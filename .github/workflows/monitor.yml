@@ -2,9 +2,13 @@ name: Monitor and archive Bloxd main bundles
 
 on:
   schedule:
-    # Every 5 minutes. Note: GitHub may start scheduled runs a few minutes
-    # late (occasionally more under load) or skip ticks during peak times.
-    - cron: '*/5 * * * *'
+    # GitHub's scheduler is best-effort only: frequent crons (*/5) get heavily
+    # throttled under load (observed: a whole day with a single delayed tick).
+    # So we do NOT rely on tick frequency — each run keeps probing every
+    # 5 minutes for up to ~53 minutes (PROBE_INTERVAL / LOOP_BUDGET below),
+    # and a new tick simply takes over from the running job. Probe gaps stay
+    # ~5-10 minutes even when ticks are delayed or dropped entirely.
+    - cron: '*/20 * * * *'
   workflow_dispatch:
 
 permissions:
@@ -12,15 +16,19 @@ permissions:
 
 concurrency:
   group: bloxd-build-monitor
-  cancel-in-progress: false
+  # The next tick takes over; anything detected before the cancel has already
+  # been committed and pushed (snapshot_and_push runs inside the probe loop).
+  cancel-in-progress: true
 
 env:
   RETENTION: '5' # number of build snapshots kept as commits for diff browsing
+  PROBE_INTERVAL: '300' # seconds between probes inside one run (5 minutes)
+  LOOP_BUDGET: '3180' # seconds of probing per run; job timeout is 60 minutes
 
 jobs:
   monitor:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 60
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -38,31 +46,45 @@ jobs:
       - name: Run tests
         run: python -m unittest discover -s tests -v
 
-      - name: Check builds and archive new bundles
-        run: python scripts/monitor.py
-
-      - name: Commit build snapshot, trim history, force-push
+      # Probe every 5 minutes; archive, commit and push immediately whenever a
+      # build changes, so a cancelled run never loses detected work. monitor.py
+      # is idempotent: unchanged builds only hit the lightweight probe path.
+      - name: Probe loop — archive and push on build change
         run: |
-          if [ -z "$(git status --porcelain)" ]; then
-            echo "No changes since last run."
-            exit 0
-          fi
-          [ -f CHANGES.md ] || printf 'Bloxd build update\n' > CHANGES.md
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          git commit -F CHANGES.md
-          # Keep only the newest $RETENTION snapshots: squash everything older
-          # than the retention window into a single rolling baseline commit
-          # (its tree equals the oldest retained snapshot, so the retained
-          # per-build diffs are preserved byte-for-byte).
-          count=$(git rev-list --count HEAD)
-          drop=$((count - RETENTION))
-          if [ "$drop" -gt 0 ]; then
-            anchor=$(git rev-list --first-parent HEAD | tail -n $((drop + 1)) | head -n 1)
-            newroot=$(git commit-tree "$(git rev-parse "${anchor}^{tree}")" \
-              -m "Rolling baseline (older build snapshots squashed)")
-            git rebase --onto "$newroot" "$anchor" main
-          fi
-          echo "History now holds $(git rev-list --count HEAD) snapshots."
-          git push --force origin main
+
+          snapshot_and_push() {
+            [ -f CHANGES.md ] || printf 'Bloxd build update\n' > CHANGES.md
+            git add -A
+            git commit -F CHANGES.md
+            # Keep only the newest $RETENTION snapshots: squash everything older
+            # than the retention window into a single rolling baseline commit
+            # (its tree equals the oldest retained snapshot, so the retained
+            # per-build diffs are preserved byte-for-byte).
+            count=$(git rev-list --count HEAD)
+            drop=$((count - RETENTION))
+            if [ "$drop" -gt 0 ]; then
+              anchor=$(git rev-list --first-parent HEAD | tail -n $((drop + 1)) | head -n 1)
+              newroot=$(git commit-tree "$(git rev-parse "${anchor}^{tree}")" \
+                -m "Rolling baseline (older build snapshots squashed)")
+              git rebase --onto "$newroot" "$anchor" main
+            fi
+            echo "History now holds $(git rev-list --count HEAD) snapshots."
+            git push --force origin main
+          }
+
+          while true; do
+            echo "=== probe $(date -u '+%Y-%m-%dT%H:%M:%SZ') ==="
+            python scripts/monitor.py
+            if [ -n "$(git status --porcelain)" ]; then
+              echo "Build change detected — committing and pushing snapshot."
+              snapshot_and_push
+            fi
+            if [ "$SECONDS" -ge "$LOOP_BUDGET" ]; then
+              echo "Probe loop budget reached — ending this run."
+              break
+            fi
+            sleep "$PROBE_INTERVAL"
+          done
