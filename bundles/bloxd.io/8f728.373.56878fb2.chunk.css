@@ -1,0 +1,476 @@
+.PlayerProfile {
+  animation-duration: .3s;
+  animation-duration: .2s;
+  animation-fill-mode: backwards;
+  animation-iteration-count: 1;
+  animation-name: fadeIn;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  isolation: isolate
+}
+
+.PlayerProfile .PlayerProfileBackgroundContainer {
+  background-color: #22283b;
+  font-size: 2rem;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  z-index: -1
+}
+
+.PlayerProfile .PlayerProfileBackgroundContainer .PlayerProfileBackground {
+  -ms-interpolation-mode: nearest-neighbor;
+  background-position: 50%;
+  background-size: 8rem;
+  filter: brightness(.6);
+  image-rendering: optimizeSpeed;
+  image-rendering: -o-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: optimize-contrast;
+  inset: 0;
+  position: absolute
+}
+
+.PlayerProfile .PlayerProfileHeader {
+  align-items: center;
+  display: flex;
+  padding: .6rem .75rem
+}
+
+.PlayerProfile .PlayerProfileHeader .BackButton {
+  font-size: 1.5rem;
+  padding-left: .3rem;
+  position: relative
+}
+
+@media(pointer:coarse) {
+  .PlayerProfile .PlayerProfileHeader .BackButton:before {
+    content: "";
+    inset: min(0px, (100% - 44px)/2) min(0px, (100% - 44px)/2);
+    position: absolute
+  }
+}
+
+.PlayerProfile .PlayerProfileHeader .PlayerProfileExclusionActions {
+  color: #a4a4a4;
+  display: flex;
+  font-size: .9rem;
+  gap: 1.2rem;
+  margin-left: auto;
+  padding-right: .5rem
+}
+
+.PlayerProfile .PlayerProfileCentredMessage {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  gap: .75rem;
+  justify-content: center;
+  min-height: 50vh
+}
+
+.PlayerProfile .PlayerProfileCentredMessage.PlayerProfileError .svg-inline--fa {
+  color: #ffb914;
+  font-size: 3rem
+}
+
+.PlayerProfile .PlayerProfileCentredMessage.PlayerProfileError .PlayerProfileErrorText {
+  font-size: 1.25rem
+}
+
+.PlayerProfile .PlayerProfileContent {
+  align-items: center;
+  display: flex;
+  gap: 2rem;
+  justify-content: center
+}
+
+.PlayerProfile .PlayerProfileLeft {
+  align-items: center;
+  display: flex;
+  flex-direction: column
+}
+
+.PlayerProfile .PlayerProfileLeft .PlayerProfileName {
+  font-size: 2rem;
+  text-align: center;
+  word-break: break-word
+}
+
+.PlayerProfile .PlayerProfileLeft .PlayerProfileModel {
+  aspect-ratio: 2/3;
+  border-radius: 0;
+  border-radius: .75rem;
+  flex-grow: 1;
+  font-size: 3rem;
+  height: 35rem;
+  overflow: hidden;
+  position: relative
+}
+
+.PlayerProfile .PlayerProfileLeft .PlayerProfileModel .PlayerProfileModelLoading {
+  align-items: center;
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  position: absolute
+}
+
+.PlayerProfile .PlayerProfileLeft .PlayerProfileModel .CharCustomisationPreview {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 100%
+}
+
+.PlayerProfile .PlayerProfileLeft .PlayerProfileModel .CharCustomisationPreview .CharCustomisationPreviewCanvas {
+  height: 100%;
+  outline: none;
+  width: 100%
+}
+
+.PlayerProfile .PlayerProfileRight {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  min-width: 0
+}
+
+.PlayerProfile .PlayerProfileRight .PlayerProfileStats {
+  display: flex;
+  gap: 1rem
+}
+
+.PlayerProfile .PlayerProfileRight .PlayerProfileStats .PlayerProfileStat {
+  align-items: center;
+  background-color: #3c4b68;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  display: flex;
+  gap: .75rem;
+  padding: .75rem 1rem;
+  width: -moz-fit-content;
+  width: fit-content
+}
+
+.PlayerProfile .PlayerProfileRight .PlayerProfileStats .PlayerProfileStat:first-of-type {
+  background-color: #463bd9
+}
+
+.PlayerProfile .PlayerProfileRight .PlayerProfileStats .PlayerProfileStat:nth-of-type(2) {
+  background-color: #0ec28c
+}
+
+.PlayerProfile .PlayerProfileRight .PlayerProfileStats .PlayerProfileStat:nth-of-type(3) {
+  background-color: #c16088
+}
+
+.PlayerProfile .PlayerProfileRight .PlayerProfileStats .PlayerProfileStat .PlayerProfileStatIcon {
+  color: #ffb914;
+  flex-shrink: 0;
+  font-size: 1.25rem
+}
+
+.PlayerProfile .PlayerProfileRight .PlayerProfileStats .PlayerProfileStat .PlayerProfileStatText {
+  display: flex;
+  flex-direction: column;
+  min-width: 0
+}
+
+.PlayerProfile .PlayerProfileRight .PlayerProfileStats .PlayerProfileStat .PlayerProfileStatText .PlayerProfileStatLabel {
+  font-size: .8rem;
+  opacity: .8
+}
+
+.PlayerProfile .PlayerProfileRight .PlayerProfileStats .PlayerProfileStat .PlayerProfileStatText .PlayerProfileStatValue {
+  font-size: 1.1rem;
+  font-weight: 700;
+  word-break: break-word
+}
+
+.PlayerProfile .PlayerProfileRight .PlayerProfileGames {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem
+}
+
+.PlayerProfile .PlayerProfileRight .PlayerProfileGames .PlayerProfileGamesTitle {
+  font-size: 1.25rem
+}
+
+.PlayerProfile .PlayerProfileRight .PlayerProfileGames .PlayerProfileNoGames {
+  opacity: .7
+}
+
+.PlayerProfile .PlayerProfileRight .PlayerProfileGames .PlayerProfileGamesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+  max-height: 20rem;
+  overflow-y: auto
+}
+
+.PlayerProfile.PlayerProfilePortrait .PlayerProfileContent {
+  flex-direction: column
+}
+
+.PlayerProfile.PlayerProfilePortrait .PlayerProfileRight .PlayerProfileGames .PlayerProfileGamesGrid {
+  max-height: -moz-fit-content;
+  max-height: fit-content
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fadeInScaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(.6)
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes fadeInScaleUpNoOversize {
+  0% {
+    opacity: 0;
+    transform: scale(.8)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes shake {
+  0% {
+    rotate: 3deg
+  }
+
+  5% {
+    rotate: -2deg
+  }
+
+  10% {
+    rotate: 2deg
+  }
+
+  15% {
+    rotate: -3deg
+  }
+
+  20% {
+    rotate: 0deg
+  }
+}
+
+@keyframes loadingShimmer {
+  0% {
+    transform: translateX(-66.6666666667%)
+  }
+
+  to {
+    transform: none
+  }
+}
+
+@keyframes topRightStackIn {
+  0% {
+    opacity: 0;
+    transform: translateX(1.5rem)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
+
+@keyframes rainbowShimmer {
+  0% {
+    background-position: 200%
+  }
+
+  to {
+    background-position: -200%
+  }
+}
+
+.PlayerProfile.PlayerProfilePortrait .PlayerProfileSocialLinksList {
+  grid-template-columns: 1fr
+}
+
+.PlayerProfileSocialLinks {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem
+}
+
+.PlayerProfileSocialLinks .PlayerProfileSocialLinksList {
+  grid-gap: .6rem;
+  display: grid;
+  gap: .6rem;
+  grid-template-columns: repeat(auto-fill, minmax(max(min(100%, 18rem), (100% - .6rem)/2), 1fr));
+  max-width: 50rem
+}
+
+.PlayerProfileSocialLinks .PlayerProfileSocialLink {
+  align-items: center;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  color: #fff;
+  display: flex;
+  gap: .85rem;
+  min-height: 3.9rem;
+  padding: 0 .85rem;
+  text-align: left;
+  transition: transform .2s, background .2s
+}
+
+.PlayerProfileSocialLinks .PlayerProfileSocialLink .PlayerProfileSocialLinkMain {
+  align-items: center;
+  color: inherit;
+  display: flex;
+  flex: 1 1;
+  gap: .85rem;
+  min-width: 0;
+  padding: .7rem 0;
+  text-decoration: none
+}
+
+.PlayerProfileSocialLinks .PlayerProfileSocialLink .PlayerProfileSocialLinkIcon {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  flex-shrink: 0;
+  font-size: 1.2rem;
+  height: 2.5rem;
+  justify-content: center;
+  overflow: hidden;
+  width: 2.5rem
+}
+
+.PlayerProfileSocialLinks .PlayerProfileSocialLink .PlayerProfileSocialLinkIcon svg:not(.YoutubeIcon) {
+  height: 100%;
+  width: 100%
+}
+
+.PlayerProfileSocialLinks .PlayerProfileSocialLink .PlayerProfileSocialLinkIcon.PlayerProfileSocialLinkIconYoutube {
+  min-width: 2.5rem;
+  overflow: visible;
+  width: auto
+}
+
+.PlayerProfileSocialLinks .PlayerProfileSocialLink .PlayerProfileSocialLinkText {
+  display: flex;
+  flex: 1 1;
+  flex-direction: column;
+  min-width: 0
+}
+
+.PlayerProfileSocialLinks .PlayerProfileSocialLink .PlayerProfileSocialLinkText .PlayerProfileSocialLinkName {
+  font-weight: 800;
+  word-break: break-word
+}
+
+.PlayerProfileSocialLinks .PlayerProfileSocialLink .PlayerProfileSocialLinkText .PlayerProfileSocialLinkCount {
+  font-size: .85rem
+}
+
+.PlayerProfileSocialLinks .PlayerProfileSocialLink .PlayerProfileSocialLinkArrow {
+  flex-shrink: 0;
+  font-size: .9rem;
+  opacity: .7
+}
+
+.PlayerProfileSocialLinks .PlayerProfileSocialLink .PlayerProfileSocialLinkEditButton {
+  align-items: center;
+  background: rgba(0, 0, 0, .2);
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-shrink: 0;
+  font-size: .95rem;
+  height: 2rem;
+  justify-content: center;
+  padding: 0;
+  transition: background .2s;
+  width: 2rem
+}
+
+@media(hover:hover) {
+  .PlayerProfileSocialLinks .PlayerProfileSocialLink .PlayerProfileSocialLinkEditButton:hover {
+    background: rgba(57, 73, 128, .6)
+  }
+}
+
+.PlayerProfileSocialLinks .PlayerProfileSocialLink .PlayerProfileSocialLinkEditButton.pad-focused {
+  background: rgba(57, 73, 128, .6)
+}
+
+@media(hover:none) {
+  .PlayerProfileSocialLinks .PlayerProfileSocialLink .PlayerProfileSocialLinkEditButton:active {
+    background: rgba(57, 73, 128, .6)
+  }
+}
+
+@media(hover:hover) {
+  .PlayerProfileSocialLinks .PlayerProfileSocialLink:hover {
+    transform: scale(1.02)
+  }
+}
+
+.PlayerProfileSocialLinks .PlayerProfileSocialLink.pad-focused {
+  transform: scale(1.02)
+}
+
+@media(hover:none) {
+  .PlayerProfileSocialLinks .PlayerProfileSocialLink:active {
+    transform: scale(1.02)
+  }
+}
+
+.PlayerProfileSocialLinks .PlayerProfileSocialLinkUnlinked {
+  cursor: pointer;
+  opacity: .85
+}
+
+@media(hover:hover) {
+  .PlayerProfileSocialLinks .PlayerProfileSocialLinkUnlinked:hover {
+    opacity: 1
+  }
+}
+
+.PlayerProfileSocialLinks .PlayerProfileSocialLinkUnlinked.pad-focused {
+  opacity: 1
+}
+
+@media(hover:none) {
+  .PlayerProfileSocialLinks .PlayerProfileSocialLinkUnlinked:active {
+    opacity: 1
+  }
+}
