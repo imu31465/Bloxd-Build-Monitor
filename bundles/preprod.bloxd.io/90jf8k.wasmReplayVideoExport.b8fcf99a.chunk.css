@@ -1,0 +1,211 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fadeInScaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(.6)
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes fadeInScaleUpNoOversize {
+  0% {
+    opacity: 0;
+    transform: scale(.8)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes shake {
+  0% {
+    rotate: 3deg
+  }
+
+  5% {
+    rotate: -2deg
+  }
+
+  10% {
+    rotate: 2deg
+  }
+
+  15% {
+    rotate: -3deg
+  }
+
+  20% {
+    rotate: 0deg
+  }
+}
+
+@keyframes loadingShimmer {
+  0% {
+    transform: translateX(-66.6666666667%)
+  }
+
+  to {
+    transform: none
+  }
+}
+
+@keyframes topRightStackIn {
+  0% {
+    opacity: 0;
+    transform: translateX(1.5rem)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
+
+@keyframes rainbowShimmer {
+  0% {
+    background-position: 200%
+  }
+
+  to {
+    background-position: -200%
+  }
+}
+
+.ReplayVideoExportOptionsPopup .ReplayVideoExportOptionsSection {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  margin: 0 0 2rem;
+  width: 100%
+}
+
+.ReplayVideoExportOptionsPopup .ReplayVideoExportOptionsSectionLabel {
+  font-size: 1.35rem;
+  text-align: center
+}
+
+.ReplayVideoExportOptionsPopup .ReplayVideoExportOptionCards {
+  align-items: stretch;
+  display: flex;
+  gap: .5rem
+}
+
+.ReplayVideoExportOptionsPopup .ReplayVideoExportOptionColumn {
+  display: flex;
+  flex: 1 1;
+  flex-direction: column;
+  gap: .4rem;
+  min-width: 0
+}
+
+.ReplayVideoExportOptionsPopup .ReplayVideoExportOptionCard {
+  align-items: center;
+  background-color: rgba(48, 58, 89, .5);
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  cursor: pointer;
+  display: flex;
+  flex: 1 1 auto;
+  gap: .75rem;
+  padding: .6rem .75rem;
+  transition: scale .15s, background-color .15s, border-color .15s
+}
+
+@media(hover:hover) {
+  .ReplayVideoExportOptionsPopup .ReplayVideoExportOptionCard:hover {
+    scale: 1.03
+  }
+}
+
+.ReplayVideoExportOptionsPopup .ReplayVideoExportOptionCard.pad-focused {
+  scale: 1.03
+}
+
+@media(hover:none) {
+  .ReplayVideoExportOptionsPopup .ReplayVideoExportOptionCard:active {
+    scale: 1.03
+  }
+}
+
+.ReplayVideoExportOptionsPopup .ReplayVideoExportOptionCard.Selected {
+  background-color: rgba(255, 185, 20, .15);
+  border-color: #ffb914
+}
+
+.ReplayVideoExportOptionsPopup .ReplayVideoExportOptionCard.Disabled {
+  cursor: default;
+  filter: brightness(.6)
+}
+
+@media(hover:hover) {
+  .ReplayVideoExportOptionsPopup .ReplayVideoExportOptionCard.Disabled:hover {
+    scale: 1
+  }
+}
+
+.ReplayVideoExportOptionsPopup .ReplayVideoExportOptionCard.Disabled.pad-focused {
+  scale: 1
+}
+
+@media(hover:none) {
+  .ReplayVideoExportOptionsPopup .ReplayVideoExportOptionCard.Disabled:active {
+    scale: 1
+  }
+}
+
+.ReplayVideoExportOptionsPopup .ReplayVideoExportOptionCardBody {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: .15rem;
+  min-width: 0;
+  text-align: center
+}
+
+.ReplayVideoExportOptionsPopup .ReplayVideoExportOptionCardLabel {
+  color: #f2f2f2;
+  font-size: 1.2rem;
+  font-weight: 700;
+  overflow-x: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.ReplayVideoExportOptionsPopup .ReplayVideoExportOptionCardDescription {
+  color: #cfcfcf;
+  font-size: .75rem;
+  white-space: normal
+}
+
+.ReplayVideoExportOptionsPopup .ReplayVideoExportOptionError {
+  background-color: #ffb914;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  color: #22283b;
+  font-size: .85rem;
+  line-height: 1.3;
+  padding: .4rem .55rem;
+  text-align: center;
+  white-space: normal
+}

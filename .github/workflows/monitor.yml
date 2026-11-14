@@ -1,0 +1,68 @@
+name: Monitor and archive Bloxd main bundles
+
+on:
+  schedule:
+    # Every 5 minutes. Note: GitHub may start scheduled runs a few minutes
+    # late (occasionally more under load) or skip ticks during peak times.
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bloxd-build-monitor
+  cancel-in-progress: false
+
+env:
+  RETENTION: '5' # number of build snapshots kept as commits for diff browsing
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # full history so per-build diffs stay browsable
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Check builds and archive new bundles
+        run: python scripts/monitor.py
+
+      - name: Commit build snapshot, trim history, force-push
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No changes since last run."
+            exit 0
+          fi
+          [ -f CHANGES.md ] || printf 'Bloxd build update\n' > CHANGES.md
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -F CHANGES.md
+          # Keep only the newest $RETENTION snapshots: squash everything older
+          # than the retention window into a single rolling baseline commit
+          # (its tree equals the oldest retained snapshot, so the retained
+          # per-build diffs are preserved byte-for-byte).
+          count=$(git rev-list --count HEAD)
+          drop=$((count - RETENTION))
+          if [ "$drop" -gt 0 ]; then
+            anchor=$(git rev-list --first-parent HEAD | tail -n $((drop + 1)) | head -n 1)
+            newroot=$(git commit-tree "$(git rev-parse "${anchor}^{tree}")" \
+              -m "Rolling baseline (older build snapshots squashed)")
+            git rebase --onto "$newroot" "$anchor" main
+          fi
+          echo "History now holds $(git rev-list --count HEAD) snapshots."
+          git push --force origin main

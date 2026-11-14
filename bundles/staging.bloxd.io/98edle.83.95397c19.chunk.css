@@ -1,0 +1,182 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fadeInScaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(.6)
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes fadeInScaleUpNoOversize {
+  0% {
+    opacity: 0;
+    transform: scale(.8)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes shake {
+  0% {
+    rotate: 3deg
+  }
+
+  5% {
+    rotate: -2deg
+  }
+
+  10% {
+    rotate: 2deg
+  }
+
+  15% {
+    rotate: -3deg
+  }
+
+  20% {
+    rotate: 0deg
+  }
+}
+
+@keyframes loadingShimmer {
+  0% {
+    transform: translateX(-66.6666666667%)
+  }
+
+  to {
+    transform: none
+  }
+}
+
+@keyframes topRightStackIn {
+  0% {
+    opacity: 0;
+    transform: translateX(1.5rem)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
+
+@keyframes rainbowShimmer {
+  0% {
+    background-position: 200%
+  }
+
+  to {
+    background-position: -200%
+  }
+}
+
+.StudioLayout {
+  align-items: stretch;
+  animation-duration: .3s;
+  animation-fill-mode: backwards;
+  animation-iteration-count: 1;
+  animation-name: fadeIn;
+  background: #22283b;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  height: 100dvh;
+  isolation: isolate;
+  position: relative;
+  width: 100vw;
+  width: 100dvw;
+  z-index: 1
+}
+
+.StudioLayout .StudioLayoutRight {
+  background: #2b3249;
+  display: flex;
+  flex: 1 0;
+  flex-direction: column;
+  min-width: 0;
+  padding-left: var(--notchLeft)
+}
+
+.StudioLayout .StudioLayoutRight .StudioTop {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  width: 100%
+}
+
+.StudioLayout .StudioLayoutRight .StudioTop .StudioNav {
+  grid-gap: 2rem;
+  align-items: center;
+  display: grid;
+  font-size: 1.6rem;
+  gap: 2rem;
+  grid-template-columns: 1fr auto 1fr
+}
+
+.StudioLayout .StudioLayoutRight .StudioTop .StudioNav .BackButton {
+  justify-self: start;
+  white-space: nowrap
+}
+
+.StudioLayout .StudioLayoutRight .StudioTop .StudioNav .StudioNavTabs {
+  display: flex;
+  gap: 1rem;
+  min-width: 0
+}
+
+.StudioLayout .StudioLayoutRight .StudioTop .StudioNav .StudioNavTabs .SecondaryButton {
+  white-space: nowrap
+}
+
+.StudioLayout .StudioLayoutRight .StudioBottom {
+  display: flex;
+  flex: 1 0;
+  min-height: 0;
+  width: 100%
+}
+
+.StudioLayout .StudioLayoutRight .StudioBottom .StudioContent {
+  flex: 1 0;
+  overflow: auto;
+  padding: 2rem 2rem 0;
+  scrollbar-gutter: stable
+}
+
+.StudioLayout .StudioLayoutRight .StudioBottom .StudioCentredMessage {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  gap: 1rem;
+  justify-content: center;
+  text-align: center;
+  width: 100%
+}
+
+.StudioLayout:has(.StudioLayoutLeft) .StudioLayoutRight {
+  padding-left: 0
+}

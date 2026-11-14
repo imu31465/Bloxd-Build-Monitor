@@ -1,0 +1,547 @@
+.ShaderPackBrowse {
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  gap: .5rem;
+  padding-bottom: 1rem;
+  width: 100%
+}
+
+.ShaderPackBrowse .BackButton {
+  font-size: 2rem;
+  padding-left: .3rem
+}
+
+.ShaderPackBrowse .ShaderPackBrowseHeader {
+  background-color: rgba(57, 73, 128, .4);
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  padding: .5rem .75rem
+}
+
+.ShaderPackBrowse .ShaderPackBrowseHeader .ShaderPackBrowseHeaderRow {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.2rem;
+  gap: .5rem
+}
+
+.ShaderPackBrowse .ShaderPackBrowseHeader .ShaderPackBrowseTabs {
+  display: flex;
+  gap: .5rem
+}
+
+.ShaderPackBrowse .ShaderPackBrowseHeader .ShaderPackBrowseTabs .ShaderPackBrowseSort .BloxdDropdownControl {
+  align-items: center;
+  background-color: transparent;
+  border: max(min(4px, .15em), 2px) solid #cfcfcf;
+  border-radius: 0;
+  box-shadow: none;
+  color: #cfcfcf;
+  cursor: pointer;
+  display: flex;
+  font-weight: inherit;
+  gap: .3em;
+  justify-content: center;
+  line-height: 1em;
+  min-width: 6.6em;
+  padding: .3em .45em .3em .6em;
+  text-shadow: none;
+  transition: border-color .2s, color .2s
+}
+
+@media(hover:hover) {
+  .ShaderPackBrowse .ShaderPackBrowseHeader .ShaderPackBrowseTabs .ShaderPackBrowseSort .BloxdDropdownControl:hover {
+    border-color: #b6830e
+  }
+}
+
+.ShaderPackBrowse .ShaderPackBrowseHeader .ShaderPackBrowseTabs .ShaderPackBrowseSort .BloxdDropdownControl.pad-focused {
+  border-color: #b6830e
+}
+
+@media(hover:none) {
+  .ShaderPackBrowse .ShaderPackBrowseHeader .ShaderPackBrowseTabs .ShaderPackBrowseSort .BloxdDropdownControl:active {
+    border-color: #b6830e
+  }
+}
+
+.ShaderPackBrowse .ShaderPackBrowseHeader .ShaderPackBrowseTabs .ShaderPackBrowseSort .Dropdown-arrow-wrapper {
+  display: flex
+}
+
+.ShaderPackBrowse .ShaderPackBrowseHeader .ShaderPackBrowseTabs .ShaderPackBrowseSort .BloxdDropdownArrow {
+  border-color: currentColor transparent transparent;
+  position: static;
+  transform: none
+}
+
+.ShaderPackBrowse .ShaderPackBrowseHeader .ShaderPackBrowseTabs .ShaderPackBrowseSort .is-open .BloxdDropdownArrow {
+  border-color: transparent transparent currentColor
+}
+
+.ShaderPackBrowse .ShaderPackBrowseHeader .ShaderPackBrowseTabs .ShaderPackBrowseSort .Dropdown-placeholder {
+  width: auto
+}
+
+.ShaderPackBrowse .ShaderPackBrowseHeader .ShaderPackBrowseTabs .ShaderPackBrowseSort.Active .BloxdDropdownControl {
+  border-color: #ffb914;
+  color: #ffb914
+}
+
+.ShaderPackBrowse .ShaderPackBrowseHeader .ShaderPackBrowseDivider {
+  background-color: #a4a4a4;
+  height: 2rem;
+  margin: 0 .5rem;
+  width: .2rem
+}
+
+.ShaderPackBrowse .ShaderPackBrowseHeader .ShaderPackBrowseSearch {
+  align-items: stretch;
+  display: flex;
+  height: 2.6rem;
+  min-width: 0
+}
+
+.ShaderPackBrowse .ShaderPackBrowseHeader .ShaderPackBrowseSearch:has(.ShaderPackBrowseSearchInput:focus) .ShaderPackBrowseSearchIcon {
+  border-color: #ffb914
+}
+
+.ShaderPackBrowse .ShaderPackBrowseHeader .ShaderPackBrowseSearch .ShaderPackBrowseSearchIcon {
+  align-items: center;
+  background-color: #303a59;
+  border: 1px solid #0f0f0f;
+  border-bottom-left-radius: 0;
+  border-right: none;
+  border-top-left-radius: 0;
+  color: #cfcfcf;
+  display: flex;
+  font-size: 1.4rem;
+  justify-content: center;
+  padding: 0 .2rem 0 .6rem
+}
+
+.ShaderPackBrowse .ShaderPackBrowseHeader .ShaderPackBrowseSearch .ShaderPackBrowseSearchInput {
+  border-left: none;
+  border-radius: 0;
+  border-right-color: transparent;
+  box-shadow: none;
+  font-size: 1.2rem;
+  min-width: 0;
+  padding: 0 .3rem;
+  text-align: left
+}
+
+.ShaderPackBrowse .ShaderPackBrowseHeader .ShaderPackBrowseSearch .ShaderPackBrowseSearchInput:focus {
+  border-right-color: #ffb914
+}
+
+.ShaderPackBrowse .ShaderPackBrowseHeader .ShaderPackBrowseSearch .NewButton {
+  align-items: center;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  box-shadow: none;
+  display: flex;
+  font-size: 1.2rem;
+  justify-content: center
+}
+
+.ShaderPackBrowse .ShaderPackBrowseHeader .ShaderPackBrowseSearch .NewButton .ButtonBody {
+  padding: 0 .4rem
+}
+
+.ShaderPackBrowse .ShaderPackBrowseHeader .ShaderPackBrowseFilterToggle.Open {
+  color: #ffb914
+}
+
+.ShaderPackBrowse .ShaderPackBrowseHeader .ShaderPackBrowseSpace {
+  flex-grow: 1
+}
+
+.ShaderPackBrowse .ShaderPackBrowseHeader .ShaderPackBrowseFeatures {
+  grid-gap: .4rem;
+  display: grid;
+  gap: .4rem;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+  margin: -4px;
+  max-width: calc(100% + 8px);
+  overflow-x: auto;
+  padding: 4px;
+  width: -moz-fit-content;
+  width: fit-content
+}
+
+.ShaderPackBrowse .ShaderPackBrowseHeader .ShaderPackBrowseFeatures .ShaderPackBrowseFeature {
+  font-size: 1.2rem
+}
+
+.ShaderPackBrowse .ShaderPackBrowseHeader .ShaderPackBrowseFeatures .ShaderPackBrowseFeature .ShaderPackBrowseFeatureLabel {
+  display: inline-grid;
+  font-size: .8333333333em;
+  text-align: center;
+  vertical-align: top
+}
+
+.ShaderPackBrowse .ShaderPackBrowseHeader .ShaderPackBrowseFeatures .ShaderPackBrowseFeature .ShaderPackBrowseFeatureLabel>span {
+  grid-area: 1/1
+}
+
+.ShaderPackBrowse .ShaderPackBrowseHeader .ShaderPackBrowseFeatures .ShaderPackBrowseFeature .ShaderPackBrowseFeatureLabel .ShaderPackBrowseFeatureReserve {
+  visibility: hidden
+}
+
+.ShaderPackBrowse .ShaderPackBrowseHeader .ShaderPackBrowseFeatures .ShaderPackBrowseFeature.Without {
+  color: #fc6464;
+  text-decoration: line-through
+}
+
+.ShaderPackBrowse .ShaderPackBrowseScenes {
+  display: flex;
+  flex-direction: column
+}
+
+.ShaderPackBrowse .ShaderPackBrowseScenes .ShaderPackViewPicker {
+  margin: 0 auto;
+  max-width: 100%
+}
+
+.ShaderPackBrowse .ShaderPackBrowseResults {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: .5rem;
+  transition: opacity .15s;
+  width: 100%
+}
+
+.ShaderPackBrowse .ShaderPackBrowseResults .ShaderPackBrowseMessage {
+  align-items: center;
+  color: #a4a4a4;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+  gap: 1rem;
+  padding-top: 4rem;
+  text-align: center
+}
+
+.ShaderPackBrowse .ShaderPackBrowseResults .ShaderPackBrowseMessage .LogoLoaderOuter {
+  font-size: 3rem
+}
+
+.ShaderPackBrowse .ShaderPackBrowseResults .ShaderPackBrowseGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(16rem, 100%), 1fr));
+  max-width: 90rem;
+  width: 100%
+}
+
+.ShaderPackBrowse .ShaderPackBrowseResults.Loading {
+  opacity: .6;
+  pointer-events: none
+}
+
+.ShaderPackBrowse .ShaderPackBrowsePagination {
+  margin-top: 1rem
+}
+
+.ShaderPackCard {
+  box-sizing: border-box;
+  min-width: 0;
+  padding: .35rem
+}
+
+.ShaderPackCard .ShaderPackCardTile {
+  aspect-ratio: 3/2;
+  background-color: #394980;
+  border: none;
+  border-radius: 0;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  overflow: hidden;
+  position: relative;
+  transition: transform .2s
+}
+
+@media(hover:hover) {
+  .ShaderPackCard .ShaderPackCardTile:hover {
+    transform: scale(1.03)
+  }
+}
+
+.ShaderPackCard .ShaderPackCardTile.pad-focused {
+  transform: scale(1.03)
+}
+
+@media(hover:none) {
+  .ShaderPackCard .ShaderPackCardTile:active {
+    transform: scale(1.03)
+  }
+}
+
+.ShaderPackCard .ShaderPackCardLink {
+  color: inherit;
+  display: block;
+  height: 100%;
+  text-decoration: none;
+  width: 100%
+}
+
+.ShaderPackCard .ShaderPackCardLink .ShaderPackCardImage {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%
+}
+
+.ShaderPackCard .ShaderPackCardLink .ShaderPackCardImage.ShaderPackCardImagePending {
+  align-items: center;
+  color: #838383;
+  display: flex;
+  font-size: 2.5rem;
+  justify-content: center
+}
+
+.ShaderPackCard .ShaderPackCardLink .ShaderPackCardText {
+  align-items: flex-start;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  max-width: 100%;
+  position: absolute
+}
+
+.ShaderPackCard .ShaderPackCardLink .ShaderPackCardText .ShaderPackCardName,
+.ShaderPackCard .ShaderPackCardLink .ShaderPackCardText .ShaderPackCardNotice {
+  -webkit-backdrop-filter: blur(.1rem);
+  backdrop-filter: blur(.1rem);
+  background-color: rgba(57, 73, 128, .5);
+  border-radius: 0;
+  box-sizing: border-box;
+  font-size: 1rem;
+  max-width: 100%;
+  padding: .1rem .5rem
+}
+
+.ShaderPackCard .ShaderPackCardLink .ShaderPackCardText .ShaderPackCardName {
+  color: #fff;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.ShaderPackCard .ShaderPackCardLink .ShaderPackCardText .ShaderPackCardNotice {
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  color: #85baff;
+  display: -webkit-box;
+  font-size: .9rem;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  white-space: normal
+}
+
+.ShaderPackCard .ShaderPackCardLink .ShaderPackCardText .ShaderPackCardNotice.Warning {
+  color: #fcd373
+}
+
+.ShaderPackCard .ShaderPackCardStats {
+  display: flex;
+  gap: .4rem;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0
+}
+
+.ShaderPackCard .ShaderPackCardStats .LikeButton {
+  pointer-events: auto
+}
+
+.ShaderPackCard .ShaderPackCardStats .LikeButton,
+.ShaderPackCard .ShaderPackCardStats .ShaderPackCardUses {
+  box-sizing: border-box;
+  font-size: 1rem;
+  height: 1.7rem
+}
+
+.ShaderPackCard .ShaderPackCardStats .ShaderPackCardUses {
+  align-items: center;
+  background-color: rgba(34, 40, 59, .4);
+  border-radius: 0;
+  color: #cfcfcf;
+  display: flex;
+  gap: .3rem;
+  padding: 0 .4rem
+}
+
+.ShaderPackPreviewsNotice {
+  --diagonal: 29.3577535428deg;
+  container-type: size;
+  align-items: center;
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute
+}
+
+.ShaderPackCardTile .ShaderPackPreviewsNotice {
+  --diagonal: 33.690067526deg
+}
+
+.ShaderPackPreviewsNotice>span {
+  background-color: rgba(38, 52, 93, .85);
+  color: #fff;
+  flex: none;
+  font-size: 4.5cqw;
+  font-weight: 700;
+  opacity: .5;
+  padding: .2em .6em;
+  text-align: center;
+  text-transform: uppercase;
+  transform: rotate(var(--diagonal));
+  white-space: nowrap;
+  width: 150cqw
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fadeInScaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(.6)
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes fadeInScaleUpNoOversize {
+  0% {
+    opacity: 0;
+    transform: scale(.8)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes shake {
+  0% {
+    rotate: 3deg
+  }
+
+  5% {
+    rotate: -2deg
+  }
+
+  10% {
+    rotate: 2deg
+  }
+
+  15% {
+    rotate: -3deg
+  }
+
+  20% {
+    rotate: 0deg
+  }
+}
+
+@keyframes loadingShimmer {
+  0% {
+    transform: translateX(-66.6666666667%)
+  }
+
+  to {
+    transform: none
+  }
+}
+
+@keyframes topRightStackIn {
+  0% {
+    opacity: 0;
+    transform: translateX(1.5rem)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
+
+@keyframes rainbowShimmer {
+  0% {
+    background-position: 200%
+  }
+
+  to {
+    background-position: -200%
+  }
+}
+
+.ShaderPackViewPicker {
+  display: flex;
+  gap: .4rem;
+  min-width: 0;
+  overflow-x: auto
+}
+
+.ShaderPackViewPicker .ShaderPackViewOption {
+  aspect-ratio: 16/9;
+  background-color: #394980;
+  border: .15rem solid transparent;
+  border-radius: 0;
+  color: inherit;
+  cursor: pointer;
+  flex-shrink: 0;
+  font: inherit;
+  padding: 0;
+  position: relative;
+  width: 7rem
+}
+
+.ShaderPackViewPicker .ShaderPackViewOption img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%
+}
+
+.ShaderPackViewPicker .ShaderPackViewOption span {
+  align-items: center;
+  display: flex;
+  font-size: 1rem;
+  inset: 0;
+  justify-content: center;
+  position: absolute
+}
+
+.ShaderPackViewPicker .ShaderPackViewOption.Selected {
+  border-color: #ffb914
+}

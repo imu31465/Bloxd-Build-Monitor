@@ -1,0 +1,139 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fadeInScaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(.6)
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes fadeInScaleUpNoOversize {
+  0% {
+    opacity: 0;
+    transform: scale(.8)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes shake {
+  0% {
+    rotate: 3deg
+  }
+
+  5% {
+    rotate: -2deg
+  }
+
+  10% {
+    rotate: 2deg
+  }
+
+  15% {
+    rotate: -3deg
+  }
+
+  20% {
+    rotate: 0deg
+  }
+}
+
+@keyframes loadingShimmer {
+  0% {
+    transform: translateX(-66.6666666667%)
+  }
+
+  to {
+    transform: none
+  }
+}
+
+@keyframes topRightStackIn {
+  0% {
+    opacity: 0;
+    transform: translateX(1.5rem)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
+
+@keyframes rainbowShimmer {
+  0% {
+    background-position: 200%
+  }
+
+  to {
+    background-position: -200%
+  }
+}
+
+.PurchaseWelcome {
+  align-items: center;
+  animation-delay: .5s;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100vh;
+  height: 100dvh;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  width: 100dvw;
+  width: 100vw
+}
+
+.PurchaseWelcome .PurchaseWelcomeTitle {
+  font-size: 5rem;
+  z-index: 2
+}
+
+.PurchaseWelcome .PurchaseWelcomeText {
+  background-color: rgba(57, 73, 128, .5);
+  border-radius: 0;
+  font-size: 2rem;
+  max-width: 50rem;
+  padding: .5rem 1rem;
+  text-align: center;
+  z-index: 2
+}
+
+.PurchaseWelcome .PurchaseWelcomeWarning {
+  align-items: center;
+  background-color: rgba(255, 185, 20, .5);
+  border-radius: 0;
+  display: flex;
+  gap: 1rem;
+  max-width: 50rem;
+  padding: .5rem 1rem;
+  z-index: 2
+}
+
+.PurchaseWelcome .PurchaseWelcomeContinue {
+  font-size: 2rem;
+  margin-top: 1rem;
+  z-index: 2
+}

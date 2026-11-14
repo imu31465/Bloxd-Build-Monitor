@@ -1,0 +1,330 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fadeInScaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(.6)
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes fadeInScaleUpNoOversize {
+  0% {
+    opacity: 0;
+    transform: scale(.8)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes shake {
+  0% {
+    rotate: 3deg
+  }
+
+  5% {
+    rotate: -2deg
+  }
+
+  10% {
+    rotate: 2deg
+  }
+
+  15% {
+    rotate: -3deg
+  }
+
+  20% {
+    rotate: 0deg
+  }
+}
+
+@keyframes loadingShimmer {
+  0% {
+    transform: translateX(-66.6666666667%)
+  }
+
+  to {
+    transform: none
+  }
+}
+
+@keyframes topRightStackIn {
+  0% {
+    opacity: 0;
+    transform: translateX(1.5rem)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
+
+@keyframes rainbowShimmer {
+  0% {
+    background-position: 200%
+  }
+
+  to {
+    background-position: -200%
+  }
+}
+
+.CreateCustomLobbyPopup {
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative
+}
+
+.CreateCustomLobbyPopup .CreateCustomLobby {
+  max-height: 80vh;
+  max-width: 75vw;
+  width: 80rem
+}
+
+.CreateCustomLobbyPopup .CreateCustomLobby.CreateCustomLobbySuccess {
+  overflow: hidden
+}
+
+.CreateCustomLobbyPopup .CreateCustomLobby .CreateCustomLobbySuccessOverlay {
+  align-items: center;
+  background-color: #22283b;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  padding: 2rem 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10
+}
+
+.CreateCustomLobbyPopup .CreateCustomLobby .CreateCustomLobbySuccessOverlay .CreateCustomLobbySuccessTitle {
+  align-items: center;
+  animation-delay: .2s;
+  background-color: rgba(182, 131, 14, .2);
+  border-radius: 50%;
+  color: #ffb914;
+  display: flex;
+  font-size: 12rem;
+  height: 14rem;
+  justify-content: center;
+  position: relative;
+  text-align: left;
+  width: 14rem
+}
+
+.CreateCustomLobbyPopup .CreateCustomLobby .CreateCustomLobbySuccessOverlay .CreateCustomLobbySuccessTitle .Confetti {
+  font-size: 6rem
+}
+
+.CreateCustomLobbyPopup .CreateCustomLobby .CreateCustomLobbySuccessOverlay .CreateCustomLobbySuccessTitle .Confetti .ConfettiParticle {
+  animation-delay: .2s
+}
+
+.CreateCustomLobbyPopup .CreateCustomLobby .CreateCustomLobbySuccessOverlay .CreateCustomLobbySuccessButtons {
+  align-items: center;
+  animation-delay: .5s;
+  display: flex;
+  gap: 1rem;
+  justify-content: center
+}
+
+.CreateCustomLobbyPopup .CreateCustomLobby .CreateCustomLobbySuccessOverlay .CreateCustomLobbySuccessButtons .NewButton {
+  font-size: 3rem
+}
+
+.CreateCustomLobbyPopup .CreateCustomLobby .CreateCustomLobbyTitleContainer {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-right: 5rem;
+  padding-bottom: 1.5rem
+}
+
+.CreateCustomLobbyPopup .CreateCustomLobby .CreateCustomLobbyTitleContainer .CreateCustomLobbyTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: left
+}
+
+.CreateCustomLobbyPopup .CreateCustomLobby .CreateCustomLobbyBody {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem
+}
+
+.CreateCustomLobbyPopup .CreateCustomLobby .CreateCustomLobbyFields {
+  display: contents
+}
+
+.CreateCustomLobbyPopup .CreateCustomLobby .CreateCustomLobbyFooter {
+  display: flex;
+  gap: .5rem;
+  min-width: 0;
+  padding-bottom: 1rem;
+  text-align: left;
+  width: 100%
+}
+
+.CreateCustomLobbyPopup .CreateCustomLobby .CreateCustomLobbyFooter .CreateCustomLobbyError {
+  align-items: center;
+  background-color: rgba(204, 20, 20, .1);
+  border-radius: 0;
+  color: #ff8a80;
+  display: flex;
+  font-size: 1.25rem;
+  justify-content: center;
+  min-width: 0;
+  padding: 0 1rem;
+  text-align: left
+}
+
+.CreateCustomLobbyPopup .CreateCustomLobby .CreateCustomLobbyFooter .CreateCustomLobbyButton {
+  align-items: center;
+  display: inline-flex;
+  height: 3rem;
+  justify-content: center
+}
+
+.CreateCustomLobbyPopup .CreateCustomLobby .CreateCustomLobbyFooter .CreateCustomLobbyButton .ButtonBody {
+  overflow: hidden;
+  padding: 0 1rem
+}
+
+.CustomLobbyDescription {
+  width: 100%
+}
+
+.CustomLobbyDescription .TextInput {
+  flex-grow: 1
+}
+
+.CreateCustomLobby:not(.AdvancedMode) .NameInput .Label,
+.CreateCustomLobby:not(.AdvancedMode) .NameInput .TextInput {
+  font-size: 2rem
+}
+
+.CreateCustomLobby:not(.AdvancedMode) .GamemodeForm .SectionBody {
+  grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr))
+}
+
+.CreateCustomLobby:not(.AdvancedMode) .GamemodeForm .SectionBody .WorldGamemode {
+  height: 6rem
+}
+
+.CreateCustomLobby:not(.AdvancedMode) .MapTypeForm .SectionBody {
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr))
+}
+
+.BloxdForm.GamemodeForm .SectionBody,
+.BloxdForm.MapTypeForm .SectionBody {
+  grid-gap: .5rem;
+  align-items: stretch;
+  display: grid;
+  gap: .5rem;
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr))
+}
+
+.BloxdForm.GamemodeForm .SectionBody .MapType,
+.BloxdForm.GamemodeForm .SectionBody .WorldGamemode,
+.BloxdForm.MapTypeForm .SectionBody .MapType,
+.BloxdForm.MapTypeForm .SectionBody .WorldGamemode {
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), var(--background-image);
+  background-position: 50%;
+  background-size: cover;
+  border: 3px solid transparent;
+  border-radius: 0;
+  cursor: pointer;
+  display: flex;
+  height: 3rem;
+  justify-content: center;
+  padding: 1rem;
+  position: relative;
+  transition: border-color .2s
+}
+
+.BloxdForm.GamemodeForm .SectionBody .MapType.Selected,
+.BloxdForm.GamemodeForm .SectionBody .WorldGamemode.Selected,
+.BloxdForm.MapTypeForm .SectionBody .MapType.Selected,
+.BloxdForm.MapTypeForm .SectionBody .WorldGamemode.Selected {
+  border-color: #ffb914
+}
+
+.BloxdForm.MapTypeForm .SectionBody {
+  grid-template-columns: repeat(auto-fill, minmax(14.4rem, 1fr))
+}
+
+.WorldGamemode .Dropdown-placeholder {
+  width: 12rem
+}
+
+.SchematicListTitle {
+  color: #cfcfcf;
+  font-size: 1rem;
+  padding-top: .5rem;
+  text-align: left;
+  width: 100%
+}
+
+.SchematicListContainer {
+  background-color: #303a59;
+  border-radius: 0;
+  padding: .5rem;
+  width: 100%
+}
+
+.SchematicListContainer.SchematicListContainerDisabled {
+  filter: brightness(.6);
+  pointer-events: none
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SchematicListWindow {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  min-height: 0
+}
+
+.SchematicList {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  row-gap: .5rem;
+  width: 100%
+}
+
+.SchematicList .NoSchematicsText {
+  color: #cfcfcf;
+  font-size: 1rem;
+  margin: 2rem
+}

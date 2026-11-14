@@ -1,0 +1,186 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fadeInScaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(.6)
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes fadeInScaleUpNoOversize {
+  0% {
+    opacity: 0;
+    transform: scale(.8)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes shake {
+  0% {
+    rotate: 3deg
+  }
+
+  5% {
+    rotate: -2deg
+  }
+
+  10% {
+    rotate: 2deg
+  }
+
+  15% {
+    rotate: -3deg
+  }
+
+  20% {
+    rotate: 0deg
+  }
+}
+
+@keyframes loadingShimmer {
+  0% {
+    transform: translateX(-66.6666666667%)
+  }
+
+  to {
+    transform: none
+  }
+}
+
+@keyframes topRightStackIn {
+  0% {
+    opacity: 0;
+    transform: translateX(1.5rem)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
+
+@keyframes rainbowShimmer {
+  0% {
+    background-position: 200%
+  }
+
+  to {
+    background-position: -200%
+  }
+}
+
+.Crosshair {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  font-size: 1.3rem;
+  font-weight: 900;
+  justify-content: center;
+  left: 50%;
+  line-height: 1;
+  margin-top: -2px;
+  pointer-events: none;
+  position: fixed;
+  text-shadow: -1.2px 0 #000, 0 1.2px #000, 1.2px 0 #000, 0 -1.2px #000;
+  top: 50%;
+  translate: -50% -50%;
+  z-index: 1
+}
+
+.Crosshair.Touch {
+  font-size: max(1.3rem, 18px)
+}
+
+.GunCrosshairWrapper {
+  transition: opacity .2s
+}
+
+.GunCrosshair {
+  background-color: #fff;
+  border: 1px solid #000;
+  position: fixed;
+  transition: transform .2s ease-out;
+  z-index: 1
+}
+
+.GunCrosshairOverlayWrapper {
+  height: 104vh;
+  height: 104dvh;
+  left: 50%;
+  pointer-events: none;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: filter .3s;
+  width: 104vw;
+  width: 104dvw;
+  z-index: 2
+}
+
+.GunCrosshairOverlayWrapper .GunCrosshairOverlay {
+  background-color: #000;
+  height: 100%;
+  left: 0;
+  -webkit-mask-image: radial-gradient(circle, transparent 40%, #000 41%);
+  mask-image: radial-gradient(circle, transparent 40%, #000 41%);
+  position: absolute;
+  top: 0;
+  width: 100%
+}
+
+.GunCrosshairOverlayWrapper .GunCrosshairOverlayLine1,
+.GunCrosshairOverlayWrapper .GunCrosshairOverlayLine2 {
+  position: absolute
+}
+
+.GunCrosshairOverlayWrapper .GunCrosshairOverlayLine1 {
+  border-top: 1px dashed #000;
+  height: 1px;
+  left: 0;
+  top: 50%;
+  translate: 0 -25%;
+  width: 100%
+}
+
+.GunCrosshairOverlayWrapper .GunCrosshairOverlayLine2 {
+  border-left: 1px dashed #000;
+  height: 100%;
+  left: 50%;
+  top: 0;
+  translate: -25% 0;
+  width: 1px
+}
+
+.GunCrosshairOverlayWrapper .GunCrosshairOverlayDot {
+  border: 1px solid rgba(204, 20, 20, .5);
+  border-radius: 50%;
+  box-sizing: border-box;
+  height: 5px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  translate: -50% -50%;
+  width: 5px
+}

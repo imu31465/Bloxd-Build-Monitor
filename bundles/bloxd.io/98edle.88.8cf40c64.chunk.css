@@ -1,0 +1,3295 @@
+.StudioGamePage {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 60rem;
+  padding-bottom: 4rem;
+  position: relative
+}
+
+@media(min-width:1201px) {
+  .StudioGamePage {
+    max-width: 80rem
+  }
+}
+
+.StudioGamePage .SchematicPage .SchematicPageBody {
+  padding: 2rem
+}
+
+.StudioGamePage .StudioGamePageCentredMessage {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  gap: .75rem;
+  justify-content: center;
+  min-height: 50vh
+}
+
+.StudioGamePage .StudioGamePageCentredMessage.StudioGamePageError .svg-inline--fa {
+  color: #ffb914;
+  font-size: 3rem
+}
+
+.StudioGamePage .StudioGamePageCentredMessage.StudioGamePageError div {
+  font-size: 1.25rem
+}
+
+.StudioGamePage .StudioGamePageHeader {
+  align-items: stretch;
+  background-color: #303a59;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-sizing: border-box;
+  display: flex;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  width: 100%
+}
+
+.StudioGamePage .StudioGamePageHeader .StudioGamePageThumbnail {
+  aspect-ratio: 3/2;
+  border-radius: 0;
+  flex-shrink: 0;
+  height: 8rem;
+  overflow: hidden;
+  position: relative
+}
+
+.StudioGamePage .StudioGamePageHeader .StudioGamePageThumbnail .StudioGamePageThumbnailImage {
+  height: 100%;
+  object-fit: cover;
+  width: 100%
+}
+
+.StudioGamePage .StudioGamePageHeader .StudioGamePageHeaderInfo {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: .4rem;
+  min-width: 0
+}
+
+.StudioGamePage .StudioGamePageHeader .StudioGamePageHeaderInfo .StudioGamePageTitleRow {
+  align-items: center;
+  display: flex;
+  gap: .75rem;
+  justify-content: space-between
+}
+
+.StudioGamePage .StudioGamePageHeader .StudioGamePageHeaderInfo .StudioGamePageTitleRow .StudioGamePageTitleGroup {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  min-width: 0
+}
+
+.StudioGamePage .StudioGamePageHeader .StudioGamePageHeaderInfo .StudioGamePageTitleRow .StudioGamePageTitle {
+  font-size: 1.75rem;
+  margin: 0;
+  word-break: break-word
+}
+
+.StudioGamePage .StudioGamePageHeader .StudioGamePageHeaderInfo .StudioGamePageTitleRow .StudioGamePageLiveCcu {
+  align-items: center;
+  background-color: #394980;
+  color: #f2f2f2;
+  display: flex;
+  flex-shrink: 0;
+  font-size: .85rem;
+  font-weight: 800;
+  gap: .4rem;
+  padding: .15rem .6rem
+}
+
+.StudioGamePage .StudioGamePageHeader .StudioGamePageHeaderInfo .StudioGamePageTitleRow .StudioGamePageLiveCcu .StudioGamePageLiveCcuDot {
+  animation: StudioGamePageLiveCcuPulse 1.6s ease-in-out infinite;
+  background-color: #1dd06d;
+  border-radius: 50%;
+  height: .45rem;
+  width: .45rem
+}
+
+.StudioGamePage .StudioGamePageHeader .StudioGamePageHeaderInfo .StudioGamePageTitleRow .StudioGamePageLiveCcu.StudioGamePageLiveCcuUnknown {
+  color: #cfcfcf
+}
+
+.StudioGamePage .StudioGamePageHeader .StudioGamePageHeaderInfo .StudioGamePageTitleRow .StudioGamePageLiveCcu.StudioGamePageLiveCcuUnknown .StudioGamePageLiveCcuDot {
+  animation: none;
+  background-color: #838383
+}
+
+.StudioGamePage .StudioGamePageHeader .StudioGamePageHeaderInfo .StudioGamePageTitleRow .StudioGamePageStatusChips {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  gap: .3rem
+}
+
+.StudioGamePage .StudioGamePageHeader .StudioGamePageHeaderInfo .StudioGamePageTitleRow .StudioGamePageStatusChips .StudioGamePageStatusChip {
+  background-color: #394980;
+  color: #cfcfcf;
+  font-size: .85em;
+  font-weight: 800;
+  padding: .15rem .6rem;
+  text-transform: uppercase
+}
+
+.StudioGamePage .StudioGamePageHeader .StudioGamePageHeaderInfo .StudioGamePageTitleRow .StudioGamePageStatusChips .StudioGamePageStatusChip.StudioGamePageStatusChipPublished {
+  background-color: rgba(29, 208, 109, .15);
+  color: #1dd06d
+}
+
+.StudioGamePage .StudioGamePageHeader .StudioGamePageHeaderInfo .StudioGamePageTitleRow .StudioGamePageStatusChips .StudioGamePageApprovalChip {
+  align-items: center;
+  background-color: hsla(0, 96%, 69%, .15);
+  border: none;
+  color: #ff8a80;
+  cursor: pointer;
+  display: flex;
+  font-family: inherit;
+  font-size: .8em;
+  font-weight: 800;
+  gap: .35rem;
+  padding: .15rem .6rem;
+  text-transform: uppercase
+}
+
+.StudioGamePage .StudioGamePageHeader .StudioGamePageHeaderInfo .StudioGamePageTitleRow .StudioGamePageStatusChips .StudioGamePageApprovalChip.StudioGamePageApprovalChipPassed {
+  background-color: rgba(29, 208, 109, .15);
+  color: #1dd06d
+}
+
+@media(hover:hover) {
+  .StudioGamePage .StudioGamePageHeader .StudioGamePageHeaderInfo .StudioGamePageTitleRow .StudioGamePageStatusChips .StudioGamePageApprovalChip:hover {
+    filter: brightness(1.2)
+  }
+}
+
+.StudioGamePage .StudioGamePageHeader .StudioGamePageHeaderInfo .StudioGamePageTitleRow .StudioGamePageStatusChips .StudioGamePageApprovalChip.pad-focused {
+  filter: brightness(1.2)
+}
+
+@media(hover:none) {
+  .StudioGamePage .StudioGamePageHeader .StudioGamePageHeaderInfo .StudioGamePageTitleRow .StudioGamePageStatusChips .StudioGamePageApprovalChip:active {
+    filter: brightness(1.2)
+  }
+}
+
+.StudioGamePage .StudioGamePageHeader .StudioGamePageHeaderInfo .StudioGamePageHeaderMeta {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: .9rem;
+  gap: .25rem .6rem
+}
+
+.StudioGamePage .StudioGamePageHeader .StudioGamePageHeaderInfo .StudioGamePageHeaderMeta>*+:before {
+  content: "•";
+  margin-right: .6rem;
+  opacity: .35
+}
+
+.StudioGamePage .StudioGamePageHeader .StudioGamePageHeaderInfo .StudioGamePageHeaderMeta .StudioGamePageCategory {
+  color: #cfcfcf
+}
+
+.StudioGamePage .StudioGamePageHeader .StudioGamePageHeaderInfo .StudioGamePageHeaderMeta .StudioGamePageCategory span {
+  color: #fff;
+  font-weight: 800
+}
+
+.StudioGamePage .StudioGamePageHeader .StudioGamePageHeaderInfo .StudioGamePageHeaderMeta .StudioGamePagePublishedAt,
+.StudioGamePage .StudioGamePageHeader .StudioGamePageHeaderInfo .StudioGamePageHeaderMeta .StudioGamePageUpdatedAt {
+  color: #cfcfcf
+}
+
+.StudioGamePage .StudioGamePageHeader .StudioGamePageHeaderInfo .StudioGamePageHeaderMeta .StudioGamePageFavourites {
+  align-items: center;
+  display: flex;
+  font-weight: 800
+}
+
+.StudioGamePage .StudioGamePageHeader .StudioGamePageHeaderInfo .StudioGamePageHeaderMeta .StudioGamePageFavourites .svg-inline--fa {
+  color: #fc6464;
+  margin-right: .35rem
+}
+
+.StudioGamePage .StudioGamePageHeader .StudioGamePageHeaderInfo .StudioGamePageHeaderActions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-top: auto;
+  padding-top: .5rem
+}
+
+.StudioGamePage .StudioGamePageHeader .StudioGamePageHeaderInfo .StudioGamePageHeaderActions .ButtonBody {
+  padding: .5rem 1rem
+}
+
+.StudioGamePage .StudioGamePageTabs {
+  display: flex;
+  font-size: 1.6rem;
+  gap: 1rem;
+  padding-left: 1rem
+}
+
+.StudioGamePage .StudioGamePageContent {
+  background-color: #303a59;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-sizing: border-box;
+  width: 100%
+}
+
+.StudioGamePage .StudioGamePageAi {
+  padding: 2rem 2rem 0
+}
+
+.StudioGamePage .StudioGamePageAiHidden {
+  display: none
+}
+
+@keyframes StudioGamePageLiveCcuPulse {
+
+  0%,
+  to {
+    opacity: 1
+  }
+
+  50% {
+    opacity: .25
+  }
+}
+
+.StudioOpenedStat {
+  animation: StudioOpenedStatFlash 1.5s ease-out;
+  outline: .2rem solid transparent;
+  outline-offset: .3rem;
+  scroll-margin-top: 1rem
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .StudioOpenedStat {
+    animation: none;
+    outline-color: #ffb914
+  }
+}
+
+@keyframes StudioOpenedStatFlash {
+
+  0%,
+  40% {
+    outline-color: #ffb914
+  }
+
+  to {
+    outline-color: transparent
+  }
+}
+
+.StudioMetricsTab {
+  display: flex;
+  flex-direction: column;
+  gap: 0
+}
+
+.StudioMetricsTab .StudioMetricsSection {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem
+}
+
+.StudioMetricsTab .StudioMetricsSection .StudioMetricsSectionTitle {
+  color: #f2f2f2;
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin: 0
+}
+
+.StudioMetricsTab .StudioMetricsSection .StudioMetricsSectionNote {
+  color: #cfcfcf;
+  font-size: .9rem;
+  margin: 0
+}
+
+.StudioMetricsTab .StudioMetricsTabBody {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 2rem
+}
+
+.StudioMetricsTab .StudioMetricsGrid {
+  grid-gap: 1rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(14rem, 100%), 1fr))
+}
+
+@media(min-width:1201px) {
+  .StudioMetricsTab .StudioMetricsGrid {
+    grid-template-columns: repeat(3, 1fr)
+  }
+}
+
+.StudioMetricsTab .StudioMetricsGrid .StudioMetricCard {
+  background-color: #3c4b68;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column
+}
+
+.StudioMetricsTab .StudioMetricsGrid .StudioMetricCard .StudioMetricCardBody {
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
+  gap: .75rem;
+  min-width: 0;
+  padding: 1rem
+}
+
+.StudioMetricsTab .StudioMetricsGrid .StudioMetricCard .StudioMetricCardBody .StudioMetricCardIcon {
+  color: #ffb914;
+  flex-shrink: 0;
+  font-size: 1.5rem
+}
+
+.StudioMetricsTab .StudioMetricsGrid .StudioMetricCard .StudioMetricCardBody .StudioMetricCardIconImage {
+  -ms-interpolation-mode: nearest-neighbor;
+  height: 2.4rem;
+  image-rendering: optimizeSpeed;
+  image-rendering: -o-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: optimize-contrast;
+  width: 2.4rem
+}
+
+.StudioMetricsTab .StudioMetricsGrid .StudioMetricCard .StudioMetricCardBody .StudioMetricCardText {
+  display: flex;
+  flex-direction: column;
+  min-width: 0
+}
+
+.StudioMetricsTab .StudioMetricsGrid .StudioMetricCard .StudioMetricCardBody .StudioMetricCardText .StudioMetricCardLabel {
+  align-items: center;
+  color: #cfcfcf;
+  display: flex;
+  font-size: .85rem;
+  gap: .35rem
+}
+
+.StudioMetricsTab .StudioMetricsGrid .StudioMetricCard .StudioMetricCardBody .StudioMetricCardText .StudioMetricCardValue {
+  font-size: 1.3rem;
+  font-weight: 800;
+  line-height: 1.3;
+  min-height: 1.3em;
+  word-break: break-word
+}
+
+.StudioMetricsTab .StudioMetricsGrid .StudioMetricCard .StudioMetricCardBody .StudioMetricCardText .StudioMetricCardChange {
+  align-items: center;
+  color: #cfcfcf;
+  display: flex;
+  font-size: .75rem;
+  gap: .25rem;
+  line-height: 1.3;
+  min-height: 1.3em
+}
+
+.StudioMetricsTab .StudioMetricsGrid .StudioMetricCard .StudioMetricCardBody .StudioMetricCardText .StudioMetricCardChange.StudioMetricCardChangeUp {
+  color: #1dd06d
+}
+
+.StudioMetricsTab .StudioMetricsGrid .StudioMetricCard .StudioMetricCardBody .StudioMetricCardText .StudioMetricCardChange.StudioMetricCardChangeDown {
+  color: #ff8a80
+}
+
+.StudioMetricsTab .StudioMetricsGrid .StudioMetricCard .StudioMetricCardComparison {
+  align-items: center;
+  background-color: hsla(0, 0%, 64%, .15);
+  color: #a4a4a4;
+  display: flex;
+  font-size: .75rem;
+  gap: .25rem;
+  justify-content: center;
+  line-height: 1.3;
+  min-height: 1.3em;
+  padding: .4rem 1rem
+}
+
+.StudioMetricsTab .StudioMetricsGrid .StudioMetricCard .StudioMetricCardComparison.StudioMetricCardComparisonAhead {
+  color: #1dd06d
+}
+
+.StudioMetricsTab .StudioMetricsGrid .StudioMetricCard .StudioMetricCardComparison.StudioMetricCardComparisonBehind {
+  color: #ff8a80
+}
+
+.StudioMetricsTab .StudioMetricsGrid .StudioMetricCard.StudioMetricCardTopRank {
+  border-color: var(--studioTopRankColour)
+}
+
+.StudioMetricsTab .StudioMetricsGrid .StudioMetricCard.StudioMetricCardTopRank .StudioMetricCardValue {
+  color: var(--studioTopRankColour)
+}
+
+.StudioMetricsTab .StudioMetricsGrid .StudioMetricCard.StudioMetricCardTopRank.StudioMetricCardTopRank1 {
+  --studioTopRankColour: #5ce1d8
+}
+
+.StudioMetricsTab .StudioMetricsGrid .StudioMetricCard.StudioMetricCardTopRank.StudioMetricCardTopRank2 {
+  --studioTopRankColour: #ffb914
+}
+
+.StudioMetricsTab .StudioMetricsGrid .StudioMetricCard.StudioMetricCardTopRank.StudioMetricCardTopRank3 {
+  --studioTopRankColour: #cfcfcf
+}
+
+.StudioMetricsTab .StudioMetricsGrid .StudioMetricCard.StudioMetricCardPlaceholder .StudioMetricCardIcon {
+  color: #cfcfcf
+}
+
+.StudioMetricsTab .StudioMetricsGrid .StudioMetricCard.StudioMetricCardPlaceholder .StudioMetricCardValue {
+  opacity: .6
+}
+
+.StudioMetricsTab .StudioMetricsBanner {
+  align-items: center;
+  background-color: rgba(255, 185, 20, .12);
+  border-left: .2rem solid #ffb914;
+  display: flex;
+  font-size: .9rem;
+  gap: .75rem;
+  padding: .75rem 1rem
+}
+
+.StudioMetricsTab .StudioMetricsBannerWarning {
+  background-color: rgba(255, 185, 20, .12);
+  border-left-color: #ffb914
+}
+
+.StudioMetricsTab .StudioMetricsBannerWarning svg {
+  color: #ffb914
+}
+
+.StudioMetricsTab .StudioMetricsBannerError {
+  background-color: rgba(227, 79, 79, .12);
+  border-left-color: #e34f4f
+}
+
+.StudioMetricsTab .StudioMetricsBannerError svg {
+  color: #e34f4f
+}
+
+.StudioMetricsTab .StudioMetricsRangeTabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem
+}
+
+.StudioMetricsTab .StudioMetricsCharts {
+  grid-gap: 1rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(24rem, 100%), 1fr))
+}
+
+.StudioMetricsTab .StudioMetricsChartsError {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem
+}
+
+.StudioMetricsTab .StudioMetricsChartsError .svg-inline--fa {
+  color: #ffb914;
+  font-size: 1.5rem
+}
+
+.StudioStatsBarChartFilters {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem;
+  justify-content: flex-end
+}
+
+.StudioStatsBarChartFilters .StudioStatsBarChartNameFilter {
+  min-width: 0;
+  padding: .4em .6em;
+  text-align: left;
+  width: 9rem
+}
+
+.StudioStatsBarChartFilters .Dropdown-root,
+.StudioStatsBarChartFilters .StudioEventPickerDropdown {
+  min-width: 0
+}
+
+.StudioStatsBarChartFilters .BloxdDropdownControl {
+  padding: .4em 2.5em .4em .6em
+}
+
+.StudioStatsBarChartFilters .BloxdDropdownControl .Dropdown-placeholder {
+  overflow-wrap: anywhere;
+  white-space: normal;
+  width: auto
+}
+
+.StudioStatsBarChartFilters .BloxdDropdownMenu {
+  left: auto;
+  max-width: var(--studio-filter-menu-max-width, none);
+  min-width: 100%;
+  right: 0;
+  width: max-content
+}
+
+.StudioStatsBarChartFilters .BloxdDropdownMenu .Dropdown-option {
+  overflow-wrap: anywhere;
+  white-space: normal
+}
+
+.StudioStatsChart.StudioStatsBarChart .StudioStatsChartCanvas {
+  height: auto
+}
+
+.StudioStatsChart.StudioStatsBarChart .StudioStatsBarChartScroll {
+  overflow: hidden
+}
+
+.StudioStatsChart {
+  background-color: #3c4b68;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  min-width: 0;
+  padding: 1rem
+}
+
+.StudioStatsChart .StudioStatsChartHeader {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  justify-content: space-between
+}
+
+.StudioStatsChart .StudioStatsChartHeader .StudioStatsChartTitle {
+  align-items: center;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 800;
+  gap: .4rem
+}
+
+.StudioStatsChart .StudioStatsChartHeader .StudioStatsChartHeaderActions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: .8rem;
+  gap: .35rem;
+  justify-content: flex-end;
+  margin-left: auto
+}
+
+.StudioStatsChart .StudioStatsChartHeader .StudioStatsChartHeaderActions .StudioStatsChartSampleSize {
+  color: #cfcfcf
+}
+
+.StudioStatsChart .StudioStatsChartFilters {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: .8rem;
+  gap: .35rem;
+  justify-content: flex-end
+}
+
+.StudioStatsChart .StudioStatsChartPlaceholder {
+  align-items: center;
+  display: flex;
+  font-style: italic;
+  height: var(--studio-chart-height, 14rem);
+  justify-content: center;
+  opacity: .7
+}
+
+.StudioStatsChart .StudioStatsChartCanvas {
+  height: var(--studio-chart-height, 14rem)
+}
+
+.StudioStatsChart .StudioStatsChartLegend {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: .75rem;
+  gap: .75rem
+}
+
+.StudioStatsChart .StudioStatsChartLegend .StudioStatsChartLegendEntry {
+  align-items: center;
+  display: flex;
+  gap: .35rem;
+  min-width: 0
+}
+
+.StudioStatsChart .StudioStatsChartLegend .StudioStatsChartLegendEntry .StudioStatsChartLegendSwatch {
+  border-radius: .1rem;
+  flex-shrink: 0;
+  height: .2rem;
+  width: .8rem
+}
+
+.StudioStatsChart .StudioStatsChartLegend .StudioStatsChartLegendEntry .StudioStatsChartLegendSwatch.StudioStatsChartLegendSwatchComparison {
+  background-image: linear-gradient(90deg, currentColor 60%, transparent 0);
+  background-size: .3rem 100%
+}
+
+.StudioStatsChart .StudioStatsChartLegend .StudioStatsChartLegendEntry .StudioStatsChartLegendSwatch.StudioStatsChartLegendSwatchComparisonBand {
+  background-color: currentColor;
+  height: .55rem;
+  opacity: .35
+}
+
+.StudioStatsChart .StudioStatsChartLegend .StudioStatsChartLegendEntry .StudioStatsChartLegendRemove {
+  align-items: center;
+  color: #a4a4a4;
+  cursor: pointer;
+  display: flex;
+  font-size: .65rem;
+  padding: .1rem
+}
+
+@media(hover:hover) {
+  .StudioStatsChart .StudioStatsChartLegend .StudioStatsChartLegendEntry .StudioStatsChartLegendRemove:hover {
+    color: #fff
+  }
+}
+
+.StudioStatsChart .StudioStatsChartLegend .StudioStatsChartLegendEntry .StudioStatsChartLegendRemove.pad-focused {
+  color: #fff
+}
+
+@media(hover:none) {
+  .StudioStatsChart .StudioStatsChartLegend .StudioStatsChartLegendEntry .StudioStatsChartLegendRemove:active {
+    color: #fff
+  }
+}
+
+.StudioStatsChart .StudioStatsChartFooter {
+  align-items: flex-end;
+  display: flex;
+  gap: .75rem
+}
+
+.StudioStatsChart .StudioStatsChartFooter .StudioStatsChartLegend {
+  flex: 1 1;
+  min-width: 0
+}
+
+.StudioStatsChart .StudioStatsChartFooter .StudioStatsChartFooterActions {
+  display: flex;
+  gap: .35rem;
+  margin-left: auto
+}
+
+.StudioStatsChart .StudioStatsChartMarkerLabel {
+  fill: #a4a4a4;
+  font-size: .7rem
+}
+
+.StudioStatsChart .StudioStatsChartTooltip {
+  background-color: #394980;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  padding: .4rem .6rem
+}
+
+.StudioStatsChart .StudioStatsChartTooltip .StudioStatsChartTooltipTitle {
+  color: #cfcfcf;
+  font-size: .75rem
+}
+
+.StudioStatsChart .StudioStatsChartTooltip .StudioStatsChartTooltipValue {
+  font-size: .95rem;
+  font-weight: 800
+}
+
+.StudioStatsChart .StudioStatsChartTooltip .StudioStatsChartTooltipSub {
+  color: #cfcfcf;
+  font-size: .75rem
+}
+
+.StudioStatsChart .StudioStatsChartTooltip .StudioStatsChartTooltipLine {
+  align-items: center;
+  display: flex;
+  font-size: .75rem;
+  gap: .35rem
+}
+
+.StudioStatsChart .StudioStatsChartTooltip .StudioStatsChartTooltipLine .StudioStatsChartTooltipLineSwatch {
+  border-radius: .1rem;
+  flex-shrink: 0;
+  height: .5rem;
+  width: .5rem
+}
+
+.StudioSmallIconButton {
+  flex-shrink: 0;
+  font-size: .8rem
+}
+
+.StudioEventGraph {
+  --studio-chart-height: 24rem
+}
+
+.StudioEventGraph.StudioEventGraphFullscreen .StudioStatsChartCanvas,
+.StudioEventGraph.StudioEventGraphFullscreen .StudioStatsChartPlaceholder {
+  flex: 1 1;
+  height: auto;
+  min-height: 0
+}
+
+.StudioEventGraph .StudioEventFlowCheckbox {
+  align-items: center;
+  display: flex;
+  gap: .35rem;
+  margin-right: auto
+}
+
+.StudioEventGraph .StudioEventFlowCheckbox label {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  gap: .35rem
+}
+
+.StudioEventGraph .StudioEventGraphViewport {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%
+}
+
+.StudioEventGraph .StudioEventGraphViewport .StudioEventGraphEmptyMessage {
+  align-items: center;
+  color: #cfcfcf;
+  display: flex;
+  font-style: italic;
+  height: 100%;
+  justify-content: center
+}
+
+.StudioEventGraph .StudioEventGraphViewport .StudioEventGraphSvg {
+  cursor: grab;
+  display: block;
+  height: 100%;
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
+  width: 100%
+}
+
+.StudioEventGraph .StudioEventGraphViewport .StudioEventGraphSvg.StudioEventGraphSvgPanning {
+  cursor: grabbing
+}
+
+.StudioEventGraph .StudioEventGraphViewport .StudioEventGraphSvg.StudioEventGraphSvgCanRemoveEdge .StudioEventGraphEdge,
+.StudioEventGraph .StudioEventGraphViewport .StudioEventGraphSvg.StudioEventGraphSvgCanRemoveEdge .StudioEventGraphEdgeLabel,
+.StudioEventGraph .StudioEventGraphViewport .StudioEventGraphSvg.StudioEventGraphSvgCanRemoveNode .StudioEventGraphNode {
+  cursor: pointer
+}
+
+.StudioEventGraph .StudioEventGraphViewport .StudioEventGraphSvg.StudioEventGraphSvgCanAddEdge .StudioEventGraphNode,
+.StudioEventGraph .StudioEventGraphViewport .StudioEventGraphSvg.StudioEventGraphSvgDrafting {
+  cursor: crosshair
+}
+
+.StudioEventGraph .StudioEventGraphViewport .StudioEventGraphSvg .StudioEventGraphEdgeDraft {
+  fill: none;
+  stroke: #f2f2f2;
+  stroke-width: 2;
+  stroke-dasharray: 6 4;
+  pointer-events: none
+}
+
+.StudioEventGraph .StudioEventGraphViewport .StudioEventGraphSvg .StudioEventGraphEdgeDraft.StudioEventGraphEdgeDraftInvalid {
+  stroke: #e34f4f
+}
+
+.StudioEventGraph .StudioEventGraphViewport .StudioEventGraphSvg .StudioEventGraphEdge {
+  opacity: .55
+}
+
+.StudioEventGraph .StudioEventGraphViewport .StudioEventGraphSvg .StudioEventGraphEdge .StudioEventGraphEdgeLine {
+  fill: none;
+  stroke: #2e80ee
+}
+
+.StudioEventGraph .StudioEventGraphViewport .StudioEventGraphSvg .StudioEventGraphEdge .StudioEventGraphEdgeArrow {
+  fill: #2e80ee
+}
+
+.StudioEventGraph .StudioEventGraphViewport .StudioEventGraphSvg .StudioEventGraphEdge .StudioEventGraphEdgeHitArea {
+  fill: none;
+  stroke: transparent;
+  pointer-events: stroke
+}
+
+.StudioEventGraph .StudioEventGraphViewport .StudioEventGraphSvg .StudioEventGraphEdge.StudioEventGraphEdgeHighlighted {
+  opacity: .95
+}
+
+.StudioEventGraph .StudioEventGraphViewport .StudioEventGraphSvg .StudioEventGraphEdge.StudioEventGraphEdgeHighlighted .StudioEventGraphEdgeLine {
+  stroke: #ad50e3
+}
+
+.StudioEventGraph .StudioEventGraphViewport .StudioEventGraphSvg .StudioEventGraphEdge.StudioEventGraphEdgeHighlighted .StudioEventGraphEdgeArrow {
+  fill: #ad50e3
+}
+
+.StudioEventGraph .StudioEventGraphViewport .StudioEventGraphSvg .StudioEventGraphEdge.StudioEventGraphEdgeDimmed {
+  opacity: .15
+}
+
+.StudioEventGraph .StudioEventGraphViewport .StudioEventGraphSvg .StudioEventGraphEdge.StudioEventGraphEdgePending .StudioEventGraphEdgeLine {
+  stroke-dasharray: 4 3
+}
+
+.StudioEventGraph .StudioEventGraphViewport .StudioEventGraphSvg .StudioEventGraphEdgeLabel rect {
+  fill: #22283b;
+  stroke: #2e80ee;
+  stroke-width: 1
+}
+
+.StudioEventGraph .StudioEventGraphViewport .StudioEventGraphSvg .StudioEventGraphEdgeLabel text {
+  fill: #f2f2f2
+}
+
+.StudioEventGraph .StudioEventGraphViewport .StudioEventGraphSvg .StudioEventGraphEdgeLabel.StudioEventGraphEdgeLabelHighlighted rect {
+  stroke: #ad50e3
+}
+
+.StudioEventGraph .StudioEventGraphViewport .StudioEventGraphSvg .StudioEventGraphEdgeLabel.StudioEventGraphEdgeLabelDimmed {
+  opacity: .35
+}
+
+.StudioEventGraph .StudioEventGraphViewport .StudioEventGraphSvg .StudioEventGraphEdgeLabel.StudioEventGraphEdgeLabelPending text {
+  opacity: .5
+}
+
+.StudioEventGraph .StudioEventGraphViewport .StudioEventGraphSvg .StudioEventGraphNode rect {
+  fill: #22283b;
+  stroke: #2e80ee;
+  stroke-width: 1.5
+}
+
+.StudioEventGraph .StudioEventGraphViewport .StudioEventGraphSvg .StudioEventGraphNode .StudioEventGraphNodeName {
+  fill: #f2f2f2
+}
+
+.StudioEventGraph .StudioEventGraphViewport .StudioEventGraphSvg .StudioEventGraphNode .StudioEventGraphNodeDetail,
+.StudioEventGraph .StudioEventGraphViewport .StudioEventGraphSvg .StudioEventGraphNode .StudioEventGraphNodeValue {
+  fill: #cfcfcf
+}
+
+.StudioEventGraph .StudioEventGraphViewport .StudioEventGraphSvg .StudioEventGraphNode.StudioEventGraphNodePending .StudioEventGraphNodeValue {
+  opacity: .5
+}
+
+.StudioEventGraph .StudioEventGraphViewport .StudioEventGraphSvg .StudioEventGraphNode.StudioEventGraphNodeDraftSource rect {
+  stroke: #f2f2f2
+}
+
+.StudioEventGraph .StudioEventGraphViewport .StudioEventGraphSvg .StudioEventGraphNode.StudioEventGraphNodeOpened rect {
+  stroke: #ffb914;
+  stroke-width: 3
+}
+
+.StudioEventGraph .StudioEventGraphViewport .StudioEventGraphSvg .StudioEventGraphNode.StudioEventGraphNodeHighlighted rect {
+  fill: #453265;
+  stroke: #ad50e3
+}
+
+.StudioEventGraph .StudioEventGraphViewport .StudioEventGraphSvg .StudioEventGraphNode.StudioEventGraphNodeDropTarget rect {
+  stroke: #1dd06d
+}
+
+.StudioEventGraph .StudioEventGraphViewport .StudioEventGraphSvg .StudioEventGraphNode.StudioEventGraphNodeDropTargetInvalid rect {
+  stroke: #e34f4f
+}
+
+.StudioEventValues {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem
+}
+
+.StudioEventValues .StudioEventValuesHeader {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  justify-content: space-between
+}
+
+.StudioEventValues .StudioEventValuesHeader .StudioEventValuesMeasure {
+  align-items: center;
+  display: flex;
+  gap: .4rem
+}
+
+.StudioEventValues .StudioEventValuesHeader .StudioStatsBarChartFilters {
+  font-size: .85rem
+}
+
+.StudioEventValues .StudioEventValuesMessage {
+  align-items: center;
+  background-color: #3c4b68;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  color: #cfcfcf;
+  display: flex;
+  font-style: italic;
+  justify-content: center;
+  min-height: 14rem;
+  padding: 1.5rem 1rem;
+  text-align: center
+}
+
+.StudioEventValues .StudioEventValuesWorthALook {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: .8rem;
+  gap: .4rem
+}
+
+.StudioEventValues .StudioEventValuesWorthALook .StudioEventValuesWorthALookLabel {
+  color: #cfcfcf
+}
+
+.StudioEventValues .StudioEventValuesWorthALook .StudioEventValuesFlag {
+  align-items: center;
+  background-color: rgba(255, 185, 20, .12);
+  border: 1px solid rgba(255, 185, 20, .4);
+  color: #fcd373;
+  cursor: pointer;
+  display: inline-flex;
+  gap: .35rem;
+  padding: .2rem .55rem
+}
+
+@media(hover:hover) {
+  .StudioEventValues .StudioEventValuesWorthALook .StudioEventValuesFlag:hover {
+    background-color: rgba(255, 185, 20, .24)
+  }
+}
+
+.StudioEventValues .StudioEventValuesWorthALook .StudioEventValuesFlag.pad-focused {
+  background-color: rgba(255, 185, 20, .24)
+}
+
+@media(hover:none) {
+  .StudioEventValues .StudioEventValuesWorthALook .StudioEventValuesFlag:active {
+    background-color: rgba(255, 185, 20, .24)
+  }
+}
+
+.StudioEventValues .StudioEventValuesWorthALook .StudioEventValuesFlag.StudioEventValuesFlagSelected {
+  border-color: #ffb914
+}
+
+.StudioEventValues .StudioEventValuesBasis {
+  color: #a4a4a4;
+  font-size: .8rem
+}
+
+.StudioEventValues .StudioEventValuesWarnings {
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+  margin-top: -.4rem
+}
+
+.StudioEventValues .StudioEventValuesWarnings .StudioEventValuesWarning {
+  align-items: baseline;
+  color: #fcd373;
+  display: flex;
+  font-size: .85rem;
+  gap: .5rem
+}
+
+.StudioEventValues .StudioEventValuesWarnings .StudioEventValuesWarning .svg-inline--fa {
+  color: #ffb914
+}
+
+.StudioEventValues .StudioEventValuesCharts {
+  grid-gap: .75rem;
+  display: grid;
+  gap: .75rem;
+  grid-template-columns: repeat(3, 1fr)
+}
+
+@media(max-width:1280px) {
+  .StudioEventValues .StudioEventValuesCharts {
+    grid-template-columns: repeat(2, 1fr)
+  }
+
+  .StudioEventValues .StudioEventValuesCharts .StudioEventValuesChart:last-child {
+    grid-column: 1/-1
+  }
+}
+
+@media(max-width:700px) {
+  .StudioEventValues .StudioEventValuesCharts {
+    grid-template-columns: 1fr
+  }
+}
+
+.StudioEventValues .StudioEventValuesChart {
+  --studio-chart-height: 13rem;
+  min-width: 0
+}
+
+.StudioEventValues .StudioEventValuesChart .StudioEventValuesCheckbox {
+  align-items: center;
+  display: flex;
+  gap: .35rem;
+  margin-right: auto
+}
+
+.StudioEventValues .StudioEventValuesChart .StudioEventValuesCheckbox label {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  gap: .35rem
+}
+
+.StudioEventValues .StudioEventValuesChart .StudioEventValuesFooter {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  margin-top: auto
+}
+
+.StudioEventValues .StudioEventValuesChart .StudioEventValuesFooter .StudioEventValuesSwatchLine {
+  background-color: currentColor
+}
+
+.StudioEventValues .StudioEventValuesChart .StudioEventValuesFooter .StudioEventValuesChartNote {
+  color: #a4a4a4;
+  font-style: italic
+}
+
+.StudioEventValues .StudioEventValuesChart .StudioEventValuesReading {
+  color: #f2f2f2;
+  font-size: .85rem;
+  line-height: 1.35
+}
+
+.StudioHeatmap {
+  --studio-chart-height: 34rem
+}
+
+.StudioHeatmap.StudioStatsChart {
+  gap: .5rem
+}
+
+.StudioHeatmap.StudioHeatmapShowingOverview .StudioStatsChartCanvas {
+  height: auto
+}
+
+.StudioHeatmap .StudioHeatmapChip {
+  flex-shrink: 0;
+  font-size: .75rem;
+  gap: .4em;
+  white-space: nowrap
+}
+
+.StudioHeatmap .StudioHeatmapChip .StudioHeatmapChipName {
+  max-width: 14rem;
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+
+.StudioHeatmap .StudioHeatmapChipCount {
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+  opacity: .7
+}
+
+.StudioHeatmap .StudioHeatmapLayerBar {
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+  width: 100%
+}
+
+.StudioHeatmap .StudioHeatmapLayerBar .StudioHeatmapLayerTitle {
+  align-items: center;
+  display: flex;
+  font-weight: 700;
+  gap: .5rem;
+  min-height: 1.5rem
+}
+
+.StudioHeatmap .StudioHeatmapLayerBar .StudioHeatmapLayerTitle .StudioHeatmapClear {
+  border-width: 1px;
+  box-sizing: border-box;
+  font-size: .72rem;
+  min-height: 1.5rem;
+  padding: 0 .55em
+}
+
+.StudioHeatmap .StudioHeatmapLayerBar .StudioHeatmapTypeChips {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem
+}
+
+.StudioHeatmap .StudioHeatmapLayerBar .StudioHeatmapMore {
+  align-self: stretch;
+  display: flex;
+  position: relative
+}
+
+.StudioHeatmap .StudioHeatmapLayerBar .StudioHeatmapMore:after {
+  border-color: #f2f2f2 transparent transparent;
+  border-style: solid;
+  border-width: 5px 5px 0;
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  right: .7em;
+  top: 50%;
+  transform: translateY(-50%)
+}
+
+.StudioHeatmap .StudioHeatmapLayerBar .StudioHeatmapMore .StudioHeatmapMoreSelect {
+  appearance: none;
+  background-color: #3c4b68;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: .75rem;
+  height: 100%;
+  padding: 0 2.2em 0 .6rem
+}
+
+.StudioHeatmap .StudioHeatmapLayerBar .StudioHeatmapMore .StudioHeatmapMoreSelect:focus-visible {
+  outline: 2px solid #ffb914;
+  outline-offset: 2px
+}
+
+.StudioHeatmap .StudioHeatmapLayerBar .StudioHeatmapMore .StudioHeatmapMoreSelect option {
+  background-color: #3c4b68;
+  color: #fff
+}
+
+.StudioHeatmap .StudioHeatmapLayerBar .StudioHeatmapLayerLine {
+  align-items: center;
+  display: flex;
+  min-height: 1.5rem
+}
+
+.StudioHeatmap .StudioHeatmapLayerBar .StudioHeatmapLayerLine .StudioHeatmapValueChips {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25rem;
+  min-width: 0
+}
+
+.StudioHeatmap .StudioHeatmapLayerBar .StudioHeatmapLayerLine .StudioHeatmapValueChips .StudioHeatmapValueChipsType {
+  color: #cfcfcf;
+  font-size: .72rem;
+  margin-right: .15rem
+}
+
+.StudioHeatmap .StudioHeatmapLayerBar .StudioHeatmapLayerLine .StudioHeatmapValueChips .StudioHeatmapValueChipsType:after {
+  content: ":"
+}
+
+.StudioHeatmap .StudioHeatmapLayerBar .StudioHeatmapLayerLine .StudioHeatmapValueChips .StudioHeatmapChip {
+  border-width: 1px;
+  box-sizing: border-box;
+  font-size: .72rem;
+  min-height: 1.5rem;
+  padding: 0 .55em
+}
+
+.StudioHeatmap .StudioHeatmapLayerBar .StudioHeatmapLayerLine .StudioHeatmapValueChips .StudioHeatmapChip .StudioHeatmapChipCount {
+  opacity: .85
+}
+
+.StudioHeatmap .StudioHeatmapLayerBar .StudioHeatmapLayerLine .StudioHeatmapValueChips .StudioHeatmapChip:not(.ActiveSecondaryButton) {
+  border-color: hsla(0, 0%, 81%, .5)
+}
+
+@media(hover:hover) {
+  .StudioHeatmap .StudioHeatmapLayerBar .StudioHeatmapLayerLine .StudioHeatmapValueChips .StudioHeatmapChip:not(.ActiveSecondaryButton):hover {
+    border-color: #b6830e
+  }
+}
+
+.StudioHeatmap .StudioHeatmapLayerBar .StudioHeatmapLayerLine .StudioHeatmapValueChips .StudioHeatmapChip:not(.ActiveSecondaryButton).pad-focused {
+  border-color: #b6830e
+}
+
+@media(hover:none) {
+  .StudioHeatmap .StudioHeatmapLayerBar .StudioHeatmapLayerLine .StudioHeatmapValueChips .StudioHeatmapChip:not(.ActiveSecondaryButton):active {
+    border-color: #b6830e
+  }
+}
+
+.StudioHeatmap .StudioHeatmapPeriod {
+  color: #cfcfcf;
+  white-space: nowrap
+}
+
+.StudioHeatmap .StudioHeatmapOverview {
+  grid-gap: 12px;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  width: 100%
+}
+
+.StudioHeatmap .StudioHeatmapOverview .StudioHeatmapTile {
+  container-type: inline-size;
+  align-items: stretch;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  min-width: 0;
+  padding: 0;
+  text-align: left
+}
+
+@media(hover:hover) {
+  .StudioHeatmap .StudioHeatmapOverview .StudioHeatmapTile:hover .StudioHeatmapTileLabel {
+    text-decoration: underline
+  }
+}
+
+.StudioHeatmap .StudioHeatmapOverview .StudioHeatmapTile.pad-focused .StudioHeatmapTileLabel {
+  text-decoration: underline
+}
+
+@media(hover:none) {
+  .StudioHeatmap .StudioHeatmapOverview .StudioHeatmapTile:active .StudioHeatmapTileLabel {
+    text-decoration: underline
+  }
+}
+
+.StudioHeatmap .StudioHeatmapOverview .StudioHeatmapTile .StudioHeatmapTileName {
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+  font-size: .85rem;
+  font-weight: 700;
+  gap: .5rem;
+  height: 22px;
+  justify-content: space-between;
+  white-space: nowrap
+}
+
+.StudioHeatmap .StudioHeatmapOverview .StudioHeatmapTile .StudioHeatmapTileName .StudioHeatmapTileLabel {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+
+.StudioHeatmap .StudioHeatmapOverview .StudioHeatmapTile .StudioHeatmapTileMap {
+  aspect-ratio: 1;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  position: relative
+}
+
+.StudioHeatmap .StudioStatsChartCanvas {
+  position: relative
+}
+
+.StudioHeatmap .StudioHeatmapMapNote {
+  background-color: rgba(0, 0, 0, .65);
+  border-radius: .25rem;
+  font-size: .75rem;
+  left: 50%;
+  max-width: 80%;
+  padding: .3rem .6rem;
+  pointer-events: none;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%)
+}
+
+.StudioHeatmap .StudioHeatmapExpanded {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  height: 100%;
+  width: 100%
+}
+
+.StudioHeatmap .StudioHeatmapExpanded.StudioHeatmapExpandedFullscreen {
+  background-color: #3c4b68;
+  padding: 1rem
+}
+
+.StudioHeatmap .StudioHeatmapExpanded .StudioHeatmapExpandedHeader {
+  grid-gap: .75rem;
+  align-items: center;
+  display: grid;
+  flex-shrink: 0;
+  font-size: .8rem;
+  gap: .75rem;
+  grid-template-columns: 1fr auto 1fr
+}
+
+.StudioHeatmap .StudioHeatmapExpanded .StudioHeatmapExpandedHeader>:first-child {
+  justify-self: start
+}
+
+.StudioHeatmap .StudioHeatmapExpanded .StudioHeatmapExpandedHeader .StudioHeatmapExpandedName {
+  align-items: center;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 700;
+  gap: .4rem
+}
+
+.StudioHeatmap .StudioHeatmapExpanded .StudioHeatmapExpandedHeader .StudioHeatmapExpandedViews {
+  display: flex;
+  gap: .25rem;
+  justify-self: end
+}
+
+.StudioHeatmap .StudioHeatmapExpanded .StudioHeatmapExpandedMap {
+  flex: 1 1;
+  min-height: 0;
+  position: relative
+}
+
+.StudioHeatmap .StudioHeatmapExpanded .StudioHeatmapExpandedMap .StudioHeatmapExpandedKey {
+  background-color: rgba(0, 0, 0, .6);
+  border-radius: .25rem;
+  bottom: .5rem;
+  font-size: .75rem;
+  left: .5rem;
+  padding: .3rem .5rem;
+  pointer-events: none;
+  position: absolute
+}
+
+.StudioHeatmap .StudioHeatmapExpanded .StudioHeatmapExpandedMap .StudioHeatmapExpandedKey .StudioHeatmapFadeSlider {
+  display: flex;
+  flex-direction: column;
+  font-size: .7rem;
+  gap: .1rem;
+  margin-top: .3rem;
+  pointer-events: auto
+}
+
+.StudioHeatmap .StudioHeatmapExpanded .StudioHeatmapExpandedMap .StudioHeatmapExpandedKey .StudioHeatmapFadeSlider input {
+  accent-color: #ffb914;
+  cursor: pointer;
+  margin: 0;
+  width: 10rem
+}
+
+.StudioHeatmap .StudioHeatmapExpanded .StudioHeatmapExpandedMap .StudioHeatmapExpandedKey .StudioHeatmapPerPositionToggle {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  font-size: .7rem;
+  gap: .35rem;
+  margin-top: .7rem;
+  pointer-events: auto
+}
+
+.StudioHeatmap .StudioHeatmapExpanded .StudioHeatmapExpandedMap .StudioHeatmapExpandedKey .StudioHeatmapPerPositionToggle input {
+  accent-color: #ffb914;
+  cursor: pointer;
+  margin: 0
+}
+
+.StudioHeatmap .StudioHeatmapExpanded .StudioHeatmapExpandedMap .StudioHeatmapMapReadout {
+  bottom: auto;
+  top: calc(18px + .5rem)
+}
+
+.StudioHeatmap .StudioHeatmapExpanded .StudioHeatmapExpandedMap .StudioHeatmap3D .StudioHeatmapMapReadout {
+  top: 2.5rem
+}
+
+.StudioHeatmap .StudioHeatmapExpanded .StudioHeatmapExpandedTimeline {
+  --time-axis-top: 0.5rem;
+  --time-axis-height: 2rem;
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+  font-size: .8rem;
+  gap: .75rem;
+  min-height: var(--time-axis-height)
+}
+
+.StudioHeatmap .StudioHeatmapExpanded .StudioHeatmapExpandedTimeline .StudioHeatmapExpandedPlay {
+  flex-shrink: 0
+}
+
+.StudioHeatmap .StudioHeatmapExpanded .StudioHeatmapExpandedTimeline .StudioHeatmapExpandedTime {
+  display: flex;
+  flex: 0 0 6.5rem;
+  flex-direction: column;
+  text-align: right;
+  white-space: nowrap
+}
+
+.StudioHeatmap .StudioHeatmapExpanded .StudioHeatmapExpandedTimeline .StudioHeatmapExpandedTime .StudioHeatmapExpandedTimeCount {
+  color: #cfcfcf;
+  font-size: .7rem
+}
+
+.StudioHeatmap .StudioHeatmapExpanded .StudioHeatmapExpandedTimeline .StudioHeatmapExpandedTimelineStatus {
+  color: #cfcfcf;
+  flex-shrink: 0;
+  white-space: nowrap
+}
+
+.StudioHeatmap .StudioHeatmapExpanded .StudioHeatmapExpandedTimeline .StudioHeatmapTimeAxis {
+  cursor: ew-resize;
+  flex: 1 1;
+  height: var(--time-axis-height);
+  min-width: 0;
+  padding: 0 .5rem;
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none
+}
+
+.StudioHeatmap .StudioHeatmapExpanded .StudioHeatmapExpandedTimeline .StudioHeatmapTimeAxis .StudioHeatmapTimeAxisTrack {
+  height: 100%;
+  position: relative
+}
+
+.StudioHeatmap .StudioHeatmapExpanded .StudioHeatmapExpandedTimeline .StudioHeatmapTimeAxis .StudioHeatmapTimeAxisTrack .StudioHeatmapTimeAxisLine {
+  background-color: #838383;
+  height: 2px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: calc(var(--time-axis-top) - 1px)
+}
+
+.StudioHeatmap .StudioHeatmapExpanded .StudioHeatmapExpandedTimeline .StudioHeatmapTimeAxis .StudioHeatmapTimeAxisTrack .StudioHeatmapTimeAxisPicked {
+  background-color: #ffb914;
+  border-radius: 2px;
+  height: 4px;
+  min-width: 2px;
+  position: absolute;
+  top: calc(var(--time-axis-top) - 2px)
+}
+
+.StudioHeatmap .StudioHeatmapExpanded .StudioHeatmapExpandedTimeline .StudioHeatmapTimeAxis .StudioHeatmapTimeAxisTrack .StudioHeatmapTimeAxisLabel {
+  color: #cfcfcf;
+  font-size: .7rem;
+  position: absolute;
+  top: calc(var(--time-axis-top) + .5rem);
+  transform: translateX(-50%);
+  white-space: nowrap
+}
+
+.StudioHeatmap .StudioHeatmapExpanded .StudioHeatmapExpandedTimeline .StudioHeatmapTimeAxis .StudioHeatmapTimeAxisTrack .StudioHeatmapTimeAxisLabel:before {
+  background-color: #838383;
+  content: "";
+  height: .35rem;
+  left: 50%;
+  position: absolute;
+  top: -.45rem;
+  width: 1px
+}
+
+.StudioHeatmap .StudioHeatmapExpanded .StudioHeatmapExpandedTimeline .StudioHeatmapTimeAxis .StudioHeatmapTimeAxisTrack .StudioHeatmapTimeAxisPoint {
+  background-color: #ffb914;
+  border: 2px solid #22283b;
+  border-radius: 50%;
+  box-sizing: border-box;
+  height: 12px;
+  position: absolute;
+  top: calc(var(--time-axis-top) - 6px);
+  transform: translateX(-50%);
+  width: 12px
+}
+
+.StudioHeatmap .StudioHeatmapExpanded .StudioHeatmapExpandedTimeline .StudioHeatmapTimeAxis .StudioHeatmapTimeAxisTrack .StudioHeatmapTimeAxisPoint.StudioHeatmapTimeAxisPointIdle {
+  background-color: #22283b;
+  border-color: #ffb914
+}
+
+.StudioHeatmap .StudioHeatmapExpanded .StudioHeatmapExpandedTimeline .StudioHeatmapTimeAxis .StudioHeatmapTimeAxisTrack .StudioHeatmapTimeAxisPoint:focus-visible {
+  outline: 2px solid #fff
+}
+
+.StudioHeatmap .StudioHeatmapLegend {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: .75rem;
+  gap: .5rem
+}
+
+.StudioHeatmap .StudioHeatmapLegend .StudioHeatmapLegendInfo {
+  margin-left: auto
+}
+
+.StudioHeatmap .StudioHeatmapLegendKey {
+  display: flex;
+  flex-direction: column;
+  gap: .1rem;
+  min-width: 10rem
+}
+
+.StudioHeatmap .StudioHeatmapLegendKey .StudioHeatmapLegendTitle {
+  font-size: .7rem;
+  font-weight: 700;
+  white-space: nowrap
+}
+
+.StudioHeatmap .StudioHeatmapLegendKey .StudioHeatmapLegendGradient {
+  border-radius: .25rem;
+  height: .5rem
+}
+
+.StudioHeatmap .StudioHeatmapLegendKey .StudioHeatmapLegendTicks {
+  font-size: .7rem;
+  height: 1.3em;
+  position: relative
+}
+
+.StudioHeatmap .StudioHeatmapLegendKey .StudioHeatmapLegendTicks>span {
+  position: absolute;
+  top: 0;
+  white-space: nowrap
+}
+
+.StudioHeatmap .StudioHeatmapLegendKey.StudioHeatmapPlayersKey {
+  min-width: 7rem
+}
+
+.StudioHeatmap .StudioHeatmapLegendKey.StudioHeatmapPlayersKey .StudioHeatmapLegendGradient {
+  border: 1px solid hsla(0, 0%, 100%, .5);
+  border-radius: .125rem
+}
+
+.StudioHeatmap .StudioHeatmapExpandedKey .StudioHeatmapPlayersKey {
+  margin-top: .3rem
+}
+
+.StudioHeatmapMap {
+  --heatmap-axis-band: rgba(0, 0, 0, .35);
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%
+}
+
+.StudioHeatmapMap .StudioHeatmapMapCanvas {
+  display: block;
+  left: 0;
+  position: absolute;
+  top: 0;
+  -webkit-user-select: none;
+  user-select: none
+}
+
+.StudioHeatmapMap .StudioHeatmapMapCanvas.StudioHeatmapMapCanvasPannable {
+  cursor: grab;
+  touch-action: none
+}
+
+.StudioHeatmapMap .StudioHeatmapMapCanvas.StudioHeatmapMapCanvasDragging {
+  cursor: grabbing
+}
+
+.StudioHeatmapMap .StudioHeatmapMapReadout {
+  background-color: rgba(0, 0, 0, .6);
+  border-radius: .25rem;
+  bottom: .5rem;
+  font-size: .75rem;
+  left: .5rem;
+  padding: .25rem .5rem;
+  pointer-events: none;
+  position: absolute;
+  white-space: nowrap
+}
+
+.StudioHeatmapMap .StudioHeatmapMapControls {
+  align-items: center;
+  bottom: .5rem;
+  display: flex;
+  gap: .25rem;
+  position: absolute;
+  right: .5rem
+}
+
+.StudioHeatmapMap .StudioHeatmapMapControls .SecondaryButton {
+  background-color: rgba(26, 31, 46, .9);
+  border-color: hsla(0, 0%, 100%, .35);
+  color: #fff
+}
+
+@media(hover:hover) {
+  .StudioHeatmapMap .StudioHeatmapMapControls .SecondaryButton:hover {
+    border-color: #b6830e
+  }
+}
+
+.StudioHeatmapMap .StudioHeatmapMapControls .SecondaryButton.pad-focused {
+  border-color: #b6830e
+}
+
+@media(hover:none) {
+  .StudioHeatmapMap .StudioHeatmapMapControls .SecondaryButton:active {
+    border-color: #b6830e
+  }
+}
+
+.StudioHeatmapMap .StudioHeatmapMapControls .SecondaryButton.ActiveSecondaryButton {
+  border-color: #ffb914
+}
+
+.StudioHeatmapMap .StudioHeatmapMapControls .StudioHeatmapSchematicStatus {
+  background-color: rgba(0, 0, 0, .6);
+  border-radius: .25rem;
+  font-size: .75rem;
+  padding: .25rem .5rem;
+  white-space: nowrap
+}
+
+.StudioAiAskOverride {
+  flex: 0 1 22rem;
+  min-width: 0
+}
+
+.StudioAiAskOverride .Dropdown-root {
+  width: 100%
+}
+
+.StudioAiAskOverride .Dropdown-control {
+  padding-right: 2.5em
+}
+
+.StudioAiAskOverride .Dropdown-placeholder {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: auto
+}
+
+.StudioAiAnswerText {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  user-select: text;
+  -webkit-user-select: text
+}
+
+.StudioAiAnswerText h3,
+.StudioAiAnswerText h4 {
+  margin: 1rem 0 .25rem
+}
+
+.StudioAiAnswerText h3 {
+  font-size: 1.4rem
+}
+
+.StudioAiAnswerText h4 {
+  font-size: 1.2rem
+}
+
+.StudioAiAnswerText ol,
+.StudioAiAnswerText p,
+.StudioAiAnswerText ul {
+  margin: .4rem 0
+}
+
+.StudioAiAnswerText ol,
+.StudioAiAnswerText ul {
+  padding-left: 1.5rem
+}
+
+.StudioAiAnswerText code {
+  background-color: #303a59;
+  overflow-wrap: anywhere;
+  padding: 0 .2rem
+}
+
+.StudioAiAnswerText table {
+  border-collapse: collapse
+}
+
+.StudioAiAnswerText table td,
+.StudioAiAnswerText table th {
+  border: 1px solid #303a59;
+  padding: .2rem .5rem
+}
+
+.StudioAiAnswerSummary p {
+  font-weight: 700;
+  margin-top: 0
+}
+
+.StudioAiAnswerText p.StudioAiKidGoingWell {
+  align-items: baseline;
+  display: flex;
+  gap: .5rem;
+  margin: .4rem 0 .6rem
+}
+
+.StudioAiAnswerText p.StudioAiKidGoingWell svg {
+  color: #1dd06d;
+  flex-shrink: 0
+}
+
+.StudioAiAnswerSection h3 {
+  align-items: center;
+  display: flex;
+  gap: .5rem
+}
+
+.StudioAiAnswerSection-goingWell h3 svg {
+  color: #1dd06d
+}
+
+.StudioAiAnswerSection-fixFirst h3 svg {
+  color: #fcd373
+}
+
+.StudioAiAnswerSection-tryNext h3 svg {
+  color: #85baff
+}
+
+.StudioAiNextChange {
+  background-color: rgba(57, 73, 128, .4);
+  border: 2px solid rgba(255, 185, 20, .35);
+  border-radius: .75rem;
+  margin: .5rem 0 .75rem;
+  padding: .6rem .9rem
+}
+
+.StudioAiNextChange h4 {
+  align-items: center;
+  display: flex;
+  font-size: 1.15rem;
+  gap: .5rem;
+  margin: 0 0 .35rem
+}
+
+.StudioAiNextChange h4 svg {
+  color: #ffb914
+}
+
+.StudioAiNextChange>:last-child {
+  margin-bottom: 0
+}
+
+.StudioAiNextChange strong {
+  color: #fff
+}
+
+.StudioAiNextChangeProgress {
+  border: 1px solid hsla(0, 0%, 95%, .1);
+  border-radius: 999px;
+  color: #cfcfcf;
+  font-size: .9rem;
+  font-weight: 700;
+  margin-left: auto;
+  padding: 0 .6rem
+}
+
+.StudioAiNextChangeProgress.StudioAiNextChangeProgressDone {
+  border-color: #1dd06d;
+  color: #1dd06d
+}
+
+.StudioAiAnswerText ol.StudioAiNextChangeSteps {
+  list-style: none;
+  padding-left: 0
+}
+
+.StudioAiNextChangeStep {
+  margin: .3rem 0
+}
+
+.StudioAiNextChangeStep>label {
+  align-items: flex-start;
+  cursor: pointer;
+  display: flex;
+  gap: .6rem
+}
+
+.StudioAiNextChangeStep input {
+  accent-color: #1dd06d;
+  cursor: pointer;
+  flex-shrink: 0;
+  height: 1.15rem;
+  margin: .2rem 0 0;
+  width: 1.15rem
+}
+
+.StudioAiNextChangeStep.StudioAiNextChangeStepDone>label>span {
+  color: #a4a4a4;
+  text-decoration: line-through
+}
+
+.StudioAiAnswerText p.StudioAiNextChangeTarget {
+  align-items: baseline;
+  border-top: 1px solid hsla(0, 0%, 95%, .1);
+  display: flex;
+  gap: .6rem;
+  margin-top: .5rem;
+  padding-top: .45rem
+}
+
+.StudioAiAnswerText p.StudioAiNextChangeTarget svg {
+  color: #1dd06d;
+  flex-shrink: 0
+}
+
+.StudioAiAnswerText p.StudioAiNextChangeThen {
+  align-items: baseline;
+  display: flex;
+  gap: .6rem;
+  margin-top: .5rem
+}
+
+.StudioAiAnswerText p.StudioAiNextChangeThen svg {
+  color: #85baff;
+  flex-shrink: 0
+}
+
+.StudioAiNextChange .StudioAiNextChangeCode {
+  background-color: #303a59;
+  margin: .5rem 0
+}
+
+.StudioAiNextChange .StudioAiNextChangeCode .StudioAiTrackLineHeader>span {
+  align-items: center;
+  color: #cfcfcf;
+  display: inline-flex;
+  gap: .4rem
+}
+
+.StudioAiNextChange .StudioAiNextChangeCode pre {
+  font-size: 1.05em
+}
+
+.StudioAiAnswerText p.StudioAiNextChangeCodeCheck,
+.StudioAiAnswerText p.StudioAiNextChangeWhere {
+  font-size: .95em;
+  margin: .4rem 0 0;
+  overflow-wrap: anywhere
+}
+
+.StudioAiAnswerText p.StudioAiNextChangeCodeCheck {
+  color: #fcd373
+}
+
+.StudioAiAnswerText p.StudioAiNextChangeCodeCheck.StudioAiNextChangeCodeAdd {
+  color: inherit
+}
+
+.StudioAiNextChangeCode p.StudioAiNextChangeWhere {
+  border-top: 1px dashed hsla(0, 0%, 95%, .1);
+  padding-top: .35rem
+}
+
+.StudioAiNextChangeTitle {
+  color: #fff;
+  font-weight: 700
+}
+
+.StudioAiNextChangeBasis {
+  color: #cfcfcf;
+  font-size: .9rem;
+  white-space: normal
+}
+
+.StudioAiCheckPlan {
+  border: 1px dashed hsla(0, 0%, 95%, .1);
+  border-radius: .4rem;
+  margin-top: .5rem;
+  padding: .45rem .75rem
+}
+
+.StudioAiCheckPlan p {
+  margin: .2rem 0 0;
+  overflow-wrap: anywhere
+}
+
+.StudioAiCheckPlan p.StudioAiCheckPlanTitle {
+  align-items: center;
+  display: flex;
+  font-weight: 700;
+  gap: .5rem;
+  margin: 0
+}
+
+.StudioAiCheckPlan p.StudioAiCheckPlanTitle svg {
+  color: #1dd06d
+}
+
+.StudioAiCheckPlan p.StudioAiCheckPlanOneLine {
+  align-items: baseline;
+  font-weight: inherit
+}
+
+.StudioAiCheckPlan p.StudioAiCheckPlanOneLine svg {
+  flex-shrink: 0
+}
+
+.StudioAiCheckPlan p.StudioAiCheckPlanUndo {
+  color: #cfcfcf;
+  font-size: .95em
+}
+
+.StudioAiAnswerText .StudioAiDataFacts {
+  background-color: rgba(57, 73, 128, .4);
+  border-left: .3rem solid #85baff;
+  border-radius: .4rem;
+  margin: .6rem 0;
+  padding: .45rem .75rem
+}
+
+.StudioAiAnswerText .StudioAiDataFacts p.StudioAiDataFactsTitle {
+  align-items: center;
+  display: flex;
+  font-weight: 700;
+  gap: .5rem;
+  margin: 0
+}
+
+.StudioAiAnswerText .StudioAiDataFacts p.StudioAiDataFactsTitle svg {
+  color: #85baff
+}
+
+.StudioAiAnswerText .StudioAiDataFacts ul {
+  margin: .2rem 0 0
+}
+
+.StudioAiAnswerText .StudioAiDataFacts li {
+  overflow-wrap: anywhere
+}
+
+.StudioAiAnswerText .StudioAiDataFacts li.StudioAiHardestSteps ol {
+  margin: .1rem 0 0;
+  padding-left: 1.4rem
+}
+
+.StudioAiAnswerText .StudioAiDataFacts.StudioAiAlsoInData {
+  background-color: transparent;
+  border-left-color: hsla(0, 0%, 95%, .1);
+  margin-top: -.3rem
+}
+
+.StudioAiAnswerText .StudioAiDataFacts.StudioAiAlsoInData p.StudioAiDataFactsTitle svg {
+  color: #cfcfcf
+}
+
+.StudioAiAnswerText .StudioAiDataFacts.StudioAiYourEvents {
+  background-color: transparent;
+  border-left-color: hsla(0, 0%, 95%, .1)
+}
+
+.StudioAiAnswerText .StudioAiDataFacts.StudioAiYourEvents>summary.StudioAiDataFactsTitle {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  font-weight: 700;
+  gap: .5rem;
+  list-style: none
+}
+
+.StudioAiAnswerText .StudioAiDataFacts.StudioAiYourEvents>summary.StudioAiDataFactsTitle::-webkit-details-marker {
+  display: none
+}
+
+.StudioAiAnswerText .StudioAiDataFacts.StudioAiYourEvents>summary.StudioAiDataFactsTitle svg {
+  color: #cfcfcf
+}
+
+.StudioAiAnswerText .StudioAiDataFacts.StudioAiYourEvents>summary.StudioAiDataFactsTitle svg.StudioAiYourEventsCaret {
+  transition: transform .15s
+}
+
+.StudioAiAnswerText .StudioAiDataFacts.StudioAiYourEvents p.StudioAiYourEventsHint {
+  color: #cfcfcf;
+  margin: .2rem 0 0
+}
+
+.StudioAiAnswerText .StudioAiDataFacts.StudioAiYourEvents[open]>summary svg.StudioAiYourEventsCaret {
+  transform: rotate(90deg)
+}
+
+.StudioAiAnswerText .StudioAiMeasureFirst {
+  background-color: rgba(57, 73, 128, .4);
+  border-left: .3rem solid #fcd373;
+  border-radius: .4rem;
+  margin: .6rem 0;
+  padding: .45rem .75rem
+}
+
+.StudioAiAnswerText .StudioAiMeasureFirst p {
+  margin: .2rem 0 0
+}
+
+.StudioAiAnswerText .StudioAiMeasureFirst p.StudioAiMeasureFirstTitle {
+  align-items: baseline;
+  display: flex;
+  gap: .5rem;
+  margin: 0
+}
+
+.StudioAiAnswerText .StudioAiMeasureFirst p.StudioAiMeasureFirstTitle svg {
+  color: #fcd373
+}
+
+.StudioAiAnswerText .StudioAiMeasureFirst p.StudioAiMeasureFirstHint {
+  color: #cfcfcf
+}
+
+.StudioAiAnswerText .StudioAiMeasureFirst>details>summary {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  font-weight: 700;
+  gap: .5rem;
+  list-style: none;
+  margin-top: .3rem
+}
+
+.StudioAiAnswerText .StudioAiMeasureFirst>details>summary::-webkit-details-marker {
+  display: none
+}
+
+.StudioAiAnswerText .StudioAiMeasureFirst>details>summary svg.StudioAiMeasureFirstCaret {
+  color: #cfcfcf;
+  transition: transform .15s
+}
+
+.StudioAiAnswerText .StudioAiMeasureFirst>details[open]>summary svg.StudioAiMeasureFirstCaret {
+  transform: rotate(90deg)
+}
+
+.StudioAiAnswerText .StudioAiMeasureFirst ul {
+  margin: .2rem 0 0
+}
+
+.StudioAiAnswerText .StudioAiMeasureFirst.StudioAiMeasureFirstInvite {
+  border-left-color: #85baff
+}
+
+.StudioAiAnswerText .StudioAiMeasureFirst.StudioAiMeasureFirstInvite p.StudioAiMeasureFirstTitle svg {
+  color: #85baff
+}
+
+.StudioAiAnswerText p.StudioAiEffectSize {
+  align-items: baseline;
+  display: flex;
+  gap: .6rem;
+  margin-top: .35rem;
+  overflow-wrap: anywhere
+}
+
+.StudioAiAnswerText p.StudioAiEffectSize svg {
+  color: #1dd06d;
+  flex-shrink: 0
+}
+
+.StudioAiGuessMark {
+  color: #cfcfcf;
+  font-size: .85em;
+  font-style: italic
+}
+
+.StudioAiGuessMark svg {
+  color: #fcd373;
+  margin-right: .3em
+}
+
+.StudioAiBranchNote {
+  color: #cfcfcf;
+  display: block;
+  font-size: .9em;
+  margin-top: .2rem
+}
+
+.StudioAiBranchNote svg {
+  margin-right: .35em
+}
+
+.StudioAiConstantCheck {
+  color: #cfcfcf;
+  cursor: help;
+  display: block;
+  font-size: .9em;
+  margin-top: .2rem
+}
+
+.StudioAiConstantCheck svg {
+  margin-right: .35em
+}
+
+.StudioAiConstantCheckDirection svg {
+  color: #fcd373
+}
+
+.StudioAiNextChangePeek {
+  align-items: center;
+  background-color: rgba(57, 73, 128, .4);
+  border: 2px solid rgba(255, 185, 20, .35);
+  border-radius: .75rem;
+  display: none;
+  gap: .5rem;
+  margin: .6rem 0 0;
+  padding: .35rem .9rem
+}
+
+.StudioAiNextChangePeek svg {
+  color: #ffb914;
+  flex-shrink: 0
+}
+
+.StudioAiNextChangePeek strong {
+  flex-shrink: 0
+}
+
+.StudioAiNextChangePeekText {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.StudioAiAnswerText .StudioAiJourneyStrip {
+  grid-gap: .75rem;
+  display: grid;
+  gap: .75rem;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  list-style: none;
+  margin: .75rem 0 .5rem;
+  padding: 0
+}
+
+.StudioAiJourneyStep {
+  background-color: rgba(57, 73, 128, .4);
+  border: 1px solid hsla(0, 0%, 95%, .1);
+  border-left: .3rem solid #a4a4a4;
+  border-radius: .4rem;
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  padding: .5rem .75rem;
+  position: relative
+}
+
+.StudioAiJourneyStep:has(>button.StudioAiJourneyStepOpen:hover) {
+  background-color: rgba(57, 73, 128, .6)
+}
+
+.StudioAiJourneyStep:has(>button.StudioAiJourneyStepOpen:focus-visible) {
+  outline: 2px solid #85baff
+}
+
+.StudioAiJourneyStep-good {
+  border-left-color: #1dd06d
+}
+
+.StudioAiJourneyStep-okay {
+  border-left-color: #85baff
+}
+
+.StudioAiJourneyStep-weak {
+  border-left-color: #fcd373
+}
+
+.StudioAiJourneyStepOpen {
+  background: none;
+  border: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  font: inherit;
+  gap: .15rem;
+  padding: 0;
+  text-align: left
+}
+
+button.StudioAiJourneyStepOpen {
+  cursor: pointer
+}
+
+button.StudioAiJourneyStepOpen:focus-visible {
+  outline: none
+}
+
+button.StudioAiJourneyStepOpen:after {
+  content: "";
+  inset: 0;
+  position: absolute
+}
+
+.StudioAiJourneyStepTitle {
+  align-items: center;
+  display: flex;
+  font-size: 1.1rem;
+  font-weight: 700;
+  gap: .5rem;
+  justify-content: space-between
+}
+
+.StudioAiJourneyStepReason {
+  font-size: 1rem;
+  line-height: 1.35
+}
+
+.StudioAiJourneyStepTypical {
+  color: #cfcfcf;
+  font-size: .9rem;
+  line-height: 1.35
+}
+
+.StudioAiJourneyStepLinks {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1rem;
+  gap: .3rem;
+  pointer-events: none;
+  position: relative;
+  z-index: 1
+}
+
+.StudioAiJourneyStepLinks .StudioAiStatChip {
+  flex-wrap: wrap;
+  margin: 0;
+  max-width: 100%;
+  pointer-events: auto;
+  row-gap: 0;
+  text-align: left;
+  white-space: normal
+}
+
+.StudioAiJourneyVerdict {
+  border-radius: 999px;
+  flex-shrink: 0;
+  font-size: .85rem;
+  font-weight: 800;
+  line-height: 1.5;
+  padding: 0 .55rem;
+  white-space: nowrap
+}
+
+.StudioAiJourneyVerdict-good {
+  background-color: rgba(29, 208, 109, .15);
+  color: #1dd06d
+}
+
+.StudioAiJourneyVerdict-okay {
+  background-color: rgba(133, 186, 255, .15);
+  color: #85baff
+}
+
+.StudioAiJourneyVerdict-weak {
+  background-color: hsla(42, 96%, 72%, .15);
+  color: #fcd373
+}
+
+.StudioAiStatChip {
+  align-items: center;
+  background-color: rgba(57, 73, 128, .4);
+  border: 1px solid hsla(0, 0%, 95%, .1);
+  border-radius: 999px;
+  color: #85baff;
+  display: inline-flex;
+  flex-wrap: wrap;
+  font: inherit;
+  font-size: .9em;
+  gap: 0 .3rem;
+  line-height: 1.5;
+  margin: 0 .15rem;
+  max-width: 100%;
+  padding: 0 .45rem;
+  vertical-align: baseline;
+  white-space: nowrap
+}
+
+.StudioAiStatChip svg {
+  font-size: .85em
+}
+
+.StudioAiStatChipName {
+  color: #cfcfcf;
+  font-size: .85em
+}
+
+button.StudioAiStatChip {
+  cursor: pointer
+}
+
+button.StudioAiStatChip:focus-visible,
+button.StudioAiStatChip:hover {
+  background-color: rgba(57, 73, 128, .6);
+  color: #fff
+}
+
+.StudioAiAnswerSection-trackNext h3 svg {
+  color: #85baff
+}
+
+.StudioAiTrackItems>li {
+  margin: .4rem 0 .75rem
+}
+
+.StudioAiTrackLine {
+  background-color: rgba(57, 73, 128, .4);
+  border: 1px solid hsla(0, 0%, 95%, .1);
+  border-radius: .4rem;
+  margin: .3rem 0;
+  padding: .5rem .75rem
+}
+
+.StudioAiTrackLine pre {
+  margin: .4rem 0 0;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word
+}
+
+.StudioAiTrackLine pre code {
+  background-color: transparent;
+  font-size: .95em;
+  padding: 0
+}
+
+.StudioAiTrackLineHeader {
+  align-items: center;
+  display: flex;
+  font-size: .95em;
+  gap: .5rem
+}
+
+.StudioAiTrackLineHeader>span {
+  min-width: 0;
+  overflow-wrap: anywhere
+}
+
+.StudioAiTrackLineCopy {
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid hsla(0, 0%, 95%, .1);
+  border-radius: 999px;
+  color: #85baff;
+  cursor: pointer;
+  display: inline-flex;
+  flex-shrink: 0;
+  font: inherit;
+  font-size: .9em;
+  gap: .3rem;
+  margin-left: auto;
+  padding: .1rem .6rem
+}
+
+.StudioAiTrackLineCopy:focus-visible,
+.StudioAiTrackLineCopy:hover {
+  background-color: rgba(57, 73, 128, .6);
+  color: #fff
+}
+
+.StudioAiUnknownCodeName {
+  cursor: help;
+  -webkit-text-decoration: underline dotted #fcd373;
+  text-decoration: underline dotted #fcd373;
+  text-decoration-thickness: 2px;
+  text-underline-offset: .2em
+}
+
+.StudioAiOverstatement,
+.StudioAiUncheckedNumber {
+  cursor: help;
+  -webkit-text-decoration: underline dotted #fcd373;
+  text-decoration: underline dotted #fcd373;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .2em
+}
+
+.StudioAiConstantNote {
+  color: #cfcfcf;
+  cursor: help;
+  font-size: .9em;
+  -webkit-text-decoration: underline dotted #cfcfcf;
+  text-decoration: underline dotted #cfcfcf;
+  text-underline-offset: .2em;
+  white-space: nowrap
+}
+
+.StudioAiAnswerText p.StudioAiNextChangeCodeNote {
+  font-size: .95em;
+  margin: .4rem 0 0
+}
+
+.StudioAiUnknownItem {
+  cursor: help;
+  -webkit-text-decoration: underline dotted #fcd373;
+  text-decoration: underline dotted #fcd373;
+  text-decoration-thickness: 2px;
+  text-underline-offset: .2em
+}
+
+.StudioAiAnswerText p.StudioAiLeftOut,
+.StudioAiAnswerText p.StudioAiNumbersChecked {
+  color: #cfcfcf;
+  font-size: .9rem;
+  margin-top: .8rem
+}
+
+.StudioAiAnswerText p.StudioAiNumbersChecked {
+  align-items: center;
+  display: flex;
+  gap: .4rem
+}
+
+.StudioAiNextChange .StudioAiSetupLines {
+  background-color: #303a59;
+  border-left: 3px solid #1dd06d;
+  margin: .5rem 0
+}
+
+.StudioAiNextChange .StudioAiSetupLines .StudioAiTrackLineHeader {
+  color: #cfcfcf
+}
+
+.StudioAiNextChange .StudioAiSetupLines pre+.StudioAiTrackLineHeader {
+  margin-top: .5rem
+}
+
+.StudioAiCodeInPlace {
+  border-top: 1px dashed hsla(0, 0%, 95%, .1);
+  font-size: .95em;
+  margin: .4rem 0 0;
+  padding-top: .35rem
+}
+
+.StudioAiCodeInPlace summary {
+  color: #cfcfcf;
+  cursor: pointer
+}
+
+.StudioAiCodeInPlace pre {
+  background-color: #1a1f2e;
+  border-radius: .3rem;
+  padding: .3rem 0
+}
+
+.StudioAiCodeInPlaceLine {
+  display: flex
+}
+
+.StudioAiCodeInPlaceGutter {
+  color: #a4a4a4;
+  flex: 0 0 3.2em;
+  padding-right: .6em;
+  text-align: right;
+  -webkit-user-select: none;
+  user-select: none
+}
+
+.StudioAiCodeInPlaceText {
+  flex: 1 1;
+  min-width: 0;
+  white-space: pre-wrap
+}
+
+.StudioAiCodeInPlaceAdded {
+  background-color: rgba(29, 208, 109, .12);
+  color: #1dd06d
+}
+
+.StudioAiCodeInPlaceAdded .StudioAiCodeInPlaceGutter {
+  color: #1dd06d
+}
+
+.StudioAiCodeInPlaceMore {
+  color: #a4a4a4;
+  font-style: italic;
+  -webkit-user-select: none;
+  user-select: none
+}
+
+.StudioAiCodeInPlaceRemoved {
+  background-color: hsla(5, 100%, 75%, .1);
+  color: #ff8a80
+}
+
+.StudioAiCodeInPlaceRemoved .StudioAiCodeInPlaceText {
+  text-decoration: line-through
+}
+
+.StudioAiAlreadyGiven,
+.StudioAiMissingCommand,
+.StudioAiSetupInline {
+  color: #fcd373;
+  font-size: .9em;
+  overflow-wrap: anywhere
+}
+
+.StudioAiSetupInline {
+  color: #cfcfcf;
+  display: block
+}
+
+.StudioAiInventedName {
+  color: #cfcfcf;
+  font-size: .9em;
+  overflow-wrap: anywhere
+}
+
+.StudioAiKidMore {
+  margin: .75rem 0 .4rem
+}
+
+.StudioAiKidMore>summary {
+  align-items: center;
+  color: #cfcfcf;
+  cursor: pointer;
+  display: inline-flex;
+  font-weight: 700;
+  gap: .5rem;
+  list-style: none
+}
+
+.StudioAiKidMore>summary::-webkit-details-marker {
+  display: none
+}
+
+.StudioAiKidMore>summary svg {
+  transition: transform .15s
+}
+
+.StudioAiKidMore[open]>summary svg {
+  transform: rotate(90deg)
+}
+
+.StudioAiBumpNote {
+  color: #cfcfcf;
+  cursor: help;
+  font-size: .9em;
+  -webkit-text-decoration: underline dotted #cfcfcf;
+  text-decoration: underline dotted #cfcfcf;
+  text-underline-offset: .2em
+}
+
+.StudioTextLoading {
+  background-color: #3c4b68;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  padding: 1rem 1.25rem
+}
+
+.StudioTextLoading .StudioTextLoadingHeader {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem
+}
+
+.StudioTextLoading .StudioTextLoadingTitle {
+  color: #f2f2f2;
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin: 0
+}
+
+.StudioTextLoading .StudioTextLoadingActions {
+  align-items: center;
+  display: flex;
+  font-size: .8rem;
+  gap: .5rem;
+  margin-left: auto;
+  max-width: 100%;
+  min-width: 0
+}
+
+.StudioTextLoading .StudioTextLoadingStatus {
+  align-items: center;
+  color: #cfcfcf;
+  display: flex;
+  font-size: 1.1rem;
+  gap: .75rem;
+  min-height: 3.3rem
+}
+
+.StudioTextLoading .StudioTextLoadingSpinner {
+  animation: StudioTextLoadingSpin .9s linear infinite;
+  border: .25rem solid hsla(0, 0%, 95%, .2);
+  border-radius: 50%;
+  border-top-color: #ffb914;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  height: 1.5rem;
+  width: 1.5rem
+}
+
+.StudioTextLoading .StudioTextLoadingNotice {
+  align-self: flex-start;
+  display: flex;
+  font-size: 1rem
+}
+
+.StudioTextLoading .StudioTextLoadingText .StudioAiAnswerText>:first-child {
+  margin-top: 0
+}
+
+.StudioTextLoading .StudioTextLoadingText .StudioAiAnswerText>:last-child {
+  margin-bottom: 0
+}
+
+.StudioTextLoading .StudioTextLoadingTextCollapsed {
+  max-height: 3.3rem;
+  overflow: hidden;
+  overflow: clip
+}
+
+.StudioTextLoading .StudioTextLoadingTextCollapsed:has(>.StudioAiAnswerText>h3:first-child) {
+  max-height: 5.8rem
+}
+
+.StudioTextLoading .StudioTextLoadingTextCollapsed:has(>.StudioAiAnswerText>h4:first-child) {
+  max-height: 5.5rem
+}
+
+.StudioTextLoading .StudioTextLoadingTextCollapsed .StudioAiDataFacts,
+.StudioTextLoading .StudioTextLoadingTextCollapsed .StudioAiKidGoingWell {
+  display: none
+}
+
+.StudioTextLoading .StudioTextLoadingTextCollapsed:has(>.StudioAiAnswerText>.StudioAiAnswerBody) {
+  max-height: none
+}
+
+.StudioTextLoading .StudioTextLoadingTextCollapsed:has(>.StudioAiAnswerText>.StudioAiAnswerBody) .StudioAiAnswerSummary>:not(:first-child),
+.StudioTextLoading .StudioTextLoadingTextCollapsed:has(>.StudioAiAnswerText>.StudioAiAnswerBody) .StudioAiAnswerSummary~.StudioAiAnswerBody,
+.StudioTextLoading .StudioTextLoadingTextCollapsed:has(>.StudioAiAnswerText>.StudioAiAnswerBody) .StudioAiNextChangePeek~.StudioAiAnswerBody {
+  display: none
+}
+
+.StudioTextLoading .StudioTextLoadingTextCollapsed:has(>.StudioAiAnswerText>.StudioAiAnswerBody) .StudioAiNextChangePeek {
+  display: flex
+}
+
+.StudioTextLoading .StudioTextLoadingTextCollapsed:has(>.StudioAiAnswerText>.StudioAiAnswerBody) .StudioAiAnswerSummary>:first-child {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  overflow: hidden
+}
+
+.StudioTextLoading .StudioTextLoadingTextCollapsed:has(>.StudioAiAnswerText>.StudioAiAnswerBody) .StudioAiJourneyStrip {
+  margin-bottom: 0
+}
+
+.StudioTextLoading .StudioTextLoadingTextCollapsed:has(>.StudioAiAnswerText>.StudioAiAnswerBody) .StudioAiJourneyStrip:first-child+.StudioAiAnswerBody {
+  -webkit-mask-image: linear-gradient(180deg, #000 calc(100% - 1.65rem), transparent);
+  mask-image: linear-gradient(180deg, #000 calc(100% - 1.65rem), transparent);
+  max-height: 3.3rem;
+  overflow: hidden
+}
+
+.StudioTextLoading .StudioTextLoadingTextCollapsed:has(>.StudioAiAnswerText>.StudioAiAnswerBody) .StudioAiJourneyStrip:first-child+.StudioAiAnswerBody>:first-child {
+  margin-top: 0
+}
+
+.StudioTextLoading .StudioTextLoadingTextFaded {
+  -webkit-mask-image: linear-gradient(180deg, #000 calc(100% - 1.65rem), transparent);
+  mask-image: linear-gradient(180deg, #000 calc(100% - 1.65rem), transparent)
+}
+
+.StudioTextLoading .StudioTextLoadingNote {
+  color: #cfcfcf;
+  font-size: 1rem
+}
+
+.StudioTextLoading .StudioTextLoadingToggle {
+  align-items: center;
+  align-self: flex-start;
+  background: none;
+  border: none;
+  color: #cfcfcf;
+  cursor: pointer;
+  display: flex;
+  font: inherit;
+  font-size: 1rem;
+  gap: .4rem;
+  padding: 0
+}
+
+.StudioTextLoading .StudioTextLoadingToggle:hover {
+  color: #f2f2f2
+}
+
+@keyframes StudioTextLoadingSpin {
+  to {
+    transform: rotate(1turn)
+  }
+}
+
+.StudioComparisonBar {
+  align-items: center;
+  background-color: hsla(0, 0%, 64%, .15);
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  padding: 1rem
+}
+
+.StudioComparisonBar .StudioComparisonBarLabel {
+  color: #cfcfcf;
+  font-size: .8rem
+}
+
+.StudioComparisonBar .StudioComparisonBarUnavailable {
+  color: #cfcfcf;
+  font-size: .8rem;
+  font-style: italic
+}
+
+.StudioComparisonPicker {
+  position: relative
+}
+
+.StudioComparisonPicker .StudioComparisonPickerAnchor .StudioComparisonPickerValue {
+  display: inline-block;
+  line-height: 1.3;
+  margin-right: .4rem;
+  max-width: 12rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: bottom;
+  white-space: nowrap
+}
+
+.StudioComparisonPicker .StudioComparisonPickerPanel {
+  background-color: #3c4b68;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  left: 0;
+  max-width: calc(100vw - 2rem);
+  padding: .5rem;
+  position: absolute;
+  top: calc(100% + .4rem);
+  width: 18rem;
+  z-index: 21
+}
+
+.StudioComparisonPicker .StudioComparisonPickerPanel .StudioComparisonPickerSearch {
+  align-items: center;
+  color: #cfcfcf;
+  display: flex;
+  gap: .4rem;
+  padding: 0 .3rem
+}
+
+.StudioComparisonPicker .StudioComparisonPickerPanel .StudioComparisonPickerSearch .TextInput {
+  box-shadow: none;
+  flex: 1 1;
+  min-width: 0
+}
+
+.StudioComparisonPicker .StudioComparisonPickerPanel .StudioComparisonPickerResults {
+  display: flex;
+  flex-direction: column;
+  max-height: 17rem;
+  overflow-y: auto
+}
+
+.StudioComparisonPicker .StudioComparisonPickerPanel .StudioComparisonPickerMessage {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 4rem;
+  text-align: center
+}
+
+.StudioComparisonPicker .StudioComparisonPickerOption {
+  align-items: center;
+  border-radius: .25rem;
+  cursor: pointer;
+  display: flex;
+  gap: .5rem;
+  padding: .4rem
+}
+
+@media(hover:hover) {
+  .StudioComparisonPicker .StudioComparisonPickerOption:hover {
+    background-color: rgba(57, 73, 128, .6)
+  }
+}
+
+.StudioComparisonPicker .StudioComparisonPickerOption.pad-focused {
+  background-color: rgba(57, 73, 128, .6)
+}
+
+@media(hover:none) {
+  .StudioComparisonPicker .StudioComparisonPickerOption:active {
+    background-color: rgba(57, 73, 128, .6)
+  }
+}
+
+.StudioComparisonPicker .StudioComparisonPickerOption.StudioComparisonPickerOptionSelected {
+  background-color: #394980;
+  color: #ffb914
+}
+
+.StudioComparisonPicker .StudioComparisonPickerOption .StudioComparisonPickerOptionIcon {
+  align-items: center;
+  color: #ffb914;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  width: 2.5rem
+}
+
+.StudioComparisonPicker .StudioComparisonPickerOption .StudioComparisonPickerOptionThumbnail {
+  flex-shrink: 0;
+  height: 1.6rem;
+  overflow: hidden;
+  position: relative;
+  width: 2.5rem
+}
+
+.StudioComparisonPicker .StudioComparisonPickerOption .StudioComparisonPickerOptionThumbnail .SchematicImageContainer {
+  font-size: 1.2rem
+}
+
+.StudioComparisonPicker .StudioComparisonPickerOption .StudioComparisonPickerOptionThumbnail .StudioTableThumbnailImage {
+  height: 100%;
+  object-fit: cover;
+  width: 100%
+}
+
+.StudioComparisonPicker .StudioComparisonPickerOption .StudioComparisonPickerOptionName {
+  font-size: .9rem;
+  line-height: 1.3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.StudioTable {
+  background-color: #3c4b68;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-sizing: border-box;
+  text-align: left
+}
+
+.StudioTable thead {
+  background-color: #394980
+}
+
+.StudioTable thead th {
+  color: #a4a4a4;
+  font-size: .85em;
+  font-weight: 800;
+  padding: .75rem 1rem;
+  text-transform: uppercase
+}
+
+.StudioTable tbody tr {
+  border-top: 1px solid hsla(0, 0%, 95%, .1);
+  cursor: pointer
+}
+
+@media(hover:hover) {
+  .StudioTable tbody tr:hover {
+    background-color: #394980
+  }
+}
+
+.StudioTable tbody tr.pad-focused {
+  background-color: #394980
+}
+
+@media(hover:none) {
+  .StudioTable tbody tr:active {
+    background-color: #394980
+  }
+}
+
+.StudioTable tbody tr td {
+  padding: .6rem 1rem
+}
+
+.StudioTable .StudioTableGameCell {
+  align-items: center;
+  display: flex;
+  gap: .75rem
+}
+
+.StudioTable .StudioTableGameCell .StudioTableThumbnail {
+  aspect-ratio: 3/2;
+  border-radius: 0;
+  flex-shrink: 0;
+  height: 3rem;
+  overflow: hidden;
+  position: relative
+}
+
+.StudioTable .StudioTableGameCell .StudioTableThumbnail .StudioTableThumbnailImage {
+  height: 100%;
+  object-fit: cover;
+  width: 100%
+}
+
+.StudioTable .StudioTableGameCell .StudioTableGameName {
+  font-weight: 800
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fadeInScaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(.6)
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes fadeInScaleUpNoOversize {
+  0% {
+    opacity: 0;
+    transform: scale(.8)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes shake {
+  0% {
+    rotate: 3deg
+  }
+
+  5% {
+    rotate: -2deg
+  }
+
+  10% {
+    rotate: 2deg
+  }
+
+  15% {
+    rotate: -3deg
+  }
+
+  20% {
+    rotate: 0deg
+  }
+}
+
+@keyframes loadingShimmer {
+  0% {
+    transform: translateX(-66.6666666667%)
+  }
+
+  to {
+    transform: none
+  }
+}
+
+@keyframes topRightStackIn {
+  0% {
+    opacity: 0;
+    transform: translateX(1.5rem)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
+
+@keyframes rainbowShimmer {
+  0% {
+    background-position: 200%
+  }
+
+  to {
+    background-position: -200%
+  }
+}
+
+.StudioGameBoost {
+  align-items: center;
+  background-color: #303a59;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding: .75rem 1rem
+}
+
+.StudioGameBoost.StudioGameBoostActive {
+  border-color: #ffb914
+}
+
+.StudioGameBoost .StudioGameBoostInfo {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: .15rem;
+  min-width: 12rem
+}
+
+.StudioGameBoost .StudioGameBoostInfo .StudioGameBoostTitle {
+  align-items: center;
+  display: flex;
+  font-size: 1.1rem;
+  font-weight: 800;
+  gap: .4rem
+}
+
+.StudioGameBoost .StudioGameBoostInfo .StudioGameBoostTitle .svg-inline--fa {
+  color: #ffb914
+}
+
+.StudioGameBoost .StudioGameBoostInfo .StudioGameBoostDetail {
+  color: #cfcfcf;
+  font-size: .9rem
+}
+
+.StudioGameBoost .StudioGameBoostStat {
+  align-items: center;
+  background-color: #394980;
+  border-radius: .4rem;
+  display: flex;
+  flex-direction: column;
+  gap: .1rem;
+  padding: .35rem .9rem
+}
+
+.StudioGameBoost .StudioGameBoostStat .StudioGameBoostStatValue {
+  color: #ffb914;
+  font-size: 1.4rem;
+  font-weight: 800;
+  line-height: 1;
+  white-space: nowrap
+}
+
+.StudioGameBoost .StudioGameBoostStat .StudioGameBoostStatLabel {
+  color: #cfcfcf;
+  font-size: .7rem;
+  letter-spacing: .03em;
+  text-transform: uppercase
+}
+
+.StudioGameBoost .StudioGameBoostSkeletonBar {
+  animation: StudioGameBoostSkeletonPulse 1.2s ease-in-out infinite;
+  background-color: #cfcfcf;
+  border-radius: .25rem;
+  display: inline-block;
+  height: 1em;
+  line-height: 1;
+  width: 2.4rem
+}
+
+.StudioGameBoostApprovalTooltip {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  max-width: 20rem
+}
+
+@keyframes StudioGameBoostSkeletonPulse {
+
+  0%,
+  to {
+    opacity: .2
+  }
+
+  50% {
+    opacity: .45
+  }
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.ApprovalInfoPopup .ApprovalInfoPopupBody {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 100%;
+  min-height: 12rem;
+  width: 30rem
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.ApprovalInfoPopup .ApprovalInfoPopupBody .ApprovalInfoPopupTitle {
+  font-size: 1.75rem;
+  margin: 0;
+  text-align: center
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.ApprovalInfoPopup .ApprovalInfoPopupBody .ApprovalInfoPopupLoader {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 8rem
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.ApprovalInfoPopup .ApprovalInfoPopupBody .ApprovalInfoPopupError {
+  color: #ff8a80;
+  font-weight: 700;
+  padding: 1rem;
+  text-align: center
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.ApprovalInfoPopup .ApprovalInfoPopupBody .ApprovalInfoPopupActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: .5rem
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.ApprovalInfoPopup .ApprovalInfoPopupBody .ApprovalInfoPopupActions .ApprovalInfoPopupActionButton {
+  font-size: 1.1rem
+}
+
+.GameApprovalInfoDetails {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem
+}
+
+.GameApprovalInfoDetails .GameApprovalInfoSummary {
+  align-items: center;
+  border-radius: 0;
+  display: flex;
+  font-size: 1.1rem;
+  font-weight: 700;
+  gap: .5rem;
+  padding: .5rem .75rem
+}
+
+.GameApprovalInfoDetails .GameApprovalInfoSummary .svg-inline--fa {
+  flex-shrink: 0;
+  font-size: 1.4rem
+}
+
+.GameApprovalInfoDetails .GameApprovalInfoSummary.Passed {
+  background-color: rgba(7, 148, 14, .25)
+}
+
+.GameApprovalInfoDetails .GameApprovalInfoSummary.Passed .svg-inline--fa {
+  color: #1dd06d
+}
+
+.GameApprovalInfoDetails .GameApprovalInfoSummary.Failed {
+  background-color: rgba(204, 20, 20, .25)
+}
+
+.GameApprovalInfoDetails .GameApprovalInfoSummary.Failed .svg-inline--fa {
+  color: #ff8a80
+}
+
+.GameApprovalInfoDetails .GameApprovalInfoRows {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem
+}
+
+.GameApprovalInfoDetails .GameApprovalInfoRows .GameApprovalInfoRow {
+  align-items: center;
+  background-color: rgba(0, 0, 0, .25);
+  display: flex;
+  gap: .6rem;
+  padding: .4rem .6rem
+}
+
+.GameApprovalInfoDetails .GameApprovalInfoRows .GameApprovalInfoRow .svg-inline--fa {
+  flex-shrink: 0;
+  font-size: 1.1rem;
+  text-align: center;
+  width: 1.2rem
+}
+
+.GameApprovalInfoDetails .GameApprovalInfoRows .GameApprovalInfoRow.Passed .svg-inline--fa {
+  color: #1dd06d
+}
+
+.GameApprovalInfoDetails .GameApprovalInfoRows .GameApprovalInfoRow.Failed .svg-inline--fa {
+  color: #ff8a80
+}
+
+.GameApprovalInfoDetails .GameApprovalInfoRows .GameApprovalInfoRow .GameApprovalInfoRowText {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: .05rem;
+  min-width: 0
+}
+
+.GameApprovalInfoDetails .GameApprovalInfoRows .GameApprovalInfoRow .GameApprovalInfoRowText .GameApprovalInfoRowLabel {
+  font-size: .9rem;
+  font-weight: 700
+}
+
+.GameApprovalInfoDetails .GameApprovalInfoRows .GameApprovalInfoRow .GameApprovalInfoRowText .GameApprovalInfoRowValue {
+  color: #cfcfcf;
+  font-size: .8rem
+}

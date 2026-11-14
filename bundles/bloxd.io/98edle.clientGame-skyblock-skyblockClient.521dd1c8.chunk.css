@@ -1,0 +1,120 @@
+.InlineIconTextGlue {
+  white-space: nowrap
+}
+
+.InlineIconTextGlue .InlineIconTextIcon {
+  display: inline-block;
+  height: 1.3em;
+  position: relative;
+  vertical-align: middle;
+  width: 1.3em
+}
+
+.DialogueAnchor {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.25rem;
+  left: 50%;
+  pointer-events: none;
+  position: fixed;
+  top: calc(50% + 3rem);
+  transform: translateX(-50%);
+  width: min(28em, 84vw);
+  z-index: 6
+}
+
+@media(min-width:1200px)and (min-height:800px) {
+  .DialogueAnchor {
+    bottom: 25%;
+    font-size: clamp(1.25rem, 2vh, 2.25rem)
+  }
+
+  .DialogueAnchor .Dialogue {
+    margin-top: auto
+  }
+}
+
+.Dialogue {
+  background: rgba(38, 52, 93, .85);
+  color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  gap: .4em;
+  max-width: 100%;
+  padding: .6em .9em .7em;
+  text-align: left
+}
+
+.Dialogue .DialogueSpeaker {
+  color: #ffb914;
+  font-weight: 700
+}
+
+.Dialogue .DialogueSpeaker .TextFromServerGameIcon,
+.Dialogue .DialogueSpeaker .TextFromServerIngameItem {
+  margin-right: .4em
+}
+
+.Dialogue>.DialogueSpeaker {
+  font-size: .9em
+}
+
+.Dialogue .DialogueLine {
+  font-size: 1.15em;
+  line-height: 1.35;
+  margin: 0;
+  overflow-wrap: anywhere;
+  white-space: pre-line
+}
+
+.Dialogue .DialogueLine .DialogueGlue {
+  white-space: nowrap
+}
+
+.Dialogue .DialogueLine .DialogueWord {
+  display: inline-block;
+  white-space: normal
+}
+
+.Dialogue.DialogueAnimateIn .DialogueLine .DialogueWord {
+  animation: DialogueWordPop .16s ease-out var(--word-delay) both
+}
+
+@media(max-height:500px) {
+  .Dialogue {
+    gap: .25em;
+    padding: .4em .7em .5em
+  }
+
+  .Dialogue>.DialogueSpeaker {
+    font-size: .8em
+  }
+
+  .Dialogue .DialogueLine {
+    font-size: 1.05em
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .Dialogue.DialogueAnimateIn .DialogueLine .DialogueWord {
+    animation: none
+  }
+}
+
+@keyframes DialogueWordPop {
+  0% {
+    opacity: 0;
+    transform: translateY(.3em) scale(.7)
+  }
+
+  70% {
+    opacity: 1;
+    transform: translateY(-.05em) scale(1.08)
+  }
+
+  to {
+    opacity: 1;
+    transform: none
+  }
+}

@@ -1,0 +1,352 @@
+.StudioPage {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 0 auto;
+  max-width: 100rem;
+  padding-bottom: 4rem
+}
+
+.StudioPage .StudioPageHeader {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between
+}
+
+.StudioPage .StudioPageHeader .StudioPageTitle {
+  font-size: 2rem;
+  margin: 0
+}
+
+.StudioPage .StudioPageLoader {
+  display: flex;
+  justify-content: center;
+  padding: 4rem 0
+}
+
+.StudioPage .StudioPageMessage {
+  color: #cfcfcf;
+  font-size: 1.2rem;
+  padding: 4rem 0;
+  text-align: center
+}
+
+.StudioLeaderboard .StudioLeaderboardBanner {
+  background-color: rgba(255, 185, 20, .12);
+  border-left: .2rem solid #ffb914;
+  display: flex;
+  flex-direction: column;
+  font-size: .9rem;
+  gap: .35rem;
+  padding: .75rem 1rem
+}
+
+.StudioLeaderboard .StudioLeaderboardCategories,
+.StudioLeaderboard .StudioLeaderboardScopes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem
+}
+
+.StudioLeaderboard .StudioLeaderboardScopes+.StudioLeaderboardCategories {
+  margin-top: -1rem
+}
+
+.StudioLeaderboard .StudioLeaderboardTableScroll {
+  overflow-x: auto;
+  overflow-y: hidden
+}
+
+.StudioLeaderboard .StudioLeaderboardOwner .ProfilePreview {
+  background-color: #303a59;
+  cursor: inherit;
+  font-size: .85rem
+}
+
+.StudioLeaderboard .StudioLeaderboardOwner .ProfilePreviewLeft {
+  transform: none
+}
+
+.StudioLeaderboard .StudioLeaderboardEngagementScore {
+  font-weight: 800
+}
+
+.StudioLeaderboard .StudioLeaderboardPosition {
+  color: #cfcfcf;
+  font-weight: 800;
+  white-space: nowrap
+}
+
+.StudioLeaderboard .StudioLeaderboardPosition .StudioLeaderboardPositionItem {
+  -ms-interpolation-mode: nearest-neighbor;
+  height: 1.5rem;
+  image-rendering: optimizeSpeed;
+  image-rendering: -o-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: optimize-contrast;
+  margin-right: .4rem;
+  vertical-align: -.35rem;
+  width: 1.5rem
+}
+
+.StudioLeaderboard .StudioLeaderboardPosition.StudioLeaderboardTopPosition {
+  color: var(--studioTopRankColour)
+}
+
+.StudioLeaderboard .StudioLeaderboardPosition.StudioLeaderboardTopPosition.StudioLeaderboardTopPosition1 {
+  --studioTopRankColour: #5ce1d8
+}
+
+.StudioLeaderboard .StudioLeaderboardPosition.StudioLeaderboardTopPosition.StudioLeaderboardTopPosition2 {
+  --studioTopRankColour: #ffb914
+}
+
+.StudioLeaderboard .StudioLeaderboardPosition.StudioLeaderboardTopPosition.StudioLeaderboardTopPosition3 {
+  --studioTopRankColour: #cfcfcf
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup {
+  display: flex;
+  gap: .5rem;
+  max-height: 75vh;
+  max-width: 55rem;
+  min-width: 40rem;
+  overflow-y: scroll;
+  text-align: left
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SchematicPopupTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SchematicPopupSubtitle {
+  color: #cfcfcf;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 1rem 0 0
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SchematicPopupSubtitle.Hidden {
+  display: none
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SchematicPopupSchematicListContainer {
+  border: 2px solid #303a59;
+  border-radius: 0;
+  box-sizing: border-box;
+  overflow-y: auto;
+  padding: .5rem;
+  width: 100%
+}
+
+.SchematicImageContainer {
+  align-items: center;
+  display: flex;
+  font-size: 2rem;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1
+}
+
+.SchematicImageContainer .LogoLoaderOuter {
+  border-color: #a4a4a4 #f2f2f2 #f2f2f2
+}
+
+.SchematicImageContainer .SchematicImage {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%
+}
+
+.SchematicImageContainer .SchematicImage.SchematicImageFadeIn {
+  animation-duration: .3s;
+  animation-fill-mode: backwards;
+  animation-iteration-count: 1;
+  animation-name: fadeIn;
+  isolation: isolate
+}
+
+.SchematicImageContainer .SchematicImageError {
+  color: #cfcfcf;
+  opacity: .4
+}
+
+.Table {
+  border-collapse: collapse;
+  width: 100%
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fadeInScaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(.6)
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes fadeInScaleUpNoOversize {
+  0% {
+    opacity: 0;
+    transform: scale(.8)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes shake {
+  0% {
+    rotate: 3deg
+  }
+
+  5% {
+    rotate: -2deg
+  }
+
+  10% {
+    rotate: 2deg
+  }
+
+  15% {
+    rotate: -3deg
+  }
+
+  20% {
+    rotate: 0deg
+  }
+}
+
+@keyframes loadingShimmer {
+  0% {
+    transform: translateX(-66.6666666667%)
+  }
+
+  to {
+    transform: none
+  }
+}
+
+@keyframes topRightStackIn {
+  0% {
+    opacity: 0;
+    transform: translateX(1.5rem)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
+
+@keyframes rainbowShimmer {
+  0% {
+    background-position: 200%
+  }
+
+  to {
+    background-position: -200%
+  }
+}
+
+.StudioTable {
+  background-color: #3c4b68;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-sizing: border-box;
+  text-align: left
+}
+
+.StudioTable thead {
+  background-color: #394980
+}
+
+.StudioTable thead th {
+  color: #a4a4a4;
+  font-size: .85em;
+  font-weight: 800;
+  padding: .75rem 1rem;
+  text-transform: uppercase
+}
+
+.StudioTable tbody tr {
+  border-top: 1px solid hsla(0, 0%, 95%, .1);
+  cursor: pointer
+}
+
+@media(hover:hover) {
+  .StudioTable tbody tr:hover {
+    background-color: #394980
+  }
+}
+
+.StudioTable tbody tr.pad-focused {
+  background-color: #394980
+}
+
+@media(hover:none) {
+  .StudioTable tbody tr:active {
+    background-color: #394980
+  }
+}
+
+.StudioTable tbody tr td {
+  padding: .6rem 1rem
+}
+
+.StudioTable .StudioTableGameCell {
+  align-items: center;
+  display: flex;
+  gap: .75rem
+}
+
+.StudioTable .StudioTableGameCell .StudioTableThumbnail {
+  aspect-ratio: 3/2;
+  border-radius: 0;
+  flex-shrink: 0;
+  height: 3rem;
+  overflow: hidden;
+  position: relative
+}
+
+.StudioTable .StudioTableGameCell .StudioTableThumbnail .StudioTableThumbnailImage {
+  height: 100%;
+  object-fit: cover;
+  width: 100%
+}
+
+.StudioTable .StudioTableGameCell .StudioTableGameName {
+  font-weight: 800
+}

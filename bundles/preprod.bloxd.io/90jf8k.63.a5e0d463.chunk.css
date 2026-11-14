@@ -1,0 +1,4704 @@
+.DocsSite[data-theme=dark] {
+  --docs-bg: #141414;
+  --docs-surface: #1b1b1b;
+  --docs-raised: #222;
+  --docs-border: hsla(0, 0%, 100%, .08);
+  --docs-border-strong: hsla(0, 0%, 100%, .15);
+  --docs-text: #ececec;
+  --docs-text-muted: #a3a3a3;
+  --docs-text-faint: #6f6f6f;
+  --docs-accent: #ffb914;
+  --docs-accent-hover: #fcd373;
+  --docs-accent-bevel-top: #fcd373;
+  --docs-accent-bevel-bottom: #b6830e;
+  --docs-accent-text: #ffb914;
+  --docs-accent-soft: rgba(255, 185, 20, .1);
+  --docs-on-accent: #141414;
+  --docs-link: #ffb914;
+  --docs-code-bg: #0f0f0f;
+  --docs-inline-code-bg: hsla(0, 0%, 100%, .07);
+  --docs-button-border: #0f0f0f;
+  --docs-shadow: calc(var(--docs-unit)*0.2) calc(var(--docs-unit)*0.25) 0 rgba(0, 0, 0, .5);
+  --docs-topbar-bg: #141414;
+  --docs-mark: rgba(255, 185, 20, .3);
+  --docs-code-text: #d4d4d4;
+  --docs-code-keyword: #c792ea;
+  --docs-code-string: #a5d6a7;
+  --docs-code-number: #f78c6c;
+  --docs-code-type: #82aaff;
+  --docs-code-comment: #6f6f6f;
+  --docs-code-function: #fcd373;
+  --docs-code-punctuation: #8f8f8f;
+  color-scheme: dark
+}
+
+.DocsSite[data-theme=light] {
+  --docs-bg: #fff;
+  --docs-surface: #f7f7f7;
+  --docs-raised: #fff;
+  --docs-border: #e5e5e5;
+  --docs-border-strong: #d0d0d0;
+  --docs-text: #171717;
+  --docs-text-muted: #525252;
+  --docs-text-faint: #8a8a8a;
+  --docs-accent: #2e80ee;
+  --docs-accent-hover: #4f94f1;
+  --docs-accent-bevel-top: #4f94f1;
+  --docs-accent-bevel-bottom: #2671d7;
+  --docs-accent-text: #2671d7;
+  --docs-accent-soft: rgba(46, 128, 238, .08);
+  --docs-on-accent: #fff;
+  --docs-link: #2671d7;
+  --docs-code-bg: #f7f7f7;
+  --docs-inline-code-bg: #f0f0f0;
+  --docs-button-border: #2671d7;
+  --docs-shadow: calc(var(--docs-unit)*0.2) calc(var(--docs-unit)*0.25) 0 rgba(0, 0, 0, .1);
+  --docs-topbar-bg: #fff;
+  --docs-mark: rgba(46, 128, 238, .18);
+  --docs-code-text: #262626;
+  --docs-code-keyword: #8a3ffc;
+  --docs-code-string: #1a7f37;
+  --docs-code-number: #b3501b;
+  --docs-code-type: #2671d7;
+  --docs-code-comment: #8a8a8a;
+  --docs-code-function: #9a5b00;
+  --docs-code-punctuation: #6b6b6b;
+  color-scheme: light
+}
+
+.DocsSite {
+  --docs-unit: 16px;
+  --docs-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", "Local Roboto", "Helvetica Neue", Arial, sans-serif;
+  --docs-mono: "SF Mono", "JetBrains Mono", Menlo, Monaco, Consolas, "Courier New", monospace;
+  --docs-radius: 0;
+  -webkit-font-smoothing: antialiased;
+  background: var(--docs-bg);
+  color: var(--docs-text);
+  font-family: var(--docs-font);
+  font-size: calc(var(--docs-unit)*1);
+  font-weight: 400;
+  height: 100vh;
+  height: 100dvh;
+  line-height: 1.6;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  scroll-padding-top: calc(var(--docs-unit)*3.75 + var(--docs-unit)*1);
+  user-select: text;
+  -webkit-user-select: text
+}
+
+.DocsSite.Embedded {
+  height: 100%
+}
+
+.DocsSite *,
+.DocsSite :after,
+.DocsSite :before {
+  box-sizing: border-box
+}
+
+.DocsSite a {
+  color: var(--docs-link);
+  text-decoration: none
+}
+
+@media(hover:hover) {
+  .DocsSite a:hover {
+    text-decoration: underline
+  }
+}
+
+.DocsSite a.pad-focused {
+  text-decoration: underline
+}
+
+.DocsSite button {
+  color: inherit;
+  cursor: pointer;
+  font: inherit
+}
+
+.DocsSite :focus-visible {
+  outline: 2px solid var(--docs-accent);
+  outline-offset: 2px
+}
+
+.DocsSite input:not([type=range], [type=color]):focus-visible {
+  outline: none
+}
+
+.DocsSite kbd {
+  background: var(--docs-surface);
+  border: 1px solid var(--docs-border-strong);
+  color: var(--docs-text-muted);
+  font-family: var(--docs-font);
+  font-size: calc(var(--docs-unit)*.72);
+  font-weight: 600;
+  padding: calc(var(--docs-unit)*.1) calc(var(--docs-unit)*.4)
+}
+
+.DocsIconButton {
+  align-items: center;
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--docs-text-muted);
+  display: inline-flex;
+  height: calc(var(--docs-unit)*2.25);
+  justify-content: center;
+  width: calc(var(--docs-unit)*2.25)
+}
+
+@media(hover:hover) {
+  .DocsIconButton:hover {
+    background: var(--docs-surface);
+    color: var(--docs-text)
+  }
+}
+
+.DocsIconButton.pad-focused {
+  background: var(--docs-surface);
+  color: var(--docs-text)
+}
+
+@media(hover:none) {
+  .DocsIconButton:active {
+    background: var(--docs-surface);
+    color: var(--docs-text)
+  }
+}
+
+.DocsTopBar {
+  align-items: center;
+  background: var(--docs-topbar-bg);
+  border-bottom: 1px solid var(--docs-border);
+  display: flex;
+  gap: calc(var(--docs-unit)*1);
+  height: calc(var(--docs-unit)*3.75);
+  padding: 0 calc(var(--docs-unit)*1.25);
+  position: sticky;
+  top: 0;
+  z-index: 4
+}
+
+.DocsTopBar .DocsMenuButton {
+  display: none
+}
+
+.DocsTopBar .DocsBrand {
+  align-items: center;
+  color: var(--docs-text);
+  display: flex;
+  flex-shrink: 0;
+  gap: calc(var(--docs-unit)*.6)
+}
+
+@media(hover:hover) {
+  .DocsTopBar .DocsBrand:hover {
+    text-decoration: none
+  }
+}
+
+.DocsTopBar .DocsBrand.pad-focused {
+  text-decoration: none
+}
+
+.DocsTopBar .DocsBrand .DocsBrandName {
+  font-size: calc(var(--docs-unit)*1.1);
+  font-weight: 800;
+  letter-spacing: -.01em
+}
+
+.DocsTopBar .DocsBrand .DocsBrandTag {
+  background: var(--docs-accent-soft);
+  color: var(--docs-accent-text);
+  font-size: calc(var(--docs-unit)*.75);
+  font-weight: 700;
+  padding: calc(var(--docs-unit)*.15) calc(var(--docs-unit)*.5)
+}
+
+.DocsTopBar .DocsSearchTrigger {
+  align-items: center;
+  background: var(--docs-surface);
+  border: 1px solid var(--docs-border-strong);
+  color: var(--docs-text-faint);
+  display: flex;
+  flex: 0 1 calc(var(--docs-unit)*22);
+  font-size: calc(var(--docs-unit)*.9);
+  gap: calc(var(--docs-unit)*.6);
+  height: calc(var(--docs-unit)*2.35);
+  margin-left: auto;
+  padding: 0 calc(var(--docs-unit)*.6) 0 calc(var(--docs-unit)*.8);
+  text-align: left
+}
+
+.DocsTopBar .DocsSearchTrigger .DocsSearchTriggerLabel {
+  flex: 1 1
+}
+
+@media(hover:hover) {
+  .DocsTopBar .DocsSearchTrigger:hover {
+    border-color: var(--docs-accent);
+    color: var(--docs-text-muted)
+  }
+}
+
+.DocsTopBar .DocsSearchTrigger.pad-focused {
+  border-color: var(--docs-accent);
+  color: var(--docs-text-muted)
+}
+
+@media(hover:none) {
+  .DocsTopBar .DocsSearchTrigger:active {
+    border-color: var(--docs-accent);
+    color: var(--docs-text-muted)
+  }
+}
+
+.DocsTopBar .DocsTopBarLinks {
+  align-items: center;
+  display: flex;
+  gap: calc(var(--docs-unit)*.25)
+}
+
+.DocsTopBar .DocsTopBarLink {
+  align-items: center;
+  color: var(--docs-text-muted);
+  display: inline-flex;
+  font-size: calc(var(--docs-unit)*.9);
+  font-weight: 600;
+  gap: calc(var(--docs-unit)*.45);
+  padding: calc(var(--docs-unit)*.45) calc(var(--docs-unit)*.7)
+}
+
+@media(hover:hover) {
+  .DocsTopBar .DocsTopBarLink:hover {
+    background: var(--docs-surface);
+    color: var(--docs-text);
+    text-decoration: none
+  }
+}
+
+.DocsTopBar .DocsTopBarLink.pad-focused {
+  background: var(--docs-surface);
+  color: var(--docs-text);
+  text-decoration: none
+}
+
+@media(hover:none) {
+  .DocsTopBar .DocsTopBarLink:active {
+    background: var(--docs-surface);
+    color: var(--docs-text);
+    text-decoration: none
+  }
+}
+
+.DocsTopBar .DocsTopBarLink.DocsPlayLink {
+  background: var(--docs-accent);
+  border: 1px solid var(--docs-button-border);
+  border-radius: 0;
+  box-shadow: inset 0 .21em 0 var(--docs-accent-bevel-top), inset 0 -.21em 0 var(--docs-accent-bevel-bottom), var(--docs-shadow);
+  color: var(--docs-on-accent);
+  font-weight: 700;
+  margin-left: calc(var(--docs-unit)*.5);
+  padding: calc(var(--docs-unit)*.5) calc(var(--docs-unit)*.9)
+}
+
+@media(hover:hover) {
+  .DocsTopBar .DocsTopBarLink.DocsPlayLink:hover {
+    background: var(--docs-accent-hover);
+    color: var(--docs-on-accent);
+    text-decoration: none
+  }
+}
+
+.DocsTopBar .DocsTopBarLink.DocsPlayLink.pad-focused {
+  background: var(--docs-accent-hover);
+  color: var(--docs-on-accent);
+  text-decoration: none
+}
+
+@media(hover:none) {
+  .DocsTopBar .DocsTopBarLink.DocsPlayLink:active {
+    background: var(--docs-accent-hover);
+    color: var(--docs-on-accent);
+    text-decoration: none
+  }
+}
+
+.DocsSiteBody {
+  grid-gap: calc(var(--docs-unit)*2.5);
+  display: grid;
+  gap: calc(var(--docs-unit)*2.5);
+  grid-template-columns: calc(var(--docs-unit)*16) minmax(0, 1fr) calc(var(--docs-unit)*15);
+  margin: 0 auto;
+  max-width: calc(var(--docs-unit)*90);
+  padding: 0 calc(var(--docs-unit)*1.5)
+}
+
+.DocsSidebar,
+.DocsToc {
+  align-self: flex-start;
+  max-height: calc(100dvh - var(--docs-unit)*3.75);
+  overflow-y: auto;
+  padding: calc(var(--docs-unit)*1.75) 0 calc(var(--docs-unit)*2);
+  position: sticky;
+  scrollbar-width: thin;
+  top: calc(var(--docs-unit)*3.75)
+}
+
+.DocsSite.Embedded {
+  container-type: size
+}
+
+.DocsSite.Embedded .DocsSidebar,
+.DocsSite.Embedded .DocsToc {
+  max-height: calc(100cqh - var(--docs-unit)*3.75)
+}
+
+.DocsNav {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--docs-unit)*1.5)
+}
+
+.DocsNav .DocsNavGroupTitle {
+  color: var(--docs-text-faint);
+  font-size: calc(var(--docs-unit)*.72);
+  font-weight: 700;
+  letter-spacing: .08em;
+  padding: 0 calc(var(--docs-unit)*.75) calc(var(--docs-unit)*.4);
+  text-transform: uppercase
+}
+
+.DocsNav .DocsNavLink {
+  align-items: center;
+  color: var(--docs-text-muted);
+  display: flex;
+  font-size: calc(var(--docs-unit)*.92);
+  font-weight: 500;
+  gap: calc(var(--docs-unit)*.7);
+  padding: calc(var(--docs-unit)*.42) calc(var(--docs-unit)*.75)
+}
+
+.DocsNav .DocsNavLink svg {
+  color: var(--docs-text-faint);
+  width: calc(var(--docs-unit)*1)
+}
+
+.DocsNav .DocsNavLink .DocsPixelIcon {
+  height: calc(var(--docs-unit)*1.25);
+  opacity: .6;
+  width: calc(var(--docs-unit)*1.25)
+}
+
+@media(hover:hover) {
+  .DocsNav .DocsNavLink:hover {
+    background: var(--docs-surface);
+    color: var(--docs-text);
+    text-decoration: none
+  }
+
+  .DocsNav .DocsNavLink:hover .DocsPixelIcon {
+    opacity: 1
+  }
+}
+
+.DocsNav .DocsNavLink.pad-focused {
+  background: var(--docs-surface);
+  color: var(--docs-text);
+  text-decoration: none
+}
+
+.DocsNav .DocsNavLink.pad-focused .DocsPixelIcon {
+  opacity: 1
+}
+
+@media(hover:none) {
+  .DocsNav .DocsNavLink:active {
+    background: var(--docs-surface);
+    color: var(--docs-text);
+    text-decoration: none
+  }
+
+  .DocsNav .DocsNavLink:active .DocsPixelIcon {
+    opacity: 1
+  }
+}
+
+.DocsNav .DocsNavLink.Active {
+  background: var(--docs-accent-soft);
+  box-shadow: inset 3px 0 0 var(--docs-accent);
+  color: var(--docs-text);
+  font-weight: 650
+}
+
+.DocsNav .DocsNavLink.Active svg {
+  color: var(--docs-accent)
+}
+
+.DocsNav .DocsNavLink.Active .DocsPixelIcon {
+  opacity: 1
+}
+
+.DocsPixelIcon {
+  -webkit-user-drag: none;
+  flex-shrink: 0;
+  height: 1.25em;
+  image-rendering: pixelated;
+  -webkit-user-select: none;
+  user-select: none;
+  vertical-align: -.25em;
+  width: 1.25em
+}
+
+.DocsPixelIcon.Tinted {
+  display: inline-block;
+  isolation: isolate;
+  position: relative
+}
+
+.DocsPixelIcon.Tinted img {
+  display: block;
+  height: 100%;
+  image-rendering: pixelated;
+  mix-blend-mode: multiply;
+  width: 100%
+}
+
+.DocsPixelIconTint {
+  background: currentColor;
+  inset: 0;
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+  position: absolute
+}
+
+.DocsNavScrim {
+  display: none
+}
+
+.DocsMain {
+  max-width: calc(var(--docs-unit)*52);
+  min-width: 0;
+  padding: calc(var(--docs-unit)*2.5) 0 calc(var(--docs-unit)*4)
+}
+
+.DocsToc {
+  font-size: calc(var(--docs-unit)*.84)
+}
+
+.DocsToc.Timeline {
+  scrollbar-width: none
+}
+
+.DocsToc.Timeline::-webkit-scrollbar {
+  display: none
+}
+
+.DocsToc .DocsTocTitle {
+  color: var(--docs-text-faint);
+  font-size: calc(var(--docs-unit)*.72);
+  font-weight: 700;
+  letter-spacing: .08em;
+  margin-bottom: calc(var(--docs-unit)*.6);
+  text-transform: uppercase
+}
+
+.DocsToc ul {
+  border-left: 1px solid var(--docs-border);
+  list-style: none;
+  margin: 0;
+  padding: 0
+}
+
+.DocsToc a {
+  border-left: 2px solid transparent;
+  color: var(--docs-text-muted);
+  display: block;
+  margin-left: -1px;
+  overflow: hidden;
+  padding: calc(var(--docs-unit)*.22) 0 calc(var(--docs-unit)*.22) calc(var(--docs-unit)*.9);
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.DocsToc a.Level3 {
+  font-size: calc(var(--docs-unit)*.8);
+  padding-left: calc(var(--docs-unit)*1.7)
+}
+
+@media(hover:hover) {
+  .DocsToc a:hover {
+    color: var(--docs-text);
+    text-decoration: none
+  }
+}
+
+.DocsToc a.pad-focused {
+  color: var(--docs-text);
+  text-decoration: none
+}
+
+@media(hover:none) {
+  .DocsToc a:active {
+    color: var(--docs-text);
+    text-decoration: none
+  }
+}
+
+.DocsToc a.Active {
+  border-left-color: var(--docs-accent);
+  color: var(--docs-accent-text);
+  font-weight: 600
+}
+
+.DocsTimeline {
+  list-style: none;
+  margin: 0;
+  padding: 0
+}
+
+.DocsTimeline ol {
+  list-style: none;
+  margin: 0 0 0 calc(var(--docs-unit)*.3);
+  padding: 0
+}
+
+.DocsTimeline .DocsTimelineMonthName {
+  color: var(--docs-text-faint);
+  display: block;
+  font-size: calc(var(--docs-unit)*.72);
+  font-weight: 700;
+  letter-spacing: .04em;
+  padding: calc(var(--docs-unit)*.5) 0 calc(var(--docs-unit)*.35)
+}
+
+.DocsTimeline .DocsTimelineNotch {
+  border-left: 2px solid var(--docs-border);
+  position: relative
+}
+
+.DocsTimeline .DocsTimelineNotch:before {
+  background: var(--docs-bg);
+  border: 2px solid var(--docs-border);
+  box-sizing: border-box;
+  content: "";
+  height: calc(var(--docs-unit)*.6);
+  left: calc(var(--docs-unit)*-.3 - 1px);
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: calc(var(--docs-unit)*.6)
+}
+
+.DocsTimeline .DocsTimelineNotch a {
+  font-feature-settings: "tnum";
+  border-left: none;
+  font-variant-numeric: tabular-nums;
+  margin-left: 0;
+  padding: calc(var(--docs-unit)*.3) 0 calc(var(--docs-unit)*.3) calc(var(--docs-unit)*1)
+}
+
+.DocsTimeline .DocsTimelineNotch.Passed {
+  border-left-color: var(--docs-accent)
+}
+
+.DocsTimeline .DocsTimelineNotch.Active:before,
+.DocsTimeline .DocsTimelineNotch.Passed:before {
+  background: var(--docs-accent);
+  border-color: var(--docs-accent)
+}
+
+.DocsTimeline .DocsTimelineNotch.Active:before {
+  box-shadow: 0 0 0 3px var(--docs-accent-soft);
+  height: calc(var(--docs-unit)*.8);
+  left: calc(var(--docs-unit)*-.4 - 1px);
+  width: calc(var(--docs-unit)*.8)
+}
+
+.DocsPager {
+  grid-gap: calc(var(--docs-unit)*1);
+  border-top: 1px solid var(--docs-border);
+  display: grid;
+  gap: calc(var(--docs-unit)*1);
+  grid-template-columns: 1fr 1fr;
+  margin-top: calc(var(--docs-unit)*4);
+  padding-top: calc(var(--docs-unit)*2)
+}
+
+.DocsPager .DocsPagerLink {
+  border: 1px solid var(--docs-border);
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--docs-unit)*.2);
+  padding: calc(var(--docs-unit)*1) calc(var(--docs-unit)*1.25)
+}
+
+.DocsPager .DocsPagerLink.Next {
+  grid-column: 2;
+  text-align: right
+}
+
+@media(hover:hover) {
+  .DocsPager .DocsPagerLink:hover {
+    border-color: var(--docs-accent);
+    text-decoration: none
+  }
+}
+
+.DocsPager .DocsPagerLink.pad-focused {
+  border-color: var(--docs-accent);
+  text-decoration: none
+}
+
+@media(hover:none) {
+  .DocsPager .DocsPagerLink:active {
+    border-color: var(--docs-accent);
+    text-decoration: none
+  }
+}
+
+.DocsPager .DocsPagerLabel {
+  color: var(--docs-text-faint);
+  font-size: calc(var(--docs-unit)*.78)
+}
+
+.DocsPager .DocsPagerTitle {
+  color: var(--docs-text);
+  font-weight: 650
+}
+
+@media(max-width:1240px) {
+  .DocsSiteBody {
+    grid-template-columns: calc(var(--docs-unit)*16) minmax(0, 1fr)
+  }
+
+  .DocsToc {
+    display: none
+  }
+}
+
+@media(max-width:900px) {
+  .DocsTopBar {
+    gap: calc(var(--docs-unit)*.5);
+    padding: 0 calc(var(--docs-unit)*.75)
+  }
+
+  .DocsTopBar .DocsMenuButton {
+    display: inline-flex
+  }
+
+  .DocsTopBar .DocsBrandTag,
+  .DocsTopBar .DocsSearchTrigger kbd,
+  .DocsTopBar .DocsSearchTriggerLabel,
+  .DocsTopBar .DocsTopBarLink span {
+    display: none
+  }
+
+  .DocsTopBar .DocsSearchTrigger {
+    flex: 0 0 auto;
+    padding: 0 calc(var(--docs-unit)*.7)
+  }
+
+  .DocsSiteBody {
+    display: block;
+    padding: 0 calc(var(--docs-unit)*1)
+  }
+
+  .DocsSidebar {
+    align-self: auto;
+    background: var(--docs-bg);
+    border-right: 1px solid var(--docs-border);
+    bottom: 0;
+    left: 0;
+    max-height: none;
+    padding: calc(var(--docs-unit)*1.25) calc(var(--docs-unit)*.75);
+    position: fixed;
+    top: calc(var(--docs-unit)*3.75);
+    transform: translateX(-100%);
+    transition: transform .2s ease, visibility 0s linear .2s;
+    visibility: hidden;
+    width: min(18*var(--docs-unit), 85vw);
+    z-index: 5
+  }
+
+  .DocsSite.NavOpen .DocsSidebar {
+    box-shadow: var(--docs-shadow);
+    transform: none;
+    transition: transform .2s ease;
+    visibility: visible
+  }
+
+  .DocsSite.NavOpen .DocsNavScrim {
+    background: rgba(0, 0, 0, .4);
+    display: block;
+    inset: calc(var(--docs-unit)*3.75) 0 0 0;
+    position: fixed;
+    z-index: 3
+  }
+
+  .DocsSite.Embedded .DocsNavScrim,
+  .DocsSite.Embedded .DocsSidebar {
+    background: none;
+    border: none;
+    bottom: auto;
+    height: 0;
+    left: auto;
+    margin: 0 calc(var(--docs-unit)*-1);
+    overflow: visible;
+    padding: 0;
+    position: sticky;
+    top: calc(var(--docs-unit)*3.75);
+    transform: none;
+    visibility: visible;
+    width: auto
+  }
+
+  .DocsSite.Embedded .DocsSidebar {
+    z-index: 5
+  }
+
+  .DocsSite.Embedded .DocsSidebar .DocsNav {
+    background: var(--docs-bg);
+    border-right: 1px solid var(--docs-border);
+    height: calc(100cqh - var(--docs-unit)*3.75);
+    left: 0;
+    overflow-y: auto;
+    padding: calc(var(--docs-unit)*1.25) calc(var(--docs-unit)*.75);
+    position: absolute;
+    top: 0;
+    transform: translateX(-100%);
+    transition: transform .2s ease, visibility 0s linear .2s;
+    visibility: hidden;
+    width: min(18*var(--docs-unit), 85cqw)
+  }
+
+  .DocsSite.Embedded .DocsNavScrim:before {
+    background: rgba(0, 0, 0, .4);
+    content: "";
+    height: calc(100cqh - var(--docs-unit)*3.75);
+    inset: 0 0 auto;
+    position: absolute
+  }
+
+  .DocsSite.Embedded.NavOpen .DocsSidebar {
+    box-shadow: none
+  }
+
+  .DocsSite.Embedded.NavOpen .DocsSidebar .DocsNav {
+    box-shadow: var(--docs-shadow);
+    transform: none;
+    transition: transform .2s ease;
+    visibility: visible
+  }
+
+  .DocsSite.Embedded.NavOpen .DocsNavScrim {
+    background: none;
+    inset: calc(var(--docs-unit)*3.75) auto auto
+  }
+
+  .DocsMain {
+    padding-top: calc(var(--docs-unit)*1.75)
+  }
+}
+
+@media(max-width:600px) {
+  .DocsSite {
+    --docs-unit: 15px
+  }
+}
+
+.DocsPageHeader {
+  margin-bottom: calc(var(--docs-unit)*2)
+}
+
+.DocsPageHeader .DocsPageTitle {
+  font-size: clamp(2*var(--docs-unit), 4vw, 2.6*var(--docs-unit));
+  font-weight: 800;
+  letter-spacing: -.025em;
+  line-height: 1.15;
+  margin: 0
+}
+
+.DocsPageHeader .DocsPageSummary {
+  color: var(--docs-text-muted);
+  font-size: calc(var(--docs-unit)*1.15);
+  margin: calc(var(--docs-unit)*.75) 0 0
+}
+
+.DocsPageHeader .DocsPageAgentActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--docs-unit)*.5);
+  margin-top: calc(var(--docs-unit)*1.25)
+}
+
+.DocsPageHeader .DocsPageAgentAction {
+  align-items: center;
+  background: var(--docs-surface);
+  border: 1px solid var(--docs-border-strong);
+  border-radius: 0;
+  color: var(--docs-text);
+  cursor: pointer;
+  display: inline-flex;
+  font: inherit;
+  font-size: calc(var(--docs-unit)*.8);
+  font-weight: 600;
+  gap: calc(var(--docs-unit)*.4);
+  padding: calc(var(--docs-unit)*.3) calc(var(--docs-unit)*.7)
+}
+
+@media(hover:hover) {
+  .DocsPageHeader .DocsPageAgentAction:hover {
+    border-color: var(--docs-accent);
+    text-decoration: none
+  }
+}
+
+.DocsPageHeader .DocsPageAgentAction.pad-focused {
+  border-color: var(--docs-accent);
+  text-decoration: none
+}
+
+@media(hover:none) {
+  .DocsPageHeader .DocsPageAgentAction:active {
+    border-color: var(--docs-accent);
+    text-decoration: none
+  }
+}
+
+.DocsPageHeader .DocsPageStats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--docs-unit)*.5);
+  margin-top: calc(var(--docs-unit)*1.25)
+}
+
+.DocsPageHeader .DocsPageStats span {
+  background: var(--docs-surface);
+  border: 1px solid var(--docs-border);
+  color: var(--docs-text-muted);
+  font-size: calc(var(--docs-unit)*.8);
+  padding: calc(var(--docs-unit)*.25) calc(var(--docs-unit)*.7)
+}
+
+.DocsPageHeader .DocsPageStats strong {
+  color: var(--docs-text)
+}
+
+.DocsProse>:first-child {
+  margin-top: 0
+}
+
+.DocsProse p {
+  margin: calc(var(--docs-unit)*.75) 0
+}
+
+.DocsProse strong {
+  font-weight: 650
+}
+
+.DocsProse .DocsHeading {
+  font-weight: 750;
+  letter-spacing: -.015em;
+  position: relative;
+  scroll-margin-top: calc(var(--docs-unit)*1)
+}
+
+.DocsProse h2.DocsHeading {
+  border-top: 1px solid var(--docs-border);
+  font-size: calc(var(--docs-unit)*1.6);
+  margin: calc(var(--docs-unit)*3) 0 calc(var(--docs-unit)*1);
+  padding-top: calc(var(--docs-unit)*1.5)
+}
+
+.DocsProse h3.DocsHeading {
+  font-size: calc(var(--docs-unit)*1.2);
+  margin: calc(var(--docs-unit)*2) 0 calc(var(--docs-unit)*.75)
+}
+
+.DocsProse h4.DocsHeading {
+  font-size: calc(var(--docs-unit)*1);
+  margin: calc(var(--docs-unit)*1.5) 0 calc(var(--docs-unit)*.5)
+}
+
+.DocsProse .DocsList {
+  margin: calc(var(--docs-unit)*.75) 0;
+  padding-left: calc(var(--docs-unit)*1.4)
+}
+
+.DocsProse .DocsList li {
+  margin: calc(var(--docs-unit)*.35) 0
+}
+
+.DocsProse .DocsList li::marker {
+  color: var(--docs-text-faint)
+}
+
+.DocsHeading {
+  overflow-wrap: anywhere
+}
+
+.DocsHeading .DocsHeadingAnchor {
+  color: var(--docs-text-faint);
+  font-weight: 500;
+  margin-left: calc(var(--docs-unit)*.5);
+  opacity: 0;
+  transition: opacity .15s
+}
+
+@media(hover:hover) {
+  .DocsHeading .DocsHeadingAnchor:hover {
+    color: var(--docs-accent);
+    text-decoration: none
+  }
+}
+
+.DocsHeading .DocsHeadingAnchor.pad-focused {
+  color: var(--docs-accent);
+  text-decoration: none
+}
+
+.DocsHeading .DocsHeadingAnchor:focus-visible {
+  opacity: 1
+}
+
+@media(hover:none) {
+  .DocsHeading .DocsHeadingAnchor {
+    display: none
+  }
+}
+
+@media(hover:hover) {
+  .DocsHeading:hover .DocsHeadingAnchor {
+    opacity: 1
+  }
+}
+
+.DocsHeading.pad-focused .DocsHeadingAnchor {
+  opacity: 1
+}
+
+.DocsPageIntro {
+  margin-bottom: calc(var(--docs-unit)*2)
+}
+
+.DocsColourSwatch {
+  border: 1px solid var(--docs-border-strong);
+  display: inline-block;
+  height: .85em;
+  margin-right: .3em;
+  vertical-align: -.08em;
+  width: .85em
+}
+
+.DocsInlineCode {
+  background: var(--docs-inline-code-bg);
+  border-radius: 2px;
+  color: var(--docs-code-text);
+  font-family: var(--docs-mono);
+  font-size: .86em;
+  overflow-wrap: anywhere;
+  padding: .12em .38em
+}
+
+.DocsInlineCode.DocsSymbolLink {
+  box-shadow: inset 0 -1px 0 var(--docs-accent-soft);
+  color: var(--docs-code-function)
+}
+
+@media(hover:hover) {
+  .DocsInlineCode.DocsSymbolLink:hover {
+    box-shadow: inset 0 -2px 0 var(--docs-accent);
+    text-decoration: none
+  }
+}
+
+.DocsInlineCode.DocsSymbolLink.pad-focused {
+  box-shadow: inset 0 -2px 0 var(--docs-accent);
+  text-decoration: none
+}
+
+.DocsTypeText .DocsTypeKeyword {
+  color: var(--docs-code-keyword)
+}
+
+.DocsTypeText .DocsTypeName {
+  color: var(--docs-code-type)
+}
+
+.DocsTypeText .DocsTypeString {
+  color: var(--docs-code-string)
+}
+
+.DocsTypeText .DocsTypeNumber {
+  color: var(--docs-code-number)
+}
+
+.DocsTypeText .DocsTypePunctuation {
+  color: var(--docs-code-punctuation)
+}
+
+.DocsTypeLink {
+  background: none;
+  border: none;
+  color: var(--docs-code-type);
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0;
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+  text-underline-offset: .2em
+}
+
+@media(hover:hover) {
+  .DocsTypeLink:hover {
+    color: var(--docs-accent-text)
+  }
+}
+
+.DocsTypeLink.pad-focused {
+  color: var(--docs-accent-text)
+}
+
+@media(hover:none) {
+  .DocsTypeLink:active {
+    color: var(--docs-accent-text)
+  }
+}
+
+.DocsTypePopover {
+  background: var(--docs-raised);
+  border: 1px solid var(--docs-border-strong);
+  box-shadow: var(--docs-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--docs-unit)*.5);
+  max-height: calc(var(--docs-unit)*22);
+  min-width: calc(var(--docs-unit)*16);
+  overflow: auto;
+  padding: calc(var(--docs-unit)*.75);
+  position: fixed;
+  width: max-content;
+  z-index: 6
+}
+
+.DocsTypePopover .DocsTypePopoverHeader {
+  align-items: center;
+  display: flex;
+  gap: calc(var(--docs-unit)*1);
+  justify-content: space-between
+}
+
+.DocsTypePopover .DocsTypePopoverTitle {
+  color: var(--docs-text-faint);
+  font-size: calc(var(--docs-unit)*.75);
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase
+}
+
+.DocsTypePopover .DocsTypePopoverLink {
+  align-items: center;
+  display: inline-flex;
+  flex-shrink: 0;
+  font-size: calc(var(--docs-unit)*.85);
+  font-weight: 600;
+  gap: calc(var(--docs-unit)*.4)
+}
+
+.DocsCodeBlock {
+  background: var(--docs-code-bg);
+  border: 1px solid var(--docs-border);
+  margin: calc(var(--docs-unit)*1) 0;
+  overflow: hidden;
+  position: relative
+}
+
+.DocsCodeBlock .DocsCodeBlockHeader {
+  align-items: center;
+  border-bottom: 1px solid var(--docs-border);
+  color: var(--docs-text-faint);
+  display: flex;
+  font-size: calc(var(--docs-unit)*.75);
+  justify-content: space-between;
+  padding: calc(var(--docs-unit)*.35) calc(var(--docs-unit)*.5) calc(var(--docs-unit)*.35) calc(var(--docs-unit)*1)
+}
+
+.DocsCodeBlock pre {
+  font-family: var(--docs-mono);
+  font-size: calc(var(--docs-unit)*.84);
+  line-height: 1.6;
+  margin: 0;
+  overflow-x: auto;
+  padding: calc(var(--docs-unit)*.9) calc(var(--docs-unit)*1);
+  tab-size: 4
+}
+
+.DocsCodeBlock code.hljs {
+  background: none;
+  color: var(--docs-code-text);
+  display: block;
+  padding: 0
+}
+
+.DocsCodeBlock .hljs-built_in,
+.DocsCodeBlock .hljs-keyword,
+.DocsCodeBlock .hljs-literal {
+  color: var(--docs-code-keyword)
+}
+
+.DocsCodeBlock .hljs-regexp,
+.DocsCodeBlock .hljs-string {
+  color: var(--docs-code-string)
+}
+
+.DocsCodeBlock .hljs-number {
+  color: var(--docs-code-number)
+}
+
+.DocsCodeBlock .hljs-class,
+.DocsCodeBlock .hljs-title.class_,
+.DocsCodeBlock .hljs-type {
+  color: var(--docs-code-type)
+}
+
+.DocsCodeBlock .hljs-title,
+.DocsCodeBlock .hljs-title.function_ {
+  color: var(--docs-code-function)
+}
+
+.DocsCodeBlock .hljs-comment {
+  color: var(--docs-code-comment);
+  font-style: italic
+}
+
+.DocsCodeBlock .hljs-attr,
+.DocsCodeBlock .hljs-params,
+.DocsCodeBlock .hljs-property,
+.DocsCodeBlock .hljs-variable {
+  color: var(--docs-code-text)
+}
+
+.DocsCodeBlock .hljs-operator,
+.DocsCodeBlock .hljs-punctuation {
+  color: var(--docs-code-punctuation)
+}
+
+.DocsCodeBlock.Compact {
+  border: none;
+  margin: 0
+}
+
+.DocsCodeBlock.Compact pre {
+  font-size: calc(var(--docs-unit)*.8);
+  padding: 0
+}
+
+.DocsCodeBlock.Collapsed pre {
+  -webkit-mask-image: linear-gradient(180deg, #000 75%, transparent);
+  mask-image: linear-gradient(180deg, #000 75%, transparent);
+  max-height: calc(var(--docs-unit)*34);
+  overflow-y: hidden
+}
+
+.DocsCodeBlock .DocsCodeBlockExpand {
+  align-items: center;
+  background: var(--docs-surface);
+  border: none;
+  border-top: 1px solid var(--docs-border);
+  color: var(--docs-text-muted);
+  display: flex;
+  font-size: calc(var(--docs-unit)*.82);
+  font-weight: 600;
+  gap: calc(var(--docs-unit)*.5);
+  justify-content: center;
+  padding: calc(var(--docs-unit)*.55);
+  width: 100%
+}
+
+@media(hover:hover) {
+  .DocsCodeBlock .DocsCodeBlockExpand:hover {
+    color: var(--docs-text)
+  }
+}
+
+.DocsCodeBlock .DocsCodeBlockExpand.pad-focused {
+  color: var(--docs-text)
+}
+
+@media(hover:none) {
+  .DocsCodeBlock .DocsCodeBlockExpand:active {
+    color: var(--docs-text)
+  }
+}
+
+.DocsCopyButton {
+  align-items: center;
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--docs-text-muted);
+  display: inline-flex;
+  flex-shrink: 0;
+  font-size: calc(var(--docs-unit)*.75);
+  font-weight: 600;
+  gap: calc(var(--docs-unit)*.4);
+  padding: calc(var(--docs-unit)*.3) calc(var(--docs-unit)*.55);
+  white-space: nowrap
+}
+
+@media(hover:hover) {
+  .DocsCopyButton:hover {
+    background: var(--docs-inline-code-bg);
+    color: var(--docs-text)
+  }
+}
+
+.DocsCopyButton.pad-focused {
+  background: var(--docs-inline-code-bg);
+  color: var(--docs-text)
+}
+
+@media(hover:none) {
+  .DocsCopyButton:active {
+    background: var(--docs-inline-code-bg);
+    color: var(--docs-text)
+  }
+}
+
+.DocsCopyButton.Copied {
+  color: #1dd06d
+}
+
+.DocsTableScroll {
+  border: 1px solid var(--docs-border);
+  margin: calc(var(--docs-unit)*1) 0;
+  overflow-x: auto
+}
+
+.DocsTable {
+  border-collapse: collapse;
+  font-size: calc(var(--docs-unit)*.9);
+  width: 100%
+}
+
+.DocsTable td,
+.DocsTable th {
+  border-bottom: 1px solid var(--docs-border);
+  padding: calc(var(--docs-unit)*.6) calc(var(--docs-unit)*.9);
+  text-align: left;
+  vertical-align: top
+}
+
+.DocsTable th {
+  background: var(--docs-surface);
+  color: var(--docs-text-muted);
+  font-size: calc(var(--docs-unit)*.78);
+  font-weight: 700
+}
+
+.DocsTable tr:last-child td {
+  border-bottom: none
+}
+
+.DocsCallout {
+  background: var(--docs-surface);
+  border: 1px solid var(--docs-border);
+  border-left: 3px solid #4f94f1;
+  margin: calc(var(--docs-unit)*1.25) 0;
+  padding: calc(var(--docs-unit)*.9) calc(var(--docs-unit)*1.1)
+}
+
+.DocsCallout.tip {
+  background: var(--docs-accent-soft);
+  border-left-color: var(--docs-accent)
+}
+
+.DocsCallout.warning {
+  border-left-color: #e34f4f
+}
+
+.DocsCallout>:first-child {
+  margin-top: 0
+}
+
+.DocsCallout>:last-child {
+  margin-bottom: 0
+}
+
+.DocsRule {
+  border: none;
+  border-top: 1px solid var(--docs-border);
+  margin: calc(var(--docs-unit)*2) 0
+}
+
+.DocsFilterBar {
+  align-items: center;
+  background: var(--docs-raised);
+  border: 1px solid var(--docs-border-strong);
+  box-shadow: 0 calc(var(--docs-unit)*.5) calc(var(--docs-unit)*1.5) calc(var(--docs-unit)*-1) rgba(0, 0, 0, .5);
+  color: var(--docs-text-faint);
+  display: flex;
+  gap: calc(var(--docs-unit)*.7);
+  height: calc(var(--docs-unit)*2.9);
+  margin: 0 0 calc(var(--docs-unit)*1.5);
+  padding: 0 calc(var(--docs-unit)*.9);
+  position: sticky;
+  top: calc(var(--docs-unit)*4.25);
+  z-index: 1
+}
+
+.DocsFilterBar:before {
+  background: var(--docs-bg);
+  bottom: calc(100% + 1px);
+  content: "";
+  height: calc(var(--docs-unit)*.5 + 1px);
+  left: -1px;
+  position: absolute;
+  right: -1px
+}
+
+.DocsFilterBar:focus-within {
+  border-color: var(--docs-accent)
+}
+
+.DocsFilterBar input {
+  background: transparent;
+  border: none;
+  color: var(--docs-text);
+  flex: 1 1;
+  font: inherit;
+  font-size: calc(var(--docs-unit)*.95);
+  height: 100%;
+  min-width: 0;
+  outline: none
+}
+
+.DocsFilterBar .DocsFilterCount {
+  font-size: calc(var(--docs-unit)*.8);
+  white-space: nowrap
+}
+
+.DocsSections {
+  display: flex;
+  flex-direction: column
+}
+
+.DocsSections.Layout-callbacks,
+.DocsSections.Layout-methods,
+.DocsSections.Layout-settings,
+.DocsSections.Layout-snippets {
+  gap: calc(var(--docs-unit)*1)
+}
+
+.DocsCard.DocsSnippetCard .DocsCardTitle {
+  font-family: inherit;
+  margin-bottom: calc(var(--docs-unit)*.6)
+}
+
+.DocsCard.DocsSnippetCard .DocsProse>:last-child {
+  margin-bottom: 0
+}
+
+.DocsEmpty {
+  color: var(--docs-text-muted);
+  padding: calc(var(--docs-unit)*3) 0;
+  text-align: center
+}
+
+.DocsCard {
+  background: var(--docs-surface);
+  border: 1px solid var(--docs-border);
+  padding: calc(var(--docs-unit)*1.25) calc(var(--docs-unit)*1.4)
+}
+
+.DocsCard.DocsTargeted {
+  border-color: var(--docs-accent);
+  box-shadow: 0 0 0 3px var(--docs-accent-soft)
+}
+
+.DocsCard .DocsCardHeader {
+  align-items: center;
+  display: flex;
+  gap: calc(var(--docs-unit)*1);
+  justify-content: space-between
+}
+
+.DocsCard .DocsCardTitle {
+  font-family: var(--docs-mono);
+  font-size: calc(var(--docs-unit)*1.08);
+  font-weight: 650;
+  letter-spacing: 0;
+  margin: 0;
+  overflow-wrap: anywhere;
+  scroll-margin-top: calc(var(--docs-unit)*4)
+}
+
+.DocsCard .DocsCardCopy {
+  flex-shrink: 0;
+  opacity: .7
+}
+
+@media(hover:hover) {
+  .DocsCard:hover .DocsCardCopy {
+    opacity: 1
+  }
+}
+
+.DocsCard.pad-focused .DocsCardCopy {
+  opacity: 1
+}
+
+.DocsCard .DocsCardFooter {
+  border-top: 1px solid var(--docs-border);
+  display: flex;
+  flex-direction: column;
+  font-size: calc(var(--docs-unit)*.85);
+  gap: calc(var(--docs-unit)*.4);
+  margin-top: calc(var(--docs-unit)*1);
+  padding-top: calc(var(--docs-unit)*.75)
+}
+
+.DocsCard .DocsCardReferences {
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--docs-unit)*.3) calc(var(--docs-unit)*.9)
+}
+
+.DocsCard .DocsCardReferencesTitle {
+  color: var(--docs-text-faint);
+  font-size: calc(var(--docs-unit)*.72);
+  font-weight: 700;
+  letter-spacing: .06em;
+  min-width: calc(var(--docs-unit)*5.5);
+  text-transform: uppercase
+}
+
+.DocsCard .DocsDeprecation {
+  font-size: calc(var(--docs-unit)*.95);
+  margin: calc(var(--docs-unit)*.75) 0 0
+}
+
+.DocsCard .DocsCardBody {
+  color: var(--docs-text-muted);
+  font-size: calc(var(--docs-unit)*.95);
+  margin-top: calc(var(--docs-unit)*.75)
+}
+
+.DocsCard .DocsCardBody .DocsCodeBlock {
+  margin: calc(var(--docs-unit)*.75) 0
+}
+
+.DocsCard .DocsCardPart {
+  margin-top: calc(var(--docs-unit)*1.1)
+}
+
+.DocsCard .DocsCardPartTitle {
+  color: var(--docs-text-faint);
+  font-size: calc(var(--docs-unit)*.72);
+  font-weight: 700;
+  letter-spacing: .08em;
+  margin: 0 0 calc(var(--docs-unit)*.5);
+  text-transform: uppercase
+}
+
+.DocsSignature {
+  align-items: baseline;
+  background: var(--docs-code-bg);
+  border: 1px solid var(--docs-border);
+  display: flex;
+  flex-wrap: wrap;
+  font-family: var(--docs-mono);
+  font-size: calc(var(--docs-unit)*.86);
+  gap: calc(var(--docs-unit)*.25) calc(var(--docs-unit)*.6);
+  margin-top: calc(var(--docs-unit)*.75);
+  overflow-wrap: anywhere;
+  padding: calc(var(--docs-unit)*.65) calc(var(--docs-unit)*.9)
+}
+
+.DocsSignature .DocsSignatureObject {
+  color: var(--docs-text-faint)
+}
+
+.DocsSignature .DocsSignatureName {
+  color: var(--docs-code-function);
+  font-weight: 600
+}
+
+.DocsSignature .DocsSignatureParam {
+  color: var(--docs-code-text)
+}
+
+.DocsSignature .DocsTypePunctuation {
+  color: var(--docs-code-punctuation)
+}
+
+.DocsSignature .DocsTypeKeyword {
+  color: var(--docs-code-keyword)
+}
+
+.DocsSignature .DocsSignatureReturns {
+  align-items: baseline;
+  display: inline-flex;
+  gap: calc(var(--docs-unit)*.5)
+}
+
+.DocsSignature .DocsSignatureArrow {
+  color: var(--docs-text-faint)
+}
+
+.DocsSignature .DocsTypeText {
+  background: none;
+  font-size: 1em;
+  padding: 0
+}
+
+.DocsParamList {
+  border: 1px solid var(--docs-border);
+  margin: 0;
+  overflow: hidden
+}
+
+.DocsParamList .DocsParam {
+  border-bottom: 1px solid var(--docs-border);
+  padding: calc(var(--docs-unit)*.6) calc(var(--docs-unit)*.9);
+  scroll-margin-top: calc(var(--docs-unit)*4)
+}
+
+.DocsParamList .DocsParam:last-child {
+  border-bottom: none
+}
+
+.DocsParamList .DocsParam.DocsTargeted {
+  background: var(--docs-accent-soft)
+}
+
+.DocsParamList dt {
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--docs-unit)*.3) calc(var(--docs-unit)*.75)
+}
+
+.DocsParamList dd {
+  color: var(--docs-text-muted);
+  font-size: calc(var(--docs-unit)*.9);
+  margin: calc(var(--docs-unit)*.3) 0 0
+}
+
+.DocsParamList .DocsParamName {
+  color: var(--docs-text);
+  font-family: var(--docs-mono);
+  font-size: calc(var(--docs-unit)*.88);
+  font-weight: 650
+}
+
+.DocsReturns {
+  align-items: flex-start;
+  color: var(--docs-text-muted);
+  display: flex;
+  flex-direction: column;
+  font-size: calc(var(--docs-unit)*.92);
+  gap: calc(var(--docs-unit)*.4)
+}
+
+.DocsReturns .DocsProse p {
+  margin: calc(var(--docs-unit)*.25) 0
+}
+
+.DocsSettingFacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--docs-unit)*.5) calc(var(--docs-unit)*1.5);
+  margin: calc(var(--docs-unit)*.75) 0 0
+}
+
+.DocsSettingFacts>div {
+  align-items: baseline;
+  display: flex;
+  gap: calc(var(--docs-unit)*.5);
+  min-width: 0
+}
+
+.DocsSettingFacts dt {
+  color: var(--docs-text-faint);
+  font-size: calc(var(--docs-unit)*.72);
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase
+}
+
+.DocsSettingFacts dd {
+  margin: 0;
+  min-width: 0
+}
+
+.DocsSettingFacts .DocsDefaultValue {
+  color: var(--docs-code-number)
+}
+
+.DocsArticleSection:first-child>h2.DocsHeading {
+  border-top: none;
+  margin-top: 0;
+  padding-top: 0
+}
+
+.DocsChangelogEntry {
+  grid-gap: calc(var(--docs-unit)*1.5);
+  border-bottom: 1px solid var(--docs-border);
+  display: grid;
+  gap: calc(var(--docs-unit)*1.5);
+  grid-template-columns: calc(var(--docs-unit)*11) minmax(0, 1fr);
+  padding: calc(var(--docs-unit)*1.5) 0
+}
+
+.DocsChangelogEntry .DocsChangelogDate .DocsHeading {
+  color: var(--docs-accent-text);
+  font-size: calc(var(--docs-unit)*.95);
+  font-weight: 700;
+  margin: 0;
+  position: sticky;
+  top: calc(var(--docs-unit)*5)
+}
+
+.DocsChangelogEntry .DocsChangelogBody {
+  font-size: calc(var(--docs-unit)*.95)
+}
+
+@media(max-width:640px) {
+  .DocsChangelogEntry {
+    gap: calc(var(--docs-unit)*.5);
+    grid-template-columns: minmax(0, 1fr)
+  }
+}
+
+.DocsSite mark {
+  background: var(--docs-mark);
+  border-radius: calc(var(--docs-unit)*.2);
+  color: inherit
+}
+
+.DocsLandingCards {
+  grid-gap: calc(var(--docs-unit)*.85);
+  display: grid;
+  gap: calc(var(--docs-unit)*.85);
+  grid-template-columns: repeat(auto-fill, minmax(calc(var(--docs-unit)*14.5), 1fr));
+  margin: 0 0 calc(var(--docs-unit)*2.5)
+}
+
+.DocsLandingCards .DocsLandingCard {
+  background: var(--docs-surface);
+  border: 1px solid var(--docs-border);
+  color: var(--docs-text);
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--docs-unit)*.35);
+  padding: calc(var(--docs-unit)*1.1) calc(var(--docs-unit)*1.15);
+  transition: border-color .15s, box-shadow .15s
+}
+
+@media(hover:hover) {
+  .DocsLandingCards .DocsLandingCard:hover {
+    border-color: var(--docs-accent);
+    box-shadow: var(--docs-shadow);
+    text-decoration: none
+  }
+
+  .DocsLandingCards .DocsLandingCard:hover .DocsLandingCardTitle {
+    color: var(--docs-accent-text)
+  }
+}
+
+.DocsLandingCards .DocsLandingCard.pad-focused {
+  border-color: var(--docs-accent);
+  box-shadow: var(--docs-shadow);
+  text-decoration: none
+}
+
+.DocsLandingCards .DocsLandingCard.pad-focused .DocsLandingCardTitle {
+  color: var(--docs-accent-text)
+}
+
+@media(hover:none) {
+  .DocsLandingCards .DocsLandingCard:active {
+    border-color: var(--docs-accent);
+    box-shadow: var(--docs-shadow);
+    text-decoration: none
+  }
+
+  .DocsLandingCards .DocsLandingCard:active .DocsLandingCardTitle {
+    color: var(--docs-accent-text)
+  }
+}
+
+.DocsLandingCards .DocsLandingCard .DocsLandingCardIcon {
+  align-items: center;
+  background: var(--docs-accent-soft);
+  color: var(--docs-accent);
+  display: inline-flex;
+  height: calc(var(--docs-unit)*2.25);
+  justify-content: center;
+  margin-bottom: calc(var(--docs-unit)*.35);
+  width: calc(var(--docs-unit)*2.25)
+}
+
+.DocsLandingCards .DocsLandingCard .DocsLandingCardTitle {
+  color: var(--docs-text);
+  font-weight: 700
+}
+
+.DocsLandingCards .DocsLandingCard .DocsLandingCardSummary {
+  color: var(--docs-text-muted);
+  font-size: calc(var(--docs-unit)*.87)
+}
+
+.DocsLandingCards .DocsLandingCard .DocsLandingCardCount {
+  color: var(--docs-accent-text);
+  font-size: calc(var(--docs-unit)*.78);
+  font-weight: 600;
+  margin-top: auto;
+  padding-top: calc(var(--docs-unit)*.5)
+}
+
+@media(max-width:640px) {
+  .DocsCardCopy {
+    position: relative
+  }
+
+  .DocsCardCopy>span {
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px
+  }
+}
+
+.DocsQteDemo {
+  margin: calc(var(--docs-unit)*-.4) 0 calc(var(--docs-unit)*1.4)
+}
+
+.DocsQteStage {
+  aspect-ratio: 16/9;
+  background: linear-gradient(rgba(26, 31, 46, .6), rgba(26, 31, 46, .6)), repeating-linear-gradient(45deg, #303a59 0 12px, #26345d 12px 24px);
+  border: 1px solid var(--docs-border);
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  -webkit-user-select: none;
+  user-select: none
+}
+
+.DocsQteStage.Playing {
+  cursor: pointer;
+  touch-action: none
+}
+
+.DocsQteStage:focus-visible {
+  border-color: var(--docs-accent)
+}
+
+.DocsQteScreen {
+  height: 45rem;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transform-origin: top left;
+  width: 80rem
+}
+
+.DocsQteOverlay {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--docs-unit)*.75);
+  inset: 0;
+  justify-content: center;
+  padding: calc(var(--docs-unit)*1);
+  position: absolute;
+  text-align: center
+}
+
+.DocsQteOverlay .DocsQtePlay {
+  align-items: center;
+  background: var(--docs-accent);
+  border: 1px solid var(--docs-button-border);
+  border-radius: 0;
+  box-shadow: inset 0 .21em 0 var(--docs-accent-bevel-top), inset 0 -.21em 0 var(--docs-accent-bevel-bottom), var(--docs-shadow);
+  color: var(--docs-on-accent);
+  display: inline-flex;
+  font-family: var(--docs-mono);
+  font-size: calc(var(--docs-unit)*.85);
+  font-weight: 700;
+  gap: calc(var(--docs-unit)*.5);
+  padding: calc(var(--docs-unit)*.55) calc(var(--docs-unit)*1.1)
+}
+
+@media(hover:hover) {
+  .DocsQteOverlay .DocsQtePlay:hover {
+    background: var(--docs-accent-hover);
+    color: var(--docs-on-accent);
+    text-decoration: none
+  }
+}
+
+.DocsQteOverlay .DocsQtePlay.pad-focused {
+  background: var(--docs-accent-hover);
+  color: var(--docs-on-accent);
+  text-decoration: none
+}
+
+@media(hover:none) {
+  .DocsQteOverlay .DocsQtePlay:active {
+    background: var(--docs-accent-hover);
+    color: var(--docs-on-accent);
+    text-decoration: none
+  }
+}
+
+.DocsQteOverlay .DocsQtePlay:disabled {
+  cursor: default;
+  opacity: .6
+}
+
+.DocsQteResult {
+  align-items: center;
+  background: rgba(10, 11, 13, .75);
+  color: #fff;
+  display: inline-flex;
+  font-size: calc(var(--docs-unit)*.85);
+  font-weight: 650;
+  gap: calc(var(--docs-unit)*.5);
+  padding: calc(var(--docs-unit)*.35) calc(var(--docs-unit)*.75)
+}
+
+.DocsQteResult.Succeeded .DocsPixelIcon,
+.DocsQteResult.Succeeded svg {
+  color: #1dd06d
+}
+
+.DocsQteResult.Failed .DocsPixelIcon,
+.DocsQteResult.Failed svg {
+  color: #fc6464
+}
+
+.DocsQteCaption {
+  color: var(--docs-text-muted);
+  font-size: calc(var(--docs-unit)*.8);
+  margin: calc(var(--docs-unit)*.4) 0 0
+}
+
+.QTEProgressBarWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  left: 50%;
+  position: fixed;
+  top: 25%;
+  transform: translate(-50%);
+  width: 40rem;
+  z-index: 2
+}
+
+.QTEProgressBarInteractionIndicator {
+  color: #fff;
+  left: var(--left, var(--notchLeft));
+  position: fixed;
+  rotate: var(--rotation, 15deg);
+  scale: var(--scale, 4);
+  text-shadow: 0 0 8px #000;
+  top: var(--top, 5%);
+  transition: transform .1s ease-out
+}
+
+.QTEProgressBarInteractionIndicator.pulse {
+  transform: scale(1.4)
+}
+
+.QTEProgressBar {
+  appearance: none;
+  background-color: #303a59;
+  border: .25rem solid #303a59;
+  border-radius: 0;
+  box-sizing: border-box;
+  height: 3rem;
+  width: 100%
+}
+
+.QTEProgressBar[value]::-webkit-progress-bar {
+  background-color: #303a59
+}
+
+.QTEProgressBar[value]::-webkit-progress-value {
+  background-color: #eee;
+  box-shadow: 0 0 16px hsla(0, 0%, 100%, .15)
+}
+
+.QTEProgressBar[value]::-moz-progress-bar {
+  background-color: #eee;
+  box-shadow: 0 0 16px hsla(0, 0%, 100%, .15)
+}
+
+.QTEProgressBarDescription {
+  color: #fff;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 800;
+  justify-content: space-between;
+  text-shadow: 0 2px 15px #000
+}
+
+.QTETimedClick {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  left: 50%;
+  position: fixed;
+  top: 25%;
+  transform: translate(-50%);
+  transition: opacity .2s ease-out;
+  z-index: 2
+}
+
+.QTETimedClickCircleContainer {
+  align-items: center;
+  display: flex;
+  height: 9rem;
+  justify-content: center;
+  min-height: 9rem;
+  min-width: 9rem;
+  position: relative;
+  width: 9rem
+}
+
+.QTETimedClickCircularProgress {
+  height: 100%;
+  position: absolute;
+  transform: rotate(-90deg);
+  width: 100%
+}
+
+.QTETimedClickProgressTrack {
+  stroke: rgba(34, 40, 59, .6)
+}
+
+.QTETimedClickProgressArc {
+  stroke: #fff
+}
+
+.QTETimedClickCenterContent {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  z-index: 1
+}
+
+.QTETimedClickInnerText {
+  font-weight: 800;
+  line-height: 0;
+  rotate: var(--rotation, 0);
+  scale: var(--scale, 4);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, .5)
+}
+
+.QTETimedClickInnerText.QTETimedClickBreathe {
+  --breathing-scale: 1.4;
+  animation: breathing 1s infinite
+}
+
+.QTETimedClickIconContainer {
+  height: 5rem;
+  width: 5rem
+}
+
+.QTETimedClickIconFallback {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 800
+}
+
+.QTETimedClickRightTextContainer {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  justify-content: center
+}
+
+.QTETimedClickLabelText {
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 800;
+  text-shadow: 0 2px 15px #000
+}
+
+.QTETimedClickTimeText {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, .5)
+}
+
+@keyframes breathing {
+  0% {
+    transform: scale(1)
+  }
+
+  50% {
+    transform: scale(var(--breathing-scale))
+  }
+
+  to {
+    transform: scale(1)
+  }
+}
+
+.QTEGravityBar {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  left: 50%;
+  position: fixed;
+  top: 25%;
+  transform: translate(-50%);
+  width: 35rem;
+  z-index: 2
+}
+
+.QTEGravityBarDescription {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 800;
+  text-shadow: 0 2px 15px #000
+}
+
+.QTEGravityBarProgress {
+  appearance: none;
+  background-color: #303a59;
+  border: .15rem solid #303a59;
+  border-radius: 0;
+  box-sizing: border-box;
+  height: 1rem;
+  width: 100%
+}
+
+.QTEGravityBarProgress[value]::-webkit-progress-bar {
+  background-color: #303a59;
+  border-radius: 0
+}
+
+.QTEGravityBarProgress[value]::-webkit-progress-value {
+  background-color: #eee;
+  border-radius: 0;
+  box-shadow: 0 0 12px hsla(0, 0%, 100%, .15)
+}
+
+.QTEGravityBarProgress[value]::-moz-progress-bar {
+  background-color: #eee;
+  border-radius: 0
+}
+
+.QTEGravityBarTrack {
+  background-color: #303a59;
+  border: .25rem solid rgba(34, 40, 59, .6);
+  border-radius: 0;
+  box-sizing: border-box;
+  height: 3rem;
+  overflow: visible;
+  position: relative;
+  width: 100%
+}
+
+.QTEGravityBarCatchZone {
+  background-color: hsla(0, 0%, 100%, .15);
+  border-left: 2px solid hsla(0, 0%, 100%, .3);
+  border-right: 2px solid hsla(0, 0%, 100%, .3);
+  box-sizing: border-box;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  transition: background-color .15s ease
+}
+
+.QTEGravityBarCatchZone.catching {
+  background-color: rgba(54, 231, 133, .7)
+}
+
+.QTEGravityBarMover {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 0 8px hsla(0, 0%, 100%, .7), 0 0 16px hsla(0, 0%, 100%, .3);
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  position: absolute;
+  top: 10%;
+  transform: translateX(-50%);
+  width: .35rem
+}
+
+.QTEGravityBarMover span {
+  margin-top: 2.5rem
+}
+
+.QTEPrecisionBarWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  left: 50%;
+  position: fixed;
+  top: 25%;
+  transform: translate(-50%);
+  width: 40rem;
+  z-index: 2
+}
+
+.QTEPrecisionBarTrack {
+  background-color: #303a59;
+  border: .25rem solid #303a59;
+  border-radius: 0;
+  box-sizing: border-box;
+  height: 3rem;
+  overflow: hidden;
+  position: relative;
+  width: 100%
+}
+
+.QTEPrecisionBarSuccessZone {
+  background-color: rgba(100, 220, 100, .35);
+  border-left: 2px solid rgba(100, 220, 100, .7);
+  border-right: 2px solid rgba(100, 220, 100, .7);
+  bottom: 0;
+  box-sizing: border-box;
+  pointer-events: none;
+  position: absolute;
+  top: 0
+}
+
+.QTEPrecisionBarMarker {
+  background-color: #fff;
+  bottom: -.25rem;
+  box-shadow: 0 0 10px hsla(0, 0%, 100%, .8);
+  pointer-events: none;
+  position: absolute;
+  top: -.25rem;
+  transform: translateX(-50%);
+  width: .35rem;
+  will-change: left
+}
+
+.QTEPrecisionBarLabel {
+  color: #fff;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 800;
+  justify-content: center;
+  text-shadow: 0 2px 15px #000
+}
+
+.QTEPrecisionBarIcon {
+  display: flex;
+  justify-content: center;
+  line-height: 0;
+  margin-bottom: .25rem;
+  rotate: var(--rotation, 0);
+  scale: var(--scale, 4);
+  z-index: 1
+}
+
+.QTERhythmClickWrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  left: 50%;
+  position: fixed;
+  top: 15%;
+  transform: translate(-50%);
+  z-index: 2
+}
+
+.QTERhythmClickCircleContainer {
+  align-items: center;
+  display: flex;
+  height: 12rem;
+  justify-content: center;
+  position: relative;
+  width: 12rem
+}
+
+.QTERhythmClickSvg {
+  height: 100%;
+  position: absolute;
+  width: 100%
+}
+
+.QTERhythmClickInnerCircle {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 3
+}
+
+.QTERhythmClickOuterCircle {
+  fill: none;
+  stroke: #ffb914;
+  stroke-width: 3;
+  will-change: r
+}
+
+.QTERhythmClickOuterCircle--hit {
+  stroke: #1dd06d
+}
+
+.QTERhythmClickOuterCircle--miss {
+  stroke: #e34f4f
+}
+
+.QTERhythmClickCenterContent {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  z-index: 1
+}
+
+.QTERhythmClickIcon {
+  line-height: 0;
+  scale: 4
+}
+
+.QTERhythmClickLabel {
+  color: #fff;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 800;
+  justify-content: center;
+  text-shadow: 0 2px 15px #000
+}
+
+.QTERhythmClickProgress {
+  display: flex;
+  gap: .5rem;
+  justify-content: center
+}
+
+.QTERhythmClickDot {
+  background-color: #3c4b68;
+  border-radius: 50%;
+  height: .75rem;
+  transition: background-color .2s ease;
+  width: .75rem
+}
+
+.QTERhythmClickDot--success {
+  background-color: #22ff2c
+}
+
+.QTERhythmClickDot--pendingSuccess {
+  background-color: #4ca172;
+  opacity: .35
+}
+
+.QTERhythmClickDot--miss {
+  background-color: #e34f4f
+}
+
+.QTERhythmClickDot--pendingMiss {
+  background-color: #ba7878;
+  opacity: .35
+}
+
+.DocsGallery {
+  margin: calc(var(--docs-unit)*1) 0 calc(var(--docs-unit)*1.5)
+}
+
+.DocsGalleryFilter {
+  align-items: center;
+  background: var(--docs-raised);
+  border: 1px solid var(--docs-border-strong);
+  color: var(--docs-text-faint);
+  display: flex;
+  font-size: calc(var(--docs-unit)*.85);
+  gap: calc(var(--docs-unit)*.6);
+  height: calc(var(--docs-unit)*2.3);
+  margin-bottom: calc(var(--docs-unit)*.75);
+  max-width: calc(var(--docs-unit)*22);
+  padding: 0 calc(var(--docs-unit)*.75)
+}
+
+.DocsGalleryFilter:focus-within {
+  border-color: var(--docs-accent)
+}
+
+.DocsGalleryFilter input {
+  background: transparent;
+  border: none;
+  color: var(--docs-text);
+  flex: 1 1;
+  font: inherit;
+  height: 100%;
+  min-width: 0;
+  outline: none
+}
+
+.DocsGalleryGrid {
+  grid-gap: calc(var(--docs-unit)*.6);
+  display: grid;
+  gap: calc(var(--docs-unit)*.6);
+  grid-template-columns: repeat(auto-fill, minmax(calc(var(--docs-unit)*7.5), 1fr))
+}
+
+.DocsGalleryGrid.Kind-sounds {
+  gap: calc(var(--docs-unit)*.4);
+  grid-template-columns: repeat(auto-fill, minmax(calc(var(--docs-unit)*13), 1fr))
+}
+
+.DocsGalleryGrid.Kind-sounds.Songs {
+  grid-template-columns: repeat(auto-fill, minmax(calc(var(--docs-unit)*18), 1fr))
+}
+
+.DocsTile {
+  align-items: center;
+  background: var(--docs-surface);
+  border: 1px solid var(--docs-border);
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--docs-unit)*.55);
+  min-width: 0;
+  padding: calc(var(--docs-unit)*.9) calc(var(--docs-unit)*.5) calc(var(--docs-unit)*.65);
+  text-align: center;
+  transition: border-color .12s, transform .12s
+}
+
+@media(hover:hover) {
+  .DocsTile:hover {
+    border-color: var(--docs-accent);
+    transform: translateY(-1px)
+  }
+}
+
+.DocsTile.pad-focused {
+  border-color: var(--docs-accent);
+  transform: translateY(-1px)
+}
+
+@media(hover:none) {
+  .DocsTile:active {
+    border-color: var(--docs-accent);
+    transform: translateY(-1px)
+  }
+}
+
+.DocsTile.Copied {
+  border-color: #1dd06d
+}
+
+.DocsTile.Copied .DocsTileName {
+  color: #1dd06d
+}
+
+.DocsTile .DocsTilePreview {
+  align-items: center;
+  display: flex;
+  height: calc(var(--docs-unit)*3);
+  justify-content: center;
+  width: calc(var(--docs-unit)*3)
+}
+
+.DocsTile .DocsTilePreview.Rendered {
+  height: calc(var(--docs-unit)*6.5);
+  width: 100%
+}
+
+.DocsTile .DocsTileImage {
+  max-height: 100%;
+  max-width: 100%
+}
+
+.DocsTile .DocsTileImage.Pixelated {
+  height: calc(var(--docs-unit)*2.5);
+  image-rendering: pixelated;
+  object-fit: contain;
+  width: calc(var(--docs-unit)*2.5)
+}
+
+.DocsTile .DocsTileIcon {
+  color: var(--docs-text);
+  height: calc(var(--docs-unit)*1.6);
+  width: calc(var(--docs-unit)*1.6)
+}
+
+.DocsTile .DocsTileIcon.Placeholder {
+  color: var(--docs-text-faint);
+  opacity: .5
+}
+
+.DocsTile .DocsTileName {
+  color: var(--docs-text-muted);
+  font-family: var(--docs-mono);
+  font-size: calc(var(--docs-unit)*.72);
+  line-height: 1.3;
+  max-width: 100%;
+  overflow-wrap: anywhere
+}
+
+.DocsSoundTile {
+  align-items: center;
+  background: var(--docs-surface);
+  border: 1px solid var(--docs-border);
+  display: flex;
+  gap: calc(var(--docs-unit)*.6);
+  min-width: 0;
+  padding: calc(var(--docs-unit)*.35) calc(var(--docs-unit)*.75) calc(var(--docs-unit)*.35) calc(var(--docs-unit)*.35);
+  text-align: left
+}
+
+@media(hover:hover) {
+  .DocsSoundTile:hover {
+    border-color: var(--docs-border-strong)
+  }
+
+  .DocsSoundTile:hover .DocsSoundPlay {
+    background: var(--docs-accent-hover)
+  }
+}
+
+.DocsSoundTile.pad-focused {
+  border-color: var(--docs-border-strong)
+}
+
+.DocsSoundTile.pad-focused .DocsSoundPlay {
+  background: var(--docs-accent-hover)
+}
+
+@media(hover:none) {
+  .DocsSoundTile:active {
+    border-color: var(--docs-border-strong)
+  }
+
+  .DocsSoundTile:active .DocsSoundPlay {
+    background: var(--docs-accent-hover)
+  }
+}
+
+.DocsSoundTile.Playing {
+  background: var(--docs-accent-soft);
+  border-color: var(--docs-accent)
+}
+
+.DocsSoundTile .DocsSoundPlay {
+  align-items: center;
+  background: var(--docs-accent);
+  border: 1px solid var(--docs-button-border);
+  border-radius: 0;
+  box-shadow: inset 0 .21em 0 var(--docs-accent-bevel-top), inset 0 -.21em 0 var(--docs-accent-bevel-bottom), var(--docs-shadow);
+  color: var(--docs-on-accent);
+  display: inline-flex;
+  flex-shrink: 0;
+  font-size: calc(var(--docs-unit)*.75);
+  height: calc(var(--docs-unit)*2);
+  justify-content: center;
+  width: calc(var(--docs-unit)*2)
+}
+
+@media(hover:hover) {
+  .DocsSoundTile .DocsSoundPlay:hover {
+    background: var(--docs-accent-hover);
+    color: var(--docs-on-accent);
+    text-decoration: none
+  }
+}
+
+.DocsSoundTile .DocsSoundPlay.pad-focused {
+  background: var(--docs-accent-hover);
+  color: var(--docs-on-accent);
+  text-decoration: none
+}
+
+@media(hover:none) {
+  .DocsSoundTile .DocsSoundPlay:active {
+    background: var(--docs-accent-hover);
+    color: var(--docs-on-accent);
+    text-decoration: none
+  }
+}
+
+.DocsSoundTile .DocsSoundName {
+  flex: 1 1;
+  font-family: var(--docs-mono);
+  font-size: calc(var(--docs-unit)*.8);
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.DocsSoundTile .DocsSoundCaption {
+  color: var(--docs-text-faint);
+  flex-shrink: 0;
+  font-size: calc(var(--docs-unit)*.75)
+}
+
+.DocsCatalogue .DocsVariantLegend td:first-child {
+  width: calc(var(--docs-unit)*4)
+}
+
+.DocsVariantChip {
+  align-items: center;
+  background: var(--docs-raised);
+  border: 1px solid var(--docs-border-strong);
+  color: var(--docs-text-muted);
+  display: inline-flex;
+  font-family: var(--docs-mono);
+  font-size: calc(var(--docs-unit)*.75);
+  font-weight: 700;
+  gap: calc(var(--docs-unit)*.35);
+  padding: calc(var(--docs-unit)*.1) calc(var(--docs-unit)*.5)
+}
+
+@media(hover:hover) {
+  .DocsVariantChip:hover {
+    border-color: var(--docs-accent)
+  }
+}
+
+.DocsVariantChip.pad-focused {
+  border-color: var(--docs-accent)
+}
+
+@media(hover:none) {
+  .DocsVariantChip:active {
+    border-color: var(--docs-accent)
+  }
+}
+
+.DocsVariantChip.Active {
+  background: var(--docs-accent-soft);
+  border-color: var(--docs-accent);
+  color: var(--docs-accent-text)
+}
+
+.DocsCatalogueGrid {
+  grid-gap: calc(var(--docs-unit)*.6);
+  display: grid;
+  gap: calc(var(--docs-unit)*.6);
+  grid-template-columns: repeat(auto-fill, minmax(calc(var(--docs-unit)*9.5), 1fr))
+}
+
+.DocsCatalogueTile {
+  align-items: center;
+  background: var(--docs-surface);
+  border: 1px solid var(--docs-border);
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--docs-unit)*.5);
+  padding: calc(var(--docs-unit)*1) calc(var(--docs-unit)*.5) calc(var(--docs-unit)*.7);
+  position: relative;
+  text-align: center
+}
+
+.DocsCatalogueTile .DocsCatalogueTexture {
+  align-items: center;
+  display: flex;
+  height: calc(var(--docs-unit)*3.25);
+  justify-content: center;
+  width: calc(var(--docs-unit)*3.25)
+}
+
+.DocsCatalogueTile .DocsCatalogueTexture img {
+  height: calc(var(--docs-unit)*2.75);
+  image-rendering: pixelated;
+  object-fit: contain;
+  width: calc(var(--docs-unit)*2.75)
+}
+
+.DocsCatalogueTile .DocsCatalogueName {
+  font-size: calc(var(--docs-unit)*.8);
+  font-weight: 600;
+  line-height: 1.3
+}
+
+.DocsCatalogueTile .DocsCatalogueVariants {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--docs-unit)*.25);
+  justify-content: center
+}
+
+.DocsCatalogueTile .DocsCatalogueVariants span {
+  background: var(--docs-accent-soft);
+  color: var(--docs-accent-text);
+  font-family: var(--docs-mono);
+  font-size: calc(var(--docs-unit)*.65);
+  padding: 0 calc(var(--docs-unit)*.35)
+}
+
+.DocsCatalogueTile .DocsCatalogueCopy {
+  opacity: 0;
+  position: absolute;
+  right: calc(var(--docs-unit)*.3);
+  top: calc(var(--docs-unit)*.3)
+}
+
+@media(hover:hover) {
+  .DocsCatalogueTile:hover {
+    border-color: var(--docs-border-strong)
+  }
+
+  .DocsCatalogueTile:hover .DocsCatalogueCopy {
+    opacity: 1
+  }
+}
+
+.DocsCatalogueTile.pad-focused {
+  border-color: var(--docs-border-strong)
+}
+
+.DocsCatalogueTile.pad-focused .DocsCatalogueCopy {
+  opacity: 1
+}
+
+@media(hover:none) {
+  .DocsCatalogueTile:active {
+    border-color: var(--docs-border-strong)
+  }
+
+  .DocsCatalogueTile:active .DocsCatalogueCopy {
+    opacity: 1
+  }
+}
+
+.DocsCatalogueTile:focus-within .DocsCatalogueCopy {
+  opacity: 1
+}
+
+.DocsCube {
+  height: calc(var(--docs-unit)*2.1);
+  position: relative;
+  transform: rotateX(-35.264deg) rotateY(-45deg);
+  transform-style: preserve-3d;
+  width: calc(var(--docs-unit)*2.1)
+}
+
+.DocsCube .DocsCubeFace {
+  backface-visibility: hidden;
+  background-size: cover;
+  image-rendering: pixelated;
+  inset: 0;
+  position: absolute
+}
+
+.DocsCube .Top {
+  transform: rotateX(90deg) translateZ(calc(var(--docs-unit)*1.05))
+}
+
+.DocsCube .Left {
+  filter: brightness(.82);
+  transform: translateZ(calc(var(--docs-unit)*1.05))
+}
+
+.DocsCube .Right {
+  filter: brightness(.64);
+  transform: rotateY(90deg) translateZ(calc(var(--docs-unit)*1.05))
+}
+
+.DocsShowMore {
+  background: var(--docs-surface);
+  border: 1px solid var(--docs-border-strong);
+  border-radius: 0;
+  color: var(--docs-text);
+  display: block;
+  font-weight: 600;
+  margin: calc(var(--docs-unit)*1.25) auto 0;
+  padding: calc(var(--docs-unit)*.6) calc(var(--docs-unit)*1.25)
+}
+
+@media(hover:hover) {
+  .DocsShowMore:hover {
+    border-color: var(--docs-accent);
+    text-decoration: none
+  }
+}
+
+.DocsShowMore.pad-focused {
+  border-color: var(--docs-accent);
+  text-decoration: none
+}
+
+@media(hover:none) {
+  .DocsShowMore:active {
+    border-color: var(--docs-accent);
+    text-decoration: none
+  }
+}
+
+.DocsPlayground {
+  background: var(--docs-surface);
+  border: 1px solid var(--docs-border-strong);
+  margin: calc(var(--docs-unit)*1.5) 0 calc(var(--docs-unit)*2);
+  padding: calc(var(--docs-unit)*1.1)
+}
+
+.DocsPlayground .DocsPlaygroundHeader {
+  align-items: flex-start;
+  display: flex;
+  gap: calc(var(--docs-unit)*1);
+  justify-content: space-between
+}
+
+.DocsPlayground .DocsPlaygroundTitle {
+  font-weight: 750
+}
+
+.DocsPlayground .DocsPlaygroundHint {
+  color: var(--docs-text-muted);
+  font-size: calc(var(--docs-unit)*.85)
+}
+
+.DocsPlayground .DocsPlaygroundPresets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--docs-unit)*.4);
+  margin: calc(var(--docs-unit)*.85) 0
+}
+
+.DocsPlayground .DocsPlaygroundPresets .DocsVariantChip {
+  font-family: var(--docs-font);
+  font-weight: 600;
+  padding: calc(var(--docs-unit)*.2) calc(var(--docs-unit)*.65)
+}
+
+.DocsPlayground .DocsPlaygroundInput {
+  background: var(--docs-code-bg);
+  border: 1px solid var(--docs-border);
+  color: var(--docs-code-text);
+  font-family: var(--docs-mono);
+  font-size: calc(var(--docs-unit)*.8);
+  line-height: 1.5;
+  min-height: calc(var(--docs-unit)*9);
+  outline: none;
+  padding: calc(var(--docs-unit)*.75);
+  resize: vertical
+}
+
+.DocsPlayground .DocsPlaygroundInput:focus {
+  border-color: var(--docs-accent)
+}
+
+.DocsPlayground .DocsControl {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--docs-unit)*.3)
+}
+
+.DocsPlayground .DocsControl input[type=range] {
+  accent-color: var(--docs-accent);
+  margin: 0;
+  width: 100%
+}
+
+.DocsPlayground .DocsControlLabel {
+  display: flex;
+  font-size: calc(var(--docs-unit)*.8);
+  font-weight: 650;
+  gap: calc(var(--docs-unit)*.5);
+  justify-content: space-between
+}
+
+.DocsPlayground .DocsControlValue {
+  color: var(--docs-text-muted);
+  font-family: var(--docs-mono);
+  font-size: calc(var(--docs-unit)*.75);
+  font-weight: 500
+}
+
+.DocsPlayground .DocsPlaygroundError {
+  color: #ff8a80;
+  font-size: calc(var(--docs-unit)*.85);
+  margin: 0
+}
+
+.DocsCatalogueTile.DocsTargeted,
+.DocsCatalogueTile.Linked,
+.DocsSoundTile.DocsTargeted,
+.DocsSoundTile.Linked,
+.DocsTile.DocsTargeted,
+.DocsTile.Linked {
+  border-color: var(--docs-accent);
+  box-shadow: 0 0 0 3px var(--docs-accent-soft)
+}
+
+.DocsParticlePlayground .DocsParticleSelect {
+  background: var(--docs-raised);
+  border: 1px solid var(--docs-border-strong);
+  border-radius: 0;
+  color: var(--docs-text);
+  font-family: var(--docs-mono);
+  font-size: calc(var(--docs-unit)*.75);
+  max-width: 100%;
+  outline: none;
+  padding: calc(var(--docs-unit)*.2) calc(var(--docs-unit)*.5)
+}
+
+.DocsParticlePlayground .DocsParticleSelect:focus {
+  border-color: var(--docs-accent)
+}
+
+.DocsParticlePlayground .DocsParticleBody {
+  grid-gap: calc(var(--docs-unit)*.75);
+  display: grid;
+  gap: calc(var(--docs-unit)*.75);
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  margin-bottom: calc(var(--docs-unit)*.85)
+}
+
+@media(max-width:760px) {
+  .DocsParticlePlayground .DocsParticleBody {
+    grid-template-columns: minmax(0, 1fr)
+  }
+
+  .DocsParticlePlayground .DocsParticleBody .DocsParticleStageWrap {
+    aspect-ratio: 1
+  }
+}
+
+.DocsParticlePlayground .DocsParticleStageWrap {
+  background: #16181c;
+  border: 1px solid var(--docs-border);
+  min-height: calc(var(--docs-unit)*18);
+  position: relative
+}
+
+.DocsParticlePlayground .DocsParticleCanvas {
+  cursor: grab;
+  display: block;
+  height: 100%;
+  min-height: calc(var(--docs-unit)*18);
+  touch-action: pan-y;
+  width: 100%
+}
+
+.DocsParticlePlayground .DocsParticleCanvas:active {
+  cursor: grabbing
+}
+
+.DocsParticlePlayground .DocsParticleStageButtons {
+  bottom: calc(var(--docs-unit)*.6);
+  display: flex;
+  gap: calc(var(--docs-unit)*.4);
+  left: calc(var(--docs-unit)*.6);
+  position: absolute
+}
+
+.DocsParticlePlayground .DocsParticleStageButton {
+  align-items: center;
+  background: rgba(10, 11, 13, .7);
+  border: 1px solid hsla(0, 0%, 100%, .18);
+  color: #e8e8e8;
+  display: inline-flex;
+  font-size: calc(var(--docs-unit)*.75);
+  font-weight: 650;
+  gap: calc(var(--docs-unit)*.4);
+  padding: calc(var(--docs-unit)*.3) calc(var(--docs-unit)*.65)
+}
+
+@media(hover:hover) {
+  .DocsParticlePlayground .DocsParticleStageButton:hover {
+    border-color: hsla(0, 0%, 100%, .5)
+  }
+}
+
+.DocsParticlePlayground .DocsParticleStageButton.pad-focused {
+  border-color: hsla(0, 0%, 100%, .5)
+}
+
+@media(hover:none) {
+  .DocsParticlePlayground .DocsParticleStageButton:active {
+    border-color: hsla(0, 0%, 100%, .5)
+  }
+}
+
+.DocsParticlePlayground .DocsParticleControls {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--docs-unit)*.7);
+  min-width: 0
+}
+
+.DocsParticlePlayground .DocsParticleRange {
+  grid-gap: calc(var(--docs-unit)*.6);
+  display: grid;
+  gap: calc(var(--docs-unit)*.6);
+  grid-template-columns: 1fr 1fr
+}
+
+.DocsParticlePlayground .DocsParticleTextures {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--docs-unit)*.3)
+}
+
+.DocsParticlePlayground .DocsParticleTexture {
+  align-items: center;
+  background: #16181c;
+  border: 1px solid var(--docs-border-strong);
+  color: #8a8a8a;
+  display: inline-flex;
+  height: calc(var(--docs-unit)*2.1);
+  justify-content: center;
+  width: calc(var(--docs-unit)*2.1)
+}
+
+.DocsParticlePlayground .DocsParticleTexture img {
+  height: calc(var(--docs-unit)*1.5);
+  image-rendering: pixelated;
+  object-fit: contain;
+  width: calc(var(--docs-unit)*1.5)
+}
+
+@media(hover:hover) {
+  .DocsParticlePlayground .DocsParticleTexture:hover {
+    border-color: var(--docs-accent)
+  }
+}
+
+.DocsParticlePlayground .DocsParticleTexture.pad-focused {
+  border-color: var(--docs-accent)
+}
+
+@media(hover:none) {
+  .DocsParticlePlayground .DocsParticleTexture:active {
+    border-color: var(--docs-accent)
+  }
+}
+
+.DocsParticlePlayground .DocsParticleTexture.Active {
+  border-color: var(--docs-accent);
+  box-shadow: inset 0 0 0 1px var(--docs-accent)
+}
+
+.DocsParticlePlayground .DocsParticleStop {
+  grid-gap: calc(var(--docs-unit)*.4);
+  align-items: center;
+  display: grid;
+  gap: calc(var(--docs-unit)*.4);
+  grid-template-columns: calc(var(--docs-unit)*2.4) minmax(0, 1fr) auto auto
+}
+
+.DocsParticlePlayground .DocsParticleStopTime {
+  color: var(--docs-text-muted);
+  font-family: var(--docs-mono);
+  font-size: calc(var(--docs-unit)*.72)
+}
+
+.DocsParticlePlayground .DocsParticleStopBar {
+  border: 1px solid var(--docs-border);
+  height: calc(var(--docs-unit)*.5)
+}
+
+.DocsParticlePlayground .DocsParticleSwatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--docs-unit)*.3)
+}
+
+.DocsParticlePlayground input[type=color] {
+  background: none;
+  border: 1px solid var(--docs-border-strong);
+  cursor: pointer;
+  height: calc(var(--docs-unit)*1.3);
+  padding: 0;
+  width: calc(var(--docs-unit)*1.7)
+}
+
+.DocsParticlePlayground .DocsCodeBlock {
+  margin: 0
+}
+
+.DocsTile.Previewable .DocsTilePreview {
+  position: relative
+}
+
+.DocsTile.Previewable .DocsTilePlayBadge {
+  align-items: center;
+  background: var(--docs-accent);
+  border: 1px solid var(--docs-button-border);
+  border-radius: 0;
+  bottom: calc(var(--docs-unit)*-.2);
+  box-shadow: inset 0 .21em 0 var(--docs-accent-bevel-top), inset 0 -.21em 0 var(--docs-accent-bevel-bottom), var(--docs-shadow);
+  color: var(--docs-on-accent);
+  display: inline-flex;
+  font-size: calc(var(--docs-unit)*.6);
+  height: calc(var(--docs-unit)*1.25);
+  justify-content: center;
+  position: absolute;
+  right: calc(var(--docs-unit)*-.4);
+  width: calc(var(--docs-unit)*1.25)
+}
+
+@media(hover:hover) {
+  .DocsTile.Previewable .DocsTilePlayBadge:hover {
+    background: var(--docs-accent-hover);
+    color: var(--docs-on-accent);
+    text-decoration: none
+  }
+}
+
+.DocsTile.Previewable .DocsTilePlayBadge.pad-focused {
+  background: var(--docs-accent-hover);
+  color: var(--docs-on-accent);
+  text-decoration: none
+}
+
+@media(hover:none) {
+  .DocsTile.Previewable .DocsTilePlayBadge:active {
+    background: var(--docs-accent-hover);
+    color: var(--docs-on-accent);
+    text-decoration: none
+  }
+}
+
+.DocsStyledTextPreview .TextFromServer {
+  display: inline
+}
+
+.DocsBloxdTextIcon {
+  align-items: center;
+  display: inline-flex;
+  isolation: isolate;
+  justify-content: center;
+  position: relative;
+  vertical-align: middle
+}
+
+.DocsBloxdTextIcon img {
+  height: 100%;
+  image-rendering: pixelated;
+  width: 100%
+}
+
+.DocsBloxdTextIcon img.Tinted {
+  mix-blend-mode: multiply
+}
+
+.DocsBloxdTextIcon.Missing {
+  border: 1px dashed hsla(0, 0%, 100%, .5);
+  font-size: .6em
+}
+
+.DocsBloxdTextIconTint {
+  inset: 0;
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+  position: absolute
+}
+
+.DocsTextEditorPreview {
+  align-items: center;
+  background: linear-gradient(rgba(26, 31, 46, .55), rgba(26, 31, 46, .55)), repeating-linear-gradient(45deg, #303a59 0 12px, #26345d 12px 24px);
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: calc(var(--docs-unit)*1.15);
+  font-weight: 600;
+  margin-bottom: calc(var(--docs-unit)*.85);
+  min-height: calc(var(--docs-unit)*6);
+  padding: calc(var(--docs-unit)*1.25);
+  text-shadow: .08em .08em 0 rgba(0, 0, 0, .45)
+}
+
+.DocsTextEditorBody {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--docs-unit)*1)
+}
+
+.DocsTextEditorPanel {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--docs-unit)*.5);
+  min-width: 0
+}
+
+.DocsTextEditorPanel .DocsCodeBlock,
+.DocsTextEditorPanel pre {
+  margin: 0
+}
+
+.DocsTextEditorPanel .DocsPlaygroundInput {
+  min-height: calc(var(--docs-unit)*10)
+}
+
+.DocsTextEditorPanelTitle {
+  color: var(--docs-text-muted);
+  display: flex;
+  font-weight: 700;
+  justify-content: space-between;
+  letter-spacing: .06em;
+  min-height: calc(var(--docs-unit)*1.75);
+  text-transform: uppercase
+}
+
+.DocsTextEditCodeButton,
+.DocsTextEditorPanelTitle {
+  align-items: center;
+  font-size: calc(var(--docs-unit)*.75)
+}
+
+.DocsTextEditCodeButton {
+  background: var(--docs-surface);
+  border: 1px solid var(--docs-border-strong);
+  border-radius: 0;
+  color: var(--docs-text);
+  cursor: pointer;
+  display: inline-flex;
+  font-weight: 650;
+  gap: calc(var(--docs-unit)*.35);
+  letter-spacing: 0;
+  padding: calc(var(--docs-unit)*.15) calc(var(--docs-unit)*.55);
+  text-transform: none
+}
+
+@media(hover:hover) {
+  .DocsTextEditCodeButton:hover {
+    border-color: var(--docs-accent);
+    text-decoration: none
+  }
+}
+
+.DocsTextEditCodeButton.pad-focused {
+  border-color: var(--docs-accent);
+  text-decoration: none
+}
+
+@media(hover:none) {
+  .DocsTextEditCodeButton:active {
+    border-color: var(--docs-accent);
+    text-decoration: none
+  }
+}
+
+.DocsTextParts {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--docs-unit)*.35);
+  list-style: none;
+  margin: 0;
+  padding: 0
+}
+
+.DocsTextPart {
+  align-items: stretch;
+  background: var(--docs-raised);
+  border: 1px solid var(--docs-border-strong);
+  display: flex
+}
+
+@media(hover:hover) {
+  .DocsTextPart:hover {
+    border-color: var(--docs-accent)
+  }
+}
+
+.DocsTextPart.pad-focused {
+  border-color: var(--docs-accent)
+}
+
+@media(hover:none) {
+  .DocsTextPart:active {
+    border-color: var(--docs-accent)
+  }
+}
+
+.DocsTextPartMain {
+  align-items: center;
+  background: none;
+  border: none;
+  color: var(--docs-text);
+  cursor: pointer;
+  display: flex;
+  flex: 1 1;
+  font: inherit;
+  gap: calc(var(--docs-unit)*.6);
+  min-width: 0;
+  padding: calc(var(--docs-unit)*.4) calc(var(--docs-unit)*.6);
+  text-align: left
+}
+
+.DocsTextPartKind {
+  color: var(--docs-text-faint);
+  flex-shrink: 0;
+  font-size: calc(var(--docs-unit)*.7);
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  width: calc(var(--docs-unit)*5.5)
+}
+
+.DocsTextPartPreview {
+  background: linear-gradient(rgba(26, 31, 46, .55), rgba(26, 31, 46, .55)), repeating-linear-gradient(45deg, #303a59 0 12px, #26345d 12px 24px);
+  color: #fff;
+  flex-shrink: 1;
+  font-size: calc(var(--docs-unit)*.85);
+  font-weight: 600;
+  max-width: 60%;
+  min-width: 0;
+  overflow: hidden;
+  padding: calc(var(--docs-unit)*.15) calc(var(--docs-unit)*.45);
+  text-overflow: ellipsis;
+  text-shadow: .08em .08em 0 rgba(0, 0, 0, .45)
+}
+
+.DocsTextPartName,
+.DocsTextPartPreview,
+.DocsTextPartPreview .TextFromServer {
+  white-space: nowrap
+}
+
+.DocsTextPartName {
+  color: var(--docs-text-muted);
+  font-family: var(--docs-mono);
+  font-size: calc(var(--docs-unit)*.75);
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+
+.DocsTextPartActions {
+  align-items: center;
+  display: flex;
+  padding-right: calc(var(--docs-unit)*.25)
+}
+
+.DocsTextPartsEmpty {
+  border: 1px dashed var(--docs-border-strong);
+  color: var(--docs-text-muted);
+  font-size: calc(var(--docs-unit)*.85);
+  padding: calc(var(--docs-unit)*.75)
+}
+
+.DocsTextIconButton {
+  align-items: center;
+  background: none;
+  border: none;
+  color: var(--docs-text-muted);
+  cursor: pointer;
+  display: inline-flex;
+  flex-shrink: 0;
+  font-size: calc(var(--docs-unit)*.8);
+  height: calc(var(--docs-unit)*1.75);
+  justify-content: center;
+  padding: 0;
+  width: calc(var(--docs-unit)*1.75)
+}
+
+.DocsTextIconButton .DocsPixelIcon {
+  opacity: .7
+}
+
+@media(hover:hover) {
+  .DocsTextIconButton:hover {
+    color: var(--docs-text)
+  }
+
+  .DocsTextIconButton:hover .DocsPixelIcon {
+    opacity: 1
+  }
+}
+
+.DocsTextIconButton.pad-focused {
+  color: var(--docs-text)
+}
+
+.DocsTextIconButton.pad-focused .DocsPixelIcon {
+  opacity: 1
+}
+
+@media(hover:none) {
+  .DocsTextIconButton:active {
+    color: var(--docs-text)
+  }
+
+  .DocsTextIconButton:active .DocsPixelIcon {
+    opacity: 1
+  }
+}
+
+.DocsTextIconButton:disabled {
+  cursor: default;
+  opacity: .35
+}
+
+.DocsTextAddPartButton {
+  background: var(--docs-raised);
+  border: 1px solid var(--docs-border-strong);
+  border-radius: 0;
+  color: var(--docs-text);
+  font: inherit;
+  font-size: calc(var(--docs-unit)*.85);
+  height: calc(var(--docs-unit)*2.1);
+  min-width: 0;
+  outline: none;
+  padding: 0 calc(var(--docs-unit)*.6)
+}
+
+.DocsTextAddPartButton:focus {
+  border-color: var(--docs-accent)
+}
+
+.DocsTextAddPartButton {
+  align-items: center;
+  background: transparent;
+  border-style: dashed;
+  color: var(--docs-text-muted);
+  cursor: pointer;
+  display: flex;
+  font-weight: 600;
+  gap: calc(var(--docs-unit)*.5);
+  text-align: left;
+  width: 100%
+}
+
+@media(hover:hover) {
+  .DocsTextAddPartButton:hover {
+    color: var(--docs-text)
+  }
+}
+
+.DocsTextAddPartButton.pad-focused {
+  color: var(--docs-text)
+}
+
+@media(hover:none) {
+  .DocsTextAddPartButton:active {
+    color: var(--docs-text)
+  }
+}
+
+.DocsTextAddPartButton>:last-child {
+  margin-left: auto
+}
+
+.DocsTextAddPartMenu {
+  border: 1px solid var(--docs-border-strong);
+  border-top: none;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0
+}
+
+.DocsTextAddPartMenu button {
+  background: none;
+  border: none;
+  color: var(--docs-text);
+  cursor: pointer;
+  font: inherit;
+  font-size: calc(var(--docs-unit)*.85);
+  padding: calc(var(--docs-unit)*.45) calc(var(--docs-unit)*.6) calc(var(--docs-unit)*.45) calc(var(--docs-unit)*1.9);
+  text-align: left;
+  width: 100%
+}
+
+@media(hover:hover) {
+  .DocsTextAddPartMenu button:hover {
+    background: var(--docs-raised)
+  }
+}
+
+.DocsTextAddPartMenu button.pad-focused {
+  background: var(--docs-raised)
+}
+
+@media(hover:none) {
+  .DocsTextAddPartMenu button:active {
+    background: var(--docs-raised)
+  }
+}
+
+.DocsTextAddPartMenu button:focus-visible {
+  outline: 2px solid var(--docs-accent);
+  outline-offset: -2px
+}
+
+.DocsTextDialogOverlay {
+  align-items: flex-start;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  background: rgba(26, 31, 46, .6);
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  padding: 8vh calc(var(--docs-unit)*1) calc(var(--docs-unit)*1);
+  position: fixed;
+  z-index: 6
+}
+
+.DocsTextDialog {
+  background: var(--docs-raised);
+  border: 1px solid var(--docs-border-strong);
+  box-shadow: var(--docs-shadow);
+  color: var(--docs-text);
+  display: flex;
+  flex-direction: column;
+  max-height: 84vh;
+  outline: none;
+  overflow: hidden;
+  width: min(32*var(--docs-unit), 100%)
+}
+
+.DocsTextDialogHeader {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  padding: calc(var(--docs-unit)*.85) calc(var(--docs-unit)*1) calc(var(--docs-unit)*.6)
+}
+
+.DocsTextDialogKind {
+  color: var(--docs-text-faint);
+  font-size: calc(var(--docs-unit)*.7);
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase
+}
+
+.DocsTextDialogTitle {
+  font-size: calc(var(--docs-unit)*1.1);
+  font-weight: 750
+}
+
+.DocsTextDialogPreview {
+  align-items: center;
+  background: linear-gradient(rgba(26, 31, 46, .55), rgba(26, 31, 46, .55)), repeating-linear-gradient(45deg, #303a59 0 12px, #26345d 12px 24px);
+  color: #fff;
+  display: flex;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  font-size: calc(var(--docs-unit)*1);
+  font-weight: 600;
+  margin: 0 calc(var(--docs-unit)*1);
+  min-height: calc(var(--docs-unit)*3.5);
+  padding: calc(var(--docs-unit)*.75) calc(var(--docs-unit)*1);
+  text-shadow: .08em .08em 0 rgba(0, 0, 0, .45)
+}
+
+.DocsTextDialogFields {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--docs-unit)*.9);
+  overflow-y: auto;
+  padding: calc(var(--docs-unit)*1)
+}
+
+.DocsTextField {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--docs-unit)*.3)
+}
+
+.DocsTextField>input,
+.DocsTextField>select {
+  background: var(--docs-raised);
+  border: 1px solid var(--docs-border-strong);
+  border-radius: 0;
+  color: var(--docs-text);
+  font: inherit;
+  font-size: calc(var(--docs-unit)*.85);
+  height: calc(var(--docs-unit)*2.1);
+  min-width: 0;
+  outline: none;
+  padding: 0 calc(var(--docs-unit)*.6)
+}
+
+.DocsTextField>input:focus,
+.DocsTextField>select:focus {
+  border-color: var(--docs-accent)
+}
+
+.DocsTextField>textarea {
+  background: var(--docs-raised);
+  border: 1px solid var(--docs-border-strong);
+  border-radius: 0;
+  color: var(--docs-text);
+  font: inherit;
+  font-size: calc(var(--docs-unit)*.85);
+  height: calc(var(--docs-unit)*2.1);
+  min-width: 0;
+  outline: none;
+  padding: 0 calc(var(--docs-unit)*.6)
+}
+
+.DocsTextField>textarea:focus {
+  border-color: var(--docs-accent)
+}
+
+.DocsTextField>textarea {
+  height: auto;
+  padding: calc(var(--docs-unit)*.45) calc(var(--docs-unit)*.6);
+  resize: vertical
+}
+
+.DocsTextField .DocsTextJson {
+  font-family: var(--docs-mono);
+  font-size: calc(var(--docs-unit)*.8)
+}
+
+.DocsTextFieldLabel {
+  align-items: center;
+  display: flex;
+  font-size: calc(var(--docs-unit)*.85);
+  font-weight: 650;
+  justify-content: space-between
+}
+
+.DocsTextFieldHint {
+  color: var(--docs-text-faint);
+  font-size: calc(var(--docs-unit)*.75);
+  margin: 0
+}
+
+.DocsTextFieldError {
+  color: #ff8a80;
+  font-size: calc(var(--docs-unit)*.8)
+}
+
+.DocsTextResetButton {
+  align-items: center;
+  background: none;
+  border: none;
+  color: var(--docs-link);
+  cursor: pointer;
+  display: inline-flex;
+  font-size: calc(var(--docs-unit)*.75);
+  font-weight: 600;
+  gap: calc(var(--docs-unit)*.3);
+  padding: 0
+}
+
+.DocsTextResetButton .DocsPixelIcon,
+.DocsTextResetButton svg {
+  transform: scaleX(-1)
+}
+
+.DocsTextResetButton:disabled {
+  color: var(--docs-text-faint);
+  cursor: default;
+  opacity: .6
+}
+
+.DocsColourInput {
+  display: flex;
+  gap: calc(var(--docs-unit)*.4)
+}
+
+.DocsColourInput input[type=color] {
+  cursor: pointer;
+  flex-shrink: 0;
+  padding: calc(var(--docs-unit)*.15);
+  width: calc(var(--docs-unit)*2.1)
+}
+
+.DocsColourInput input[type=color],
+.DocsColourInput input[type=text] {
+  background: var(--docs-raised);
+  border: 1px solid var(--docs-border-strong);
+  height: calc(var(--docs-unit)*2.1)
+}
+
+.DocsColourInput input[type=text] {
+  border-radius: 0;
+  color: var(--docs-text);
+  font: inherit;
+  font-size: calc(var(--docs-unit)*.85);
+  min-width: 0;
+  outline: none;
+  padding: 0 calc(var(--docs-unit)*.6)
+}
+
+.DocsColourInput input[type=text]:focus {
+  border-color: var(--docs-accent)
+}
+
+.DocsColourInput input[type=text] {
+  flex: 1 1;
+  font-family: var(--docs-mono)
+}
+
+.DocsColourList {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--docs-unit)*.35)
+}
+
+.DocsColourListRow {
+  align-items: center;
+  display: flex;
+  gap: calc(var(--docs-unit)*.25)
+}
+
+.DocsColourListRow .DocsColourInput {
+  flex: 1 1
+}
+
+.DocsTextAddButton {
+  align-items: center;
+  align-self: flex-start;
+  background: var(--docs-surface);
+  border: 1px solid var(--docs-border-strong);
+  border-radius: 0;
+  color: var(--docs-text);
+  cursor: pointer;
+  display: inline-flex;
+  font-size: calc(var(--docs-unit)*.8);
+  font-weight: 600;
+  gap: calc(var(--docs-unit)*.4);
+  padding: calc(var(--docs-unit)*.3) calc(var(--docs-unit)*.6)
+}
+
+@media(hover:hover) {
+  .DocsTextAddButton:hover {
+    border-color: var(--docs-accent);
+    text-decoration: none
+  }
+}
+
+.DocsTextAddButton.pad-focused {
+  border-color: var(--docs-accent);
+  text-decoration: none
+}
+
+@media(hover:none) {
+  .DocsTextAddButton:active {
+    border-color: var(--docs-accent);
+    text-decoration: none
+  }
+}
+
+.DocsFractionInput {
+  align-items: center;
+  display: flex;
+  gap: calc(var(--docs-unit)*.6)
+}
+
+.DocsFractionInput input[type=range] {
+  accent-color: var(--docs-accent);
+  flex: 1 1;
+  margin: 0
+}
+
+.DocsFractionInput output {
+  color: var(--docs-text-muted);
+  font-family: var(--docs-mono);
+  font-size: calc(var(--docs-unit)*.8);
+  text-align: right;
+  width: calc(var(--docs-unit)*2.5)
+}
+
+.DocsIconPicker {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--docs-unit)*.4)
+}
+
+.DocsIconPicker>input {
+  background: var(--docs-raised);
+  border: 1px solid var(--docs-border-strong);
+  border-radius: 0;
+  color: var(--docs-text);
+  font: inherit;
+  font-size: calc(var(--docs-unit)*.85);
+  height: calc(var(--docs-unit)*2.1);
+  min-width: 0;
+  outline: none;
+  padding: 0 calc(var(--docs-unit)*.6)
+}
+
+.DocsIconPicker>input:focus {
+  border-color: var(--docs-accent)
+}
+
+.DocsIconPicker>input {
+  font-family: var(--docs-mono)
+}
+
+.DocsIconPickerTabs {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--docs-unit)*.35)
+}
+
+.DocsIconPickerTabs .DocsVariantChip {
+  font-family: var(--docs-font);
+  font-weight: 600
+}
+
+.DocsIconPickerTabs input {
+  background: var(--docs-raised);
+  border: 1px solid var(--docs-border-strong);
+  border-radius: 0;
+  color: var(--docs-text);
+  font: inherit;
+  font-size: calc(var(--docs-unit)*.85);
+  height: calc(var(--docs-unit)*2.1);
+  min-width: 0;
+  outline: none;
+  padding: 0 calc(var(--docs-unit)*.6)
+}
+
+.DocsIconPickerTabs input:focus {
+  border-color: var(--docs-accent)
+}
+
+.DocsIconPickerTabs input {
+  flex: 1 1;
+  height: calc(var(--docs-unit)*1.75);
+  min-width: calc(var(--docs-unit)*6)
+}
+
+.DocsIconPickerGrid {
+  grid-gap: calc(var(--docs-unit)*.25);
+  background: var(--docs-surface);
+  border: 1px solid var(--docs-border);
+  display: grid;
+  gap: calc(var(--docs-unit)*.25);
+  grid-template-columns: repeat(auto-fill, minmax(calc(var(--docs-unit)*2.4), 1fr));
+  max-height: calc(var(--docs-unit)*13);
+  overflow-y: auto;
+  padding: calc(var(--docs-unit)*.35)
+}
+
+.DocsIconPickerGrid .DocsTextFieldHint {
+  grid-column: 1/-1
+}
+
+.DocsIconPickerOption {
+  align-items: center;
+  aspect-ratio: 1;
+  background: none;
+  border: 1px solid transparent;
+  color: var(--docs-text);
+  cursor: pointer;
+  display: flex;
+  font-size: calc(var(--docs-unit)*1);
+  justify-content: center;
+  padding: calc(var(--docs-unit)*.3)
+}
+
+.DocsIconPickerOption img {
+  height: 100%;
+  image-rendering: pixelated;
+  width: 100%
+}
+
+@media(hover:hover) {
+  .DocsIconPickerOption:hover {
+    background: var(--docs-raised);
+    border-color: var(--docs-border-strong)
+  }
+}
+
+.DocsIconPickerOption.pad-focused {
+  background: var(--docs-raised);
+  border-color: var(--docs-border-strong)
+}
+
+@media(hover:none) {
+  .DocsIconPickerOption:active {
+    background: var(--docs-raised);
+    border-color: var(--docs-border-strong)
+  }
+}
+
+.DocsIconPickerOption.Active {
+  background: var(--docs-accent-soft);
+  border-color: var(--docs-accent)
+}
+
+.DocsTextDialogFooter {
+  border-top: 1px solid var(--docs-border);
+  display: flex;
+  gap: calc(var(--docs-unit)*.5);
+  justify-content: space-between;
+  padding: calc(var(--docs-unit)*.75) calc(var(--docs-unit)*1)
+}
+
+.DocsTextRemoveButton {
+  align-items: center;
+  background: var(--docs-surface);
+  border: 1px solid var(--docs-border-strong);
+  border-radius: 0;
+  color: var(--docs-text);
+  cursor: pointer;
+  display: inline-flex;
+  font-size: calc(var(--docs-unit)*.85);
+  font-weight: 600;
+  gap: calc(var(--docs-unit)*.4);
+  padding: calc(var(--docs-unit)*.35) calc(var(--docs-unit)*.75)
+}
+
+@media(hover:hover) {
+  .DocsTextRemoveButton:hover {
+    border-color: var(--docs-accent);
+    text-decoration: none
+  }
+}
+
+.DocsTextRemoveButton.pad-focused {
+  border-color: var(--docs-accent);
+  text-decoration: none
+}
+
+@media(hover:none) {
+  .DocsTextRemoveButton:active {
+    border-color: var(--docs-accent);
+    text-decoration: none
+  }
+}
+
+@media(hover:hover) {
+  .DocsTextRemoveButton:hover {
+    border-color: #e34f4f;
+    color: #ff8a80
+  }
+}
+
+.DocsTextRemoveButton.pad-focused {
+  border-color: #e34f4f;
+  color: #ff8a80
+}
+
+@media(hover:none) {
+  .DocsTextRemoveButton:active {
+    border-color: #e34f4f;
+    color: #ff8a80
+  }
+}
+
+.DocsTextDoneButton {
+  background: var(--docs-accent);
+  border: 1px solid var(--docs-button-border);
+  border-radius: 0;
+  box-shadow: inset 0 .21em 0 var(--docs-accent-bevel-top), inset 0 -.21em 0 var(--docs-accent-bevel-bottom), var(--docs-shadow);
+  color: var(--docs-on-accent);
+  cursor: pointer;
+  font-size: calc(var(--docs-unit)*.85);
+  font-weight: 700;
+  padding: calc(var(--docs-unit)*.35) calc(var(--docs-unit)*1.25)
+}
+
+@media(hover:hover) {
+  .DocsTextDoneButton:hover {
+    background: var(--docs-accent-hover);
+    color: var(--docs-on-accent);
+    text-decoration: none
+  }
+}
+
+.DocsTextDoneButton.pad-focused {
+  background: var(--docs-accent-hover);
+  color: var(--docs-on-accent);
+  text-decoration: none
+}
+
+@media(hover:none) {
+  .DocsTextDoneButton:active {
+    background: var(--docs-accent-hover);
+    color: var(--docs-on-accent);
+    text-decoration: none
+  }
+}
+
+.DocsVoicePlayground .DocsVoiceCustomChip {
+  cursor: default
+}
+
+.DocsVoicePlayground .DocsVoiceBody {
+  grid-gap: calc(var(--docs-unit)*.85);
+  display: grid;
+  gap: calc(var(--docs-unit)*.85);
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  margin-bottom: calc(var(--docs-unit)*.85)
+}
+
+@media(max-width:760px) {
+  .DocsVoicePlayground .DocsVoiceBody {
+    grid-template-columns: minmax(0, 1fr)
+  }
+}
+
+.DocsVoicePlayground .DocsVoiceScene {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--docs-unit)*.6);
+  min-width: 0
+}
+
+.DocsVoicePlayground .DocsVoiceStage {
+  align-items: center;
+  background: linear-gradient(rgba(26, 31, 46, .55), rgba(26, 31, 46, .55)), repeating-linear-gradient(45deg, #303a59 0 12px, #26345d 12px 24px);
+  border: 1px solid var(--docs-border);
+  color: #fff;
+  display: flex;
+  font-size: calc(var(--docs-unit)*.85);
+  font-weight: 600;
+  justify-content: center;
+  min-height: calc(var(--docs-unit)*11);
+  padding: calc(var(--docs-unit)*1);
+  text-shadow: .08em .08em 0 rgba(0, 0, 0, .45);
+  text-shadow: none
+}
+
+.DocsVoicePlayground .DocsVoiceStage .Dialogue {
+  width: min(28em, 100%)
+}
+
+.DocsVoicePlayground .DocsVoiceLineRow {
+  display: flex;
+  gap: calc(var(--docs-unit)*.4)
+}
+
+.DocsVoicePlayground .DocsVoiceLineRow input {
+  background: var(--docs-raised);
+  border: 1px solid var(--docs-border-strong);
+  border-radius: 0;
+  color: var(--docs-text);
+  font: inherit;
+  font-size: calc(var(--docs-unit)*.85);
+  height: calc(var(--docs-unit)*2.1);
+  min-width: 0;
+  outline: none;
+  padding: 0 calc(var(--docs-unit)*.6)
+}
+
+.DocsVoicePlayground .DocsVoiceLineRow input:focus {
+  border-color: var(--docs-accent)
+}
+
+.DocsVoicePlayground .DocsVoiceLineRow input {
+  flex: 1 1
+}
+
+.DocsVoicePlayground .DocsVoiceSpeakButton {
+  align-items: center;
+  background: var(--docs-accent);
+  border: 1px solid var(--docs-button-border);
+  border-radius: 0;
+  box-shadow: inset 0 .21em 0 var(--docs-accent-bevel-top), inset 0 -.21em 0 var(--docs-accent-bevel-bottom), var(--docs-shadow);
+  color: var(--docs-on-accent);
+  display: inline-flex;
+  font-size: calc(var(--docs-unit)*.8);
+  font-weight: 700;
+  gap: calc(var(--docs-unit)*.4);
+  padding: 0 calc(var(--docs-unit)*.85)
+}
+
+@media(hover:hover) {
+  .DocsVoicePlayground .DocsVoiceSpeakButton:hover {
+    background: var(--docs-accent-hover);
+    color: var(--docs-on-accent);
+    text-decoration: none
+  }
+}
+
+.DocsVoicePlayground .DocsVoiceSpeakButton.pad-focused {
+  background: var(--docs-accent-hover);
+  color: var(--docs-on-accent);
+  text-decoration: none
+}
+
+@media(hover:none) {
+  .DocsVoicePlayground .DocsVoiceSpeakButton:active {
+    background: var(--docs-accent-hover);
+    color: var(--docs-on-accent);
+    text-decoration: none
+  }
+}
+
+.DocsVoicePlayground .DocsVoiceSamples,
+.DocsVoicePlayground .DocsVoiceWaveforms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--docs-unit)*.3)
+}
+
+.DocsVoicePlayground .DocsVoiceSamples .DocsVariantChip,
+.DocsVoicePlayground .DocsVoiceWaveforms .DocsVariantChip {
+  font-family: var(--docs-font);
+  font-weight: 600
+}
+
+.DocsVoicePlayground .DocsVoiceSpeaker {
+  align-items: center;
+  display: flex;
+  font-size: calc(var(--docs-unit)*.8);
+  font-weight: 650;
+  gap: calc(var(--docs-unit)*.5)
+}
+
+.DocsVoicePlayground .DocsVoiceSpeaker input {
+  background: var(--docs-raised);
+  border: 1px solid var(--docs-border-strong);
+  border-radius: 0;
+  color: var(--docs-text);
+  font: inherit;
+  font-size: calc(var(--docs-unit)*.85);
+  height: calc(var(--docs-unit)*2.1);
+  min-width: 0;
+  outline: none;
+  padding: 0 calc(var(--docs-unit)*.6)
+}
+
+.DocsVoicePlayground .DocsVoiceSpeaker input:focus {
+  border-color: var(--docs-accent)
+}
+
+.DocsVoicePlayground .DocsVoiceSpeaker input {
+  flex: 1 1
+}
+
+.DocsVoicePlayground .DocsVoiceControls {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--docs-unit)*1);
+  min-width: 0
+}
+
+.DocsVoicePlayground .DocsVoiceGroup {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--docs-unit)*.6)
+}
+
+.DocsVoicePlayground .DocsVoiceGroupTitle {
+  color: var(--docs-text-muted);
+  font-size: calc(var(--docs-unit)*.7);
+  font-weight: 750;
+  letter-spacing: .06em;
+  text-transform: uppercase
+}
+
+.DocsVoicePlayground .DocsVoiceToggle {
+  align-items: center;
+  display: flex;
+  font-size: calc(var(--docs-unit)*.8);
+  font-weight: 650;
+  gap: calc(var(--docs-unit)*.45)
+}
+
+.DocsVoicePlayground .DocsVoiceToggle input {
+  accent-color: var(--docs-accent);
+  margin: 0
+}
+
+.DocsVoicePlayground .DocsCodeBlock {
+  margin: 0
+}
+
+.InlineIconTextGlue {
+  white-space: nowrap
+}
+
+.InlineIconTextGlue .InlineIconTextIcon {
+  display: inline-block;
+  height: 1.3em;
+  position: relative;
+  vertical-align: middle;
+  width: 1.3em
+}
+
+.DialogueAnchor {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.25rem;
+  left: 50%;
+  pointer-events: none;
+  position: fixed;
+  top: calc(50% + 3rem);
+  transform: translateX(-50%);
+  width: min(28em, 84vw);
+  z-index: 6
+}
+
+@media(min-width:1200px)and (min-height:800px) {
+  .DialogueAnchor {
+    bottom: 25%;
+    font-size: clamp(1.25rem, 2vh, 2.25rem)
+  }
+
+  .DialogueAnchor .Dialogue {
+    margin-top: auto
+  }
+}
+
+.Dialogue {
+  background: rgba(38, 52, 93, .85);
+  color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  gap: .4em;
+  max-width: 100%;
+  padding: .6em .9em .7em;
+  text-align: left
+}
+
+.Dialogue .DialogueSpeaker {
+  color: #ffb914;
+  font-weight: 700
+}
+
+.Dialogue .DialogueSpeaker .TextFromServerGameIcon,
+.Dialogue .DialogueSpeaker .TextFromServerIngameItem {
+  margin-right: .4em
+}
+
+.Dialogue>.DialogueSpeaker {
+  font-size: .9em
+}
+
+.Dialogue .DialogueLine {
+  font-size: 1.15em;
+  line-height: 1.35;
+  margin: 0;
+  overflow-wrap: anywhere;
+  white-space: pre-line
+}
+
+.Dialogue .DialogueLine .DialogueGlue {
+  white-space: nowrap
+}
+
+.Dialogue .DialogueLine .DialogueWord {
+  display: inline-block;
+  white-space: normal
+}
+
+.Dialogue.DialogueAnimateIn .DialogueLine .DialogueWord {
+  animation: DialogueWordPop .16s ease-out var(--word-delay) both
+}
+
+@media(max-height:500px) {
+  .Dialogue {
+    gap: .25em;
+    padding: .4em .7em .5em
+  }
+
+  .Dialogue>.DialogueSpeaker {
+    font-size: .8em
+  }
+
+  .Dialogue .DialogueLine {
+    font-size: 1.05em
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .Dialogue.DialogueAnimateIn .DialogueLine .DialogueWord {
+    animation: none
+  }
+}
+
+@keyframes DialogueWordPop {
+  0% {
+    opacity: 0;
+    transform: translateY(.3em) scale(.7)
+  }
+
+  70% {
+    opacity: 1;
+    transform: translateY(-.05em) scale(1.08)
+  }
+
+  to {
+    opacity: 1;
+    transform: none
+  }
+}
+
+.DocsSearchOverlay {
+  align-items: flex-start;
+  animation: DocsSearchFadeIn .12s ease-out;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  background: rgba(26, 31, 46, .6);
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  padding: 12vh calc(var(--docs-unit)*1) calc(var(--docs-unit)*1);
+  position: fixed;
+  z-index: 6
+}
+
+.DocsSearchDialog {
+  background: var(--docs-raised);
+  border: 1px solid var(--docs-border-strong);
+  box-shadow: var(--docs-shadow);
+  display: flex;
+  flex-direction: column;
+  max-height: 70vh;
+  overflow: hidden;
+  width: min(40*var(--docs-unit), 100%)
+}
+
+.DocsSearchInputRow {
+  align-items: center;
+  border-bottom: 1px solid var(--docs-border);
+  color: var(--docs-text-faint);
+  display: flex;
+  gap: calc(var(--docs-unit)*.75);
+  height: calc(var(--docs-unit)*3.5);
+  padding: 0 calc(var(--docs-unit)*1)
+}
+
+.DocsSearchInputRow input {
+  background: transparent;
+  border: none;
+  color: var(--docs-text);
+  flex: 1 1;
+  font: inherit;
+  font-size: calc(var(--docs-unit)*1.05);
+  height: 100%;
+  min-width: 0;
+  outline: none
+}
+
+.DocsSearchResults {
+  flex: 1 1;
+  list-style: none;
+  margin: 0;
+  overflow-y: auto;
+  padding: calc(var(--docs-unit)*.5)
+}
+
+.DocsSearchHint {
+  color: var(--docs-text-faint);
+  font-size: calc(var(--docs-unit)*.78);
+  font-weight: 700;
+  letter-spacing: .06em;
+  padding: calc(var(--docs-unit)*.5) calc(var(--docs-unit)*.75);
+  text-transform: uppercase
+}
+
+.DocsSearchResult {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  gap: calc(var(--docs-unit)*.85);
+  padding: calc(var(--docs-unit)*.6) calc(var(--docs-unit)*.75)
+}
+
+.DocsSearchResult>svg {
+  color: var(--docs-text-faint);
+  flex-shrink: 0;
+  width: calc(var(--docs-unit)*1)
+}
+
+.DocsSearchResult>.DocsPixelIcon {
+  height: calc(var(--docs-unit)*1.25);
+  opacity: .6;
+  width: calc(var(--docs-unit)*1.25)
+}
+
+.DocsSearchResult.Active {
+  background: var(--docs-accent-soft)
+}
+
+.DocsSearchResult.Active>svg {
+  color: var(--docs-accent)
+}
+
+.DocsSearchResult.Active>.DocsPixelIcon {
+  opacity: 1
+}
+
+.DocsSearchResult .DocsSearchResultText {
+  flex: 1 1;
+  min-width: 0
+}
+
+.DocsSearchResult .DocsSearchResultTitle {
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.DocsSearchResult .DocsSearchResultSnippet {
+  color: var(--docs-text-muted);
+  font-size: calc(var(--docs-unit)*.82);
+  margin-top: calc(var(--docs-unit)*.1);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.DocsSearchResult .DocsSearchResultMeta {
+  color: var(--docs-text-faint);
+  flex-shrink: 0;
+  font-size: calc(var(--docs-unit)*.75);
+  max-width: 40%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+@keyframes DocsSearchFadeIn {
+  0% {
+    opacity: 0
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fadeInScaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(.6)
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes fadeInScaleUpNoOversize {
+  0% {
+    opacity: 0;
+    transform: scale(.8)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes shake {
+  0% {
+    rotate: 3deg
+  }
+
+  5% {
+    rotate: -2deg
+  }
+
+  10% {
+    rotate: 2deg
+  }
+
+  15% {
+    rotate: -3deg
+  }
+
+  20% {
+    rotate: 0deg
+  }
+}
+
+@keyframes loadingShimmer {
+  0% {
+    transform: translateX(-66.6666666667%)
+  }
+
+  to {
+    transform: none
+  }
+}
+
+@keyframes topRightStackIn {
+  0% {
+    opacity: 0;
+    transform: translateX(1.5rem)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
+
+@keyframes rainbowShimmer {
+  0% {
+    background-position: 200%
+  }
+
+  to {
+    background-position: -200%
+  }
+}
+
+.DocsSoundPlayerDock {
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 calc(var(--docs-unit)*1.25);
+  pointer-events: none;
+  position: sticky;
+  z-index: 2
+}
+
+.DocsSoundPlayer {
+  align-items: center;
+  background: var(--docs-raised);
+  border: 1px solid var(--docs-border-strong);
+  box-shadow: var(--docs-shadow);
+  display: flex;
+  gap: calc(var(--docs-unit)*.75);
+  margin-bottom: calc(var(--docs-unit)*1.25);
+  padding: calc(var(--docs-unit)*.6) calc(var(--docs-unit)*.6) calc(var(--docs-unit)*.6) calc(var(--docs-unit)*.6);
+  pointer-events: auto;
+  width: calc(var(--docs-unit)*26)
+}
+
+.DocsSoundPlayer button {
+  align-items: center;
+  cursor: pointer;
+  display: inline-flex;
+  flex-shrink: 0;
+  justify-content: center;
+  padding: 0
+}
+
+.DocsSoundPlayer input[type=range] {
+  accent-color: var(--docs-accent);
+  margin: 0;
+  min-width: 0
+}
+
+.DocsSoundPlayerToggle {
+  background: var(--docs-accent);
+  border: 1px solid var(--docs-button-border);
+  border-radius: 0;
+  box-shadow: inset 0 .21em 0 var(--docs-accent-bevel-top), inset 0 -.21em 0 var(--docs-accent-bevel-bottom), var(--docs-shadow);
+  color: var(--docs-on-accent);
+  font-size: calc(var(--docs-unit)*.9);
+  height: calc(var(--docs-unit)*2.5);
+  width: calc(var(--docs-unit)*2.5)
+}
+
+@media(hover:hover) {
+  .DocsSoundPlayerToggle:hover {
+    background: var(--docs-accent-hover);
+    color: var(--docs-on-accent);
+    text-decoration: none
+  }
+}
+
+.DocsSoundPlayerToggle.pad-focused {
+  background: var(--docs-accent-hover);
+  color: var(--docs-on-accent);
+  text-decoration: none
+}
+
+@media(hover:none) {
+  .DocsSoundPlayerToggle:active {
+    background: var(--docs-accent-hover);
+    color: var(--docs-on-accent);
+    text-decoration: none
+  }
+}
+
+.DocsSoundPlayerTrack {
+  display: flex;
+  flex: 1 1;
+  flex-direction: column;
+  gap: calc(var(--docs-unit)*.15);
+  min-width: 0
+}
+
+.DocsSoundPlayerTitle {
+  align-items: baseline;
+  display: flex;
+  gap: calc(var(--docs-unit)*.5);
+  min-width: 0
+}
+
+.DocsSoundPlayerTitle code {
+  font-family: var(--docs-mono);
+  font-size: calc(var(--docs-unit)*.8);
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.DocsSoundPlayerTitle span {
+  color: var(--docs-text-faint);
+  flex-shrink: 0;
+  font-size: calc(var(--docs-unit)*.7);
+  letter-spacing: .06em;
+  text-transform: uppercase
+}
+
+.DocsSoundPlayerScrubber {
+  font-feature-settings: "tnum";
+  align-items: center;
+  color: var(--docs-text-muted);
+  display: flex;
+  font-family: var(--docs-mono);
+  font-size: calc(var(--docs-unit)*.7);
+  font-variant-numeric: tabular-nums;
+  gap: calc(var(--docs-unit)*.45)
+}
+
+.DocsSoundPlayerScrubber span {
+  flex-shrink: 0;
+  min-width: calc(var(--docs-unit)*2.1)
+}
+
+.DocsSoundPlayerScrubber span:last-child {
+  text-align: right
+}
+
+.DocsSoundPlayerScrubber input[type=range] {
+  flex: 1 1
+}
+
+.DocsSoundPlayerVolume {
+  align-items: center;
+  display: flex;
+  gap: calc(var(--docs-unit)*.3)
+}
+
+.DocsSoundPlayerVolume button {
+  background: none;
+  border: none;
+  color: var(--docs-text-muted);
+  font-size: calc(var(--docs-unit)*.8);
+  height: calc(var(--docs-unit)*1.6);
+  width: calc(var(--docs-unit)*1.6)
+}
+
+.DocsSoundPlayerVolume button .DocsPixelIcon {
+  opacity: .7
+}
+
+@media(hover:hover) {
+  .DocsSoundPlayerVolume button:hover {
+    color: var(--docs-text)
+  }
+
+  .DocsSoundPlayerVolume button:hover .DocsPixelIcon {
+    opacity: 1
+  }
+}
+
+.DocsSoundPlayerVolume button.pad-focused {
+  color: var(--docs-text)
+}
+
+.DocsSoundPlayerVolume button.pad-focused .DocsPixelIcon {
+  opacity: 1
+}
+
+@media(hover:none) {
+  .DocsSoundPlayerVolume button:active {
+    color: var(--docs-text)
+  }
+
+  .DocsSoundPlayerVolume button:active .DocsPixelIcon {
+    opacity: 1
+  }
+}
+
+.DocsSoundPlayerVolume button .DocsPixelIcon.Muted {
+  opacity: .35
+}
+
+.DocsSoundPlayerVolume input[type=range] {
+  width: calc(var(--docs-unit)*4.5)
+}
+
+.DocsSoundPlayerClose {
+  align-self: flex-start;
+  background: none;
+  border: none;
+  color: var(--docs-text-faint);
+  font-size: calc(var(--docs-unit)*.8);
+  height: calc(var(--docs-unit)*1.5);
+  width: calc(var(--docs-unit)*1.5)
+}
+
+.DocsSoundPlayerClose .DocsPixelIcon {
+  opacity: .6
+}
+
+@media(hover:hover) {
+  .DocsSoundPlayerClose:hover {
+    color: var(--docs-text)
+  }
+
+  .DocsSoundPlayerClose:hover .DocsPixelIcon {
+    opacity: 1
+  }
+}
+
+.DocsSoundPlayerClose.pad-focused {
+  color: var(--docs-text)
+}
+
+.DocsSoundPlayerClose.pad-focused .DocsPixelIcon {
+  opacity: 1
+}
+
+@media(hover:none) {
+  .DocsSoundPlayerClose:active {
+    color: var(--docs-text)
+  }
+
+  .DocsSoundPlayerClose:active .DocsPixelIcon {
+    opacity: 1
+  }
+}
+
+@media(max-width:600px) {
+  .DocsSoundPlayerDock {
+    padding: 0
+  }
+
+  .DocsSoundPlayer {
+    border-width: 1px 0 0;
+    box-shadow: 0 calc(var(--docs-unit)*-.25) calc(var(--docs-unit)*1) rgba(0, 0, 0, .25);
+    flex-wrap: wrap;
+    margin-bottom: 0;
+    padding: calc(var(--docs-unit)*.75) calc(var(--docs-unit)*1) calc(var(--docs-unit)*.75 + env(safe-area-inset-bottom));
+    width: 100%
+  }
+
+  .DocsSoundPlayerTrack {
+    flex-basis: 0
+  }
+
+  .DocsSoundPlayerVolume {
+    flex-basis: 100%;
+    order: 1;
+    padding-left: calc(var(--docs-unit)*3.25)
+  }
+
+  .DocsSoundPlayerVolume input[type=range] {
+    flex: 1 1;
+    width: auto
+  }
+}

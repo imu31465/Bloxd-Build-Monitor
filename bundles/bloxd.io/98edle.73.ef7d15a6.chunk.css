@@ -1,0 +1,3440 @@
+.StudioAiAnswerText {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  user-select: text;
+  -webkit-user-select: text
+}
+
+.StudioAiAnswerText h3,
+.StudioAiAnswerText h4 {
+  margin: 1rem 0 .25rem
+}
+
+.StudioAiAnswerText h3 {
+  font-size: 1.4rem
+}
+
+.StudioAiAnswerText h4 {
+  font-size: 1.2rem
+}
+
+.StudioAiAnswerText ol,
+.StudioAiAnswerText p,
+.StudioAiAnswerText ul {
+  margin: .4rem 0
+}
+
+.StudioAiAnswerText ol,
+.StudioAiAnswerText ul {
+  padding-left: 1.5rem
+}
+
+.StudioAiAnswerText code {
+  background-color: #303a59;
+  overflow-wrap: anywhere;
+  padding: 0 .2rem
+}
+
+.StudioAiAnswerText table {
+  border-collapse: collapse
+}
+
+.StudioAiAnswerText table td,
+.StudioAiAnswerText table th {
+  border: 1px solid #303a59;
+  padding: .2rem .5rem
+}
+
+.StudioAiAnswerSummary p {
+  font-weight: 700;
+  margin-top: 0
+}
+
+.StudioAiAnswerText p.StudioAiKidGoingWell {
+  align-items: baseline;
+  display: flex;
+  gap: .5rem;
+  margin: .4rem 0 .6rem
+}
+
+.StudioAiAnswerText p.StudioAiKidGoingWell svg {
+  color: #1dd06d;
+  flex-shrink: 0
+}
+
+.StudioAiAnswerSection h3 {
+  align-items: center;
+  display: flex;
+  gap: .5rem
+}
+
+.StudioAiAnswerSection-goingWell h3 svg {
+  color: #1dd06d
+}
+
+.StudioAiAnswerSection-fixFirst h3 svg {
+  color: #fcd373
+}
+
+.StudioAiAnswerSection-tryNext h3 svg {
+  color: #85baff
+}
+
+.StudioAiNextChange {
+  background-color: rgba(57, 73, 128, .4);
+  border: 2px solid rgba(255, 185, 20, .35);
+  border-radius: .75rem;
+  margin: .5rem 0 .75rem;
+  padding: .6rem .9rem
+}
+
+.StudioAiNextChange h4 {
+  align-items: center;
+  display: flex;
+  font-size: 1.15rem;
+  gap: .5rem;
+  margin: 0 0 .35rem
+}
+
+.StudioAiNextChange h4 svg {
+  color: #ffb914
+}
+
+.StudioAiNextChange>:last-child {
+  margin-bottom: 0
+}
+
+.StudioAiNextChange strong {
+  color: #fff
+}
+
+.StudioAiNextChangeProgress {
+  border: 1px solid hsla(0, 0%, 95%, .1);
+  border-radius: 999px;
+  color: #cfcfcf;
+  font-size: .9rem;
+  font-weight: 700;
+  margin-left: auto;
+  padding: 0 .6rem
+}
+
+.StudioAiNextChangeProgress.StudioAiNextChangeProgressDone {
+  border-color: #1dd06d;
+  color: #1dd06d
+}
+
+.StudioAiAnswerText ol.StudioAiNextChangeSteps {
+  list-style: none;
+  padding-left: 0
+}
+
+.StudioAiNextChangeStep {
+  margin: .3rem 0
+}
+
+.StudioAiNextChangeStep>label {
+  align-items: flex-start;
+  cursor: pointer;
+  display: flex;
+  gap: .6rem
+}
+
+.StudioAiNextChangeStep input {
+  accent-color: #1dd06d;
+  cursor: pointer;
+  flex-shrink: 0;
+  height: 1.15rem;
+  margin: .2rem 0 0;
+  width: 1.15rem
+}
+
+.StudioAiNextChangeStep.StudioAiNextChangeStepDone>label>span {
+  color: #a4a4a4;
+  text-decoration: line-through
+}
+
+.StudioAiAnswerText p.StudioAiNextChangeTarget {
+  align-items: baseline;
+  border-top: 1px solid hsla(0, 0%, 95%, .1);
+  display: flex;
+  gap: .6rem;
+  margin-top: .5rem;
+  padding-top: .45rem
+}
+
+.StudioAiAnswerText p.StudioAiNextChangeTarget svg {
+  color: #1dd06d;
+  flex-shrink: 0
+}
+
+.StudioAiAnswerText p.StudioAiNextChangeThen {
+  align-items: baseline;
+  display: flex;
+  gap: .6rem;
+  margin-top: .5rem
+}
+
+.StudioAiAnswerText p.StudioAiNextChangeThen svg {
+  color: #85baff;
+  flex-shrink: 0
+}
+
+.StudioAiNextChange .StudioAiNextChangeCode {
+  background-color: #303a59;
+  margin: .5rem 0
+}
+
+.StudioAiNextChange .StudioAiNextChangeCode .StudioAiTrackLineHeader>span {
+  align-items: center;
+  color: #cfcfcf;
+  display: inline-flex;
+  gap: .4rem
+}
+
+.StudioAiNextChange .StudioAiNextChangeCode pre {
+  font-size: 1.05em
+}
+
+.StudioAiAnswerText p.StudioAiNextChangeCodeCheck,
+.StudioAiAnswerText p.StudioAiNextChangeWhere {
+  font-size: .95em;
+  margin: .4rem 0 0;
+  overflow-wrap: anywhere
+}
+
+.StudioAiAnswerText p.StudioAiNextChangeCodeCheck {
+  color: #fcd373
+}
+
+.StudioAiAnswerText p.StudioAiNextChangeCodeCheck.StudioAiNextChangeCodeAdd {
+  color: inherit
+}
+
+.StudioAiNextChangeCode p.StudioAiNextChangeWhere {
+  border-top: 1px dashed hsla(0, 0%, 95%, .1);
+  padding-top: .35rem
+}
+
+.StudioAiNextChangeTitle {
+  color: #fff;
+  font-weight: 700
+}
+
+.StudioAiNextChangeBasis {
+  color: #cfcfcf;
+  font-size: .9rem;
+  white-space: normal
+}
+
+.StudioAiCheckPlan {
+  border: 1px dashed hsla(0, 0%, 95%, .1);
+  border-radius: .4rem;
+  margin-top: .5rem;
+  padding: .45rem .75rem
+}
+
+.StudioAiCheckPlan p {
+  margin: .2rem 0 0;
+  overflow-wrap: anywhere
+}
+
+.StudioAiCheckPlan p.StudioAiCheckPlanTitle {
+  align-items: center;
+  display: flex;
+  font-weight: 700;
+  gap: .5rem;
+  margin: 0
+}
+
+.StudioAiCheckPlan p.StudioAiCheckPlanTitle svg {
+  color: #1dd06d
+}
+
+.StudioAiCheckPlan p.StudioAiCheckPlanOneLine {
+  align-items: baseline;
+  font-weight: inherit
+}
+
+.StudioAiCheckPlan p.StudioAiCheckPlanOneLine svg {
+  flex-shrink: 0
+}
+
+.StudioAiCheckPlan p.StudioAiCheckPlanUndo {
+  color: #cfcfcf;
+  font-size: .95em
+}
+
+.StudioAiAnswerText .StudioAiDataFacts {
+  background-color: rgba(57, 73, 128, .4);
+  border-left: .3rem solid #85baff;
+  border-radius: .4rem;
+  margin: .6rem 0;
+  padding: .45rem .75rem
+}
+
+.StudioAiAnswerText .StudioAiDataFacts p.StudioAiDataFactsTitle {
+  align-items: center;
+  display: flex;
+  font-weight: 700;
+  gap: .5rem;
+  margin: 0
+}
+
+.StudioAiAnswerText .StudioAiDataFacts p.StudioAiDataFactsTitle svg {
+  color: #85baff
+}
+
+.StudioAiAnswerText .StudioAiDataFacts ul {
+  margin: .2rem 0 0
+}
+
+.StudioAiAnswerText .StudioAiDataFacts li {
+  overflow-wrap: anywhere
+}
+
+.StudioAiAnswerText .StudioAiDataFacts li.StudioAiHardestSteps ol {
+  margin: .1rem 0 0;
+  padding-left: 1.4rem
+}
+
+.StudioAiAnswerText .StudioAiDataFacts.StudioAiAlsoInData {
+  background-color: transparent;
+  border-left-color: hsla(0, 0%, 95%, .1);
+  margin-top: -.3rem
+}
+
+.StudioAiAnswerText .StudioAiDataFacts.StudioAiAlsoInData p.StudioAiDataFactsTitle svg {
+  color: #cfcfcf
+}
+
+.StudioAiAnswerText .StudioAiDataFacts.StudioAiYourEvents {
+  background-color: transparent;
+  border-left-color: hsla(0, 0%, 95%, .1)
+}
+
+.StudioAiAnswerText .StudioAiDataFacts.StudioAiYourEvents>summary.StudioAiDataFactsTitle {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  font-weight: 700;
+  gap: .5rem;
+  list-style: none
+}
+
+.StudioAiAnswerText .StudioAiDataFacts.StudioAiYourEvents>summary.StudioAiDataFactsTitle::-webkit-details-marker {
+  display: none
+}
+
+.StudioAiAnswerText .StudioAiDataFacts.StudioAiYourEvents>summary.StudioAiDataFactsTitle svg {
+  color: #cfcfcf
+}
+
+.StudioAiAnswerText .StudioAiDataFacts.StudioAiYourEvents>summary.StudioAiDataFactsTitle svg.StudioAiYourEventsCaret {
+  transition: transform .15s
+}
+
+.StudioAiAnswerText .StudioAiDataFacts.StudioAiYourEvents p.StudioAiYourEventsHint {
+  color: #cfcfcf;
+  margin: .2rem 0 0
+}
+
+.StudioAiAnswerText .StudioAiDataFacts.StudioAiYourEvents[open]>summary svg.StudioAiYourEventsCaret {
+  transform: rotate(90deg)
+}
+
+.StudioAiAnswerText .StudioAiMeasureFirst {
+  background-color: rgba(57, 73, 128, .4);
+  border-left: .3rem solid #fcd373;
+  border-radius: .4rem;
+  margin: .6rem 0;
+  padding: .45rem .75rem
+}
+
+.StudioAiAnswerText .StudioAiMeasureFirst p {
+  margin: .2rem 0 0
+}
+
+.StudioAiAnswerText .StudioAiMeasureFirst p.StudioAiMeasureFirstTitle {
+  align-items: baseline;
+  display: flex;
+  gap: .5rem;
+  margin: 0
+}
+
+.StudioAiAnswerText .StudioAiMeasureFirst p.StudioAiMeasureFirstTitle svg {
+  color: #fcd373
+}
+
+.StudioAiAnswerText .StudioAiMeasureFirst p.StudioAiMeasureFirstHint {
+  color: #cfcfcf
+}
+
+.StudioAiAnswerText .StudioAiMeasureFirst>details>summary {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  font-weight: 700;
+  gap: .5rem;
+  list-style: none;
+  margin-top: .3rem
+}
+
+.StudioAiAnswerText .StudioAiMeasureFirst>details>summary::-webkit-details-marker {
+  display: none
+}
+
+.StudioAiAnswerText .StudioAiMeasureFirst>details>summary svg.StudioAiMeasureFirstCaret {
+  color: #cfcfcf;
+  transition: transform .15s
+}
+
+.StudioAiAnswerText .StudioAiMeasureFirst>details[open]>summary svg.StudioAiMeasureFirstCaret {
+  transform: rotate(90deg)
+}
+
+.StudioAiAnswerText .StudioAiMeasureFirst ul {
+  margin: .2rem 0 0
+}
+
+.StudioAiAnswerText .StudioAiMeasureFirst.StudioAiMeasureFirstInvite {
+  border-left-color: #85baff
+}
+
+.StudioAiAnswerText .StudioAiMeasureFirst.StudioAiMeasureFirstInvite p.StudioAiMeasureFirstTitle svg {
+  color: #85baff
+}
+
+.StudioAiAnswerText p.StudioAiEffectSize {
+  align-items: baseline;
+  display: flex;
+  gap: .6rem;
+  margin-top: .35rem;
+  overflow-wrap: anywhere
+}
+
+.StudioAiAnswerText p.StudioAiEffectSize svg {
+  color: #1dd06d;
+  flex-shrink: 0
+}
+
+.StudioAiGuessMark {
+  color: #cfcfcf;
+  font-size: .85em;
+  font-style: italic
+}
+
+.StudioAiGuessMark svg {
+  color: #fcd373;
+  margin-right: .3em
+}
+
+.StudioAiBranchNote {
+  color: #cfcfcf;
+  display: block;
+  font-size: .9em;
+  margin-top: .2rem
+}
+
+.StudioAiBranchNote svg {
+  margin-right: .35em
+}
+
+.StudioAiConstantCheck {
+  color: #cfcfcf;
+  cursor: help;
+  display: block;
+  font-size: .9em;
+  margin-top: .2rem
+}
+
+.StudioAiConstantCheck svg {
+  margin-right: .35em
+}
+
+.StudioAiConstantCheckDirection svg {
+  color: #fcd373
+}
+
+.StudioAiNextChangePeek {
+  align-items: center;
+  background-color: rgba(57, 73, 128, .4);
+  border: 2px solid rgba(255, 185, 20, .35);
+  border-radius: .75rem;
+  display: none;
+  gap: .5rem;
+  margin: .6rem 0 0;
+  padding: .35rem .9rem
+}
+
+.StudioAiNextChangePeek svg {
+  color: #ffb914;
+  flex-shrink: 0
+}
+
+.StudioAiNextChangePeek strong {
+  flex-shrink: 0
+}
+
+.StudioAiNextChangePeekText {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.StudioAiAnswerText .StudioAiJourneyStrip {
+  grid-gap: .75rem;
+  display: grid;
+  gap: .75rem;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  list-style: none;
+  margin: .75rem 0 .5rem;
+  padding: 0
+}
+
+.StudioAiJourneyStep {
+  background-color: rgba(57, 73, 128, .4);
+  border: 1px solid hsla(0, 0%, 95%, .1);
+  border-left: .3rem solid #a4a4a4;
+  border-radius: .4rem;
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  padding: .5rem .75rem;
+  position: relative
+}
+
+.StudioAiJourneyStep:has(>button.StudioAiJourneyStepOpen:hover) {
+  background-color: rgba(57, 73, 128, .6)
+}
+
+.StudioAiJourneyStep:has(>button.StudioAiJourneyStepOpen:focus-visible) {
+  outline: 2px solid #85baff
+}
+
+.StudioAiJourneyStep-good {
+  border-left-color: #1dd06d
+}
+
+.StudioAiJourneyStep-okay {
+  border-left-color: #85baff
+}
+
+.StudioAiJourneyStep-weak {
+  border-left-color: #fcd373
+}
+
+.StudioAiJourneyStepOpen {
+  background: none;
+  border: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  font: inherit;
+  gap: .15rem;
+  padding: 0;
+  text-align: left
+}
+
+button.StudioAiJourneyStepOpen {
+  cursor: pointer
+}
+
+button.StudioAiJourneyStepOpen:focus-visible {
+  outline: none
+}
+
+button.StudioAiJourneyStepOpen:after {
+  content: "";
+  inset: 0;
+  position: absolute
+}
+
+.StudioAiJourneyStepTitle {
+  align-items: center;
+  display: flex;
+  font-size: 1.1rem;
+  font-weight: 700;
+  gap: .5rem;
+  justify-content: space-between
+}
+
+.StudioAiJourneyStepReason {
+  font-size: 1rem;
+  line-height: 1.35
+}
+
+.StudioAiJourneyStepTypical {
+  color: #cfcfcf;
+  font-size: .9rem;
+  line-height: 1.35
+}
+
+.StudioAiJourneyStepLinks {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1rem;
+  gap: .3rem;
+  pointer-events: none;
+  position: relative;
+  z-index: 1
+}
+
+.StudioAiJourneyStepLinks .StudioAiStatChip {
+  flex-wrap: wrap;
+  margin: 0;
+  max-width: 100%;
+  pointer-events: auto;
+  row-gap: 0;
+  text-align: left;
+  white-space: normal
+}
+
+.StudioAiJourneyVerdict {
+  border-radius: 999px;
+  flex-shrink: 0;
+  font-size: .85rem;
+  font-weight: 800;
+  line-height: 1.5;
+  padding: 0 .55rem;
+  white-space: nowrap
+}
+
+.StudioAiJourneyVerdict-good {
+  background-color: rgba(29, 208, 109, .15);
+  color: #1dd06d
+}
+
+.StudioAiJourneyVerdict-okay {
+  background-color: rgba(133, 186, 255, .15);
+  color: #85baff
+}
+
+.StudioAiJourneyVerdict-weak {
+  background-color: hsla(42, 96%, 72%, .15);
+  color: #fcd373
+}
+
+.StudioAiStatChip {
+  align-items: center;
+  background-color: rgba(57, 73, 128, .4);
+  border: 1px solid hsla(0, 0%, 95%, .1);
+  border-radius: 999px;
+  color: #85baff;
+  display: inline-flex;
+  flex-wrap: wrap;
+  font: inherit;
+  font-size: .9em;
+  gap: 0 .3rem;
+  line-height: 1.5;
+  margin: 0 .15rem;
+  max-width: 100%;
+  padding: 0 .45rem;
+  vertical-align: baseline;
+  white-space: nowrap
+}
+
+.StudioAiStatChip svg {
+  font-size: .85em
+}
+
+.StudioAiStatChipName {
+  color: #cfcfcf;
+  font-size: .85em
+}
+
+button.StudioAiStatChip {
+  cursor: pointer
+}
+
+button.StudioAiStatChip:focus-visible,
+button.StudioAiStatChip:hover {
+  background-color: rgba(57, 73, 128, .6);
+  color: #fff
+}
+
+.StudioAiAnswerSection-trackNext h3 svg {
+  color: #85baff
+}
+
+.StudioAiTrackItems>li {
+  margin: .4rem 0 .75rem
+}
+
+.StudioAiTrackLine {
+  background-color: rgba(57, 73, 128, .4);
+  border: 1px solid hsla(0, 0%, 95%, .1);
+  border-radius: .4rem;
+  margin: .3rem 0;
+  padding: .5rem .75rem
+}
+
+.StudioAiTrackLine pre {
+  margin: .4rem 0 0;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word
+}
+
+.StudioAiTrackLine pre code {
+  background-color: transparent;
+  font-size: .95em;
+  padding: 0
+}
+
+.StudioAiTrackLineHeader {
+  align-items: center;
+  display: flex;
+  font-size: .95em;
+  gap: .5rem
+}
+
+.StudioAiTrackLineHeader>span {
+  min-width: 0;
+  overflow-wrap: anywhere
+}
+
+.StudioAiTrackLineCopy {
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid hsla(0, 0%, 95%, .1);
+  border-radius: 999px;
+  color: #85baff;
+  cursor: pointer;
+  display: inline-flex;
+  flex-shrink: 0;
+  font: inherit;
+  font-size: .9em;
+  gap: .3rem;
+  margin-left: auto;
+  padding: .1rem .6rem
+}
+
+.StudioAiTrackLineCopy:focus-visible,
+.StudioAiTrackLineCopy:hover {
+  background-color: rgba(57, 73, 128, .6);
+  color: #fff
+}
+
+.StudioAiUnknownCodeName {
+  cursor: help;
+  -webkit-text-decoration: underline dotted #fcd373;
+  text-decoration: underline dotted #fcd373;
+  text-decoration-thickness: 2px;
+  text-underline-offset: .2em
+}
+
+.StudioAiOverstatement,
+.StudioAiUncheckedNumber {
+  cursor: help;
+  -webkit-text-decoration: underline dotted #fcd373;
+  text-decoration: underline dotted #fcd373;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .2em
+}
+
+.StudioAiConstantNote {
+  color: #cfcfcf;
+  cursor: help;
+  font-size: .9em;
+  -webkit-text-decoration: underline dotted #cfcfcf;
+  text-decoration: underline dotted #cfcfcf;
+  text-underline-offset: .2em;
+  white-space: nowrap
+}
+
+.StudioAiAnswerText p.StudioAiNextChangeCodeNote {
+  font-size: .95em;
+  margin: .4rem 0 0
+}
+
+.StudioAiUnknownItem {
+  cursor: help;
+  -webkit-text-decoration: underline dotted #fcd373;
+  text-decoration: underline dotted #fcd373;
+  text-decoration-thickness: 2px;
+  text-underline-offset: .2em
+}
+
+.StudioAiAnswerText p.StudioAiLeftOut,
+.StudioAiAnswerText p.StudioAiNumbersChecked {
+  color: #cfcfcf;
+  font-size: .9rem;
+  margin-top: .8rem
+}
+
+.StudioAiAnswerText p.StudioAiNumbersChecked {
+  align-items: center;
+  display: flex;
+  gap: .4rem
+}
+
+.StudioAiNextChange .StudioAiSetupLines {
+  background-color: #303a59;
+  border-left: 3px solid #1dd06d;
+  margin: .5rem 0
+}
+
+.StudioAiNextChange .StudioAiSetupLines .StudioAiTrackLineHeader {
+  color: #cfcfcf
+}
+
+.StudioAiNextChange .StudioAiSetupLines pre+.StudioAiTrackLineHeader {
+  margin-top: .5rem
+}
+
+.StudioAiCodeInPlace {
+  border-top: 1px dashed hsla(0, 0%, 95%, .1);
+  font-size: .95em;
+  margin: .4rem 0 0;
+  padding-top: .35rem
+}
+
+.StudioAiCodeInPlace summary {
+  color: #cfcfcf;
+  cursor: pointer
+}
+
+.StudioAiCodeInPlace pre {
+  background-color: #1a1f2e;
+  border-radius: .3rem;
+  padding: .3rem 0
+}
+
+.StudioAiCodeInPlaceLine {
+  display: flex
+}
+
+.StudioAiCodeInPlaceGutter {
+  color: #a4a4a4;
+  flex: 0 0 3.2em;
+  padding-right: .6em;
+  text-align: right;
+  -webkit-user-select: none;
+  user-select: none
+}
+
+.StudioAiCodeInPlaceText {
+  flex: 1 1;
+  min-width: 0;
+  white-space: pre-wrap
+}
+
+.StudioAiCodeInPlaceAdded {
+  background-color: rgba(29, 208, 109, .12);
+  color: #1dd06d
+}
+
+.StudioAiCodeInPlaceAdded .StudioAiCodeInPlaceGutter {
+  color: #1dd06d
+}
+
+.StudioAiCodeInPlaceMore {
+  color: #a4a4a4;
+  font-style: italic;
+  -webkit-user-select: none;
+  user-select: none
+}
+
+.StudioAiCodeInPlaceRemoved {
+  background-color: hsla(5, 100%, 75%, .1);
+  color: #ff8a80
+}
+
+.StudioAiCodeInPlaceRemoved .StudioAiCodeInPlaceText {
+  text-decoration: line-through
+}
+
+.StudioAiAlreadyGiven,
+.StudioAiMissingCommand,
+.StudioAiSetupInline {
+  color: #fcd373;
+  font-size: .9em;
+  overflow-wrap: anywhere
+}
+
+.StudioAiSetupInline {
+  color: #cfcfcf;
+  display: block
+}
+
+.StudioAiInventedName {
+  color: #cfcfcf;
+  font-size: .9em;
+  overflow-wrap: anywhere
+}
+
+.StudioAiKidMore {
+  margin: .75rem 0 .4rem
+}
+
+.StudioAiKidMore>summary {
+  align-items: center;
+  color: #cfcfcf;
+  cursor: pointer;
+  display: inline-flex;
+  font-weight: 700;
+  gap: .5rem;
+  list-style: none
+}
+
+.StudioAiKidMore>summary::-webkit-details-marker {
+  display: none
+}
+
+.StudioAiKidMore>summary svg {
+  transition: transform .15s
+}
+
+.StudioAiKidMore[open]>summary svg {
+  transform: rotate(90deg)
+}
+
+.StudioAiBumpNote {
+  color: #cfcfcf;
+  cursor: help;
+  font-size: .9em;
+  -webkit-text-decoration: underline dotted #cfcfcf;
+  text-decoration: underline dotted #cfcfcf;
+  text-underline-offset: .2em
+}
+
+.WorldCodeAiAddKey,
+.WorldCodeAiAiSettings {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+  line-height: 1.45
+}
+
+.WorldCodeAiAddKey h3,
+.WorldCodeAiAddKey p,
+.WorldCodeAiAiSettings h3,
+.WorldCodeAiAiSettings p {
+  margin: 0
+}
+
+.WorldCodeAiAiSettings {
+  padding-bottom: 1rem
+}
+
+.WorldCodeAiAiSettingsSection {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: .6rem
+}
+
+.WorldCodeAiAiSettingsTitle {
+  font-size: 1.05rem;
+  font-weight: 700
+}
+
+.WorldCodeAiAiSettingsNote {
+  color: rgb(var(--wcai-panel-muted));
+  font-size: .85rem
+}
+
+.WorldCodeAiAiSettingsNote a {
+  color: rgb(var(--wcai-accent))
+}
+
+.WorldCodeAiAllowEdits,
+.WorldCodeAiRememberKeys {
+  align-items: flex-start;
+  cursor: pointer;
+  display: flex;
+  gap: .5rem
+}
+
+.WorldCodeAiAllowEdits input,
+.WorldCodeAiRememberKeys input {
+  accent-color: rgb(var(--wcai-accent));
+  flex: none;
+  height: 1.1em;
+  margin: .1rem 0 0;
+  width: 1.1em
+}
+
+.WorldCodeAiRememberKeys>span {
+  display: flex;
+  flex-direction: column
+}
+
+.WorldCodeAiModelList {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: .4rem
+}
+
+.WorldCodeAiModelGroup {
+  border-top: 1px solid rgb(var(--wcai-panel-border));
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  padding-top: .4rem
+}
+
+.WorldCodeAiModelGroupHeader {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem .6rem
+}
+
+.WorldCodeAiModelGroupHeader code {
+  color: rgb(var(--wcai-panel-muted));
+  font-family: monospace
+}
+
+.WorldCodeAiModelGroupName {
+  flex: 1 1 12rem;
+  font-weight: 700;
+  min-width: 0
+}
+
+.WorldCodeAiModelGroupName .WorldCodeAiKeyLearnMore {
+  font-size: .85rem;
+  font-weight: 400
+}
+
+.WorldCodeAiModelGroupHeader .WorldCodeAiModelRefresh {
+  font-size: .85rem;
+  padding: .15rem .5rem
+}
+
+.WorldCodeAiModelGroupHeader .WorldCodeAiModelRefresh,
+.WorldCodeAiModelGroupHeader .WorldCodeAiModelRefresh:active,
+.WorldCodeAiModelGroupHeader .WorldCodeAiModelRefresh:focus-visible,
+.WorldCodeAiModelGroupHeader .WorldCodeAiModelRefresh:hover {
+  background: transparent;
+  border: 1px solid rgb(var(--wcai-accent));
+  box-shadow: none;
+  color: rgb(var(--wcai-accent));
+  text-shadow: none
+}
+
+.WorldCodeAiModelGroupHeader .WorldCodeAiModelRefresh:hover {
+  background-color: rgba(var(--wcai-accent), .12)
+}
+
+.WorldCodeAiModelGroupHeader .WorldCodeAiModelRefresh:disabled {
+  opacity: .6
+}
+
+.WorldCodeAiForgetAll .WorldCodeAiModelRemove,
+.WorldCodeAiModelGroupHeader .WorldCodeAiModelRemove {
+  font-size: .85rem;
+  margin-left: .5rem;
+  padding: .15rem .5rem
+}
+
+.WorldCodeAiForgetAll .WorldCodeAiModelRemove,
+.WorldCodeAiForgetAll .WorldCodeAiModelRemove:active,
+.WorldCodeAiForgetAll .WorldCodeAiModelRemove:focus-visible,
+.WorldCodeAiForgetAll .WorldCodeAiModelRemove:hover,
+.WorldCodeAiModelGroupHeader .WorldCodeAiModelRemove,
+.WorldCodeAiModelGroupHeader .WorldCodeAiModelRemove:active,
+.WorldCodeAiModelGroupHeader .WorldCodeAiModelRemove:focus-visible,
+.WorldCodeAiModelGroupHeader .WorldCodeAiModelRemove:hover {
+  background: transparent;
+  border: 1px solid rgb(var(--wcai-removed));
+  box-shadow: none;
+  color: rgb(var(--wcai-removed));
+  text-shadow: none
+}
+
+.WorldCodeAiForgetAll .WorldCodeAiModelRemove:hover,
+.WorldCodeAiModelGroupHeader .WorldCodeAiModelRemove:hover {
+  background-color: rgba(var(--wcai-removed), .12)
+}
+
+.WorldCodeAiKeyLinks {
+  display: flex;
+  gap: .6rem
+}
+
+.WorldCodeAiKeyLinks .WorldCodeAiKeyLearnMore {
+  font-size: .95rem;
+  min-height: 1.8rem;
+  padding: .2rem .4rem
+}
+
+.WorldCodeAiKeyLinks .WorldCodeAiKeyLearnMore:first-child {
+  padding-left: 0
+}
+
+.WorldCodeAiHeader .WorldCodeAiViewTitle {
+  flex: 0 1 auto;
+  font-size: 1rem;
+  margin: 0;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.WorldCodeAiHeader .WorldCodeAiBackButton {
+  flex: none;
+  white-space: nowrap
+}
+
+.WorldCodeAiHeader .WorldCodeAiViewTitle:has(+.WorldCodeAiViewUsing) {
+  flex-shrink: 0
+}
+
+.WorldCodeAiHeader:has(.WorldCodeAiViewUsing) {
+  flex-wrap: wrap;
+  row-gap: .3rem
+}
+
+.WorldCodeAiHeader:has(.WorldCodeAiViewUsing) .WorldCodeAiDisclosure {
+  flex: 0 1000 auto
+}
+
+.WorldCodeAiHeader:has(.WorldCodeAiViewUsing) .WorldCodeAiViewUsing {
+  flex: 1 0 auto;
+  max-width: 100%
+}
+
+.WorldCodeAiHeader .WorldCodeAiViewUsing {
+  color: rgb(var(--wcai-panel-muted));
+  display: flex;
+  flex: 1 1;
+  gap: .8rem;
+  justify-content: flex-end;
+  margin-left: auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.WorldCodeAiHeader .WorldCodeAiViewUsing .WorldCodeAiViewUsingModel {
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+
+.WorldCodeAiHeader .WorldCodeAiViewUsing .WorldCodeAiViewUsingEdits {
+  flex: none
+}
+
+.WorldCodeAiInUseTag {
+  border: 1px solid rgb(var(--wcai-accent));
+  border-radius: .6em;
+  color: rgb(var(--wcai-accent));
+  font-size: .8rem;
+  font-weight: 400;
+  padding: .05em .45em;
+  white-space: nowrap
+}
+
+.WorldCodeAiKeyConfirm {
+  align-items: center;
+  color: rgb(var(--wcai-removed));
+  display: inline-flex;
+  font-weight: 700;
+  gap: .5rem;
+  margin-left: .5rem
+}
+
+.WorldCodeAiKeyConfirm .WorldCodeAiModelRemove {
+  margin-left: 0
+}
+
+.WorldCodeAiKeyRename {
+  align-items: center;
+  display: flex;
+  flex: 1 1 100%;
+  flex-wrap: wrap;
+  gap: .4rem
+}
+
+.WorldCodeAiKeyRename .WorldCodeAiAddKeyInput {
+  flex: 1 1 10rem;
+  min-width: 0
+}
+
+.WorldCodeAiModelFilter {
+  align-self: stretch
+}
+
+.WorldCodeAiModelRow {
+  align-items: center;
+  border: 1px solid rgb(var(--wcai-panel-border));
+  border-radius: .4rem;
+  column-gap: .5rem;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  padding: .4rem .6rem
+}
+
+.WorldCodeAiModelRow.Selected {
+  background-color: rgba(var(--wcai-accent), .08);
+  border-color: rgb(var(--wcai-accent))
+}
+
+.WorldCodeAiModelRow.Disabled {
+  cursor: not-allowed
+}
+
+.WorldCodeAiModelRow.Disabled .WorldCodeAiModelName,
+.WorldCodeAiModelRow.Disabled input {
+  opacity: .5
+}
+
+.WorldCodeAiModelRow input {
+  accent-color: rgb(var(--wcai-accent));
+  margin: 0
+}
+
+.WorldCodeAiModelName {
+  font-weight: 700
+}
+
+.WorldCodeAiModelHint {
+  color: rgb(var(--wcai-panel-muted));
+  font-size: .85rem
+}
+
+.WorldCodeAiAddKeyField {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: .25rem
+}
+
+.WorldCodeAiAddKeyPaste {
+  display: flex;
+  gap: .5rem
+}
+
+.WorldCodeAiAddKeyInput {
+  background-color: rgb(var(--wcai-panel-bg-dark));
+  border: 1px solid rgb(var(--wcai-panel-border));
+  border-radius: .4rem;
+  color: rgb(var(--wcai-panel-text));
+  flex: 1 1;
+  font: inherit;
+  min-width: 0;
+  padding: .4rem .5rem
+}
+
+.WorldCodeAiAddKeyInput:focus {
+  border-color: rgb(var(--wcai-accent))
+}
+
+.WorldCodeAiAddKeyInput:focus-visible {
+  outline: 2px solid rgb(var(--wcai-accent));
+  outline-offset: 1px
+}
+
+.WorldCodeAiAddKeyError {
+  color: rgb(var(--wcai-removed))
+}
+
+.WorldCodeAiAiSettingsHeading {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  justify-content: space-between
+}
+
+.WorldCodeAiKeyDetails {
+  color: rgb(var(--wcai-panel-muted));
+  font-size: .85em
+}
+
+.WorldCodeAiKeyDetails summary {
+  cursor: pointer
+}
+
+.WorldCodeAiKeyDetails p {
+  margin: .2rem 0 0;
+  overflow-wrap: anywhere
+}
+
+.WorldCodeAiAllowEdits input[role=switch] {
+  appearance: none;
+  background-color: rgb(var(--wcai-panel-border));
+  border: 1px solid rgb(var(--wcai-panel-muted));
+  border-radius: .6em;
+  cursor: pointer;
+  height: 1.2em;
+  position: relative;
+  transition: background-color .15s;
+  width: 2.2em
+}
+
+.WorldCodeAiAllowEdits input[role=switch]:before {
+  background-color: rgb(var(--wcai-switch-knob));
+  border-radius: 50%;
+  content: "";
+  height: .9em;
+  left: .15em;
+  position: absolute;
+  top: .15em;
+  transition: transform .15s;
+  width: .9em
+}
+
+.WorldCodeAiAllowEdits input[role=switch]:checked {
+  background-color: rgb(var(--wcai-accent));
+  border-color: rgb(var(--wcai-accent))
+}
+
+.WorldCodeAiAllowEdits input[role=switch]:checked:before {
+  transform: translateX(1em)
+}
+
+.WorldCodeAiAllowEdits input[role=switch]:focus-visible {
+  outline: 2px solid rgb(var(--wcai-accent));
+  outline-offset: 2px
+}
+
+select.WorldCodeAiAddKeyInput {
+  cursor: pointer
+}
+
+.WorldCodeAiKeyExplainer {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: .25rem
+}
+
+.WorldCodeAiKeyExplainerLines {
+  align-self: stretch;
+  background-color: rgba(var(--wcai-accent), .06);
+  border-left: 3px solid rgb(var(--wcai-accent));
+  display: flex;
+  flex-direction: column;
+  font-size: .9rem;
+  gap: .2em;
+  margin: 0;
+  padding: .4rem .6rem .4rem 2.2em
+}
+
+.WorldCodeAiKeyExplainerMore {
+  list-style: none;
+  margin-left: -1.2em
+}
+
+.WorldCodeAiKeyLearnMore,
+.WorldCodeAiKeyPageLink {
+  color: rgb(var(--wcai-accent))
+}
+
+.WorldCodeAiKeyLearnMore {
+  background: none;
+  border: none;
+  padding: 0;
+  text-decoration: underline
+}
+
+.WorldCodeAiAddKeyModels .WorldCodeAiKeyLearnMore {
+  align-self: flex-start
+}
+
+.WorldCodeAiAddKeyWorks {
+  color: rgb(var(--wcai-added));
+  font-weight: 700
+}
+
+.WorldCodeAiMessages:has(.WorldCodeAiAddKeyActions) {
+  scroll-padding-top: .8rem
+}
+
+@media(max-height:520px) {
+
+  .WorldCodeAiPanel-aiView .WorldCodeAiInputRow,
+  .WorldCodeAiPanel-aiView .WorldCodeAiLimit {
+    display: none
+  }
+}
+
+.WorldCodeAiAddKeyActions {
+  align-items: flex-start;
+  align-self: stretch;
+  border-top: 1px solid rgb(var(--wcai-panel-border));
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  padding-top: .5rem
+}
+
+.WorldCodeAiKeyRemoved {
+  background-color: rgba(var(--wcai-warning), .08);
+  border-left: 3px solid rgb(var(--wcai-warning));
+  border-radius: .3rem;
+  color: rgb(var(--wcai-panel-text));
+  padding: .4rem .6rem
+}
+
+.WorldCodeAiKeyRemoved:focus {
+  outline: none
+}
+
+.WorldCodeAiServerTips {
+  display: block
+}
+
+.WorldCodeAiAddKeySavedKey {
+  color: rgb(var(--wcai-panel-muted))
+}
+
+.WorldCodeAiAddKeySavedKey code {
+  font-family: monospace
+}
+
+.WorldCodeAiModelUnfold {
+  align-self: flex-start;
+  font-size: .85rem;
+  margin-left: .2rem
+}
+
+.WorldCodeAiForgetAll .WorldCodeAiKeyConfirm {
+  flex-wrap: wrap;
+  margin-left: 0
+}
+
+.WorldCodeAiModelChipRow {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .2rem .5rem;
+  min-width: 0;
+  position: relative
+}
+
+.WorldCodeAiModelChip {
+  align-items: center;
+  display: inline-flex;
+  flex: none;
+  font-size: .85rem;
+  gap: .3rem;
+  max-width: 60%
+}
+
+.WorldCodeAiModelChip:focus-visible {
+  outline: 2px solid rgb(var(--wcai-accent));
+  outline-offset: 1px
+}
+
+.WorldCodeAiModelChip .WorldCodeAiKeyIcon {
+  color: rgb(var(--wcai-warning-text));
+  margin-right: 0
+}
+
+.WorldCodeAiModelChipName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.WorldCodeAiModelChipCaret {
+  color: rgb(var(--wcai-panel-muted))
+}
+
+.WorldCodeAiModelChipStatus {
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  flex: 1 1 14rem;
+  line-height: 1.25;
+  min-width: 0;
+  overflow: hidden;
+  overflow-wrap: anywhere
+}
+
+.WorldCodeAiModelChipStatus .WorldCodeAiModelChipStatusLine {
+  display: block
+}
+
+.WorldCodeAiModelChipStatus:empty {
+  display: none
+}
+
+.WorldCodeAiModelMenu {
+  align-items: flex-start;
+  background-color: rgb(var(--wcai-panel-bg-dark));
+  border: 1px solid rgb(var(--wcai-accent));
+  border-radius: .5rem;
+  bottom: calc(100% + .4rem);
+  box-shadow: 0 .3rem 1.2rem rgba(0, 0, 0, .5);
+  color: rgb(var(--wcai-panel-text));
+  display: flex;
+  flex-direction: column;
+  font-size: .95rem;
+  gap: .5rem;
+  left: 0;
+  line-height: 1.4;
+  max-height: min(24rem, 70vh);
+  overflow: hidden;
+  padding: .7rem;
+  position: absolute;
+  width: min(100%, 28em);
+  z-index: 5
+}
+
+.WorldCodeAiModelMenu h3 {
+  margin: 0
+}
+
+.WorldCodeAiModelMenu .WorldCodeAiModelRow {
+  background-color: rgb(var(--wcai-panel-bg))
+}
+
+.WorldCodeAiModelMenu .WorldCodeAiModelGroupHeader {
+  background-color: rgb(var(--wcai-panel-bg-dark));
+  border-bottom: 1px solid rgb(var(--wcai-panel-border));
+  padding: .2rem 0 .3rem;
+  position: sticky;
+  top: 0;
+  z-index: 1
+}
+
+.WorldCodeAiModelMenu .WorldCodeAiModelGroupHeader.Unpinned {
+  position: static
+}
+
+@media(max-height:520px) {
+  .WorldCodeAiModelMenu {
+    max-height: 75vh
+  }
+}
+
+.WorldCodeAiModelMenu .WorldCodeAiModelMenuList {
+  align-self: stretch;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto
+}
+
+.WorldCodeAiModelMenuActions {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex: none;
+  flex-wrap: wrap;
+  gap: .4rem .8rem;
+  justify-content: space-between
+}
+
+.WorldCodeAiModelMenuBotxd {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  gap: .2rem
+}
+
+.WorldCodeAiEditsTag {
+  border: 1px solid rgb(var(--wcai-added));
+  border-radius: .6em;
+  color: rgb(var(--wcai-added));
+  flex: none;
+  font-size: .8rem;
+  padding: .05em .45em;
+  white-space: nowrap
+}
+
+.WorldCodeAiEditsTag.WorldCodeAiEditsTag-off {
+  border-color: rgb(var(--wcai-removed));
+  color: rgb(var(--wcai-removed))
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fadeInScaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(.6)
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes fadeInScaleUpNoOversize {
+  0% {
+    opacity: 0;
+    transform: scale(.8)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes shake {
+  0% {
+    rotate: 3deg
+  }
+
+  5% {
+    rotate: -2deg
+  }
+
+  10% {
+    rotate: 2deg
+  }
+
+  15% {
+    rotate: -3deg
+  }
+
+  20% {
+    rotate: 0deg
+  }
+}
+
+@keyframes loadingShimmer {
+  0% {
+    transform: translateX(-66.6666666667%)
+  }
+
+  to {
+    transform: none
+  }
+}
+
+@keyframes topRightStackIn {
+  0% {
+    opacity: 0;
+    transform: translateX(1.5rem)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
+
+@keyframes rainbowShimmer {
+  0% {
+    background-position: 200%
+  }
+
+  to {
+    background-position: -200%
+  }
+}
+
+.WorldCodeAiPanel {
+  --wcai-panel-bg: 30, 30, 46;
+  --wcai-panel-bg-dark: 24, 24, 37;
+  --wcai-panel-text: 205, 214, 244;
+  --wcai-panel-muted: 166, 173, 200;
+  --wcai-panel-border: 49, 50, 68;
+  --wcai-accent: 137, 180, 250;
+  --wcai-added: 166, 227, 161;
+  --wcai-removed: 243, 139, 168;
+  --wcai-warning: 249, 226, 175;
+  --wcai-warning-text: 249, 226, 175;
+  --wcai-raised: 69, 71, 90;
+  --wcai-outline: 88, 91, 112;
+  --wcai-diff-bg: 17, 17, 27;
+  --wcai-on-accent: 17, 17, 27;
+  --wcai-switch-knob: 205, 214, 244;
+  background-color: rgb(var(--wcai-panel-bg));
+  color: rgb(var(--wcai-panel-text));
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  min-height: 0;
+  user-select: text;
+  -webkit-user-select: text
+}
+
+.WorldCodeAiPanel button {
+  cursor: pointer;
+  font: inherit
+}
+
+.WorldCodeAiHeader {
+  align-items: baseline;
+  background-color: rgb(var(--wcai-panel-bg-dark));
+  border-bottom: 1px solid rgb(var(--wcai-panel-border));
+  display: flex;
+  gap: .6rem;
+  padding: .6rem .8rem
+}
+
+.WorldCodeAiHeader .WorldCodeAiTitle {
+  flex: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+  white-space: nowrap
+}
+
+.WorldCodeAiHeader .WorldCodeAiDisclosure {
+  color: rgb(var(--wcai-panel-muted));
+  flex: 1 1;
+  font-size: .85rem;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.WorldCodeAiHeader .WorldCodeAiHeaderStop {
+  flex: none;
+  margin-left: 0;
+  margin-right: auto;
+  padding: .25rem .6rem
+}
+
+.WorldCodeAiHeader .WorldCodeAiGear {
+  align-items: center;
+  display: inline-flex;
+  flex: none;
+  gap: .35em;
+  padding: .25rem .5rem
+}
+
+.WorldCodeAiMessages {
+  display: flex;
+  flex: 1 1;
+  flex-direction: column;
+  gap: .6rem;
+  -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 .75rem, #000 calc(100% - 1rem), transparent);
+  mask-image: linear-gradient(180deg, transparent 0, #000 .75rem, #000 calc(100% - 1rem), transparent);
+  min-height: 0;
+  overflow-y: auto;
+  padding: .8rem .8rem 1.2rem
+}
+
+.WorldCodeAiEmpty {
+  color: rgb(var(--wcai-panel-muted))
+}
+
+.WorldCodeAiEmpty p {
+  margin: .2rem 0 .6rem
+}
+
+.WorldCodeAiEmpty .WorldCodeAiPrivacy {
+  font-size: .85em;
+  margin-top: 1rem
+}
+
+.WorldCodeAiChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem
+}
+
+.WorldCodeAiEntry {
+  line-height: 1.45
+}
+
+.WorldCodeAiEntry p {
+  margin: .2rem 0
+}
+
+.WorldCodeAiEntry p.WorldCodeAiChangeTakenOut,
+.WorldCodeAiEntry p.WorldCodeAiHunksHint {
+  margin-left: .6rem;
+  margin-right: .6rem
+}
+
+.WorldCodeAiEntry.WorldCodeAiEntry-user {
+  align-self: flex-end;
+  background-color: rgb(var(--wcai-raised));
+  border-radius: .8rem .8rem .2rem .8rem;
+  max-width: 85%;
+  padding: .4rem .7rem;
+  white-space: pre-wrap
+}
+
+.WorldCodeAiEntry.WorldCodeAiEntry-assistant {
+  align-self: stretch
+}
+
+.WorldCodeAiEntry.WorldCodeAiEntry-elsewhere {
+  color: rgb(var(--wcai-panel-muted))
+}
+
+.WorldCodeAiEntry.WorldCodeAiNotice {
+  background-color: rgba(var(--wcai-removed), .08);
+  border-left: 3px solid rgb(var(--wcai-removed));
+  border-radius: .3rem;
+  color: rgb(var(--wcai-panel-text));
+  padding: .45rem .6rem
+}
+
+.WorldCodeAiEntry.WorldCodeAiNotice-calm {
+  background-color: rgba(var(--wcai-accent), .08);
+  border-left-color: rgb(var(--wcai-accent))
+}
+
+.WorldCodeAiEntry.WorldCodeAiNotice-past {
+  background: none;
+  border-left-color: rgb(var(--wcai-panel-border));
+  color: rgb(var(--wcai-panel-muted));
+  font-size: .9rem;
+  padding: .15rem .6rem
+}
+
+.WorldCodeAiEntry .WorldCodeAiRetry {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .8rem;
+  margin-top: .4rem
+}
+
+.WorldCodeAiEntry .StudioAiAnswerText ol,
+.WorldCodeAiEntry .StudioAiAnswerText p,
+.WorldCodeAiEntry .StudioAiAnswerText ul {
+  margin: .25rem 0
+}
+
+.WorldCodeAiEntry .StudioAiAnswerText ol,
+.WorldCodeAiEntry .StudioAiAnswerText ul {
+  padding-left: 1.3rem
+}
+
+.WorldCodeAiEntry .StudioAiAnswerText code {
+  background-color: rgb(var(--wcai-panel-bg-dark));
+  border-radius: .2rem;
+  padding: 0 .2rem
+}
+
+.WorldCodeAiEntry .StudioAiAnswerText pre {
+  background-color: rgb(var(--wcai-panel-bg-dark));
+  overflow-x: auto;
+  padding: .4rem
+}
+
+.WorldCodeAiBusy {
+  align-items: center;
+  color: rgb(var(--wcai-panel-muted));
+  display: flex;
+  gap: .5rem
+}
+
+.WorldCodeAiBusy .WorldCodeAiBusyText {
+  display: flex;
+  flex-direction: column
+}
+
+.WorldCodeAiBusy .WorldCodeAiBusyHint {
+  font-size: .85rem;
+  opacity: .8
+}
+
+.WorldCodeAiLog {
+  align-self: stretch;
+  background-color: rgba(var(--wcai-removed), .08);
+  border-left: 3px solid rgb(var(--wcai-removed));
+  border-radius: .3rem;
+  color: rgb(var(--wcai-panel-text));
+  font-size: .9rem;
+  padding: .15rem .6rem
+}
+
+.WorldCodeAiLog.WorldCodeAiLog-calm {
+  background-color: rgba(var(--wcai-accent), .08);
+  border-left-color: rgb(var(--wcai-accent))
+}
+
+.WorldCodeAiLog.WorldCodeAiLog-elsewhere {
+  color: rgb(var(--wcai-panel-muted))
+}
+
+.WorldCodeAiLog .WorldCodeAiLogToggle {
+  align-items: baseline;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+  font: inherit;
+  gap: .4rem;
+  padding: .15rem 0;
+  text-align: left;
+  width: 100%
+}
+
+.WorldCodeAiLog .WorldCodeAiLogChevron {
+  flex: none;
+  width: .8rem
+}
+
+.WorldCodeAiLog .WorldCodeAiLogBody {
+  padding: .1rem 0 .25rem 1.2rem
+}
+
+.WorldCodeAiLog .WorldCodeAiLogBody p {
+  margin: .15rem 0
+}
+
+.WorldCodeAiSteps {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: .85rem;
+  gap: .25rem .75rem;
+  list-style: none;
+  margin: .25rem 0 0;
+  padding: 0
+}
+
+.WorldCodeAiSteps li {
+  opacity: .55
+}
+
+.WorldCodeAiSteps li+li:before {
+  content: "→ ";
+  opacity: .7
+}
+
+.WorldCodeAiSteps .WorldCodeAiStep-done {
+  opacity: .8
+}
+
+.WorldCodeAiSteps .WorldCodeAiStep-current {
+  font-weight: 700;
+  opacity: 1
+}
+
+.WorldCodeAiBusyEntry {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem
+}
+
+.WorldCodeAiQueued {
+  border: 1px dashed rgb(var(--wcai-panel-muted));
+  opacity: .75
+}
+
+.WorldCodeAiQueued .WorldCodeAiQueuedNote {
+  color: rgb(var(--wcai-panel-muted));
+  display: flex;
+  font-size: .8rem;
+  gap: .6rem;
+  justify-content: flex-end;
+  margin-top: .2rem
+}
+
+.WorldCodeAiWarning {
+  flex: 1 1 100%
+}
+
+@media(max-height:520px) {
+  .WorldCodeAiWarning {
+    flex-basis: 24rem;
+    padding: .3rem .5rem
+  }
+}
+
+.WorldCodeAiWarning {
+  background-color: rgba(var(--wcai-warning), .08);
+  border-left: 3px solid rgb(var(--wcai-warning));
+  border-radius: .3rem;
+  padding: .45rem .6rem
+}
+
+.WorldCodeAiWarning p {
+  margin: 0
+}
+
+.WorldCodeAiWarning p+p {
+  margin-top: .35rem
+}
+
+.WorldCodeAiWarning .WorldCodeAiWarningTitle {
+  font-weight: 700
+}
+
+.WorldCodeAiWarning .WorldCodeAiWarningWhere code {
+  font-size: .85rem;
+  overflow-wrap: anywhere
+}
+
+.WorldCodeAiWarning .WorldCodeAiLinkButton {
+  margin-top: .25rem
+}
+
+.WorldCodeAiLookups {
+  display: flex;
+  margin-top: .4rem
+}
+
+.WorldCodeAiLookupList {
+  margin: .15rem 0;
+  padding-left: 1.1rem
+}
+
+.WorldCodeAiEntry>.WorldCodeAiLog {
+  margin-top: .4rem
+}
+
+.WorldCodeAiTrial {
+  align-items: center;
+  background-color: rgba(var(--wcai-added), .08);
+  border-left: 3px solid rgb(var(--wcai-added));
+  border-radius: .3rem;
+  flex-wrap: wrap;
+  margin-top: .4rem;
+  padding: .45rem .6rem
+}
+
+.WorldCodeAiTrial,
+.WorldCodeAiTrial .WorldCodeAiTrialButtons {
+  display: flex;
+  gap: .5rem
+}
+
+.WorldCodeAiTrial.WorldCodeAiTrial-wrong {
+  background-color: rgba(var(--wcai-warning), .08);
+  border-left-color: rgb(var(--wcai-warning))
+}
+
+.WorldCodeAiFollowUps {
+  margin-top: .4rem
+}
+
+.WorldCodeAiStop {
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  color: #fff;
+  margin-left: auto;
+  padding: .4em .8em;
+  text-shadow: -1px -1px 0 #303a59, -1px 0 0 #303a59, -1px 1px 0 #303a59, 0 -1px 0 #303a59, 0 0 0 #303a59, 0 1px 0 #303a59, 1px -1px 0 #303a59, 1px 0 0 #303a59, 1px 1px 0 #303a59;
+  transition: transform .2s
+}
+
+.WorldCodeAiStop .svg-inline--fa path:only-of-type,
+.WorldCodeAiStop.svg-inline--fa path:only-of-type {
+  stroke: #303a59;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 2px;
+  stroke-linejoin: round;
+  paint-order: stroke fill
+}
+
+.WorldCodeAiStop {
+  background-color: #e34f4f;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32), inset 0 .21em 0 #fc6464, inset 0 -.21em 0 #cc1414
+}
+
+@media(hover:hover) {
+  .WorldCodeAiStop:hover {
+    background-color: #fc6464
+  }
+}
+
+.WorldCodeAiStop.pad-focused {
+  background-color: #fc6464
+}
+
+@media(hover:none) {
+  .WorldCodeAiStop:active {
+    background-color: #fc6464
+  }
+}
+
+@media(hover:hover) {
+  .WorldCodeAiStop:hover {
+    transform: scale(1.05)
+  }
+}
+
+.WorldCodeAiStop.pad-focused {
+  transform: scale(1.05)
+}
+
+@media(hover:none) {
+  .WorldCodeAiStop:active {
+    transform: scale(1.05)
+  }
+}
+
+.WorldCodeAiStop:active {
+  filter: brightness(.92);
+  transform: translateY(1px)
+}
+
+.WorldCodeAiStop:focus-visible {
+  outline: 2px solid #ffb914;
+  outline-offset: 2px
+}
+
+.WorldCodeAiStop:disabled {
+  background-color: #a4a4a4;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32), inset 0 .21em 0 #cfcfcf, inset 0 -.21em 0 #838383;
+  cursor: default;
+  filter: none;
+  opacity: .6;
+  transform: none
+}
+
+.WorldCodeAiStop {
+  padding: .25rem .7rem
+}
+
+.WorldCodeAiSpinner {
+  animation: WorldCodeAiSpin .8s linear infinite;
+  border: 3px solid rgb(var(--wcai-raised));
+  border-radius: 50%;
+  border-top-color: rgb(var(--wcai-accent));
+  flex: none;
+  height: 1.2rem;
+  width: 1.2rem
+}
+
+@keyframes WorldCodeAiSpin {
+  to {
+    transform: rotate(1turn)
+  }
+}
+
+.WorldCodeAiChanges {
+  border: 1px solid rgb(var(--wcai-panel-border));
+  border-radius: .4rem;
+  margin-top: .4rem;
+  overflow: clip
+}
+
+.WorldCodeAiChange+.WorldCodeAiChange {
+  border-top: 1px solid rgb(var(--wcai-panel-border))
+}
+
+.WorldCodeAiChangeHeader {
+  background-color: rgb(var(--wcai-panel-bg-dark));
+  border: none;
+  box-sizing: border-box;
+  color: rgb(var(--wcai-panel-text));
+  display: flex;
+  gap: .5rem;
+  padding: .35rem .6rem;
+  text-align: left;
+  width: 100%
+}
+
+.WorldCodeAiChangeHeader .WorldCodeAiChangePath {
+  flex: 1 1;
+  font-family: monospace
+}
+
+.WorldCodeAiToolCard {
+  display: flex;
+  flex-direction: column;
+  margin-top: .4rem
+}
+
+.WorldCodeAiToolCard .WorldCodeAiChangeLog .WorldCodeAiLogBody {
+  padding-left: 0
+}
+
+.WorldCodeAiToolCard .WorldCodeAiLogBody .WorldCodeAiChanges {
+  margin-top: .2rem
+}
+
+.WorldCodeAiToolCard>.WorldCodeAiChangeActions {
+  border-radius: .4rem;
+  margin-top: .3rem
+}
+
+.WorldCodeAiHunkAlso {
+  border: 1px solid rgb(var(--wcai-panel-border));
+  border-radius: .3rem;
+  color: rgb(var(--wcai-panel-muted));
+  display: inline-block;
+  font-size: .75rem;
+  font-weight: 400;
+  margin-right: .4rem;
+  padding: 0 .35rem;
+  vertical-align: .1em
+}
+
+.WorldCodeAiHunksHint {
+  flex: none;
+  font-size: .85rem;
+  margin: 0 .6rem .4rem
+}
+
+.WorldCodeAiHunks {
+  display: flex;
+  flex-direction: column;
+  gap: .15rem;
+  list-style: none;
+  margin: .2rem .6rem .4rem;
+  padding: 0
+}
+
+.WorldCodeAiHunks label {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  gap: .5rem;
+  min-height: 2.2rem
+}
+
+.WorldCodeAiHunks input {
+  accent-color: rgb(var(--wcai-accent));
+  flex: none;
+  height: 1.2rem;
+  width: 1.2rem
+}
+
+.WorldCodeAiHunks .WorldCodeAiHunkDetail {
+  color: rgb(var(--wcai-panel-muted));
+  display: block;
+  font-size: .85rem
+}
+
+.WorldCodeAiHunks .WorldCodeAiHunkCode {
+  color: rgb(var(--wcai-panel-muted));
+  font-size: .75rem;
+  margin-left: .4rem
+}
+
+.WorldCodeAiHunks .WorldCodeAiHunkCount {
+  color: rgb(var(--wcai-panel-muted));
+  font-size: .85rem;
+  margin-left: auto;
+  white-space: nowrap
+}
+
+.WorldCodeAiPartsToggle {
+  font-size: .9rem;
+  margin: .2rem .6rem 0
+}
+
+.WorldCodeAiHunks.WorldCodeAiHunks-done {
+  font-size: .9rem;
+  list-style: disc;
+  padding-left: 1.1rem
+}
+
+.WorldCodeAiChangeTakenOut {
+  font-size: .9rem;
+  margin: .2rem .6rem .4rem
+}
+
+.WorldCodeAiChangeTakenOut code {
+  color: rgb(var(--wcai-panel-muted));
+  font-size: .75rem;
+  margin-left: .2rem
+}
+
+.WorldCodeAiQuestion {
+  align-items: flex-start;
+  background-color: rgb(var(--wcai-panel-bg-dark));
+  border: 1px solid rgb(var(--wcai-panel-border));
+  border-left: 3px solid rgb(var(--wcai-accent));
+  border-radius: .4rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  margin-top: .4rem;
+  padding: .6rem
+}
+
+.WorldCodeAiQuestion .WorldCodeAiQuestionText {
+  font-weight: 700;
+  margin: 0
+}
+
+.WorldCodeAiQuestion .WorldCodeAiQuestionChoices {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: .4rem
+}
+
+.WorldCodeAiQuestion .WorldCodeAiQuestionChoice {
+  background-color: rgb(var(--wcai-panel-bg));
+  border: 1px solid rgb(var(--wcai-outline));
+  border-radius: .4rem;
+  color: rgb(var(--wcai-panel-text));
+  padding: .55rem .8rem;
+  text-align: left
+}
+
+.WorldCodeAiQuestion .WorldCodeAiQuestionChoice:hover {
+  background-color: rgba(var(--wcai-accent), .12);
+  border-color: rgb(var(--wcai-accent))
+}
+
+.WorldCodeAiQuestion .WorldCodeAiQuestionOther {
+  align-self: stretch;
+  display: flex;
+  gap: .4rem
+}
+
+.WorldCodeAiQuestion .WorldCodeAiHint {
+  flex: none
+}
+
+.WorldCodeAiFailedEdits {
+  display: flex;
+  flex-direction: column;
+  margin-top: .4rem
+}
+
+.WorldCodeAiFailedEdits:first-child {
+  margin: 0 0 .5rem
+}
+
+.WorldCodeAiFailedEdits .WorldCodeAiFailedRetry {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  margin-top: .4rem
+}
+
+.WorldCodeAiFailedEdits .WorldCodeAiFailedLines {
+  background-color: rgb(var(--wcai-panel-bg));
+  border-radius: .3rem;
+  font-size: .85rem;
+  margin: .2rem 0 .3rem;
+  overflow-wrap: anywhere;
+  padding: .3rem .5rem;
+  white-space: pre-wrap
+}
+
+.WorldCodeAiChangeWhy {
+  background-color: rgb(var(--wcai-panel-bg-dark));
+  color: rgb(var(--wcai-panel-muted));
+  font-size: .9rem;
+  margin: 0;
+  padding: .3rem .6rem .35rem 1.6rem
+}
+
+.WorldCodeAiAdded {
+  color: rgb(var(--wcai-added))
+}
+
+.WorldCodeAiRemoved {
+  color: rgb(var(--wcai-removed))
+}
+
+.WorldCodeAiDiff {
+  background-color: rgb(var(--wcai-diff-bg));
+  font-size: .85rem;
+  line-height: 1.35;
+  margin: 0;
+  max-height: 16rem;
+  overflow: auto;
+  padding: .3rem 0
+}
+
+.WorldCodeAiDiff .WorldCodeAiDiffLine {
+  display: flex;
+  padding: 0 .6rem
+}
+
+.WorldCodeAiDiff .WorldCodeAiDiffMark {
+  color: rgb(var(--wcai-panel-muted));
+  flex: none;
+  width: 1rem
+}
+
+.WorldCodeAiDiff .WorldCodeAiDiffText {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap
+}
+
+.WorldCodeAiDiff .WorldCodeAiDiff-added {
+  background-color: rgba(var(--wcai-added), .14)
+}
+
+.WorldCodeAiDiff .WorldCodeAiDiff-added .WorldCodeAiDiffMark {
+  color: rgb(var(--wcai-added))
+}
+
+.WorldCodeAiDiff .WorldCodeAiDiff-removed {
+  background-color: rgba(var(--wcai-removed), .14)
+}
+
+.WorldCodeAiDiff .WorldCodeAiDiff-removed .WorldCodeAiDiffMark {
+  color: rgb(var(--wcai-removed))
+}
+
+.WorldCodeAiDiff .WorldCodeAiDiffFold {
+  color: rgb(var(--wcai-panel-muted));
+  font-style: italic;
+  padding: .1rem .6rem
+}
+
+.WorldCodeAiDiff .WorldCodeAiDiff-marked {
+  box-shadow: inset 3px 0 0 rgb(var(--wcai-warning))
+}
+
+.WorldCodeAiDiff .WorldCodeAiDiff-marked mark {
+  background-color: rgba(var(--wcai-warning), .3);
+  border-radius: .15rem;
+  color: inherit
+}
+
+.WorldCodeAiChangeActions {
+  align-items: center;
+  background-color: rgb(var(--wcai-panel-bg-dark));
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  padding: .45rem .6rem
+}
+
+.WorldCodeAiChangeActions.WorldCodeAiChangeActions-sticky {
+  border-top: 1px solid rgb(var(--wcai-panel-border));
+  bottom: -.6rem;
+  box-shadow: 0 .6rem 0 0 rgb(var(--wcai-panel-bg-dark));
+  position: sticky;
+  z-index: 1
+}
+
+.WorldCodeAiTargetLabel {
+  align-items: baseline;
+  border-bottom: 1px solid rgb(var(--wcai-panel-border));
+  color: rgb(var(--wcai-panel-muted));
+  display: flex;
+  font-size: .85rem;
+  font-weight: 700;
+  gap: .5rem;
+  margin-top: .4rem;
+  padding-bottom: .2rem
+}
+
+.WorldCodeAiTargetLabel.WorldCodeAiTargetLabel-open {
+  color: rgb(var(--wcai-accent))
+}
+
+.WorldCodeAiTargetLabel .WorldCodeAiTargetLabelNote {
+  font-weight: 400
+}
+
+.WorldCodeAiHint {
+  color: rgb(var(--wcai-panel-muted));
+  flex: 1 1 12rem;
+  font-size: .9rem
+}
+
+.WorldCodeAiChip,
+.WorldCodeAiLinkButton,
+.WorldCodeAiSecondaryButton {
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  color: #fff;
+  padding: .4em .8em;
+  text-shadow: -1px -1px 0 #303a59, -1px 0 0 #303a59, -1px 1px 0 #303a59, 0 -1px 0 #303a59, 0 0 0 #303a59, 0 1px 0 #303a59, 1px -1px 0 #303a59, 1px 0 0 #303a59, 1px 1px 0 #303a59;
+  transition: transform .2s
+}
+
+.WorldCodeAiChip .svg-inline--fa path:only-of-type,
+.WorldCodeAiChip.svg-inline--fa path:only-of-type,
+.WorldCodeAiLinkButton .svg-inline--fa path:only-of-type,
+.WorldCodeAiLinkButton.svg-inline--fa path:only-of-type,
+.WorldCodeAiSecondaryButton .svg-inline--fa path:only-of-type,
+.WorldCodeAiSecondaryButton.svg-inline--fa path:only-of-type {
+  stroke: #303a59;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 2px;
+  stroke-linejoin: round;
+  paint-order: stroke fill
+}
+
+.WorldCodeAiChip,
+.WorldCodeAiLinkButton,
+.WorldCodeAiSecondaryButton {
+  background-color: #2e80ee;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32), inset 0 .21em 0 #4f94f1, inset 0 -.21em 0 #2671d7
+}
+
+@media(hover:hover) {
+
+  .WorldCodeAiChip:hover,
+  .WorldCodeAiLinkButton:hover,
+  .WorldCodeAiSecondaryButton:hover {
+    background-color: #4f94f1
+  }
+}
+
+.WorldCodeAiChip.pad-focused,
+.WorldCodeAiLinkButton.pad-focused,
+.WorldCodeAiSecondaryButton.pad-focused {
+  background-color: #4f94f1
+}
+
+@media(hover:none) {
+
+  .WorldCodeAiChip:active,
+  .WorldCodeAiLinkButton:active,
+  .WorldCodeAiSecondaryButton:active {
+    background-color: #4f94f1
+  }
+}
+
+@media(hover:hover) {
+
+  .WorldCodeAiChip:hover,
+  .WorldCodeAiLinkButton:hover,
+  .WorldCodeAiSecondaryButton:hover {
+    transform: scale(1.05)
+  }
+}
+
+.WorldCodeAiChip.pad-focused,
+.WorldCodeAiLinkButton.pad-focused,
+.WorldCodeAiSecondaryButton.pad-focused {
+  transform: scale(1.05)
+}
+
+@media(hover:none) {
+
+  .WorldCodeAiChip:active,
+  .WorldCodeAiLinkButton:active,
+  .WorldCodeAiSecondaryButton:active {
+    transform: scale(1.05)
+  }
+}
+
+.WorldCodeAiChip:active,
+.WorldCodeAiLinkButton:active,
+.WorldCodeAiSecondaryButton:active {
+  filter: brightness(.92);
+  transform: translateY(1px)
+}
+
+.WorldCodeAiChip:focus-visible,
+.WorldCodeAiLinkButton:focus-visible,
+.WorldCodeAiSecondaryButton:focus-visible {
+  outline: 2px solid #ffb914;
+  outline-offset: 2px
+}
+
+.WorldCodeAiChip:disabled,
+.WorldCodeAiLinkButton:disabled,
+.WorldCodeAiSecondaryButton:disabled {
+  background-color: #a4a4a4;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32), inset 0 .21em 0 #cfcfcf, inset 0 -.21em 0 #838383;
+  cursor: default;
+  filter: none;
+  opacity: .6;
+  transform: none
+}
+
+.WorldCodeAiPrimaryButton {
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  color: #fff;
+  padding: .4em .8em;
+  text-shadow: -1px -1px 0 #303a59, -1px 0 0 #303a59, -1px 1px 0 #303a59, 0 -1px 0 #303a59, 0 0 0 #303a59, 0 1px 0 #303a59, 1px -1px 0 #303a59, 1px 0 0 #303a59, 1px 1px 0 #303a59;
+  transition: transform .2s
+}
+
+.WorldCodeAiPrimaryButton .svg-inline--fa path:only-of-type,
+.WorldCodeAiPrimaryButton.svg-inline--fa path:only-of-type {
+  stroke: #303a59;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 2px;
+  stroke-linejoin: round;
+  paint-order: stroke fill
+}
+
+.WorldCodeAiPrimaryButton {
+  background-color: #ffb914;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32), inset 0 .21em 0 #fcd373, inset 0 -.21em 0 #b6830e
+}
+
+@media(hover:hover) {
+  .WorldCodeAiPrimaryButton:hover {
+    background-color: #fcd373
+  }
+}
+
+.WorldCodeAiPrimaryButton.pad-focused {
+  background-color: #fcd373
+}
+
+@media(hover:none) {
+  .WorldCodeAiPrimaryButton:active {
+    background-color: #fcd373
+  }
+}
+
+@media(hover:hover) {
+  .WorldCodeAiPrimaryButton:hover {
+    transform: scale(1.05)
+  }
+}
+
+.WorldCodeAiPrimaryButton.pad-focused {
+  transform: scale(1.05)
+}
+
+@media(hover:none) {
+  .WorldCodeAiPrimaryButton:active {
+    transform: scale(1.05)
+  }
+}
+
+.WorldCodeAiPrimaryButton:active {
+  filter: brightness(.92);
+  transform: translateY(1px)
+}
+
+.WorldCodeAiPrimaryButton:focus-visible {
+  outline: 2px solid #ffb914;
+  outline-offset: 2px
+}
+
+.WorldCodeAiPrimaryButton:disabled {
+  background-color: #a4a4a4;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32), inset 0 .21em 0 #cfcfcf, inset 0 -.21em 0 #838383;
+  cursor: default;
+  filter: none;
+  opacity: .6;
+  transform: none
+}
+
+.WorldCodeAiLinkButton.WorldCodeAiLinkButton-active {
+  background-color: #ffb914;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32), inset 0 .21em 0 #fcd373, inset 0 -.21em 0 #b6830e
+}
+
+@media(hover:hover) {
+  .WorldCodeAiLinkButton.WorldCodeAiLinkButton-active:hover {
+    background-color: #fcd373
+  }
+}
+
+.WorldCodeAiLinkButton.WorldCodeAiLinkButton-active.pad-focused {
+  background-color: #fcd373
+}
+
+@media(hover:none) {
+  .WorldCodeAiLinkButton.WorldCodeAiLinkButton-active:active {
+    background-color: #fcd373
+  }
+}
+
+.WorldCodeAiLinkButton,
+.WorldCodeAiSecondaryButton {
+  padding: .25rem .7rem
+}
+
+.WorldCodeAiHistory {
+  display: flex;
+  flex-direction: column;
+  gap: .6rem
+}
+
+.WorldCodeAiHistory .WorldCodeAiHistoryTitle {
+  align-items: baseline;
+  display: flex;
+  font-weight: 700;
+  gap: .6rem;
+  justify-content: space-between
+}
+
+.WorldCodeAiHistory .WorldCodeAiSnapshots {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0
+}
+
+.WorldCodeAiHistory .WorldCodeAiSnapshot {
+  background-color: rgb(var(--wcai-panel-bg-dark));
+  border: 1px solid rgb(var(--wcai-panel-border));
+  border-radius: .4rem;
+  padding: .45rem .6rem;
+  scroll-margin: 1rem 0 1.75rem
+}
+
+.WorldCodeAiHistory .WorldCodeAiSnapshotRow {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem
+}
+
+.WorldCodeAiHistory .WorldCodeAiSnapshotLabel {
+  flex: 1 1 12rem;
+  overflow-wrap: anywhere
+}
+
+.WorldCodeAiHistory .WorldCodeAiSnapshotMore {
+  font-size: .85rem;
+  margin-left: .35rem
+}
+
+.WorldCodeAiHistory .WorldCodeAiSnapshotAge {
+  color: rgb(var(--wcai-panel-muted))
+}
+
+.WorldCodeAiHistory .WorldCodeAiSnapshotAsked {
+  color: rgb(var(--wcai-panel-muted));
+  display: block;
+  font-size: .85rem
+}
+
+.WorldCodeAiHistory .WorldCodeAiSnapshotCompareNote {
+  color: rgb(var(--wcai-panel-muted));
+  font-size: .9rem;
+  margin: 0;
+  padding: .35rem .6rem
+}
+
+.WorldCodeAiHistory .WorldCodeAiSnapshotCompare {
+  max-height: 14rem;
+  overflow: auto
+}
+
+.WorldCodeAiHistory .WorldCodeAiSnapshotCompare:after {
+  background: linear-gradient(transparent, rgba(0, 0, 0, .85));
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 1.5rem;
+  margin-top: -1.5rem;
+  pointer-events: none;
+  position: sticky
+}
+
+@media(max-height:520px) {
+  .WorldCodeAiHistory .WorldCodeAiSnapshotCompare {
+    max-height: 10rem
+  }
+}
+
+.WorldCodeAiHistory .WorldCodeAiSnapshotCompare.WorldCodeAiSnapshotCompare-end:after {
+  display: none
+}
+
+.WorldCodeAiHistory .WorldCodeAiSnapshotCompare .WorldCodeAiDiff {
+  max-height: none;
+  padding-bottom: 1.5rem
+}
+
+.WorldCodeAiHistory .WorldCodeAiSnapshotNow {
+  border: 1px solid rgb(var(--wcai-panel-border));
+  border-radius: 1rem;
+  color: rgb(var(--wcai-panel-muted));
+  flex: none;
+  font-size: .85rem;
+  padding: .15rem .5rem
+}
+
+.WorldCodeAiUndoButton {
+  margin-left: .4rem;
+  min-height: 2.75rem;
+  padding: 0 .4rem
+}
+
+.WorldCodeAiAppliedRow {
+  align-items: center;
+  display: flex;
+  flex: 1 1 100%;
+  flex-wrap: wrap;
+  gap: .5rem
+}
+
+.WorldCodeAiAppliedRow .WorldCodeAiAppliedNote {
+  color: rgb(var(--wcai-panel-muted));
+  font-size: .9rem
+}
+
+.WorldCodeAiAppliedRow .WorldCodeAiUndoButton {
+  margin-left: auto
+}
+
+.WorldCodeAiNoticeUndo {
+  margin-top: .3rem
+}
+
+.WorldCodeAiErrorBanner {
+  background-color: rgba(var(--wcai-removed), .1);
+  border: 1px solid rgb(var(--wcai-removed));
+  border-radius: .4rem;
+  margin: 0 .8rem .5rem;
+  padding: .5rem .6rem
+}
+
+.WorldCodeAiErrorBanner .WorldCodeAiErrorPlain {
+  line-height: 1.4
+}
+
+.WorldCodeAiErrorBanner .WorldCodeAiErrorText {
+  font-family: monospace;
+  font-size: .85rem;
+  margin-top: .3rem;
+  max-height: 4.2rem;
+  overflow: auto;
+  white-space: pre-wrap
+}
+
+.WorldCodeAiErrorBanner .WorldCodeAiErrorActions {
+  align-items: center;
+  display: flex;
+  gap: .8rem;
+  margin-top: .4rem
+}
+
+.WorldCodeAiErrorBanner .WorldCodeAiErrorNote {
+  color: rgb(var(--wcai-panel-muted));
+  font-size: .8rem;
+  margin-top: .3rem
+}
+
+@media(max-height:520px) {
+  .WorldCodeAiErrorBanner .WorldCodeAiErrorNote {
+    display: none
+  }
+}
+
+.WorldCodeAiPicked {
+  align-items: center;
+  background-color: rgb(var(--wcai-panel-bg-dark));
+  border-top: 1px solid rgb(var(--wcai-panel-border));
+  color: rgb(var(--wcai-panel-muted));
+  display: flex;
+  font-size: .85rem;
+  gap: .5rem;
+  justify-content: space-between;
+  padding: .35rem .8rem
+}
+
+@media(max-height:520px) {
+  .WorldCodeAiPicked {
+    font-size: .8rem;
+    padding: .1rem .8rem
+  }
+}
+
+.WorldCodeAiInputRow {
+  border-top: 1px solid rgb(var(--wcai-panel-border));
+  display: flex;
+  gap: .5rem;
+  padding: .6rem .8rem
+}
+
+.WorldCodeAiInputRow,
+.WorldCodeAiLimit {
+  background-color: rgb(var(--wcai-panel-bg-dark))
+}
+
+.WorldCodeAiLimit {
+  color: rgb(var(--wcai-panel-muted));
+  font-size: .8rem;
+  padding: 0 .8rem .4rem
+}
+
+@media(max-height:520px) {
+  .WorldCodeAiLimit {
+    font-size: .72rem;
+    padding-bottom: .2rem
+  }
+}
+
+.WorldCodeAiLimit .WorldCodeAiModelChip {
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  color: #fff;
+  padding: .4em .8em;
+  text-shadow: -1px -1px 0 #303a59, -1px 0 0 #303a59, -1px 1px 0 #303a59, 0 -1px 0 #303a59, 0 0 0 #303a59, 0 1px 0 #303a59, 1px -1px 0 #303a59, 1px 0 0 #303a59, 1px 1px 0 #303a59;
+  transition: transform .2s
+}
+
+.WorldCodeAiLimit .WorldCodeAiModelChip .svg-inline--fa path:only-of-type,
+.WorldCodeAiLimit .WorldCodeAiModelChip.svg-inline--fa path:only-of-type {
+  stroke: #303a59;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 2px;
+  stroke-linejoin: round;
+  paint-order: stroke fill
+}
+
+.WorldCodeAiLimit .WorldCodeAiModelChip {
+  background-color: #2e80ee;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32), inset 0 .21em 0 #4f94f1, inset 0 -.21em 0 #2671d7
+}
+
+@media(hover:hover) {
+  .WorldCodeAiLimit .WorldCodeAiModelChip:hover {
+    background-color: #4f94f1
+  }
+}
+
+.WorldCodeAiLimit .WorldCodeAiModelChip.pad-focused {
+  background-color: #4f94f1
+}
+
+@media(hover:none) {
+  .WorldCodeAiLimit .WorldCodeAiModelChip:active {
+    background-color: #4f94f1
+  }
+}
+
+@media(hover:hover) {
+  .WorldCodeAiLimit .WorldCodeAiModelChip:hover {
+    transform: scale(1.05)
+  }
+}
+
+.WorldCodeAiLimit .WorldCodeAiModelChip.pad-focused {
+  transform: scale(1.05)
+}
+
+@media(hover:none) {
+  .WorldCodeAiLimit .WorldCodeAiModelChip:active {
+    transform: scale(1.05)
+  }
+}
+
+.WorldCodeAiLimit .WorldCodeAiModelChip:active {
+  filter: brightness(.92);
+  transform: translateY(1px)
+}
+
+.WorldCodeAiLimit .WorldCodeAiModelChip:focus-visible {
+  outline: 2px solid #ffb914;
+  outline-offset: 2px
+}
+
+.WorldCodeAiLimit .WorldCodeAiModelChip:disabled {
+  background-color: #a4a4a4;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32), inset 0 .21em 0 #cfcfcf, inset 0 -.21em 0 #838383;
+  cursor: default;
+  filter: none;
+  opacity: .6;
+  transform: none
+}
+
+.WorldCodeAiLimit .WorldCodeAiModelChip {
+  font-weight: 700;
+  padding: .15em .55em
+}
+
+.WorldCodeAiLimit .WorldCodeAiModelChip.Open {
+  background-color: #4f94f1
+}
+
+.WorldCodeAiLimit .WorldCodeAiModelChip .WorldCodeAiModelChipCaret {
+  color: inherit
+}
+
+.WorldCodeAiAsk {
+  align-items: stretch;
+  background-color: #303a59;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  display: flex;
+  flex: 1 1;
+  min-width: 0
+}
+
+.WorldCodeAiAsk .WorldCodeAiAskInput {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  color: #fff;
+  flex: 1 1;
+  font: inherit;
+  min-width: 0;
+  outline: none;
+  padding: .6rem .8rem;
+  resize: none
+}
+
+.WorldCodeAiAsk .WorldCodeAiAskInput::placeholder {
+  color: #838383
+}
+
+@media(max-height:520px) {
+  .WorldCodeAiAsk .WorldCodeAiAskInput {
+    height: 2.1rem
+  }
+}
+
+.WorldCodeAiAsk .WorldCodeAiSend {
+  box-shadow: none;
+  flex-shrink: 0;
+  font-size: 1.4rem
+}
+
+.WorldCodeAiAsk .WorldCodeAiSend .ButtonBody {
+  padding: 0 .9rem
+}
+
+.WorldCodeAiAsk .WorldCodeAiSend .svg-inline--fa {
+  transform: rotate(90deg)
+}
+
+.WorldCodeAiInput {
+  background-color: rgb(var(--wcai-panel-bg));
+  border: 1px solid rgb(var(--wcai-panel-border));
+  border-radius: .4rem;
+  color: rgb(var(--wcai-panel-text));
+  flex: 1 1;
+  font: inherit;
+  padding: .4rem .5rem;
+  resize: none
+}
+
+.WorldCodeAiInput:focus {
+  border-color: rgb(var(--wcai-accent));
+  outline: none
+}
+
+@media(max-height:520px) {
+  .WorldCodeAiInput {
+    height: 2.1rem
+  }
+}
+
+.WorldCodeAiViewSwitch {
+  border: 1px solid rgb(var(--wcai-outline));
+  border-radius: .4rem;
+  display: none;
+  overflow: hidden
+}
+
+.WorldCodeAiViewSwitch button {
+  background: none;
+  border: none;
+  color: rgb(var(--wcai-panel-muted));
+  padding: .2rem .8rem
+}
+
+.WorldCodeAiViewSwitch button.Selected {
+  background-color: rgb(var(--wcai-accent));
+  color: rgb(var(--wcai-on-accent));
+  cursor: default;
+  font-weight: 700
+}
+
+@media(max-width:900px) {
+  .WorldCodeAiPanel {
+    border-left: none;
+    inset: 0;
+    min-width: 0;
+    position: absolute;
+    width: auto;
+    z-index: 5
+  }
+
+  .WorldCodeAiViewSwitch {
+    display: flex
+  }
+
+  .WorldCodeAiErrorBanner .WorldCodeAiErrorPlain {
+    max-height: 3rem;
+    overflow-y: auto
+  }
+}
+
+.WorldCodeAiAbout p {
+  margin: 0
+}
+
+.WorldCodeAiAbout .WorldCodeAiHint {
+  flex: none
+}
+
+.WorldCodeAiAbout .WorldCodeAiAboutNote {
+  color: rgb(var(--wcai-panel-muted));
+  font-size: .9rem
+}
+
+.WorldCodeAiAbout .WorldCodeAiAboutList {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  list-style: none;
+  margin: 0;
+  padding: 0
+}
+
+.WorldCodeAiAbout .WorldCodeAiAboutList li {
+  align-items: baseline;
+  background-color: rgb(var(--wcai-panel-bg-dark));
+  border: 1px solid rgb(var(--wcai-panel-border));
+  border-left: 3px solid rgb(var(--wcai-accent));
+  border-radius: .4rem;
+  display: flex;
+  gap: .6rem;
+  justify-content: space-between;
+  padding: .45rem .6rem
+}
+
+.WorldCodeAiAbout .WorldCodeAiQuestionOther {
+  display: flex;
+  gap: .4rem
+}
+
+.WorldCodeAiAbout .WorldCodeAiAboutError {
+  color: rgb(var(--wcai-removed));
+  font-size: .9rem
+}
+
+.WorldCodeAiAbout .WorldCodeAiAboutHeading {
+  font-weight: 700;
+  margin-top: .4rem
+}
+
+.WorldCodeAiAbout .WorldCodeAiOutline {
+  margin: 0;
+  padding-left: 1.1rem
+}
+
+.WorldCodeAiAbout .WorldCodeAiOutline li {
+  overflow-wrap: anywhere;
+  padding: .1rem 0
+}
+
+.WorldCodeAiAbout .WorldCodeAiOutline code {
+  color: rgb(var(--wcai-panel-muted));
+  font-size: .8rem
+}
+
+.WorldCodeAiWentBack {
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .2rem .75rem
+}
+
+.WorldCodeAiForget {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem .75rem;
+  margin-top: .4rem
+}
+
+.WorldCodeAiForget .WorldCodeAiHint {
+  flex: none
+}
+
+.WorldCodeAiForget .WorldCodeAiForgetAsk {
+  flex: 1 1 16rem;
+  font-weight: 700
+}
+
+.WorldCodeAiForget .WorldCodeAiForgetNote {
+  font-weight: 400
+}
+
+.WorldCodeAiForget .WorldCodeAiNoteButtons {
+  align-items: center;
+  display: flex;
+  gap: .75rem
+}
+
+.WorldCodeAiPlan .WorldCodeAiPlanSteps {
+  margin: 0;
+  padding-left: 1.4rem
+}
+
+.WorldCodeAiPlan .WorldCodeAiPlanSteps li {
+  padding: .15rem 0
+}
+
+.WorldCodeAiPlan .WorldCodeAiPlanStep-built {
+  color: rgb(var(--wcai-panel-muted))
+}
+
+.WorldCodeAiPlan .WorldCodeAiPlanTick {
+  color: rgb(var(--wcai-added))
+}
+
+.WorldCodeAiPlan .WorldCodeAiPlanAsked {
+  color: rgb(var(--wcai-panel-muted));
+  font-size: .85rem
+}
+
+.WorldCodeAiSaveGame {
+  margin-top: .4rem
+}
+
+.WorldCodeAiSettings p {
+  margin: 0
+}
+
+.WorldCodeAiSettings .WorldCodeAiAboutNote {
+  color: rgb(var(--wcai-panel-muted));
+  font-size: .9rem
+}
+
+.WorldCodeAiSettings .WorldCodeAiAboutHeading {
+  font-weight: 700;
+  margin-top: .4rem
+}
+
+.WorldCodeAiSettings .WorldCodeAiAboutError {
+  color: rgb(var(--wcai-removed));
+  font-size: .85rem
+}
+
+.WorldCodeAiSettings .WorldCodeAiHint {
+  flex: none
+}
+
+.WorldCodeAiSettings .WorldCodeAiSettingActions {
+  align-items: center;
+  display: flex;
+  gap: .75rem
+}
+
+.WorldCodeAiSettings .WorldCodeAiSettingList {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0
+}
+
+.WorldCodeAiSettings .WorldCodeAiSetting {
+  align-items: center;
+  background-color: rgb(var(--wcai-panel-bg-dark));
+  border: 1px solid rgb(var(--wcai-panel-border));
+  border-radius: .4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .3rem .75rem;
+  padding: .4rem .6rem
+}
+
+.WorldCodeAiSettings .WorldCodeAiSettingLabel {
+  display: flex;
+  flex: 1 1 12rem;
+  flex-direction: column;
+  overflow-wrap: anywhere
+}
+
+.WorldCodeAiSettings .WorldCodeAiSettingLabel code {
+  color: rgb(var(--wcai-panel-muted));
+  font-size: .8rem
+}
+
+.WorldCodeAiSettings .WorldCodeAiSettingControl {
+  align-items: center;
+  display: flex;
+  flex: 0 1 16rem;
+  gap: .3rem
+}
+
+.WorldCodeAiSettings .WorldCodeAiSettingInput {
+  flex: 1 1 auto;
+  min-height: 2.5rem;
+  min-width: 0;
+  width: 6rem
+}
+
+.WorldCodeAiSettings .WorldCodeAiStepper {
+  flex: none;
+  font-size: 1.2rem;
+  line-height: 1;
+  min-height: 2.5rem;
+  min-width: 2.5rem
+}
+
+.WorldCodeAiSettings .WorldCodeAiSettingDone {
+  color: rgb(var(--wcai-added));
+  flex-basis: 100%;
+  font-size: .85rem
+}
+
+@media(max-height:520px) {
+  .WorldCodeAiSettings .WorldCodeAiSettingList {
+    gap: .3rem
+  }
+
+  .WorldCodeAiSettings .WorldCodeAiSetting {
+    padding: .2rem .6rem;
+    scroll-margin-bottom: 1.5rem
+  }
+
+  .WorldCodeAiSettings .WorldCodeAiSettingLabel {
+    align-items: baseline;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0 .5rem
+  }
+
+  .WorldCodeAiSettings .WorldCodeAiSettingDone {
+    flex-basis: auto;
+    order: 1
+  }
+
+  .WorldCodeAiSettings .WorldCodeAiSettingControl,
+  .WorldCodeAiSettings .WorldCodeAiSwitch {
+    margin-left: auto;
+    order: 2
+  }
+}
+
+.WorldCodeAiSettings .WorldCodeAiSwitch {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  gap: .4rem;
+  min-height: 2.5rem
+}
+
+.WorldCodeAiSettings .WorldCodeAiSwitch input {
+  accent-color: rgb(var(--wcai-accent));
+  height: 1.4rem;
+  width: 1.4rem
+}
+
+[data-asks-ai]:after {
+  content: " ✨";
+  font-size: .85em
+}
+
+.WorldCodeAiBusyEntry>.WorldCodeAiHint,
+.WorldCodeAiHistory>.WorldCodeAiHint,
+.WorldCodeAiQuestion>.WorldCodeAiHint {
+  flex: none
+}
+
+.WorldCodeAiKeyIcon {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  flex: none;
+  height: 1em;
+  margin-right: .3em;
+  vertical-align: -.15em;
+  width: 1em
+}
+
+.WorldCodeAiAnsweredBy {
+  align-items: center;
+  color: rgb(var(--wcai-warning-text));
+  display: flex;
+  font-size: max(12px, .8rem);
+  margin-top: .2rem
+}
+
+.WorldCodeAiBackTo {
+  color: rgb(var(--wcai-panel-muted));
+  font-size: max(12px, .8rem);
+  margin: .15rem 0 0
+}
+
+.WorldCodeAiKeyNoticeActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-top: .4rem
+}
+
+.WorldCodeAiCutShort {
+  align-items: flex-start;
+  color: rgb(var(--wcai-warning-text));
+  display: flex;
+  flex-direction: column;
+  font-size: max(12px, .85rem);
+  gap: .3rem;
+  margin: .4rem 0 0
+}
+
+.WorldCodeAiCutShort p {
+  margin: 0
+}
+
+.CodeEditorLight .WorldCodeAiPanel {
+  --wcai-panel-bg: 239, 241, 245;
+  --wcai-panel-bg-dark: 230, 233, 239;
+  --wcai-panel-text: 76, 79, 105;
+  --wcai-panel-muted: 108, 111, 133;
+  --wcai-panel-border: 204, 208, 218;
+  --wcai-accent: 30, 102, 245;
+  --wcai-added: 64, 160, 43;
+  --wcai-removed: 210, 15, 57;
+  --wcai-warning: 223, 142, 29;
+  --wcai-warning-text: 143, 100, 0;
+  --wcai-raised: 204, 208, 218;
+  --wcai-outline: 172, 176, 190;
+  --wcai-diff-bg: 220, 224, 232;
+  --wcai-on-accent: 255, 255, 255;
+  --wcai-switch-knob: 255, 255, 255
+}
+
+.CodeEditorLight .WorldCodeAiPanel .WorldCodeAiAsk {
+  background-color: #fafafa;
+  border-color: rgb(var(--wcai-outline))
+}
+
+.CodeEditorLight .WorldCodeAiPanel .WorldCodeAiAsk .WorldCodeAiAskInput {
+  color: rgb(var(--wcai-panel-text))
+}
+
+.CodeEditorLight .WorldCodeAiPanel .WorldCodeAiAsk .WorldCodeAiAskInput::placeholder {
+  color: rgb(var(--wcai-panel-muted))
+}
+
+.CodeEditorLight .WorldCodeAiPanel .WorldCodeAiInput[type=number] {
+  background: rgb(var(--wcai-panel-bg));
+  border-color: rgb(var(--wcai-panel-border));
+  color: rgb(var(--wcai-panel-text))
+}
+
+.CodeEditorLight .WorldCodeAiPanel .WorldCodeAiInput[type=number]:focus {
+  border-color: rgb(var(--wcai-accent))
+}
+
+.CodeEditorLight .WorldCodeAiPanel .WorldCodeAiModelMenu {
+  box-shadow: 0 .3rem 1.2rem rgba(34, 40, 59, .25)
+}
+
+.CodeEditorLight .WorldCodeAiPanel .WorldCodeAiHistory .WorldCodeAiSnapshotCompare:after {
+  background: linear-gradient(transparent, rgba(76, 79, 105, .3))
+}
+
+.CodeEditorLight .WorldCodeAiPanel .StudioAiAnswerText table td,
+.CodeEditorLight .WorldCodeAiPanel .StudioAiAnswerText table th {
+  border-color: rgb(var(--wcai-outline))
+}
+
+@media(max-height:520px) {
+
+  .WorldCodeAiPanel.WorldCodeAiPanel.WorldCodeAiPanel,
+  .WorldCodeAiPanel.WorldCodeAiPanel.WorldCodeAiPanel * {
+    font-size: 12px
+  }
+
+  .WorldCodeAiPanel.WorldCodeAiPanel.WorldCodeAiPanel code,
+  .WorldCodeAiPanel.WorldCodeAiPanel.WorldCodeAiPanel code *,
+  .WorldCodeAiPanel.WorldCodeAiPanel.WorldCodeAiPanel pre,
+  .WorldCodeAiPanel.WorldCodeAiPanel.WorldCodeAiPanel pre * {
+    font-size: 11px
+  }
+}

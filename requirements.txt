@@ -1,0 +1,2 @@
+jsbeautifier==2.0.3
+cssbeautifier==2.0.3

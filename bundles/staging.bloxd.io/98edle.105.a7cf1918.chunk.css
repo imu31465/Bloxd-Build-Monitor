@@ -1,0 +1,13 @@
+.AuthCallback {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: 100dvh;
+  justify-content: center;
+  width: 100vw
+}
+
+.AuthCallback .LogoLoader {
+  font-size: 14rem
+}

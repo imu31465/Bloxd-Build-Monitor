@@ -1,0 +1,217 @@
+.LuckyCloverWalletAnchor {
+  height: 0;
+  pointer-events: none;
+  position: relative;
+  width: var(--hotbar-slots-width, 42rem)
+}
+
+.LuckyCloverWalletAnchor .LuckyCloverWallet {
+  align-items: center;
+  background-color: #0b2a0e;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  bottom: -3.05rem;
+  display: flex;
+  gap: .4rem;
+  height: 2.5rem;
+  left: var(--hotbar-keys-reach, 0);
+  opacity: .9;
+  overflow: hidden;
+  padding: 0 .5rem;
+  position: absolute;
+  width: 12rem
+}
+
+.LuckyCloverWalletAnchor .LuckyCloverWallet .LuckyCloverWalletFill {
+  background-color: #07940e;
+  box-shadow: inset 0 .4rem 0 0 #2ca433, inset 0 -.4rem 0 0 #06820c;
+  inset: 0;
+  position: absolute;
+  transform-origin: left;
+  transition: transform .25s ease-out
+}
+
+.LuckyCloverWalletAnchor .LuckyCloverWallet .LuckyCloverWalletReached {
+  animation: LuckyCloverReached .9s ease-out both;
+  background-color: #fff;
+  inset: 0;
+  position: absolute
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .LuckyCloverWalletAnchor .LuckyCloverWallet .LuckyCloverWalletReached {
+    display: none
+  }
+}
+
+.LuckyCloverWalletAnchor .LuckyCloverWallet .LuckyCloverWalletIcon {
+  height: 2rem;
+  position: relative;
+  width: 2rem
+}
+
+.LuckyCloverWalletAnchor .LuckyCloverWallet .LuckyCloverWalletIcon.Bounce {
+  animation: LuckyCloverBounce .45s ease-out both
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .LuckyCloverWalletAnchor .LuckyCloverWallet .LuckyCloverWalletIcon.Bounce {
+    animation: none
+  }
+}
+
+.LuckyCloverWalletAnchor .LuckyCloverWallet .LuckyCloverWalletAmount {
+  font-feature-settings: "tnum";
+  color: #fff;
+  flex-grow: 1;
+  font-size: 1.3rem;
+  font-variant-numeric: tabular-nums;
+  position: relative
+}
+
+.LuckyCloverWalletAnchor .LuckyCloverWallet .LuckyCloverWalletShop {
+  color: var(--luckyTierColour);
+  font-size: 1.4rem;
+  position: relative
+}
+
+.LuckyCloverWalletAnchor .LuckyCloverWallet.Capped:after,
+.LuckyCloverWalletAnchor .LuckyCloverWallet.Capped:before {
+  background-color: var(--luckyTierColour);
+  bottom: 0;
+  content: "";
+  position: absolute;
+  top: 0;
+  width: .35rem;
+  z-index: 1
+}
+
+.LuckyCloverWalletAnchor .LuckyCloverWallet.Capped:before {
+  left: 0
+}
+
+.LuckyCloverWalletAnchor .LuckyCloverWallet.Capped:after {
+  right: 0
+}
+
+.BottomMiddleElements:has(.LuckyCloverWallet) .SelectedItemName {
+  transform: translateY(-3rem)
+}
+
+.LuckyCloverFlying {
+  height: 2rem;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  width: 2rem;
+  z-index: 6
+}
+
+@keyframes LuckyCloverBounce {
+  35% {
+    transform: scale(1.35) rotate(-12deg)
+  }
+}
+
+@keyframes LuckyCloverReached {
+  0% {
+    opacity: .7
+  }
+
+  to {
+    opacity: 0
+  }
+}
+
+@keyframes luckyGearRing {
+  0% {
+    opacity: 1;
+    transform: scale(.9)
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(1.6)
+  }
+}
+
+@keyframes luckyGearUnseenIn {
+  0% {
+    transform: scale(0)
+  }
+
+  60% {
+    transform: scale(1.3)
+  }
+
+  to {
+    transform: scale(1)
+  }
+}
+
+@keyframes luckyGearUnseenPulse {
+
+  0%,
+  to {
+    transform: scale(1)
+  }
+
+  50% {
+    transform: scale(1.15)
+  }
+}
+
+.LuckyGearRing {
+  animation: luckyGearRing calc(var(--ringMs)/2) ease-out 2 forwards;
+  border: .2rem solid var(--ringColour);
+  border-radius: 0;
+  box-shadow: 0 0 0 .1rem #1a1f2e, 0 0 .6rem var(--ringColour);
+  box-sizing: border-box;
+  pointer-events: none;
+  position: fixed;
+  z-index: 7
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .LuckyGearRing {
+    animation: none
+  }
+}
+
+.LuckyGearUnseen {
+  animation: luckyGearUnseenIn .3s ease-out, luckyGearUnseenPulse 1s ease-in-out .3s infinite;
+  filter: drop-shadow(0 .05rem 0 #1a1f2e);
+  height: 40%;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transform-origin: 30% 30%;
+  width: 40%;
+  z-index: 1
+}
+
+.LuckyGearUnseen:after,
+.LuckyGearUnseen:before {
+  clip-path: polygon(50% 0, 100% 55%, 72% 55%, 72% 100%, 28% 100%, 28% 55%, 0 55%);
+  content: "";
+  position: absolute
+}
+
+.LuckyGearUnseen:before {
+  background-color: #1a1f2e;
+  inset: 0
+}
+
+.LuckyGearUnseen:after {
+  background-color: #22ff2c;
+  inset: .15rem
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .LuckyGearUnseen {
+    animation: none
+  }
+}
