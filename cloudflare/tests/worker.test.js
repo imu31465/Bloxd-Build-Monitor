@@ -103,7 +103,7 @@ test("entriesDiffNotification reports only actual data changes", () => {
   });
   assert.equal(unchanged.title, "ブロック・アイテム変更なし");
   assert.match(unchanged.description, /追加・削除・ID変更・プロパティ変更はありません/);
-  assert.match(unchanged.description, /追加 0 · 削除 0 · ID変更 0/);
+  assert.match(unchanged.description, /ブロック・アイテムの追加・削除・ID変更・プロパティ変更はありません/);
   const result = entriesDiffNotification({
     lastRunAt: "2026-11-18T01:00:00.000Z",
     lastDiff: {
