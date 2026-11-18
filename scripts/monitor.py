@@ -676,6 +676,8 @@ def normalize_minified_js_identifiers(source: str) -> str:
     index = 0
     length = len(source)
     brace_stack = []
+    paren_depth = 0
+    bracket_depth = 0
 
     while index < length:
         char = source[index]
@@ -739,6 +741,27 @@ def normalize_minified_js_identifiers(source: str) -> str:
                 index = end
                 continue
 
+        if char == "(":
+            paren_depth += 1
+            output.append(char)
+            index += 1
+            continue
+        if char == ")":
+            paren_depth = max(0, paren_depth - 1)
+            output.append(char)
+            index += 1
+            continue
+        if char == "[":
+            bracket_depth += 1
+            output.append(char)
+            index += 1
+            continue
+        if char == "]":
+            bracket_depth = max(0, bracket_depth - 1)
+            output.append(char)
+            index += 1
+            continue
+
         if char == "{":
             previous = index - 1
             while previous >= 0 and source[previous].isspace():
@@ -754,9 +777,9 @@ def normalize_minified_js_identifiers(source: str) -> str:
             is_object_literal = (
                 previous_char in "=(:,["
                 or previous_word in {"return", "yield", "default", "const", "let", "var"}
-                or (bool(brace_stack) and brace_stack[-1] == "object" and previous_char in "{,")
+                or (bool(brace_stack) and brace_stack[-1][0] == "object" and previous_char in "{,")
             )
-            brace_stack.append("class" if is_class_body else ("object" if is_object_literal else "block"))
+            brace_stack.append(("class" if is_class_body else ("object" if is_object_literal else "block"), paren_depth, bracket_depth))
             output.append(char)
             index += 1
             continue
@@ -810,8 +833,13 @@ def normalize_minified_js_identifiers(source: str) -> str:
         next_char = source[following] if following < length else ""
         is_member_property = previous_char == "."
         is_object_key = next_char == ":"
-        in_object_literal = bool(brace_stack and brace_stack[-1] == "object")
-        in_class_body = bool(brace_stack and brace_stack[-1] == "class")
+        same_container_depth = bool(
+            brace_stack
+            and brace_stack[-1][1] == paren_depth
+            and brace_stack[-1][2] == bracket_depth
+        )
+        in_object_literal = bool(brace_stack and brace_stack[-1][0] == "object" and same_container_depth)
+        in_class_body = bool(brace_stack and brace_stack[-1][0] == "class" and same_container_depth)
         is_shorthand_key = in_object_literal and previous_char in "{," and next_char in ",}"
         is_method_key = (in_object_literal or in_class_body) and previous_char in "{," and next_char == "("
         is_keyword = identifier in keywords
