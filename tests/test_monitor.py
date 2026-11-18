@@ -3,6 +3,7 @@ import importlib.util
 import json
 import tempfile
 import unittest
+import subprocess
 from pathlib import Path
 from unittest import mock
 
@@ -562,6 +563,81 @@ class MonitorTests(unittest.TestCase):
         self.assertIn("Largest changes", rendered)
         self.assertLess(len(rendered.splitlines()), 20)
         self.assertNotIn("All changed files", rendered)
+
+    def test_render_changes_uses_diff_highlighting_and_report_link(self):
+        previous_state = {
+            "bloxd.io": {
+                "build": "oldbuild.aaaaaaaa",
+                "files": [{"identity": "js:main", "cdn_hash": "aaaaaaaa", "size": 100}],
+            }
+        }
+        current_state = {
+            "bloxd.io": {
+                "build": "newbuild.bbbbbbbb",
+                "files": [{"identity": "js:main", "cdn_hash": "bbbbbbbb", "size": 125}],
+            }
+        }
+        rendered = monitor.render_changes(
+            previous_state,
+            current_state,
+            ["bloxd.io"],
+            "2026-11-18T15:00 JST",
+            "diffs/202611181500-newbuild-bbbbbbbb.md",
+        )
+        self.assertIn("```diff", rendered)
+        self.assertIn("- Total size: 100 B", rendered)
+        self.assertIn("+ Total size: 125 B (+25 B)", rendered)
+        self.assertIn("[diffs/202611181500-newbuild-bbbbbbbb.md]", rendered)
+
+    def test_readable_diff_report_collapses_files_and_skips_generated_noise(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+
+            def git(*args):
+                subprocess.run(
+                    ["git", *args],
+                    cwd=root,
+                    check=True,
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.PIPE,
+                )
+
+            git("init", "-q")
+            git("config", "user.name", "Test")
+            git("config", "user.email", "test@example.invalid")
+            files = {
+                "README.md": "old readme\n",
+                "bundles/e/main.js": "const oldMinifiedIdentifier=1;\n",
+                "bundles/e/chunks/css/1.css": ".old { color: red; }\n",
+                ".monitor-state.json": '{"old":"hash"}\n',
+            }
+            for relative, content in files.items():
+                path = root / relative
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text(content, encoding="utf-8")
+            git("add", "-A")
+            git("commit", "-qm", "baseline")
+
+            (root / "README.md").write_text("new readme\n", encoding="utf-8")
+            (root / "bundles/e/main.js").write_text(
+                "const newMinifiedIdentifier=2;\n", encoding="utf-8"
+            )
+            (root / "bundles/e/chunks/css/1.css").write_text(
+                ".new { color: green; }\n", encoding="utf-8"
+            )
+            (root / ".monitor-state.json").write_text(
+                '{"new":"hash"}\n', encoding="utf-8"
+            )
+            report = monitor.render_readable_diff_report(root, "test build")
+
+            self.assertIn("<details>", report)
+            self.assertIn("<summary><code>README.md</code>", report)
+            self.assertIn("bundles/e/chunks/css/1.css", report)
+            self.assertIn("```diff", report)
+            self.assertIn("Generated JavaScript bundle diffs skipped: 1", report)
+            self.assertIn("Machine-state manifest skipped: 1", report)
+            self.assertNotIn("MinifiedIdentifier", report)
+            self.assertNotIn(".monitor-state.json", report)
 
     def test_render_changes_baseline_section(self):
         current_state = {
