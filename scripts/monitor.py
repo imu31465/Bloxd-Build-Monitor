@@ -703,7 +703,7 @@ def normalize_minified_js_identifiers(source: str) -> str:
             index = end
             continue
 
-        match = re.match(r"[A-Za-z_$][A-Za-z0-9_$]*", source[index:])
+        match = re.match(r"[A-Za-z_$][A-Za-z0-9_$]*", source, index)
         if not match:
             output.append(char)
             index += 1
@@ -758,7 +758,12 @@ def split_unified_hunks(diff_lines: list[str]) -> list[list[str]]:
     return hunks
 
 
-def render_readable_diff_report(root: Path, title: str, base_ref: str = "HEAD") -> str:
+def render_readable_diff_report(
+    root: Path,
+    title: str,
+    base_ref: str = "HEAD",
+    exclude_paths: set[str] | None = None,
+) -> str:
     """Render every changed file, with a separate collapsible box for every diff hunk."""
     def git_output(*args: str) -> str:
         result = subprocess.run(
@@ -779,11 +784,12 @@ def render_readable_diff_report(root: Path, title: str, base_ref: str = "HEAD") 
     untracked = git_output("ls-files", "--others", "--exclude-standard", "-z").split("\0")
     paths = sorted({path for path in tracked + untracked if path})
     sections = []
+    excluded = set(exclude_paths or ())
     included = binary_count = identifier_only_count = hunk_count = 0
     fence = chr(96) * 3
 
     for relative in paths:
-        if relative.startswith("diffs/"):
+        if relative in excluded:
             continue
 
         old_result = subprocess.run(
@@ -995,7 +1001,11 @@ def main() -> int:
         report_file = ROOT / report_path
         report_file.parent.mkdir(parents=True, exist_ok=True)
         report_file.write_text(
-            render_readable_diff_report(ROOT, f"{now_text} — " + ", ".join(persistent[env]["build"] for env in updated)),
+            render_readable_diff_report(
+                ROOT,
+                f"{now_text} — " + ", ".join(persistent[env]["build"] for env in updated),
+                exclude_paths={report_path},
+            ),
             encoding="utf-8",
         )
 
