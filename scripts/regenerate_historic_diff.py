@@ -177,6 +177,8 @@ def main() -> int:
     destination = ROOT / output_dir
     parts_dir = destination / "parts"
     parts_dir.mkdir(parents=True, exist_ok=True)
+    for stale_part in parts_dir.glob("part-*.md"):
+        stale_part.unlink()
 
     part_number = 0
     current_blocks: list[str] = []

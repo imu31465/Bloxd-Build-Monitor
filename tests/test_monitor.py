@@ -661,6 +661,16 @@ class MonitorTests(unittest.TestCase):
         self.assertIn("// TB", normalized)
         self.assertIn("/ab+c/", monitor.normalize_minified_js_identifiers("const rx = /ab+c/;"))
 
+    def test_normalizer_masks_identifiers_inside_embedded_worker_code_only(self):
+        source = """const worker = '(()=>{var JJ=(JJ,cJ)=>JJ.exports;return cJ(1)} )()';"""
+        normalized = monitor.normalize_minified_js_identifiers(source)
+        self.assertIn("__TWO_CHAR_ID__", normalized)
+        self.assertIn("exports", normalized)
+        self.assertIn("'(()=>{", normalized)
+
+        ordinary = 'const message = "No UI changes";'
+        self.assertEqual(monitor.normalize_minified_js_identifiers(ordinary), ordinary)
+
     def test_workflow_preserves_every_build_commit(self):
         workflow_path = monitor.ROOT / ".github" / "workflows" / "monitor.yml"
         workflow = workflow_path.read_text(encoding="utf-8")

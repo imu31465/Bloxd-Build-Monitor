@@ -749,7 +749,16 @@ def normalize_minified_js_identifiers(source: str) -> str:
                     end += 1
                     break
                 end += 1
-            output.append(source[index:end])
+            raw_literal = source[index:end]
+            literal_content = source[index + 1:end - 1]
+            starts_like_worker_code = (
+                literal_content.lstrip().startswith(("(()=>{", "!function", "function("))
+                and ("=>" in literal_content or ".exports" in literal_content)
+            ) or "self.webpackChunk_" in literal_content
+            if starts_like_worker_code:
+                output.append(quote + normalize_minified_js_identifiers(literal_content) + quote)
+            else:
+                output.append(raw_literal)
             index = end
             continue
 
