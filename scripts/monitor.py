@@ -831,7 +831,7 @@ def normalize_minified_js_identifiers(source: str) -> str:
 
         previous_char = source[previous] if previous >= 0 else ""
         next_char = source[following] if following < length else ""
-        is_member_property = previous_char == "."
+        is_member_property = previous_char == "." and source[max(0, index - 3):index] != "..."
         is_object_key = next_char == ":"
         same_container_depth = bool(
             brace_stack

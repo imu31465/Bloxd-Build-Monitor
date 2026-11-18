@@ -668,10 +668,16 @@ class MonitorTests(unittest.TestCase):
         self.assertIn("exports", normalized)
         self.assertIn("'(()=>{", normalized)
 
-        arguments_source = "function fn(BB, cJ) { return BB + cJ; }"
+        arguments_source = "function fn(BB, cJ, ...TB) { return BB + cJ + TB; }"
         arguments_normalized = monitor.normalize_minified_js_identifiers(arguments_source)
         self.assertNotIn("BB", arguments_normalized)
         self.assertNotIn("cJ", arguments_normalized)
+        self.assertNotIn("TB", arguments_normalized)
+
+        spread_source = "const copy = {...BB};"
+        spread_normalized = monitor.normalize_minified_js_identifiers(spread_source)
+        self.assertIn("...⟦2-char-id⟧", spread_normalized)
+        self.assertNotIn("BB", spread_normalized)
 
         object_source = "const data = { xy, id: value, method(BB, cJ) { return cJ; } };"
         object_normalized = monitor.normalize_minified_js_identifiers(object_source)
