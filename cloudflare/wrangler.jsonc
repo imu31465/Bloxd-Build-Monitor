@@ -1,0 +1,30 @@
+{
+  "$schema": "https://unpkg.com/wrangler@latest/config-schema.json",
+  "name": "bloxd-build-dispatcher",
+  "main": "src/index.js",
+  "compatibility_date": "2026-11-15",
+  "workers_dev": true,
+  "kv_namespaces": [
+    {
+      "binding": "NOTIFICATION_STATE",
+      "id": "bb6aab874d7b42e48d556ed7fa943c63"
+    }
+  ],
+  "triggers": {
+    "crons": ["* * * * *"]
+  },
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1,
+    "logs": {
+      "enabled": true,
+      "invocation_logs": true,
+      "head_sampling_rate": 1,
+      "persist": true,
+      "redact_query_string": true
+    },
+    "issues": {
+      "enabled": true
+    }
+  }
+}

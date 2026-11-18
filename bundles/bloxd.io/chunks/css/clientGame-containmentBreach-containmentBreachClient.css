@@ -1,0 +1,2139 @@
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.BoardChipTooltipBox {
+  --tooltipBackground: #22283b;
+  padding: 0;
+  white-space: normal
+}
+
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.BoardChipTooltipBox[data-popper-placement*=bottom] .tooltip-arrow:after,
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.BoardChipTooltipBox[data-popper-placement*=bottom] .tooltip-arrow:before {
+  border-bottom-color: #ffb914
+}
+
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.BoardChipTooltipBox .BoardChipTooltip {
+  border-top: .2em solid #ffb914;
+  display: flex;
+  flex-direction: column;
+  font-size: max(1.1rem, 13px, min(.9166666667vw, 1.6296296296vh));
+  line-height: 1.4;
+  max-width: 19em;
+  min-width: 11em;
+  text-align: left
+}
+
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.BoardChipTooltipBox .BoardChipTooltipHeader {
+  align-items: center;
+  display: flex;
+  gap: .6em;
+  padding: .55em .75em
+}
+
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.BoardChipTooltipBox .BoardChipTooltipIcon {
+  align-items: center;
+  background: #1a1f2e;
+  border: 1px solid #0f0f0f;
+  box-sizing: border-box;
+  display: flex;
+  flex-shrink: 0;
+  height: 2.4em;
+  justify-content: center;
+  padding: .25em;
+  width: 2.4em
+}
+
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.BoardChipTooltipBox .BoardChipTooltipName {
+  font-size: 1.1em;
+  font-weight: 900;
+  line-height: 1.2
+}
+
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.BoardChipTooltipBox .BoardChipTooltipLabel {
+  color: #cfcfcf;
+  font-size: .75em;
+  font-weight: 900;
+  letter-spacing: .1em;
+  text-transform: uppercase
+}
+
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.BoardChipTooltipBox .BoardChipTooltipBody {
+  display: flex;
+  flex-direction: column;
+  gap: .45em;
+  padding: 0 .75em .6em
+}
+
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.BoardChipTooltipBox .BoardChipTooltipDescription {
+  color: #f2f2f2
+}
+
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.BoardChipTooltipBox .BoardChipTooltipSource {
+  align-items: baseline;
+  column-gap: .45em;
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: 800
+}
+
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.BoardChipTooltipBox .BoardChipTooltipHeld {
+  grid-gap: .35em 1.2em;
+  align-items: baseline;
+  border-top: 1px solid hsla(0, 0%, 95%, .1);
+  display: grid;
+  gap: .35em 1.2em;
+  grid-template-columns: 1fr auto;
+  padding: .5em .75em .65em
+}
+
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.BoardChipTooltipBox .BoardChipTooltipHeld .BoardChipTooltipCount {
+  color: #cfcfcf;
+  font-weight: 900
+}
+
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.BoardChipTooltipBox .BoardChipTooltipHeld .BoardChipTooltipHeldAmount {
+  color: #1dd06d
+}
+
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.BoardChipTooltipBox .BoardChipTooltipHeld .BoardChipTooltipMeter {
+  background: #1a1f2e;
+  grid-column: 1/-1;
+  height: .3em
+}
+
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.BoardChipTooltipBox .BoardChipTooltipHeld .BoardChipTooltipMeter span {
+  background: #1dd06d;
+  display: block;
+  height: 100%
+}
+
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.BoardChipTooltipBox .BoardChipTooltipHeld.Short .BoardChipTooltipHeldAmount {
+  color: #ff8a80
+}
+
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.BoardChipTooltipBox .BoardChipTooltipHeld.Short .BoardChipTooltipMeter span {
+  background: #e34f4f
+}
+
+.GameBackgroundScreen.ContainmentBoardOverlay {
+  background: #303a59;
+  pointer-events: auto;
+  z-index: 9
+}
+
+.ContainmentBoardPanel {
+  --tile-min-width: 9em;
+  --tile-icon: 3.4em;
+  --detail-icon: 4em;
+  background: #303a59;
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  font-size: max(1.35rem, 14px, min(1.125vw, 2vh));
+  height: 100%;
+  padding: var(--notchTop) var(--notchRight) var(--notchBottom) var(--notchLeft);
+  position: relative;
+  text-align: left;
+  white-space: normal;
+  width: 100%
+}
+
+.ContainmentBoardPanel h2,
+.ContainmentBoardPanel h3,
+.ContainmentBoardPanel p {
+  margin: 0
+}
+
+.ContainmentBoardPanel .BoardDecor {
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  z-index: 2
+}
+
+.ContainmentBoardPanel .BoardHeader {
+  align-items: center;
+  background: #394980;
+  border-bottom: 1px solid #0f0f0f;
+  box-sizing: border-box;
+  display: flex;
+  gap: .8em;
+  justify-content: flex-end;
+  min-height: calc(var(--InGameHeaderRowsHeight, 2.5rem) + .25rem);
+  padding: .5em .6em .5em 1em;
+  position: relative
+}
+
+.ContainmentBoardPanel .BoardHeader .ExitButton {
+  font-size: 1.4em
+}
+
+.ContainmentBoardPanel .BoardWallet {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4em;
+  justify-content: flex-end
+}
+
+.ContainmentBoardPanel .BoardChip {
+  align-items: center;
+  background: #1a1f2e;
+  border: 1px solid #0f0f0f;
+  cursor: help;
+  display: inline-flex;
+  font-weight: 700;
+  gap: .3em;
+  padding: .15em .5em .15em .2em
+}
+
+.ContainmentBoardPanel .BoardChip .BoardChipIcon {
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+  height: 1.4em;
+  justify-content: center;
+  width: 1.4em
+}
+
+.ContainmentBoardPanel .BoardChip.Short {
+  border-color: #fc6464;
+  color: #ff8a80
+}
+
+.ContainmentBoardPanel .BoardBody {
+  display: grid;
+  flex: 1 1;
+  grid-template-columns: 1fr 21em;
+  min-height: 0
+}
+
+.ContainmentBoardPanel .BoardTiles {
+  grid-gap: .5em;
+  display: grid;
+  gap: .5em;
+  grid-auto-rows: min-content;
+  grid-template-columns: repeat(auto-fill, minmax(var(--tile-min-width), 1fr));
+  overflow-y: auto;
+  padding: .5em
+}
+
+.ContainmentBoardPanel .BoardTiles .BoardTile {
+  align-items: center;
+  background: #3c4b68;
+  border: 1px solid #0f0f0f;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font: inherit;
+  gap: .4em;
+  padding: 1.35em .5em .8em;
+  position: relative
+}
+
+@media(hover:hover) {
+  .ContainmentBoardPanel .BoardTiles .BoardTile:hover {
+    background: #394980
+  }
+}
+
+.ContainmentBoardPanel .BoardTiles .BoardTile.pad-focused {
+  background: #394980
+}
+
+@media(hover:none) {
+  .ContainmentBoardPanel .BoardTiles .BoardTile:active {
+    background: #394980
+  }
+}
+
+.ContainmentBoardPanel .BoardTiles .BoardTile.Selected {
+  outline: 3px solid #ffb914;
+  outline-offset: -1px
+}
+
+.ContainmentBoardPanel .BoardTiles .BoardTile.Locked .BoardTileIcon {
+  filter: grayscale(1) brightness(.35)
+}
+
+.ContainmentBoardPanel .BoardTiles .BoardTile.Locked .BoardTileName {
+  color: #f2f2f2
+}
+
+.ContainmentBoardPanel .BoardTiles .BoardTile .BoardBadge {
+  left: -1px;
+  position: absolute;
+  top: -1px;
+  z-index: 1
+}
+
+.ContainmentBoardPanel .BoardTiles .BoardTileIcon {
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+  height: var(--tile-icon);
+  justify-content: center;
+  width: var(--tile-icon)
+}
+
+.ContainmentBoardPanel .BoardTiles .BoardTileName {
+  font-size: .9em;
+  font-weight: 900;
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+  text-align: center
+}
+
+.ContainmentBoardPanel .BoardMugshot {
+  background: #f2f2f2;
+  border: 1px solid #0f0f0f;
+  box-sizing: border-box;
+  display: block;
+  height: 100%;
+  padding: .12em;
+  width: 100%
+}
+
+.ContainmentBoardPanel .BoardMugshot img {
+  display: block;
+  height: 100%;
+  width: 100%
+}
+
+.ContainmentBoardPanel .BoardMugshot.Uncaught img {
+  animation: BoardMugshotGlitch 3.7s steps(1) infinite
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .ContainmentBoardPanel .BoardMugshot.Uncaught img {
+    animation: none
+  }
+}
+
+.ContainmentBoardPanel .BoardMugshot[data-off-screen] img,
+html[data-app-covered] .WholeAppWrapper .ContainmentBoardPanel .BoardMugshot img {
+  animation-play-state: paused
+}
+
+.ContainmentBoardPanel .BoardBadge {
+  background: #ffb914;
+  border: 1px solid #0f0f0f;
+  color: #0f0f0f;
+  font-size: .7em;
+  font-weight: 700;
+  letter-spacing: .06em;
+  padding: 0 .35em;
+  text-transform: uppercase
+}
+
+.ContainmentBoardPanel .BoardBadge.Muted {
+  background: #1a1f2e;
+  color: #cfcfcf
+}
+
+.ContainmentBoardPanel .BoardDetail {
+  background: #2b3249;
+  border-left: 1px solid #0f0f0f;
+  display: flex;
+  flex-direction: column;
+  gap: .7em;
+  overflow-y: auto;
+  padding: .8em
+}
+
+.ContainmentBoardPanel .BoardDetailHeader {
+  align-items: center;
+  display: flex;
+  gap: .7em
+}
+
+.ContainmentBoardPanel .BoardDetailHeader h3 {
+  font-size: 1.25em;
+  line-height: 1.15;
+  overflow-wrap: anywhere
+}
+
+.ContainmentBoardPanel .BoardDetailIcon {
+  align-items: center;
+  background: #1a1f2e;
+  display: flex;
+  flex-shrink: 0;
+  height: var(--detail-icon);
+  justify-content: center;
+  width: var(--detail-icon)
+}
+
+.ContainmentBoardPanel .BoardDetailHeading {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: .25em;
+  min-width: 0
+}
+
+.ContainmentBoardPanel .BoardDetailStatus {
+  align-items: center;
+  color: #cfcfcf;
+  display: flex;
+  gap: .4em
+}
+
+.ContainmentBoardPanel .BoardDescription {
+  color: #f2f2f2;
+  font-size: .9em;
+  line-height: 1.35
+}
+
+.ContainmentBoardPanel .BoardActions {
+  background: inherit;
+  bottom: -.8em;
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+  margin-bottom: -.8em;
+  margin-top: auto;
+  padding: .5em 0 .8em;
+  position: sticky;
+  z-index: 1
+}
+
+.ContainmentBoardPanel .BoardActions .NewButton,
+.ContainmentBoardPanel .BoardActions .SecondaryButton {
+  min-height: 2.6em
+}
+
+.ContainmentBoardPanel .BoardHint {
+  color: #cfcfcf;
+  text-align: center
+}
+
+.ContainmentBoardPanel .BoardStatus {
+  align-items: center;
+  background: #394980;
+  border-top: 1px solid #0f0f0f;
+  color: #1dd06d;
+  display: flex;
+  font-weight: 700;
+  gap: .6em;
+  min-height: 2em;
+  padding: .4em 1em
+}
+
+.ContainmentBoardPanel .BoardStatus.Refused {
+  background: #cc1414;
+  color: #fff
+}
+
+@keyframes BoardMugshotGlitch {
+  0% {
+    filter: none;
+    transform: none
+  }
+
+  88% {
+    filter: contrast(1.8);
+    transform: translateX(.05em)
+  }
+
+  90% {
+    filter: brightness(1.4);
+    transform: translateX(-.08em) skewX(6deg)
+  }
+
+  92% {
+    filter: none;
+    transform: none
+  }
+
+  96% {
+    filter: invert(1);
+    transform: translateY(.04em)
+  }
+
+  97% {
+    filter: none;
+    transform: none
+  }
+}
+
+@media(max-width:900px)and (orientation:landscape) {
+  .ContainmentBoardPanel .BoardBody {
+    grid-template-columns: 1fr 17em
+  }
+}
+
+@media(max-height:560px) {
+  .ContainmentBoardPanel .BoardTiles .BoardTile {
+    gap: .3em;
+    padding: 1.15em .35em .5em
+  }
+
+  .ContainmentBoardPanel .BoardTiles .BoardTileIcon {
+    --tile-icon: 2.6em
+  }
+
+  .ContainmentBoardPanel .BoardDetailIcon {
+    --detail-icon: 2.8em
+  }
+
+  .ContainmentBoardPanel .BoardDetailHeader h3 {
+    font-size: 1.1em
+  }
+
+  .ContainmentBoardPanel .BoardStatus {
+    min-height: 1.7em;
+    padding: .25em .8em
+  }
+}
+
+@media(max-width:900px)and (orientation:portrait) {
+  .ContainmentBoardPanel .BoardHeader {
+    padding-top: calc(var(--InGameHeaderRowsHeight, 2.5rem) + .25rem)
+  }
+
+  .ContainmentBoardPanel .BoardWallet {
+    flex: 1 1;
+    justify-content: flex-start
+  }
+
+  .ContainmentBoardPanel .BoardBody {
+    display: flex;
+    flex-direction: column
+  }
+
+  .ContainmentBoardPanel .BoardTiles {
+    --tile-min-width: 6.5em;
+    flex: 1 1;
+    min-height: 0
+  }
+
+  .ContainmentBoardPanel .BoardTiles .BoardTileName {
+    font-size: .82em
+  }
+
+  .ContainmentBoardPanel .BoardDetail {
+    border-left: none;
+    border-top: 1px solid #0f0f0f;
+    flex: 0 1 auto;
+    max-height: 45%;
+    min-height: 0
+  }
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel {
+  background: #3f1f0e;
+  font-weight: 800
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .BoardHeader {
+  background: #50250e;
+  padding-bottom: .8em
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .BoardHeader:after {
+  background: #ffb914;
+  bottom: 0;
+  content: "";
+  height: .3em;
+  left: 0;
+  position: absolute;
+  right: 0
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .CodexProgress {
+  background: #20150f;
+  border: 1px solid #0f0f0f;
+  display: flex;
+  flex-direction: column;
+  font-weight: 900;
+  gap: .25em;
+  padding: .25em .6em .35em
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .CodexProgress .CodexProgressMeter {
+  background: #50250e;
+  height: .3em
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .CodexProgress .CodexProgressMeter span {
+  background: #ffb914;
+  display: block;
+  height: 100%
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .BoardBody {
+  grid-template-columns: 1fr 22em
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .BoardTiles {
+  gap: 1.4em .7em;
+  padding: 1.4em .7em .7em
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .BoardTiles .BoardTile.CodexFolder {
+  --photo: 5.6em;
+  --photo-top: 1.35em;
+  --folder-front: #f7e3b3;
+  --folder-back: #dbc99f;
+  --folder-crease: #c4b48f;
+  background: none;
+  border: none;
+  color: #14171f;
+  isolation: isolate;
+  overflow: visible;
+  padding-top: var(--photo-top)
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .BoardTiles .BoardTile.CodexFolder:after,
+.ContainmentBoardPanel.ContainmentCodexPanel .BoardTiles .BoardTile.CodexFolder:before {
+  box-sizing: border-box;
+  content: "";
+  position: absolute;
+  z-index: -1
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .BoardTiles .BoardTile.CodexFolder:before {
+  background: linear-gradient(var(--folder-crease), var(--folder-crease)) left 0 top 1.2em/calc(100% - .4em) 1px no-repeat, linear-gradient(var(--folder-crease), var(--folder-crease)) right .4em top 1.2em/1px 100% no-repeat, linear-gradient(var(--folder-front), var(--folder-front)) left 0 top 1.2em/calc(100% - .4em) 100% no-repeat, linear-gradient(#f3f0ea, #f3f0ea) left .35em top .92em/calc(100% - .6em) 100% no-repeat, linear-gradient(#f4ecdb, #f4ecdb) left .2em top .8em/calc(100% - .3em) 100% no-repeat, var(--folder-back)
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .BoardTiles .BoardTile.CodexFolder:after {
+  background: #3f1f0e
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .BoardTiles .BoardTile.CodexFolder {
+  box-shadow: .2rem .25rem 0 1px rgba(0, 0, 0, .32)
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .BoardTiles .BoardTile.CodexFolder:before {
+  border: 1px solid #0f0f0f;
+  inset: calc(-.7em + -1px) -1px -1px
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .BoardTiles .BoardTile.CodexFolder:after {
+  border-bottom: 1px solid #0f0f0f;
+  border-left: 1px solid #0f0f0f;
+  bottom: 100%;
+  left: 45%;
+  right: -1px;
+  top: calc(-.7em + -1px)
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .BoardTiles .BoardTile.CodexFolder .BoardBadge {
+  right: -1px;
+  top: -1px
+}
+
+@media(hover:hover) {
+  .ContainmentBoardPanel.ContainmentCodexPanel .BoardTiles .BoardTile.CodexFolder:hover {
+    --folder-front: #f5e9cc;
+    --folder-back: #d9cfb5;
+    --folder-crease: #c2b9a2
+  }
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .BoardTiles .BoardTile.CodexFolder.pad-focused {
+  --folder-front: #f5e9cc;
+  --folder-back: #d9cfb5;
+  --folder-crease: #c2b9a2
+}
+
+@media(hover:none) {
+  .ContainmentBoardPanel.ContainmentCodexPanel .BoardTiles .BoardTile.CodexFolder:active {
+    --folder-front: #f5e9cc;
+    --folder-back: #d9cfb5;
+    --folder-crease: #c2b9a2
+  }
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .BoardTiles .BoardTile.CodexFolder.Selected {
+  box-shadow: .2rem .25rem 0 3px rgba(0, 0, 0, .32);
+  outline: none
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .BoardTiles .BoardTile.CodexFolder.Selected:before {
+  border: 3px solid #ffb914;
+  inset: calc(-.7em + -3px) -3px -3px
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .BoardTiles .BoardTile.CodexFolder.Selected:after {
+  border-bottom: 3px solid #ffb914;
+  border-left: 3px solid #ffb914;
+  bottom: 100%;
+  left: 45%;
+  right: -3px;
+  top: calc(-.7em + -3px)
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .BoardTiles .BoardTile.CodexFolder.Selected .BoardBadge {
+  right: -3px;
+  top: -3px
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .BoardTiles .BoardTile.CodexFolder.Unknown {
+  --folder-front: #b7ae98;
+  --folder-back: #a39b88;
+  --folder-crease: #928b7a
+}
+
+@media(hover:hover) {
+  .ContainmentBoardPanel.ContainmentCodexPanel .BoardTiles .BoardTile.CodexFolder.Unknown:hover {
+    --folder-front: #cec1a2;
+    --folder-back: #b7ac90;
+    --folder-crease: #a49a82
+  }
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .BoardTiles .BoardTile.CodexFolder.Unknown.pad-focused {
+  --folder-front: #cec1a2;
+  --folder-back: #b7ac90;
+  --folder-crease: #a49a82
+}
+
+@media(hover:none) {
+  .ContainmentBoardPanel.ContainmentCodexPanel .BoardTiles .BoardTile.CodexFolder.Unknown:active {
+    --folder-front: #cec1a2;
+    --folder-back: #b7ac90;
+    --folder-crease: #a49a82
+  }
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .BoardTiles .BoardTile.CodexFolder.Unknown .BoardTileIcon {
+  box-sizing: border-box;
+  margin: .275em 0;
+  padding: .9em
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .BoardTiles .BoardTile.CodexFolder.Unknown .BoardTileName {
+  color: #515256
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .BoardTiles .BoardTile.CodexFolder .BoardTileIcon {
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+  height: var(--photo);
+  justify-content: center;
+  width: var(--photo)
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .BoardTiles .BoardTile.CodexFolder:not(.Unknown) {
+  align-items: flex-start
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .BoardTiles .BoardTile.CodexFolder:not(.Unknown) .BoardTileIcon {
+  height: calc(var(--photo) + .55em);
+  margin-left: .2em
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .BoardTiles .BoardTile.CodexFolder:not(.Unknown) .BoardTileName {
+  text-align: left
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .BoardTiles .BoardTile.CodexFolder:not(.Unknown) .CodexPaperclip {
+  top: calc(.5em - var(--photo-top) - var(--clip-pixel)*3)
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .BoardTiles .BoardTile.CodexFolder .BoardTileName {
+  min-height: 2.3em
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .BoardTiles .BoardTile.CodexFolder .BoardBadge {
+  left: auto
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .BoardTiles .CodexSeal {
+  height: 1.28em;
+  image-rendering: pixelated;
+  position: absolute;
+  right: .65em;
+  top: .75em;
+  width: 1.28em
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .BoardBadge.Contained {
+  background: #cc1414;
+  color: #fff
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .BoardBadge.Sighted,
+.ContainmentBoardPanel.ContainmentCodexPanel .BoardBadge.Unknown {
+  background: #515256;
+  color: #fff
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .BoardDetail {
+  background: #2d190f
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .CodexPhoto {
+  --clip-pixel: 0.2em;
+  display: block;
+  height: 100%;
+  position: relative;
+  width: 100%
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .CodexPhoto .BoardMugshot {
+  background: #f3f0ea;
+  padding: .2em .2em .75em;
+  transform: rotate(-3deg)
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .CodexPhoto .CodexPaperclip {
+  height: calc(var(--clip-pixel)*12);
+  image-rendering: pixelated;
+  left: .4em;
+  position: absolute;
+  top: calc(var(--clip-pixel)*-3)
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .CodexDossier {
+  --photo: 6em;
+  background: #f4ecdb;
+  border: 1px solid #0f0f0f;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  color: #14171f;
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  gap: .75em;
+  padding: 1em;
+  position: relative
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .CodexDossier .CodexFileNumber {
+  color: #515256;
+  font-size: .7em;
+  font-weight: 900;
+  letter-spacing: .1em;
+  text-transform: uppercase
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .CodexDossier .CodexPhoto {
+  transform: rotate(-3deg)
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .CodexDossier .CodexPhoto .BoardMugshot {
+  transform: none
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .CodexDossier .BoardDetailIcon {
+  align-items: center;
+  background: none;
+  box-sizing: border-box;
+  display: flex;
+  flex-shrink: 0;
+  height: var(--photo);
+  height: calc(var(--photo) + .55em);
+  justify-content: center;
+  width: var(--photo)
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .CodexDossier.Unknown .BoardDetailIcon {
+  background: #f7e3b3;
+  border: 1px solid #0f0f0f;
+  height: 4em;
+  padding: .2em;
+  width: 4em
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .CodexDossier .BoardDescription {
+  color: #14171f;
+  line-height: 1.45
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .CodexTally {
+  align-items: center;
+  color: #cc1414;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: .9em;
+  font-weight: 900;
+  gap: .6em
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .CodexTallyMarks {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: .5em
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .CodexTallyGroup {
+  display: inline-flex;
+  gap: .2em;
+  height: 1.1em;
+  position: relative
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .CodexTallyGroup .CodexTallyMark {
+  background: #cc1414;
+  height: 100%;
+  width: .15em
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .CodexTallyGroup.Gate:after {
+  background: #cc1414;
+  content: "";
+  height: .15em;
+  left: -.2em;
+  position: absolute;
+  right: -.2em;
+  top: 50%;
+  transform: rotate(-28deg)
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .CodexClosedStamp {
+  border: .15em solid;
+  border-radius: .2em;
+  color: rgba(204, 20, 20, .55);
+  font-size: 1.4em;
+  font-weight: 700;
+  letter-spacing: .12em;
+  padding: .05em .4em;
+  pointer-events: none;
+  position: absolute;
+  right: .8em;
+  text-transform: uppercase;
+  top: 1.6em;
+  transform: rotate(-14deg)
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .CodexRedaction {
+  display: flex;
+  flex-direction: column;
+  gap: .45em
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .CodexRedaction .CodexRedactedLine {
+  background: #14171f;
+  height: .95em
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .CodexRedaction .CodexRedacted {
+  color: #cc1414;
+  font-weight: 900;
+  letter-spacing: .12em;
+  margin-top: .2em
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .CodexNote {
+  background: #fcd373;
+  border: 1px solid #0f0f0f;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  color: #14171f;
+  padding: .6em .75em
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .CodexNote h4 {
+  font-size: .7em;
+  font-weight: 900;
+  letter-spacing: .1em;
+  margin: 0 0 .3em;
+  text-transform: uppercase
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .CodexNote p {
+  font-size: .9em;
+  line-height: 1.4
+}
+
+.ContainmentBoardPanel.ContainmentCodexPanel .CodexClearance {
+  border-top: 2px dashed #515256;
+  color: #cc1414;
+  font-size: .75em;
+  font-weight: 900;
+  letter-spacing: .1em;
+  margin-top: auto;
+  padding-top: .6em;
+  text-transform: uppercase
+}
+
+@media(max-width:900px)and (orientation:landscape) {
+  .ContainmentBoardPanel.ContainmentCodexPanel .BoardBody {
+    grid-template-columns: 1fr 17em
+  }
+}
+
+@media(max-height:560px) {
+  .ContainmentBoardPanel.ContainmentCodexPanel .BoardTiles {
+    gap: 1.15em .45em;
+    padding: 1.15em .45em .45em
+  }
+
+  .ContainmentBoardPanel.ContainmentCodexPanel .BoardTiles .BoardTile.CodexFolder {
+    --photo: 3.6em;
+    --photo-top: 1.15em
+  }
+
+  .ContainmentBoardPanel.ContainmentCodexPanel .BoardTiles .BoardTile.CodexFolder.Unknown .BoardTileIcon {
+    padding: .6em
+  }
+
+  .ContainmentBoardPanel.ContainmentCodexPanel .CodexPhoto {
+    --clip-pixel: 0.16em
+  }
+
+  .ContainmentBoardPanel.ContainmentCodexPanel .CodexDossier {
+    --photo: 4em;
+    gap: .5em;
+    padding: .7em
+  }
+}
+
+@media(max-width:900px)and (orientation:portrait) {
+  .ContainmentBoardPanel.ContainmentCodexPanel .CodexProgress {
+    flex: 1 1
+  }
+
+  .ContainmentBoardPanel.ContainmentCodexPanel .BoardTiles .BoardTile.CodexFolder {
+    --photo: 4.6em
+  }
+
+  .ContainmentBoardPanel.ContainmentCodexPanel .BoardTiles .BoardTile.CodexFolder.Unknown .BoardTileIcon {
+    padding: .75em
+  }
+
+  .ContainmentBoardPanel.ContainmentCodexPanel .CodexDossier {
+    --photo: 4em
+  }
+}
+
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.LoadoutWalkthroughStep {
+  --tooltipBackground: #3a5011;
+  animation: LoadoutWalkthroughEnter .18s ease-out;
+  font-size: max(1.35rem, 14px, min(1.125vw, 2vh));
+  font-weight: 800;
+  gap: 0;
+  line-height: 1.35;
+  max-width: min(22em, 100vw - 2rem);
+  padding: 0;
+  white-space: normal
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .WholeAppWrapper .WholeAppWrapperInner .tooltip-container.LoadoutWalkthroughStep {
+    animation: none
+  }
+}
+
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.LoadoutWalkthroughStep .LoadoutWalkthroughHeader {
+  align-items: center;
+  display: flex;
+  gap: .6em;
+  padding: .5em .5em 0 .7em
+}
+
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.LoadoutWalkthroughStep .LoadoutWalkthroughHeader .LoadoutWalkthroughPortrait {
+  align-items: center;
+  background: #263509;
+  border: 1px solid #0f0f0f;
+  box-sizing: border-box;
+  display: flex;
+  flex-shrink: 0;
+  height: 2.2em;
+  image-rendering: pixelated;
+  justify-content: center;
+  padding: .15em;
+  width: 2.2em
+}
+
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.LoadoutWalkthroughStep .LoadoutWalkthroughHeader .LoadoutWalkthroughSpeaker {
+  color: #a8e08a;
+  flex: 1 1;
+  font-size: .75em;
+  font-weight: 900;
+  letter-spacing: .1em;
+  text-transform: uppercase
+}
+
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.LoadoutWalkthroughStep .LoadoutWalkthroughHeader .ExitButton {
+  font-size: .9em
+}
+
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.LoadoutWalkthroughStep .LoadoutWalkthroughText {
+  margin: 0;
+  padding: .5em .9em .8em .7em
+}
+
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.LoadoutWalkthroughStep .LoadoutWalkthroughText .LoadoutWalkthroughName {
+  color: #ffb914;
+  font-weight: 900
+}
+
+@keyframes LoadoutWalkthroughEnter {
+  0% {
+    opacity: 0;
+    scale: .94
+  }
+}
+
+.tooltip-container.TutorialStep {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  gap: .6rem;
+  max-width: 18rem;
+  padding: .6rem .75rem
+}
+
+.tooltip-container.TutorialStep .TutorialStepText {
+  text-align: center
+}
+
+.tooltip-container.TutorialStep .TutorialStepText .TutorialStepList {
+  margin: .4rem 0;
+  padding-left: 1.4rem;
+  text-align: left
+}
+
+.tooltip-container.TutorialStep .TutorialStepText p {
+  margin: 0 0 .4rem
+}
+
+.tooltip-container.TutorialStep .TutorialStepText p:last-child {
+  margin-bottom: 0
+}
+
+.tooltip-container.TutorialStep .TutorialStepButtons {
+  display: flex;
+  gap: .5rem;
+  justify-content: center
+}
+
+.tooltip-container.TutorialStep .TutorialStepButtons .TutorialStepButton {
+  font-size: .9rem
+}
+
+.tooltip-container.TutorialStep .TutorialStepButtons .TutorialStepButton .ButtonBody {
+  padding: .35rem .8rem
+}
+
+.TutorialCentreBackdrop,
+.TutorialSpotlightBackdrop {
+  background-color: rgba(26, 31, 46, .6);
+  position: fixed;
+  z-index: 3999
+}
+
+.TutorialCentreBackdrop {
+  align-items: center;
+  display: flex;
+  inset: 0;
+  justify-content: center
+}
+
+.TutorialCentreBackdrop .tooltip-container.TutorialStep.TutorialCentreStep {
+  box-sizing: border-box;
+  font-size: 1.3rem;
+  gap: 1rem;
+  max-height: 90vh;
+  max-width: none;
+  overflow-y: auto;
+  padding: 1.25rem 1.5rem;
+  width: min(32rem, 90vw)
+}
+
+.TutorialCentreBackdrop .tooltip-container.TutorialStep.TutorialCentreStep .TutorialStepButtons .TutorialStepButton {
+  font-size: 1.1rem
+}
+
+.TutorialCentreBackdrop .tooltip-container.TutorialStep.TutorialCentreStep .TutorialStepButtons .TutorialStepButton .ButtonBody {
+  padding: .5rem 1.2rem
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel {
+  --tile-min-width: 9.5em;
+  background: #3a5011;
+  font-weight: 800
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .BoardHeader {
+  background: linear-gradient(#9cc23a, #9cc23a) left .4em top .4em/.22em .22em no-repeat, linear-gradient(#9cc23a, #9cc23a) right .4em top .4em/.22em .22em no-repeat, linear-gradient(#9cc23a, #9cc23a) left .4em bottom .8em/.22em .22em no-repeat, linear-gradient(#9cc23a, #9cc23a) right .4em bottom .8em/.22em .22em no-repeat, #4a6514;
+  padding-bottom: .9em
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .BoardHeader:after {
+  background: repeating-linear-gradient(-45deg, #ffb914 0 .5em, #0f0f0f .5em 1em);
+  bottom: 0;
+  content: "";
+  height: .4em;
+  left: 0;
+  position: absolute;
+  right: 0
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .BoardWallet {
+  max-width: 55%
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .BoardChip {
+  background: #263509
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .BoardBody {
+  grid-template-columns: 15em 1fr 20em
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutKit {
+  background: #2f420d;
+  border-right: 1px solid #0f0f0f;
+  display: flex;
+  flex-direction: column;
+  gap: .45em;
+  min-height: 0;
+  overflow-y: auto;
+  padding: .6em
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutKitSlot {
+  align-items: center;
+  background: #445d12;
+  border: 1px solid #0f0f0f;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-shrink: 0;
+  font: inherit;
+  gap: .6em;
+  padding: .45em .6em;
+  position: relative;
+  text-align: left
+}
+
+@media(hover:hover) {
+  .ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutKitSlot:hover {
+    background: #57771a
+  }
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutKitSlot.pad-focused {
+  background: #57771a
+}
+
+@media(hover:none) {
+  .ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutKitSlot:active {
+    background: #57771a
+  }
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutKitSlot.Selected {
+  background: #ffb914;
+  color: #0f0f0f
+}
+
+@media(hover:hover) {
+  .ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutKitSlot.Selected:hover {
+    background: #fcd373
+  }
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutKitSlot.Selected.pad-focused {
+  background: #fcd373
+}
+
+@media(hover:none) {
+  .ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutKitSlot.Selected:active {
+    background: #fcd373
+  }
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutKitSlot.Selected .LoadoutKitLabel,
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutKitSlot.Selected .LoadoutPerkCount {
+  color: #0f0f0f
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutKitSlot.Selected .LoadoutPip {
+  background: transparent;
+  border-color: #0f0f0f
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutKitSlot.Selected .LoadoutPip.Filled {
+  background: #0f0f0f
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutKitIcon {
+  align-items: center;
+  background: #263509;
+  border: 1px solid #0f0f0f;
+  box-sizing: border-box;
+  display: flex;
+  flex-shrink: 0;
+  height: 2.3em;
+  justify-content: center;
+  padding: .15em;
+  width: 2.3em
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutKitText {
+  display: flex;
+  flex: 1 1;
+  flex-direction: column;
+  gap: .15em;
+  min-width: 0
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutKitTop {
+  align-items: center;
+  display: flex;
+  gap: .4em;
+  justify-content: space-between;
+  min-width: 0
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutKitLabel {
+  color: #a8e08a;
+  font-size: .7em;
+  letter-spacing: .1em;
+  min-width: 0;
+  text-transform: uppercase
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutKitLabel,
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutKitName {
+  font-weight: 900;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutPerks {
+  align-items: stretch;
+  border-color: #ffb914;
+  flex-direction: column;
+  gap: .4em
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutPerks .LoadoutKitLabel {
+  color: #fcd373;
+  font-size: .8em
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutPerkCount {
+  color: #fcd373;
+  flex-shrink: 0;
+  font-size: .8em;
+  font-weight: 900
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutSockets {
+  display: flex;
+  flex-direction: column;
+  gap: .35em
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutSocket {
+  align-items: center;
+  display: flex;
+  gap: .5em;
+  min-width: 0
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutSocket .LoadoutSocketWell {
+  align-items: center;
+  background: #263509;
+  border: 2px solid #ffb914;
+  box-sizing: border-box;
+  display: flex;
+  flex-shrink: 0;
+  height: 2.5em;
+  justify-content: center;
+  padding: .15em;
+  width: 2.5em
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutSocket .LoadoutSocketName {
+  font-size: .9em;
+  font-weight: 900;
+  min-width: 0;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutSocket.Filled .LoadoutSocketWell {
+  background: linear-gradient(#9cc23a, #9cc23a) left .12em top .12em/.13em .13em no-repeat, linear-gradient(#9cc23a, #9cc23a) right .12em top .12em/.13em .13em no-repeat, linear-gradient(#9cc23a, #9cc23a) left .12em bottom .12em/.13em .13em no-repeat, linear-gradient(#9cc23a, #9cc23a) right .12em bottom .12em/.13em .13em no-repeat, #263509
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutSocket.Empty .LoadoutSocketWell {
+  border-color: #4d6a16;
+  border-style: dashed
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutSocket.Empty .LoadoutSocketWell:before {
+  color: #cfcfcf;
+  content: "+";
+  font-size: 1.4em
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutSocket.Empty .LoadoutSocketName {
+  color: #cfcfcf;
+  font-weight: 700
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutKitSlot.Selected .LoadoutSocket.Empty .LoadoutSocketName {
+  color: #0f0f0f
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutPips {
+  display: flex;
+  flex-shrink: 0;
+  gap: .2em
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutPips .LoadoutPip {
+  background: #263509;
+  border: 1px solid #0f0f0f;
+  height: .6em;
+  width: .6em
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutPips .LoadoutPip.Filled {
+  background: #ffb914
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .BoardTiles {
+  gap: .6em;
+  padding: .7em
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .BoardTiles .BoardTile {
+  background: #4d6a16
+}
+
+@media(hover:hover) {
+  .ContainmentBoardPanel.ContainmentLoadoutPanel .BoardTiles .BoardTile:hover {
+    background: #57771a
+  }
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .BoardTiles .BoardTile.pad-focused {
+  background: #57771a
+}
+
+@media(hover:none) {
+  .ContainmentBoardPanel.ContainmentLoadoutPanel .BoardTiles .BoardTile:active {
+    background: #57771a
+  }
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .BoardTiles .BoardTile.Locked:after {
+  background: repeating-linear-gradient(-45deg, #ffb914 0 .5em, #0f0f0f .5em 1em);
+  content: "";
+  height: .4em;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .BoardBadge.Muted {
+  background: #263509;
+  color: #f2f2f2
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .BoardDetail {
+  background: #2f420d
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .BoardDetailIcon {
+  background: linear-gradient(#9cc23a, #9cc23a) left .22em top .22em/.15em .15em no-repeat, linear-gradient(#9cc23a, #9cc23a) right .22em top .22em/.15em .15em no-repeat, linear-gradient(#9cc23a, #9cc23a) left .22em bottom .22em/.15em .15em no-repeat, linear-gradient(#9cc23a, #9cc23a) right .22em bottom .22em/.15em .15em no-repeat, #263509;
+  border: 1px solid #0f0f0f
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .BoardDetailHeader h3 {
+  text-shadow: -2px -2px 0 #0f0f0f, -2px -1px 0 #0f0f0f, -2px 0 0 #0f0f0f, -2px 1px 0 #0f0f0f, -2px 2px 0 #0f0f0f, -1px -2px 0 #0f0f0f, -1px -1px 0 #0f0f0f, -1px 0 0 #0f0f0f, -1px 1px 0 #0f0f0f, -1px 2px 0 #0f0f0f, 0 -2px 0 #0f0f0f, 0 -1px 0 #0f0f0f, 0 0 0 #0f0f0f, 0 1px 0 #0f0f0f, 0 2px 0 #0f0f0f, 1px -2px 0 #0f0f0f, 1px -1px 0 #0f0f0f, 1px 0 0 #0f0f0f, 1px 1px 0 #0f0f0f, 1px 2px 0 #0f0f0f, 2px -2px 0 #0f0f0f, 2px -1px 0 #0f0f0f, 2px 0 0 #0f0f0f, 2px 1px 0 #0f0f0f, 2px 2px 0 #0f0f0f
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .BoardDetailHeader h3 .svg-inline--fa path:only-of-type,
+.ContainmentBoardPanel.ContainmentLoadoutPanel .BoardDetailHeader h3.svg-inline--fa path:only-of-type {
+  stroke: #0f0f0f;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 4px;
+  stroke-linejoin: round;
+  paint-order: stroke fill
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .BoardDetailStatus {
+  color: #fcd373;
+  flex-wrap: wrap
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutStatusText {
+  font-size: .8em;
+  font-weight: 900;
+  letter-spacing: .1em;
+  text-transform: uppercase
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutStatusText.Locked {
+  color: #cfcfcf
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutTierTable {
+  font-feature-settings: "tnum";
+  border-collapse: collapse;
+  font-size: .9em;
+  font-variant-numeric: tabular-nums;
+  width: 100%
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutTierTable td,
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutTierTable th {
+  padding: .3em .35em;
+  text-align: center
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutTierTable th {
+  color: #a8e08a;
+  font-size: .72em;
+  font-weight: 900;
+  letter-spacing: .1em;
+  text-transform: uppercase
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutTierTable thead th {
+  white-space: nowrap
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutTierTable thead th.Current {
+  background: #4a5410;
+  color: #fcd373
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutTierTable thead th.Next {
+  color: #36e785
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutTierTable tbody tr {
+  border-top: 1px solid #4d6a16
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutTierTable tbody th {
+  text-align: left
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutTierTable .LoadoutStatUnit {
+  color: #cfcfcf;
+  letter-spacing: 0;
+  margin-left: .25em;
+  text-transform: none
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutTierTable td {
+  color: #cfcfcf;
+  white-space: nowrap
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutTierTable td.Owned {
+  color: #fff
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutTierTable td.Current {
+  background: #4a5410;
+  color: #fff;
+  font-weight: 900
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutTierTable td.Next.Gain {
+  color: #36e785;
+  font-weight: 900
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutTierTable .LoadoutGainArrow {
+  font-size: .8em;
+  margin-right: .1em
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutBuy {
+  display: flex;
+  flex-direction: column;
+  gap: .4em
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutCost {
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: 900;
+  gap: .3em
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .BoardStatus:not(.Refused) {
+  background: #1f2b08;
+  color: #36e785
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .BoardStatus .LoadoutRadioBadge {
+  background: #ffb914;
+  border: 1px solid #0f0f0f;
+  color: #0f0f0f;
+  flex-shrink: 0;
+  font-size: .75em;
+  font-weight: 900;
+  letter-spacing: .08em;
+  padding: .05em .4em
+}
+
+.ContainmentBoardPanel.ContainmentLoadoutPanel .BoardStatus:after {
+  animation: LoadoutCaret 1s steps(1) infinite;
+  background: currentColor;
+  content: "";
+  flex-shrink: 0;
+  height: 1em;
+  width: .55em
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .ContainmentBoardPanel.ContainmentLoadoutPanel .BoardStatus:after {
+    animation: none
+  }
+}
+
+@keyframes LoadoutCaret {
+  50% {
+    opacity: 0
+  }
+}
+
+@media(max-width:900px)and (orientation:landscape) {
+  .ContainmentBoardPanel.ContainmentLoadoutPanel .BoardBody {
+    grid-template-columns: 13em 1fr 17em
+  }
+}
+
+@media(max-height:560px) {
+  .ContainmentBoardPanel.ContainmentLoadoutPanel .BoardHeader {
+    padding-bottom: .75em;
+    padding-top: .35em
+  }
+
+  .ContainmentBoardPanel.ContainmentLoadoutPanel .BoardWallet {
+    font-size: .85em
+  }
+
+  .ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutKit {
+    gap: .3em;
+    padding: .4em
+  }
+
+  .ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutKitSlot {
+    padding-bottom: .25em;
+    padding-top: .25em
+  }
+
+  .ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutKitIcon {
+    align-items: center;
+    background: #263509;
+    border: 1px solid #0f0f0f;
+    box-sizing: border-box;
+    display: flex;
+    flex-shrink: 0;
+    height: 1.9em;
+    justify-content: center;
+    padding: .15em;
+    width: 1.9em
+  }
+
+  .ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutSockets {
+    flex-direction: row
+  }
+
+  .ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutSocket .LoadoutSocketWell {
+    height: 1.9em;
+    width: 1.9em
+  }
+
+  .ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutSocket .LoadoutSocketName {
+    display: none
+  }
+
+  .ContainmentBoardPanel.ContainmentLoadoutPanel .BoardTiles {
+    gap: .4em;
+    padding: .45em
+  }
+
+  .ContainmentBoardPanel.ContainmentLoadoutPanel .BoardDetail {
+    gap: .45em
+  }
+
+  .ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutTierTable {
+    font-size: .82em
+  }
+}
+
+@media(max-width:900px)and (orientation:portrait) {
+  .ContainmentBoardPanel.ContainmentLoadoutPanel .BoardWallet {
+    max-width: none
+  }
+
+  .ContainmentBoardPanel.ContainmentLoadoutPanel .BoardBody {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto minmax(0, 1fr) fit-content(46%)
+  }
+
+  .ContainmentBoardPanel.ContainmentLoadoutPanel .BoardDetail {
+    max-height: none
+  }
+
+  .ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutKit {
+    grid-gap: .35em;
+    border-bottom: 1px solid #0f0f0f;
+    border-right: none;
+    display: grid;
+    gap: .35em;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    overflow: visible;
+    padding: .45em
+  }
+
+  .ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutKitSlot {
+    gap: .4em;
+    padding: .25em .4em
+  }
+
+  .ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutKitIcon {
+    align-items: center;
+    background: #263509;
+    border: 1px solid #0f0f0f;
+    box-sizing: border-box;
+    display: flex;
+    flex-shrink: 0;
+    height: 1.9em;
+    justify-content: center;
+    padding: .15em;
+    width: 1.9em
+  }
+
+  .ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutKitName {
+    font-size: .85em
+  }
+
+  .ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutPerks {
+    grid-column: 1/-1
+  }
+
+  .ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutSockets {
+    grid-gap: .4em;
+    display: grid;
+    gap: .4em;
+    grid-template-columns: repeat(3, minmax(0, 1fr))
+  }
+
+  .ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutSocket {
+    gap: .3em
+  }
+
+  .ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutSocket .LoadoutSocketWell {
+    height: 1.8em;
+    width: 1.8em
+  }
+
+  .ContainmentBoardPanel.ContainmentLoadoutPanel .LoadoutSocket .LoadoutSocketName {
+    font-size: .75em
+  }
+
+  .ContainmentBoardPanel.ContainmentLoadoutPanel .BoardTiles {
+    gap: .45em;
+    padding: .5em
+  }
+
+  .ContainmentBoardPanel.ContainmentLoadoutPanel .BoardTiles .BoardTile {
+    gap: .3em;
+    padding: 1.2em .3em .5em
+  }
+
+  .ContainmentBoardPanel.ContainmentLoadoutPanel .BoardTiles .BoardTileIcon {
+    --tile-icon: 2.6em
+  }
+}
+
+@keyframes rainbowShimmer {
+  0% {
+    transform: translateX(0)
+  }
+
+  to {
+    transform: translateX(88.88889%)
+  }
+}
+
+@keyframes rainbowShimmerPosition {
+  to {
+    background-position: -200% 0
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fadeInScaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(.6)
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes fadeInScaleUpNoOversize {
+  0% {
+    opacity: 0;
+    transform: scale(.8)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes shake {
+  0% {
+    rotate: 3deg
+  }
+
+  5% {
+    rotate: -2deg
+  }
+
+  10% {
+    rotate: 2deg
+  }
+
+  15% {
+    rotate: -3deg
+  }
+
+  20% {
+    rotate: 0deg
+  }
+}
+
+@keyframes loadingShimmer {
+  0% {
+    transform: translateX(-66.6666666667%)
+  }
+
+  to {
+    transform: none
+  }
+}
+
+@keyframes topRightStackIn {
+  0% {
+    opacity: 0;
+    transform: translateX(1.5rem)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
+
+.ContainmentBoardPanel.ContainmentLocatorPanel {
+  --tile-icon: 4.4em;
+  --detail-icon: 5em;
+  background: #1a2920;
+  font-weight: 800
+}
+
+.ContainmentBoardPanel.ContainmentLocatorPanel .BoardDecor .LocatorFly {
+  animation: LocatorBuzz 3.2s ease-in-out infinite;
+  height: 1.5em;
+  overflow: hidden;
+  position: absolute;
+  width: 1.5em
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .ContainmentBoardPanel.ContainmentLocatorPanel .BoardDecor .LocatorFly {
+    animation: none
+  }
+}
+
+.ContainmentBoardPanel.ContainmentLocatorPanel .BoardDecor .LocatorFly img {
+  animation: LocatorWings .1s steps(2) infinite;
+  display: block;
+  height: 100%;
+  image-rendering: pixelated
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .ContainmentBoardPanel.ContainmentLocatorPanel .BoardDecor .LocatorFly img {
+    animation: none
+  }
+}
+
+.ContainmentBoardPanel.ContainmentLocatorPanel .BoardDecor .LocatorFly:first-child {
+  left: 22%;
+  top: 34%
+}
+
+.ContainmentBoardPanel.ContainmentLocatorPanel .BoardDecor .LocatorFly:nth-child(2) {
+  animation-direction: reverse;
+  animation-duration: 4.1s;
+  left: 64%;
+  top: 70%
+}
+
+.ContainmentBoardPanel.ContainmentLocatorPanel .BoardDecor .LocatorFly:nth-child(3) {
+  animation-delay: -1.3s;
+  animation-duration: 2.7s;
+  left: 41%;
+  top: 84%
+}
+
+.ContainmentBoardPanel.ContainmentLocatorPanel .BoardDecor .LocatorFly:nth-child(4) {
+  animation-delay: -2.2s;
+  animation-direction: reverse;
+  animation-duration: 3.7s;
+  left: 78%;
+  top: 26%
+}
+
+.ContainmentBoardPanel.ContainmentLocatorPanel .BoardDecor .LocatorFly:nth-child(5) {
+  animation-delay: -.6s;
+  animation-duration: 5s;
+  left: 9%;
+  top: 62%
+}
+
+.ContainmentBoardPanel.ContainmentLocatorPanel .BoardHeader {
+  background: repeating-linear-gradient(90deg, #51256a 0 2.4em, #0b4b0f 2.4em 4.8em);
+  border-bottom: none;
+  z-index: 2
+}
+
+.ContainmentBoardPanel.ContainmentLocatorPanel .BoardHeader:after {
+  background: radial-gradient(circle at 1.2em 0, #51256a .9em, transparent .95em) 0 0/4.8em .9em repeat-x, radial-gradient(circle at 3.6em 0, #0b4b0f .9em, transparent .95em) 0 0/4.8em .9em repeat-x;
+  content: "";
+  height: .9em;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 100%
+}
+
+.ContainmentBoardPanel.ContainmentLocatorPanel .BoardChip {
+  background: #131815
+}
+
+.ContainmentBoardPanel.ContainmentLocatorPanel .BoardTiles {
+  gap: 1.8em .7em;
+  padding: 2.5em .7em .7em
+}
+
+.ContainmentBoardPanel.ContainmentLocatorPanel .BoardTiles .BoardTile.LocatorTag {
+  --tentacle-pixel: 0.22em;
+  background: #aebf84;
+  color: #0e230f;
+  isolation: isolate;
+  overflow: visible
+}
+
+.ContainmentBoardPanel.ContainmentLocatorPanel .BoardTiles .BoardTile.LocatorTag:before {
+  background: radial-gradient(circle at 50% calc(100% - .3em), #1a2920 .14em, #0f0f0f .16em, #0f0f0f .2em, transparent .22em), linear-gradient(#c18b57, #c18b57) 50% 0/.12em calc(100% - .45em) no-repeat;
+  bottom: calc(100% - .75em);
+  content: "";
+  height: 1.85em;
+  left: 50%;
+  margin-left: -.25em;
+  position: absolute;
+  width: .5em
+}
+
+@media(hover:hover) {
+  .ContainmentBoardPanel.ContainmentLocatorPanel .BoardTiles .BoardTile.LocatorTag:hover {
+    background: #c3cea5
+  }
+}
+
+.ContainmentBoardPanel.ContainmentLocatorPanel .BoardTiles .BoardTile.LocatorTag.pad-focused {
+  background: #c3cea5
+}
+
+@media(hover:none) {
+  .ContainmentBoardPanel.ContainmentLocatorPanel .BoardTiles .BoardTile.LocatorTag:active {
+    background: #c3cea5
+  }
+}
+
+.ContainmentBoardPanel.ContainmentLocatorPanel .BoardTiles .BoardTile.LocatorTag.Selected.Armed {
+  outline-offset: calc(var(--tentacle-pixel)*-5)
+}
+
+.ContainmentBoardPanel.ContainmentLocatorPanel .BoardTiles .BoardTile.LocatorTag.Armed:after {
+  animation: LocatorWrithe .8s steps(1) infinite;
+  border: calc(var(--tentacle-pixel)*8) solid transparent;
+  border-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAA7UlEQVR4nNVWAQrDMAjMx2Qf2QMGfcCgf9gD9oFC/tF/bciacnFe3JYSmCApGr2oiTaljeR0fiAzGZLV070qmK/3iplMgK3e7q2cT5fbbli+dUW2Tqwe7XaQAoBpsafNy+oCstRUPm0EuqEKMb0MdFWgAubpsS4UAFNUFQqMPTmm0E0ROvWcRERvkgfQQ8KKPAQgbwXscZ6XdXAESkdEId7pUTkMQDprMA0HkL9/B0rhwPiA0JZGgM3ql2aXWimy/dw6SEG7Vh8hgA31m4HDhtZbkctj88bhTEYmzpDmVY3YRhb9INBbwLhVdLb3CRGQ1i75sosbAAAAAElFTkSuQmCC) 8 round;
+  content: "";
+  image-rendering: pixelated;
+  inset: calc(var(--tentacle-pixel)*-3);
+  pointer-events: none;
+  position: absolute
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .ContainmentBoardPanel.ContainmentLocatorPanel .BoardTiles .BoardTile.LocatorTag.Armed:after {
+    animation: none
+  }
+}
+
+.ContainmentBoardPanel.ContainmentLocatorPanel .BoardTiles .BoardTile.LocatorTag .BoardChip {
+  background: none;
+  border: none;
+  color: #0e230f
+}
+
+.ContainmentBoardPanel.ContainmentLocatorPanel .BoardTiles .BoardTile.LocatorTag .BoardChip.Short {
+  color: #cc1414
+}
+
+.ContainmentBoardPanel.ContainmentLocatorPanel .BoardBadge.Armed {
+  background: #1dd06d;
+  color: #0f0f0f
+}
+
+.ContainmentBoardPanel.ContainmentLocatorPanel .BoardDetail {
+  background: #161f19;
+  padding-top: 1.2em
+}
+
+.ContainmentBoardPanel.ContainmentLocatorPanel .LocatorLabel {
+  background: #aebf84;
+  border: 1px solid #0f0f0f;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  color: #0e230f;
+  display: flex;
+  flex-direction: column;
+  gap: .7em;
+  padding: .9em
+}
+
+.ContainmentBoardPanel.ContainmentLocatorPanel .LocatorLabel.Armed {
+  outline: 3px solid #1dd06d;
+  outline-offset: -1px
+}
+
+.ContainmentBoardPanel.ContainmentLocatorPanel .LocatorLabel .BoardDetailIcon {
+  background: #96a873;
+  border: 1px solid #0f0f0f;
+  box-sizing: border-box;
+  padding: .2em
+}
+
+.ContainmentBoardPanel.ContainmentLocatorPanel .LocatorLabel .BoardDescription {
+  color: #0e230f
+}
+
+.ContainmentBoardPanel.ContainmentLocatorPanel .LocatorLabel .LocatorUsage {
+  border-top: 2px dashed #6e8155;
+  padding-top: .6em
+}
+
+.ContainmentBoardPanel.ContainmentLocatorPanel .LocatorLabel .LocatorAttuned {
+  color: #cc1414;
+  font-size: .9em;
+  font-weight: 900
+}
+
+.ContainmentBoardPanel.ContainmentLocatorPanel .LocatorBuy {
+  display: flex;
+  flex-direction: column;
+  gap: .4em
+}
+
+.ContainmentBoardPanel.ContainmentLocatorPanel .LocatorBuy .BoardChip {
+  align-self: flex-start
+}
+
+.ContainmentBoardPanel.ContainmentLocatorPanel .BoardStatus:not(.Refused) {
+  background: #161f19;
+  color: #22ff2c
+}
+
+.ContainmentBoardPanel.ContainmentLocatorPanel .BoardStatus .LocatorKeeperBadge {
+  background: #1dd06d;
+  border: 1px solid #0f0f0f;
+  color: #0f0f0f;
+  flex-shrink: 0;
+  font-size: .75em;
+  font-weight: 900;
+  letter-spacing: .08em;
+  padding: .05em .4em;
+  text-transform: uppercase
+}
+
+@keyframes LocatorBuzz {
+
+  0%,
+  to {
+    transform: translate(0)
+  }
+
+  20% {
+    transform: translate(2.6em, -1.3em)
+  }
+
+  35% {
+    transform: translate(1.9em, -2.9em)
+  }
+
+  55% {
+    transform: translate(-1.6em, -1.1em)
+  }
+
+  75% {
+    transform: translate(-.4em, 1.2em)
+  }
+
+  90% {
+    transform: translate(.9em, .3em)
+  }
+}
+
+@keyframes LocatorWings {
+  to {
+    transform: translateX(-100%)
+  }
+}
+
+@keyframes LocatorWrithe {
+  50% {
+    border-image-source: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAA7ElEQVR4nL1ViwkDMQjNYtJFOkAhAxS6QwfoAgfZ4/ZqESK8eCZ615CAXH6+p8bTlAKDbvcvSkTHBcL16/lpRBOGDNBAuM6PdyOa0DLABGdlnuM31zlL2fZmX4ucHUiEQDZ1GBLc4y8TCZkV1i6BWGG6CUMDYtiGHugQIehouA+tCa6mInlvcNbyEMEs8C7JUoJSU+8f8LLtiz3gMcMLsqzHw2UENDtNZxFQ/UFNArxwpbGQqsBDD7Bo9UisKiugoXLd84QG5Zr1LayDB2KFZEQONBw3REhiSXZaptVuh5mgxWv6WjeaHF3iM8o/BRWMQqCp5xMAAAAASUVORK5CYII=)
+  }
+}
+
+@media(max-height:560px) {
+  .ContainmentBoardPanel.ContainmentLocatorPanel .BoardTiles {
+    gap: 1.55em .45em;
+    padding: 2.3em .45em .45em
+  }
+
+  .ContainmentBoardPanel.ContainmentLocatorPanel .BoardTiles .BoardTile.LocatorTag {
+    --tentacle-pixel: 0.14em
+  }
+
+  .ContainmentBoardPanel.ContainmentLocatorPanel .LocatorLabel {
+    gap: .45em;
+    padding: .7em
+  }
+}

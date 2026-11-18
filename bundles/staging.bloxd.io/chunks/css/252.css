@@ -1,0 +1,38 @@
+.BloxdInformation {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem
+}
+
+.BloxdInformation .BloxdInformationSectionList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  width: 100%
+}
+
+.BloxdInformation .BloxdInformationContentWrapper {
+  text-align: justify;
+  text-justify: inter-word;
+  user-select: text;
+  -moz-user-select: text;
+  -webkit-user-select: text;
+  -ms-user-select: text;
+  white-space: pre-line
+}
+
+.BloxdInformation .BloxdInformationText {
+  border-top: 1px solid #a4a4a4;
+  color: #a4a4a4;
+  font-size: 1rem;
+  padding-top: 1rem
+}
+
+.BloxdInformation .BloxdInformationHeader {
+  font-size: 3rem;
+  padding-bottom: 1rem
+}
+
+.BloxdInformation .PrivacyPolicyLink {
+  color: #85baff
+}

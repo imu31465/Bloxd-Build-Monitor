@@ -1,0 +1,95 @@
+name: Monitor and archive Bloxd main bundles
+
+on:
+  # Validate monitor changes and migrate the bundle archive immediately.
+  push:
+    paths:
+      - scripts/monitor.py
+      - tests/test_monitor.py
+      - requirements.txt
+      - .github/workflows/monitor.yml
+      - cloudflare/**
+  # Low-frequency fallback. Minute-level detection is handled externally.
+  schedule:
+    - cron: '41 */6 * * *'
+  repository_dispatch:
+    types: [bloxd-build-changed]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bloxd-build-monitor
+  # Keep one active run and coalesce newer dispatches into the pending run.
+  cancel-in-progress: false
+
+env:
+  RETENTION: '5' # number of build snapshots kept as commits for diff browsing
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # full history so per-build diffs stay browsable
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Run Python tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Run Cloudflare Worker parser tests
+        working-directory: cloudflare
+        run: npm test
+
+      - name: Probe once — archive and push on build change
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          snapshot_and_push() {
+            [ -f CHANGES.md ] || printf 'Bloxd build update\n' > CHANGES.md
+            git add -A
+            commit_title=$(head -n 1 CHANGES.md)
+            if [ -z "$commit_title" ]; then
+              commit_title="Bloxd build update"
+            fi
+            git commit -m "$commit_title" -m "Per-file details: CHANGES.md"
+            # Keep only the newest $RETENTION snapshots; squash everything older
+            # than the retention window into a single rolling baseline commit.
+            count=$(git rev-list --count HEAD)
+            drop=$((count - RETENTION))
+            if [ "$drop" -gt 0 ]; then
+              anchor=$(git rev-list --first-parent HEAD | tail -n $((drop + 1)) | head -n 1)
+              newroot=$(git commit-tree "$(git rev-parse "${anchor}^{tree}")" \
+                -m "Rolling baseline (older build snapshots squashed)")
+              git rebase --onto "$newroot" "$anchor" main
+            fi
+            echo "History now holds $(git rev-list --count HEAD) snapshots."
+            git push --force origin main
+          }
+
+          echo "=== one-shot probe $(date -u '+%Y-%m-%dT%H:%M:%SZ') ==="
+          python scripts/monitor.py
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "Build change detected — committing and pushing snapshot."
+            snapshot_and_push
+          else
+            echo "All environments unchanged."
+          fi

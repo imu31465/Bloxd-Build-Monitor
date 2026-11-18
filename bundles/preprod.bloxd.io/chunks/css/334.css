@@ -1,0 +1,16 @@
+.WorldCodeAiOutOfUsage {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 30rem;
+  padding: 3rem 1rem .5rem
+}
+
+.WorldCodeAiOutOfUsage .WorldCodeAiOutOfUsageText {
+  margin: 0
+}
+
+.WorldCodeAiOutOfUsage .WorldCodeAiOutOfUsageButton {
+  font-size: 1.4rem
+}
