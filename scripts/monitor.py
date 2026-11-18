@@ -665,9 +665,14 @@ def readable_diff_report_path(now_text: str, state: dict, updated_envs: list) ->
 
 
 def normalize_minified_js_identifiers(source: str) -> str:
-    """Replace two-character JS identifiers while preserving strings, comments and property keys."""
+    """Replace two-character JS identifiers while preserving literals and property names."""
     output = []
     keywords = {"as", "do", "if", "in", "of"}
+    regex_context_words = {
+        "return", "throw", "case", "delete", "void", "typeof",
+        "instanceof", "in", "of", "yield", "await",
+    }
+    identifier_pattern = re.compile(r"[A-Za-z_$][A-Za-z0-9_$]*")
     index = 0
     length = len(source)
 
@@ -688,6 +693,48 @@ def normalize_minified_js_identifiers(source: str) -> str:
             output.append(source[index:end])
             index = end
             continue
+
+        # Preserve regular-expression literals, not just quoted strings.
+        if char == "/":
+            previous = index - 1
+            while previous >= 0 and source[previous].isspace():
+                previous -= 1
+            previous_char = source[previous] if previous >= 0 else ""
+            previous_word_match = re.search(
+                r"([A-Za-z_$][A-Za-z0-9_$]*)\s*$", source[:index]
+            )
+            previous_word = previous_word_match.group(1) if previous_word_match else ""
+            regex_can_start = (
+                previous < 0
+                or previous_char in "([{:;,=!?&|+-*%^~<>"
+                or previous_word in regex_context_words
+            )
+            if regex_can_start:
+                end = index + 1
+                escaped = False
+                in_character_class = False
+                while end < length:
+                    current = source[end]
+                    if escaped:
+                        escaped = False
+                    elif current == "\\":
+                        escaped = True
+                    elif current == "[":
+                        in_character_class = True
+                    elif current == "]":
+                        in_character_class = False
+                    elif current == "/" and not in_character_class:
+                        end += 1
+                        while end < length and source[end].isalpha():
+                            end += 1
+                        break
+                    elif current in "\r\n":
+                        break
+                    end += 1
+                output.append(source[index:end])
+                index = end
+                continue
+
         if char in ("'", '"') or ord(char) == 96:
             quote = char
             end = index + 1
@@ -703,14 +750,14 @@ def normalize_minified_js_identifiers(source: str) -> str:
             index = end
             continue
 
-        match = re.match(r"[A-Za-z_$][A-Za-z0-9_$]*", source, index)
+        match = identifier_pattern.match(source, index)
         if not match:
             output.append(char)
             index += 1
             continue
 
         identifier = match.group(0)
-        end = index + len(identifier)
+        end = match.end()
         previous = index - 1
         while previous >= 0 and source[previous].isspace():
             previous -= 1
@@ -740,7 +787,6 @@ def normalize_minified_js_identifiers(source: str) -> str:
         index = end
 
     return "".join(output)
-
 
 def split_unified_hunks(diff_lines: list[str]) -> list[list[str]]:
     """Split a unified diff into independent @@ hunks."""

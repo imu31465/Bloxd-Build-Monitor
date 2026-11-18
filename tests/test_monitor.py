@@ -659,6 +659,7 @@ class MonitorTests(unittest.TestCase):
         self.assertIn('"BB"', normalized)
         self.assertIn("id:", normalized)
         self.assertIn("// TB", normalized)
+        self.assertIn("/ab+c/", monitor.normalize_minified_js_identifiers("const rx = /ab+c/;"))
 
     def test_workflow_preserves_every_build_commit(self):
         workflow_path = monitor.ROOT / ".github" / "workflows" / "monitor.yml"
