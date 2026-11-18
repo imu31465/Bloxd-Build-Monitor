@@ -664,7 +664,7 @@ class MonitorTests(unittest.TestCase):
     def test_normalizer_masks_identifiers_inside_embedded_worker_code_only(self):
         source = """const worker = '(()=>{var JJ=(JJ,cJ)=>JJ.exports;return cJ(1)} )()';"""
         normalized = monitor.normalize_minified_js_identifiers(source)
-        self.assertIn("__TWO_CHAR_ID__", normalized)
+        self.assertIn("⟦2-char-id⟧", normalized)
         self.assertIn("exports", normalized)
         self.assertIn("'(()=>{", normalized)
 
