@@ -48,7 +48,7 @@ JavaScript comparison suppresses only identifiers exactly two characters long. S
 
 ### [part-006.md](part-006.md)
 
-- Files: 4 · 521,965 characters
+- Files: 4 · 542,548 characters
 - Includes: bundles/bloxd.io/chunks/js/186.js, bundles/bloxd.io/chunks/js/187.js, bundles/bloxd.io/chunks/js/188.js, bundles/bloxd.io/chunks/js/189.js
 
 ### [part-007.md](part-007.md)
@@ -58,7 +58,7 @@ JavaScript comparison suppresses only identifiers exactly two characters long. S
 
 ### [part-008.md](part-008.md)
 
-- Files: 22 · 914,160 characters
+- Files: 22 · 1,007,148 characters
 - Includes: bundles/bloxd.io/chunks/js/191.js, bundles/bloxd.io/chunks/js/192.js, bundles/bloxd.io/chunks/js/193.js, bundles/bloxd.io/chunks/js/194.js, +18 more
 
 ### [part-009.md](part-009.md)
@@ -163,18 +163,18 @@ JavaScript comparison suppresses only identifiers exactly two characters long. S
 
 ### [part-029.md](part-029.md)
 
-- Files: 9 · 1,378,625 characters
+- Files: 9 · 1,394,096 characters
 - Includes: bundles/bloxd.io/chunks/js/controller.js, bundles/bloxd.io/chunks/js/errorLogging.js, bundles/bloxd.io/chunks/js/fa-renderer.js, bundles/bloxd.io/chunks/js/icons-brands.js, +5 more
 
 ### [part-030.md](part-030.md)
 
-- Files: 16 · 1,494,486 characters
-- Includes: bundles/bloxd.io/chunks/js/modelCatalogue.js, bundles/bloxd.io/chunks/js/modelPool.js, bundles/bloxd.io/chunks/js/modelWorkerLoader.js, bundles/bloxd.io/chunks/js/packAssets.js, +12 more
+- Files: 15 · 1,499,185 characters
+- Includes: bundles/bloxd.io/chunks/js/modelCatalogue.js, bundles/bloxd.io/chunks/js/modelPool.js, bundles/bloxd.io/chunks/js/modelWorkerLoader.js, bundles/bloxd.io/chunks/js/packAssets.js, +11 more
 
 ### [part-031.md](part-031.md)
 
-- Files: 9 · 1,448,944 characters
-- Includes: bundles/bloxd.io/chunks/js/wasmClientTextIcons.js, bundles/bloxd.io/chunks/js/wasmMatchmaking.js, bundles/bloxd.io/chunks/js/wasmPlay.js, bundles/bloxd.io/chunks/js/wasmRecorder.js, +5 more
+- Files: 10 · 1,465,143 characters
+- Includes: bundles/bloxd.io/chunks/js/wasmClientReplayViewer.js, bundles/bloxd.io/chunks/js/wasmClientTextIcons.js, bundles/bloxd.io/chunks/js/wasmMatchmaking.js, bundles/bloxd.io/chunks/js/wasmPlay.js, +6 more
 
 ### [part-032.md](part-032.md)
 
@@ -203,7 +203,7 @@ JavaScript comparison suppresses only identifiers exactly two characters long. S
 
 ### [part-037.md](part-037.md)
 
-- Files: 4 · 521,997 characters
+- Files: 4 · 542,580 characters
 - Includes: bundles/staging.bloxd.io/chunks/js/186.js, bundles/staging.bloxd.io/chunks/js/187.js, bundles/staging.bloxd.io/chunks/js/188.js, bundles/staging.bloxd.io/chunks/js/189.js
 
 ### [part-038.md](part-038.md)
@@ -213,7 +213,7 @@ JavaScript comparison suppresses only identifiers exactly two characters long. S
 
 ### [part-039.md](part-039.md)
 
-- Files: 22 · 914,336 characters
+- Files: 22 · 1,007,324 characters
 - Includes: bundles/staging.bloxd.io/chunks/js/191.js, bundles/staging.bloxd.io/chunks/js/192.js, bundles/staging.bloxd.io/chunks/js/193.js, bundles/staging.bloxd.io/chunks/js/194.js, +18 more
 
 ### [part-040.md](part-040.md)
@@ -318,18 +318,18 @@ JavaScript comparison suppresses only identifiers exactly two characters long. S
 
 ### [part-060.md](part-060.md)
 
-- Files: 9 · 1,378,697 characters
+- Files: 9 · 1,394,168 characters
 - Includes: bundles/staging.bloxd.io/chunks/js/controller.js, bundles/staging.bloxd.io/chunks/js/errorLogging.js, bundles/staging.bloxd.io/chunks/js/fa-renderer.js, bundles/staging.bloxd.io/chunks/js/icons-brands.js, +5 more
 
 ### [part-061.md](part-061.md)
 
-- Files: 16 · 1,494,614 characters
-- Includes: bundles/staging.bloxd.io/chunks/js/modelCatalogue.js, bundles/staging.bloxd.io/chunks/js/modelPool.js, bundles/staging.bloxd.io/chunks/js/modelWorkerLoader.js, bundles/staging.bloxd.io/chunks/js/packAssets.js, +12 more
+- Files: 15 · 1,499,305 characters
+- Includes: bundles/staging.bloxd.io/chunks/js/modelCatalogue.js, bundles/staging.bloxd.io/chunks/js/modelPool.js, bundles/staging.bloxd.io/chunks/js/modelWorkerLoader.js, bundles/staging.bloxd.io/chunks/js/packAssets.js, +11 more
 
 ### [part-062.md](part-062.md)
 
-- Files: 9 · 1,449,016 characters
-- Includes: bundles/staging.bloxd.io/chunks/js/wasmClientTextIcons.js, bundles/staging.bloxd.io/chunks/js/wasmMatchmaking.js, bundles/staging.bloxd.io/chunks/js/wasmPlay.js, bundles/staging.bloxd.io/chunks/js/wasmRecorder.js, +5 more
+- Files: 10 · 1,465,223 characters
+- Includes: bundles/staging.bloxd.io/chunks/js/wasmClientReplayViewer.js, bundles/staging.bloxd.io/chunks/js/wasmClientTextIcons.js, bundles/staging.bloxd.io/chunks/js/wasmMatchmaking.js, bundles/staging.bloxd.io/chunks/js/wasmPlay.js, +6 more
 
 ### [part-063.md](part-063.md)
 

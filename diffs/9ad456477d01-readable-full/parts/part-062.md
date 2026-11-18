@@ -2,7 +2,353 @@
 
 - Base: e7e20713782fba2472c7866f1ac5b84e503e7647
 - Build: 9ad456477d01ce4e7883eecb0f575724f962561f
-- Files in this part: 9
+- Files in this part: 10
+
+<details>
+<summary><code>bundles/staging.bloxd.io/chunks/js/wasmClientReplayViewer.js</code> · modified · +48 / -48</summary>
+
+JavaScript comparison masks only two-character identifiers. Strings, comments, member properties, object keys, and all other source changes remain visible.
+
+<details>
+<summary>Hunk 1 · Change · +2 / -2</summary>
+
+```diff
+@@ -1,10 +1,10 @@
+ export const ⟦2-char-id⟧ = 53;
+ export const ids = [53];
+ export const modules = {
+-  36009: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
++  35950: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+     ⟦2-char-id⟧.d(⟦2-char-id⟧, {
+       c: () => ⟦2-char-id⟧,
+-      e: () => ⟦2-char-id⟧
++      g: () => ⟦2-char-id⟧
+     });
+     const ⟦2-char-id⟧ = "data-replay-ui-active",
+       ⟦2-char-id⟧ = [{
+```
+
+</details>
+
+<details>
+<summary>Hunk 2 · Change · +8 / -8</summary>
+
+```diff
+@@ -57,28 +57,28 @@
+         label: "Everything else"
+       }]
+   },
+-  36014: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
++  35959: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+     ⟦2-char-id⟧.d(⟦2-char-id⟧, {
+-      b: () => ⟦2-char-id⟧,
++      d: () => ⟦2-char-id⟧,
+       e: () => ⟦2-char-id⟧,
+-      h: () => ⟦2-char-id⟧
++      g: () => ⟦2-char-id⟧
+     });
+-    var ⟦2-char-id⟧ = ⟦2-char-id⟧(13),
+-      ⟦2-char-id⟧ = ⟦2-char-id⟧(17),
+-      ⟦2-char-id⟧ = ⟦2-char-id⟧(36009);
++    var ⟦2-char-id⟧ = ⟦2-char-id⟧(21),
++      ⟦2-char-id⟧ = ⟦2-char-id⟧(24),
++      ⟦2-char-id⟧ = ⟦2-char-id⟧(35950);
+ 
+     function ⟦2-char-id⟧() {
+       const ⟦2-char-id⟧ = {};
+       for (const {
+           group: ⟦2-char-id⟧
+         }
+-        of ⟦2-char-id⟧.e) ⟦2-char-id⟧[⟦2-char-id⟧] = !0;
++        of ⟦2-char-id⟧.g) ⟦2-char-id⟧[⟦2-char-id⟧] = !0;
+       return ⟦2-char-id⟧
+     }
+     let ⟦2-char-id⟧ = ⟦2-char-id⟧();
+ 
+     function ⟦2-char-id⟧() {
+-      ⟦2-char-id⟧.i.Uf("replayViewer|uiVisibilityChanged")
++      ⟦2-char-id⟧.h.yH("replayViewer|uiVisibilityChanged")
+     }
+ 
+     function ⟦2-char-id⟧() {
+```
+
+</details>
+
+<details>
+<summary>Hunk 3 · Change · +10 / -10</summary>
+
+```diff
+@@ -87,34 +87,34 @@
+ 
+     function ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧) {
+       ⟦2-char-id⟧[⟦2-char-id⟧] !== ⟦2-char-id⟧ && (⟦2-char-id⟧ = {
+-        ...AJ,
++        ...JB,
+         [⟦2-char-id⟧]: ⟦2-char-id⟧
+       }, "nametag" === ⟦2-char-id⟧ && ⟦2-char-id⟧.d.set({
+         areNametagsHidden: !⟦2-char-id⟧
+-      }), qJ())
++      }), YB())
+     }
+ 
+     function ⟦2-char-id⟧() {
+       ⟦2-char-id⟧ = ⟦2-char-id⟧(), ⟦2-char-id⟧.d.set({
+         areNametagsHidden: !1
+-      }), qJ()
++      }), YB()
+     }
+   },
+-  41272: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
++  41304: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+     ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
+       HOLD_TIMEOUT_MS: () => ⟦2-char-id⟧,
+       ReplayViewer: () => ⟦2-char-id⟧
+     });
+-    var ⟦2-char-id⟧ = ⟦2-char-id⟧(35998),
+-      ⟦2-char-id⟧ = ⟦2-char-id⟧(36014),
+-      ⟦2-char-id⟧ = ⟦2-char-id⟧(4189),
+-      ⟦2-char-id⟧ = ⟦2-char-id⟧(41240);
++    var ⟦2-char-id⟧ = ⟦2-char-id⟧(35941),
++      ⟦2-char-id⟧ = ⟦2-char-id⟧(35959),
++      ⟦2-char-id⟧ = ⟦2-char-id⟧(4186),
++      ⟦2-char-id⟧ = ⟦2-char-id⟧(41274);
+     const ⟦2-char-id⟧ = 1⟦2-char-id⟧,
+-      ⟦2-char-id⟧ = new Set(["Jn"]);
++      ⟦2-char-id⟧ = new Set(["pD"]);
+     class ⟦2-char-id⟧ {
+       constructor(⟦2-char-id⟧) {
+         var ⟦2-char-id⟧;
+-        this.deps = ⟦2-char-id⟧, this.id = 0, this.fileName = null, this.fileHandle = null, this.unsavedChanges = !1, this.suggestSaveAs = !1, this.playback = !1, this.opening = !1, this.loadingOpens = 0, this.epoch = 0, this.holds = new Map, this.seekAsked = !1, this.cropAsked = !1, this.cropRunning = !1, this.settleFrames = 0, this.pendingSave = null, this.pendingOpen = null, this.saveRefused = !1, this.edits = 0, this.editsAtSave = null, this.lastView = null, this.now = void 0, this.now = null !== (⟦2-char-id⟧ = ⟦2-char-id⟧.now) && void 0 !== ⟦2-char-id⟧ ? cJ : () => performance.now()
++        this.deps = ⟦2-char-id⟧, this.id = 0, this.fileName = null, this.fileHandle = null, this.unsavedChanges = !1, this.suggestSaveAs = !1, this.playback = !1, this.opening = !1, this.loadingOpens = 0, this.epoch = 0, this.holds = new Map, this.seekAsked = !1, this.cropAsked = !1, this.cropRunning = !1, this.settleFrames = 0, this.pendingSave = null, this.pendingOpen = null, this.saveRefused = !1, this.edits = 0, this.editsAtSave = null, this.lastView = null, this.now = void 0, this.now = null !== (⟦2-char-id⟧ = ⟦2-char-id⟧.now) && void 0 !== ⟦2-char-id⟧ ? TB : () => performance.now()
+       }
+       get inPlayback() {
+         return this.playback
+```
+
+</details>
+
+<details>
+<summary>Hunk 4 · Change · +1 / -1</summary>
+
+```diff
+@@ -123,7 +123,7 @@
+         return this.lastView
+       }
+       get isOpen() {
+-        return null !== this.lastView && this.lastView.state !== ⟦2-char-id⟧.cd.None
++        return null !== this.lastView && this.lastView.state !== ⟦2-char-id⟧.hd.None
+       }
+       get keyframes() {
+         return this.deps.client.keyframes()
+```
+
+</details>
+
+<details>
+<summary>Hunk 5 · Change · +1 / -1</summary>
+
+```diff
+@@ -141,7 +141,7 @@
+         return this.cropAsked || this.cropRunning
+       }
+       async open(⟦2-char-id⟧, ⟦2-char-id⟧) {
+-        var ⟦2-char-id⟧, UJ, XJ, ⟦2-char-id⟧;
++        var ⟦2-char-id⟧, yB, lB, ⟦2-char-id⟧;
+         const {
+           client: ⟦2-char-id⟧
+         } = this.deps;
+```
+
+</details>
+
+<details>
+<summary>Hunk 6 · Change · +4 / -4</summary>
+
+```diff
+@@ -165,18 +165,18 @@
+               case "reloading":
+                 return null;
+               case "stopped":
+-              case ⟦2-char-id⟧.Sc.ModuleTrap:
++              case ⟦2-char-id⟧.Wc.ModuleTrap:
+                 return ⟦2-char-id⟧.d.coreStopped;
+-              case ⟦2-char-id⟧.Sc.ModuleLoad:
++              case ⟦2-char-id⟧.Wc.ModuleLoad:
+                 return ⟦2-char-id⟧.d.viewerLoadFailed;
+-              case ⟦2-char-id⟧.Sc.TooLarge:
++              case ⟦2-char-id⟧.Wc.TooLarge:
+                 return ⟦2-char-id⟧.d.cantOpen
+             }
+           }(⟦2-char-id⟧);
+           if (null === ⟦2-char-id⟧) return;
+           throw new Error(⟦2-char-id⟧.text)
+         }
+-        return this.rejectSave(new Error(⟦2-char-id⟧.d.saveClosed.text)), this.fileName = null !== (⟦2-char-id⟧ = null !== (⟦2-char-id⟧ = ⟦2-char-id⟧.fileName) && void 0 !== ⟦2-char-id⟧ ? UJ : null === (⟦2-char-id⟧ = ⟦2-char-id⟧.fileHandle) || void 0 === ⟦2-char-id⟧ ? void 0 : ⟦2-char-id⟧.name) && void 0 !== ⟦2-char-id⟧ ? ZJ : null, this.fileHandle = null !== (⟦2-char-id⟧ = ⟦2-char-id⟧.fileHandle) && void 0 !== ⟦2-char-id⟧ ? AJ : null, this.unsavedChanges = !1, this.suggestSaveAs = !1, this.opening = !0, this.cropAsked = !1, this.cropRunning = !1, this.seekAsked = !1, this.hold("opening"), this.id++, this.deps.onChange(), this.settleOpen(null), new Promise(((⟦2-char-id⟧, ⟦2-char-id⟧) => {
++        return this.rejectSave(new Error(⟦2-char-id⟧.d.saveClosed.text)), this.fileName = null !== (⟦2-char-id⟧ = null !== (⟦2-char-id⟧ = ⟦2-char-id⟧.fileName) && void 0 !== ⟦2-char-id⟧ ? yB : null === (⟦2-char-id⟧ = ⟦2-char-id⟧.fileHandle) || void 0 === ⟦2-char-id⟧ ? void 0 : ⟦2-char-id⟧.name) && void 0 !== ⟦2-char-id⟧ ? dB : null, this.fileHandle = null !== (⟦2-char-id⟧ = ⟦2-char-id⟧.fileHandle) && void 0 !== ⟦2-char-id⟧ ? JB : null, this.unsavedChanges = !1, this.suggestSaveAs = !1, this.opening = !0, this.cropAsked = !1, this.cropRunning = !1, this.seekAsked = !1, this.hold("opening"), this.id++, this.deps.onChange(), this.settleOpen(null), new Promise(((⟦2-char-id⟧, ⟦2-char-id⟧) => {
+           this.pendingOpen = {
+             resolve: ⟦2-char-id⟧,
+             reject: ⟦2-char-id⟧
+```
+
+</details>
+
+<details>
+<summary>Hunk 7 · Change · +3 / -3</summary>
+
+```diff
+@@ -184,18 +184,18 @@
+         }))
+       }
+       play() {
+-        this.holds.has("Jn") || this.deps.client.play()
++        this.holds.has("pD") || this.deps.client.play()
+       }
+       pause() {
+         this.deps.client.pause()
+       }
+       holdForShaderPackFailure() {
+-        this.isOpen && this.pause(), this.hold("Jn")
++        this.isOpen && this.pause(), this.hold("pD")
+       }
+       seek(⟦2-char-id⟧) {
+         let ⟦2-char-id⟧ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+         const ⟦2-char-id⟧ = this.lastView;
+-        null !== ⟦2-char-id⟧ && (⟦2-char-id⟧ || ⟦2-char-id⟧ < ⟦2-char-id⟧.Hh) && (this.seekAsked = !0, this.hold("seek")), this.deps.client.seek(⟦2-char-id⟧, ⟦2-char-id⟧)
++        null !== ⟦2-char-id⟧ && (⟦2-char-id⟧ || ⟦2-char-id⟧ < ⟦2-char-id⟧.dL) && (this.seekAsked = !0, this.hold("seek")), this.deps.client.seek(⟦2-char-id⟧, ⟦2-char-id⟧)
+       }
+       setSpeed(⟦2-char-id⟧) {
+         this.deps.client.setSpeed(⟦2-char-id⟧)
+```
+
+</details>
+
+<details>
+<summary>Hunk 8 · Change · +1 / -1</summary>
+
+```diff
+@@ -205,7 +205,7 @@
+       }
+       cycleCameraMode() {
+         const ⟦2-char-id⟧ = this.lastView;
+-        null !== ⟦2-char-id⟧ && ⟦2-char-id⟧.state !== ⟦2-char-id⟧.cd.None && this.setCameraMode(⟦2-char-id⟧.b[(⟦2-char-id⟧.b.indexOf(⟦2-char-id⟧.cameraMode) + 1) % ⟦2-char-id⟧.b.length])
++        null !== ⟦2-char-id⟧ && ⟦2-char-id⟧.state !== ⟦2-char-id⟧.hd.None && this.setCameraMode(⟦2-char-id⟧.b[(⟦2-char-id⟧.b.indexOf(⟦2-char-id⟧.cameraMode) + 1) % ⟦2-char-id⟧.b.length])
+       }
+       addKeyframe() {
+         this.edited(this.deps.client.addKeyframe())
+```
+
+</details>
+
+<details>
+<summary>Hunk 9 · Change · +1 / -1</summary>
+
+```diff
+@@ -234,7 +234,7 @@
+           this.pendingSave = ⟦2-char-id⟧, this.editsAtSave = this.edits, this.deps.client.save((0, ⟦2-char-id⟧.d)()).then((⟦2-char-id⟧ => {
+             this.pendingSave === ⟦2-char-id⟧ && this.saveStarted(⟦2-char-id⟧)
+           }), (⟦2-char-id⟧ => {
+-            this.pendingSave === ⟦2-char-id⟧ && this.rejectSave(⟦2-char-id⟧ instanceof Error ? JJ : new Error(String(⟦2-char-id⟧)))
++            this.pendingSave === ⟦2-char-id⟧ && this.rejectSave(⟦2-char-id⟧ instanceof Error ? BB : new Error(String(⟦2-char-id⟧)))
+           }))
+         }))
+       }
+```
+
+</details>
+
+<details>
+<summary>Hunk 10 · Change · +4 / -4</summary>
+
+```diff
+@@ -252,17 +252,17 @@
+       }
+       markSaved(⟦2-char-id⟧, ⟦2-char-id⟧) {
+         var ⟦2-char-id⟧, ⟦2-char-id⟧;
+-        this.fileHandle = ⟦2-char-id⟧, this.fileName = null !== (⟦2-char-id⟧ = null !== (⟦2-char-id⟧ = null === ⟦2-char-id⟧ || void 0 === ⟦2-char-id⟧ ? void 0 : ⟦2-char-id⟧.name) && void 0 !== ⟦2-char-id⟧ ? FJ : ⟦2-char-id⟧) && void 0 !== ⟦2-char-id⟧ ? ZJ : this.fileName, this.unsavedChanges = null !== this.editsAtSave && this.edits !== this.editsAtSave, this.editsAtSave = null, this.suggestSaveAs = !1, this.deps.onChange()
++        this.fileHandle = ⟦2-char-id⟧, this.fileName = null !== (⟦2-char-id⟧ = null !== (⟦2-char-id⟧ = null === ⟦2-char-id⟧ || void 0 === ⟦2-char-id⟧ ? void 0 : ⟦2-char-id⟧.name) && void 0 !== ⟦2-char-id⟧ ? VB : ⟦2-char-id⟧) && void 0 !== ⟦2-char-id⟧ ? dB : this.fileName, this.unsavedChanges = null !== this.editsAtSave && this.edits !== this.editsAtSave, this.editsAtSave = null, this.suggestSaveAs = !1, this.deps.onChange()
+       }
+       end() {
+         this.epoch++, this.resetInFlight(), this.releaseAll(), this.settleOpen(new Error(⟦2-char-id⟧.d.coreStopped.text)), this.rejectSave(new Error(⟦2-char-id⟧.d.saveClosed.text)), this.lastView = null, this.deps.onChange()
+       }
+       afterFrame() {
+-        var ⟦2-char-id⟧, cJ, ⟦2-char-id⟧;
++        var ⟦2-char-id⟧, TB, ⟦2-char-id⟧;
+         const ⟦2-char-id⟧ = this.deps.client.view(),
+           ⟦2-char-id⟧ = ⟦2-char-id⟧ !== this.lastView;
+-        this.lastView = ⟦2-char-id⟧, this.opening && null !== ⟦2-char-id⟧ && ⟦2-char-id⟧.state !== ⟦2-char-id⟧.cd.None && ⟦2-char-id⟧.totalTicks > 0 && (this.opening = !1, this.settleFrames = 2, this.settleOpen(null), (0, ⟦2-char-id⟧.e)()), this.cropAsked ? (this.cropAsked = !1, null !== ⟦2-char-id⟧ && ⟦2-char-id⟧.state === ⟦2-char-id⟧.cd.Cropping ? this.cropRunning = !0 : this.cropped()) : this.cropRunning && null !== ⟦2-char-id⟧ && ⟦2-char-id⟧.state !== ⟦2-char-id⟧.cd.Cropping && (this.cropRunning = !1, this.cropped()), this.seekAsked && (this.seekAsked = !1, this.settleFrames = 2), this.settleFrames > 0 && this.settleFrames--;
+-        const ⟦2-char-id⟧ = 0 === this.settleFrames && 0 === (null !== (⟦2-char-id⟧ = null === (⟦2-char-id⟧ = (⟦2-char-id⟧ = this.deps).meshPending) || void 0 === ⟦2-char-id⟧ ? void 0 : ⟦2-char-id⟧.call(⟦2-char-id⟧)) && void 0 !== ⟦2-char-id⟧ ? JJ : 0);
++        this.lastView = ⟦2-char-id⟧, this.opening && null !== ⟦2-char-id⟧ && ⟦2-char-id⟧.state !== ⟦2-char-id⟧.hd.None && ⟦2-char-id⟧.totalTicks > 0 && (this.opening = !1, this.settleFrames = 2, this.settleOpen(null), (0, ⟦2-char-id⟧.e)()), this.cropAsked ? (this.cropAsked = !1, null !== ⟦2-char-id⟧ && ⟦2-char-id⟧.state === ⟦2-char-id⟧.hd.Cropping ? this.cropRunning = !0 : this.cropped()) : this.cropRunning && null !== ⟦2-char-id⟧ && ⟦2-char-id⟧.state !== ⟦2-char-id⟧.hd.Cropping && (this.cropRunning = !1, this.cropped()), this.seekAsked && (this.seekAsked = !1, this.settleFrames = 2), this.settleFrames > 0 && this.settleFrames--;
++        const ⟦2-char-id⟧ = 0 === this.settleFrames && 0 === (null !== (⟦2-char-id⟧ = null === (⟦2-char-id⟧ = (⟦2-char-id⟧ = this.deps).meshPending) || void 0 === ⟦2-char-id⟧ ? void 0 : ⟦2-char-id⟧.call(⟦2-char-id⟧)) && void 0 !== ⟦2-char-id⟧ ? BB : 0);
+         this.holds.has("opening") && !this.opening && 0 === this.loadingOpens && ⟦2-char-id⟧ && this.release("opening"), this.holds.has("seek") && ⟦2-char-id⟧ && this.release("seek"), this.holds.has("crop") && !this.cropRunning && ⟦2-char-id⟧ && this.release("crop");
+         const ⟦2-char-id⟧ = this.now();
+         for (const [⟦2-char-id⟧, ⟦2-char-id⟧] of this.holds) !⟦2-char-id⟧.has(⟦2-char-id⟧) && ⟦2-char-id⟧ - ⟦2-char-id⟧ >= ⟦2-char-id⟧ && (this.release(⟦2-char-id⟧), "opening" === ⟦2-char-id⟧ && (this.opening = !1, this.settleOpen(null)));
+```
+
+</details>
+
+<details>
+<summary>Hunk 11 · Change · +6 / -6</summary>
+
+```diff
+@@ -273,14 +273,14 @@
+       }
+       onFailed(⟦2-char-id⟧) {
+         switch (⟦2-char-id⟧.reason) {
+-          case ⟦2-char-id⟧.Sc.TooLarge:
+-            break;
+-          case ⟦2-char-id⟧.Sc.Open:
+-          case ⟦2-char-id⟧.Sc.NothingStaged:
++          case ⟦2-char-id⟧.Wc.TooLarge:
++            break;
++          case ⟦2-char-id⟧.Wc.Open:
++          case ⟦2-char-id⟧.Wc.NothingStaged:
+             this.opening = !1, this.release("opening"), null === this.pendingOpen && this.deps.notify(⟦2-char-id⟧.d.cantOpen), this.settleOpen(new Error(⟦2-char-id⟧.d.cantOpen.text));
+             break;
+-          case ⟦2-char-id⟧.Sc.Crop:
+-            if (⟦2-char-id⟧.code === ⟦2-char-id⟧.Oc.Busy) {
++          case ⟦2-char-id⟧.Wc.Crop:
++            if (⟦2-char-id⟧.code === ⟦2-char-id⟧.Tc.Busy) {
+               this.cropBusy();
+               break
+             }
+```
+
+</details>
+
+<details>
+<summary>Hunk 12 · Change · +7 / -7</summary>
+
+```diff
+@@ -290,16 +290,16 @@
+             }
+             this.cropAsked = !1, this.cropRunning = !1, this.release("crop"), this.deps.notify(⟦2-char-id⟧.d.cropFailed);
+             break;
+-          case ⟦2-char-id⟧.Sc.ModuleTrap:
+-          case ⟦2-char-id⟧.Sc.ModuleLoad:
+-          case ⟦2-char-id⟧.Sc.Port:
+-            this.moduleEnded(⟦2-char-id⟧.reason === ⟦2-char-id⟧.Sc.ModuleTrap ? ⟦2-char-id⟧.d.coreStopped : ⟦2-char-id⟧.d.cantOpen);
+-            break;
+-          case ⟦2-char-id⟧.Sc.NotLive:
++          case ⟦2-char-id⟧.Wc.ModuleTrap:
++          case ⟦2-char-id⟧.Wc.ModuleLoad:
++          case ⟦2-char-id⟧.Wc.Port:
++            this.moduleEnded(⟦2-char-id⟧.reason === ⟦2-char-id⟧.Wc.ModuleTrap ? ⟦2-char-id⟧.d.coreStopped : ⟦2-char-id⟧.d.cantOpen);
++            break;
++          case ⟦2-char-id⟧.Wc.NotLive:
+             console.warn("[bloxd-wasm-client] the core refused a recorder command in playback");
+             break;
+           default:
+-            console.warn(`[bloxd-wasm-client] the replay module refused a command (ReplayFailed ${JJ.reason})`), this.seekAsked = !1, this.release("seek")
++            console.warn(`[bloxd-wasm-client] the replay module refused a command (ReplayFailed ${BB.reason})`), this.seekAsked = !1, this.release("seek")
+         }
+         this.deps.onChange()
+       }
+```
+
+</details>
+
+</details>
 
 <details>
 <summary><code>bundles/staging.bloxd.io/chunks/js/wasmClientTextIcons.js</code> · modified · +244 / -244</summary>
