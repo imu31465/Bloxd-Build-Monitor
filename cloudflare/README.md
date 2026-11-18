@@ -13,10 +13,10 @@ Cloudflare Cron Triggers run once per minute. The Worker checks live bundle file
 
 The Worker uses exactly two Discord webhook secrets:
 
-- `DISCORD_ENTRIES_WEBHOOK`: extracted block/item data changes only (additions, removals, ID changes, and property changes), read from the committed `Bloxd-Entries-Data/update-state.json`.
-- `DISCORD_BUNDLE_WEBHOOK`: all other notifications, including build transitions, production/preprod Update Log announcements and reminders, hotfixes, GitHub Actions failures, frontend/social incidents, recovery, and monitoring errors.
+- `DISCORD_ENTRIES_WEBHOOK`: Entries-related notifications, including Entries bundle/build transitions and every successful extraction result from `Bloxd-Entries-Data/update-state.json` (additions, removals, ID changes, property changes, or an explicit no-changes status).
+- `DISCORD_BUNDLE_WEBHOOK`: all other build and monitoring notifications, including production/preprod Update Log announcements and reminders, hotfixes, GitHub Actions failures, frontend/social incidents, recovery, and monitoring errors.
 
-GitHub Actions performs extraction and commits the diff state; it does not send Discord messages directly. The Worker polls workflow runs and sends failure alerts through the Build webhook. All messages disable Discord mentions; channel-level notifications are managed in Discord.
+GitHub Actions performs extraction and commits the diff state; it does not send Discord messages directly. On each newly observed extraction, the Worker sends either the change summary or an explicit no-changes status to the Entries webhook. The Worker polls workflow runs and sends failure alerts through the Build webhook. All messages disable Discord mentions; channel-level notifications are managed in Discord.
 
 Embeds use color to distinguish event types. Notification titles and descriptions avoid decorative emoji.
 
