@@ -12,11 +12,14 @@ The workflow keeps the latest RETENTION build snapshots for diff browsing.
 from __future__ import annotations
 
 import concurrent.futures
+import difflib
 import hashlib
+import html
 import json
 import os
 import re
 import shutil
+import subprocess
 import sys
 import time
 import urllib.error
@@ -586,8 +589,8 @@ def is_named_chunk(identity: str) -> bool:
     return name != "main" and not name.isdigit()
 
 
-def render_changes(previous_state: dict, current_state: dict, updated_envs: list, now_text: str) -> str:
-    """Render a compact commit body; detailed code changes stay in Git file diffs."""
+def render_changes(previous_state: dict, current_state: dict, updated_envs: list, now_text: str, diff_report_path: str | None = None) -> str:
+    """Render a compact summary with green/red diff highlighting."""
     subject = (
         f"Bloxd build update — {now_text} ("
         + ", ".join(f"{env}={current_state[env]['build']}" for env in updated_envs)
@@ -598,55 +601,163 @@ def render_changes(previous_state: dict, current_state: dict, updated_envs: list
         "",
         "Bundle files use stable Webpack paths; original CDN names and hashes remain in .monitor-state.json.",
     ]
+    if diff_report_path:
+        lines.extend(["", f"Readable per-file diff: [{diff_report_path}]({diff_report_path})"])
+
     for environment in updated_envs:
         record = current_state[environment]
         previous = previous_state.get(environment) or {}
         previous_files = previous.get("files") or []
         current_files = record.get("files") or []
-        lines.extend([
-            "",
-            f"## {environment} — {previous.get('build', 'baseline')} → {record['build']}",
-        ])
+        old_build = previous.get("build", "baseline")
+        lines.extend(["", f"## {environment} — {old_build} → {record['build']}", "", "```diff"])
         if not previous_files:
             total = sum(entry.get("size") or 0 for entry in current_files)
-            lines.append(f"- Baseline: {len(current_files)} files ({human_size(total)})")
+            lines.append(f"+ Baseline: {len(current_files)} files ({human_size(total)})")
+            lines.extend(["```", ""])
             continue
 
         diff = diff_manifests(previous_files, current_files)
-        lines.append(
-            f"- Files: {diff['previous_count']} → {diff['current_count']} "
-            f"(changed {len(diff['changed'])}, added {len(diff['added'])}, "
-            f"removed {len(diff['removed'])}, unchanged {diff['unchanged_count']})"
-        )
         total = sum(entry.get("size") or 0 for entry in current_files)
         previous_total = total - diff["size_delta"]
-        lines.append(
-            f"- Size: {human_size(previous_total)} → {human_size(total)} "
-            f"({human_delta(diff['size_delta'])})"
-        )
-
+        lines.extend([
+            f"- Files: {diff['previous_count']} files",
+            f"+ Files: {diff['current_count']} files "
+            f"(changed {len(diff['changed'])}, added {len(diff['added'])}, "
+            f"removed {len(diff['removed'])}, unchanged {diff['unchanged_count']})",
+            f"- Total size: {human_size(previous_total)}",
+            f"+ Total size: {human_size(total)} ({human_delta(diff['size_delta'])})",
+        ])
         notable = sorted(
             diff["changed"],
             key=lambda entry: abs(entry[4] - entry[3]),
             reverse=True,
         )[:10]
         if notable:
-            lines.append("- Largest changes:")
+            lines.append("+ Largest changes:")
             for identity, old_hash, new_hash, old_size, new_size in notable:
+                delta = new_size - old_size
+                marker = "+" if delta >= 0 else "-"
+                direction = "increased" if delta >= 0 else "decreased"
                 lines.append(
-                    f"  - {stable_storage_path(identity)} "
-                    f"{human_delta(new_size - old_size)} ({old_hash} → {new_hash})"
+                    f"{marker} {stable_storage_path(identity)} {direction} "
+                    f"{human_size(abs(delta))} ({old_hash} → {new_hash})"
                 )
         if diff["added"]:
             names = ", ".join(stable_storage_path(identity) for identity, _, _ in diff["added"][:8])
             suffix = f" (+{len(diff['added']) - 8} more)" if len(diff["added"]) > 8 else ""
-            lines.append(f"- Added: {names}{suffix}")
+            lines.append(f"+ Added files: {names}{suffix}")
         if diff["removed"]:
             names = ", ".join(stable_storage_path(identity) for identity, _, _ in diff["removed"][:8])
             suffix = f" (+{len(diff['removed']) - 8} more)" if len(diff["removed"]) > 8 else ""
-            lines.append(f"- Removed: {names}{suffix}")
+            lines.append(f"- Removed files: {names}{suffix}")
+        lines.extend(["```", ""])
     return "\n".join(lines).rstrip() + "\n"
 
+
+def readable_diff_report_path(now_text: str, state: dict, updated_envs: list) -> str:
+    timestamp = re.sub(r"\D", "", now_text)[:12] or "latest"
+    build_slug = "-".join(
+        re.sub(r"[^A-Za-z0-9_-]+", "-", str(state[env].get("build", env))).strip("-")
+        for env in updated_envs
+    )
+    return f"diffs/{timestamp}-{build_slug}.md"
+
+
+def render_readable_diff_report(root: Path, title: str, base_ref: str = "HEAD") -> str:
+    """Embed human-readable changes in one collapsible section per file."""
+    def git_output(*args: str) -> str:
+        result = subprocess.run(
+            ["git", *args],
+            cwd=root,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+            check=False,
+        )
+        if result.returncode:
+            raise RuntimeError(f"git {' '.join(args)} failed: {result.stderr.strip()}")
+        return result.stdout
+
+    tracked = git_output("diff", "--name-only", "-z", base_ref, "--").split("\0")
+    untracked = git_output("ls-files", "--others", "--exclude-standard", "-z").split("\0")
+    paths = sorted({path for path in tracked + untracked if path})
+    sections = []
+    skipped_js = skipped_state = skipped_binary = included = 0
+
+    for relative in paths:
+        if relative.startswith("diffs/"):
+            continue
+        if relative == ".monitor-state.json":
+            skipped_state += 1
+            continue
+        if relative.startswith("bundles/") and relative.endswith(".js"):
+            skipped_js += 1
+            continue
+
+        old_result = subprocess.run(
+            ["git", "show", f"{base_ref}:{relative}"],
+            cwd=root,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            check=False,
+        )
+        old_bytes = old_result.stdout if old_result.returncode == 0 else b""
+        current_path = root / relative
+        new_bytes = current_path.read_bytes() if current_path.is_file() else b""
+        if b"\0" in old_bytes or b"\0" in new_bytes:
+            skipped_binary += 1
+            continue
+        try:
+            old_text = old_bytes.decode("utf-8")
+            new_text = new_bytes.decode("utf-8")
+        except UnicodeDecodeError:
+            skipped_binary += 1
+            continue
+
+        diff_lines = list(difflib.unified_diff(
+            old_text.splitlines(),
+            new_text.splitlines(),
+            fromfile=f"a/{relative}",
+            tofile=f"b/{relative}",
+            lineterm="",
+            n=3,
+        ))
+        if not diff_lines:
+            continue
+        additions = sum(line.startswith("+") and not line.startswith("+++") for line in diff_lines)
+        deletions = sum(line.startswith("-") and not line.startswith("---") for line in diff_lines)
+        status = "new" if not old_bytes else ("deleted" if not new_bytes else "modified")
+        summary = f"<code>{html.escape(relative)}</code> · {status} · +{additions} / -{deletions}"
+        sections.extend([
+            "<details>",
+            f"<summary>{summary}</summary>",
+            "",
+            "```diff",
+            *diff_lines,
+            "```",
+            "</details>",
+            "",
+        ])
+        included += 1
+
+    lines = [
+        f"# Readable build diff — {title}",
+        "",
+        "Only human-readable text changes are embedded below. Open each file separately.",
+        "",
+        f"- Readable files included: {included}",
+        f"- Generated JavaScript bundle diffs skipped: {skipped_js}",
+        f"- Machine-state manifest skipped: {skipped_state}",
+        f"- Binary files skipped: {skipped_binary}",
+        "",
+        "GitHub diff highlighting colors additions green and deletions red.",
+        "",
+    ]
+    lines.extend(sections or ["No readable text diffs were found for this build."])
+    return "\n".join(lines).rstrip() + "\n"
 
 def render_readme(state: dict) -> str:
     lines = [
@@ -661,7 +772,8 @@ def render_readme(state: dict) -> str:
         " GitHub shows a normal file modification instead of delete/add. The"
         " last 5 build snapshots are kept for diff browsing; older snapshots"
         " are squashed into a rolling baseline.",
-        "`CHANGES.md` summarizes each build change without minification noise.",
+        "`CHANGES.md` uses green/red diff highlighting and links to a per-build readable report.",
+        "`diffs/` contains one collapsed `<details>` section per readable changed file. Generated JavaScript bundle diffs and `.monitor-state.json` are omitted to avoid minification and hash noise.",
         "",
         "| Environment | Checked at (JST) | Build | Main bundle |",
         "|---|---|---|---|",
@@ -721,8 +833,15 @@ def main() -> int:
         )
         README_PATH.write_text(render_readme(persistent), encoding="utf-8")
         now_text = datetime.now(JST).strftime("%Y-%m-%dT%H:%M JST")
+        report_path = readable_diff_report_path(now_text, persistent, updated)
         CHANGES_PATH.write_text(
-            render_changes(previous, persistent, updated, now_text), encoding="utf-8"
+            render_changes(previous, persistent, updated, now_text, report_path), encoding="utf-8"
+        )
+        report_file = ROOT / report_path
+        report_file.parent.mkdir(parents=True, exist_ok=True)
+        report_file.write_text(
+            render_readable_diff_report(ROOT, f"{now_text} — " + ", ".join(persistent[env]["build"] for env in updated)),
+            encoding="utf-8",
         )
 
     for environment, record in persistent.items():
