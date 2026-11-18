@@ -248,11 +248,35 @@ def main() -> int:
 
     css_path = "bundles/bloxd.io/chunks/css/76.css"
     js_path = "bundles/bloxd.io/chunks/js/207.js"
+    examples_dir = destination / "examples"
+    examples_dir.mkdir(parents=True, exist_ok=True)
+    for stale_example in examples_dir.glob("*.md"):
+        stale_example.unlink()
+
     example_links = []
-    for label, path in (("CSS 76", css_path), ("JavaScript 207", js_path)):
-        part = path_to_part.get(path)
-        if part:
-            example_links.append(f"- {label}: [open {part}](parts/{part})")
+    for label, path, filename in (
+        ("CSS 76", css_path, "css-76.md"),
+        ("JavaScript 207", js_path, "js-207.md"),
+    ):
+        old_bytes = get_blob(base_ref, path)
+        new_bytes = get_blob(head_ref, path)
+        block, metrics = markdown_file_block(path, old_bytes, new_bytes)
+        if block:
+            page = [
+                f"# {label} — historical build diff",
+                "",
+                f"- Base: {base_ref}",
+                f"- Build: {head_ref}",
+                f"- Hunks: {metrics['hunks']}",
+                "",
+                "This focused page contains only the requested file. Expand each hunk independently.",
+                "",
+                block,
+            ]
+            (examples_dir / filename).write_text(
+                "\n".join(page).rstrip() + "\n", encoding="utf-8"
+            )
+            example_links.append(f"- {label}: [open focused diff](examples/{filename})")
 
     index = [
         "# Complete historical build diff — 2026-11-18 15:07 JST",
@@ -263,6 +287,7 @@ def main() -> int:
         "",
         f"- Changed files examined: {totals['files']}",
         f"- Report pages: {len(part_index)}",
+        "- Focused example pages: 2",
         f"- Individual diff hunks: {totals['hunks']}",
         f"- Additions after JavaScript identifier filtering: {totals['add']:,}",
         f"- Deletions after JavaScript identifier filtering: {totals['del']:,}",
