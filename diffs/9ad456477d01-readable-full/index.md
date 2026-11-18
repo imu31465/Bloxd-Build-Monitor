@@ -6,6 +6,7 @@ Every changed file from the historical build is represented below. Files are gro
 
 - Changed files examined: 755
 - Report pages: 63
+- Focused example pages: 2
 - Individual diff hunks: 45075
 - Additions after JavaScript identifier filtering: 294,133
 - Deletions after JavaScript identifier filtering: 294,129
@@ -16,8 +17,8 @@ JavaScript comparison suppresses only identifiers exactly two characters long. S
 
 ## Requested examples
 
-- CSS 76: [open part-001.md](parts/part-001.md)
-- JavaScript 207: [open part-008.md](parts/part-008.md)
+- CSS 76: [open focused diff](examples/css-76.md)
+- JavaScript 207: [open focused diff](examples/js-207.md)
 
 ## All diff pages
 
