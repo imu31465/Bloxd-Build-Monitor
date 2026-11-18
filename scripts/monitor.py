@@ -700,10 +700,13 @@ def normalize_minified_js_identifiers(source: str) -> str:
             while previous >= 0 and source[previous].isspace():
                 previous -= 1
             previous_char = source[previous] if previous >= 0 else ""
-            previous_word_match = re.search(
-                r"([A-Za-z_$][A-Za-z0-9_$]*)\s*$", source[:index]
-            )
-            previous_word = previous_word_match.group(1) if previous_word_match else ""
+            word_end = previous + 1
+            word_start = previous
+            while word_start >= 0 and (
+                source[word_start].isalnum() or source[word_start] in "_$"
+            ):
+                word_start -= 1
+            previous_word = source[word_start + 1:word_end]
             regex_can_start = (
                 previous < 0
                 or previous_char in "([{:;,=!?&|+-*%^~<>"

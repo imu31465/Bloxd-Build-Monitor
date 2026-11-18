@@ -5,7 +5,9 @@ on:
   push:
     paths:
       - scripts/monitor.py
+      - scripts/regenerate_historic_diff.py
       - tests/test_monitor.py
+      - .diff-preview-request
       - requirements.txt
       - .github/workflows/monitor.yml
       - cloudflare/**
@@ -72,6 +74,16 @@ jobs:
             echo "Build snapshot committed: $(git rev-parse HEAD)"
             git push origin main
           }
+
+          if [ -f .diff-preview-request ]; then
+            echo "=== regenerate complete historical readable diff ==="
+            python scripts/regenerate_historic_diff.py
+            rm .diff-preview-request
+            git add -A
+            git commit -m "Generate complete historical readable diff report"
+            git push origin main
+            exit 0
+          fi
 
           echo "=== one-shot probe $(date -u '+%Y-%m-%dT%H:%M:%SZ') ==="
           python scripts/monitor.py
