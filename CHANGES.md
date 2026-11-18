@@ -1,6 +1,6 @@
 # Bloxd build update — 2026-11-18T15:07 JST
 
-Bundle files use stable Webpack paths. Generated JavaScript bundle code is summarized by file metadata rather than pasted as token-level diffs.
+Bundle files use stable Webpack paths. The full diff report includes every changed file, including JavaScript; only two-character minifier identifiers are masked. Each file and each independent diff hunk can be expanded separately.
 
 Readable per-file diff: [diffs/9ad456477d01-readable-full/index.md](diffs/9ad456477d01-readable-full/index.md)
 
