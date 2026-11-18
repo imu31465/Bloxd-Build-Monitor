@@ -5,7 +5,7 @@ Every bundle is beautified and archived under stable logical paths: main.js, mai
 This keeps each Webpack chunk on the same Git path across builds, so GitHub shows a normal file modification instead of delete/add. Every detected build is saved as a new ordinary commit. The current files on `main` show the latest build, while every previous snapshot remains accessible through Git history. Build history is never squashed or force-pushed.
 `CHANGES.md` uses green/red diff highlighting and links to a per-build readable report.
 
-`diffs/` contains one collapsed `<details>` section per readable changed file. Generated JavaScript bundle diffs and `.monitor-state.json` are omitted to avoid minification and hash noise.
+`diffs/` includes every changed file, with a separate collapsible section for each file and each diff hunk. JavaScript comparison masks only two-character identifiers to suppress minifier-name churn; other code and manifest changes remain visible.
 
 | Environment | Checked at (JST) | Build | Main bundle |
 |---|---|---|---|

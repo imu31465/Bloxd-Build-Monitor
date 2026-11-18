@@ -664,8 +664,102 @@ def readable_diff_report_path(now_text: str, state: dict, updated_envs: list) ->
     return f"diffs/{timestamp}-{build_slug}.md"
 
 
+def normalize_minified_js_identifiers(source: str) -> str:
+    """Replace two-character JS identifiers while preserving strings, comments and property keys."""
+    output = []
+    keywords = {"as", "do", "if", "in", "of"}
+    index = 0
+    length = len(source)
+
+    while index < length:
+        char = source[index]
+
+        if source.startswith("//", index):
+            end = source.find("\n", index)
+            if end < 0:
+                output.append(source[index:])
+                break
+            output.append(source[index:end])
+            index = end
+            continue
+        if source.startswith("/*", index):
+            end = source.find("*/", index + 2)
+            end = length if end < 0 else end + 2
+            output.append(source[index:end])
+            index = end
+            continue
+        if char in ("'", '"') or ord(char) == 96:
+            quote = char
+            end = index + 1
+            while end < length:
+                if source[end] == "\\":
+                    end += 2
+                    continue
+                if source[end] == quote:
+                    end += 1
+                    break
+                end += 1
+            output.append(source[index:end])
+            index = end
+            continue
+
+        match = re.match(r"[A-Za-z_$][A-Za-z0-9_$]*", source[index:])
+        if not match:
+            output.append(char)
+            index += 1
+            continue
+
+        identifier = match.group(0)
+        end = index + len(identifier)
+        previous = index - 1
+        while previous >= 0 and source[previous].isspace():
+            previous -= 1
+        following = end
+        while following < length and source[following].isspace():
+            following += 1
+
+        previous_char = source[previous] if previous >= 0 else ""
+        next_char = source[following] if following < length else ""
+        is_member_property = previous_char == "."
+        is_object_key = next_char == ":"
+        is_shorthand_key = previous_char in "{," and next_char in ",}"
+        is_method_key = previous_char in "{," and next_char == "("
+        is_keyword = identifier in keywords
+
+        if (
+            len(identifier) == 2
+            and not is_member_property
+            and not is_object_key
+            and not is_shorthand_key
+            and not is_method_key
+            and not is_keyword
+        ):
+            output.append("⟦2-char-id⟧")
+        else:
+            output.append(identifier)
+        index = end
+
+    return "".join(output)
+
+
+def split_unified_hunks(diff_lines: list[str]) -> list[list[str]]:
+    """Split a unified diff into independent @@ hunks."""
+    hunks = []
+    current = []
+    for line in diff_lines:
+        if line.startswith("@@"):
+            if current:
+                hunks.append(current)
+            current = [line]
+        elif current:
+            current.append(line)
+    if current:
+        hunks.append(current)
+    return hunks
+
+
 def render_readable_diff_report(root: Path, title: str, base_ref: str = "HEAD") -> str:
-    """Embed human-readable changes in one collapsible section per file."""
+    """Render every changed file, with a separate collapsible box for every diff hunk."""
     def git_output(*args: str) -> str:
         result = subprocess.run(
             ["git", *args],
@@ -685,16 +779,11 @@ def render_readable_diff_report(root: Path, title: str, base_ref: str = "HEAD") 
     untracked = git_output("ls-files", "--others", "--exclude-standard", "-z").split("\0")
     paths = sorted({path for path in tracked + untracked if path})
     sections = []
-    skipped_js = skipped_state = skipped_binary = included = 0
+    included = binary_count = identifier_only_count = hunk_count = 0
+    fence = chr(96) * 3
 
     for relative in paths:
         if relative.startswith("diffs/"):
-            continue
-        if relative == ".monitor-state.json":
-            skipped_state += 1
-            continue
-        if relative.startswith("bundles/") and relative.endswith(".js"):
-            skipped_js += 1
             continue
 
         old_result = subprocess.run(
@@ -704,59 +793,125 @@ def render_readable_diff_report(root: Path, title: str, base_ref: str = "HEAD") 
             stderr=subprocess.PIPE,
             check=False,
         )
-        old_bytes = old_result.stdout if old_result.returncode == 0 else b""
+        old_exists = old_result.returncode == 0
+        old_bytes = old_result.stdout if old_exists else b""
         current_path = root / relative
-        new_bytes = current_path.read_bytes() if current_path.is_file() else b""
-        if b"\0" in old_bytes or b"\0" in new_bytes:
-            skipped_binary += 1
-            continue
+        new_exists = current_path.is_file()
+        new_bytes = current_path.read_bytes() if new_exists else b""
+
+        status = "new" if not old_exists else ("deleted" if not new_exists else "modified")
+        summary_prefix = f"<code>{html.escape(relative)}</code> · {status}"
+
         try:
+            if b"\0" in old_bytes or b"\0" in new_bytes:
+                raise UnicodeDecodeError("utf-8", b"\0", 0, 1, "binary content")
             old_text = old_bytes.decode("utf-8")
             new_text = new_bytes.decode("utf-8")
         except UnicodeDecodeError:
-            skipped_binary += 1
+            binary_count += 1
+            old_hash = hashlib.sha256(old_bytes).hexdigest()[:16] if old_exists else "—"
+            new_hash = hashlib.sha256(new_bytes).hexdigest()[:16] if new_exists else "—"
+            sections.extend([
+                "<details>",
+                f"<summary>{summary_prefix} · binary</summary>",
+                "",
+                f"- Previous: {len(old_bytes):,} bytes · SHA-256 {old_hash}" if old_exists else "- Previous: file did not exist",
+                f"- Current: {len(new_bytes):,} bytes · SHA-256 {new_hash}" if new_exists else "- Current: file deleted",
+                "- Binary file changed; binary content cannot be represented as a line diff.",
+                "",
+                "</details>",
+                "",
+            ])
+            included += 1
             continue
 
+        compare_old = old_text
+        compare_new = new_text
+        if Path(relative).suffix.lower() in {".js", ".mjs", ".cjs"}:
+            compare_old = normalize_minified_js_identifiers(old_text)
+            compare_new = normalize_minified_js_identifiers(new_text)
+
         diff_lines = list(difflib.unified_diff(
-            old_text.splitlines(),
-            new_text.splitlines(),
+            compare_old.splitlines(),
+            compare_new.splitlines(),
             fromfile=f"a/{relative}",
             tofile=f"b/{relative}",
             lineterm="",
             n=3,
         ))
         if not diff_lines:
+            if compare_old == compare_new and old_text != new_text:
+                identifier_only_count += 1
+                sections.extend([
+                    "<details>",
+                    f"<summary>{summary_prefix} · 2-character identifier-only changes filtered</summary>",
+                    "",
+                    "No text diff remains after masking two-character JavaScript identifiers.",
+                    "",
+                    "</details>",
+                    "",
+                ])
+                included += 1
             continue
+
         additions = sum(line.startswith("+") and not line.startswith("+++") for line in diff_lines)
         deletions = sum(line.startswith("-") and not line.startswith("---") for line in diff_lines)
-        status = "new" if not old_bytes else ("deleted" if not new_bytes else "modified")
-        summary = f"<code>{html.escape(relative)}</code> · {status} · +{additions} / -{deletions}"
-        sections.extend([
+        file_section = [
             "<details>",
-            f"<summary>{summary}</summary>",
+            f"<summary>{summary_prefix} · +{additions} / -{deletions}</summary>",
             "",
-            "```diff",
-            *diff_lines,
-            "```",
-            "</details>",
-            "",
-        ])
+        ]
+
+        if Path(relative).suffix.lower() in {".js", ".mjs", ".cjs"}:
+            file_section.extend([
+                "JavaScript comparison masks only two-character identifiers shown as ⟦2-char-id⟧; strings, comments, member properties, object keys, and all other tokens remain visible.",
+                "",
+            ])
+
+        hunks = split_unified_hunks(diff_lines)
+        if not hunks:
+            file_section.extend([fence + "diff", *diff_lines, fence, ""])
+        else:
+            for number, hunk in enumerate(hunks, start=1):
+                header = hunk[0]
+                context_match = re.match(r"@@ .*? @@\s*(.*)", header)
+                context = context_match.group(1).strip() if context_match else ""
+                context_label = html.escape(context[:100] or "Change")
+                hunk_additions = sum(line.startswith("+") for line in hunk[1:])
+                hunk_deletions = sum(line.startswith("-") for line in hunk[1:])
+                file_section.extend([
+                    "<details>",
+                    f"<summary>Hunk {number} · {context_label} · +{hunk_additions} / -{hunk_deletions}</summary>",
+                    "",
+                    fence + "diff",
+                    *hunk,
+                    fence,
+                    "",
+                    "</details>",
+                    "",
+                ])
+                hunk_count += 1
+
+        file_section.extend(["</details>", ""])
+        sections.extend(file_section)
         included += 1
 
     lines = [
         f"# Readable build diff — {title}",
         "",
-        "Only human-readable text changes are embedded below. Open each file separately.",
+        "Every changed text file is included. Each file and each diff hunk has its own collapsible section.",
         "",
-        f"- Readable files included: {included}",
-        f"- Generated JavaScript bundle diffs skipped: {skipped_js}",
-        f"- Machine-state manifest skipped: {skipped_state}",
-        f"- Binary files skipped: {skipped_binary}",
+        f"- Changed files represented: {included}",
+        f"- Binary files represented by size and SHA-256: {binary_count}",
+        f"- JavaScript files with only two-character identifier changes filtered: {identifier_only_count}",
+        f"- Individual diff hunks: {hunk_count}",
+        "",
+        "For JavaScript, only two-character identifiers are normalized to suppress minifier variable-name churn. Strings, comments, object keys, member properties, and every other text change remain in the diff.",
         "",
         "GitHub diff highlighting colors additions green and deletions red.",
         "",
     ]
-    lines.extend(sections or ["No readable text diffs were found for this build."])
+    lines.extend(sections or ["No changed files were found."])
     return "\n".join(lines).rstrip() + "\n"
 
 def render_readme(state: dict) -> str:
@@ -773,7 +928,7 @@ def render_readme(state: dict) -> str:
         " Every build update is a new commit; previous build snapshots remain"
         " accessible in Git history and are never squashed or force-pushed.",
         "`CHANGES.md` uses green/red diff highlighting and links to a per-build readable report.",
-        "`diffs/` contains one collapsed `<details>` section per readable changed file. Generated JavaScript bundle diffs and `.monitor-state.json` are omitted to avoid minification and hash noise.",
+        "`diffs/` includes every changed file, with a separate collapsible section for each file and each diff hunk. JavaScript comparison masks only two-character identifiers to suppress minifier-name churn; other code and manifest changes remain visible.",
         "",
         "| Environment | Checked at (JST) | Build | Main bundle |",
         "|---|---|---|---|",

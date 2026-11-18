@@ -589,7 +589,7 @@ class MonitorTests(unittest.TestCase):
         self.assertIn("+ Total size: 125 B (+25 B)", rendered)
         self.assertIn("[diffs/202611181500-newbuild-bbbbbbbb.md]", rendered)
 
-    def test_readable_diff_report_collapses_files_and_skips_generated_noise(self):
+    def test_readable_diff_report_includes_all_files_and_splits_hunks(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
 
@@ -605,39 +605,60 @@ class MonitorTests(unittest.TestCase):
             git("init", "-q")
             git("config", "user.name", "Test")
             git("config", "user.email", "test@example.invalid")
+
+            css_old = [".a { color: red; }"] + [f".keep{i} {{ color: blue; }}" for i in range(10)] + [".b { color: red; }"]
+            css_new = [".a { color: green; }"] + css_old[1:-1] + [".b { color: blue; }"]
             files = {
                 "README.md": "old readme\n",
-                "bundles/e/main.js": "const oldMinifiedIdentifier=1;\n",
-                "bundles/e/chunks/css/1.css": ".old { color: red; }\n",
+                "bundles/e/chunks/css/1.css": "\n".join(css_old) + "\n",
+                "bundles/e/chunks/js/207.js": "const BB = TB.value;\nfunction xx() { return BB + 1; }\n",
                 ".monitor-state.json": '{"old":"hash"}\n',
             }
             for relative, content in files.items():
                 path = root / relative
                 path.parent.mkdir(parents=True, exist_ok=True)
                 path.write_text(content, encoding="utf-8")
+            binary_path = root / "bundles/e/chunks/image.wasm"
+            binary_path.parent.mkdir(parents=True, exist_ok=True)
+            binary_path.write_bytes(b"\x00old")
             git("add", "-A")
             git("commit", "-qm", "baseline")
 
             (root / "README.md").write_text("new readme\n", encoding="utf-8")
-            (root / "bundles/e/main.js").write_text(
-                "const newMinifiedIdentifier=2;\n", encoding="utf-8"
-            )
             (root / "bundles/e/chunks/css/1.css").write_text(
-                ".new { color: green; }\n", encoding="utf-8"
+                "\n".join(css_new) + "\n", encoding="utf-8"
             )
-            (root / ".monitor-state.json").write_text(
-                '{"new":"hash"}\n', encoding="utf-8"
+            (root / "bundles/e/chunks/js/207.js").write_text(
+                "const CC = DD.value;\nfunction yy() { return CC + 2; }\n",
+                encoding="utf-8",
             )
+            (root / ".monitor-state.json").write_text('{"new":"hash"}\n', encoding="utf-8")
+            binary_path.write_bytes(b"\x00new")
+
             report = monitor.render_readable_diff_report(root, "test build")
 
-            self.assertIn("<details>", report)
             self.assertIn("<summary><code>README.md</code>", report)
             self.assertIn("bundles/e/chunks/css/1.css", report)
-            self.assertIn("```diff", report)
-            self.assertIn("Generated JavaScript bundle diffs skipped: 1", report)
-            self.assertIn("Machine-state manifest skipped: 1", report)
-            self.assertNotIn("MinifiedIdentifier", report)
-            self.assertNotIn(".monitor-state.json", report)
+            self.assertIn("Hunk 1", report)
+            self.assertIn("Hunk 2", report)
+            self.assertIn("bundles/e/chunks/js/207.js", report)
+            self.assertIn("⟦2-char-id⟧", report)
+            self.assertIn("return ⟦2-char-id⟧ + 2", report)
+            self.assertNotIn("const BB", report)
+            self.assertNotIn("const CC", report)
+            self.assertIn(".monitor-state.json", report)
+            self.assertIn("Binary file changed", report)
+            self.assertIn("two-character identifiers", report)
+
+    def test_normalize_minified_js_identifiers_preserves_strings_and_properties(self):
+        source = 'const BB = obj.id + config.xy + "BB"; // TB\nconst key = { id: BB };'
+        normalized = monitor.normalize_minified_js_identifiers(source)
+        self.assertIn("⟦2-char-id⟧", normalized)
+        self.assertIn("obj.id", normalized)
+        self.assertIn("config.xy", normalized)
+        self.assertIn('"BB"', normalized)
+        self.assertIn("id:", normalized)
+        self.assertIn("// TB", normalized)
 
     def test_workflow_preserves_every_build_commit(self):
         workflow_path = monitor.ROOT / ".github" / "workflows" / "monitor.yml"
