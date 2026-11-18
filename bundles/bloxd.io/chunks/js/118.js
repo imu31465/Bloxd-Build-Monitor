@@ -1,13 +1,13 @@
 export const id = 118;
 export const ids = [118, 120, 123];
 export const modules = {
-  5939: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      e: () => XJ
+  5932: (BB, TB, dB) => {
+    dB.d(TB, {
+      c: () => lB
     });
-    var FJ = ZJ(5944),
-      UJ = ZJ(990);
-    const eJ = {
+    var VB = dB(5934),
+      yB = dB(980);
+    const pB = {
       strict: "shaderPack:variantStrict",
       nonStrict: "shaderPack:variantNonStrict",
       terrain: "shaderPack:variantTerrain",
@@ -15,549 +15,549 @@ export const modules = {
       model: "shaderPack:variantModel"
     };
 
-    function XJ(JJ) {
+    function lB(BB) {
       let {
-        diagnostics: cJ,
-        more: ZJ = 0,
-        t: XJ
-      } = JJ;
-      return (0, UJ.jsxs)("ul", {
+        diagnostics: TB,
+        more: dB = 0,
+        t: lB
+      } = BB;
+      return (0, yB.jsxs)("ul", {
         className: "ShaderPackDiagnostics",
-        children: [cJ.map(((JJ, cJ) => {
-          const ZJ = (0, FJ.c)(JJ),
-            AJ = function(JJ, cJ) {
-              const ZJ = (0, FJ.b)(null !== JJ && void 0 !== JJ ? JJ : []);
-              if (0 === ZJ.length) return null;
-              return ZJ.map((JJ => JJ.map((JJ => cJ(eJ[JJ]))).join(", "))).join("; ")
-            }(JJ.variants, XJ);
-          return (0, UJ.jsxs)("li", {
-            children: [ZJ && (0, UJ.jsx)("span", {
+        children: [TB.map(((BB, TB) => {
+          const dB = (0, VB.d)(BB),
+            JB = function(BB, TB) {
+              const dB = (0, VB.b)(null !== BB && void 0 !== BB ? BB : []);
+              if (0 === dB.length) return null;
+              return dB.map((BB => BB.map((BB => TB(pB[BB]))).join(", "))).join("; ")
+            }(BB.variants, lB);
+          return (0, yB.jsxs)("li", {
+            children: [dB && (0, yB.jsx)("span", {
               className: "ShaderPackDiagnosticLocation",
-              children: ZJ
-            }), JJ.message, AJ && (0, UJ.jsx)("span", {
+              children: dB
+            }), BB.message, JB && (0, yB.jsx)("span", {
               className: "ShaderPackDiagnosticVariants",
-              children: XJ("shaderPack:onlyIn", {
-                variants: AJ
+              children: lB("shaderPack:onlyIn", {
+                variants: JB
               })
             })]
-          }, cJ)
-        })), ZJ > 0 && (0, UJ.jsx)("li", {
-          children: XJ("shaderPack:moreErrors", {
-            count: String(ZJ)
+          }, TB)
+        })), dB > 0 && (0, yB.jsx)("li", {
+          children: lB("shaderPack:moreErrors", {
+            count: String(dB)
           })
         })]
       })
     }
   },
-  5955: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      e: () => TJ,
-      g: () => CJ
+  5943: (BB, TB, dB) => {
+    dB.d(TB, {
+      e: () => WB,
+      g: () => hB
     });
-    var FJ = ZJ(47),
-      UJ = ZJ(926),
-      eJ = ZJ.n(UJ),
-      XJ = ZJ(4365),
-      AJ = ZJ(1232),
-      qJ = ZJ(942),
-      jJ = ZJ(1329),
-      YJ = ZJ(1086),
-      hJ = ZJ(80),
-      DJ = ZJ(5934),
-      sJ = ZJ(5951);
-    class nJ extends Error {
-      constructor(JJ) {
-        let cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        super(JJ, arguments.length > 2 ? arguments[2] : void 0), this.translationKey = JJ, this.params = cJ
+    var VB = dB(62),
+      yB = dB(933),
+      pB = dB.n(yB),
+      lB = dB(4367),
+      JB = dB(1225),
+      YB = dB(946),
+      gB = dB(1324),
+      oB = dB(1078),
+      kB = dB(95),
+      LB = dB(5924),
+      OB = dB(5940);
+    class DB extends Error {
+      constructor(BB) {
+        let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        super(BB, arguments.length > 2 ? arguments[2] : void 0), this.translationKey = BB, this.params = TB
       }
     }
-    const GJ = 1024,
-      fJ = 101010256,
-      xJ = 33639248,
-      rJ = 67324752,
-      vJ = 22,
-      mJ = 46,
-      QJ = 30,
-      EJ = 65535,
-      VJ = 65535,
-      KJ = 4294967295,
-      yJ = 0,
-      SJ = 8,
-      IJ = new TextDecoder;
+    const uB = 1024,
+      HB = 101010256,
+      EB = 33639248,
+      vB = 67324752,
+      mB = 22,
+      iB = 46,
+      NB = 30,
+      tB = 65535,
+      fB = 65535,
+      sB = 4294967295,
+      MB = 0,
+      zB = 8,
+      wB = new TextDecoder;
 
-    function MJ(JJ) {
-      const cJ = new DataView(JJ.buffer, JJ.byteOffset, JJ.byteLength),
-        ZJ = function(JJ) {
-          const cJ = JJ.byteLength - vJ;
-          for (let ZJ = cJ; ZJ >= Math.max(0, cJ - EJ); ZJ--)
-            if (JJ.getUint32(ZJ, !0) === fJ && ZJ + vJ + JJ.getUint16(ZJ + 20, !0) <= JJ.byteLength) return ZJ;
-          throw new nJ("shaderPack:loadNotZip")
-        }(cJ),
-        FJ = cJ.getUint16(ZJ + 8, !0),
-        UJ = cJ.getUint16(ZJ + 10, !0),
-        eJ = cJ.getUint32(ZJ + 12, !0),
-        XJ = cJ.getUint32(ZJ + 16, !0);
-      if (UJ === VJ || eJ === KJ || XJ === KJ) throw gJ();
-      if (0 !== cJ.getUint16(ZJ + 4, !0) || 0 !== cJ.getUint16(ZJ + 6, !0) || FJ !== UJ) throw new nJ("shaderPack:loadSplitZip");
-      if (UJ > GJ) throw new nJ("shaderPack:loadTooManyZipEntries", {
-        count: String(GJ)
+    function UB(BB) {
+      const TB = new DataView(BB.buffer, BB.byteOffset, BB.byteLength),
+        dB = function(BB) {
+          const TB = BB.byteLength - mB;
+          for (let dB = TB; dB >= Math.max(0, TB - tB); dB--)
+            if (BB.getUint32(dB, !0) === HB && dB + mB + BB.getUint16(dB + 20, !0) <= BB.byteLength) return dB;
+          throw new DB("shaderPack:loadNotZip")
+        }(TB),
+        VB = TB.getUint16(dB + 8, !0),
+        yB = TB.getUint16(dB + 10, !0),
+        pB = TB.getUint32(dB + 12, !0),
+        lB = TB.getUint32(dB + 16, !0);
+      if (yB === fB || pB === sB || lB === sB) throw IB();
+      if (0 !== TB.getUint16(dB + 4, !0) || 0 !== TB.getUint16(dB + 6, !0) || VB !== yB) throw new DB("shaderPack:loadSplitZip");
+      if (yB > uB) throw new DB("shaderPack:loadTooManyZipEntries", {
+        count: String(uB)
       });
-      const AJ = XJ + eJ;
-      if (AJ > ZJ) throw WJ();
-      const qJ = [];
-      let jJ = XJ;
-      for (let YJ = 0; YJ < UJ; YJ++) {
-        if (jJ + mJ > AJ || cJ.getUint32(jJ, !0) !== xJ) throw WJ();
-        const ZJ = cJ.getUint16(jJ + 8, !0),
-          FJ = cJ.getUint16(jJ + 10, !0),
-          UJ = cJ.getUint32(jJ + 20, !0),
-          eJ = cJ.getUint32(jJ + 24, !0),
-          YJ = cJ.getUint16(jJ + 28, !0),
-          hJ = cJ.getUint16(jJ + 30, !0),
-          DJ = cJ.getUint16(jJ + 32, !0),
-          sJ = cJ.getUint32(jJ + 42, !0),
-          nJ = jJ + mJ;
-        if (jJ = nJ + YJ + hJ + DJ, jJ > AJ) throw WJ();
-        if (UJ === KJ || eJ === KJ || sJ === KJ) throw gJ();
-        const GJ = IJ.decode(JJ.subarray(nJ, nJ + YJ)).replace(/\\/g, "/");
-        GJ.endsWith("/") || qJ.push({
-          path: GJ,
-          method: FJ,
-          encrypted: 0 !== (1 & ZJ),
-          compressedSize: UJ,
-          dataOffset: wJ(cJ, sJ, UJ, XJ)
+      const JB = lB + pB;
+      if (JB > dB) throw rB();
+      const YB = [];
+      let gB = lB;
+      for (let oB = 0; oB < yB; oB++) {
+        if (gB + iB > JB || TB.getUint32(gB, !0) !== EB) throw rB();
+        const dB = TB.getUint16(gB + 8, !0),
+          VB = TB.getUint16(gB + 10, !0),
+          yB = TB.getUint32(gB + 20, !0),
+          pB = TB.getUint32(gB + 24, !0),
+          oB = TB.getUint16(gB + 28, !0),
+          kB = TB.getUint16(gB + 30, !0),
+          LB = TB.getUint16(gB + 32, !0),
+          OB = TB.getUint32(gB + 42, !0),
+          DB = gB + iB;
+        if (gB = DB + oB + kB + LB, gB > JB) throw rB();
+        if (yB === sB || pB === sB || OB === sB) throw IB();
+        const uB = wB.decode(BB.subarray(DB, DB + oB)).replace(/\\/g, "/");
+        uB.endsWith("/") || YB.push({
+          path: uB,
+          method: VB,
+          encrypted: 0 !== (1 & dB),
+          compressedSize: yB,
+          dataOffset: KB(TB, OB, yB, lB)
         })
       }
-      return qJ
+      return YB
     }
-    async function bJ(JJ, cJ, ZJ) {
-      if (cJ.encrypted) throw new nJ("shaderPack:loadEncrypted", {
-        path: cJ.path
+    async function FB(BB, TB, dB) {
+      if (TB.encrypted) throw new DB("shaderPack:loadEncrypted", {
+        path: TB.path
       });
-      if (cJ.method === yJ) return cJ.compressedSize > ZJ ? null : JJ.subarray(cJ.dataOffset, cJ.dataOffset + cJ.compressedSize);
-      if (cJ.method === SJ) return async function(JJ, cJ, ZJ) {
-        const FJ = new Blob([JJ]).stream().pipeThrough(new DecompressionStream("deflate-raw")).getReader(),
-          UJ = [];
-        let eJ = 0;
+      if (TB.method === MB) return TB.compressedSize > dB ? null : BB.subarray(TB.dataOffset, TB.dataOffset + TB.compressedSize);
+      if (TB.method === zB) return async function(BB, TB, dB) {
+        const VB = new Blob([BB]).stream().pipeThrough(new DecompressionStream("deflate-raw")).getReader(),
+          yB = [];
+        let pB = 0;
         try {
           for (;;) {
             const {
-              done: JJ,
-              value: ZJ
-            } = await FJ.read();
-            if (JJ) break;
-            if (eJ += ZJ.byteLength, eJ > cJ) return await FJ.cancel(), null;
-            UJ.push(ZJ)
+              done: BB,
+              value: dB
+            } = await VB.read();
+            if (BB) break;
+            if (pB += dB.byteLength, pB > TB) return await VB.cancel(), null;
+            yB.push(dB)
           }
-        } catch (qJ) {
-          throw new nJ("shaderPack:loadDecompressFailed", {
-            path: ZJ
+        } catch (YB) {
+          throw new DB("shaderPack:loadDecompressFailed", {
+            path: dB
           }, {
-            cause: qJ
+            cause: YB
           })
         }
-        const XJ = new Uint8Array(eJ);
-        let AJ = 0;
-        for (const jJ of UJ) XJ.set(jJ, AJ), AJ += jJ.byteLength;
-        return XJ
-      }(JJ.slice(cJ.dataOffset, cJ.dataOffset + cJ.compressedSize), ZJ, cJ.path);
-      throw new nJ("shaderPack:loadUnsupportedCompression", {
-        path: cJ.path,
-        method: String(cJ.method)
+        const lB = new Uint8Array(pB);
+        let JB = 0;
+        for (const gB of yB) lB.set(gB, JB), JB += gB.byteLength;
+        return lB
+      }(BB.slice(TB.dataOffset, TB.dataOffset + TB.compressedSize), dB, TB.path);
+      throw new DB("shaderPack:loadUnsupportedCompression", {
+        path: TB.path,
+        method: String(TB.method)
       })
     }
 
-    function wJ(JJ, cJ, ZJ, FJ) {
-      if (cJ + QJ > FJ || JJ.getUint32(cJ, !0) !== rJ) throw WJ();
-      const UJ = cJ + QJ + JJ.getUint16(cJ + 26, !0) + JJ.getUint16(cJ + 28, !0);
-      if (UJ + ZJ > FJ) throw WJ();
-      return UJ
+    function KB(BB, TB, dB, VB) {
+      if (TB + NB > VB || BB.getUint32(TB, !0) !== vB) throw rB();
+      const yB = TB + NB + BB.getUint16(TB + 26, !0) + BB.getUint16(TB + 28, !0);
+      if (yB + dB > VB) throw rB();
+      return yB
     }
 
-    function WJ() {
-      return new nJ("shaderPack:loadZipDamaged")
+    function rB() {
+      return new DB("shaderPack:loadZipDamaged")
     }
 
-    function gJ() {
-      return new nJ("shaderPack:loadZip64")
+    function IB() {
+      return new DB("shaderPack:loadZip64")
     }
-    const HJ = 33554432,
-      PJ = 65536;
-    async function kJ(JJ) {
-      if (1 === JJ.length && JJ[0].name.toLowerCase().endsWith(".zip")) {
-        const cJ = JJ[0];
-        if (cJ.size > HJ) throw new nJ("shaderPack:loadZipTooBig", {
-          megabytes: String(HJ / 1048576)
+    const cB = 33554432,
+      SB = 65536;
+    async function PB(BB) {
+      if (1 === BB.length && BB[0].name.toLowerCase().endsWith(".zip")) {
+        const TB = BB[0];
+        if (TB.size > cB) throw new DB("shaderPack:loadZipTooBig", {
+          megabytes: String(cB / 1048576)
         });
-        return async function(JJ) {
-          return pJ(MJ(JJ).map((cJ => ({
-            path: cJ.path,
-            read: ZJ => bJ(JJ, cJ, ZJ)
+        return async function(BB) {
+          return QB(UB(BB).map((TB => ({
+            path: TB.path,
+            read: dB => FB(BB, TB, dB)
           }))))
-        }(new Uint8Array(await cJ.arrayBuffer()))
+        }(new Uint8Array(await TB.arrayBuffer()))
       }
-      return pJ(JJ.map((JJ => ({
-        path: dJ(JJ),
-        read: cJ => async function(JJ, cJ) {
-          return JJ.size > cJ ? null : new Uint8Array(await JJ.arrayBuffer())
-        }(JJ, cJ)
+      return QB(BB.map((BB => ({
+        path: RB(BB),
+        read: TB => async function(BB, TB) {
+          return BB.size > TB ? null : new Uint8Array(await BB.arrayBuffer())
+        }(BB, TB)
       }))))
     }
-    async function pJ(JJ) {
-      const cJ = function(JJ) {
-          const cJ = JJ.length > 0 ? JJ[0].path.indexOf("/") : -1;
-          if (-1 === cJ) return JJ;
-          const ZJ = JJ[0].path.slice(0, cJ + 1);
-          if (!JJ.every((JJ => JJ.path.startsWith(ZJ)))) return JJ;
-          return JJ.map((JJ => ({
-            ...JJ,
-            path: JJ.path.slice(ZJ.length)
+    async function QB(BB) {
+      const TB = function(BB) {
+          const TB = BB.length > 0 ? BB[0].path.indexOf("/") : -1;
+          if (-1 === TB) return BB;
+          const dB = BB[0].path.slice(0, TB + 1);
+          if (!BB.every((BB => BB.path.startsWith(dB)))) return BB;
+          return BB.map((BB => ({
+            ...BB,
+            path: BB.path.slice(dB.length)
           })))
-        }(JJ.filter((JJ => ! function(JJ) {
-          const cJ = JJ.split("/"),
-            ZJ = cJ[cJ.length - 1];
-          return cJ.includes("__MACOSX") || ZJ.startsWith("._") || ".DS_Store" === ZJ
-        }(JJ.path)))),
-        ZJ = cJ.filter((JJ => "pack.json" === JJ.path.toLowerCase()));
-      if (0 === ZJ.length) throw new nJ("shaderPack:loadNoManifest");
-      if (ZJ.length > 1) throw new nJ("shaderPack:loadDuplicateManifest");
-      const FJ = ZJ[0],
-        UJ = await FJ.read(PJ);
-      if (null === UJ) throw new nJ("shaderPack:loadManifestTooBig", {
-        kilobytes: String(PJ / 1024)
+        }(BB.filter((BB => ! function(BB) {
+          const TB = BB.split("/"),
+            dB = TB[TB.length - 1];
+          return TB.includes("__MACOSX") || dB.startsWith("._") || ".DS_Store" === dB
+        }(BB.path)))),
+        dB = TB.filter((BB => "pack.json" === BB.path.toLowerCase()));
+      if (0 === dB.length) throw new DB("shaderPack:loadNoManifest");
+      if (dB.length > 1) throw new DB("shaderPack:loadDuplicateManifest");
+      const VB = dB[0],
+        yB = await VB.read(SB);
+      if (null === yB) throw new DB("shaderPack:loadManifestTooBig", {
+        kilobytes: String(SB / 1024)
       });
-      const eJ = function(JJ) {
-          let cJ;
+      const pB = function(BB) {
+          let TB;
           try {
-            cJ = JSON.parse(JJ)
-          } catch (AJ) {
-            throw new nJ("shaderPack:loadManifestNotJson", {
-              error: AJ.message
+            TB = JSON.parse(BB)
+          } catch (JB) {
+            throw new DB("shaderPack:loadManifestNotJson", {
+              error: JB.message
             }, {
-              cause: AJ
+              cause: JB
             })
           }
-          if ("object" !== typeof cJ || null === cJ || Array.isArray(cJ)) throw new nJ("shaderPack:loadManifestNotObject");
+          if ("object" !== typeof TB || null === TB || Array.isArray(TB)) throw new DB("shaderPack:loadManifestNotObject");
           const {
-            apiVersion: ZJ,
-            name: FJ,
-            author: UJ,
-            description: eJ,
-            keepCircleShadows: XJ
-          } = cJ;
-          if (void 0 === ZJ) throw new nJ("shaderPack:loadNoApiVersion", {
-            version: String(sJ.b)
+            apiVersion: dB,
+            name: VB,
+            author: yB,
+            description: pB,
+            keepCircleShadows: lB
+          } = TB;
+          if (void 0 === dB) throw new DB("shaderPack:loadNoApiVersion", {
+            version: String(OB.d)
           });
-          if (!(0, sJ.i)(ZJ)) throw new nJ("shaderPack:loadWrongApiVersion", {
-            packVersion: JSON.stringify(ZJ),
-            version: String(sJ.b)
+          if (!(0, OB.l)(dB)) throw new DB("shaderPack:loadWrongApiVersion", {
+            packVersion: JSON.stringify(dB),
+            version: String(OB.d)
           });
-          if ("string" !== typeof FJ || "" === FJ.trim()) throw new nJ("shaderPack:loadNoName");
-          if (void 0 !== UJ && null !== UJ && "string" !== typeof UJ) throw new nJ("shaderPack:loadAuthorNotString");
-          if (void 0 !== eJ && null !== eJ && "string" !== typeof eJ) throw new nJ("shaderPack:loadDescriptionNotString");
-          if (void 0 !== XJ && "boolean" !== typeof XJ) throw new nJ("shaderPack:loadKeepCircleShadowsNotBoolean");
+          if ("string" !== typeof VB || "" === VB.trim()) throw new DB("shaderPack:loadNoName");
+          if (void 0 !== yB && null !== yB && "string" !== typeof yB) throw new DB("shaderPack:loadAuthorNotString");
+          if (void 0 !== pB && null !== pB && "string" !== typeof pB) throw new DB("shaderPack:loadDescriptionNotString");
+          if (void 0 !== lB && "boolean" !== typeof lB) throw new DB("shaderPack:loadKeepCircleShadowsNotBoolean");
           return {
-            apiVersion: ZJ,
-            name: FJ,
-            author: "string" === typeof UJ ? UJ : null,
-            description: "string" === typeof eJ && "" !== eJ.trim() ? eJ : null,
-            keepCircleShadows: !0 === XJ
+            apiVersion: dB,
+            name: VB,
+            author: "string" === typeof yB ? yB : null,
+            description: "string" === typeof pB && "" !== pB.trim() ? pB : null,
+            keepCircleShadows: !0 === lB
           }
-        }(zJ(UJ, FJ.path)),
-        XJ = cJ.filter((JJ => JJ.path.toLowerCase().endsWith(".wgsl"))).sort(((JJ, cJ) => (0, DJ.j)(JJ.path, cJ.path)));
-      if (0 === XJ.length) throw new nJ("shaderPack:loadNoWgsl");
-      if (XJ.length > DJ.b) throw new nJ("shaderPack:loadTooManyWgsl", {
-        count: String(DJ.b)
+        }(aB(yB, VB.path)),
+        lB = TB.filter((BB => BB.path.toLowerCase().endsWith(".wgsl"))).sort(((BB, TB) => (0, LB.m)(BB.path, TB.path)));
+      if (0 === lB.length) throw new DB("shaderPack:loadNoWgsl");
+      if (lB.length > LB.c) throw new DB("shaderPack:loadTooManyWgsl", {
+        count: String(LB.c)
       });
-      const AJ = XJ.find(((JJ, cJ) => cJ > 0 && JJ.path === XJ[cJ - 1].path));
-      if (AJ) throw new nJ("shaderPack:loadDuplicatePath", {
-        path: AJ.path
+      const JB = lB.find(((BB, TB) => TB > 0 && BB.path === lB[TB - 1].path));
+      if (JB) throw new DB("shaderPack:loadDuplicatePath", {
+        path: JB.path
       });
-      const qJ = [];
-      let jJ = DJ.d;
-      for (const YJ of XJ) {
-        const JJ = await YJ.read(jJ);
-        if (null === JJ) throw new nJ("shaderPack:loadSourceTooBig", {
-          kilobytes: String(DJ.d / 1024)
+      const YB = [];
+      let gB = LB.d;
+      for (const oB of lB) {
+        const BB = await oB.read(gB);
+        if (null === BB) throw new DB("shaderPack:loadSourceTooBig", {
+          kilobytes: String(LB.d / 1024)
         });
-        jJ -= JJ.byteLength, qJ.push({
-          path: YJ.path,
-          source: zJ(JJ, YJ.path)
+        gB -= BB.byteLength, YB.push({
+          path: oB.path,
+          source: aB(BB, oB.path)
         })
       }
       return {
-        manifest: eJ,
-        files: qJ
+        manifest: pB,
+        files: YB
       }
     }
 
-    function dJ(JJ) {
-      return (JJ.webkitRelativePath || JJ.path || JJ.name).replace(/^\.?\//, "")
+    function RB(BB) {
+      return (BB.webkitRelativePath || BB.path || BB.name).replace(/^\.?\//, "")
     }
 
-    function zJ(JJ, cJ) {
+    function aB(BB, TB) {
       try {
         return new TextDecoder("utf-8", {
           fatal: !0
-        }).decode(JJ)
-      } catch (ZJ) {
-        throw new nJ("shaderPack:loadNotUtf8", {
-          path: cJ
+        }).decode(BB)
+      } catch (dB) {
+        throw new DB("shaderPack:loadNotUtf8", {
+          path: TB
         }, {
-          cause: ZJ
+          cause: dB
         })
       }
     }
-    var NJ = ZJ(5944),
-      OJ = ZJ(990);
+    var ZB = dB(5934),
+      XB = dB(980);
 
-    function TJ(JJ) {
+    function WB(BB) {
       let {
-        busy: cJ,
-        disabled: ZJ,
-        onFiles: UJ
-      } = JJ;
+        busy: TB,
+        disabled: dB,
+        onFiles: yB
+      } = BB;
       const {
-        t: DJ
-      } = (0, YJ.F)(), sJ = (0, FJ.useRef)(null), nJ = !(0, hJ.isMobile)(), {
-        getRootProps: GJ,
-        getInputProps: fJ,
-        isDragActive: xJ,
-        open: rJ
-      } = (0, XJ.c)({
-        onDrop: UJ,
+        t: LB
+      } = (0, oB.z)(), OB = (0, VB.useRef)(null), DB = !(0, kB.isMobile)(), {
+        getRootProps: uB,
+        getInputProps: HB,
+        isDragActive: EB,
+        open: vB
+      } = (0, lB.c)({
+        onDrop: yB,
         noClick: !0,
         noKeyboard: !0,
         useFsAccessApi: !1,
-        disabled: ZJ
+        disabled: dB
       });
-      return (0, OJ.jsxs)("div", {
-        ...GJ({
-          className: eJ()("ShaderPackDropZone", {
-            ActiveDrag: xJ,
-            Disabled: ZJ
+      return (0, XB.jsxs)("div", {
+        ...uB({
+          className: pB()("ShaderPackDropZone", {
+            ActiveDrag: EB,
+            Disabled: dB
           })
         }),
-        children: [(0, OJ.jsx)("input", {
-          ...fJ({
+        children: [(0, XB.jsx)("input", {
+          ...HB({
             webkitdirectory: "true"
           })
-        }), (0, OJ.jsx)("input", {
-          ref: sJ,
+        }), (0, XB.jsx)("input", {
+          ref: OB,
           type: "file",
           accept: ".zip,application/zip",
           hidden: !0,
-          onChange: function(JJ) {
-            const cJ = Array.from(JJ.target.files);
-            JJ.target.value = "", UJ(cJ)
+          onChange: function(BB) {
+            const TB = Array.from(BB.target.files);
+            BB.target.value = "", yB(TB)
           }
-        }), cJ && (0, OJ.jsx)(AJ.c, {}), !cJ && (0, OJ.jsxs)(OJ.Fragment, {
-          children: [(0, OJ.jsx)("div", {
+        }), TB && (0, XB.jsx)(JB.b, {}), !TB && (0, XB.jsxs)(XB.Fragment, {
+          children: [(0, XB.jsx)("div", {
             className: "ShaderPackDropZoneIcon",
-            children: (0, OJ.jsx)(qJ.c, {
+            children: (0, XB.jsx)(YB.e, {
               name: "up-from-bracket"
             })
-          }), (0, OJ.jsx)("div", {
+          }), (0, XB.jsx)("div", {
             className: "ShaderPackDropZoneInstructions",
-            children: DJ(nJ ? "shaderPack:dropHere" : "shaderPack:chooseZipInstructions")
-          }), (0, OJ.jsxs)("div", {
+            children: LB(DB ? "shaderPack:dropHere" : "shaderPack:chooseZipInstructions")
+          }), (0, XB.jsxs)("div", {
             className: "ShaderPackDropZoneButtons",
             "data-pad-mouse-only": !0,
-            children: [nJ && (0, OJ.jsx)(jJ.d, {
-              disabled: ZJ,
-              onClick: rJ,
-              children: DJ("shaderPack:chooseFolder")
-            }), (0, OJ.jsx)(jJ.d, {
-              disabled: ZJ,
+            children: [DB && (0, XB.jsx)(gB.d, {
+              disabled: dB,
+              onClick: vB,
+              children: LB("shaderPack:chooseFolder")
+            }), (0, XB.jsx)(gB.d, {
+              disabled: dB,
               onClick: () => {
-                sJ.current.click()
+                OB.current.click()
               },
-              children: DJ("shaderPack:chooseZip")
+              children: LB("shaderPack:chooseZip")
             })]
           })]
         })]
       })
     }
 
-    function CJ(JJ) {
+    function hB(BB) {
       const {
-        t: cJ
-      } = (0, YJ.F)(), [ZJ, UJ] = (0, FJ.useState)(!1), [eJ, XJ] = (0, FJ.useState)(null), AJ = (0, FJ.useRef)(!1);
+        t: TB
+      } = (0, oB.z)(), [dB, yB] = (0, VB.useState)(!1), [pB, lB] = (0, VB.useState)(null), JB = (0, VB.useRef)(!1);
       return {
-        loading: ZJ,
-        error: eJ,
-        setError: XJ,
-        onFiles: async function(ZJ) {
-          if (!AJ.current) {
-            AJ.current = !0, UJ(!0), XJ(null);
+        loading: dB,
+        error: pB,
+        setError: lB,
+        onFiles: async function(dB) {
+          if (!JB.current) {
+            JB.current = !0, yB(!0), lB(null);
             try {
-              await JJ(await kJ(ZJ))
-            } catch (FJ) {
-              FJ instanceof nJ ? XJ((0, NJ.g)(cJ, FJ.translationKey, FJ.params)) : (console.error("Failed to load the shader pack", FJ), XJ(cJ("shaderPack:unexpectedError")))
+              await BB(await PB(dB))
+            } catch (VB) {
+              VB instanceof DB ? lB((0, ZB.f)(TB, VB.translationKey, VB.params)) : (console.error("Failed to load the shader pack", VB), lB(TB("shaderPack:unexpectedError")))
             } finally {
-              AJ.current = !1, UJ(!1)
+              JB.current = !1, yB(!1)
             }
           }
         }
       }
     }
   },
-  5944: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      b: () => AJ,
-      c: () => XJ,
-      g: () => eJ
+  5934: (BB, TB, dB) => {
+    dB.d(TB, {
+      b: () => JB,
+      d: () => lB,
+      f: () => pB
     });
-    var FJ = ZJ(5951);
-    const UJ = [JJ => JJ.strict ? "strict" : "nonStrict", JJ => JJ.program];
+    var VB = dB(5940);
+    const yB = [BB => BB.strict ? "strict" : "nonStrict", BB => BB.program];
 
-    function eJ(JJ, cJ) {
-      let ZJ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const FJ = {};
-      for (const UJ in ZJ) FJ[UJ] = `\0${UJ}\0`;
-      return JJ(cJ, FJ).replace(/\0(\w+)\0/g, ((JJ, cJ) => ZJ[cJ]))
+    function pB(BB, TB) {
+      let dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const VB = {};
+      for (const yB in dB) VB[yB] = `\0${yB}\0`;
+      return BB(TB, VB).replace(/\0(\w+)\0/g, ((BB, TB) => dB[TB]))
     }
 
-    function XJ(JJ) {
-      return null === JJ.file ? null : JJ.line > 0 ? `${JJ.file}:${JJ.line}` : JJ.file
+    function lB(BB) {
+      return null === BB.file ? null : BB.line > 0 ? `${BB.file}:${BB.line}` : BB.file
     }
 
-    function AJ(JJ) {
-      const cJ = new Map(JJ.map((JJ => [qJ(JJ).join("."), JJ])));
-      if (0 === cJ.size) return [];
-      const ZJ = YJ([...cJ.values()]);
-      return 0 === ZJ[0].length ? [] : ZJ
+    function JB(BB) {
+      const TB = new Map(BB.map((BB => [YB(BB).join("."), BB])));
+      if (0 === TB.size) return [];
+      const dB = oB([...TB.values()]);
+      return 0 === dB[0].length ? [] : dB
     }
 
-    function qJ(JJ) {
-      return UJ.map((cJ => cJ(JJ)))
+    function YB(BB) {
+      return yB.map((TB => TB(BB)))
     }
-    const jJ = UJ.map((JJ => new Set(FJ.e.map(JJ)).size));
+    const gB = yB.map((BB => new Set(VB.h.map(BB)).size));
 
-    function YJ(JJ) {
-      const cJ = UJ.map((cJ => new Set(JJ.map(cJ)))),
-        ZJ = cJ.reduce(((JJ, cJ) => JJ * cJ.size), 1),
-        FJ = cJ.every(((JJ, cJ) => 1 === JJ.size || JJ.size === jJ[cJ]));
-      if (ZJ === JJ.length && FJ) return [UJ.filter(((JJ, ZJ) => 1 === cJ[ZJ].size)).map((cJ => cJ(JJ[0])))];
-      let eJ = null;
-      for (let XJ = 0; XJ < UJ.length; XJ++) {
-        if (1 === cJ[XJ].size) continue;
-        const ZJ = hJ(JJ, UJ[XJ]).flatMap(YJ);
-        (null === eJ || ZJ.length < eJ.length) && (eJ = ZJ)
+    function oB(BB) {
+      const TB = yB.map((TB => new Set(BB.map(TB)))),
+        dB = TB.reduce(((BB, TB) => BB * TB.size), 1),
+        VB = TB.every(((BB, TB) => 1 === BB.size || BB.size === gB[TB]));
+      if (dB === BB.length && VB) return [yB.filter(((BB, dB) => 1 === TB[dB].size)).map((TB => TB(BB[0])))];
+      let pB = null;
+      for (let lB = 0; lB < yB.length; lB++) {
+        if (1 === TB[lB].size) continue;
+        const dB = kB(BB, yB[lB]).flatMap(oB);
+        (null === pB || dB.length < pB.length) && (pB = dB)
       }
-      return eJ
+      return pB
     }
 
-    function hJ(JJ, cJ) {
-      const ZJ = new Map;
-      for (const UJ of JJ) {
-        var FJ;
-        const JJ = cJ(UJ);
-        ZJ.set(JJ, [...null !== (FJ = ZJ.get(JJ)) && void 0 !== FJ ? FJ : [], UJ])
+    function kB(BB, TB) {
+      const dB = new Map;
+      for (const yB of BB) {
+        var VB;
+        const BB = TB(yB);
+        dB.set(BB, [...null !== (VB = dB.get(BB)) && void 0 !== VB ? VB : [], yB])
       }
-      return [...ZJ.values()]
+      return [...dB.values()]
     }
   },
-  5951: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      b: () => FJ.f,
-      e: () => UJ,
-      i: () => FJ.k
+  5940: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => VB.h,
+      h: () => yB,
+      l: () => VB.p
     });
-    var FJ = ZJ(5934);
-    const UJ = [!1, !0].flatMap((JJ => ["terrain", "liquid", "model"].map((cJ => ({
-      strict: JJ,
-      program: cJ
+    var VB = dB(5924);
+    const yB = [!1, !0].flatMap((BB => ["terrain", "liquid", "model"].map((TB => ({
+      strict: BB,
+      program: TB
     })))))
   },
-  5996: (JJ, cJ, ZJ) => {
-    ZJ.r(cJ), ZJ.d(cJ, {
-      forgetShaderPackActiveHint: () => MJ,
-      isOtherApiVersion: () => KJ,
-      isShaderPackActive: () => mJ,
-      isShaderPackChangePending: () => VJ,
-      markShaderPackChangePending: () => EJ,
-      pageShaderPackValidationVersion: () => yJ,
-      reconcileStoredShaderPackHint: () => IJ,
-      removeShaderPack: () => vJ,
-      replaceShaderPack: () => fJ,
-      saveShaderPack: () => GJ,
-      shaderPackNeedsCheck: () => SJ,
-      storedPackOutcome: () => QJ,
-      storedShaderPackFiles: () => DJ,
-      toStoredShaderPack: () => hJ
+  5987: (BB, TB, dB) => {
+    dB.r(TB), dB.d(TB, {
+      forgetShaderPackActiveHint: () => UB,
+      isOtherApiVersion: () => sB,
+      isShaderPackActive: () => iB,
+      isShaderPackChangePending: () => fB,
+      markShaderPackChangePending: () => tB,
+      pageShaderPackValidationVersion: () => MB,
+      reconcileStoredShaderPackHint: () => wB,
+      removeShaderPack: () => mB,
+      replaceShaderPack: () => HB,
+      saveShaderPack: () => uB,
+      shaderPackNeedsCheck: () => zB,
+      storedPackOutcome: () => NB,
+      storedShaderPackFiles: () => LB,
+      toStoredShaderPack: () => kB
     });
-    var FJ = ZJ(5934),
-      UJ = ZJ(5951),
-      eJ = ZJ(29),
-      XJ = ZJ(2938),
-      AJ = ZJ(6004),
-      qJ = ZJ(5977);
-    const jJ = "shaderPackChangePending";
-    let YJ = null;
+    var VB = dB(5924),
+      yB = dB(5940),
+      pB = dB(33),
+      lB = dB(2939),
+      JB = dB(5994),
+      YB = dB(5973);
+    const gB = "shaderPackChangePending";
+    let oB = null;
 
-    function hJ(JJ, cJ, ZJ) {
+    function kB(BB, TB, dB) {
       return {
-        manifest: JJ.manifest,
-        files: (0, FJ.o)(JJ.files),
-        validation: cJ,
-        ...ZJ && {
-          listing: ZJ
+        manifest: BB.manifest,
+        files: (0, VB.u)(BB.files),
+        validation: TB,
+        ...dB && {
+          listing: dB
         }
       }
     }
 
-    function DJ(JJ) {
-      return Object.keys(JJ.files).map((cJ => ({
-        path: cJ,
-        source: JJ.files[cJ]
+    function LB(BB) {
+      return Object.keys(BB.files).map((TB => ({
+        path: TB,
+        source: BB.files[TB]
       })))
     }
-    let sJ = Promise.resolve();
+    let OB = Promise.resolve();
 
-    function nJ(JJ) {
-      const cJ = sJ.then(JJ);
-      return sJ = cJ.catch((() => {})), cJ
-    }
-
-    function GJ(JJ, cJ) {
-      return nJ((() => xJ(JJ, cJ)))
+    function DB(BB) {
+      const TB = OB.then(BB);
+      return OB = TB.catch((() => {})), TB
     }
 
-    function fJ(JJ, cJ, ZJ) {
-      return nJ((async () => JSON.stringify(await (0, AJ.f)()) === JSON.stringify(JJ) && (null === cJ ? (await rJ(), !0) : xJ(cJ, ZJ))))
-    }
-    async function xJ(JJ, cJ) {
-      const ZJ = await eJ.g.setItem(AJ.e, JJ);
-      return ZJ && bJ(JJ, cJ), ZJ
-    }
-    async function rJ() {
-      await eJ.g.removeItem(AJ.e), eJ.j.removeItem(XJ.b)
+    function uB(BB, TB) {
+      return DB((() => EB(BB, TB)))
     }
 
-    function vJ() {
-      return nJ(rJ)
+    function HB(BB, TB, dB) {
+      return DB((async () => JSON.stringify(await (0, JB.d)()) === JSON.stringify(BB) && (null === TB ? (await vB(), !0) : EB(TB, dB))))
+    }
+    async function EB(BB, TB) {
+      const dB = await pB.f.setItem(JB.b, BB);
+      return dB && FB(BB, TB), dB
+    }
+    async function vB() {
+      await pB.f.removeItem(JB.b), pB.j.removeItem(lB.d)
     }
 
-    function mJ(JJ, cJ) {
-      return "active" === QJ(JJ, cJ).kind
+    function mB() {
+      return DB(vB)
     }
 
-    function QJ(JJ, cJ) {
-      var ZJ;
-      return null === JJ ? {
+    function iB(BB, TB) {
+      return "active" === NB(BB, TB).kind
+    }
+
+    function NB(BB, TB) {
+      var dB;
+      return null === BB ? {
         kind: "none",
         reason: "nothingStored"
-      } : KJ(JJ) ? {
+      } : sB(BB) ? {
         kind: "none",
         reason: "otherApiVersion"
-      } : !1 !== (null === (ZJ = JJ.validation) || void 0 === ZJ ? void 0 : ZJ.ok) || JJ.validation.fromRecheck ? null === cJ ? {
+      } : !1 !== (null === (dB = BB.validation) || void 0 === dB ? void 0 : dB.ok) || BB.validation.fromRecheck ? null === TB ? {
         kind: "none",
         reason: "noCompiler"
-      } : SJ(JJ, cJ) ? {
+      } : zB(BB, TB) ? {
         kind: "blocked",
         messageKey: "shaderPack:failedUnchecked"
-      } : JJ.validation.ok ? {
+      } : BB.validation.ok ? {
         kind: "active"
       } : {
         kind: "blocked",
@@ -568,326 +568,326 @@ export const modules = {
       }
     }
 
-    function EJ() {
-      eJ.k.setItem(jJ, performance.timeOrigin)
+    function tB() {
+      pB.m.setItem(gB, performance.timeOrigin)
     }
 
-    function VJ() {
-      return eJ.k.getItem(jJ) === performance.timeOrigin
+    function fB() {
+      return pB.m.getItem(gB) === performance.timeOrigin
     }
 
-    function KJ(JJ) {
-      return !(0, UJ.i)(JJ.manifest.apiVersion)
+    function sB(BB) {
+      return !(0, yB.l)(BB.manifest.apiVersion)
     }
 
-    function yJ(JJ) {
-      return YJ ??= JJ.Uy((0, qJ.shaderPackTextures)()), YJ
+    function MB(BB) {
+      return oB ??= BB.PU((0, YB.shaderPackTextures)()), oB
     }
 
-    function SJ(JJ, cJ) {
-      var ZJ;
-      return (null === (ZJ = JJ.validation) || void 0 === ZJ ? void 0 : ZJ.headerVersion) !== yJ(cJ)
+    function zB(BB, TB) {
+      var dB;
+      return (null === (dB = BB.validation) || void 0 === dB ? void 0 : dB.headerVersion) !== MB(TB)
     }
 
-    function IJ(JJ) {
-      return nJ((async () => {
-        bJ(await (0, AJ.f)(!0), JJ)
+    function wB(BB) {
+      return DB((async () => {
+        FB(await (0, JB.d)(!0), BB)
       }))
     }
 
-    function MJ() {
-      return nJ((async () => {
-        eJ.j.removeItem(XJ.b)
+    function UB() {
+      return DB((async () => {
+        pB.j.removeItem(lB.d)
       }))
     }
 
-    function bJ(JJ, cJ) {
-      mJ(JJ, cJ) ? eJ.j.setItem(XJ.b, !0) : eJ.j.removeItem(XJ.b)
+    function FB(BB, TB) {
+      iB(BB, TB) ? pB.j.setItem(lB.d, !0) : pB.j.removeItem(lB.d)
     }
   },
-  5977: (JJ, cJ, ZJ) => {
-    ZJ.r(cJ), ZJ.d(cJ, {
-      loadShaderPackTextures: () => XJ,
-      shaderPackTextures: () => AJ
+  5973: (BB, TB, dB) => {
+    dB.r(TB), dB.d(TB, {
+      loadShaderPackTextures: () => lB,
+      shaderPackTextures: () => JB
     });
-    var FJ = ZJ(5934);
-    let UJ = null,
-      eJ = null;
+    var VB = dB(5924);
+    let yB = null,
+      pB = null;
 
-    function XJ() {
-      return eJ ??= Promise.all([ZJ.e(64), ZJ.e(184)]).then((() => ZJ(39255))).then((JJ => {
+    function lB() {
+      return pB ??= Promise.all([dB.e(64), dB.e(184)]).then((() => dB(39231))).then((BB => {
         let {
-          FORMER_BLOCK_IMAGE_NAMES: cJ,
-          textureNameToIndex: ZJ,
-          textureAnimationData: eJ
-        } = JJ;
-        return UJ ??= (0, FJ.g)(ZJ, eJ, cJ), UJ
-      })), eJ
+          FORMER_BLOCK_IMAGE_NAMES: TB,
+          textureNameToIndex: dB,
+          textureAnimationData: pB
+        } = BB;
+        return yB ??= (0, VB.l)(dB, pB, TB), yB
+      })), pB
     }
 
-    function AJ() {
-      if (null === UJ) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return UJ
+    function JB() {
+      if (null === yB) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return yB
     }
   },
-  5994: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => qJ,
-      f: () => AJ
+  5985: (BB, TB, dB) => {
+    dB.d(TB, {
+      c: () => YB,
+      f: () => JB
     });
-    var FJ = ZJ(5996),
-      UJ = ZJ(5977),
-      eJ = ZJ(95);
-    const XJ = 100;
-    async function AJ(JJ, cJ) {
-      var ZJ;
-      let FJ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (ZJ = navigator.gpu) && void 0 !== ZJ ? ZJ : null;
-      const XJ = JJ.W4(cJ, (0, UJ.shaderPackTextures)());
-      if (XJ.errors.length > 0) return jJ(JJ, XJ.errors, XJ.offInStrict);
-      const AJ = await async function(JJ) {
-        if (!JJ) return null;
+    var VB = dB(5987),
+      yB = dB(5973),
+      pB = dB(113);
+    const lB = 100;
+    async function JB(BB, TB) {
+      var dB;
+      let VB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (dB = navigator.gpu) && void 0 !== dB ? dB : null;
+      const lB = BB.iBB(TB, (0, yB.shaderPackTextures)());
+      if (lB.errors.length > 0) return gB(BB, lB.errors, lB.offInStrict);
+      const JB = await async function(BB) {
+        if (!BB) return null;
         try {
-          const cJ = await (0, eJ.u)(JJ);
-          return cJ ? await cJ.requestDevice() : null
-        } catch (cJ) {
-          return console.error("Couldn't get a WebGPU device to validate the shader pack.", cJ), null
+          const TB = await (0, pB.q)(BB);
+          return TB ? await TB.requestDevice() : null
+        } catch (TB) {
+          return console.error("Couldn't get a WebGPU device to validate the shader pack.", TB), null
         }
-      }(FJ);
-      if (!AJ) return null;
-      let qJ = !1;
-      AJ.lost.then((() => {
-        qJ = !0
+      }(VB);
+      if (!JB) return null;
+      let YB = !1;
+      JB.lost.then((() => {
+        YB = !0
       }));
       try {
-        const cJ = await Promise.all(XJ.validationModules.map((cJ => async function(JJ, cJ, ZJ) {
-          cJ.pushErrorScope("validation");
-          const FJ = cJ.createShaderModule({
-              code: ZJ.code
+        const TB = await Promise.all(lB.validationModules.map((TB => async function(BB, TB, dB) {
+          TB.pushErrorScope("validation");
+          const VB = TB.createShaderModule({
+              code: dB.code
             }),
-            UJ = cJ.popErrorScope(),
+            yB = TB.popErrorScope(),
             {
-              messages: eJ
-            } = await FJ.getCompilationInfo(),
-            XJ = eJ.filter((JJ => "error" === JJ.type)).map((cJ => JJ.mapValidationMessage(ZJ, cJ))),
-            AJ = await UJ;
-          AJ && 0 === XJ.length && XJ.push({
+              messages: pB
+            } = await VB.getCompilationInfo(),
+            lB = pB.filter((BB => "error" === BB.type)).map((TB => BB.mapValidationMessage(dB, TB))),
+            JB = await yB;
+          JB && 0 === lB.length && lB.push({
             file: null,
             line: 0,
-            message: AJ.message,
-            variants: [ZJ.key]
+            message: JB.message,
+            variants: [dB.key]
           });
-          return XJ
-        }(JJ, AJ, cJ))));
-        return qJ ? null : jJ(JJ, JJ.kZJ(cJ.flat()), XJ.offInStrict)
-      } catch (YJ) {
-        return console.error("Couldn't validate the shader pack on WebGPU.", YJ), null
+          return lB
+        }(BB, JB, TB))));
+        return YB ? null : gB(BB, BB.LVB(TB.flat()), lB.offInStrict)
+      } catch (oB) {
+        return console.error("Couldn't validate the shader pack on WebGPU.", oB), null
       } finally {
-        AJ.destroy()
+        JB.destroy()
       }
     }
-    async function qJ(JJ, cJ) {
-      var ZJ;
-      if (!(0, FJ.shaderPackNeedsCheck)(JJ, cJ) || (0, FJ.isOtherApiVersion)(JJ)) return JJ;
-      const UJ = await AJ(cJ, (0, FJ.storedShaderPackFiles)(JJ));
-      if (!UJ) return JJ;
-      const eJ = !1 === (null === (ZJ = JJ.validation) || void 0 === ZJ ? void 0 : ZJ.ok) && !JJ.validation.fromRecheck,
-        XJ = {
-          ...JJ,
-          validation: eJ ? UJ : {
-            ...UJ,
+    async function YB(BB, TB) {
+      var dB;
+      if (!(0, VB.shaderPackNeedsCheck)(BB, TB) || (0, VB.isOtherApiVersion)(BB)) return BB;
+      const yB = await JB(TB, (0, VB.storedShaderPackFiles)(BB));
+      if (!yB) return BB;
+      const pB = !1 === (null === (dB = BB.validation) || void 0 === dB ? void 0 : dB.ok) && !BB.validation.fromRecheck,
+        lB = {
+          ...BB,
+          validation: pB ? yB : {
+            ...yB,
             fromRecheck: !0
           }
         };
-      return await (0, FJ.replaceShaderPack)(JJ, XJ, cJ) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), XJ
+      return await (0, VB.replaceShaderPack)(BB, lB, TB) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), lB
     }
 
-    function jJ(JJ, cJ, ZJ) {
+    function gB(BB, TB, dB) {
       return {
-        headerVersion: (0, FJ.pageShaderPackValidationVersion)(JJ),
-        ok: 0 === cJ.length,
-        errors: cJ.slice(0, XJ),
-        moreErrors: Math.max(0, cJ.length - XJ),
-        offInStrict: ZJ
+        headerVersion: (0, VB.pageShaderPackValidationVersion)(BB),
+        ok: 0 === TB.length,
+        errors: TB.slice(0, lB),
+        moreErrors: Math.max(0, TB.length - lB),
+        offInStrict: dB
       }
     }
   },
-  5934: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      b: () => XJ,
-      d: () => eJ,
-      f: () => FJ,
-      g: () => nJ,
-      j: () => YJ,
-      k: () => UJ,
-      l: () => qJ,
-      o: () => jJ,
-      q: () => hJ
+  5924: (BB, TB, dB) => {
+    dB.d(TB, {
+      c: () => lB,
+      d: () => pB,
+      h: () => VB,
+      l: () => DB,
+      m: () => oB,
+      p: () => yB,
+      q: () => YB,
+      u: () => gB,
+      x: () => kB
     });
-    const FJ = 5;
+    const VB = 5;
 
-    function UJ(JJ) {
-      return JJ === FJ
+    function yB(BB) {
+      return BB === VB
     }
-    const eJ = 262144,
-      XJ = 256,
-      AJ = 256;
+    const pB = 262144,
+      lB = 256,
+      JB = 256;
 
-    function qJ(JJ) {
-      if ("object" !== typeof JJ || null === JJ || Array.isArray(JJ)) return "The pack has no files.";
-      const cJ = [];
-      for (const [ZJ, FJ] of Object.entries(JJ)) {
-        if ("string" !== typeof FJ) return `${ZJ} isn't text.`;
-        cJ.push({
-          path: ZJ,
-          source: FJ
+    function YB(BB) {
+      if ("object" !== typeof BB || null === BB || Array.isArray(BB)) return "The pack has no files.";
+      const TB = [];
+      for (const [dB, VB] of Object.entries(BB)) {
+        if ("string" !== typeof VB) return `${dB} isn't text.`;
+        TB.push({
+          path: dB,
+          source: VB
         })
       }
-      return cJ.sort(((JJ, cJ) => YJ(JJ.path, cJ.path))),
-        function(JJ) {
-          if (0 === JJ.length) return "The pack has no .wgsl files.";
-          if (JJ.length > XJ) return `The pack has more than ${XJ} .wgsl files.`;
-          const cJ = new Set;
+      return TB.sort(((BB, TB) => oB(BB.path, TB.path))),
+        function(BB) {
+          if (0 === BB.length) return "The pack has no .wgsl files.";
+          if (BB.length > lB) return `The pack has more than ${lB} .wgsl files.`;
+          const TB = new Set;
           for (const {
-              path: ZJ
+              path: dB
             }
-            of JJ) {
-            const JJ = DJ(ZJ);
-            if (null !== JJ) return JJ;
-            if (cJ.has(ZJ)) return `The pack has two files at ${ZJ}.`;
-            cJ.add(ZJ)
+            of BB) {
+            const BB = LB(dB);
+            if (null !== BB) return BB;
+            if (TB.has(dB)) return `The pack has two files at ${dB}.`;
+            TB.add(dB)
           }
-          return hJ(JJ) > eJ ? `The pack's .wgsl files are over ${eJ/1024} KB in total.` : null
-        }(cJ) ?? cJ
+          return kB(BB) > pB ? `The pack's .wgsl files are over ${pB/1024} KB in total.` : null
+        }(TB) ?? TB
     }
 
-    function jJ(JJ) {
-      const cJ = {};
-      for (const ZJ of JJ) cJ[ZJ.path] = ZJ.source;
-      return cJ
+    function gB(BB) {
+      const TB = {};
+      for (const dB of BB) TB[dB.path] = dB.source;
+      return TB
     }
 
-    function YJ(JJ, cJ) {
-      return JJ < cJ ? -1 : JJ > cJ ? 1 : 0
+    function oB(BB, TB) {
+      return BB < TB ? -1 : BB > TB ? 1 : 0
     }
 
-    function hJ(JJ) {
-      const cJ = new TextEncoder;
-      let ZJ = 0;
+    function kB(BB) {
+      const TB = new TextEncoder;
+      let dB = 0;
       for (const {
-          source: FJ
+          source: VB
         }
-        of JJ) ZJ += cJ.encode(FJ).byteLength;
-      return ZJ
+        of BB) dB += TB.encode(VB).byteLength;
+      return dB
     }
 
-    function DJ(JJ) {
-      if (!JJ.toLowerCase().endsWith(".wgsl")) return `${JJ} isn't a .wgsl file.`;
-      if (JJ.length > AJ) return `A file path is over ${AJ} characters.`;
-      if (JJ.includes("\\") || /[\u0000-\u001f]/.test(JJ)) return `${JJ} isn't a valid file path.`;
-      return JJ.split("/").some((JJ => "" === JJ || "." === JJ || ".." === JJ)) ? `${JJ} isn't a valid file path.` : null
+    function LB(BB) {
+      if (!BB.toLowerCase().endsWith(".wgsl")) return `${BB} isn't a .wgsl file.`;
+      if (BB.length > JB) return `A file path is over ${JB} characters.`;
+      if (BB.includes("\\") || /[\u0000-\u001f]/.test(BB)) return `${BB} isn't a valid file path.`;
+      return BB.split("/").some((BB => "" === BB || "." === BB || ".." === BB)) ? `${BB} isn't a valid file path.` : null
     }
-    const sJ = /^(.*)\[rot\[([1-4])$/;
+    const OB = /^(.*)\[rot\[([1-4])$/;
 
-    function nJ(JJ, cJ) {
-      let ZJ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const FJ = new Map;
-      cJ.forEach(((JJ, cJ) => {
+    function DB(BB, TB) {
+      let dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const VB = new Map;
+      TB.forEach(((BB, TB) => {
         let {
-          numAnimStates: ZJ,
-          animStartIdx: UJ
-        } = JJ;
-        for (let eJ = 1; eJ < ZJ; eJ++) FJ.set(UJ + eJ - 1, cJ)
+          numAnimStates: dB,
+          animStartIdx: yB
+        } = BB;
+        for (let pB = 1; pB < dB; pB++) VB.set(yB + pB - 1, TB)
       }));
-      const UJ = Object.entries(JJ),
-        eJ = new Map;
-      for (const [GJ, fJ] of UJ) {
-        const JJ = sJ.exec(GJ);
-        "1" === JJ?.[2] && eJ.set(JJ[1], fJ + 1)
+      const yB = Object.entries(BB),
+        pB = new Map;
+      for (const [uB, HB] of yB) {
+        const BB = OB.exec(uB);
+        "1" === BB?.[2] && pB.set(BB[1], HB + 1)
       }
-      const XJ = JJ => {
-          const cJ = sJ.exec(JJ);
-          return cJ && eJ.has(cJ[1]) ? {
-            root: cJ[1],
-            rotation: Number(cJ[2]) - 1
+      const lB = BB => {
+          const TB = OB.exec(BB);
+          return TB && pB.has(TB[1]) ? {
+            root: TB[1],
+            rotation: Number(TB[2]) - 1
           } : null
         },
-        AJ = new Set(UJ.map((JJ => {
-          let [cJ] = JJ;
-          return XJ(cJ)?.root ?? cJ
+        JB = new Set(yB.map((BB => {
+          let [TB] = BB;
+          return lB(TB)?.root ?? TB
         }))),
-        qJ = (JJ, ZJ) => {
-          const FJ = JJ.replace(/_?0$/, "");
-          return (cJ[ZJ]?.numAnimStates ?? 0) > 1 && !AJ.has(FJ) ? FJ : JJ
+        YB = (BB, dB) => {
+          const VB = BB.replace(/_?0$/, "");
+          return (TB[dB]?.numAnimStates ?? 0) > 1 && !JB.has(VB) ? VB : BB
         },
-        jJ = new Map;
-      for (const [sJ, GJ] of UJ) jJ.set(GJ, qJ(XJ(sJ)?.root ?? sJ, GJ));
-      const YJ = UJ.reduce(((JJ, cJ) => {
-          let [, ZJ] = cJ;
-          return Math.max(JJ, ZJ + 1)
+        gB = new Map;
+      for (const [OB, uB] of yB) gB.set(uB, YB(lB(OB)?.root ?? OB, uB));
+      const oB = yB.reduce(((BB, TB) => {
+          let [, dB] = TB;
+          return Math.max(BB, dB + 1)
         }), 0),
-        hJ = Array.from({
-          length: YJ
-        }, ((JJ, cJ) => ({
-          id: cJ + 1,
+        kB = Array.from({
+          length: oB
+        }, ((BB, TB) => ({
+          id: TB + 1,
           rotation: 0
         }))),
-        DJ = new Map,
-        nJ = new Map;
-      for (const [sJ, GJ] of UJ) {
-        const JJ = XJ(sJ),
-          cJ = FJ.get(GJ);
-        if (void 0 !== cJ) {
-          const ZJ = jJ.get(cJ);
-          nJ.set(sJ, {
-            name: sJ,
-            texture: ZJ,
+        LB = new Map,
+        DB = new Map;
+      for (const [OB, uB] of yB) {
+        const BB = lB(OB),
+          TB = VB.get(uB);
+        if (void 0 !== TB) {
+          const dB = gB.get(TB);
+          DB.set(OB, {
+            name: OB,
+            texture: dB,
             kind: "frame"
-          }), JJ && !nJ.has(JJ.root) && nJ.set(JJ.root, {
-            name: JJ.root,
-            texture: ZJ,
+          }), BB && !DB.has(BB.root) && DB.set(BB.root, {
+            name: BB.root,
+            texture: dB,
             kind: "frame"
           });
           continue
         }
-        const ZJ = jJ.get(GJ),
-          UJ = JJ?.root ?? sJ;
-        if (ZJ !== UJ && nJ.set(UJ, {
-            name: UJ,
-            texture: ZJ,
+        const dB = gB.get(uB),
+          yB = BB?.root ?? OB;
+        if (dB !== yB && DB.set(yB, {
+            name: yB,
+            texture: dB,
             kind: "frame"
-          }), JJ) {
-          const cJ = eJ.get(JJ.root);
-          hJ[GJ] = {
-            id: cJ,
-            rotation: JJ.rotation
-          }, DJ.set(ZJ, cJ), nJ.set(sJ, {
-            name: sJ,
-            texture: ZJ,
+          }), BB) {
+          const TB = pB.get(BB.root);
+          kB[uB] = {
+            id: TB,
+            rotation: BB.rotation
+          }, LB.set(dB, TB), DB.set(OB, {
+            name: OB,
+            texture: dB,
             kind: "rotation"
           })
-        } else DJ.set(ZJ, GJ + 1)
+        } else LB.set(dB, uB + 1)
       }
-      for (const sJ of DJ.keys()) nJ.delete(sJ);
-      for (const [sJ, GJ] of ZJ) {
-        const JJ = DJ.get(GJ);
-        void 0 === JJ || DJ.has(sJ) || (DJ.set(sJ, JJ), nJ.delete(sJ))
+      for (const OB of LB.keys()) DB.delete(OB);
+      for (const [OB, uB] of dB) {
+        const BB = LB.get(uB);
+        void 0 === BB || LB.has(OB) || (LB.set(OB, BB), DB.delete(OB))
       }
       return {
-        named: [...DJ].sort(((JJ, cJ) => {
-          let [ZJ] = JJ, [FJ] = cJ;
-          return ZJ < FJ ? -1 : ZJ > FJ ? 1 : 0
-        })).map((JJ => {
-          let [cJ, ZJ] = JJ;
+        named: [...LB].sort(((BB, TB) => {
+          let [dB] = BB, [VB] = TB;
+          return dB < VB ? -1 : dB > VB ? 1 : 0
+        })).map((BB => {
+          let [TB, dB] = BB;
           return {
-            name: cJ,
-            id: ZJ
+            name: TB,
+            id: dB
           }
         })),
-        aliases: [...nJ.values()],
-        layers: hJ
+        aliases: [...DB.values()],
+        layers: kB
       }
     }
   }
 };
 Object.freeze(modules);
-for (const JJ in modules) Object.freeze(modules[JJ]);
+for (const BB in modules) Object.freeze(modules[BB]);

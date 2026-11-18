@@ -1,597 +1,597 @@
 export const id = 25;
 export const ids = [25];
 export const modules = {
-  35658: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      b: () => sJ,
-      f: () => nJ,
-      j: () => DJ,
-      m: () => hJ
+  35589: (BB, TB, dB) => {
+    dB.d(TB, {
+      c: () => OB,
+      e: () => DB,
+      h: () => LB,
+      l: () => kB
     });
-    var FJ = ZJ(8557),
-      UJ = ZJ(35661),
-      eJ = ZJ(35665),
-      XJ = ZJ(8068),
-      AJ = ZJ(1326),
-      qJ = ZJ(47),
-      jJ = ZJ(60),
-      YJ = ZJ(990);
+    var VB = dB(8570),
+      yB = dB(35595),
+      pB = dB(35601),
+      lB = dB(8103),
+      JB = dB(1317),
+      YB = dB(62),
+      gB = dB(72),
+      oB = dB(980);
 
-    function hJ() {
-      var JJ;
-      return (0, AJ.m)(UJ.b, (0, UJ.m)()), (0, YJ.jsx)(YJ.Fragment, {
-        children: null === (JJ = (0, UJ.m)()) || void 0 === JJ ? void 0 : JJ.content
+    function kB() {
+      var BB;
+      return (0, JB.f)(yB.c, (0, yB.k)()), (0, oB.jsx)(oB.Fragment, {
+        children: null === (BB = (0, yB.k)()) || void 0 === BB ? void 0 : BB.content
       })
     }
 
-    function DJ(JJ) {
-      var cJ;
+    function LB(BB) {
+      var TB;
       let {
-        show: ZJ
-      } = JJ;
-      (0, AJ.m)(UJ.b, (0, UJ.m)());
-      const jJ = null === (cJ = (0, UJ.m)()) || void 0 === cJ ? void 0 : cJ.menu;
-      return (0, qJ.useEffect)((() => {
-        var JJ;
-        ZJ || (null === jJ || void 0 === jJ || null === (JJ = jJ.onClose) || void 0 === JJ || JJ.call(jJ), (0, eJ.m)())
-      }), [ZJ, jJ]), (0, qJ.useEffect)((() => ZJ ? (0, XJ.f)(eJ.v, eJ.c) : void 0), [ZJ]), (0, YJ.jsx)(FJ.c, {
-        showing: ZJ,
+        show: dB
+      } = BB;
+      (0, JB.f)(yB.c, (0, yB.k)());
+      const gB = null === (TB = (0, yB.k)()) || void 0 === TB ? void 0 : TB.menu;
+      return (0, YB.useEffect)((() => {
+        var BB;
+        dB || (null === gB || void 0 === gB || null === (BB = gB.onClose) || void 0 === BB || BB.call(gB), (0, pB.r)())
+      }), [dB, gB]), (0, YB.useEffect)((() => dB ? (0, lB.c)(pB.x, pB.e) : void 0), [dB]), (0, oB.jsx)(VB.d, {
+        showing: dB,
         globallyUniqueKey: "clientGameMenu",
-        children: null === jJ || void 0 === jJ ? void 0 : jJ.content
+        children: null === gB || void 0 === gB ? void 0 : gB.content
       })
     }
 
-    function sJ(JJ) {
+    function OB(BB) {
       let {
-        placement: cJ = "bottom"
-      } = JJ;
-      return (0, YJ.jsx)("div", {
-        id: `clientGameHud-${cJ}`,
+        placement: TB = "bottom"
+      } = BB;
+      return (0, oB.jsx)("div", {
+        id: `clientGameHud-${TB}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function nJ(JJ) {
+    function DB(BB) {
       let {
-        children: cJ,
-        placement: ZJ = "bottom"
-      } = JJ;
-      const [FJ, UJ] = (0, qJ.useState)(null);
-      return (0, qJ.useEffect)((() => {
-        UJ(document.getElementById(`clientGameHud-${ZJ}`))
-      }), [ZJ]), FJ ? (0, jJ.createPortal)(cJ, FJ) : null
+        children: TB,
+        placement: dB = "bottom"
+      } = BB;
+      const [VB, yB] = (0, YB.useState)(null);
+      return (0, YB.useEffect)((() => {
+        yB(document.getElementById(`clientGameHud-${dB}`))
+      }), [dB]), VB ? (0, gB.createPortal)(TB, VB) : null
     }
   },
-  4225: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      c: () => fJ,
-      d: () => xJ
+  4226: (BB, TB, dB) => {
+    dB.d(TB, {
+      e: () => HB,
+      h: () => EB
     });
-    var FJ = ZJ(926),
-      UJ = ZJ.n(FJ),
-      eJ = ZJ(47),
-      XJ = ZJ(1086),
-      AJ = ZJ(4233),
-      qJ = ZJ(1675),
-      jJ = ZJ(2175),
-      YJ = ZJ(4242),
-      hJ = ZJ(990);
-    const DJ = new WeakMap;
-    let sJ = 0;
+    var VB = dB(933),
+      yB = dB.n(VB),
+      pB = dB(62),
+      lB = dB(1078),
+      JB = dB(4232),
+      YB = dB(1657),
+      gB = dB(2139),
+      oB = dB(4240),
+      kB = dB(980);
+    const LB = new WeakMap;
+    let OB = 0;
 
-    function nJ(JJ) {
-      let cJ = DJ.get(JJ);
-      return void 0 === cJ && (cJ = sJ++, DJ.set(JJ, cJ)), cJ
+    function DB(BB) {
+      let TB = LB.get(BB);
+      return void 0 === TB && (TB = OB++, LB.set(BB, TB)), TB
     }
 
-    function GJ(JJ) {
+    function uB(BB) {
       let {
-        piece: cJ
-      } = JJ;
-      return "space" === cJ.kind ? (0, hJ.jsx)(hJ.Fragment, {
-        children: cJ.text
-      }) : (0, hJ.jsx)("span", {
+        piece: TB
+      } = BB;
+      return "space" === TB.kind ? (0, kB.jsx)(kB.Fragment, {
+        children: TB.text
+      }) : (0, kB.jsx)("span", {
         className: "DialogueWord",
         style: {
-          "--word-delay": `${cJ.delayMs}ms`
+          "--word-delay": `${TB.delayMs}ms`
         },
-        children: (0, hJ.jsx)(AJ.c, {
-          text: "icon" === cJ.kind ? `[[${cJ.icon}]]` : cJ.text
+        children: (0, kB.jsx)(JB.d, {
+          text: "icon" === TB.kind ? `[[${TB.icon}]]` : TB.text
         })
       })
     }
 
-    function fJ(JJ) {
+    function HB(BB) {
       let {
-        display: cJ
-      } = JJ;
+        display: TB
+      } = BB;
       const {
-        selectedLanguage: ZJ
-      } = (0, XJ.F)(), FJ = (0, eJ.useMemo)((() => (0, YJ.d)((0, YJ.f)(cJ).plan.pieces)), [cJ, ZJ.code]);
-      return (0, hJ.jsxs)("div", {
-        className: UJ()("Dialogue", {
-          DialogueAnimateIn: !1 !== cJ.animateIn
+        selectedLanguage: dB
+      } = (0, lB.z)(), VB = (0, pB.useMemo)((() => (0, oB.e)((0, oB.f)(TB).plan.pieces)), [TB, dB.code]);
+      return (0, kB.jsxs)("div", {
+        className: yB()("Dialogue", {
+          DialogueAnimateIn: !1 !== TB.animateIn
         }),
-        children: [cJ.speakerName && (0, hJ.jsx)(qJ.d, {
-          text: cJ.speakerName,
+        children: [TB.speakerName && (0, kB.jsx)(YB.e, {
+          text: TB.speakerName,
           className: "DialogueSpeaker"
-        }), (0, hJ.jsx)("p", {
+        }), (0, kB.jsx)("p", {
           className: "DialogueLine",
-          children: FJ.map(((JJ, cJ) => 1 === JJ.length && "space" === JJ[0].kind ? JJ[0].text : (0, hJ.jsx)("span", {
+          children: VB.map(((BB, TB) => 1 === BB.length && "space" === BB[0].kind ? BB[0].text : (0, kB.jsx)("span", {
             className: "DialogueGlue",
-            children: JJ.map(((JJ, cJ) => (0, hJ.jsx)(GJ, {
-              piece: JJ
-            }, cJ)))
-          }, cJ)))
+            children: BB.map(((BB, TB) => (0, kB.jsx)(uB, {
+              piece: BB
+            }, TB)))
+          }, TB)))
         })]
       })
     }
-    const xJ = (0, eJ.memo)((function() {
-      const JJ = (0, jJ.f)("dialogue");
-      return (0, hJ.jsx)("div", {
+    const EB = (0, pB.memo)((function() {
+      const BB = (0, gB.j)("dialogue");
+      return (0, kB.jsx)("div", {
         className: "DialogueAnchor",
         "data-camera-keeper": "",
         role: "status",
         "aria-live": "polite",
         "aria-atomic": "true",
-        children: JJ && (0, hJ.jsx)(fJ, {
-          display: JJ
-        }, nJ(JJ))
+        children: BB && (0, kB.jsx)(HB, {
+          display: BB
+        }, DB(BB))
       })
     }))
   },
-  4233: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      c: () => AJ
+  4232: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => JB
     });
-    var FJ = ZJ(47),
-      UJ = ZJ(227),
-      eJ = ZJ(1688),
-      XJ = ZJ(990);
+    var VB = dB(62),
+      yB = dB(270),
+      pB = dB(1666),
+      lB = dB(980);
 
-    function AJ(JJ) {
+    function JB(BB) {
       let {
-        text: cJ
-      } = JJ;
-      const ZJ = [];
-      let AJ = "";
-      return (0, UJ.Sb)(cJ).forEach(((JJ, cJ) => {
-        if ("string" === typeof JJ || !(0, eJ.e)(JJ.icon)) return void(AJ += "string" === typeof JJ ? JJ : JJ.icon);
-        const UJ = Math.max(0, AJ.trimEnd().search(/\S{1,12}$/));
-        ZJ.push((0, XJ.jsxs)(FJ.Fragment, {
-          children: [AJ.slice(0, UJ), (0, XJ.jsxs)("span", {
+        text: TB
+      } = BB;
+      const dB = [];
+      let JB = "";
+      return (0, yB.hc)(TB).forEach(((BB, TB) => {
+        if ("string" === typeof BB || !(0, pB.d)(BB.icon)) return void(JB += "string" === typeof BB ? BB : BB.icon);
+        const yB = Math.max(0, JB.trimEnd().search(/\S{1,12}$/));
+        dB.push((0, lB.jsxs)(VB.Fragment, {
+          children: [JB.slice(0, yB), (0, lB.jsxs)("span", {
             className: "InlineIconTextGlue",
-            children: [AJ.slice(UJ), (0, XJ.jsx)("span", {
+            children: [JB.slice(yB), (0, lB.jsx)("span", {
               className: "InlineIconTextIcon",
               role: "img",
-              "aria-label": JJ.icon,
-              children: (0, XJ.jsx)(eJ.d, {
-                itemName: JJ.icon,
+              "aria-label": BB.icon,
+              children: (0, lB.jsx)(pB.c, {
+                itemName: BB.icon,
                 amount: 0
               })
             })]
           })]
-        }, cJ)), AJ = ""
-      })), ZJ.push(AJ), (0, XJ.jsx)(XJ.Fragment, {
-        children: ZJ
+        }, TB)), JB = ""
+      })), dB.push(JB), (0, lB.jsx)(lB.Fragment, {
+        children: dB
       })
     }
   },
-  8557: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      c: () => eJ
+  8570: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => pB
     });
-    var FJ = ZJ(3957),
-      UJ = ZJ(3966);
+    var VB = dB(3948),
+      yB = dB(3951);
 
-    function eJ(JJ) {
+    function pB(BB) {
       let {
-        children: cJ,
-        showing: ZJ,
-        globallyUniqueKey: eJ,
-        alwaysMountChildren: XJ = !1,
-        doGameplayStartStopOnShow: AJ = !0,
-        keepsMovement: qJ = !1
-      } = JJ;
-      return (0, UJ.c)(!0, ZJ, eJ, qJ), (0, FJ.c)(AJ, ZJ), ZJ || XJ ? cJ : null
+        children: TB,
+        showing: dB,
+        globallyUniqueKey: pB,
+        alwaysMountChildren: lB = !1,
+        doGameplayStartStopOnShow: JB = !0,
+        keepsMovement: YB = !1
+      } = BB;
+      return (0, yB.d)(!0, dB, pB, YB), (0, VB.e)(JB, dB), dB || lB ? TB : null
     }
   },
-  4242: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => HJ,
-      f: () => gJ
+  4240: (BB, TB, dB) => {
+    dB.d(TB, {
+      e: () => cB,
+      f: () => IB
     });
-    var FJ = ZJ(4245),
-      UJ = ZJ(227);
-    const eJ = 120,
-      XJ = 260,
-      AJ = 1.15,
-      qJ = 1.2,
-      jJ = 2,
-      YJ = 1.08,
-      hJ = .8,
-      DJ = .95,
-      sJ = 8,
-      nJ = "[\"')\\]\u300d\u300f\uff09]*",
-      GJ = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${nJ}$`),
-      fJ = new RegExp(`[?\uff1f]${nJ}$`),
-      xJ = new RegExp(`[!\uff01]${nJ}$`),
-      rJ = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-      vJ = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-      mJ = new RegExp(`[${vJ}]`),
-      QJ = new RegExp(`[${vJ}]|[^${vJ}]+`, "g"),
-      EJ = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+    var VB = dB(4247),
+      yB = dB(270);
+    const pB = 120,
+      lB = 260,
+      JB = 1.15,
+      YB = 1.2,
+      gB = 2,
+      oB = 1.08,
+      kB = .8,
+      LB = .95,
+      OB = 8,
+      DB = "[\"')\\]\u300d\u300f\uff09]*",
+      uB = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${DB}$`),
+      HB = new RegExp(`[?\uff1f]${DB}$`),
+      EB = new RegExp(`[!\uff01]${DB}$`),
+      vB = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+      mB = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+      iB = new RegExp(`[${mB}]`),
+      NB = new RegExp(`[${mB}]|[^${mB}]+`, "g"),
+      tB = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-    function VJ(JJ) {
-      let cJ = 2166136261;
-      for (let ZJ = 0; ZJ < JJ.length; ZJ++) cJ ^= JJ.charCodeAt(ZJ), cJ = Math.imul(cJ, 16777619);
-      return (cJ >>> 0) / 4294967295 * 2 - 1
+    function fB(BB) {
+      let TB = 2166136261;
+      for (let dB = 0; dB < BB.length; dB++) TB ^= BB.charCodeAt(dB), TB = Math.imul(TB, 16777619);
+      return (TB >>> 0) / 4294967295 * 2 - 1
     }
 
-    function KJ(JJ) {
-      var cJ;
-      if (mJ.test(JJ)) return 1;
-      const ZJ = JJ.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-        FJ = ZJ.replace(/[^0-9]/g, "");
-      if (FJ.length > 0 && !/\p{L}/u.test(ZJ)) return Math.min(FJ.length, 4);
-      const UJ = null !== (cJ = ZJ.match(EJ)) && void 0 !== cJ ? cJ : [];
-      if (0 === UJ.length) {
-        var eJ, XJ;
-        const JJ = null !== (eJ = null === (XJ = ZJ.match(/\p{L}/gu)) || void 0 === XJ ? void 0 : XJ.length) && void 0 !== eJ ? eJ : 0;
-        return 0 === JJ ? 0 : Math.min(Math.max(1, Math.round(JJ / 2.5)), sJ)
+    function sB(BB) {
+      var TB;
+      if (iB.test(BB)) return 1;
+      const dB = BB.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+        VB = dB.replace(/[^0-9]/g, "");
+      if (VB.length > 0 && !/\p{L}/u.test(dB)) return Math.min(VB.length, 4);
+      const yB = null !== (TB = dB.match(tB)) && void 0 !== TB ? TB : [];
+      if (0 === yB.length) {
+        var pB, lB;
+        const BB = null !== (pB = null === (lB = dB.match(/\p{L}/gu)) || void 0 === lB ? void 0 : lB.length) && void 0 !== pB ? pB : 0;
+        return 0 === BB ? 0 : Math.min(Math.max(1, Math.round(BB / 2.5)), OB)
       }
-      const AJ = ZJ.replace(/[^\p{L}]/gu, ""),
-        qJ = UJ.length > 1 && "e" === UJ.at(-1) && AJ.endsWith("e") && !AJ.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(JJ.replace(/[^\p{L}]/gu, ""));
-      return Math.min(UJ.length - (qJ ? 1 : 0), sJ)
+      const JB = dB.replace(/[^\p{L}]/gu, ""),
+        YB = yB.length > 1 && "e" === yB.at(-1) && JB.endsWith("e") && !JB.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(BB.replace(/[^\p{L}]/gu, ""));
+      return Math.min(yB.length - (YB ? 1 : 0), OB)
     }
 
-    function yJ(JJ) {
-      return JJ.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+    function MB(BB) {
+      return BB.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
     }
 
-    function SJ(JJ) {
-      const cJ = JJ.replace(/[^\p{L}]/gu, "");
-      return cJ.length >= 2 && cJ === cJ.toUpperCase() && cJ !== cJ.toLowerCase()
+    function zB(BB) {
+      const TB = BB.replace(/[^\p{L}]/gu, "");
+      return TB.length >= 2 && TB === TB.toUpperCase() && TB !== TB.toLowerCase()
     }
 
-    function IJ(JJ, cJ) {
-      var ZJ;
-      const sJ = cJ && (0, FJ.h)(cJ),
-        nJ = null !== (ZJ = null === sJ || void 0 === sJ ? void 0 : sJ.syllableMs) && void 0 !== ZJ ? ZJ : FJ.c,
-        vJ = function(JJ) {
-          const cJ = [];
-          for (const FJ of (0, UJ.Sb)(JJ))
-            if ("string" === typeof FJ)
-              for (const JJ of FJ.split(/(\s+)/)) {
-                if ("" === JJ) continue;
-                if (/^\s+$/.test(JJ)) {
-                  cJ.push({
+    function wB(BB, TB) {
+      var dB;
+      const OB = TB && (0, VB.i)(TB),
+        DB = null !== (dB = null === OB || void 0 === OB ? void 0 : OB.syllableMs) && void 0 !== dB ? dB : VB.b,
+        mB = function(BB) {
+          const TB = [];
+          for (const VB of (0, yB.hc)(BB))
+            if ("string" === typeof VB)
+              for (const BB of VB.split(/(\s+)/)) {
+                if ("" === BB) continue;
+                if (/^\s+$/.test(BB)) {
+                  TB.push({
                     kind: "space",
-                    text: JJ
+                    text: BB
                   });
                   continue
                 }
-                if (!mJ.test(JJ)) {
-                  cJ.push({
+                if (!iB.test(BB)) {
+                  TB.push({
                     kind: "word",
-                    text: JJ,
+                    text: BB,
                     delayMs: 0
                   });
                   continue
                 }
-                let FJ = !0;
-                for (const UJ of null !== (ZJ = JJ.match(QJ)) && void 0 !== ZJ ? ZJ : []) {
-                  var ZJ;
-                  const JJ = cJ.at(-1);
-                  FJ || "word" !== (null === JJ || void 0 === JJ ? void 0 : JJ.kind) || mJ.test(UJ) || /[\p{L}\p{N}]/u.test(UJ) ? (FJ || cJ.push({
+                let VB = !0;
+                for (const yB of null !== (dB = BB.match(NB)) && void 0 !== dB ? dB : []) {
+                  var dB;
+                  const BB = TB.at(-1);
+                  VB || "word" !== (null === BB || void 0 === BB ? void 0 : BB.kind) || iB.test(yB) || /[\p{L}\p{N}]/u.test(yB) ? (VB || TB.push({
                     kind: "space",
                     text: "\u200b"
-                  }), cJ.push({
+                  }), TB.push({
                     kind: "word",
-                    text: UJ,
+                    text: yB,
                     delayMs: 0
-                  }), FJ = !1) : JJ.text += UJ
+                  }), VB = !1) : BB.text += yB
                 }
-              } else cJ.push({
+              } else TB.push({
                 kind: "icon",
-                text: FJ.icon,
+                text: VB.icon,
                 delayMs: 0
               });
-          return cJ
-        }(JJ),
-        EJ = [];
-      let IJ = [];
-      for (const FJ of vJ) "space" !== FJ.kind && (IJ.push(FJ), GJ.test(FJ.text) && (EJ.push(IJ), IJ = []));
-      EJ.push(IJ);
-      const MJ = [];
-      let bJ = 0;
-      for (const FJ of EJ) {
-        var wJ, WJ;
-        const JJ = null !== (wJ = null === (WJ = FJ.at(-1)) || void 0 === WJ ? void 0 : WJ.text) && void 0 !== wJ ? wJ : "",
-          cJ = fJ.test(JJ),
-          ZJ = xJ.test(JJ),
-          UJ = FJ.map((JJ => "word" === JJ.kind ? KJ(JJ.text) : 1)),
-          vJ = UJ.findLastIndex((JJ => JJ > 0));
-        for (const [fJ, xJ] of FJ.entries()) {
-          const JJ = "word" === xJ.kind,
-            FJ = UJ[fJ];
-          xJ.delayMs = bJ;
-          for (let UJ = 0; sJ && UJ < FJ; UJ++) {
+          return TB
+        }(BB),
+        tB = [];
+      let wB = [];
+      for (const VB of mB) "space" !== VB.kind && (wB.push(VB), uB.test(VB.text) && (tB.push(wB), wB = []));
+      tB.push(wB);
+      const UB = [];
+      let FB = 0;
+      for (const VB of tB) {
+        var KB, rB;
+        const BB = null !== (KB = null === (rB = VB.at(-1)) || void 0 === rB ? void 0 : rB.text) && void 0 !== KB ? KB : "",
+          TB = HB.test(BB),
+          dB = EB.test(BB),
+          yB = VB.map((BB => "word" === BB.kind ? sB(BB.text) : 1)),
+          mB = yB.findLastIndex((BB => BB > 0));
+        for (const [HB, EB] of VB.entries()) {
+          const BB = "word" === EB.kind,
+            VB = yB[HB];
+          EB.delayMs = FB;
+          for (let yB = 0; OB && yB < VB; yB++) {
             const {
-              intonation: eJ
-            } = sJ;
-            let XJ = vJ > 0 ? -eJ.declineSemitones * (fJ / vJ) : 0;
-            XJ += VJ(`${yJ(xJ.text)}|${UJ}`) * eJ.variationSemitones;
-            const GJ = Math.min(1, eJ.variationSemitones);
-            let rJ = sJ.glideSemitones,
-              mJ = 1;
-            ZJ && (XJ += eJ.exclaimLiftSemitones, mJ *= AJ), cJ && fJ === vJ && (XJ += eJ.questionRiseSemitones * (FJ > 1 ? .5 + .5 * UJ / (FJ - 1) : 1), UJ === FJ - 1 && (rJ = Math.abs(rJ) + eJ.questionRiseSemitones / 2)), JJ && SJ(xJ.text) && (XJ += jJ * GJ, mJ *= qJ), FJ > 1 && 0 === UJ && (XJ += hJ * GJ, mJ *= YJ), MJ.push({
-              atMs: bJ + UJ * nJ,
-              semitones: XJ,
-              glideSemitones: rJ,
-              durationMs: UJ < FJ - 1 ? Math.min(sJ.durationMs, nJ * DJ) : sJ.durationMs,
-              level: mJ
+              intonation: pB
+            } = OB;
+            let lB = mB > 0 ? -pB.declineSemitones * (HB / mB) : 0;
+            lB += fB(`${MB(EB.text)}|${yB}`) * pB.variationSemitones;
+            const uB = Math.min(1, pB.variationSemitones);
+            let vB = OB.glideSemitones,
+              iB = 1;
+            dB && (lB += pB.exclaimLiftSemitones, iB *= JB), TB && HB === mB && (lB += pB.questionRiseSemitones * (VB > 1 ? .5 + .5 * yB / (VB - 1) : 1), yB === VB - 1 && (vB = Math.abs(vB) + pB.questionRiseSemitones / 2)), BB && zB(EB.text) && (lB += gB * uB, iB *= YB), VB > 1 && 0 === yB && (lB += kB * uB, iB *= oB), UB.push({
+              atMs: FB + yB * DB,
+              semitones: lB,
+              glideSemitones: vB,
+              durationMs: yB < VB - 1 ? Math.min(OB.durationMs, DB * LB) : OB.durationMs,
+              level: iB
             })
           }
-          bJ += FJ * nJ + (GJ.test(xJ.text) ? XJ : rJ.test(xJ.text) ? eJ : 0)
+          FB += VB * DB + (uB.test(EB.text) ? lB : vB.test(EB.text) ? pB : 0)
         }
       }
       return {
-        pieces: vJ.map((JJ => "space" === JJ.kind ? JJ : "icon" === JJ.kind ? {
+        pieces: mB.map((BB => "space" === BB.kind ? BB : "icon" === BB.kind ? {
           kind: "icon",
-          icon: JJ.text,
-          delayMs: JJ.delayMs
+          icon: BB.text,
+          delayMs: BB.delayMs
         } : {
           kind: "word",
-          text: JJ.text,
-          delayMs: JJ.delayMs
+          text: BB.text,
+          delayMs: BB.delayMs
         })),
-        blips: MJ
+        blips: UB
       }
     }
-    var MJ = ZJ(1086),
-      bJ = ZJ(1151),
-      wJ = ZJ(1712);
+    var UB = dB(1078),
+      FB = dB(1133),
+      KB = dB(1685);
 
-    function WJ(JJ) {
-      if ("string" === typeof JJ) return JJ;
-      const cJ = bJ.e.get().getCurrentLanguageCode();
-      return (0, MJ.t)(cJ, JJ.translationKey, (0, MJ.s)(JJ.params, wJ.d.shown))
+    function rB(BB) {
+      if ("string" === typeof BB) return BB;
+      const TB = FB.f.get().getCurrentLanguageCode();
+      return (0, UB.r)(TB, BB.translationKey, (0, UB.o)(BB.params, KB.c.shown))
     }
 
-    function gJ(JJ) {
-      const cJ = void 0 === JJ.voice ? null : (0, FJ.k)(JJ.voice),
-        ZJ = cJ && (0, FJ.h)(cJ);
+    function IB(BB) {
+      const TB = void 0 === BB.voice ? null : (0, VB.j)(BB.voice),
+        dB = TB && (0, VB.i)(TB);
       return {
-        plan: IJ(WJ(JJ.line), ZJ),
-        synth: ZJ
+        plan: wB(rB(BB.line), dB),
+        synth: dB
       }
     }
 
-    function HJ(JJ) {
-      const cJ = [];
-      let ZJ = [];
-      for (const [UJ, eJ] of JJ.entries()) {
-        var FJ;
-        "space" === eJ.kind && (" " !== eJ.text || "icon" !== (null === (FJ = JJ[UJ + 1]) || void 0 === FJ ? void 0 : FJ.kind)) ? (ZJ.length > 0 && cJ.push(ZJ), cJ.push([eJ]), ZJ = []) : ZJ.push(eJ)
+    function cB(BB) {
+      const TB = [];
+      let dB = [];
+      for (const [yB, pB] of BB.entries()) {
+        var VB;
+        "space" === pB.kind && (" " !== pB.text || "icon" !== (null === (VB = BB[yB + 1]) || void 0 === VB ? void 0 : VB.kind)) ? (dB.length > 0 && TB.push(dB), TB.push([pB]), dB = []) : dB.push(pB)
       }
-      return ZJ.length > 0 && cJ.push(ZJ), cJ
+      return dB.length > 0 && TB.push(dB), TB
     }
   },
-  8068: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => eJ,
-      f: () => UJ
+  8103: (BB, TB, dB) => {
+    dB.d(TB, {
+      b: () => pB,
+      c: () => yB
     });
-    let FJ = null;
-    const UJ = function(JJ) {
-        const cJ = {
-          cycle: JJ,
+    let VB = null;
+    const yB = function(BB) {
+        const TB = {
+          cycle: BB,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return FJ = cJ, () => {
-          FJ === cJ && (FJ = null)
+        return VB = TB, () => {
+          VB === TB && (VB = null)
         }
       },
-      eJ = () => {
-        var JJ;
-        return null !== (JJ = FJ) && void 0 !== JJ && JJ.canCycle() ? FJ.cycle : null
+      pB = () => {
+        var BB;
+        return null !== (BB = VB) && void 0 !== BB && BB.canCycle() ? VB.cycle : null
       }
   },
-  35665: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      b: () => eJ,
-      c: () => GJ,
-      f: () => fJ,
-      j: () => AJ,
-      l: () => DJ,
-      m: () => xJ,
-      p: () => hJ,
-      t: () => vJ,
-      v: () => nJ,
-      z: () => rJ
+  35601: (BB, TB, dB) => {
+    dB.d(TB, {
+      A: () => vB,
+      c: () => pB,
+      e: () => uB,
+      i: () => HB,
+      k: () => JB,
+      n: () => LB,
+      r: () => EB,
+      s: () => kB,
+      v: () => mB,
+      x: () => DB
     });
-    var FJ = ZJ(13),
-      UJ = ZJ(17);
-    const eJ = "clientGameInventoryButtonsChanged",
-      XJ = new Map;
+    var VB = dB(21),
+      yB = dB(24);
+    const pB = "clientGameInventoryButtonsChanged",
+      lB = new Map;
 
-    function AJ() {
-      return [...XJ.values()].sort(((JJ, cJ) => {
-        var ZJ, FJ;
-        return (null !== (ZJ = JJ.order) && void 0 !== ZJ ? ZJ : 0) - (null !== (FJ = cJ.order) && void 0 !== FJ ? FJ : 0)
+    function JB() {
+      return [...lB.values()].sort(((BB, TB) => {
+        var dB, VB;
+        return (null !== (dB = BB.order) && void 0 !== dB ? dB : 0) - (null !== (VB = TB.order) && void 0 !== VB ? VB : 0)
       }))
     }
-    let qJ = null;
+    let YB = null;
 
-    function jJ(JJ) {
-      qJ = JJ
+    function gB(BB) {
+      YB = BB
     }
-    let YJ = !1;
+    let oB = !1;
 
-    function hJ(JJ) {
-      YJ = !0;
+    function kB(BB) {
+      oB = !0;
       try {
-        JJ.onClick()
+        BB.onClick()
       } finally {
-        YJ = !1
+        oB = !1
       }
-      JJ.panel && "clientGame" === FJ.d.get("openInGameMenuName") && jJ(JJ.id)
+      BB.panel && "clientGame" === VB.d.get("openInGameMenuName") && gB(BB.id)
     }
 
-    function DJ() {
-      return YJ
+    function LB() {
+      return oB
     }
 
-    function sJ() {
-      return AJ().filter((JJ => JJ.panel && !JJ.disabled))
+    function OB() {
+      return JB().filter((BB => BB.panel && !BB.disabled))
     }
 
-    function nJ(JJ) {
-      const cJ = sJ(),
-        ZJ = cJ.findIndex((JJ => JJ.id === qJ));
-      return !(ZJ < 0 || cJ.length < 2) && (hJ(cJ[(ZJ + JJ + cJ.length) % cJ.length]), !0)
+    function DB(BB) {
+      const TB = OB(),
+        dB = TB.findIndex((BB => BB.id === YB));
+      return !(dB < 0 || TB.length < 2) && (kB(TB[(dB + BB + TB.length) % TB.length]), !0)
     }
 
-    function GJ() {
-      return null !== qJ && sJ().length > 1
+    function uB() {
+      return null !== YB && OB().length > 1
     }
 
-    function fJ() {
-      jJ(null)
+    function HB() {
+      gB(null)
     }
 
-    function xJ() {
-      "inventory" !== FJ.d.get("openInGameMenuName") && jJ(null)
+    function EB() {
+      "inventory" !== VB.d.get("openInGameMenuName") && gB(null)
     }
 
-    function rJ() {
-      const JJ = qJ;
-      return jJ(null), JJ
+    function vB() {
+      const BB = YB;
+      return gB(null), BB
     }
 
-    function vJ(JJ) {
-      return XJ.set(JJ.id, JJ), UJ.i.Uf(eJ, AJ(), !0), () => {
-        XJ.get(JJ.id) === JJ && (XJ.delete(JJ.id), UJ.i.Uf(eJ, AJ()))
+    function mB(BB) {
+      return lB.set(BB.id, BB), yB.h.yH(pB, JB(), !0), () => {
+        lB.get(BB.id) === BB && (lB.delete(BB.id), yB.h.yH(pB, JB()))
       }
     }
   },
-  35661: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      b: () => AJ,
-      f: () => fJ,
-      j: () => xJ,
-      k: () => DJ,
-      m: () => jJ,
-      n: () => GJ,
-      r: () => sJ,
-      u: () => YJ
+  35595: (BB, TB, dB) => {
+    dB.d(TB, {
+      c: () => JB,
+      g: () => HB,
+      h: () => EB,
+      j: () => LB,
+      k: () => gB,
+      o: () => uB,
+      p: () => OB,
+      r: () => oB
     });
-    var FJ = ZJ(13),
-      UJ = ZJ(17),
-      eJ = ZJ(1184),
-      XJ = ZJ(35665);
-    const AJ = "clientGameUiChanged";
-    let qJ = null;
+    var VB = dB(21),
+      yB = dB(24),
+      pB = dB(1173),
+      lB = dB(35601);
+    const JB = "clientGameUiChanged";
+    let YB = null;
 
-    function jJ() {
-      return qJ
+    function gB() {
+      return YB
     }
 
-    function YJ(JJ, cJ) {
-      const ZJ = {
-        content: JJ,
-        menu: cJ
+    function oB(BB, TB) {
+      const dB = {
+        content: BB,
+        menu: TB
       };
-      return qJ = ZJ, UJ.i.Uf(AJ, qJ, !0), () => {
-        qJ === ZJ && (qJ = null, nJ = !1, fJ(), UJ.i.Uf(AJ, null))
+      return YB = dB, yB.h.yH(JB, YB, !0), () => {
+        YB === dB && (YB = null, DB = !1, HB(), yB.h.yH(JB, null))
       }
     }
-    let hJ = null;
+    let kB = null;
 
-    function DJ() {
-      return hJ
+    function LB() {
+      return kB
     }
 
-    function sJ(JJ) {
-      return hJ = JJ, () => {
-        hJ === JJ && (hJ = null)
+    function OB(BB) {
+      return kB = BB, () => {
+        kB === BB && (kB = null)
       }
     }
-    let nJ = !1;
+    let DB = !1;
 
-    function GJ() {
-      const JJ = FJ.d.get("openInGameMenuName");
-      "clientGame" !== JJ && (nJ = "inventory" === JJ), (0, XJ.l)() || (0, XJ.f)(), (0, eJ.h)("InGameMenu"), FJ.d.set({
+    function uB() {
+      const BB = VB.d.get("openInGameMenuName");
+      "clientGame" !== BB && (DB = "inventory" === BB), (0, lB.n)() || (0, lB.i)(), (0, pB.p)("InGameMenu"), VB.d.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function fJ() {
-      rJ(!1)
+    function HB() {
+      vB(!1)
     }
 
-    function xJ() {
-      rJ(nJ)
+    function EB() {
+      vB(DB)
     }
 
-    function rJ(JJ) {
-      "clientGame" === FJ.d.get("openInGameMenuName") && FJ.d.set({
-        openInGameMenuName: JJ ? "inventory" : null
-      }), JJ || (0, XJ.f)(), nJ = !1
+    function vB(BB) {
+      "clientGame" === VB.d.get("openInGameMenuName") && VB.d.set({
+        openInGameMenuName: BB ? "inventory" : null
+      }), BB || (0, lB.i)(), DB = !1
     }
   },
-  37499: (JJ, cJ, ZJ) => {
-    function FJ(JJ, cJ, ZJ) {
-      const FJ = new Set,
-        UJ = new ResizeObserver(ZJ),
-        eJ = () => {
-          const cJ = new Set(document.querySelectorAll(JJ));
-          let eJ = !1;
-          for (const JJ of FJ) cJ.has(JJ) || (UJ.unobserve(JJ), FJ.delete(JJ), eJ = !0);
-          for (const JJ of cJ) FJ.has(JJ) || (UJ.observe(JJ), XJ.observe(JJ, {
+  37463: (BB, TB, dB) => {
+    function VB(BB, TB, dB) {
+      const VB = new Set,
+        yB = new ResizeObserver(dB),
+        pB = () => {
+          const TB = new Set(document.querySelectorAll(BB));
+          let pB = !1;
+          for (const BB of VB) TB.has(BB) || (yB.unobserve(BB), VB.delete(BB), pB = !0);
+          for (const BB of TB) VB.has(BB) || (yB.observe(BB), lB.observe(BB, {
             attributes: !0,
             attributeFilter: ["class", "style"]
-          }), FJ.add(JJ));
-          eJ && ZJ()
+          }), VB.add(BB));
+          pB && dB()
         },
-        XJ = new MutationObserver((cJ => {
-          cJ.some((JJ => "attributes" === JJ.type)) && ZJ(), cJ.some((cJ => function(JJ, cJ, ZJ) {
-            if ("childList" !== JJ.type) return !1;
-            for (const FJ of JJ.addedNodes)
-              if (FJ instanceof Element && (FJ.matches(cJ) || FJ.querySelector(cJ))) return !0;
-            for (const FJ of JJ.removedNodes)
-              if (FJ instanceof Element)
-                for (const JJ of ZJ)
-                  if (FJ.contains(JJ)) return !0;
+        lB = new MutationObserver((TB => {
+          TB.some((BB => "attributes" === BB.type)) && dB(), TB.some((TB => function(BB, TB, dB) {
+            if ("childList" !== BB.type) return !1;
+            for (const VB of BB.addedNodes)
+              if (VB instanceof Element && (VB.matches(TB) || VB.querySelector(TB))) return !0;
+            for (const VB of BB.removedNodes)
+              if (VB instanceof Element)
+                for (const BB of dB)
+                  if (VB.contains(BB)) return !0;
             return !1
-          }(cJ, JJ, FJ))) && eJ()
+          }(TB, BB, VB))) && pB()
         }));
-      XJ.observe(document.body, {
+      lB.observe(document.body, {
         childList: !0,
         subtree: !0
       });
-      for (const AJ of cJ) UJ.observe(AJ);
-      return window.addEventListener("resize", ZJ), eJ(), ZJ(), () => {
-        UJ.disconnect(), XJ.disconnect(), window.removeEventListener("resize", ZJ)
+      for (const JB of TB) yB.observe(JB);
+      return window.addEventListener("resize", dB), pB(), dB(), () => {
+        yB.disconnect(), lB.disconnect(), window.removeEventListener("resize", dB)
       }
     }
-    ZJ.d(cJ, {
-      d: () => FJ
+    dB.d(TB, {
+      d: () => VB
     })
   },
-  8178: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      e: () => AJ,
-      g: () => qJ
+  8204: (BB, TB, dB) => {
+    dB.d(TB, {
+      c: () => JB,
+      f: () => YB
     });
-    var FJ = ZJ(13),
-      UJ = ZJ(1213),
-      eJ = ZJ(80);
-    const XJ = {
+    var VB = dB(21),
+      yB = dB(1209),
+      pB = dB(95);
+    const lB = {
       blockMined: {
         pattern: [18],
         priority: 1,
@@ -634,350 +634,350 @@ export const modules = {
       }
     };
 
-    function AJ() {
-      return (0, eJ.isMobile)() && "function" === typeof navigator.vibrate
+    function JB() {
+      return (0, pB.isMobile)() && "function" === typeof navigator.vibrate
     }
-    const qJ = new class {
-      constructor(JJ) {
-        this.deps = JJ, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
+    const YB = new class {
+      constructor(BB) {
+        this.deps = BB, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
       }
-      play(JJ, cJ) {
-        var ZJ;
+      play(BB, TB) {
+        var dB;
         if (!this.deps.enabled()) return;
-        const FJ = XJ[JJ],
-          UJ = null !== cJ && void 0 !== cJ ? cJ : FJ.pattern;
-        if (null === UJ) return void console.warn("No vibration pattern for", JJ);
-        const eJ = this.deps.now();
-        eJ - this.lastAnyAt < 40 && FJ.priority < this.playingPriority || eJ - (null !== (ZJ = this.lastAt.get(JJ)) && void 0 !== ZJ ? ZJ : -1 / 0) < FJ.minGapMs || eJ < this.playingUntil && FJ.priority < this.playingPriority || (this.lastAt.set(JJ, eJ), this.lastAnyAt = eJ, this.playingUntil = eJ + UJ.reduce(((JJ, cJ) => JJ + cJ), 0), this.playingPriority = FJ.priority, this.deps.vibrate(UJ))
+        const VB = lB[BB],
+          yB = null !== TB && void 0 !== TB ? TB : VB.pattern;
+        if (null === yB) return void console.warn("No vibration pattern for", BB);
+        const pB = this.deps.now();
+        pB - this.lastAnyAt < 40 && VB.priority < this.playingPriority || pB - (null !== (dB = this.lastAt.get(BB)) && void 0 !== dB ? dB : -1 / 0) < VB.minGapMs || pB < this.playingUntil && VB.priority < this.playingPriority || (this.lastAt.set(BB, pB), this.lastAnyAt = pB, this.playingUntil = pB + yB.reduce(((BB, TB) => BB + TB), 0), this.playingPriority = VB.priority, this.deps.vibrate(yB))
       }
     }({
-      vibrate: JJ => {
-        navigator.vibrate([...JJ])
+      vibrate: BB => {
+        navigator.vibrate([...BB])
       },
       now: () => performance.now(),
-      enabled: () => AJ() && FJ.d.get("isTouchScreen") && FJ.d.get("clientEscMenuOptions").vibration && !(0, UJ.g)()
+      enabled: () => JB() && VB.d.get("isTouchScreen") && VB.d.get("clientEscMenuOptions").vibration && !(0, yB.h)()
     })
   },
-  36562: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => AJ,
-      g: () => XJ
+  36496: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => JB,
+      h: () => lB
     });
-    var FJ = ZJ(36555),
-      UJ = ZJ(235),
-      eJ = ZJ(1671);
+    var VB = dB(36491),
+      yB = dB(279),
+      pB = dB(1652);
 
-    function XJ(JJ) {
-      if ("Ic" in JJ) return EJ.createAnimationScript(JJ);
-      return new jJ(JJ).createAnimationScript()
+    function lB(BB) {
+      if ("Sy" in BB) return tB.createAnimationScript(BB);
+      return new gB(BB).createAnimationScript()
     }
 
-    function AJ(JJ, cJ, ZJ, UJ) {
-      const eJ = JJ.Ic <= 0 ? 1 : cJ + ZJ * Math.max(0, UJ) / JJ.Ic;
-      return JJ.Mc === FJ.n.LoopOnLastFrame ? eJ % 1 : JJ.Mc === FJ.n.NoLoop && eJ >= 1 ? null : Math.min(1, eJ)
+    function JB(BB, TB, dB, yB) {
+      const pB = BB.Sy <= 0 ? 1 : TB + dB * Math.max(0, yB) / BB.Sy;
+      return BB.Py === VB.n.LoopOnLastFrame ? pB % 1 : BB.Py === VB.n.NoLoop && pB >= 1 ? null : Math.min(1, pB)
     }
-    class qJ {
-      createAnimationScript(JJ) {
+    class YB {
+      createAnimationScript(BB) {
         const {
-          Ic: cJ,
-          loop: ZJ,
-          bc: FJ
-        } = JJ;
+          Sy: TB,
+          loop: dB,
+          Qy: VB
+        } = BB;
         return {
-          Ic: Math.round(cJ),
-          Mc: this.createLoopMode(null !== ZJ && void 0 !== ZJ && ZJ),
-          bc: this.createNodeSkeletonAnimationScript(null !== FJ && void 0 !== FJ ? FJ : null)
+          Sy: Math.round(TB),
+          Py: this.createLoopMode(null !== dB && void 0 !== dB && dB),
+          Qy: this.createNodeSkeletonAnimationScript(null !== VB && void 0 !== VB ? VB : null)
         }
       }
-      createLoopMode(JJ) {
-        switch (JJ) {
+      createLoopMode(BB) {
+        switch (BB) {
           case !1:
-            return FJ.n.NoLoop;
+            return VB.n.NoLoop;
           case !0:
-            return FJ.n.LoopOnLastFrame;
+            return VB.n.LoopOnLastFrame;
           case "hold-on-last-frame":
-            return FJ.n.HoldOnLastFrame
+            return VB.n.HoldOnLastFrame
         }
-        throw new Error(`Invalid loop mode schema: ${JJ}`)
+        throw new Error(`Invalid loop mode schema: ${BB}`)
       }
-      createNodeSkeletonAnimationScript(JJ) {
-        if (null === JJ) return null;
-        const cJ = {};
-        for (const ZJ in JJ) {
-          const FJ = JJ[ZJ];
-          cJ[ZJ] = this.createNodeAnimationScript(FJ)
+      createNodeSkeletonAnimationScript(BB) {
+        if (null === BB) return null;
+        const TB = {};
+        for (const dB in BB) {
+          const VB = BB[dB];
+          TB[dB] = this.createNodeAnimationScript(VB)
         }
-        return cJ
+        return TB
       }
-      createNodeAnimationScript(JJ) {
+      createNodeAnimationScript(BB) {
         const {
-          timeline: cJ
-        } = JJ, ZJ = cJ.filter((JJ => Number.isFinite(JJ.timeFraction)));
-        return ZJ.sort(((JJ, cJ) => JJ.timeFraction - cJ.timeFraction)), {
-          rotation: this.createTimelineFromKeyframes(ZJ, "rotation", DJ),
-          position: this.createTimelineFromKeyframes(ZJ, "position", nJ)
+          timeline: TB
+        } = BB, dB = TB.filter((BB => Number.isFinite(BB.timeFraction)));
+        return dB.sort(((BB, TB) => BB.timeFraction - TB.timeFraction)), {
+          rotation: this.createTimelineFromKeyframes(dB, "rotation", LB),
+          position: this.createTimelineFromKeyframes(dB, "position", DB)
         }
       }
-      createTimelineFromKeyframes(JJ, cJ, ZJ) {
-        const FJ = [];
-        for (const qJ of JJ) {
-          const JJ = qJ[cJ];
-          if (JJ) {
-            const cJ = this.createAnimationFrameWithoutPrecomputes(qJ.timeFraction, JJ);
-            YJ(cJ) && FJ.push(cJ)
+      createTimelineFromKeyframes(BB, TB, dB) {
+        const VB = [];
+        for (const YB of BB) {
+          const BB = YB[TB];
+          if (BB) {
+            const TB = this.createAnimationFrameWithoutPrecomputes(YB.timeFraction, BB);
+            oB(TB) && VB.push(TB)
           }
         }
-        const UJ = [];
-        for (let qJ = 0; qJ < FJ.length; qJ++) {
-          var eJ, XJ, AJ;
-          const JJ = FJ[qJ],
-            cJ = null !== (eJ = FJ[qJ - 1]) && void 0 !== eJ ? eJ : JJ,
-            jJ = null !== (XJ = FJ[qJ + 1]) && void 0 !== XJ ? XJ : JJ,
-            YJ = null !== (AJ = FJ[qJ + 2]) && void 0 !== AJ ? AJ : jJ;
-          UJ.push({
-            ...JJ,
-            ...ZJ(cJ.post, cJ.timeFraction, JJ.post, JJ.timeFraction, jJ.pre, jJ.timeFraction, YJ.pre, YJ.timeFraction)
+        const yB = [];
+        for (let YB = 0; YB < VB.length; YB++) {
+          var pB, lB, JB;
+          const BB = VB[YB],
+            TB = null !== (pB = VB[YB - 1]) && void 0 !== pB ? pB : BB,
+            gB = null !== (lB = VB[YB + 1]) && void 0 !== lB ? lB : BB,
+            oB = null !== (JB = VB[YB + 2]) && void 0 !== JB ? JB : gB;
+          yB.push({
+            ...BB,
+            ...dB(TB.post, TB.timeFraction, BB.post, BB.timeFraction, gB.pre, gB.timeFraction, oB.pre, oB.timeFraction)
           })
         }
-        return UJ
+        return yB
       }
-      createAnimationFrameWithoutPrecomputes(JJ, cJ) {
-        let ZJ, FJ, UJ = null;
-        var eJ;
-        if ("object" === typeof cJ && "point" in cJ) UJ = null !== (eJ = cJ.Hc) && void 0 !== eJ ? eJ : null, ZJ = cJ.point, FJ = cJ.point;
-        else if ("object" === typeof cJ && "pre" in cJ) {
-          var XJ;
-          UJ = null !== (XJ = cJ.Hc) && void 0 !== XJ ? XJ : null, ZJ = cJ.pre, FJ = cJ.post
-        } else ZJ = cJ, FJ = cJ;
+      createAnimationFrameWithoutPrecomputes(BB, TB) {
+        let dB, VB, yB = null;
+        var pB;
+        if ("object" === typeof TB && "point" in TB) yB = null !== (pB = TB.Xy) && void 0 !== pB ? pB : null, dB = TB.point, VB = TB.point;
+        else if ("object" === typeof TB && "pre" in TB) {
+          var lB;
+          yB = null !== (lB = TB.Xy) && void 0 !== lB ? lB : null, dB = TB.pre, VB = TB.post
+        } else dB = TB, VB = TB;
         return {
-          timeFraction: JJ,
-          Hc: this.createLerpMode(UJ),
-          pre: ZJ,
-          post: FJ
+          timeFraction: BB,
+          Xy: this.createLerpMode(yB),
+          pre: dB,
+          post: VB
         }
       }
-      createLerpMode(JJ) {
-        return null === JJ ? FJ.j.Linear : qJ.LERP_MODE_SCHEMA_MAPPING[JJ]
+      createLerpMode(BB) {
+        return null === BB ? VB.j.Linear : YB.LERP_MODE_SCHEMA_MAPPING[BB]
       }
     }
-    qJ.LERP_MODE_SCHEMA_MAPPING = {
-      linear: FJ.j.Linear,
-      "catmull-rom-spline": FJ.j.CatmullRomSpline
+    YB.LERP_MODE_SCHEMA_MAPPING = {
+      linear: VB.j.Linear,
+      "catmull-rom-spline": VB.j.CatmullRomSpline
     };
-    class jJ {
-      constructor(JJ) {
-        this.animationSchema = JJ
+    class gB {
+      constructor(BB) {
+        this.animationSchema = BB
       }
       createAnimationScript() {
         const {
-          animation_length: JJ,
-          loop: cJ,
-          bones: ZJ
+          animation_length: BB,
+          loop: TB,
+          bones: dB
         } = this.animationSchema;
         return {
-          Ic: Math.round(1e3 * JJ),
-          Mc: this.createLoopMode(null !== cJ && void 0 !== cJ && cJ),
-          bc: this.createNodeSkeletonAnimationScript(null !== ZJ && void 0 !== ZJ ? ZJ : null)
+          Sy: Math.round(1e3 * BB),
+          Py: this.createLoopMode(null !== TB && void 0 !== TB && TB),
+          Qy: this.createNodeSkeletonAnimationScript(null !== dB && void 0 !== dB ? dB : null)
         }
       }
-      createLoopMode(JJ) {
-        switch (JJ) {
+      createLoopMode(BB) {
+        switch (BB) {
           case !1:
-            return FJ.n.NoLoop;
+            return VB.n.NoLoop;
           case !0:
-            return FJ.n.LoopOnLastFrame;
+            return VB.n.LoopOnLastFrame;
           case "hold_on_last_frame":
-            return FJ.n.HoldOnLastFrame
+            return VB.n.HoldOnLastFrame
         }
-        throw new Error(`Invalid Blockbench loop mode schema: ${JJ}`)
+        throw new Error(`Invalid Blockbench loop mode schema: ${BB}`)
       }
-      createNodeSkeletonAnimationScript(JJ) {
-        if (null === JJ) return null;
-        const cJ = {};
-        for (const ZJ in JJ) {
-          const FJ = JJ[ZJ];
-          cJ[ZJ] = this.createNodeAnimationScript(FJ)
+      createNodeSkeletonAnimationScript(BB) {
+        if (null === BB) return null;
+        const TB = {};
+        for (const dB in BB) {
+          const VB = BB[dB];
+          TB[dB] = this.createNodeAnimationScript(VB)
         }
-        return cJ
+        return TB
       }
-      createNodeAnimationScript(JJ) {
+      createNodeAnimationScript(BB) {
         const {
-          rotation: cJ,
-          position: ZJ
-        } = JJ;
+          rotation: TB,
+          position: dB
+        } = BB;
         return {
-          rotation: this.createAnimationTimeline(null !== cJ && void 0 !== cJ ? cJ : null, fJ, DJ, !0),
-          position: this.createAnimationTimeline(null !== ZJ && void 0 !== ZJ ? ZJ : null, rJ, nJ, !1)
+          rotation: this.createAnimationTimeline(null !== TB && void 0 !== TB ? TB : null, HB, LB, !0),
+          position: this.createAnimationTimeline(null !== dB && void 0 !== dB ? dB : null, vB, DB, !1)
         }
       }
-      createAnimationTimeline(JJ, cJ, ZJ, FJ) {
-        if (null === JJ) return [];
-        if (Array.isArray(JJ)) {
-          JJ = {
-            "0.0": JJ
+      createAnimationTimeline(BB, TB, dB, VB) {
+        if (null === BB) return [];
+        if (Array.isArray(BB)) {
+          BB = {
+            "0.0": BB
           }
         }
-        const UJ = Object.entries(JJ).map((JJ => {
-          let [ZJ, FJ] = JJ;
-          const UJ = Number(ZJ) / this.animationSchema.animation_length;
-          return this.createAnimationFrameWithoutPrecomputes(UJ, FJ, cJ)
-        })).filter(YJ);
-        UJ.sort(((JJ, cJ) => JJ.timeFraction - cJ.timeFraction)), FJ && function(JJ) {
-          for (let cJ = 1; cJ < JJ.length; cJ++) {
-            const ZJ = JJ[cJ - 1].post,
-              FJ = JJ[cJ],
-              UJ = vJ(FJ.pre),
-              eJ = vJ(FJ.post),
-              XJ = QJ(ZJ, FJ.pre);
-            QJ(ZJ, UJ) < XJ && (JJ[cJ] = {
-              ...FJ,
-              pre: UJ,
-              post: eJ
+        const yB = Object.entries(BB).map((BB => {
+          let [dB, VB] = BB;
+          const yB = Number(dB) / this.animationSchema.animation_length;
+          return this.createAnimationFrameWithoutPrecomputes(yB, VB, TB)
+        })).filter(oB);
+        yB.sort(((BB, TB) => BB.timeFraction - TB.timeFraction)), VB && function(BB) {
+          for (let TB = 1; TB < BB.length; TB++) {
+            const dB = BB[TB - 1].post,
+              VB = BB[TB],
+              yB = mB(VB.pre),
+              pB = mB(VB.post),
+              lB = NB(dB, VB.pre);
+            NB(dB, yB) < lB && (BB[TB] = {
+              ...VB,
+              pre: yB,
+              post: pB
             })
           }
-        }(UJ);
-        const eJ = [];
-        for (let jJ = 0; jJ < UJ.length; jJ++) {
-          var XJ, AJ, qJ;
-          const JJ = UJ[jJ],
-            cJ = null !== (XJ = UJ[jJ - 1]) && void 0 !== XJ ? XJ : JJ,
-            FJ = null !== (AJ = UJ[jJ + 1]) && void 0 !== AJ ? AJ : JJ,
-            YJ = null !== (qJ = UJ[jJ + 2]) && void 0 !== qJ ? qJ : FJ;
-          eJ.push({
-            ...JJ,
-            ...ZJ(cJ.post, cJ.timeFraction, JJ.post, JJ.timeFraction, FJ.pre, FJ.timeFraction, YJ.pre, YJ.timeFraction)
+        }(yB);
+        const pB = [];
+        for (let gB = 0; gB < yB.length; gB++) {
+          var lB, JB, YB;
+          const BB = yB[gB],
+            TB = null !== (lB = yB[gB - 1]) && void 0 !== lB ? lB : BB,
+            VB = null !== (JB = yB[gB + 1]) && void 0 !== JB ? JB : BB,
+            oB = null !== (YB = yB[gB + 2]) && void 0 !== YB ? YB : VB;
+          pB.push({
+            ...BB,
+            ...dB(TB.post, TB.timeFraction, BB.post, BB.timeFraction, VB.pre, VB.timeFraction, oB.pre, oB.timeFraction)
           })
         }
-        return eJ
+        return pB
       }
-      createAnimationFrameWithoutPrecomputes(JJ, cJ, ZJ) {
-        let FJ, UJ, eJ = null;
-        if ("object" === typeof cJ && "post" in cJ) {
-          var XJ;
-          eJ = null !== (XJ = cJ.lerp_mode) && void 0 !== XJ ? XJ : null, UJ = GJ(cJ.post, ZJ), FJ = cJ.pre ? GJ(cJ.pre, ZJ) : UJ
+      createAnimationFrameWithoutPrecomputes(BB, TB, dB) {
+        let VB, yB, pB = null;
+        if ("object" === typeof TB && "post" in TB) {
+          var lB;
+          pB = null !== (lB = TB.lerp_mode) && void 0 !== lB ? lB : null, yB = uB(TB.post, dB), VB = TB.pre ? uB(TB.pre, dB) : yB
         } else {
-          const JJ = GJ(cJ, ZJ);
-          UJ = JJ, FJ = JJ
+          const BB = uB(TB, dB);
+          yB = BB, VB = BB
         }
         return {
-          timeFraction: JJ,
-          Hc: this.createLerpMode(eJ),
-          pre: FJ,
-          post: UJ
+          timeFraction: BB,
+          Xy: this.createLerpMode(pB),
+          pre: VB,
+          post: yB
         }
       }
-      createLerpMode(JJ) {
-        return null === JJ ? FJ.j.Linear : jJ.LERP_MODE_SCHEMA_MAPPING[JJ]
+      createLerpMode(BB) {
+        return null === BB ? VB.j.Linear : gB.LERP_MODE_SCHEMA_MAPPING[BB]
       }
     }
 
-    function YJ(JJ) {
-      return Number.isFinite(JJ.timeFraction) && hJ(JJ.pre) && hJ(JJ.post)
+    function oB(BB) {
+      return Number.isFinite(BB.timeFraction) && kB(BB.pre) && kB(BB.post)
     }
 
-    function hJ(JJ) {
-      return Number.isFinite(JJ[0]) && Number.isFinite(JJ[1]) && Number.isFinite(JJ[2])
+    function kB(BB) {
+      return Number.isFinite(BB[0]) && Number.isFinite(BB[1]) && Number.isFinite(BB[2])
     }
 
-    function DJ(JJ, cJ, ZJ, FJ, UJ, eJ, XJ, AJ) {
-      const qJ = eJ - cJ,
-        jJ = eJ - FJ,
-        YJ = AJ - FJ,
-        hJ = [null, null, null];
-      for (let DJ = 0; DJ < hJ.length; DJ++) hJ[DJ] = sJ(JJ[DJ], ZJ[DJ], UJ[DJ], XJ[DJ], qJ, YJ);
+    function LB(BB, TB, dB, VB, yB, pB, lB, JB) {
+      const YB = pB - TB,
+        gB = pB - VB,
+        oB = JB - VB,
+        kB = [null, null, null];
+      for (let LB = 0; LB < kB.length; LB++) kB[LB] = OB(BB[LB], dB[LB], yB[LB], lB[LB], YB, oB);
       return {
-        Pc: jJ,
-        kc: hJ
+        Wy: gB,
+        hy: kB
       }
     }
 
-    function sJ(JJ, cJ, ZJ, FJ, eJ, XJ) {
+    function OB(BB, TB, dB, VB, pB, lB) {
       return {
-        zc: UJ.c.computeShortestRotation(JJ, ZJ) / eJ,
-        Nc: UJ.c.computeShortestRotation(cJ, FJ) / XJ,
-        delta: UJ.c.computeShortestRotation(cJ, ZJ)
+        Gy: yB.e.computeShortestRotation(BB, dB) / pB,
+        qy: yB.e.computeShortestRotation(TB, VB) / lB,
+        delta: yB.e.computeShortestRotation(TB, dB)
       }
     }
 
-    function nJ(JJ, cJ, ZJ, FJ, UJ, eJ, XJ, AJ) {
-      const qJ = eJ - cJ,
-        jJ = eJ - FJ,
-        YJ = AJ - FJ,
-        hJ = [null, null, null];
-      for (let DJ = 0; DJ < hJ.length; DJ++) hJ[DJ] = {
-        zc: (UJ[DJ] - JJ[DJ]) / qJ,
-        Nc: (XJ[DJ] - ZJ[DJ]) / YJ,
-        delta: UJ[DJ] - ZJ[DJ]
+    function DB(BB, TB, dB, VB, yB, pB, lB, JB) {
+      const YB = pB - TB,
+        gB = pB - VB,
+        oB = JB - VB,
+        kB = [null, null, null];
+      for (let LB = 0; LB < kB.length; LB++) kB[LB] = {
+        Gy: (yB[LB] - BB[LB]) / YB,
+        qy: (lB[LB] - dB[LB]) / oB,
+        delta: yB[LB] - dB[LB]
       };
       return {
-        Pc: jJ,
-        kc: hJ
+        Wy: gB,
+        hy: kB
       }
     }
 
-    function GJ(JJ, cJ) {
-      return null === cJ ? JJ : cJ(JJ)
+    function uB(BB, TB) {
+      return null === TB ? BB : TB(BB)
     }
 
-    function fJ(JJ) {
-      const [cJ, ZJ, FJ] = JJ, XJ = -(0, eJ.k)(cJ), AJ = -(0, eJ.k)(ZJ), qJ = (0, eJ.k)(FJ), jJ = UJ.c.quaternionFromEulerZYX(XJ, AJ, qJ);
-      return UJ.c.eulerYXZFromQuaternion(jJ)
+    function HB(BB) {
+      const [TB, dB, VB] = BB, lB = -(0, pB.j)(TB), JB = -(0, pB.j)(dB), YB = (0, pB.j)(VB), gB = yB.e.quaternionFromEulerZYX(lB, JB, YB);
+      return yB.e.eulerYXZFromQuaternion(gB)
     }
-    jJ.LERP_MODE_SCHEMA_MAPPING = {
-      linear: FJ.j.Linear,
-      catmullrom: FJ.j.CatmullRomSpline
+    gB.LERP_MODE_SCHEMA_MAPPING = {
+      linear: VB.j.Linear,
+      catmullrom: VB.j.CatmullRomSpline
     };
-    const xJ = 1 / 16;
+    const EB = 1 / 16;
 
-    function rJ(JJ) {
-      return [-JJ[0] * xJ, JJ[1] * xJ, JJ[2] * xJ]
+    function vB(BB) {
+      return [-BB[0] * EB, BB[1] * EB, BB[2] * EB]
     }
 
-    function vJ(JJ) {
-      const [cJ, ZJ, FJ] = JJ;
-      return [cJ >= 0 ? Math.PI - cJ : -Math.PI - cJ, mJ(ZJ + Math.PI), mJ(FJ + Math.PI)]
+    function mB(BB) {
+      const [TB, dB, VB] = BB;
+      return [TB >= 0 ? Math.PI - TB : -Math.PI - TB, iB(dB + Math.PI), iB(VB + Math.PI)]
     }
 
-    function mJ(JJ) {
-      return UJ.c.mod(JJ + Math.PI, 2 * Math.PI) - Math.PI
+    function iB(BB) {
+      return yB.e.mod(BB + Math.PI, 2 * Math.PI) - Math.PI
     }
 
-    function QJ(JJ, cJ) {
-      return Math.abs(UJ.c.computeShortestRotation(JJ[0], cJ[0])) + Math.abs(UJ.c.computeShortestRotation(JJ[1], cJ[1])) + Math.abs(UJ.c.computeShortestRotation(JJ[2], cJ[2]))
+    function NB(BB, TB) {
+      return Math.abs(yB.e.computeShortestRotation(BB[0], TB[0])) + Math.abs(yB.e.computeShortestRotation(BB[1], TB[1])) + Math.abs(yB.e.computeShortestRotation(BB[2], TB[2]))
     }
-    const EJ = new qJ
+    const tB = new YB
   },
-  36555: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => XJ,
-      f: () => eJ,
-      j: () => FJ,
-      n: () => UJ
+  36491: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => lB,
+      f: () => pB,
+      j: () => VB,
+      n: () => yB
     });
-    let FJ = function(JJ) {
-        return JJ[JJ.Linear = 0] = "Linear", JJ[JJ.CatmullRomSpline = 1] = "CatmullRomSpline", JJ
+    let VB = function(BB) {
+        return BB[BB.Linear = 0] = "Linear", BB[BB.CatmullRomSpline = 1] = "CatmullRomSpline", BB
       }({}),
-      UJ = function(JJ) {
-        return JJ[JJ.NoLoop = 0] = "NoLoop", JJ[JJ.LoopOnLastFrame = 1] = "LoopOnLastFrame", JJ[JJ.HoldOnLastFrame = 2] = "HoldOnLastFrame", JJ
+      yB = function(BB) {
+        return BB[BB.NoLoop = 0] = "NoLoop", BB[BB.LoopOnLastFrame = 1] = "LoopOnLastFrame", BB[BB.HoldOnLastFrame = 2] = "HoldOnLastFrame", BB
       }({}),
-      eJ = function(JJ) {
-        return JJ[JJ.Movement = 0] = "Movement", JJ[JJ.Action = 1] = "Action", JJ[JJ.Emote = 2] = "Emote", JJ[JJ.Custom = 3] = "Custom", JJ
+      pB = function(BB) {
+        return BB[BB.Movement = 0] = "Movement", BB[BB.Action = 1] = "Action", BB[BB.Emote = 2] = "Emote", BB[BB.Custom = 3] = "Custom", BB
       }({}),
-      XJ = function(JJ) {
-        return JJ[JJ.Start = 0] = "Start", JJ[JJ.Stop = 1] = "Stop", JJ
+      lB = function(BB) {
+        return BB[BB.Start = 0] = "Start", BB[BB.Stop = 1] = "Stop", BB
       }({})
   },
-  4245: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      c: () => UJ,
-      d: () => FJ,
-      f: () => eJ,
-      h: () => qJ,
-      k: () => XJ
+  4247: (BB, TB, dB) => {
+    dB.d(TB, {
+      b: () => yB,
+      d: () => VB,
+      e: () => pB,
+      i: () => YB,
+      j: () => lB
     });
-    const FJ = ["sine", "triangle", "square", "sawtooth"],
-      UJ = 55,
-      eJ = {
+    const VB = ["sine", "triangle", "square", "sawtooth"],
+      yB = 55,
+      pB = {
         soft: {
           waveform: "sine",
           pitchHz: 300,
@@ -1116,39 +1116,39 @@ export const modules = {
         }
       };
 
-    function XJ(JJ) {
-      return "string" !== typeof JJ ? JJ : Object.hasOwn(eJ, JJ) ? eJ[JJ] : null
+    function lB(BB) {
+      return "string" !== typeof BB ? BB : Object.hasOwn(pB, BB) ? pB[BB] : null
     }
 
-    function AJ(JJ, cJ, ZJ) {
-      return Math.min(ZJ, Math.max(cJ, JJ))
+    function JB(BB, TB, dB) {
+      return Math.min(dB, Math.max(TB, BB))
     }
 
-    function qJ(JJ) {
-      const cJ = AJ(JJ.durationMs, 10, 500),
-        ZJ = AJ(JJ.attackMs, 0, cJ),
+    function YB(BB) {
+      const TB = JB(BB.durationMs, 10, 500),
+        dB = JB(BB.attackMs, 0, TB),
         {
-          intonation: UJ
-        } = JJ;
+          intonation: yB
+        } = BB;
       return {
-        waveform: FJ.includes(JJ.waveform) ? JJ.waveform : "sine",
-        pitchHz: AJ(JJ.pitchHz, 20, 4e3),
-        glideSemitones: AJ(JJ.glideSemitones, -24, 24),
-        durationMs: cJ,
-        attackMs: ZJ,
-        releaseMs: AJ(JJ.releaseMs, 0, cJ - ZJ),
-        lowpassHz: null === JJ.lowpassHz ? null : AJ(JJ.lowpassHz, 20, 2e4),
-        volume: AJ(JJ.volume, 0, 2),
+        waveform: VB.includes(BB.waveform) ? BB.waveform : "sine",
+        pitchHz: JB(BB.pitchHz, 20, 4e3),
+        glideSemitones: JB(BB.glideSemitones, -24, 24),
+        durationMs: TB,
+        attackMs: dB,
+        releaseMs: JB(BB.releaseMs, 0, TB - dB),
+        lowpassHz: null === BB.lowpassHz ? null : JB(BB.lowpassHz, 20, 2e4),
+        volume: JB(BB.volume, 0, 2),
         intonation: {
-          variationSemitones: AJ(UJ.variationSemitones, 0, 6),
-          declineSemitones: AJ(UJ.declineSemitones, 0, 12),
-          questionRiseSemitones: AJ(UJ.questionRiseSemitones, 0, 12),
-          exclaimLiftSemitones: AJ(UJ.exclaimLiftSemitones, 0, 12)
+          variationSemitones: JB(yB.variationSemitones, 0, 6),
+          declineSemitones: JB(yB.declineSemitones, 0, 12),
+          questionRiseSemitones: JB(yB.questionRiseSemitones, 0, 12),
+          exclaimLiftSemitones: JB(yB.exclaimLiftSemitones, 0, 12)
         },
-        syllableMs: AJ(JJ.syllableMs, 25, 200)
+        syllableMs: JB(BB.syllableMs, 25, 200)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const JJ in modules) Object.freeze(modules[JJ]);
+for (const BB in modules) Object.freeze(modules[BB]);

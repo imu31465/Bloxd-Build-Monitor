@@ -1,60 +1,60 @@
 export const id = 106;
 export const ids = [106];
 export const modules = {
-  35669: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      b: () => GJ,
-      c: () => mJ
+  35607: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => uB,
+      g: () => iB
     });
-    var FJ = ZJ(926),
-      UJ = ZJ.n(FJ),
-      eJ = ZJ(47),
-      XJ = ZJ(1326),
-      AJ = ZJ(1703),
-      qJ = ZJ(1743),
-      jJ = ZJ(13),
-      YJ = ZJ(2175),
-      hJ = ZJ(35676),
-      DJ = ZJ(35678),
-      sJ = ZJ(35683),
-      nJ = ZJ(990);
-    const GJ = (0, eJ.memo)((function() {
+    var VB = dB(933),
+      yB = dB.n(VB),
+      pB = dB(62),
+      lB = dB(1317),
+      JB = dB(1679),
+      YB = dB(1727),
+      gB = dB(21),
+      oB = dB(2139),
+      kB = dB(35616),
+      LB = dB(35624),
+      OB = dB(35628),
+      DB = dB(980);
+    const uB = (0, pB.memo)((function() {
       const {
-        isTouchScreen: JJ,
-        clientEscMenuOptions: cJ,
-        scriptedCameraFacing: ZJ,
-        crosshairShownOverride: FJ
-      } = (0, jJ.j)(["isTouchScreen", "clientEscMenuOptions", "scriptedCameraFacing", "crosshairShownOverride"]), AJ = (0, YJ.f)("gunshotOrigin"), GJ = (0, eJ.useRef)(null), xJ = (0, eJ.useRef)(!1), [rJ, vJ] = (0, eJ.useState)(fJ);
-      (0, XJ.i)("cameraZoomSet", vJ), (0, eJ.useEffect)((() => {
-        vJ(fJ())
+        isTouchScreen: BB,
+        clientEscMenuOptions: TB,
+        scriptedCameraFacing: dB,
+        crosshairShownOverride: VB
+      } = (0, gB.m)(["isTouchScreen", "clientEscMenuOptions", "scriptedCameraFacing", "crosshairShownOverride"]), JB = (0, oB.j)("gunshotOrigin"), uB = (0, pB.useRef)(null), EB = (0, pB.useRef)(!1), [vB, mB] = (0, pB.useState)(HB);
+      (0, lB.e)("cameraZoomSet", mB), (0, pB.useEffect)((() => {
+        mB(HB())
       }), []);
-      const QJ = (0, qJ.f)("heldItemAim"),
-        VJ = QJ.gun;
-      (0, eJ.useEffect)((() => (0, DJ.g)("crosshairAccuracy", mJ)), []), (0, XJ.i)("mouseState", (JJ => {
+      const NB = (0, YB.i)("heldItemAim"),
+        fB = NB.gun;
+      (0, pB.useEffect)((() => (0, LB.h)("crosshairAccuracy", iB)), []), (0, lB.e)("mouseState", (BB => {
         let {
-          isDown: cJ
-        } = JJ;
-        xJ.current = cJ, GJ.current && (GJ.current.style.transform = cJ ? "scale(1.4)" : "scale(1)")
+          isDown: TB
+        } = BB;
+        EB.current = TB, uB.current && (uB.current.style.transform = TB ? "scale(1.4)" : "scale(1)")
       }));
-      const KJ = (0, sJ.f)(JJ, cJ.touchActionButtons);
-      return (null !== FJ && void 0 !== FJ ? FJ : (0, hJ.d)(QJ, rJ > 1, KJ, AJ)) ? "movement" === ZJ || "cursor" === ZJ ? null : (0, nJ.jsxs)(nJ.Fragment, {
-        children: [VJ && (0, nJ.jsx)(EJ, {}), !VJ && (0, nJ.jsx)("div", {
-          className: UJ()("Crosshair", {
-            Touch: JJ
+      const sB = (0, OB.i)(BB, TB.touchActionButtons);
+      return (null !== VB && void 0 !== VB ? VB : (0, kB.f)(NB, vB > 1, sB, JB)) ? "movement" === dB || "cursor" === dB ? null : (0, DB.jsxs)(DB.Fragment, {
+        children: [fB && (0, DB.jsx)(tB, {}), !fB && (0, DB.jsx)("div", {
+          className: yB()("Crosshair", {
+            Touch: BB
           }),
-          ref: GJ,
+          ref: uB,
           style: {
-            transform: xJ.current ? "scale(1.4)" : "scale(1)"
+            transform: EB.current ? "scale(1.4)" : "scale(1)"
           },
           children: "+"
         })]
       }) : null
     }));
 
-    function fJ() {
-      return AJ.gameBridge.lookup("cameraZoom", null)
+    function HB() {
+      return JB.gameBridge.lookup("cameraZoom", null)
     }
-    const xJ = [{
+    const EB = [{
         current: null
       }, {
         current: null
@@ -63,348 +63,348 @@ export const modules = {
       }, {
         current: null
       }],
-      rJ = {
+      vB = {
         current: null
       };
-    let vJ = 0;
+    let mB = 0;
 
-    function mJ(JJ) {
-      xJ[0].current || rJ.current ? QJ(JJ) : vJ = JJ
+    function iB(BB) {
+      EB[0].current || vB.current ? NB(BB) : mB = BB
     }
 
-    function QJ(JJ) {
-      if (xJ[0].current) {
-        const cJ = `${(0,hJ.c)(JJ)}vh`;
-        xJ[0].current.style.transform = `translateX(calc(0px - ${cJ}))`, xJ[1].current.style.transform = `translateX(calc(0px + ${cJ}))`, xJ[2].current.style.transform = `translateY(calc(0px - ${cJ}))`, xJ[3].current.style.transform = `translateY(calc(0px + ${cJ}))`
+    function NB(BB) {
+      if (EB[0].current) {
+        const TB = `${(0,kB.e)(BB)}vh`;
+        EB[0].current.style.transform = `translateX(calc(0px - ${TB}))`, EB[1].current.style.transform = `translateX(calc(0px + ${TB}))`, EB[2].current.style.transform = `translateY(calc(0px - ${TB}))`, EB[3].current.style.transform = `translateY(calc(0px + ${TB}))`
       }
-      rJ.current && (rJ.current.style.filter = `blur(${Math.round(JJ/10)}px)`)
+      vB.current && (vB.current.style.filter = `blur(${Math.round(BB/10)}px)`)
     }
 
-    function EJ() {
-      const JJ = (0, XJ.m)("aimingOverlay", "none"),
-        cJ = "1.2vh",
-        ZJ = "0.3vh";
-      return (0, eJ.useEffect)((() => {
-        vJ && QJ(vJ)
-      }), []), (0, nJ.jsxs)(nJ.Fragment, {
-        children: ["sniper" === JJ && (0, nJ.jsxs)("div", {
-          ref: rJ,
+    function tB() {
+      const BB = (0, lB.f)("aimingOverlay", "none"),
+        TB = "1.2vh",
+        dB = "0.3vh";
+      return (0, pB.useEffect)((() => {
+        mB && NB(mB)
+      }), []), (0, DB.jsxs)(DB.Fragment, {
+        children: ["sniper" === BB && (0, DB.jsxs)("div", {
+          ref: vB,
           className: "GunCrosshairOverlayWrapper",
-          children: [(0, nJ.jsx)("div", {
+          children: [(0, DB.jsx)("div", {
             className: "GunCrosshairOverlay"
-          }), (0, nJ.jsx)("div", {
+          }), (0, DB.jsx)("div", {
             className: "GunCrosshairOverlayLine1"
-          }), (0, nJ.jsx)("div", {
+          }), (0, DB.jsx)("div", {
             className: "GunCrosshairOverlayLine2"
-          }), (0, nJ.jsx)("div", {
+          }), (0, DB.jsx)("div", {
             className: "GunCrosshairOverlayDot"
           })]
-        }), (0, nJ.jsxs)("div", {
+        }), (0, DB.jsxs)("div", {
           className: "GunCrosshairWrapper",
           style: {
-            opacity: "sniper" === JJ ? 0 : 1
+            opacity: "sniper" === BB ? 0 : 1
           },
-          children: [(0, nJ.jsx)("div", {
+          children: [(0, DB.jsx)("div", {
             className: "GunCrosshair",
             style: {
-              width: cJ,
-              height: ZJ,
+              width: TB,
+              height: dB,
               top: "49.85vh",
               left: "calc(50vw - 0.6vh)"
             },
-            ref: xJ[0]
-          }), (0, nJ.jsx)("div", {
+            ref: EB[0]
+          }), (0, DB.jsx)("div", {
             className: "GunCrosshair",
             style: {
-              width: cJ,
-              height: ZJ,
+              width: TB,
+              height: dB,
               top: "49.85vh",
               left: "calc(50vw - 0.6vh)"
             },
-            ref: xJ[1]
-          }), (0, nJ.jsx)("div", {
+            ref: EB[1]
+          }), (0, DB.jsx)("div", {
             className: "GunCrosshair",
             style: {
-              width: ZJ,
-              height: cJ,
+              width: dB,
+              height: TB,
               top: "49.4vh",
               left: "calc(50vw - 0.15vh)"
             },
-            ref: xJ[2]
-          }), (0, nJ.jsx)("div", {
+            ref: EB[2]
+          }), (0, DB.jsx)("div", {
             className: "GunCrosshair",
             style: {
-              width: ZJ,
-              height: cJ,
+              width: dB,
+              height: TB,
               top: "49.4vh",
               left: "calc(50vw - 0.15vh)"
             },
-            ref: xJ[3]
+            ref: EB[3]
           })]
         })]
       })
     }
   },
-  35797: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      c: () => eJ,
-      d: () => qJ,
-      f: () => XJ
+  35741: (BB, TB, dB) => {
+    dB.d(TB, {
+      e: () => pB,
+      i: () => YB,
+      l: () => lB
     });
-    var FJ = ZJ(535),
-      UJ = ZJ(2401);
+    var VB = dB(572),
+      yB = dB(2385);
 
-    function eJ(JJ) {
-      return JJ === (0, UJ.h)().IJJ ? (0, UJ.h)().XM : JJ
+    function pB(BB) {
+      return BB === (0, yB.d)().yTB ? (0, yB.d)().rK : BB
     }
 
-    function XJ(JJ) {
-      return !(0, FJ.P)(JJ) && eJ(JJ) === (0, UJ.h)().XM
+    function lB(BB) {
+      return !(0, VB.M)(BB) && pB(BB) === (0, yB.d)().rK
     }
-    const AJ = "gravity";
+    const JB = "gravity";
 
-    function qJ() {
-      return (0, UJ.h)().physics[AJ][1]
+    function YB() {
+      return (0, yB.d)().physics[JB][1]
     }
   },
-  35783: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      c: () => vJ
+  35725: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => mB
     });
-    var FJ = ZJ(35789),
-      UJ = ZJ(157),
-      eJ = ZJ(4259),
-      XJ = ZJ(35815),
-      AJ = ZJ(35797),
-      qJ = ZJ(250),
-      jJ = ZJ.n(qJ),
-      YJ = ZJ(1098),
-      hJ = ZJ(2401),
-      DJ = ZJ(35813),
-      sJ = ZJ(17),
-      nJ = ZJ(13),
-      GJ = ZJ(35806);
-    const fJ = new Set(["note"]);
-    const xJ = {
-      stop: () => xJ,
-      fade: () => xJ,
-      rate: () => xJ,
+    var VB = dB(35732),
+      yB = dB(184),
+      pB = dB(4258),
+      lB = dB(35764),
+      JB = dB(35741),
+      YB = dB(287),
+      gB = dB.n(YB),
+      oB = dB(1089),
+      kB = dB(2385),
+      LB = dB(35755),
+      OB = dB(24),
+      DB = dB(21),
+      uB = dB(35746);
+    const HB = new Set(["note"]);
+    const EB = {
+      stop: () => EB,
+      fade: () => EB,
+      rate: () => EB,
       stopsAtOnce: () => !1,
       isAlive: () => !1,
       getDurationMs: () => 0,
       getVolume: () => 0,
       getRelativeVolume: () => 0,
-      setRelativeVolume: () => xJ,
-      setPannerAttr: () => xJ,
-      setPosition: () => xJ
+      setRelativeVolume: () => EB,
+      setPannerAttr: () => EB,
+      setPosition: () => EB
     };
-    class rJ {
-      constructor(JJ) {
-        let cJ, {
-          src: ZJ,
-          volumeScalar: UJ,
-          isSoundSprite: AJ
-        } = JJ;
-        this._howl = void 0, this._volumeMultiplier = void 0, this._spriteTrackSrc = void 0, this._loadFailed = !1, AJ ? (cJ = (0, FJ.g)(ZJ), this._spriteTrackSrc = cJ) : cJ = {
-          src: YJ.clientSideServerUrls.staticUrl + ZJ
-        }, this._volumeMultiplier = new XJ.j, this._volumeMultiplier.setMultiplierType("persistentScalar", UJ), this._howl = new eJ.Howl({
-          ...cJ,
+    class vB {
+      constructor(BB) {
+        let TB, {
+          src: dB,
+          volumeScalar: yB,
+          isSoundSprite: JB
+        } = BB;
+        this._howl = void 0, this._volumeMultiplier = void 0, this._spriteTrackSrc = void 0, this._loadFailed = !1, JB ? (TB = (0, VB.g)(dB), this._spriteTrackSrc = TB) : TB = {
+          src: oB.clientSideServerUrls.staticUrl + dB
+        }, this._volumeMultiplier = new lB.j, this._volumeMultiplier.setMultiplierType("persistentScalar", yB), this._howl = new pB.Howl({
+          ...TB,
           pool: 15
         }), this._howl.once("loaderror", (() => {
           this._loadFailed = !0
         }))
       }
       play() {
-        let JJ, cJ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : void 0,
-          ZJ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        if (cJ) {
-          var FJ;
-          if (null === (FJ = this._spriteTrackSrc) || void 0 === FJ || !FJ.sprite[cJ]) throw new Error("No such sprite in your spritetrack");
-          JJ = this._howl.play(cJ)
-        } else JJ = this._howl.play();
-        ZJ && this._howl.loop(!0, JJ);
-        let UJ = 1;
-        this._howl.volume(this._volumeMultiplier.getTotalMultipliedVal(), JJ);
-        const eJ = {
-          stop: () => (this._howl.stop(JJ), eJ),
-          fade: (cJ, ZJ, FJ) => (this._howl.fade(cJ, ZJ, FJ, JJ), eJ),
-          rate: cJ => (this._howl.rate(cJ, JJ), eJ),
-          stopsAtOnce: () => this._howl.playing(JJ) && !this._howl._playLock,
+        let BB, TB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : void 0,
+          dB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        if (TB) {
+          var VB;
+          if (null === (VB = this._spriteTrackSrc) || void 0 === VB || !VB.sprite[TB]) throw new Error("No such sprite in your spritetrack");
+          BB = this._howl.play(TB)
+        } else BB = this._howl.play();
+        dB && this._howl.loop(!0, BB);
+        let yB = 1;
+        this._howl.volume(this._volumeMultiplier.getTotalMultipliedVal(), BB);
+        const pB = {
+          stop: () => (this._howl.stop(BB), pB),
+          fade: (TB, dB, VB) => (this._howl.fade(TB, dB, VB, BB), pB),
+          rate: TB => (this._howl.rate(TB, BB), pB),
+          stopsAtOnce: () => this._howl.playing(BB) && !this._howl._playLock,
           isAlive: () => {
-            const cJ = this._howl._soundById(JJ);
-            return !this._loadFailed && !!cJ && !cJ._ended
+            const TB = this._howl._soundById(BB);
+            return !this._loadFailed && !!TB && !TB._ended
           },
-          getDurationMs: () => this._howl._soundById(JJ) ? 1e3 * this._howl.duration(JJ) / this._howl.rate(JJ) : 0,
-          getVolume: () => UJ * this._volumeMultiplier.getTotalMultipliedVal(),
-          getRelativeVolume: () => UJ,
-          setRelativeVolume: cJ => {
-            if (cJ > 1) throw new Error("Volume should be <= 1");
-            return UJ = nJ.d.get("soundOnFromAd") ? cJ : 0, this._howl.volume(Math.min(1, UJ * this._volumeMultiplier.getTotalMultipliedVal()), JJ), eJ
+          getDurationMs: () => this._howl._soundById(BB) ? 1e3 * this._howl.duration(BB) / this._howl.rate(BB) : 0,
+          getVolume: () => yB * this._volumeMultiplier.getTotalMultipliedVal(),
+          getRelativeVolume: () => yB,
+          setRelativeVolume: TB => {
+            if (TB > 1) throw new Error("Volume should be <= 1");
+            return yB = DB.d.get("soundOnFromAd") ? TB : 0, this._howl.volume(Math.min(1, yB * this._volumeMultiplier.getTotalMultipliedVal()), BB), pB
           },
-          setPannerAttr: cJ => {
+          setPannerAttr: TB => {
             let {
-              coneInnerAngle: ZJ,
-              coneOuterAngle: FJ = 360,
-              coneOuterGain: UJ,
-              distanceModel: XJ,
-              maxDistance: AJ,
-              panningModel: qJ,
-              refDistance: jJ,
-              rolloffFactor: YJ
-            } = cJ;
+              coneInnerAngle: dB,
+              coneOuterAngle: VB = 360,
+              coneOuterGain: yB,
+              distanceModel: lB,
+              maxDistance: JB,
+              panningModel: YB,
+              refDistance: gB,
+              rolloffFactor: oB
+            } = TB;
             return this._setPannerAttr({
-              id: JJ,
-              coneInnerAngle: ZJ,
-              coneOuterAngle: FJ,
-              coneOuterGain: UJ,
-              distanceModel: XJ,
-              maxDistance: AJ,
-              panningModel: qJ,
-              refDistance: jJ,
-              rolloffFactor: YJ
-            }), eJ
+              id: BB,
+              coneInnerAngle: dB,
+              coneOuterAngle: VB,
+              coneOuterGain: yB,
+              distanceModel: lB,
+              maxDistance: JB,
+              panningModel: YB,
+              refDistance: gB,
+              rolloffFactor: oB
+            }), pB
           },
-          setPosition: cJ => (this._howl.pos(cJ[2], cJ[1], cJ[0], JJ), eJ)
+          setPosition: TB => (this._howl.pos(TB[2], TB[1], TB[0], BB), pB)
         };
-        return eJ
+        return pB
       }
-      setGlobalVolume(JJ) {
-        this._volumeMultiplier.setMultiplierType("globalVolume", JJ), this._howl.volume(JJ)
+      setGlobalVolume(BB) {
+        this._volumeMultiplier.setMultiplierType("globalVolume", BB), this._howl.volume(BB)
       }
-      _setPannerAttr(JJ) {
+      _setPannerAttr(BB) {
         let {
-          id: cJ,
-          coneInnerAngle: ZJ = 360,
-          coneOuterAngle: FJ = 360,
-          coneOuterGain: UJ = 0,
-          distanceModel: eJ = "inverse",
-          maxDistance: XJ = 1e3,
-          panningModel: AJ = "HRTF",
-          refDistance: qJ = DJ.k,
-          rolloffFactor: jJ = 1
-        } = JJ;
+          id: TB,
+          coneInnerAngle: dB = 360,
+          coneOuterAngle: VB = 360,
+          coneOuterGain: yB = 0,
+          distanceModel: pB = "inverse",
+          maxDistance: lB = 1e3,
+          panningModel: JB = "HRTF",
+          refDistance: YB = LB.f,
+          rolloffFactor: gB = 1
+        } = BB;
         this._howl.pannerAttr({
-          coneOuterAngle: FJ
-        }, cJ);
-        const YJ = {
-          coneInnerAngle: ZJ,
-          coneOuterAngle: FJ,
-          coneOuterGain: UJ,
-          distanceModel: eJ,
-          maxDistance: XJ,
-          panningModel: AJ,
-          refDistance: qJ,
-          rolloffFactor: jJ
+          coneOuterAngle: VB
+        }, TB);
+        const oB = {
+          coneInnerAngle: dB,
+          coneOuterAngle: VB,
+          coneOuterGain: yB,
+          distanceModel: pB,
+          maxDistance: lB,
+          panningModel: JB,
+          refDistance: YB,
+          rolloffFactor: gB
         };
-        this._howl.pannerAttr(YJ, cJ)
+        this._howl.pannerAttr(oB, TB)
       }
     }
-    const vJ = new class {
+    const mB = new class {
       constructor() {
-        this.stereoSheets = {}, this.spatialSheets = {}, this.spatialVoices = new GJ.d, sJ.i.subscribe("appManagerUpdated|soundVolume", (JJ => {
-          const cJ = Object.values(this.stereoSheets).concat(Object.values(this.spatialSheets));
-          for (const ZJ of cJ) ZJ.setGlobalVolume(JJ)
+        this.stereoSheets = {}, this.spatialSheets = {}, this.spatialVoices = new uB.e, OB.h.subscribe("appManagerUpdated|soundVolume", (BB => {
+          const TB = Object.values(this.stereoSheets).concat(Object.values(this.spatialSheets));
+          for (const dB of TB) dB.setGlobalVolume(BB)
         }))
       }
-      play(JJ, cJ) {
-        var ZJ;
-        let eJ, XJ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null === (ZJ = (0, hJ.h)()) || void 0 === ZJ ? void 0 : ZJ.XM,
-          qJ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : DJ.g,
-          YJ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : DJ.k,
-          sJ = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-        var vJ;
-        (0, hJ.h)() ? eJ = !!Array.isArray(XJ) || (0, AJ.c)(XJ) !== (null === (vJ = (0, hJ.h)()) || void 0 === vJ ? void 0 : vJ.XM): eJ = !1;
-        const mJ = eJ ? this.spatialSheets : this.stereoSheets,
-          QJ = (0, FJ.h)(JJ);
-        if (!mJ[QJ]) {
-          const JJ = new rJ({
-            src: QJ,
+      play(BB, TB) {
+        var dB;
+        let pB, lB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null === (dB = (0, kB.d)()) || void 0 === dB ? void 0 : dB.rK,
+          YB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : LB.c,
+          oB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : LB.f,
+          OB = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+        var mB;
+        (0, kB.d)() ? pB = !!Array.isArray(lB) || (0, JB.e)(lB) !== (null === (mB = (0, kB.d)()) || void 0 === mB ? void 0 : mB.rK): pB = !1;
+        const iB = pB ? this.spatialSheets : this.stereoSheets,
+          NB = (0, VB.h)(BB);
+        if (!iB[NB]) {
+          const BB = new vB({
+            src: NB,
             isSoundSprite: !0,
             volumeScalar: 1
           });
-          JJ.setGlobalVolume(nJ.d.get("soundVolume")), mJ[QJ] = JJ
+          BB.setGlobalVolume(DB.d.get("soundVolume")), iB[NB] = BB
         }
-        const EJ = mJ[QJ];
-        if (!eJ) {
-          const ZJ = EJ.play(JJ, sJ);
-          return ZJ.setRelativeVolume(cJ), ZJ
+        const tB = iB[NB];
+        if (!pB) {
+          const dB = tB.play(BB, OB);
+          return dB.setRelativeVolume(TB), dB
         }
-        const VJ = (0, hJ.h)(),
-          KJ = Array.isArray(XJ) ? XJ : VJ.qE.Om(XJ),
-          yJ = VJ.qE.Om(VJ.XM);
-        if (!KJ || jJ().sqrDist(KJ, yJ) > qJ * qJ) return xJ;
-        let SJ;
-        if (!sJ) {
+        const fB = (0, kB.d)(),
+          sB = Array.isArray(lB) ? lB : fB.Km.Dv(lB),
+          MB = fB.Km.Dv(fB.rK);
+        if (!sB || gB().sqrDist(sB, MB) > YB * YB) return EB;
+        let zB;
+        if (!OB) {
           if (!this.spatialVoices.admit({
-              group: fJ.has(QJ) ? null : (0, GJ.j)(JJ),
-              loudness: (0, GJ.h)(cJ, jJ().DA(KJ, yJ), YJ),
+              group: HB.has(NB) ? null : (0, uB.k)(BB),
+              loudness: (0, uB.h)(TB, gB().cg(sB, MB), oB),
               startMs: performance.now(),
               getDurationMs: () => {
-                var JJ, cJ;
-                return null !== (JJ = null === (cJ = SJ) || void 0 === cJ ? void 0 : cJ.getDurationMs()) && void 0 !== JJ ? JJ : 0
+                var BB, TB;
+                return null !== (BB = null === (TB = zB) || void 0 === TB ? void 0 : TB.getDurationMs()) && void 0 !== BB ? BB : 0
               },
               isAlive: () => {
-                var JJ, cJ;
-                return null !== (JJ = null === (cJ = SJ) || void 0 === cJ ? void 0 : cJ.isAlive()) && void 0 !== JJ && JJ
+                var BB, TB;
+                return null !== (BB = null === (TB = zB) || void 0 === TB ? void 0 : TB.isAlive()) && void 0 !== BB && BB
               },
               canStop: () => {
-                var JJ, cJ;
-                return null !== (JJ = null === (cJ = SJ) || void 0 === cJ ? void 0 : cJ.stopsAtOnce()) && void 0 !== JJ && JJ
+                var BB, TB;
+                return null !== (BB = null === (TB = zB) || void 0 === TB ? void 0 : TB.stopsAtOnce()) && void 0 !== BB && BB
               },
               stop: () => {
-                var JJ;
-                null === (JJ = SJ) || void 0 === JJ || JJ.stop()
+                var BB;
+                null === (BB = zB) || void 0 === BB || BB.stop()
               }
-            })) return xJ
+            })) return EB
         }
-        return SJ = EJ.play(JJ, sJ), SJ.setRelativeVolume(cJ), SJ.setPannerAttr({
-          refDistance: YJ
-        }), SJ.setPosition([KJ[0], KJ[1] + UJ.c.Dv * UJ.c.playerEyeToHeightRatio, KJ[2]]), SJ
+        return zB = tB.play(BB, OB), zB.setRelativeVolume(TB), zB.setPannerAttr({
+          refDistance: oB
+        }), zB.setPosition([sB[0], sB[1] + yB.c.kE * yB.c.playerEyeToHeightRatio, sB[2]]), zB
       }
     }
   },
-  35858: (JJ, cJ, ZJ) => {
-    function FJ(JJ, cJ) {
-      var ZJ, FJ, UJ, eJ, XJ, AJ, qJ, jJ;
-      return JJ.name === cJ.name && ((null === (ZJ = JJ.attributes) || void 0 === ZJ || null === (FJ = ZJ.customAttributes) || void 0 === FJ ? void 0 : FJ.stackKey) === (null === (UJ = cJ.attributes) || void 0 === UJ || null === (eJ = UJ.customAttributes) || void 0 === eJ ? void 0 : eJ.stackKey) && (!0 !== (null === (XJ = JJ.attributes) || void 0 === XJ || null === (AJ = XJ.customAttributes) || void 0 === AJ ? void 0 : AJ.unstackable) && !0 !== (null === (qJ = cJ.attributes) || void 0 === qJ || null === (jJ = qJ.customAttributes) || void 0 === jJ ? void 0 : jJ.unstackable)))
+  35814: (BB, TB, dB) => {
+    function VB(BB, TB) {
+      var dB, VB, yB, pB, lB, JB, YB, gB;
+      return BB.name === TB.name && ((null === (dB = BB.attributes) || void 0 === dB || null === (VB = dB.customAttributes) || void 0 === VB ? void 0 : VB.stackKey) === (null === (yB = TB.attributes) || void 0 === yB || null === (pB = yB.customAttributes) || void 0 === pB ? void 0 : pB.stackKey) && (!0 !== (null === (lB = BB.attributes) || void 0 === lB || null === (JB = lB.customAttributes) || void 0 === JB ? void 0 : JB.unstackable) && !0 !== (null === (YB = TB.attributes) || void 0 === YB || null === (gB = YB.customAttributes) || void 0 === gB ? void 0 : gB.unstackable)))
     }
-    ZJ.d(cJ, {
-      c: () => FJ
+    dB.d(TB, {
+      c: () => VB
     })
   },
-  5817: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => XJ,
-      h: () => UJ,
-      j: () => qJ,
-      m: () => eJ,
-      p: () => jJ,
-      s: () => FJ,
-      v: () => AJ
+  5839: (BB, TB, dB) => {
+    dB.d(TB, {
+      e: () => lB,
+      h: () => yB,
+      i: () => YB,
+      l: () => pB,
+      o: () => gB,
+      q: () => VB,
+      s: () => JB
     });
-    let FJ = function(JJ) {
-        return JJ[JJ.DEFAULT = 0] = "DEFAULT", JJ[JJ.BOAT = 1] = "BOAT", JJ[JJ.GLIDER = 2] = "GLIDER", JJ[JJ.BALLOON = 3] = "BALLOON", JJ[JJ.SLEEPING = 4] = "SLEEPING", JJ[JJ.RIDING_MOB = 5] = "RIDING_MOB", JJ[JJ.CAR = 6] = "CAR", JJ[JJ.HOVERCRAFT = 7] = "HOVERCRAFT", JJ
+    let VB = function(BB) {
+        return BB[BB.DEFAULT = 0] = "DEFAULT", BB[BB.BOAT = 1] = "BOAT", BB[BB.GLIDER = 2] = "GLIDER", BB[BB.BALLOON = 3] = "BALLOON", BB[BB.SLEEPING = 4] = "SLEEPING", BB[BB.RIDING_MOB = 5] = "RIDING_MOB", BB[BB.CAR = 6] = "CAR", BB[BB.HOVERCRAFT = 7] = "HOVERCRAFT", BB
       }({}),
-      UJ = function(JJ) {
-        return JJ[JJ.WOOD = 0] = "WOOD", JJ[JJ.OBSIDIAN = 1] = "OBSIDIAN", JJ[JJ.SPEED = 2] = "SPEED", JJ
+      yB = function(BB) {
+        return BB[BB.WOOD = 0] = "WOOD", BB[BB.OBSIDIAN = 1] = "OBSIDIAN", BB[BB.SPEED = 2] = "SPEED", BB
       }({}),
-      eJ = function(JJ) {
-        return JJ[JJ.WOOD = 0] = "WOOD", JJ[JJ.IRON = 1] = "IRON", JJ[JJ.GOLD = 2] = "GOLD", JJ[JJ.DIAMOND = 3] = "DIAMOND", JJ
+      pB = function(BB) {
+        return BB[BB.WOOD = 0] = "WOOD", BB[BB.IRON = 1] = "IRON", BB[BB.GOLD = 2] = "GOLD", BB[BB.DIAMOND = 3] = "DIAMOND", BB
       }({}),
-      XJ = function(JJ) {
-        return JJ[JJ.YELLOW = 0] = "YELLOW", JJ[JJ.WHITE = 1] = "WHITE", JJ[JJ.RED = 2] = "RED", JJ[JJ.PURPLE = 3] = "PURPLE", JJ[JJ.PINK = 4] = "PINK", JJ[JJ.ORANGE = 5] = "ORANGE", JJ[JJ.MAGENTA = 6] = "MAGENTA", JJ[JJ.LIME = 7] = "LIME", JJ[JJ.LIGHT_GRAY = 8] = "LIGHT_GRAY", JJ[JJ.LIGHT_BLUE = 9] = "LIGHT_BLUE", JJ[JJ.GREEN = 10] = "GREEN", JJ[JJ.GRAY = 11] = "GRAY", JJ[JJ.CYAN = 12] = "CYAN", JJ[JJ.BROWN = 13] = "BROWN", JJ[JJ.BLUE = 14] = "BLUE", JJ[JJ.BLACK = 15] = "BLACK", JJ
+      lB = function(BB) {
+        return BB[BB.YELLOW = 0] = "YELLOW", BB[BB.WHITE = 1] = "WHITE", BB[BB.RED = 2] = "RED", BB[BB.PURPLE = 3] = "PURPLE", BB[BB.PINK = 4] = "PINK", BB[BB.ORANGE = 5] = "ORANGE", BB[BB.MAGENTA = 6] = "MAGENTA", BB[BB.LIME = 7] = "LIME", BB[BB.LIGHT_GRAY = 8] = "LIGHT_GRAY", BB[BB.LIGHT_BLUE = 9] = "LIGHT_BLUE", BB[BB.GREEN = 10] = "GREEN", BB[BB.GRAY = 11] = "GRAY", BB[BB.CYAN = 12] = "CYAN", BB[BB.BROWN = 13] = "BROWN", BB[BB.BLUE = 14] = "BLUE", BB[BB.BLACK = 15] = "BLACK", BB
       }({}),
-      AJ = function(JJ) {
-        return JJ[JJ.ROTATION_1 = 0] = "ROTATION_1", JJ[JJ.ROTATION_2 = 1] = "ROTATION_2", JJ[JJ.ROTATION_3 = 2] = "ROTATION_3", JJ[JJ.ROTATION_4 = 3] = "ROTATION_4", JJ
+      JB = function(BB) {
+        return BB[BB.ROTATION_1 = 0] = "ROTATION_1", BB[BB.ROTATION_2 = 1] = "ROTATION_2", BB[BB.ROTATION_3 = 2] = "ROTATION_3", BB[BB.ROTATION_4 = 3] = "ROTATION_4", BB
       }({}),
-      qJ = function(JJ) {
-        return JJ[JJ.KART = 0] = "KART", JJ[JJ.OFF_ROADER = 1] = "OFF_ROADER", JJ[JJ.CAR = 2] = "CAR", JJ[JJ.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", JJ[JJ.ARMORED_CAR = 4] = "ARMORED_CAR", JJ[JJ.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", JJ[JJ.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", JJ[JJ.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", JJ
+      YB = function(BB) {
+        return BB[BB.KART = 0] = "KART", BB[BB.OFF_ROADER = 1] = "OFF_ROADER", BB[BB.CAR = 2] = "CAR", BB[BB.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", BB[BB.ARMORED_CAR = 4] = "ARMORED_CAR", BB[BB.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", BB[BB.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", BB[BB.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", BB
       }({});
-    FJ.DEFAULT, FJ.BOAT, UJ.SPEED, FJ.GLIDER, eJ.DIAMOND, FJ.BALLOON, XJ.BLACK, FJ.SLEEPING, AJ.ROTATION_4, FJ.RIDING_MOB, FJ.CAR, qJ.MOONSTONE_MINING_DRILL, FJ.HOVERCRAFT;
-    let jJ = function(JJ) {
-      return JJ[JJ.NORMAL = 0] = "NORMAL", JJ[JJ.GLIDING = 1] = "GLIDING", JJ[JJ.FLOATING = 2] = "FLOATING", JJ
+    VB.DEFAULT, VB.BOAT, yB.SPEED, VB.GLIDER, pB.DIAMOND, VB.BALLOON, lB.BLACK, VB.SLEEPING, JB.ROTATION_4, VB.RIDING_MOB, VB.CAR, YB.MOONSTONE_MINING_DRILL, VB.HOVERCRAFT;
+    let gB = function(BB) {
+      return BB[BB.NORMAL = 0] = "NORMAL", BB[BB.GLIDING = 1] = "GLIDING", BB[BB.FLOATING = 2] = "FLOATING", BB
     }({})
   }
 };
 Object.freeze(modules);
-for (const JJ in modules) Object.freeze(modules[JJ]);
+for (const BB in modules) Object.freeze(modules[BB]);

@@ -1,432 +1,432 @@
 export const id = 145;
 export const ids = [145];
 export const modules = {
-  37761: (JJ, cJ, ZJ) => {
-    var FJ = {
-      "./cape_cow_cream.png": 27270,
-      "./cape_cow_normal.png": 27273,
-      "./cape_creator_level1.png": 27279,
-      "./cape_creator_level2.png": 27287,
-      "./cape_creator_level3.png": 27294,
-      "./cape_none.png": 27299,
-      "./cape_pig.png": 27308,
-      "./cape_sheep.png": 27314,
-      "./cape_super.png": 27323,
-      "./cape_super_inverted.png": 27326,
-      "./cape_youtuber.png": 27332
+  37772: (BB, TB, dB) => {
+    var VB = {
+      "./cape_cow_cream.png": 27356,
+      "./cape_cow_normal.png": 27363,
+      "./cape_creator_level1.png": 27370,
+      "./cape_creator_level2.png": 27373,
+      "./cape_creator_level3.png": 27379,
+      "./cape_none.png": 27384,
+      "./cape_pig.png": 27393,
+      "./cape_sheep.png": 27402,
+      "./cape_super.png": 27411,
+      "./cape_super_inverted.png": 27419,
+      "./cape_youtuber.png": 27427
     };
 
-    function UJ(JJ) {
-      var cJ = eJ(JJ);
-      return ZJ(cJ)
+    function yB(BB) {
+      var TB = pB(BB);
+      return dB(TB)
     }
 
-    function eJ(JJ) {
-      if (!ZJ.o(FJ, JJ)) {
-        var cJ = new Error("Cannot find module '" + JJ + "'");
-        throw cJ.code = "MODULE_NOT_FOUND", cJ
+    function pB(BB) {
+      if (!dB.o(VB, BB)) {
+        var TB = new Error("Cannot find module '" + BB + "'");
+        throw TB.code = "MODULE_NOT_FOUND", TB
       }
-      return FJ[JJ]
+      return VB[BB]
     }
-    UJ.keys = function() {
-      return Object.keys(FJ)
-    }, UJ.resolve = eJ, JJ.exports = UJ, UJ.id = 37761
+    yB.keys = function() {
+      return Object.keys(VB)
+    }, yB.resolve = pB, BB.exports = yB, yB.id = 37772
   },
-  40040: (JJ, cJ, ZJ) => {
-    ZJ.r(cJ), ZJ.d(cJ, {
-      openCharacterPreview: () => RJ
+  40024: (BB, TB, dB) => {
+    dB.r(TB), dB.d(TB, {
+      openCharacterPreview: () => qB
     });
-    var FJ = ZJ(37108),
-      UJ = ZJ(2401),
-      eJ = ZJ(1995),
-      XJ = ZJ(521),
-      AJ = ZJ(36562),
-      qJ = ZJ(2001),
-      jJ = ZJ(36555),
-      YJ = ZJ(38624),
-      hJ = ZJ(38872),
-      DJ = ZJ(39952),
-      sJ = ZJ(36165),
-      nJ = ZJ(39009),
-      GJ = ZJ(36229),
-      fJ = ZJ(39029),
-      xJ = ZJ(40004),
-      rJ = ZJ(36138),
-      vJ = ZJ(36578),
-      mJ = ZJ(36588),
-      QJ = (ZJ(39980), ZJ(39250), ZJ(39987), ZJ(35868));
-    let EJ, VJ, KJ, yJ, SJ, IJ, MJ, bJ, wJ;
-    const WJ = document.createElement("canvas");
-    async function gJ() {
-      await new Promise((JJ => {
+    var VB = dB(37038),
+      yB = dB(2385),
+      pB = dB(1978),
+      lB = dB(554),
+      JB = dB(36496),
+      YB = dB(1985),
+      gB = dB(36491),
+      oB = dB(38562),
+      kB = dB(38840),
+      LB = dB(39929),
+      OB = dB(36119),
+      DB = dB(39001),
+      uB = dB(36180),
+      HB = dB(39019),
+      EB = dB(39976),
+      vB = dB(36083),
+      mB = dB(36515),
+      iB = dB(36529),
+      NB = (dB(39955), dB(39222), dB(39959), dB(35819));
+    let tB, fB, sB, MB, zB, wB, UB, FB, KB;
+    const rB = document.createElement("canvas");
+    async function IB() {
+      await new Promise((BB => {
         setTimeout((() => {
-          JJ()
+          BB()
         }), 100)
       }))
     }
-    WJ.classList.add("CharCustomisationPreviewCanvas");
-    const HJ = {},
-      PJ = {},
-      kJ = {},
-      pJ = {};
+    rB.classList.add("CharCustomisationPreviewCanvas");
+    const cB = {},
+      SB = {},
+      PB = {},
+      QB = {};
 
-    function dJ(JJ) {
-      JJ.unfreezeWorldMatrix();
-      for (const cJ of JJ.getChildren()) dJ(cJ)
+    function RB(BB) {
+      BB.unfreezeWorldMatrix();
+      for (const TB of BB.getChildren()) RB(TB)
     }
 
-    function zJ(JJ, cJ) {
-      const ZJ = (0, rJ.d)(JJ, cJ);
-      return ZJ in HJ || (HJ[ZJ] = (async () => {
+    function aB(BB, TB) {
+      const dB = (0, vB.f)(BB, TB);
+      return dB in cB || (cB[dB] = (async () => {
         try {
-          const ZJ = await (0, rJ.f)(JJ, KJ),
-            FJ = new Map;
-          for (const JJ of ZJ.getNodes()) FJ.set(JJ.name, JJ);
-          const UJ = (0, rJ.c)(null !== cJ && void 0 !== cJ ? cJ : JJ, KJ);
-          (0, rJ.g)(ZJ, UJ, {
-            onProcessedMesh: JJ => {
-              (0, rJ.k)(JJ), KJ.BZJ(JJ, !1), JJ.isVisible = !1
+          const dB = await (0, vB.j)(BB, sB),
+            VB = new Map;
+          for (const BB of dB.getNodes()) VB.set(BB.name, BB);
+          const yB = (0, vB.c)(null !== TB && void 0 !== TB ? TB : BB, sB);
+          (0, vB.k)(dB, yB, {
+            onProcessedMesh: BB => {
+              (0, vB.o)(BB), sB.MVB(BB, !1), BB.isVisible = !1
             }
           });
-          for (const JJ of ZJ.rootNodes) dJ(JJ);
-          return FJ
-        } catch (FJ) {
-          throw delete HJ[ZJ], console.error(`Failed to load preview attachment ${ZJ}:`, FJ), FJ
+          for (const BB of dB.rootNodes) RB(BB);
+          return VB
+        } catch (VB) {
+          throw delete cB[dB], console.error(`Failed to load preview attachment ${dB}:`, VB), VB
         }
-      })()), HJ[ZJ]
+      })()), cB[dB]
     }
 
-    function NJ(JJ, cJ) {
-      JJ.isVisible = cJ;
-      for (const ZJ of JJ.getChildMeshes()) ZJ.isVisible = cJ
+    function ZB(BB, TB) {
+      BB.isVisible = TB;
+      for (const dB of BB.getChildMeshes()) dB.isVisible = TB
     }
 
-    function OJ(JJ, cJ) {
-      if (!yJ) return;
-      const AJ = (0, UJ.h)();
-      if (AJ.HV(!1), FJ.e.Player.meshApi.updatePlayerCosmetic(AJ.XM, MJ, JJ, cJ, !0), "cape" === JJ)
-        if (cJ === XJ.h) SJ.GV(!1);
+    function XB(BB, TB) {
+      if (!MB) return;
+      const JB = (0, yB.d)();
+      if (JB.XM(!1), VB.d.Player.meshApi.updatePlayerCosmetic(JB.rK, UB, BB, TB, !0), "cape" === BB)
+        if (TB === lB.h) zB.hN(!1);
         else {
-          SJ.GV(!0);
-          SJ.material.diffuseTexture = new xJ.b(ZJ(37761)(`./cape_${cJ}.png`), SJ.Qy(), {
+          zB.hN(!0);
+          zB.material.diffuseTexture = new EB.b(dB(37772)(`./cape_${TB}.png`), zB.jU(), {
             invertY: !1,
-            samplingMode: xJ.b.NEAREST_NEAREST_MIPLINEAR
+            samplingMode: EB.b.NEAREST_NEAREST_MIPLINEAR
           })
-        } pJ[JJ] = async function(JJ, cJ) {
-        var ZJ;
-        kJ[JJ] = cJ;
-        const FJ = PJ[JJ];
-        if (FJ)
+        } QB[BB] = async function(BB, TB) {
+        var dB;
+        PB[BB] = TB;
+        const VB = SB[BB];
+        if (VB)
           for (const {
-              mesh: eJ,
-              destNode: XJ
+              mesh: pB,
+              destNode: lB
             }
-            of FJ) {
-            NJ(eJ, !1);
-            const JJ = IJ.getNamedNode(MJ, XJ);
-            IJ.detachTransformNodeIfFound(eJ, MJ, JJ)
+            of VB) {
+            ZB(pB, !1);
+            const BB = wB.getNamedNode(UB, lB);
+            wB.detachTransformNodeIfFound(pB, UB, BB)
           }
-        PJ[JJ] = [];
-        const UJ = (0, eJ.i)(JJ, cJ);
-        if (null !== UJ && void 0 !== UJ && null !== (ZJ = UJ.attachments) && void 0 !== ZJ && ZJ.length)
-          for (const eJ of UJ.attachments) {
-            let ZJ;
+        SB[BB] = [];
+        const yB = (0, pB.h)(BB, TB);
+        if (null !== yB && void 0 !== yB && null !== (dB = yB.attachments) && void 0 !== dB && dB.length)
+          for (const pB of yB.attachments) {
+            let dB;
             try {
-              ZJ = await zJ(eJ.modelGlb, eJ.texture)
+              dB = await aB(pB.modelGlb, pB.texture)
             } catch {
               continue
             }
-            if (kJ[JJ] !== cJ) return;
-            const FJ = ZJ.get(eJ.modelNode);
-            if (!FJ) {
-              console.error(`Preview attachment node ${eJ.modelNode} not found in ${eJ.modelGlb}`);
+            if (PB[BB] !== TB) return;
+            const VB = dB.get(pB.modelNode);
+            if (!VB) {
+              console.error(`Preview attachment node ${pB.modelNode} not found in ${pB.modelGlb}`);
               continue
             }
-            NJ(FJ, !0), (0, rJ.n)(FJ, eJ.overlayColour);
-            const UJ = IJ.getNamedNode(MJ, eJ.destNode);
-            IJ.attachTransformNode(FJ, MJ, UJ), PJ[JJ].push({
-              mesh: FJ,
-              destNode: eJ.destNode
+            ZB(VB, !0), (0, vB.t)(VB, pB.overlayColour);
+            const yB = wB.getNamedNode(UB, pB.destNode);
+            wB.attachTransformNode(VB, UB, yB), SB[BB].push({
+              mesh: VB,
+              destNode: pB.destNode
             })
           }
-      }(JJ, cJ)
+      }(BB, TB)
     }
 
-    function TJ(JJ, cJ) {
-      WJ.width = JJ, WJ.height = cJ, EJ.resize()
+    function WB(BB, TB) {
+      rB.width = BB, rB.height = TB, tB.resize()
     }
-    let CJ = 0;
-    class uJ {
-      constructor(JJ, cJ) {
-        this.framing = cJ, this.ready = wJ, this.dev = {
-          setCamera: iJ,
-          canvas: () => WJ,
-          isolateHead(JJ) {
-            const cJ = IJ.getNodeNames(MJ);
-            for (let ZJ = 0; ZJ < cJ.length; ZJ++) "HeadMesh" !== cJ[ZJ] && "__root__" !== cJ[ZJ] && "TorsoNode" !== cJ[ZJ] && IJ.setNodeEnabled(MJ, ZJ, !1);
-            if (JJ) {
-              const JJ = IJ.getNamedNode(MJ, "HeadMesh");
-              IJ.setNodeDisableColorWrite(MJ, JJ, !0, (JJ => {
-                const cJ = new fJ.StandardMaterial(`${JJ.name}_depthOnly`, JJ.Qy());
-                return cJ.disableColorWrite = !0, cJ
+    let hB = 0;
+    class CB {
+      constructor(BB, TB) {
+        this.framing = TB, this.ready = KB, this.dev = {
+          setCamera: GB,
+          canvas: () => rB,
+          isolateHead(BB) {
+            const TB = wB.getNodeNames(UB);
+            for (let dB = 0; dB < TB.length; dB++) "HeadMesh" !== TB[dB] && "__root__" !== TB[dB] && "TorsoNode" !== TB[dB] && wB.setNodeEnabled(UB, dB, !1);
+            if (BB) {
+              const BB = wB.getNamedNode(UB, "HeadMesh");
+              wB.setNodeDisableColorWrite(UB, BB, !0, (BB => {
+                const TB = new HB.StandardMaterial(`${BB.name}_depthOnly`, BB.jU());
+                return TB.disableColorWrite = !0, TB
               }))
             }
-            IJ.setPosition(MJ, 0, -12, 0)
+            wB.setPosition(UB, 0, -12, 0)
           }
         }, this.closed = !1, this.resetCamera();
-        const ZJ = JJ.getBoundingClientRect();
-        TJ(ZJ.width, ZJ.height), CJ++, EJ.stopRenderLoop(), EJ.runRenderLoop((() => {
-          var JJ;
-          null === (JJ = bJ) || void 0 === JJ || JJ.render(EJ.getDeltaTime()), KJ.render()
+        const dB = BB.getBoundingClientRect();
+        WB(dB.width, dB.height), hB++, tB.stopRenderLoop(), tB.runRenderLoop((() => {
+          var BB;
+          null === (BB = FB) || void 0 === BB || BB.render(tB.getDeltaTime()), sB.render()
         }))
       }
       isReady() {
-        return !!yJ
+        return !!MB
       }
-      setCosmetic(JJ, cJ) {
-        OJ(JJ, cJ)
+      setCosmetic(BB, TB) {
+        XB(BB, TB)
       }
-      playEmote(JJ) {
-        if (!bJ) return;
-        if (!JJ) return void bJ.stopAnimation(jJ.f.Emote);
-        const cJ = (0, AJ.g)((0, qJ.m)(JJ).animation);
-        bJ.startAnimation(cJ, jJ.f.Emote, 0, qJ.e)
+      playEmote(BB) {
+        if (!FB) return;
+        if (!BB) return void FB.stopAnimation(gB.f.Emote);
+        const TB = (0, JB.h)((0, YB.g)(BB).animation);
+        FB.startAnimation(TB, gB.f.Emote, 0, YB.b)
       }
-      async untilDrawn(JJ) {
-        if (await gJ(), "cape" === JJ && SJ) {
-          const JJ = SJ.material,
-            cJ = null === JJ || void 0 === JJ ? void 0 : JJ.diffuseTexture;
-          cJ && !cJ.isReady() && (await new Promise((JJ => {
-            cJ.onLoadObservable.addOnce((() => {
-              JJ()
+      async untilDrawn(BB) {
+        if (await IB(), "cape" === BB && zB) {
+          const BB = zB.material,
+            TB = null === BB || void 0 === BB ? void 0 : BB.diffuseTexture;
+          TB && !TB.isReady() && (await new Promise((BB => {
+            TB.onLoadObservable.addOnce((() => {
+              BB()
             }))
-          })), await gJ())
+          })), await IB())
         }
-        pJ[JJ] && (await pJ[JJ], await gJ()), await KJ.whenReadyAsync(), await new Promise((JJ => {
-          KJ.onAfterRenderObservable.addOnce((() => {
-            JJ()
+        QB[BB] && (await QB[BB], await IB()), await sB.whenReadyAsync(), await new Promise((BB => {
+          sB.onAfterRenderObservable.addOnce((() => {
+            BB()
           }))
         }))
       }
       resetCamera() {
-        VJ.inertialAlphaOffset = 0, VJ.inertialBetaOffset = 0, VJ.inertialRadiusOffset = 0, iJ(QJ.e[this.framing])
+        fB.inertialAlphaOffset = 0, fB.inertialBetaOffset = 0, fB.inertialRadiusOffset = 0, GB(NB.d[this.framing])
       }
-      resize(JJ, cJ) {
-        TJ(JJ, cJ)
+      resize(BB, TB) {
+        WB(BB, TB)
       }
       close() {
-        this.closed || (this.closed = !0, CJ--, 0 === CJ && EJ.stopRenderLoop())
+        this.closed || (this.closed = !0, hB--, 0 === hB && tB.stopRenderLoop())
       }
     }
 
-    function iJ(JJ) {
+    function GB(BB) {
       let {
-        yaw: cJ,
-        pitch: ZJ,
-        radius: FJ,
-        target: UJ
-      } = JJ;
-      VJ.alpha = cJ, VJ.beta = ZJ, FJ && (VJ.radius = FJ), UJ && VJ.target.set(UJ[0], UJ[1], UJ[2])
+        yaw: TB,
+        pitch: dB,
+        radius: VB,
+        target: yB
+      } = BB;
+      fB.alpha = TB, fB.beta = dB, VB && (fB.radius = VB), yB && fB.target.set(yB[0], yB[1], yB[2])
     }
 
-    function RJ(JJ, cJ) {
-      return JJ.appendChild(WJ), EJ || function() {
-        EJ = new YJ.e(WJ, !0, {
+    function qB(BB, TB) {
+      return BB.appendChild(rB), tB || function() {
+        tB = new oB.d(rB, !0, {
           preserveDrawingBuffer: !0
         });
-        const JJ = (0, UJ.h)();
-        EJ.LZJ = JJ.XG.engine.LZJ, KJ = new hJ.b(EJ), KJ.clearColor = new GJ.e(0, 0, 0, 0), KJ.ambientColor = new GJ.Color3(1, 1, 1), VJ = new DJ.b("yf", 0, 0, 1, sJ.Pn.Zero(), KJ), VJ.attachControl(WJ, !0), VJ.panningSensibility = 0, wJ = (0, FJ.r)("Player", KJ, !0).then((cJ => {
-          yJ = cJ.meshApi, SJ = cJ.capeMesh, IJ = JJ.XG.Wy;
-          const ZJ = 8.33;
-          MJ = (0, FJ.k)("Player", ZJ, !0, !0), IJ.setPosition(MJ, 0, -8.33, 0);
-          const UJ = IJ.getNamedNode(MJ, "BodyMesh");
-          IJ.attachTransformNode(SJ, MJ, UJ), IJ.set(MJ, "aOpacity", 1), IJ.bM(MJ, "aOpacity", 1), bJ = new vJ.AnimatorState, bJ.ih = JJ, bJ.thinInstMgr = IJ, bJ.Py = MJ, bJ.fZJ = IJ.aZJ(MJ, 0), bJ.modelLifeformType = "Player", bJ.nodeNameAliases = (0, mJ.b)("Player").nodeNameAliases;
-          const eJ = SJ.rM().boundingBox;
-          SJ.position.y = ((24 - eJ.maximum.y + eJ.minimum.y) / 2 - 1 / 32) / ZJ, SJ.position.z = -1 / ZJ, SJ.rotationQuaternion = null;
-          const XJ = Math.PI / 18,
-            AJ = eJ.maximum.y / ZJ;
-          SJ.rotation.x = XJ;
-          const qJ = Math.cos(XJ),
-            jJ = Math.sin(XJ);
-          SJ.position.y += AJ * (1 - qJ) + 0 * jJ, SJ.position.z -= AJ * jJ + 0 * (1 - qJ);
-          const YJ = new fJ.StandardMaterial("capeMaterial", SJ.Qy());
-          SJ.material = YJ;
-          const hJ = new GJ.Color3(1, 1, 1);
-          YJ.diffuseColor = new GJ.Color3, YJ.specularColor = new GJ.Color3, YJ.emissiveColor = new GJ.Color3, YJ.ambientColor = new GJ.Color3, hJ.scaleToRef(.43, YJ.diffuseColor), hJ.scaleToRef(1.75, YJ.ambientColor), YJ.freeze();
-          const DJ = new nJ.b("light", new sJ.Pn(-.1, 1, -.3), KJ);
-          DJ.diffuse = new GJ.Color3(1, 1, 1), DJ.specular = new GJ.Color3(1, 1, 1), DJ.groundColor = new GJ.Color3(.5, .5, .5)
+        const BB = (0, yB.d)();
+        tB.fVB = BB.yu.engine.fVB, sB = new kB.c(tB), sB.clearColor = new uB.d(0, 0, 0, 0), sB.ambientColor = new uB.Color3(1, 1, 1), fB = new LB.b("tH", 0, 0, 1, OB.RD.Zero(), sB), fB.attachControl(rB, !0), fB.panningSensibility = 0, KB = (0, VB.z)("Player", sB, !0).then((TB => {
+          MB = TB.meshApi, zB = TB.capeMesh, wB = BB.yu.YF;
+          const dB = 8.33;
+          UB = (0, VB.m)("Player", dB, !0, !0), wB.setPosition(UB, 0, -8.33, 0);
+          const yB = wB.getNamedNode(UB, "BodyMesh");
+          wB.attachTransformNode(zB, UB, yB), wB.set(UB, "aOpacity", 1), wB.hK(UB, "aOpacity", 1), FB = new mB.AnimatorState, FB.OL = BB, FB.thinInstMgr = wB, FB.kF = UB, FB.jdB = wB.sVB(UB, 0), FB.modelLifeformType = "Player", FB.nodeNameAliases = (0, iB.c)("Player").nodeNameAliases;
+          const pB = zB.IK().boundingBox;
+          zB.position.y = ((24 - pB.maximum.y + pB.minimum.y) / 2 - 1 / 32) / dB, zB.position.z = -1 / dB, zB.rotationQuaternion = null;
+          const lB = Math.PI / 18,
+            JB = pB.maximum.y / dB;
+          zB.rotation.x = lB;
+          const YB = Math.cos(lB),
+            gB = Math.sin(lB);
+          zB.position.y += JB * (1 - YB) + 0 * gB, zB.position.z -= JB * gB + 0 * (1 - YB);
+          const oB = new HB.StandardMaterial("capeMaterial", zB.jU());
+          zB.material = oB;
+          const kB = new uB.Color3(1, 1, 1);
+          oB.diffuseColor = new uB.Color3, oB.specularColor = new uB.Color3, oB.emissiveColor = new uB.Color3, oB.ambientColor = new uB.Color3, kB.scaleToRef(.43, oB.diffuseColor), kB.scaleToRef(1.75, oB.ambientColor), oB.freeze();
+          const LB = new DB.c("light", new OB.RD(-.1, 1, -.3), sB);
+          LB.diffuse = new uB.Color3(1, 1, 1), LB.specular = new uB.Color3(1, 1, 1), LB.groundColor = new uB.Color3(.5, .5, .5)
         }))
-      }(), new uJ(JJ, cJ)
+      }(), new CB(BB, TB)
     }
   },
-  37754: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => DJ
+  37767: (BB, TB, dB) => {
+    dB.d(TB, {
+      c: () => LB
     });
-    var FJ = ZJ(36086),
-      UJ = ZJ(36102),
-      eJ = ZJ(36349),
-      XJ = ZJ(36107),
-      AJ = ZJ(36093);
+    var VB = dB(36024),
+      yB = dB(36041),
+      pB = dB(36292),
+      lB = dB(36050),
+      JB = dB(36033);
 
-    function qJ(JJ) {
-      return `\n\t\t\t\t${(0,AJ.A)(JJ,"mat2","rotate",[{name:"ang",type:"float"}],`\
+    function YB(BB) {
+      return `\n\t\t\t\t${(0,JB.z)(BB,"mat2","rotate",[{name:"ang",type:"float"}],`\
       n\ t\ t\ t\ t\ t$ {
-        (0, AJ.H)(JJ, "float", "s", "sin(ang)")
+        (0, JB.F)(BB, "float", "s", "sin(ang)")
       }\
       n\ t\ t\ t\ t\ t$ {
-        (0, AJ.H)(JJ, "float", "c", "cos(ang)")
+        (0, JB.F)(BB, "float", "c", "cos(ang)")
       }\
       n\ t\ t\ t\ t\ treturn $ {
-        (0, AJ.p)(JJ, "mat2", "c", "s", "-s", "c")
+        (0, JB.o)(BB, "mat2", "c", "s", "-s", "c")
       };\
       n\ t\ t\ t\ t`)}\n\t\t\t`
     }
 
-    function jJ(JJ, cJ) {
-      let ZJ = (0, AJ.Hb)(JJ, "skele" + (cJ - 1));
-      for (let UJ = cJ - 2; UJ >= 0; UJ--) ZJ = (0, AJ.zb)(JJ, `boneIdx == ${UJ}`, (0, AJ.Hb)(JJ, `skele${UJ}`), ZJ);
-      const FJ = "bone.yz + rotate(bone.x) * pivot - pivot";
-      return `\n\t\t\t\t${(0,AJ.H)(JJ,"int","boneIdx",(0,AJ.Fb)(JJ,"BLOXD_CAPE_MAX_Y - positionUpdated.y"))}\n\t\t\t\t${(0,AJ.H)(JJ,"vec3","bone",ZJ)}\n\t\t\t\t${(0,AJ.H)(JJ,"vec2","pivot",(0,AJ.p)(JJ,"vec2","0.0",`${(0,AJ.Nb)(JJ,"position")}.z`))}\n\t\t\t\t${(0,AJ.gb)(JJ)?`positionUpdated = vec3f(positionUpdated.x, positionUpdated.yz + (${FJ}));`:`positionUpdated.yz += ${FJ};`}\n\t\t`
+    function gB(BB, TB) {
+      let dB = (0, JB.Fb)(BB, "skele" + (TB - 1));
+      for (let yB = TB - 2; yB >= 0; yB--) dB = (0, JB.xb)(BB, `boneIdx == ${yB}`, (0, JB.Fb)(BB, `skele${yB}`), dB);
+      const VB = "bone.yz + rotate(bone.x) * pivot - pivot";
+      return `\n\t\t\t\t${(0,JB.F)(BB,"int","boneIdx",(0,JB.Cb)(BB,"BLOXD_CAPE_MAX_Y - positionUpdated.y"))}\n\t\t\t\t${(0,JB.F)(BB,"vec3","bone",dB)}\n\t\t\t\t${(0,JB.F)(BB,"vec2","pivot",(0,JB.o)(BB,"vec2","0.0",`${(0,JB.Qb)(BB,"position")}.z`))}\n\t\t\t\t${(0,JB.fb)(BB)?`positionUpdated = vec3f(positionUpdated.x, positionUpdated.yz + (${VB}));`:`positionUpdated.yz += ${VB};`}\n\t\t`
     }
 
-    function YJ(JJ) {
-      return `\n\t\t\t\t#ifdef NORMAL\n\t\t\t\tnormalUpdated = ${(0,AJ.p)(JJ,"vec3","normalUpdated.x","rotate(bone.x) * normalUpdated.yz")};\n\t\t\t\t#endif\n\t\t`
+    function oB(BB) {
+      return `\n\t\t\t\t#ifdef NORMAL\n\t\t\t\tnormalUpdated = ${(0,JB.o)(BB,"vec3","normalUpdated.x","rotate(bone.x) * normalUpdated.yz")};\n\t\t\t\t#endif\n\t\t`
     }
-    const hJ = {
+    const kB = {
         x: 0,
         y: 0,
         z: 0,
-        zcJ(JJ, cJ) {
-          return this.x = JJ[cJ], this.y = JJ[cJ + 1], this.z = JJ[cJ + 2], this
+        HdB(BB, TB) {
+          return this.x = BB[TB], this.y = BB[TB + 1], this.z = BB[TB + 2], this
         }
       },
-      DJ = {
+      LB = {
         name: "Cape",
         className: "CapeMaterialPlugin",
         priority: 200,
-        defines: (JJ, cJ) => ({
-          ...(0, FJ.b)("CAPE"),
-          BLOXD_CAPE_BONES: `${JJ}`,
-          BLOXD_CAPE_MAX_Y: (0, UJ.ib)(cJ)
+        defines: (BB, TB) => ({
+          ...(0, VB.c)("CAPE"),
+          BLOXD_CAPE_BONES: `${BB}`,
+          BLOXD_CAPE_MAX_Y: (0, yB.kb)(TB)
         }),
-        getUniforms(JJ) {
-          return (0, eJ.d)(function(JJ) {
-            const cJ = [];
-            for (let ZJ = 0; ZJ < JJ; ZJ++) cJ.push({
-              name: `skele${ZJ}`,
+        getUniforms(BB) {
+          return (0, pB.e)(function(BB) {
+            const TB = [];
+            for (let dB = 0; dB < BB; dB++) TB.push({
+              name: `skele${dB}`,
               type: "highp vec3"
             });
-            return cJ
-          }(this.skeleLen), "vertex", JJ)
+            return TB
+          }(this.skeleLen), "vertex", BB)
         },
-        bind(JJ) {
-          for (let cJ = 0; cJ < this.skeleLen; cJ++) JJ.updateVector3(`skele${cJ}`, hJ.zcJ(this.skele, 3 * cJ))
+        bind(BB) {
+          for (let TB = 0; TB < this.skeleLen; TB++) BB.updateVector3(`skele${TB}`, kB.HdB(this.skele, 3 * TB))
         },
         uniformsVersion() {
           return this.bonesVersion
         },
-        getCustomCode(JJ, cJ) {
-          return "vertex" !== JJ ? null : {
-            CUSTOM_VERTEX_DEFINITIONS: qJ(cJ),
-            CUSTOM_VERTEX_UPDATE_POSITION: jJ(cJ, this.skeleLen),
-            CUSTOM_VERTEX_UPDATE_NORMAL: YJ(cJ)
+        getCustomCode(BB, TB) {
+          return "vertex" !== BB ? null : {
+            CUSTOM_VERTEX_DEFINITIONS: YB(TB),
+            CUSTOM_VERTEX_UPDATE_POSITION: gB(TB, this.skeleLen),
+            CUSTOM_VERTEX_UPDATE_NORMAL: oB(TB)
           }
         }
       };
-    (0, XJ.p)(DJ)
+    (0, lB.i)(LB)
   },
-  37667: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      c: () => YJ,
-      g: () => hJ
+  37661: (BB, TB, dB) => {
+    dB.d(TB, {
+      e: () => oB,
+      i: () => kB
     });
-    var FJ = ZJ(36086),
-      UJ = ZJ(36349),
-      eJ = ZJ(36093),
-      XJ = ZJ(36107);
-    const AJ = "bloxdTextLodBias",
-      qJ = [{
-        name: AJ,
+    var VB = dB(36024),
+      yB = dB(36292),
+      pB = dB(36033),
+      lB = dB(36050);
+    const JB = "bloxdTextLodBias",
+      YB = [{
+        name: JB,
         type: "float"
       }],
-      jJ = "bloxdTextSample",
-      YJ = {
+      gB = "bloxdTextSample",
+      oB = {
         planes: -.5,
         boards: -.5
       },
-      hJ = {
+      kB = {
         name: "TextSampler",
         className: "TextSamplerMaterialPlugin",
         priority: 60,
-        defines: () => (0, FJ.b)("TEXT_SAMPLER"),
-        getUniforms: JJ => (0, UJ.d)(qJ, "fragment", JJ),
-        bind(JJ) {
-          JJ.updateFloat(AJ, this.lodBias)
+        defines: () => (0, VB.c)("TEXT_SAMPLER"),
+        getUniforms: BB => (0, yB.e)(YB, "fragment", BB),
+        bind(BB) {
+          BB.updateFloat(JB, this.lodBias)
         },
         uniformsVersion: () => 0,
-        getCustomCode(JJ, cJ) {
-          if ("fragment" !== JJ) return null;
-          const ZJ = (0, eJ.Q)(cJ, `vec4 ${jJ}(sampler2D s, vec2 uv, float bias)`, `fn ${jJ}(t: texture_2d<f32>, ts: sampler, uv: vec2f, bias: f32) -> vec4f`),
-            FJ = (0, eJ.Q)(cJ, "texture2D(s, uv, bias)", "textureSampleBias(t, ts, uv, bias)"),
-            UJ = `${(0,eJ.$)(cJ,"vDiffuseUV")} + uvOffset`,
-            XJ = (0, eJ.Q)(cJ, `${jJ}(diffuseSampler, ${UJ}, ${(0,eJ.Hb)(cJ,AJ)})`, `${jJ}(diffuseSampler, diffuseSamplerSampler, ${UJ}, ${(0,eJ.Hb)(cJ,AJ)})`);
+        getCustomCode(BB, TB) {
+          if ("fragment" !== BB) return null;
+          const dB = (0, pB.N)(TB, `vec4 ${gB}(sampler2D s, vec2 uv, float bias)`, `fn ${gB}(t: texture_2d<f32>, ts: sampler, uv: vec2f, bias: f32) -> vec4f`),
+            VB = (0, pB.N)(TB, "texture2D(s, uv, bias)", "textureSampleBias(t, ts, uv, bias)"),
+            yB = `${(0,pB.Y)(TB,"vDiffuseUV")} + uvOffset`,
+            lB = (0, pB.N)(TB, `${gB}(diffuseSampler, ${yB}, ${(0,pB.Fb)(TB,JB)})`, `${gB}(diffuseSampler, diffuseSamplerSampler, ${yB}, ${(0,pB.Fb)(TB,JB)})`);
           return {
-            CUSTOM_FRAGMENT_DEFINITIONS: `\n\t\t\t\t${ZJ} {\n\t\t\t\t\t${(0,eJ.H)(cJ,"vec4","texel",FJ)}\n\t\t\t\t\t// 8-bit premultiplied rounding can put the quotient just over 1; only alpha 0 hits the floor,\n\t\t\t\t\t// where the colour is 0 anyway.\n\t\t\t\t\treturn ${(0,eJ.p)(cJ,"vec4",`clamp(texel.rgb / max(texel.a, 1.0 / 255.0), ${(0,eJ.p)(cJ,"vec3","0.0")}, ${(0,eJ.p)(cJ,"vec3","1.0")})`,"texel.a")};\n\t\t\t\t}\n\t\t\t`,
-            [(0, eJ.L)(cJ)]: `baseColor = ${XJ};`
+            CUSTOM_FRAGMENT_DEFINITIONS: `\n\t\t\t\t${dB} {\n\t\t\t\t\t${(0,pB.F)(TB,"vec4","texel",VB)}\n\t\t\t\t\t// 8-bit premultiplied rounding can put the quotient just over 1; only alpha 0 hits the floor,\n\t\t\t\t\t// where the colour is 0 anyway.\n\t\t\t\t\treturn ${(0,pB.o)(TB,"vec4",`clamp(texel.rgb / max(texel.a, 1.0 / 255.0), ${(0,pB.o)(TB,"vec3","0.0")}, ${(0,pB.o)(TB,"vec3","1.0")})`,"texel.a")};\n\t\t\t\t}\n\t\t\t`,
+            [(0, pB.H)(TB)]: `baseColor = ${lB};`
           }
         }
       };
-    (0, XJ.p)(hJ)
+    (0, lB.i)(kB)
   },
-  8114: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      e: () => YJ,
-      i: () => AJ,
-      j: () => qJ
+  8155: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => oB,
+      h: () => JB,
+      i: () => YB
     });
-    var FJ = ZJ(1995),
-      UJ = ZJ(1137),
-      eJ = ZJ(2001);
-    const XJ = ",";
+    var VB = dB(1978),
+      yB = dB(1117),
+      pB = dB(1985);
+    const lB = ",";
 
-    function AJ(JJ) {
-      if (!JJ) return [];
-      const cJ = new Set,
-        ZJ = [];
-      for (const FJ of JJ.split(XJ)) {
-        const JJ = FJ.trim();
-        if ((0, eJ.n)(JJ) && !cJ.has(JJ) && (cJ.add(JJ), ZJ.push(JJ), ZJ.length >= UJ.n)) break
+    function JB(BB) {
+      if (!BB) return [];
+      const TB = new Set,
+        dB = [];
+      for (const VB of BB.split(lB)) {
+        const BB = VB.trim();
+        if ((0, pB.k)(BB) && !TB.has(BB) && (TB.add(BB), dB.push(BB), dB.length >= yB.k)) break
       }
-      return ZJ
+      return dB
     }
 
-    function qJ(JJ) {
-      const cJ = new Set,
-        ZJ = [];
-      for (const FJ of JJ)
-        if ((0, eJ.n)(FJ) && !cJ.has(FJ) && (cJ.add(FJ), ZJ.push(FJ), ZJ.length >= UJ.n)) break;
-      return ZJ.join(XJ)
+    function YB(BB) {
+      const TB = new Set,
+        dB = [];
+      for (const VB of BB)
+        if ((0, pB.k)(VB) && !TB.has(VB) && (TB.add(VB), dB.push(VB), dB.length >= yB.k)) break;
+      return dB.join(lB)
     }
 
-    function jJ() {
-      return qJ(eJ.i)
+    function gB() {
+      return YB(pB.e)
     }
 
-    function YJ(JJ) {
-      var cJ;
-      return "emote" === JJ ? jJ() : null !== (cJ = hJ[JJ][0]) && void 0 !== cJ ? cJ : DJ[JJ]
+    function oB(BB) {
+      var TB;
+      return "emote" === BB ? gB() : null !== (TB = kB[BB][0]) && void 0 !== TB ? TB : LB[BB]
     }
-    const hJ = UJ.s.reduce(((JJ, cJ) => {
-        const ZJ = [];
-        for (const eJ in FJ.g[cJ]) {
-          var UJ;
-          "default" === (null === (UJ = (0, FJ.i)(cJ, eJ)) || void 0 === UJ ? void 0 : UJ.cosmeticPack) && ZJ.push(eJ)
+    const kB = yB.q.reduce(((BB, TB) => {
+        const dB = [];
+        for (const pB in VB.d[TB]) {
+          var yB;
+          "default" === (null === (yB = (0, VB.h)(TB, pB)) || void 0 === yB ? void 0 : yB.cosmeticPack) && dB.push(pB)
         }
-        return JJ[cJ] = ZJ, JJ
+        return BB[TB] = dB, BB
       }), {}),
-      DJ = UJ.s.reduce(((JJ, cJ) => (JJ[cJ] = Object.keys(FJ.g[cJ])[0], JJ)), {})
+      LB = yB.q.reduce(((BB, TB) => (BB[TB] = Object.keys(VB.d[TB])[0], BB)), {})
   }
 };
 Object.freeze(modules);
-for (const JJ in modules) Object.freeze(modules[JJ]);
+for (const BB in modules) Object.freeze(modules[BB]);

@@ -1,62 +1,62 @@
 export const id = 340;
 export const ids = [340];
 export const modules = {
-  59485: (JJ, cJ, ZJ) => {
-    ZJ.r(cJ), ZJ.d(cJ, {
-      applyLightFoOffset: () => XJ,
-      getFloatingOriginOffset: () => UJ,
-      lightFoVersion: () => eJ,
-      wrapRenderableForFO: () => AJ
+  59794: (BB, TB, dB) => {
+    dB.r(TB), dB.d(TB, {
+      applyLightFoOffset: () => lB,
+      getFloatingOriginOffset: () => yB,
+      lightFoVersion: () => pB,
+      wrapRenderableForFO: () => JB
     });
-    var FJ = ZJ(40450);
+    var VB = dB(40446);
 
-    function UJ(JJ) {
-      const cJ = JJ.camera;
-      if (!cJ) return {
+    function yB(BB) {
+      const TB = BB.camera;
+      if (!TB) return {
         x: 0,
         y: 0,
         z: 0
       };
-      const ZJ = cJ.worldMatrix;
+      const dB = TB.worldMatrix;
       return {
-        x: ZJ[12],
-        y: ZJ[13],
-        z: ZJ[14]
+        x: dB[12],
+        y: dB[13],
+        z: dB[14]
       }
     }
 
-    function eJ(JJ) {
-      return JJ.camera ? JJ.camera.worldMatrixVersion : 0
+    function pB(BB) {
+      return BB.camera ? BB.camera.worldMatrixVersion : 0
     }
 
-    function XJ(JJ, cJ) {
-      const ZJ = cJ.camera?.worldMatrix;
-      if (!ZJ) return;
-      const UJ = ZJ[12],
-        eJ = ZJ[13],
-        XJ = ZJ[14];
-      let AJ = 0;
-      for (const qJ of cJ.lights) {
-        if (AJ >= FJ.e) break;
-        if (!qJ._writeLightUbo) continue;
-        const cJ = 4 + 16 * AJ,
-          ZJ = JJ[cJ + 3];
-        if (0 === ZJ || 2 === ZJ) {
-          const ZJ = qJ.worldMatrix;
-          JJ[cJ] = ZJ[12] - UJ, JJ[cJ + 1] = ZJ[13] - eJ, JJ[cJ + 2] = ZJ[14] - XJ
+    function lB(BB, TB) {
+      const dB = TB.camera?.worldMatrix;
+      if (!dB) return;
+      const yB = dB[12],
+        pB = dB[13],
+        lB = dB[14];
+      let JB = 0;
+      for (const YB of TB.lights) {
+        if (JB >= VB.e) break;
+        if (!YB._writeLightUbo) continue;
+        const TB = 4 + 16 * JB,
+          dB = BB[TB + 3];
+        if (0 === dB || 2 === dB) {
+          const dB = YB.worldMatrix;
+          BB[TB] = dB[12] - yB, BB[TB + 1] = dB[13] - pB, BB[TB + 2] = dB[14] - lB
         }
-        AJ++
+        JB++
       }
     }
 
-    function AJ(JJ, cJ, ZJ) {
-      let FJ = -1;
+    function JB(BB, TB, dB) {
+      let VB = -1;
       return () => {
-        const UJ = cJ.camera ? cJ.camera.worldMatrixVersion : -1;
-        UJ !== FJ && (ZJ(), FJ = UJ), JJ()
+        const yB = TB.camera ? TB.camera.worldMatrixVersion : -1;
+        yB !== VB && (dB(), VB = yB), BB()
       }
     }
   }
 };
 Object.freeze(modules);
-for (const JJ in modules) Object.freeze(modules[JJ]);
+for (const BB in modules) Object.freeze(modules[BB]);

@@ -1,249 +1,249 @@
 export const id = 293;
 export const ids = [293];
 export const modules = {
-  40551: (JJ, cJ, ZJ) => {
-    ZJ.r(cJ), ZJ.d(cJ, {
-      _KTXTextureLoader: () => nJ
+  40543: (BB, TB, dB) => {
+    dB.r(TB), dB.d(TB, {
+      _KTXTextureLoader: () => DB
     });
-    var FJ = ZJ(37660);
-    class UJ {
-      constructor(JJ, cJ) {
-        if (this.data = JJ, this.isInvalid = !1, !UJ.IsValid(JJ)) return this.isInvalid = !0, void FJ.c.Error("texture missing KTX identifier");
-        const ZJ = Uint32Array.BYTES_PER_ELEMENT,
-          eJ = new DataView(this.data.buffer, this.data.byteOffset + 12, 13 * ZJ),
-          XJ = 67305985 === eJ.getUint32(0, !0);
-        return this.glType = eJ.getUint32(1 * ZJ, XJ), this.glTypeSize = eJ.getUint32(2 * ZJ, XJ), this.glFormat = eJ.getUint32(3 * ZJ, XJ), this.glInternalFormat = eJ.getUint32(4 * ZJ, XJ), this.glBaseInternalFormat = eJ.getUint32(5 * ZJ, XJ), this.pixelWidth = eJ.getUint32(6 * ZJ, XJ), this.pixelHeight = eJ.getUint32(7 * ZJ, XJ), this.pixelDepth = eJ.getUint32(8 * ZJ, XJ), this.numberOfArrayElements = eJ.getUint32(9 * ZJ, XJ), this.numberOfFaces = eJ.getUint32(10 * ZJ, XJ), this.numberOfMipmapLevels = eJ.getUint32(11 * ZJ, XJ), this.bytesOfKeyValueData = eJ.getUint32(12 * ZJ, XJ), 0 !== this.glType ? (FJ.c.Error("only compressed formats currently supported"), void(this.isInvalid = !0)) : (this.numberOfMipmapLevels = Math.max(1, this.numberOfMipmapLevels), 0 === this.pixelHeight || 0 !== this.pixelDepth ? (FJ.c.Error("only 2D textures currently supported"), void(this.isInvalid = !0)) : 0 !== this.numberOfArrayElements ? (FJ.c.Error("texture arrays not currently supported"), void(this.isInvalid = !0)) : this.numberOfFaces !== cJ ? (FJ.c.Error("number of faces expected" + cJ + ", but found " + this.numberOfFaces), void(this.isInvalid = !0)) : void(this.loadType = UJ.COMPRESSED_2D))
+    var VB = dB(37651);
+    class yB {
+      constructor(BB, TB) {
+        if (this.data = BB, this.isInvalid = !1, !yB.IsValid(BB)) return this.isInvalid = !0, void VB.b.Error("texture missing KTX identifier");
+        const dB = Uint32Array.BYTES_PER_ELEMENT,
+          pB = new DataView(this.data.buffer, this.data.byteOffset + 12, 13 * dB),
+          lB = 67305985 === pB.getUint32(0, !0);
+        return this.glType = pB.getUint32(1 * dB, lB), this.glTypeSize = pB.getUint32(2 * dB, lB), this.glFormat = pB.getUint32(3 * dB, lB), this.glInternalFormat = pB.getUint32(4 * dB, lB), this.glBaseInternalFormat = pB.getUint32(5 * dB, lB), this.pixelWidth = pB.getUint32(6 * dB, lB), this.pixelHeight = pB.getUint32(7 * dB, lB), this.pixelDepth = pB.getUint32(8 * dB, lB), this.numberOfArrayElements = pB.getUint32(9 * dB, lB), this.numberOfFaces = pB.getUint32(10 * dB, lB), this.numberOfMipmapLevels = pB.getUint32(11 * dB, lB), this.bytesOfKeyValueData = pB.getUint32(12 * dB, lB), 0 !== this.glType ? (VB.b.Error("only compressed formats currently supported"), void(this.isInvalid = !0)) : (this.numberOfMipmapLevels = Math.max(1, this.numberOfMipmapLevels), 0 === this.pixelHeight || 0 !== this.pixelDepth ? (VB.b.Error("only 2D textures currently supported"), void(this.isInvalid = !0)) : 0 !== this.numberOfArrayElements ? (VB.b.Error("texture arrays not currently supported"), void(this.isInvalid = !0)) : this.numberOfFaces !== TB ? (VB.b.Error("number of faces expected" + TB + ", but found " + this.numberOfFaces), void(this.isInvalid = !0)) : void(this.loadType = yB.COMPRESSED_2D))
       }
-      uploadLevels(JJ, cJ) {
+      uploadLevels(BB, TB) {
         switch (this.loadType) {
-          case UJ.COMPRESSED_2D:
-            this._upload2DCompressedLevels(JJ, cJ);
-          case UJ.TEX_2D:
-          case UJ.COMPRESSED_3D:
-          case UJ.TEX_3D:
+          case yB.COMPRESSED_2D:
+            this._upload2DCompressedLevels(BB, TB);
+          case yB.TEX_2D:
+          case yB.COMPRESSED_3D:
+          case yB.TEX_3D:
         }
       }
-      _upload2DCompressedLevels(JJ, cJ) {
-        let ZJ = UJ.HEADER_LEN + this.bytesOfKeyValueData,
-          FJ = this.pixelWidth,
-          eJ = this.pixelHeight;
-        const XJ = cJ ? this.numberOfMipmapLevels : 1;
-        for (let UJ = 0; UJ < XJ; UJ++) {
-          const cJ = new Int32Array(this.data.buffer, this.data.byteOffset + ZJ, 1)[0];
-          ZJ += 4;
-          for (let XJ = 0; XJ < this.numberOfFaces; XJ++) {
-            const AJ = new Uint8Array(this.data.buffer, this.data.byteOffset + ZJ, cJ);
-            JJ.gn()._uploadCompressedDataToTextureDirectly(JJ, JJ.format, FJ, eJ, AJ, XJ, UJ), ZJ += cJ, ZJ += 3 - (cJ + 3) % 4
+      _upload2DCompressedLevels(BB, TB) {
+        let dB = yB.HEADER_LEN + this.bytesOfKeyValueData,
+          VB = this.pixelWidth,
+          pB = this.pixelHeight;
+        const lB = TB ? this.numberOfMipmapLevels : 1;
+        for (let yB = 0; yB < lB; yB++) {
+          const TB = new Int32Array(this.data.buffer, this.data.byteOffset + dB, 1)[0];
+          dB += 4;
+          for (let lB = 0; lB < this.numberOfFaces; lB++) {
+            const JB = new Uint8Array(this.data.buffer, this.data.byteOffset + dB, TB);
+            BB.PD()._uploadCompressedDataToTextureDirectly(BB, BB.format, VB, pB, JB, lB, yB), dB += TB, dB += 3 - (TB + 3) % 4
           }
-          FJ = Math.max(1, .5 * FJ), eJ = Math.max(1, .5 * eJ)
+          VB = Math.max(1, .5 * VB), pB = Math.max(1, .5 * pB)
         }
       }
-      static IsValid(JJ) {
-        if (JJ.byteLength >= 12) {
-          const cJ = new Uint8Array(JJ.buffer, JJ.byteOffset, 12);
-          if (171 === cJ[0] && 75 === cJ[1] && 84 === cJ[2] && 88 === cJ[3] && 32 === cJ[4] && 49 === cJ[5] && 49 === cJ[6] && 187 === cJ[7] && 13 === cJ[8] && 10 === cJ[9] && 26 === cJ[10] && 10 === cJ[11]) return !0
+      static IsValid(BB) {
+        if (BB.byteLength >= 12) {
+          const TB = new Uint8Array(BB.buffer, BB.byteOffset, 12);
+          if (171 === TB[0] && 75 === TB[1] && 84 === TB[2] && 88 === TB[3] && 32 === TB[4] && 49 === TB[5] && 49 === TB[6] && 187 === TB[7] && 13 === TB[8] && 10 === TB[9] && 26 === TB[10] && 10 === TB[11]) return !0
         }
         return !1
       }
     }
-    UJ.HEADER_LEN = 64, UJ.COMPRESSED_2D = 0, UJ.COMPRESSED_3D = 1, UJ.TEX_2D = 2, UJ.TEX_3D = 3;
-    var eJ, XJ, AJ, qJ = ZJ(40556),
-      jJ = ZJ(38879);
+    yB.HEADER_LEN = 64, yB.COMPRESSED_2D = 0, yB.COMPRESSED_3D = 1, yB.TEX_2D = 2, yB.TEX_3D = 3;
+    var pB, lB, JB, YB = dB(40546),
+      gB = dB(38848);
 
-    function YJ(JJ, cJ) {
-      const ZJ = cJ?.jsDecoderModule || KTX2DECODER;
-      JJ && (JJ.wasmBaseUrl && (ZJ.Transcoder.WasmBaseUrl = JJ.wasmBaseUrl), JJ.wasmUASTCToASTC && (ZJ.LiteTranscoder_UASTC_ASTC.WasmModuleURL = JJ.wasmUASTCToASTC), JJ.wasmUASTCToBC7 && (ZJ.LiteTranscoder_UASTC_BC7.WasmModuleURL = JJ.wasmUASTCToBC7), JJ.wasmUASTCToRGBA_UNORM && (ZJ.LiteTranscoder_UASTC_RGBA_UNORM.WasmModuleURL = JJ.wasmUASTCToRGBA_UNORM), JJ.wasmUASTCToRGBA_SRGB && (ZJ.LiteTranscoder_UASTC_RGBA_SRGB.WasmModuleURL = JJ.wasmUASTCToRGBA_SRGB), JJ.wasmUASTCToR8_UNORM && (ZJ.LiteTranscoder_UASTC_R8_UNORM.WasmModuleURL = JJ.wasmUASTCToR8_UNORM), JJ.wasmUASTCToRG8_UNORM && (ZJ.LiteTranscoder_UASTC_RG8_UNORM.WasmModuleURL = JJ.wasmUASTCToRG8_UNORM), JJ.jsMSCTranscoder && (ZJ.MSCTranscoder.JSModuleURL = JJ.jsMSCTranscoder), JJ.wasmMSCTranscoder && (ZJ.MSCTranscoder.WasmModuleURL = JJ.wasmMSCTranscoder), JJ.wasmZSTDDecoder && (ZJ.ZSTDDecoder.WasmModuleURL = JJ.wasmZSTDDecoder)), cJ && (cJ.wasmUASTCToASTC && (ZJ.LiteTranscoder_UASTC_ASTC.WasmBinary = cJ.wasmUASTCToASTC), cJ.wasmUASTCToBC7 && (ZJ.LiteTranscoder_UASTC_BC7.WasmBinary = cJ.wasmUASTCToBC7), cJ.wasmUASTCToRGBA_UNORM && (ZJ.LiteTranscoder_UASTC_RGBA_UNORM.WasmBinary = cJ.wasmUASTCToRGBA_UNORM), cJ.wasmUASTCToRGBA_SRGB && (ZJ.LiteTranscoder_UASTC_RGBA_SRGB.WasmBinary = cJ.wasmUASTCToRGBA_SRGB), cJ.wasmUASTCToR8_UNORM && (ZJ.LiteTranscoder_UASTC_R8_UNORM.WasmBinary = cJ.wasmUASTCToR8_UNORM), cJ.wasmUASTCToRG8_UNORM && (ZJ.LiteTranscoder_UASTC_RG8_UNORM.WasmBinary = cJ.wasmUASTCToRG8_UNORM), cJ.jsMSCTranscoder && (ZJ.MSCTranscoder.JSModule = cJ.jsMSCTranscoder), cJ.wasmMSCTranscoder && (ZJ.MSCTranscoder.WasmBinary = cJ.wasmMSCTranscoder), cJ.wasmZSTDDecoder && (ZJ.ZSTDDecoder.WasmBinary = cJ.wasmZSTDDecoder))
+    function oB(BB, TB) {
+      const dB = TB?.jsDecoderModule || KTX2DECODER;
+      BB && (BB.wasmBaseUrl && (dB.Transcoder.WasmBaseUrl = BB.wasmBaseUrl), BB.wasmUASTCToASTC && (dB.LiteTranscoder_UASTC_ASTC.WasmModuleURL = BB.wasmUASTCToASTC), BB.wasmUASTCToBC7 && (dB.LiteTranscoder_UASTC_BC7.WasmModuleURL = BB.wasmUASTCToBC7), BB.wasmUASTCToRGBA_UNORM && (dB.LiteTranscoder_UASTC_RGBA_UNORM.WasmModuleURL = BB.wasmUASTCToRGBA_UNORM), BB.wasmUASTCToRGBA_SRGB && (dB.LiteTranscoder_UASTC_RGBA_SRGB.WasmModuleURL = BB.wasmUASTCToRGBA_SRGB), BB.wasmUASTCToR8_UNORM && (dB.LiteTranscoder_UASTC_R8_UNORM.WasmModuleURL = BB.wasmUASTCToR8_UNORM), BB.wasmUASTCToRG8_UNORM && (dB.LiteTranscoder_UASTC_RG8_UNORM.WasmModuleURL = BB.wasmUASTCToRG8_UNORM), BB.jsMSCTranscoder && (dB.MSCTranscoder.JSModuleURL = BB.jsMSCTranscoder), BB.wasmMSCTranscoder && (dB.MSCTranscoder.WasmModuleURL = BB.wasmMSCTranscoder), BB.wasmZSTDDecoder && (dB.ZSTDDecoder.WasmModuleURL = BB.wasmZSTDDecoder)), TB && (TB.wasmUASTCToASTC && (dB.LiteTranscoder_UASTC_ASTC.WasmBinary = TB.wasmUASTCToASTC), TB.wasmUASTCToBC7 && (dB.LiteTranscoder_UASTC_BC7.WasmBinary = TB.wasmUASTCToBC7), TB.wasmUASTCToRGBA_UNORM && (dB.LiteTranscoder_UASTC_RGBA_UNORM.WasmBinary = TB.wasmUASTCToRGBA_UNORM), TB.wasmUASTCToRGBA_SRGB && (dB.LiteTranscoder_UASTC_RGBA_SRGB.WasmBinary = TB.wasmUASTCToRGBA_SRGB), TB.wasmUASTCToR8_UNORM && (dB.LiteTranscoder_UASTC_R8_UNORM.WasmBinary = TB.wasmUASTCToR8_UNORM), TB.wasmUASTCToRG8_UNORM && (dB.LiteTranscoder_UASTC_RG8_UNORM.WasmBinary = TB.wasmUASTCToRG8_UNORM), TB.jsMSCTranscoder && (dB.MSCTranscoder.JSModule = TB.jsMSCTranscoder), TB.wasmMSCTranscoder && (dB.MSCTranscoder.WasmBinary = TB.wasmMSCTranscoder), TB.wasmZSTDDecoder && (dB.ZSTDDecoder.WasmBinary = TB.wasmZSTDDecoder))
     }
 
-    function hJ(JJ) {
-      let cJ;
-      "undefined" === typeof JJ && "undefined" !== typeof KTX2DECODER && (JJ = KTX2DECODER), onmessage = ZJ => {
-        if (ZJ.data) switch (ZJ.data.action) {
+    function kB(BB) {
+      let TB;
+      "undefined" === typeof BB && "undefined" !== typeof KTX2DECODER && (BB = KTX2DECODER), onmessage = dB => {
+        if (dB.data) switch (dB.data.action) {
           case "init": {
-            const FJ = ZJ.data.urls;
-            FJ && (FJ.jsDecoderModule && "undefined" === typeof JJ && (importScripts(FJ.jsDecoderModule), JJ = KTX2DECODER), YJ(FJ)), ZJ.data.wasmBinaries && YJ(void 0, {
-              ...ZJ.data.wasmBinaries,
-              jsDecoderModule: JJ
-            }), cJ = new JJ.KTX2Decoder, postMessage({
+            const VB = dB.data.urls;
+            VB && (VB.jsDecoderModule && "undefined" === typeof BB && (importScripts(VB.jsDecoderModule), BB = KTX2DECODER), oB(VB)), dB.data.wasmBinaries && oB(void 0, {
+              ...dB.data.wasmBinaries,
+              jsDecoderModule: BB
+            }), TB = new BB.KTX2Decoder, postMessage({
               action: "init"
             });
             break
           }
           case "setDefaultDecoderOptions":
-            JJ.KTX2Decoder.DefaultDecoderOptions = ZJ.data.options;
+            BB.KTX2Decoder.DefaultDecoderOptions = dB.data.options;
             break;
           case "decode":
-            cJ.decode(ZJ.data.data, ZJ.data.caps, ZJ.data.options).then((JJ => {
-              const cJ = [];
-              for (let ZJ = 0; ZJ < JJ.mipmaps.length; ++ZJ) {
-                const FJ = JJ.mipmaps[ZJ];
-                FJ && FJ.data && cJ.push(FJ.data.buffer)
+            TB.decode(dB.data.data, dB.data.caps, dB.data.options).then((BB => {
+              const TB = [];
+              for (let dB = 0; dB < BB.mipmaps.length; ++dB) {
+                const VB = BB.mipmaps[dB];
+                VB && VB.data && TB.push(VB.data.buffer)
               }
               postMessage({
                 action: "decoded",
                 success: !0,
-                decodedData: JJ
-              }, cJ)
-            })).catch((JJ => {
+                decodedData: BB
+              }, TB)
+            })).catch((BB => {
               postMessage({
                 action: "decoded",
                 success: !1,
-                JY: JJ
+                Jo: BB
               })
             }))
         }
       }
-    }! function(JJ) {
-      JJ[JJ.ETC1S = 0] = "ETC1S", JJ[JJ.UASTC4x4 = 1] = "UASTC4x4", JJ[JJ.RGBA32 = 2] = "RGBA32"
-    }(eJ || (eJ = {})),
-    function(JJ) {
-      JJ[JJ.ASTC_4X4_RGBA = 0] = "ASTC_4X4_RGBA", JJ[JJ.ASTC_4x4_RGBA = 0] = "ASTC_4x4_RGBA", JJ[JJ.BC7_RGBA = 1] = "BC7_RGBA", JJ[JJ.BC3_RGBA = 2] = "BC3_RGBA", JJ[JJ.BC1_RGB = 3] = "BC1_RGB", JJ[JJ.PVRTC1_4_RGBA = 4] = "PVRTC1_4_RGBA", JJ[JJ.PVRTC1_4_RGB = 5] = "PVRTC1_4_RGB", JJ[JJ.ETC2_RGBA = 6] = "ETC2_RGBA", JJ[JJ.ETC1_RGB = 7] = "ETC1_RGB", JJ[JJ.RGBA32 = 8] = "RGBA32", JJ[JJ.R8 = 9] = "R8", JJ[JJ.RG8 = 10] = "RG8"
-    }(XJ || (XJ = {})),
-    function(JJ) {
-      JJ[JJ.COMPRESSED_RGBA_BPTC_UNORM_EXT = 36492] = "COMPRESSED_RGBA_BPTC_UNORM_EXT", JJ[JJ.COMPRESSED_RGBA_ASTC_4X4_KHR = 37808] = "COMPRESSED_RGBA_ASTC_4X4_KHR", JJ[JJ.COMPRESSED_RGB_S3TC_DXT1_EXT = 33776] = "COMPRESSED_RGB_S3TC_DXT1_EXT", JJ[JJ.COMPRESSED_RGBA_S3TC_DXT5_EXT = 33779] = "COMPRESSED_RGBA_S3TC_DXT5_EXT", JJ[JJ.COMPRESSED_RGBA_PVRTC_4BPPV1_IMG = 35842] = "COMPRESSED_RGBA_PVRTC_4BPPV1_IMG", JJ[JJ.COMPRESSED_RGB_PVRTC_4BPPV1_IMG = 35840] = "COMPRESSED_RGB_PVRTC_4BPPV1_IMG", JJ[JJ.COMPRESSED_RGBA8_ETC2_EAC = 37496] = "COMPRESSED_RGBA8_ETC2_EAC", JJ[JJ.COMPRESSED_RGB8_ETC2 = 37492] = "COMPRESSED_RGB8_ETC2", JJ[JJ.COMPRESSED_RGB_ETC1_WEBGL = 36196] = "COMPRESSED_RGB_ETC1_WEBGL", JJ[JJ.RGBA8Format = 32856] = "RGBA8Format", JJ[JJ.R8Format = 33321] = "R8Format", JJ[JJ.RG8Format = 33323] = "RG8Format"
-    }(AJ || (AJ = {}));
-    class DJ {
+    }! function(BB) {
+      BB[BB.ETC1S = 0] = "ETC1S", BB[BB.UASTC4x4 = 1] = "UASTC4x4", BB[BB.RGBA32 = 2] = "RGBA32"
+    }(pB || (pB = {})),
+    function(BB) {
+      BB[BB.ASTC_4X4_RGBA = 0] = "ASTC_4X4_RGBA", BB[BB.ASTC_4x4_RGBA = 0] = "ASTC_4x4_RGBA", BB[BB.BC7_RGBA = 1] = "BC7_RGBA", BB[BB.BC3_RGBA = 2] = "BC3_RGBA", BB[BB.BC1_RGB = 3] = "BC1_RGB", BB[BB.PVRTC1_4_RGBA = 4] = "PVRTC1_4_RGBA", BB[BB.PVRTC1_4_RGB = 5] = "PVRTC1_4_RGB", BB[BB.ETC2_RGBA = 6] = "ETC2_RGBA", BB[BB.ETC1_RGB = 7] = "ETC1_RGB", BB[BB.RGBA32 = 8] = "RGBA32", BB[BB.R8 = 9] = "R8", BB[BB.RG8 = 10] = "RG8"
+    }(lB || (lB = {})),
+    function(BB) {
+      BB[BB.COMPRESSED_RGBA_BPTC_UNORM_EXT = 36492] = "COMPRESSED_RGBA_BPTC_UNORM_EXT", BB[BB.COMPRESSED_RGBA_ASTC_4X4_KHR = 37808] = "COMPRESSED_RGBA_ASTC_4X4_KHR", BB[BB.COMPRESSED_RGB_S3TC_DXT1_EXT = 33776] = "COMPRESSED_RGB_S3TC_DXT1_EXT", BB[BB.COMPRESSED_RGBA_S3TC_DXT5_EXT = 33779] = "COMPRESSED_RGBA_S3TC_DXT5_EXT", BB[BB.COMPRESSED_RGBA_PVRTC_4BPPV1_IMG = 35842] = "COMPRESSED_RGBA_PVRTC_4BPPV1_IMG", BB[BB.COMPRESSED_RGB_PVRTC_4BPPV1_IMG = 35840] = "COMPRESSED_RGB_PVRTC_4BPPV1_IMG", BB[BB.COMPRESSED_RGBA8_ETC2_EAC = 37496] = "COMPRESSED_RGBA8_ETC2_EAC", BB[BB.COMPRESSED_RGB8_ETC2 = 37492] = "COMPRESSED_RGB8_ETC2", BB[BB.COMPRESSED_RGB_ETC1_WEBGL = 36196] = "COMPRESSED_RGB_ETC1_WEBGL", BB[BB.RGBA8Format = 32856] = "RGBA8Format", BB[BB.R8Format = 33321] = "R8Format", BB[BB.RG8Format = 33323] = "RG8Format"
+    }(JB || (JB = {}));
+    class LB {
       static GetDefaultNumWorkers() {
         return "object" === typeof navigator && navigator.hardwareConcurrency ? Math.min(Math.floor(.5 * navigator.hardwareConcurrency), 4) : 1
       }
-      static _Initialize(JJ) {
-        if (DJ._WorkerPoolPromise || DJ._DecoderModulePromise) return;
-        const cJ = {
-          wasmBaseUrl: jJ.j.ScriptBaseUrl,
-          jsDecoderModule: jJ.j.GetBabylonScriptURL(this.URLConfig.jsDecoderModule, !0),
-          wasmUASTCToASTC: jJ.j.GetBabylonScriptURL(this.URLConfig.wasmUASTCToASTC, !0),
-          wasmUASTCToBC7: jJ.j.GetBabylonScriptURL(this.URLConfig.wasmUASTCToBC7, !0),
-          wasmUASTCToRGBA_UNORM: jJ.j.GetBabylonScriptURL(this.URLConfig.wasmUASTCToRGBA_UNORM, !0),
-          wasmUASTCToRGBA_SRGB: jJ.j.GetBabylonScriptURL(this.URLConfig.wasmUASTCToRGBA_SRGB, !0),
-          wasmUASTCToR8_UNORM: jJ.j.GetBabylonScriptURL(this.URLConfig.wasmUASTCToR8_UNORM, !0),
-          wasmUASTCToRG8_UNORM: jJ.j.GetBabylonScriptURL(this.URLConfig.wasmUASTCToRG8_UNORM, !0),
-          jsMSCTranscoder: jJ.j.GetBabylonScriptURL(this.URLConfig.jsMSCTranscoder, !0),
-          wasmMSCTranscoder: jJ.j.GetBabylonScriptURL(this.URLConfig.wasmMSCTranscoder, !0),
-          wasmZSTDDecoder: jJ.j.GetBabylonScriptURL(this.URLConfig.wasmZSTDDecoder, !0)
+      static _Initialize(BB) {
+        if (LB._WorkerPoolPromise || LB._DecoderModulePromise) return;
+        const TB = {
+          wasmBaseUrl: gB.h.ScriptBaseUrl,
+          jsDecoderModule: gB.h.GetBabylonScriptURL(this.URLConfig.jsDecoderModule, !0),
+          wasmUASTCToASTC: gB.h.GetBabylonScriptURL(this.URLConfig.wasmUASTCToASTC, !0),
+          wasmUASTCToBC7: gB.h.GetBabylonScriptURL(this.URLConfig.wasmUASTCToBC7, !0),
+          wasmUASTCToRGBA_UNORM: gB.h.GetBabylonScriptURL(this.URLConfig.wasmUASTCToRGBA_UNORM, !0),
+          wasmUASTCToRGBA_SRGB: gB.h.GetBabylonScriptURL(this.URLConfig.wasmUASTCToRGBA_SRGB, !0),
+          wasmUASTCToR8_UNORM: gB.h.GetBabylonScriptURL(this.URLConfig.wasmUASTCToR8_UNORM, !0),
+          wasmUASTCToRG8_UNORM: gB.h.GetBabylonScriptURL(this.URLConfig.wasmUASTCToRG8_UNORM, !0),
+          jsMSCTranscoder: gB.h.GetBabylonScriptURL(this.URLConfig.jsMSCTranscoder, !0),
+          wasmMSCTranscoder: gB.h.GetBabylonScriptURL(this.URLConfig.wasmMSCTranscoder, !0),
+          wasmZSTDDecoder: gB.h.GetBabylonScriptURL(this.URLConfig.wasmZSTDDecoder, !0)
         };
-        JJ && "function" === typeof Worker && "undefined" !== typeof URL ? DJ._WorkerPoolPromise = new Promise((ZJ => {
-          const FJ = `${YJ}(${hJ})()`,
-            UJ = URL.createObjectURL(new Blob([FJ], {
+        BB && "function" === typeof Worker && "undefined" !== typeof URL ? LB._WorkerPoolPromise = new Promise((dB => {
+          const VB = `${oB}(${kB})()`,
+            yB = URL.createObjectURL(new Blob([VB], {
               type: "application/javascript"
             }));
-          ZJ(new qJ.b(JJ, (async () => await async function(JJ, cJ, ZJ) {
-            return await new Promise(((FJ, UJ) => {
-              const eJ = cJ => {
-                  JJ.removeEventListener("error", eJ), JJ.removeEventListener("message", XJ), UJ(cJ)
+          dB(new YB.c(BB, (async () => await async function(BB, TB, dB) {
+            return await new Promise(((VB, yB) => {
+              const pB = TB => {
+                  BB.removeEventListener("error", pB), BB.removeEventListener("message", lB), yB(TB)
                 },
-                XJ = cJ => {
-                  "init" === cJ.data.action && (JJ.removeEventListener("error", eJ), JJ.removeEventListener("message", XJ), FJ(JJ))
+                lB = TB => {
+                  "init" === TB.data.action && (BB.removeEventListener("error", pB), BB.removeEventListener("message", lB), VB(BB))
                 };
-              JJ.addEventListener("error", eJ), JJ.addEventListener("message", XJ), JJ.postMessage({
+              BB.addEventListener("error", pB), BB.addEventListener("message", lB), BB.postMessage({
                 action: "init",
-                urls: ZJ,
-                wasmBinaries: cJ
+                urls: dB,
+                wasmBinaries: TB
               })
             }))
-          }(new Worker(UJ), void 0, cJ))))
-        })) : "undefined" === typeof DJ._KTX2DecoderModule ? DJ._DecoderModulePromise = jJ.j.LoadBabylonScriptAsync(cJ.jsDecoderModule).then((() => (DJ._KTX2DecoderModule = KTX2DECODER, DJ._KTX2DecoderModule.MSCTranscoder.UseFromWorkerThread = !1, DJ._KTX2DecoderModule.WASMMemoryManager.LoadBinariesFromCurrentThread = !0, YJ(cJ, DJ._KTX2DecoderModule), new DJ._KTX2DecoderModule.KTX2Decoder))) : (DJ._KTX2DecoderModule.MSCTranscoder.UseFromWorkerThread = !1, DJ._KTX2DecoderModule.WASMMemoryManager.LoadBinariesFromCurrentThread = !0, DJ._DecoderModulePromise = Promise.resolve(new DJ._KTX2DecoderModule.KTX2Decoder))
+          }(new Worker(yB), void 0, TB))))
+        })) : "undefined" === typeof LB._KTX2DecoderModule ? LB._DecoderModulePromise = gB.h.LoadBabylonScriptAsync(TB.jsDecoderModule).then((() => (LB._KTX2DecoderModule = KTX2DECODER, LB._KTX2DecoderModule.MSCTranscoder.UseFromWorkerThread = !1, LB._KTX2DecoderModule.WASMMemoryManager.LoadBinariesFromCurrentThread = !0, oB(TB, LB._KTX2DecoderModule), new LB._KTX2DecoderModule.KTX2Decoder))) : (LB._KTX2DecoderModule.MSCTranscoder.UseFromWorkerThread = !1, LB._KTX2DecoderModule.WASMMemoryManager.LoadBinariesFromCurrentThread = !0, LB._DecoderModulePromise = Promise.resolve(new LB._KTX2DecoderModule.KTX2Decoder))
       }
-      constructor(JJ) {
-        let cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : DJ.DefaultNumWorkers;
-        this._engine = JJ;
-        const ZJ = "object" === typeof cJ && cJ.workerPool || DJ.WorkerPool;
-        if (ZJ) DJ._WorkerPoolPromise = Promise.resolve(ZJ);
+      constructor(BB) {
+        let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : LB.DefaultNumWorkers;
+        this._engine = BB;
+        const dB = "object" === typeof TB && TB.workerPool || LB.WorkerPool;
+        if (dB) LB._WorkerPoolPromise = Promise.resolve(dB);
         else {
-          "object" === typeof cJ ? DJ._KTX2DecoderModule = cJ?.binariesAndModulesContainer?.jsDecoderModule : "undefined" !== typeof KTX2DECODER && (DJ._KTX2DecoderModule = KTX2DECODER);
-          const JJ = "number" === typeof cJ ? cJ : cJ.numWorkers ?? DJ.DefaultNumWorkers;
-          DJ._Initialize(JJ)
+          "object" === typeof TB ? LB._KTX2DecoderModule = TB?.binariesAndModulesContainer?.jsDecoderModule : "undefined" !== typeof KTX2DECODER && (LB._KTX2DecoderModule = KTX2DECODER);
+          const BB = "number" === typeof TB ? TB : TB.numWorkers ?? LB.DefaultNumWorkers;
+          LB._Initialize(BB)
         }
       }
-      async _uploadAsync(JJ, cJ, ZJ) {
-        const FJ = await this._decodeAsync(JJ, ZJ);
-        this._createTexture(FJ, cJ, ZJ)
+      async _uploadAsync(BB, TB, dB) {
+        const VB = await this._decodeAsync(BB, dB);
+        this._createTexture(VB, TB, dB)
       }
-      async _decodeAsync(JJ, cJ) {
-        const ZJ = this._engine.getCaps(),
-          FJ = {
-            astc: !!ZJ.astc,
-            bptc: !!ZJ.bptc,
-            s3tc: !!ZJ.s3tc,
-            pvrtc: !!ZJ.pvrtc,
-            etc2: !!ZJ.etc2,
-            etc1: !!ZJ.etc1
+      async _decodeAsync(BB, TB) {
+        const dB = this._engine.getCaps(),
+          VB = {
+            astc: !!dB.astc,
+            bptc: !!dB.bptc,
+            s3tc: !!dB.s3tc,
+            pvrtc: !!dB.pvrtc,
+            etc2: !!dB.etc2,
+            etc1: !!dB.etc1
           };
-        if (DJ._WorkerPoolPromise) {
-          const ZJ = await DJ._WorkerPoolPromise;
-          return await new Promise(((UJ, eJ) => {
-            ZJ.push(((ZJ, XJ) => {
-              const AJ = JJ => {
-                  ZJ.removeEventListener("error", AJ), ZJ.removeEventListener("message", qJ), eJ(JJ), XJ()
+        if (LB._WorkerPoolPromise) {
+          const dB = await LB._WorkerPoolPromise;
+          return await new Promise(((yB, pB) => {
+            dB.push(((dB, lB) => {
+              const JB = BB => {
+                  dB.removeEventListener("error", JB), dB.removeEventListener("message", YB), pB(BB), lB()
                 },
-                qJ = JJ => {
-                  "decoded" === JJ.data.action && (ZJ.removeEventListener("error", AJ), ZJ.removeEventListener("message", qJ), JJ.data.success ? UJ(JJ.data.decodedData) : eJ({
-                    message: JJ.data.JY
-                  }), XJ())
+                YB = BB => {
+                  "decoded" === BB.data.action && (dB.removeEventListener("error", JB), dB.removeEventListener("message", YB), BB.data.success ? yB(BB.data.decodedData) : pB({
+                    message: BB.data.Jo
+                  }), lB())
                 };
-              ZJ.addEventListener("error", AJ), ZJ.addEventListener("message", qJ), ZJ.postMessage({
+              dB.addEventListener("error", JB), dB.addEventListener("message", YB), dB.postMessage({
                 action: "setDefaultDecoderOptions",
-                options: DJ.DefaultDecoderOptions._getKTX2DecoderOptions()
+                options: LB.DefaultDecoderOptions._getKTX2DecoderOptions()
               });
-              const jJ = new Uint8Array(JJ.byteLength);
-              jJ.set(new Uint8Array(JJ.buffer, JJ.byteOffset, JJ.byteLength)), ZJ.postMessage({
+              const gB = new Uint8Array(BB.byteLength);
+              gB.set(new Uint8Array(BB.buffer, BB.byteOffset, BB.byteLength)), dB.postMessage({
                 action: "decode",
-                data: jJ,
-                caps: FJ,
-                options: cJ
-              }, [jJ.buffer])
+                data: gB,
+                caps: VB,
+                options: TB
+              }, [gB.buffer])
             }))
           }))
         }
-        if (DJ._DecoderModulePromise) {
-          const FJ = await DJ._DecoderModulePromise;
-          return DJ.DefaultDecoderOptions.isDirty && (DJ._KTX2DecoderModule.KTX2Decoder.DefaultDecoderOptions = DJ.DefaultDecoderOptions._getKTX2DecoderOptions()), await new Promise(((UJ, eJ) => {
-            FJ.decode(JJ, ZJ, cJ).then((JJ => {
-              UJ(JJ)
-            })).catch((JJ => {
-              eJ({
-                message: JJ
+        if (LB._DecoderModulePromise) {
+          const VB = await LB._DecoderModulePromise;
+          return LB.DefaultDecoderOptions.isDirty && (LB._KTX2DecoderModule.KTX2Decoder.DefaultDecoderOptions = LB.DefaultDecoderOptions._getKTX2DecoderOptions()), await new Promise(((yB, pB) => {
+            VB.decode(BB, dB, TB).then((BB => {
+              yB(BB)
+            })).catch((BB => {
+              pB({
+                message: BB
               })
             }))
           }))
         }
         throw new Error("KTX2 decoder module is not available")
       }
-      _createTexture(JJ, cJ, ZJ) {
-        if ((JJ.layerCount ?? 1) > 1) throw new Error("KTX2 container - array textures are not supported by this texture loader.");
-        this._engine._bindTextureDirectly(3553, cJ), ZJ && (ZJ.transcodedFormat = JJ.transcodedFormat, ZJ.isInGammaSpace = JJ.isInGammaSpace, ZJ.hasAlpha = JJ.hasAlpha, ZJ.transcoderName = JJ.transcoderName);
-        let FJ = !0;
-        switch (JJ.transcodedFormat) {
+      _createTexture(BB, TB, dB) {
+        if ((BB.layerCount ?? 1) > 1) throw new Error("KTX2 container - array textures are not supported by this texture loader.");
+        this._engine._bindTextureDirectly(3553, TB), dB && (dB.transcodedFormat = BB.transcodedFormat, dB.isInGammaSpace = BB.isInGammaSpace, dB.hasAlpha = BB.hasAlpha, dB.transcoderName = BB.transcoderName);
+        let VB = !0;
+        switch (BB.transcodedFormat) {
           case 32856:
-            cJ.type = 0, cJ.format = 5;
+            TB.type = 0, TB.format = 5;
             break;
           case 33321:
-            cJ.type = 0, cJ.format = 6;
+            TB.type = 0, TB.format = 6;
             break;
           case 33323:
-            cJ.type = 0, cJ.format = 7;
+            TB.type = 0, TB.format = 7;
             break;
           default:
-            cJ.format = JJ.transcodedFormat, FJ = !1
+            TB.format = BB.transcodedFormat, VB = !1
         }
-        if (cJ._gammaSpace = JJ.isInGammaSpace, cJ.generateMipMaps = JJ.mipmaps.length > 1, cJ.width = JJ.mipmaps[0].width, cJ.height = JJ.mipmaps[0].height, JJ.errors) throw new Error("KTX2 container - could not transcode the data. " + JJ.errors);
-        for (let UJ = 0; UJ < JJ.mipmaps.length; ++UJ) {
-          const ZJ = JJ.mipmaps[UJ];
-          if (!ZJ || !ZJ.data) throw new Error("KTX2 container - could not transcode one of the image");
-          FJ ? (cJ.width = ZJ.width, cJ.height = ZJ.height, this._engine._uploadDataToTextureDirectly(cJ, ZJ.data, 0, UJ, void 0, !0)) : this._engine._uploadCompressedDataToTextureDirectly(cJ, JJ.transcodedFormat, ZJ.width, ZJ.height, ZJ.data, 0, UJ)
+        if (TB._gammaSpace = BB.isInGammaSpace, TB.generateMipMaps = BB.mipmaps.length > 1, TB.width = BB.mipmaps[0].width, TB.height = BB.mipmaps[0].height, BB.errors) throw new Error("KTX2 container - could not transcode the data. " + BB.errors);
+        for (let yB = 0; yB < BB.mipmaps.length; ++yB) {
+          const dB = BB.mipmaps[yB];
+          if (!dB || !dB.data) throw new Error("KTX2 container - could not transcode one of the image");
+          VB ? (TB.width = dB.width, TB.height = dB.height, this._engine._uploadDataToTextureDirectly(TB, dB.data, 0, yB, void 0, !0)) : this._engine._uploadCompressedDataToTextureDirectly(TB, BB.transcodedFormat, dB.width, dB.height, dB.data, 0, yB)
         }
-        cJ._extension = ".ktx2", cJ.isReady = !0, this._engine._bindTextureDirectly(3553, null)
+        TB._extension = ".ktx2", TB.isReady = !0, this._engine._bindTextureDirectly(3553, null)
       }
-      static IsValid(JJ) {
-        if (JJ.byteLength >= 12) {
-          const cJ = new Uint8Array(JJ.buffer, JJ.byteOffset, 12);
-          if (171 === cJ[0] && 75 === cJ[1] && 84 === cJ[2] && 88 === cJ[3] && 32 === cJ[4] && 50 === cJ[5] && 48 === cJ[6] && 187 === cJ[7] && 13 === cJ[8] && 10 === cJ[9] && 26 === cJ[10] && 10 === cJ[11]) return !0
+      static IsValid(BB) {
+        if (BB.byteLength >= 12) {
+          const TB = new Uint8Array(BB.buffer, BB.byteOffset, 12);
+          if (171 === TB[0] && 75 === TB[1] && 84 === TB[2] && 88 === TB[3] && 32 === TB[4] && 50 === TB[5] && 48 === TB[6] && 187 === TB[7] && 13 === TB[8] && 10 === TB[9] && 26 === TB[10] && 10 === TB[11]) return !0
         }
         return !1
       }
     }
 
-    function sJ(JJ) {
-      switch (JJ) {
+    function OB(BB) {
+      switch (BB) {
         case 35916:
           return 33776;
         case 35918:
@@ -289,7 +289,7 @@ export const modules = {
       }
       return null
     }
-    DJ.URLConfig = {
+    LB.URLConfig = {
       jsDecoderModule: "https://cdn.babylonjs.com/babylon.ktx2Decoder.js",
       wasmUASTCToASTC: null,
       wasmUASTCToBC7: null,
@@ -300,7 +300,7 @@ export const modules = {
       jsMSCTranscoder: null,
       wasmMSCTranscoder: null,
       wasmZSTDDecoder: null
-    }, DJ.DefaultNumWorkers = DJ.GetDefaultNumWorkers(), DJ.DefaultDecoderOptions = new class {
+    }, LB.DefaultNumWorkers = LB.GetDefaultNumWorkers(), LB.DefaultDecoderOptions = new class {
       constructor() {
         this._isDirty = !0, this._useRGBAIfOnlyBC1BC3AvailableWhenUASTC = !0, this._ktx2DecoderOptions = {}
       }
@@ -310,153 +310,153 @@ export const modules = {
       get useRGBAIfASTCBC7NotAvailableWhenUASTC() {
         return this._useRGBAIfASTCBC7NotAvailableWhenUASTC
       }
-      set useRGBAIfASTCBC7NotAvailableWhenUASTC(JJ) {
-        this._useRGBAIfASTCBC7NotAvailableWhenUASTC !== JJ && (this._useRGBAIfASTCBC7NotAvailableWhenUASTC = JJ, this._isDirty = !0)
+      set useRGBAIfASTCBC7NotAvailableWhenUASTC(BB) {
+        this._useRGBAIfASTCBC7NotAvailableWhenUASTC !== BB && (this._useRGBAIfASTCBC7NotAvailableWhenUASTC = BB, this._isDirty = !0)
       }
       get useRGBAIfOnlyBC1BC3AvailableWhenUASTC() {
         return this._useRGBAIfOnlyBC1BC3AvailableWhenUASTC
       }
-      set useRGBAIfOnlyBC1BC3AvailableWhenUASTC(JJ) {
-        this._useRGBAIfOnlyBC1BC3AvailableWhenUASTC !== JJ && (this._useRGBAIfOnlyBC1BC3AvailableWhenUASTC = JJ, this._isDirty = !0)
+      set useRGBAIfOnlyBC1BC3AvailableWhenUASTC(BB) {
+        this._useRGBAIfOnlyBC1BC3AvailableWhenUASTC !== BB && (this._useRGBAIfOnlyBC1BC3AvailableWhenUASTC = BB, this._isDirty = !0)
       }
       get forceRGBA() {
         return this._forceRGBA
       }
-      set forceRGBA(JJ) {
-        this._forceRGBA !== JJ && (this._forceRGBA = JJ, this._isDirty = !0)
+      set forceRGBA(BB) {
+        this._forceRGBA !== BB && (this._forceRGBA = BB, this._isDirty = !0)
       }
       get forceR8() {
         return this._forceR8
       }
-      set forceR8(JJ) {
-        this._forceR8 !== JJ && (this._forceR8 = JJ, this._isDirty = !0)
+      set forceR8(BB) {
+        this._forceR8 !== BB && (this._forceR8 = BB, this._isDirty = !0)
       }
       get forceRG8() {
         return this._forceRG8
       }
-      set forceRG8(JJ) {
-        this._forceRG8 !== JJ && (this._forceRG8 = JJ, this._isDirty = !0)
+      set forceRG8(BB) {
+        this._forceRG8 !== BB && (this._forceRG8 = BB, this._isDirty = !0)
       }
       get bypassTranscoders() {
         return this._bypassTranscoders
       }
-      set bypassTranscoders(JJ) {
-        this._bypassTranscoders !== JJ && (this._bypassTranscoders = JJ, this._isDirty = !0)
+      set bypassTranscoders(BB) {
+        this._bypassTranscoders !== BB && (this._bypassTranscoders = BB, this._isDirty = !0)
       }
       _getKTX2DecoderOptions() {
         if (!this._isDirty) return this._ktx2DecoderOptions;
         this._isDirty = !1;
-        const JJ = {};
-        return void 0 !== this._useRGBAIfASTCBC7NotAvailableWhenUASTC && (JJ.useRGBAIfASTCBC7NotAvailableWhenUASTC = this._useRGBAIfASTCBC7NotAvailableWhenUASTC), void 0 !== this._forceRGBA && (JJ.forceRGBA = this._forceRGBA), void 0 !== this._forceR8 && (JJ.forceR8 = this._forceR8), void 0 !== this._forceRG8 && (JJ.forceRG8 = this._forceRG8), void 0 !== this._bypassTranscoders && (JJ.bypassTranscoders = this._bypassTranscoders), this.useRGBAIfOnlyBC1BC3AvailableWhenUASTC && (JJ.transcodeFormatDecisionTree = {
+        const BB = {};
+        return void 0 !== this._useRGBAIfASTCBC7NotAvailableWhenUASTC && (BB.useRGBAIfASTCBC7NotAvailableWhenUASTC = this._useRGBAIfASTCBC7NotAvailableWhenUASTC), void 0 !== this._forceRGBA && (BB.forceRGBA = this._forceRGBA), void 0 !== this._forceR8 && (BB.forceR8 = this._forceR8), void 0 !== this._forceRG8 && (BB.forceRG8 = this._forceRG8), void 0 !== this._bypassTranscoders && (BB.bypassTranscoders = this._bypassTranscoders), this.useRGBAIfOnlyBC1BC3AvailableWhenUASTC && (BB.transcodeFormatDecisionTree = {
           UASTC: {
-            transcodeFormat: [XJ.BC1_RGB, XJ.BC3_RGBA],
+            transcodeFormat: [lB.BC1_RGB, lB.BC3_RGBA],
             yes: {
-              transcodeFormat: XJ.RGBA32,
+              transcodeFormat: lB.RGBA32,
               engineFormat: 32856,
               roundToMultiple4: !1
             }
           }
-        }), this._ktx2DecoderOptions = JJ, JJ
+        }), this._ktx2DecoderOptions = BB, BB
       }
     };
-    class nJ {
+    class DB {
       constructor() {
         this.supportCascades = !1
       }
-      loadCubeData(JJ, cJ, ZJ, FJ) {
-        if (Array.isArray(JJ)) return;
-        cJ._invertVScale = !cJ.invertY;
-        const eJ = cJ.gn(),
-          XJ = new UJ(JJ, 6),
-          AJ = sJ(XJ.glInternalFormat);
-        null !== AJ ? (cJ.format = AJ, cJ._useSRGBBuffer = eJ._getUseSRGBBuffer(!0, !cJ.generateMipMaps), cJ._gammaSpace = !0) : cJ.format = XJ.glInternalFormat;
-        const qJ = XJ.numberOfMipmapLevels > 1 && cJ.generateMipMaps;
-        eJ._unpackFlipY(!0), XJ.uploadLevels(cJ, cJ.generateMipMaps), cJ.width = XJ.pixelWidth, cJ.height = XJ.pixelHeight, eJ._setCubeMapTextureParams(cJ, qJ, XJ.numberOfMipmapLevels - 1), cJ.isReady = !0, cJ.onLoadedObservable.notifyObservers(cJ), cJ.onLoadedObservable.clear(), FJ && FJ()
+      loadCubeData(BB, TB, dB, VB) {
+        if (Array.isArray(BB)) return;
+        TB._invertVScale = !TB.invertY;
+        const pB = TB.PD(),
+          lB = new yB(BB, 6),
+          JB = OB(lB.glInternalFormat);
+        null !== JB ? (TB.format = JB, TB._useSRGBBuffer = pB._getUseSRGBBuffer(!0, !TB.generateMipMaps), TB._gammaSpace = !0) : TB.format = lB.glInternalFormat;
+        const YB = lB.numberOfMipmapLevels > 1 && TB.generateMipMaps;
+        pB._unpackFlipY(!0), lB.uploadLevels(TB, TB.generateMipMaps), TB.width = lB.pixelWidth, TB.height = lB.pixelHeight, pB._setCubeMapTextureParams(TB, YB, lB.numberOfMipmapLevels - 1), TB.isReady = !0, TB.onLoadedObservable.notifyObservers(TB), TB.onLoadedObservable.clear(), VB && VB()
       }
-      loadData(JJ, cJ, ZJ, eJ) {
-        if (UJ.IsValid(JJ)) {
-          cJ._invertVScale = !cJ.invertY;
-          const FJ = new UJ(JJ, 1),
-            eJ = sJ(FJ.glInternalFormat);
-          null !== eJ ? (cJ.format = eJ, cJ._useSRGBBuffer = cJ.gn()._getUseSRGBBuffer(!0, !cJ.generateMipMaps), cJ._gammaSpace = !0) : cJ.format = FJ.glInternalFormat, ZJ(FJ.pixelWidth, FJ.pixelHeight, cJ.generateMipMaps, !0, (() => {
-            FJ.uploadLevels(cJ, cJ.generateMipMaps)
-          }), FJ.isInvalid)
-        } else if (DJ.IsValid(JJ)) {
-          new DJ(cJ.gn())._uploadAsync(JJ, cJ, eJ).then((() => {
-            ZJ(cJ.width, cJ.height, cJ.generateMipMaps, !0, (() => {}), !1)
-          }), (JJ => {
-            FJ.c.Warn(`Failed to load KTX2 texture data: ${JJ.message}`), ZJ(0, 0, !1, !1, (() => {}), !0)
+      loadData(BB, TB, dB, pB) {
+        if (yB.IsValid(BB)) {
+          TB._invertVScale = !TB.invertY;
+          const VB = new yB(BB, 1),
+            pB = OB(VB.glInternalFormat);
+          null !== pB ? (TB.format = pB, TB._useSRGBBuffer = TB.PD()._getUseSRGBBuffer(!0, !TB.generateMipMaps), TB._gammaSpace = !0) : TB.format = VB.glInternalFormat, dB(VB.pixelWidth, VB.pixelHeight, TB.generateMipMaps, !0, (() => {
+            VB.uploadLevels(TB, TB.generateMipMaps)
+          }), VB.isInvalid)
+        } else if (LB.IsValid(BB)) {
+          new LB(TB.PD())._uploadAsync(BB, TB, pB).then((() => {
+            dB(TB.width, TB.height, TB.generateMipMaps, !0, (() => {}), !1)
+          }), (BB => {
+            VB.b.Warn(`Failed to load KTX2 texture data: ${BB.message}`), dB(0, 0, !1, !1, (() => {}), !0)
           }))
-        } else FJ.c.Error("texture missing KTX identifier"), ZJ(0, 0, !1, !1, (() => {}), !0)
+        } else VB.b.Error("texture missing KTX identifier"), dB(0, 0, !1, !1, (() => {}), !0)
       }
     }
   },
-  40556: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      b: () => UJ
+  40546: (BB, TB, dB) => {
+    dB.d(TB, {
+      c: () => yB
     });
-    class FJ {
-      constructor(JJ) {
-        this._pendingActions = new Array, this._workerInfos = JJ.map((JJ => ({
-          workerPromise: Promise.resolve(JJ),
+    class VB {
+      constructor(BB) {
+        this._pendingActions = new Array, this._workerInfos = BB.map((BB => ({
+          workerPromise: Promise.resolve(BB),
           idle: !0
         })))
       }
       dispose() {
-        for (const JJ of this._workerInfos) JJ.workerPromise.then((JJ => {
-          JJ.terminate()
+        for (const BB of this._workerInfos) BB.workerPromise.then((BB => {
+          BB.terminate()
         }));
         this._workerInfos.length = 0, this._pendingActions.length = 0
       }
-      push(JJ) {
-        this._executeOnIdleWorker(JJ) || this._pendingActions.push(JJ)
+      push(BB) {
+        this._executeOnIdleWorker(BB) || this._pendingActions.push(BB)
       }
-      _executeOnIdleWorker(JJ) {
-        for (const cJ of this._workerInfos)
-          if (cJ.idle) return this._execute(cJ, JJ), !0;
+      _executeOnIdleWorker(BB) {
+        for (const TB of this._workerInfos)
+          if (TB.idle) return this._execute(TB, BB), !0;
         return !1
       }
-      _execute(JJ, cJ) {
-        JJ.idle = !1, JJ.workerPromise.then((ZJ => {
-          cJ(ZJ, (() => {
-            const cJ = this._pendingActions.shift();
-            cJ ? this._execute(JJ, cJ) : JJ.idle = !0
+      _execute(BB, TB) {
+        BB.idle = !1, BB.workerPromise.then((dB => {
+          TB(dB, (() => {
+            const TB = this._pendingActions.shift();
+            TB ? this._execute(BB, TB) : BB.idle = !0
           }))
         }))
       }
     }
-    class UJ extends FJ {
-      constructor(JJ, cJ) {
-        let ZJ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : UJ.DefaultOptions;
-        super([]), this._maxWorkers = JJ, this._createWorkerAsync = cJ, this._options = ZJ
+    class yB extends VB {
+      constructor(BB, TB) {
+        let dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : yB.DefaultOptions;
+        super([]), this._maxWorkers = BB, this._createWorkerAsync = TB, this._options = dB
       }
-      push(JJ) {
-        if (!this._executeOnIdleWorker(JJ))
+      push(BB) {
+        if (!this._executeOnIdleWorker(BB))
           if (this._workerInfos.length < this._maxWorkers) {
-            const cJ = {
+            const TB = {
               workerPromise: this._createWorkerAsync(),
               idle: !1
             };
-            this._workerInfos.push(cJ), this._execute(cJ, JJ)
-          } else this._pendingActions.push(JJ)
+            this._workerInfos.push(TB), this._execute(TB, BB)
+          } else this._pendingActions.push(BB)
       }
-      _execute(JJ, cJ) {
-        JJ.timeoutId && (clearTimeout(JJ.timeoutId), delete JJ.timeoutId), super._execute(JJ, ((ZJ, FJ) => {
-          cJ(ZJ, (() => {
-            FJ(), JJ.idle && (JJ.timeoutId = setTimeout((() => {
-              JJ.workerPromise.then((JJ => {
-                JJ.terminate()
+      _execute(BB, TB) {
+        BB.timeoutId && (clearTimeout(BB.timeoutId), delete BB.timeoutId), super._execute(BB, ((dB, VB) => {
+          TB(dB, (() => {
+            VB(), BB.idle && (BB.timeoutId = setTimeout((() => {
+              BB.workerPromise.then((BB => {
+                BB.terminate()
               }));
-              const cJ = this._workerInfos.indexOf(JJ); - 1 !== cJ && this._workerInfos.splice(cJ, 1)
+              const TB = this._workerInfos.indexOf(BB); - 1 !== TB && this._workerInfos.splice(TB, 1)
             }), this._options.idleTimeElapsedBeforeRelease))
           }))
         }))
       }
     }
-    UJ.DefaultOptions = {
+    yB.DefaultOptions = {
       idleTimeElapsedBeforeRelease: 1e3
     }
   }
 };
 Object.freeze(modules);
-for (const JJ in modules) Object.freeze(modules[JJ]);
+for (const BB in modules) Object.freeze(modules[BB]);

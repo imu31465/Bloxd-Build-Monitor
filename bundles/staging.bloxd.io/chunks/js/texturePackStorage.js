@@ -1,72 +1,72 @@
 export const id = 48;
 export const ids = [48];
 export const modules = {
-  8593: (JJ, cJ, ZJ) => {
-    ZJ.r(cJ), ZJ.d(cJ, {
-      announceStoredTexturePack: () => UJ.d,
-      takeOneShotTexturePack: () => FJ.h
+  8606: (BB, TB, dB) => {
+    dB.r(TB), dB.d(TB, {
+      announceStoredTexturePack: () => yB.c,
+      takeOneShotTexturePack: () => VB.g
     });
-    var FJ = ZJ(8601),
-      UJ = ZJ(8606)
+    var VB = dB(8609),
+      yB = dB(8615)
   },
-  8606: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => UJ,
-      h: () => eJ
+  8615: (BB, TB, dB) => {
+    dB.d(TB, {
+      c: () => yB,
+      g: () => pB
     });
-    var FJ = ZJ(2753);
+    var VB = dB(2743);
 
-    function UJ() {
+    function yB() {
       if ("undefined" === typeof BroadcastChannel) return null;
-      const JJ = `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
+      const BB = `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
       try {
-        const cJ = new BroadcastChannel(FJ.i);
-        cJ.postMessage({
-          stored: JJ
-        }), cJ.close()
+        const TB = new BroadcastChannel(VB.k);
+        TB.postMessage({
+          stored: BB
+        }), TB.close()
       } catch {
         return null
       }
-      return JJ
+      return BB
     }
 
-    function eJ(JJ) {
-      const cJ = "object" === typeof JJ && null !== JJ ? JJ.stored : null;
-      return "string" === typeof cJ ? cJ : null
+    function pB(BB) {
+      const TB = "object" === typeof BB && null !== BB ? BB.stored : null;
+      return "string" === typeof TB ? TB : null
     }
   },
-  8601: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      c: () => XJ,
-      g: () => UJ,
-      h: () => eJ
+  8609: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => lB,
+      f: () => yB,
+      g: () => pB
     });
-    var FJ = ZJ(2753);
-    async function UJ(JJ, cJ, ZJ) {
-      let UJ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
-      const eJ = XJ(await JJ.getItem(FJ.f, cJ));
-      if (null === eJ || UJ()) return null;
-      const AJ = await JJ.getItem(FJ.g, cJ);
-      return UJ() ? null : (await async function(JJ) {
-        await Promise.all([JJ.removeItem(FJ.f), JJ.removeItem(FJ.g)])
-      }(JJ).catch(ZJ), {
-        pack: eJ,
-        source: "string" === typeof AJ ? AJ : null
+    var VB = dB(2743);
+    async function yB(BB, TB, dB) {
+      let yB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
+      const pB = lB(await BB.getItem(VB.g, TB));
+      if (null === pB || yB()) return null;
+      const JB = await BB.getItem(VB.h, TB);
+      return yB() ? null : (await async function(BB) {
+        await Promise.all([BB.removeItem(VB.g), BB.removeItem(VB.h)])
+      }(BB).catch(dB), {
+        pack: pB,
+        source: "string" === typeof JB ? JB : null
       })
     }
 
-    function eJ(JJ) {
-      return (0, FJ.q)() ? Promise.resolve(null) : UJ(JJ, !1, (JJ => {
-        console.error("Error removing temporary texture pack: ", JJ)
-      }), FJ.q)
+    function pB(BB) {
+      return (0, VB.r)() ? Promise.resolve(null) : yB(BB, !1, (BB => {
+        console.error("Error removing temporary texture pack: ", BB)
+      }), VB.r)
     }
 
-    function XJ(JJ) {
-      if ("object" !== typeof JJ || null === JJ) return null;
-      const cJ = JJ.metaData;
-      return "object" !== typeof cJ || null === cJ || "string" !== typeof cJ.id ? null : JJ
+    function lB(BB) {
+      if ("object" !== typeof BB || null === BB) return null;
+      const TB = BB.metaData;
+      return "object" !== typeof TB || null === TB || "string" !== typeof TB.id ? null : BB
     }
   }
 };
 Object.freeze(modules);
-for (const JJ in modules) Object.freeze(modules[JJ]);
+for (const BB in modules) Object.freeze(modules[BB]);

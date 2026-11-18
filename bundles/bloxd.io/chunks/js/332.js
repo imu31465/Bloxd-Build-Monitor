@@ -1,97 +1,97 @@
 export const id = 332;
 export const ids = [332, 333];
 export const modules = {
-  41982: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      gamePackSource: () => eJ
+  42032: (BB, TB, dB) => {
+    dB.d(TB, {
+      gamePackSource: () => pB
     });
-    var FJ = ZJ(4392),
-      UJ = ZJ(1389);
+    var VB = dB(4400),
+      yB = dB(1393);
 
-    function eJ(JJ) {
+    function pB(BB) {
       return {
-        packKey: async cJ => (await UJ.c.getGame(JJ, cJ, !0)).customTexturePackKey,
-        fetchPack: FJ.d
+        packKey: async TB => (await yB.c.getGame(BB, TB, !0)).customTexturePackKey,
+        fetchPack: VB.c
       }
     }
   },
-  41973: (JJ, cJ, ZJ) => {
-    ZJ.r(cJ), ZJ.d(cJ, {
-      fetchGuestContext: () => DJ,
-      guestJoinTarget: () => vJ,
-      guestJoinWithPack: () => nJ,
-      guestPackForGame: () => sJ,
-      invalidateGuestTrafficCode: () => rJ
+  42025: (BB, TB, dB) => {
+    dB.r(TB), dB.d(TB, {
+      fetchGuestContext: () => LB,
+      guestJoinTarget: () => mB,
+      guestJoinWithPack: () => DB,
+      guestPackForGame: () => OB,
+      invalidateGuestTrafficCode: () => vB
     });
-    var FJ = ZJ(1098),
-      UJ = ZJ(1389),
-      eJ = ZJ(80),
-      XJ = ZJ(35551),
-      AJ = ZJ(1028),
-      qJ = ZJ(39705),
-      jJ = ZJ(41982),
-      YJ = ZJ(39630);
+    var VB = dB(1089),
+      yB = dB(1393),
+      pB = dB(95),
+      lB = dB(35476),
+      JB = dB(1020),
+      YB = dB(39676),
+      gB = dB(42032),
+      oB = dB(39601);
 
-    function hJ() {
-      if (eJ.featureFlags.useTurnstile) throw new qJ.TurnstilePageError
+    function kB() {
+      if (pB.featureFlags.useTurnstile) throw new YB.TurnstilePageError
     }
 
-    function DJ() {
-      return (0, AJ.fetchAnonymousUserContext)().catch((JJ => (console.warn("the guest context didn't load", JJ), null)))
+    function LB() {
+      return (0, JB.fetchAnonymousUserContext)().catch((BB => (console.warn("the guest context didn't load", BB), null)))
     }
-    async function sJ(JJ, cJ, ZJ, FJ) {
+    async function OB(BB, TB, dB, VB) {
       try {
-        const UJ = await ZJ;
-        if (null === UJ) return void console.warn(`the texture pack step for ${JJ} has no guest context: the pack in play stays`);
-        await cJ.packForGame(JJ, (0, jJ.gamePackSource)(UJ), FJ)
-      } catch (UJ) {
-        console.warn(`the texture pack step for ${JJ} failed: the pack in play stays`, UJ)
+        const yB = await dB;
+        if (null === yB) return void console.warn(`the texture pack step for ${BB} has no guest context: the pack in play stays`);
+        await TB.packForGame(BB, (0, gB.gamePackSource)(yB), VB)
+      } catch (yB) {
+        console.warn(`the texture pack step for ${BB} failed: the pack in play stays`, yB)
       }
     }
-    async function nJ(JJ, cJ, ZJ, FJ) {
-      hJ();
-      const UJ = DJ();
-      return await ZJ(((cJ, ZJ) => sJ(JJ, cJ, UJ, ZJ))), vJ(JJ, cJ, FJ(), await UJ)
+    async function DB(BB, TB, dB, VB) {
+      kB();
+      const yB = LB();
+      return await dB(((TB, dB) => OB(BB, TB, yB, dB))), mB(BB, TB, VB(), await yB)
     }
-    let GJ = null,
-      fJ = null;
-    async function xJ() {
-      if ((null === GJ || GJ.hasExpired()) && (fJ ??= (0, AJ.fetchAnonymousUserContext)().then((JJ => {
-          GJ = JJ
+    let uB = null,
+      HB = null;
+    async function EB() {
+      if ((null === uB || uB.hasExpired()) && (HB ??= (0, JB.fetchAnonymousUserContext)().then((BB => {
+          uB = BB
         })).finally((() => {
-          fJ = null
-        })), await fJ), null === GJ) throw new Error("no guest context to post as");
-      return GJ.getMetricsCookies()
+          HB = null
+        })), await HB), null === uB) throw new Error("no guest context to post as");
+      return uB.getMetricsCookies()
     }
-    async function rJ() {
-      var JJ;
-      await (null === (JJ = GJ) || void 0 === JJ ? void 0 : JJ.invalidateTrafficCode())
+    async function vB() {
+      var BB;
+      await (null === (BB = uB) || void 0 === BB ? void 0 : BB.invalidateTrafficCode())
     }
-    async function vJ(JJ, cJ, ZJ) {
-      let eJ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-      hJ();
-      const qJ = null !== eJ && void 0 !== eJ ? eJ : await (0, AJ.fetchAnonymousUserContext)();
-      if (GJ = qJ, qJ.isLoggedIn()) throw new Error("the shell's page joins as a guest only");
-      const jJ = await UJ.c.matchmakePlayer(qJ, cJ, JJ, (0, XJ.b)()),
-        DJ = performance.now();
-      if (!("gameServerHost" in jJ)) throw new Error(`matchmaking refused: ${jJ.failReason}`);
-      const sJ = FJ.clientSideServerUrls.getServerWebSocketUrlFromServerUrl(jJ.gameServerHost);
-      if (sJ.isError()) throw new Error(`no socket URL for ${jJ.gameServerHost}: ${sJ.asError().message}`);
-      const nJ = {
-        endpoint: sJ.getValue(),
-        gameNameWithVariation: jJ.gameNameWithVariation,
-        lobbyName: jJ.lobbyName
+    async function mB(BB, TB, dB) {
+      let pB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+      kB();
+      const YB = null !== pB && void 0 !== pB ? pB : await (0, JB.fetchAnonymousUserContext)();
+      if (uB = YB, YB.isLoggedIn()) throw new Error("the shell's page joins as a guest only");
+      const gB = await yB.c.matchmakePlayer(YB, TB, BB, (0, lB.d)()),
+        LB = performance.now();
+      if (!("gameServerHost" in gB)) throw new Error(`matchmaking refused: ${gB.failReason}`);
+      const OB = VB.clientSideServerUrls.getServerWebSocketUrlFromServerUrl(gB.gameServerHost);
+      if (OB.isError()) throw new Error(`no socket URL for ${gB.gameServerHost}: ${OB.asError().message}`);
+      const DB = {
+        endpoint: OB.getValue(),
+        gameNameWithVariation: gB.gameNameWithVariation,
+        lobbyName: gB.lobbyName
       };
       return {
         target: {
-          ...await (0, YJ.g)(qJ, nJ, ZJ),
-          postCookies: xJ
+          ...await (0, oB.f)(YB, DB, dB),
+          postCookies: EB
         },
-        matchedAt: DJ,
-        freshMs: YJ.d
+        matchedAt: LB,
+        freshMs: oB.e
       }
     }
   }
 };
 Object.freeze(modules);
-for (const JJ in modules) Object.freeze(modules[JJ]);
+for (const BB in modules) Object.freeze(modules[BB]);

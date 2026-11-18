@@ -1,57 +1,57 @@
-/*! For license information please see symm5.wasmMatchmaking.ce60ac5c.chunk.js.LICENSE.txt */
+/*! For license information please see l9xvfg.wasmMatchmaking.c0dbac6c.chunk.js.LICENSE.txt */
 export const id = 55;
 export const ids = [55];
 export const modules = {
-  35753: JJ => {
-    JJ.exports = function JJ(cJ, ZJ) {
-      if (cJ === ZJ) return !0;
-      if (cJ && ZJ && "object" == typeof cJ && "object" == typeof ZJ) {
-        if (cJ.constructor !== ZJ.constructor) return !1;
-        var FJ, UJ, eJ;
-        if (Array.isArray(cJ)) {
-          if ((FJ = cJ.length) != ZJ.length) return !1;
-          for (UJ = FJ; 0 !== UJ--;)
-            if (!JJ(cJ[UJ], ZJ[UJ])) return !1;
+  35692: BB => {
+    BB.exports = function BB(TB, dB) {
+      if (TB === dB) return !0;
+      if (TB && dB && "object" == typeof TB && "object" == typeof dB) {
+        if (TB.constructor !== dB.constructor) return !1;
+        var VB, yB, pB;
+        if (Array.isArray(TB)) {
+          if ((VB = TB.length) != dB.length) return !1;
+          for (yB = VB; 0 !== yB--;)
+            if (!BB(TB[yB], dB[yB])) return !1;
           return !0
         }
-        if (cJ.constructor === RegExp) return cJ.source === ZJ.source && cJ.flags === ZJ.flags;
-        if (cJ.valueOf !== Object.prototype.valueOf) return cJ.valueOf() === ZJ.valueOf();
-        if (cJ.toString !== Object.prototype.toString) return cJ.toString() === ZJ.toString();
-        if ((FJ = (eJ = Object.keys(cJ)).length) !== Object.keys(ZJ).length) return !1;
-        for (UJ = FJ; 0 !== UJ--;)
-          if (!Object.prototype.hasOwnProperty.call(ZJ, eJ[UJ])) return !1;
-        for (UJ = FJ; 0 !== UJ--;) {
-          var XJ = eJ[UJ];
-          if (!JJ(cJ[XJ], ZJ[XJ])) return !1
+        if (TB.constructor === RegExp) return TB.source === dB.source && TB.flags === dB.flags;
+        if (TB.valueOf !== Object.prototype.valueOf) return TB.valueOf() === dB.valueOf();
+        if (TB.toString !== Object.prototype.toString) return TB.toString() === dB.toString();
+        if ((VB = (pB = Object.keys(TB)).length) !== Object.keys(dB).length) return !1;
+        for (yB = VB; 0 !== yB--;)
+          if (!Object.prototype.hasOwnProperty.call(dB, pB[yB])) return !1;
+        for (yB = VB; 0 !== yB--;) {
+          var lB = pB[yB];
+          if (!BB(TB[lB], dB[lB])) return !1
         }
         return !0
       }
-      return cJ !== cJ && ZJ !== ZJ
+      return TB !== TB && dB !== dB
     }
   },
-  35605: (JJ, cJ) => {
-    function ZJ(JJ) {
-      if (JJ && "object" === typeof JJ) {
-        var cJ = JJ.which || JJ.keyCode || JJ.charCode;
-        cJ && (JJ = cJ)
+  35542: (BB, TB) => {
+    function dB(BB) {
+      if (BB && "object" === typeof BB) {
+        var TB = BB.which || BB.keyCode || BB.charCode;
+        TB && (BB = TB)
       }
-      if ("number" === typeof JJ) return XJ[JJ];
-      var ZJ, eJ = String(JJ);
-      return (ZJ = FJ[eJ.toLowerCase()]) ? ZJ : (ZJ = UJ[eJ.toLowerCase()]) || (1 === eJ.length ? eJ.charCodeAt(0) : void 0)
+      if ("number" === typeof BB) return lB[BB];
+      var dB, pB = String(BB);
+      return (dB = VB[pB.toLowerCase()]) ? dB : (dB = yB[pB.toLowerCase()]) || (1 === pB.length ? pB.charCodeAt(0) : void 0)
     }
-    ZJ.isEventKey = function(JJ, cJ) {
-      if (JJ && "object" === typeof JJ) {
-        var ZJ = JJ.which || JJ.keyCode || JJ.charCode;
-        if (null === ZJ || void 0 === ZJ) return !1;
-        if ("string" === typeof cJ) {
-          var eJ;
-          if (eJ = FJ[cJ.toLowerCase()]) return eJ === ZJ;
-          if (eJ = UJ[cJ.toLowerCase()]) return eJ === ZJ
-        } else if ("number" === typeof cJ) return cJ === ZJ;
+    dB.isEventKey = function(BB, TB) {
+      if (BB && "object" === typeof BB) {
+        var dB = BB.which || BB.keyCode || BB.charCode;
+        if (null === dB || void 0 === dB) return !1;
+        if ("string" === typeof TB) {
+          var pB;
+          if (pB = VB[TB.toLowerCase()]) return pB === dB;
+          if (pB = yB[TB.toLowerCase()]) return pB === dB
+        } else if ("number" === typeof TB) return TB === dB;
         return !1
       }
     };
-    var FJ = (cJ = JJ.exports = ZJ).code = cJ.codes = {
+    var VB = (TB = BB.exports = dB).code = TB.codes = {
         backspace: 8,
         tab: 9,
         enter: 13,
@@ -96,7 +96,7 @@ export const modules = {
         "]": 221,
         "'": 222
       },
-      UJ = cJ.aliases = {
+      yB = TB.aliases = {
         windows: 91,
         "\u21e7": 16,
         "\u2325": 18,
@@ -118,47 +118,47 @@ export const modules = {
         del: 46,
         cmd: 91
       };
-    for (eJ = 97; eJ < 123; eJ++) FJ[String.fromCharCode(eJ)] = eJ - 32;
-    for (var eJ = 48; eJ < 58; eJ++) FJ[eJ - 48] = eJ;
-    for (eJ = 1; eJ < 13; eJ++) FJ["f" + eJ] = eJ + 111;
-    for (eJ = 0; eJ < 10; eJ++) FJ["numpad " + eJ] = eJ + 96;
-    var XJ = cJ.names = cJ.title = {};
-    for (eJ in FJ) XJ[FJ[eJ]] = eJ;
-    for (var AJ in UJ) FJ[AJ] = UJ[AJ]
+    for (pB = 97; pB < 123; pB++) VB[String.fromCharCode(pB)] = pB - 32;
+    for (var pB = 48; pB < 58; pB++) VB[pB - 48] = pB;
+    for (pB = 1; pB < 13; pB++) VB["f" + pB] = pB + 111;
+    for (pB = 0; pB < 10; pB++) VB["numpad " + pB] = pB + 96;
+    var lB = TB.names = TB.title = {};
+    for (pB in VB) lB[VB[pB]] = pB;
+    for (var JB in yB) VB[JB] = yB[JB]
   },
-  35778: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => XJ
+  35713: (BB, TB, dB) => {
+    dB.d(TB, {
+      b: () => lB
     });
-    var FJ = ZJ(47);
-    const UJ = FJ.useLayoutEffect;
-    const eJ = function(JJ) {
-      var cJ = (0, FJ.useRef)(JJ);
-      return UJ((function() {
-        cJ.current = JJ
-      })), cJ
+    var VB = dB(62);
+    const yB = VB.useLayoutEffect;
+    const pB = function(BB) {
+      var TB = (0, VB.useRef)(BB);
+      return yB((function() {
+        TB.current = BB
+      })), TB
     };
-    var XJ = function(JJ) {
-      var cJ = eJ(JJ);
-      (0, FJ.useEffect)((function() {
-        var JJ = function(JJ) {
-          var ZJ;
-          if (null != cJ.current && (ZJ = cJ.current(JJ)), JJ.defaultPrevented && (JJ.returnValue = ""), "string" === typeof ZJ) return JJ.returnValue = ZJ, ZJ
+    var lB = function(BB) {
+      var TB = pB(BB);
+      (0, VB.useEffect)((function() {
+        var BB = function(BB) {
+          var dB;
+          if (null != TB.current && (dB = TB.current(BB)), BB.defaultPrevented && (BB.returnValue = ""), "string" === typeof dB) return BB.returnValue = dB, dB
         };
-        return window.addEventListener("beforeunload", JJ),
+        return window.addEventListener("beforeunload", BB),
           function() {
-            window.removeEventListener("beforeunload", JJ)
+            window.removeEventListener("beforeunload", BB)
           }
       }), [])
     }
   },
-  35642: JJ => {
-    var cJ, ZJ = "undefined" !== typeof window ? window.navigator.userAgent : "",
-      FJ = /OS X/.test(ZJ),
-      UJ = /Opera/.test(ZJ),
-      eJ = !/like Gecko/.test(ZJ) && !UJ,
-      XJ = JJ.exports = {
-        0: FJ ? "<menu>" : "<UNK>",
+  35571: BB => {
+    var TB, dB = "undefined" !== typeof window ? window.navigator.userAgent : "",
+      VB = /OS X/.test(dB),
+      yB = /Opera/.test(dB),
+      pB = !/like Gecko/.test(dB) && !yB,
+      lB = BB.exports = {
+        0: VB ? "<menu>" : "<UNK>",
         1: "<mouse 1>",
         2: "<mouse 2>",
         3: "<break>",
@@ -201,7 +201,7 @@ export const modules = {
         47: "<help>",
         91: "<meta>",
         92: "<meta>",
-        93: FJ ? "<meta>" : "<menu>",
+        93: VB ? "<meta>" : "<menu>",
         95: "<sleep>",
         106: "<num-*>",
         107: "<num-+>",
@@ -224,7 +224,7 @@ export const modules = {
         170: "<browser-search>",
         171: "<browser-favorites>",
         172: "<browser-home>",
-        173: FJ && eJ ? "-" : "<volume-mute>",
+        173: VB && pB ? "-" : "<volume-mute>",
         174: "<volume-down>",
         175: "<volume-up>",
         176: "<next-track>",
@@ -250,7 +250,7 @@ export const modules = {
         224: "<meta>",
         226: "<alt-gr>",
         229: "<ime-process>",
-        231: UJ ? "`" : "<unicode>",
+        231: yB ? "`" : "<unicode>",
         246: "<attention>",
         247: "<crsel>",
         248: "<exsel>",
@@ -261,237 +261,237 @@ export const modules = {
         253: "<pa-1>",
         254: "<clear>"
       };
-    for (cJ = 58; cJ < 65; ++cJ) XJ[cJ] = String.fromCharCode(cJ);
-    for (cJ = 48; cJ < 58; ++cJ) XJ[cJ] = cJ - 48 + "";
-    for (cJ = 65; cJ < 91; ++cJ) XJ[cJ] = String.fromCharCode(cJ);
-    for (cJ = 96; cJ < 106; ++cJ) XJ[cJ] = "<num-" + (cJ - 96) + ">";
-    for (cJ = 112; cJ < 136; ++cJ) XJ[cJ] = "F" + (cJ - 111)
+    for (TB = 58; TB < 65; ++TB) lB[TB] = String.fromCharCode(TB);
+    for (TB = 48; TB < 58; ++TB) lB[TB] = TB - 48 + "";
+    for (TB = 65; TB < 91; ++TB) lB[TB] = String.fromCharCode(TB);
+    for (TB = 96; TB < 106; ++TB) lB[TB] = "<num-" + (TB - 96) + ">";
+    for (TB = 112; TB < 136; ++TB) lB[TB] = "F" + (TB - 111)
   },
-  6004: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      e: () => UJ,
-      f: () => eJ
+  5994: (BB, TB, dB) => {
+    dB.d(TB, {
+      b: () => yB,
+      d: () => pB
     });
-    var FJ = ZJ(29);
-    const UJ = "shaderPack";
-    async function eJ() {
-      var JJ;
-      let cJ = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (JJ = await FJ.g.getItem(UJ, cJ)) && void 0 !== JJ ? JJ : null
+    var VB = dB(33);
+    const yB = "shaderPack";
+    async function pB() {
+      var BB;
+      let TB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (BB = await VB.f.getItem(yB, TB)) && void 0 !== BB ? BB : null
     }
   },
-  35489: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      b: () => qJ,
-      c: () => jJ
+  35399: (BB, TB, dB) => {
+    dB.d(TB, {
+      e: () => YB,
+      g: () => gB
     });
-    var FJ = ZJ(1151),
-      UJ = ZJ(3059),
-      eJ = ZJ(547),
-      XJ = ZJ(8187);
+    var VB = dB(1133),
+      yB = dB(3073),
+      pB = dB(586),
+      lB = dB(8214);
 
-    function AJ(JJ, cJ) {
-      let FJ = !1;
-      const eJ = () => {
-        FJ = !0
+    function JB(BB, TB) {
+      let VB = !1;
+      const pB = () => {
+        VB = !0
       };
-      if (! function(JJ) {
-          var cJ;
-          return !0 !== (null === JJ || void 0 === JJ ? void 0 : JJ.saveData) && !/2g$/.test(null !== (cJ = null === JJ || void 0 === JJ ? void 0 : JJ.effectiveType) && void 0 !== cJ ? cJ : "")
-        }(navigator.connection)) return eJ;
-      const AJ = () => !FJ && !(0, XJ.g)();
-      return (0, UJ.e)((() => {
-        AJ() && Promise.all([ZJ.e(126), ZJ.e(81), ZJ.e(51)]).then((() => ZJ(39512))).then((JJ => AJ() ? cJ(JJ) : void 0), (cJ => {
-          console.warn(`[bloxd-wasm-client] ${JJ} did not load: the join loads the client itself`, cJ)
+      if (! function(BB) {
+          var TB;
+          return !0 !== (null === BB || void 0 === BB ? void 0 : BB.saveData) && !/2g$/.test(null !== (TB = null === BB || void 0 === BB ? void 0 : BB.effectiveType) && void 0 !== TB ? TB : "")
+        }(navigator.connection)) return pB;
+      const JB = () => !VB && !(0, lB.i)();
+      return (0, yB.b)((() => {
+        JB() && Promise.all([dB.e(126), dB.e(81), dB.e(51)]).then((() => dB(39476))).then((BB => JB() ? TB(BB) : void 0), (TB => {
+          console.warn(`[bloxd-wasm-client] ${BB} did not load: the join loads the client itself`, TB)
         }))
-      })), eJ
+      })), pB
     }
 
-    function qJ() {
-      AJ("the prefetch", (JJ => {
+    function YB() {
+      JB("the prefetch", (BB => {
         let {
-          prefetchWasmClient: cJ
-        } = JJ;
-        return cJ({
-          joinStarted: XJ.g,
-          language: FJ.e.get().getCurrentLanguageCode()
+          prefetchWasmClient: TB
+        } = BB;
+        return TB({
+          joinStarted: lB.i,
+          language: VB.f.get().getCurrentLanguageCode()
         })
       }))
     }
 
-    function jJ() {
-      return eJ.r ? AJ("the game page's early load", (JJ => {
+    function gB() {
+      return pB.p ? JB("the game page's early load", (BB => {
         let {
-          startGamePageLoad: cJ
-        } = JJ;
-        return cJ()
+          startGamePageLoad: TB
+        } = BB;
+        return TB()
       })) : () => {}
     }
   },
-  35531: (JJ, cJ, ZJ) => {
-    ZJ.r(cJ), ZJ.d(cJ, {
-      InGameUi: () => xJ.d,
-      LobbyLeaderboard: () => rJ.d,
-      loadCharacterCustomisationUI: () => vJ,
-      loadCharacterPreview: () => mJ,
-      matchmakeAndPlay: () => KJ,
-      setUpGame: () => QJ
+  35457: (BB, TB, dB) => {
+    dB.r(TB), dB.d(TB, {
+      InGameUi: () => EB.b,
+      LobbyLeaderboard: () => vB.c,
+      loadCharacterCustomisationUI: () => mB,
+      loadCharacterPreview: () => iB,
+      matchmakeAndPlay: () => sB,
+      setUpGame: () => NB
     });
-    var FJ = ZJ(1144),
-      UJ = ZJ(143),
-      eJ = ZJ(13),
-      XJ = ZJ(35540),
-      AJ = ZJ(35545),
-      qJ = ZJ(1725),
-      jJ = ZJ(35560);
+    var VB = dB(1126),
+      yB = dB(163),
+      pB = dB(21),
+      lB = dB(35466),
+      JB = dB(35474),
+      YB = dB(1708),
+      gB = dB(35488);
 
-    function YJ() {
-      return !1 !== qJ.b.get("canCustomiseChar")
+    function oB() {
+      return !1 !== YB.c.get("canCustomiseChar")
     }
-    let hJ = !1;
-    var DJ = ZJ(1213),
-      sJ = ZJ(35489),
-      nJ = ZJ(8187),
-      GJ = ZJ(3055),
-      fJ = ZJ(1654);
-    var xJ = ZJ(35570),
-      rJ = ZJ(36023);
+    let kB = !1;
+    var LB = dB(1209),
+      OB = dB(35399),
+      DB = dB(8214),
+      uB = dB(3069),
+      HB = dB(1638);
+    var EB = dB(35500),
+      vB = dB(35965);
 
-    function vJ() {
-      return Promise.all([ZJ.e(269), ZJ.e(377)]).then((() => ZJ(39936)))
-    }
-
-    function mJ() {
-      return ZJ.e(270).then((() => ZJ(39938)))
+    function mB() {
+      return Promise.all([dB.e(269), dB.e(377)]).then((() => dB(39902)))
     }
 
-    function QJ() {
-      return (0, nJ.e)()
+    function iB() {
+      return dB.e(270).then((() => dB(39911)))
     }
-    hJ || (hJ = !0, document.addEventListener("keydown", (JJ => {
-      (0, jJ.d)(JJ, YJ)
-    }))), (0, sJ.b)();
-    const EJ = eJ.d.get("router");
-    null === EJ ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function JJ(cJ) {
-      if ((0, fJ.e)(cJ.state.location.pathname)) return void(0, nJ.c)().catch((() => {}));
-      const ZJ = cJ.subscribe((FJ => {
-        (0, fJ.e)(FJ.location.pathname) && (ZJ(), (0, GJ.c)().then((() => {
-          JJ(cJ)
+
+    function NB() {
+      return (0, DB.g)()
+    }
+    kB || (kB = !0, document.addEventListener("keydown", (BB => {
+      (0, gB.d)(BB, oB)
+    }))), (0, OB.e)();
+    const tB = pB.d.get("router");
+    null === tB ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function BB(TB) {
+      if ((0, HB.d)(TB.state.location.pathname)) return void(0, DB.c)().catch((() => {}));
+      const dB = TB.subscribe((VB => {
+        (0, HB.d)(VB.location.pathname) && (dB(), (0, uB.d)().then((() => {
+          BB(TB)
         })))
       }))
-    }(EJ), (0, XJ.d)();
-    const VJ = (0, AJ.e)((async function(JJ, cJ) {
+    }(tB), (0, lB.d)();
+    const fB = (0, JB.e)((async function(BB, TB) {
       let {
-        place: ZJ,
-        userContext: eJ,
-        direct: XJ,
-        rematch: AJ
-      } = JJ;
-      const qJ = XJ ? 1 / 0 : performance.now();
-      let jJ;
+        place: dB,
+        userContext: pB,
+        direct: lB,
+        rematch: JB
+      } = BB;
+      const YB = lB ? 1 / 0 : performance.now();
+      let gB;
       try {
-        jJ = await (0, nJ.c)()
-      } catch (YJ) {
-        return console.error("The wasm client did not load:", YJ), (0, DJ.o)({
+        gB = await (0, DB.c)()
+      } catch (oB) {
+        return console.error("The wasm client did not load:", oB), (0, LB.r)({
           websocketUrl: null
-        }), FJ.b.errorWithCode(String(YJ), UJ.e.CONNECT_TO_GAME_SERVER, {
-          error: YJ,
-          severity: cJ.aborted ? "low" : "medium",
-          hZ: cJ.aborted
+        }), VB.d.errorWithCode(String(oB), yB.i.CONNECT_TO_GAME_SERVER, {
+          error: oB,
+          severity: TB.aborted ? "low" : "medium",
+          IT: TB.aborted
         })
       }
-      return jJ.playWasmGame({
-        userContext: eJ,
-        place: ZJ,
-        matchedAt: qJ,
-        rematch: AJ
-      }, cJ)
+      return gB.playWasmGame({
+        userContext: pB,
+        place: dB,
+        matchedAt: YB,
+        rematch: JB
+      }, TB)
     }));
 
-    function KJ() {
-      return (0, nJ.c)().catch((() => {})), VJ(...arguments)
+    function sB() {
+      return (0, DB.c)().catch((() => {})), fB(...arguments)
     }
   },
-  8187: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      c: () => YJ,
-      e: () => DJ,
-      g: () => hJ
+  8214: (BB, TB, dB) => {
+    dB.d(TB, {
+      c: () => oB,
+      g: () => LB,
+      i: () => kB
     });
-    var FJ = ZJ(2642),
-      UJ = ZJ(2042),
-      eJ = ZJ(2675),
-      XJ = ZJ(4057),
-      AJ = ZJ(2988);
-    let qJ = null,
-      jJ = !1;
+    var VB = dB(2614),
+      yB = dB(2034),
+      pB = dB(2664),
+      lB = dB(4051),
+      JB = dB(2998);
+    let YB = null,
+      gB = !1;
 
-    function YJ() {
-      return XJ.e.cancelDownloadForJoin(), (0, AJ.e)(), (0, UJ.c)(), jJ = !0, (0, eJ.j)(), Promise.all([ZJ.e(64), ZJ.e(67), ZJ.e(66), ZJ.e(65), ZJ.e(77), ZJ.e(228), ZJ.e(202), ZJ.e(226), ZJ.e(197), ZJ.e(43)]).then((() => ZJ(39445))).catch((() => {})), Promise.all([ZJ.e(126), ZJ.e(81), ZJ.e(51)]).then((() => ZJ(39512))).then((JJ => {
+    function oB() {
+      return lB.e.cancelDownloadForJoin(), (0, JB.d)(), (0, yB.i)(), gB = !0, (0, pB.h)(), Promise.all([dB.e(64), dB.e(67), dB.e(66), dB.e(65), dB.e(77), dB.e(228), dB.e(202), dB.e(226), dB.e(197), dB.e(43)]).then((() => dB(39407))).catch((() => {})), Promise.all([dB.e(126), dB.e(81), dB.e(51)]).then((() => dB(39476))).then((BB => {
         let {
-          startJoinLoad: cJ
-        } = JJ;
-        cJ()
-      }), (() => {})), qJ ??= Promise.all([ZJ.e(66), ZJ.e(126), ZJ.e(122), ZJ.e(251), ZJ.e(177), ZJ.e(81), ZJ.e(80), ZJ.e(79), ZJ.e(197), ZJ.e(56)]).then((() => ZJ(39595))).then((JJ => (JJ.startWasmPlay(), JJ.followPageUiPack((JJ => {
-        FJ.b.showGamePack(JJ)
-      })), JJ)), (JJ => {
-        throw qJ = null, JJ
-      })), qJ
+          startJoinLoad: TB
+        } = BB;
+        TB()
+      }), (() => {})), YB ??= Promise.all([dB.e(66), dB.e(126), dB.e(122), dB.e(251), dB.e(177), dB.e(81), dB.e(80), dB.e(79), dB.e(197), dB.e(56)]).then((() => dB(39565))).then((BB => (BB.startWasmPlay(), BB.followPageUiPack((BB => {
+        VB.b.showGamePack(BB)
+      })), BB)), (BB => {
+        throw YB = null, BB
+      })), YB
     }
 
-    function hJ() {
-      return jJ
+    function kB() {
+      return gB
     }
 
-    function DJ() {
-      return Promise.all([ZJ.e(66), ZJ.e(126), ZJ.e(122), ZJ.e(251), ZJ.e(177), ZJ.e(81), ZJ.e(80), ZJ.e(79), ZJ.e(197), ZJ.e(56)]).then((() => ZJ(39595))).then((JJ => {
-        JJ.startWasmPreviews(), JJ.prefetchWasmPreviews()
+    function LB() {
+      return Promise.all([dB.e(66), dB.e(126), dB.e(122), dB.e(251), dB.e(177), dB.e(81), dB.e(80), dB.e(79), dB.e(197), dB.e(56)]).then((() => dB(39565))).then((BB => {
+        BB.startWasmPreviews(), BB.prefetchWasmPreviews()
       }))
     }
   },
-  35948: (JJ, cJ, ZJ) => {
-    function FJ(JJ) {
-      return JJ.includes("Leaf Bed")
+  35894: (BB, TB, dB) => {
+    function VB(BB) {
+      return BB.includes("Leaf Bed")
     }
 
-    function UJ(JJ) {
-      return / Bed(?: Head)?(?:\||$)/.test(JJ) && !FJ(JJ)
+    function yB(BB) {
+      return / Bed(?: Head)?(?:\||$)/.test(BB) && !VB(BB)
     }
 
-    function eJ(JJ) {
-      return JJ.includes(" Strongbed")
+    function pB(BB) {
+      return BB.includes(" Strongbed")
     }
 
-    function XJ(JJ) {
-      return FJ(JJ) || UJ(JJ) || eJ(JJ)
+    function lB(BB) {
+      return VB(BB) || yB(BB) || pB(BB)
     }
-    ZJ.d(cJ, {
-      e: () => XJ,
-      h: () => FJ,
-      l: () => eJ,
-      m: () => UJ
+    dB.d(TB, {
+      e: () => lB,
+      h: () => VB,
+      l: () => pB,
+      p: () => yB
     })
   },
-  35944: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      c: () => jJ
+  35886: (BB, TB, dB) => {
+    dB.d(TB, {
+      e: () => gB
     });
-    var FJ = ZJ(35948),
-      UJ = ZJ(8636);
-    const eJ = [],
-      XJ = [],
-      AJ = [],
-      qJ = [];
-    for (const YJ of Object.keys(UJ.o))(0, FJ.h)(YJ) ? eJ.push(YJ) : (0, FJ.m)(YJ) && XJ.push(YJ), (0, FJ.l)(YJ) && AJ.push(YJ), (YJ.includes(" Bed Head") || YJ.includes(" Strongbed Head")) && qJ.push(YJ);
-    const jJ = {
-      leafBeds: eJ,
-      woolBeds: XJ,
-      strongBeds: AJ,
-      beds: [...eJ, ...XJ, ...AJ],
-      bedHeads: qJ,
+    var VB = dB(35894),
+      yB = dB(8653);
+    const pB = [],
+      lB = [],
+      JB = [],
+      YB = [];
+    for (const oB of Object.keys(yB.n))(0, VB.h)(oB) ? pB.push(oB) : (0, VB.p)(oB) && lB.push(oB), (0, VB.l)(oB) && JB.push(oB), (oB.includes(" Bed Head") || oB.includes(" Strongbed Head")) && YB.push(oB);
+    const gB = {
+      leafBeds: pB,
+      woolBeds: lB,
+      strongBeds: JB,
+      beds: [...pB, ...lB, ...JB],
+      bedHeads: YB,
       blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
     }
   }
 };
 Object.freeze(modules);
-for (const JJ in modules) Object.freeze(modules[JJ]);
+for (const BB in modules) Object.freeze(modules[BB]);

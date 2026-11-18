@@ -1,945 +1,945 @@
 export const id = 284;
 export const ids = [284];
 export const modules = {
-  40339: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      e: () => eJ
+  40326: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => pB
     });
-    var FJ = ZJ(38890),
-      UJ = ZJ(40344);
-    class eJ {
-      constructor(JJ, cJ) {
-        let ZJ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 2;
-        this.maxDepth = ZJ, this.hFJ = [], this._maxBlockCapacity = cJ || 64, this._selectionContent = new FJ.b(1024), this._creationFunc = JJ
+    var VB = dB(38861),
+      yB = dB(40332);
+    class pB {
+      constructor(BB, TB) {
+        let dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 2;
+        this.maxDepth = dB, this.ZVB = [], this._maxBlockCapacity = TB || 64, this._selectionContent = new VB.d(1024), this._creationFunc = BB
       }
-      update(JJ, cJ, ZJ) {
-        UJ.c._CreateBlocks(JJ, cJ, ZJ, this._maxBlockCapacity, 0, this.maxDepth, this, this._creationFunc)
+      update(BB, TB, dB) {
+        yB.c._CreateBlocks(BB, TB, dB, this._maxBlockCapacity, 0, this.maxDepth, this, this._creationFunc)
       }
-      BZJ(JJ) {
-        for (let cJ = 0; cJ < this.blocks.length; cJ++) {
-          this.blocks[cJ].addEntry(JJ)
+      MVB(BB) {
+        for (let TB = 0; TB < this.blocks.length; TB++) {
+          this.blocks[TB].addEntry(BB)
         }
       }
-      kS(JJ) {
-        for (let cJ = 0; cJ < this.blocks.length; cJ++) {
-          this.blocks[cJ].removeEntry(JJ)
+      mF(BB) {
+        for (let TB = 0; TB < this.blocks.length; TB++) {
+          this.blocks[TB].removeEntry(BB)
         }
       }
-      select(JJ, cJ) {
+      select(BB, TB) {
         this._selectionContent.reset();
-        for (let ZJ = 0; ZJ < this.blocks.length; ZJ++) {
-          this.blocks[ZJ].select(JJ, this._selectionContent, cJ)
+        for (let dB = 0; dB < this.blocks.length; dB++) {
+          this.blocks[dB].select(BB, this._selectionContent, TB)
         }
-        return cJ ? this._selectionContent.concat(this.hFJ) : this._selectionContent.concatWithNoDuplicate(this.hFJ), this._selectionContent
+        return TB ? this._selectionContent.concat(this.ZVB) : this._selectionContent.concatWithNoDuplicate(this.ZVB), this._selectionContent
       }
-      intersects(JJ, cJ, ZJ) {
+      intersects(BB, TB, dB) {
         this._selectionContent.reset();
-        for (let FJ = 0; FJ < this.blocks.length; FJ++) {
-          this.blocks[FJ].intersects(JJ, cJ, this._selectionContent, ZJ)
+        for (let VB = 0; VB < this.blocks.length; VB++) {
+          this.blocks[VB].intersects(BB, TB, this._selectionContent, dB)
         }
-        return ZJ ? this._selectionContent.concat(this.hFJ) : this._selectionContent.concatWithNoDuplicate(this.hFJ), this._selectionContent
+        return dB ? this._selectionContent.concat(this.ZVB) : this._selectionContent.concatWithNoDuplicate(this.ZVB), this._selectionContent
       }
-      intersectsRay(JJ) {
+      intersectsRay(BB) {
         this._selectionContent.reset();
-        for (let cJ = 0; cJ < this.blocks.length; cJ++) {
-          this.blocks[cJ].intersectsRay(JJ, this._selectionContent)
+        for (let TB = 0; TB < this.blocks.length; TB++) {
+          this.blocks[TB].intersectsRay(BB, this._selectionContent)
         }
-        return this._selectionContent.concatWithNoDuplicate(this.hFJ), this._selectionContent
+        return this._selectionContent.concatWithNoDuplicate(this.ZVB), this._selectionContent
       }
     }
-    eJ.CreationFuncForMeshes = (JJ, cJ) => {
-      const ZJ = JJ.rM();
-      !JJ.isBlocked && ZJ.boundingBox.intersectsMinMax(cJ.ZFJ, cJ.cFJ) && cJ.entries.push(JJ)
-    }, eJ.CreationFuncForSubMeshes = (JJ, cJ) => {
-      JJ.rM().boundingBox.intersectsMinMax(cJ.ZFJ, cJ.cFJ) && cJ.entries.push(JJ)
+    pB.CreationFuncForMeshes = (BB, TB) => {
+      const dB = BB.IK();
+      !BB.isBlocked && dB.boundingBox.intersectsMinMax(TB.rVB, TB.KVB) && TB.entries.push(BB)
+    }, pB.CreationFuncForSubMeshes = (BB, TB) => {
+      BB.IK().boundingBox.intersectsMinMax(TB.rVB, TB.KVB) && TB.entries.push(BB)
     }
   },
-  40344: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      c: () => eJ
+  40332: (BB, TB, dB) => {
+    dB.d(TB, {
+      c: () => pB
     });
-    var FJ = ZJ(36174),
-      UJ = ZJ(39072);
-    class eJ {
-      constructor(JJ, cJ, ZJ, FJ, UJ, eJ) {
-        this.entries = [], this.DFJ = new Array, this._capacity = ZJ, this._depth = FJ, this._maxDepth = UJ, this._creationFunc = eJ, this._minPoint = JJ, this._maxPoint = cJ, this.DFJ.push(JJ.clone()), this.DFJ.push(cJ.clone()), this.DFJ.push(JJ.clone()), this.DFJ[2].x = cJ.x, this.DFJ.push(JJ.clone()), this.DFJ[3].y = cJ.y, this.DFJ.push(JJ.clone()), this.DFJ[4].z = cJ.z, this.DFJ.push(cJ.clone()), this.DFJ[5].z = JJ.z, this.DFJ.push(cJ.clone()), this.DFJ[6].x = JJ.x, this.DFJ.push(cJ.clone()), this.DFJ[7].y = JJ.y
+    var VB = dB(36126),
+      yB = dB(39060);
+    class pB {
+      constructor(BB, TB, dB, VB, yB, pB) {
+        this.entries = [], this.XVB = new Array, this._capacity = dB, this._depth = VB, this._maxDepth = yB, this._creationFunc = pB, this._minPoint = BB, this._maxPoint = TB, this.XVB.push(BB.clone()), this.XVB.push(TB.clone()), this.XVB.push(BB.clone()), this.XVB[2].x = TB.x, this.XVB.push(BB.clone()), this.XVB[3].y = TB.y, this.XVB.push(BB.clone()), this.XVB[4].z = TB.z, this.XVB.push(TB.clone()), this.XVB[5].z = BB.z, this.XVB.push(TB.clone()), this.XVB[6].x = BB.x, this.XVB.push(TB.clone()), this.XVB[7].y = BB.y
       }
-      get qh() {
+      get Kk() {
         return this._capacity
       }
-      get ZFJ() {
+      get rVB() {
         return this._minPoint
       }
-      get cFJ() {
+      get KVB() {
         return this._maxPoint
       }
-      addEntry(JJ) {
+      addEntry(BB) {
         if (this.blocks)
-          for (let cJ = 0; cJ < this.blocks.length; cJ++) {
-            this.blocks[cJ].addEntry(JJ)
-          } else this._creationFunc(JJ, this), this.entries.length > this.qh && this._depth < this._maxDepth && this.createInnerBlocks()
+          for (let TB = 0; TB < this.blocks.length; TB++) {
+            this.blocks[TB].addEntry(BB)
+          } else this._creationFunc(BB, this), this.entries.length > this.Kk && this._depth < this._maxDepth && this.createInnerBlocks()
       }
-      removeEntry(JJ) {
+      removeEntry(BB) {
         if (this.blocks) {
-          for (let cJ = 0; cJ < this.blocks.length; cJ++) {
-            this.blocks[cJ].removeEntry(JJ)
+          for (let TB = 0; TB < this.blocks.length; TB++) {
+            this.blocks[TB].removeEntry(BB)
           }
           return
         }
-        const cJ = this.entries.indexOf(JJ);
-        cJ > -1 && this.entries.splice(cJ, 1)
+        const TB = this.entries.indexOf(BB);
+        TB > -1 && this.entries.splice(TB, 1)
       }
-      addEntries(JJ) {
-        for (let cJ = 0; cJ < JJ.length; cJ++) {
-          const ZJ = JJ[cJ];
-          this.addEntry(ZJ)
+      addEntries(BB) {
+        for (let TB = 0; TB < BB.length; TB++) {
+          const dB = BB[TB];
+          this.addEntry(dB)
         }
       }
-      select(JJ, cJ, ZJ) {
-        if (UJ.e.IsInFrustum(this.DFJ, JJ)) {
+      select(BB, TB, dB) {
+        if (yB.d.IsInFrustum(this.XVB, BB)) {
           if (this.blocks) {
-            for (let FJ = 0; FJ < this.blocks.length; FJ++) {
-              this.blocks[FJ].select(JJ, cJ, ZJ)
+            for (let VB = 0; VB < this.blocks.length; VB++) {
+              this.blocks[VB].select(BB, TB, dB)
             }
             return
           }
-          ZJ ? cJ.concat(this.entries) : cJ.concatWithNoDuplicate(this.entries)
+          dB ? TB.concat(this.entries) : TB.concatWithNoDuplicate(this.entries)
         }
       }
-      intersects(JJ, cJ, ZJ, FJ) {
-        if (UJ.e.IntersectsSphere(this._minPoint, this._maxPoint, JJ, cJ)) {
+      intersects(BB, TB, dB, VB) {
+        if (yB.d.IntersectsSphere(this._minPoint, this._maxPoint, BB, TB)) {
           if (this.blocks) {
-            for (let UJ = 0; UJ < this.blocks.length; UJ++) {
-              this.blocks[UJ].intersects(JJ, cJ, ZJ, FJ)
+            for (let yB = 0; yB < this.blocks.length; yB++) {
+              this.blocks[yB].intersects(BB, TB, dB, VB)
             }
             return
           }
-          FJ ? ZJ.concat(this.entries) : ZJ.concatWithNoDuplicate(this.entries)
+          VB ? dB.concat(this.entries) : dB.concatWithNoDuplicate(this.entries)
         }
       }
-      intersectsRay(JJ, cJ) {
-        if (JJ.intersectsBoxMinMax(this._minPoint, this._maxPoint)) {
+      intersectsRay(BB, TB) {
+        if (BB.intersectsBoxMinMax(this._minPoint, this._maxPoint)) {
           if (this.blocks) {
-            for (let ZJ = 0; ZJ < this.blocks.length; ZJ++) {
-              this.blocks[ZJ].intersectsRay(JJ, cJ)
+            for (let dB = 0; dB < this.blocks.length; dB++) {
+              this.blocks[dB].intersectsRay(BB, TB)
             }
             return
           }
-          cJ.concatWithNoDuplicate(this.entries)
+          TB.concatWithNoDuplicate(this.entries)
         }
       }
       createInnerBlocks() {
-        eJ._CreateBlocks(this._minPoint, this._maxPoint, this.entries, this._capacity, this._depth, this._maxDepth, this, this._creationFunc), this.entries.splice(0)
+        pB._CreateBlocks(this._minPoint, this._maxPoint, this.entries, this._capacity, this._depth, this._maxDepth, this, this._creationFunc), this.entries.splice(0)
       }
-      static _CreateBlocks(JJ, cJ, ZJ, UJ, XJ, AJ, qJ, jJ) {
-        qJ.blocks = new Array;
-        const YJ = new FJ.j((cJ.x - JJ.x) / 2, (cJ.y - JJ.y) / 2, (cJ.z - JJ.z) / 2);
-        for (let FJ = 0; FJ < 2; FJ++)
-          for (let cJ = 0; cJ < 2; cJ++)
-            for (let hJ = 0; hJ < 2; hJ++) {
-              const DJ = JJ.add(YJ.multiplyByFloats(FJ, cJ, hJ)),
-                sJ = JJ.add(YJ.multiplyByFloats(FJ + 1, cJ + 1, hJ + 1)),
-                nJ = new eJ(DJ, sJ, UJ, XJ + 1, AJ, jJ);
-              nJ.addEntries(ZJ), qJ.blocks.push(nJ)
+      static _CreateBlocks(BB, TB, dB, yB, lB, JB, YB, gB) {
+        YB.blocks = new Array;
+        const oB = new VB.p((TB.x - BB.x) / 2, (TB.y - BB.y) / 2, (TB.z - BB.z) / 2);
+        for (let VB = 0; VB < 2; VB++)
+          for (let TB = 0; TB < 2; TB++)
+            for (let kB = 0; kB < 2; kB++) {
+              const LB = BB.add(oB.multiplyByFloats(VB, TB, kB)),
+                OB = BB.add(oB.multiplyByFloats(VB + 1, TB + 1, kB + 1)),
+                DB = new pB(LB, OB, yB, lB + 1, JB, gB);
+              DB.addEntries(dB), YB.blocks.push(DB)
             }
       }
     }
   },
-  40347: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => YJ
+  40339: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => oB
     });
-    var FJ = ZJ(38874),
-      UJ = ZJ(36174),
-      eJ = ZJ(39202),
-      XJ = ZJ(40294),
-      AJ = ZJ(38933),
-      qJ = ZJ(36192),
-      jJ = ZJ(40339);
-    class YJ {
-      constructor(JJ) {
-        this.name = AJ.c.NAME_OCTREE, this.checksIsEnabled = !0, this._tempRay = new XJ.y(UJ.j.Zero(), new UJ.j(1, 1, 1)), (JJ = JJ || qJ.c.LastCreatedScene) && (this.iG = JJ, this.iG.getActiveMeshCandidates = () => this.getActiveMeshCandidates(), this.iG.getActiveSubMeshCandidates = JJ => this.getActiveSubMeshCandidates(JJ), this.iG.getCollidingSubMeshCandidates = (JJ, cJ) => this.getCollidingSubMeshCandidates(JJ, cJ), this.iG.getIntersectingSubMeshCandidates = (JJ, cJ) => this.getIntersectingSubMeshCandidates(JJ, cJ))
+    var VB = dB(38843),
+      yB = dB(36126),
+      pB = dB(39180),
+      lB = dB(40293),
+      JB = dB(38927),
+      YB = dB(36148),
+      gB = dB(40326);
+    class oB {
+      constructor(BB) {
+        this.name = JB.b.NAME_OCTREE, this.checksIsEnabled = !0, this._tempRay = new lB.v(yB.p.Zero(), new yB.p(1, 1, 1)), (BB = BB || YB.c.LastCreatedScene) && (this.Gu = BB, this.Gu.getActiveMeshCandidates = () => this.getActiveMeshCandidates(), this.Gu.getActiveSubMeshCandidates = BB => this.getActiveSubMeshCandidates(BB), this.Gu.getCollidingSubMeshCandidates = (BB, TB) => this.getCollidingSubMeshCandidates(BB, TB), this.Gu.getIntersectingSubMeshCandidates = (BB, TB) => this.getIntersectingSubMeshCandidates(BB, TB))
       }
       register() {
-        this.iG.onMeshRemovedObservable.add((JJ => {
-          const cJ = this.iG.selectionOctree;
-          if (void 0 !== cJ && null !== cJ) {
-            const ZJ = cJ.hFJ.indexOf(JJ); - 1 !== ZJ && cJ.hFJ.splice(ZJ, 1)
+        this.Gu.onMeshRemovedObservable.add((BB => {
+          const TB = this.Gu.selectionOctree;
+          if (void 0 !== TB && null !== TB) {
+            const dB = TB.ZVB.indexOf(BB); - 1 !== dB && TB.ZVB.splice(dB, 1)
           }
-        })), this.iG.onMeshImportedObservable.add((JJ => {
-          const cJ = this.iG.selectionOctree;
-          void 0 !== cJ && null !== cJ && cJ.BZJ(JJ)
+        })), this.Gu.onMeshImportedObservable.add((BB => {
+          const TB = this.Gu.selectionOctree;
+          void 0 !== TB && null !== TB && TB.MVB(BB)
         }))
       }
       getActiveMeshCandidates() {
-        return this.iG.vFJ?.select(this.iG.frustumPlanes) || this.iG._getDefaultMeshCandidates()
+        return this.Gu.jVB?.select(this.Gu.frustumPlanes) || this.Gu._getDefaultMeshCandidates()
       }
-      getActiveSubMeshCandidates(JJ) {
-        if (JJ._submeshesOctree && JJ.useOctreeForRenderingSelection) {
-          return JJ._submeshesOctree.select(this.iG.frustumPlanes)
+      getActiveSubMeshCandidates(BB) {
+        if (BB._submeshesOctree && BB.useOctreeForRenderingSelection) {
+          return BB._submeshesOctree.select(this.Gu.frustumPlanes)
         }
-        return this.iG._getDefaultSubMeshCandidates(JJ)
+        return this.Gu._getDefaultSubMeshCandidates(BB)
       }
-      getIntersectingSubMeshCandidates(JJ, cJ) {
-        if (JJ._submeshesOctree && JJ.useOctreeForPicking) {
-          XJ.y.TransformToRef(cJ, JJ.getWorldMatrix(), this._tempRay);
-          return JJ._submeshesOctree.intersectsRay(this._tempRay)
+      getIntersectingSubMeshCandidates(BB, TB) {
+        if (BB._submeshesOctree && BB.useOctreeForPicking) {
+          lB.v.TransformToRef(TB, BB.getWorldMatrix(), this._tempRay);
+          return BB._submeshesOctree.intersectsRay(this._tempRay)
         }
-        return this.iG._getDefaultSubMeshCandidates(JJ)
+        return this.Gu._getDefaultSubMeshCandidates(BB)
       }
-      getCollidingSubMeshCandidates(JJ, cJ) {
-        if (JJ._submeshesOctree && JJ.useOctreeForCollisions) {
-          const ZJ = cJ._velocityWorldLength + Math.max(cJ._radius.x, cJ._radius.y, cJ._radius.z);
-          return JJ._submeshesOctree.intersects(cJ._basePointWorld, ZJ)
+      getCollidingSubMeshCandidates(BB, TB) {
+        if (BB._submeshesOctree && BB.useOctreeForCollisions) {
+          const dB = TB._velocityWorldLength + Math.max(TB._radius.x, TB._radius.y, TB._radius.z);
+          return BB._submeshesOctree.intersects(TB._basePointWorld, dB)
         }
-        return this.iG._getDefaultSubMeshCandidates(JJ)
+        return this.Gu._getDefaultSubMeshCandidates(BB)
       }
       rebuild() {}
       dispose() {}
     }
-    let hJ = !1;
-    hJ || (hJ = !0, FJ.e.prototype.createOrUpdateSelectionOctree = function() {
-      let JJ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 64,
-        cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2,
-        ZJ = this._getComponent(AJ.c.NAME_OCTREE);
-      ZJ || (ZJ = new YJ(this), this.pZJ(ZJ)), this.vFJ || (this.vFJ = new jJ.e(jJ.e.CreationFuncForMeshes, JJ, cJ));
-      const FJ = this.getWorldExtends();
-      return this.vFJ.update(FJ.min, FJ.max, this.meshes), this.vFJ
-    }, Object.defineProperty(FJ.e.prototype, "selectionOctree", {
+    let kB = !1;
+    kB || (kB = !0, VB.g.prototype.createOrUpdateSelectionOctree = function() {
+      let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 64,
+        TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2,
+        dB = this._getComponent(JB.b.NAME_OCTREE);
+      dB || (dB = new oB(this), this.OVB(dB)), this.jVB || (this.jVB = new gB.d(gB.d.CreationFuncForMeshes, BB, TB));
+      const VB = this.getWorldExtends();
+      return this.jVB.update(VB.min, VB.max, this.meshes), this.jVB
+    }, Object.defineProperty(VB.g.prototype, "selectionOctree", {
       get: function() {
-        return this.vFJ
+        return this.jVB
       },
       enumerable: !0,
       configurable: !0
-    }), eJ.c.prototype.createOrUpdateSubmeshesOctree = function() {
-      let JJ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 64,
-        cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-      const ZJ = this.Qy();
-      let FJ = ZJ._getComponent(AJ.c.NAME_OCTREE);
-      FJ || (FJ = new YJ(ZJ), ZJ.pZJ(FJ)), this._submeshesOctree || (this._submeshesOctree = new jJ.e(jJ.e.CreationFuncForSubMeshes, JJ, cJ)), this.computeWorldMatrix(!0);
-      const UJ = this.rM().boundingBox;
-      return this._submeshesOctree.update(UJ.minimumWorld, UJ.maximumWorld, this.aE), this._submeshesOctree
+    }), pB.e.prototype.createOrUpdateSubmeshesOctree = function() {
+      let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 64,
+        TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+      const dB = this.jU();
+      let VB = dB._getComponent(JB.b.NAME_OCTREE);
+      VB || (VB = new oB(dB), dB.OVB(VB)), this._submeshesOctree || (this._submeshesOctree = new gB.d(gB.d.CreationFuncForSubMeshes, BB, TB)), this.computeWorldMatrix(!0);
+      const yB = this.IK().boundingBox;
+      return this._submeshesOctree.update(yB.minimumWorld, yB.maximumWorld, this.oN), this._submeshesOctree
     })
   },
-  40294: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => bJ,
-      h: () => GJ,
-      l: () => nJ,
-      m: () => sJ,
-      n: () => IJ,
-      o: () => SJ,
-      s: () => VJ,
-      t: () => yJ,
-      v: () => KJ,
-      y: () => hJ
+  40293: (BB, TB, dB) => {
+    dB.d(TB, {
+      b: () => FB,
+      d: () => uB,
+      h: () => DB,
+      i: () => OB,
+      k: () => wB,
+      l: () => zB,
+      p: () => fB,
+      q: () => MB,
+      u: () => sB,
+      v: () => kB
     });
-    var FJ = ZJ(36177),
-      UJ = ZJ(36174),
-      eJ = ZJ(36183),
-      XJ = ZJ(39062),
-      AJ = ZJ(38910),
-      qJ = ZJ(36192),
-      jJ = ZJ(38960);
-    const YJ = {
+    var VB = dB(36132),
+      yB = dB(36126),
+      pB = dB(36137),
+      lB = dB(39051),
+      JB = dB(38889),
+      YB = dB(36148),
+      gB = dB(38955);
+    const oB = {
       internalPickerForMesh: void 0
     };
-    class hJ {
-      constructor(JJ, cJ) {
-        let ZJ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Number.MAX_VALUE,
-          UJ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : FJ.e;
-        this.origin = JJ, this.direction = cJ, this.length = ZJ, this.epsilon = UJ
+    class kB {
+      constructor(BB, TB) {
+        let dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Number.MAX_VALUE,
+          yB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : VB.b;
+        this.origin = BB, this.direction = TB, this.length = dB, this.epsilon = yB
       }
       clone() {
-        return new hJ(this.origin.clone(), this.direction.clone(), this.length)
+        return new kB(this.origin.clone(), this.direction.clone(), this.length)
       }
-      intersectsBoxMinMax(JJ, cJ) {
-        let ZJ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        const FJ = hJ._TmpVector3[0].K9(JJ.x - ZJ, JJ.y - ZJ, JJ.z - ZJ),
-          UJ = hJ._TmpVector3[1].K9(cJ.x + ZJ, cJ.y + ZJ, cJ.z + ZJ);
-        let eJ, XJ, AJ, qJ, jJ = 0,
-          YJ = Number.MAX_VALUE;
+      intersectsBoxMinMax(BB, TB) {
+        let dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        const VB = kB._TmpVector3[0].YBB(BB.x - dB, BB.y - dB, BB.z - dB),
+          yB = kB._TmpVector3[1].YBB(TB.x + dB, TB.y + dB, TB.z + dB);
+        let pB, lB, JB, YB, gB = 0,
+          oB = Number.MAX_VALUE;
         if (Math.abs(this.direction.x) < 1e-7) {
-          if (this.origin.x < FJ.x || this.origin.x > UJ.x) return !1
-        } else if (eJ = 1 / this.direction.x, XJ = (FJ.x - this.origin.x) * eJ, AJ = (UJ.x - this.origin.x) * eJ, AJ === -1 / 0 && (AJ = 1 / 0), XJ > AJ && (qJ = XJ, XJ = AJ, AJ = qJ), jJ = Math.max(XJ, jJ), YJ = Math.min(AJ, YJ), jJ > YJ) return !1;
+          if (this.origin.x < VB.x || this.origin.x > yB.x) return !1
+        } else if (pB = 1 / this.direction.x, lB = (VB.x - this.origin.x) * pB, JB = (yB.x - this.origin.x) * pB, JB === -1 / 0 && (JB = 1 / 0), lB > JB && (YB = lB, lB = JB, JB = YB), gB = Math.max(lB, gB), oB = Math.min(JB, oB), gB > oB) return !1;
         if (Math.abs(this.direction.y) < 1e-7) {
-          if (this.origin.y < FJ.y || this.origin.y > UJ.y) return !1
-        } else if (eJ = 1 / this.direction.y, XJ = (FJ.y - this.origin.y) * eJ, AJ = (UJ.y - this.origin.y) * eJ, AJ === -1 / 0 && (AJ = 1 / 0), XJ > AJ && (qJ = XJ, XJ = AJ, AJ = qJ), jJ = Math.max(XJ, jJ), YJ = Math.min(AJ, YJ), jJ > YJ) return !1;
+          if (this.origin.y < VB.y || this.origin.y > yB.y) return !1
+        } else if (pB = 1 / this.direction.y, lB = (VB.y - this.origin.y) * pB, JB = (yB.y - this.origin.y) * pB, JB === -1 / 0 && (JB = 1 / 0), lB > JB && (YB = lB, lB = JB, JB = YB), gB = Math.max(lB, gB), oB = Math.min(JB, oB), gB > oB) return !1;
         if (Math.abs(this.direction.z) < 1e-7) {
-          if (this.origin.z < FJ.z || this.origin.z > UJ.z) return !1
-        } else if (eJ = 1 / this.direction.z, XJ = (FJ.z - this.origin.z) * eJ, AJ = (UJ.z - this.origin.z) * eJ, AJ === -1 / 0 && (AJ = 1 / 0), XJ > AJ && (qJ = XJ, XJ = AJ, AJ = qJ), jJ = Math.max(XJ, jJ), YJ = Math.min(AJ, YJ), jJ > YJ) return !1;
+          if (this.origin.z < VB.z || this.origin.z > yB.z) return !1
+        } else if (pB = 1 / this.direction.z, lB = (VB.z - this.origin.z) * pB, JB = (yB.z - this.origin.z) * pB, JB === -1 / 0 && (JB = 1 / 0), lB > JB && (YB = lB, lB = JB, JB = YB), gB = Math.max(lB, gB), oB = Math.min(JB, oB), gB > oB) return !1;
         return !0
       }
-      intersectsBox(JJ) {
-        let cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return this.intersectsBoxMinMax(JJ.minimum, JJ.maximum, cJ)
+      intersectsBox(BB) {
+        let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return this.intersectsBoxMinMax(BB.minimum, BB.maximum, TB)
       }
-      intersectsSphere(JJ) {
-        let cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const ZJ = JJ.center.x - this.origin.x,
-          FJ = JJ.center.y - this.origin.y,
-          UJ = JJ.center.z - this.origin.z,
-          eJ = ZJ * ZJ + FJ * FJ + UJ * UJ,
-          XJ = JJ.radius + cJ,
-          AJ = XJ * XJ;
-        if (eJ <= AJ) return !0;
-        const qJ = ZJ * this.direction.x + FJ * this.direction.y + UJ * this.direction.z;
-        if (qJ < 0) return !1;
-        return eJ - qJ * qJ <= AJ
+      intersectsSphere(BB) {
+        let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const dB = BB.center.x - this.origin.x,
+          VB = BB.center.y - this.origin.y,
+          yB = BB.center.z - this.origin.z,
+          pB = dB * dB + VB * VB + yB * yB,
+          lB = BB.radius + TB,
+          JB = lB * lB;
+        if (pB <= JB) return !0;
+        const YB = dB * this.direction.x + VB * this.direction.y + yB * this.direction.z;
+        if (YB < 0) return !1;
+        return pB - YB * YB <= JB
       }
-      intersectsTriangle(JJ, cJ, ZJ) {
-        const FJ = hJ._TmpVector3[0],
-          eJ = hJ._TmpVector3[1],
-          AJ = hJ._TmpVector3[2],
-          qJ = hJ._TmpVector3[3],
-          jJ = hJ._TmpVector3[4];
-        cJ.subtractToRef(JJ, FJ), ZJ.subtractToRef(JJ, eJ), UJ.j.CrossToRef(this.direction, eJ, AJ);
-        const YJ = UJ.j.Dot(FJ, AJ);
-        if (0 === YJ) return null;
-        const DJ = 1 / YJ;
-        this.origin.subtractToRef(JJ, qJ);
-        const sJ = UJ.j.Dot(qJ, AJ) * DJ;
-        if (sJ < -this.epsilon || sJ > 1 + this.epsilon) return null;
-        UJ.j.CrossToRef(qJ, FJ, jJ);
-        const nJ = UJ.j.Dot(this.direction, jJ) * DJ;
-        if (nJ < -this.epsilon || sJ + nJ > 1 + this.epsilon) return null;
-        const GJ = UJ.j.Dot(eJ, jJ) * DJ;
-        return GJ > this.length || GJ < 0 ? null : new XJ.b(1 - sJ - nJ, sJ, GJ)
+      intersectsTriangle(BB, TB, dB) {
+        const VB = kB._TmpVector3[0],
+          pB = kB._TmpVector3[1],
+          JB = kB._TmpVector3[2],
+          YB = kB._TmpVector3[3],
+          gB = kB._TmpVector3[4];
+        TB.subtractToRef(BB, VB), dB.subtractToRef(BB, pB), yB.p.CrossToRef(this.direction, pB, JB);
+        const oB = yB.p.Dot(VB, JB);
+        if (0 === oB) return null;
+        const LB = 1 / oB;
+        this.origin.subtractToRef(BB, YB);
+        const OB = yB.p.Dot(YB, JB) * LB;
+        if (OB < -this.epsilon || OB > 1 + this.epsilon) return null;
+        yB.p.CrossToRef(YB, VB, gB);
+        const DB = yB.p.Dot(this.direction, gB) * LB;
+        if (DB < -this.epsilon || OB + DB > 1 + this.epsilon) return null;
+        const uB = yB.p.Dot(pB, gB) * LB;
+        return uB > this.length || uB < 0 ? null : new lB.d(1 - OB - DB, OB, uB)
       }
-      intersectsPlane(JJ) {
-        let cJ;
-        const ZJ = UJ.j.Dot(JJ.normal, this.direction);
-        if (Math.abs(ZJ) < 9.99999997475243e-7) return null;
+      intersectsPlane(BB) {
+        let TB;
+        const dB = yB.p.Dot(BB.normal, this.direction);
+        if (Math.abs(dB) < 9.99999997475243e-7) return null;
         {
-          const FJ = UJ.j.Dot(JJ.normal, this.origin);
-          return cJ = (-JJ.d - FJ) / ZJ, cJ < 0 ? cJ < -9.99999997475243e-7 ? null : 0 : cJ
+          const VB = yB.p.Dot(BB.normal, this.origin);
+          return TB = (-BB.d - VB) / dB, TB < 0 ? TB < -9.99999997475243e-7 ? null : 0 : TB
         }
       }
-      intersectsAxis(JJ) {
-        let cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        switch (JJ) {
+      intersectsAxis(BB) {
+        let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        switch (BB) {
           case "y": {
-            const JJ = (this.origin.y - cJ) / this.direction.y;
-            return JJ > 0 ? null : new UJ.j(this.origin.x + this.direction.x * -JJ, cJ, this.origin.z + this.direction.z * -JJ)
+            const BB = (this.origin.y - TB) / this.direction.y;
+            return BB > 0 ? null : new yB.p(this.origin.x + this.direction.x * -BB, TB, this.origin.z + this.direction.z * -BB)
           }
           case "x": {
-            const JJ = (this.origin.x - cJ) / this.direction.x;
-            return JJ > 0 ? null : new UJ.j(cJ, this.origin.y + this.direction.y * -JJ, this.origin.z + this.direction.z * -JJ)
+            const BB = (this.origin.x - TB) / this.direction.x;
+            return BB > 0 ? null : new yB.p(TB, this.origin.y + this.direction.y * -BB, this.origin.z + this.direction.z * -BB)
           }
           case "z": {
-            const JJ = (this.origin.z - cJ) / this.direction.z;
-            return JJ > 0 ? null : new UJ.j(this.origin.x + this.direction.x * -JJ, this.origin.y + this.direction.y * -JJ, cJ)
+            const BB = (this.origin.z - TB) / this.direction.z;
+            return BB > 0 ? null : new yB.p(this.origin.x + this.direction.x * -BB, this.origin.y + this.direction.y * -BB, TB)
           }
           default:
             return null
         }
       }
-      pFJ(JJ, cJ, ZJ) {
-        let FJ = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-          eJ = arguments.length > 4 ? arguments[4] : void 0,
-          XJ = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-        const AJ = UJ.h.Matrix[0];
-        return JJ.getWorldMatrix().invertToRef(AJ), this._tmpRay ? hJ.TransformToRef(this, AJ, this._tmpRay) : this._tmpRay = hJ.Transform(this, AJ), JJ.intersects(this._tmpRay, cJ, ZJ, FJ, eJ, XJ)
+      LyB(BB, TB, dB) {
+        let VB = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+          pB = arguments.length > 4 ? arguments[4] : void 0,
+          lB = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+        const JB = yB.j.Matrix[0];
+        return BB.getWorldMatrix().invertToRef(JB), this._tmpRay ? kB.TransformToRef(this, JB, this._tmpRay) : this._tmpRay = kB.Transform(this, JB), BB.intersects(this._tmpRay, TB, dB, VB, pB, lB)
       }
-      intersectsMeshes(JJ, cJ, ZJ) {
-        ZJ ? ZJ.length = 0 : ZJ = [];
-        for (let FJ = 0; FJ < JJ.length; FJ++) {
-          const UJ = this.pFJ(JJ[FJ], cJ);
-          UJ.hit && ZJ.push(UJ)
+      intersectsMeshes(BB, TB, dB) {
+        dB ? dB.length = 0 : dB = [];
+        for (let VB = 0; VB < BB.length; VB++) {
+          const yB = this.LyB(BB[VB], TB);
+          yB.hit && dB.push(yB)
         }
-        return ZJ.sort(this._comparePickingInfo), ZJ
+        return dB.sort(this._comparePickingInfo), dB
       }
-      _comparePickingInfo(JJ, cJ) {
-        return JJ.distance < cJ.distance ? -1 : JJ.distance > cJ.distance ? 1 : 0
+      _comparePickingInfo(BB, TB) {
+        return BB.distance < TB.distance ? -1 : BB.distance > TB.distance ? 1 : 0
       }
-      intersectionSegment(JJ, cJ, ZJ) {
-        const FJ = this.origin,
-          eJ = UJ.h.Pn[0],
-          XJ = UJ.h.Pn[1],
-          AJ = UJ.h.Pn[2],
-          qJ = UJ.h.Pn[3];
-        cJ.subtractToRef(JJ, eJ), this.direction.scaleToRef(hJ._Rayl, AJ), FJ.addToRef(AJ, XJ), JJ.subtractToRef(FJ, qJ);
-        const jJ = UJ.j.Dot(eJ, eJ),
-          YJ = UJ.j.Dot(eJ, AJ),
-          DJ = UJ.j.Dot(AJ, AJ),
-          sJ = UJ.j.Dot(eJ, qJ),
-          nJ = UJ.j.Dot(AJ, qJ),
-          GJ = jJ * DJ - YJ * YJ;
-        let fJ, xJ, rJ = GJ,
-          vJ = GJ;
-        GJ < hJ._Smallnum ? (fJ = 0, rJ = 1, xJ = nJ, vJ = DJ) : (fJ = YJ * nJ - DJ * sJ, xJ = jJ * nJ - YJ * sJ, fJ < 0 ? (fJ = 0, xJ = nJ, vJ = DJ) : fJ > rJ && (fJ = rJ, xJ = nJ + YJ, vJ = DJ)), xJ < 0 ? (xJ = 0, -sJ < 0 ? fJ = 0 : -sJ > jJ ? fJ = rJ : (fJ = -sJ, rJ = jJ)) : xJ > vJ && (xJ = vJ, -sJ + YJ < 0 ? fJ = 0 : -sJ + YJ > jJ ? fJ = rJ : (fJ = -sJ + YJ, rJ = jJ));
-        const mJ = Math.abs(fJ) < hJ._Smallnum ? 0 : fJ / rJ,
-          QJ = Math.abs(xJ) < hJ._Smallnum ? 0 : xJ / vJ,
-          EJ = UJ.h.Pn[4];
-        AJ.scaleToRef(QJ, EJ);
-        const VJ = UJ.h.Pn[5];
-        eJ.scaleToRef(mJ, VJ), VJ.addInPlace(qJ);
-        const KJ = UJ.h.Pn[6];
-        VJ.subtractToRef(EJ, KJ);
-        return QJ > 0 && QJ <= this.length && KJ.lengthSquared() < ZJ * ZJ ? VJ.length() : -1
+      intersectionSegment(BB, TB, dB) {
+        const VB = this.origin,
+          pB = yB.j.RD[0],
+          lB = yB.j.RD[1],
+          JB = yB.j.RD[2],
+          YB = yB.j.RD[3];
+        TB.subtractToRef(BB, pB), this.direction.scaleToRef(kB._Rayl, JB), VB.addToRef(JB, lB), BB.subtractToRef(VB, YB);
+        const gB = yB.p.Dot(pB, pB),
+          oB = yB.p.Dot(pB, JB),
+          LB = yB.p.Dot(JB, JB),
+          OB = yB.p.Dot(pB, YB),
+          DB = yB.p.Dot(JB, YB),
+          uB = gB * LB - oB * oB;
+        let HB, EB, vB = uB,
+          mB = uB;
+        uB < kB._Smallnum ? (HB = 0, vB = 1, EB = DB, mB = LB) : (HB = oB * DB - LB * OB, EB = gB * DB - oB * OB, HB < 0 ? (HB = 0, EB = DB, mB = LB) : HB > vB && (HB = vB, EB = DB + oB, mB = LB)), EB < 0 ? (EB = 0, -OB < 0 ? HB = 0 : -OB > gB ? HB = vB : (HB = -OB, vB = gB)) : EB > mB && (EB = mB, -OB + oB < 0 ? HB = 0 : -OB + oB > gB ? HB = vB : (HB = -OB + oB, vB = gB));
+        const iB = Math.abs(HB) < kB._Smallnum ? 0 : HB / vB,
+          NB = Math.abs(EB) < kB._Smallnum ? 0 : EB / mB,
+          tB = yB.j.RD[4];
+        JB.scaleToRef(NB, tB);
+        const fB = yB.j.RD[5];
+        pB.scaleToRef(iB, fB), fB.addInPlace(YB);
+        const sB = yB.j.RD[6];
+        fB.subtractToRef(tB, sB);
+        return NB > 0 && NB <= this.length && sB.lengthSquared() < dB * dB ? fB.length() : -1
       }
-      update(JJ, cJ, ZJ, FJ, eJ, XJ, AJ) {
+      update(BB, TB, dB, VB, pB, lB, JB) {
         if (arguments.length > 7 && void 0 !== arguments[7] && arguments[7]) {
-          hJ._RayDistant || (hJ._RayDistant = hJ.Zero()), hJ._RayDistant.unprojectRayToRef(JJ, cJ, ZJ, FJ, UJ.b.IdentityReadOnly, XJ, AJ);
-          const qJ = UJ.h.Matrix[0];
-          eJ.invertToRef(qJ), hJ.TransformToRef(hJ._RayDistant, qJ, this)
-        } else this.unprojectRayToRef(JJ, cJ, ZJ, FJ, eJ, XJ, AJ);
+          kB._RayDistant || (kB._RayDistant = kB.Zero()), kB._RayDistant.unprojectRayToRef(BB, TB, dB, VB, yB.b.IdentityReadOnly, lB, JB);
+          const YB = yB.j.Matrix[0];
+          pB.invertToRef(YB), kB.TransformToRef(kB._RayDistant, YB, this)
+        } else this.unprojectRayToRef(BB, TB, dB, VB, pB, lB, JB);
         return this
       }
       static Zero() {
-        return new hJ(UJ.j.Zero(), UJ.j.Zero())
+        return new kB(yB.p.Zero(), yB.p.Zero())
       }
-      static CreateNew(JJ, cJ, ZJ, FJ, UJ, eJ, XJ) {
-        return hJ.Zero().update(JJ, cJ, ZJ, FJ, UJ, eJ, XJ)
+      static CreateNew(BB, TB, dB, VB, yB, pB, lB) {
+        return kB.Zero().update(BB, TB, dB, VB, yB, pB, lB)
       }
-      static CreateNewFromTo(JJ, cJ) {
-        let ZJ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : UJ.b.IdentityReadOnly;
-        const FJ = new hJ(new UJ.j(0, 0, 0), new UJ.j(0, 0, 0));
-        return hJ.CreateFromToToRef(JJ, cJ, FJ, ZJ)
+      static CreateNewFromTo(BB, TB) {
+        let dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : yB.b.IdentityReadOnly;
+        const VB = new kB(new yB.p(0, 0, 0), new yB.p(0, 0, 0));
+        return kB.CreateFromToToRef(BB, TB, VB, dB)
       }
-      static CreateFromToToRef(JJ, cJ, ZJ) {
-        let FJ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : UJ.b.IdentityReadOnly;
-        ZJ.origin.rZJ(JJ);
-        const eJ = cJ.subtractToRef(JJ, ZJ.direction),
-          XJ = Math.sqrt(eJ.x * eJ.x + eJ.y * eJ.y + eJ.z * eJ.z);
-        return ZJ.length = XJ, ZJ.direction.normalize(), hJ.TransformToRef(ZJ, FJ, ZJ)
+      static CreateFromToToRef(BB, TB, dB) {
+        let VB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : yB.b.IdentityReadOnly;
+        dB.origin.bdB(BB);
+        const pB = TB.subtractToRef(BB, dB.direction),
+          lB = Math.sqrt(pB.x * pB.x + pB.y * pB.y + pB.z * pB.z);
+        return dB.length = lB, dB.direction.normalize(), kB.TransformToRef(dB, VB, dB)
       }
-      static Transform(JJ, cJ) {
-        const ZJ = new hJ(new UJ.j(0, 0, 0), new UJ.j(0, 0, 0));
-        return hJ.TransformToRef(JJ, cJ, ZJ), ZJ
+      static Transform(BB, TB) {
+        const dB = new kB(new yB.p(0, 0, 0), new yB.p(0, 0, 0));
+        return kB.TransformToRef(BB, TB, dB), dB
       }
-      static TransformToRef(JJ, cJ, ZJ) {
-        UJ.j.TransformCoordinatesToRef(JJ.origin, cJ, ZJ.origin), UJ.j.TransformNormalToRef(JJ.direction, cJ, ZJ.direction), ZJ.length = JJ.length, ZJ.epsilon = JJ.epsilon;
-        const FJ = ZJ.direction,
-          eJ = FJ.length();
-        if (0 !== eJ && 1 !== eJ) {
-          const JJ = 1 / eJ;
-          FJ.x *= JJ, FJ.y *= JJ, FJ.z *= JJ, ZJ.length *= eJ
+      static TransformToRef(BB, TB, dB) {
+        yB.p.TransformCoordinatesToRef(BB.origin, TB, dB.origin), yB.p.TransformNormalToRef(BB.direction, TB, dB.direction), dB.length = BB.length, dB.epsilon = BB.epsilon;
+        const VB = dB.direction,
+          pB = VB.length();
+        if (0 !== pB && 1 !== pB) {
+          const BB = 1 / pB;
+          VB.x *= BB, VB.y *= BB, VB.z *= BB, dB.length *= pB
         }
-        return ZJ
+        return dB
       }
-      unprojectRayToRef(JJ, cJ, ZJ, FJ, eJ, XJ, AJ) {
-        const jJ = UJ.h.Matrix[0];
-        eJ.multiplyToRef(XJ, jJ), jJ.multiplyToRef(AJ, jJ), jJ.invert();
-        const YJ = qJ.c.LastCreatedEngine,
-          hJ = UJ.h.Pn[0];
-        hJ.x = JJ / ZJ * 2 - 1, hJ.y = -(cJ / FJ * 2 - 1), hJ.z = YJ?.LZJ ? 1 : YJ?.isNDCHalfZRange ? 0 : -1;
-        const DJ = UJ.h.Pn[1].K9(hJ.x, hJ.y, 1 - 1e-8),
-          sJ = UJ.h.Pn[2],
-          nJ = UJ.h.Pn[3];
-        UJ.j.TransformCoordinatesToRef(hJ, jJ, sJ), UJ.j.TransformCoordinatesToRef(DJ, jJ, nJ), this.origin.rZJ(sJ), nJ.subtractToRef(sJ, this.direction), this.direction.normalize()
+      unprojectRayToRef(BB, TB, dB, VB, pB, lB, JB) {
+        const gB = yB.j.Matrix[0];
+        pB.multiplyToRef(lB, gB), gB.multiplyToRef(JB, gB), gB.invert();
+        const oB = YB.c.LastCreatedEngine,
+          kB = yB.j.RD[0];
+        kB.x = BB / dB * 2 - 1, kB.y = -(TB / VB * 2 - 1), kB.z = oB?.fVB ? 1 : oB?.isNDCHalfZRange ? 0 : -1;
+        const LB = yB.j.RD[1].YBB(kB.x, kB.y, 1 - 1e-8),
+          OB = yB.j.RD[2],
+          DB = yB.j.RD[3];
+        yB.p.TransformCoordinatesToRef(kB, gB, OB), yB.p.TransformCoordinatesToRef(LB, gB, DB), this.origin.bdB(OB), DB.subtractToRef(OB, this.direction), this.direction.normalize()
       }
     }
 
-    function DJ(JJ, cJ, ZJ, FJ, UJ) {
-      let eJ = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-      const XJ = hJ.Zero();
-      return sJ(JJ, cJ, ZJ, FJ, XJ, UJ, eJ), XJ
+    function LB(BB, TB, dB, VB, yB) {
+      let pB = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+      const lB = kB.Zero();
+      return OB(BB, TB, dB, VB, lB, yB, pB), lB
     }
 
-    function sJ(JJ, cJ, ZJ, FJ, eJ, XJ) {
-      let AJ = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
-        qJ = arguments.length > 7 && void 0 !== arguments[7] && arguments[7];
-      const jJ = JJ.gn();
-      if (!XJ && !(XJ = JJ.activeCamera) && !(XJ = JJ.cameraToUseForPointers)) return JJ;
-      const YJ = XJ.viewport,
-        hJ = jJ.getRenderHeight(),
+    function OB(BB, TB, dB, VB, pB, lB) {
+      let JB = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
+        YB = arguments.length > 7 && void 0 !== arguments[7] && arguments[7];
+      const gB = BB.PD();
+      if (!lB && !(lB = BB.activeCamera) && !(lB = BB.cameraToUseForPointers)) return BB;
+      const oB = lB.viewport,
+        kB = gB.getRenderHeight(),
         {
-          x: DJ,
-          y: sJ,
-          width: nJ,
-          height: GJ
-        } = YJ.toGlobal(jJ.getRenderWidth(), hJ),
-        fJ = 1 / jJ.getHardwareScalingLevel();
-      return cJ = cJ * fJ - DJ, ZJ = ZJ * fJ - (hJ - sJ - GJ), eJ.update(cJ, ZJ, nJ, GJ, FJ || UJ.b.IdentityReadOnly, AJ ? UJ.b.IdentityReadOnly : XJ.getViewMatrix(), XJ.getProjectionMatrix(), qJ), JJ
+          x: LB,
+          y: OB,
+          width: DB,
+          height: uB
+        } = oB.toGlobal(gB.getRenderWidth(), kB),
+        HB = 1 / gB.getHardwareScalingLevel();
+      return TB = TB * HB - LB, dB = dB * HB - (kB - OB - uB), pB.update(TB, dB, DB, uB, VB || yB.b.IdentityReadOnly, JB ? yB.b.IdentityReadOnly : lB.getViewMatrix(), lB.getProjectionMatrix(), YB), BB
     }
 
-    function nJ(JJ, cJ, ZJ, FJ) {
-      const UJ = hJ.Zero();
-      return GJ(JJ, cJ, ZJ, UJ, FJ), UJ
+    function DB(BB, TB, dB, VB) {
+      const yB = kB.Zero();
+      return uB(BB, TB, dB, yB, VB), yB
     }
 
-    function GJ(JJ, cJ, ZJ, FJ, eJ) {
-      if (!AJ.e) return JJ;
-      const XJ = JJ.gn();
-      if (!eJ && !(eJ = JJ.activeCamera) && !(eJ = JJ.cameraToUseForPointers)) throw new Error("Active camera not set");
-      const qJ = eJ.viewport,
-        jJ = XJ.getRenderHeight(),
+    function uB(BB, TB, dB, VB, pB) {
+      if (!JB.b) return BB;
+      const lB = BB.PD();
+      if (!pB && !(pB = BB.activeCamera) && !(pB = BB.cameraToUseForPointers)) throw new Error("Active camera not set");
+      const YB = pB.viewport,
+        gB = lB.getRenderHeight(),
         {
-          x: YJ,
-          y: hJ,
-          width: DJ,
-          height: sJ
-        } = qJ.toGlobal(XJ.getRenderWidth(), jJ),
-        nJ = UJ.b.Identity(),
-        GJ = 1 / XJ.getHardwareScalingLevel();
-      return cJ = cJ * GJ - YJ, ZJ = ZJ * GJ - (jJ - hJ - sJ), FJ.update(cJ, ZJ, DJ, sJ, nJ, nJ, eJ.getProjectionMatrix()), JJ
+          x: oB,
+          y: kB,
+          width: LB,
+          height: OB
+        } = YB.toGlobal(lB.getRenderWidth(), gB),
+        DB = yB.b.Identity(),
+        uB = 1 / lB.getHardwareScalingLevel();
+      return TB = TB * uB - oB, dB = dB * uB - (gB - kB - OB), VB.update(TB, dB, LB, OB, DB, DB, pB.getProjectionMatrix()), BB
     }
 
-    function fJ(JJ, cJ, ZJ, FJ, UJ, eJ, XJ, AJ) {
-      return xJ(JJ, ZJ, FJ, cJ(FJ, ZJ.enableDistantPicking), UJ, eJ, XJ, AJ)
+    function HB(BB, TB, dB, VB, yB, pB, lB, JB) {
+      return EB(BB, dB, VB, TB(VB, dB.enableDistantPicking), yB, pB, lB, JB)
     }
 
-    function xJ(JJ, cJ, ZJ, FJ, UJ, eJ, XJ, AJ) {
-      const qJ = cJ.intersects(FJ, UJ, XJ, eJ, ZJ, AJ);
-      return qJ && qJ.hit ? !UJ && null != JJ && qJ.distance >= JJ.distance ? null : qJ : null
+    function EB(BB, TB, dB, VB, yB, pB, lB, JB) {
+      const YB = TB.intersects(VB, yB, lB, pB, dB, JB);
+      return YB && YB.hit ? !yB && null != BB && YB.distance >= BB.distance ? null : YB : null
     }
 
-    function rJ(JJ, cJ) {
-      return "InstancedLinesMesh" === JJ || "LinesMesh" === JJ ? cJ.intersectionThreshold : 0
+    function vB(BB, TB) {
+      return "InstancedLinesMesh" === BB || "LinesMesh" === BB ? TB.intersectionThreshold : 0
     }
 
-    function vJ(JJ) {
-      const cJ = JJ.getClassName();
-      if ("GreasedLineMesh" === cJ) return {
+    function mB(BB) {
+      const TB = BB.getClassName();
+      if ("GreasedLineMesh" === TB) return {
         rawBoundingInfo: null,
         intersectionThreshold: 0
       };
-      const ZJ = JJ.rawBoundingInfo;
+      const dB = BB.rawBoundingInfo;
       return {
-        rawBoundingInfo: ZJ,
-        intersectionThreshold: ZJ ? rJ(cJ, JJ) : 0
+        rawBoundingInfo: dB,
+        intersectionThreshold: dB ? vB(TB, BB) : 0
       }
     }
 
-    function mJ(JJ, cJ, ZJ, FJ, UJ) {
-      const eJ = JJ(ZJ, cJ.enableDistantPicking);
-      return eJ.intersectsSphere(FJ.QFJ, UJ) && eJ.intersectsBox(FJ.boundingBox, UJ) ? eJ : null
+    function iB(BB, TB, dB, VB, yB) {
+      const pB = BB(dB, TB.enableDistantPicking);
+      return pB.intersectsSphere(VB.bVB, yB) && pB.intersectsBox(VB.boundingBox, yB) ? pB : null
     }
 
-    function QJ(JJ, cJ, ZJ, FJ, eJ, XJ) {
-      let qJ = null;
-      const jJ = !!(JJ.activeCameras && JJ.activeCameras.length > 1 && JJ.cameraToUseForPointers !== JJ.activeCamera),
-        hJ = JJ.cameraToUseForPointers || JJ.activeCamera,
-        DJ = YJ.internalPickerForMesh || fJ,
-        sJ = DJ === fJ;
-      for (let AJ = 0; AJ < JJ.meshes.length; AJ++) {
-        const YJ = JJ.meshes[AJ];
-        if (ZJ) {
-          if (!ZJ(YJ, -1)) continue
-        } else if (!YJ.isEnabled() || !YJ.isVisible || !YJ.aG) continue;
-        const nJ = jJ && YJ.isWorldMatrixCameraDependent(),
-          GJ = YJ.computeWorldMatrix(nJ, hJ);
-        if (YJ.hasThinInstances && YJ.fcJ) {
-          const JJ = DJ(qJ, cJ, YJ, GJ, !0, !0, XJ);
-          if (JJ) {
-            if (eJ) return JJ;
+    function NB(BB, TB, dB, VB, pB, lB) {
+      let YB = null;
+      const gB = !!(BB.activeCameras && BB.activeCameras.length > 1 && BB.cameraToUseForPointers !== BB.activeCamera),
+        kB = BB.cameraToUseForPointers || BB.activeCamera,
+        LB = oB.internalPickerForMesh || HB,
+        OB = LB === HB;
+      for (let JB = 0; JB < BB.meshes.length; JB++) {
+        const oB = BB.meshes[JB];
+        if (dB) {
+          if (!dB(oB, -1)) continue
+        } else if (!oB.isEnabled() || !oB.isVisible || !oB.xu) continue;
+        const DB = gB && oB.isWorldMatrixCameraDependent(),
+          uB = oB.computeWorldMatrix(DB, kB);
+        if (oB.hasThinInstances && oB.xTB) {
+          const BB = LB(YB, TB, oB, uB, !0, !0, lB);
+          if (BB) {
+            if (pB) return BB;
             const {
-              rawBoundingInfo: AJ,
-              intersectionThreshold: jJ
-            } = vJ(YJ), hJ = YJ._thinInstanceDataStorage.matrixData;
-            if (hJ) {
-              const JJ = UJ.h.Matrix[0],
-                nJ = UJ.h.Matrix[1],
-                fJ = Math.min(YJ.f6, hJ.length >> 4);
-              for (let rJ = 0; rJ < fJ; rJ++) {
-                if (ZJ && !ZJ(YJ, rJ)) continue;
-                UJ.b.FromArrayToRef(hJ, rJ << 4, JJ), JJ.multiplyToRef(GJ, nJ);
-                const fJ = sJ && AJ ? mJ(cJ, YJ, nJ, AJ, jJ) : null;
-                if (sJ && AJ && !fJ) continue;
-                const vJ = sJ && fJ ? xJ(qJ, YJ, nJ, fJ, FJ, eJ, XJ, !0) : DJ(qJ, cJ, YJ, nJ, FJ, eJ, XJ, !0);
-                if (vJ && (qJ = vJ, qJ.thinInstanceIndex = rJ, FJ)) return qJ
+              rawBoundingInfo: JB,
+              intersectionThreshold: gB
+            } = mB(oB), kB = oB._thinInstanceDataStorage.matrixData;
+            if (kB) {
+              const BB = yB.j.Matrix[0],
+                DB = yB.j.Matrix[1],
+                HB = Math.min(oB.K9, kB.length >> 4);
+              for (let vB = 0; vB < HB; vB++) {
+                if (dB && !dB(oB, vB)) continue;
+                yB.b.FromArrayToRef(kB, vB << 4, BB), BB.multiplyToRef(uB, DB);
+                const HB = OB && JB ? iB(TB, oB, DB, JB, gB) : null;
+                if (OB && JB && !HB) continue;
+                const mB = OB && HB ? EB(YB, oB, DB, HB, VB, pB, lB, !0) : LB(YB, TB, oB, DB, VB, pB, lB, !0);
+                if (mB && (YB = mB, YB.thinInstanceIndex = vB, VB)) return YB
               }
             }
           }
         } else {
-          const JJ = DJ(qJ, cJ, YJ, GJ, FJ, eJ, XJ);
-          if (JJ && (qJ = JJ, FJ)) return qJ
+          const BB = LB(YB, TB, oB, uB, VB, pB, lB);
+          if (BB && (YB = BB, VB)) return YB
         }
       }
-      return qJ || new AJ.e
+      return YB || new JB.b
     }
 
-    function EJ(JJ, cJ, ZJ, FJ) {
-      if (!AJ.e) return null;
-      const eJ = [],
-        XJ = !!(JJ.activeCameras && JJ.activeCameras.length > 1 && JJ.cameraToUseForPointers !== JJ.activeCamera),
-        qJ = JJ.cameraToUseForPointers || JJ.activeCamera,
-        jJ = YJ.internalPickerForMesh || fJ,
-        hJ = jJ === fJ;
-      for (let AJ = 0; AJ < JJ.meshes.length; AJ++) {
-        const YJ = JJ.meshes[AJ];
-        if (ZJ) {
-          if (!ZJ(YJ, -1)) continue
-        } else if (!YJ.isEnabled() || !YJ.isVisible || !YJ.aG) continue;
-        const DJ = XJ && YJ.isWorldMatrixCameraDependent(),
-          sJ = YJ.computeWorldMatrix(DJ, qJ);
-        if (YJ.hasThinInstances && YJ.fcJ) {
-          if (jJ(null, cJ, YJ, sJ, !0, !0, FJ)) {
+    function tB(BB, TB, dB, VB) {
+      if (!JB.b) return null;
+      const pB = [],
+        lB = !!(BB.activeCameras && BB.activeCameras.length > 1 && BB.cameraToUseForPointers !== BB.activeCamera),
+        YB = BB.cameraToUseForPointers || BB.activeCamera,
+        gB = oB.internalPickerForMesh || HB,
+        kB = gB === HB;
+      for (let JB = 0; JB < BB.meshes.length; JB++) {
+        const oB = BB.meshes[JB];
+        if (dB) {
+          if (!dB(oB, -1)) continue
+        } else if (!oB.isEnabled() || !oB.isVisible || !oB.xu) continue;
+        const LB = lB && oB.isWorldMatrixCameraDependent(),
+          OB = oB.computeWorldMatrix(LB, YB);
+        if (oB.hasThinInstances && oB.xTB) {
+          if (gB(null, TB, oB, OB, !0, !0, VB)) {
             const {
-              rawBoundingInfo: JJ,
-              intersectionThreshold: XJ
-            } = vJ(YJ), AJ = YJ._thinInstanceDataStorage.matrixData;
-            if (AJ) {
-              const qJ = UJ.h.Matrix[0],
-                DJ = UJ.h.Matrix[1],
-                nJ = Math.min(YJ.f6, AJ.length >> 4);
-              for (let GJ = 0; GJ < nJ; GJ++) {
-                if (ZJ && !ZJ(YJ, GJ)) continue;
-                UJ.b.FromArrayToRef(AJ, GJ << 4, qJ), qJ.multiplyToRef(sJ, DJ);
-                const nJ = hJ && JJ ? mJ(cJ, YJ, DJ, JJ, XJ) : null;
-                if (hJ && JJ && !nJ) continue;
-                const fJ = hJ && nJ ? xJ(null, YJ, DJ, nJ, !1, !1, FJ, !0) : jJ(null, cJ, YJ, DJ, !1, !1, FJ, !0);
-                fJ && (fJ.thinInstanceIndex = GJ, eJ.push(fJ))
+              rawBoundingInfo: BB,
+              intersectionThreshold: lB
+            } = mB(oB), JB = oB._thinInstanceDataStorage.matrixData;
+            if (JB) {
+              const YB = yB.j.Matrix[0],
+                LB = yB.j.Matrix[1],
+                DB = Math.min(oB.K9, JB.length >> 4);
+              for (let uB = 0; uB < DB; uB++) {
+                if (dB && !dB(oB, uB)) continue;
+                yB.b.FromArrayToRef(JB, uB << 4, YB), YB.multiplyToRef(OB, LB);
+                const DB = kB && BB ? iB(TB, oB, LB, BB, lB) : null;
+                if (kB && BB && !DB) continue;
+                const HB = kB && DB ? EB(null, oB, LB, DB, !1, !1, VB, !0) : gB(null, TB, oB, LB, !1, !1, VB, !0);
+                HB && (HB.thinInstanceIndex = uB, pB.push(HB))
               }
             }
           }
         } else {
-          const JJ = jJ(null, cJ, YJ, sJ, !1, !1, FJ);
-          JJ && eJ.push(JJ)
+          const BB = gB(null, TB, oB, OB, !1, !1, VB);
+          BB && pB.push(BB)
         }
       }
-      return eJ
+      return pB
     }
 
-    function VJ(JJ, cJ, ZJ, FJ, eJ, XJ) {
-      if (!AJ.e) return null;
-      const qJ = QJ(JJ, (FJ => (JJ._tempPickingRay || (JJ._tempPickingRay = hJ.Zero()), sJ(JJ, cJ, ZJ, FJ, JJ._tempPickingRay, XJ || null), JJ._tempPickingRay)), FJ, eJ, !0);
-      return qJ && (qJ.ray = DJ(JJ, cJ, ZJ, UJ.b.Identity(), XJ || null)), qJ
+    function fB(BB, TB, dB, VB, pB, lB) {
+      if (!JB.b) return null;
+      const YB = NB(BB, (VB => (BB._tempPickingRay || (BB._tempPickingRay = kB.Zero()), OB(BB, TB, dB, VB, BB._tempPickingRay, lB || null), BB._tempPickingRay)), VB, pB, !0);
+      return YB && (YB.ray = LB(BB, TB, dB, yB.b.Identity(), lB || null)), YB
     }
 
-    function KJ(JJ, cJ, ZJ, FJ, eJ, XJ, AJ) {
-      const qJ = QJ(JJ, ((FJ, UJ) => (JJ._tempPickingRay || (JJ._tempPickingRay = hJ.Zero()), sJ(JJ, cJ, ZJ, FJ, JJ._tempPickingRay, XJ || null, !1, UJ), JJ._tempPickingRay)), FJ, eJ, !1, AJ);
-      return qJ && (qJ.ray = DJ(JJ, cJ, ZJ, UJ.b.Identity(), XJ || null)), qJ
+    function sB(BB, TB, dB, VB, pB, lB, JB) {
+      const YB = NB(BB, ((VB, yB) => (BB._tempPickingRay || (BB._tempPickingRay = kB.Zero()), OB(BB, TB, dB, VB, BB._tempPickingRay, lB || null, !1, yB), BB._tempPickingRay)), VB, pB, !1, JB);
+      return YB && (YB.ray = LB(BB, TB, dB, yB.b.Identity(), lB || null)), YB
     }
 
-    function yJ(JJ, cJ, ZJ, FJ, eJ) {
-      const XJ = QJ(JJ, (ZJ => (JJ._pickWithRayInverseMatrix || (JJ._pickWithRayInverseMatrix = UJ.b.Identity()), ZJ.invertToRef(JJ._pickWithRayInverseMatrix), JJ._cachedRayForTransform || (JJ._cachedRayForTransform = hJ.Zero()), hJ.TransformToRef(cJ, JJ._pickWithRayInverseMatrix, JJ._cachedRayForTransform), JJ._cachedRayForTransform)), ZJ, FJ, !1, eJ);
-      return XJ && (XJ.ray = cJ), XJ
+    function MB(BB, TB, dB, VB, pB) {
+      const lB = NB(BB, (dB => (BB._pickWithRayInverseMatrix || (BB._pickWithRayInverseMatrix = yB.b.Identity()), dB.invertToRef(BB._pickWithRayInverseMatrix), BB._cachedRayForTransform || (BB._cachedRayForTransform = kB.Zero()), kB.TransformToRef(TB, BB._pickWithRayInverseMatrix, BB._cachedRayForTransform), BB._cachedRayForTransform)), dB, VB, !1, pB);
+      return lB && (lB.ray = TB), lB
     }
 
-    function SJ(JJ, cJ, ZJ, FJ, UJ, eJ) {
-      return EJ(JJ, (FJ => DJ(JJ, cJ, ZJ, FJ, UJ || null)), FJ, eJ)
+    function zB(BB, TB, dB, VB, yB, pB) {
+      return tB(BB, (VB => LB(BB, TB, dB, VB, yB || null)), VB, pB)
     }
 
-    function IJ(JJ, cJ, ZJ, FJ) {
-      return EJ(JJ, (ZJ => (JJ._pickWithRayInverseMatrix || (JJ._pickWithRayInverseMatrix = UJ.b.Identity()), ZJ.invertToRef(JJ._pickWithRayInverseMatrix), JJ._cachedRayForTransform || (JJ._cachedRayForTransform = hJ.Zero()), hJ.TransformToRef(cJ, JJ._pickWithRayInverseMatrix, JJ._cachedRayForTransform), JJ._cachedRayForTransform)), ZJ, FJ)
+    function wB(BB, TB, dB, VB) {
+      return tB(BB, (dB => (BB._pickWithRayInverseMatrix || (BB._pickWithRayInverseMatrix = yB.b.Identity()), dB.invertToRef(BB._pickWithRayInverseMatrix), BB._cachedRayForTransform || (BB._cachedRayForTransform = kB.Zero()), kB.TransformToRef(TB, BB._pickWithRayInverseMatrix, BB._cachedRayForTransform), BB._cachedRayForTransform)), dB, VB)
     }
 
-    function MJ(JJ, cJ) {
-      let ZJ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 100,
-        FJ = arguments.length > 3 ? arguments[3] : void 0,
-        eJ = arguments.length > 4 ? arguments[4] : void 0;
-      FJ || (FJ = JJ.getWorldMatrix()), cJ.length = ZJ, eJ ? cJ.origin.rZJ(eJ) : cJ.origin.rZJ(JJ.position);
-      const XJ = UJ.h.Pn[2];
-      XJ.set(0, 0, JJ._scene.useRightHandedSystem ? -1 : 1);
-      const AJ = UJ.h.Pn[3];
-      return UJ.j.TransformNormalToRef(XJ, FJ, AJ), UJ.j.NormalizeToRef(AJ, cJ.direction), cJ
+    function UB(BB, TB) {
+      let dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 100,
+        VB = arguments.length > 3 ? arguments[3] : void 0,
+        pB = arguments.length > 4 ? arguments[4] : void 0;
+      VB || (VB = BB.getWorldMatrix()), TB.length = dB, pB ? TB.origin.bdB(pB) : TB.origin.bdB(BB.position);
+      const lB = yB.j.RD[2];
+      lB.set(0, 0, BB._scene.useRightHandedSystem ? -1 : 1);
+      const JB = yB.j.RD[3];
+      return yB.p.TransformNormalToRef(lB, VB, JB), yB.p.NormalizeToRef(JB, TB.direction), TB
     }
 
-    function bJ(JJ, cJ) {
-      cJ && (cJ.prototype.getForwardRay = function() {
-        let JJ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 100,
-          cJ = arguments.length > 1 ? arguments[1] : void 0,
-          ZJ = arguments.length > 2 ? arguments[2] : void 0;
-        return MJ(this, new hJ(UJ.j.Zero(), UJ.j.Zero(), JJ), JJ, cJ, ZJ)
-      }, cJ.prototype.getForwardRayToRef = function(JJ) {
-        return MJ(this, JJ, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 100, arguments.length > 2 ? arguments[2] : void 0, arguments.length > 3 ? arguments[3] : void 0)
-      }), JJ && (jJ.c._IsPickingAvailable = !0, JJ.prototype.createPickingRay = function(JJ, cJ, ZJ, FJ) {
-        return DJ(this, JJ, cJ, ZJ, FJ, arguments.length > 4 && void 0 !== arguments[4] && arguments[4])
+    function FB(BB, TB) {
+      TB && (TB.prototype.getForwardRay = function() {
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 100,
+          TB = arguments.length > 1 ? arguments[1] : void 0,
+          dB = arguments.length > 2 ? arguments[2] : void 0;
+        return UB(this, new kB(yB.p.Zero(), yB.p.Zero(), BB), BB, TB, dB)
+      }, TB.prototype.getForwardRayToRef = function(BB) {
+        return UB(this, BB, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 100, arguments.length > 2 ? arguments[2] : void 0, arguments.length > 3 ? arguments[3] : void 0)
+      }), BB && (gB.c._IsPickingAvailable = !0, BB.prototype.createPickingRay = function(BB, TB, dB, VB) {
+        return LB(this, BB, TB, dB, VB, arguments.length > 4 && void 0 !== arguments[4] && arguments[4])
       })
     }
-    hJ._TmpVector3 = (0, eJ.e)(6, UJ.j.Zero), hJ._RayDistant = hJ.Zero(), hJ._Smallnum = 1e-8, hJ._Rayl = 1e9
+    kB._TmpVector3 = (0, pB.b)(6, yB.p.Zero), kB._RayDistant = kB.Zero(), kB._Smallnum = 1e-8, kB._Rayl = 1e9
   },
-  40289: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      b: () => eJ.y
+  40287: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => pB.v
     });
-    var FJ = ZJ(38874),
-      UJ = ZJ(38986),
-      eJ = ZJ(40294);
-    let XJ = !1;
-    XJ || (XJ = !0, (0, eJ.d)(FJ.e, UJ.e), FJ.e.prototype.createPickingRayToRef = function(JJ, cJ, ZJ, FJ, UJ) {
-      let XJ = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-        AJ = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
-      return (0, eJ.m)(this, JJ, cJ, ZJ, FJ, UJ, XJ, AJ)
-    }, FJ.e.prototype.createPickingRayInCameraSpace = function(JJ, cJ, ZJ) {
-      return (0, eJ.l)(this, JJ, cJ, ZJ)
-    }, FJ.e.prototype.createPickingRayInCameraSpaceToRef = function(JJ, cJ, ZJ, FJ) {
-      return (0, eJ.h)(this, JJ, cJ, ZJ, FJ)
-    }, FJ.e.prototype.pickWithBoundingInfo = function(JJ, cJ, ZJ, FJ, UJ) {
-      return (0, eJ.s)(this, JJ, cJ, ZJ, FJ, UJ)
-    }, FJ.e.prototype.PD = function(JJ, cJ, ZJ, FJ, UJ, XJ) {
-      let AJ = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
-      return (0, eJ.v)(this, JJ, cJ, ZJ, FJ, UJ, XJ, AJ)
-    }, FJ.e.prototype.pickWithRay = function(JJ, cJ, ZJ, FJ) {
-      return (0, eJ.t)(this, JJ, cJ, ZJ, FJ)
-    }, FJ.e.prototype.multiPick = function(JJ, cJ, ZJ, FJ, UJ) {
-      return (0, eJ.o)(this, JJ, cJ, ZJ, FJ, UJ)
-    }, FJ.e.prototype.multiPickWithRay = function(JJ, cJ, ZJ) {
-      return (0, eJ.n)(this, JJ, cJ, ZJ)
+    var VB = dB(38843),
+      yB = dB(38974),
+      pB = dB(40293);
+    let lB = !1;
+    lB || (lB = !0, (0, pB.b)(VB.g, yB.b), VB.g.prototype.createPickingRayToRef = function(BB, TB, dB, VB, yB) {
+      let lB = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+        JB = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
+      return (0, pB.i)(this, BB, TB, dB, VB, yB, lB, JB)
+    }, VB.g.prototype.createPickingRayInCameraSpace = function(BB, TB, dB) {
+      return (0, pB.h)(this, BB, TB, dB)
+    }, VB.g.prototype.createPickingRayInCameraSpaceToRef = function(BB, TB, dB, VB) {
+      return (0, pB.d)(this, BB, TB, dB, VB)
+    }, VB.g.prototype.pickWithBoundingInfo = function(BB, TB, dB, VB, yB) {
+      return (0, pB.p)(this, BB, TB, dB, VB, yB)
+    }, VB.g.prototype.dO = function(BB, TB, dB, VB, yB, lB) {
+      let JB = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
+      return (0, pB.u)(this, BB, TB, dB, VB, yB, lB, JB)
+    }, VB.g.prototype.pickWithRay = function(BB, TB, dB, VB) {
+      return (0, pB.q)(this, BB, TB, dB, VB)
+    }, VB.g.prototype.multiPick = function(BB, TB, dB, VB, yB) {
+      return (0, pB.l)(this, BB, TB, dB, VB, yB)
+    }, VB.g.prototype.multiPickWithRay = function(BB, TB, dB) {
+      return (0, pB.k)(this, BB, TB, dB)
     })
   },
-  40302: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => YJ
+  40295: (BB, TB, dB) => {
+    dB.d(TB, {
+      e: () => oB
     });
-    var FJ = ZJ(38800),
-      UJ = ZJ(38806),
-      eJ = ZJ(36174),
-      XJ = ZJ(39023),
-      AJ = ZJ(40308),
-      qJ = ZJ(38989),
-      jJ = ZJ(36216);
-    let YJ = (() => {
-        var JJ;
-        let cJ, ZJ, qJ, jJ, YJ, hJ, DJ, sJ, nJ = AJ.e,
-          GJ = [],
-          fJ = [],
-          xJ = [],
-          rJ = [],
-          vJ = [],
-          mJ = [],
-          QJ = [],
-          EJ = [],
-          VJ = [],
-          KJ = [],
-          yJ = [],
-          SJ = [],
-          IJ = [];
-        return JJ = class extends nJ {
+    var VB = dB(38745),
+      yB = dB(38750),
+      pB = dB(36126),
+      lB = dB(39016),
+      JB = dB(40298),
+      YB = dB(38980),
+      gB = dB(36166);
+    let oB = (() => {
+        var BB;
+        let TB, dB, YB, gB, oB, kB, LB, OB, DB = JB.d,
+          uB = [],
+          HB = [],
+          EB = [],
+          vB = [],
+          mB = [],
+          iB = [],
+          NB = [],
+          tB = [],
+          fB = [],
+          sB = [],
+          MB = [],
+          zB = [],
+          wB = [];
+        return BB = class extends DB {
           get shadowFrustumSize() {
             return this._shadowFrustumSize
           }
-          set shadowFrustumSize(JJ) {
-            this._shadowFrustumSize = JJ, this.forceProjectionMatrixCompute()
+          set shadowFrustumSize(BB) {
+            this._shadowFrustumSize = BB, this.forceProjectionMatrixCompute()
           }
           get shadowOrthoScale() {
             return this._shadowOrthoScale
           }
-          set shadowOrthoScale(JJ) {
-            this._shadowOrthoScale = JJ, this.forceProjectionMatrixCompute()
+          set shadowOrthoScale(BB) {
+            this._shadowOrthoScale = BB, this.forceProjectionMatrixCompute()
           }
           get orthoLeft() {
             return this._orthoLeft
           }
-          set orthoLeft(JJ) {
-            this._orthoLeft = JJ
+          set orthoLeft(BB) {
+            this._orthoLeft = BB
           }
           get orthoRight() {
             return this._orthoRight
           }
-          set orthoRight(JJ) {
-            this._orthoRight = JJ
+          set orthoRight(BB) {
+            this._orthoRight = BB
           }
           get orthoTop() {
             return this._orthoTop
           }
-          set orthoTop(JJ) {
-            this._orthoTop = JJ
+          set orthoTop(BB) {
+            this._orthoTop = BB
           }
           get orthoBottom() {
             return this._orthoBottom
           }
-          set orthoBottom(JJ) {
-            this._orthoBottom = JJ
+          set orthoBottom(BB) {
+            this._orthoBottom = BB
           }
-          constructor(JJ, cJ, ZJ, UJ) {
-            super(JJ, ZJ, UJ), this._shadowFrustumSize = ((0, FJ.e)(this, GJ), 0), this._shadowOrthoScale = .1, this.autoUpdateExtends = (0, FJ.e)(this, fJ, !0), this.autoCalcShadowZBounds = ((0, FJ.e)(this, xJ), (0, FJ.e)(this, rJ, !1)), this._orthoLeft = ((0, FJ.e)(this, vJ), (0, FJ.e)(this, mJ, Number.MAX_VALUE)), this._orthoRight = ((0, FJ.e)(this, QJ), (0, FJ.e)(this, EJ, Number.MIN_VALUE)), this._orthoTop = ((0, FJ.e)(this, VJ), (0, FJ.e)(this, KJ, Number.MIN_VALUE)), this._orthoBottom = ((0, FJ.e)(this, yJ), (0, FJ.e)(this, SJ, Number.MAX_VALUE)), (0, FJ.e)(this, IJ), this.position = cJ.scale(-1), this.direction = cJ
+          constructor(BB, TB, dB, yB) {
+            super(BB, dB, yB), this._shadowFrustumSize = ((0, VB.h)(this, uB), 0), this._shadowOrthoScale = .1, this.autoUpdateExtends = (0, VB.h)(this, HB, !0), this.autoCalcShadowZBounds = ((0, VB.h)(this, EB), (0, VB.h)(this, vB, !1)), this._orthoLeft = ((0, VB.h)(this, mB), (0, VB.h)(this, iB, Number.MAX_VALUE)), this._orthoRight = ((0, VB.h)(this, NB), (0, VB.h)(this, tB, Number.MIN_VALUE)), this._orthoTop = ((0, VB.h)(this, fB), (0, VB.h)(this, sB, Number.MIN_VALUE)), this._orthoBottom = ((0, VB.h)(this, MB), (0, VB.h)(this, zB, Number.MAX_VALUE)), (0, VB.h)(this, wB), this.position = TB.scale(-1), this.direction = TB
           }
           getClassName() {
             return "DirectionalLight"
           }
           getTypeID() {
-            return XJ.b.LIGHTTYPEID_DIRECTIONALLIGHT
+            return lB.c.LIGHTTYPEID_DIRECTIONALLIGHT
           }
-          _setDefaultShadowProjectionMatrix(JJ, cJ, ZJ) {
-            this.shadowFrustumSize > 0 ? this._setDefaultFixedFrustumShadowProjectionMatrix(JJ) : this._setDefaultAutoExtendShadowProjectionMatrix(JJ, cJ, ZJ)
+          _setDefaultShadowProjectionMatrix(BB, TB, dB) {
+            this.shadowFrustumSize > 0 ? this._setDefaultFixedFrustumShadowProjectionMatrix(BB) : this._setDefaultAutoExtendShadowProjectionMatrix(BB, TB, dB)
           }
-          _setDefaultFixedFrustumShadowProjectionMatrix(JJ) {
-            const cJ = this.Qy().activeCamera;
-            eJ.b.OrthoLHToRef(this.shadowFrustumSize, this.shadowFrustumSize, void 0 !== this.shadowMinZ ? this.shadowMinZ : cJ ? cJ.minZ : 0, void 0 !== this.shadowMaxZ ? this.shadowMaxZ : cJ ? cJ.maxZ : 1e4, JJ, this.Qy().gn().isNDCHalfZRange)
+          _setDefaultFixedFrustumShadowProjectionMatrix(BB) {
+            const TB = this.jU().activeCamera;
+            pB.b.OrthoLHToRef(this.shadowFrustumSize, this.shadowFrustumSize, void 0 !== this.shadowMinZ ? this.shadowMinZ : TB ? TB.minZ : 0, void 0 !== this.shadowMaxZ ? this.shadowMaxZ : TB ? TB.maxZ : 1e4, BB, this.jU().PD().isNDCHalfZRange)
           }
-          _setDefaultAutoExtendShadowProjectionMatrix(JJ, cJ, ZJ) {
-            const FJ = this.Qy().activeCamera;
+          _setDefaultAutoExtendShadowProjectionMatrix(BB, TB, dB) {
+            const VB = this.jU().activeCamera;
             if (this.autoUpdateExtends || this._orthoLeft === Number.MAX_VALUE) {
-              const JJ = eJ.j.Zero();
+              const BB = pB.p.Zero();
               this._orthoLeft = Number.MAX_VALUE, this._orthoRight = -Number.MAX_VALUE, this._orthoTop = -Number.MAX_VALUE, this._orthoBottom = Number.MAX_VALUE;
-              let FJ = Number.MAX_VALUE,
-                UJ = -Number.MAX_VALUE;
-              for (let XJ = 0; XJ < ZJ.length; XJ++) {
-                const AJ = ZJ[XJ];
-                if (!AJ) continue;
-                const qJ = AJ.rM().boundingBox;
-                for (let ZJ = 0; ZJ < qJ.vectorsWorld.length; ZJ++) eJ.j.TransformCoordinatesToRef(qJ.vectorsWorld[ZJ], cJ, JJ), JJ.x < this._orthoLeft && (this._orthoLeft = JJ.x), JJ.y < this._orthoBottom && (this._orthoBottom = JJ.y), JJ.x > this._orthoRight && (this._orthoRight = JJ.x), JJ.y > this._orthoTop && (this._orthoTop = JJ.y), this.autoCalcShadowZBounds && (JJ.z < FJ && (FJ = JJ.z), JJ.z > UJ && (UJ = JJ.z))
+              let VB = Number.MAX_VALUE,
+                yB = -Number.MAX_VALUE;
+              for (let lB = 0; lB < dB.length; lB++) {
+                const JB = dB[lB];
+                if (!JB) continue;
+                const YB = JB.IK().boundingBox;
+                for (let dB = 0; dB < YB.vectorsWorld.length; dB++) pB.p.TransformCoordinatesToRef(YB.vectorsWorld[dB], TB, BB), BB.x < this._orthoLeft && (this._orthoLeft = BB.x), BB.y < this._orthoBottom && (this._orthoBottom = BB.y), BB.x > this._orthoRight && (this._orthoRight = BB.x), BB.y > this._orthoTop && (this._orthoTop = BB.y), this.autoCalcShadowZBounds && (BB.z < VB && (VB = BB.z), BB.z > yB && (yB = BB.z))
               }
-              this.autoCalcShadowZBounds && (this._shadowMinZ = FJ, this._shadowMaxZ = UJ)
+              this.autoCalcShadowZBounds && (this._shadowMinZ = VB, this._shadowMaxZ = yB)
             }
-            const UJ = this._orthoRight - this._orthoLeft,
-              XJ = this._orthoTop - this._orthoBottom,
-              AJ = void 0 !== this.shadowMinZ ? this.shadowMinZ : FJ?.minZ || 0,
-              qJ = void 0 !== this.shadowMaxZ ? this.shadowMaxZ : FJ?.maxZ || 1e4,
-              jJ = this.Qy().gn().LZJ;
-            eJ.b.OrthoOffCenterLHToRef(this._orthoLeft - UJ * this.shadowOrthoScale, this._orthoRight + UJ * this.shadowOrthoScale, this._orthoBottom - XJ * this.shadowOrthoScale, this._orthoTop + XJ * this.shadowOrthoScale, jJ ? qJ : AJ, jJ ? AJ : qJ, JJ, this.Qy().gn().isNDCHalfZRange)
+            const yB = this._orthoRight - this._orthoLeft,
+              lB = this._orthoTop - this._orthoBottom,
+              JB = void 0 !== this.shadowMinZ ? this.shadowMinZ : VB?.minZ || 0,
+              YB = void 0 !== this.shadowMaxZ ? this.shadowMaxZ : VB?.maxZ || 1e4,
+              gB = this.jU().PD().fVB;
+            pB.b.OrthoOffCenterLHToRef(this._orthoLeft - yB * this.shadowOrthoScale, this._orthoRight + yB * this.shadowOrthoScale, this._orthoBottom - lB * this.shadowOrthoScale, this._orthoTop + lB * this.shadowOrthoScale, gB ? YB : JB, gB ? JB : YB, BB, this.jU().PD().isNDCHalfZRange)
           }
           _buildUniformLayout() {
             this._uniformBuffer.addUniform("vLightData", 4), this._uniformBuffer.addUniform("vLightDiffuse", 4), this._uniformBuffer.addUniform("vLightSpecular", 4), this._uniformBuffer.addUniform("shadowsInfo", 3), this._uniformBuffer.addUniform("depthValues", 2), this._uniformBuffer.create()
           }
-          transferToEffect(JJ, cJ) {
-            return this.computeTransformedInformation() ? (this._uniformBuffer.updateFloat4("vLightData", this.transformedDirection.x, this.transformedDirection.y, this.transformedDirection.z, 1, cJ), this) : (this._uniformBuffer.updateFloat4("vLightData", this.direction.x, this.direction.y, this.direction.z, 1, cJ), this)
+          transferToEffect(BB, TB) {
+            return this.computeTransformedInformation() ? (this._uniformBuffer.updateFloat4("vLightData", this.transformedDirection.x, this.transformedDirection.y, this.transformedDirection.z, 1, TB), this) : (this._uniformBuffer.updateFloat4("vLightData", this.direction.x, this.direction.y, this.direction.z, 1, TB), this)
           }
-          transferToNodeMaterialEffect(JJ, cJ) {
-            return this.computeTransformedInformation() ? (JJ.setFloat3(cJ, this.transformedDirection.x, this.transformedDirection.y, this.transformedDirection.z), this) : (JJ.setFloat3(cJ, this.direction.x, this.direction.y, this.direction.z), this)
+          transferToNodeMaterialEffect(BB, TB) {
+            return this.computeTransformedInformation() ? (BB.setFloat3(TB, this.transformedDirection.x, this.transformedDirection.y, this.transformedDirection.z), this) : (BB.setFloat3(TB, this.direction.x, this.direction.y, this.direction.z), this)
           }
-          getDepthMinZ(JJ) {
-            const cJ = this._scene.gn();
-            return !cJ.LZJ && cJ.isNDCHalfZRange ? 0 : 1
+          getDepthMinZ(BB) {
+            const TB = this._scene.PD();
+            return !TB.fVB && TB.isNDCHalfZRange ? 0 : 1
           }
-          getDepthMaxZ(JJ) {
-            const cJ = this._scene.gn();
-            return cJ.LZJ && cJ.isNDCHalfZRange ? 0 : 1
+          getDepthMaxZ(BB) {
+            const TB = this._scene.PD();
+            return TB.fVB && TB.isNDCHalfZRange ? 0 : 1
           }
-          prepareLightSpecificDefines(JJ, cJ) {
-            JJ["DIRLIGHT" + cJ] = !0
+          prepareLightSpecificDefines(BB, TB) {
+            BB["DIRLIGHT" + TB] = !0
           }
         }, (() => {
-          const eJ = "function" === typeof Symbol && Symbol.metadata ? Object.create(nJ[Symbol.metadata] ?? null) : void 0;
-          cJ = [(0, UJ.F)()], ZJ = [(0, UJ.F)()], qJ = [(0, UJ.F)()], jJ = [(0, UJ.F)()], YJ = [(0, UJ.F)("orthoLeft")], hJ = [(0, UJ.F)("orthoRight")], DJ = [(0, UJ.F)("orthoTop")], sJ = [(0, UJ.F)("orthoBottom")], (0, FJ.d)(JJ, null, cJ, {
+          const pB = "function" === typeof Symbol && Symbol.metadata ? Object.create(DB[Symbol.metadata] ?? null) : void 0;
+          TB = [(0, yB.W)()], dB = [(0, yB.W)()], YB = [(0, yB.W)()], gB = [(0, yB.W)()], oB = [(0, yB.W)("orthoLeft")], kB = [(0, yB.W)("orthoRight")], LB = [(0, yB.W)("orthoTop")], OB = [(0, yB.W)("orthoBottom")], (0, VB.g)(BB, null, TB, {
             kind: "getter",
             name: "shadowFrustumSize",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "shadowFrustumSize" in JJ,
-              get: JJ => JJ.shadowFrustumSize
+              has: BB => "shadowFrustumSize" in BB,
+              get: BB => BB.shadowFrustumSize
             },
-            metadata: eJ
-          }, null, GJ), (0, FJ.d)(JJ, null, ZJ, {
+            metadata: pB
+          }, null, uB), (0, VB.g)(BB, null, dB, {
             kind: "getter",
             name: "shadowOrthoScale",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "shadowOrthoScale" in JJ,
-              get: JJ => JJ.shadowOrthoScale
+              has: BB => "shadowOrthoScale" in BB,
+              get: BB => BB.shadowOrthoScale
             },
-            metadata: eJ
-          }, null, GJ), (0, FJ.d)(null, null, qJ, {
+            metadata: pB
+          }, null, uB), (0, VB.g)(null, null, YB, {
             kind: "field",
             name: "autoUpdateExtends",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "autoUpdateExtends" in JJ,
-              get: JJ => JJ.autoUpdateExtends,
-              set: (JJ, cJ) => {
-                JJ.autoUpdateExtends = cJ
+              has: BB => "autoUpdateExtends" in BB,
+              get: BB => BB.autoUpdateExtends,
+              set: (BB, TB) => {
+                BB.autoUpdateExtends = TB
               }
             },
-            metadata: eJ
-          }, fJ, xJ), (0, FJ.d)(null, null, jJ, {
+            metadata: pB
+          }, HB, EB), (0, VB.g)(null, null, gB, {
             kind: "field",
             name: "autoCalcShadowZBounds",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "autoCalcShadowZBounds" in JJ,
-              get: JJ => JJ.autoCalcShadowZBounds,
-              set: (JJ, cJ) => {
-                JJ.autoCalcShadowZBounds = cJ
+              has: BB => "autoCalcShadowZBounds" in BB,
+              get: BB => BB.autoCalcShadowZBounds,
+              set: (BB, TB) => {
+                BB.autoCalcShadowZBounds = TB
               }
             },
-            metadata: eJ
-          }, rJ, vJ), (0, FJ.d)(null, null, YJ, {
+            metadata: pB
+          }, vB, mB), (0, VB.g)(null, null, oB, {
             kind: "field",
             name: "_orthoLeft",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "_orthoLeft" in JJ,
-              get: JJ => JJ._orthoLeft,
-              set: (JJ, cJ) => {
-                JJ._orthoLeft = cJ
+              has: BB => "_orthoLeft" in BB,
+              get: BB => BB._orthoLeft,
+              set: (BB, TB) => {
+                BB._orthoLeft = TB
               }
             },
-            metadata: eJ
-          }, mJ, QJ), (0, FJ.d)(null, null, hJ, {
+            metadata: pB
+          }, iB, NB), (0, VB.g)(null, null, kB, {
             kind: "field",
             name: "_orthoRight",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "_orthoRight" in JJ,
-              get: JJ => JJ._orthoRight,
-              set: (JJ, cJ) => {
-                JJ._orthoRight = cJ
+              has: BB => "_orthoRight" in BB,
+              get: BB => BB._orthoRight,
+              set: (BB, TB) => {
+                BB._orthoRight = TB
               }
             },
-            metadata: eJ
-          }, EJ, VJ), (0, FJ.d)(null, null, DJ, {
+            metadata: pB
+          }, tB, fB), (0, VB.g)(null, null, LB, {
             kind: "field",
             name: "_orthoTop",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "_orthoTop" in JJ,
-              get: JJ => JJ._orthoTop,
-              set: (JJ, cJ) => {
-                JJ._orthoTop = cJ
+              has: BB => "_orthoTop" in BB,
+              get: BB => BB._orthoTop,
+              set: (BB, TB) => {
+                BB._orthoTop = TB
               }
             },
-            metadata: eJ
-          }, KJ, yJ), (0, FJ.d)(null, null, sJ, {
+            metadata: pB
+          }, sB, MB), (0, VB.g)(null, null, OB, {
             kind: "field",
             name: "_orthoBottom",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "_orthoBottom" in JJ,
-              get: JJ => JJ._orthoBottom,
-              set: (JJ, cJ) => {
-                JJ._orthoBottom = cJ
+              has: BB => "_orthoBottom" in BB,
+              get: BB => BB._orthoBottom,
+              set: (BB, TB) => {
+                BB._orthoBottom = TB
               }
             },
-            metadata: eJ
-          }, SJ, IJ), eJ && Object.defineProperty(JJ, Symbol.metadata, {
+            metadata: pB
+          }, zB, wB), pB && Object.defineProperty(BB, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: eJ
+            value: pB
           })
-        })(), JJ
+        })(), BB
       })(),
-      hJ = !1;
-    hJ || (hJ = !0, qJ.b.AddNodeConstructor("Light_Type_1", ((JJ, cJ) => () => new YJ(JJ, eJ.j.Zero(), cJ))), (0, jJ.f)("BABYLON.DirectionalLight", YJ))
+      kB = !1;
+    kB || (kB = !0, YB.e.AddNodeConstructor("Light_Type_1", ((BB, TB) => () => new oB(BB, pB.p.Zero(), TB))), (0, gB.g)("BABYLON.DirectionalLight", oB))
   },
-  40322: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      e: () => ic
+  40308: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => GT
     });
-    var FJ = ZJ(37683),
-      UJ = ZJ(36200),
-      eJ = ZJ(36174),
-      XJ = ZJ(38918),
-      AJ = ZJ(40325),
-      qJ = ZJ(36192),
-      jJ = ZJ(39037),
-      YJ = ZJ(36231),
-      hJ = ZJ(37686),
-      DJ = ZJ(37658),
-      sJ = ZJ(36207);
-    class nJ {
+    var VB = dB(37681),
+      yB = dB(36150),
+      pB = dB(36126),
+      lB = dB(38897),
+      JB = dB(40310),
+      YB = dB(36148),
+      gB = dB(39030),
+      oB = dB(36183),
+      kB = dB(37690),
+      LB = dB(37646),
+      OB = dB(36157);
+    class DB {
       constructor() {
-        this.direction1 = new eJ.j(0, 1, 0), this.direction2 = new eJ.j(0, 1, 0)
+        this.direction1 = new pB.p(0, 1, 0), this.direction2 = new pB.p(0, 1, 0)
       }
-      startDirectionFunction(JJ, cJ, ZJ, FJ) {
-        const UJ = (0, sJ.RandomRange)(this.direction1.x, this.direction2.x),
-          XJ = (0, sJ.RandomRange)(this.direction1.y, this.direction2.y),
-          AJ = (0, sJ.RandomRange)(this.direction1.z, this.direction2.z);
-        FJ ? cJ.K9(UJ, XJ, AJ) : eJ.j.TransformNormalFromFloatsToRef(UJ, XJ, AJ, JJ, cJ)
+      startDirectionFunction(BB, TB, dB, VB) {
+        const yB = (0, OB.RandomRange)(this.direction1.x, this.direction2.x),
+          lB = (0, OB.RandomRange)(this.direction1.y, this.direction2.y),
+          JB = (0, OB.RandomRange)(this.direction1.z, this.direction2.z);
+        VB ? TB.YBB(yB, lB, JB) : pB.p.TransformNormalFromFloatsToRef(yB, lB, JB, BB, TB)
       }
-      startPositionFunction(JJ, cJ, ZJ, FJ) {
-        FJ ? cJ.K9(0, 0, 0) : eJ.j.TransformCoordinatesFromFloatsToRef(0, 0, 0, JJ, cJ)
+      startPositionFunction(BB, TB, dB, VB) {
+        VB ? TB.YBB(0, 0, 0) : pB.p.TransformCoordinatesFromFloatsToRef(0, 0, 0, BB, TB)
       }
       clone() {
-        const JJ = new nJ;
-        return DJ.e.DeepCopy(this, JJ), JJ
+        const BB = new DB;
+        return LB.b.DeepCopy(this, BB), BB
       }
-      applyToShader(JJ) {
-        JJ.setVector3("direction1", this.direction1), JJ.setVector3("direction2", this.direction2)
+      applyToShader(BB) {
+        BB.setVector3("direction1", this.direction1), BB.setVector3("direction2", this.direction2)
       }
-      buildUniformLayout(JJ) {
-        JJ.addUniform("direction1", 3), JJ.addUniform("direction2", 3)
+      buildUniformLayout(BB) {
+        BB.addUniform("direction1", 3), BB.addUniform("direction2", 3)
       }
       getEffectDefines() {
         return "#define POINTEMITTER"
@@ -948,46 +948,46 @@ export const modules = {
         return "PointParticleEmitter"
       }
       serialize() {
-        const JJ = {};
-        return JJ.type = this.getClassName(), JJ.direction1 = this.direction1.JFJ(), JJ.direction2 = this.direction2.JFJ(), JJ
+        const BB = {};
+        return BB.type = this.getClassName(), BB.direction1 = this.direction1.FVB(), BB.direction2 = this.direction2.FVB(), BB
       }
-      parse(JJ) {
-        eJ.j.FromArrayToRef(JJ.direction1, 0, this.direction1), eJ.j.FromArrayToRef(JJ.direction2, 0, this.direction2)
+      parse(BB) {
+        pB.p.FromArrayToRef(BB.direction1, 0, this.direction1), pB.p.FromArrayToRef(BB.direction2, 0, this.direction2)
       }
     }
-    class GJ {
+    class uB {
       constructor() {
-        let JJ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          ZJ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        this.radius = JJ, this.radiusRange = cJ, this.directionRandomizer = ZJ
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        this.radius = BB, this.radiusRange = TB, this.directionRandomizer = dB
       }
-      startDirectionFunction(JJ, cJ, ZJ, FJ) {
-        const UJ = ZJ.position.subtract(JJ.getTranslation()).normalize(),
-          XJ = (0, sJ.RandomRange)(0, this.directionRandomizer),
-          AJ = (0, sJ.RandomRange)(0, this.directionRandomizer),
-          qJ = (0, sJ.RandomRange)(0, this.directionRandomizer);
-        UJ.x += XJ, UJ.y += AJ, UJ.z += qJ, UJ.normalize(), FJ ? cJ.rZJ(UJ) : eJ.j.TransformNormalFromFloatsToRef(UJ.x, UJ.y, UJ.z, JJ, cJ)
+      startDirectionFunction(BB, TB, dB, VB) {
+        const yB = dB.position.subtract(BB.getTranslation()).normalize(),
+          lB = (0, OB.RandomRange)(0, this.directionRandomizer),
+          JB = (0, OB.RandomRange)(0, this.directionRandomizer),
+          YB = (0, OB.RandomRange)(0, this.directionRandomizer);
+        yB.x += lB, yB.y += JB, yB.z += YB, yB.normalize(), VB ? TB.bdB(yB) : pB.p.TransformNormalFromFloatsToRef(yB.x, yB.y, yB.z, BB, TB)
       }
-      startPositionFunction(JJ, cJ, ZJ, FJ) {
-        const UJ = this.radius - (0, sJ.RandomRange)(0, this.radius * this.radiusRange),
-          XJ = (0, sJ.RandomRange)(0, 1),
-          AJ = (0, sJ.RandomRange)(0, 2 * Math.PI),
-          qJ = Math.acos(2 * XJ - 1),
-          jJ = UJ * Math.cos(AJ) * Math.sin(qJ),
-          YJ = UJ * Math.cos(qJ),
-          hJ = UJ * Math.sin(AJ) * Math.sin(qJ);
-        FJ ? cJ.K9(jJ, Math.abs(YJ), hJ) : eJ.j.TransformCoordinatesFromFloatsToRef(jJ, Math.abs(YJ), hJ, JJ, cJ)
+      startPositionFunction(BB, TB, dB, VB) {
+        const yB = this.radius - (0, OB.RandomRange)(0, this.radius * this.radiusRange),
+          lB = (0, OB.RandomRange)(0, 1),
+          JB = (0, OB.RandomRange)(0, 2 * Math.PI),
+          YB = Math.acos(2 * lB - 1),
+          gB = yB * Math.cos(JB) * Math.sin(YB),
+          oB = yB * Math.cos(YB),
+          kB = yB * Math.sin(JB) * Math.sin(YB);
+        VB ? TB.YBB(gB, Math.abs(oB), kB) : pB.p.TransformCoordinatesFromFloatsToRef(gB, Math.abs(oB), kB, BB, TB)
       }
       clone() {
-        const JJ = new GJ(this.radius, this.directionRandomizer);
-        return DJ.e.DeepCopy(this, JJ), JJ
+        const BB = new uB(this.radius, this.directionRandomizer);
+        return LB.b.DeepCopy(this, BB), BB
       }
-      applyToShader(JJ) {
-        JJ.setFloat("radius", this.radius), JJ.setFloat("radiusRange", this.radiusRange), JJ.setFloat("directionRandomizer", this.directionRandomizer)
+      applyToShader(BB) {
+        BB.setFloat("radius", this.radius), BB.setFloat("radiusRange", this.radiusRange), BB.setFloat("directionRandomizer", this.directionRandomizer)
       }
-      buildUniformLayout(JJ) {
-        JJ.addUniform("radius", 1), JJ.addUniform("radiusRange", 1), JJ.addUniform("directionRandomizer", 1)
+      buildUniformLayout(BB) {
+        BB.addUniform("radius", 1), BB.addUniform("radiusRange", 1), BB.addUniform("directionRandomizer", 1)
       }
       getEffectDefines() {
         return "#define HEMISPHERICEMITTER"
@@ -996,46 +996,46 @@ export const modules = {
         return "HemisphericParticleEmitter"
       }
       serialize() {
-        const JJ = {};
-        return JJ.type = this.getClassName(), JJ.radius = this.radius, JJ.radiusRange = this.radiusRange, JJ.directionRandomizer = this.directionRandomizer, JJ
+        const BB = {};
+        return BB.type = this.getClassName(), BB.radius = this.radius, BB.radiusRange = this.radiusRange, BB.directionRandomizer = this.directionRandomizer, BB
       }
-      parse(JJ) {
-        this.radius = JJ.radius, this.radiusRange = JJ.radiusRange, this.directionRandomizer = JJ.directionRandomizer
+      parse(BB) {
+        this.radius = BB.radius, this.radiusRange = BB.radiusRange, this.directionRandomizer = BB.directionRandomizer
       }
     }
-    class fJ {
+    class HB {
       constructor() {
-        let JJ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          ZJ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        this.radius = JJ, this.radiusRange = cJ, this.directionRandomizer = ZJ
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        this.radius = BB, this.radiusRange = TB, this.directionRandomizer = dB
       }
-      startDirectionFunction(JJ, cJ, ZJ, FJ) {
-        const UJ = ZJ.position.subtract(JJ.getTranslation()).normalize(),
-          XJ = (0, sJ.RandomRange)(0, this.directionRandomizer),
-          AJ = (0, sJ.RandomRange)(0, this.directionRandomizer),
-          qJ = (0, sJ.RandomRange)(0, this.directionRandomizer);
-        UJ.x += XJ, UJ.y += AJ, UJ.z += qJ, UJ.normalize(), FJ ? cJ.rZJ(UJ) : eJ.j.TransformNormalFromFloatsToRef(UJ.x, UJ.y, UJ.z, JJ, cJ)
+      startDirectionFunction(BB, TB, dB, VB) {
+        const yB = dB.position.subtract(BB.getTranslation()).normalize(),
+          lB = (0, OB.RandomRange)(0, this.directionRandomizer),
+          JB = (0, OB.RandomRange)(0, this.directionRandomizer),
+          YB = (0, OB.RandomRange)(0, this.directionRandomizer);
+        yB.x += lB, yB.y += JB, yB.z += YB, yB.normalize(), VB ? TB.bdB(yB) : pB.p.TransformNormalFromFloatsToRef(yB.x, yB.y, yB.z, BB, TB)
       }
-      startPositionFunction(JJ, cJ, ZJ, FJ) {
-        const UJ = this.radius - (0, sJ.RandomRange)(0, this.radius * this.radiusRange),
-          XJ = (0, sJ.RandomRange)(0, 1),
-          AJ = (0, sJ.RandomRange)(0, 2 * Math.PI),
-          qJ = Math.acos(2 * XJ - 1),
-          jJ = UJ * Math.cos(AJ) * Math.sin(qJ),
-          YJ = UJ * Math.cos(qJ),
-          hJ = UJ * Math.sin(AJ) * Math.sin(qJ);
-        FJ ? cJ.K9(jJ, YJ, hJ) : eJ.j.TransformCoordinatesFromFloatsToRef(jJ, YJ, hJ, JJ, cJ)
+      startPositionFunction(BB, TB, dB, VB) {
+        const yB = this.radius - (0, OB.RandomRange)(0, this.radius * this.radiusRange),
+          lB = (0, OB.RandomRange)(0, 1),
+          JB = (0, OB.RandomRange)(0, 2 * Math.PI),
+          YB = Math.acos(2 * lB - 1),
+          gB = yB * Math.cos(JB) * Math.sin(YB),
+          oB = yB * Math.cos(YB),
+          kB = yB * Math.sin(JB) * Math.sin(YB);
+        VB ? TB.YBB(gB, oB, kB) : pB.p.TransformCoordinatesFromFloatsToRef(gB, oB, kB, BB, TB)
       }
       clone() {
-        const JJ = new fJ(this.radius, this.directionRandomizer);
-        return DJ.e.DeepCopy(this, JJ), JJ
+        const BB = new HB(this.radius, this.directionRandomizer);
+        return LB.b.DeepCopy(this, BB), BB
       }
-      applyToShader(JJ) {
-        JJ.setFloat("radius", this.radius), JJ.setFloat("radiusRange", this.radiusRange), JJ.setFloat("directionRandomizer", this.directionRandomizer)
+      applyToShader(BB) {
+        BB.setFloat("radius", this.radius), BB.setFloat("radiusRange", this.radiusRange), BB.setFloat("directionRandomizer", this.directionRandomizer)
       }
-      buildUniformLayout(JJ) {
-        JJ.addUniform("radius", 1), JJ.addUniform("radiusRange", 1), JJ.addUniform("directionRandomizer", 1)
+      buildUniformLayout(BB) {
+        BB.addUniform("radius", 1), BB.addUniform("radiusRange", 1), BB.addUniform("directionRandomizer", 1)
       }
       getEffectDefines() {
         return "#define SPHEREEMITTER"
@@ -1044,35 +1044,35 @@ export const modules = {
         return "SphereParticleEmitter"
       }
       serialize() {
-        const JJ = {};
-        return JJ.type = this.getClassName(), JJ.radius = this.radius, JJ.radiusRange = this.radiusRange, JJ.directionRandomizer = this.directionRandomizer, JJ
+        const BB = {};
+        return BB.type = this.getClassName(), BB.radius = this.radius, BB.radiusRange = this.radiusRange, BB.directionRandomizer = this.directionRandomizer, BB
       }
-      parse(JJ) {
-        this.radius = JJ.radius, this.radiusRange = JJ.radiusRange, this.directionRandomizer = JJ.directionRandomizer
+      parse(BB) {
+        this.radius = BB.radius, this.radiusRange = BB.radiusRange, this.directionRandomizer = BB.directionRandomizer
       }
     }
-    class xJ extends fJ {
+    class EB extends HB {
       constructor() {
-        let JJ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new eJ.j(0, 1, 0),
-          ZJ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new eJ.j(0, 1, 0);
-        super(JJ), this.direction1 = cJ, this.direction2 = ZJ
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new pB.p(0, 1, 0),
+          dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new pB.p(0, 1, 0);
+        super(BB), this.direction1 = TB, this.direction2 = dB
       }
-      startDirectionFunction(JJ, cJ, ZJ, FJ) {
-        const UJ = (0, sJ.RandomRange)(this.direction1.x, this.direction2.x),
-          XJ = (0, sJ.RandomRange)(this.direction1.y, this.direction2.y),
-          AJ = (0, sJ.RandomRange)(this.direction1.z, this.direction2.z);
-        FJ ? cJ.K9(UJ, XJ, AJ) : eJ.j.TransformNormalFromFloatsToRef(UJ, XJ, AJ, JJ, cJ)
+      startDirectionFunction(BB, TB, dB, VB) {
+        const yB = (0, OB.RandomRange)(this.direction1.x, this.direction2.x),
+          lB = (0, OB.RandomRange)(this.direction1.y, this.direction2.y),
+          JB = (0, OB.RandomRange)(this.direction1.z, this.direction2.z);
+        VB ? TB.YBB(yB, lB, JB) : pB.p.TransformNormalFromFloatsToRef(yB, lB, JB, BB, TB)
       }
       clone() {
-        const JJ = new xJ(this.radius, this.direction1, this.direction2);
-        return DJ.e.DeepCopy(this, JJ), JJ
+        const BB = new EB(this.radius, this.direction1, this.direction2);
+        return LB.b.DeepCopy(this, BB), BB
       }
-      applyToShader(JJ) {
-        JJ.setFloat("radius", this.radius), JJ.setFloat("radiusRange", this.radiusRange), JJ.setVector3("direction1", this.direction1), JJ.setVector3("direction2", this.direction2)
+      applyToShader(BB) {
+        BB.setFloat("radius", this.radius), BB.setFloat("radiusRange", this.radiusRange), BB.setVector3("direction1", this.direction1), BB.setVector3("direction2", this.direction2)
       }
-      buildUniformLayout(JJ) {
-        JJ.addUniform("radius", 1), JJ.addUniform("radiusRange", 1), JJ.addUniform("direction1", 3), JJ.addUniform("direction2", 3)
+      buildUniformLayout(BB) {
+        BB.addUniform("radius", 1), BB.addUniform("radiusRange", 1), BB.addUniform("direction1", 3), BB.addUniform("direction2", 3)
       }
       getEffectDefines() {
         return "#define SPHEREEMITTER\n#define DIRECTEDSPHEREEMITTER"
@@ -1081,103 +1081,103 @@ export const modules = {
         return "SphereDirectedParticleEmitter"
       }
       serialize() {
-        const JJ = super.serialize();
-        return JJ.direction1 = this.direction1.JFJ(), JJ.direction2 = this.direction2.JFJ(), JJ
+        const BB = super.serialize();
+        return BB.direction1 = this.direction1.FVB(), BB.direction2 = this.direction2.FVB(), BB
       }
-      parse(JJ) {
-        super.parse(JJ), eJ.j.FromArrayToRef(JJ.direction1, 0, this.direction1), eJ.j.FromArrayToRef(JJ.direction2, 0, this.direction2)
+      parse(BB) {
+        super.parse(BB), pB.p.FromArrayToRef(BB.direction1, 0, this.direction1), pB.p.FromArrayToRef(BB.direction2, 0, this.direction2)
       }
     }
-    var rJ = ZJ(37651);
-    class vJ {
+    var vB = dB(37643);
+    class mB {
       get radius() {
         return this._radius
       }
-      set radius(JJ) {
-        this._radius = JJ, this._buildHeight()
+      set radius(BB) {
+        this._radius = BB, this._buildHeight()
       }
       get angle() {
         return this._angle
       }
-      set angle(JJ) {
-        this._angle = JJ, this._buildHeight()
+      set angle(BB) {
+        this._angle = BB, this._buildHeight()
       }
       _buildHeight() {
         0 !== this._angle ? this._height = this._radius / Math.tan(this._angle / 2) : this._height = 1
       }
       constructor() {
-        let JJ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI,
-          ZJ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        this.directionRandomizer = ZJ, this.radiusRange = 1, this.heightRange = 1, this.emitFromSpawnPointOnly = !1, this.angle = cJ, this.radius = JJ
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI,
+          dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        this.directionRandomizer = dB, this.radiusRange = 1, this.heightRange = 1, this.emitFromSpawnPointOnly = !1, this.angle = TB, this.radius = BB
       }
-      startDirectionFunction(JJ, cJ, ZJ, FJ) {
-        const UJ = ZJ.position.subtract(JJ.getTranslation()).normalize(),
-          XJ = (0, sJ.RandomRange)(0, this.directionRandomizer),
-          AJ = (0, sJ.RandomRange)(0, this.directionRandomizer),
-          qJ = (0, sJ.RandomRange)(0, this.directionRandomizer);
-        UJ.x += XJ, UJ.y += AJ, UJ.z += qJ, UJ.normalize(), FJ ? cJ.rZJ(UJ) : eJ.j.TransformNormalFromFloatsToRef(UJ.x, UJ.y, UJ.z, JJ, cJ)
+      startDirectionFunction(BB, TB, dB, VB) {
+        const yB = dB.position.subtract(BB.getTranslation()).normalize(),
+          lB = (0, OB.RandomRange)(0, this.directionRandomizer),
+          JB = (0, OB.RandomRange)(0, this.directionRandomizer),
+          YB = (0, OB.RandomRange)(0, this.directionRandomizer);
+        yB.x += lB, yB.y += JB, yB.z += YB, yB.normalize(), VB ? TB.bdB(yB) : pB.p.TransformNormalFromFloatsToRef(yB.x, yB.y, yB.z, BB, TB)
       }
-      startPositionFunction(JJ, cJ, ZJ, FJ) {
-        const UJ = (0, sJ.RandomRange)(0, 2 * Math.PI);
-        let XJ;
-        this.emitFromSpawnPointOnly ? XJ = 1e-4 : (XJ = (0, sJ.RandomRange)(0, this.heightRange), XJ = 1 - XJ * XJ);
-        let AJ = this._radius - (0, sJ.RandomRange)(0, this._radius * this.radiusRange);
-        AJ *= XJ;
-        const qJ = AJ * Math.sin(UJ),
-          jJ = AJ * Math.cos(UJ),
-          YJ = XJ * this._height;
-        if (FJ) return cJ.x = qJ, cJ.y = YJ, void(cJ.z = jJ);
-        eJ.j.TransformCoordinatesFromFloatsToRef(qJ, YJ, jJ, JJ, cJ)
+      startPositionFunction(BB, TB, dB, VB) {
+        const yB = (0, OB.RandomRange)(0, 2 * Math.PI);
+        let lB;
+        this.emitFromSpawnPointOnly ? lB = 1e-4 : (lB = (0, OB.RandomRange)(0, this.heightRange), lB = 1 - lB * lB);
+        let JB = this._radius - (0, OB.RandomRange)(0, this._radius * this.radiusRange);
+        JB *= lB;
+        const YB = JB * Math.sin(yB),
+          gB = JB * Math.cos(yB),
+          oB = lB * this._height;
+        if (VB) return TB.x = YB, TB.y = oB, void(TB.z = gB);
+        pB.p.TransformCoordinatesFromFloatsToRef(YB, oB, gB, BB, TB)
       }
       clone() {
-        const JJ = new vJ(this._radius, this._angle, this.directionRandomizer);
-        return DJ.e.DeepCopy(this, JJ), JJ
+        const BB = new mB(this._radius, this._angle, this.directionRandomizer);
+        return LB.b.DeepCopy(this, BB), BB
       }
-      applyToShader(JJ) {
-        JJ.setFloat2("radius", this._radius, this.radiusRange), JJ.setFloat("coneAngle", this._angle), JJ.setFloat2("height", this._height, this.heightRange), JJ.setFloat("directionRandomizer", this.directionRandomizer)
+      applyToShader(BB) {
+        BB.setFloat2("radius", this._radius, this.radiusRange), BB.setFloat("coneAngle", this._angle), BB.setFloat2("height", this._height, this.heightRange), BB.setFloat("directionRandomizer", this.directionRandomizer)
       }
-      buildUniformLayout(JJ) {
-        JJ.addUniform("radius", 2), JJ.addUniform("coneAngle", 1), JJ.addUniform("height", 2), JJ.addUniform("directionRandomizer", 1)
+      buildUniformLayout(BB) {
+        BB.addUniform("radius", 2), BB.addUniform("coneAngle", 1), BB.addUniform("height", 2), BB.addUniform("directionRandomizer", 1)
       }
       getEffectDefines() {
-        let JJ = "#define CONEEMITTER";
-        return this.emitFromSpawnPointOnly && (JJ += "\n#define CONEEMITTERSPAWNPOINT"), JJ
+        let BB = "#define CONEEMITTER";
+        return this.emitFromSpawnPointOnly && (BB += "\n#define CONEEMITTERSPAWNPOINT"), BB
       }
       getClassName() {
         return "ConeParticleEmitter"
       }
       serialize() {
-        const JJ = {};
-        return JJ.type = this.getClassName(), JJ.radius = this._radius, JJ.angle = this._angle, JJ.directionRandomizer = this.directionRandomizer, JJ.radiusRange = this.radiusRange, JJ.heightRange = this.heightRange, JJ.emitFromSpawnPointOnly = this.emitFromSpawnPointOnly, JJ
+        const BB = {};
+        return BB.type = this.getClassName(), BB.radius = this._radius, BB.angle = this._angle, BB.directionRandomizer = this.directionRandomizer, BB.radiusRange = this.radiusRange, BB.heightRange = this.heightRange, BB.emitFromSpawnPointOnly = this.emitFromSpawnPointOnly, BB
       }
-      parse(JJ) {
-        this.radius = JJ.radius, this.angle = JJ.angle, this.directionRandomizer = JJ.directionRandomizer, this.radiusRange = void 0 !== JJ.radiusRange ? JJ.radiusRange : 1, this.heightRange = void 0 !== JJ.heightRange ? JJ.heightRange : 1, this.emitFromSpawnPointOnly = void 0 !== JJ.emitFromSpawnPointOnly && JJ.emitFromSpawnPointOnly
+      parse(BB) {
+        this.radius = BB.radius, this.angle = BB.angle, this.directionRandomizer = BB.directionRandomizer, this.radiusRange = void 0 !== BB.radiusRange ? BB.radiusRange : 1, this.heightRange = void 0 !== BB.heightRange ? BB.heightRange : 1, this.emitFromSpawnPointOnly = void 0 !== BB.emitFromSpawnPointOnly && BB.emitFromSpawnPointOnly
       }
     }
-    class mJ extends vJ {
+    class iB extends mB {
       constructor() {
-        let JJ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI,
-          ZJ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new eJ.j(0, 1, 0),
-          FJ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new eJ.j(0, 1, 0);
-        super(JJ, cJ), this.direction1 = ZJ, this.direction2 = FJ
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI,
+          dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new pB.p(0, 1, 0),
+          VB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new pB.p(0, 1, 0);
+        super(BB, TB), this.direction1 = dB, this.direction2 = VB
       }
-      startDirectionFunction(JJ, cJ, ZJ, FJ) {
-        const UJ = (0, sJ.RandomRange)(this.direction1.x, this.direction2.x),
-          XJ = (0, sJ.RandomRange)(this.direction1.y, this.direction2.y),
-          AJ = (0, sJ.RandomRange)(this.direction1.z, this.direction2.z);
-        FJ ? cJ.K9(UJ, XJ, AJ) : eJ.j.TransformNormalFromFloatsToRef(UJ, XJ, AJ, JJ, cJ)
+      startDirectionFunction(BB, TB, dB, VB) {
+        const yB = (0, OB.RandomRange)(this.direction1.x, this.direction2.x),
+          lB = (0, OB.RandomRange)(this.direction1.y, this.direction2.y),
+          JB = (0, OB.RandomRange)(this.direction1.z, this.direction2.z);
+        VB ? TB.YBB(yB, lB, JB) : pB.p.TransformNormalFromFloatsToRef(yB, lB, JB, BB, TB)
       }
       clone() {
-        const JJ = new mJ(this.radius, this.angle, this.direction1, this.direction2);
-        return DJ.e.DeepCopy(this, JJ), JJ
+        const BB = new iB(this.radius, this.angle, this.direction1, this.direction2);
+        return LB.b.DeepCopy(this, BB), BB
       }
-      applyToShader(JJ) {
-        super.applyToShader(JJ), JJ.setVector3("direction1", this.direction1), JJ.setVector3("direction2", this.direction2)
+      applyToShader(BB) {
+        super.applyToShader(BB), BB.setVector3("direction1", this.direction1), BB.setVector3("direction2", this.direction2)
       }
-      buildUniformLayout(JJ) {
-        super.buildUniformLayout(JJ), JJ.addUniform("direction1", 3), JJ.addUniform("direction2", 3)
+      buildUniformLayout(BB) {
+        super.buildUniformLayout(BB), BB.addUniform("direction1", 3), BB.addUniform("direction2", 3)
       }
       getEffectDefines() {
         return "#define CONEEMITTER\n#define DIRECTEDCONEEMITTER"
@@ -1186,55 +1186,55 @@ export const modules = {
         return "ConeDirectedParticleEmitter"
       }
       serialize() {
-        const JJ = super.serialize();
-        return JJ.direction1 = this.direction1.JFJ(), JJ.direction2 = this.direction2.JFJ(), JJ
+        const BB = super.serialize();
+        return BB.direction1 = this.direction1.FVB(), BB.direction2 = this.direction2.FVB(), BB
       }
-      parse(JJ) {
-        super.parse(JJ), eJ.j.FromArrayToRef(JJ.direction1, 0, this.direction1), eJ.j.FromArrayToRef(JJ.direction2, 0, this.direction2)
+      parse(BB) {
+        super.parse(BB), pB.p.FromArrayToRef(BB.direction1, 0, this.direction1), pB.p.FromArrayToRef(BB.direction2, 0, this.direction2)
       }
     }
-    class QJ {
+    class NB {
       get mesh() {
         return this._mesh
       }
-      set mesh(JJ) {
-        this._mesh !== JJ && (this._mesh = JJ, JJ ? (this._indices = JJ.QXJ(), this._positions = JJ.getVerticesData(XJ.n.PositionKind), this._normals = JJ.getVerticesData(XJ.n.NormalKind)) : (this._indices = null, this._positions = null, this._normals = null))
+      set mesh(BB) {
+        this._mesh !== BB && (this._mesh = BB, BB ? (this._indices = BB.elB(), this._positions = BB.getVerticesData(lB.m.PositionKind), this._normals = BB.getVerticesData(lB.m.NormalKind)) : (this._indices = null, this._positions = null, this._normals = null))
       }
       constructor() {
-        let JJ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-        this._indices = null, this._positions = null, this._normals = null, this._storedNormal = eJ.j.Zero(), this._mesh = null, this.direction1 = new eJ.j(0, 1, 0), this.direction2 = new eJ.j(0, 1, 0), this.useMeshNormalsForDirection = !0, this.mesh = JJ
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        this._indices = null, this._positions = null, this._normals = null, this._storedNormal = pB.p.Zero(), this._mesh = null, this.direction1 = new pB.p(0, 1, 0), this.direction2 = new pB.p(0, 1, 0), this.useMeshNormalsForDirection = !0, this.mesh = BB
       }
-      startDirectionFunction(JJ, cJ, ZJ, FJ) {
-        if (this.useMeshNormalsForDirection && this._normals) return void eJ.j.TransformNormalToRef(this._storedNormal, JJ, cJ);
-        const UJ = (0, sJ.RandomRange)(this.direction1.x, this.direction2.x),
-          XJ = (0, sJ.RandomRange)(this.direction1.y, this.direction2.y),
-          AJ = (0, sJ.RandomRange)(this.direction1.z, this.direction2.z);
-        FJ ? cJ.K9(UJ, XJ, AJ) : eJ.j.TransformNormalFromFloatsToRef(UJ, XJ, AJ, JJ, cJ)
+      startDirectionFunction(BB, TB, dB, VB) {
+        if (this.useMeshNormalsForDirection && this._normals) return void pB.p.TransformNormalToRef(this._storedNormal, BB, TB);
+        const yB = (0, OB.RandomRange)(this.direction1.x, this.direction2.x),
+          lB = (0, OB.RandomRange)(this.direction1.y, this.direction2.y),
+          JB = (0, OB.RandomRange)(this.direction1.z, this.direction2.z);
+        VB ? TB.YBB(yB, lB, JB) : pB.p.TransformNormalFromFloatsToRef(yB, lB, JB, BB, TB)
       }
-      startPositionFunction(JJ, cJ, ZJ, FJ) {
+      startPositionFunction(BB, TB, dB, VB) {
         if (!this._indices || !this._positions) return;
-        const UJ = 3 * (Math.random() * (this._indices.length / 3) | 0),
-          XJ = Math.random(),
-          AJ = Math.random() * (1 - XJ),
-          qJ = 1 - XJ - AJ,
-          jJ = this._indices[UJ],
-          YJ = this._indices[UJ + 1],
-          hJ = this._indices[UJ + 2],
-          DJ = eJ.h.Pn[0],
-          sJ = eJ.h.Pn[1],
-          nJ = eJ.h.Pn[2],
-          GJ = eJ.h.Pn[3];
-        eJ.j.FromArrayToRef(this._positions, 3 * jJ, DJ), eJ.j.FromArrayToRef(this._positions, 3 * YJ, sJ), eJ.j.FromArrayToRef(this._positions, 3 * hJ, nJ), GJ.x = XJ * DJ.x + AJ * sJ.x + qJ * nJ.x, GJ.y = XJ * DJ.y + AJ * sJ.y + qJ * nJ.y, GJ.z = XJ * DJ.z + AJ * sJ.z + qJ * nJ.z, FJ ? cJ.K9(GJ.x, GJ.y, GJ.z) : eJ.j.TransformCoordinatesFromFloatsToRef(GJ.x, GJ.y, GJ.z, JJ, cJ), this.useMeshNormalsForDirection && this._normals && (eJ.j.FromArrayToRef(this._normals, 3 * jJ, DJ), eJ.j.FromArrayToRef(this._normals, 3 * YJ, sJ), eJ.j.FromArrayToRef(this._normals, 3 * hJ, nJ), this._storedNormal.x = XJ * DJ.x + AJ * sJ.x + qJ * nJ.x, this._storedNormal.y = XJ * DJ.y + AJ * sJ.y + qJ * nJ.y, this._storedNormal.z = XJ * DJ.z + AJ * sJ.z + qJ * nJ.z)
+        const yB = 3 * (Math.random() * (this._indices.length / 3) | 0),
+          lB = Math.random(),
+          JB = Math.random() * (1 - lB),
+          YB = 1 - lB - JB,
+          gB = this._indices[yB],
+          oB = this._indices[yB + 1],
+          kB = this._indices[yB + 2],
+          LB = pB.j.RD[0],
+          OB = pB.j.RD[1],
+          DB = pB.j.RD[2],
+          uB = pB.j.RD[3];
+        pB.p.FromArrayToRef(this._positions, 3 * gB, LB), pB.p.FromArrayToRef(this._positions, 3 * oB, OB), pB.p.FromArrayToRef(this._positions, 3 * kB, DB), uB.x = lB * LB.x + JB * OB.x + YB * DB.x, uB.y = lB * LB.y + JB * OB.y + YB * DB.y, uB.z = lB * LB.z + JB * OB.z + YB * DB.z, VB ? TB.YBB(uB.x, uB.y, uB.z) : pB.p.TransformCoordinatesFromFloatsToRef(uB.x, uB.y, uB.z, BB, TB), this.useMeshNormalsForDirection && this._normals && (pB.p.FromArrayToRef(this._normals, 3 * gB, LB), pB.p.FromArrayToRef(this._normals, 3 * oB, OB), pB.p.FromArrayToRef(this._normals, 3 * kB, DB), this._storedNormal.x = lB * LB.x + JB * OB.x + YB * DB.x, this._storedNormal.y = lB * LB.y + JB * OB.y + YB * DB.y, this._storedNormal.z = lB * LB.z + JB * OB.z + YB * DB.z)
       }
       clone() {
-        const JJ = new QJ(this.mesh);
-        return DJ.e.DeepCopy(this, JJ), JJ
+        const BB = new NB(this.mesh);
+        return LB.b.DeepCopy(this, BB), BB
       }
-      applyToShader(JJ) {
-        JJ.setVector3("direction1", this.direction1), JJ.setVector3("direction2", this.direction2)
+      applyToShader(BB) {
+        BB.setVector3("direction1", this.direction1), BB.setVector3("direction2", this.direction2)
       }
-      buildUniformLayout(JJ) {
-        JJ.addUniform("direction1", 3), JJ.addUniform("direction2", 3)
+      buildUniformLayout(BB) {
+        BB.addUniform("direction1", 3), BB.addUniform("direction2", 3)
       }
       getEffectDefines() {
         return ""
@@ -1243,19 +1243,19 @@ export const modules = {
         return "MeshParticleEmitter"
       }
       serialize() {
-        const JJ = {};
-        return JJ.type = this.getClassName(), JJ.direction1 = this.direction1.JFJ(), JJ.direction2 = this.direction2.JFJ(), JJ.meshId = this.mesh?.id, JJ.useMeshNormalsForDirection = this.useMeshNormalsForDirection, JJ
+        const BB = {};
+        return BB.type = this.getClassName(), BB.direction1 = this.direction1.FVB(), BB.direction2 = this.direction2.FVB(), BB.meshId = this.mesh?.id, BB.useMeshNormalsForDirection = this.useMeshNormalsForDirection, BB
       }
-      parse(JJ, cJ) {
-        eJ.j.FromArrayToRef(JJ.direction1, 0, this.direction1), eJ.j.FromArrayToRef(JJ.direction2, 0, this.direction2), JJ.meshId && cJ && (this.mesh = cJ.getLastMeshById(JJ.meshId)), this.useMeshNormalsForDirection = JJ.useMeshNormalsForDirection
+      parse(BB, TB) {
+        pB.p.FromArrayToRef(BB.direction1, 0, this.direction1), pB.p.FromArrayToRef(BB.direction2, 0, this.direction2), BB.meshId && TB && (this.mesh = TB.getLastMeshById(BB.meshId)), this.useMeshNormalsForDirection = BB.useMeshNormalsForDirection
       }
     }
-    class EJ {
+    class tB {
       get targetStopDuration() {
         return this._targetStopDuration
       }
-      set targetStopDuration(JJ) {
-        this._targetStopDuration !== JJ && (this._targetStopDuration = JJ)
+      set targetStopDuration(BB) {
+        this._targetStopDuration !== BB && (this._targetStopDuration = BB)
       }
       get isNodeGenerated() {
         return !1
@@ -1263,62 +1263,62 @@ export const modules = {
       get noiseTexture() {
         return this._noiseTexture
       }
-      set noiseTexture(JJ) {
-        this._noiseTexture !== JJ && (this._noiseTexture = JJ, this._reset())
+      set noiseTexture(BB) {
+        this._noiseTexture !== BB && (this._noiseTexture = BB, this._reset())
       }
       get attractors() {
         return this._attractors.slice(0)
       }
-      addAttractor(JJ) {
-        this._attractors.push(JJ)
+      addAttractor(BB) {
+        this._attractors.push(BB)
       }
-      removeAttractor(JJ) {
-        const cJ = this._attractors.indexOf(JJ); - 1 !== cJ && this._attractors.splice(cJ, 1)
+      removeAttractor(BB) {
+        const TB = this._attractors.indexOf(BB); - 1 !== TB && this._attractors.splice(TB, 1)
       }
       get _isAnimationSheetEnabled() {
         return this._animationSheetEnabled
       }
-      set _isAnimationSheetEnabled(JJ) {
-        this._animationSheetEnabled !== JJ && (this._animationSheetEnabled = JJ)
+      set _isAnimationSheetEnabled(BB) {
+        this._animationSheetEnabled !== BB && (this._animationSheetEnabled = BB)
       }
       get isAnimationSheetEnabled() {
         return this._isAnimationSheetEnabled
       }
-      set isAnimationSheetEnabled(JJ) {
-        this._isAnimationSheetEnabled != JJ && (this._isAnimationSheetEnabled = JJ, this._reset())
+      set isAnimationSheetEnabled(BB) {
+        this._isAnimationSheetEnabled != BB && (this._isAnimationSheetEnabled = BB, this._reset())
       }
       get useLogarithmicDepth() {
         return this._useLogarithmicDepth
       }
-      set useLogarithmicDepth(JJ) {
-        this._useLogarithmicDepth = JJ && this.Qy().gn().getCaps().fragmentDepthSupported
+      set useLogarithmicDepth(BB) {
+        this._useLogarithmicDepth = BB && this.jU().PD().getCaps().fragmentDepthSupported
       }
-      Qy() {
+      jU() {
         return this._scene
       }
       _hasTargetStopDurationDependantGradient() {
         return this._startSizeGradients && this._startSizeGradients.length > 0 || this._emitRateGradients && this._emitRateGradients.length > 0 || this._lifeTimeGradients && this._lifeTimeGradients.length > 0
       }
-      _setEngineBasedOnBlendMode(JJ) {
-        switch (JJ) {
-          case EJ.BLENDMODE_MULTIPLYADD:
+      _setEngineBasedOnBlendMode(BB) {
+        switch (BB) {
+          case tB.BLENDMODE_MULTIPLYADD:
             return;
-          case EJ.BLENDMODE_ADD:
-            JJ = 1;
+          case tB.BLENDMODE_ADD:
+            BB = 1;
             break;
-          case EJ.BLENDMODE_ONEONE:
-            JJ = 6;
+          case tB.BLENDMODE_ONEONE:
+            BB = 6;
             break;
-          case EJ.BLENDMODE_STANDARD:
-            JJ = 2;
+          case tB.BLENDMODE_STANDARD:
+            BB = 2;
             break;
-          case EJ.BLENDMODE_MULTIPLY:
-            JJ = 4;
+          case tB.BLENDMODE_MULTIPLY:
+            BB = 4;
             break;
-          case EJ.BLENDMODE_SUBTRACT:
-            JJ = 3
+          case tB.BLENDMODE_SUBTRACT:
+            BB = 3
         }
-        this._engine.setAlphaMode(JJ)
+        this._engine.setAlphaMode(BB)
       }
       getDragGradients() {
         return this._dragGradients
@@ -1353,216 +1353,216 @@ export const modules = {
       getEmitRateGradients() {
         return this._emitRateGradients
       }
-      addEmitRateGradient(JJ, cJ, ZJ) {
-        return this._emitRateGradients || (this._emitRateGradients = []), this._addFactorGradient(this._emitRateGradients, JJ, cJ, ZJ), this
+      addEmitRateGradient(BB, TB, dB) {
+        return this._emitRateGradients || (this._emitRateGradients = []), this._addFactorGradient(this._emitRateGradients, BB, TB, dB), this
       }
-      removeEmitRateGradient(JJ) {
-        return this._removeFactorGradient(this._emitRateGradients, JJ), this
+      removeEmitRateGradient(BB) {
+        return this._removeFactorGradient(this._emitRateGradients, BB), this
       }
       get direction1() {
-        return this.particleEmitterType.direction1 ? this.particleEmitterType.direction1 : eJ.j.Zero()
+        return this.particleEmitterType.direction1 ? this.particleEmitterType.direction1 : pB.p.Zero()
       }
-      set direction1(JJ) {
-        this.particleEmitterType.direction1 && (this.particleEmitterType.direction1 = JJ)
+      set direction1(BB) {
+        this.particleEmitterType.direction1 && (this.particleEmitterType.direction1 = BB)
       }
       get direction2() {
-        return this.particleEmitterType.direction2 ? this.particleEmitterType.direction2 : eJ.j.Zero()
+        return this.particleEmitterType.direction2 ? this.particleEmitterType.direction2 : pB.p.Zero()
       }
-      set direction2(JJ) {
-        this.particleEmitterType.direction2 && (this.particleEmitterType.direction2 = JJ)
+      set direction2(BB) {
+        this.particleEmitterType.direction2 && (this.particleEmitterType.direction2 = BB)
       }
       get minEmitBox() {
-        return this.particleEmitterType.minEmitBox ? this.particleEmitterType.minEmitBox : eJ.j.Zero()
+        return this.particleEmitterType.minEmitBox ? this.particleEmitterType.minEmitBox : pB.p.Zero()
       }
-      set minEmitBox(JJ) {
-        this.particleEmitterType.minEmitBox && (this.particleEmitterType.minEmitBox = JJ)
+      set minEmitBox(BB) {
+        this.particleEmitterType.minEmitBox && (this.particleEmitterType.minEmitBox = BB)
       }
       get maxEmitBox() {
-        return this.particleEmitterType.maxEmitBox ? this.particleEmitterType.maxEmitBox : eJ.j.Zero()
+        return this.particleEmitterType.maxEmitBox ? this.particleEmitterType.maxEmitBox : pB.p.Zero()
       }
-      set maxEmitBox(JJ) {
-        this.particleEmitterType.maxEmitBox && (this.particleEmitterType.maxEmitBox = JJ)
+      set maxEmitBox(BB) {
+        this.particleEmitterType.maxEmitBox && (this.particleEmitterType.maxEmitBox = BB)
       }
       get billboardMode() {
         return this._billboardMode
       }
-      set billboardMode(JJ) {
-        this._billboardMode !== JJ && (this._billboardMode = JJ, this._reset())
+      set billboardMode(BB) {
+        this._billboardMode !== BB && (this._billboardMode = BB, this._reset())
       }
       get isBillboardBased() {
         return this._isBillboardBased
       }
-      set isBillboardBased(JJ) {
-        this._isBillboardBased !== JJ && (this._isBillboardBased = JJ, this._reset())
+      set isBillboardBased(BB) {
+        this._isBillboardBased !== BB && (this._isBillboardBased = BB, this._reset())
       }
       get imageProcessingConfiguration() {
         return this._imageProcessingConfiguration
       }
-      set imageProcessingConfiguration(JJ) {
-        this._attachImageProcessingConfiguration(JJ)
+      set imageProcessingConfiguration(BB) {
+        this._attachImageProcessingConfiguration(BB)
       }
-      _attachImageProcessingConfiguration(JJ) {
-        JJ !== this._imageProcessingConfiguration && (!JJ && this._scene ? this._imageProcessingConfiguration = this._scene.imageProcessingConfiguration : this._imageProcessingConfiguration = JJ)
+      _attachImageProcessingConfiguration(BB) {
+        BB !== this._imageProcessingConfiguration && (!BB && this._scene ? this._imageProcessingConfiguration = this._scene.imageProcessingConfiguration : this._imageProcessingConfiguration = BB)
       }
       _reset() {}
-      _addFactorGradient(JJ, cJ, ZJ, UJ) {
-        const eJ = new FJ.g(cJ, ZJ, UJ);
-        JJ.push(eJ), JJ.sort(((JJ, cJ) => JJ.gradient < cJ.gradient ? -1 : JJ.gradient > cJ.gradient ? 1 : 0))
+      _addFactorGradient(BB, TB, dB, yB) {
+        const pB = new VB.i(TB, dB, yB);
+        BB.push(pB), BB.sort(((BB, TB) => BB.gradient < TB.gradient ? -1 : BB.gradient > TB.gradient ? 1 : 0))
       }
-      _removeFactorGradient(JJ, cJ) {
-        if (!JJ) return;
-        let ZJ = 0;
-        for (const FJ of JJ) {
-          if (FJ.gradient === cJ) {
-            JJ.splice(ZJ, 1);
+      _removeFactorGradient(BB, TB) {
+        if (!BB) return;
+        let dB = 0;
+        for (const VB of BB) {
+          if (VB.gradient === TB) {
+            BB.splice(dB, 1);
             break
           }
-          ZJ++
+          dB++
         }
       }
-      _removeGradientAndTexture(JJ, cJ, ZJ) {
-        if (!cJ) return this;
-        let FJ = 0;
-        for (const UJ of cJ) {
-          if (UJ.gradient === JJ) {
-            cJ.splice(FJ, 1);
+      _removeGradientAndTexture(BB, TB, dB) {
+        if (!TB) return this;
+        let VB = 0;
+        for (const yB of TB) {
+          if (yB.gradient === BB) {
+            TB.splice(VB, 1);
             break
           }
-          FJ++
+          VB++
         }
-        return ZJ && ZJ.dispose(), this
+        return dB && dB.dispose(), this
       }
-      constructor(JJ) {
-        this.animations = [], this.renderingGroupId = 0, this.emitter = eJ.j.Zero(), this.emitRate = 10, this.manualEmitCount = -1, this.updateSpeed = .01, this._targetStopDuration = 0, this.disposeOnStop = !1, this.minEmitPower = 1, this.maxEmitPower = 1, this.minLifeTime = 1, this.maxLifeTime = 1, this.minSize = 1, this.maxSize = 1, this.minScaleX = 1, this.maxScaleX = 1, this.minScaleY = 1, this.maxScaleY = 1, this.minInitialRotation = 0, this.maxInitialRotation = 0, this.minAngularSpeed = 0, this.maxAngularSpeed = 0, this.layerMask = 268435455, this.customShader = null, this.preventAutoStart = !1, this.applyFog = !1, this._wasDispatched = !1, this._rootUrl = "", this.noiseStrength = new eJ.j(10, 10, 10), this._attractors = [], this.onAnimationEnd = null, this.blendMode = EJ.BLENDMODE_ONEONE, this.forceDepthWrite = !1, this.preWarmCycles = 0, this.preWarmStepOffset = 1, this.spriteCellChangeSpeed = 1, this.startSpriteCellID = 0, this.endSpriteCellID = 0, this.spriteCellWidth = 0, this.spriteCellHeight = 0, this.spriteCellLoop = !0, this.spriteRandomStartCell = !1, this.translationPivot = new eJ.i(0, 0), this._animationSheetEnabled = !1, this.beginAnimationOnStart = !1, this.beginAnimationFrom = 0, this.beginAnimationTo = 60, this.beginAnimationLoop = !1, this.worldOffset = new eJ.j(0, 0, 0), this._useLogarithmicDepth = !1, this.gravity = eJ.j.Zero(), this._colorGradients = null, this._sizeGradients = null, this._lifeTimeGradients = null, this._angularSpeedGradients = null, this._velocityGradients = null, this._limitVelocityGradients = null, this._dragGradients = null, this._emitRateGradients = null, this._startSizeGradients = null, this._rampGradients = null, this._colorRemapGradients = null, this._alphaRemapGradients = null, this.startDelay = 0, this.limitVelocityDamping = .4, this.color1 = new YJ.f(1, 1, 1, 1), this.color2 = new YJ.f(1, 1, 1, 1), this.colorDead = new YJ.f(0, 0, 0, 1), this.textureMask = new YJ.f(1, 1, 1, 1), this._isSubEmitter = !1, this._billboardMode = 7, this._isBillboardBased = !0, this._imageProcessingConfigurationDefines = new jJ.b, this.id = JJ, this.name = JJ
+      constructor(BB) {
+        this.animations = [], this.renderingGroupId = 0, this.emitter = pB.p.Zero(), this.emitRate = 10, this.manualEmitCount = -1, this.updateSpeed = .01, this._targetStopDuration = 0, this.disposeOnStop = !1, this.minEmitPower = 1, this.maxEmitPower = 1, this.minLifeTime = 1, this.maxLifeTime = 1, this.minSize = 1, this.maxSize = 1, this.minScaleX = 1, this.maxScaleX = 1, this.minScaleY = 1, this.maxScaleY = 1, this.minInitialRotation = 0, this.maxInitialRotation = 0, this.minAngularSpeed = 0, this.maxAngularSpeed = 0, this.layerMask = 268435455, this.customShader = null, this.preventAutoStart = !1, this.applyFog = !1, this._wasDispatched = !1, this._rootUrl = "", this.noiseStrength = new pB.p(10, 10, 10), this._attractors = [], this.onAnimationEnd = null, this.blendMode = tB.BLENDMODE_ONEONE, this.forceDepthWrite = !1, this.preWarmCycles = 0, this.preWarmStepOffset = 1, this.spriteCellChangeSpeed = 1, this.startSpriteCellID = 0, this.endSpriteCellID = 0, this.spriteCellWidth = 0, this.spriteCellHeight = 0, this.spriteCellLoop = !0, this.spriteRandomStartCell = !1, this.translationPivot = new pB.l(0, 0), this._animationSheetEnabled = !1, this.beginAnimationOnStart = !1, this.beginAnimationFrom = 0, this.beginAnimationTo = 60, this.beginAnimationLoop = !1, this.worldOffset = new pB.p(0, 0, 0), this._useLogarithmicDepth = !1, this.gravity = pB.p.Zero(), this._colorGradients = null, this._sizeGradients = null, this._lifeTimeGradients = null, this._angularSpeedGradients = null, this._velocityGradients = null, this._limitVelocityGradients = null, this._dragGradients = null, this._emitRateGradients = null, this._startSizeGradients = null, this._rampGradients = null, this._colorRemapGradients = null, this._alphaRemapGradients = null, this.startDelay = 0, this.limitVelocityDamping = .4, this.color1 = new oB.d(1, 1, 1, 1), this.color2 = new oB.d(1, 1, 1, 1), this.colorDead = new oB.d(0, 0, 0, 1), this.textureMask = new oB.d(1, 1, 1, 1), this._isSubEmitter = !1, this._billboardMode = 7, this._isBillboardBased = !0, this._imageProcessingConfigurationDefines = new gB.d, this.id = BB, this.name = BB
       }
-      createPointEmitter(JJ, cJ) {
-        const ZJ = function(JJ, cJ) {
-          const ZJ = new nJ;
-          return ZJ.direction1 = JJ, ZJ.direction2 = cJ, ZJ
-        }(JJ, cJ);
-        return this.particleEmitterType = ZJ, ZJ
+      createPointEmitter(BB, TB) {
+        const dB = function(BB, TB) {
+          const dB = new DB;
+          return dB.direction1 = BB, dB.direction2 = TB, dB
+        }(BB, TB);
+        return this.particleEmitterType = dB, dB
       }
       createHemisphericEmitter() {
-        const JJ = function() {
-          return new GJ(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1)
+        const BB = function() {
+          return new uB(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1)
         }(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1);
-        return this.particleEmitterType = JJ, JJ
+        return this.particleEmitterType = BB, BB
       }
       createSphereEmitter() {
-        const JJ = function() {
-          return new fJ(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1)
+        const BB = function() {
+          return new HB(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1)
         }(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1);
-        return this.particleEmitterType = JJ, JJ
+        return this.particleEmitterType = BB, BB
       }
       createDirectedSphereEmitter() {
-        const JJ = function() {
-          let JJ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-            cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new eJ.j(0, 1, 0),
-            ZJ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new eJ.j(0, 1, 0);
-          return new xJ(JJ, cJ, ZJ)
-        }(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new eJ.j(0, 1, 0), arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new eJ.j(0, 1, 0));
-        return this.particleEmitterType = JJ, JJ
+        const BB = function() {
+          let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+            TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new pB.p(0, 1, 0),
+            dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new pB.p(0, 1, 0);
+          return new EB(BB, TB, dB)
+        }(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new pB.p(0, 1, 0), arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new pB.p(0, 1, 0));
+        return this.particleEmitterType = BB, BB
       }
       createCylinderEmitter() {
-        const JJ = function() {
-          let JJ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-            cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-            ZJ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-            FJ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-          return new rJ.e(JJ, cJ, ZJ, FJ)
+        const BB = function() {
+          let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+            TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+            dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
+            VB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+          return new vB.g(BB, TB, dB, VB)
         }(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0);
-        return this.particleEmitterType = JJ, JJ
+        return this.particleEmitterType = BB, BB
       }
       createDirectedCylinderEmitter() {
-        const JJ = function() {
-          let JJ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-            cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-            ZJ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-            FJ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new eJ.j(0, 1, 0),
-            UJ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new eJ.j(0, 1, 0);
-          return new rJ.b(JJ, cJ, ZJ, FJ, UJ)
-        }(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new eJ.j(0, 1, 0), arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new eJ.j(0, 1, 0));
-        return this.particleEmitterType = JJ, JJ
+        const BB = function() {
+          let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+            TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+            dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
+            VB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new pB.p(0, 1, 0),
+            yB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new pB.p(0, 1, 0);
+          return new vB.c(BB, TB, dB, VB, yB)
+        }(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new pB.p(0, 1, 0), arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new pB.p(0, 1, 0));
+        return this.particleEmitterType = BB, BB
       }
       createConeEmitter() {
-        const JJ = function() {
-          let JJ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-            cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI / 4;
-          return new vJ(JJ, cJ)
+        const BB = function() {
+          let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+            TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI / 4;
+          return new mB(BB, TB)
         }(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI / 4);
-        return this.particleEmitterType = JJ, JJ
+        return this.particleEmitterType = BB, BB
       }
       createDirectedConeEmitter() {
-        const JJ = function() {
-          let JJ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-            cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI / 4,
-            ZJ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new eJ.j(0, 1, 0),
-            FJ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new eJ.j(0, 1, 0);
-          return new mJ(JJ, cJ, ZJ, FJ)
-        }(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI / 4, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new eJ.j(0, 1, 0), arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new eJ.j(0, 1, 0));
-        return this.particleEmitterType = JJ, JJ
+        const BB = function() {
+          let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+            TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI / 4,
+            dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new pB.p(0, 1, 0),
+            VB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new pB.p(0, 1, 0);
+          return new iB(BB, TB, dB, VB)
+        }(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI / 4, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new pB.p(0, 1, 0), arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new pB.p(0, 1, 0));
+        return this.particleEmitterType = BB, BB
       }
-      createBoxEmitter(JJ, cJ, ZJ, FJ) {
-        const UJ = new hJ.c;
-        return this.particleEmitterType = UJ, this.direction1 = JJ, this.direction2 = cJ, this.minEmitBox = ZJ, this.maxEmitBox = FJ, UJ
+      createBoxEmitter(BB, TB, dB, VB) {
+        const yB = new kB.c;
+        return this.particleEmitterType = yB, this.direction1 = BB, this.direction2 = TB, this.minEmitBox = dB, this.maxEmitBox = VB, yB
       }
       createMeshEmitter() {
-        const JJ = function() {
-          return new QJ(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null)
+        const BB = function() {
+          return new NB(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null)
         }(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null);
-        return this.particleEmitterType = JJ, JJ
+        return this.particleEmitterType = BB, BB
       }
     }
-    EJ.BLENDMODE_ONEONE = 0, EJ.BLENDMODE_STANDARD = 1, EJ.BLENDMODE_ADD = 2, EJ.BLENDMODE_MULTIPLY = 3, EJ.BLENDMODE_MULTIPLYADD = 4, EJ.BLENDMODE_SUBTRACT = -1;
-    class VJ {
+    tB.BLENDMODE_ONEONE = 0, tB.BLENDMODE_STANDARD = 1, tB.BLENDMODE_ADD = 2, tB.BLENDMODE_MULTIPLY = 3, tB.BLENDMODE_MULTIPLYADD = 4, tB.BLENDMODE_SUBTRACT = -1;
+    class fB {
       constructor() {
-        this.attachedSubEmitters = null, this.currentColor1 = new YJ.f(0, 0, 0, 0), this.currentColor2 = new YJ.f(0, 0, 0, 0), this.currentSize1 = 0, this.currentSize2 = 0, this.currentAngularSpeed1 = 0, this.currentAngularSpeed2 = 0, this.currentVelocity1 = 0, this.currentVelocity2 = 0, this.scaledDirection = eJ.j.Zero(), this.currentLimitVelocity1 = 0, this.currentLimitVelocity2 = 0, this.currentDrag1 = 0, this.currentDrag2 = 0
+        this.attachedSubEmitters = null, this.currentColor1 = new oB.d(0, 0, 0, 0), this.currentColor2 = new oB.d(0, 0, 0, 0), this.currentSize1 = 0, this.currentSize2 = 0, this.currentAngularSpeed1 = 0, this.currentAngularSpeed2 = 0, this.currentVelocity1 = 0, this.currentVelocity2 = 0, this.scaledDirection = pB.p.Zero(), this.currentLimitVelocity1 = 0, this.currentLimitVelocity2 = 0, this.currentDrag1 = 0, this.currentDrag2 = 0
       }
       reset() {
         this.currentColorGradient = null, this.currentSizeGradient = null, this.currentAngularSpeedGradient = null, this.currentVelocityGradient = null, this.currentLimitVelocityGradient = null, this.currentDragGradient = null, this.randomCellOffset = void 0, this.randomNoiseCoordinates1 = null, this.randomNoiseCoordinates2 = null
       }
     }
-    class KJ {
-      constructor(JJ) {
-        this.particleSystem = JJ, this.position = eJ.j.Zero(), this.direction = eJ.j.Zero(), this.color = new YJ.f(0, 0, 0, 0), this.colorStep = new YJ.f(0, 0, 0, 0), this.initialColor = new YJ.f(0, 0, 0, 0), this.colorDead = new YJ.f(0, 0, 0, 0), this.lifeTime = 1, this.age = 0, this.size = 0, this.scale = new eJ.i(1, 1), this.angle = 0, this.angularSpeed = 0, this.cellIndex = 0, this.metadata = null, this._properties = new VJ, this.id = KJ._Count++, this.particleSystem.isAnimationSheetEnabled && this._updateCellInfoFromSystem()
+    class sB {
+      constructor(BB) {
+        this.particleSystem = BB, this.position = pB.p.Zero(), this.direction = pB.p.Zero(), this.color = new oB.d(0, 0, 0, 0), this.colorStep = new oB.d(0, 0, 0, 0), this.initialColor = new oB.d(0, 0, 0, 0), this.colorDead = new oB.d(0, 0, 0, 0), this.lifeTime = 1, this.age = 0, this.size = 0, this.scale = new pB.l(1, 1), this.angle = 0, this.angularSpeed = 0, this.cellIndex = 0, this.metadata = null, this._properties = new fB, this.id = sB._Count++, this.particleSystem.isAnimationSheetEnabled && this._updateCellInfoFromSystem()
       }
       _updateCellInfoFromSystem() {
         this.cellIndex = this.particleSystem.startSpriteCellID
       }
       updateCellIndex() {
-        let JJ = this.age,
-          cJ = this.particleSystem.spriteCellChangeSpeed;
-        this.particleSystem.spriteRandomStartCell && (void 0 === this._properties.randomCellOffset && (this._properties.randomCellOffset = Math.random() * this.lifeTime), 0 === cJ ? (cJ = 1, JJ = this._properties.randomCellOffset) : JJ += this._properties.randomCellOffset);
-        const ZJ = this._properties.initialEndSpriteCellId - this._properties.initialStartSpriteCellId + 1;
-        let FJ;
-        FJ = this._properties.initialSpriteCellLoop ? (0, sJ.Clamp)(JJ * cJ % this.lifeTime / this.lifeTime) : (0, sJ.Clamp)(JJ * cJ / this.lifeTime), this.cellIndex = this._properties.initialStartSpriteCellId + FJ * ZJ | 0
+        let BB = this.age,
+          TB = this.particleSystem.spriteCellChangeSpeed;
+        this.particleSystem.spriteRandomStartCell && (void 0 === this._properties.randomCellOffset && (this._properties.randomCellOffset = Math.random() * this.lifeTime), 0 === TB ? (TB = 1, BB = this._properties.randomCellOffset) : BB += this._properties.randomCellOffset);
+        const dB = this._properties.initialEndSpriteCellId - this._properties.initialStartSpriteCellId + 1;
+        let VB;
+        VB = this._properties.initialSpriteCellLoop ? (0, OB.Clamp)(BB * TB % this.lifeTime / this.lifeTime) : (0, OB.Clamp)(BB * TB / this.lifeTime), this.cellIndex = this._properties.initialStartSpriteCellId + VB * dB | 0
       }
-      _inheritParticleInfoToSubEmitter(JJ) {
-        if (JJ.particleSystem.emitter.position) {
-          const cJ = JJ.particleSystem.emitter;
-          if (cJ.position.rZJ(this.position), JJ.inheritDirection) {
-            const JJ = eJ.h.Pn[0];
-            this.direction.normalizeToRef(JJ), cJ.setDirection(JJ, 0, Math.PI / 2)
+      _inheritParticleInfoToSubEmitter(BB) {
+        if (BB.particleSystem.emitter.position) {
+          const TB = BB.particleSystem.emitter;
+          if (TB.position.bdB(this.position), BB.inheritDirection) {
+            const BB = pB.j.RD[0];
+            this.direction.normalizeToRef(BB), TB.setDirection(BB, 0, Math.PI / 2)
           }
         } else {
-          JJ.particleSystem.emitter.rZJ(this.position)
+          BB.particleSystem.emitter.bdB(this.position)
         }
-        this.direction.scaleToRef(JJ.inheritedVelocityAmount / 2, eJ.h.Pn[0]), JJ.particleSystem._inheritedVelocityOffset.rZJ(eJ.h.Pn[0])
+        this.direction.scaleToRef(BB.inheritedVelocityAmount / 2, pB.j.RD[0]), BB.particleSystem._inheritedVelocityOffset.bdB(pB.j.RD[0])
       }
       _inheritParticleInfoToSubEmitters() {
         if (this._properties.attachedSubEmitters && this._properties.attachedSubEmitters.length > 0)
-          for (const JJ of this._properties.attachedSubEmitters) this._inheritParticleInfoToSubEmitter(JJ)
+          for (const BB of this._properties.attachedSubEmitters) this._inheritParticleInfoToSubEmitter(BB)
       }
       _reset() {
-        this._properties.onReset && this._properties.onReset(), this.age = 0, this.id = KJ._Count++, this._properties.reset(), this.metadata = null, this.cellIndex = this.particleSystem.startSpriteCellID
+        this._properties.onReset && this._properties.onReset(), this.age = 0, this.id = sB._Count++, this._properties.reset(), this.metadata = null, this.cellIndex = this.particleSystem.startSpriteCellID
       }
-      copyTo(JJ) {
-        JJ.position.rZJ(this.position), this._properties.initialDirection ? JJ._properties.initialDirection ? JJ._properties.initialDirection.rZJ(this._properties.initialDirection) : JJ._properties.initialDirection = this._properties.initialDirection.clone() : JJ._properties.initialDirection = null, JJ.direction.rZJ(this.direction), this._properties.localPosition && (JJ._properties.localPosition ? JJ._properties.localPosition.rZJ(this._properties.localPosition) : JJ._properties.localPosition = this._properties.localPosition.clone()), JJ.color.rZJ(this.color), JJ.colorStep.rZJ(this.colorStep), JJ.initialColor.rZJ(this.initialColor), JJ.colorDead.rZJ(this.colorDead), JJ.lifeTime = this.lifeTime, JJ.age = this.age, JJ._properties.randomCellOffset = this._properties.randomCellOffset, JJ.size = this.size, JJ.scale.rZJ(this.scale), JJ.angle = this.angle, JJ.angularSpeed = this.angularSpeed, JJ.particleSystem = this.particleSystem, JJ.cellIndex = this.cellIndex, JJ.id = this.id, JJ._properties.attachedSubEmitters = this._properties.attachedSubEmitters, this._properties.currentColorGradient && (JJ._properties.currentColorGradient = this._properties.currentColorGradient, JJ._properties.currentColor1.rZJ(this._properties.currentColor1), JJ._properties.currentColor2.rZJ(this._properties.currentColor2)), this._properties.currentSizeGradient && (JJ._properties.currentSizeGradient = this._properties.currentSizeGradient, JJ._properties.currentSize1 = this._properties.currentSize1, JJ._properties.currentSize2 = this._properties.currentSize2), this._properties.currentAngularSpeedGradient && (JJ._properties.currentAngularSpeedGradient = this._properties.currentAngularSpeedGradient, JJ._properties.currentAngularSpeed1 = this._properties.currentAngularSpeed1, JJ._properties.currentAngularSpeed2 = this._properties.currentAngularSpeed2), this._properties.currentVelocityGradient && (JJ._properties.currentVelocityGradient = this._properties.currentVelocityGradient, JJ._properties.currentVelocity1 = this._properties.currentVelocity1, JJ._properties.currentVelocity2 = this._properties.currentVelocity2), this._properties.currentLimitVelocityGradient && (JJ._properties.currentLimitVelocityGradient = this._properties.currentLimitVelocityGradient, JJ._properties.currentLimitVelocity1 = this._properties.currentLimitVelocity1, JJ._properties.currentLimitVelocity2 = this._properties.currentLimitVelocity2), this._properties.currentDragGradient && (JJ._properties.currentDragGradient = this._properties.currentDragGradient, JJ._properties.currentDrag1 = this._properties.currentDrag1, JJ._properties.currentDrag2 = this._properties.currentDrag2), this.particleSystem.isAnimationSheetEnabled && (JJ._properties.initialStartSpriteCellId = this._properties.initialStartSpriteCellId, JJ._properties.initialEndSpriteCellId = this._properties.initialEndSpriteCellId, JJ._properties.initialSpriteCellLoop = this._properties.initialSpriteCellLoop), this.particleSystem.useRampGradients && (JJ.remapData && this.remapData ? JJ.remapData.rZJ(this.remapData) : JJ.remapData = new eJ.k(0, 0, 0, 0)), this._properties.randomNoiseCoordinates1 && this._properties.randomNoiseCoordinates2 && (JJ._properties.randomNoiseCoordinates1 && JJ._properties.randomNoiseCoordinates2 ? (JJ._properties.randomNoiseCoordinates1.rZJ(this._properties.randomNoiseCoordinates1), JJ._properties.randomNoiseCoordinates2.rZJ(this._properties.randomNoiseCoordinates2)) : (JJ._properties.randomNoiseCoordinates1 = this._properties.randomNoiseCoordinates1.clone(), JJ._properties.randomNoiseCoordinates2 = this._properties.randomNoiseCoordinates2.clone())), JJ.metadata = this.metadata
+      copyTo(BB) {
+        BB.position.bdB(this.position), this._properties.initialDirection ? BB._properties.initialDirection ? BB._properties.initialDirection.bdB(this._properties.initialDirection) : BB._properties.initialDirection = this._properties.initialDirection.clone() : BB._properties.initialDirection = null, BB.direction.bdB(this.direction), this._properties.localPosition && (BB._properties.localPosition ? BB._properties.localPosition.bdB(this._properties.localPosition) : BB._properties.localPosition = this._properties.localPosition.clone()), BB.color.bdB(this.color), BB.colorStep.bdB(this.colorStep), BB.initialColor.bdB(this.initialColor), BB.colorDead.bdB(this.colorDead), BB.lifeTime = this.lifeTime, BB.age = this.age, BB._properties.randomCellOffset = this._properties.randomCellOffset, BB.size = this.size, BB.scale.bdB(this.scale), BB.angle = this.angle, BB.angularSpeed = this.angularSpeed, BB.particleSystem = this.particleSystem, BB.cellIndex = this.cellIndex, BB.id = this.id, BB._properties.attachedSubEmitters = this._properties.attachedSubEmitters, this._properties.currentColorGradient && (BB._properties.currentColorGradient = this._properties.currentColorGradient, BB._properties.currentColor1.bdB(this._properties.currentColor1), BB._properties.currentColor2.bdB(this._properties.currentColor2)), this._properties.currentSizeGradient && (BB._properties.currentSizeGradient = this._properties.currentSizeGradient, BB._properties.currentSize1 = this._properties.currentSize1, BB._properties.currentSize2 = this._properties.currentSize2), this._properties.currentAngularSpeedGradient && (BB._properties.currentAngularSpeedGradient = this._properties.currentAngularSpeedGradient, BB._properties.currentAngularSpeed1 = this._properties.currentAngularSpeed1, BB._properties.currentAngularSpeed2 = this._properties.currentAngularSpeed2), this._properties.currentVelocityGradient && (BB._properties.currentVelocityGradient = this._properties.currentVelocityGradient, BB._properties.currentVelocity1 = this._properties.currentVelocity1, BB._properties.currentVelocity2 = this._properties.currentVelocity2), this._properties.currentLimitVelocityGradient && (BB._properties.currentLimitVelocityGradient = this._properties.currentLimitVelocityGradient, BB._properties.currentLimitVelocity1 = this._properties.currentLimitVelocity1, BB._properties.currentLimitVelocity2 = this._properties.currentLimitVelocity2), this._properties.currentDragGradient && (BB._properties.currentDragGradient = this._properties.currentDragGradient, BB._properties.currentDrag1 = this._properties.currentDrag1, BB._properties.currentDrag2 = this._properties.currentDrag2), this.particleSystem.isAnimationSheetEnabled && (BB._properties.initialStartSpriteCellId = this._properties.initialStartSpriteCellId, BB._properties.initialEndSpriteCellId = this._properties.initialEndSpriteCellId, BB._properties.initialSpriteCellLoop = this._properties.initialSpriteCellLoop), this.particleSystem.useRampGradients && (BB.remapData && this.remapData ? BB.remapData.bdB(this.remapData) : BB.remapData = new pB.r(0, 0, 0, 0)), this._properties.randomNoiseCoordinates1 && this._properties.randomNoiseCoordinates2 && (BB._properties.randomNoiseCoordinates1 && BB._properties.randomNoiseCoordinates2 ? (BB._properties.randomNoiseCoordinates1.bdB(this._properties.randomNoiseCoordinates1), BB._properties.randomNoiseCoordinates2.bdB(this._properties.randomNoiseCoordinates2)) : (BB._properties.randomNoiseCoordinates1 = this._properties.randomNoiseCoordinates1.clone(), BB._properties.randomNoiseCoordinates2 = this._properties.randomNoiseCoordinates2.clone())), BB.metadata = this.metadata
       }
     }
-    KJ._Count = 0;
-    var yJ = ZJ(39958);
-    class SJ {
+    sB._Count = 0;
+    var MB = dB(39945);
+    class zB {
       get currentFrame() {
         return this._currentFrame
       }
@@ -1596,247 +1596,247 @@ export const modules = {
       get isAdditive() {
         return this._host && this._host.isAdditive
       }
-      constructor(JJ, cJ, ZJ, FJ) {
-        if (this._events = new Array, this._currentFrame = 0, this._originalValue = new Array, this._originalBlendValue = null, this._offsetsCache = {}, this._highLimitsCache = {}, this._stopped = !1, this._blendingFactor = 0, this._currentValue = null, this._currentActiveTarget = null, this._directTarget = null, this._targetPath = "", this._weight = 1, this._absoluteFrameOffset = 0, this._previousElapsedTime = 0, this._yoyoDirection = 1, this._previousAbsoluteFrame = 0, this._playbackFrom = 0, this._playbackTo = 0, this._playbackFrames = 0, this._playbackProgress = 0, this._playbackSyncRoot = null, this._playbackJumped = !1, this._playbackSyncMasterPlayed = 0, this._playbackSyncMasterFrame = 0, this._targetIsArray = !1, this._coreRuntimeAnimation = null, this._animation = cJ, this.wL = JJ, this._scene = ZJ, this._host = FJ, this._activeTargets = [], cJ._runtimeAnimations.push(this), this._animationState = {
+      constructor(BB, TB, dB, VB) {
+        if (this._events = new Array, this._currentFrame = 0, this._originalValue = new Array, this._originalBlendValue = null, this._offsetsCache = {}, this._highLimitsCache = {}, this._stopped = !1, this._blendingFactor = 0, this._currentValue = null, this._currentActiveTarget = null, this._directTarget = null, this._targetPath = "", this._weight = 1, this._absoluteFrameOffset = 0, this._previousElapsedTime = 0, this._yoyoDirection = 1, this._previousAbsoluteFrame = 0, this._playbackFrom = 0, this._playbackTo = 0, this._playbackFrames = 0, this._playbackProgress = 0, this._playbackSyncRoot = null, this._playbackJumped = !1, this._playbackSyncMasterPlayed = 0, this._playbackSyncMasterFrame = 0, this._targetIsArray = !1, this._coreRuntimeAnimation = null, this._animation = TB, this.Q8 = BB, this._scene = dB, this._host = VB, this._activeTargets = [], TB._runtimeAnimations.push(this), this._animationState = {
             key: 0,
             repeatCount: 0,
-            Mc: this._getCorrectLoopMode()
-          }, this._animation.dataType === yJ.c.ANIMATIONTYPE_MATRIX && (this._animationState.workValue = eJ.b.Zero()), this._keys = this._animation.getKeys(), this._minFrame = this._keys[0].frame, this._maxFrame = this._keys[this._keys.length - 1].frame, 0 !== this._minFrame) {
-          const JJ = {
+            Py: this._getCorrectLoopMode()
+          }, this._animation.dataType === MB.c.ANIMATIONTYPE_MATRIX && (this._animationState.workValue = pB.b.Zero()), this._keys = this._animation.getKeys(), this._minFrame = this._keys[0].frame, this._maxFrame = this._keys[this._keys.length - 1].frame, 0 !== this._minFrame) {
+          const BB = {
             frame: 0,
             value: this._keys[0].value
           };
-          this._keys.splice(0, 0, JJ)
+          this._keys.splice(0, 0, BB)
         }
-        if (this.wL instanceof Array) {
-          let JJ = 0;
-          for (const cJ of this.wL) this._preparePath(cJ, JJ), this._getOriginalValues(JJ), JJ++;
+        if (this.Q8 instanceof Array) {
+          let BB = 0;
+          for (const TB of this.Q8) this._preparePath(TB, BB), this._getOriginalValues(BB), BB++;
           this._targetIsArray = !0
-        } else this._preparePath(this.wL), this._getOriginalValues(), this._targetIsArray = !1, this._directTarget = this._activeTargets[0];
-        const UJ = cJ.getEvents();
-        if (UJ && UJ.length > 0)
-          for (const eJ of UJ) this._events.push(eJ._clone());
-        this._enableBlending = JJ && JJ.animationPropertiesOverride ? JJ.animationPropertiesOverride.enableBlending : this._animation.enableBlending
+        } else this._preparePath(this.Q8), this._getOriginalValues(), this._targetIsArray = !1, this._directTarget = this._activeTargets[0];
+        const yB = TB.getEvents();
+        if (yB && yB.length > 0)
+          for (const pB of yB) this._events.push(pB._clone());
+        this._enableBlending = BB && BB.animationPropertiesOverride ? BB.animationPropertiesOverride.enableBlending : this._animation.enableBlending
       }
-      _preparePath(JJ) {
-        let cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const ZJ = this._animation.targetPropertyPath;
-        if (ZJ.length > 1) {
-          let FJ = JJ;
-          for (let JJ = 0; JJ < ZJ.length - 1; JJ++) {
-            const cJ = ZJ[JJ];
-            if (FJ = FJ[cJ], void 0 === FJ) throw new Error(`Invalid property (${cJ}) in property path (${ZJ.join(".")})`)
+      _preparePath(BB) {
+        let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const dB = this._animation.targetPropertyPath;
+        if (dB.length > 1) {
+          let VB = BB;
+          for (let BB = 0; BB < dB.length - 1; BB++) {
+            const TB = dB[BB];
+            if (VB = VB[TB], void 0 === VB) throw new Error(`Invalid property (${TB}) in property path (${dB.join(".")})`)
           }
-          this._targetPath = ZJ[ZJ.length - 1], this._activeTargets[cJ] = FJ
-        } else this._targetPath = ZJ[0], this._activeTargets[cJ] = JJ;
-        if (void 0 === this._activeTargets[cJ][this._targetPath]) throw new Error(`Invalid property (${this._targetPath}) in property path (${ZJ.join(".")})`)
+          this._targetPath = dB[dB.length - 1], this._activeTargets[TB] = VB
+        } else this._targetPath = dB[0], this._activeTargets[TB] = BB;
+        if (void 0 === this._activeTargets[TB][this._targetPath]) throw new Error(`Invalid property (${this._targetPath}) in property path (${dB.join(".")})`)
       }
       get animation() {
         return this._animation
       }
       reset() {
         if (arguments.length > 0 && void 0 !== arguments[0] && arguments[0])
-          if (this.wL instanceof Array) {
-            let JJ = 0;
-            for (const cJ of this.wL) void 0 !== this._originalValue[JJ] && this._setValue(cJ, this._activeTargets[JJ], this._originalValue[JJ], -1, JJ), JJ++
-          } else void 0 !== this._originalValue[0] && this._setValue(this.wL, this._directTarget, this._originalValue[0], -1, 0);
+          if (this.Q8 instanceof Array) {
+            let BB = 0;
+            for (const TB of this.Q8) void 0 !== this._originalValue[BB] && this._setValue(TB, this._activeTargets[BB], this._originalValue[BB], -1, BB), BB++
+          } else void 0 !== this._originalValue[0] && this._setValue(this.Q8, this._directTarget, this._originalValue[0], -1, 0);
         this._offsetsCache = {}, this._highLimitsCache = {}, this._currentFrame = 0, this._blendingFactor = 0;
-        for (let JJ = 0; JJ < this._events.length; JJ++) this._events[JJ].isDone = !1
+        for (let BB = 0; BB < this._events.length; BB++) this._events[BB].isDone = !1
       }
       isStopped() {
         return this._stopped
       }
       dispose() {
-        const JJ = this._animation.runtimeAnimations.indexOf(this);
-        JJ > -1 && this._animation.runtimeAnimations.splice(JJ, 1)
+        const BB = this._animation.runtimeAnimations.indexOf(this);
+        BB > -1 && this._animation.runtimeAnimations.splice(BB, 1)
       }
-      setValue(JJ, cJ) {
+      setValue(BB, TB) {
         if (this._targetIsArray)
-          for (let ZJ = 0; ZJ < this.wL.length; ZJ++) {
-            const FJ = this.wL[ZJ];
-            this._setValue(FJ, this._activeTargets[ZJ], JJ, cJ, ZJ)
-          } else this._setValue(this.wL, this._directTarget, JJ, cJ, 0)
+          for (let dB = 0; dB < this.Q8.length; dB++) {
+            const VB = this.Q8[dB];
+            this._setValue(VB, this._activeTargets[dB], BB, TB, dB)
+          } else this._setValue(this.Q8, this._directTarget, BB, TB, 0)
       }
       _getOriginalValues() {
-        let JJ, cJ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        const ZJ = this._activeTargets[cJ];
-        if (yJ.c.InheritOriginalValueFromActiveAnimations) {
-          const JJ = this._scene._activeAnimatables;
-          for (let FJ = 0; FJ < JJ.length; FJ++) {
-            const UJ = JJ[FJ]._runtimeAnimations;
-            for (let JJ = 0; JJ < UJ.length; JJ++) {
-              const FJ = UJ[JJ];
-              if (FJ !== this && FJ._targetPath === this._targetPath)
-                for (let JJ = 0; JJ < FJ._activeTargets.length; JJ++)
-                  if (FJ._activeTargets[JJ] === ZJ && void 0 !== FJ._originalValue[JJ]) return void(FJ._originalValue[JJ] && FJ._originalValue[JJ].clone ? this._originalValue[cJ] = FJ._originalValue[JJ].clone() : this._originalValue[cJ] = FJ._originalValue[JJ])
+        let BB, TB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        const dB = this._activeTargets[TB];
+        if (MB.c.InheritOriginalValueFromActiveAnimations) {
+          const BB = this._scene._activeAnimatables;
+          for (let VB = 0; VB < BB.length; VB++) {
+            const yB = BB[VB]._runtimeAnimations;
+            for (let BB = 0; BB < yB.length; BB++) {
+              const VB = yB[BB];
+              if (VB !== this && VB._targetPath === this._targetPath)
+                for (let BB = 0; BB < VB._activeTargets.length; BB++)
+                  if (VB._activeTargets[BB] === dB && void 0 !== VB._originalValue[BB]) return void(VB._originalValue[BB] && VB._originalValue[BB].clone ? this._originalValue[TB] = VB._originalValue[BB].clone() : this._originalValue[TB] = VB._originalValue[BB])
             }
           }
         }
-        JJ = ZJ.getLocalMatrix && "_matrix" === this._targetPath ? ZJ.getLocalMatrix() : ZJ[this._targetPath], JJ && JJ.clone ? this._originalValue[cJ] = JJ.clone() : this._originalValue[cJ] = JJ
+        BB = dB.getLocalMatrix && "_matrix" === this._targetPath ? dB.getLocalMatrix() : dB[this._targetPath], BB && BB.clone ? this._originalValue[TB] = BB.clone() : this._originalValue[TB] = BB
       }
-      _registerTargetForLateAnimationBinding(JJ, cJ) {
-        const ZJ = JJ.target;
-        this._scene._registeredForLateAnimationBindings.pushNoDuplicate(ZJ), ZJ._lateAnimationHolders || (ZJ._lateAnimationHolders = {}), ZJ._lateAnimationHolders[JJ.targetPath] || (ZJ._lateAnimationHolders[JJ.targetPath] = {
+      _registerTargetForLateAnimationBinding(BB, TB) {
+        const dB = BB.target;
+        this._scene._registeredForLateAnimationBindings.pushNoDuplicate(dB), dB._lateAnimationHolders || (dB._lateAnimationHolders = {}), dB._lateAnimationHolders[BB.targetPath] || (dB._lateAnimationHolders[BB.targetPath] = {
           totalWeight: 0,
           totalAdditiveWeight: 0,
           animations: [],
           additiveAnimations: [],
-          originalValue: cJ
-        }), JJ.isAdditive ? (ZJ._lateAnimationHolders[JJ.targetPath].additiveAnimations.push(JJ), ZJ._lateAnimationHolders[JJ.targetPath].totalAdditiveWeight += JJ.weight) : (ZJ._lateAnimationHolders[JJ.targetPath].animations.push(JJ), ZJ._lateAnimationHolders[JJ.targetPath].totalWeight += JJ.weight)
+          originalValue: TB
+        }), BB.isAdditive ? (dB._lateAnimationHolders[BB.targetPath].additiveAnimations.push(BB), dB._lateAnimationHolders[BB.targetPath].totalAdditiveWeight += BB.weight) : (dB._lateAnimationHolders[BB.targetPath].animations.push(BB), dB._lateAnimationHolders[BB.targetPath].totalWeight += BB.weight)
       }
-      _setValue(JJ, cJ, ZJ, FJ, UJ) {
-        const XJ = this._scene._animationWrites,
-          AJ = this._scene._animationWriteCount++;
-        let qJ = XJ[AJ];
-        if (qJ || (qJ = XJ[AJ] = {
+      _setValue(BB, TB, dB, VB, yB) {
+        const lB = this._scene._animationWrites,
+          JB = this._scene._animationWriteCount++;
+        let YB = lB[JB];
+        if (YB || (YB = lB[JB] = {
             runtimeAnimation: this,
-            target: JJ,
-            weight: FJ,
+            target: BB,
+            weight: VB,
             additive: !1,
             blendingFactor: 1,
-            Yf: !1
-          }), qJ.runtimeAnimation = this, qJ.target = JJ, qJ.weight = FJ, qJ.additive = this.isAdditive, qJ.Yf = !1, this._currentActiveTarget = cJ, this._weight = FJ, this._enableBlending && this._blendingFactor <= 1) {
+            pH: !1
+          }), YB.runtimeAnimation = this, YB.target = BB, YB.weight = VB, YB.additive = this.isAdditive, YB.pH = !1, this._currentActiveTarget = TB, this._weight = VB, this._enableBlending && this._blendingFactor <= 1) {
           if (!this._originalBlendValue) {
-            const JJ = cJ[this._targetPath];
-            JJ.clone ? this._originalBlendValue = JJ.clone() : this._originalBlendValue = JJ
+            const BB = TB[this._targetPath];
+            BB.clone ? this._originalBlendValue = BB.clone() : this._originalBlendValue = BB
           }
-          this._originalBlendValue.m ? yJ.c.AllowMatrixDecomposeForInterpolation ? this._currentValue ? eJ.b.DecomposeLerpToRef(this._originalBlendValue, ZJ, this._blendingFactor, this._currentValue) : this._currentValue = eJ.b.DecomposeLerp(this._originalBlendValue, ZJ, this._blendingFactor) : this._currentValue ? eJ.b.LerpToRef(this._originalBlendValue, ZJ, this._blendingFactor, this._currentValue) : this._currentValue = eJ.b.Lerp(this._originalBlendValue, ZJ, this._blendingFactor) : this._currentValue = yJ.c._UniversalLerp(this._originalBlendValue, ZJ, this._blendingFactor);
-          const FJ = JJ && JJ.animationPropertiesOverride ? JJ.animationPropertiesOverride.blendingSpeed : this._animation.blendingSpeed;
-          qJ.blendingFactor = this._blendingFactor, this._blendingFactor += FJ
-        } else qJ.blendingFactor = 1, this._currentValue ? this._currentValue.rZJ ? this._currentValue.rZJ(ZJ) : this._currentValue = ZJ : this._currentValue = ZJ?.clone ? ZJ.clone() : ZJ; - 1 !== FJ ? this._registerTargetForLateAnimationBinding(this, this._originalValue[UJ]) : this._animationState.Mc === yJ.c.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT ? this._currentValue.addToRef ? this._currentValue.addToRef(this._originalValue[UJ], cJ[this._targetPath]) : cJ[this._targetPath] = this._originalValue[UJ] + this._currentValue : cJ[this._targetPath] = this._currentValue, JJ.ycJ && JJ.ycJ(this._animation.targetProperty)
+          this._originalBlendValue.m ? MB.c.AllowMatrixDecomposeForInterpolation ? this._currentValue ? pB.b.DecomposeLerpToRef(this._originalBlendValue, dB, this._blendingFactor, this._currentValue) : this._currentValue = pB.b.DecomposeLerp(this._originalBlendValue, dB, this._blendingFactor) : this._currentValue ? pB.b.LerpToRef(this._originalBlendValue, dB, this._blendingFactor, this._currentValue) : this._currentValue = pB.b.Lerp(this._originalBlendValue, dB, this._blendingFactor) : this._currentValue = MB.c._UniversalLerp(this._originalBlendValue, dB, this._blendingFactor);
+          const VB = BB && BB.animationPropertiesOverride ? BB.animationPropertiesOverride.blendingSpeed : this._animation.blendingSpeed;
+          YB.blendingFactor = this._blendingFactor, this._blendingFactor += VB
+        } else YB.blendingFactor = 1, this._currentValue ? this._currentValue.bdB ? this._currentValue.bdB(dB) : this._currentValue = dB : this._currentValue = dB?.clone ? dB.clone() : dB; - 1 !== VB ? this._registerTargetForLateAnimationBinding(this, this._originalValue[yB]) : this._animationState.Py === MB.c.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT ? this._currentValue.addToRef ? this._currentValue.addToRef(this._originalValue[yB], TB[this._targetPath]) : TB[this._targetPath] = this._originalValue[yB] + this._currentValue : TB[this._targetPath] = this._currentValue, BB.VdB && BB.VdB(this._animation.targetProperty)
       }
       _getCorrectLoopMode() {
-        if (this.wL && this.wL.animationPropertiesOverride) {
-          return "MorphTarget" === this.wL.getClassName?.() && null == this.wL._animationPropertiesOverride ? this._animation.Mc : this.wL.animationPropertiesOverride.Mc
+        if (this.Q8 && this.Q8.animationPropertiesOverride) {
+          return "MorphTarget" === this.Q8.getClassName?.() && null == this.Q8._animationPropertiesOverride ? this._animation.Py : this.Q8.animationPropertiesOverride.Py
         }
-        return this._animation.Mc
+        return this._animation.Py
       }
-      goToFrame(JJ) {
-        let cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
-        const ZJ = this._animation.getKeys();
-        JJ < ZJ[0].frame ? JJ = ZJ[0].frame : JJ > ZJ[ZJ.length - 1].frame && (JJ = ZJ[ZJ.length - 1].frame);
-        const FJ = this._events;
-        if (FJ.length)
-          for (let eJ = 0; eJ < FJ.length; eJ++) FJ[eJ].onlyOnce || (FJ[eJ].isDone = FJ[eJ].frame < JJ);
-        this._currentFrame = JJ;
-        const UJ = this._animation._interpolate(JJ, this._animationState);
-        this.setValue(UJ, cJ)
+      goToFrame(BB) {
+        let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
+        const dB = this._animation.getKeys();
+        BB < dB[0].frame ? BB = dB[0].frame : BB > dB[dB.length - 1].frame && (BB = dB[dB.length - 1].frame);
+        const VB = this._events;
+        if (VB.length)
+          for (let pB = 0; pB < VB.length; pB++) VB[pB].onlyOnce || (VB[pB].isDone = VB[pB].frame < BB);
+        this._currentFrame = BB;
+        const yB = this._animation._interpolate(BB, this._animationState);
+        this.setValue(yB, TB)
       }
-      _prepareForSpeedRatioChange(JJ) {
-        const cJ = this._previousElapsedTime * (this._animation.framePerSecond * JJ) / 1e3;
-        this._absoluteFrameOffset = this._previousAbsoluteFrame - cJ
+      _prepareForSpeedRatioChange(BB) {
+        const TB = this._previousElapsedTime * (this._animation.framePerSecond * BB) / 1e3;
+        this._absoluteFrameOffset = this._previousAbsoluteFrame - TB
       }
-      animate(JJ, cJ, ZJ, FJ, UJ) {
-        let eJ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : -1;
-        const XJ = this._animation,
-          AJ = XJ.targetPropertyPath;
-        if (!AJ || AJ.length < 1) return this._stopped = !0, !1;
-        let qJ, jJ = !0;
-        const YJ = this._events;
-        let hJ;
-        if (this._coreRuntimeAnimation) hJ = ZJ - cJ, qJ = this._coreRuntimeAnimation.currentFrame, this._currentFrame = qJ, this._animationState.repeatCount = this._coreRuntimeAnimation._animationState.repeatCount, this._animationState.highLimitValue = this._coreRuntimeAnimation._animationState.highLimitValue, this._animationState.offsetValue = this._coreRuntimeAnimation._animationState.offsetValue, this._playbackFrom = this._coreRuntimeAnimation._playbackFrom, this._playbackTo = this._coreRuntimeAnimation._playbackTo, this._playbackFrames = this._coreRuntimeAnimation._playbackFrames, this._playbackProgress = this._coreRuntimeAnimation._playbackProgress, this._playbackJumped = this._coreRuntimeAnimation._playbackJumped, this._playbackSyncRoot = this._coreRuntimeAnimation._playbackSyncRoot;
+      animate(BB, TB, dB, VB, yB) {
+        let pB = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : -1;
+        const lB = this._animation,
+          JB = lB.targetPropertyPath;
+        if (!JB || JB.length < 1) return this._stopped = !0, !1;
+        let YB, gB = !0;
+        const oB = this._events;
+        let kB;
+        if (this._coreRuntimeAnimation) kB = dB - TB, YB = this._coreRuntimeAnimation.currentFrame, this._currentFrame = YB, this._animationState.repeatCount = this._coreRuntimeAnimation._animationState.repeatCount, this._animationState.highLimitValue = this._coreRuntimeAnimation._animationState.highLimitValue, this._animationState.offsetValue = this._coreRuntimeAnimation._animationState.offsetValue, this._playbackFrom = this._coreRuntimeAnimation._playbackFrom, this._playbackTo = this._coreRuntimeAnimation._playbackTo, this._playbackFrames = this._coreRuntimeAnimation._playbackFrames, this._playbackProgress = this._coreRuntimeAnimation._playbackProgress, this._playbackJumped = this._coreRuntimeAnimation._playbackJumped, this._playbackSyncRoot = this._coreRuntimeAnimation._playbackSyncRoot;
         else {
-          let eJ;
-          (cJ < this._minFrame || cJ > this._maxFrame) && (cJ = this._minFrame), (ZJ < this._minFrame || ZJ > this._maxFrame) && (ZJ = this._maxFrame), hJ = ZJ - cJ;
-          let AJ = JJ * (XJ.framePerSecond * UJ) / 1e3 + this._absoluteFrameOffset,
-            DJ = 0,
-            sJ = !1;
-          const nJ = FJ && this._animationState.Mc === yJ.c.ANIMATIONLOOPMODE_YOYO;
-          if (nJ) {
-            const JJ = (AJ - cJ) / hJ,
-              ZJ = Math.sin(JJ * Math.PI);
-            AJ = Math.abs(ZJ) * hJ + cJ;
-            const FJ = ZJ >= 0 ? 1 : -1;
-            this._yoyoDirection !== FJ && (sJ = !0), this._yoyoDirection = FJ
+          let pB;
+          (TB < this._minFrame || TB > this._maxFrame) && (TB = this._minFrame), (dB < this._minFrame || dB > this._maxFrame) && (dB = this._maxFrame), kB = dB - TB;
+          let JB = BB * (lB.framePerSecond * yB) / 1e3 + this._absoluteFrameOffset,
+            LB = 0,
+            OB = !1;
+          const DB = VB && this._animationState.Py === MB.c.ANIMATIONLOOPMODE_YOYO;
+          if (DB) {
+            const BB = (JB - TB) / kB,
+              dB = Math.sin(BB * Math.PI);
+            JB = Math.abs(dB) * kB + TB;
+            const VB = dB >= 0 ? 1 : -1;
+            this._yoyoDirection !== VB && (OB = !0), this._yoyoDirection = VB
           }
-          if (this._previousElapsedTime = JJ, this._previousAbsoluteFrame = AJ, !FJ && ZJ >= cJ && (AJ >= hJ && UJ > 0 || AJ <= 0 && UJ < 0)) jJ = !1, DJ = XJ.evaluate(ZJ);
-          else if (!FJ && cJ >= ZJ && (AJ <= hJ && UJ < 0 || AJ >= 0 && UJ > 0)) jJ = !1, DJ = XJ.evaluate(cJ);
-          else if (this._animationState.Mc !== yJ.c.ANIMATIONLOOPMODE_CYCLE) {
-            const JJ = ZJ.toString() + cJ.toString();
-            if (!this._offsetsCache[JJ]) {
-              this._animationState.repeatCount = 0, this._animationState.Mc = yJ.c.ANIMATIONLOOPMODE_CYCLE;
-              const FJ = XJ._interpolate(cJ, this._animationState),
-                UJ = XJ._interpolate(ZJ, this._animationState);
-              switch (this._animationState.Mc = this._getCorrectLoopMode(), XJ.dataType) {
-                case yJ.c.ANIMATIONTYPE_FLOAT:
-                  this._offsetsCache[JJ] = UJ - FJ;
+          if (this._previousElapsedTime = BB, this._previousAbsoluteFrame = JB, !VB && dB >= TB && (JB >= kB && yB > 0 || JB <= 0 && yB < 0)) gB = !1, LB = lB.evaluate(dB);
+          else if (!VB && TB >= dB && (JB <= kB && yB < 0 || JB >= 0 && yB > 0)) gB = !1, LB = lB.evaluate(TB);
+          else if (this._animationState.Py !== MB.c.ANIMATIONLOOPMODE_CYCLE) {
+            const BB = dB.toString() + TB.toString();
+            if (!this._offsetsCache[BB]) {
+              this._animationState.repeatCount = 0, this._animationState.Py = MB.c.ANIMATIONLOOPMODE_CYCLE;
+              const VB = lB._interpolate(TB, this._animationState),
+                yB = lB._interpolate(dB, this._animationState);
+              switch (this._animationState.Py = this._getCorrectLoopMode(), lB.dataType) {
+                case MB.c.ANIMATIONTYPE_FLOAT:
+                  this._offsetsCache[BB] = yB - VB;
                   break;
-                case yJ.c.ANIMATIONTYPE_QUATERNION:
-                case yJ.c.ANIMATIONTYPE_VECTOR3:
-                case yJ.c.ANIMATIONTYPE_VECTOR2:
-                case yJ.c.ANIMATIONTYPE_SIZE:
-                case yJ.c.ANIMATIONTYPE_COLOR3:
-                case yJ.c.ANIMATIONTYPE_COLOR4:
-                  this._offsetsCache[JJ] = UJ.subtract(FJ)
+                case MB.c.ANIMATIONTYPE_QUATERNION:
+                case MB.c.ANIMATIONTYPE_VECTOR3:
+                case MB.c.ANIMATIONTYPE_VECTOR2:
+                case MB.c.ANIMATIONTYPE_SIZE:
+                case MB.c.ANIMATIONTYPE_COLOR3:
+                case MB.c.ANIMATIONTYPE_COLOR4:
+                  this._offsetsCache[BB] = yB.subtract(VB)
               }
-              this._highLimitsCache[JJ] = UJ
+              this._highLimitsCache[BB] = yB
             }
-            DJ = this._highLimitsCache[JJ], eJ = this._offsetsCache[JJ]
+            LB = this._highLimitsCache[BB], pB = this._offsetsCache[BB]
           }
-          if (void 0 === eJ) switch (XJ.dataType) {
-            case yJ.c.ANIMATIONTYPE_FLOAT:
-              eJ = 0;
+          if (void 0 === pB) switch (lB.dataType) {
+            case MB.c.ANIMATIONTYPE_FLOAT:
+              pB = 0;
               break;
-            case yJ.c.ANIMATIONTYPE_QUATERNION:
-              eJ = yJ.m;
+            case MB.c.ANIMATIONTYPE_QUATERNION:
+              pB = MB.n;
               break;
-            case yJ.c.ANIMATIONTYPE_VECTOR3:
-              eJ = yJ.v;
+            case MB.c.ANIMATIONTYPE_VECTOR3:
+              pB = MB.t;
               break;
-            case yJ.c.ANIMATIONTYPE_VECTOR2:
-              eJ = yJ.s;
+            case MB.c.ANIMATIONTYPE_VECTOR2:
+              pB = MB.r;
               break;
-            case yJ.c.ANIMATIONTYPE_SIZE:
-              eJ = yJ.q;
+            case MB.c.ANIMATIONTYPE_SIZE:
+              pB = MB.o;
               break;
-            case yJ.c.ANIMATIONTYPE_COLOR3:
-              eJ = yJ.h;
+            case MB.c.ANIMATIONTYPE_COLOR3:
+              pB = MB.j;
               break;
-            case yJ.c.ANIMATIONTYPE_COLOR4:
-              eJ = yJ.j
+            case MB.c.ANIMATIONTYPE_COLOR4:
+              pB = MB.l
           }
-          const GJ = this._host ? this._host.syncRoot : null;
-          let fJ, xJ = this._playbackFrames,
-            rJ = !1;
-          if (GJ) {
-            const JJ = GJ.toFrame - GJ.fromFrame,
-              ZJ = GJ.masterFrame,
-              FJ = (ZJ - GJ.fromFrame) / JJ;
-            qJ = cJ + hJ * FJ;
-            const UJ = GJ.getAnimations()[0];
-            if (UJ && 0 !== JJ) {
-              const JJ = hJ * FJ,
-                cJ = UJ._playbackTo - UJ._playbackFrom;
-              if (0 !== cJ && UJ._playbackFrom <= GJ.fromFrame && UJ._playbackTo >= GJ.toFrame) {
-                xJ = hJ * Math.round((UJ._playbackFrames - (UJ._currentFrame - UJ._playbackFrom)) / cJ) + JJ
-              } else rJ = (ZJ - this._playbackSyncMasterFrame) * (UJ._playbackFrames - this._playbackSyncMasterPlayed) < 0, xJ = JJ;
-              rJ = rJ || UJ._playbackJumped, this._playbackSyncMasterPlayed = UJ._playbackFrames, this._playbackSyncMasterFrame = ZJ
+          const uB = this._host ? this._host.syncRoot : null;
+          let HB, EB = this._playbackFrames,
+            vB = !1;
+          if (uB) {
+            const BB = uB.toFrame - uB.fromFrame,
+              dB = uB.masterFrame,
+              VB = (dB - uB.fromFrame) / BB;
+            YB = TB + kB * VB;
+            const yB = uB.getAnimations()[0];
+            if (yB && 0 !== BB) {
+              const BB = kB * VB,
+                TB = yB._playbackTo - yB._playbackFrom;
+              if (0 !== TB && yB._playbackFrom <= uB.fromFrame && yB._playbackTo >= uB.toFrame) {
+                EB = kB * Math.round((yB._playbackFrames - (yB._currentFrame - yB._playbackFrom)) / TB) + BB
+              } else vB = (dB - this._playbackSyncMasterFrame) * (yB._playbackFrames - this._playbackSyncMasterPlayed) < 0, EB = BB;
+              vB = vB || yB._playbackJumped, this._playbackSyncMasterPlayed = yB._playbackFrames, this._playbackSyncMasterFrame = dB
             }
-          } else qJ = AJ > 0 && cJ > ZJ || AJ < 0 && cJ < ZJ ? jJ && 0 !== hJ ? ZJ + AJ % hJ : cJ : jJ && 0 !== hJ ? cJ + AJ % hJ : ZJ;
-          if (!nJ && (UJ > 0 && this.currentFrame > qJ || UJ < 0 && this.currentFrame < qJ) || nJ && sJ) {
+          } else YB = JB > 0 && TB > dB || JB < 0 && TB < dB ? gB && 0 !== kB ? dB + JB % kB : TB : gB && 0 !== kB ? TB + JB % kB : dB;
+          if (!DB && (yB > 0 && this.currentFrame > YB || yB < 0 && this.currentFrame < YB) || DB && OB) {
             this._onLoop();
-            for (let JJ = 0; JJ < YJ.length; JJ++) YJ[JJ].onlyOnce || (YJ[JJ].isDone = !1);
-            this._animationState.key = UJ > 0 ? 0 : XJ.getKeys().length - 1
+            for (let BB = 0; BB < oB.length; BB++) oB[BB].onlyOnce || (oB[BB].isDone = !1);
+            this._animationState.key = yB > 0 ? 0 : lB.getKeys().length - 1
           }
-          if (this._currentFrame = qJ, this._animationState.repeatCount = 0 === hJ ? 0 : AJ / hJ | 0, this._animationState.highLimitValue = DJ, this._animationState.offsetValue = eJ, this._playbackFrom = cJ, this._playbackTo = ZJ, this._playbackJumped = rJ, this._playbackSyncRoot = GJ, GJ) fJ = xJ;
-          else if (jJ) fJ = nJ ? qJ === cJ && AJ === ZJ ? hJ : qJ - cJ : AJ;
+          if (this._currentFrame = YB, this._animationState.repeatCount = 0 === kB ? 0 : JB / kB | 0, this._animationState.highLimitValue = LB, this._animationState.offsetValue = pB, this._playbackFrom = TB, this._playbackTo = dB, this._playbackJumped = vB, this._playbackSyncRoot = uB, uB) HB = EB;
+          else if (gB) HB = DB ? YB === TB && JB === dB ? kB : YB - TB : JB;
           else {
-            const JJ = 0 !== hJ ? Math.floor(this._playbackFrames / hJ) : 0;
-            fJ = (qJ === ZJ ? JJ + 1 : JJ) * hJ
+            const BB = 0 !== kB ? Math.floor(this._playbackFrames / kB) : 0;
+            HB = (YB === dB ? BB + 1 : BB) * kB
           }
-          this._playbackFrames = fJ, this._playbackProgress = this._animationState.Mc === yJ.c.ANIMATIONLOOPMODE_CONSTANT && this._animationState.repeatCount > 0 ? hJ : fJ
+          this._playbackFrames = HB, this._playbackProgress = this._animationState.Py === MB.c.ANIMATIONLOOPMODE_CONSTANT && this._animationState.repeatCount > 0 ? kB : HB
         }
-        const DJ = XJ._interpolate(qJ, this._animationState);
-        if (this.setValue(DJ, eJ), YJ.length)
-          for (let sJ = 0; sJ < YJ.length; sJ++)
-            if (hJ >= 0 && qJ >= YJ[sJ].frame && YJ[sJ].frame >= cJ || hJ < 0 && qJ <= YJ[sJ].frame && YJ[sJ].frame <= cJ) {
-              const JJ = YJ[sJ];
-              JJ.isDone || (JJ.onlyOnce && (YJ.splice(sJ, 1), sJ--), JJ.isDone = !0, JJ.action(qJ))
-            } return jJ || (this._stopped = !0), jJ
+        const LB = lB._interpolate(YB, this._animationState);
+        if (this.setValue(LB, pB), oB.length)
+          for (let OB = 0; OB < oB.length; OB++)
+            if (kB >= 0 && YB >= oB[OB].frame && oB[OB].frame >= TB || kB < 0 && YB <= oB[OB].frame && oB[OB].frame <= TB) {
+              const BB = oB[OB];
+              BB.isDone || (BB.onlyOnce && (oB.splice(OB, 1), OB--), BB.isDone = !0, BB.action(YB))
+            } return gB || (this._stopped = !0), gB
       }
     }
-    var IJ = ZJ(38700);
-    class MJ {
+    var wB = dB(38657);
+    class UB {
       get syncRoot() {
         return this._syncRoot
       }
@@ -1846,412 +1846,412 @@ export const modules = {
       get weight() {
         return this._weight
       }
-      set weight(JJ) {
-        this._weight = -1 !== JJ ? Math.min(Math.max(JJ, 0), 1) : -1
+      set weight(BB) {
+        this._weight = -1 !== BB ? Math.min(Math.max(BB, 0), 1) : -1
       }
       get speedRatio() {
         return this._speedRatio
       }
-      set speedRatio(JJ) {
-        for (let cJ = 0; cJ < this._runtimeAnimations.length; cJ++) {
-          this._runtimeAnimations[cJ]._prepareForSpeedRatioChange(JJ)
+      set speedRatio(BB) {
+        for (let TB = 0; TB < this._runtimeAnimations.length; TB++) {
+          this._runtimeAnimations[TB]._prepareForSpeedRatioChange(BB)
         }
-        this._speedRatio = JJ, null !== this._goToFrame && this.goToFrame(this._goToFrame)
+        this._speedRatio = BB, null !== this._goToFrame && this.goToFrame(this._goToFrame)
       }
       get elapsedTime() {
         return null === this._localDelayOffset ? 0 : this._scene._animationTime - this._localDelayOffset
       }
-      constructor(JJ, cJ) {
-        let ZJ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          FJ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 100,
-          eJ = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-          XJ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 1,
-          AJ = arguments.length > 6 ? arguments[6] : void 0,
-          qJ = arguments.length > 7 ? arguments[7] : void 0,
-          jJ = arguments.length > 8 ? arguments[8] : void 0,
-          YJ = arguments.length > 9 && void 0 !== arguments[9] && arguments[9],
-          hJ = arguments.length > 10 && void 0 !== arguments[10] ? arguments[10] : 0;
-        this.target = cJ, this.fromFrame = ZJ, this.toFrame = FJ, this.loopAnimation = eJ, this.onAnimationEnd = AJ, this.onAnimationLoop = jJ, this.isAdditive = YJ, this.playOrder = hJ, this._localDelayOffset = null, this._pausedDelay = null, this._manualJumpDelay = null, this._runtimeAnimations = new Array, this.kE = !1, this._speedRatio = 1, this._weight = -1, this._previousWeight = -1, this._syncRoot = null, this._frameToSyncFromJump = null, this._goToFrame = null, this.disposeOnEnd = !0, this.animationStarted = !1, this.onAnimationEndObservable = new UJ.c, this.onAnimationLoopObservable = new UJ.c, this._scene = JJ, qJ && this.appendAnimations(cJ, qJ), this._speedRatio = XJ, JJ._activeAnimatables.push(this)
+      constructor(BB, TB) {
+        let dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          VB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 100,
+          pB = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+          lB = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 1,
+          JB = arguments.length > 6 ? arguments[6] : void 0,
+          YB = arguments.length > 7 ? arguments[7] : void 0,
+          gB = arguments.length > 8 ? arguments[8] : void 0,
+          oB = arguments.length > 9 && void 0 !== arguments[9] && arguments[9],
+          kB = arguments.length > 10 && void 0 !== arguments[10] ? arguments[10] : 0;
+        this.target = TB, this.fromFrame = dB, this.toFrame = VB, this.loopAnimation = pB, this.onAnimationEnd = JB, this.onAnimationLoop = gB, this.isAdditive = oB, this.playOrder = kB, this._localDelayOffset = null, this._pausedDelay = null, this._manualJumpDelay = null, this._runtimeAnimations = new Array, this.Wm = !1, this._speedRatio = 1, this._weight = -1, this._previousWeight = -1, this._syncRoot = null, this._frameToSyncFromJump = null, this._goToFrame = null, this.disposeOnEnd = !0, this.animationStarted = !1, this.onAnimationEndObservable = new yB.e, this.onAnimationLoopObservable = new yB.e, this._scene = BB, YB && this.appendAnimations(TB, YB), this._speedRatio = lB, BB._activeAnimatables.push(this)
       }
-      syncWith(JJ) {
-        if (this._syncRoot = JJ, JJ) {
-          const JJ = this._scene._activeAnimatables.indexOf(this);
-          JJ > -1 && (this._scene._activeAnimatables.splice(JJ, 1), this._scene._activeAnimatables.push(this))
+      syncWith(BB) {
+        if (this._syncRoot = BB, BB) {
+          const BB = this._scene._activeAnimatables.indexOf(this);
+          BB > -1 && (this._scene._activeAnimatables.splice(BB, 1), this._scene._activeAnimatables.push(this))
         }
         return this
       }
       getAnimations() {
         return this._runtimeAnimations
       }
-      appendAnimations(JJ, cJ) {
-        for (let ZJ = 0; ZJ < cJ.length; ZJ++) {
-          const FJ = cJ[ZJ],
-            UJ = new SJ(JJ, FJ, this._scene, this);
-          UJ._onLoop = () => {
+      appendAnimations(BB, TB) {
+        for (let dB = 0; dB < TB.length; dB++) {
+          const VB = TB[dB],
+            yB = new zB(BB, VB, this._scene, this);
+          yB._onLoop = () => {
             this.onAnimationLoopObservable.notifyObservers(this), this.onAnimationLoop && this.onAnimationLoop()
-          }, this._runtimeAnimations.push(UJ)
+          }, this._runtimeAnimations.push(yB)
         }
       }
-      getAnimationByTargetProperty(JJ) {
-        const cJ = this._runtimeAnimations;
-        for (let ZJ = 0; ZJ < cJ.length; ZJ++)
-          if (cJ[ZJ].animation.targetProperty === JJ) return cJ[ZJ].animation;
+      getAnimationByTargetProperty(BB) {
+        const TB = this._runtimeAnimations;
+        for (let dB = 0; dB < TB.length; dB++)
+          if (TB[dB].animation.targetProperty === BB) return TB[dB].animation;
         return null
       }
-      getRuntimeAnimationByTargetProperty(JJ) {
-        const cJ = this._runtimeAnimations;
-        for (let ZJ = 0; ZJ < cJ.length; ZJ++)
-          if (cJ[ZJ].animation.targetProperty === JJ) return cJ[ZJ];
+      getRuntimeAnimationByTargetProperty(BB) {
+        const TB = this._runtimeAnimations;
+        for (let dB = 0; dB < TB.length; dB++)
+          if (TB[dB].animation.targetProperty === BB) return TB[dB];
         return null
       }
       reset() {
-        const JJ = this._runtimeAnimations;
-        for (let cJ = 0; cJ < JJ.length; cJ++) JJ[cJ].reset(!0);
+        const BB = this._runtimeAnimations;
+        for (let TB = 0; TB < BB.length; TB++) BB[TB].reset(!0);
         this._localDelayOffset = null, this._pausedDelay = null
       }
-      enableBlending(JJ) {
-        const cJ = this._runtimeAnimations;
-        for (let ZJ = 0; ZJ < cJ.length; ZJ++) cJ[ZJ].animation.enableBlending = !0, cJ[ZJ].animation.blendingSpeed = JJ
+      enableBlending(BB) {
+        const TB = this._runtimeAnimations;
+        for (let dB = 0; dB < TB.length; dB++) TB[dB].animation.enableBlending = !0, TB[dB].animation.blendingSpeed = BB
       }
       disableBlending() {
-        const JJ = this._runtimeAnimations;
-        for (let cJ = 0; cJ < JJ.length; cJ++) JJ[cJ].animation.enableBlending = !1
+        const BB = this._runtimeAnimations;
+        for (let TB = 0; TB < BB.length; TB++) BB[TB].animation.enableBlending = !1
       }
-      goToFrame(JJ) {
-        let cJ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const ZJ = this._runtimeAnimations;
-        if (ZJ[0]) {
-          const cJ = ZJ[0].animation.framePerSecond;
-          this._frameToSyncFromJump = this._frameToSyncFromJump ?? ZJ[0].currentFrame;
-          const FJ = 0 === this.speedRatio ? 0 : (JJ - this._frameToSyncFromJump) / cJ * 1e3 / this.speedRatio;
-          this._manualJumpDelay = -FJ
+      goToFrame(BB) {
+        let TB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const dB = this._runtimeAnimations;
+        if (dB[0]) {
+          const TB = dB[0].animation.framePerSecond;
+          this._frameToSyncFromJump = this._frameToSyncFromJump ?? dB[0].currentFrame;
+          const VB = 0 === this.speedRatio ? 0 : (BB - this._frameToSyncFromJump) / TB * 1e3 / this.speedRatio;
+          this._manualJumpDelay = -VB
         }
-        for (let FJ = 0; FJ < ZJ.length; FJ++) ZJ[FJ].goToFrame(JJ, cJ ? this._weight : -1);
-        this._goToFrame = JJ
+        for (let VB = 0; VB < dB.length; VB++) dB[VB].goToFrame(BB, TB ? this._weight : -1);
+        this._goToFrame = BB
       }
       get paused() {
-        return this.kE
+        return this.Wm
       }
       pause() {
-        this.kE || (this.kE = !0)
+        this.Wm || (this.Wm = !0)
       }
       restart() {
-        this.kE = !1
+        this.Wm = !1
       }
       _raiseOnAnimationEnd() {
         this.onAnimationEnd && this.onAnimationEnd(), this.onAnimationEndObservable.notifyObservers(this)
       }
-      stop(JJ, cJ) {
-        let ZJ = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          FJ = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        if (JJ || cJ) {
-          const UJ = this._scene._activeAnimatables.indexOf(this);
-          if (UJ > -1) {
-            const eJ = this._runtimeAnimations;
-            for (let ZJ = eJ.length - 1; ZJ >= 0; ZJ--) {
-              const FJ = eJ[ZJ];
-              JJ && FJ.animation.name != JJ || (cJ && !cJ(FJ.target) || (FJ.dispose(), eJ.splice(ZJ, 1)))
+      stop(BB, TB) {
+        let dB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          VB = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        if (BB || TB) {
+          const yB = this._scene._activeAnimatables.indexOf(this);
+          if (yB > -1) {
+            const pB = this._runtimeAnimations;
+            for (let dB = pB.length - 1; dB >= 0; dB--) {
+              const VB = pB[dB];
+              BB && VB.animation.name != BB || (TB && !TB(VB.target) || (VB.dispose(), pB.splice(dB, 1)))
             }
-            0 == eJ.length && (ZJ || this._scene._activeAnimatables.splice(UJ, 1), FJ || this._raiseOnAnimationEnd())
+            0 == pB.length && (dB || this._scene._activeAnimatables.splice(yB, 1), VB || this._raiseOnAnimationEnd())
           }
         } else {
-          const JJ = this._scene._activeAnimatables.indexOf(this);
-          if (JJ > -1) {
-            ZJ || this._scene._activeAnimatables.splice(JJ, 1);
-            const cJ = this._runtimeAnimations;
-            for (let JJ = 0; JJ < cJ.length; JJ++) cJ[JJ].dispose();
-            this._runtimeAnimations.length = 0, FJ || this._raiseOnAnimationEnd()
+          const BB = this._scene._activeAnimatables.indexOf(this);
+          if (BB > -1) {
+            dB || this._scene._activeAnimatables.splice(BB, 1);
+            const TB = this._runtimeAnimations;
+            for (let BB = 0; BB < TB.length; BB++) TB[BB].dispose();
+            this._runtimeAnimations.length = 0, VB || this._raiseOnAnimationEnd()
           }
         }
       }
       async waitAsync() {
-        return await new Promise((JJ => {
+        return await new Promise((BB => {
           this.onAnimationEndObservable.add((() => {
-            JJ(this)
+            BB(this)
           }), void 0, void 0, this, !0)
         }))
       }
-      _animate(JJ) {
-        if (this.kE) return this.animationStarted = !1, null === this._pausedDelay && (this._pausedDelay = JJ), !0;
-        if (null === this._localDelayOffset ? (this._localDelayOffset = JJ, this._pausedDelay = null) : null !== this._pausedDelay && (this._localDelayOffset += JJ - this._pausedDelay, this._pausedDelay = null), null !== this._manualJumpDelay && (this._localDelayOffset += this.speedRatio < 0 ? -this._manualJumpDelay : this._manualJumpDelay, this._manualJumpDelay = null, this._frameToSyncFromJump = null), this._goToFrame = null, !MJ.ProcessPausedAnimatables && 0 === this._weight && 0 === this._previousWeight) return !0;
+      _animate(BB) {
+        if (this.Wm) return this.animationStarted = !1, null === this._pausedDelay && (this._pausedDelay = BB), !0;
+        if (null === this._localDelayOffset ? (this._localDelayOffset = BB, this._pausedDelay = null) : null !== this._pausedDelay && (this._localDelayOffset += BB - this._pausedDelay, this._pausedDelay = null), null !== this._manualJumpDelay && (this._localDelayOffset += this.speedRatio < 0 ? -this._manualJumpDelay : this._manualJumpDelay, this._manualJumpDelay = null, this._frameToSyncFromJump = null), this._goToFrame = null, !UB.ProcessPausedAnimatables && 0 === this._weight && 0 === this._previousWeight) return !0;
         this._previousWeight = this._weight;
-        let cJ = !1;
-        const ZJ = this._runtimeAnimations;
-        let FJ;
-        for (FJ = 0; FJ < ZJ.length; FJ++) {
-          const UJ = ZJ[FJ].animate(JJ - this._localDelayOffset, this.fromFrame, this.toFrame, this.loopAnimation, this._speedRatio, this._weight);
-          cJ = cJ || UJ
+        let TB = !1;
+        const dB = this._runtimeAnimations;
+        let VB;
+        for (VB = 0; VB < dB.length; VB++) {
+          const yB = dB[VB].animate(BB - this._localDelayOffset, this.fromFrame, this.toFrame, this.loopAnimation, this._speedRatio, this._weight);
+          TB = TB || yB
         }
-        if (this.animationStarted = cJ, !cJ) {
+        if (this.animationStarted = TB, !TB) {
           if (this.disposeOnEnd)
-            for (FJ = this._scene._activeAnimatables.indexOf(this), this._scene._activeAnimatables.splice(FJ, 1), FJ = 0; FJ < ZJ.length; FJ++) ZJ[FJ].dispose();
+            for (VB = this._scene._activeAnimatables.indexOf(this), this._scene._activeAnimatables.splice(VB, 1), VB = 0; VB < dB.length; VB++) dB[VB].dispose();
           this._raiseOnAnimationEnd(), this.disposeOnEnd && (this.onAnimationEnd = null, this.onAnimationLoop = null, this.onAnimationLoopObservable.clear(), this.onAnimationEndObservable.clear())
         }
-        return cJ
+        return TB
       }
     }
 
-    function bJ(JJ) {
-      if (0 === JJ.totalWeight && 0 === JJ.totalAdditiveWeight) return JJ.originalValue;
-      let cJ = 1;
-      const ZJ = eJ.h.Pn[0],
-        FJ = eJ.h.Pn[1],
-        UJ = eJ.h.Quaternion[0];
-      let XJ = 0;
-      const AJ = JJ.animations[0],
-        qJ = JJ.originalValue;
-      let jJ, YJ = !1;
-      if (JJ.totalWeight < 1) jJ = 1 - JJ.totalWeight, qJ.decompose(FJ, UJ, ZJ);
+    function FB(BB) {
+      if (0 === BB.totalWeight && 0 === BB.totalAdditiveWeight) return BB.originalValue;
+      let TB = 1;
+      const dB = pB.j.RD[0],
+        VB = pB.j.RD[1],
+        yB = pB.j.Quaternion[0];
+      let lB = 0;
+      const JB = BB.animations[0],
+        YB = BB.originalValue;
+      let gB, oB = !1;
+      if (BB.totalWeight < 1) gB = 1 - BB.totalWeight, YB.decompose(VB, yB, dB);
       else {
-        if (XJ = 1, cJ = JJ.totalWeight, jJ = AJ.weight / cJ, 1 == jJ) {
-          if (!JJ.totalAdditiveWeight) return AJ.currentValue;
-          YJ = !0
+        if (lB = 1, TB = BB.totalWeight, gB = JB.weight / TB, 1 == gB) {
+          if (!BB.totalAdditiveWeight) return JB.currentValue;
+          oB = !0
         }
-        AJ.currentValue.decompose(FJ, UJ, ZJ)
+        JB.currentValue.decompose(VB, yB, dB)
       }
-      if (!YJ) {
-        FJ.scaleInPlace(jJ), ZJ.scaleInPlace(jJ), UJ.scaleInPlace(jJ);
-        for (let AJ = XJ; AJ < JJ.animations.length; AJ++) {
-          const XJ = JJ.animations[AJ];
-          if (0 === XJ.weight) continue;
-          jJ = XJ.weight / cJ;
-          const qJ = eJ.h.Pn[2],
-            YJ = eJ.h.Pn[3],
-            hJ = eJ.h.Quaternion[1];
-          XJ.currentValue.decompose(YJ, hJ, qJ), YJ.scaleAndAddToRef(jJ, FJ), hJ.scaleAndAddToRef(eJ.e.Dot(UJ, hJ) > 0 ? jJ : -jJ, UJ), qJ.scaleAndAddToRef(jJ, ZJ)
+      if (!oB) {
+        VB.scaleInPlace(gB), dB.scaleInPlace(gB), yB.scaleInPlace(gB);
+        for (let JB = lB; JB < BB.animations.length; JB++) {
+          const lB = BB.animations[JB];
+          if (0 === lB.weight) continue;
+          gB = lB.weight / TB;
+          const YB = pB.j.RD[2],
+            oB = pB.j.RD[3],
+            kB = pB.j.Quaternion[1];
+          lB.currentValue.decompose(oB, kB, YB), oB.scaleAndAddToRef(gB, VB), kB.scaleAndAddToRef(pB.f.Dot(yB, kB) > 0 ? gB : -gB, yB), YB.scaleAndAddToRef(gB, dB)
         }
-        UJ.normalize()
+        yB.normalize()
       }
-      for (let DJ = 0; DJ < JJ.additiveAnimations.length; DJ++) {
-        const cJ = JJ.additiveAnimations[DJ];
-        if (0 === cJ.weight) continue;
-        const XJ = eJ.h.Pn[2],
-          AJ = eJ.h.Pn[3],
-          qJ = eJ.h.Quaternion[1];
-        cJ.currentValue.decompose(AJ, qJ, XJ), AJ.multiplyToRef(FJ, AJ), eJ.j.LerpToRef(FJ, AJ, cJ.weight, FJ), UJ.multiplyToRef(qJ, qJ), eJ.e.SlerpToRef(UJ, qJ, cJ.weight, UJ), XJ.scaleAndAddToRef(cJ.weight, ZJ)
+      for (let LB = 0; LB < BB.additiveAnimations.length; LB++) {
+        const TB = BB.additiveAnimations[LB];
+        if (0 === TB.weight) continue;
+        const lB = pB.j.RD[2],
+          JB = pB.j.RD[3],
+          YB = pB.j.Quaternion[1];
+        TB.currentValue.decompose(JB, YB, lB), JB.multiplyToRef(VB, JB), pB.p.LerpToRef(VB, JB, TB.weight, VB), yB.multiplyToRef(YB, YB), pB.f.SlerpToRef(yB, YB, TB.weight, yB), lB.scaleAndAddToRef(TB.weight, dB)
       }
-      const hJ = AJ ? AJ._animationState.workValue : eJ.h.Matrix[0].clone();
-      return eJ.b.ComposeToRef(FJ, UJ, ZJ, hJ), hJ
+      const kB = JB ? JB._animationState.workValue : pB.j.Matrix[0].clone();
+      return pB.b.ComposeToRef(VB, yB, dB, kB), kB
     }
 
-    function wJ(JJ, cJ) {
-      if (0 === JJ.totalWeight && 0 === JJ.totalAdditiveWeight) return cJ;
-      const ZJ = JJ.animations[0],
-        FJ = JJ.originalValue;
-      let UJ = cJ;
-      if (0 === JJ.totalWeight && JJ.totalAdditiveWeight > 0) UJ.rZJ(FJ);
-      else if (1 === JJ.animations.length) {
-        if (eJ.e.SlerpToRef(FJ, ZJ.currentValue, Math.min(1, JJ.totalWeight), UJ), 0 === JJ.totalAdditiveWeight) return UJ
-      } else if (JJ.animations.length > 1) {
-        let ZJ, XJ, AJ = 1;
-        if (JJ.totalWeight < 1) {
-          const cJ = 1 - JJ.totalWeight;
-          ZJ = [], XJ = [], ZJ.push(FJ), XJ.push(cJ)
+    function KB(BB, TB) {
+      if (0 === BB.totalWeight && 0 === BB.totalAdditiveWeight) return TB;
+      const dB = BB.animations[0],
+        VB = BB.originalValue;
+      let yB = TB;
+      if (0 === BB.totalWeight && BB.totalAdditiveWeight > 0) yB.bdB(VB);
+      else if (1 === BB.animations.length) {
+        if (pB.f.SlerpToRef(VB, dB.currentValue, Math.min(1, BB.totalWeight), yB), 0 === BB.totalAdditiveWeight) return yB
+      } else if (BB.animations.length > 1) {
+        let dB, lB, JB = 1;
+        if (BB.totalWeight < 1) {
+          const TB = 1 - BB.totalWeight;
+          dB = [], lB = [], dB.push(VB), lB.push(TB)
         } else {
-          if (2 === JJ.animations.length && (eJ.e.SlerpToRef(JJ.animations[0].currentValue, JJ.animations[1].currentValue, JJ.animations[1].weight / JJ.totalWeight, cJ), 0 === JJ.totalAdditiveWeight)) return cJ;
-          ZJ = [], XJ = [], AJ = JJ.totalWeight
+          if (2 === BB.animations.length && (pB.f.SlerpToRef(BB.animations[0].currentValue, BB.animations[1].currentValue, BB.animations[1].weight / BB.totalWeight, TB), 0 === BB.totalAdditiveWeight)) return TB;
+          dB = [], lB = [], JB = BB.totalWeight
         }
-        for (let cJ = 0; cJ < JJ.animations.length; cJ++) {
-          const FJ = JJ.animations[cJ];
-          ZJ.push(FJ.currentValue), XJ.push(FJ.weight / AJ)
+        for (let TB = 0; TB < BB.animations.length; TB++) {
+          const VB = BB.animations[TB];
+          dB.push(VB.currentValue), lB.push(VB.weight / JB)
         }
-        let qJ = 0;
-        for (let JJ = 0; JJ < ZJ.length;) JJ ? (qJ += XJ[JJ], eJ.e.SlerpToRef(UJ, ZJ[JJ], XJ[JJ] / qJ, UJ), JJ++) : (eJ.e.SlerpToRef(ZJ[JJ], ZJ[JJ + 1], XJ[JJ + 1] / (XJ[JJ] + XJ[JJ + 1]), cJ), UJ = cJ, qJ = XJ[JJ] + XJ[JJ + 1], JJ += 2)
+        let YB = 0;
+        for (let BB = 0; BB < dB.length;) BB ? (YB += lB[BB], pB.f.SlerpToRef(yB, dB[BB], lB[BB] / YB, yB), BB++) : (pB.f.SlerpToRef(dB[BB], dB[BB + 1], lB[BB + 1] / (lB[BB] + lB[BB + 1]), TB), yB = TB, YB = lB[BB] + lB[BB + 1], BB += 2)
       }
-      for (let XJ = 0; XJ < JJ.additiveAnimations.length; XJ++) {
-        const cJ = JJ.additiveAnimations[XJ];
-        0 !== cJ.weight && (UJ.multiplyToRef(cJ.currentValue, eJ.h.Quaternion[0]), eJ.e.SlerpToRef(UJ, eJ.h.Quaternion[0], cJ.weight, UJ))
+      for (let lB = 0; lB < BB.additiveAnimations.length; lB++) {
+        const TB = BB.additiveAnimations[lB];
+        0 !== TB.weight && (yB.multiplyToRef(TB.currentValue, pB.j.Quaternion[0]), pB.f.SlerpToRef(yB, pB.j.Quaternion[0], TB.weight, yB))
       }
-      return UJ
+      return yB
     }
 
-    function WJ(JJ, cJ) {
-      cJ && (cJ.prototype.copyAnimationRange = function(JJ, cJ, ZJ) {
-        let FJ = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-          UJ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
-        0 === this.animations.length && (this.animations.push(new yJ.c(this.name, "_matrix", JJ.animations[0].framePerSecond, yJ.c.ANIMATIONTYPE_MATRIX, 0)), this.animations[0].setKeys([]));
-        const eJ = JJ.animations[0].getRange(cJ);
-        if (!eJ) return !1;
-        const XJ = eJ.from,
-          AJ = eJ.to,
-          qJ = JJ.animations[0].getKeys(),
-          jJ = JJ.length,
-          YJ = JJ.getParent(),
-          hJ = this.getParent(),
-          DJ = FJ && YJ && jJ && this.length && jJ !== this.length,
-          sJ = DJ && hJ && YJ ? hJ.length / YJ.length : 1,
-          nJ = FJ && !hJ && UJ && (1 !== UJ.x || 1 !== UJ.y || 1 !== UJ.z),
-          GJ = this.animations[0].getKeys();
-        let fJ, xJ, rJ;
-        for (let vJ = 0, mJ = qJ.length; vJ < mJ; vJ++) fJ = qJ[vJ], fJ.frame >= XJ && fJ.frame <= AJ && (FJ ? (rJ = fJ.value.clone(), DJ ? (xJ = rJ.getTranslation(), rJ.setTranslation(xJ.scaleInPlace(sJ))) : nJ && UJ ? (xJ = rJ.getTranslation(), rJ.setTranslation(xJ.multiplyInPlace(UJ))) : rJ = fJ.value) : rJ = fJ.value, GJ.push({
-          frame: fJ.frame + ZJ,
-          value: rJ
+    function rB(BB, TB) {
+      TB && (TB.prototype.copyAnimationRange = function(BB, TB, dB) {
+        let VB = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+          yB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
+        0 === this.animations.length && (this.animations.push(new MB.c(this.name, "_matrix", BB.animations[0].framePerSecond, MB.c.ANIMATIONTYPE_MATRIX, 0)), this.animations[0].setKeys([]));
+        const pB = BB.animations[0].getRange(TB);
+        if (!pB) return !1;
+        const lB = pB.from,
+          JB = pB.to,
+          YB = BB.animations[0].getKeys(),
+          gB = BB.length,
+          oB = BB.getParent(),
+          kB = this.getParent(),
+          LB = VB && oB && gB && this.length && gB !== this.length,
+          OB = LB && kB && oB ? kB.length / oB.length : 1,
+          DB = VB && !kB && yB && (1 !== yB.x || 1 !== yB.y || 1 !== yB.z),
+          uB = this.animations[0].getKeys();
+        let HB, EB, vB;
+        for (let mB = 0, iB = YB.length; mB < iB; mB++) HB = YB[mB], HB.frame >= lB && HB.frame <= JB && (VB ? (vB = HB.value.clone(), LB ? (EB = vB.getTranslation(), vB.setTranslation(EB.scaleInPlace(OB))) : DB && yB ? (EB = vB.getTranslation(), vB.setTranslation(EB.multiplyInPlace(yB))) : vB = HB.value) : vB = HB.value, uB.push({
+          frame: HB.frame + dB,
+          value: vB
         }));
-        return this.animations[0].createRange(cJ, XJ + ZJ, AJ + ZJ), !0
-      }), JJ && (JJ.prototype._animate = function(JJ) {
-        const cJ = this._animationWrites,
-          ZJ = this._animationWriteCount;
-        let FJ = 0;
-        for (let eJ = this._animationStepWriteCount; eJ < ZJ; eJ++) {
-          const JJ = cJ[eJ];
-          JJ.Yf && -1 === JJ.weight || (JJ.Yf = !0, cJ[eJ] = cJ[FJ], cJ[FJ] = JJ, FJ++)
+        return this.animations[0].createRange(TB, lB + dB, JB + dB), !0
+      }), BB && (BB.prototype._animate = function(BB) {
+        const TB = this._animationWrites,
+          dB = this._animationWriteCount;
+        let VB = 0;
+        for (let pB = this._animationStepWriteCount; pB < dB; pB++) {
+          const BB = TB[pB];
+          BB.pH && -1 === BB.weight || (BB.pH = !0, TB[pB] = TB[VB], TB[VB] = BB, VB++)
         }
-        for (let eJ = FJ; eJ < ZJ; eJ++) {
-          const JJ = cJ[eJ];
-          JJ.runtimeAnimation = null, JJ.target = null
+        for (let pB = VB; pB < dB; pB++) {
+          const BB = TB[pB];
+          BB.runtimeAnimation = null, BB.target = null
         }
-        if (this._animationWriteCount = FJ, this._animationStepWriteCount = 0, this._animationStepEvaluated = !1, !this.animationsEnabled) return;
-        const UJ = IJ.c.Now;
+        if (this._animationWriteCount = VB, this._animationStepWriteCount = 0, this._animationStepEvaluated = !1, !this.animationsEnabled) return;
+        const yB = wB.d.Now;
         if (!this._animationTimeLast) {
           if (this._pendingData.length > 0) return;
-          this._animationTimeLast = UJ
+          this._animationTimeLast = yB
         }
-        this.deltaTime = void 0 !== JJ ? JJ : this.useConstantAnimationDeltaTime ? 16 : (UJ - this._animationTimeLast) * this.animationTimeScale, this._animationTimeLast = UJ;
-        const XJ = this._activeAnimatables;
-        if (0 === XJ.length) return;
+        this.deltaTime = void 0 !== BB ? BB : this.useConstantAnimationDeltaTime ? 16 : (yB - this._animationTimeLast) * this.animationTimeScale, this._animationTimeLast = yB;
+        const lB = this._activeAnimatables;
+        if (0 === lB.length) return;
         this._animationTime += this.deltaTime;
-        const AJ = this._animationTime;
+        const JB = this._animationTime;
         this._animationStepEvaluated = !0;
-        for (let eJ = 0; eJ < XJ.length; eJ++) {
-          const JJ = XJ[eJ];
-          !JJ._animate(AJ) && JJ.disposeOnEnd && eJ--
-        }! function(JJ) {
-          if (JJ._registeredForLateAnimationBindings.length) {
-            for (let cJ = 0; cJ < JJ._registeredForLateAnimationBindings.length; cJ++) {
-              const ZJ = JJ._registeredForLateAnimationBindings.data[cJ];
-              for (const JJ in ZJ._lateAnimationHolders) {
-                const cJ = ZJ._lateAnimationHolders[JJ],
-                  FJ = cJ.animations[0],
-                  UJ = cJ.originalValue;
-                if (void 0 === UJ || null === UJ) continue;
-                const XJ = yJ.c.AllowMatrixDecomposeForInterpolation && UJ.m;
-                let AJ = ZJ[JJ];
-                if (XJ) AJ = bJ(cJ);
-                else if (void 0 !== UJ.w) AJ = wJ(cJ, AJ || eJ.e.Identity());
+        for (let pB = 0; pB < lB.length; pB++) {
+          const BB = lB[pB];
+          !BB._animate(JB) && BB.disposeOnEnd && pB--
+        }! function(BB) {
+          if (BB._registeredForLateAnimationBindings.length) {
+            for (let TB = 0; TB < BB._registeredForLateAnimationBindings.length; TB++) {
+              const dB = BB._registeredForLateAnimationBindings.data[TB];
+              for (const BB in dB._lateAnimationHolders) {
+                const TB = dB._lateAnimationHolders[BB],
+                  VB = TB.animations[0],
+                  yB = TB.originalValue;
+                if (void 0 === yB || null === yB) continue;
+                const lB = MB.c.AllowMatrixDecomposeForInterpolation && yB.m;
+                let JB = dB[BB];
+                if (lB) JB = FB(TB);
+                else if (void 0 !== yB.w) JB = KB(TB, JB || pB.f.Identity());
                 else {
-                  let JJ = 0,
-                    ZJ = 1;
-                  const eJ = FJ && FJ._animationState.Mc === yJ.c.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT;
-                  if (cJ.totalWeight < 1) AJ = eJ ? UJ.clone ? UJ.clone() : UJ : FJ && UJ.scale ? UJ.scale(1 - cJ.totalWeight) : FJ ? UJ * (1 - cJ.totalWeight) : UJ.clone ? UJ.clone() : UJ;
-                  else if (FJ) {
-                    ZJ = cJ.totalWeight;
-                    const XJ = FJ.weight / ZJ;
-                    AJ = 1 !== XJ ? FJ.currentValue.scale ? FJ.currentValue.scale(XJ) : FJ.currentValue * XJ : (cJ.animations.length > 1 || cJ.additiveAnimations.length > 0) && FJ.currentValue.clone ? FJ.currentValue.clone() : FJ.currentValue, eJ && (AJ.addToRef ? AJ.addToRef(UJ, AJ) : AJ += UJ), JJ = 1
+                  let BB = 0,
+                    dB = 1;
+                  const pB = VB && VB._animationState.Py === MB.c.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT;
+                  if (TB.totalWeight < 1) JB = pB ? yB.clone ? yB.clone() : yB : VB && yB.scale ? yB.scale(1 - TB.totalWeight) : VB ? yB * (1 - TB.totalWeight) : yB.clone ? yB.clone() : yB;
+                  else if (VB) {
+                    dB = TB.totalWeight;
+                    const lB = VB.weight / dB;
+                    JB = 1 !== lB ? VB.currentValue.scale ? VB.currentValue.scale(lB) : VB.currentValue * lB : (TB.animations.length > 1 || TB.additiveAnimations.length > 0) && VB.currentValue.clone ? VB.currentValue.clone() : VB.currentValue, pB && (JB.addToRef ? JB.addToRef(yB, JB) : JB += yB), BB = 1
                   }
-                  for (let FJ = JJ; FJ < cJ.animations.length; FJ++) {
-                    const JJ = cJ.animations[FJ],
-                      UJ = JJ.weight / ZJ;
-                    UJ && (JJ.currentValue.scaleAndAddToRef ? JJ.currentValue.scaleAndAddToRef(UJ, AJ) : AJ += JJ.currentValue * UJ)
+                  for (let VB = BB; VB < TB.animations.length; VB++) {
+                    const BB = TB.animations[VB],
+                      yB = BB.weight / dB;
+                    yB && (BB.currentValue.scaleAndAddToRef ? BB.currentValue.scaleAndAddToRef(yB, JB) : JB += BB.currentValue * yB)
                   }
-                  for (let FJ = 0; FJ < cJ.additiveAnimations.length; FJ++) {
-                    const JJ = cJ.additiveAnimations[FJ],
-                      ZJ = JJ.weight;
-                    ZJ && (JJ.currentValue.scaleAndAddToRef ? JJ.currentValue.scaleAndAddToRef(ZJ, AJ) : AJ += JJ.currentValue * ZJ)
+                  for (let VB = 0; VB < TB.additiveAnimations.length; VB++) {
+                    const BB = TB.additiveAnimations[VB],
+                      dB = BB.weight;
+                    dB && (BB.currentValue.scaleAndAddToRef ? BB.currentValue.scaleAndAddToRef(dB, JB) : JB += BB.currentValue * dB)
                   }
                 }
-                ZJ[JJ] = AJ
+                dB[BB] = JB
               }
-              ZJ._lateAnimationHolders = {}
+              dB._lateAnimationHolders = {}
             }
-            JJ._registeredForLateAnimationBindings.reset()
+            BB._registeredForLateAnimationBindings.reset()
           }
         }(this), this._animationStepWriteCount = this._animationWriteCount
-      }, JJ.prototype.sortActiveAnimatables = function() {
-        this._activeAnimatables.sort(((JJ, cJ) => JJ.playOrder - cJ.playOrder))
-      }, JJ.prototype.beginWeightedAnimation = function(JJ, cJ, ZJ) {
-        let FJ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1,
-          UJ = arguments.length > 4 ? arguments[4] : void 0,
-          eJ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 1,
-          XJ = arguments.length > 6 ? arguments[6] : void 0,
-          AJ = arguments.length > 7 ? arguments[7] : void 0,
-          qJ = arguments.length > 8 ? arguments[8] : void 0,
-          jJ = arguments.length > 9 ? arguments[9] : void 0,
-          YJ = arguments.length > 10 && void 0 !== arguments[10] && arguments[10];
-        const hJ = this.beginAnimation(JJ, cJ, ZJ, UJ, eJ, XJ, AJ, !1, qJ, jJ, YJ);
-        return hJ.weight = FJ, hJ
-      }, JJ.prototype.beginAnimation = function(JJ, cJ, ZJ, FJ) {
-        let UJ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1,
-          eJ = arguments.length > 5 ? arguments[5] : void 0,
-          XJ = arguments.length > 6 ? arguments[6] : void 0,
-          AJ = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7],
-          qJ = arguments.length > 8 ? arguments[8] : void 0,
-          jJ = arguments.length > 9 ? arguments[9] : void 0,
-          YJ = arguments.length > 10 && void 0 !== arguments[10] && arguments[10];
-        if (UJ < 0) {
-          const JJ = cJ;
-          cJ = ZJ, ZJ = JJ, UJ = -UJ
+      }, BB.prototype.sortActiveAnimatables = function() {
+        this._activeAnimatables.sort(((BB, TB) => BB.playOrder - TB.playOrder))
+      }, BB.prototype.beginWeightedAnimation = function(BB, TB, dB) {
+        let VB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1,
+          yB = arguments.length > 4 ? arguments[4] : void 0,
+          pB = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 1,
+          lB = arguments.length > 6 ? arguments[6] : void 0,
+          JB = arguments.length > 7 ? arguments[7] : void 0,
+          YB = arguments.length > 8 ? arguments[8] : void 0,
+          gB = arguments.length > 9 ? arguments[9] : void 0,
+          oB = arguments.length > 10 && void 0 !== arguments[10] && arguments[10];
+        const kB = this.beginAnimation(BB, TB, dB, yB, pB, lB, JB, !1, YB, gB, oB);
+        return kB.weight = VB, kB
+      }, BB.prototype.beginAnimation = function(BB, TB, dB, VB) {
+        let yB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1,
+          pB = arguments.length > 5 ? arguments[5] : void 0,
+          lB = arguments.length > 6 ? arguments[6] : void 0,
+          JB = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7],
+          YB = arguments.length > 8 ? arguments[8] : void 0,
+          gB = arguments.length > 9 ? arguments[9] : void 0,
+          oB = arguments.length > 10 && void 0 !== arguments[10] && arguments[10];
+        if (yB < 0) {
+          const BB = TB;
+          TB = dB, dB = BB, yB = -yB
         }
-        cJ > ZJ && (UJ = -UJ), AJ && this.stopAnimation(JJ, void 0, qJ), XJ || (XJ = new MJ(this, JJ, cJ, ZJ, FJ, UJ, eJ, void 0, jJ, YJ));
-        const hJ = !qJ || qJ(JJ);
-        if (JJ.animations && hJ && XJ.appendAnimations(JJ, JJ.animations), JJ.getAnimatables) {
-          const YJ = JJ.getAnimatables();
-          for (let JJ = 0; JJ < YJ.length; JJ++) this.beginAnimation(YJ[JJ], cJ, ZJ, FJ, UJ, eJ, XJ, AJ, qJ, jJ)
+        TB > dB && (yB = -yB), JB && this.stopAnimation(BB, void 0, YB), lB || (lB = new UB(this, BB, TB, dB, VB, yB, pB, void 0, gB, oB));
+        const kB = !YB || YB(BB);
+        if (BB.animations && kB && lB.appendAnimations(BB, BB.animations), BB.getAnimatables) {
+          const oB = BB.getAnimatables();
+          for (let BB = 0; BB < oB.length; BB++) this.beginAnimation(oB[BB], TB, dB, VB, yB, pB, lB, JB, YB, gB)
         }
-        return XJ.reset(), XJ
-      }, JJ.prototype.beginHierarchyAnimation = function(JJ, cJ, ZJ, FJ, UJ) {
-        let eJ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 1,
-          XJ = arguments.length > 6 ? arguments[6] : void 0,
-          AJ = arguments.length > 7 ? arguments[7] : void 0,
-          qJ = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8],
-          jJ = arguments.length > 9 ? arguments[9] : void 0,
-          YJ = arguments.length > 11 && void 0 !== arguments[11] && arguments[11];
-        const hJ = JJ.getDescendants(cJ),
-          DJ = [];
-        DJ.push(this.beginAnimation(JJ, ZJ, FJ, UJ, eJ, XJ, AJ, qJ, jJ, void 0, YJ));
-        for (const sJ of hJ) DJ.push(this.beginAnimation(sJ, ZJ, FJ, UJ, eJ, XJ, AJ, qJ, jJ, void 0, YJ));
-        return DJ
-      }, JJ.prototype.beginDirectAnimation = function(JJ, cJ, ZJ, FJ, UJ) {
-        let eJ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 1;
-        if (eJ < 0) {
-          const JJ = ZJ;
-          ZJ = FJ, FJ = JJ, eJ = -eJ
+        return lB.reset(), lB
+      }, BB.prototype.beginHierarchyAnimation = function(BB, TB, dB, VB, yB) {
+        let pB = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 1,
+          lB = arguments.length > 6 ? arguments[6] : void 0,
+          JB = arguments.length > 7 ? arguments[7] : void 0,
+          YB = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8],
+          gB = arguments.length > 9 ? arguments[9] : void 0,
+          oB = arguments.length > 11 && void 0 !== arguments[11] && arguments[11];
+        const kB = BB.getDescendants(TB),
+          LB = [];
+        LB.push(this.beginAnimation(BB, dB, VB, yB, pB, lB, JB, YB, gB, void 0, oB));
+        for (const OB of kB) LB.push(this.beginAnimation(OB, dB, VB, yB, pB, lB, JB, YB, gB, void 0, oB));
+        return LB
+      }, BB.prototype.beginDirectAnimation = function(BB, TB, dB, VB, yB) {
+        let pB = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 1;
+        if (pB < 0) {
+          const BB = dB;
+          dB = VB, VB = BB, pB = -pB
         }
-        ZJ > FJ && (eJ = -eJ);
-        return new MJ(this, JJ, ZJ, FJ, UJ, eJ, arguments.length > 6 ? arguments[6] : void 0, cJ, arguments.length > 7 ? arguments[7] : void 0, arguments.length > 8 && void 0 !== arguments[8] && arguments[8])
-      }, JJ.prototype.beginDirectHierarchyAnimation = function(JJ, cJ, ZJ, FJ, UJ, eJ, XJ, AJ, qJ) {
-        let jJ = arguments.length > 9 && void 0 !== arguments[9] && arguments[9];
-        const YJ = JJ.getDescendants(cJ),
-          hJ = [];
-        hJ.push(this.beginDirectAnimation(JJ, ZJ, FJ, UJ, eJ, XJ, AJ, qJ, jJ));
-        for (const DJ of YJ) hJ.push(this.beginDirectAnimation(DJ, ZJ, FJ, UJ, eJ, XJ, AJ, qJ, jJ));
-        return hJ
-      }, JJ.prototype.getAnimatableByTarget = function(JJ) {
-        for (let cJ = 0; cJ < this._activeAnimatables.length; cJ++)
-          if (this._activeAnimatables[cJ].target === JJ) return this._activeAnimatables[cJ];
+        dB > VB && (pB = -pB);
+        return new UB(this, BB, dB, VB, yB, pB, arguments.length > 6 ? arguments[6] : void 0, TB, arguments.length > 7 ? arguments[7] : void 0, arguments.length > 8 && void 0 !== arguments[8] && arguments[8])
+      }, BB.prototype.beginDirectHierarchyAnimation = function(BB, TB, dB, VB, yB, pB, lB, JB, YB) {
+        let gB = arguments.length > 9 && void 0 !== arguments[9] && arguments[9];
+        const oB = BB.getDescendants(TB),
+          kB = [];
+        kB.push(this.beginDirectAnimation(BB, dB, VB, yB, pB, lB, JB, YB, gB));
+        for (const LB of oB) kB.push(this.beginDirectAnimation(LB, dB, VB, yB, pB, lB, JB, YB, gB));
+        return kB
+      }, BB.prototype.getAnimatableByTarget = function(BB) {
+        for (let TB = 0; TB < this._activeAnimatables.length; TB++)
+          if (this._activeAnimatables[TB].target === BB) return this._activeAnimatables[TB];
         return null
-      }, JJ.prototype.getAllAnimatablesByTarget = function(JJ) {
-        const cJ = [];
-        for (let ZJ = 0; ZJ < this._activeAnimatables.length; ZJ++) this._activeAnimatables[ZJ].target === JJ && cJ.push(this._activeAnimatables[ZJ]);
-        return cJ
-      }, JJ.prototype.stopAnimation = function(JJ, cJ, ZJ) {
-        const FJ = this.getAllAnimatablesByTarget(JJ);
-        for (const UJ of FJ) UJ.stop(cJ, ZJ)
-      }, JJ.prototype.stopAllAnimations = function() {
+      }, BB.prototype.getAllAnimatablesByTarget = function(BB) {
+        const TB = [];
+        for (let dB = 0; dB < this._activeAnimatables.length; dB++) this._activeAnimatables[dB].target === BB && TB.push(this._activeAnimatables[dB]);
+        return TB
+      }, BB.prototype.stopAnimation = function(BB, TB, dB) {
+        const VB = this.getAllAnimatablesByTarget(BB);
+        for (const yB of VB) yB.stop(TB, dB)
+      }, BB.prototype.stopAllAnimations = function() {
         if (this._activeAnimatables) {
-          for (let JJ = 0; JJ < this._activeAnimatables.length; JJ++) this._activeAnimatables[JJ].stop(void 0, void 0, !0);
+          for (let BB = 0; BB < this._activeAnimatables.length; BB++) this._activeAnimatables[BB].stop(void 0, void 0, !0);
           this._activeAnimatables.length = 0
         }
-        for (const JJ of this.animationGroups) JJ.stop()
+        for (const BB of this.animationGroups) BB.stop()
       })
     }
-    MJ.ProcessPausedAnimatables = !1;
-    var gJ, HJ = ZJ(36183),
-      PJ = ZJ(38989),
-      kJ = ZJ(38677);
-    class pJ extends PJ.b {
+    UB.ProcessPausedAnimatables = !1;
+    var IB, cB = dB(36137),
+      SB = dB(38980),
+      PB = dB(38629);
+    class QB extends SB.e {
       get _matrix() {
         return this._compose(), this._localMatrix
       }
-      set _matrix(JJ) {
-        (JJ.updateFlag !== this._localMatrix.updateFlag || this._needToCompose) && (this._needToCompose = !1, this._localMatrix.rZJ(JJ), this._markAsDirtyAndDecompose())
+      set _matrix(BB) {
+        (BB.updateFlag !== this._localMatrix.updateFlag || this._needToCompose) && (this._needToCompose = !1, this._localMatrix.bdB(BB), this._markAsDirtyAndDecompose())
       }
-      constructor(JJ, cJ) {
-        let ZJ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-          FJ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-          UJ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
-          XJ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
-          AJ = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null;
-        super(JJ, cJ.Qy(), !1), this.name = JJ, this.children = [], this.animations = [], this._index = null, this._scalingDeterminant = 1, this._needToDecompose = !0, this._needToCompose = !1, this._linkedTransformNode = null, this._waitingTransformNodeId = null, this._waitingTransformNodeUniqueId = null, this._skeleton = cJ, this._localMatrix = FJ?.clone() ?? eJ.b.Identity(), this._restMatrix = UJ ?? this._localMatrix.clone(), this._bindMatrix = XJ ?? this._localMatrix.clone(), this._index = AJ, this._absoluteMatrix = new eJ.b, this._absoluteBindMatrix = new eJ.b, this._absoluteInverseBindMatrix = new eJ.b, this._finalMatrix = new eJ.b, cJ.bones.push(this), this.setParent(ZJ, !1), this._updateAbsoluteBindMatrices()
+      constructor(BB, TB) {
+        let dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+          VB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
+          yB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+          lB = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+          JB = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null;
+        super(BB, TB.jU(), !1), this.name = BB, this.children = [], this.animations = [], this._index = null, this._scalingDeterminant = 1, this._needToDecompose = !0, this._needToCompose = !1, this._linkedTransformNode = null, this._waitingTransformNodeId = null, this._waitingTransformNodeUniqueId = null, this._skeleton = TB, this._localMatrix = VB?.clone() ?? pB.b.Identity(), this._restMatrix = yB ?? this._localMatrix.clone(), this._bindMatrix = lB ?? this._localMatrix.clone(), this._index = JB, this._absoluteMatrix = new pB.b, this._absoluteBindMatrix = new pB.b, this._absoluteInverseBindMatrix = new pB.b, this._finalMatrix = new pB.b, TB.bones.push(this), this.setParent(dB, !1), this._updateAbsoluteBindMatrices()
       }
       getClassName() {
         return "Bone"
@@ -2271,16 +2271,16 @@ export const modules = {
       getIndex() {
         return null === this._index ? this.getSkeleton().bones.indexOf(this) : this._index
       }
-      set parent(JJ) {
-        this.setParent(JJ)
+      set parent(BB) {
+        this.setParent(BB)
       }
-      setParent(JJ) {
-        let cJ = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        if (this.parent !== JJ) {
+      setParent(BB) {
+        let TB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        if (this.parent !== BB) {
           if (this.parent) {
-            const JJ = this.parent.children.indexOf(this); - 1 !== JJ && this.parent.children.splice(JJ, 1)
+            const BB = this.parent.children.indexOf(this); - 1 !== BB && this.parent.children.splice(BB, 1)
           }
-          this._parentNode = JJ, this.parent && this.parent.children.push(this), cJ && this._updateAbsoluteBindMatrices(), this.ycJ()
+          this._parentNode = BB, this.parent && this.parent.children.push(this), TB && this._updateAbsoluteBindMatrices(), this.VdB()
         }
       }
       getLocalMatrix() {
@@ -2298,20 +2298,20 @@ export const modules = {
       getRestPose() {
         return this.getRestMatrix()
       }
-      setRestMatrix(JJ) {
-        this._restMatrix.rZJ(JJ)
+      setRestMatrix(BB) {
+        this._restMatrix.bdB(BB)
       }
-      setRestPose(JJ) {
-        this.setRestMatrix(JJ)
+      setRestPose(BB) {
+        this.setRestMatrix(BB)
       }
       getBindPose() {
         return this.getBindMatrix()
       }
-      setBindMatrix(JJ) {
-        this.Y5(JJ)
+      setBindMatrix(BB) {
+        this.i6(BB)
       }
-      setBindPose(JJ) {
-        this.setBindMatrix(JJ)
+      setBindPose(BB) {
+        this.setBindMatrix(BB)
       }
       getFinalMatrix() {
         return this._finalMatrix
@@ -2321,10 +2321,10 @@ export const modules = {
       }
       returnToRest() {
         if (this._linkedTransformNode) {
-          const JJ = eJ.h.Pn[0],
-            cJ = eJ.h.Quaternion[0],
-            ZJ = eJ.h.Pn[1];
-          this.getRestMatrix().decompose(JJ, cJ, ZJ), this._linkedTransformNode.position.rZJ(ZJ), this._linkedTransformNode.rotationQuaternion = this._linkedTransformNode.rotationQuaternion ?? eJ.e.Identity(), this._linkedTransformNode.rotationQuaternion.rZJ(cJ), this._linkedTransformNode.GA.rZJ(JJ)
+          const BB = pB.j.RD[0],
+            TB = pB.j.Quaternion[0],
+            dB = pB.j.RD[1];
+          this.getRestMatrix().decompose(BB, TB, dB), this._linkedTransformNode.position.bdB(dB), this._linkedTransformNode.rotationQuaternion = this._linkedTransformNode.rotationQuaternion ?? pB.f.Identity(), this._linkedTransformNode.rotationQuaternion.bdB(TB), this._linkedTransformNode.al.bdB(BB)
         } else this._matrix = this._restMatrix
       }
       getAbsoluteInverseBindMatrix() {
@@ -2339,565 +2339,565 @@ export const modules = {
       getAbsoluteTransform() {
         return this.getAbsoluteMatrix()
       }
-      linkTransformNode(JJ) {
-        this._linkedTransformNode && this._skeleton._numBonesWithLinkedTransformNode--, this._linkedTransformNode = JJ, this._linkedTransformNode && this._skeleton._numBonesWithLinkedTransformNode++
+      linkTransformNode(BB) {
+        this._linkedTransformNode && this._skeleton._numBonesWithLinkedTransformNode--, this._linkedTransformNode = BB, this._linkedTransformNode && this._skeleton._numBonesWithLinkedTransformNode++
       }
       getTransformNode() {
         return this._linkedTransformNode
       }
       get position() {
-        return this._decompose(), this.NJJ
+        return this._decompose(), this.HTB
       }
-      set position(JJ) {
-        this._decompose(), this.NJJ.rZJ(JJ), this._markAsDirtyAndCompose()
+      set position(BB) {
+        this._decompose(), this.HTB.bdB(BB), this._markAsDirtyAndCompose()
       }
       get rotation() {
         return this.getRotation()
       }
-      set rotation(JJ) {
-        this.setRotation(JJ)
+      set rotation(BB) {
+        this.setRotation(BB)
       }
       get rotationQuaternion() {
         return this._decompose(), this._localRotation
       }
-      set rotationQuaternion(JJ) {
-        this.setRotationQuaternion(JJ)
+      set rotationQuaternion(BB) {
+        this.setRotationQuaternion(BB)
       }
-      get GA() {
+      get al() {
         return this.getScale()
       }
-      set GA(JJ) {
-        this.setScale(JJ)
+      set al(BB) {
+        this.setScale(BB)
       }
       get animationPropertiesOverride() {
         return this._skeleton.animationPropertiesOverride
       }
       _decompose() {
-        this._needToDecompose && (this._needToDecompose = !1, this._localScaling || (this._localScaling = eJ.j.Zero(), this._localRotation = eJ.e.Zero(), this.NJJ = eJ.j.Zero()), this._localMatrix.decompose(this._localScaling, this._localRotation, this.NJJ))
+        this._needToDecompose && (this._needToDecompose = !1, this._localScaling || (this._localScaling = pB.p.Zero(), this._localRotation = pB.f.Zero(), this.HTB = pB.p.Zero()), this._localMatrix.decompose(this._localScaling, this._localRotation, this.HTB))
       }
       _compose() {
-        this._needToCompose && (this._localScaling ? (this._needToCompose = !1, eJ.b.ComposeToRef(this._localScaling, this._localRotation, this.NJJ, this._localMatrix)) : this._needToCompose = !1)
+        this._needToCompose && (this._localScaling ? (this._needToCompose = !1, pB.b.ComposeToRef(this._localScaling, this._localRotation, this.HTB, this._localMatrix)) : this._needToCompose = !1)
       }
-      Y5(JJ) {
-        let cJ = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-          ZJ = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        this._bindMatrix.rZJ(JJ), cJ && this._updateAbsoluteBindMatrices(), ZJ ? this._matrix = JJ : this.ycJ()
+      i6(BB) {
+        let TB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          dB = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        this._bindMatrix.bdB(BB), TB && this._updateAbsoluteBindMatrices(), dB ? this._matrix = BB : this.VdB()
       }
-      _updateAbsoluteBindMatrices(JJ) {
-        let cJ = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        if (JJ || (JJ = this._bindMatrix), this.parent ? JJ.multiplyToRef(this.parent._absoluteBindMatrix, this._absoluteBindMatrix) : this._absoluteBindMatrix.rZJ(JJ), this._absoluteBindMatrix.invertToRef(this._absoluteInverseBindMatrix), cJ)
-          for (let ZJ = 0; ZJ < this.children.length; ZJ++) this.children[ZJ]._updateAbsoluteBindMatrices();
+      _updateAbsoluteBindMatrices(BB) {
+        let TB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        if (BB || (BB = this._bindMatrix), this.parent ? BB.multiplyToRef(this.parent._absoluteBindMatrix, this._absoluteBindMatrix) : this._absoluteBindMatrix.bdB(BB), this._absoluteBindMatrix.invertToRef(this._absoluteInverseBindMatrix), TB)
+          for (let dB = 0; dB < this.children.length; dB++) this.children[dB]._updateAbsoluteBindMatrices();
         this._scalingDeterminant = this._absoluteBindMatrix.determinant() < 0 ? -1 : 1
       }
-      ycJ() {
+      VdB() {
         return this._currentRenderId++, this._childUpdateId++, this._skeleton._markAsDirty(), this
       }
       _markAsDirtyAndCompose() {
-        this.ycJ(), this._needToCompose = !0
+        this.VdB(), this._needToCompose = !0
       }
       _markAsDirtyAndDecompose() {
-        this.ycJ(), this._needToDecompose = !0
+        this.VdB(), this._needToDecompose = !0
       }
-      _updatePosition(JJ) {
-        let cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          ZJ = arguments.length > 2 ? arguments[2] : void 0,
-          FJ = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        const UJ = this.getLocalMatrix();
-        if (0 == cJ) FJ ? (UJ.addAtIndex(12, JJ.x), UJ.addAtIndex(13, JJ.y), UJ.addAtIndex(14, JJ.z)) : UJ.setTranslationFromFloats(JJ.x, JJ.y, JJ.z);
+      _updatePosition(BB) {
+        let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          dB = arguments.length > 2 ? arguments[2] : void 0,
+          VB = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        const yB = this.getLocalMatrix();
+        if (0 == TB) VB ? (yB.addAtIndex(12, BB.x), yB.addAtIndex(13, BB.y), yB.addAtIndex(14, BB.z)) : yB.setTranslationFromFloats(BB.x, BB.y, BB.z);
         else {
-          const cJ = pJ._TmpMats[0],
-            XJ = pJ._TmpVecs[0];
-          this.parent ? (cJ.rZJ(this.parent.getAbsoluteMatrix()), ZJ && cJ.multiplyToRef(ZJ.getWorldMatrix(), cJ)) : eJ.b.IdentityToRef(cJ), FJ && cJ.setTranslationFromFloats(0, 0, 0), cJ.invert(), eJ.j.TransformCoordinatesToRef(JJ, cJ, XJ), FJ ? (UJ.addAtIndex(12, XJ.x), UJ.addAtIndex(13, XJ.y), UJ.addAtIndex(14, XJ.z)) : UJ.setTranslationFromFloats(XJ.x, XJ.y, XJ.z)
+          const TB = QB._TmpMats[0],
+            lB = QB._TmpVecs[0];
+          this.parent ? (TB.bdB(this.parent.getAbsoluteMatrix()), dB && TB.multiplyToRef(dB.getWorldMatrix(), TB)) : pB.b.IdentityToRef(TB), VB && TB.setTranslationFromFloats(0, 0, 0), TB.invert(), pB.p.TransformCoordinatesToRef(BB, TB, lB), VB ? (yB.addAtIndex(12, lB.x), yB.addAtIndex(13, lB.y), yB.addAtIndex(14, lB.z)) : yB.setTranslationFromFloats(lB.x, lB.y, lB.z)
         }
         this._markAsDirtyAndDecompose()
       }
-      translate(JJ) {
-        let cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          ZJ = arguments.length > 2 ? arguments[2] : void 0;
-        this._updatePosition(JJ, cJ, ZJ, !0)
+      translate(BB) {
+        let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          dB = arguments.length > 2 ? arguments[2] : void 0;
+        this._updatePosition(BB, TB, dB, !0)
       }
-      setPosition(JJ) {
-        let cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          ZJ = arguments.length > 2 ? arguments[2] : void 0;
-        this._updatePosition(JJ, cJ, ZJ, !1)
+      setPosition(BB) {
+        let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          dB = arguments.length > 2 ? arguments[2] : void 0;
+        this._updatePosition(BB, TB, dB, !1)
       }
-      setAbsolutePosition(JJ, cJ) {
-        this.setPosition(JJ, 1, cJ)
+      setAbsolutePosition(BB, TB) {
+        this.setPosition(BB, 1, TB)
       }
-      scale(JJ, cJ, ZJ) {
-        let FJ = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        const UJ = this.getLocalMatrix(),
-          XJ = pJ._TmpMats[0];
-        eJ.b.ScalingToRef(JJ, cJ, ZJ, XJ), XJ.multiplyToRef(UJ, UJ), XJ.invert();
-        for (const eJ of this.children) {
-          const FJ = eJ.getLocalMatrix();
-          FJ.multiplyToRef(XJ, FJ), FJ.multiplyAtIndex(12, JJ), FJ.multiplyAtIndex(13, cJ), FJ.multiplyAtIndex(14, ZJ), eJ._markAsDirtyAndDecompose()
+      scale(BB, TB, dB) {
+        let VB = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        const yB = this.getLocalMatrix(),
+          lB = QB._TmpMats[0];
+        pB.b.ScalingToRef(BB, TB, dB, lB), lB.multiplyToRef(yB, yB), lB.invert();
+        for (const pB of this.children) {
+          const VB = pB.getLocalMatrix();
+          VB.multiplyToRef(lB, VB), VB.multiplyAtIndex(12, BB), VB.multiplyAtIndex(13, TB), VB.multiplyAtIndex(14, dB), pB._markAsDirtyAndDecompose()
         }
-        if (this._markAsDirtyAndDecompose(), FJ)
-          for (const eJ of this.children) eJ.scale(JJ, cJ, ZJ, FJ)
+        if (this._markAsDirtyAndDecompose(), VB)
+          for (const pB of this.children) pB.scale(BB, TB, dB, VB)
       }
-      setScale(JJ) {
-        this._decompose(), this._localScaling.rZJ(JJ), this._markAsDirtyAndCompose()
+      setScale(BB) {
+        this._decompose(), this._localScaling.bdB(BB), this._markAsDirtyAndCompose()
       }
       getScale() {
         return this._decompose(), this._localScaling
       }
-      getScaleToRef(JJ) {
-        this._decompose(), JJ.rZJ(this._localScaling)
+      getScaleToRef(BB) {
+        this._decompose(), BB.bdB(this._localScaling)
       }
-      setYawPitchRoll(JJ, cJ, ZJ) {
-        let FJ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-          UJ = arguments.length > 4 ? arguments[4] : void 0;
-        if (0 === FJ) {
-          const XJ = pJ._TmpQuat;
-          return eJ.e.RotationYawPitchRollToRef(JJ, cJ, ZJ, XJ), void this.setRotationQuaternion(XJ, FJ, UJ)
+      setYawPitchRoll(BB, TB, dB) {
+        let VB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+          yB = arguments.length > 4 ? arguments[4] : void 0;
+        if (0 === VB) {
+          const lB = QB._TmpQuat;
+          return pB.f.RotationYawPitchRollToRef(BB, TB, dB, lB), void this.setRotationQuaternion(lB, VB, yB)
         }
-        const XJ = pJ._TmpMats[0];
-        if (!this._getAbsoluteInverseMatrixUnscaledToRef(XJ, UJ)) return;
-        const AJ = pJ._TmpMats[1];
-        eJ.b.RotationYawPitchRollToRef(JJ, cJ, ZJ, AJ), XJ.multiplyToRef(AJ, AJ), this._rotateWithMatrix(AJ, FJ, UJ)
+        const lB = QB._TmpMats[0];
+        if (!this._getAbsoluteInverseMatrixUnscaledToRef(lB, yB)) return;
+        const JB = QB._TmpMats[1];
+        pB.b.RotationYawPitchRollToRef(BB, TB, dB, JB), lB.multiplyToRef(JB, JB), this._rotateWithMatrix(JB, VB, yB)
       }
-      rotate(JJ, cJ) {
-        let ZJ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          FJ = arguments.length > 3 ? arguments[3] : void 0;
-        const UJ = pJ._TmpMats[0];
-        UJ.setTranslationFromFloats(0, 0, 0), eJ.b.RotationAxisToRef(JJ, cJ, UJ), this._rotateWithMatrix(UJ, ZJ, FJ)
+      rotate(BB, TB) {
+        let dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          VB = arguments.length > 3 ? arguments[3] : void 0;
+        const yB = QB._TmpMats[0];
+        yB.setTranslationFromFloats(0, 0, 0), pB.b.RotationAxisToRef(BB, TB, yB), this._rotateWithMatrix(yB, dB, VB)
       }
-      setAxisAngle(JJ, cJ) {
-        let ZJ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          FJ = arguments.length > 3 ? arguments[3] : void 0;
-        if (0 === ZJ) {
-          const UJ = pJ._TmpQuat;
-          return eJ.e.RotationAxisToRef(JJ, cJ, UJ), void this.setRotationQuaternion(UJ, ZJ, FJ)
+      setAxisAngle(BB, TB) {
+        let dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          VB = arguments.length > 3 ? arguments[3] : void 0;
+        if (0 === dB) {
+          const yB = QB._TmpQuat;
+          return pB.f.RotationAxisToRef(BB, TB, yB), void this.setRotationQuaternion(yB, dB, VB)
         }
-        const UJ = pJ._TmpMats[0];
-        if (!this._getAbsoluteInverseMatrixUnscaledToRef(UJ, FJ)) return;
-        const XJ = pJ._TmpMats[1];
-        eJ.b.RotationAxisToRef(JJ, cJ, XJ), UJ.multiplyToRef(XJ, XJ), this._rotateWithMatrix(XJ, ZJ, FJ)
+        const yB = QB._TmpMats[0];
+        if (!this._getAbsoluteInverseMatrixUnscaledToRef(yB, VB)) return;
+        const lB = QB._TmpMats[1];
+        pB.b.RotationAxisToRef(BB, TB, lB), yB.multiplyToRef(lB, lB), this._rotateWithMatrix(lB, dB, VB)
       }
-      setRotation(JJ) {
-        let cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          ZJ = arguments.length > 2 ? arguments[2] : void 0;
-        this.setYawPitchRoll(JJ.y, JJ.x, JJ.z, cJ, ZJ)
+      setRotation(BB) {
+        let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          dB = arguments.length > 2 ? arguments[2] : void 0;
+        this.setYawPitchRoll(BB.y, BB.x, BB.z, TB, dB)
       }
-      setRotationQuaternion(JJ) {
-        let cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          ZJ = arguments.length > 2 ? arguments[2] : void 0;
-        if (0 === cJ) return this._decompose(), this._localRotation.rZJ(JJ), void this._markAsDirtyAndCompose();
-        const FJ = pJ._TmpMats[0];
-        if (!this._getAbsoluteInverseMatrixUnscaledToRef(FJ, ZJ)) return;
-        const UJ = pJ._TmpMats[1];
-        eJ.b.FromQuaternionToRef(JJ, UJ), FJ.multiplyToRef(UJ, UJ), this._rotateWithMatrix(UJ, cJ, ZJ)
+      setRotationQuaternion(BB) {
+        let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          dB = arguments.length > 2 ? arguments[2] : void 0;
+        if (0 === TB) return this._decompose(), this._localRotation.bdB(BB), void this._markAsDirtyAndCompose();
+        const VB = QB._TmpMats[0];
+        if (!this._getAbsoluteInverseMatrixUnscaledToRef(VB, dB)) return;
+        const yB = QB._TmpMats[1];
+        pB.b.FromQuaternionToRef(BB, yB), VB.multiplyToRef(yB, yB), this._rotateWithMatrix(yB, TB, dB)
       }
-      setRotationMatrix(JJ) {
-        let cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          ZJ = arguments.length > 2 ? arguments[2] : void 0;
-        if (0 === cJ) {
-          const FJ = pJ._TmpQuat;
-          return eJ.e.FromRotationMatrixToRef(JJ, FJ), void this.setRotationQuaternion(FJ, cJ, ZJ)
+      setRotationMatrix(BB) {
+        let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          dB = arguments.length > 2 ? arguments[2] : void 0;
+        if (0 === TB) {
+          const VB = QB._TmpQuat;
+          return pB.f.FromRotationMatrixToRef(BB, VB), void this.setRotationQuaternion(VB, TB, dB)
         }
-        const FJ = pJ._TmpMats[0];
-        if (!this._getAbsoluteInverseMatrixUnscaledToRef(FJ, ZJ)) return;
-        const UJ = pJ._TmpMats[1];
-        UJ.rZJ(JJ), FJ.multiplyToRef(JJ, UJ), this._rotateWithMatrix(UJ, cJ, ZJ)
+        const VB = QB._TmpMats[0];
+        if (!this._getAbsoluteInverseMatrixUnscaledToRef(VB, dB)) return;
+        const yB = QB._TmpMats[1];
+        yB.bdB(BB), VB.multiplyToRef(BB, yB), this._rotateWithMatrix(yB, TB, dB)
       }
-      _rotateWithMatrix(JJ) {
-        let cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          ZJ = arguments.length > 2 ? arguments[2] : void 0;
-        const FJ = this.getLocalMatrix(),
-          UJ = FJ.m[12],
-          eJ = FJ.m[13],
-          XJ = FJ.m[14],
-          AJ = this.getParent(),
-          qJ = pJ._TmpMats[3],
-          jJ = pJ._TmpMats[4];
-        AJ && 1 == cJ ? (ZJ ? (qJ.rZJ(ZJ.getWorldMatrix()), AJ.getAbsoluteMatrix().multiplyToRef(qJ, qJ)) : qJ.rZJ(AJ.getAbsoluteMatrix()), jJ.rZJ(qJ), jJ.invert(), FJ.multiplyToRef(qJ, FJ), FJ.multiplyToRef(JJ, FJ), FJ.multiplyToRef(jJ, FJ)) : 1 == cJ && ZJ ? (qJ.rZJ(ZJ.getWorldMatrix()), jJ.rZJ(qJ), jJ.invert(), FJ.multiplyToRef(qJ, FJ), FJ.multiplyToRef(JJ, FJ), FJ.multiplyToRef(jJ, FJ)) : FJ.multiplyToRef(JJ, FJ), FJ.setTranslationFromFloats(UJ, eJ, XJ), this._markAsDirtyAndDecompose()
+      _rotateWithMatrix(BB) {
+        let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          dB = arguments.length > 2 ? arguments[2] : void 0;
+        const VB = this.getLocalMatrix(),
+          yB = VB.m[12],
+          pB = VB.m[13],
+          lB = VB.m[14],
+          JB = this.getParent(),
+          YB = QB._TmpMats[3],
+          gB = QB._TmpMats[4];
+        JB && 1 == TB ? (dB ? (YB.bdB(dB.getWorldMatrix()), JB.getAbsoluteMatrix().multiplyToRef(YB, YB)) : YB.bdB(JB.getAbsoluteMatrix()), gB.bdB(YB), gB.invert(), VB.multiplyToRef(YB, VB), VB.multiplyToRef(BB, VB), VB.multiplyToRef(gB, VB)) : 1 == TB && dB ? (YB.bdB(dB.getWorldMatrix()), gB.bdB(YB), gB.invert(), VB.multiplyToRef(YB, VB), VB.multiplyToRef(BB, VB), VB.multiplyToRef(gB, VB)) : VB.multiplyToRef(BB, VB), VB.setTranslationFromFloats(yB, pB, lB), this._markAsDirtyAndDecompose()
       }
-      _getAbsoluteInverseMatrixUnscaledToRef(JJ, cJ) {
-        const ZJ = pJ._TmpMats[2];
-        return JJ.rZJ(this.getAbsoluteMatrix()), cJ ? (JJ.multiplyToRef(cJ.getWorldMatrix(), JJ), eJ.b.ScalingToRef(cJ.GA.x, cJ.GA.y, cJ.GA.z, ZJ)) : eJ.b.IdentityToRef(ZJ), JJ.invert(), !isNaN(JJ.m[0]) && (ZJ.multiplyAtIndex(0, this._scalingDeterminant), JJ.multiplyToRef(ZJ, JJ), !0)
+      _getAbsoluteInverseMatrixUnscaledToRef(BB, TB) {
+        const dB = QB._TmpMats[2];
+        return BB.bdB(this.getAbsoluteMatrix()), TB ? (BB.multiplyToRef(TB.getWorldMatrix(), BB), pB.b.ScalingToRef(TB.al.x, TB.al.y, TB.al.z, dB)) : pB.b.IdentityToRef(dB), BB.invert(), !isNaN(BB.m[0]) && (dB.multiplyAtIndex(0, this._scalingDeterminant), BB.multiplyToRef(dB, BB), !0)
       }
-      Om() {
-        let JJ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        const ZJ = eJ.j.Zero();
-        return this.getPositionToRef(JJ, cJ, ZJ), ZJ
+      Dv() {
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        const dB = pB.p.Zero();
+        return this.getPositionToRef(BB, TB, dB), dB
       }
       getPositionToRef() {
-        let JJ = arguments.length > 1 ? arguments[1] : void 0,
-          cJ = arguments.length > 2 ? arguments[2] : void 0;
+        let BB = arguments.length > 1 ? arguments[1] : void 0,
+          TB = arguments.length > 2 ? arguments[2] : void 0;
         if (0 == (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0)) {
-          const JJ = this.getLocalMatrix();
-          cJ.x = JJ.m[12], cJ.y = JJ.m[13], cJ.z = JJ.m[14]
+          const BB = this.getLocalMatrix();
+          TB.x = BB.m[12], TB.y = BB.m[13], TB.z = BB.m[14]
         } else {
-          const ZJ = pJ._TmpMats[0].rZJ(this.getAbsoluteMatrix());
-          JJ && ZJ.multiplyToRef(JJ.getWorldMatrix(), ZJ), cJ.x = ZJ.m[12], cJ.y = ZJ.m[13], cJ.z = ZJ.m[14]
+          const dB = QB._TmpMats[0].bdB(this.getAbsoluteMatrix());
+          BB && dB.multiplyToRef(BB.getWorldMatrix(), dB), TB.x = dB.m[12], TB.y = dB.m[13], TB.z = dB.m[14]
         }
       }
       getAbsolutePosition() {
-        let JJ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-        const cJ = eJ.j.Zero();
-        return this.getPositionToRef(1, JJ, cJ), cJ
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        const TB = pB.p.Zero();
+        return this.getPositionToRef(1, BB, TB), TB
       }
-      getAbsolutePositionToRef(JJ, cJ) {
-        this.getPositionToRef(1, JJ, cJ)
+      getAbsolutePositionToRef(BB, TB) {
+        this.getPositionToRef(1, BB, TB)
       }
       computeAbsoluteMatrices() {
         if (this._compose(), this.parent) this._localMatrix.multiplyToRef(this.parent._absoluteMatrix, this._absoluteMatrix);
         else {
-          this._absoluteMatrix.rZJ(this._localMatrix);
-          const JJ = this._skeleton.getPoseMatrix();
-          JJ && this._absoluteMatrix.multiplyToRef(JJ, this._absoluteMatrix)
+          this._absoluteMatrix.bdB(this._localMatrix);
+          const BB = this._skeleton.getPoseMatrix();
+          BB && this._absoluteMatrix.multiplyToRef(BB, this._absoluteMatrix)
         }
-        const JJ = this.children,
-          cJ = JJ.length;
-        for (let ZJ = 0; ZJ < cJ; ZJ++) JJ[ZJ].computeAbsoluteMatrices()
+        const BB = this.children,
+          TB = BB.length;
+        for (let dB = 0; dB < TB; dB++) BB[dB].computeAbsoluteMatrices()
       }
       computeAbsoluteTransforms() {
         this.computeAbsoluteMatrices()
       }
-      yR(JJ) {
-        let cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        const ZJ = eJ.j.Zero();
-        return this.getDirectionToRef(JJ, cJ, ZJ), ZJ
+      bq(BB) {
+        let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        const dB = pB.p.Zero();
+        return this.getDirectionToRef(BB, TB, dB), dB
       }
-      getDirectionToRef(JJ) {
-        let cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          ZJ = arguments.length > 2 ? arguments[2] : void 0;
-        const FJ = pJ._TmpMats[0].rZJ(this.getAbsoluteMatrix());
-        cJ && FJ.multiplyToRef(cJ.getWorldMatrix(), FJ), eJ.j.TransformNormalToRef(JJ, FJ, ZJ), ZJ.normalize()
+      getDirectionToRef(BB) {
+        let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          dB = arguments.length > 2 ? arguments[2] : void 0;
+        const VB = QB._TmpMats[0].bdB(this.getAbsoluteMatrix());
+        TB && VB.multiplyToRef(TB.getWorldMatrix(), VB), pB.p.TransformNormalToRef(BB, VB, dB), dB.normalize()
       }
       getRotation() {
-        let JJ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        const ZJ = eJ.j.Zero();
-        return this.getRotationToRef(JJ, cJ, ZJ), ZJ
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        const dB = pB.p.Zero();
+        return this.getRotationToRef(BB, TB, dB), dB
       }
       getRotationToRef() {
-        let JJ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          ZJ = arguments.length > 2 ? arguments[2] : void 0;
-        const FJ = pJ._TmpQuat;
-        this.getRotationQuaternionToRef(JJ, cJ, FJ), FJ.toEulerAnglesToRef(ZJ)
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          dB = arguments.length > 2 ? arguments[2] : void 0;
+        const VB = QB._TmpQuat;
+        this.getRotationQuaternionToRef(BB, TB, VB), VB.toEulerAnglesToRef(dB)
       }
       getRotationQuaternion() {
-        let JJ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        const ZJ = eJ.e.Identity();
-        return this.getRotationQuaternionToRef(JJ, cJ, ZJ), ZJ
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        const dB = pB.f.Identity();
+        return this.getRotationQuaternionToRef(BB, TB, dB), dB
       }
       getRotationQuaternionToRef() {
-        let JJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          cJ = arguments.length > 2 ? arguments[2] : void 0;
-        if (0 == (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0)) this._decompose(), cJ.rZJ(this._localRotation);
+        let BB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          TB = arguments.length > 2 ? arguments[2] : void 0;
+        if (0 == (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0)) this._decompose(), TB.bdB(this._localRotation);
         else {
-          const ZJ = pJ._TmpMats[0],
-            FJ = this.getAbsoluteMatrix();
-          JJ ? FJ.multiplyToRef(JJ.getWorldMatrix(), ZJ) : ZJ.rZJ(FJ), ZJ.multiplyAtIndex(0, this._scalingDeterminant), ZJ.multiplyAtIndex(1, this._scalingDeterminant), ZJ.multiplyAtIndex(2, this._scalingDeterminant), ZJ.decompose(void 0, cJ, void 0)
+          const dB = QB._TmpMats[0],
+            VB = this.getAbsoluteMatrix();
+          BB ? VB.multiplyToRef(BB.getWorldMatrix(), dB) : dB.bdB(VB), dB.multiplyAtIndex(0, this._scalingDeterminant), dB.multiplyAtIndex(1, this._scalingDeterminant), dB.multiplyAtIndex(2, this._scalingDeterminant), dB.decompose(void 0, TB, void 0)
         }
       }
       getRotationMatrix() {
-        let JJ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          cJ = arguments.length > 1 ? arguments[1] : void 0;
-        const ZJ = eJ.b.Identity();
-        return this.getRotationMatrixToRef(JJ, cJ, ZJ), ZJ
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          TB = arguments.length > 1 ? arguments[1] : void 0;
+        const dB = pB.b.Identity();
+        return this.getRotationMatrixToRef(BB, TB, dB), dB
       }
       getRotationMatrixToRef() {
-        let JJ = arguments.length > 1 ? arguments[1] : void 0,
-          cJ = arguments.length > 2 ? arguments[2] : void 0;
-        if (0 == (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0)) this.getLocalMatrix().getRotationMatrixToRef(cJ);
+        let BB = arguments.length > 1 ? arguments[1] : void 0,
+          TB = arguments.length > 2 ? arguments[2] : void 0;
+        if (0 == (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0)) this.getLocalMatrix().getRotationMatrixToRef(TB);
         else {
-          const ZJ = pJ._TmpMats[0],
-            FJ = this.getAbsoluteMatrix();
-          JJ ? FJ.multiplyToRef(JJ.getWorldMatrix(), ZJ) : ZJ.rZJ(FJ), ZJ.multiplyAtIndex(0, this._scalingDeterminant), ZJ.multiplyAtIndex(1, this._scalingDeterminant), ZJ.multiplyAtIndex(2, this._scalingDeterminant), ZJ.getRotationMatrixToRef(cJ)
+          const dB = QB._TmpMats[0],
+            VB = this.getAbsoluteMatrix();
+          BB ? VB.multiplyToRef(BB.getWorldMatrix(), dB) : dB.bdB(VB), dB.multiplyAtIndex(0, this._scalingDeterminant), dB.multiplyAtIndex(1, this._scalingDeterminant), dB.multiplyAtIndex(2, this._scalingDeterminant), dB.getRotationMatrixToRef(TB)
         }
       }
-      getAbsolutePositionFromLocal(JJ) {
-        let cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        const ZJ = eJ.j.Zero();
-        return this.getAbsolutePositionFromLocalToRef(JJ, cJ, ZJ), ZJ
+      getAbsolutePositionFromLocal(BB) {
+        let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        const dB = pB.p.Zero();
+        return this.getAbsolutePositionFromLocalToRef(BB, TB, dB), dB
       }
-      getAbsolutePositionFromLocalToRef(JJ) {
-        let cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          ZJ = arguments.length > 2 ? arguments[2] : void 0;
-        const FJ = pJ._TmpMats[0].rZJ(this.getAbsoluteMatrix());
-        cJ && FJ.multiplyToRef(cJ.getWorldMatrix(), FJ), eJ.j.TransformCoordinatesToRef(JJ, FJ, ZJ)
+      getAbsolutePositionFromLocalToRef(BB) {
+        let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          dB = arguments.length > 2 ? arguments[2] : void 0;
+        const VB = QB._TmpMats[0].bdB(this.getAbsoluteMatrix());
+        TB && VB.multiplyToRef(TB.getWorldMatrix(), VB), pB.p.TransformCoordinatesToRef(BB, VB, dB)
       }
-      getLocalPositionFromAbsolute(JJ) {
-        let cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        const ZJ = eJ.j.Zero();
-        return this.getLocalPositionFromAbsoluteToRef(JJ, cJ, ZJ), ZJ
+      getLocalPositionFromAbsolute(BB) {
+        let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        const dB = pB.p.Zero();
+        return this.getLocalPositionFromAbsoluteToRef(BB, TB, dB), dB
       }
-      getLocalPositionFromAbsoluteToRef(JJ) {
-        let cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          ZJ = arguments.length > 2 ? arguments[2] : void 0;
-        const FJ = pJ._TmpMats[0].rZJ(this.getAbsoluteMatrix());
-        cJ && FJ.multiplyToRef(cJ.getWorldMatrix(), FJ), FJ.invert(), eJ.j.TransformCoordinatesToRef(JJ, FJ, ZJ)
+      getLocalPositionFromAbsoluteToRef(BB) {
+        let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          dB = arguments.length > 2 ? arguments[2] : void 0;
+        const VB = QB._TmpMats[0].bdB(this.getAbsoluteMatrix());
+        TB && VB.multiplyToRef(TB.getWorldMatrix(), VB), VB.invert(), pB.p.TransformCoordinatesToRef(BB, VB, dB)
       }
       setCurrentPoseAsRest() {
         this.setRestMatrix(this.getLocalMatrix())
       }
       dispose() {
         this._linkedTransformNode = null;
-        const JJ = this._skeleton.bones.indexOf(this);
-        if (-1 !== JJ && this._skeleton.bones.splice(JJ, 1), this._parentNode && this._parentNode.children) {
-          const JJ = this._parentNode.children,
-            cJ = JJ.indexOf(this); - 1 !== cJ && JJ.splice(cJ, 1)
+        const BB = this._skeleton.bones.indexOf(this);
+        if (-1 !== BB && this._skeleton.bones.splice(BB, 1), this._parentNode && this._parentNode.children) {
+          const BB = this._parentNode.children,
+            TB = BB.indexOf(this); - 1 !== TB && BB.splice(TB, 1)
         }
         super.dispose()
       }
     }
-    pJ._TmpVecs = (0, HJ.e)(2, eJ.j.Zero), pJ._TmpQuat = eJ.e.Identity(), pJ._TmpMats = (0, HJ.e)(5, eJ.b.Identity), (gJ = pJ.prototype).copyAnimationRange ?? (gJ.copyAnimationRange = (0, kJ.l)("Bone", "copyAnimationRange"));
-    var dJ = ZJ(38874);
-    let zJ = !1;
-    var NJ = ZJ(38763),
-      OJ = ZJ(39079),
-      TJ = ZJ(39091),
-      CJ = ZJ(39087),
-      uJ = ZJ(38901);
+    QB._TmpVecs = (0, cB.b)(2, pB.p.Zero), QB._TmpQuat = pB.f.Identity(), QB._TmpMats = (0, cB.b)(5, pB.b.Identity), (IB = QB.prototype).copyAnimationRange ?? (IB.copyAnimationRange = (0, PB.h)("Bone", "copyAnimationRange"));
+    var RB = dB(38843);
+    let aB = !1;
+    var ZB = dB(38720),
+      XB = dB(39069),
+      WB = dB(39075),
+      hB = dB(39073),
+      CB = dB(38871);
 
-    function iJ(JJ, cJ) {
-      const ZJ = (0, sJ.RandomRange)(0, 1);
-      YJ.f.LerpToRef(cJ.color1, cJ.color2, ZJ, JJ.color)
+    function GB(BB, TB) {
+      const dB = (0, OB.RandomRange)(0, 1);
+      oB.d.LerpToRef(TB.color1, TB.color2, dB, BB.color)
     }
 
-    function RJ(JJ, cJ) {
-      cJ.colorDead.subtractToRef(JJ.color, cJ._colorDiff), cJ._colorDiff.scaleToRef(1 / JJ.lifeTime, JJ.colorStep)
+    function qB(BB, TB) {
+      TB.colorDead.subtractToRef(BB.color, TB._colorDiff), TB._colorDiff.scaleToRef(1 / BB.lifeTime, BB.colorStep)
     }
 
-    function LJ(JJ, cJ) {
-      JJ._properties.currentColorGradient = cJ._colorGradients[0], JJ._properties.currentColorGradient.getColorToRef(JJ.color), JJ._properties.currentColor1.rZJ(JJ.color), cJ._colorGradients.length > 1 ? cJ._colorGradients[1].getColorToRef(JJ._properties.currentColor2) : JJ._properties.currentColor2.rZJ(JJ.color)
+    function xB(BB, TB) {
+      BB._properties.currentColorGradient = TB._colorGradients[0], BB._properties.currentColorGradient.getColorToRef(BB.color), BB._properties.currentColor1.bdB(BB.color), TB._colorGradients.length > 1 ? TB._colorGradients[1].getColorToRef(BB._properties.currentColor2) : BB._properties.currentColor2.bdB(BB.color)
     }
 
-    function aJ(JJ, cJ) {
-      const ZJ = cJ._colorGradients;
-      FJ.j.GetCurrentGradient(cJ._ratio, ZJ, ((cJ, ZJ, FJ) => {
-        cJ !== JJ._properties.currentColorGradient && (JJ._properties.currentColor1.rZJ(JJ._properties.currentColor2), ZJ.getColorToRef(JJ._properties.currentColor2), JJ._properties.currentColorGradient = cJ), YJ.f.LerpToRef(JJ._properties.currentColor1, JJ._properties.currentColor2, FJ, JJ.color), JJ.color.a < 0 && (JJ.color.a = 0)
+    function jB(BB, TB) {
+      const dB = TB._colorGradients;
+      VB.l.GetCurrentGradient(TB._ratio, dB, ((TB, dB, VB) => {
+        TB !== BB._properties.currentColorGradient && (BB._properties.currentColor1.bdB(BB._properties.currentColor2), dB.getColorToRef(BB._properties.currentColor2), BB._properties.currentColorGradient = TB), oB.d.LerpToRef(BB._properties.currentColor1, BB._properties.currentColor2, VB, BB.color), BB.color.a < 0 && (BB.color.a = 0)
       }))
     }
 
-    function BJ(JJ, cJ) {
-      JJ.colorStep.scaleToRef(cJ._scaledUpdateSpeed, cJ._scaledColorStep), JJ.color.addInPlace(cJ._scaledColorStep), JJ.color.a < 0 && (JJ.color.a = 0)
+    function AB(BB, TB) {
+      BB.colorStep.scaleToRef(TB._scaledUpdateSpeed, TB._scaledColorStep), BB.color.addInPlace(TB._scaledColorStep), BB.color.a < 0 && (BB.color.a = 0)
     }
 
-    function tJ(JJ, cJ) {
-      FJ.j.GetCurrentGradient(cJ._ratio, cJ._angularSpeedGradients, ((cJ, ZJ, FJ) => {
-        cJ !== JJ._properties.currentAngularSpeedGradient && (JJ._properties.currentAngularSpeed1 = JJ._properties.currentAngularSpeed2, JJ._properties.currentAngularSpeed2 = ZJ.getFactor(), JJ._properties.currentAngularSpeedGradient = cJ), JJ.angularSpeed = (0, sJ.Lerp)(JJ._properties.currentAngularSpeed1, JJ._properties.currentAngularSpeed2, FJ)
+    function bB(BB, TB) {
+      VB.l.GetCurrentGradient(TB._ratio, TB._angularSpeedGradients, ((TB, dB, VB) => {
+        TB !== BB._properties.currentAngularSpeedGradient && (BB._properties.currentAngularSpeed1 = BB._properties.currentAngularSpeed2, BB._properties.currentAngularSpeed2 = dB.getFactor(), BB._properties.currentAngularSpeedGradient = TB), BB.angularSpeed = (0, OB.Lerp)(BB._properties.currentAngularSpeed1, BB._properties.currentAngularSpeed2, VB)
       }))
     }
 
-    function oJ(JJ, cJ) {
-      JJ.angle += JJ.angularSpeed * cJ._scaledUpdateSpeed
+    function nB(BB, TB) {
+      BB.angle += BB.angularSpeed * TB._scaledUpdateSpeed
     }
 
-    function lJ(JJ, cJ) {
-      cJ.particleEmitterType.startDirectionFunction(cJ._emitterWorldMatrix, JJ.direction, JJ, cJ.isLocal, cJ._emitterInverseWorldMatrix)
+    function eB(BB, TB) {
+      TB.particleEmitterType.startDirectionFunction(TB._emitterWorldMatrix, BB.direction, BB, TB.isLocal, TB._emitterInverseWorldMatrix)
     }
 
-    function Jc(JJ, cJ) {
-      cJ.startDirectionFunction(cJ._emitterWorldMatrix, JJ.direction, JJ, cJ.isLocal)
+    function BT(BB, TB) {
+      TB.startDirectionFunction(TB._emitterWorldMatrix, BB.direction, BB, TB.isLocal)
     }
 
-    function cc(JJ, cJ) {
-      JJ._properties.currentVelocityGradient = cJ._velocityGradients[0], JJ._properties.currentVelocity1 = JJ._properties.currentVelocityGradient.getFactor(), cJ._velocityGradients.length > 1 ? JJ._properties.currentVelocity2 = cJ._velocityGradients[1].getFactor() : JJ._properties.currentVelocity2 = JJ._properties.currentVelocity1
+    function TT(BB, TB) {
+      BB._properties.currentVelocityGradient = TB._velocityGradients[0], BB._properties.currentVelocity1 = BB._properties.currentVelocityGradient.getFactor(), TB._velocityGradients.length > 1 ? BB._properties.currentVelocity2 = TB._velocityGradients[1].getFactor() : BB._properties.currentVelocity2 = BB._properties.currentVelocity1
     }
 
-    function Zc(JJ, cJ) {
-      JJ._properties.currentLimitVelocityGradient = cJ._limitVelocityGradients[0], JJ._properties.currentLimitVelocity1 = JJ._properties.currentLimitVelocityGradient.getFactor(), cJ._limitVelocityGradients.length > 1 ? JJ._properties.currentLimitVelocity2 = cJ._limitVelocityGradients[1].getFactor() : JJ._properties.currentLimitVelocity2 = JJ._properties.currentLimitVelocity1
+    function dT(BB, TB) {
+      BB._properties.currentLimitVelocityGradient = TB._limitVelocityGradients[0], BB._properties.currentLimitVelocity1 = BB._properties.currentLimitVelocityGradient.getFactor(), TB._limitVelocityGradients.length > 1 ? BB._properties.currentLimitVelocity2 = TB._limitVelocityGradients[1].getFactor() : BB._properties.currentLimitVelocity2 = BB._properties.currentLimitVelocity1
     }
 
-    function Fc(JJ, cJ) {
-      FJ.j.GetCurrentGradient(cJ._ratio, cJ._velocityGradients, ((cJ, ZJ, FJ) => {
-        cJ !== JJ._properties.currentVelocityGradient && (JJ._properties.currentVelocity1 = JJ._properties.currentVelocity2, JJ._properties.currentVelocity2 = ZJ.getFactor(), JJ._properties.currentVelocityGradient = cJ), JJ._properties.directionScale *= (0, sJ.Lerp)(JJ._properties.currentVelocity1, JJ._properties.currentVelocity2, FJ)
+    function VT(BB, TB) {
+      VB.l.GetCurrentGradient(TB._ratio, TB._velocityGradients, ((TB, dB, VB) => {
+        TB !== BB._properties.currentVelocityGradient && (BB._properties.currentVelocity1 = BB._properties.currentVelocity2, BB._properties.currentVelocity2 = dB.getFactor(), BB._properties.currentVelocityGradient = TB), BB._properties.directionScale *= (0, OB.Lerp)(BB._properties.currentVelocity1, BB._properties.currentVelocity2, VB)
       }))
     }
 
-    function Uc(JJ, cJ) {
-      FJ.j.GetCurrentGradient(cJ._ratio, cJ._limitVelocityGradients, ((ZJ, FJ, UJ) => {
-        ZJ !== JJ._properties.currentLimitVelocityGradient && (JJ._properties.currentLimitVelocity1 = JJ._properties.currentLimitVelocity2, JJ._properties.currentLimitVelocity2 = FJ.getFactor(), JJ._properties.currentLimitVelocityGradient = ZJ);
-        const eJ = (0, sJ.Lerp)(JJ._properties.currentLimitVelocity1, JJ._properties.currentLimitVelocity2, UJ);
-        JJ.direction.length() > eJ && JJ.direction.scaleInPlace(cJ.limitVelocityDamping)
+    function yT(BB, TB) {
+      VB.l.GetCurrentGradient(TB._ratio, TB._limitVelocityGradients, ((dB, VB, yB) => {
+        dB !== BB._properties.currentLimitVelocityGradient && (BB._properties.currentLimitVelocity1 = BB._properties.currentLimitVelocity2, BB._properties.currentLimitVelocity2 = VB.getFactor(), BB._properties.currentLimitVelocityGradient = dB);
+        const pB = (0, OB.Lerp)(BB._properties.currentLimitVelocity1, BB._properties.currentLimitVelocity2, yB);
+        BB.direction.length() > pB && BB.direction.scaleInPlace(TB.limitVelocityDamping)
       }))
     }
 
-    function ec(JJ) {
-      JJ.direction.scaleToRef(JJ._properties.directionScale, JJ._properties.scaledDirection)
+    function pT(BB) {
+      BB.direction.scaleToRef(BB._properties.directionScale, BB._properties.scaledDirection)
     }
 
-    function Xc(JJ, cJ) {
-      cJ.particleEmitterType.startPositionFunction(cJ._emitterWorldMatrix, JJ.position, JJ, cJ.isLocal)
+    function lT(BB, TB) {
+      TB.particleEmitterType.startPositionFunction(TB._emitterWorldMatrix, BB.position, BB, TB.isLocal)
     }
 
-    function Ac(JJ, cJ) {
-      cJ.startPositionFunction(cJ._emitterWorldMatrix, JJ.position, JJ, cJ.isLocal)
+    function JT(BB, TB) {
+      TB.startPositionFunction(TB._emitterWorldMatrix, BB.position, BB, TB.isLocal)
     }
 
-    function qc(JJ, cJ) {
-      JJ._properties.localPosition ? JJ._properties.localPosition.rZJ(JJ.position) : JJ._properties.localPosition = JJ.position.clone(), eJ.j.TransformCoordinatesToRef(JJ._properties.localPosition, cJ._emitterWorldMatrix, JJ.position)
+    function YT(BB, TB) {
+      BB._properties.localPosition ? BB._properties.localPosition.bdB(BB.position) : BB._properties.localPosition = BB.position.clone(), pB.p.TransformCoordinatesToRef(BB._properties.localPosition, TB._emitterWorldMatrix, BB.position)
     }
 
-    function jc(JJ, cJ) {
-      cJ.isLocal && JJ._properties.localPosition ? (JJ._properties.localPosition.addInPlace(JJ._properties.scaledDirection), eJ.j.TransformCoordinatesToRef(JJ._properties.localPosition, cJ._emitterWorldMatrix, JJ.position)) : JJ.position.addInPlace(JJ._properties.scaledDirection)
+    function gT(BB, TB) {
+      TB.isLocal && BB._properties.localPosition ? (BB._properties.localPosition.addInPlace(BB._properties.scaledDirection), pB.p.TransformCoordinatesToRef(BB._properties.localPosition, TB._emitterWorldMatrix, BB.position)) : BB.position.addInPlace(BB._properties.scaledDirection)
     }
 
-    function Yc(JJ, cJ) {
-      JJ._properties.currentDragGradient = cJ._dragGradients[0], JJ._properties.currentDrag1 = JJ._properties.currentDragGradient.getFactor(), cJ._dragGradients.length > 1 ? JJ._properties.currentDrag2 = cJ._dragGradients[1].getFactor() : JJ._properties.currentDrag2 = JJ._properties.currentDrag1
+    function oT(BB, TB) {
+      BB._properties.currentDragGradient = TB._dragGradients[0], BB._properties.currentDrag1 = BB._properties.currentDragGradient.getFactor(), TB._dragGradients.length > 1 ? BB._properties.currentDrag2 = TB._dragGradients[1].getFactor() : BB._properties.currentDrag2 = BB._properties.currentDrag1
     }
 
-    function hc(JJ, cJ) {
-      FJ.j.GetCurrentGradient(cJ._ratio, cJ._dragGradients, ((cJ, ZJ, FJ) => {
-        cJ !== JJ._properties.currentDragGradient && (JJ._properties.currentDrag1 = JJ._properties.currentDrag2, JJ._properties.currentDrag2 = ZJ.getFactor(), JJ._properties.currentDragGradient = cJ);
-        const UJ = (0, sJ.Lerp)(JJ._properties.currentDrag1, JJ._properties.currentDrag2, FJ);
-        JJ._properties.scaledDirection.scaleInPlace(1 - UJ)
+    function kT(BB, TB) {
+      VB.l.GetCurrentGradient(TB._ratio, TB._dragGradients, ((TB, dB, VB) => {
+        TB !== BB._properties.currentDragGradient && (BB._properties.currentDrag1 = BB._properties.currentDrag2, BB._properties.currentDrag2 = dB.getFactor(), BB._properties.currentDragGradient = TB);
+        const yB = (0, OB.Lerp)(BB._properties.currentDrag1, BB._properties.currentDrag2, VB);
+        BB._properties.scaledDirection.scaleInPlace(1 - yB)
       }))
     }
 
-    function Dc(JJ, cJ) {
-      JJ._properties.randomNoiseCoordinates1 && JJ._properties.randomNoiseCoordinates2 ? (JJ._properties.randomNoiseCoordinates1.K9(Math.random(), Math.random(), Math.random()), JJ._properties.randomNoiseCoordinates2.K9(Math.random(), Math.random(), Math.random())) : (JJ._properties.randomNoiseCoordinates1 = new eJ.j(Math.random(), Math.random(), Math.random()), JJ._properties.randomNoiseCoordinates2 = new eJ.j(Math.random(), Math.random(), Math.random()))
+    function LT(BB, TB) {
+      BB._properties.randomNoiseCoordinates1 && BB._properties.randomNoiseCoordinates2 ? (BB._properties.randomNoiseCoordinates1.YBB(Math.random(), Math.random(), Math.random()), BB._properties.randomNoiseCoordinates2.YBB(Math.random(), Math.random(), Math.random())) : (BB._properties.randomNoiseCoordinates1 = new pB.p(Math.random(), Math.random(), Math.random()), BB._properties.randomNoiseCoordinates2 = new pB.p(Math.random(), Math.random(), Math.random()))
     }
 
-    function sc(JJ, cJ) {
-      const ZJ = cJ._noiseTextureData,
-        FJ = cJ._noiseTextureSize;
-      if (ZJ && FJ && JJ._properties.randomNoiseCoordinates1 && JJ._properties.randomNoiseCoordinates2) {
-        const UJ = cJ._fetchR(JJ._properties.randomNoiseCoordinates1.x, JJ._properties.randomNoiseCoordinates1.y, FJ.width, FJ.height, ZJ),
-          XJ = cJ._fetchR(JJ._properties.randomNoiseCoordinates1.z, JJ._properties.randomNoiseCoordinates2.x, FJ.width, FJ.height, ZJ),
-          AJ = cJ._fetchR(JJ._properties.randomNoiseCoordinates2.y, JJ._properties.randomNoiseCoordinates2.z, FJ.width, FJ.height, ZJ),
-          qJ = eJ.h.Pn[0],
-          jJ = eJ.h.Pn[1];
-        qJ.K9((2 * UJ - 1) * cJ.noiseStrength.x, (2 * XJ - 1) * cJ.noiseStrength.y, (2 * AJ - 1) * cJ.noiseStrength.z), qJ.scaleToRef(cJ._tempScaledUpdateSpeed, jJ), JJ.direction.addInPlace(jJ)
+    function OT(BB, TB) {
+      const dB = TB._noiseTextureData,
+        VB = TB._noiseTextureSize;
+      if (dB && VB && BB._properties.randomNoiseCoordinates1 && BB._properties.randomNoiseCoordinates2) {
+        const yB = TB._fetchR(BB._properties.randomNoiseCoordinates1.x, BB._properties.randomNoiseCoordinates1.y, VB.width, VB.height, dB),
+          lB = TB._fetchR(BB._properties.randomNoiseCoordinates1.z, BB._properties.randomNoiseCoordinates2.x, VB.width, VB.height, dB),
+          JB = TB._fetchR(BB._properties.randomNoiseCoordinates2.y, BB._properties.randomNoiseCoordinates2.z, VB.width, VB.height, dB),
+          YB = pB.j.RD[0],
+          gB = pB.j.RD[1];
+        YB.YBB((2 * yB - 1) * TB.noiseStrength.x, (2 * lB - 1) * TB.noiseStrength.y, (2 * JB - 1) * TB.noiseStrength.z), YB.scaleToRef(TB._tempScaledUpdateSpeed, gB), BB.direction.addInPlace(gB)
       }
     }
 
-    function nc(JJ, cJ) {
-      cJ.gravity.scaleToRef(cJ._tempScaledUpdateSpeed, cJ._scaledGravity), JJ.direction.addInPlace(cJ._scaledGravity)
+    function DT(BB, TB) {
+      TB.gravity.scaleToRef(TB._tempScaledUpdateSpeed, TB._scaledGravity), BB.direction.addInPlace(TB._scaledGravity)
     }
 
-    function Gc(JJ, cJ) {
-      JJ.size = (0, sJ.RandomRange)(cJ.minSize, cJ.maxSize), JJ.scale.K9((0, sJ.RandomRange)(cJ.minScaleX, cJ.maxScaleX), (0, sJ.RandomRange)(cJ.minScaleY, cJ.maxScaleY))
+    function uT(BB, TB) {
+      BB.size = (0, OB.RandomRange)(TB.minSize, TB.maxSize), BB.scale.YBB((0, OB.RandomRange)(TB.minScaleX, TB.maxScaleX), (0, OB.RandomRange)(TB.minScaleY, TB.maxScaleY))
     }
 
-    function fc(JJ, cJ) {
-      JJ._properties.currentSizeGradient = cJ._sizeGradients[0], JJ._properties.currentSize1 = JJ._properties.currentSizeGradient.getFactor(), JJ.size = JJ._properties.currentSize1, cJ._sizeGradients.length > 1 ? JJ._properties.currentSize2 = cJ._sizeGradients[1].getFactor() : JJ._properties.currentSize2 = JJ._properties.currentSize1, JJ.scale.K9((0, sJ.RandomRange)(cJ.minScaleX, cJ.maxScaleX), (0, sJ.RandomRange)(cJ.minScaleY, cJ.maxScaleY))
+    function HT(BB, TB) {
+      BB._properties.currentSizeGradient = TB._sizeGradients[0], BB._properties.currentSize1 = BB._properties.currentSizeGradient.getFactor(), BB.size = BB._properties.currentSize1, TB._sizeGradients.length > 1 ? BB._properties.currentSize2 = TB._sizeGradients[1].getFactor() : BB._properties.currentSize2 = BB._properties.currentSize1, BB.scale.YBB((0, OB.RandomRange)(TB.minScaleX, TB.maxScaleX), (0, OB.RandomRange)(TB.minScaleY, TB.maxScaleY))
     }
 
-    function xc(JJ, cJ) {
-      const ZJ = cJ._actualFrame / cJ.targetStopDuration;
-      FJ.j.GetCurrentGradient(ZJ, cJ._startSizeGradients, ((ZJ, FJ, UJ) => {
-        ZJ !== cJ._currentStartSizeGradient && (cJ._currentStartSize1 = cJ._currentStartSize2, cJ._currentStartSize2 = FJ.getFactor(), cJ._currentStartSizeGradient = ZJ);
-        const eJ = (0, sJ.Lerp)(cJ._currentStartSize1, cJ._currentStartSize2, UJ);
-        JJ.scale.scaleInPlace(eJ)
+    function ET(BB, TB) {
+      const dB = TB._actualFrame / TB.targetStopDuration;
+      VB.l.GetCurrentGradient(dB, TB._startSizeGradients, ((dB, VB, yB) => {
+        dB !== TB._currentStartSizeGradient && (TB._currentStartSize1 = TB._currentStartSize2, TB._currentStartSize2 = VB.getFactor(), TB._currentStartSizeGradient = dB);
+        const pB = (0, OB.Lerp)(TB._currentStartSize1, TB._currentStartSize2, yB);
+        BB.scale.scaleInPlace(pB)
       }))
     }
 
-    function rc(JJ, cJ) {
-      FJ.j.GetCurrentGradient(cJ._ratio, cJ._sizeGradients, ((cJ, ZJ, FJ) => {
-        cJ !== JJ._properties.currentSizeGradient && (JJ._properties.currentSize1 = JJ._properties.currentSize2, JJ._properties.currentSize2 = ZJ.getFactor(), JJ._properties.currentSizeGradient = cJ), JJ.size = (0, sJ.Lerp)(JJ._properties.currentSize1, JJ._properties.currentSize2, FJ)
+    function vT(BB, TB) {
+      VB.l.GetCurrentGradient(TB._ratio, TB._sizeGradients, ((TB, dB, VB) => {
+        TB !== BB._properties.currentSizeGradient && (BB._properties.currentSize1 = BB._properties.currentSize2, BB._properties.currentSize2 = dB.getFactor(), BB._properties.currentSizeGradient = TB), BB.size = (0, OB.Lerp)(BB._properties.currentSize1, BB._properties.currentSize2, VB)
       }))
     }
 
-    function vc(JJ, cJ) {
-      JJ.remapData = new eJ.k(0, 1, 0, 1)
+    function mT(BB, TB) {
+      BB.remapData = new pB.r(0, 1, 0, 1)
     }
 
-    function mc(JJ, cJ) {
-      cJ._colorRemapGradients && cJ._colorRemapGradients.length > 0 && FJ.j.GetCurrentGradient(cJ._ratio, cJ._colorRemapGradients, ((cJ, ZJ, FJ) => {
-        const UJ = (0, sJ.Lerp)(cJ.factor1, ZJ.factor1, FJ),
-          eJ = (0, sJ.Lerp)(cJ.factor2, ZJ.factor2, FJ);
-        JJ.remapData.x = UJ, JJ.remapData.y = eJ - UJ
-      })), cJ._alphaRemapGradients && cJ._alphaRemapGradients.length > 0 && FJ.j.GetCurrentGradient(cJ._ratio, cJ._alphaRemapGradients, ((cJ, ZJ, FJ) => {
-        const UJ = (0, sJ.Lerp)(cJ.factor1, ZJ.factor1, FJ),
-          eJ = (0, sJ.Lerp)(cJ.factor2, ZJ.factor2, FJ);
-        JJ.remapData.z = UJ, JJ.remapData.w = eJ - UJ
+    function iT(BB, TB) {
+      TB._colorRemapGradients && TB._colorRemapGradients.length > 0 && VB.l.GetCurrentGradient(TB._ratio, TB._colorRemapGradients, ((TB, dB, VB) => {
+        const yB = (0, OB.Lerp)(TB.factor1, dB.factor1, VB),
+          pB = (0, OB.Lerp)(TB.factor2, dB.factor2, VB);
+        BB.remapData.x = yB, BB.remapData.y = pB - yB
+      })), TB._alphaRemapGradients && TB._alphaRemapGradients.length > 0 && VB.l.GetCurrentGradient(TB._ratio, TB._alphaRemapGradients, ((TB, dB, VB) => {
+        const yB = (0, OB.Lerp)(TB.factor1, dB.factor1, VB),
+          pB = (0, OB.Lerp)(TB.factor2, dB.factor2, VB);
+        BB.remapData.z = yB, BB.remapData.w = pB - yB
       }))
     }
 
-    function Qc(JJ, cJ) {
-      const ZJ = (0, sJ.Clamp)(cJ._actualFrame / cJ.targetStopDuration);
-      FJ.j.GetCurrentGradient(ZJ, cJ._lifeTimeGradients, ((cJ, FJ) => {
-        const UJ = cJ,
-          eJ = FJ,
-          XJ = UJ.getFactor(),
-          AJ = eJ.getFactor(),
-          qJ = (ZJ - UJ.gradient) / (eJ.gradient - UJ.gradient);
-        JJ.lifeTime = (0, sJ.Lerp)(XJ, AJ, qJ)
-      })), cJ._emitPower = (0, sJ.RandomRange)(cJ.minEmitPower, cJ.maxEmitPower)
+    function NT(BB, TB) {
+      const dB = (0, OB.Clamp)(TB._actualFrame / TB.targetStopDuration);
+      VB.l.GetCurrentGradient(dB, TB._lifeTimeGradients, ((TB, VB) => {
+        const yB = TB,
+          pB = VB,
+          lB = yB.getFactor(),
+          JB = pB.getFactor(),
+          YB = (dB - yB.gradient) / (pB.gradient - yB.gradient);
+        BB.lifeTime = (0, OB.Lerp)(lB, JB, YB)
+      })), TB._emitPower = (0, OB.RandomRange)(TB.minEmitPower, TB.maxEmitPower)
     }
 
-    function Ec(JJ, cJ) {
-      JJ.lifeTime = (0, sJ.RandomRange)(cJ.minLifeTime, cJ.maxLifeTime), cJ._emitPower = (0, sJ.RandomRange)(cJ.minEmitPower, cJ.maxEmitPower)
+    function tT(BB, TB) {
+      BB.lifeTime = (0, OB.RandomRange)(TB.minLifeTime, TB.maxLifeTime), TB._emitPower = (0, OB.RandomRange)(TB.minEmitPower, TB.maxEmitPower)
     }
 
-    function Vc(JJ, cJ) {
-      0 === cJ._emitPower ? (JJ._properties.initialDirection ? JJ._properties.initialDirection.rZJ(JJ.direction) : JJ._properties.initialDirection = JJ.direction.clone(), JJ.direction.set(0, 0, 0)) : (JJ._properties.initialDirection = null, JJ.direction.scaleInPlace(cJ._emitPower)), JJ.direction.addInPlace(cJ._inheritedVelocityOffset)
+    function fT(BB, TB) {
+      0 === TB._emitPower ? (BB._properties.initialDirection ? BB._properties.initialDirection.bdB(BB.direction) : BB._properties.initialDirection = BB.direction.clone(), BB.direction.set(0, 0, 0)) : (BB._properties.initialDirection = null, BB.direction.scaleInPlace(TB._emitPower)), BB.direction.addInPlace(TB._inheritedVelocityOffset)
     }
 
-    function Kc(JJ, cJ) {
-      JJ.angularSpeed = (0, sJ.RandomRange)(cJ.minAngularSpeed, cJ.maxAngularSpeed), JJ.angle = (0, sJ.RandomRange)(cJ.minInitialRotation, cJ.maxInitialRotation)
+    function sT(BB, TB) {
+      BB.angularSpeed = (0, OB.RandomRange)(TB.minAngularSpeed, TB.maxAngularSpeed), BB.angle = (0, OB.RandomRange)(TB.minInitialRotation, TB.maxInitialRotation)
     }
 
-    function yc(JJ, cJ) {
-      JJ._properties.currentAngularSpeedGradient = cJ._angularSpeedGradients[0], JJ.angularSpeed = JJ._properties.currentAngularSpeedGradient.getFactor(), JJ._properties.currentAngularSpeed1 = JJ.angularSpeed, cJ._angularSpeedGradients.length > 1 ? JJ._properties.currentAngularSpeed2 = cJ._angularSpeedGradients[1].getFactor() : JJ._properties.currentAngularSpeed2 = JJ._properties.currentAngularSpeed1, JJ.angle = (0, sJ.RandomRange)(cJ.minInitialRotation, cJ.maxInitialRotation)
+    function MT(BB, TB) {
+      BB._properties.currentAngularSpeedGradient = TB._angularSpeedGradients[0], BB.angularSpeed = BB._properties.currentAngularSpeedGradient.getFactor(), BB._properties.currentAngularSpeed1 = BB.angularSpeed, TB._angularSpeedGradients.length > 1 ? BB._properties.currentAngularSpeed2 = TB._angularSpeedGradients[1].getFactor() : BB._properties.currentAngularSpeed2 = BB._properties.currentAngularSpeed1, BB.angle = (0, OB.RandomRange)(TB.minInitialRotation, TB.maxInitialRotation)
     }
 
-    function Sc(JJ, cJ) {
-      JJ._properties.initialStartSpriteCellId = cJ.startSpriteCellID, JJ._properties.initialEndSpriteCellId = cJ.endSpriteCellID, JJ._properties.initialSpriteCellLoop = cJ.spriteCellLoop
+    function zT(BB, TB) {
+      BB._properties.initialStartSpriteCellId = TB.startSpriteCellID, BB._properties.initialEndSpriteCellId = TB.endSpriteCellID, BB._properties.initialSpriteCellLoop = TB.spriteCellLoop
     }
 
-    function Ic(JJ, cJ) {
-      JJ.previousItem = cJ.previousItem, JJ.nextItem = cJ, cJ.previousItem && (cJ.previousItem.nextItem = JJ), cJ.previousItem = JJ
+    function wT(BB, TB) {
+      BB.previousItem = TB.previousItem, BB.nextItem = TB, TB.previousItem && (TB.previousItem.nextItem = BB), TB.previousItem = BB
     }
 
-    function Mc(JJ, cJ) {
-      JJ.previousItem = cJ, JJ.nextItem = cJ.nextItem, cJ.nextItem && (cJ.nextItem.previousItem = JJ), cJ.nextItem = JJ
+    function UT(BB, TB) {
+      BB.previousItem = TB, BB.nextItem = TB.nextItem, TB.nextItem && (TB.nextItem.previousItem = BB), TB.nextItem = BB
     }
 
-    function bc(JJ) {
-      JJ.previousItem && (JJ.previousItem.nextItem = JJ.nextItem), JJ.nextItem && (JJ.nextItem.previousItem = JJ.previousItem)
+    function FT(BB) {
+      BB.previousItem && (BB.previousItem.nextItem = BB.nextItem), BB.nextItem && (BB.nextItem.previousItem = BB.previousItem)
     }
-    var wc = ZJ(39138);
-    class Wc extends EJ {
+    var KT = dB(39117);
+    class rT extends tB {
       get startDirectionFunction() {
         return this._startDirectionFunction
       }
-      set startDirectionFunction(JJ) {
-        this._startDirectionFunction !== JJ && (this._startDirectionFunction = JJ, this._directionCreation.process = JJ ? Jc : lJ)
+      set startDirectionFunction(BB) {
+        this._startDirectionFunction !== BB && (this._startDirectionFunction = BB, this._directionCreation.process = BB ? BT : eB)
       }
       get startPositionFunction() {
         return this._startPositionFunction
       }
-      set startPositionFunction(JJ) {
-        this._startPositionFunction !== JJ && (this._startPositionFunction = JJ, this._positionCreation.process = JJ ? Ac : Xc)
+      set startPositionFunction(BB) {
+        this._startPositionFunction !== BB && (this._startPositionFunction = BB, this._positionCreation.process = BB ? JT : lT)
       }
-      set onDispose(JJ) {
-        this._onDisposeObserver && this.Sy.remove(this._onDisposeObserver), this._onDisposeObserver = this.Sy.add(JJ)
+      set onDispose(BB) {
+        this._onDisposeObserver && this.lF.remove(this._onDisposeObserver), this._onDisposeObserver = this.lF.add(BB)
       }
-      get YZJ() {
+      get WdB() {
         return this._isDisposed
       }
       get useRampGradients() {
         return this._useRampGradients
       }
-      set useRampGradients(JJ) {
-        this._useRampGradients !== JJ && (this._useRampGradients = JJ, this._resetEffect(), JJ ? (this._rampCreation = {
-          process: vc,
+      set useRampGradients(BB) {
+        this._useRampGradients !== BB && (this._useRampGradients = BB, this._resetEffect(), BB ? (this._rampCreation = {
+          process: mT,
           previousItem: null,
           nextItem: null
-        }, Mc(this._rampCreation, this._colorDeadCreation), this._gravityProcessing && (this._remapGradientProcessing = {
-          process: mc,
+        }, UT(this._rampCreation, this._colorDeadCreation), this._gravityProcessing && (this._remapGradientProcessing = {
+          process: iT,
           previousItem: null,
           nextItem: null
-        }, Mc(this._remapGradientProcessing, this._gravityProcessing))) : (bc(this._rampCreation), bc(this._remapGradientProcessing)))
+        }, UT(this._remapGradientProcessing, this._gravityProcessing))) : (FT(this._rampCreation), FT(this._remapGradientProcessing)))
       }
       get isLocal() {
         return this._isLocal
       }
-      set isLocal(JJ) {
-        this._isLocal !== JJ && (this._isLocal = JJ, JJ ? (this._isLocalCreation = {
-          process: qc,
+      set isLocal(BB) {
+        this._isLocal !== BB && (this._isLocal = BB, BB ? (this._isLocalCreation = {
+          process: YT,
           previousItem: null,
           nextItem: null
-        }, Mc(this._isLocalCreation, this._positionCreation)) : bc(this._isLocalCreation))
+        }, UT(this._isLocalCreation, this._positionCreation)) : FT(this._isLocalCreation))
       }
       get particles() {
         return this._particles
@@ -2908,12 +2908,12 @@ export const modules = {
       get _isAnimationSheetEnabled() {
         return this._animationSheetEnabled
       }
-      set _isAnimationSheetEnabled(JJ) {
-        this._animationSheetEnabled !== JJ && (this._animationSheetEnabled = JJ, JJ ? (this._sheetCreation = {
-          process: Sc,
+      set _isAnimationSheetEnabled(BB) {
+        this._animationSheetEnabled !== BB && (this._animationSheetEnabled = BB, BB ? (this._sheetCreation = {
+          process: zT,
           previousItem: null,
           nextItem: null
-        }, Mc(this._sheetCreation, this._colorDeadCreation)) : bc(this._sheetCreation), this._reset())
+        }, UT(this._sheetCreation, this._colorDeadCreation)) : FT(this._sheetCreation), this._reset())
       }
       getActiveCount() {
         return this._particles.length
@@ -2925,19 +2925,19 @@ export const modules = {
         return this._stopped && this.isAlive()
       }
       getCustomEffect() {
-        let JJ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return this._customWrappers[JJ]?.effect ?? this._customWrappers[0].effect
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return this._customWrappers[BB]?.effect ?? this._customWrappers[0].effect
       }
       _getCustomDrawWrapper() {
-        let JJ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return this._customWrappers[JJ] ?? this._customWrappers[0]
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return this._customWrappers[BB] ?? this._customWrappers[0]
       }
-      setCustomEffect(JJ) {
-        let cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        this._customWrappers[cJ] = new OJ.d(this._engine), this._customWrappers[cJ].effect = JJ, this._customWrappers[cJ].drawContext && (this._customWrappers[cJ].drawContext.useInstancing = this._useInstancing)
+      setCustomEffect(BB) {
+        let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        this._customWrappers[TB] = new XB.b(this._engine), this._customWrappers[TB].effect = BB, this._customWrappers[TB].drawContext && (this._customWrappers[TB].drawContext.useInstancing = this._useInstancing)
       }
       get onBeforeDrawParticlesObservable() {
-        return this._onBeforeDrawParticlesObservable || (this._onBeforeDrawParticlesObservable = new UJ.c), this._onBeforeDrawParticlesObservable
+        return this._onBeforeDrawParticlesObservable || (this._onBeforeDrawParticlesObservable = new yB.e), this._onBeforeDrawParticlesObservable
       }
       get vertexShaderName() {
         return "particles"
@@ -2951,231 +2951,231 @@ export const modules = {
       get noiseTexture() {
         return this._noiseTexture
       }
-      set noiseTexture(JJ) {
-        if (this.noiseTexture !== JJ) {
-          if (this._noiseTexture = JJ, !JJ) return bc(this._noiseCreation), void bc(this._noiseProcessing);
+      set noiseTexture(BB) {
+        if (this.noiseTexture !== BB) {
+          if (this._noiseTexture = BB, !BB) return FT(this._noiseCreation), void FT(this._noiseProcessing);
           this._noiseCreation = {
-            process: Dc,
+            process: LT,
             previousItem: null,
             nextItem: null
-          }, Mc(this._noiseCreation, this._colorDeadCreation), this._noiseProcessing = {
-            process: sc,
+          }, UT(this._noiseCreation, this._colorDeadCreation), this._noiseProcessing = {
+            process: OT,
             previousItem: null,
             nextItem: null
-          }, Mc(this._noiseProcessing, this._positionProcessing)
+          }, UT(this._noiseProcessing, this._positionProcessing)
         }
       }
-      constructor(JJ, cJ, ZJ) {
-        let FJ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-          XJ = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-          AJ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : .01,
-          jJ = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
-        zJ || (zJ = !0, WJ(dJ.e, pJ)), (0, NJ.b)(), super(JJ), this._emitterInverseWorldMatrix = eJ.b.Identity(), this._startDirectionFunction = null, this._startPositionFunction = null, this._inheritedVelocityOffset = new eJ.j, this.Sy = new UJ.c, this.onStoppedObservable = new UJ.c, this.onStartedObservable = new UJ.c, this._noiseTextureSize = null, this._noiseTextureData = null, this._particles = new Array, this._stockParticles = new Array, this._newPartsExcess = 0, this._vertexBuffers = {}, this._renderPassObserver = null, this._scaledColorStep = new YJ.f(0, 0, 0, 0), this._colorDiff = new YJ.f(0, 0, 0, 0), this._scaledGravity = eJ.j.Zero(), this._currentRenderId = -1, this._useInstancing = !1, this._useFixedCapacityForSnapshot = !1, this._fixedCapacityHighWaterMark = 0, this._isDisposed = !1, this._started = !1, this._stopped = !1, this._actualFrame = 0, this._currentEmitRate1 = 0, this._currentEmitRate2 = 0, this._currentStartSize1 = 0, this._currentStartSize2 = 0, this.updateInAnimate = !0, this._rawTextureWidth = 256, this._useRampGradients = !1, this._updateQueueStart = null, this._startSizeCreation = null, this._createQueueStart = null, this._isLocal = !1, this.isGPU = !1, this._shaderLanguage = 0, this._onBeforeDrawParticlesObservable = null, this._emitFromParticle = JJ => {}, this.recycleParticle = JJ => {
-          const cJ = this._particles.pop();
-          cJ !== JJ && cJ.copyTo(JJ), cJ.metadata = null, this._stockParticles.push(cJ)
+      constructor(BB, TB, dB) {
+        let VB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
+          lB = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+          JB = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : .01,
+          gB = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
+        aB || (aB = !0, rB(RB.g, QB)), (0, ZB.b)(), super(BB), this._emitterInverseWorldMatrix = pB.b.Identity(), this._startDirectionFunction = null, this._startPositionFunction = null, this._inheritedVelocityOffset = new pB.p, this.lF = new yB.e, this.onStoppedObservable = new yB.e, this.onStartedObservable = new yB.e, this._noiseTextureSize = null, this._noiseTextureData = null, this._particles = new Array, this._stockParticles = new Array, this._newPartsExcess = 0, this._vertexBuffers = {}, this._renderPassObserver = null, this._scaledColorStep = new oB.d(0, 0, 0, 0), this._colorDiff = new oB.d(0, 0, 0, 0), this._scaledGravity = pB.p.Zero(), this._currentRenderId = -1, this._useInstancing = !1, this._useFixedCapacityForSnapshot = !1, this._fixedCapacityHighWaterMark = 0, this._isDisposed = !1, this._started = !1, this._stopped = !1, this._actualFrame = 0, this._currentEmitRate1 = 0, this._currentEmitRate2 = 0, this._currentStartSize1 = 0, this._currentStartSize2 = 0, this.updateInAnimate = !0, this._rawTextureWidth = 256, this._useRampGradients = !1, this._updateQueueStart = null, this._startSizeCreation = null, this._createQueueStart = null, this._isLocal = !1, this.isGPU = !1, this._shaderLanguage = 0, this._onBeforeDrawParticlesObservable = null, this._emitFromParticle = BB => {}, this.recycleParticle = BB => {
+          const TB = this._particles.pop();
+          TB !== BB && TB.copyTo(BB), TB.metadata = null, this._stockParticles.push(TB)
         }, this._createParticle = () => {
-          let JJ;
-          return 0 !== this._stockParticles.length ? (JJ = this._stockParticles.pop(), JJ._reset()) : JJ = new KJ(this), this._prepareParticle(JJ), JJ
-        }, this.paused = !1, this._shadersLoaded = !1, this._capacity = cJ, this._epsilon = AJ, ZJ && "Scene" !== ZJ.getClassName() ? (this._engine = ZJ, this.defaultProjectionMatrix = eJ.b.PerspectiveFovLH(.8, 1, .1, 100, this._engine.isNDCHalfZRange)) : (this._scene = ZJ || qJ.c.LastCreatedScene, this._engine = this._scene.gn(), this.uniqueId = this._scene.getUniqueId(), this.layerMask = this._scene.defaultRenderableLayerMask, this._scene.lE.push(this)), this._engine.getCaps().vertexArrayObject && (this._vertexArrayObject = null), this._initShaderSourceAsync(), this._lifeTimeCreation = {
-          process: Ec,
+          let BB;
+          return 0 !== this._stockParticles.length ? (BB = this._stockParticles.pop(), BB._reset()) : BB = new sB(this), this._prepareParticle(BB), BB
+        }, this.paused = !1, this._shadersLoaded = !1, this._capacity = TB, this._epsilon = JB, dB && "Scene" !== dB.getClassName() ? (this._engine = dB, this.defaultProjectionMatrix = pB.b.PerspectiveFovLH(.8, 1, .1, 100, this._engine.isNDCHalfZRange)) : (this._scene = dB || YB.c.LastCreatedScene, this._engine = this._scene.PD(), this.uniqueId = this._scene.getUniqueId(), this.layerMask = this._scene.defaultRenderableLayerMask, this._scene.kN.push(this)), this._engine.getCaps().vertexArrayObject && (this._vertexArrayObject = null), this._initShaderSourceAsync(), this._lifeTimeCreation = {
+          process: tT,
           previousItem: null,
           nextItem: null
         }, this._positionCreation = {
-          process: Xc,
+          process: lT,
           previousItem: null,
           nextItem: null
-        }, Mc(this._positionCreation, this._lifeTimeCreation), this._directionCreation = {
-          process: lJ,
+        }, UT(this._positionCreation, this._lifeTimeCreation), this._directionCreation = {
+          process: eB,
           previousItem: null,
           nextItem: null
-        }, Mc(this._directionCreation, this._positionCreation), this._emitPowerCreation = {
-          process: Vc,
+        }, UT(this._directionCreation, this._positionCreation), this._emitPowerCreation = {
+          process: fT,
           previousItem: null,
           nextItem: null
-        }, Mc(this._emitPowerCreation, this._directionCreation), this._sizeCreation = {
-          process: Gc,
+        }, UT(this._emitPowerCreation, this._directionCreation), this._sizeCreation = {
+          process: uT,
           previousItem: null,
           nextItem: null
-        }, Mc(this._sizeCreation, this._emitPowerCreation), this._angleCreation = {
-          process: Kc,
+        }, UT(this._sizeCreation, this._emitPowerCreation), this._angleCreation = {
+          process: sT,
           previousItem: null,
           nextItem: null
-        }, Mc(this._angleCreation, this._sizeCreation), this._colorCreation = {
-          process: iJ,
+        }, UT(this._angleCreation, this._sizeCreation), this._colorCreation = {
+          process: GB,
           previousItem: null,
           nextItem: null
-        }, Mc(this._colorCreation, this._angleCreation), this._colorDeadCreation = {
-          process: RJ,
+        }, UT(this._colorCreation, this._angleCreation), this._colorDeadCreation = {
+          process: qB,
           previousItem: null,
           nextItem: null
-        }, Mc(this._colorDeadCreation, this._colorCreation), this._createQueueStart = this._lifeTimeCreation, jJ || (this._colorProcessing = {
-          process: BJ,
+        }, UT(this._colorDeadCreation, this._colorCreation), this._createQueueStart = this._lifeTimeCreation, gB || (this._colorProcessing = {
+          process: AB,
           previousItem: null,
           nextItem: null
         }, this._angularSpeedProcessing = {
-          process: oJ,
+          process: nB,
           previousItem: null,
           nextItem: null
-        }, Mc(this._angularSpeedProcessing, this._colorProcessing), this._directionProcessing = {
-          process: ec,
+        }, UT(this._angularSpeedProcessing, this._colorProcessing), this._directionProcessing = {
+          process: pT,
           previousItem: null,
           nextItem: null
-        }, Mc(this._directionProcessing, this._angularSpeedProcessing), this._positionProcessing = {
-          process: jc,
+        }, UT(this._directionProcessing, this._angularSpeedProcessing), this._positionProcessing = {
+          process: gT,
           previousItem: null,
           nextItem: null
-        }, Mc(this._positionProcessing, this._directionProcessing), this._gravityProcessing = {
-          process: nc,
+        }, UT(this._positionProcessing, this._directionProcessing), this._gravityProcessing = {
+          process: DT,
           previousItem: null,
           nextItem: null
-        }, Mc(this._gravityProcessing, this._positionProcessing), this._updateQueueStart = this._colorProcessing), this._isAnimationSheetEnabled = XJ, this._attachImageProcessingConfiguration(null), this._customWrappers = {
-          0: new OJ.d(this._engine)
-        }, this._customWrappers[0].effect = FJ, this._drawWrappers = [], this._useInstancing = this._engine.getCaps().instancedArrays, this._createIndexBuffer(), this._createVertexBuffers(), this.particleEmitterType = new hJ.c, this.updateFunction = JJ => {
-          this.noiseTexture && (this._noiseTextureSize = this.noiseTexture.getSize(), this.noiseTexture.getContent()?.then((JJ => {
-            this._noiseTextureData = JJ
+        }, UT(this._gravityProcessing, this._positionProcessing), this._updateQueueStart = this._colorProcessing), this._isAnimationSheetEnabled = lB, this._attachImageProcessingConfiguration(null), this._customWrappers = {
+          0: new XB.b(this._engine)
+        }, this._customWrappers[0].effect = VB, this._drawWrappers = [], this._useInstancing = this._engine.getCaps().instancedArrays, this._createIndexBuffer(), this._createVertexBuffers(), this.particleEmitterType = new kB.c, this.updateFunction = BB => {
+          this.noiseTexture && (this._noiseTextureSize = this.noiseTexture.getSize(), this.noiseTexture.getContent()?.then((BB => {
+            this._noiseTextureData = BB
           })));
-          const cJ = JJ === this._particles;
-          for (let ZJ = 0; ZJ < JJ.length; ZJ++) {
-            const FJ = JJ[ZJ];
+          const TB = BB === this._particles;
+          for (let dB = 0; dB < BB.length; dB++) {
+            const VB = BB[dB];
             this._tempScaledUpdateSpeed = this._scaledUpdateSpeed;
-            const UJ = FJ.age;
-            if (FJ.age += this._tempScaledUpdateSpeed, FJ.age > FJ.lifeTime) {
-              const JJ = FJ.age - UJ,
-                cJ = FJ.lifeTime - UJ;
-              this._tempScaledUpdateSpeed = cJ * this._tempScaledUpdateSpeed / JJ, FJ.age = FJ.lifeTime
+            const yB = VB.age;
+            if (VB.age += this._tempScaledUpdateSpeed, VB.age > VB.lifeTime) {
+              const BB = VB.age - yB,
+                TB = VB.lifeTime - yB;
+              this._tempScaledUpdateSpeed = TB * this._tempScaledUpdateSpeed / BB, VB.age = VB.lifeTime
             }
-            this._ratio = FJ.age / FJ.lifeTime, FJ._properties.directionScale = this._tempScaledUpdateSpeed;
-            let eJ = this._updateQueueStart;
-            for (; eJ;) eJ.process(FJ, this), eJ = eJ.nextItem;
-            if (this._isAnimationSheetEnabled && !jJ && FJ.updateCellIndex(), FJ._inheritParticleInfoToSubEmitters(), FJ.age >= FJ.lifeTime) {
-              if (this._emitFromParticle(FJ), FJ._properties.attachedSubEmitters) {
-                for (const JJ of FJ._properties.attachedSubEmitters) JJ.particleSystem.disposeOnStop = !0, JJ.particleSystem.stop();
-                FJ._properties.attachedSubEmitters = null
+            this._ratio = VB.age / VB.lifeTime, VB._properties.directionScale = this._tempScaledUpdateSpeed;
+            let pB = this._updateQueueStart;
+            for (; pB;) pB.process(VB, this), pB = pB.nextItem;
+            if (this._isAnimationSheetEnabled && !gB && VB.updateCellIndex(), VB._inheritParticleInfoToSubEmitters(), VB.age >= VB.lifeTime) {
+              if (this._emitFromParticle(VB), VB._properties.attachedSubEmitters) {
+                for (const BB of VB._properties.attachedSubEmitters) BB.particleSystem.disposeOnStop = !0, BB.particleSystem.stop();
+                VB._properties.attachedSubEmitters = null
               }
-              this.recycleParticle(FJ), cJ && ZJ--
+              this.recycleParticle(VB), TB && dB--
             } else;
           }
         }
       }
-      serialize(JJ) {
+      serialize(BB) {
         throw new Error("Method not implemented.")
       }
-      clone(JJ, cJ) {
+      clone(BB, TB) {
         throw new Error("Method not implemented.")
       }
       _syncLifeTimeCreation() {
-        this.targetStopDuration && this._lifeTimeGradients && this._lifeTimeGradients.length > 0 ? this._lifeTimeCreation.process = Qc : this._lifeTimeCreation.process = Ec
+        this.targetStopDuration && this._lifeTimeGradients && this._lifeTimeGradients.length > 0 ? this._lifeTimeCreation.process = NT : this._lifeTimeCreation.process = tT
       }
       _syncStartSizeCreation() {
         this._startSizeGradients && this._startSizeGradients[0] && this.targetStopDuration ? this._startSizeCreation || (this._startSizeCreation = {
-          process: xc,
+          process: ET,
           previousItem: null,
           nextItem: null
-        }, Mc(this._startSizeCreation, this._sizeCreation)) : this._startSizeCreation && (bc(this._startSizeCreation), this._startSizeCreation = null)
+        }, UT(this._startSizeCreation, this._sizeCreation)) : this._startSizeCreation && (FT(this._startSizeCreation), this._startSizeCreation = null)
       }
       get targetStopDuration() {
         return this._targetStopDuration
       }
-      set targetStopDuration(JJ) {
-        this.targetStopDuration !== JJ && (this._targetStopDuration = JJ, this._syncLifeTimeCreation(), this._syncStartSizeCreation())
+      set targetStopDuration(BB) {
+        this.targetStopDuration !== BB && (this._targetStopDuration = BB, this._syncLifeTimeCreation(), this._syncStartSizeCreation())
       }
-      addLifeTimeGradient(JJ, cJ, ZJ) {
-        return this._lifeTimeGradients || (this._lifeTimeGradients = []), this._addFactorGradient(this._lifeTimeGradients, JJ, cJ, ZJ), this._syncLifeTimeCreation(), this
+      addLifeTimeGradient(BB, TB, dB) {
+        return this._lifeTimeGradients || (this._lifeTimeGradients = []), this._addFactorGradient(this._lifeTimeGradients, BB, TB, dB), this._syncLifeTimeCreation(), this
       }
-      removeLifeTimeGradient(JJ) {
-        return this._removeFactorGradient(this._lifeTimeGradients, JJ), this._syncLifeTimeCreation(), this
+      removeLifeTimeGradient(BB) {
+        return this._removeFactorGradient(this._lifeTimeGradients, BB), this._syncLifeTimeCreation(), this
       }
-      addSizeGradient(JJ, cJ, ZJ) {
-        return this._sizeGradients || (this._sizeGradients = []), 0 === this._sizeGradients.length && (this._sizeCreation.process = fc, this._sizeGradientProcessing = {
-          process: rc,
+      addSizeGradient(BB, TB, dB) {
+        return this._sizeGradients || (this._sizeGradients = []), 0 === this._sizeGradients.length && (this._sizeCreation.process = HT, this._sizeGradientProcessing = {
+          process: vT,
           previousItem: null,
           nextItem: null
-        }, Ic(this._sizeGradientProcessing, this._gravityProcessing)), this._addFactorGradient(this._sizeGradients, JJ, cJ, ZJ), this
+        }, wT(this._sizeGradientProcessing, this._gravityProcessing)), this._addFactorGradient(this._sizeGradients, BB, TB, dB), this
       }
-      removeSizeGradient(JJ) {
-        return this._removeFactorGradient(this._sizeGradients, JJ), 0 === this._sizeGradients?.length && (bc(this._sizeGradientProcessing), this._sizeCreation.process = Gc), this
+      removeSizeGradient(BB) {
+        return this._removeFactorGradient(this._sizeGradients, BB), 0 === this._sizeGradients?.length && (FT(this._sizeGradientProcessing), this._sizeCreation.process = uT), this
       }
-      addColorRemapGradient(JJ, cJ, ZJ) {
-        return this._colorRemapGradients || (this._colorRemapGradients = []), this._addFactorGradient(this._colorRemapGradients, JJ, cJ, ZJ), this
+      addColorRemapGradient(BB, TB, dB) {
+        return this._colorRemapGradients || (this._colorRemapGradients = []), this._addFactorGradient(this._colorRemapGradients, BB, TB, dB), this
       }
-      removeColorRemapGradient(JJ) {
-        return this._removeFactorGradient(this._colorRemapGradients, JJ), this
+      removeColorRemapGradient(BB) {
+        return this._removeFactorGradient(this._colorRemapGradients, BB), this
       }
-      addAlphaRemapGradient(JJ, cJ, ZJ) {
-        return this._alphaRemapGradients || (this._alphaRemapGradients = []), this._addFactorGradient(this._alphaRemapGradients, JJ, cJ, ZJ), this
+      addAlphaRemapGradient(BB, TB, dB) {
+        return this._alphaRemapGradients || (this._alphaRemapGradients = []), this._addFactorGradient(this._alphaRemapGradients, BB, TB, dB), this
       }
-      removeAlphaRemapGradient(JJ) {
-        return this._removeFactorGradient(this._alphaRemapGradients, JJ), this
+      removeAlphaRemapGradient(BB) {
+        return this._removeFactorGradient(this._alphaRemapGradients, BB), this
       }
-      addAngularSpeedGradient(JJ, cJ, ZJ) {
-        return this._angularSpeedGradients || (this._angularSpeedGradients = []), 0 === this._angularSpeedGradients.length && (this._angleCreation.process = yc, this._angularSpeedGradientProcessing = {
-          process: tJ,
+      addAngularSpeedGradient(BB, TB, dB) {
+        return this._angularSpeedGradients || (this._angularSpeedGradients = []), 0 === this._angularSpeedGradients.length && (this._angleCreation.process = MT, this._angularSpeedGradientProcessing = {
+          process: bB,
           previousItem: null,
           nextItem: null
-        }, Ic(this._angularSpeedGradientProcessing, this._angularSpeedProcessing)), this._addFactorGradient(this._angularSpeedGradients, JJ, cJ, ZJ), this
+        }, wT(this._angularSpeedGradientProcessing, this._angularSpeedProcessing)), this._addFactorGradient(this._angularSpeedGradients, BB, TB, dB), this
       }
-      removeAngularSpeedGradient(JJ) {
-        return this._removeFactorGradient(this._angularSpeedGradients, JJ), 0 === this._angularSpeedGradients?.length && (this._angleCreation.process = Kc, bc(this._angularSpeedGradientProcessing)), this
+      removeAngularSpeedGradient(BB) {
+        return this._removeFactorGradient(this._angularSpeedGradients, BB), 0 === this._angularSpeedGradients?.length && (this._angleCreation.process = sT, FT(this._angularSpeedGradientProcessing)), this
       }
-      addVelocityGradient(JJ, cJ, ZJ) {
+      addVelocityGradient(BB, TB, dB) {
         return this._velocityGradients || (this._velocityGradients = []), 0 === this._velocityGradients.length && (this._velocityCreation = {
-          process: cc,
+          process: TT,
           previousItem: null,
           nextItem: null
-        }, Mc(this._velocityCreation, this._angleCreation), this._velocityGradientProcessing = {
-          process: Fc,
+        }, UT(this._velocityCreation, this._angleCreation), this._velocityGradientProcessing = {
+          process: VT,
           previousItem: null,
           nextItem: null
-        }, Ic(this._velocityGradientProcessing, this._directionProcessing)), this._addFactorGradient(this._velocityGradients, JJ, cJ, ZJ), this
+        }, wT(this._velocityGradientProcessing, this._directionProcessing)), this._addFactorGradient(this._velocityGradients, BB, TB, dB), this
       }
-      removeVelocityGradient(JJ) {
-        return this._removeFactorGradient(this._velocityGradients, JJ), 0 === this._velocityGradients?.length && (bc(this._velocityCreation), bc(this._velocityGradientProcessing)), this
+      removeVelocityGradient(BB) {
+        return this._removeFactorGradient(this._velocityGradients, BB), 0 === this._velocityGradients?.length && (FT(this._velocityCreation), FT(this._velocityGradientProcessing)), this
       }
-      addLimitVelocityGradient(JJ, cJ, ZJ) {
+      addLimitVelocityGradient(BB, TB, dB) {
         return this._limitVelocityGradients || (this._limitVelocityGradients = []), 0 === this._limitVelocityGradients.length && (this._limitVelocityCreation = {
-          process: Zc,
+          process: dT,
           previousItem: null,
           nextItem: null
-        }, Mc(this._limitVelocityCreation, this._angleCreation), this._limitVelocityGradientProcessing = {
-          process: Uc,
+        }, UT(this._limitVelocityCreation, this._angleCreation), this._limitVelocityGradientProcessing = {
+          process: yT,
           previousItem: null,
           nextItem: null
-        }, Mc(this._limitVelocityGradientProcessing, this._directionProcessing)), this._addFactorGradient(this._limitVelocityGradients, JJ, cJ, ZJ), this
+        }, UT(this._limitVelocityGradientProcessing, this._directionProcessing)), this._addFactorGradient(this._limitVelocityGradients, BB, TB, dB), this
       }
-      removeLimitVelocityGradient(JJ) {
-        return this._removeFactorGradient(this._limitVelocityGradients, JJ), 0 === this._limitVelocityGradients?.length && (bc(this._limitVelocityCreation), bc(this._limitVelocityGradientProcessing)), this
+      removeLimitVelocityGradient(BB) {
+        return this._removeFactorGradient(this._limitVelocityGradients, BB), 0 === this._limitVelocityGradients?.length && (FT(this._limitVelocityCreation), FT(this._limitVelocityGradientProcessing)), this
       }
-      addDragGradient(JJ, cJ, ZJ) {
+      addDragGradient(BB, TB, dB) {
         return this._dragGradients || (this._dragGradients = []), 0 === this._dragGradients.length && (this._dragCreation = {
-          process: Yc,
+          process: oT,
           previousItem: null,
           nextItem: null
-        }, Ic(this._dragCreation, this._colorDeadCreation), this._dragGradientProcessing = {
-          process: hc,
+        }, wT(this._dragCreation, this._colorDeadCreation), this._dragGradientProcessing = {
+          process: kT,
           previousItem: null,
           nextItem: null
-        }, Ic(this._dragGradientProcessing, this._positionProcessing)), this._addFactorGradient(this._dragGradients, JJ, cJ, ZJ), this
+        }, wT(this._dragGradientProcessing, this._positionProcessing)), this._addFactorGradient(this._dragGradients, BB, TB, dB), this
       }
-      removeDragGradient(JJ) {
-        return this._removeFactorGradient(this._dragGradients, JJ), 0 === this._dragGradients?.length && (bc(this._dragCreation), bc(this._dragGradientProcessing)), this
+      removeDragGradient(BB) {
+        return this._removeFactorGradient(this._dragGradients, BB), 0 === this._dragGradients?.length && (FT(this._dragCreation), FT(this._dragGradientProcessing)), this
       }
-      addStartSizeGradient(JJ, cJ, ZJ) {
-        return this._startSizeGradients || (this._startSizeGradients = []), this._addFactorGradient(this._startSizeGradients, JJ, cJ, ZJ), this._syncStartSizeCreation(), this
+      addStartSizeGradient(BB, TB, dB) {
+        return this._startSizeGradients || (this._startSizeGradients = []), this._addFactorGradient(this._startSizeGradients, BB, TB, dB), this._syncStartSizeCreation(), this
       }
-      removeStartSizeGradient(JJ) {
-        return this._removeFactorGradient(this._startSizeGradients, JJ), this._syncStartSizeCreation(), this
+      removeStartSizeGradient(BB) {
+        return this._removeFactorGradient(this._startSizeGradients, BB), this._syncStartSizeCreation(), this
       }
       _createRampGradientTexture() {
         if (!this._rampGradients || !this._rampGradients.length || this._rampGradientsTexture || !this._scene) return;
-        const JJ = new Uint8Array(4 * this._rawTextureWidth),
-          cJ = YJ.h.Color3[0];
-        for (let ZJ = 0; ZJ < this._rawTextureWidth; ZJ++) {
-          const UJ = ZJ / this._rawTextureWidth;
-          FJ.j.GetCurrentGradient(UJ, this._rampGradients, ((FJ, UJ, eJ) => {
-            YJ.e.LerpToRef(FJ.color, UJ.color, eJ, cJ), JJ[4 * ZJ] = 255 * cJ.r, JJ[4 * ZJ + 1] = 255 * cJ.g, JJ[4 * ZJ + 2] = 255 * cJ.b, JJ[4 * ZJ + 3] = 255
+        const BB = new Uint8Array(4 * this._rawTextureWidth),
+          TB = oB.h.Color3[0];
+        for (let dB = 0; dB < this._rawTextureWidth; dB++) {
+          const yB = dB / this._rawTextureWidth;
+          VB.l.GetCurrentGradient(yB, this._rampGradients, ((VB, yB, pB) => {
+            oB.c.LerpToRef(VB.color, yB.color, pB, TB), BB[4 * dB] = 255 * TB.r, BB[4 * dB + 1] = 255 * TB.g, BB[4 * dB + 2] = 255 * TB.b, BB[4 * dB + 3] = 255
           }))
         }
-        this._rampGradientsTexture = AJ.e.CreateRGBATexture(JJ, this._rawTextureWidth, 1, this._scene, !1, !1, 1)
+        this._rampGradientsTexture = JB.d.CreateRGBATexture(BB, this._rawTextureWidth, 1, this._scene, !1, !1, 1)
       }
       getRampGradients() {
         return this._rampGradients
@@ -3184,43 +3184,43 @@ export const modules = {
         this._syncRampGradientTexture()
       }
       _syncRampGradientTexture() {
-        this._rampGradients && (this._rampGradients.sort(((JJ, cJ) => JJ.gradient < cJ.gradient ? -1 : JJ.gradient > cJ.gradient ? 1 : 0)), this._rampGradientsTexture && (this._rampGradientsTexture.dispose(), this._rampGradientsTexture = null), this._createRampGradientTexture())
+        this._rampGradients && (this._rampGradients.sort(((BB, TB) => BB.gradient < TB.gradient ? -1 : BB.gradient > TB.gradient ? 1 : 0)), this._rampGradientsTexture && (this._rampGradientsTexture.dispose(), this._rampGradientsTexture = null), this._createRampGradientTexture())
       }
-      addRampGradient(JJ, cJ) {
+      addRampGradient(BB, TB) {
         this._rampGradients || (this._rampGradients = []);
-        const ZJ = new FJ.e(JJ, cJ);
-        return this._rampGradients.push(ZJ), this._syncRampGradientTexture(), this
+        const dB = new VB.f(BB, TB);
+        return this._rampGradients.push(dB), this._syncRampGradientTexture(), this
       }
-      removeRampGradient(JJ) {
-        return this._removeGradientAndTexture(JJ, this._rampGradients, this._rampGradientsTexture), this._rampGradientsTexture = null, this._rampGradients && this._rampGradients.length > 0 && this._createRampGradientTexture(), this
+      removeRampGradient(BB) {
+        return this._removeGradientAndTexture(BB, this._rampGradients, this._rampGradientsTexture), this._rampGradientsTexture = null, this._rampGradients && this._rampGradients.length > 0 && this._createRampGradientTexture(), this
       }
-      addColorGradient(JJ, cJ, ZJ) {
-        this._colorGradients || (this._colorGradients = []), 0 === this._colorGradients.length && (this._colorCreation.process = LJ, this._colorProcessing.process = aJ);
-        const UJ = new FJ.b(JJ, cJ, ZJ);
-        return this._colorGradients.push(UJ), this._colorGradients.sort(((JJ, cJ) => JJ.gradient < cJ.gradient ? -1 : JJ.gradient > cJ.gradient ? 1 : 0)), this
+      addColorGradient(BB, TB, dB) {
+        this._colorGradients || (this._colorGradients = []), 0 === this._colorGradients.length && (this._colorCreation.process = xB, this._colorProcessing.process = jB);
+        const yB = new VB.e(BB, TB, dB);
+        return this._colorGradients.push(yB), this._colorGradients.sort(((BB, TB) => BB.gradient < TB.gradient ? -1 : BB.gradient > TB.gradient ? 1 : 0)), this
       }
-      removeColorGradient(JJ) {
+      removeColorGradient(BB) {
         if (!this._colorGradients) return this;
-        let cJ = 0;
-        for (const ZJ of this._colorGradients) {
-          if (ZJ.gradient === JJ) {
-            this._colorGradients.splice(cJ, 1);
+        let TB = 0;
+        for (const dB of this._colorGradients) {
+          if (dB.gradient === BB) {
+            this._colorGradients.splice(TB, 1);
             break
           }
-          cJ++
+          TB++
         }
-        return 0 === this._colorGradients.length && (this._colorCreation.process = iJ, this._colorProcessing.process = BJ), this
+        return 0 === this._colorGradients.length && (this._colorCreation.process = GB, this._colorProcessing.process = AB), this
       }
       resetDrawCache() {
         if (this._drawWrappers) {
-          for (const JJ of this._drawWrappers)
-            if (JJ)
-              for (const cJ of JJ) cJ?.dispose();
+          for (const BB of this._drawWrappers)
+            if (BB)
+              for (const TB of BB) TB?.dispose();
           this._drawWrappers = []
         }
       }
-      _fetchR(JJ, cJ, ZJ, FJ, UJ) {
-        return UJ[4 * (((JJ = .5 * Math.abs(JJ) + .5) * ZJ % ZJ | 0) + ((cJ = .5 * Math.abs(cJ) + .5) * FJ % FJ | 0) * ZJ)] / 255
+      _fetchR(BB, TB, dB, VB, yB) {
+        return yB[4 * (((BB = .5 * Math.abs(BB) + .5) * dB % dB | 0) + ((TB = .5 * Math.abs(TB) + .5) * VB % VB | 0) * dB)] / 255
       }
       _reset() {
         this._resetEffect()
@@ -3230,43 +3230,43 @@ export const modules = {
       }
       _createVertexBuffers() {
         this._vertexBufferSize = this._useInstancing ? 10 : 12, this._isAnimationSheetEnabled && (this._vertexBufferSize += 1), this._isBillboardBased && 8 !== this.billboardMode && 9 !== this.billboardMode || (this._vertexBufferSize += 3), this._useRampGradients && (this._vertexBufferSize += 4);
-        const JJ = this._engine,
-          cJ = this._vertexBufferSize * (this._useInstancing ? 1 : 4);
-        this._vertexData = new Float32Array(this._capacity * cJ), this._vertexBuffer = new XJ.d(JJ, this._vertexData, !0, cJ);
-        let ZJ = 0;
-        const FJ = this._vertexBuffer.createVertexBuffer(XJ.n.PositionKind, ZJ, 3, this._vertexBufferSize, this._useInstancing);
-        this._vertexBuffers[XJ.n.PositionKind] = FJ, ZJ += 3;
-        const UJ = this._vertexBuffer.createVertexBuffer(XJ.n.ColorKind, ZJ, 4, this._vertexBufferSize, this._useInstancing);
-        this._vertexBuffers[XJ.n.ColorKind] = UJ, ZJ += 4;
-        const eJ = this._vertexBuffer.createVertexBuffer("angle", ZJ, 1, this._vertexBufferSize, this._useInstancing);
-        this._vertexBuffers.angle = eJ, ZJ += 1;
-        const AJ = this._vertexBuffer.createVertexBuffer("size", ZJ, 2, this._vertexBufferSize, this._useInstancing);
-        if (this._vertexBuffers.size = AJ, ZJ += 2, this._isAnimationSheetEnabled) {
-          const JJ = this._vertexBuffer.createVertexBuffer("cellIndex", ZJ, 1, this._vertexBufferSize, this._useInstancing);
-          this._vertexBuffers.cellIndex = JJ, ZJ += 1
+        const BB = this._engine,
+          TB = this._vertexBufferSize * (this._useInstancing ? 1 : 4);
+        this._vertexData = new Float32Array(this._capacity * TB), this._vertexBuffer = new lB.d(BB, this._vertexData, !0, TB);
+        let dB = 0;
+        const VB = this._vertexBuffer.createVertexBuffer(lB.m.PositionKind, dB, 3, this._vertexBufferSize, this._useInstancing);
+        this._vertexBuffers[lB.m.PositionKind] = VB, dB += 3;
+        const yB = this._vertexBuffer.createVertexBuffer(lB.m.ColorKind, dB, 4, this._vertexBufferSize, this._useInstancing);
+        this._vertexBuffers[lB.m.ColorKind] = yB, dB += 4;
+        const pB = this._vertexBuffer.createVertexBuffer("angle", dB, 1, this._vertexBufferSize, this._useInstancing);
+        this._vertexBuffers.angle = pB, dB += 1;
+        const JB = this._vertexBuffer.createVertexBuffer("size", dB, 2, this._vertexBufferSize, this._useInstancing);
+        if (this._vertexBuffers.size = JB, dB += 2, this._isAnimationSheetEnabled) {
+          const BB = this._vertexBuffer.createVertexBuffer("cellIndex", dB, 1, this._vertexBufferSize, this._useInstancing);
+          this._vertexBuffers.cellIndex = BB, dB += 1
         }
         if (!this._isBillboardBased || 8 === this.billboardMode || 9 === this.billboardMode) {
-          const JJ = this._vertexBuffer.createVertexBuffer("direction", ZJ, 3, this._vertexBufferSize, this._useInstancing);
-          this._vertexBuffers.direction = JJ, ZJ += 3
+          const BB = this._vertexBuffer.createVertexBuffer("direction", dB, 3, this._vertexBufferSize, this._useInstancing);
+          this._vertexBuffers.direction = BB, dB += 3
         }
         if (this._useRampGradients) {
-          const JJ = this._vertexBuffer.createVertexBuffer("remapData", ZJ, 4, this._vertexBufferSize, this._useInstancing);
-          this._vertexBuffers.remapData = JJ, ZJ += 4
+          const BB = this._vertexBuffer.createVertexBuffer("remapData", dB, 4, this._vertexBufferSize, this._useInstancing);
+          this._vertexBuffers.remapData = BB, dB += 4
         }
-        let qJ;
+        let YB;
         if (this._useInstancing) {
-          const cJ = new Float32Array([0, 0, 1, 0, 0, 1, 1, 1]);
-          this._spriteBuffer = new XJ.d(JJ, cJ, !1, 2), qJ = this._spriteBuffer.createVertexBuffer("offset", 0, 2)
-        } else qJ = this._vertexBuffer.createVertexBuffer("offset", ZJ, 2, this._vertexBufferSize, this._useInstancing);
-        this._vertexBuffers.offset = qJ, this.resetDrawCache()
+          const TB = new Float32Array([0, 0, 1, 0, 0, 1, 1, 1]);
+          this._spriteBuffer = new lB.d(BB, TB, !1, 2), YB = this._spriteBuffer.createVertexBuffer("offset", 0, 2)
+        } else YB = this._vertexBuffer.createVertexBuffer("offset", dB, 2, this._vertexBufferSize, this._useInstancing);
+        this._vertexBuffers.offset = YB, this.resetDrawCache()
       }
       _createIndexBuffer() {
         if (this._useInstancing) return void(this._linesIndexBufferUseInstancing = this._engine.createIndexBuffer(new Uint32Array([0, 1, 1, 3, 3, 2, 2, 0, 0, 3])));
-        const JJ = [],
-          cJ = [];
-        let ZJ = 0;
-        for (let FJ = 0; FJ < this._capacity; FJ++) JJ.push(ZJ), JJ.push(ZJ + 1), JJ.push(ZJ + 2), JJ.push(ZJ), JJ.push(ZJ + 2), JJ.push(ZJ + 3), cJ.push(ZJ, ZJ + 1, ZJ + 1, ZJ + 2, ZJ + 2, ZJ + 3, ZJ + 3, ZJ, ZJ, ZJ + 3), ZJ += 4;
-        this._indexBuffer = this._engine.createIndexBuffer(JJ), this._linesIndexBuffer = this._engine.createIndexBuffer(cJ)
+        const BB = [],
+          TB = [];
+        let dB = 0;
+        for (let VB = 0; VB < this._capacity; VB++) BB.push(dB), BB.push(dB + 1), BB.push(dB + 2), BB.push(dB), BB.push(dB + 2), BB.push(dB + 3), TB.push(dB, dB + 1, dB + 1, dB + 2, dB + 2, dB + 3, dB + 3, dB, dB, dB + 3), dB += 4;
+        this._indexBuffer = this._engine.createIndexBuffer(BB), this._linesIndexBuffer = this._engine.createIndexBuffer(TB)
       }
       getCapacity() {
         return this._capacity
@@ -3279,171 +3279,171 @@ export const modules = {
       }
       _preStart() {}
       start() {
-        let JJ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.startDelay;
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.startDelay;
         if (!this.targetStopDuration && this._hasTargetStopDurationDependantGradient()) throw "Particle system started with a targetStopDuration dependant gradient (eg. startSizeGradients) but no targetStopDuration set";
-        if (JJ) return this.startDelay = JJ, void setTimeout((() => {
+        if (BB) return this.startDelay = BB, void setTimeout((() => {
           this.start(0)
-        }), JJ);
+        }), BB);
         if (this._started = !0, this._stopped = !1, this._actualFrame = 0, this._preStart(), this._emitRateGradients && (this._emitRateGradients.length > 0 && (this._currentEmitRateGradient = this._emitRateGradients[0], this._currentEmitRate1 = this._currentEmitRateGradient.getFactor(), this._currentEmitRate2 = this._currentEmitRate1), this._emitRateGradients.length > 1 && (this._currentEmitRate2 = this._emitRateGradients[1].getFactor())), this._startSizeGradients && (this._startSizeGradients.length > 0 && (this._currentStartSizeGradient = this._startSizeGradients[0], this._currentStartSize1 = this._currentStartSizeGradient.getFactor(), this._currentStartSize2 = this._currentStartSize1), this._startSizeGradients.length > 1 && (this._currentStartSize2 = this._startSizeGradients[1].getFactor())), this.preWarmCycles) {
           -1 !== this.emitter?.getClassName().indexOf("Mesh") && this.emitter.computeWorldMatrix(!0), this._scene?.updateTransformMatrix();
-          const JJ = this.noiseTexture;
-          if (JJ && JJ.onGeneratedObservable) JJ.onGeneratedObservable.addOnce((() => {
+          const BB = this.noiseTexture;
+          if (BB && BB.onGeneratedObservable) BB.onGeneratedObservable.addOnce((() => {
             setTimeout((() => {
-              for (let cJ = 0; cJ < this.preWarmCycles; cJ++) this.animate(!0), JJ.render()
+              for (let TB = 0; TB < this.preWarmCycles; TB++) this.animate(!0), BB.render()
             }))
           }));
           else
-            for (let cJ = 0; cJ < this.preWarmCycles; cJ++) this.animate(!0)
+            for (let TB = 0; TB < this.preWarmCycles; TB++) this.animate(!0)
         }
         this.beginAnimationOnStart && this.animations && this.animations.length > 0 && this._scene && this._scene.beginAnimation(this, this.beginAnimationFrom, this.beginAnimationTo, this.beginAnimationLoop), this.onStartedObservable.notifyObservers(this)
       }
       stop() {
-        let JJ = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        this._stopped || (this.onStoppedObservable.notifyObservers(this), this._stopped = !0, this._postStop(JJ))
+        let BB = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        this._stopped || (this.onStoppedObservable.notifyObservers(this), this._stopped = !0, this._postStop(BB))
       }
-      _postStop(JJ) {}
+      _postStop(BB) {}
       reset() {
         this._stockParticles.length = 0, this._particles.length = 0
       }
-      _appendParticleVertex(JJ, cJ, ZJ, FJ) {
-        let UJ = JJ * this._vertexBufferSize;
-        const XJ = eJ.h.Pn[0].rZJ(this._scene?.floatingOriginOffset || eJ.j.ZeroReadOnly);
-        if (this._vertexData[UJ++] = cJ.position.x + this.worldOffset.x - XJ.x, this._vertexData[UJ++] = cJ.position.y + this.worldOffset.y - XJ.y, this._vertexData[UJ++] = cJ.position.z + this.worldOffset.z - XJ.z, this._vertexData[UJ++] = cJ.color.r, this._vertexData[UJ++] = cJ.color.g, this._vertexData[UJ++] = cJ.color.b, this._vertexData[UJ++] = cJ.color.a, this._vertexData[UJ++] = cJ.angle, this._vertexData[UJ++] = cJ.scale.x * cJ.size, this._vertexData[UJ++] = cJ.scale.y * cJ.size, this._isAnimationSheetEnabled && (this._vertexData[UJ++] = cJ.cellIndex), this._isBillboardBased) 8 !== this.billboardMode && 9 !== this.billboardMode || (this._vertexData[UJ++] = cJ.direction.x, this._vertexData[UJ++] = cJ.direction.y, this._vertexData[UJ++] = cJ.direction.z);
-        else if (cJ._properties.initialDirection) {
-          let JJ = cJ._properties.initialDirection;
-          this.isLocal && (eJ.j.TransformNormalToRef(JJ, this._emitterWorldMatrix, eJ.h.Pn[0]), JJ = eJ.h.Pn[0]), 0 === JJ.x && 0 === JJ.z && (JJ.x = .001), this._vertexData[UJ++] = JJ.x, this._vertexData[UJ++] = JJ.y, this._vertexData[UJ++] = JJ.z
+      _appendParticleVertex(BB, TB, dB, VB) {
+        let yB = BB * this._vertexBufferSize;
+        const lB = pB.j.RD[0].bdB(this._scene?.floatingOriginOffset || pB.p.ZeroReadOnly);
+        if (this._vertexData[yB++] = TB.position.x + this.worldOffset.x - lB.x, this._vertexData[yB++] = TB.position.y + this.worldOffset.y - lB.y, this._vertexData[yB++] = TB.position.z + this.worldOffset.z - lB.z, this._vertexData[yB++] = TB.color.r, this._vertexData[yB++] = TB.color.g, this._vertexData[yB++] = TB.color.b, this._vertexData[yB++] = TB.color.a, this._vertexData[yB++] = TB.angle, this._vertexData[yB++] = TB.scale.x * TB.size, this._vertexData[yB++] = TB.scale.y * TB.size, this._isAnimationSheetEnabled && (this._vertexData[yB++] = TB.cellIndex), this._isBillboardBased) 8 !== this.billboardMode && 9 !== this.billboardMode || (this._vertexData[yB++] = TB.direction.x, this._vertexData[yB++] = TB.direction.y, this._vertexData[yB++] = TB.direction.z);
+        else if (TB._properties.initialDirection) {
+          let BB = TB._properties.initialDirection;
+          this.isLocal && (pB.p.TransformNormalToRef(BB, this._emitterWorldMatrix, pB.j.RD[0]), BB = pB.j.RD[0]), 0 === BB.x && 0 === BB.z && (BB.x = .001), this._vertexData[yB++] = BB.x, this._vertexData[yB++] = BB.y, this._vertexData[yB++] = BB.z
         } else {
-          let JJ = cJ.direction;
-          this.isLocal && (eJ.j.TransformNormalToRef(JJ, this._emitterWorldMatrix, eJ.h.Pn[0]), JJ = eJ.h.Pn[0]), 0 === JJ.x && 0 === JJ.z && (JJ.x = .001), this._vertexData[UJ++] = JJ.x, this._vertexData[UJ++] = JJ.y, this._vertexData[UJ++] = JJ.z
+          let BB = TB.direction;
+          this.isLocal && (pB.p.TransformNormalToRef(BB, this._emitterWorldMatrix, pB.j.RD[0]), BB = pB.j.RD[0]), 0 === BB.x && 0 === BB.z && (BB.x = .001), this._vertexData[yB++] = BB.x, this._vertexData[yB++] = BB.y, this._vertexData[yB++] = BB.z
         }
-        this._useRampGradients && cJ.remapData && (this._vertexData[UJ++] = cJ.remapData.x, this._vertexData[UJ++] = cJ.remapData.y, this._vertexData[UJ++] = cJ.remapData.z, this._vertexData[UJ++] = cJ.remapData.w), this._useInstancing || (this._isAnimationSheetEnabled && (0 === ZJ ? ZJ = this._epsilon : 1 === ZJ && (ZJ = 1 - this._epsilon), 0 === FJ ? FJ = this._epsilon : 1 === FJ && (FJ = 1 - this._epsilon)), this._vertexData[UJ++] = ZJ, this._vertexData[UJ] = FJ)
+        this._useRampGradients && TB.remapData && (this._vertexData[yB++] = TB.remapData.x, this._vertexData[yB++] = TB.remapData.y, this._vertexData[yB++] = TB.remapData.z, this._vertexData[yB++] = TB.remapData.w), this._useInstancing || (this._isAnimationSheetEnabled && (0 === dB ? dB = this._epsilon : 1 === dB && (dB = 1 - this._epsilon), 0 === VB ? VB = this._epsilon : 1 === VB && (VB = 1 - this._epsilon)), this._vertexData[yB++] = dB, this._vertexData[yB] = VB)
       }
-      _prepareParticle(JJ) {}
-      _createNewOnes(JJ) {
-        let cJ;
-        for (let ZJ = 0; ZJ < JJ && this._particles.length !== this._capacity; ZJ++) {
-          cJ = this._createParticle(), this._particles.push(cJ);
-          let JJ = this._createQueueStart;
-          for (; JJ;) JJ.process(cJ, this), JJ = JJ.nextItem;
-          cJ._inheritParticleInfoToSubEmitters()
+      _prepareParticle(BB) {}
+      _createNewOnes(BB) {
+        let TB;
+        for (let dB = 0; dB < BB && this._particles.length !== this._capacity; dB++) {
+          TB = this._createParticle(), this._particles.push(TB);
+          let BB = this._createQueueStart;
+          for (; BB;) BB.process(TB, this), BB = BB.nextItem;
+          TB._inheritParticleInfoToSubEmitters()
         }
       }
-      _update(JJ) {
+      _update(BB) {
         if (this._alive = this._particles.length > 0, this.emitter.position) {
-          const JJ = this.emitter;
-          this._emitterWorldMatrix = JJ.getWorldMatrix()
+          const BB = this.emitter;
+          this._emitterWorldMatrix = BB.getWorldMatrix()
         } else {
-          const JJ = this.emitter;
-          this._emitterWorldMatrix = eJ.b.Translation(JJ.x, JJ.y, JJ.z)
+          const BB = this.emitter;
+          this._emitterWorldMatrix = pB.b.Translation(BB.x, BB.y, BB.z)
         }
-        this._emitterWorldMatrix.invertToRef(this._emitterInverseWorldMatrix), this.updateFunction(this._particles), this._createNewOnes(JJ)
+        this._emitterWorldMatrix.invertToRef(this._emitterInverseWorldMatrix), this.updateFunction(this._particles), this._createNewOnes(BB)
       }
       static _GetAttributeNamesOrOptions() {
-        let JJ = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-          cJ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          ZJ = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const FJ = [XJ.n.PositionKind, XJ.n.ColorKind, "angle", "offset", "size"];
-        return JJ && FJ.push("cellIndex"), cJ || FJ.push("direction"), ZJ && FJ.push("remapData"), FJ
+        let BB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+          TB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          dB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const VB = [lB.m.PositionKind, lB.m.ColorKind, "angle", "offset", "size"];
+        return BB && VB.push("cellIndex"), TB || VB.push("direction"), dB && VB.push("remapData"), VB
       }
       static _GetEffectCreationOptions() {
-        let JJ = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-          cJ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          ZJ = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const FJ = ["invView", "view", "projection", "textureMask", "translationPivot", "eyePosition"];
-        return (0, TJ.c)(FJ), JJ && FJ.push("particlesInfos"), cJ && FJ.push("logarithmicDepthConstant"), ZJ && (FJ.push("vFogInfos"), FJ.push("vFogColor")), FJ
+        let BB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+          TB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          dB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const VB = ["invView", "view", "projection", "textureMask", "translationPivot", "eyePosition"];
+        return (0, WB.c)(VB), BB && VB.push("particlesInfos"), TB && VB.push("logarithmicDepthConstant"), dB && (VB.push("vFogInfos"), VB.push("vFogColor")), VB
       }
-      fillDefines(JJ, cJ) {
-        let ZJ = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        if (this._scene && ((0, TJ.l)(this, this._scene, JJ), this.applyFog && this._scene.fogEnabled && 0 !== this._scene.fogMode && JJ.push("#define FOG")), this._isAnimationSheetEnabled && JJ.push("#define ANIMATESHEET"), this.useLogarithmicDepth && JJ.push("#define LOGARITHMICDEPTH"), cJ === EJ.BLENDMODE_MULTIPLY && JJ.push("#define BLENDMULTIPLYMODE"), this.isLocal && JJ.push("#define LOCAL"), this._useRampGradients && JJ.push("#define RAMPGRADIENT"), this._isBillboardBased) switch (JJ.push("#define BILLBOARD"), this.billboardMode) {
+      fillDefines(BB, TB) {
+        let dB = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        if (this._scene && ((0, WB.g)(this, this._scene, BB), this.applyFog && this._scene.fogEnabled && 0 !== this._scene.fogMode && BB.push("#define FOG")), this._isAnimationSheetEnabled && BB.push("#define ANIMATESHEET"), this.useLogarithmicDepth && BB.push("#define LOGARITHMICDEPTH"), TB === tB.BLENDMODE_MULTIPLY && BB.push("#define BLENDMULTIPLYMODE"), this.isLocal && BB.push("#define LOCAL"), this._useRampGradients && BB.push("#define RAMPGRADIENT"), this._isBillboardBased) switch (BB.push("#define BILLBOARD"), this.billboardMode) {
           case 2:
-            JJ.push("#define BILLBOARDY");
+            BB.push("#define BILLBOARDY");
             break;
           case 8:
           case 9:
-            JJ.push("#define BILLBOARDSTRETCHED"), 9 === this.billboardMode && JJ.push("#define BILLBOARDSTRETCHED_LOCAL");
+            BB.push("#define BILLBOARDSTRETCHED"), 9 === this.billboardMode && BB.push("#define BILLBOARDSTRETCHED_LOCAL");
             break;
           case 7:
-            JJ.push("#define BILLBOARDMODE_ALL")
+            BB.push("#define BILLBOARDMODE_ALL")
         }
-        ZJ && this._imageProcessingConfiguration && (this._imageProcessingConfiguration.prepareDefines(this._imageProcessingConfigurationDefines), JJ.push(this._imageProcessingConfigurationDefines.toString()))
+        dB && this._imageProcessingConfiguration && (this._imageProcessingConfiguration.prepareDefines(this._imageProcessingConfigurationDefines), BB.push(this._imageProcessingConfigurationDefines.toString()))
       }
-      fillUniformsAttributesAndSamplerNames(JJ, cJ, ZJ) {
-        cJ.push(...Wc._GetAttributeNamesOrOptions(this._isAnimationSheetEnabled, this._isBillboardBased && 8 !== this.billboardMode && 9 !== this.billboardMode, this._useRampGradients)), JJ.push(...Wc._GetEffectCreationOptions(this._isAnimationSheetEnabled, this.useLogarithmicDepth, this.applyFog)), ZJ.push("diffuseSampler", "rampSampler"), this._imageProcessingConfiguration && ((0, uJ.i)(JJ, this._imageProcessingConfigurationDefines), (0, uJ.e)(ZJ, this._imageProcessingConfigurationDefines))
+      fillUniformsAttributesAndSamplerNames(BB, TB, dB) {
+        TB.push(...rT._GetAttributeNamesOrOptions(this._isAnimationSheetEnabled, this._isBillboardBased && 8 !== this.billboardMode && 9 !== this.billboardMode, this._useRampGradients)), BB.push(...rT._GetEffectCreationOptions(this._isAnimationSheetEnabled, this.useLogarithmicDepth, this.applyFog)), dB.push("diffuseSampler", "rampSampler"), this._imageProcessingConfiguration && ((0, CB.d)(BB, this._imageProcessingConfigurationDefines), (0, CB.b)(dB, this._imageProcessingConfigurationDefines))
       }
-      _getWrapper(JJ) {
-        var cJ;
-        const ZJ = this._getCustomDrawWrapper(JJ);
-        if (ZJ?.effect) return ZJ;
-        const FJ = [];
-        this.fillDefines(FJ, JJ);
-        const eJ = this._engine._features.supportRenderPasses ? this._engine.currentRenderPassId : 0,
-          XJ = wc.b._PrepareStringDefines(eJ, FJ),
-          AJ = XJ ? wc.b.GetConfiguration(eJ) : void 0;
-        let qJ = this._drawWrappers[eJ];
-        qJ || (qJ = this._drawWrappers[eJ] = [], 0 === eJ || this._renderPassObserver || (this._renderPassObserver = ((cJ = this._engine)._onReleaseRenderPassObservable ?? (cJ._onReleaseRenderPassObservable = new UJ.c)).add((JJ => {
-          const cJ = this._drawWrappers[JJ];
-          if (cJ) {
-            for (const JJ of cJ) JJ?.dispose();
-            delete this._drawWrappers[JJ]
+      _getWrapper(BB) {
+        var TB;
+        const dB = this._getCustomDrawWrapper(BB);
+        if (dB?.effect) return dB;
+        const VB = [];
+        this.fillDefines(VB, BB);
+        const pB = this._engine._features.supportRenderPasses ? this._engine.currentRenderPassId : 0,
+          lB = KT.e._PrepareStringDefines(pB, VB),
+          JB = lB ? KT.e.GetConfiguration(pB) : void 0;
+        let YB = this._drawWrappers[pB];
+        YB || (YB = this._drawWrappers[pB] = [], 0 === pB || this._renderPassObserver || (this._renderPassObserver = ((TB = this._engine)._onReleaseRenderPassObservable ?? (TB._onReleaseRenderPassObservable = new yB.e)).add((BB => {
+          const TB = this._drawWrappers[BB];
+          if (TB) {
+            for (const BB of TB) BB?.dispose();
+            delete this._drawWrappers[BB]
           }
         }))));
-        let jJ = qJ[JJ];
-        jJ || (jJ = new OJ.d(this._engine), jJ.drawContext && (jJ.drawContext.useInstancing = this._useInstancing), qJ[JJ] = jJ);
-        const YJ = FJ.join("\n");
-        if (jJ.defines !== YJ) {
-          const JJ = [],
-            cJ = [],
-            ZJ = [];
-          this.fillUniformsAttributesAndSamplerNames(cJ, JJ, ZJ), XJ && (cJ.push("cameraInfo", "objectId", "meshBlendTag", "geometryZeroAlphaDiscard"), this.isLocal && void 0 !== AJ?.defines.PREPASS_LOCAL_POSITION_INDEX && cJ.push("inverseEmitterWM", "geometryWorldOffset")), jJ.setEffect(this._engine.createEffect("particles", {
-            attributes: JJ,
-            uniformsNames: cJ,
-            samplers: ZJ,
-            defines: YJ,
+        let gB = YB[BB];
+        gB || (gB = new XB.b(this._engine), gB.drawContext && (gB.drawContext.useInstancing = this._useInstancing), YB[BB] = gB);
+        const oB = VB.join("\n");
+        if (gB.defines !== oB) {
+          const BB = [],
+            TB = [],
+            dB = [];
+          this.fillUniformsAttributesAndSamplerNames(TB, BB, dB), lB && (TB.push("cameraInfo", "objectId", "meshBlendTag", "geometryZeroAlphaDiscard"), this.isLocal && void 0 !== JB?.defines.PREPASS_LOCAL_POSITION_INDEX && TB.push("inverseEmitterWM", "geometryWorldOffset")), gB.setEffect(this._engine.createEffect("particles", {
+            attributes: BB,
+            uniformsNames: TB,
+            samplers: dB,
+            defines: oB,
             shaderLanguage: this._shaderLanguage,
-            multiTarget: XJ,
-            indexParameters: XJ ? {
-              buffersCount: AJ?._mrtCount ?? 0
+            multiTarget: lB,
+            indexParameters: lB ? {
+              buffersCount: JB?._mrtCount ?? 0
             } : void 0
-          }, this._engine), YJ)
+          }, this._engine), oB)
         }
-        return jJ
+        return gB
       }
-      _bindGeometryRendering(JJ) {
-        const cJ = this._engine._features.supportRenderPasses ? this._engine.currentRenderPassId : 0,
-          ZJ = wc.b.GetConfiguration(cJ);
-        if (!ZJ?._defines) return;
-        JJ.setFloat("objectId", 0), JJ.setInt("meshBlendTag", 0);
-        const FJ = this._scene?.activeCamera;
-        if (JJ.setFloat2("cameraInfo", FJ?.minZ ?? 0, FJ?.maxZ ?? 1), this.isLocal && void 0 !== ZJ.defines.PREPASS_LOCAL_POSITION_INDEX) {
-          JJ.setMatrix("inverseEmitterWM", this._emitterInverseWorldMatrix);
-          const cJ = this.worldOffset.subtractToRef(this._scene?.floatingOriginOffset || eJ.j.ZeroReadOnly, eJ.h.Pn[0]);
-          JJ.setVector3("geometryWorldOffset", cJ)
+      _bindGeometryRendering(BB) {
+        const TB = this._engine._features.supportRenderPasses ? this._engine.currentRenderPassId : 0,
+          dB = KT.e.GetConfiguration(TB);
+        if (!dB?._defines) return;
+        BB.setFloat("objectId", 0), BB.setInt("meshBlendTag", 0);
+        const VB = this._scene?.activeCamera;
+        if (BB.setFloat2("cameraInfo", VB?.minZ ?? 0, VB?.maxZ ?? 1), this.isLocal && void 0 !== dB.defines.PREPASS_LOCAL_POSITION_INDEX) {
+          BB.setMatrix("inverseEmitterWM", this._emitterInverseWorldMatrix);
+          const TB = this.worldOffset.subtractToRef(this._scene?.floatingOriginOffset || pB.p.ZeroReadOnly, pB.j.RD[0]);
+          BB.setVector3("geometryWorldOffset", TB)
         }
       }
       animate() {
-        let JJ, cJ = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        let BB, TB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         if (this._started && !this.paused) {
-          if (!cJ && this._scene) {
+          if (!TB && this._scene) {
             if (!this.isReady()) return;
             if (this._currentRenderId === this._scene.getFrameId()) return;
             this._currentRenderId = this._scene.getFrameId()
           }
-          if (this._scaledUpdateSpeed = this.updateSpeed * (cJ ? this.preWarmStepOffset : this._scene?.getAnimationRatio() || 1), this.manualEmitCount > -1) JJ = this.manualEmitCount, this._newPartsExcess = 0, this.manualEmitCount = 0;
+          if (this._scaledUpdateSpeed = this.updateSpeed * (TB ? this.preWarmStepOffset : this._scene?.getAnimationRatio() || 1), this.manualEmitCount > -1) BB = this.manualEmitCount, this._newPartsExcess = 0, this.manualEmitCount = 0;
           else {
-            const cJ = this._calculateEmitRate();
-            JJ = cJ * this._scaledUpdateSpeed | 0, this._newPartsExcess += cJ * this._scaledUpdateSpeed - JJ
+            const TB = this._calculateEmitRate();
+            BB = TB * this._scaledUpdateSpeed | 0, this._newPartsExcess += TB * this._scaledUpdateSpeed - BB
           }
-          if (this._newPartsExcess > 1 && (JJ += this._newPartsExcess | 0, this._newPartsExcess -= this._newPartsExcess | 0), this._alive = !1, this._stopped ? JJ = 0 : (this._actualFrame += this._scaledUpdateSpeed, this.targetStopDuration && this._actualFrame >= this.targetStopDuration && this.stop()), this._update(JJ), this._stopped && (this._alive || (this._started = !1, this.onAnimationEnd && this.onAnimationEnd(), this.disposeOnStop && this._scene && this._scene._toBeDisposed.push(this))), !cJ) {
-            let JJ = 0;
-            for (let cJ = 0; cJ < this._particles.length; cJ++) {
-              const ZJ = this._particles[cJ];
-              this._appendParticleVertices(JJ, ZJ), JJ += this._useInstancing ? 1 : 4
+          if (this._newPartsExcess > 1 && (BB += this._newPartsExcess | 0, this._newPartsExcess -= this._newPartsExcess | 0), this._alive = !1, this._stopped ? BB = 0 : (this._actualFrame += this._scaledUpdateSpeed, this.targetStopDuration && this._actualFrame >= this.targetStopDuration && this.stop()), this._update(BB), this._stopped && (this._alive || (this._started = !1, this.onAnimationEnd && this.onAnimationEnd(), this.disposeOnStop && this._scene && this._scene._toBeDisposed.push(this))), !TB) {
+            let BB = 0;
+            for (let TB = 0; TB < this._particles.length; TB++) {
+              const dB = this._particles[TB];
+              this._appendParticleVertices(BB, dB), BB += this._useInstancing ? 1 : 4
             }
             if (this._vertexBuffer)
               if (this._useFixedCapacityForSnapshot) {
-                const JJ = this._vertexBufferSize * (this._useInstancing ? 1 : 4),
-                  cJ = this._particles.length;
-                cJ < this._fixedCapacityHighWaterMark && this._vertexData.fill(0, cJ * JJ, this._fixedCapacityHighWaterMark * JJ), this._fixedCapacityHighWaterMark = cJ, this._vertexBuffer.updateDirectly(this._vertexData, 0, this._capacity)
+                const BB = this._vertexBufferSize * (this._useInstancing ? 1 : 4),
+                  TB = this._particles.length;
+                TB < this._fixedCapacityHighWaterMark && this._vertexData.fill(0, TB * BB, this._fixedCapacityHighWaterMark * BB), this._fixedCapacityHighWaterMark = TB, this._vertexBuffer.updateDirectly(this._vertexData, 0, this._capacity)
               } else this._vertexBuffer.updateDirectly(this._vertexData, 0, this._particles.length)
           }
           0 === this.manualEmitCount && this.disposeOnStop && this.stop()
@@ -3454,151 +3454,151 @@ export const modules = {
       }
       _clearFixedCapacitySnapshotData() {
         if (!this._useFixedCapacityForSnapshot || !this._vertexBuffer || 0 === this._fixedCapacityHighWaterMark) return;
-        const JJ = this._vertexBufferSize * (this._useInstancing ? 1 : 4);
-        this._vertexData.fill(0, 0, this._fixedCapacityHighWaterMark * JJ), this._fixedCapacityHighWaterMark = 0, this._vertexBuffer.updateDirectly(this._vertexData, 0, this._capacity)
+        const BB = this._vertexBufferSize * (this._useInstancing ? 1 : 4);
+        this._vertexData.fill(0, 0, this._fixedCapacityHighWaterMark * BB), this._fixedCapacityHighWaterMark = 0, this._vertexBuffer.updateDirectly(this._vertexData, 0, this._capacity)
       }
       _calculateEmitRate() {
-        let JJ = this.emitRate;
+        let BB = this.emitRate;
         if (this._emitRateGradients && this._emitRateGradients.length > 0 && this.targetStopDuration) {
-          const cJ = this._actualFrame / this.targetStopDuration;
-          FJ.j.GetCurrentGradient(cJ, this._emitRateGradients, ((cJ, ZJ, FJ) => {
-            cJ !== this._currentEmitRateGradient && (this._currentEmitRate1 = this._currentEmitRate2, this._currentEmitRate2 = ZJ.getFactor(), this._currentEmitRateGradient = cJ), JJ = (0, sJ.Lerp)(this._currentEmitRate1, this._currentEmitRate2, FJ)
+          const TB = this._actualFrame / this.targetStopDuration;
+          VB.l.GetCurrentGradient(TB, this._emitRateGradients, ((TB, dB, VB) => {
+            TB !== this._currentEmitRateGradient && (this._currentEmitRate1 = this._currentEmitRate2, this._currentEmitRate2 = dB.getFactor(), this._currentEmitRateGradient = TB), BB = (0, OB.Lerp)(this._currentEmitRate1, this._currentEmitRate2, VB)
           }))
         }
-        return JJ
+        return BB
       }
-      _appendParticleVertices(JJ, cJ) {
-        this._appendParticleVertex(JJ++, cJ, 0, 0), this._useInstancing || (this._appendParticleVertex(JJ++, cJ, 1, 0), this._appendParticleVertex(JJ++, cJ, 1, 1), this._appendParticleVertex(JJ, cJ, 0, 1))
+      _appendParticleVertices(BB, TB) {
+        this._appendParticleVertex(BB++, TB, 0, 0), this._useInstancing || (this._appendParticleVertex(BB++, TB, 1, 0), this._appendParticleVertex(BB++, TB, 1, 1), this._appendParticleVertex(BB, TB, 0, 1))
       }
       rebuild() {
         this._engine.getCaps().vertexArrayObject && (this._vertexArrayObject = null), this._createIndexBuffer(), this._spriteBuffer?._rebuild(), this._createVertexBuffers(), this.resetDrawCache()
       }
       async _initShaderSourceAsync() {
-        this._engine.isWebGPU && !Wc.ForceGLSL ? (this._shaderLanguage = 1, await Promise.all([ZJ.e(326).then((() => ZJ(59429))), ZJ.e(320).then((() => ZJ(59437)))])) : await Promise.all([ZJ.e(309).then((() => ZJ(59439))), Promise.all([ZJ.e(302), ZJ.e(338)]).then((() => ZJ(59447)))]), this._shadersLoaded = !0
+        this._engine.isWebGPU && !rT.ForceGLSL ? (this._shaderLanguage = 1, await Promise.all([dB.e(326).then((() => dB(59756))), dB.e(320).then((() => dB(59765)))])) : await Promise.all([dB.e(309).then((() => dB(59770))), Promise.all([dB.e(302), dB.e(338)]).then((() => dB(59772)))]), this._shadersLoaded = !0
       }
       isReady() {
         if (!this._shadersLoaded) return !1;
         if (!this.emitter || this._imageProcessingConfiguration && !this._imageProcessingConfiguration.isReady() || !this.particleTexture || !this.particleTexture.isReady()) return !1;
-        if (this.blendMode !== EJ.BLENDMODE_MULTIPLYADD) {
+        if (this.blendMode !== tB.BLENDMODE_MULTIPLYADD) {
           if (!this._getWrapper(this.blendMode).effect.isReady()) return !1
         } else {
-          if (!this._getWrapper(EJ.BLENDMODE_MULTIPLY).effect.isReady()) return !1;
-          if (!this._getWrapper(EJ.BLENDMODE_ADD).effect.isReady()) return !1
+          if (!this._getWrapper(tB.BLENDMODE_MULTIPLY).effect.isReady()) return !1;
+          if (!this._getWrapper(tB.BLENDMODE_ADD).effect.isReady()) return !1
         }
         return !0
       }
-      _render(JJ) {
-        const cJ = this._getWrapper(JJ),
-          ZJ = cJ.effect,
-          FJ = this._engine;
-        FJ.enableEffect(cJ);
-        const UJ = this.defaultViewMatrix ?? this._scene.getViewMatrix();
-        ZJ.setTexture("diffuseSampler", this.particleTexture), ZJ.setMatrix("view", UJ);
-        const XJ = this.defaultProjectionMatrix ?? this._scene.getProjectionMatrix();
-        if (ZJ.setMatrix("projection", XJ), this._isAnimationSheetEnabled && this.particleTexture) {
-          const JJ = this.particleTexture.getBaseSize();
-          ZJ.setFloat3("particlesInfos", this.spriteCellWidth / JJ.width, this.spriteCellHeight / JJ.height, this.spriteCellWidth / JJ.width)
+      _render(BB) {
+        const TB = this._getWrapper(BB),
+          dB = TB.effect,
+          VB = this._engine;
+        VB.enableEffect(TB);
+        const yB = this.defaultViewMatrix ?? this._scene.getViewMatrix();
+        dB.setTexture("diffuseSampler", this.particleTexture), dB.setMatrix("view", yB);
+        const lB = this.defaultProjectionMatrix ?? this._scene.getProjectionMatrix();
+        if (dB.setMatrix("projection", lB), this._isAnimationSheetEnabled && this.particleTexture) {
+          const BB = this.particleTexture.getBaseSize();
+          dB.setFloat3("particlesInfos", this.spriteCellWidth / BB.width, this.spriteCellHeight / BB.height, this.spriteCellWidth / BB.width)
         }
-        if (ZJ.setVector2("translationPivot", this.translationPivot), ZJ.setFloat4("textureMask", this.textureMask.r, this.textureMask.g, this.textureMask.b, this.textureMask.a), this._isBillboardBased && this._scene) {
-          const JJ = this._scene.activeCamera;
-          ZJ.setVector3("eyePosition", JJ.globalPosition)
+        if (dB.setVector2("translationPivot", this.translationPivot), dB.setFloat4("textureMask", this.textureMask.r, this.textureMask.g, this.textureMask.b, this.textureMask.a), this._isBillboardBased && this._scene) {
+          const BB = this._scene.activeCamera;
+          dB.setVector3("eyePosition", BB.globalPosition)
         }
-        this._rampGradientsTexture && (this._rampGradients && this._rampGradients.length || (this._rampGradientsTexture.dispose(), this._rampGradientsTexture = null), ZJ.setTexture("rampSampler", this._rampGradientsTexture));
-        const AJ = ZJ.defines;
-        this._scene && ((0, TJ.e)(ZJ, this, this._scene), this.applyFog && (0, CJ.h)(this._scene, void 0, ZJ)), AJ.indexOf("#define BILLBOARDMODE_ALL") >= 0 && (UJ.invertToRef(eJ.h.Matrix[0]), ZJ.setMatrix("invView", eJ.h.Matrix[0])), ZJ._multiTarget && this._bindGeometryRendering(ZJ), void 0 !== this._vertexArrayObject ? this._scene?.forceWireframe ? FJ.bindBuffers(this._vertexBuffers, this._linesIndexBufferUseInstancing, ZJ) : (this._vertexArrayObject || (this._vertexArrayObject = this._engine.recordVertexArrayObject(this._vertexBuffers, this._indexBuffer, ZJ)), this._engine.bindVertexArrayObject(this._vertexArrayObject, this._indexBuffer)) : this._indexBuffer ? FJ.bindBuffers(this._vertexBuffers, this._scene?.forceWireframe ? this._linesIndexBuffer : this._indexBuffer, ZJ) : FJ.bindBuffers(this._vertexBuffers, this._scene?.forceWireframe ? this._linesIndexBufferUseInstancing : null, ZJ), this.useLogarithmicDepth && this._scene && (0, CJ.l)(AJ, ZJ, this._scene), this._imageProcessingConfiguration && !this._imageProcessingConfiguration.applyByPostProcess && this._imageProcessingConfiguration.bind(ZJ), this._setEngineBasedOnBlendMode(JJ), ZJ._multiTarget && wc.b._BindZeroAlphaDiscard(FJ, ZJ);
-        let qJ = !1;
+        this._rampGradientsTexture && (this._rampGradients && this._rampGradients.length || (this._rampGradientsTexture.dispose(), this._rampGradientsTexture = null), dB.setTexture("rampSampler", this._rampGradientsTexture));
+        const JB = dB.defines;
+        this._scene && ((0, WB.d)(dB, this, this._scene), this.applyFog && (0, hB.h)(this._scene, void 0, dB)), JB.indexOf("#define BILLBOARDMODE_ALL") >= 0 && (yB.invertToRef(pB.j.Matrix[0]), dB.setMatrix("invView", pB.j.Matrix[0])), dB._multiTarget && this._bindGeometryRendering(dB), void 0 !== this._vertexArrayObject ? this._scene?.forceWireframe ? VB.bindBuffers(this._vertexBuffers, this._linesIndexBufferUseInstancing, dB) : (this._vertexArrayObject || (this._vertexArrayObject = this._engine.recordVertexArrayObject(this._vertexBuffers, this._indexBuffer, dB)), this._engine.bindVertexArrayObject(this._vertexArrayObject, this._indexBuffer)) : this._indexBuffer ? VB.bindBuffers(this._vertexBuffers, this._scene?.forceWireframe ? this._linesIndexBuffer : this._indexBuffer, dB) : VB.bindBuffers(this._vertexBuffers, this._scene?.forceWireframe ? this._linesIndexBufferUseInstancing : null, dB), this.useLogarithmicDepth && this._scene && (0, hB.p)(JB, dB, this._scene), this._imageProcessingConfiguration && !this._imageProcessingConfiguration.applyByPostProcess && this._imageProcessingConfiguration.bind(dB), this._setEngineBasedOnBlendMode(BB), dB._multiTarget && KT.e._BindZeroAlphaDiscard(VB, dB);
+        let YB = !1;
         try {
-          wc.b._BindAttachmentsForEffect(FJ, ZJ) && (this._onBeforeDrawParticlesObservable && this._onBeforeDrawParticlesObservable.notifyObservers(ZJ), this._useInstancing ? this._scene?.forceWireframe ? FJ.drawElementsType(6, 0, 10, this._useFixedCapacityForSnapshot ? this._capacity : this._particles.length) : FJ.drawArraysType(7, 0, 4, this._useFixedCapacityForSnapshot ? this._capacity : this._particles.length) : this._scene?.forceWireframe ? FJ.drawElementsType(1, 0, 10 * (this._useFixedCapacityForSnapshot ? this._capacity : this._particles.length)) : FJ.drawElementsType(0, 0, 6 * (this._useFixedCapacityForSnapshot ? this._capacity : this._particles.length)), qJ = !0)
+          KT.e._BindAttachmentsForEffect(VB, dB) && (this._onBeforeDrawParticlesObservable && this._onBeforeDrawParticlesObservable.notifyObservers(dB), this._useInstancing ? this._scene?.forceWireframe ? VB.drawElementsType(6, 0, 10, this._useFixedCapacityForSnapshot ? this._capacity : this._particles.length) : VB.drawArraysType(7, 0, 4, this._useFixedCapacityForSnapshot ? this._capacity : this._particles.length) : this._scene?.forceWireframe ? VB.drawElementsType(1, 0, 10 * (this._useFixedCapacityForSnapshot ? this._capacity : this._particles.length)) : VB.drawElementsType(0, 0, 6 * (this._useFixedCapacityForSnapshot ? this._capacity : this._particles.length)), YB = !0)
         } finally {
-          wc.b._RestoreAttachments(FJ)
+          KT.e._RestoreAttachments(VB)
         }
-        return qJ ? this._particles.length : 0
+        return YB ? this._particles.length : 0
       }
       render() {
         if (!this.isReady() || !this._particles.length && !this._useFixedCapacityForSnapshot) return 0;
-        const JJ = this._engine;
-        let cJ;
-        return JJ.setState && (JJ.setState(!1), this.forceDepthWrite && JJ.setDepthWrite(!0)), cJ = this.blendMode === EJ.BLENDMODE_MULTIPLYADD ? this._render(EJ.BLENDMODE_MULTIPLY) + this._render(EJ.BLENDMODE_ADD) : this._render(this.blendMode), this._engine.unbindInstanceAttributes(), this._engine.setAlphaMode(0), cJ
+        const BB = this._engine;
+        let TB;
+        return BB.setState && (BB.setState(!1), this.forceDepthWrite && BB.setDepthWrite(!0)), TB = this.blendMode === tB.BLENDMODE_MULTIPLYADD ? this._render(tB.BLENDMODE_MULTIPLY) + this._render(tB.BLENDMODE_ADD) : this._render(this.blendMode), this._engine.unbindInstanceAttributes(), this._engine.setAlphaMode(0), TB
       }
       _onDispose() {}
       dispose() {
-        let JJ = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
-          cJ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          ZJ = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        if (this._engine._onReleaseRenderPassObservable?.remove(this._renderPassObserver), this._renderPassObserver = null, this.resetDrawCache(), this._vertexBuffer && (this._vertexBuffer.dispose(), this._vertexBuffer = null), this._spriteBuffer && (this._spriteBuffer.dispose(), this._spriteBuffer = null), this._indexBuffer && (this._engine._releaseBuffer(this._indexBuffer), this._indexBuffer = null), this._linesIndexBuffer && (this._engine._releaseBuffer(this._linesIndexBuffer), this._linesIndexBuffer = null), this._linesIndexBufferUseInstancing && (this._engine._releaseBuffer(this._linesIndexBufferUseInstancing), this._linesIndexBufferUseInstancing = null), this._vertexArrayObject && (this._engine.releaseVertexArrayObject(this._vertexArrayObject), this._vertexArrayObject = null), JJ && this.particleTexture && (this.particleTexture.dispose(), this.particleTexture = null), JJ && this.noiseTexture && (this.noiseTexture.dispose(), this.noiseTexture = null), this._rampGradientsTexture && (this._rampGradientsTexture.dispose(), this._rampGradientsTexture = null), this._onDispose(cJ, ZJ), this._onBeforeDrawParticlesObservable && this._onBeforeDrawParticlesObservable.clear(), this._scene) {
-          const JJ = this._scene.lE.indexOf(this);
-          JJ > -1 && this._scene.lE.splice(JJ, 1), this._scene._activeParticleSystems.dispose()
+        let BB = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
+          TB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          dB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        if (this._engine._onReleaseRenderPassObservable?.remove(this._renderPassObserver), this._renderPassObserver = null, this.resetDrawCache(), this._vertexBuffer && (this._vertexBuffer.dispose(), this._vertexBuffer = null), this._spriteBuffer && (this._spriteBuffer.dispose(), this._spriteBuffer = null), this._indexBuffer && (this._engine._releaseBuffer(this._indexBuffer), this._indexBuffer = null), this._linesIndexBuffer && (this._engine._releaseBuffer(this._linesIndexBuffer), this._linesIndexBuffer = null), this._linesIndexBufferUseInstancing && (this._engine._releaseBuffer(this._linesIndexBufferUseInstancing), this._linesIndexBufferUseInstancing = null), this._vertexArrayObject && (this._engine.releaseVertexArrayObject(this._vertexArrayObject), this._vertexArrayObject = null), BB && this.particleTexture && (this.particleTexture.dispose(), this.particleTexture = null), BB && this.noiseTexture && (this.noiseTexture.dispose(), this.noiseTexture = null), this._rampGradientsTexture && (this._rampGradientsTexture.dispose(), this._rampGradientsTexture = null), this._onDispose(TB, dB), this._onBeforeDrawParticlesObservable && this._onBeforeDrawParticlesObservable.clear(), this._scene) {
+          const BB = this._scene.kN.indexOf(this);
+          BB > -1 && this._scene.kN.splice(BB, 1), this._scene._activeParticleSystems.dispose()
         }
-        this.Sy.notifyObservers(this), this.Sy.clear(), this.onStoppedObservable.clear(), this.onStartedObservable.clear(), this.reset(), this._isDisposed = !0
+        this.lF.notifyObservers(this), this.lF.clear(), this.onStoppedObservable.clear(), this.onStartedObservable.clear(), this.reset(), this._isDisposed = !0
       }
     }
-    Wc.ForceGLSL = !1;
-    var gc, Hc = ZJ(36216);
-    ! function(JJ) {
-      JJ[JJ.ATTACHED = 0] = "ATTACHED", JJ[JJ.END = 1] = "END"
-    }(gc || (gc = {}));
-    class Pc {
-      constructor(JJ) {
-        if (this.particleSystem = JJ, this.type = 1, this.inheritDirection = !1, this.inheritedVelocityAmount = 0, !JJ.emitter || !JJ.emitter.dispose) {
-          const cJ = (0, Hc.e)("BABYLON.AbstractMesh");
-          JJ.emitter = new cJ("SubemitterSystemEmitter", JJ.Qy()), JJ._disposeEmitterOnDispose = !0
+    rT.ForceGLSL = !1;
+    var IT, cT = dB(36166);
+    ! function(BB) {
+      BB[BB.ATTACHED = 0] = "ATTACHED", BB[BB.END = 1] = "END"
+    }(IT || (IT = {}));
+    class ST {
+      constructor(BB) {
+        if (this.particleSystem = BB, this.type = 1, this.inheritDirection = !1, this.inheritedVelocityAmount = 0, !BB.emitter || !BB.emitter.dispose) {
+          const TB = (0, cT.e)("BABYLON.AbstractMesh");
+          BB.emitter = new TB("SubemitterSystemEmitter", BB.jU()), BB._disposeEmitterOnDispose = !0
         }
       }
       clone() {
-        let JJ = this.particleSystem.emitter;
-        if (JJ) {
-          if (JJ instanceof eJ.j) JJ = JJ.clone();
-          else if (-1 !== JJ.getClassName().indexOf("Mesh")) {
-            JJ = new((0, Hc.e)("BABYLON.Mesh"))("", JJ.Qy()), JJ.isVisible = !1
+        let BB = this.particleSystem.emitter;
+        if (BB) {
+          if (BB instanceof pB.p) BB = BB.clone();
+          else if (-1 !== BB.getClassName().indexOf("Mesh")) {
+            BB = new((0, cT.e)("BABYLON.Mesh"))("", BB.jU()), BB.isVisible = !1
           }
-        } else JJ = new eJ.j;
-        const cJ = new Pc(this.particleSystem.clone(this.particleSystem.name, JJ));
-        return cJ.particleSystem.name += "Clone", cJ.type = this.type, cJ.inheritDirection = this.inheritDirection, cJ.inheritedVelocityAmount = this.inheritedVelocityAmount, cJ.particleSystem._disposeEmitterOnDispose = !0, cJ.particleSystem.disposeOnStop = !0, cJ
+        } else BB = new pB.p;
+        const TB = new ST(this.particleSystem.clone(this.particleSystem.name, BB));
+        return TB.particleSystem.name += "Clone", TB.type = this.type, TB.inheritDirection = this.inheritDirection, TB.inheritedVelocityAmount = this.inheritedVelocityAmount, TB.particleSystem._disposeEmitterOnDispose = !0, TB.particleSystem.disposeOnStop = !0, TB
       }
       serialize() {
-        let JJ = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const cJ = {};
-        return cJ.type = this.type, cJ.inheritDirection = this.inheritDirection, cJ.inheritedVelocityAmount = this.inheritedVelocityAmount, cJ.particleSystem = this.particleSystem.serialize(JJ), cJ
+        let BB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const TB = {};
+        return TB.type = this.type, TB.inheritDirection = this.inheritDirection, TB.inheritedVelocityAmount = this.inheritedVelocityAmount, TB.particleSystem = this.particleSystem.serialize(BB), TB
       }
-      static _ParseParticleSystem(JJ, cJ, ZJ) {
-        throw (0, kJ.m)("ParseParticle")
+      static _ParseParticleSystem(BB, TB, dB) {
+        throw (0, PB.i)("ParseParticle")
       }
-      static Parse(JJ, cJ, ZJ) {
-        const FJ = JJ.particleSystem,
-          UJ = new Pc(Pc._ParseParticleSystem(FJ, cJ, ZJ, !0));
-        return UJ.type = JJ.type, UJ.inheritDirection = JJ.inheritDirection, UJ.inheritedVelocityAmount = JJ.inheritedVelocityAmount, UJ.particleSystem._isSubEmitter = !0, UJ
+      static Parse(BB, TB, dB) {
+        const VB = BB.particleSystem,
+          yB = new ST(ST._ParseParticleSystem(VB, TB, dB, !0));
+        return yB.type = BB.type, yB.inheritDirection = BB.inheritDirection, yB.inheritedVelocityAmount = BB.inheritedVelocityAmount, yB.particleSystem._isSubEmitter = !0, yB
       }
       dispose() {
         this.particleSystem.dispose()
       }
     }
-    var kc = ZJ(38698),
-      pc = ZJ(38822);
-    const dc = () => {};
-    class zc {
+    var PT = dB(38652),
+      QT = dB(38772);
+    const RT = () => {};
+    class aT {
       constructor() {
-        this.particlePositionGenerator = dc, this.particleDestinationGenerator = dc, this.particleDirectionGenerator = dc
+        this.particlePositionGenerator = RT, this.particleDestinationGenerator = RT, this.particleDirectionGenerator = RT
       }
-      startDirectionFunction(JJ, cJ, ZJ, FJ) {
-        const UJ = eJ.h.Pn[0];
-        if (this.particleDirectionGenerator && this.particleDirectionGenerator !== dc) this.particleDirectionGenerator(-1, ZJ, UJ);
-        else if (this.particleDestinationGenerator && this.particleDestinationGenerator !== dc) {
-          this.particleDestinationGenerator(-1, ZJ, UJ);
-          const JJ = eJ.h.Pn[1];
-          UJ.subtractToRef(ZJ.position, JJ), JJ.scaleToRef(1 / ZJ.lifeTime, UJ)
-        } else UJ.set(0, 0, 0);
-        FJ ? cJ.rZJ(UJ) : eJ.j.TransformNormalToRef(UJ, JJ, cJ)
+      startDirectionFunction(BB, TB, dB, VB) {
+        const yB = pB.j.RD[0];
+        if (this.particleDirectionGenerator && this.particleDirectionGenerator !== RT) this.particleDirectionGenerator(-1, dB, yB);
+        else if (this.particleDestinationGenerator && this.particleDestinationGenerator !== RT) {
+          this.particleDestinationGenerator(-1, dB, yB);
+          const BB = pB.j.RD[1];
+          yB.subtractToRef(dB.position, BB), BB.scaleToRef(1 / dB.lifeTime, yB)
+        } else yB.set(0, 0, 0);
+        VB ? TB.bdB(yB) : pB.p.TransformNormalToRef(yB, BB, TB)
       }
-      startPositionFunction(JJ, cJ, ZJ, FJ) {
-        const UJ = eJ.h.Pn[0];
-        this.particlePositionGenerator && this.particlePositionGenerator !== dc ? this.particlePositionGenerator(-1, ZJ, UJ) : UJ.set(0, 0, 0), FJ ? cJ.rZJ(UJ) : eJ.j.TransformCoordinatesToRef(UJ, JJ, cJ)
+      startPositionFunction(BB, TB, dB, VB) {
+        const yB = pB.j.RD[0];
+        this.particlePositionGenerator && this.particlePositionGenerator !== RT ? this.particlePositionGenerator(-1, dB, yB) : yB.set(0, 0, 0), VB ? TB.bdB(yB) : pB.p.TransformCoordinatesToRef(yB, BB, TB)
       }
       clone() {
-        const JJ = new zc;
-        return DJ.e.DeepCopy(this, JJ), JJ
+        const BB = new aT;
+        return LB.b.DeepCopy(this, BB), BB
       }
-      applyToShader(JJ) {}
-      buildUniformLayout(JJ) {}
+      applyToShader(BB) {}
+      buildUniformLayout(BB) {}
       getEffectDefines() {
         return "#define CUSTOMEMITTER"
       }
@@ -3606,42 +3606,42 @@ export const modules = {
         return "CustomParticleEmitter"
       }
       serialize() {
-        const JJ = {};
-        return JJ.type = this.getClassName(), JJ.particlePositionGenerator = this.particlePositionGenerator, JJ.particleDestinationGenerator = this.particleDestinationGenerator, JJ
+        const BB = {};
+        return BB.type = this.getClassName(), BB.particlePositionGenerator = this.particlePositionGenerator, BB.particleDestinationGenerator = this.particleDestinationGenerator, BB
       }
-      parse(JJ) {
-        JJ.particlePositionGenerator && (this.particlePositionGenerator = JJ.particlePositionGenerator), JJ.particleDestinationGenerator && (this.particleDestinationGenerator = JJ.particleDestinationGenerator)
+      parse(BB) {
+        BB.particlePositionGenerator && (this.particlePositionGenerator = BB.particlePositionGenerator), BB.particleDestinationGenerator && (this.particleDestinationGenerator = BB.particleDestinationGenerator)
       }
     }
-    const Nc = eJ.j.Zero(),
-      Oc = eJ.j.Zero(),
-      Tc = eJ.j.Zero();
-    class Cc {
+    const ZT = pB.p.Zero(),
+      XT = pB.p.Zero(),
+      WT = pB.p.Zero();
+    class hT {
       constructor() {
-        this.strength = 0, this.position = eJ.j.Zero()
+        this.strength = 0, this.position = pB.p.Zero()
       }
-      _processParticle(JJ, cJ) {
-        this.position.subtractToRef(JJ.position, Nc);
-        const ZJ = Nc.lengthSquared() + 1;
-        Nc.normalize().scaleToRef(this.strength / ZJ, Oc), Oc.scaleToRef(cJ._tempScaledUpdateSpeed, Tc), JJ.direction.addInPlace(Tc)
+      _processParticle(BB, TB) {
+        this.position.subtractToRef(BB.position, ZT);
+        const dB = ZT.lengthSquared() + 1;
+        ZT.normalize().scaleToRef(this.strength / dB, XT), XT.scaleToRef(TB._tempScaledUpdateSpeed, WT), BB.direction.addInPlace(WT)
       }
       serialize() {
         return {
-          position: this.position.JFJ(),
+          position: this.position.FVB(),
           strength: this.strength
         }
       }
     }
-    const uc = ["level", "hasAlpha", "getAlphaFromRGB", "gammaSpace", "coordinatesIndex", "coordinatesMode", "wrapU", "wrapV", "wrapR", "anisotropicFilteringLevel", "uOffset", "vOffset", "uScale", "vScale", "uAng", "vAng", "wAng", "uRotationCenter", "vRotationCenter", "wRotationCenter"];
-    class ic extends Wc {
+    const CT = ["level", "hasAlpha", "getAlphaFromRGB", "gammaSpace", "coordinatesIndex", "coordinatesMode", "wrapU", "wrapV", "wrapR", "anisotropicFilteringLevel", "uOffset", "vOffset", "uScale", "vScale", "uAng", "vAng", "wAng", "uRotationCenter", "vRotationCenter", "wRotationCenter"];
+    class GT extends rT {
       constructor() {
-        super(...arguments), this._disposeEmitterOnDispose = !1, this.doNotSerialize = !1, this.canStart = () => !0, this._flowMap = null, this._flowMapUpdate = null, this._source = null, this._blockReference = 0, this.flowMapStrength = 1, this._attractorUpdate = null, this.metadata = null, this._emitFromParticle = JJ => {
+        super(...arguments), this._disposeEmitterOnDispose = !1, this.doNotSerialize = !1, this.canStart = () => !0, this._flowMap = null, this._flowMapUpdate = null, this._source = null, this._blockReference = 0, this.flowMapStrength = 1, this._attractorUpdate = null, this.metadata = null, this._emitFromParticle = BB => {
           if (!this._subEmitters || 0 === this._subEmitters.length) return;
-          const cJ = Math.floor(Math.random() * this._subEmitters.length);
-          for (const ZJ of this._subEmitters[cJ])
-            if (1 === ZJ.type) {
-              const cJ = ZJ.clone();
-              JJ._inheritParticleInfoToSubEmitter(cJ), cJ.particleSystem._rootParticleSystem = this, this.activeSubSystems.push(cJ.particleSystem), cJ.particleSystem.start()
+          const TB = Math.floor(Math.random() * this._subEmitters.length);
+          for (const dB of this._subEmitters[TB])
+            if (1 === dB.type) {
+              const TB = dB.clone();
+              BB._inheritParticleInfoToSubEmitter(TB), TB.particleSystem._rootParticleSystem = this, this.activeSubSystems.push(TB.particleSystem), TB.particleSystem.start()
             }
         }
       }
@@ -3654,465 +3654,465 @@ export const modules = {
       get flowMap() {
         return this._flowMap
       }
-      set flowMap(JJ) {
-        this._flowMap !== JJ && (this._flowMap = JJ, this._flowMapUpdate && (bc(this._flowMapUpdate), this._flowMapUpdate = null), JJ && (this._flowMapUpdate = {
-          process: JJ => {
-            const cJ = this.Qy()?.getTransformMatrix();
-            this._flowMap._processParticle(JJ, this.flowMapStrength * this._tempScaledUpdateSpeed, cJ)
+      set flowMap(BB) {
+        this._flowMap !== BB && (this._flowMap = BB, this._flowMapUpdate && (FT(this._flowMapUpdate), this._flowMapUpdate = null), BB && (this._flowMapUpdate = {
+          process: BB => {
+            const TB = this.jU()?.getTransformMatrix();
+            this._flowMap._processParticle(BB, this.flowMapStrength * this._tempScaledUpdateSpeed, TB)
           },
           previousItem: null,
           nextItem: null
-        }, Mc(this._flowMapUpdate, this._directionProcessing)))
+        }, UT(this._flowMapUpdate, this._directionProcessing)))
       }
-      addAttractor(JJ) {
-        super.addAttractor(JJ), 1 === this._attractors.length && (this._attractorUpdate = {
-          process: JJ => {
-            for (const cJ of this._attractors) cJ._processParticle(JJ, this)
+      addAttractor(BB) {
+        super.addAttractor(BB), 1 === this._attractors.length && (this._attractorUpdate = {
+          process: BB => {
+            for (const TB of this._attractors) TB._processParticle(BB, this)
           },
           previousItem: null,
           nextItem: null
-        }, Mc(this._attractorUpdate, this._directionProcessing))
+        }, UT(this._attractorUpdate, this._directionProcessing))
       }
-      removeAttractor(JJ) {
-        super.removeAttractor(JJ), 0 === this._attractors.length && this._attractorUpdate && bc(this._attractorUpdate)
+      removeAttractor(BB) {
+        super.removeAttractor(BB), 0 === this._attractors.length && this._attractorUpdate && FT(this._attractorUpdate)
       }
       start() {
-        let JJ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.startDelay;
-        this.canStart() && super.start(JJ)
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.startDelay;
+        this.canStart() && super.start(BB)
       }
       _prepareSubEmitterInternalArray() {
         if (this._subEmitters = new Array, this.subEmitters)
-          for (const JJ of this.subEmitters) JJ instanceof ic ? this._subEmitters.push([new Pc(JJ)]) : JJ instanceof Pc ? this._subEmitters.push([JJ]) : JJ instanceof Array && this._subEmitters.push(JJ)
+          for (const BB of this.subEmitters) BB instanceof GT ? this._subEmitters.push([new ST(BB)]) : BB instanceof ST ? this._subEmitters.push([BB]) : BB instanceof Array && this._subEmitters.push(BB)
       }
       _stopSubEmitters() {
         if (this.activeSubSystems) {
-          for (const JJ of this.activeSubSystems) JJ.stop(!0);
+          for (const BB of this.activeSubSystems) BB.stop(!0);
           this.activeSubSystems = []
         }
       }
       _removeFromRoot() {
         if (!this._rootParticleSystem) return;
-        const JJ = this._rootParticleSystem.activeSubSystems.indexOf(this); - 1 !== JJ && this._rootParticleSystem.activeSubSystems.splice(JJ, 1), this._rootParticleSystem = null
+        const BB = this._rootParticleSystem.activeSubSystems.indexOf(this); - 1 !== BB && this._rootParticleSystem.activeSubSystems.splice(BB, 1), this._rootParticleSystem = null
       }
       _preStart() {
         this._prepareSubEmitterInternalArray(), this._subEmitters && 0 != this._subEmitters.length && (this.activeSubSystems = [])
       }
-      _postStop(JJ) {
-        JJ && this._stopSubEmitters()
+      _postStop(BB) {
+        BB && this._stopSubEmitters()
       }
-      _prepareParticle(JJ) {
+      _prepareParticle(BB) {
         if (this._subEmitters && this._subEmitters.length > 0) {
-          const cJ = this._subEmitters[Math.floor(Math.random() * this._subEmitters.length)];
-          JJ._properties.attachedSubEmitters = [];
-          for (const ZJ of cJ)
-            if (0 === ZJ.type) {
-              const cJ = ZJ.clone();
-              JJ._properties.attachedSubEmitters.push(cJ), cJ.particleSystem.start()
+          const TB = this._subEmitters[Math.floor(Math.random() * this._subEmitters.length)];
+          BB._properties.attachedSubEmitters = [];
+          for (const dB of TB)
+            if (0 === dB.type) {
+              const TB = dB.clone();
+              BB._properties.attachedSubEmitters.push(TB), TB.particleSystem.start()
             }
         }
       }
       _onDispose() {
-        let JJ = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-          cJ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        if (this._removeFromRoot(), this.subEmitters && !this._subEmitters && this._prepareSubEmitterInternalArray(), JJ && this.particles)
-          for (const ZJ of this.particles)
-            if (ZJ._properties.attachedSubEmitters)
-              for (let JJ = ZJ._properties.attachedSubEmitters.length - 1; JJ >= 0; JJ -= 1) ZJ._properties.attachedSubEmitters[JJ].dispose();
-        if (cJ && this.activeSubSystems)
-          for (let ZJ = this.activeSubSystems.length - 1; ZJ >= 0; ZJ -= 1) this.activeSubSystems[ZJ].dispose();
+        let BB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+          TB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        if (this._removeFromRoot(), this.subEmitters && !this._subEmitters && this._prepareSubEmitterInternalArray(), BB && this.particles)
+          for (const dB of this.particles)
+            if (dB._properties.attachedSubEmitters)
+              for (let BB = dB._properties.attachedSubEmitters.length - 1; BB >= 0; BB -= 1) dB._properties.attachedSubEmitters[BB].dispose();
+        if (TB && this.activeSubSystems)
+          for (let dB = this.activeSubSystems.length - 1; dB >= 0; dB -= 1) this.activeSubSystems[dB].dispose();
         if (this._subEmitters && this._subEmitters.length) {
-          for (let JJ = 0; JJ < this._subEmitters.length; JJ++)
-            for (const cJ of this._subEmitters[JJ]) cJ.dispose();
+          for (let BB = 0; BB < this._subEmitters.length; BB++)
+            for (const TB of this._subEmitters[BB]) TB.dispose();
           this._subEmitters = [], this.subEmitters = []
         }
         this._disposeEmitterOnDispose && this.emitter && this.emitter.dispose && this.emitter.dispose(!0)
       }
-      static _Parse(JJ, cJ, ZJ, FJ) {
-        let UJ;
-        UJ = ZJ instanceof kc.e ? null : ZJ;
-        const XJ = (0, Hc.e)("BABYLON.Texture");
-        if (XJ && UJ)
-          if (JJ.texture) cJ.particleTexture = XJ.Parse(JJ.texture, UJ, FJ);
-          else if (JJ.textureName) {
-          const ZJ = JJ.textureSettings;
-          if (cJ.particleTexture = new XJ(FJ + JJ.textureName, UJ, !1, void 0 === JJ.invertY || JJ.invertY, ZJ ? ZJ.samplingMode : void 0), cJ.particleTexture.name = JJ.textureName, ZJ) {
-            const JJ = cJ.particleTexture;
-            for (const cJ of uc) void 0 !== ZJ[cJ] && (JJ[cJ] = ZJ[cJ])
+      static _Parse(BB, TB, dB, VB) {
+        let yB;
+        yB = dB instanceof PT.c ? null : dB;
+        const lB = (0, cT.e)("BABYLON.Texture");
+        if (lB && yB)
+          if (BB.texture) TB.particleTexture = lB.Parse(BB.texture, yB, VB);
+          else if (BB.textureName) {
+          const dB = BB.textureSettings;
+          if (TB.particleTexture = new lB(VB + BB.textureName, yB, !1, void 0 === BB.invertY || BB.invertY, dB ? dB.samplingMode : void 0), TB.particleTexture.name = BB.textureName, dB) {
+            const BB = TB.particleTexture;
+            for (const TB of CT) void 0 !== dB[TB] && (BB[TB] = dB[TB])
           }
         }
-        if (JJ.emitterId || 0 === JJ.emitterId || void 0 !== JJ.emitter ? (JJ.emitterId || 0 === JJ.emitterId) && UJ ? (cJ.emitter = UJ.getLastMeshById(JJ.emitterId), cJ.emitter || (cJ.emitter = eJ.j.Zero())) : cJ.emitter = eJ.j.FromArray(JJ.emitter) : cJ.emitter = eJ.j.Zero(), cJ.isLocal = !!JJ.isLocal, void 0 !== JJ.renderingGroupId && (cJ.renderingGroupId = JJ.renderingGroupId), void 0 !== JJ.isBillboardBased && (cJ.isBillboardBased = JJ.isBillboardBased), void 0 !== JJ.billboardMode && (cJ.billboardMode = JJ.billboardMode), void 0 !== JJ.useLogarithmicDepth && (cJ.useLogarithmicDepth = JJ.useLogarithmicDepth), JJ.animations) {
-          for (let ZJ = 0; ZJ < JJ.animations.length; ZJ++) {
-            const FJ = JJ.animations[ZJ],
-              UJ = (0, Hc.e)("BABYLON.Animation");
-            UJ && cJ.animations.push(UJ.Parse(FJ))
+        if (BB.emitterId || 0 === BB.emitterId || void 0 !== BB.emitter ? (BB.emitterId || 0 === BB.emitterId) && yB ? (TB.emitter = yB.getLastMeshById(BB.emitterId), TB.emitter || (TB.emitter = pB.p.Zero())) : TB.emitter = pB.p.FromArray(BB.emitter) : TB.emitter = pB.p.Zero(), TB.isLocal = !!BB.isLocal, void 0 !== BB.renderingGroupId && (TB.renderingGroupId = BB.renderingGroupId), void 0 !== BB.isBillboardBased && (TB.isBillboardBased = BB.isBillboardBased), void 0 !== BB.billboardMode && (TB.billboardMode = BB.billboardMode), void 0 !== BB.useLogarithmicDepth && (TB.useLogarithmicDepth = BB.useLogarithmicDepth), BB.animations) {
+          for (let dB = 0; dB < BB.animations.length; dB++) {
+            const VB = BB.animations[dB],
+              yB = (0, cT.e)("BABYLON.Animation");
+            yB && TB.animations.push(yB.Parse(VB))
           }
-          cJ.beginAnimationOnStart = JJ.beginAnimationOnStart, cJ.beginAnimationFrom = JJ.beginAnimationFrom, cJ.beginAnimationTo = JJ.beginAnimationTo, cJ.beginAnimationLoop = JJ.beginAnimationLoop
+          TB.beginAnimationOnStart = BB.beginAnimationOnStart, TB.beginAnimationFrom = BB.beginAnimationFrom, TB.beginAnimationTo = BB.beginAnimationTo, TB.beginAnimationLoop = BB.beginAnimationLoop
         }
-        if (JJ.autoAnimate && UJ && UJ.beginAnimation(cJ, JJ.autoAnimateFrom, JJ.autoAnimateTo, JJ.autoAnimateLoop, JJ.autoAnimateSpeed || 1), cJ.startDelay = 0 | JJ.startDelay, cJ.minAngularSpeed = JJ.minAngularSpeed, cJ.maxAngularSpeed = JJ.maxAngularSpeed, cJ.minSize = JJ.minSize, cJ.maxSize = JJ.maxSize, JJ.minScaleX && (cJ.minScaleX = JJ.minScaleX, cJ.maxScaleX = JJ.maxScaleX, cJ.minScaleY = JJ.minScaleY, cJ.maxScaleY = JJ.maxScaleY), void 0 !== JJ.preWarmCycles && (cJ.preWarmCycles = JJ.preWarmCycles, cJ.preWarmStepOffset = JJ.preWarmStepOffset), void 0 !== JJ.minInitialRotation && (cJ.minInitialRotation = JJ.minInitialRotation, cJ.maxInitialRotation = JJ.maxInitialRotation), cJ.minLifeTime = JJ.minLifeTime, cJ.maxLifeTime = JJ.maxLifeTime, cJ.minEmitPower = JJ.minEmitPower, cJ.maxEmitPower = JJ.maxEmitPower, cJ.emitRate = JJ.emitRate, cJ.gravity = eJ.j.FromArray(JJ.gravity), JJ.noiseStrength && (cJ.noiseStrength = eJ.j.FromArray(JJ.noiseStrength)), cJ.color1 = YJ.f.FromArray(JJ.color1), cJ.color2 = YJ.f.FromArray(JJ.color2), cJ.colorDead = YJ.f.FromArray(JJ.colorDead), cJ.updateSpeed = JJ.updateSpeed, cJ.targetStopDuration = JJ.targetStopDuration, cJ.blendMode = JJ.blendMode, JJ.colorGradients)
-          for (const eJ of JJ.colorGradients) cJ.addColorGradient(eJ.gradient, YJ.f.FromArray(eJ.color1), eJ.color2 ? YJ.f.FromArray(eJ.color2) : void 0);
-        if (JJ.rampGradients) {
-          for (const ZJ of JJ.rampGradients) cJ.addRampGradient(ZJ.gradient, YJ.e.FromArray(ZJ.color));
-          cJ.useRampGradients = JJ.useRampGradients
+        if (BB.autoAnimate && yB && yB.beginAnimation(TB, BB.autoAnimateFrom, BB.autoAnimateTo, BB.autoAnimateLoop, BB.autoAnimateSpeed || 1), TB.startDelay = 0 | BB.startDelay, TB.minAngularSpeed = BB.minAngularSpeed, TB.maxAngularSpeed = BB.maxAngularSpeed, TB.minSize = BB.minSize, TB.maxSize = BB.maxSize, BB.minScaleX && (TB.minScaleX = BB.minScaleX, TB.maxScaleX = BB.maxScaleX, TB.minScaleY = BB.minScaleY, TB.maxScaleY = BB.maxScaleY), void 0 !== BB.preWarmCycles && (TB.preWarmCycles = BB.preWarmCycles, TB.preWarmStepOffset = BB.preWarmStepOffset), void 0 !== BB.minInitialRotation && (TB.minInitialRotation = BB.minInitialRotation, TB.maxInitialRotation = BB.maxInitialRotation), TB.minLifeTime = BB.minLifeTime, TB.maxLifeTime = BB.maxLifeTime, TB.minEmitPower = BB.minEmitPower, TB.maxEmitPower = BB.maxEmitPower, TB.emitRate = BB.emitRate, TB.gravity = pB.p.FromArray(BB.gravity), BB.noiseStrength && (TB.noiseStrength = pB.p.FromArray(BB.noiseStrength)), TB.color1 = oB.d.FromArray(BB.color1), TB.color2 = oB.d.FromArray(BB.color2), TB.colorDead = oB.d.FromArray(BB.colorDead), TB.updateSpeed = BB.updateSpeed, TB.targetStopDuration = BB.targetStopDuration, TB.blendMode = BB.blendMode, BB.colorGradients)
+          for (const pB of BB.colorGradients) TB.addColorGradient(pB.gradient, oB.d.FromArray(pB.color1), pB.color2 ? oB.d.FromArray(pB.color2) : void 0);
+        if (BB.rampGradients) {
+          for (const dB of BB.rampGradients) TB.addRampGradient(dB.gradient, oB.c.FromArray(dB.color));
+          TB.useRampGradients = BB.useRampGradients
         }
-        if (JJ.colorRemapGradients)
-          for (const eJ of JJ.colorRemapGradients) cJ.addColorRemapGradient(eJ.gradient, void 0 !== eJ.factor1 ? eJ.factor1 : eJ.factor, eJ.factor2);
-        if (JJ.alphaRemapGradients)
-          for (const eJ of JJ.alphaRemapGradients) cJ.addAlphaRemapGradient(eJ.gradient, void 0 !== eJ.factor1 ? eJ.factor1 : eJ.factor, eJ.factor2);
-        if (JJ.sizeGradients)
-          for (const eJ of JJ.sizeGradients) cJ.addSizeGradient(eJ.gradient, void 0 !== eJ.factor1 ? eJ.factor1 : eJ.factor, eJ.factor2);
-        if (JJ.angularSpeedGradients)
-          for (const eJ of JJ.angularSpeedGradients) cJ.addAngularSpeedGradient(eJ.gradient, void 0 !== eJ.factor1 ? eJ.factor1 : eJ.factor, eJ.factor2);
-        if (JJ.velocityGradients)
-          for (const eJ of JJ.velocityGradients) cJ.addVelocityGradient(eJ.gradient, void 0 !== eJ.factor1 ? eJ.factor1 : eJ.factor, eJ.factor2);
-        if (JJ.dragGradients)
-          for (const eJ of JJ.dragGradients) cJ.addDragGradient(eJ.gradient, void 0 !== eJ.factor1 ? eJ.factor1 : eJ.factor, eJ.factor2);
-        if (JJ.emitRateGradients)
-          for (const eJ of JJ.emitRateGradients) cJ.addEmitRateGradient(eJ.gradient, void 0 !== eJ.factor1 ? eJ.factor1 : eJ.factor, eJ.factor2);
-        if (JJ.startSizeGradients)
-          for (const eJ of JJ.startSizeGradients) cJ.addStartSizeGradient(eJ.gradient, void 0 !== eJ.factor1 ? eJ.factor1 : eJ.factor, eJ.factor2);
-        if (JJ.lifeTimeGradients)
-          for (const eJ of JJ.lifeTimeGradients) cJ.addLifeTimeGradient(eJ.gradient, void 0 !== eJ.factor1 ? eJ.factor1 : eJ.factor, eJ.factor2);
-        if (JJ.limitVelocityGradients) {
-          for (const ZJ of JJ.limitVelocityGradients) cJ.addLimitVelocityGradient(ZJ.gradient, void 0 !== ZJ.factor1 ? ZJ.factor1 : ZJ.factor, ZJ.factor2);
-          cJ.limitVelocityDamping = JJ.limitVelocityDamping
+        if (BB.colorRemapGradients)
+          for (const pB of BB.colorRemapGradients) TB.addColorRemapGradient(pB.gradient, void 0 !== pB.factor1 ? pB.factor1 : pB.factor, pB.factor2);
+        if (BB.alphaRemapGradients)
+          for (const pB of BB.alphaRemapGradients) TB.addAlphaRemapGradient(pB.gradient, void 0 !== pB.factor1 ? pB.factor1 : pB.factor, pB.factor2);
+        if (BB.sizeGradients)
+          for (const pB of BB.sizeGradients) TB.addSizeGradient(pB.gradient, void 0 !== pB.factor1 ? pB.factor1 : pB.factor, pB.factor2);
+        if (BB.angularSpeedGradients)
+          for (const pB of BB.angularSpeedGradients) TB.addAngularSpeedGradient(pB.gradient, void 0 !== pB.factor1 ? pB.factor1 : pB.factor, pB.factor2);
+        if (BB.velocityGradients)
+          for (const pB of BB.velocityGradients) TB.addVelocityGradient(pB.gradient, void 0 !== pB.factor1 ? pB.factor1 : pB.factor, pB.factor2);
+        if (BB.dragGradients)
+          for (const pB of BB.dragGradients) TB.addDragGradient(pB.gradient, void 0 !== pB.factor1 ? pB.factor1 : pB.factor, pB.factor2);
+        if (BB.emitRateGradients)
+          for (const pB of BB.emitRateGradients) TB.addEmitRateGradient(pB.gradient, void 0 !== pB.factor1 ? pB.factor1 : pB.factor, pB.factor2);
+        if (BB.startSizeGradients)
+          for (const pB of BB.startSizeGradients) TB.addStartSizeGradient(pB.gradient, void 0 !== pB.factor1 ? pB.factor1 : pB.factor, pB.factor2);
+        if (BB.lifeTimeGradients)
+          for (const pB of BB.lifeTimeGradients) TB.addLifeTimeGradient(pB.gradient, void 0 !== pB.factor1 ? pB.factor1 : pB.factor, pB.factor2);
+        if (BB.limitVelocityGradients) {
+          for (const dB of BB.limitVelocityGradients) TB.addLimitVelocityGradient(dB.gradient, void 0 !== dB.factor1 ? dB.factor1 : dB.factor, dB.factor2);
+          TB.limitVelocityDamping = BB.limitVelocityDamping
         }
-        if (JJ.noiseTexture && UJ) {
-          const ZJ = (0, Hc.e)("BABYLON.ProceduralTexture");
-          cJ.noiseTexture = ZJ.Parse(JJ.noiseTexture, UJ, FJ)
+        if (BB.noiseTexture && yB) {
+          const dB = (0, cT.e)("BABYLON.ProceduralTexture");
+          TB.noiseTexture = dB.Parse(BB.noiseTexture, yB, VB)
         }
-        let AJ;
-        if (JJ.particleEmitterType) {
-          switch (JJ.particleEmitterType.type) {
+        let JB;
+        if (BB.particleEmitterType) {
+          switch (BB.particleEmitterType.type) {
             case "SphereParticleEmitter":
-              AJ = new fJ;
+              JB = new HB;
               break;
             case "SphereDirectedParticleEmitter":
-              AJ = new xJ;
+              JB = new EB;
               break;
             case "ConeEmitter":
             case "ConeParticleEmitter":
-              AJ = new vJ;
+              JB = new mB;
               break;
             case "ConeDirectedParticleEmitter":
-              AJ = new mJ;
+              JB = new iB;
               break;
             case "CylinderParticleEmitter":
-              AJ = new rJ.e;
+              JB = new vB.g;
               break;
             case "CylinderDirectedParticleEmitter":
-              AJ = new rJ.b;
+              JB = new vB.c;
               break;
             case "HemisphericParticleEmitter":
-              AJ = new GJ;
+              JB = new uB;
               break;
             case "PointParticleEmitter":
-              AJ = new nJ;
+              JB = new DB;
               break;
             case "MeshParticleEmitter":
-              AJ = new QJ;
+              JB = new NB;
               break;
             case "CustomParticleEmitter":
-              AJ = new zc;
+              JB = new aT;
               break;
             default:
-              AJ = new hJ.c
+              JB = new kB.c
           }
-          AJ.parse(JJ.particleEmitterType, UJ)
-        } else AJ = new hJ.c, AJ.parse(JJ, UJ);
-        cJ.particleEmitterType = AJ, cJ.startSpriteCellID = JJ.startSpriteCellID, cJ.endSpriteCellID = JJ.endSpriteCellID, cJ.spriteCellLoop = JJ.spriteCellLoop ?? !0, cJ.spriteCellWidth = JJ.spriteCellWidth, cJ.spriteCellHeight = JJ.spriteCellHeight, cJ.spriteCellChangeSpeed = JJ.spriteCellChangeSpeed, cJ.spriteRandomStartCell = JJ.spriteRandomStartCell, cJ.disposeOnStop = JJ.disposeOnStop ?? !1, cJ.manualEmitCount = JJ.manualEmitCount ?? -1
+          JB.parse(BB.particleEmitterType, yB)
+        } else JB = new kB.c, JB.parse(BB, yB);
+        TB.particleEmitterType = JB, TB.startSpriteCellID = BB.startSpriteCellID, TB.endSpriteCellID = BB.endSpriteCellID, TB.spriteCellLoop = BB.spriteCellLoop ?? !0, TB.spriteCellWidth = BB.spriteCellWidth, TB.spriteCellHeight = BB.spriteCellHeight, TB.spriteCellChangeSpeed = BB.spriteCellChangeSpeed, TB.spriteRandomStartCell = BB.spriteRandomStartCell, TB.disposeOnStop = BB.disposeOnStop ?? !1, TB.manualEmitCount = BB.manualEmitCount ?? -1
       }
-      static Parse(JJ, cJ, ZJ) {
-        let FJ = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-          UJ = arguments.length > 4 ? arguments[4] : void 0;
-        const XJ = JJ.name;
-        let AJ, qJ, jJ = null,
-          hJ = null;
-        if (cJ instanceof kc.e ? AJ = cJ : (qJ = cJ, AJ = qJ.gn()), JJ.customShader && (0, kJ.e)(AJ.createEffectForParticles)) {
-          hJ = JJ.customShader;
-          const cJ = hJ.shaderOptions.defines.length > 0 ? hJ.shaderOptions.defines.join("\n") : "";
-          jJ = AJ.createEffectForParticles(hJ.shaderPath.fragmentElement, hJ.shaderOptions.uniforms, hJ.shaderOptions.samplers, cJ)
+      static Parse(BB, TB, dB) {
+        let VB = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+          yB = arguments.length > 4 ? arguments[4] : void 0;
+        const lB = BB.name;
+        let JB, YB, gB = null,
+          kB = null;
+        if (TB instanceof PT.c ? JB = TB : (YB = TB, JB = YB.PD()), BB.customShader && (0, PB.b)(JB.createEffectForParticles)) {
+          kB = BB.customShader;
+          const TB = kB.shaderOptions.defines.length > 0 ? kB.shaderOptions.defines.join("\n") : "";
+          gB = JB.createEffectForParticles(kB.shaderPath.fragmentElement, kB.shaderOptions.uniforms, kB.shaderOptions.samplers, TB)
         }
-        const DJ = new ic(XJ, UJ || JJ.qh, cJ, jJ, JJ.isAnimationSheetEnabled);
-        if (DJ.customShader = hJ, DJ._rootUrl = ZJ, JJ.id && (DJ.id = JJ.id), JJ.subEmitters) {
-          DJ.subEmitters = [];
-          for (const FJ of JJ.subEmitters) {
-            const JJ = [];
-            for (const UJ of FJ) JJ.push(Pc.Parse(UJ, cJ, ZJ));
-            DJ.subEmitters.push(JJ)
+        const LB = new GT(lB, yB || BB.Kk, TB, gB, BB.isAnimationSheetEnabled);
+        if (LB.customShader = kB, LB._rootUrl = dB, BB.id && (LB.id = BB.id), BB.subEmitters) {
+          LB.subEmitters = [];
+          for (const VB of BB.subEmitters) {
+            const BB = [];
+            for (const yB of VB) BB.push(ST.Parse(yB, TB, dB));
+            LB.subEmitters.push(BB)
           }
         }
-        if (JJ.attractors)
-          for (const YJ of JJ.attractors) {
-            const JJ = new Cc;
-            JJ.position = eJ.j.FromArray(YJ.position), JJ.strength = YJ.strength, DJ.addAttractor(JJ)
+        if (BB.attractors)
+          for (const oB of BB.attractors) {
+            const BB = new hT;
+            BB.position = pB.p.FromArray(oB.position), BB.strength = oB.strength, LB.addAttractor(BB)
           }
-        return ic._Parse(JJ, DJ, cJ, ZJ), JJ.textureMask && (DJ.textureMask = YJ.f.FromArray(JJ.textureMask)), JJ.worldOffset && (DJ.worldOffset = eJ.j.FromArray(JJ.worldOffset)), JJ.preventAutoStart && (DJ.preventAutoStart = JJ.preventAutoStart), JJ.metadata && (DJ.metadata = JJ.metadata), FJ || DJ.preventAutoStart || DJ.start(), DJ
+        return GT._Parse(BB, LB, TB, dB), BB.textureMask && (LB.textureMask = oB.d.FromArray(BB.textureMask)), BB.worldOffset && (LB.worldOffset = pB.p.FromArray(BB.worldOffset)), BB.preventAutoStart && (LB.preventAutoStart = BB.preventAutoStart), BB.metadata && (LB.metadata = BB.metadata), VB || LB.preventAutoStart || LB.start(), LB
       }
       serialize() {
-        let JJ = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const cJ = {};
-        if (ic._Serialize(cJ, this, JJ), cJ.textureMask = this.textureMask.JFJ(), cJ.customShader = this.customShader, cJ.preventAutoStart = this.preventAutoStart, cJ.worldOffset = this.worldOffset.JFJ(), this.metadata && (cJ.metadata = this.metadata), this.subEmitters) {
-          cJ.subEmitters = [], this._subEmitters || this._prepareSubEmitterInternalArray();
-          for (const ZJ of this._subEmitters) {
-            const FJ = [];
-            for (const cJ of ZJ) cJ.particleSystem.doNotSerialize || FJ.push(cJ.serialize(JJ));
-            cJ.subEmitters.push(FJ)
+        let BB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const TB = {};
+        if (GT._Serialize(TB, this, BB), TB.textureMask = this.textureMask.FVB(), TB.customShader = this.customShader, TB.preventAutoStart = this.preventAutoStart, TB.worldOffset = this.worldOffset.FVB(), this.metadata && (TB.metadata = this.metadata), this.subEmitters) {
+          TB.subEmitters = [], this._subEmitters || this._prepareSubEmitterInternalArray();
+          for (const dB of this._subEmitters) {
+            const VB = [];
+            for (const TB of dB) TB.particleSystem.doNotSerialize || VB.push(TB.serialize(BB));
+            TB.subEmitters.push(VB)
           }
         }
         if (this._attractors && this._attractors.length) {
-          cJ.attractors = [];
-          for (const JJ of this._attractors) cJ.attractors.push(JJ.serialize())
+          TB.attractors = [];
+          for (const BB of this._attractors) TB.attractors.push(BB.serialize())
         }
-        return cJ
+        return TB
       }
-      static _Serialize(JJ, cJ, ZJ) {
-        if (JJ.name = cJ.name, JJ.id = cJ.id, JJ.qh = cJ.getCapacity(), JJ.disposeOnStop = cJ.disposeOnStop, JJ.manualEmitCount = cJ.manualEmitCount, cJ.emitter.position) {
-          const ZJ = cJ.emitter;
-          JJ.emitterId = ZJ.id
+      static _Serialize(BB, TB, dB) {
+        if (BB.name = TB.name, BB.id = TB.id, BB.Kk = TB.getCapacity(), BB.disposeOnStop = TB.disposeOnStop, BB.manualEmitCount = TB.manualEmitCount, TB.emitter.position) {
+          const dB = TB.emitter;
+          BB.emitterId = dB.id
         } else {
-          const ZJ = cJ.emitter;
-          JJ.emitter = ZJ.JFJ()
+          const dB = TB.emitter;
+          BB.emitter = dB.FVB()
         }
-        if (cJ.particleEmitterType && (JJ.particleEmitterType = cJ.particleEmitterType.serialize()), cJ.particleTexture)
-          if (ZJ) JJ.texture = cJ.particleTexture.serialize();
+        if (TB.particleEmitterType && (BB.particleEmitterType = TB.particleEmitterType.serialize()), TB.particleTexture)
+          if (dB) BB.texture = TB.particleTexture.serialize();
           else {
-            const ZJ = cJ.particleTexture;
-            JJ.textureName = cJ.particleTexture.name, JJ.invertY = !!ZJ._invertY;
-            const FJ = {};
-            for (const JJ of uc) FJ[JJ] = ZJ[JJ];
-            FJ.samplingMode = ZJ.samplingMode, JJ.textureSettings = FJ
-          } JJ.isLocal = cJ.isLocal, pc.c.AppendSerializedAnimations(cJ, JJ), JJ.beginAnimationOnStart = cJ.beginAnimationOnStart, JJ.beginAnimationFrom = cJ.beginAnimationFrom, JJ.beginAnimationTo = cJ.beginAnimationTo, JJ.beginAnimationLoop = cJ.beginAnimationLoop, JJ.startDelay = cJ.startDelay, JJ.renderingGroupId = cJ.renderingGroupId, JJ.isBillboardBased = cJ.isBillboardBased, JJ.billboardMode = cJ.billboardMode, JJ.minAngularSpeed = cJ.minAngularSpeed, JJ.maxAngularSpeed = cJ.maxAngularSpeed, JJ.minSize = cJ.minSize, JJ.maxSize = cJ.maxSize, JJ.minScaleX = cJ.minScaleX, JJ.maxScaleX = cJ.maxScaleX, JJ.minScaleY = cJ.minScaleY, JJ.maxScaleY = cJ.maxScaleY, JJ.minEmitPower = cJ.minEmitPower, JJ.maxEmitPower = cJ.maxEmitPower, JJ.minLifeTime = cJ.minLifeTime, JJ.maxLifeTime = cJ.maxLifeTime, JJ.emitRate = cJ.emitRate, JJ.gravity = cJ.gravity.JFJ(), JJ.noiseStrength = cJ.noiseStrength.JFJ(), JJ.color1 = cJ.color1.JFJ(), JJ.color2 = cJ.color2.JFJ(), JJ.colorDead = cJ.colorDead.JFJ(), JJ.updateSpeed = cJ.updateSpeed, JJ.targetStopDuration = cJ.targetStopDuration, JJ.blendMode = cJ.blendMode, JJ.preWarmCycles = cJ.preWarmCycles, JJ.preWarmStepOffset = cJ.preWarmStepOffset, JJ.minInitialRotation = cJ.minInitialRotation, JJ.maxInitialRotation = cJ.maxInitialRotation, JJ.startSpriteCellID = cJ.startSpriteCellID, JJ.spriteCellLoop = cJ.spriteCellLoop, JJ.endSpriteCellID = cJ.endSpriteCellID, JJ.spriteCellChangeSpeed = cJ.spriteCellChangeSpeed, JJ.spriteCellWidth = cJ.spriteCellWidth, JJ.spriteCellHeight = cJ.spriteCellHeight, JJ.spriteRandomStartCell = cJ.spriteRandomStartCell, JJ.isAnimationSheetEnabled = cJ.isAnimationSheetEnabled, JJ.useLogarithmicDepth = cJ.useLogarithmicDepth;
-        const FJ = cJ.getColorGradients();
-        if (FJ) {
-          JJ.colorGradients = [];
-          for (const cJ of FJ) {
-            const ZJ = {
-              gradient: cJ.gradient,
-              color1: cJ.color1.JFJ()
+            const dB = TB.particleTexture;
+            BB.textureName = TB.particleTexture.name, BB.invertY = !!dB._invertY;
+            const VB = {};
+            for (const BB of CT) VB[BB] = dB[BB];
+            VB.samplingMode = dB.samplingMode, BB.textureSettings = VB
+          } BB.isLocal = TB.isLocal, QT.c.AppendSerializedAnimations(TB, BB), BB.beginAnimationOnStart = TB.beginAnimationOnStart, BB.beginAnimationFrom = TB.beginAnimationFrom, BB.beginAnimationTo = TB.beginAnimationTo, BB.beginAnimationLoop = TB.beginAnimationLoop, BB.startDelay = TB.startDelay, BB.renderingGroupId = TB.renderingGroupId, BB.isBillboardBased = TB.isBillboardBased, BB.billboardMode = TB.billboardMode, BB.minAngularSpeed = TB.minAngularSpeed, BB.maxAngularSpeed = TB.maxAngularSpeed, BB.minSize = TB.minSize, BB.maxSize = TB.maxSize, BB.minScaleX = TB.minScaleX, BB.maxScaleX = TB.maxScaleX, BB.minScaleY = TB.minScaleY, BB.maxScaleY = TB.maxScaleY, BB.minEmitPower = TB.minEmitPower, BB.maxEmitPower = TB.maxEmitPower, BB.minLifeTime = TB.minLifeTime, BB.maxLifeTime = TB.maxLifeTime, BB.emitRate = TB.emitRate, BB.gravity = TB.gravity.FVB(), BB.noiseStrength = TB.noiseStrength.FVB(), BB.color1 = TB.color1.FVB(), BB.color2 = TB.color2.FVB(), BB.colorDead = TB.colorDead.FVB(), BB.updateSpeed = TB.updateSpeed, BB.targetStopDuration = TB.targetStopDuration, BB.blendMode = TB.blendMode, BB.preWarmCycles = TB.preWarmCycles, BB.preWarmStepOffset = TB.preWarmStepOffset, BB.minInitialRotation = TB.minInitialRotation, BB.maxInitialRotation = TB.maxInitialRotation, BB.startSpriteCellID = TB.startSpriteCellID, BB.spriteCellLoop = TB.spriteCellLoop, BB.endSpriteCellID = TB.endSpriteCellID, BB.spriteCellChangeSpeed = TB.spriteCellChangeSpeed, BB.spriteCellWidth = TB.spriteCellWidth, BB.spriteCellHeight = TB.spriteCellHeight, BB.spriteRandomStartCell = TB.spriteRandomStartCell, BB.isAnimationSheetEnabled = TB.isAnimationSheetEnabled, BB.useLogarithmicDepth = TB.useLogarithmicDepth;
+        const VB = TB.getColorGradients();
+        if (VB) {
+          BB.colorGradients = [];
+          for (const TB of VB) {
+            const dB = {
+              gradient: TB.gradient,
+              color1: TB.color1.FVB()
             };
-            cJ.color2 ? ZJ.color2 = cJ.color2.JFJ() : ZJ.color2 = cJ.color1.JFJ(), JJ.colorGradients.push(ZJ)
+            TB.color2 ? dB.color2 = TB.color2.FVB() : dB.color2 = TB.color1.FVB(), BB.colorGradients.push(dB)
           }
         }
-        const UJ = cJ.getRampGradients();
-        if (UJ) {
-          JJ.rampGradients = [];
-          for (const cJ of UJ) {
-            const ZJ = {
-              gradient: cJ.gradient,
-              color: cJ.color.JFJ()
+        const yB = TB.getRampGradients();
+        if (yB) {
+          BB.rampGradients = [];
+          for (const TB of yB) {
+            const dB = {
+              gradient: TB.gradient,
+              color: TB.color.FVB()
             };
-            JJ.rampGradients.push(ZJ)
+            BB.rampGradients.push(dB)
           }
-          JJ.useRampGradients = cJ.useRampGradients
+          BB.useRampGradients = TB.useRampGradients
         }
-        const eJ = cJ.getColorRemapGradients();
-        if (eJ) {
-          JJ.colorRemapGradients = [];
-          for (const cJ of eJ) {
-            const ZJ = {
-              gradient: cJ.gradient,
-              factor1: cJ.factor1
+        const pB = TB.getColorRemapGradients();
+        if (pB) {
+          BB.colorRemapGradients = [];
+          for (const TB of pB) {
+            const dB = {
+              gradient: TB.gradient,
+              factor1: TB.factor1
             };
-            void 0 !== cJ.factor2 ? ZJ.factor2 = cJ.factor2 : ZJ.factor2 = cJ.factor1, JJ.colorRemapGradients.push(ZJ)
-          }
-        }
-        const XJ = cJ.getAlphaRemapGradients();
-        if (XJ) {
-          JJ.alphaRemapGradients = [];
-          for (const cJ of XJ) {
-            const ZJ = {
-              gradient: cJ.gradient,
-              factor1: cJ.factor1
-            };
-            void 0 !== cJ.factor2 ? ZJ.factor2 = cJ.factor2 : ZJ.factor2 = cJ.factor1, JJ.alphaRemapGradients.push(ZJ)
+            void 0 !== TB.factor2 ? dB.factor2 = TB.factor2 : dB.factor2 = TB.factor1, BB.colorRemapGradients.push(dB)
           }
         }
-        const AJ = cJ.getSizeGradients();
-        if (AJ) {
-          JJ.sizeGradients = [];
-          for (const cJ of AJ) {
-            const ZJ = {
-              gradient: cJ.gradient,
-              factor1: cJ.factor1
+        const lB = TB.getAlphaRemapGradients();
+        if (lB) {
+          BB.alphaRemapGradients = [];
+          for (const TB of lB) {
+            const dB = {
+              gradient: TB.gradient,
+              factor1: TB.factor1
             };
-            void 0 !== cJ.factor2 ? ZJ.factor2 = cJ.factor2 : ZJ.factor2 = cJ.factor1, JJ.sizeGradients.push(ZJ)
+            void 0 !== TB.factor2 ? dB.factor2 = TB.factor2 : dB.factor2 = TB.factor1, BB.alphaRemapGradients.push(dB)
           }
         }
-        const qJ = cJ.getAngularSpeedGradients();
-        if (qJ) {
-          JJ.angularSpeedGradients = [];
-          for (const cJ of qJ) {
-            const ZJ = {
-              gradient: cJ.gradient,
-              factor1: cJ.factor1
+        const JB = TB.getSizeGradients();
+        if (JB) {
+          BB.sizeGradients = [];
+          for (const TB of JB) {
+            const dB = {
+              gradient: TB.gradient,
+              factor1: TB.factor1
             };
-            void 0 !== cJ.factor2 ? ZJ.factor2 = cJ.factor2 : ZJ.factor2 = cJ.factor1, JJ.angularSpeedGradients.push(ZJ)
+            void 0 !== TB.factor2 ? dB.factor2 = TB.factor2 : dB.factor2 = TB.factor1, BB.sizeGradients.push(dB)
           }
         }
-        const jJ = cJ.getVelocityGradients();
-        if (jJ) {
-          JJ.velocityGradients = [];
-          for (const cJ of jJ) {
-            const ZJ = {
-              gradient: cJ.gradient,
-              factor1: cJ.factor1
+        const YB = TB.getAngularSpeedGradients();
+        if (YB) {
+          BB.angularSpeedGradients = [];
+          for (const TB of YB) {
+            const dB = {
+              gradient: TB.gradient,
+              factor1: TB.factor1
             };
-            void 0 !== cJ.factor2 ? ZJ.factor2 = cJ.factor2 : ZJ.factor2 = cJ.factor1, JJ.velocityGradients.push(ZJ)
+            void 0 !== TB.factor2 ? dB.factor2 = TB.factor2 : dB.factor2 = TB.factor1, BB.angularSpeedGradients.push(dB)
           }
         }
-        const YJ = cJ.getDragGradients();
-        if (YJ) {
-          JJ.dragGradients = [];
-          for (const cJ of YJ) {
-            const ZJ = {
-              gradient: cJ.gradient,
-              factor1: cJ.factor1
+        const gB = TB.getVelocityGradients();
+        if (gB) {
+          BB.velocityGradients = [];
+          for (const TB of gB) {
+            const dB = {
+              gradient: TB.gradient,
+              factor1: TB.factor1
             };
-            void 0 !== cJ.factor2 ? ZJ.factor2 = cJ.factor2 : ZJ.factor2 = cJ.factor1, JJ.dragGradients.push(ZJ)
+            void 0 !== TB.factor2 ? dB.factor2 = TB.factor2 : dB.factor2 = TB.factor1, BB.velocityGradients.push(dB)
           }
         }
-        const hJ = cJ.getEmitRateGradients();
-        if (hJ) {
-          JJ.emitRateGradients = [];
-          for (const cJ of hJ) {
-            const ZJ = {
-              gradient: cJ.gradient,
-              factor1: cJ.factor1
+        const oB = TB.getDragGradients();
+        if (oB) {
+          BB.dragGradients = [];
+          for (const TB of oB) {
+            const dB = {
+              gradient: TB.gradient,
+              factor1: TB.factor1
             };
-            void 0 !== cJ.factor2 ? ZJ.factor2 = cJ.factor2 : ZJ.factor2 = cJ.factor1, JJ.emitRateGradients.push(ZJ)
+            void 0 !== TB.factor2 ? dB.factor2 = TB.factor2 : dB.factor2 = TB.factor1, BB.dragGradients.push(dB)
           }
         }
-        const DJ = cJ.getStartSizeGradients();
-        if (DJ) {
-          JJ.startSizeGradients = [];
-          for (const cJ of DJ) {
-            const ZJ = {
-              gradient: cJ.gradient,
-              factor1: cJ.factor1
+        const kB = TB.getEmitRateGradients();
+        if (kB) {
+          BB.emitRateGradients = [];
+          for (const TB of kB) {
+            const dB = {
+              gradient: TB.gradient,
+              factor1: TB.factor1
             };
-            void 0 !== cJ.factor2 ? ZJ.factor2 = cJ.factor2 : ZJ.factor2 = cJ.factor1, JJ.startSizeGradients.push(ZJ)
+            void 0 !== TB.factor2 ? dB.factor2 = TB.factor2 : dB.factor2 = TB.factor1, BB.emitRateGradients.push(dB)
           }
         }
-        const sJ = cJ.getLifeTimeGradients();
-        if (sJ) {
-          JJ.lifeTimeGradients = [];
-          for (const cJ of sJ) {
-            const ZJ = {
-              gradient: cJ.gradient,
-              factor1: cJ.factor1
+        const LB = TB.getStartSizeGradients();
+        if (LB) {
+          BB.startSizeGradients = [];
+          for (const TB of LB) {
+            const dB = {
+              gradient: TB.gradient,
+              factor1: TB.factor1
             };
-            void 0 !== cJ.factor2 ? ZJ.factor2 = cJ.factor2 : ZJ.factor2 = cJ.factor1, JJ.lifeTimeGradients.push(ZJ)
+            void 0 !== TB.factor2 ? dB.factor2 = TB.factor2 : dB.factor2 = TB.factor1, BB.startSizeGradients.push(dB)
           }
         }
-        const nJ = cJ.getLimitVelocityGradients();
-        if (nJ) {
-          JJ.limitVelocityGradients = [];
-          for (const cJ of nJ) {
-            const ZJ = {
-              gradient: cJ.gradient,
-              factor1: cJ.factor1
+        const OB = TB.getLifeTimeGradients();
+        if (OB) {
+          BB.lifeTimeGradients = [];
+          for (const TB of OB) {
+            const dB = {
+              gradient: TB.gradient,
+              factor1: TB.factor1
             };
-            void 0 !== cJ.factor2 ? ZJ.factor2 = cJ.factor2 : ZJ.factor2 = cJ.factor1, JJ.limitVelocityGradients.push(ZJ)
+            void 0 !== TB.factor2 ? dB.factor2 = TB.factor2 : dB.factor2 = TB.factor1, BB.lifeTimeGradients.push(dB)
           }
-          JJ.limitVelocityDamping = cJ.limitVelocityDamping
         }
-        cJ.noiseTexture && (JJ.noiseTexture = cJ.noiseTexture.serialize())
+        const DB = TB.getLimitVelocityGradients();
+        if (DB) {
+          BB.limitVelocityGradients = [];
+          for (const TB of DB) {
+            const dB = {
+              gradient: TB.gradient,
+              factor1: TB.factor1
+            };
+            void 0 !== TB.factor2 ? dB.factor2 = TB.factor2 : dB.factor2 = TB.factor1, BB.limitVelocityGradients.push(dB)
+          }
+          BB.limitVelocityDamping = TB.limitVelocityDamping
+        }
+        TB.noiseTexture && (BB.noiseTexture = TB.noiseTexture.serialize())
       }
-      clone(JJ, cJ) {
-        let ZJ = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const FJ = {
+      clone(BB, TB) {
+        let dB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const VB = {
           ...this._customWrappers
         };
-        let UJ = null;
-        const eJ = this._engine;
-        if ((0, kJ.e)(eJ.createEffectForParticles) && null != this.customShader) {
-          UJ = this.customShader;
-          const JJ = UJ.shaderOptions.defines.length > 0 ? UJ.shaderOptions.defines.join("\n") : "",
-            cJ = eJ.createEffectForParticles(UJ.shaderPath.fragmentElement, UJ.shaderOptions.uniforms, UJ.shaderOptions.samplers, JJ);
-          FJ[0] ? FJ[0].effect = cJ : this.setCustomEffect(cJ, 0)
+        let yB = null;
+        const pB = this._engine;
+        if ((0, PB.b)(pB.createEffectForParticles) && null != this.customShader) {
+          yB = this.customShader;
+          const BB = yB.shaderOptions.defines.length > 0 ? yB.shaderOptions.defines.join("\n") : "",
+            TB = pB.createEffectForParticles(yB.shaderPath.fragmentElement, yB.shaderOptions.uniforms, yB.shaderOptions.samplers, BB);
+          VB[0] ? VB[0].effect = TB : this.setCustomEffect(TB, 0)
         }
-        const XJ = this.serialize(ZJ),
-          AJ = !1 === ZJ && this.particleTexture ? this.particleTexture.clone() : null;
-        AJ && (XJ.textureName = void 0);
-        const qJ = ic.Parse(XJ, this._scene || this._engine, this._rootUrl);
-        return qJ.name = JJ, qJ.customShader = UJ, qJ._customWrappers = FJ, AJ && (qJ.particleTexture = AJ), void 0 === cJ && (cJ = this.emitter), this.noiseTexture && (qJ.noiseTexture = this.noiseTexture.clone()), qJ.emitter = cJ, this.preventAutoStart || qJ.start(), qJ
+        const lB = this.serialize(dB),
+          JB = !1 === dB && this.particleTexture ? this.particleTexture.clone() : null;
+        JB && (lB.textureName = void 0);
+        const YB = GT.Parse(lB, this._scene || this._engine, this._rootUrl);
+        return YB.name = BB, YB.customShader = yB, YB._customWrappers = VB, JB && (YB.particleTexture = JB), void 0 === TB && (TB = this.emitter), this.noiseTexture && (YB.noiseTexture = this.noiseTexture.clone()), YB.emitter = TB, this.preventAutoStart || YB.start(), YB
       }
     }
-    ic.BILLBOARDMODE_Y = 2, ic.BILLBOARDMODE_ALL = 7, ic.BILLBOARDMODE_STRETCHED = 8, ic.BILLBOARDMODE_STRETCHED_LOCAL = 9;
-    let Rc = !1;
-    Rc || (Rc = !0, Pc._ParseParticleSystem = ic.Parse)
+    GT.BILLBOARDMODE_Y = 2, GT.BILLBOARDMODE_ALL = 7, GT.BILLBOARDMODE_STRETCHED = 8, GT.BILLBOARDMODE_STRETCHED_LOCAL = 9;
+    let qT = !1;
+    qT || (qT = !0, ST._ParseParticleSystem = GT.Parse)
   },
-  40354: (JJ, cJ, ZJ) => {
-    ZJ.r(cJ), ZJ.d(cJ, {
-      SkyMaterial: () => vJ,
-      _MaxColorValueForRenderTarget: () => rJ
+  40355: (BB, TB, dB) => {
+    dB.r(TB), dB.d(TB, {
+      SkyMaterial: () => mB,
+      _MaxColorValueForRenderTarget: () => vB
     });
-    var FJ = ZJ(38800),
-      UJ = ZJ(38806),
-      eJ = ZJ(38822),
-      XJ = ZJ(36165),
-      AJ = ZJ(39041),
-      qJ = ZJ(39106),
-      jJ = ZJ(40327),
-      YJ = ZJ(40018),
-      hJ = ZJ(38872),
-      DJ = ZJ(36216),
-      sJ = ZJ(39130),
-      nJ = ZJ(39113),
-      GJ = ZJ(39091),
-      fJ = ZJ(39087);
-    class xJ extends AJ.d {
+    var VB = dB(38745),
+      yB = dB(38750),
+      pB = dB(38772),
+      lB = dB(36119),
+      JB = dB(39034),
+      YB = dB(39080),
+      gB = dB(40312),
+      oB = dB(39994),
+      kB = dB(38840),
+      LB = dB(36166),
+      OB = dB(39108),
+      DB = dB(39088),
+      uB = dB(39075),
+      HB = dB(39073);
+    class EB extends JB.d {
       constructor() {
         super(), this.CLIPPLANE = !1, this.CLIPPLANE2 = !1, this.CLIPPLANE3 = !1, this.CLIPPLANE4 = !1, this.CLIPPLANE5 = !1, this.CLIPPLANE6 = !1, this.POINTSIZE = !1, this.FOG = !1, this.VERTEXCOLOR = !1, this.VERTEXALPHA = !1, this.IMAGEPROCESSINGPOSTPROCESS = !1, this.SKIPFINALCOLORCLAMP = !1, this.DITHER = !1, this.LOGARITHMICDEPTH = !1, this.SKY_RAW_HDR_OUTPUT = !1, this.rebuild()
       }
     }
 
-    function rJ(JJ) {
-      switch (JJ) {
-        case jJ.c.TEXTURETYPE_HALF_FLOAT:
+    function vB(BB) {
+      switch (BB) {
+        case gB.c.TEXTURETYPE_HALF_FLOAT:
           return 65504;
-        case jJ.c.TEXTURETYPE_FLOAT:
+        case gB.c.TEXTURETYPE_FLOAT:
           return 3e38;
         default:
           return 1
       }
     }
-    let vJ = (() => {
-      var JJ;
-      let cJ, AJ, jJ, DJ, vJ, mJ, QJ, EJ, VJ, KJ, yJ, SJ, IJ, MJ, bJ, wJ = qJ.d,
-        WJ = [],
-        gJ = [],
-        HJ = [],
-        PJ = [],
-        kJ = [],
-        pJ = [],
-        dJ = [],
-        zJ = [],
-        NJ = [],
-        OJ = [],
-        TJ = [],
-        CJ = [],
-        uJ = [],
-        iJ = [],
-        RJ = [],
-        LJ = [],
-        aJ = [],
-        BJ = [],
-        tJ = [],
-        oJ = [],
-        lJ = [],
-        Jc = [],
-        cc = [],
-        Zc = [],
-        Fc = [],
-        Uc = [],
-        ec = [],
-        Xc = [],
-        Ac = [],
-        qc = [];
-      return JJ = class extends wJ {
-        constructor(JJ, cJ) {
-          super(JJ, cJ, void 0, arguments.length > 2 && void 0 !== arguments[2] && arguments[2]), this.luminance = (0, FJ.e)(this, WJ, 1), this.turbidity = ((0, FJ.e)(this, gJ), (0, FJ.e)(this, HJ, 10)), this.rayleigh = ((0, FJ.e)(this, PJ), (0, FJ.e)(this, kJ, 2)), this.mieCoefficient = ((0, FJ.e)(this, pJ), (0, FJ.e)(this, dJ, .005)), this.mieDirectionalG = ((0, FJ.e)(this, zJ), (0, FJ.e)(this, NJ, .8)), this.distance = ((0, FJ.e)(this, OJ), (0, FJ.e)(this, TJ, 500)), this.inclination = ((0, FJ.e)(this, CJ), (0, FJ.e)(this, uJ, .49)), this.azimuth = ((0, FJ.e)(this, iJ), (0, FJ.e)(this, RJ, .25)), this.sunPosition = ((0, FJ.e)(this, LJ), (0, FJ.e)(this, aJ, new XJ.Pn(0, 100, 0))), this.useSunPosition = ((0, FJ.e)(this, BJ), (0, FJ.e)(this, tJ, !1)), this.cameraOffset = ((0, FJ.e)(this, oJ), (0, FJ.e)(this, lJ, XJ.Pn.Zero())), this.up = ((0, FJ.e)(this, Jc), (0, FJ.e)(this, cc, XJ.Pn.Up())), this.dithering = ((0, FJ.e)(this, Zc), (0, FJ.e)(this, Fc, !1)), this.rawHdrOutput = ((0, FJ.e)(this, Uc), (0, FJ.e)(this, ec, !1)), this.cloudiness = ((0, FJ.e)(this, Xc), (0, FJ.e)(this, Ac, 0)), this._cameraPosition = ((0, FJ.e)(this, qc), XJ.Pn.Zero()), this._skyOrientation = new XJ.Quaternion
+    let mB = (() => {
+      var BB;
+      let TB, JB, gB, LB, mB, iB, NB, tB, fB, sB, MB, zB, wB, UB, FB, KB = YB.c,
+        rB = [],
+        IB = [],
+        cB = [],
+        SB = [],
+        PB = [],
+        QB = [],
+        RB = [],
+        aB = [],
+        ZB = [],
+        XB = [],
+        WB = [],
+        hB = [],
+        CB = [],
+        GB = [],
+        qB = [],
+        xB = [],
+        jB = [],
+        AB = [],
+        bB = [],
+        nB = [],
+        eB = [],
+        BT = [],
+        TT = [],
+        dT = [],
+        VT = [],
+        yT = [],
+        pT = [],
+        lT = [],
+        JT = [],
+        YT = [];
+      return BB = class extends KB {
+        constructor(BB, TB) {
+          super(BB, TB, void 0, arguments.length > 2 && void 0 !== arguments[2] && arguments[2]), this.luminance = (0, VB.h)(this, rB, 1), this.turbidity = ((0, VB.h)(this, IB), (0, VB.h)(this, cB, 10)), this.rayleigh = ((0, VB.h)(this, SB), (0, VB.h)(this, PB, 2)), this.mieCoefficient = ((0, VB.h)(this, QB), (0, VB.h)(this, RB, .005)), this.mieDirectionalG = ((0, VB.h)(this, aB), (0, VB.h)(this, ZB, .8)), this.distance = ((0, VB.h)(this, XB), (0, VB.h)(this, WB, 500)), this.inclination = ((0, VB.h)(this, hB), (0, VB.h)(this, CB, .49)), this.azimuth = ((0, VB.h)(this, GB), (0, VB.h)(this, qB, .25)), this.sunPosition = ((0, VB.h)(this, xB), (0, VB.h)(this, jB, new lB.RD(0, 100, 0))), this.useSunPosition = ((0, VB.h)(this, AB), (0, VB.h)(this, bB, !1)), this.cameraOffset = ((0, VB.h)(this, nB), (0, VB.h)(this, eB, lB.RD.Zero())), this.up = ((0, VB.h)(this, BT), (0, VB.h)(this, TT, lB.RD.Up())), this.dithering = ((0, VB.h)(this, dT), (0, VB.h)(this, VT, !1)), this.rawHdrOutput = ((0, VB.h)(this, yT), (0, VB.h)(this, pT, !1)), this.cloudiness = ((0, VB.h)(this, lT), (0, VB.h)(this, JT, 0)), this._cameraPosition = ((0, VB.h)(this, YT), lB.RD.Zero()), this._skyOrientation = new lB.Quaternion
         }
         needAlphaBlending() {
           return this.alpha < 1
@@ -4123,287 +4123,287 @@ export const modules = {
         getAlphaTestTexture() {
           return null
         }
-        isReadyForSubMesh(cJ, ZJ) {
-          const FJ = ZJ._drawWrapper;
-          if (this.isFrozen && FJ.effect && FJ._wasPreviouslyReady) return !0;
-          ZJ.materialDefines || (ZJ.materialDefines = new xJ);
-          const UJ = ZJ.materialDefines,
-            eJ = this.Qy();
-          if (this._isReadyForSubMesh(ZJ)) return !0;
-          if ((0, fJ.Y)(cJ, eJ, this._useLogarithmicDepth, this.pointsCloud, this.fogEnabled, !1, UJ, void 0, void 0, void 0, this._isVertexOutputInvariant), (0, fJ.L)(cJ, UJ, !0, !1), UJ.IMAGEPROCESSINGPOSTPROCESS !== eJ.imageProcessingConfiguration.applyByPostProcess && UJ.markAsMiscDirty(), UJ.DITHER !== this.dithering && UJ.markAsMiscDirty(), UJ.SKY_RAW_HDR_OUTPUT !== this.rawHdrOutput && UJ.markAsMiscDirty(), UJ.isDirty) {
-            UJ.markAsProcessed(), eJ.resetCachedMaterial();
-            const cJ = new nJ.b;
-            UJ.FOG && cJ.addFallback(1, "FOG"), UJ.IMAGEPROCESSINGPOSTPROCESS = eJ.imageProcessingConfiguration.applyByPostProcess, UJ.DITHER = this.dithering, UJ.SKY_RAW_HDR_OUTPUT = this.rawHdrOutput;
-            const FJ = [YJ.e.PositionKind];
-            UJ.VERTEXCOLOR && FJ.push(YJ.e.ColorKind);
-            const XJ = "sky",
-              AJ = ["world", "viewProjection", "view", "vFogInfos", "vFogColor", "logarithmicDepthConstant", "pointSize", "luminance", "turbidity", "rayleigh", "mieCoefficient", "mieDirectionalG", "sunPosition", "cameraPosition", "cameraOffset", "up", "cloudiness", "maxColorValue"];
-            (0, GJ.c)(AJ);
-            const qJ = UJ.toString();
-            ZJ.setEffect(eJ.gn().createEffect(XJ, {
-              attributes: FJ,
-              uniformsNames: AJ,
+        isReadyForSubMesh(TB, dB) {
+          const VB = dB._drawWrapper;
+          if (this.isFrozen && VB.effect && VB._wasPreviouslyReady) return !0;
+          dB.materialDefines || (dB.materialDefines = new EB);
+          const yB = dB.materialDefines,
+            pB = this.jU();
+          if (this._isReadyForSubMesh(dB)) return !0;
+          if ((0, HB.W)(TB, pB, this._useLogarithmicDepth, this.pointsCloud, this.fogEnabled, !1, yB, void 0, void 0, void 0, this._isVertexOutputInvariant), (0, HB.I)(TB, yB, !0, !1), yB.IMAGEPROCESSINGPOSTPROCESS !== pB.imageProcessingConfiguration.applyByPostProcess && yB.markAsMiscDirty(), yB.DITHER !== this.dithering && yB.markAsMiscDirty(), yB.SKY_RAW_HDR_OUTPUT !== this.rawHdrOutput && yB.markAsMiscDirty(), yB.isDirty) {
+            yB.markAsProcessed(), pB.resetCachedMaterial();
+            const TB = new DB.d;
+            yB.FOG && TB.addFallback(1, "FOG"), yB.IMAGEPROCESSINGPOSTPROCESS = pB.imageProcessingConfiguration.applyByPostProcess, yB.DITHER = this.dithering, yB.SKY_RAW_HDR_OUTPUT = this.rawHdrOutput;
+            const VB = [oB.f.PositionKind];
+            yB.VERTEXCOLOR && VB.push(oB.f.ColorKind);
+            const lB = "sky",
+              JB = ["world", "viewProjection", "view", "vFogInfos", "vFogColor", "logarithmicDepthConstant", "pointSize", "luminance", "turbidity", "rayleigh", "mieCoefficient", "mieDirectionalG", "sunPosition", "cameraPosition", "cameraOffset", "up", "cloudiness", "maxColorValue"];
+            (0, uB.c)(JB);
+            const YB = yB.toString();
+            dB.setEffect(pB.PD().createEffect(lB, {
+              attributes: VB,
+              uniformsNames: JB,
               uniformBuffersNames: [],
               samplers: [],
-              defines: qJ,
-              fallbacks: cJ,
+              defines: YB,
+              fallbacks: TB,
               onCompiled: this.onCompiled,
               onError: this.onError,
               shaderLanguage: this._shaderLanguage,
-              extraInitializationsAsync: JJ._ShaderLoader.getLoadCallback(this._shaderLanguage)
-            }, eJ.gn()), UJ, this._materialContext)
+              extraInitializationsAsync: BB._ShaderLoader.getLoadCallback(this._shaderLanguage)
+            }, pB.PD()), yB, this._materialContext)
           }
-          return !(!ZJ.effect || !ZJ.effect.isReady()) && (UJ._renderId = eJ.getRenderId(), FJ._wasPreviouslyReady = !0, !0)
+          return !(!dB.effect || !dB.effect.isReady()) && (yB._renderId = pB.getRenderId(), VB._wasPreviouslyReady = !0, !0)
         }
-        bindForSubMesh(JJ, cJ, ZJ) {
-          const FJ = this.Qy(),
-            UJ = ZJ.materialDefines;
-          if (!UJ) return;
-          const eJ = ZJ.effect;
-          if (!eJ) return;
-          this._activeEffect = eJ, this.bindOnlyWorldMatrix(JJ), this._activeEffect.setMatrix("viewProjection", FJ.getTransformMatrix()), this._mustRebind(FJ, eJ, ZJ) && ((0, GJ.e)(eJ, this, FJ), this.pointsCloud && this._activeEffect.setFloat("pointSize", this.pointSize), this._useLogarithmicDepth && (0, fJ.l)(UJ, eJ, FJ)), FJ.fogEnabled && cJ.applyFog && FJ.fogMode !== hJ.b.FOGMODE_NONE && this._activeEffect.setMatrix("view", FJ.getViewMatrix()), (0, fJ.h)(FJ, cJ, this._activeEffect, this.rawHdrOutput);
-          const AJ = FJ.activeCamera;
-          if (AJ) {
-            const JJ = AJ.getWorldMatrix();
-            this._cameraPosition.x = JJ.m[12], this._cameraPosition.y = JJ.m[13], this._cameraPosition.z = JJ.m[14], this._activeEffect.setVector3("cameraPosition", XJ.TmpVectors.Pn[0].rZJ(this._cameraPosition).xFJ(FJ.floatingOriginOffset))
+        bindForSubMesh(BB, TB, dB) {
+          const VB = this.jU(),
+            yB = dB.materialDefines;
+          if (!yB) return;
+          const pB = dB.effect;
+          if (!pB) return;
+          this._activeEffect = pB, this.bindOnlyWorldMatrix(BB), this._activeEffect.setMatrix("viewProjection", VB.getTransformMatrix()), this._mustRebind(VB, pB, dB) && ((0, uB.d)(pB, this, VB), this.pointsCloud && this._activeEffect.setFloat("pointSize", this.pointSize), this._useLogarithmicDepth && (0, HB.p)(yB, pB, VB)), VB.fogEnabled && TB.applyFog && VB.fogMode !== kB.c.FOGMODE_NONE && this._activeEffect.setMatrix("view", VB.getViewMatrix()), (0, HB.h)(VB, TB, this._activeEffect, this.rawHdrOutput);
+          const JB = VB.activeCamera;
+          if (JB) {
+            const BB = JB.getWorldMatrix();
+            this._cameraPosition.x = BB.m[12], this._cameraPosition.y = BB.m[13], this._cameraPosition.z = BB.m[14], this._activeEffect.setVector3("cameraPosition", lB.TmpVectors.RD[0].bdB(this._cameraPosition).qVB(VB.floatingOriginOffset))
           }
           if (this._activeEffect.setVector3("cameraOffset", this.cameraOffset), this._activeEffect.setVector3("up", this.up), (this.rawHdrOutput || this.luminance > 0) && this._activeEffect.setFloat("luminance", this.luminance), this._activeEffect.setFloat("turbidity", this.turbidity), this._activeEffect.setFloat("rayleigh", this.rayleigh), this._activeEffect.setFloat("mieCoefficient", this.mieCoefficient), this._activeEffect.setFloat("mieDirectionalG", this.mieDirectionalG), this._activeEffect.setFloat("cloudiness", this.cloudiness), this.rawHdrOutput) {
-            const JJ = FJ.gn()._currentRenderTarget;
-            this._activeEffect.setFloat("maxColorValue", rJ(JJ?.texture?.type))
+            const BB = VB.PD()._currentRenderTarget;
+            this._activeEffect.setFloat("maxColorValue", vB(BB?.texture?.type))
           }
           if (!this.useSunPosition) {
-            const JJ = Math.PI * (this.inclination - .5),
-              cJ = 2 * Math.PI * (this.azimuth - .5);
-            this.sunPosition.x = this.distance * Math.cos(cJ) * Math.cos(JJ), this.sunPosition.y = this.distance * Math.sin(-JJ), this.sunPosition.z = this.distance * Math.sin(cJ) * Math.cos(JJ), XJ.Quaternion.FromUnitVectorsToRef(XJ.Pn.UpReadOnly, this.up, this._skyOrientation), this.sunPosition.rotateByQuaternionToRef(this._skyOrientation, this.sunPosition)
+            const BB = Math.PI * (this.inclination - .5),
+              TB = 2 * Math.PI * (this.azimuth - .5);
+            this.sunPosition.x = this.distance * Math.cos(TB) * Math.cos(BB), this.sunPosition.y = this.distance * Math.sin(-BB), this.sunPosition.z = this.distance * Math.sin(TB) * Math.cos(BB), lB.Quaternion.FromUnitVectorsToRef(lB.RD.UpReadOnly, this.up, this._skyOrientation), this.sunPosition.rotateByQuaternionToRef(this._skyOrientation, this.sunPosition)
           }
-          this._activeEffect.setVector3("sunPosition", this.sunPosition), this._afterBind(cJ, this._activeEffect, ZJ)
+          this._activeEffect.setVector3("sunPosition", this.sunPosition), this._afterBind(TB, this._activeEffect, dB)
         }
         getAnimatables() {
           return []
         }
-        dispose(JJ) {
-          super.dispose(JJ)
+        dispose(BB) {
+          super.dispose(BB)
         }
-        clone(cJ) {
-          return eJ.c.Clone((() => new JJ(cJ, this.Qy())), this)
+        clone(TB) {
+          return pB.c.Clone((() => new BB(TB, this.jU())), this)
         }
         serialize() {
-          const JJ = super.serialize();
-          return JJ.customType = "BABYLON.SkyMaterial", JJ
+          const BB = super.serialize();
+          return BB.customType = "BABYLON.SkyMaterial", BB
         }
         getClassName() {
           return "SkyMaterial"
         }
-        static Parse(cJ, ZJ, FJ) {
-          return eJ.c.Parse((() => new JJ(cJ.name, ZJ)), cJ, ZJ, FJ)
+        static Parse(TB, dB, VB) {
+          return pB.c.Parse((() => new BB(TB.name, dB)), TB, dB, VB)
         }
       }, (() => {
-        const ZJ = "function" === typeof Symbol && Symbol.metadata ? Object.create(wJ[Symbol.metadata] ?? null) : void 0;
-        cJ = [(0, UJ.F)()], AJ = [(0, UJ.F)()], jJ = [(0, UJ.F)()], DJ = [(0, UJ.F)()], vJ = [(0, UJ.F)()], mJ = [(0, UJ.F)()], QJ = [(0, UJ.F)()], EJ = [(0, UJ.F)()], VJ = [(0, UJ.E)()], KJ = [(0, UJ.F)()], yJ = [(0, UJ.E)()], SJ = [(0, UJ.E)()], IJ = [(0, UJ.F)()], MJ = [(0, UJ.F)()], bJ = [(0, UJ.F)()], (0, FJ.d)(null, null, cJ, {
+        const dB = "function" === typeof Symbol && Symbol.metadata ? Object.create(KB[Symbol.metadata] ?? null) : void 0;
+        TB = [(0, yB.W)()], JB = [(0, yB.W)()], gB = [(0, yB.W)()], LB = [(0, yB.W)()], mB = [(0, yB.W)()], iB = [(0, yB.W)()], NB = [(0, yB.W)()], tB = [(0, yB.W)()], fB = [(0, yB.T)()], sB = [(0, yB.W)()], MB = [(0, yB.T)()], zB = [(0, yB.T)()], wB = [(0, yB.W)()], UB = [(0, yB.W)()], FB = [(0, yB.W)()], (0, VB.g)(null, null, TB, {
           kind: "field",
           name: "luminance",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "luminance" in JJ,
-            get: JJ => JJ.luminance,
-            set: (JJ, cJ) => {
-              JJ.luminance = cJ
+            has: BB => "luminance" in BB,
+            get: BB => BB.luminance,
+            set: (BB, TB) => {
+              BB.luminance = TB
             }
           },
-          metadata: ZJ
-        }, WJ, gJ), (0, FJ.d)(null, null, AJ, {
+          metadata: dB
+        }, rB, IB), (0, VB.g)(null, null, JB, {
           kind: "field",
           name: "turbidity",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "turbidity" in JJ,
-            get: JJ => JJ.turbidity,
-            set: (JJ, cJ) => {
-              JJ.turbidity = cJ
+            has: BB => "turbidity" in BB,
+            get: BB => BB.turbidity,
+            set: (BB, TB) => {
+              BB.turbidity = TB
             }
           },
-          metadata: ZJ
-        }, HJ, PJ), (0, FJ.d)(null, null, jJ, {
+          metadata: dB
+        }, cB, SB), (0, VB.g)(null, null, gB, {
           kind: "field",
           name: "rayleigh",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "rayleigh" in JJ,
-            get: JJ => JJ.rayleigh,
-            set: (JJ, cJ) => {
-              JJ.rayleigh = cJ
+            has: BB => "rayleigh" in BB,
+            get: BB => BB.rayleigh,
+            set: (BB, TB) => {
+              BB.rayleigh = TB
             }
           },
-          metadata: ZJ
-        }, kJ, pJ), (0, FJ.d)(null, null, DJ, {
+          metadata: dB
+        }, PB, QB), (0, VB.g)(null, null, LB, {
           kind: "field",
           name: "mieCoefficient",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "mieCoefficient" in JJ,
-            get: JJ => JJ.mieCoefficient,
-            set: (JJ, cJ) => {
-              JJ.mieCoefficient = cJ
+            has: BB => "mieCoefficient" in BB,
+            get: BB => BB.mieCoefficient,
+            set: (BB, TB) => {
+              BB.mieCoefficient = TB
             }
           },
-          metadata: ZJ
-        }, dJ, zJ), (0, FJ.d)(null, null, vJ, {
+          metadata: dB
+        }, RB, aB), (0, VB.g)(null, null, mB, {
           kind: "field",
           name: "mieDirectionalG",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "mieDirectionalG" in JJ,
-            get: JJ => JJ.mieDirectionalG,
-            set: (JJ, cJ) => {
-              JJ.mieDirectionalG = cJ
+            has: BB => "mieDirectionalG" in BB,
+            get: BB => BB.mieDirectionalG,
+            set: (BB, TB) => {
+              BB.mieDirectionalG = TB
             }
           },
-          metadata: ZJ
-        }, NJ, OJ), (0, FJ.d)(null, null, mJ, {
+          metadata: dB
+        }, ZB, XB), (0, VB.g)(null, null, iB, {
           kind: "field",
           name: "distance",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "distance" in JJ,
-            get: JJ => JJ.distance,
-            set: (JJ, cJ) => {
-              JJ.distance = cJ
+            has: BB => "distance" in BB,
+            get: BB => BB.distance,
+            set: (BB, TB) => {
+              BB.distance = TB
             }
           },
-          metadata: ZJ
-        }, TJ, CJ), (0, FJ.d)(null, null, QJ, {
+          metadata: dB
+        }, WB, hB), (0, VB.g)(null, null, NB, {
           kind: "field",
           name: "inclination",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "inclination" in JJ,
-            get: JJ => JJ.inclination,
-            set: (JJ, cJ) => {
-              JJ.inclination = cJ
+            has: BB => "inclination" in BB,
+            get: BB => BB.inclination,
+            set: (BB, TB) => {
+              BB.inclination = TB
             }
           },
-          metadata: ZJ
-        }, uJ, iJ), (0, FJ.d)(null, null, EJ, {
+          metadata: dB
+        }, CB, GB), (0, VB.g)(null, null, tB, {
           kind: "field",
           name: "azimuth",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "azimuth" in JJ,
-            get: JJ => JJ.azimuth,
-            set: (JJ, cJ) => {
-              JJ.azimuth = cJ
+            has: BB => "azimuth" in BB,
+            get: BB => BB.azimuth,
+            set: (BB, TB) => {
+              BB.azimuth = TB
             }
           },
-          metadata: ZJ
-        }, RJ, LJ), (0, FJ.d)(null, null, VJ, {
+          metadata: dB
+        }, qB, xB), (0, VB.g)(null, null, fB, {
           kind: "field",
           name: "sunPosition",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "sunPosition" in JJ,
-            get: JJ => JJ.sunPosition,
-            set: (JJ, cJ) => {
-              JJ.sunPosition = cJ
+            has: BB => "sunPosition" in BB,
+            get: BB => BB.sunPosition,
+            set: (BB, TB) => {
+              BB.sunPosition = TB
             }
           },
-          metadata: ZJ
-        }, aJ, BJ), (0, FJ.d)(null, null, KJ, {
+          metadata: dB
+        }, jB, AB), (0, VB.g)(null, null, sB, {
           kind: "field",
           name: "useSunPosition",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "useSunPosition" in JJ,
-            get: JJ => JJ.useSunPosition,
-            set: (JJ, cJ) => {
-              JJ.useSunPosition = cJ
+            has: BB => "useSunPosition" in BB,
+            get: BB => BB.useSunPosition,
+            set: (BB, TB) => {
+              BB.useSunPosition = TB
             }
           },
-          metadata: ZJ
-        }, tJ, oJ), (0, FJ.d)(null, null, yJ, {
+          metadata: dB
+        }, bB, nB), (0, VB.g)(null, null, MB, {
           kind: "field",
           name: "cameraOffset",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "cameraOffset" in JJ,
-            get: JJ => JJ.cameraOffset,
-            set: (JJ, cJ) => {
-              JJ.cameraOffset = cJ
+            has: BB => "cameraOffset" in BB,
+            get: BB => BB.cameraOffset,
+            set: (BB, TB) => {
+              BB.cameraOffset = TB
             }
           },
-          metadata: ZJ
-        }, lJ, Jc), (0, FJ.d)(null, null, SJ, {
+          metadata: dB
+        }, eB, BT), (0, VB.g)(null, null, zB, {
           kind: "field",
           name: "up",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "up" in JJ,
-            get: JJ => JJ.up,
-            set: (JJ, cJ) => {
-              JJ.up = cJ
+            has: BB => "up" in BB,
+            get: BB => BB.up,
+            set: (BB, TB) => {
+              BB.up = TB
             }
           },
-          metadata: ZJ
-        }, cc, Zc), (0, FJ.d)(null, null, IJ, {
+          metadata: dB
+        }, TT, dT), (0, VB.g)(null, null, wB, {
           kind: "field",
           name: "dithering",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "dithering" in JJ,
-            get: JJ => JJ.dithering,
-            set: (JJ, cJ) => {
-              JJ.dithering = cJ
+            has: BB => "dithering" in BB,
+            get: BB => BB.dithering,
+            set: (BB, TB) => {
+              BB.dithering = TB
             }
           },
-          metadata: ZJ
-        }, Fc, Uc), (0, FJ.d)(null, null, MJ, {
+          metadata: dB
+        }, VT, yT), (0, VB.g)(null, null, UB, {
           kind: "field",
           name: "rawHdrOutput",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "rawHdrOutput" in JJ,
-            get: JJ => JJ.rawHdrOutput,
-            set: (JJ, cJ) => {
-              JJ.rawHdrOutput = cJ
+            has: BB => "rawHdrOutput" in BB,
+            get: BB => BB.rawHdrOutput,
+            set: (BB, TB) => {
+              BB.rawHdrOutput = TB
             }
           },
-          metadata: ZJ
-        }, ec, Xc), (0, FJ.d)(null, null, bJ, {
+          metadata: dB
+        }, pT, lT), (0, VB.g)(null, null, FB, {
           kind: "field",
           name: "cloudiness",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "cloudiness" in JJ,
-            get: JJ => JJ.cloudiness,
-            set: (JJ, cJ) => {
-              JJ.cloudiness = cJ
+            has: BB => "cloudiness" in BB,
+            get: BB => BB.cloudiness,
+            set: (BB, TB) => {
+              BB.cloudiness = TB
             }
           },
-          metadata: ZJ
-        }, Ac, qc), ZJ && Object.defineProperty(JJ, Symbol.metadata, {
+          metadata: dB
+        }, JT, YT), dB && Object.defineProperty(BB, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: ZJ
+          value: dB
         })
-      })(), JJ._ShaderLoader = new sJ.b((() => [ZJ.e(310).then((() => ZJ(59452))), ZJ.e(303).then((() => ZJ(59456)))]), (() => [ZJ.e(327).then((() => ZJ(59463))), ZJ.e(321).then((() => ZJ(59470)))])), JJ
+      })(), BB._ShaderLoader = new OB.b((() => [dB.e(310).then((() => dB(59775))), dB.e(303).then((() => dB(59779)))]), (() => [dB.e(327).then((() => dB(59786))), dB.e(321).then((() => dB(59790)))])), BB
     })();
-    (0, DJ.f)("BABYLON.SkyMaterial", vJ)
+    (0, LB.g)("BABYLON.SkyMaterial", mB)
   }
 };
 Object.freeze(modules);
-for (const JJ in modules) Object.freeze(modules[JJ]);
+for (const BB in modules) Object.freeze(modules[BB]);

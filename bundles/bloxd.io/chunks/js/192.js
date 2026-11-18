@@ -1,22 +1,22 @@
 export const id = 192;
 export const ids = [192];
 export const modules = {
-  35414: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      reportCappedWasmFailure: () => XJ,
-      reportWasmFailure: () => eJ
+  35319: (BB, TB, dB) => {
+    dB.d(TB, {
+      reportCappedWasmFailure: () => lB,
+      reportWasmFailure: () => pB
     });
-    var FJ = ZJ(2710);
-    const UJ = FJ.d - 4;
+    var VB = dB(2702);
+    const yB = VB.e - 4;
 
-    function eJ(JJ, cJ, ZJ) {
-      (0, FJ.h)(JJ, cJ, ZJ, !1)
+    function pB(BB, TB, dB) {
+      (0, VB.i)(BB, TB, dB, !1)
     }
 
-    function XJ(JJ, cJ, ZJ) {
-      (0, FJ.h)(JJ, cJ, ZJ, !1, UJ)
+    function lB(BB, TB, dB) {
+      (0, VB.i)(BB, TB, dB, !1, yB)
     }
   }
 };
 Object.freeze(modules);
-for (const JJ in modules) Object.freeze(modules[JJ]);
+for (const BB in modules) Object.freeze(modules[BB]);

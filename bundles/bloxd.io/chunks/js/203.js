@@ -1,203 +1,203 @@
 export const id = 203;
 export const ids = [203];
 export const modules = {
-  40259: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      e: () => eJ
+  40263: (BB, TB, dB) => {
+    dB.d(TB, {
+      c: () => pB
     });
-    var FJ = ZJ(47),
-      UJ = ZJ(2383);
+    var VB = dB(62),
+      yB = dB(2368);
 
-    function eJ(JJ, cJ, ZJ) {
-      const eJ = (0, FJ.useRef)(null),
+    function pB(BB, TB, dB) {
+      const pB = (0, VB.useRef)(null),
         {
-          width: XJ,
-          height: AJ
-        } = (0, UJ.d)(JJ);
-      (0, FJ.useEffect)((() => {
-        const ZJ = cJ(JJ.current);
-        return eJ.current = ZJ, () => {
-          ZJ.close(), eJ.current = null
+          width: lB,
+          height: JB
+        } = (0, yB.b)(BB);
+      (0, VB.useEffect)((() => {
+        const dB = TB(BB.current);
+        return pB.current = dB, () => {
+          dB.close(), pB.current = null
         }
-      }), [JJ, cJ]), (0, FJ.useEffect)((() => {
-        XJ <= 0 || AJ <= 0 || eJ.current.resize(XJ, AJ)
-      }), [XJ, AJ]), (0, FJ.useEffect)((() => {
-        eJ.current.show(ZJ)
-      }), [ZJ])
+      }), [BB, TB]), (0, VB.useEffect)((() => {
+        lB <= 0 || JB <= 0 || pB.current.resize(lB, JB)
+      }), [lB, JB]), (0, VB.useEffect)((() => {
+        pB.current.show(dB)
+      }), [dB])
     }
   },
-  40265: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      c: () => DJ,
-      d: () => hJ,
-      g: () => qJ
+  40266: (BB, TB, dB) => {
+    dB.d(TB, {
+      c: () => LB,
+      d: () => kB,
+      f: () => YB
     });
-    var FJ = ZJ(36562),
-      UJ = ZJ(37623);
+    var VB = dB(36496),
+      yB = dB(37598);
 
-    function eJ(JJ, cJ) {
-      let [ZJ, FJ, UJ] = JJ;
-      return [0, .5, 1].map((JJ => ({
-        timeFraction: JJ,
+    function pB(BB, TB) {
+      let [dB, VB, yB] = BB;
+      return [0, .5, 1].map((BB => ({
+        timeFraction: BB,
         rotation: {
-          Hc: "catmull-rom-spline",
-          point: [ZJ, FJ, UJ + (.5 === JJ ? cJ : 0)]
+          Xy: "catmull-rom-spline",
+          point: [dB, VB, yB + (.5 === BB ? TB : 0)]
         }
       })))
     }
 
-    function XJ(JJ, cJ, ZJ) {
+    function lB(BB, TB, dB) {
       return {
-        Ic: 3200,
+        Sy: 3200,
         loop: !0,
-        bc: {
+        Qy: {
           Root: {
-            timeline: [0, .5, 1].map((JJ => ({
-              timeFraction: JJ,
+            timeline: [0, .5, 1].map((BB => ({
+              timeFraction: BB,
               position: {
-                Hc: "catmull-rom-spline",
-                point: [0, .5 === JJ ? .18 : 0, 0]
+                Xy: "catmull-rom-spline",
+                point: [0, .5 === BB ? .18 : 0, 0]
               }
             })))
           },
           HeadMesh: {
-            timeline: [0, .25, .75, 1].map((JJ => ({
-              timeFraction: JJ,
+            timeline: [0, .25, .75, 1].map((BB => ({
+              timeFraction: BB,
               rotation: {
-                Hc: "catmull-rom-spline",
-                point: [0, .25 === JJ ? .12 : .75 === JJ ? -.12 : 0, 0]
+                Xy: "catmull-rom-spline",
+                point: [0, .25 === BB ? .12 : .75 === BB ? -.12 : 0, 0]
               }
             })))
           },
           ArmLeftMesh: {
-            timeline: eJ(JJ, ZJ)
+            timeline: pB(BB, dB)
           },
           ArmRightMesh: {
-            timeline: eJ(cJ, -ZJ)
+            timeline: pB(TB, -dB)
           }
         }
       }
     }
-    const AJ = XJ([0, 0, 0], [0, 0, 0], .07),
-      qJ = (0, UJ.b)((0, FJ.g)(AJ), "mobIdle"),
-      jJ = XJ([-.2 * Math.PI, -.15 * Math.PI, 0], [-.1 * Math.PI, .18 * Math.PI, 0], .02),
-      YJ = XJ([-.4 * Math.PI, -.15 * Math.PI, 0], [-.3 * Math.PI, .18 * Math.PI, 0], .02),
-      hJ = (0, UJ.b)((0, FJ.g)(jJ), "gunReady"),
-      DJ = (0, UJ.b)((0, FJ.g)(YJ), "gunAimed")
+    const JB = lB([0, 0, 0], [0, 0, 0], .07),
+      YB = (0, yB.b)((0, VB.h)(JB), "mobIdle"),
+      gB = lB([-.2 * Math.PI, -.15 * Math.PI, 0], [-.1 * Math.PI, .18 * Math.PI, 0], .02),
+      oB = lB([-.4 * Math.PI, -.15 * Math.PI, 0], [-.3 * Math.PI, .18 * Math.PI, 0], .02),
+      kB = (0, yB.b)((0, VB.h)(gB), "gunReady"),
+      LB = (0, yB.b)((0, VB.h)(oB), "gunAimed")
   },
-  37623: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      b: () => UJ,
-      c: () => eJ
+  37598: (BB, TB, dB) => {
+    dB.d(TB, {
+      b: () => yB,
+      c: () => pB
     });
-    const FJ = new WeakMap;
+    const VB = new WeakMap;
 
-    function UJ(JJ, cJ) {
-      return FJ.set(JJ, cJ), JJ
+    function yB(BB, TB) {
+      return VB.set(BB, TB), BB
     }
 
-    function eJ(JJ) {
-      var cJ;
-      return null !== (cJ = FJ.get(JJ)) && void 0 !== cJ ? cJ : null
+    function pB(BB) {
+      var TB;
+      return null !== (TB = VB.get(BB)) && void 0 !== TB ? TB : null
     }
   },
-  35868: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      e: () => UJ,
-      g: () => qJ
+  35819: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => yB,
+      e: () => YB
     });
-    const FJ = {
+    const VB = {
         yaw: .61 * Math.PI,
         pitch: Math.PI / 2.05,
         radius: 30,
         target: [0, 0, 0]
       },
-      UJ = {
-        player: FJ,
+      yB = {
+        player: VB,
         store: {
-          ...FJ,
+          ...VB,
           radius: 33,
           target: [0, 3.9, 0]
         }
       };
 
-    function eJ(JJ, cJ) {
-      JJ instanceof Promise ? JJ.then(cJ).catch((JJ => {
-        console.error("Couldn't open the preview", JJ)
-      })) : cJ(JJ)
+    function pB(BB, TB) {
+      BB instanceof Promise ? BB.then(TB).catch((BB => {
+        console.error("Couldn't open the preview", BB)
+      })) : TB(BB)
     }
-    class XJ {
-      constructor(JJ) {
-        this.opened = null, this.view = null, this.size = null, this.closed = !1, eJ(JJ, (JJ => {
-          this.closed ? JJ.close() : (this.opened = JJ, null !== this.size && JJ.resize(this.size.width, this.size.height), null !== this.view && JJ.show(this.view))
+    class lB {
+      constructor(BB) {
+        this.opened = null, this.view = null, this.size = null, this.closed = !1, pB(BB, (BB => {
+          this.closed ? BB.close() : (this.opened = BB, null !== this.size && BB.resize(this.size.width, this.size.height), null !== this.view && BB.show(this.view))
         }))
       }
-      show(JJ) {
-        var cJ;
-        this.view = JJ, null === (cJ = this.opened) || void 0 === cJ || cJ.show(JJ)
+      show(BB) {
+        var TB;
+        this.view = BB, null === (TB = this.opened) || void 0 === TB || TB.show(BB)
       }
-      resize(JJ, cJ) {
-        var ZJ;
+      resize(BB, TB) {
+        var dB;
         this.size = {
-          width: JJ,
-          height: cJ
-        }, null === (ZJ = this.opened) || void 0 === ZJ || ZJ.resize(JJ, cJ)
+          width: BB,
+          height: TB
+        }, null === (dB = this.opened) || void 0 === dB || dB.resize(BB, TB)
       }
       close() {
-        var JJ;
-        this.closed = !0, null === (JJ = this.opened) || void 0 === JJ || JJ.close(), this.opened = null
+        var BB;
+        this.closed = !0, null === (BB = this.opened) || void 0 === BB || BB.close(), this.opened = null
       }
     }
-    class AJ {
-      constructor(JJ) {
-        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(JJ).then((JJ => JJ.ready)), eJ(JJ, (JJ => {
-          this.closed ? JJ.close() : (this.opened = JJ, null !== this.size && JJ.resize(this.size.width, this.size.height))
+    class JB {
+      constructor(BB) {
+        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(BB).then((BB => BB.ready)), pB(BB, (BB => {
+          this.closed ? BB.close() : (this.opened = BB, null !== this.size && BB.resize(this.size.width, this.size.height))
         }))
       }
       get dev() {
         return this.opened.dev
       }
       isReady() {
-        var JJ, cJ;
-        return null !== (JJ = null === (cJ = this.opened) || void 0 === cJ ? void 0 : cJ.isReady()) && void 0 !== JJ && JJ
+        var BB, TB;
+        return null !== (BB = null === (TB = this.opened) || void 0 === TB ? void 0 : TB.isReady()) && void 0 !== BB && BB
       }
-      setCosmetic(JJ, cJ) {
-        var ZJ;
-        null === (ZJ = this.opened) || void 0 === ZJ || ZJ.setCosmetic(JJ, cJ)
+      setCosmetic(BB, TB) {
+        var dB;
+        null === (dB = this.opened) || void 0 === dB || dB.setCosmetic(BB, TB)
       }
-      playEmote(JJ) {
-        var cJ;
-        null === (cJ = this.opened) || void 0 === cJ || cJ.playEmote(JJ)
+      playEmote(BB) {
+        var TB;
+        null === (TB = this.opened) || void 0 === TB || TB.playEmote(BB)
       }
       resetCamera() {
-        var JJ;
-        null === (JJ = this.opened) || void 0 === JJ || JJ.resetCamera()
+        var BB;
+        null === (BB = this.opened) || void 0 === BB || BB.resetCamera()
       }
-      async untilDrawn(JJ) {
-        var cJ;
-        await this.ready, await (null === (cJ = this.opened) || void 0 === cJ ? void 0 : cJ.untilDrawn(JJ))
+      async untilDrawn(BB) {
+        var TB;
+        await this.ready, await (null === (TB = this.opened) || void 0 === TB ? void 0 : TB.untilDrawn(BB))
       }
-      resize(JJ, cJ) {
-        var ZJ;
+      resize(BB, TB) {
+        var dB;
         this.size = {
-          width: JJ,
-          height: cJ
-        }, null === (ZJ = this.opened) || void 0 === ZJ || ZJ.resize(JJ, cJ)
+          width: BB,
+          height: TB
+        }, null === (dB = this.opened) || void 0 === dB || dB.resize(BB, TB)
       }
       close() {
-        var JJ;
-        this.closed = !0, null === (JJ = this.opened) || void 0 === JJ || JJ.close(), this.opened = null
+        var BB;
+        this.closed = !0, null === (BB = this.opened) || void 0 === BB || BB.close(), this.opened = null
       }
     }
-    const qJ = new class {
+    const YB = new class {
       constructor() {
         this.host = null, this.makeDefault = null
       }
-      setHost(JJ) {
-        this.host = JJ
+      setHost(BB) {
+        this.host = BB
       }
-      setDefaultHost(JJ) {
-        this.makeDefault = JJ
+      setDefaultHost(BB) {
+        this.makeDefault = BB
       }
       current() {
         if (null === this.host) {
@@ -206,424 +206,424 @@ export const modules = {
         }
         return this.host
       }
-      openMob(JJ) {
-        return new XJ(this.current().openMob(JJ))
+      openMob(BB) {
+        return new lB(this.current().openMob(BB))
       }
-      openPet(JJ) {
-        return new XJ(this.current().openPet(JJ))
+      openPet(BB) {
+        return new lB(this.current().openPet(BB))
       }
-      openMobLineup(JJ) {
-        return new XJ(this.current().openMobLineup(JJ))
+      openMobLineup(BB) {
+        return new lB(this.current().openMobLineup(BB))
       }
-      openCharacter(JJ, cJ) {
-        return new AJ(this.current().openCharacter(JJ, cJ))
+      openCharacter(BB, TB) {
+        return new JB(this.current().openCharacter(BB, TB))
       }
     }
   },
-  35860: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => FJ.g
+  35817: (BB, TB, dB) => {
+    dB.d(TB, {
+      e: () => VB.e
     });
-    var FJ = ZJ(35868);
-    class UJ {
-      constructor(JJ) {
-        this.load = JJ, this.loaded = null, this.loading = null
+    var VB = dB(35819);
+    class yB {
+      constructor(BB) {
+        this.load = BB, this.loaded = null, this.loading = null
       }
-      run(JJ) {
-        return null !== this.loaded ? JJ(this.loaded) : (this.loading ??= this.load().then((JJ => (this.loaded = JJ, JJ)), (JJ => {
-          throw this.loading = null, JJ
-        })), this.loading.then(JJ))
+      run(BB) {
+        return null !== this.loaded ? BB(this.loaded) : (this.loading ??= this.load().then((BB => (this.loaded = BB, BB)), (BB => {
+          throw this.loading = null, BB
+        })), this.loading.then(BB))
       }
     }
-    class eJ {
+    class pB {
       constructor() {
-        this.mobScene = new UJ((() => Promise.all([ZJ.e(215), ZJ.e(214), ZJ.e(234), ZJ.e(235), ZJ.e(67), ZJ.e(66), ZJ.e(232), ZJ.e(65), ZJ.e(242), ZJ.e(236), ZJ.e(241), ZJ.e(239), ZJ.e(231), ZJ.e(206), ZJ.e(271), ZJ.e(211), ZJ.e(225), ZJ.e(237), ZJ.e(240), ZJ.e(126), ZJ.e(185), ZJ.e(207), ZJ.e(222), ZJ.e(205), ZJ.e(106), ZJ.e(68), ZJ.e(272), ZJ.e(146)]).then((() => ZJ(39946))))), this.characterScene = new UJ((() => Promise.all([ZJ.e(215), ZJ.e(214), ZJ.e(234), ZJ.e(235), ZJ.e(67), ZJ.e(66), ZJ.e(232), ZJ.e(65), ZJ.e(242), ZJ.e(236), ZJ.e(241), ZJ.e(239), ZJ.e(231), ZJ.e(206), ZJ.e(271), ZJ.e(211), ZJ.e(225), ZJ.e(237), ZJ.e(240), ZJ.e(126), ZJ.e(185), ZJ.e(207), ZJ.e(222), ZJ.e(205), ZJ.e(106), ZJ.e(68), ZJ.e(272), ZJ.e(145)]).then((() => ZJ(40040)))))
+        this.mobScene = new yB((() => Promise.all([dB.e(215), dB.e(214), dB.e(234), dB.e(235), dB.e(67), dB.e(66), dB.e(232), dB.e(65), dB.e(242), dB.e(236), dB.e(241), dB.e(239), dB.e(231), dB.e(206), dB.e(271), dB.e(211), dB.e(225), dB.e(237), dB.e(240), dB.e(126), dB.e(185), dB.e(207), dB.e(222), dB.e(205), dB.e(106), dB.e(68), dB.e(272), dB.e(146)]).then((() => dB(39925))))), this.characterScene = new yB((() => Promise.all([dB.e(215), dB.e(214), dB.e(234), dB.e(235), dB.e(67), dB.e(66), dB.e(232), dB.e(65), dB.e(242), dB.e(236), dB.e(241), dB.e(239), dB.e(231), dB.e(206), dB.e(271), dB.e(211), dB.e(225), dB.e(237), dB.e(240), dB.e(126), dB.e(185), dB.e(207), dB.e(222), dB.e(205), dB.e(106), dB.e(68), dB.e(272), dB.e(145)]).then((() => dB(40024)))))
       }
-      openMob(JJ) {
-        return this.mobScene.run((cJ => cJ.openMobPreview(JJ)))
+      openMob(BB) {
+        return this.mobScene.run((TB => TB.openMobPreview(BB)))
       }
-      openPet(JJ) {
-        return this.mobScene.run((cJ => cJ.openPetPreview(JJ)))
+      openPet(BB) {
+        return this.mobScene.run((TB => TB.openPetPreview(BB)))
       }
-      openMobLineup(JJ) {
-        return this.mobScene.run((cJ => cJ.openMobLineupPreview(JJ)))
+      openMobLineup(BB) {
+        return this.mobScene.run((TB => TB.openMobLineupPreview(BB)))
       }
-      openCharacter(JJ, cJ) {
-        return this.characterScene.run((ZJ => ZJ.openCharacterPreview(JJ, cJ)))
+      openCharacter(BB, TB) {
+        return this.characterScene.run((dB => dB.openCharacterPreview(BB, TB)))
       }
     }
-    FJ.g.setDefaultHost((() => new eJ))
+    VB.e.setDefaultHost((() => new pB))
   },
-  40464: (JJ, cJ, ZJ) => {
-    ZJ.r(cJ), ZJ.d(cJ, {
-      FrontlineMvpLineup: () => hJ
+  40454: (BB, TB, dB) => {
+    dB.r(TB), dB.d(TB, {
+      FrontlineMvpLineup: () => kB
     });
-    var FJ = ZJ(47),
-      UJ = ZJ(926),
-      eJ = ZJ.n(UJ),
-      XJ = ZJ(35860),
-      AJ = ZJ(40265),
-      qJ = ZJ(40259),
-      jJ = ZJ(990);
+    var VB = dB(62),
+      yB = dB(933),
+      pB = dB.n(yB),
+      lB = dB(35817),
+      JB = dB(40266),
+      YB = dB(40263),
+      gB = dB(980);
 
-    function YJ(JJ) {
-      return XJ.d.openMobLineup(JJ)
+    function oB(BB) {
+      return lB.e.openMobLineup(BB)
     }
-    const hJ = (0, FJ.memo)((function(JJ) {
+    const kB = (0, VB.memo)((function(BB) {
       let {
-        players: cJ,
-        className: ZJ
-      } = JJ;
-      const UJ = (0, FJ.useRef)(null),
-        XJ = (0, FJ.useMemo)((() => cJ.map((JJ => {
+        players: TB,
+        className: dB
+      } = BB;
+      const yB = (0, VB.useRef)(null),
+        lB = (0, VB.useMemo)((() => TB.map((BB => {
           let {
-            cosmetics: cJ,
-            size: ZJ,
-            heldGun: FJ
-          } = JJ;
+            cosmetics: TB,
+            size: dB,
+            heldGun: VB
+          } = BB;
           return {
-            cosmetics: cJ,
-            size: ZJ,
-            cV: FJ.name,
-            animation: FJ.aimed ? AJ.c : AJ.d
+            cosmetics: TB,
+            size: dB,
+            mN: VB.name,
+            animation: VB.aimed ? JB.c : JB.d
           }
-        }))), [cJ]),
-        hJ = function(JJ) {
-          const [cJ, ZJ] = (0, FJ.useState)([]);
-          return (0, FJ.useEffect)((() => {
-            ZJ(JJ.map((() => !1)));
-            const cJ = JJ.map(((JJ, cJ) => {
+        }))), [TB]),
+        kB = function(BB) {
+          const [TB, dB] = (0, VB.useState)([]);
+          return (0, VB.useEffect)((() => {
+            dB(BB.map((() => !1)));
+            const TB = BB.map(((BB, TB) => {
               let {
-                showAfterMs: FJ
-              } = JJ;
+                showAfterMs: VB
+              } = BB;
               return window.setTimeout((() => {
-                ZJ((JJ => JJ.map(((JJ, ZJ) => JJ || ZJ === cJ))))
-              }), FJ)
+                dB((BB => BB.map(((BB, dB) => BB || dB === TB))))
+              }), VB)
             }));
             return () => {
-              for (const JJ of cJ) window.clearTimeout(JJ)
+              for (const BB of TB) window.clearTimeout(BB)
             }
-          }), [JJ]), cJ
-        }(cJ),
-        DJ = (0, FJ.useMemo)((() => ({
-          figures: XJ,
-          shown: hJ
-        })), [XJ, hJ]);
-      return (0, qJ.e)(UJ, YJ, DJ), (0, jJ.jsx)("div", {
-        className: eJ()("MobPreview", ZJ),
-        ref: UJ
+          }), [BB]), TB
+        }(TB),
+        LB = (0, VB.useMemo)((() => ({
+          figures: lB,
+          shown: kB
+        })), [lB, kB]);
+      return (0, YB.c)(yB, oB, LB), (0, gB.jsx)("div", {
+        className: pB()("MobPreview", dB),
+        ref: yB
       })
     }))
   },
-  36562: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => AJ,
-      g: () => XJ
+  36496: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => JB,
+      h: () => lB
     });
-    var FJ = ZJ(36555),
-      UJ = ZJ(235),
-      eJ = ZJ(1671);
+    var VB = dB(36491),
+      yB = dB(279),
+      pB = dB(1652);
 
-    function XJ(JJ) {
-      if ("Ic" in JJ) return EJ.createAnimationScript(JJ);
-      return new jJ(JJ).createAnimationScript()
+    function lB(BB) {
+      if ("Sy" in BB) return tB.createAnimationScript(BB);
+      return new gB(BB).createAnimationScript()
     }
 
-    function AJ(JJ, cJ, ZJ, UJ) {
-      const eJ = JJ.Ic <= 0 ? 1 : cJ + ZJ * Math.max(0, UJ) / JJ.Ic;
-      return JJ.Mc === FJ.n.LoopOnLastFrame ? eJ % 1 : JJ.Mc === FJ.n.NoLoop && eJ >= 1 ? null : Math.min(1, eJ)
+    function JB(BB, TB, dB, yB) {
+      const pB = BB.Sy <= 0 ? 1 : TB + dB * Math.max(0, yB) / BB.Sy;
+      return BB.Py === VB.n.LoopOnLastFrame ? pB % 1 : BB.Py === VB.n.NoLoop && pB >= 1 ? null : Math.min(1, pB)
     }
-    class qJ {
-      createAnimationScript(JJ) {
+    class YB {
+      createAnimationScript(BB) {
         const {
-          Ic: cJ,
-          loop: ZJ,
-          bc: FJ
-        } = JJ;
+          Sy: TB,
+          loop: dB,
+          Qy: VB
+        } = BB;
         return {
-          Ic: Math.round(cJ),
-          Mc: this.createLoopMode(null !== ZJ && void 0 !== ZJ && ZJ),
-          bc: this.createNodeSkeletonAnimationScript(null !== FJ && void 0 !== FJ ? FJ : null)
+          Sy: Math.round(TB),
+          Py: this.createLoopMode(null !== dB && void 0 !== dB && dB),
+          Qy: this.createNodeSkeletonAnimationScript(null !== VB && void 0 !== VB ? VB : null)
         }
       }
-      createLoopMode(JJ) {
-        switch (JJ) {
+      createLoopMode(BB) {
+        switch (BB) {
           case !1:
-            return FJ.n.NoLoop;
+            return VB.n.NoLoop;
           case !0:
-            return FJ.n.LoopOnLastFrame;
+            return VB.n.LoopOnLastFrame;
           case "hold-on-last-frame":
-            return FJ.n.HoldOnLastFrame
+            return VB.n.HoldOnLastFrame
         }
-        throw new Error(`Invalid loop mode schema: ${JJ}`)
+        throw new Error(`Invalid loop mode schema: ${BB}`)
       }
-      createNodeSkeletonAnimationScript(JJ) {
-        if (null === JJ) return null;
-        const cJ = {};
-        for (const ZJ in JJ) {
-          const FJ = JJ[ZJ];
-          cJ[ZJ] = this.createNodeAnimationScript(FJ)
+      createNodeSkeletonAnimationScript(BB) {
+        if (null === BB) return null;
+        const TB = {};
+        for (const dB in BB) {
+          const VB = BB[dB];
+          TB[dB] = this.createNodeAnimationScript(VB)
         }
-        return cJ
+        return TB
       }
-      createNodeAnimationScript(JJ) {
+      createNodeAnimationScript(BB) {
         const {
-          timeline: cJ
-        } = JJ, ZJ = cJ.filter((JJ => Number.isFinite(JJ.timeFraction)));
-        return ZJ.sort(((JJ, cJ) => JJ.timeFraction - cJ.timeFraction)), {
-          rotation: this.createTimelineFromKeyframes(ZJ, "rotation", DJ),
-          position: this.createTimelineFromKeyframes(ZJ, "position", nJ)
+          timeline: TB
+        } = BB, dB = TB.filter((BB => Number.isFinite(BB.timeFraction)));
+        return dB.sort(((BB, TB) => BB.timeFraction - TB.timeFraction)), {
+          rotation: this.createTimelineFromKeyframes(dB, "rotation", LB),
+          position: this.createTimelineFromKeyframes(dB, "position", DB)
         }
       }
-      createTimelineFromKeyframes(JJ, cJ, ZJ) {
-        const FJ = [];
-        for (const qJ of JJ) {
-          const JJ = qJ[cJ];
-          if (JJ) {
-            const cJ = this.createAnimationFrameWithoutPrecomputes(qJ.timeFraction, JJ);
-            YJ(cJ) && FJ.push(cJ)
+      createTimelineFromKeyframes(BB, TB, dB) {
+        const VB = [];
+        for (const YB of BB) {
+          const BB = YB[TB];
+          if (BB) {
+            const TB = this.createAnimationFrameWithoutPrecomputes(YB.timeFraction, BB);
+            oB(TB) && VB.push(TB)
           }
         }
-        const UJ = [];
-        for (let qJ = 0; qJ < FJ.length; qJ++) {
-          var eJ, XJ, AJ;
-          const JJ = FJ[qJ],
-            cJ = null !== (eJ = FJ[qJ - 1]) && void 0 !== eJ ? eJ : JJ,
-            jJ = null !== (XJ = FJ[qJ + 1]) && void 0 !== XJ ? XJ : JJ,
-            YJ = null !== (AJ = FJ[qJ + 2]) && void 0 !== AJ ? AJ : jJ;
-          UJ.push({
-            ...JJ,
-            ...ZJ(cJ.post, cJ.timeFraction, JJ.post, JJ.timeFraction, jJ.pre, jJ.timeFraction, YJ.pre, YJ.timeFraction)
+        const yB = [];
+        for (let YB = 0; YB < VB.length; YB++) {
+          var pB, lB, JB;
+          const BB = VB[YB],
+            TB = null !== (pB = VB[YB - 1]) && void 0 !== pB ? pB : BB,
+            gB = null !== (lB = VB[YB + 1]) && void 0 !== lB ? lB : BB,
+            oB = null !== (JB = VB[YB + 2]) && void 0 !== JB ? JB : gB;
+          yB.push({
+            ...BB,
+            ...dB(TB.post, TB.timeFraction, BB.post, BB.timeFraction, gB.pre, gB.timeFraction, oB.pre, oB.timeFraction)
           })
         }
-        return UJ
+        return yB
       }
-      createAnimationFrameWithoutPrecomputes(JJ, cJ) {
-        let ZJ, FJ, UJ = null;
-        var eJ;
-        if ("object" === typeof cJ && "point" in cJ) UJ = null !== (eJ = cJ.Hc) && void 0 !== eJ ? eJ : null, ZJ = cJ.point, FJ = cJ.point;
-        else if ("object" === typeof cJ && "pre" in cJ) {
-          var XJ;
-          UJ = null !== (XJ = cJ.Hc) && void 0 !== XJ ? XJ : null, ZJ = cJ.pre, FJ = cJ.post
-        } else ZJ = cJ, FJ = cJ;
+      createAnimationFrameWithoutPrecomputes(BB, TB) {
+        let dB, VB, yB = null;
+        var pB;
+        if ("object" === typeof TB && "point" in TB) yB = null !== (pB = TB.Xy) && void 0 !== pB ? pB : null, dB = TB.point, VB = TB.point;
+        else if ("object" === typeof TB && "pre" in TB) {
+          var lB;
+          yB = null !== (lB = TB.Xy) && void 0 !== lB ? lB : null, dB = TB.pre, VB = TB.post
+        } else dB = TB, VB = TB;
         return {
-          timeFraction: JJ,
-          Hc: this.createLerpMode(UJ),
-          pre: ZJ,
-          post: FJ
+          timeFraction: BB,
+          Xy: this.createLerpMode(yB),
+          pre: dB,
+          post: VB
         }
       }
-      createLerpMode(JJ) {
-        return null === JJ ? FJ.j.Linear : qJ.LERP_MODE_SCHEMA_MAPPING[JJ]
+      createLerpMode(BB) {
+        return null === BB ? VB.j.Linear : YB.LERP_MODE_SCHEMA_MAPPING[BB]
       }
     }
-    qJ.LERP_MODE_SCHEMA_MAPPING = {
-      linear: FJ.j.Linear,
-      "catmull-rom-spline": FJ.j.CatmullRomSpline
+    YB.LERP_MODE_SCHEMA_MAPPING = {
+      linear: VB.j.Linear,
+      "catmull-rom-spline": VB.j.CatmullRomSpline
     };
-    class jJ {
-      constructor(JJ) {
-        this.animationSchema = JJ
+    class gB {
+      constructor(BB) {
+        this.animationSchema = BB
       }
       createAnimationScript() {
         const {
-          animation_length: JJ,
-          loop: cJ,
-          bones: ZJ
+          animation_length: BB,
+          loop: TB,
+          bones: dB
         } = this.animationSchema;
         return {
-          Ic: Math.round(1e3 * JJ),
-          Mc: this.createLoopMode(null !== cJ && void 0 !== cJ && cJ),
-          bc: this.createNodeSkeletonAnimationScript(null !== ZJ && void 0 !== ZJ ? ZJ : null)
+          Sy: Math.round(1e3 * BB),
+          Py: this.createLoopMode(null !== TB && void 0 !== TB && TB),
+          Qy: this.createNodeSkeletonAnimationScript(null !== dB && void 0 !== dB ? dB : null)
         }
       }
-      createLoopMode(JJ) {
-        switch (JJ) {
+      createLoopMode(BB) {
+        switch (BB) {
           case !1:
-            return FJ.n.NoLoop;
+            return VB.n.NoLoop;
           case !0:
-            return FJ.n.LoopOnLastFrame;
+            return VB.n.LoopOnLastFrame;
           case "hold_on_last_frame":
-            return FJ.n.HoldOnLastFrame
+            return VB.n.HoldOnLastFrame
         }
-        throw new Error(`Invalid Blockbench loop mode schema: ${JJ}`)
+        throw new Error(`Invalid Blockbench loop mode schema: ${BB}`)
       }
-      createNodeSkeletonAnimationScript(JJ) {
-        if (null === JJ) return null;
-        const cJ = {};
-        for (const ZJ in JJ) {
-          const FJ = JJ[ZJ];
-          cJ[ZJ] = this.createNodeAnimationScript(FJ)
+      createNodeSkeletonAnimationScript(BB) {
+        if (null === BB) return null;
+        const TB = {};
+        for (const dB in BB) {
+          const VB = BB[dB];
+          TB[dB] = this.createNodeAnimationScript(VB)
         }
-        return cJ
+        return TB
       }
-      createNodeAnimationScript(JJ) {
+      createNodeAnimationScript(BB) {
         const {
-          rotation: cJ,
-          position: ZJ
-        } = JJ;
+          rotation: TB,
+          position: dB
+        } = BB;
         return {
-          rotation: this.createAnimationTimeline(null !== cJ && void 0 !== cJ ? cJ : null, fJ, DJ, !0),
-          position: this.createAnimationTimeline(null !== ZJ && void 0 !== ZJ ? ZJ : null, rJ, nJ, !1)
+          rotation: this.createAnimationTimeline(null !== TB && void 0 !== TB ? TB : null, HB, LB, !0),
+          position: this.createAnimationTimeline(null !== dB && void 0 !== dB ? dB : null, vB, DB, !1)
         }
       }
-      createAnimationTimeline(JJ, cJ, ZJ, FJ) {
-        if (null === JJ) return [];
-        if (Array.isArray(JJ)) {
-          JJ = {
-            "0.0": JJ
+      createAnimationTimeline(BB, TB, dB, VB) {
+        if (null === BB) return [];
+        if (Array.isArray(BB)) {
+          BB = {
+            "0.0": BB
           }
         }
-        const UJ = Object.entries(JJ).map((JJ => {
-          let [ZJ, FJ] = JJ;
-          const UJ = Number(ZJ) / this.animationSchema.animation_length;
-          return this.createAnimationFrameWithoutPrecomputes(UJ, FJ, cJ)
-        })).filter(YJ);
-        UJ.sort(((JJ, cJ) => JJ.timeFraction - cJ.timeFraction)), FJ && function(JJ) {
-          for (let cJ = 1; cJ < JJ.length; cJ++) {
-            const ZJ = JJ[cJ - 1].post,
-              FJ = JJ[cJ],
-              UJ = vJ(FJ.pre),
-              eJ = vJ(FJ.post),
-              XJ = QJ(ZJ, FJ.pre);
-            QJ(ZJ, UJ) < XJ && (JJ[cJ] = {
-              ...FJ,
-              pre: UJ,
-              post: eJ
+        const yB = Object.entries(BB).map((BB => {
+          let [dB, VB] = BB;
+          const yB = Number(dB) / this.animationSchema.animation_length;
+          return this.createAnimationFrameWithoutPrecomputes(yB, VB, TB)
+        })).filter(oB);
+        yB.sort(((BB, TB) => BB.timeFraction - TB.timeFraction)), VB && function(BB) {
+          for (let TB = 1; TB < BB.length; TB++) {
+            const dB = BB[TB - 1].post,
+              VB = BB[TB],
+              yB = mB(VB.pre),
+              pB = mB(VB.post),
+              lB = NB(dB, VB.pre);
+            NB(dB, yB) < lB && (BB[TB] = {
+              ...VB,
+              pre: yB,
+              post: pB
             })
           }
-        }(UJ);
-        const eJ = [];
-        for (let jJ = 0; jJ < UJ.length; jJ++) {
-          var XJ, AJ, qJ;
-          const JJ = UJ[jJ],
-            cJ = null !== (XJ = UJ[jJ - 1]) && void 0 !== XJ ? XJ : JJ,
-            FJ = null !== (AJ = UJ[jJ + 1]) && void 0 !== AJ ? AJ : JJ,
-            YJ = null !== (qJ = UJ[jJ + 2]) && void 0 !== qJ ? qJ : FJ;
-          eJ.push({
-            ...JJ,
-            ...ZJ(cJ.post, cJ.timeFraction, JJ.post, JJ.timeFraction, FJ.pre, FJ.timeFraction, YJ.pre, YJ.timeFraction)
+        }(yB);
+        const pB = [];
+        for (let gB = 0; gB < yB.length; gB++) {
+          var lB, JB, YB;
+          const BB = yB[gB],
+            TB = null !== (lB = yB[gB - 1]) && void 0 !== lB ? lB : BB,
+            VB = null !== (JB = yB[gB + 1]) && void 0 !== JB ? JB : BB,
+            oB = null !== (YB = yB[gB + 2]) && void 0 !== YB ? YB : VB;
+          pB.push({
+            ...BB,
+            ...dB(TB.post, TB.timeFraction, BB.post, BB.timeFraction, VB.pre, VB.timeFraction, oB.pre, oB.timeFraction)
           })
         }
-        return eJ
+        return pB
       }
-      createAnimationFrameWithoutPrecomputes(JJ, cJ, ZJ) {
-        let FJ, UJ, eJ = null;
-        if ("object" === typeof cJ && "post" in cJ) {
-          var XJ;
-          eJ = null !== (XJ = cJ.lerp_mode) && void 0 !== XJ ? XJ : null, UJ = GJ(cJ.post, ZJ), FJ = cJ.pre ? GJ(cJ.pre, ZJ) : UJ
+      createAnimationFrameWithoutPrecomputes(BB, TB, dB) {
+        let VB, yB, pB = null;
+        if ("object" === typeof TB && "post" in TB) {
+          var lB;
+          pB = null !== (lB = TB.lerp_mode) && void 0 !== lB ? lB : null, yB = uB(TB.post, dB), VB = TB.pre ? uB(TB.pre, dB) : yB
         } else {
-          const JJ = GJ(cJ, ZJ);
-          UJ = JJ, FJ = JJ
+          const BB = uB(TB, dB);
+          yB = BB, VB = BB
         }
         return {
-          timeFraction: JJ,
-          Hc: this.createLerpMode(eJ),
-          pre: FJ,
-          post: UJ
+          timeFraction: BB,
+          Xy: this.createLerpMode(pB),
+          pre: VB,
+          post: yB
         }
       }
-      createLerpMode(JJ) {
-        return null === JJ ? FJ.j.Linear : jJ.LERP_MODE_SCHEMA_MAPPING[JJ]
+      createLerpMode(BB) {
+        return null === BB ? VB.j.Linear : gB.LERP_MODE_SCHEMA_MAPPING[BB]
       }
     }
 
-    function YJ(JJ) {
-      return Number.isFinite(JJ.timeFraction) && hJ(JJ.pre) && hJ(JJ.post)
+    function oB(BB) {
+      return Number.isFinite(BB.timeFraction) && kB(BB.pre) && kB(BB.post)
     }
 
-    function hJ(JJ) {
-      return Number.isFinite(JJ[0]) && Number.isFinite(JJ[1]) && Number.isFinite(JJ[2])
+    function kB(BB) {
+      return Number.isFinite(BB[0]) && Number.isFinite(BB[1]) && Number.isFinite(BB[2])
     }
 
-    function DJ(JJ, cJ, ZJ, FJ, UJ, eJ, XJ, AJ) {
-      const qJ = eJ - cJ,
-        jJ = eJ - FJ,
-        YJ = AJ - FJ,
-        hJ = [null, null, null];
-      for (let DJ = 0; DJ < hJ.length; DJ++) hJ[DJ] = sJ(JJ[DJ], ZJ[DJ], UJ[DJ], XJ[DJ], qJ, YJ);
+    function LB(BB, TB, dB, VB, yB, pB, lB, JB) {
+      const YB = pB - TB,
+        gB = pB - VB,
+        oB = JB - VB,
+        kB = [null, null, null];
+      for (let LB = 0; LB < kB.length; LB++) kB[LB] = OB(BB[LB], dB[LB], yB[LB], lB[LB], YB, oB);
       return {
-        Pc: jJ,
-        kc: hJ
+        Wy: gB,
+        hy: kB
       }
     }
 
-    function sJ(JJ, cJ, ZJ, FJ, eJ, XJ) {
+    function OB(BB, TB, dB, VB, pB, lB) {
       return {
-        zc: UJ.c.computeShortestRotation(JJ, ZJ) / eJ,
-        Nc: UJ.c.computeShortestRotation(cJ, FJ) / XJ,
-        delta: UJ.c.computeShortestRotation(cJ, ZJ)
+        Gy: yB.e.computeShortestRotation(BB, dB) / pB,
+        qy: yB.e.computeShortestRotation(TB, VB) / lB,
+        delta: yB.e.computeShortestRotation(TB, dB)
       }
     }
 
-    function nJ(JJ, cJ, ZJ, FJ, UJ, eJ, XJ, AJ) {
-      const qJ = eJ - cJ,
-        jJ = eJ - FJ,
-        YJ = AJ - FJ,
-        hJ = [null, null, null];
-      for (let DJ = 0; DJ < hJ.length; DJ++) hJ[DJ] = {
-        zc: (UJ[DJ] - JJ[DJ]) / qJ,
-        Nc: (XJ[DJ] - ZJ[DJ]) / YJ,
-        delta: UJ[DJ] - ZJ[DJ]
+    function DB(BB, TB, dB, VB, yB, pB, lB, JB) {
+      const YB = pB - TB,
+        gB = pB - VB,
+        oB = JB - VB,
+        kB = [null, null, null];
+      for (let LB = 0; LB < kB.length; LB++) kB[LB] = {
+        Gy: (yB[LB] - BB[LB]) / YB,
+        qy: (lB[LB] - dB[LB]) / oB,
+        delta: yB[LB] - dB[LB]
       };
       return {
-        Pc: jJ,
-        kc: hJ
+        Wy: gB,
+        hy: kB
       }
     }
 
-    function GJ(JJ, cJ) {
-      return null === cJ ? JJ : cJ(JJ)
+    function uB(BB, TB) {
+      return null === TB ? BB : TB(BB)
     }
 
-    function fJ(JJ) {
-      const [cJ, ZJ, FJ] = JJ, XJ = -(0, eJ.k)(cJ), AJ = -(0, eJ.k)(ZJ), qJ = (0, eJ.k)(FJ), jJ = UJ.c.quaternionFromEulerZYX(XJ, AJ, qJ);
-      return UJ.c.eulerYXZFromQuaternion(jJ)
+    function HB(BB) {
+      const [TB, dB, VB] = BB, lB = -(0, pB.j)(TB), JB = -(0, pB.j)(dB), YB = (0, pB.j)(VB), gB = yB.e.quaternionFromEulerZYX(lB, JB, YB);
+      return yB.e.eulerYXZFromQuaternion(gB)
     }
-    jJ.LERP_MODE_SCHEMA_MAPPING = {
-      linear: FJ.j.Linear,
-      catmullrom: FJ.j.CatmullRomSpline
+    gB.LERP_MODE_SCHEMA_MAPPING = {
+      linear: VB.j.Linear,
+      catmullrom: VB.j.CatmullRomSpline
     };
-    const xJ = 1 / 16;
+    const EB = 1 / 16;
 
-    function rJ(JJ) {
-      return [-JJ[0] * xJ, JJ[1] * xJ, JJ[2] * xJ]
+    function vB(BB) {
+      return [-BB[0] * EB, BB[1] * EB, BB[2] * EB]
     }
 
-    function vJ(JJ) {
-      const [cJ, ZJ, FJ] = JJ;
-      return [cJ >= 0 ? Math.PI - cJ : -Math.PI - cJ, mJ(ZJ + Math.PI), mJ(FJ + Math.PI)]
+    function mB(BB) {
+      const [TB, dB, VB] = BB;
+      return [TB >= 0 ? Math.PI - TB : -Math.PI - TB, iB(dB + Math.PI), iB(VB + Math.PI)]
     }
 
-    function mJ(JJ) {
-      return UJ.c.mod(JJ + Math.PI, 2 * Math.PI) - Math.PI
+    function iB(BB) {
+      return yB.e.mod(BB + Math.PI, 2 * Math.PI) - Math.PI
     }
 
-    function QJ(JJ, cJ) {
-      return Math.abs(UJ.c.computeShortestRotation(JJ[0], cJ[0])) + Math.abs(UJ.c.computeShortestRotation(JJ[1], cJ[1])) + Math.abs(UJ.c.computeShortestRotation(JJ[2], cJ[2]))
+    function NB(BB, TB) {
+      return Math.abs(yB.e.computeShortestRotation(BB[0], TB[0])) + Math.abs(yB.e.computeShortestRotation(BB[1], TB[1])) + Math.abs(yB.e.computeShortestRotation(BB[2], TB[2]))
     }
-    const EJ = new qJ
+    const tB = new YB
   },
-  36555: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => XJ,
-      f: () => eJ,
-      j: () => FJ,
-      n: () => UJ
+  36491: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => lB,
+      f: () => pB,
+      j: () => VB,
+      n: () => yB
     });
-    let FJ = function(JJ) {
-        return JJ[JJ.Linear = 0] = "Linear", JJ[JJ.CatmullRomSpline = 1] = "CatmullRomSpline", JJ
+    let VB = function(BB) {
+        return BB[BB.Linear = 0] = "Linear", BB[BB.CatmullRomSpline = 1] = "CatmullRomSpline", BB
       }({}),
-      UJ = function(JJ) {
-        return JJ[JJ.NoLoop = 0] = "NoLoop", JJ[JJ.LoopOnLastFrame = 1] = "LoopOnLastFrame", JJ[JJ.HoldOnLastFrame = 2] = "HoldOnLastFrame", JJ
+      yB = function(BB) {
+        return BB[BB.NoLoop = 0] = "NoLoop", BB[BB.LoopOnLastFrame = 1] = "LoopOnLastFrame", BB[BB.HoldOnLastFrame = 2] = "HoldOnLastFrame", BB
       }({}),
-      eJ = function(JJ) {
-        return JJ[JJ.Movement = 0] = "Movement", JJ[JJ.Action = 1] = "Action", JJ[JJ.Emote = 2] = "Emote", JJ[JJ.Custom = 3] = "Custom", JJ
+      pB = function(BB) {
+        return BB[BB.Movement = 0] = "Movement", BB[BB.Action = 1] = "Action", BB[BB.Emote = 2] = "Emote", BB[BB.Custom = 3] = "Custom", BB
       }({}),
-      XJ = function(JJ) {
-        return JJ[JJ.Start = 0] = "Start", JJ[JJ.Stop = 1] = "Stop", JJ
+      lB = function(BB) {
+        return BB[BB.Start = 0] = "Start", BB[BB.Stop = 1] = "Stop", BB
       }({})
   }
 };
 Object.freeze(modules);
-for (const JJ in modules) Object.freeze(modules[JJ]);
+for (const BB in modules) Object.freeze(modules[BB]);

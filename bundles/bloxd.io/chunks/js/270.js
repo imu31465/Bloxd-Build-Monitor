@@ -1,124 +1,124 @@
 export const id = 270;
 export const ids = [270];
 export const modules = {
-  39938: (JJ, cJ, ZJ) => {
-    ZJ.r(cJ), ZJ.d(cJ, {
-      CharacterPreview: () => YJ
+  39911: (BB, TB, dB) => {
+    dB.r(TB), dB.d(TB, {
+      CharacterPreview: () => oB
     });
-    var FJ = ZJ(47),
-      UJ = ZJ(2383),
-      eJ = ZJ(1137),
-      XJ = ZJ(8114),
-      AJ = ZJ(35860),
-      qJ = ZJ(3111),
-      jJ = ZJ(990);
-    const YJ = (0, FJ.memo)((0, FJ.forwardRef)((function(JJ, cJ) {
+    var VB = dB(62),
+      yB = dB(2368),
+      pB = dB(1117),
+      lB = dB(8155),
+      JB = dB(35817),
+      YB = dB(3121),
+      gB = dB(980);
+    const oB = (0, VB.memo)((0, VB.forwardRef)((function(BB, TB) {
       let {
-        onReady: ZJ,
-        onDrawn: YJ,
-        owner: hJ = "other",
-        framing: DJ = "player",
-        forcedCosmetics: sJ,
-        sj: nJ,
-        emotePlaySeq: GJ
-      } = JJ;
-      const fJ = (0, FJ.useRef)(null),
+        onReady: dB,
+        onDrawn: oB,
+        owner: kB = "other",
+        framing: LB = "player",
+        forcedCosmetics: OB,
+        Eo: DB,
+        emotePlaySeq: uB
+      } = BB;
+      const HB = (0, VB.useRef)(null),
         {
-          width: xJ,
-          height: rJ
-        } = (0, UJ.d)(fJ),
-        vJ = (0, FJ.useRef)(null),
-        mJ = (0, FJ.useRef)({}),
-        QJ = (0, FJ.useRef)({}),
-        [EJ, VJ] = (0, FJ.useState)(!1),
-        KJ = (0, FJ.useRef)(ZJ);
-      KJ.current = ZJ;
-      const yJ = (0, FJ.useRef)(YJ);
-      yJ.current = YJ;
-      const SJ = (0, FJ.useRef)(null),
-        IJ = (0, FJ.useRef)(!1),
-        MJ = (0, FJ.useRef)(!1),
-        bJ = (0, FJ.useCallback)((() => {
-          const JJ = vJ.current;
-          if (!JJ || !yJ.current || IJ.current || !MJ.current) return;
-          const cJ = {};
-          SJ.current = cJ, queueMicrotask((() => {
-            if (SJ.current !== cJ) return;
-            const ZJ = Promise.all(eJ.s.map((cJ => JJ.untilDrawn(cJ)))).catch((JJ => {
-                console.error("Failed to draw the character preview", JJ)
+          width: EB,
+          height: vB
+        } = (0, yB.b)(HB),
+        mB = (0, VB.useRef)(null),
+        iB = (0, VB.useRef)({}),
+        NB = (0, VB.useRef)({}),
+        [tB, fB] = (0, VB.useState)(!1),
+        sB = (0, VB.useRef)(dB);
+      sB.current = dB;
+      const MB = (0, VB.useRef)(oB);
+      MB.current = oB;
+      const zB = (0, VB.useRef)(null),
+        wB = (0, VB.useRef)(!1),
+        UB = (0, VB.useRef)(!1),
+        FB = (0, VB.useCallback)((() => {
+          const BB = mB.current;
+          if (!BB || !MB.current || wB.current || !UB.current) return;
+          const TB = {};
+          zB.current = TB, queueMicrotask((() => {
+            if (zB.current !== TB) return;
+            const dB = Promise.all(pB.q.map((TB => BB.untilDrawn(TB)))).catch((BB => {
+                console.error("Failed to draw the character preview", BB)
               })),
-              FJ = new Promise((JJ => {
-                setTimeout(JJ, 1e4)
+              VB = new Promise((BB => {
+                setTimeout(BB, 1e4)
               }));
-            Promise.race([ZJ, FJ]).then((() => {
-              var ZJ;
-              vJ.current !== JJ || SJ.current !== cJ || IJ.current || (IJ.current = !0, null === (ZJ = yJ.current) || void 0 === ZJ || ZJ.call(yJ))
+            Promise.race([dB, VB]).then((() => {
+              var dB;
+              mB.current !== BB || zB.current !== TB || wB.current || (wB.current = !0, null === (dB = MB.current) || void 0 === dB || dB.call(MB))
             }))
           }))
         }), []);
-      return (0, FJ.useImperativeHandle)(cJ, (() => {
-        const JJ = (JJ, cJ) => {
-          var ZJ;
-          (mJ.current[JJ] = cJ, null !== sJ && void 0 !== sJ && sJ[JJ]) || (null === (ZJ = vJ.current) || void 0 === ZJ || ZJ.setCosmetic(JJ, cJ), bJ())
+      return (0, VB.useImperativeHandle)(TB, (() => {
+        const BB = (BB, TB) => {
+          var dB;
+          (iB.current[BB] = TB, null !== OB && void 0 !== OB && OB[BB]) || (null === (dB = mB.current) || void 0 === dB || dB.setCosmetic(BB, TB), FB())
         };
         return {
-          updateCosmetic: JJ,
-          setAllCosmetics(cJ) {
-            for (const FJ of eJ.s) {
-              var ZJ;
-              JJ(FJ, null !== (ZJ = cJ[FJ]) && void 0 !== ZJ ? ZJ : (0, XJ.e)(FJ))
+          updateCosmetic: BB,
+          setAllCosmetics(TB) {
+            for (const VB of pB.q) {
+              var dB;
+              BB(VB, null !== (dB = TB[VB]) && void 0 !== dB ? dB : (0, lB.d)(VB))
             }
           },
           isReady() {
-            var JJ, cJ;
-            return null !== (JJ = null === (cJ = vJ.current) || void 0 === cJ ? void 0 : cJ.isReady()) && void 0 !== JJ && JJ
+            var BB, TB;
+            return null !== (BB = null === (TB = mB.current) || void 0 === TB ? void 0 : TB.isReady()) && void 0 !== BB && BB
           },
           resetCamera() {
-            var JJ;
-            null === (JJ = vJ.current) || void 0 === JJ || JJ.resetCamera()
+            var BB;
+            null === (BB = mB.current) || void 0 === BB || BB.resetCamera()
           },
-          async ensureReadyForCapture(JJ) {
-            var cJ;
-            await (null === (cJ = vJ.current) || void 0 === cJ ? void 0 : cJ.untilDrawn(JJ))
+          async ensureReadyForCapture(BB) {
+            var TB;
+            await (null === (TB = mB.current) || void 0 === TB ? void 0 : TB.untilDrawn(BB))
           },
           getDevTools() {
-            var JJ;
-            return null !== (JJ = vJ.current) && void 0 !== JJ && JJ.isReady() ? vJ.current.dev : null
+            var BB;
+            return null !== (BB = mB.current) && void 0 !== BB && BB.isReady() ? mB.current.dev : null
           }
         }
-      }), [sJ, bJ]), (0, FJ.useEffect)((() => {
-        const JJ = qJ.e.register(hJ),
-          cJ = AJ.d.openCharacter(fJ.current, DJ);
-        vJ.current = cJ;
-        let ZJ = !0;
-        return cJ.ready.then((() => {
-          ZJ && (VJ(!0), KJ.current())
-        })).catch((JJ => {
-          console.error("Failed to set up the character preview", JJ)
+      }), [OB, FB]), (0, VB.useEffect)((() => {
+        const BB = YB.b.register(kB),
+          TB = JB.e.openCharacter(HB.current, LB);
+        mB.current = TB;
+        let dB = !0;
+        return TB.ready.then((() => {
+          dB && (fB(!0), sB.current())
+        })).catch((BB => {
+          console.error("Failed to set up the character preview", BB)
         })), () => {
-          ZJ = !1, JJ(), cJ.close(), vJ.current = null
+          dB = !1, BB(), TB.close(), mB.current = null
         }
-      }), []), (0, FJ.useEffect)((() => {
-        xJ <= 0 || rJ <= 0 || vJ.current.resize(xJ, rJ)
-      }), [xJ, rJ]), (0, FJ.useEffect)((() => {
-        if (!EJ) return;
-        const JJ = QJ.current;
-        for (const cJ of eJ.s) {
-          const ZJ = null === sJ || void 0 === sJ ? void 0 : sJ[cJ],
-            FJ = JJ[cJ];
-          ZJ && ZJ !== FJ ? vJ.current.setCosmetic(cJ, ZJ) : !ZJ && FJ && mJ.current[cJ] && vJ.current.setCosmetic(cJ, mJ.current[cJ])
+      }), []), (0, VB.useEffect)((() => {
+        EB <= 0 || vB <= 0 || mB.current.resize(EB, vB)
+      }), [EB, vB]), (0, VB.useEffect)((() => {
+        if (!tB) return;
+        const BB = NB.current;
+        for (const TB of pB.q) {
+          const dB = null === OB || void 0 === OB ? void 0 : OB[TB],
+            VB = BB[TB];
+          dB && dB !== VB ? mB.current.setCosmetic(TB, dB) : !dB && VB && iB.current[TB] && mB.current.setCosmetic(TB, iB.current[TB])
         }
-        QJ.current = {
-          ...sJ
-        }, MJ.current = !0, bJ()
-      }), [sJ, EJ, bJ]), (0, FJ.useEffect)((() => {
-        EJ && vJ.current.playEmote(null !== nJ && void 0 !== nJ ? nJ : null)
-      }), [nJ, GJ, EJ]), (0, jJ.jsx)("div", {
+        NB.current = {
+          ...OB
+        }, UB.current = !0, FB()
+      }), [OB, tB, FB]), (0, VB.useEffect)((() => {
+        tB && mB.current.playEmote(null !== DB && void 0 !== DB ? DB : null)
+      }), [DB, uB, tB]), (0, gB.jsx)("div", {
         className: "CharCustomisationPreview",
-        ref: fJ
+        ref: HB
       })
     })))
   }
 };
 Object.freeze(modules);
-for (const JJ in modules) Object.freeze(modules[JJ]);
+for (const BB in modules) Object.freeze(modules[BB]);

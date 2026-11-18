@@ -1,168 +1,168 @@
 export const id = 50;
 export const ids = [50];
 export const modules = {
-  41964: (JJ, cJ, ZJ) => {
-    ZJ.r(cJ), ZJ.d(cJ, {
-      joinRoom: () => jJ,
-      leaveHeldSeat: () => GJ,
-      resumeRoom: () => hJ
+  42021: (BB, TB, dB) => {
+    dB.r(TB), dB.d(TB, {
+      joinRoom: () => gB,
+      leaveHeldSeat: () => uB,
+      resumeRoom: () => kB
     });
-    var FJ = ZJ(3122),
-      UJ = ZJ(38019),
-      eJ = ZJ(2538),
-      XJ = ZJ(4189),
-      AJ = ZJ(39602),
-      qJ = ZJ(39697);
-    async function jJ(JJ, cJ) {
-      let ZJ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+    var VB = dB(3138),
+      yB = dB(38015),
+      pB = dB(2512),
+      lB = dB(4186),
+      JB = dB(39576),
+      YB = dB(39669);
+    async function gB(BB, TB) {
+      let dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
       try {
-        return await YJ(JJ, cJ, ZJ)
-      } catch (UJ) {
-        var FJ;
-        const eJ = await (null === (FJ = cJ.optionsAfterRefusal) || void 0 === FJ ? void 0 : FJ.call(cJ, UJ));
-        if (!eJ) throw UJ;
-        return YJ(JJ, {
-          ...cJ,
-          joinOptions: eJ
+        return await oB(BB, TB, dB)
+      } catch (yB) {
+        var VB;
+        const pB = await (null === (VB = TB.optionsAfterRefusal) || void 0 === VB ? void 0 : VB.call(TB, yB));
+        if (!pB) throw yB;
+        return oB(BB, {
+          ...TB,
+          joinOptions: pB
         }, {
-          ...ZJ,
+          ...dB,
           early: void 0
         })
       }
     }
-    async function YJ(JJ, cJ, ZJ) {
-      var UJ;
+    async function oB(BB, TB, dB) {
+      var yB;
       const {
-        signal: eJ
-      } = ZJ, XJ = () => (0, qJ.j)(cJ.endpoint, cJ.roomName, cJ.joinOptions, ZJ), {
-        early: AJ
-      } = ZJ, jJ = AJ ? null !== (UJ = await AJ.take(eJ)) && void 0 !== UJ ? UJ : await AJ.reserveInstead(XJ, eJ) : await XJ();
-      return (0, FJ.l)(eJ), nJ(JJ, cJ.endpoint, jJ, ZJ, !1)
+        signal: pB
+      } = dB, lB = () => (0, YB.f)(TB.endpoint, TB.roomName, TB.joinOptions, dB), {
+        early: JB
+      } = dB, gB = JB ? null !== (yB = await JB.take(pB)) && void 0 !== yB ? yB : await JB.reserveInstead(lB, pB) : await lB();
+      return (0, VB.k)(pB), DB(BB, TB.endpoint, gB, dB, !1)
     }
-    async function hJ(JJ, cJ, ZJ, UJ) {
-      let eJ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
-      const XJ = await (0, qJ.f)(cJ, ZJ, UJ, eJ);
-      return (0, FJ.l)(eJ.signal), nJ(JJ, cJ, XJ, eJ, !0)
-    }
-
-    function DJ(JJ, cJ, ZJ) {
-      const FJ = (0, qJ.m)(JJ, cJ);
-      return ZJ.createSocket ? ZJ.createSocket(FJ) : new WebSocket(FJ)
+    async function kB(BB, TB, dB, yB) {
+      let pB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+      const lB = await (0, YB.d)(TB, dB, yB, pB);
+      return (0, VB.k)(pB.signal), DB(BB, TB, lB, pB, !0)
     }
 
-    function sJ(JJ, cJ, ZJ) {
-      var FJ;
-      let UJ = !1;
-      return (null !== (FJ = JJ.setTimer) && void 0 !== FJ ? FJ : (JJ, cJ) => {
-        setTimeout(JJ, cJ)
+    function LB(BB, TB, dB) {
+      const VB = (0, YB.h)(BB, TB);
+      return dB.createSocket ? dB.createSocket(VB) : new WebSocket(VB)
+    }
+
+    function OB(BB, TB, dB) {
+      var VB;
+      let yB = !1;
+      return (null !== (VB = BB.setTimer) && void 0 !== VB ? VB : (BB, TB) => {
+        setTimeout(BB, TB)
       })((() => {
-        UJ || cJ()
-      }), ZJ), () => {
-        UJ = !0
+        yB || TB()
+      }), dB), () => {
+        yB = !0
       }
     }
-    async function nJ(JJ, cJ, ZJ, qJ, jJ) {
+    async function DB(BB, TB, dB, YB, gB) {
       const {
-        signal: YJ
-      } = qJ, hJ = DJ(cJ, ZJ, qJ);
-      let nJ = null,
-        GJ = null;
-      const fJ = [];
-      let xJ = !1,
-        rJ = !1;
-      const vJ = JJ => {
-        var cJ;
-        rJ = !0, null === (cJ = GJ) || void 0 === cJ || cJ.reject(new AJ.b("the room socket closed before the resume", "closed", JJ.code))
+        signal: oB
+      } = YB, kB = LB(TB, dB, YB);
+      let DB = null,
+        uB = null;
+      const HB = [];
+      let EB = !1,
+        vB = !1;
+      const mB = BB => {
+        var TB;
+        vB = !0, null === (TB = uB) || void 0 === TB || TB.reject(new JB.d("the room socket closed before the resume", "closed", BB.code))
       };
-      jJ && hJ.addEventListener("close", vJ);
-      const mJ = (JJ, cJ) => {
-          var ZJ;
-          if (JJ === (jJ ? XJ.G.Resumed : XJ.G.Activated)) xJ = !0, null === (ZJ = GJ) || void 0 === ZJ || ZJ.resolve();
-          else if (!jJ || JJ !== XJ.G.ResumeRefused && JJ !== XJ.G.Activated)
-            if (JJ === XJ.G.Error) {
-              var FJ;
-              null === (FJ = GJ) || void 0 === FJ || FJ.reject(new AJ.b(`the room refused the join (code ${cJ})`, "roomError", cJ))
+      gB && kB.addEventListener("close", mB);
+      const iB = (BB, TB) => {
+          var dB;
+          if (BB === (gB ? lB.v.Resumed : lB.v.Activated)) EB = !0, null === (dB = uB) || void 0 === dB || dB.resolve();
+          else if (!gB || BB !== lB.v.ResumeRefused && BB !== lB.v.Activated)
+            if (BB === lB.v.Error) {
+              var VB;
+              null === (VB = uB) || void 0 === VB || VB.reject(new JB.d(`the room refused the join (code ${TB})`, "roomError", TB))
             } else {
-              var UJ;
-              null === (UJ = GJ) || void 0 === UJ || UJ.reject(new AJ.b("the room socket closed before the join", "closed", cJ))
+              var yB;
+              null === (yB = uB) || void 0 === yB || yB.reject(new JB.d("the room socket closed before the join", "closed", TB))
             }
           else {
-            var eJ;
-            null === (eJ = GJ) || void 0 === eJ || eJ.reject(new AJ.l("the core refused the resume: it held no game"))
+            var pB;
+            null === (pB = uB) || void 0 === pB || pB.reject(new JB.s("the core refused the resume: it held no game"))
           }
         },
-        QJ = JJ.onConnection(((JJ, cJ, ZJ) => {
-          null === nJ ? fJ.push([JJ, cJ, ZJ]) : JJ === nJ && mJ(cJ, ZJ)
+        NB = BB.onConnection(((BB, TB, dB) => {
+          null === DB ? HB.push([BB, TB, dB]) : BB === DB && iB(TB, dB)
         })),
-        EJ = JJ.attachSocket(hJ);
-      if (null === EJ) throw QJ(), new AJ.b("the core could not take the room socket", "attach");
-      var VJ;
-      (nJ = EJ, jJ) && (null === (VJ = qJ.onAttached) || void 0 === VJ || VJ.call(qJ));
-      const KJ = jJ ? null : new eJ.d(UJ.d, (() => {
-        var cJ, ZJ;
-        null === (cJ = JJ.flushNet) || void 0 === cJ || cJ.call(JJ), null === (ZJ = GJ) || void 0 === ZJ || ZJ.reject(new UJ.h)
+        tB = BB.attachSocket(kB);
+      if (null === tB) throw NB(), new JB.d("the core could not take the room socket", "attach");
+      var fB;
+      (DB = tB, gB) && (null === (fB = YB.onAttached) || void 0 === fB || fB.call(YB));
+      const sB = gB ? null : new pB.c(yB.e, (() => {
+        var TB, dB;
+        null === (TB = BB.flushNet) || void 0 === TB || TB.call(BB), null === (dB = uB) || void 0 === dB || dB.reject(new yB.i)
       }));
-      let yJ = !1;
-      const SJ = () => {
-        if (yJ) return;
-        if (yJ = !0, QJ(), jJ && (hJ.removeEventListener("close", vJ), !xJ && !(null !== YJ && void 0 !== YJ && YJ.aborted && (0, FJ.e)(YJ) instanceof AJ.m))) return void(rJ || JJ.closeSocket(EJ));
-        xJ && JJ.leaveRoom(EJ) || JJ.sendRaw(EJ, AJ.g) ? sJ(qJ, (() => {
-          JJ.closeSocket(EJ)
-        }), AJ.d) : JJ.closeSocket(EJ)
+      let MB = !1;
+      const zB = () => {
+        if (MB) return;
+        if (MB = !0, NB(), gB && (kB.removeEventListener("close", mB), !EB && !(null !== oB && void 0 !== oB && oB.aborted && (0, VB.c)(oB) instanceof JB.w))) return void(vB || BB.closeSocket(tB));
+        EB && BB.leaveRoom(tB) || BB.sendRaw(tB, JB.m) ? OB(YB, (() => {
+          BB.closeSocket(tB)
+        }), JB.f) : BB.closeSocket(tB)
       };
       try {
-        await new Promise(((cJ, ZJ) => {
-          const UJ = () => {
-            var cJ;
-            jJ && (null === (cJ = JJ.flushNet) || void 0 === cJ || cJ.call(JJ));
-            ZJ((0, FJ.e)(YJ))
+        await new Promise(((TB, dB) => {
+          const yB = () => {
+            var TB;
+            gB && (null === (TB = BB.flushNet) || void 0 === TB || TB.call(BB));
+            dB((0, VB.c)(oB))
           };
-          null === YJ || void 0 === YJ || YJ.addEventListener("abort", UJ, {
+          null === oB || void 0 === oB || oB.addEventListener("abort", yB, {
             once: !0
-          }), GJ = {
+          }), uB = {
             resolve: () => {
-              null === YJ || void 0 === YJ || YJ.removeEventListener("abort", UJ), cJ()
+              null === oB || void 0 === oB || oB.removeEventListener("abort", yB), TB()
             },
-            reject: JJ => {
-              null === YJ || void 0 === YJ || YJ.removeEventListener("abort", UJ), ZJ(JJ)
+            reject: BB => {
+              null === oB || void 0 === oB || oB.removeEventListener("abort", yB), dB(BB)
             }
           };
-          for (const [JJ, FJ, eJ] of fJ.splice(0)) JJ === nJ && mJ(FJ, eJ)
+          for (const [BB, VB, pB] of HB.splice(0)) BB === DB && iB(VB, pB)
         }))
-      } catch (IJ) {
-        throw SJ(), IJ
+      } catch (wB) {
+        throw zB(), wB
       } finally {
-        null === KJ || void 0 === KJ || KJ.stop()
+        null === sB || void 0 === sB || sB.stop()
       }
-      jJ && hJ.removeEventListener("close", vJ);
+      gB && kB.removeEventListener("close", mB);
       return {
-        conn: EJ,
-        seat: ZJ,
-        cn: SJ,
+        conn: tB,
+        seat: dB,
+        lD: zB,
         detach: () => {
-          yJ = !0, QJ()
+          MB = !0, NB()
         }
       }
     }
-    async function GJ(JJ, cJ, ZJ) {
-      let FJ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    async function uB(BB, TB, dB) {
+      let VB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
       try {
-        const UJ = DJ(JJ, await (0, qJ.f)(JJ, cJ, ZJ, FJ), FJ);
-        UJ.binaryType = "arraybuffer", await new Promise((JJ => {
-          const cJ = sJ(FJ, (() => {
-            UJ.close(), JJ()
-          }), AJ.d);
-          UJ.addEventListener("open", (() => {
-            UJ.send(AJ.g)
-          })), UJ.addEventListener("close", (() => {
-            cJ(), JJ()
+        const yB = LB(BB, await (0, YB.d)(BB, TB, dB, VB), VB);
+        yB.binaryType = "arraybuffer", await new Promise((BB => {
+          const TB = OB(VB, (() => {
+            yB.close(), BB()
+          }), JB.f);
+          yB.addEventListener("open", (() => {
+            yB.send(JB.m)
+          })), yB.addEventListener("close", (() => {
+            TB(), BB()
           }))
         }))
-      } catch (UJ) {
-        console.warn("[bloxd-wasm-client] the held seat of a game left while it reconnected couldn't be released", UJ)
+      } catch (yB) {
+        console.warn("[bloxd-wasm-client] the held seat of a game left while it reconnected couldn't be released", yB)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const JJ in modules) Object.freeze(modules[JJ]);
+for (const BB in modules) Object.freeze(modules[BB]);

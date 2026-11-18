@@ -1,66 +1,66 @@
 export const id = 273;
 export const ids = [273];
 export const modules = {
-  40047: (JJ, cJ, ZJ) => {
-    ZJ.r(cJ), ZJ.d(cJ, {
-      default: () => Hc
+  40028: (BB, TB, dB) => {
+    dB.r(TB), dB.d(TB, {
+      default: () => cT
     });
-    var FJ = ZJ(40052),
-      UJ = ZJ(40090),
-      eJ = ZJ(40092),
-      XJ = ZJ(47),
-      AJ = ZJ(60),
-      qJ = ZJ(40103),
-      jJ = ZJ(40107),
-      YJ = ZJ(4153),
-      hJ = ZJ(40111),
-      DJ = ZJ(1675),
-      sJ = ZJ(40118),
-      nJ = ZJ(40138),
-      GJ = ZJ.n(nJ),
-      fJ = ZJ(40094),
-      xJ = ZJ(40097),
-      rJ = ZJ(1232),
-      vJ = ZJ(35877),
-      mJ = ZJ(1137),
-      QJ = ZJ(35886),
-      EJ = ZJ(35781),
-      VJ = ZJ(1326),
-      KJ = ZJ(535),
-      yJ = ZJ(1144),
-      SJ = ZJ(40189),
-      IJ = ZJ(40060),
-      MJ = ZJ(40065),
-      bJ = ZJ(1703),
-      wJ = ZJ(3242),
-      WJ = ZJ(17),
-      gJ = ZJ(1028);
-    const HJ = 1e4,
-      PJ = 250,
-      kJ = 250;
-    var pJ = ZJ(40078);
-    const dJ = 50,
-      zJ = 100;
-    const NJ = 2e3,
-      OJ = IJ.A.define(),
-      TJ = IJ.A.define(),
-      CJ = IJ.A.define();
-    class uJ extends MJ.l {
-      constructor(JJ, cJ, ZJ) {
-        super(), this.colour = JJ, this.playerName = cJ, this.showName = ZJ
+    var VB = dB(40033),
+      yB = dB(40073),
+      pB = dB(40078),
+      lB = dB(62),
+      JB = dB(72),
+      YB = dB(40096),
+      gB = dB(40104),
+      oB = dB(4147),
+      kB = dB(40107),
+      LB = dB(1657),
+      OB = dB(40115),
+      DB = dB(40136),
+      uB = dB.n(DB),
+      HB = dB(40084),
+      EB = dB(40092),
+      vB = dB(1225),
+      mB = dB(35823),
+      iB = dB(1117),
+      NB = dB(35832),
+      tB = dB(35721),
+      fB = dB(1317),
+      sB = dB(572),
+      MB = dB(1126),
+      zB = dB(40187),
+      wB = dB(40036),
+      UB = dB(40040),
+      FB = dB(1679),
+      KB = dB(3249),
+      rB = dB(24),
+      IB = dB(1020);
+    const cB = 1e4,
+      SB = 250,
+      PB = 250;
+    var QB = dB(40060);
+    const RB = 50,
+      aB = 100;
+    const ZB = 2e3,
+      XB = wB.x.define(),
+      WB = wB.x.define(),
+      hB = wB.x.define();
+    class CB extends UB.p {
+      constructor(BB, TB, dB) {
+        super(), this.colour = BB, this.playerName = TB, this.showName = dB
       }
       toDOM() {
-        const JJ = document.createElement("span");
-        JJ.className = "cm-remote-cursor-wrapper", JJ.style.borderLeftColor = this.colour;
-        const cJ = document.createElement("span");
-        if (cJ.className = "cm-remote-cursor", cJ.style.borderLeftColor = this.colour, JJ.appendChild(cJ), this.showName) {
-          const cJ = document.createElement("span");
-          cJ.className = "cm-remote-cursor-name", cJ.style.backgroundColor = this.colour, cJ.textContent = this.playerName, JJ.appendChild(cJ)
+        const BB = document.createElement("span");
+        BB.className = "cm-remote-cursor-wrapper", BB.style.borderLeftColor = this.colour;
+        const TB = document.createElement("span");
+        if (TB.className = "cm-remote-cursor", TB.style.borderLeftColor = this.colour, BB.appendChild(TB), this.showName) {
+          const TB = document.createElement("span");
+          TB.className = "cm-remote-cursor-name", TB.style.backgroundColor = this.colour, TB.textContent = this.playerName, BB.appendChild(TB)
         }
-        return JJ
+        return BB
       }
-      eq(JJ) {
-        return this.colour === JJ.colour && this.playerName === JJ.playerName && this.showName === JJ.showName
+      eq(BB) {
+        return this.colour === BB.colour && this.playerName === BB.playerName && this.showName === BB.showName
       }
       get estimatedHeight() {
         return -1
@@ -70,114 +70,114 @@ export const modules = {
       }
     }
 
-    function iJ(JJ, cJ) {
-      const ZJ = [],
-        FJ = [];
-      for (const [, XJ] of JJ) {
-        const JJ = cJ - XJ.lastMoved < NJ;
-        if (ZJ.push({
-            pos: XJ.head,
-            decoration: MJ.c.widget({
-              widget: new uJ(XJ.colour, XJ.playerName, JJ),
+    function GB(BB, TB) {
+      const dB = [],
+        VB = [];
+      for (const [, lB] of BB) {
+        const BB = TB - lB.lastMoved < ZB;
+        if (dB.push({
+            pos: lB.head,
+            decoration: UB.c.widget({
+              widget: new CB(lB.colour, lB.playerName, BB),
               side: 1
             })
-          }), XJ.anchor !== XJ.head) {
-          const JJ = Math.min(XJ.anchor, XJ.head),
-            cJ = Math.max(XJ.anchor, XJ.head);
-          FJ.push({
-            from: JJ,
-            to: cJ,
-            decoration: MJ.c.mark({
+          }), lB.anchor !== lB.head) {
+          const BB = Math.min(lB.anchor, lB.head),
+            TB = Math.max(lB.anchor, lB.head);
+          VB.push({
+            from: BB,
+            to: TB,
+            decoration: UB.c.mark({
               class: "cm-remote-selection",
               attributes: {
-                style: `background-color: ${XJ.colour}33`
+                style: `background-color: ${lB.colour}33`
               }
             })
           })
         }
       }
-      const UJ = new IJ.u,
-        eJ = [];
-      for (const XJ of ZJ) eJ.push({
+      const yB = new wB.t,
+        pB = [];
+      for (const lB of dB) pB.push({
         bias: 1,
-        deco: XJ.decoration,
-        from: XJ.pos,
-        to: XJ.pos
+        deco: lB.decoration,
+        from: lB.pos,
+        to: lB.pos
       });
-      for (const XJ of FJ) eJ.push({
+      for (const lB of VB) pB.push({
         bias: 0,
-        deco: XJ.decoration,
-        from: XJ.from,
-        to: XJ.to
+        deco: lB.decoration,
+        from: lB.from,
+        to: lB.to
       });
-      eJ.sort(((JJ, cJ) => JJ.from - cJ.from || JJ.deco.startSide - cJ.deco.startSide || JJ.bias - cJ.bias));
-      for (const XJ of eJ) UJ.add(XJ.from, XJ.to, XJ.deco);
-      return UJ.finish()
+      pB.sort(((BB, TB) => BB.from - TB.from || BB.deco.startSide - TB.deco.startSide || BB.bias - TB.bias));
+      for (const lB of pB) yB.add(lB.from, lB.to, lB.deco);
+      return yB.finish()
     }
-    const RJ = IJ.E.define({
+    const qB = wB.A.define({
       create: () => ({
         cursors: new Map,
-        je: MJ.c.none
+        QB: UB.c.none
       }),
-      update(JJ, cJ) {
-        let ZJ = JJ.cursors,
-          FJ = !1;
-        if (cJ.docChanged) {
-          const JJ = new Map;
-          for (const [FJ, UJ] of ZJ) JJ.set(FJ, {
-            ...UJ,
-            anchor: cJ.changes.mapPos(UJ.anchor, 1),
-            head: cJ.changes.mapPos(UJ.head, 1)
+      update(BB, TB) {
+        let dB = BB.cursors,
+          VB = !1;
+        if (TB.docChanged) {
+          const BB = new Map;
+          for (const [VB, yB] of dB) BB.set(VB, {
+            ...yB,
+            anchor: TB.changes.mapPos(yB.anchor, 1),
+            head: TB.changes.mapPos(yB.head, 1)
           });
-          ZJ = JJ, FJ = !0
+          dB = BB, VB = !0
         }
-        for (const UJ of cJ.effects)
-          if (UJ.is(OJ)) {
-            if (!Number.isInteger(UJ.value.anchor) || !Number.isInteger(UJ.value.head)) {
-              console.warn(`Code Editor: ignored player ${UJ.value.playerId}'s cursor at ${UJ.value.anchor}-${UJ.value.head}`);
+        for (const yB of TB.effects)
+          if (yB.is(XB)) {
+            if (!Number.isInteger(yB.value.anchor) || !Number.isInteger(yB.value.head)) {
+              console.warn(`Code Editor: ignored player ${yB.value.playerId}'s cursor at ${yB.value.anchor}-${yB.value.head}`);
               continue
             }
-            const eJ = cJ.state.doc.length,
-              XJ = {
-                ...UJ.value,
-                anchor: Math.min(UJ.value.anchor, eJ),
-                head: Math.min(UJ.value.head, eJ)
+            const pB = TB.state.doc.length,
+              lB = {
+                ...yB.value,
+                anchor: Math.min(yB.value.anchor, pB),
+                head: Math.min(yB.value.head, pB)
               };
-            ZJ === JJ.cursors && (ZJ = new Map(ZJ)), ZJ.set(XJ.playerId, XJ), FJ = !0
-          } else UJ.is(TJ) ? ZJ.has(UJ.value) && (ZJ === JJ.cursors && (ZJ = new Map(ZJ)), ZJ.delete(UJ.value), FJ = !0) : UJ.is(CJ) && (FJ = !0);
-        return FJ ? {
-          cursors: ZJ,
-          je: iJ(ZJ, Date.now())
-        } : JJ
+            dB === BB.cursors && (dB = new Map(dB)), dB.set(lB.playerId, lB), VB = !0
+          } else yB.is(WB) ? dB.has(yB.value) && (dB === BB.cursors && (dB = new Map(dB)), dB.delete(yB.value), VB = !0) : yB.is(hB) && (VB = !0);
+        return VB ? {
+          cursors: dB,
+          QB: GB(dB, Date.now())
+        } : BB
       },
-      provide: JJ => MJ.f.je.from(JJ, (JJ => JJ.je))
+      provide: BB => UB.i.QB.from(BB, (BB => BB.QB))
     });
-    var LJ = ZJ(40084);
-    const aJ = "#e45649",
-      BJ = "#383a42",
-      tJ = "#696c77",
-      oJ = "#986801",
-      lJ = "#e5e5e6",
-      Jc = "#fafafa",
-      cc = "#eaeaeb",
-      Zc = "#526fff",
-      Fc = MJ.f.theme({
+    var xB = dB(40069);
+    const jB = "#e45649",
+      AB = "#383a42",
+      bB = "#696c77",
+      nB = "#986801",
+      eB = "#e5e5e6",
+      BT = "#fafafa",
+      TT = "#eaeaeb",
+      dT = "#526fff",
+      VT = UB.i.theme({
         "&": {
-          color: BJ,
-          backgroundColor: Jc
+          color: AB,
+          backgroundColor: BT
         },
         ".cm-content": {
-          caretColor: Zc
+          caretColor: dT
         },
         ".cm-cursor, .cm-dropCursor": {
-          borderLeftColor: Zc
+          borderLeftColor: dT
         },
         "&.cm-focused > .cm-scroller > .cm-selectionLayer .cm-selectionBackground, .cm-selectionBackground, .cm-content ::selection": {
           backgroundColor: "#d7d8de"
         },
         ".cm-panels": {
           backgroundColor: "#f0f0f1",
-          color: BJ
+          color: AB
         },
         ".cm-panels.cm-panels-top": {
           borderBottom: "2px solid #d4d4d6"
@@ -202,12 +202,12 @@ export const modules = {
           backgroundColor: "#4078f233"
         },
         ".cm-gutters": {
-          backgroundColor: Jc,
-          color: tJ,
+          backgroundColor: BT,
+          color: bB,
           border: "none"
         },
         ".cm-activeLineGutter": {
-          backgroundColor: lJ
+          backgroundColor: eB
         },
         ".cm-foldPlaceholder": {
           backgroundColor: "transparent",
@@ -216,88 +216,88 @@ export const modules = {
         },
         ".cm-tooltip": {
           border: "none",
-          backgroundColor: cc
+          backgroundColor: TT
         },
         ".cm-tooltip .cm-tooltip-arrow:before": {
           borderTopColor: "transparent",
           borderBottomColor: "transparent"
         },
         ".cm-tooltip .cm-tooltip-arrow:after": {
-          borderTopColor: cc,
-          borderBottomColor: cc
+          borderTopColor: TT,
+          borderBottomColor: TT
         },
         ".cm-tooltip-autocomplete": {
           "& > ul > li[aria-selected]": {
-            backgroundColor: lJ,
-            color: BJ
+            backgroundColor: eB,
+            color: AB
           }
         }
       }, {
         dark: !1
       }),
-      Uc = pJ.c.define([{
-        tag: LJ.j.keyword,
+      yT = QB.b.define([{
+        tag: xB.h.keyword,
         color: "#a626a4"
       }, {
-        tag: [LJ.j.name, LJ.j.deleted, LJ.j.character, LJ.j.propertyName, LJ.j.macroName],
-        color: aJ
+        tag: [xB.h.name, xB.h.deleted, xB.h.character, xB.h.propertyName, xB.h.macroName],
+        color: jB
       }, {
-        tag: [LJ.j.function(LJ.j.variableName), LJ.j.labelName],
+        tag: [xB.h.function(xB.h.variableName), xB.h.labelName],
         color: "#4078f2"
       }, {
-        tag: [LJ.j.color, LJ.j.constant(LJ.j.name), LJ.j.standard(LJ.j.name)],
-        color: oJ
+        tag: [xB.h.color, xB.h.constant(xB.h.name), xB.h.standard(xB.h.name)],
+        color: nB
       }, {
-        tag: [LJ.j.definition(LJ.j.name), LJ.j.separator],
-        color: BJ
+        tag: [xB.h.definition(xB.h.name), xB.h.separator],
+        color: AB
       }, {
-        tag: [LJ.j.typeName, LJ.j.className, LJ.j.number, LJ.j.changed, LJ.j.annotation, LJ.j.modifier, LJ.j.self, LJ.j.namespace],
+        tag: [xB.h.typeName, xB.h.className, xB.h.number, xB.h.changed, xB.h.annotation, xB.h.modifier, xB.h.self, xB.h.namespace],
         color: "#c18401"
       }, {
-        tag: [LJ.j.operator, LJ.j.operatorKeyword, LJ.j.url, LJ.j.escape, LJ.j.regexp, LJ.j.link, LJ.j.special(LJ.j.string)],
+        tag: [xB.h.operator, xB.h.operatorKeyword, xB.h.url, xB.h.escape, xB.h.regexp, xB.h.link, xB.h.special(xB.h.string)],
         color: "#0184bc"
       }, {
-        tag: [LJ.j.meta, LJ.j.comment],
-        color: tJ
+        tag: [xB.h.meta, xB.h.comment],
+        color: bB
       }, {
-        tag: LJ.j.strong,
+        tag: xB.h.strong,
         fontWeight: "bold"
       }, {
-        tag: LJ.j.emphasis,
+        tag: xB.h.emphasis,
         fontStyle: "italic"
       }, {
-        tag: LJ.j.strikethrough,
+        tag: xB.h.strikethrough,
         textDecoration: "line-through"
       }, {
-        tag: LJ.j.link,
-        color: tJ,
+        tag: xB.h.link,
+        color: bB,
         textDecoration: "underline"
       }, {
-        tag: LJ.j.heading,
+        tag: xB.h.heading,
         fontWeight: "bold",
-        color: aJ
+        color: jB
       }, {
-        tag: [LJ.j.atom, LJ.j.bool, LJ.j.special(LJ.j.variableName)],
-        color: oJ
+        tag: [xB.h.atom, xB.h.bool, xB.h.special(xB.h.variableName)],
+        color: nB
       }, {
-        tag: [LJ.j.processingInstruction, LJ.j.string, LJ.j.inserted],
+        tag: [xB.h.processingInstruction, xB.h.string, xB.h.inserted],
         color: "#50a14f"
       }, {
-        tag: LJ.j.invalid,
+        tag: xB.h.invalid,
         color: "#000000"
       }]),
-      ec = [Fc, (0, pJ.nb)(Uc)];
-    var Xc = ZJ(35915),
-      Ac = ZJ(40197);
-    const qc = eJ.h.define(),
-      jc = eJ.k.define({
+      pT = [VT, (0, QB.cb)(yT)];
+    var lT = dB(35873),
+      JT = dB(40193);
+    const YT = pB.f.define(),
+      gT = pB.g.define({
         create: () => !1,
-        update(JJ, cJ) {
-          for (const ZJ of cJ.effects) ZJ.is(qc) && (JJ = ZJ.value);
-          return JJ
+        update(BB, TB) {
+          for (const dB of TB.effects) dB.is(YT) && (BB = dB.value);
+          return BB
         }
       }),
-      Yc = [{
+      oT = [{
         action: "explain",
         label: "Explain this"
       }, {
@@ -308,68 +308,68 @@ export const modules = {
         label: "Change this\u2026"
       }];
 
-    function hc(JJ, cJ) {
-      return [jc, eJ.n.fromClass(class {
-        constructor(JJ) {
-          this.view = JJ, this.onDown = JJ => {
-            const cJ = JJ.target instanceof Element && null !== JJ.target.closest(".cm-tooltip");
-            0 !== JJ.button || cJ || this.view.state.field(jc) || this.view.dispatch({
-              effects: qc.of(!0)
+    function kT(BB, TB) {
+      return [gT, pB.k.fromClass(class {
+        constructor(BB) {
+          this.view = BB, this.onDown = BB => {
+            const TB = BB.target instanceof Element && null !== BB.target.closest(".cm-tooltip");
+            0 !== BB.button || TB || this.view.state.field(gT) || this.view.dispatch({
+              effects: YT.of(!0)
             })
           }, this.onUp = () => {
-            this.view.state.field(jc) && this.view.dispatch({
-              effects: qc.of(!1)
+            this.view.state.field(gT) && this.view.dispatch({
+              effects: YT.of(!1)
             })
-          }, JJ.dom.addEventListener("mousedown", this.onDown), document.addEventListener("mouseup", this.onUp), window.addEventListener("blur", this.onUp)
+          }, BB.dom.addEventListener("mousedown", this.onDown), document.addEventListener("mouseup", this.onUp), window.addEventListener("blur", this.onUp)
         }
         destroy() {
           this.view.dom.removeEventListener("mousedown", this.onDown), document.removeEventListener("mouseup", this.onUp), window.removeEventListener("blur", this.onUp)
         }
-      }), eJ.t.compute(["selection", jc], (ZJ => function(JJ, cJ, ZJ) {
-        const FJ = JJ.selection.main;
-        return FJ.empty || JJ.field(jc) || JJ.sliceDoc(FJ.from, FJ.to).trim().length < 2 ? null : {
-          pos: FJ.from,
+      }), pB.r.compute(["selection", gT], (dB => function(BB, TB, dB) {
+        const VB = BB.selection.main;
+        return VB.empty || BB.field(gT) || BB.sliceDoc(VB.from, VB.to).trim().length < 2 ? null : {
+          pos: VB.from,
           above: !0,
-          create: JJ => {
-            const FJ = document.createElement("div");
-            FJ.className = "CodeSelectionActions", FJ.setAttribute("role", "toolbar"), FJ.setAttribute("aria-label", "AI Helper: picked code");
+          create: BB => {
+            const VB = document.createElement("div");
+            VB.className = "CodeSelectionActions", VB.setAttribute("role", "toolbar"), VB.setAttribute("aria-label", "AI Helper: picked code");
             for (const {
-                action: UJ,
-                label: eJ
+                action: yB,
+                label: pB
               }
-              of Yc) {
-              if (!ZJ && "explain" !== UJ) continue;
-              const XJ = document.createElement("button");
-              XJ.type = "button", XJ.textContent = eJ, "change" !== UJ && (XJ.title = Ac.c, XJ.dataset.asksAi = "true"), XJ.addEventListener("mousedown", (JJ => {
-                JJ.preventDefault()
-              })), XJ.addEventListener("click", (() => {
-                const ZJ = JJ.state.selection.main;
-                if (ZJ.empty) return;
-                const FJ = {
-                  action: UJ,
-                  path: cJ,
-                  fromLine: JJ.state.doc.lineAt(ZJ.from).number,
-                  toLine: JJ.state.doc.lineAt(ZJ.to > ZJ.from && JJ.state.doc.lineAt(ZJ.to).from === ZJ.to ? ZJ.to - 1 : ZJ.to).number,
-                  text: JJ.state.sliceDoc(ZJ.from, ZJ.to)
+              of oT) {
+              if (!dB && "explain" !== yB) continue;
+              const lB = document.createElement("button");
+              lB.type = "button", lB.textContent = pB, "change" !== yB && (lB.title = JT.e, lB.dataset.asksAi = "true"), lB.addEventListener("mousedown", (BB => {
+                BB.preventDefault()
+              })), lB.addEventListener("click", (() => {
+                const dB = BB.state.selection.main;
+                if (dB.empty) return;
+                const VB = {
+                  action: yB,
+                  path: TB,
+                  fromLine: BB.state.doc.lineAt(dB.from).number,
+                  toLine: BB.state.doc.lineAt(dB.to > dB.from && BB.state.doc.lineAt(dB.to).from === dB.to ? dB.to - 1 : dB.to).number,
+                  text: BB.state.sliceDoc(dB.from, dB.to)
                 };
-                WJ.i.Uf("WorldCodeAiSelection", FJ), JJ.dispatch({
+                rB.h.yH("WorldCodeAiSelection", VB), BB.dispatch({
                   selection: {
-                    anchor: ZJ.to
+                    anchor: dB.to
                   }
                 })
-              })), FJ.appendChild(XJ)
+              })), VB.appendChild(lB)
             }
             return {
-              dom: FJ
+              dom: VB
             }
           }
         }
-      }(ZJ, JJ, cJ)))]
+      }(dB, BB, TB)))]
     }
-    var Dc = ZJ(990);
-    const sc = new Set(["(", "{", "[", "<"]),
-      nc = new Set([")", "}", "]", ">"]),
-      Gc = {
+    var LT = dB(980);
+    const OT = new Set(["(", "{", "[", "<"]),
+      DT = new Set([")", "}", "]", ">"]),
+      uT = {
         text: "var(--codeTooltipText, white)",
         parameterName: "var(--codeTooltipParameterName, orange)",
         parameter: "var(--codeTooltipParameter, cyan)",
@@ -377,100 +377,100 @@ export const modules = {
         docs: "var(--codeTooltipDocs, gray)"
       };
 
-    function fc(JJ) {
-      let cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+    function HT(BB) {
+      let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
 
-      function ZJ(JJ, cJ) {
-        let ZJ = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const FJ = [];
-        for (const UJ of JJ) {
-          let JJ;
-          JJ = "punctuation" === UJ.kind ? Gc.text : "parameterName" === UJ.kind ? Gc.parameterName : cJ, FJ.push({
-            str: UJ.text,
+      function dB(BB, TB) {
+        let dB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const VB = [];
+        for (const yB of BB) {
+          let BB;
+          BB = "punctuation" === yB.kind ? uT.text : "parameterName" === yB.kind ? uT.parameterName : TB, VB.push({
+            str: yB.text,
             style: {
-              color: JJ,
-              opacity: ZJ ? .5 : void 0
+              color: BB,
+              opacity: dB ? .5 : void 0
             }
           })
         }
-        return FJ
+        return VB
       }
-      const FJ = [];
-      if (FJ.push(...ZJ(JJ.prefixDisplayParts, Gc.text)), JJ.parameters.length > 0) {
-        FJ.push("\n");
-        for (let UJ = 0; UJ < JJ.parameters.length; UJ++) {
-          const eJ = JJ.parameters[UJ];
-          FJ.push("\t"), FJ.push(...ZJ(eJ.displayParts, Gc.parameter, null !== cJ && UJ !== cJ)), FJ.push("\n")
+      const VB = [];
+      if (VB.push(...dB(BB.prefixDisplayParts, uT.text)), BB.parameters.length > 0) {
+        VB.push("\n");
+        for (let yB = 0; yB < BB.parameters.length; yB++) {
+          const pB = BB.parameters[yB];
+          VB.push("\t"), VB.push(...dB(pB.displayParts, uT.parameter, null !== TB && yB !== TB)), VB.push("\n")
         }
       }
-      return FJ.push(...ZJ(JJ.suffixDisplayParts, Gc.suffix)), JJ.documentation && (FJ.push("\n\n"), FJ.push(...ZJ(JJ.documentation, Gc.docs))), FJ
+      return VB.push(...dB(BB.suffixDisplayParts, uT.suffix)), BB.documentation && (VB.push("\n\n"), VB.push(...dB(BB.documentation, uT.docs))), VB
     }
-    var xc = function(JJ) {
-      return JJ[JJ.VariableDefinedElsewhere = 2304] = "VariableDefinedElsewhere", JJ[JJ.DuplicateIdentifier = 2300] = "DuplicateIdentifier", JJ
-    }(xc || {});
-    const rc = new Set([xc.DuplicateIdentifier]),
-      vc = new Set([xc.VariableDefinedElsewhere]),
-      mc = new Set([]),
-      Qc = "/index.js";
+    var ET = function(BB) {
+      return BB[BB.VariableDefinedElsewhere = 2304] = "VariableDefinedElsewhere", BB[BB.DuplicateIdentifier = 2300] = "DuplicateIdentifier", BB
+    }(ET || {});
+    const vT = new Set([ET.DuplicateIdentifier]),
+      mT = new Set([ET.VariableDefinedElsewhere]),
+      iT = new Set([]),
+      NT = "/index.js";
 
-    function Ec(JJ) {
-      return "/" + JJ
-    }
-
-    function Vc(JJ, cJ, ZJ) {
-      JJ.getSourceFile(cJ) && JJ.deleteFile(cJ), JJ.createFile(cJ, ZJ)
+    function tT(BB) {
+      return "/" + BB
     }
 
-    function Kc(JJ) {
-      return !!JJ && ((0, QJ.r)(JJ) || (0, QJ.p)(JJ))
+    function fT(BB, TB, dB) {
+      BB.getSourceFile(TB) && BB.deleteFile(TB), BB.createFile(TB, dB)
     }
 
-    function yc(JJ, cJ, ZJ) {
+    function sT(BB) {
+      return !!BB && ((0, NB.s)(BB) || (0, NB.p)(BB))
+    }
+
+    function MT(BB, TB, dB) {
       return () => {
-        let FJ = [...cJ.languageService.getSemanticDiagnostics(ZJ), ...cJ.languageService.getSyntacticDiagnostics(ZJ)];
-        return FJ = FJ.filter((JJ => !(0, KJ.P)(JJ.start) && !(0, KJ.P)(JJ.length) && !rc.has(JJ.code))), JJ || (FJ = FJ.filter((JJ => !vc.has(JJ.code)))), FJ.map((JJ => ({
-          from: JJ.start,
-          to: JJ.start + JJ.length,
-          message: "string" === typeof JJ.messageText ? JJ.messageText : JJ.messageText.messageText,
-          severity: mc.has(JJ.code) ? "warning" : "error"
+        let VB = [...TB.languageService.getSemanticDiagnostics(dB), ...TB.languageService.getSyntacticDiagnostics(dB)];
+        return VB = VB.filter((BB => !(0, sB.M)(BB.start) && !(0, sB.M)(BB.length) && !vT.has(BB.code))), BB || (VB = VB.filter((BB => !mT.has(BB.code)))), VB.map((BB => ({
+          from: BB.start,
+          to: BB.start + BB.length,
+          message: "string" === typeof BB.messageText ? BB.messageText : BB.messageText.messageText,
+          severity: iT.has(BB.code) ? "warning" : "error"
         })))
       }
     }
 
-    function Sc(JJ, cJ) {
-      return ZJ => {
-        var FJ, UJ;
-        const eJ = JJ.languageService.getCompletionsAtPosition(cJ, ZJ.pos, {});
-        if (!eJ) return {
-          from: ZJ.pos,
+    function zT(BB, TB) {
+      return dB => {
+        var VB, yB;
+        const pB = BB.languageService.getCompletionsAtPosition(TB, dB.pos, {});
+        if (!pB) return {
+          from: dB.pos,
           options: []
         };
-        let XJ = null !== (FJ = null === (UJ = eJ.optionalReplacementSpan) || void 0 === UJ ? void 0 : UJ.start) && void 0 !== FJ ? FJ : ZJ.pos;
-        if (!eJ.optionalReplacementSpan) {
-          const JJ = ZJ.state.doc.sliceString(0, ZJ.pos);
-          for (; XJ > 0 && /[\w$]/.test(JJ[XJ - 1]);) XJ--
+        let lB = null !== (VB = null === (yB = pB.optionalReplacementSpan) || void 0 === yB ? void 0 : yB.start) && void 0 !== VB ? VB : dB.pos;
+        if (!pB.optionalReplacementSpan) {
+          const BB = dB.state.doc.sliceString(0, dB.pos);
+          for (; lB > 0 && /[\w$]/.test(BB[lB - 1]);) lB--
         }
-        return eJ.entries = eJ.entries.filter((JJ => JJ.kind !== GJ().ScriptElementKind.warning)), {
-          from: XJ,
-          options: eJ.entries.map((FJ => {
-            var UJ, eJ, AJ, qJ;
-            const jJ = JJ.languageService.getCompletionEntryDetails(cJ, ZJ.pos, FJ.name, {}, FJ.source, {}, FJ.data),
-              YJ = null !== (UJ = null === (eJ = FJ.replacementSpan) || void 0 === eJ ? void 0 : eJ.start) && void 0 !== UJ ? UJ : XJ,
-              hJ = FJ.replacementSpan ? FJ.replacementSpan.start + FJ.replacementSpan.length : ZJ.pos,
-              DJ = null !== (AJ = FJ.insertText) && void 0 !== AJ ? AJ : FJ.name;
+        return pB.entries = pB.entries.filter((BB => BB.kind !== uB().ScriptElementKind.warning)), {
+          from: lB,
+          options: pB.entries.map((VB => {
+            var yB, pB, JB, YB;
+            const gB = BB.languageService.getCompletionEntryDetails(TB, dB.pos, VB.name, {}, VB.source, {}, VB.data),
+              oB = null !== (yB = null === (pB = VB.replacementSpan) || void 0 === pB ? void 0 : pB.start) && void 0 !== yB ? yB : lB,
+              kB = VB.replacementSpan ? VB.replacementSpan.start + VB.replacementSpan.length : dB.pos,
+              LB = null !== (JB = VB.insertText) && void 0 !== JB ? JB : VB.name;
             return {
-              label: FJ.name,
-              detail: null === jJ || void 0 === jJ ? void 0 : jJ.displayParts.map((JJ => JJ.text)).join(""),
-              info: null === jJ || void 0 === jJ || null === (qJ = jJ.documentation) || void 0 === qJ ? void 0 : qJ.map((JJ => JJ.text)).join(""),
-              apply: JJ => {
-                JJ.dispatch({
+              label: VB.name,
+              detail: null === gB || void 0 === gB ? void 0 : gB.displayParts.map((BB => BB.text)).join(""),
+              info: null === gB || void 0 === gB || null === (YB = gB.documentation) || void 0 === YB ? void 0 : YB.map((BB => BB.text)).join(""),
+              apply: BB => {
+                BB.dispatch({
                   changes: {
-                    from: YJ,
-                    to: hJ,
-                    insert: DJ
+                    from: oB,
+                    to: kB,
+                    insert: LB
                   },
                   selection: {
-                    anchor: YJ + DJ.length
+                    anchor: oB + LB.length
                   }
                 })
               }
@@ -480,114 +480,114 @@ export const modules = {
       }
     }
 
-    function Ic(JJ) {
-      return cJ => {
-        const ZJ = document.createElement("div");
-        ZJ.className = "CodeEditorTooltip";
-        let FJ = !1;
+    function wT(BB) {
+      return TB => {
+        const dB = document.createElement("div");
+        dB.className = "CodeEditorTooltip";
+        let VB = !1;
         return queueMicrotask((() => {
-          FJ || (AJ.render((0, Dc.jsx)(DJ.d, {
-            text: JJ
-          }), ZJ), cJ.requestMeasure())
+          VB || (JB.render((0, LT.jsx)(LB.e, {
+            text: BB
+          }), dB), TB.requestMeasure())
         })), {
-          dom: ZJ,
+          dom: dB,
           destroy() {
-            FJ = !0, queueMicrotask((() => {
-              AJ.unmountComponentAtNode(ZJ)
+            VB = !0, queueMicrotask((() => {
+              JB.unmountComponentAtNode(dB)
             }))
           }
         }
       }
     }
 
-    function Mc(JJ, cJ, ZJ) {
-      return FJ => {
-        var UJ;
-        if (!cJ) return [];
-        const eJ = null === (UJ = FJ.selection.ws[0]) || void 0 === UJ ? void 0 : UJ.head;
-        if (void 0 === eJ) return [];
-        const XJ = JJ.languageService.getSignatureHelpItems(ZJ, eJ, {});
-        if (!XJ || !XJ.items.length) return [];
-        const AJ = XJ.applicableSpan.start - XJ.items[0].prefixDisplayParts.map((JJ => JJ.text)).join("").length,
-          qJ = XJ.applicableSpan.start,
-          jJ = FJ.doc.lineAt(eJ),
-          YJ = jJ.from,
-          hJ = Math.min(jJ.to, eJ);
-        let DJ, sJ;
-        return AJ < YJ ? (DJ = YJ, sJ = hJ) : (DJ = AJ, sJ = qJ), [{
-          pos: DJ,
-          end: sJ,
+    function UT(BB, TB, dB) {
+      return VB => {
+        var yB;
+        if (!TB) return [];
+        const pB = null === (yB = VB.selection.ek[0]) || void 0 === yB ? void 0 : yB.head;
+        if (void 0 === pB) return [];
+        const lB = BB.languageService.getSignatureHelpItems(dB, pB, {});
+        if (!lB || !lB.items.length) return [];
+        const JB = lB.applicableSpan.start - lB.items[0].prefixDisplayParts.map((BB => BB.text)).join("").length,
+          YB = lB.applicableSpan.start,
+          gB = VB.doc.lineAt(pB),
+          oB = gB.from,
+          kB = Math.min(gB.to, pB);
+        let LB, OB;
+        return JB < oB ? (LB = oB, OB = kB) : (LB = JB, OB = YB), [{
+          pos: LB,
+          end: OB,
           above: !1,
-          create: Ic(fc(XJ.items[0], XJ.argumentIndex))
+          create: wT(HT(lB.items[0], lB.argumentIndex))
         }]
       }
     }
 
-    function bc(JJ, cJ) {
-      return (ZJ, FJ, UJ) => {
-        const eJ = JJ.languageService.getQuickInfoAtPosition(cJ, FJ);
-        if (!eJ) return [];
-        const XJ = eJ.textSpan.start,
-          AJ = eJ.textSpan.start + eJ.textSpan.length;
-        if (FJ < XJ || FJ >= AJ) return [];
-        if (eJ.kind === GJ().ScriptElementKind.memberFunctionElement || eJ.kind === GJ().ScriptElementKind.variableElement && "declare" === eJ.kindModifiers) {
-          const JJ = eJ.displayParts.findIndex((JJ => "space" === JJ.kind)); - 1 !== JJ && (eJ.displayParts = eJ.displayParts.slice(JJ));
-          const cJ = {
+    function FT(BB, TB) {
+      return (dB, VB, yB) => {
+        const pB = BB.languageService.getQuickInfoAtPosition(TB, VB);
+        if (!pB) return [];
+        const lB = pB.textSpan.start,
+          JB = pB.textSpan.start + pB.textSpan.length;
+        if (VB < lB || VB >= JB) return [];
+        if (pB.kind === uB().ScriptElementKind.memberFunctionElement || pB.kind === uB().ScriptElementKind.variableElement && "declare" === pB.kindModifiers) {
+          const BB = pB.displayParts.findIndex((BB => "space" === BB.kind)); - 1 !== BB && (pB.displayParts = pB.displayParts.slice(BB));
+          const TB = {
               prefixDisplayParts: [],
               parameters: [],
               suffixDisplayParts: [],
               documentation: []
             },
-            ZJ = eJ.displayParts.findIndex((JJ => "punctuation" === JJ.kind && "(" === JJ.text)); - 1 !== ZJ && (cJ.prefixDisplayParts = eJ.displayParts.slice(0, ZJ + 1), eJ.displayParts = eJ.displayParts.slice(ZJ + 1));
-          const FJ = eJ.displayParts.findLastIndex((JJ => "punctuation" === JJ.kind && ")" === JJ.text)); - 1 !== FJ && (cJ.suffixDisplayParts = eJ.displayParts.slice(FJ), eJ.displayParts = eJ.displayParts.slice(0, FJ));
-          let UJ = 0,
-            qJ = [];
-          for (const XJ of eJ.displayParts)
-            if (sc.has(XJ.text) ? UJ++ : nc.has(XJ.text) && UJ--, "lineBreak" !== XJ.kind) {
-              if ("space" === XJ.kind) {
-                if (0 === qJ.length) continue;
-                qJ.push({
+            dB = pB.displayParts.findIndex((BB => "punctuation" === BB.kind && "(" === BB.text)); - 1 !== dB && (TB.prefixDisplayParts = pB.displayParts.slice(0, dB + 1), pB.displayParts = pB.displayParts.slice(dB + 1));
+          const VB = pB.displayParts.findLastIndex((BB => "punctuation" === BB.kind && ")" === BB.text)); - 1 !== VB && (TB.suffixDisplayParts = pB.displayParts.slice(VB), pB.displayParts = pB.displayParts.slice(0, VB));
+          let yB = 0,
+            YB = [];
+          for (const lB of pB.displayParts)
+            if (OT.has(lB.text) ? yB++ : DT.has(lB.text) && yB--, "lineBreak" !== lB.kind) {
+              if ("space" === lB.kind) {
+                if (0 === YB.length) continue;
+                YB.push({
                   kind: "space",
                   text: " "
                 })
-              } else qJ.push(XJ);
-              0 === UJ && "," === XJ.text && (cJ.parameters.push({
-                displayParts: qJ
-              }), qJ = [])
-            } return qJ.length > 0 && cJ.parameters.push({
-            displayParts: qJ
-          }), cJ.documentation = eJ.documentation, [{
-            pos: XJ,
-            end: AJ,
+              } else YB.push(lB);
+              0 === yB && "," === lB.text && (TB.parameters.push({
+                displayParts: YB
+              }), YB = [])
+            } return YB.length > 0 && TB.parameters.push({
+            displayParts: YB
+          }), TB.documentation = pB.documentation, [{
+            pos: lB,
+            end: JB,
             above: !0,
-            create: Ic(fc(cJ))
+            create: wT(HT(TB))
           }]
         }
-        const qJ = [];
-        for (const JJ of eJ.displayParts) qJ.push({
-          str: JJ.text,
+        const YB = [];
+        for (const BB of pB.displayParts) YB.push({
+          str: BB.text,
           style: {
-            color: Gc.text
+            color: uT.text
           }
         });
-        if (eJ.documentation) {
-          qJ.push("\n\n");
-          for (const JJ of eJ.documentation) qJ.push({
-            str: JJ.text,
+        if (pB.documentation) {
+          YB.push("\n\n");
+          for (const BB of pB.documentation) YB.push({
+            str: BB.text,
             style: {
-              color: Gc.docs
+              color: uT.docs
             }
           })
         }
         return [{
-          pos: XJ,
-          end: AJ,
+          pos: lB,
+          end: JB,
           above: !0,
-          create: Ic(qJ)
+          create: wT(YB)
         }]
       }
     }
-    const wc = {
+    const KT = {
       indentSize: 4,
       tabSize: 4,
       newLineCharacter: "\n",
@@ -606,236 +606,236 @@ export const modules = {
       insertSpaceAfterTypeAssertion: !1,
       placeOpenBraceOnNewLineForFunctions: !1,
       placeOpenBraceOnNewLineForControlBlocks: !1,
-      semicolons: GJ().SemicolonPreference.Insert
+      semicolons: uB().SemicolonPreference.Insert
     };
-    const Wc = eJ.h.define(),
-      gc = {
+    const rT = pB.f.define(),
+      IT = {
         lineNumbers: !0,
         tabSize: 4
       };
 
-    function Hc(JJ) {
+    function cT(BB) {
       let {
-        isLobbyCode: cJ,
-        code: ZJ,
-        onChange: AJ,
-        canEditCode: DJ,
-        setTemporaryMessage: nJ,
-        close: KJ,
-        showTooltips: uJ,
-        lightMode: iJ,
-        collabState: LJ,
-        onRemoteDocChange: aJ,
-        files: BJ,
-        activePath: tJ,
-        pluginName: oJ,
-        pluginFile: lJ,
-        pluginSource: Jc,
-        setActiveDocReplacer: cc,
-        showAiHints: Zc,
-        canAiChangeCode: Fc = DJ
-      } = JJ;
-      const [Uc, Ac] = (0, XJ.useState)(null), qc = null === LJ || void 0 === LJ ? void 0 : LJ.version, jc = null === LJ || void 0 === LJ ? void 0 : LJ.clientID, Yc = (0, XJ.useRef)({
-        isLobbyCode: cJ,
-        files: BJ,
-        code: ZJ,
-        activePath: tJ
-      }), sc = (0, XJ.useRef)(aJ);
-      sc.current = aJ;
-      const nc = (0, XJ.useRef)(null),
-        Gc = (0, XJ.useRef)(LJ);
-      Gc.current = LJ;
-      const fc = (0, XJ.useRef)(null),
-        xc = (0, XJ.useRef)(null),
-        rc = (0, XJ.useRef)(null),
-        vc = (0, XJ.useRef)(KJ);
-      vc.current = KJ;
-      const mc = (0, XJ.useRef)(ZJ);
-      mc.current = ZJ;
-      const Ic = (0, XJ.useRef)(Jc);
-      Ic.current = Jc;
-      const Hc = function(JJ, cJ, ZJ, FJ) {
-        return ZJ ? `/plugin-preview/${ZJ}/${null!==FJ&&void 0!==FJ?FJ:"index.ts"}` : JJ ? Ec(null !== cJ && void 0 !== cJ ? cJ : mJ.g) : Qc
-      }(cJ, tJ, oJ, lJ);
-      (0, XJ.useEffect)((() => {
+        isLobbyCode: TB,
+        code: dB,
+        onChange: JB,
+        canEditCode: LB,
+        setTemporaryMessage: DB,
+        close: sB,
+        showTooltips: CB,
+        lightMode: GB,
+        collabState: xB,
+        onRemoteDocChange: jB,
+        files: AB,
+        activePath: bB,
+        pluginName: nB,
+        pluginFile: eB,
+        pluginSource: BT,
+        setActiveDocReplacer: TT,
+        showAiHints: dT,
+        canAiChangeCode: VT = LB
+      } = BB;
+      const [yT, JT] = (0, lB.useState)(null), YT = null === xB || void 0 === xB ? void 0 : xB.version, gT = null === xB || void 0 === xB ? void 0 : xB.clientID, oT = (0, lB.useRef)({
+        isLobbyCode: TB,
+        files: AB,
+        code: dB,
+        activePath: bB
+      }), OT = (0, lB.useRef)(jB);
+      OT.current = jB;
+      const DT = (0, lB.useRef)(null),
+        uT = (0, lB.useRef)(xB);
+      uT.current = xB;
+      const HT = (0, lB.useRef)(null),
+        ET = (0, lB.useRef)(null),
+        vT = (0, lB.useRef)(null),
+        mT = (0, lB.useRef)(sB);
+      mT.current = sB;
+      const iT = (0, lB.useRef)(dB);
+      iT.current = dB;
+      const wT = (0, lB.useRef)(BT);
+      wT.current = BT;
+      const cT = function(BB, TB, dB, VB) {
+        return dB ? `/plugin-preview/${dB}/${null!==VB&&void 0!==VB?VB:"index.ts"}` : BB ? tT(null !== TB && void 0 !== TB ? TB : iB.f) : NT
+      }(TB, bB, nB, eB);
+      (0, lB.useEffect)((() => {
         !async function() {
           const {
-            isLobbyCode: JJ,
-            files: cJ,
-            code: ZJ,
-            activePath: FJ
-          } = Yc.current, UJ = {
+            isLobbyCode: BB,
+            files: TB,
+            code: dB,
+            activePath: VB
+          } = oT.current, yB = {
             allowJs: !0,
             checkJs: !1,
             noLib: !0,
             strict: !1,
-            module: GJ().ModuleKind.ESNext,
-            moduleResolution: GJ().ModuleResolutionKind.Bundler,
-            target: GJ().ScriptTarget.ES2015,
+            module: uB().ModuleKind.ESNext,
+            moduleResolution: uB().ModuleResolutionKind.Bundler,
+            target: uB().ScriptTarget.ES2015,
             paths: {
               "@bloxd": ["/node_modules/@bloxd/index.d.ts"],
-              ...Object.fromEntries(Object.values(vJ.g).map((JJ => [JJ.specifier, [JJ.typesVfsPath]])))
+              ...Object.fromEntries(Object.values(mB.f).map((BB => [BB.specifier, [BB.typesVfsPath]])))
             }
-          }, eJ = new Map, XJ = [];
-          if (JJ) {
-            const JJ = null !== cJ && void 0 !== cJ ? cJ : {
-              [mJ.g]: ZJ || "\n"
+          }, pB = new Map, lB = [];
+          if (BB) {
+            const BB = null !== TB && void 0 !== TB ? TB : {
+              [iB.f]: dB || "\n"
             };
-            for (const [cJ, ZJ] of Object.entries(JJ)) {
-              const JJ = Ec(cJ);
-              eJ.set(JJ, ZJ || "\n"), XJ.push(JJ)
+            for (const [TB, dB] of Object.entries(BB)) {
+              const BB = tT(TB);
+              pB.set(BB, dB || "\n"), lB.push(BB)
             }
-            const UJ = Ec(null !== FJ && void 0 !== FJ ? FJ : mJ.g);
-            eJ.has(UJ) ? eJ.set(UJ, ZJ || "\n") : (eJ.set(UJ, ZJ || "\n"), XJ.push(UJ)), eJ.set("/node_modules/@bloxd/index.d.ts", YJ.default), XJ.push("/node_modules/@bloxd/index.d.ts");
-            for (const cJ of Object.values(vJ.g)) {
-              eJ.set(cJ.typesVfsPath, cJ.types), XJ.push(cJ.typesVfsPath);
-              for (const [JJ, ZJ] of Object.entries(cJ.files)) {
-                const FJ = `/plugin-preview/${cJ.name}/${JJ}`;
-                eJ.set(FJ, ZJ || "\n"), XJ.push(FJ)
+            const yB = tT(null !== VB && void 0 !== VB ? VB : iB.f);
+            pB.has(yB) ? pB.set(yB, dB || "\n") : (pB.set(yB, dB || "\n"), lB.push(yB)), pB.set("/node_modules/@bloxd/index.d.ts", oB.default), lB.push("/node_modules/@bloxd/index.d.ts");
+            for (const TB of Object.values(mB.f)) {
+              pB.set(TB.typesVfsPath, TB.types), lB.push(TB.typesVfsPath);
+              for (const [BB, dB] of Object.entries(TB.files)) {
+                const VB = `/plugin-preview/${TB.name}/${BB}`;
+                pB.set(VB, dB || "\n"), lB.push(VB)
               }
             }
-          } else eJ.set(Qc, ZJ || "\n"), XJ.push(Qc);
-          eJ.set("/globals.d.ts", JJ ? jJ.e : qJ.c), eJ.set("/lib.d.ts", hJ.e), XJ.push("/globals.d.ts", "/lib.d.ts");
-          const AJ = sJ.b(eJ),
-            DJ = sJ.c(AJ, XJ, GJ(), UJ);
-          Ac({
-            ef: DJ,
-            fsMap: eJ
+          } else pB.set(NT, dB || "\n"), lB.push(NT);
+          pB.set("/globals.d.ts", BB ? gB.c : YB.e), pB.set("/lib.d.ts", kB.c), lB.push("/globals.d.ts", "/lib.d.ts");
+          const JB = OB.d(pB),
+            LB = OB.f(JB, lB, uB(), yB);
+          JT({
+            GL: LB,
+            fsMap: pB
           })
         }()
-      }), []), (0, XJ.useEffect)((() => {
-        var JJ, FJ;
-        if (!Uc || !cJ) return;
+      }), []), (0, lB.useEffect)((() => {
+        var BB, VB;
+        if (!yT || !TB) return;
         const {
-          ef: UJ,
-          fsMap: eJ
-        } = Uc;
-        if (function(JJ, cJ, ZJ) {
-            const FJ = new Set;
-            for (const [UJ, eJ] of Object.entries(ZJ)) {
-              const ZJ = Ec(UJ);
-              FJ.add(ZJ);
-              const XJ = eJ || "\n";
-              cJ.get(ZJ) !== XJ && (cJ.set(ZJ, XJ), Vc(JJ, ZJ, XJ))
+          GL: yB,
+          fsMap: pB
+        } = yT;
+        if (function(BB, TB, dB) {
+            const VB = new Set;
+            for (const [yB, pB] of Object.entries(dB)) {
+              const dB = tT(yB);
+              VB.add(dB);
+              const lB = pB || "\n";
+              TB.get(dB) !== lB && (TB.set(dB, lB), fT(BB, dB, lB))
             }
-            for (const UJ of [...cJ.keys()]) "/globals.d.ts" === UJ || "/lib.d.ts" === UJ || UJ.startsWith("/node_modules/") || UJ.startsWith("/plugin-preview/") || FJ.has(UJ) || (cJ.delete(UJ), JJ.getSourceFile(UJ) && JJ.deleteFile(UJ))
-          }(UJ, eJ, null !== BJ && void 0 !== BJ ? BJ : {
-            [mJ.g]: ZJ || "\n"
-          }), oJ) return void Vc(UJ, Hc, Jc || "\n");
-        const XJ = null !== (JJ = null === (FJ = nc.current) || void 0 === FJ ? void 0 : FJ.state.doc.toString()) && void 0 !== JJ ? JJ : ZJ;
-        Vc(UJ, Hc, XJ || "\n")
-      }), [BJ, tJ, Uc, oJ, Jc, Hc, ZJ, cJ]), (0, XJ.useEffect)((() => {
-        if (!Uc) return;
+            for (const yB of [...TB.keys()]) "/globals.d.ts" === yB || "/lib.d.ts" === yB || yB.startsWith("/node_modules/") || yB.startsWith("/plugin-preview/") || VB.has(yB) || (TB.delete(yB), BB.getSourceFile(yB) && BB.deleteFile(yB))
+          }(yB, pB, null !== AB && void 0 !== AB ? AB : {
+            [iB.f]: dB || "\n"
+          }), nB) return void fT(yB, cT, BT || "\n");
+        const lB = null !== (BB = null === (VB = DT.current) || void 0 === VB ? void 0 : VB.state.doc.toString()) && void 0 !== BB ? BB : dB;
+        fT(yB, cT, lB || "\n")
+      }), [AB, bB, yT, nB, BT, cT, dB, TB]), (0, lB.useEffect)((() => {
+        if (!yT) return;
         const {
-          ef: JJ
-        } = Uc;
-        Vc(JJ, Hc, (oJ ? Jc : ZJ) || "\n")
-      }), [ZJ, oJ, Jc, Hc, Uc]), (0, XJ.useEffect)((() => () => {
-        xc.current && (xc.current(), xc.current = null)
-      }), []), (0, XJ.useEffect)((() => (cc(((JJ, cJ) => {
-        if (oJ) return !1;
-        const ZJ = nc.current,
-          FJ = Gc.current,
-          UJ = FJ ? (0, QJ.x)(FJ.docKey) : null;
-        if (!ZJ || !FJ || fc.current !== FJ.clientID || JJ !== UJ) return !1;
-        const eJ = ZJ.state.doc.toString();
-        return eJ !== cJ && ZJ.dispatch({
+          GL: BB
+        } = yT;
+        fT(BB, cT, (nB ? BT : dB) || "\n")
+      }), [dB, nB, BT, cT, yT]), (0, lB.useEffect)((() => () => {
+        ET.current && (ET.current(), ET.current = null)
+      }), []), (0, lB.useEffect)((() => (TT(((BB, TB) => {
+        if (nB) return !1;
+        const dB = DT.current,
+          VB = uT.current,
+          yB = VB ? (0, NB.A)(VB.docKey) : null;
+        if (!dB || !VB || HT.current !== VB.clientID || BB !== yB) return !1;
+        const pB = dB.state.doc.toString();
+        return pB !== TB && dB.dispatch({
           changes: {
             from: 0,
-            to: eJ.length,
-            insert: cJ
+            to: pB.length,
+            insert: TB
           }
         }), !0
       })), () => {
-        nc.current = null, fc.current = null, cc(null)
-      })), [cc, oJ]);
-      const Pc = cJ ? oJ ? null : null !== tJ && void 0 !== tJ ? tJ : mJ.g : Xc.d,
-        kc = function(JJ, cJ) {
-          const ZJ = (0, XJ.useRef)(null);
-          (0, XJ.useEffect)((() => {
-            var JJ;
-            (null === (JJ = ZJ.current) || void 0 === JJ ? void 0 : JJ.path) !== cJ && (ZJ.current = null)
-          }), [cJ]);
-          const FJ = JJ => {
-            const FJ = ZJ.current;
-            if (null === JJ || void 0 === JJ || !JJ.dom.isConnected || !FJ || FJ.path !== cJ) return;
-            ZJ.current = null;
+        DT.current = null, HT.current = null, TT(null)
+      })), [TT, nB]);
+      const ST = TB ? nB ? null : null !== bB && void 0 !== bB ? bB : iB.f : lT.c,
+        PT = function(BB, TB) {
+          const dB = (0, lB.useRef)(null);
+          (0, lB.useEffect)((() => {
+            var BB;
+            (null === (BB = dB.current) || void 0 === BB ? void 0 : BB.path) !== TB && (dB.current = null)
+          }), [TB]);
+          const VB = BB => {
+            const VB = dB.current;
+            if (null === BB || void 0 === BB || !BB.dom.isConnected || !VB || VB.path !== TB) return;
+            dB.current = null;
             const {
-              doc: UJ
-            } = JJ.state, {
-              from: XJ
-            } = UJ.line(Math.min(Math.max(FJ.line, 1), UJ.lines));
-            JJ.dispatch({
+              doc: yB
+            } = BB.state, {
+              from: lB
+            } = yB.line(Math.min(Math.max(VB.line, 1), yB.lines));
+            BB.dispatch({
               selection: {
-                anchor: XJ
+                anchor: lB
               },
-              effects: eJ.b.scrollIntoView(XJ, {
+              effects: pB.c.scrollIntoView(lB, {
                 y: "center"
               })
-            }), JJ.focus()
+            }), BB.focus()
           };
-          return (0, VJ.i)("CodeEditorGoToLine", (cJ => {
-            ZJ.current = cJ, FJ(JJ.current)
-          })), FJ
-        }(nc, Pc);
-      (0, VJ.i)("FormatCode", (() => {
-        if (!Uc || !nc.current || oJ) return;
+          return (0, fB.e)("CodeEditorGoToLine", (TB => {
+            dB.current = TB, VB(BB.current)
+          })), VB
+        }(DT, ST);
+      (0, fB.e)("FormatCode", (() => {
+        if (!yT || !DT.current || nB) return;
         const {
-          ef: JJ,
-          fsMap: ZJ
-        } = Uc, FJ = JJ.getSourceFile(Hc).getFullText();
-        let UJ = 0;
-        if (cJ && BJ)
-          for (const [cJ, AJ] of Object.entries(BJ)) cJ !== (null !== tJ && void 0 !== tJ ? tJ : mJ.g) && (UJ += AJ.length);
-        const eJ = function(JJ, cJ, ZJ, FJ, UJ) {
-          const eJ = JJ.languageService.getFormattingEditsForDocument(FJ, wc);
-          if (!eJ.length) return yJ.b.error("Code is already formatted.");
-          eJ.sort(((JJ, cJ) => cJ.span.start - JJ.span.start));
-          let XJ = JJ.getSourceFile(FJ).getFullText();
-          for (const AJ of eJ) XJ = XJ.slice(0, AJ.span.start) + AJ.Cj + XJ.slice(AJ.span.start + AJ.span.length);
-          return XJ !== (ZJ ? (0, EJ.j)(XJ, UJ) : (0, EJ.f)(XJ)) ? yJ.b.error("Formatting the code will go beyond the character limit.") : yJ.b.value(XJ)
-        }(JJ, 0, cJ, Hc, UJ);
-        if (eJ.isError()) return void nJ({
-          message: eJ.asError().message,
+          GL: BB,
+          fsMap: dB
+        } = yT, VB = BB.getSourceFile(cT).getFullText();
+        let yB = 0;
+        if (TB && AB)
+          for (const [TB, JB] of Object.entries(AB)) TB !== (null !== bB && void 0 !== bB ? bB : iB.f) && (yB += JB.length);
+        const pB = function(BB, TB, dB, VB, yB) {
+          const pB = BB.languageService.getFormattingEditsForDocument(VB, KT);
+          if (!pB.length) return MB.d.error("Code is already formatted.");
+          pB.sort(((BB, TB) => TB.span.start - BB.span.start));
+          let lB = BB.getSourceFile(VB).getFullText();
+          for (const JB of pB) lB = lB.slice(0, JB.span.start) + JB.og + lB.slice(JB.span.start + JB.span.length);
+          return lB !== (dB ? (0, tB.i)(lB, yB) : (0, tB.g)(lB)) ? MB.d.error("Formatting the code will go beyond the character limit.") : MB.d.value(lB)
+        }(BB, 0, TB, cT, yB);
+        if (pB.isError()) return void DB({
+          message: pB.asError().message,
           type: "warning"
         });
-        const XJ = eJ.getValue();
-        XJ && (nc.current.dispatch({
+        const lB = pB.getValue();
+        lB && (DT.current.dispatch({
           changes: {
             from: 0,
-            to: FJ.length,
-            insert: XJ
+            to: VB.length,
+            insert: lB
           },
           selection: {
-            anchor: XJ.length
+            anchor: lB.length
           }
-        }), Vc(JJ, Hc, XJ), AJ(XJ))
+        }), fT(BB, cT, lB), JB(lB))
       }));
-      const pc = (0, XJ.useMemo)((() => {
-        if (!Uc) return [];
+      const QT = (0, lB.useMemo)((() => {
+        if (!yT) return [];
         const {
-          ef: JJ,
-          fsMap: ZJ
-        } = Uc;
-        ! function(JJ, cJ, ZJ, FJ) {
-          if (JJ.getSourceFile(ZJ)) return;
-          const UJ = FJ || "\n";
-          cJ.set(ZJ, UJ), JJ.createFile(ZJ, UJ)
-        }(JJ, ZJ, Hc, (oJ ? Ic.current : mc.current) || "\n");
-        const XJ = cJ && Kc(oJ ? null !== lJ && void 0 !== lJ ? lJ : "index.ts" : tJ),
-          AJ = [(0, UJ.c)({
+          GL: BB,
+          fsMap: dB
+        } = yT;
+        ! function(BB, TB, dB, VB) {
+          if (BB.getSourceFile(dB)) return;
+          const yB = VB || "\n";
+          TB.set(dB, yB), BB.createFile(dB, yB)
+        }(BB, dB, cT, (nB ? wT.current : iT.current) || "\n");
+        const lB = TB && sT(nB ? null !== eB && void 0 !== eB ? eB : "index.ts" : bB),
+          JB = [(0, yB.d)({
             jsx: !1,
-            typescript: XJ
-          }), eJ.e.highest(eJ.b.domEventHandlers({
-            keydown: JJ => "Escape" === JJ.key ? (vc.current(), JJ.stopPropagation(), !0) : (JJ.stopPropagation(), !1)
-          })), (0, FJ.e)({
-            override: [Sc(JJ, Hc)]
-          }), MJ.k.fromClass(class {
-            constructor(JJ) {
-              this.view = JJ, this.timeout = null, this.scheduleParse()
+            typescript: lB
+          }), pB.d.highest(pB.c.domEventHandlers({
+            keydown: BB => "Escape" === BB.key ? (mT.current(), BB.stopPropagation(), !0) : (BB.stopPropagation(), !1)
+          })), (0, VB.e)({
+            override: [zT(BB, cT)]
+          }), UB.n.fromClass(class {
+            constructor(BB) {
+              this.view = BB, this.timeout = null, this.scheduleParse()
             }
-            update(JJ) {
-              (JJ.docChanged || JJ.viewportChanged) && this.scheduleParse()
+            update(BB) {
+              (BB.docChanged || BB.viewportChanged) && this.scheduleParse()
             }
             destroy() {
               null !== this.timeout && (clearTimeout(this.timeout), this.timeout = null)
@@ -843,215 +843,215 @@ export const modules = {
             scheduleParse() {
               null === this.timeout && (this.timeout = setTimeout((() => {
                 this.timeout = null;
-                const JJ = this.view.viewport.to;
-                (0, pJ.qb)(this.view.state, JJ) || (0, pJ.P)(this.view, JJ, dJ) || this.scheduleParse()
-              }), zJ))
+                const BB = this.view.viewport.to;
+                (0, QB.gb)(this.view.state, BB) || (0, QB.I)(this.view, BB, RB) || this.scheduleParse()
+              }), aB))
             }
-          }), eJ.b.lineWrapping, eJ.k.define({
-            create: Mc(JJ, uJ, Hc),
-            update(cJ, ZJ) {
-              const FJ = ZJ.effects.some((JJ => JJ.is(Wc)));
-              return ZJ.docChanged || ZJ.selection || FJ ? (Vc(JJ, Hc, ZJ.state.doc.toString() || " "), Mc(JJ, uJ, Hc)(ZJ.state)) : cJ
+          }), pB.c.lineWrapping, pB.g.define({
+            create: UT(BB, CB, cT),
+            update(TB, dB) {
+              const VB = dB.effects.some((BB => BB.is(rT)));
+              return dB.docChanged || dB.selection || VB ? (fT(BB, cT, dB.state.doc.toString() || " "), UT(BB, CB, cT)(dB.state)) : TB
             },
-            provide: JJ => eJ.t.computeN([JJ], (cJ => cJ.field(JJ)))
-          }), (0, eJ.s)(bc(JJ, Hc)), (0, xJ.e)(yc(cJ, JJ, Hc)), eJ.n.fromClass(class {
-            constructor(JJ) {
-              this.view = JJ, this.searchPanel = null
+            provide: BB => pB.r.computeN([BB], (TB => TB.field(BB)))
+          }), (0, pB.p)(FT(BB, cT)), (0, EB.h)(MT(TB, BB, cT)), pB.k.fromClass(class {
+            constructor(BB) {
+              this.view = BB, this.searchPanel = null
             }
-            update(JJ) {
-              const cJ = JJ.view.dom.querySelector(".cm-search");
-              if (cJ !== this.searchPanel) {
-                if (this.searchPanel = cJ, !this.searchPanel) return;
-                this.searchPanel.addEventListener("keydown", (JJ => {
-                  "Escape" === JJ.key && (0, fJ.c)(this.view), JJ.stopPropagation()
+            update(BB) {
+              const TB = BB.view.dom.querySelector(".cm-search");
+              if (TB !== this.searchPanel) {
+                if (this.searchPanel = TB, !this.searchPanel) return;
+                this.searchPanel.addEventListener("keydown", (BB => {
+                  "Escape" === BB.key && (0, HB.d)(this.view), BB.stopPropagation()
                 }))
               }
             }
           })];
-        Zc && !oJ && AJ.push(hc(cJ ? null !== tJ && void 0 !== tJ ? tJ : mJ.g : Xc.d, Fc));
-        const qJ = Gc.current;
-        if (qJ && !oJ) {
-          AJ.push(... function(JJ, cJ, ZJ, FJ, UJ) {
-            let eJ = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5];
-            const XJ = (0, QJ.x)(ZJ),
-              AJ = MJ.k.fromClass(class {
-                constructor(JJ) {
-                  this.view = JJ, this.pushing = !1, this.pushTimeout = null, this.pushDelayTimeout = null, this.cursorTimeout = null, this.lastPushTime = 0, this.pulling = !1, this.pullPending = !1, this.lastCursorSent = 0, this.destroyed = !1, this.subToken = void 0, this.subToken = WJ.i.subscribe("codeCollab", (JJ => {
-                    JJ.docKey === XJ && JJ.type === QJ.g.Updates && (JJ.updates ? this.applyUpdates(JJ.updates) : this.pull())
+        dT && !nB && JB.push(kT(TB ? null !== bB && void 0 !== bB ? bB : iB.f : lT.c, VT));
+        const YB = uT.current;
+        if (YB && !nB) {
+          JB.push(... function(BB, TB, dB, VB, yB) {
+            let pB = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5];
+            const lB = (0, NB.A)(dB),
+              JB = UB.n.fromClass(class {
+                constructor(BB) {
+                  this.view = BB, this.pushing = !1, this.pushTimeout = null, this.pushDelayTimeout = null, this.cursorTimeout = null, this.lastPushTime = 0, this.pulling = !1, this.pullPending = !1, this.lastCursorSent = 0, this.destroyed = !1, this.subToken = void 0, this.subToken = rB.h.subscribe("codeCollab", (BB => {
+                    BB.docKey === lB && BB.type === NB.g.Updates && (BB.updates ? this.applyUpdates(BB.updates) : this.pull())
                   })), this.pull()
                 }
-                applyUpdates(JJ) {
-                  const cJ = JSON.parse(JJ).map((JJ => ({
-                    clientID: JJ.clientID,
-                    changes: IJ.ChangeSet.fromJSON(JJ.changes)
+                applyUpdates(BB) {
+                  const TB = JSON.parse(BB).map((BB => ({
+                    clientID: BB.clientID,
+                    changes: wB.ChangeSet.fromJSON(BB.changes)
                   })));
-                  cJ.length > 0 && (this.view.dispatch((0, SJ.f)(this.view.state, cJ)), UJ && UJ(this.view.state.doc.toString())), this.clearPushState(), this.push()
+                  TB.length > 0 && (this.view.dispatch((0, zB.m)(this.view.state, TB)), yB && yB(this.view.state.doc.toString())), this.clearPushState(), this.push()
                 }
                 clearPushState() {
                   this.pushing = !1, this.pushTimeout && (clearTimeout(this.pushTimeout), this.pushTimeout = null), this.pushDelayTimeout && (clearTimeout(this.pushDelayTimeout), this.pushDelayTimeout = null)
                 }
-                update(JJ) {
-                  eJ && (JJ.docChanged && this.push(), this.sendCursor())
+                update(BB) {
+                  pB && (BB.docChanged && this.push(), this.sendCursor())
                 }
                 push() {
-                  const JJ = (0, SJ.i)(this.view.state);
-                  if (this.pushing || !JJ.length) return;
-                  const cJ = Date.now() - this.lastPushTime;
-                  if (cJ < kJ) return void(this.pushDelayTimeout || (this.pushDelayTimeout = setTimeout((() => {
+                  const BB = (0, zB.o)(this.view.state);
+                  if (this.pushing || !BB.length) return;
+                  const TB = Date.now() - this.lastPushTime;
+                  if (TB < PB) return void(this.pushDelayTimeout || (this.pushDelayTimeout = setTimeout((() => {
                     this.pushDelayTimeout = null, this.push()
-                  }), kJ - cJ)));
+                  }), PB - TB)));
                   this.pushing = !0, this.lastPushTime = Date.now(), this.pushTimeout = setTimeout((() => {
                     this.clearPushState(), this.push()
-                  }), HJ);
-                  const ZJ = (0, SJ.d)(this.view.state),
-                    UJ = JJ.map((JJ => ({
-                      clientID: JJ.clientID,
-                      changes: JJ.changes.toJSON()
+                  }), cB);
+                  const dB = (0, zB.i)(this.view.state),
+                    yB = BB.map((BB => ({
+                      clientID: BB.clientID,
+                      changes: BB.changes.toJSON()
                     }))),
-                    eJ = JSON.stringify(UJ);
-                  eJ.length <= QJ.k ? bJ.gameBridge.send("sendCodeCollab", {
-                    JJ: QJ.e.Push,
-                    cJ: XJ,
-                    ZJ: ZJ,
-                    eJ: eJ
-                  }) : (0, gJ.postJsonWithMetricsCookiesAndJsonResponse)(`${FJ.gsUrl}/code/collab-push`, wJ.l["collab-push"].toBuffer({
-                    gameNameWithVariation: FJ.gameNameWithVariation,
-                    lobbyName: FJ.lobbyName,
-                    docKey: XJ,
-                    version: ZJ,
-                    updates: eJ
+                    pB = JSON.stringify(yB);
+                  pB.length <= NB.i ? FB.gameBridge.send("sendCodeCollab", {
+                    Vp: NB.d.Push,
+                    yp: lB,
+                    lp: dB,
+                    kp: pB
+                  }) : (0, IB.postJsonWithMetricsCookiesAndJsonResponse)(`${VB.gsUrl}/code/collab-push`, KB.m["collab-push"].toBuffer({
+                    gameNameWithVariation: VB.gameNameWithVariation,
+                    lobbyName: VB.lobbyName,
+                    docKey: lB,
+                    version: dB,
+                    updates: pB
                   }), {
                     retries: 0
-                  }).catch((JJ => {
-                    console.error("[CodeCollab] HTTP push failed", JJ)
+                  }).catch((BB => {
+                    console.error("[CodeCollab] HTTP push failed", BB)
                   }))
                 }
                 pull() {
                   if (this.destroyed) return;
                   if (this.pulling) return void(this.pullPending = !0);
                   this.pulling = !0, this.pullPending = !1;
-                  const JJ = (0, SJ.d)(this.view.state);
-                  (0, gJ.postJsonWithMetricsCookiesAndJsonResponse)(`${FJ.gsUrl}/code/collab-pull`, wJ.l["collab-pull"].toBuffer({
-                    gameNameWithVariation: FJ.gameNameWithVariation,
-                    lobbyName: FJ.lobbyName,
-                    docKey: XJ,
-                    fromVersion: JJ
+                  const BB = (0, zB.i)(this.view.state);
+                  (0, IB.postJsonWithMetricsCookiesAndJsonResponse)(`${VB.gsUrl}/code/collab-pull`, KB.m["collab-pull"].toBuffer({
+                    gameNameWithVariation: VB.gameNameWithVariation,
+                    lobbyName: VB.lobbyName,
+                    docKey: lB,
+                    fromVersion: BB
                   }), {
                     retries: 1
-                  }).then((JJ => {
-                    this.destroyed || (JJ.fullDoc ? WJ.i.Uf("codeCollabRejoin", {
-                      docKey: XJ,
-                      doc: JJ.fullDoc,
-                      version: JJ.version
-                    }) : this.applyUpdates(JJ.updates))
-                  })).catch((JJ => {
-                    console.error("[CodeCollab] Pull failed", JJ)
+                  }).then((BB => {
+                    this.destroyed || (BB.fullDoc ? rB.h.yH("codeCollabRejoin", {
+                      docKey: lB,
+                      doc: BB.fullDoc,
+                      version: BB.version
+                    }) : this.applyUpdates(BB.updates))
+                  })).catch((BB => {
+                    console.error("[CodeCollab] Pull failed", BB)
                   })).finally((() => {
                     this.pulling = !1, this.pullPending && this.pull()
                   }))
                 }
                 sendCursor() {
-                  const JJ = Date.now();
-                  if (JJ - this.lastCursorSent < PJ) return void(this.cursorTimeout || (this.cursorTimeout = setTimeout((() => {
+                  const BB = Date.now();
+                  if (BB - this.lastCursorSent < SB) return void(this.cursorTimeout || (this.cursorTimeout = setTimeout((() => {
                     this.cursorTimeout = null, this.sendCursor()
-                  }), PJ)));
-                  this.lastCursorSent = JJ;
-                  const cJ = this.view.state.selection.main;
-                  bJ.gameBridge.send("sendCodeCollab", {
-                    JJ: QJ.e.Cursor,
-                    cJ: XJ,
-                    jJ: cJ.anchor,
-                    YJ: cJ.head
+                  }), SB)));
+                  this.lastCursorSent = BB;
+                  const TB = this.view.state.selection.main;
+                  FB.gameBridge.send("sendCodeCollab", {
+                    Vp: NB.d.Cursor,
+                    yp: lB,
+                    Hp: TB.anchor,
+                    Ep: TB.head
                   })
                 }
                 destroy() {
-                  this.destroyed = !0, WJ.i.unsubscribe(this.subToken), this.clearPushState(), this.cursorTimeout && clearTimeout(this.cursorTimeout)
+                  this.destroyed = !0, rB.h.unsubscribe(this.subToken), this.clearPushState(), this.cursorTimeout && clearTimeout(this.cursorTimeout)
                 }
               });
-            return [(0, SJ.b)({
-              startVersion: JJ,
-              clientID: cJ
-            }), AJ]
-          }(qc, jc, qJ.docKey, qJ.httpConfig, (JJ => {
-            var cJ;
-            null === (cJ = sc.current) || void 0 === cJ || cJ.call(sc, JJ)
-          }), DJ));
-          const JJ = function(JJ, cJ) {
-            const ZJ = (0, QJ.x)(JJ);
+            return [(0, zB.e)({
+              startVersion: BB,
+              clientID: TB
+            }), JB]
+          }(YT, gT, YB.docKey, YB.httpConfig, (BB => {
+            var TB;
+            null === (TB = OT.current) || void 0 === TB || TB.call(OT, BB)
+          }), LB));
+          const BB = function(BB, TB) {
+            const dB = (0, NB.A)(BB);
             return {
-              extensions: [RJ],
-              connect(JJ) {
-                if (cJ) {
-                  const ZJ = cJ.map((JJ => OJ.of({
-                    playerId: JJ.playerId,
-                    playerName: JJ.playerName,
-                    colour: JJ.colour,
-                    anchor: JJ.anchor,
-                    head: JJ.head,
+              extensions: [qB],
+              connect(BB) {
+                if (TB) {
+                  const dB = TB.map((BB => XB.of({
+                    playerId: BB.playerId,
+                    playerName: BB.playerName,
+                    colour: BB.colour,
+                    anchor: BB.anchor,
+                    head: BB.head,
                     lastMoved: Date.now()
                   })));
-                  ZJ.length > 0 && JJ.dispatch({
-                    effects: ZJ
+                  dB.length > 0 && BB.dispatch({
+                    effects: dB
                   })
                 }
-                const FJ = WJ.i.subscribe("codeCollab", (cJ => {
-                    if (cJ.docKey === ZJ)
-                      if (cJ.type === QJ.g.RemoteCursor) JJ.dispatch({
-                        effects: OJ.of({
-                          playerId: cJ.playerId,
-                          playerName: cJ.playerName,
-                          colour: cJ.colour,
-                          anchor: cJ.anchor,
-                          head: cJ.head,
+                const VB = rB.h.subscribe("codeCollab", (TB => {
+                    if (TB.docKey === dB)
+                      if (TB.type === NB.g.RemoteCursor) BB.dispatch({
+                        effects: XB.of({
+                          playerId: TB.playerId,
+                          playerName: TB.playerName,
+                          colour: TB.colour,
+                          anchor: TB.anchor,
+                          head: TB.head,
                           lastMoved: Date.now()
                         })
                       });
-                      else if (cJ.type === QJ.g.Presence) {
-                      const ZJ = JSON.parse(cJ.peers),
-                        FJ = new Set(ZJ.map((JJ => JJ.playerId))),
-                        UJ = JJ.state.field(RJ),
-                        eJ = [];
-                      for (const [JJ] of UJ.cursors) FJ.has(JJ) || eJ.push(TJ.of(JJ));
-                      eJ.length > 0 && JJ.dispatch({
-                        effects: eJ
+                      else if (TB.type === NB.g.Presence) {
+                      const dB = JSON.parse(TB.peers),
+                        VB = new Set(dB.map((BB => BB.playerId))),
+                        yB = BB.state.field(qB),
+                        pB = [];
+                      for (const [BB] of yB.cursors) VB.has(BB) || pB.push(WB.of(BB));
+                      pB.length > 0 && BB.dispatch({
+                        effects: pB
                       })
                     }
                   })),
-                  UJ = setInterval((() => {
-                    JJ.dom.isConnected ? JJ.dispatch({
-                      effects: CJ.of(Date.now())
-                    }) : clearInterval(UJ)
-                  }), NJ);
+                  yB = setInterval((() => {
+                    BB.dom.isConnected ? BB.dispatch({
+                      effects: hB.of(Date.now())
+                    }) : clearInterval(yB)
+                  }), ZB);
                 return () => {
-                  WJ.i.unsubscribe(FJ), clearInterval(UJ)
+                  rB.h.unsubscribe(VB), clearInterval(yB)
                 }
               }
             }
-          }(qJ.docKey, qJ.existingCursors);
-          AJ.push(...JJ.extensions), rc.current = JJ.connect
-        } else rc.current = null;
-        return AJ
-      }), [cJ, Uc, uJ, qc, jc, Hc, tJ, oJ, lJ, DJ, Zc, Fc]);
-      if (!Uc || !LJ && !oJ) return (0, Dc.jsx)("div", {
+          }(YB.docKey, YB.existingCursors);
+          JB.push(...BB.extensions), vT.current = BB.connect
+        } else vT.current = null;
+        return JB
+      }), [TB, yT, CB, YT, gT, cT, bB, nB, eB, LB, dT, VT]);
+      if (!yT || !xB && !nB) return (0, LT.jsx)("div", {
         className: "CodeEditorContent",
-        children: (0, Dc.jsx)(rJ.c, {})
+        children: (0, LT.jsx)(vB.b, {})
       });
-      const dc = oJ ? `plugin-${oJ}-${null!==lJ&&void 0!==lJ?lJ:"index.ts"}` : LJ ? `collab-${LJ.clientID}` : `local-${cJ}`;
-      return (0, Dc.jsx)(eJ.q, {
-        value: oJ ? null !== Jc && void 0 !== Jc ? Jc : "" : ZJ,
-        onChange: AJ,
-        extensions: pc,
+      const RT = nB ? `plugin-${nB}-${null!==eB&&void 0!==eB?eB:"index.ts"}` : xB ? `collab-${xB.clientID}` : `local-${TB}`;
+      return (0, LT.jsx)(pB.o, {
+        value: nB ? null !== BT && void 0 !== BT ? BT : "" : dB,
+        onChange: JB,
+        extensions: QT,
         className: "CodeEditorContent",
-        theme: iJ ? ec : "dark",
-        editable: DJ && !oJ,
-        basicSetup: gc,
-        onCreateEditor: JJ => {
-          var cJ;
-          nc.current = JJ, fc.current = null !== (cJ = null === LJ || void 0 === LJ ? void 0 : LJ.clientID) && void 0 !== cJ ? cJ : null, nc.current.focus(), kc(JJ), xc.current && xc.current(), rc.current && (xc.current = rc.current(JJ))
+        theme: GB ? pT : "dark",
+        editable: LB && !nB,
+        basicSetup: IT,
+        onCreateEditor: BB => {
+          var TB;
+          DT.current = BB, HT.current = null !== (TB = null === xB || void 0 === xB ? void 0 : xB.clientID) && void 0 !== TB ? TB : null, DT.current.focus(), PT(BB), ET.current && ET.current(), vT.current && (ET.current = vT.current(BB))
         }
-      }, dc)
+      }, RT)
     }
   }
 };
 Object.freeze(modules);
-for (const JJ in modules) Object.freeze(modules[JJ]);
+for (const BB in modules) Object.freeze(modules[BB]);

@@ -1,80 +1,80 @@
 export const id = 229;
 export const ids = [229];
 export const modules = {
-  38603: (JJ, cJ, ZJ) => {
-    ZJ.r(cJ), ZJ.d(cJ, {
-      playDocsSound: () => AJ
+  38545: (BB, TB, dB) => {
+    dB.r(TB), dB.d(TB, {
+      playDocsSound: () => JB
     });
-    var FJ = ZJ(4259),
-      UJ = ZJ(35789),
-      eJ = ZJ(1098);
-    const XJ = new Map;
+    var VB = dB(4258),
+      yB = dB(35732),
+      pB = dB(1089);
+    const lB = new Map;
 
-    function AJ(JJ, cJ, ZJ, AJ, qJ) {
-      let jJ, YJ = null,
-        hJ = 0,
-        DJ = 0;
-      if (cJ) jJ = new FJ.Howl({
-        src: [`${eJ.clientSideServerUrls.staticUrl}/sounds/music/${JJ}.mp3`],
+    function JB(BB, TB, dB, JB, YB) {
+      let gB, oB = null,
+        kB = 0,
+        LB = 0;
+      if (TB) gB = new VB.Howl({
+        src: [`${pB.clientSideServerUrls.staticUrl}/sounds/music/${BB}.mp3`],
         html5: !0,
-        volume: ZJ
+        volume: dB
       });
       else {
-        var sJ;
-        YJ = (0, UJ.h)(JJ);
-        const cJ = (0, UJ.g)(YJ),
-          ZJ = null !== (sJ = cJ.sprite[JJ]) && void 0 !== sJ ? sJ : null;
-        if (!ZJ) throw new Error(`Docs sound ${JJ} is not in sprite sheet ${YJ}`);
-        hJ = ZJ[0] / 1e3, DJ = ZJ[1] / 1e3, jJ = XJ.get(YJ), jJ || (jJ = new FJ.Howl({
-          ...cJ,
+        var OB;
+        oB = (0, yB.h)(BB);
+        const TB = (0, yB.g)(oB),
+          dB = null !== (OB = TB.sprite[BB]) && void 0 !== OB ? OB : null;
+        if (!dB) throw new Error(`Docs sound ${BB} is not in sprite sheet ${oB}`);
+        kB = dB[0] / 1e3, LB = dB[1] / 1e3, gB = lB.get(oB), gB || (gB = new VB.Howl({
+          ...TB,
           volume: 1
-        }), XJ.set(YJ, jJ))
+        }), lB.set(oB, gB))
       }
-      const nJ = cJ ? jJ.play() : jJ.play(JJ);
-      jJ.volume(ZJ, nJ), AJ > 0 && jJ.seek(hJ + AJ, nJ);
-      const GJ = () => cJ ? jJ.duration() : DJ;
-      let fJ = !1;
-      const xJ = JJ => {
-          fJ || (fJ = !0, jJ.off("play", rJ, nJ), jJ.off("end", vJ, nJ), jJ.off("loaderror", QJ), jJ.off("playerror", mJ, nJ), cJ && jJ.unload(), qJ.onEnd(JJ))
+      const DB = TB ? gB.play() : gB.play(BB);
+      gB.volume(dB, DB), JB > 0 && gB.seek(kB + JB, DB);
+      const uB = () => TB ? gB.duration() : LB;
+      let HB = !1;
+      const EB = BB => {
+          HB || (HB = !0, gB.off("play", vB, DB), gB.off("end", mB, DB), gB.off("loaderror", NB), gB.off("playerror", iB, DB), TB && gB.unload(), YB.onEnd(BB))
         },
-        rJ = () => {
-          qJ.onPlay(GJ())
+        vB = () => {
+          YB.onPlay(uB())
         },
-        vJ = () => {
-          xJ(!1)
+        mB = () => {
+          EB(!1)
         },
-        mJ = (cJ, ZJ) => {
-          console.error(`Could not play docs sound ${JJ}`, ZJ), xJ(!0)
+        iB = (TB, dB) => {
+          console.error(`Could not play docs sound ${BB}`, dB), EB(!0)
         },
-        QJ = (JJ, cJ) => {
-          null !== YJ && XJ.get(YJ) === jJ && (XJ.delete(YJ), jJ.unload()), mJ(JJ, cJ)
+        NB = (BB, TB) => {
+          null !== oB && lB.get(oB) === gB && (lB.delete(oB), gB.unload()), iB(BB, TB)
         };
-      return jJ.on("play", rJ, nJ), jJ.once("end", vJ, nJ), jJ.once("loaderror", QJ), jJ.once("playerror", mJ, nJ), {
+      return gB.on("play", vB, DB), gB.once("end", mB, DB), gB.once("loaderror", NB), gB.once("playerror", iB, DB), {
         pause: () => {
-          jJ.pause(nJ)
+          gB.pause(DB)
         },
         resume: () => {
-          jJ.play(nJ)
+          gB.play(DB)
         },
-        seek: JJ => {
-          const cJ = GJ(),
-            ZJ = Math.max(JJ, 0);
-          jJ.seek(hJ + (cJ > 0 ? Math.min(ZJ, cJ) : ZJ), nJ)
+        seek: BB => {
+          const TB = uB(),
+            dB = Math.max(BB, 0);
+          gB.seek(kB + (TB > 0 ? Math.min(dB, TB) : dB), DB)
         },
-        Om: () => {
-          const JJ = jJ.seek(nJ);
-          return "number" === typeof JJ ? Math.max(0, JJ - hJ) : 0
+        Dv: () => {
+          const BB = gB.seek(DB);
+          return "number" === typeof BB ? Math.max(0, BB - kB) : 0
         },
-        getDuration: GJ,
-        setVolume: JJ => {
-          jJ.volume(JJ, nJ)
+        getDuration: uB,
+        setVolume: BB => {
+          gB.volume(BB, DB)
         },
         stop: () => {
-          fJ || (jJ.stop(nJ), xJ(!1))
+          HB || (gB.stop(DB), EB(!1))
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const JJ in modules) Object.freeze(modules[JJ]);
+for (const BB in modules) Object.freeze(modules[BB]);

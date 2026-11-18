@@ -1,467 +1,467 @@
 export const id = 288;
 export const ids = [288];
 export const modules = {
-  40499: (JJ, cJ, ZJ) => {
-    ZJ.r(cJ), ZJ.d(cJ, {
-      _ENVTextureLoader: () => yJ
+  40488: (BB, TB, dB) => {
+    dB.r(TB), dB.d(TB, {
+      _ENVTextureLoader: () => MB
     });
-    var FJ = ZJ(38729),
-      UJ = ZJ(36174),
-      eJ = ZJ(36207),
-      XJ = ZJ(38790),
-      AJ = ZJ(38635),
-      qJ = ZJ(38797),
-      jJ = (ZJ(38874), ZJ(40501)),
-      YJ = ZJ(37660),
-      hJ = (ZJ(40512), ZJ(40538), ZJ(38859));
-    const DJ = "image/png",
-      sJ = [134, 22, 135, 150, 246, 214, 150, 54];
+    var VB = dB(38689),
+      yB = dB(36126),
+      pB = dB(36157),
+      lB = dB(38732),
+      JB = dB(38569),
+      YB = dB(38741),
+      gB = (dB(38843), dB(40496)),
+      oB = dB(37651),
+      kB = (dB(40506), dB(40532), dB(38819));
+    const LB = "image/png",
+      OB = [134, 22, 135, 150, 246, 214, 150, 54];
 
-    function nJ(JJ) {
-      const cJ = new DataView(JJ.buffer, JJ.byteOffset, JJ.byteLength);
-      let ZJ = 0;
-      for (let XJ = 0; XJ < sJ.length; XJ++)
-        if (cJ.getUint8(ZJ++) !== sJ[XJ]) return YJ.c.Error("Not a babylon environment map"), null;
-      let FJ, UJ = "";
-      for (; FJ = cJ.getUint8(ZJ++);) UJ += String.fromCharCode(FJ);
-      let eJ = JSON.parse(UJ);
-      return eJ = GJ(eJ), eJ.binaryDataPosition = ZJ, eJ.specular && (eJ.specular.lodGenerationScale = eJ.specular.lodGenerationScale || .8), eJ
+    function DB(BB) {
+      const TB = new DataView(BB.buffer, BB.byteOffset, BB.byteLength);
+      let dB = 0;
+      for (let lB = 0; lB < OB.length; lB++)
+        if (TB.getUint8(dB++) !== OB[lB]) return oB.b.Error("Not a babylon environment map"), null;
+      let VB, yB = "";
+      for (; VB = TB.getUint8(dB++);) yB += String.fromCharCode(VB);
+      let pB = JSON.parse(yB);
+      return pB = uB(pB), pB.binaryDataPosition = dB, pB.specular && (pB.specular.lodGenerationScale = pB.specular.lodGenerationScale || .8), pB
     }
 
-    function GJ(JJ) {
-      if (JJ.version > 2) throw new Error(`Unsupported babylon environment map version "${JJ.version}". Latest supported version is "2".`);
-      return 2 === JJ.version ? JJ : JJ = {
-        ...JJ,
+    function uB(BB) {
+      if (BB.version > 2) throw new Error(`Unsupported babylon environment map version "${BB.version}". Latest supported version is "2".`);
+      return 2 === BB.version ? BB : BB = {
+        ...BB,
         version: 2,
-        imageType: DJ
+        imageType: LB
       }
     }
 
-    function fJ(JJ, cJ) {
-      const ZJ = (cJ = GJ(cJ)).specular;
-      let FJ = Math.log2(cJ.width);
-      if (FJ = Math.round(FJ) + 1, ZJ.mipmaps.length !== 6 * FJ) throw new Error(`Unsupported specular mipmaps number "${ZJ.mipmaps.length}"`);
-      const UJ = new Array(FJ);
-      for (let eJ = 0; eJ < FJ; eJ++) {
-        UJ[eJ] = new Array(6);
-        for (let FJ = 0; FJ < 6; FJ++) {
-          const XJ = ZJ.mipmaps[6 * eJ + FJ];
-          UJ[eJ][FJ] = new Uint8Array(JJ.buffer, JJ.byteOffset + cJ.binaryDataPosition + XJ.position, XJ.length)
+    function HB(BB, TB) {
+      const dB = (TB = uB(TB)).specular;
+      let VB = Math.log2(TB.width);
+      if (VB = Math.round(VB) + 1, dB.mipmaps.length !== 6 * VB) throw new Error(`Unsupported specular mipmaps number "${dB.mipmaps.length}"`);
+      const yB = new Array(VB);
+      for (let pB = 0; pB < VB; pB++) {
+        yB[pB] = new Array(6);
+        for (let VB = 0; VB < 6; VB++) {
+          const lB = dB.mipmaps[6 * pB + VB];
+          yB[pB][VB] = new Uint8Array(BB.buffer, BB.byteOffset + TB.binaryDataPosition + lB.position, lB.length)
         }
       }
-      return UJ
+      return yB
     }
 
-    function xJ(JJ, cJ) {
-      cJ = GJ(cJ);
-      const ZJ = new Array(6),
-        FJ = cJ.irradiance?.irradianceTexture;
-      if (FJ) {
-        if (6 !== FJ.faces.length) throw new Error(`Incorrect irradiance texture faces number "${FJ.faces.length}"`);
-        for (let UJ = 0; UJ < 6; UJ++) {
-          const eJ = FJ.faces[UJ];
-          ZJ[UJ] = new Uint8Array(JJ.buffer, JJ.byteOffset + cJ.binaryDataPosition + eJ.position, eJ.length)
+    function EB(BB, TB) {
+      TB = uB(TB);
+      const dB = new Array(6),
+        VB = TB.irradiance?.irradianceTexture;
+      if (VB) {
+        if (6 !== VB.faces.length) throw new Error(`Incorrect irradiance texture faces number "${VB.faces.length}"`);
+        for (let yB = 0; yB < 6; yB++) {
+          const pB = VB.faces[yB];
+          dB[yB] = new Uint8Array(BB.buffer, BB.byteOffset + TB.binaryDataPosition + pB.position, pB.length)
         }
       }
-      return ZJ
+      return dB
     }
 
-    function rJ(JJ, cJ, ZJ) {
-      const FJ = (ZJ = GJ(ZJ)).specular;
-      if (!FJ) return Promise.resolve([]);
-      JJ._lodGenerationScale = FJ.lodGenerationScale;
-      const eJ = [],
-        XJ = fJ(cJ, ZJ);
-      eJ.push(mJ(JJ, XJ, ZJ.imageType));
-      const AJ = ZJ.irradiance?.irradianceTexture;
-      if (AJ) {
-        const FJ = xJ(cJ, ZJ);
-        let XJ = null;
-        ZJ.irradiance?.irradianceTexture?.dominantDirection && (XJ = UJ.j.FromArray(ZJ.irradiance.irradianceTexture.dominantDirection)), eJ.push(QJ(JJ, FJ, AJ.size, ZJ.imageType, XJ))
+    function vB(BB, TB, dB) {
+      const VB = (dB = uB(dB)).specular;
+      if (!VB) return Promise.resolve([]);
+      BB._lodGenerationScale = VB.lodGenerationScale;
+      const pB = [],
+        lB = HB(TB, dB);
+      pB.push(iB(BB, lB, dB.imageType));
+      const JB = dB.irradiance?.irradianceTexture;
+      if (JB) {
+        const VB = EB(TB, dB);
+        let lB = null;
+        dB.irradiance?.irradianceTexture?.dominantDirection && (lB = yB.p.FromArray(dB.irradiance.irradianceTexture.dominantDirection)), pB.push(NB(BB, VB, JB.size, dB.imageType, lB))
       }
-      return Promise.all(eJ)
+      return Promise.all(pB)
     }
-    async function vJ(JJ, cJ, ZJ, FJ, UJ, eJ, XJ, AJ, qJ, jJ, YJ) {
-      return await new Promise(((hJ, DJ) => {
-        if (ZJ) {
-          const ZJ = cJ.createTexture(null, !0, !0, null, 1, null, (JJ => {
-            DJ(JJ)
-          }), JJ);
-          FJ?.onEffectCreatedObservable.addOnce((AJ => {
-            AJ.executeWhenCompiled((() => {
-              FJ.externalTextureSamplerBinding = !0, FJ.onApply = FJ => {
-                FJ._bindTexture("textureSampler", ZJ), FJ.setFloat2("scale", 1, cJ._features.needsInvertingBitmap && JJ instanceof ImageBitmap ? -1 : 1)
-              }, cJ.scenes.length && (cJ.scenes[0].postProcessManager.directRender([FJ], jJ, !0, eJ, XJ), cJ.restoreDefaultFramebuffer(), ZJ.dispose(), URL.revokeObjectURL(UJ), hJ())
+    async function mB(BB, TB, dB, VB, yB, pB, lB, JB, YB, gB, oB) {
+      return await new Promise(((kB, LB) => {
+        if (dB) {
+          const dB = TB.createTexture(null, !0, !0, null, 1, null, (BB => {
+            LB(BB)
+          }), BB);
+          VB?.onEffectCreatedObservable.addOnce((JB => {
+            JB.executeWhenCompiled((() => {
+              VB.externalTextureSamplerBinding = !0, VB.onApply = VB => {
+                VB._bindTexture("textureSampler", dB), VB.setFloat2("scale", 1, TB._features.needsInvertingBitmap && BB instanceof ImageBitmap ? -1 : 1)
+              }, TB.scenes.length && (TB.scenes[0].postProcessManager.directRender([VB], gB, !0, pB, lB), TB.restoreDefaultFramebuffer(), dB.dispose(), URL.revokeObjectURL(yB), kB())
             }))
           }))
         } else {
-          if (cJ._uploadImageToTexture(YJ, JJ, eJ, XJ), AJ) {
-            const ZJ = qJ[XJ];
-            ZJ && cJ._uploadImageToTexture(ZJ._texture, JJ, eJ, 0)
+          if (TB._uploadImageToTexture(oB, BB, pB, lB), JB) {
+            const dB = YB[lB];
+            dB && TB._uploadImageToTexture(dB._texture, BB, pB, 0)
           }
-          hJ()
+          kB()
         }
       }))
     }
-    async function mJ(JJ, cJ) {
-      let ZJ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : DJ;
-      const FJ = JJ.gn();
-      JJ.format = 5, JJ.type = 0, JJ.generateMipMaps = !0, JJ._cachedAnisotropicFilteringLevel = null, FJ.updateTextureSamplingMode(3, JJ), await EJ(JJ, cJ, !0, ZJ), JJ.isReady = !0
+    async function iB(BB, TB) {
+      let dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : LB;
+      const VB = BB.PD();
+      BB.format = 5, BB.type = 0, BB.generateMipMaps = !0, BB._cachedAnisotropicFilteringLevel = null, VB.updateTextureSamplingMode(3, BB), await tB(BB, TB, !0, dB), BB.isReady = !0
     }
-    async function QJ(JJ, cJ, ZJ) {
-      let FJ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : DJ,
-        UJ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
-      const eJ = JJ.gn(),
-        XJ = new AJ.e(eJ, 5),
-        jJ = new qJ.c(eJ, XJ);
-      JJ._irradianceTexture = jJ, jJ._dominantDirection = UJ, XJ.isCube = !0, XJ.format = 5, XJ.type = 0, XJ.generateMipMaps = !0, XJ._cachedAnisotropicFilteringLevel = null, XJ.generateMipMaps = !0, XJ.width = ZJ, XJ.height = ZJ, eJ.updateTextureSamplingMode(3, XJ), await EJ(XJ, [cJ], !1, FJ), eJ.generateMipMapsForCubemap(XJ), XJ.isReady = !0
+    async function NB(BB, TB, dB) {
+      let VB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : LB,
+        yB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
+      const pB = BB.PD(),
+        lB = new JB.e(pB, 5),
+        gB = new YB.b(pB, lB);
+      BB._irradianceTexture = gB, gB._dominantDirection = yB, lB.isCube = !0, lB.format = 5, lB.type = 0, lB.generateMipMaps = !0, lB._cachedAnisotropicFilteringLevel = null, lB.generateMipMaps = !0, lB.width = dB, lB.height = dB, pB.updateTextureSamplingMode(3, lB), await tB(lB, [TB], !1, VB), pB.generateMipMapsForCubemap(lB), lB.isReady = !0
     }
-    async function EJ(JJ, cJ, UJ) {
-      let XJ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : DJ;
-      if (!(0, FJ.e)(JJ.width)) throw new Error("Texture size must be a power of two");
-      const YJ = (0, eJ.ILog2)(JJ.width) + 1,
-        sJ = JJ.gn();
-      let nJ = !1,
-        GJ = !1,
-        fJ = null,
-        xJ = null,
-        rJ = null;
-      const mJ = sJ.getCaps();
-      mJ.textureLOD ? sJ._features.supportRenderAndCopyToLodForFloatTextures ? mJ.textureHalfFloatRender && mJ.textureHalfFloatLinearFiltering ? (nJ = !0, JJ.type = 2) : mJ.textureFloatRender && mJ.textureFloatLinearFiltering && (nJ = !0, JJ.type = 1) : nJ = !1 : (nJ = !1, GJ = UJ);
-      let QJ = 0;
-      if (nJ) sJ.isWebGPU ? (QJ = 1, await ZJ.e(322).then((() => ZJ(59636)))) : await ZJ.e(304).then((() => ZJ(59641))), fJ = new jJ.e("rgbdDecode", "rgbdDecode", null, null, 1, null, 3, sJ, !1, void 0, JJ.type, void 0, null, !1, void 0, QJ), JJ._isRGBD = !1, JJ.invertY = !1, xJ = sJ.createRenderTargetCubeTexture(JJ.width, {
+    async function tB(BB, TB, yB) {
+      let lB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : LB;
+      if (!(0, VB.i)(BB.width)) throw new Error("Texture size must be a power of two");
+      const oB = (0, pB.ILog2)(BB.width) + 1,
+        OB = BB.PD();
+      let DB = !1,
+        uB = !1,
+        HB = null,
+        EB = null,
+        vB = null;
+      const iB = OB.getCaps();
+      iB.textureLOD ? OB._features.supportRenderAndCopyToLodForFloatTextures ? iB.textureHalfFloatRender && iB.textureHalfFloatLinearFiltering ? (DB = !0, BB.type = 2) : iB.textureFloatRender && iB.textureFloatLinearFiltering && (DB = !0, BB.type = 1) : DB = !1 : (DB = !1, uB = yB);
+      let NB = 0;
+      if (DB) OB.isWebGPU ? (NB = 1, await dB.e(322).then((() => dB(59938)))) : await dB.e(304).then((() => dB(59942))), HB = new gB.e("rgbdDecode", "rgbdDecode", null, null, 1, null, 3, OB, !1, void 0, BB.type, void 0, null, !1, void 0, NB), BB._isRGBD = !1, BB.invertY = !1, EB = OB.createRenderTargetCubeTexture(BB.width, {
         generateDepthBuffer: !1,
         generateMipMaps: !0,
         generateStencilBuffer: !1,
         samplingMode: 3,
-        type: JJ.type,
+        type: BB.type,
         format: 5
       });
-      else if (JJ._isRGBD = !0, JJ.invertY = !0, GJ) {
-        const cJ = 3;
-        rJ = {};
-        const ZJ = JJ._lodGenerationScale,
-          FJ = JJ._lodGenerationOffset;
-        for (let UJ = 0; UJ < cJ; UJ++) {
-          const eJ = (YJ - 1) * ZJ + FJ,
-            XJ = FJ + (eJ - FJ) * (1 - UJ / (cJ - 1)),
-            jJ = Math.round(Math.min(Math.max(XJ, 0), eJ)),
-            hJ = new AJ.e(sJ, 2);
-          hJ.isCube = !0, hJ.invertY = !0, hJ.generateMipMaps = !1, sJ.updateTextureSamplingMode(2, hJ);
-          const DJ = new qJ.c(null);
-          switch (DJ._isCube = !0, DJ._texture = hJ, rJ[jJ] = DJ, UJ) {
+      else if (BB._isRGBD = !0, BB.invertY = !0, uB) {
+        const TB = 3;
+        vB = {};
+        const dB = BB._lodGenerationScale,
+          VB = BB._lodGenerationOffset;
+        for (let yB = 0; yB < TB; yB++) {
+          const pB = (oB - 1) * dB + VB,
+            lB = VB + (pB - VB) * (1 - yB / (TB - 1)),
+            gB = Math.round(Math.min(Math.max(lB, 0), pB)),
+            kB = new JB.e(OB, 2);
+          kB.isCube = !0, kB.invertY = !0, kB.generateMipMaps = !1, OB.updateTextureSamplingMode(2, kB);
+          const LB = new YB.b(null);
+          switch (LB._isCube = !0, LB._texture = kB, vB[gB] = LB, yB) {
             case 0:
-              JJ._lodTextureLow = DJ;
+              BB._lodTextureLow = LB;
               break;
             case 1:
-              JJ._lodTextureMid = DJ;
+              BB._lodTextureMid = LB;
               break;
             case 2:
-              JJ._lodTextureHigh = DJ
+              BB._lodTextureHigh = LB
           }
         }
       }
-      const EJ = [];
-      for (let ZJ = 0; ZJ < cJ.length; ZJ++)
-        for (let FJ = 0; FJ < 6; FJ++) {
-          const UJ = cJ[ZJ][FJ],
-            eJ = (0, hJ.k)(UJ),
-            AJ = new Blob([eJ], {
-              type: XJ
+      const tB = [];
+      for (let dB = 0; dB < TB.length; dB++)
+        for (let VB = 0; VB < 6; VB++) {
+          const yB = TB[dB][VB],
+            pB = (0, kB.j)(yB),
+            JB = new Blob([pB], {
+              type: lB
             }),
-            qJ = URL.createObjectURL(AJ);
-          let jJ;
-          if (sJ._features.forceBitmapOverHTMLImageElement) jJ = sJ.createImageBitmap(AJ, {
+            YB = URL.createObjectURL(JB);
+          let gB;
+          if (OB._features.forceBitmapOverHTMLImageElement) gB = OB.createImageBitmap(JB, {
             premultiplyAlpha: "none",
             colorSpaceConversion: "none"
-          }).then((async cJ => await vJ(cJ, sJ, nJ, fJ, qJ, FJ, ZJ, GJ, rJ, xJ, JJ)));
+          }).then((async TB => await mB(TB, OB, DB, HB, YB, VB, dB, uB, vB, EB, BB)));
           else {
-            const cJ = new Image;
-            cJ.src = qJ, jJ = new Promise(((UJ, eJ) => {
-              cJ.onload = () => {
-                vJ(cJ, sJ, nJ, fJ, qJ, FJ, ZJ, GJ, rJ, xJ, JJ).then((() => UJ())).catch((JJ => {
-                  eJ(JJ)
+            const TB = new Image;
+            TB.src = YB, gB = new Promise(((yB, pB) => {
+              TB.onload = () => {
+                mB(TB, OB, DB, HB, YB, VB, dB, uB, vB, EB, BB).then((() => yB())).catch((BB => {
+                  pB(BB)
                 }))
-              }, cJ.onerror = JJ => {
-                eJ(JJ)
+              }, TB.onerror = BB => {
+                pB(BB)
               }
             }))
           }
-          EJ.push(jJ)
+          tB.push(gB)
         }
-      if (await Promise.all(EJ), cJ.length < YJ) {
-        let ZJ;
-        const FJ = Math.pow(2, YJ - 1 - cJ.length),
-          UJ = FJ * FJ * 4;
-        switch (JJ.type) {
+      if (await Promise.all(tB), TB.length < oB) {
+        let dB;
+        const VB = Math.pow(2, oB - 1 - TB.length),
+          yB = VB * VB * 4;
+        switch (BB.type) {
           case 0:
-            ZJ = new Uint8Array(UJ);
+            dB = new Uint8Array(yB);
             break;
           case 2:
-            ZJ = new Uint16Array(UJ);
+            dB = new Uint16Array(yB);
             break;
           case 1:
-            ZJ = new Float32Array(UJ)
+            dB = new Float32Array(yB)
         }
-        for (let eJ = cJ.length; eJ < YJ; eJ++)
-          for (let cJ = 0; cJ < 6; cJ++) sJ._uploadArrayBufferViewToTexture(xJ?.texture || JJ, ZJ, cJ, eJ)
+        for (let pB = TB.length; pB < oB; pB++)
+          for (let TB = 0; TB < 6; TB++) OB._uploadArrayBufferViewToTexture(EB?.texture || BB, dB, TB, pB)
       }
-      if (xJ) {
-        const cJ = JJ._irradianceTexture;
-        JJ._irradianceTexture = null, sJ._releaseTexture(JJ), xJ._swapAndDie(JJ), JJ._irradianceTexture = cJ
+      if (EB) {
+        const TB = BB._irradianceTexture;
+        BB._irradianceTexture = null, OB._releaseTexture(BB), EB._swapAndDie(BB), BB._irradianceTexture = TB
       }
-      fJ && fJ.dispose(), GJ && (JJ._lodTextureHigh && JJ._lodTextureHigh._texture && (JJ._lodTextureHigh._texture.isReady = !0), JJ._lodTextureMid && JJ._lodTextureMid._texture && (JJ._lodTextureMid._texture.isReady = !0), JJ._lodTextureLow && JJ._lodTextureLow._texture && (JJ._lodTextureLow._texture.isReady = !0))
+      HB && HB.dispose(), uB && (BB._lodTextureHigh && BB._lodTextureHigh._texture && (BB._lodTextureHigh._texture.isReady = !0), BB._lodTextureMid && BB._lodTextureMid._texture && (BB._lodTextureMid._texture.isReady = !0), BB._lodTextureLow && BB._lodTextureLow._texture && (BB._lodTextureLow._texture.isReady = !0))
     }
 
-    function VJ(JJ, cJ) {
-      const ZJ = (cJ = GJ(cJ)).irradiance;
-      if (!ZJ) return;
-      const FJ = new XJ.h;
-      UJ.j.FromArrayToRef(ZJ.x, 0, FJ.x), UJ.j.FromArrayToRef(ZJ.y, 0, FJ.y), UJ.j.FromArrayToRef(ZJ.z, 0, FJ.z), UJ.j.FromArrayToRef(ZJ.xx, 0, FJ.xx), UJ.j.FromArrayToRef(ZJ.yy, 0, FJ.yy), UJ.j.FromArrayToRef(ZJ.zz, 0, FJ.zz), UJ.j.FromArrayToRef(ZJ.yz, 0, FJ.yz), UJ.j.FromArrayToRef(ZJ.zx, 0, FJ.zx), UJ.j.FromArrayToRef(ZJ.xy, 0, FJ.xy), JJ._sphericalPolynomial = FJ
+    function fB(BB, TB) {
+      const dB = (TB = uB(TB)).irradiance;
+      if (!dB) return;
+      const VB = new lB.d;
+      yB.p.FromArrayToRef(dB.x, 0, VB.x), yB.p.FromArrayToRef(dB.y, 0, VB.y), yB.p.FromArrayToRef(dB.z, 0, VB.z), yB.p.FromArrayToRef(dB.xx, 0, VB.xx), yB.p.FromArrayToRef(dB.yy, 0, VB.yy), yB.p.FromArrayToRef(dB.zz, 0, VB.zz), yB.p.FromArrayToRef(dB.yz, 0, VB.yz), yB.p.FromArrayToRef(dB.zx, 0, VB.zx), yB.p.FromArrayToRef(dB.xy, 0, VB.xy), BB._sphericalPolynomial = VB
     }
-    var KJ = ZJ(40542);
-    class yJ {
+    var sB = dB(40538);
+    class MB {
       constructor() {
         this.supportCascades = !1
       }
-      loadCubeData(JJ, cJ, ZJ, FJ, UJ) {
-        if (Array.isArray(JJ)) return;
-        const eJ = nJ(JJ);
-        if (eJ) {
-          cJ.width = eJ.width, cJ.height = eJ.width;
+      loadCubeData(BB, TB, dB, VB, yB) {
+        if (Array.isArray(BB)) return;
+        const pB = DB(BB);
+        if (pB) {
+          TB.width = pB.width, TB.height = pB.width;
           try {
-            (0, KJ.d)(), VJ(cJ, eJ), rJ(cJ, JJ, eJ).then((() => {
-              cJ.isReady = !0, cJ.onLoadedObservable.notifyObservers(cJ), cJ.onLoadedObservable.clear(), FJ && FJ()
-            }), (JJ => {
-              UJ?.("Can not upload environment levels", JJ)
+            (0, sB.e)(), fB(TB, pB), vB(TB, BB, pB).then((() => {
+              TB.isReady = !0, TB.onLoadedObservable.notifyObservers(TB), TB.onLoadedObservable.clear(), VB && VB()
+            }), (BB => {
+              yB?.("Can not upload environment levels", BB)
             }))
-          } catch (XJ) {
-            UJ?.("Can not upload environment file", XJ)
+          } catch (lB) {
+            yB?.("Can not upload environment file", lB)
           }
-        } else UJ && UJ("Can not parse the environment file", null)
+        } else yB && yB("Can not parse the environment file", null)
       }
       loadData() {
         throw ".env not supported in 2d."
       }
     }
   },
-  40542: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => XJ
+  40538: (BB, TB, dB) => {
+    dB.d(TB, {
+      e: () => lB
     });
-    var FJ = ZJ(40476),
-      UJ = ZJ(38797);
-    let eJ = !1;
+    var VB = dB(40463),
+      yB = dB(38741);
+    let pB = !1;
 
-    function XJ() {
-      eJ || (eJ = !0, UJ.c.prototype._sphericalPolynomialTargetSize = 0, UJ.c.prototype.forceSphericalPolynomialsRecompute = function() {
+    function lB() {
+      pB || (pB = !0, yB.b.prototype._sphericalPolynomialTargetSize = 0, yB.b.prototype.forceSphericalPolynomialsRecompute = function() {
         this._texture && (this._texture._sphericalPolynomial = null, this._texture._sphericalPolynomialPromise = null, this._texture._sphericalPolynomialComputed = !1)
-      }, Object.defineProperty(UJ.c.prototype, "sphericalPolynomial", {
+      }, Object.defineProperty(yB.b.prototype, "sphericalPolynomial", {
         get: function() {
           if (this._texture) {
             if (this._texture._sphericalPolynomial || this._texture._sphericalPolynomialComputed) return this._texture._sphericalPolynomial;
-            if (this._texture.isReady) return this._texture._sphericalPolynomialPromise || (this._texture._sphericalPolynomialPromise = FJ.c.ConvertCubeMapTextureToSphericalPolynomial(this), null === this._texture._sphericalPolynomialPromise ? this._texture._sphericalPolynomialComputed = !0 : this._texture._sphericalPolynomialPromise.then((JJ => {
-              this._texture._sphericalPolynomial = JJ, this._texture._sphericalPolynomialComputed = !0
+            if (this._texture.isReady) return this._texture._sphericalPolynomialPromise || (this._texture._sphericalPolynomialPromise = VB.e.ConvertCubeMapTextureToSphericalPolynomial(this), null === this._texture._sphericalPolynomialPromise ? this._texture._sphericalPolynomialComputed = !0 : this._texture._sphericalPolynomialPromise.then((BB => {
+              this._texture._sphericalPolynomial = BB, this._texture._sphericalPolynomialComputed = !0
             }))), null
           }
           return null
         },
-        set: function(JJ) {
-          this._texture && (this._texture._sphericalPolynomial = JJ)
+        set: function(BB) {
+          this._texture && (this._texture._sphericalPolynomial = BB)
         },
         enumerable: !0,
         configurable: !0
       }))
     }
   },
-  40476: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      c: () => jJ
+  40463: (BB, TB, dB) => {
+    dB.d(TB, {
+      e: () => gB
     });
-    var FJ = ZJ(36174),
-      UJ = ZJ(36207),
-      eJ = ZJ(38790),
-      XJ = ZJ(36177),
-      AJ = ZJ(36231);
-    class qJ {
-      constructor(JJ, cJ, ZJ, FJ) {
-        this.name = JJ, this.worldAxisForNormal = cJ, this.worldAxisForFileX = ZJ, this.worldAxisForFileY = FJ
+    var VB = dB(36126),
+      yB = dB(36157),
+      pB = dB(38732),
+      lB = dB(36132),
+      JB = dB(36183);
+    class YB {
+      constructor(BB, TB, dB, VB) {
+        this.name = BB, this.worldAxisForNormal = TB, this.worldAxisForFileX = dB, this.worldAxisForFileY = VB
       }
     }
-    class jJ {
-      static _NearestPow2Floor(JJ) {
-        return JJ <= 1 ? 1 : 1 << Math.floor(Math.log2(JJ))
+    class gB {
+      static _NearestPow2Floor(BB) {
+        return BB <= 1 ? 1 : 1 << Math.floor(Math.log2(BB))
       }
-      static ConvertCubeMapTextureToSphericalPolynomial(JJ) {
-        if (!JJ.isCube) return null;
-        JJ.Qy()?.gn().flushFramebuffer();
-        const cJ = JJ.getSize().width,
-          ZJ = JJ._sphericalPolynomialTargetSize,
-          FJ = ZJ > 0 ? this._NearestPow2Floor(ZJ) : 0,
-          UJ = !JJ.noMipmap && !0 === JJ._texture?.generateMipMaps,
-          eJ = FJ > 0 && FJ < cJ && UJ,
-          XJ = eJ ? Math.max(0, Math.round(Math.log2(cJ / FJ))) : 0,
-          AJ = eJ ? Math.max(1, Math.floor(cJ / Math.pow(2, XJ))) : cJ,
-          qJ = JJ.readPixels(0, XJ, void 0, !1),
-          jJ = JJ.readPixels(1, XJ, void 0, !1);
-        let YJ, hJ;
-        JJ.isRenderTarget ? (YJ = JJ.readPixels(3, XJ, void 0, !1), hJ = JJ.readPixels(2, XJ, void 0, !1)) : (YJ = JJ.readPixels(2, XJ, void 0, !1), hJ = JJ.readPixels(3, XJ, void 0, !1));
-        const DJ = JJ.readPixels(4, XJ, void 0, !1),
-          sJ = JJ.readPixels(5, XJ, void 0, !1),
-          nJ = JJ.gammaSpace,
-          GJ = FJ > 0 && FJ < cJ && !eJ;
-        return new Promise((JJ => {
-          Promise.all([jJ, qJ, YJ, hJ, DJ, sJ]).then((ZJ => {
-            let [UJ, eJ, XJ, qJ, jJ, YJ] = ZJ, hJ = AJ;
-            if (GJ) {
-              const JJ = 4;
-              UJ = this._DownsampleFace(UJ, cJ, FJ, JJ), eJ = this._DownsampleFace(eJ, cJ, FJ, JJ), XJ = this._DownsampleFace(XJ, cJ, FJ, JJ), qJ = this._DownsampleFace(qJ, cJ, FJ, JJ), jJ = this._DownsampleFace(jJ, cJ, FJ, JJ), YJ = this._DownsampleFace(YJ, cJ, FJ, JJ), hJ = FJ
+      static ConvertCubeMapTextureToSphericalPolynomial(BB) {
+        if (!BB.isCube) return null;
+        BB.jU()?.PD().flushFramebuffer();
+        const TB = BB.getSize().width,
+          dB = BB._sphericalPolynomialTargetSize,
+          VB = dB > 0 ? this._NearestPow2Floor(dB) : 0,
+          yB = !BB.noMipmap && !0 === BB._texture?.generateMipMaps,
+          pB = VB > 0 && VB < TB && yB,
+          lB = pB ? Math.max(0, Math.round(Math.log2(TB / VB))) : 0,
+          JB = pB ? Math.max(1, Math.floor(TB / Math.pow(2, lB))) : TB,
+          YB = BB.readPixels(0, lB, void 0, !1),
+          gB = BB.readPixels(1, lB, void 0, !1);
+        let oB, kB;
+        BB.isRenderTarget ? (oB = BB.readPixels(3, lB, void 0, !1), kB = BB.readPixels(2, lB, void 0, !1)) : (oB = BB.readPixels(2, lB, void 0, !1), kB = BB.readPixels(3, lB, void 0, !1));
+        const LB = BB.readPixels(4, lB, void 0, !1),
+          OB = BB.readPixels(5, lB, void 0, !1),
+          DB = BB.gammaSpace,
+          uB = VB > 0 && VB < TB && !pB;
+        return new Promise((BB => {
+          Promise.all([gB, YB, oB, kB, LB, OB]).then((dB => {
+            let [yB, pB, lB, YB, gB, oB] = dB, kB = JB;
+            if (uB) {
+              const BB = 4;
+              yB = this._DownsampleFace(yB, TB, VB, BB), pB = this._DownsampleFace(pB, TB, VB, BB), lB = this._DownsampleFace(lB, TB, VB, BB), YB = this._DownsampleFace(YB, TB, VB, BB), gB = this._DownsampleFace(gB, TB, VB, BB), oB = this._DownsampleFace(oB, TB, VB, BB), kB = VB
             }
-            const DJ = {
-              size: hJ,
-              right: eJ,
-              left: UJ,
-              up: XJ,
-              down: qJ,
-              front: jJ,
-              back: YJ,
+            const LB = {
+              size: kB,
+              right: pB,
+              left: yB,
+              up: lB,
+              down: YB,
+              front: gB,
+              back: oB,
               format: 5,
-              type: UJ instanceof Float32Array ? 1 : 0,
-              gammaSpace: nJ
+              type: yB instanceof Float32Array ? 1 : 0,
+              gammaSpace: DB
             };
-            JJ(this.ConvertCubeMapToSphericalPolynomial(DJ))
+            BB(this.ConvertCubeMapToSphericalPolynomial(LB))
           }))
         }))
       }
-      static _AreaElement(JJ, cJ) {
-        return Math.atan2(JJ * cJ, Math.sqrt(JJ * JJ + cJ * cJ + 1))
+      static _AreaElement(BB, TB) {
+        return Math.atan2(BB * TB, Math.sqrt(BB * BB + TB * TB + 1))
       }
-      static _DownsampleFace(JJ, cJ, ZJ, FJ) {
-        const UJ = JJ instanceof Float32Array ? JJ : Float32Array.from(JJ),
-          eJ = ZJ * ZJ * FJ,
-          XJ = new Float32Array(eJ),
-          AJ = cJ / ZJ,
-          qJ = 1 / (AJ * AJ);
-        for (let YJ = 0; YJ < ZJ; YJ++) {
-          const JJ = Math.floor(YJ * AJ),
-            eJ = Math.floor((YJ + 1) * AJ);
-          for (let jJ = 0; jJ < ZJ; jJ++) {
-            const hJ = Math.floor(jJ * AJ),
-              DJ = Math.floor((jJ + 1) * AJ),
-              sJ = (YJ * ZJ + jJ) * FJ;
-            for (let ZJ = 0; ZJ < FJ; ZJ++) {
-              let AJ = 0;
-              for (let XJ = JJ; XJ < eJ; XJ++)
-                for (let JJ = hJ; JJ < DJ; JJ++) AJ += UJ[(XJ * cJ + JJ) * FJ + ZJ];
-              XJ[sJ + ZJ] = AJ * qJ
+      static _DownsampleFace(BB, TB, dB, VB) {
+        const yB = BB instanceof Float32Array ? BB : Float32Array.from(BB),
+          pB = dB * dB * VB,
+          lB = new Float32Array(pB),
+          JB = TB / dB,
+          YB = 1 / (JB * JB);
+        for (let oB = 0; oB < dB; oB++) {
+          const BB = Math.floor(oB * JB),
+            pB = Math.floor((oB + 1) * JB);
+          for (let gB = 0; gB < dB; gB++) {
+            const kB = Math.floor(gB * JB),
+              LB = Math.floor((gB + 1) * JB),
+              OB = (oB * dB + gB) * VB;
+            for (let dB = 0; dB < VB; dB++) {
+              let JB = 0;
+              for (let lB = BB; lB < pB; lB++)
+                for (let BB = kB; BB < LB; BB++) JB += yB[(lB * TB + BB) * VB + dB];
+              lB[OB + dB] = JB * YB
             }
           }
         }
-        if (JJ instanceof Float32Array) return XJ;
-        const jJ = new(0, JJ.constructor)(eJ);
-        for (let YJ = 0; YJ < eJ; YJ++) jJ[YJ] = XJ[YJ] + .5 | 0;
-        return jJ
+        if (BB instanceof Float32Array) return lB;
+        const gB = new(0, BB.constructor)(pB);
+        for (let oB = 0; oB < pB; oB++) gB[oB] = lB[oB] + .5 | 0;
+        return gB
       }
-      static ConvertCubeMapToSphericalPolynomial(JJ) {
-        let cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const ZJ = cJ > 0 ? this._NearestPow2Floor(cJ) : 0;
-        if (ZJ > 0 && JJ.size > ZJ) {
-          const cJ = 5 === JJ.format ? 4 : 3,
-            FJ = ["right", "left", "up", "down", "front", "back"],
-            UJ = {};
-          for (const eJ of FJ) UJ[eJ] = this._DownsampleFace(JJ[eJ], JJ.size, ZJ, cJ);
-          JJ = {
-            ...JJ,
-            ...UJ,
-            size: ZJ
+      static ConvertCubeMapToSphericalPolynomial(BB) {
+        let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const dB = TB > 0 ? this._NearestPow2Floor(TB) : 0;
+        if (dB > 0 && BB.size > dB) {
+          const TB = 5 === BB.format ? 4 : 3,
+            VB = ["right", "left", "up", "down", "front", "back"],
+            yB = {};
+          for (const pB of VB) yB[pB] = this._DownsampleFace(BB[pB], BB.size, dB, TB);
+          BB = {
+            ...BB,
+            ...yB,
+            size: dB
           }
         }
-        const FJ = new eJ.e;
-        let qJ = 0;
-        const jJ = 2 / JJ.size,
-          YJ = jJ,
-          hJ = .5 * jJ,
-          DJ = hJ - 1;
-        for (let eJ = 0; eJ < 6; eJ++) {
-          const cJ = this._FileFaces[eJ],
-            ZJ = JJ[cJ.name];
-          let sJ = DJ;
-          const nJ = 5 === JJ.format ? 4 : 3;
-          for (let eJ = 0; eJ < JJ.size; eJ++) {
-            let GJ = DJ;
-            for (let YJ = 0; YJ < JJ.size; YJ++) {
-              const DJ = cJ.worldAxisForFileX.scale(GJ).add(cJ.worldAxisForFileY.scale(sJ)).add(cJ.worldAxisForNormal);
-              DJ.normalize();
-              const fJ = this._AreaElement(GJ - hJ, sJ - hJ) - this._AreaElement(GJ - hJ, sJ + hJ) - this._AreaElement(GJ + hJ, sJ - hJ) + this._AreaElement(GJ + hJ, sJ + hJ);
-              let xJ = ZJ[eJ * JJ.size * nJ + YJ * nJ + 0],
-                rJ = ZJ[eJ * JJ.size * nJ + YJ * nJ + 1],
-                vJ = ZJ[eJ * JJ.size * nJ + YJ * nJ + 2];
-              isNaN(xJ) && (xJ = 0), isNaN(rJ) && (rJ = 0), isNaN(vJ) && (vJ = 0), 0 === JJ.type && (xJ /= 255, rJ /= 255, vJ /= 255), JJ.gammaSpace && (xJ = Math.pow((0, UJ.Clamp)(xJ), XJ.j), rJ = Math.pow((0, UJ.Clamp)(rJ), XJ.j), vJ = Math.pow((0, UJ.Clamp)(vJ), XJ.j));
-              const mJ = this.MAX_HDRI_VALUE;
+        const VB = new pB.b;
+        let YB = 0;
+        const gB = 2 / BB.size,
+          oB = gB,
+          kB = .5 * gB,
+          LB = kB - 1;
+        for (let pB = 0; pB < 6; pB++) {
+          const TB = this._FileFaces[pB],
+            dB = BB[TB.name];
+          let OB = LB;
+          const DB = 5 === BB.format ? 4 : 3;
+          for (let pB = 0; pB < BB.size; pB++) {
+            let uB = LB;
+            for (let oB = 0; oB < BB.size; oB++) {
+              const LB = TB.worldAxisForFileX.scale(uB).add(TB.worldAxisForFileY.scale(OB)).add(TB.worldAxisForNormal);
+              LB.normalize();
+              const HB = this._AreaElement(uB - kB, OB - kB) - this._AreaElement(uB - kB, OB + kB) - this._AreaElement(uB + kB, OB - kB) + this._AreaElement(uB + kB, OB + kB);
+              let EB = dB[pB * BB.size * DB + oB * DB + 0],
+                vB = dB[pB * BB.size * DB + oB * DB + 1],
+                mB = dB[pB * BB.size * DB + oB * DB + 2];
+              isNaN(EB) && (EB = 0), isNaN(vB) && (vB = 0), isNaN(mB) && (mB = 0), 0 === BB.type && (EB /= 255, vB /= 255, mB /= 255), BB.gammaSpace && (EB = Math.pow((0, yB.Clamp)(EB), lB.j), vB = Math.pow((0, yB.Clamp)(vB), lB.j), mB = Math.pow((0, yB.Clamp)(mB), lB.j));
+              const iB = this.MAX_HDRI_VALUE;
               if (this.PRESERVE_CLAMPED_COLORS) {
-                const JJ = Math.max(xJ, rJ, vJ);
-                if (JJ > mJ) {
-                  const cJ = mJ / JJ;
-                  xJ *= cJ, rJ *= cJ, vJ *= cJ
+                const BB = Math.max(EB, vB, mB);
+                if (BB > iB) {
+                  const TB = iB / BB;
+                  EB *= TB, vB *= TB, mB *= TB
                 }
-              } else xJ = (0, UJ.Clamp)(xJ, 0, mJ), rJ = (0, UJ.Clamp)(rJ, 0, mJ), vJ = (0, UJ.Clamp)(vJ, 0, mJ);
-              const QJ = new AJ.e(xJ, rJ, vJ);
-              FJ.addLight(DJ, QJ, fJ), qJ += fJ, GJ += jJ
+              } else EB = (0, yB.Clamp)(EB, 0, iB), vB = (0, yB.Clamp)(vB, 0, iB), mB = (0, yB.Clamp)(mB, 0, iB);
+              const NB = new JB.c(EB, vB, mB);
+              VB.addLight(LB, NB, HB), YB += HB, uB += gB
             }
-            sJ += YJ
+            OB += oB
           }
         }
-        const sJ = 6 * (4 * Math.PI) / 6 / qJ;
-        return FJ.scaleInPlace(sJ), FJ.convertIncidentRadianceToIrradiance(), FJ.convertIrradianceToLambertianRadiance(), eJ.h.FromHarmonics(FJ)
+        const OB = 6 * (4 * Math.PI) / 6 / YB;
+        return VB.scaleInPlace(OB), VB.convertIncidentRadianceToIrradiance(), VB.convertIrradianceToLambertianRadiance(), pB.d.FromHarmonics(VB)
       }
     }
-    jJ._FileFaces = [new qJ("right", new FJ.j(1, 0, 0), new FJ.j(0, 0, -1), new FJ.j(0, -1, 0)), new qJ("left", new FJ.j(-1, 0, 0), new FJ.j(0, 0, 1), new FJ.j(0, -1, 0)), new qJ("up", new FJ.j(0, 1, 0), new FJ.j(1, 0, 0), new FJ.j(0, 0, 1)), new qJ("down", new FJ.j(0, -1, 0), new FJ.j(1, 0, 0), new FJ.j(0, 0, -1)), new qJ("front", new FJ.j(0, 0, 1), new FJ.j(1, 0, 0), new FJ.j(0, -1, 0)), new qJ("back", new FJ.j(0, 0, -1), new FJ.j(-1, 0, 0), new FJ.j(0, -1, 0))], jJ.MAX_HDRI_VALUE = 4096, jJ.PRESERVE_CLAMPED_COLORS = !1
+    gB._FileFaces = [new YB("right", new VB.p(1, 0, 0), new VB.p(0, 0, -1), new VB.p(0, -1, 0)), new YB("left", new VB.p(-1, 0, 0), new VB.p(0, 0, 1), new VB.p(0, -1, 0)), new YB("up", new VB.p(0, 1, 0), new VB.p(1, 0, 0), new VB.p(0, 0, 1)), new YB("down", new VB.p(0, -1, 0), new VB.p(1, 0, 0), new VB.p(0, 0, -1)), new YB("front", new VB.p(0, 0, 1), new VB.p(1, 0, 0), new VB.p(0, -1, 0)), new YB("back", new VB.p(0, 0, -1), new VB.p(-1, 0, 0), new VB.p(0, -1, 0))], gB.MAX_HDRI_VALUE = 4096, gB.PRESERVE_CLAMPED_COLORS = !1
   },
-  40512: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => eJ
+  40506: (BB, TB, dB) => {
+    dB.d(TB, {
+      b: () => pB
     });
-    var FJ = ZJ(40501),
-      UJ = ZJ(40520);
-    class eJ {
-      static ExpandRGBDTexture(JJ) {
-        const cJ = JJ._texture;
-        if (!cJ || !JJ.isRGBD) return;
-        const UJ = cJ.gn(),
-          eJ = UJ.getCaps(),
-          XJ = cJ.isReady;
-        let AJ = !1;
-        eJ.textureHalfFloatRender && eJ.textureHalfFloatLinearFiltering ? (AJ = !0, cJ.type = 2) : eJ.textureFloatRender && eJ.textureFloatLinearFiltering && (AJ = !0, cJ.type = 1), AJ && (cJ.isReady = !1, cJ._isRGBD = !1, cJ.invertY = !1);
-        const qJ = async () => {
-          const eJ = UJ.isWebGPU,
-            XJ = eJ ? 1 : 0;
-          cJ.isReady = !1, eJ ? await ZJ.e(322).then((() => ZJ(59636))) : await ZJ.e(304).then((() => ZJ(59641)));
-          const AJ = new FJ.e("rgbdDecode", "rgbdDecode", null, null, 1, null, 3, UJ, !1, void 0, cJ.type, void 0, null, !1, void 0, XJ);
-          AJ.externalTextureSamplerBinding = !0;
-          const qJ = UJ.createRenderTargetTexture(cJ.width, {
+    var VB = dB(40496),
+      yB = dB(40510);
+    class pB {
+      static ExpandRGBDTexture(BB) {
+        const TB = BB._texture;
+        if (!TB || !BB.isRGBD) return;
+        const yB = TB.PD(),
+          pB = yB.getCaps(),
+          lB = TB.isReady;
+        let JB = !1;
+        pB.textureHalfFloatRender && pB.textureHalfFloatLinearFiltering ? (JB = !0, TB.type = 2) : pB.textureFloatRender && pB.textureFloatLinearFiltering && (JB = !0, TB.type = 1), JB && (TB.isReady = !1, TB._isRGBD = !1, TB.invertY = !1);
+        const YB = async () => {
+          const pB = yB.isWebGPU,
+            lB = pB ? 1 : 0;
+          TB.isReady = !1, pB ? await dB.e(322).then((() => dB(59938))) : await dB.e(304).then((() => dB(59942)));
+          const JB = new VB.e("rgbdDecode", "rgbdDecode", null, null, 1, null, 3, yB, !1, void 0, TB.type, void 0, null, !1, void 0, lB);
+          JB.externalTextureSamplerBinding = !0;
+          const YB = yB.createRenderTargetTexture(TB.width, {
             generateDepthBuffer: !1,
             generateMipMaps: !1,
             generateStencilBuffer: !1,
-            samplingMode: cJ.samplingMode,
-            type: cJ.type,
+            samplingMode: TB.samplingMode,
+            type: TB.type,
             format: 5
           });
-          AJ.onEffectCreatedObservable.addOnce((ZJ => {
-            ZJ.executeWhenCompiled((() => {
-              AJ.onApply = JJ => {
-                JJ._bindTexture("textureSampler", cJ), JJ.setFloat2("scale", 1, 1)
-              }, JJ.Qy()?.postProcessManager.directRender([AJ], qJ, !0), UJ.restoreDefaultFramebuffer(), UJ._releaseTexture(cJ), AJ && AJ.dispose(), qJ._swapAndDie(cJ), cJ.isReady = !0
+          JB.onEffectCreatedObservable.addOnce((dB => {
+            dB.executeWhenCompiled((() => {
+              JB.onApply = BB => {
+                BB._bindTexture("textureSampler", TB), BB.setFloat2("scale", 1, 1)
+              }, BB.jU()?.postProcessManager.directRender([JB], YB, !0), yB.restoreDefaultFramebuffer(), yB._releaseTexture(TB), JB && JB.dispose(), YB._swapAndDie(TB), TB.isReady = !0
             }))
           }))
         };
-        AJ && (XJ ? qJ() : JJ.onLoadObservable.addOnce(qJ))
+        JB && (lB ? YB() : BB.onLoadObservable.addOnce(YB))
       }
-      static async EncodeTextureToRGBD(JJ, cJ) {
-        let FJ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        return cJ.gn().isWebGPU ? await ZJ.e(323).then((() => ZJ(59654))) : await ZJ.e(305).then((() => ZJ(59652))), await (0, UJ.c)("rgbdEncode", JJ, cJ, FJ, 1, 5)
+      static async EncodeTextureToRGBD(BB, TB) {
+        let VB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        return TB.PD().isWebGPU ? await dB.e(323).then((() => dB(59964))) : await dB.e(305).then((() => dB(59959))), await (0, yB.d)("rgbdEncode", BB, TB, VB, 1, 5)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const JJ in modules) Object.freeze(modules[JJ]);
+for (const BB in modules) Object.freeze(modules[BB]);

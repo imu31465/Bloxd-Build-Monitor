@@ -1,11 +1,11 @@
 export const id = 155;
 export const ids = [155];
 export const modules = {
-  8243: (JJ, cJ, ZJ) => {
-    ZJ.r(cJ), ZJ.d(cJ, {
-      pageBody: () => FJ
+  8274: (BB, TB, dB) => {
+    dB.r(TB), dB.d(TB, {
+      pageBody: () => VB
     });
-    const FJ = {
+    const VB = {
       whatIs: ["What if the mobs had guns, and so did you? Bloxd Survival with Guns takes the classic Bloxd Survival world and adds craftable guns and armed mobs. You still mine, craft and build in a shared multiplayer world. The difference is you can also craft guns and vehicles to defend your base, explore further and take on whatever comes at you."],
       howToPlay: ["Start off by gathering wood. Your first gun, the M1911, only takes 10 Maple Wood Planks. Mine Messy Stone, iron, gold, diamonds and moonstone to craft stronger Bloxd guns, like the AK-47, the Striker-12, the AWP and even the Minigun.", "Be careful, because the mobs are armed too. Draugr Zombies, Skeletons, Huntresses and Knights all carry guns, and so do Frost mobs and the Cave, Frost and Magma Golems. Tame animals by feeding them and they'll get guns of their own to fight alongside you. Farm pets start off small, while wild and spirit pets carry stronger guns. You can also craft cars, karts, speedboats and hovercraft to get around quickly."],
       features: ["17 Craftable Guns, from the M1911 to the Minigun", "Armed Mobs That Fight Back", "Tame Pets That Fight with Guns", "Craftable Vehicles: Cars, Karts, Speedboats and Hovercraft", "Salvage Guns Back into Materials", "Gunfights on Top of Mining, Crafting and Base Building", "Persistent Multiplayer World"],
@@ -37,4 +37,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const JJ in modules) Object.freeze(modules[JJ]);
+for (const BB in modules) Object.freeze(modules[BB]);

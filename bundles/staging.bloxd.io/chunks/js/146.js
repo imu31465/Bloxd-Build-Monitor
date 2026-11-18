@@ -1,419 +1,419 @@
 export const id = 146;
 export const ids = [146];
 export const modules = {
-  39946: (JJ, cJ, ZJ) => {
-    ZJ.r(cJ), ZJ.d(cJ, {
-      openMobLineupPreview: () => NJ,
-      openMobPreview: () => zJ,
-      openPetPreview: () => OJ
+  39925: (BB, TB, dB) => {
+    dB.r(TB), dB.d(TB, {
+      openMobLineupPreview: () => ZB,
+      openMobPreview: () => aB,
+      openPetPreview: () => XB
     });
-    var FJ = ZJ(38624),
-      UJ = ZJ(38872),
-      eJ = ZJ(39952),
-      XJ = ZJ(36229),
-      AJ = ZJ(36165),
-      qJ = ZJ(39009),
-      jJ = ZJ(39971),
-      YJ = ZJ(37458),
-      hJ = ZJ(36588),
-      DJ = ZJ(36555),
-      sJ = ZJ(36578),
-      nJ = ZJ(37368),
-      GJ = ZJ(37364),
-      fJ = ZJ(37108),
-      xJ = ZJ(37143),
-      rJ = ZJ(37118),
-      vJ = ZJ(36759),
-      mJ = ZJ(2401),
-      QJ = ZJ(36542);
-    ZJ(39980), ZJ(39250), ZJ(39987);
-    const EJ = 22,
-      VJ = 13,
-      KJ = Math.PI - Math.PI / 16,
-      yJ = 6,
-      SJ = Math.PI / 4;
-    let IJ = null;
-    const MJ = {},
-      bJ = new Map;
+    var VB = dB(38562),
+      yB = dB(38840),
+      pB = dB(39929),
+      lB = dB(36180),
+      JB = dB(36119),
+      YB = dB(39001),
+      gB = dB(39949),
+      oB = dB(37420),
+      kB = dB(36529),
+      LB = dB(36491),
+      OB = dB(36515),
+      DB = dB(37320),
+      uB = dB(37311),
+      HB = dB(37038),
+      EB = dB(37090),
+      vB = dB(37059),
+      mB = dB(36702),
+      iB = dB(2385),
+      NB = dB(36479);
+    dB(39955), dB(39222), dB(39959);
+    const tB = 22,
+      fB = 13,
+      sB = Math.PI - Math.PI / 16,
+      MB = 6,
+      zB = Math.PI / 4;
+    let wB = null;
+    const UB = {},
+      FB = new Map;
 
-    function wJ() {
-      if (null !== IJ) return IJ;
-      const JJ = document.createElement("canvas");
-      JJ.classList.add("MobPreviewCanvas");
-      const cJ = new FJ.e(JJ, !0, {
+    function KB() {
+      if (null !== wB) return wB;
+      const BB = document.createElement("canvas");
+      BB.classList.add("MobPreviewCanvas");
+      const TB = new VB.d(BB, !0, {
         preserveDrawingBuffer: !0
       });
-      cJ.LZJ = (0, mJ.h)().XG.engine.LZJ;
-      const ZJ = new UJ.b(cJ);
-      ZJ.clearColor = new XJ.e(0, 0, 0, 0), ZJ.ambientColor = new XJ.Color3(1, 1, 1);
-      const jJ = new eJ.b("yf", Math.PI / 2, Math.PI / 2, EJ, AJ.Pn.Zero(), ZJ),
-        YJ = new qJ.b("light", new AJ.Pn(-.1, 1, -.3), ZJ);
-      return YJ.diffuse = new XJ.Color3(1, 1, 1), YJ.specular = new XJ.Color3(1, 1, 1), YJ.groundColor = new XJ.Color3(.5, .5, .5), IJ = {
-        engine: cJ,
-        iG: ZJ,
-        canvas: JJ,
-        camera: jJ
-      }, IJ
+      TB.fVB = (0, iB.d)().yu.engine.fVB;
+      const dB = new yB.c(TB);
+      dB.clearColor = new lB.d(0, 0, 0, 0), dB.ambientColor = new lB.Color3(1, 1, 1);
+      const gB = new pB.b("tH", Math.PI / 2, Math.PI / 2, tB, JB.RD.Zero(), dB),
+        oB = new YB.c("light", new JB.RD(-.1, 1, -.3), dB);
+      return oB.diffuse = new lB.Color3(1, 1, 1), oB.specular = new lB.Color3(1, 1, 1), oB.groundColor = new lB.Color3(.5, .5, .5), wB = {
+        engine: TB,
+        Gu: dB,
+        canvas: BB,
+        camera: gB
+      }, wB
     }
 
-    function WJ(JJ) {
-      return MJ[JJ] ??= (0, fJ.r)(JJ, wJ().iG, !0).catch((cJ => {
-        throw delete MJ[JJ], cJ
-      })), MJ[JJ]
+    function rB(BB) {
+      return UB[BB] ??= (0, HB.z)(BB, KB().Gu, !0).catch((TB => {
+        throw delete UB[BB], TB
+      })), UB[BB]
     }
 
-    function gJ(JJ) {
-      let cJ = bJ.get(JJ);
-      return cJ || (cJ = vJ.A[JJ].loadModel(wJ().iG, !1).then((JJ => (JJ.GV(!1), JJ)), (cJ => {
-        throw bJ.delete(JJ), cJ
-      })), bJ.set(JJ, cJ)), cJ
+    function IB(BB) {
+      let TB = FB.get(BB);
+      return TB || (TB = mB.A[BB].loadModel(KB().Gu, !1).then((BB => (BB.hN(!1), BB)), (TB => {
+        throw FB.delete(BB), TB
+      })), FB.set(BB, TB)), TB
     }
 
-    function HJ(JJ) {
-      var cJ, ZJ, FJ;
+    function cB(BB) {
+      var TB, dB, VB;
       let {
-        mobType: UJ,
-        variation: eJ,
-        animation: XJ
-      } = JJ, qJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, EJ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-      const yJ = null !== (cJ = null === qJ || void 0 === qJ ? void 0 : qJ.size) && void 0 !== cJ ? cJ : 1,
-        SJ = null !== (ZJ = null === qJ || void 0 === qJ ? void 0 : qJ.cosmetics) && void 0 !== ZJ ? ZJ : [],
-        IJ = null !== (FJ = null === qJ || void 0 === qJ ? void 0 : qJ.cV) && void 0 !== FJ ? FJ : null;
-      let MJ = !1,
-        bJ = null,
-        HJ = null;
+        mobType: yB,
+        variation: pB,
+        animation: lB
+      } = BB, YB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, tB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      const MB = null !== (TB = null === YB || void 0 === YB ? void 0 : YB.size) && void 0 !== TB ? TB : 1,
+        zB = null !== (dB = null === YB || void 0 === YB ? void 0 : YB.cosmetics) && void 0 !== dB ? dB : [],
+        wB = null !== (VB = null === YB || void 0 === YB ? void 0 : YB.mN) && void 0 !== VB ? VB : null;
+      let UB = !1,
+        FB = null,
+        cB = null;
       const {
-        engine: PJ,
-        iG: kJ
-      } = wJ(), pJ = kJ.onBeforeRenderObservable.add((() => {
-        var JJ;
-        null === (JJ = HJ) || void 0 === JJ || JJ.render(PJ.getDeltaTime())
-      })), dJ = null === IJ ? null : gJ(IJ).catch((JJ => (console.error(`Mob preview: could not load ${IJ}`, JJ), null)));
-      return Promise.all([WJ(UJ), dJ]).then((JJ => {
-        var cJ, ZJ, FJ;
-        let [qJ, WJ] = JJ;
-        if (MJ) return;
-        const gJ = (0, mJ.h)().XG.Wy,
+        engine: SB,
+        Gu: PB
+      } = KB(), QB = PB.onBeforeRenderObservable.add((() => {
+        var BB;
+        null === (BB = cB) || void 0 === BB || BB.render(SB.getDeltaTime())
+      })), RB = null === wB ? null : IB(wB).catch((BB => (console.error(`Mob preview: could not load ${wB}`, BB), null)));
+      return Promise.all([rB(yB), RB]).then((BB => {
+        var TB, dB, VB;
+        let [YB, rB] = BB;
+        if (UB) return;
+        const IB = (0, iB.d)().yu.YF,
           {
-            hitBoxDimensions: PJ
-          } = (0, YJ.c)(UJ),
-          kJ = VJ / Math.max(PJ.height, PJ.width);
-        if (bJ = (0, fJ.k)(UJ, kJ * yJ, !0, !0), gJ.setPosition(bJ, EJ, -PJ.height * kJ / 2, 0), gJ.setRotationEulerY(bJ, KJ), qJ.meshApi instanceof rJ.e && SJ.length > 0)
-          for (const [UJ, eJ] of SJ) qJ.meshApi.updatePlayerCosmetic(null, bJ, UJ, eJ, !0);
-        else qJ.meshApi.updateVariation(bJ, UJ, null !== eJ && void 0 !== eJ ? eJ : "default");
-        null !== IJ && null !== WJ && function(JJ, cJ, ZJ, FJ) {
-          var UJ;
-          const eJ = vJ.A[JJ],
-            XJ = (0, nJ.h)();
-          (0, nJ.e)(eJ, null === (UJ = (0, xJ.d)(ZJ).meshMetadata.heldItemPositionParams) || void 0 === UJ ? void 0 : UJ.itemOffset, XJ);
-          const qJ = QJ.e * XJ.GA.y,
-            YJ = XJ.usesQuaternion ? XJ.quaternion : AJ.Quaternion.FromEulerVector(XJ.rotation),
-            hJ = new jJ.e(`${cJ.name}Hand`, wJ().iG);
-          hJ.position.rZJ((0, GJ.b)(XJ.position, YJ, qJ, eJ.heldModelOffsetY())), hJ.rotationQuaternion = YJ, hJ.GA.set(XJ.GA.x, qJ, XJ.GA.z), cJ.clone(`${cJ.name}Held`, hJ).GV(!0);
-          const DJ = (0, mJ.h)().XG.Wy;
-          DJ.attachTransformNode(hJ, FJ, DJ.getNamedNode(FJ, "ArmRightMesh"))
-        }(IJ, WJ, UJ, bJ), gJ.set(bJ, "aOpacity", 1);
-        const pJ = null !== (cJ = (0, xJ.d)(UJ).meshMetadata.lifeformTypeForModelOverride) && void 0 !== cJ ? cJ : UJ;
-        HJ = new sJ.AnimatorState, HJ.thinInstMgr = gJ, HJ.Py = bJ, HJ.fZJ = gJ.aZJ(bJ, 0), HJ.modelLifeformType = pJ, HJ.nodeNameAliases = null !== (ZJ = null === (FJ = (0, hJ.b)(pJ)) || void 0 === FJ ? void 0 : FJ.nodeNameAliases) && void 0 !== ZJ ? ZJ : null, HJ.startAnimation(XJ, DJ.f.Movement)
-      })).catch((JJ => {
-        console.error(`Mob preview: could not load ${UJ}`, JJ)
+            hitBoxDimensions: SB
+          } = (0, oB.d)(yB),
+          PB = fB / Math.max(SB.height, SB.width);
+        if (FB = (0, HB.m)(yB, PB * MB, !0, !0), IB.setPosition(FB, tB, -SB.height * PB / 2, 0), IB.setRotationEulerY(FB, sB), YB.meshApi instanceof vB.e && zB.length > 0)
+          for (const [yB, pB] of zB) YB.meshApi.updatePlayerCosmetic(null, FB, yB, pB, !0);
+        else YB.meshApi.updateVariation(FB, yB, null !== pB && void 0 !== pB ? pB : "default");
+        null !== wB && null !== rB && function(BB, TB, dB, VB) {
+          var yB;
+          const pB = mB.A[BB],
+            lB = (0, DB.o)();
+          (0, DB.i)(pB, null === (yB = (0, EB.c)(dB).meshMetadata.heldItemPositionParams) || void 0 === yB ? void 0 : yB.itemOffset, lB);
+          const YB = NB.b * lB.al.y,
+            oB = lB.usesQuaternion ? lB.quaternion : JB.Quaternion.FromEulerVector(lB.rotation),
+            kB = new gB.c(`${TB.name}Hand`, KB().Gu);
+          kB.position.bdB((0, uB.d)(lB.position, oB, YB, pB.heldModelOffsetY())), kB.rotationQuaternion = oB, kB.al.set(lB.al.x, YB, lB.al.z), TB.clone(`${TB.name}Held`, kB).hN(!0);
+          const LB = (0, iB.d)().yu.YF;
+          LB.attachTransformNode(kB, VB, LB.getNamedNode(VB, "ArmRightMesh"))
+        }(wB, rB, yB, FB), IB.set(FB, "aOpacity", 1);
+        const QB = null !== (TB = (0, EB.c)(yB).meshMetadata.lifeformTypeForModelOverride) && void 0 !== TB ? TB : yB;
+        cB = new OB.AnimatorState, cB.thinInstMgr = IB, cB.kF = FB, cB.jdB = IB.sVB(FB, 0), cB.modelLifeformType = QB, cB.nodeNameAliases = null !== (dB = null === (VB = (0, kB.c)(QB)) || void 0 === VB ? void 0 : VB.nodeNameAliases) && void 0 !== dB ? dB : null, cB.startAnimation(lB, LB.f.Movement)
+      })).catch((BB => {
+        console.error(`Mob preview: could not load ${yB}`, BB)
       })), () => {
-        MJ = !0, kJ.onBeforeRenderObservable.remove(pJ), null !== bJ && (0, mJ.h)().XG.Wy.delete(bJ)
+        UB = !0, PB.onBeforeRenderObservable.remove(QB), null !== FB && (0, iB.d)().yu.YF.delete(FB)
       }
     }
 
-    function PJ(JJ, cJ) {
-      return HJ({
+    function SB(BB, TB) {
+      return cB({
         mobType: "NPC",
         variation: null,
-        animation: JJ.animation
-      }, JJ, cJ)
+        animation: BB.animation
+      }, BB, TB)
     }
 
-    function kJ(JJ) {
+    function PB(BB) {
       let {
-        mobType: cJ,
-        variation: ZJ,
-        metaInfo: FJ,
-        tamed: UJ
-      } = JJ, eJ = !1, XJ = null, AJ = 0;
-      const qJ = (0, mJ.h)(),
-        jJ = qJ.XG.Wy,
-        YJ = JJ => {
-          AJ += SJ * (JJ / 1e3) % (2 * Math.PI), jJ.setRotationEulerY(XJ, AJ)
+        mobType: TB,
+        variation: dB,
+        metaInfo: VB,
+        tamed: yB
+      } = BB, pB = !1, lB = null, JB = 0;
+      const YB = (0, iB.d)(),
+        gB = YB.yu.YF,
+        oB = BB => {
+          JB += zB * (BB / 1e3) % (2 * Math.PI), gB.setRotationEulerY(lB, JB)
         };
-      return WJ(cJ).then((JJ => {
-        if (eJ) return;
-        XJ = (0, fJ.k)(cJ, yJ, !0, !0), jJ.setPosition(XJ, 0, -yJ, 0), JJ.meshApi.updateVariation(XJ, cJ, ZJ);
-        const AJ = {
-          wool: "Sheared" !== FJ,
-          saddle: "Saddled" === FJ,
-          antlers: "Antlers" === FJ,
-          collar: UJ
+      return rB(TB).then((BB => {
+        if (pB) return;
+        lB = (0, HB.m)(TB, MB, !0, !0), gB.setPosition(lB, 0, -MB, 0), BB.meshApi.updateVariation(lB, TB, dB);
+        const JB = {
+          wool: "Sheared" !== VB,
+          saddle: "Saddled" === VB,
+          antlers: "Antlers" === VB,
+          collar: yB
         };
-        for (const [cJ, ZJ] of Object.entries(AJ)) jJ.hasGroup(XJ, cJ) && JJ.meshApi.setMeshGroupVisibility(XJ, cJ, ZJ);
-        jJ.set(XJ, "aOpacity", 1), qJ.on("renderTickBegin", YJ)
-      })).catch((JJ => {
-        console.error(`Pet preview: could not load ${cJ}`, JJ)
+        for (const [TB, dB] of Object.entries(JB)) gB.hasGroup(lB, TB) && BB.meshApi.setMeshGroupVisibility(lB, TB, dB);
+        gB.set(lB, "aOpacity", 1), YB.on("renderTickBegin", oB)
+      })).catch((BB => {
+        console.error(`Pet preview: could not load ${TB}`, BB)
       })), () => {
-        eJ = !0, qJ.off("renderTickBegin", YJ), null !== XJ && jJ.delete(XJ)
+        pB = !0, YB.off("renderTickBegin", oB), null !== lB && gB.delete(lB)
       }
     }
-    class pJ {
-      constructor(JJ, cJ) {
-        this.place = cJ, this.remove = null;
+    class QB {
+      constructor(BB, TB) {
+        this.place = TB, this.remove = null;
         const {
-          engine: ZJ,
-          iG: FJ,
-          canvas: UJ
-        } = wJ();
-        JJ.appendChild(UJ), ZJ.resize(), ZJ.runRenderLoop((() => {
-          FJ.render()
+          engine: dB,
+          Gu: VB,
+          canvas: yB
+        } = KB();
+        BB.appendChild(yB), dB.resize(), dB.runRenderLoop((() => {
+          VB.render()
         }))
       }
-      show(JJ) {
-        var cJ;
-        null === (cJ = this.remove) || void 0 === cJ || cJ.call(this), this.remove = this.place(JJ)
+      show(BB) {
+        var TB;
+        null === (TB = this.remove) || void 0 === TB || TB.call(this), this.remove = this.place(BB)
       }
-      resize(JJ, cJ) {
+      resize(BB, TB) {
         const {
-          engine: ZJ,
-          canvas: FJ
-        } = wJ();
-        FJ.width = JJ, FJ.height = cJ, ZJ.resize()
+          engine: dB,
+          canvas: VB
+        } = KB();
+        VB.width = BB, VB.height = TB, dB.resize()
       }
       close() {
-        var JJ;
-        wJ().engine.stopRenderLoop(), null === (JJ = this.remove) || void 0 === JJ || JJ.call(this), this.remove = null
+        var BB;
+        KB().engine.stopRenderLoop(), null === (BB = this.remove) || void 0 === BB || BB.call(this), this.remove = null
       }
     }
-    class dJ {
-      constructor(JJ) {
+    class RB {
+      constructor(BB) {
         this.preview = void 0, this.view = {
           figures: [],
           shown: []
-        }, this.aspect = 1, this.placed = [], this.preview = new pJ(JJ, (() => () => {}))
+        }, this.aspect = 1, this.placed = [], this.preview = new QB(BB, (() => () => {}))
       }
-      show(JJ) {
-        JJ.figures !== this.view.figures && this.preload(JJ.figures), this.view = JJ, this.place()
+      show(BB) {
+        BB.figures !== this.view.figures && this.preload(BB.figures), this.view = BB, this.place()
       }
-      resize(JJ, cJ) {
-        this.preview.resize(JJ, cJ), this.aspect = JJ / cJ, this.place()
+      resize(BB, TB) {
+        this.preview.resize(BB, TB), this.aspect = BB / TB, this.place()
       }
       close() {
         this.preview.close();
-        for (const JJ of this.placed) null === JJ || void 0 === JJ || JJ.remove();
+        for (const BB of this.placed) null === BB || void 0 === BB || BB.remove();
         this.placed = []
       }
-      preload(JJ) {
-        const cJ = () => {};
-        WJ("NPC").catch(cJ);
+      preload(BB) {
+        const TB = () => {};
+        rB("NPC").catch(TB);
         for (const {
-            cV: ZJ
+            mN: dB
           }
-          of JJ) null !== ZJ && gJ(ZJ).catch(cJ)
+          of BB) null !== dB && IB(dB).catch(TB)
       }
       place() {
         const {
-          figures: JJ,
-          shown: cJ
-        } = this.view, ZJ = JJ.map(((ZJ, FJ) => {
-          var UJ;
-          const eJ = null !== (UJ = this.placed[FJ]) && void 0 !== UJ ? UJ : null;
-          if (!cJ[FJ]) return null === eJ || void 0 === eJ || eJ.remove(), null;
-          const XJ = (AJ = (FJ + .5) / JJ.length, qJ = this.aspect, (.5 - AJ) * (2 * EJ * Math.tan(wJ().camera.fov / 2)) * qJ);
-          var AJ, qJ;
-          return null !== eJ && eJ.figure === ZJ && eJ.x === XJ ? eJ : (null === eJ || void 0 === eJ || eJ.remove(), {
-            figure: ZJ,
-            x: XJ,
-            remove: PJ(ZJ, XJ)
+          figures: BB,
+          shown: TB
+        } = this.view, dB = BB.map(((dB, VB) => {
+          var yB;
+          const pB = null !== (yB = this.placed[VB]) && void 0 !== yB ? yB : null;
+          if (!TB[VB]) return null === pB || void 0 === pB || pB.remove(), null;
+          const lB = (JB = (VB + .5) / BB.length, YB = this.aspect, (.5 - JB) * (2 * tB * Math.tan(KB().camera.fov / 2)) * YB);
+          var JB, YB;
+          return null !== pB && pB.figure === dB && pB.x === lB ? pB : (null === pB || void 0 === pB || pB.remove(), {
+            figure: dB,
+            x: lB,
+            remove: SB(dB, lB)
           })
         }));
-        for (const FJ of this.placed.slice(JJ.length)) null === FJ || void 0 === FJ || FJ.remove();
-        this.placed = ZJ
+        for (const VB of this.placed.slice(BB.length)) null === VB || void 0 === VB || VB.remove();
+        this.placed = dB
       }
     }
 
-    function zJ(JJ) {
-      return new pJ(JJ, HJ)
+    function aB(BB) {
+      return new QB(BB, cB)
     }
 
-    function NJ(JJ) {
-      return new dJ(JJ)
+    function ZB(BB) {
+      return new RB(BB)
     }
 
-    function OJ(JJ) {
-      return new pJ(JJ, kJ)
+    function XB(BB) {
+      return new QB(BB, PB)
     }
   },
-  37754: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => DJ
+  37767: (BB, TB, dB) => {
+    dB.d(TB, {
+      c: () => LB
     });
-    var FJ = ZJ(36086),
-      UJ = ZJ(36102),
-      eJ = ZJ(36349),
-      XJ = ZJ(36107),
-      AJ = ZJ(36093);
+    var VB = dB(36024),
+      yB = dB(36041),
+      pB = dB(36292),
+      lB = dB(36050),
+      JB = dB(36033);
 
-    function qJ(JJ) {
-      return `\n\t\t\t\t${(0,AJ.A)(JJ,"mat2","rotate",[{name:"ang",type:"float"}],`\
+    function YB(BB) {
+      return `\n\t\t\t\t${(0,JB.z)(BB,"mat2","rotate",[{name:"ang",type:"float"}],`\
       n\ t\ t\ t\ t\ t$ {
-        (0, AJ.H)(JJ, "float", "s", "sin(ang)")
+        (0, JB.F)(BB, "float", "s", "sin(ang)")
       }\
       n\ t\ t\ t\ t\ t$ {
-        (0, AJ.H)(JJ, "float", "c", "cos(ang)")
+        (0, JB.F)(BB, "float", "c", "cos(ang)")
       }\
       n\ t\ t\ t\ t\ treturn $ {
-        (0, AJ.p)(JJ, "mat2", "c", "s", "-s", "c")
+        (0, JB.o)(BB, "mat2", "c", "s", "-s", "c")
       };\
       n\ t\ t\ t\ t`)}\n\t\t\t`
     }
 
-    function jJ(JJ, cJ) {
-      let ZJ = (0, AJ.Hb)(JJ, "skele" + (cJ - 1));
-      for (let UJ = cJ - 2; UJ >= 0; UJ--) ZJ = (0, AJ.zb)(JJ, `boneIdx == ${UJ}`, (0, AJ.Hb)(JJ, `skele${UJ}`), ZJ);
-      const FJ = "bone.yz + rotate(bone.x) * pivot - pivot";
-      return `\n\t\t\t\t${(0,AJ.H)(JJ,"int","boneIdx",(0,AJ.Fb)(JJ,"BLOXD_CAPE_MAX_Y - positionUpdated.y"))}\n\t\t\t\t${(0,AJ.H)(JJ,"vec3","bone",ZJ)}\n\t\t\t\t${(0,AJ.H)(JJ,"vec2","pivot",(0,AJ.p)(JJ,"vec2","0.0",`${(0,AJ.Nb)(JJ,"position")}.z`))}\n\t\t\t\t${(0,AJ.gb)(JJ)?`positionUpdated = vec3f(positionUpdated.x, positionUpdated.yz + (${FJ}));`:`positionUpdated.yz += ${FJ};`}\n\t\t`
+    function gB(BB, TB) {
+      let dB = (0, JB.Fb)(BB, "skele" + (TB - 1));
+      for (let yB = TB - 2; yB >= 0; yB--) dB = (0, JB.xb)(BB, `boneIdx == ${yB}`, (0, JB.Fb)(BB, `skele${yB}`), dB);
+      const VB = "bone.yz + rotate(bone.x) * pivot - pivot";
+      return `\n\t\t\t\t${(0,JB.F)(BB,"int","boneIdx",(0,JB.Cb)(BB,"BLOXD_CAPE_MAX_Y - positionUpdated.y"))}\n\t\t\t\t${(0,JB.F)(BB,"vec3","bone",dB)}\n\t\t\t\t${(0,JB.F)(BB,"vec2","pivot",(0,JB.o)(BB,"vec2","0.0",`${(0,JB.Qb)(BB,"position")}.z`))}\n\t\t\t\t${(0,JB.fb)(BB)?`positionUpdated = vec3f(positionUpdated.x, positionUpdated.yz + (${VB}));`:`positionUpdated.yz += ${VB};`}\n\t\t`
     }
 
-    function YJ(JJ) {
-      return `\n\t\t\t\t#ifdef NORMAL\n\t\t\t\tnormalUpdated = ${(0,AJ.p)(JJ,"vec3","normalUpdated.x","rotate(bone.x) * normalUpdated.yz")};\n\t\t\t\t#endif\n\t\t`
+    function oB(BB) {
+      return `\n\t\t\t\t#ifdef NORMAL\n\t\t\t\tnormalUpdated = ${(0,JB.o)(BB,"vec3","normalUpdated.x","rotate(bone.x) * normalUpdated.yz")};\n\t\t\t\t#endif\n\t\t`
     }
-    const hJ = {
+    const kB = {
         x: 0,
         y: 0,
         z: 0,
-        zcJ(JJ, cJ) {
-          return this.x = JJ[cJ], this.y = JJ[cJ + 1], this.z = JJ[cJ + 2], this
+        HdB(BB, TB) {
+          return this.x = BB[TB], this.y = BB[TB + 1], this.z = BB[TB + 2], this
         }
       },
-      DJ = {
+      LB = {
         name: "Cape",
         className: "CapeMaterialPlugin",
         priority: 200,
-        defines: (JJ, cJ) => ({
-          ...(0, FJ.b)("CAPE"),
-          BLOXD_CAPE_BONES: `${JJ}`,
-          BLOXD_CAPE_MAX_Y: (0, UJ.ib)(cJ)
+        defines: (BB, TB) => ({
+          ...(0, VB.c)("CAPE"),
+          BLOXD_CAPE_BONES: `${BB}`,
+          BLOXD_CAPE_MAX_Y: (0, yB.kb)(TB)
         }),
-        getUniforms(JJ) {
-          return (0, eJ.d)(function(JJ) {
-            const cJ = [];
-            for (let ZJ = 0; ZJ < JJ; ZJ++) cJ.push({
-              name: `skele${ZJ}`,
+        getUniforms(BB) {
+          return (0, pB.e)(function(BB) {
+            const TB = [];
+            for (let dB = 0; dB < BB; dB++) TB.push({
+              name: `skele${dB}`,
               type: "highp vec3"
             });
-            return cJ
-          }(this.skeleLen), "vertex", JJ)
+            return TB
+          }(this.skeleLen), "vertex", BB)
         },
-        bind(JJ) {
-          for (let cJ = 0; cJ < this.skeleLen; cJ++) JJ.updateVector3(`skele${cJ}`, hJ.zcJ(this.skele, 3 * cJ))
+        bind(BB) {
+          for (let TB = 0; TB < this.skeleLen; TB++) BB.updateVector3(`skele${TB}`, kB.HdB(this.skele, 3 * TB))
         },
         uniformsVersion() {
           return this.bonesVersion
         },
-        getCustomCode(JJ, cJ) {
-          return "vertex" !== JJ ? null : {
-            CUSTOM_VERTEX_DEFINITIONS: qJ(cJ),
-            CUSTOM_VERTEX_UPDATE_POSITION: jJ(cJ, this.skeleLen),
-            CUSTOM_VERTEX_UPDATE_NORMAL: YJ(cJ)
+        getCustomCode(BB, TB) {
+          return "vertex" !== BB ? null : {
+            CUSTOM_VERTEX_DEFINITIONS: YB(TB),
+            CUSTOM_VERTEX_UPDATE_POSITION: gB(TB, this.skeleLen),
+            CUSTOM_VERTEX_UPDATE_NORMAL: oB(TB)
           }
         }
       };
-    (0, XJ.p)(DJ)
+    (0, lB.i)(LB)
   },
-  37667: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      c: () => YJ,
-      g: () => hJ
+  37661: (BB, TB, dB) => {
+    dB.d(TB, {
+      e: () => oB,
+      i: () => kB
     });
-    var FJ = ZJ(36086),
-      UJ = ZJ(36349),
-      eJ = ZJ(36093),
-      XJ = ZJ(36107);
-    const AJ = "bloxdTextLodBias",
-      qJ = [{
-        name: AJ,
+    var VB = dB(36024),
+      yB = dB(36292),
+      pB = dB(36033),
+      lB = dB(36050);
+    const JB = "bloxdTextLodBias",
+      YB = [{
+        name: JB,
         type: "float"
       }],
-      jJ = "bloxdTextSample",
-      YJ = {
+      gB = "bloxdTextSample",
+      oB = {
         planes: -.5,
         boards: -.5
       },
-      hJ = {
+      kB = {
         name: "TextSampler",
         className: "TextSamplerMaterialPlugin",
         priority: 60,
-        defines: () => (0, FJ.b)("TEXT_SAMPLER"),
-        getUniforms: JJ => (0, UJ.d)(qJ, "fragment", JJ),
-        bind(JJ) {
-          JJ.updateFloat(AJ, this.lodBias)
+        defines: () => (0, VB.c)("TEXT_SAMPLER"),
+        getUniforms: BB => (0, yB.e)(YB, "fragment", BB),
+        bind(BB) {
+          BB.updateFloat(JB, this.lodBias)
         },
         uniformsVersion: () => 0,
-        getCustomCode(JJ, cJ) {
-          if ("fragment" !== JJ) return null;
-          const ZJ = (0, eJ.Q)(cJ, `vec4 ${jJ}(sampler2D s, vec2 uv, float bias)`, `fn ${jJ}(t: texture_2d<f32>, ts: sampler, uv: vec2f, bias: f32) -> vec4f`),
-            FJ = (0, eJ.Q)(cJ, "texture2D(s, uv, bias)", "textureSampleBias(t, ts, uv, bias)"),
-            UJ = `${(0,eJ.$)(cJ,"vDiffuseUV")} + uvOffset`,
-            XJ = (0, eJ.Q)(cJ, `${jJ}(diffuseSampler, ${UJ}, ${(0,eJ.Hb)(cJ,AJ)})`, `${jJ}(diffuseSampler, diffuseSamplerSampler, ${UJ}, ${(0,eJ.Hb)(cJ,AJ)})`);
+        getCustomCode(BB, TB) {
+          if ("fragment" !== BB) return null;
+          const dB = (0, pB.N)(TB, `vec4 ${gB}(sampler2D s, vec2 uv, float bias)`, `fn ${gB}(t: texture_2d<f32>, ts: sampler, uv: vec2f, bias: f32) -> vec4f`),
+            VB = (0, pB.N)(TB, "texture2D(s, uv, bias)", "textureSampleBias(t, ts, uv, bias)"),
+            yB = `${(0,pB.Y)(TB,"vDiffuseUV")} + uvOffset`,
+            lB = (0, pB.N)(TB, `${gB}(diffuseSampler, ${yB}, ${(0,pB.Fb)(TB,JB)})`, `${gB}(diffuseSampler, diffuseSamplerSampler, ${yB}, ${(0,pB.Fb)(TB,JB)})`);
           return {
-            CUSTOM_FRAGMENT_DEFINITIONS: `\n\t\t\t\t${ZJ} {\n\t\t\t\t\t${(0,eJ.H)(cJ,"vec4","texel",FJ)}\n\t\t\t\t\t// 8-bit premultiplied rounding can put the quotient just over 1; only alpha 0 hits the floor,\n\t\t\t\t\t// where the colour is 0 anyway.\n\t\t\t\t\treturn ${(0,eJ.p)(cJ,"vec4",`clamp(texel.rgb / max(texel.a, 1.0 / 255.0), ${(0,eJ.p)(cJ,"vec3","0.0")}, ${(0,eJ.p)(cJ,"vec3","1.0")})`,"texel.a")};\n\t\t\t\t}\n\t\t\t`,
-            [(0, eJ.L)(cJ)]: `baseColor = ${XJ};`
+            CUSTOM_FRAGMENT_DEFINITIONS: `\n\t\t\t\t${dB} {\n\t\t\t\t\t${(0,pB.F)(TB,"vec4","texel",VB)}\n\t\t\t\t\t// 8-bit premultiplied rounding can put the quotient just over 1; only alpha 0 hits the floor,\n\t\t\t\t\t// where the colour is 0 anyway.\n\t\t\t\t\treturn ${(0,pB.o)(TB,"vec4",`clamp(texel.rgb / max(texel.a, 1.0 / 255.0), ${(0,pB.o)(TB,"vec3","0.0")}, ${(0,pB.o)(TB,"vec3","1.0")})`,"texel.a")};\n\t\t\t\t}\n\t\t\t`,
+            [(0, pB.H)(TB)]: `baseColor = ${lB};`
           }
         }
       };
-    (0, XJ.p)(hJ)
+    (0, lB.i)(kB)
   },
-  8114: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      e: () => YJ,
-      i: () => AJ,
-      j: () => qJ
+  8155: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => oB,
+      h: () => JB,
+      i: () => YB
     });
-    var FJ = ZJ(1995),
-      UJ = ZJ(1137),
-      eJ = ZJ(2001);
-    const XJ = ",";
+    var VB = dB(1978),
+      yB = dB(1117),
+      pB = dB(1985);
+    const lB = ",";
 
-    function AJ(JJ) {
-      if (!JJ) return [];
-      const cJ = new Set,
-        ZJ = [];
-      for (const FJ of JJ.split(XJ)) {
-        const JJ = FJ.trim();
-        if ((0, eJ.n)(JJ) && !cJ.has(JJ) && (cJ.add(JJ), ZJ.push(JJ), ZJ.length >= UJ.n)) break
+    function JB(BB) {
+      if (!BB) return [];
+      const TB = new Set,
+        dB = [];
+      for (const VB of BB.split(lB)) {
+        const BB = VB.trim();
+        if ((0, pB.k)(BB) && !TB.has(BB) && (TB.add(BB), dB.push(BB), dB.length >= yB.k)) break
       }
-      return ZJ
+      return dB
     }
 
-    function qJ(JJ) {
-      const cJ = new Set,
-        ZJ = [];
-      for (const FJ of JJ)
-        if ((0, eJ.n)(FJ) && !cJ.has(FJ) && (cJ.add(FJ), ZJ.push(FJ), ZJ.length >= UJ.n)) break;
-      return ZJ.join(XJ)
+    function YB(BB) {
+      const TB = new Set,
+        dB = [];
+      for (const VB of BB)
+        if ((0, pB.k)(VB) && !TB.has(VB) && (TB.add(VB), dB.push(VB), dB.length >= yB.k)) break;
+      return dB.join(lB)
     }
 
-    function jJ() {
-      return qJ(eJ.i)
+    function gB() {
+      return YB(pB.e)
     }
 
-    function YJ(JJ) {
-      var cJ;
-      return "emote" === JJ ? jJ() : null !== (cJ = hJ[JJ][0]) && void 0 !== cJ ? cJ : DJ[JJ]
+    function oB(BB) {
+      var TB;
+      return "emote" === BB ? gB() : null !== (TB = kB[BB][0]) && void 0 !== TB ? TB : LB[BB]
     }
-    const hJ = UJ.s.reduce(((JJ, cJ) => {
-        const ZJ = [];
-        for (const eJ in FJ.g[cJ]) {
-          var UJ;
-          "default" === (null === (UJ = (0, FJ.i)(cJ, eJ)) || void 0 === UJ ? void 0 : UJ.cosmeticPack) && ZJ.push(eJ)
+    const kB = yB.q.reduce(((BB, TB) => {
+        const dB = [];
+        for (const pB in VB.d[TB]) {
+          var yB;
+          "default" === (null === (yB = (0, VB.h)(TB, pB)) || void 0 === yB ? void 0 : yB.cosmeticPack) && dB.push(pB)
         }
-        return JJ[cJ] = ZJ, JJ
+        return BB[TB] = dB, BB
       }), {}),
-      DJ = UJ.s.reduce(((JJ, cJ) => (JJ[cJ] = Object.keys(FJ.g[cJ])[0], JJ)), {})
+      LB = yB.q.reduce(((BB, TB) => (BB[TB] = Object.keys(VB.d[TB])[0], BB)), {})
   }
 };
 Object.freeze(modules);
-for (const JJ in modules) Object.freeze(modules[JJ]);
+for (const BB in modules) Object.freeze(modules[BB]);

@@ -1,285 +1,285 @@
 (() => {
   (() => {
     if ("undefined" !== typeof __webpack_require__) {
-      var JJ = __webpack_require__.u,
-        cJ = __webpack_require__.e,
-        ZJ = {},
-        FJ = {};
-      __webpack_require__.u = function(cJ) {
-        return JJ(cJ) + (ZJ.hasOwnProperty(cJ) ? "?" + ZJ[cJ] : "")
-      }, __webpack_require__.e = function(UJ) {
-        return cJ(UJ).catch((function(cJ) {
-          var eJ = FJ.hasOwnProperty(UJ) ? FJ[UJ] : 4;
-          if (eJ < 1) {
-            var XJ = JJ(UJ);
-            throw cJ.message = "Loading chunk " + UJ + " failed after 4 retries.\n(" + XJ + ")", cJ.request = XJ, ZJ[UJ] = "cache-bust=" + Date.now(), setTimeout((function() {
-              delete FJ[UJ]
-            }), 0), cJ
+      var BB = __webpack_require__.u,
+        TB = __webpack_require__.e,
+        dB = {},
+        VB = {};
+      __webpack_require__.u = function(TB) {
+        return BB(TB) + (dB.hasOwnProperty(TB) ? "?" + dB[TB] : "")
+      }, __webpack_require__.e = function(yB) {
+        return TB(yB).catch((function(TB) {
+          var pB = VB.hasOwnProperty(yB) ? VB[yB] : 4;
+          if (pB < 1) {
+            var lB = BB(yB);
+            throw TB.message = "Loading chunk " + yB + " failed after 4 retries.\n(" + lB + ")", TB.request = lB, dB[yB] = "cache-bust=" + Date.now(), setTimeout((function() {
+              delete VB[yB]
+            }), 0), TB
           }
-          return new Promise((function(JJ) {
-            var cJ = 4 - eJ + 1;
+          return new Promise((function(BB) {
+            var TB = 4 - pB + 1;
             setTimeout((function() {
-              var cJ = "cache-bust=" + Date.now();
-              ZJ[UJ] = cJ, FJ[UJ] = eJ - 1, JJ(__webpack_require__.e(UJ))
-            }), function(JJ) {
-              return 500 * Math.pow(2, JJ)
-            }(cJ))
+              var TB = "cache-bust=" + Date.now();
+              dB[yB] = TB, VB[yB] = pB - 1, BB(__webpack_require__.e(yB))
+            }), function(BB) {
+              return 500 * Math.pow(2, BB)
+            }(TB))
           }))
         }))
       }
     }
   })();
-  const JJ = [15, 15, 15],
-    cJ = {
+  const BB = [15, 15, 15],
+    TB = {
       top: 1,
       left: .85,
       right: .7
     };
 
-  function ZJ(cJ, ZJ, FJ) {
-    let UJ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : JJ => 0 !== cJ[4 * JJ + 3];
-    const eJ = (JJ, cJ) => JJ < 0 || cJ < 0 || JJ >= ZJ || cJ >= ZJ || !UJ(cJ * ZJ + JJ),
-      XJ = [];
-    for (let JJ = 0; JJ < ZJ; JJ++)
-      for (let cJ = 0; cJ < ZJ; cJ++)
-        if (!eJ(cJ, JJ)) JJ: for (let UJ = -FJ; UJ <= FJ; UJ++) {
-          const AJ = FJ - Math.abs(UJ);
-          for (let FJ = -AJ; FJ <= AJ; FJ++)
-            if (eJ(cJ + FJ, JJ + UJ)) {
-              XJ.push(JJ * ZJ + cJ);
-              break JJ
+  function dB(TB, dB, VB) {
+    let yB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : BB => 0 !== TB[4 * BB + 3];
+    const pB = (BB, TB) => BB < 0 || TB < 0 || BB >= dB || TB >= dB || !yB(TB * dB + BB),
+      lB = [];
+    for (let BB = 0; BB < dB; BB++)
+      for (let TB = 0; TB < dB; TB++)
+        if (!pB(TB, BB)) BB: for (let yB = -VB; yB <= VB; yB++) {
+          const JB = VB - Math.abs(yB);
+          for (let VB = -JB; VB <= JB; VB++)
+            if (pB(TB + VB, BB + yB)) {
+              lB.push(BB * dB + TB);
+              break BB
             }
         }
-    for (const AJ of XJ) cJ.set(JJ, 4 * AJ), cJ[4 * AJ + 3] = 255
+    for (const JB of lB) TB.set(BB, 4 * JB), TB[4 * JB + 3] = 255
   }
-  const FJ = Math.SQRT1_2,
-    UJ = Math.sqrt(3) / 2,
-    eJ = {
+  const VB = Math.SQRT1_2,
+    yB = Math.sqrt(3) / 2,
+    pB = {
       boxes: [
         [0, 0, 0, 1, 1, 1]
       ],
       cropFaces: !1
     },
-    XJ = {
+    lB = {
       boxes: [
         [0, 0, 0, 1, .5, 1]
       ],
       cropFaces: !1
     },
-    AJ = {
+    JB = {
       boxes: [
         [0, 0, 0, 1, .5, 1],
         [0, .5, 0, .5, 1, 1]
       ],
       cropFaces: !0
     };
-  const qJ = 1e-6;
+  const YB = 1e-6;
 
-  function jJ(JJ, cJ, ZJ, FJ) {
+  function gB(BB, TB, dB, VB) {
     let {
-      origin: UJ,
-      across: eJ,
-      down: XJ,
-      texture: AJ,
-      rect: [jJ, YJ, hJ, DJ],
-      shade: sJ
-    } = FJ;
-    const nJ = eJ.x * XJ.y - eJ.y * XJ.x;
-    if (Math.abs(nJ) < 1e-9) return;
-    const GJ = [UJ.x, UJ.x + eJ.x, UJ.x + XJ.x, UJ.x + eJ.x + XJ.x],
-      fJ = [UJ.y, UJ.y + eJ.y, UJ.y + XJ.y, UJ.y + eJ.y + XJ.y],
-      xJ = Math.max(0, Math.floor(Math.min(...GJ))),
-      rJ = Math.min(ZJ - 1, Math.ceil(Math.max(...GJ))),
-      vJ = Math.max(0, Math.floor(Math.min(...fJ))),
-      mJ = Math.min(ZJ - 1, Math.ceil(Math.max(...fJ)));
-    for (let QJ = vJ; QJ <= mJ; QJ++)
-      for (let FJ = xJ; FJ <= rJ; FJ++) {
-        const GJ = FJ + .5 - UJ.x,
-          fJ = QJ + .5 - UJ.y,
-          xJ = (GJ * XJ.y - fJ * XJ.x) / nJ,
-          rJ = (eJ.x * fJ - eJ.y * GJ) / nJ;
-        if (xJ < -qJ || xJ > 1 + qJ || rJ < -qJ || rJ > 1 + qJ) continue;
-        const vJ = QJ * ZJ + FJ;
-        cJ[vJ] = 1;
-        const mJ = jJ + Math.min(Math.max(xJ, 0), 1) * (hJ - jJ),
-          EJ = YJ + Math.min(Math.max(rJ, 0), 1) * (DJ - YJ),
-          VJ = Math.min(AJ.width - 1, Math.floor(mJ * AJ.width)),
-          KJ = 4 * (Math.min(AJ.height - 1, Math.floor(EJ * AJ.height)) * AJ.width + VJ),
-          yJ = AJ.pixels[KJ + 3] / 255;
-        if (0 === yJ) continue;
-        const SJ = 4 * vJ,
-          IJ = JJ[SJ + 3] / 255 * (1 - yJ),
-          MJ = yJ + IJ;
-        for (let cJ = 0; cJ < 3; cJ++) JJ[SJ + cJ] = (AJ.pixels[KJ + cJ] * sJ * yJ + JJ[SJ + cJ] * IJ) / MJ;
-        JJ[SJ + 3] = 255 * MJ
+      origin: yB,
+      across: pB,
+      down: lB,
+      texture: JB,
+      rect: [gB, oB, kB, LB],
+      shade: OB
+    } = VB;
+    const DB = pB.x * lB.y - pB.y * lB.x;
+    if (Math.abs(DB) < 1e-9) return;
+    const uB = [yB.x, yB.x + pB.x, yB.x + lB.x, yB.x + pB.x + lB.x],
+      HB = [yB.y, yB.y + pB.y, yB.y + lB.y, yB.y + pB.y + lB.y],
+      EB = Math.max(0, Math.floor(Math.min(...uB))),
+      vB = Math.min(dB - 1, Math.ceil(Math.max(...uB))),
+      mB = Math.max(0, Math.floor(Math.min(...HB))),
+      iB = Math.min(dB - 1, Math.ceil(Math.max(...HB)));
+    for (let NB = mB; NB <= iB; NB++)
+      for (let VB = EB; VB <= vB; VB++) {
+        const uB = VB + .5 - yB.x,
+          HB = NB + .5 - yB.y,
+          EB = (uB * lB.y - HB * lB.x) / DB,
+          vB = (pB.x * HB - pB.y * uB) / DB;
+        if (EB < -YB || EB > 1 + YB || vB < -YB || vB > 1 + YB) continue;
+        const mB = NB * dB + VB;
+        TB[mB] = 1;
+        const iB = gB + Math.min(Math.max(EB, 0), 1) * (kB - gB),
+          tB = oB + Math.min(Math.max(vB, 0), 1) * (LB - oB),
+          fB = Math.min(JB.width - 1, Math.floor(iB * JB.width)),
+          sB = 4 * (Math.min(JB.height - 1, Math.floor(tB * JB.height)) * JB.width + fB),
+          MB = JB.pixels[sB + 3] / 255;
+        if (0 === MB) continue;
+        const zB = 4 * mB,
+          wB = BB[zB + 3] / 255 * (1 - MB),
+          UB = MB + wB;
+        for (let TB = 0; TB < 3; TB++) BB[zB + TB] = (JB.pixels[sB + TB] * OB * MB + BB[zB + TB] * wB) / UB;
+        BB[zB + 3] = 255 * UB
       }
   }
 
-  function YJ(JJ, cJ, ZJ) {
-    const FJ = JJ.get(cJ);
-    if (void 0 === FJ) throw new Error(`no ${ZJ} was sent for ${cJ.slice(0,100)}`);
-    return FJ
+  function oB(BB, TB, dB) {
+    const VB = BB.get(TB);
+    if (void 0 === VB) throw new Error(`no ${dB} was sent for ${TB.slice(0,100)}`);
+    return VB
   }
-  const hJ = {
-      pixelsOf(JJ) {
-        const cJ = new OffscreenCanvas(JJ.width, JJ.height),
-          ZJ = cJ.getContext("2d");
-        if (!ZJ) throw new Error("no 2D context");
-        return ZJ.drawImage(JJ, 0, 0), JJ.close(), {
-          width: cJ.width,
-          height: cJ.height,
-          pixels: ZJ.getImageData(0, 0, cJ.width, cJ.height).data
+  const kB = {
+      pixelsOf(BB) {
+        const TB = new OffscreenCanvas(BB.width, BB.height),
+          dB = TB.getContext("2d");
+        if (!dB) throw new Error("no 2D context");
+        return dB.drawImage(BB, 0, 0), BB.close(), {
+          width: TB.width,
+          height: TB.height,
+          pixels: dB.getImageData(0, 0, TB.width, TB.height).data
         }
       },
-      async encode(JJ, cJ) {
-        const ZJ = new OffscreenCanvas(cJ, cJ),
-          FJ = ZJ.getContext("2d");
-        if (!FJ) throw new Error("no 2D context");
-        FJ.putImageData(new ImageData(JJ, cJ, cJ), 0, 0);
-        const UJ = await ZJ.convertToBlob();
-        return new Promise(((JJ, cJ) => {
-          const ZJ = new FileReader;
-          ZJ.onload = () => {
-            JJ(ZJ.result)
-          }, ZJ.onerror = () => {
-            var JJ;
-            cJ(null !== (JJ = ZJ.error) && void 0 !== JJ ? JJ : new Error("the icon did not encode"))
-          }, ZJ.readAsDataURL(UJ)
+      async encode(BB, TB) {
+        const dB = new OffscreenCanvas(TB, TB),
+          VB = dB.getContext("2d");
+        if (!VB) throw new Error("no 2D context");
+        VB.putImageData(new ImageData(BB, TB, TB), 0, 0);
+        const yB = await dB.convertToBlob();
+        return new Promise(((BB, TB) => {
+          const dB = new FileReader;
+          dB.onload = () => {
+            BB(dB.result)
+          }, dB.onerror = () => {
+            var BB;
+            TB(null !== (BB = dB.error) && void 0 !== BB ? BB : new Error("the icon did not encode"))
+          }, dB.readAsDataURL(yB)
         }))
       }
     },
-    DJ = globalThis.WorkerGlobalScope;
-  void 0 !== DJ && globalThis instanceof DJ && function(JJ, qJ) {
-    const hJ = new Map,
-      DJ = new Map,
-      sJ = (cJ, ZJ, FJ) => {
+    LB = globalThis.WorkerGlobalScope;
+  void 0 !== LB && globalThis instanceof LB && function(BB, YB) {
+    const kB = new Map,
+      LB = new Map,
+      OB = (TB, dB, VB) => {
         (async () => {
           try {
-            JJ.postMessage({
+            BB.postMessage({
               type: "drawn",
-              id: cJ,
-              url: await qJ.encode(FJ(), ZJ)
+              id: TB,
+              url: await YB.encode(VB(), dB)
             })
-          } catch (UJ) {
-            JJ.postMessage({
+          } catch (yB) {
+            BB.postMessage({
               type: "failed",
-              message: String(UJ)
+              message: String(yB)
             })
           }
         })()
       };
-    JJ.onmessage = JJ => {
+    BB.onmessage = BB => {
       let {
-        data: nJ
-      } = JJ;
-      if ("texture" === nJ.type) hJ.set(nJ.url, qJ.pixelsOf(nJ.bitmap));
-      else if ("model" === nJ.type) DJ.set(nJ.name, {
-        geometry: nJ.geometry,
-        texture: qJ.pixelsOf(nJ.bitmap)
+        data: DB
+      } = BB;
+      if ("texture" === DB.type) kB.set(DB.url, YB.pixelsOf(DB.bitmap));
+      else if ("model" === DB.type) LB.set(DB.name, {
+        geometry: DB.geometry,
+        texture: YB.pixelsOf(DB.bitmap)
       });
-      else if ("draw" === nJ.type) {
+      else if ("draw" === DB.type) {
         const {
-          id: JJ,
-          top: qJ,
-          left: DJ,
-          right: GJ,
-          itemType: fJ,
-          size: xJ,
-          outlineWidth: rJ
-        } = nJ;
-        sJ(JJ, xJ, (() => function(JJ, eJ, XJ, AJ) {
-          const qJ = .6 * XJ,
-            YJ = qJ * FJ,
-            hJ = qJ * FJ * .5,
-            DJ = qJ * UJ,
-            sJ = Math.max(...eJ.boxes.map((JJ => JJ[4]))),
-            nJ = YJ / 2 + (XJ - YJ) / 2,
-            GJ = hJ + (XJ - hJ - hJ - sJ * DJ) / 2,
-            fJ = (JJ, cJ, ZJ) => ({
-              x: nJ + (JJ - ZJ) * YJ,
-              y: GJ - hJ + (JJ + ZJ) * hJ + (sJ - cJ) * DJ
+          id: BB,
+          top: YB,
+          left: LB,
+          right: uB,
+          itemType: HB,
+          size: EB,
+          outlineWidth: vB
+        } = DB;
+        OB(BB, EB, (() => function(BB, pB, lB, JB) {
+          const YB = .6 * lB,
+            oB = YB * VB,
+            kB = YB * VB * .5,
+            LB = YB * yB,
+            OB = Math.max(...pB.boxes.map((BB => BB[4]))),
+            DB = oB / 2 + (lB - oB) / 2,
+            uB = kB + (lB - kB - kB - OB * LB) / 2,
+            HB = (BB, TB, dB) => ({
+              x: DB + (BB - dB) * oB,
+              y: uB - kB + (BB + dB) * kB + (OB - TB) * LB
             }),
-            xJ = (JJ, cJ, ZJ, FJ, UJ, XJ) => ({
-              origin: JJ,
+            EB = (BB, TB, dB, VB, yB, lB) => ({
+              origin: BB,
               across: {
-                x: cJ.x - JJ.x,
-                y: cJ.y - JJ.y
+                x: TB.x - BB.x,
+                y: TB.y - BB.y
               },
               down: {
-                x: ZJ.x - JJ.x,
-                y: ZJ.y - JJ.y
+                x: dB.x - BB.x,
+                y: dB.y - BB.y
               },
-              texture: FJ,
-              rect: eJ.cropFaces ? UJ : [0, 0, 1, 1],
-              shade: XJ
+              texture: VB,
+              rect: pB.cropFaces ? yB : [0, 0, 1, 1],
+              shade: lB
             }),
-            rJ = new Uint8ClampedArray(XJ * XJ * 4),
-            vJ = new Uint8Array(XJ * XJ),
-            mJ = cJ;
-          for (const [cJ, ZJ, FJ, UJ, QJ, EJ] of eJ.boxes) {
-            const eJ = xJ(fJ(UJ, QJ, EJ), fJ(UJ, QJ, FJ), fJ(UJ, ZJ, EJ), JJ.right, [1 - EJ, 1 - QJ, 1 - FJ, 1 - ZJ], mJ.right),
-              AJ = xJ(fJ(cJ, QJ, EJ), fJ(UJ, QJ, EJ), fJ(cJ, ZJ, EJ), JJ.left, [cJ, 1 - QJ, UJ, 1 - ZJ], mJ.left),
-              qJ = xJ(fJ(cJ, QJ, FJ), fJ(UJ, QJ, FJ), fJ(cJ, QJ, EJ), JJ.top, [cJ, FJ, UJ, EJ], mJ.top);
-            for (const JJ of [eJ, AJ, qJ]) jJ(rJ, vJ, XJ, JJ)
+            vB = new Uint8ClampedArray(lB * lB * 4),
+            mB = new Uint8Array(lB * lB),
+            iB = TB;
+          for (const [TB, dB, VB, yB, NB, tB] of pB.boxes) {
+            const pB = EB(HB(yB, NB, tB), HB(yB, NB, VB), HB(yB, dB, tB), BB.right, [1 - tB, 1 - NB, 1 - VB, 1 - dB], iB.right),
+              JB = EB(HB(TB, NB, tB), HB(yB, NB, tB), HB(TB, dB, tB), BB.left, [TB, 1 - NB, yB, 1 - dB], iB.left),
+              YB = EB(HB(TB, NB, VB), HB(yB, NB, VB), HB(TB, NB, tB), BB.top, [TB, VB, yB, tB], iB.top);
+            for (const BB of [pB, JB, YB]) gB(vB, mB, lB, BB)
           }
-          return ZJ(rJ, XJ, AJ, (JJ => 1 === vJ[JJ])), rJ
+          return dB(vB, lB, JB, (BB => 1 === mB[BB])), vB
         }({
-          top: YJ(hJ, qJ, "texture"),
-          left: YJ(hJ, DJ, "texture"),
-          right: YJ(hJ, GJ, "texture")
-        }, function(JJ) {
-          return "SlabBlock" === JJ ? XJ : "StairsBlock" === JJ ? AJ : eJ
-        }(fJ), xJ, rJ)))
+          top: oB(kB, YB, "texture"),
+          left: oB(kB, LB, "texture"),
+          right: oB(kB, uB, "texture")
+        }, function(BB) {
+          return "SlabBlock" === BB ? lB : "StairsBlock" === BB ? JB : pB
+        }(HB), EB, vB)))
       } else {
         const {
-          id: JJ,
-          name: cJ,
-          size: FJ,
-          outlineWidth: UJ
-        } = nJ;
-        sJ(JJ, FJ, (() => {
+          id: BB,
+          name: TB,
+          size: VB,
+          outlineWidth: yB
+        } = DB;
+        OB(BB, VB, (() => {
           const {
-            geometry: JJ,
-            texture: eJ
-          } = YJ(DJ, cJ, "model");
-          return function(JJ, cJ, FJ, UJ) {
+            geometry: BB,
+            texture: pB
+          } = oB(LB, TB, "model");
+          return function(BB, TB, VB, yB) {
             const {
-              vertices: eJ,
-              uvs: XJ,
-              indices: AJ,
-              shades: qJ
-            } = JJ, jJ = .03125 * FJ, YJ = FJ - 2 * jJ, hJ = new Float32Array(eJ.length);
-            for (let ZJ = 0; ZJ < eJ.length; ZJ += 3) hJ[ZJ] = jJ + eJ[ZJ] * YJ, hJ[ZJ + 1] = jJ + eJ[ZJ + 1] * YJ, hJ[ZJ + 2] = eJ[ZJ + 2];
-            const DJ = new Float32Array(FJ * FJ).fill(-1 / 0),
-              sJ = new Uint8ClampedArray(FJ * FJ * 4),
-              nJ = 255 * JJ.alphaCutoff;
-            for (let ZJ = 0; ZJ < AJ.length; ZJ += 3) {
-              const [JJ, UJ, eJ] = [AJ[ZJ], AJ[ZJ + 1], AJ[ZJ + 2]], [jJ, YJ, GJ] = [3 * JJ, 3 * UJ, 3 * eJ], [fJ, xJ, rJ, vJ, mJ, QJ] = [hJ[jJ], hJ[jJ + 1], hJ[YJ], hJ[YJ + 1], hJ[GJ], hJ[GJ + 1]], EJ = (rJ - fJ) * (QJ - xJ) - (mJ - fJ) * (vJ - xJ);
-              if (Math.abs(EJ) < 1e-9) continue;
-              const VJ = qJ[ZJ / 3],
-                [KJ, yJ, SJ, IJ, MJ, bJ] = [XJ[2 * JJ], XJ[2 * JJ + 1], XJ[2 * UJ], XJ[2 * UJ + 1], XJ[2 * eJ], XJ[2 * eJ + 1]],
-                wJ = Math.max(0, Math.floor(Math.min(fJ, rJ, mJ))),
-                WJ = Math.min(FJ - 1, Math.ceil(Math.max(fJ, rJ, mJ))),
-                gJ = Math.max(0, Math.floor(Math.min(xJ, vJ, QJ))),
-                HJ = Math.min(FJ - 1, Math.ceil(Math.max(xJ, vJ, QJ)));
-              for (let ZJ = gJ; ZJ <= HJ; ZJ++)
-                for (let JJ = wJ; JJ <= WJ; JJ++) {
-                  const [UJ, eJ] = [JJ + .5, ZJ + .5], XJ = ((UJ - fJ) * (QJ - xJ) - (mJ - fJ) * (eJ - xJ)) / EJ, AJ = ((rJ - fJ) * (eJ - xJ) - (UJ - fJ) * (vJ - xJ)) / EJ, qJ = 1 - XJ - AJ;
-                  if (qJ < 0 || XJ < 0 || AJ < 0) continue;
-                  const wJ = qJ * hJ[jJ + 2] + XJ * hJ[YJ + 2] + AJ * hJ[GJ + 2],
-                    WJ = ZJ * FJ + JJ;
-                  if (wJ <= DJ[WJ]) continue;
-                  const gJ = Math.max(0, Math.min(cJ.width - 1, Math.floor((qJ * KJ + XJ * SJ + AJ * MJ) * cJ.width))),
-                    HJ = 4 * (Math.max(0, Math.min(cJ.height - 1, Math.floor((qJ * yJ + XJ * IJ + AJ * bJ) * cJ.height))) * cJ.width + gJ);
-                  cJ.pixels[HJ + 3] < nJ || (DJ[WJ] = wJ, sJ[4 * WJ] = cJ.pixels[HJ] * VJ, sJ[4 * WJ + 1] = cJ.pixels[HJ + 1] * VJ, sJ[4 * WJ + 2] = cJ.pixels[HJ + 2] * VJ, sJ[4 * WJ + 3] = 255)
+              vertices: pB,
+              uvs: lB,
+              indices: JB,
+              shades: YB
+            } = BB, gB = .03125 * VB, oB = VB - 2 * gB, kB = new Float32Array(pB.length);
+            for (let dB = 0; dB < pB.length; dB += 3) kB[dB] = gB + pB[dB] * oB, kB[dB + 1] = gB + pB[dB + 1] * oB, kB[dB + 2] = pB[dB + 2];
+            const LB = new Float32Array(VB * VB).fill(-1 / 0),
+              OB = new Uint8ClampedArray(VB * VB * 4),
+              DB = 255 * BB.alphaCutoff;
+            for (let dB = 0; dB < JB.length; dB += 3) {
+              const [BB, yB, pB] = [JB[dB], JB[dB + 1], JB[dB + 2]], [gB, oB, uB] = [3 * BB, 3 * yB, 3 * pB], [HB, EB, vB, mB, iB, NB] = [kB[gB], kB[gB + 1], kB[oB], kB[oB + 1], kB[uB], kB[uB + 1]], tB = (vB - HB) * (NB - EB) - (iB - HB) * (mB - EB);
+              if (Math.abs(tB) < 1e-9) continue;
+              const fB = YB[dB / 3],
+                [sB, MB, zB, wB, UB, FB] = [lB[2 * BB], lB[2 * BB + 1], lB[2 * yB], lB[2 * yB + 1], lB[2 * pB], lB[2 * pB + 1]],
+                KB = Math.max(0, Math.floor(Math.min(HB, vB, iB))),
+                rB = Math.min(VB - 1, Math.ceil(Math.max(HB, vB, iB))),
+                IB = Math.max(0, Math.floor(Math.min(EB, mB, NB))),
+                cB = Math.min(VB - 1, Math.ceil(Math.max(EB, mB, NB)));
+              for (let dB = IB; dB <= cB; dB++)
+                for (let BB = KB; BB <= rB; BB++) {
+                  const [yB, pB] = [BB + .5, dB + .5], lB = ((yB - HB) * (NB - EB) - (iB - HB) * (pB - EB)) / tB, JB = ((vB - HB) * (pB - EB) - (yB - HB) * (mB - EB)) / tB, YB = 1 - lB - JB;
+                  if (YB < 0 || lB < 0 || JB < 0) continue;
+                  const KB = YB * kB[gB + 2] + lB * kB[oB + 2] + JB * kB[uB + 2],
+                    rB = dB * VB + BB;
+                  if (KB <= LB[rB]) continue;
+                  const IB = Math.max(0, Math.min(TB.width - 1, Math.floor((YB * sB + lB * zB + JB * UB) * TB.width))),
+                    cB = 4 * (Math.max(0, Math.min(TB.height - 1, Math.floor((YB * MB + lB * wB + JB * FB) * TB.height))) * TB.width + IB);
+                  TB.pixels[cB + 3] < DB || (LB[rB] = KB, OB[4 * rB] = TB.pixels[cB] * fB, OB[4 * rB + 1] = TB.pixels[cB + 1] * fB, OB[4 * rB + 2] = TB.pixels[cB + 2] * fB, OB[4 * rB + 3] = 255)
                 }
             }
-            return ZJ(sJ, FJ, UJ), sJ
-          }(JJ, eJ, FJ, UJ)
+            return dB(OB, VB, yB), OB
+          }(BB, pB, VB, yB)
         }))
       }
-    }, JJ.postMessage({
+    }, BB.postMessage({
       type: "started"
     })
-  }(globalThis, hJ)
+  }(globalThis, kB)
 })();

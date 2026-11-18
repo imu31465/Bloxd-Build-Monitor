@@ -1,559 +1,559 @@
 export const id = 218;
 export const ids = [218];
 export const modules = {
-  39848: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      noaDevTools: () => hJ
+  39796: (BB, TB, dB) => {
+    dB.d(TB, {
+      noaDevTools: () => kB
     });
-    var FJ = ZJ(36459),
-      UJ = ZJ(36440),
-      eJ = ZJ(2401),
-      XJ = ZJ(1599);
+    var VB = dB(36412),
+      yB = dB(36399),
+      pB = dB(2385),
+      lB = dB(1596);
 
-    function AJ(JJ) {
+    function JB(BB) {
       const {
-        XG: cJ
-      } = JJ, ZJ = cJ.engine, FJ = {
-        width: ZJ.getRenderWidth(),
-        height: ZJ.getRenderHeight()
+        yu: TB
+      } = BB, dB = TB.engine, VB = {
+        width: dB.getRenderWidth(),
+        height: dB.getRenderHeight()
       };
       return {
-        canvas: ZJ.getRenderingCanvas(),
-        maxTextureSize: ZJ.getCaps().maxTextureSize,
-        drawing: () => !JJ.kE,
-        resize: (JJ, cJ) => {
-          ZJ.setSize(JJ, cJ)
+        canvas: dB.getRenderingCanvas(),
+        maxTextureSize: dB.getCaps().maxTextureSize,
+        drawing: () => !BB.Wm,
+        resize: (BB, TB) => {
+          dB.setSize(BB, TB)
         },
         restoreSize: () => {
-          ZJ.setSize(FJ.width, FJ.height), cJ.resize()
+          dB.setSize(VB.width, VB.height), TB.resize()
         },
-        onFrameDrawn: cJ => (JJ.on("afterRender", cJ), () => {
-          JJ.off("afterRender", cJ)
+        onFrameDrawn: TB => (BB.on("afterRender", TB), () => {
+          BB.off("afterRender", TB)
         })
       }
     }
-    var qJ = ZJ(39824),
-      jJ = ZJ(8476);
+    var YB = dB(39774),
+      gB = dB(8520);
 
-    function YJ(JJ, cJ) {
+    function oB(BB, TB) {
       let {
-        width: jJ,
-        height: YJ,
-        colouring: hJ
-      } = cJ;
-      const DJ = "normals" === hJ,
-        sJ = "depth" === hJ;
-      return new Promise((cJ => {
+        width: gB,
+        height: oB,
+        colouring: kB
+      } = TB;
+      const LB = "normals" === kB,
+        OB = "depth" === kB;
+      return new Promise((TB => {
         try {
-          const nJ = (0, eJ.h)();
-          if (nJ.XG.AG) return "screenshot" !== JJ || null !== hJ ? (console.warn("GLB downloads and coloured screenshots need WebGPU off in Graphics settings"), void cJ()) : void(0, qJ.e)(AJ(nJ), jJ, YJ).finally(cJ);
-          const GJ = nJ.XG.engine,
-            fJ = nJ.XG.Qy(),
-            xJ = jJ,
-            rJ = YJ;
-          Promise.all([Promise.all([ZJ.e(234), ZJ.e(235), ZJ.e(216)]).then((() => ZJ(59384))), Promise.all([ZJ.e(215), ZJ.e(214), ZJ.e(234), ZJ.e(235), ZJ.e(232), ZJ.e(236), ZJ.e(239), ZJ.e(291), ZJ.e(219)]).then((() => ZJ(59392))), Promise.all([ZJ.e(215), ZJ.e(214), ZJ.e(234), ZJ.e(235), ZJ.e(232), ZJ.e(242), ZJ.e(236), ZJ.e(244), ZJ.e(221)]).then((() => ZJ(59394))), ZJ.e(334).then((() => ZJ(59401))), Promise.all([ZJ.e(214), ZJ.e(210)]).then((() => ZJ(36165))), ZJ.e(233).then((() => ZJ(59409))), ZJ.e(209).then((() => ZJ(59412)))]).then((eJ => {
+          const DB = (0, pB.d)();
+          if (DB.yu.pu) return "screenshot" !== BB || null !== kB ? (console.warn("GLB downloads and coloured screenshots need WebGPU off in Graphics settings"), void TB()) : void(0, YB.d)(JB(DB), gB, oB).finally(TB);
+          const uB = DB.yu.engine,
+            HB = DB.yu.jU(),
+            EB = gB,
+            vB = oB;
+          Promise.all([Promise.all([dB.e(234), dB.e(235), dB.e(216)]).then((() => dB(59711))), Promise.all([dB.e(215), dB.e(214), dB.e(234), dB.e(235), dB.e(232), dB.e(236), dB.e(239), dB.e(291), dB.e(219)]).then((() => dB(59713))), Promise.all([dB.e(215), dB.e(214), dB.e(234), dB.e(235), dB.e(232), dB.e(242), dB.e(236), dB.e(244), dB.e(221)]).then((() => dB(59715))), dB.e(334).then((() => dB(59722))), Promise.all([dB.e(214), dB.e(210)]).then((() => dB(36119))), dB.e(233).then((() => dB(59725))), dB.e(209).then((() => dB(59734)))]).then((pB => {
             const {
-              CreateScreenshotUsingRenderTarget: AJ
-            } = eJ[1], {
-              ShaderMaterial: qJ
-            } = eJ[2], {
-              ShaderLanguage: jJ
-            } = eJ[3], {
-              Pn: YJ
-            } = eJ[4], {
-              registerDevtoolsShader: hJ
-            } = eJ[6], nJ = jJ.GLSL, vJ = new Map, mJ = fJ.meshes.filter((JJ => JJ.material));
-            let QJ = !1,
-              EJ = null;
+              CreateScreenshotUsingRenderTarget: JB
+            } = pB[1], {
+              ShaderMaterial: YB
+            } = pB[2], {
+              ShaderLanguage: gB
+            } = pB[3], {
+              RD: oB
+            } = pB[4], {
+              registerDevtoolsShader: kB
+            } = pB[6], DB = gB.GLSL, mB = new Map, iB = HB.meshes.filter((BB => BB.material));
+            let NB = !1,
+              tB = null;
 
-            function VJ() {
-              var JJ;
-              QJ && (QJ = !1, (0, FJ.f)(fJ.meshes, !1)), null === (JJ = EJ) || void 0 === JJ || JJ(), EJ = null, mJ.forEach((JJ => {
-                const cJ = vJ.get(JJ);
-                cJ && (JJ.material = cJ)
+            function fB() {
+              var BB;
+              NB && (NB = !1, (0, VB.e)(HB.meshes, !1)), null === (BB = tB) || void 0 === BB || BB(), tB = null, iB.forEach((BB => {
+                const TB = mB.get(BB);
+                TB && (BB.material = TB)
               }))
             }
-            if (DJ) {
-              const JJ = [],
-                cJ = [];
-              mJ.forEach((ZJ => {
-                const FJ = ZJ.name.toLowerCase(),
-                  UJ = ZJ.rM().boundingBox.center,
-                  eJ = fJ.activeCamera.position.subtract(UJ).length();
-                FJ.includes("sky") || FJ.includes("background") || FJ.includes("environment") || eJ > 1e3 ? cJ.push(ZJ) : JJ.push(ZJ)
-              })), hJ("devtoolsNormal", nJ);
-              const ZJ = new qJ("normalMaterial", fJ, "devtoolsNormal", {
+            if (LB) {
+              const BB = [],
+                TB = [];
+              iB.forEach((dB => {
+                const VB = dB.name.toLowerCase(),
+                  yB = dB.IK().boundingBox.center,
+                  pB = HB.activeCamera.position.subtract(yB).length();
+                VB.includes("sky") || VB.includes("background") || VB.includes("environment") || pB > 1e3 ? TB.push(dB) : BB.push(dB)
+              })), kB("devtoolsNormal", DB);
+              const dB = new YB("normalMaterial", HB, "devtoolsNormal", {
                 attributes: ["position", "normal"],
                 uniforms: ["worldViewProjection", "world"],
-                shaderLanguage: nJ
+                shaderLanguage: DB
               });
-              hJ("devtoolsWhite", nJ);
-              const FJ = new qJ("whiteMaterial", fJ, "devtoolsWhite", {
+              kB("devtoolsWhite", DB);
+              const VB = new YB("whiteMaterial", HB, "devtoolsWhite", {
                 attributes: ["position"],
                 uniforms: ["worldViewProjection"],
-                shaderLanguage: nJ
+                shaderLanguage: DB
               });
-              JJ.forEach((JJ => {
-                vJ.set(JJ, JJ.material), JJ.material = ZJ
-              })), cJ.forEach((JJ => {
-                vJ.set(JJ, JJ.material), JJ.material = FJ
+              BB.forEach((BB => {
+                mB.set(BB, BB.material), BB.material = dB
+              })), TB.forEach((BB => {
+                mB.set(BB, BB.material), BB.material = VB
               }))
-            } else if (sJ) {
-              hJ("devtoolsDepth", nJ);
-              const JJ = fJ.activeCamera.position;
-              let cJ = 0,
-                ZJ = 1 / 0;
-              mJ.forEach((FJ => {
-                const UJ = FJ.name.toLowerCase();
-                if (UJ.includes("sky") || UJ.includes("background") || UJ.includes("environment")) return;
-                const eJ = FJ.rM().boundingBox.center,
-                  XJ = YJ.TransformCoordinates(eJ, FJ.getWorldMatrix()),
-                  AJ = JJ.subtract(XJ).length();
-                AJ > 1e3 || (cJ = Math.max(cJ, AJ), ZJ = Math.min(ZJ, AJ))
+            } else if (OB) {
+              kB("devtoolsDepth", DB);
+              const BB = HB.activeCamera.position;
+              let TB = 0,
+                dB = 1 / 0;
+              iB.forEach((VB => {
+                const yB = VB.name.toLowerCase();
+                if (yB.includes("sky") || yB.includes("background") || yB.includes("environment")) return;
+                const pB = VB.IK().boundingBox.center,
+                  lB = oB.TransformCoordinates(pB, VB.getWorldMatrix()),
+                  JB = BB.subtract(lB).length();
+                JB > 1e3 || (TB = Math.max(TB, JB), dB = Math.min(dB, JB))
               }));
-              const FJ = cJ - ZJ;
-              cJ += .1 * FJ, ZJ = Math.max(0, ZJ - .1 * FJ), console.log(`Depth range: min=${ZJ.toFixed(2)}, max=${cJ.toFixed(2)}, range=${FJ.toFixed(2)}`), FJ < 1 && (cJ = ZJ + 10);
-              const UJ = new qJ("depthMaterial", fJ, "devtoolsDepth", {
+              const VB = TB - dB;
+              TB += .1 * VB, dB = Math.max(0, dB - .1 * VB), console.log(`Depth range: min=${dB.toFixed(2)}, max=${TB.toFixed(2)}, range=${VB.toFixed(2)}`), VB < 1 && (TB = dB + 10);
+              const yB = new YB("depthMaterial", HB, "devtoolsDepth", {
                 attributes: ["position"],
                 uniforms: ["worldViewProjection", "world", "cameraPosition", "maxDepth", "minDepth"],
-                shaderLanguage: nJ
+                shaderLanguage: DB
               });
-              UJ.setVector3("cameraPosition", JJ), UJ.setFloat("maxDepth", cJ), UJ.setFloat("minDepth", ZJ), mJ.forEach((JJ => {
-                vJ.set(JJ, JJ.material), JJ.material = UJ
+              yB.setVector3("cameraPosition", BB), yB.setFloat("maxDepth", TB), yB.setFloat("minDepth", dB), iB.forEach((BB => {
+                mB.set(BB, BB.material), BB.material = yB
               }))
             }
-            if ((0, FJ.f)(fJ.meshes, !0), QJ = !0, "glb" === JJ && (EJ = (0, UJ.b)(fJ.meshes)), "screenshot" === JJ) {
-              let JJ = `bloxd-screenshot-${xJ}x${rJ}-${Date.now()}.png`;
-              DJ ? JJ = `bloxd-screenshot-normals-${xJ}x${rJ}-${Date.now()}.png` : sJ && (JJ = `bloxd-screenshot-depth-${xJ}x${rJ}-${Date.now()}.png`), AJ(GJ, fJ.activeCamera, {
-                width: xJ,
-                height: rJ
-              }, (function(ZJ) {
-                VJ(), fetch(ZJ).then((function(JJ) {
-                  return JJ.blob()
-                })).then((function(ZJ) {
-                  (0, XJ.downloadBlob)(ZJ, JJ), cJ()
-                })).catch((function(JJ) {
-                  console.error("Error processing screenshot:", JJ), cJ()
+            if ((0, VB.e)(HB.meshes, !0), NB = !0, "glb" === BB && (tB = (0, yB.d)(HB.meshes)), "screenshot" === BB) {
+              let BB = `bloxd-screenshot-${EB}x${vB}-${Date.now()}.png`;
+              LB ? BB = `bloxd-screenshot-normals-${EB}x${vB}-${Date.now()}.png` : OB && (BB = `bloxd-screenshot-depth-${EB}x${vB}-${Date.now()}.png`), JB(uB, HB.activeCamera, {
+                width: EB,
+                height: vB
+              }, (function(dB) {
+                fB(), fetch(dB).then((function(BB) {
+                  return BB.blob()
+                })).then((function(dB) {
+                  (0, lB.downloadBlob)(dB, BB), TB()
+                })).catch((function(BB) {
+                  console.error("Error processing screenshot:", BB), TB()
                 }))
               }), "image/png", void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, (function() {
-                console.error("Screenshot timed out"), VJ(), cJ()
+                console.error("Screenshot timed out"), fB(), TB()
               }))
             } else {
-              let JJ = "iG";
-              DJ ? JJ = "scene-normals" : sJ && (JJ = "scene-depth"), DJ || sJ ? setTimeout((() => {
+              let BB = "Gu";
+              LB ? BB = "scene-normals" : OB && (BB = "scene-depth"), LB || OB ? setTimeout((() => {
                 (async function() {
                   const {
-                    StandardMaterial: JJ
-                  } = await Promise.all([ZJ.e(215), ZJ.e(214), ZJ.e(234), ZJ.e(235), ZJ.e(232), ZJ.e(242), ZJ.e(241), ZJ.e(220)]).then((() => ZJ(39029))), {
-                    Color3: cJ
-                  } = await Promise.all([ZJ.e(215), ZJ.e(217)]).then((() => ZJ(36229))), FJ = [], UJ = [];
-                  if (mJ.forEach((JJ => {
-                      const cJ = JJ.name.toLowerCase(),
-                        ZJ = JJ.rM().boundingBox.center,
-                        eJ = fJ.activeCamera.position.subtract(ZJ).length();
-                      cJ.includes("sky") || cJ.includes("background") || cJ.includes("environment") || eJ > 1e3 ? UJ.push(JJ) : FJ.push(JJ)
-                    })), DJ) FJ.forEach(((ZJ, FJ) => {
-                    const UJ = ZJ.getVerticesData("normal");
-                    if (UJ) {
-                      const eJ = [];
-                      for (let JJ = 0; JJ < UJ.length; JJ += 3) {
-                        const cJ = Math.abs(UJ[JJ]),
-                          ZJ = Math.abs(UJ[JJ + 1]),
-                          FJ = Math.abs(UJ[JJ + 2]);
-                        eJ.push(cJ, ZJ, FJ, 1)
+                    StandardMaterial: BB
+                  } = await Promise.all([dB.e(215), dB.e(214), dB.e(234), dB.e(235), dB.e(232), dB.e(242), dB.e(241), dB.e(220)]).then((() => dB(39019))), {
+                    Color3: TB
+                  } = await Promise.all([dB.e(215), dB.e(217)]).then((() => dB(36180))), VB = [], yB = [];
+                  if (iB.forEach((BB => {
+                      const TB = BB.name.toLowerCase(),
+                        dB = BB.IK().boundingBox.center,
+                        pB = HB.activeCamera.position.subtract(dB).length();
+                      TB.includes("sky") || TB.includes("background") || TB.includes("environment") || pB > 1e3 ? yB.push(BB) : VB.push(BB)
+                    })), LB) VB.forEach(((dB, VB) => {
+                    const yB = dB.getVerticesData("normal");
+                    if (yB) {
+                      const pB = [];
+                      for (let BB = 0; BB < yB.length; BB += 3) {
+                        const TB = Math.abs(yB[BB]),
+                          dB = Math.abs(yB[BB + 1]),
+                          VB = Math.abs(yB[BB + 2]);
+                        pB.push(TB, dB, VB, 1)
                       }
-                      ZJ.setVerticesData("color", eJ);
-                      const XJ = new JJ(`vertexColorMat_${FJ}`, fJ);
-                      XJ.disableLighting = !0, XJ.emissiveColor = new cJ(1, 1, 1), XJ.specularColor = new cJ(0, 0, 0), ZJ.material = XJ
+                      dB.setVerticesData("color", pB);
+                      const lB = new BB(`vertexColorMat_${VB}`, HB);
+                      lB.disableLighting = !0, lB.emissiveColor = new TB(1, 1, 1), lB.specularColor = new TB(0, 0, 0), dB.material = lB
                     }
-                  })), UJ.forEach(((ZJ, FJ) => {
-                    const UJ = ZJ.getVerticesData("position");
-                    if (UJ) {
-                      const eJ = [],
-                        XJ = UJ.length / 3;
-                      for (let JJ = 0; JJ < XJ; JJ++) eJ.push(1, 1, 1, 1);
-                      ZJ.setVerticesData("color", eJ);
-                      const AJ = new JJ(`whiteMat_${FJ}`, fJ);
-                      AJ.disableLighting = !0, AJ.emissiveColor = new cJ(1, 1, 1), AJ.specularColor = new cJ(0, 0, 0), ZJ.material = AJ
+                  })), yB.forEach(((dB, VB) => {
+                    const yB = dB.getVerticesData("position");
+                    if (yB) {
+                      const pB = [],
+                        lB = yB.length / 3;
+                      for (let BB = 0; BB < lB; BB++) pB.push(1, 1, 1, 1);
+                      dB.setVerticesData("color", pB);
+                      const JB = new BB(`whiteMat_${VB}`, HB);
+                      JB.disableLighting = !0, JB.emissiveColor = new TB(1, 1, 1), JB.specularColor = new TB(0, 0, 0), dB.material = JB
                     }
                   }));
-                  else if (sJ) {
-                    const ZJ = fJ.activeCamera.position;
-                    let UJ = 0,
-                      eJ = 1 / 0;
-                    FJ.forEach((JJ => {
-                      const cJ = JJ.rM().boundingBox.center,
-                        FJ = YJ.TransformCoordinates(cJ, JJ.getWorldMatrix()),
-                        XJ = ZJ.subtract(FJ).length();
-                      UJ = Math.max(UJ, XJ), eJ = Math.min(eJ, XJ)
+                  else if (OB) {
+                    const dB = HB.activeCamera.position;
+                    let yB = 0,
+                      pB = 1 / 0;
+                    VB.forEach((BB => {
+                      const TB = BB.IK().boundingBox.center,
+                        VB = oB.TransformCoordinates(TB, BB.getWorldMatrix()),
+                        lB = dB.subtract(VB).length();
+                      yB = Math.max(yB, lB), pB = Math.min(pB, lB)
                     }));
-                    const XJ = UJ - eJ;
-                    UJ += .1 * XJ, eJ = Math.max(0, eJ - .1 * XJ), XJ < 1 && (UJ = eJ + 10), mJ.forEach(((FJ, XJ) => {
-                      const AJ = FJ.name.toLowerCase(),
-                        qJ = FJ.rM().boundingBox.center,
-                        jJ = YJ.TransformCoordinates(qJ, FJ.getWorldMatrix()),
-                        hJ = ZJ.subtract(jJ).length();
-                      if (!(AJ.includes("sky") || AJ.includes("background") || AJ.includes("environment") || hJ > 1e3)) {
-                        const ZJ = 1 - Math.min(Math.max((hJ - eJ) / (UJ - eJ), 0), 1),
-                          AJ = new JJ(`depthMat_${XJ}`, fJ);
-                        AJ.diffuseColor = new cJ(ZJ, ZJ, ZJ), AJ.specularColor = new cJ(0, 0, 0), FJ.material = AJ
+                    const lB = yB - pB;
+                    yB += .1 * lB, pB = Math.max(0, pB - .1 * lB), lB < 1 && (yB = pB + 10), iB.forEach(((VB, lB) => {
+                      const JB = VB.name.toLowerCase(),
+                        YB = VB.IK().boundingBox.center,
+                        gB = oB.TransformCoordinates(YB, VB.getWorldMatrix()),
+                        kB = dB.subtract(gB).length();
+                      if (!(JB.includes("sky") || JB.includes("background") || JB.includes("environment") || kB > 1e3)) {
+                        const dB = 1 - Math.min(Math.max((kB - pB) / (yB - pB), 0), 1),
+                          JB = new BB(`depthMat_${lB}`, HB);
+                        JB.diffuseColor = new TB(dB, dB, dB), JB.specularColor = new TB(0, 0, 0), VB.material = JB
                       }
                     }))
                   }
-                })().then((() => Promise.all([ZJ.e(215), ZJ.e(214), ZJ.e(234), ZJ.e(235), ZJ.e(232), ZJ.e(242), ZJ.e(236), ZJ.e(241), ZJ.e(239), ZJ.e(231), ZJ.e(244), ZJ.e(271), ZJ.e(291), ZJ.e(225), ZJ.e(243), ZJ.e(213)]).then((() => ZJ(59415))))).then((cJ => cJ.GLTF2Export.GLBAsync(fJ, JJ))).then((JJ => {
-                  VJ(), JJ.downloadFiles(), cJ()
-                })).catch((JJ => {
-                  console.error("Error exporting GLB:", JJ), VJ(), cJ()
+                })().then((() => Promise.all([dB.e(215), dB.e(214), dB.e(234), dB.e(235), dB.e(232), dB.e(242), dB.e(236), dB.e(241), dB.e(239), dB.e(231), dB.e(244), dB.e(271), dB.e(291), dB.e(225), dB.e(243), dB.e(213)]).then((() => dB(59741))))).then((TB => TB.GLTF2Export.GLBAsync(HB, BB))).then((BB => {
+                  fB(), BB.downloadFiles(), TB()
+                })).catch((BB => {
+                  console.error("Error exporting GLB:", BB), fB(), TB()
                 }))
-              }), 100) : Promise.all([ZJ.e(215), ZJ.e(214), ZJ.e(234), ZJ.e(235), ZJ.e(232), ZJ.e(242), ZJ.e(236), ZJ.e(241), ZJ.e(239), ZJ.e(231), ZJ.e(244), ZJ.e(271), ZJ.e(291), ZJ.e(225), ZJ.e(243), ZJ.e(213)]).then((() => ZJ(59415))).then((ZJ => {
-                ZJ.GLTF2Export.GLBAsync(fJ, JJ).then((JJ => {
-                  VJ(), JJ.downloadFiles(), cJ()
-                })).catch((JJ => {
-                  console.error("Error exporting GLB:", JJ), VJ(), cJ()
+              }), 100) : Promise.all([dB.e(215), dB.e(214), dB.e(234), dB.e(235), dB.e(232), dB.e(242), dB.e(236), dB.e(241), dB.e(239), dB.e(231), dB.e(244), dB.e(271), dB.e(291), dB.e(225), dB.e(243), dB.e(213)]).then((() => dB(59741))).then((dB => {
+                dB.GLTF2Export.GLBAsync(HB, BB).then((BB => {
+                  fB(), BB.downloadFiles(), TB()
+                })).catch((BB => {
+                  console.error("Error exporting GLB:", BB), fB(), TB()
                 }))
-              })).catch((JJ => {
-                console.error("Error importing serializers:", JJ), VJ(), cJ()
+              })).catch((BB => {
+                console.error("Error importing serializers:", BB), fB(), TB()
               }))
             }
-          })).catch((JJ => {
-            console.error("Error downloading the scene:", JJ), cJ()
+          })).catch((BB => {
+            console.error("Error downloading the scene:", BB), TB()
           }))
-        } catch (nJ) {
-          console.error("Error taking screenshot:", nJ), cJ()
+        } catch (DB) {
+          console.error("Error taking screenshot:", DB), TB()
         }
       }))
     }
-    const hJ = new class {
+    const kB = new class {
       constructor() {
-        this.tools = jJ.ALL_DEV_TOOLS
+        this.tools = gB.ALL_DEV_TOOLS
       }
-      downloadScene(JJ, cJ) {
-        return YJ(JJ, cJ)
+      downloadScene(BB, TB) {
+        return oB(BB, TB)
       }
-      async setAmbientLightIntensity(JJ) {
+      async setAmbientLightIntensity(BB) {
         const {
-          Color3: cJ
-        } = await Promise.all([ZJ.e(215), ZJ.e(217)]).then((() => ZJ(36229)));
-        (0, eJ.h)().XG.Qy().ambientColor = cJ.FromArray([JJ, JJ, JJ])
+          Color3: TB
+        } = await Promise.all([dB.e(215), dB.e(217)]).then((() => dB(36180)));
+        (0, pB.d)().yu.jU().ambientColor = TB.FromArray([BB, BB, BB])
       }
     }
   },
-  39824: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      e: () => qJ
+  39774: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => YB
     });
-    var FJ = ZJ(1620);
-    const UJ = 33177600,
-      eJ = 3e4;
-    let XJ = !1;
+    var VB = dB(1612);
+    const yB = 33177600,
+      pB = 3e4;
+    let lB = !1;
 
-    function AJ(JJ, cJ, ZJ) {
-      if (!JJ.drawing()) return Promise.reject(new Error("Screenshots need a game to be running"));
-      if (XJ) return Promise.reject(new Error("A screenshot is already being taken"));
-      XJ = !0;
-      const FJ = function(JJ, cJ, ZJ) {
-        const FJ = Math.max(1, JJ),
-          eJ = Math.max(1, cJ),
-          XJ = Math.min(1, ZJ / Math.max(FJ, eJ), Math.sqrt(UJ / (FJ * eJ)));
+    function JB(BB, TB, dB) {
+      if (!BB.drawing()) return Promise.reject(new Error("Screenshots need a game to be running"));
+      if (lB) return Promise.reject(new Error("A screenshot is already being taken"));
+      lB = !0;
+      const VB = function(BB, TB, dB) {
+        const VB = Math.max(1, BB),
+          pB = Math.max(1, TB),
+          lB = Math.min(1, dB / Math.max(VB, pB), Math.sqrt(yB / (VB * pB)));
         return {
-          width: Math.max(1, Math.floor(FJ * XJ)),
-          height: Math.max(1, Math.floor(eJ * XJ))
+          width: Math.max(1, Math.floor(VB * lB)),
+          height: Math.max(1, Math.floor(pB * lB))
         }
-      }(cJ, ZJ, JJ.maxTextureSize);
-      return JJ.resize(FJ.width, FJ.height), new Promise(((cJ, ZJ) => {
-        let FJ, UJ = 2,
-          AJ = null;
-        const qJ = () => {
-          var cJ;
-          XJ = !1, null === (cJ = AJ) || void 0 === cJ || cJ(), clearTimeout(FJ), JJ.restoreSize()
+      }(TB, dB, BB.maxTextureSize);
+      return BB.resize(VB.width, VB.height), new Promise(((TB, dB) => {
+        let VB, yB = 2,
+          JB = null;
+        const YB = () => {
+          var TB;
+          lB = !1, null === (TB = JB) || void 0 === TB || TB(), clearTimeout(VB), BB.restoreSize()
         };
-        FJ = setTimeout((() => {
-          qJ(), ZJ(new Error("No frame was drawn to capture"))
-        }), eJ), AJ = JJ.onFrameDrawn((() => {
-          if (UJ--, UJ > 0) return;
+        VB = setTimeout((() => {
+          YB(), dB(new Error("No frame was drawn to capture"))
+        }), pB), JB = BB.onFrameDrawn((() => {
+          if (yB--, yB > 0) return;
           const {
-            canvas: FJ
-          } = JJ, eJ = {
-            width: FJ.width,
-            height: FJ.height
+            canvas: VB
+          } = BB, pB = {
+            width: VB.width,
+            height: VB.height
           };
           try {
-            FJ.toBlob((JJ => {
-              JJ ? cJ({
-                blob: JJ,
-                ...eJ
-              }) : ZJ(new Error("The canvas gave no image"))
+            VB.toBlob((BB => {
+              BB ? TB({
+                blob: BB,
+                ...pB
+              }) : dB(new Error("The canvas gave no image"))
             }), "image/png")
-          } catch (XJ) {
-            ZJ(XJ)
+          } catch (lB) {
+            dB(lB)
           } finally {
-            qJ()
+            YB()
           }
         }))
       }))
     }
-    async function qJ(JJ, cJ, ZJ) {
+    async function YB(BB, TB, dB) {
       try {
-        const UJ = await AJ(JJ, cJ, ZJ);
-        (0, FJ.d)(UJ.blob, `bloxd-screenshot-${UJ.width}x${UJ.height}-${Date.now()}.png`)
-      } catch (UJ) {
-        console.error("Error taking screenshot:", UJ)
+        const yB = await JB(BB, TB, dB);
+        (0, VB.c)(yB.blob, `bloxd-screenshot-${yB.width}x${yB.height}-${Date.now()}.png`)
+      } catch (yB) {
+        console.error("Error taking screenshot:", yB)
       }
     }
   },
-  36459: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      c: () => jJ,
-      f: () => AJ,
-      g: () => XJ
+  36412: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => gB,
+      e: () => JB,
+      g: () => lB
     });
-    var FJ = ZJ(36450),
-      UJ = ZJ(36468);
-    let eJ = 0;
+    var VB = dB(36409),
+      yB = dB(36420);
+    let pB = 0;
 
-    function XJ(JJ, cJ) {
-      const ZJ = JJ;
-      ZJ._noaFaceGroups = null !== cJ && void 0 !== cJ ? cJ : null, ZJ._noaFaceEpoch = -1, ZJ._noaFaceMask = -1, ZJ._noaFaceCount = -1, ZJ._noaFaceMaterial = null;
-      const FJ = JJ.aE;
-      FJ && 1 === FJ.length && (FJ[0].indexStart = 0, FJ[0].indexCount = JJ.getTotalIndices())
+    function lB(BB, TB) {
+      const dB = BB;
+      dB._noaFaceGroups = null !== TB && void 0 !== TB ? TB : null, dB._noaFaceEpoch = -1, dB._noaFaceMask = -1, dB._noaFaceCount = -1, dB._noaFaceMaterial = null;
+      const VB = BB.oN;
+      VB && 1 === VB.length && (VB[0].indexStart = 0, VB[0].indexCount = BB.getTotalIndices())
     }
 
-    function AJ(JJ, cJ) {
-      if (cJ) {
-        eJ++;
-        for (const cJ of JJ) {
-          const JJ = cJ._noaFaceGroups;
-          JJ && XJ(cJ, JJ)
+    function JB(BB, TB) {
+      if (TB) {
+        pB++;
+        for (const TB of BB) {
+          const BB = TB._noaFaceGroups;
+          BB && lB(TB, BB)
         }
-      } else eJ = Math.max(0, eJ - 1)
+      } else pB = Math.max(0, pB - 1)
     }
 
-    function qJ(JJ, cJ, ZJ) {
-      let UJ = -1,
-        eJ = 0;
-      for (let XJ = 0; XJ < FJ.f; XJ++) {
-        const ZJ = JJ[XJ],
-          AJ = JJ[XJ + 1];
-        AJ > ZJ && cJ & 1 << FJ.d[XJ] && (UJ < 0 && (UJ = ZJ), eJ = AJ)
+    function YB(BB, TB, dB) {
+      let yB = -1,
+        pB = 0;
+      for (let lB = 0; lB < VB.f; lB++) {
+        const dB = BB[lB],
+          JB = BB[lB + 1];
+        JB > dB && TB & 1 << VB.d[lB] && (yB < 0 && (yB = dB), pB = JB)
       }
-      return UJ < 0 ? (ZJ[0] = 0, ZJ[1] = 0, 0) : (ZJ[0] = UJ, ZJ[1] = eJ - UJ, eJ - UJ)
+      return yB < 0 ? (dB[0] = 0, dB[1] = 0, 0) : (dB[0] = yB, dB[1] = pB - yB, pB - yB)
     }
-    class jJ {
-      constructor(JJ, cJ) {
-        this.Kn = JJ, this.engine = cJ, this.epoch = 0, this.eyeX = NaN, this.eyeY = NaN, this.eyeZ = NaN, this.focalPx = NaN, this.culling = !1, this.range = new Int32Array(2)
+    class gB {
+      constructor(BB, TB) {
+        this.UD = BB, this.engine = TB, this.epoch = 0, this.eyeX = NaN, this.eyeY = NaN, this.eyeZ = NaN, this.focalPx = NaN, this.culling = !1, this.range = new Int32Array(2)
       }
-      apply(JJ, cJ) {
-        if (!cJ) return;
-        const ZJ = cJ.getProjectionMatrix().m,
-          XJ = 0 === eJ && 0 === ZJ[15],
-          AJ = cJ.globalPosition,
+      apply(BB, TB) {
+        if (!TB) return;
+        const dB = TB.getProjectionMatrix().m,
+          lB = 0 === pB && 0 === dB[15],
+          JB = TB.globalPosition,
           {
-            engine: jJ
+            engine: gB
           } = this,
-          YJ = XJ ? (0, UJ.c)(ZJ, jJ.getRenderWidth(), jJ.getRenderHeight()) : 0;
-        AJ.x === this.eyeX && AJ.y === this.eyeY && AJ.z === this.eyeZ && YJ === this.focalPx && XJ === this.culling || (this.epoch++, this.eyeX = AJ.x, this.eyeY = AJ.y, this.eyeZ = AJ.z, this.focalPx = YJ, this.culling = XJ);
+          oB = lB ? (0, yB.c)(dB, gB.getRenderWidth(), gB.getRenderHeight()) : 0;
+        JB.x === this.eyeX && JB.y === this.eyeY && JB.z === this.eyeZ && oB === this.focalPx && lB === this.culling || (this.epoch++, this.eyeX = JB.x, this.eyeY = JB.y, this.eyeZ = JB.z, this.focalPx = oB, this.culling = lB);
         const {
-          epoch: hJ,
-          range: DJ
-        } = this, sJ = this.Kn / 2, nJ = sJ * Math.sqrt(3), GJ = JJ.data, fJ = JJ.length;
-        let xJ = 0;
-        for (let eJ = 0; eJ < fJ; eJ++) {
-          const JJ = GJ[eJ],
-            cJ = JJ._noaFaceGroups;
-          if (cJ && (JJ._noaFaceEpoch !== hJ || JJ._noaFaceMaterial !== JJ.material)) {
-            JJ._noaFaceEpoch = hJ, JJ._noaFaceMaterial = JJ.material;
-            const ZJ = JJ.aE,
-              eJ = ZJ && 1 === ZJ.length ? ZJ[0] : null;
-            let jJ = -1;
-            if (XJ && eJ && (0, FJ.u)(JJ.material)) {
-              const ZJ = JJ.position,
-                FJ = AJ.x - ZJ.x,
-                eJ = AJ.y - ZJ.y,
-                XJ = AJ.z - ZJ.z,
-                qJ = FJ - sJ,
-                hJ = eJ - sJ,
-                DJ = XJ - sJ,
-                GJ = Math.sqrt(qJ * qJ + hJ * hJ + DJ * DJ) + nJ;
-              jJ = (0, UJ.n)(cJ, FJ, eJ, XJ, (0, UJ.g)(GJ, YJ))
+          epoch: kB,
+          range: LB
+        } = this, OB = this.UD / 2, DB = OB * Math.sqrt(3), uB = BB.data, HB = BB.length;
+        let EB = 0;
+        for (let pB = 0; pB < HB; pB++) {
+          const BB = uB[pB],
+            TB = BB._noaFaceGroups;
+          if (TB && (BB._noaFaceEpoch !== kB || BB._noaFaceMaterial !== BB.material)) {
+            BB._noaFaceEpoch = kB, BB._noaFaceMaterial = BB.material;
+            const dB = BB.oN,
+              pB = dB && 1 === dB.length ? dB[0] : null;
+            let gB = -1;
+            if (lB && pB && (0, VB.q)(BB.material)) {
+              const dB = BB.position,
+                VB = JB.x - dB.x,
+                pB = JB.y - dB.y,
+                lB = JB.z - dB.z,
+                YB = VB - OB,
+                kB = pB - OB,
+                LB = lB - OB,
+                uB = Math.sqrt(YB * YB + kB * kB + LB * LB) + DB;
+              gB = (0, yB.l)(TB, VB, pB, lB, (0, yB.g)(uB, oB))
             }
-            if (eJ && jJ !== JJ._noaFaceMask) {
-              JJ._noaFaceMask = jJ;
-              let ZJ = 0,
-                UJ = cJ[FJ.f]; - 1 !== jJ && (UJ = qJ(cJ, jJ, DJ), ZJ = DJ[0]), JJ._noaFaceCount = UJ, eJ.indexStart = 6 * ZJ, eJ.indexCount = 6 * UJ, eJ.setBoundingInfo(JJ.rM())
+            if (pB && gB !== BB._noaFaceMask) {
+              BB._noaFaceMask = gB;
+              let dB = 0,
+                yB = TB[VB.f]; - 1 !== gB && (yB = YB(TB, gB, LB), dB = LB[0]), BB._noaFaceCount = yB, pB.indexStart = 6 * dB, pB.indexCount = 6 * yB, pB.setBoundingInfo(BB.IK())
             }
           }
-          cJ && 0 === JJ._noaFaceCount || (GJ[xJ++] = JJ)
+          TB && 0 === BB._noaFaceCount || (uB[EB++] = BB)
         }
-        JJ.length = xJ
+        BB.length = EB
       }
     }
   },
-  36440: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      b: () => qJ,
-      e: () => AJ
+  36399: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => YB,
+      g: () => JB
     });
-    const FJ = new WeakSet;
-    let UJ = 0;
-    const eJ = new Set;
+    const VB = new WeakSet;
+    let yB = 0;
+    const pB = new Set;
 
-    function XJ(JJ, cJ) {
-      JJ._data = cJ
+    function lB(BB, TB) {
+      BB._data = TB
     }
 
-    function AJ(JJ) {
-      var cJ, ZJ;
-      (null !== (cJ = null === (ZJ = JJ.getBuffer()) || void 0 === ZJ ? void 0 : ZJ.qh) && void 0 !== cJ ? cJ : 0) > 0 && (FJ.add(JJ), 0 === UJ ? XJ(JJ, null) : eJ.add(JJ))
+    function JB(BB) {
+      var TB, dB;
+      (null !== (TB = null === (dB = BB.getBuffer()) || void 0 === dB ? void 0 : dB.Kk) && void 0 !== TB ? TB : 0) > 0 && (VB.add(BB), 0 === yB ? lB(BB, null) : pB.add(BB))
     }
 
-    function qJ(JJ) {
-      UJ++;
-      for (const ZJ of function(JJ) {
-          const cJ = new Set;
-          for (const UJ of JJ) {
-            const JJ = UJ.geometry;
-            for (const UJ of Object.values(null !== (ZJ = null === JJ || void 0 === JJ ? void 0 : JJ.getVertexBuffers()) && void 0 !== ZJ ? ZJ : {})) {
-              var ZJ;
-              const JJ = UJ.getWrapperBuffer();
-              FJ.has(JJ) && cJ.add(JJ)
+    function YB(BB) {
+      yB++;
+      for (const dB of function(BB) {
+          const TB = new Set;
+          for (const yB of BB) {
+            const BB = yB.geometry;
+            for (const yB of Object.values(null !== (dB = null === BB || void 0 === BB ? void 0 : BB.getVertexBuffers()) && void 0 !== dB ? dB : {})) {
+              var dB;
+              const BB = yB.getWrapperBuffer();
+              VB.has(BB) && TB.add(BB)
             }
           }
-          return cJ
-        }(JJ)) ZJ.getData() || jJ(ZJ), eJ.add(ZJ);
-      let cJ = !0;
+          return TB
+        }(BB)) dB.getData() || gB(dB), pB.add(dB);
+      let TB = !0;
       return () => {
-        if (cJ && (cJ = !1, UJ--, 0 === UJ)) {
-          for (const JJ of eJ) XJ(JJ, null);
-          eJ.clear()
+        if (TB && (TB = !1, yB--, 0 === yB)) {
+          for (const BB of pB) lB(BB, null);
+          pB.clear()
         }
       }
     }
 
-    function jJ(JJ) {
-      const cJ = JJ.getBuffer();
-      if (!cJ || !(cJ.qh > 0)) return;
-      const ZJ = JJ._engine,
-        FJ = new Uint8Array(cJ.qh);
-      ZJ.bindArrayBuffer(cJ), ZJ._gl.getBufferSubData(ZJ._gl.ARRAY_BUFFER, 0, FJ), ZJ._resetVertexBufferBinding(), XJ(JJ, FJ)
+    function gB(BB) {
+      const TB = BB.getBuffer();
+      if (!TB || !(TB.Kk > 0)) return;
+      const dB = BB._engine,
+        VB = new Uint8Array(TB.Kk);
+      dB.bindArrayBuffer(TB), dB._gl.getBufferSubData(dB._gl.ARRAY_BUFFER, 0, VB), dB._resetVertexBufferBinding(), lB(BB, VB)
     }
   },
-  36450: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => XJ,
-      f: () => eJ,
-      j: () => qJ,
-      k: () => FJ,
-      n: () => AJ,
-      r: () => UJ,
-      u: () => jJ
+  36409: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => lB,
+      f: () => pB,
+      h: () => YB,
+      l: () => VB,
+      m: () => JB,
+      p: () => yB,
+      q: () => gB
     });
-    const FJ = 6,
-      UJ = [0, 2, 4, 1, 3, 5, 0, 2],
-      eJ = 6,
-      XJ = [1, 0, 3, 2, 5, 4];
-    for (let YJ = eJ; YJ < UJ.length; YJ++)
-      if (UJ[YJ] !== UJ[YJ - eJ]) throw new Error("FACE_LAYOUT must repeat a prefix of its base groups");
-    const AJ = UJ.length + 1,
-      qJ = (() => {
-        const JJ = [];
-        for (let cJ = 0; cJ < eJ; cJ++) JJ[UJ[cJ]] = cJ;
-        return JJ
+    const VB = 6,
+      yB = [0, 2, 4, 1, 3, 5, 0, 2],
+      pB = 6,
+      lB = [1, 0, 3, 2, 5, 4];
+    for (let oB = pB; oB < yB.length; oB++)
+      if (yB[oB] !== yB[oB - pB]) throw new Error("FACE_LAYOUT must repeat a prefix of its base groups");
+    const JB = yB.length + 1,
+      YB = (() => {
+        const BB = [];
+        for (let TB = 0; TB < pB; TB++) BB[yB[TB]] = TB;
+        return BB
       })();
 
-    function jJ(JJ) {
-      return !!JJ && JJ.backFaceCulling && (0 === JJ.transparencyMode || 1 === JJ.transparencyMode)
+    function gB(BB) {
+      return !!BB && BB.backFaceCulling && (0 === BB.transparencyMode || 1 === BB.transparencyMode)
     }
   },
-  36468: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      c: () => AJ,
-      g: () => qJ,
-      j: () => YJ,
-      n: () => jJ,
-      p: () => nJ
+  36420: (BB, TB, dB) => {
+    dB.d(TB, {
+      c: () => JB,
+      g: () => YB,
+      j: () => oB,
+      l: () => gB,
+      n: () => DB
     });
-    var FJ = ZJ(36450);
-    const UJ = 1 / 16,
-      eJ = 1 / 64,
-      XJ = 2048;
-    FJ.k;
+    var VB = dB(36409);
+    const yB = 1 / 16,
+      pB = 1 / 64,
+      lB = 2048;
+    VB.l;
 
-    function AJ(JJ, cJ, ZJ) {
-      return Math.min(Math.abs(JJ[0] * cJ), Math.abs(JJ[5] * ZJ)) / 2
+    function JB(BB, TB, dB) {
+      return Math.min(Math.abs(BB[0] * TB), Math.abs(BB[5] * dB)) / 2
     }
 
-    function qJ(JJ, cJ) {
-      return UJ + eJ * JJ * JJ / cJ
+    function YB(BB, TB) {
+      return yB + pB * BB * BB / TB
     }
 
-    function jJ(JJ, cJ, ZJ, UJ, eJ) {
-      const XJ = FJ.n;
-      return YJ(JJ[XJ], JJ[XJ + 1], JJ[XJ + 2], JJ[XJ + 3], JJ[XJ + 4], JJ[XJ + 5], cJ, ZJ, UJ, eJ)
+    function gB(BB, TB, dB, yB, pB) {
+      const lB = VB.m;
+      return oB(BB[lB], BB[lB + 1], BB[lB + 2], BB[lB + 3], BB[lB + 4], BB[lB + 5], TB, dB, yB, pB)
     }
 
-    function YJ(JJ, cJ, ZJ, FJ, UJ, eJ, XJ, AJ, qJ, jJ) {
-      return (XJ <= JJ - jJ ? 0 : 1) | (XJ >= cJ + jJ ? 0 : 2) | (AJ <= ZJ - jJ ? 0 : 4) | (AJ >= FJ + jJ ? 0 : 8) | (qJ <= UJ - jJ ? 0 : 16) | (qJ >= eJ + jJ ? 0 : 32)
+    function oB(BB, TB, dB, VB, yB, pB, lB, JB, YB, gB) {
+      return (lB <= BB - gB ? 0 : 1) | (lB >= TB + gB ? 0 : 2) | (JB <= dB - gB ? 0 : 4) | (JB >= VB + gB ? 0 : 8) | (YB <= yB - gB ? 0 : 16) | (YB >= pB + gB ? 0 : 32)
     }
-    const hJ = (() => {
-        const JJ = [];
-        for (let cJ = 0; cJ < FJ.r.length; cJ++) {
-          let ZJ = 0;
-          for (let UJ = cJ + 1; UJ <= FJ.r.length; UJ++) {
-            const eJ = 1 << FJ.r[UJ - 1];
-            if (ZJ & eJ) break;
-            ZJ |= eJ, JJ.push({
-              start: cJ,
-              end: UJ,
-              vU: ZJ
+    const kB = (() => {
+        const BB = [];
+        for (let TB = 0; TB < VB.p.length; TB++) {
+          let dB = 0;
+          for (let yB = TB + 1; yB <= VB.p.length; yB++) {
+            const pB = 1 << VB.p[yB - 1];
+            if (dB & pB) break;
+            dB |= pB, BB.push({
+              start: TB,
+              end: yB,
+              EB: dB
             })
           }
         }
-        return JJ
+        return BB
       })(),
-      DJ = [];
+      LB = [];
 
-    function sJ(JJ, cJ) {
-      const ZJ = FJ.j[cJ];
-      return JJ[ZJ + 1] - JJ[ZJ]
+    function OB(BB, TB) {
+      const dB = VB.h[TB];
+      return BB[dB + 1] - BB[dB]
     }
 
-    function nJ(JJ, cJ, ZJ) {
-      let UJ = 0;
-      for (let XJ = 0; XJ < FJ.k; XJ++) sJ(JJ, XJ) > 0 && (UJ |= 1 << XJ);
-      if (0 === (cJ &= UJ)) return 0;
-      if (cJ === UJ) return ZJ[0] = 0, ZJ[1] = JJ[FJ.f], 1;
-      let eJ = null,
-        AJ = 1 / 0;
-      for (const jJ of function(JJ) {
-          let cJ = DJ[JJ];
-          if (cJ) return cJ;
-          const ZJ = new Map,
-            FJ = (JJ, cJ) => {
-              const FJ = 4 * JJ + cJ.length / 2;
-              ZJ.has(FJ) || ZJ.set(FJ, {
-                vU: JJ,
-                windows: cJ
+    function DB(BB, TB, dB) {
+      let yB = 0;
+      for (let lB = 0; lB < VB.l; lB++) OB(BB, lB) > 0 && (yB |= 1 << lB);
+      if (0 === (TB &= yB)) return 0;
+      if (TB === yB) return dB[0] = 0, dB[1] = BB[VB.f], 1;
+      let pB = null,
+        JB = 1 / 0;
+      for (const gB of function(BB) {
+          let TB = LB[BB];
+          if (TB) return TB;
+          const dB = new Map,
+            VB = (BB, TB) => {
+              const VB = 4 * BB + TB.length / 2;
+              dB.has(VB) || dB.set(VB, {
+                EB: BB,
+                windows: TB
               })
             };
-          for (const eJ of hJ)
-            if ((eJ.vU & JJ) === JJ && FJ(eJ.vU, [eJ.start, eJ.end]), 0 !== (eJ.vU & JJ))
-              for (const cJ of hJ) cJ.start < eJ.end || 0 !== (eJ.vU & cJ.vU) || 0 === (cJ.vU & JJ) || ((eJ.vU | cJ.vU) & JJ) !== JJ || FJ(eJ.vU | cJ.vU, [eJ.start, eJ.end, cJ.start, cJ.end]);
-          const UJ = [...ZJ.values()];
-          return cJ = UJ.filter((JJ => !UJ.some((cJ => cJ !== JJ && (cJ.vU & JJ.vU) === cJ.vU && cJ.windows.length <= JJ.windows.length)))), DJ[JJ] = cJ, cJ
-        }(cJ)) {
-        let ZJ = (jJ.windows.length / 2 - 1) * XJ;
-        const qJ = jJ.vU & ~cJ & UJ;
-        for (let cJ = 0; cJ < FJ.k; cJ++) qJ & 1 << cJ && (ZJ += sJ(JJ, cJ));
-        ZJ < AJ && (eJ = jJ, AJ = ZJ)
+          for (const pB of kB)
+            if ((pB.EB & BB) === BB && VB(pB.EB, [pB.start, pB.end]), 0 !== (pB.EB & BB))
+              for (const TB of kB) TB.start < pB.end || 0 !== (pB.EB & TB.EB) || 0 === (TB.EB & BB) || ((pB.EB | TB.EB) & BB) !== BB || VB(pB.EB | TB.EB, [pB.start, pB.end, TB.start, TB.end]);
+          const yB = [...dB.values()];
+          return TB = yB.filter((BB => !yB.some((TB => TB !== BB && (TB.EB & BB.EB) === TB.EB && TB.windows.length <= BB.windows.length)))), LB[BB] = TB, TB
+        }(TB)) {
+        let dB = (gB.windows.length / 2 - 1) * lB;
+        const YB = gB.EB & ~TB & yB;
+        for (let TB = 0; TB < VB.l; TB++) YB & 1 << TB && (dB += OB(BB, TB));
+        dB < JB && (pB = gB, JB = dB)
       }
-      const qJ = eJ.windows;
-      for (let FJ = 0; FJ < qJ.length; FJ += 2) {
-        const cJ = JJ[qJ[FJ]];
-        ZJ[FJ] = cJ, ZJ[FJ + 1] = JJ[qJ[FJ + 1]] - cJ
+      const YB = pB.windows;
+      for (let VB = 0; VB < YB.length; VB += 2) {
+        const TB = BB[YB[VB]];
+        dB[VB] = TB, dB[VB + 1] = BB[YB[VB + 1]] - TB
       }
-      return qJ.length / 2
+      return YB.length / 2
     }
   }
 };
 Object.freeze(modules);
-for (const JJ in modules) Object.freeze(modules[JJ]);
+for (const BB in modules) Object.freeze(modules[BB]);

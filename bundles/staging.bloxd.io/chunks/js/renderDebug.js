@@ -1,30 +1,30 @@
 export const id = 44;
 export const ids = [44];
 export const modules = {
-  4105: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      c: () => YJ
+  4096: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => oB
     });
-    var FJ = ZJ(13),
-      UJ = ZJ(17),
-      eJ = ZJ(1184),
-      XJ = ZJ(2610);
-    const AJ = 3e4,
-      qJ = 1e3;
+    var VB = dB(21),
+      yB = dB(24),
+      pB = dB(1173),
+      lB = dB(2583);
+    const JB = 3e4,
+      YB = 1e3;
 
-    function jJ() {
-      return "visible" === document.visibilityState && "inGame" === FJ.d.get("gameState") && (0, eJ.j)()
+    function gB() {
+      return "visible" === document.visibilityState && "inGame" === VB.d.get("gameState") && (0, pB.r)()
     }
 
-    function YJ(JJ, cJ) {
-      ! function(JJ, cJ, ZJ) {
-        let FJ = 0;
-        const UJ = setInterval((() => {
-          cJ() && (FJ += qJ, FJ >= JJ && (clearInterval(UJ), ZJ()))
-        }), qJ)
-      }(AJ, jJ, (() => {
-        cJ().then((() => {
-          JJ(`saved for the player after ${AJ/1e3} s of play`), (0, XJ.x)(), UJ.i.Uf("chat", {
+    function oB(BB, TB) {
+      ! function(BB, TB, dB) {
+        let VB = 0;
+        const yB = setInterval((() => {
+          TB() && (VB += YB, VB >= BB && (clearInterval(yB), dB()))
+        }), YB)
+      }(JB, gB, (() => {
+        TB().then((() => {
+          BB(`saved for the player after ${JB/1e3} s of play`), (0, lB.r)(), yB.h.yH("chat", {
             content: [{
               str: "Saved a debug file to your downloads: please send it to us with a screenshot of the game.",
               style: {
@@ -36,61 +36,61 @@ export const modules = {
       }))
     }
   },
-  4098: (JJ, cJ, ZJ) => {
-    ZJ.r(cJ), ZJ.d(cJ, {
-      installRenderDebug: () => AZ,
-      renderDebugPlayable: () => jZ,
-      startRenderDebug: () => qZ,
-      waitForDraw: () => YZ
+  4089: (BB, TB, dB) => {
+    dB.r(TB), dB.d(TB, {
+      installRenderDebug: () => Jd,
+      renderDebugPlayable: () => gd,
+      startRenderDebug: () => Yd,
+      waitForDraw: () => od
     });
-    var FJ = ZJ(4064),
-      UJ = ZJ(4105),
-      eJ = ZJ(2610);
-    const XJ = ["+x", "-x", "+y", "-y", "+z", "-z", "dir6", "dir7"];
+    var VB = dB(4057),
+      yB = dB(4096),
+      pB = dB(2583);
+    const lB = ["+x", "-x", "+y", "-y", "+z", "-z", "dir6", "dir7"];
 
-    function AJ(JJ) {
-      return 7 & JJ
+    function JB(BB) {
+      return 7 & BB
     }
 
-    function qJ(JJ) {
-      return JJ >>> 11 & 1
+    function YB(BB) {
+      return BB >>> 11 & 1
     }
 
-    function jJ(JJ) {
-      return [1 + (JJ >>> 18 & 63), 1 + (JJ >>> 24 & 63)]
+    function gB(BB) {
+      return [1 + (BB >>> 18 & 63), 1 + (BB >>> 24 & 63)]
     }
 
-    function YJ(JJ, cJ) {
-      const [ZJ, , FJ] = JJ, UJ = AJ(FJ), eJ = function(JJ, cJ, ZJ) {
-        return cJ + (1 === (22 >>> JJ & 1) ? 4 - ZJ : ZJ) & 3
-      }(UJ, qJ(FJ), cJ), XJ = UJ >>> 1, [YJ, hJ] = jJ(ZJ), DJ = 1 === eJ || 2 === eJ ? YJ : 0, sJ = eJ >= 2 ? hJ : 0, nJ = [63 & ZJ, ZJ >>> 6 & 63, ZJ >>> 12 & 63];
-      return nJ[2 === XJ ? 0 : 2] += DJ, nJ[1 === XJ ? 0 : 1] += sJ, nJ
+    function oB(BB, TB) {
+      const [dB, , VB] = BB, yB = JB(VB), pB = function(BB, TB, dB) {
+        return TB + (1 === (22 >>> BB & 1) ? 4 - dB : dB) & 3
+      }(yB, YB(VB), TB), lB = yB >>> 1, [oB, kB] = gB(dB), LB = 1 === pB || 2 === pB ? oB : 0, OB = pB >= 2 ? kB : 0, DB = [63 & dB, dB >>> 6 & 63, dB >>> 12 & 63];
+      return DB[2 === lB ? 0 : 2] += LB, DB[1 === lB ? 0 : 1] += OB, DB
     }
 
-    function hJ(JJ) {
-      const cJ = Math.max(...jJ(JJ[0]));
-      return 1 === cJ ? "1" : cJ <= 4 ? "2-4" : cJ <= 16 ? "5-16" : "17-64"
+    function kB(BB) {
+      const TB = Math.max(...gB(BB[0]));
+      return 1 === TB ? "1" : TB <= 4 ? "2-4" : TB <= 16 ? "5-16" : "17-64"
     }
-    const DJ = 16;
+    const LB = 16;
 
-    function sJ(JJ) {
-      let cJ = 2166136261;
-      for (let ZJ = 0; ZJ < JJ.length; ZJ++) cJ = Math.imul(cJ ^ JJ[ZJ], 16777619);
-      return cJ >>> 0
+    function OB(BB) {
+      let TB = 2166136261;
+      for (let dB = 0; dB < BB.length; dB++) TB = Math.imul(TB ^ BB[dB], 16777619);
+      return TB >>> 0
     }
 
-    function nJ(JJ, cJ) {
-      let ZJ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 12;
-      const FJ = Math.max(0, cJ - ZJ),
-        UJ = Math.min(JJ.length, cJ + ZJ),
-        eJ = [];
-      for (let XJ = FJ; XJ < UJ; XJ++) {
-        const ZJ = JJ[XJ].toString(16).padStart(2, "0");
-        eJ.push(XJ === cJ ? `[${ZJ}]` : ZJ)
+    function DB(BB, TB) {
+      let dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 12;
+      const VB = Math.max(0, TB - dB),
+        yB = Math.min(BB.length, TB + dB),
+        pB = [];
+      for (let lB = VB; lB < yB; lB++) {
+        const dB = BB[lB].toString(16).padStart(2, "0");
+        pB.push(lB === TB ? `[${dB}]` : dB)
       }
-      return eJ.join(" ")
+      return pB.join(" ")
     }
-    const GJ = {
+    const uB = {
         NO_ERROR: 0,
         POINTS: 0,
         ARRAY_BUFFER: 34962,
@@ -168,437 +168,437 @@ export const modules = {
         FLOAT_MAT3: 35675,
         FLOAT_MAT4: 35676
       },
-      fJ = "_vs2fs_location0",
-      xJ = 0,
-      rJ = 4,
-      vJ = 6,
-      mJ = [0, 1, 2, 0, 2, 3],
-      QJ = 2048,
-      EJ = 4,
-      VJ = 256,
-      KJ = 64,
-      yJ = 268435456,
-      SJ = 65536,
-      IJ = /^#version [^\n]*\/\/ program (\S+)$/m;
+      HB = "_vs2fs_location0",
+      EB = 0,
+      vB = 4,
+      mB = 6,
+      iB = [0, 1, 2, 0, 2, 3],
+      NB = 2048,
+      tB = 4,
+      fB = 256,
+      sB = 64,
+      MB = 268435456,
+      zB = 65536,
+      wB = /^#version [^\n]*\/\/ program (\S+)$/m;
 
-    function MJ(JJ) {
-      return null === JJ.name ? `#${JJ.id}` : `#${JJ.id} ${JJ.name}`
+    function UB(BB) {
+      return null === BB.name ? `#${BB.id}` : `#${BB.id} ${BB.name}`
     }
-    const bJ = [],
-      wJ = new WeakMap,
-      WJ = new WeakMap,
-      gJ = {
+    const FB = [],
+      KB = new WeakMap,
+      rB = new WeakMap,
+      IB = {
         context: null,
         inProbe: !1,
         pendingCheck: null,
         shadowBytes: 0,
         uncopied: 0
       };
-    let HJ = 1;
-    const PJ = new WeakMap;
+    let cB = 1;
+    const SB = new WeakMap;
 
-    function kJ(JJ) {
-      if (null === JJ) return 0;
-      let cJ = PJ.get(JJ);
-      return void 0 === cJ && (cJ = HJ++, PJ.set(JJ, cJ)), cJ
+    function PB(BB) {
+      if (null === BB) return 0;
+      let TB = SB.get(BB);
+      return void 0 === TB && (TB = cB++, SB.set(BB, TB)), TB
     }
-    class pJ {
-      constructor(JJ, cJ) {
-        this.print = JJ, this.now = cJ, this.shown = 0, this.hj = 0, this.sections = 0, this.second = -1 / 0, this.inSecond = 0, this.ys = [], this.dropped = 0
+    class QB {
+      constructor(BB, TB) {
+        this.print = BB, this.now = TB, this.shown = 0, this.Dg = 0, this.sections = 0, this.second = -1 / 0, this.inSecond = 0, this.RO = [], this.dropped = 0
       }
-      line(JJ) {
-        const cJ = this.now();
-        if (cJ - this.second >= 1e3 && (this.second = cJ, this.inSecond = 0), this.shown >= 400 || this.inSecond >= 20) return this.hj++, void this.store(JJ);
-        this.shown++, this.inSecond++, this.print(400 === this.shown ? `${JJ} (the last line here: the rest go to bloxdDebug.save())` : JJ)
+      line(BB) {
+        const TB = this.now();
+        if (TB - this.second >= 1e3 && (this.second = TB, this.inSecond = 0), this.shown >= 400 || this.inSecond >= 20) return this.Dg++, void this.store(BB);
+        this.shown++, this.inSecond++, this.print(400 === this.shown ? `${BB} (the last line here: the rest go to bloxdDebug.save())` : BB)
       }
-      keep(JJ) {
-        this.sections++, this.store(JJ)
+      keep(BB) {
+        this.sections++, this.store(BB)
       }
-      store(JJ) {
-        this.ys.push(`${new Date(Date.now()).toISOString()} ${JJ}`), this.ys.length > 2e4 && (this.ys.shift(), this.dropped++)
+      store(BB) {
+        this.RO.push(`${new Date(Date.now()).toISOString()} ${BB}`), this.RO.length > 2e4 && (this.RO.shift(), this.dropped++)
       }
       dump() {
-        return [`${this.shown} lines logged (above); kept here: ${this.hj} lines past the console's budget, ${this.sections} sections; ${this.dropped} oldest dropped`, ...this.ys].join("\n")
+        return [`${this.shown} lines logged (above); kept here: ${this.Dg} lines past the console's budget, ${this.sections} sections; ${this.dropped} oldest dropped`, ...this.RO].join("\n")
       }
     }
-    let dJ = null;
+    let RB = null;
 
-    function zJ() {
-      if (null === dJ) {
-        const JJ = new pJ((JJ => {
-          (0, eJ.j)("render", JJ)
+    function aB() {
+      if (null === RB) {
+        const BB = new QB((BB => {
+          (0, pB.i)("render", BB)
         }), (() => performance.now()));
-        (0, eJ.h)("render", (() => JJ.dump())), dJ = JJ
+        (0, pB.f)("render", (() => BB.dump())), RB = BB
       }
-      return dJ
+      return RB
     }
 
-    function NJ(JJ) {
-      zJ().line(JJ)
+    function ZB(BB) {
+      aB().line(BB)
     }
 
-    function OJ(JJ) {
-      zJ().keep(JJ)
+    function XB(BB) {
+      aB().keep(BB)
     }
 
-    function TJ(JJ) {
-      let cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 4096;
-      return JJ.length <= cJ ? JJ : `${JJ.slice(0,cJ)}... (${JJ.length-cJ} more characters)`
+    function WB(BB) {
+      let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 4096;
+      return BB.length <= TB ? BB : `${BB.slice(0,TB)}... (${BB.length-TB} more characters)`
     }
 
-    function CJ(JJ, cJ, ZJ, FJ, UJ, eJ) {
-      const XJ = gJ.pendingCheck;
-      if (null === XJ) return;
-      const AJ = "undefined" !== typeof WebGL2RenderingContext && JJ instanceof WebGL2RenderingContext,
-        qJ = {
-          gl: JJ,
-          program: ZJ,
-          call: FJ,
-          ws: UJ,
-          instances: eJ,
+    function hB(BB, TB, dB, VB, yB, pB) {
+      const lB = IB.pendingCheck;
+      if (null === lB) return;
+      const JB = "undefined" !== typeof WebGL2RenderingContext && BB instanceof WebGL2RenderingContext,
+        YB = {
+          gl: BB,
+          program: dB,
+          call: VB,
+          ek: yB,
+          instances: pB,
           attributes: [],
           group: -1,
           chunk: "",
           pages: []
         };
-      if (XJ.draws.push(qJ), AJ) try {
-        const FJ = function(JJ) {
-          const cJ = [],
-            ZJ = new Map,
-            FJ = Math.min(16, JJ.getParameter(GJ.MAX_VERTEX_ATTRIBS));
-          for (let UJ = 0; UJ < FJ; UJ++) {
-            if (!JJ.getVertexAttrib(UJ, GJ.VERTEX_ATTRIB_ARRAY_ENABLED)) continue;
-            const FJ = JJ.getVertexAttrib(UJ, GJ.VERTEX_ATTRIB_ARRAY_BUFFER_BINDING),
-              eJ = JJ.getVertexAttribOffset(UJ, GJ.VERTEX_ATTRIB_ARRAY_POINTER),
-              XJ = JJ.getVertexAttrib(UJ, GJ.VERTEX_ATTRIB_ARRAY_STRIDE),
-              AJ = JJ.getVertexAttrib(UJ, GJ.VERTEX_ATTRIB_ARRAY_SIZE),
-              qJ = JJ.getVertexAttrib(UJ, GJ.VERTEX_ATTRIB_ARRAY_TYPE),
-              jJ = "VERTEX_ATTRIB_ARRAY_INTEGER" in JJ && JJ.getVertexAttrib(UJ, GJ.VERTEX_ATTRIB_ARRAY_INTEGER),
-              YJ = "VERTEX_ATTRIB_ARRAY_DIVISOR" in JJ ? JJ.getVertexAttrib(UJ, GJ.VERTEX_ATTRIB_ARRAY_DIVISOR) : 0;
-            ZJ.set(UJ, {
-              buffer: FJ,
-              offset: eJ,
-              stride: XJ
-            }), cJ.push(`@${UJ} buf#${kJ(FJ)} +${eJ} stride ${XJ} ${AJ}x0x${qJ.toString(16)}${jJ?" int":""} div ${YJ}`)
+      if (lB.draws.push(YB), JB) try {
+        const VB = function(BB) {
+          const TB = [],
+            dB = new Map,
+            VB = Math.min(16, BB.getParameter(uB.MAX_VERTEX_ATTRIBS));
+          for (let yB = 0; yB < VB; yB++) {
+            if (!BB.getVertexAttrib(yB, uB.VERTEX_ATTRIB_ARRAY_ENABLED)) continue;
+            const VB = BB.getVertexAttrib(yB, uB.VERTEX_ATTRIB_ARRAY_BUFFER_BINDING),
+              pB = BB.getVertexAttribOffset(yB, uB.VERTEX_ATTRIB_ARRAY_POINTER),
+              lB = BB.getVertexAttrib(yB, uB.VERTEX_ATTRIB_ARRAY_STRIDE),
+              JB = BB.getVertexAttrib(yB, uB.VERTEX_ATTRIB_ARRAY_SIZE),
+              YB = BB.getVertexAttrib(yB, uB.VERTEX_ATTRIB_ARRAY_TYPE),
+              gB = "VERTEX_ATTRIB_ARRAY_INTEGER" in BB && BB.getVertexAttrib(yB, uB.VERTEX_ATTRIB_ARRAY_INTEGER),
+              oB = "VERTEX_ATTRIB_ARRAY_DIVISOR" in BB ? BB.getVertexAttrib(yB, uB.VERTEX_ATTRIB_ARRAY_DIVISOR) : 0;
+            dB.set(yB, {
+              buffer: VB,
+              offset: pB,
+              stride: lB
+            }), TB.push(`@${yB} buf#${PB(VB)} +${pB} stride ${lB} ${JB}x0x${YB.toString(16)}${gB?" int":""} div ${oB}`)
           }
           return {
-            lines: cJ,
-            byLocation: ZJ
+            lines: TB,
+            byLocation: dB
           }
-        }(JJ);
-        if (qJ.attributes = FJ.lines, "inst" === ZJ.terrain) {
+        }(BB);
+        if (YB.attributes = VB.lines, "inst" === dB.terrain) {
           const {
-            group: UJ,
-            chunk: AJ
-          } = function(JJ, cJ, ZJ) {
-            const FJ = cJ.get(vJ),
-              UJ = JJ.getVertexAttrib(vJ, GJ.CURRENT_VERTEX_ATTRIB),
-              eJ = FJ ? `+${FJ.offset}` : UJ ? Array.from(UJ).slice(0, 3).join(",") : "?";
-            let XJ = ZJ.groups.get(eJ);
-            return void 0 === XJ && (XJ = ZJ.groups.size, ZJ.groups.set(eJ, XJ)), {
-              group: XJ,
-              chunk: eJ
+            group: yB,
+            chunk: JB
+          } = function(BB, TB, dB) {
+            const VB = TB.get(mB),
+              yB = BB.getVertexAttrib(mB, uB.CURRENT_VERTEX_ATTRIB),
+              pB = VB ? `+${VB.offset}` : yB ? Array.from(yB).slice(0, 3).join(",") : "?";
+            let lB = dB.groups.get(pB);
+            return void 0 === lB && (lB = dB.groups.size, dB.groups.set(pB, lB)), {
+              group: lB,
+              chunk: pB
             }
-          }(JJ, FJ.byLocation, XJ);
-          qJ.group = UJ, qJ.chunk = AJ;
-          for (const JJ of [xJ, rJ]) {
-            var jJ;
-            const cJ = null === (jJ = FJ.byLocation.get(JJ)) || void 0 === jJ ? void 0 : jJ.buffer;
-            cJ && qJ.pages.push({
+          }(BB, VB.byLocation, lB);
+          YB.group = yB, YB.chunk = JB;
+          for (const BB of [EB, vB]) {
+            var gB;
+            const TB = null === (gB = VB.byLocation.get(BB)) || void 0 === gB ? void 0 : gB.buffer;
+            TB && YB.pages.push({
               kind: "buf",
-              buffer: cJ
+              buffer: TB
             })
-          }! function(JJ, cJ, ZJ, FJ, UJ, eJ, XJ) {
-            const AJ = FJ.get(xJ),
-              qJ = XJ.parts.get(eJ);
-            if (void 0 === qJ && XJ.parts.size >= EJ) return;
-            const jJ = Math.min(UJ, KJ, VJ - (null !== qJ && void 0 !== qJ ? qJ : 0));
-            if (null === AJ || void 0 === AJ || !AJ.buffer || jJ <= 0) return;
-            const YJ = uJ(JJ, cJ, ZJ);
-            if (!YJ) return;
-            const hJ = AJ.stride || 12,
-              DJ = BJ(JJ, AJ.buffer, AJ.offset, (jJ - 1) * hJ + 12),
-              sJ = new DataView(DJ.buffer),
-              nJ = function(JJ, cJ) {
-                const ZJ = function(JJ) {
-                    const cJ = lJ.get(JJ);
-                    if (void 0 !== cJ && (null === cJ || JJ.isProgram(cJ))) return cJ;
-                    gJ.inProbe = !0;
-                    let ZJ = null;
+          }! function(BB, TB, dB, VB, yB, pB, lB) {
+            const JB = VB.get(EB),
+              YB = lB.parts.get(pB);
+            if (void 0 === YB && lB.parts.size >= tB) return;
+            const gB = Math.min(yB, sB, fB - (null !== YB && void 0 !== YB ? YB : 0));
+            if (null === JB || void 0 === JB || !JB.buffer || gB <= 0) return;
+            const oB = CB(BB, TB, dB);
+            if (!oB) return;
+            const kB = JB.stride || 12,
+              LB = AB(BB, JB.buffer, JB.offset, (gB - 1) * kB + 12),
+              OB = new DataView(LB.buffer),
+              DB = function(BB, TB) {
+                const dB = function(BB) {
+                    const TB = eB.get(BB);
+                    if (void 0 !== TB && (null === TB || BB.isProgram(TB))) return TB;
+                    IB.inProbe = !0;
+                    let dB = null;
                     try {
-                      ZJ = iJ(JJ, tJ, oJ, "fed", "the record feed")
+                      dB = GB(BB, bB, nB, "fed", "the record feed")
                     } finally {
-                      gJ.inProbe = !1
+                      IB.inProbe = !1
                     }
-                    return lJ.set(JJ, ZJ), ZJ
-                  }(JJ),
-                  FJ = ZJ ? aJ(JJ, ZJ, cJ, (() => {
-                    JJ.drawArraysInstanced(GJ.POINTS, 0, 1, cJ)
+                    return eB.set(BB, dB), dB
+                  }(BB),
+                  VB = dB ? jB(BB, dB, TB, (() => {
+                    BB.drawArraysInstanced(uB.POINTS, 0, 1, TB)
                   }), "decode probe input (the record feed)") : null;
-                return FJ ? new Uint32Array(FJ.buffer) : null
-              }(JJ, jJ);
-            nJ || XJ.fed.failed++;
-            const fJ = aJ(JJ, YJ, 4 * jJ, (() => {
-              JJ.drawArraysInstanced(GJ.POINTS, 0, 4, jJ)
+                return VB ? new Uint32Array(VB.buffer) : null
+              }(BB, gB);
+            DB || lB.fed.failed++;
+            const HB = jB(BB, oB, 4 * gB, (() => {
+              BB.drawArraysInstanced(uB.POINTS, 0, 4, gB)
             }));
-            if (!fJ) return;
-            XJ.parts.set(eJ, (null !== qJ && void 0 !== qJ ? qJ : 0) + jJ);
-            for (let GJ = 0; GJ < jJ; GJ++) {
-              const JJ = GJ * hJ,
-                cJ = [sJ.getUint32(JJ, !0), sJ.getUint32(JJ + 4, !0), sJ.getUint32(JJ + 8, !0)],
-                ZJ = nJ ? [nJ[3 * GJ], nJ[3 * GJ + 1], nJ[3 * GJ + 2]] : cJ;
-              nJ && (XJ.fed.records++, ZJ.some(((JJ, ZJ) => JJ !== cJ[ZJ])) && (XJ.fed.differing++, XJ.fed.first.length < 8 && XJ.fed.first.push(`part ${eJ} instance ${GJ}: fed ${ZJ.map(Uc).join(" ")} buffer ${cJ.map(Uc).join(" ")}`)));
-              for (let FJ = 0; FJ < 4; FJ++) {
-                const JJ = 3 * (4 * GJ + FJ);
-                XJ.vertices.push({
-                  record: ZJ,
-                  slot: FJ,
-                  group: eJ,
-                  gpu: [fJ[JJ], fJ[JJ + 1], fJ[JJ + 2]]
+            if (!HB) return;
+            lB.parts.set(pB, (null !== YB && void 0 !== YB ? YB : 0) + gB);
+            for (let uB = 0; uB < gB; uB++) {
+              const BB = uB * kB,
+                TB = [OB.getUint32(BB, !0), OB.getUint32(BB + 4, !0), OB.getUint32(BB + 8, !0)],
+                dB = DB ? [DB[3 * uB], DB[3 * uB + 1], DB[3 * uB + 2]] : TB;
+              DB && (lB.fed.records++, dB.some(((BB, dB) => BB !== TB[dB])) && (lB.fed.differing++, lB.fed.first.length < 8 && lB.fed.first.push(`part ${pB} instance ${uB}: fed ${dB.map(yT).join(" ")} buffer ${TB.map(yT).join(" ")}`)));
+              for (let VB = 0; VB < 4; VB++) {
+                const BB = 3 * (4 * uB + VB);
+                lB.vertices.push({
+                  record: dB,
+                  slot: VB,
+                  group: pB,
+                  gpu: [HB[BB], HB[BB + 1], HB[BB + 2]]
                 })
               }
             }
-          }(JJ, cJ, ZJ, FJ.byLocation, eJ, UJ, XJ)
+          }(BB, TB, dB, VB.byLocation, pB, yB, lB)
         } else {
-          const FJ = Jc(JJ, cJ, 16),
-            eJ = Jc(JJ, cJ, 8);
-          for (const JJ of [FJ, eJ]) JJ && qJ.pages.push({
+          const VB = BT(BB, TB, 16),
+            pB = BT(BB, TB, 8);
+          for (const BB of [VB, pB]) BB && YB.pages.push({
             kind: "tex",
-            texture: JJ
+            texture: BB
           });
-          FJ && function(JJ, cJ, ZJ, FJ, UJ, eJ) {
-            if (eJ.parts.size >= EJ) return;
-            const XJ = uJ(JJ, cJ, ZJ);
-            if (!XJ) return;
-            let AJ = 6 * VJ;
-            const qJ = [];
-            for (const [sJ, nJ] of UJ) {
-              const JJ = Math.min(nJ, AJ, Math.max(6, 6 * Math.floor(VJ / UJ.length)));
-              JJ > 0 && (qJ.push([sJ, JJ]), AJ -= JJ)
+          VB && function(BB, TB, dB, VB, yB, pB) {
+            if (pB.parts.size >= tB) return;
+            const lB = CB(BB, TB, dB);
+            if (!lB) return;
+            let JB = 6 * fB;
+            const YB = [];
+            for (const [OB, DB] of yB) {
+              const BB = Math.min(DB, JB, Math.max(6, 6 * Math.floor(fB / yB.length)));
+              BB > 0 && (YB.push([OB, BB]), JB -= BB)
             }
-            const jJ = qJ.reduce(((JJ, cJ) => {
-                let [, ZJ] = cJ;
-                return JJ + ZJ
+            const gB = YB.reduce(((BB, TB) => {
+                let [, dB] = TB;
+                return BB + dB
               }), 0),
-              YJ = aJ(JJ, XJ, jJ, (() => {
-                for (const [cJ, ZJ] of qJ) JJ.drawArrays(GJ.POINTS, cJ, ZJ)
+              oB = jB(BB, lB, gB, (() => {
+                for (const [TB, dB] of YB) BB.drawArrays(uB.POINTS, TB, dB)
               }));
-            if (!YJ) return;
-            let hJ = 0;
-            for (const [sJ, nJ] of qJ) {
-              const cJ = Math.floor(sJ / 6),
-                ZJ = Math.floor((sJ + nJ - 1) / 6) - cJ + 1,
-                UJ = cc(JJ, FJ, QJ, cJ, ZJ);
-              for (let JJ = sJ; JJ < sJ + nJ; JJ++, hJ++) {
-                var DJ;
-                const ZJ = 4 * (Math.floor(JJ / 6) - cJ),
-                  FJ = [UJ[ZJ], UJ[ZJ + 1], UJ[ZJ + 2]];
-                eJ.parts.set(UJ[ZJ + 3], (null !== (DJ = eJ.parts.get(UJ[ZJ + 3])) && void 0 !== DJ ? DJ : 0) + (JJ % 6 === 0 ? 1 : 0)), eJ.vertices.push({
-                  record: FJ,
-                  slot: mJ[JJ % 6],
-                  group: UJ[ZJ + 3],
-                  gpu: [YJ[3 * hJ], YJ[3 * hJ + 1], YJ[3 * hJ + 2]]
+            if (!oB) return;
+            let kB = 0;
+            for (const [OB, DB] of YB) {
+              const TB = Math.floor(OB / 6),
+                dB = Math.floor((OB + DB - 1) / 6) - TB + 1,
+                yB = TT(BB, VB, NB, TB, dB);
+              for (let BB = OB; BB < OB + DB; BB++, kB++) {
+                var LB;
+                const dB = 4 * (Math.floor(BB / 6) - TB),
+                  VB = [yB[dB], yB[dB + 1], yB[dB + 2]];
+                pB.parts.set(yB[dB + 3], (null !== (LB = pB.parts.get(yB[dB + 3])) && void 0 !== LB ? LB : 0) + (BB % 6 === 0 ? 1 : 0)), pB.vertices.push({
+                  record: VB,
+                  slot: iB[BB % 6],
+                  group: yB[dB + 3],
+                  gpu: [oB[3 * kB], oB[3 * kB + 1], oB[3 * kB + 2]]
                 })
               }
             }
-          }(JJ, cJ, ZJ, FJ, UJ, XJ)
+          }(BB, TB, dB, VB, yB, lB)
         }
-      } catch (YJ) {
-        NJ(`decode probe failed on program ${MJ(ZJ)}: ${String(YJ)}`)
+      } catch (oB) {
+        ZB(`decode probe failed on program ${UB(dB)}: ${String(oB)}`)
       }
     }
 
-    function uJ(JJ, cJ, ZJ) {
-      if (void 0 !== ZJ.probe) return ZJ.probe && RJ(JJ, cJ, ZJ.probe), ZJ.probe;
-      ZJ.probe = null, gJ.inProbe = !0;
+    function CB(BB, TB, dB) {
+      if (void 0 !== dB.probe) return dB.probe && qB(BB, TB, dB.probe), dB.probe;
+      dB.probe = null, IB.inProbe = !0;
       try {
-        ZJ.probe = function(JJ, cJ) {
-          return iJ(JJ, cJ.vertex, cJ.fragment, fJ, `program ${MJ(cJ)}'s twin`)
-        }(JJ, ZJ)
+        dB.probe = function(BB, TB) {
+          return GB(BB, TB.vertex, TB.fragment, HB, `program ${UB(TB)}'s twin`)
+        }(BB, dB)
       } finally {
-        gJ.inProbe = !1
+        IB.inProbe = !1
       }
-      return ZJ.probe && RJ(JJ, cJ, ZJ.probe), ZJ.probe
+      return dB.probe && qB(BB, TB, dB.probe), dB.probe
     }
 
-    function iJ(JJ, cJ, ZJ, FJ, UJ) {
-      const eJ = [JJ.createShader(GJ.VERTEX_SHADER), JJ.createShader(GJ.FRAGMENT_SHADER)],
-        XJ = JJ.createProgram();
-      if (!XJ || !eJ[0] || !eJ[1]) return null;
-      JJ.shaderSource(eJ[0], cJ), JJ.shaderSource(eJ[1], ZJ);
-      for (const qJ of eJ) JJ.compileShader(qJ), JJ.attachShader(XJ, qJ);
-      JJ.transformFeedbackVaryings(XJ, [FJ], GJ.INTERLEAVED_ATTRIBS), JJ.linkProgram(XJ);
-      for (const qJ of eJ) JJ.deleteShader(qJ);
-      var AJ;
-      return JJ.getProgramParameter(XJ, GJ.LINK_STATUS) ? XJ : (NJ(`decode probe: ${UJ} failed to link: ${TJ(null!==(AJ=JJ.getProgramInfoLog(XJ))&&void 0!==AJ?AJ:"",300)}`), JJ.deleteProgram(XJ), null)
+    function GB(BB, TB, dB, VB, yB) {
+      const pB = [BB.createShader(uB.VERTEX_SHADER), BB.createShader(uB.FRAGMENT_SHADER)],
+        lB = BB.createProgram();
+      if (!lB || !pB[0] || !pB[1]) return null;
+      BB.shaderSource(pB[0], TB), BB.shaderSource(pB[1], dB);
+      for (const YB of pB) BB.compileShader(YB), BB.attachShader(lB, YB);
+      BB.transformFeedbackVaryings(lB, [VB], uB.INTERLEAVED_ATTRIBS), BB.linkProgram(lB);
+      for (const YB of pB) BB.deleteShader(YB);
+      var JB;
+      return BB.getProgramParameter(lB, uB.LINK_STATUS) ? lB : (ZB(`decode probe: ${yB} failed to link: ${WB(null!==(JB=BB.getProgramInfoLog(lB))&&void 0!==JB?JB:"",300)}`), BB.deleteProgram(lB), null)
     }
 
-    function RJ(JJ, cJ, ZJ) {
-      const FJ = JJ.getProgramParameter(cJ, GJ.ACTIVE_UNIFORM_BLOCKS);
-      for (let AJ = 0; AJ < FJ; AJ++) {
-        const FJ = JJ.getActiveUniformBlockName(cJ, AJ),
-          UJ = null === FJ ? GJ.INVALID_INDEX : JJ.getUniformBlockIndex(ZJ, FJ);
-        UJ !== GJ.INVALID_INDEX && JJ.uniformBlockBinding(ZJ, UJ, JJ.getActiveUniformBlockParameter(cJ, AJ, GJ.UNIFORM_BLOCK_BINDING))
+    function qB(BB, TB, dB) {
+      const VB = BB.getProgramParameter(TB, uB.ACTIVE_UNIFORM_BLOCKS);
+      for (let JB = 0; JB < VB; JB++) {
+        const VB = BB.getActiveUniformBlockName(TB, JB),
+          yB = null === VB ? uB.INVALID_INDEX : BB.getUniformBlockIndex(dB, VB);
+        yB !== uB.INVALID_INDEX && BB.uniformBlockBinding(dB, yB, BB.getActiveUniformBlockParameter(TB, JB, uB.UNIFORM_BLOCK_BINDING))
       }
-      const UJ = JJ.getParameter(GJ.CURRENT_PROGRAM);
-      JJ.useProgram(ZJ);
-      const eJ = JJ.getProgramParameter(cJ, GJ.ACTIVE_UNIFORMS),
-        XJ = JJ.getActiveUniforms(cJ, [...Array(eJ).keys()], GJ.UNIFORM_BLOCK_INDEX);
-      for (let AJ = 0; AJ < eJ; AJ++) {
-        const FJ = JJ.getActiveUniform(cJ, AJ);
-        if (!FJ || -1 !== XJ[AJ]) continue;
-        const UJ = FJ.name.replace(/\[0\]$/, "");
-        for (let eJ = 0; eJ < FJ.size; eJ++) {
-          const XJ = FJ.size > 1 ? `${UJ}[${eJ}]` : FJ.name,
-            AJ = JJ.getUniformLocation(cJ, XJ),
-            qJ = JJ.getUniformLocation(ZJ, XJ);
-          AJ && qJ && LJ(JJ, qJ, FJ.type, JJ.getUniform(cJ, AJ))
+      const yB = BB.getParameter(uB.CURRENT_PROGRAM);
+      BB.useProgram(dB);
+      const pB = BB.getProgramParameter(TB, uB.ACTIVE_UNIFORMS),
+        lB = BB.getActiveUniforms(TB, [...Array(pB).keys()], uB.UNIFORM_BLOCK_INDEX);
+      for (let JB = 0; JB < pB; JB++) {
+        const VB = BB.getActiveUniform(TB, JB);
+        if (!VB || -1 !== lB[JB]) continue;
+        const yB = VB.name.replace(/\[0\]$/, "");
+        for (let pB = 0; pB < VB.size; pB++) {
+          const lB = VB.size > 1 ? `${yB}[${pB}]` : VB.name,
+            JB = BB.getUniformLocation(TB, lB),
+            YB = BB.getUniformLocation(dB, lB);
+          JB && YB && xB(BB, YB, VB.type, BB.getUniform(TB, JB))
         }
       }
-      JJ.useProgram(UJ)
+      BB.useProgram(yB)
     }
 
-    function LJ(JJ, cJ, ZJ, FJ) {
-      const UJ = ArrayBuffer.isView(FJ) ? Array.from(FJ) : [Number(FJ)];
-      switch (ZJ) {
-        case GJ.FLOAT:
-          return void JJ.uniform1f(cJ, UJ[0]);
-        case GJ.FLOAT_VEC2:
-          return void JJ.uniform2fv(cJ, UJ);
-        case GJ.FLOAT_VEC3:
-          return void JJ.uniform3fv(cJ, UJ);
-        case GJ.FLOAT_VEC4:
-          return void JJ.uniform4fv(cJ, UJ);
-        case GJ.FLOAT_MAT3:
-          return void JJ.uniformMatrix3fv(cJ, !1, UJ);
-        case GJ.FLOAT_MAT4:
-          return void JJ.uniformMatrix4fv(cJ, !1, UJ);
-        case GJ.UNSIGNED_INT:
-          return void JJ.uniform1ui(cJ, UJ[0]);
-        case GJ.UNSIGNED_INT_VEC2:
-          return void JJ.uniform2uiv(cJ, UJ);
-        case GJ.UNSIGNED_INT_VEC3:
-          return void JJ.uniform3uiv(cJ, UJ);
-        case GJ.UNSIGNED_INT_VEC4:
-          return void JJ.uniform4uiv(cJ, UJ);
-        case GJ.INT_VEC2:
-          return void JJ.uniform2iv(cJ, UJ);
-        case GJ.INT_VEC3:
-          return void JJ.uniform3iv(cJ, UJ);
-        case GJ.INT_VEC4:
-          return void JJ.uniform4iv(cJ, UJ);
+    function xB(BB, TB, dB, VB) {
+      const yB = ArrayBuffer.isView(VB) ? Array.from(VB) : [Number(VB)];
+      switch (dB) {
+        case uB.FLOAT:
+          return void BB.uniform1f(TB, yB[0]);
+        case uB.FLOAT_VEC2:
+          return void BB.uniform2fv(TB, yB);
+        case uB.FLOAT_VEC3:
+          return void BB.uniform3fv(TB, yB);
+        case uB.FLOAT_VEC4:
+          return void BB.uniform4fv(TB, yB);
+        case uB.FLOAT_MAT3:
+          return void BB.uniformMatrix3fv(TB, !1, yB);
+        case uB.FLOAT_MAT4:
+          return void BB.uniformMatrix4fv(TB, !1, yB);
+        case uB.UNSIGNED_INT:
+          return void BB.uniform1ui(TB, yB[0]);
+        case uB.UNSIGNED_INT_VEC2:
+          return void BB.uniform2uiv(TB, yB);
+        case uB.UNSIGNED_INT_VEC3:
+          return void BB.uniform3uiv(TB, yB);
+        case uB.UNSIGNED_INT_VEC4:
+          return void BB.uniform4uiv(TB, yB);
+        case uB.INT_VEC2:
+          return void BB.uniform2iv(TB, yB);
+        case uB.INT_VEC3:
+          return void BB.uniform3iv(TB, yB);
+        case uB.INT_VEC4:
+          return void BB.uniform4iv(TB, yB);
         default:
-          JJ.uniform1i(cJ, UJ[0])
+          BB.uniform1i(TB, yB[0])
       }
     }
 
-    function aJ(JJ, cJ, ZJ, FJ) {
-      let UJ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "decode probe";
-      const eJ = JJ.getParameter(GJ.CURRENT_PROGRAM),
-        XJ = JJ.getParameter(GJ.TRANSFORM_FEEDBACK_BINDING),
-        AJ = JJ.getParameter(GJ.TRANSFORM_FEEDBACK_BUFFER_BINDING),
-        qJ = JJ.getParameter(GJ.COPY_READ_BUFFER_BINDING),
-        jJ = JJ.isEnabled(GJ.RASTERIZER_DISCARD),
-        YJ = JJ.createTransformFeedback(),
-        hJ = JJ.createBuffer();
-      gJ.inProbe = !0;
+    function jB(BB, TB, dB, VB) {
+      let yB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "decode probe";
+      const pB = BB.getParameter(uB.CURRENT_PROGRAM),
+        lB = BB.getParameter(uB.TRANSFORM_FEEDBACK_BINDING),
+        JB = BB.getParameter(uB.TRANSFORM_FEEDBACK_BUFFER_BINDING),
+        YB = BB.getParameter(uB.COPY_READ_BUFFER_BINDING),
+        gB = BB.isEnabled(uB.RASTERIZER_DISCARD),
+        oB = BB.createTransformFeedback(),
+        kB = BB.createBuffer();
+      IB.inProbe = !0;
       try {
-        const eJ = JJ.getError();
-        eJ !== GJ.NO_ERROR && NJ(`GL error 0x${eJ.toString(16)} pending before the decode probe (the renderer's)`), JJ.useProgram(cJ), JJ.bindTransformFeedback(GJ.TRANSFORM_FEEDBACK, YJ), JJ.bindBuffer(GJ.TRANSFORM_FEEDBACK_BUFFER, hJ), JJ.bufferData(GJ.TRANSFORM_FEEDBACK_BUFFER, 12 * ZJ, GJ.STREAM_READ), JJ.bindBufferBase(GJ.TRANSFORM_FEEDBACK_BUFFER, 0, hJ), JJ.enable(GJ.RASTERIZER_DISCARD), JJ.beginTransformFeedback(GJ.POINTS), FJ(), JJ.endTransformFeedback(), JJ.bindBufferBase(GJ.TRANSFORM_FEEDBACK_BUFFER, 0, null);
-        const XJ = JJ.getError();
-        if (XJ !== GJ.NO_ERROR) return NJ(`${UJ}: GL error 0x${XJ.toString(16)} on the feedback draw`), null;
-        const AJ = new Float32Array(3 * ZJ);
-        return JJ.bindBuffer(GJ.COPY_READ_BUFFER, hJ), JJ.getBufferSubData(GJ.COPY_READ_BUFFER, 0, AJ), AJ
+        const pB = BB.getError();
+        pB !== uB.NO_ERROR && ZB(`GL error 0x${pB.toString(16)} pending before the decode probe (the renderer's)`), BB.useProgram(TB), BB.bindTransformFeedback(uB.TRANSFORM_FEEDBACK, oB), BB.bindBuffer(uB.TRANSFORM_FEEDBACK_BUFFER, kB), BB.bufferData(uB.TRANSFORM_FEEDBACK_BUFFER, 12 * dB, uB.STREAM_READ), BB.bindBufferBase(uB.TRANSFORM_FEEDBACK_BUFFER, 0, kB), BB.enable(uB.RASTERIZER_DISCARD), BB.beginTransformFeedback(uB.POINTS), VB(), BB.endTransformFeedback(), BB.bindBufferBase(uB.TRANSFORM_FEEDBACK_BUFFER, 0, null);
+        const lB = BB.getError();
+        if (lB !== uB.NO_ERROR) return ZB(`${yB}: GL error 0x${lB.toString(16)} on the feedback draw`), null;
+        const JB = new Float32Array(3 * dB);
+        return BB.bindBuffer(uB.COPY_READ_BUFFER, kB), BB.getBufferSubData(uB.COPY_READ_BUFFER, 0, JB), JB
       } finally {
-        jJ || JJ.disable(GJ.RASTERIZER_DISCARD), JJ.bindTransformFeedback(GJ.TRANSFORM_FEEDBACK, XJ), JJ.bindBuffer(GJ.TRANSFORM_FEEDBACK_BUFFER, AJ), JJ.bindBuffer(GJ.COPY_READ_BUFFER, qJ), JJ.deleteTransformFeedback(YJ), JJ.deleteBuffer(hJ), JJ.useProgram(eJ), gJ.inProbe = !1
+        gB || BB.disable(uB.RASTERIZER_DISCARD), BB.bindTransformFeedback(uB.TRANSFORM_FEEDBACK, lB), BB.bindBuffer(uB.TRANSFORM_FEEDBACK_BUFFER, JB), BB.bindBuffer(uB.COPY_READ_BUFFER, YB), BB.deleteTransformFeedback(oB), BB.deleteBuffer(kB), BB.useProgram(pB), IB.inProbe = !1
       }
     }
 
-    function BJ(JJ, cJ, ZJ, FJ) {
-      const UJ = JJ.getParameter(GJ.COPY_READ_BUFFER_BINDING),
-        eJ = new Uint8Array(FJ);
-      return JJ.bindBuffer(GJ.COPY_READ_BUFFER, cJ), JJ.getBufferSubData(GJ.COPY_READ_BUFFER, ZJ, eJ), JJ.bindBuffer(GJ.COPY_READ_BUFFER, UJ), eJ
+    function AB(BB, TB, dB, VB) {
+      const yB = BB.getParameter(uB.COPY_READ_BUFFER_BINDING),
+        pB = new Uint8Array(VB);
+      return BB.bindBuffer(uB.COPY_READ_BUFFER, TB), BB.getBufferSubData(uB.COPY_READ_BUFFER, dB, pB), BB.bindBuffer(uB.COPY_READ_BUFFER, yB), pB
     }
-    const tJ = `#version 300 es\nlayout(location = ${xJ}) in uvec3 record;\nflat out uvec3 fed;\nvoid main() {\n\tfed = record;\n\tgl_Position = vec4(0.0);\n\tgl_PointSize = 1.0;\n}\n`,
-      oJ = "#version 300 es\nprecision highp float;\nout vec4 color;\nvoid main() {\n\tcolor = vec4(0.0);\n}\n",
-      lJ = new WeakMap;
+    const bB = `#version 300 es\nlayout(location = ${EB}) in uvec3 record;\nflat out uvec3 fed;\nvoid main() {\n\tfed = record;\n\tgl_Position = vec4(0.0);\n\tgl_PointSize = 1.0;\n}\n`,
+      nB = "#version 300 es\nprecision highp float;\nout vec4 color;\nvoid main() {\n\tcolor = vec4(0.0);\n}\n",
+      eB = new WeakMap;
 
-    function Jc(JJ, cJ, ZJ) {
-      const FJ = JJ.getProgramParameter(cJ, GJ.ACTIVE_UNIFORMS),
-        UJ = JJ.getParameter(GJ.ACTIVE_TEXTURE);
+    function BT(BB, TB, dB) {
+      const VB = BB.getProgramParameter(TB, uB.ACTIVE_UNIFORMS),
+        yB = BB.getParameter(uB.ACTIVE_TEXTURE);
       try {
-        for (let UJ = 0; UJ < FJ; UJ++) {
-          const FJ = JJ.getActiveUniform(cJ, UJ);
-          if ((null === FJ || void 0 === FJ ? void 0 : FJ.type) !== GJ.UNSIGNED_INT_SAMPLER_2D) continue;
-          const eJ = JJ.getUniformLocation(cJ, FJ.name),
-            XJ = eJ ? JJ.getUniform(cJ, eJ) : -1;
-          if (XJ < 0) continue;
-          JJ.activeTexture(GJ.TEXTURE0 + XJ);
-          const AJ = JJ.getParameter(GJ.TEXTURE_BINDING_2D);
-          if (AJ && WJ.get(AJ) === ZJ) return AJ
+        for (let yB = 0; yB < VB; yB++) {
+          const VB = BB.getActiveUniform(TB, yB);
+          if ((null === VB || void 0 === VB ? void 0 : VB.type) !== uB.UNSIGNED_INT_SAMPLER_2D) continue;
+          const pB = BB.getUniformLocation(TB, VB.name),
+            lB = pB ? BB.getUniform(TB, pB) : -1;
+          if (lB < 0) continue;
+          BB.activeTexture(uB.TEXTURE0 + lB);
+          const JB = BB.getParameter(uB.TEXTURE_BINDING_2D);
+          if (JB && rB.get(JB) === dB) return JB
         }
         return null
       } finally {
-        JJ.activeTexture(UJ)
+        BB.activeTexture(yB)
       }
     }
 
-    function cc(JJ, cJ, ZJ, FJ, UJ) {
-      const eJ = new Uint32Array(4 * UJ),
-        XJ = JJ.getParameter(GJ.READ_FRAMEBUFFER_BINDING),
-        AJ = JJ.createFramebuffer();
-      JJ.bindFramebuffer(GJ.READ_FRAMEBUFFER, AJ), JJ.framebufferTexture2D(GJ.READ_FRAMEBUFFER, GJ.COLOR_ATTACHMENT0, GJ.TEXTURE_2D, cJ, 0);
+    function TT(BB, TB, dB, VB, yB) {
+      const pB = new Uint32Array(4 * yB),
+        lB = BB.getParameter(uB.READ_FRAMEBUFFER_BINDING),
+        JB = BB.createFramebuffer();
+      BB.bindFramebuffer(uB.READ_FRAMEBUFFER, JB), BB.framebufferTexture2D(uB.READ_FRAMEBUFFER, uB.COLOR_ATTACHMENT0, uB.TEXTURE_2D, TB, 0);
       try {
-        let cJ = 0;
-        for (; cJ < UJ;) {
-          const XJ = FJ + cJ,
-            AJ = XJ % ZJ,
-            qJ = Math.min(UJ - cJ, ZJ - AJ);
-          JJ.readPixels(AJ, Math.floor(XJ / ZJ), qJ, 1, GJ.RGBA_INTEGER, GJ.UNSIGNED_INT, eJ.subarray(4 * cJ, 4 * (cJ + qJ))), cJ += qJ
+        let TB = 0;
+        for (; TB < yB;) {
+          const lB = VB + TB,
+            JB = lB % dB,
+            YB = Math.min(yB - TB, dB - JB);
+          BB.readPixels(JB, Math.floor(lB / dB), YB, 1, uB.RGBA_INTEGER, uB.UNSIGNED_INT, pB.subarray(4 * TB, 4 * (TB + YB))), TB += YB
         }
       } finally {
-        JJ.bindFramebuffer(GJ.READ_FRAMEBUFFER, XJ), JJ.deleteFramebuffer(AJ)
+        BB.bindFramebuffer(uB.READ_FRAMEBUFFER, lB), BB.deleteFramebuffer(JB)
       }
-      return eJ
+      return pB
     }
 
-    function Zc(JJ, cJ, ZJ) {
-      let FJ = 0,
-        UJ = 0;
-      for (let qJ = 0; qJ < cJ.bytes.length; qJ += SJ) {
-        FJ++;
-        const JJ = Math.min(qJ + SJ, cJ.bytes.length);
-        sJ(cJ.bytes.subarray(qJ, JJ)) !== sJ(ZJ.subarray(qJ, JJ)) && UJ++
+    function dT(BB, TB, dB) {
+      let VB = 0,
+        yB = 0;
+      for (let YB = 0; YB < TB.bytes.length; YB += zB) {
+        VB++;
+        const BB = Math.min(YB + zB, TB.bytes.length);
+        OB(TB.bytes.subarray(YB, BB)) !== OB(dB.subarray(YB, BB)) && yB++
       }
-      const eJ = `${JJ} ${cJ.bytes.length} B cpu ${sJ(cJ.bytes).toString(16)} gpu ${sJ(ZJ).toString(16)}, ${UJ}/${FJ} blocks differ${cJ.missed?`, ${cJ.missed} GPU-side writes uncopied`:""}`;
-      if (0 === UJ) return eJ;
+      const pB = `${BB} ${TB.bytes.length} B cpu ${OB(TB.bytes).toString(16)} gpu ${OB(dB).toString(16)}, ${yB}/${VB} blocks differ${TB.missed?`, ${TB.missed} GPU-side writes uncopied`:""}`;
+      if (0 === yB) return pB;
       const {
-        count: XJ,
-        offsets: AJ
-      } = function(JJ, cJ) {
-        let ZJ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 8;
-        const FJ = Math.min(JJ.length, cJ.length);
-        let UJ = Math.abs(JJ.length - cJ.length);
-        const eJ = [];
-        for (let XJ = 0; XJ < FJ; XJ++) JJ[XJ] !== cJ[XJ] && (UJ++, eJ.length < ZJ && eJ.push(XJ));
+        count: lB,
+        offsets: JB
+      } = function(BB, TB) {
+        let dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 8;
+        const VB = Math.min(BB.length, TB.length);
+        let yB = Math.abs(BB.length - TB.length);
+        const pB = [];
+        for (let lB = 0; lB < VB; lB++) BB[lB] !== TB[lB] && (yB++, pB.length < dB && pB.push(lB));
         return {
-          count: UJ,
-          offsets: eJ
+          count: yB,
+          offsets: pB
         }
-      }(cJ.bytes, ZJ);
-      return OJ([`${eJ}: ${XJ} bytes differ`, ...AJ.map((JJ => `  +${JJ}: cpu ${nJ(cJ.bytes,JJ)} | gpu ${nJ(ZJ,JJ)}`))].join("\n")), `${eJ}: ${XJ} bytes differ, first at ${AJ.join(", ")} (context in the saved file)`
+      }(TB.bytes, dB);
+      return XB([`${pB}: ${lB} bytes differ`, ...JB.map((BB => `  +${BB}: cpu ${DB(TB.bytes,BB)} | gpu ${DB(dB,BB)}`))].join("\n")), `${pB}: ${lB} bytes differ, first at ${JB.join(", ")} (context in the saved file)`
     }
 
-    function Fc(JJ) {
-      if (0 === JJ.vertices.length) return void NJ(`decode probe (${JJ.reason}): no terrain draw probed (${JJ.draws.length} seen)`);
-      const cJ = function(JJ) {
-          const cJ = new Map;
-          for (const FJ of JJ) {
-            const JJ = cJ.get(FJ.group);
-            JJ ? JJ.push(FJ) : cJ.set(FJ.group, [FJ])
+    function VT(BB) {
+      if (0 === BB.vertices.length) return void ZB(`decode probe (${BB.reason}): no terrain draw probed (${BB.draws.length} seen)`);
+      const TB = function(BB) {
+          const TB = new Map;
+          for (const VB of BB) {
+            const BB = TB.get(VB.group);
+            BB ? BB.push(VB) : TB.set(VB.group, [VB])
           }
-          const ZJ = {
-            vertices: JJ.length,
+          const dB = {
+            vertices: BB.length,
             mismatches: 0,
             byDirection: new Array(8).fill(0),
             byDiagonal: [0, 0],
@@ -606,67 +606,67 @@ export const modules = {
             translations: new Map,
             first: []
           };
-          for (const [FJ, UJ] of cJ) {
-            const JJ = new Map,
-              cJ = UJ.map((cJ => {
-                const ZJ = YJ(cJ.record, cJ.slot),
-                  FJ = [cJ.gpu[0] - ZJ[0], cJ.gpu[1] - ZJ[1], cJ.gpu[2] - ZJ[2]],
-                  UJ = FJ.map((JJ => Math.round(64 * JJ))).join(","),
-                  eJ = JJ.get(UJ);
-                return eJ ? eJ.count++ : JJ.set(UJ, {
+          for (const [VB, yB] of TB) {
+            const BB = new Map,
+              TB = yB.map((TB => {
+                const dB = oB(TB.record, TB.slot),
+                  VB = [TB.gpu[0] - dB[0], TB.gpu[1] - dB[1], TB.gpu[2] - dB[2]],
+                  yB = VB.map((BB => Math.round(64 * BB))).join(","),
+                  pB = BB.get(yB);
+                return pB ? pB.count++ : BB.set(yB, {
                   count: 1,
-                  offset: FJ
-                }), ZJ
+                  offset: VB
+                }), dB
               }));
-            let eJ = [0, 0, 0],
-              XJ = 0;
-            for (const ZJ of JJ.values()) ZJ.count > XJ && (XJ = ZJ.count, eJ = ZJ.offset);
-            ZJ.translations.set(FJ, eJ), UJ.forEach(((JJ, FJ) => {
-              var UJ;
-              const XJ = [cJ[FJ][0] + eJ[0], cJ[FJ][1] + eJ[1], cJ[FJ][2] + eJ[2]];
-              if (XJ.every(((cJ, ZJ) => {
-                  return FJ = JJ.gpu[ZJ], UJ = cJ, Math.abs(FJ - UJ) <= Math.max(.001, 1e-6 * Math.abs(UJ));
-                  var FJ, UJ
+            let pB = [0, 0, 0],
+              lB = 0;
+            for (const dB of BB.values()) dB.count > lB && (lB = dB.count, pB = dB.offset);
+            dB.translations.set(VB, pB), yB.forEach(((BB, VB) => {
+              var yB;
+              const lB = [TB[VB][0] + pB[0], TB[VB][1] + pB[1], TB[VB][2] + pB[2]];
+              if (lB.every(((TB, dB) => {
+                  return VB = BB.gpu[dB], yB = TB, Math.abs(VB - yB) <= Math.max(.001, 1e-6 * Math.abs(yB));
+                  var VB, yB
                 }))) return;
-              ZJ.mismatches++, ZJ.byDirection[AJ(JJ.record[2])]++, ZJ.byDiagonal[qJ(JJ.record[2])]++;
-              const jJ = hJ(JJ.record);
-              ZJ.byBand[jJ] = (null !== (UJ = ZJ.byBand[jJ]) && void 0 !== UJ ? UJ : 0) + 1, ZJ.first.length < DJ && ZJ.first.push({
-                ...JJ,
-                expected: XJ
+              dB.mismatches++, dB.byDirection[JB(BB.record[2])]++, dB.byDiagonal[YB(BB.record[2])]++;
+              const gB = kB(BB.record);
+              dB.byBand[gB] = (null !== (yB = dB.byBand[gB]) && void 0 !== yB ? yB : 0) + 1, dB.first.length < LB && dB.first.push({
+                ...BB,
+                expected: lB
               })
             }))
           }
-          return ZJ
-        }(JJ.vertices),
-        ZJ = cJ.byDirection.map(((JJ, cJ) => JJ ? `${XJ[cJ]} ${JJ}` : "")).filter(Boolean).join(" "),
-        FJ = Object.entries(cJ.byBand).map((JJ => {
-          let [cJ, ZJ] = JJ;
-          return `${cJ}: ${ZJ}`
+          return dB
+        }(BB.vertices),
+        dB = TB.byDirection.map(((BB, TB) => BB ? `${lB[TB]} ${BB}` : "")).filter(Boolean).join(" "),
+        VB = Object.entries(TB.byBand).map((BB => {
+          let [TB, dB] = BB;
+          return `${TB}: ${dB}`
         })).join(" ");
-      if (NJ(`decode probe (${JJ.reason}): ${cJ.mismatches}/${cJ.vertices} vertices differ from the CPU decode over ${JJ.parts.size} parts, in the probe's own transform feedback draw (the frame's draws can still differ)` + (cJ.mismatches ? ` by direction [${ZJ}] diagonal [0: ${cJ.byDiagonal[0]} 1: ${cJ.byDiagonal[1]}] extent [${FJ}]` : "")), JJ.fed.records > 0 || JJ.fed.failed > 0) {
-        NJ(`decode probe input: ${JJ.fed.differing}/${JJ.fed.records} instanced records the vertex input fed differ from the buffer's readback` + (JJ.fed.differing ? " (H2: the GPU's vertex copy differs, unless the feed's own integer pass-through is the fault)" : "") + (JJ.fed.failed ? `; the feed failed on ${JJ.fed.failed} draws, whose decode is held to the buffer's readback` : ""));
-        for (const cJ of JJ.fed.first) NJ(`  ${cJ}`)
+      if (ZB(`decode probe (${BB.reason}): ${TB.mismatches}/${TB.vertices} vertices differ from the CPU decode over ${BB.parts.size} parts, in the probe's own transform feedback draw (the frame's draws can still differ)` + (TB.mismatches ? ` by direction [${dB}] diagonal [0: ${TB.byDiagonal[0]} 1: ${TB.byDiagonal[1]}] extent [${VB}]` : "")), BB.fed.records > 0 || BB.fed.failed > 0) {
+        ZB(`decode probe input: ${BB.fed.differing}/${BB.fed.records} instanced records the vertex input fed differ from the buffer's readback` + (BB.fed.differing ? " (H2: the GPU's vertex copy differs, unless the feed's own integer pass-through is the fault)" : "") + (BB.fed.failed ? `; the feed failed on ${BB.fed.failed} draws, whose decode is held to the buffer's readback` : ""));
+        for (const TB of BB.fed.first) ZB(`  ${TB}`)
       }
-      for (const UJ of cJ.first) {
-        const [JJ, cJ, ZJ] = UJ.record;
-        NJ(`  mismatch part ${UJ.group} r0 ${JJ.toString(16)} r1 ${cJ.toString(16)} r2 ${ZJ.toString(16)} slot ${UJ.slot} (${XJ[AJ(ZJ)]}): expected ${UJ.expected.map(ec).join(",")} gpu ${UJ.gpu.map(ec).join(",")}`)
+      for (const yB of TB.first) {
+        const [BB, TB, dB] = yB.record;
+        ZB(`  mismatch part ${yB.group} r0 ${BB.toString(16)} r1 ${TB.toString(16)} r2 ${dB.toString(16)} slot ${yB.slot} (${lB[JB(dB)]}): expected ${yB.expected.map(pT).join(",")} gpu ${yB.gpu.map(pT).join(",")}`)
       }
-      OJ(`decode probe translations: ${[...cJ.translations].map((JJ=>{let[cJ,ZJ]=JJ;return`${cJ}: ${ZJ.map(ec).join(",")}`})).join("; ")}`)
+      XB(`decode probe translations: ${[...TB.translations].map((BB=>{let[TB,dB]=BB;return`${TB}: ${dB.map(pT).join(",")}`})).join("; ")}`)
     }
 
-    function Uc(JJ) {
-      return JJ.toString(16)
+    function yT(BB) {
+      return BB.toString(16)
     }
 
-    function ec(JJ) {
-      return Number.isInteger(JJ) ? String(JJ) : JJ.toFixed(3)
+    function pT(BB) {
+      return Number.isInteger(BB) ? String(BB) : BB.toFixed(3)
     }
 
-    function Xc(JJ) {
-      return null !== gJ.pendingCheck ? Promise.resolve() : new Promise((cJ => {
-        let ZJ = !1;
-        const FJ = {
-          reason: JJ,
+    function lT(BB) {
+      return null !== IB.pendingCheck ? Promise.resolve() : new Promise((TB => {
+        let dB = !1;
+        const VB = {
+          reason: BB,
           terrainDraws: 0,
           draws: [],
           vertices: [],
@@ -679,80 +679,80 @@ export const modules = {
             failed: 0
           }
         };
-        gJ.pendingCheck = FJ;
-        const UJ = () => {
-            gJ.pendingCheck = null;
+        IB.pendingCheck = VB;
+        const yB = () => {
+            IB.pendingCheck = null;
             try {
-              ! function(JJ) {
-                NJ(`draw ranges (${JJ.reason}): ${JJ.terrainDraws} terrain draws in the frame, the first ${JJ.draws.length} here`);
-                for (const cJ of JJ.draws) {
-                  const JJ = cJ.ws.slice(0, 8).map((JJ => {
-                      let [cJ, ZJ] = JJ;
-                      return `${cJ}+${ZJ}`
+              ! function(BB) {
+                ZB(`draw ranges (${BB.reason}): ${BB.terrainDraws} terrain draws in the frame, the first ${BB.draws.length} here`);
+                for (const TB of BB.draws) {
+                  const BB = TB.ek.slice(0, 8).map((BB => {
+                      let [TB, dB] = BB;
+                      return `${TB}+${dB}`
                     })).join(" "),
-                    ZJ = cJ.ws.length > 8 ? ` (+${cJ.ws.length-8} ranges)` : "";
-                  NJ(`  ${MJ(cJ.program)} ${cJ.program.terrain} ${cJ.call} ${JJ}${ZJ} x${cJ.instances}${cJ.group>=0?` part ${cJ.group} chunk ${cJ.chunk}`:""} | ${cJ.attributes.join(" | ")}`)
+                    dB = TB.ek.length > 8 ? ` (+${TB.ek.length-8} ranges)` : "";
+                  ZB(`  ${UB(TB.program)} ${TB.program.terrain} ${TB.call} ${BB}${dB} x${TB.instances}${TB.group>=0?` part ${TB.group} chunk ${TB.chunk}`:""} | ${TB.attributes.join(" | ")}`)
                 }
-              }(FJ), Fc(FJ);
-              FJ.draws.some((JJ => "undefined" !== typeof WebGL2RenderingContext && JJ.gl instanceof WebGL2RenderingContext)) || 0 === FJ.draws.length ? function(JJ) {
-                const cJ = [],
-                  ZJ = new Map;
-                for (const FJ of JJ)
-                  if ("undefined" !== typeof WebGL2RenderingContext && FJ.gl instanceof WebGL2RenderingContext)
-                    for (const JJ of FJ.pages) ZJ.set("buf" === JJ.kind ? JJ.buffer : JJ.texture, {
-                      page: JJ,
-                      gl: FJ.gl
+              }(VB), VT(VB);
+              VB.draws.some((BB => "undefined" !== typeof WebGL2RenderingContext && BB.gl instanceof WebGL2RenderingContext)) || 0 === VB.draws.length ? function(BB) {
+                const TB = [],
+                  dB = new Map;
+                for (const VB of BB)
+                  if ("undefined" !== typeof WebGL2RenderingContext && VB.gl instanceof WebGL2RenderingContext)
+                    for (const BB of VB.pages) dB.set("buf" === BB.kind ? BB.buffer : BB.texture, {
+                      page: BB,
+                      gl: VB.gl
                     });
-                for (const [FJ, {
-                    page: UJ,
-                    gl: eJ
-                  }] of ZJ) {
-                  const JJ = wJ.get(FJ);
-                  if (!JJ) {
-                    cJ.push(`${UJ.kind}#${kJ(FJ)}: no CPU copy (${gJ.uncopied} pages over the copy budget)`);
+                for (const [VB, {
+                    page: yB,
+                    gl: pB
+                  }] of dB) {
+                  const BB = KB.get(VB);
+                  if (!BB) {
+                    TB.push(`${yB.kind}#${PB(VB)}: no CPU copy (${IB.uncopied} pages over the copy budget)`);
                     continue
                   }
-                  if ("buf" === UJ.kind) {
-                    cJ.push(Zc(`buf#${JJ.id}`, JJ, BJ(eJ, UJ.buffer, 0, JJ.bytes.length)));
+                  if ("buf" === yB.kind) {
+                    TB.push(dT(`buf#${BB.id}`, BB, AB(pB, yB.buffer, 0, BB.bytes.length)));
                     continue
                   }
-                  const ZJ = cc(eJ, UJ.texture, JJ.width, 0, JJ.width * JJ.height),
-                    XJ = 16 === JJ.texelBytes ? new Uint8Array(ZJ.buffer) : new Uint8Array(new Uint16Array(ZJ).buffer);
-                  cJ.push(Zc(`tex#${JJ.id} (${16===JJ.texelBytes?"records":"light"})`, JJ, XJ))
+                  const dB = TT(pB, yB.texture, BB.width, 0, BB.width * BB.height),
+                    lB = 16 === BB.texelBytes ? new Uint8Array(dB.buffer) : new Uint8Array(new Uint16Array(dB).buffer);
+                  TB.push(dT(`tex#${BB.id} (${16===BB.texelBytes?"records":"light"})`, BB, lB))
                 }
-                for (const FJ of cJ) NJ(`page readback ${FJ}`)
-              }(FJ.draws) : NJ("page readback: none on WebGL1 (no buffer readback)")
-            } catch (JJ) {
-              NJ(`check failed: ${String(JJ)}`)
+                for (const VB of TB) ZB(`page readback ${VB}`)
+              }(VB.draws) : ZB("page readback: none on WebGL1 (no buffer readback)")
+            } catch (BB) {
+              ZB(`check failed: ${String(BB)}`)
             }
-            cJ()
+            TB()
           },
-          eJ = () => {
-            if (FJ.draws.length > 0 && !ZJ) return ZJ = !0, void setTimeout(UJ, 0);
-            ZJ || requestAnimationFrame(eJ)
+          pB = () => {
+            if (VB.draws.length > 0 && !dB) return dB = !0, void setTimeout(yB, 0);
+            dB || requestAnimationFrame(pB)
           };
-        requestAnimationFrame(eJ), setTimeout((() => {
-          ZJ || (ZJ = !0, UJ())
+        requestAnimationFrame(pB), setTimeout((() => {
+          dB || (dB = !0, yB())
         }), 5e3)
       }))
     }
-    const Ac = 20,
-      qc = 24;
+    const JT = 20,
+      YT = 24;
 
-    function jc(JJ, cJ, ZJ) {
-      if (!JJ) return;
-      const FJ = JJ[cJ];
-      "function" === typeof FJ && (JJ[cJ] = ZJ(FJ))
+    function gT(BB, TB, dB) {
+      if (!BB) return;
+      const VB = BB[TB];
+      "function" === typeof VB && (BB[TB] = dB(VB))
     }
-    let Yc = !1;
-    const hc = new WeakMap,
-      Dc = new WeakMap,
-      sc = new WeakMap,
-      nc = {
+    let oT = !1;
+    const kT = new WeakMap,
+      LT = new WeakMap,
+      OT = new WeakMap,
+      DT = {
         gl: 0,
         lost: 0
       };
-    let Gc = {
+    let uT = {
         inst: {
           draws: 0,
           faces: 0
@@ -766,311 +766,311 @@ export const modules = {
           faces: 0
         }
       },
-      fc = {
+      HT = {
         buffer: 0,
         texture: 0
       },
-      xc = 0;
+      ET = 0;
 
-    function rc(JJ, cJ, ZJ) {
-      return Reflect.apply(JJ, cJ, ZJ)
+    function vT(BB, TB, dB) {
+      return Reflect.apply(BB, TB, dB)
     }
 
-    function vc(JJ) {
-      let cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        ZJ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-      if (JJ instanceof ArrayBuffer) return new Uint8Array(JJ, cJ, ZJ || void 0);
-      if (!ArrayBuffer.isView(JJ)) return null;
-      const FJ = "BYTES_PER_ELEMENT" in JJ ? JJ.BYTES_PER_ELEMENT : 1,
-        UJ = JJ.byteOffset + cJ * FJ,
-        eJ = ZJ ? ZJ * FJ : JJ.byteLength - cJ * FJ;
-      return new Uint8Array(JJ.buffer, UJ, Math.max(0, eJ))
+    function mT(BB) {
+      let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      if (BB instanceof ArrayBuffer) return new Uint8Array(BB, TB, dB || void 0);
+      if (!ArrayBuffer.isView(BB)) return null;
+      const VB = "BYTES_PER_ELEMENT" in BB ? BB.BYTES_PER_ELEMENT : 1,
+        yB = BB.byteOffset + TB * VB,
+        pB = dB ? dB * VB : BB.byteLength - TB * VB;
+      return new Uint8Array(BB.buffer, yB, Math.max(0, pB))
     }
 
-    function mc(JJ, cJ) {
-      const ZJ = function(JJ) {
-        switch (JJ) {
-          case GJ.ARRAY_BUFFER:
-            return GJ.ARRAY_BUFFER_BINDING;
-          case GJ.ELEMENT_ARRAY_BUFFER:
-            return GJ.ELEMENT_ARRAY_BUFFER_BINDING;
-          case GJ.COPY_READ_BUFFER:
-            return GJ.COPY_READ_BUFFER_BINDING;
-          case GJ.COPY_WRITE_BUFFER:
-            return GJ.COPY_WRITE_BUFFER_BINDING;
-          case GJ.UNIFORM_BUFFER:
-            return GJ.UNIFORM_BUFFER_BINDING;
-          case GJ.PIXEL_UNPACK_BUFFER:
-            return GJ.PIXEL_UNPACK_BUFFER_BINDING;
-          case GJ.TRANSFORM_FEEDBACK_BUFFER:
-            return GJ.TRANSFORM_FEEDBACK_BUFFER_BINDING;
+    function iT(BB, TB) {
+      const dB = function(BB) {
+        switch (BB) {
+          case uB.ARRAY_BUFFER:
+            return uB.ARRAY_BUFFER_BINDING;
+          case uB.ELEMENT_ARRAY_BUFFER:
+            return uB.ELEMENT_ARRAY_BUFFER_BINDING;
+          case uB.COPY_READ_BUFFER:
+            return uB.COPY_READ_BUFFER_BINDING;
+          case uB.COPY_WRITE_BUFFER:
+            return uB.COPY_WRITE_BUFFER_BINDING;
+          case uB.UNIFORM_BUFFER:
+            return uB.UNIFORM_BUFFER_BINDING;
+          case uB.PIXEL_UNPACK_BUFFER:
+            return uB.PIXEL_UNPACK_BUFFER_BINDING;
+          case uB.TRANSFORM_FEEDBACK_BUFFER:
+            return uB.TRANSFORM_FEEDBACK_BUFFER_BINDING;
           default:
             return 0
         }
-      }(cJ);
-      return ZJ ? JJ.getParameter(ZJ) : null
+      }(TB);
+      return dB ? BB.getParameter(dB) : null
     }
 
-    function Qc(JJ) {
-      const cJ = wJ.get(JJ);
-      cJ && (gJ.shadowBytes -= cJ.bytes.length, wJ.delete(JJ))
+    function NT(BB) {
+      const TB = KB.get(BB);
+      TB && (IB.shadowBytes -= TB.bytes.length, KB.delete(BB))
     }
 
-    function Ec(JJ, cJ) {
-      let ZJ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        FJ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-        UJ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
-      Qc(JJ), gJ.shadowBytes + cJ > yJ ? gJ.uncopied++ : (gJ.shadowBytes += cJ, wJ.set(JJ, {
-        id: kJ(JJ),
-        bytes: new Uint8Array(cJ),
-        width: ZJ,
-        height: FJ,
-        texelBytes: UJ,
+    function tT(BB, TB) {
+      let dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        VB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+        yB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
+      NT(BB), IB.shadowBytes + TB > MB ? IB.uncopied++ : (IB.shadowBytes += TB, KB.set(BB, {
+        id: PB(BB),
+        bytes: new Uint8Array(TB),
+        width: dB,
+        height: VB,
+        texelBytes: yB,
         missed: 0
       }))
     }
 
-    function Vc(JJ, cJ) {
-      for (const ZJ of ["deleteBuffer", "deleteTexture"]) jc(JJ, ZJ, (JJ => function() {
-        for (var cJ = arguments.length, ZJ = new Array(cJ), FJ = 0; FJ < cJ; FJ++) ZJ[FJ] = arguments[FJ];
-        return ZJ[0] && Qc(ZJ[0]), rc(JJ, this, ZJ)
+    function fT(BB, TB) {
+      for (const dB of ["deleteBuffer", "deleteTexture"]) gT(BB, dB, (BB => function() {
+        for (var TB = arguments.length, dB = new Array(TB), VB = 0; VB < TB; VB++) dB[VB] = arguments[VB];
+        return dB[0] && NT(dB[0]), vT(BB, this, dB)
       }));
-      jc(JJ, "shaderSource", (JJ => function() {
-        for (var cJ = arguments.length, ZJ = new Array(cJ), FJ = 0; FJ < cJ; FJ++) ZJ[FJ] = arguments[FJ];
-        return ZJ[0] && "string" === typeof ZJ[1] && hc.set(ZJ[0], ZJ[1]), rc(JJ, this, ZJ)
-      })), jc(JJ, "attachShader", (JJ => function() {
-        for (var cJ, ZJ = arguments.length, FJ = new Array(ZJ), UJ = 0; UJ < ZJ; UJ++) FJ[UJ] = arguments[UJ];
-        const eJ = FJ[0],
-          XJ = null !== (cJ = Dc.get(eJ)) && void 0 !== cJ ? cJ : [];
-        return XJ.push(FJ[1]), Dc.set(eJ, XJ), rc(JJ, this, FJ)
-      })), jc(JJ, "linkProgram", (JJ => function() {
-        for (var cJ = arguments.length, ZJ = new Array(cJ), FJ = 0; FJ < cJ; FJ++) ZJ[FJ] = arguments[FJ];
-        const UJ = rc(JJ, this, ZJ);
-        return gJ.inProbe || function(JJ, cJ) {
-          var ZJ, FJ, UJ;
-          "undefined" !== typeof HTMLCanvasElement && JJ.canvas instanceof HTMLCanvasElement && function(JJ) {
-            if (bc.has(JJ)) return;
-            bc.add(JJ);
-            for (const cJ of ["webglcontextlost", "webglcontextrestored", "webglcontextcreationerror"]) JJ.addEventListener(cJ, (JJ => {
-              nc.lost < Ac && (nc.lost++, NJ(`${cJ}${"statusMessage"in JJ?`: ${String(JJ.statusMessage)}`:""}`))
+      gT(BB, "shaderSource", (BB => function() {
+        for (var TB = arguments.length, dB = new Array(TB), VB = 0; VB < TB; VB++) dB[VB] = arguments[VB];
+        return dB[0] && "string" === typeof dB[1] && kT.set(dB[0], dB[1]), vT(BB, this, dB)
+      })), gT(BB, "attachShader", (BB => function() {
+        for (var TB, dB = arguments.length, VB = new Array(dB), yB = 0; yB < dB; yB++) VB[yB] = arguments[yB];
+        const pB = VB[0],
+          lB = null !== (TB = LT.get(pB)) && void 0 !== TB ? TB : [];
+        return lB.push(VB[1]), LT.set(pB, lB), vT(BB, this, VB)
+      })), gT(BB, "linkProgram", (BB => function() {
+        for (var TB = arguments.length, dB = new Array(TB), VB = 0; VB < TB; VB++) dB[VB] = arguments[VB];
+        const yB = vT(BB, this, dB);
+        return IB.inProbe || function(BB, TB) {
+          var dB, VB, yB;
+          "undefined" !== typeof HTMLCanvasElement && BB.canvas instanceof HTMLCanvasElement && function(BB) {
+            if (FT.has(BB)) return;
+            FT.add(BB);
+            for (const TB of ["webglcontextlost", "webglcontextrestored", "webglcontextcreationerror"]) BB.addEventListener(TB, (BB => {
+              DT.lost < JT && (DT.lost++, ZB(`${TB}${"statusMessage"in BB?`: ${String(BB.statusMessage)}`:""}`))
             }))
-          }(JJ.canvas);
-          gJ.context ??= JJ;
-          const eJ = null !== (ZJ = Dc.get(cJ)) && void 0 !== ZJ ? ZJ : [];
-          let XJ = "",
-            AJ = "";
-          for (const YJ of eJ) {
-            var qJ;
-            const JJ = null !== (qJ = hc.get(YJ)) && void 0 !== qJ ? qJ : "";
-            /\bgl_Position\b/.test(JJ) ? XJ = JJ : AJ = JJ
+          }(BB.canvas);
+          IB.context ??= BB;
+          const pB = null !== (dB = LT.get(TB)) && void 0 !== dB ? dB : [];
+          let lB = "",
+            JB = "";
+          for (const oB of pB) {
+            var YB;
+            const BB = null !== (YB = kT.get(oB)) && void 0 !== YB ? YB : "";
+            /\bgl_Position\b/.test(BB) ? lB = BB : JB = BB
           }
-          const jJ = {
-            id: kJ(cJ),
-            name: null !== (FJ = null === (UJ = IJ.exec(XJ)) || void 0 === UJ ? void 0 : UJ[1]) && void 0 !== FJ ? FJ : null,
-            gl: JJ,
-            vertex: XJ,
-            fragment: AJ,
-            terrain: yc(XJ),
+          const gB = {
+            id: PB(TB),
+            name: null !== (VB = null === (yB = wB.exec(lB)) || void 0 === yB ? void 0 : yB[1]) && void 0 !== VB ? VB : null,
+            gl: BB,
+            vertex: lB,
+            fragment: JB,
+            terrain: MT(lB),
             checked: !1,
             firstDraw: !1
           };
-          if (sc.set(cJ, jJ), bJ.push([cJ, jJ]), null !== jJ.terrain) {
-            const cJ = eJ.map((cJ => {
-              var ZJ;
-              return null !== (ZJ = JJ.getShaderInfoLog(cJ)) && void 0 !== ZJ ? ZJ : ""
-            })).filter((JJ => "" !== JJ.trim()));
-            cJ.length > 0 && OJ(`program ${MJ(jJ)} (${jJ.terrain}) shader logs:\n${TJ(cJ.join("\n"))}`)
+          if (OT.set(TB, gB), FB.push([TB, gB]), null !== gB.terrain) {
+            const TB = pB.map((TB => {
+              var dB;
+              return null !== (dB = BB.getShaderInfoLog(TB)) && void 0 !== dB ? dB : ""
+            })).filter((BB => "" !== BB.trim()));
+            TB.length > 0 && XB(`program ${UB(gB)} (${gB.terrain}) shader logs:\n${WB(TB.join("\n"))}`)
           }
-        }(this, ZJ[0]), UJ
-      })), jc(JJ, "bufferData", (JJ => function() {
-        for (var cJ = arguments.length, ZJ = new Array(cJ), FJ = 0; FJ < cJ; FJ++) ZJ[FJ] = arguments[FJ];
-        const UJ = rc(JJ, this, ZJ);
-        if (!gJ.inProbe) {
-          const JJ = mc(this, ZJ[0]);
-          if (JJ) {
-            var eJ, XJ, AJ;
-            const cJ = "number" === typeof ZJ[1] ? null : vc(ZJ[1], null !== (eJ = ZJ[3]) && void 0 !== eJ ? eJ : 0, null !== (XJ = ZJ[4]) && void 0 !== XJ ? XJ : 0);
-            var qJ;
-            if (Ec(JJ, "number" === typeof ZJ[1] ? ZJ[1] : null !== (AJ = null === cJ || void 0 === cJ ? void 0 : cJ.length) && void 0 !== AJ ? AJ : 0), cJ) null === (qJ = wJ.get(JJ)) || void 0 === qJ || qJ.bytes.set(cJ)
-          }
-        }
-        return UJ
-      })), jc(JJ, "bufferSubData", (JJ => function() {
-        for (var cJ = arguments.length, ZJ = new Array(cJ), FJ = 0; FJ < cJ; FJ++) ZJ[FJ] = arguments[FJ];
-        const UJ = rc(JJ, this, ZJ);
-        if (!gJ.inProbe) {
-          var eJ, XJ;
-          const JJ = mc(this, ZJ[0]),
-            cJ = JJ ? wJ.get(JJ) : void 0,
-            FJ = vc(ZJ[2], null !== (eJ = ZJ[3]) && void 0 !== eJ ? eJ : 0, null !== (XJ = ZJ[4]) && void 0 !== XJ ? XJ : 0);
-          if (cJ && FJ) {
-            const JJ = ZJ[1];
-            cJ.bytes.set(FJ.subarray(0, Math.max(0, cJ.bytes.length - JJ)), JJ), Kc("buffer", cJ, JJ, FJ.length)
+        }(this, dB[0]), yB
+      })), gT(BB, "bufferData", (BB => function() {
+        for (var TB = arguments.length, dB = new Array(TB), VB = 0; VB < TB; VB++) dB[VB] = arguments[VB];
+        const yB = vT(BB, this, dB);
+        if (!IB.inProbe) {
+          const BB = iT(this, dB[0]);
+          if (BB) {
+            var pB, lB, JB;
+            const TB = "number" === typeof dB[1] ? null : mT(dB[1], null !== (pB = dB[3]) && void 0 !== pB ? pB : 0, null !== (lB = dB[4]) && void 0 !== lB ? lB : 0);
+            var YB;
+            if (tT(BB, "number" === typeof dB[1] ? dB[1] : null !== (JB = null === TB || void 0 === TB ? void 0 : TB.length) && void 0 !== JB ? JB : 0), TB) null === (YB = KB.get(BB)) || void 0 === YB || YB.bytes.set(TB)
           }
         }
-        return UJ
-      })), cJ && (jc(JJ, "copyBufferSubData", (JJ => function() {
-        for (var cJ = arguments.length, ZJ = new Array(cJ), FJ = 0; FJ < cJ; FJ++) ZJ[FJ] = arguments[FJ];
-        const UJ = rc(JJ, this, ZJ);
-        if (!gJ.inProbe) {
-          const [JJ, cJ, FJ, UJ, eJ] = ZJ, XJ = mc(this, JJ), AJ = mc(this, cJ), qJ = XJ ? wJ.get(XJ) : void 0, jJ = AJ ? wJ.get(AJ) : void 0;
-          jJ && (qJ ? jJ.bytes.set(qJ.bytes.slice(FJ, FJ + eJ), UJ) : jJ.missed++)
-        }
-        return UJ
-      })), jc(JJ, "texStorage2D", (JJ => function() {
-        for (var cJ = arguments.length, ZJ = new Array(cJ), FJ = 0; FJ < cJ; FJ++) ZJ[FJ] = arguments[FJ];
-        const UJ = rc(JJ, this, ZJ),
-          [, , eJ, XJ, AJ] = ZJ;
-        if (!gJ.inProbe && (eJ === GJ.RGBA32UI || eJ === GJ.RGBA16UI)) {
-          const JJ = this.getParameter(GJ.TEXTURE_BINDING_2D),
-            cJ = eJ === GJ.RGBA32UI ? 16 : 8;
-          JJ && (WJ.set(JJ, cJ), Ec(JJ, XJ * AJ * cJ, XJ, AJ, cJ))
-        }
-        return UJ
-      })), jc(JJ, "texSubImage2D", (JJ => function() {
-        for (var cJ = arguments.length, ZJ = new Array(cJ), FJ = 0; FJ < cJ; FJ++) ZJ[FJ] = arguments[FJ];
-        const UJ = rc(JJ, this, ZJ);
-        return !gJ.inProbe && ZJ.length >= 9 && ZJ[0] === GJ.TEXTURE_2D && 0 === ZJ[1] && function(JJ, cJ) {
-          var ZJ;
-          const FJ = JJ.getParameter(GJ.TEXTURE_BINDING_2D),
-            UJ = FJ ? wJ.get(FJ) : void 0;
-          if (!UJ) return;
-          const [, , eJ, XJ, AJ, qJ] = cJ;
-          let jJ = vc(cJ[8], null !== (ZJ = cJ[9]) && void 0 !== ZJ ? ZJ : 0);
-          if (null === jJ && "number" === typeof cJ[8]) {
-            const ZJ = mc(JJ, GJ.PIXEL_UNPACK_BUFFER),
-              FJ = ZJ ? wJ.get(ZJ) : void 0;
-            jJ = FJ ? FJ.bytes.subarray(cJ[8]) : null
+        return yB
+      })), gT(BB, "bufferSubData", (BB => function() {
+        for (var TB = arguments.length, dB = new Array(TB), VB = 0; VB < TB; VB++) dB[VB] = arguments[VB];
+        const yB = vT(BB, this, dB);
+        if (!IB.inProbe) {
+          var pB, lB;
+          const BB = iT(this, dB[0]),
+            TB = BB ? KB.get(BB) : void 0,
+            VB = mT(dB[2], null !== (pB = dB[3]) && void 0 !== pB ? pB : 0, null !== (lB = dB[4]) && void 0 !== lB ? lB : 0);
+          if (TB && VB) {
+            const BB = dB[1];
+            TB.bytes.set(VB.subarray(0, Math.max(0, TB.bytes.length - BB)), BB), sT("buffer", TB, BB, VB.length)
           }
-          if (null === jJ) return void UJ.missed++;
-          const YJ = JJ.getParameter(GJ.UNPACK_ROW_LENGTH) || AJ,
-            hJ = JJ.getParameter(GJ.UNPACK_SKIP_ROWS),
-            DJ = JJ.getParameter(GJ.UNPACK_SKIP_PIXELS),
-            sJ = UJ.texelBytes;
-          for (let nJ = 0; nJ < qJ; nJ++) {
-            const JJ = ((hJ + nJ) * YJ + DJ) * sJ,
-              cJ = ((XJ + nJ) * UJ.width + eJ) * sJ;
-            UJ.bytes.set(jJ.subarray(JJ, JJ + AJ * sJ), cJ)
+        }
+        return yB
+      })), TB && (gT(BB, "copyBufferSubData", (BB => function() {
+        for (var TB = arguments.length, dB = new Array(TB), VB = 0; VB < TB; VB++) dB[VB] = arguments[VB];
+        const yB = vT(BB, this, dB);
+        if (!IB.inProbe) {
+          const [BB, TB, VB, yB, pB] = dB, lB = iT(this, BB), JB = iT(this, TB), YB = lB ? KB.get(lB) : void 0, gB = JB ? KB.get(JB) : void 0;
+          gB && (YB ? gB.bytes.set(YB.bytes.slice(VB, VB + pB), yB) : gB.missed++)
+        }
+        return yB
+      })), gT(BB, "texStorage2D", (BB => function() {
+        for (var TB = arguments.length, dB = new Array(TB), VB = 0; VB < TB; VB++) dB[VB] = arguments[VB];
+        const yB = vT(BB, this, dB),
+          [, , pB, lB, JB] = dB;
+        if (!IB.inProbe && (pB === uB.RGBA32UI || pB === uB.RGBA16UI)) {
+          const BB = this.getParameter(uB.TEXTURE_BINDING_2D),
+            TB = pB === uB.RGBA32UI ? 16 : 8;
+          BB && (rB.set(BB, TB), tT(BB, lB * JB * TB, lB, JB, TB))
+        }
+        return yB
+      })), gT(BB, "texSubImage2D", (BB => function() {
+        for (var TB = arguments.length, dB = new Array(TB), VB = 0; VB < TB; VB++) dB[VB] = arguments[VB];
+        const yB = vT(BB, this, dB);
+        return !IB.inProbe && dB.length >= 9 && dB[0] === uB.TEXTURE_2D && 0 === dB[1] && function(BB, TB) {
+          var dB;
+          const VB = BB.getParameter(uB.TEXTURE_BINDING_2D),
+            yB = VB ? KB.get(VB) : void 0;
+          if (!yB) return;
+          const [, , pB, lB, JB, YB] = TB;
+          let gB = mT(TB[8], null !== (dB = TB[9]) && void 0 !== dB ? dB : 0);
+          if (null === gB && "number" === typeof TB[8]) {
+            const dB = iT(BB, uB.PIXEL_UNPACK_BUFFER),
+              VB = dB ? KB.get(dB) : void 0;
+            gB = VB ? VB.bytes.subarray(TB[8]) : null
           }
-          Kc("texture", UJ, (XJ * UJ.width + eJ) * sJ, AJ * qJ * sJ)
-        }(this, ZJ), UJ
-      })), jc(JJ, "copyTexSubImage2D", (JJ => function() {
-        for (var cJ = arguments.length, ZJ = new Array(cJ), FJ = 0; FJ < cJ; FJ++) ZJ[FJ] = arguments[FJ];
-        const UJ = ZJ[0] === GJ.TEXTURE_2D ? this.getParameter(GJ.TEXTURE_BINDING_2D) : null,
-          eJ = UJ ? wJ.get(UJ) : void 0;
-        return eJ && eJ.missed++, rc(JJ, this, ZJ)
+          if (null === gB) return void yB.missed++;
+          const oB = BB.getParameter(uB.UNPACK_ROW_LENGTH) || JB,
+            kB = BB.getParameter(uB.UNPACK_SKIP_ROWS),
+            LB = BB.getParameter(uB.UNPACK_SKIP_PIXELS),
+            OB = yB.texelBytes;
+          for (let DB = 0; DB < YB; DB++) {
+            const BB = ((kB + DB) * oB + LB) * OB,
+              TB = ((lB + DB) * yB.width + pB) * OB;
+            yB.bytes.set(gB.subarray(BB, BB + JB * OB), TB)
+          }
+          sT("texture", yB, (lB * yB.width + pB) * OB, JB * YB * OB)
+        }(this, dB), yB
+      })), gT(BB, "copyTexSubImage2D", (BB => function() {
+        for (var TB = arguments.length, dB = new Array(TB), VB = 0; VB < TB; VB++) dB[VB] = arguments[VB];
+        const yB = dB[0] === uB.TEXTURE_2D ? this.getParameter(uB.TEXTURE_BINDING_2D) : null,
+          pB = yB ? KB.get(yB) : void 0;
+        return pB && pB.missed++, vT(BB, this, dB)
       })));
-      for (const ZJ of ["drawArrays", "drawElements", "drawArraysInstanced", "drawElementsInstanced"]) jc(JJ, ZJ, (JJ => function() {
-        for (var cJ = arguments.length, FJ = new Array(cJ), UJ = 0; UJ < cJ; UJ++) FJ[UJ] = arguments[UJ];
-        const eJ = rc(JJ, this, FJ);
-        return gJ.inProbe || Ic(this, ZJ, FJ), eJ
+      for (const dB of ["drawArrays", "drawElements", "drawArraysInstanced", "drawElementsInstanced"]) gT(BB, dB, (BB => function() {
+        for (var TB = arguments.length, VB = new Array(TB), yB = 0; yB < TB; yB++) VB[yB] = arguments[yB];
+        const pB = vT(BB, this, VB);
+        return IB.inProbe || wT(this, dB, VB), pB
       }));
-      jc(JJ, "getExtension", (JJ => function() {
-        for (var cJ = arguments.length, ZJ = new Array(cJ), FJ = 0; FJ < cJ; FJ++) ZJ[FJ] = arguments[FJ];
-        const UJ = rc(JJ, this, ZJ);
-        return UJ && "object" === typeof UJ && function(JJ, cJ, ZJ) {
-          const FJ = {
+      gT(BB, "getExtension", (BB => function() {
+        for (var TB = arguments.length, dB = new Array(TB), VB = 0; VB < TB; VB++) dB[VB] = arguments[VB];
+        const yB = vT(BB, this, dB);
+        return yB && "object" === typeof yB && function(BB, TB, dB) {
+          const VB = {
             WEBGL_multi_draw: ["multiDrawArraysWEBGL", "multiDrawElementsWEBGL", "multiDrawArraysInstancedWEBGL", "multiDrawElementsInstancedWEBGL"],
             ANGLE_instanced_arrays: ["drawArraysInstancedANGLE", "drawElementsInstancedANGLE"]
           };
-          if (!(cJ in FJ) || ZJ.bloxdRenderDebug) return;
-          ZJ.bloxdRenderDebug = !0;
-          for (const UJ of FJ[cJ]) {
-            const cJ = ZJ[UJ];
-            "function" === typeof cJ && (ZJ[UJ] = function() {
-              for (var FJ = arguments.length, eJ = new Array(FJ), XJ = 0; XJ < FJ; XJ++) eJ[XJ] = arguments[XJ];
-              const AJ = Reflect.apply(cJ, ZJ, eJ);
-              return gJ.inProbe || Ic(JJ, UJ, eJ), AJ
+          if (!(TB in VB) || dB.bloxdRenderDebug) return;
+          dB.bloxdRenderDebug = !0;
+          for (const yB of VB[TB]) {
+            const TB = dB[yB];
+            "function" === typeof TB && (dB[yB] = function() {
+              for (var VB = arguments.length, pB = new Array(VB), lB = 0; lB < VB; lB++) pB[lB] = arguments[lB];
+              const JB = Reflect.apply(TB, dB, pB);
+              return IB.inProbe || wT(BB, yB, pB), JB
             })
           }
-        }(this, ZJ[0], UJ), UJ
+        }(this, dB[0], yB), yB
       }))
     }
 
-    function Kc(JJ, cJ, ZJ, FJ) {
-      fc[JJ] += FJ, xc < 32 && cJ.bytes.length >= 1 << 20 && (xc++, OJ(`upload ${JJ} #${cJ.id} +${ZJ} ${FJ} B`))
+    function sT(BB, TB, dB, VB) {
+      HT[BB] += VB, ET < 32 && TB.bytes.length >= 1 << 20 && (ET++, XB(`upload ${BB} #${TB.id} +${dB} ${VB} B`))
     }
 
-    function yc(JJ) {
-      if (!JJ.includes("decodeQuad")) return null;
-      return !/^\s*#version 300 es/.test(JJ) || /in uvec3 _p2vs_location0\b/.test(JJ) ? "inst" : "tex"
+    function MT(BB) {
+      if (!BB.includes("decodeQuad")) return null;
+      return !/^\s*#version 300 es/.test(BB) || /in uvec3 _p2vs_location0\b/.test(BB) ? "inst" : "tex"
     }
 
-    function Sc(JJ, cJ, ZJ) {
-      var FJ;
-      if (ZJ.checked) return;
-      ZJ.checked = !0;
-      const UJ = JJ.getProgramParameter(cJ, GJ.LINK_STATUS),
-        eJ = (null !== (FJ = JJ.getProgramInfoLog(cJ)) && void 0 !== FJ ? FJ : "").trim();
-      var XJ;
-      null === ZJ.terrain && UJ || (NJ(`program ${MJ(ZJ)} ${null!==(XJ=ZJ.terrain)&&void 0!==XJ?XJ:"other"} link ${UJ?"ok":"FAILED"}${eJ?`: ${TJ(eJ,300)}`:""}`), eJ && OJ(`program ${MJ(ZJ)} link log:\n${TJ(eJ)}`))
+    function zT(BB, TB, dB) {
+      var VB;
+      if (dB.checked) return;
+      dB.checked = !0;
+      const yB = BB.getProgramParameter(TB, uB.LINK_STATUS),
+        pB = (null !== (VB = BB.getProgramInfoLog(TB)) && void 0 !== VB ? VB : "").trim();
+      var lB;
+      null === dB.terrain && yB || (ZB(`program ${UB(dB)} ${null!==(lB=dB.terrain)&&void 0!==lB?lB:"other"} link ${yB?"ok":"FAILED"}${pB?`: ${WB(pB,300)}`:""}`), pB && XB(`program ${UB(dB)} link log:\n${WB(pB)}`))
     }
 
-    function Ic(JJ, cJ, ZJ) {
-      var FJ;
-      const UJ = JJ.getParameter(GJ.CURRENT_PROGRAM),
-        eJ = UJ ? sc.get(UJ) : void 0;
-      if (!UJ || !eJ) return;
-      const XJ = null !== (FJ = eJ.terrain) && void 0 !== FJ ? FJ : "other",
+    function wT(BB, TB, dB) {
+      var VB;
+      const yB = BB.getParameter(uB.CURRENT_PROGRAM),
+        pB = yB ? OT.get(yB) : void 0;
+      if (!yB || !pB) return;
+      const lB = null !== (VB = pB.terrain) && void 0 !== VB ? VB : "other",
         {
-          ws: AJ,
-          instances: qJ
-        } = function(JJ, cJ) {
-          switch (JJ) {
+          ek: JB,
+          instances: YB
+        } = function(BB, TB) {
+          switch (BB) {
             case "drawArrays":
               return {
-                ws: [
-                  [cJ[1], cJ[2]]
+                ek: [
+                  [TB[1], TB[2]]
                 ], instances: 1
               };
             case "drawArraysInstanced":
             case "drawArraysInstancedANGLE":
               return {
-                ws: [
-                  [cJ[1], cJ[2]]
-                ], instances: cJ[3]
+                ek: [
+                  [TB[1], TB[2]]
+                ], instances: TB[3]
               };
             case "drawElements":
               return {
-                ws: [
-                  [0, cJ[1]]
+                ek: [
+                  [0, TB[1]]
                 ], instances: 1
               };
             case "drawElementsInstanced":
             case "drawElementsInstancedANGLE":
               return {
-                ws: [
-                  [0, cJ[1]]
-                ], instances: cJ[4]
+                ek: [
+                  [0, TB[1]]
+                ], instances: TB[4]
               };
             case "multiDrawArraysWEBGL": {
-              const JJ = cJ[1],
-                ZJ = cJ[3],
-                FJ = cJ[2],
-                UJ = cJ[4],
-                eJ = [];
-              for (let XJ = 0; XJ < cJ[5]; XJ++) eJ.push([JJ[FJ + XJ], ZJ[UJ + XJ]]);
+              const BB = TB[1],
+                dB = TB[3],
+                VB = TB[2],
+                yB = TB[4],
+                pB = [];
+              for (let lB = 0; lB < TB[5]; lB++) pB.push([BB[VB + lB], dB[yB + lB]]);
               return {
-                ws: eJ,
+                ek: pB,
                 instances: 1
               }
             }
             default:
               return {
-                ws: [], instances: 0
+                ek: [], instances: 0
               }
           }
-        }(cJ, ZJ),
-        jJ = "inst" === eJ.terrain ? qJ : AJ.reduce(((JJ, cJ) => {
-          let [, ZJ] = cJ;
-          return JJ + ZJ
+        }(TB, dB),
+        gB = "inst" === pB.terrain ? YB : JB.reduce(((BB, TB) => {
+          let [, dB] = TB;
+          return BB + dB
         }), 0) / 6;
-      if (Gc[XJ].draws++, Gc[XJ].faces += jJ, null === eJ.terrain) return;
-      if (gJ.context = JJ, !eJ.firstDraw) {
-        eJ.firstDraw = !0, Sc(JJ, UJ, eJ), Mc || (Mc = !0, NJ(function(JJ) {
-          var cJ;
-          const ZJ = JJ.getParameter(GJ.DEPTH_FUNC),
-            FJ = {
+      if (uT[lB].draws++, uT[lB].faces += gB, null === pB.terrain) return;
+      if (IB.context = BB, !pB.firstDraw) {
+        pB.firstDraw = !0, zT(BB, yB, pB), UT || (UT = !0, ZB(function(BB) {
+          var TB;
+          const dB = BB.getParameter(uB.DEPTH_FUNC),
+            VB = {
               513: "less",
               514: "equal",
               515: "lequal",
@@ -1078,306 +1078,306 @@ export const modules = {
               518: "gequal",
               519: "always"
             };
-          let UJ = "default framebuffer";
-          if ("DRAW_FRAMEBUFFER" in JJ && JJ.getParameter(GJ.DRAW_FRAMEBUFFER_BINDING)) {
-            const cJ = JJ;
-            UJ = cJ.getFramebufferAttachmentParameter(GJ.DRAW_FRAMEBUFFER, GJ.DEPTH_ATTACHMENT, GJ.FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE) ? `depth ${String(cJ.getFramebufferAttachmentParameter(GJ.DRAW_FRAMEBUFFER,GJ.DEPTH_ATTACHMENT,GJ.FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE))} bits type 0x${Number(cJ.getFramebufferAttachmentParameter(GJ.DRAW_FRAMEBUFFER,GJ.DEPTH_ATTACHMENT,GJ.FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE)).toString(16)}` : "no depth attachment"
+          let yB = "default framebuffer";
+          if ("DRAW_FRAMEBUFFER" in BB && BB.getParameter(uB.DRAW_FRAMEBUFFER_BINDING)) {
+            const TB = BB;
+            yB = TB.getFramebufferAttachmentParameter(uB.DRAW_FRAMEBUFFER, uB.DEPTH_ATTACHMENT, uB.FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE) ? `depth ${String(TB.getFramebufferAttachmentParameter(uB.DRAW_FRAMEBUFFER,uB.DEPTH_ATTACHMENT,uB.FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE))} bits type 0x${Number(TB.getFramebufferAttachmentParameter(uB.DRAW_FRAMEBUFFER,uB.DEPTH_ATTACHMENT,uB.FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE)).toString(16)}` : "no depth attachment"
           }
-          const eJ = JJ.getParameter(GJ.DEPTH_CLEAR_VALUE);
-          return `depth ${null!==(cJ=FJ[ZJ])&&void 0!==cJ?cJ:`0x${ZJ.toString(16)}`} clear ${eJ}${516===ZJ||518===ZJ?" (reverse-Z)":""}, samples ${String(JJ.getParameter(GJ.SAMPLES))}, ${UJ}`
-        }(JJ)));
-        const ZJ = JJ.getError();
-        ZJ !== GJ.NO_ERROR && nc.gl < Ac && (nc.gl++, NJ(`GL error 0x${ZJ.toString(16)} after program ${MJ(eJ)}'s first terrain draw (${cJ})`))
+          const pB = BB.getParameter(uB.DEPTH_CLEAR_VALUE);
+          return `depth ${null!==(TB=VB[dB])&&void 0!==TB?TB:`0x${dB.toString(16)}`} clear ${pB}${516===dB||518===dB?" (reverse-Z)":""}, samples ${String(BB.getParameter(uB.SAMPLES))}, ${yB}`
+        }(BB)));
+        const dB = BB.getError();
+        dB !== uB.NO_ERROR && DT.gl < JT && (DT.gl++, ZB(`GL error 0x${dB.toString(16)} after program ${UB(pB)}'s first terrain draw (${TB})`))
       }
-      const YJ = gJ.pendingCheck;
-      null !== YJ && (YJ.terrainDraws++, YJ.draws.length < qc && CJ(JJ, UJ, eJ, cJ, AJ, qJ))
+      const oB = IB.pendingCheck;
+      null !== oB && (oB.terrainDraws++, oB.draws.length < YT && hB(BB, yB, pB, TB, JB, YB))
     }
-    let Mc = !1;
-    const bc = new WeakSet;
-    const wc = ["maxStorageBuffersPerShaderStage", "maxStorageBufferBindingSize", "maxBufferSize", "maxUniformBufferBindingSize", "minUniformBufferOffsetAlignment", "maxTextureDimension2D", "maxTextureArrayLayers", "maxVertexBuffers", "maxVertexAttributes", "maxVertexBufferArrayStride", "maxBindGroups", "maxColorAttachmentBytesPerSample"];
-    let Wc = !1;
-    const gc = new WeakSet,
-      Hc = new WeakMap,
-      Pc = new WeakMap,
-      kc = {
+    let UT = !1;
+    const FT = new WeakSet;
+    const KT = ["maxStorageBuffersPerShaderStage", "maxStorageBufferBindingSize", "maxBufferSize", "maxUniformBufferBindingSize", "minUniformBufferOffsetAlignment", "maxTextureDimension2D", "maxTextureArrayLayers", "maxVertexBuffers", "maxVertexAttributes", "maxVertexBufferArrayStride", "maxBindGroups", "maxColorAttachmentBytesPerSample"];
+    let rT = !1;
+    const IT = new WeakSet,
+      cT = new WeakMap,
+      ST = new WeakMap,
+      PT = {
         uncaptured: 0,
         compile: 0,
         rejected: 0
       };
-    let pc = 0,
-      dc = !1,
-      zc = null,
-      Nc = {
+    let QT = 0,
+      RT = !1,
+      aT = null,
+      ZT = {
         draws: 0,
         faces: 0
       };
 
-    function Oc(JJ) {
-      const cJ = globalThis[JJ];
-      return null === cJ || void 0 === cJ ? void 0 : cJ.prototype
+    function XT(BB) {
+      const TB = globalThis[BB];
+      return null === TB || void 0 === TB ? void 0 : TB.prototype
     }
 
-    function Tc(JJ) {
-      return JJ && "function" === typeof JJ[Symbol.iterator] ? [...JJ].sort().join(" ") : ""
+    function WT(BB) {
+      return BB && "function" === typeof BB[Symbol.iterator] ? [...BB].sort().join(" ") : ""
     }
 
-    function Cc(JJ, cJ) {
-      const ZJ = null !== JJ && void 0 !== JJ ? JJ : {},
-        FJ = null !== cJ && void 0 !== cJ ? cJ : Object.keys(Object.getPrototypeOf(ZJ)).concat(Object.keys(ZJ));
-      return [...new Set(FJ)].filter((JJ => "number" === typeof ZJ[JJ])).map((JJ => `${JJ} ${String(ZJ[JJ])}`)).join(", ")
+    function hT(BB, TB) {
+      const dB = null !== BB && void 0 !== BB ? BB : {},
+        VB = null !== TB && void 0 !== TB ? TB : Object.keys(Object.getPrototypeOf(dB)).concat(Object.keys(dB));
+      return [...new Set(VB)].filter((BB => "number" === typeof dB[BB])).map((BB => `${BB} ${String(dB[BB])}`)).join(", ")
     }
 
-    function uc(JJ, cJ) {
-      var ZJ;
-      const FJ = null !== (ZJ = cJ.vertex) && void 0 !== ZJ ? ZJ : {};
-      if (FJ.module && gc.has(FJ.module)) {
-        var UJ;
-        const ZJ = String(null !== (UJ = FJ.entryPoint) && void 0 !== UJ ? UJ : "");
-        if (ZJ.startsWith("vs_packed") && Hc.set(JJ, ZJ), !dc) {
-          var eJ, XJ, AJ, qJ, jJ;
-          dc = !0;
-          const JJ = null !== (eJ = cJ.depthStencil) && void 0 !== eJ ? eJ : {},
-            FJ = null !== (XJ = cJ.multisample) && void 0 !== XJ ? XJ : {},
-            UJ = String(null !== (AJ = JJ.depthCompare) && void 0 !== AJ ? AJ : "");
-          NJ(`WebGPU terrain pipeline ${ZJ}: depth ${String(null!==(qJ=JJ.format)&&void 0!==qJ?qJ:"none")} ${UJ}${UJ.startsWith("greater")?" (reverse-Z)":""}, MSAA ${String(null!==(jJ=FJ.count)&&void 0!==jJ?jJ:1)}`)
+    function CT(BB, TB) {
+      var dB;
+      const VB = null !== (dB = TB.vertex) && void 0 !== dB ? dB : {};
+      if (VB.module && IT.has(VB.module)) {
+        var yB;
+        const dB = String(null !== (yB = VB.entryPoint) && void 0 !== yB ? yB : "");
+        if (dB.startsWith("vs_packed") && cT.set(BB, dB), !RT) {
+          var pB, lB, JB, YB, gB;
+          RT = !0;
+          const BB = null !== (pB = TB.depthStencil) && void 0 !== pB ? pB : {},
+            VB = null !== (lB = TB.multisample) && void 0 !== lB ? lB : {},
+            yB = String(null !== (JB = BB.depthCompare) && void 0 !== JB ? JB : "");
+          ZB(`WebGPU terrain pipeline ${dB}: depth ${String(null!==(YB=BB.format)&&void 0!==YB?YB:"none")} ${yB}${yB.startsWith("greater")?" (reverse-Z)":""}, MSAA ${String(null!==(gB=VB.count)&&void 0!==gB?gB:1)}`)
         }
       }
     }
 
-    function ic(JJ) {
-      jc(JJ, "setPipeline", (JJ => function() {
-        for (var cJ = arguments.length, ZJ = new Array(cJ), FJ = 0; FJ < cJ; FJ++) ZJ[FJ] = arguments[FJ];
-        return Pc.set(this, ZJ[0]), Reflect.apply(JJ, this, ZJ)
+    function GT(BB) {
+      gT(BB, "setPipeline", (BB => function() {
+        for (var TB = arguments.length, dB = new Array(TB), VB = 0; VB < TB; VB++) dB[VB] = arguments[VB];
+        return ST.set(this, dB[0]), Reflect.apply(BB, this, dB)
       }));
-      for (const cJ of ["draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect"]) jc(JJ, cJ, (JJ => function() {
-        const ZJ = Pc.get(this),
-          FJ = ZJ ? Hc.get(ZJ) : void 0;
-        for (var UJ = arguments.length, eJ = new Array(UJ), XJ = 0; XJ < UJ; XJ++) eJ[XJ] = arguments[XJ];
-        return void 0 !== FJ && Rc(cJ, FJ, eJ), Reflect.apply(JJ, this, eJ)
+      for (const TB of ["draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect"]) gT(BB, TB, (BB => function() {
+        const dB = ST.get(this),
+          VB = dB ? cT.get(dB) : void 0;
+        for (var yB = arguments.length, pB = new Array(yB), lB = 0; lB < yB; lB++) pB[lB] = arguments[lB];
+        return void 0 !== VB && qT(TB, VB, pB), Reflect.apply(BB, this, pB)
       }))
     }
 
-    function Rc(JJ, cJ, ZJ) {
-      var FJ;
-      (Nc.draws++, "draw" === JJ || "drawIndexed" === JJ) && (Nc.faces += ZJ[0] * (null !== (FJ = ZJ[1]) && void 0 !== FJ ? FJ : 1) / 6);
-      if (null !== zc && zc.length < qc) {
-        const FJ = ("draw" === JJ ? ["vertices", "instances", "firstVertex", "firstInstance"] : "drawIndexed" === JJ ? ["indices", "instances", "firstIndex", "baseVertex", "firstInstance"] : ["indirectOffset"]).map(((cJ, FJ) => {
-          const UJ = JJ.endsWith("Indirect") ? ZJ[1] : ZJ[FJ];
-          return `${cJ} ${String(null!==UJ&&void 0!==UJ?UJ:"instances"===cJ?1:0)}`
+    function qT(BB, TB, dB) {
+      var VB;
+      (ZT.draws++, "draw" === BB || "drawIndexed" === BB) && (ZT.faces += dB[0] * (null !== (VB = dB[1]) && void 0 !== VB ? VB : 1) / 6);
+      if (null !== aT && aT.length < YT) {
+        const VB = ("draw" === BB ? ["vertices", "instances", "firstVertex", "firstInstance"] : "drawIndexed" === BB ? ["indices", "instances", "firstIndex", "baseVertex", "firstInstance"] : ["indirectOffset"]).map(((TB, VB) => {
+          const yB = BB.endsWith("Indirect") ? dB[1] : dB[VB];
+          return `${TB} ${String(null!==yB&&void 0!==yB?yB:"instances"===TB?1:0)}`
         }));
-        zc.push(`  ${cJ} ${JJ} ${FJ.join(" ")}`)
+        aT.push(`  ${TB} ${BB} ${VB.join(" ")}`)
       }
     }
 
-    function Lc() {
-      if (Wc || "undefined" === typeof navigator || !("gpu" in navigator)) return;
-      Wc = !0, jc(Oc("GPU"), "requestAdapter", (JJ => function() {
-        for (var cJ = arguments.length, ZJ = new Array(cJ), FJ = 0; FJ < cJ; FJ++) ZJ[FJ] = arguments[FJ];
-        return Reflect.apply(JJ, this, ZJ).then((JJ => {
-          var cJ;
-          JJ ? function(JJ) {
-            var cJ;
-            const ZJ = null !== (cJ = JJ.info) && void 0 !== cJ ? cJ : {};
-            NJ(`WebGPU adapter ${["vendor","architecture","device","description"].map((JJ=>{var cJ;return`${JJ} "${String(null!==(cJ=ZJ[JJ])&&void 0!==cJ?cJ:"")}"`})).join(" ")}${JJ.isFallbackAdapter?" (fallback)":""}`), NJ(`WebGPU adapter features ${Tc(JJ.features)}`), NJ(`WebGPU adapter limits ${Cc(JJ.limits,wc)}`), OJ(`WebGPU adapter all limits ${Cc(JJ.limits,null)}`)
-          }(JJ) : NJ(`WebGPU requestAdapter(${JSON.stringify(null!==(cJ=ZJ[0])&&void 0!==cJ?cJ:{})}) gave none`);
-          return JJ
+    function xT() {
+      if (rT || "undefined" === typeof navigator || !("gpu" in navigator)) return;
+      rT = !0, gT(XT("GPU"), "requestAdapter", (BB => function() {
+        for (var TB = arguments.length, dB = new Array(TB), VB = 0; VB < TB; VB++) dB[VB] = arguments[VB];
+        return Reflect.apply(BB, this, dB).then((BB => {
+          var TB;
+          BB ? function(BB) {
+            var TB;
+            const dB = null !== (TB = BB.info) && void 0 !== TB ? TB : {};
+            ZB(`WebGPU adapter ${["vendor","architecture","device","description"].map((BB=>{var TB;return`${BB} "${String(null!==(TB=dB[BB])&&void 0!==TB?TB:"")}"`})).join(" ")}${BB.isFallbackAdapter?" (fallback)":""}`), ZB(`WebGPU adapter features ${WT(BB.features)}`), ZB(`WebGPU adapter limits ${hT(BB.limits,KT)}`), XB(`WebGPU adapter all limits ${hT(BB.limits,null)}`)
+          }(BB) : ZB(`WebGPU requestAdapter(${JSON.stringify(null!==(TB=dB[0])&&void 0!==TB?TB:{})}) gave none`);
+          return BB
         }))
-      })), jc(Oc("GPUAdapter"), "requestDevice", (JJ => function() {
-        for (var cJ = arguments.length, ZJ = new Array(cJ), FJ = 0; FJ < cJ; FJ++) ZJ[FJ] = arguments[FJ];
-        return Reflect.apply(JJ, this, ZJ).then((JJ => (function(JJ) {
-          NJ(`WebGPU device features ${Tc(JJ.features)}`), NJ(`WebGPU device limits ${Cc(JJ.limits,wc)}`), JJ.addEventListener("uncapturederror", (JJ => {
-            if (kc.uncaptured < Ac) {
-              var cJ, ZJ, FJ;
-              kc.uncaptured++;
-              const UJ = JJ.error;
-              NJ(`WebGPU uncaptured ${null!==(cJ=null===UJ||void 0===UJ||null===(ZJ=UJ.constructor)||void 0===ZJ?void 0:ZJ.name)&&void 0!==cJ?cJ:"error"}: ${TJ(String(null!==(FJ=null===UJ||void 0===UJ?void 0:UJ.message)&&void 0!==FJ?FJ:""),600)}`)
+      })), gT(XT("GPUAdapter"), "requestDevice", (BB => function() {
+        for (var TB = arguments.length, dB = new Array(TB), VB = 0; VB < TB; VB++) dB[VB] = arguments[VB];
+        return Reflect.apply(BB, this, dB).then((BB => (function(BB) {
+          ZB(`WebGPU device features ${WT(BB.features)}`), ZB(`WebGPU device limits ${hT(BB.limits,KT)}`), BB.addEventListener("uncapturederror", (BB => {
+            if (PT.uncaptured < JT) {
+              var TB, dB, VB;
+              PT.uncaptured++;
+              const yB = BB.error;
+              ZB(`WebGPU uncaptured ${null!==(TB=null===yB||void 0===yB||null===(dB=yB.constructor)||void 0===dB?void 0:dB.name)&&void 0!==TB?TB:"error"}: ${WB(String(null!==(VB=null===yB||void 0===yB?void 0:yB.message)&&void 0!==VB?VB:""),600)}`)
             }
           }));
-          const cJ = JJ.lost;
-          null === cJ || void 0 === cJ || cJ.then((JJ => {
-            var cJ;
-            NJ(`WebGPU device lost (${String(JJ.reason)}): ${TJ(String(null!==(cJ=JJ.message)&&void 0!==cJ?cJ:""),600)}`)
+          const TB = BB.lost;
+          null === TB || void 0 === TB || TB.then((BB => {
+            var TB;
+            ZB(`WebGPU device lost (${String(BB.reason)}): ${WB(String(null!==(TB=BB.message)&&void 0!==TB?TB:""),600)}`)
           }))
-        }(JJ), JJ)), (JJ => {
-          throw NJ(`WebGPU requestDevice failed: ${String(JJ)}`), JJ
+        }(BB), BB)), (BB => {
+          throw ZB(`WebGPU requestDevice failed: ${String(BB)}`), BB
         }))
       }));
-      const JJ = Oc("GPUDevice");
-      jc(JJ, "createShaderModule", (JJ => function() {
-        for (var cJ, ZJ, FJ = arguments.length, UJ = new Array(FJ), eJ = 0; eJ < FJ; eJ++) UJ[eJ] = arguments[eJ];
-        const XJ = Reflect.apply(JJ, this, UJ);
-        return function(JJ, cJ) {
-          const ZJ = cJ.includes("decodeQuad");
-          ZJ && gc.add(JJ);
-          const FJ = JJ.getCompilationInfo;
-          null === FJ || void 0 === FJ || FJ.call(JJ).then((JJ => {
-            if (0 === JJ.messages.length && !ZJ) return;
-            const cJ = {};
-            for (const ZJ of JJ.messages) {
-              var FJ;
-              cJ[String(ZJ.type)] = (null !== (FJ = cJ[String(ZJ.type)]) && void 0 !== FJ ? FJ : 0) + 1
+      const BB = XT("GPUDevice");
+      gT(BB, "createShaderModule", (BB => function() {
+        for (var TB, dB, VB = arguments.length, yB = new Array(VB), pB = 0; pB < VB; pB++) yB[pB] = arguments[pB];
+        const lB = Reflect.apply(BB, this, yB);
+        return function(BB, TB) {
+          const dB = TB.includes("decodeQuad");
+          dB && IT.add(BB);
+          const VB = BB.getCompilationInfo;
+          null === VB || void 0 === VB || VB.call(BB).then((BB => {
+            if (0 === BB.messages.length && !dB) return;
+            const TB = {};
+            for (const dB of BB.messages) {
+              var VB;
+              TB[String(dB.type)] = (null !== (VB = TB[String(dB.type)]) && void 0 !== VB ? VB : 0) + 1
             }
-            const UJ = JJ.messages.map((JJ => `${String(JJ.type)} ${String(JJ.lineNum)}:${String(JJ.linePos)} ${String(JJ.message)}`)).join("\n");
-            kc.compile < Ac && (kc.compile++, NJ(`WebGPU ${ZJ?"terrain ":""}shader module compiled: ${JSON.stringify(cJ)}${UJ?` first: ${TJ(UJ.split("\n")[0],300)}`:""}`)), UJ && OJ(`WebGPU shader module messages:\n${TJ(UJ)}`)
+            const yB = BB.messages.map((BB => `${String(BB.type)} ${String(BB.lineNum)}:${String(BB.linePos)} ${String(BB.message)}`)).join("\n");
+            PT.compile < JT && (PT.compile++, ZB(`WebGPU ${dB?"terrain ":""}shader module compiled: ${JSON.stringify(TB)}${yB?` first: ${WB(yB.split("\n")[0],300)}`:""}`)), yB && XB(`WebGPU shader module messages:\n${WB(yB)}`)
           }))
-        }(XJ, String(null !== (cJ = (null !== (ZJ = UJ[0]) && void 0 !== ZJ ? ZJ : {}).code) && void 0 !== cJ ? cJ : "")), XJ
-      })), jc(JJ, "createRenderPipeline", (JJ => function() {
-        for (var cJ, ZJ = arguments.length, FJ = new Array(ZJ), UJ = 0; UJ < ZJ; UJ++) FJ[UJ] = arguments[UJ];
-        const eJ = Reflect.apply(JJ, this, FJ);
-        return uc(eJ, null !== (cJ = FJ[0]) && void 0 !== cJ ? cJ : {}), eJ
-      })), jc(JJ, "createRenderPipelineAsync", (JJ => function() {
-        for (var cJ = arguments.length, ZJ = new Array(cJ), FJ = 0; FJ < cJ; FJ++) ZJ[FJ] = arguments[FJ];
-        return Reflect.apply(JJ, this, ZJ).then((JJ => {
-          var cJ;
-          return uc(JJ, null !== (cJ = ZJ[0]) && void 0 !== cJ ? cJ : {}), JJ
-        }), (JJ => {
-          var cJ;
-          throw function(JJ, cJ) {
-            var ZJ, FJ, UJ;
-            if (kc.rejected >= Ac) return;
-            kc.rejected++;
+        }(lB, String(null !== (TB = (null !== (dB = yB[0]) && void 0 !== dB ? dB : {}).code) && void 0 !== TB ? TB : "")), lB
+      })), gT(BB, "createRenderPipeline", (BB => function() {
+        for (var TB, dB = arguments.length, VB = new Array(dB), yB = 0; yB < dB; yB++) VB[yB] = arguments[yB];
+        const pB = Reflect.apply(BB, this, VB);
+        return CT(pB, null !== (TB = VB[0]) && void 0 !== TB ? TB : {}), pB
+      })), gT(BB, "createRenderPipelineAsync", (BB => function() {
+        for (var TB = arguments.length, dB = new Array(TB), VB = 0; VB < TB; VB++) dB[VB] = arguments[VB];
+        return Reflect.apply(BB, this, dB).then((BB => {
+          var TB;
+          return CT(BB, null !== (TB = dB[0]) && void 0 !== TB ? TB : {}), BB
+        }), (BB => {
+          var TB;
+          throw function(BB, TB) {
+            var dB, VB, yB;
+            if (PT.rejected >= JT) return;
+            PT.rejected++;
             const {
-              reason: eJ,
-              message: XJ
-            } = null !== cJ && void 0 !== cJ ? cJ : {}, AJ = String(null !== (ZJ = (null !== (FJ = JJ.vertex) && void 0 !== FJ ? FJ : {}).entryPoint) && void 0 !== ZJ ? ZJ : "");
-            NJ(`WebGPU pipeline "${String(null!==(UJ=JJ.label)&&void 0!==UJ?UJ:"")}" ${AJ} rejected (${String(null!==eJ&&void 0!==eJ?eJ:"no reason")}): ${TJ(String(null!==XJ&&void 0!==XJ?XJ:cJ),600)}`)
-          }(null !== (cJ = ZJ[0]) && void 0 !== cJ ? cJ : {}, JJ), JJ
+              reason: pB,
+              message: lB
+            } = null !== TB && void 0 !== TB ? TB : {}, JB = String(null !== (dB = (null !== (VB = BB.vertex) && void 0 !== VB ? VB : {}).entryPoint) && void 0 !== dB ? dB : "");
+            ZB(`WebGPU pipeline "${String(null!==(yB=BB.label)&&void 0!==yB?yB:"")}" ${JB} rejected (${String(null!==pB&&void 0!==pB?pB:"no reason")}): ${WB(String(null!==lB&&void 0!==lB?lB:TB),600)}`)
+          }(null !== (TB = dB[0]) && void 0 !== TB ? TB : {}, BB), BB
         }))
-      })), jc(Oc("GPUCanvasContext"), "configure", (JJ => function() {
-        for (var cJ, ZJ = arguments.length, FJ = new Array(ZJ), UJ = 0; UJ < ZJ; UJ++) FJ[UJ] = arguments[UJ];
-        const eJ = null !== (cJ = FJ[0]) && void 0 !== cJ ? cJ : {};
-        var XJ, AJ;
-        pc++ < 3 && NJ(`WebGPU canvas ${String(eJ.format)} ${String(null!==(XJ=eJ.colorSpace)&&void 0!==XJ?XJ:"srgb")} alpha ${String(null!==(AJ=eJ.alphaMode)&&void 0!==AJ?AJ:"opaque")}`);
-        return Reflect.apply(JJ, this, FJ)
-      })), ic(Oc("GPURenderPassEncoder")), ic(Oc("GPURenderBundleEncoder"))
+      })), gT(XT("GPUCanvasContext"), "configure", (BB => function() {
+        for (var TB, dB = arguments.length, VB = new Array(dB), yB = 0; yB < dB; yB++) VB[yB] = arguments[yB];
+        const pB = null !== (TB = VB[0]) && void 0 !== TB ? TB : {};
+        var lB, JB;
+        QT++ < 3 && ZB(`WebGPU canvas ${String(pB.format)} ${String(null!==(lB=pB.colorSpace)&&void 0!==lB?lB:"srgb")} alpha ${String(null!==(JB=pB.alphaMode)&&void 0!==JB?JB:"opaque")}`);
+        return Reflect.apply(BB, this, VB)
+      })), GT(XT("GPURenderPassEncoder")), GT(XT("GPURenderBundleEncoder"))
     }
-    const ac = 1e4,
-      Bc = 6e4,
-      tc = 5e3;
-    let oc = null,
-      lc = !1,
-      JZ = "1",
-      cZ = "",
-      ZZ = !1,
-      FZ = null,
-      UZ = 0,
-      eZ = () => {};
-    const XZ = new Promise((JJ => {
-      eZ = JJ
+    const jT = 1e4,
+      AT = 6e4,
+      bT = 5e3;
+    let nT = null,
+      eT = !1,
+      Bd = "1",
+      Td = "",
+      dd = !1,
+      Vd = null,
+      yd = 0,
+      pd = () => {};
+    const ld = new Promise((BB => {
+      pd = BB
     }));
 
-    function AZ() {
-      var JJ;
-      lc || (lc = !0, JZ = "0" === (0, eJ.m)("faceCull") ? "0" : "1", cZ = null !== (JJ = (0, eJ.m)("adrenoProbe")) && void 0 !== JJ ? JJ : "", window.bloxdRenderDebug = {
-        faceCull: JZ,
-        adrenoProbe: cZ
-      }, NJ("quality steps off while the topic is on (util/weakGpu.ts): no stepped MSAA or scale, no weak-GPU tier"), Yc || "undefined" === typeof window || (Yc = !0, "undefined" !== typeof WebGL2RenderingContext && Vc(WebGL2RenderingContext.prototype, !0), "undefined" !== typeof WebGLRenderingContext && Vc(WebGLRenderingContext.prototype, !1)), Lc(), (0, eJ.e)("renderProbe", (() => {
-        sZ("console")
-      })), hZ(), setInterval(nZ, tc))
+    function Jd() {
+      var BB;
+      eT || (eT = !0, Bd = "0" === (0, pB.m)("faceCull") ? "0" : "1", Td = null !== (BB = (0, pB.m)("adrenoProbe")) && void 0 !== BB ? BB : "", window.bloxdRenderDebug = {
+        faceCull: Bd,
+        adrenoProbe: Td
+      }, ZB("quality steps off while the topic is on (util/weakGpu.ts): no stepped MSAA or scale, no weak-GPU tier"), oT || "undefined" === typeof window || (oT = !0, "undefined" !== typeof WebGL2RenderingContext && fT(WebGL2RenderingContext.prototype, !0), "undefined" !== typeof WebGLRenderingContext && fT(WebGLRenderingContext.prototype, !1)), xT(), (0, pB.b)("renderProbe", (() => {
+        Od("console")
+      })), kd(), setInterval(Dd, bT))
     }
 
-    function qZ(JJ) {
-      var cJ, ZJ;
-      AZ(), oc = null !== (cJ = null === JJ || void 0 === JJ ? void 0 : JJ.backend) && void 0 !== cJ ? cJ : null, NJ(null === JJ ? "backend: none picked (no renderer build)" : `backend ${JJ.backend}: reason ${JJ.reason}, source ${JJ.source}, adapter ${JJ.adapter?`${JJ.adapter.vendor}/${JJ.adapter.architecture}`:"none"}, renderer param ${null!==(ZJ=(0,eJ.m)("renderer"))&&void 0!==ZJ?ZJ:"none"}, faceCull ${"0"===JZ?"off (whole parts)":"on"}, adrenoProbe ${cZ||"none"}`)
+    function Yd(BB) {
+      var TB, dB;
+      Jd(), nT = null !== (TB = null === BB || void 0 === BB ? void 0 : BB.backend) && void 0 !== TB ? TB : null, ZB(null === BB ? "backend: none picked (no renderer build)" : `backend ${BB.backend}: reason ${BB.reason}, source ${BB.source}, adapter ${BB.adapter?`${BB.adapter.vendor}/${BB.adapter.architecture}`:"none"}, renderer param ${null!==(dB=(0,pB.m)("renderer"))&&void 0!==dB?dB:"none"}, faceCull ${"0"===Bd?"off (whole parts)":"on"}, adrenoProbe ${Td||"none"}`)
     }
 
-    function jZ() {
-      const JJ = performance.now(),
-        cJ = YZ(XZ, ac, Bc).then((cJ => sZ(`${Math.round((performance.now()-JJ)/1e3)} s after playable${cJ?"":", no terrain drawn yet"}`)));
-      (0, UJ.c)(NJ, (async () => {
-        await cJ, await FZ
+    function gd() {
+      const BB = performance.now(),
+        TB = od(ld, jT, AT).then((TB => Od(`${Math.round((performance.now()-BB)/1e3)} s after playable${TB?"":", no terrain drawn yet"}`)));
+      (0, yB.d)(ZB, (async () => {
+        await TB, await Vd
       }))
     }
-    async function YZ(JJ, cJ, ZJ) {
-      const UJ = (0, FJ.b)(ZJ).then((() => !1));
-      return await (0, FJ.b)(cJ), Promise.race([JJ.then((() => !0)), UJ])
+    async function od(BB, TB, dB) {
+      const yB = (0, VB.b)(dB).then((() => !1));
+      return await (0, VB.b)(TB), Promise.race([BB.then((() => !0)), yB])
     }
 
-    function hZ() {
+    function kd() {
       requestAnimationFrame((() => {
-        UZ++, hZ()
+        yd++, kd()
       }))
     }
 
-    function DZ() {
-      var JJ, cJ;
-      if (ZZ) return;
-      ZZ = !0;
-      const ZJ = window.bloxdRenderDebug;
-      var FJ;
-      (NJ(`renderer caps ${null!==(JJ=null===ZJ||void 0===ZJ?void 0:ZJ.caps)&&void 0!==JJ?JJ:"(not noted)"}; terrain fetch ${null!==(cJ=null===ZJ||void 0===ZJ?void 0:ZJ.fetch)&&void 0!==cJ?cJ:"(not noted)"}`), cZ) && NJ(`adrenoProbe ${cZ} asked; in force (storage fetch only): ${null!==(FJ=null===ZJ||void 0===ZJ?void 0:ZJ.probe)&&void 0!==FJ?FJ:"(not noted)"}`);
-      const UJ = gJ.context;
-      if (UJ) {
-        for (const JJ of function(JJ) {
-            var cJ;
-            const ZJ = [],
-              FJ = JJ.getExtension("WEBGL_debug_renderer_info"),
-              UJ = FJ ? JJ.getParameter(FJ.UNMASKED_VENDOR_WEBGL) : "(masked)",
-              eJ = FJ ? JJ.getParameter(FJ.UNMASKED_RENDERER_WEBGL) : "(masked)";
-            ZJ.push(`GL ${String(JJ.getParameter(JJ.VERSION))} | ${String(JJ.getParameter(JJ.SHADING_LANGUAGE_VERSION))} | ${String(JJ.getParameter(JJ.VENDOR))} / ${String(JJ.getParameter(JJ.RENDERER))}`), ZJ.push(`GL unmasked ${UJ} / ${eJ}`);
-            const XJ = [
-              ["MAX_TEXTURE_SIZE", JJ.MAX_TEXTURE_SIZE],
-              ["MAX_VERTEX_ATTRIBS", JJ.MAX_VERTEX_ATTRIBS],
-              ["MAX_VERTEX_UNIFORM_VECTORS", JJ.MAX_VERTEX_UNIFORM_VECTORS],
-              ["MAX_VERTEX_TEXTURE_IMAGE_UNITS", JJ.MAX_VERTEX_TEXTURE_IMAGE_UNITS],
-              ["MAX_COMBINED_TEXTURE_IMAGE_UNITS", JJ.MAX_COMBINED_TEXTURE_IMAGE_UNITS],
-              ["MAX_VARYING_VECTORS", JJ.MAX_VARYING_VECTORS],
-              ["MAX_RENDERBUFFER_SIZE", JJ.MAX_RENDERBUFFER_SIZE]
+    function Ld() {
+      var BB, TB;
+      if (dd) return;
+      dd = !0;
+      const dB = window.bloxdRenderDebug;
+      var VB;
+      (ZB(`renderer caps ${null!==(BB=null===dB||void 0===dB?void 0:dB.caps)&&void 0!==BB?BB:"(not noted)"}; terrain fetch ${null!==(TB=null===dB||void 0===dB?void 0:dB.fetch)&&void 0!==TB?TB:"(not noted)"}`), Td) && ZB(`adrenoProbe ${Td} asked; in force (storage fetch only): ${null!==(VB=null===dB||void 0===dB?void 0:dB.probe)&&void 0!==VB?VB:"(not noted)"}`);
+      const yB = IB.context;
+      if (yB) {
+        for (const BB of function(BB) {
+            var TB;
+            const dB = [],
+              VB = BB.getExtension("WEBGL_debug_renderer_info"),
+              yB = VB ? BB.getParameter(VB.UNMASKED_VENDOR_WEBGL) : "(masked)",
+              pB = VB ? BB.getParameter(VB.UNMASKED_RENDERER_WEBGL) : "(masked)";
+            dB.push(`GL ${String(BB.getParameter(BB.VERSION))} | ${String(BB.getParameter(BB.SHADING_LANGUAGE_VERSION))} | ${String(BB.getParameter(BB.VENDOR))} / ${String(BB.getParameter(BB.RENDERER))}`), dB.push(`GL unmasked ${yB} / ${pB}`);
+            const lB = [
+              ["MAX_TEXTURE_SIZE", BB.MAX_TEXTURE_SIZE],
+              ["MAX_VERTEX_ATTRIBS", BB.MAX_VERTEX_ATTRIBS],
+              ["MAX_VERTEX_UNIFORM_VECTORS", BB.MAX_VERTEX_UNIFORM_VECTORS],
+              ["MAX_VERTEX_TEXTURE_IMAGE_UNITS", BB.MAX_VERTEX_TEXTURE_IMAGE_UNITS],
+              ["MAX_COMBINED_TEXTURE_IMAGE_UNITS", BB.MAX_COMBINED_TEXTURE_IMAGE_UNITS],
+              ["MAX_VARYING_VECTORS", BB.MAX_VARYING_VECTORS],
+              ["MAX_RENDERBUFFER_SIZE", BB.MAX_RENDERBUFFER_SIZE]
             ];
-            "MAX_UNIFORM_BLOCK_SIZE" in JJ && XJ.push(["MAX_UNIFORM_BLOCK_SIZE", JJ.MAX_UNIFORM_BLOCK_SIZE], ["MAX_VERTEX_UNIFORM_BLOCKS", JJ.MAX_VERTEX_UNIFORM_BLOCKS], ["MAX_SAMPLES", JJ.MAX_SAMPLES], ["MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS", JJ.MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS]), ZJ.push(`GL limits ${XJ.map((cJ=>{let[ZJ,FJ]=cJ;return`${ZJ} ${String(JJ.getParameter(FJ))}`})).join(", ")}`);
-            const AJ = (cJ, ZJ) => {
-              const FJ = JJ.getShaderPrecisionFormat(cJ, JJ.HIGH_FLOAT),
-                UJ = JJ.getShaderPrecisionFormat(cJ, JJ.HIGH_INT);
-              return `${ZJ} highp float ${FJ?`${FJ.rangeMin}/${FJ.rangeMax}/${FJ.precision}`:"?"} int ${UJ?`${UJ.rangeMin}/${UJ.rangeMax}/${UJ.precision}`:"?"}`
+            "MAX_UNIFORM_BLOCK_SIZE" in BB && lB.push(["MAX_UNIFORM_BLOCK_SIZE", BB.MAX_UNIFORM_BLOCK_SIZE], ["MAX_VERTEX_UNIFORM_BLOCKS", BB.MAX_VERTEX_UNIFORM_BLOCKS], ["MAX_SAMPLES", BB.MAX_SAMPLES], ["MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS", BB.MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS]), dB.push(`GL limits ${lB.map((TB=>{let[dB,VB]=TB;return`${dB} ${String(BB.getParameter(VB))}`})).join(", ")}`);
+            const JB = (TB, dB) => {
+              const VB = BB.getShaderPrecisionFormat(TB, BB.HIGH_FLOAT),
+                yB = BB.getShaderPrecisionFormat(TB, BB.HIGH_INT);
+              return `${dB} highp float ${VB?`${VB.rangeMin}/${VB.rangeMax}/${VB.precision}`:"?"} int ${yB?`${yB.rangeMin}/${yB.rangeMax}/${yB.precision}`:"?"}`
             };
-            ZJ.push(`GL precision ${AJ(JJ.VERTEX_SHADER,"VS")}, ${AJ(JJ.FRAGMENT_SHADER,"FS")}`);
-            const qJ = JJ.getContextAttributes();
-            return ZJ.push(`GL context ${JSON.stringify(qJ)} drawingBuffer ${JJ.drawingBufferWidth}x${JJ.drawingBufferHeight}${"drawingBufferFormat"in JJ?` format 0x${Number(JJ.drawingBufferFormat).toString(16)}`:""}${"drawingBufferColorSpace"in JJ?` ${String(JJ.drawingBufferColorSpace)}`:""}`), ZJ.push(`GL extensions ${(null!==(cJ=JJ.getSupportedExtensions())&&void 0!==cJ?cJ:[]).join(" ")}`), ZJ
-          }(UJ)) NJ(JJ);
+            dB.push(`GL precision ${JB(BB.VERTEX_SHADER,"VS")}, ${JB(BB.FRAGMENT_SHADER,"FS")}`);
+            const YB = BB.getContextAttributes();
+            return dB.push(`GL context ${JSON.stringify(YB)} drawingBuffer ${BB.drawingBufferWidth}x${BB.drawingBufferHeight}${"drawingBufferFormat"in BB?` format 0x${Number(BB.drawingBufferFormat).toString(16)}`:""}${"drawingBufferColorSpace"in BB?` ${String(BB.drawingBufferColorSpace)}`:""}`), dB.push(`GL extensions ${(null!==(TB=BB.getSupportedExtensions())&&void 0!==TB?TB:[]).join(" ")}`), dB
+          }(yB)) ZB(BB);
         ! function() {
-          if (!gJ.context) return;
-          let JJ = 0,
-            cJ = 0;
-          for (const [ZJ, FJ] of bJ) !FJ.gl.isContextLost() && FJ.gl.isProgram(ZJ) && (cJ++, Sc(FJ.gl, ZJ, FJ), null !== FJ.terrain && JJ++);
-          NJ(`programs: ${cJ} live of ${bJ.length} linked, ${JJ} packed terrain; CPU page copies ${Math.round(gJ.shadowBytes/1048576)} MiB (${gJ.uncopied} over budget)`)
+          if (!IB.context) return;
+          let BB = 0,
+            TB = 0;
+          for (const [dB, VB] of FB) !VB.gl.isContextLost() && VB.gl.isProgram(dB) && (TB++, zT(VB.gl, dB, VB), null !== VB.terrain && BB++);
+          ZB(`programs: ${TB} live of ${FB.length} linked, ${BB} packed terrain; CPU page copies ${Math.round(IB.shadowBytes/1048576)} MiB (${IB.uncopied} over budget)`)
         }()
       }
     }
 
-    function sZ(JJ) {
-      return FZ ??= async function(JJ) {
-        DZ(), "webgpu" === oc ? await
-        function(JJ) {
-          if (null !== zc) return Promise.resolve();
-          const cJ = [];
-          return zc = cJ, new Promise((ZJ => {
+    function Od(BB) {
+      return Vd ??= async function(BB) {
+        Ld(), "webgpu" === nT ? await
+        function(BB) {
+          if (null !== aT) return Promise.resolve();
+          const TB = [];
+          return aT = TB, new Promise((dB => {
             setTimeout((() => {
-              zc = null, NJ(`WebGPU draw ranges (${JJ}): ${cJ.length} terrain draws recorded in a second (first ${qc}; bundles replay without new ones)`);
-              for (const JJ of cJ) NJ(JJ);
-              ZJ()
+              aT = null, ZB(`WebGPU draw ranges (${BB}): ${TB.length} terrain draws recorded in a second (first ${YT}; bundles replay without new ones)`);
+              for (const BB of TB) ZB(BB);
+              dB()
             }), 1e3)
           }))
-        }(JJ): await Xc(JJ);
-        NJ(`check (${JJ}) done: bloxdDebug.save() downloads it all`)
-      }(JJ).catch((cJ => {
-        NJ(`check (${JJ}) failed: ${String(cJ)}`)
+        }(BB): await lT(BB);
+        ZB(`check (${BB}) done: bloxdDebug.save() downloads it all`)
+      }(BB).catch((TB => {
+        ZB(`check (${BB}) failed: ${String(TB)}`)
       })).finally((() => {
-        FZ = null
-      })), FZ
+        Vd = null
+      })), Vd
     }
 
-    function nZ() {
-      const JJ = JJ => UZ ? (JJ / UZ).toFixed(1) : "0",
-        cJ = function() {
-          const JJ = Nc;
-          return Nc = {
+    function Dd() {
+      const BB = BB => yd ? (BB / yd).toFixed(1) : "0",
+        TB = function() {
+          const BB = ZT;
+          return ZT = {
             draws: 0,
             faces: 0
-          }, JJ
+          }, BB
         }(),
-        ZJ = function() {
-          const JJ = Gc;
-          return Gc = {
+        dB = function() {
+          const BB = uT;
+          return uT = {
             inst: {
               draws: 0,
               faces: 0
@@ -1390,20 +1390,20 @@ export const modules = {
               draws: 0,
               faces: 0
             }
-          }, JJ
+          }, BB
         }(),
-        FJ = function() {
-          const JJ = fc;
-          return fc = {
+        VB = function() {
+          const BB = HT;
+          return HT = {
             buffer: 0,
             texture: 0
-          }, JJ
+          }, BB
         }();
-      ("webgpu" === oc ? cJ.draws : ZJ.inst.draws + ZJ.tex.draws) > 0 && eZ();
-      const UJ = "webgpu" === oc ? [`terrain ${JJ(cJ.draws)} draws ${JJ(cJ.faces)} faces a frame (bundles' replays uncounted)`] : ["inst", "tex", "other"].filter((JJ => ZJ[JJ].draws > 0)).map((cJ => `${cJ} ${JJ(ZJ[cJ].draws)} draws ${JJ(ZJ[cJ].faces)} faces a frame`));
-      NJ(`${UZ} frames: ${UJ.join(", ")||"no draws"}; uploaded ${Math.round(FJ.buffer/1024)} KiB to buffers, ${Math.round(FJ.texture/1024)} KiB to data textures`), UZ = 0
+      ("webgpu" === nT ? TB.draws : dB.inst.draws + dB.tex.draws) > 0 && pd();
+      const yB = "webgpu" === nT ? [`terrain ${BB(TB.draws)} draws ${BB(TB.faces)} faces a frame (bundles' replays uncounted)`] : ["inst", "tex", "other"].filter((BB => dB[BB].draws > 0)).map((TB => `${TB} ${BB(dB[TB].draws)} draws ${BB(dB[TB].faces)} faces a frame`));
+      ZB(`${yd} frames: ${yB.join(", ")||"no draws"}; uploaded ${Math.round(VB.buffer/1024)} KiB to buffers, ${Math.round(VB.texture/1024)} KiB to data textures`), yd = 0
     }
   }
 };
 Object.freeze(modules);
-for (const JJ in modules) Object.freeze(modules[JJ]);
+for (const BB in modules) Object.freeze(modules[BB]);

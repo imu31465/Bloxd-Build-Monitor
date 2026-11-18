@@ -1,28 +1,28 @@
 export const id = 60;
 export const ids = [60];
 export const modules = {
-  39858: (JJ, cJ, ZJ) => {
-    ZJ.r(cJ), ZJ.d(cJ, {
-      ZstdErrorCode: () => YJ,
-      ZstdFrameDecoder: () => MJ
+  39813: (BB, TB, dB) => {
+    dB.r(TB), dB.d(TB, {
+      ZstdErrorCode: () => oB,
+      ZstdFrameDecoder: () => UB
     });
-    const FJ = ArrayBuffer,
-      UJ = Uint8Array,
-      eJ = Uint16Array,
-      XJ = Int16Array,
-      AJ = Int32Array,
-      qJ = (JJ, cJ, ZJ) => {
-        if (UJ.prototype.slice) return UJ.prototype.slice.call(JJ, cJ, ZJ);
-        (null == cJ || cJ < 0) && (cJ = 0), (null == ZJ || ZJ > JJ.length) && (ZJ = JJ.length);
-        const FJ = new UJ(ZJ - cJ);
-        return FJ.set(JJ.subarray(cJ, ZJ)), FJ
+    const VB = ArrayBuffer,
+      yB = Uint8Array,
+      pB = Uint16Array,
+      lB = Int16Array,
+      JB = Int32Array,
+      YB = (BB, TB, dB) => {
+        if (yB.prototype.slice) return yB.prototype.slice.call(BB, TB, dB);
+        (null == TB || TB < 0) && (TB = 0), (null == dB || dB > BB.length) && (dB = BB.length);
+        const VB = new yB(dB - TB);
+        return VB.set(BB.subarray(TB, dB)), VB
       },
-      jJ = (JJ, cJ, ZJ, FJ) => {
-        if (UJ.prototype.fill) return UJ.prototype.fill.call(JJ, cJ, ZJ, FJ);
-        for ((null == ZJ || ZJ < 0) && (ZJ = 0), (null == FJ || FJ > JJ.length) && (FJ = JJ.length); ZJ < FJ; ++ZJ) JJ[ZJ] = cJ;
-        return JJ
+      gB = (BB, TB, dB, VB) => {
+        if (yB.prototype.fill) return yB.prototype.fill.call(BB, TB, dB, VB);
+        for ((null == dB || dB < 0) && (dB = 0), (null == VB || VB > BB.length) && (VB = BB.length); dB < VB; ++dB) BB[dB] = TB;
+        return BB
       },
-      YJ = {
+      oB = {
         InvalidData: 0,
         WindowSizeTooLarge: 1,
         InvalidBlockType: 2,
@@ -30,376 +30,376 @@ export const modules = {
         DistanceTooFarBack: 4,
         UnexpectedEOF: 5
       },
-      hJ = ["invalid zstd data", "window size too large (>2046MB)", "invalid block type", "FSE accuracy too high", "match distance too far back", "unexpected EOF"],
-      DJ = (JJ, cJ, ZJ) => {
-        const FJ = new Error(cJ || hJ[JJ]);
-        if (FJ.code = JJ, Error.captureStackTrace && Error.captureStackTrace(FJ, DJ), !ZJ) throw FJ;
-        return FJ
+      kB = ["invalid zstd data", "window size too large (>2046MB)", "invalid block type", "FSE accuracy too high", "match distance too far back", "unexpected EOF"],
+      LB = (BB, TB, dB) => {
+        const VB = new Error(TB || kB[BB]);
+        if (VB.code = BB, Error.captureStackTrace && Error.captureStackTrace(VB, LB), !dB) throw VB;
+        return VB
       },
-      sJ = (JJ, cJ, ZJ) => {
-        let FJ = 0,
-          UJ = 0;
-        for (; FJ < ZJ; ++FJ) UJ |= JJ[cJ++] << (FJ << 3);
-        return UJ
+      OB = (BB, TB, dB) => {
+        let VB = 0,
+          yB = 0;
+        for (; VB < dB; ++VB) yB |= BB[TB++] << (VB << 3);
+        return yB
       },
-      nJ = (JJ, cJ) => {
-        const ZJ = JJ[0] | JJ[1] << 8 | JJ[2] << 16;
-        if (3126568 == ZJ && 253 == JJ[3]) {
-          const ZJ = JJ[4],
-            FJ = ZJ >> 5 & 1,
-            eJ = ZJ >> 2 & 1,
-            XJ = 3 & ZJ,
-            qJ = ZJ >> 6;
-          8 & ZJ && DJ(0);
-          let jJ = 6 - FJ;
-          const YJ = 3 == XJ ? 4 : XJ,
-            hJ = sJ(JJ, jJ, YJ);
-          jJ += YJ;
-          const nJ = qJ ? 1 << qJ : FJ,
-            GJ = sJ(JJ, jJ, nJ) + (1 == qJ && 256);
-          let fJ = GJ;
-          if (!FJ) {
-            const cJ = 1 << 10 + (JJ[5] >> 3);
-            fJ = cJ + (cJ >> 3) * (7 & JJ[5])
+      DB = (BB, TB) => {
+        const dB = BB[0] | BB[1] << 8 | BB[2] << 16;
+        if (3126568 == dB && 253 == BB[3]) {
+          const dB = BB[4],
+            VB = dB >> 5 & 1,
+            pB = dB >> 2 & 1,
+            lB = 3 & dB,
+            YB = dB >> 6;
+          8 & dB && LB(0);
+          let gB = 6 - VB;
+          const oB = 3 == lB ? 4 : lB,
+            kB = OB(BB, gB, oB);
+          gB += oB;
+          const DB = YB ? 1 << YB : VB,
+            uB = OB(BB, gB, DB) + (1 == YB && 256);
+          let HB = uB;
+          if (!VB) {
+            const TB = 1 << 10 + (BB[5] >> 3);
+            HB = TB + (TB >> 3) * (7 & BB[5])
           }
-          fJ > 2145386496 && DJ(1);
-          const xJ = new UJ((1 == cJ ? GJ || fJ : cJ ? 0 : fJ) + 12);
-          return xJ[0] = 1, xJ[4] = 4, xJ[8] = 8, {
-            b: jJ + nJ,
+          HB > 2145386496 && LB(1);
+          const EB = new yB((1 == TB ? uB || HB : TB ? 0 : HB) + 12);
+          return EB[0] = 1, EB[4] = 4, EB[8] = 8, {
+            b: gB + DB,
             y: 0,
             l: 0,
-            d: hJ,
-            w: cJ && 1 != cJ ? cJ : xJ.subarray(12),
-            e: fJ,
-            o: new AJ(xJ.buffer, 0, 3),
-            u: GJ,
-            c: eJ,
-            m: Math.min(131072, fJ)
+            d: kB,
+            w: TB && 1 != TB ? TB : EB.subarray(12),
+            e: HB,
+            o: new JB(EB.buffer, 0, 3),
+            u: uB,
+            c: pB,
+            m: Math.min(131072, HB)
           }
         }
-        if (25481893 == (ZJ >> 4 | JJ[3] << 20)) return 8 + (((FJ = JJ)[eJ = 4] | FJ[eJ + 1] << 8 | FJ[eJ + 2] << 16 | FJ[eJ + 3] << 24) >>> 0);
-        var FJ, eJ;
-        DJ(0)
+        if (25481893 == (dB >> 4 | BB[3] << 20)) return 8 + (((VB = BB)[pB = 4] | VB[pB + 1] << 8 | VB[pB + 2] << 16 | VB[pB + 3] << 24) >>> 0);
+        var VB, pB;
+        LB(0)
       },
-      GJ = JJ => {
-        let cJ = 0;
-        for (; 1 << cJ <= JJ; ++cJ);
-        return cJ - 1
+      uB = BB => {
+        let TB = 0;
+        for (; 1 << TB <= BB; ++TB);
+        return TB - 1
       },
-      fJ = (JJ, cJ, ZJ) => {
-        let AJ = 4 + (cJ << 3);
-        const qJ = 5 + (15 & JJ[cJ]);
-        qJ > ZJ && DJ(3);
-        const jJ = 1 << qJ;
-        let YJ = jJ,
-          hJ = -1,
-          sJ = -1,
-          nJ = -1,
-          fJ = jJ;
-        const xJ = new FJ(512 + (jJ << 2)),
-          rJ = new XJ(xJ, 0, 256),
-          vJ = new eJ(xJ, 0, 256),
-          mJ = new eJ(xJ, 512, jJ),
-          QJ = 512 + (jJ << 1),
-          EJ = new UJ(xJ, QJ, jJ),
-          VJ = new UJ(xJ, QJ + jJ);
-        for (; hJ < 255 && YJ > 0;) {
-          const cJ = GJ(YJ + 1),
-            ZJ = AJ >> 3,
-            FJ = (1 << cJ + 1) - 1;
-          let UJ = (JJ[ZJ] | JJ[ZJ + 1] << 8 | JJ[ZJ + 2] << 16) >> (7 & AJ) & FJ;
-          const eJ = (1 << cJ) - 1,
-            XJ = FJ - YJ - 1,
-            qJ = UJ & eJ;
-          if (qJ < XJ ? (AJ += cJ, UJ = qJ) : (AJ += cJ + 1, UJ > eJ && (UJ -= XJ)), rJ[++hJ] = --UJ, -1 == UJ ? (YJ += UJ, EJ[--fJ] = hJ) : YJ -= UJ, !UJ)
+      HB = (BB, TB, dB) => {
+        let JB = 4 + (TB << 3);
+        const YB = 5 + (15 & BB[TB]);
+        YB > dB && LB(3);
+        const gB = 1 << YB;
+        let oB = gB,
+          kB = -1,
+          OB = -1,
+          DB = -1,
+          HB = gB;
+        const EB = new VB(512 + (gB << 2)),
+          vB = new lB(EB, 0, 256),
+          mB = new pB(EB, 0, 256),
+          iB = new pB(EB, 512, gB),
+          NB = 512 + (gB << 1),
+          tB = new yB(EB, NB, gB),
+          fB = new yB(EB, NB + gB);
+        for (; kB < 255 && oB > 0;) {
+          const TB = uB(oB + 1),
+            dB = JB >> 3,
+            VB = (1 << TB + 1) - 1;
+          let yB = (BB[dB] | BB[dB + 1] << 8 | BB[dB + 2] << 16) >> (7 & JB) & VB;
+          const pB = (1 << TB) - 1,
+            lB = VB - oB - 1,
+            YB = yB & pB;
+          if (YB < lB ? (JB += TB, yB = YB) : (JB += TB + 1, yB > pB && (yB -= lB)), vB[++kB] = --yB, -1 == yB ? (oB += yB, tB[--HB] = kB) : oB -= yB, !yB)
             do {
-              const cJ = AJ >> 3;
-              sJ = (JJ[cJ] | JJ[cJ + 1] << 8) >> (7 & AJ) & 3, AJ += 2, hJ += sJ
-            } while (3 == sJ)
-        }(hJ > 255 || YJ) && DJ(0);
-        let KJ = 0;
-        const yJ = (jJ >> 1) + (jJ >> 3) + 3,
-          SJ = jJ - 1;
-        for (let FJ = 0; FJ <= hJ; ++FJ) {
-          const JJ = rJ[FJ];
-          if (JJ < 1) vJ[FJ] = -JJ;
+              const TB = JB >> 3;
+              OB = (BB[TB] | BB[TB + 1] << 8) >> (7 & JB) & 3, JB += 2, kB += OB
+            } while (3 == OB)
+        }(kB > 255 || oB) && LB(0);
+        let sB = 0;
+        const MB = (gB >> 1) + (gB >> 3) + 3,
+          zB = gB - 1;
+        for (let VB = 0; VB <= kB; ++VB) {
+          const BB = vB[VB];
+          if (BB < 1) mB[VB] = -BB;
           else
-            for (nJ = 0; nJ < JJ; ++nJ) {
-              EJ[KJ] = FJ;
+            for (DB = 0; DB < BB; ++DB) {
+              tB[sB] = VB;
               do {
-                KJ = KJ + yJ & SJ
-              } while (KJ >= fJ)
+                sB = sB + MB & zB
+              } while (sB >= HB)
             }
         }
-        for (KJ && DJ(0), nJ = 0; nJ < jJ; ++nJ) {
-          const JJ = vJ[EJ[nJ]]++,
-            cJ = VJ[nJ] = qJ - GJ(JJ);
-          mJ[nJ] = (JJ << cJ) - jJ
+        for (sB && LB(0), DB = 0; DB < gB; ++DB) {
+          const BB = mB[tB[DB]]++,
+            TB = fB[DB] = YB - uB(BB);
+          iB[DB] = (BB << TB) - gB
         }
-        return [AJ + 7 >> 3, {
-          b: qJ,
-          s: EJ,
-          n: VJ,
-          t: mJ
+        return [JB + 7 >> 3, {
+          b: YB,
+          s: tB,
+          n: fB,
+          t: iB
         }]
       },
-      xJ = fJ(new UJ([81, 16, 99, 140, 49, 198, 24, 99, 12, 33, 196, 24, 99, 102, 102, 134, 70, 146, 4]), 0, 6)[1],
-      rJ = fJ(new UJ([33, 20, 196, 24, 99, 140, 33, 132, 16, 66, 8, 33, 132, 16, 66, 8, 33, 68, 68, 68, 68, 68, 68, 68, 68, 36, 9]), 0, 6)[1],
-      vJ = fJ(new UJ([32, 132, 16, 66, 102, 70, 68, 68, 68, 68, 36, 73, 2]), 0, 5)[1],
-      mJ = (JJ, cJ) => {
-        const ZJ = JJ.length,
-          FJ = new AJ(ZJ);
-        for (let UJ = 0; UJ < ZJ; ++UJ) FJ[UJ] = cJ, cJ += 1 << JJ[UJ];
-        return FJ
+      EB = HB(new yB([81, 16, 99, 140, 49, 198, 24, 99, 12, 33, 196, 24, 99, 102, 102, 134, 70, 146, 4]), 0, 6)[1],
+      vB = HB(new yB([33, 20, 196, 24, 99, 140, 33, 132, 16, 66, 8, 33, 132, 16, 66, 8, 33, 68, 68, 68, 68, 68, 68, 68, 68, 36, 9]), 0, 6)[1],
+      mB = HB(new yB([32, 132, 16, 66, 102, 70, 68, 68, 68, 68, 36, 73, 2]), 0, 5)[1],
+      iB = (BB, TB) => {
+        const dB = BB.length,
+          VB = new JB(dB);
+        for (let yB = 0; yB < dB; ++yB) VB[yB] = TB, TB += 1 << BB[yB];
+        return VB
       },
-      QJ = new UJ(new AJ([0, 0, 0, 0, 16843009, 50528770, 134678020, 202050057, 269422093]).buffer, 0, 36),
-      EJ = mJ(QJ, 0),
-      VJ = new UJ(new AJ([0, 0, 0, 0, 0, 0, 0, 0, 16843009, 50528770, 117769220, 185207048, 252579084, 16]).buffer, 0, 53),
-      KJ = mJ(VJ, 3),
-      yJ = (JJ, cJ, ZJ) => {
-        const FJ = JJ.length,
-          UJ = cJ.length,
-          eJ = JJ[FJ - 1],
-          XJ = (1 << ZJ.b) - 1,
-          AJ = -ZJ.b;
-        eJ || DJ(0);
-        let qJ = 0,
-          jJ = ZJ.b,
-          YJ = (FJ << 3) - 8 + GJ(eJ) - jJ,
-          hJ = -1;
-        for (; YJ > AJ && hJ < UJ;) {
-          const FJ = YJ >> 3;
-          qJ = (qJ << jJ | (JJ[FJ] | JJ[FJ + 1] << 8 | JJ[FJ + 2] << 16) >> (7 & YJ)) & XJ, cJ[++hJ] = ZJ.s[qJ], YJ -= jJ = ZJ.n[qJ]
+      NB = new yB(new JB([0, 0, 0, 0, 16843009, 50528770, 134678020, 202050057, 269422093]).buffer, 0, 36),
+      tB = iB(NB, 0),
+      fB = new yB(new JB([0, 0, 0, 0, 0, 0, 0, 0, 16843009, 50528770, 117769220, 185207048, 252579084, 16]).buffer, 0, 53),
+      sB = iB(fB, 3),
+      MB = (BB, TB, dB) => {
+        const VB = BB.length,
+          yB = TB.length,
+          pB = BB[VB - 1],
+          lB = (1 << dB.b) - 1,
+          JB = -dB.b;
+        pB || LB(0);
+        let YB = 0,
+          gB = dB.b,
+          oB = (VB << 3) - 8 + uB(pB) - gB,
+          kB = -1;
+        for (; oB > JB && kB < yB;) {
+          const VB = oB >> 3;
+          YB = (YB << gB | (BB[VB] | BB[VB + 1] << 8 | BB[VB + 2] << 16) >> (7 & oB)) & lB, TB[++kB] = dB.s[YB], oB -= gB = dB.n[YB]
         }
-        YJ == AJ && hJ + 1 == UJ || DJ(0)
+        oB == JB && kB + 1 == yB || LB(0)
       },
-      SJ = (JJ, cJ, ZJ) => {
-        let FJ = 6;
-        const UJ = cJ.length + 3 >> 2,
-          eJ = UJ << 1,
-          XJ = UJ + eJ;
-        yJ(JJ.subarray(FJ, FJ += JJ[0] | JJ[1] << 8), cJ.subarray(0, UJ), ZJ), yJ(JJ.subarray(FJ, FJ += JJ[2] | JJ[3] << 8), cJ.subarray(UJ, eJ), ZJ), yJ(JJ.subarray(FJ, FJ += JJ[4] | JJ[5] << 8), cJ.subarray(eJ, XJ), ZJ), yJ(JJ.subarray(FJ), cJ.subarray(XJ), ZJ)
+      zB = (BB, TB, dB) => {
+        let VB = 6;
+        const yB = TB.length + 3 >> 2,
+          pB = yB << 1,
+          lB = yB + pB;
+        MB(BB.subarray(VB, VB += BB[0] | BB[1] << 8), TB.subarray(0, yB), dB), MB(BB.subarray(VB, VB += BB[2] | BB[3] << 8), TB.subarray(yB, pB), dB), MB(BB.subarray(VB, VB += BB[4] | BB[5] << 8), TB.subarray(pB, lB), dB), MB(BB.subarray(VB), TB.subarray(lB), dB)
       },
-      IJ = (JJ, cJ, ZJ) => {
-        let FJ = cJ.b;
-        const XJ = JJ[FJ],
-          AJ = XJ >> 1 & 3;
-        cJ.l = 1 & XJ;
-        const YJ = XJ >> 3 | JJ[FJ + 1] << 5 | JJ[FJ + 2] << 13,
-          hJ = (FJ += 3) + YJ;
-        if (1 == AJ) {
-          if (FJ >= JJ.length) return;
-          return cJ.b = FJ + 1, ZJ ? (jJ(ZJ, JJ[FJ], cJ.y, cJ.y += YJ), ZJ) : jJ(new UJ(YJ), JJ[FJ])
+      wB = (BB, TB, dB) => {
+        let VB = TB.b;
+        const lB = BB[VB],
+          JB = lB >> 1 & 3;
+        TB.l = 1 & lB;
+        const oB = lB >> 3 | BB[VB + 1] << 5 | BB[VB + 2] << 13,
+          kB = (VB += 3) + oB;
+        if (1 == JB) {
+          if (VB >= BB.length) return;
+          return TB.b = VB + 1, dB ? (gB(dB, BB[VB], TB.y, TB.y += oB), dB) : gB(new yB(oB), BB[VB])
         }
-        if (!(hJ > JJ.length)) {
-          if (0 == AJ) return cJ.b = hJ, ZJ ? (ZJ.set(JJ.subarray(FJ, hJ), cJ.y), cJ.y += YJ, ZJ) : qJ(JJ, FJ, hJ);
-          if (2 == AJ) {
-            const XJ = JJ[FJ],
-              AJ = 3 & XJ,
-              YJ = XJ >> 2 & 3;
-            let sJ = XJ >> 4,
-              nJ = 0,
-              mJ = 0;
-            AJ < 2 ? 1 & YJ ? sJ |= JJ[++FJ] << 4 | (2 & YJ && JJ[++FJ] << 12) : sJ = XJ >> 3 : (mJ = YJ, YJ < 2 ? (sJ |= (63 & JJ[++FJ]) << 4, nJ = JJ[FJ] >> 6 | JJ[++FJ] << 2) : 2 == YJ ? (sJ |= JJ[++FJ] << 4 | (3 & JJ[++FJ]) << 12, nJ = JJ[FJ] >> 2 | JJ[++FJ] << 6) : (sJ |= JJ[++FJ] << 4 | (63 & JJ[++FJ]) << 12, nJ = JJ[FJ] >> 6 | JJ[++FJ] << 2 | JJ[++FJ] << 10)), ++FJ;
-            let IJ = ZJ ? ZJ.subarray(cJ.y, cJ.y + cJ.m) : new UJ(cJ.m),
-              MJ = IJ.length - sJ;
-            if (MJ < 0 && DJ(0), 0 == AJ) IJ.set(JJ.subarray(FJ, FJ += sJ), MJ);
-            else if (1 == AJ) jJ(IJ, JJ[FJ++], MJ);
+        if (!(kB > BB.length)) {
+          if (0 == JB) return TB.b = kB, dB ? (dB.set(BB.subarray(VB, kB), TB.y), TB.y += oB, dB) : YB(BB, VB, kB);
+          if (2 == JB) {
+            const lB = BB[VB],
+              JB = 3 & lB,
+              oB = lB >> 2 & 3;
+            let OB = lB >> 4,
+              DB = 0,
+              iB = 0;
+            JB < 2 ? 1 & oB ? OB |= BB[++VB] << 4 | (2 & oB && BB[++VB] << 12) : OB = lB >> 3 : (iB = oB, oB < 2 ? (OB |= (63 & BB[++VB]) << 4, DB = BB[VB] >> 6 | BB[++VB] << 2) : 2 == oB ? (OB |= BB[++VB] << 4 | (3 & BB[++VB]) << 12, DB = BB[VB] >> 2 | BB[++VB] << 6) : (OB |= BB[++VB] << 4 | (63 & BB[++VB]) << 12, DB = BB[VB] >> 6 | BB[++VB] << 2 | BB[++VB] << 10)), ++VB;
+            let wB = dB ? dB.subarray(TB.y, TB.y + TB.m) : new yB(TB.m),
+              UB = wB.length - OB;
+            if (UB < 0 && LB(0), 0 == JB) wB.set(BB.subarray(VB, VB += OB), UB);
+            else if (1 == JB) gB(wB, BB[VB++], UB);
             else {
-              let ZJ = cJ.h;
-              if (2 == AJ) {
-                const XJ = ((JJ, cJ) => {
-                  let ZJ = 0,
-                    FJ = -1;
-                  const XJ = new UJ(292),
-                    AJ = JJ[cJ],
-                    qJ = XJ.subarray(0, 256),
-                    YJ = XJ.subarray(256, 268),
-                    hJ = new eJ(XJ.buffer, 268);
-                  if (AJ < 128) {
-                    const [ZJ, UJ] = fJ(JJ, cJ + 1, 6), eJ = ZJ << 3, XJ = JJ[cJ += AJ];
-                    XJ || DJ(0);
-                    let jJ = 0,
-                      YJ = 0,
-                      hJ = UJ.b,
-                      sJ = hJ,
-                      nJ = (++cJ << 3) - 8 + GJ(XJ);
-                    for (; FJ > 254 && DJ(0), nJ -= hJ, !(nJ < eJ);) {
-                      let cJ = nJ >> 3;
-                      if (jJ += (JJ[cJ] | JJ[cJ + 1] << 8) >> (7 & nJ) & (1 << hJ) - 1, qJ[++FJ] = UJ.s[jJ], nJ -= sJ, nJ < eJ) break;
-                      cJ = nJ >> 3, YJ += (JJ[cJ] | JJ[cJ + 1] << 8) >> (7 & nJ) & (1 << sJ) - 1, qJ[++FJ] = UJ.s[YJ], hJ = UJ.n[jJ], jJ = UJ.t[jJ], sJ = UJ.n[YJ], YJ = UJ.t[YJ]
-                    }++FJ > 255 && DJ(0)
+              let dB = TB.h;
+              if (2 == JB) {
+                const lB = ((BB, TB) => {
+                  let dB = 0,
+                    VB = -1;
+                  const lB = new yB(292),
+                    JB = BB[TB],
+                    YB = lB.subarray(0, 256),
+                    oB = lB.subarray(256, 268),
+                    kB = new pB(lB.buffer, 268);
+                  if (JB < 128) {
+                    const [dB, yB] = HB(BB, TB + 1, 6), pB = dB << 3, lB = BB[TB += JB];
+                    lB || LB(0);
+                    let gB = 0,
+                      oB = 0,
+                      kB = yB.b,
+                      OB = kB,
+                      DB = (++TB << 3) - 8 + uB(lB);
+                    for (; VB > 254 && LB(0), DB -= kB, !(DB < pB);) {
+                      let TB = DB >> 3;
+                      if (gB += (BB[TB] | BB[TB + 1] << 8) >> (7 & DB) & (1 << kB) - 1, YB[++VB] = yB.s[gB], DB -= OB, DB < pB) break;
+                      TB = DB >> 3, oB += (BB[TB] | BB[TB + 1] << 8) >> (7 & DB) & (1 << OB) - 1, YB[++VB] = yB.s[oB], kB = yB.n[gB], gB = yB.t[gB], OB = yB.n[oB], oB = yB.t[oB]
+                    }++VB > 255 && LB(0)
                   } else {
-                    for (FJ = AJ - 127; ZJ < FJ; ZJ += 2) {
-                      const FJ = JJ[++cJ];
-                      qJ[ZJ] = FJ >> 4, qJ[ZJ + 1] = 15 & FJ
-                    }++cJ
+                    for (VB = JB - 127; dB < VB; dB += 2) {
+                      const VB = BB[++TB];
+                      YB[dB] = VB >> 4, YB[dB + 1] = 15 & VB
+                    }++TB
                   }
-                  let sJ = 0;
-                  for (ZJ = 0; ZJ < FJ; ++ZJ) {
-                    const JJ = qJ[ZJ];
-                    JJ > 11 && DJ(0), sJ += JJ && 1 << JJ - 1
+                  let OB = 0;
+                  for (dB = 0; dB < VB; ++dB) {
+                    const BB = YB[dB];
+                    BB > 11 && LB(0), OB += BB && 1 << BB - 1
                   }
-                  const nJ = GJ(sJ) + 1,
-                    xJ = 1 << nJ,
-                    rJ = xJ - sJ;
-                  for (rJ & rJ - 1 && DJ(0), qJ[FJ++] = GJ(rJ) + 1, ZJ = 0; ZJ < FJ; ++ZJ) {
-                    const JJ = qJ[ZJ];
-                    ++YJ[qJ[ZJ] = JJ && nJ + 1 - JJ]
+                  const DB = uB(OB) + 1,
+                    EB = 1 << DB,
+                    vB = EB - OB;
+                  for (vB & vB - 1 && LB(0), YB[VB++] = uB(vB) + 1, dB = 0; dB < VB; ++dB) {
+                    const BB = YB[dB];
+                    ++oB[YB[dB] = BB && DB + 1 - BB]
                   }
-                  const vJ = new UJ(xJ << 1),
-                    mJ = vJ.subarray(0, xJ),
-                    QJ = vJ.subarray(xJ);
-                  for (hJ[nJ] = 0, ZJ = nJ; ZJ > 0; --ZJ) {
-                    const JJ = hJ[ZJ];
-                    jJ(QJ, ZJ, JJ, hJ[ZJ - 1] = JJ + YJ[ZJ] * (1 << nJ - ZJ))
+                  const mB = new yB(EB << 1),
+                    iB = mB.subarray(0, EB),
+                    NB = mB.subarray(EB);
+                  for (kB[DB] = 0, dB = DB; dB > 0; --dB) {
+                    const BB = kB[dB];
+                    gB(NB, dB, BB, kB[dB - 1] = BB + oB[dB] * (1 << DB - dB))
                   }
-                  for (hJ[0] != xJ && DJ(0), ZJ = 0; ZJ < FJ; ++ZJ) {
-                    const JJ = qJ[ZJ];
-                    if (JJ) {
-                      const cJ = hJ[JJ];
-                      jJ(mJ, ZJ, cJ, hJ[JJ] = cJ + (1 << nJ - JJ))
+                  for (kB[0] != EB && LB(0), dB = 0; dB < VB; ++dB) {
+                    const BB = YB[dB];
+                    if (BB) {
+                      const TB = kB[BB];
+                      gB(iB, dB, TB, kB[BB] = TB + (1 << DB - BB))
                     }
                   }
-                  return [cJ, {
-                    n: QJ,
-                    b: nJ,
-                    s: mJ
+                  return [TB, {
+                    n: NB,
+                    b: DB,
+                    s: iB
                   }]
-                })(JJ, FJ);
-                nJ += FJ - (FJ = XJ[0]), cJ.h = ZJ = XJ[1]
-              } else ZJ || DJ(0);
-              (mJ ? SJ : yJ)(JJ.subarray(FJ, FJ += nJ), IJ.subarray(MJ), ZJ)
+                })(BB, VB);
+                DB += VB - (VB = lB[0]), TB.h = dB = lB[1]
+              } else dB || LB(0);
+              (iB ? zB : MB)(BB.subarray(VB, VB += DB), wB.subarray(UB), dB)
             }
-            let bJ = JJ[FJ++];
-            if (bJ) {
-              255 == bJ ? bJ = 32512 + (JJ[FJ++] | JJ[FJ++] << 8) : bJ > 127 && (bJ = bJ - 128 << 8 | JJ[FJ++]);
-              const XJ = JJ[FJ++];
-              3 & XJ && DJ(0);
-              const AJ = [rJ, vJ, xJ];
-              for (let ZJ = 2; ZJ > -1; --ZJ) {
-                const qJ = XJ >> 2 + (ZJ << 1) & 3;
-                if (1 == qJ) {
-                  const cJ = new UJ([0, 0, JJ[FJ++]]);
-                  AJ[ZJ] = {
-                    s: cJ.subarray(2, 3),
-                    n: cJ.subarray(0, 1),
-                    t: new eJ(cJ.buffer, 0, 1),
+            let FB = BB[VB++];
+            if (FB) {
+              255 == FB ? FB = 32512 + (BB[VB++] | BB[VB++] << 8) : FB > 127 && (FB = FB - 128 << 8 | BB[VB++]);
+              const lB = BB[VB++];
+              3 & lB && LB(0);
+              const JB = [vB, mB, EB];
+              for (let dB = 2; dB > -1; --dB) {
+                const YB = lB >> 2 + (dB << 1) & 3;
+                if (1 == YB) {
+                  const TB = new yB([0, 0, BB[VB++]]);
+                  JB[dB] = {
+                    s: TB.subarray(2, 3),
+                    n: TB.subarray(0, 1),
+                    t: new pB(TB.buffer, 0, 1),
                     b: 0
                   }
-                } else 2 == qJ ? [FJ, AJ[ZJ]] = fJ(JJ, FJ, 9 - (1 & ZJ)) : 3 == qJ && (cJ.t || DJ(0), AJ[ZJ] = cJ.t[ZJ])
+                } else 2 == YB ? [VB, JB[dB]] = HB(BB, VB, 9 - (1 & dB)) : 3 == YB && (TB.t || LB(0), JB[dB] = TB.t[dB])
               }
-              const [jJ, YJ, sJ] = cJ.t = AJ, nJ = JJ[hJ - 1];
-              nJ || DJ(0);
-              let mJ = (hJ << 3) - 8 + GJ(nJ) - sJ.b,
-                yJ = mJ >> 3,
-                SJ = 0,
-                wJ = (JJ[yJ] | JJ[yJ + 1] << 8) >> (7 & mJ) & (1 << sJ.b) - 1;
-              yJ = (mJ -= YJ.b) >> 3;
-              let WJ = (JJ[yJ] | JJ[yJ + 1] << 8) >> (7 & mJ) & (1 << YJ.b) - 1;
-              yJ = (mJ -= jJ.b) >> 3;
-              let gJ = (JJ[yJ] | JJ[yJ + 1] << 8) >> (7 & mJ) & (1 << jJ.b) - 1;
-              for (++bJ; --bJ;) {
-                const ZJ = sJ.s[wJ],
-                  FJ = sJ.n[wJ],
-                  UJ = jJ.s[gJ],
-                  eJ = jJ.n[gJ],
-                  XJ = YJ.s[WJ],
-                  AJ = YJ.n[WJ];
-                yJ = (mJ -= XJ) >> 3;
-                const qJ = 1 << XJ;
-                let hJ = qJ + ((JJ[yJ] | JJ[yJ + 1] << 8 | JJ[yJ + 2] << 16 | JJ[yJ + 3] << 24) >>> (7 & mJ) & qJ - 1);
-                yJ = (mJ -= VJ[UJ]) >> 3;
-                let nJ = KJ[UJ] + ((JJ[yJ] | JJ[yJ + 1] << 8 | JJ[yJ + 2] << 16) >> (7 & mJ) & (1 << VJ[UJ]) - 1);
-                yJ = (mJ -= QJ[ZJ]) >> 3;
-                const GJ = EJ[ZJ] + ((JJ[yJ] | JJ[yJ + 1] << 8 | JJ[yJ + 2] << 16) >> (7 & mJ) & (1 << QJ[ZJ]) - 1);
-                if ((mJ < 0 || MJ + GJ > IJ.length || SJ + GJ + nJ > IJ.length) && DJ(0), yJ = (mJ -= FJ) >> 3, wJ = sJ.t[wJ] + ((JJ[yJ] | JJ[yJ + 1] << 8) >> (7 & mJ) & (1 << FJ) - 1), yJ = (mJ -= eJ) >> 3, gJ = jJ.t[gJ] + ((JJ[yJ] | JJ[yJ + 1] << 8) >> (7 & mJ) & (1 << eJ) - 1), yJ = (mJ -= AJ) >> 3, WJ = YJ.t[WJ] + ((JJ[yJ] | JJ[yJ + 1] << 8) >> (7 & mJ) & (1 << AJ) - 1), hJ > 3) cJ.o[2] = cJ.o[1], cJ.o[1] = cJ.o[0], cJ.o[0] = hJ -= 3;
+              const [gB, oB, OB] = TB.t = JB, DB = BB[kB - 1];
+              DB || LB(0);
+              let iB = (kB << 3) - 8 + uB(DB) - OB.b,
+                MB = iB >> 3,
+                zB = 0,
+                KB = (BB[MB] | BB[MB + 1] << 8) >> (7 & iB) & (1 << OB.b) - 1;
+              MB = (iB -= oB.b) >> 3;
+              let rB = (BB[MB] | BB[MB + 1] << 8) >> (7 & iB) & (1 << oB.b) - 1;
+              MB = (iB -= gB.b) >> 3;
+              let IB = (BB[MB] | BB[MB + 1] << 8) >> (7 & iB) & (1 << gB.b) - 1;
+              for (++FB; --FB;) {
+                const dB = OB.s[KB],
+                  VB = OB.n[KB],
+                  yB = gB.s[IB],
+                  pB = gB.n[IB],
+                  lB = oB.s[rB],
+                  JB = oB.n[rB];
+                MB = (iB -= lB) >> 3;
+                const YB = 1 << lB;
+                let kB = YB + ((BB[MB] | BB[MB + 1] << 8 | BB[MB + 2] << 16 | BB[MB + 3] << 24) >>> (7 & iB) & YB - 1);
+                MB = (iB -= fB[yB]) >> 3;
+                let DB = sB[yB] + ((BB[MB] | BB[MB + 1] << 8 | BB[MB + 2] << 16) >> (7 & iB) & (1 << fB[yB]) - 1);
+                MB = (iB -= NB[dB]) >> 3;
+                const uB = tB[dB] + ((BB[MB] | BB[MB + 1] << 8 | BB[MB + 2] << 16) >> (7 & iB) & (1 << NB[dB]) - 1);
+                if ((iB < 0 || UB + uB > wB.length || zB + uB + DB > wB.length) && LB(0), MB = (iB -= VB) >> 3, KB = OB.t[KB] + ((BB[MB] | BB[MB + 1] << 8) >> (7 & iB) & (1 << VB) - 1), MB = (iB -= pB) >> 3, IB = gB.t[IB] + ((BB[MB] | BB[MB + 1] << 8) >> (7 & iB) & (1 << pB) - 1), MB = (iB -= JB) >> 3, rB = oB.t[rB] + ((BB[MB] | BB[MB + 1] << 8) >> (7 & iB) & (1 << JB) - 1), kB > 3) TB.o[2] = TB.o[1], TB.o[1] = TB.o[0], TB.o[0] = kB -= 3;
                 else {
-                  const JJ = hJ - (0 != GJ);
-                  JJ ? (hJ = 3 == JJ ? cJ.o[0] - 1 : cJ.o[JJ], JJ > 1 && (cJ.o[2] = cJ.o[1]), cJ.o[1] = cJ.o[0], cJ.o[0] = hJ) : hJ = cJ.o[0]
+                  const BB = kB - (0 != uB);
+                  BB ? (kB = 3 == BB ? TB.o[0] - 1 : TB.o[BB], BB > 1 && (TB.o[2] = TB.o[1]), TB.o[1] = TB.o[0], TB.o[0] = kB) : kB = TB.o[0]
                 }
-                for (let JJ = 0; JJ < GJ; ++JJ) IJ[SJ + JJ] = IJ[MJ + JJ];
-                SJ += GJ, MJ += GJ;
-                let fJ = SJ - hJ;
-                if (fJ < 0) {
-                  let JJ = -fJ;
-                  const ZJ = cJ.e + fJ;
-                  ZJ < 0 && DJ(4), JJ > nJ && (JJ = nJ);
-                  for (let FJ = 0; FJ < JJ; ++FJ) IJ[SJ + FJ] = cJ.w[ZJ + FJ];
-                  SJ += JJ, nJ -= JJ, fJ = 0
+                for (let BB = 0; BB < uB; ++BB) wB[zB + BB] = wB[UB + BB];
+                zB += uB, UB += uB;
+                let HB = zB - kB;
+                if (HB < 0) {
+                  let BB = -HB;
+                  const dB = TB.e + HB;
+                  dB < 0 && LB(4), BB > DB && (BB = DB);
+                  for (let VB = 0; VB < BB; ++VB) wB[zB + VB] = TB.w[dB + VB];
+                  zB += BB, DB -= BB, HB = 0
                 }
-                for (let JJ = 0; JJ < nJ; ++JJ) IJ[SJ + JJ] = IJ[fJ + JJ];
-                SJ += nJ
+                for (let BB = 0; BB < DB; ++BB) wB[zB + BB] = wB[HB + BB];
+                zB += DB
               }
-              if (SJ != MJ)
-                for (; MJ < IJ.length;) IJ[SJ++] = IJ[MJ++];
-              else SJ = IJ.length;
-              ZJ ? cJ.y += SJ : IJ = qJ(IJ, 0, SJ)
-            } else if (ZJ) {
-              if (cJ.y += sJ, MJ)
-                for (let JJ = 0; JJ < sJ; ++JJ) IJ[JJ] = IJ[MJ + JJ]
-            } else MJ && (IJ = qJ(IJ, MJ));
-            return cJ.b = hJ, IJ
+              if (zB != UB)
+                for (; UB < wB.length;) wB[zB++] = wB[UB++];
+              else zB = wB.length;
+              dB ? TB.y += zB : wB = YB(wB, 0, zB)
+            } else if (dB) {
+              if (TB.y += OB, UB)
+                for (let BB = 0; BB < OB; ++BB) wB[BB] = wB[UB + BB]
+            } else UB && (wB = YB(wB, UB));
+            return TB.b = kB, wB
           }
-          DJ(2)
+          LB(2)
         }
       };
-    class MJ {
+    class UB {
       output = null;
       decoded = 0;
       done = !1;
       st = null;
       parts = [];
-      hj = 0;
+      Dg = 0;
       needed = 18;
       size;
-      constructor(JJ) {
-        this.size = JJ
+      constructor(BB) {
+        this.size = BB
       }
-      push(JJ) {
+      push(BB) {
         if (this.done) return;
-        if (this.parts.push(JJ), this.hj += JJ.length, this.hj < this.needed) return;
-        const cJ = ((JJ, cJ) => {
-          if (1 == JJ.length) return JJ[0];
-          const ZJ = new UJ(cJ);
-          for (let FJ = 0, UJ = 0; FJ < JJ.length; ++FJ) {
-            const cJ = JJ[FJ];
-            ZJ.set(cJ, UJ), UJ += cJ.length
+        if (this.parts.push(BB), this.Dg += BB.length, this.Dg < this.needed) return;
+        const TB = ((BB, TB) => {
+          if (1 == BB.length) return BB[0];
+          const dB = new yB(TB);
+          for (let VB = 0, yB = 0; VB < BB.length; ++VB) {
+            const TB = BB[VB];
+            dB.set(TB, yB), yB += TB.length
           }
-          return ZJ
-        })(this.parts, this.hj);
-        let ZJ = this.st;
-        if (!ZJ) {
-          const JJ = nJ(cJ, new UJ(0));
-          "number" != typeof JJ && JJ.u === this.size || DJ(0, `not a zstd frame of ${this.size} bytes`), ZJ = this.st = nJ(cJ, 1), ZJ.e = 0, this.output = ZJ.w
+          return dB
+        })(this.parts, this.Dg);
+        let dB = this.st;
+        if (!dB) {
+          const BB = DB(TB, new yB(0));
+          "number" != typeof BB && BB.u === this.size || LB(0, `not a zstd frame of ${this.size} bytes`), dB = this.st = DB(TB, 1), dB.e = 0, this.output = dB.w
         }
         for (;;) {
-          const JJ = cJ.length - ZJ.b;
-          if (JJ < 3) {
+          const BB = TB.length - dB.b;
+          if (BB < 3) {
             this.needed = 3;
             break
           }
-          const FJ = cJ[ZJ.b],
-            UJ = FJ >> 1 & 3;
-          3 == UJ && DJ(2);
-          const eJ = FJ >> 3 | cJ[ZJ.b + 1] << 5 | cJ[ZJ.b + 2] << 13;
-          eJ > ZJ.m && DJ(0);
-          const XJ = 1 == UJ ? 4 : 3 + eJ;
-          if (JJ < XJ) {
-            this.needed = XJ;
+          const VB = TB[dB.b],
+            yB = VB >> 1 & 3;
+          3 == yB && LB(2);
+          const pB = VB >> 3 | TB[dB.b + 1] << 5 | TB[dB.b + 2] << 13;
+          pB > dB.m && LB(0);
+          const lB = 1 == yB ? 4 : 3 + pB;
+          if (BB < lB) {
+            this.needed = lB;
             break
           }
-          if (IJ(cJ, ZJ, ZJ.w) || DJ(5), ZJ.e = ZJ.y, (ZJ.y > ZJ.u || ZJ.l && ZJ.y != ZJ.u) && DJ(0), ZJ.l) {
+          if (wB(TB, dB, dB.w) || LB(5), dB.e = dB.y, (dB.y > dB.u || dB.l && dB.y != dB.u) && LB(0), dB.l) {
             this.done = !0;
             break
           }
         }
-        this.decoded = ZJ.y;
-        const FJ = cJ.subarray(ZJ.b);
-        this.parts = FJ.length ? [FJ] : [], this.hj = FJ.length, ZJ.b = 0
+        this.decoded = dB.y;
+        const VB = TB.subarray(dB.b);
+        this.parts = VB.length ? [VB] : [], this.Dg = VB.length, dB.b = 0
       }
     }
   }
 };
 Object.freeze(modules);
-for (const JJ in modules) Object.freeze(modules[JJ]);
+for (const BB in modules) Object.freeze(modules[BB]);

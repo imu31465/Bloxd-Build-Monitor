@@ -1,183 +1,183 @@
 export const id = 43;
 export const ids = [43];
 export const modules = {
-  38582: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      c: () => qJ,
-      f: () => eJ,
-      j: () => UJ
+  38528: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => YB,
+      g: () => pB,
+      k: () => yB
     });
-    const FJ = 6e3;
+    const VB = 6e3;
 
-    function UJ(JJ, cJ) {
-      return [Math.floor(JJ[0] / cJ) * cJ, Math.floor(JJ[1] / cJ) * cJ, Math.floor(JJ[2] / cJ) * cJ]
+    function yB(BB, TB) {
+      return [Math.floor(BB[0] / TB) * TB, Math.floor(BB[1] / TB) * TB, Math.floor(BB[2] / TB) * TB]
     }
 
-    function eJ(JJ) {
-      const cJ = (null !== JJ && void 0 !== JJ ? JJ : "").match(/-?\d+(?:\.\d+)?/g);
-      return cJ && cJ.length >= 3 ? [Number(cJ[0]), Number(cJ[1]), Number(cJ[2])] : null
+    function pB(BB) {
+      const TB = (null !== BB && void 0 !== BB ? BB : "").match(/-?\d+(?:\.\d+)?/g);
+      return TB && TB.length >= 3 ? [Number(TB[0]), Number(TB[1]), Number(TB[2])] : null
     }
 
-    function XJ(JJ, cJ) {
-      return JJ === cJ ? String(JJ) : `${JJ}-${cJ}`
+    function lB(BB, TB) {
+      return BB === TB ? String(BB) : `${BB}-${TB}`
     }
 
-    function AJ(JJ, cJ, ZJ, FJ) {
-      const UJ = [];
-      let eJ = new Map;
-      for (let XJ = JJ[2]; XJ < JJ[2] + cJ; XJ++) {
-        const AJ = new Map;
-        let qJ = JJ[0];
-        for (; qJ < JJ[0] + cJ;) {
-          const UJ = FJ(qJ, ZJ, XJ);
-          let jJ = qJ;
-          for (; jJ + 1 < JJ[0] + cJ && FJ(jJ + 1, ZJ, XJ) === UJ;) jJ++;
-          if (null !== UJ) {
-            const JJ = `${qJ} ${jJ} ${UJ}`,
-              cJ = eJ.get(JJ);
-            cJ ? (cJ.z1 = XJ, eJ.delete(JJ), AJ.set(JJ, cJ)) : AJ.set(JJ, {
-              x0: qJ,
-              x1: jJ,
-              z0: XJ,
-              z1: XJ,
-              name: UJ
+    function JB(BB, TB, dB, VB) {
+      const yB = [];
+      let pB = new Map;
+      for (let lB = BB[2]; lB < BB[2] + TB; lB++) {
+        const JB = new Map;
+        let YB = BB[0];
+        for (; YB < BB[0] + TB;) {
+          const yB = VB(YB, dB, lB);
+          let gB = YB;
+          for (; gB + 1 < BB[0] + TB && VB(gB + 1, dB, lB) === yB;) gB++;
+          if (null !== yB) {
+            const BB = `${YB} ${gB} ${yB}`,
+              TB = pB.get(BB);
+            TB ? (TB.z1 = lB, pB.delete(BB), JB.set(BB, TB)) : JB.set(BB, {
+              x0: YB,
+              x1: gB,
+              z0: lB,
+              z1: lB,
+              name: yB
             })
           }
-          qJ = jJ + 1
+          YB = gB + 1
         }
-        UJ.push(...eJ.values()), eJ = AJ
+        yB.push(...pB.values()), pB = JB
       }
-      return UJ.push(...eJ.values()), UJ.sort(((JJ, cJ) => JJ.z0 - cJ.z0 || JJ.x0 - cJ.x0)).map((JJ => `x${XJ(JJ.x0,JJ.x1)} z${XJ(JJ.z0,JJ.z1)} ${JJ.name}`))
+      return yB.push(...pB.values()), yB.sort(((BB, TB) => BB.z0 - TB.z0 || BB.x0 - TB.x0)).map((BB => `x${lB(BB.x0,BB.x1)} z${lB(BB.z0,BB.z1)} ${BB.name}`))
     }
 
-    function qJ(JJ, cJ, ZJ, UJ) {
-      let eJ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : FJ;
-      const qJ = [JJ[0] + cJ - 1, JJ[1] + cJ - 1, JJ[2] + cJ - 1],
-        jJ = null !== UJ && UJ.every(((cJ, ZJ) => Math.floor(cJ) >= JJ[ZJ] && Math.floor(cJ) <= qJ[ZJ])),
-        YJ = [`The chunk from ${JJ.join(" ")} to ${qJ.join(" ")}. Each line is one layer (y), with boxes of one block: x from-to, z from-to, then the block. Air is left out.`];
-      null !== UJ && YJ.push(`The player's feet are at ${UJ.map(Math.floor).join(" ")}, ${jJ?"in this chunk":"outside this chunk"}.`);
-      const hJ = [];
-      for (let FJ = JJ[1]; FJ <= qJ[1]; FJ++) {
-        const UJ = AJ(JJ, cJ, FJ, ZJ).join("; "),
-          eJ = hJ[hJ.length - 1];
-        (null === eJ || void 0 === eJ ? void 0 : eJ.boxes) === UJ ? eJ.to = FJ : hJ.push({
-          from: FJ,
-          to: FJ,
-          boxes: UJ
+    function YB(BB, TB, dB, yB) {
+      let pB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : VB;
+      const YB = [BB[0] + TB - 1, BB[1] + TB - 1, BB[2] + TB - 1],
+        gB = null !== yB && yB.every(((TB, dB) => Math.floor(TB) >= BB[dB] && Math.floor(TB) <= YB[dB])),
+        oB = [`The chunk from ${BB.join(" ")} to ${YB.join(" ")}. Each line is one layer (y), with boxes of one block: x from-to, z from-to, then the block. Air is left out.`];
+      null !== yB && oB.push(`The player's feet are at ${yB.map(Math.floor).join(" ")}, ${gB?"in this chunk":"outside this chunk"}.`);
+      const kB = [];
+      for (let VB = BB[1]; VB <= YB[1]; VB++) {
+        const yB = JB(BB, TB, VB, dB).join("; "),
+          pB = kB[kB.length - 1];
+        (null === pB || void 0 === pB ? void 0 : pB.boxes) === yB ? pB.to = VB : kB.push({
+          from: VB,
+          to: VB,
+          boxes: yB
         })
       }
-      const DJ = hJ.filter((JJ => "" !== JJ.boxes));
-      0 === DJ.length && YJ.push("It is all air.");
-      let sJ = YJ.join("\n").length;
-      for (const FJ of DJ) {
-        const JJ = `y${XJ(FJ.from,FJ.to)}: ${FJ.boxes}`;
-        if (sJ += JJ.length + 1, sJ > eJ) {
-          YJ.push(`Cut short: the layers from y${FJ.from} up aren't shown, as there are too many blocks.`);
+      const LB = kB.filter((BB => "" !== BB.boxes));
+      0 === LB.length && oB.push("It is all air.");
+      let OB = oB.join("\n").length;
+      for (const VB of LB) {
+        const BB = `y${lB(VB.from,VB.to)}: ${VB.boxes}`;
+        if (OB += BB.length + 1, OB > pB) {
+          oB.push(`Cut short: the layers from y${VB.from} up aren't shown, as there are too many blocks.`);
           break
         }
-        YJ.push(JJ)
+        oB.push(BB)
       }
-      return YJ.join("\n")
+      return oB.join("\n")
     }
   },
-  8088: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      b: () => UJ
+  8127: (BB, TB, dB) => {
+    dB.d(TB, {
+      e: () => yB
     });
-    var FJ = ZJ(13);
+    var VB = dB(21);
 
-    function UJ() {
-      return !FJ.d.get("isTouchScreen") && null !== document.pointerLockElement
+    function yB() {
+      return !VB.d.get("isTouchScreen") && null !== document.pointerLockElement
     }
   },
-  35962: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => XJ,
-      f: () => eJ,
-      i: () => UJ
+  35908: (BB, TB, dB) => {
+    dB.d(TB, {
+      c: () => lB,
+      e: () => pB,
+      h: () => yB
     });
-    const FJ = [.25, .5, 1, 2, 4, 8, 16];
+    const VB = [.25, .5, 1, 2, 4, 8, 16];
 
-    function UJ(JJ, cJ) {
-      const ZJ = FJ;
-      let UJ = ZJ.indexOf(JJ);
-      return -1 === UJ && (UJ = ZJ.findIndex((cJ => cJ >= JJ)), -1 === UJ && (UJ = ZJ.length - 1)), "up" === cJ ? ZJ[Math.min(UJ + 1, ZJ.length - 1)] : ZJ[Math.max(UJ - 1, 0)]
+    function yB(BB, TB) {
+      const dB = VB;
+      let yB = dB.indexOf(BB);
+      return -1 === yB && (yB = dB.findIndex((TB => TB >= BB)), -1 === yB && (yB = dB.length - 1)), "up" === TB ? dB[Math.min(yB + 1, dB.length - 1)] : dB[Math.max(yB - 1, 0)]
     }
 
-    function eJ(JJ) {
-      return JJ <= FJ[0]
+    function pB(BB) {
+      return BB <= VB[0]
     }
 
-    function XJ(JJ) {
-      return JJ >= FJ[FJ.length - 1]
+    function lB(BB) {
+      return BB >= VB[VB.length - 1]
     }
   },
-  35562: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      b: () => UJ,
-      e: () => eJ
+  35497: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => yB,
+      g: () => pB
     });
-    let FJ = !1;
+    let VB = !1;
 
-    function UJ() {
-      return FJ
+    function yB() {
+      return VB
     }
 
-    function eJ(JJ) {
-      return FJ !== JJ && (FJ = JJ, !0)
+    function pB(BB) {
+      return VB !== BB && (VB = BB, !0)
     }
   },
-  37914: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      c: () => eJ
+  37912: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => pB
     });
-    var FJ = ZJ(17),
-      UJ = ZJ(1725);
+    var VB = dB(24),
+      yB = dB(1708);
 
-    function eJ(JJ) {
+    function pB(BB) {
       let {
-        taskId: cJ,
-        progress: ZJ
-      } = JJ;
-      const FJ = UJ.b.get("_tasks");
-      null !== FJ && void 0 !== FJ && FJ[cJ] && UJ.b.apply({
+        taskId: TB,
+        progress: dB
+      } = BB;
+      const VB = yB.c.get("_tasks");
+      null !== VB && void 0 !== VB && VB[TB] && yB.c.apply({
         _tasks: {
-          ...FJ,
-          [cJ]: {
-            ...FJ[cJ],
-            progress: ZJ
+          ...VB,
+          [TB]: {
+            ...VB[TB],
+            progress: dB
           }
         }
       })
     }
-    FJ.i.subscribe("clientTaskProgress", (JJ => {
-      eJ(JJ)
+    VB.h.subscribe("clientTaskProgress", (BB => {
+      pB(BB)
     }))
   },
-  38562: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      e: () => DJ,
-      h: () => nJ,
-      k: () => jJ,
-      o: () => hJ,
-      q: () => qJ,
-      s: () => XJ,
-      u: () => YJ,
-      v: () => GJ
+  38504: (BB, TB, dB) => {
+    dB.d(TB, {
+      e: () => LB,
+      f: () => DB,
+      j: () => gB,
+      k: () => kB,
+      m: () => YB,
+      o: () => lB,
+      s: () => oB,
+      u: () => uB
     });
-    var FJ = ZJ(1725),
-      UJ = ZJ(17),
-      eJ = ZJ(1739);
-    const XJ = (0, eJ.r)((function() {
-        var JJ, cJ, ZJ, UJ;
+    var VB = dB(1708),
+      yB = dB(24),
+      pB = dB(1719);
+    const lB = (0, pB.n)((function() {
+        var BB, TB, dB, yB;
         return {
-          health: null !== (JJ = FJ.b.get("_health")) && void 0 !== JJ ? JJ : null,
-          maxHealth: null !== (cJ = FJ.b.get("_totalMaxHealth")) && void 0 !== cJ ? cJ : null,
-          shield: null !== (ZJ = FJ.b.get("_shield")) && void 0 !== ZJ ? ZJ : null,
-          maxShield: null !== (UJ = FJ.b.get("maxShield")) && void 0 !== UJ ? UJ : null
+          health: null !== (BB = VB.c.get("_health")) && void 0 !== BB ? BB : null,
+          maxHealth: null !== (TB = VB.c.get("_totalMaxHealth")) && void 0 !== TB ? TB : null,
+          shield: null !== (dB = VB.c.get("_shield")) && void 0 !== dB ? dB : null,
+          maxShield: null !== (yB = VB.c.get("maxShield")) && void 0 !== yB ? yB : null
         }
-      }), [], (0, eJ.n)("_health", "_totalMaxHealth", "_shield", "maxShield")),
-      AJ = [{
+      }), [], (0, pB.j)("_health", "_totalMaxHealth", "_shield", "maxShield")),
+      JB = [{
         canFly: !1,
         flying: !1
       }, {
@@ -191,2219 +191,2219 @@ export const modules = {
         flying: !0
       }];
 
-    function qJ(JJ, cJ) {
-      return AJ[(JJ ? 2 : 0) + (cJ ? 1 : 0)]
+    function YB(BB, TB) {
+      return JB[(BB ? 2 : 0) + (TB ? 1 : 0)]
     }
-    const jJ = (0, eJ.r)((function() {
-      var JJ;
-      return null !== (JJ = FJ.b.get("_aura")) && void 0 !== JJ ? JJ : null
-    }), [], (0, eJ.n)("_aura"));
+    const gB = (0, pB.n)((function() {
+      var BB;
+      return null !== (BB = VB.c.get("_aura")) && void 0 !== BB ? BB : null
+    }), [], (0, pB.j)("_aura"));
 
-    function YJ(JJ) {
+    function oB(BB) {
       return {
-        watch: cJ => (0, UJ.j)("shotPlayer", (ZJ => {
+        watch: TB => (0, yB.i)("shotPlayer", (dB => {
           let {
-            playerId: FJ,
-            damage: UJ,
-            wasCrit: eJ,
-            distance: XJ
-          } = ZJ;
-          JJ(FJ) && cJ({
-            damage: UJ,
-            wasCrit: eJ,
-            distance: XJ
+            playerId: VB,
+            damage: yB,
+            wasCrit: pB,
+            distance: lB
+          } = dB;
+          BB(VB) && TB({
+            damage: yB,
+            wasCrit: pB,
+            distance: lB
           })
         }))
       }
     }
 
-    function hJ(JJ) {
-      return (0, eJ.d)("chat", (cJ => {
+    function kB(BB) {
+      return (0, pB.c)("chat", (TB => {
         let {
-          serverChatMsgId: ZJ,
-          content: FJ,
-          chatterEId: UJ
-        } = cJ;
+          serverChatMsgId: dB,
+          content: VB,
+          chatterEId: yB
+        } = TB;
         return {
-          serverChatMsgId: null !== ZJ && void 0 !== ZJ ? ZJ : null,
-          content: FJ,
-          author: UJ ? JJ(UJ) : null
+          serverChatMsgId: null !== dB && void 0 !== dB ? dB : null,
+          content: VB,
+          author: yB ? BB(yB) : null
         }
       }))
     }
-    class DJ {
+    class LB {
       constructor() {
         this.shown = null, this.needed = null, this.neededSince = 0
       }
-      update(JJ) {
-        let cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-        const ZJ = this.shown;
-        return JJ !== this.needed && (this.needed = JJ, this.neededSince = cJ, null === JJ && (this.shown = null)), this.shown !== this.needed && cJ - this.neededSince > 200 && (this.shown = this.needed), this.shown !== ZJ
+      update(BB) {
+        let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+        const dB = this.shown;
+        return BB !== this.needed && (this.needed = BB, this.neededSince = TB, null === BB && (this.shown = null)), this.shown !== this.needed && TB - this.neededSince > 200 && (this.shown = this.needed), this.shown !== dB
       }
     }
 
-    function sJ(JJ) {
+    function OB(BB) {
       return [{
-        translationKey: `touchKeys:${JJ}`
+        translationKey: `touchKeys:${BB}`
       }]
     }
-    const nJ = {
-      open: sJ("open"),
-      close: sJ("close"),
-      milk: sJ("milk"),
-      shear: sJ("shear"),
-      tame: sJ("tame"),
-      feed: sJ("feed"),
-      ride: sJ("ride")
+    const DB = {
+      open: OB("open"),
+      close: OB("close"),
+      milk: OB("milk"),
+      shear: OB("shear"),
+      tame: OB("tame"),
+      feed: OB("feed"),
+      ride: OB("ride")
     };
 
-    function GJ(JJ) {
+    function uB(BB) {
       return [{
         translationKey: "touchKeys:tameWith"
       }, " ", {
-        icon: JJ
+        icon: BB
       }]
     }
   },
-  39508: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      c: () => AJ,
-      d: () => XJ
+  39470: (BB, TB, dB) => {
+    dB.d(TB, {
+      e: () => JB,
+      f: () => lB
     });
-    var FJ = ZJ(2780);
-    let UJ = null,
-      eJ = null;
+    var VB = dB(2764);
+    let yB = null,
+      pB = null;
 
-    function XJ() {
-      return eJ ??= ZJ.e(193).then((() => ZJ(35454))).then((JJ => {
+    function lB() {
+      return pB ??= dB.e(193).then((() => dB(35362))).then((BB => {
         let {
-          ITEM_SPRITES: cJ,
-          ITEM_SPRITES_WITHOUT_FILE: ZJ,
-          ITEM_FILES_WITHOUT_SPRITE: eJ
-        } = JJ;
-        UJ = function(JJ, cJ, ZJ) {
-          const UJ = new Set,
-            eJ = (0, FJ.t)(cJ);
-          let XJ = 0;
-          for (const [FJ, AJ] of JJ.entries()) FJ === eJ[XJ] ? XJ++ : UJ.add(AJ);
-          if ("" !== ZJ)
-            for (const AJ of ZJ.split(FJ.n)) UJ.add(AJ);
-          return UJ
-        }(cJ.split(FJ.n), ZJ, eJ)
-      }), (JJ => {
-        throw eJ = null, JJ
-      })), eJ
+          ITEM_SPRITES: TB,
+          ITEM_SPRITES_WITHOUT_FILE: dB,
+          ITEM_FILES_WITHOUT_SPRITE: pB
+        } = BB;
+        yB = function(BB, TB, dB) {
+          const yB = new Set,
+            pB = (0, VB.z)(TB);
+          let lB = 0;
+          for (const [VB, JB] of BB.entries()) VB === pB[lB] ? lB++ : yB.add(JB);
+          if ("" !== dB)
+            for (const JB of dB.split(VB.v)) yB.add(JB);
+          return yB
+        }(TB.split(VB.v), dB, pB)
+      }), (BB => {
+        throw pB = null, BB
+      })), pB
     }
 
-    function AJ(JJ) {
-      var cJ, ZJ;
-      return null !== (cJ = null === (ZJ = UJ) || void 0 === ZJ ? void 0 : ZJ.has(JJ)) && void 0 !== cJ && cJ
+    function JB(BB) {
+      var TB, dB;
+      return null !== (TB = null === (dB = yB) || void 0 === dB ? void 0 : dB.has(BB)) && void 0 !== TB && TB
     }
   },
-  38559: (JJ, cJ, ZJ) => {
-    function FJ(JJ, cJ, ZJ) {
-      return Math.hypot(JJ[0] - cJ[0], JJ[1] - cJ[1], JJ[2] - cJ[2]) < ZJ + .5
+  38502: (BB, TB, dB) => {
+    function VB(BB, TB, dB) {
+      return Math.hypot(BB[0] - TB[0], BB[1] - TB[1], BB[2] - TB[2]) < dB + .5
     }
-    ZJ.d(cJ, {
-      d: () => FJ
+    dB.d(TB, {
+      d: () => VB
     })
   },
-  37931: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => YJ
+  37930: (BB, TB, dB) => {
+    dB.d(TB, {
+      e: () => oB
     });
-    var FJ = ZJ(1122),
-      UJ = ZJ(1221),
-      eJ = ZJ(13),
-      XJ = ZJ(1201),
-      AJ = ZJ(1213),
-      qJ = ZJ(1406),
-      jJ = ZJ(35554);
+    var VB = dB(1105),
+      yB = dB(1214),
+      pB = dB(21),
+      lB = dB(1201),
+      JB = dB(1209),
+      YB = dB(1407),
+      gB = dB(35479);
 
-    function YJ(JJ) {
+    function oB(BB) {
       let {
-        WJ: cJ,
-        gJ: ZJ
-      } = JJ;
-      const YJ = null !== cJ && void 0 !== cJ ? cJ : (0, AJ.e)().gameNameWithVariation;
-      (0, FJ.K)(YJ) && ((0, jJ.i)(), (0, XJ.db)((() => {
-        console.log("Received matchmaking order from game server to game", cJ), (0, eJ.h)("inGameReplay"), (0, qJ.navigatePreserveSearch)((0, UJ.c)(YJ, null !== ZJ && void 0 !== ZJ ? ZJ : void 0))
+        DB: TB,
+        uB: dB
+      } = BB;
+      const oB = null !== TB && void 0 !== TB ? TB : (0, JB.e)().gameNameWithVariation;
+      (0, VB.M)(oB) && ((0, gB.i)(), (0, lB.cb)((() => {
+        console.log("Received matchmaking order from game server to game", TB), (0, pB.i)("inGameReplay"), (0, YB.navigatePreserveSearch)((0, yB.b)(oB, null !== dB && void 0 !== dB ? dB : void 0))
       }), "video_start"))
     }
   },
-  38126: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      c: () => eJ
+  38113: (BB, TB, dB) => {
+    dB.d(TB, {
+      b: () => pB
     });
-    var FJ = ZJ(17),
-      UJ = ZJ(1756);
+    var VB = dB(24),
+      yB = dB(1738);
 
-    function eJ(JJ) {
-      var cJ, ZJ;
-      const eJ = (0, UJ.r)(null !== (cJ = null === (ZJ = UJ.z.toggleFreeCam) || void 0 === ZJ ? void 0 : ZJ[0]) && void 0 !== cJ ? cJ : null);
-      FJ.i.Uf("showBottomMessage", {
-        message: `Free Camera ${JJ?"Enabled":"Disabled"}${eJ?` - Press ${eJ} to toggle`:""}`,
+    function pB(BB) {
+      var TB, dB;
+      const pB = (0, yB.k)(null !== (TB = null === (dB = yB.r.toggleFreeCam) || void 0 === dB ? void 0 : dB[0]) && void 0 !== TB ? TB : null);
+      VB.h.yH("showBottomMessage", {
+        message: `Free Camera ${BB?"Enabled":"Disabled"}${pB?` - Press ${pB} to toggle`:""}`,
         timeoutLength: 2e3,
         type: "Warning"
       })
     }
   },
-  37922: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      e: () => qJ,
-      f: () => XJ,
-      i: () => AJ,
-      k: () => jJ
+  37918: (BB, TB, dB) => {
+    dB.d(TB, {
+      b: () => YB,
+      c: () => lB,
+      g: () => JB,
+      i: () => gB
     });
-    var FJ = ZJ(17),
-      UJ = ZJ(1247);
-    const eJ = new Map;
+    var VB = dB(24),
+      yB = dB(1235);
+    const pB = new Map;
 
-    function XJ(JJ, cJ) {
-      FJ.i.Uf("newUiRequest", {
-        id: JJ,
-        clientParameters: cJ
+    function lB(BB, TB) {
+      VB.h.yH("newUiRequest", {
+        id: BB,
+        clientParameters: TB
       }, !0)
     }
 
-    function AJ(JJ) {
-      FJ.i.Uf("removeUiRequest", JJ, !0);
-      const cJ = eJ.get(JJ);
-      cJ && (cJ.tearDownNotification(), eJ.delete(JJ))
+    function JB(BB) {
+      VB.h.yH("removeUiRequest", BB, !0);
+      const TB = pB.get(BB);
+      TB && (TB.tearDownNotification(), pB.delete(BB))
     }
 
-    function qJ() {
-      FJ.i.Uf("clearUiRequests");
-      for (const JJ of eJ.values()) JJ.tearDownNotification();
-      eJ.clear()
+    function YB() {
+      VB.h.yH("clearUiRequests");
+      for (const BB of pB.values()) BB.tearDownNotification();
+      pB.clear()
     }
 
-    function jJ(JJ, cJ, ZJ) {
-      const FJ = UJ.NotificationProvider.showPromptPopup({
-        title: cJ,
+    function gB(BB, TB, dB) {
+      const VB = yB.NotificationProvider.showPromptPopup({
+        title: TB,
         confirmText: "general:yes",
         cancelText: "general:no",
         unlockPointerKey: "uiRequestPopup"
       });
-      eJ.set(JJ, FJ), FJ.getResult().then((cJ => {
-        eJ.delete(JJ), "notificationTornDown" !== cJ && ZJ(cJ)
+      pB.set(BB, VB), VB.getResult().then((TB => {
+        pB.delete(BB), "notificationTornDown" !== TB && dB(TB)
       }))
     }
   },
-  38578: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      c: () => hJ,
-      g: () => DJ
+  38521: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => kB,
+      h: () => LB
     });
-    var FJ = ZJ(157),
-      UJ = ZJ(38582);
-    const eJ = 20;
+    var VB = dB(184),
+      yB = dB(38528);
+    const pB = 20;
 
-    function XJ(JJ) {
-      return JJ.map(Math.floor).join(" ")
+    function lB(BB) {
+      return BB.map(Math.floor).join(" ")
     }
 
-    function AJ(JJ) {
-      return null === JJ.amount || 1 === JJ.amount ? JJ.name : `${JJ.amount} ${JJ.name}`
+    function JB(BB) {
+      return null === BB.amount || 1 === BB.amount ? BB.name : `${BB.amount} ${BB.name}`
     }
-    var qJ = ZJ(38585),
-      jJ = ZJ(1725),
-      YJ = ZJ(1213);
+    var YB = dB(38530),
+      gB = dB(1708),
+      oB = dB(1209);
 
-    function hJ(JJ, cJ) {
-      if (!JJ) return qJ.b;
-      const ZJ = JJ.playerFeet();
-      if (!ZJ) return "The player isn't in the world yet, so no blocks can be seen.";
-      const eJ = FJ.c.Kn,
-        XJ = (0, UJ.j)(null !== cJ && void 0 !== cJ ? cJ : ZJ, eJ),
-        AJ = JJ.chunkBlocks(XJ);
-      return AJ ? (0, UJ.c)(XJ, eJ, ((cJ, ZJ, FJ) => {
-        const UJ = AJ(cJ, ZJ, FJ);
-        return 0 === UJ ? null : JJ.blockName(UJ).split("|")[0]
-      }), ZJ) : `The chunk from ${XJ.join(" ")} isn't loaded: only chunks near the player are. The player's feet are at ${ZJ.map(Math.floor).join(" ")}.`
+    function kB(BB, TB) {
+      if (!BB) return YB.c;
+      const dB = BB.playerFeet();
+      if (!dB) return "The player isn't in the world yet, so no blocks can be seen.";
+      const pB = VB.c.UD,
+        lB = (0, yB.k)(null !== TB && void 0 !== TB ? TB : dB, pB),
+        JB = BB.chunkBlocks(lB);
+      return JB ? (0, yB.d)(lB, pB, ((TB, dB, VB) => {
+        const yB = JB(TB, dB, VB);
+        return 0 === yB ? null : BB.blockName(yB).split("|")[0]
+      }), dB) : `The chunk from ${lB.join(" ")} isn't loaded: only chunks near the player are. The player's feet are at ${dB.map(Math.floor).join(" ")}.`
     }
 
-    function DJ(JJ) {
-      var cJ, ZJ, FJ;
-      if (!JJ) return qJ.c;
-      const UJ = JJ.playerFeet();
-      if (!UJ) return "The player isn't in the world yet, so nothing in it can be seen.";
+    function LB(BB) {
+      var TB, dB, VB;
+      if (!BB) return YB.g;
+      const yB = BB.playerFeet();
+      if (!yB) return "The player isn't in the world yet, so nothing in it can be seen.";
       const {
-        slots: hJ,
-        heldSlot: DJ
-      } = JJ.inventory();
-      return function(JJ) {
-        const cJ = [];
-        null !== JJ.game && cJ.push(`Game: ${JJ.game}.`);
-        const ZJ = null === JJ.health ? "" : `, health ${Math.round(JJ.health)}${null===JJ.maxHealth?"":` of ${Math.round(JJ.maxHealth)}`}`;
-        cJ.push(`The player (the creator) stands at ${XJ(JJ.position)}${ZJ}, ${JJ.creative?"in":"not in"} creative mode.`);
-        const FJ = JJ.slots[JJ.heldSlot];
-        cJ.push(FJ ? `Holding (slot ${JJ.heldSlot}): ${AJ(FJ)}.` : `Holding nothing (slot ${JJ.heldSlot} is empty).`);
-        const UJ = JJ.slots.flatMap(((JJ, cJ) => JJ ? [`slot ${cJ}: ${AJ(JJ)}`] : []));
-        cJ.push(UJ.length > 0 ? `Inventory: ${UJ.join(", ")}.` : "Inventory: empty.");
-        const qJ = cJ => Math.hypot(cJ.position[0] - JJ.position[0], cJ.position[1] - JJ.position[1], cJ.position[2] - JJ.position[2]),
-          jJ = [...JJ.nearby].sort(((JJ, cJ) => qJ(JJ) - qJ(cJ)));
-        if (0 === jJ.length) cJ.push("No other players or mobs are near enough to see.");
+        slots: kB,
+        heldSlot: LB
+      } = BB.inventory();
+      return function(BB) {
+        const TB = [];
+        null !== BB.game && TB.push(`Game: ${BB.game}.`);
+        const dB = null === BB.health ? "" : `, health ${Math.round(BB.health)}${null===BB.maxHealth?"":` of ${Math.round(BB.maxHealth)}`}`;
+        TB.push(`The player (the creator) stands at ${lB(BB.position)}${dB}, ${BB.creative?"in":"not in"} creative mode.`);
+        const VB = BB.slots[BB.heldSlot];
+        TB.push(VB ? `Holding (slot ${BB.heldSlot}): ${JB(VB)}.` : `Holding nothing (slot ${BB.heldSlot} is empty).`);
+        const yB = BB.slots.flatMap(((BB, TB) => BB ? [`slot ${TB}: ${JB(BB)}`] : []));
+        TB.push(yB.length > 0 ? `Inventory: ${yB.join(", ")}.` : "Inventory: empty.");
+        const YB = TB => Math.hypot(TB.position[0] - BB.position[0], TB.position[1] - BB.position[1], TB.position[2] - BB.position[2]),
+          gB = [...BB.nearby].sort(((BB, TB) => YB(BB) - YB(TB)));
+        if (0 === gB.length) TB.push("No other players or mobs are near enough to see.");
         else {
-          cJ.push("Near them, nearest first:");
-          for (const JJ of jJ.slice(0, eJ)) {
-            const ZJ = "player" === JJ.kind ? `player "${JJ.name||"?"}"` : JJ.name && JJ.name !== JJ.kind ? `${JJ.kind} "${JJ.name}"` : JJ.kind,
-              FJ = Math.round(qJ(JJ));
-            cJ.push(`- ${ZJ} at ${XJ(JJ.position)}, ${FJ} block${1===FJ?"":"s"} away`)
+          TB.push("Near them, nearest first:");
+          for (const BB of gB.slice(0, pB)) {
+            const dB = "player" === BB.kind ? `player "${BB.name||"?"}"` : BB.name && BB.name !== BB.kind ? `${BB.kind} "${BB.name}"` : BB.kind,
+              VB = Math.round(YB(BB));
+            TB.push(`- ${dB} at ${lB(BB.position)}, ${VB} block${1===VB?"":"s"} away`)
           }
-          jJ.length > eJ && cJ.push(`- and ${jJ.length-eJ} more further away`)
+          gB.length > pB && TB.push(`- and ${gB.length-pB} more further away`)
         }
-        return JJ.droppedItems > 0 && cJ.push(`${JJ.droppedItems} dropped item${1===JJ.droppedItems?" is":"s are"} on the ground nearby.`), cJ.join("\n")
+        return BB.droppedItems > 0 && TB.push(`${BB.droppedItems} dropped item${1===BB.droppedItems?" is":"s are"} on the ground nearby.`), TB.join("\n")
       }({
-        game: null !== (cJ = (0, YJ.e)().gameNameWithVariation) && void 0 !== cJ ? cJ : null,
-        position: UJ,
-        health: null !== (ZJ = jJ.b.get("_health")) && void 0 !== ZJ ? ZJ : null,
-        maxHealth: null !== (FJ = jJ.b.get("_totalMaxHealth")) && void 0 !== FJ ? FJ : null,
-        creative: !0 === jJ.b.get("creative"),
-        heldSlot: DJ,
-        slots: hJ,
-        nearby: JJ.nearby(),
-        droppedItems: JJ.droppedItems()
+        game: null !== (TB = (0, oB.e)().gameNameWithVariation) && void 0 !== TB ? TB : null,
+        position: yB,
+        health: null !== (dB = gB.c.get("_health")) && void 0 !== dB ? dB : null,
+        maxHealth: null !== (VB = gB.c.get("_totalMaxHealth")) && void 0 !== VB ? VB : null,
+        creative: !0 === gB.c.get("creative"),
+        heldSlot: LB,
+        slots: kB,
+        nearby: BB.nearby(),
+        droppedItems: BB.droppedItems()
       })
     }
   },
-  37948: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      c: () => AJ,
-      f: () => qJ,
-      h: () => jJ
+  37951: (BB, TB, dB) => {
+    dB.d(TB, {
+      e: () => JB,
+      g: () => YB,
+      i: () => gB
     });
-    var FJ = ZJ(1122),
-      UJ = ZJ(889),
-      eJ = ZJ(35886),
-      XJ = ZJ(17);
+    var VB = dB(1105),
+      yB = dB(900),
+      pB = dB(35832),
+      lB = dB(24);
 
-    function AJ(JJ) {
+    function JB(BB) {
       let {
-        lobbyName: cJ,
-        gameNameWithVariation: ZJ
-      } = JJ;
-      return !(0, FJ.N)(cJ) || null !== ZJ && (ZJ.startsWith("testGym") || (0, UJ.k)(ZJ))
+        lobbyName: TB,
+        gameNameWithVariation: dB
+      } = BB;
+      return !(0, VB.O)(TB) || null !== dB && (dB.startsWith("testGym") || (0, yB.j)(dB))
     }
 
-    function qJ(JJ) {
-      return JJ.JJ === eJ.e.Leave || JJ.JJ === eJ.e.Cursor
+    function YB(BB) {
+      return BB.Vp === pB.d.Leave || BB.Vp === pB.d.Cursor
     }
 
-    function jJ(JJ) {
-      XJ.i.Uf("codeCollab", {
-        type: JJ.JJ,
-        docKey: JJ.cJ,
-        version: JJ.ZJ,
-        editorCount: JJ.FJ,
-        peers: JJ.UJ,
-        updates: JJ.eJ,
-        playerId: JJ.XJ,
-        playerName: JJ.AJ,
-        colour: JJ.qJ,
-        anchor: JJ.jJ,
-        head: JJ.YJ,
-        existingCursors: JJ.hJ,
-        files: JJ.DJ,
-        engineSettings: JJ.sJ
+    function gB(BB) {
+      lB.h.yH("codeCollab", {
+        type: BB.Vp,
+        docKey: BB.yp,
+        version: BB.lp,
+        editorCount: BB.Jp,
+        peers: BB.Yp,
+        updates: BB.kp,
+        playerId: BB.Lp,
+        playerName: BB.Op,
+        colour: BB.Dp,
+        anchor: BB.Hp,
+        head: BB.Ep,
+        existingCursors: BB.vp,
+        files: BB.mp,
+        engineSettings: BB.ip
       })
     }
   },
-  39478: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      C: () => gJ,
-      D: () => BJ,
-      E: () => kJ,
-      G: () => bJ,
-      K: () => PJ,
-      O: () => MJ,
-      S: () => uJ,
-      W: () => CJ,
-      Z: () => WJ,
-      e: () => iJ,
-      i: () => dJ,
-      j: () => SJ,
-      m: () => RJ,
-      p: () => IJ,
-      q: () => yJ,
-      u: () => pJ,
-      w: () => wJ,
-      z: () => HJ
+  39434: (BB, TB, dB) => {
+    dB.d(TB, {
+      C: () => AB,
+      G: () => PB,
+      K: () => FB,
+      M: () => SB,
+      N: () => UB,
+      Q: () => CB,
+      U: () => hB,
+      V: () => rB,
+      b: () => GB,
+      e: () => RB,
+      h: () => zB,
+      k: () => qB,
+      l: () => wB,
+      m: () => MB,
+      n: () => QB,
+      r: () => KB,
+      v: () => cB,
+      y: () => IB
     });
-    var FJ = ZJ(1294),
-      UJ = ZJ(17),
-      eJ = ZJ(1184),
-      XJ = ZJ(2146),
-      AJ = ZJ(4217),
-      qJ = ZJ(4176);
-    let jJ, YJ = !1,
-      hJ = !1,
-      DJ = !1,
-      sJ = !1;
-    const nJ = 1300,
-      GJ = 3e3;
-    let fJ = 0,
-      xJ = !1,
-      rJ = !1,
-      vJ = 0;
-    const mJ = 2;
-    let QJ = !1,
-      EJ = !1;
-    const VJ = new Set,
-      KJ = new Set;
+    var VB = dB(1275),
+      yB = dB(24),
+      pB = dB(1173),
+      lB = dB(2101),
+      JB = dB(4209),
+      YB = dB(4169);
+    let gB, oB = !1,
+      kB = !1,
+      LB = !1,
+      OB = !1;
+    const DB = 1300,
+      uB = 3e3;
+    let HB = 0,
+      EB = !1,
+      vB = !1,
+      mB = 0;
+    const iB = 2;
+    let NB = !1,
+      tB = !1;
+    const fB = new Set,
+      sB = new Set;
 
-    function yJ() {
-      return YJ
+    function MB() {
+      return oB
     }
 
-    function SJ() {
-      return rJ
+    function zB() {
+      return vB
     }
 
-    function IJ() {
-      return EJ
+    function wB() {
+      return tB
     }
 
-    function MJ() {
-      return (0, eJ.j)() && !EJ
+    function UB() {
+      return (0, pB.r)() && !tB
     }
 
-    function bJ(JJ) {
-      let cJ = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-      if (JJ !== EJ) {
-        EJ = JJ;
-        for (const JJ of [...KJ]) JJ(EJ);
-        cJ && CJ()
+    function FB(BB) {
+      let TB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+      if (BB !== tB) {
+        tB = BB;
+        for (const BB of [...sB]) BB(tB);
+        TB && hB()
       }
     }
 
-    function wJ(JJ) {
-      return KJ.add(JJ), () => {
-        KJ.delete(JJ)
+    function KB(BB) {
+      return sB.add(BB), () => {
+        sB.delete(BB)
       }
     }
 
-    function WJ() {
-      (0, AJ.g)(XJ.D.Menu, (0, eJ.j)() ? 0 : XJ.D.Menu)
+    function rB() {
+      (0, JB.f)(lB.A.Menu, (0, pB.r)() ? 0 : lB.A.Menu)
     }
 
-    function gJ() {
-      rJ = !1, vJ = 0, WJ(), CJ()
+    function IB() {
+      vB = !1, mB = 0, rB(), hB()
     }
 
-    function HJ(JJ) {
-      return VJ.add(JJ), () => {
-        VJ.delete(JJ)
+    function cB(BB) {
+      return fB.add(BB), () => {
+        fB.delete(BB)
       }
     }
 
-    function PJ(JJ) {
-      hJ = !1, JJ !== YJ && (YJ = JJ, sJ = !1, clearTimeout(jJ), DJ = !YJ && QJ, YJ ? (xJ = !1, rJ = !1, vJ = 0) : MJ() && !QJ && (rJ = !0), QJ = !1, YJ && !MJ() && aJ(), tJ(), DJ && CJ())
+    function SB(BB) {
+      kB = !1, BB !== oB && (oB = BB, OB = !1, clearTimeout(gB), LB = !oB && NB, oB ? (EB = !1, vB = !1, mB = 0) : UB() && !NB && (vB = !0), NB = !1, oB && !UB() && jB(), bB(), LB && hB())
     }
 
-    function kJ(JJ) {
-      JJ !== xJ && (xJ = JJ, JJ || CJ())
+    function PB(BB) {
+      BB !== EB && (EB = BB, BB || hB())
     }
 
-    function pJ() {
-      hJ = !1, sJ || !0 !== OJ() || (sJ = !0, clearTimeout(jJ), jJ = setTimeout(zJ, nJ))
+    function QB() {
+      kB = !1, OB || !0 !== XB() || (OB = !0, clearTimeout(gB), gB = setTimeout(aB, DB))
     }
 
-    function dJ() {
-      return (!hJ || performance.now() - fJ > GJ) && (hJ = (0, qJ.F)().lockPointer(), fJ = performance.now()), hJ
+    function RB() {
+      return (!kB || performance.now() - HB > uB) && (kB = (0, YB.N)().lockPointer(), HB = performance.now()), kB
     }
 
-    function zJ() {
-      NJ() && TJ() && dJ()
+    function aB() {
+      ZB() && WB() && RB()
     }
 
-    function NJ() {
-      return MJ() && !YJ && !xJ && !(0, FJ.e)()
+    function ZB() {
+      return UB() && !oB && !EB && !(0, VB.i)()
     }
 
-    function OJ() {
-      var JJ;
-      return "undefined" === typeof navigator || null === (JJ = navigator.userActivation) || void 0 === JJ ? void 0 : JJ.isActive
+    function XB() {
+      var BB;
+      return "undefined" === typeof navigator || null === (BB = navigator.userActivation) || void 0 === BB ? void 0 : BB.isActive
     }
 
-    function TJ() {
-      return DJ && (!navigator.userAgent.includes("Firefox/") || Boolean(document.fullscreenElement)) || !1 !== OJ()
+    function WB() {
+      return LB && (!navigator.userAgent.includes("Firefox/") || Boolean(document.fullscreenElement)) || !1 !== XB()
     }
 
-    function CJ() {
-      MJ() ? NJ() && !rJ && TJ() && dJ() : YJ && !QJ && aJ()
+    function hB() {
+      UB() ? ZB() && !vB && WB() && RB() : oB && !NB && jB()
     }
 
-    function uJ() {
-      rJ ? navigator.vendor.startsWith("Apple") ? LJ() : vJ = mJ : CJ()
+    function CB() {
+      vB ? navigator.vendor.startsWith("Apple") ? xB() : mB = iB : hB()
     }
 
-    function iJ() {
-      vJ > 0 && 0 === --vJ && LJ()
+    function GB() {
+      mB > 0 && 0 === --mB && xB()
     }
 
-    function RJ() {
-      vJ = 0
+    function qB() {
+      mB = 0
     }
 
-    function LJ() {
-      NJ() && !0 === OJ() && dJ()
+    function xB() {
+      ZB() && !0 === XB() && RB()
     }
 
-    function aJ() {
-      QJ = !0, (0, qJ.F)().unlockPointer()
+    function jB() {
+      NB = !0, (0, YB.N)().unlockPointer()
     }
 
-    function BJ() {
-      hJ = !1, DJ = !1, sJ = !1, clearTimeout(jJ), xJ = !1, rJ = !1, vJ = 0, QJ = !1;
-      const JJ = YJ;
-      YJ = !1, JJ && tJ()
+    function AB() {
+      kB = !1, LB = !1, OB = !1, clearTimeout(gB), EB = !1, vB = !1, mB = 0, NB = !1;
+      const BB = oB;
+      oB = !1, BB && bB()
     }
 
-    function tJ() {
-      for (const JJ of [...VJ]) JJ(YJ);
-      UJ.i.Uf("pointerLockUpdate", YJ)
+    function bB() {
+      for (const BB of [...fB]) BB(oB);
+      yB.h.yH("pointerLockUpdate", oB)
     }
   },
-  39452: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      b: () => DJ,
-      f: () => AJ,
-      j: () => hJ,
-      n: () => jJ,
-      o: () => XJ,
-      r: () => YJ,
-      v: () => qJ
+  39412: (BB, TB, dB) => {
+    dB.d(TB, {
+      b: () => LB,
+      c: () => JB,
+      e: () => kB,
+      f: () => gB,
+      i: () => lB,
+      l: () => oB,
+      o: () => YB
     });
-    let FJ = null,
-      UJ = null,
-      eJ = null;
+    let VB = null,
+      yB = null,
+      pB = null;
 
-    function XJ(JJ) {
-      FJ = JJ
+    function lB(BB) {
+      VB = BB
     }
 
-    function AJ() {
-      return FJ
+    function JB() {
+      return VB
     }
 
-    function qJ(JJ) {
-      UJ = JJ
+    function YB(BB) {
+      yB = BB
     }
 
-    function jJ() {
-      return UJ
+    function gB() {
+      return yB
     }
 
-    function YJ(JJ) {
-      eJ = JJ
+    function oB(BB) {
+      pB = BB
     }
 
-    function hJ() {
-      return eJ
+    function kB() {
+      return pB
     }
 
-    function DJ() {
-      var JJ, cJ;
-      return !0 === (null === (JJ = UJ) || void 0 === JJ || null === (cJ = JJ.currentViewer) || void 0 === cJ ? void 0 : cJ.inPlayback)
+    function LB() {
+      var BB, TB;
+      return !0 === (null === (BB = yB) || void 0 === BB || null === (TB = BB.currentViewer) || void 0 === TB ? void 0 : TB.inPlayback)
     }
   },
-  39490: (JJ, cJ, ZJ) => {
-    ZJ.r(cJ), ZJ.d(cJ, {
-      loadIcons: () => IJ,
-      setIconFileOverrides: () => MJ,
-      wasmIconLookups: () => dJ,
-      wasmIconQueries: () => pJ
+  39454: (BB, TB, dB) => {
+    dB.r(TB), dB.d(TB, {
+      loadIcons: () => wB,
+      setIconFileOverrides: () => UB,
+      wasmIconLookups: () => RB,
+      wasmIconQueries: () => QB
     });
-    var FJ = ZJ(3917),
-      UJ = ZJ(3880),
-      eJ = ZJ(39494),
-      XJ = ZJ(1717),
-      AJ = ZJ(1703),
-      qJ = ZJ(2778),
-      jJ = ZJ(2780);
-    let YJ = null,
-      hJ = null;
+    var VB = dB(3916),
+      yB = dB(3886),
+      pB = dB(39459),
+      lB = dB(1694),
+      JB = dB(1679),
+      YB = dB(2760),
+      gB = dB(2764);
+    let oB = null,
+      kB = null;
 
-    function DJ(JJ) {
-      const cJ = JJ.startsWith(jJ.i),
-        [ZJ, FJ = ZJ, UJ = ZJ] = (cJ ? JJ.slice(jJ.i.length) : JJ).split(jJ.h);
+    function LB(BB) {
+      const TB = BB.startsWith(gB.n),
+        [dB, VB = dB, yB = dB] = (TB ? BB.slice(gB.n.length) : BB).split(gB.j);
       return {
-        top: ZJ,
-        left: FJ,
-        right: UJ,
-        half: cJ
+        top: dB,
+        left: VB,
+        right: yB,
+        half: TB
       }
     }
 
-    function sJ(JJ) {
-      const cJ = null === YJ ? void 0 : (0, qJ.c)(JJ),
-        ZJ = void 0 === cJ ? 0 : YJ.codes[cJ];
-      return 0 === ZJ ? void 0 : YJ.pool[ZJ - 1]
+    function OB(BB) {
+      const TB = null === oB ? void 0 : (0, YB.b)(BB),
+        dB = void 0 === TB ? 0 : oB.codes[TB];
+      return 0 === dB ? void 0 : oB.pool[dB - 1]
     }
-    var nJ = ZJ(2769),
-      GJ = ZJ(3864),
-      fJ = ZJ(3911),
-      xJ = ZJ(39499);
-    const rJ = "item:";
-    let vJ = null,
-      mJ = null,
-      QJ = null,
-      EJ = null,
-      VJ = !1,
-      KJ = !1,
-      yJ = null,
-      SJ = 0;
+    var DB = dB(2751),
+      uB = dB(3869),
+      HB = dB(3909),
+      EB = dB(39467);
+    const vB = "item:";
+    let mB = null,
+      iB = null,
+      NB = null,
+      tB = null,
+      fB = !1,
+      sB = !1,
+      MB = null,
+      zB = 0;
 
-    function IJ() {
-      return KJ || (KJ = !0, (0, fJ.j)().then((JJ => {
-        JJ && (0, XJ.b)()
-      }))), QJ ??= Promise.all([(0, nJ.i)(), (hJ ??= ZJ.e(1).then((() => ZJ(41276))).then((JJ => {
+    function wB() {
+      return sB || (sB = !0, (0, HB.d)().then((BB => {
+        BB && (0, lB.c)()
+      }))), NB ??= Promise.all([(0, DB.g)(), (kB ??= dB.e(1).then((() => dB(41306))).then((BB => {
         let {
-          BLOCK_FACE_RUNS: cJ,
-          BLOCK_FACES: ZJ,
-          MAX_FACE_ITEM_ID: FJ
-        } = JJ;
-        YJ = {
-          codes: (0, jJ.x)(cJ, FJ + 1),
-          pool: ZJ.split(jJ.n).map(DJ)
+          BLOCK_FACE_RUNS: TB,
+          BLOCK_FACES: dB,
+          MAX_FACE_ITEM_ID: VB
+        } = BB;
+        oB = {
+          codes: (0, gB.B)(TB, VB + 1),
+          pool: dB.split(gB.v).map(LB)
         }
-      }), (JJ => {
-        throw hJ = null, JJ
-      })), hJ), (0, xJ.h)(), ZJ.e(200).then((() => ZJ(35740)))]).then((JJ => {
-        let [, , cJ, ZJ] = JJ;
-        cJ.followBundledTextures(), vJ = cJ, mJ = ZJ, (0, XJ.b)()
-      }), (JJ => {
-        QJ = null, console.warn("[bloxd-wasm-client] the item icon tables did not load, so item icons stay blank", JJ)
-      })), QJ
+      }), (BB => {
+        throw kB = null, BB
+      })), kB), (0, EB.f)(), dB.e(200).then((() => dB(35681)))]).then((BB => {
+        let [, , TB, dB] = BB;
+        TB.followBundledTextures(), mB = TB, iB = dB, (0, lB.c)()
+      }), (BB => {
+        NB = null, console.warn("[bloxd-wasm-client] the item icon tables did not load, so item icons stay blank", BB)
+      })), NB
     }
 
-    function MJ(JJ) {
-      yJ = JJ, SJ++, (0, XJ.b)()
+    function UB(BB) {
+      MB = BB, zB++, (0, lB.c)()
     }
 
-    function bJ(JJ) {
-      var cJ, ZJ;
-      return null !== (cJ = null === (ZJ = yJ) || void 0 === ZJ ? void 0 : ZJ.itemSprite(JJ)) && void 0 !== cJ ? cJ : vJ.itemSpriteUrl(JJ)
+    function FB(BB) {
+      var TB, dB;
+      return null !== (TB = null === (dB = MB) || void 0 === dB ? void 0 : dB.itemSprite(BB)) && void 0 !== TB ? TB : mB.itemSpriteUrl(BB)
     }
 
-    function wJ(JJ) {
-      var cJ, ZJ;
-      return null !== (cJ = null === (ZJ = yJ) || void 0 === ZJ ? void 0 : ZJ.blockTexture(JJ)) && void 0 !== cJ ? cJ : vJ.blockTextureUrl(JJ)
+    function KB(BB) {
+      var TB, dB;
+      return null !== (TB = null === (dB = MB) || void 0 === dB ? void 0 : dB.blockTexture(BB)) && void 0 !== TB ? TB : mB.blockTextureUrl(BB)
     }
 
-    function WJ(JJ) {
-      var cJ;
-      return null !== (cJ = (0, nJ.e)(JJ)) && void 0 !== cJ ? cJ : JJ
+    function rB(BB) {
+      var TB;
+      return null !== (TB = (0, DB.d)(BB)) && void 0 !== TB ? TB : BB
     }
 
-    function gJ(JJ, cJ) {
-      var ZJ, FJ, UJ;
-      return null !== (ZJ = null !== (FJ = null !== (UJ = wJ(JJ)) && void 0 !== UJ ? UJ : null === cJ || void 0 === cJ ? void 0 : cJ.rotated[JJ]) && void 0 !== FJ ? FJ : null === cJ || void 0 === cJ ? void 0 : cJ.animated[JJ]) && void 0 !== ZJ ? ZJ : vJ.notFoundUrl()
+    function IB(BB, TB) {
+      var dB, VB, yB;
+      return null !== (dB = null !== (VB = null !== (yB = KB(BB)) && void 0 !== yB ? yB : null === TB || void 0 === TB ? void 0 : TB.rotated[BB]) && void 0 !== VB ? VB : null === TB || void 0 === TB ? void 0 : TB.animated[BB]) && void 0 !== dB ? dB : mB.notFoundUrl()
     }
 
-    function HJ(JJ) {
-      return void 0 !== (0, qJ.c)(JJ) ? JJ : /^[1-9][0-9]*$/.test(JJ) ? (0, qJ.e)(Number(JJ)) : void 0
+    function cB(BB) {
+      return void 0 !== (0, YB.b)(BB) ? BB : /^[1-9][0-9]*$/.test(BB) ? (0, YB.c)(Number(BB)) : void 0
     }
 
-    function PJ(JJ) {
-      var cJ;
-      if (JJ.startsWith(rJ)) {
-        var ZJ;
-        const cJ = (0, nJ.e)(JJ.slice(5));
-        return null !== (ZJ = void 0 === cJ ? null : bJ(cJ)) && void 0 !== ZJ ? ZJ : vJ.notFoundUrl()
+    function SB(BB) {
+      var TB;
+      if (BB.startsWith(vB)) {
+        var dB;
+        const TB = (0, DB.d)(BB.slice(5));
+        return null !== (dB = void 0 === TB ? null : FB(TB)) && void 0 !== dB ? dB : mB.notFoundUrl()
       }
-      return null !== (cJ = vJ.particleUrl(JJ)) && void 0 !== cJ ? cJ : vJ.notFoundUrl()
+      return null !== (TB = mB.particleUrl(BB)) && void 0 !== TB ? TB : mB.notFoundUrl()
     }
 
-    function kJ(JJ, cJ) {
-      return "StairsBlock" === JJ ? JJ : cJ ? "SlabBlock" : "CubeBlock"
+    function PB(BB, TB) {
+      return "StairsBlock" === BB ? BB : TB ? "SlabBlock" : "CubeBlock"
     }
-    const pJ = {
-        async blockIcon(JJ) {
-          var cJ;
+    const QB = {
+        async blockIcon(BB) {
+          var TB;
           let {
-            name: FJ,
-            size: UJ,
-            lineWidth: eJ
-          } = JJ;
-          await IJ();
-          const AJ = null !== (cJ = HJ(FJ)) && void 0 !== cJ ? cJ : FJ,
-            jJ = (0, fJ.b)(AJ, UJ, eJ);
-          if (null !== jJ) return jJ;
-          const YJ = sJ(AJ),
-            hJ = (0, qJ.c)(AJ),
-            DJ = void 0 === hJ || null === mJ ? void 0 : mJ.itemTypeNameOf(hJ);
-          if (null === vJ || void 0 === YJ) return "";
-          const nJ = [YJ.top, YJ.left, YJ.right].some((JJ => null === wJ(JJ))),
-            xJ = nJ ? await (EJ ??= ZJ.e(187).then((() => ZJ(33439))).then((JJ => (VJ && (VJ = !1, (0, XJ.b)()), {
-              rotated: JJ.rotatedBlockTextures,
-              animated: JJ.animatedBlockTextures
-            })), (JJ => (EJ = null, VJ = !0, console.warn("[bloxd-wasm-client] the built block atlas did not load, so some block icons stay blank", JJ), null))), EJ) : null;
-          if (nJ && null === xJ) return "";
-          const rJ = {
-              top: gJ(YJ.top, xJ),
-              left: gJ(YJ.left, xJ),
-              right: gJ(YJ.right, xJ),
-              itemType: kJ(DJ, YJ.half)
+            name: VB,
+            size: yB,
+            lineWidth: pB
+          } = BB;
+          await wB();
+          const JB = null !== (TB = cB(VB)) && void 0 !== TB ? TB : VB,
+            gB = (0, HB.b)(JB, yB, pB);
+          if (null !== gB) return gB;
+          const oB = OB(JB),
+            kB = (0, YB.b)(JB),
+            LB = void 0 === kB || null === iB ? void 0 : iB.itemTypeNameOf(kB);
+          if (null === mB || void 0 === oB) return "";
+          const DB = [oB.top, oB.left, oB.right].some((BB => null === KB(BB))),
+            EB = DB ? await (tB ??= dB.e(187).then((() => dB(33444))).then((BB => (fB && (fB = !1, (0, lB.c)()), {
+              rotated: BB.rotatedBlockTextures,
+              animated: BB.animatedBlockTextures
+            })), (BB => (tB = null, fB = !0, console.warn("[bloxd-wasm-client] the built block atlas did not load, so some block icons stay blank", BB), null))), tB) : null;
+          if (DB && null === EB) return "";
+          const vB = {
+              top: IB(oB.top, EB),
+              left: IB(oB.left, EB),
+              right: IB(oB.right, EB),
+              itemType: PB(LB, oB.half)
             },
-            QJ = 0 === SJ ? AJ : `${AJ}#${SJ}`;
-          return (await (0, GJ.c)()).drawBlockIconUrl(QJ, UJ, eJ, (() => rJ))
+            NB = 0 === zB ? JB : `${JB}#${zB}`;
+          return (await (0, uB.e)()).drawBlockIconUrl(NB, yB, pB, (() => vB))
         }
       },
-      dJ = {
-        itemIcon: function(JJ) {
-          var cJ, ZJ;
-          if (null === vJ) return IJ(), AJ.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(JJ);
-          if ((0, UJ.h)(JJ)) return {
+      RB = {
+        itemIcon: function(BB) {
+          var TB, dB;
+          if (null === mB) return wB(), JB.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(BB);
+          if ((0, yB.l)(BB)) return {
             kind: "icon",
-            url: null !== (ZJ = vJ.ingameIconUrl(JJ)) && void 0 !== ZJ ? ZJ : vJ.notFoundUrl()
+            url: null !== (dB = mB.ingameIconUrl(BB)) && void 0 !== dB ? dB : mB.notFoundUrl()
           };
-          if (JJ.startsWith(UJ.c)) return {
+          if (BB.startsWith(yB.e)) return {
             kind: "icon",
-            url: PJ(JJ.slice(UJ.c.length))
+            url: SB(BB.slice(yB.e.length))
           };
-          if (0 === (0, qJ.h)()) return (0, eJ.b)(), AJ.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(JJ);
-          const XJ = null !== (cJ = HJ(JJ)) && void 0 !== cJ ? cJ : JJ,
-            jJ = (0, qJ.c)(XJ),
-            YJ = void 0 === jJ ? void 0 : mJ.itemTypeNameOf(jJ);
-          if (void 0 !== sJ(XJ)) return {
+          if (0 === (0, YB.d)()) return (0, pB.d)(), JB.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(BB);
+          const lB = null !== (TB = cB(BB)) && void 0 !== TB ? TB : BB,
+            gB = (0, YB.b)(lB),
+            oB = void 0 === gB ? void 0 : iB.itemTypeNameOf(gB);
+          if (void 0 !== OB(lB)) return {
             kind: "drawnBlock"
           };
-          const hJ = function(JJ) {
-            var cJ;
-            return null !== (cJ = bJ(WJ(JJ))) && void 0 !== cJ ? cJ : vJ.notFoundUrl()
-          }(XJ);
-          if ((0, fJ.f)(XJ) && ! function(JJ) {
-              return null !== yJ && (null !== yJ.itemSprite(WJ(JJ)) || null !== yJ.model(JJ))
-            }(XJ)) return {
+          const kB = function(BB) {
+            var TB;
+            return null !== (TB = FB(rB(BB))) && void 0 !== TB ? TB : mB.notFoundUrl()
+          }(lB);
+          if ((0, HB.c)(lB) && ! function(BB) {
+              return null !== MB && (null !== MB.itemSprite(rB(BB)) || null !== MB.model(BB))
+            }(lB)) return {
             kind: "model",
-            url: hJ
+            url: kB
           };
-          if ("Gun" === YJ) return {
+          if ("Gun" === oB) return {
             kind: "gun",
-            url: hJ
+            url: kB
           };
-          if (void 0 !== jJ && "GrayscaleArmour" === mJ.itemTypeOf(jJ) || Object.hasOwn(FJ.d, XJ)) {
-            var DJ;
-            const cJ = null !== (DJ = (0, FJ.f)(JJ)) && void 0 !== DJ ? DJ : (0, FJ.f)(XJ);
-            if (cJ) return {
+          if (void 0 !== gB && "GrayscaleArmour" === iB.itemTypeOf(gB) || Object.hasOwn(VB.e, lB)) {
+            var LB;
+            const TB = null !== (LB = (0, VB.f)(BB)) && void 0 !== LB ? LB : (0, VB.f)(lB);
+            if (TB) return {
               kind: "item",
-              url: hJ,
-              tint: cJ
+              url: kB,
+              tint: TB
             }
           }
           return {
             kind: "item",
-            url: hJ
+            url: kB
           }
         },
-        hasIcon: function(JJ) {
-          return void 0 !== HJ(JJ) || (0, UJ.h)(JJ) || JJ.startsWith(UJ.c)
+        hasIcon: function(BB) {
+          return void 0 !== cB(BB) || (0, yB.l)(BB) || BB.startsWith(yB.e)
         },
-        isItemName: function(JJ) {
-          return void 0 !== HJ(JJ)
+        isItemName: function(BB) {
+          return void 0 !== cB(BB)
         }
       }
   },
-  39445: (JJ, cJ, ZJ) => {
-    ZJ.r(cJ), ZJ.d(cJ, {
-      attachPlayGameSources: () => wZ,
-      playGameSources: () => bZ
+  39407: (BB, TB, dB) => {
+    dB.r(TB), dB.d(TB, {
+      attachPlayGameSources: () => rd,
+      playGameSources: () => Kd
     });
-    var FJ = ZJ(1703),
-      UJ = ZJ(39452),
-      eJ = ZJ(4176),
-      XJ = ZJ(39360),
-      AJ = ZJ(39459),
-      qJ = ZJ(38562),
-      jJ = ZJ(17),
-      YJ = ZJ(4198),
-      hJ = ZJ(4189),
-      DJ = ZJ(39401),
-      sJ = ZJ(39426),
-      nJ = ZJ(39465),
-      GJ = ZJ(39410);
-    (0, GJ.k)(YJ.Lb.Chat, (JJ => {
-      if (JJ.payloadKind !== hJ.bc.Msgpack) return;
-      const cJ = function(JJ) {
-        if (null === JJ || "object" !== typeof JJ || !("content" in JJ)) return null;
+    var VB = dB(1679),
+      yB = dB(39412),
+      pB = dB(4169),
+      lB = dB(39322),
+      JB = dB(39417),
+      YB = dB(38504),
+      gB = dB(24),
+      oB = dB(4192),
+      kB = dB(4186),
+      LB = dB(39356),
+      OB = dB(39385),
+      DB = dB(39424),
+      uB = dB(39372);
+    (0, uB.n)(oB.Jb.Chat, (BB => {
+      if (BB.payloadKind !== kB.ac.Msgpack) return;
+      const TB = function(BB) {
+        if (null === BB || "object" !== typeof BB || !("content" in BB)) return null;
         const {
-          chatMsgId: cJ,
-          content: ZJ,
-          chatterEId: FJ
-        } = JJ;
+          chatMsgId: TB,
+          content: dB,
+          chatterEId: VB
+        } = BB;
         return {
-          serverChatMsgId: null !== cJ && void 0 !== cJ ? cJ : void 0,
-          content: ZJ,
-          chatterEId: void 0 === FJ || null === FJ ? void 0 : String(FJ)
+          serverChatMsgId: null !== TB && void 0 !== TB ? TB : void 0,
+          content: dB,
+          chatterEId: void 0 === VB || null === VB ? void 0 : String(VB)
         }
-      }((0, DJ.b)(JJ.payload));
-      null !== cJ && jJ.i.Uf("chat", cJ, !0)
+      }((0, LB.c)(BB.payload));
+      null !== TB && gB.h.yH("chat", TB, !0)
     }));
-    const fJ = {
-        chatReceived: (0, qJ.o)((function(JJ) {
-          var cJ, ZJ, FJ;
+    const HB = {
+        chatReceived: (0, YB.k)((function(BB) {
+          var TB, dB, VB;
           return {
-            id: JJ,
-            name: null !== (cJ = nJ.f.getName(JJ)) && void 0 !== cJ ? cJ : null,
-            local: (0, sJ.f)() === JJ,
-            profileEffect: null !== (ZJ = null === (FJ = (0, nJ.g)(JJ)) || void 0 === FJ ? void 0 : FJ.profileEffect) && void 0 !== ZJ ? ZJ : null
+            id: BB,
+            name: null !== (TB = DB.h.getName(BB)) && void 0 !== TB ? TB : null,
+            local: (0, OB.e)() === BB,
+            profileEffect: null !== (dB = null === (VB = (0, DB.i)(BB)) || void 0 === VB ? void 0 : VB.profileEffect) && void 0 !== dB ? dB : null
           }
         }))
       },
-      xJ = {
-        sendChatMessage(JJ) {
-          var cJ;
+      EB = {
+        sendChatMessage(BB) {
+          var TB;
           let {
-            JY: ZJ,
-            channelName: FJ
-          } = JJ;
-          null === (cJ = (0, XJ.j)()) || void 0 === cJ || cJ.clientApi.sendChat(ZJ, FJ)
+            Jo: dB,
+            channelName: VB
+          } = BB;
+          null === (TB = (0, lB.i)()) || void 0 === TB || TB.clientApi.sendChat(dB, VB)
         }
       };
-    var rJ = ZJ(157),
-      vJ = ZJ(1725),
-      mJ = ZJ(39354),
-      QJ = ZJ(38559);
-    const EJ = [0, 0, 0],
-      VJ = {
-        codeBlockClickable(JJ) {
-          var cJ;
-          const ZJ = (0, XJ.j)();
-          if (null === ZJ || void 0 === ZJ || !ZJ.isSessionLive) return !1;
-          const FJ = ZJ.api;
-          if (0 !== (mJ.s.playerFlags(FJ.apiView, 0) & mJ.Ad.Crouching)) return !1;
-          const UJ = FJ.queries.directorEntity(FJ.localId) >= mJ.mb.BYTES ? FJ.memoryData(FJ.scratch(), mJ.mb.BYTES, 8, "the local player's DirectorEntity") : null;
-          if (null === UJ) return !1;
-          for (let eJ = 0; eJ < 3; eJ++) EJ[eJ] = mJ.mb.feet(UJ, 0, eJ);
-          return EJ[1] += mJ.mb.eyeHeight(UJ, 0), (0, QJ.d)(EJ, JJ, null !== (cJ = vJ.b.get("blockReach")) && void 0 !== cJ ? cJ : rJ.c.Tv)
+    var vB = dB(184),
+      mB = dB(1708),
+      iB = dB(39310),
+      NB = dB(38502);
+    const tB = [0, 0, 0],
+      fB = {
+        codeBlockClickable(BB) {
+          var TB;
+          const dB = (0, lB.i)();
+          if (null === dB || void 0 === dB || !dB.isSessionLive) return !1;
+          const VB = dB.api;
+          if (0 !== (iB.B.playerFlags(VB.apiView, 0) & iB.Bd.Crouching)) return !1;
+          const yB = VB.queries.directorEntity(VB.localId) >= iB.xb.BYTES ? VB.memoryData(VB.scratch(), iB.xb.BYTES, 8, "the local player's DirectorEntity") : null;
+          if (null === yB) return !1;
+          for (let pB = 0; pB < 3; pB++) tB[pB] = iB.xb.feet(yB, 0, pB);
+          return tB[1] += iB.xb.eyeHeight(yB, 0), (0, NB.d)(tB, BB, null !== (TB = mB.c.get("blockReach")) && void 0 !== TB ? TB : vB.c.uE)
         }
       },
-      KJ = {
-        clickCodeBlock(JJ) {
-          var cJ;
-          null === (cJ = (0, XJ.j)()) || void 0 === cJ || cJ.clickCodeBlock(JJ)
+      sB = {
+        clickCodeBlock(BB) {
+          var TB;
+          null === (TB = (0, lB.i)()) || void 0 === TB || TB.clickCodeBlock(BB)
         }
       };
-    var yJ = ZJ(39376),
-      SJ = ZJ(39470),
-      IJ = ZJ(889),
-      MJ = ZJ(37992),
-      bJ = ZJ(4171),
-      wJ = ZJ(39394),
-      WJ = ZJ(39368),
-      gJ = ZJ(39399);
+    var MB = dB(39338),
+      zB = dB(39428),
+      wB = dB(900),
+      UB = dB(37983),
+      FB = dB(4167),
+      KB = dB(39346),
+      rB = dB(39330),
+      IB = dB(39348);
 
-    function HJ(JJ) {
-      if (null === JJ) return null;
-      const cJ = [];
-      for (const ZJ of JJ) {
-        const JJ = Object.keys(ZJ)[0];
-        if ("Gc" === JJ) {
+    function cB(BB) {
+      if (null === BB) return null;
+      const TB = [];
+      for (const dB of BB) {
+        const BB = Object.keys(dB)[0];
+        if ("Ed" === BB) {
           const {
-            str: JJ,
-            style: FJ,
-            clickableUrl: UJ
-          } = ZJ.Gc, eJ = Object.keys(JJ)[0], XJ = JJ[eJ];
-          "string" !== eJ && "styledEntityName" !== eJ && "styledTranslatedText" !== eJ || cJ.push({
-            str: XJ,
-            style: FJ,
-            clickableUrl: UJ
+            str: BB,
+            style: VB,
+            clickableUrl: yB
+          } = dB.Ed, pB = Object.keys(BB)[0], lB = BB[pB];
+          "string" !== pB && "styledEntityName" !== pB && "styledTranslatedText" !== pB || TB.push({
+            str: lB,
+            style: VB,
+            clickableUrl: yB
           })
-        } else cJ.push(ZJ[JJ])
+        } else TB.push(dB[BB])
       }
-      return cJ
+      return TB
     }
-    const PJ = {
-      screenPos(JJ) {
-        var cJ, ZJ;
-        return null !== (cJ = null === (ZJ = (0, XJ.j)()) || void 0 === ZJ ? void 0 : ZJ.renderFrame.projectWorldPosToScreenPos(JJ)) && void 0 !== cJ ? cJ : {
+    const SB = {
+      screenPos(BB) {
+        var TB, dB;
+        return null !== (TB = null === (dB = (0, lB.i)()) || void 0 === dB ? void 0 : dB.renderFrame.projectWorldPosToScreenPos(BB)) && void 0 !== TB ? TB : {
           x: 0,
           y: 0
         }
       }
     };
-    let kJ = !1;
+    let PB = !1;
 
-    function pJ() {
-      kJ || (kJ = !0, (0, GJ.k)(YJ.Lb.ProgressBarUpdate, (JJ => {
-        const cJ = (0, gJ.g)(JJ);
-        (0, gJ.c)(cJ) && jJ.i.Uf("progressBarUpdate", cJ, !0)
-      })), (0, GJ.k)(wJ.y, (JJ => {
-        const cJ = (0, gJ.d)(wJ.y, JJ);
-        cJ && jJ.i.Uf("middleScreenBarInitiate", {
-          duration: cJ.nJ,
-          GJ: cJ.GJ,
-          horizBarRemOffset: cJ.fJ
+    function QB() {
+      PB || (PB = !0, (0, uB.n)(oB.Jb.ProgressBarUpdate, (BB => {
+        const TB = (0, IB.h)(BB);
+        (0, IB.e)(TB) && gB.h.yH("progressBarUpdate", TB, !0)
+      })), (0, uB.n)(KB.w, (BB => {
+        const TB = (0, IB.f)(KB.w, BB);
+        TB && gB.h.yH("middleScreenBarInitiate", {
+          duration: TB.Zp,
+          Xp: TB.Xp,
+          horizBarRemOffset: TB.Wp
         }, !0)
-      })), (0, GJ.k)(YJ.Lb.RemoveMiddleScreenBar, (() => {
-        jJ.i.Uf("middleScreenBarRemove")
-      })), (0, GJ.k)(wJ.eb, (JJ => {
-        const cJ = (0, gJ.d)(wJ.eb, JJ);
-        if (cJ) {
-          var ZJ;
-          const JJ = cJ.iJ ? null === (ZJ = (0, XJ.j)()) || void 0 === ZJ ? void 0 : ZJ.renderFrame.projectDirectionToScreenPos(cJ.iJ) : void 0;
-          jJ.i.Uf("sendHitmarker", {
-            hU: cJ.hU,
-            screenPos: JJ
+      })), (0, uB.n)(oB.Jb.RemoveMiddleScreenBar, (() => {
+        gB.h.yH("middleScreenBarRemove")
+      })), (0, uB.n)(KB.db, (BB => {
+        const TB = (0, IB.f)(KB.db, BB);
+        if (TB) {
+          var dB;
+          const BB = TB.YB ? null === (dB = (0, lB.i)()) || void 0 === dB ? void 0 : dB.renderFrame.projectDirectionToScreenPos(TB.YB) : void 0;
+          gB.h.yH("sendHitmarker", {
+            jT: TB.jT,
+            screenPos: BB
           }, !0)
         }
-      })), (0, GJ.k)(wJ.jb, (JJ => {
-        const cJ = (0, gJ.d)(wJ.jb, JJ);
-        if (cJ) {
+      })), (0, uB.n)(KB.hb, (BB => {
+        const TB = (0, IB.f)(KB.hb, BB);
+        if (TB) {
           const {
-            id: JJ,
-            position: ZJ,
-            style: FJ,
-            nc: UJ,
-            vc: eJ
-          } = cJ;
-          jJ.i.Uf("setDirectionArrow", {
-            id: JJ,
-            position: ZJ,
-            style: FJ,
-            text: HJ(UJ),
-            vc: eJ
+            id: BB,
+            position: dB,
+            style: VB,
+            cp: yB,
+            Pp: pB
+          } = TB;
+          gB.h.yH("setDirectionArrow", {
+            id: BB,
+            position: dB,
+            style: VB,
+            text: cB(yB),
+            Pp: pB
           }, !0)
         }
-      })), (0, GJ.k)(wJ.g, (JJ => {
-        const cJ = (0, gJ.d)(wJ.g, JJ);
-        cJ && jJ.i.Uf("clearDirectionArrow", {
-          id: cJ.id
+      })), (0, uB.n)(KB.e, (BB => {
+        const TB = (0, IB.f)(KB.e, BB);
+        TB && gB.h.yH("clearDirectionArrow", {
+          id: TB.id
         }, !0)
-      })), (0, GJ.k)(wJ.p, (JJ => {
-        const cJ = (0, gJ.d)(wJ.p, JJ);
-        cJ && jJ.i.Uf("flyingMiddleMessage", {
-          content: HJ(cJ.zF),
-          NF: cJ.NF,
-          TF: cJ.TF
+      })), (0, uB.n)(KB.q, (BB => {
+        const TB = (0, IB.f)(KB.q, BB);
+        TB && gB.h.yH("flyingMiddleMessage", {
+          content: cB(TB.Hd),
+          Nd: TB.Nd,
+          td: TB.td
         }, !0)
-      })), (0, GJ.k)(YJ.Lb.WorldVariation, (JJ => {
-        const cJ = (0, gJ.g)(JJ);
-        if ("string" === typeof cJ) {
-          const JJ = cJ === IJ.h ? null : {
-            message: `Currently loaded as variation: ${cJ}`,
+      })), (0, uB.n)(oB.Jb.WorldVariation, (BB => {
+        const TB = (0, IB.h)(BB);
+        if ("string" === typeof TB) {
+          const BB = TB === wB.f ? null : {
+            message: `Currently loaded as variation: ${TB}`,
             type: "Warning"
           };
-          jJ.i.Uf("showPermanentBottomMessage", JJ, !0)
+          gB.h.yH("showPermanentBottomMessage", BB, !0)
         }
-      })), (0, GJ.k)(wJ.N, (JJ => {
-        const cJ = (0, gJ.d)(wJ.N, JJ);
-        cJ && function(JJ, cJ) {
+      })), (0, uB.n)(KB.J, (BB => {
+        const TB = (0, IB.f)(KB.J, BB);
+        TB && function(BB, TB) {
           const {
-            type: ZJ,
-            params: FJ
-          } = (0, MJ.d)(cJ), UJ = {
-            ...FJ
+            type: dB,
+            params: VB
+          } = (0, UB.i)(TB), yB = {
+            ...VB
           };
-          for (const eJ of MJ.b) UJ[eJ] && (UJ[eJ] = HJ(UJ[eJ]));
-          bJ.c.queueQTE(JJ, ZJ, UJ).getResult().then((cJ => {
-            var ZJ;
-            "boolean" === typeof cJ && (null === (ZJ = (0, XJ.j)()) || void 0 === ZJ || ZJ.send(WJ.d.QteResponse, {
-              qteId: JJ,
-              qteResponse: cJ
+          for (const pB of UB.e) yB[pB] && (yB[pB] = cB(yB[pB]));
+          FB.c.queueQTE(BB, dB, yB).getResult().then((TB => {
+            var dB;
+            "boolean" === typeof TB && (null === (dB = (0, lB.i)()) || void 0 === dB || dB.send(rB.c.QteResponse, {
+              qteId: BB,
+              qteResponse: TB
             }))
           }))
-        }(cJ.id, cJ.mU)
-      })), (0, GJ.k)(wJ.Y, (JJ => {
-        const cJ = (0, gJ.d)(wJ.Y, JJ);
-        "number" === typeof cJ && bJ.c.cancelQTE(cJ)
-      })), (0, GJ.e)((() => {
-        bJ.c.reset(), jJ.i.Uf("showPermanentBottomMessage", null, !0)
-      })), (0, GJ.i)((() => {
-        bJ.c.reset()
-      })), (0, GJ.k)(YJ.Lb.EditItemCraftingRecipes, (JJ => {
-        const cJ = (0, gJ.g)(JJ);
-        (0, gJ.c)(cJ) && jJ.i.Uf("craftingRecipesEdited", {
-          itemName: cJ.craftingRecipeItemName,
-          recipesForItem: cJ.recipesForItem
+        }(TB.id, TB.bd)
+      })), (0, uB.n)(KB.W, (BB => {
+        const TB = (0, IB.f)(KB.W, BB);
+        "number" === typeof TB && FB.c.cancelQTE(TB)
+      })), (0, uB.i)((() => {
+        FB.c.reset(), gB.h.yH("showPermanentBottomMessage", null, !0)
+      })), (0, uB.m)((() => {
+        FB.c.reset()
+      })), (0, uB.n)(oB.Jb.EditItemCraftingRecipes, (BB => {
+        const TB = (0, IB.h)(BB);
+        (0, IB.e)(TB) && gB.h.yH("craftingRecipesEdited", {
+          itemName: TB.craftingRecipeItemName,
+          recipesForItem: TB.recipesForItem
         })
-      })), (0, GJ.k)(wJ.U, (JJ => {
-        const cJ = (0, gJ.d)(wJ.U, JJ);
-        cJ && jJ.i.Uf("craftingRecipesEdited", {
-          itemName: cJ.gZ,
+      })), (0, uB.n)(KB.T, (BB => {
+        const TB = (0, IB.f)(KB.T, BB);
+        TB && gB.h.yH("craftingRecipesEdited", {
+          itemName: TB.RT,
           recipesForItem: []
         })
       })))
     }
-    var dJ = ZJ(38126);
-    let zJ = !1,
-      NJ = !1;
+    var RB = dB(38113);
+    let aB = !1,
+      ZB = !1;
 
-    function OJ() {
-      const JJ = (0, XJ.j)();
-      if (null === JJ || void 0 === JJ || !JJ.isSessionLive) return void(zJ = !1);
-      const cJ = 0 !== (mJ.s.playerFlags(JJ.api.apiView, 0) & mJ.Ad.FreeCam);
-      cJ !== zJ && (zJ = cJ, (0, dJ.c)(cJ))
+    function XB() {
+      const BB = (0, lB.i)();
+      if (null === BB || void 0 === BB || !BB.isSessionLive) return void(aB = !1);
+      const TB = 0 !== (iB.B.playerFlags(BB.api.apiView, 0) & iB.Bd.FreeCam);
+      TB !== aB && (aB = TB, (0, RB.b)(TB))
     }
-    var TJ = ZJ(235),
-      CJ = ZJ(36052),
-      uJ = ZJ(1739);
-    var iJ = ZJ(39474),
-      RJ = ZJ(39423);
-    const LJ = {
+    var WB = dB(279),
+      hB = dB(35984),
+      CB = dB(1719);
+    var GB = dB(39431),
+      qB = dB(39378);
+    const xB = {
       interactPrompt: null,
       blockText: null,
       neededTool: null
     };
-    let aJ = "off";
+    let jB = "off";
 
-    function BJ(JJ) {
-      var cJ;
-      return null === JJ ? null : {
-        label: null !== (cJ = (0, iJ.d)(JJ, "interactionPrompt")) && void 0 !== cJ ? cJ : null
+    function AB(BB) {
+      var TB;
+      return null === BB ? null : {
+        label: null !== (TB = (0, GB.b)(BB, "interactionPrompt")) && void 0 !== TB ? TB : null
       }
     }
-    const tJ = new Map([
-      [mJ.sc.Open, {
-        label: qJ.h.open
+    const bB = new Map([
+      [iB.Bc.Open, {
+        label: YB.f.open
       }],
-      [mJ.sc.Close, {
-        label: qJ.h.close
+      [iB.Bc.Close, {
+        label: YB.f.close
       }],
-      [mJ.sc.Milk, {
-        label: qJ.h.milk
+      [iB.Bc.Milk, {
+        label: YB.f.milk
       }],
-      [mJ.sc.Shear, {
-        label: qJ.h.shear
+      [iB.Bc.Shear, {
+        label: YB.f.shear
       }],
-      [mJ.sc.Tame, {
-        label: qJ.h.tame
+      [iB.Bc.Tame, {
+        label: YB.f.tame
       }],
-      [mJ.sc.Feed, {
-        label: qJ.h.feed
+      [iB.Bc.Feed, {
+        label: YB.f.feed
       }],
-      [mJ.sc.Ride, {
-        label: qJ.h.ride
+      [iB.Bc.Ride, {
+        label: YB.f.ride
       }]
     ]);
-    class oJ {
+    class nB {
       constructor() {
-        this.target = LJ, this.EA = mJ.Wc, this.optionName = null, this.pickaxe = new qJ.e
+        this.target = xB, this.rY = iB.dd, this.optionName = null, this.pickaxe = new YB.e
       }
-      read(JJ) {
-        var cJ;
-        const ZJ = mJ.s.targetBlockId(JJ.api.apiView, 0);
-        ZJ !== this.EA && (this.EA = ZJ, this.optionName = ZJ === mJ.Wc ? null : `${JJ.tables.getMetaInfo(ZJ).rootName}CrosshairText`);
-        const FJ = null === this.optionName ? null : null !== (cJ = JJ.tables.getClientOption(this.optionName)) && void 0 !== cJ ? cJ : null;
-        this.pickaxe.update(function(JJ, cJ) {
-          var ZJ, FJ, UJ;
-          if (0 === (mJ.s.playerFlags(JJ.api.apiView, 0) & mJ.Ad.Breaking) || cJ === mJ.Wc || 0 === cJ) return null;
+      read(BB) {
+        var TB;
+        const dB = iB.B.targetBlockId(BB.api.apiView, 0);
+        dB !== this.rY && (this.rY = dB, this.optionName = dB === iB.dd ? null : `${BB.tables.getMetaInfo(dB).rootName}CrosshairText`);
+        const VB = null === this.optionName ? null : null !== (TB = BB.tables.getClientOption(this.optionName)) && void 0 !== TB ? TB : null;
+        this.pickaxe.update(function(BB, TB) {
+          var dB, VB, yB;
+          if (0 === (iB.B.playerFlags(BB.api.apiView, 0) & iB.Bd.Breaking) || TB === iB.dd || 0 === TB) return null;
           const {
-            tables: eJ
-          } = JJ;
-          if (!0 === eJ.getClientOption("creative")) return null;
-          const XJ = eJ.nameOfId(cJ),
-            AJ = null === (ZJ = JJ.items.hj()) || void 0 === ZJ ? void 0 : ZJ.name,
-            qJ = null !== (FJ = eJ.getItemStat(XJ, "harvestLevel")) && void 0 !== FJ ? FJ : 0;
-          return (0, TJ.nc)({
-            blockHarvestType: eJ.getDefaultItemStat(XJ, "harvestType"),
-            blockHarvestLevel: eJ.getDefaultItemStat(XJ, "harvestLevel"),
-            harvestLevel: qJ,
-            heldToolType: void 0 === AJ ? void 0 : eJ.getDefaultItemStat(AJ, "harvests"),
-            heldToolLevel: void 0 === AJ ? void 0 : eJ.getDefaultItemStat(AJ, "level")
-          }) && null !== (UJ = CJ.q[qJ]) && void 0 !== UJ ? UJ : null
-        }(JJ, ZJ)), JJ.watchPromptPick(aJ);
-        const UJ = "touch" === aJ ? function(JJ) {
-          var cJ;
-          const ZJ = JJ.interactLabel;
-          return ZJ === mJ.sc.Entity ? BJ(JJ.promptEntity) : ZJ === mJ.sc.TameWith ? {
-            label: (0, qJ.v)(JJ.tables.nameOfId(JJ.interactIcon))
-          } : null !== (cJ = tJ.get(ZJ)) && void 0 !== cJ ? cJ : null
-        }(JJ) : BJ(JJ.promptEntity);
-        return this.target = (0, uJ.u)(this.target, {
-          interactPrompt: UJ,
-          blockText: FJ,
+            tables: pB
+          } = BB;
+          if (!0 === pB.getClientOption("creative")) return null;
+          const lB = pB.nameOfId(TB),
+            JB = null === (dB = BB.items.Dg()) || void 0 === dB ? void 0 : dB.name,
+            YB = null !== (VB = pB.getItemStat(lB, "harvestLevel")) && void 0 !== VB ? VB : 0;
+          return (0, WB.Dc)({
+            blockHarvestType: pB.getDefaultItemStat(lB, "harvestType"),
+            blockHarvestLevel: pB.getDefaultItemStat(lB, "harvestLevel"),
+            harvestLevel: YB,
+            heldToolType: void 0 === JB ? void 0 : pB.getDefaultItemStat(JB, "harvests"),
+            heldToolLevel: void 0 === JB ? void 0 : pB.getDefaultItemStat(JB, "level")
+          }) && null !== (yB = hB.o[YB]) && void 0 !== yB ? yB : null
+        }(BB, dB)), BB.watchPromptPick(jB);
+        const yB = "touch" === jB ? function(BB) {
+          var TB;
+          const dB = BB.interactLabel;
+          return dB === iB.Bc.Entity ? AB(BB.promptEntity) : dB === iB.Bc.TameWith ? {
+            label: (0, YB.u)(BB.tables.nameOfId(BB.interactIcon))
+          } : null !== (TB = bB.get(dB)) && void 0 !== TB ? TB : null
+        }(BB) : AB(BB.promptEntity);
+        return this.target = (0, CB.r)(this.target, {
+          interactPrompt: yB,
+          blockText: VB,
           neededTool: this.pickaxe.shown
         }), this.target
       }
     }
-    let lJ = null;
-    const Jc = {
+    let eB = null;
+    const BT = {
       current: () => {
-        var JJ, cJ;
-        return null !== (JJ = null === (cJ = lJ) || void 0 === cJ ? void 0 : cJ.target) && void 0 !== JJ ? JJ : LJ
+        var BB, TB;
+        return null !== (BB = null === (TB = eB) || void 0 === TB ? void 0 : TB.target) && void 0 !== BB ? BB : xB
       },
-      watch: JJ => {
-        const cJ = new oJ;
-        lJ = cJ;
-        const ZJ = (0, sJ.i)((ZJ => {
-          let FJ = cJ.read(ZJ);
-          JJ(FJ);
-          const UJ = (0, eJ.w)((() => {
-            const UJ = cJ.read(ZJ);
-            UJ !== FJ && (FJ = UJ, JJ(UJ))
+      watch: BB => {
+        const TB = new nB;
+        eB = TB;
+        const dB = (0, OB.i)((dB => {
+          let VB = TB.read(dB);
+          BB(VB);
+          const yB = (0, pB.w)((() => {
+            const yB = TB.read(dB);
+            yB !== VB && (VB = yB, BB(yB))
           }));
           return () => {
-            UJ(), ZJ.watchPromptPick("off")
+            yB(), dB.watchPromptPick("off")
           }
         }));
         return () => {
-          ZJ(), lJ === cJ && (lJ = null)
+          dB(), eB === TB && (eB = null)
         }
       }
     };
-    let cc = 0,
-      Zc = 0;
-    const Fc = {
-        health: qJ.s,
-        aura: qJ.k,
-        hotbar: RJ.e.states.hotbar,
-        heldItemAim: RJ.e.states.heldItemAim,
-        crouching: (0, sJ.b)((JJ => function(JJ) {
-          const cJ = () => 0 !== (mJ.s.playerFlags(JJ.apiView, 0) & mJ.Ad.Crouching);
+    let TT = 0,
+      dT = 0;
+    const VT = {
+        health: YB.o,
+        aura: YB.j,
+        hotbar: qB.b.states.hotbar,
+        heldItemAim: qB.b.states.heldItemAim,
+        crouching: (0, OB.c)((BB => function(BB) {
+          const TB = () => 0 !== (iB.B.playerFlags(BB.apiView, 0) & iB.Bd.Crouching);
           return {
-            current: cJ,
-            watch(JJ) {
-              let ZJ = cJ();
-              return (0, eJ.s)((() => {
-                const FJ = cJ();
-                FJ !== ZJ && (ZJ = FJ, JJ(FJ))
+            current: TB,
+            watch(BB) {
+              let dB = TB();
+              return (0, pB.v)((() => {
+                const VB = TB();
+                VB !== dB && (dB = VB, BB(VB))
               }))
             }
           }
-        }(JJ.api).current), !1, (JJ => (0, eJ.s)(JJ))),
-        flight: (0, sJ.b)((JJ => () => function(JJ) {
-          const cJ = mJ.s.playerFlags(JJ.apiView, 0);
-          return (0, qJ.q)(0 !== (cJ & mJ.Ad.CanFly), 0 !== (cJ & mJ.Ad.Flying))
-        }(JJ.api)), (0, qJ.q)(!1, !1), (JJ => (0, eJ.s)(JJ))),
-        gliderBoostFuel: (0, sJ.b)((JJ => () => mJ.s.gliderBoostFuel(JJ.api.apiView, 0)), 0, (JJ => (0, eJ.s)(JJ))),
-        crosshairTarget: Jc
+        }(BB.api).current), !1, (BB => (0, pB.v)(BB))),
+        flight: (0, OB.c)((BB => () => function(BB) {
+          const TB = iB.B.playerFlags(BB.apiView, 0);
+          return (0, YB.m)(0 !== (TB & iB.Bd.CanFly), 0 !== (TB & iB.Bd.Flying))
+        }(BB.api)), (0, YB.m)(!1, !1), (BB => (0, pB.v)(BB))),
+        gliderBoostFuel: (0, OB.c)((BB => () => iB.B.gliderBoostFuel(BB.api.apiView, 0)), 0, (BB => (0, pB.v)(BB))),
+        crosshairTarget: BT
       },
-      Uc = {
-        hotbarSlotRequested: RJ.e.events.hotbarSlotRequested,
-        hotbarScrolled: RJ.e.events.hotbarScrolled,
-        numberKeyPressed: RJ.e.events.numberKeyPressed,
-        shotDamageToShow: (0, qJ.u)((JJ => !0 === (0, iJ.d)(JJ, "showDamageAmounts")))
+      yT = {
+        hotbarSlotRequested: qB.b.events.hotbarSlotRequested,
+        hotbarScrolled: qB.b.events.hotbarScrolled,
+        numberKeyPressed: qB.b.events.numberKeyPressed,
+        shotDamageToShow: (0, YB.s)((BB => !0 === (0, GB.b)(BB, "showDamageAmounts")))
       },
-      ec = {
-        selectHotbarSlot: RJ.e.commands.selectHotbarSlot,
-        setCrosshairInteractPrompt: JJ => {
-          aJ = JJ
+      pT = {
+        selectHotbarSlot: qB.b.commands.selectHotbarSlot,
+        setCrosshairInteractPrompt: BB => {
+          jB = BB
         }
       },
-      Xc = {
+      lT = {
         momentumFrac: function() {
-          var JJ, cJ, ZJ;
-          const FJ = (0, XJ.j)(),
-            UJ = performance.now(),
-            eJ = null === FJ || void 0 === FJ || null === (JJ = FJ.items.hj()) || void 0 === JJ || null === (cJ = JJ.attributes) || void 0 === cJ || null === (ZJ = cJ.customAttributes) || void 0 === ZJ ? void 0 : ZJ.enchantments;
-          return cc = null !== FJ && null !== eJ && void 0 !== eJ && eJ.Momentum ? 0 !== (mJ.s.playerFlags(FJ.api.apiView, 0) & mJ.Ad.Breaking) ? Math.max(0, mJ.s.momentumFrac(FJ.api.apiView, 0)) : Math.max(0, cc - (UJ - Zc) / 1500) : 0, Zc = UJ, cc
+          var BB, TB, dB;
+          const VB = (0, lB.i)(),
+            yB = performance.now(),
+            pB = null === VB || void 0 === VB || null === (BB = VB.items.Dg()) || void 0 === BB || null === (TB = BB.attributes) || void 0 === TB || null === (dB = TB.customAttributes) || void 0 === dB ? void 0 : dB.enchantments;
+          return TT = null !== VB && null !== pB && void 0 !== pB && pB.Momentum ? 0 !== (iB.B.playerFlags(VB.api.apiView, 0) & iB.Bd.Breaking) ? Math.max(0, iB.B.momentumFrac(VB.api.apiView, 0)) : Math.max(0, TT - (yB - dT) / 1500) : 0, dT = yB, TT
         }
       };
-    var Ac = ZJ(39357),
-      qc = ZJ(1137),
-      jc = ZJ(13),
-      Yc = ZJ(35562),
-      hc = ZJ(8088),
-      Dc = ZJ(1528),
-      sc = ZJ(2146),
-      nc = ZJ(4207);
-    let Gc = !1;
+    var JT = dB(39315),
+      YT = dB(1117),
+      gT = dB(21),
+      oT = dB(35497),
+      kT = dB(8127),
+      LT = dB(1507),
+      OT = dB(2101),
+      DT = dB(4199);
+    let uT = !1;
 
-    function fc(JJ) {
-      Gc = JJ
+    function HT(BB) {
+      uT = BB
     }
 
-    function xc() {
-      "inGame" !== jc.d.get("gameState") || (0, Dc.o)() || jJ.i.Uf("ctrlCrouchWithoutFullscreen")
+    function ET() {
+      "inGame" !== gT.d.get("gameState") || (0, LT.o)() || gB.h.yH("ctrlCrouchWithoutFullscreen")
     }
-    let rc = !1;
-    const vc = {
+    let vT = !1;
+    const mT = {
         OpenEmoteWheel: () => {
-          fc(!0), rc = !0, queueMicrotask((() => {
-            rc && (rc = !1, jJ.i.Uf("requestEmoteWheelHoldOpen"))
+          HT(!0), vT = !0, queueMicrotask((() => {
+            vT && (vT = !1, gB.h.yH("requestEmoteWheelHoldOpen"))
           }))
         },
         ToggleFullCoordinateOverlay: () => {
-          jJ.i.Uf("toggleFullCoordinateOverlay")
+          gB.h.yH("toggleFullCoordinateOverlay")
         },
         KeyYPressed: () => {
-          (0, Yc.b)() || jJ.i.Uf("YKeyPressed")
+          (0, oT.d)() || gB.h.yH("YKeyPressed")
         },
         KeyXPressed: () => {
-          (0, Yc.b)() || jJ.i.Uf("XKeyPressed")
+          (0, oT.d)() || gB.h.yH("XKeyPressed")
         },
-        CtrlCrouch: xc,
+        CtrlCrouch: ET,
         "primary-fire": () => {
-          jJ.i.Uf("mouseState", {
-            oj: qc.b.DownFirePrimary,
+          gB.h.yH("mouseState", {
+            eg: YT.b.DownFirePrimary,
             isDown: !0
           })
         },
         "alt-fire": () => {
-          jJ.i.Uf("mouseState", {
-            oj: qc.b.DownFireSecondary,
+          gB.h.yH("mouseState", {
+            eg: YT.b.DownFireSecondary,
             isDown: !0
           })
         },
         TouchHold: () => {
-          jJ.i.Uf("mouseState", {
-            oj: qc.b.TouchDownLong,
+          gB.h.yH("mouseState", {
+            eg: YT.b.TouchDownLong,
             isDown: !0
           })
         }
       },
-      mc = {
+      iT = {
         OpenEmoteWheel: () => {
-          fc(!1), rc ? (rc = !1, (0, hc.b)() || jJ.i.Uf("requestEmoteWheelHoldOpen")) : jJ.i.Uf("requestEmoteWheelHoldRelease")
+          HT(!1), vT ? (vT = !1, (0, kT.e)() || gB.h.yH("requestEmoteWheelHoldOpen")) : gB.h.yH("requestEmoteWheelHoldRelease")
         },
-        CtrlCrouch: xc,
+        CtrlCrouch: ET,
         "primary-fire": () => {
-          jJ.i.Uf("mouseState", {
-            oj: qc.b.UpFirePrimary,
+          gB.h.yH("mouseState", {
+            eg: YT.b.UpFirePrimary,
             isDown: !1
           })
         },
         "alt-fire": () => {
-          jJ.i.Uf("mouseState", {
-            oj: qc.b.UpFireSecondary,
+          gB.h.yH("mouseState", {
+            eg: YT.b.UpFireSecondary,
             isDown: !1
           })
         },
         TouchDig: () => {
-          jJ.i.Uf("mouseState", {
-            oj: qc.b.UpFirePrimary,
+          gB.h.yH("mouseState", {
+            eg: YT.b.UpFirePrimary,
             isDown: !1
           })
         }
       };
-    let Qc = !1;
+    let NT = !1;
 
-    function Ec() {
-      Qc || (Qc = !0, (0, nc.g)((JJ => {
-        if ((0, UJ.b)()) return;
-        const cJ = (0, nc.e)(JJ) ? "primary-fire" : JJ.action;
-        var ZJ;
-        if (JJ.down) {
-          if (0 === (JJ.flags & sc.e.Synthetic)) {
-            var FJ;
-            null === (FJ = vc[cJ]) || void 0 === FJ || FJ.call(vc)
+    function tT() {
+      NT || (NT = !0, (0, DT.f)((BB => {
+        if ((0, yB.b)()) return;
+        const TB = (0, DT.c)(BB) ? "primary-fire" : BB.action;
+        var dB;
+        if (BB.down) {
+          if (0 === (BB.flags & OT.e.Synthetic)) {
+            var VB;
+            null === (VB = mT[TB]) || void 0 === VB || VB.call(mT)
           }
-        } else null === (ZJ = mc[cJ]) || void 0 === ZJ || ZJ.call(mc)
+        } else null === (dB = iT[TB]) || void 0 === dB || dB.call(iT)
       })))
     }
-    var Vc = ZJ(227),
-      Kc = ZJ(80),
-      yc = ZJ(29),
-      Sc = ZJ(39478),
-      Ic = ZJ(1213),
-      Mc = ZJ(37948);
-    let bc = !1;
-    const wc = {
-      sendCodeCollab(JJ) {
-        var cJ;
-        null === (cJ = (0, XJ.j)()) || void 0 === cJ || cJ.send(WJ.d.CodeCollab, (0, WJ.m)(JJ), (0, Mc.f)(JJ))
+    var fT = dB(270),
+      sT = dB(95),
+      MT = dB(33),
+      zT = dB(39434),
+      wT = dB(1209),
+      UT = dB(37951);
+    let FT = !1;
+    const KT = {
+      sendCodeCollab(BB) {
+        var TB;
+        null === (TB = (0, lB.i)()) || void 0 === TB || TB.send(rB.c.CodeCollab, (0, rB.l)(BB), (0, UT.g)(BB))
       }
     };
-    let Wc = null,
-      gc = !1,
-      Hc = null;
+    let rT = null,
+      IT = !1,
+      cT = null;
 
-    function Pc() {
-      return "inGame" === jc.d.get("gameState") && !(0, Yc.b)()
+    function ST() {
+      return "inGame" === gT.d.get("gameState") && !(0, oT.d)()
     }
-    const kc = {
-        OpenInventory: JJ => {
-          (0, Dc.t)(JJ, "inventory", (0, Ac.k)())
+    const PT = {
+        OpenInventory: BB => {
+          (0, LT.u)(BB, "inventory", (0, JT.k)())
         },
-        OpenShop: JJ => {
-          Wc && Pc() && (0, Dc.s)(JJ, Vc.m.SHOP, !Wc.shopIsEmpty(vJ.b.get("shopInfo")))
+        OpenShop: BB => {
+          rT && ST() && (0, LT.s)(BB, fT.m.SHOP, !rT.shopIsEmpty(mB.c.get("shopInfo")))
         },
-        OpenLobbyLeaderboard: JJ => {
-          Pc() && (0, Dc.s)(JJ, Vc.m.LOBBY_LEADERBOARD, !!vJ.b.get("lobbyLeaderboardInfo"))
+        OpenLobbyLeaderboard: BB => {
+          ST() && (0, LT.s)(BB, fT.m.LOBBY_LEADERBOARD, !!mB.c.get("lobbyLeaderboardInfo"))
         },
-        OpenTasksAndLeaderboard: JJ => {
-          var cJ;
-          const ZJ = null === (cJ = Wc) || void 0 === cJ ? void 0 : cJ.getClientGameMapKey();
-          ZJ ? (0, Dc.v)(JJ, !0, ZJ) : (0, Dc.t)(JJ, "retentionFeatures", !(!vJ.b.get("_tasks") && !vJ.b.get("_availableLeaderboards")))
+        OpenTasksAndLeaderboard: BB => {
+          var TB;
+          const dB = null === (TB = rT) || void 0 === TB ? void 0 : TB.getClientGameMapKey();
+          dB ? (0, LT.v)(BB, !0, dB) : (0, LT.u)(BB, "retentionFeatures", !(!mB.c.get("_tasks") && !mB.c.get("_availableLeaderboards")))
         },
-        OpenInviteLink: JJ => {
-          (0, Dc.t)(JJ, "inviteLink", Kc.featureFlags.canUseInviteLinks)
+        OpenInviteLink: BB => {
+          (0, LT.u)(BB, "inviteLink", sT.featureFlags.canUseInviteLinks)
         },
-        OpenCodeEditor: JJ => {
-          Pc() && function(JJ) {
-            var cJ;
-            const ZJ = (0, XJ.j)(),
-              FJ = null !== ZJ && void 0 !== ZJ && ZJ.isSessionLive ? ZJ.api : null,
-              UJ = FJ ? FJ.Om(FJ.localId) : null,
-              eJ = null !== (cJ = null === UJ || void 0 === UJ ? void 0 : UJ.map((JJ => Math.floor(JJ)))) && void 0 !== cJ ? cJ : null;
-            (0, Dc.v)(JJ, null !== eJ && (0, Mc.c)((0, Ic.e)()), (() => {
-              jJ.i.Uf("EditLobbyCode", eJ)
+        OpenCodeEditor: BB => {
+          ST() && function(BB) {
+            var TB;
+            const dB = (0, lB.i)(),
+              VB = null !== dB && void 0 !== dB && dB.isSessionLive ? dB.api : null,
+              yB = VB ? VB.Dv(VB.localId) : null,
+              pB = null !== (TB = null === yB || void 0 === yB ? void 0 : yB.map((BB => Math.floor(BB)))) && void 0 !== TB ? TB : null;
+            (0, LT.v)(BB, null !== pB && (0, UT.e)((0, wT.e)()), (() => {
+              gB.h.yH("EditLobbyCode", pB)
             }))
-          }(JJ)
+          }(BB)
         },
         HideUi: () => {
-          jJ.i.Uf("showUi", !1)
+          gB.h.yH("showUi", !1)
         }
       },
-      pc = {
+      QT = {
         HideUi: () => {
-          jJ.i.Uf("showUi", !0)
+          gB.h.yH("showUi", !0)
         }
       };
 
-    function dc() {
-      gc || (gc = !0, ZJ.e(144).then((() => ZJ(41258))).then((JJ => {
-        Wc = JJ
-      }), (JJ => {
-        console.error("[bloxd-wasm-client] the menu keys' checks did not load", JJ)
-      })), (0, Sc.z)((JJ => {
-        JJ || !(0, Sc.j)() || (0, Kc.isMobile)() || !yc.j.getItem("disableFullscreen") || (0, Dc.l)() || jc.d.set({
-          openEverythingMenuName: Vc.m.SETTINGS
+    function RT() {
+      IT || (IT = !0, dB.e(144).then((() => dB(41295))).then((BB => {
+        rT = BB
+      }), (BB => {
+        console.error("[bloxd-wasm-client] the menu keys' checks did not load", BB)
+      })), (0, zT.v)((BB => {
+        BB || !(0, zT.h)() || (0, sT.isMobile)() || !MT.j.getItem("disableFullscreen") || (0, LT.l)() || gT.d.set({
+          openEverythingMenuName: fT.m.SETTINGS
         })
-      })), (0, nc.g)((JJ => {
+      })), (0, DT.f)((BB => {
         let {
-          action: cJ,
-          down: ZJ,
-          press: FJ
-        } = JJ;
-        var eJ, XJ;
-        (0, UJ.b)() || (ZJ ? null === (eJ = kc[cJ]) || void 0 === eJ || eJ.call(kc, function(JJ) {
-          var cJ;
-          if (0 === JJ || (null === (cJ = Hc) || void 0 === cJ ? void 0 : cJ.press) !== JJ) {
-            const cJ = {
-              press: JJ,
+          action: TB,
+          down: dB,
+          press: VB
+        } = BB;
+        var pB, lB;
+        (0, yB.b)() || (dB ? null === (pB = PT[TB]) || void 0 === pB || pB.call(PT, function(BB) {
+          var TB;
+          if (0 === BB || (null === (TB = cT) || void 0 === TB ? void 0 : TB.press) !== BB) {
+            const TB = {
+              press: BB,
               event: new Event("inputAction")
             };
-            Hc = cJ, queueMicrotask((() => {
-              Hc === cJ && (Hc = null)
+            cT = TB, queueMicrotask((() => {
+              cT === TB && (cT = null)
             }))
           }
-          return Hc.event
-        }(FJ)) : null === (XJ = pc[cJ]) || void 0 === XJ || XJ.call(pc))
+          return cT.event
+        }(VB)) : null === (lB = QT[TB]) || void 0 === lB || lB.call(QT))
       })))
     }
-    var zc = ZJ(37914),
-      Nc = ZJ(37931),
-      Oc = ZJ(37922);
-    const Tc = {
-      completeTask(JJ) {
-        var cJ;
-        null === (cJ = (0, XJ.j)()) || void 0 === cJ || cJ.send(WJ.d.CompleteTask, (0, WJ.q)(JJ))
+    var aT = dB(37912),
+      ZT = dB(37930),
+      XT = dB(37918);
+    const WT = {
+      completeTask(BB) {
+        var TB;
+        null === (TB = (0, lB.i)()) || void 0 === TB || TB.send(rB.c.CompleteTask, (0, rB.n)(BB))
       },
-      setServerCookie(JJ) {
-        var cJ;
+      setServerCookie(BB) {
+        var TB;
         let {
-          key: ZJ,
-          value: FJ
-        } = JJ;
-        null === (cJ = (0, XJ.j)()) || void 0 === cJ || cJ.send(WJ.d.GeneralCookieSet, (0, WJ.s)({
-          IY: ZJ,
-          MY: FJ
+          key: dB,
+          value: VB
+        } = BB;
+        null === (TB = (0, lB.i)()) || void 0 === TB || TB.send(rB.c.GeneralCookieSet, (0, rB.u)({
+          Ng: dB,
+          tg: VB
         }))
       },
-      answerUiRequest(JJ) {
-        var cJ;
+      answerUiRequest(BB) {
+        var TB;
         let {
-          id: ZJ,
-          vY: FJ
-        } = JJ;
-        null === (cJ = (0, XJ.j)()) || void 0 === cJ || cJ.send(WJ.d.UiRequestResp, (0, WJ.ab)({
-          Gj: ZJ,
-          fj: FJ,
-          xj: 5
+          id: dB,
+          po: VB
+        } = BB;
+        null === (TB = (0, lB.i)()) || void 0 === TB || TB.send(rB.c.UiRequestResp, (0, rB.T)({
+          vo: dB,
+          fo: VB,
+          Mo: 5
         }))
       },
-      chooseRewardedAd(JJ) {
-        var cJ;
+      chooseRewardedAd(BB) {
+        var TB;
         let {
-          id: ZJ,
-          vY: FJ
-        } = JJ;
-        null === (cJ = (0, XJ.j)()) || void 0 === cJ || cJ.send(WJ.d.UiRequestResponded, (0, WJ.Y)({
-          id: ZJ,
-          vY: FJ
+          id: dB,
+          po: VB
+        } = BB;
+        null === (TB = (0, lB.i)()) || void 0 === TB || TB.send(rB.c.UiRequestResponded, (0, rB.S)({
+          id: dB,
+          po: VB
         }))
       },
-      requestLeaderboard(JJ) {
-        var cJ;
+      requestLeaderboard(BB) {
+        var TB;
         let {
-          category: ZJ,
-          timeframe: FJ,
-          seeTop: UJ
-        } = JJ;
-        null === (cJ = (0, XJ.j)()) || void 0 === cJ || cJ.send(WJ.d.LeaderboardRequest, {
-          category: ZJ,
-          timeframe: FJ,
-          seeTop: UJ
+          category: dB,
+          timeframe: VB,
+          seeTop: yB
+        } = BB;
+        null === (TB = (0, lB.i)()) || void 0 === TB || TB.send(rB.c.LeaderboardRequest, {
+          category: dB,
+          timeframe: VB,
+          seeTop: yB
         })
       }
     };
-    let Cc = !1;
-    const uc = rJ.c.Av / 2,
-      ic = [uc, -uc, -uc, -uc, uc, uc, -uc, uc],
-      Rc = [0, 0, 0];
+    let hT = !1;
+    const CT = vB.c.lE / 2,
+      GT = [CT, -CT, -CT, -CT, CT, CT, -CT, CT],
+      qT = [0, 0, 0];
 
-    function Lc(JJ, cJ, ZJ) {
-      for (let FJ = 0; FJ < JJ.length; FJ += 2)
-        if (JJ[FJ] === cJ && JJ[FJ + 1] === ZJ) return !0;
+    function xT(BB, TB, dB) {
+      for (let VB = 0; VB < BB.length; VB += 2)
+        if (BB[VB] === TB && BB[VB + 1] === dB) return !0;
       return !1
     }
-    const ac = {
+    const jT = {
       blocksStandingOn: function() {
-        const JJ = (0, XJ.j)();
-        if (null === JJ) return [];
+        const BB = (0, lB.i)();
+        if (null === BB) return [];
         const {
-          api: cJ,
-          chunks: ZJ,
-          tables: FJ
-        } = JJ;
-        if (!cJ.readPosition(cJ.localId, Rc)) return [];
-        const [UJ, eJ, AJ] = Rc, qJ = Math.ceil(eJ) - 1, jJ = [], YJ = [];
-        for (let XJ = 0; XJ < ic.length; XJ += 2) {
-          const JJ = UJ + ic[XJ],
-            cJ = AJ + ic[XJ + 1];
-          if (Number.isInteger(JJ) || Number.isInteger(cJ)) continue;
-          const eJ = Math.floor(JJ),
-            hJ = Math.floor(cJ);
-          if (Lc(YJ, eJ, hJ)) continue;
-          const DJ = ZJ.EA(eJ, qJ, hJ);
-          FJ.isSolidBlockId(DJ) && (YJ.push(eJ, hJ), jJ.push(FJ.nameOfId(DJ)))
+          api: TB,
+          chunks: dB,
+          tables: VB
+        } = BB;
+        if (!TB.readPosition(TB.localId, qT)) return [];
+        const [yB, pB, JB] = qT, YB = Math.ceil(pB) - 1, gB = [], oB = [];
+        for (let lB = 0; lB < GT.length; lB += 2) {
+          const BB = yB + GT[lB],
+            TB = JB + GT[lB + 1];
+          if (Number.isInteger(BB) || Number.isInteger(TB)) continue;
+          const pB = Math.floor(BB),
+            kB = Math.floor(TB);
+          if (xT(oB, pB, kB)) continue;
+          const LB = dB.rY(pB, YB, kB);
+          VB.isSolidBlockId(LB) && (oB.push(pB, kB), gB.push(VB.nameOfId(LB)))
         }
-        return jJ
+        return gB
       },
       dropAhead: function() {
-        const JJ = (0, XJ.j)();
-        return null !== JJ && 0 !== (mJ.s.playerFlags(JJ.api.apiView, 0) & mJ.Ad.DropAhead)
+        const BB = (0, lB.i)();
+        return null !== BB && 0 !== (iB.B.playerFlags(BB.api.apiView, 0) & iB.Bd.DropAhead)
       }
     };
-    var Bc = ZJ(35962),
-      tc = ZJ(38033),
-      oc = ZJ(1247),
-      lc = ZJ(39431);
-    const JZ = new Set(["replayLoad", "replaySave", "replaySaveAs", "replayTimelineZoomIn", "replayTimelineZoomOut"]),
-      cZ = new Set(["replaySkipBack", "replaySkipForward", "replaySpeedUp", "replaySpeedDown", "replayRecordKeyframe"]);
+    var AT = dB(35908),
+      bT = dB(38028),
+      nT = dB(1235),
+      eT = dB(39390);
+    const Bd = new Set(["replayLoad", "replaySave", "replaySaveAs", "replayTimelineZoomIn", "replayTimelineZoomOut"]),
+      Td = new Set(["replaySkipBack", "replaySkipForward", "replaySpeedUp", "replaySpeedDown", "replayRecordKeyframe"]);
 
-    function ZZ() {
-      const JJ = new Set;
+    function dd() {
+      const BB = new Set;
       return {
-        add: cJ => (JJ.add(cJ), () => {
-          JJ.delete(cJ)
+        add: TB => (BB.add(TB), () => {
+          BB.delete(TB)
         }),
         fire() {
-          for (const cJ of JJ) cJ()
+          for (const TB of BB) TB()
         }
       }
     }
-    const FZ = Object.freeze([]);
+    const Vd = Object.freeze([]);
 
-    function UZ(JJ, cJ) {
-      let ZJ, {
-        rereads: FJ,
-        followLocalId: UJ
-      } = cJ;
-      const XJ = () => (ZJ = (0, uJ.u)(ZJ, JJ()), ZJ);
+    function yd(BB, TB) {
+      let dB, {
+        rereads: VB,
+        followLocalId: yB
+      } = TB;
+      const lB = () => (dB = (0, CB.r)(dB, BB()), dB);
       return {
-        current: XJ,
-        watch(JJ) {
-          const cJ = (0, nJ.e)((cJ => {
-            FJ(cJ) && JJ(XJ())
+        current: lB,
+        watch(BB) {
+          const TB = (0, DB.d)((TB => {
+            VB(TB) && BB(lB())
           }));
-          if (!UJ) return cJ;
-          let ZJ = (0, sJ.f)();
-          const AJ = (0, eJ.w)((() => {
-            const cJ = (0, sJ.f)();
-            cJ !== ZJ && (ZJ = cJ, JJ(XJ()))
+          if (!yB) return TB;
+          let dB = (0, OB.e)();
+          const JB = (0, pB.w)((() => {
+            const TB = (0, OB.e)();
+            TB !== dB && (dB = TB, BB(lB()))
           }));
           return () => {
-            cJ(), AJ()
+            TB(), JB()
           }
         }
       }
     }
-    const eZ = {
-        players: UZ((function() {
-          const JJ = nJ.f.ids(),
-            cJ = {};
-          for (const eJ of JJ) {
-            var ZJ, FJ, UJ;
-            cJ[eJ] = {
-              name: null !== (ZJ = nJ.f.getName(eJ)) && void 0 !== ZJ ? ZJ : null,
-              ranks: null !== (FJ = nJ.f.getSetting(eJ, "ranks")) && void 0 !== FJ ? FJ : FZ,
-              cosmetics: null !== (UJ = (0, nJ.g)(eJ)) && void 0 !== UJ ? UJ : null
+    const pd = {
+        players: yd((function() {
+          const BB = DB.h.ids(),
+            TB = {};
+          for (const pB of BB) {
+            var dB, VB, yB;
+            TB[pB] = {
+              name: null !== (dB = DB.h.getName(pB)) && void 0 !== dB ? dB : null,
+              ranks: null !== (VB = DB.h.getSetting(pB, "ranks")) && void 0 !== VB ? VB : Vd,
+              cosmetics: null !== (yB = (0, DB.i)(pB)) && void 0 !== yB ? yB : null
             }
           }
           return {
-            ids: JJ,
-            byId: cJ,
-            localId: (0, sJ.f)()
+            ids: BB,
+            byId: TB,
+            localId: (0, OB.e)()
           }
         }), {
-          rereads: JJ => "roster" !== JJ.kind || JJ.members || JJ.settings.has("ranks"),
+          rereads: BB => "roster" !== BB.kind || BB.members || BB.settings.has("ranks"),
           followLocalId: !0
         }),
-        lobbyLeaderboardRows: UZ((function() {
-          const JJ = {};
-          for (const UJ of nJ.f.ids()) {
-            var cJ, ZJ, FJ;
-            JJ[UJ] = {
-              colour: null !== (cJ = nJ.f.getSetting(UJ, "colorInLobbyLeaderboard")) && void 0 !== cJ ? cJ : null,
-              values: null !== (ZJ = nJ.f.getSetting(UJ, "lobbyLeaderboardValues")) && void 0 !== ZJ ? ZJ : null,
-              tags: null !== (FJ = nJ.f.getSetting(UJ, "lobbyLeaderboardTags")) && void 0 !== FJ ? FJ : null
+        lobbyLeaderboardRows: yd((function() {
+          const BB = {};
+          for (const yB of DB.h.ids()) {
+            var TB, dB, VB;
+            BB[yB] = {
+              colour: null !== (TB = DB.h.getSetting(yB, "colorInLobbyLeaderboard")) && void 0 !== TB ? TB : null,
+              values: null !== (dB = DB.h.getSetting(yB, "lobbyLeaderboardValues")) && void 0 !== dB ? dB : null,
+              tags: null !== (VB = DB.h.getSetting(yB, "lobbyLeaderboardTags")) && void 0 !== VB ? VB : null
             }
           }
-          return JJ
+          return BB
         }), {
-          rereads: function(JJ) {
-            if ("roster" !== JJ.kind) return "reset" === JJ.kind;
+          rereads: function(BB) {
+            if ("roster" !== BB.kind) return "reset" === BB.kind;
             const {
-              members: cJ,
-              settings: ZJ
-            } = JJ;
-            return cJ || ZJ.has("colorInLobbyLeaderboard") || ZJ.has("lobbyLeaderboardValues") || ZJ.has("lobbyLeaderboardTags")
+              members: TB,
+              settings: dB
+            } = BB;
+            return TB || dB.has("colorInLobbyLeaderboard") || dB.has("lobbyLeaderboardValues") || dB.has("lobbyLeaderboardTags")
           },
           followLocalId: !1
         })
       },
-      XZ = {
+      ld = {
         cosmeticsUpdated: {
-          watch: JJ => (0, nJ.e)((cJ => {
-            if ("cosmetics" !== cJ.kind) return;
-            const ZJ = (0, sJ.f)();
-            JJ(cJ.updates.map((JJ => {
+          watch: BB => (0, DB.d)((TB => {
+            if ("cosmetics" !== TB.kind) return;
+            const dB = (0, OB.e)();
+            BB(TB.updates.map((BB => {
               let {
-                EF: cJ,
-                VF: FJ,
-                KF: UJ
-              } = JJ;
+                Np: TB,
+                tp: VB,
+                sp: yB
+              } = BB;
               return {
-                local: cJ === ZJ,
-                VF: FJ,
-                KF: UJ
+                local: TB === dB,
+                tp: VB,
+                sp: yB
               }
             })))
           }))
         }
       };
-    var AZ = ZJ(2473),
-      qZ = ZJ(1599),
-      jZ = ZJ(969),
-      YZ = ZJ(39482);
-    let hZ = !1,
-      DZ = null;
-    const sZ = {
-      setShopOpen(JJ) {
-        var cJ;
-        null === (cJ = (0, XJ.j)()) || void 0 === cJ || cJ.send(WJ.d.ShopMenuChanged, (0, WJ.Q)(JJ))
+    var Jd = dB(2465),
+      Yd = dB(1596),
+      gd = dB(965),
+      od = dB(39440);
+    let kd = !1,
+      Ld = null;
+    const Od = {
+      setShopOpen(BB) {
+        var TB;
+        null === (TB = (0, lB.i)()) || void 0 === TB || TB.send(rB.c.ShopMenuChanged, (0, rB.M)(BB))
       },
-      buyShopItem(JJ) {
-        var cJ;
+      buyShopItem(BB) {
+        var TB;
         let {
-          categoryKey: ZJ,
-          itemKey: FJ,
-          userInput: UJ
-        } = JJ;
-        null === (cJ = (0, XJ.j)()) || void 0 === cJ || cJ.send(WJ.d.ItemBought, {
-          categoryKey: ZJ,
-          itemKey: FJ,
-          shopVersion: vJ.b.get("_shopVersion"),
-          userInput: UJ
+          categoryKey: dB,
+          itemKey: VB,
+          userInput: yB
+        } = BB;
+        null === (TB = (0, lB.i)()) || void 0 === TB || TB.send(rB.c.ItemBought, {
+          categoryKey: dB,
+          itemKey: VB,
+          shopVersion: mB.c.get("_shopVersion"),
+          userInput: yB
         })
       }
     };
-    let nZ = !1;
-    var GZ = ZJ(4217);
-    const fZ = sc.D.LookFrozen | sc.D.ClicksSuppressed;
+    let Dd = !1;
+    var ud = dB(4209);
+    const Hd = OT.A.LookFrozen | OT.A.ClicksSuppressed;
 
-    function xZ(JJ, cJ) {
-      var ZJ;
-      null !== (ZJ = (0, XJ.j)()) && void 0 !== ZJ && ZJ.send(JJ, cJ) || console.warn(`[bloxd-wasm-client] message ${JJ} not sent: no live game or the core's command ring is full`)
-    }(0, GJ.k)(wJ.kb, (JJ => {
-      const cJ = (0, gJ.d)(wJ.kb, JJ);
-      void 0 !== cJ && jJ.i.Uf("setDiscordReportKey", cJ)
+    function Ed(BB, TB) {
+      var dB;
+      null !== (dB = (0, lB.i)()) && void 0 !== dB && dB.send(BB, TB) || console.warn(`[bloxd-wasm-client] message ${BB} not sent: no live game or the core's command ring is full`)
+    }(0, uB.n)(KB.ib, (BB => {
+      const TB = (0, IB.f)(KB.ib, BB);
+      void 0 !== TB && gB.h.yH("setDiscordReportKey", TB)
     }));
-    const rZ = {
-      ignorePlayer(JJ) {
-        xZ(WJ.d.IgnoreUser, (0, WJ.w)({
-          Dj: JJ
+    const vd = {
+      ignorePlayer(BB) {
+        Ed(rB.c.IgnoreUser, (0, rB.v)({
+          zg: BB
         }))
       },
-      reportPlayer(JJ) {
+      reportPlayer(BB) {
         let {
-          playerId: cJ,
-          chatMsgId: ZJ,
-          XY: FJ,
-          details: UJ
-        } = JJ;
-        xZ(WJ.d.UserReport, (0, WJ.ib)({
-          EY: cJ,
-          VY: ZJ,
-          XY: FJ,
-          AY: UJ
+          playerId: TB,
+          chatMsgId: dB,
+          yl: VB,
+          details: yB
+        } = BB;
+        Ed(rB.c.UserReport, (0, rB.$)({
+          cY: TB,
+          SY: dB,
+          yl: VB,
+          pl: yB
         }))
       },
-      reportWorldCodeChat(JJ) {
+      reportWorldCodeChat(BB) {
         let {
-          chatMsgId: cJ,
-          XY: ZJ,
-          details: FJ
-        } = JJ;
-        xZ(WJ.d.UserReport, (0, WJ.ib)({
-          EY: "",
-          VY: cJ,
-          XY: ZJ,
-          AY: FJ
+          chatMsgId: TB,
+          yl: dB,
+          details: VB
+        } = BB;
+        Ed(rB.c.UserReport, (0, rB.$)({
+          cY: "",
+          SY: TB,
+          yl: dB,
+          pl: VB
         }))
       },
-      requestDiscordReportKey(JJ) {
-        xZ(WJ.d.ReqDiscordReportKey, (0, WJ.I)(JJ))
+      requestDiscordReportKey(BB) {
+        Ed(rB.c.ReqDiscordReportKey, (0, rB.H)(BB))
       },
-      reportLobbyOrGame(JJ) {
+      reportLobbyOrGame(BB) {
         let {
-          target: cJ,
-          XY: ZJ,
-          details: FJ
-        } = JJ;
-        "customGame" === cJ ? xZ(WJ.d.CustomGameReport, (0, WJ.r)({
-          XY: ZJ,
-          AY: FJ
-        })) : xZ(WJ.d.LobbyReport, (0, WJ.A)({
-          XY: ZJ,
-          AY: FJ
+          target: TB,
+          yl: dB,
+          details: VB
+        } = BB;
+        "customGame" === TB ? Ed(rB.c.CustomGameReport, (0, rB.q)({
+          yl: dB,
+          pl: VB
+        })) : Ed(rB.c.LobbyReport, (0, rB.z)({
+          yl: dB,
+          pl: VB
         }))
       },
-      updateMyCosmetic(JJ) {
-        xZ(WJ.d.UpdateMyCosmetic, (0, WJ.hb)(JJ))
+      updateMyCosmetic(BB) {
+        Ed(rB.c.UpdateMyCosmetic, (0, rB.Y)(BB))
       },
-      holdEmoteWheel(JJ) {
-        !JJ || Gc ? (0, GZ.g)(fZ, JJ ? fZ : 0) : jJ.i.Uf("requestEmoteWheelHoldRelease")
+      holdEmoteWheel(BB) {
+        !BB || uT ? (0, ud.f)(Hd, BB ? Hd : 0) : gB.h.yH("requestEmoteWheelHoldRelease")
       }
     };
-    var vZ = ZJ(39484),
-      mZ = ZJ(1717),
-      QZ = ZJ(39487);
+    var md = dB(39445),
+      Nd = dB(1694),
+      td = dB(39448);
 
-    function EZ() {
-      const JJ = (0, XJ.j)();
-      return !0 === (null === JJ || void 0 === JJ ? void 0 : JJ.isCoreRunning) ? function(JJ) {
-        if (JJ.queries.drawCensus() < mJ.vb.BYTES) return [];
-        const cJ = JJ.memoryData(JJ.scratch(), mJ.vb.BYTES, 4, "the draw census");
-        if (null === cJ) return [];
-        const ZJ = mJ.vb.terrainOpaque(cJ, 0),
-          FJ = mJ.vb.terrainTransparent(cJ, 0),
-          UJ = mJ.vb.earthSky(cJ, 0),
-          eJ = mJ.vb.skyMeshes(cJ, 0),
-          XJ = mJ.vb.regular(cJ, 0),
-          AJ = mJ.vb.thin(cJ, 0),
-          qJ = mJ.vb.line(cJ, 0),
-          jJ = mJ.vb.text(cJ, 0),
-          YJ = mJ.vb.particles(cJ, 0);
+    function fd() {
+      const BB = (0, lB.i)();
+      return !0 === (null === BB || void 0 === BB ? void 0 : BB.isCoreRunning) ? function(BB) {
+        if (BB.queries.drawCensus() < iB.Fb.BYTES) return [];
+        const TB = BB.memoryData(BB.scratch(), iB.Fb.BYTES, 4, "the draw census");
+        if (null === TB) return [];
+        const dB = iB.Fb.terrainOpaque(TB, 0),
+          VB = iB.Fb.terrainTransparent(TB, 0),
+          yB = iB.Fb.earthSky(TB, 0),
+          pB = iB.Fb.skyMeshes(TB, 0),
+          lB = iB.Fb.regular(TB, 0),
+          JB = iB.Fb.thin(TB, 0),
+          YB = iB.Fb.line(TB, 0),
+          gB = iB.Fb.text(TB, 0),
+          oB = iB.Fb.particles(TB, 0);
         return [{
           label: "Drawn",
-          value: `${ZJ+FJ+UJ+eJ+XJ+AJ+qJ+jJ+YJ}`
+          value: `${dB+VB+yB+pB+lB+JB+YB+gB+oB}`
         }, {
           label: "Terrain",
-          value: `${ZJ} opaque / ${FJ} transparent (${mJ.vb.terrainPack(cJ,0)} shader pack)`
+          value: `${dB} opaque / ${VB} transparent (${iB.Fb.terrainPack(TB,0)} shader pack)`
         }, {
           label: "Meshes / Thin bases",
-          value: `${XJ} / ${AJ}`
+          value: `${lB} / ${JB}`
         }, {
           label: "Text / Lines",
-          value: `${jJ} / ${qJ}`
+          value: `${gB} / ${YB}`
         }, {
           label: "Sky / Particles",
-          value: `${UJ+eJ} / ${YJ}`
+          value: `${yB+pB} / ${oB}`
         }]
-      }(JJ.api) : []
+      }(BB.api) : []
     }
-    var VZ = ZJ(39490);
-    var KZ = ZJ(523),
-      yZ = ZJ(38578);
+    var sd = dB(39454);
+    var Md = dB(560),
+      zd = dB(38521);
 
-    function SZ(JJ) {
-      if (null === JJ || void 0 === JJ || !JJ.isCoreRunning) return null;
+    function wd(BB) {
+      if (null === BB || void 0 === BB || !BB.isCoreRunning) return null;
       const {
-        api: cJ,
-        chunks: ZJ,
-        items: FJ,
-        tables: UJ
-      } = JJ;
+        api: TB,
+        chunks: dB,
+        items: VB,
+        tables: yB
+      } = BB;
       return {
         playerFeet() {
-          const JJ = cJ.Om(cJ.localId);
-          return null !== JJ && void 0 !== JJ && JJ.every(Number.isFinite) ? JJ : null
+          const BB = TB.Dv(TB.localId);
+          return null !== BB && void 0 !== BB && BB.every(Number.isFinite) ? BB : null
         },
-        chunkBlocks: JJ => ZJ.isLoaded(JJ[0], JJ[1], JJ[2]) ? (JJ, cJ, FJ) => ZJ.EA(JJ, cJ, FJ) : null,
-        blockName: JJ => UJ.nameOfId(JJ),
+        chunkBlocks: BB => dB.isLoaded(BB[0], BB[1], BB[2]) ? (BB, TB, VB) => dB.rY(BB, TB, VB) : null,
+        blockName: BB => yB.nameOfId(BB),
         inventory: () => ({
-          slots: FJ.playerItems().map((JJ => JJ ? {
-            name: JJ.name,
-            amount: JJ.amount
+          slots: VB.playerItems().map((BB => BB ? {
+            name: BB.name,
+            amount: BB.amount
           } : null)),
-          heldSlot: FJ.selectedSlot
+          heldSlot: VB.selectedSlot
         }),
         nearby() {
-          const ZJ = [];
-          for (let UJ = 0; UJ < cJ.idStr.length; UJ++) {
-            var FJ;
-            const eJ = cJ.idStr[UJ],
-              XJ = cJ.serverIds[UJ],
-              AJ = cJ.kinds[UJ];
-            if (null === eJ || cJ.isLocal(XJ) || AJ >>> mJ.d !== mJ.r.Lifeform) continue;
-            const qJ = cJ.Om(XJ),
-              jJ = KZ.p[AJ & mJ.h];
-            qJ && void 0 !== jJ && ZJ.push({
-              kind: "Player" === jJ ? "player" : jJ,
-              name: null !== (FJ = JJ.clientApi.getEntityName(eJ)) && void 0 !== FJ ? FJ : null,
-              position: qJ
+          const dB = [];
+          for (let yB = 0; yB < TB.idStr.length; yB++) {
+            var VB;
+            const pB = TB.idStr[yB],
+              lB = TB.serverIds[yB],
+              JB = TB.kinds[yB];
+            if (null === pB || TB.isLocal(lB) || JB >>> iB.c !== iB.y.Lifeform) continue;
+            const YB = TB.Dv(lB),
+              gB = Md.l[JB & iB.g];
+            YB && void 0 !== gB && dB.push({
+              kind: "Player" === gB ? "player" : gB,
+              name: null !== (VB = BB.clientApi.getEntityName(pB)) && void 0 !== VB ? VB : null,
+              position: YB
             })
           }
-          return ZJ
+          return dB
         },
         droppedItems() {
-          let JJ = 0;
-          for (let ZJ = 0; ZJ < cJ.idStr.length; ZJ++) null !== cJ.idStr[ZJ] && cJ.kinds[ZJ] >>> mJ.d === mJ.r.Item && JJ++;
-          return JJ
+          let BB = 0;
+          for (let dB = 0; dB < TB.idStr.length; dB++) null !== TB.idStr[dB] && TB.kinds[dB] >>> iB.c === iB.y.Item && BB++;
+          return BB
         }
       }
     }
-    const IZ = {
-        worldCodeAiChunk: JJ => Promise.resolve((0, yZ.c)(SZ((0, XJ.j)()), JJ)),
-        worldCodeAiGameState: () => Promise.resolve((0, yZ.g)(SZ((0, XJ.j)())))
+    const Ud = {
+        worldCodeAiChunk: BB => Promise.resolve((0, zd.d)(wd((0, lB.i)()), BB)),
+        worldCodeAiGameState: () => Promise.resolve((0, zd.h)(wd((0, lB.i)())))
       },
-      MZ = function(JJ) {
-        const cJ = ZZ(),
-          FJ = ZZ(),
-          UJ = new Set,
-          eJ = new Set,
-          XJ = () => {
-            var cJ, ZJ;
-            return null !== (cJ = null === (ZJ = JJ.runtime()) || void 0 === ZJ ? void 0 : ZJ.currentViewer) && void 0 !== cJ ? cJ : null
+      Fd = function(BB) {
+        const TB = dd(),
+          VB = dd(),
+          yB = new Set,
+          pB = new Set,
+          lB = () => {
+            var TB, dB;
+            return null !== (TB = null === (dB = BB.runtime()) || void 0 === dB ? void 0 : dB.currentViewer) && void 0 !== TB ? TB : null
           };
-        let AJ = null,
-          qJ = null;
-        const YJ = (JJ, cJ) => ({
-            current: JJ,
-            watch(ZJ) {
-              let FJ = JJ();
-              return cJ.add((() => {
-                const cJ = JJ();
-                cJ !== FJ && (FJ = cJ, ZJ(cJ))
+        let JB = null,
+          YB = null;
+        const oB = (BB, TB) => ({
+            current: BB,
+            watch(dB) {
+              let VB = BB();
+              return TB.add((() => {
+                const TB = BB();
+                TB !== VB && (VB = TB, dB(TB))
               }))
             }
           }),
-          DJ = JJ => ({
-            watch: cJ => (JJ.add(cJ), () => {
-              JJ.delete(cJ)
+          LB = BB => ({
+            watch: TB => (BB.add(TB), () => {
+              BB.delete(TB)
             })
           }),
-          sJ = JJ => {
-            const cJ = XJ(),
-              ZJ = null === cJ || void 0 === cJ ? void 0 : cJ.view;
-            cJ && ZJ && cJ.seek(Math.max(0, Math.min(ZJ.totalTicks - 1, ZJ.Hh + JJ * hJ.rd)))
+          OB = BB => {
+            const TB = lB(),
+              dB = null === TB || void 0 === TB ? void 0 : TB.view;
+            TB && dB && TB.seek(Math.max(0, Math.min(dB.totalTicks - 1, dB.dL + BB * kB.ud)))
           },
-          nJ = {
-            replay: YJ((() => {
-              var JJ;
-              const cJ = XJ(),
-                ZJ = null !== (JJ = null === cJ || void 0 === cJ ? void 0 : cJ.view) && void 0 !== JJ ? JJ : null;
-              return null === cJ || null === ZJ || ZJ.state === hJ.cd.None ? (AJ = null, null) : (AJ = (0, uJ.u)(AJ, {
-                id: cJ.id,
-                Hh: ZJ.Hh,
-                totalTicks: ZJ.totalTicks,
-                Gy: hJ.rd,
-                playing: ZJ.state === hJ.cd.Playing,
-                speed: ZJ.speed,
-                cameraMode: ZJ.cameraMode,
-                freecam: "freecam" === ZJ.cameraMode
-              }), AJ)
-            }), cJ),
-            replayEdits: YJ((() => {
-              var JJ;
-              const cJ = XJ(),
-                ZJ = null !== (JJ = null === cJ || void 0 === cJ ? void 0 : cJ.view) && void 0 !== JJ ? JJ : null;
-              return null === cJ || null === ZJ || ZJ.state === hJ.cd.None ? (qJ = null, null) : (qJ = (0, uJ.u)(qJ, {
-                cameraKeyframes: [...cJ.keyframes],
-                playbackMark: ZJ.mark,
-                fileName: cJ.fileName,
-                unsavedChanges: cJ.unsavedChanges,
-                suggestSaveAs: cJ.suggestSaveAs
-              }), qJ)
-            }), cJ),
-            replayRecorder: YJ((() => {
-              var cJ, ZJ;
-              return null !== (cJ = null === (ZJ = JJ.runtime()) || void 0 === ZJ ? void 0 : ZJ.recorder.current) && void 0 !== cJ ? cJ : lc.c.states.replayRecorder.current()
-            }), FJ),
+          DB = {
+            replay: oB((() => {
+              var BB;
+              const TB = lB(),
+                dB = null !== (BB = null === TB || void 0 === TB ? void 0 : TB.view) && void 0 !== BB ? BB : null;
+              return null === TB || null === dB || dB.state === kB.hd.None ? (JB = null, null) : (JB = (0, CB.r)(JB, {
+                id: TB.id,
+                dL: dB.dL,
+                totalTicks: dB.totalTicks,
+                WU: kB.ud,
+                playing: dB.state === kB.hd.Playing,
+                speed: dB.speed,
+                cameraMode: dB.cameraMode,
+                freecam: "freecam" === dB.cameraMode
+              }), JB)
+            }), TB),
+            replayEdits: oB((() => {
+              var BB;
+              const TB = lB(),
+                dB = null !== (BB = null === TB || void 0 === TB ? void 0 : TB.view) && void 0 !== BB ? BB : null;
+              return null === TB || null === dB || dB.state === kB.hd.None ? (YB = null, null) : (YB = (0, CB.r)(YB, {
+                cameraKeyframes: [...TB.keyframes],
+                playbackMark: dB.mark,
+                fileName: TB.fileName,
+                unsavedChanges: TB.unsavedChanges,
+                suggestSaveAs: TB.suggestSaveAs
+              }), YB)
+            }), TB),
+            replayRecorder: oB((() => {
+              var TB, dB;
+              return null !== (TB = null === (dB = BB.runtime()) || void 0 === dB ? void 0 : dB.recorder.current) && void 0 !== TB ? TB : eT.c.states.replayRecorder.current()
+            }), VB),
             replayVideoExporting: {
-              current: tc.c,
-              watch: JJ => (0, jJ.j)("replayViewer|videoExportChanged", (() => {
-                JJ((0, tc.c)())
+              current: bT.c,
+              watch: BB => (0, gB.i)("replayViewer|videoExportChanged", (() => {
+                BB((0, bT.c)())
               }))
             }
           },
-          GJ = {
-            replayUiActionRequested: DJ(eJ),
-            replayViewerRequested: DJ(UJ)
+          uB = {
+            replayUiActionRequested: LB(pB),
+            replayViewerRequested: LB(yB)
           },
-          fJ = JJ => {
-            for (const cJ of UJ) cJ(JJ)
+          HB = BB => {
+            for (const TB of yB) TB(BB)
           },
-          xJ = () => {
-            var FJ;
-            !0 === (null === (FJ = XJ()) || void 0 === FJ ? void 0 : FJ.isOpen) && Promise.all([ZJ.e(88), ZJ.e(59)]).then((() => ZJ(41265))).then((ZJ => {
+          EB = () => {
+            var VB;
+            !0 === (null === (VB = lB()) || void 0 === VB ? void 0 : VB.isOpen) && Promise.all([dB.e(88), dB.e(59)]).then((() => dB(41299))).then((dB => {
               let {
-                startWasmReplayVideoExport: FJ
-              } = ZJ;
-              return FJ({
-                viewer: XJ,
+                startWasmReplayVideoExport: VB
+              } = dB;
+              return VB({
+                viewer: lB,
                 canvas: () => {
-                  var cJ, ZJ;
-                  return null !== (cJ = null === (ZJ = JJ.canvas) || void 0 === ZJ ? void 0 : ZJ.call(JJ)) && void 0 !== cJ ? cJ : null
+                  var TB, dB;
+                  return null !== (TB = null === (dB = BB.canvas) || void 0 === dB ? void 0 : dB.call(BB)) && void 0 !== TB ? TB : null
                 },
-                watchViewer: cJ.add,
-                requestViewer: fJ
+                watchViewer: TB.add,
+                requestViewer: HB
               })
-            }), (JJ => {
-              console.error("Couldn't load the video export", JJ), oc.NotificationProvider.showAlertPopup({
+            }), (BB => {
+              console.error("Couldn't load the video export", BB), nT.NotificationProvider.showAlertPopup({
                 title: "Video export failed",
                 subtitle: "Check your connection, then try again."
               })
-            })).catch((JJ => {
-              console.error("The video export failed", JJ)
+            })).catch((BB => {
+              console.error("The video export failed", BB)
             }))
           },
-          rJ = {
-            replayAction(JJ) {
-              if ((0, tc.c)()) return;
-              const cJ = XJ();
-              switch (JJ) {
+          vB = {
+            replayAction(BB) {
+              if ((0, bT.c)()) return;
+              const TB = lB();
+              switch (BB) {
                 case "replaySkipBack":
-                  sJ(-1);
+                  OB(-1);
                   break;
                 case "replaySkipForward":
-                  sJ(1);
+                  OB(1);
                   break;
                 case "replaySpeedUp":
                 case "replaySpeedDown":
-                  null !== cJ && void 0 !== cJ && cJ.view && cJ.setSpeed((0, Bc.i)(cJ.view.speed, "replaySpeedUp" === JJ ? "up" : "down"));
+                  null !== TB && void 0 !== TB && TB.view && TB.setSpeed((0, AT.h)(TB.view.speed, "replaySpeedUp" === BB ? "up" : "down"));
                   break;
                 case "replayRecordKeyframe":
-                  null === cJ || void 0 === cJ || cJ.addKeyframe()
+                  null === TB || void 0 === TB || TB.addKeyframe()
               }
             },
-            setReplayPlaying(JJ) {
-              var cJ, ZJ;
-              (0, tc.c)() || (JJ ? null === (cJ = XJ()) || void 0 === cJ || cJ.play() : null === (ZJ = XJ()) || void 0 === ZJ || ZJ.pause())
+            setReplayPlaying(BB) {
+              var TB, dB;
+              (0, bT.c)() || (BB ? null === (TB = lB()) || void 0 === TB || TB.play() : null === (dB = lB()) || void 0 === dB || dB.pause())
             },
-            seekReplay(JJ) {
-              var cJ;
+            seekReplay(BB) {
+              var TB;
               let {
-                Hh: ZJ,
-                ignorePlaybackMark: FJ
-              } = JJ;
-              null === (cJ = XJ()) || void 0 === cJ || cJ.seek(ZJ, null !== FJ && void 0 !== FJ && FJ)
+                dL: dB,
+                ignorePlaybackMark: VB
+              } = BB;
+              null === (TB = lB()) || void 0 === TB || TB.seek(dB, null !== VB && void 0 !== VB && VB)
             },
-            setReplayCameraMode(JJ) {
-              var cJ;
-              null === (cJ = XJ()) || void 0 === cJ || cJ.setCameraMode(JJ)
+            setReplayCameraMode(BB) {
+              var TB;
+              null === (TB = lB()) || void 0 === TB || TB.setCameraMode(BB)
             },
             syncReplayCameraMode() {},
-            setReplayCameraKeyframe(JJ) {
-              var cJ;
-              null === (cJ = XJ()) || void 0 === cJ || cJ.setKeyframe(JJ)
+            setReplayCameraKeyframe(BB) {
+              var TB;
+              null === (TB = lB()) || void 0 === TB || TB.setKeyframe(BB)
             },
-            moveReplayCameraKeyframe(JJ) {
-              var cJ;
+            moveReplayCameraKeyframe(BB) {
+              var TB;
               let {
-                from: ZJ,
-                to: FJ
-              } = JJ;
-              null === (cJ = XJ()) || void 0 === cJ || cJ.moveKeyframe(ZJ, FJ)
+                from: dB,
+                to: VB
+              } = BB;
+              null === (TB = lB()) || void 0 === TB || TB.moveKeyframe(dB, VB)
             },
-            deleteReplayCameraKeyframes(JJ) {
-              var cJ;
+            deleteReplayCameraKeyframes(BB) {
+              var TB;
               let {
-                start: ZJ,
-                end: FJ
-              } = JJ;
-              null === (cJ = XJ()) || void 0 === cJ || cJ.deleteKeyframes(ZJ, FJ)
+                start: dB,
+                end: VB
+              } = BB;
+              null === (TB = lB()) || void 0 === TB || TB.deleteKeyframes(dB, VB)
             },
-            setReplayPlaybackMark(JJ) {
-              var cJ;
-              null === (cJ = XJ()) || void 0 === cJ || cJ.setMark(JJ)
+            setReplayPlaybackMark(BB) {
+              var TB;
+              null === (TB = lB()) || void 0 === TB || TB.setMark(BB)
             },
-            cropReplay(JJ) {
-              var cJ, ZJ;
+            cropReplay(BB) {
+              var TB, dB;
               let {
-                start: FJ,
-                end: UJ
-              } = JJ;
-              return !(0, tc.c)() && (null !== (cJ = null === (ZJ = XJ()) || void 0 === ZJ ? void 0 : ZJ.crop(FJ, UJ)) && void 0 !== cJ && cJ)
+                start: VB,
+                end: yB
+              } = BB;
+              return !(0, bT.c)() && (null !== (TB = null === (dB = lB()) || void 0 === dB ? void 0 : dB.crop(VB, yB)) && void 0 !== TB && TB)
             },
-            holdReplayForShaderPackFailure(JJ) {
-              const cJ = XJ();
-              cJ && (cJ.holdForShaderPackFailure(), function(JJ) {
-                ZJ.e(122).then((() => ZJ(38169))).then((cJ => {
+            holdReplayForShaderPackFailure(BB) {
+              const TB = lB();
+              TB && (TB.holdForShaderPackFailure(), function(BB) {
+                dB.e(122).then((() => dB(38153))).then((TB => {
                   let {
-                    shaderPackPage: ZJ
-                  } = cJ;
-                  ZJ.block(JJ)
-                })).catch((JJ => {
-                  console.warn("[bloxd-wasm-client] the shader pack could not be blocked", JJ)
+                    shaderPackPage: dB
+                  } = TB;
+                  dB.block(BB)
+                })).catch((BB => {
+                  console.warn("[bloxd-wasm-client] the shader pack could not be blocked", BB)
                 }))
-              }(JJ))
+              }(BB))
             },
             exportReplayVideo() {
-              xJ()
+              EB()
             },
             toggleRecording() {
-              var cJ;
-              null === (cJ = JJ.runtime()) || void 0 === cJ || cJ.recorder.toggleRecording()
+              var TB;
+              null === (TB = BB.runtime()) || void 0 === TB || TB.recorder.toggleRecording()
             },
             saveClip() {
-              var cJ;
-              null === (cJ = JJ.runtime()) || void 0 === cJ || cJ.recorder.saveClip()
+              var TB;
+              null === (TB = BB.runtime()) || void 0 === TB || TB.recorder.saveClip()
             },
-            setRecorderPrefs(cJ) {
-              var ZJ;
+            setRecorderPrefs(TB) {
+              var dB;
               let {
-                clipping: FJ,
-                clipSeconds: UJ
-              } = cJ;
-              null === (ZJ = JJ.runtime()) || void 0 === ZJ || ZJ.recorder.setPrefs(FJ, UJ)
+                clipping: VB,
+                clipSeconds: yB
+              } = TB;
+              null === (dB = BB.runtime()) || void 0 === dB || dB.recorder.setPrefs(VB, yB)
             },
-            setReplayViewerOpen(cJ) {
-              var ZJ;
-              (0, Yc.e)(cJ) && (null === (ZJ = JJ.runtime()) || void 0 === ZJ || ZJ.recorder.viewerShown(cJ))
+            setReplayViewerOpen(TB) {
+              var dB;
+              (0, oT.g)(TB) && (null === (dB = BB.runtime()) || void 0 === dB || dB.recorder.viewerShown(TB))
             },
-            recordFlyingMiddleText(cJ) {
-              var ZJ;
+            recordFlyingMiddleText(TB) {
+              var dB;
               let {
-                content: FJ,
-                NF: UJ,
-                angle: eJ,
-                TF: XJ
-              } = cJ;
-              null === (ZJ = JJ.runtime()) || void 0 === ZJ || ZJ.recorder.recordFlyingText(JSON.stringify(FJ), UJ, eJ, XJ)
+                content: VB,
+                Nd: yB,
+                angle: pB,
+                td: lB
+              } = TB;
+              null === (dB = BB.runtime()) || void 0 === dB || dB.recorder.recordFlyingText(JSON.stringify(VB), yB, pB, lB)
             },
-            dragReplayCamera(cJ) {
-              var ZJ;
+            dragReplayCamera(TB) {
+              var dB;
               let {
-                dx: FJ,
-                dy: UJ
-              } = cJ;
-              null === (ZJ = JJ.freecam()) || void 0 === ZJ || ZJ.drag(FJ, UJ)
+                dx: VB,
+                dy: yB
+              } = TB;
+              null === (dB = BB.freecam()) || void 0 === dB || dB.drag(VB, yB)
             },
-            moveReplayFreecam(cJ) {
-              var ZJ;
-              null === (ZJ = JJ.freecam()) || void 0 === ZJ || ZJ.move(cJ)
+            moveReplayFreecam(TB) {
+              var dB;
+              null === (dB = BB.freecam()) || void 0 === dB || dB.move(TB)
             },
-            holdReplayFreecamVertical(cJ) {
-              var ZJ;
+            holdReplayFreecamVertical(TB) {
+              var dB;
               let {
-                action: FJ,
-                hj: UJ
-              } = cJ;
-              null === (ZJ = JJ.freecam()) || void 0 === ZJ || ZJ.holdVertical(FJ, UJ)
+                action: VB,
+                Dg: yB
+              } = TB;
+              null === (dB = BB.freecam()) || void 0 === dB || dB.holdVertical(VB, yB)
             }
           },
-          vJ = JJ => {
-            var cJ;
-            const ZJ = XJ(),
-              FJ = null !== (cJ = null === ZJ || void 0 === ZJ ? void 0 : ZJ.view) && void 0 !== cJ ? cJ : null;
-            JZ.has(JJ) ? (JJ => {
-              for (const cJ of eJ) cJ(JJ)
-            })(JJ) : cZ.has(JJ) ? rJ.replayAction(JJ) : "replayPlayPause" === JJ ? ZJ && FJ && FJ.state !== hJ.cd.None && rJ.setReplayPlaying(FJ.state !== hJ.cd.Playing) : "replayChangeCameraMode" === JJ ? null === ZJ || void 0 === ZJ || ZJ.cycleCameraMode() : "replayExit" === JJ ? !0 === (null === ZJ || void 0 === ZJ ? void 0 : ZJ.inPlayback) && (0, Ic.j)("/") : "replayExportVideo" === JJ && xJ()
+          mB = BB => {
+            var TB;
+            const dB = lB(),
+              VB = null !== (TB = null === dB || void 0 === dB ? void 0 : dB.view) && void 0 !== TB ? TB : null;
+            Bd.has(BB) ? (BB => {
+              for (const TB of pB) TB(BB)
+            })(BB) : Td.has(BB) ? vB.replayAction(BB) : "replayPlayPause" === BB ? dB && VB && VB.state !== kB.hd.None && vB.setReplayPlaying(VB.state !== kB.hd.Playing) : "replayChangeCameraMode" === BB ? null === dB || void 0 === dB || dB.cycleCameraMode() : "replayExit" === BB ? !0 === (null === dB || void 0 === dB ? void 0 : dB.inPlayback) && (0, wT.m)("/") : "replayExportVideo" === BB && EB()
           };
-        let mJ = !1;
+        let iB = !1;
         return {
-          states: nJ,
-          events: GJ,
-          commands: rJ,
+          states: DB,
+          events: uB,
+          commands: vB,
           lookups: {
             replayCamera() {
-              var cJ, ZJ, FJ;
-              return !0 !== (null === (cJ = XJ()) || void 0 === cJ ? void 0 : cJ.isOpen) ? null : null !== (ZJ = null === (FJ = JJ.cameraView) || void 0 === FJ ? void 0 : FJ.call(JJ)) && void 0 !== ZJ ? ZJ : null
+              var TB, dB, VB;
+              return !0 !== (null === (TB = lB()) || void 0 === TB ? void 0 : TB.isOpen) ? null : null !== (dB = null === (VB = BB.cameraView) || void 0 === VB ? void 0 : VB.call(BB)) && void 0 !== dB ? dB : null
             },
             leaveGameReloadsPage() {
-              var JJ;
-              return !0 === (null === (JJ = XJ()) || void 0 === JJ ? void 0 : JJ.inPlayback)
+              var BB;
+              return !0 === (null === (BB = lB()) || void 0 === BB ? void 0 : BB.inPlayback)
             }
           },
           feed: {
             viewerChanged: () => {
-              var JJ;
-              const ZJ = !0 === (null === (JJ = XJ()) || void 0 === JJ ? void 0 : JJ.inPlayback);
-              ZJ !== mJ && (mJ = ZJ, jJ.i.Uf("connectedGameChanged")), cJ.fire()
+              var BB;
+              const dB = !0 === (null === (BB = lB()) || void 0 === BB ? void 0 : BB.inPlayback);
+              dB !== iB && (iB = dB, gB.h.yH("connectedGameChanged")), TB.fire()
             },
-            recorderChanged: FJ.fire,
-            keyDown: JJ => {
-              var cJ;
-              switch (JJ) {
+            recorderChanged: VB.fire,
+            keyDown: BB => {
+              var TB;
+              switch (BB) {
                 case "recordGame":
-                  return void rJ.toggleRecording();
+                  return void vB.toggleRecording();
                 case "recordClip":
-                  return void((0, Yc.b)() || rJ.saveClip())
-              }(0, tc.c)() || ("replayViewerOpen" !== JJ ? JJ.startsWith("replay") && ((0, Yc.b)() || !0 === (null === (cJ = XJ()) || void 0 === cJ ? void 0 : cJ.inPlayback)) && vJ(JJ) : fJ("toggle"))
+                  return void((0, oT.d)() || vB.saveClip())
+              }(0, bT.c)() || ("replayViewerOpen" !== BB ? BB.startsWith("replay") && ((0, oT.d)() || !0 === (null === (TB = lB()) || void 0 === TB ? void 0 : TB.inPlayback)) && mB(BB) : HB("toggle"))
             }
           }
         }
       }({
-        runtime: UJ.n,
+        runtime: yB.f,
         cameraView: () => {
-          var JJ;
-          const cJ = null === (JJ = (0, XJ.j)()) || void 0 === JJ ? void 0 : JJ.renderFrame;
-          if (!cJ) return null;
-          const [ZJ, FJ, UJ] = cJ.cameraPosition, [eJ, AJ, qJ] = cJ.cameraDirection;
+          var BB;
+          const TB = null === (BB = (0, lB.i)()) || void 0 === BB ? void 0 : BB.renderFrame;
+          if (!TB) return null;
+          const [dB, VB, yB] = TB.cameraPosition, [pB, JB, YB] = TB.cameraDirection;
           return {
-            position: [ZJ, FJ, UJ],
-            direction: [eJ, AJ, qJ]
+            position: [dB, VB, yB],
+            direction: [pB, JB, YB]
           }
         },
         canvas: () => {
-          var JJ, cJ, ZJ;
-          return null !== (JJ = null === (cJ = (ZJ = (0, eJ.F)()).canvas) || void 0 === cJ ? void 0 : cJ.call(ZJ)) && void 0 !== JJ ? JJ : null
+          var BB, TB, dB;
+          return null !== (BB = null === (TB = (dB = (0, pB.N)()).canvas) || void 0 === TB ? void 0 : TB.call(dB)) && void 0 !== BB ? BB : null
         },
-        freecam: UJ.j
+        freecam: yB.e
       }),
-      bZ = {
+      Kd = {
         states: {
-          ...Fc,
-          ...Ac.i,
-          ...MZ.states,
-          ...eZ
+          ...VT,
+          ...JT.g,
+          ...Fd.states,
+          ...pd
         },
         events: {
-          ...Uc,
-          ...fJ,
-          ...Ac.e,
-          ...SJ.e,
-          ...vZ.f,
-          ...MZ.events,
-          ...XZ,
-          ...yJ.j
+          ...yT,
+          ...HB,
+          ...JT.c,
+          ...zB.d,
+          ...md.k,
+          ...Fd.events,
+          ...ld,
+          ...MB.g
         },
         commands: {
-          ...KJ,
-          ...ec,
-          ...xJ,
-          ...Ac.b,
-          ...Tc,
-          ...rZ,
-          ...yJ.h,
-          ...wc,
-          ...MZ.commands,
-          ...sZ
+          ...sB,
+          ...pT,
+          ...EB,
+          ...JT.b,
+          ...WT,
+          ...vd,
+          ...MB.e,
+          ...KT,
+          ...Fd.commands,
+          ...Od
         },
         queries: {
-          ...Ac.f,
-          ...IZ
+          ...JT.d,
+          ...Ud
         },
         lookups: {
-          ...Xc,
-          ...PJ,
-          ...vZ.j,
-          ...MZ.lookups,
-          ...VJ,
-          ...ac
+          ...lT,
+          ...SB,
+          ...md.m,
+          ...Fd.lookups,
+          ...fB,
+          ...jT
         }
       };
 
-    function wZ() {
-      (0, AJ.g)(GJ.m), (0, UJ.o)(MZ.feed), (0, SJ.f)(), Cc || (Cc = !0, (0, GJ.k)(wJ.k, (JJ => {
-        const cJ = (0, gJ.d)(wJ.k, JJ);
-        "string" === typeof cJ && Promise.resolve().then((() => ZJ(3126))).then((JJ => {
+    function rd() {
+      (0, JB.e)(uB.q), (0, yB.i)(Fd.feed), (0, zB.f)(), hT || (hT = !0, (0, uB.n)(KB.l, (BB => {
+        const TB = (0, IB.f)(KB.l, BB);
+        "string" === typeof TB && Promise.resolve().then((() => dB(3145))).then((BB => {
           let {
-            onCosmeticPackGranted: ZJ
-          } = JJ;
-          ZJ(cJ)
+            onCosmeticPackGranted: dB
+          } = BB;
+          dB(TB)
         }))
-      })), (0, GJ.k)(wJ.hb, (JJ => {
-        const cJ = (0, gJ.d)(wJ.hb, JJ);
-        "number" === typeof cJ && jJ.i.Uf("serverUpdating", Date.now() + cJ, !0)
-      })), (0, GJ.k)(wJ.J, (JJ => {
-        const cJ = (0, gJ.d)(wJ.J, JJ);
-        if ((0, gJ.c)(cJ)) {
+      })), (0, uB.n)(KB.fb, (BB => {
+        const TB = (0, IB.f)(KB.fb, BB);
+        "number" === typeof TB && gB.h.yH("serverUpdating", Date.now() + TB, !0)
+      })), (0, uB.n)(KB.F, (BB => {
+        const TB = (0, IB.f)(KB.F, BB);
+        if ((0, IB.e)(TB)) {
           const {
-            WJ: JJ,
-            gJ: ZJ
-          } = cJ;
-          (0, Nc.d)({
-            WJ: "string" === typeof JJ ? JJ : null,
-            gJ: "string" === typeof ZJ ? ZJ : null
+            DB: BB,
+            uB: dB
+          } = TB;
+          (0, ZT.e)({
+            DB: "string" === typeof BB ? BB : null,
+            uB: "string" === typeof dB ? dB : null
           })
         }
-      })), (0, GJ.k)(YJ.Lb.NewUiRequest, (JJ => {
-        const cJ = (0, gJ.g)(JJ);
-        (0, gJ.c)(cJ) && "number" === typeof cJ.id && (0, gJ.c)(cJ.clientParameters) && (0, Oc.f)(cJ.id, cJ.clientParameters)
-      })), (0, GJ.k)(wJ._, (JJ => {
-        const cJ = (0, gJ.d)(wJ._, JJ);
-        "number" === typeof cJ && (0, Oc.i)(cJ)
-      })), (0, GJ.i)(Oc.e), (0, GJ.k)(YJ.Lb.UiRequestPopup, (JJ => {
-        const cJ = (0, gJ.g)(JJ);
-        if ((0, gJ.c)(cJ) && "number" === typeof cJ.id && "string" === typeof cJ.text) {
-          const JJ = cJ.id;
-          (0, Oc.k)(JJ, cJ.text, (cJ => {
-            Tc.answerUiRequest({
-              id: JJ,
-              vY: cJ
+      })), (0, uB.n)(oB.Jb.NewUiRequest, (BB => {
+        const TB = (0, IB.h)(BB);
+        (0, IB.e)(TB) && "number" === typeof TB.id && (0, IB.e)(TB.clientParameters) && (0, XT.c)(TB.id, TB.clientParameters)
+      })), (0, uB.n)(KB.Y, (BB => {
+        const TB = (0, IB.f)(KB.Y, BB);
+        "number" === typeof TB && (0, XT.g)(TB)
+      })), (0, uB.m)(XT.b), (0, uB.n)(oB.Jb.UiRequestPopup, (BB => {
+        const TB = (0, IB.h)(BB);
+        if ((0, IB.e)(TB) && "number" === typeof TB.id && "string" === typeof TB.text) {
+          const BB = TB.id;
+          (0, XT.i)(BB, TB.text, (TB => {
+            WT.answerUiRequest({
+              id: BB,
+              po: TB
             })
           }))
         }
-      })), (0, GJ.k)(YJ.Lb.TopRightHelper, (JJ => {
-        const cJ = (0, gJ.g)(JJ);
-        void 0 !== cJ && jJ.i.Uf("TopRightHelper", cJ, !0)
-      })), (0, GJ.k)(YJ.Lb.TaskProgress, (JJ => {
-        const cJ = (0, gJ.g)(JJ);
-        (0, gJ.c)(cJ) && "string" === typeof cJ.taskId && "number" === typeof cJ.progress && (0, zc.c)({
-          taskId: cJ.taskId,
-          progress: cJ.progress
+      })), (0, uB.n)(oB.Jb.TopRightHelper, (BB => {
+        const TB = (0, IB.h)(BB);
+        void 0 !== TB && gB.h.yH("TopRightHelper", TB, !0)
+      })), (0, uB.n)(oB.Jb.TaskProgress, (BB => {
+        const TB = (0, IB.h)(BB);
+        (0, IB.e)(TB) && "string" === typeof TB.taskId && "number" === typeof TB.progress && (0, aT.d)({
+          taskId: TB.taskId,
+          progress: TB.progress
         })
-      }))), nZ || (nZ = !0, (0, GJ.k)(wJ.s, (JJ => {
-        const cJ = (0, gJ.d)(wJ.s, JJ);
-        (0, gJ.c)(cJ) && jJ.i.Uf("showShopFromServer", {
-          toggle: cJ.wZ,
-          WZ: cJ.WZ
+      }))), Dd || (Dd = !0, (0, uB.n)(KB.r, (BB => {
+        const TB = (0, IB.f)(KB.r, BB);
+        (0, IB.e)(TB) && gB.h.yH("showShopFromServer", {
+          toggle: TB.od,
+          kd: TB.kd
         }, !0)
-      })), (0, GJ.k)(YJ.Lb.OverShopInfo, (JJ => {
-        const cJ = (0, gJ.g)(JJ);
-        (0, gJ.c)(cJ) && jJ.i.Uf("overShopInfo", cJ.info, !0)
-      })), (0, GJ.k)(YJ.Lb.ShowShopTutorial, (() => {
-        jJ.i.Uf("showShopTutorial", null, !0)
-      }))), hZ || (hZ = !0, (0, GJ.e)((() => {
-        var JJ;
-        (0, AZ.D)(), null === (JJ = DZ) || void 0 === JJ || JJ(), DZ = (0, GJ.d)() ? (0, jZ.e)(GJ.d) : null
-      })), (0, GJ.k)(YJ.Lb.SetCookie, (JJ => {
-        const cJ = (0, gJ.g)(JJ),
-          ZJ = (0, Ic.e)().gameNameWithVariation;
-        (0, gJ.c)(cJ) && "string" === typeof cJ.key && null !== ZJ && (0, qZ.setCookie)(ZJ, cJ.key, cJ.value)
-      })), (0, GJ.k)(YJ.Lb.LeaveValues, (JJ => {
-        const cJ = (0, gJ.g)(JJ);
-        if ((0, gJ.c)(cJ) && "string" === typeof cJ.leaveEventType) {
+      })), (0, uB.n)(oB.Jb.OverShopInfo, (BB => {
+        const TB = (0, IB.h)(BB);
+        (0, IB.e)(TB) && gB.h.yH("overShopInfo", TB.info, !0)
+      })), (0, uB.n)(oB.Jb.ShowShopTutorial, (() => {
+        gB.h.yH("showShopTutorial", null, !0)
+      }))), kd || (kd = !0, (0, uB.i)((() => {
+        var BB;
+        (0, Jd.y)(), null === (BB = Ld) || void 0 === BB || BB(), Ld = (0, uB.e)() ? (0, gd.c)(uB.e) : null
+      })), (0, uB.n)(oB.Jb.SetCookie, (BB => {
+        const TB = (0, IB.h)(BB),
+          dB = (0, wT.e)().gameNameWithVariation;
+        (0, IB.e)(TB) && "string" === typeof TB.key && null !== dB && (0, Yd.setCookie)(dB, TB.key, TB.value)
+      })), (0, uB.n)(oB.Jb.LeaveValues, (BB => {
+        const TB = (0, IB.h)(BB);
+        if ((0, IB.e)(TB) && "string" === typeof TB.leaveEventType) {
           const {
-            leaveEventType: JJ,
-            category: ZJ,
-            subCategory: FJ,
-            value: UJ
-          } = cJ;
-          (0, AZ.J)({
-            leaveEventType: JJ,
-            category: ZJ,
-            subCategory: FJ,
-            value: UJ
+            leaveEventType: BB,
+            category: dB,
+            subCategory: VB,
+            value: yB
+          } = TB;
+          (0, Jd.C)({
+            leaveEventType: BB,
+            category: dB,
+            subCategory: VB,
+            value: yB
           })
         }
-      })), (0, GJ.k)(YJ.Lb.CustomAnalyticsEvent, (JJ => {
-        const cJ = (0, gJ.g)(JJ);
-        if ((0, gJ.c)(cJ) && "string" === typeof cJ.cat1) {
+      })), (0, uB.n)(oB.Jb.CustomAnalyticsEvent, (BB => {
+        const TB = (0, IB.h)(BB);
+        if ((0, IB.e)(TB) && "string" === typeof TB.cat1) {
           const {
-            cat1: JJ,
-            cat2: ZJ,
-            cat3: FJ,
-            value: UJ
-          } = cJ;
-          (0, AZ.t)({
-            cat1: JJ,
-            cat2: ZJ,
-            cat3: FJ,
-            value: UJ
+            cat1: BB,
+            cat2: dB,
+            cat3: VB,
+            value: yB
+          } = TB;
+          (0, Jd.p)({
+            cat1: BB,
+            cat2: dB,
+            cat3: VB,
+            value: yB
           })
         }
-      })), (0, GJ.k)(YJ.Lb.ProgressionEvent, (JJ => {
-        const cJ = (0, gJ.g)(JJ);
-        if ((0, gJ.c)(cJ)) {
+      })), (0, uB.n)(oB.Jb.ProgressionEvent, (BB => {
+        const TB = (0, IB.h)(BB);
+        if ((0, IB.e)(TB)) {
           const {
-            type: JJ,
-            location1: ZJ,
-            location2: FJ,
-            location3: UJ,
-            score: eJ
-          } = cJ;
-          (0, AZ.x)({
-            type: JJ,
-            location1: ZJ,
-            location2: FJ,
-            location3: UJ,
-            score: eJ
+            type: BB,
+            location1: dB,
+            location2: VB,
+            location3: yB,
+            score: pB
+          } = TB;
+          (0, Jd.t)({
+            type: BB,
+            location1: dB,
+            location2: VB,
+            location3: yB,
+            score: pB
           })
         }
-      })), (0, GJ.k)(YJ.Lb.ResourceEvent, (JJ => {
-        const cJ = (0, gJ.g)(JJ);
-        if ((0, gJ.c)(cJ)) {
+      })), (0, uB.n)(oB.Jb.ResourceEvent, (BB => {
+        const TB = (0, IB.h)(BB);
+        if ((0, IB.e)(TB)) {
           const {
-            type: JJ,
-            resourceType: ZJ,
-            amount: FJ,
-            category: UJ,
-            itemName: eJ
-          } = cJ;
-          (0, AZ.B)({
-            type: JJ,
-            resourceType: ZJ,
-            amount: FJ,
-            category: UJ,
-            itemName: eJ
+            type: BB,
+            resourceType: dB,
+            amount: VB,
+            category: yB,
+            itemName: pB
+          } = TB;
+          (0, Jd.u)({
+            type: BB,
+            resourceType: dB,
+            amount: VB,
+            category: yB,
+            itemName: pB
           })
         }
-      })), (0, GJ.k)(YJ.Lb.LeaderboardResponse, (JJ => {
-        const cJ = (0, gJ.g)(JJ);
-        if ((0, gJ.c)(cJ)) {
+      })), (0, uB.n)(oB.Jb.LeaderboardResponse, (BB => {
+        const TB = (0, IB.h)(BB);
+        if ((0, IB.e)(TB)) {
           const {
-            category: JJ,
-            timeframe: ZJ,
-            data: FJ
-          } = cJ;
-          jJ.i.Uf("leaderboardResponse", {
-            category: JJ,
-            timeframe: ZJ,
-            data: FJ
+            category: BB,
+            timeframe: dB,
+            data: VB
+          } = TB;
+          gB.h.yH("leaderboardResponse", {
+            category: BB,
+            timeframe: dB,
+            data: VB
           })
         }
-      })), (0, GJ.k)(wJ.B, (JJ => {
-        const cJ = (0, gJ.d)(wJ.B, JJ);
-        "string" === typeof cJ && (0, YZ.c)(JJ.conn, cJ)
-      })), (0, GJ.k)(wJ.F, (JJ => {
-        const cJ = (0, gJ.d)(wJ.F, JJ);
-        "string" === typeof cJ && console.error(`[logErrorToConsole]: ${cJ}`)
-      }))), pJ(), (0, vZ.b)(), bc || (bc = !0, (0, GJ.k)(wJ.j, (JJ => {
-        const cJ = (0, gJ.d)(wJ.j, JJ);
-        void 0 !== cJ && (0, Mc.h)(cJ)
-      }))), dc(), Ec(), NJ || (NJ = !0, (0, eJ.s)(OJ)), FJ.gameBridge.attach(bZ), (0, FJ.installPageSources)({
+      })), (0, uB.n)(KB.y, (BB => {
+        const TB = (0, IB.f)(KB.y, BB);
+        "string" === typeof TB && (0, od.b)(BB.conn, TB)
+      })), (0, uB.n)(KB.z, (BB => {
+        const TB = (0, IB.f)(KB.z, BB);
+        "string" === typeof TB && console.error(`[logErrorToConsole]: ${TB}`)
+      }))), QB(), (0, md.d)(), FT || (FT = !0, (0, uB.n)(KB.i, (BB => {
+        const TB = (0, IB.f)(KB.i, BB);
+        void 0 !== TB && (0, UT.i)(TB)
+      }))), RT(), tT(), ZB || (ZB = !0, (0, pB.v)(XB)), VB.gameBridge.attach(Kd), (0, VB.installPageSources)({
         commands: {
-          ...FJ.DEFAULT_CLIENT_PAGE_SOURCES.commands,
-          setChunkAddDistance: QZ.g
+          ...VB.DEFAULT_CLIENT_PAGE_SOURCES.commands,
+          setChunkAddDistance: td.h
         },
-        queries: VZ.wasmIconQueries,
+        queries: sd.wasmIconQueries,
         lookups: {
-          ...FJ.DEFAULT_CLIENT_PAGE_SOURCES.lookups,
-          ...VZ.wasmIconLookups,
-          EQ: QZ.c,
-          drawCallStats: EZ
+          ...VB.DEFAULT_CLIENT_PAGE_SOURCES.lookups,
+          ...sd.wasmIconLookups,
+          Tm: td.e,
+          drawCallStats: fd
         }
-      }), (0, mZ.b)(), (0, VZ.loadIcons)()
+      }), (0, Nd.c)(), (0, sd.loadIcons)()
     }
   },
-  39499: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      e: () => XJ,
-      h: () => AJ
+  39467: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => lB,
+      f: () => JB
     });
-    var FJ = ZJ(39508);
-    let UJ = null,
-      eJ = null;
+    var VB = dB(39470);
+    let yB = null,
+      pB = null;
 
-    function XJ() {
-      return UJ ??= ZJ.e(54).then((() => ZJ(41282))).catch((JJ => {
-        throw UJ = null, JJ
-      })), UJ
+    function lB() {
+      return yB ??= dB.e(54).then((() => dB(41310))).catch((BB => {
+        throw yB = null, BB
+      })), yB
     }
 
-    function AJ() {
-      return eJ ??= Promise.all([XJ(), (0, FJ.d)()]).then((JJ => {
-        let [cJ] = JJ;
-        return cJ
-      }), (JJ => {
-        throw eJ = null, JJ
-      })), eJ
+    function JB() {
+      return pB ??= Promise.all([lB(), (0, VB.f)()]).then((BB => {
+        let [TB] = BB;
+        return TB
+      }), (BB => {
+        throw pB = null, BB
+      })), pB
     }
   },
-  36067: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      c: () => FJ
+  36e3: (BB, TB, dB) => {
+    dB.d(TB, {
+      e: () => VB
     });
-    const FJ = {
+    const VB = {
       "skyblock:forged:astral-astral-astral": {
         name: "Heart of the Cosmos",
         lore: "Three shards of the night sky, forged as one. The stars answer whoever holds it.",
@@ -2563,96 +2563,96 @@ export const modules = {
       }
     }
   },
-  8719: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      e: () => UJ,
-      h: () => eJ
+  8746: (BB, TB, dB) => {
+    dB.d(TB, {
+      c: () => yB,
+      d: () => pB
     });
-    var FJ = ZJ(8687);
-    const UJ = "Air",
-      eJ = Object.freeze(new FJ.h(UJ, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var VB = dB(8698);
+    const yB = "Air",
+      pB = Object.freeze(new VB.h(yB, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   },
-  35886: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      e: () => UJ,
-      g: () => eJ,
-      k: () => DJ,
-      m: () => AJ,
-      p: () => qJ,
-      r: () => jJ,
-      u: () => hJ,
-      v: () => YJ,
-      x: () => XJ
+  35832: (BB, TB, dB) => {
+    dB.d(TB, {
+      A: () => lB,
+      d: () => yB,
+      g: () => pB,
+      i: () => LB,
+      m: () => JB,
+      p: () => YB,
+      s: () => gB,
+      v: () => kB,
+      z: () => oB
     });
-    var FJ = ZJ(1137);
-    let UJ = function(JJ) {
-        return JJ[JJ.Join = 0] = "Join", JJ[JJ.Leave = 1] = "Leave", JJ[JJ.Push = 2] = "Push", JJ[JJ.Cursor = 3] = "Cursor", JJ[JJ.Submit = 4] = "Submit", JJ[JJ.ReloadAsVariation = 5] = "ReloadAsVariation", JJ[JJ.CreateFile = 6] = "CreateFile", JJ[JJ.RenameFile = 7] = "RenameFile", JJ[JJ.DeleteFile = 8] = "DeleteFile", JJ[JJ.SetEngine = 9] = "SetEngine", JJ[JJ.RenameFolder = 10] = "RenameFolder", JJ
+    var VB = dB(1117);
+    let yB = function(BB) {
+        return BB[BB.Join = 0] = "Join", BB[BB.Leave = 1] = "Leave", BB[BB.Push = 2] = "Push", BB[BB.Cursor = 3] = "Cursor", BB[BB.Submit = 4] = "Submit", BB[BB.ReloadAsVariation = 5] = "ReloadAsVariation", BB[BB.CreateFile = 6] = "CreateFile", BB[BB.RenameFile = 7] = "RenameFile", BB[BB.DeleteFile = 8] = "DeleteFile", BB[BB.SetEngine = 9] = "SetEngine", BB[BB.RenameFolder = 10] = "RenameFolder", BB
       }({}),
-      eJ = function(JJ) {
-        return JJ[JJ.Joined = 0] = "Joined", JJ[JJ.Updates = 1] = "Updates", JJ[JJ.Presence = 2] = "Presence", JJ[JJ.RemoteCursor = 3] = "RemoteCursor", JJ[JJ.ForceClose = 4] = "ForceClose", JJ[JJ.LobbyFilesChanged = 5] = "LobbyFilesChanged", JJ[JJ.EngineSettings = 6] = "EngineSettings", JJ
+      pB = function(BB) {
+        return BB[BB.Joined = 0] = "Joined", BB[BB.Updates = 1] = "Updates", BB[BB.Presence = 2] = "Presence", BB[BB.RemoteCursor = 3] = "RemoteCursor", BB[BB.ForceClose = 4] = "ForceClose", BB[BB.LobbyFilesChanged = 5] = "LobbyFilesChanged", BB[BB.EngineSettings = 6] = "EngineSettings", BB
       }({});
 
-    function XJ(JJ) {
-      return "lobby" === JJ.kind ? `lobby:${JJ.path}` : `codeBlock:${JJ.pos[0]},${JJ.pos[1]},${JJ.pos[2]}`
+    function lB(BB) {
+      return "lobby" === BB.kind ? `lobby:${BB.path}` : `codeBlock:${BB.pos[0]},${BB.pos[1]},${BB.pos[2]}`
     }
 
-    function AJ(JJ) {
-      if ("lobby" === JJ) return {
+    function JB(BB) {
+      if ("lobby" === BB) return {
         kind: "lobby",
-        path: FJ.g
+        path: VB.f
       };
-      if (JJ.startsWith("lobby:")) {
-        const cJ = JJ.slice(6);
-        return hJ(cJ) ? {
+      if (BB.startsWith("lobby:")) {
+        const TB = BB.slice(6);
+        return kB(TB) ? {
           kind: "lobby",
-          path: cJ
+          path: TB
         } : null
       }
-      const cJ = JJ.match(/^codeBlock:(-?\d+),(-?\d+),(-?\d+)$/);
-      return cJ ? {
+      const TB = BB.match(/^codeBlock:(-?\d+),(-?\d+),(-?\d+)$/);
+      return TB ? {
         kind: "codeBlock",
-        pos: [parseInt(cJ[1]), parseInt(cJ[2]), parseInt(cJ[3])]
+        pos: [parseInt(TB[1]), parseInt(TB[2]), parseInt(TB[3])]
       } : null
     }
 
-    function qJ(JJ) {
-      return JJ.endsWith(".d.ts")
+    function YB(BB) {
+      return BB.endsWith(".d.ts")
     }
 
-    function jJ(JJ) {
-      return JJ.endsWith(".ts") && !qJ(JJ)
+    function gB(BB) {
+      return BB.endsWith(".ts") && !YB(BB)
     }
-    const YJ = 64;
+    const oB = 64;
 
-    function hJ(JJ) {
-      if (!JJ || JJ !== JJ.trim()) return !1;
-      if (JJ.length > YJ) return !1;
-      if (JJ.startsWith("/") || JJ.includes("\\") || JJ.includes("\0")) return !1;
-      if (!qJ(JJ) && !jJ(JJ) && ! function(JJ) {
-          return JJ.endsWith(".js") && !JJ.endsWith(".min.js") && !JJ.endsWith(".bundle.js")
-        }(JJ)) return !1;
-      const cJ = JJ.split("/");
-      for (const ZJ of cJ)
-        if ("" === ZJ || "." === ZJ || ".." === ZJ) return !1;
+    function kB(BB) {
+      if (!BB || BB !== BB.trim()) return !1;
+      if (BB.length > oB) return !1;
+      if (BB.startsWith("/") || BB.includes("\\") || BB.includes("\0")) return !1;
+      if (!YB(BB) && !gB(BB) && ! function(BB) {
+          return BB.endsWith(".js") && !BB.endsWith(".min.js") && !BB.endsWith(".bundle.js")
+        }(BB)) return !1;
+      const TB = BB.split("/");
+      for (const dB of TB)
+        if ("" === dB || "." === dB || ".." === dB) return !1;
       return !0
     }
-    const DJ = 14e3
+    const LB = 14e3
   },
-  37992: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      b: () => FJ,
-      d: () => UJ
+  37983: (BB, TB, dB) => {
+    dB.d(TB, {
+      e: () => VB,
+      i: () => yB
     });
-    const FJ = ["description", "label"];
+    const VB = ["description", "label"];
 
-    function UJ(JJ) {
-      const cJ = JJ.type;
+    function yB(BB) {
+      const TB = BB.type;
       return {
-        type: cJ,
-        params: JJ[cJ]
+        type: TB,
+        params: BB[TB]
       }
     }
   }
 };
 Object.freeze(modules);
-for (const JJ in modules) Object.freeze(modules[JJ]);
+for (const BB in modules) Object.freeze(modules[BB]);

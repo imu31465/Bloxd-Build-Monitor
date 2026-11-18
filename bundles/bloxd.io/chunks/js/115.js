@@ -1,40 +1,40 @@
 export const id = 115;
 export const ids = [115];
 export const modules = {
-  39853: (JJ, cJ, ZJ) => {
-    ZJ.r(cJ), ZJ.d(cJ, {
-      ShaderPackCategory: () => WJ
+  39804: (BB, TB, dB) => {
+    dB.r(TB), dB.d(TB, {
+      ShaderPackCategory: () => rB
     });
-    var FJ = ZJ(47),
-      UJ = ZJ(1421),
-      eJ = ZJ(1329),
-      XJ = ZJ(1406),
-      AJ = ZJ(1086),
-      qJ = ZJ(80),
-      jJ = ZJ(13),
-      YJ = ZJ(1528),
-      hJ = ZJ(5960),
-      DJ = ZJ(223),
-      sJ = ZJ(5996),
-      nJ = ZJ(5994),
-      GJ = ZJ(6004),
-      fJ = ZJ(5886),
-      xJ = ZJ(4401),
-      rJ = ZJ(5944),
-      vJ = ZJ(5955),
-      mJ = ZJ(2943);
+    var VB = dB(62),
+      yB = dB(1422),
+      pB = dB(1324),
+      lB = dB(1407),
+      JB = dB(1078),
+      YB = dB(95),
+      gB = dB(21),
+      oB = dB(1507),
+      kB = dB(5949),
+      LB = dB(256),
+      OB = dB(5987),
+      DB = dB(5985),
+      uB = dB(5994),
+      HB = dB(5891),
+      EB = dB(4411),
+      vB = dB(5934),
+      mB = dB(5943),
+      iB = dB(2941);
 
-    function QJ(JJ, cJ) {
-      const ZJ = (0, sJ.storedPackOutcome)(JJ, cJ);
-      return "none" !== ZJ.kind || "noCompiler" === ZJ.reason
+    function NB(BB, TB) {
+      const dB = (0, OB.storedPackOutcome)(BB, TB);
+      return "none" !== dB.kind || "noCompiler" === dB.reason
     }
-    var EJ = ZJ(926),
-      VJ = ZJ.n(EJ),
-      KJ = ZJ(5951),
-      yJ = ZJ(942),
-      SJ = ZJ(5939),
-      IJ = ZJ(990);
-    const MJ = {
+    var tB = dB(933),
+      fB = dB.n(tB),
+      sB = dB(5940),
+      MB = dB(946),
+      zB = dB(5932),
+      wB = dB(980);
+    const UB = {
       ready: "shaderPack:statusReady",
       readyAfterReload: "shaderPack:statusReadyAfterReload",
       noWebGpu: "shaderPack:statusNoWebGpu",
@@ -47,249 +47,249 @@ export const modules = {
       noCompiler: "shaderPack:statusNoCompiler"
     };
 
-    function bJ(JJ, cJ) {
-      return "failedRecheck" === JJ && cJ.listing ? "shaderPack:statusFailedRecheckListed" : MJ[JJ]
+    function FB(BB, TB) {
+      return "failedRecheck" === BB && TB.listing ? "shaderPack:statusFailedRecheckListed" : UB[BB]
     }
 
-    function wJ(JJ) {
+    function KB(BB) {
       let {
-        stored: cJ,
-        checking: ZJ,
-        webGpuUsable: FJ,
-        changePending: UJ,
-        compiler: eJ,
-        t: XJ
-      } = JJ;
-      const AJ = function(JJ, cJ, ZJ, FJ, UJ) {
-          const eJ = (0, sJ.storedPackOutcome)(JJ, UJ);
-          return "none" === eJ.kind ? "noCompiler" === eJ.reason ? cJ ? "checking" : "noCompiler" : "otherApiVersion" === eJ.reason ? "wrongApiVersion" : "failed" : (0, mJ.c)() ? "harnessBuild" : "blocked" === eJ.kind ? (0, sJ.shaderPackNeedsCheck)(JJ, UJ) ? cJ ? "checking" : !1 === ZJ ? "noWebGpu" : "unchecked" : "failedRecheck" : !1 === ZJ ? "offNoWebGpu" : FJ ? "readyAfterReload" : "ready"
-        }(cJ, ZJ, FJ, UJ, eJ),
-        qJ = "failed" === AJ || "failedRecheck" === AJ,
-        jJ = qJ || "wrongApiVersion" === AJ || "noCompiler" === AJ,
-        YJ = "ready" === AJ || "readyAfterReload" === AJ ? cJ.validation.offInStrict : [];
-      return (0, IJ.jsxs)(IJ.Fragment, {
-        children: [(0, IJ.jsxs)("div", {
-          className: VJ()("ShaderPackStatus", {
-            Ready: "ready" === AJ,
-            Failed: jJ
+        stored: TB,
+        checking: dB,
+        webGpuUsable: VB,
+        changePending: yB,
+        compiler: pB,
+        t: lB
+      } = BB;
+      const JB = function(BB, TB, dB, VB, yB) {
+          const pB = (0, OB.storedPackOutcome)(BB, yB);
+          return "none" === pB.kind ? "noCompiler" === pB.reason ? TB ? "checking" : "noCompiler" : "otherApiVersion" === pB.reason ? "wrongApiVersion" : "failed" : (0, iB.g)() ? "harnessBuild" : "blocked" === pB.kind ? (0, OB.shaderPackNeedsCheck)(BB, yB) ? TB ? "checking" : !1 === dB ? "noWebGpu" : "unchecked" : "failedRecheck" : !1 === dB ? "offNoWebGpu" : VB ? "readyAfterReload" : "ready"
+        }(TB, dB, VB, yB, pB),
+        YB = "failed" === JB || "failedRecheck" === JB,
+        gB = YB || "wrongApiVersion" === JB || "noCompiler" === JB,
+        oB = "ready" === JB || "readyAfterReload" === JB ? TB.validation.offInStrict : [];
+      return (0, wB.jsxs)(wB.Fragment, {
+        children: [(0, wB.jsxs)("div", {
+          className: fB()("ShaderPackStatus", {
+            Ready: "ready" === JB,
+            Failed: gB
           }),
-          children: ["ready" === AJ && (0, IJ.jsx)(yJ.c, {
+          children: ["ready" === JB && (0, wB.jsx)(MB.e, {
             name: "circle-check"
-          }), jJ && (0, IJ.jsx)(yJ.c, {
+          }), gB && (0, wB.jsx)(MB.e, {
             name: "triangle-exclamation"
-          }), "harnessBuild" === AJ ? (0, mJ.b)() : XJ(bJ(AJ, cJ), {
-            packVersion: String(cJ.manifest.apiVersion),
-            version: String(KJ.b)
+          }), "harnessBuild" === JB ? (0, iB.e)() : lB(FB(JB, TB), {
+            packVersion: String(TB.manifest.apiVersion),
+            version: String(sB.d)
           })]
-        }), qJ && (0, IJ.jsx)(SJ.e, {
-          diagnostics: cJ.validation.errors,
-          more: cJ.validation.moreErrors,
-          t: XJ
-        }), YJ.length > 0 && (0, IJ.jsxs)(IJ.Fragment, {
-          children: [(0, IJ.jsxs)("div", {
+        }), YB && (0, wB.jsx)(zB.c, {
+          diagnostics: TB.validation.errors,
+          more: TB.validation.moreErrors,
+          t: lB
+        }), oB.length > 0 && (0, wB.jsxs)(wB.Fragment, {
+          children: [(0, wB.jsxs)("div", {
             className: "ShaderPackStatus OffInStrict",
-            children: [(0, IJ.jsx)(yJ.c, {
+            children: [(0, wB.jsx)(MB.e, {
               name: "triangle-exclamation"
-            }), XJ("shaderPack:offInStrict")]
-          }), (0, IJ.jsx)(SJ.e, {
-            diagnostics: YJ,
-            t: XJ
+            }), lB("shaderPack:offInStrict")]
+          }), (0, wB.jsx)(zB.c, {
+            diagnostics: oB,
+            t: lB
           })]
         })]
       })
     }
 
-    function WJ(JJ) {
+    function rB(BB) {
       let {
-        setApplySettingsCallback: cJ
-      } = JJ;
+        setApplySettingsCallback: TB
+      } = BB;
       const {
-        t: ZJ
-      } = (0, AJ.F)(), [UJ, XJ] = (0, FJ.useState)(null), [jJ, YJ] = (0, FJ.useState)(null), [mJ, EJ] = (0, FJ.useState)(null), [VJ] = (0, FJ.useState)(DJ.e), [KJ, yJ] = (0, FJ.useState)(!0), [SJ, MJ] = (0, FJ.useState)(!1), {
-        loading: bJ,
-        error: WJ,
-        setError: HJ,
-        onFiles: PJ
-      } = (0, vJ.g)((async JJ => {
-        const cJ = await (0, hJ.loadPageShaderPackCompiler)();
-        if (!cJ) return void HJ(ZJ("shaderPack:compilerUnavailable"));
-        YJ(cJ);
-        const FJ = (0, sJ.toStoredShaderPack)(JJ, await (0, nJ.f)(cJ, JJ.files));
-        await (0, sJ.saveShaderPack)(FJ, cJ) ? (XJ(FJ), kJ(UJ, FJ, cJ)) : HJ(ZJ("shaderPack:saveFailed"))
+        t: dB
+      } = (0, JB.z)(), [yB, lB] = (0, VB.useState)(null), [gB, oB] = (0, VB.useState)(null), [iB, tB] = (0, VB.useState)(null), [fB] = (0, VB.useState)(LB.g), [sB, MB] = (0, VB.useState)(!0), [zB, UB] = (0, VB.useState)(!1), {
+        loading: FB,
+        error: rB,
+        setError: cB,
+        onFiles: SB
+      } = (0, mB.g)((async BB => {
+        const TB = await (0, kB.loadPageShaderPackCompiler)();
+        if (!TB) return void cB(dB("shaderPack:compilerUnavailable"));
+        oB(TB);
+        const VB = (0, OB.toStoredShaderPack)(BB, await (0, DB.f)(TB, BB.files));
+        await (0, OB.saveShaderPack)(VB, TB) ? (lB(VB), PB(yB, VB, TB)) : cB(dB("shaderPack:saveFailed"))
       }));
 
-      function kJ(JJ, ZJ, FJ) {
-        (function(JJ, cJ, ZJ, FJ) {
-          return ZJ || QJ(JJ, FJ) || QJ(cJ, FJ)
-        })(JJ, ZJ, (0, sJ.isShaderPackChangePending)(), FJ) && ((0, sJ.markShaderPackChangePending)(), cJ((() => xJ.l)))
+      function PB(BB, dB, VB) {
+        (function(BB, TB, dB, VB) {
+          return dB || NB(BB, VB) || NB(TB, VB)
+        })(BB, dB, (0, OB.isShaderPackChangePending)(), VB) && ((0, OB.markShaderPackChangePending)(), TB((() => EB.n)))
       }
-      return (0, FJ.useEffect)((() => {
-        let JJ = !1;
+      return (0, VB.useEffect)((() => {
+        let BB = !1;
         return async function() {
-          const cJ = (0, qJ.hasUsableWebGpuAdapter)(),
-            ZJ = await (0, GJ.f)();
-          if (JJ) return;
-          XJ(ZJ), MJ(!0), yJ(!1);
-          const FJ = null !== ZJ ? (0, hJ.loadPageShaderPackCompiler)() : null,
-            UJ = await cJ;
-          if (JJ) return;
-          EJ(UJ);
-          const eJ = await FJ;
-          if (!JJ && (YJ(eJ), null !== ZJ && UJ && null !== eJ && (0, sJ.shaderPackNeedsCheck)(ZJ, eJ))) {
-            const cJ = await (0, nJ.d)(ZJ, eJ);
-            JJ || XJ((JJ => JJ === ZJ ? cJ : JJ))
+          const TB = (0, YB.hasUsableWebGpuAdapter)(),
+            dB = await (0, uB.d)();
+          if (BB) return;
+          lB(dB), UB(!0), MB(!1);
+          const VB = null !== dB ? (0, kB.loadPageShaderPackCompiler)() : null,
+            yB = await TB;
+          if (BB) return;
+          tB(yB);
+          const pB = await VB;
+          if (!BB && (oB(pB), null !== dB && yB && null !== pB && (0, OB.shaderPackNeedsCheck)(dB, pB))) {
+            const TB = await (0, DB.c)(dB, pB);
+            BB || lB((BB => BB === dB ? TB : BB))
           }
-        }().catch((cJ => {
-          console.error("Failed to load the stored shader pack", cJ), JJ || HJ(ZJ("shaderPack:unexpectedError"))
+        }().catch((TB => {
+          console.error("Failed to load the stored shader pack", TB), BB || cB(dB("shaderPack:unexpectedError"))
         })).finally((() => {
-          JJ || (yJ(!1), MJ(!1))
+          BB || (MB(!1), UB(!1))
         })), () => {
-          JJ = !0
+          BB = !0
         }
-      }), []), (0, IJ.jsxs)("div", {
+      }), []), (0, wB.jsxs)("div", {
         className: "ShaderPackCategory SettingsMenuRightInner",
-        children: [(0, IJ.jsx)("div", {
+        children: [(0, wB.jsx)("div", {
           className: "ShaderPackIntro",
-          children: ZJ("shaderPack:intro")
-        }), (0, IJ.jsx)(gJ, {
-          to: fJ.S,
+          children: dB("shaderPack:intro")
+        }), (0, wB.jsx)(IB, {
+          to: HB.T,
           className: "ShaderPackBrowseLink",
-          children: (0, IJ.jsx)(eJ.m, {
+          children: (0, wB.jsx)(pB.k, {
             className: "ShaderPackBrowseButton",
-            children: ZJ("shaderPackListing:browse")
+            children: dB("shaderPackListing:browse")
           })
-        }), !1 === mJ && (0, IJ.jsx)("div", {
+        }), !1 === iB && (0, wB.jsx)("div", {
           className: "SettingsBoxWarning",
-          children: ZJ(VJ ? "shaderPack:needsWebGpuDisabledUntilRestart" : "shaderPack:needsWebGpu")
-        }), null !== WJ && (0, IJ.jsxs)("div", {
+          children: dB(fB ? "shaderPack:needsWebGpuDisabledUntilRestart" : "shaderPack:needsWebGpu")
+        }), null !== rB && (0, wB.jsxs)("div", {
           className: "ShaderPackCategoryError",
-          children: [ZJ("general:error"), ": ", WJ]
-        }), UJ && (0, IJ.jsxs)("div", {
+          children: [dB("general:error"), ": ", rB]
+        }), yB && (0, wB.jsxs)("div", {
           className: "SettingBox ShaderPackSummary",
-          children: [(0, IJ.jsxs)("div", {
+          children: [(0, wB.jsxs)("div", {
             className: "ShaderPackSummaryHeader",
-            children: [(0, IJ.jsxs)("div", {
-              children: [(0, IJ.jsx)("div", {
+            children: [(0, wB.jsxs)("div", {
+              children: [(0, wB.jsx)("div", {
                 className: "ShaderPackName",
-                children: UJ.manifest.name
-              }), UJ.manifest.author && (0, IJ.jsx)("div", {
+                children: yB.manifest.name
+              }), yB.manifest.author && (0, wB.jsx)("div", {
                 className: "ShaderPackAuthor",
-                children: (0, rJ.g)(ZJ, "shaderPack:byAuthor", {
-                  author: UJ.manifest.author
+                children: (0, vB.f)(dB, "shaderPack:byAuthor", {
+                  author: yB.manifest.author
                 })
-              }), UJ.manifest.description && (0, IJ.jsx)("div", {
+              }), yB.manifest.description && (0, wB.jsx)("div", {
                 className: "ShaderPackDescription",
-                children: UJ.manifest.description
-              }), UJ.listing && (0, IJ.jsx)("div", {
+                children: yB.manifest.description
+              }), yB.listing && (0, wB.jsx)("div", {
                 className: "ShaderPackAuthor",
-                children: (0, IJ.jsx)(gJ, {
-                  to: (0, fJ.W)(UJ.listing.packId),
+                children: (0, wB.jsx)(IB, {
+                  to: (0, HB.X)(yB.listing.packId),
                   className: "ShaderPackListingLink",
-                  children: ZJ("shaderPackListing:openPackPage")
+                  children: dB("shaderPackListing:openPackPage")
                 })
               })]
-            }), (0, IJ.jsx)(eJ.J, {
-              disabled: KJ || bJ,
+            }), (0, wB.jsx)(pB.N, {
+              disabled: sB || FB,
               onClick: async function() {
-                yJ(!0), HJ(null), await (0, sJ.removeShaderPack)(), XJ(null), yJ(!1), kJ(UJ, null, jJ)
+                MB(!0), cB(null), await (0, OB.removeShaderPack)(), lB(null), MB(!1), PB(yB, null, gB)
               },
-              children: ZJ("shaderPack:removePack")
+              children: dB("shaderPack:removePack")
             })]
-          }), (0, IJ.jsx)(wJ, {
-            stored: UJ,
-            checking: SJ,
-            webGpuUsable: mJ,
-            changePending: (0, sJ.isShaderPackChangePending)(),
-            compiler: jJ,
-            t: ZJ
+          }), (0, wB.jsx)(KB, {
+            stored: yB,
+            checking: zB,
+            webGpuUsable: iB,
+            changePending: (0, OB.isShaderPackChangePending)(),
+            compiler: gB,
+            t: dB
           })]
-        }), (0, IJ.jsx)(vJ.e, {
-          busy: KJ || bJ || SJ,
-          disabled: KJ || bJ || SJ || !0 !== mJ,
-          onFiles: PJ
+        }), (0, wB.jsx)(mB.e, {
+          busy: sB || FB || zB,
+          disabled: sB || FB || zB || !0 !== iB,
+          onFiles: SB
         })]
       })
     }
 
-    function gJ(JJ) {
+    function IB(BB) {
       let {
-        to: cJ,
-        className: ZJ,
-        children: FJ
-      } = JJ;
+        to: TB,
+        className: dB,
+        children: VB
+      } = BB;
       const {
-        gameState: eJ
-      } = (0, jJ.j)(["gameState"]), {
-        pathname: AJ,
-        search: qJ
-      } = (0, UJ.q)(), hJ = "landingPage" !== eJ && "studio" !== eJ;
-      return (0, IJ.jsx)(XJ.LinkPreserveSearch, {
-        to: cJ,
-        className: ZJ,
-        target: hJ ? "_blank" : void 0,
+        gameState: pB
+      } = (0, gB.m)(["gameState"]), {
+        pathname: JB,
+        search: YB
+      } = (0, yB.o)(), kB = "landingPage" !== pB && "studio" !== pB;
+      return (0, wB.jsx)(lB.LinkPreserveSearch, {
+        to: TB,
+        className: dB,
+        target: kB ? "_blank" : void 0,
         onClick: () => {
-          hJ || ((0, fJ.L)(`${AJ}${qJ}`), (0, YJ.f)())
+          kB || ((0, HB.K)(`${JB}${YB}`), (0, oB.f)())
         },
-        children: FJ
+        children: VB
       })
     }
   },
-  5886: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      A: () => WJ,
-      C: () => zJ,
-      G: () => nJ,
-      H: () => xJ,
-      K: () => IJ,
-      L: () => YJ,
-      M: () => bJ,
-      N: () => GJ,
-      Q: () => dJ,
-      R: () => kJ,
-      S: () => XJ,
-      U: () => pJ,
-      W: () => qJ,
-      Y: () => AJ,
-      ab: () => HJ,
-      c: () => rJ,
-      eb: () => PJ,
-      g: () => yJ,
-      ib: () => vJ,
-      j: () => fJ,
-      kb: () => MJ,
-      n: () => DJ,
-      r: () => hJ,
-      s: () => wJ,
-      w: () => sJ
+  5891: (BB, TB, dB) => {
+    dB.d(TB, {
+      $: () => cB,
+      D: () => aB,
+      E: () => DB,
+      H: () => EB,
+      J: () => wB,
+      K: () => oB,
+      L: () => FB,
+      M: () => uB,
+      O: () => RB,
+      Q: () => PB,
+      T: () => lB,
+      V: () => QB,
+      X: () => YB,
+      Y: () => JB,
+      cb: () => SB,
+      e: () => vB,
+      eb: () => mB,
+      gb: () => UB,
+      i: () => MB,
+      m: () => HB,
+      q: () => LB,
+      s: () => kB,
+      v: () => KB,
+      w: () => OB,
+      z: () => rB
     });
-    var FJ = ZJ(5889),
-      UJ = ZJ(143),
-      eJ = ZJ(3982);
-    const XJ = "/shader-packs",
-      AJ = `${XJ}/publish`;
+    var VB = dB(5898),
+      yB = dB(163),
+      pB = dB(3971);
+    const lB = "/shader-packs",
+      JB = `${lB}/publish`;
 
-    function qJ(JJ) {
-      return `${XJ}/${encodeURIComponent(JJ)}`
+    function YB(BB) {
+      return `${lB}/${encodeURIComponent(BB)}`
     }
-    let jJ = null;
+    let gB = null;
 
-    function YJ(JJ) {
-      jJ = JJ
-    }
-
-    function hJ() {
-      return jJ
+    function oB(BB) {
+      gB = BB
     }
 
-    function DJ() {
-      jJ = null
+    function kB() {
+      return gB
     }
 
-    function sJ(JJ) {
-      return JJ.playerHasRank("developer") || JJ.playerHasRank("admin")
+    function LB() {
+      gB = null
     }
-    const nJ = ["terrain", "water", "models", "sunShadows", "strict"],
-      GJ = {
+
+    function OB(BB) {
+      return BB.playerHasRank("developer") || BB.playerHasRank("admin")
+    }
+    const DB = ["terrain", "water", "models", "sunShadows", "strict"],
+      uB = {
         terrain: "shaderPackListing:filterTerrain",
         water: "shaderPackListing:filterWater",
         models: "shaderPackListing:filterModels",
@@ -297,89 +297,89 @@ export const modules = {
         strict: "shaderPackListing:filterAllGames"
       };
 
-    function fJ(JJ, cJ) {
-      return JJ.withFeatures.includes(cJ) ? "with" : JJ.withoutFeatures.includes(cJ) ? "without" : null
+    function HB(BB, TB) {
+      return BB.withFeatures.includes(TB) ? "with" : BB.withoutFeatures.includes(TB) ? "without" : null
     }
 
-    function xJ(JJ) {
-      return null === JJ ? "with" : "with" === JJ ? "without" : null
+    function EB(BB) {
+      return null === BB ? "with" : "with" === BB ? "without" : null
     }
 
-    function rJ(JJ) {
-      return "with" === JJ ? "only" : null === JJ ? "include" : void 0
+    function vB(BB) {
+      return "with" === BB ? "only" : null === BB ? "include" : void 0
     }
 
-    function vJ(JJ, cJ) {
-      const ZJ = fJ(JJ, cJ),
-        FJ = JJ => JJ.filter((JJ => JJ !== cJ));
+    function mB(BB, TB) {
+      const dB = HB(BB, TB),
+        VB = BB => BB.filter((BB => BB !== TB));
       return {
-        withFeatures: null === ZJ ? [...JJ.withFeatures, cJ] : FJ(JJ.withFeatures),
-        withoutFeatures: "with" === ZJ ? [...JJ.withoutFeatures, cJ] : FJ(JJ.withoutFeatures)
+        withFeatures: null === dB ? [...BB.withFeatures, TB] : VB(BB.withFeatures),
+        withoutFeatures: "with" === dB ? [...BB.withoutFeatures, TB] : VB(BB.withoutFeatures)
       }
     }
-    const mJ = "section",
-      QJ = "sort",
-      EJ = "filters",
-      VJ = "q",
-      KJ = "banned",
-      yJ = "popular",
-      SJ = "strict";
+    const iB = "section",
+      NB = "sort",
+      tB = "filters",
+      fB = "q",
+      sB = "banned",
+      MB = "popular",
+      zB = "strict";
 
-    function IJ(JJ) {
-      var cJ, ZJ, UJ;
-      const XJ = JJ.get(mJ),
-        AJ = (null !== (cJ = JJ.get(EJ)) && void 0 !== cJ ? cJ : SJ).split(","),
-        qJ = JJ.get(KJ);
+    function wB(BB) {
+      var TB, dB, yB;
+      const lB = BB.get(iB),
+        JB = (null !== (TB = BB.get(tB)) && void 0 !== TB ? TB : zB).split(","),
+        YB = BB.get(sB);
       return {
-        section: "favourites" === XJ || "mine" === XJ ? XJ : "explore",
-        sort: null !== (ZJ = FJ.t.find((cJ => cJ === JJ.get(QJ)))) && void 0 !== ZJ ? ZJ : yJ,
-        withFeatures: nJ.filter((JJ => AJ.includes(JJ) && !AJ.includes(`-${JJ}`))),
-        withoutFeatures: nJ.filter((JJ => AJ.includes(`-${JJ}`))),
-        searchQuery: (null === (UJ = JJ.get(VJ)) || void 0 === UJ ? void 0 : UJ.slice(0, FJ.E)) || null,
-        pageNumber: (0, eJ.h)(JJ.get(eJ.e)),
-        banned: "only" === qJ ? "with" : "include" === qJ ? null : "without"
+        section: "favourites" === lB || "mine" === lB ? lB : "explore",
+        sort: null !== (dB = VB.u.find((TB => TB === BB.get(NB)))) && void 0 !== dB ? dB : MB,
+        withFeatures: DB.filter((BB => JB.includes(BB) && !JB.includes(`-${BB}`))),
+        withoutFeatures: DB.filter((BB => JB.includes(`-${BB}`))),
+        searchQuery: (null === (yB = BB.get(fB)) || void 0 === yB ? void 0 : yB.slice(0, VB.J)) || null,
+        pageNumber: (0, pB.f)(BB.get(pB.b)),
+        banned: "only" === YB ? "with" : "include" === YB ? null : "without"
       }
     }
 
-    function MJ(JJ, cJ) {
-      var ZJ;
-      const FJ = gJ(cJ);
-      (0, eJ.l)(JJ, mJ, "explore" === cJ.section ? null : cJ.section), (0, eJ.l)(JJ, QJ, cJ.sort === yJ ? null : cJ.sort), (0, eJ.l)(JJ, EJ, FJ === SJ ? null : FJ), (0, eJ.l)(JJ, VJ, cJ.searchQuery), (0, eJ.l)(JJ, KJ, null !== (ZJ = rJ(cJ.banned)) && void 0 !== ZJ ? ZJ : null), (0, eJ.m)(JJ, cJ.pageNumber)
+    function UB(BB, TB) {
+      var dB;
+      const VB = IB(TB);
+      (0, pB.h)(BB, iB, "explore" === TB.section ? null : TB.section), (0, pB.h)(BB, NB, TB.sort === MB ? null : TB.sort), (0, pB.h)(BB, tB, VB === zB ? null : VB), (0, pB.h)(BB, fB, TB.searchQuery), (0, pB.h)(BB, sB, null !== (dB = vB(TB.banned)) && void 0 !== dB ? dB : null), (0, pB.i)(BB, TB.pageNumber)
     }
 
-    function bJ(JJ) {
-      const cJ = new URLSearchParams;
-      return MJ(cJ, {
+    function FB(BB) {
+      const TB = new URLSearchParams;
+      return UB(TB, {
         section: "explore",
-        sort: yJ,
-        withFeatures: "strict" === JJ ? [JJ] : [JJ, "strict"],
+        sort: MB,
+        withFeatures: "strict" === BB ? [BB] : [BB, "strict"],
         withoutFeatures: [],
         searchQuery: null,
         pageNumber: 1,
         banned: "without"
-      }), `${XJ}?${cJ.toString()}`
+      }), `${lB}?${TB.toString()}`
     }
 
-    function wJ(JJ) {
-      return gJ(JJ) === SJ
+    function KB(BB) {
+      return IB(BB) === zB
     }
 
-    function WJ(JJ) {
-      return null !== JJ.searchQuery || "with" === JJ.banned || gJ(JJ) !== SJ
+    function rB(BB) {
+      return null !== BB.searchQuery || "with" === BB.banned || IB(BB) !== zB
     }
 
-    function gJ(JJ) {
-      return nJ.flatMap((cJ => {
-        const ZJ = fJ(JJ, cJ);
-        return "with" === ZJ ? [cJ] : "without" === ZJ ? [`-${cJ}`] : []
+    function IB(BB) {
+      return DB.flatMap((TB => {
+        const dB = HB(BB, TB);
+        return "with" === dB ? [TB] : "without" === dB ? [`-${TB}`] : []
       })).join(",")
     }
-    const HJ = {
+    const cB = {
         popular: "shaderPackListing:sortPopular",
         updated: "shaderPackListing:sortUpdated",
         newest: "shaderPackListing:sortNewest"
       },
-      PJ = {
+      SB = {
         forest: "shaderPackListing:viewForest",
         desert: "shaderPackListing:viewDesert",
         water: "shaderPackListing:viewWater",
@@ -387,78 +387,78 @@ export const modules = {
         cave: "shaderPackListing:viewCave"
       };
 
-    function kJ(JJ) {
-      return Math.round(100 * Math.max(0, 1 - 1 / JJ))
+    function PB(BB) {
+      return Math.round(100 * Math.max(0, 1 - 1 / BB))
     }
 
-    function pJ(JJ, cJ, ZJ, UJ) {
-      const eJ = [];
-      JJ.isBanned && eJ.push({
+    function QB(BB, TB, dB, yB) {
+      const pB = [];
+      BB.isBanned && pB.push({
         tone: "warning",
-        text: UJ("shaderPackListing:ownerBanned"),
+        text: yB("shaderPackListing:ownerBanned"),
         detail: null
       });
       const {
-        pending: XJ
-      } = JJ;
-      if (null === JJ.brokenError || XJ && !XJ.error || eJ.push({
+        pending: lB
+      } = BB;
+      if (null === BB.brokenError || lB && !lB.error || pB.push({
           tone: "warning",
-          text: UJ("shaderPackListing:ownerBroken"),
-          detail: JJ.brokenError
-        }), null !== XJ && void 0 !== XJ && XJ.error) eJ.push({
+          text: yB("shaderPackListing:ownerBroken"),
+          detail: BB.brokenError
+        }), null !== lB && void 0 !== lB && lB.error) pB.push({
         tone: "warning",
-        text: UJ(cJ ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
-        detail: (0, FJ.j)(XJ.error) ? null : XJ.error
+        text: yB(TB ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
+        detail: (0, VB.j)(lB.error) ? null : lB.error
       });
-      else if (XJ) {
-        const JJ = null === XJ.renderNotBefore ? 0 : XJ.renderNotBefore - ZJ,
-          FJ = String(Math.ceil(JJ / 6e4)),
-          AJ = UJ(cJ ? JJ > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : JJ > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
-            minutes: FJ
+      else if (lB) {
+        const BB = null === lB.renderNotBefore ? 0 : lB.renderNotBefore - dB,
+          VB = String(Math.ceil(BB / 6e4)),
+          JB = yB(TB ? BB > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : BB > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
+            minutes: VB
           });
-        eJ.push({
+        pB.push({
           tone: "info",
-          text: AJ,
+          text: JB,
           detail: null
         })
       }
-      return JJ.listed || eJ.push({
+      return BB.listed || pB.push({
         tone: "info",
-        text: UJ("shaderPackListing:ownerUnlisted"),
+        text: yB("shaderPackListing:ownerUnlisted"),
         detail: null
-      }), eJ
+      }), pB
     }
 
-    function dJ(JJ) {
-      return Math.max(1, Math.round(JJ / 1024))
+    function RB(BB) {
+      return Math.max(1, Math.round(BB / 1024))
     }
 
-    function zJ(JJ, cJ, ZJ) {
-      return JJ instanceof UJ.b && JJ.errorMessageForUser ? JJ.errorMessageForUser : cJ(ZJ)
+    function aB(BB, TB, dB) {
+      return BB instanceof yB.b && BB.errorMessageForUser ? BB.errorMessageForUser : TB(dB)
     }
   },
-  5889: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      B: () => FJ,
-      C: () => DJ,
-      E: () => YJ,
-      G: () => vJ,
-      I: () => hJ,
-      L: () => jJ,
-      b: () => sJ,
-      f: () => GJ,
-      i: () => nJ,
-      j: () => rJ,
-      l: () => QJ,
-      n: () => qJ,
-      o: () => UJ,
-      q: () => mJ,
-      t: () => eJ,
-      u: () => AJ,
-      x: () => XJ
+  5898: (BB, TB, dB) => {
+    dB.d(TB, {
+      A: () => lB,
+      D: () => VB,
+      H: () => LB,
+      J: () => oB,
+      N: () => mB,
+      P: () => kB,
+      S: () => gB,
+      b: () => OB,
+      c: () => uB,
+      f: () => DB,
+      j: () => vB,
+      k: () => NB,
+      n: () => YB,
+      q: () => yB,
+      r: () => iB,
+      u: () => pB,
+      w: () => JB
     });
-    const FJ = ["forest", "desert", "water", "night", "cave"];
-    const UJ = {
+    const VB = ["forest", "desert", "water", "night", "cave"];
+    const yB = {
         full: {
           width: 3840,
           height: 2160
@@ -472,43 +472,43 @@ export const modules = {
           height: 360
         }
       },
-      eJ = ["popular", "updated", "newest"],
-      XJ = 3,
-      AJ = 32,
-      qJ = 300;
+      pB = ["popular", "updated", "newest"],
+      lB = 3,
+      JB = 32,
+      YB = 300;
 
-    function jJ(JJ, cJ) {
-      return JJ.slice(0, cJ).replace(/[\uD800-\uDBFF]$/, "")
+    function gB(BB, TB) {
+      return BB.slice(0, TB).replace(/[\uD800-\uDBFF]$/, "")
     }
-    const YJ = 64,
-      hJ = 512,
-      DJ = 18e5;
-    const sJ = "Bloxdhub",
-      nJ = "https://bloxdhub.com/shaders";
+    const oB = 64,
+      kB = 512,
+      LB = 18e5;
+    const OB = "Bloxdhub",
+      DB = "https://bloxdhub.com/shaders";
 
-    function GJ(JJ) {
-      return `https://bloxdhub.com/workshop/${encodeURIComponent(JJ)}`
+    function uB(BB) {
+      return `https://bloxdhub.com/workshop/${encodeURIComponent(BB)}`
     }
-    const fJ = "Screenshot generation failed.",
-      xJ = "Its screenshots couldn't be generated:";
+    const HB = "Screenshot generation failed.",
+      EB = "Its screenshots couldn't be generated:";
 
-    function rJ(JJ) {
-      var cJ;
-      return JJ === fJ || null !== (cJ = null === JJ || void 0 === JJ ? void 0 : JJ.startsWith(xJ)) && void 0 !== cJ && cJ
-    }
-
-    function vJ(JJ, cJ) {
-      return `shaderPacks/${JJ}/${cJ}.json`
+    function vB(BB) {
+      var TB;
+      return BB === HB || null !== (TB = null === BB || void 0 === BB ? void 0 : BB.startsWith(EB)) && void 0 !== TB && TB
     }
 
-    function mJ(JJ, cJ, ZJ, FJ) {
-      return null === cJ.renderId ? QJ(JJ, cJ.baselineVersion, ZJ, FJ) : `${JJ}/${function(JJ,cJ,ZJ,FJ){return`shaderPacks/${JJ}/${cJ}/${ZJ}-${FJ}.webp`}(cJ.packId,cJ.renderId,ZJ,FJ)}`
+    function mB(BB, TB) {
+      return `shaderPacks/${BB}/${TB}.json`
     }
 
-    function QJ(JJ, cJ, ZJ, FJ) {
-      return `${JJ}/${function(JJ,cJ,ZJ){return`shaderPacks/baseline/${JJ}/${cJ}-${ZJ}.webp`}(cJ,ZJ,FJ)}`
+    function iB(BB, TB, dB, VB) {
+      return null === TB.renderId ? NB(BB, TB.baselineVersion, dB, VB) : `${BB}/${function(BB,TB,dB,VB){return`shaderPacks/${BB}/${TB}/${dB}-${VB}.webp`}(TB.packId,TB.renderId,dB,VB)}`
+    }
+
+    function NB(BB, TB, dB, VB) {
+      return `${BB}/${function(BB,TB,dB){return`shaderPacks/baseline/${BB}/${TB}-${dB}.webp`}(TB,dB,VB)}`
     }
   }
 };
 Object.freeze(modules);
-for (const JJ in modules) Object.freeze(modules[JJ]);
+for (const BB in modules) Object.freeze(modules[BB]);

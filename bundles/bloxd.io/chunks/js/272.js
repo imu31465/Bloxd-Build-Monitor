@@ -1,157 +1,157 @@
 export const id = 272;
 export const ids = [272];
 export const modules = {
-  39987: (JJ, cJ, ZJ) => {
-    ZJ.r(cJ), ZJ.d(cJ, {
-      CapeMaterialPlugin: () => mJ,
-      HueTintMaterialPlugin: () => QJ,
-      LifeformMaterialPlugin: () => EJ,
-      OverlayMaterialPlugin: () => VJ
+  39959: (BB, TB, dB) => {
+    dB.r(TB), dB.d(TB, {
+      CapeMaterialPlugin: () => iB,
+      HueTintMaterialPlugin: () => NB,
+      LifeformMaterialPlugin: () => tB,
+      OverlayMaterialPlugin: () => fB
     });
-    var FJ = ZJ(39993),
-      UJ = ZJ(36976);
-    class eJ extends((0, FJ.e)(UJ.d)) {}(0, FJ.i)(UJ.d, eJ);
-    var XJ = ZJ(36082);
-    class AJ extends((0, FJ.e)(XJ.f)) {}(0, FJ.i)(XJ.f, AJ);
-    var qJ = ZJ(36823);
-    class jJ extends((0, FJ.e)(qJ.f)) {}(0, FJ.i)(qJ.f, jJ);
-    var YJ = ZJ(36325),
-      hJ = ZJ(39029),
-      DJ = ZJ(36319);
-    class sJ extends((0, FJ.e)(DJ.e)) {
-      constructor(JJ, cJ, ZJ) {
-        super(JJ, cJ, ZJ), (0, YJ.i)(JJ)
+    var VB = dB(39962),
+      yB = dB(36906);
+    class pB extends((0, VB.e)(yB.e)) {}(0, VB.f)(yB.e, pB);
+    var lB = dB(36016);
+    class JB extends((0, VB.e)(lB.e)) {}(0, VB.f)(lB.e, JB);
+    var YB = dB(36768);
+    class gB extends((0, VB.e)(YB.f)) {}(0, VB.f)(YB.f, gB);
+    var oB = dB(36272),
+      kB = dB(39019),
+      LB = dB(36264);
+    class OB extends((0, VB.e)(LB.f)) {
+      constructor(BB, TB, dB) {
+        super(BB, TB, dB), (0, oB.f)(BB)
       }
-      dispose(JJ) {
-        (0, YJ.l)(this._material), super.dispose(JJ)
+      dispose(BB) {
+        (0, oB.g)(this._material), super.dispose(BB)
       }
-    }(0, FJ.i)(DJ.e, sJ), (0, DJ.g)({
-      disableUnusedSpecularTerm: FJ.c,
-      isLightingDisabled: JJ => JJ instanceof hJ.StandardMaterial && JJ.disableLighting
+    }(0, VB.f)(LB.f, OB), (0, LB.h)({
+      disableUnusedSpecularTerm: VB.d,
+      isLightingDisabled: BB => BB instanceof kB.StandardMaterial && BB.disableLighting
     });
-    var nJ = ZJ(37667);
-    class GJ extends((0, FJ.e)(nJ.g)) {}(0, FJ.i)(nJ.g, GJ);
-    var fJ = ZJ(37754),
-      xJ = ZJ(36239),
-      rJ = ZJ(37125),
-      vJ = ZJ(36130);
-    class mJ extends((0, FJ.e)(fJ.d)) {}(0, FJ.i)(fJ.d, mJ);
-    class QJ extends((0, FJ.e)(xJ.e)) {}(0, FJ.i)(xJ.e, QJ);
-    class EJ extends((0, FJ.e)(rJ.i)) {}(0, FJ.i)(rJ.i, EJ);
-    class VJ extends((0, FJ.e)(vJ.d)) {}(0, FJ.i)(vJ.d, VJ)
+    var DB = dB(37661);
+    class uB extends((0, VB.e)(DB.i)) {}(0, VB.f)(DB.i, uB);
+    var HB = dB(37767),
+      EB = dB(36186),
+      vB = dB(37071),
+      mB = dB(36078);
+    class iB extends((0, VB.e)(HB.c)) {}(0, VB.f)(HB.c, iB);
+    class NB extends((0, VB.e)(EB.e)) {}(0, VB.f)(EB.e, NB);
+    class tB extends((0, VB.e)(vB.p)) {}(0, VB.f)(vB.p, tB);
+    class fB extends((0, VB.e)(mB.d)) {}(0, VB.f)(mB.d, fB)
   },
-  39993: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      c: () => NJ,
-      e: () => rJ,
-      i: () => RJ
+  39962: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => ZB,
+      e: () => vB,
+      f: () => qB
     });
-    var FJ = ZJ(39029),
-      UJ = ZJ(40001),
-      eJ = ZJ(40037),
-      XJ = ZJ(40004),
-      AJ = ZJ(36789),
-      qJ = ZJ(36797),
-      jJ = ZJ(36802),
-      YJ = ZJ(36808),
-      hJ = ZJ(36121),
-      DJ = ZJ(36125),
-      sJ = ZJ(40009),
-      nJ = ZJ(36107),
-      GJ = ZJ(36113),
-      fJ = ZJ(36093);
+    var VB = dB(39019),
+      yB = dB(39971),
+      pB = dB(40018),
+      lB = dB(39976),
+      JB = dB(36740),
+      YB = dB(36751),
+      gB = dB(36757),
+      oB = dB(36759),
+      kB = dB(36067),
+      LB = dB(36074),
+      OB = dB(39980),
+      DB = dB(36050),
+      uB = dB(36054),
+      HB = dB(36033);
 
-    function xJ(JJ, cJ) {
-      return Object.assign((function(JJ, ZJ, FJ, UJ) {
-        return cJ(this.featureState, JJ, ZJ, FJ, UJ)
+    function EB(BB, TB) {
+      return Object.assign((function(BB, dB, VB, yB) {
+        return TB(this.featureState, BB, dB, VB, yB)
       }), {
-        Un: JJ
+        gD: BB
       })
     }
 
-    function rJ(JJ) {
-      const cJ = class extends sJ.c {
-          constructor(cJ, ZJ) {
-            const FJ = (0, GJ._)(cJ),
-              UJ = FJ && (0, GJ.r)(FJ, JJ.name);
-            for (var eJ = arguments.length, XJ = new Array(eJ > 2 ? eJ - 2 : 0), AJ = 2; AJ < eJ; AJ++) XJ[AJ - 2] = arguments[AJ];
-            super(cJ, JJ.name, JJ.priority, UJ ? UJ.defines : JJ.defines(...XJ), !1), this.featureState = void 0, this.featureState = ZJ, this._pluginManager._addPlugin(this), this._enable(!0), (0, GJ.v)(this._material, JJ, this.featureState, this._pluginDefineNames)
+    function vB(BB) {
+      const TB = class extends OB.c {
+          constructor(TB, dB) {
+            const VB = (0, uB.X)(TB),
+              yB = VB && (0, uB.x)(VB, BB.name);
+            for (var pB = arguments.length, lB = new Array(pB > 2 ? pB - 2 : 0), JB = 2; JB < pB; JB++) lB[JB - 2] = arguments[JB];
+            super(TB, BB.name, BB.priority, yB ? yB.defines : BB.defines(...lB), !1), this.featureState = void 0, this.featureState = dB, this._pluginManager._addPlugin(this), this._enable(!0), (0, uB.y)(this._material, BB, this.featureState, this._pluginDefineNames)
           }
           getClassName() {
-            return JJ.className
+            return BB.className
           }
-          isCompatible(JJ) {
-            return JJ === fJ.c.GLSL || JJ === fJ.c.WGSL
+          isCompatible(BB) {
+            return BB === HB.b.GLSL || BB === HB.b.WGSL
           }
         },
-        ZJ = (0, nJ.i)(JJ);
-      for (const [FJ, UJ] of Object.entries(nJ.b)) {
-        const eJ = JJ[FJ];
-        if (eJ) {
-          const JJ = ZJ[FJ];
-          Object.defineProperty(cJ.prototype, UJ, {
-            value: xJ(eJ, JJ),
+        dB = (0, DB.g)(BB);
+      for (const [VB, yB] of Object.entries(DB.c)) {
+        const pB = BB[VB];
+        if (pB) {
+          const BB = dB[VB];
+          Object.defineProperty(TB.prototype, yB, {
+            value: EB(pB, BB),
             writable: !0,
             configurable: !0
           })
         }
       }
-      return cJ
+      return TB
     }
-    class vJ extends(rJ(AJ.c)) {}
-    var mJ = ZJ(38624),
-      QJ = ZJ(40012);
-    const EJ = new WeakMap;
+    class mB extends(vB(JB.c)) {}
+    var iB = dB(38562),
+      NB = dB(39986);
+    const tB = new WeakMap;
 
-    function VJ(JJ, cJ, ZJ) {
-      let FJ = EJ.get(ZJ);
-      FJ || (FJ = new Map, EJ.set(ZJ, FJ));
+    function fB(BB, TB, dB) {
+      let VB = tB.get(dB);
+      VB || (VB = new Map, tB.set(dB, VB));
       const {
-        url: UJ
-      } = JJ;
-      let eJ = FJ.get(UJ);
-      return eJ || (eJ = async function(JJ, cJ, ZJ) {
+        url: yB
+      } = BB;
+      let pB = VB.get(yB);
+      return pB || (pB = async function(BB, TB, dB) {
         const {
-          width: FJ,
-          height: UJ
-        } = JJ.getSize(), eJ = Math.round(UJ / FJ), AJ = cJ && cJ.byteLength === FJ * FJ * eJ * 4 ? cJ : JJ._readPixelsSync();
-        return new QJ.b(AJ, FJ, FJ, eJ, mJ.e.TEXTUREFORMAT_RGBA, ZJ, !0, !1, XJ.b.NEAREST_NEAREST_MIPLINEAR)
-      }(JJ, cJ, ZJ), FJ.set(UJ, eJ), eJ.catch((() => {
-        FJ.delete(UJ)
-      }))), eJ
+          width: VB,
+          height: yB
+        } = BB.getSize(), pB = Math.round(yB / VB), JB = TB && TB.byteLength === VB * VB * pB * 4 ? TB : BB._readPixelsSync();
+        return new NB.d(JB, VB, VB, pB, iB.d.TEXTUREFORMAT_RGBA, dB, !0, !1, lB.b.NEAREST_NEAREST_MIPLINEAR)
+      }(BB, TB, dB), VB.set(yB, pB), pB.catch((() => {
+        VB.delete(yB)
+      }))), pB
     }
-    var KJ = ZJ(36814);
-    class yJ extends(rJ(qJ.g)) {
-      constructor(JJ, cJ) {
-        super(JJ, cJ), cJ.textures.forEach(((JJ, cJ) => {
-          JJ.mirror.onLoadObservable.add((JJ => {
-            this.setTextureArrayData(JJ, cJ).catch((JJ => {
-              console.error(`Failed to build texture array for atlas ${cJ}`, JJ)
+    var sB = dB(36762);
+    class MB extends(vB(YB.k)) {
+      constructor(BB, TB) {
+        super(BB, TB), TB.textures.forEach(((BB, TB) => {
+          BB.mirror.onLoadObservable.add((BB => {
+            this.setTextureArrayData(BB, TB).catch((BB => {
+              console.error(`Failed to build texture array for atlas ${TB}`, BB)
             }))
           }))
-        })), (0, KJ.i)(cJ, JJ.shaderLanguage)
+        })), (0, sB.h)(TB, BB.shaderLanguage)
       }
-      async setTextureArrayData(JJ, cJ) {
-        var ZJ, FJ;
-        const UJ = this.featureState,
+      async setTextureArrayData(BB, TB) {
+        var dB, VB;
+        const yB = this.featureState,
           {
-            width: eJ,
-            height: XJ
-          } = JJ.getSize(),
-          AJ = UJ.useWebGL2 ? await VJ(JJ, null !== (ZJ = null === (FJ = UJ.sources.pixels) || void 0 === FJ ? void 0 : FJ[cJ]) && void 0 !== ZJ ? ZJ : null, this._material.Qy()) : null;
-        (0, KJ.e)(this._material, UJ, cJ, AJ, eJ, Math.round(XJ / eJ), this._material.shaderLanguage)
+            width: pB,
+            height: lB
+          } = BB.getSize(),
+          JB = yB.useWebGL2 ? await fB(BB, null !== (dB = null === (VB = yB.sources.pixels) || void 0 === VB ? void 0 : VB[TB]) && void 0 !== dB ? dB : null, this._material.jU()) : null;
+        (0, sB.b)(this._material, yB, TB, JB, pB, Math.round(lB / pB), this._material.shaderLanguage)
       }
     }
-    var SJ = ZJ(40018),
-      IJ = ZJ(39065),
-      MJ = ZJ(36165),
-      bJ = ZJ(40024),
-      wJ = ZJ(39170),
-      WJ = ZJ(39058),
-      gJ = ZJ(39971),
-      HJ = ZJ(36504),
-      PJ = ZJ(40033);
-    class kJ extends SJ.b {
+    var zB = dB(39994),
+      wB = dB(39058),
+      UB = dB(36119),
+      FB = dB(40003),
+      KB = dB(39156),
+      rB = dB(39045),
+      IB = dB(39949),
+      cB = dB(36450),
+      SB = dB(40010);
+    class PB extends zB.b {
       getData() {
         return null
       }
@@ -160,320 +160,320 @@ export const modules = {
         super._rebuild()
       }
     }
-    const pJ = {
-      Mesh: bJ.d,
-      TransformNode: gJ.e,
-      fn: SJ.b,
-      VertexBuffer: SJ.e,
-      BoundingInfo: IJ.b,
-      Pn: MJ.Pn,
-      ArenaBuffer: kJ,
-      SubMesh: WJ.e,
-      VertexData: wJ.e,
-      MirroredGeometry: PJ.b,
-      meshFromArrays: PJ.f,
-      plainMeshFromArrays: PJ.g
+    const QB = {
+      Mesh: FB.c,
+      TransformNode: IB.c,
+      iD: zB.b,
+      VertexBuffer: zB.f,
+      BoundingInfo: wB.b,
+      RD: UB.RD,
+      ArenaBuffer: PB,
+      SubMesh: rB.c,
+      VertexData: KB.d,
+      MirroredGeometry: SB.c,
+      meshFromArrays: SB.d,
+      plainMeshFromArrays: SB.f
     };
-    (0, HJ.e)(pJ);
-    var dJ = ZJ(36325);
-    class zJ extends(rJ(YJ.j)) {
-      constructor(JJ, cJ) {
-        if (super(JJ, cJ), JJ instanceof FJ.StandardMaterial && cJ.dirLightCount > 0) {
-          const cJ = JJ,
-            ZJ = cJ._blockDirtyMechanism;
-          cJ._blockDirtyMechanism = !0, JJ.disableLighting = !0, cJ._blockDirtyMechanism = ZJ;
-          const FJ = (0, GJ._)(JJ);
-          FJ && (FJ.disableLighting = !0, (0, GJ.W)(FJ))
-        }(0, dJ.i)(JJ)
+    (0, cB.d)(QB);
+    var RB = dB(36272);
+    class aB extends(vB(oB.m)) {
+      constructor(BB, TB) {
+        if (super(BB, TB), BB instanceof VB.StandardMaterial && TB.dirLightCount > 0) {
+          const TB = BB,
+            dB = TB._blockDirtyMechanism;
+          TB._blockDirtyMechanism = !0, BB.disableLighting = !0, TB._blockDirtyMechanism = dB;
+          const VB = (0, uB.X)(BB);
+          VB && (VB.disableLighting = !0, (0, uB.U)(VB))
+        }(0, RB.f)(BB)
       }
-      dispose(JJ) {
-        (0, dJ.l)(this._material), super.dispose(JJ)
+      dispose(BB) {
+        (0, RB.g)(this._material), super.dispose(BB)
       }
     }
 
-    function NJ(JJ, cJ) {
-      if (!(cJ instanceof FJ.StandardMaterial) || cJ.specularTexture) return;
+    function ZB(BB, TB) {
+      if (!(TB instanceof VB.StandardMaterial) || TB.specularTexture) return;
       const {
-        r: ZJ,
-        g: UJ,
-        b: eJ
-      } = cJ.specularColor;
-      0 === ZJ && 0 === UJ && 0 === eJ && (JJ.SPECULARTERM = !1)
-    }(0, YJ.f)({
-      disableUnusedSpecularTerm: NJ
+        r: dB,
+        g: yB,
+        b: pB
+      } = TB.specularColor;
+      0 === dB && 0 === yB && 0 === pB && (BB.SPECULARTERM = !1)
+    }(0, oB.i)({
+      disableUnusedSpecularTerm: ZB
     });
-    var OJ = ZJ(36261),
-      TJ = ZJ(36517);
-    const CJ = new RegExp(`^#define ${jJ.b}\\s*$`, "m");
-    class uJ extends(rJ(jJ.j)) {
-      constructor(JJ, cJ) {
-        super(JJ, cJ), this.xn = !1, cJ.ditherOnlyWhileFading && (TJ.c.add(JJ), this.prewarmDitherTwins(JJ))
+    var XB = dB(36211),
+      WB = dB(36457);
+    const hB = new RegExp(`^#define ${gB.d}\\s*$`, "m");
+    class CB extends(vB(gB.g)) {
+      constructor(BB, TB) {
+        super(BB, TB), this.ND = !1, TB.ditherOnlyWhileFading && (WB.f.add(BB), this.prewarmDitherTwins(BB))
       }
-      prewarmDitherTwins(JJ) {
-        const cJ = new WeakSet;
-        JJ.onEffectCreatedObservable.add((ZJ => {
+      prewarmDitherTwins(BB) {
+        const TB = new WeakSet;
+        BB.onEffectCreatedObservable.add((dB => {
           let {
-            effect: FJ,
-            subMesh: UJ
-          } = ZJ;
-          if (this.featureState.prewarmingDither || cJ.has(FJ)) return;
-          cJ.add(FJ);
-          const eJ = null === UJ || void 0 === UJ ? void 0 : UJ.getMesh();
-          eJ && !CJ.test(FJ.defines) && JJ.Qy().onAfterRenderObservable.addOnce((() => {
-            this.prewarmDither(eJ) || cJ.delete(FJ)
+            effect: VB,
+            subMesh: yB
+          } = dB;
+          if (this.featureState.prewarmingDither || TB.has(VB)) return;
+          TB.add(VB);
+          const pB = null === yB || void 0 === yB ? void 0 : yB.getMesh();
+          pB && !hB.test(VB.defines) && BB.jU().onAfterRenderObservable.addOnce((() => {
+            this.prewarmDither(pB) || TB.delete(VB)
           }))
         }))
       }
-      prewarmDither(JJ) {
-        if (this.xn || JJ.YZJ()) return !1;
-        const cJ = new WJ.e(0, 0, 0, 0, 0, JJ, void 0, !1, !1);
+      prewarmDither(BB) {
+        if (this.ND || BB.WdB()) return !1;
+        const TB = new rB.c(0, 0, 0, 0, 0, BB, void 0, !1, !1);
         this.featureState.prewarmingDither = !0;
         try {
-          this._material.isReadyForSubMesh(JJ, cJ)
+          this._material.isReadyForSubMesh(BB, TB)
         } finally {
           this.featureState.prewarmingDither = !1
         }
-        return null !== cJ.effect
+        return null !== TB.effect
       }
-      dispose(JJ) {
-        this.xn = !0, super.dispose(JJ)
+      dispose(BB) {
+        this.ND = !0, super.dispose(BB)
       }
     }
-    const iJ = new Map;
+    const GB = new Map;
 
-    function RJ(JJ, cJ) {
-      iJ.set(JJ, cJ)
+    function qB(BB, TB) {
+      GB.set(BB, TB)
     }
-    RJ(AJ.c, vJ), RJ(qJ.g, yJ), RJ(jJ.j, uJ), RJ(YJ.j, zJ), (0, hJ.d)({
-      create: (JJ, cJ) => {
-        const ZJ = new FJ.StandardMaterial(JJ.name, cJ);
-        return (0, OJ.n)(JJ, ZJ), ZJ.detailMap._pluginDefineNames
+    qB(JB.c, mB), qB(YB.k, MB), qB(gB.g, CB), qB(oB.m, aB), (0, kB.c)({
+      create: (BB, TB) => {
+        const dB = new VB.StandardMaterial(BB.name, TB);
+        return (0, XB.n)(BB, dB), dB.detailMap._pluginDefineNames
       },
-      write: (JJ, cJ, ZJ) => {
-        (0, OJ.V)(JJ.mirror, cJ, ZJ)
+      write: (BB, TB, dB) => {
+        (0, XB.I)(BB.mirror, TB, dB)
       },
-      addFeature: (JJ, cJ, ZJ) => {
-        const FJ = iJ.get(cJ.feature);
-        if (!FJ) throw new Error(`${cJ.feature.name} has no plugin class (registerPluginClass)`);
-        new FJ(JJ.mirror, cJ.state, ...ZJ)
+      addFeature: (BB, TB, dB) => {
+        const VB = GB.get(TB.feature);
+        if (!VB) throw new Error(`${TB.feature.name} has no plugin class (registerPluginClass)`);
+        new VB(BB.mirror, TB.state, ...dB)
       },
-      texture: (JJ, cJ, ZJ) => {
+      texture: (BB, TB, dB) => {
         let {
-          url: FJ,
-          noMipmap: UJ,
-          invertY: eJ,
-          samplingMode: AJ,
-          data: qJ,
-          sets: jJ
-        } = ZJ;
-        if (!qJ) {
-          const ZJ = new XJ.b(FJ, cJ, UJ, eJ, AJ);
-          return Object.assign(ZJ, jJ), void(0, DJ.H)(JJ, ZJ)
+          url: VB,
+          noMipmap: yB,
+          invertY: pB,
+          samplingMode: JB,
+          data: YB,
+          sets: gB
+        } = dB;
+        if (!YB) {
+          const dB = new lB.b(VB, TB, yB, pB, JB);
+          return Object.assign(dB, gB), void(0, LB.H)(BB, dB)
         }
-        const YJ = {},
-          hJ = new Promise(((JJ, cJ) => {
-            YJ.onLoad = JJ, YJ.onError = (JJ, ZJ) => {
-              cJ(new Error(`${qJ.context}: ${(null===ZJ||void 0===ZJ?void 0:ZJ.message)||JJ||"Failed to load texture"}`))
+        const oB = {},
+          kB = new Promise(((BB, TB) => {
+            oB.onLoad = BB, oB.onError = (BB, dB) => {
+              TB(new Error(`${YB.context}: ${(null===dB||void 0===dB?void 0:dB.message)||BB||"Failed to load texture"}`))
             }
           })),
           {
-            mimeType: sJ,
-            bytes: nJ,
-            label: GJ
-          } = qJ,
-          fJ = {
-            noMipmap: UJ,
+            mimeType: OB,
+            bytes: DB,
+            label: uB
+          } = YB,
+          HB = {
+            noMipmap: yB,
             invertY: !1,
-            samplingMode: AJ,
-            ...YJ,
-            mimeType: sJ,
+            samplingMode: JB,
+            ...oB,
+            mimeType: OB,
             loaderOptions: void 0,
             useSRGBBuffer: !1
           },
-          xJ = new XJ.b(null, cJ, fJ);
-        OJ.q.set(xJ, hJ), Object.assign(xJ, jJ), xJ.updateURL(FJ, nJ);
-        const rJ = xJ.getInternalTexture();
-        rJ && (rJ.label = GJ), JJ.uvSet = xJ.coordinatesIndex, JJ.matrix.set((0, OJ.L)(xJ)), (0, DJ.H)(JJ, xJ)
+          EB = new lB.b(null, TB, HB);
+        XB.p.set(EB, kB), Object.assign(EB, gB), EB.updateURL(VB, DB);
+        const vB = EB.getInternalTexture();
+        vB && (vB.label = uB), BB.uvSet = EB.coordinatesIndex, BB.matrix.set((0, XB.D)(EB)), (0, LB.H)(BB, EB)
       },
-      cube: (JJ, cJ, ZJ) => {
+      cube: (BB, TB, dB) => {
         let {
-          rootUrl: FJ,
-          files: eJ,
-          noMipmap: AJ,
-          luminance: qJ
-        } = ZJ;
+          rootUrl: VB,
+          files: pB,
+          noMipmap: JB,
+          luminance: YB
+        } = dB;
         const {
-          samplingMode: jJ
-        } = JJ.sampler, YJ = jJ === (0, DJ.A)(AJ) ? null : () => {
-          (0, OJ.H)(hJ, jJ)
-        }, hJ = new UJ.e(FJ, cJ, null, AJ, eJ, YJ, null, (0, DJ.w)(qJ));
-        hJ.coordinatesMode = XJ.b.SKYBOX_MODE, (0, DJ.H)(JJ, hJ)
+          samplingMode: gB
+        } = BB.sampler, oB = gB === (0, LB.x)(JB) ? null : () => {
+          (0, XB.B)(kB, gB)
+        }, kB = new yB.e(VB, TB, null, JB, pB, oB, null, (0, LB.v)(YB));
+        kB.coordinatesMode = lB.b.SKYBOX_MODE, (0, LB.H)(BB, kB)
       },
-      canvas: (JJ, cJ, ZJ) => {
+      canvas: (BB, TB, dB) => {
         let {
-          width: FJ,
-          height: UJ,
-          mipmaps: AJ,
-          samplingMode: qJ,
-          hasAlpha: jJ = !1,
-          wrap: YJ = XJ.b.CLAMP_ADDRESSMODE
-        } = ZJ;
-        const hJ = new eJ.d(cJ, {
-          width: FJ,
-          height: UJ
-        }, JJ, AJ, qJ);
-        hJ.hasAlpha = jJ, hJ.wrapU = YJ, hJ.wrapV = YJ;
-        const DJ = (0, OJ.w)(hJ);
-        return (0, OJ.z)(DJ, hJ), DJ
+          width: VB,
+          height: yB,
+          mipmaps: JB,
+          samplingMode: YB,
+          hasAlpha: gB = !1,
+          wrap: oB = lB.b.CLAMP_ADDRESSMODE
+        } = dB;
+        const kB = new pB.d(TB, {
+          width: VB,
+          height: yB
+        }, BB, JB, YB);
+        kB.hasAlpha = gB, kB.wrapU = oB, kB.wrapV = oB;
+        const LB = (0, XB.t)(kB);
+        return (0, XB.v)(LB, kB), LB
       }
     })
   },
-  40033: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      b: () => YJ,
-      f: () => hJ,
-      g: () => DJ
+  40010: (BB, TB, dB) => {
+    dB.d(TB, {
+      c: () => oB,
+      d: () => kB,
+      f: () => LB
     });
-    var FJ = ZJ(40018),
-      UJ = ZJ(38859),
-      eJ = ZJ(39065),
-      XJ = ZJ(39179),
-      AJ = ZJ(40024),
-      qJ = ZJ(39170),
-      jJ = ZJ(36378);
-    class YJ extends XJ.d {
+    var VB = dB(39994),
+      yB = dB(38819),
+      pB = dB(39058),
+      lB = dB(39158),
+      JB = dB(40003),
+      YB = dB(39156),
+      gB = dB(36331);
+    class oB extends lB.b {
       constructor() {
-        super(...arguments), this.model = null, this.onGeometryUpdated = (JJ, cJ) => {
-          this.releaseUnlessInstanced(cJ)
+        super(...arguments), this.model = null, this.onGeometryUpdated = (BB, TB) => {
+          this.releaseUnlessInstanced(TB)
         }, this.onLinked = null
       }
-      link(JJ) {
-        var cJ;
-        (0, jJ.n)(JJ), this.model = JJ, null === (cJ = this.onLinked) || void 0 === cJ || cJ.call(this, JJ)
+      link(BB) {
+        var TB;
+        (0, gB.l)(BB), this.model = BB, null === (TB = this.onLinked) || void 0 === TB || TB.call(this, BB)
       }
       relink() {
         this.release();
-        const JJ = [];
-        for (const UJ of Object.values(this._vertexBuffers))
-          if (!UJ.getIsInstanced()) {
+        const BB = [];
+        for (const yB of Object.values(this._vertexBuffers))
+          if (!yB.getIsInstanced()) {
             const {
-              byteOffset: cJ,
-              byteStride: ZJ,
-              type: FJ,
-              normalized: eJ
-            } = UJ;
-            JJ.push({
-              kind: UJ.getKind(),
-              data: UJ.getData(),
-              offset: cJ,
-              stride: ZJ,
-              components: UJ.getSize(),
-              glType: FJ,
-              isNormalized: eJ
+              byteOffset: TB,
+              byteStride: dB,
+              type: VB,
+              normalized: pB
+            } = yB;
+            BB.push({
+              kind: yB.getKind(),
+              data: yB.getData(),
+              offset: TB,
+              stride: dB,
+              components: yB.getSize(),
+              glType: VB,
+              isNormalized: pB
             })
-          } const cJ = this._indices.length ? this._indices : null,
+          } const TB = this._indices.length ? this._indices : null,
           {
-            minimum: ZJ,
-            maximum: FJ
+            minimum: dB,
+            maximum: VB
           } = this.extend;
-        this.link(new jJ.f(JJ, cJ, this.getTotalVertices(), new Float64Array(ZJ.JFJ()), new Float64Array(FJ.JFJ())))
+        this.link(new gB.g(BB, TB, this.getTotalVertices(), new Float64Array(dB.FVB()), new Float64Array(VB.FVB())))
       }
-      copy(JJ) {
-        if (!this.model) return super.copy(JJ);
-        const cJ = new YJ(JJ, this.Qy()),
-          ZJ = this.QXJ(void 0, !0);
-        ZJ && cJ.setIndices(ZJ);
-        let XJ = !1;
-        for (const eJ in this._vertexBuffers) {
-          const JJ = this._vertexBuffers[eJ],
-            ZJ = JJ.getData();
-          if (!ZJ) continue;
-          const AJ = JJ.getSize(),
+      copy(BB) {
+        if (!this.model) return super.copy(BB);
+        const TB = new oB(BB, this.jU()),
+          dB = this.elB(void 0, !0);
+        dB && TB.setIndices(dB);
+        let lB = !1;
+        for (const pB in this._vertexBuffers) {
+          const BB = this._vertexBuffers[pB],
+            dB = BB.getData();
+          if (!dB) continue;
+          const JB = BB.getSize(),
             {
-              type: qJ,
-              byteOffset: jJ,
-              byteStride: YJ,
-              normalized: hJ
-            } = JJ;
-          XJ ||= JJ.isUpdatable();
-          const DJ = JJ.getIsInstanced() ? (ZJ instanceof Array ? 4 * ZJ.length : ZJ.byteLength) / YJ : this.getTotalVertices(),
-            sJ = (0, UJ.r)(ZJ, AJ, qJ, jJ, YJ, DJ, !0),
-            nJ = {
-              updatable: JJ.isUpdatable(),
-              stride: AJ,
-              type: qJ,
-              normalized: hJ,
+              type: YB,
+              byteOffset: gB,
+              byteStride: oB,
+              normalized: kB
+            } = BB;
+          lB ||= BB.isUpdatable();
+          const LB = BB.getIsInstanced() ? (dB instanceof Array ? 4 * dB.length : dB.byteLength) / oB : this.getTotalVertices(),
+            OB = (0, yB.s)(dB, JB, YB, gB, oB, LB, !0),
+            DB = {
+              updatable: BB.isUpdatable(),
+              stride: JB,
+              type: YB,
+              normalized: kB,
               takeBufferOwnership: !0,
-              instanced: JJ.getIsInstanced()
+              instanced: BB.getIsInstanced()
             };
-          cJ.setVerticesBuffer(new FJ.e(this.gn(), sJ, eJ, nJ), DJ)
+          TB.setVerticesBuffer(new VB.f(this.PD(), OB, pB, DB), LB)
         }
-        return cJ._updatable = XJ, cJ._boundingInfo = new eJ.b(this.extend.minimum, this.extend.maximum), cJ.relink(), cJ
+        return TB._updatable = lB, TB._boundingInfo = new pB.b(this.extend.minimum, this.extend.maximum), TB.relink(), TB
       }
-      static mergeMeshes(JJ, cJ, ZJ, FJ, UJ, eJ) {
-        const qJ = JJ[0].Qy(),
-          jJ = new AJ.d(JJ[0].name + "_merged", qJ),
-          hJ = new YJ(XJ.d.RandomId(), qJ, void 0, !1, jJ);
+      static mergeMeshes(BB, TB, dB, VB, yB, pB) {
+        const YB = BB[0].jU(),
+          gB = new JB.c(BB[0].name + "_merged", YB),
+          kB = new oB(lB.b.RandomId(), YB, void 0, !1, gB);
         try {
-          if (!AJ.d.MergeMeshes(JJ, cJ, ZJ, jJ, UJ, eJ)) return jJ.dispose(), null
-        } catch (DJ) {
-          throw jJ.dispose(), DJ
+          if (!JB.c.MergeMeshes(BB, TB, dB, gB, yB, pB)) return gB.dispose(), null
+        } catch (LB) {
+          throw gB.dispose(), LB
         }
-        return hJ.relink(), jJ
+        return kB.relink(), gB
       }
-      removeVerticesData(JJ) {
-        this.releaseUnlessInstanced(JJ), super.removeVerticesData(JJ)
+      removeVerticesData(BB) {
+        this.releaseUnlessInstanced(BB), super.removeVerticesData(BB)
       }
       dispose() {
         this.release(), super.dispose()
       }
-      releaseUnlessInstanced(JJ) {
-        var cJ;
-        JJ && null !== (cJ = this.getVertexBuffer(JJ)) && void 0 !== cJ && cJ.getIsInstanced() || this.release()
+      releaseUnlessInstanced(BB) {
+        var TB;
+        BB && null !== (TB = this.getVertexBuffer(BB)) && void 0 !== TB && TB.getIsInstanced() || this.release()
       }
       release() {
-        this.model && ((0, jJ.x)(this.model), this.model = null)
+        this.model && ((0, gB.t)(this.model), this.model = null)
       }
     }
 
-    function hJ(JJ, cJ, ZJ) {
-      let FJ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new AJ.d(JJ, ZJ);
-      const UJ = (0, jJ.l)(cJ),
+    function kB(BB, TB, dB) {
+      let VB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new JB.c(BB, dB);
+      const yB = (0, gB.j)(TB),
         {
-          positions: eJ,
-          normals: hJ,
-          uvs: DJ,
-          indices: sJ,
-          named: nJ = {}
-        } = cJ,
-        GJ = new qJ.e;
-      GJ.positions = eJ, GJ.normals = null !== hJ && void 0 !== hJ ? hJ : null, GJ.uvs = null !== DJ && void 0 !== DJ ? DJ : null, GJ.indices = sJ;
-      const fJ = new YJ(XJ.d.RandomId(), ZJ, GJ, !1, FJ);
+          positions: pB,
+          normals: kB,
+          uvs: LB,
+          indices: OB,
+          named: DB = {}
+        } = TB,
+        uB = new YB.d;
+      uB.positions = pB, uB.normals = null !== kB && void 0 !== kB ? kB : null, uB.uvs = null !== LB && void 0 !== LB ? LB : null, uB.indices = OB;
+      const HB = new oB(lB.b.RandomId(), dB, uB, !1, VB);
       for (const {
-          kind: XJ,
-          components: AJ
+          kind: lB,
+          components: JB
         }
-        of UJ.vertexAttributes) XJ in nJ && FJ.setVerticesData(XJ, nJ[XJ], !1, AJ);
-      return fJ.link(UJ), FJ
+        of yB.vertexAttributes) lB in DB && VB.setVerticesData(lB, DB[lB], !1, JB);
+      return HB.link(yB), VB
     }
 
-    function DJ(JJ, cJ, ZJ) {
-      let FJ = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      const UJ = new AJ.d(JJ, ZJ),
+    function LB(BB, TB, dB) {
+      let VB = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      const yB = new JB.c(BB, dB),
         {
-          positions: eJ,
-          normals: XJ,
-          uvs: jJ,
-          indices: YJ
-        } = cJ;
-      return Object.assign(new qJ.e, {
-        positions: eJ,
-        normals: XJ,
-        uvs: jJ,
-        indices: YJ
-      }).applyToMesh(UJ, FJ), UJ
+          positions: pB,
+          normals: lB,
+          uvs: gB,
+          indices: oB
+        } = TB;
+      return Object.assign(new YB.d, {
+        positions: pB,
+        normals: lB,
+        uvs: gB,
+        indices: oB
+      }).applyToMesh(yB, VB), yB
     }
   }
 };
 Object.freeze(modules);
-for (const JJ in modules) Object.freeze(modules[JJ]);
+for (const BB in modules) Object.freeze(modules[BB]);

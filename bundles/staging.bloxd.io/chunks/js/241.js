@@ -1,23 +1,23 @@
 export const id = 241;
 export const ids = [241];
 export const modules = {
-  39151: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      e: () => UJ
+  39130: (BB, TB, dB) => {
+    dB.d(TB, {
+      c: () => yB
     });
-    var FJ = ZJ(38813);
+    var VB = dB(38759);
 
-    function UJ(JJ) {
-      return class extends JJ {
+    function yB(BB) {
+      return class extends BB {
         constructor() {
           super(...arguments);
-          const JJ = new.target;
-          if (!JJ[Symbol.metadata]) {
-            const cJ = Object.getPrototypeOf(JJ)?.[Symbol.metadata];
-            JJ[Symbol.metadata] = cJ ? Object.create(cJ) : {}
+          const BB = new.target;
+          if (!BB[Symbol.metadata]) {
+            const TB = Object.getPrototypeOf(BB)?.[Symbol.metadata];
+            BB[Symbol.metadata] = TB ? Object.create(TB) : {}
           }
-          const cJ = (0, FJ.e)(JJ[Symbol.metadata]);
-          cJ._imageProcessingConfiguration || (cJ._imageProcessingConfiguration = {
+          const TB = (0, VB.c)(BB[Symbol.metadata]);
+          TB._imageProcessingConfiguration || (TB._imageProcessingConfiguration = {
             type: 9,
             sourceName: void 0
           })
@@ -25,128 +25,128 @@ export const modules = {
         get imageProcessingConfiguration() {
           return this._imageProcessingConfiguration
         }
-        set imageProcessingConfiguration(JJ) {
-          this._attachImageProcessingConfiguration(JJ), this._markAllSubMeshesAsImageProcessingDirty && this._markAllSubMeshesAsImageProcessingDirty()
+        set imageProcessingConfiguration(BB) {
+          this._attachImageProcessingConfiguration(BB), this._markAllSubMeshesAsImageProcessingDirty && this._markAllSubMeshesAsImageProcessingDirty()
         }
-        _attachImageProcessingConfiguration(JJ) {
-          JJ !== this._imageProcessingConfiguration && (this._imageProcessingConfiguration && this._imageProcessingObserver && this._imageProcessingConfiguration.onUpdateParameters.remove(this._imageProcessingObserver), !JJ && this.Qy ? this._imageProcessingConfiguration = this.Qy().imageProcessingConfiguration : JJ && (this._imageProcessingConfiguration = JJ), this._imageProcessingConfiguration && (this._imageProcessingObserver = this._imageProcessingConfiguration.onUpdateParameters.add((() => {
+        _attachImageProcessingConfiguration(BB) {
+          BB !== this._imageProcessingConfiguration && (this._imageProcessingConfiguration && this._imageProcessingObserver && this._imageProcessingConfiguration.onUpdateParameters.remove(this._imageProcessingObserver), !BB && this.jU ? this._imageProcessingConfiguration = this.jU().imageProcessingConfiguration : BB && (this._imageProcessingConfiguration = BB), this._imageProcessingConfiguration && (this._imageProcessingObserver = this._imageProcessingConfiguration.onUpdateParameters.add((() => {
             this._markAllSubMeshesAsImageProcessingDirty && this._markAllSubMeshesAsImageProcessingDirty()
           }))))
         }
         get cameraColorCurvesEnabled() {
           return this.imageProcessingConfiguration.colorCurvesEnabled
         }
-        set cameraColorCurvesEnabled(JJ) {
-          this.imageProcessingConfiguration.colorCurvesEnabled = JJ
+        set cameraColorCurvesEnabled(BB) {
+          this.imageProcessingConfiguration.colorCurvesEnabled = BB
         }
         get cameraColorGradingEnabled() {
           return this.imageProcessingConfiguration.colorGradingEnabled
         }
-        set cameraColorGradingEnabled(JJ) {
-          this.imageProcessingConfiguration.colorGradingEnabled = JJ
+        set cameraColorGradingEnabled(BB) {
+          this.imageProcessingConfiguration.colorGradingEnabled = BB
         }
         get cameraToneMappingEnabled() {
           return this._imageProcessingConfiguration.toneMappingEnabled
         }
-        set cameraToneMappingEnabled(JJ) {
-          this._imageProcessingConfiguration.toneMappingEnabled = JJ
+        set cameraToneMappingEnabled(BB) {
+          this._imageProcessingConfiguration.toneMappingEnabled = BB
         }
         get cameraExposure() {
           return this._imageProcessingConfiguration.exposure
         }
-        set cameraExposure(JJ) {
-          this._imageProcessingConfiguration.exposure = JJ
+        set cameraExposure(BB) {
+          this._imageProcessingConfiguration.exposure = BB
         }
         get cameraContrast() {
           return this._imageProcessingConfiguration.contrast
         }
-        set cameraContrast(JJ) {
-          this._imageProcessingConfiguration.contrast = JJ
+        set cameraContrast(BB) {
+          this._imageProcessingConfiguration.contrast = BB
         }
         get cameraColorGradingTexture() {
           return this._imageProcessingConfiguration.colorGradingTexture
         }
-        set cameraColorGradingTexture(JJ) {
-          this._imageProcessingConfiguration.colorGradingTexture = JJ
+        set cameraColorGradingTexture(BB) {
+          this._imageProcessingConfiguration.colorGradingTexture = BB
         }
         get cameraColorCurves() {
           return this._imageProcessingConfiguration.colorCurves
         }
-        set cameraColorCurves(JJ) {
-          this._imageProcessingConfiguration.colorCurves = JJ
+        set cameraColorCurves(BB) {
+          this._imageProcessingConfiguration.colorCurves = BB
         }
       }
     }
   },
-  39037: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      b: () => eJ,
-      e: () => UJ
+  39030: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => pB,
+      h: () => yB
     });
-    var FJ = ZJ(39041);
+    var VB = dB(39034);
 
-    function UJ(JJ) {
-      return class extends JJ {
+    function yB(BB) {
+      return class extends BB {
         constructor() {
           super(...arguments), this.IMAGEPROCESSING = !1, this.WHITEBALANCE = !1, this.VIGNETTE = !1, this.VIGNETTEBLENDMODEMULTIPLY = !1, this.VIGNETTEBLENDMODEOPAQUE = !1, this.TONEMAPPING = 0, this.CONTRAST = !1, this.COLORCURVES = !1, this.COLORGRADING = !1, this.COLORGRADING3D = !1, this.SAMPLER3DGREENDEPTH = !1, this.SAMPLER3DBGRMAP = !1, this.DITHER = !1, this.IMAGEPROCESSINGPOSTPROCESS = !1, this.SKIPFINALCOLORCLAMP = !1, this.EXPOSURE = !1
         }
       }
     }
-    class eJ extends FJ.d {
+    class pB extends VB.d {
       constructor() {
         super(), this.IMAGEPROCESSING = !1, this.WHITEBALANCE = !1, this.VIGNETTE = !1, this.VIGNETTEBLENDMODEMULTIPLY = !1, this.VIGNETTEBLENDMODEOPAQUE = !1, this.TONEMAPPING = 0, this.CONTRAST = !1, this.COLORCURVES = !1, this.COLORGRADING = !1, this.COLORGRADING3D = !1, this.SAMPLER3DGREENDEPTH = !1, this.SAMPLER3DBGRMAP = !1, this.DITHER = !1, this.IMAGEPROCESSINGPOSTPROCESS = !1, this.EXPOSURE = !1, this.SKIPFINALCOLORCLAMP = !1, this.rebuild()
       }
     }
   },
-  39117: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => hJ
+  39090: (BB, TB, dB) => {
+    dB.d(TB, {
+      b: () => kB
     });
-    var FJ = ZJ(38800),
-      UJ = ZJ(39049),
-      eJ = ZJ(38806),
-      XJ = ZJ(39100),
-      AJ = ZJ(39041),
-      qJ = ZJ(39123),
-      jJ = ZJ(39087);
-    class YJ extends AJ.d {
+    var VB = dB(38745),
+      yB = dB(39040),
+      pB = dB(38750),
+      lB = dB(39078),
+      JB = dB(39034),
+      YB = dB(39099),
+      gB = dB(39073);
+    class oB extends JB.d {
       constructor() {
         super(...arguments), this.DETAIL = !1, this.DETAILDIRECTUV = 0, this.DETAIL_NORMALBLENDMETHOD = 0
       }
     }
-    let hJ = (() => {
-      var JJ, cJ, ZJ, AJ;
-      let hJ, DJ, sJ, nJ, GJ, fJ, xJ = qJ.d,
-        rJ = [],
-        vJ = [],
-        mJ = [],
-        QJ = [],
-        EJ = [],
-        VJ = [],
-        KJ = [],
-        yJ = [],
-        SJ = [],
-        IJ = [],
-        MJ = [],
-        bJ = [];
-      return JJ = class extends xJ {
+    let kB = (() => {
+      var BB, TB, dB, JB;
+      let kB, LB, OB, DB, uB, HB, EB = YB.b,
+        vB = [],
+        mB = [],
+        iB = [],
+        NB = [],
+        tB = [],
+        fB = [],
+        sB = [],
+        MB = [],
+        zB = [],
+        wB = [],
+        UB = [],
+        FB = [];
+      return BB = class extends EB {
         get texture() {
-          return (0, FJ.b)(this, cJ, "f")
+          return (0, VB.b)(this, TB, "f")
         }
-        set texture(JJ) {
-          (0, FJ.c)(this, cJ, JJ, "f")
+        set texture(BB) {
+          (0, VB.f)(this, TB, BB, "f")
         }
         get normalBlendMethod() {
-          return (0, FJ.b)(this, ZJ, "f")
+          return (0, VB.b)(this, dB, "f")
         }
-        set normalBlendMethod(JJ) {
-          (0, FJ.c)(this, ZJ, JJ, "f")
+        set normalBlendMethod(BB) {
+          (0, VB.f)(this, dB, BB, "f")
         }
         get isEnabled() {
-          return (0, FJ.b)(this, AJ, "f")
+          return (0, VB.b)(this, JB, "f")
         }
-        set isEnabled(JJ) {
-          (0, FJ.c)(this, AJ, JJ, "f")
+        set isEnabled(BB) {
+          (0, VB.f)(this, JB, BB, "f")
         }
         _markAllSubMeshesAsTexturesDirty() {
           this._enable(this._isEnabled), this._internalMarkAllSubMeshesAsTexturesDirty()
@@ -154,42 +154,42 @@ export const modules = {
         isCompatible() {
           return !0
         }
-        constructor(JJ) {
-          let eJ = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-          super(JJ, "DetailMap", 140, new YJ, eJ), this._texture = null, cJ.set(this, (0, FJ.e)(this, rJ, void 0)), this.diffuseBlendLevel = ((0, FJ.e)(this, vJ), (0, FJ.e)(this, mJ, 1)), this.roughnessBlendLevel = ((0, FJ.e)(this, QJ), (0, FJ.e)(this, EJ, 1)), this.bumpLevel = ((0, FJ.e)(this, VJ), (0, FJ.e)(this, KJ, 1)), this._normalBlendMethod = ((0, FJ.e)(this, yJ), UJ.c.MATERIAL_NORMALBLENDMETHOD_WHITEOUT), ZJ.set(this, (0, FJ.e)(this, SJ, void 0)), this._isEnabled = ((0, FJ.e)(this, IJ), !1), AJ.set(this, (0, FJ.e)(this, MJ, !1)), this._internalMarkAllSubMeshesAsTexturesDirty = (0, FJ.e)(this, bJ), this._internalMarkAllSubMeshesAsTexturesDirty = JJ._dirtyCallbacks[1]
+        constructor(BB) {
+          let pB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+          super(BB, "DetailMap", 140, new oB, pB), this._texture = null, TB.set(this, (0, VB.h)(this, vB, void 0)), this.diffuseBlendLevel = ((0, VB.h)(this, mB), (0, VB.h)(this, iB, 1)), this.roughnessBlendLevel = ((0, VB.h)(this, NB), (0, VB.h)(this, tB, 1)), this.bumpLevel = ((0, VB.h)(this, fB), (0, VB.h)(this, sB, 1)), this._normalBlendMethod = ((0, VB.h)(this, MB), yB.b.MATERIAL_NORMALBLENDMETHOD_WHITEOUT), dB.set(this, (0, VB.h)(this, zB, void 0)), this._isEnabled = ((0, VB.h)(this, wB), !1), JB.set(this, (0, VB.h)(this, UB, !1)), this._internalMarkAllSubMeshesAsTexturesDirty = (0, VB.h)(this, FB), this._internalMarkAllSubMeshesAsTexturesDirty = BB._dirtyCallbacks[1]
         }
-        isReadyForSubMesh(JJ, cJ, ZJ) {
-          return !this._isEnabled || !(JJ._areTexturesDirty && cJ.texturesEnabled && ZJ.getCaps().standardDerivatives && this._texture && XJ.d.DetailTextureEnabled && !this._texture.isReady())
+        isReadyForSubMesh(BB, TB, dB) {
+          return !this._isEnabled || !(BB._areTexturesDirty && TB.texturesEnabled && dB.getCaps().standardDerivatives && this._texture && lB.d.DetailTextureEnabled && !this._texture.isReady())
         }
-        prepareDefines(JJ, cJ) {
+        prepareDefines(BB, TB) {
           if (this._isEnabled) {
-            JJ.DETAIL_NORMALBLENDMETHOD = this._normalBlendMethod;
-            const ZJ = cJ.gn();
-            JJ._areTexturesDirty && (ZJ.getCaps().standardDerivatives && this._texture && XJ.d.DetailTextureEnabled && this._isEnabled ? ((0, jJ.X)(this._texture, JJ, "DETAIL"), JJ.DETAIL_NORMALBLENDMETHOD = this._normalBlendMethod) : JJ.DETAIL = !1)
-          } else JJ.DETAIL = !1
+            BB.DETAIL_NORMALBLENDMETHOD = this._normalBlendMethod;
+            const dB = TB.PD();
+            BB._areTexturesDirty && (dB.getCaps().standardDerivatives && this._texture && lB.d.DetailTextureEnabled && this._isEnabled ? ((0, gB.S)(this._texture, BB, "DETAIL"), BB.DETAIL_NORMALBLENDMETHOD = this._normalBlendMethod) : BB.DETAIL = !1)
+          } else BB.DETAIL = !1
         }
-        bindForSubMesh(JJ, cJ) {
+        bindForSubMesh(BB, TB) {
           if (!this._isEnabled) return;
-          const ZJ = this._material.isFrozen;
-          JJ.useUbo && ZJ && JJ.isSync || this._texture && XJ.d.DetailTextureEnabled && (JJ.updateFloat4("vDetailInfos", this._texture.coordinatesIndex, this.diffuseBlendLevel, this.bumpLevel, this.roughnessBlendLevel), (0, jJ.q)(this._texture, JJ, "detail")), cJ.texturesEnabled && this._texture && XJ.d.DetailTextureEnabled && JJ.setTexture("detailSampler", this._texture)
+          const dB = this._material.isFrozen;
+          BB.useUbo && dB && BB.isSync || this._texture && lB.d.DetailTextureEnabled && (BB.updateFloat4("vDetailInfos", this._texture.coordinatesIndex, this.diffuseBlendLevel, this.bumpLevel, this.roughnessBlendLevel), (0, gB.u)(this._texture, BB, "detail")), TB.texturesEnabled && this._texture && lB.d.DetailTextureEnabled && BB.setTexture("detailSampler", this._texture)
         }
-        hasTexture(JJ) {
-          return this._texture === JJ
+        hasTexture(BB) {
+          return this._texture === BB
         }
-        getActiveTextures(JJ) {
-          this._texture && JJ.push(this._texture)
+        getActiveTextures(BB) {
+          this._texture && BB.push(this._texture)
         }
-        getAnimatables(JJ) {
-          this._texture && this._texture.animations && this._texture.animations.length > 0 && JJ.push(this._texture)
+        getAnimatables(BB) {
+          this._texture && this._texture.animations && this._texture.animations.length > 0 && BB.push(this._texture)
         }
-        dispose(JJ) {
-          JJ && this._texture?.dispose()
+        dispose(BB) {
+          BB && this._texture?.dispose()
         }
         getClassName() {
           return "DetailMapConfiguration"
         }
-        getSamplers(JJ) {
-          JJ.push("detailSampler")
+        getSamplers(BB) {
+          BB.push("detailSampler")
         }
         getUniforms() {
           return {
@@ -204,103 +204,103 @@ export const modules = {
             }]
           }
         }
-      }, cJ = new WeakMap, ZJ = new WeakMap, AJ = new WeakMap, (() => {
-        const cJ = "function" === typeof Symbol && Symbol.metadata ? Object.create(xJ[Symbol.metadata] ?? null) : void 0;
-        hJ = [(0, eJ.A)("detailTexture"), (0, eJ.f)("_markAllSubMeshesAsTexturesDirty")], DJ = [(0, eJ.F)()], sJ = [(0, eJ.F)()], nJ = [(0, eJ.F)()], GJ = [(0, eJ.F)(), (0, eJ.f)("_markAllSubMeshesAsTexturesDirty")], fJ = [(0, eJ.F)(), (0, eJ.f)("_markAllSubMeshesAsTexturesDirty")], (0, FJ.d)(JJ, null, hJ, {
+      }, TB = new WeakMap, dB = new WeakMap, JB = new WeakMap, (() => {
+        const TB = "function" === typeof Symbol && Symbol.metadata ? Object.create(EB[Symbol.metadata] ?? null) : void 0;
+        kB = [(0, pB.M)("detailTexture"), (0, pB.i)("_markAllSubMeshesAsTexturesDirty")], LB = [(0, pB.W)()], OB = [(0, pB.W)()], DB = [(0, pB.W)()], uB = [(0, pB.W)(), (0, pB.i)("_markAllSubMeshesAsTexturesDirty")], HB = [(0, pB.W)(), (0, pB.i)("_markAllSubMeshesAsTexturesDirty")], (0, VB.g)(BB, null, kB, {
           kind: "accessor",
           name: "texture",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "texture" in JJ,
-            get: JJ => JJ.texture,
-            set: (JJ, cJ) => {
-              JJ.texture = cJ
+            has: BB => "texture" in BB,
+            get: BB => BB.texture,
+            set: (BB, TB) => {
+              BB.texture = TB
             }
           },
-          metadata: cJ
-        }, rJ, vJ), (0, FJ.d)(JJ, null, GJ, {
+          metadata: TB
+        }, vB, mB), (0, VB.g)(BB, null, uB, {
           kind: "accessor",
           name: "normalBlendMethod",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "normalBlendMethod" in JJ,
-            get: JJ => JJ.normalBlendMethod,
-            set: (JJ, cJ) => {
-              JJ.normalBlendMethod = cJ
+            has: BB => "normalBlendMethod" in BB,
+            get: BB => BB.normalBlendMethod,
+            set: (BB, TB) => {
+              BB.normalBlendMethod = TB
             }
           },
-          metadata: cJ
-        }, SJ, IJ), (0, FJ.d)(JJ, null, fJ, {
+          metadata: TB
+        }, zB, wB), (0, VB.g)(BB, null, HB, {
           kind: "accessor",
           name: "isEnabled",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "isEnabled" in JJ,
-            get: JJ => JJ.isEnabled,
-            set: (JJ, cJ) => {
-              JJ.isEnabled = cJ
+            has: BB => "isEnabled" in BB,
+            get: BB => BB.isEnabled,
+            set: (BB, TB) => {
+              BB.isEnabled = TB
             }
           },
-          metadata: cJ
-        }, MJ, bJ), (0, FJ.d)(null, null, DJ, {
+          metadata: TB
+        }, UB, FB), (0, VB.g)(null, null, LB, {
           kind: "field",
           name: "diffuseBlendLevel",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "diffuseBlendLevel" in JJ,
-            get: JJ => JJ.diffuseBlendLevel,
-            set: (JJ, cJ) => {
-              JJ.diffuseBlendLevel = cJ
+            has: BB => "diffuseBlendLevel" in BB,
+            get: BB => BB.diffuseBlendLevel,
+            set: (BB, TB) => {
+              BB.diffuseBlendLevel = TB
             }
           },
-          metadata: cJ
-        }, mJ, QJ), (0, FJ.d)(null, null, sJ, {
+          metadata: TB
+        }, iB, NB), (0, VB.g)(null, null, OB, {
           kind: "field",
           name: "roughnessBlendLevel",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "roughnessBlendLevel" in JJ,
-            get: JJ => JJ.roughnessBlendLevel,
-            set: (JJ, cJ) => {
-              JJ.roughnessBlendLevel = cJ
+            has: BB => "roughnessBlendLevel" in BB,
+            get: BB => BB.roughnessBlendLevel,
+            set: (BB, TB) => {
+              BB.roughnessBlendLevel = TB
             }
           },
-          metadata: cJ
-        }, EJ, VJ), (0, FJ.d)(null, null, nJ, {
+          metadata: TB
+        }, tB, fB), (0, VB.g)(null, null, DB, {
           kind: "field",
           name: "bumpLevel",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "bumpLevel" in JJ,
-            get: JJ => JJ.bumpLevel,
-            set: (JJ, cJ) => {
-              JJ.bumpLevel = cJ
+            has: BB => "bumpLevel" in BB,
+            get: BB => BB.bumpLevel,
+            set: (BB, TB) => {
+              BB.bumpLevel = TB
             }
           },
-          metadata: cJ
-        }, KJ, yJ), cJ && Object.defineProperty(JJ, Symbol.metadata, {
+          metadata: TB
+        }, sB, MB), TB && Object.defineProperty(BB, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: cJ
+          value: TB
         })
-      })(), JJ
+      })(), BB
     })()
   },
-  39041: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => FJ
+  39034: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => VB
     });
-    class FJ {
-      constructor(JJ) {
-        if (this.VERTEXOUTPUT_INVARIANT = !1, this._keys = [], this._isDirty = !0, this._areLightsDirty = !0, this._areLightsDisposed = !1, this._areAttributesDirty = !0, this._areTexturesDirty = !0, this._areFresnelDirty = !0, this._areMiscDirty = !0, this._arePrePassDirty = !0, this._areImageProcessingDirty = !0, this._normals = !1, this._uvs = !1, this._needNormals = !1, this._needUVs = !1, this._externalProperties = JJ, JJ)
-          for (const cJ in JJ) Object.prototype.hasOwnProperty.call(JJ, cJ) && this._setDefaultValue(cJ)
+    class VB {
+      constructor(BB) {
+        if (this.VERTEXOUTPUT_INVARIANT = !1, this._keys = [], this._isDirty = !0, this._areLightsDirty = !0, this._areLightsDisposed = !1, this._areAttributesDirty = !0, this._areTexturesDirty = !0, this._areFresnelDirty = !0, this._areMiscDirty = !0, this._arePrePassDirty = !0, this._areImageProcessingDirty = !0, this._normals = !1, this._uvs = !1, this._needNormals = !1, this._needUVs = !1, this._externalProperties = BB, BB)
+          for (const TB in BB) Object.prototype.hasOwnProperty.call(BB, TB) && this._setDefaultValue(TB)
       }
       get isDirty() {
         return this._isDirty
@@ -318,8 +318,8 @@ export const modules = {
         this._areImageProcessingDirty = !0, this._isDirty = !0
       }
       markAsLightDirty() {
-        let JJ = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        this._areLightsDirty = !0, this._areLightsDisposed = this._areLightsDisposed || JJ, this._isDirty = !0
+        let BB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        this._areLightsDirty = !0, this._areLightsDisposed = this._areLightsDisposed || BB, this._isDirty = !0
       }
       markAsAttributesDirty() {
         this._areAttributesDirty = !0, this._isDirty = !0
@@ -338,192 +338,192 @@ export const modules = {
       }
       rebuild() {
         this._keys.length = 0;
-        for (const JJ of Object.keys(this)) "_" !== JJ[0] && this._keys.push(JJ);
+        for (const BB of Object.keys(this)) "_" !== BB[0] && this._keys.push(BB);
         if (this._externalProperties)
-          for (const JJ in this._externalProperties) - 1 === this._keys.indexOf(JJ) && this._keys.push(JJ)
+          for (const BB in this._externalProperties) - 1 === this._keys.indexOf(BB) && this._keys.push(BB)
       }
-      isEqual(JJ) {
-        if (this._keys.length !== JJ._keys.length) return !1;
-        for (let cJ = 0; cJ < this._keys.length; cJ++) {
-          const ZJ = this._keys[cJ];
-          if (this[ZJ] !== JJ[ZJ]) return !1
+      isEqual(BB) {
+        if (this._keys.length !== BB._keys.length) return !1;
+        for (let TB = 0; TB < this._keys.length; TB++) {
+          const dB = this._keys[TB];
+          if (this[dB] !== BB[dB]) return !1
         }
         return !0
       }
-      cloneTo(JJ) {
-        this._keys.length !== JJ._keys.length && (JJ._keys = this._keys.slice(0));
-        for (let cJ = 0; cJ < this._keys.length; cJ++) {
-          const ZJ = this._keys[cJ];
-          JJ[ZJ] = this[ZJ]
+      cloneTo(BB) {
+        this._keys.length !== BB._keys.length && (BB._keys = this._keys.slice(0));
+        for (let TB = 0; TB < this._keys.length; TB++) {
+          const dB = this._keys[TB];
+          BB[dB] = this[dB]
         }
       }
       reset() {
-        for (const JJ of this._keys) this._setDefaultValue(JJ)
+        for (const BB of this._keys) this._setDefaultValue(BB)
       }
-      _setDefaultValue(JJ) {
-        const cJ = this._externalProperties?.[JJ]?.type ?? typeof this[JJ],
-          ZJ = this._externalProperties?.[JJ]?.default;
-        switch (cJ) {
+      _setDefaultValue(BB) {
+        const TB = this._externalProperties?.[BB]?.type ?? typeof this[BB],
+          dB = this._externalProperties?.[BB]?.default;
+        switch (TB) {
           case "number":
-            this[JJ] = ZJ ?? 0;
+            this[BB] = dB ?? 0;
             break;
           case "string":
-            this[JJ] = ZJ ?? "";
+            this[BB] = dB ?? "";
             break;
           default:
-            this[JJ] = ZJ ?? !1
+            this[BB] = dB ?? !1
         }
       }
       toString() {
-        let JJ = "";
-        for (let cJ = 0; cJ < this._keys.length; cJ++) {
-          const ZJ = this._keys[cJ],
-            FJ = this[ZJ];
-          switch (typeof FJ) {
+        let BB = "";
+        for (let TB = 0; TB < this._keys.length; TB++) {
+          const dB = this._keys[TB],
+            VB = this[dB];
+          switch (typeof VB) {
             case "number":
             case "string":
-              JJ += "#define " + ZJ + " " + FJ + "\n";
+              BB += "#define " + dB + " " + VB + "\n";
               break;
             default:
-              FJ && (JJ += "#define " + ZJ + "\n")
+              VB && (BB += "#define " + dB + "\n")
           }
         }
-        return JJ
+        return BB
       }
     }
   },
-  39138: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      b: () => AJ,
-      d: () => XJ,
-      e: () => eJ
+  39117: (BB, TB, dB) => {
+    dB.d(TB, {
+      e: () => JB,
+      g: () => lB,
+      j: () => pB
     });
-    var FJ, UJ = ZJ(36174);
+    var VB, yB = dB(36126);
 
-    function eJ(JJ, cJ) {
-      let ZJ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 16777215;
-      const FJ = cJ(JJ);
-      if (!Number.isInteger(FJ) || FJ < 0 || FJ > ZJ) throw new Error(`Invalid geometry object ID ${FJ} for mesh "${JJ.name}". Object IDs must be integers between 0 and 0x${ZJ.toString(16).toUpperCase()}.`);
-      return FJ
+    function pB(BB, TB) {
+      let dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 16777215;
+      const VB = TB(BB);
+      if (!Number.isInteger(VB) || VB < 0 || VB > dB) throw new Error(`Invalid geometry object ID ${VB} for mesh "${BB.name}". Object IDs must be integers between 0 and 0x${dB.toString(16).toUpperCase()}.`);
+      return VB
     }
 
-    function XJ(JJ, cJ) {
-      const ZJ = cJ(JJ);
-      if (!Number.isInteger(ZJ) || ZJ < 0 || ZJ > 255 || 0 !== ZJ && 0 === (63 & ZJ)) throw new Error(`Invalid geometry mesh-blending tag ${ZJ} for mesh "${JJ.name}". Tags must be 0 or contain a group ID between 1 and 63.`);
-      return ZJ
-    }! function(JJ) {
-      JJ[JJ.Zero = 0] = "Zero", JJ[JJ.One = 1] = "One", JJ[JJ.MaxViewZ = 2] = "MaxViewZ", JJ[JJ.NoClear = 3] = "NoClear"
-    }(FJ || (FJ = {}));
-    class AJ {
-      static CreateConfiguration(JJ) {
-        return AJ._Configurations[JJ] = {
+    function lB(BB, TB) {
+      const dB = TB(BB);
+      if (!Number.isInteger(dB) || dB < 0 || dB > 255 || 0 !== dB && 0 === (63 & dB)) throw new Error(`Invalid geometry mesh-blending tag ${dB} for mesh "${BB.name}". Tags must be 0 or contain a group ID between 1 and 63.`);
+      return dB
+    }! function(BB) {
+      BB[BB.Zero = 0] = "Zero", BB[BB.One = 1] = "One", BB[BB.MaxViewZ = 2] = "MaxViewZ", BB[BB.NoClear = 3] = "NoClear"
+    }(VB || (VB = {}));
+    class JB {
+      static CreateConfiguration(BB) {
+        return JB._Configurations[BB] = {
           defines: {},
           previousWorldMatrices: {},
-          previousViewProjection: UJ.b.Zero(),
-          currentViewProjection: UJ.b.Zero(),
+          previousViewProjection: yB.b.Zero(),
+          currentViewProjection: yB.b.Zero(),
           previousBones: {},
           lastUpdateFrameId: -1,
           excludedSkinnedMesh: [],
           reverseCulling: !1,
           objectIdIsRedFormat: !1
-        }, AJ._Configurations[JJ]
+        }, JB._Configurations[BB]
       }
-      static DeleteConfiguration(JJ) {
-        delete AJ._Configurations[JJ]
+      static DeleteConfiguration(BB) {
+        delete JB._Configurations[BB]
       }
-      static GetConfiguration(JJ) {
-        return AJ._Configurations[JJ]
+      static GetConfiguration(BB) {
+        return JB._Configurations[BB]
       }
-      static _PrepareConfiguration(JJ, cJ, ZJ) {
-        const FJ = AJ._Configurations[JJ];
-        FJ._attachments = cJ, FJ._colorAttachments = ZJ, FJ._mrtCount = cJ.length;
-        let UJ = "#define PREPASS\n";
-        for (const eJ of AJ.GeometryTextureDescriptions) {
-          const JJ = FJ.defines[eJ.defineIndex];
-          void 0 !== JJ && (UJ += `#define ${eJ.define}\n#define ${eJ.defineIndex} ${JJ}\n`)
+      static _PrepareConfiguration(BB, TB, dB) {
+        const VB = JB._Configurations[BB];
+        VB._attachments = TB, VB._colorAttachments = dB, VB._mrtCount = TB.length;
+        let yB = "#define PREPASS\n";
+        for (const pB of JB.GeometryTextureDescriptions) {
+          const BB = VB.defines[pB.defineIndex];
+          void 0 !== BB && (yB += `#define ${pB.define}\n#define ${pB.defineIndex} ${BB}\n`)
         }
-        FJ.objectIdIsRedFormat && (UJ += "#define PREPASS_OBJECT_ID_R8\n"), FJ._defines = UJ + `#define SCENE_MRT_COUNT ${cJ.length}\n`
+        VB.objectIdIsRedFormat && (yB += "#define PREPASS_OBJECT_ID_R8\n"), VB._defines = yB + `#define SCENE_MRT_COUNT ${TB.length}\n`
       }
-      static _PrepareStringDefines(JJ, cJ) {
-        const ZJ = AJ._Configurations[JJ];
-        return !!ZJ?._defines && (cJ.push(ZJ._defines), !0)
+      static _PrepareStringDefines(BB, TB) {
+        const dB = JB._Configurations[BB];
+        return !!dB?._defines && (TB.push(dB._defines), !0)
       }
-      static _BindAttachmentsForEffect(JJ, cJ) {
-        const ZJ = AJ._Configurations[JJ.currentRenderPassId];
-        return !ZJ?._attachments || (JJ.bindAttachments(cJ._multiTarget ? ZJ._attachments : ZJ._colorAttachments), cJ._multiTarget || void 0 !== ZJ.defines.PREPASS_COLOR_INDEX)
+      static _BindAttachmentsForEffect(BB, TB) {
+        const dB = JB._Configurations[BB.currentRenderPassId];
+        return !dB?._attachments || (BB.bindAttachments(TB._multiTarget ? dB._attachments : dB._colorAttachments), TB._multiTarget || void 0 !== dB.defines.PREPASS_COLOR_INDEX)
       }
-      static _RestoreAttachments(JJ) {
-        const cJ = AJ._Configurations[JJ.currentRenderPassId];
-        cJ?._colorAttachments && JJ.bindAttachments(cJ._colorAttachments)
+      static _RestoreAttachments(BB) {
+        const TB = JB._Configurations[BB.currentRenderPassId];
+        TB?._colorAttachments && BB.bindAttachments(TB._colorAttachments)
       }
-      static _BindColorAttachments(JJ) {
-        const cJ = AJ._Configurations[JJ.currentRenderPassId];
-        return !cJ?._colorAttachments || (JJ.bindAttachments(cJ._colorAttachments), void 0 !== cJ.defines.PREPASS_COLOR_INDEX)
+      static _BindColorAttachments(BB) {
+        const TB = JB._Configurations[BB.currentRenderPassId];
+        return !TB?._colorAttachments || (BB.bindAttachments(TB._colorAttachments), void 0 !== TB.defines.PREPASS_COLOR_INDEX)
       }
-      static _IsColorAttachmentEnabled(JJ) {
-        const cJ = AJ._Configurations[JJ.currentRenderPassId];
-        return !cJ?._colorAttachments || void 0 !== cJ.defines.PREPASS_COLOR_INDEX
+      static _IsColorAttachmentEnabled(BB) {
+        const TB = JB._Configurations[BB.currentRenderPassId];
+        return !TB?._colorAttachments || void 0 !== TB.defines.PREPASS_COLOR_INDEX
       }
-      static _BindZeroAlphaDiscard(JJ, cJ) {
-        const ZJ = AJ._Configurations[JJ.currentRenderPassId];
-        if (!ZJ) return;
-        const FJ = JJ.getAlphaMode(),
-          UJ = void 0 === ZJ.defines.PREPASS_COLOR_INDEX || 2 === FJ || 1 === FJ || 17 === FJ;
-        cJ.setFloat("geometryZeroAlphaDiscard", UJ ? 1 : 0)
+      static _BindZeroAlphaDiscard(BB, TB) {
+        const dB = JB._Configurations[BB.currentRenderPassId];
+        if (!dB) return;
+        const VB = BB.getAlphaMode(),
+          yB = void 0 === dB.defines.PREPASS_COLOR_INDEX || 2 === VB || 1 === VB || 17 === VB;
+        TB.setFloat("geometryZeroAlphaDiscard", yB ? 1 : 0)
       }
-      static AddUniformsAndSamplers(JJ, cJ) {
-        JJ.push("previousWorld", "previousViewProjection", "mPreviousBones", "objectId", "meshBlendTag")
+      static AddUniformsAndSamplers(BB, TB) {
+        BB.push("previousWorld", "previousViewProjection", "mPreviousBones", "objectId", "meshBlendTag")
       }
-      static MarkAsDirty(JJ, cJ) {
-        for (const ZJ of cJ)
-          if (ZJ.aE)
-            for (const cJ of ZJ.aE) cJ._removeDrawWrapper(JJ)
+      static MarkAsDirty(BB, TB) {
+        for (const dB of TB)
+          if (dB.oN)
+            for (const TB of dB.oN) TB._removeDrawWrapper(BB)
       }
-      static PrepareDefines(JJ, cJ, ZJ) {
-        if (!ZJ._arePrePassDirty) return;
-        const FJ = AJ._Configurations[JJ];
-        if (!FJ) return;
-        ZJ.PREPASS = !0;
-        let UJ = 0;
-        for (let eJ = 0; eJ < AJ.GeometryTextureDescriptions.length; eJ++) {
-          const JJ = AJ.GeometryTextureDescriptions[eJ],
-            cJ = JJ.define,
-            XJ = JJ.defineIndex,
-            qJ = FJ.defines[XJ];
-          void 0 !== qJ ? (ZJ[cJ] = !0, ZJ[XJ] = qJ, UJ++) : (ZJ[cJ] = !1, delete ZJ[XJ])
+      static PrepareDefines(BB, TB, dB) {
+        if (!dB._arePrePassDirty) return;
+        const VB = JB._Configurations[BB];
+        if (!VB) return;
+        dB.PREPASS = !0;
+        let yB = 0;
+        for (let pB = 0; pB < JB.GeometryTextureDescriptions.length; pB++) {
+          const BB = JB.GeometryTextureDescriptions[pB],
+            TB = BB.define,
+            lB = BB.defineIndex,
+            YB = VB.defines[lB];
+          void 0 !== YB ? (dB[TB] = !0, dB[lB] = YB, yB++) : (dB[TB] = !1, delete dB[lB])
         }
-        ZJ.PREPASS_OBJECT_ID_R8 = FJ.objectIdIsRedFormat, ZJ.SCENE_MRT_COUNT = FJ._mrtCount ?? UJ, ZJ.BONES_VELOCITY_ENABLED = cJ.useBones && cJ.computeBonesUsingShaders && cJ.skeleton && !cJ.skeleton.isUsingTextureForMatrices && -1 === FJ.excludedSkinnedMesh.indexOf(cJ)
+        dB.PREPASS_OBJECT_ID_R8 = VB.objectIdIsRedFormat, dB.SCENE_MRT_COUNT = VB._mrtCount ?? yB, dB.BONES_VELOCITY_ENABLED = TB.useBones && TB.computeBonesUsingShaders && TB.skeleton && !TB.skeleton.isUsingTextureForMatrices && -1 === VB.excludedSkinnedMesh.indexOf(TB)
       }
-      static Bind(JJ, cJ, ZJ, FJ, UJ) {
-        const qJ = AJ._Configurations[JJ];
-        if (!qJ) return;
-        const jJ = ZJ.Qy(),
-          YJ = jJ.gn();
-        if (qJ.reverseCulling && YJ.setStateCullFaceType(jJ._mirroredCameraPosition ? UJ.cullBackFaces : !UJ.cullBackFaces), void 0 !== qJ.defines.PREPASS_OBJECT_ID_INDEX) {
-          const JJ = qJ.objectIdIsRedFormat ? 255 : 16777215;
-          let FJ = ZJ.uniqueId;
-          if (qJ.objectIdProvider) FJ = eJ(ZJ, qJ.objectIdProvider, JJ);
-          else if (FJ > JJ) throw new Error(`Invalid geometry object ID ${FJ} for mesh "${ZJ.name}". Object IDs must be integers between 0 and 0x${JJ.toString(16).toUpperCase()}.`);
-          cJ.setFloat("objectId", FJ)
+      static Bind(BB, TB, dB, VB, yB) {
+        const YB = JB._Configurations[BB];
+        if (!YB) return;
+        const gB = dB.jU(),
+          oB = gB.PD();
+        if (YB.reverseCulling && oB.setStateCullFaceType(gB._mirroredCameraPosition ? yB.cullBackFaces : !yB.cullBackFaces), void 0 !== YB.defines.PREPASS_OBJECT_ID_INDEX) {
+          const BB = YB.objectIdIsRedFormat ? 255 : 16777215;
+          let VB = dB.uniqueId;
+          if (YB.objectIdProvider) VB = pB(dB, YB.objectIdProvider, BB);
+          else if (VB > BB) throw new Error(`Invalid geometry object ID ${VB} for mesh "${dB.name}". Object IDs must be integers between 0 and 0x${BB.toString(16).toUpperCase()}.`);
+          TB.setFloat("objectId", VB)
         }
-        if (void 0 !== qJ.defines.PREPASS_MESH_BLEND_TAG_INDEX) {
-          const JJ = qJ.meshBlendTagProvider ? XJ(ZJ, qJ.meshBlendTagProvider) : ZJ.meshBlendingTag;
-          cJ.setInt("meshBlendTag", JJ)
+        if (void 0 !== YB.defines.PREPASS_MESH_BLEND_TAG_INDEX) {
+          const BB = YB.meshBlendTagProvider ? lB(dB, YB.meshBlendTagProvider) : dB.meshBlendingTag;
+          TB.setInt("meshBlendTag", BB)
         }
-        if (void 0 !== qJ.defines.PREPASS_VELOCITY_INDEX || void 0 !== qJ.defines.PREPASS_VELOCITY_LINEAR_INDEX) {
-          const JJ = qJ._currentWorldMatrices ?? (qJ._currentWorldMatrices = {}),
-            UJ = qJ._worldMatrixFrameIds ?? (qJ._worldMatrixFrameIds = {});
-          if (JJ[ZJ.uniqueId] || (JJ[ZJ.uniqueId] = FJ.clone(), qJ.previousWorldMatrices[ZJ.uniqueId] = FJ.clone()), UJ[ZJ.uniqueId] !== YJ.frameId && (qJ.previousWorldMatrices[ZJ.uniqueId].rZJ(JJ[ZJ.uniqueId]), UJ[ZJ.uniqueId] = YJ.frameId), JJ[ZJ.uniqueId].rZJ(FJ), -1 === qJ.lastUpdateFrameId ? (qJ.lastUpdateFrameId = YJ.frameId, qJ.previousViewProjection.rZJ(jJ.getTransformMatrix()), qJ.currentViewProjection.rZJ(jJ.getTransformMatrix())) : qJ.currentViewProjection.updateFlag !== jJ.getTransformMatrix().updateFlag ? (qJ.lastUpdateFrameId = YJ.frameId, qJ.previousViewProjection.rZJ(qJ.currentViewProjection), qJ.currentViewProjection.rZJ(jJ.getTransformMatrix())) : qJ.lastUpdateFrameId !== YJ.frameId && (qJ.lastUpdateFrameId = YJ.frameId, qJ.previousViewProjection.rZJ(qJ.currentViewProjection)), cJ.setMatrix("previousWorld", qJ.previousWorldMatrices[ZJ.uniqueId]), cJ.setMatrix("previousViewProjection", qJ.previousViewProjection), ZJ.useBones && ZJ.computeBonesUsingShaders && ZJ.skeleton) {
-            const JJ = ZJ.skeleton;
-            if (!JJ.isUsingTextureForMatrices || -1 === cJ.getUniformIndex("boneTextureInfo")) {
-              const FJ = JJ.getTransformMatrices(ZJ);
-              FJ && (qJ.previousBones[ZJ.uniqueId] || (qJ.previousBones[ZJ.uniqueId] = FJ.slice()), cJ.setMatrices("mPreviousBones", qJ.previousBones[ZJ.uniqueId]), qJ.previousBones[ZJ.uniqueId].set(FJ))
+        if (void 0 !== YB.defines.PREPASS_VELOCITY_INDEX || void 0 !== YB.defines.PREPASS_VELOCITY_LINEAR_INDEX) {
+          const BB = YB._currentWorldMatrices ?? (YB._currentWorldMatrices = {}),
+            yB = YB._worldMatrixFrameIds ?? (YB._worldMatrixFrameIds = {});
+          if (BB[dB.uniqueId] || (BB[dB.uniqueId] = VB.clone(), YB.previousWorldMatrices[dB.uniqueId] = VB.clone()), yB[dB.uniqueId] !== oB.frameId && (YB.previousWorldMatrices[dB.uniqueId].bdB(BB[dB.uniqueId]), yB[dB.uniqueId] = oB.frameId), BB[dB.uniqueId].bdB(VB), -1 === YB.lastUpdateFrameId ? (YB.lastUpdateFrameId = oB.frameId, YB.previousViewProjection.bdB(gB.getTransformMatrix()), YB.currentViewProjection.bdB(gB.getTransformMatrix())) : YB.currentViewProjection.updateFlag !== gB.getTransformMatrix().updateFlag ? (YB.lastUpdateFrameId = oB.frameId, YB.previousViewProjection.bdB(YB.currentViewProjection), YB.currentViewProjection.bdB(gB.getTransformMatrix())) : YB.lastUpdateFrameId !== oB.frameId && (YB.lastUpdateFrameId = oB.frameId, YB.previousViewProjection.bdB(YB.currentViewProjection)), TB.setMatrix("previousWorld", YB.previousWorldMatrices[dB.uniqueId]), TB.setMatrix("previousViewProjection", YB.previousViewProjection), dB.useBones && dB.computeBonesUsingShaders && dB.skeleton) {
+            const BB = dB.skeleton;
+            if (!BB.isUsingTextureForMatrices || -1 === TB.getUniformIndex("boneTextureInfo")) {
+              const VB = BB.getTransformMatrices(dB);
+              VB && (YB.previousBones[dB.uniqueId] || (YB.previousBones[dB.uniqueId] = VB.slice()), TB.setMatrices("mPreviousBones", YB.previousBones[dB.uniqueId]), YB.previousBones[dB.uniqueId].set(VB))
             }
           }
         }
       }
     }
-    AJ.GeometryTextureDescriptions = [{
+    JB.GeometryTextureDescriptions = [{
       type: 0,
       name: "IrradianceLegacy",
       clearType: 0,
@@ -625,777 +625,777 @@ export const modules = {
       clearType: 0,
       define: "PREPASS_MESH_BLEND_TAG",
       defineIndex: "PREPASS_MESH_BLEND_TAG_INDEX"
-    }], AJ._Configurations = {}
+    }], JB._Configurations = {}
   },
-  39123: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => DJ,
-      e: () => nJ
+  39099: (BB, TB, dB) => {
+    dB.d(TB, {
+      b: () => LB,
+      d: () => DB
     });
-    var FJ = ZJ(38800),
-      UJ = ZJ(38806),
-      eJ = ZJ(38683),
-      XJ = ZJ(38658);
-    const AJ = new RegExp("^([gimus]+)!");
-    class qJ {
-      constructor(JJ) {
-        this._plugins = [], this._activePlugins = [], this._activePluginsForExtraEvents = [], this._material = JJ, this._scene = JJ.Qy(), this._engine = this._scene.gn()
+    var VB = dB(38745),
+      yB = dB(38750),
+      pB = dB(38638),
+      lB = dB(38595);
+    const JB = new RegExp("^([gimus]+)!");
+    class YB {
+      constructor(BB) {
+        this._plugins = [], this._activePlugins = [], this._activePluginsForExtraEvents = [], this._material = BB, this._scene = BB.jU(), this._engine = this._scene.PD()
       }
-      _addPlugin(JJ) {
-        for (let FJ = 0; FJ < this._plugins.length; ++FJ)
-          if (this._plugins[FJ].name === JJ.name) return !1;
-        if (this._material._uniformBufferLayoutBuilt && (this._material.resetDrawCache(), this._material._createUniformBuffer()), !JJ.isCompatible(this._material.shaderLanguage)) throw `The plugin "${JJ.name}" can't be added to the material "${this._material.name}" because the plugin is not compatible with the shader language of the material.`;
-        const cJ = JJ.getClassName();
-        qJ._MaterialPluginClassToMainDefine[cJ] || (qJ._MaterialPluginClassToMainDefine[cJ] = "MATERIALPLUGIN_" + ++qJ._MaterialPluginCounter), this._material._callbackPluginEventGeneric = (JJ, cJ) => this._handlePluginEvent(JJ, cJ), this._plugins.push(JJ), this._plugins.sort(((JJ, cJ) => JJ.priority - cJ.priority)), this._codeInjectionPoints = {};
-        const ZJ = {};
-        ZJ[qJ._MaterialPluginClassToMainDefine[cJ]] = {
+      _addPlugin(BB) {
+        for (let VB = 0; VB < this._plugins.length; ++VB)
+          if (this._plugins[VB].name === BB.name) return !1;
+        if (this._material._uniformBufferLayoutBuilt && (this._material.resetDrawCache(), this._material._createUniformBuffer()), !BB.isCompatible(this._material.shaderLanguage)) throw `The plugin "${BB.name}" can't be added to the material "${this._material.name}" because the plugin is not compatible with the shader language of the material.`;
+        const TB = BB.getClassName();
+        YB._MaterialPluginClassToMainDefine[TB] || (YB._MaterialPluginClassToMainDefine[TB] = "MATERIALPLUGIN_" + ++YB._MaterialPluginCounter), this._material._callbackPluginEventGeneric = (BB, TB) => this._handlePluginEvent(BB, TB), this._plugins.push(BB), this._plugins.sort(((BB, TB) => BB.priority - TB.priority)), this._codeInjectionPoints = {};
+        const dB = {};
+        dB[YB._MaterialPluginClassToMainDefine[TB]] = {
           type: "boolean",
           default: !0
         };
-        for (const FJ of this._plugins) FJ.collectDefines(ZJ), this._collectPointNames("vertex", FJ.getCustomCode("vertex", this._material.shaderLanguage)), this._collectPointNames("fragment", FJ.getCustomCode("fragment", this._material.shaderLanguage));
-        return this._defineNamesFromPlugins = ZJ, !0
+        for (const VB of this._plugins) VB.collectDefines(dB), this._collectPointNames("vertex", VB.getCustomCode("vertex", this._material.shaderLanguage)), this._collectPointNames("fragment", VB.getCustomCode("fragment", this._material.shaderLanguage));
+        return this._defineNamesFromPlugins = dB, !0
       }
-      _activatePlugin(JJ) {
-        -1 === this._activePlugins.indexOf(JJ) && (this._activePlugins.push(JJ), this._activePlugins.sort(((JJ, cJ) => JJ.priority - cJ.priority)), this._material._callbackPluginEventIsReadyForSubMesh = this._handlePluginEventIsReadyForSubMesh.bind(this), this._material._callbackPluginEventPrepareDefinesBeforeAttributes = this._handlePluginEventPrepareDefinesBeforeAttributes.bind(this), this._material._callbackPluginEventPrepareDefines = this._handlePluginEventPrepareDefines.bind(this), this._material._callbackPluginEventBindForSubMesh = this._handlePluginEventBindForSubMesh.bind(this), JJ.registerForExtraEvents && (this._activePluginsForExtraEvents.push(JJ), this._activePluginsForExtraEvents.sort(((JJ, cJ) => JJ.priority - cJ.priority)), this._material._callbackPluginEventHasRenderTargetTextures = this._handlePluginEventHasRenderTargetTextures.bind(this), this._material._callbackPluginEventFillRenderTargetTextures = this._handlePluginEventFillRenderTargetTextures.bind(this), this._material._callbackPluginEventHardBindForSubMesh = this._handlePluginEventHardBindForSubMesh.bind(this)))
+      _activatePlugin(BB) {
+        -1 === this._activePlugins.indexOf(BB) && (this._activePlugins.push(BB), this._activePlugins.sort(((BB, TB) => BB.priority - TB.priority)), this._material._callbackPluginEventIsReadyForSubMesh = this._handlePluginEventIsReadyForSubMesh.bind(this), this._material._callbackPluginEventPrepareDefinesBeforeAttributes = this._handlePluginEventPrepareDefinesBeforeAttributes.bind(this), this._material._callbackPluginEventPrepareDefines = this._handlePluginEventPrepareDefines.bind(this), this._material._callbackPluginEventBindForSubMesh = this._handlePluginEventBindForSubMesh.bind(this), BB.registerForExtraEvents && (this._activePluginsForExtraEvents.push(BB), this._activePluginsForExtraEvents.sort(((BB, TB) => BB.priority - TB.priority)), this._material._callbackPluginEventHasRenderTargetTextures = this._handlePluginEventHasRenderTargetTextures.bind(this), this._material._callbackPluginEventFillRenderTargetTextures = this._handlePluginEventFillRenderTargetTextures.bind(this), this._material._callbackPluginEventHardBindForSubMesh = this._handlePluginEventHardBindForSubMesh.bind(this)))
       }
-      getPlugin(JJ) {
-        for (let cJ = 0; cJ < this._plugins.length; ++cJ)
-          if (this._plugins[cJ].name === JJ) return this._plugins[cJ];
+      getPlugin(BB) {
+        for (let TB = 0; TB < this._plugins.length; ++TB)
+          if (this._plugins[TB].name === BB) return this._plugins[TB];
         return null
       }
-      _handlePluginEventIsReadyForSubMesh(JJ) {
-        let cJ = !0;
-        for (const ZJ of this._activePlugins) cJ = cJ && ZJ.isReadyForSubMesh(JJ.defines, this._scene, this._engine, JJ.subMesh);
-        JJ.isReadyForSubMesh = cJ
+      _handlePluginEventIsReadyForSubMesh(BB) {
+        let TB = !0;
+        for (const dB of this._activePlugins) TB = TB && dB.isReadyForSubMesh(BB.defines, this._scene, this._engine, BB.subMesh);
+        BB.isReadyForSubMesh = TB
       }
-      _handlePluginEventPrepareDefinesBeforeAttributes(JJ) {
-        for (const cJ of this._activePlugins) cJ.prepareDefinesBeforeAttributes(JJ.defines, this._scene, JJ.mesh)
+      _handlePluginEventPrepareDefinesBeforeAttributes(BB) {
+        for (const TB of this._activePlugins) TB.prepareDefinesBeforeAttributes(BB.defines, this._scene, BB.mesh)
       }
-      _handlePluginEventPrepareDefines(JJ) {
-        for (const cJ of this._activePlugins) cJ.prepareDefines(JJ.defines, this._scene, JJ.mesh)
+      _handlePluginEventPrepareDefines(BB) {
+        for (const TB of this._activePlugins) TB.prepareDefines(BB.defines, this._scene, BB.mesh)
       }
-      _handlePluginEventHardBindForSubMesh(JJ) {
-        for (const cJ of this._activePluginsForExtraEvents) cJ.hardBindForSubMesh(this._material._uniformBuffer, this._scene, this._engine, JJ.subMesh)
+      _handlePluginEventHardBindForSubMesh(BB) {
+        for (const TB of this._activePluginsForExtraEvents) TB.hardBindForSubMesh(this._material._uniformBuffer, this._scene, this._engine, BB.subMesh)
       }
-      _handlePluginEventBindForSubMesh(JJ) {
-        for (const cJ of this._activePlugins) cJ.bindForSubMesh(this._material._uniformBuffer, this._scene, this._engine, JJ.subMesh)
+      _handlePluginEventBindForSubMesh(BB) {
+        for (const TB of this._activePlugins) TB.bindForSubMesh(this._material._uniformBuffer, this._scene, this._engine, BB.subMesh)
       }
-      _handlePluginEventHasRenderTargetTextures(JJ) {
-        let cJ = !1;
-        for (const ZJ of this._activePluginsForExtraEvents)
-          if (cJ = ZJ.hasRenderTargetTextures(), cJ) break;
-        JJ.hasRenderTargetTextures = cJ
+      _handlePluginEventHasRenderTargetTextures(BB) {
+        let TB = !1;
+        for (const dB of this._activePluginsForExtraEvents)
+          if (TB = dB.hasRenderTargetTextures(), TB) break;
+        BB.hasRenderTargetTextures = TB
       }
-      _handlePluginEventFillRenderTargetTextures(JJ) {
-        for (const cJ of this._activePluginsForExtraEvents) cJ.fillRenderTargetTextures(JJ.renderTargets)
+      _handlePluginEventFillRenderTargetTextures(BB) {
+        for (const TB of this._activePluginsForExtraEvents) TB.fillRenderTargetTextures(BB.renderTargets)
       }
-      _handlePluginEvent(JJ, cJ) {
-        switch (JJ) {
+      _handlePluginEvent(BB, TB) {
+        switch (BB) {
           case 512: {
-            const JJ = cJ;
-            for (const cJ of this._activePlugins) cJ.getActiveTextures(JJ.activeTextures);
+            const BB = TB;
+            for (const TB of this._activePlugins) TB.getActiveTextures(BB.activeTextures);
             break
           }
           case 256: {
-            const JJ = cJ;
-            for (const cJ of this._activePlugins) cJ.getAnimatables(JJ.animatables);
+            const BB = TB;
+            for (const TB of this._activePlugins) TB.getAnimatables(BB.animatables);
             break
           }
           case 1024: {
-            const JJ = cJ;
-            let ZJ = !1;
-            for (const cJ of this._activePlugins)
-              if (ZJ = cJ.hasTexture(JJ.texture), ZJ) break;
-            JJ.hasTexture = ZJ;
+            const BB = TB;
+            let dB = !1;
+            for (const TB of this._activePlugins)
+              if (dB = TB.hasTexture(BB.texture), dB) break;
+            BB.hasTexture = dB;
             break
           }
           case 2: {
-            const JJ = cJ;
-            for (const cJ of this._plugins) cJ.dispose(JJ.forceDisposeTextures);
+            const BB = TB;
+            for (const TB of this._plugins) TB.dispose(BB.forceDisposeTextures);
             break
           }
           case 4:
-            cJ.defineNames = this._defineNamesFromPlugins;
+            TB.defineNames = this._defineNamesFromPlugins;
             break;
           case 128: {
-            const JJ = cJ;
-            for (const cJ of this._activePlugins) JJ.fallbackRank = cJ.addFallbacks(JJ.defines, JJ.fallbacks, JJ.fallbackRank), cJ.getAttributes(JJ.attributes, this._scene, JJ.mesh);
-            this._uniformList.length > 0 && JJ.uniforms.push(...this._uniformList), this._samplerList.length > 0 && JJ.samplers.push(...this._samplerList), this._uboList.length > 0 && JJ.uniformBuffersNames.push(...this._uboList), JJ.customCode = this._injectCustomCode(JJ, JJ.customCode);
+            const BB = TB;
+            for (const TB of this._activePlugins) BB.fallbackRank = TB.addFallbacks(BB.defines, BB.fallbacks, BB.fallbackRank), TB.getAttributes(BB.attributes, this._scene, BB.mesh);
+            this._uniformList.length > 0 && BB.uniforms.push(...this._uniformList), this._samplerList.length > 0 && BB.samplers.push(...this._samplerList), this._uboList.length > 0 && BB.uniformBuffersNames.push(...this._uboList), BB.customCode = this._injectCustomCode(BB, BB.customCode);
             break
           }
           case 8: {
-            const JJ = cJ;
+            const BB = TB;
             this._uboDeclaration = "", this._vertexDeclaration = "", this._fragmentDeclaration = "", this._uniformList = [], this._samplerList = [], this._uboList = [];
-            const ZJ = 1 === this._material.shaderLanguage;
-            for (const cJ of this._plugins) {
-              const FJ = cJ.getUniforms(this._material.shaderLanguage);
-              if (FJ) {
-                if (FJ.ubo)
-                  for (const cJ of FJ.ubo) {
-                    if (cJ.size && cJ.type) {
-                      const FJ = cJ.arraySize ?? 0;
-                      if (JJ.ubo.addUniform(cJ.name, cJ.size, FJ), ZJ) {
-                        let JJ;
-                        switch (cJ.type) {
+            const dB = 1 === this._material.shaderLanguage;
+            for (const TB of this._plugins) {
+              const VB = TB.getUniforms(this._material.shaderLanguage);
+              if (VB) {
+                if (VB.ubo)
+                  for (const TB of VB.ubo) {
+                    if (TB.size && TB.type) {
+                      const VB = TB.arraySize ?? 0;
+                      if (BB.ubo.addUniform(TB.name, TB.size, VB), dB) {
+                        let BB;
+                        switch (TB.type) {
                           case "mat4":
-                            JJ = "mat4x4f";
+                            BB = "mat4x4f";
                             break;
                           case "float":
-                            JJ = "f32";
+                            BB = "f32";
                             break;
                           default:
-                            JJ = `${cJ.type}f`
+                            BB = `${TB.type}f`
                         }
-                        this._uboDeclaration += FJ > 0 ? `uniform ${cJ.name}: array<${JJ}, ${FJ}>;\n` : `uniform ${cJ.name}: ${JJ};\n`
-                      } else this._uboDeclaration += `${cJ.type} ${cJ.name}${FJ>0?`[${FJ}]`:""};\n`
+                        this._uboDeclaration += VB > 0 ? `uniform ${TB.name}: array<${BB}, ${VB}>;\n` : `uniform ${TB.name}: ${BB};\n`
+                      } else this._uboDeclaration += `${TB.type} ${TB.name}${VB>0?`[${VB}]`:""};\n`
                     }
-                    this._uniformList.push(cJ.name)
+                    this._uniformList.push(TB.name)
                   }
-                FJ.vertex && (this._vertexDeclaration += FJ.vertex + "\n"), FJ.fragment && (this._fragmentDeclaration += FJ.fragment + "\n"), FJ.externalUniforms && this._uniformList.push(...FJ.externalUniforms)
+                VB.vertex && (this._vertexDeclaration += VB.vertex + "\n"), VB.fragment && (this._fragmentDeclaration += VB.fragment + "\n"), VB.externalUniforms && this._uniformList.push(...VB.externalUniforms)
               }
-              cJ.getSamplers(this._samplerList), cJ.getUniformBuffersNames(this._uboList)
+              TB.getSamplers(this._samplerList), TB.getUniformBuffersNames(this._uboList)
             }
             break
           }
         }
       }
-      _collectPointNames(JJ, cJ) {
-        if (cJ)
-          for (const ZJ in cJ) this._codeInjectionPoints[JJ] || (this._codeInjectionPoints[JJ] = {}), this._codeInjectionPoints[JJ][ZJ] = !0
+      _collectPointNames(BB, TB) {
+        if (TB)
+          for (const dB in TB) this._codeInjectionPoints[BB] || (this._codeInjectionPoints[BB] = {}), this._codeInjectionPoints[BB][dB] = !0
       }
-      _injectCustomCode(JJ, cJ) {
-        return (ZJ, FJ) => {
-          cJ && (FJ = cJ(ZJ, FJ)), this._uboDeclaration && (FJ = FJ.replace("#define ADDITIONAL_UBO_DECLARATION", this._uboDeclaration)), this._vertexDeclaration && (FJ = FJ.replace("#define ADDITIONAL_VERTEX_DECLARATION", this._vertexDeclaration)), this._fragmentDeclaration && (FJ = FJ.replace("#define ADDITIONAL_FRAGMENT_DECLARATION", this._fragmentDeclaration));
-          const UJ = this._codeInjectionPoints?.[ZJ];
-          if (!UJ) return FJ;
-          let qJ = null;
-          for (let cJ in UJ) {
-            let UJ = "";
-            for (const FJ of this._activePlugins) {
-              const AJ = this._material.shaderLanguage;
-              let jJ = FJ.getCustomCode(ZJ, AJ)?.[cJ];
-              jJ && (FJ.resolveIncludes && (null === qJ && (qJ = {
+      _injectCustomCode(BB, TB) {
+        return (dB, VB) => {
+          TB && (VB = TB(dB, VB)), this._uboDeclaration && (VB = VB.replace("#define ADDITIONAL_UBO_DECLARATION", this._uboDeclaration)), this._vertexDeclaration && (VB = VB.replace("#define ADDITIONAL_VERTEX_DECLARATION", this._vertexDeclaration)), this._fragmentDeclaration && (VB = VB.replace("#define ADDITIONAL_FRAGMENT_DECLARATION", this._fragmentDeclaration));
+          const yB = this._codeInjectionPoints?.[dB];
+          if (!yB) return VB;
+          let YB = null;
+          for (let TB in yB) {
+            let yB = "";
+            for (const VB of this._activePlugins) {
+              const JB = this._material.shaderLanguage;
+              let gB = VB.getCustomCode(dB, JB)?.[TB];
+              gB && (VB.resolveIncludes && (null === YB && (YB = {
                 defines: [],
-                indexParameters: JJ.indexParameters,
+                indexParameters: BB.indexParameters,
                 isFragment: !1,
                 shouldUseHighPrecisionShader: this._engine._shouldUseHighPrecisionShader,
                 processor: void 0,
                 supportsUniformBuffers: this._engine.supportsUniformBuffers,
-                shadersRepository: XJ.b.GetShadersRepository(AJ),
-                includesShadersStore: XJ.b.GetIncludesShadersStore(AJ),
+                shadersRepository: lB.e.GetShadersRepository(JB),
+                includesShadersStore: lB.e.GetIncludesShadersStore(JB),
                 version: void 0,
                 platformName: this._engine.shaderPlatformName,
                 processingContext: void 0,
                 isNDCHalfZRange: this._engine.isNDCHalfZRange,
-                LZJ: this._engine.LZJ,
+                fVB: this._engine.fVB,
                 processCodeAfterIncludes: void 0
-              }), qJ.isFragment = "fragment" === ZJ, (0, eJ.g)(jJ, qJ, (JJ => jJ = JJ))), UJ += jJ + "\n")
+              }), YB.isFragment = "fragment" === dB, (0, pB.f)(gB, YB, (BB => gB = BB))), yB += gB + "\n")
             }
-            if (UJ.length > 0)
-              if ("!" === cJ.charAt(0)) {
-                cJ = cJ.substring(1);
-                let JJ = "g";
-                if ("!" === cJ.charAt(0)) JJ = "", cJ = cJ.substring(1);
+            if (yB.length > 0)
+              if ("!" === TB.charAt(0)) {
+                TB = TB.substring(1);
+                let BB = "g";
+                if ("!" === TB.charAt(0)) BB = "", TB = TB.substring(1);
                 else {
-                  const ZJ = AJ.exec(cJ);
-                  ZJ && ZJ.length >= 2 && (JJ = ZJ[1], cJ = cJ.substring(JJ.length + 1))
+                  const dB = JB.exec(TB);
+                  dB && dB.length >= 2 && (BB = dB[1], TB = TB.substring(BB.length + 1))
                 }
-                JJ.indexOf("g") < 0 && (JJ += "g");
-                const ZJ = new RegExp(cJ, JJ);
-                let eJ = ZJ.exec(FJ);
-                for (; null !== eJ;) {
+                BB.indexOf("g") < 0 && (BB += "g");
+                const dB = new RegExp(TB, BB);
+                let pB = dB.exec(VB);
+                for (; null !== pB;) {
                   const {
-                    index: JJ
-                  } = eJ, cJ = jJ(UJ, eJ);
-                  FJ = FJ.substring(0, JJ) + cJ + FJ.substring(JJ + eJ[0].length), ZJ.lastIndex = JJ + cJ.length, eJ = ZJ.exec(FJ)
+                    index: BB
+                  } = pB, TB = gB(yB, pB);
+                  VB = VB.substring(0, BB) + TB + VB.substring(BB + pB[0].length), dB.lastIndex = BB + TB.length, pB = dB.exec(VB)
                 }
               } else {
-                const JJ = "#define " + cJ;
-                FJ = FJ.replace(JJ, "\n" + UJ + "\n" + JJ)
+                const BB = "#define " + TB;
+                VB = VB.replace(BB, "\n" + yB + "\n" + BB)
               }
           }
-          return FJ
+          return VB
         }
       }
     }
-    qJ._MaterialPluginClassToMainDefine = {}, qJ._MaterialPluginCounter = 0;
+    YB._MaterialPluginClassToMainDefine = {}, YB._MaterialPluginCounter = 0;
 
-    function jJ(JJ, cJ) {
-      return JJ.replace(/\$(\d+)/g, ((JJ, ZJ) => {
-        const FJ = Number(ZJ);
-        return FJ < cJ.length ? cJ[FJ] : ""
+    function gB(BB, TB) {
+      return BB.replace(/\$(\d+)/g, ((BB, dB) => {
+        const VB = Number(dB);
+        return VB < TB.length ? TB[VB] : ""
       }))
     }
-    var YJ = ZJ(38822),
-      hJ = ZJ(36216);
-    let DJ = (() => {
-        var JJ;
-        let cJ, ZJ, eJ, XJ, AJ = [],
-          jJ = [],
-          hJ = [],
-          DJ = [],
-          sJ = [],
-          nJ = [],
-          GJ = [],
-          fJ = [];
-        return JJ = class {
-          isCompatible(JJ) {
-            return 0 === JJ
+    var oB = dB(38772),
+      kB = dB(36166);
+    let LB = (() => {
+        var BB;
+        let TB, dB, pB, lB, JB = [],
+          gB = [],
+          kB = [],
+          LB = [],
+          OB = [],
+          DB = [],
+          uB = [],
+          HB = [];
+        return BB = class {
+          isCompatible(BB) {
+            return 0 === BB
           }
-          _enable(JJ) {
-            JJ && this._pluginManager._activatePlugin(this)
+          _enable(BB) {
+            BB && this._pluginManager._activatePlugin(this)
           }
-          constructor(JJ, cJ, ZJ, UJ) {
-            let eJ = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-              XJ = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-              YJ = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
-            this.name = (0, FJ.e)(this, AJ, void 0), this.priority = ((0, FJ.e)(this, jJ), (0, FJ.e)(this, hJ, 500)), this.resolveIncludes = ((0, FJ.e)(this, DJ), (0, FJ.e)(this, sJ, !1)), this.registerForExtraEvents = ((0, FJ.e)(this, nJ), (0, FJ.e)(this, GJ, !1)), this.doNotSerialize = ((0, FJ.e)(this, fJ), !1), this._material = JJ, this.name = cJ, this.priority = ZJ, this.resolveIncludes = YJ, JJ.pluginManager || (JJ.pluginManager = new qJ(JJ), JJ.Sy.add((() => {
-              JJ.pluginManager = void 0
-            }))), this._pluginDefineNames = UJ, this._pluginManager = JJ.pluginManager, eJ && this._pluginManager._addPlugin(this), XJ && this._enable(!0), this.markAllDefinesAsDirty = JJ._dirtyCallbacks[127]
+          constructor(BB, TB, dB, yB) {
+            let pB = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+              lB = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+              oB = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
+            this.name = (0, VB.h)(this, JB, void 0), this.priority = ((0, VB.h)(this, gB), (0, VB.h)(this, kB, 500)), this.resolveIncludes = ((0, VB.h)(this, LB), (0, VB.h)(this, OB, !1)), this.registerForExtraEvents = ((0, VB.h)(this, DB), (0, VB.h)(this, uB, !1)), this.doNotSerialize = ((0, VB.h)(this, HB), !1), this._material = BB, this.name = TB, this.priority = dB, this.resolveIncludes = oB, BB.pluginManager || (BB.pluginManager = new YB(BB), BB.lF.add((() => {
+              BB.pluginManager = void 0
+            }))), this._pluginDefineNames = yB, this._pluginManager = BB.pluginManager, pB && this._pluginManager._addPlugin(this), lB && this._enable(!0), this.markAllDefinesAsDirty = BB._dirtyCallbacks[127]
           }
           getClassName() {
             return "MaterialPluginBase"
           }
-          isReadyForSubMesh(JJ, cJ, ZJ, FJ) {
+          isReadyForSubMesh(BB, TB, dB, VB) {
             return !0
           }
-          hardBindForSubMesh(JJ, cJ, ZJ, FJ) {}
-          bindForSubMesh(JJ, cJ, ZJ, FJ) {}
-          dispose(JJ) {}
-          getCustomCode(JJ) {
+          hardBindForSubMesh(BB, TB, dB, VB) {}
+          bindForSubMesh(BB, TB, dB, VB) {}
+          dispose(BB) {}
+          getCustomCode(BB) {
             return null
           }
-          collectDefines(JJ) {
+          collectDefines(BB) {
             if (this._pluginDefineNames)
-              for (const cJ of Object.keys(this._pluginDefineNames)) {
-                if ("_" === cJ[0]) continue;
-                const ZJ = typeof this._pluginDefineNames[cJ];
-                JJ[cJ] = {
-                  type: "number" === ZJ ? "number" : "string" === ZJ ? "string" : "boolean" === ZJ ? "boolean" : "object",
-                  default: this._pluginDefineNames[cJ]
+              for (const TB of Object.keys(this._pluginDefineNames)) {
+                if ("_" === TB[0]) continue;
+                const dB = typeof this._pluginDefineNames[TB];
+                BB[TB] = {
+                  type: "number" === dB ? "number" : "string" === dB ? "string" : "boolean" === dB ? "boolean" : "object",
+                  default: this._pluginDefineNames[TB]
                 }
               }
           }
-          prepareDefinesBeforeAttributes(JJ, cJ, ZJ) {}
-          prepareDefines(JJ, cJ, ZJ) {}
-          hasTexture(JJ) {
+          prepareDefinesBeforeAttributes(BB, TB, dB) {}
+          prepareDefines(BB, TB, dB) {}
+          hasTexture(BB) {
             return !1
           }
           hasRenderTargetTextures() {
             return !1
           }
-          fillRenderTargetTextures(JJ) {}
-          getActiveTextures(JJ) {}
-          getAnimatables(JJ) {}
-          addFallbacks(JJ, cJ, ZJ) {
-            return ZJ
+          fillRenderTargetTextures(BB) {}
+          getActiveTextures(BB) {}
+          getAnimatables(BB) {}
+          addFallbacks(BB, TB, dB) {
+            return dB
           }
-          getSamplers(JJ) {}
-          getAttributes(JJ, cJ, ZJ) {}
-          getUniformBuffersNames(JJ) {}
+          getSamplers(BB) {}
+          getAttributes(BB, TB, dB) {}
+          getUniformBuffersNames(BB) {}
           getUniforms() {
             return {}
           }
-          copyTo(JJ) {
-            YJ.c.Clone((() => JJ), this)
+          copyTo(BB) {
+            oB.c.Clone((() => BB), this)
           }
           serialize() {
-            return YJ.c.Serialize(this)
+            return oB.c.Serialize(this)
           }
-          parse(JJ, cJ, ZJ) {
-            YJ.c.Parse((() => this), JJ, cJ, ZJ)
+          parse(BB, TB, dB) {
+            oB.c.Parse((() => this), BB, TB, dB)
           }
         }, (() => {
-          const qJ = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-          cJ = [(0, UJ.F)()], ZJ = [(0, UJ.F)()], eJ = [(0, UJ.F)()], XJ = [(0, UJ.F)()], (0, FJ.d)(null, null, cJ, {
+          const YB = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+          TB = [(0, yB.W)()], dB = [(0, yB.W)()], pB = [(0, yB.W)()], lB = [(0, yB.W)()], (0, VB.g)(null, null, TB, {
             kind: "field",
             name: "name",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "name" in JJ,
-              get: JJ => JJ.name,
-              set: (JJ, cJ) => {
-                JJ.name = cJ
+              has: BB => "name" in BB,
+              get: BB => BB.name,
+              set: (BB, TB) => {
+                BB.name = TB
               }
             },
-            metadata: qJ
-          }, AJ, jJ), (0, FJ.d)(null, null, ZJ, {
+            metadata: YB
+          }, JB, gB), (0, VB.g)(null, null, dB, {
             kind: "field",
             name: "priority",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "priority" in JJ,
-              get: JJ => JJ.priority,
-              set: (JJ, cJ) => {
-                JJ.priority = cJ
+              has: BB => "priority" in BB,
+              get: BB => BB.priority,
+              set: (BB, TB) => {
+                BB.priority = TB
               }
             },
-            metadata: qJ
-          }, hJ, DJ), (0, FJ.d)(null, null, eJ, {
+            metadata: YB
+          }, kB, LB), (0, VB.g)(null, null, pB, {
             kind: "field",
             name: "resolveIncludes",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "resolveIncludes" in JJ,
-              get: JJ => JJ.resolveIncludes,
-              set: (JJ, cJ) => {
-                JJ.resolveIncludes = cJ
+              has: BB => "resolveIncludes" in BB,
+              get: BB => BB.resolveIncludes,
+              set: (BB, TB) => {
+                BB.resolveIncludes = TB
               }
             },
-            metadata: qJ
-          }, sJ, nJ), (0, FJ.d)(null, null, XJ, {
+            metadata: YB
+          }, OB, DB), (0, VB.g)(null, null, lB, {
             kind: "field",
             name: "registerForExtraEvents",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "registerForExtraEvents" in JJ,
-              get: JJ => JJ.registerForExtraEvents,
-              set: (JJ, cJ) => {
-                JJ.registerForExtraEvents = cJ
+              has: BB => "registerForExtraEvents" in BB,
+              get: BB => BB.registerForExtraEvents,
+              set: (BB, TB) => {
+                BB.registerForExtraEvents = TB
               }
             },
-            metadata: qJ
-          }, GJ, fJ), qJ && Object.defineProperty(JJ, Symbol.metadata, {
+            metadata: YB
+          }, uB, HB), YB && Object.defineProperty(BB, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: qJ
+            value: YB
           })
-        })(), JJ
+        })(), BB
       })(),
-      sJ = !1;
+      OB = !1;
 
-    function nJ() {
-      sJ || (sJ = !0, (0, hJ.f)("BABYLON.MaterialPluginBase", DJ))
+    function DB() {
+      OB || (OB = !0, (0, kB.g)("BABYLON.MaterialPluginBase", LB))
     }
   },
-  39034: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      e: () => FJ
+  39028: (BB, TB, dB) => {
+    dB.d(TB, {
+      e: () => VB
     });
-    class FJ {
+    class VB {
       constructor() {
         this.previousWorldMatrices = {}, this.previousBones = {}
       }
-      static AddUniforms(JJ) {
-        JJ.push("previousWorld", "previousViewProjection", "mPreviousBones")
+      static AddUniforms(BB) {
+        BB.push("previousWorld", "previousViewProjection", "mPreviousBones")
       }
-      static AddSamplers(JJ) {}
-      bindForSubMesh(JJ, cJ, ZJ, FJ, UJ) {
-        if (cJ.prePassRenderer && cJ.prePassRenderer.enabled && cJ.prePassRenderer.currentRTisSceneRT && (-1 !== cJ.prePassRenderer.getIndex(2) || -1 !== cJ.prePassRenderer.getIndex(11))) {
-          this.previousWorldMatrices[ZJ.uniqueId] || (this.previousWorldMatrices[ZJ.uniqueId] = FJ.clone()), this.previousViewProjection || (this.previousViewProjection = cJ.getTransformMatrix().clone(), this.currentViewProjection = cJ.getTransformMatrix().clone());
-          const UJ = cJ.gn();
-          this.currentViewProjection.updateFlag !== cJ.getTransformMatrix().updateFlag ? (this._lastUpdateFrameId = UJ.frameId, this.previousViewProjection.rZJ(this.currentViewProjection), this.currentViewProjection.rZJ(cJ.getTransformMatrix())) : this._lastUpdateFrameId !== UJ.frameId && (this._lastUpdateFrameId = UJ.frameId, this.previousViewProjection.rZJ(this.currentViewProjection)), JJ.setMatrix("previousWorld", this.previousWorldMatrices[ZJ.uniqueId]), JJ.setMatrix("previousViewProjection", this.previousViewProjection), this.previousWorldMatrices[ZJ.uniqueId] = FJ.clone()
+      static AddSamplers(BB) {}
+      bindForSubMesh(BB, TB, dB, VB, yB) {
+        if (TB.prePassRenderer && TB.prePassRenderer.enabled && TB.prePassRenderer.currentRTisSceneRT && (-1 !== TB.prePassRenderer.getIndex(2) || -1 !== TB.prePassRenderer.getIndex(11))) {
+          this.previousWorldMatrices[dB.uniqueId] || (this.previousWorldMatrices[dB.uniqueId] = VB.clone()), this.previousViewProjection || (this.previousViewProjection = TB.getTransformMatrix().clone(), this.currentViewProjection = TB.getTransformMatrix().clone());
+          const yB = TB.PD();
+          this.currentViewProjection.updateFlag !== TB.getTransformMatrix().updateFlag ? (this._lastUpdateFrameId = yB.frameId, this.previousViewProjection.bdB(this.currentViewProjection), this.currentViewProjection.bdB(TB.getTransformMatrix())) : this._lastUpdateFrameId !== yB.frameId && (this._lastUpdateFrameId = yB.frameId, this.previousViewProjection.bdB(this.currentViewProjection)), BB.setMatrix("previousWorld", this.previousWorldMatrices[dB.uniqueId]), BB.setMatrix("previousViewProjection", this.previousViewProjection), this.previousWorldMatrices[dB.uniqueId] = VB.clone()
         }
       }
     }
   },
-  39143: (JJ, cJ, ZJ) => {
-    function FJ(JJ) {
-      return class extends JJ {
+  39126: (BB, TB, dB) => {
+    function VB(BB) {
+      return class extends BB {
         constructor() {
           super(...arguments), this.PREPASS = !1, this.PREPASS_COLOR = !1, this.PREPASS_COLOR_INDEX = -1, this.PREPASS_IRRADIANCE_LEGACY = !1, this.PREPASS_IRRADIANCE_LEGACY_INDEX = -1, this.PREPASS_IRRADIANCE = !1, this.PREPASS_IRRADIANCE_INDEX = -1, this.PREPASS_ALBEDO = !1, this.PREPASS_ALBEDO_INDEX = -1, this.PREPASS_ALBEDO_SQRT = !1, this.PREPASS_ALBEDO_SQRT_INDEX = -1, this.PREPASS_DEPTH = !1, this.PREPASS_DEPTH_INDEX = -1, this.PREPASS_SCREENSPACE_DEPTH = !1, this.PREPASS_SCREENSPACE_DEPTH_INDEX = -1, this.PREPASS_NORMALIZED_VIEW_DEPTH = !1, this.PREPASS_NORMALIZED_VIEW_DEPTH_INDEX = -1, this.PREPASS_NORMAL = !1, this.PREPASS_NORMAL_INDEX = -1, this.PREPASS_NORMAL_WORLDSPACE = !1, this.PREPASS_WORLD_NORMAL = !1, this.PREPASS_WORLD_NORMAL_INDEX = -1, this.PREPASS_POSITION = !1, this.PREPASS_POSITION_INDEX = -1, this.PREPASS_LOCAL_POSITION = !1, this.PREPASS_LOCAL_POSITION_INDEX = -1, this.PREPASS_VELOCITY = !1, this.PREPASS_VELOCITY_INDEX = -1, this.PREPASS_VELOCITY_LINEAR = !1, this.PREPASS_VELOCITY_LINEAR_INDEX = -1, this.PREPASS_REFLECTIVITY = !1, this.PREPASS_REFLECTIVITY_INDEX = -1, this.PREPASS_OBJECT_ID = !1, this.PREPASS_OBJECT_ID_INDEX = -1, this.PREPASS_OBJECT_ID_R8 = !1, this.PREPASS_MESH_BLEND_TAG = !1, this.PREPASS_MESH_BLEND_TAG_INDEX = -1, this.SCENE_MRT_COUNT = 0
         }
       }
     }
-    ZJ.d(cJ, {
-      d: () => FJ
+    dB.d(TB, {
+      c: () => VB
     })
   },
-  39029: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      StandardMaterial: () => FJ.f
+  39019: (BB, TB, dB) => {
+    dB.d(TB, {
+      StandardMaterial: () => VB.e
     });
-    var FJ = ZJ(39032);
-    (0, FJ.c)()
+    var VB = dB(39024);
+    (0, VB.c)()
   },
-  39032: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      c: () => kJ,
-      f: () => HJ
+  39024: (BB, TB, dB) => {
+    dB.d(TB, {
+      c: () => PB,
+      e: () => cB
     });
-    var FJ = ZJ(38800),
-      UJ = ZJ(38806),
-      eJ = ZJ(38890),
-      XJ = ZJ(38874),
-      AJ = ZJ(36231),
-      qJ = ZJ(38918),
-      jJ = ZJ(39034),
-      YJ = ZJ(39037),
-      hJ = ZJ(38892),
-      DJ = ZJ(39049),
-      sJ = ZJ(39041),
-      nJ = ZJ(39106),
-      GJ = ZJ(39100),
-      fJ = ZJ(39113),
-      xJ = ZJ(39117),
-      rJ = ZJ(39091),
-      vJ = ZJ(39128),
-      mJ = ZJ(39087),
-      QJ = ZJ(38822),
-      EJ = ZJ(39130),
-      VJ = ZJ(39138),
-      KJ = ZJ(39140),
-      yJ = ZJ(39143),
-      SJ = ZJ(39151),
-      IJ = ZJ(36216),
-      MJ = ZJ(38677);
-    const bJ = {
+    var VB = dB(38745),
+      yB = dB(38750),
+      pB = dB(38861),
+      lB = dB(38843),
+      JB = dB(36183),
+      YB = dB(38897),
+      gB = dB(39028),
+      oB = dB(39030),
+      kB = dB(38863),
+      LB = dB(39040),
+      OB = dB(39034),
+      DB = dB(39080),
+      uB = dB(39078),
+      HB = dB(39088),
+      EB = dB(39090),
+      vB = dB(39075),
+      mB = dB(39101),
+      iB = dB(39073),
+      NB = dB(38772),
+      tB = dB(39108),
+      fB = dB(39117),
+      sB = dB(39119),
+      MB = dB(39126),
+      zB = dB(39130),
+      wB = dB(36166),
+      UB = dB(38629);
+    const FB = {
       effect: null,
       subMesh: null
     };
-    class wJ extends((0, yJ.d)((0, KJ.c)(sJ.d))) {}
-    class WJ extends((0, YJ.e)(wJ)) {
-      constructor(JJ) {
-        super(JJ), this.DIFFUSE = !1, this.DIFFUSEDIRECTUV = 0, this.BAKED_VERTEX_ANIMATION_TEXTURE = !1, this.AMBIENT = !1, this.AMBIENTDIRECTUV = 0, this.OPACITY = !1, this.OPACITYDIRECTUV = 0, this.OPACITYRGB = !1, this.REFLECTION = !1, this.EMISSIVE = !1, this.EMISSIVEDIRECTUV = 0, this.SPECULAR = !1, this.SPECULARDIRECTUV = 0, this.BUMP = !1, this.BUMPDIRECTUV = 0, this.PARALLAX = !1, this.PARALLAX_RHS = !1, this.PARALLAXOCCLUSION = !1, this.SPECULAROVERALPHA = !1, this.CLIPPLANE = !1, this.CLIPPLANE2 = !1, this.CLIPPLANE3 = !1, this.CLIPPLANE4 = !1, this.CLIPPLANE5 = !1, this.CLIPPLANE6 = !1, this.ALPHATEST = !1, this.DEPTHPREPASS = !1, this.ALPHAFROMDIFFUSE = !1, this.POINTSIZE = !1, this.FOG = !1, this.SPECULARTERM = !1, this.DIFFUSEFRESNEL = !1, this.OPACITYFRESNEL = !1, this.REFLECTIONFRESNEL = !1, this.REFRACTIONFRESNEL = !1, this.EMISSIVEFRESNEL = !1, this.FRESNEL = !1, this.NORMAL = !1, this.TANGENT = !1, this.VERTEXCOLOR = !1, this.VERTEXALPHA = !1, this.NUM_BONE_INFLUENCERS = 0, this.BonesPerMesh = 0, this.BONETEXTURE = !1, this.BONES_VELOCITY_ENABLED = !1, this.INSTANCES = !1, this.THIN_INSTANCES = !1, this.INSTANCESCOLOR = !1, this.GLOSSINESS = !1, this.ROUGHNESS = !1, this.EMISSIVEASILLUMINATION = !1, this.LINKEMISSIVEWITHDIFFUSE = !1, this.REFLECTIONFRESNELFROMSPECULAR = !1, this.LIGHTMAP = !1, this.LIGHTMAPDIRECTUV = 0, this.OBJECTSPACE_NORMALMAP = !1, this.USELIGHTMAPASSHADOWMAP = !1, this.REFLECTIONMAP_3D = !1, this.REFLECTIONMAP_SPHERICAL = !1, this.REFLECTIONMAP_PLANAR = !1, this.REFLECTIONMAP_CUBIC = !1, this.USE_LOCAL_REFLECTIONMAP_CUBIC = !1, this.USE_LOCAL_REFRACTIONMAP_CUBIC = !1, this.REFLECTIONMAP_PROJECTION = !1, this.REFLECTIONMAP_SKYBOX = !1, this.REFLECTIONMAP_EXPLICIT = !1, this.REFLECTIONMAP_EQUIRECTANGULAR = !1, this.REFLECTIONMAP_EQUIRECTANGULAR_FIXED = !1, this.REFLECTIONMAP_MIRROREDEQUIRECTANGULAR_FIXED = !1, this.REFLECTIONMAP_OPPOSITEZ = !1, this.INVERTCUBICMAP = !1, this.LOGARITHMICDEPTH = !1, this.REFRACTION = !1, this.REFRACTIONMAP_3D = !1, this.REFLECTIONOVERALPHA = !1, this.TWOSIDEDLIGHTING = !1, this.SHADOWFLOAT = !1, this.MORPHTARGETS = !1, this.MORPHTARGETS_POSITION = !1, this.MORPHTARGETS_NORMAL = !1, this.MORPHTARGETS_TANGENT = !1, this.MORPHTARGETS_UV = !1, this.MORPHTARGETS_UV2 = !1, this.MORPHTARGETS_COLOR = !1, this.MORPHTARGETTEXTURE_HASPOSITIONS = !1, this.MORPHTARGETTEXTURE_HASNORMALS = !1, this.MORPHTARGETTEXTURE_HASTANGENTS = !1, this.MORPHTARGETTEXTURE_HASUVS = !1, this.MORPHTARGETTEXTURE_HASUV2S = !1, this.MORPHTARGETTEXTURE_HASCOLORS = !1, this.NUM_MORPH_INFLUENCERS = 0, this.MORPHTARGETS_TEXTURE = !1, this.NONUNIFORMSCALING = !1, this.PREMULTIPLYALPHA = !1, this.ALPHATEST_AFTERALLALPHACOMPUTATIONS = !1, this.ALPHABLEND = !0, this.RGBDLIGHTMAP = !1, this.RGBDREFLECTION = !1, this.RGBDREFRACTION = !1, this.MULTIVIEW = !1, this.ORDER_INDEPENDENT_TRANSPARENCY = !1, this.ORDER_INDEPENDENT_TRANSPARENCY_16BITS = !1, this.CAMERA_ORTHOGRAPHIC = !1, this.CAMERA_PERSPECTIVE = !1, this.AREALIGHTSUPPORTED = !0, this.USE_VERTEX_PULLING = !1, this.VERTEX_PULLING_USE_INDEX_BUFFER = !1, this.VERTEX_PULLING_INDEX_BUFFER_32BITS = !1, this.RIGHT_HANDED = !1, this.CLUSTLIGHT_SLICES = 0, this.CLUSTLIGHT_BATCH = 0, this.IS_REFLECTION_LINEAR = !1, this.IS_REFRACTION_LINEAR = !1, this.DECAL_AFTER_DETAIL = !1, this.TEXTURE_REPETITION_MODE = 0, this.rebuild()
+    class KB extends((0, MB.c)((0, sB.b)(OB.d))) {}
+    class rB extends((0, oB.h)(KB)) {
+      constructor(BB) {
+        super(BB), this.DIFFUSE = !1, this.DIFFUSEDIRECTUV = 0, this.BAKED_VERTEX_ANIMATION_TEXTURE = !1, this.AMBIENT = !1, this.AMBIENTDIRECTUV = 0, this.OPACITY = !1, this.OPACITYDIRECTUV = 0, this.OPACITYRGB = !1, this.REFLECTION = !1, this.EMISSIVE = !1, this.EMISSIVEDIRECTUV = 0, this.SPECULAR = !1, this.SPECULARDIRECTUV = 0, this.BUMP = !1, this.BUMPDIRECTUV = 0, this.PARALLAX = !1, this.PARALLAX_RHS = !1, this.PARALLAXOCCLUSION = !1, this.SPECULAROVERALPHA = !1, this.CLIPPLANE = !1, this.CLIPPLANE2 = !1, this.CLIPPLANE3 = !1, this.CLIPPLANE4 = !1, this.CLIPPLANE5 = !1, this.CLIPPLANE6 = !1, this.ALPHATEST = !1, this.DEPTHPREPASS = !1, this.ALPHAFROMDIFFUSE = !1, this.POINTSIZE = !1, this.FOG = !1, this.SPECULARTERM = !1, this.DIFFUSEFRESNEL = !1, this.OPACITYFRESNEL = !1, this.REFLECTIONFRESNEL = !1, this.REFRACTIONFRESNEL = !1, this.EMISSIVEFRESNEL = !1, this.FRESNEL = !1, this.NORMAL = !1, this.TANGENT = !1, this.VERTEXCOLOR = !1, this.VERTEXALPHA = !1, this.NUM_BONE_INFLUENCERS = 0, this.BonesPerMesh = 0, this.BONETEXTURE = !1, this.BONES_VELOCITY_ENABLED = !1, this.INSTANCES = !1, this.THIN_INSTANCES = !1, this.INSTANCESCOLOR = !1, this.GLOSSINESS = !1, this.ROUGHNESS = !1, this.EMISSIVEASILLUMINATION = !1, this.LINKEMISSIVEWITHDIFFUSE = !1, this.REFLECTIONFRESNELFROMSPECULAR = !1, this.LIGHTMAP = !1, this.LIGHTMAPDIRECTUV = 0, this.OBJECTSPACE_NORMALMAP = !1, this.USELIGHTMAPASSHADOWMAP = !1, this.REFLECTIONMAP_3D = !1, this.REFLECTIONMAP_SPHERICAL = !1, this.REFLECTIONMAP_PLANAR = !1, this.REFLECTIONMAP_CUBIC = !1, this.USE_LOCAL_REFLECTIONMAP_CUBIC = !1, this.USE_LOCAL_REFRACTIONMAP_CUBIC = !1, this.REFLECTIONMAP_PROJECTION = !1, this.REFLECTIONMAP_SKYBOX = !1, this.REFLECTIONMAP_EXPLICIT = !1, this.REFLECTIONMAP_EQUIRECTANGULAR = !1, this.REFLECTIONMAP_EQUIRECTANGULAR_FIXED = !1, this.REFLECTIONMAP_MIRROREDEQUIRECTANGULAR_FIXED = !1, this.REFLECTIONMAP_OPPOSITEZ = !1, this.INVERTCUBICMAP = !1, this.LOGARITHMICDEPTH = !1, this.REFRACTION = !1, this.REFRACTIONMAP_3D = !1, this.REFLECTIONOVERALPHA = !1, this.TWOSIDEDLIGHTING = !1, this.SHADOWFLOAT = !1, this.MORPHTARGETS = !1, this.MORPHTARGETS_POSITION = !1, this.MORPHTARGETS_NORMAL = !1, this.MORPHTARGETS_TANGENT = !1, this.MORPHTARGETS_UV = !1, this.MORPHTARGETS_UV2 = !1, this.MORPHTARGETS_COLOR = !1, this.MORPHTARGETTEXTURE_HASPOSITIONS = !1, this.MORPHTARGETTEXTURE_HASNORMALS = !1, this.MORPHTARGETTEXTURE_HASTANGENTS = !1, this.MORPHTARGETTEXTURE_HASUVS = !1, this.MORPHTARGETTEXTURE_HASUV2S = !1, this.MORPHTARGETTEXTURE_HASCOLORS = !1, this.NUM_MORPH_INFLUENCERS = 0, this.MORPHTARGETS_TEXTURE = !1, this.NONUNIFORMSCALING = !1, this.PREMULTIPLYALPHA = !1, this.ALPHATEST_AFTERALLALPHACOMPUTATIONS = !1, this.ALPHABLEND = !0, this.RGBDLIGHTMAP = !1, this.RGBDREFLECTION = !1, this.RGBDREFRACTION = !1, this.MULTIVIEW = !1, this.ORDER_INDEPENDENT_TRANSPARENCY = !1, this.ORDER_INDEPENDENT_TRANSPARENCY_16BITS = !1, this.CAMERA_ORTHOGRAPHIC = !1, this.CAMERA_PERSPECTIVE = !1, this.AREALIGHTSUPPORTED = !0, this.USE_VERTEX_PULLING = !1, this.VERTEX_PULLING_USE_INDEX_BUFFER = !1, this.VERTEX_PULLING_INDEX_BUFFER_32BITS = !1, this.RIGHT_HANDED = !1, this.CLUSTLIGHT_SLICES = 0, this.CLUSTLIGHT_BATCH = 0, this.IS_REFLECTION_LINEAR = !1, this.IS_REFRACTION_LINEAR = !1, this.DECAL_AFTER_DETAIL = !1, this.TEXTURE_REPETITION_MODE = 0, this.rebuild()
       }
     }
-    class gJ extends((0, SJ.e)(nJ.d)) {}
-    let HJ = (() => {
-        var JJ, cJ, YJ, sJ, KJ, yJ, SJ, IJ, MJ, wJ, HJ, PJ, kJ, pJ, dJ, zJ, NJ, OJ, TJ, CJ, uJ, iJ, RJ, LJ, aJ, BJ, tJ, oJ, lJ, Jc, cc, Zc, Fc;
-        let Uc, ec, Xc, Ac, qc, jc, Yc, hc, Dc, sc, nc, Gc, fc, xc, rc, vc, mc, Qc, Ec, Vc, Kc, yc, Sc, Ic, Mc, bc, wc, Wc, gc, Hc, Pc, kc, pc, dc, zc, Nc, Oc, Tc, Cc, uc, ic, Rc, Lc, ac, Bc, tc, oc, lc, JZ, cZ, ZZ, FZ, UZ, eZ, XZ, AZ, qZ, jZ, YZ, hZ, DZ, sZ, nZ, GZ, fZ, xZ, rZ, vZ, mZ, QZ, EZ, VZ, KZ, yZ = gJ,
-          SZ = [],
-          IZ = [],
-          MZ = [],
-          bZ = [],
-          wZ = [],
-          WZ = [],
-          gZ = [],
-          HZ = [],
-          PZ = [],
-          kZ = [],
-          pZ = [],
-          dZ = [],
-          zZ = [],
-          NZ = [],
-          OZ = [],
-          TZ = [],
-          CZ = [],
-          uZ = [],
-          iZ = [],
-          RZ = [],
-          LZ = [],
-          aZ = [],
-          BZ = [],
-          tZ = [],
-          oZ = [],
-          lZ = [],
-          JF = [],
-          cF = [],
-          ZF = [],
-          FF = [],
-          UF = [],
-          eF = [],
-          XF = [],
-          AF = [],
-          qF = [],
-          jF = [],
-          YF = [],
-          hF = [],
-          DF = [],
-          sF = [],
-          nF = [],
-          GF = [],
-          fF = [],
-          xF = [],
-          rF = [],
-          vF = [],
-          mF = [],
-          QF = [],
-          EF = [],
-          VF = [],
-          KF = [],
-          yF = [],
-          SF = [],
-          IF = [],
-          MF = [],
-          bF = [],
-          wF = [],
-          WF = [],
-          gF = [],
-          HF = [],
-          PF = [],
-          kF = [],
-          pF = [],
-          dF = [],
-          zF = [],
-          NF = [],
-          OF = [],
-          TF = [],
-          CF = [],
-          uF = [],
-          iF = [],
-          RF = [],
-          LF = [],
-          aF = [],
-          BF = [],
-          tF = [],
-          oF = [],
-          lF = [],
-          JU = [],
-          cU = [],
-          ZU = [],
-          FU = [],
-          UU = [],
-          eU = [],
-          XU = [],
-          AU = [],
-          qU = [],
-          jU = [],
-          YU = [],
-          hU = [],
-          DU = [],
-          sU = [],
-          nU = [],
-          GU = [],
-          fU = [],
-          xU = [],
-          rU = [],
-          vU = [],
-          mU = [],
-          QU = [],
-          EU = [],
-          VU = [],
-          KU = [],
-          yU = [],
-          SU = [],
-          IU = [],
-          MU = [],
-          bU = [],
-          wU = [],
-          WU = [],
-          gU = [],
-          HU = [],
-          PU = [],
-          kU = [],
-          pU = [],
-          dU = [],
-          zU = [],
-          NU = [],
-          OU = [],
-          TU = [],
-          CU = [],
-          uU = [],
-          iU = [],
-          RU = [],
-          LU = [],
-          aU = [],
-          BU = [],
-          tU = [],
-          oU = [],
-          lU = [],
-          Je = [],
-          ce = [],
-          Ze = [],
-          Fe = [],
-          Ue = [],
-          ee = [],
-          Xe = [],
-          Ae = [],
-          qe = [],
-          je = [],
-          Ye = [],
-          he = [],
-          De = [],
-          se = [],
-          ne = [],
-          Ge = [];
-        return JJ = class extends yZ {
+    class IB extends((0, zB.c)(DB.c)) {}
+    let cB = (() => {
+        var BB, TB, oB, OB, sB, MB, zB, wB, UB, KB, cB, SB, PB, QB, RB, aB, ZB, XB, WB, hB, CB, GB, qB, xB, jB, AB, bB, nB, eB, BT, TT, dT, VT;
+        let yT, pT, lT, JT, YT, gT, oT, kT, LT, OT, DT, uT, HT, ET, vT, mT, iT, NT, tT, fT, sT, MT, zT, wT, UT, FT, KT, rT, IT, cT, ST, PT, QT, RT, aT, ZT, XT, WT, hT, CT, GT, qT, xT, jT, AT, bT, nT, eT, Bd, Td, dd, Vd, yd, pd, ld, Jd, Yd, gd, od, kd, Ld, Od, Dd, ud, Hd, Ed, vd, md, Nd, td, fd, sd, Md, zd = IB,
+          wd = [],
+          Ud = [],
+          Fd = [],
+          Kd = [],
+          rd = [],
+          Id = [],
+          cd = [],
+          Sd = [],
+          Pd = [],
+          Qd = [],
+          Rd = [],
+          ad = [],
+          Zd = [],
+          Xd = [],
+          Wd = [],
+          hd = [],
+          Cd = [],
+          Gd = [],
+          qd = [],
+          xd = [],
+          jd = [],
+          Ad = [],
+          bd = [],
+          nd = [],
+          ed = [],
+          BV = [],
+          TV = [],
+          dV = [],
+          VV = [],
+          yV = [],
+          pV = [],
+          lV = [],
+          JV = [],
+          YV = [],
+          gV = [],
+          oV = [],
+          kV = [],
+          LV = [],
+          OV = [],
+          DV = [],
+          uV = [],
+          HV = [],
+          EV = [],
+          vV = [],
+          mV = [],
+          iV = [],
+          NV = [],
+          tV = [],
+          fV = [],
+          sV = [],
+          MV = [],
+          zV = [],
+          wV = [],
+          UV = [],
+          FV = [],
+          KV = [],
+          rV = [],
+          IV = [],
+          cV = [],
+          SV = [],
+          PV = [],
+          QV = [],
+          RV = [],
+          aV = [],
+          ZV = [],
+          XV = [],
+          WV = [],
+          hV = [],
+          CV = [],
+          GV = [],
+          qV = [],
+          xV = [],
+          jV = [],
+          AV = [],
+          bV = [],
+          nV = [],
+          eV = [],
+          By = [],
+          Ty = [],
+          dy = [],
+          Vy = [],
+          yy = [],
+          py = [],
+          ly = [],
+          Jy = [],
+          Yy = [],
+          gy = [],
+          oy = [],
+          ky = [],
+          Ly = [],
+          Oy = [],
+          Dy = [],
+          uy = [],
+          Hy = [],
+          Ey = [],
+          vy = [],
+          my = [],
+          iy = [],
+          Ny = [],
+          ty = [],
+          fy = [],
+          sy = [],
+          My = [],
+          zy = [],
+          wy = [],
+          Uy = [],
+          Fy = [],
+          Ky = [],
+          ry = [],
+          Iy = [],
+          cy = [],
+          Sy = [],
+          Py = [],
+          Qy = [],
+          Ry = [],
+          ay = [],
+          Zy = [],
+          Xy = [],
+          Wy = [],
+          hy = [],
+          Cy = [],
+          Gy = [],
+          qy = [],
+          xy = [],
+          jy = [],
+          Ay = [],
+          by = [],
+          ny = [],
+          ey = [],
+          Bp = [],
+          Tp = [],
+          dp = [],
+          Vp = [],
+          yp = [],
+          pp = [],
+          lp = [],
+          Jp = [],
+          Yp = [],
+          gp = [],
+          op = [],
+          kp = [],
+          Lp = [],
+          Op = [],
+          Dp = [],
+          Hp = [],
+          Ep = [];
+        return BB = class extends zd {
           get diffuseTexture() {
-            return (0, FJ.b)(this, cJ, "f")
+            return (0, VB.b)(this, TB, "f")
           }
-          set diffuseTexture(JJ) {
-            (0, FJ.c)(this, cJ, JJ, "f")
+          set diffuseTexture(BB) {
+            (0, VB.f)(this, TB, BB, "f")
           }
           get ambientTexture() {
-            return (0, FJ.b)(this, YJ, "f")
+            return (0, VB.b)(this, oB, "f")
           }
-          set ambientTexture(JJ) {
-            (0, FJ.c)(this, YJ, JJ, "f")
+          set ambientTexture(BB) {
+            (0, VB.f)(this, oB, BB, "f")
           }
           get opacityTexture() {
-            return (0, FJ.b)(this, sJ, "f")
+            return (0, VB.b)(this, OB, "f")
           }
-          set opacityTexture(JJ) {
-            (0, FJ.c)(this, sJ, JJ, "f")
+          set opacityTexture(BB) {
+            (0, VB.f)(this, OB, BB, "f")
           }
           get reflectionTexture() {
-            return (0, FJ.b)(this, KJ, "f")
+            return (0, VB.b)(this, sB, "f")
           }
-          set reflectionTexture(JJ) {
-            (0, FJ.c)(this, KJ, JJ, "f")
+          set reflectionTexture(BB) {
+            (0, VB.f)(this, sB, BB, "f")
           }
           get emissiveTexture() {
-            return (0, FJ.b)(this, yJ, "f")
+            return (0, VB.b)(this, MB, "f")
           }
-          set emissiveTexture(JJ) {
-            (0, FJ.c)(this, yJ, JJ, "f")
+          set emissiveTexture(BB) {
+            (0, VB.f)(this, MB, BB, "f")
           }
           get specularTexture() {
-            return (0, FJ.b)(this, SJ, "f")
+            return (0, VB.b)(this, zB, "f")
           }
-          set specularTexture(JJ) {
-            (0, FJ.c)(this, SJ, JJ, "f")
+          set specularTexture(BB) {
+            (0, VB.f)(this, zB, BB, "f")
           }
           get bumpTexture() {
-            return (0, FJ.b)(this, IJ, "f")
+            return (0, VB.b)(this, wB, "f")
           }
-          set bumpTexture(JJ) {
-            (0, FJ.c)(this, IJ, JJ, "f")
+          set bumpTexture(BB) {
+            (0, VB.f)(this, wB, BB, "f")
           }
           get lightmapTexture() {
-            return (0, FJ.b)(this, MJ, "f")
+            return (0, VB.b)(this, UB, "f")
           }
-          set lightmapTexture(JJ) {
-            (0, FJ.c)(this, MJ, JJ, "f")
+          set lightmapTexture(BB) {
+            (0, VB.f)(this, UB, BB, "f")
           }
           get refractionTexture() {
-            return (0, FJ.b)(this, wJ, "f")
+            return (0, VB.b)(this, KB, "f")
           }
-          set refractionTexture(JJ) {
-            (0, FJ.c)(this, wJ, JJ, "f")
+          set refractionTexture(BB) {
+            (0, VB.f)(this, KB, BB, "f")
           }
           get useAlphaFromDiffuseTexture() {
-            return (0, FJ.b)(this, HJ, "f")
+            return (0, VB.b)(this, cB, "f")
           }
-          set useAlphaFromDiffuseTexture(JJ) {
-            (0, FJ.c)(this, HJ, JJ, "f")
+          set useAlphaFromDiffuseTexture(BB) {
+            (0, VB.f)(this, cB, BB, "f")
           }
           get useEmissiveAsIllumination() {
-            return (0, FJ.b)(this, PJ, "f")
+            return (0, VB.b)(this, SB, "f")
           }
-          set useEmissiveAsIllumination(JJ) {
-            (0, FJ.c)(this, PJ, JJ, "f")
+          set useEmissiveAsIllumination(BB) {
+            (0, VB.f)(this, SB, BB, "f")
           }
           get linkEmissiveWithDiffuse() {
-            return (0, FJ.b)(this, kJ, "f")
+            return (0, VB.b)(this, PB, "f")
           }
-          set linkEmissiveWithDiffuse(JJ) {
-            (0, FJ.c)(this, kJ, JJ, "f")
+          set linkEmissiveWithDiffuse(BB) {
+            (0, VB.f)(this, PB, BB, "f")
           }
           get useSpecularOverAlpha() {
-            return (0, FJ.b)(this, pJ, "f")
+            return (0, VB.b)(this, QB, "f")
           }
-          set useSpecularOverAlpha(JJ) {
-            (0, FJ.c)(this, pJ, JJ, "f")
+          set useSpecularOverAlpha(BB) {
+            (0, VB.f)(this, QB, BB, "f")
           }
           get useReflectionOverAlpha() {
-            return (0, FJ.b)(this, dJ, "f")
+            return (0, VB.b)(this, RB, "f")
           }
-          set useReflectionOverAlpha(JJ) {
-            (0, FJ.c)(this, dJ, JJ, "f")
+          set useReflectionOverAlpha(BB) {
+            (0, VB.f)(this, RB, BB, "f")
           }
           get disableLighting() {
-            return (0, FJ.b)(this, zJ, "f")
+            return (0, VB.b)(this, aB, "f")
           }
-          set disableLighting(JJ) {
-            (0, FJ.c)(this, zJ, JJ, "f")
+          set disableLighting(BB) {
+            (0, VB.f)(this, aB, BB, "f")
           }
           get useObjectSpaceNormalMap() {
-            return (0, FJ.b)(this, NJ, "f")
+            return (0, VB.b)(this, ZB, "f")
           }
-          set useObjectSpaceNormalMap(JJ) {
-            (0, FJ.c)(this, NJ, JJ, "f")
+          set useObjectSpaceNormalMap(BB) {
+            (0, VB.f)(this, ZB, BB, "f")
           }
           get useParallax() {
-            return (0, FJ.b)(this, OJ, "f")
+            return (0, VB.b)(this, XB, "f")
           }
-          set useParallax(JJ) {
-            (0, FJ.c)(this, OJ, JJ, "f")
+          set useParallax(BB) {
+            (0, VB.f)(this, XB, BB, "f")
           }
           get useParallaxOcclusion() {
-            return (0, FJ.b)(this, TJ, "f")
+            return (0, VB.b)(this, WB, "f")
           }
-          set useParallaxOcclusion(JJ) {
-            (0, FJ.c)(this, TJ, JJ, "f")
+          set useParallaxOcclusion(BB) {
+            (0, VB.f)(this, WB, BB, "f")
           }
           get roughness() {
-            return (0, FJ.b)(this, CJ, "f")
+            return (0, VB.b)(this, hB, "f")
           }
-          set roughness(JJ) {
-            (0, FJ.c)(this, CJ, JJ, "f")
+          set roughness(BB) {
+            (0, VB.f)(this, hB, BB, "f")
           }
           get useLightmapAsShadowmap() {
-            return (0, FJ.b)(this, uJ, "f")
+            return (0, VB.b)(this, CB, "f")
           }
-          set useLightmapAsShadowmap(JJ) {
-            (0, FJ.c)(this, uJ, JJ, "f")
+          set useLightmapAsShadowmap(BB) {
+            (0, VB.f)(this, CB, BB, "f")
           }
           get diffuseFresnelParameters() {
-            return (0, FJ.b)(this, iJ, "f")
+            return (0, VB.b)(this, GB, "f")
           }
-          set diffuseFresnelParameters(JJ) {
-            (0, FJ.c)(this, iJ, JJ, "f")
+          set diffuseFresnelParameters(BB) {
+            (0, VB.f)(this, GB, BB, "f")
           }
           get opacityFresnelParameters() {
-            return (0, FJ.b)(this, RJ, "f")
+            return (0, VB.b)(this, qB, "f")
           }
-          set opacityFresnelParameters(JJ) {
-            (0, FJ.c)(this, RJ, JJ, "f")
+          set opacityFresnelParameters(BB) {
+            (0, VB.f)(this, qB, BB, "f")
           }
           get reflectionFresnelParameters() {
-            return (0, FJ.b)(this, LJ, "f")
+            return (0, VB.b)(this, xB, "f")
           }
-          set reflectionFresnelParameters(JJ) {
-            (0, FJ.c)(this, LJ, JJ, "f")
+          set reflectionFresnelParameters(BB) {
+            (0, VB.f)(this, xB, BB, "f")
           }
           get refractionFresnelParameters() {
-            return (0, FJ.b)(this, aJ, "f")
+            return (0, VB.b)(this, jB, "f")
           }
-          set refractionFresnelParameters(JJ) {
-            (0, FJ.c)(this, aJ, JJ, "f")
+          set refractionFresnelParameters(BB) {
+            (0, VB.f)(this, jB, BB, "f")
           }
           get emissiveFresnelParameters() {
-            return (0, FJ.b)(this, BJ, "f")
+            return (0, VB.b)(this, AB, "f")
           }
-          set emissiveFresnelParameters(JJ) {
-            (0, FJ.c)(this, BJ, JJ, "f")
+          set emissiveFresnelParameters(BB) {
+            (0, VB.f)(this, AB, BB, "f")
           }
           get useReflectionFresnelFromSpecular() {
-            return (0, FJ.b)(this, tJ, "f")
+            return (0, VB.b)(this, bB, "f")
           }
-          set useReflectionFresnelFromSpecular(JJ) {
-            (0, FJ.c)(this, tJ, JJ, "f")
+          set useReflectionFresnelFromSpecular(BB) {
+            (0, VB.f)(this, bB, BB, "f")
           }
           get useGlossinessFromSpecularMapAlpha() {
-            return (0, FJ.b)(this, oJ, "f")
+            return (0, VB.b)(this, nB, "f")
           }
-          set useGlossinessFromSpecularMapAlpha(JJ) {
-            (0, FJ.c)(this, oJ, JJ, "f")
+          set useGlossinessFromSpecularMapAlpha(BB) {
+            (0, VB.f)(this, nB, BB, "f")
           }
           get maxSimultaneousLights() {
-            return (0, FJ.b)(this, lJ, "f")
+            return (0, VB.b)(this, eB, "f")
           }
-          set maxSimultaneousLights(JJ) {
-            (0, FJ.c)(this, lJ, JJ, "f")
+          set maxSimultaneousLights(BB) {
+            (0, VB.f)(this, eB, BB, "f")
           }
           get invertNormalMapX() {
-            return (0, FJ.b)(this, Jc, "f")
+            return (0, VB.b)(this, BT, "f")
           }
-          set invertNormalMapX(JJ) {
-            (0, FJ.c)(this, Jc, JJ, "f")
+          set invertNormalMapX(BB) {
+            (0, VB.f)(this, BT, BB, "f")
           }
           get invertNormalMapY() {
-            return (0, FJ.b)(this, cc, "f")
+            return (0, VB.b)(this, TT, "f")
           }
-          set invertNormalMapY(JJ) {
-            (0, FJ.c)(this, cc, JJ, "f")
+          set invertNormalMapY(BB) {
+            (0, VB.f)(this, TT, BB, "f")
           }
           get twoSidedLighting() {
-            return (0, FJ.b)(this, Zc, "f")
+            return (0, VB.b)(this, dT, "f")
           }
-          set twoSidedLighting(JJ) {
-            (0, FJ.c)(this, Zc, JJ, "f")
+          set twoSidedLighting(BB) {
+            (0, VB.f)(this, dT, BB, "f")
           }
           get applyDecalMapAfterDetailMap() {
-            return (0, FJ.b)(this, Fc, "f")
+            return (0, VB.b)(this, VT, "f")
           }
-          set applyDecalMapAfterDetailMap(JJ) {
-            (0, FJ.c)(this, Fc, JJ, "f")
+          set applyDecalMapAfterDetailMap(BB) {
+            (0, VB.f)(this, VT, BB, "f")
           }
           get isPrePassCapable() {
             return !this.disableDepthWrite
@@ -1403,11 +1403,11 @@ export const modules = {
           get canRenderToMRT() {
             return !0
           }
-          constructor(ZJ, UJ) {
-            super(ZJ, UJ, void 0, arguments.length > 2 && void 0 !== arguments[2] && arguments[2] || JJ.ForceGLSL), this._diffuseTexture = (0, FJ.e)(this, SZ, null), cJ.set(this, ((0, FJ.e)(this, IZ), (0, FJ.e)(this, MZ, void 0))), this._ambientTexture = ((0, FJ.e)(this, bZ), (0, FJ.e)(this, wZ, null)), YJ.set(this, ((0, FJ.e)(this, WZ), (0, FJ.e)(this, gZ, void 0))), this._opacityTexture = ((0, FJ.e)(this, HZ), (0, FJ.e)(this, PZ, null)), sJ.set(this, ((0, FJ.e)(this, kZ), (0, FJ.e)(this, pZ, void 0))), this._reflectionTexture = ((0, FJ.e)(this, dZ), (0, FJ.e)(this, zZ, null)), KJ.set(this, ((0, FJ.e)(this, NZ), (0, FJ.e)(this, OZ, void 0))), this._emissiveTexture = ((0, FJ.e)(this, TZ), (0, FJ.e)(this, CZ, null)), yJ.set(this, ((0, FJ.e)(this, uZ), (0, FJ.e)(this, iZ, void 0))), this._specularTexture = ((0, FJ.e)(this, RZ), (0, FJ.e)(this, LZ, null)), SJ.set(this, ((0, FJ.e)(this, aZ), (0, FJ.e)(this, BZ, void 0))), this._bumpTexture = ((0, FJ.e)(this, tZ), (0, FJ.e)(this, oZ, null)), IJ.set(this, ((0, FJ.e)(this, lZ), (0, FJ.e)(this, JF, void 0))), this._lightmapTexture = ((0, FJ.e)(this, cF), (0, FJ.e)(this, ZF, null)), MJ.set(this, ((0, FJ.e)(this, FF), (0, FJ.e)(this, UF, void 0))), this._refractionTexture = ((0, FJ.e)(this, eF), (0, FJ.e)(this, XF, null)), wJ.set(this, ((0, FJ.e)(this, AF), (0, FJ.e)(this, qF, void 0))), this.ambientColor = ((0, FJ.e)(this, jF), (0, FJ.e)(this, YF, new AJ.e(0, 0, 0))), this.diffuseColor = ((0, FJ.e)(this, hF), (0, FJ.e)(this, DF, new AJ.e(1, 1, 1))), this.specularColor = ((0, FJ.e)(this, sF), (0, FJ.e)(this, nF, new AJ.e(1, 1, 1))), this.emissiveColor = ((0, FJ.e)(this, GF), (0, FJ.e)(this, fF, new AJ.e(0, 0, 0))), this.specularPower = ((0, FJ.e)(this, xF), (0, FJ.e)(this, rF, 64)), this._useAlphaFromDiffuseTexture = ((0, FJ.e)(this, vF), (0, FJ.e)(this, mF, !1)), HJ.set(this, ((0, FJ.e)(this, QF), (0, FJ.e)(this, EF, void 0))), this._useEmissiveAsIllumination = ((0, FJ.e)(this, VF), (0, FJ.e)(this, KF, !1)), PJ.set(this, ((0, FJ.e)(this, yF), (0, FJ.e)(this, SF, void 0))), this._linkEmissiveWithDiffuse = ((0, FJ.e)(this, IF), (0, FJ.e)(this, MF, !1)), kJ.set(this, ((0, FJ.e)(this, bF), (0, FJ.e)(this, wF, void 0))), this._useSpecularOverAlpha = ((0, FJ.e)(this, WF), (0, FJ.e)(this, gF, !1)), pJ.set(this, ((0, FJ.e)(this, HF), (0, FJ.e)(this, PF, void 0))), this._useReflectionOverAlpha = ((0, FJ.e)(this, kF), (0, FJ.e)(this, pF, !1)), dJ.set(this, ((0, FJ.e)(this, dF), (0, FJ.e)(this, zF, void 0))), this._disableLighting = ((0, FJ.e)(this, NF), (0, FJ.e)(this, OF, !1)), zJ.set(this, ((0, FJ.e)(this, TF), (0, FJ.e)(this, CF, void 0))), this._useObjectSpaceNormalMap = ((0, FJ.e)(this, uF), (0, FJ.e)(this, iF, !1)), NJ.set(this, ((0, FJ.e)(this, RF), (0, FJ.e)(this, LF, void 0))), this._useParallax = ((0, FJ.e)(this, aF), (0, FJ.e)(this, BF, !1)), OJ.set(this, ((0, FJ.e)(this, tF), (0, FJ.e)(this, oF, void 0))), this._useParallaxOcclusion = ((0, FJ.e)(this, lF), (0, FJ.e)(this, JU, !1)), TJ.set(this, ((0, FJ.e)(this, cU), (0, FJ.e)(this, ZU, void 0))), this.parallaxScaleBias = ((0, FJ.e)(this, FU), (0, FJ.e)(this, UU, .05)), this._roughness = ((0, FJ.e)(this, eU), (0, FJ.e)(this, XU, 0)), CJ.set(this, ((0, FJ.e)(this, AU), (0, FJ.e)(this, qU, void 0))), this.indexOfRefraction = ((0, FJ.e)(this, jU), (0, FJ.e)(this, YU, .98)), this.invertRefractionY = ((0, FJ.e)(this, hU), (0, FJ.e)(this, DU, !0)), this.alphaCutOff = ((0, FJ.e)(this, sU), (0, FJ.e)(this, nU, .4)), this._useLightmapAsShadowmap = ((0, FJ.e)(this, GU), (0, FJ.e)(this, fU, !1)), uJ.set(this, ((0, FJ.e)(this, xU), (0, FJ.e)(this, rU, void 0))), this._diffuseFresnelParameters = ((0, FJ.e)(this, vU), (0, FJ.e)(this, mU, void 0)), iJ.set(this, ((0, FJ.e)(this, QU), (0, FJ.e)(this, EU, void 0))), this._opacityFresnelParameters = ((0, FJ.e)(this, VU), (0, FJ.e)(this, KU, void 0)), RJ.set(this, ((0, FJ.e)(this, yU), (0, FJ.e)(this, SU, void 0))), this._reflectionFresnelParameters = ((0, FJ.e)(this, IU), (0, FJ.e)(this, MU, void 0)), LJ.set(this, ((0, FJ.e)(this, bU), (0, FJ.e)(this, wU, void 0))), this._refractionFresnelParameters = ((0, FJ.e)(this, WU), (0, FJ.e)(this, gU, void 0)), aJ.set(this, ((0, FJ.e)(this, HU), (0, FJ.e)(this, PU, void 0))), this._emissiveFresnelParameters = ((0, FJ.e)(this, kU), (0, FJ.e)(this, pU, void 0)), BJ.set(this, ((0, FJ.e)(this, dU), (0, FJ.e)(this, zU, void 0))), this._useReflectionFresnelFromSpecular = ((0, FJ.e)(this, NU), (0, FJ.e)(this, OU, !1)), tJ.set(this, ((0, FJ.e)(this, TU), (0, FJ.e)(this, CU, void 0))), this._useGlossinessFromSpecularMapAlpha = ((0, FJ.e)(this, uU), (0, FJ.e)(this, iU, !1)), oJ.set(this, ((0, FJ.e)(this, RU), (0, FJ.e)(this, LU, void 0))), this._maxSimultaneousLights = ((0, FJ.e)(this, aU), (0, FJ.e)(this, BU, 4)), lJ.set(this, ((0, FJ.e)(this, tU), (0, FJ.e)(this, oU, void 0))), this._invertNormalMapX = ((0, FJ.e)(this, lU), (0, FJ.e)(this, Je, !1)), Jc.set(this, ((0, FJ.e)(this, ce), (0, FJ.e)(this, Ze, void 0))), this._invertNormalMapY = ((0, FJ.e)(this, Fe), (0, FJ.e)(this, Ue, !1)), cc.set(this, ((0, FJ.e)(this, ee), (0, FJ.e)(this, Xe, void 0))), this._twoSidedLighting = ((0, FJ.e)(this, Ae), (0, FJ.e)(this, qe, !1)), Zc.set(this, ((0, FJ.e)(this, je), (0, FJ.e)(this, Ye, void 0))), this._applyDecalMapAfterDetailMap = ((0, FJ.e)(this, he), (0, FJ.e)(this, De, !1)), Fc.set(this, ((0, FJ.e)(this, se), (0, FJ.e)(this, ne, void 0))), this._vertexPullingMetadata = ((0, FJ.e)(this, Ge), null), this._renderTargets = new eJ.c(16), this._globalAmbientColor = new AJ.e(0, 0, 0), this._cacheHasRenderTargetTextures = !1, this.detailMap = new xJ.d(this), this._attachImageProcessingConfiguration(null), this.prePassConfiguration = new jJ.e, this.getRenderTargetTextures = () => (this._renderTargets.reset(), JJ.ReflectionTextureEnabled && this._reflectionTexture && this._reflectionTexture.isRenderTarget && this._renderTargets.push(this._reflectionTexture), JJ.RefractionTextureEnabled && this._refractionTexture && this._refractionTexture.isRenderTarget && this._renderTargets.push(this._refractionTexture), this._eventInfo.renderTargets = this._renderTargets, this._callbackPluginEventFillRenderTargetTextures(this._eventInfo), this._renderTargets)
+          constructor(dB, yB) {
+            super(dB, yB, void 0, arguments.length > 2 && void 0 !== arguments[2] && arguments[2] || BB.ForceGLSL), this._diffuseTexture = (0, VB.h)(this, wd, null), TB.set(this, ((0, VB.h)(this, Ud), (0, VB.h)(this, Fd, void 0))), this._ambientTexture = ((0, VB.h)(this, Kd), (0, VB.h)(this, rd, null)), oB.set(this, ((0, VB.h)(this, Id), (0, VB.h)(this, cd, void 0))), this._opacityTexture = ((0, VB.h)(this, Sd), (0, VB.h)(this, Pd, null)), OB.set(this, ((0, VB.h)(this, Qd), (0, VB.h)(this, Rd, void 0))), this._reflectionTexture = ((0, VB.h)(this, ad), (0, VB.h)(this, Zd, null)), sB.set(this, ((0, VB.h)(this, Xd), (0, VB.h)(this, Wd, void 0))), this._emissiveTexture = ((0, VB.h)(this, hd), (0, VB.h)(this, Cd, null)), MB.set(this, ((0, VB.h)(this, Gd), (0, VB.h)(this, qd, void 0))), this._specularTexture = ((0, VB.h)(this, xd), (0, VB.h)(this, jd, null)), zB.set(this, ((0, VB.h)(this, Ad), (0, VB.h)(this, bd, void 0))), this._bumpTexture = ((0, VB.h)(this, nd), (0, VB.h)(this, ed, null)), wB.set(this, ((0, VB.h)(this, BV), (0, VB.h)(this, TV, void 0))), this._lightmapTexture = ((0, VB.h)(this, dV), (0, VB.h)(this, VV, null)), UB.set(this, ((0, VB.h)(this, yV), (0, VB.h)(this, pV, void 0))), this._refractionTexture = ((0, VB.h)(this, lV), (0, VB.h)(this, JV, null)), KB.set(this, ((0, VB.h)(this, YV), (0, VB.h)(this, gV, void 0))), this.ambientColor = ((0, VB.h)(this, oV), (0, VB.h)(this, kV, new JB.c(0, 0, 0))), this.diffuseColor = ((0, VB.h)(this, LV), (0, VB.h)(this, OV, new JB.c(1, 1, 1))), this.specularColor = ((0, VB.h)(this, DV), (0, VB.h)(this, uV, new JB.c(1, 1, 1))), this.emissiveColor = ((0, VB.h)(this, HV), (0, VB.h)(this, EV, new JB.c(0, 0, 0))), this.specularPower = ((0, VB.h)(this, vV), (0, VB.h)(this, mV, 64)), this._useAlphaFromDiffuseTexture = ((0, VB.h)(this, iV), (0, VB.h)(this, NV, !1)), cB.set(this, ((0, VB.h)(this, tV), (0, VB.h)(this, fV, void 0))), this._useEmissiveAsIllumination = ((0, VB.h)(this, sV), (0, VB.h)(this, MV, !1)), SB.set(this, ((0, VB.h)(this, zV), (0, VB.h)(this, wV, void 0))), this._linkEmissiveWithDiffuse = ((0, VB.h)(this, UV), (0, VB.h)(this, FV, !1)), PB.set(this, ((0, VB.h)(this, KV), (0, VB.h)(this, rV, void 0))), this._useSpecularOverAlpha = ((0, VB.h)(this, IV), (0, VB.h)(this, cV, !1)), QB.set(this, ((0, VB.h)(this, SV), (0, VB.h)(this, PV, void 0))), this._useReflectionOverAlpha = ((0, VB.h)(this, QV), (0, VB.h)(this, RV, !1)), RB.set(this, ((0, VB.h)(this, aV), (0, VB.h)(this, ZV, void 0))), this._disableLighting = ((0, VB.h)(this, XV), (0, VB.h)(this, WV, !1)), aB.set(this, ((0, VB.h)(this, hV), (0, VB.h)(this, CV, void 0))), this._useObjectSpaceNormalMap = ((0, VB.h)(this, GV), (0, VB.h)(this, qV, !1)), ZB.set(this, ((0, VB.h)(this, xV), (0, VB.h)(this, jV, void 0))), this._useParallax = ((0, VB.h)(this, AV), (0, VB.h)(this, bV, !1)), XB.set(this, ((0, VB.h)(this, nV), (0, VB.h)(this, eV, void 0))), this._useParallaxOcclusion = ((0, VB.h)(this, By), (0, VB.h)(this, Ty, !1)), WB.set(this, ((0, VB.h)(this, dy), (0, VB.h)(this, Vy, void 0))), this.parallaxScaleBias = ((0, VB.h)(this, yy), (0, VB.h)(this, py, .05)), this._roughness = ((0, VB.h)(this, ly), (0, VB.h)(this, Jy, 0)), hB.set(this, ((0, VB.h)(this, Yy), (0, VB.h)(this, gy, void 0))), this.indexOfRefraction = ((0, VB.h)(this, oy), (0, VB.h)(this, ky, .98)), this.invertRefractionY = ((0, VB.h)(this, Ly), (0, VB.h)(this, Oy, !0)), this.alphaCutOff = ((0, VB.h)(this, Dy), (0, VB.h)(this, uy, .4)), this._useLightmapAsShadowmap = ((0, VB.h)(this, Hy), (0, VB.h)(this, Ey, !1)), CB.set(this, ((0, VB.h)(this, vy), (0, VB.h)(this, my, void 0))), this._diffuseFresnelParameters = ((0, VB.h)(this, iy), (0, VB.h)(this, Ny, void 0)), GB.set(this, ((0, VB.h)(this, ty), (0, VB.h)(this, fy, void 0))), this._opacityFresnelParameters = ((0, VB.h)(this, sy), (0, VB.h)(this, My, void 0)), qB.set(this, ((0, VB.h)(this, zy), (0, VB.h)(this, wy, void 0))), this._reflectionFresnelParameters = ((0, VB.h)(this, Uy), (0, VB.h)(this, Fy, void 0)), xB.set(this, ((0, VB.h)(this, Ky), (0, VB.h)(this, ry, void 0))), this._refractionFresnelParameters = ((0, VB.h)(this, Iy), (0, VB.h)(this, cy, void 0)), jB.set(this, ((0, VB.h)(this, Sy), (0, VB.h)(this, Py, void 0))), this._emissiveFresnelParameters = ((0, VB.h)(this, Qy), (0, VB.h)(this, Ry, void 0)), AB.set(this, ((0, VB.h)(this, ay), (0, VB.h)(this, Zy, void 0))), this._useReflectionFresnelFromSpecular = ((0, VB.h)(this, Xy), (0, VB.h)(this, Wy, !1)), bB.set(this, ((0, VB.h)(this, hy), (0, VB.h)(this, Cy, void 0))), this._useGlossinessFromSpecularMapAlpha = ((0, VB.h)(this, Gy), (0, VB.h)(this, qy, !1)), nB.set(this, ((0, VB.h)(this, xy), (0, VB.h)(this, jy, void 0))), this._maxSimultaneousLights = ((0, VB.h)(this, Ay), (0, VB.h)(this, by, 4)), eB.set(this, ((0, VB.h)(this, ny), (0, VB.h)(this, ey, void 0))), this._invertNormalMapX = ((0, VB.h)(this, Bp), (0, VB.h)(this, Tp, !1)), BT.set(this, ((0, VB.h)(this, dp), (0, VB.h)(this, Vp, void 0))), this._invertNormalMapY = ((0, VB.h)(this, yp), (0, VB.h)(this, pp, !1)), TT.set(this, ((0, VB.h)(this, lp), (0, VB.h)(this, Jp, void 0))), this._twoSidedLighting = ((0, VB.h)(this, Yp), (0, VB.h)(this, gp, !1)), dT.set(this, ((0, VB.h)(this, op), (0, VB.h)(this, kp, void 0))), this._applyDecalMapAfterDetailMap = ((0, VB.h)(this, Lp), (0, VB.h)(this, Op, !1)), VT.set(this, ((0, VB.h)(this, Dp), (0, VB.h)(this, Hp, void 0))), this._vertexPullingMetadata = ((0, VB.h)(this, Ep), null), this._renderTargets = new pB.g(16), this._globalAmbientColor = new JB.c(0, 0, 0), this._cacheHasRenderTargetTextures = !1, this.detailMap = new EB.b(this), this._attachImageProcessingConfiguration(null), this.prePassConfiguration = new gB.e, this.getRenderTargetTextures = () => (this._renderTargets.reset(), BB.ReflectionTextureEnabled && this._reflectionTexture && this._reflectionTexture.isRenderTarget && this._renderTargets.push(this._reflectionTexture), BB.RefractionTextureEnabled && this._refractionTexture && this._refractionTexture.isRenderTarget && this._renderTargets.push(this._refractionTexture), this._eventInfo.renderTargets = this._renderTargets, this._callbackPluginEventFillRenderTargetTextures(this._eventInfo), this._renderTargets)
           }
           get hasRenderTargetTextures() {
-            return !!(JJ.ReflectionTextureEnabled && this._reflectionTexture && this._reflectionTexture.isRenderTarget) || (!!(JJ.RefractionTextureEnabled && this._refractionTexture && this._refractionTexture.isRenderTarget) || this._cacheHasRenderTargetTextures)
+            return !!(BB.ReflectionTextureEnabled && this._reflectionTexture && this._reflectionTexture.isRenderTarget) || (!!(BB.RefractionTextureEnabled && this._refractionTexture && this._refractionTexture.isRenderTarget) || this._cacheHasRenderTargetTextures)
           }
           getClassName() {
             return "StandardMaterial"
@@ -1416,10 +1416,10 @@ export const modules = {
             return this._hasTransparencyMode ? this._transparencyModeIsBlend : !this._disableAlphaBlending && (this.alpha < 1 || null != this._opacityTexture || this._shouldUseAlphaFromDiffuseTexture() || this._opacityFresnelParameters && this._opacityFresnelParameters.isEnabled)
           }
           needAlphaTesting() {
-            return this._hasTransparencyMode ? this._transparencyModeIsTest : this._hasAlphaChannel() && (null == this._transparencyMode || this._transparencyMode === DJ.c.MATERIAL_ALPHATEST)
+            return this._hasTransparencyMode ? this._transparencyModeIsTest : this._hasAlphaChannel() && (null == this._transparencyMode || this._transparencyMode === LB.b.MATERIAL_ALPHATEST)
           }
           _shouldUseAlphaFromDiffuseTexture() {
-            return null != this._diffuseTexture && this._diffuseTexture.hasAlpha && this._useAlphaFromDiffuseTexture && this._transparencyMode !== DJ.c.MATERIAL_OPAQUE
+            return null != this._diffuseTexture && this._diffuseTexture.hasAlpha && this._useAlphaFromDiffuseTexture && this._transparencyMode !== LB.b.MATERIAL_OPAQUE
           }
           _hasAlphaChannel() {
             return null != this._diffuseTexture && this._diffuseTexture.hasAlpha || null != this._opacityTexture
@@ -1427,1308 +1427,1308 @@ export const modules = {
           getAlphaTestTexture() {
             return this._diffuseTexture
           }
-          isReadyForSubMesh(cJ, ZJ) {
-            let FJ = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+          isReadyForSubMesh(TB, dB) {
+            let VB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
             this._uniformBufferLayoutBuilt || this.buildUniformLayout();
-            const UJ = ZJ._drawWrapper;
-            if (UJ.effect && this.isFrozen && UJ._wasPreviouslyReady && UJ._wasPreviouslyUsingInstances === FJ) return !0;
-            ZJ.materialDefines || (this._callbackPluginEventGeneric(4, this._eventInfo), ZJ.materialDefines = new WJ(this._eventInfo.defineNames));
-            const eJ = this.Qy(),
-              XJ = ZJ.materialDefines;
-            if (this._isReadyForSubMesh(ZJ)) return !0;
-            const AJ = eJ.gn();
-            if (XJ._needNormals = (0, mJ.V)(eJ, cJ, XJ, !0, this._maxSimultaneousLights, this._disableLighting), !(0, mJ.d)(eJ, cJ, this._maxSimultaneousLights, this._disableLighting)) return !1;
-            (0, mJ._)(eJ, XJ);
-            const YJ = this.needAlphaBlendingForMesh(cJ) && this.Qy().useOrderIndependentTransparency;
-            if ((0, mJ.eb)(eJ, XJ, this.canRenderToMRT && !YJ), (0, mJ.cb)(eJ, XJ, YJ), VJ.b.PrepareDefines(AJ.currentRenderPassId, cJ, XJ), XJ._areTexturesDirty) {
-              this._eventInfo.hasRenderTargetTextures = !1, this._callbackPluginEventHasRenderTargetTextures(this._eventInfo), this._cacheHasRenderTargetTextures = this._eventInfo.hasRenderTargetTextures, XJ._needUVs = !1;
-              for (let JJ = 1; JJ <= 6; ++JJ) XJ["MAINUV" + JJ] = !1;
-              if (eJ.texturesEnabled) {
-                if (XJ.DIFFUSEDIRECTUV = 0, XJ.BUMPDIRECTUV = 0, XJ.AMBIENTDIRECTUV = 0, XJ.OPACITYDIRECTUV = 0, XJ.EMISSIVEDIRECTUV = 0, XJ.SPECULARDIRECTUV = 0, XJ.LIGHTMAPDIRECTUV = 0, this._diffuseTexture && JJ.DiffuseTextureEnabled) {
+            const yB = dB._drawWrapper;
+            if (yB.effect && this.isFrozen && yB._wasPreviouslyReady && yB._wasPreviouslyUsingInstances === VB) return !0;
+            dB.materialDefines || (this._callbackPluginEventGeneric(4, this._eventInfo), dB.materialDefines = new rB(this._eventInfo.defineNames));
+            const pB = this.jU(),
+              lB = dB.materialDefines;
+            if (this._isReadyForSubMesh(dB)) return !0;
+            const JB = pB.PD();
+            if (lB._needNormals = (0, iB.Q)(pB, TB, lB, !0, this._maxSimultaneousLights, this._disableLighting), !(0, iB.d)(pB, TB, this._maxSimultaneousLights, this._disableLighting)) return !1;
+            (0, iB.Z)(pB, lB);
+            const oB = this.needAlphaBlendingForMesh(TB) && this.jU().useOrderIndependentTransparency;
+            if ((0, iB.bb)(pB, lB, this.canRenderToMRT && !oB), (0, iB._)(pB, lB, oB), fB.e.PrepareDefines(JB.currentRenderPassId, TB, lB), lB._areTexturesDirty) {
+              this._eventInfo.hasRenderTargetTextures = !1, this._callbackPluginEventHasRenderTargetTextures(this._eventInfo), this._cacheHasRenderTargetTextures = this._eventInfo.hasRenderTargetTextures, lB._needUVs = !1;
+              for (let BB = 1; BB <= 6; ++BB) lB["MAINUV" + BB] = !1;
+              if (pB.texturesEnabled) {
+                if (lB.DIFFUSEDIRECTUV = 0, lB.BUMPDIRECTUV = 0, lB.AMBIENTDIRECTUV = 0, lB.OPACITYDIRECTUV = 0, lB.EMISSIVEDIRECTUV = 0, lB.SPECULARDIRECTUV = 0, lB.LIGHTMAPDIRECTUV = 0, this._diffuseTexture && BB.DiffuseTextureEnabled) {
                   if (!this._diffuseTexture.isReadyOrNotBlocking()) return !1;
-                  (0, mJ.X)(this._diffuseTexture, XJ, "DIFFUSE")
-                } else XJ.DIFFUSE = !1;
-                if (this._ambientTexture && JJ.AmbientTextureEnabled) {
+                  (0, iB.S)(this._diffuseTexture, lB, "DIFFUSE")
+                } else lB.DIFFUSE = !1;
+                if (this._ambientTexture && BB.AmbientTextureEnabled) {
                   if (!this._ambientTexture.isReadyOrNotBlocking()) return !1;
-                  (0, mJ.X)(this._ambientTexture, XJ, "AMBIENT")
-                } else XJ.AMBIENT = !1;
-                if (this._opacityTexture && JJ.OpacityTextureEnabled) {
+                  (0, iB.S)(this._ambientTexture, lB, "AMBIENT")
+                } else lB.AMBIENT = !1;
+                if (this._opacityTexture && BB.OpacityTextureEnabled) {
                   if (!this._opacityTexture.isReadyOrNotBlocking()) return !1;
-                  (0, mJ.X)(this._opacityTexture, XJ, "OPACITY"), XJ.OPACITYRGB = this._opacityTexture.getAlphaFromRGB
-                } else XJ.OPACITY = !1;
-                if (this._reflectionTexture && JJ.ReflectionTextureEnabled ? (XJ.ROUGHNESS = this._roughness > 0, XJ.REFLECTIONOVERALPHA = this._useReflectionOverAlpha) : (XJ.ROUGHNESS = !1, XJ.REFLECTIONOVERALPHA = !1), !(0, mJ.T)(eJ, this._reflectionTexture, XJ)) return !1;
-                if (this._emissiveTexture && JJ.EmissiveTextureEnabled) {
+                  (0, iB.S)(this._opacityTexture, lB, "OPACITY"), lB.OPACITYRGB = this._opacityTexture.getAlphaFromRGB
+                } else lB.OPACITY = !1;
+                if (this._reflectionTexture && BB.ReflectionTextureEnabled ? (lB.ROUGHNESS = this._roughness > 0, lB.REFLECTIONOVERALPHA = this._useReflectionOverAlpha) : (lB.ROUGHNESS = !1, lB.REFLECTIONOVERALPHA = !1), !(0, iB.P)(pB, this._reflectionTexture, lB)) return !1;
+                if (this._emissiveTexture && BB.EmissiveTextureEnabled) {
                   if (!this._emissiveTexture.isReadyOrNotBlocking()) return !1;
-                  (0, mJ.X)(this._emissiveTexture, XJ, "EMISSIVE")
-                } else XJ.EMISSIVE = !1;
-                if (this._lightmapTexture && JJ.LightmapTextureEnabled) {
+                  (0, iB.S)(this._emissiveTexture, lB, "EMISSIVE")
+                } else lB.EMISSIVE = !1;
+                if (this._lightmapTexture && BB.LightmapTextureEnabled) {
                   if (!this._lightmapTexture.isReadyOrNotBlocking()) return !1;
-                  (0, mJ.X)(this._lightmapTexture, XJ, "LIGHTMAP"), XJ.USELIGHTMAPASSHADOWMAP = this._useLightmapAsShadowmap, XJ.RGBDLIGHTMAP = this._lightmapTexture.isRGBD
-                } else XJ.LIGHTMAP = !1;
-                if (this._specularTexture && JJ.SpecularTextureEnabled) {
+                  (0, iB.S)(this._lightmapTexture, lB, "LIGHTMAP"), lB.USELIGHTMAPASSHADOWMAP = this._useLightmapAsShadowmap, lB.RGBDLIGHTMAP = this._lightmapTexture.isRGBD
+                } else lB.LIGHTMAP = !1;
+                if (this._specularTexture && BB.SpecularTextureEnabled) {
                   if (!this._specularTexture.isReadyOrNotBlocking()) return !1;
-                  (0, mJ.X)(this._specularTexture, XJ, "SPECULAR"), XJ.GLOSSINESS = this._useGlossinessFromSpecularMapAlpha
-                } else XJ.SPECULAR = !1;
-                if (eJ.gn().getCaps().standardDerivatives && this._bumpTexture && JJ.BumpTextureEnabled) {
+                  (0, iB.S)(this._specularTexture, lB, "SPECULAR"), lB.GLOSSINESS = this._useGlossinessFromSpecularMapAlpha
+                } else lB.SPECULAR = !1;
+                if (pB.PD().getCaps().standardDerivatives && this._bumpTexture && BB.BumpTextureEnabled) {
                   if (!this._bumpTexture.isReady()) return !1;
-                  (0, mJ.X)(this._bumpTexture, XJ, "BUMP"), XJ.PARALLAX = this._useParallax, XJ.PARALLAX_RHS = eJ.useRightHandedSystem, XJ.PARALLAXOCCLUSION = this._useParallaxOcclusion, XJ.OBJECTSPACE_NORMALMAP = this._useObjectSpaceNormalMap
-                } else XJ.BUMP = !1, XJ.PARALLAX = !1, XJ.PARALLAX_RHS = !1, XJ.PARALLAXOCCLUSION = !1;
-                if (this._refractionTexture && JJ.RefractionTextureEnabled) {
+                  (0, iB.S)(this._bumpTexture, lB, "BUMP"), lB.PARALLAX = this._useParallax, lB.PARALLAX_RHS = pB.useRightHandedSystem, lB.PARALLAXOCCLUSION = this._useParallaxOcclusion, lB.OBJECTSPACE_NORMALMAP = this._useObjectSpaceNormalMap
+                } else lB.BUMP = !1, lB.PARALLAX = !1, lB.PARALLAX_RHS = !1, lB.PARALLAXOCCLUSION = !1;
+                if (this._refractionTexture && BB.RefractionTextureEnabled) {
                   if (!this._refractionTexture.isReadyOrNotBlocking()) return !1;
-                  XJ._needUVs = !0, XJ.REFRACTION = !0, XJ.REFRACTIONMAP_3D = this._refractionTexture.isCube, XJ.RGBDREFRACTION = this._refractionTexture.isRGBD, XJ.USE_LOCAL_REFRACTIONMAP_CUBIC = !!this._refractionTexture.boundingBoxSize
-                } else XJ.REFRACTION = !1;
-                XJ.TWOSIDEDLIGHTING = !this._backFaceCulling && this._twoSidedLighting
-              } else XJ.DIFFUSE = !1, XJ.AMBIENT = !1, XJ.OPACITY = !1, XJ.REFLECTION = !1, XJ.EMISSIVE = !1, XJ.LIGHTMAP = !1, XJ.BUMP = !1, XJ.REFRACTION = !1;
-              XJ.ALPHAFROMDIFFUSE = this._shouldUseAlphaFromDiffuseTexture(), XJ.EMISSIVEASILLUMINATION = this._useEmissiveAsIllumination, XJ.LINKEMISSIVEWITHDIFFUSE = this._linkEmissiveWithDiffuse, XJ.SPECULAROVERALPHA = this._useSpecularOverAlpha, XJ.PREMULTIPLYALPHA = 7 === this.alphaMode || 8 === this.alphaMode, XJ.ALPHATEST_AFTERALLALPHACOMPUTATIONS = null !== this.transparencyMode, XJ.ALPHABLEND = null === this.transparencyMode || this.needAlphaBlendingForMesh(cJ), XJ.TEXTURE_REPETITION_MODE = AJ.version > 1 || AJ.isWebGPU ? this.textureRepetitionMode : 0
+                  lB._needUVs = !0, lB.REFRACTION = !0, lB.REFRACTIONMAP_3D = this._refractionTexture.isCube, lB.RGBDREFRACTION = this._refractionTexture.isRGBD, lB.USE_LOCAL_REFRACTIONMAP_CUBIC = !!this._refractionTexture.boundingBoxSize
+                } else lB.REFRACTION = !1;
+                lB.TWOSIDEDLIGHTING = !this._backFaceCulling && this._twoSidedLighting
+              } else lB.DIFFUSE = !1, lB.AMBIENT = !1, lB.OPACITY = !1, lB.REFLECTION = !1, lB.EMISSIVE = !1, lB.LIGHTMAP = !1, lB.BUMP = !1, lB.REFRACTION = !1;
+              lB.ALPHAFROMDIFFUSE = this._shouldUseAlphaFromDiffuseTexture(), lB.EMISSIVEASILLUMINATION = this._useEmissiveAsIllumination, lB.LINKEMISSIVEWITHDIFFUSE = this._linkEmissiveWithDiffuse, lB.SPECULAROVERALPHA = this._useSpecularOverAlpha, lB.PREMULTIPLYALPHA = 7 === this.alphaMode || 8 === this.alphaMode, lB.ALPHATEST_AFTERALLALPHACOMPUTATIONS = null !== this.transparencyMode, lB.ALPHABLEND = null === this.transparencyMode || this.needAlphaBlendingForMesh(TB), lB.TEXTURE_REPETITION_MODE = JB.version > 1 || JB.isWebGPU ? this.textureRepetitionMode : 0
             }
-            if (this._eventInfo.isReadyForSubMesh = !0, this._eventInfo.defines = XJ, this._eventInfo.subMesh = ZJ, this._callbackPluginEventIsReadyForSubMesh(this._eventInfo), !this._eventInfo.isReadyForSubMesh) return !1;
-            if (XJ._areImageProcessingDirty && this._imageProcessingConfiguration) {
+            if (this._eventInfo.isReadyForSubMesh = !0, this._eventInfo.defines = lB, this._eventInfo.subMesh = dB, this._callbackPluginEventIsReadyForSubMesh(this._eventInfo), !this._eventInfo.isReadyForSubMesh) return !1;
+            if (lB._areImageProcessingDirty && this._imageProcessingConfiguration) {
               if (!this._imageProcessingConfiguration.isReady()) return !1;
-              this._imageProcessingConfiguration.prepareDefines(XJ), XJ.IS_REFLECTION_LINEAR = null != this.reflectionTexture && !this.reflectionTexture.gammaSpace, XJ.IS_REFRACTION_LINEAR = null != this.refractionTexture && !this.refractionTexture.gammaSpace
+              this._imageProcessingConfiguration.prepareDefines(lB), lB.IS_REFLECTION_LINEAR = null != this.reflectionTexture && !this.reflectionTexture.gammaSpace, lB.IS_REFRACTION_LINEAR = null != this.refractionTexture && !this.refractionTexture.gammaSpace
             }
-            if (XJ._areFresnelDirty && (JJ.FresnelEnabled ? (this._diffuseFresnelParameters || this._opacityFresnelParameters || this._emissiveFresnelParameters || this._refractionFresnelParameters || this._reflectionFresnelParameters) && (XJ.DIFFUSEFRESNEL = this._diffuseFresnelParameters && this._diffuseFresnelParameters.isEnabled, XJ.OPACITYFRESNEL = this._opacityFresnelParameters && this._opacityFresnelParameters.isEnabled, XJ.REFLECTIONFRESNEL = this._reflectionFresnelParameters && this._reflectionFresnelParameters.isEnabled, XJ.REFLECTIONFRESNELFROMSPECULAR = this._useReflectionFresnelFromSpecular, XJ.REFRACTIONFRESNEL = this._refractionFresnelParameters && this._refractionFresnelParameters.isEnabled, XJ.EMISSIVEFRESNEL = this._emissiveFresnelParameters && this._emissiveFresnelParameters.isEnabled, XJ._needNormals = !0, XJ.FRESNEL = !0) : XJ.FRESNEL = !1), XJ.AREALIGHTUSED || XJ.CLUSTLIGHT_BATCH)
-              for (let JJ = 0; JJ < cJ.lightSources.length; JJ++)
-                if (!cJ.lightSources[JJ]._isReady()) return !1;
-            (0, mJ.Y)(cJ, eJ, this._useLogarithmicDepth, this.pointsCloud, this.fogEnabled, this.needAlphaTestingForMesh(cJ), XJ, this._applyDecalMapAfterDetailMap, this._useVertexPulling, ZJ.getRenderingMesh(), this._isVertexOutputInvariant), (0, mJ.P)(eJ, AJ, this, XJ, FJ, null, ZJ.getRenderingMesh().hasThinInstances), this._eventInfo.defines = XJ, this._eventInfo.mesh = cJ, this._callbackPluginEventPrepareDefinesBeforeAttributes(this._eventInfo), (0, mJ.L)(cJ, XJ, !0, !0, !0), this._callbackPluginEventPrepareDefines(this._eventInfo);
-            let DJ = !1;
-            if (XJ.isDirty) {
-              const FJ = XJ._areLightsDisposed;
-              XJ.markAsProcessed();
-              const UJ = new fJ.b;
-              XJ.REFLECTION && UJ.addFallback(0, "REFLECTION"), XJ.SPECULAR && UJ.addFallback(0, "SPECULAR"), XJ.BUMP && UJ.addFallback(0, "BUMP"), XJ.PARALLAX && UJ.addFallback(1, "PARALLAX"), XJ.PARALLAX_RHS && UJ.addFallback(1, "PARALLAX_RHS"), XJ.PARALLAXOCCLUSION && UJ.addFallback(0, "PARALLAXOCCLUSION"), XJ.SPECULAROVERALPHA && UJ.addFallback(0, "SPECULAROVERALPHA"), XJ.FOG && UJ.addFallback(1, "FOG"), XJ.POINTSIZE && UJ.addFallback(0, "POINTSIZE"), XJ.LOGARITHMICDEPTH && UJ.addFallback(0, "LOGARITHMICDEPTH"), (0, mJ.t)(XJ, UJ, this._maxSimultaneousLights), XJ.SPECULARTERM && UJ.addFallback(0, "SPECULARTERM"), XJ.DIFFUSEFRESNEL && UJ.addFallback(1, "DIFFUSEFRESNEL"), XJ.OPACITYFRESNEL && UJ.addFallback(2, "OPACITYFRESNEL"), XJ.REFLECTIONFRESNEL && UJ.addFallback(3, "REFLECTIONFRESNEL"), XJ.EMISSIVEFRESNEL && UJ.addFallback(4, "EMISSIVEFRESNEL"), XJ.FRESNEL && UJ.addFallback(4, "FRESNEL"), XJ.MULTIVIEW && UJ.addFallback(0, "MULTIVIEW");
-              const YJ = [qJ.n.PositionKind];
-              XJ.NORMAL && YJ.push(qJ.n.NormalKind), XJ.TANGENT && YJ.push(qJ.n.TangentKind);
-              for (let JJ = 1; JJ <= 6; ++JJ) XJ["UV" + JJ] && YJ.push(`uv${1===JJ?"":JJ}`);
-              XJ.VERTEXCOLOR && YJ.push(qJ.n.ColorKind), (0, mJ.z)(YJ, cJ, XJ, UJ), (0, mJ.D)(YJ, XJ), (0, mJ.H)(YJ, cJ, XJ), (0, mJ.w)(YJ, cJ, XJ);
-              let sJ = "default";
-              const nJ = ["world", "view", "viewProjection", "vEyePosition", "vLightsType", "vAmbientColor", "vDiffuseColor", "vSpecularColor", "vEmissiveColor", "visibility", "vFogInfos", "vFogColor", "pointSize", "vDiffuseInfos", "vAmbientInfos", "vOpacityInfos", "vEmissiveInfos", "vSpecularInfos", "vBumpInfos", "vLightmapInfos", "vRefractionInfos", "mBones", "diffuseMatrix", "ambientMatrix", "opacityMatrix", "emissiveMatrix", "specularMatrix", "bumpMatrix", "normalMatrix", "lightmapMatrix", "refractionMatrix", "diffuseLeftColor", "diffuseRightColor", "opacityParts", "reflectionLeftColor", "reflectionRightColor", "emissiveLeftColor", "emissiveRightColor", "refractionLeftColor", "refractionRightColor", "vRefractionPosition", "vRefractionSize", "logarithmicDepthConstant", "vTangentSpaceParams", "alphaCutOff", "boneTextureInfo", "morphTargetTextureInfo", "morphTargetTextureIndices", "cameraInfo", "vTextureRepetitionHexTilingParams"],
-                GJ = ["diffuseSampler", "ambientSampler", "opacitySampler", "reflectionCubeSampler", "reflection2DSampler", "emissiveSampler", "specularSampler", "bumpSampler", "lightmapSampler", "refractionCubeSampler", "refraction2DSampler", "boneSampler", "morphTargets", "oitDepthSampler", "oitFrontColorSampler", "areaLightsLTC1Sampler", "areaLightsLTC2Sampler"];
-              (0, mJ.kb)(nJ, GJ, !1);
-              const xJ = ["Material", "Scene", "Mesh"],
-                QJ = {
+            if (lB._areFresnelDirty && (BB.FresnelEnabled ? (this._diffuseFresnelParameters || this._opacityFresnelParameters || this._emissiveFresnelParameters || this._refractionFresnelParameters || this._reflectionFresnelParameters) && (lB.DIFFUSEFRESNEL = this._diffuseFresnelParameters && this._diffuseFresnelParameters.isEnabled, lB.OPACITYFRESNEL = this._opacityFresnelParameters && this._opacityFresnelParameters.isEnabled, lB.REFLECTIONFRESNEL = this._reflectionFresnelParameters && this._reflectionFresnelParameters.isEnabled, lB.REFLECTIONFRESNELFROMSPECULAR = this._useReflectionFresnelFromSpecular, lB.REFRACTIONFRESNEL = this._refractionFresnelParameters && this._refractionFresnelParameters.isEnabled, lB.EMISSIVEFRESNEL = this._emissiveFresnelParameters && this._emissiveFresnelParameters.isEnabled, lB._needNormals = !0, lB.FRESNEL = !0) : lB.FRESNEL = !1), lB.AREALIGHTUSED || lB.CLUSTLIGHT_BATCH)
+              for (let BB = 0; BB < TB.lightSources.length; BB++)
+                if (!TB.lightSources[BB]._isReady()) return !1;
+            (0, iB.W)(TB, pB, this._useLogarithmicDepth, this.pointsCloud, this.fogEnabled, this.needAlphaTestingForMesh(TB), lB, this._applyDecalMapAfterDetailMap, this._useVertexPulling, dB.getRenderingMesh(), this._isVertexOutputInvariant), (0, iB.L)(pB, JB, this, lB, VB, null, dB.getRenderingMesh().hasThinInstances), this._eventInfo.defines = lB, this._eventInfo.mesh = TB, this._callbackPluginEventPrepareDefinesBeforeAttributes(this._eventInfo), (0, iB.I)(TB, lB, !0, !0, !0), this._callbackPluginEventPrepareDefines(this._eventInfo);
+            let LB = !1;
+            if (lB.isDirty) {
+              const VB = lB._areLightsDisposed;
+              lB.markAsProcessed();
+              const yB = new HB.d;
+              lB.REFLECTION && yB.addFallback(0, "REFLECTION"), lB.SPECULAR && yB.addFallback(0, "SPECULAR"), lB.BUMP && yB.addFallback(0, "BUMP"), lB.PARALLAX && yB.addFallback(1, "PARALLAX"), lB.PARALLAX_RHS && yB.addFallback(1, "PARALLAX_RHS"), lB.PARALLAXOCCLUSION && yB.addFallback(0, "PARALLAXOCCLUSION"), lB.SPECULAROVERALPHA && yB.addFallback(0, "SPECULAROVERALPHA"), lB.FOG && yB.addFallback(1, "FOG"), lB.POINTSIZE && yB.addFallback(0, "POINTSIZE"), lB.LOGARITHMICDEPTH && yB.addFallback(0, "LOGARITHMICDEPTH"), (0, iB.x)(lB, yB, this._maxSimultaneousLights), lB.SPECULARTERM && yB.addFallback(0, "SPECULARTERM"), lB.DIFFUSEFRESNEL && yB.addFallback(1, "DIFFUSEFRESNEL"), lB.OPACITYFRESNEL && yB.addFallback(2, "OPACITYFRESNEL"), lB.REFLECTIONFRESNEL && yB.addFallback(3, "REFLECTIONFRESNEL"), lB.EMISSIVEFRESNEL && yB.addFallback(4, "EMISSIVEFRESNEL"), lB.FRESNEL && yB.addFallback(4, "FRESNEL"), lB.MULTIVIEW && yB.addFallback(0, "MULTIVIEW");
+              const oB = [YB.m.PositionKind];
+              lB.NORMAL && oB.push(YB.m.NormalKind), lB.TANGENT && oB.push(YB.m.TangentKind);
+              for (let BB = 1; BB <= 6; ++BB) lB["UV" + BB] && oB.push(`uv${1===BB?"":BB}`);
+              lB.VERTEXCOLOR && oB.push(YB.m.ColorKind), (0, iB.D)(oB, TB, lB, yB), (0, iB.F)(oB, lB), (0, iB.G)(oB, TB, lB), (0, iB.A)(oB, TB, lB);
+              let OB = "default";
+              const DB = ["world", "view", "viewProjection", "vEyePosition", "vLightsType", "vAmbientColor", "vDiffuseColor", "vSpecularColor", "vEmissiveColor", "visibility", "vFogInfos", "vFogColor", "pointSize", "vDiffuseInfos", "vAmbientInfos", "vOpacityInfos", "vEmissiveInfos", "vSpecularInfos", "vBumpInfos", "vLightmapInfos", "vRefractionInfos", "mBones", "diffuseMatrix", "ambientMatrix", "opacityMatrix", "emissiveMatrix", "specularMatrix", "bumpMatrix", "normalMatrix", "lightmapMatrix", "refractionMatrix", "diffuseLeftColor", "diffuseRightColor", "opacityParts", "reflectionLeftColor", "reflectionRightColor", "emissiveLeftColor", "emissiveRightColor", "refractionLeftColor", "refractionRightColor", "vRefractionPosition", "vRefractionSize", "logarithmicDepthConstant", "vTangentSpaceParams", "alphaCutOff", "boneTextureInfo", "morphTargetTextureInfo", "morphTargetTextureIndices", "cameraInfo", "vTextureRepetitionHexTilingParams"],
+                uB = ["diffuseSampler", "ambientSampler", "opacitySampler", "reflectionCubeSampler", "reflection2DSampler", "emissiveSampler", "specularSampler", "bumpSampler", "lightmapSampler", "refractionCubeSampler", "refraction2DSampler", "boneSampler", "morphTargets", "oitDepthSampler", "oitFrontColorSampler", "areaLightsLTC1Sampler", "areaLightsLTC2Sampler"];
+              (0, iB.jb)(DB, uB, !1);
+              const EB = ["Material", "Scene", "Mesh"],
+                NB = {
                   maxSimultaneousLights: this._maxSimultaneousLights,
-                  maxSimultaneousMorphTargets: XJ.NUM_MORPH_INFLUENCERS
+                  maxSimultaneousMorphTargets: lB.NUM_MORPH_INFLUENCERS
                 };
-              if (this._eventInfo.fallbacks = UJ, this._eventInfo.fallbackRank = 0, this._eventInfo.defines = XJ, this._eventInfo.uniforms = nJ, this._eventInfo.attributes = YJ, this._eventInfo.samplers = GJ, this._eventInfo.uniformBuffersNames = xJ, this._eventInfo.customCode = void 0, this._eventInfo.mesh = cJ, this._eventInfo.indexParameters = QJ, this._callbackPluginEventGeneric(128, this._eventInfo), VJ.b.AddUniformsAndSamplers(nJ, GJ), jJ.e.AddUniforms(nJ), jJ.e.AddSamplers(GJ), hJ.e && (hJ.e.PrepareUniforms(nJ, XJ), hJ.e.PrepareSamplers(GJ, XJ)), (0, mJ.mb)({
-                  uniformsNames: nJ,
-                  uniformBuffersNames: xJ,
-                  samplers: GJ,
-                  defines: XJ,
+              if (this._eventInfo.fallbacks = yB, this._eventInfo.fallbackRank = 0, this._eventInfo.defines = lB, this._eventInfo.uniforms = DB, this._eventInfo.attributes = oB, this._eventInfo.samplers = uB, this._eventInfo.uniformBuffersNames = EB, this._eventInfo.customCode = void 0, this._eventInfo.mesh = TB, this._eventInfo.indexParameters = NB, this._callbackPluginEventGeneric(128, this._eventInfo), fB.e.AddUniformsAndSamplers(DB, uB), gB.e.AddUniforms(DB), gB.e.AddSamplers(uB), kB.b && (kB.b.PrepareUniforms(DB, lB), kB.b.PrepareSamplers(uB, lB)), (0, iB.nb)({
+                  uniformsNames: DB,
+                  uniformBuffersNames: EB,
+                  samplers: uB,
+                  defines: lB,
                   maxSimultaneousLights: this._maxSimultaneousLights,
                   shaderLanguage: this._shaderLanguage
-                }), (0, rJ.c)(nJ), this._useVertexPulling) {
-                const JJ = ZJ.getRenderingMesh(),
-                  cJ = JJ?.geometry;
-                cJ && (this._vertexPullingMetadata = (0, vJ.f)(cJ), this._vertexPullingMetadata && this._vertexPullingMetadata.forEach(((JJ, cJ) => {
-                  nJ.push(`vp_${cJ}_info`)
+                }), (0, vB.c)(DB), this._useVertexPulling) {
+                const BB = dB.getRenderingMesh(),
+                  TB = BB?.geometry;
+                TB && (this._vertexPullingMetadata = (0, mB.e)(TB), this._vertexPullingMetadata && this._vertexPullingMetadata.forEach(((BB, TB) => {
+                  DB.push(`vp_${TB}_info`)
                 })))
               } else this._vertexPullingMetadata = null;
-              const EJ = {};
-              this.customShaderNameResolve && (sJ = this.customShaderNameResolve(sJ, nJ, xJ, GJ, XJ, YJ, EJ));
-              const KJ = XJ.toString(),
-                yJ = ZJ.effect,
-                SJ = eJ.gn().createEffect(sJ, {
-                  attributes: YJ,
-                  uniformsNames: nJ,
-                  uniformBuffersNames: xJ,
-                  samplers: GJ,
-                  defines: KJ,
-                  fallbacks: UJ,
+              const tB = {};
+              this.customShaderNameResolve && (OB = this.customShaderNameResolve(OB, DB, EB, uB, lB, oB, tB));
+              const sB = lB.toString(),
+                MB = dB.effect,
+                zB = pB.PD().createEffect(OB, {
+                  attributes: oB,
+                  uniformsNames: DB,
+                  uniformBuffersNames: EB,
+                  samplers: uB,
+                  defines: sB,
+                  fallbacks: yB,
                   onCompiled: this.onCompiled,
                   onError: this.onError,
-                  indexParameters: QJ,
-                  processFinalCode: EJ.processFinalCode,
+                  indexParameters: NB,
+                  processFinalCode: tB.processFinalCode,
                   processCodeAfterIncludes: this._eventInfo.customCode,
-                  multiTarget: XJ.PREPASS,
+                  multiTarget: lB.PREPASS,
                   shaderLanguage: this._shaderLanguage,
-                  extraInitializationsAsync: JJ._ShaderLoader.getLoadCallback(this._shaderLanguage)
-                }, AJ);
-              if (this._eventInfo.customCode = void 0, SJ)
-                if (this._onEffectCreatedObservable && (bJ.effect = SJ, bJ.subMesh = ZJ, this._onEffectCreatedObservable.notifyObservers(bJ)), this.allowShaderHotSwapping && yJ && !SJ.isReady()) {
-                  if (XJ.markAsUnprocessed(), DJ = this.isFrozen, FJ) return XJ._areLightsDisposed = !0, !1
-                } else eJ.resetCachedMaterial(), ZJ.setEffect(SJ, XJ, this._materialContext)
+                  extraInitializationsAsync: BB._ShaderLoader.getLoadCallback(this._shaderLanguage)
+                }, JB);
+              if (this._eventInfo.customCode = void 0, zB)
+                if (this._onEffectCreatedObservable && (FB.effect = zB, FB.subMesh = dB, this._onEffectCreatedObservable.notifyObservers(FB)), this.allowShaderHotSwapping && MB && !zB.isReady()) {
+                  if (lB.markAsUnprocessed(), LB = this.isFrozen, VB) return lB._areLightsDisposed = !0, !1
+                } else pB.resetCachedMaterial(), dB.setEffect(zB, lB, this._materialContext)
             }
-            return !(!ZJ.effect || !ZJ.effect.isReady()) && (XJ._renderId = eJ.getRenderId(), UJ._wasPreviouslyReady = !DJ, UJ._wasPreviouslyUsingInstances = FJ, this._checkScenePerformancePriority(), !0)
+            return !(!dB.effect || !dB.effect.isReady()) && (lB._renderId = pB.getRenderId(), yB._wasPreviouslyReady = !LB, yB._wasPreviouslyUsingInstances = VB, this._checkScenePerformancePriority(), !0)
           }
           buildUniformLayout() {
-            const JJ = this._uniformBuffer;
-            JJ.addUniform("diffuseLeftColor", 4), JJ.addUniform("diffuseRightColor", 4), JJ.addUniform("opacityParts", 4), JJ.addUniform("reflectionLeftColor", 4), JJ.addUniform("reflectionRightColor", 4), JJ.addUniform("refractionLeftColor", 4), JJ.addUniform("refractionRightColor", 4), JJ.addUniform("emissiveLeftColor", 4), JJ.addUniform("emissiveRightColor", 4), JJ.addUniform("vDiffuseInfos", 2), JJ.addUniform("vAmbientInfos", 2), JJ.addUniform("vOpacityInfos", 2), JJ.addUniform("vEmissiveInfos", 2), JJ.addUniform("vLightmapInfos", 2), JJ.addUniform("vSpecularInfos", 2), JJ.addUniform("vBumpInfos", 3), JJ.addUniform("diffuseMatrix", 16), JJ.addUniform("ambientMatrix", 16), JJ.addUniform("opacityMatrix", 16), JJ.addUniform("emissiveMatrix", 16), JJ.addUniform("lightmapMatrix", 16), JJ.addUniform("specularMatrix", 16), JJ.addUniform("bumpMatrix", 16), JJ.addUniform("vTangentSpaceParams", 2), JJ.addUniform("pointSize", 1), JJ.addUniform("alphaCutOff", 1), JJ.addUniform("refractionMatrix", 16), JJ.addUniform("vRefractionInfos", 4), JJ.addUniform("vRefractionPosition", 3), JJ.addUniform("vRefractionSize", 3), JJ.addUniform("vSpecularColor", 4), JJ.addUniform("vEmissiveColor", 3), JJ.addUniform("vDiffuseColor", 4), JJ.addUniform("vAmbientColor", 3), JJ.addUniform("cameraInfo", 4), JJ.addUniform("vTextureRepetitionHexTilingParams", 4), (0, mJ.gb)(JJ, !1, !0), super.buildUniformLayout()
+            const BB = this._uniformBuffer;
+            BB.addUniform("diffuseLeftColor", 4), BB.addUniform("diffuseRightColor", 4), BB.addUniform("opacityParts", 4), BB.addUniform("reflectionLeftColor", 4), BB.addUniform("reflectionRightColor", 4), BB.addUniform("refractionLeftColor", 4), BB.addUniform("refractionRightColor", 4), BB.addUniform("emissiveLeftColor", 4), BB.addUniform("emissiveRightColor", 4), BB.addUniform("vDiffuseInfos", 2), BB.addUniform("vAmbientInfos", 2), BB.addUniform("vOpacityInfos", 2), BB.addUniform("vEmissiveInfos", 2), BB.addUniform("vLightmapInfos", 2), BB.addUniform("vSpecularInfos", 2), BB.addUniform("vBumpInfos", 3), BB.addUniform("diffuseMatrix", 16), BB.addUniform("ambientMatrix", 16), BB.addUniform("opacityMatrix", 16), BB.addUniform("emissiveMatrix", 16), BB.addUniform("lightmapMatrix", 16), BB.addUniform("specularMatrix", 16), BB.addUniform("bumpMatrix", 16), BB.addUniform("vTangentSpaceParams", 2), BB.addUniform("pointSize", 1), BB.addUniform("alphaCutOff", 1), BB.addUniform("refractionMatrix", 16), BB.addUniform("vRefractionInfos", 4), BB.addUniform("vRefractionPosition", 3), BB.addUniform("vRefractionSize", 3), BB.addUniform("vSpecularColor", 4), BB.addUniform("vEmissiveColor", 3), BB.addUniform("vDiffuseColor", 4), BB.addUniform("vAmbientColor", 3), BB.addUniform("cameraInfo", 4), BB.addUniform("vTextureRepetitionHexTilingParams", 4), (0, iB.fb)(BB, !1, !0), super.buildUniformLayout()
           }
-          bindForSubMesh(cJ, ZJ, FJ) {
-            const UJ = this.Qy(),
-              eJ = FJ.materialDefines;
-            if (!eJ) return;
-            const qJ = FJ.effect;
-            if (!qJ) return;
-            this._activeEffect = qJ, ZJ.getMeshUniformBuffer().bindToEffect(qJ, "Mesh"), ZJ.transferToEffect(cJ), this._uniformBuffer.bindToEffect(qJ, "Material"), this.prePassConfiguration.bindForSubMesh(this._activeEffect, UJ, ZJ, cJ, this.isFrozen), VJ.b.Bind(UJ.gn().currentRenderPassId, this._activeEffect, ZJ, cJ, this);
-            const jJ = UJ.activeCamera;
-            jJ ? this._uniformBuffer.updateFloat4("cameraInfo", jJ.minZ, jJ.maxZ, 0, 0) : this._uniformBuffer.updateFloat4("cameraInfo", 0, 0, 0, 0);
-            const YJ = this.textureRepetitionHexTilingParams;
-            this._uniformBuffer.updateFloat4("vTextureRepetitionHexTilingParams", YJ[0], YJ[1], YJ[2], YJ[3]), this._eventInfo.subMesh = FJ, this._callbackPluginEventHardBindForSubMesh(this._eventInfo), eJ.OBJECTSPACE_NORMALMAP && (cJ.toNormalMatrix(this._normalMatrix), this.bindOnlyNormalMatrix(this._normalMatrix));
-            const hJ = this._mustRebind(UJ, qJ, FJ, ZJ.visibility),
-              DJ = UJ.gn()._features.needToAlwaysBindUniformBuffers;
-            (0, mJ.e)(ZJ, qJ), this._vertexPullingMetadata && (0, vJ.d)(qJ, this._vertexPullingMetadata);
-            const sJ = this._uniformBuffer;
-            if (hJ) {
-              if (this.bindViewProjection(qJ), !sJ.useUbo || !this.isFrozen || !sJ.isSync || FJ._drawWrapper._forceRebindOnNextCall) {
-                if (JJ.FresnelEnabled && eJ.FRESNEL) {
-                  if (this.diffuseFresnelParameters && this.diffuseFresnelParameters.isEnabled && (sJ.updateColor4("diffuseLeftColor", this.diffuseFresnelParameters.leftColor, this.diffuseFresnelParameters.power), sJ.updateColor4("diffuseRightColor", this.diffuseFresnelParameters.rightColor, this.diffuseFresnelParameters.bias)), this.opacityFresnelParameters && this.opacityFresnelParameters.isEnabled) {
-                    const JJ = AJ.h.Color3[0];
-                    JJ.set(this.opacityFresnelParameters.leftColor.toLuminance(), this.opacityFresnelParameters.rightColor.toLuminance(), this.opacityFresnelParameters.bias), sJ.updateColor4("opacityParts", JJ, this.opacityFresnelParameters.power)
+          bindForSubMesh(TB, dB, VB) {
+            const yB = this.jU(),
+              pB = VB.materialDefines;
+            if (!pB) return;
+            const YB = VB.effect;
+            if (!YB) return;
+            this._activeEffect = YB, dB.getMeshUniformBuffer().bindToEffect(YB, "Mesh"), dB.transferToEffect(TB), this._uniformBuffer.bindToEffect(YB, "Material"), this.prePassConfiguration.bindForSubMesh(this._activeEffect, yB, dB, TB, this.isFrozen), fB.e.Bind(yB.PD().currentRenderPassId, this._activeEffect, dB, TB, this);
+            const gB = yB.activeCamera;
+            gB ? this._uniformBuffer.updateFloat4("cameraInfo", gB.minZ, gB.maxZ, 0, 0) : this._uniformBuffer.updateFloat4("cameraInfo", 0, 0, 0, 0);
+            const oB = this.textureRepetitionHexTilingParams;
+            this._uniformBuffer.updateFloat4("vTextureRepetitionHexTilingParams", oB[0], oB[1], oB[2], oB[3]), this._eventInfo.subMesh = VB, this._callbackPluginEventHardBindForSubMesh(this._eventInfo), pB.OBJECTSPACE_NORMALMAP && (TB.toNormalMatrix(this._normalMatrix), this.bindOnlyNormalMatrix(this._normalMatrix));
+            const kB = this._mustRebind(yB, YB, VB, dB.visibility),
+              LB = yB.PD()._features.needToAlwaysBindUniformBuffers;
+            (0, iB.f)(dB, YB), this._vertexPullingMetadata && (0, mB.b)(YB, this._vertexPullingMetadata);
+            const OB = this._uniformBuffer;
+            if (kB) {
+              if (this.bindViewProjection(YB), !OB.useUbo || !this.isFrozen || !OB.isSync || VB._drawWrapper._forceRebindOnNextCall) {
+                if (BB.FresnelEnabled && pB.FRESNEL) {
+                  if (this.diffuseFresnelParameters && this.diffuseFresnelParameters.isEnabled && (OB.updateColor4("diffuseLeftColor", this.diffuseFresnelParameters.leftColor, this.diffuseFresnelParameters.power), OB.updateColor4("diffuseRightColor", this.diffuseFresnelParameters.rightColor, this.diffuseFresnelParameters.bias)), this.opacityFresnelParameters && this.opacityFresnelParameters.isEnabled) {
+                    const BB = JB.h.Color3[0];
+                    BB.set(this.opacityFresnelParameters.leftColor.toLuminance(), this.opacityFresnelParameters.rightColor.toLuminance(), this.opacityFresnelParameters.bias), OB.updateColor4("opacityParts", BB, this.opacityFresnelParameters.power)
                   }
-                  this.reflectionFresnelParameters && this.reflectionFresnelParameters.isEnabled && (sJ.updateColor4("reflectionLeftColor", this.reflectionFresnelParameters.leftColor, this.reflectionFresnelParameters.power), sJ.updateColor4("reflectionRightColor", this.reflectionFresnelParameters.rightColor, this.reflectionFresnelParameters.bias)), this.refractionFresnelParameters && this.refractionFresnelParameters.isEnabled && (sJ.updateColor4("refractionLeftColor", this.refractionFresnelParameters.leftColor, this.refractionFresnelParameters.power), sJ.updateColor4("refractionRightColor", this.refractionFresnelParameters.rightColor, this.refractionFresnelParameters.bias)), this.emissiveFresnelParameters && this.emissiveFresnelParameters.isEnabled && (sJ.updateColor4("emissiveLeftColor", this.emissiveFresnelParameters.leftColor, this.emissiveFresnelParameters.power), sJ.updateColor4("emissiveRightColor", this.emissiveFresnelParameters.rightColor, this.emissiveFresnelParameters.bias))
+                  this.reflectionFresnelParameters && this.reflectionFresnelParameters.isEnabled && (OB.updateColor4("reflectionLeftColor", this.reflectionFresnelParameters.leftColor, this.reflectionFresnelParameters.power), OB.updateColor4("reflectionRightColor", this.reflectionFresnelParameters.rightColor, this.reflectionFresnelParameters.bias)), this.refractionFresnelParameters && this.refractionFresnelParameters.isEnabled && (OB.updateColor4("refractionLeftColor", this.refractionFresnelParameters.leftColor, this.refractionFresnelParameters.power), OB.updateColor4("refractionRightColor", this.refractionFresnelParameters.rightColor, this.refractionFresnelParameters.bias)), this.emissiveFresnelParameters && this.emissiveFresnelParameters.isEnabled && (OB.updateColor4("emissiveLeftColor", this.emissiveFresnelParameters.leftColor, this.emissiveFresnelParameters.power), OB.updateColor4("emissiveRightColor", this.emissiveFresnelParameters.rightColor, this.emissiveFresnelParameters.bias))
                 }
-                if (eJ.ALPHATEST && sJ.updateFloat("alphaCutOff", this.alphaCutOff), UJ.texturesEnabled && (this._diffuseTexture && JJ.DiffuseTextureEnabled && (sJ.updateFloat2("vDiffuseInfos", this._diffuseTexture.coordinatesIndex, this._diffuseTexture.level), (0, mJ.q)(this._diffuseTexture, sJ, "diffuse")), this._ambientTexture && JJ.AmbientTextureEnabled && (sJ.updateFloat2("vAmbientInfos", this._ambientTexture.coordinatesIndex, this._ambientTexture.level), (0, mJ.q)(this._ambientTexture, sJ, "ambient")), this._opacityTexture && JJ.OpacityTextureEnabled && (sJ.updateFloat2("vOpacityInfos", this._opacityTexture.coordinatesIndex, this._opacityTexture.level), (0, mJ.q)(this._opacityTexture, sJ, "opacity")), (0, mJ.i)(UJ, eJ, sJ, AJ.e.White(), this._reflectionTexture, !1, !1, !0, !1, !1, !1, this.roughness), this._reflectionTexture && JJ.ReflectionTextureEnabled || sJ.updateFloat2("vReflectionInfos", 0, this.roughness), this._emissiveTexture && JJ.EmissiveTextureEnabled && (sJ.updateFloat2("vEmissiveInfos", this._emissiveTexture.coordinatesIndex, this._emissiveTexture.level), (0, mJ.q)(this._emissiveTexture, sJ, "emissive")), this._lightmapTexture && JJ.LightmapTextureEnabled && (sJ.updateFloat2("vLightmapInfos", this._lightmapTexture.coordinatesIndex, this._lightmapTexture.level), (0, mJ.q)(this._lightmapTexture, sJ, "lightmap")), this._specularTexture && JJ.SpecularTextureEnabled && (sJ.updateFloat2("vSpecularInfos", this._specularTexture.coordinatesIndex, this._specularTexture.level), (0, mJ.q)(this._specularTexture, sJ, "specular")), this._bumpTexture && UJ.gn().getCaps().standardDerivatives && JJ.BumpTextureEnabled && (sJ.updateFloat3("vBumpInfos", this._bumpTexture.coordinatesIndex, 1 / this._bumpTexture.level, this.parallaxScaleBias), (0, mJ.q)(this._bumpTexture, sJ, "bump"), UJ._mirroredCameraPosition ? sJ.updateFloat2("vTangentSpaceParams", this._invertNormalMapX ? 1 : -1, this._invertNormalMapY ? 1 : -1) : sJ.updateFloat2("vTangentSpaceParams", this._invertNormalMapX ? -1 : 1, this._invertNormalMapY ? -1 : 1)), this._refractionTexture && JJ.RefractionTextureEnabled)) {
-                  let JJ = 1;
-                  if (this._refractionTexture.isCube || (sJ.Y5("refractionMatrix", this._refractionTexture.getReflectionTextureMatrix()), this._refractionTexture.depth && (JJ = this._refractionTexture.depth)), sJ.updateFloat4("vRefractionInfos", this._refractionTexture.level, this.indexOfRefraction, JJ, this.invertRefractionY ? -1 : 1), this._refractionTexture.boundingBoxSize) {
-                    const JJ = this._refractionTexture;
-                    sJ.updateVector3("vRefractionPosition", JJ.boundingBoxPosition), sJ.updateVector3("vRefractionSize", JJ.boundingBoxSize)
+                if (pB.ALPHATEST && OB.updateFloat("alphaCutOff", this.alphaCutOff), yB.texturesEnabled && (this._diffuseTexture && BB.DiffuseTextureEnabled && (OB.updateFloat2("vDiffuseInfos", this._diffuseTexture.coordinatesIndex, this._diffuseTexture.level), (0, iB.u)(this._diffuseTexture, OB, "diffuse")), this._ambientTexture && BB.AmbientTextureEnabled && (OB.updateFloat2("vAmbientInfos", this._ambientTexture.coordinatesIndex, this._ambientTexture.level), (0, iB.u)(this._ambientTexture, OB, "ambient")), this._opacityTexture && BB.OpacityTextureEnabled && (OB.updateFloat2("vOpacityInfos", this._opacityTexture.coordinatesIndex, this._opacityTexture.level), (0, iB.u)(this._opacityTexture, OB, "opacity")), (0, iB.j)(yB, pB, OB, JB.c.White(), this._reflectionTexture, !1, !1, !0, !1, !1, !1, this.roughness), this._reflectionTexture && BB.ReflectionTextureEnabled || OB.updateFloat2("vReflectionInfos", 0, this.roughness), this._emissiveTexture && BB.EmissiveTextureEnabled && (OB.updateFloat2("vEmissiveInfos", this._emissiveTexture.coordinatesIndex, this._emissiveTexture.level), (0, iB.u)(this._emissiveTexture, OB, "emissive")), this._lightmapTexture && BB.LightmapTextureEnabled && (OB.updateFloat2("vLightmapInfos", this._lightmapTexture.coordinatesIndex, this._lightmapTexture.level), (0, iB.u)(this._lightmapTexture, OB, "lightmap")), this._specularTexture && BB.SpecularTextureEnabled && (OB.updateFloat2("vSpecularInfos", this._specularTexture.coordinatesIndex, this._specularTexture.level), (0, iB.u)(this._specularTexture, OB, "specular")), this._bumpTexture && yB.PD().getCaps().standardDerivatives && BB.BumpTextureEnabled && (OB.updateFloat3("vBumpInfos", this._bumpTexture.coordinatesIndex, 1 / this._bumpTexture.level, this.parallaxScaleBias), (0, iB.u)(this._bumpTexture, OB, "bump"), yB._mirroredCameraPosition ? OB.updateFloat2("vTangentSpaceParams", this._invertNormalMapX ? 1 : -1, this._invertNormalMapY ? 1 : -1) : OB.updateFloat2("vTangentSpaceParams", this._invertNormalMapX ? -1 : 1, this._invertNormalMapY ? -1 : 1)), this._refractionTexture && BB.RefractionTextureEnabled)) {
+                  let BB = 1;
+                  if (this._refractionTexture.isCube || (OB.i6("refractionMatrix", this._refractionTexture.getReflectionTextureMatrix()), this._refractionTexture.depth && (BB = this._refractionTexture.depth)), OB.updateFloat4("vRefractionInfos", this._refractionTexture.level, this.indexOfRefraction, BB, this.invertRefractionY ? -1 : 1), this._refractionTexture.boundingBoxSize) {
+                    const BB = this._refractionTexture;
+                    OB.updateVector3("vRefractionPosition", BB.boundingBoxPosition), OB.updateVector3("vRefractionSize", BB.boundingBoxSize)
                   }
                 }
-                this.pointsCloud && sJ.updateFloat("pointSize", this.pointSize), sJ.updateColor4("vSpecularColor", this.specularColor, this.specularPower), sJ.updateColor3("vEmissiveColor", JJ.EmissiveTextureEnabled ? this.emissiveColor : AJ.e.BlackReadOnly), sJ.updateColor4("vDiffuseColor", this.diffuseColor, this.alpha), UJ.ambientColor.multiplyToRef(this.ambientColor, this._globalAmbientColor), sJ.updateColor3("vAmbientColor", this._globalAmbientColor)
+                this.pointsCloud && OB.updateFloat("pointSize", this.pointSize), OB.updateColor4("vSpecularColor", this.specularColor, this.specularPower), OB.updateColor3("vEmissiveColor", BB.EmissiveTextureEnabled ? this.emissiveColor : JB.c.BlackReadOnly), OB.updateColor4("vDiffuseColor", this.diffuseColor, this.alpha), yB.ambientColor.multiplyToRef(this.ambientColor, this._globalAmbientColor), OB.updateColor3("vAmbientColor", this._globalAmbientColor)
               }
-              UJ.texturesEnabled && (this._diffuseTexture && JJ.DiffuseTextureEnabled && qJ.setTexture("diffuseSampler", this._diffuseTexture), this._ambientTexture && JJ.AmbientTextureEnabled && qJ.setTexture("ambientSampler", this._ambientTexture), this._opacityTexture && JJ.OpacityTextureEnabled && qJ.setTexture("opacitySampler", this._opacityTexture), this._reflectionTexture && JJ.ReflectionTextureEnabled && (this._reflectionTexture.isCube ? qJ.setTexture("reflectionCubeSampler", this._reflectionTexture) : qJ.setTexture("reflection2DSampler", this._reflectionTexture)), this._emissiveTexture && JJ.EmissiveTextureEnabled && qJ.setTexture("emissiveSampler", this._emissiveTexture), this._lightmapTexture && JJ.LightmapTextureEnabled && qJ.setTexture("lightmapSampler", this._lightmapTexture), this._specularTexture && JJ.SpecularTextureEnabled && qJ.setTexture("specularSampler", this._specularTexture), this._bumpTexture && UJ.gn().getCaps().standardDerivatives && JJ.BumpTextureEnabled && qJ.setTexture("bumpSampler", this._bumpTexture), this._refractionTexture && JJ.RefractionTextureEnabled && (this._refractionTexture.isCube ? qJ.setTexture("refractionCubeSampler", this._refractionTexture) : qJ.setTexture("refraction2DSampler", this._refractionTexture))), this.Qy().useOrderIndependentTransparency && this.needAlphaBlendingForMesh(ZJ) && this.Qy().depthPeelingRenderer.bind(qJ), this._eventInfo.subMesh = FJ, this._callbackPluginEventBindForSubMesh(this._eventInfo), (0, rJ.e)(qJ, this, UJ), this.bindEyePosition(qJ)
-            } else DJ && (this._needToBindSceneUbo = !0);
-            !hJ && this.isFrozen && !DJ || !UJ.lightsEnabled || this._disableLighting || (0, mJ.k)(UJ, ZJ, qJ, eJ, this._maxSimultaneousLights), !hJ && this.isFrozen || ((UJ.fogEnabled && ZJ.applyFog && UJ.fogMode !== XJ.e.FOGMODE_NONE || this._reflectionTexture || this._refractionTexture || ZJ.receiveShadows || eJ.PREPASS || eJ.CLUSTLIGHT_BATCH) && this.bindView(qJ), (0, mJ.h)(UJ, ZJ, qJ), eJ.NUM_MORPH_INFLUENCERS && (0, mJ.m)(ZJ, qJ), eJ.BAKED_VERTEX_ANIMATION_TEXTURE && ZJ.bakedVertexAnimationManager?.bind(qJ, eJ.INSTANCES), this.useLogarithmicDepth && (0, mJ.l)(eJ, qJ, UJ), this._imageProcessingConfiguration && !this._imageProcessingConfiguration.applyByPostProcess && this._imageProcessingConfiguration.bind(this._activeEffect)), this._afterBind(ZJ, this._activeEffect, FJ), sJ.update()
+              yB.texturesEnabled && (this._diffuseTexture && BB.DiffuseTextureEnabled && YB.setTexture("diffuseSampler", this._diffuseTexture), this._ambientTexture && BB.AmbientTextureEnabled && YB.setTexture("ambientSampler", this._ambientTexture), this._opacityTexture && BB.OpacityTextureEnabled && YB.setTexture("opacitySampler", this._opacityTexture), this._reflectionTexture && BB.ReflectionTextureEnabled && (this._reflectionTexture.isCube ? YB.setTexture("reflectionCubeSampler", this._reflectionTexture) : YB.setTexture("reflection2DSampler", this._reflectionTexture)), this._emissiveTexture && BB.EmissiveTextureEnabled && YB.setTexture("emissiveSampler", this._emissiveTexture), this._lightmapTexture && BB.LightmapTextureEnabled && YB.setTexture("lightmapSampler", this._lightmapTexture), this._specularTexture && BB.SpecularTextureEnabled && YB.setTexture("specularSampler", this._specularTexture), this._bumpTexture && yB.PD().getCaps().standardDerivatives && BB.BumpTextureEnabled && YB.setTexture("bumpSampler", this._bumpTexture), this._refractionTexture && BB.RefractionTextureEnabled && (this._refractionTexture.isCube ? YB.setTexture("refractionCubeSampler", this._refractionTexture) : YB.setTexture("refraction2DSampler", this._refractionTexture))), this.jU().useOrderIndependentTransparency && this.needAlphaBlendingForMesh(dB) && this.jU().depthPeelingRenderer.bind(YB), this._eventInfo.subMesh = VB, this._callbackPluginEventBindForSubMesh(this._eventInfo), (0, vB.d)(YB, this, yB), this.bindEyePosition(YB)
+            } else LB && (this._needToBindSceneUbo = !0);
+            !kB && this.isFrozen && !LB || !yB.lightsEnabled || this._disableLighting || (0, iB.n)(yB, dB, YB, pB, this._maxSimultaneousLights), !kB && this.isFrozen || ((yB.fogEnabled && dB.applyFog && yB.fogMode !== lB.g.FOGMODE_NONE || this._reflectionTexture || this._refractionTexture || dB.receiveShadows || pB.PREPASS || pB.CLUSTLIGHT_BATCH) && this.bindView(YB), (0, iB.h)(yB, dB, YB), pB.NUM_MORPH_INFLUENCERS && (0, iB.q)(dB, YB), pB.BAKED_VERTEX_ANIMATION_TEXTURE && dB.bakedVertexAnimationManager?.bind(YB, pB.INSTANCES), this.useLogarithmicDepth && (0, iB.p)(pB, YB, yB), this._imageProcessingConfiguration && !this._imageProcessingConfiguration.applyByPostProcess && this._imageProcessingConfiguration.bind(this._activeEffect)), this._afterBind(dB, this._activeEffect, VB), OB.update()
           }
-          _canBindRunFollower(cJ, ZJ, FJ, UJ, eJ) {
-            const XJ = cJ.prePassRenderer;
-            return this.isFrozen && this._storeEffectOnSubMeshes && this._uniformBufferLayoutBuilt && !this._needToBindSceneUbo && this.isReadyForSubMesh === JJ.prototype.isReadyForSubMesh && this.bindForSubMesh === JJ.prototype.bindForSubMesh && this._mustRebind === nJ.d.prototype._mustRebind && !(!this.backFaceCulling && this.separateCullingPass) && !(this.pluginManager && 0 !== this.pluginManager._activePluginsForExtraEvents.length) && !this._vertexPullingMetadata && !ZJ._features.needToAlwaysBindUniformBuffers && !(XJ && XJ.enabled && XJ.currentRTisSceneRT) && !VJ.b._Configurations[ZJ.currentRenderPassId] && !UJ.materialDefines?.OBJECTSPACE_NORMALMAP && !FJ.skeleton && !eJ._bonesComputationForcedToCPU
+          _canBindRunFollower(TB, dB, VB, yB, pB) {
+            const lB = TB.prePassRenderer;
+            return this.isFrozen && this._storeEffectOnSubMeshes && this._uniformBufferLayoutBuilt && !this._needToBindSceneUbo && this.isReadyForSubMesh === BB.prototype.isReadyForSubMesh && this.bindForSubMesh === BB.prototype.bindForSubMesh && this._mustRebind === DB.c.prototype._mustRebind && !(!this.backFaceCulling && this.separateCullingPass) && !(this.pluginManager && 0 !== this.pluginManager._activePluginsForExtraEvents.length) && !this._vertexPullingMetadata && !dB._features.needToAlwaysBindUniformBuffers && !(lB && lB.enabled && lB.currentRTisSceneRT) && !fB.e._Configurations[dB.currentRenderPassId] && !yB.materialDefines?.OBJECTSPACE_NORMALMAP && !VB.skeleton && !pB._bonesComputationForcedToCPU
           }
-          _bindRunFollower(JJ, cJ, ZJ, FJ) {
-            this._activeEffect = FJ, cJ.getMeshUniformBuffer().bindToEffect(FJ, "Mesh"), cJ.transferToEffect(JJ);
-            const UJ = this._uniformBuffer;
-            UJ.bindToEffect(FJ, "Material");
-            const eJ = this._scene.activeCamera;
-            eJ ? UJ.updateFloat4("cameraInfo", eJ.minZ, eJ.maxZ, 0, 0) : UJ.updateFloat4("cameraInfo", 0, 0, 0, 0);
-            const XJ = this.textureRepetitionHexTilingParams;
-            UJ.updateFloat4("vTextureRepetitionHexTilingParams", XJ[0], XJ[1], XJ[2], XJ[3]), this._afterBind(cJ, FJ, ZJ), UJ.update()
+          _bindRunFollower(BB, TB, dB, VB) {
+            this._activeEffect = VB, TB.getMeshUniformBuffer().bindToEffect(VB, "Mesh"), TB.transferToEffect(BB);
+            const yB = this._uniformBuffer;
+            yB.bindToEffect(VB, "Material");
+            const pB = this._scene.activeCamera;
+            pB ? yB.updateFloat4("cameraInfo", pB.minZ, pB.maxZ, 0, 0) : yB.updateFloat4("cameraInfo", 0, 0, 0, 0);
+            const lB = this.textureRepetitionHexTilingParams;
+            yB.updateFloat4("vTextureRepetitionHexTilingParams", lB[0], lB[1], lB[2], lB[3]), this._afterBind(TB, VB, dB), yB.update()
           }
           getAnimatables() {
-            const JJ = super.getAnimatables();
-            return this._diffuseTexture && this._diffuseTexture.animations && this._diffuseTexture.animations.length > 0 && JJ.push(this._diffuseTexture), this._ambientTexture && this._ambientTexture.animations && this._ambientTexture.animations.length > 0 && JJ.push(this._ambientTexture), this._opacityTexture && this._opacityTexture.animations && this._opacityTexture.animations.length > 0 && JJ.push(this._opacityTexture), this._reflectionTexture && this._reflectionTexture.animations && this._reflectionTexture.animations.length > 0 && JJ.push(this._reflectionTexture), this._emissiveTexture && this._emissiveTexture.animations && this._emissiveTexture.animations.length > 0 && JJ.push(this._emissiveTexture), this._specularTexture && this._specularTexture.animations && this._specularTexture.animations.length > 0 && JJ.push(this._specularTexture), this._bumpTexture && this._bumpTexture.animations && this._bumpTexture.animations.length > 0 && JJ.push(this._bumpTexture), this._lightmapTexture && this._lightmapTexture.animations && this._lightmapTexture.animations.length > 0 && JJ.push(this._lightmapTexture), this._refractionTexture && this._refractionTexture.animations && this._refractionTexture.animations.length > 0 && JJ.push(this._refractionTexture), JJ
+            const BB = super.getAnimatables();
+            return this._diffuseTexture && this._diffuseTexture.animations && this._diffuseTexture.animations.length > 0 && BB.push(this._diffuseTexture), this._ambientTexture && this._ambientTexture.animations && this._ambientTexture.animations.length > 0 && BB.push(this._ambientTexture), this._opacityTexture && this._opacityTexture.animations && this._opacityTexture.animations.length > 0 && BB.push(this._opacityTexture), this._reflectionTexture && this._reflectionTexture.animations && this._reflectionTexture.animations.length > 0 && BB.push(this._reflectionTexture), this._emissiveTexture && this._emissiveTexture.animations && this._emissiveTexture.animations.length > 0 && BB.push(this._emissiveTexture), this._specularTexture && this._specularTexture.animations && this._specularTexture.animations.length > 0 && BB.push(this._specularTexture), this._bumpTexture && this._bumpTexture.animations && this._bumpTexture.animations.length > 0 && BB.push(this._bumpTexture), this._lightmapTexture && this._lightmapTexture.animations && this._lightmapTexture.animations.length > 0 && BB.push(this._lightmapTexture), this._refractionTexture && this._refractionTexture.animations && this._refractionTexture.animations.length > 0 && BB.push(this._refractionTexture), BB
           }
           getActiveTextures() {
-            const JJ = super.getActiveTextures();
-            return this._diffuseTexture && JJ.push(this._diffuseTexture), this._ambientTexture && JJ.push(this._ambientTexture), this._opacityTexture && JJ.push(this._opacityTexture), this._reflectionTexture && JJ.push(this._reflectionTexture), this._emissiveTexture && JJ.push(this._emissiveTexture), this._specularTexture && JJ.push(this._specularTexture), this._bumpTexture && JJ.push(this._bumpTexture), this._lightmapTexture && JJ.push(this._lightmapTexture), this._refractionTexture && JJ.push(this._refractionTexture), JJ
+            const BB = super.getActiveTextures();
+            return this._diffuseTexture && BB.push(this._diffuseTexture), this._ambientTexture && BB.push(this._ambientTexture), this._opacityTexture && BB.push(this._opacityTexture), this._reflectionTexture && BB.push(this._reflectionTexture), this._emissiveTexture && BB.push(this._emissiveTexture), this._specularTexture && BB.push(this._specularTexture), this._bumpTexture && BB.push(this._bumpTexture), this._lightmapTexture && BB.push(this._lightmapTexture), this._refractionTexture && BB.push(this._refractionTexture), BB
           }
-          hasTexture(JJ) {
-            return !!super.hasTexture(JJ) || (this._diffuseTexture === JJ || (this._ambientTexture === JJ || (this._opacityTexture === JJ || (this._reflectionTexture === JJ || (this._emissiveTexture === JJ || (this._specularTexture === JJ || (this._bumpTexture === JJ || (this._lightmapTexture === JJ || this._refractionTexture === JJ))))))))
+          hasTexture(BB) {
+            return !!super.hasTexture(BB) || (this._diffuseTexture === BB || (this._ambientTexture === BB || (this._opacityTexture === BB || (this._reflectionTexture === BB || (this._emissiveTexture === BB || (this._specularTexture === BB || (this._bumpTexture === BB || (this._lightmapTexture === BB || this._refractionTexture === BB))))))))
           }
-          dispose(JJ, cJ) {
-            cJ && (this._diffuseTexture?.dispose(), this._ambientTexture?.dispose(), this._opacityTexture?.dispose(), this._reflectionTexture?.dispose(), this._emissiveTexture?.dispose(), this._specularTexture?.dispose(), this._bumpTexture?.dispose(), this._lightmapTexture?.dispose(), this._refractionTexture?.dispose()), this._imageProcessingConfiguration && this._imageProcessingObserver && this._imageProcessingConfiguration.onUpdateParameters.remove(this._imageProcessingObserver), super.dispose(JJ, cJ)
+          dispose(BB, TB) {
+            TB && (this._diffuseTexture?.dispose(), this._ambientTexture?.dispose(), this._opacityTexture?.dispose(), this._reflectionTexture?.dispose(), this._emissiveTexture?.dispose(), this._specularTexture?.dispose(), this._bumpTexture?.dispose(), this._lightmapTexture?.dispose(), this._refractionTexture?.dispose()), this._imageProcessingConfiguration && this._imageProcessingObserver && this._imageProcessingConfiguration.onUpdateParameters.remove(this._imageProcessingObserver), super.dispose(BB, TB)
           }
-          clone(cJ) {
-            let ZJ = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-              FJ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-            const UJ = QJ.c.Clone((() => new JJ(cJ, this.Qy())), this, {
-              cloneTexturesOnlyOnce: ZJ
+          clone(TB) {
+            let dB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+              VB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+            const yB = NB.c.Clone((() => new BB(TB, this.jU())), this, {
+              cloneTexturesOnlyOnce: dB
             });
-            return UJ.name = cJ, UJ.id = cJ, this.stencil.copyTo(UJ.stencil), this._clonePlugins(UJ, FJ), UJ
+            return yB.name = TB, yB.id = TB, this.stencil.copyTo(yB.stencil), this._clonePlugins(yB, VB), yB
           }
-          static Parse(cJ, ZJ, FJ) {
-            const UJ = QJ.c.Parse((() => new JJ(cJ.name, ZJ)), cJ, ZJ, FJ);
-            return cJ.stencil && UJ.stencil.parse(cJ.stencil, ZJ, FJ), DJ.c._ParsePlugins(cJ, UJ, ZJ, FJ), UJ
+          static Parse(TB, dB, VB) {
+            const yB = NB.c.Parse((() => new BB(TB.name, dB)), TB, dB, VB);
+            return TB.stencil && yB.stencil.parse(TB.stencil, dB, VB), LB.b._ParsePlugins(TB, yB, dB, VB), yB
           }
           static get DiffuseTextureEnabled() {
-            return GJ.d.DiffuseTextureEnabled
+            return uB.d.DiffuseTextureEnabled
           }
-          static set DiffuseTextureEnabled(JJ) {
-            GJ.d.DiffuseTextureEnabled = JJ
+          static set DiffuseTextureEnabled(BB) {
+            uB.d.DiffuseTextureEnabled = BB
           }
           static get DetailTextureEnabled() {
-            return GJ.d.DetailTextureEnabled
+            return uB.d.DetailTextureEnabled
           }
-          static set DetailTextureEnabled(JJ) {
-            GJ.d.DetailTextureEnabled = JJ
+          static set DetailTextureEnabled(BB) {
+            uB.d.DetailTextureEnabled = BB
           }
           static get AmbientTextureEnabled() {
-            return GJ.d.AmbientTextureEnabled
+            return uB.d.AmbientTextureEnabled
           }
-          static set AmbientTextureEnabled(JJ) {
-            GJ.d.AmbientTextureEnabled = JJ
+          static set AmbientTextureEnabled(BB) {
+            uB.d.AmbientTextureEnabled = BB
           }
           static get OpacityTextureEnabled() {
-            return GJ.d.OpacityTextureEnabled
+            return uB.d.OpacityTextureEnabled
           }
-          static set OpacityTextureEnabled(JJ) {
-            GJ.d.OpacityTextureEnabled = JJ
+          static set OpacityTextureEnabled(BB) {
+            uB.d.OpacityTextureEnabled = BB
           }
           static get ReflectionTextureEnabled() {
-            return GJ.d.ReflectionTextureEnabled
+            return uB.d.ReflectionTextureEnabled
           }
-          static set ReflectionTextureEnabled(JJ) {
-            GJ.d.ReflectionTextureEnabled = JJ
+          static set ReflectionTextureEnabled(BB) {
+            uB.d.ReflectionTextureEnabled = BB
           }
           static get EmissiveTextureEnabled() {
-            return GJ.d.EmissiveTextureEnabled
+            return uB.d.EmissiveTextureEnabled
           }
-          static set EmissiveTextureEnabled(JJ) {
-            GJ.d.EmissiveTextureEnabled = JJ
+          static set EmissiveTextureEnabled(BB) {
+            uB.d.EmissiveTextureEnabled = BB
           }
           static get SpecularTextureEnabled() {
-            return GJ.d.SpecularTextureEnabled
+            return uB.d.SpecularTextureEnabled
           }
-          static set SpecularTextureEnabled(JJ) {
-            GJ.d.SpecularTextureEnabled = JJ
+          static set SpecularTextureEnabled(BB) {
+            uB.d.SpecularTextureEnabled = BB
           }
           static get BumpTextureEnabled() {
-            return GJ.d.BumpTextureEnabled
+            return uB.d.BumpTextureEnabled
           }
-          static set BumpTextureEnabled(JJ) {
-            GJ.d.BumpTextureEnabled = JJ
+          static set BumpTextureEnabled(BB) {
+            uB.d.BumpTextureEnabled = BB
           }
           static get LightmapTextureEnabled() {
-            return GJ.d.LightmapTextureEnabled
+            return uB.d.LightmapTextureEnabled
           }
-          static set LightmapTextureEnabled(JJ) {
-            GJ.d.LightmapTextureEnabled = JJ
+          static set LightmapTextureEnabled(BB) {
+            uB.d.LightmapTextureEnabled = BB
           }
           static get RefractionTextureEnabled() {
-            return GJ.d.RefractionTextureEnabled
+            return uB.d.RefractionTextureEnabled
           }
-          static set RefractionTextureEnabled(JJ) {
-            GJ.d.RefractionTextureEnabled = JJ
+          static set RefractionTextureEnabled(BB) {
+            uB.d.RefractionTextureEnabled = BB
           }
           static get ColorGradingTextureEnabled() {
-            return GJ.d.ColorGradingTextureEnabled
+            return uB.d.ColorGradingTextureEnabled
           }
-          static set ColorGradingTextureEnabled(JJ) {
-            GJ.d.ColorGradingTextureEnabled = JJ
+          static set ColorGradingTextureEnabled(BB) {
+            uB.d.ColorGradingTextureEnabled = BB
           }
           static get FresnelEnabled() {
-            return GJ.d.FresnelEnabled
+            return uB.d.FresnelEnabled
           }
-          static set FresnelEnabled(JJ) {
-            GJ.d.FresnelEnabled = JJ
+          static set FresnelEnabled(BB) {
+            uB.d.FresnelEnabled = BB
           }
-        }, cJ = new WeakMap, YJ = new WeakMap, sJ = new WeakMap, KJ = new WeakMap, yJ = new WeakMap, SJ = new WeakMap, IJ = new WeakMap, MJ = new WeakMap, wJ = new WeakMap, HJ = new WeakMap, PJ = new WeakMap, kJ = new WeakMap, pJ = new WeakMap, dJ = new WeakMap, zJ = new WeakMap, NJ = new WeakMap, OJ = new WeakMap, TJ = new WeakMap, CJ = new WeakMap, uJ = new WeakMap, iJ = new WeakMap, RJ = new WeakMap, LJ = new WeakMap, aJ = new WeakMap, BJ = new WeakMap, tJ = new WeakMap, oJ = new WeakMap, lJ = new WeakMap, Jc = new WeakMap, cc = new WeakMap, Zc = new WeakMap, Fc = new WeakMap, (() => {
-          const cJ = "function" === typeof Symbol && Symbol.metadata ? Object.create(yZ[Symbol.metadata] ?? null) : void 0;
-          Uc = [(0, UJ.A)("diffuseTexture")], ec = [(0, UJ.f)("_markAllSubMeshesAsTexturesAndMiscDirty")], Xc = [(0, UJ.A)("ambientTexture")], Ac = [(0, UJ.f)("_markAllSubMeshesAsTexturesDirty")], qc = [(0, UJ.A)("opacityTexture")], jc = [(0, UJ.f)("_markAllSubMeshesAsTexturesAndMiscDirty")], Yc = [(0, UJ.A)("reflectionTexture")], hc = [(0, UJ.f)("_markAllSubMeshesAsTexturesDirty")], Dc = [(0, UJ.A)("emissiveTexture")], sc = [(0, UJ.f)("_markAllSubMeshesAsTexturesDirty")], nc = [(0, UJ.A)("specularTexture")], Gc = [(0, UJ.f)("_markAllSubMeshesAsTexturesDirty")], fc = [(0, UJ.A)("bumpTexture")], xc = [(0, UJ.f)("_markAllSubMeshesAsTexturesDirty")], rc = [(0, UJ.A)("lightmapTexture")], vc = [(0, UJ.f)("_markAllSubMeshesAsTexturesDirty")], mc = [(0, UJ.A)("refractionTexture")], Qc = [(0, UJ.f)("_markAllSubMeshesAsTexturesDirty")], Ec = [(0, UJ.m)("ambient")], Vc = [(0, UJ.m)("diffuse")], Kc = [(0, UJ.m)("specular")], yc = [(0, UJ.m)("emissive")], Sc = [(0, UJ.F)()], Ic = [(0, UJ.F)("useAlphaFromDiffuseTexture")], Mc = [() => ({
-            init(JJ) {
-              return void 0 === JJ && "_useAlphaFromDiffuseTexture" in this || (this._useAlphaFromDiffuseTexture = JJ), JJ
+        }, TB = new WeakMap, oB = new WeakMap, OB = new WeakMap, sB = new WeakMap, MB = new WeakMap, zB = new WeakMap, wB = new WeakMap, UB = new WeakMap, KB = new WeakMap, cB = new WeakMap, SB = new WeakMap, PB = new WeakMap, QB = new WeakMap, RB = new WeakMap, aB = new WeakMap, ZB = new WeakMap, XB = new WeakMap, WB = new WeakMap, hB = new WeakMap, CB = new WeakMap, GB = new WeakMap, qB = new WeakMap, xB = new WeakMap, jB = new WeakMap, AB = new WeakMap, bB = new WeakMap, nB = new WeakMap, eB = new WeakMap, BT = new WeakMap, TT = new WeakMap, dT = new WeakMap, VT = new WeakMap, (() => {
+          const TB = "function" === typeof Symbol && Symbol.metadata ? Object.create(zd[Symbol.metadata] ?? null) : void 0;
+          yT = [(0, yB.M)("diffuseTexture")], pT = [(0, yB.i)("_markAllSubMeshesAsTexturesAndMiscDirty")], lT = [(0, yB.M)("ambientTexture")], JT = [(0, yB.i)("_markAllSubMeshesAsTexturesDirty")], YT = [(0, yB.M)("opacityTexture")], gT = [(0, yB.i)("_markAllSubMeshesAsTexturesAndMiscDirty")], oT = [(0, yB.M)("reflectionTexture")], kT = [(0, yB.i)("_markAllSubMeshesAsTexturesDirty")], LT = [(0, yB.M)("emissiveTexture")], OT = [(0, yB.i)("_markAllSubMeshesAsTexturesDirty")], DT = [(0, yB.M)("specularTexture")], uT = [(0, yB.i)("_markAllSubMeshesAsTexturesDirty")], HT = [(0, yB.M)("bumpTexture")], ET = [(0, yB.i)("_markAllSubMeshesAsTexturesDirty")], vT = [(0, yB.M)("lightmapTexture")], mT = [(0, yB.i)("_markAllSubMeshesAsTexturesDirty")], iT = [(0, yB.M)("refractionTexture")], NT = [(0, yB.i)("_markAllSubMeshesAsTexturesDirty")], tT = [(0, yB.s)("ambient")], fT = [(0, yB.s)("diffuse")], sT = [(0, yB.s)("specular")], MT = [(0, yB.s)("emissive")], zT = [(0, yB.W)()], wT = [(0, yB.W)("useAlphaFromDiffuseTexture")], UT = [() => ({
+            init(BB) {
+              return void 0 === BB && "_useAlphaFromDiffuseTexture" in this || (this._useAlphaFromDiffuseTexture = BB), BB
             },
             get() {
               return this._useAlphaFromDiffuseTexture
             },
-            set(JJ) {
-              this._useAlphaFromDiffuseTexture = JJ
+            set(BB) {
+              this._useAlphaFromDiffuseTexture = BB
             }
-          })], bc = [(0, UJ.F)("useEmissiveAsIllumination")], wc = [(0, UJ.f)("_markAllSubMeshesAsTexturesDirty")], Wc = [(0, UJ.F)("linkEmissiveWithDiffuse")], gc = [(0, UJ.f)("_markAllSubMeshesAsTexturesDirty")], Hc = [(0, UJ.F)("useSpecularOverAlpha")], Pc = [(0, UJ.f)("_markAllSubMeshesAsTexturesDirty")], kc = [(0, UJ.F)("useReflectionOverAlpha")], pc = [(0, UJ.f)("_markAllSubMeshesAsTexturesDirty")], dc = [(0, UJ.F)("disableLighting")], zc = [(0, UJ.f)("_markAllSubMeshesAsLightsDirty")], Nc = [(0, UJ.F)("useObjectSpaceNormalMap")], Oc = [(0, UJ.f)("_markAllSubMeshesAsTexturesDirty")], Tc = [(0, UJ.F)("useParallax")], Cc = [(0, UJ.f)("_markAllSubMeshesAsTexturesDirty")], uc = [(0, UJ.F)("useParallaxOcclusion")], ic = [(0, UJ.f)("_markAllSubMeshesAsTexturesDirty")], Rc = [(0, UJ.F)()], Lc = [(0, UJ.F)("roughness")], ac = [(0, UJ.f)("_markAllSubMeshesAsTexturesDirty")], Bc = [(0, UJ.F)()], tc = [(0, UJ.F)()], oc = [(0, UJ.F)()], lc = [(0, UJ.F)("useLightmapAsShadowmap")], JZ = [(0, UJ.f)("_markAllSubMeshesAsTexturesDirty")], cZ = [(0, UJ.s)("diffuseFresnelParameters")], ZZ = [(0, UJ.f)("_markAllSubMeshesAsFresnelDirty")], FZ = [(0, UJ.s)("opacityFresnelParameters")], UZ = [(0, UJ.f)("_markAllSubMeshesAsFresnelAndMiscDirty")], eZ = [(0, UJ.s)("reflectionFresnelParameters")], XZ = [(0, UJ.f)("_markAllSubMeshesAsFresnelDirty")], AZ = [(0, UJ.s)("refractionFresnelParameters")], qZ = [(0, UJ.f)("_markAllSubMeshesAsFresnelDirty")], jZ = [(0, UJ.s)("emissiveFresnelParameters")], YZ = [(0, UJ.f)("_markAllSubMeshesAsFresnelDirty")], hZ = [(0, UJ.F)("useReflectionFresnelFromSpecular")], DZ = [(0, UJ.f)("_markAllSubMeshesAsFresnelDirty")], sZ = [(0, UJ.F)("useGlossinessFromSpecularMapAlpha")], nZ = [(0, UJ.f)("_markAllSubMeshesAsTexturesDirty")], GZ = [(0, UJ.F)("maxSimultaneousLights")], fZ = [(0, UJ.f)("_markAllSubMeshesAsLightsDirty")], xZ = [(0, UJ.F)("invertNormalMapX")], rZ = [(0, UJ.f)("_markAllSubMeshesAsTexturesDirty")], vZ = [(0, UJ.F)("invertNormalMapY")], mZ = [(0, UJ.f)("_markAllSubMeshesAsTexturesDirty")], QZ = [(0, UJ.F)("twoSidedLighting")], EZ = [(0, UJ.f)("_markAllSubMeshesAsTexturesDirty")], VZ = [(0, UJ.F)("applyDecalMapAfterDetailMap")], KZ = [(0, UJ.f)("_markAllSubMeshesAsMiscDirty")], (0, FJ.d)(JJ, null, ec, {
+          })], FT = [(0, yB.W)("useEmissiveAsIllumination")], KT = [(0, yB.i)("_markAllSubMeshesAsTexturesDirty")], rT = [(0, yB.W)("linkEmissiveWithDiffuse")], IT = [(0, yB.i)("_markAllSubMeshesAsTexturesDirty")], cT = [(0, yB.W)("useSpecularOverAlpha")], ST = [(0, yB.i)("_markAllSubMeshesAsTexturesDirty")], PT = [(0, yB.W)("useReflectionOverAlpha")], QT = [(0, yB.i)("_markAllSubMeshesAsTexturesDirty")], RT = [(0, yB.W)("disableLighting")], aT = [(0, yB.i)("_markAllSubMeshesAsLightsDirty")], ZT = [(0, yB.W)("useObjectSpaceNormalMap")], XT = [(0, yB.i)("_markAllSubMeshesAsTexturesDirty")], WT = [(0, yB.W)("useParallax")], hT = [(0, yB.i)("_markAllSubMeshesAsTexturesDirty")], CT = [(0, yB.W)("useParallaxOcclusion")], GT = [(0, yB.i)("_markAllSubMeshesAsTexturesDirty")], qT = [(0, yB.W)()], xT = [(0, yB.W)("roughness")], jT = [(0, yB.i)("_markAllSubMeshesAsTexturesDirty")], AT = [(0, yB.W)()], bT = [(0, yB.W)()], nT = [(0, yB.W)()], eT = [(0, yB.W)("useLightmapAsShadowmap")], Bd = [(0, yB.i)("_markAllSubMeshesAsTexturesDirty")], Td = [(0, yB.z)("diffuseFresnelParameters")], dd = [(0, yB.i)("_markAllSubMeshesAsFresnelDirty")], Vd = [(0, yB.z)("opacityFresnelParameters")], yd = [(0, yB.i)("_markAllSubMeshesAsFresnelAndMiscDirty")], pd = [(0, yB.z)("reflectionFresnelParameters")], ld = [(0, yB.i)("_markAllSubMeshesAsFresnelDirty")], Jd = [(0, yB.z)("refractionFresnelParameters")], Yd = [(0, yB.i)("_markAllSubMeshesAsFresnelDirty")], gd = [(0, yB.z)("emissiveFresnelParameters")], od = [(0, yB.i)("_markAllSubMeshesAsFresnelDirty")], kd = [(0, yB.W)("useReflectionFresnelFromSpecular")], Ld = [(0, yB.i)("_markAllSubMeshesAsFresnelDirty")], Od = [(0, yB.W)("useGlossinessFromSpecularMapAlpha")], Dd = [(0, yB.i)("_markAllSubMeshesAsTexturesDirty")], ud = [(0, yB.W)("maxSimultaneousLights")], Hd = [(0, yB.i)("_markAllSubMeshesAsLightsDirty")], Ed = [(0, yB.W)("invertNormalMapX")], vd = [(0, yB.i)("_markAllSubMeshesAsTexturesDirty")], md = [(0, yB.W)("invertNormalMapY")], Nd = [(0, yB.i)("_markAllSubMeshesAsTexturesDirty")], td = [(0, yB.W)("twoSidedLighting")], fd = [(0, yB.i)("_markAllSubMeshesAsTexturesDirty")], sd = [(0, yB.W)("applyDecalMapAfterDetailMap")], Md = [(0, yB.i)("_markAllSubMeshesAsMiscDirty")], (0, VB.g)(BB, null, pT, {
             kind: "accessor",
             name: "diffuseTexture",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "diffuseTexture" in JJ,
-              get: JJ => JJ.diffuseTexture,
-              set: (JJ, cJ) => {
-                JJ.diffuseTexture = cJ
+              has: BB => "diffuseTexture" in BB,
+              get: BB => BB.diffuseTexture,
+              set: (BB, TB) => {
+                BB.diffuseTexture = TB
               }
             },
-            metadata: cJ
-          }, MZ, bZ), (0, FJ.d)(JJ, null, Ac, {
+            metadata: TB
+          }, Fd, Kd), (0, VB.g)(BB, null, JT, {
             kind: "accessor",
             name: "ambientTexture",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "ambientTexture" in JJ,
-              get: JJ => JJ.ambientTexture,
-              set: (JJ, cJ) => {
-                JJ.ambientTexture = cJ
+              has: BB => "ambientTexture" in BB,
+              get: BB => BB.ambientTexture,
+              set: (BB, TB) => {
+                BB.ambientTexture = TB
               }
             },
-            metadata: cJ
-          }, gZ, HZ), (0, FJ.d)(JJ, null, jc, {
+            metadata: TB
+          }, cd, Sd), (0, VB.g)(BB, null, gT, {
             kind: "accessor",
             name: "opacityTexture",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "opacityTexture" in JJ,
-              get: JJ => JJ.opacityTexture,
-              set: (JJ, cJ) => {
-                JJ.opacityTexture = cJ
+              has: BB => "opacityTexture" in BB,
+              get: BB => BB.opacityTexture,
+              set: (BB, TB) => {
+                BB.opacityTexture = TB
               }
             },
-            metadata: cJ
-          }, pZ, dZ), (0, FJ.d)(JJ, null, hc, {
+            metadata: TB
+          }, Rd, ad), (0, VB.g)(BB, null, kT, {
             kind: "accessor",
             name: "reflectionTexture",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "reflectionTexture" in JJ,
-              get: JJ => JJ.reflectionTexture,
-              set: (JJ, cJ) => {
-                JJ.reflectionTexture = cJ
+              has: BB => "reflectionTexture" in BB,
+              get: BB => BB.reflectionTexture,
+              set: (BB, TB) => {
+                BB.reflectionTexture = TB
               }
             },
-            metadata: cJ
-          }, OZ, TZ), (0, FJ.d)(JJ, null, sc, {
+            metadata: TB
+          }, Wd, hd), (0, VB.g)(BB, null, OT, {
             kind: "accessor",
             name: "emissiveTexture",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "emissiveTexture" in JJ,
-              get: JJ => JJ.emissiveTexture,
-              set: (JJ, cJ) => {
-                JJ.emissiveTexture = cJ
+              has: BB => "emissiveTexture" in BB,
+              get: BB => BB.emissiveTexture,
+              set: (BB, TB) => {
+                BB.emissiveTexture = TB
               }
             },
-            metadata: cJ
-          }, iZ, RZ), (0, FJ.d)(JJ, null, Gc, {
+            metadata: TB
+          }, qd, xd), (0, VB.g)(BB, null, uT, {
             kind: "accessor",
             name: "specularTexture",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "specularTexture" in JJ,
-              get: JJ => JJ.specularTexture,
-              set: (JJ, cJ) => {
-                JJ.specularTexture = cJ
+              has: BB => "specularTexture" in BB,
+              get: BB => BB.specularTexture,
+              set: (BB, TB) => {
+                BB.specularTexture = TB
               }
             },
-            metadata: cJ
-          }, BZ, tZ), (0, FJ.d)(JJ, null, xc, {
+            metadata: TB
+          }, bd, nd), (0, VB.g)(BB, null, ET, {
             kind: "accessor",
             name: "bumpTexture",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "bumpTexture" in JJ,
-              get: JJ => JJ.bumpTexture,
-              set: (JJ, cJ) => {
-                JJ.bumpTexture = cJ
+              has: BB => "bumpTexture" in BB,
+              get: BB => BB.bumpTexture,
+              set: (BB, TB) => {
+                BB.bumpTexture = TB
               }
             },
-            metadata: cJ
-          }, JF, cF), (0, FJ.d)(JJ, null, vc, {
+            metadata: TB
+          }, TV, dV), (0, VB.g)(BB, null, mT, {
             kind: "accessor",
             name: "lightmapTexture",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "lightmapTexture" in JJ,
-              get: JJ => JJ.lightmapTexture,
-              set: (JJ, cJ) => {
-                JJ.lightmapTexture = cJ
+              has: BB => "lightmapTexture" in BB,
+              get: BB => BB.lightmapTexture,
+              set: (BB, TB) => {
+                BB.lightmapTexture = TB
               }
             },
-            metadata: cJ
-          }, UF, eF), (0, FJ.d)(JJ, null, Qc, {
+            metadata: TB
+          }, pV, lV), (0, VB.g)(BB, null, NT, {
             kind: "accessor",
             name: "refractionTexture",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "refractionTexture" in JJ,
-              get: JJ => JJ.refractionTexture,
-              set: (JJ, cJ) => {
-                JJ.refractionTexture = cJ
+              has: BB => "refractionTexture" in BB,
+              get: BB => BB.refractionTexture,
+              set: (BB, TB) => {
+                BB.refractionTexture = TB
               }
             },
-            metadata: cJ
-          }, qF, jF), (0, FJ.d)(JJ, null, Mc, {
+            metadata: TB
+          }, gV, oV), (0, VB.g)(BB, null, UT, {
             kind: "accessor",
             name: "useAlphaFromDiffuseTexture",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "useAlphaFromDiffuseTexture" in JJ,
-              get: JJ => JJ.useAlphaFromDiffuseTexture,
-              set: (JJ, cJ) => {
-                JJ.useAlphaFromDiffuseTexture = cJ
+              has: BB => "useAlphaFromDiffuseTexture" in BB,
+              get: BB => BB.useAlphaFromDiffuseTexture,
+              set: (BB, TB) => {
+                BB.useAlphaFromDiffuseTexture = TB
               }
             },
-            metadata: cJ
-          }, EF, VF), (0, FJ.d)(JJ, null, wc, {
+            metadata: TB
+          }, fV, sV), (0, VB.g)(BB, null, KT, {
             kind: "accessor",
             name: "useEmissiveAsIllumination",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "useEmissiveAsIllumination" in JJ,
-              get: JJ => JJ.useEmissiveAsIllumination,
-              set: (JJ, cJ) => {
-                JJ.useEmissiveAsIllumination = cJ
+              has: BB => "useEmissiveAsIllumination" in BB,
+              get: BB => BB.useEmissiveAsIllumination,
+              set: (BB, TB) => {
+                BB.useEmissiveAsIllumination = TB
               }
             },
-            metadata: cJ
-          }, SF, IF), (0, FJ.d)(JJ, null, gc, {
+            metadata: TB
+          }, wV, UV), (0, VB.g)(BB, null, IT, {
             kind: "accessor",
             name: "linkEmissiveWithDiffuse",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "linkEmissiveWithDiffuse" in JJ,
-              get: JJ => JJ.linkEmissiveWithDiffuse,
-              set: (JJ, cJ) => {
-                JJ.linkEmissiveWithDiffuse = cJ
+              has: BB => "linkEmissiveWithDiffuse" in BB,
+              get: BB => BB.linkEmissiveWithDiffuse,
+              set: (BB, TB) => {
+                BB.linkEmissiveWithDiffuse = TB
               }
             },
-            metadata: cJ
-          }, wF, WF), (0, FJ.d)(JJ, null, Pc, {
+            metadata: TB
+          }, rV, IV), (0, VB.g)(BB, null, ST, {
             kind: "accessor",
             name: "useSpecularOverAlpha",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "useSpecularOverAlpha" in JJ,
-              get: JJ => JJ.useSpecularOverAlpha,
-              set: (JJ, cJ) => {
-                JJ.useSpecularOverAlpha = cJ
+              has: BB => "useSpecularOverAlpha" in BB,
+              get: BB => BB.useSpecularOverAlpha,
+              set: (BB, TB) => {
+                BB.useSpecularOverAlpha = TB
               }
             },
-            metadata: cJ
-          }, PF, kF), (0, FJ.d)(JJ, null, pc, {
+            metadata: TB
+          }, PV, QV), (0, VB.g)(BB, null, QT, {
             kind: "accessor",
             name: "useReflectionOverAlpha",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "useReflectionOverAlpha" in JJ,
-              get: JJ => JJ.useReflectionOverAlpha,
-              set: (JJ, cJ) => {
-                JJ.useReflectionOverAlpha = cJ
+              has: BB => "useReflectionOverAlpha" in BB,
+              get: BB => BB.useReflectionOverAlpha,
+              set: (BB, TB) => {
+                BB.useReflectionOverAlpha = TB
               }
             },
-            metadata: cJ
-          }, zF, NF), (0, FJ.d)(JJ, null, zc, {
+            metadata: TB
+          }, ZV, XV), (0, VB.g)(BB, null, aT, {
             kind: "accessor",
             name: "disableLighting",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "disableLighting" in JJ,
-              get: JJ => JJ.disableLighting,
-              set: (JJ, cJ) => {
-                JJ.disableLighting = cJ
+              has: BB => "disableLighting" in BB,
+              get: BB => BB.disableLighting,
+              set: (BB, TB) => {
+                BB.disableLighting = TB
               }
             },
-            metadata: cJ
-          }, CF, uF), (0, FJ.d)(JJ, null, Oc, {
+            metadata: TB
+          }, CV, GV), (0, VB.g)(BB, null, XT, {
             kind: "accessor",
             name: "useObjectSpaceNormalMap",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "useObjectSpaceNormalMap" in JJ,
-              get: JJ => JJ.useObjectSpaceNormalMap,
-              set: (JJ, cJ) => {
-                JJ.useObjectSpaceNormalMap = cJ
+              has: BB => "useObjectSpaceNormalMap" in BB,
+              get: BB => BB.useObjectSpaceNormalMap,
+              set: (BB, TB) => {
+                BB.useObjectSpaceNormalMap = TB
               }
             },
-            metadata: cJ
-          }, LF, aF), (0, FJ.d)(JJ, null, Cc, {
+            metadata: TB
+          }, jV, AV), (0, VB.g)(BB, null, hT, {
             kind: "accessor",
             name: "useParallax",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "useParallax" in JJ,
-              get: JJ => JJ.useParallax,
-              set: (JJ, cJ) => {
-                JJ.useParallax = cJ
+              has: BB => "useParallax" in BB,
+              get: BB => BB.useParallax,
+              set: (BB, TB) => {
+                BB.useParallax = TB
               }
             },
-            metadata: cJ
-          }, oF, lF), (0, FJ.d)(JJ, null, ic, {
+            metadata: TB
+          }, eV, By), (0, VB.g)(BB, null, GT, {
             kind: "accessor",
             name: "useParallaxOcclusion",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "useParallaxOcclusion" in JJ,
-              get: JJ => JJ.useParallaxOcclusion,
-              set: (JJ, cJ) => {
-                JJ.useParallaxOcclusion = cJ
+              has: BB => "useParallaxOcclusion" in BB,
+              get: BB => BB.useParallaxOcclusion,
+              set: (BB, TB) => {
+                BB.useParallaxOcclusion = TB
               }
             },
-            metadata: cJ
-          }, ZU, FU), (0, FJ.d)(JJ, null, ac, {
+            metadata: TB
+          }, Vy, yy), (0, VB.g)(BB, null, jT, {
             kind: "accessor",
             name: "roughness",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "roughness" in JJ,
-              get: JJ => JJ.roughness,
-              set: (JJ, cJ) => {
-                JJ.roughness = cJ
+              has: BB => "roughness" in BB,
+              get: BB => BB.roughness,
+              set: (BB, TB) => {
+                BB.roughness = TB
               }
             },
-            metadata: cJ
-          }, qU, jU), (0, FJ.d)(JJ, null, JZ, {
+            metadata: TB
+          }, gy, oy), (0, VB.g)(BB, null, Bd, {
             kind: "accessor",
             name: "useLightmapAsShadowmap",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "useLightmapAsShadowmap" in JJ,
-              get: JJ => JJ.useLightmapAsShadowmap,
-              set: (JJ, cJ) => {
-                JJ.useLightmapAsShadowmap = cJ
+              has: BB => "useLightmapAsShadowmap" in BB,
+              get: BB => BB.useLightmapAsShadowmap,
+              set: (BB, TB) => {
+                BB.useLightmapAsShadowmap = TB
               }
             },
-            metadata: cJ
-          }, rU, vU), (0, FJ.d)(JJ, null, ZZ, {
+            metadata: TB
+          }, my, iy), (0, VB.g)(BB, null, dd, {
             kind: "accessor",
             name: "diffuseFresnelParameters",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "diffuseFresnelParameters" in JJ,
-              get: JJ => JJ.diffuseFresnelParameters,
-              set: (JJ, cJ) => {
-                JJ.diffuseFresnelParameters = cJ
+              has: BB => "diffuseFresnelParameters" in BB,
+              get: BB => BB.diffuseFresnelParameters,
+              set: (BB, TB) => {
+                BB.diffuseFresnelParameters = TB
               }
             },
-            metadata: cJ
-          }, EU, VU), (0, FJ.d)(JJ, null, UZ, {
+            metadata: TB
+          }, fy, sy), (0, VB.g)(BB, null, yd, {
             kind: "accessor",
             name: "opacityFresnelParameters",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "opacityFresnelParameters" in JJ,
-              get: JJ => JJ.opacityFresnelParameters,
-              set: (JJ, cJ) => {
-                JJ.opacityFresnelParameters = cJ
+              has: BB => "opacityFresnelParameters" in BB,
+              get: BB => BB.opacityFresnelParameters,
+              set: (BB, TB) => {
+                BB.opacityFresnelParameters = TB
               }
             },
-            metadata: cJ
-          }, SU, IU), (0, FJ.d)(JJ, null, XZ, {
+            metadata: TB
+          }, wy, Uy), (0, VB.g)(BB, null, ld, {
             kind: "accessor",
             name: "reflectionFresnelParameters",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "reflectionFresnelParameters" in JJ,
-              get: JJ => JJ.reflectionFresnelParameters,
-              set: (JJ, cJ) => {
-                JJ.reflectionFresnelParameters = cJ
+              has: BB => "reflectionFresnelParameters" in BB,
+              get: BB => BB.reflectionFresnelParameters,
+              set: (BB, TB) => {
+                BB.reflectionFresnelParameters = TB
               }
             },
-            metadata: cJ
-          }, wU, WU), (0, FJ.d)(JJ, null, qZ, {
+            metadata: TB
+          }, ry, Iy), (0, VB.g)(BB, null, Yd, {
             kind: "accessor",
             name: "refractionFresnelParameters",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "refractionFresnelParameters" in JJ,
-              get: JJ => JJ.refractionFresnelParameters,
-              set: (JJ, cJ) => {
-                JJ.refractionFresnelParameters = cJ
+              has: BB => "refractionFresnelParameters" in BB,
+              get: BB => BB.refractionFresnelParameters,
+              set: (BB, TB) => {
+                BB.refractionFresnelParameters = TB
               }
             },
-            metadata: cJ
-          }, PU, kU), (0, FJ.d)(JJ, null, YZ, {
+            metadata: TB
+          }, Py, Qy), (0, VB.g)(BB, null, od, {
             kind: "accessor",
             name: "emissiveFresnelParameters",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "emissiveFresnelParameters" in JJ,
-              get: JJ => JJ.emissiveFresnelParameters,
-              set: (JJ, cJ) => {
-                JJ.emissiveFresnelParameters = cJ
+              has: BB => "emissiveFresnelParameters" in BB,
+              get: BB => BB.emissiveFresnelParameters,
+              set: (BB, TB) => {
+                BB.emissiveFresnelParameters = TB
               }
             },
-            metadata: cJ
-          }, zU, NU), (0, FJ.d)(JJ, null, DZ, {
+            metadata: TB
+          }, Zy, Xy), (0, VB.g)(BB, null, Ld, {
             kind: "accessor",
             name: "useReflectionFresnelFromSpecular",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "useReflectionFresnelFromSpecular" in JJ,
-              get: JJ => JJ.useReflectionFresnelFromSpecular,
-              set: (JJ, cJ) => {
-                JJ.useReflectionFresnelFromSpecular = cJ
+              has: BB => "useReflectionFresnelFromSpecular" in BB,
+              get: BB => BB.useReflectionFresnelFromSpecular,
+              set: (BB, TB) => {
+                BB.useReflectionFresnelFromSpecular = TB
               }
             },
-            metadata: cJ
-          }, CU, uU), (0, FJ.d)(JJ, null, nZ, {
+            metadata: TB
+          }, Cy, Gy), (0, VB.g)(BB, null, Dd, {
             kind: "accessor",
             name: "useGlossinessFromSpecularMapAlpha",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "useGlossinessFromSpecularMapAlpha" in JJ,
-              get: JJ => JJ.useGlossinessFromSpecularMapAlpha,
-              set: (JJ, cJ) => {
-                JJ.useGlossinessFromSpecularMapAlpha = cJ
+              has: BB => "useGlossinessFromSpecularMapAlpha" in BB,
+              get: BB => BB.useGlossinessFromSpecularMapAlpha,
+              set: (BB, TB) => {
+                BB.useGlossinessFromSpecularMapAlpha = TB
               }
             },
-            metadata: cJ
-          }, LU, aU), (0, FJ.d)(JJ, null, fZ, {
+            metadata: TB
+          }, jy, Ay), (0, VB.g)(BB, null, Hd, {
             kind: "accessor",
             name: "maxSimultaneousLights",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "maxSimultaneousLights" in JJ,
-              get: JJ => JJ.maxSimultaneousLights,
-              set: (JJ, cJ) => {
-                JJ.maxSimultaneousLights = cJ
+              has: BB => "maxSimultaneousLights" in BB,
+              get: BB => BB.maxSimultaneousLights,
+              set: (BB, TB) => {
+                BB.maxSimultaneousLights = TB
               }
             },
-            metadata: cJ
-          }, oU, lU), (0, FJ.d)(JJ, null, rZ, {
+            metadata: TB
+          }, ey, Bp), (0, VB.g)(BB, null, vd, {
             kind: "accessor",
             name: "invertNormalMapX",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "invertNormalMapX" in JJ,
-              get: JJ => JJ.invertNormalMapX,
-              set: (JJ, cJ) => {
-                JJ.invertNormalMapX = cJ
+              has: BB => "invertNormalMapX" in BB,
+              get: BB => BB.invertNormalMapX,
+              set: (BB, TB) => {
+                BB.invertNormalMapX = TB
               }
             },
-            metadata: cJ
-          }, Ze, Fe), (0, FJ.d)(JJ, null, mZ, {
+            metadata: TB
+          }, Vp, yp), (0, VB.g)(BB, null, Nd, {
             kind: "accessor",
             name: "invertNormalMapY",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "invertNormalMapY" in JJ,
-              get: JJ => JJ.invertNormalMapY,
-              set: (JJ, cJ) => {
-                JJ.invertNormalMapY = cJ
+              has: BB => "invertNormalMapY" in BB,
+              get: BB => BB.invertNormalMapY,
+              set: (BB, TB) => {
+                BB.invertNormalMapY = TB
               }
             },
-            metadata: cJ
-          }, Xe, Ae), (0, FJ.d)(JJ, null, EZ, {
+            metadata: TB
+          }, Jp, Yp), (0, VB.g)(BB, null, fd, {
             kind: "accessor",
             name: "twoSidedLighting",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "twoSidedLighting" in JJ,
-              get: JJ => JJ.twoSidedLighting,
-              set: (JJ, cJ) => {
-                JJ.twoSidedLighting = cJ
+              has: BB => "twoSidedLighting" in BB,
+              get: BB => BB.twoSidedLighting,
+              set: (BB, TB) => {
+                BB.twoSidedLighting = TB
               }
             },
-            metadata: cJ
-          }, Ye, he), (0, FJ.d)(JJ, null, KZ, {
+            metadata: TB
+          }, kp, Lp), (0, VB.g)(BB, null, Md, {
             kind: "accessor",
             name: "applyDecalMapAfterDetailMap",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "applyDecalMapAfterDetailMap" in JJ,
-              get: JJ => JJ.applyDecalMapAfterDetailMap,
-              set: (JJ, cJ) => {
-                JJ.applyDecalMapAfterDetailMap = cJ
+              has: BB => "applyDecalMapAfterDetailMap" in BB,
+              get: BB => BB.applyDecalMapAfterDetailMap,
+              set: (BB, TB) => {
+                BB.applyDecalMapAfterDetailMap = TB
               }
             },
-            metadata: cJ
-          }, ne, Ge), (0, FJ.d)(null, null, Uc, {
+            metadata: TB
+          }, Hp, Ep), (0, VB.g)(null, null, yT, {
             kind: "field",
             name: "_diffuseTexture",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "_diffuseTexture" in JJ,
-              get: JJ => JJ._diffuseTexture,
-              set: (JJ, cJ) => {
-                JJ._diffuseTexture = cJ
+              has: BB => "_diffuseTexture" in BB,
+              get: BB => BB._diffuseTexture,
+              set: (BB, TB) => {
+                BB._diffuseTexture = TB
               }
             },
-            metadata: cJ
-          }, SZ, IZ), (0, FJ.d)(null, null, Xc, {
+            metadata: TB
+          }, wd, Ud), (0, VB.g)(null, null, lT, {
             kind: "field",
             name: "_ambientTexture",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "_ambientTexture" in JJ,
-              get: JJ => JJ._ambientTexture,
-              set: (JJ, cJ) => {
-                JJ._ambientTexture = cJ
+              has: BB => "_ambientTexture" in BB,
+              get: BB => BB._ambientTexture,
+              set: (BB, TB) => {
+                BB._ambientTexture = TB
               }
             },
-            metadata: cJ
-          }, wZ, WZ), (0, FJ.d)(null, null, qc, {
+            metadata: TB
+          }, rd, Id), (0, VB.g)(null, null, YT, {
             kind: "field",
             name: "_opacityTexture",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "_opacityTexture" in JJ,
-              get: JJ => JJ._opacityTexture,
-              set: (JJ, cJ) => {
-                JJ._opacityTexture = cJ
+              has: BB => "_opacityTexture" in BB,
+              get: BB => BB._opacityTexture,
+              set: (BB, TB) => {
+                BB._opacityTexture = TB
               }
             },
-            metadata: cJ
-          }, PZ, kZ), (0, FJ.d)(null, null, Yc, {
+            metadata: TB
+          }, Pd, Qd), (0, VB.g)(null, null, oT, {
             kind: "field",
             name: "_reflectionTexture",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "_reflectionTexture" in JJ,
-              get: JJ => JJ._reflectionTexture,
-              set: (JJ, cJ) => {
-                JJ._reflectionTexture = cJ
+              has: BB => "_reflectionTexture" in BB,
+              get: BB => BB._reflectionTexture,
+              set: (BB, TB) => {
+                BB._reflectionTexture = TB
               }
             },
-            metadata: cJ
-          }, zZ, NZ), (0, FJ.d)(null, null, Dc, {
+            metadata: TB
+          }, Zd, Xd), (0, VB.g)(null, null, LT, {
             kind: "field",
             name: "_emissiveTexture",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "_emissiveTexture" in JJ,
-              get: JJ => JJ._emissiveTexture,
-              set: (JJ, cJ) => {
-                JJ._emissiveTexture = cJ
+              has: BB => "_emissiveTexture" in BB,
+              get: BB => BB._emissiveTexture,
+              set: (BB, TB) => {
+                BB._emissiveTexture = TB
               }
             },
-            metadata: cJ
-          }, CZ, uZ), (0, FJ.d)(null, null, nc, {
+            metadata: TB
+          }, Cd, Gd), (0, VB.g)(null, null, DT, {
             kind: "field",
             name: "_specularTexture",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "_specularTexture" in JJ,
-              get: JJ => JJ._specularTexture,
-              set: (JJ, cJ) => {
-                JJ._specularTexture = cJ
+              has: BB => "_specularTexture" in BB,
+              get: BB => BB._specularTexture,
+              set: (BB, TB) => {
+                BB._specularTexture = TB
               }
             },
-            metadata: cJ
-          }, LZ, aZ), (0, FJ.d)(null, null, fc, {
+            metadata: TB
+          }, jd, Ad), (0, VB.g)(null, null, HT, {
             kind: "field",
             name: "_bumpTexture",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "_bumpTexture" in JJ,
-              get: JJ => JJ._bumpTexture,
-              set: (JJ, cJ) => {
-                JJ._bumpTexture = cJ
+              has: BB => "_bumpTexture" in BB,
+              get: BB => BB._bumpTexture,
+              set: (BB, TB) => {
+                BB._bumpTexture = TB
               }
             },
-            metadata: cJ
-          }, oZ, lZ), (0, FJ.d)(null, null, rc, {
+            metadata: TB
+          }, ed, BV), (0, VB.g)(null, null, vT, {
             kind: "field",
             name: "_lightmapTexture",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "_lightmapTexture" in JJ,
-              get: JJ => JJ._lightmapTexture,
-              set: (JJ, cJ) => {
-                JJ._lightmapTexture = cJ
+              has: BB => "_lightmapTexture" in BB,
+              get: BB => BB._lightmapTexture,
+              set: (BB, TB) => {
+                BB._lightmapTexture = TB
               }
             },
-            metadata: cJ
-          }, ZF, FF), (0, FJ.d)(null, null, mc, {
+            metadata: TB
+          }, VV, yV), (0, VB.g)(null, null, iT, {
             kind: "field",
             name: "_refractionTexture",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "_refractionTexture" in JJ,
-              get: JJ => JJ._refractionTexture,
-              set: (JJ, cJ) => {
-                JJ._refractionTexture = cJ
+              has: BB => "_refractionTexture" in BB,
+              get: BB => BB._refractionTexture,
+              set: (BB, TB) => {
+                BB._refractionTexture = TB
               }
             },
-            metadata: cJ
-          }, XF, AF), (0, FJ.d)(null, null, Ec, {
+            metadata: TB
+          }, JV, YV), (0, VB.g)(null, null, tT, {
             kind: "field",
             name: "ambientColor",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "ambientColor" in JJ,
-              get: JJ => JJ.ambientColor,
-              set: (JJ, cJ) => {
-                JJ.ambientColor = cJ
+              has: BB => "ambientColor" in BB,
+              get: BB => BB.ambientColor,
+              set: (BB, TB) => {
+                BB.ambientColor = TB
               }
             },
-            metadata: cJ
-          }, YF, hF), (0, FJ.d)(null, null, Vc, {
+            metadata: TB
+          }, kV, LV), (0, VB.g)(null, null, fT, {
             kind: "field",
             name: "diffuseColor",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "diffuseColor" in JJ,
-              get: JJ => JJ.diffuseColor,
-              set: (JJ, cJ) => {
-                JJ.diffuseColor = cJ
+              has: BB => "diffuseColor" in BB,
+              get: BB => BB.diffuseColor,
+              set: (BB, TB) => {
+                BB.diffuseColor = TB
               }
             },
-            metadata: cJ
-          }, DF, sF), (0, FJ.d)(null, null, Kc, {
+            metadata: TB
+          }, OV, DV), (0, VB.g)(null, null, sT, {
             kind: "field",
             name: "specularColor",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "specularColor" in JJ,
-              get: JJ => JJ.specularColor,
-              set: (JJ, cJ) => {
-                JJ.specularColor = cJ
+              has: BB => "specularColor" in BB,
+              get: BB => BB.specularColor,
+              set: (BB, TB) => {
+                BB.specularColor = TB
               }
             },
-            metadata: cJ
-          }, nF, GF), (0, FJ.d)(null, null, yc, {
+            metadata: TB
+          }, uV, HV), (0, VB.g)(null, null, MT, {
             kind: "field",
             name: "emissiveColor",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "emissiveColor" in JJ,
-              get: JJ => JJ.emissiveColor,
-              set: (JJ, cJ) => {
-                JJ.emissiveColor = cJ
+              has: BB => "emissiveColor" in BB,
+              get: BB => BB.emissiveColor,
+              set: (BB, TB) => {
+                BB.emissiveColor = TB
               }
             },
-            metadata: cJ
-          }, fF, xF), (0, FJ.d)(null, null, Sc, {
+            metadata: TB
+          }, EV, vV), (0, VB.g)(null, null, zT, {
             kind: "field",
             name: "specularPower",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "specularPower" in JJ,
-              get: JJ => JJ.specularPower,
-              set: (JJ, cJ) => {
-                JJ.specularPower = cJ
+              has: BB => "specularPower" in BB,
+              get: BB => BB.specularPower,
+              set: (BB, TB) => {
+                BB.specularPower = TB
               }
             },
-            metadata: cJ
-          }, rF, vF), (0, FJ.d)(null, null, Ic, {
+            metadata: TB
+          }, mV, iV), (0, VB.g)(null, null, wT, {
             kind: "field",
             name: "_useAlphaFromDiffuseTexture",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "_useAlphaFromDiffuseTexture" in JJ,
-              get: JJ => JJ._useAlphaFromDiffuseTexture,
-              set: (JJ, cJ) => {
-                JJ._useAlphaFromDiffuseTexture = cJ
+              has: BB => "_useAlphaFromDiffuseTexture" in BB,
+              get: BB => BB._useAlphaFromDiffuseTexture,
+              set: (BB, TB) => {
+                BB._useAlphaFromDiffuseTexture = TB
               }
             },
-            metadata: cJ
-          }, mF, QF), (0, FJ.d)(null, null, bc, {
+            metadata: TB
+          }, NV, tV), (0, VB.g)(null, null, FT, {
             kind: "field",
             name: "_useEmissiveAsIllumination",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "_useEmissiveAsIllumination" in JJ,
-              get: JJ => JJ._useEmissiveAsIllumination,
-              set: (JJ, cJ) => {
-                JJ._useEmissiveAsIllumination = cJ
+              has: BB => "_useEmissiveAsIllumination" in BB,
+              get: BB => BB._useEmissiveAsIllumination,
+              set: (BB, TB) => {
+                BB._useEmissiveAsIllumination = TB
               }
             },
-            metadata: cJ
-          }, KF, yF), (0, FJ.d)(null, null, Wc, {
+            metadata: TB
+          }, MV, zV), (0, VB.g)(null, null, rT, {
             kind: "field",
             name: "_linkEmissiveWithDiffuse",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "_linkEmissiveWithDiffuse" in JJ,
-              get: JJ => JJ._linkEmissiveWithDiffuse,
-              set: (JJ, cJ) => {
-                JJ._linkEmissiveWithDiffuse = cJ
+              has: BB => "_linkEmissiveWithDiffuse" in BB,
+              get: BB => BB._linkEmissiveWithDiffuse,
+              set: (BB, TB) => {
+                BB._linkEmissiveWithDiffuse = TB
               }
             },
-            metadata: cJ
-          }, MF, bF), (0, FJ.d)(null, null, Hc, {
+            metadata: TB
+          }, FV, KV), (0, VB.g)(null, null, cT, {
             kind: "field",
             name: "_useSpecularOverAlpha",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "_useSpecularOverAlpha" in JJ,
-              get: JJ => JJ._useSpecularOverAlpha,
-              set: (JJ, cJ) => {
-                JJ._useSpecularOverAlpha = cJ
+              has: BB => "_useSpecularOverAlpha" in BB,
+              get: BB => BB._useSpecularOverAlpha,
+              set: (BB, TB) => {
+                BB._useSpecularOverAlpha = TB
               }
             },
-            metadata: cJ
-          }, gF, HF), (0, FJ.d)(null, null, kc, {
+            metadata: TB
+          }, cV, SV), (0, VB.g)(null, null, PT, {
             kind: "field",
             name: "_useReflectionOverAlpha",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "_useReflectionOverAlpha" in JJ,
-              get: JJ => JJ._useReflectionOverAlpha,
-              set: (JJ, cJ) => {
-                JJ._useReflectionOverAlpha = cJ
+              has: BB => "_useReflectionOverAlpha" in BB,
+              get: BB => BB._useReflectionOverAlpha,
+              set: (BB, TB) => {
+                BB._useReflectionOverAlpha = TB
               }
             },
-            metadata: cJ
-          }, pF, dF), (0, FJ.d)(null, null, dc, {
+            metadata: TB
+          }, RV, aV), (0, VB.g)(null, null, RT, {
             kind: "field",
             name: "_disableLighting",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "_disableLighting" in JJ,
-              get: JJ => JJ._disableLighting,
-              set: (JJ, cJ) => {
-                JJ._disableLighting = cJ
+              has: BB => "_disableLighting" in BB,
+              get: BB => BB._disableLighting,
+              set: (BB, TB) => {
+                BB._disableLighting = TB
               }
             },
-            metadata: cJ
-          }, OF, TF), (0, FJ.d)(null, null, Nc, {
+            metadata: TB
+          }, WV, hV), (0, VB.g)(null, null, ZT, {
             kind: "field",
             name: "_useObjectSpaceNormalMap",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "_useObjectSpaceNormalMap" in JJ,
-              get: JJ => JJ._useObjectSpaceNormalMap,
-              set: (JJ, cJ) => {
-                JJ._useObjectSpaceNormalMap = cJ
+              has: BB => "_useObjectSpaceNormalMap" in BB,
+              get: BB => BB._useObjectSpaceNormalMap,
+              set: (BB, TB) => {
+                BB._useObjectSpaceNormalMap = TB
               }
             },
-            metadata: cJ
-          }, iF, RF), (0, FJ.d)(null, null, Tc, {
+            metadata: TB
+          }, qV, xV), (0, VB.g)(null, null, WT, {
             kind: "field",
             name: "_useParallax",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "_useParallax" in JJ,
-              get: JJ => JJ._useParallax,
-              set: (JJ, cJ) => {
-                JJ._useParallax = cJ
+              has: BB => "_useParallax" in BB,
+              get: BB => BB._useParallax,
+              set: (BB, TB) => {
+                BB._useParallax = TB
               }
             },
-            metadata: cJ
-          }, BF, tF), (0, FJ.d)(null, null, uc, {
+            metadata: TB
+          }, bV, nV), (0, VB.g)(null, null, CT, {
             kind: "field",
             name: "_useParallaxOcclusion",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "_useParallaxOcclusion" in JJ,
-              get: JJ => JJ._useParallaxOcclusion,
-              set: (JJ, cJ) => {
-                JJ._useParallaxOcclusion = cJ
+              has: BB => "_useParallaxOcclusion" in BB,
+              get: BB => BB._useParallaxOcclusion,
+              set: (BB, TB) => {
+                BB._useParallaxOcclusion = TB
               }
             },
-            metadata: cJ
-          }, JU, cU), (0, FJ.d)(null, null, Rc, {
+            metadata: TB
+          }, Ty, dy), (0, VB.g)(null, null, qT, {
             kind: "field",
             name: "parallaxScaleBias",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "parallaxScaleBias" in JJ,
-              get: JJ => JJ.parallaxScaleBias,
-              set: (JJ, cJ) => {
-                JJ.parallaxScaleBias = cJ
+              has: BB => "parallaxScaleBias" in BB,
+              get: BB => BB.parallaxScaleBias,
+              set: (BB, TB) => {
+                BB.parallaxScaleBias = TB
               }
             },
-            metadata: cJ
-          }, UU, eU), (0, FJ.d)(null, null, Lc, {
+            metadata: TB
+          }, py, ly), (0, VB.g)(null, null, xT, {
             kind: "field",
             name: "_roughness",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "_roughness" in JJ,
-              get: JJ => JJ._roughness,
-              set: (JJ, cJ) => {
-                JJ._roughness = cJ
+              has: BB => "_roughness" in BB,
+              get: BB => BB._roughness,
+              set: (BB, TB) => {
+                BB._roughness = TB
               }
             },
-            metadata: cJ
-          }, XU, AU), (0, FJ.d)(null, null, Bc, {
+            metadata: TB
+          }, Jy, Yy), (0, VB.g)(null, null, AT, {
             kind: "field",
             name: "indexOfRefraction",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "indexOfRefraction" in JJ,
-              get: JJ => JJ.indexOfRefraction,
-              set: (JJ, cJ) => {
-                JJ.indexOfRefraction = cJ
+              has: BB => "indexOfRefraction" in BB,
+              get: BB => BB.indexOfRefraction,
+              set: (BB, TB) => {
+                BB.indexOfRefraction = TB
               }
             },
-            metadata: cJ
-          }, YU, hU), (0, FJ.d)(null, null, tc, {
+            metadata: TB
+          }, ky, Ly), (0, VB.g)(null, null, bT, {
             kind: "field",
             name: "invertRefractionY",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "invertRefractionY" in JJ,
-              get: JJ => JJ.invertRefractionY,
-              set: (JJ, cJ) => {
-                JJ.invertRefractionY = cJ
+              has: BB => "invertRefractionY" in BB,
+              get: BB => BB.invertRefractionY,
+              set: (BB, TB) => {
+                BB.invertRefractionY = TB
               }
             },
-            metadata: cJ
-          }, DU, sU), (0, FJ.d)(null, null, oc, {
+            metadata: TB
+          }, Oy, Dy), (0, VB.g)(null, null, nT, {
             kind: "field",
             name: "alphaCutOff",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "alphaCutOff" in JJ,
-              get: JJ => JJ.alphaCutOff,
-              set: (JJ, cJ) => {
-                JJ.alphaCutOff = cJ
+              has: BB => "alphaCutOff" in BB,
+              get: BB => BB.alphaCutOff,
+              set: (BB, TB) => {
+                BB.alphaCutOff = TB
               }
             },
-            metadata: cJ
-          }, nU, GU), (0, FJ.d)(null, null, lc, {
+            metadata: TB
+          }, uy, Hy), (0, VB.g)(null, null, eT, {
             kind: "field",
             name: "_useLightmapAsShadowmap",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "_useLightmapAsShadowmap" in JJ,
-              get: JJ => JJ._useLightmapAsShadowmap,
-              set: (JJ, cJ) => {
-                JJ._useLightmapAsShadowmap = cJ
+              has: BB => "_useLightmapAsShadowmap" in BB,
+              get: BB => BB._useLightmapAsShadowmap,
+              set: (BB, TB) => {
+                BB._useLightmapAsShadowmap = TB
               }
             },
-            metadata: cJ
-          }, fU, xU), (0, FJ.d)(null, null, cZ, {
+            metadata: TB
+          }, Ey, vy), (0, VB.g)(null, null, Td, {
             kind: "field",
             name: "_diffuseFresnelParameters",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "_diffuseFresnelParameters" in JJ,
-              get: JJ => JJ._diffuseFresnelParameters,
-              set: (JJ, cJ) => {
-                JJ._diffuseFresnelParameters = cJ
+              has: BB => "_diffuseFresnelParameters" in BB,
+              get: BB => BB._diffuseFresnelParameters,
+              set: (BB, TB) => {
+                BB._diffuseFresnelParameters = TB
               }
             },
-            metadata: cJ
-          }, mU, QU), (0, FJ.d)(null, null, FZ, {
+            metadata: TB
+          }, Ny, ty), (0, VB.g)(null, null, Vd, {
             kind: "field",
             name: "_opacityFresnelParameters",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "_opacityFresnelParameters" in JJ,
-              get: JJ => JJ._opacityFresnelParameters,
-              set: (JJ, cJ) => {
-                JJ._opacityFresnelParameters = cJ
+              has: BB => "_opacityFresnelParameters" in BB,
+              get: BB => BB._opacityFresnelParameters,
+              set: (BB, TB) => {
+                BB._opacityFresnelParameters = TB
               }
             },
-            metadata: cJ
-          }, KU, yU), (0, FJ.d)(null, null, eZ, {
+            metadata: TB
+          }, My, zy), (0, VB.g)(null, null, pd, {
             kind: "field",
             name: "_reflectionFresnelParameters",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "_reflectionFresnelParameters" in JJ,
-              get: JJ => JJ._reflectionFresnelParameters,
-              set: (JJ, cJ) => {
-                JJ._reflectionFresnelParameters = cJ
+              has: BB => "_reflectionFresnelParameters" in BB,
+              get: BB => BB._reflectionFresnelParameters,
+              set: (BB, TB) => {
+                BB._reflectionFresnelParameters = TB
               }
             },
-            metadata: cJ
-          }, MU, bU), (0, FJ.d)(null, null, AZ, {
+            metadata: TB
+          }, Fy, Ky), (0, VB.g)(null, null, Jd, {
             kind: "field",
             name: "_refractionFresnelParameters",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "_refractionFresnelParameters" in JJ,
-              get: JJ => JJ._refractionFresnelParameters,
-              set: (JJ, cJ) => {
-                JJ._refractionFresnelParameters = cJ
+              has: BB => "_refractionFresnelParameters" in BB,
+              get: BB => BB._refractionFresnelParameters,
+              set: (BB, TB) => {
+                BB._refractionFresnelParameters = TB
               }
             },
-            metadata: cJ
-          }, gU, HU), (0, FJ.d)(null, null, jZ, {
+            metadata: TB
+          }, cy, Sy), (0, VB.g)(null, null, gd, {
             kind: "field",
             name: "_emissiveFresnelParameters",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "_emissiveFresnelParameters" in JJ,
-              get: JJ => JJ._emissiveFresnelParameters,
-              set: (JJ, cJ) => {
-                JJ._emissiveFresnelParameters = cJ
+              has: BB => "_emissiveFresnelParameters" in BB,
+              get: BB => BB._emissiveFresnelParameters,
+              set: (BB, TB) => {
+                BB._emissiveFresnelParameters = TB
               }
             },
-            metadata: cJ
-          }, pU, dU), (0, FJ.d)(null, null, hZ, {
+            metadata: TB
+          }, Ry, ay), (0, VB.g)(null, null, kd, {
             kind: "field",
             name: "_useReflectionFresnelFromSpecular",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "_useReflectionFresnelFromSpecular" in JJ,
-              get: JJ => JJ._useReflectionFresnelFromSpecular,
-              set: (JJ, cJ) => {
-                JJ._useReflectionFresnelFromSpecular = cJ
+              has: BB => "_useReflectionFresnelFromSpecular" in BB,
+              get: BB => BB._useReflectionFresnelFromSpecular,
+              set: (BB, TB) => {
+                BB._useReflectionFresnelFromSpecular = TB
               }
             },
-            metadata: cJ
-          }, OU, TU), (0, FJ.d)(null, null, sZ, {
+            metadata: TB
+          }, Wy, hy), (0, VB.g)(null, null, Od, {
             kind: "field",
             name: "_useGlossinessFromSpecularMapAlpha",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "_useGlossinessFromSpecularMapAlpha" in JJ,
-              get: JJ => JJ._useGlossinessFromSpecularMapAlpha,
-              set: (JJ, cJ) => {
-                JJ._useGlossinessFromSpecularMapAlpha = cJ
+              has: BB => "_useGlossinessFromSpecularMapAlpha" in BB,
+              get: BB => BB._useGlossinessFromSpecularMapAlpha,
+              set: (BB, TB) => {
+                BB._useGlossinessFromSpecularMapAlpha = TB
               }
             },
-            metadata: cJ
-          }, iU, RU), (0, FJ.d)(null, null, GZ, {
+            metadata: TB
+          }, qy, xy), (0, VB.g)(null, null, ud, {
             kind: "field",
             name: "_maxSimultaneousLights",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "_maxSimultaneousLights" in JJ,
-              get: JJ => JJ._maxSimultaneousLights,
-              set: (JJ, cJ) => {
-                JJ._maxSimultaneousLights = cJ
+              has: BB => "_maxSimultaneousLights" in BB,
+              get: BB => BB._maxSimultaneousLights,
+              set: (BB, TB) => {
+                BB._maxSimultaneousLights = TB
               }
             },
-            metadata: cJ
-          }, BU, tU), (0, FJ.d)(null, null, xZ, {
+            metadata: TB
+          }, by, ny), (0, VB.g)(null, null, Ed, {
             kind: "field",
             name: "_invertNormalMapX",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "_invertNormalMapX" in JJ,
-              get: JJ => JJ._invertNormalMapX,
-              set: (JJ, cJ) => {
-                JJ._invertNormalMapX = cJ
+              has: BB => "_invertNormalMapX" in BB,
+              get: BB => BB._invertNormalMapX,
+              set: (BB, TB) => {
+                BB._invertNormalMapX = TB
               }
             },
-            metadata: cJ
-          }, Je, ce), (0, FJ.d)(null, null, vZ, {
+            metadata: TB
+          }, Tp, dp), (0, VB.g)(null, null, md, {
             kind: "field",
             name: "_invertNormalMapY",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "_invertNormalMapY" in JJ,
-              get: JJ => JJ._invertNormalMapY,
-              set: (JJ, cJ) => {
-                JJ._invertNormalMapY = cJ
+              has: BB => "_invertNormalMapY" in BB,
+              get: BB => BB._invertNormalMapY,
+              set: (BB, TB) => {
+                BB._invertNormalMapY = TB
               }
             },
-            metadata: cJ
-          }, Ue, ee), (0, FJ.d)(null, null, QZ, {
+            metadata: TB
+          }, pp, lp), (0, VB.g)(null, null, td, {
             kind: "field",
             name: "_twoSidedLighting",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "_twoSidedLighting" in JJ,
-              get: JJ => JJ._twoSidedLighting,
-              set: (JJ, cJ) => {
-                JJ._twoSidedLighting = cJ
+              has: BB => "_twoSidedLighting" in BB,
+              get: BB => BB._twoSidedLighting,
+              set: (BB, TB) => {
+                BB._twoSidedLighting = TB
               }
             },
-            metadata: cJ
-          }, qe, je), (0, FJ.d)(null, null, VZ, {
+            metadata: TB
+          }, gp, op), (0, VB.g)(null, null, sd, {
             kind: "field",
             name: "_applyDecalMapAfterDetailMap",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "_applyDecalMapAfterDetailMap" in JJ,
-              get: JJ => JJ._applyDecalMapAfterDetailMap,
-              set: (JJ, cJ) => {
-                JJ._applyDecalMapAfterDetailMap = cJ
+              has: BB => "_applyDecalMapAfterDetailMap" in BB,
+              get: BB => BB._applyDecalMapAfterDetailMap,
+              set: (BB, TB) => {
+                BB._applyDecalMapAfterDetailMap = TB
               }
             },
-            metadata: cJ
-          }, De, se), cJ && Object.defineProperty(JJ, Symbol.metadata, {
+            metadata: TB
+          }, Op, Dp), TB && Object.defineProperty(BB, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: cJ
+            value: TB
           })
-        })(), JJ.ForceGLSL = !1, JJ._ShaderLoader = new EJ.b((() => [Promise.all([ZJ.e(297), ZJ.e(296)]).then((() => ZJ(40581))), Promise.all([ZJ.e(302), ZJ.e(298), ZJ.e(311), ZJ.e(301)]).then((() => ZJ(40753)))]), (() => [Promise.all([ZJ.e(318), ZJ.e(313)]).then((() => ZJ(40910))), Promise.all([ZJ.e(319), ZJ.e(329), ZJ.e(315)]).then((() => ZJ(41091)))])), JJ
+        })(), BB.ForceGLSL = !1, BB._ShaderLoader = new tB.b((() => [Promise.all([dB.e(297), dB.e(296)]).then((() => dB(40563))), Promise.all([dB.e(302), dB.e(298), dB.e(311), dB.e(301)]).then((() => dB(40759)))]), (() => [Promise.all([dB.e(318), dB.e(313)]).then((() => dB(40924))), Promise.all([dB.e(319), dB.e(329), dB.e(315)]).then((() => dB(41103)))])), BB
       })(),
-      PJ = !1;
+      SB = !1;
 
-    function kJ() {
-      PJ || (PJ = !0, (0, hJ.i)(), (0, IJ.f)("BABYLON.StandardMaterial", HJ), XJ.e.DefaultMaterialFactory = JJ => new HJ("default material", JJ))
+    function PB() {
+      SB || (SB = !0, (0, kB.f)(), (0, wB.g)("BABYLON.StandardMaterial", cB), lB.g.DefaultMaterialFactory = BB => new cB("default material", BB))
     }
-    Object.getOwnPropertyDescriptor(HJ.prototype, "decalMap") || Object.defineProperty(HJ.prototype, "decalMap", (0, MJ.h)("StandardMaterial", "decalMap"))
+    Object.getOwnPropertyDescriptor(cB.prototype, "decalMap") || Object.defineProperty(cB.prototype, "decalMap", (0, UB.d)("StandardMaterial", "decalMap"))
   },
-  39140: (JJ, cJ, ZJ) => {
-    function FJ(JJ) {
-      return class extends JJ {
+  39119: (BB, TB, dB) => {
+    function VB(BB) {
+      return class extends BB {
         constructor() {
           super(...arguments), this.MAINUV1 = !1, this.MAINUV2 = !1, this.MAINUV3 = !1, this.MAINUV4 = !1, this.MAINUV5 = !1, this.MAINUV6 = !1, this.UV1 = !1, this.UV2 = !1, this.UV3 = !1, this.UV4 = !1, this.UV5 = !1, this.UV6 = !1
         }
       }
     }
-    ZJ.d(cJ, {
-      c: () => FJ
+    dB.d(TB, {
+      b: () => VB
     })
   },
-  39130: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      b: () => FJ
+  39108: (BB, TB, dB) => {
+    dB.d(TB, {
+      b: () => VB
     });
-    class FJ {
-      constructor(JJ, cJ) {
+    class VB {
+      constructor(BB, TB) {
         this._webGL = {
-          load: JJ,
+          load: BB,
           loaded: !1,
           loadPromise: null
         }, this._webGPU = {
-          load: cJ,
+          load: TB,
           loaded: !1,
           loadPromise: null
         }
       }
-      getLoadCallback(JJ) {
-        const cJ = 1 === JJ ? this._webGPU : this._webGL;
-        return cJ.loaded ? void 0 : async () => {
-          await this._loadAsync(cJ)
+      getLoadCallback(BB) {
+        const TB = 1 === BB ? this._webGPU : this._webGL;
+        return TB.loaded ? void 0 : async () => {
+          await this._loadAsync(TB)
         }
       }
-      async _loadAsync(JJ) {
-        if (JJ.loaded) return;
-        let cJ = JJ.loadPromise;
-        const ZJ = null === cJ;
-        ZJ && (cJ = Promise.all(JJ.load()), JJ.loadPromise = cJ);
-        let FJ = !1;
+      async _loadAsync(BB) {
+        if (BB.loaded) return;
+        let TB = BB.loadPromise;
+        const dB = null === TB;
+        dB && (TB = Promise.all(BB.load()), BB.loadPromise = TB);
+        let VB = !1;
         try {
-          await cJ, FJ = !0
+          await TB, VB = !0
         } finally {
-          ZJ && this._completeLoad(JJ, FJ)
+          dB && this._completeLoad(BB, VB)
         }
       }
-      _completeLoad(JJ, cJ) {
-        JJ.loaded = cJ, JJ.loadPromise = null
+      _completeLoad(BB, TB) {
+        BB.loaded = TB, BB.loadPromise = null
       }
     }
   }
 };
 Object.freeze(modules);
-for (const JJ in modules) Object.freeze(modules[JJ]);
+for (const BB in modules) Object.freeze(modules[BB]);

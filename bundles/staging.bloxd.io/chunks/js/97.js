@@ -1,184 +1,184 @@
 export const id = 97;
 export const ids = [97];
 export const modules = {
-  4345: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      e: () => hJ,
-      g: () => YJ,
-      k: () => DJ
+  4339: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => kB,
+      g: () => oB,
+      i: () => LB
     });
-    ZJ(4351);
-    var FJ = ZJ(1086),
-      UJ = ZJ(926),
-      eJ = ZJ.n(UJ),
-      XJ = ZJ(1259),
-      AJ = (ZJ(47), ZJ(3826)),
-      qJ = ZJ(942),
-      jJ = ZJ(990);
+    dB(4346);
+    var VB = dB(1078),
+      yB = dB(933),
+      pB = dB.n(yB),
+      lB = dB(1249),
+      JB = (dB(62), dB(3821)),
+      YB = dB(946),
+      gB = dB(980);
 
-    function YJ(JJ) {
+    function oB(BB) {
       let {
-        children: cJ,
-        label: ZJ,
-        className: UJ,
-        circleInfoText: AJ,
-        disabled: YJ,
-        onLabelClick: hJ
-      } = JJ;
+        children: TB,
+        label: dB,
+        className: yB,
+        circleInfoText: JB,
+        disabled: oB,
+        onLabelClick: kB
+      } = BB;
       const {
-        t: DJ
-      } = (0, FJ.F)(), sJ = (0, jJ.jsxs)("div", {
-        className: eJ()("Label", {
-          ClickableLabel: void 0 !== hJ
+        t: LB
+      } = (0, VB.z)(), OB = (0, gB.jsxs)("div", {
+        className: pB()("Label", {
+          ClickableLabel: void 0 !== kB
         }),
-        onClick: hJ,
-        children: [DJ(ZJ), AJ && (0, jJ.jsx)(qJ.c, {
+        onClick: kB,
+        children: [LB(dB), JB && (0, gB.jsx)(YB.e, {
           name: "circle-info"
         })]
       });
-      return (0, jJ.jsxs)("div", {
-        className: eJ()("LabeledInput", {
-          [UJ]: UJ,
-          DisabledLabelInput: YJ
+      return (0, gB.jsxs)("div", {
+        className: pB()("LabeledInput", {
+          [yB]: yB,
+          DisabledLabelInput: oB
         }),
-        children: [AJ && (0, jJ.jsx)(XJ.g, {
-          tooltipInner: (0, jJ.jsx)("div", {
+        children: [JB && (0, gB.jsx)(lB.h, {
+          tooltipInner: (0, gB.jsx)("div", {
             className: "LabeledInputTooltip",
-            children: DJ(AJ)
+            children: LB(JB)
           }),
-          children: sJ
-        }), !AJ && sJ, cJ]
+          children: OB
+        }), !JB && OB, TB]
       })
     }
 
-    function hJ(JJ) {
+    function kB(BB) {
       let {
-        checked: cJ,
-        setChecked: ZJ
-      } = JJ;
-      return (0, jJ.jsx)("div", {
+        checked: TB,
+        setChecked: dB
+      } = BB;
+      return (0, gB.jsx)("div", {
         className: "OtherInput ClickableOtherInput",
         "data-pad-focusable": !0,
-        onClick: JJ => {
-          ZJ(!cJ)
+        onClick: BB => {
+          dB(!TB)
         },
-        children: (0, jJ.jsx)(AJ.e, {
-          checked: cJ,
-          onChange: JJ => {
-            ZJ(JJ.target.checked)
+        children: (0, gB.jsx)(JB.b, {
+          checked: TB,
+          onChange: BB => {
+            dB(BB.target.checked)
           },
           disabled: !1
         })
       })
     }
 
-    function DJ(JJ) {
+    function LB(BB) {
       let {
-        checked: cJ,
-        setChecked: ZJ,
-        disabled: FJ
-      } = JJ;
-      return (0, jJ.jsx)("div", {
-        className: eJ()("SwitchContainer", {
-          SwitchContainerDisabled: FJ
+        checked: TB,
+        setChecked: dB,
+        disabled: VB
+      } = BB;
+      return (0, gB.jsx)("div", {
+        className: pB()("SwitchContainer", {
+          SwitchContainerDisabled: VB
         }),
         onClick: () => {
-          FJ || ZJ(!cJ)
+          VB || dB(!TB)
         },
-        children: (0, jJ.jsx)(AJ.e, {
+        children: (0, gB.jsx)(JB.b, {
           className: "SwitchCheckbox",
-          checked: cJ,
-          onChange: JJ => {
-            ZJ(JJ.target.checked)
+          checked: TB,
+          onChange: BB => {
+            dB(BB.target.checked)
           },
-          disabled: !!FJ
+          disabled: !!VB
         })
       })
     }
   },
-  4359: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      b: () => jJ
+  4354: (BB, TB, dB) => {
+    dB.d(TB, {
+      b: () => gB
     });
-    var FJ = ZJ(926),
-      UJ = ZJ.n(FJ),
-      eJ = ZJ(4049),
-      XJ = ZJ(1086),
-      AJ = ZJ(990);
-    const qJ = [...eJ.m, "tpRequests", "spawnProtection", "spawnReset", "smpMarketplace"];
+    var VB = dB(933),
+      yB = dB.n(VB),
+      pB = dB(4027),
+      lB = dB(1078),
+      JB = dB(980);
+    const YB = [...pB.f, "tpRequests", "spawnProtection", "spawnReset", "smpMarketplace"];
 
-    function jJ(JJ) {
+    function gB(BB) {
       const {
-        disabled: cJ,
-        hideWrapper: ZJ
-      } = JJ, {
-        t: FJ
-      } = (0, XJ.F)(), jJ = JJ.advancedMode ? qJ.map((cJ => [cJ, JJ.callbacks[cJ]])) : eJ.m.map((cJ => [cJ, JJ.callbacks[cJ]])), hJ = (0, AJ.jsx)("div", {
-        className: UJ()("PluginsGrid", {
-          SectionBody: !ZJ
+        disabled: TB,
+        hideWrapper: dB
+      } = BB, {
+        t: VB
+      } = (0, lB.z)(), gB = BB.advancedMode ? YB.map((TB => [TB, BB.callbacks[TB]])) : pB.f.map((TB => [TB, BB.callbacks[TB]])), kB = (0, JB.jsx)("div", {
+        className: yB()("PluginsGrid", {
+          SectionBody: !dB
         }),
-        children: jJ.map((JJ => {
-          let [ZJ, FJ] = JJ;
-          return (0, AJ.jsx)(YJ, {
-            plugin: ZJ,
-            callbacks: FJ,
-            disabled: cJ
-          }, ZJ)
+        children: gB.map((BB => {
+          let [dB, VB] = BB;
+          return (0, JB.jsx)(oB, {
+            plugin: dB,
+            callbacks: VB,
+            disabled: TB
+          }, dB)
         }))
       });
-      return ZJ ? hJ : (0, AJ.jsxs)("div", {
+      return dB ? kB : (0, JB.jsxs)("div", {
         className: "BloxdForm",
-        children: [(0, AJ.jsx)("div", {
+        children: [(0, JB.jsx)("div", {
           className: "SectionTitle",
-          children: FJ("worldBuilder:pluginsSection")
-        }), hJ]
+          children: VB("worldBuilder:pluginsSection")
+        }), kB]
       })
     }
 
-    function YJ(JJ) {
+    function oB(BB) {
       let {
-        plugin: cJ,
+        plugin: TB,
         callbacks: {
-          isEnabled: ZJ,
-          GV: FJ
+          isEnabled: dB,
+          hN: VB
         },
-        disabled: eJ
-      } = JJ;
+        disabled: pB
+      } = BB;
       const {
-        t: qJ
-      } = (0, XJ.F)(), jJ = ZJ();
-      return (0, AJ.jsxs)("div", {
-        className: UJ()("PluginCard", {
-          PluginCardEnabled: jJ,
-          PluginCardDisabledForm: eJ
+        t: YB
+      } = (0, lB.z)(), gB = dB();
+      return (0, JB.jsxs)("div", {
+        className: yB()("PluginCard", {
+          PluginCardEnabled: gB,
+          PluginCardDisabledForm: pB
         }),
         "data-pad-focusable": !0,
-        "aria-disabled": eJ || void 0,
+        "aria-disabled": pB || void 0,
         onClick: () => {
-          eJ || FJ(!jJ)
+          pB || VB(!gB)
         },
-        children: [(0, AJ.jsx)("div", {
+        children: [(0, JB.jsx)("div", {
           className: "PluginCardIcon",
-          children: (0, AJ.jsx)("img", {
-            src: `/textures/games/classic/customGames/${cJ}.png`,
-            alt: cJ
+          children: (0, JB.jsx)("img", {
+            src: `/textures/games/classic/customGames/${TB}.png`,
+            alt: TB
           })
-        }), (0, AJ.jsxs)("div", {
+        }), (0, JB.jsxs)("div", {
           className: "PluginCardBody",
-          children: [(0, AJ.jsx)("div", {
+          children: [(0, JB.jsx)("div", {
             className: "PluginCardTitle",
-            children: qJ(hJ[cJ])
-          }), (0, AJ.jsx)("div", {
+            children: YB(kB[TB])
+          }), (0, JB.jsx)("div", {
             className: "PluginCardDescription",
-            children: qJ(DJ[cJ])
+            children: YB(LB[TB])
           })]
-        }), (0, AJ.jsx)("span", {
+        }), (0, JB.jsx)("span", {
           className: "PluginCardToggleLabel",
-          children: qJ(jJ ? "general:on" : "general:off")
+          children: YB(gB ? "general:on" : "general:off")
         })]
       })
     }
-    const hJ = {
+    const kB = {
         fallDamage: "classic:enableFallDamage",
         tpRequests: "classic:enableTpRequests",
         spawnProtection: "classic:enableSpawnProtection",
@@ -187,7 +187,7 @@ export const modules = {
         survivalGuns: "classic:enableSurvivalGuns",
         dayNight: "classic:enableDayNight"
       },
-      DJ = {
+      LB = {
         fallDamage: "classic:enableFallDamageDescription",
         tpRequests: "classic:enableTpRequestsDescription",
         spawnProtection: "classic:enableSpawnProtectionDescription",
@@ -197,656 +197,656 @@ export const modules = {
         dayNight: "classic:enableDayNightDescription"
       }
   },
-  4340: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      h: () => Uc,
-      b: () => Fc,
-      f: () => Zc,
-      j: () => ec
+  4334: (BB, TB, dB) => {
+    dB.d(TB, {
+      h: () => yT,
+      e: () => VT,
+      g: () => dT,
+      i: () => pT
     });
-    var FJ = ZJ(47),
-      UJ = ZJ(1247),
-      eJ = ZJ(1329),
-      XJ = ZJ(1566),
-      AJ = ZJ(1086),
-      qJ = ZJ(1232),
-      jJ = ZJ(1259),
-      YJ = ZJ(942),
-      hJ = ZJ(1122),
-      DJ = ZJ(926),
-      sJ = ZJ.n(DJ),
-      nJ = ZJ(227),
-      GJ = ZJ(4049),
-      fJ = ZJ(1137),
-      xJ = ZJ(4345),
-      rJ = ZJ(2623),
-      vJ = ZJ(4359),
-      mJ = ZJ(990);
+    var VB = dB(62),
+      yB = dB(1235),
+      pB = dB(1324),
+      lB = dB(1555),
+      JB = dB(1078),
+      YB = dB(1225),
+      gB = dB(1249),
+      oB = dB(946),
+      kB = dB(1105),
+      LB = dB(933),
+      OB = dB.n(LB),
+      DB = dB(270),
+      uB = dB(4027),
+      HB = dB(1117),
+      EB = dB(4339),
+      vB = dB(2602),
+      mB = dB(4354),
+      iB = dB(980);
 
-    function QJ(JJ) {
+    function NB(BB) {
       let {
-        icon: cJ,
-        title: ZJ,
-        disabled: FJ,
-        children: UJ
-      } = JJ;
-      return (0, mJ.jsxs)("div", {
-        className: sJ()("ManageCard", {
-          ManageCardDisabled: FJ
+        icon: TB,
+        title: dB,
+        disabled: VB,
+        children: yB
+      } = BB;
+      return (0, iB.jsxs)("div", {
+        className: OB()("ManageCard", {
+          ManageCardDisabled: VB
         }),
-        children: [(0, mJ.jsxs)("div", {
+        children: [(0, iB.jsxs)("div", {
           className: "ManageCardHead",
-          children: [(0, mJ.jsx)("div", {
+          children: [(0, iB.jsx)("div", {
             className: "ManageCardIcon",
-            children: (0, mJ.jsx)(YJ.c, {
-              name: cJ
+            children: (0, iB.jsx)(oB.e, {
+              name: TB
             })
-          }), (0, mJ.jsx)("div", {
-            children: (0, mJ.jsx)("h2", {
+          }), (0, iB.jsx)("div", {
+            children: (0, iB.jsx)("h2", {
               className: "ManageCardTitle",
-              children: ZJ
+              children: dB
             })
           })]
-        }), (0, mJ.jsxs)("div", {
+        }), (0, iB.jsxs)("div", {
           className: "ManageCardBody",
-          children: [UJ, FJ && (0, mJ.jsx)("div", {
+          children: [yB, VB && (0, iB.jsx)("div", {
             className: "ManageCardDisabledOverlay"
           })]
         })]
       })
     }
 
-    function EJ(JJ) {
+    function tB(BB) {
       let {
-        label: cJ,
-        caption: ZJ,
-        children: FJ
-      } = JJ;
-      return (0, mJ.jsxs)("div", {
+        label: TB,
+        caption: dB,
+        children: VB
+      } = BB;
+      return (0, iB.jsxs)("div", {
         className: "ManageStackedField",
-        children: [(0, mJ.jsx)("div", {
+        children: [(0, iB.jsx)("div", {
           className: "ManageStackedFieldLabel",
-          children: cJ
-        }), FJ, ZJ && (0, mJ.jsx)("div", {
+          children: TB
+        }), VB, dB && (0, iB.jsx)("div", {
           className: "ManageStackedFieldCaption",
-          children: ZJ
+          children: dB
         })]
       })
     }
 
-    function VJ(JJ) {
+    function fB(BB) {
       let {
-        label: cJ,
-        caption: ZJ,
-        disabled: FJ,
-        children: UJ
-      } = JJ;
-      return (0, mJ.jsxs)("div", {
-        className: sJ()("ManageField", {
-          ManageFieldDisabled: FJ
+        label: TB,
+        caption: dB,
+        disabled: VB,
+        children: yB
+      } = BB;
+      return (0, iB.jsxs)("div", {
+        className: OB()("ManageField", {
+          ManageFieldDisabled: VB
         }),
-        children: [(0, mJ.jsxs)("div", {
+        children: [(0, iB.jsxs)("div", {
           className: "ManageFieldText",
-          children: [(0, mJ.jsx)("div", {
+          children: [(0, iB.jsx)("div", {
             className: "ManageFieldLabel",
-            children: cJ
-          }), (0, mJ.jsx)("div", {
+            children: TB
+          }), (0, iB.jsx)("div", {
             className: "ManageFieldCaption",
-            children: ZJ
+            children: dB
           })]
-        }), (0, mJ.jsx)("div", {
+        }), (0, iB.jsx)("div", {
           className: "ManageFieldControl",
-          children: UJ
+          children: yB
         })]
       })
     }
 
-    function KJ(JJ) {
-      var cJ, ZJ;
+    function sB(BB) {
+      var TB, dB;
       let {
-        schematicData: FJ,
-        updateSchematicData: UJ,
-        publishFormEnabled: eJ,
-        formEnabled: XJ
-      } = JJ;
+        schematicData: VB,
+        updateSchematicData: yB,
+        publishFormEnabled: pB,
+        formEnabled: lB
+      } = BB;
       const {
-        t: qJ
-      } = (0, AJ.F)(), jJ = !eJ, YJ = {
+        t: YB
+      } = (0, JB.z)(), gB = !pB, oB = {
         tpRequests: {
-          isEnabled: () => !FJ.disableTpRequests,
-          GV: JJ => UJ("disableTpRequests", !JJ)
+          isEnabled: () => !VB.disableTpRequests,
+          hN: BB => yB("disableTpRequests", !BB)
         },
         spawnProtection: {
-          isEnabled: () => !FJ.disableSpawnProtection,
-          GV: JJ => UJ("disableSpawnProtection", !JJ)
+          isEnabled: () => !VB.disableSpawnProtection,
+          hN: BB => yB("disableSpawnProtection", !BB)
         },
         spawnReset: {
-          isEnabled: () => !!FJ.enableSpawnReset,
-          GV: JJ => UJ("enableSpawnReset", JJ)
+          isEnabled: () => !!VB.enableSpawnReset,
+          hN: BB => yB("enableSpawnReset", BB)
         },
         smpMarketplace: {
-          isEnabled: () => !!FJ.enableSmpMarketplace,
-          GV: JJ => UJ("enableSmpMarketplace", JJ)
+          isEnabled: () => !!VB.enableSmpMarketplace,
+          hN: BB => yB("enableSmpMarketplace", BB)
         },
         survivalGuns: {
-          isEnabled: () => !!FJ.enableSurvivalGuns,
-          GV: JJ => UJ("enableSurvivalGuns", JJ)
+          isEnabled: () => !!VB.enableSurvivalGuns,
+          hN: BB => yB("enableSurvivalGuns", BB)
         },
         fallDamage: {
-          isEnabled: () => !FJ.disableFallDamage,
-          GV: JJ => UJ("disableFallDamage", !JJ)
+          isEnabled: () => !VB.disableFallDamage,
+          hN: BB => yB("disableFallDamage", !BB)
         },
         dayNight: {
-          isEnabled: () => !!FJ.enableDayNight,
-          GV: JJ => UJ("enableDayNight", JJ)
+          isEnabled: () => !!VB.enableDayNight,
+          hN: BB => yB("enableDayNight", BB)
         }
       };
-      return (0, mJ.jsxs)(mJ.Fragment, {
-        children: [!1 === FJ.schematicContainsSpawnBlock && (0, mJ.jsx)("div", {
+      return (0, iB.jsxs)(iB.Fragment, {
+        children: [!1 === VB.schematicContainsSpawnBlock && (0, iB.jsx)("div", {
           className: "ManageWarningBanner",
-          children: qJ("worldBuilder:mustContainSpawnBlock")
-        }), (0, mJ.jsxs)("div", {
+          children: YB("worldBuilder:mustContainSpawnBlock")
+        }), (0, iB.jsxs)("div", {
           className: "ManageSettingsGrid",
-          children: [(0, mJ.jsxs)(QJ, {
+          children: [(0, iB.jsxs)(NB, {
             icon: "globe",
-            title: qJ("worldBuilder:worldRulesSection"),
-            disabled: !XJ,
-            children: [(0, mJ.jsx)(VJ, {
-              label: qJ("classic:defaultGamemode"),
-              caption: qJ("classic:defaultGamemodeDescription"),
-              disabled: jJ,
-              children: (0, mJ.jsx)(rJ.d, {
+            title: YB("worldBuilder:worldRulesSection"),
+            disabled: !lB,
+            children: [(0, iB.jsx)(fB, {
+              label: YB("classic:defaultGamemode"),
+              caption: YB("classic:defaultGamemodeDescription"),
+              disabled: gB,
+              children: (0, iB.jsx)(vB.e, {
                 controlClassName: "ManageDropdown",
-                options: GJ.B.map((JJ => ({
-                  value: JJ,
-                  label: nJ.p[JJ]
+                options: uB.z.map((BB => ({
+                  value: BB,
+                  label: DB.n[BB]
                 }))),
-                value: FJ.defaultGamemode,
-                onChange: JJ => UJ("defaultGamemode", JJ.value)
+                value: VB.defaultGamemode,
+                onChange: BB => yB("defaultGamemode", BB.value)
               })
-            }), (0, mJ.jsx)(VJ, {
-              label: qJ("classic:voidDeathHeight"),
-              caption: qJ("classic:voidDeathHeightDescription"),
-              disabled: jJ,
-              children: (0, mJ.jsxs)("div", {
+            }), (0, iB.jsx)(fB, {
+              label: YB("classic:voidDeathHeight"),
+              caption: YB("classic:voidDeathHeightDescription"),
+              disabled: gB,
+              children: (0, iB.jsxs)("div", {
                 className: "ManageNumberField",
-                children: [(0, mJ.jsx)("input", {
+                children: [(0, iB.jsx)("input", {
                   type: "number",
-                  max: fJ.B,
-                  value: null !== (cJ = FJ.voidDeathHeight) && void 0 !== cJ ? cJ : "",
-                  onChange: JJ => {
-                    const cJ = parseInt(JJ.target.value);
-                    UJ("voidDeathHeight", cJ)
+                  max: HB.z,
+                  value: null !== (TB = VB.voidDeathHeight) && void 0 !== TB ? TB : "",
+                  onChange: BB => {
+                    const TB = parseInt(BB.target.value);
+                    yB("voidDeathHeight", TB)
                   }
-                }), (0, mJ.jsx)("span", {
+                }), (0, iB.jsx)("span", {
                   className: "ManageFieldUnit",
-                  children: qJ("worldBuilder:blocksUnit")
+                  children: YB("worldBuilder:blocksUnit")
                 })]
               })
-            }), (0, mJ.jsx)(VJ, {
-              label: qJ("classic:worldBorder"),
-              caption: qJ("classic:worldBorderDescription"),
-              disabled: jJ,
-              children: (0, mJ.jsxs)("div", {
+            }), (0, iB.jsx)(fB, {
+              label: YB("classic:worldBorder"),
+              caption: YB("classic:worldBorderDescription"),
+              disabled: gB,
+              children: (0, iB.jsxs)("div", {
                 className: "ManageNumberField",
-                children: [(0, mJ.jsx)("input", {
+                children: [(0, iB.jsx)("input", {
                   type: "number",
-                  min: fJ.J,
-                  max: fJ.C,
-                  placeholder: qJ("worldBuilder:noWorldBorderLimit"),
-                  value: null !== (ZJ = FJ.worldBorder) && void 0 !== ZJ ? ZJ : "",
-                  onChange: JJ => {
-                    const cJ = parseInt(JJ.target.value);
-                    UJ("worldBorder", isNaN(cJ) ? null : cJ)
+                  min: HB.F,
+                  max: HB.A,
+                  placeholder: YB("worldBuilder:noWorldBorderLimit"),
+                  value: null !== (dB = VB.worldBorder) && void 0 !== dB ? dB : "",
+                  onChange: BB => {
+                    const TB = parseInt(BB.target.value);
+                    yB("worldBorder", isNaN(TB) ? null : TB)
                   }
-                }), (0, mJ.jsx)("span", {
+                }), (0, iB.jsx)("span", {
                   className: "ManageFieldUnit",
-                  children: qJ("worldBuilder:blocksUnit")
+                  children: YB("worldBuilder:blocksUnit")
                 })]
               })
-            }), (0, mJ.jsx)(VJ, {
-              label: qJ("classic:disableMobs"),
-              caption: qJ("classic:disableMobsDescription"),
-              disabled: jJ,
-              children: (0, mJ.jsx)(xJ.k, {
-                checked: FJ.disableMobs,
-                setChecked: JJ => UJ("disableMobs", JJ),
-                disabled: jJ
+            }), (0, iB.jsx)(fB, {
+              label: YB("classic:disableMobs"),
+              caption: YB("classic:disableMobsDescription"),
+              disabled: gB,
+              children: (0, iB.jsx)(EB.i, {
+                checked: VB.disableMobs,
+                setChecked: BB => yB("disableMobs", BB),
+                disabled: gB
               })
             })]
-          }), (0, mJ.jsxs)(QJ, {
+          }), (0, iB.jsxs)(NB, {
             icon: "user-group",
-            title: qJ("worldBuilder:playerAndLobbySection"),
-            disabled: !XJ,
-            children: [(0, mJ.jsx)(VJ, {
-              label: qJ("classic:disableKeepInventory"),
-              caption: qJ("classic:disableKeepInventoryDescription"),
-              disabled: jJ,
-              children: (0, mJ.jsx)(xJ.k, {
-                checked: FJ.disableKeepInventory,
-                setChecked: JJ => UJ("disableKeepInventory", JJ),
-                disabled: jJ
+            title: YB("worldBuilder:playerAndLobbySection"),
+            disabled: !lB,
+            children: [(0, iB.jsx)(fB, {
+              label: YB("classic:disableKeepInventory"),
+              caption: YB("classic:disableKeepInventoryDescription"),
+              disabled: gB,
+              children: (0, iB.jsx)(EB.i, {
+                checked: VB.disableKeepInventory,
+                setChecked: BB => yB("disableKeepInventory", BB),
+                disabled: gB
               })
-            }), (0, mJ.jsx)(VJ, {
-              label: qJ("classic:persistInventory"),
-              caption: qJ("classic:persistInventoryDescription"),
-              disabled: jJ,
-              children: (0, mJ.jsx)(rJ.d, {
+            }), (0, iB.jsx)(fB, {
+              label: YB("classic:persistInventory"),
+              caption: YB("classic:persistInventoryDescription"),
+              disabled: gB,
+              children: (0, iB.jsx)(vB.e, {
                 controlClassName: "ManageDropdown",
-                options: GJ.n.map((JJ => ({
-                  value: JJ,
-                  label: nJ.g[JJ]
+                options: uB.i.map((BB => ({
+                  value: BB,
+                  label: DB.j[BB]
                 }))),
-                value: FJ.persistInventory,
-                onChange: JJ => UJ("persistInventory", JJ.value)
+                value: VB.persistInventory,
+                onChange: BB => yB("persistInventory", BB.value)
               })
-            }), (0, mJ.jsx)(VJ, {
-              label: qJ("classic:persistWorld"),
-              caption: qJ("classic:persistWorldDescription"),
-              disabled: jJ,
-              children: (0, mJ.jsx)(xJ.k, {
-                checked: FJ.persistWorld,
-                setChecked: JJ => UJ("persistWorld", JJ),
-                disabled: jJ
+            }), (0, iB.jsx)(fB, {
+              label: YB("classic:persistWorld"),
+              caption: YB("classic:persistWorldDescription"),
+              disabled: gB,
+              children: (0, iB.jsx)(EB.i, {
+                checked: VB.persistWorld,
+                setChecked: BB => yB("persistWorld", BB),
+                disabled: gB
               })
-            }), (0, mJ.jsx)(VJ, {
-              label: qJ("classic:disableLobbySpawn"),
-              caption: qJ("classic:disableLobbySpawnDescription"),
-              disabled: jJ,
-              children: (0, mJ.jsx)(xJ.k, {
-                checked: FJ.disableLobbySpawn,
-                setChecked: JJ => UJ("disableLobbySpawn", JJ),
-                disabled: jJ
+            }), (0, iB.jsx)(fB, {
+              label: YB("classic:disableLobbySpawn"),
+              caption: YB("classic:disableLobbySpawnDescription"),
+              disabled: gB,
+              children: (0, iB.jsx)(EB.i, {
+                checked: VB.disableLobbySpawn,
+                setChecked: BB => yB("disableLobbySpawn", BB),
+                disabled: gB
               })
-            }), (0, mJ.jsx)(VJ, {
-              label: qJ("classic:hideLobbyCode"),
-              caption: qJ("classic:hideLobbyCodeDescription"),
-              disabled: jJ,
-              children: (0, mJ.jsx)(xJ.k, {
-                checked: FJ.hideLobbyCode,
-                setChecked: JJ => UJ("hideLobbyCode", JJ),
-                disabled: jJ
+            }), (0, iB.jsx)(fB, {
+              label: YB("classic:hideLobbyCode"),
+              caption: YB("classic:hideLobbyCodeDescription"),
+              disabled: gB,
+              children: (0, iB.jsx)(EB.i, {
+                checked: VB.hideLobbyCode,
+                setChecked: BB => yB("hideLobbyCode", BB),
+                disabled: gB
               })
             })]
           })]
-        }), (0, mJ.jsx)(QJ, {
+        }), (0, iB.jsx)(NB, {
           icon: "layer-group",
-          title: qJ("worldBuilder:pluginsSection"),
-          disabled: !XJ,
-          children: (0, mJ.jsx)(vJ.b, {
-            callbacks: YJ,
-            disabled: jJ,
+          title: YB("worldBuilder:pluginsSection"),
+          disabled: !lB,
+          children: (0, iB.jsx)(mB.b, {
+            callbacks: oB,
+            disabled: gB,
             advancedMode: !0,
             hideWrapper: !0
           })
         })]
       })
     }
-    var yJ = ZJ(4362),
-      SJ = ZJ(3826),
-      IJ = ZJ(1389),
-      MJ = ZJ(2975),
-      bJ = ZJ(1022),
-      wJ = ZJ(4323),
-      WJ = ZJ(4365),
-      gJ = ZJ(1335);
-    const HJ = 50,
-      PJ = .3;
-    async function kJ(JJ) {
-      const cJ = await
-      function(JJ) {
-        return new Promise(((cJ, ZJ) => {
-          const FJ = new FileReader;
-          FJ.onload = () => cJ(FJ.result), FJ.onerror = ZJ, FJ.readAsDataURL(JJ)
+    var MB = dB(4362),
+      zB = dB(3821),
+      wB = dB(1393),
+      UB = dB(2983),
+      FB = dB(1011),
+      KB = dB(4312),
+      rB = dB(4367),
+      IB = dB(1330);
+    const cB = 50,
+      SB = .3;
+    async function PB(BB) {
+      const TB = await
+      function(BB) {
+        return new Promise(((TB, dB) => {
+          const VB = new FileReader;
+          VB.onload = () => TB(VB.result), VB.onerror = dB, VB.readAsDataURL(BB)
         }))
-      }(JJ), ZJ = await
-      function(JJ) {
-        return new Promise(((cJ, ZJ) => {
-          const FJ = new Image;
-          FJ.onload = () => cJ(FJ), FJ.onerror = () => ZJ(new Error("Failed to load image")), FJ.src = JJ
+      }(BB), dB = await
+      function(BB) {
+        return new Promise(((TB, dB) => {
+          const VB = new Image;
+          VB.onload = () => TB(VB), VB.onerror = () => dB(new Error("Failed to load image")), VB.src = BB
         }))
-      }(cJ);
-      if (ZJ.naturalHeight > ZJ.naturalWidth) throw new pJ;
-      const FJ = 1024 * HJ,
+      }(TB);
+      if (dB.naturalHeight > dB.naturalWidth) throw new QB;
+      const VB = 1024 * cB,
         {
-          dataUrl: UJ,
-          finalQuality: eJ
-        } = function(JJ, cJ) {
-          const ZJ = document.createElement("canvas");
-          ZJ.width = JJ.naturalWidth, ZJ.height = JJ.naturalHeight, ZJ.getContext("2d").drawImage(JJ, 0, 0);
-          let FJ = .92,
-            UJ = ZJ.toDataURL("image/jpeg", FJ);
-          for (; .75 * UJ.length > cJ && FJ > .05;) FJ -= .05, UJ = ZJ.toDataURL("image/jpeg", FJ);
+          dataUrl: yB,
+          finalQuality: pB
+        } = function(BB, TB) {
+          const dB = document.createElement("canvas");
+          dB.width = BB.naturalWidth, dB.height = BB.naturalHeight, dB.getContext("2d").drawImage(BB, 0, 0);
+          let VB = .92,
+            yB = dB.toDataURL("image/jpeg", VB);
+          for (; .75 * yB.length > TB && VB > .05;) VB -= .05, yB = dB.toDataURL("image/jpeg", VB);
           return {
-            dataUrl: UJ,
-            finalQuality: FJ
+            dataUrl: yB,
+            finalQuality: VB
           }
-        }(ZJ, FJ);
-      if (Math.ceil(.75 * UJ.length) > FJ) throw new dJ;
+        }(dB, VB);
+      if (Math.ceil(.75 * yB.length) > VB) throw new RB;
       return {
-        base64Jpg: UJ,
-        heavilyCompressed: eJ < PJ
+        base64Jpg: yB,
+        heavilyCompressed: pB < SB
       }
     }
-    class pJ extends Error {}
-    class dJ extends Error {}
-    var zJ = function(JJ) {
-      return JJ[JJ.NOT_LOGGED_IN = 0] = "NOT_LOGGED_IN", JJ[JJ.THUMBNAIL_LIMIT_REACHED = 1] = "THUMBNAIL_LIMIT_REACHED", JJ
-    }(zJ || {});
+    class QB extends Error {}
+    class RB extends Error {}
+    var aB = function(BB) {
+      return BB[BB.NOT_LOGGED_IN = 0] = "NOT_LOGGED_IN", BB[BB.THUMBNAIL_LIMIT_REACHED = 1] = "THUMBNAIL_LIMIT_REACHED", BB
+    }(aB || {});
 
-    function NJ(JJ) {
-      var cJ;
+    function ZB(BB) {
+      var TB;
       let {
-        schematicId: ZJ,
-        hasReadUploadPolicy: UJ,
-        onPolicyValidationError: qJ,
-        onThumbnailReady: jJ
-      } = JJ;
+        schematicId: dB,
+        hasReadUploadPolicy: yB,
+        onPolicyValidationError: YB,
+        onThumbnailReady: gB
+      } = BB;
       const {
-        t: DJ
-      } = (0, AJ.F)(), [nJ, GJ] = (0, FJ.useState)(null), [fJ, xJ] = (0, FJ.useState)(""), [rJ, vJ] = (0, FJ.useState)(""), [QJ, EJ] = (0, FJ.useState)(!0), [VJ, KJ] = (0, FJ.useState)(!1), yJ = (0, FJ.useRef)(!1), [SJ, IJ] = (0, FJ.useState)(null), [MJ, bJ] = (0, FJ.useState)(!1), [wJ, gJ] = (0, FJ.useState)(!1), HJ = (0, FJ.useRef)(0), {
-        getRootProps: PJ,
-        getInputProps: zJ,
-        isDragActive: NJ
-      } = (0, WJ.c)({
+        t: LB
+      } = (0, JB.z)(), [DB, uB] = (0, VB.useState)(null), [HB, EB] = (0, VB.useState)(""), [vB, mB] = (0, VB.useState)(""), [NB, tB] = (0, VB.useState)(!0), [fB, sB] = (0, VB.useState)(!1), MB = (0, VB.useRef)(!1), [zB, wB] = (0, VB.useState)(null), [UB, FB] = (0, VB.useState)(!1), [KB, IB] = (0, VB.useState)(!1), cB = (0, VB.useRef)(0), {
+        getRootProps: SB,
+        getInputProps: aB,
+        isDragActive: ZB
+      } = (0, rB.c)({
         accept: {
           "image/*": [".png", ".jpg", ".jpeg", ".webp", ".gif", ".bmp"]
         },
         multiple: !1,
-        onDrop: async JJ => {
-          if (0 === JJ.length) return;
-          const cJ = JJ[0],
-            ZJ = ++HJ.current;
-          IJ(null), bJ(!1), GJ(null), xJ(cJ.name);
+        onDrop: async BB => {
+          if (0 === BB.length) return;
+          const TB = BB[0],
+            dB = ++cB.current;
+          wB(null), FB(!1), uB(null), EB(TB.name);
           try {
-            const JJ = await kJ(cJ);
-            if (ZJ !== HJ.current) return;
-            GJ(JJ), bJ(JJ.heavilyCompressed)
-          } catch (FJ) {
-            if (ZJ !== HJ.current) return;
-            IJ(DJ(FJ instanceof pJ ? "thumbnail:portraitImagesNotAllowed" : FJ instanceof dJ ? "thumbnail:couldNotCompressImage" : "thumbnail:failedToUploadImage"))
+            const BB = await PB(TB);
+            if (dB !== cB.current) return;
+            uB(BB), FB(BB.heavilyCompressed)
+          } catch (VB) {
+            if (dB !== cB.current) return;
+            wB(LB(VB instanceof QB ? "thumbnail:portraitImagesNotAllowed" : VB instanceof RB ? "thumbnail:couldNotCompressImage" : "thumbnail:failedToUploadImage"))
           }
         },
         useFsAccessApi: !1
-      }), OJ = fJ.length <= 30 ? fJ : `${fJ.slice(0,27)}...`, TJ = null !== (cJ = null === nJ || void 0 === nJ ? void 0 : nJ.base64Jpg) && void 0 !== cJ ? cJ : null, CJ = rJ.trim(), uJ = CJ.length >= hJ.m && CJ.length <= hJ.k, iJ = wJ && !nJ && !SJ, RJ = wJ && !uJ;
-      return (0, mJ.jsxs)("div", {
+      }), XB = HB.length <= 30 ? HB : `${HB.slice(0,27)}...`, WB = null !== (TB = null === DB || void 0 === DB ? void 0 : DB.base64Jpg) && void 0 !== TB ? TB : null, hB = vB.trim(), CB = hB.length >= kB.r && hB.length <= kB.n, GB = KB && !DB && !zB, qB = KB && !CB;
+      return (0, iB.jsxs)("div", {
         className: "ThumbnailUploadContainer",
-        children: [(0, mJ.jsxs)("div", {
-          ...PJ({
-            className: sJ()("ThumbnailUploadDropzone", {
-              ActiveDrag: NJ,
-              ValidationError: iJ
+        children: [(0, iB.jsxs)("div", {
+          ...SB({
+            className: OB()("ThumbnailUploadDropzone", {
+              ActiveDrag: ZB,
+              ValidationError: GB
             })
           }),
-          children: [(0, mJ.jsx)("input", {
-            ...zJ()
-          }), !NJ && TJ ? (0, mJ.jsxs)(mJ.Fragment, {
-            children: [(0, mJ.jsxs)("div", {
+          children: [(0, iB.jsx)("input", {
+            ...aB()
+          }), !ZB && WB ? (0, iB.jsxs)(iB.Fragment, {
+            children: [(0, iB.jsxs)("div", {
               className: "ThumbnailAspectPreviews",
-              children: [(0, mJ.jsxs)("div", {
+              children: [(0, iB.jsxs)("div", {
                 className: "ThumbnailAspectPreview",
-                children: [(0, mJ.jsx)("div", {
+                children: [(0, iB.jsx)("div", {
                   className: "ThumbnailAspectLabel",
                   children: "1:1"
-                }), (0, mJ.jsx)("div", {
+                }), (0, iB.jsx)("div", {
                   className: "ThumbnailAspectFrame Square",
-                  children: (0, mJ.jsx)("img", {
-                    src: TJ,
+                  children: (0, iB.jsx)("img", {
+                    src: WB,
                     alt: "1:1 preview"
                   })
                 })]
-              }), (0, mJ.jsxs)("div", {
+              }), (0, iB.jsxs)("div", {
                 className: "ThumbnailAspectPreview",
-                children: [(0, mJ.jsx)("div", {
+                children: [(0, iB.jsx)("div", {
                   className: "ThumbnailAspectLabel",
                   children: "16:9"
-                }), (0, mJ.jsx)("div", {
+                }), (0, iB.jsx)("div", {
                   className: "ThumbnailAspectFrame Wide",
-                  children: (0, mJ.jsx)("img", {
-                    src: TJ,
+                  children: (0, iB.jsx)("img", {
+                    src: WB,
                     alt: "16:9 preview"
                   })
                 })]
               })]
-            }), (0, mJ.jsxs)("div", {
-              children: [(0, mJ.jsx)("div", {
+            }), (0, iB.jsxs)("div", {
+              children: [(0, iB.jsx)("div", {
                 className: "ThumbnailUploadInstructions Active",
-                children: OJ
-              }), (0, mJ.jsx)("div", {
+                children: XB
+              }), (0, iB.jsx)("div", {
                 className: "ThumbnailUploadInstructions Preview",
-                children: DJ("thumbnail:preview")
+                children: LB("thumbnail:preview")
               })]
             })]
-          }) : (0, mJ.jsxs)(mJ.Fragment, {
-            children: [(0, mJ.jsx)("div", {
+          }) : (0, iB.jsxs)(iB.Fragment, {
+            children: [(0, iB.jsx)("div", {
               className: "ThumbnailUploadIcon",
-              children: (0, mJ.jsx)(YJ.c, {
+              children: (0, iB.jsx)(oB.e, {
                 name: "image"
               })
-            }), (0, mJ.jsx)("div", {
+            }), (0, iB.jsx)("div", {
               className: "ThumbnailUploadInstructions",
-              children: DJ("thumbnail:dragImageHere")
+              children: LB("thumbnail:dragImageHere")
             })]
           })]
-        }), iJ && (0, mJ.jsx)("div", {
+        }), GB && (0, iB.jsx)("div", {
           className: "ThumbnailUploadError",
-          children: DJ("thumbnail:imageRequired")
-        }), (0, mJ.jsx)(XJ.e, {
-          className: sJ()("ThumbnailUploadNameInput", {
-            ValidationError: RJ
+          children: LB("thumbnail:imageRequired")
+        }), (0, iB.jsx)(lB.e, {
+          className: OB()("ThumbnailUploadNameInput", {
+            ValidationError: qB
           }),
-          placeholderText: DJ("thumbnail:thumbnailName"),
-          defaultValue: rJ,
-          onValueChange: JJ => {
-            vJ(JJ)
+          placeholderText: LB("thumbnail:thumbnailName"),
+          defaultValue: vB,
+          onValueChange: BB => {
+            mB(BB)
           },
-          maxLength: hJ.k
-        }), RJ && (0, mJ.jsx)("div", {
+          maxLength: kB.n
+        }), qB && (0, iB.jsx)("div", {
           className: "ThumbnailUploadError",
-          children: DJ("thumbnail:nameRequired", {
-            min: hJ.m,
-            max: hJ.k
+          children: LB("thumbnail:nameRequired", {
+            min: kB.r,
+            max: kB.n
           })
-        }), (0, mJ.jsxs)("label", {
+        }), (0, iB.jsxs)("label", {
           className: "ThumbnailUploadCheckbox",
-          children: [(0, mJ.jsx)("input", {
+          children: [(0, iB.jsx)("input", {
             type: "checkbox",
-            checked: QJ,
-            onChange: JJ => {
-              EJ(JJ.target.checked)
+            checked: NB,
+            onChange: BB => {
+              tB(BB.target.checked)
             }
-          }), DJ("thumbnail:setAsThumbnailOnceApproved")]
-        }), MJ && (0, mJ.jsx)("div", {
+          }), LB("thumbnail:setAsThumbnailOnceApproved")]
+        }), UB && (0, iB.jsx)("div", {
           className: "ThumbnailUploadWarning",
-          children: DJ("thumbnail:heavyCompressionWarning")
-        }), SJ && (0, mJ.jsx)("div", {
+          children: LB("thumbnail:heavyCompressionWarning")
+        }), zB && (0, iB.jsx)("div", {
           className: "ThumbnailUploadError",
-          children: SJ
-        }), (0, mJ.jsx)(eJ.m, {
-          disabled: VJ,
+          children: zB
+        }), (0, iB.jsx)(pB.k, {
+          disabled: fB,
           className: "ThumbnailUploadButton",
           onClick: async () => {
-            if (gJ(!0), !yJ.current && nJ && uJ && UJ) {
-              yJ.current = !0, KJ(!0), IJ(null);
+            if (IB(!0), !MB.current && DB && CB && yB) {
+              MB.current = !0, sB(!0), wB(null);
               try {
-                await jJ(nJ.base64Jpg, CJ, QJ ? ZJ : null)
-              } catch (JJ) {
-                IJ(JJ.errorMessageForUser ? DJ(JJ.errorMessageForUser, JJ.errorMessageTranslationParams) : DJ("thumbnail:failedToUploadImage"))
+                await gB(DB.base64Jpg, hB, NB ? dB : null)
+              } catch (BB) {
+                wB(BB.errorMessageForUser ? LB(BB.errorMessageForUser, BB.errorMessageTranslationParams) : LB("thumbnail:failedToUploadImage"))
               } finally {
-                yJ.current = !1, KJ(!1)
+                MB.current = !1, sB(!1)
               }
-            } else UJ || qJ()
+            } else yB || YB()
           },
-          children: DJ(VJ ? "thumbnail:processing" : "thumbnail:uploadThumbnail")
+          children: LB(fB ? "thumbnail:processing" : "thumbnail:uploadThumbnail")
         })]
       })
     }
-    const OJ = 2e3;
+    const XB = 2e3;
 
-    function TJ(JJ) {
+    function WB(BB) {
       let {
-        schematicId: cJ,
-        ownedThumbnailCount: ZJ,
-        onClose: UJ,
-        onThumbnailReady: eJ
-      } = JJ;
+        schematicId: TB,
+        ownedThumbnailCount: dB,
+        onClose: yB,
+        onThumbnailReady: pB
+      } = BB;
       const {
-        t: XJ
-      } = (0, AJ.F)(), {
-        userContext: qJ
-      } = (0, bJ.d)(), [jJ, DJ] = (0, FJ.useState)(!1), [nJ, GJ] = (0, FJ.useState)(!1), [fJ, xJ] = (0, FJ.useState)(!1), rJ = (0, FJ.useRef)();
-      (0, FJ.useEffect)((() => () => {
-        clearTimeout(rJ.current)
+        t: lB
+      } = (0, JB.z)(), {
+        userContext: YB
+      } = (0, FB.b)(), [gB, LB] = (0, VB.useState)(!1), [DB, uB] = (0, VB.useState)(!1), [HB, EB] = (0, VB.useState)(!1), vB = (0, VB.useRef)();
+      (0, VB.useEffect)((() => () => {
+        clearTimeout(vB.current)
       }), []);
-      const vJ = function(JJ, cJ) {
-        const ZJ = [];
-        return JJ.isLoggedIn() || ZJ.push(zJ.NOT_LOGGED_IN), cJ >= hJ.W && ZJ.push(zJ.THUMBNAIL_LIMIT_REACHED), ZJ
-      }(qJ, ZJ);
-      if (vJ.length > 0) {
-        const JJ = {
-          [zJ.NOT_LOGGED_IN]: {
+      const mB = function(BB, TB) {
+        const dB = [];
+        return BB.isLoggedIn() || dB.push(aB.NOT_LOGGED_IN), TB >= kB.Z && dB.push(aB.THUMBNAIL_LIMIT_REACHED), dB
+      }(YB, dB);
+      if (mB.length > 0) {
+        const BB = {
+          [aB.NOT_LOGGED_IN]: {
             key: "thumbnail:mustBeLoggedInToUpload"
           },
-          [zJ.THUMBNAIL_LIMIT_REACHED]: {
+          [aB.THUMBNAIL_LIMIT_REACHED]: {
             key: "thumbnail:thumbnailLimitReachedPleaseDelete",
             params: {
-              max: hJ.W
+              max: kB.Z
             }
           }
         };
-        return (0, mJ.jsxs)("div", {
+        return (0, iB.jsxs)("div", {
           className: "ThumbnailUploaderInner",
-          children: [(0, mJ.jsx)("h1", {
+          children: [(0, iB.jsx)("h1", {
             className: "SchematicPopupTitle",
-            children: XJ("thumbnail:cannotUploadThumbnail")
-          }), vJ.map(((cJ, ZJ) => {
-            const FJ = JJ[cJ];
-            return (0, mJ.jsxs)("div", {
+            children: lB("thumbnail:cannotUploadThumbnail")
+          }), mB.map(((TB, dB) => {
+            const VB = BB[TB];
+            return (0, iB.jsxs)("div", {
               className: "CannotUploadThumbnailItem",
-              children: [(0, mJ.jsx)(YJ.c, {
+              children: [(0, iB.jsx)(oB.e, {
                 name: "triangle-exclamation"
-              }), (0, mJ.jsx)("span", {
-                children: XJ(FJ.key, FJ.params)
+              }), (0, iB.jsx)("span", {
+                children: lB(VB.key, VB.params)
               })]
-            }, ZJ)
+            }, dB)
           }))]
         })
       }
-      return (0, mJ.jsxs)("div", {
-        className: sJ()("ThumbnailUploaderInner", {
-          ThumbnailUploaderSuccess: jJ
+      return (0, iB.jsxs)("div", {
+        className: OB()("ThumbnailUploaderInner", {
+          ThumbnailUploaderSuccess: gB
         }),
-        children: [jJ && (0, mJ.jsxs)("div", {
+        children: [gB && (0, iB.jsxs)("div", {
           className: "ThumbnailUploadSuccessOverlay",
-          children: [(0, mJ.jsxs)("div", {
+          children: [(0, iB.jsxs)("div", {
             className: "ThumbnailUploadSuccessIcon FullyFancyText AnimFadeInScaleUp",
-            children: [(0, mJ.jsx)(YJ.c, {
+            children: [(0, iB.jsx)(oB.e, {
               name: "check"
-            }), (0, mJ.jsx)(gJ.c, {})]
-          }), (0, mJ.jsx)("div", {
+            }), (0, iB.jsx)(IB.c, {})]
+          }), (0, iB.jsx)("div", {
             className: "ThumbnailUploadSuccessText AnimFadeInScaleUp",
-            children: XJ("thumbnail:thumbnailUploaded")
+            children: lB("thumbnail:thumbnailUploaded")
           })]
-        }), (0, mJ.jsx)("h1", {
+        }), (0, iB.jsx)("h1", {
           className: "SchematicPopupTitle",
-          children: XJ("thumbnail:uploadThumbnail")
-        }), (0, mJ.jsxs)("div", {
+          children: lB("thumbnail:uploadThumbnail")
+        }), (0, iB.jsxs)("div", {
           className: "ThumbnailUploaderBody",
-          children: [(0, mJ.jsxs)("div", {
+          children: [(0, iB.jsxs)("div", {
             className: "ThumbnailUploaderLeft",
-            children: [(0, mJ.jsx)("h3", {
+            children: [(0, iB.jsx)("h3", {
               className: "SchematicPopupSubtitle",
-              children: XJ("thumbnail:chooseImage", {
-                maxSizeKb: HJ
+              children: lB("thumbnail:chooseImage", {
+                maxSizeKb: cB
               })
-            }), (0, mJ.jsx)(NJ, {
-              schematicId: cJ,
-              hasReadUploadPolicy: nJ,
+            }), (0, iB.jsx)(ZB, {
+              schematicId: TB,
+              hasReadUploadPolicy: DB,
               onPolicyValidationError: () => {
-                xJ(!0)
+                EB(!0)
               },
-              onThumbnailReady: async (JJ, cJ, ZJ) => {
-                await eJ(JJ, cJ, ZJ), DJ(!0), rJ.current = setTimeout(UJ, OJ)
+              onThumbnailReady: async (BB, TB, dB) => {
+                await pB(BB, TB, dB), LB(!0), vB.current = setTimeout(yB, XB)
               }
             })]
-          }), (0, mJ.jsxs)("div", {
+          }), (0, iB.jsxs)("div", {
             className: "ThumbnailUploadPolicy",
-            children: [(0, mJ.jsx)("h3", {
+            children: [(0, iB.jsx)("h3", {
               className: "ThumbnailUploadPolicyTitle",
-              children: XJ("thumbnail:uploadPolicy")
-            }), (0, mJ.jsxs)("ul", {
+              children: lB("thumbnail:uploadPolicy")
+            }), (0, iB.jsxs)("ul", {
               className: "ThumbnailUploadPolicyList",
-              children: [(0, mJ.jsxs)("li", {
+              children: [(0, iB.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem Allowed",
-                children: [(0, mJ.jsx)(YJ.c, {
+                children: [(0, iB.jsx)(oB.e, {
                   name: "check"
-                }), (0, mJ.jsx)("span", {
-                  children: XJ("thumbnail:policyFollowGuidelines")
+                }), (0, iB.jsx)("span", {
+                  children: lB("thumbnail:policyFollowGuidelines")
                 })]
-              }), (0, mJ.jsxs)("li", {
+              }), (0, iB.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem Allowed",
-                children: [(0, mJ.jsx)(YJ.c, {
+                children: [(0, iB.jsx)(oB.e, {
                   name: "check"
-                }), (0, mJ.jsx)("span", {
-                  children: XJ("thumbnail:policyInGameAssets")
+                }), (0, iB.jsx)("span", {
+                  children: lB("thumbnail:policyInGameAssets")
                 })]
-              }), (0, mJ.jsxs)("li", {
+              }), (0, iB.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem Allowed",
-                children: [(0, mJ.jsx)(YJ.c, {
+                children: [(0, iB.jsx)(oB.e, {
                   name: "check"
-                }), (0, mJ.jsx)("span", {
-                  children: XJ("thumbnail:policyLimitText")
+                }), (0, iB.jsx)("span", {
+                  children: lB("thumbnail:policyLimitText")
                 })]
-              }), (0, mJ.jsxs)("li", {
+              }), (0, iB.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem NotAllowed",
-                children: [(0, mJ.jsx)(YJ.c, {
+                children: [(0, iB.jsx)(oB.e, {
                   name: "x"
-                }), (0, mJ.jsx)("span", {
-                  children: XJ("thumbnail:policyCopyrightContent")
+                }), (0, iB.jsx)("span", {
+                  children: lB("thumbnail:policyCopyrightContent")
                 })]
-              }), (0, mJ.jsxs)("li", {
+              }), (0, iB.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem NotAllowed",
-                children: [(0, mJ.jsx)(YJ.c, {
+                children: [(0, iB.jsx)(oB.e, {
                   name: "x"
-                }), (0, mJ.jsx)("span", {
-                  children: XJ("thumbnail:policyOutOfGameAssets")
+                }), (0, iB.jsx)("span", {
+                  children: lB("thumbnail:policyOutOfGameAssets")
                 })]
-              }), (0, mJ.jsxs)("li", {
+              }), (0, iB.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem NotAllowed",
-                children: [(0, mJ.jsx)(YJ.c, {
+                children: [(0, iB.jsx)(oB.e, {
                   name: "x"
-                }), (0, mJ.jsx)("span", {
-                  children: XJ("thumbnail:policyBloxdTags")
+                }), (0, iB.jsx)("span", {
+                  children: lB("thumbnail:policyBloxdTags")
                 })]
-              }), (0, mJ.jsxs)("li", {
+              }), (0, iB.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem NotAllowed",
-                children: [(0, mJ.jsx)(YJ.c, {
+                children: [(0, iB.jsx)(oB.e, {
                   name: "x"
-                }), (0, mJ.jsx)("span", {
-                  children: XJ("thumbnail:policyMustReflectGame")
+                }), (0, iB.jsx)("span", {
+                  children: lB("thumbnail:policyMustReflectGame")
                 })]
               })]
-            }), (0, mJ.jsxs)("label", {
-              className: sJ()("ThumbnailUploadCheckbox Policy", {
-                ValidationError: fJ && !nJ
+            }), (0, iB.jsxs)("label", {
+              className: OB()("ThumbnailUploadCheckbox Policy", {
+                ValidationError: HB && !DB
               }),
-              children: [(0, mJ.jsx)("input", {
+              children: [(0, iB.jsx)("input", {
                 type: "checkbox",
-                checked: nJ,
-                onChange: JJ => {
-                  GJ(JJ.target.checked)
+                checked: DB,
+                onChange: BB => {
+                  uB(BB.target.checked)
                 }
-              }), XJ("thumbnail:agreeToUploadPolicy")]
-            }), fJ && !nJ && (0, mJ.jsx)("div", {
+              }), lB("thumbnail:agreeToUploadPolicy")]
+            }), HB && !DB && (0, iB.jsx)("div", {
               className: "ThumbnailPolicyError",
-              children: XJ("thumbnail:policyRequired")
+              children: lB("thumbnail:policyRequired")
             })]
           })]
         })]
       })
     }
-    var CJ = ZJ(1098);
-    const uJ = {
+    var hB = dB(1089);
+    const CB = {
       "custom-game-bad-thumbnail": {
         reason: "thumbnail:rejectionInappropriate",
         tips: ["thumbnail:rejectionInappropriateTip1", "thumbnail:rejectionInappropriateTip2", "thumbnail:rejectionInappropriateTip3"]
@@ -877,207 +877,207 @@ export const modules = {
       }
     };
 
-    function iJ(JJ) {
-      var cJ, ZJ;
+    function GB(BB) {
+      var TB, dB;
       let {
-        schematicData: XJ,
-        updateSchematicData: jJ,
-        publishFormEnabled: hJ,
-        onClose: DJ
-      } = JJ;
+        schematicData: lB,
+        updateSchematicData: gB,
+        publishFormEnabled: kB,
+        onClose: LB
+      } = BB;
       const {
-        t: nJ
-      } = (0, AJ.F)(), {
-        userContext: GJ,
-        isUserContextUpdating: fJ
-      } = (0, bJ.d)(), xJ = (0, MJ.e)(), [rJ, vJ] = (0, FJ.useState)([]), [QJ, EJ] = (0, FJ.useState)([]), [VJ, KJ] = (0, FJ.useState)(!0), [yJ, SJ] = (0, FJ.useState)(null !== (cJ = XJ.customThumbnailId) && void 0 !== cJ ? cJ : null), [WJ, gJ] = (0, FJ.useState)(null), HJ = (0, FJ.useRef)(null !== (ZJ = XJ.customThumbnailId) && void 0 !== ZJ ? ZJ : null), PJ = (0, FJ.useRef)(0), kJ = (0, FJ.useRef)(null), pJ = (0, FJ.useRef)(null), dJ = (0, FJ.useRef)(null), zJ = (0, FJ.useRef)(!1);
+        t: DB
+      } = (0, JB.z)(), {
+        userContext: uB,
+        isUserContextUpdating: HB
+      } = (0, FB.b)(), EB = (0, UB.b)(), [vB, mB] = (0, VB.useState)([]), [NB, tB] = (0, VB.useState)([]), [fB, sB] = (0, VB.useState)(!0), [MB, zB] = (0, VB.useState)(null !== (TB = lB.customThumbnailId) && void 0 !== TB ? TB : null), [rB, IB] = (0, VB.useState)(null), cB = (0, VB.useRef)(null !== (dB = lB.customThumbnailId) && void 0 !== dB ? dB : null), SB = (0, VB.useRef)(0), PB = (0, VB.useRef)(null), QB = (0, VB.useRef)(null), RB = (0, VB.useRef)(null), aB = (0, VB.useRef)(!1);
 
-      function NJ(JJ, cJ) {
-        dJ.current && (clearTimeout(dJ.current), dJ.current = null), gJ(JJ), null !== JJ && cJ && (dJ.current = setTimeout((() => {
-          gJ(null), dJ.current = null
+      function ZB(BB, TB) {
+        RB.current && (clearTimeout(RB.current), RB.current = null), IB(BB), null !== BB && TB && (RB.current = setTimeout((() => {
+          IB(null), RB.current = null
         }), 5e3))
-      }(0, FJ.useEffect)((() => () => {
-        clearTimeout(pJ.current), clearTimeout(dJ.current)
+      }(0, VB.useEffect)((() => () => {
+        clearTimeout(QB.current), clearTimeout(RB.current)
       }), []);
-      const OJ = (0, FJ.useCallback)((() => {
-        KJ(!0), IJ.c.getOwnedThumbnails(GJ).then((JJ => {
-          const cJ = [],
-            ZJ = [];
-          for (const FJ of JJ.thumbnails) FJ.rejectionPolicyId ? cJ.push(FJ) : ZJ.push(FJ);
-          cJ.sort(((JJ, cJ) => JJ.lastUpdatedAt - cJ.lastUpdatedAt)), ZJ.sort(((JJ, cJ) => {
-            const ZJ = JJ.approved ? 1 : 0,
-              FJ = (cJ.approved ? 1 : 0) - ZJ;
-            return 0 !== FJ ? FJ : cJ.lastUpdatedAt - JJ.lastUpdatedAt
-          })), EJ(cJ), vJ(ZJ)
-        })).catch((JJ => {
-          console.error("Failed to fetch thumbnails:", JJ)
+      const XB = (0, VB.useCallback)((() => {
+        sB(!0), wB.c.getOwnedThumbnails(uB).then((BB => {
+          const TB = [],
+            dB = [];
+          for (const VB of BB.thumbnails) VB.rejectionPolicyId ? TB.push(VB) : dB.push(VB);
+          TB.sort(((BB, TB) => BB.lastUpdatedAt - TB.lastUpdatedAt)), dB.sort(((BB, TB) => {
+            const dB = BB.approved ? 1 : 0,
+              VB = (TB.approved ? 1 : 0) - dB;
+            return 0 !== VB ? VB : TB.lastUpdatedAt - BB.lastUpdatedAt
+          })), tB(TB), mB(dB)
+        })).catch((BB => {
+          console.error("Failed to fetch thumbnails:", BB)
         })).finally((() => {
-          KJ(!1)
+          sB(!1)
         }))
-      }), [GJ]);
-      async function uJ(JJ, cJ, ZJ) {
-        return IJ.c.uploadSchematicThumbnail(GJ, JJ, cJ, ZJ).then((() => {
-          NJ({
-            text: nJ("thumbnail:uploadedAwaitingModeration"),
+      }), [uB]);
+      async function CB(BB, TB, dB) {
+        return wB.c.uploadSchematicThumbnail(uB, BB, TB, dB).then((() => {
+          ZB({
+            text: DB("thumbnail:uploadedAwaitingModeration"),
             type: "success"
-          }, !0), OJ()
+          }, !0), XB()
         }))
       }
 
-      function iJ() {
-        PJ.current = Date.now(), pJ.current = null;
-        const JJ = kJ.current;
-        kJ.current = null, NJ({
-          text: nJ("thumbnail:settingThumbnail"),
+      function GB() {
+        SB.current = Date.now(), QB.current = null;
+        const BB = PB.current;
+        PB.current = null, ZB({
+          text: DB("thumbnail:settingThumbnail"),
           type: "info"
-        }, !1), IJ.c.setSchematicThumbnail(GJ, XJ.schematicId, JJ).then((() => {
-          xJ.current && (NJ({
-            text: nJ("thumbnail:thumbnailUpdated"),
+        }, !1), wB.c.setSchematicThumbnail(uB, lB.schematicId, BB).then((() => {
+          EB.current && (ZB({
+            text: DB("thumbnail:thumbnailUpdated"),
             type: "success"
-          }, !0), HJ.current = JJ, jJ("customThumbnailId", JJ), jJ("customThumbnailBlurhash", void 0), jJ("customThumbnailVariants", void 0))
-        })).catch((JJ => {
-          xJ.current && (NJ({
-            text: JJ.errorMessageForUser ? nJ(JJ.errorMessageForUser, JJ.errorMessageTranslationParams) : nJ("thumbnail:failedToSetThumbnail"),
+          }, !0), cB.current = BB, gB("customThumbnailId", BB), gB("customThumbnailBlurhash", void 0), gB("customThumbnailVariants", void 0))
+        })).catch((BB => {
+          EB.current && (ZB({
+            text: BB.errorMessageForUser ? DB(BB.errorMessageForUser, BB.errorMessageTranslationParams) : DB("thumbnail:failedToSetThumbnail"),
             type: "error"
-          }, !0), SJ(HJ.current))
+          }, !0), zB(cB.current))
         }))
       }
 
-      function aJ(JJ) {
-        SJ(JJ), kJ.current = JJ;
-        const cJ = Date.now() - PJ.current;
-        cJ >= 1e3 ? iJ() : (NJ({
-          text: nJ("thumbnail:settingThumbnail"),
+      function jB(BB) {
+        zB(BB), PB.current = BB;
+        const TB = Date.now() - SB.current;
+        TB >= 1e3 ? GB() : (ZB({
+          text: DB("thumbnail:settingThumbnail"),
           type: "info"
-        }, !1), pJ.current || (pJ.current = setTimeout((() => {
-          iJ()
-        }), 1e3 - cJ)))
+        }, !1), QB.current || (QB.current = setTimeout((() => {
+          GB()
+        }), 1e3 - TB)))
       }
-      return (0, FJ.useEffect)((() => {
-        !1 === fJ && OJ()
-      }), [fJ, OJ]), QJ.length > 0 ? (0, mJ.jsx)(RJ, {
-        rejectedThumbnails: QJ,
-        userContext: GJ,
-        isMountedRef: xJ,
-        onAcknowledged: OJ
-      }) : (0, mJ.jsxs)("div", {
+      return (0, VB.useEffect)((() => {
+        !1 === HB && XB()
+      }), [HB, XB]), NB.length > 0 ? (0, iB.jsx)(qB, {
+        rejectedThumbnails: NB,
+        userContext: uB,
+        isMountedRef: EB,
+        onAcknowledged: XB
+      }) : (0, iB.jsxs)("div", {
         className: "BloxdForm ThumbnailSection",
-        children: [(0, mJ.jsxs)("div", {
+        children: [(0, iB.jsxs)("div", {
           className: "SectionTitle",
-          children: [nJ("thumbnail:gameThumbnail"), WJ && (0, mJ.jsx)("span", {
-            className: sJ()("ThumbnailActionMsg", `ThumbnailActionMsg--${WJ.type}`),
-            children: WJ.text
+          children: [DB("thumbnail:gameThumbnail"), rB && (0, iB.jsx)("span", {
+            className: OB()("ThumbnailActionMsg", `ThumbnailActionMsg--${rB.type}`),
+            children: rB.text
           })]
-        }), (0, mJ.jsx)("div", {
+        }), (0, iB.jsx)("div", {
           className: "SectionBody",
-          children: (0, mJ.jsxs)("div", {
+          children: (0, iB.jsxs)("div", {
             className: "ThumbnailGrid",
-            children: [(0, mJ.jsxs)("div", {
-              className: sJ()("ThumbnailGridItem ThumbnailGridItemDefault", {
-                ThumbnailGridItemSelected: null === yJ
+            children: [(0, iB.jsxs)("div", {
+              className: OB()("ThumbnailGridItem ThumbnailGridItemDefault", {
+                ThumbnailGridItemSelected: null === MB
               }),
-              onClick: () => aJ(null),
-              children: [(0, mJ.jsx)(wJ.e, {
+              onClick: () => jB(null),
+              children: [(0, iB.jsx)(KB.e, {
                 game: {
-                  schematicId: XJ.schematicId,
-                  imageBlurhash: XJ.imageBlurhash
+                  schematicId: lB.schematicId,
+                  imageBlurhash: lB.imageBlurhash
                 }
-              }), (0, mJ.jsx)("div", {
+              }), (0, iB.jsx)("div", {
                 className: "ThumbnailGridItemLabel ThumbnailDefaultLabel",
-                children: nJ("general:default")
+                children: DB("general:default")
               })]
-            }), VJ && (0, mJ.jsx)(qJ.c, {}), rJ.map(((JJ, cJ) => (0, mJ.jsxs)("div", {
-              className: sJ()("ThumbnailGridItem", {
-                ThumbnailGridItemSelected: yJ === JJ.id,
-                ThumbnailGridItemPending: !JJ.approved
+            }), fB && (0, iB.jsx)(YB.b, {}), vB.map(((BB, TB) => (0, iB.jsxs)("div", {
+              className: OB()("ThumbnailGridItem", {
+                ThumbnailGridItemSelected: MB === BB.id,
+                ThumbnailGridItemPending: !BB.approved
               }),
               onClick: () => {
-                JJ.approved && aJ(JJ.id)
+                BB.approved && jB(BB.id)
               },
-              children: [JJ.approved && (0, mJ.jsx)("img", {
-                src: `${CJ.clientSideServerUrls.s3Url}/customThumbnails/${JJ.id}.jpg`,
+              children: [BB.approved && (0, iB.jsx)("img", {
+                src: `${hB.clientSideServerUrls.s3Url}/customThumbnails/${BB.id}.jpg`,
                 alt: "Thumbnail"
-              }), JJ.approved && (0, mJ.jsx)("div", {
+              }), BB.approved && (0, iB.jsx)("div", {
                 className: "ThumbnailGridItemLabel",
-                children: JJ.name
-              }), JJ.id && (0, mJ.jsx)(eJ.I, {
+                children: BB.name
+              }), BB.id && (0, iB.jsx)(pB.K, {
                 className: "ThumbnailDeleteButton",
-                onClick: cJ => async function(JJ, cJ, ZJ) {
-                  JJ.stopPropagation();
-                  const FJ = await UJ.NotificationProvider.showCustomPopup({
-                      body: JJ => (0, mJ.jsx)(LJ, {
-                        thumbnailId: cJ,
-                        thumbnailName: ZJ,
-                        onClose: cJ => {
-                          cJ && (zJ.current = !0), JJ()
+                onClick: TB => async function(BB, TB, dB) {
+                  BB.stopPropagation();
+                  const VB = await yB.NotificationProvider.showCustomPopup({
+                      body: BB => (0, iB.jsx)(xB, {
+                        thumbnailId: TB,
+                        thumbnailName: dB,
+                        onClose: TB => {
+                          TB && (aB.current = !0), BB()
                         }
                       }),
                       middleScreenPopupClassName: "ThumbnailDeleteConfirmPopup",
-                      onClose: DJ
+                      onClose: LB
                     }).getResult(),
-                    eJ = zJ.current;
-                  zJ.current = !1, eJ && !0 === FJ && (xJ.current && NJ({
-                    text: nJ("thumbnail:deletingThumbnail"),
+                    pB = aB.current;
+                  aB.current = !1, pB && !0 === VB && (EB.current && ZB({
+                    text: DB("thumbnail:deletingThumbnail"),
                     type: "info"
-                  }, !1), IJ.c.deleteSchematicThumbnail(GJ, cJ).then((() => {
-                    xJ.current && (NJ({
-                      text: nJ("thumbnail:thumbnailDeleted"),
+                  }, !1), wB.c.deleteSchematicThumbnail(uB, TB).then((() => {
+                    EB.current && (ZB({
+                      text: DB("thumbnail:thumbnailDeleted"),
                       type: "success"
-                    }, !0), HJ.current === cJ && aJ(null), OJ())
-                  })).catch((JJ => {
-                    xJ.current && NJ({
-                      text: JJ.errorMessageForUser ? nJ(JJ.errorMessageForUser, JJ.errorMessageTranslationParams) : nJ("thumbnail:failedToDeleteThumbnail"),
+                    }, !0), cB.current === TB && jB(null), XB())
+                  })).catch((BB => {
+                    EB.current && ZB({
+                      text: BB.errorMessageForUser ? DB(BB.errorMessageForUser, BB.errorMessageTranslationParams) : DB("thumbnail:failedToDeleteThumbnail"),
                       type: "error"
                     }, !0)
                   })))
-                }(cJ, JJ.id, JJ.name),
-                children: (0, mJ.jsx)(YJ.c, {
+                }(TB, BB.id, BB.name),
+                children: (0, iB.jsx)(oB.e, {
                   name: "trash-can"
                 })
-              }), !JJ.approved && (0, mJ.jsx)("div", {
+              }), !BB.approved && (0, iB.jsx)("div", {
                 className: "ThumbnailUnapprovedIcon",
-                children: (0, mJ.jsx)(YJ.c, {
+                children: (0, iB.jsx)(oB.e, {
                   name: "hourglass-clock"
                 })
-              }), !JJ.approved && (0, mJ.jsxs)("div", {
+              }), !BB.approved && (0, iB.jsxs)("div", {
                 className: "ThumbnailGridItemLabel ThumbnailPendingLabel",
-                children: [JJ.name, (0, mJ.jsx)("br", {}), nJ("thumbnail:pendingApproval")]
+                children: [BB.name, (0, iB.jsx)("br", {}), DB("thumbnail:pendingApproval")]
               })]
-            }, cJ))), (0, mJ.jsxs)("div", {
-              className: sJ()("ThumbnailGridItem ThumbnailUploadTile", {
-                ThumbnailUploadTileDisabled: !hJ
+            }, TB))), (0, iB.jsxs)("div", {
+              className: OB()("ThumbnailGridItem ThumbnailUploadTile", {
+                ThumbnailUploadTileDisabled: !kB
               }),
               onClick: () => {
-                hJ && function(JJ) {
+                kB && function(BB) {
                   let {
-                    schematicId: cJ,
-                    ownedThumbnailCount: ZJ,
-                    onThumbnailReady: FJ,
-                    onClose: eJ
-                  } = JJ;
-                  UJ.NotificationProvider.showCustomPopup({
-                    body: JJ => (0, mJ.jsx)(TJ, {
-                      schematicId: cJ,
-                      ownedThumbnailCount: ZJ,
-                      onClose: JJ,
-                      onThumbnailReady: FJ
+                    schematicId: TB,
+                    ownedThumbnailCount: dB,
+                    onThumbnailReady: VB,
+                    onClose: pB
+                  } = BB;
+                  yB.NotificationProvider.showCustomPopup({
+                    body: BB => (0, iB.jsx)(WB, {
+                      schematicId: TB,
+                      ownedThumbnailCount: dB,
+                      onClose: BB,
+                      onThumbnailReady: VB
                     }),
                     middleScreenPopupClassName: "SchematicThumbnailPopup",
-                    onClose: eJ,
+                    onClose: pB,
                     unlockPointerKey: "schematicThumbnailUploaderPopup"
                   })
                 }({
-                  schematicId: XJ.schematicId,
-                  ownedThumbnailCount: rJ.length,
-                  onThumbnailReady: uJ,
-                  onClose: DJ
+                  schematicId: lB.schematicId,
+                  ownedThumbnailCount: vB.length,
+                  onThumbnailReady: CB,
+                  onClose: LB
                 })
               },
-              children: [(0, mJ.jsx)(YJ.c, {
+              children: [(0, iB.jsx)(oB.e, {
                 name: "plus"
-              }), (0, mJ.jsx)("div", {
+              }), (0, iB.jsx)("div", {
                 className: "ThumbnailGridItemLabel",
-                children: nJ("thumbnail:uploadThumbnail")
+                children: DB("thumbnail:uploadThumbnail")
               })]
             })]
           })
@@ -1085,640 +1085,640 @@ export const modules = {
       })
     }
 
-    function RJ(JJ) {
+    function qB(BB) {
       let {
-        rejectedThumbnails: cJ,
-        userContext: ZJ,
-        isMountedRef: UJ,
-        onAcknowledged: XJ
-      } = JJ;
+        rejectedThumbnails: TB,
+        userContext: dB,
+        isMountedRef: yB,
+        onAcknowledged: lB
+      } = BB;
       const {
-        t: jJ
-      } = (0, AJ.F)(), [hJ, DJ] = (0, FJ.useState)(!1), [sJ, nJ] = (0, FJ.useState)(!1), GJ = function(JJ) {
-        const cJ = new Map;
-        for (const ZJ of JJ) {
-          const JJ = ZJ.rejectionPolicyId,
-            FJ = cJ.get(JJ);
-          FJ ? FJ.push(ZJ) : cJ.set(JJ, [ZJ])
+        t: gB
+      } = (0, JB.z)(), [kB, LB] = (0, VB.useState)(!1), [OB, DB] = (0, VB.useState)(!1), uB = function(BB) {
+        const TB = new Map;
+        for (const dB of BB) {
+          const BB = dB.rejectionPolicyId,
+            VB = TB.get(BB);
+          VB ? VB.push(dB) : TB.set(BB, [dB])
         }
-        return cJ
-      }(cJ);
-      return (0, mJ.jsxs)("div", {
+        return TB
+      }(TB);
+      return (0, iB.jsxs)("div", {
         className: "ThumbnailRejectionNotice",
-        children: [(0, mJ.jsxs)("div", {
+        children: [(0, iB.jsxs)("div", {
           className: "ThumbnailRejectionNoticeTitle",
-          children: [(0, mJ.jsx)(YJ.c, {
+          children: [(0, iB.jsx)(oB.e, {
             name: "triangle-exclamation"
-          }), " ", jJ("thumbnail:thumbnailsRejected"), " ", (0, mJ.jsx)(YJ.c, {
+          }), " ", gB("thumbnail:thumbnailsRejected"), " ", (0, iB.jsx)(oB.e, {
             name: "triangle-exclamation"
           })]
-        }), (0, mJ.jsx)("div", {
+        }), (0, iB.jsx)("div", {
           className: "ThumbnailRejectionNoticeSubtitle",
-          children: jJ("thumbnail:thumbnailsRejectedDescription")
-        }), (0, mJ.jsx)("div", {
+          children: gB("thumbnail:thumbnailsRejectedDescription")
+        }), (0, iB.jsx)("div", {
           className: "ThumbnailRejectionNoticeList",
-          children: [...GJ.entries()].map((JJ => {
-            let [cJ, ZJ] = JJ;
-            const FJ = uJ[cJ];
-            return (0, mJ.jsxs)("div", {
+          children: [...uB.entries()].map((BB => {
+            let [TB, dB] = BB;
+            const VB = CB[TB];
+            return (0, iB.jsxs)("div", {
               className: "ThumbnailRejectionNoticeGroup",
-              children: [(0, mJ.jsx)("div", {
+              children: [(0, iB.jsx)("div", {
                 className: "ThumbnailRejectionNoticeItems",
-                children: ZJ.map((JJ => (0, mJ.jsxs)("div", {
+                children: dB.map((BB => (0, iB.jsxs)("div", {
                   className: "ThumbnailRejectionNoticeItem",
-                  children: [(0, mJ.jsx)("div", {
+                  children: [(0, iB.jsx)("div", {
                     className: "ThumbnailRejectionNoticeItemIcon",
-                    children: (0, mJ.jsx)(YJ.c, {
+                    children: (0, iB.jsx)(oB.e, {
                       name: "image-slash"
                     })
-                  }), (0, mJ.jsx)("div", {
+                  }), (0, iB.jsx)("div", {
                     className: "ThumbnailRejectionNoticeItemDetails",
-                    children: (0, mJ.jsx)("div", {
+                    children: (0, iB.jsx)("div", {
                       className: "ThumbnailRejectionNoticeItemName",
-                      children: JJ.name
+                      children: BB.name
                     })
                   })]
-                }, JJ.id)))
-              }), (0, mJ.jsxs)("div", {
+                }, BB.id)))
+              }), (0, iB.jsxs)("div", {
                 className: "ThumbnailRejectionNoticeGroupReason",
-                children: [jJ("thumbnail:rejectionReason"), " ", FJ ? jJ(FJ.reason) : cJ]
-              }), FJ && (0, mJ.jsx)("ul", {
+                children: [gB("thumbnail:rejectionReason"), " ", VB ? gB(VB.reason) : TB]
+              }), VB && (0, iB.jsx)("ul", {
                 className: "ThumbnailRejectionNoticeGroupTips",
-                children: FJ.tips.map((JJ => (0, mJ.jsx)("li", {
-                  children: jJ(JJ)
-                }, JJ)))
+                children: VB.tips.map((BB => (0, iB.jsx)("li", {
+                  children: gB(BB)
+                }, BB)))
               })]
-            }, cJ)
+            }, TB)
           }))
-        }), (0, mJ.jsxs)("label", {
+        }), (0, iB.jsxs)("label", {
           className: "ThumbnailRejectionNoticeCheckbox",
-          children: [(0, mJ.jsx)(SJ.e, {
-            checked: hJ,
-            onChange: JJ => DJ(JJ.target.checked),
-            disabled: sJ
-          }), (0, mJ.jsx)("span", {
-            children: jJ("thumbnail:haveReadRejectionReasons")
+          children: [(0, iB.jsx)(zB.b, {
+            checked: kB,
+            onChange: BB => LB(BB.target.checked),
+            disabled: OB
+          }), (0, iB.jsx)("span", {
+            children: gB("thumbnail:haveReadRejectionReasons")
           })]
-        }), (0, mJ.jsx)(eJ.m, {
+        }), (0, iB.jsx)(pB.k, {
           onClick: async function() {
-            nJ(!0);
-            const JJ = await Promise.allSettled(cJ.map((JJ => IJ.c.deleteSchematicThumbnail(ZJ, JJ.id))));
-            if (!UJ.current) return;
-            const FJ = JJ.filter((JJ => "rejected" === JJ.status));
-            FJ.length > 0 && console.error("Some rejected thumbnails failed to delete:", FJ), XJ()
+            DB(!0);
+            const BB = await Promise.allSettled(TB.map((BB => wB.c.deleteSchematicThumbnail(dB, BB.id))));
+            if (!yB.current) return;
+            const VB = BB.filter((BB => "rejected" === BB.status));
+            VB.length > 0 && console.error("Some rejected thumbnails failed to delete:", VB), lB()
           },
-          disabled: !hJ || sJ,
+          disabled: !kB || OB,
           className: "ThumbnailRejectionNoticeAcceptButton",
-          children: sJ ? (0, mJ.jsx)(qJ.c, {}) : jJ("general:accept")
+          children: OB ? (0, iB.jsx)(YB.b, {}) : gB("general:accept")
         })]
       })
     }
 
-    function LJ(JJ) {
+    function xB(BB) {
       let {
-        thumbnailId: cJ,
-        thumbnailName: ZJ,
-        onClose: FJ
-      } = JJ;
+        thumbnailId: TB,
+        thumbnailName: dB,
+        onClose: VB
+      } = BB;
       const {
-        t: UJ
-      } = (0, AJ.F)();
-      return (0, mJ.jsxs)("div", {
+        t: yB
+      } = (0, JB.z)();
+      return (0, iB.jsxs)("div", {
         className: "ThumbnailDeleteConfirm",
-        children: [(0, mJ.jsx)("div", {
+        children: [(0, iB.jsx)("div", {
           className: "ThumbnailDeleteConfirmTitle",
-          children: UJ("thumbnail:deleteThumbnail")
-        }), (0, mJ.jsxs)("div", {
+          children: yB("thumbnail:deleteThumbnail")
+        }), (0, iB.jsxs)("div", {
           className: "ThumbnailDeleteConfirmImageContainer",
-          children: [(0, mJ.jsx)("img", {
+          children: [(0, iB.jsx)("img", {
             className: "ThumbnailDeleteConfirmImage",
-            src: `${CJ.clientSideServerUrls.s3Url}/customThumbnails/${cJ}.jpg`,
+            src: `${hB.clientSideServerUrls.s3Url}/customThumbnails/${TB}.jpg`,
             alt: "Thumbnail to delete"
-          }), (0, mJ.jsx)("div", {
+          }), (0, iB.jsx)("div", {
             className: "ThumbnailGridItemLabel",
-            children: ZJ
+            children: dB
           })]
-        }), (0, mJ.jsx)("div", {
+        }), (0, iB.jsx)("div", {
           className: "ThumbnailDeleteConfirmSubtitle",
-          children: UJ("thumbnail:deleteThumbnailConfirmation")
-        }), (0, mJ.jsxs)("div", {
+          children: yB("thumbnail:deleteThumbnailConfirmation")
+        }), (0, iB.jsxs)("div", {
           className: "ThumbnailDeleteConfirmButtons",
-          children: [(0, mJ.jsxs)(eJ.I, {
+          children: [(0, iB.jsxs)(pB.K, {
             className: "ThumbnailDeleteConfirmButton",
-            onClick: () => FJ(!0),
-            children: [(0, mJ.jsx)(YJ.c, {
+            onClick: () => VB(!0),
+            children: [(0, iB.jsx)(oB.e, {
               name: "trash-can"
-            }), " ", UJ("general:delete")]
-          }), (0, mJ.jsx)(eJ.g, {
+            }), " ", yB("general:delete")]
+          }), (0, iB.jsx)(pB.g, {
             className: "ThumbnailDeleteConfirmButton",
-            onClick: () => FJ(!1),
-            children: UJ("general:cancel")
+            onClick: () => VB(!1),
+            children: yB("general:cancel")
           })]
         })]
       })
     }
-    var aJ = ZJ(2651),
-      BJ = ZJ(4392),
-      tJ = ZJ(4397),
-      oJ = ZJ(4439);
+    var jB = dB(2626),
+      AB = dB(4400),
+      bB = dB(4408),
+      nB = dB(4451);
 
-    function lJ(JJ) {
+    function eB(BB) {
       let {
-        schematicData: cJ,
-        setTexturePack: ZJ,
-        initializeTexturePack: UJ,
-        publishFormEnabled: eJ
-      } = JJ;
+        schematicData: TB,
+        setTexturePack: dB,
+        initializeTexturePack: yB,
+        publishFormEnabled: pB
+      } = BB;
       const {
-        t: XJ
-      } = (0, AJ.F)(), [qJ, jJ] = (0, FJ.useState)(null), [YJ, hJ] = (0, FJ.useState)(null), [DJ, nJ] = (0, FJ.useState)(!1), GJ = (0, MJ.e)(), fJ = eJ && !DJ, xJ = cJ.customTexturePackKey;
+        t: lB
+      } = (0, JB.z)(), [YB, gB] = (0, VB.useState)(null), [oB, kB] = (0, VB.useState)(null), [LB, DB] = (0, VB.useState)(!1), uB = (0, UB.b)(), HB = pB && !LB, EB = TB.customTexturePackKey;
 
-      function rJ(JJ) {
-        var cJ;
-        jJ(JJ.metaData.id), hJ(null !== (cJ = JJ.metaData.fromFolderName) && void 0 !== cJ ? cJ : null), (JJ.metaData.id !== aJ.r.CUSTOM || JJ.metaData.fromFolderName) && ZJ(JJ)
+      function vB(BB) {
+        var TB;
+        gB(BB.metaData.id), kB(null !== (TB = BB.metaData.fromFolderName) && void 0 !== TB ? TB : null), (BB.metaData.id !== jB.r.CUSTOM || BB.metaData.fromFolderName) && dB(BB)
       }
-      return (0, FJ.useEffect)((() => {
-        xJ && (nJ(!0), (0, BJ.d)(xJ).then((JJ => {
-          var cJ;
-          GJ.current && (JJ ? (jJ(JJ.metaData.id), hJ(null !== (cJ = JJ.metaData.fromFolderName) && void 0 !== cJ ? cJ : null), UJ(JJ)) : console.error(`No texture pack at ${xJ}`))
-        })).catch((JJ => {
-          console.error("Error fetching texture pack: ", JJ)
+      return (0, VB.useEffect)((() => {
+        EB && (DB(!0), (0, AB.c)(EB).then((BB => {
+          var TB;
+          uB.current && (BB ? (gB(BB.metaData.id), kB(null !== (TB = BB.metaData.fromFolderName) && void 0 !== TB ? TB : null), yB(BB)) : console.error(`No texture pack at ${EB}`))
+        })).catch((BB => {
+          console.error("Error fetching texture pack: ", BB)
         })).finally((() => {
-          nJ(!1)
+          DB(!1)
         })))
-      }), [xJ, UJ, GJ]), (0, mJ.jsxs)("div", {
+      }), [EB, yB, uB]), (0, iB.jsxs)("div", {
         className: "BloxdForm TexturePackSection",
-        children: [(0, mJ.jsx)("div", {
+        children: [(0, iB.jsx)("div", {
           className: "SectionTitle",
-          children: XJ("customTexturePack:customTexturePack")
-        }), (0, mJ.jsxs)("div", {
+          children: lB("customTexturePack:customTexturePack")
+        }), (0, iB.jsxs)("div", {
           className: "TexturePackList",
-          children: [(0, mJ.jsx)("div", {
-            className: sJ()("TexturePack", {
-              Selected: null === qJ && !DJ,
-              Disabled: !fJ
+          children: [(0, iB.jsx)("div", {
+            className: OB()("TexturePack", {
+              Selected: null === YB && !LB,
+              Disabled: !HB
             }),
             onClick: () => {
-              fJ && (jJ(null), ZJ(null), hJ(null))
+              HB && (gB(null), dB(null), kB(null))
             },
-            children: (0, mJ.jsx)("div", {
+            children: (0, iB.jsx)("div", {
               className: "TexturePackName",
               children: "No Override"
             })
-          }), Object.values(aJ.r).map((JJ => (0, mJ.jsx)(tJ.f, {
-            id: JJ,
-            isSelected: JJ === qJ,
-            setSelected: rJ,
-            disabled: !fJ
-          }, JJ)))]
-        }), qJ === aJ.r.CUSTOM && (0, mJ.jsx)(oJ.e, {
-          folderName: YJ,
-          onTexturePackUpdated: rJ,
-          disabled: !fJ,
+          }), Object.values(jB.r).map((BB => (0, iB.jsx)(bB.d, {
+            id: BB,
+            isSelected: BB === YB,
+            setSelected: vB,
+            disabled: !HB
+          }, BB)))]
+        }), YB === jB.r.CUSTOM && (0, iB.jsx)(nB.e, {
+          folderName: oB,
+          onTexturePackUpdated: vB,
+          disabled: !HB,
           maxFileSizeMb: 25,
           packOwner: "customGame"
         })]
       })
     }
-    var Jc = ZJ(4456);
+    var BT = dB(4470);
 
-    function cc(JJ) {
-      var cJ;
+    function TT(BB) {
+      var TB;
       let {
-        gameCategory: ZJ,
-        setGameCategory: FJ,
-        disabled: UJ
-      } = JJ;
-      const XJ = null !== (cJ = (0, nJ.X)(ZJ)) && void 0 !== cJ ? cJ : "other";
-      return (0, mJ.jsxs)("div", {
+        gameCategory: dB,
+        setGameCategory: VB,
+        disabled: yB
+      } = BB;
+      const lB = null !== (TB = (0, DB.hb)(dB)) && void 0 !== TB ? TB : "other";
+      return (0, iB.jsxs)("div", {
         className: "GameCategoryPicker",
-        children: [(0, mJ.jsx)(xJ.g, {
+        children: [(0, iB.jsx)(EB.g, {
           label: "worldBuilder:gameCategoryGroup",
           className: "GameCategoryGroup",
-          disabled: UJ,
-          children: (0, mJ.jsx)(rJ.d, {
-            options: nJ.N.map((JJ => ({
-              value: JJ,
-              label: nJ.L[JJ]
+          disabled: yB,
+          children: (0, iB.jsx)(vB.e, {
+            options: DB.W.map((BB => ({
+              value: BB,
+              label: DB.U[BB]
             }))),
-            value: XJ,
-            onChange: JJ => {
-              JJ.value !== XJ && FJ(nJ.H[JJ.value][0])
+            value: lB,
+            onChange: BB => {
+              BB.value !== lB && VB(DB.P[BB.value][0])
             }
           })
-        }), (0, mJ.jsx)(xJ.g, {
+        }), (0, iB.jsx)(EB.g, {
           label: "worldBuilder:gameCategory",
           className: "GameCategory",
-          disabled: UJ,
-          children: (0, mJ.jsx)("div", {
+          disabled: yB,
+          children: (0, iB.jsx)("div", {
             className: "GameCategoryOptions",
-            children: nJ.H[XJ].map((JJ => (0, mJ.jsx)(eJ.O, {
-              active: JJ === ZJ,
+            children: DB.P[lB].map((BB => (0, iB.jsx)(pB.T, {
+              active: BB === dB,
               onClick: () => {
-                FJ(JJ)
+                VB(BB)
               },
-              children: (0, nJ.T)(JJ)
-            }, JJ)))
+              children: (0, DB.db)(BB)
+            }, BB)))
           })
         })]
       })
     }
 
-    function Zc(JJ) {
+    function dT(BB) {
       let {
-        editor: cJ,
-        onClose: ZJ
-      } = JJ;
+        editor: TB,
+        onClose: dB
+      } = BB;
       const {
-        t: FJ
-      } = (0, AJ.F)(), {
-        schematicData: UJ,
-        updateSchematicData: eJ,
-        publishFormEnabled: qJ,
-        formEnabled: jJ
-      } = cJ;
-      return (0, mJ.jsxs)(mJ.Fragment, {
-        children: [(0, mJ.jsxs)(QJ, {
+        t: VB
+      } = (0, JB.z)(), {
+        schematicData: yB,
+        updateSchematicData: pB,
+        publishFormEnabled: YB,
+        formEnabled: gB
+      } = TB;
+      return (0, iB.jsxs)(iB.Fragment, {
+        children: [(0, iB.jsxs)(NB, {
           icon: "pen-to-square",
-          title: FJ("worldBuilder:basicsSection"),
-          disabled: !jJ,
-          children: [(0, mJ.jsx)(EJ, {
-            label: FJ("general:name"),
-            caption: FJ("worldBuilder:schematicNameTagsHint"),
-            children: (0, mJ.jsx)(XJ.e, {
+          title: VB("worldBuilder:basicsSection"),
+          disabled: !gB,
+          children: [(0, iB.jsx)(tB, {
+            label: VB("general:name"),
+            caption: VB("worldBuilder:schematicNameTagsHint"),
+            children: (0, iB.jsx)(lB.e, {
               className: "SchematicPageName",
-              defaultValue: UJ.name,
-              onValueChange: JJ => eJ("name", JJ),
-              placeholderText: FJ("worldBuilder:schematicNamePlaceholder"),
-              maxLength: hJ.qb
+              defaultValue: yB.name,
+              onValueChange: BB => pB("name", BB),
+              placeholderText: VB("worldBuilder:schematicNamePlaceholder"),
+              maxLength: kB.wb
             })
-          }), (0, mJ.jsx)(EJ, {
-            label: FJ("general:description"),
-            children: (0, mJ.jsx)(XJ.e, {
+          }), (0, iB.jsx)(tB, {
+            label: VB("general:description"),
+            children: (0, iB.jsx)(lB.e, {
               className: "SchematicPageDescription",
               useTextarea: !0,
-              defaultValue: UJ.description,
-              onValueChange: JJ => eJ("description", JJ),
-              placeholderText: FJ("worldBuilder:schematicDescriptionPlaceholder"),
-              maxLength: hJ.nb
+              defaultValue: yB.description,
+              onValueChange: BB => pB("description", BB),
+              placeholderText: VB("worldBuilder:schematicDescriptionPlaceholder"),
+              maxLength: kB.vb
             })
-          }), (0, mJ.jsx)(cc, {
-            gameCategory: UJ.gameCategory,
-            setGameCategory: JJ => eJ("gameCategory", JJ),
-            disabled: !qJ
-          }), !0 === UJ.gamePublished && (0, mJ.jsx)(iJ, {
-            schematicData: UJ,
-            updateSchematicData: eJ,
-            publishFormEnabled: qJ,
+          }), (0, iB.jsx)(TT, {
+            gameCategory: yB.gameCategory,
+            setGameCategory: BB => pB("gameCategory", BB),
+            disabled: !YB
+          }), !0 === yB.gamePublished && (0, iB.jsx)(GB, {
+            schematicData: yB,
+            updateSchematicData: pB,
+            publishFormEnabled: YB,
             onClose: function() {
-              null === ZJ || void 0 === ZJ || ZJ()
+              null === dB || void 0 === dB || dB()
             }
           })]
-        }), (0, mJ.jsx)(KJ, {
-          schematicData: UJ,
-          updateSchematicData: eJ,
-          publishFormEnabled: qJ,
-          formEnabled: jJ
-        }), !0 === UJ.gamePublished && (0, mJ.jsx)(QJ, {
+        }), (0, iB.jsx)(sB, {
+          schematicData: yB,
+          updateSchematicData: pB,
+          publishFormEnabled: YB,
+          formEnabled: gB
+        }), !0 === yB.gamePublished && (0, iB.jsx)(NB, {
           icon: "palette",
-          title: FJ("worldBuilder:texturePackSection"),
-          disabled: !jJ,
-          children: (0, mJ.jsx)(lJ, {
-            schematicData: UJ,
-            setTexturePack: cJ.setTexturePack,
-            initializeTexturePack: cJ.initializeTexturePack,
-            publishFormEnabled: qJ
+          title: VB("worldBuilder:texturePackSection"),
+          disabled: !gB,
+          children: (0, iB.jsx)(eB, {
+            schematicData: yB,
+            setTexturePack: TB.setTexturePack,
+            initializeTexturePack: TB.initializeTexturePack,
+            publishFormEnabled: YB
           })
         })]
       })
     }
 
-    function Fc(JJ) {
+    function VT(BB) {
       let {
-        editor: cJ
-      } = JJ;
+        editor: TB
+      } = BB;
       const {
-        t: ZJ
-      } = (0, AJ.F)(), {
-        schematicData: FJ,
-        formEnabled: UJ,
-        hasUnsavedChanges: XJ
-      } = cJ, hJ = UJ && XJ;
-      return (0, mJ.jsxs)("footer", {
+        t: dB
+      } = (0, JB.z)(), {
+        schematicData: VB,
+        formEnabled: yB,
+        hasUnsavedChanges: lB
+      } = TB, kB = yB && lB;
+      return (0, iB.jsxs)("footer", {
         className: "SchematicPageFooter",
-        children: [UJ && XJ && (0, mJ.jsxs)("div", {
+        children: [yB && lB && (0, iB.jsxs)("div", {
           className: "SchematicPageFooterStatus",
-          children: [(0, mJ.jsx)("span", {
+          children: [(0, iB.jsx)("span", {
             className: "SchematicPageFooterStatusDot"
-          }), ZJ("worldBuilder:unsavedChanges")]
-        }), (0, mJ.jsx)(jJ.g, {
-          tooltipInner: (0, mJ.jsx)("div", {
+          }), dB("worldBuilder:unsavedChanges")]
+        }), (0, iB.jsx)(gB.h, {
+          tooltipInner: (0, iB.jsx)("div", {
             className: "SaveButtonTooltip",
-            children: ZJ(UJ && !XJ ? "worldBuilder:saveChangesNoneDescription" : "worldBuilder:saveChangesDescription")
+            children: dB(yB && !lB ? "worldBuilder:saveChangesNoneDescription" : "worldBuilder:saveChangesDescription")
           }),
-          children: (0, mJ.jsxs)(eJ.d, {
+          children: (0, iB.jsxs)(pB.d, {
             className: "SaveChangesButton",
-            onClick: () => cJ.saveSchematic(FJ.gamePublished),
-            disabled: !hJ,
-            children: [(0, mJ.jsxs)("span", {
-              className: UJ ? "" : "SaveChangesButtonBodyHidden",
-              children: [(0, mJ.jsx)(YJ.c, {
+            onClick: () => TB.saveSchematic(VB.gamePublished),
+            disabled: !kB,
+            children: [(0, iB.jsxs)("span", {
+              className: yB ? "" : "SaveChangesButtonBodyHidden",
+              children: [(0, iB.jsx)(oB.e, {
                 name: "wrench"
-              }), " ", ZJ("worldBuilder:saveChanges")]
-            }), !UJ && (0, mJ.jsx)(qJ.c, {})]
+              }), " ", dB("worldBuilder:saveChanges")]
+            }), !yB && (0, iB.jsx)(YB.b, {})]
           })
         })]
       })
     }
 
-    function Uc(JJ) {
+    function yT(BB) {
       let {
-        schematic: cJ,
-        onSchematicUpdate: ZJ,
-        onClose: UJ,
-        inSourceWorld: XJ
-      } = JJ;
+        schematic: TB,
+        onSchematicUpdate: dB,
+        onClose: yB,
+        inSourceWorld: lB
+      } = BB;
       const {
-        t: qJ
-      } = (0, AJ.F)();
+        t: YB
+      } = (0, JB.z)();
 
-      function jJ() {
-        null === UJ || void 0 === UJ || UJ()
+      function gB() {
+        null === yB || void 0 === yB || yB()
       }
-      const YJ = (0, Jc.e)(cJ, {
-        onNavigateAway: jJ,
-        inSourceWorld: XJ
+      const oB = (0, BT.e)(TB, {
+        onNavigateAway: gB,
+        inSourceWorld: lB
       });
-      return (0, FJ.useEffect)((() => {
-        null === ZJ || void 0 === ZJ || ZJ(YJ.schematicData)
-      }), [YJ.schematicData, ZJ]), (0, mJ.jsxs)("div", {
+      return (0, VB.useEffect)((() => {
+        null === dB || void 0 === dB || dB(oB.schematicData)
+      }), [oB.schematicData, dB]), (0, iB.jsxs)("div", {
         className: "SchematicPage SchematicPagePopupVariant",
-        children: [(0, mJ.jsxs)("div", {
+        children: [(0, iB.jsxs)("div", {
           className: "SchematicPageBody",
-          children: [(0, mJ.jsx)(eJ.b, {
-            onClick: jJ,
-            children: qJ("worldBuilder:back")
-          }), (0, mJ.jsx)(QJ, {
+          children: [(0, iB.jsx)(pB.b, {
+            onClick: gB,
+            children: YB("worldBuilder:back")
+          }), (0, iB.jsx)(NB, {
             icon: "rocket-launch",
-            title: qJ("worldBuilder:actionsSection"),
-            disabled: !YJ.formEnabled,
-            children: (0, mJ.jsx)(yJ.d, {
-              editor: YJ
+            title: YB("worldBuilder:actionsSection"),
+            disabled: !oB.formEnabled,
+            children: (0, iB.jsx)(MB.b, {
+              editor: oB
             })
-          }), (0, mJ.jsx)(Zc, {
-            editor: YJ,
-            onClose: jJ
+          }), (0, iB.jsx)(dT, {
+            editor: oB,
+            onClose: gB
           })]
-        }), (0, mJ.jsx)(Fc, {
-          editor: YJ
+        }), (0, iB.jsx)(VT, {
+          editor: oB
         })]
       })
     }
 
-    function ec(JJ) {
+    function pT(BB) {
       let {
-        schematic: cJ,
-        onSchematicUpdate: ZJ,
-        onClose: FJ,
-        inSourceWorld: eJ
-      } = JJ;
-      UJ.NotificationProvider.showCustomPopup({
-        body: JJ => (0, mJ.jsx)(Uc, {
-          schematic: cJ,
-          onSchematicUpdate: ZJ,
-          onClose: JJ,
-          inSourceWorld: eJ
+        schematic: TB,
+        onSchematicUpdate: dB,
+        onClose: VB,
+        inSourceWorld: pB
+      } = BB;
+      yB.NotificationProvider.showCustomPopup({
+        body: BB => (0, iB.jsx)(yT, {
+          schematic: TB,
+          onSchematicUpdate: dB,
+          onClose: BB,
+          inSourceWorld: pB
         }),
         middleScreenPopupClassName: "SchematicPopup",
-        onClose: FJ,
+        onClose: VB,
         unlockPointerKey: "schematicPagePopup"
       })
     }
   },
-  4362: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => hJ
+  4362: (BB, TB, dB) => {
+    dB.d(TB, {
+      b: () => kB
     });
-    var FJ = ZJ(926),
-      UJ = ZJ.n(FJ),
-      eJ = ZJ(1086),
-      XJ = ZJ(942),
-      AJ = ZJ(1329),
-      qJ = ZJ(1259),
-      jJ = ZJ(1232),
-      YJ = ZJ(990);
+    var VB = dB(933),
+      yB = dB.n(VB),
+      pB = dB(1078),
+      lB = dB(946),
+      JB = dB(1324),
+      YB = dB(1249),
+      gB = dB(1225),
+      oB = dB(980);
 
-    function hJ(JJ) {
+    function kB(BB) {
       let {
-        editor: cJ,
-        className: ZJ
-      } = JJ;
+        editor: TB,
+        className: dB
+      } = BB;
       const {
-        t: FJ
-      } = (0, eJ.F)(), {
-        schematicData: hJ,
-        formEnabled: DJ,
-        publishFormEnabled: sJ
-      } = cJ, nJ = !DJ || !sJ;
-      return (0, YJ.jsxs)("div", {
-        className: UJ()("PublishButtonContainer", ZJ),
-        children: [cJ.canEditSourceWorld && (0, YJ.jsxs)(AJ.d, {
-          onClick: cJ.editSourceWorld,
-          disabled: nJ,
-          children: [(0, YJ.jsx)(XJ.c, {
+        t: VB
+      } = (0, pB.z)(), {
+        schematicData: kB,
+        formEnabled: LB,
+        publishFormEnabled: OB
+      } = TB, DB = !LB || !OB;
+      return (0, oB.jsxs)("div", {
+        className: yB()("PublishButtonContainer", dB),
+        children: [TB.canEditSourceWorld && (0, oB.jsxs)(JB.d, {
+          onClick: TB.editSourceWorld,
+          disabled: DB,
+          children: [(0, oB.jsx)(lB.e, {
             name: "edit"
-          }), " ", FJ("worldBuilder:editSourceWorld")]
-        }), !hJ.gamePublished && (0, YJ.jsx)(qJ.g, {
-          tooltipInner: (0, YJ.jsx)("div", {
+          }), " ", VB("worldBuilder:editSourceWorld")]
+        }), !kB.gamePublished && (0, oB.jsx)(YB.h, {
+          tooltipInner: (0, oB.jsx)("div", {
             className: "PublishButtonTooltip",
-            children: FJ("worldBuilder:publishAsGameDescription")
+            children: VB("worldBuilder:publishAsGameDescription")
           }),
-          children: (0, YJ.jsxs)(AJ.m, {
-            onClick: () => cJ.saveSchematic(!0),
-            disabled: nJ,
-            children: [(0, YJ.jsx)(XJ.c, {
+          children: (0, oB.jsxs)(JB.k, {
+            onClick: () => TB.saveSchematic(!0),
+            disabled: DB,
+            children: [(0, oB.jsx)(lB.e, {
               name: "rocket-launch"
-            }), " ", FJ("worldBuilder:publishAsGame"), " ", (0, YJ.jsx)(XJ.c, {
+            }), " ", VB("worldBuilder:publishAsGame"), " ", (0, oB.jsx)(lB.e, {
               name: "info-circle"
             })]
           })
-        }), !0 === hJ.gamePublished && (0, YJ.jsxs)(YJ.Fragment, {
-          children: [(0, YJ.jsx)(qJ.g, {
-            tooltipInner: (0, YJ.jsx)("div", {
+        }), !0 === kB.gamePublished && (0, oB.jsxs)(oB.Fragment, {
+          children: [(0, oB.jsx)(YB.h, {
+            tooltipInner: (0, oB.jsx)("div", {
               className: "PublishButtonTooltip",
-              children: FJ("worldBuilder:unpublishAsGameDescription")
+              children: VB("worldBuilder:unpublishAsGameDescription")
             }),
-            children: (0, YJ.jsxs)(AJ.I, {
-              onClick: cJ.unpublishSchematic,
-              disabled: nJ,
-              children: [(0, YJ.jsx)(XJ.c, {
+            children: (0, oB.jsxs)(JB.K, {
+              onClick: TB.unpublishSchematic,
+              disabled: DB,
+              children: [(0, oB.jsx)(lB.e, {
                 name: "rocket-launch"
-              }), " ", FJ("worldBuilder:unpublishAsGame"), " ", (0, YJ.jsx)(XJ.c, {
+              }), " ", VB("worldBuilder:unpublishAsGame"), " ", (0, oB.jsx)(lB.e, {
                 name: "info-circle"
               })]
             })
-          }), (0, YJ.jsxs)(AJ.d, {
-            onClick: cJ.playGame,
-            disabled: nJ,
-            children: [(0, YJ.jsx)(XJ.c, {
+          }), (0, oB.jsxs)(JB.d, {
+            onClick: TB.playGame,
+            disabled: DB,
+            children: [(0, oB.jsx)(lB.e, {
               name: "joystick"
-            }), " ", FJ("general:playGame")]
+            }), " ", VB("general:playGame")]
           })]
-        }), !DJ && (0, YJ.jsx)(jJ.c, {
+        }), !LB && (0, oB.jsx)(gB.b, {
           loaderType: "Secondary"
         })]
       })
     }
   },
-  4392: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => UJ
+  4400: (BB, TB, dB) => {
+    dB.d(TB, {
+      c: () => yB
     });
-    var FJ = ZJ(1098);
-    async function UJ(JJ) {
-      const cJ = await fetch(`${FJ.clientSideServerUrls.s3Url}/${JJ}`, {
+    var VB = dB(1089);
+    async function yB(BB) {
+      const TB = await fetch(`${VB.clientSideServerUrls.s3Url}/${BB}`, {
         headers: {
           Accept: "application/json"
         }
       });
-      if (404 === cJ.status || 403 === cJ.status) return null;
-      if (!cJ.ok) throw new Error(`Failed to download the texture pack (${cJ.status})`);
-      return await cJ.json()
+      if (404 === TB.status || 403 === TB.status) return null;
+      if (!TB.ok) throw new Error(`Failed to download the texture pack (${TB.status})`);
+      return await TB.json()
     }
   },
-  4456: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      e: () => fJ
+  4470: (BB, TB, dB) => {
+    dB.d(TB, {
+      e: () => HB
     });
-    var FJ = ZJ(47),
-      UJ = ZJ(1221),
-      eJ = ZJ(889),
-      XJ = ZJ(143),
-      AJ = ZJ(1447),
-      qJ = ZJ(13),
-      jJ = ZJ(1703),
-      YJ = ZJ(1389),
-      hJ = ZJ(4006),
-      DJ = ZJ(1247),
-      sJ = ZJ(1022),
-      nJ = ZJ(1406);
+    var VB = dB(62),
+      yB = dB(1214),
+      pB = dB(900),
+      lB = dB(163),
+      JB = dB(1445),
+      YB = dB(21),
+      gB = dB(1679),
+      oB = dB(1393),
+      kB = dB(3993),
+      LB = dB(1235),
+      OB = dB(1011),
+      DB = dB(1407);
 
-    function GJ(JJ, cJ) {
+    function uB(BB, TB) {
       return {
-        schematicId: JJ.schematicId,
-        name: JJ.name,
-        description: JJ.description,
-        gamePublished: cJ,
-        gameCategory: JJ.gameCategory,
-        defaultGamemode: JJ.defaultGamemode,
-        voidDeathHeight: JJ.voidDeathHeight,
-        disableKeepInventory: JJ.disableKeepInventory,
-        disableTpRequests: JJ.disableTpRequests,
-        disableLobbySpawn: JJ.disableLobbySpawn,
-        disableMobs: JJ.disableMobs,
-        disableSpawnProtection: JJ.disableSpawnProtection,
-        disableFallDamage: JJ.disableFallDamage,
-        worldBorder: JJ.worldBorder,
-        hideLobbyCode: JJ.hideLobbyCode,
-        enableSmpMarketplace: JJ.enableSmpMarketplace,
-        enableSurvivalGuns: JJ.enableSurvivalGuns,
-        enableSpawnReset: JJ.enableSpawnReset,
-        enableDayNight: JJ.enableDayNight,
-        persistWorld: JJ.persistWorld,
-        persistInventory: JJ.persistInventory
+        schematicId: BB.schematicId,
+        name: BB.name,
+        description: BB.description,
+        gamePublished: TB,
+        gameCategory: BB.gameCategory,
+        defaultGamemode: BB.defaultGamemode,
+        voidDeathHeight: BB.voidDeathHeight,
+        disableKeepInventory: BB.disableKeepInventory,
+        disableTpRequests: BB.disableTpRequests,
+        disableLobbySpawn: BB.disableLobbySpawn,
+        disableMobs: BB.disableMobs,
+        disableSpawnProtection: BB.disableSpawnProtection,
+        disableFallDamage: BB.disableFallDamage,
+        worldBorder: BB.worldBorder,
+        hideLobbyCode: BB.hideLobbyCode,
+        enableSmpMarketplace: BB.enableSmpMarketplace,
+        enableSurvivalGuns: BB.enableSurvivalGuns,
+        enableSpawnReset: BB.enableSpawnReset,
+        enableDayNight: BB.enableDayNight,
+        persistWorld: BB.persistWorld,
+        persistInventory: BB.persistInventory
       }
     }
 
-    function fJ(JJ) {
+    function HB(BB) {
       let {
-        onNavigateAway: cJ,
-        inSourceWorld: ZJ = !1
+        onNavigateAway: TB,
+        inSourceWorld: dB = !1
       } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
       const {
-        userContext: fJ
-      } = (0, sJ.d)(), xJ = (0, nJ.useNavigatePreserveSearch)(), [rJ, vJ] = (0, FJ.useState)({
-        ...JJ
-      }), [mJ, QJ] = (0, FJ.useState)("Enter"), [EJ, VJ] = (0, FJ.useState)(void 0), KJ = (0, FJ.useRef)(GJ(JJ, JJ.gamePublished)), yJ = (0, FJ.useRef)(void 0), SJ = "Enter" === mJ, IJ = fJ.playerHasRank("developer") || fJ.playerHasRank("admin") || "Enter" === mJ && !1 !== rJ.schematicContainsSpawnBlock, MJ = void 0 !== EJ && EJ !== yJ.current || JSON.stringify(GJ(rJ, rJ.gamePublished)) !== JSON.stringify(KJ.current);
+        userContext: HB
+      } = (0, OB.b)(), EB = (0, DB.useNavigatePreserveSearch)(), [vB, mB] = (0, VB.useState)({
+        ...BB
+      }), [iB, NB] = (0, VB.useState)("Enter"), [tB, fB] = (0, VB.useState)(void 0), sB = (0, VB.useRef)(uB(BB, BB.gamePublished)), MB = (0, VB.useRef)(void 0), zB = "Enter" === iB, wB = HB.playerHasRank("developer") || HB.playerHasRank("admin") || "Enter" === iB && !1 !== vB.schematicContainsSpawnBlock, UB = void 0 !== tB && tB !== MB.current || JSON.stringify(uB(vB, vB.gamePublished)) !== JSON.stringify(sB.current);
 
-      function bJ(JJ, cJ) {
-        vJ((ZJ => ({
-          ...ZJ,
-          [JJ]: cJ
+      function FB(BB, TB) {
+        mB((dB => ({
+          ...dB,
+          [BB]: TB
         })))
       }
-      const wJ = (0, FJ.useCallback)((JJ => {
-        yJ.current = JJ, VJ(JJ)
+      const KB = (0, VB.useCallback)((BB => {
+        MB.current = BB, fB(BB)
       }), []);
 
-      function WJ(JJ) {
-        QJ("Loading");
-        const cJ = GJ(rJ, JJ),
-          ZJ = EJ !== yJ.current ? EJ : void 0;
-        YJ.c.updateSchematic(fJ, cJ, ZJ).then((ZJ => {
+      function rB(BB) {
+        NB("Loading");
+        const TB = uB(vB, BB),
+          dB = tB !== MB.current ? tB : void 0;
+        oB.c.updateSchematic(HB, TB, dB).then((dB => {
           let {
-            customTexturePackKey: FJ
-          } = ZJ;
-          QJ("Success"), bJ("customTexturePackKey", FJ), KJ.current = cJ, yJ.current = void 0, VJ(void 0), setTimeout((() => {
-            bJ("gamePublished", JJ), QJ("Enter")
+            customTexturePackKey: VB
+          } = dB;
+          NB("Success"), FB("customTexturePackKey", VB), sB.current = TB, MB.current = void 0, fB(void 0), setTimeout((() => {
+            FB("gamePublished", BB), NB("Enter")
           }), 1e3)
-        })).catch((JJ => {
-          var cJ;
-          (console.error("Failed to save schematic:", JJ), QJ("Error"), JJ instanceof XJ.b && JJ.errorMessageForUser) && DJ.NotificationProvider.showAlertPopup({
+        })).catch((BB => {
+          var TB;
+          (console.error("Failed to save schematic:", BB), NB("Error"), BB instanceof lB.b && BB.errorMessageForUser) && LB.NotificationProvider.showAlertPopup({
             title: "worldBuilder:changesNotSaved",
-            subtitle: JJ.errorMessageForUser,
+            subtitle: BB.errorMessageForUser,
             textOpts: {
-              subtitle: null !== (cJ = JJ.errorMessageTranslationParams) && void 0 !== cJ ? cJ : void 0
+              subtitle: null !== (TB = BB.errorMessageTranslationParams) && void 0 !== TB ? TB : void 0
             },
             confirmText: "general:ok"
           });
           setTimeout((() => {
-            QJ("Enter")
+            NB("Enter")
           }), 1e3)
         }))
       }
       return {
-        schematicData: rJ,
-        updateSchematicData: bJ,
-        setTexturePack: VJ,
-        initializeTexturePack: wJ,
-        updateState: mJ,
-        formEnabled: SJ,
-        publishFormEnabled: IJ,
-        hasUnsavedChanges: MJ,
-        canEditSourceWorld: !ZJ,
-        saveSchematic: WJ,
+        schematicData: vB,
+        updateSchematicData: FB,
+        setTexturePack: fB,
+        initializeTexturePack: KB,
+        updateState: iB,
+        formEnabled: zB,
+        publishFormEnabled: wB,
+        hasUnsavedChanges: UB,
+        canEditSourceWorld: !dB,
+        saveSchematic: rB,
         unpublishSchematic: function() {
-          DJ.NotificationProvider.showPromptPopup({
+          LB.NotificationProvider.showPromptPopup({
             icon: "rocket-launch",
             title: "worldBuilder:unpublishAsGameConfirmTitle",
             subtitle: "worldBuilder:unpublishAsGameConfirmSubtitle",
             confirmText: "worldBuilder:unpublishAsGame",
             cancelText: "general:cancel",
             unlockPointerKey: "unpublishGamePrompt"
-          }).getResult().then((JJ => {
-            !0 === JJ && WJ(!1)
+          }).getResult().then((BB => {
+            !0 === BB && rB(!1)
           }))
         },
         editSourceWorld: function() {
-          QJ("Loading"), hJ.e.getSourceWorld(rJ.schematicId).then((JJ => {
-            jJ.gameBridge.send("leaveGame", {
+          NB("Loading"), kB.e.getSourceWorld(vB.schematicId).then((BB => {
+            gB.gameBridge.send("leaveGame", {
               reloadPath: "/"
-            }), (0, qJ.h)("other"), xJ((0, UJ.c)("classic", JJ)), null === cJ || void 0 === cJ || cJ()
-          })).catch((JJ => {
-            console.error("Failed to get source world:", JJ), QJ("Error"), setTimeout((() => {
-              QJ("Enter")
+            }), (0, YB.i)("other"), EB((0, yB.b)("classic", BB)), null === TB || void 0 === TB || TB()
+          })).catch((BB => {
+            console.error("Failed to get source world:", BB), NB("Error"), setTimeout((() => {
+              NB("Enter")
             }), 1e3)
           }))
         },
         playGame: function() {
-          jJ.gameBridge.send("leaveGame", {
+          gB.gameBridge.send("leaveGame", {
             reloadPath: "/"
-          }), xJ((0, AJ.t)((0, eJ.p)(rJ.schematicId), rJ)), null === cJ || void 0 === cJ || cJ()
+          }), EB((0, JB.z)((0, pB.t)(vB.schematicId), vB)), null === TB || void 0 === TB || TB()
         }
       }
     }
   },
-  4351: () => {}
+  4346: () => {}
 };
 Object.freeze(modules);
-for (const JJ in modules) Object.freeze(modules[JJ]);
+for (const BB in modules) Object.freeze(modules[BB]);

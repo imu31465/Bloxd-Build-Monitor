@@ -1,26 +1,26 @@
 export const id = 227;
 export const ids = [227];
 export const modules = {
-  38416: (JJ, cJ, ZJ) => {
-    ZJ.r(cJ), ZJ.d(cJ, {
-      default: () => JF
+  38377: (BB, TB, dB) => {
+    dB.r(TB), dB.d(TB, {
+      default: () => TV
     });
-    const FJ = [0, 90, 180, 270],
-      UJ = "plotsblueprint";
-    var eJ = ZJ(47),
-      XJ = ZJ(35661),
-      AJ = ZJ(13),
-      qJ = ZJ(1528),
-      jJ = ZJ(1599),
-      YJ = ZJ(17);
-    const hJ = [
+    const VB = [0, 90, 180, 270],
+      yB = "plotsblueprint";
+    var pB = dB(62),
+      lB = dB(35595),
+      JB = dB(21),
+      YB = dB(1507),
+      gB = dB(1596),
+      oB = dB(24);
+    const kB = [
         ["well", "greenhouse", "farmhouse"],
         ["tent", "cottage", "windmill"],
         ["marketStall", "gazebo", "bakery"],
         ["bridge", "lookoutTower", "lighthouse"]
       ],
-      DJ = hJ.flat(),
-      sJ = {
+      LB = kB.flat(),
+      OB = {
         well: {
           displayName: {
             translationKey: "plotsGame:blueprintWell"
@@ -95,16 +95,16 @@ export const modules = {
         }
       };
 
-    function nJ(JJ) {
-      return sJ[JJ]
+    function DB(BB) {
+      return OB[BB]
     }
-    const GJ = new Map(hJ.flatMap((JJ => JJ.slice(1).map(((cJ, ZJ) => [cJ, JJ[ZJ]])))));
+    const uB = new Map(kB.flatMap((BB => BB.slice(1).map(((TB, dB) => [TB, BB[dB]])))));
 
-    function fJ(JJ) {
-      var cJ;
-      return null !== (cJ = GJ.get(JJ)) && void 0 !== cJ ? cJ : null
+    function HB(BB) {
+      var TB;
+      return null !== (TB = uB.get(BB)) && void 0 !== TB ? TB : null
     }
-    const xJ = {
+    const EB = {
       well: "plotsGame:journalNoteWell",
       tent: "plotsGame:journalNoteTent",
       lookoutTower: "plotsGame:journalNoteLookoutTower",
@@ -112,180 +112,180 @@ export const modules = {
       windmill: "plotsGame:journalNoteWindmill"
     };
 
-    function rJ(JJ, cJ) {
-      const ZJ = new Set(JJ),
-        FJ = function(JJ) {
-          const cJ = new Set(JJ);
-          return new Set(DJ.filter((JJ => {
-            const ZJ = fJ(JJ);
-            return null === ZJ || cJ.has(ZJ)
+    function vB(BB, TB) {
+      const dB = new Set(BB),
+        VB = function(BB) {
+          const TB = new Set(BB);
+          return new Set(LB.filter((BB => {
+            const dB = HB(BB);
+            return null === dB || TB.has(dB)
           })))
-        }(ZJ);
-      return DJ.map((JJ => {
-        const UJ = JJ === cJ;
-        return ZJ.has(JJ) ? {
-          id: JJ,
-          active: UJ,
+        }(dB);
+      return LB.map((BB => {
+        const yB = BB === TB;
+        return dB.has(BB) ? {
+          id: BB,
+          active: yB,
           state: "completed",
           unlockedBy: null
-        } : FJ.has(JJ) ? {
-          id: JJ,
-          active: UJ,
+        } : VB.has(BB) ? {
+          id: BB,
+          active: yB,
           state: "open",
           unlockedBy: null
         } : {
-          id: JJ,
-          active: UJ,
+          id: BB,
+          active: yB,
           state: "locked",
-          unlockedBy: fJ(JJ)
+          unlockedBy: HB(BB)
         }
       }))
     }
-    const vJ = "plotsJournalChanged";
-    class mJ {
-      constructor(JJ, cJ) {
-        this.api = JJ, this.placement = cJ, this.pages = null, this.openRequested = !1, this.reported = new Set, this.onOpened = () => {
-          this.placement.stop(), this.ls("journal_opened")
-        }, this.build = JJ => {
-          this.ls("placement_started"), this.placement.start(JJ), (0, XJ.f)()
+    const mB = "plotsJournalChanged";
+    class iB {
+      constructor(BB, TB) {
+        this.api = BB, this.placement = TB, this.pages = null, this.openRequested = !1, this.reported = new Set, this.onOpened = () => {
+          this.placement.stop(), this.yD("journal_opened")
+        }, this.build = BB => {
+          this.yD("placement_started"), this.placement.start(BB), (0, lB.g)()
         }, this.putAway = () => {
-          this.api.sendCommand(`${UJ} cancel`)
+          this.api.sendCommand(`${yB} cancel`)
         }
       }
       getPages() {
         return this.pages
       }
-      Qn(JJ) {
-        let [, cJ, ZJ] = JJ;
-        this.pages = rJ(cJ, ZJ), YJ.i.Uf(vJ, this.pages, !0)
+      MD(BB) {
+        let [, TB, dB] = BB;
+        this.pages = vB(TB, dB), oB.h.yH(mB, this.pages, !0)
       }
       openFromServer() {
-        this.openRequested = !0, this.Hh()
+        this.openRequested = !0, this.dL()
       }
-      Hh() {
-        this.openRequested && !AJ.d.get("loadingOverlayVisible") && (this.openRequested = !1, null === this.pages || (0, qJ.l)() || (0, jJ.isTypingInInput)() || null !== this.placement.getView() || (0, XJ.n)())
+      dL() {
+        this.openRequested && !JB.d.get("loadingOverlayVisible") && (this.openRequested = !1, null === this.pages || (0, YB.l)() || (0, gB.isTypingInInput)() || null !== this.placement.getView() || (0, lB.o)())
       }
-      ls(JJ) {
-        this.reported.has(JJ) || (this.reported.add(JJ), this.api.sendCommand(`${UJ} report ${JJ}`))
+      yD(BB) {
+        this.reported.has(BB) || (this.reported.add(BB), this.api.sendCommand(`${yB} report ${BB}`))
       }
     }
-    var QJ = ZJ(926),
-      EJ = ZJ.n(QJ),
-      VJ = ZJ(942),
-      KJ = ZJ(1329),
-      yJ = ZJ(3950),
-      SJ = ZJ(2906),
-      IJ = ZJ(1326),
-      MJ = ZJ(1861),
-      bJ = ZJ(1086),
-      wJ = ZJ(8636);
-    const WJ = [0, 90, 180, 270],
-      gJ = /^(meta\|rot\d)\|([lrud]+)$/,
-      HJ = "nesw",
-      PJ = /^meta\|([nesw]*)\|?(Stacked)?$/,
-      kJ = function(JJ) {
-        const cJ = new WeakMap;
-        return (ZJ, FJ) => {
-          let UJ = cJ.get(ZJ);
-          return void 0 === UJ && (UJ = JJ(ZJ, FJ), cJ.set(ZJ, UJ)), UJ
+    var NB = dB(933),
+      tB = dB.n(NB),
+      fB = dB(946),
+      sB = dB(1324),
+      MB = dB(3942),
+      zB = dB(2892),
+      wB = dB(1317),
+      UB = dB(1826),
+      FB = dB(1078),
+      KB = dB(8653);
+    const rB = [0, 90, 180, 270],
+      IB = /^(meta\|rot\d)\|([lrud]+)$/,
+      cB = "nesw",
+      SB = /^meta\|([nesw]*)\|?(Stacked)?$/,
+      PB = function(BB) {
+        const TB = new WeakMap;
+        return (dB, VB) => {
+          let yB = TB.get(dB);
+          return void 0 === yB && (yB = BB(dB, VB), TB.set(dB, yB)), yB
         }
-      }((JJ => new pJ(JJ)));
-    class pJ {
-      constructor(JJ) {
-        this.blockMetadata = JJ, this.blockIdMappings = new Map, this.maxBlockId = void 0;
-        const cJ = new Set(Object.keys(JJ).map((cJ => JJ[cJ].id)));
-        cJ.add(0), this.maxBlockId = Math.max(...cJ)
+      }((BB => new QB(BB)));
+    class QB {
+      constructor(BB) {
+        this.blockMetadata = BB, this.blockIdMappings = new Map, this.maxBlockId = void 0;
+        const TB = new Set(Object.keys(BB).map((TB => BB[TB].id)));
+        TB.add(0), this.maxBlockId = Math.max(...TB)
       }
       static
-      for (JJ) {
-        return kJ(JJ)
+      for (BB) {
+        return PB(BB)
       }
-      getBlockIdMapping(JJ, cJ) {
-        const ZJ = this.getBlockIdMappingKey(JJ, cJ);
-        let FJ = this.blockIdMappings.get(ZJ);
-        return void 0 === FJ && WJ.includes(JJ) && (FJ = this.createBlockIdMapping(this.blockMetadata, this.maxBlockId, JJ, cJ), this.blockIdMappings.set(ZJ, FJ)), FJ
+      getBlockIdMapping(BB, TB) {
+        const dB = this.getBlockIdMappingKey(BB, TB);
+        let VB = this.blockIdMappings.get(dB);
+        return void 0 === VB && rB.includes(BB) && (VB = this.createBlockIdMapping(this.blockMetadata, this.maxBlockId, BB, TB), this.blockIdMappings.set(dB, VB)), VB
       }
-      turnBlockId(JJ, cJ, ZJ) {
-        return this.mapBlockId(this.blockMetadata[JJ], cJ, this.getRotationMapping(cJ, ZJ), ZJ)
+      turnBlockId(BB, TB, dB) {
+        return this.mapBlockId(this.blockMetadata[BB], TB, this.getRotationMapping(TB, dB), dB)
       }
-      getBlockIdMappingKey(JJ, cJ) {
-        return `r${JJ}|m${Number(cJ)}`
+      getBlockIdMappingKey(BB, TB) {
+        return `r${BB}|m${Number(TB)}`
       }
-      createBlockIdMapping(JJ, cJ, ZJ, FJ) {
-        const UJ = new Uint16Array(cJ + 1),
-          eJ = this.getRotationMapping(ZJ, FJ);
-        for (const XJ in JJ) {
-          const cJ = JJ[XJ];
-          UJ[cJ.id] = this.mapBlockId(cJ, ZJ, eJ, FJ)
+      createBlockIdMapping(BB, TB, dB, VB) {
+        const yB = new Uint16Array(TB + 1),
+          pB = this.getRotationMapping(dB, VB);
+        for (const lB in BB) {
+          const TB = BB[lB];
+          yB[TB.id] = this.mapBlockId(TB, dB, pB, VB)
         }
-        return UJ
+        return yB
       }
-      getRotationMapping(JJ, cJ) {
-        const ZJ = Math.round(JJ / 90),
-          FJ = new Uint8Array(4);
-        for (let UJ = 0; UJ < 4; UJ++) FJ[UJ] = (4 + UJ - ZJ) % 4;
-        if (cJ) {
-          let JJ = FJ[0];
-          FJ[0] = FJ[1], FJ[1] = JJ, JJ = FJ[2], FJ[2] = FJ[3], FJ[3] = JJ
+      getRotationMapping(BB, TB) {
+        const dB = Math.round(BB / 90),
+          VB = new Uint8Array(4);
+        for (let yB = 0; yB < 4; yB++) VB[yB] = (4 + yB - dB) % 4;
+        if (TB) {
+          let BB = VB[0];
+          VB[0] = VB[1], VB[1] = BB, BB = VB[2], VB[2] = VB[3], VB[3] = BB
         }
-        return FJ
+        return VB
       }
-      mapBlockId(JJ, cJ, ZJ, FJ) {
-        var UJ;
+      mapBlockId(BB, TB, dB, VB) {
+        var yB;
         const {
-          blockMetadata: eJ
-        } = this, XJ = Math.round(cJ / 90), {
-          id: AJ,
-          meta: qJ
-        } = JJ, {
-          rot: jJ,
-          rootName: YJ,
-          metaStr: hJ
-        } = qJ;
-        let DJ;
-        const [, sJ, nJ] = null !== (UJ = PJ.exec(hJ)) && void 0 !== UJ ? UJ : [];
-        if (void 0 !== sJ) {
-          var GJ, fJ;
-          DJ = null !== (GJ = null === (fJ = eJ[`${YJ}|meta|${[HJ.split("").filter(((JJ,cJ)=>sJ.split("").some((JJ=>{const ZJ=HJ.indexOf(JJ);return((FJ?3-ZJ:ZJ)+XJ)%4===cJ})))).join(""),nJ].filter(Boolean).join("|")}`]) || void 0 === fJ ? void 0 : fJ.id) && void 0 !== GJ ? GJ : AJ
-        } else if (null === jJ) DJ = AJ;
+          blockMetadata: pB
+        } = this, lB = Math.round(TB / 90), {
+          id: JB,
+          meta: YB
+        } = BB, {
+          rot: gB,
+          rootName: oB,
+          metaStr: kB
+        } = YB;
+        let LB;
+        const [, OB, DB] = null !== (yB = SB.exec(kB)) && void 0 !== yB ? yB : [];
+        if (void 0 !== OB) {
+          var uB, HB;
+          LB = null !== (uB = null === (HB = pB[`${oB}|meta|${[cB.split("").filter(((BB,TB)=>OB.split("").some((BB=>{const dB=cB.indexOf(BB);return((VB?3-dB:dB)+lB)%4===TB})))).join(""),DB].filter(Boolean).join("|")}`]) || void 0 === HB ? void 0 : HB.id) && void 0 !== uB ? uB : JB
+        } else if (null === gB) LB = JB;
         else {
-          var xJ, rJ;
-          const JJ = ZJ[jJ - 1] + 1;
-          let cJ = hJ.replace(`rot${jJ}`, `rot${JJ}`);
-          FJ && qJ.stairsCorner && (cJ = cJ.replace(/(Left|Right)$/, (JJ => "Left" === JJ ? "Right" : "Left"))), FJ && "Chest" === YJ && (cJ = cJ.replace(/\|(left|right)$/, ((JJ, cJ) => "left" === cJ ? "|right" : "|left")));
-          const UJ = gJ.exec(cJ);
-          if (FJ && null !== UJ) {
-            const JJ = "lrud".split("").filter((JJ => UJ[2].includes("l" === JJ ? "r" : "r" === JJ ? "l" : JJ)));
-            cJ = `${UJ[1]}|${JJ.join("")}`
+          var EB, vB;
+          const BB = dB[gB - 1] + 1;
+          let TB = kB.replace(`rot${gB}`, `rot${BB}`);
+          VB && YB.stairsCorner && (TB = TB.replace(/(Left|Right)$/, (BB => "Left" === BB ? "Right" : "Left"))), VB && "Chest" === oB && (TB = TB.replace(/\|(left|right)$/, ((BB, TB) => "left" === TB ? "|right" : "|left")));
+          const yB = IB.exec(TB);
+          if (VB && null !== yB) {
+            const BB = "lrud".split("").filter((BB => yB[2].includes("l" === BB ? "r" : "r" === BB ? "l" : BB)));
+            TB = `${yB[1]}|${BB.join("")}`
           }
-          const XJ = `${YJ}|${cJ}`;
-          if (DJ = null !== (xJ = null === (rJ = eJ[XJ]) || void 0 === rJ ? void 0 : rJ.id) && void 0 !== xJ ? xJ : null, null === DJ) {
-            const JJ = eJ[YJ];
-            DJ = JJ.rootMetaDesc === XJ ? JJ.id : AJ
+          const lB = `${oB}|${TB}`;
+          if (LB = null !== (EB = null === (vB = pB[lB]) || void 0 === vB ? void 0 : vB.id) && void 0 !== EB ? EB : null, null === LB) {
+            const BB = pB[oB];
+            LB = BB.rootMetaDesc === lB ? BB.id : JB
           }
         }
-        return DJ
+        return LB
       }
     }
 
-    function dJ(JJ, cJ, ZJ) {
+    function RB(BB, TB, dB) {
       let {
-        xRotationMappedOrigin: FJ,
-        shouldSwapXZ: UJ
-      } = ZJ;
-      const eJ = UJ ? cJ : JJ;
-      return null === FJ ? eJ : FJ - eJ
+        xRotationMappedOrigin: VB,
+        shouldSwapXZ: yB
+      } = dB;
+      const pB = yB ? TB : BB;
+      return null === VB ? pB : VB - pB
     }
 
-    function zJ(JJ, cJ, ZJ) {
+    function aB(BB, TB, dB) {
       let {
-        zRotationMappedOrigin: FJ,
-        shouldSwapXZ: UJ
-      } = ZJ;
-      const eJ = UJ ? JJ : cJ;
-      return null === FJ ? eJ : FJ - eJ
+        zRotationMappedOrigin: VB,
+        shouldSwapXZ: yB
+      } = dB;
+      const pB = yB ? BB : TB;
+      return null === VB ? pB : VB - pB
     }
-    const NJ = {
+    const ZB = {
         well: {
           size: [7, 8, 5],
           palette: ["Daisy", "Stone Bricks", "Cracked Stone Bricks", "Stone Bricks Slab", "Maple Log", "Bricks Stairs|meta|rot4|bot", "Light Blue Glass", "Mossy Stone Bricks", "Maple Wood Planks", "Bricks Slab", "Bricks Stairs|meta|rot2|bot", "Poppy", "Dandelion"],
@@ -347,493 +347,493 @@ export const modules = {
           layers: ["....... ..eee.. .e...e. .e...e. .e...e. ..e.e.. ...o...", "....... ..eee.. .e...e. .e...e. .e...e. ..e.e.. .......", "....... ..fff.. .f...f. .f...f. .f...f. ..fff.. ...p...", "....... ..fff.. .f...f. .f...f. .f...f. ..fff.. .......", "....... ..eee.. .e...e. .e...e. .e...e. ..eee.. .......", "....... ..eee.. .e...e. .e...q. .e...e. ..eee.. .......", "....... ..fff.. .f...f. .f...f. .f...f. ..fff.. .......", "....... ..fff.. .f...f. .f...f. .f...f. ..fqf.. .......", "....... ..eee.. .e...e. .e...e. .e...e. ..eee.. .......", "....... ..eee.. .e...e. .e...e. .e...e. ..eee.. .......", ".aaaaa. aaaaaaa aaaaaaa aaaaaaa aaaaaaa aaaaaaa .aaaaa.", ".gkkkw. b.....b c.lll.c c.lrl.c c.lll.c d.....d .gkkkw.", "....... ....... ..lll.. ..l.l.. ..lll.. ....... .......", "....... .hmmmt. .ifffu. .ifffu. .ifffu. .jnnnv. .......", "....... ....... ..hmt.. ..ifu.. ..jnv.. ....... .......", "....... ....... ....... ...s... ....... ....... ......."]
         }
       },
-      OJ = new Map;
+      XB = new Map;
 
-    function TJ(JJ, cJ) {
-      const ZJ = `${JJ}|${cJ}`;
-      let FJ = OJ.get(ZJ);
-      if (void 0 === FJ) {
+    function WB(BB, TB) {
+      const dB = `${BB}|${TB}`;
+      let VB = XB.get(dB);
+      if (void 0 === VB) {
         const {
-          size: UJ,
-          palette: eJ,
-          layers: XJ
-        } = NJ[JJ], AJ = 90 === cJ || 270 === cJ, [qJ, jJ] = AJ ? [UJ[2], UJ[0]] : [UJ[0], UJ[2]], YJ = function(JJ, cJ, ZJ) {
-          let FJ = null,
-            UJ = null,
-            eJ = !1;
-          switch (JJ) {
+          size: yB,
+          palette: pB,
+          layers: lB
+        } = ZB[BB], JB = 90 === TB || 270 === TB, [YB, gB] = JB ? [yB[2], yB[0]] : [yB[0], yB[2]], oB = function(BB, TB, dB) {
+          let VB = null,
+            yB = null,
+            pB = !1;
+          switch (BB) {
             case 0:
               break;
             case 90:
-              FJ = cJ - 1, eJ = !0;
+              VB = TB - 1, pB = !0;
               break;
             case 180:
-              FJ = cJ - 1, UJ = ZJ - 1;
+              VB = TB - 1, yB = dB - 1;
               break;
             case 270:
-              UJ = ZJ - 1, eJ = !0;
+              yB = dB - 1, pB = !0;
               break;
             default:
-              throw new Error(`Invalid rotation: ${JJ}`)
+              throw new Error(`Invalid rotation: ${BB}`)
           }
           return {
-            xRotationMappedOrigin: FJ,
-            zRotationMappedOrigin: UJ,
-            shouldSwapXZ: eJ
+            xRotationMappedOrigin: VB,
+            zRotationMappedOrigin: yB,
+            shouldSwapXZ: pB
           }
-        }(cJ, qJ, jJ), hJ = pJ.for(wJ.m), DJ = eJ.map((JJ => (0, wJ.i)(hJ.turnBlockId((0, wJ.n)(JJ), cJ, !1)))), sJ = [];
-        XJ.forEach(((JJ, cJ) => {
-          JJ.split(" ").forEach(((JJ, ZJ) => {
-            for (let FJ = 0; FJ < JJ.length; FJ++)
-              if ("." !== JJ[FJ]) {
-                const UJ = [dJ(FJ, ZJ, YJ), cJ, zJ(FJ, ZJ, YJ)];
-                sJ.push({
-                  offset: UJ,
-                  block: DJ[JJ.charCodeAt(FJ) - "a".charCodeAt(0)]
+        }(TB, YB, gB), kB = QB.for(KB.h), LB = pB.map((BB => (0, KB.f)(kB.turnBlockId((0, KB.j)(BB), TB, !1)))), OB = [];
+        lB.forEach(((BB, TB) => {
+          BB.split(" ").forEach(((BB, dB) => {
+            for (let VB = 0; VB < BB.length; VB++)
+              if ("." !== BB[VB]) {
+                const yB = [RB(VB, dB, oB), TB, aB(VB, dB, oB)];
+                OB.push({
+                  offset: yB,
+                  block: LB[BB.charCodeAt(VB) - "a".charCodeAt(0)]
                 })
               }
           }))
-        })), FJ = {
-          size: [qJ, UJ[1], jJ],
-          cells: sJ
-        }, OJ.set(ZJ, FJ)
+        })), VB = {
+          size: [YB, yB[1], gB],
+          cells: OB
+        }, XB.set(dB, VB)
       }
-      return FJ
+      return VB
     }
-    const CJ = {
-      well: ZJ.p + "static/media/well.6059dda29952da474ade.webp",
-      tent: ZJ.p + "static/media/tent.b33fdaeb9129e7931315.webp",
-      marketStall: ZJ.p + "static/media/marketStall.6e04c605a5daeb43787d.webp",
-      gazebo: ZJ.p + "static/media/gazebo.5db92096efe3e790b93c.webp",
-      cottage: ZJ.p + "static/media/cottage.a2ba06bd20dc5625f673.webp",
-      lookoutTower: ZJ.p + "static/media/lookoutTower.eeb0336a5e86d88661c4.webp",
-      bridge: ZJ.p + "static/media/bridge.ee5a7ddef6d74a1c5c2d.webp",
-      farmhouse: ZJ.p + "static/media/farmhouse.9e4425b8d81e6c8cf5d2.webp",
-      bakery: ZJ.p + "static/media/bakery.678fc20dd5fba272965f.webp",
-      greenhouse: ZJ.p + "static/media/greenhouse.b77eb0b4ade590f95053.webp",
-      lighthouse: ZJ.p + "static/media/lighthouse.b8267661edfd4c5e7c77.webp",
-      windmill: ZJ.p + "static/media/windmill.e2fd79cf51ec00d299c8.webp"
+    const hB = {
+      well: dB.p + "static/media/well.6059dda29952da474ade.webp",
+      tent: dB.p + "static/media/tent.b33fdaeb9129e7931315.webp",
+      marketStall: dB.p + "static/media/marketStall.6e04c605a5daeb43787d.webp",
+      gazebo: dB.p + "static/media/gazebo.5db92096efe3e790b93c.webp",
+      cottage: dB.p + "static/media/cottage.a2ba06bd20dc5625f673.webp",
+      lookoutTower: dB.p + "static/media/lookoutTower.eeb0336a5e86d88661c4.webp",
+      bridge: dB.p + "static/media/bridge.ee5a7ddef6d74a1c5c2d.webp",
+      farmhouse: dB.p + "static/media/farmhouse.9e4425b8d81e6c8cf5d2.webp",
+      bakery: dB.p + "static/media/bakery.678fc20dd5fba272965f.webp",
+      greenhouse: dB.p + "static/media/greenhouse.b77eb0b4ade590f95053.webp",
+      lighthouse: dB.p + "static/media/lighthouse.b8267661edfd4c5e7c77.webp",
+      windmill: dB.p + "static/media/windmill.e2fd79cf51ec00d299c8.webp"
     };
-    var uJ = ZJ(990);
-    const iJ = {
+    var CB = dB(980);
+    const GB = {
       small: "plotsGame:journalTierSmall",
       medium: "plotsGame:journalTierMedium",
       large: "plotsGame:journalTierLarge"
     };
 
-    function RJ(JJ) {
+    function qB(BB) {
       let {
-        page: cJ,
-        building: ZJ,
-        onBuild: FJ,
-        onPutAway: UJ
-      } = JJ;
+        page: TB,
+        building: dB,
+        onBuild: VB,
+        onPutAway: yB
+      } = BB;
       const {
-        t: eJ
-      } = (0, bJ.F)(), {
-        displayName: XJ,
-        tier: AJ
-      } = nJ(cJ.id), qJ = TJ(cJ.id, 0).cells.length, jJ = xJ[cJ.id], YJ = "locked" === cJ.state, hJ = ZJ ? KJ.d : KJ.m;
-      return (0, uJ.jsxs)("article", {
-        className: EJ()("PlotsJournalPage", {
-          Locked: YJ
+        t: pB
+      } = (0, FB.z)(), {
+        displayName: lB,
+        tier: JB
+      } = DB(TB.id), YB = WB(TB.id, 0).cells.length, gB = EB[TB.id], oB = "locked" === TB.state, kB = dB ? sB.d : sB.k;
+      return (0, CB.jsxs)("article", {
+        className: tB()("PlotsJournalPage", {
+          Locked: oB
         }),
-        children: [(0, uJ.jsx)("h3", {
+        children: [(0, CB.jsx)("h3", {
           className: "PlotsJournalPageName",
-          children: eJ(XJ.translationKey)
-        }), (0, uJ.jsxs)("div", {
+          children: pB(lB.translationKey)
+        }), (0, CB.jsxs)("div", {
           className: "PlotsJournalPageMeta",
-          children: [eJ(iJ[AJ]), " \xb7 ", eJ("plotsGame:journalBlocks", {
-            blocks: String(qJ)
+          children: [pB(GB[JB]), " \xb7 ", pB("plotsGame:journalBlocks", {
+            blocks: String(YB)
           })]
-        }), (0, uJ.jsxs)("div", {
+        }), (0, CB.jsxs)("div", {
           className: "PlotsJournalSketch",
-          children: [DJ.map((JJ => (0, uJ.jsx)("img", {
-            className: EJ()({
-              Shown: JJ === cJ.id
+          children: [LB.map((BB => (0, CB.jsx)("img", {
+            className: tB()({
+              Shown: BB === TB.id
             }),
-            src: CJ[JJ],
+            src: hB[BB],
             alt: "",
             draggable: !1
-          }, JJ))), "completed" === cJ.state && (0, uJ.jsx)("span", {
+          }, BB))), "completed" === TB.state && (0, CB.jsx)("span", {
             className: "PlotsJournalStamp",
-            children: eJ("plotsGame:journalBuilt")
-          }), YJ && (0, uJ.jsx)("span", {
+            children: pB("plotsGame:journalBuilt")
+          }), oB && (0, CB.jsx)("span", {
             className: "PlotsJournalLock",
-            children: (0, uJ.jsx)(VJ.c, {
+            children: (0, CB.jsx)(fB.e, {
               name: "lock"
             })
           })]
-        }), void 0 !== jJ && "completed" !== cJ.state && (0, uJ.jsx)("p", {
+        }), void 0 !== gB && "completed" !== TB.state && (0, CB.jsx)("p", {
           className: "PlotsJournalNote",
-          children: eJ(jJ)
-        }), (0, uJ.jsxs)("div", {
+          children: pB(gB)
+        }), (0, CB.jsxs)("div", {
           className: "PlotsJournalPageAction",
-          children: ["locked" === cJ.state && (0, uJ.jsx)("p", {
+          children: ["locked" === TB.state && (0, CB.jsx)("p", {
             className: "PlotsJournalHint",
-            children: eJ("plotsGame:journalLocked", {
-              name: eJ(nJ(cJ.unlockedBy).displayName.translationKey)
+            children: pB("plotsGame:journalLocked", {
+              name: pB(DB(TB.unlockedBy).displayName.translationKey)
             })
-          }), cJ.active && (0, uJ.jsxs)(uJ.Fragment, {
-            children: [(0, uJ.jsx)("p", {
+          }), TB.active && (0, CB.jsxs)(CB.Fragment, {
+            children: [(0, CB.jsx)("p", {
               className: "PlotsJournalHint Building",
-              children: eJ("plotsGame:journalBuilding")
-            }), (0, uJ.jsx)(KJ.g, {
-              onClick: UJ,
-              children: eJ("plotsGame:journalPutAway")
+              children: pB("plotsGame:journalBuilding")
+            }), (0, CB.jsx)(sB.g, {
+              onClick: yB,
+              children: pB("plotsGame:journalPutAway")
             })]
-          }), !YJ && !cJ.active && (0, uJ.jsx)(hJ, {
+          }), !oB && !TB.active && (0, CB.jsx)(kB, {
             onClick: () => {
-              FJ(cJ.id)
+              VB(TB.id)
             },
-            children: eJ("plotsGame:placementBuild")
+            children: pB("plotsGame:placementBuild")
           })]
         })]
       })
     }
 
-    function LJ(JJ) {
+    function xB(BB) {
       let {
-        className: cJ,
-        page: ZJ,
-        hidden: FJ,
-        building: UJ,
-        journal: eJ
-      } = JJ;
-      return (0, uJ.jsxs)("div", {
-        ref: JJ => {
-          null !== JJ && (JJ.inert = FJ)
+        className: TB,
+        page: dB,
+        hidden: VB,
+        building: yB,
+        journal: pB
+      } = BB;
+      return (0, CB.jsxs)("div", {
+        ref: BB => {
+          null !== BB && (BB.inert = VB)
         },
-        className: EJ()("PlotsJournalSide", cJ),
-        children: [void 0 !== ZJ && (0, uJ.jsx)(RJ, {
-          page: ZJ,
-          building: UJ,
-          onBuild: eJ.build,
-          onPutAway: eJ.putAway
-        }), void 0 === ZJ && (0, uJ.jsx)("div", {
+        className: tB()("PlotsJournalSide", TB),
+        children: [void 0 !== dB && (0, CB.jsx)(qB, {
+          page: dB,
+          building: yB,
+          onBuild: pB.build,
+          onPutAway: pB.putAway
+        }), void 0 === dB && (0, CB.jsx)("div", {
           className: "PlotsJournalPage"
         })]
       })
     }
-    var aJ = ZJ(235),
-      BJ = ZJ(1671);
+    var jB = dB(279),
+      AB = dB(1652);
 
-    function tJ(JJ) {
-      return Math.cos((0, BJ.k)(JJ))
+    function bB(BB) {
+      return Math.cos((0, AB.j)(BB))
     }
 
-    function oJ(JJ) {
-      return (0, BJ.z)(Math.acos(aJ.c.clamp(JJ, -1, 1)))
+    function nB(BB) {
+      return (0, AB.x)(Math.acos(jB.e.clamp(BB, -1, 1)))
     }
 
-    function lJ(JJ, cJ, ZJ, FJ, UJ) {
-      const eJ = Math.abs(cJ - JJ),
-        XJ = (0, BJ.z)(UJ / (ZJ * Math.abs(Math.sin((0, BJ.k)(JJ))))),
-        AJ = 450 * Math.min(1, eJ / FJ),
-        qJ = XJ > 0 ? 3 * eJ / XJ : 1 / 0;
-      return Math.round(Math.max(120, Math.min(AJ, qJ)))
+    function eB(BB, TB, dB, VB, yB) {
+      const pB = Math.abs(TB - BB),
+        lB = (0, AB.x)(yB / (dB * Math.abs(Math.sin((0, AB.j)(BB))))),
+        JB = 450 * Math.min(1, pB / VB),
+        YB = lB > 0 ? 3 * pB / lB : 1 / 0;
+      return Math.round(Math.max(120, Math.min(JB, YB)))
     }
-    class Jc {
+    class BT {
       constructor() {
         this.samples = []
       }
-      add(JJ, cJ) {
+      add(BB, TB) {
         for (this.samples.push({
-            x: JJ,
-            at: cJ
-          }); cJ - this.samples[0].at > 100;) this.samples.shift()
+            x: BB,
+            at: TB
+          }); TB - this.samples[0].at > 100;) this.samples.shift()
       }
       get() {
-        const JJ = this.samples[0],
-          cJ = this.samples[this.samples.length - 1];
-        return cJ.at > JJ.at ? (cJ.x - JJ.x) / (cJ.at - JJ.at) : 0
+        const BB = this.samples[0],
+          TB = this.samples[this.samples.length - 1];
+        return TB.at > BB.at ? (TB.x - BB.x) / (TB.at - BB.at) : 0
       }
     }
 
-    function cc(JJ, cJ) {
-      return JJ > cJ && JJ >= 600
+    function TT(BB, TB) {
+      return BB > TB && BB >= 600
     }
 
-    function Zc(JJ) {
-      return oJ(new DOMMatrixReadOnly(getComputedStyle(JJ).transform).m11)
+    function dT(BB) {
+      return nB(new DOMMatrixReadOnly(getComputedStyle(BB).transform).m11)
     }
 
-    function Fc(JJ, cJ) {
-      JJ.style.transform = `rotateY(${-cJ}deg)`, JJ.classList.add("Turning")
+    function VT(BB, TB) {
+      BB.style.transform = `rotateY(${-TB}deg)`, BB.classList.add("Turning")
     }
 
-    function Uc(JJ) {
+    function yT(BB) {
       let {
-        journal: cJ
-      } = JJ;
+        journal: TB
+      } = BB;
       const {
-        t: ZJ
-      } = (0, bJ.F)(), FJ = (0, IJ.m)(vJ, cJ.getPages()), UJ = (0, MJ.c)(cc), [AJ, qJ] = (0, eJ.useState)((() => function(JJ) {
-        const cJ = JJ.findIndex((JJ => JJ.active));
-        return -1 !== cJ ? cJ : Math.max(0, JJ.findIndex((JJ => "open" === JJ.state)))
-      }(FJ))), YJ = (0, eJ.useRef)(null), hJ = (0, eJ.useRef)(null), DJ = (0, eJ.useRef)({
+        t: dB
+      } = (0, FB.z)(), VB = (0, wB.f)(mB, TB.getPages()), yB = (0, UB.e)(TT), [JB, YB] = (0, pB.useState)((() => function(BB) {
+        const TB = BB.findIndex((BB => BB.active));
+        return -1 !== TB ? TB : Math.max(0, BB.findIndex((BB => "open" === BB.state)))
+      }(VB))), oB = (0, pB.useRef)(null), kB = (0, pB.useRef)(null), LB = (0, pB.useRef)({
         Forward: null,
         Back: null
-      }), sJ = UJ ? 2 : 1, nJ = UJ ? 180 : 90, GJ = AJ - AJ % sJ, fJ = GJ > 0, xJ = GJ + sJ < FJ.length, rJ = (0, eJ.useCallback)((() => {
-        const JJ = hJ.current;
-        return null === JJ ? GJ : (hJ.current = null, JJ.animation.cancel(), (cJ = DJ.current[JJ.direction]).style.transform = "", cJ.classList.remove("Turning"), null === JJ.next ? GJ : (qJ(JJ.next), JJ.next));
-        var cJ
-      }), [GJ]), mJ = (0, eJ.useCallback)(((JJ, cJ, ZJ, FJ) => {
-        const UJ = DJ.current[JJ],
-          eJ = Zc(UJ),
-          XJ = cJ === ("Forward" === JJ) ? nJ : 0;
-        Fc(UJ, XJ);
-        const AJ = UJ.animate([{
-          transform: `rotateY(${-eJ}deg)`
+      }), OB = yB ? 2 : 1, DB = yB ? 180 : 90, uB = JB - JB % OB, HB = uB > 0, EB = uB + OB < VB.length, vB = (0, pB.useCallback)((() => {
+        const BB = kB.current;
+        return null === BB ? uB : (kB.current = null, BB.animation.cancel(), (TB = LB.current[BB.direction]).style.transform = "", TB.classList.remove("Turning"), null === BB.next ? uB : (YB(BB.next), BB.next));
+        var TB
+      }), [uB]), iB = (0, pB.useCallback)(((BB, TB, dB, VB) => {
+        const yB = LB.current[BB],
+          pB = dT(yB),
+          lB = TB === ("Forward" === BB) ? DB : 0;
+        VT(yB, lB);
+        const JB = yB.animate([{
+          transform: `rotateY(${-pB}deg)`
         }, {
-          transform: `rotateY(${-XJ}deg)`
+          transform: `rotateY(${-lB}deg)`
         }], {
-          duration: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : lJ(eJ, XJ, UJ.offsetWidth, nJ, XJ > eJ ? -ZJ : ZJ),
+          duration: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : eB(pB, lB, yB.offsetWidth, DB, lB > pB ? -dB : dB),
           easing: "cubic-bezier(0.25, 0.75, 0.5, 1)"
         });
-        hJ.current = {
-          direction: JJ,
-          animation: AJ,
-          next: cJ ? FJ + ("Forward" === JJ ? sJ : -sJ) : null
-        }, AJ.onfinish = () => {
-          var JJ;
-          (null === (JJ = hJ.current) || void 0 === JJ ? void 0 : JJ.animation) === AJ && rJ()
+        kB.current = {
+          direction: BB,
+          animation: JB,
+          next: TB ? VB + ("Forward" === BB ? OB : -OB) : null
+        }, JB.onfinish = () => {
+          var BB;
+          (null === (BB = kB.current) || void 0 === BB ? void 0 : BB.animation) === JB && vB()
         }
-      }), [sJ, nJ, rJ]), QJ = (0, eJ.useCallback)((JJ => {
-        if (null !== YJ.current) return;
-        const cJ = rJ();
-        ("Forward" === JJ ? cJ + sJ < FJ.length : cJ > 0) && mJ(JJ, !0, 0, cJ)
-      }), [rJ, mJ, sJ, FJ.length]);
-      (0, eJ.useEffect)((() => {
-        cJ.onOpened()
-      }), [cJ]), (0, eJ.useEffect)((() => () => {
-        var JJ;
-        null === (JJ = hJ.current) || void 0 === JJ || JJ.animation.cancel()
-      }), []), (0, eJ.useEffect)((() => {
-        const JJ = JJ => {
-          var cJ;
-          JJ.pointerId !== (null === (cJ = YJ.current) || void 0 === cJ ? void 0 : cJ.pointerId) || YJ.current.following || (YJ.current = null)
+      }), [OB, DB, vB]), NB = (0, pB.useCallback)((BB => {
+        if (null !== oB.current) return;
+        const TB = vB();
+        ("Forward" === BB ? TB + OB < VB.length : TB > 0) && iB(BB, !0, 0, TB)
+      }), [vB, iB, OB, VB.length]);
+      (0, pB.useEffect)((() => {
+        TB.onOpened()
+      }), [TB]), (0, pB.useEffect)((() => () => {
+        var BB;
+        null === (BB = kB.current) || void 0 === BB || BB.animation.cancel()
+      }), []), (0, pB.useEffect)((() => {
+        const BB = BB => {
+          var TB;
+          BB.pointerId !== (null === (TB = oB.current) || void 0 === TB ? void 0 : TB.pointerId) || oB.current.following || (oB.current = null)
         };
-        return window.addEventListener("pointerup", JJ), () => {
-          window.removeEventListener("pointerup", JJ)
+        return window.addEventListener("pointerup", BB), () => {
+          window.removeEventListener("pointerup", BB)
         }
-      }), []), (0, SJ.b)((JJ => ("ArrowLeft" === JJ.code || "ArrowRight" === JJ.code) && !(0, jJ.isTypingInInput)()), (JJ => {
-        JJ.stopPropagation(), QJ("ArrowLeft" === JJ.code ? "Back" : "Forward")
+      }), []), (0, zB.d)((BB => ("ArrowLeft" === BB.code || "ArrowRight" === BB.code) && !(0, gB.isTypingInInput)()), (BB => {
+        BB.stopPropagation(), NB("ArrowLeft" === BB.code ? "Back" : "Forward")
       }));
-      const VJ = (JJ, cJ, ZJ) => {
-          const FJ = function(JJ, cJ, ZJ, FJ) {
-            return (JJ < 0 ? ZJ : FJ) ? aJ.c.clampAbs(JJ, cJ) : Math.sign(JJ) * cJ * (1 - 1 / (.55 * Math.abs(JJ) / cJ + 1))
-          }(JJ.base + ZJ, sJ * JJ.width, xJ, fJ);
-          return "Forward" === cJ ? Math.min(FJ, 0) : Math.max(FJ, 0)
+      const fB = (BB, TB, dB) => {
+          const VB = function(BB, TB, dB, VB) {
+            return (BB < 0 ? dB : VB) ? jB.e.clampAbs(BB, TB) : Math.sign(BB) * TB * (1 - 1 / (.55 * Math.abs(BB) / TB + 1))
+          }(BB.base + dB, OB * BB.width, EB, HB);
+          return "Forward" === TB ? Math.min(VB, 0) : Math.max(VB, 0)
         },
-        wJ = (JJ, cJ) => {
-          const ZJ = YJ.current;
-          if (YJ.current = null, null === ZJ.direction) return;
-          ZJ.speed.add(JJ, cJ);
-          const FJ = ZJ.speed.get(),
-            UJ = VJ(ZJ, ZJ.direction, JJ - ZJ.x);
-          mJ(ZJ.direction, null !== function(JJ, cJ, ZJ, FJ, UJ) {
-            if (Math.abs(cJ) >= .3 ? Math.sign(cJ) !== Math.sign(JJ) : Math.abs(JJ) < .5 * ZJ) return null;
-            const eJ = JJ < 0 ? "Forward" : "Back";
-            return ("Forward" === eJ ? FJ : UJ) ? eJ : null
-          }(UJ, FJ, sJ * ZJ.width, xJ, fJ), FJ, GJ)
+        KB = (BB, TB) => {
+          const dB = oB.current;
+          if (oB.current = null, null === dB.direction) return;
+          dB.speed.add(BB, TB);
+          const VB = dB.speed.get(),
+            yB = fB(dB, dB.direction, BB - dB.x);
+          iB(dB.direction, null !== function(BB, TB, dB, VB, yB) {
+            if (Math.abs(TB) >= .3 ? Math.sign(TB) !== Math.sign(BB) : Math.abs(BB) < .5 * dB) return null;
+            const pB = BB < 0 ? "Forward" : "Back";
+            return ("Forward" === pB ? VB : yB) ? pB : null
+          }(yB, VB, OB * dB.width, EB, HB), VB, uB)
         },
-        WJ = FJ.some((JJ => JJ.active)),
-        gJ = (JJ, ZJ, UJ) => (0, uJ.jsx)(LJ, {
-          className: JJ,
-          page: ZJ >= 0 && ZJ < FJ.length ? FJ[ZJ] : void 0,
-          hidden: UJ,
-          building: WJ,
-          journal: cJ
+        rB = VB.some((BB => BB.active)),
+        IB = (BB, dB, yB) => (0, CB.jsx)(xB, {
+          className: BB,
+          page: dB >= 0 && dB < VB.length ? VB[dB] : void 0,
+          hidden: yB,
+          building: rB,
+          journal: TB
         });
-      return (0, uJ.jsx)(yJ.c, {
-        close: XJ.j,
+      return (0, CB.jsx)(MB.b, {
+        close: lB.h,
         togglePointerLock: !1,
         className: "PlotsJournalOverlay",
-        children: (0, uJ.jsxs)("section", {
-          className: EJ()("PlotsJournal", {
-            Spread: UJ
+        children: (0, CB.jsxs)("section", {
+          className: tB()("PlotsJournal", {
+            Spread: yB
           }),
           role: "dialog",
           "aria-modal": "true",
-          "aria-label": ZJ("plotsGame:journalTitle"),
-          children: [(0, uJ.jsx)(KJ.j, {
+          "aria-label": dB("plotsGame:journalTitle"),
+          children: [(0, CB.jsx)(sB.i, {
             className: "PlotsJournalClose",
-            onClick: XJ.j
-          }), (0, uJ.jsx)(ec, {
+            onClick: lB.h
+          }), (0, CB.jsx)(pT, {
             direction: "Back",
-            disabled: !fJ,
-            onTurn: QJ
-          }), (0, uJ.jsx)("div", {
+            disabled: !HB,
+            onTurn: NB
+          }), (0, CB.jsx)("div", {
             className: "PlotsJournalBookPages",
-            onPointerDown: JJ => {
-              var cJ;
-              if (!JJ.isPrimary || 0 !== JJ.button || null !== hJ.current && null !== JJ.target.closest("button")) return;
-              const ZJ = new Jc;
-              ZJ.add(JJ.clientX, JJ.timeStamp);
-              const FJ = DJ.current.Forward.offsetWidth,
-                UJ = hJ.current;
-              hJ.current = null;
-              let eJ = 0;
-              if (null !== UJ) {
-                const cJ = DJ.current[UJ.direction],
-                  ZJ = Zc(cJ);
-                UJ.animation.cancel(), Fc(cJ, ZJ), eJ = function(JJ, cJ, ZJ, FJ) {
-                  return (JJ < 0 ? ZJ : FJ) ? JJ : Math.sign(JJ) * cJ * (1 / (1 - Math.min(Math.abs(JJ) / cJ, .99)) - 1) / .55
-                }(function(JJ, cJ, ZJ, FJ) {
-                  return ZJ * (tJ(cJ) - tJ("Forward" === JJ ? 0 : FJ))
-                }(UJ.direction, ZJ, FJ, nJ), sJ * FJ, xJ, fJ), JJ.currentTarget.setPointerCapture(JJ.pointerId)
+            onPointerDown: BB => {
+              var TB;
+              if (!BB.isPrimary || 0 !== BB.button || null !== kB.current && null !== BB.target.closest("button")) return;
+              const dB = new BT;
+              dB.add(BB.clientX, BB.timeStamp);
+              const VB = LB.current.Forward.offsetWidth,
+                yB = kB.current;
+              kB.current = null;
+              let pB = 0;
+              if (null !== yB) {
+                const TB = LB.current[yB.direction],
+                  dB = dT(TB);
+                yB.animation.cancel(), VT(TB, dB), pB = function(BB, TB, dB, VB) {
+                  return (BB < 0 ? dB : VB) ? BB : Math.sign(BB) * TB * (1 / (1 - Math.min(Math.abs(BB) / TB, .99)) - 1) / .55
+                }(function(BB, TB, dB, VB) {
+                  return dB * (bB(TB) - bB("Forward" === BB ? 0 : VB))
+                }(yB.direction, dB, VB, DB), OB * VB, EB, HB), BB.currentTarget.setPointerCapture(BB.pointerId)
               }
-              YJ.current = {
-                pointerId: JJ.pointerId,
-                x: JJ.clientX,
-                y: JJ.clientY,
-                base: eJ,
-                width: FJ,
-                following: null !== UJ,
-                direction: null !== (cJ = null === UJ || void 0 === UJ ? void 0 : UJ.direction) && void 0 !== cJ ? cJ : null,
-                speed: ZJ
+              oB.current = {
+                pointerId: BB.pointerId,
+                x: BB.clientX,
+                y: BB.clientY,
+                base: pB,
+                width: VB,
+                following: null !== yB,
+                direction: null !== (TB = null === yB || void 0 === yB ? void 0 : yB.direction) && void 0 !== TB ? TB : null,
+                speed: dB
               }
             },
-            onPointerMove: JJ => {
-              const cJ = YJ.current;
-              if (null === cJ || JJ.pointerId !== cJ.pointerId) return;
-              if (0 === JJ.buttons) return void wJ(JJ.clientX, JJ.timeStamp);
-              const ZJ = JJ.clientX - cJ.x;
-              !cJ.following && function(JJ, cJ) {
-                return Math.abs(JJ) > 8 && Math.abs(JJ) > Math.abs(cJ)
-              }(ZJ, JJ.clientY - cJ.y) && (cJ.following = !0, cJ.direction = ZJ < 0 ? "Forward" : "Back", JJ.currentTarget.setPointerCapture(JJ.pointerId)), null !== cJ.direction && (cJ.speed.add(JJ.clientX, JJ.timeStamp), Fc(DJ.current[cJ.direction], function(JJ, cJ, ZJ, FJ) {
-                const UJ = ZJ * tJ("Forward" === JJ ? 0 : FJ) + cJ;
-                return aJ.c.clamp(oJ(UJ / ZJ), 0, FJ)
-              }(cJ.direction, VJ(cJ, cJ.direction, ZJ), cJ.width, nJ)))
+            onPointerMove: BB => {
+              const TB = oB.current;
+              if (null === TB || BB.pointerId !== TB.pointerId) return;
+              if (0 === BB.buttons) return void KB(BB.clientX, BB.timeStamp);
+              const dB = BB.clientX - TB.x;
+              !TB.following && function(BB, TB) {
+                return Math.abs(BB) > 8 && Math.abs(BB) > Math.abs(TB)
+              }(dB, BB.clientY - TB.y) && (TB.following = !0, TB.direction = dB < 0 ? "Forward" : "Back", BB.currentTarget.setPointerCapture(BB.pointerId)), null !== TB.direction && (TB.speed.add(BB.clientX, BB.timeStamp), VT(LB.current[TB.direction], function(BB, TB, dB, VB) {
+                const yB = dB * bB("Forward" === BB ? 0 : VB) + TB;
+                return jB.e.clamp(nB(yB / dB), 0, VB)
+              }(TB.direction, fB(TB, TB.direction, dB), TB.width, DB)))
             },
-            onPointerUp: JJ => {
-              var cJ;
-              JJ.pointerId === (null === (cJ = YJ.current) || void 0 === cJ ? void 0 : cJ.pointerId) && wJ(JJ.clientX, JJ.timeStamp)
+            onPointerUp: BB => {
+              var TB;
+              BB.pointerId === (null === (TB = oB.current) || void 0 === TB ? void 0 : TB.pointerId) && KB(BB.clientX, BB.timeStamp)
             },
-            onPointerCancel: JJ => {
-              const cJ = YJ.current;
-              JJ.pointerId === (null === cJ || void 0 === cJ ? void 0 : cJ.pointerId) && (YJ.current = null, null !== cJ.direction && mJ(cJ.direction, !1, 0, GJ))
+            onPointerCancel: BB => {
+              const TB = oB.current;
+              BB.pointerId === (null === TB || void 0 === TB ? void 0 : TB.pointerId) && (oB.current = null, null !== TB.direction && iB(TB.direction, !1, 0, uB))
             },
-            children: (0, uJ.jsxs)("div", {
+            children: (0, CB.jsxs)("div", {
               className: "PlotsJournalSheet",
-              children: [UJ && gJ("Left", GJ - 2, !0), gJ("Right", GJ + 2 * sJ - 1, !0), (0, uJ.jsxs)("div", {
-                ref: JJ => {
-                  DJ.current.Back = JJ
+              children: [yB && IB("Left", uB - 2, !0), IB("Right", uB + 2 * OB - 1, !0), (0, CB.jsxs)("div", {
+                ref: BB => {
+                  LB.current.Back = BB
                 },
                 className: "PlotsJournalLeaf Back",
-                children: [gJ("Recto", GJ - 1, !0), UJ && gJ("Verso", GJ, !1)]
-              }), (0, uJ.jsxs)("div", {
-                ref: JJ => {
-                  DJ.current.Forward = JJ
+                children: [IB("Recto", uB - 1, !0), yB && IB("Verso", uB, !1)]
+              }), (0, CB.jsxs)("div", {
+                ref: BB => {
+                  LB.current.Forward = BB
                 },
                 className: "PlotsJournalLeaf Forward",
-                children: [gJ("Recto", GJ + sJ - 1, !1), UJ && gJ("Verso", GJ + sJ, !0)]
+                children: [IB("Recto", uB + OB - 1, !1), yB && IB("Verso", uB + OB, !0)]
               })]
             })
-          }), (0, uJ.jsx)(ec, {
+          }), (0, CB.jsx)(pT, {
             direction: "Forward",
-            disabled: !xJ,
-            onTurn: QJ
+            disabled: !EB,
+            onTurn: NB
           })]
         })
       })
     }
 
-    function ec(JJ) {
+    function pT(BB) {
       let {
-        direction: cJ,
-        disabled: ZJ,
-        onTurn: FJ
-      } = JJ;
+        direction: TB,
+        disabled: dB,
+        onTurn: VB
+      } = BB;
       const {
-        t: UJ
-      } = (0, bJ.F)();
-      return (0, uJ.jsx)("div", {
-        className: EJ()("PlotsJournalArrow", cJ),
-        children: (0, uJ.jsx)(KJ.d, {
-          disabled: ZJ,
-          ariaLabel: UJ("Forward" === cJ ? "plotsGame:journalNextPage" : "plotsGame:journalPreviousPage"),
+        t: yB
+      } = (0, FB.z)();
+      return (0, CB.jsx)("div", {
+        className: tB()("PlotsJournalArrow", TB),
+        children: (0, CB.jsx)(sB.d, {
+          disabled: dB,
+          ariaLabel: yB("Forward" === TB ? "plotsGame:journalNextPage" : "plotsGame:journalPreviousPage"),
           onClick: () => {
-            FJ(cJ)
+            VB(TB)
           },
-          children: (0, uJ.jsx)(VJ.c, {
+          children: (0, CB.jsx)(fB.e, {
             name: "angle-up"
           })
         })
       })
     }
-    var Xc = ZJ(35658),
-      Ac = ZJ(1688),
-      qc = ZJ(1747);
-    const jc = "plotsStepChanged",
-      Yc = "plotsPlotChanged";
-    class hc {
+    var lT = dB(35589),
+      JT = dB(1666),
+      YT = dB(1736);
+    const gT = "plotsStepChanged",
+      oT = "plotsPlotChanged";
+    class kT {
       constructor() {
         this.step = ["none"], this.plot = ["none"]
       }
       getStep() {
         return this.step
       }
-      receiveStep(JJ) {
-        this.step = JJ, YJ.i.Uf(jc, JJ, !0)
+      receiveStep(BB) {
+        this.step = BB, oB.h.yH(gT, BB, !0)
       }
       getPlot() {
         return this.plot
       }
-      receivePlot(JJ) {
-        this.plot = JJ, YJ.i.Uf(Yc, JJ, !0)
+      receivePlot(BB) {
+        this.plot = BB, oB.h.yH(oT, BB, !0)
       }
     }
-    const Dc = "KeyJ";
+    const LT = "KeyJ";
 
-    function sc(JJ) {
+    function OT(BB) {
       let {
-        hud: cJ,
-        journal: ZJ
-      } = JJ;
-      const FJ = (0, IJ.m)(vJ, ZJ.getPages()),
-        UJ = (0, IJ.m)(jc, cJ.getStep()),
+        hud: TB,
+        journal: dB
+      } = BB;
+      const VB = (0, wB.f)(mB, dB.getPages()),
+        yB = (0, wB.f)(gT, TB.getStep()),
         {
-          isTouchScreen: eJ
-        } = (0, AJ.j)(["isTouchScreen"]),
+          isTouchScreen: pB
+        } = (0, JB.m)(["isTouchScreen"]),
         {
-          t: YJ
-        } = (0, bJ.F)(),
-        hJ = null !== FJ && "none" === UJ[0];
-      return (0, SJ.b)((JJ => null !== FJ && JJ.code === Dc && !JJ.repeat && !(0, jJ.isTypingInInput)()), (JJ => {
-        (0, qJ.v)(JJ, hJ, XJ.n)
-      })), hJ ? (0, uJ.jsx)(Xc.f, {
+          t: oB
+        } = (0, FB.z)(),
+        kB = null !== VB && "none" === yB[0];
+      return (0, zB.d)((BB => null !== VB && BB.code === LT && !BB.repeat && !(0, gB.isTypingInInput)()), (BB => {
+        (0, YB.v)(BB, kB, lB.o)
+      })), kB ? (0, CB.jsx)(lT.e, {
         placement: "topRight",
-        children: (0, uJ.jsx)("div", {
+        children: (0, CB.jsx)("div", {
           className: "PlotsJournalButtonContainer",
-          children: (0, uJ.jsxs)("button", {
+          children: (0, CB.jsxs)("button", {
             type: "button",
-            className: EJ()("PlotsJournalButton SmallTextBold", {
-              Touch: eJ
+            className: tB()("PlotsJournalButton SmallTextBold", {
+              Touch: pB
             }),
-            onClick: XJ.n,
-            children: [(0, uJ.jsx)("span", {
+            onClick: lB.o,
+            children: [(0, CB.jsx)("span", {
               className: "PlotsJournalButtonIcon",
-              children: (0, uJ.jsx)(Ac.d, {
+              children: (0, CB.jsx)(JT.c, {
                 itemName: "Book",
                 amount: 0
               })
-            }), YJ("plotsGame:journalButton"), !eJ && (0, uJ.jsx)(qc.e, {
+            }), oB("plotsGame:journalButton"), !pB && (0, CB.jsx)(YT.d, {
               className: "PlotsJournalButtonKey",
-              keyCode: Dc
+              keyCode: LT
             })]
           })
         })
       }) : null
     }
-    var nc = ZJ(37403),
-      Gc = ZJ(37170),
-      fc = ZJ(35944),
-      xc = ZJ(8677),
-      rc = ZJ(8692),
-      vc = ZJ(36775);
-    const mc = new Map([
+    var DT = dB(37361),
+      uT = dB(37120),
+      HT = dB(35886),
+      ET = dB(8690),
+      vT = dB(8701),
+      mT = dB(36727);
+    const iT = new Map([
         ["Bluebell", [.165, .749, .992]],
         ["Bread Block", [.776, .565, .161]],
         ["Bricks", [.584, .329, .239]],
@@ -905,782 +905,782 @@ export const modules = {
         ["Yellow Glass", [1, .82, .263]],
         ["Yellow Wool", [1, .827, .251]]
       ]),
-      Qc = [...fc.c.blockRemoveActionRoots, ...Gc.b, ...xc.h, "Board", "Code Block", "Custom Lobby Block"],
-      Ec = /^(open|closed|(inner|outer)(Left|Right)|Stacked|books\d+|Roots|\w*GrassRoots|Growing|FreshlyGrown|empty|full)$/;
-    let Vc = null;
+      NT = [...HT.e.blockRemoveActionRoots, ...uT.b, ...ET.k, "Board", "Code Block", "Custom Lobby Block"],
+      tT = /^(open|closed|(inner|outer)(Left|Right)|Stacked|books\d+|Roots|\w*GrassRoots|Growing|FreshlyGrown|empty|full)$/;
+    let fT = null;
 
-    function Kc() {
-      return Vc ??= function() {
-        const JJ = yc(),
-          cJ = Math.max(...JJ.map((JJ => wJ.m[JJ].id))) + 1,
-          ZJ = new Int32Array(cJ),
-          FJ = new Int32Array(cJ),
-          UJ = new Uint8Array(cJ).fill(1),
-          eJ = new Uint8Array(cJ),
-          XJ = new Uint8Array(cJ),
-          AJ = new Array(cJ).fill("Air"),
-          qJ = new Map,
-          jJ = JJ => {
-            let cJ = qJ.get(JJ);
-            return void 0 === cJ && (cJ = qJ.size + 1, qJ.set(JJ, cJ)), cJ
+    function sT() {
+      return fT ??= function() {
+        const BB = MT(),
+          TB = Math.max(...BB.map((BB => KB.h[BB].id))) + 1,
+          dB = new Int32Array(TB),
+          VB = new Int32Array(TB),
+          yB = new Uint8Array(TB).fill(1),
+          pB = new Uint8Array(TB),
+          lB = new Uint8Array(TB),
+          JB = new Array(TB).fill("Air"),
+          YB = new Map,
+          gB = BB => {
+            let TB = YB.get(BB);
+            return void 0 === TB && (TB = YB.size + 1, YB.set(BB, TB)), TB
           },
-          YJ = new Set(Qc);
-        for (const DJ of JJ) {
-          var hJ;
+          oB = new Set(NT);
+        for (const LB of BB) {
+          var kB;
           const {
-            id: JJ,
-            meta: cJ,
-            altActionable: qJ,
-            canBePlacedOver: sJ
-          } = wJ.m[DJ];
-          ZJ[JJ] = jJ(Sc(DJ));
-          const nJ = cJ.stairsCorner;
-          if (null === nJ) FJ[JJ] = ZJ[JJ];
+            id: BB,
+            meta: TB,
+            altActionable: YB,
+            canBePlacedOver: OB
+          } = KB.h[LB];
+          dB[BB] = gB(zT(LB));
+          const DB = TB.stairsCorner;
+          if (null === DB) VB[BB] = dB[BB];
           else {
-            const ZJ = nJ.endsWith("Right");
-            FJ[JJ] = jJ(`${cJ.rootName}|rot${ZJ?cJ.rot%4+1:cJ.rot}|${cJ.halfblockPlacement}|${nJ.replace("Right","Left")}`)
+            const dB = DB.endsWith("Right");
+            VB[BB] = gB(`${TB.rootName}|rot${dB?TB.rot%4+1:TB.rot}|${TB.halfblockPlacement}|${DB.replace("Right","Left")}`)
           }
-          UJ[JJ] = sJ ? 1 : 0, eJ[JJ] = qJ || null !== cJ.open || DJ in vc.d || YJ.has(cJ.rootName) || void 0 !== (0, Gc.d)(cJ.rootName) ? 1 : 0;
+          yB[BB] = OB ? 1 : 0, pB[BB] = YB || null !== TB.open || LB in mT.d || oB.has(TB.rootName) || void 0 !== (0, uT.d)(TB.rootName) ? 1 : 0;
           const {
-            rootName: GJ
-          } = cJ;
-          XJ[JJ] = null !== cJ.open || Gc.b.includes(GJ) || GJ.includes("Bookshelf") || GJ.includes("Mailbox") ? 1 : 0, AJ[JJ] = null !== (hJ = (0, nc.f)(JJ)) && void 0 !== hJ ? hJ : GJ
+            rootName: uB
+          } = TB;
+          lB[BB] = null !== TB.open || uT.b.includes(uB) || uB.includes("Bookshelf") || uB.includes("Mailbox") ? 1 : 0, JB[BB] = null !== (kB = (0, DT.d)(BB)) && void 0 !== kB ? kB : uB
         }
         return {
-          kinds: ZJ,
-          shapes: FJ,
-          empty: UJ,
-          inUse: eJ,
-          ownAltActionMessage: XJ,
-          placingItems: AJ
+          kinds: dB,
+          shapes: VB,
+          empty: yB,
+          inUse: pB,
+          ownAltActionMessage: lB,
+          placingItems: JB
         }
-      }(), Vc
+      }(), fT
     }
 
-    function yc() {
-      return Object.keys(wJ.m).filter((JJ => wJ.m[JJ].name === JJ))
+    function MT() {
+      return Object.keys(KB.h).filter((BB => KB.h[BB].name === BB))
     }
 
-    function Sc(JJ) {
-      var cJ;
-      const ZJ = wJ.m[JJ],
+    function zT(BB) {
+      var TB;
+      const dB = KB.h[BB],
         {
-          rootName: FJ,
-          rot: UJ
-        } = ZJ.meta,
-        [, ...eJ] = (null !== (cJ = ZJ.rootMetaDesc) && void 0 !== cJ ? cJ : JJ).split("|"),
-        XJ = eJ.filter((JJ => !("meta" === JJ || Ec.test(JJ) || (0, rc.B)(ZJ) && /^[nesw]+$/.test(JJ) || xc.h.includes(FJ) && /^[lrud]+$/.test(JJ) || aJ.C.includes(FJ) && /^(left|right)$/.test(JJ))));
-      return [FJ, ...XJ].map((JJ => "fenceGate" === ZJ.model && JJ === `rot${UJ}` ? "rot" + ((UJ - 1) % 2 + 1) : JJ)).join("|")
+          rootName: VB,
+          rot: yB
+        } = dB.meta,
+        [, ...pB] = (null !== (TB = dB.rootMetaDesc) && void 0 !== TB ? TB : BB).split("|"),
+        lB = pB.filter((BB => !("meta" === BB || tT.test(BB) || (0, vT.A)(dB) && /^[nesw]+$/.test(BB) || ET.k.includes(VB) && /^[lrud]+$/.test(BB) || jB.J.includes(VB) && /^(left|right)$/.test(BB))));
+      return [VB, ...lB].map((BB => "fenceGate" === dB.model && BB === `rot${yB}` ? "rot" + ((yB - 1) % 2 + 1) : BB)).join("|")
     }
 
-    function Ic(JJ, cJ) {
+    function wT(BB, TB) {
       const {
-        kinds: ZJ,
-        shapes: FJ
-      } = Kc();
-      return ZJ[JJ] === ZJ[cJ] || FJ[JJ] === FJ[cJ]
+        kinds: dB,
+        shapes: VB
+      } = sT();
+      return dB[BB] === dB[TB] || VB[BB] === VB[TB]
     }
 
-    function Mc(JJ) {
-      return 1 === Kc().empty[JJ]
+    function UT(BB) {
+      return 1 === sT().empty[BB]
     }
 
-    function bc(JJ) {
-      return Kc().placingItems[JJ]
+    function FT(BB) {
+      return sT().placingItems[BB]
     }
 
-    function wc(JJ) {
-      return mc.get(wJ.m[JJ].meta.rootName)
+    function KT(BB) {
+      return iT.get(KB.h[BB].meta.rootName)
     }
-    var Wc = ZJ(8670),
-      gc = ZJ(8687);
-    const Hc = [0, 0, 0, 1, 1, 1],
-      Pc = (0, Wc.c)([
+    var rT = dB(8687),
+      IT = dB(8698);
+    const cT = [0, 0, 0, 1, 1, 1],
+      ST = (0, rT.d)([
         [2, 0, 2, 6, 6, 6]
       ]),
-      kc = (0, Wc.c)([
+      PT = (0, rT.d)([
         [3, 0, 3, 5, 5, 5]
       ]),
-      pc = (0, Wc.c)([
+      QT = (0, rT.d)([
         [3, 3, 3, 5, 8, 5]
       ]),
-      dc = [0, 1, 2, 3].map((JJ => (0, Wc.c)((0, Wc.n)([
+      RT = [0, 1, 2, 3].map((BB => (0, rT.d)((0, rT.n)([
         [3, 2, 0, 5, 7, 3]
-      ], JJ))));
+      ], BB))));
 
-    function zc(JJ) {
+    function aT(BB) {
       const {
-        Xf: cJ,
-        model: ZJ,
-        blockModel: FJ,
-        meta: UJ
-      } = wJ.m[JJ];
-      return void 0 !== cJ ? cJ : "CentreCross" === ZJ ? Pc : null !== FJ && void 0 !== FJ && FJ.startsWith("torch") ? UJ.halfblockPlacement === gc.d.side ? dc[UJ.rot - 1] : UJ.halfblockPlacement === gc.d.top ? pc : kc : Hc
+        AO: TB,
+        model: dB,
+        blockModel: VB,
+        meta: yB
+      } = KB.h[BB];
+      return void 0 !== TB ? TB : "CentreCross" === dB ? ST : null !== VB && void 0 !== VB && VB.startsWith("torch") ? yB.halfblockPlacement === IT.e.side ? RT[yB.rot - 1] : yB.halfblockPlacement === IT.e.top ? QT : PT : cT
     }
 
-    function Nc(JJ, cJ) {
-      return null === JJ || null === cJ ? JJ === cJ : JJ[0] === cJ[0] && JJ[1] === cJ[1] && JJ[2] === cJ[2]
+    function ZT(BB, TB) {
+      return null === BB || null === TB ? BB === TB : BB[0] === TB[0] && BB[1] === TB[1] && BB[2] === TB[2]
     }
 
-    function Oc(JJ) {
-      return [JJ[0] + .5, JJ[1] + .5, JJ[2] + .5]
+    function XT(BB) {
+      return [BB[0] + .5, BB[1] + .5, BB[2] + .5]
     }
-    var Tc = ZJ(157);
+    var WT = dB(184);
 
-    function Cc(JJ, cJ) {
-      const ZJ = Tc.c.Av / 2;
-      return JJ[0] < cJ[0] + ZJ && JJ[0] + 1 > cJ[0] - ZJ && JJ[1] < cJ[1] + Tc.c.Dv && JJ[1] + 1 > cJ[1] && JJ[2] < cJ[2] + ZJ && JJ[2] + 1 > cJ[2] - ZJ
-    }
-
-    function uc(JJ) {
-      return JJ + 1
+    function hT(BB, TB) {
+      const dB = WT.c.lE / 2;
+      return BB[0] < TB[0] + dB && BB[0] + 1 > TB[0] - dB && BB[1] < TB[1] + WT.c.kE && BB[1] + 1 > TB[1] && BB[2] < TB[2] + dB && BB[2] + 1 > TB[2] - dB
     }
 
-    function ic(JJ, cJ, ZJ, FJ, UJ) {
-      const eJ = Math.hypot(...cJ.dir);
-      if (!Number.isFinite(eJ) || 0 === eJ) return -1;
+    function CT(BB) {
+      return BB + 1
+    }
+
+    function GT(BB, TB, dB, VB, yB) {
+      const pB = Math.hypot(...TB.dir);
+      if (!Number.isFinite(pB) || 0 === pB) return -1;
       const {
-        from: XJ,
-        reach: AJ,
-        solid: qJ
-      } = cJ, jJ = [cJ.dir[0] / eJ, cJ.dir[1] / eJ, cJ.dir[2] / eJ], YJ = null === qJ ? AJ : Math.min(AJ, function(JJ, cJ, ZJ) {
-        const FJ = Rc(JJ, cJ, ZJ);
-        if (FJ !== 1 / 0) return FJ;
-        return (ZJ[0] + .5 - JJ[0]) * cJ[0] + (ZJ[1] + .5 - JJ[1]) * cJ[1] + (ZJ[2] + .5 - JJ[2]) * cJ[2]
-      }(XJ, jJ, qJ) + .75);
-      let hJ = -1,
-        DJ = 1 / 0,
-        sJ = 1 / 0;
-      for (let nJ = 0; nJ < JJ.length; nJ += 4) {
-        const cJ = [JJ[nJ], JJ[nJ + 1], JJ[nJ + 2]],
-          eJ = UJ(nJ) ? AJ : YJ;
-        let qJ = -1,
-          GJ = Rc(XJ, jJ, cJ);
-        if (GJ > eJ) {
-          const JJ = [cJ[0] + .5 - XJ[0], cJ[1] + .5 - XJ[1], cJ[2] + .5 - XJ[2]];
-          if (GJ = JJ[0] * jJ[0] + JJ[1] * jJ[1] + JJ[2] * jJ[2], GJ <= 0 || GJ > eJ) continue;
-          if (qJ = Math.hypot(JJ[0] - GJ * jJ[0], JJ[1] - GJ * jJ[1], JJ[2] - GJ * jJ[2]), qJ > .7 || !FJ(nJ)) continue
-        }(qJ < DJ || qJ === DJ && GJ < sJ) && ZJ(nJ) && (hJ = nJ, DJ = qJ, sJ = GJ)
+        from: lB,
+        reach: JB,
+        solid: YB
+      } = TB, gB = [TB.dir[0] / pB, TB.dir[1] / pB, TB.dir[2] / pB], oB = null === YB ? JB : Math.min(JB, function(BB, TB, dB) {
+        const VB = qT(BB, TB, dB);
+        if (VB !== 1 / 0) return VB;
+        return (dB[0] + .5 - BB[0]) * TB[0] + (dB[1] + .5 - BB[1]) * TB[1] + (dB[2] + .5 - BB[2]) * TB[2]
+      }(lB, gB, YB) + .75);
+      let kB = -1,
+        LB = 1 / 0,
+        OB = 1 / 0;
+      for (let DB = 0; DB < BB.length; DB += 4) {
+        const TB = [BB[DB], BB[DB + 1], BB[DB + 2]],
+          pB = yB(DB) ? JB : oB;
+        let YB = -1,
+          uB = qT(lB, gB, TB);
+        if (uB > pB) {
+          const BB = [TB[0] + .5 - lB[0], TB[1] + .5 - lB[1], TB[2] + .5 - lB[2]];
+          if (uB = BB[0] * gB[0] + BB[1] * gB[1] + BB[2] * gB[2], uB <= 0 || uB > pB) continue;
+          if (YB = Math.hypot(BB[0] - uB * gB[0], BB[1] - uB * gB[1], BB[2] - uB * gB[2]), YB > .7 || !VB(DB)) continue
+        }(YB < LB || YB === LB && uB < OB) && dB(DB) && (kB = DB, LB = YB, OB = uB)
       }
-      return hJ
+      return kB
     }
 
-    function Rc(JJ, cJ, ZJ) {
-      let FJ = 0,
-        UJ = 1 / 0;
-      for (let eJ = 0; eJ < 3; eJ++) {
-        const XJ = ZJ[eJ] - JJ[eJ];
-        if (0 === cJ[eJ]) {
-          if (XJ > 0 || XJ + 1 < 0) return 1 / 0;
+    function qT(BB, TB, dB) {
+      let VB = 0,
+        yB = 1 / 0;
+      for (let pB = 0; pB < 3; pB++) {
+        const lB = dB[pB] - BB[pB];
+        if (0 === TB[pB]) {
+          if (lB > 0 || lB + 1 < 0) return 1 / 0;
           continue
         }
-        const AJ = XJ / cJ[eJ],
-          qJ = (XJ + 1) / cJ[eJ];
-        FJ = Math.max(FJ, Math.min(AJ, qJ)), UJ = Math.min(UJ, Math.max(AJ, qJ))
+        const JB = lB / TB[pB],
+          YB = (lB + 1) / TB[pB];
+        VB = Math.max(VB, Math.min(JB, YB)), yB = Math.min(yB, Math.max(JB, YB))
       }
-      return FJ <= UJ ? FJ : 1 / 0
+      return VB <= yB ? VB : 1 / 0
     }
-    var Lc = ZJ(37025),
-      ac = ZJ(37505);
-    const Bc = [1, 1, 1];
-    class tc {
-      constructor(JJ) {
-        this.api = JJ, this.meshes = null, this.shown = null
+    var xT = dB(36946),
+      jT = dB(37470);
+    const AT = [1, 1, 1];
+    class bT {
+      constructor(BB) {
+        this.api = BB, this.meshes = null, this.shown = null
       }
-      show(JJ) {
-        if (!Nc(JJ, this.shown))
-          if (this.shown = null === JJ ? null : [JJ[0], JJ[1], JJ[2]], null !== this.meshes)
-            for (const cJ of this.meshes) this.api.setGameMesh(cJ, null === JJ ? {
+      show(BB) {
+        if (!ZT(BB, this.shown))
+          if (this.shown = null === BB ? null : [BB[0], BB[1], BB[2]], null !== this.meshes)
+            for (const TB of this.meshes) this.api.setGameMesh(TB, null === BB ? {
               visible: !1
             } : {
-              anchor: JJ,
+              anchor: BB,
               visible: !0
             });
-          else if (null !== JJ) {
-          const cJ = [Lc.g, Lc.g, Lc.g, 0, 0, 0];
-          this.meshes = [this.build([cJ], Lc.h, JJ), this.build((0, Lc.c)(), Lc.l, JJ)]
+          else if (null !== BB) {
+          const TB = [xT.g, xT.g, xT.g, 0, 0, 0];
+          this.meshes = [this.build([TB], xT.j, BB), this.build((0, xT.d)(), xT.o, BB)]
         }
       }
       dispose() {
-        for (const cJ of null !== (JJ = this.meshes) && void 0 !== JJ ? JJ : []) {
-          var JJ;
-          this.api.disposeGameMesh(cJ)
+        for (const TB of null !== (BB = this.meshes) && void 0 !== BB ? BB : []) {
+          var BB;
+          this.api.disposeGameMesh(TB)
         }
         this.meshes = null, this.shown = null
       }
-      build(JJ, cJ, ZJ) {
-        const FJ = [],
-          UJ = [];
-        for (const [eJ, XJ, AJ, qJ, jJ, YJ] of JJ)(0, ac.i)(FJ, UJ, [qJ + .5, jJ + .5, YJ + .5], [eJ, XJ, AJ]);
+      build(BB, TB, dB) {
+        const VB = [],
+          yB = [];
+        for (const [pB, lB, JB, YB, gB, oB] of BB)(0, jT.f)(VB, yB, [YB + .5, gB + .5, oB + .5], [pB, lB, JB]);
         return this.api.createGameMesh({
-          positions: FJ,
-          indices: UJ
+          positions: VB,
+          indices: yB
         }, {
-          rgb: Bc,
-          alpha: cJ,
+          rgb: AT,
+          alpha: TB,
           onTop: !0
-        }, ZJ)
+        }, dB)
       }
     }
-    class oc {
-      constructor(JJ) {
-        this.api = JJ, this.chunks = [], this.versions = [], this.lastCheckMs = -1 / 0
+    class nT {
+      constructor(BB) {
+        this.api = BB, this.chunks = [], this.versions = [], this.lastCheckMs = -1 / 0
       }
-      watch(JJ) {
-        const cJ = Tc.c.Kn;
+      watch(BB) {
+        const TB = WT.c.UD;
         this.chunks = [];
-        for (let ZJ = 0; ZJ < JJ.length; ZJ += 3) {
-          const FJ = Math.floor(JJ[ZJ] / cJ),
-            UJ = Math.floor(JJ[ZJ + 1] / cJ),
-            eJ = Math.floor(JJ[ZJ + 2] / cJ);
-          this.watches(FJ, UJ, eJ) || this.chunks.push(FJ, UJ, eJ)
+        for (let dB = 0; dB < BB.length; dB += 3) {
+          const VB = Math.floor(BB[dB] / TB),
+            yB = Math.floor(BB[dB + 1] / TB),
+            pB = Math.floor(BB[dB + 2] / TB);
+          this.watches(VB, yB, pB) || this.chunks.push(VB, yB, pB)
         }
         this.versions = [], this.lastCheckMs = -1 / 0, this.changed()
       }
       changed() {
-        const JJ = performance.now();
-        if (JJ - this.lastCheckMs < 100) return !1;
-        this.lastCheckMs = JJ;
-        let cJ = !1;
-        for (let ZJ = 0; ZJ < this.chunks.length; ZJ += 3) {
-          const JJ = this.api.getChunkVersion(this.chunks[ZJ], this.chunks[ZJ + 1], this.chunks[ZJ + 2]);
-          this.versions[ZJ / 3] !== JJ && (this.versions[ZJ / 3] = JJ, cJ = !0)
+        const BB = performance.now();
+        if (BB - this.lastCheckMs < 100) return !1;
+        this.lastCheckMs = BB;
+        let TB = !1;
+        for (let dB = 0; dB < this.chunks.length; dB += 3) {
+          const BB = this.api.getChunkVersion(this.chunks[dB], this.chunks[dB + 1], this.chunks[dB + 2]);
+          this.versions[dB / 3] !== BB && (this.versions[dB / 3] = BB, TB = !0)
         }
-        return cJ
+        return TB
       }
-      watches(JJ, cJ, ZJ) {
-        for (let FJ = 0; FJ < this.chunks.length; FJ += 3)
-          if (this.chunks[FJ] === JJ && this.chunks[FJ + 1] === cJ && this.chunks[FJ + 2] === ZJ) return !0;
+      watches(BB, TB, dB) {
+        for (let VB = 0; VB < this.chunks.length; VB += 3)
+          if (this.chunks[VB] === BB && this.chunks[VB + 1] === TB && this.chunks[VB + 2] === dB) return !0;
         return !1
       }
     }
-    const lc = .35,
-      JZ = {
+    const eT = .35,
+      Bd = {
         size: .9,
         alpha: .35,
         crossed: !1
       },
-      cZ = {
+      Td = {
         size: 1.04,
         alpha: .45,
         crossed: !0
       },
-      ZZ = [.95, .2, .15];
-    class FZ {
+      dd = [.95, .2, .15];
+    class Vd {
       constructor() {
         this.groups = []
       }
-      add(JJ, cJ, ZJ, FJ, UJ) {
-        let eJ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Hc;
-        for (const XJ of this.groups)
-          if (XZ(XJ, FJ, UJ)) return XJ.cells.push(JJ, cJ, ZJ), void XJ.boxes.push(eJ);
+      add(BB, TB, dB, VB, yB) {
+        let pB = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : cT;
+        for (const lB of this.groups)
+          if (ld(lB, VB, yB)) return lB.cells.push(BB, TB, dB), void lB.boxes.push(pB);
         this.groups.push({
-          rgb: FJ,
-          look: UJ,
-          cells: [JJ, cJ, ZJ],
-          boxes: [eJ]
+          rgb: VB,
+          look: yB,
+          cells: [BB, TB, dB],
+          boxes: [pB]
         })
       }
       toArray() {
         return this.groups
       }
     }
-    class UZ {
-      constructor(JJ) {
-        this.api = JJ, this.shown = []
+    class yd {
+      constructor(BB) {
+        this.api = BB, this.shown = []
       }
-      show(JJ) {
-        const cJ = [];
-        for (const ZJ of JJ) {
-          const JJ = this.shown.findIndex((JJ => {
+      show(BB) {
+        const TB = [];
+        for (const dB of BB) {
+          const BB = this.shown.findIndex((BB => {
             let {
-              group: cJ
-            } = JJ;
-            return XZ(cJ, ZJ.rgb, ZJ.look) && AZ(cJ, ZJ)
-          })); - 1 === JJ ? cJ.push(this.build(ZJ)) : (cJ.push(this.shown[JJ]), this.shown.splice(JJ, 1))
+              group: TB
+            } = BB;
+            return ld(TB, dB.rgb, dB.look) && Jd(TB, dB)
+          })); - 1 === BB ? TB.push(this.build(dB)) : (TB.push(this.shown[BB]), this.shown.splice(BB, 1))
         }
-        this.dispose(), this.shown = cJ
+        this.dispose(), this.shown = TB
       }
       dispose() {
         for (const {
-            meshes: JJ
+            meshes: BB
           }
           of this.shown)
-          for (const cJ of JJ) this.api.disposeGameMesh(cJ);
+          for (const TB of BB) this.api.disposeGameMesh(TB);
         this.shown = []
       }
-      build(JJ) {
+      build(BB) {
         const {
-          rgb: cJ,
-          look: ZJ,
-          boxes: FJ
-        } = JJ, UJ = [cJ[0] + (1 - cJ[0]) * lc, cJ[1] + (1 - cJ[1]) * lc, cJ[2] + (1 - cJ[2]) * lc], eJ = [this.buildMesh(JJ.cells, cJ, ZJ.alpha, ((JJ, cJ, UJ, eJ) => {
-          eZ(JJ, cJ, UJ, FJ[eJ], ZJ.size, !1)
-        })), this.buildMesh(JJ.cells, UJ, ZJ.alpha, ((JJ, cJ, UJ, eJ) => {
-          eZ(JJ, cJ, UJ, FJ[eJ], ZJ.size, !0)
+          rgb: TB,
+          look: dB,
+          boxes: VB
+        } = BB, yB = [TB[0] + (1 - TB[0]) * eT, TB[1] + (1 - TB[1]) * eT, TB[2] + (1 - TB[2]) * eT], pB = [this.buildMesh(BB.cells, TB, dB.alpha, ((BB, TB, yB, pB) => {
+          pd(BB, TB, yB, VB[pB], dB.size, !1)
+        })), this.buildMesh(BB.cells, yB, dB.alpha, ((BB, TB, yB, pB) => {
+          pd(BB, TB, yB, VB[pB], dB.size, !0)
         }))];
-        return ZJ.crossed && eJ.push(this.buildMesh(JJ.cells, cJ, .9, ((JJ, cJ, FJ) => {
-          (0, ac.k)(JJ, cJ, FJ, ZJ.size + .01, .12)
+        return dB.crossed && pB.push(this.buildMesh(BB.cells, TB, .9, ((BB, TB, VB) => {
+          (0, jT.g)(BB, TB, VB, dB.size + .01, .12)
         }))), {
-          group: JJ,
-          meshes: eJ
+          group: BB,
+          meshes: pB
         }
       }
-      buildMesh(JJ, cJ, ZJ, FJ) {
-        const UJ = [JJ[0], JJ[1], JJ[2]],
-          eJ = [],
-          XJ = [];
-        for (let AJ = 0; AJ < JJ.length; AJ += 3) FJ(eJ, XJ, [JJ[AJ] - UJ[0] + .5, JJ[AJ + 1] - UJ[1] + .5, JJ[AJ + 2] - UJ[2] + .5], AJ / 3);
+      buildMesh(BB, TB, dB, VB) {
+        const yB = [BB[0], BB[1], BB[2]],
+          pB = [],
+          lB = [];
+        for (let JB = 0; JB < BB.length; JB += 3) VB(pB, lB, [BB[JB] - yB[0] + .5, BB[JB + 1] - yB[1] + .5, BB[JB + 2] - yB[2] + .5], JB / 3);
         return this.api.createGameMesh({
-          positions: eJ,
-          indices: XJ
+          positions: pB,
+          indices: lB
         }, {
-          rgb: [cJ[0], cJ[1], cJ[2]],
-          alpha: ZJ
-        }, UJ)
+          rgb: [TB[0], TB[1], TB[2]],
+          alpha: dB
+        }, yB)
       }
     }
 
-    function eZ(JJ, cJ, ZJ, FJ, UJ, eJ) {
-      for (let XJ = 0; XJ < FJ.length; XJ += 6) {
-        const AJ = [0, 0, 0],
-          qJ = [0, 0, 0];
-        for (let JJ = 0; JJ < 3; JJ++) AJ[JJ] = ZJ[JJ] + ((FJ[XJ + JJ] + FJ[XJ + JJ + 3]) / 2 - .5) * UJ, qJ[JJ] = (FJ[XJ + JJ + 3] - FJ[XJ + JJ]) * UJ;
-        (0, ac.e)(JJ, cJ, AJ, qJ, eJ)
+    function pd(BB, TB, dB, VB, yB, pB) {
+      for (let lB = 0; lB < VB.length; lB += 6) {
+        const JB = [0, 0, 0],
+          YB = [0, 0, 0];
+        for (let BB = 0; BB < 3; BB++) JB[BB] = dB[BB] + ((VB[lB + BB] + VB[lB + BB + 3]) / 2 - .5) * yB, YB[BB] = (VB[lB + BB + 3] - VB[lB + BB]) * yB;
+        (0, jT.c)(BB, TB, JB, YB, pB)
       }
     }
 
-    function XZ(JJ, cJ, ZJ) {
-      return JJ.rgb[0] === cJ[0] && JJ.rgb[1] === cJ[1] && JJ.rgb[2] === cJ[2] && JJ.look === ZJ
+    function ld(BB, TB, dB) {
+      return BB.rgb[0] === TB[0] && BB.rgb[1] === TB[1] && BB.rgb[2] === TB[2] && BB.look === dB
     }
 
-    function AZ(JJ, cJ) {
-      if (JJ.cells.length !== cJ.cells.length) return !1;
-      for (let ZJ = 0; ZJ < JJ.cells.length; ZJ++)
-        if (JJ.cells[ZJ] !== cJ.cells[ZJ]) return !1;
-      return JJ.boxes.every(((JJ, ZJ) => JJ === cJ.boxes[ZJ]))
+    function Jd(BB, TB) {
+      if (BB.cells.length !== TB.cells.length) return !1;
+      for (let dB = 0; dB < BB.cells.length; dB++)
+        if (BB.cells[dB] !== TB.cells[dB]) return !1;
+      return BB.boxes.every(((BB, dB) => BB === TB.boxes[dB]))
     }
-    class qZ {
-      constructor(JJ, cJ, ZJ) {
-        this.api = JJ, this.localPlayerId = cJ, this.pickNext = ZJ, this.turning = null, this.pending = null, this.tap = null, this.heading = [0, 1]
+    class Yd {
+      constructor(BB, TB, dB) {
+        this.api = BB, this.localPlayerId = TB, this.pickNext = dB, this.turning = null, this.pending = null, this.tap = null, this.heading = [0, 1]
       }
-      look(JJ) {
-        const [cJ, , ZJ] = JJ.cameraDirection, FJ = Math.hypot(cJ, ZJ);
-        FJ > .001 && (this.heading = [cJ / FJ, ZJ / FJ])
+      look(BB) {
+        const [TB, , dB] = BB.cameraDirection, VB = Math.hypot(TB, dB);
+        VB > .001 && (this.heading = [TB / VB, dB / VB])
       }
-      tapped(JJ, cJ, ZJ) {
-        const FJ = uc(this.api.getClientOption(this.localPlayerId, "blockReach")),
+      tapped(BB, TB, dB) {
+        const VB = CT(this.api.getClientOption(this.localPlayerId, "blockReach")),
           {
-            origin: UJ,
-            direction: eJ
+            origin: yB,
+            direction: pB
           } = this.api.getActionRay(),
-          XJ = [...UJ],
-          AJ = [
-            [XJ, [XJ[0] + eJ[0] * FJ, XJ[1] + eJ[1] * FJ, XJ[2] + eJ[2] * FJ]]
+          lB = [...yB],
+          JB = [
+            [lB, [lB[0] + pB[0] * VB, lB[1] + pB[1] * VB, lB[2] + pB[2] * VB]]
           ];
-        null !== JJ && AJ.push([XJ, Oc(JJ)]), this.tap = {
-          lines: AJ,
-          next: cJ,
-          ms: ZJ
+        null !== BB && JB.push([lB, XT(BB)]), this.tap = {
+          lines: JB,
+          next: TB,
+          ms: dB
         }
       }
-      filled(JJ, cJ) {
+      filled(BB, TB) {
         this.tap = null, this.pending = {
-          from: JJ,
-          ms: cJ
-        }, this.retry(cJ)
+          from: BB,
+          ms: TB
+        }, this.retry(TB)
       }
-      arrived(JJ, cJ) {
+      arrived(BB, TB) {
         const {
-          tap: ZJ
+          tap: dB
         } = this;
-        if (null === ZJ || cJ - ZJ.ms > 1500) return null;
-        const FJ = Oc(JJ);
-        return Nc(ZJ.next, JJ) || ZJ.lines.some((JJ => {
-          let [cJ, ZJ] = JJ;
-          return function(JJ, cJ, ZJ) {
-            const FJ = [ZJ[0] - cJ[0], ZJ[1] - cJ[1], ZJ[2] - cJ[2]],
-              UJ = [JJ[0] - cJ[0], JJ[1] - cJ[1], JJ[2] - cJ[2]],
-              eJ = FJ[0] ** 2 + FJ[1] ** 2 + FJ[2] ** 2,
-              XJ = 0 === eJ ? 0 : Math.min(1, Math.max(0, (UJ[0] * FJ[0] + UJ[1] * FJ[1] + UJ[2] * FJ[2]) / eJ));
-            return Math.hypot(UJ[0] - FJ[0] * XJ, UJ[1] - FJ[1] * XJ, UJ[2] - FJ[2] * XJ)
-          }(FJ, cJ, ZJ) <= .9
+        if (null === dB || TB - dB.ms > 1500) return null;
+        const VB = XT(BB);
+        return ZT(dB.next, BB) || dB.lines.some((BB => {
+          let [TB, dB] = BB;
+          return function(BB, TB, dB) {
+            const VB = [dB[0] - TB[0], dB[1] - TB[1], dB[2] - TB[2]],
+              yB = [BB[0] - TB[0], BB[1] - TB[1], BB[2] - TB[2]],
+              pB = VB[0] ** 2 + VB[1] ** 2 + VB[2] ** 2,
+              lB = 0 === pB ? 0 : Math.min(1, Math.max(0, (yB[0] * VB[0] + yB[1] * VB[1] + yB[2] * VB[2]) / pB));
+            return Math.hypot(yB[0] - VB[0] * lB, yB[1] - VB[1] * lB, yB[2] - VB[2] * lB)
+          }(VB, TB, dB) <= .9
         })) ? (this.tap = null, this.pending = {
-          from: JJ,
-          ms: cJ
-        }, ZJ.ms) : null
+          from: BB,
+          ms: TB
+        }, dB.ms) : null
       }
-      retry(JJ) {
+      retry(BB) {
         const {
-          pending: cJ
+          pending: TB
         } = this;
-        if (null === cJ) return;
-        if (JJ - cJ.ms > 1500) return void(this.pending = null);
-        const ZJ = this.pickNext(Oc(cJ.from), (JJ => Nc(JJ, cJ.from)));
-        if (null === ZJ) return;
+        if (null === TB) return;
+        if (BB - TB.ms > 1500) return void(this.pending = null);
+        const dB = this.pickNext(XT(TB.from), (BB => ZT(BB, TB.from)));
+        if (null === dB) return;
         this.pending = null;
         const {
-          turning: FJ
+          turning: VB
         } = this;
-        if (null !== FJ && JJ < FJ.endMs && Nc(FJ.to, ZJ)) return;
-        const UJ = this.api.getActionRay().origin,
-          eJ = [ZJ[0] + .5 - UJ[0], ZJ[1] + .5 - UJ[1], ZJ[2] + .5 - UJ[2]],
-          XJ = Math.hypot(eJ[0], eJ[2]);
-        if (XJ < .3) {
-          const JJ = Math.max(XJ, .001);
-          eJ[0] = this.heading[0] * JJ, eJ[2] = this.heading[1] * JJ
+        if (null !== VB && BB < VB.endMs && ZT(VB.to, dB)) return;
+        const yB = this.api.getActionRay().origin,
+          pB = [dB[0] + .5 - yB[0], dB[1] + .5 - yB[1], dB[2] + .5 - yB[2]],
+          lB = Math.hypot(pB[0], pB[2]);
+        if (lB < .3) {
+          const BB = Math.max(lB, .001);
+          pB[0] = this.heading[0] * BB, pB[2] = this.heading[1] * BB
         }
-        this.api.turnCamera(eJ, 250), this.turning = {
-          to: ZJ,
-          endMs: JJ + 250
+        this.api.turnCamera(pB, 250), this.turning = {
+          to: dB,
+          endMs: BB + 250
         }
       }
     }
-    class jZ {
-      constructor(JJ, cJ, ZJ) {
-        this.api = JJ, this.localPlayerId = cJ, this.juice = ZJ, this.ghostCells = [], this.palette = [], this.blockIds = [], this.occupiedCells = [], this.blueprint = "", this.layerY = 0, this.topLayerY = 0, this.layerCells = new Map, this.open = new Set, this.nextCells = [], this.lastFilled = null, this.lastSeenFilled = null, this.playerCells = [], this.aimed = null, this.pressMs = null, this.foreseen = new Map, this.turn = void 0, this.nextCell = null, this.chunkWatch = void 0, this.meshes = void 0, this.outline = void 0, this.chunkWatch = new oc(JJ), this.meshes = new UZ(JJ), this.outline = new tc(JJ), this.turn = new qZ(JJ, cJ, ((JJ, cJ) => this.pickNext(JJ, cJ)))
+    class gd {
+      constructor(BB, TB, dB) {
+        this.api = BB, this.localPlayerId = TB, this.juice = dB, this.ghostCells = [], this.palette = [], this.blockIds = [], this.occupiedCells = [], this.blueprint = "", this.layerY = 0, this.topLayerY = 0, this.layerCells = new Map, this.open = new Set, this.nextCells = [], this.lastFilled = null, this.lastSeenFilled = null, this.playerCells = [], this.aimed = null, this.pressMs = null, this.foreseen = new Map, this.turn = void 0, this.nextCell = null, this.chunkWatch = void 0, this.meshes = void 0, this.outline = void 0, this.chunkWatch = new nT(BB), this.meshes = new yd(BB), this.outline = new bT(BB), this.turn = new Yd(BB, TB, ((BB, TB) => this.pickNext(BB, TB)))
       }
-      Qn(JJ) {
-        const cJ = "active" === JJ[0] ? `${JJ[1]}|${JJ[3]}|${JJ[4]}|${JJ[5]}|${JJ[6]}` : "";
-        if ("active" !== JJ[0]) "built" === JJ[0] && "" !== this.blueprint && this.finishLayer(1 / 0), this.ghostCells = [], this.palette = [], this.occupiedCells = [];
+      MD(BB) {
+        const TB = "active" === BB[0] ? `${BB[1]}|${BB[3]}|${BB[4]}|${BB[5]}|${BB[6]}` : "";
+        if ("active" !== BB[0]) "built" === BB[0] && "" !== this.blueprint && this.finishLayer(1 / 0), this.ghostCells = [], this.palette = [], this.occupiedCells = [];
         else {
-          const [, , , , , , , ZJ, FJ, UJ, eJ] = JJ;
-          cJ !== this.blueprint ? (this.layerCells.clear(), this.topLayerY = ZJ) : ZJ === this.layerY ? this.burstUnlisted(FJ) : ZJ > this.layerY && this.finishLayer(ZJ), this.layerY = ZJ, this.layerCells.has(ZJ) || this.layerCells.set(ZJ, FJ.filter(hZ)), this.ghostCells = FJ, this.palette = UJ, this.occupiedCells = eJ
+          const [, , , , , , , dB, VB, yB, pB] = BB;
+          TB !== this.blueprint ? (this.layerCells.clear(), this.topLayerY = dB) : dB === this.layerY ? this.burstUnlisted(VB) : dB > this.layerY && this.finishLayer(dB), this.layerY = dB, this.layerCells.has(dB) || this.layerCells.set(dB, VB.filter(kd)), this.ghostCells = VB, this.palette = yB, this.occupiedCells = pB
         }
-        cJ !== this.blueprint && (this.blueprint = cJ, this.open.clear(), this.foreseen.clear(), this.lastFilled = null, this.lastSeenFilled = null), this.blockIds = this.palette.map((JJ => this.api.blockNameToBlockId(JJ))), this.chunkWatch.watch([...this.ghostCells.filter(hZ), ...this.occupiedCells]), this.refresh()
+        TB !== this.blueprint && (this.blueprint = TB, this.open.clear(), this.foreseen.clear(), this.lastFilled = null, this.lastSeenFilled = null), this.blockIds = this.palette.map((BB => this.api.blockNameToBlockId(BB))), this.chunkWatch.watch([...this.ghostCells.filter(kd), ...this.occupiedCells]), this.refresh()
       }
-      finishLayer(JJ) {
-        this.burstUnlisted([]), JJ > this.topLayerY && (this.juice.layerDone(this.layerCells.get(this.topLayerY)), this.topLayerY = JJ)
+      finishLayer(BB) {
+        this.burstUnlisted([]), BB > this.topLayerY && (this.juice.layerDone(this.layerCells.get(this.topLayerY)), this.topLayerY = BB)
       }
-      Hh() {
+      dL() {
         if (this.chunkWatch.changed()) return void this.refresh();
-        const JJ = performance.now();
-        let cJ = !1;
-        for (const [UJ, eJ] of this.foreseen) {
-          var ZJ;
-          if (JJ - eJ > 1e3) this.foreseen.delete(UJ), cJ = !0, (null === (ZJ = this.lastFilled) || void 0 === ZJ ? void 0 : ZJ.join()) === UJ && (this.lastFilled = this.lastSeenFilled)
+        const BB = performance.now();
+        let TB = !1;
+        for (const [yB, pB] of this.foreseen) {
+          var dB;
+          if (BB - pB > 1e3) this.foreseen.delete(yB), TB = !0, (null === (dB = this.lastFilled) || void 0 === dB ? void 0 : dB.join()) === yB && (this.lastFilled = this.lastSeenFilled)
         }
-        const FJ = YZ(this.api.getPositionView(this.localPlayerId));
-        (cJ || FJ.some(((JJ, cJ) => JJ !== this.playerCells[cJ]))) && this.showNext()
+        const VB = od(this.api.getPositionView(this.localPlayerId));
+        (TB || VB.some(((BB, TB) => BB !== this.playerCells[TB]))) && this.showNext()
       }
       dispose() {
         this.meshes.dispose(), this.outline.dispose()
       }
-      burstUnlisted(JJ) {
-        const cJ = new Set;
-        for (let UJ = 0; UJ < JJ.length; UJ += 4) cJ.add(`${JJ[UJ]},${JJ[UJ+1]},${JJ[UJ+2]}`);
-        const ZJ = [],
+      burstUnlisted(BB) {
+        const TB = new Set;
+        for (let yB = 0; yB < BB.length; yB += 4) TB.add(`${BB[yB]},${BB[yB+1]},${BB[yB+2]}`);
+        const dB = [],
           {
-            ghostCells: FJ
+            ghostCells: VB
           } = this;
-        for (let UJ = 0; UJ < FJ.length; UJ += 4) {
-          const JJ = `${FJ[UJ]},${FJ[UJ+1]},${FJ[UJ+2]}`;
-          !cJ.has(JJ) && this.open.delete(JJ) && ZJ.push(this.filledCell(UJ))
+        for (let yB = 0; yB < VB.length; yB += 4) {
+          const BB = `${VB[yB]},${VB[yB+1]},${VB[yB+2]}`;
+          !TB.has(BB) && this.open.delete(BB) && dB.push(this.filledCell(yB))
         }
-        this.burst(ZJ)
+        this.burst(dB)
       }
       refresh() {
         const {
-          ghostCells: JJ,
-          palette: cJ,
-          occupiedCells: ZJ
-        } = this, FJ = new FZ, UJ = new Set, eJ = [], XJ = [];
-        for (let AJ = 0; AJ < JJ.length; AJ += 4) {
-          const [ZJ, qJ, jJ, YJ] = [JJ[AJ], JJ[AJ + 1], JJ[AJ + 2], JJ[AJ + 3]], hJ = this.api.getBlockId(ZJ, qJ, jJ), DJ = `${ZJ},${qJ},${jJ}`, sJ = Ic(this.blockIds[YJ], hJ);
-          !sJ && Mc(hJ) ? FJ.add(ZJ, qJ, jJ, wc(cJ[YJ]), JZ, zc(cJ[YJ])) : sJ ? this.open.has(DJ) && eJ.push(this.filledCell(AJ)) : FJ.add(ZJ, qJ, jJ, ZZ, cZ), !sJ && this.api.isBlockInLoadedChunk(ZJ, qJ, jJ) && (UJ.add(DJ), XJ.push(ZJ, qJ, jJ, Mc(hJ) ? 0 : 1))
+          ghostCells: BB,
+          palette: TB,
+          occupiedCells: dB
+        } = this, VB = new Vd, yB = new Set, pB = [], lB = [];
+        for (let JB = 0; JB < BB.length; JB += 4) {
+          const [dB, YB, gB, oB] = [BB[JB], BB[JB + 1], BB[JB + 2], BB[JB + 3]], kB = this.api.getBlockId(dB, YB, gB), LB = `${dB},${YB},${gB}`, OB = wT(this.blockIds[oB], kB);
+          !OB && UT(kB) ? VB.add(dB, YB, gB, KT(TB[oB]), Bd, aT(TB[oB])) : OB ? this.open.has(LB) && pB.push(this.filledCell(JB)) : VB.add(dB, YB, gB, dd, Td), !OB && this.api.isBlockInLoadedChunk(dB, YB, gB) && (yB.add(LB), lB.push(dB, YB, gB, UT(kB) ? 0 : 1))
         }
-        this.open = UJ, this.nextCells = XJ;
-        for (let AJ = 0; AJ < ZJ.length; AJ += 3) {
-          const [JJ, cJ, UJ] = [ZJ[AJ], ZJ[AJ + 1], ZJ[AJ + 2]];
-          Mc(this.api.getBlockId(JJ, cJ, UJ)) || FJ.add(JJ, cJ, UJ, ZZ, cZ)
+        this.open = yB, this.nextCells = lB;
+        for (let JB = 0; JB < dB.length; JB += 3) {
+          const [BB, TB, yB] = [dB[JB], dB[JB + 1], dB[JB + 2]];
+          UT(this.api.getBlockId(BB, TB, yB)) || VB.add(BB, TB, yB, dd, Td)
         }
-        this.meshes.show(FJ.toArray()), this.burst(eJ), this.showNext(), this.turn.retry(performance.now())
+        this.meshes.show(VB.toArray()), this.burst(pB), this.showNext(), this.turn.retry(performance.now())
       }
-      burst(JJ) {
-        const cJ = performance.now(),
-          ZJ = [];
-        for (const [FJ, UJ, eJ] of JJ) {
-          const JJ = [FJ, UJ, eJ];
-          this.lastSeenFilled = JJ, this.foreseen.delete(JJ.join()) || ZJ.push(JJ)
+      burst(BB) {
+        const TB = performance.now(),
+          dB = [];
+        for (const [VB, yB, pB] of BB) {
+          const BB = [VB, yB, pB];
+          this.lastSeenFilled = BB, this.foreseen.delete(BB.join()) || dB.push(BB)
         }
-        for (const FJ of ZJ) {
-          this.lastFilled = FJ;
-          const JJ = this.turn.arrived(FJ, cJ);
-          if (null !== JJ)
-            for (const [cJ, ZJ] of this.foreseen) ZJ <= JJ && this.foreseen.delete(cJ)
+        for (const VB of dB) {
+          this.lastFilled = VB;
+          const BB = this.turn.arrived(VB, TB);
+          if (null !== BB)
+            for (const [TB, dB] of this.foreseen) dB <= BB && this.foreseen.delete(TB)
         }
-        this.juice.filled(JJ)
+        this.juice.filled(BB)
       }
       showNext() {
-        var JJ;
-        const cJ = this.api.getPositionView(this.localPlayerId);
-        this.playerCells.splice(0, 1 / 0, ...YZ(cJ));
-        const ZJ = this.lastFilled;
-        this.nextCell = this.pickNext(null === ZJ ? [cJ[0], cJ[1] + 1, cJ[2]] : Oc(ZJ), (() => !1)), this.outline.show(null !== (JJ = this.aimed) && void 0 !== JJ ? JJ : this.nextCell)
+        var BB;
+        const TB = this.api.getPositionView(this.localPlayerId);
+        this.playerCells.splice(0, 1 / 0, ...od(TB));
+        const dB = this.lastFilled;
+        this.nextCell = this.pickNext(null === dB ? [TB[0], TB[1] + 1, TB[2]] : XT(dB), (() => !1)), this.outline.show(null !== (BB = this.aimed) && void 0 !== BB ? BB : this.nextCell)
       }
-      pickNext(JJ, cJ) {
-        const ZJ = this.api.getPositionView(this.localPlayerId),
+      pickNext(BB, TB) {
+        const dB = this.api.getPositionView(this.localPlayerId),
           {
-            nextCells: FJ
+            nextCells: VB
           } = this,
-          UJ = function(JJ, cJ, ZJ, FJ, UJ) {
-            let eJ = -1,
-              XJ = !1,
-              AJ = 1 / 0;
-            for (let qJ = 0; qJ < JJ.length; qJ += cJ) {
-              const cJ = FJ(qJ);
-              if (XJ && !cJ || UJ(qJ)) continue;
-              const jJ = (JJ[qJ] + .5 - ZJ[0]) ** 2 + (JJ[qJ + 1] + .5 - ZJ[1]) ** 2 + (JJ[qJ + 2] + .5 - ZJ[2]) ** 2;
-              (cJ && !XJ || jJ < AJ) && (eJ = qJ, XJ = cJ, AJ = jJ)
+          yB = function(BB, TB, dB, VB, yB) {
+            let pB = -1,
+              lB = !1,
+              JB = 1 / 0;
+            for (let YB = 0; YB < BB.length; YB += TB) {
+              const TB = VB(YB);
+              if (lB && !TB || yB(YB)) continue;
+              const gB = (BB[YB] + .5 - dB[0]) ** 2 + (BB[YB + 1] + .5 - dB[1]) ** 2 + (BB[YB + 2] + .5 - dB[2]) ** 2;
+              (TB && !lB || gB < JB) && (pB = YB, lB = TB, JB = gB)
             }
-            return eJ
-          }(FJ, 4, JJ, (JJ => 1 === FJ[JJ + 3]), (JJ => {
-            const UJ = [FJ[JJ], FJ[JJ + 1], FJ[JJ + 2]];
-            return Cc(UJ, ZJ) || this.foreseen.has(UJ.join()) || cJ(UJ)
+            return pB
+          }(VB, 4, BB, (BB => 1 === VB[BB + 3]), (BB => {
+            const yB = [VB[BB], VB[BB + 1], VB[BB + 2]];
+            return hT(yB, dB) || this.foreseen.has(yB.join()) || TB(yB)
           }));
-        return -1 === UJ ? null : [FJ[UJ], FJ[UJ + 1], FJ[UJ + 2]]
+        return -1 === yB ? null : [VB[yB], VB[yB + 1], VB[yB + 2]]
       }
-      afterRender(JJ) {
-        var cJ;
-        this.turn.look(JJ);
-        const ZJ = this.api.getTargetedBlock();
-        this.aimed = this.findAimed(null === ZJ ? null : ZJ.position), this.outline.show(null !== (cJ = this.aimed) && void 0 !== cJ ? cJ : this.nextCell)
+      afterRender(BB) {
+        var TB;
+        this.turn.look(BB);
+        const dB = this.api.getTargetedBlock();
+        this.aimed = this.findAimed(null === dB ? null : dB.position), this.outline.show(null !== (TB = this.aimed) && void 0 !== TB ? TB : this.nextCell)
       }
-      attemptAltAction(JJ) {
-        const cJ = performance.now(),
-          ZJ = this.findAimed(JJ);
-        if (null === ZJ && null !== this.nextCell && this.turn.tapped(JJ, this.nextCell, cJ), null !== ZJ || !(null === this.pressMs || cJ - this.pressMs > 500)) return null !== ZJ && (this.foreseen.set(ZJ.join(), cJ), this.lastFilled = ZJ, this.aimed = null, this.showNext(), this.turn.filled(ZJ, cJ)), this.pressMs = cJ, "preventPlacement";
+      attemptAltAction(BB) {
+        const TB = performance.now(),
+          dB = this.findAimed(BB);
+        if (null === dB && null !== this.nextCell && this.turn.tapped(BB, this.nextCell, TB), null !== dB || !(null === this.pressMs || TB - this.pressMs > 500)) return null !== dB && (this.foreseen.set(dB.join(), TB), this.lastFilled = dB, this.aimed = null, this.showNext(), this.turn.filled(dB, TB)), this.pressMs = TB, "preventPlacement";
         this.pressMs = null
       }
-      findAimed(JJ) {
-        return function(JJ, cJ, ZJ, FJ, UJ, eJ, XJ) {
-          const AJ = JJ.WcJ(cJ),
-            qJ = null === AJ || null === JJ.blockNameToBlockId(AJ.name, !0) ? null : AJ.name,
-            jJ = JJ.getPositionView(cJ),
+      findAimed(BB) {
+        return function(BB, TB, dB, VB, yB, pB, lB) {
+          const JB = BB.gdB(TB),
+            YB = null === JB || null === BB.blockNameToBlockId(JB.name, !0) ? null : JB.name,
+            gB = BB.getPositionView(TB),
             {
-              origin: YJ,
-              direction: hJ
-            } = JJ.getActionRay(),
-            DJ = ic(FJ, {
-              from: YJ,
-              dir: hJ,
-              reach: uc(JJ.getClientOption(cJ, "blockReach")),
-              solid: ZJ
-            }, (cJ => {
-              const ZJ = [FJ[cJ], FJ[cJ + 1], FJ[cJ + 2]];
-              return !Ic(UJ[FJ[cJ + 3]], JJ.getBlockId(...ZJ)) && !XJ.has(ZJ.join()) && JJ.isBlockInLoadedChunk(...ZJ) && !Cc(ZJ, jJ)
-            }), (JJ => null === qJ || qJ === bc(UJ[FJ[JJ + 3]])), (JJ => null !== eJ && FJ[JJ] === eJ[0] && FJ[JJ + 1] === eJ[1] && FJ[JJ + 2] === eJ[2]));
-          return -1 === DJ ? null : [FJ[DJ], FJ[DJ + 1], FJ[DJ + 2]]
-        }(this.api, this.localPlayerId, JJ, this.ghostCells, this.blockIds, this.nextCell, this.foreseen)
+              origin: oB,
+              direction: kB
+            } = BB.getActionRay(),
+            LB = GT(VB, {
+              from: oB,
+              dir: kB,
+              reach: CT(BB.getClientOption(TB, "blockReach")),
+              solid: dB
+            }, (TB => {
+              const dB = [VB[TB], VB[TB + 1], VB[TB + 2]];
+              return !wT(yB[VB[TB + 3]], BB.getBlockId(...dB)) && !lB.has(dB.join()) && BB.isBlockInLoadedChunk(...dB) && !hT(dB, gB)
+            }), (BB => null === YB || YB === FT(yB[VB[BB + 3]])), (BB => null !== pB && VB[BB] === pB[0] && VB[BB + 1] === pB[1] && VB[BB + 2] === pB[2]));
+          return -1 === LB ? null : [VB[LB], VB[LB + 1], VB[LB + 2]]
+        }(this.api, this.localPlayerId, BB, this.ghostCells, this.blockIds, this.nextCell, this.foreseen)
       }
       endPress() {
         this.pressMs = null
       }
-      filledCell(JJ) {
+      filledCell(BB) {
         const {
-          ghostCells: cJ
-        } = this, [ZJ, FJ, UJ] = wc(this.palette[cJ[JJ + 3]]);
-        return [cJ[JJ], cJ[JJ + 1], cJ[JJ + 2], ZJ, FJ, UJ]
+          ghostCells: TB
+        } = this, [dB, VB, yB] = KT(this.palette[TB[BB + 3]]);
+        return [TB[BB], TB[BB + 1], TB[BB + 2], dB, VB, yB]
       }
     }
 
-    function YZ(JJ) {
-      let [cJ, ZJ, FJ] = JJ;
-      const UJ = Tc.c.Av / 2;
-      return [Math.floor(cJ), Math.floor(ZJ), Math.floor(FJ), Math.floor(cJ - UJ), Math.floor(cJ + UJ), Math.floor(ZJ + Tc.c.Dv), Math.floor(FJ - UJ), Math.floor(FJ + UJ)]
+    function od(BB) {
+      let [TB, dB, VB] = BB;
+      const yB = WT.c.lE / 2;
+      return [Math.floor(TB), Math.floor(dB), Math.floor(VB), Math.floor(TB - yB), Math.floor(TB + yB), Math.floor(dB + WT.c.kE), Math.floor(VB - yB), Math.floor(VB + yB)]
     }
 
-    function hZ(JJ, cJ) {
-      return cJ % 4 !== 3
+    function kd(BB, TB) {
+      return TB % 4 !== 3
     }
 
-    function DZ(JJ, cJ, ZJ, FJ, UJ) {
-      if (!JJ.isBlockInLoadedChunk(cJ, FJ - 6, ZJ) || !JJ.isBlockInLoadedChunk(cJ, FJ + 6 + UJ, ZJ) || !JJ.canModifyBlockAt(cJ, FJ, ZJ)) return NaN;
-      let eJ = FJ - 1;
-      if (0 !== JJ.getBlockId(cJ, eJ, ZJ)) {
-        for (; eJ < FJ + 6 && 0 !== JJ.getBlockId(cJ, eJ + 1, ZJ);) eJ++;
-        return eJ
+    function Ld(BB, TB, dB, VB, yB) {
+      if (!BB.isBlockInLoadedChunk(TB, VB - 6, dB) || !BB.isBlockInLoadedChunk(TB, VB + 6 + yB, dB) || !BB.canModifyBlockAt(TB, VB, dB)) return NaN;
+      let pB = VB - 1;
+      if (0 !== BB.getBlockId(TB, pB, dB)) {
+        for (; pB < VB + 6 && 0 !== BB.getBlockId(TB, pB + 1, dB);) pB++;
+        return pB
       }
-      for (; eJ > FJ - 6;)
-        if (eJ--, 0 !== JJ.getBlockId(cJ, eJ, ZJ)) return eJ;
+      for (; pB > VB - 6;)
+        if (pB--, 0 !== BB.getBlockId(TB, pB, dB)) return pB;
       return NaN
     }
 
-    function sZ(JJ, cJ, ZJ, FJ, UJ) {
-      let eJ = 0;
-      for (let XJ = FJ + 1; XJ <= FJ + UJ; XJ++) 0 !== JJ.getBlockId(cJ, XJ, ZJ) && eJ++;
-      return eJ
+    function Od(BB, TB, dB, VB, yB) {
+      let pB = 0;
+      for (let lB = VB + 1; lB <= VB + yB; lB++) 0 !== BB.getBlockId(TB, lB, dB) && pB++;
+      return pB
     }
 
-    function nZ(JJ) {
-      const cJ = new Map;
-      for (const XJ of JJ) {
-        var ZJ;
-        if (Number.isNaN(XJ)) return null;
-        cJ.set(XJ, (null !== (ZJ = cJ.get(XJ)) && void 0 !== ZJ ? ZJ : 0) + 1)
+    function Dd(BB) {
+      const TB = new Map;
+      for (const lB of BB) {
+        var dB;
+        if (Number.isNaN(lB)) return null;
+        TB.set(lB, (null !== (dB = TB.get(lB)) && void 0 !== dB ? dB : 0) + 1)
       }
-      let FJ = NaN,
-        UJ = 0;
-      for (const [XJ, AJ] of cJ)(AJ > UJ || AJ === UJ && XJ < FJ) && (FJ = XJ, UJ = AJ);
-      let eJ = 0;
-      for (const XJ of JJ) eJ += Math.abs(XJ - FJ);
-      return eJ
+      let VB = NaN,
+        yB = 0;
+      for (const [lB, JB] of TB)(JB > yB || JB === yB && lB < VB) && (VB = lB, yB = JB);
+      let pB = 0;
+      for (const lB of BB) pB += Math.abs(lB - VB);
+      return pB
     }
 
-    function GZ(JJ, cJ, ZJ, FJ) {
+    function ud(BB, TB, dB, VB) {
       const {
-        eye: UJ,
-        forward: eJ,
-        tanHalfFovX: XJ,
-        tanHalfFovY: AJ
-      } = JJ, [qJ, jJ] = function(JJ) {
-        let [cJ, ZJ, FJ] = JJ;
-        const UJ = Math.hypot(cJ, FJ),
-          [eJ, XJ] = [FJ / UJ, -cJ / UJ];
+        eye: yB,
+        forward: pB,
+        tanHalfFovX: lB,
+        tanHalfFovY: JB
+      } = BB, [YB, gB] = function(BB) {
+        let [TB, dB, VB] = BB;
+        const yB = Math.hypot(TB, VB),
+          [pB, lB] = [VB / yB, -TB / yB];
         return [
-          [eJ, 0, XJ],
-          [ZJ * XJ, FJ * eJ - cJ * XJ, -ZJ * eJ]
+          [pB, 0, lB],
+          [dB * lB, VB * pB - TB * lB, -dB * pB]
         ]
-      }(eJ), [YJ, hJ] = [cJ * XJ, ZJ * AJ], DJ = eJ[0] + YJ * qJ[0] + hJ * jJ[0], sJ = eJ[1] + hJ * jJ[1], nJ = eJ[2] + YJ * qJ[2] + hJ * jJ[2], GJ = (FJ - UJ[1]) / sJ;
-      return GJ > 0 && GJ < 1 / 0 ? [UJ[0] + GJ * DJ, UJ[2] + GJ * nJ] : null
+      }(pB), [oB, kB] = [TB * lB, dB * JB], LB = pB[0] + oB * YB[0] + kB * gB[0], OB = pB[1] + kB * gB[1], DB = pB[2] + oB * YB[2] + kB * gB[2], uB = (VB - yB[1]) / OB;
+      return uB > 0 && uB < 1 / 0 ? [yB[0] + uB * LB, yB[2] + uB * DB] : null
     }
-    const fZ = "plotsBlueprintPlacementChanged",
-      xZ = {
+    const Hd = "plotsBlueprintPlacementChanged",
+      Ed = {
         size: .9,
         alpha: .2,
         crossed: !1
       };
-    class rZ {
-      constructor(JJ, cJ) {
-        this.api = JJ, this.localPlayerId = cJ, this.placing = null, this.view = null, this.camera = {
+    class vd {
+      constructor(BB, TB) {
+        this.api = BB, this.localPlayerId = TB, this.placing = null, this.view = null, this.camera = {
           eye: [0, 0, 0],
           forward: [0, 0, 1],
           tanHalfFovX: 1,
           tanHalfFovY: 1
-        }, this.chunkWatch = void 0, this.meshes = void 0, this.start = JJ => {
-          var cJ, ZJ, FJ, eJ;
-          const XJ = null !== (cJ = null === (ZJ = this.placing) || void 0 === ZJ ? void 0 : ZJ.rotation) && void 0 !== cJ ? cJ : 0,
+        }, this.chunkWatch = void 0, this.meshes = void 0, this.start = BB => {
+          var TB, dB, VB, pB;
+          const lB = null !== (TB = null === (dB = this.placing) || void 0 === dB ? void 0 : dB.rotation) && void 0 !== TB ? TB : 0,
             {
-              size: AJ
-            } = TJ(JJ, XJ),
-            qJ = this.api.Om(this.localPlayerId),
-            [jJ, YJ] = null !== (FJ = null !== (eJ = function(JJ, cJ, ZJ) {
-              const [FJ, UJ, eJ] = cJ, [XJ, AJ, qJ] = [Math.floor(ZJ[0]), Math.floor(ZJ[1]), Math.floor(ZJ[2])], [jJ, YJ] = [10 + Math.ceil(FJ / 2), 10 + Math.ceil(eJ / 2)], [hJ, DJ] = [XJ - jJ, qJ - YJ], [sJ, nJ] = [2 * jJ + 1, 2 * YJ + 1], GJ = new Float64Array(sJ * nJ), fJ = new Uint16Array(sJ * nJ);
-              for (let mJ = 0; mJ < sJ; mJ++)
-                for (let cJ = 0; cJ < nJ; cJ++) {
-                  const ZJ = DZ(JJ, hJ + mJ, DJ + cJ, AJ, UJ);
-                  GJ[mJ * nJ + cJ] = ZJ, Number.isNaN(ZJ) || (fJ[mJ * nJ + cJ] = sZ(JJ, hJ + mJ, DJ + cJ, ZJ, UJ))
+              size: JB
+            } = WB(BB, lB),
+            YB = this.api.Dv(this.localPlayerId),
+            [gB, oB] = null !== (VB = null !== (pB = function(BB, TB, dB) {
+              const [VB, yB, pB] = TB, [lB, JB, YB] = [Math.floor(dB[0]), Math.floor(dB[1]), Math.floor(dB[2])], [gB, oB] = [10 + Math.ceil(VB / 2), 10 + Math.ceil(pB / 2)], [kB, LB] = [lB - gB, YB - oB], [OB, DB] = [2 * gB + 1, 2 * oB + 1], uB = new Float64Array(OB * DB), HB = new Uint16Array(OB * DB);
+              for (let iB = 0; iB < OB; iB++)
+                for (let TB = 0; TB < DB; TB++) {
+                  const dB = Ld(BB, kB + iB, LB + TB, JB, yB);
+                  uB[iB * DB + TB] = dB, Number.isNaN(dB) || (HB[iB * DB + TB] = Od(BB, kB + iB, LB + TB, dB, yB))
                 }
-              const xJ = [];
-              let rJ = null,
-                vJ = 1 / 0;
-              for (let mJ = 0; mJ + FJ <= sJ; mJ++)
-                for (let JJ = 0; JJ + eJ <= nJ; JJ++) {
-                  const [cJ, UJ] = [hJ + mJ, DJ + JJ], AJ = Math.hypot(cJ + FJ / 2 - ZJ[0], UJ + eJ / 2 - ZJ[2]);
-                  if (AJ > 10 || XJ >= cJ - 2 && XJ < cJ + FJ + 2 && qJ >= UJ - 2 && qJ < UJ + eJ + 2) continue;
-                  xJ.length = 0;
-                  let jJ = 0;
-                  for (let ZJ = 0; ZJ < FJ; ZJ++)
-                    for (let cJ = 0; cJ < eJ; cJ++) xJ.push(GJ[(mJ + ZJ) * nJ + JJ + cJ]), jJ += fJ[(mJ + ZJ) * nJ + JJ + cJ];
-                  const YJ = nZ(xJ);
-                  if (null === YJ) continue;
-                  const sJ = AJ + 3 * (YJ + jJ);
-                  sJ < vJ && (vJ = sJ, rJ = [cJ, UJ])
+              const EB = [];
+              let vB = null,
+                mB = 1 / 0;
+              for (let iB = 0; iB + VB <= OB; iB++)
+                for (let BB = 0; BB + pB <= DB; BB++) {
+                  const [TB, yB] = [kB + iB, LB + BB], JB = Math.hypot(TB + VB / 2 - dB[0], yB + pB / 2 - dB[2]);
+                  if (JB > 10 || lB >= TB - 2 && lB < TB + VB + 2 && YB >= yB - 2 && YB < yB + pB + 2) continue;
+                  EB.length = 0;
+                  let gB = 0;
+                  for (let dB = 0; dB < VB; dB++)
+                    for (let TB = 0; TB < pB; TB++) EB.push(uB[(iB + dB) * DB + BB + TB]), gB += HB[(iB + dB) * DB + BB + TB];
+                  const oB = Dd(EB);
+                  if (null === oB) continue;
+                  const OB = JB + 3 * (oB + gB);
+                  OB < mB && (mB = OB, vB = [TB, yB])
                 }
-              return rJ
-            }(this.api, AJ, qJ)) && void 0 !== eJ ? eJ : this.cornerOnTarget(AJ)) && void 0 !== FJ ? FJ : [Math.floor(qJ[0]) + 2, Math.floor(qJ[2])];
+              return vB
+            }(this.api, JB, YB)) && void 0 !== pB ? pB : this.cornerOnTarget(JB)) && void 0 !== VB ? VB : [Math.floor(YB[0]) + 2, Math.floor(YB[2])];
           this.placing = {
-            id: JJ,
-            rotation: XJ,
-            corner: [jJ, this.playerLevel(), YJ],
+            id: BB,
+            rotation: lB,
+            corner: [gB, this.playerLevel(), oB],
             sent: null,
             refusals: 0,
             hover: null,
             drag: null
-          }, this.update(), this.api.sendCommand(`${UJ} preview`)
+          }, this.update(), this.api.sendCommand(`${yB} preview`)
         }, this.rotate = () => {
           const {
-            id: JJ,
-            rotation: cJ,
-            corner: ZJ
-          } = this.placing, UJ = FJ[(FJ.indexOf(cJ) + 1) % FJ.length], [eJ, , XJ] = TJ(JJ, cJ).size, [AJ, , qJ] = TJ(JJ, UJ).size;
-          this.moveTo(ZJ[0] + Math.floor(eJ / 2) - Math.floor(AJ / 2), ZJ[2] + Math.floor(XJ / 2) - Math.floor(qJ / 2), UJ)
-        }, this.hoverAt = (JJ, cJ) => {
-          this.placing.hover = [JJ, cJ], this.moveCentreTo(this.camera, JJ, cJ)
+            id: BB,
+            rotation: TB,
+            corner: dB
+          } = this.placing, yB = VB[(VB.indexOf(TB) + 1) % VB.length], [pB, , lB] = WB(BB, TB).size, [JB, , YB] = WB(BB, yB).size;
+          this.moveTo(dB[0] + Math.floor(pB / 2) - Math.floor(JB / 2), dB[2] + Math.floor(lB / 2) - Math.floor(YB / 2), yB)
+        }, this.hoverAt = (BB, TB) => {
+          this.placing.hover = [BB, TB], this.moveCentreTo(this.camera, BB, TB)
         }, this.endHover = () => {
           this.placing.hover = null
-        }, this.beginDrag = (JJ, cJ) => {
-          const ZJ = this.placing,
+        }, this.beginDrag = (BB, TB) => {
+          const dB = this.placing,
             {
-              eye: FJ,
-              forward: UJ,
-              tanHalfFovX: eJ,
-              tanHalfFovY: XJ
+              eye: VB,
+              forward: yB,
+              tanHalfFovX: pB,
+              tanHalfFovY: lB
             } = this.camera,
-            AJ = {
-              eye: [FJ[0], FJ[1], FJ[2]],
-              forward: [UJ[0], UJ[1], UJ[2]],
-              tanHalfFovX: eJ,
-              tanHalfFovY: XJ
+            JB = {
+              eye: [VB[0], VB[1], VB[2]],
+              forward: [yB[0], yB[1], yB[2]],
+              tanHalfFovX: pB,
+              tanHalfFovY: lB
             },
-            qJ = ZJ.corner[1],
-            jJ = GZ(AJ, JJ, cJ, qJ);
-          ZJ.hover = null, ZJ.drag = jJ && {
-            view: AJ,
-            ground: jJ,
-            corner: [ZJ.corner[0], ZJ.corner[2]],
-            level: qJ
+            YB = dB.corner[1],
+            gB = ud(JB, BB, TB, YB);
+          dB.hover = null, dB.drag = gB && {
+            view: JB,
+            ground: gB,
+            corner: [dB.corner[0], dB.corner[2]],
+            level: YB
           }
-        }, this.dragTo = (JJ, cJ) => {
-          const ZJ = this.placing.drag,
-            FJ = ZJ && GZ(ZJ.view, JJ, cJ, ZJ.level);
-          null !== ZJ && null !== FJ && this.moveTo(ZJ.corner[0] + Math.round(FJ[0] - ZJ.ground[0]), ZJ.corner[1] + Math.round(FJ[1] - ZJ.ground[1]))
+        }, this.dragTo = (BB, TB) => {
+          const dB = this.placing.drag,
+            VB = dB && ud(dB.view, BB, TB, dB.level);
+          null !== dB && null !== VB && this.moveTo(dB.corner[0] + Math.round(VB[0] - dB.ground[0]), dB.corner[1] + Math.round(VB[1] - dB.ground[1]))
         }, this.endDrag = () => {
           this.placing.drag = null
         }, this.tap = () => {
-          const JJ = this.view;
-          JJ.waiting || (JJ.blocked ? this.Uf({
-            ...JJ,
+          const BB = this.view;
+          BB.waiting || (BB.blocked ? this.yH({
+            ...BB,
             refusals: ++this.placing.refusals
           }) : this.build())
         }, this.build = () => {
-          const JJ = this.placing,
+          const BB = this.placing,
             {
-              id: cJ,
-              rotation: ZJ,
-              corner: FJ
-            } = JJ;
-          this.api.sendCommand(`${UJ} place ${cJ} ${FJ.join(" ")} ${ZJ}`), JJ.sent = {
+              id: TB,
+              rotation: dB,
+              corner: VB
+            } = BB;
+          this.api.sendCommand(`${yB} place ${TB} ${VB.join(" ")} ${dB}`), BB.sent = {
             atMs: performance.now(),
-            corner: [...FJ],
-            rotation: ZJ,
+            corner: [...VB],
+            rotation: dB,
             timedOut: !1
           }, this.update()
         }, this.stop = () => {
-          null !== this.placing && (this.close(), this.api.sendCommand(`${UJ} preview off`))
-        }, this.chunkWatch = new oc(JJ), this.meshes = new UZ(JJ)
+          null !== this.placing && (this.close(), this.api.sendCommand(`${yB} preview off`))
+        }, this.chunkWatch = new nT(BB), this.meshes = new yd(BB)
       }
       getView() {
         return this.view
       }
-      Hh() {
-        const JJ = this.placing;
-        null !== JJ && (null !== JJ.sent && !JJ.sent.timedOut && performance.now() - JJ.sent.atMs > 3e3 ? (JJ.sent.timedOut = !0, this.update()) : (this.followPlayerLevel(JJ) || this.chunkWatch.changed()) && this.update())
+      dL() {
+        const BB = this.placing;
+        null !== BB && (null !== BB.sent && !BB.sent.timedOut && performance.now() - BB.sent.atMs > 3e3 ? (BB.sent.timedOut = !0, this.update()) : (this.followPlayerLevel(BB) || this.chunkWatch.changed()) && this.update())
       }
-      afterRender(JJ) {
-        const cJ = this.placing;
-        null !== cJ && (! function(JJ, cJ) {
-          for (let ZJ = 0; ZJ < 3; ZJ++) cJ.eye[ZJ] = JJ.cameraPosition[ZJ], cJ.forward[ZJ] = JJ.cameraDirection[ZJ];
-          cJ.tanHalfFovX = JJ.tanHalfFovX, cJ.tanHalfFovY = JJ.tanHalfFovY
-        }(JJ, this.camera), null !== cJ.hover && this.moveCentreTo(this.camera, cJ.hover[0], cJ.hover[1]))
+      afterRender(BB) {
+        const TB = this.placing;
+        null !== TB && (! function(BB, TB) {
+          for (let dB = 0; dB < 3; dB++) TB.eye[dB] = BB.cameraPosition[dB], TB.forward[dB] = BB.cameraDirection[dB];
+          TB.tanHalfFovX = BB.tanHalfFovX, TB.tanHalfFovY = BB.tanHalfFovY
+        }(BB, this.camera), null !== TB.hover && this.moveCentreTo(this.camera, TB.hover[0], TB.hover[1]))
       }
-      Qn(JJ) {
-        const cJ = this.placing;
-        if (null === cJ || null === cJ.sent || "active" !== JJ[0]) return;
+      MD(BB) {
+        const TB = this.placing;
+        if (null === TB || null === TB.sent || "active" !== BB[0]) return;
         const {
-          sent: ZJ
-        } = cJ, [, FJ, UJ, eJ, XJ, AJ, qJ] = JJ;
-        UJ && FJ === cJ.id && qJ === ZJ.rotation && eJ === ZJ.corner[0] && XJ === ZJ.corner[1] && AJ === ZJ.corner[2] && this.close()
+          sent: dB
+        } = TB, [, VB, yB, pB, lB, JB, YB] = BB;
+        yB && VB === TB.id && YB === dB.rotation && pB === dB.corner[0] && lB === dB.corner[1] && JB === dB.corner[2] && this.close()
       }
       endFromServer() {
         null !== this.placing && this.close()
@@ -1688,142 +1688,142 @@ export const modules = {
       dispose() {
         this.meshes.dispose()
       }
-      cornerOnTarget(JJ) {
-        let [cJ, , ZJ] = JJ;
-        const FJ = this.api.getTargetedBlock();
-        if (null === FJ) return null;
-        const [UJ, , eJ] = FJ.position;
-        return [UJ - Math.floor(cJ / 2), eJ - Math.floor(ZJ / 2)]
+      cornerOnTarget(BB) {
+        let [TB, , dB] = BB;
+        const VB = this.api.getTargetedBlock();
+        if (null === VB) return null;
+        const [yB, , pB] = VB.position;
+        return [yB - Math.floor(TB / 2), pB - Math.floor(dB / 2)]
       }
       playerLevel() {
-        var JJ;
-        const [cJ, ZJ, FJ] = this.api.Om(this.localPlayerId);
-        if (null !== (JJ = this.api.getLocalPlayerMovement()) && void 0 !== JJ && JJ.onGround) return Math.ceil(ZJ - .01);
-        const [UJ, eJ, XJ] = [Math.floor(cJ), Math.floor(ZJ), Math.floor(FJ)];
-        for (let AJ = eJ; AJ >= eJ - 2; AJ--)
-          if (this.api.isSolidToPlayerBlockId(this.api.getBlockId(UJ, AJ, XJ))) return AJ + 1;
-        return eJ
+        var BB;
+        const [TB, dB, VB] = this.api.Dv(this.localPlayerId);
+        if (null !== (BB = this.api.getLocalPlayerMovement()) && void 0 !== BB && BB.onGround) return Math.ceil(dB - .01);
+        const [yB, pB, lB] = [Math.floor(TB), Math.floor(dB), Math.floor(VB)];
+        for (let JB = pB; JB >= pB - 2; JB--)
+          if (this.api.isSolidToPlayerBlockId(this.api.getBlockId(yB, JB, lB))) return JB + 1;
+        return pB
       }
-      followPlayerLevel(JJ) {
-        if (vZ(JJ)) return !1;
-        const cJ = this.playerLevel();
-        return cJ !== JJ.corner[1] && (JJ.corner[1] = cJ, !0)
+      followPlayerLevel(BB) {
+        if (md(BB)) return !1;
+        const TB = this.playerLevel();
+        return TB !== BB.corner[1] && (BB.corner[1] = TB, !0)
       }
-      moveCentreTo(JJ, cJ, ZJ) {
-        const FJ = this.placing,
-          UJ = GZ(JJ, cJ, ZJ, FJ.corner[1]);
-        if (null !== UJ) {
-          const [JJ, , cJ] = TJ(FJ.id, FJ.rotation).size;
-          this.moveTo(Math.round(UJ[0] - JJ / 2), Math.round(UJ[1] - cJ / 2))
+      moveCentreTo(BB, TB, dB) {
+        const VB = this.placing,
+          yB = ud(BB, TB, dB, VB.corner[1]);
+        if (null !== yB) {
+          const [BB, , TB] = WB(VB.id, VB.rotation).size;
+          this.moveTo(Math.round(yB[0] - BB / 2), Math.round(yB[1] - TB / 2))
         }
       }
-      moveTo(JJ, cJ) {
-        let ZJ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
-        const FJ = this.placing;
-        if (vZ(FJ)) return;
-        const [UJ, eJ, XJ] = FJ.corner;
-        if (this.centreOnPlot(UJ, XJ) && !this.centreOnPlot(JJ, cJ, ZJ))
-          if (this.centreOnPlot(JJ, XJ, ZJ)) cJ = XJ;
+      moveTo(BB, TB) {
+        let dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
+        const VB = this.placing;
+        if (md(VB)) return;
+        const [yB, pB, lB] = VB.corner;
+        if (this.centreOnPlot(yB, lB) && !this.centreOnPlot(BB, TB, dB))
+          if (this.centreOnPlot(BB, lB, dB)) TB = lB;
           else {
-            if (!this.centreOnPlot(UJ, cJ, ZJ)) return;
-            JJ = UJ
-          } JJ === UJ && cJ === XJ && ZJ === FJ.rotation || (FJ.rotation = ZJ, FJ.corner = [JJ, eJ, cJ], this.update())
+            if (!this.centreOnPlot(yB, TB, dB)) return;
+            BB = yB
+          } BB === yB && TB === lB && dB === VB.rotation || (VB.rotation = dB, VB.corner = [BB, pB, TB], this.update())
       }
-      centreOnPlot(JJ, cJ) {
-        let ZJ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
+      centreOnPlot(BB, TB) {
+        let dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
         const {
-          id: FJ,
-          corner: UJ
-        } = this.placing, [eJ, , XJ] = TJ(FJ, ZJ).size;
-        return this.api.canModifyBlockAt(JJ + Math.floor(eJ / 2), UJ[1], cJ + Math.floor(XJ / 2))
+          id: VB,
+          corner: yB
+        } = this.placing, [pB, , lB] = WB(VB, dB).size;
+        return this.api.canModifyBlockAt(BB + Math.floor(pB / 2), yB[1], TB + Math.floor(lB / 2))
       }
       close() {
-        this.placing = null, this.meshes.dispose(), this.Uf(null)
+        this.placing = null, this.meshes.dispose(), this.yH(null)
       }
       update() {
         const {
-          id: JJ,
-          rotation: cJ,
-          corner: ZJ,
-          refusals: FJ
-        } = this.placing, UJ = new FZ, eJ = [];
-        let XJ = !1,
-          AJ = 0;
+          id: BB,
+          rotation: TB,
+          corner: dB,
+          refusals: VB
+        } = this.placing, yB = new Vd, pB = [];
+        let lB = !1,
+          JB = 0;
         for (const {
-            offset: YJ,
-            block: hJ
+            offset: oB,
+            block: kB
           }
-          of TJ(JJ, cJ).cells) {
-          const [JJ, cJ, FJ] = [ZJ[0] + YJ[0], ZJ[1] + YJ[1], ZJ[2] + YJ[2]];
-          eJ.push(JJ, cJ, FJ);
-          const qJ = !this.api.canModifyBlockAt(JJ, cJ, FJ),
-            jJ = this.api.getBlockId(JJ, cJ, FJ),
-            DJ = !Mc(jJ) && !Ic(this.api.blockNameToBlockId(hJ), jJ);
-          XJ ||= qJ, AJ += DJ ? 1 : 0, qJ || DJ ? UJ.add(JJ, cJ, FJ, ZZ, cZ) : UJ.add(JJ, cJ, FJ, wc(hJ), xZ, zc(hJ))
+          of WB(BB, TB).cells) {
+          const [BB, TB, VB] = [dB[0] + oB[0], dB[1] + oB[1], dB[2] + oB[2]];
+          pB.push(BB, TB, VB);
+          const YB = !this.api.canModifyBlockAt(BB, TB, VB),
+            gB = this.api.getBlockId(BB, TB, VB),
+            LB = !UT(gB) && !wT(this.api.blockNameToBlockId(kB), gB);
+          lB ||= YB, JB += LB ? 1 : 0, YB || LB ? yB.add(BB, TB, VB, dd, Td) : yB.add(BB, TB, VB, KT(kB), Ed, aT(kB))
         }
-        this.chunkWatch.watch(eJ), this.meshes.show(UJ.toArray());
-        const qJ = this.view,
-          jJ = vZ(this.placing);
-        (null === qJ || void 0 === qJ ? void 0 : qJ.id) === JJ && qJ.blocked === XJ && qJ.toClear === AJ && qJ.waiting === jJ && qJ.refusals === FJ || this.Uf({
-          id: JJ,
-          blocked: XJ,
-          toClear: AJ,
-          waiting: jJ,
-          refusals: FJ
+        this.chunkWatch.watch(pB), this.meshes.show(yB.toArray());
+        const YB = this.view,
+          gB = md(this.placing);
+        (null === YB || void 0 === YB ? void 0 : YB.id) === BB && YB.blocked === lB && YB.toClear === JB && YB.waiting === gB && YB.refusals === VB || this.yH({
+          id: BB,
+          blocked: lB,
+          toClear: JB,
+          waiting: gB,
+          refusals: VB
         })
       }
-      Uf(JJ) {
-        this.view = JJ, YJ.i.Uf(fZ, JJ, !0)
+      yH(BB) {
+        this.view = BB, oB.h.yH(Hd, BB, !0)
       }
     }
 
-    function vZ(JJ) {
+    function md(BB) {
       let {
-        sent: cJ
-      } = JJ;
-      return null !== cJ && !cJ.timedOut
+        sent: TB
+      } = BB;
+      return null !== TB && !TB.timedOut
     }
-    var mZ = ZJ(3726),
-      QZ = ZJ(38095);
+    var Nd = dB(3716),
+      td = dB(38087);
 
-    function EZ(JJ, cJ, ZJ) {
-      const FJ = [255 * JJ, 255 * cJ, 255 * ZJ],
-        [UJ, eJ, XJ] = FJ.map((JJ => JJ + .4 * (255 - JJ)));
+    function fd(BB, TB, dB) {
+      const VB = [255 * BB, 255 * TB, 255 * dB],
+        [yB, pB, lB] = VB.map((BB => BB + .4 * (255 - BB)));
       return {
         texture: "square_particle",
-        qh: 48,
-        minLifeTime: .3 / QZ.c,
-        maxLifeTime: .55 / QZ.c,
+        Kk: 48,
+        minLifeTime: .3 / td.e,
+        maxLifeTime: .55 / td.e,
         minSize: .07,
         maxSize: .14,
         minEmitPower: 1,
         maxEmitPower: 1,
         emitRate: 0,
-        gravity: [0, -14 * QZ.c * QZ.c, 0],
+        gravity: [0, -14 * td.e * td.e, 0],
         colorGradients: [{
           timeFraction: 0,
-          minColor: [...FJ, 1],
-          maxColor: [UJ, eJ, XJ, 1]
+          minColor: [...VB, 1],
+          maxColor: [yB, pB, lB, 1]
         }, {
           timeFraction: 1,
-          minColor: [...FJ, 0],
-          maxColor: [UJ, eJ, XJ, 0]
+          minColor: [...VB, 0],
+          maxColor: [yB, pB, lB, 0]
         }],
-        blendMode: mZ.g.Standard
+        blendMode: Nd.e.Standard
       }
     }
-    const VZ = {
+    const sd = {
       texture: "glint",
       mipmaps: !1,
-      qh: 96,
-      minLifeTime: .5 / QZ.c,
-      maxLifeTime: .9 / QZ.c,
+      Kk: 96,
+      minLifeTime: .5 / td.e,
+      maxLifeTime: .9 / td.e,
       minSize: .15,
       maxSize: .3,
       minEmitPower: 1,
       maxEmitPower: 1,
       emitRate: 0,
-      gravity: [0, 2 * QZ.c * QZ.c, 0],
+      gravity: [0, 2 * td.e * td.e, 0],
       colorGradients: [{
         timeFraction: 0,
         minColor: [255, 224, 97, 1],
@@ -1832,601 +1832,601 @@ export const modules = {
         timeFraction: 1,
         minColor: [0, 0, 0, 1]
       }],
-      blendMode: mZ.g.OneOne
+      blendMode: Nd.e.OneOne
     };
-    class KZ {
-      constructor(JJ, cJ) {
-        this.api = JJ, this.localPlayerId = cJ, this.chips = new Map, this.sparkles = null, this.points = new Float32Array(384)
+    class Md {
+      constructor(BB, TB) {
+        this.api = BB, this.localPlayerId = TB, this.chips = new Map, this.sparkles = null, this.points = new Float32Array(384)
       }
-      filled(JJ) {
+      filled(BB) {
         if (this.api.particlesEnabled())
-          for (const [cJ, ZJ, FJ, UJ, eJ, XJ] of JJ.slice(0, 3)) {
-            const JJ = `${UJ},${eJ},${XJ}`;
-            let AJ = this.chips.get(JJ);
-            void 0 === AJ && (AJ = this.api.createParticles(EZ(UJ, eJ, XJ), {
-              pos: [cJ + .5, ZJ + .5, FJ + .5]
-            }), this.chips.set(JJ, AJ));
-            for (let cJ = 0; cJ < 8; cJ++) this.setPoint(cJ, .9 * (Math.random() - .5), .9 * (Math.random() - .5), .9 * (Math.random() - .5), 1.5 + 1.5 * Math.random());
-            AJ.emitPoints([cJ + .5, ZJ + .5, FJ + .5], this.points, 8)
+          for (const [TB, dB, VB, yB, pB, lB] of BB.slice(0, 3)) {
+            const BB = `${yB},${pB},${lB}`;
+            let JB = this.chips.get(BB);
+            void 0 === JB && (JB = this.api.createParticles(fd(yB, pB, lB), {
+              pos: [TB + .5, dB + .5, VB + .5]
+            }), this.chips.set(BB, JB));
+            for (let TB = 0; TB < 8; TB++) this.setPoint(TB, .9 * (Math.random() - .5), .9 * (Math.random() - .5), .9 * (Math.random() - .5), 1.5 + 1.5 * Math.random());
+            JB.emitPoints([TB + .5, dB + .5, VB + .5], this.points, 8)
           }
       }
-      layerDone(JJ) {
+      layerDone(BB) {
         this.api.playSound(this.localPlayerId, "magicAccent2", .7, 1.1);
-        const cJ = JJ.length / 3;
-        if (0 === cJ || !this.api.particlesEnabled()) return;
-        const ZJ = Math.min(cJ, 48),
-          [FJ, UJ, eJ] = [JJ[0] + .5, JJ[1] + 1, JJ[2] + .5];
-        let XJ = 0;
-        for (let AJ = 0; AJ < ZJ; AJ++) {
-          const qJ = 3 * Math.floor(AJ * cJ / ZJ);
-          for (let cJ = 0; cJ < 2; cJ++) this.setPoint(XJ++, JJ[qJ] + Math.random() - FJ, JJ[qJ + 1] + 1 - UJ, JJ[qJ + 2] + Math.random() - eJ, .6 + .8 * Math.random())
+        const TB = BB.length / 3;
+        if (0 === TB || !this.api.particlesEnabled()) return;
+        const dB = Math.min(TB, 48),
+          [VB, yB, pB] = [BB[0] + .5, BB[1] + 1, BB[2] + .5];
+        let lB = 0;
+        for (let JB = 0; JB < dB; JB++) {
+          const YB = 3 * Math.floor(JB * TB / dB);
+          for (let TB = 0; TB < 2; TB++) this.setPoint(lB++, BB[YB] + Math.random() - VB, BB[YB + 1] + 1 - yB, BB[YB + 2] + Math.random() - pB, .6 + .8 * Math.random())
         }
-        this.sparkles ??= this.api.createParticles(VZ, {
-          pos: [FJ, UJ, eJ]
-        }), this.sparkles.emitPoints([FJ, UJ, eJ], this.points, XJ)
+        this.sparkles ??= this.api.createParticles(sd, {
+          pos: [VB, yB, pB]
+        }), this.sparkles.emitPoints([VB, yB, pB], this.points, lB)
       }
       dispose() {
-        var JJ;
-        for (const cJ of this.chips.values()) cJ.stop();
-        this.chips.clear(), null === (JJ = this.sparkles) || void 0 === JJ || JJ.stop(), this.sparkles = null
+        var BB;
+        for (const TB of this.chips.values()) TB.stop();
+        this.chips.clear(), null === (BB = this.sparkles) || void 0 === BB || BB.stop(), this.sparkles = null
       }
-      setPoint(JJ, cJ, ZJ, FJ, UJ) {
-        const eJ = 4 * JJ;
-        this.points[eJ] = cJ, this.points[eJ + 1] = ZJ, this.points[eJ + 2] = FJ, this.points[eJ + 3] = UJ
+      setPoint(BB, TB, dB, VB, yB) {
+        const pB = 4 * BB;
+        this.points[pB] = TB, this.points[pB + 1] = dB, this.points[pB + 2] = VB, this.points[pB + 3] = yB
       }
     }
-    var yZ = ZJ(1756);
-    const SZ = "SpecialAction1",
-      IZ = "KeyY",
-      MZ = "KeyX";
+    var zd = dB(1738);
+    const wd = "SpecialAction1",
+      Ud = "KeyY",
+      Fd = "KeyX";
 
-    function bZ(JJ) {
+    function Kd(BB) {
       let {
-        placement: cJ
-      } = JJ;
-      const ZJ = (0, IJ.m)(fZ, cJ.getView()),
+        placement: TB
+      } = BB;
+      const dB = (0, wB.f)(Hd, TB.getView()),
         {
-          t: FJ
-        } = (0, bJ.F)(),
+          t: VB
+        } = (0, FB.z)(),
         {
-          isTouchScreen: UJ
-        } = (0, AJ.j)(["isTouchScreen"]),
-        eJ = null !== ZJ,
-        XJ = eJ && !ZJ.blocked && !ZJ.waiting;
-      if ((0, SJ.b)((JJ => eJ && !JJ.repeat && !(0, jJ.isTypingInInput)() && !(0, qJ.l)() && !UJ), (JJ => {
-          const ZJ = function(JJ, cJ, ZJ) {
-            if (JJ === MZ) return cJ.stop;
-            if (JJ === IZ) return ZJ ? cJ.build : WZ;
-            return yZ.z[SZ].includes(JJ) ? cJ.rotate : null
-          }(JJ.code, cJ, XJ);
-          null !== ZJ && (JJ.stopPropagation(), ZJ())
-        })), !eJ) return null;
-      let YJ = UJ ? "plotsGame:placementHintTouch" : "plotsGame:placementHint";
-      return ZJ.blocked ? YJ = "plotsGame:placementOffPlot" : ZJ.toClear > 0 && (YJ = "plotsGame:placementClear"), (0, uJ.jsx)(Xc.f, {
+          isTouchScreen: yB
+        } = (0, JB.m)(["isTouchScreen"]),
+        pB = null !== dB,
+        lB = pB && !dB.blocked && !dB.waiting;
+      if ((0, zB.d)((BB => pB && !BB.repeat && !(0, gB.isTypingInInput)() && !(0, YB.l)() && !yB), (BB => {
+          const dB = function(BB, TB, dB) {
+            if (BB === Fd) return TB.stop;
+            if (BB === Ud) return dB ? TB.build : Id;
+            return zd.r[wd].includes(BB) ? TB.rotate : null
+          }(BB.code, TB, lB);
+          null !== dB && (BB.stopPropagation(), dB())
+        })), !pB) return null;
+      let oB = yB ? "plotsGame:placementHintTouch" : "plotsGame:placementHint";
+      return dB.blocked ? oB = "plotsGame:placementOffPlot" : dB.toClear > 0 && (oB = "plotsGame:placementClear"), (0, CB.jsx)(lT.e, {
         placement: "bottom",
-        children: (0, uJ.jsxs)("div", {
+        children: (0, CB.jsxs)("div", {
           className: "PlotsPlacementCard",
-          children: [(0, uJ.jsx)("div", {
+          children: [(0, CB.jsx)("div", {
             className: "PlotsPlacementCardTitle SmallTextBold",
-            children: FJ(nJ(ZJ.id).displayName.translationKey)
-          }), (0, uJ.jsx)("div", {
-            className: EJ()("PlotsPlacementCardHint SmallTextLight", {
-              Nudge: ZJ.refusals > 0
+            children: VB(DB(dB.id).displayName.translationKey)
+          }), (0, CB.jsx)("div", {
+            className: tB()("PlotsPlacementCardHint SmallTextLight", {
+              Nudge: dB.refusals > 0
             }),
-            children: FJ(YJ)
-          }, ZJ.refusals), (0, uJ.jsxs)("div", {
+            children: VB(oB)
+          }, dB.refusals), (0, CB.jsxs)("div", {
             className: "PlotsPlacementCardButtons",
-            children: [(0, uJ.jsxs)(KJ.d, {
-              onClick: cJ.rotate,
-              children: [(0, uJ.jsx)(wZ, {
-                noaAction: SZ
-              }), FJ("plotsGame:placementRotate")]
-            }), (0, uJ.jsxs)(KJ.I, {
-              onClick: cJ.stop,
-              children: [(0, uJ.jsx)(wZ, {
-                keyCode: MZ
-              }), FJ("general:cancel")]
-            }), (0, uJ.jsxs)(KJ.m, {
-              disabled: !XJ,
-              onClick: cJ.build,
-              children: [(0, uJ.jsx)(wZ, {
-                keyCode: IZ
-              }), FJ("plotsGame:placementBuild")]
+            children: [(0, CB.jsxs)(sB.d, {
+              onClick: TB.rotate,
+              children: [(0, CB.jsx)(rd, {
+                noaAction: wd
+              }), VB("plotsGame:placementRotate")]
+            }), (0, CB.jsxs)(sB.K, {
+              onClick: TB.stop,
+              children: [(0, CB.jsx)(rd, {
+                keyCode: Fd
+              }), VB("general:cancel")]
+            }), (0, CB.jsxs)(sB.k, {
+              disabled: !lB,
+              onClick: TB.build,
+              children: [(0, CB.jsx)(rd, {
+                keyCode: Ud
+              }), VB("plotsGame:placementBuild")]
             })]
           })]
         })
       })
     }
 
-    function wZ(JJ) {
-      return (0, uJ.jsx)(qc.e, {
+    function rd(BB) {
+      return (0, CB.jsx)(YT.d, {
         className: "PlotsPlacementKey",
-        ...JJ
+        ...BB
       })
     }
 
-    function WZ() {}
-    var gZ = ZJ(3966);
-    class HZ {
-      constructor(JJ) {
-        this.placement = JJ, this.press = null
+    function Id() {}
+    var cd = dB(3951);
+    class Sd {
+      constructor(BB) {
+        this.placement = BB, this.press = null
       }
-      down(JJ) {
+      down(BB) {
         if (null !== this.press) return !1;
         const {
-          id: cJ,
-          mouse: ZJ,
-          x: FJ,
-          y: UJ,
-          atMs: eJ
-        } = JJ;
+          id: TB,
+          mouse: dB,
+          x: VB,
+          y: yB,
+          atMs: pB
+        } = BB;
         return this.press = {
-          id: cJ,
-          mouse: ZJ,
-          x: FJ,
-          y: UJ,
-          atMs: eJ,
+          id: TB,
+          mouse: dB,
+          x: VB,
+          y: yB,
+          atMs: pB,
           moved: !1
-        }, ZJ || this.placement.beginDrag(JJ.ndcX, JJ.ndcY), !0
+        }, dB || this.placement.beginDrag(BB.ndcX, BB.ndcY), !0
       }
-      move(JJ) {
-        const cJ = this.press;
-        null !== cJ && cJ.id === JJ.id && (cJ.moved ||= Math.hypot(JJ.x - cJ.x, JJ.y - cJ.y) > 8), JJ.mouse ? this.placement.hoverAt(JJ.ndcX, JJ.ndcY) : (null === cJ || void 0 === cJ ? void 0 : cJ.id) === JJ.id && this.placement.dragTo(JJ.ndcX, JJ.ndcY)
+      move(BB) {
+        const TB = this.press;
+        null !== TB && TB.id === BB.id && (TB.moved ||= Math.hypot(BB.x - TB.x, BB.y - TB.y) > 8), BB.mouse ? this.placement.hoverAt(BB.ndcX, BB.ndcY) : (null === TB || void 0 === TB ? void 0 : TB.id) === BB.id && this.placement.dragTo(BB.ndcX, BB.ndcY)
       }
-      up(JJ) {
-        const cJ = this.press;
-        (null === cJ || void 0 === cJ ? void 0 : cJ.id) === JJ.id && (this.move(JJ), this.end(), !cJ.moved && (cJ.mouse || JJ.atMs - cJ.atMs <= 250) && this.placement.tap())
+      up(BB) {
+        const TB = this.press;
+        (null === TB || void 0 === TB ? void 0 : TB.id) === BB.id && (this.move(BB), this.end(), !TB.moved && (TB.mouse || BB.atMs - TB.atMs <= 250) && this.placement.tap())
       }
-      cancel(JJ) {
-        var cJ;
-        (null === (cJ = this.press) || void 0 === cJ ? void 0 : cJ.id) === JJ && this.end()
+      cancel(BB) {
+        var TB;
+        (null === (TB = this.press) || void 0 === TB ? void 0 : TB.id) === BB && this.end()
       }
-      cn(JJ) {
+      lD(BB) {
         let {
-          id: cJ,
-          mouse: ZJ
-        } = JJ;
-        ZJ && this.placement.endHover(), this.cancel(cJ)
+          id: TB,
+          mouse: dB
+        } = BB;
+        dB && this.placement.endHover(), this.cancel(TB)
       }
       end() {
         this.press.mouse || this.placement.endDrag(), this.press = null
       }
     }
 
-    function PZ(JJ) {
+    function Pd(BB) {
       let {
-        placement: cJ
-      } = JJ;
-      return null === (0, IJ.m)(fZ, cJ.getView()) ? null : (0, uJ.jsx)(kZ, {
-        placement: cJ
+        placement: TB
+      } = BB;
+      return null === (0, wB.f)(Hd, TB.getView()) ? null : (0, CB.jsx)(Qd, {
+        placement: TB
       })
     }
 
-    function kZ(JJ) {
+    function Qd(BB) {
       let {
-        placement: cJ
-      } = JJ;
-      (0, gZ.c)(!0, !0, "PlotsPlacementLayer");
-      const ZJ = (0, eJ.useMemo)((() => new HZ(cJ)), [cJ]);
-      return (0, uJ.jsx)("div", {
+        placement: TB
+      } = BB;
+      (0, cd.d)(!0, !0, "PlotsPlacementLayer");
+      const dB = (0, pB.useMemo)((() => new Sd(TB)), [TB]);
+      return (0, CB.jsx)("div", {
         className: "PlotsPlacementLayer",
-        onPointerDown: JJ => {
-          "mouse" === JJ.pointerType && 0 !== JJ.button || !ZJ.down(pZ(JJ)) || JJ.currentTarget.setPointerCapture(JJ.pointerId)
+        onPointerDown: BB => {
+          "mouse" === BB.pointerType && 0 !== BB.button || !dB.down(Rd(BB)) || BB.currentTarget.setPointerCapture(BB.pointerId)
         },
-        onPointerMove: JJ => {
-          ZJ.move(pZ(JJ))
+        onPointerMove: BB => {
+          dB.move(Rd(BB))
         },
-        onPointerUp: JJ => {
-          ZJ.up(pZ(JJ))
+        onPointerUp: BB => {
+          dB.up(Rd(BB))
         },
-        onPointerCancel: JJ => {
-          ZJ.cancel(JJ.pointerId)
+        onPointerCancel: BB => {
+          dB.cancel(BB.pointerId)
         },
-        onLostPointerCapture: JJ => {
-          ZJ.cancel(JJ.pointerId)
+        onLostPointerCapture: BB => {
+          dB.cancel(BB.pointerId)
         },
-        onPointerLeave: JJ => {
-          ZJ.cn(pZ(JJ))
+        onPointerLeave: BB => {
+          dB.lD(Rd(BB))
         },
         "aria-hidden": !0
       })
     }
 
-    function pZ(JJ) {
+    function Rd(BB) {
       const {
-        left: cJ,
-        top: ZJ,
-        width: FJ,
-        height: UJ
-      } = JJ.currentTarget.getBoundingClientRect();
+        left: TB,
+        top: dB,
+        width: VB,
+        height: yB
+      } = BB.currentTarget.getBoundingClientRect();
       return {
-        id: JJ.pointerId,
-        mouse: "mouse" === JJ.pointerType,
-        x: JJ.clientX,
-        y: JJ.clientY,
-        ndcX: (JJ.clientX - cJ) / FJ * 2 - 1,
-        ndcY: 1 - (JJ.clientY - ZJ) / UJ * 2,
-        atMs: JJ.timeStamp
+        id: BB.pointerId,
+        mouse: "mouse" === BB.pointerType,
+        x: BB.clientX,
+        y: BB.clientY,
+        ndcX: (BB.clientX - TB) / VB * 2 - 1,
+        ndcY: 1 - (BB.clientY - dB) / yB * 2,
+        atMs: BB.timeStamp
       }
     }
-    var dZ = ZJ(2112),
-      zZ = ZJ(35765),
-      NZ = ZJ(1743),
-      OZ = ZJ(1162);
-    const TZ = {
+    var ad = dB(2085),
+      Zd = dB(35700),
+      Xd = dB(1727),
+      Wd = dB(1139);
+    const hd = {
       own: "crown",
       shared: "user-group",
       other: "house"
     };
 
-    function CZ(JJ) {
+    function Cd(BB) {
       let {
-        hud: cJ
-      } = JJ;
-      const ZJ = (0, IJ.m)(Yc, cJ.getPlot()),
-        [FJ, UJ] = (0, eJ.useState)(null),
-        XJ = (0, zZ.h)(FJ);
-      if ("none" === ZJ[0]) return null;
-      const [, AJ, qJ, jJ, YJ, hJ] = ZJ;
-      return (0, uJ.jsx)("div", {
-        className: EJ()("PlotsPlotBannerContainer", {
-          Below: XJ
+        hud: TB
+      } = BB;
+      const dB = (0, wB.f)(oT, TB.getPlot()),
+        [VB, yB] = (0, pB.useState)(null),
+        lB = (0, Zd.j)(VB);
+      if ("none" === dB[0]) return null;
+      const [, JB, YB, gB, oB, kB] = dB;
+      return (0, CB.jsx)("div", {
+        className: tB()("PlotsPlotBannerContainer", {
+          Below: lB
         }),
-        children: (0, uJ.jsx)(uZ, {
-          plotX: AJ,
-          plotZ: qJ,
-          ownerName: jJ,
-          ownerId: YJ,
-          relation: hJ,
-          plaqueRef: UJ
-        }, `${AJ},${qJ}`)
+        children: (0, CB.jsx)(Gd, {
+          plotX: JB,
+          plotZ: YB,
+          ownerName: gB,
+          ownerId: oB,
+          relation: kB,
+          plaqueRef: yB
+        }, `${JB},${YB}`)
       })
     }
 
-    function uZ(JJ) {
-      var cJ, ZJ;
+    function Gd(BB) {
+      var TB, dB;
       let {
-        plotX: FJ,
-        plotZ: UJ,
-        ownerName: eJ,
-        ownerId: XJ,
-        relation: AJ,
-        plaqueRef: qJ
-      } = JJ;
+        plotX: VB,
+        plotZ: yB,
+        ownerName: pB,
+        ownerId: lB,
+        relation: JB,
+        plaqueRef: YB
+      } = BB;
       const {
-        t: jJ
-      } = (0, bJ.F)(), YJ = (0, NZ.f)("hiddenPlayerNames"), hJ = (0, NZ.f)("players"), DJ = null === XJ ? null : null !== (cJ = null === (ZJ = hJ.byId[XJ]) || void 0 === ZJ ? void 0 : ZJ.cosmetics) && void 0 !== cJ ? cJ : null, sJ = jJ("plotsGame:plotBannerCoords", {
-        x: FJ,
-        z: UJ
-      }), nJ = "own" === AJ || null !== eJ;
-      return (0, uJ.jsxs)("div", {
-        ref: qJ,
-        className: EJ()("PlotsPlotBanner", {
-          Own: "own" === AJ,
-          Shared: "shared" === AJ
+        t: gB
+      } = (0, FB.z)(), oB = (0, Xd.i)("hiddenPlayerNames"), kB = (0, Xd.i)("players"), LB = null === lB ? null : null !== (TB = null === (dB = kB.byId[lB]) || void 0 === dB ? void 0 : dB.cosmetics) && void 0 !== TB ? TB : null, OB = gB("plotsGame:plotBannerCoords", {
+        x: VB,
+        z: yB
+      }), DB = "own" === JB || null !== pB;
+      return (0, CB.jsxs)("div", {
+        ref: YB,
+        className: tB()("PlotsPlotBanner", {
+          Own: "own" === JB,
+          Shared: "shared" === JB
         }),
         role: "status",
-        children: [(0, uJ.jsxs)("span", {
-          className: EJ()("PlotsPlotBannerSeal", {
-            Face: null !== DJ
+        children: [(0, CB.jsxs)("span", {
+          className: tB()("PlotsPlotBannerSeal", {
+            Face: null !== LB
           }),
-          children: [null !== DJ && (0, uJ.jsx)(dZ.e, {
-            cosmetics: DJ
-          }), null === DJ && (0, uJ.jsx)(VJ.c, {
-            name: TZ[AJ]
+          children: [null !== LB && (0, CB.jsx)(ad.e, {
+            cosmetics: LB
+          }), null === LB && (0, CB.jsx)(fB.e, {
+            name: hd[JB]
           })]
-        }), (0, uJ.jsxs)("div", {
+        }), (0, CB.jsxs)("div", {
           className: "PlotsPlotBannerText",
-          children: [(0, uJ.jsxs)("div", {
+          children: [(0, CB.jsxs)("div", {
             className: "PlotsPlotBannerTitle SmallTextBold",
-            children: ["own" === AJ && jJ("plotsGame:plotBannerYours"), "own" !== AJ && null !== eJ && jJ("plotsGame:plotBannerOwner", {
-              name: (0, OZ.g)(eJ, YJ)
-            }), !nJ && sJ]
-          }), nJ && (0, uJ.jsxs)("div", {
+            children: ["own" === JB && gB("plotsGame:plotBannerYours"), "own" !== JB && null !== pB && gB("plotsGame:plotBannerOwner", {
+              name: (0, Wd.g)(pB, oB)
+            }), !DB && OB]
+          }), DB && (0, CB.jsxs)("div", {
             className: "PlotsPlotBannerCoords SmallTextLight",
-            children: [sJ, "shared" === AJ && (0, uJ.jsx)("span", {
+            children: [OB, "shared" === JB && (0, CB.jsx)("span", {
               className: "PlotsPlotBannerBadge",
-              children: jJ("plotsGame:plotBannerShared")
+              children: gB("plotsGame:plotBannerShared")
             })]
           })]
         })]
       })
     }
 
-    function iZ(JJ) {
+    function qd(BB) {
       let {
-        progress: cJ,
-        goal: ZJ
-      } = JJ;
-      const FJ = Math.min(cJ, ZJ);
-      return (0, uJ.jsxs)("div", {
+        progress: TB,
+        goal: dB
+      } = BB;
+      const VB = Math.min(TB, dB);
+      return (0, CB.jsxs)("div", {
         className: "PlotsProgress",
-        children: [(0, uJ.jsx)("div", {
+        children: [(0, CB.jsx)("div", {
           className: "PlotsProgressBar",
           role: "progressbar",
           "aria-valuemin": 0,
-          "aria-valuemax": ZJ,
-          "aria-valuenow": FJ,
-          children: (0, uJ.jsx)("div", {
+          "aria-valuemax": dB,
+          "aria-valuenow": VB,
+          children: (0, CB.jsx)("div", {
             className: "PlotsProgressBarFill",
             style: {
-              transform: `scaleX(${FJ/ZJ})`
+              transform: `scaleX(${VB/dB})`
             }
           })
-        }), (0, uJ.jsxs)("span", {
+        }), (0, CB.jsxs)("span", {
           className: "PlotsProgressCount",
-          children: [FJ, "/", ZJ]
+          children: [VB, "/", dB]
         })]
       })
     }
 
-    function RZ(JJ) {
+    function xd(BB) {
       return {
-        translationKey: `plotsGame:${JJ}`,
+        translationKey: `plotsGame:${BB}`,
         actions: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : []
       }
     }
-    const LZ = {
+    const jd = {
       house: {
         icon: "house",
         titleKey: "plotsGame:starterLotHouseTitle",
-        desktop: RZ("starterLotHouseHint", ["alt-fire"]),
-        touch: RZ("starterLotHouseHint", ["alt-fire"]),
+        desktop: xd("starterLotHouseHint", ["alt-fire"]),
+        touch: xd("starterLotHouseHint", ["alt-fire"]),
         plainKey: "plotsGame:starterLotHousePlain"
       },
       garden: {
         icon: "sparkle",
         titleKey: "plotsGame:starterLotGarden",
-        desktop: RZ("starterLotGardenHint", ["alt-fire"]),
-        touch: RZ("starterLotGardenHint", ["alt-fire"]),
+        desktop: xd("starterLotGardenHint", ["alt-fire"]),
+        touch: xd("starterLotGardenHint", ["alt-fire"]),
         plainKey: "plotsGame:starterLotGardenPlain"
       },
       boulder: {
         icon: "hammer",
         titleKey: "plotsGame:starterLotBoulder",
-        desktop: RZ("starterLotBreakHint", ["primary-fire"]),
-        touch: RZ("starterLotBreakHintTouch"),
+        desktop: xd("starterLotBreakHint", ["primary-fire"]),
+        touch: xd("starterLotBreakHintTouch"),
         plainKey: "plotsGame:starterLotBreakPlain"
       },
       fly: {
         icon: "angles-up",
         titleKey: "plotsGame:starterLotFly",
-        desktop: RZ("starterLotFlyHint", ["jump"]),
-        touch: RZ("starterLotFlyHintTouch"),
+        desktop: xd("starterLotFlyHint", ["jump"]),
+        touch: xd("starterLotFlyHintTouch"),
         plainKey: "plotsGame:starterLotFlyPlain"
       },
       backpack: {
         icon: "backpack",
         titleKey: "plotsGame:starterLotBackpack",
-        desktop: RZ("starterLotBackpackHint", ["OpenInventory"]),
-        touch: RZ("starterLotBackpackHintTouch"),
+        desktop: xd("starterLotBackpackHint", ["OpenInventory"]),
+        touch: xd("starterLotBackpackHintTouch"),
         plainKey: "plotsGame:starterLotBackpackPlain"
       },
       neighbour: {
         icon: "person",
         titleKey: "plotsGame:starterLotNeighbour",
-        desktop: RZ("starterLotNeighbourHint", ["forward", "left", "backward", "right"]),
-        touch: RZ("starterLotNeighbourHintTouch"),
+        desktop: xd("starterLotNeighbourHint", ["forward", "left", "backward", "right"]),
+        touch: xd("starterLotNeighbourHintTouch"),
         plainKey: "plotsGame:starterLotNeighbourPlain"
       }
     };
 
-    function aZ(JJ, cJ, ZJ) {
+    function Ad(BB, TB, dB) {
       const {
-        translationKey: FJ,
-        actions: UJ
-      } = ZJ ? cJ.touch : cJ.desktop;
-      if (0 === UJ.length) return JJ(FJ);
-      const eJ = [];
-      for (const XJ of UJ) {
-        const FJ = (0, yZ.y)(XJ, ZJ),
-          UJ = yZ.z[XJ][0];
-        if (null === FJ && void 0 === UJ) return JJ(cJ.plainKey);
-        eJ.push(null === FJ ? (0, yZ.r)(UJ) : JJ(FJ.translationKey))
+        translationKey: VB,
+        actions: yB
+      } = dB ? TB.touch : TB.desktop;
+      if (0 === yB.length) return BB(VB);
+      const pB = [];
+      for (const lB of yB) {
+        const VB = (0, zd.q)(lB, dB),
+          yB = zd.r[lB][0];
+        if (null === VB && void 0 === yB) return BB(TB.plainKey);
+        pB.push(null === VB ? (0, zd.k)(yB) : BB(VB.translationKey))
       }
-      return JJ(FJ, {
-        key: eJ.join("")
+      return BB(VB, {
+        key: pB.join("")
       })
     }
 
-    function BZ(JJ) {
+    function bd(BB) {
       let {
-        hud: cJ
-      } = JJ;
-      const ZJ = (0, IJ.m)(jc, cJ.getStep()),
+        hud: TB
+      } = BB;
+      const dB = (0, wB.f)(gT, TB.getStep()),
         {
-          t: FJ
-        } = (0, bJ.F)();
-      return (0, uJ.jsxs)(Xc.f, {
+          t: VB
+        } = (0, FB.z)();
+      return (0, CB.jsxs)(lT.e, {
         placement: "bottom",
-        children: ["step" === ZJ[0] && (0, uJ.jsx)(tZ, {
-          step: ZJ[1],
-          progress: ZJ[2],
-          goal: ZJ[3]
-        }, ZJ[1]), "celebrate" === ZJ[0] && (0, uJ.jsx)(oZ, {
-          className: EJ()("Celebrate", {
-            Gold: "house" === ZJ[1]
+        children: ["step" === dB[0] && (0, CB.jsx)(nd, {
+          step: dB[1],
+          progress: dB[2],
+          goal: dB[3]
+        }, dB[1]), "celebrate" === dB[0] && (0, CB.jsx)(ed, {
+          className: tB()("Celebrate", {
+            Gold: "house" === dB[1]
           }),
           icon: "star",
-          title: FJ("house" === ZJ[1] ? "plotsGame:starterLotYourPlot" : "plotsGame:starterLotBriefDone")
-        }, `celebrate-${ZJ[1]}`)]
+          title: VB("house" === dB[1] ? "plotsGame:starterLotYourPlot" : "plotsGame:starterLotBriefDone")
+        }, `celebrate-${dB[1]}`)]
       })
     }
 
-    function tZ(JJ) {
+    function nd(BB) {
       let {
-        step: cJ,
-        progress: ZJ,
-        goal: FJ
-      } = JJ;
+        step: TB,
+        progress: dB,
+        goal: VB
+      } = BB;
       const {
-        isTouchScreen: UJ
-      } = (0, AJ.j)(["isTouchScreen"]), {
-        t: eJ
-      } = (0, bJ.F)(), XJ = LZ[cJ];
-      return (0, uJ.jsxs)(oZ, {
-        icon: XJ.icon,
-        title: eJ(XJ.titleKey),
-        children: [(0, uJ.jsx)("div", {
+        isTouchScreen: yB
+      } = (0, JB.m)(["isTouchScreen"]), {
+        t: pB
+      } = (0, FB.z)(), lB = jd[TB];
+      return (0, CB.jsxs)(ed, {
+        icon: lB.icon,
+        title: pB(lB.titleKey),
+        children: [(0, CB.jsx)("div", {
           className: "PlotsStepCardHint SmallTextLight",
-          children: aZ(eJ, XJ, UJ)
-        }), FJ > 1 && (0, uJ.jsx)(iZ, {
-          progress: ZJ,
-          goal: FJ
-        }), "backpack" === cJ && UJ && (0, uJ.jsx)(lZ, {})]
+          children: Ad(pB, lB, yB)
+        }), VB > 1 && (0, CB.jsx)(qd, {
+          progress: dB,
+          goal: VB
+        }), "backpack" === TB && yB && (0, CB.jsx)(BV, {})]
       })
     }
 
-    function oZ(JJ) {
+    function ed(BB) {
       let {
-        className: cJ,
-        icon: ZJ,
-        title: FJ,
-        children: UJ
-      } = JJ;
-      return (0, uJ.jsxs)("div", {
-        className: EJ()("PlotsStepCard", cJ),
+        className: TB,
+        icon: dB,
+        title: VB,
+        children: yB
+      } = BB;
+      return (0, CB.jsxs)("div", {
+        className: tB()("PlotsStepCard", TB),
         role: "status",
-        children: [(0, uJ.jsx)("span", {
+        children: [(0, CB.jsx)("span", {
           className: "PlotsStepCardIcon",
-          children: (0, uJ.jsx)(VJ.c, {
-            name: ZJ
+          children: (0, CB.jsx)(fB.e, {
+            name: dB
           })
-        }), (0, uJ.jsxs)("div", {
+        }), (0, CB.jsxs)("div", {
           className: "PlotsStepCardBody",
-          children: [(0, uJ.jsx)("div", {
+          children: [(0, CB.jsx)("div", {
             className: "PlotsStepCardTitle SmallTextBold",
-            children: FJ
-          }), UJ]
+            children: VB
+          }), yB]
         })]
       })
     }
 
-    function lZ() {
-      return (0, eJ.useEffect)((() => (AJ.d.set({
+    function BV() {
+      return (0, pB.useEffect)((() => (JB.d.set({
         backpackPointerRequested: !0
       }), () => {
-        AJ.d.set({
+        JB.d.set({
           backpackPointerRequested: !1
         })
       })), []), null
     }
-    const JF = function(JJ, cJ, ZJ, FJ) {
+    const TV = function(BB, TB, dB, VB) {
       let {
-        localPlayerId: UJ
-      } = FJ;
-      const AJ = new hc;
-      let qJ = null,
-        jJ = null,
-        YJ = null,
-        hJ = null,
-        DJ = null;
-      const sJ = [];
+        localPlayerId: yB
+      } = VB;
+      const JB = new kT;
+      let YB = null,
+        gB = null,
+        oB = null,
+        kB = null,
+        LB = null;
+      const OB = [];
       return {
-        onCreate: JJ => {
-          qJ = new KZ(JJ, UJ), jJ = new jZ(JJ, UJ, qJ), YJ = new jZ(JJ, UJ, qJ), hJ = new rZ(JJ, UJ), DJ = new mJ(JJ, hJ), sJ.push((0, XJ.u)((0, eJ.createElement)(eJ.Fragment, null, (0, eJ.createElement)(CZ, {
-            hud: AJ
-          }), (0, eJ.createElement)(BZ, {
-            hud: AJ
-          }), (0, eJ.createElement)(sc, {
-            hud: AJ,
-            journal: DJ
-          }), (0, eJ.createElement)(PZ, {
-            placement: hJ
-          }), (0, eJ.createElement)(bZ, {
-            placement: hJ
+        onCreate: BB => {
+          YB = new Md(BB, yB), gB = new gd(BB, yB, YB), oB = new gd(BB, yB, YB), kB = new vd(BB, yB), LB = new iB(BB, kB), OB.push((0, lB.r)((0, pB.createElement)(pB.Fragment, null, (0, pB.createElement)(Cd, {
+            hud: JB
+          }), (0, pB.createElement)(bd, {
+            hud: JB
+          }), (0, pB.createElement)(OT, {
+            hud: JB,
+            journal: LB
+          }), (0, pB.createElement)(Pd, {
+            placement: kB
+          }), (0, pB.createElement)(Kd, {
+            placement: kB
           })), {
-            content: (0, eJ.createElement)(Uc, {
-              journal: DJ
+            content: (0, pB.createElement)(yT, {
+              journal: LB
             })
           }))
         },
-        Hh: () => {
-          jJ.Hh(), YJ.Hh(), hJ.Hh(), DJ.Hh()
+        dL: () => {
+          gB.dL(), oB.dL(), kB.dL(), LB.dL()
         },
-        onPlayerAttemptAltAction: (JJ, cJ, ZJ, FJ, UJ, eJ) => {
-          var XJ;
-          if (null !== eJ) return;
-          const AJ = void 0 === cJ ? null : [cJ, ZJ, FJ];
-          return null !== (XJ = jJ.attemptAltAction(AJ)) && void 0 !== XJ ? XJ : YJ.attemptAltAction(AJ)
+        onPlayerAttemptAltAction: (BB, TB, dB, VB, yB, pB) => {
+          var lB;
+          if (null !== pB) return;
+          const JB = void 0 === TB ? null : [TB, dB, VB];
+          return null !== (lB = gB.attemptAltAction(JB)) && void 0 !== lB ? lB : oB.attemptAltAction(JB)
         },
         onPlayerClickUp: () => {
-          jJ.endPress(), YJ.endPress()
+          gB.endPress(), oB.endPress()
         },
-        onAfterRender: (JJ, cJ) => {
-          hJ.afterRender(cJ), jJ.afterRender(cJ), YJ.afterRender(cJ)
+        onAfterRender: (BB, TB) => {
+          kB.afterRender(TB), gB.afterRender(TB), oB.afterRender(TB)
         },
         onClose: () => {
-          for (const JJ of sJ) JJ();
-          qJ.dispose(), jJ.dispose(), YJ.dispose(), hJ.dispose(), qJ = null, jJ = null, YJ = null, hJ = null, DJ = null
+          for (const BB of OB) BB();
+          YB.dispose(), gB.dispose(), oB.dispose(), kB.dispose(), YB = null, gB = null, oB = null, kB = null, LB = null
         },
-        onReceivedMessageFromServer: (JJ, cJ) => {
-          if ("plotsStarterLot" === JJ) AJ.receiveStep(cJ);
-          else if ("plotsPlot" === JJ) AJ.receivePlot(cJ);
-          else if ("plotsStarterHouse" === JJ) jJ.Qn(cJ);
-          else if ("plotsBlueprint" === JJ) {
-            const JJ = cJ;
-            YJ.Qn(JJ), hJ.Qn(JJ)
-          } else "plotsJournal" === JJ ? DJ.Qn(cJ) : "plotsJournalOpen" === JJ ? DJ.openFromServer() : "plotsPreviewEnd" === JJ && hJ.endFromServer()
+        onReceivedMessageFromServer: (BB, TB) => {
+          if ("plotsStarterLot" === BB) JB.receiveStep(TB);
+          else if ("plotsPlot" === BB) JB.receivePlot(TB);
+          else if ("plotsStarterHouse" === BB) gB.MD(TB);
+          else if ("plotsBlueprint" === BB) {
+            const BB = TB;
+            oB.MD(BB), kB.MD(BB)
+          } else "plotsJournal" === BB ? LB.MD(TB) : "plotsJournalOpen" === BB ? LB.openFromServer() : "plotsPreviewEnd" === BB && kB.endFromServer()
         }
       }
     }
   },
-  38095: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      c: () => FJ,
-      g: () => eJ
+  38087: (BB, TB, dB) => {
+    dB.d(TB, {
+      e: () => VB,
+      g: () => pB
     });
-    const FJ = 1 / .6,
-      UJ = {
+    const VB = 1 / .6,
+      yB = {
         kind: "smokePuff"
       };
-    class eJ {
-      constructor(JJ, cJ, ZJ) {
-        this.style = JJ, this.qh = cJ, this.half = ZJ, this.particles = null, this.lastFrame = -1
+    class pB {
+      constructor(BB, TB, dB) {
+        this.style = BB, this.Kk = TB, this.half = dB, this.particles = null, this.lastFrame = -1
       }
-      emit(JJ, cJ, ZJ) {
-        let eJ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
-        return ZJ !== this.lastFrame && (this.lastFrame = ZJ, this.particles || (this.particles = JJ.createParticles(function(JJ, cJ) {
+      emit(BB, TB, dB) {
+        let pB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
+        return dB !== this.lastFrame && (this.lastFrame = dB, this.particles || (this.particles = BB.createParticles(function(BB, TB) {
           const [
-            [ZJ, eJ, XJ],
-            [AJ, qJ, jJ]
-          ] = JJ.colours;
+            [dB, pB, lB],
+            [JB, YB, gB]
+          ] = BB.colours;
           return {
-            texture: JJ.soft ? UJ : "square_particle",
-            qh: cJ,
-            minLifeTime: JJ.life[0] / FJ,
-            maxLifeTime: JJ.life[1] / FJ,
-            minEmitPower: JJ.power[0] * FJ,
-            maxEmitPower: JJ.power[1] * FJ,
-            minSize: JJ.size[0],
-            maxSize: JJ.size[1],
+            texture: BB.soft ? yB : "square_particle",
+            Kk: TB,
+            minLifeTime: BB.life[0] / VB,
+            maxLifeTime: BB.life[1] / VB,
+            minEmitPower: BB.power[0] * VB,
+            maxEmitPower: BB.power[1] * VB,
+            minSize: BB.size[0],
+            maxSize: BB.size[1],
             emitRate: 0,
-            gravity: [0, JJ.lift * FJ * FJ, 0],
-            dir1: [-JJ.spread, 1, -JJ.spread],
-            dir2: [JJ.spread, 1, JJ.spread],
+            gravity: [0, BB.lift * VB * VB, 0],
+            dir1: [-BB.spread, 1, -BB.spread],
+            dir2: [BB.spread, 1, BB.spread],
             colorGradients: [{
               timeFraction: 0,
-              minColor: [ZJ, eJ, XJ, JJ.alpha],
-              maxColor: [AJ, qJ, jJ, JJ.alpha]
+              minColor: [dB, pB, lB, BB.alpha],
+              maxColor: [JB, YB, gB, BB.alpha]
             }, {
               timeFraction: 1,
-              minColor: [ZJ, eJ, XJ, 0],
-              maxColor: [AJ, qJ, jJ, 0]
+              minColor: [dB, pB, lB, 0],
+              maxColor: [JB, YB, gB, 0]
             }],
-            blendMode: JJ.blendMode
+            blendMode: BB.blendMode
           }
-        }(this.style, this.qh), {
-          pos: cJ,
+        }(this.style, this.Kk), {
+          pos: TB,
           half: this.half
-        })), this.particles.moveTo(cJ, this.half), this.particles.emit(eJ), !0)
+        })), this.particles.moveTo(TB, this.half), this.particles.emit(pB), !0)
       }
       dispose() {
-        var JJ;
-        null === (JJ = this.particles) || void 0 === JJ || JJ.stop(), this.particles = null
+        var BB;
+        null === (BB = this.particles) || void 0 === BB || BB.stop(), this.particles = null
       }
     }
   }
 };
 Object.freeze(modules);
-for (const JJ in modules) Object.freeze(modules[JJ]);
+for (const BB in modules) Object.freeze(modules[BB]);

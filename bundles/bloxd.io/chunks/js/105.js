@@ -1,44 +1,44 @@
-/*! For license information please see symm5.105.38c2a56b.chunk.js.LICENSE.txt */
+/*! For license information please see l9xvfg.105.1cc93717.chunk.js.LICENSE.txt */
 export const id = 105;
 export const ids = [105];
 export const modules = {
-  5783: (JJ, cJ, ZJ) => {
-    ZJ.r(cJ), ZJ.d(cJ, {
-      Graph: () => NJ,
-      debug: () => bZ,
-      default: () => WZ,
-      graphlib: () => eJ,
-      layout: () => sZ,
-      util: () => wZ,
-      version: () => ec
+  5798: (BB, TB, dB) => {
+    dB.r(TB), dB.d(TB, {
+      Graph: () => ZB,
+      debug: () => Kd,
+      default: () => Id,
+      graphlib: () => pB,
+      layout: () => Od,
+      util: () => rd,
+      version: () => pT
     });
-    var FJ = Object.defineProperty,
-      UJ = (JJ, cJ, ZJ) => ((JJ, cJ, ZJ) => cJ in JJ ? FJ(JJ, cJ, {
+    var VB = Object.defineProperty,
+      yB = (BB, TB, dB) => ((BB, TB, dB) => TB in BB ? VB(BB, TB, {
         enumerable: !0,
         configurable: !0,
         writable: !0,
-        value: ZJ
-      }) : JJ[cJ] = ZJ)(JJ, "symbol" != typeof cJ ? cJ + "" : cJ, ZJ),
-      eJ = {};
-    ((JJ, cJ) => {
-      for (var ZJ in cJ) FJ(JJ, ZJ, {
-        get: cJ[ZJ],
+        value: dB
+      }) : BB[TB] = dB)(BB, "symbol" != typeof TB ? TB + "" : TB, dB),
+      pB = {};
+    ((BB, TB) => {
+      for (var dB in TB) VB(BB, dB, {
+        get: TB[dB],
         enumerable: !0
       })
-    })(eJ, {
-      Graph: () => NJ,
-      alg: () => xJ
+    })(pB, {
+      Graph: () => ZB,
+      alg: () => EB
     });
-    var XJ = Object.defineProperty,
-      AJ = (JJ, cJ) => {
-        for (var ZJ in cJ) XJ(JJ, ZJ, {
-          get: cJ[ZJ],
+    var lB = Object.defineProperty,
+      JB = (BB, TB) => {
+        for (var dB in TB) lB(BB, dB, {
+          get: TB[dB],
           enumerable: !0
         })
       },
-      qJ = class {
-        constructor(JJ) {
-          this._isDirected = !0, this._isMultigraph = !1, this._isCompound = !1, this._nodes = {}, this._in = {}, this._preds = {}, this._out = {}, this._sucs = {}, this._edgeObjs = {}, this._edgeLabels = {}, this._nodeCount = 0, this._edgeCount = 0, this._defaultNodeLabelFn = () => {}, this._defaultEdgeLabelFn = () => {}, JJ && (this._isDirected = !("directed" in JJ) || JJ.directed, this._isMultigraph = "multigraph" in JJ && JJ.multigraph, this._isCompound = "compound" in JJ && JJ.compound), this._isCompound && (this._parent = {}, this._children = {}, this._children["\0"] = {})
+      YB = class {
+        constructor(BB) {
+          this._isDirected = !0, this._isMultigraph = !1, this._isCompound = !1, this._nodes = {}, this._in = {}, this._preds = {}, this._out = {}, this._sucs = {}, this._edgeObjs = {}, this._edgeLabels = {}, this._nodeCount = 0, this._edgeCount = 0, this._defaultNodeLabelFn = () => {}, this._defaultEdgeLabelFn = () => {}, BB && (this._isDirected = !("directed" in BB) || BB.directed, this._isMultigraph = "multigraph" in BB && BB.multigraph, this._isCompound = "compound" in BB && BB.compound), this._isCompound && (this._parent = {}, this._children = {}, this._children["\0"] = {})
         }
         isDirected() {
           return this._isDirected
@@ -49,14 +49,14 @@ export const modules = {
         isCompound() {
           return this._isCompound
         }
-        setGraph(JJ) {
-          return this._label = JJ, this
+        setGraph(BB) {
+          return this._label = BB, this
         }
         graph() {
           return this._label
         }
-        setDefaultNodeLabel(JJ) {
-          return this._defaultNodeLabelFn = "function" != typeof JJ ? () => JJ : JJ, this
+        setDefaultNodeLabel(BB) {
+          return this._defaultNodeLabelFn = "function" != typeof BB ? () => BB : BB, this
         }
         nodeCount() {
           return this._nodeCount
@@ -65,105 +65,105 @@ export const modules = {
           return Object.keys(this._nodes)
         }
         sources() {
-          return this.nodes().filter((JJ => 0 === Object.keys(this._in[JJ]).length))
+          return this.nodes().filter((BB => 0 === Object.keys(this._in[BB]).length))
         }
         sinks() {
-          return this.nodes().filter((JJ => 0 === Object.keys(this._out[JJ]).length))
+          return this.nodes().filter((BB => 0 === Object.keys(this._out[BB]).length))
         }
-        setNodes(JJ, cJ) {
-          return JJ.forEach((JJ => {
-            void 0 !== cJ ? this.setNode(JJ, cJ) : this.setNode(JJ)
+        setNodes(BB, TB) {
+          return BB.forEach((BB => {
+            void 0 !== TB ? this.setNode(BB, TB) : this.setNode(BB)
           })), this
         }
-        setNode(JJ, cJ) {
-          return JJ in this._nodes ? (arguments.length > 1 && (this._nodes[JJ] = cJ), this) : (this._nodes[JJ] = arguments.length > 1 ? cJ : this._defaultNodeLabelFn(JJ), this._isCompound && (this._parent[JJ] = "\0", this._children[JJ] = {}, this._children["\0"][JJ] = !0), this._in[JJ] = {}, this._preds[JJ] = {}, this._out[JJ] = {}, this._sucs[JJ] = {}, ++this._nodeCount, this)
+        setNode(BB, TB) {
+          return BB in this._nodes ? (arguments.length > 1 && (this._nodes[BB] = TB), this) : (this._nodes[BB] = arguments.length > 1 ? TB : this._defaultNodeLabelFn(BB), this._isCompound && (this._parent[BB] = "\0", this._children[BB] = {}, this._children["\0"][BB] = !0), this._in[BB] = {}, this._preds[BB] = {}, this._out[BB] = {}, this._sucs[BB] = {}, ++this._nodeCount, this)
         }
-        node(JJ) {
-          return this._nodes[JJ]
+        node(BB) {
+          return this._nodes[BB]
         }
-        hasNode(JJ) {
-          return JJ in this._nodes
+        hasNode(BB) {
+          return BB in this._nodes
         }
-        removeNode(JJ) {
-          if (JJ in this._nodes) {
-            let cJ = JJ => this.removeEdge(this._edgeObjs[JJ]);
-            delete this._nodes[JJ], this._isCompound && (this._removeFromParentsChildList(JJ), delete this._parent[JJ], this.children(JJ).forEach((JJ => {
-              this.setParent(JJ)
-            })), delete this._children[JJ]), Object.keys(this._in[JJ]).forEach(cJ), delete this._in[JJ], delete this._preds[JJ], Object.keys(this._out[JJ]).forEach(cJ), delete this._out[JJ], delete this._sucs[JJ], --this._nodeCount
+        removeNode(BB) {
+          if (BB in this._nodes) {
+            let TB = BB => this.removeEdge(this._edgeObjs[BB]);
+            delete this._nodes[BB], this._isCompound && (this._removeFromParentsChildList(BB), delete this._parent[BB], this.children(BB).forEach((BB => {
+              this.setParent(BB)
+            })), delete this._children[BB]), Object.keys(this._in[BB]).forEach(TB), delete this._in[BB], delete this._preds[BB], Object.keys(this._out[BB]).forEach(TB), delete this._out[BB], delete this._sucs[BB], --this._nodeCount
           }
           return this
         }
-        setParent(JJ, cJ) {
+        setParent(BB, TB) {
           if (!this._isCompound) throw new Error("Cannot set parent in a non-compound graph");
-          if (void 0 === cJ) cJ = "\0";
+          if (void 0 === TB) TB = "\0";
           else {
-            for (let ZJ = cJ += ""; void 0 !== ZJ; ZJ = this.parent(ZJ))
-              if (ZJ === JJ) throw new Error("Setting " + cJ + " as parent of " + JJ + " would create a cycle");
-            this.setNode(cJ)
+            for (let dB = TB += ""; void 0 !== dB; dB = this.parent(dB))
+              if (dB === BB) throw new Error("Setting " + TB + " as parent of " + BB + " would create a cycle");
+            this.setNode(TB)
           }
-          return this.setNode(JJ), this._removeFromParentsChildList(JJ), this._parent[JJ] = cJ, this._children[cJ][JJ] = !0, this
+          return this.setNode(BB), this._removeFromParentsChildList(BB), this._parent[BB] = TB, this._children[TB][BB] = !0, this
         }
-        parent(JJ) {
+        parent(BB) {
           if (this._isCompound) {
-            let cJ = this._parent[JJ];
-            if ("\0" !== cJ) return cJ
+            let TB = this._parent[BB];
+            if ("\0" !== TB) return TB
           }
         }
         children() {
-          let JJ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "\0";
+          let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "\0";
           if (this._isCompound) {
-            let cJ = this._children[JJ];
-            if (cJ) return Object.keys(cJ)
+            let TB = this._children[BB];
+            if (TB) return Object.keys(TB)
           } else {
-            if ("\0" === JJ) return this.nodes();
-            if (this.hasNode(JJ)) return []
+            if ("\0" === BB) return this.nodes();
+            if (this.hasNode(BB)) return []
           }
           return []
         }
-        predecessors(JJ) {
-          let cJ = this._preds[JJ];
-          if (cJ) return Object.keys(cJ)
+        predecessors(BB) {
+          let TB = this._preds[BB];
+          if (TB) return Object.keys(TB)
         }
-        successors(JJ) {
-          let cJ = this._sucs[JJ];
-          if (cJ) return Object.keys(cJ)
+        successors(BB) {
+          let TB = this._sucs[BB];
+          if (TB) return Object.keys(TB)
         }
-        neighbors(JJ) {
-          let cJ = this.predecessors(JJ);
-          if (cJ) {
-            let ZJ = new Set(cJ),
-              FJ = this.successors(JJ);
-            if (FJ)
-              for (let JJ of FJ) ZJ.add(JJ);
-            return Array.from(ZJ.values())
+        neighbors(BB) {
+          let TB = this.predecessors(BB);
+          if (TB) {
+            let dB = new Set(TB),
+              VB = this.successors(BB);
+            if (VB)
+              for (let BB of VB) dB.add(BB);
+            return Array.from(dB.values())
           }
         }
-        isLeaf(JJ) {
-          var cJ;
-          let ZJ;
-          return ZJ = this.isDirected() ? this.successors(JJ) : this.neighbors(JJ), 0 === (null != (cJ = null == ZJ ? void 0 : ZJ.length) ? cJ : 0)
+        isLeaf(BB) {
+          var TB;
+          let dB;
+          return dB = this.isDirected() ? this.successors(BB) : this.neighbors(BB), 0 === (null != (TB = null == dB ? void 0 : dB.length) ? TB : 0)
         }
-        filterNodes(JJ) {
-          let cJ = new this.constructor({
+        filterNodes(BB) {
+          let TB = new this.constructor({
             directed: this._isDirected,
             multigraph: this._isMultigraph,
             compound: this._isCompound
           });
-          cJ.setGraph(this.graph()), Object.entries(this._nodes).forEach((ZJ => {
-            let [FJ, UJ] = ZJ;
-            JJ(FJ) && cJ.setNode(FJ, UJ)
-          })), Object.values(this._edgeObjs).forEach((JJ => {
-            cJ.hasNode(JJ.v) && cJ.hasNode(JJ.w) && cJ.setEdge(JJ, this.edge(JJ))
+          TB.setGraph(this.graph()), Object.entries(this._nodes).forEach((dB => {
+            let [VB, yB] = dB;
+            BB(VB) && TB.setNode(VB, yB)
+          })), Object.values(this._edgeObjs).forEach((BB => {
+            TB.hasNode(BB.v) && TB.hasNode(BB.w) && TB.setEdge(BB, this.edge(BB))
           }));
-          let ZJ = {},
-            FJ = JJ => {
-              let UJ = this.parent(JJ);
-              return !UJ || cJ.hasNode(UJ) ? (ZJ[JJ] = UJ, UJ) : UJ in ZJ ? ZJ[UJ] : FJ(UJ)
+          let dB = {},
+            VB = BB => {
+              let yB = this.parent(BB);
+              return !yB || TB.hasNode(yB) ? (dB[BB] = yB, yB) : yB in dB ? dB[yB] : VB(yB)
             };
-          return this._isCompound && cJ.nodes().forEach((JJ => cJ.setParent(JJ, FJ(JJ)))), cJ
+          return this._isCompound && TB.nodes().forEach((BB => TB.setParent(BB, VB(BB)))), TB
         }
-        setDefaultEdgeLabel(JJ) {
-          return this._defaultEdgeLabelFn = "function" != typeof JJ ? () => JJ : JJ, this
+        setDefaultEdgeLabel(BB) {
+          return this._defaultEdgeLabelFn = "function" != typeof BB ? () => BB : BB, this
         }
         edgeCount() {
           return this._edgeCount
@@ -171,226 +171,226 @@ export const modules = {
         edges() {
           return Object.values(this._edgeObjs)
         }
-        setPath(JJ, cJ) {
-          return JJ.reduce(((JJ, ZJ) => (void 0 !== cJ ? this.setEdge(JJ, ZJ, cJ) : this.setEdge(JJ, ZJ), ZJ))), this
+        setPath(BB, TB) {
+          return BB.reduce(((BB, dB) => (void 0 !== TB ? this.setEdge(BB, dB, TB) : this.setEdge(BB, dB), dB))), this
         }
-        setEdge(JJ, cJ, ZJ, FJ) {
-          let UJ, eJ, XJ, AJ, qJ = !1;
-          "object" == typeof JJ && null !== JJ && "v" in JJ ? (UJ = JJ.v, eJ = JJ.w, XJ = JJ.name, 2 === arguments.length && (AJ = cJ, qJ = !0)) : (UJ = JJ, eJ = cJ, XJ = FJ, arguments.length > 2 && (AJ = ZJ, qJ = !0)), UJ = "" + UJ, eJ = "" + eJ, void 0 !== XJ && (XJ = "" + XJ);
-          let YJ = hJ(this._isDirected, UJ, eJ, XJ);
-          if (YJ in this._edgeLabels) return qJ && (this._edgeLabels[YJ] = AJ), this;
-          if (void 0 !== XJ && !this._isMultigraph) throw new Error("Cannot set a named edge when isMultigraph = false");
-          this.setNode(UJ), this.setNode(eJ), this._edgeLabels[YJ] = qJ ? AJ : this._defaultEdgeLabelFn(UJ, eJ, XJ);
-          let DJ = function(JJ, cJ, ZJ, FJ) {
-            let UJ = "" + cJ,
-              eJ = "" + ZJ;
-            if (!JJ && UJ > eJ) {
-              let JJ = UJ;
-              UJ = eJ, eJ = JJ
+        setEdge(BB, TB, dB, VB) {
+          let yB, pB, lB, JB, YB = !1;
+          "object" == typeof BB && null !== BB && "v" in BB ? (yB = BB.v, pB = BB.w, lB = BB.name, 2 === arguments.length && (JB = TB, YB = !0)) : (yB = BB, pB = TB, lB = VB, arguments.length > 2 && (JB = dB, YB = !0)), yB = "" + yB, pB = "" + pB, void 0 !== lB && (lB = "" + lB);
+          let oB = kB(this._isDirected, yB, pB, lB);
+          if (oB in this._edgeLabels) return YB && (this._edgeLabels[oB] = JB), this;
+          if (void 0 !== lB && !this._isMultigraph) throw new Error("Cannot set a named edge when isMultigraph = false");
+          this.setNode(yB), this.setNode(pB), this._edgeLabels[oB] = YB ? JB : this._defaultEdgeLabelFn(yB, pB, lB);
+          let LB = function(BB, TB, dB, VB) {
+            let yB = "" + TB,
+              pB = "" + dB;
+            if (!BB && yB > pB) {
+              let BB = yB;
+              yB = pB, pB = BB
             }
-            let XJ = {
-              v: UJ,
-              w: eJ
+            let lB = {
+              v: yB,
+              w: pB
             };
-            return FJ && (XJ.name = FJ), XJ
-          }(this._isDirected, UJ, eJ, XJ);
-          return UJ = DJ.v, eJ = DJ.w, Object.freeze(DJ), this._edgeObjs[YJ] = DJ, jJ(this._preds[eJ], UJ), jJ(this._sucs[UJ], eJ), this._in[eJ][YJ] = DJ, this._out[UJ][YJ] = DJ, this._edgeCount++, this
+            return VB && (lB.name = VB), lB
+          }(this._isDirected, yB, pB, lB);
+          return yB = LB.v, pB = LB.w, Object.freeze(LB), this._edgeObjs[oB] = LB, gB(this._preds[pB], yB), gB(this._sucs[yB], pB), this._in[pB][oB] = LB, this._out[yB][oB] = LB, this._edgeCount++, this
         }
-        edge(JJ, cJ, ZJ) {
-          let FJ = 1 === arguments.length ? DJ(this._isDirected, JJ) : hJ(this._isDirected, JJ, cJ, ZJ);
-          return this._edgeLabels[FJ]
+        edge(BB, TB, dB) {
+          let VB = 1 === arguments.length ? LB(this._isDirected, BB) : kB(this._isDirected, BB, TB, dB);
+          return this._edgeLabels[VB]
         }
-        edgeAsObj(JJ, cJ, ZJ) {
-          let FJ = 1 === arguments.length ? this.edge(JJ) : this.edge(JJ, cJ, ZJ);
-          return "object" != typeof FJ || null === FJ ? {
-            label: FJ
-          } : FJ
+        edgeAsObj(BB, TB, dB) {
+          let VB = 1 === arguments.length ? this.edge(BB) : this.edge(BB, TB, dB);
+          return "object" != typeof VB || null === VB ? {
+            label: VB
+          } : VB
         }
-        hasEdge(JJ, cJ, ZJ) {
-          return (1 === arguments.length ? DJ(this._isDirected, JJ) : hJ(this._isDirected, JJ, cJ, ZJ)) in this._edgeLabels
+        hasEdge(BB, TB, dB) {
+          return (1 === arguments.length ? LB(this._isDirected, BB) : kB(this._isDirected, BB, TB, dB)) in this._edgeLabels
         }
-        removeEdge(JJ, cJ, ZJ) {
-          let FJ = 1 === arguments.length ? DJ(this._isDirected, JJ) : hJ(this._isDirected, JJ, cJ, ZJ),
-            UJ = this._edgeObjs[FJ];
-          if (UJ) {
-            let JJ = UJ.v,
-              cJ = UJ.w;
-            delete this._edgeLabels[FJ], delete this._edgeObjs[FJ], YJ(this._preds[cJ], JJ), YJ(this._sucs[JJ], cJ), delete this._in[cJ][FJ], delete this._out[JJ][FJ], this._edgeCount--
+        removeEdge(BB, TB, dB) {
+          let VB = 1 === arguments.length ? LB(this._isDirected, BB) : kB(this._isDirected, BB, TB, dB),
+            yB = this._edgeObjs[VB];
+          if (yB) {
+            let BB = yB.v,
+              TB = yB.w;
+            delete this._edgeLabels[VB], delete this._edgeObjs[VB], oB(this._preds[TB], BB), oB(this._sucs[BB], TB), delete this._in[TB][VB], delete this._out[BB][VB], this._edgeCount--
           }
           return this
         }
-        inEdges(JJ, cJ) {
-          return this.isDirected() ? this.filterEdges(this._in[JJ], JJ, cJ) : this.nodeEdges(JJ, cJ)
+        inEdges(BB, TB) {
+          return this.isDirected() ? this.filterEdges(this._in[BB], BB, TB) : this.nodeEdges(BB, TB)
         }
-        outEdges(JJ, cJ) {
-          return this.isDirected() ? this.filterEdges(this._out[JJ], JJ, cJ) : this.nodeEdges(JJ, cJ)
+        outEdges(BB, TB) {
+          return this.isDirected() ? this.filterEdges(this._out[BB], BB, TB) : this.nodeEdges(BB, TB)
         }
-        nodeEdges(JJ, cJ) {
-          if (JJ in this._nodes) return this.filterEdges({
-            ...this._in[JJ],
-            ...this._out[JJ]
-          }, JJ, cJ)
+        nodeEdges(BB, TB) {
+          if (BB in this._nodes) return this.filterEdges({
+            ...this._in[BB],
+            ...this._out[BB]
+          }, BB, TB)
         }
-        _removeFromParentsChildList(JJ) {
-          delete this._children[this._parent[JJ]][JJ]
+        _removeFromParentsChildList(BB) {
+          delete this._children[this._parent[BB]][BB]
         }
-        filterEdges(JJ, cJ, ZJ) {
-          if (!JJ) return;
-          let FJ = Object.values(JJ);
-          return ZJ ? FJ.filter((JJ => JJ.v === cJ && JJ.w === ZJ || JJ.v === ZJ && JJ.w === cJ)) : FJ
+        filterEdges(BB, TB, dB) {
+          if (!BB) return;
+          let VB = Object.values(BB);
+          return dB ? VB.filter((BB => BB.v === TB && BB.w === dB || BB.v === dB && BB.w === TB)) : VB
         }
       };
 
-    function jJ(JJ, cJ) {
-      JJ[cJ] ? JJ[cJ]++ : JJ[cJ] = 1
+    function gB(BB, TB) {
+      BB[TB] ? BB[TB]++ : BB[TB] = 1
     }
 
-    function YJ(JJ, cJ) {
-      void 0 !== JJ[cJ] && !--JJ[cJ] && delete JJ[cJ]
+    function oB(BB, TB) {
+      void 0 !== BB[TB] && !--BB[TB] && delete BB[TB]
     }
 
-    function hJ(JJ, cJ, ZJ, FJ) {
-      let UJ = "" + cJ,
-        eJ = "" + ZJ;
-      if (!JJ && UJ > eJ) {
-        let JJ = UJ;
-        UJ = eJ, eJ = JJ
+    function kB(BB, TB, dB, VB) {
+      let yB = "" + TB,
+        pB = "" + dB;
+      if (!BB && yB > pB) {
+        let BB = yB;
+        yB = pB, pB = BB
       }
-      return UJ + "\x01" + eJ + "\x01" + (void 0 === FJ ? "\0" : FJ)
+      return yB + "\x01" + pB + "\x01" + (void 0 === VB ? "\0" : VB)
     }
 
-    function DJ(JJ, cJ) {
-      return hJ(JJ, cJ.v, cJ.w, cJ.name)
+    function LB(BB, TB) {
+      return kB(BB, TB.v, TB.w, TB.name)
     }
 
-    function sJ(JJ) {
-      let cJ = {
+    function OB(BB) {
+      let TB = {
           options: {
-            directed: JJ.isDirected(),
-            multigraph: JJ.isMultigraph(),
-            compound: JJ.isCompound()
+            directed: BB.isDirected(),
+            multigraph: BB.isMultigraph(),
+            compound: BB.isCompound()
           },
-          nodes: nJ(JJ),
-          edges: GJ(JJ)
+          nodes: DB(BB),
+          edges: uB(BB)
         },
-        ZJ = JJ.graph();
-      return void 0 !== ZJ && (cJ.value = structuredClone(ZJ)), cJ
+        dB = BB.graph();
+      return void 0 !== dB && (TB.value = structuredClone(dB)), TB
     }
 
-    function nJ(JJ) {
-      return JJ.nodes().map((cJ => {
-        let ZJ = JJ.node(cJ),
-          FJ = JJ.parent(cJ),
-          UJ = {
-            v: cJ
+    function DB(BB) {
+      return BB.nodes().map((TB => {
+        let dB = BB.node(TB),
+          VB = BB.parent(TB),
+          yB = {
+            v: TB
           };
-        return void 0 !== ZJ && (UJ.value = ZJ), void 0 !== FJ && (UJ.parent = FJ), UJ
+        return void 0 !== dB && (yB.value = dB), void 0 !== VB && (yB.parent = VB), yB
       }))
     }
 
-    function GJ(JJ) {
-      return JJ.edges().map((cJ => {
-        let ZJ = JJ.edge(cJ),
-          FJ = {
-            v: cJ.v,
-            w: cJ.w
+    function uB(BB) {
+      return BB.edges().map((TB => {
+        let dB = BB.edge(TB),
+          VB = {
+            v: TB.v,
+            w: TB.w
           };
-        return void 0 !== cJ.name && (FJ.name = cJ.name), void 0 !== ZJ && (FJ.value = ZJ), FJ
+        return void 0 !== TB.name && (VB.name = TB.name), void 0 !== dB && (VB.value = dB), VB
       }))
     }
 
-    function fJ(JJ) {
-      let cJ = new qJ(JJ.options);
-      return void 0 !== JJ.value && cJ.setGraph(JJ.value), JJ.nodes.forEach((JJ => {
-        cJ.setNode(JJ.v, JJ.value), JJ.parent && cJ.setParent(JJ.v, JJ.parent)
-      })), JJ.edges.forEach((JJ => {
-        cJ.setEdge({
-          v: JJ.v,
-          w: JJ.w,
-          name: JJ.name
-        }, JJ.value)
-      })), cJ
+    function HB(BB) {
+      let TB = new YB(BB.options);
+      return void 0 !== BB.value && TB.setGraph(BB.value), BB.nodes.forEach((BB => {
+        TB.setNode(BB.v, BB.value), BB.parent && TB.setParent(BB.v, BB.parent)
+      })), BB.edges.forEach((BB => {
+        TB.setEdge({
+          v: BB.v,
+          w: BB.w,
+          name: BB.name
+        }, BB.value)
+      })), TB
     }
-    AJ({}, {
-      read: () => fJ,
-      write: () => sJ
+    JB({}, {
+      read: () => HB,
+      write: () => OB
     });
-    var xJ = {};
-    AJ(xJ, {
-      CycleException: () => bJ,
-      bellmanFord: () => vJ,
-      components: () => mJ,
-      dijkstra: () => VJ,
-      dijkstraAll: () => KJ,
-      findCycles: () => SJ,
-      floydWarshall: () => MJ,
-      isAcyclic: () => WJ,
-      postorder: () => kJ,
-      preorder: () => pJ,
-      prim: () => dJ,
-      shortestPaths: () => zJ,
-      tarjan: () => yJ,
-      topsort: () => wJ
+    var EB = {};
+    JB(EB, {
+      CycleException: () => FB,
+      bellmanFord: () => mB,
+      components: () => iB,
+      dijkstra: () => fB,
+      dijkstraAll: () => sB,
+      findCycles: () => zB,
+      floydWarshall: () => UB,
+      isAcyclic: () => rB,
+      postorder: () => PB,
+      preorder: () => QB,
+      prim: () => RB,
+      shortestPaths: () => aB,
+      tarjan: () => MB,
+      topsort: () => KB
     });
-    var rJ = () => 1;
+    var vB = () => 1;
 
-    function vJ(JJ, cJ, ZJ, FJ) {
-      return function(JJ, cJ, ZJ, FJ) {
-        let UJ, eJ = {},
-          XJ = 0,
-          AJ = JJ.nodes(),
-          qJ = function(JJ) {
-            let cJ = eJ[JJ.v],
-              FJ = eJ[JJ.w];
-            if (!cJ || !FJ) return;
-            let XJ = ZJ(JJ);
-            cJ.distance + XJ < FJ.distance && (eJ[JJ.w] = {
-              distance: cJ.distance + XJ,
-              predecessor: JJ.v
-            }, UJ = !0)
+    function mB(BB, TB, dB, VB) {
+      return function(BB, TB, dB, VB) {
+        let yB, pB = {},
+          lB = 0,
+          JB = BB.nodes(),
+          YB = function(BB) {
+            let TB = pB[BB.v],
+              VB = pB[BB.w];
+            if (!TB || !VB) return;
+            let lB = dB(BB);
+            TB.distance + lB < VB.distance && (pB[BB.w] = {
+              distance: TB.distance + lB,
+              predecessor: BB.v
+            }, yB = !0)
           },
-          jJ = function() {
-            AJ.forEach((function(JJ) {
-              FJ(JJ).forEach((function(cJ) {
-                let ZJ = cJ.v === JJ ? cJ.v : cJ.w,
-                  FJ = ZJ === cJ.v ? cJ.w : cJ.v;
-                qJ({
-                  v: ZJ,
-                  w: FJ
+          gB = function() {
+            JB.forEach((function(BB) {
+              VB(BB).forEach((function(TB) {
+                let dB = TB.v === BB ? TB.v : TB.w,
+                  VB = dB === TB.v ? TB.w : TB.v;
+                YB({
+                  v: dB,
+                  w: VB
                 })
               }))
             }))
           };
-        AJ.forEach((function(JJ) {
-          let ZJ = JJ === cJ ? 0 : Number.POSITIVE_INFINITY;
-          eJ[JJ] = {
-            distance: ZJ,
+        JB.forEach((function(BB) {
+          let dB = BB === TB ? 0 : Number.POSITIVE_INFINITY;
+          pB[BB] = {
+            distance: dB,
             predecessor: ""
           }
         }));
-        let YJ = AJ.length;
-        for (let hJ = 1; hJ < YJ && (UJ = !1, XJ++, jJ(), UJ); hJ++);
-        if (XJ === YJ - 1 && (UJ = !1, jJ(), UJ)) throw new Error("The graph contains a negative weight cycle");
-        return eJ
-      }(JJ, String(cJ), ZJ || rJ, FJ || function(cJ) {
-        var ZJ;
-        return null != (ZJ = JJ.outEdges(cJ)) ? ZJ : []
+        let oB = JB.length;
+        for (let kB = 1; kB < oB && (yB = !1, lB++, gB(), yB); kB++);
+        if (lB === oB - 1 && (yB = !1, gB(), yB)) throw new Error("The graph contains a negative weight cycle");
+        return pB
+      }(BB, String(TB), dB || vB, VB || function(TB) {
+        var dB;
+        return null != (dB = BB.outEdges(TB)) ? dB : []
       })
     }
 
-    function mJ(JJ) {
-      let cJ, ZJ = {},
-        FJ = [];
+    function iB(BB) {
+      let TB, dB = {},
+        VB = [];
 
-      function UJ(FJ) {
-        var eJ, XJ;
-        FJ in ZJ || (ZJ[FJ] = !0, cJ.push(FJ), null == (eJ = JJ.successors(FJ)) || eJ.forEach(UJ), null == (XJ = JJ.predecessors(FJ)) || XJ.forEach(UJ))
+      function yB(VB) {
+        var pB, lB;
+        VB in dB || (dB[VB] = !0, TB.push(VB), null == (pB = BB.successors(VB)) || pB.forEach(yB), null == (lB = BB.predecessors(VB)) || lB.forEach(yB))
       }
-      return JJ.nodes().forEach((function(JJ) {
-        cJ = [], UJ(JJ), cJ.length && FJ.push(cJ)
-      })), FJ
+      return BB.nodes().forEach((function(BB) {
+        TB = [], yB(BB), TB.length && VB.push(TB)
+      })), VB
     }
-    var QJ = class {
+    var NB = class {
         constructor() {
           this._arr = [], this._keyIndices = {}
         }
@@ -398,1915 +398,1915 @@ export const modules = {
           return this._arr.length
         }
         keys() {
-          return this._arr.map((JJ => JJ.key))
+          return this._arr.map((BB => BB.key))
         }
-        has(JJ) {
-          return JJ in this._keyIndices
+        has(BB) {
+          return BB in this._keyIndices
         }
-        priority(JJ) {
-          let cJ = this._keyIndices[JJ];
-          if (void 0 !== cJ) return this._arr[cJ].priority
+        priority(BB) {
+          let TB = this._keyIndices[BB];
+          if (void 0 !== TB) return this._arr[TB].priority
         }
         min() {
           if (0 === this.size()) throw new Error("Queue underflow");
           return this._arr[0].key
         }
-        add(JJ, cJ) {
-          let ZJ = this._keyIndices,
-            FJ = String(JJ);
-          if (!(FJ in ZJ)) {
-            let JJ = this._arr,
-              UJ = JJ.length;
-            return ZJ[FJ] = UJ, JJ.push({
-              key: FJ,
-              priority: cJ
-            }), this._decrease(UJ), !0
+        add(BB, TB) {
+          let dB = this._keyIndices,
+            VB = String(BB);
+          if (!(VB in dB)) {
+            let BB = this._arr,
+              yB = BB.length;
+            return dB[VB] = yB, BB.push({
+              key: VB,
+              priority: TB
+            }), this._decrease(yB), !0
           }
           return !1
         }
         removeMin() {
           if (0 === this.size()) throw new Error("Queue underflow");
           this._swap(0, this._arr.length - 1);
-          let JJ = this._arr.pop();
-          return delete this._keyIndices[JJ.key], this._heapify(0), JJ.key
+          let BB = this._arr.pop();
+          return delete this._keyIndices[BB.key], this._heapify(0), BB.key
         }
-        decrease(JJ, cJ) {
-          let ZJ = this._keyIndices[JJ];
-          if (void 0 === ZJ) throw new Error(`Key not found: ${JJ}`);
-          let FJ = this._arr[ZJ].priority;
-          if (cJ > FJ) throw new Error(`New priority is greater than current priority. Key: ${JJ} Old: ${FJ} New: ${cJ}`);
-          this._arr[ZJ].priority = cJ, this._decrease(ZJ)
+        decrease(BB, TB) {
+          let dB = this._keyIndices[BB];
+          if (void 0 === dB) throw new Error(`Key not found: ${BB}`);
+          let VB = this._arr[dB].priority;
+          if (TB > VB) throw new Error(`New priority is greater than current priority. Key: ${BB} Old: ${VB} New: ${TB}`);
+          this._arr[dB].priority = TB, this._decrease(dB)
         }
-        _heapify(JJ) {
-          let cJ = this._arr,
-            ZJ = 2 * JJ,
-            FJ = ZJ + 1,
-            UJ = JJ;
-          ZJ < cJ.length && (UJ = cJ[ZJ].priority < cJ[UJ].priority ? ZJ : UJ, FJ < cJ.length && (UJ = cJ[FJ].priority < cJ[UJ].priority ? FJ : UJ), UJ !== JJ && (this._swap(JJ, UJ), this._heapify(UJ)))
+        _heapify(BB) {
+          let TB = this._arr,
+            dB = 2 * BB,
+            VB = dB + 1,
+            yB = BB;
+          dB < TB.length && (yB = TB[dB].priority < TB[yB].priority ? dB : yB, VB < TB.length && (yB = TB[VB].priority < TB[yB].priority ? VB : yB), yB !== BB && (this._swap(BB, yB), this._heapify(yB)))
         }
-        _decrease(JJ) {
-          let cJ, ZJ = this._arr,
-            FJ = ZJ[JJ].priority;
-          for (; 0 !== JJ && (cJ = JJ >> 1, !(ZJ[cJ].priority < FJ));) this._swap(JJ, cJ), JJ = cJ
+        _decrease(BB) {
+          let TB, dB = this._arr,
+            VB = dB[BB].priority;
+          for (; 0 !== BB && (TB = BB >> 1, !(dB[TB].priority < VB));) this._swap(BB, TB), BB = TB
         }
-        _swap(JJ, cJ) {
-          let ZJ = this._arr,
-            FJ = this._keyIndices,
-            UJ = ZJ[JJ],
-            eJ = ZJ[cJ];
-          ZJ[JJ] = eJ, ZJ[cJ] = UJ, FJ[eJ.key] = JJ, FJ[UJ.key] = cJ
+        _swap(BB, TB) {
+          let dB = this._arr,
+            VB = this._keyIndices,
+            yB = dB[BB],
+            pB = dB[TB];
+          dB[BB] = pB, dB[TB] = yB, VB[pB.key] = BB, VB[yB.key] = TB
         }
       },
-      EJ = () => 1;
+      tB = () => 1;
 
-    function VJ(JJ, cJ, ZJ, FJ) {
-      return function(JJ, cJ, ZJ, FJ) {
-        let UJ, eJ, XJ = {},
-          AJ = new QJ,
-          qJ = function(JJ) {
-            let cJ = JJ.v !== UJ ? JJ.v : JJ.w,
-              FJ = XJ[cJ];
-            if (!FJ) return;
-            let qJ = ZJ(JJ),
-              jJ = eJ.distance + qJ;
-            if (qJ < 0) throw new Error("dijkstra does not allow negative edge weights. Bad edge: " + JJ + " Weight: " + qJ);
-            jJ < FJ.distance && (FJ.distance = jJ, FJ.predecessor = UJ, AJ.decrease(cJ, jJ))
+    function fB(BB, TB, dB, VB) {
+      return function(BB, TB, dB, VB) {
+        let yB, pB, lB = {},
+          JB = new NB,
+          YB = function(BB) {
+            let TB = BB.v !== yB ? BB.v : BB.w,
+              VB = lB[TB];
+            if (!VB) return;
+            let YB = dB(BB),
+              gB = pB.distance + YB;
+            if (YB < 0) throw new Error("dijkstra does not allow negative edge weights. Bad edge: " + BB + " Weight: " + YB);
+            gB < VB.distance && (VB.distance = gB, VB.predecessor = yB, JB.decrease(TB, gB))
           };
-        for (JJ.nodes().forEach((function(JJ) {
-            let ZJ = JJ === cJ ? 0 : Number.POSITIVE_INFINITY;
-            XJ[JJ] = {
-              distance: ZJ,
+        for (BB.nodes().forEach((function(BB) {
+            let dB = BB === TB ? 0 : Number.POSITIVE_INFINITY;
+            lB[BB] = {
+              distance: dB,
               predecessor: ""
-            }, AJ.add(JJ, ZJ)
-          })); AJ.size() > 0;) {
-          UJ = AJ.removeMin();
-          let JJ = XJ[UJ];
-          if (!JJ || JJ.distance === Number.POSITIVE_INFINITY) break;
-          eJ = JJ, FJ(UJ).forEach(qJ)
+            }, JB.add(BB, dB)
+          })); JB.size() > 0;) {
+          yB = JB.removeMin();
+          let BB = lB[yB];
+          if (!BB || BB.distance === Number.POSITIVE_INFINITY) break;
+          pB = BB, VB(yB).forEach(YB)
         }
-        return XJ
-      }(JJ, String(cJ), ZJ || EJ, FJ || function(cJ) {
-        var ZJ;
-        return null != (ZJ = JJ.outEdges(cJ)) ? ZJ : []
+        return lB
+      }(BB, String(TB), dB || tB, VB || function(TB) {
+        var dB;
+        return null != (dB = BB.outEdges(TB)) ? dB : []
       })
     }
 
-    function KJ(JJ, cJ, ZJ) {
-      return JJ.nodes().reduce((function(FJ, UJ) {
-        return FJ[UJ] = VJ(JJ, UJ, cJ, ZJ), FJ
+    function sB(BB, TB, dB) {
+      return BB.nodes().reduce((function(VB, yB) {
+        return VB[yB] = fB(BB, yB, TB, dB), VB
       }), {})
     }
 
-    function yJ(JJ) {
-      let cJ = 0,
-        ZJ = [],
-        FJ = {},
-        UJ = [];
+    function MB(BB) {
+      let TB = 0,
+        dB = [],
+        VB = {},
+        yB = [];
 
-      function eJ(XJ) {
-        var AJ;
-        let qJ = FJ[XJ] = {
+      function pB(lB) {
+        var JB;
+        let YB = VB[lB] = {
           onStack: !0,
-          lowlink: cJ,
-          index: cJ++
+          lowlink: TB,
+          index: TB++
         };
-        if (ZJ.push(XJ), null == (AJ = JJ.successors(XJ)) || AJ.forEach((function(JJ) {
-            if (JJ in FJ) {
-              let cJ = FJ[JJ];
-              null != cJ && cJ.onStack && (qJ.lowlink = Math.min(qJ.lowlink, cJ.index))
+        if (dB.push(lB), null == (JB = BB.successors(lB)) || JB.forEach((function(BB) {
+            if (BB in VB) {
+              let TB = VB[BB];
+              null != TB && TB.onStack && (YB.lowlink = Math.min(YB.lowlink, TB.index))
             } else {
-              eJ(JJ);
-              let cJ = FJ[JJ];
-              cJ && (qJ.lowlink = Math.min(qJ.lowlink, cJ.lowlink))
+              pB(BB);
+              let TB = VB[BB];
+              TB && (YB.lowlink = Math.min(YB.lowlink, TB.lowlink))
             }
-          })), qJ.lowlink === qJ.index) {
-          let JJ, cJ = [];
+          })), YB.lowlink === YB.index) {
+          let BB, TB = [];
           do {
-            JJ = ZJ.pop();
-            let UJ = FJ[JJ];
-            UJ && (UJ.onStack = !1), cJ.push(JJ)
-          } while (XJ !== JJ);
-          UJ.push(cJ)
+            BB = dB.pop();
+            let yB = VB[BB];
+            yB && (yB.onStack = !1), TB.push(BB)
+          } while (lB !== BB);
+          yB.push(TB)
         }
       }
-      return JJ.nodes().forEach((function(JJ) {
-        JJ in FJ || eJ(JJ)
-      })), UJ
+      return BB.nodes().forEach((function(BB) {
+        BB in VB || pB(BB)
+      })), yB
     }
 
-    function SJ(JJ) {
-      return yJ(JJ).filter((function(cJ) {
-        var ZJ;
-        let FJ = cJ[0];
-        return !!FJ && (cJ.length > 1 || 1 === cJ.length && (null != (ZJ = JJ.outEdges(FJ, FJ)) ? ZJ : []).length > 0)
+    function zB(BB) {
+      return MB(BB).filter((function(TB) {
+        var dB;
+        let VB = TB[0];
+        return !!VB && (TB.length > 1 || 1 === TB.length && (null != (dB = BB.outEdges(VB, VB)) ? dB : []).length > 0)
       }))
     }
-    var IJ = () => 1;
+    var wB = () => 1;
 
-    function MJ(JJ, cJ, ZJ) {
-      return function(JJ, cJ, ZJ) {
-        let FJ = {},
-          UJ = JJ.nodes();
-        return UJ.forEach((function(JJ) {
-          let eJ = {};
-          FJ[JJ] = eJ, eJ[JJ] = {
+    function UB(BB, TB, dB) {
+      return function(BB, TB, dB) {
+        let VB = {},
+          yB = BB.nodes();
+        return yB.forEach((function(BB) {
+          let pB = {};
+          VB[BB] = pB, pB[BB] = {
             distance: 0,
             predecessor: ""
-          }, UJ.forEach((function(cJ) {
-            JJ !== cJ && (eJ[cJ] = {
+          }, yB.forEach((function(TB) {
+            BB !== TB && (pB[TB] = {
               distance: Number.POSITIVE_INFINITY,
               predecessor: ""
             })
-          })), ZJ(JJ).forEach((function(ZJ) {
-            let FJ = ZJ.v === JJ ? ZJ.w : ZJ.v,
-              UJ = cJ(ZJ);
-            eJ[FJ] = {
-              distance: UJ,
-              predecessor: JJ
+          })), dB(BB).forEach((function(dB) {
+            let VB = dB.v === BB ? dB.w : dB.v,
+              yB = TB(dB);
+            pB[VB] = {
+              distance: yB,
+              predecessor: BB
             }
           }))
-        })), UJ.forEach((function(JJ) {
-          let cJ = FJ[JJ];
-          cJ && UJ.forEach((function(ZJ) {
-            let eJ = FJ[ZJ];
-            eJ && UJ.forEach((function(ZJ) {
-              let FJ = eJ[JJ],
-                UJ = cJ[ZJ],
-                XJ = eJ[ZJ];
-              if (FJ && UJ && XJ) {
-                let JJ = FJ.distance + UJ.distance;
-                JJ < XJ.distance && (XJ.distance = JJ, XJ.predecessor = UJ.predecessor)
+        })), yB.forEach((function(BB) {
+          let TB = VB[BB];
+          TB && yB.forEach((function(dB) {
+            let pB = VB[dB];
+            pB && yB.forEach((function(dB) {
+              let VB = pB[BB],
+                yB = TB[dB],
+                lB = pB[dB];
+              if (VB && yB && lB) {
+                let BB = VB.distance + yB.distance;
+                BB < lB.distance && (lB.distance = BB, lB.predecessor = yB.predecessor)
               }
             }))
           }))
-        })), FJ
-      }(JJ, cJ || IJ, ZJ || function(cJ) {
-        var ZJ;
-        return null != (ZJ = JJ.outEdges(cJ)) ? ZJ : []
+        })), VB
+      }(BB, TB || wB, dB || function(TB) {
+        var dB;
+        return null != (dB = BB.outEdges(TB)) ? dB : []
       })
     }
-    var bJ = class extends Error {
-      constructor(JJ) {
-        super(JJ), this.name = "CycleException"
+    var FB = class extends Error {
+      constructor(BB) {
+        super(BB), this.name = "CycleException"
       }
     };
 
-    function wJ(JJ) {
-      let cJ = {},
-        ZJ = {},
-        FJ = [];
-      if (JJ.sinks().forEach((function UJ(eJ) {
-          var XJ;
-          if (eJ in ZJ) throw new bJ;
-          eJ in cJ || (ZJ[eJ] = !0, cJ[eJ] = !0, null == (XJ = JJ.predecessors(eJ)) || XJ.forEach(UJ), delete ZJ[eJ], FJ.push(eJ))
-        })), Object.keys(cJ).length !== JJ.nodeCount()) throw new bJ;
-      return FJ
+    function KB(BB) {
+      let TB = {},
+        dB = {},
+        VB = [];
+      if (BB.sinks().forEach((function yB(pB) {
+          var lB;
+          if (pB in dB) throw new FB;
+          pB in TB || (dB[pB] = !0, TB[pB] = !0, null == (lB = BB.predecessors(pB)) || lB.forEach(yB), delete dB[pB], VB.push(pB))
+        })), Object.keys(TB).length !== BB.nodeCount()) throw new FB;
+      return VB
     }
 
-    function WJ(JJ) {
+    function rB(BB) {
       try {
-        wJ(JJ)
-      } catch (cJ) {
-        if (cJ instanceof bJ) return !1;
-        throw cJ
+        KB(BB)
+      } catch (TB) {
+        if (TB instanceof FB) return !1;
+        throw TB
       }
       return !0
     }
 
-    function gJ(JJ, cJ, ZJ, FJ, UJ) {
-      Array.isArray(cJ) || (cJ = [cJ]);
-      let eJ = cJ => {
-          var ZJ;
-          return null != (ZJ = JJ.isDirected() ? JJ.successors(cJ) : JJ.neighbors(cJ)) ? ZJ : []
+    function IB(BB, TB, dB, VB, yB) {
+      Array.isArray(TB) || (TB = [TB]);
+      let pB = TB => {
+          var dB;
+          return null != (dB = BB.isDirected() ? BB.successors(TB) : BB.neighbors(TB)) ? dB : []
         },
-        XJ = {};
-      return cJ.forEach((function(cJ) {
-        if (!JJ.hasNode(cJ)) throw new Error("Graph does not have node: " + cJ);
-        UJ = HJ(JJ, cJ, "post" === ZJ, XJ, eJ, FJ, UJ)
-      })), UJ
+        lB = {};
+      return TB.forEach((function(TB) {
+        if (!BB.hasNode(TB)) throw new Error("Graph does not have node: " + TB);
+        yB = cB(BB, TB, "post" === dB, lB, pB, VB, yB)
+      })), yB
     }
 
-    function HJ(JJ, cJ, ZJ, FJ, UJ, eJ, XJ) {
-      return cJ in FJ || (FJ[cJ] = !0, ZJ || (XJ = eJ(XJ, cJ)), UJ(cJ).forEach((function(cJ) {
-        XJ = HJ(JJ, cJ, ZJ, FJ, UJ, eJ, XJ)
-      })), ZJ && (XJ = eJ(XJ, cJ))), XJ
+    function cB(BB, TB, dB, VB, yB, pB, lB) {
+      return TB in VB || (VB[TB] = !0, dB || (lB = pB(lB, TB)), yB(TB).forEach((function(TB) {
+        lB = cB(BB, TB, dB, VB, yB, pB, lB)
+      })), dB && (lB = pB(lB, TB))), lB
     }
 
-    function PJ(JJ, cJ, ZJ) {
-      return gJ(JJ, cJ, ZJ, (function(JJ, cJ) {
-        return JJ.push(cJ), JJ
+    function SB(BB, TB, dB) {
+      return IB(BB, TB, dB, (function(BB, TB) {
+        return BB.push(TB), BB
       }), [])
     }
 
-    function kJ(JJ, cJ) {
-      return PJ(JJ, cJ, "post")
+    function PB(BB, TB) {
+      return SB(BB, TB, "post")
     }
 
-    function pJ(JJ, cJ) {
-      return PJ(JJ, cJ, "pre")
+    function QB(BB, TB) {
+      return SB(BB, TB, "pre")
     }
 
-    function dJ(JJ, cJ) {
-      var ZJ;
-      let FJ, UJ = new qJ,
-        eJ = {},
-        XJ = new QJ;
+    function RB(BB, TB) {
+      var dB;
+      let VB, yB = new YB,
+        pB = {},
+        lB = new NB;
 
-      function AJ(JJ) {
-        let ZJ = JJ.v === FJ ? JJ.w : JJ.v,
-          UJ = XJ.priority(ZJ);
-        if (void 0 !== UJ) {
-          let AJ = cJ(JJ);
-          AJ < UJ && (eJ[ZJ] = FJ, XJ.decrease(ZJ, AJ))
+      function JB(BB) {
+        let dB = BB.v === VB ? BB.w : BB.v,
+          yB = lB.priority(dB);
+        if (void 0 !== yB) {
+          let JB = TB(BB);
+          JB < yB && (pB[dB] = VB, lB.decrease(dB, JB))
         }
       }
-      if (0 === JJ.nodeCount()) return UJ;
-      JJ.nodes().forEach((function(JJ) {
-        XJ.add(JJ, Number.POSITIVE_INFINITY), UJ.setNode(JJ)
+      if (0 === BB.nodeCount()) return yB;
+      BB.nodes().forEach((function(BB) {
+        lB.add(BB, Number.POSITIVE_INFINITY), yB.setNode(BB)
       }));
-      let jJ = JJ.nodes()[0];
-      void 0 !== jJ && XJ.decrease(jJ, 0);
-      let YJ = !1;
-      for (; XJ.size() > 0;) {
-        if (FJ = XJ.removeMin(), FJ in eJ) UJ.setEdge(FJ, eJ[FJ]);
+      let gB = BB.nodes()[0];
+      void 0 !== gB && lB.decrease(gB, 0);
+      let oB = !1;
+      for (; lB.size() > 0;) {
+        if (VB = lB.removeMin(), VB in pB) yB.setEdge(VB, pB[VB]);
         else {
-          if (YJ) throw new Error("Input graph is not connected: " + JJ);
-          YJ = !0
+          if (oB) throw new Error("Input graph is not connected: " + BB);
+          oB = !0
         }
-        null == (ZJ = JJ.nodeEdges(FJ)) || ZJ.forEach(AJ)
+        null == (dB = BB.nodeEdges(VB)) || dB.forEach(JB)
       }
-      return UJ
+      return yB
     }
 
-    function zJ(JJ, cJ, ZJ, FJ) {
-      return function(JJ, cJ, ZJ, FJ) {
-        if (void 0 === ZJ) return VJ(JJ, cJ, ZJ, FJ);
-        let UJ = !1,
-          eJ = JJ.nodes();
-        for (let XJ = 0; XJ < eJ.length; XJ++) {
-          let AJ = eJ[XJ];
-          if (void 0 === AJ) continue;
-          let qJ = FJ(AJ);
-          for (let JJ = 0; JJ < qJ.length; JJ++) {
-            let cJ = qJ[JJ];
-            if (!cJ) continue;
-            let FJ = cJ.v === AJ ? cJ.v : cJ.w;
-            ZJ({
-              v: FJ,
-              w: FJ === cJ.v ? cJ.w : cJ.v
-            }) < 0 && (UJ = !0)
+    function aB(BB, TB, dB, VB) {
+      return function(BB, TB, dB, VB) {
+        if (void 0 === dB) return fB(BB, TB, dB, VB);
+        let yB = !1,
+          pB = BB.nodes();
+        for (let lB = 0; lB < pB.length; lB++) {
+          let JB = pB[lB];
+          if (void 0 === JB) continue;
+          let YB = VB(JB);
+          for (let BB = 0; BB < YB.length; BB++) {
+            let TB = YB[BB];
+            if (!TB) continue;
+            let VB = TB.v === JB ? TB.v : TB.w;
+            dB({
+              v: VB,
+              w: VB === TB.v ? TB.w : TB.v
+            }) < 0 && (yB = !0)
           }
-          if (UJ) return vJ(JJ, cJ, ZJ, FJ)
+          if (yB) return mB(BB, TB, dB, VB)
         }
-        return VJ(JJ, cJ, ZJ, FJ)
-      }(JJ, cJ, ZJ, null != FJ ? FJ : cJ => {
-        var ZJ;
-        return null != (ZJ = JJ.outEdges(cJ)) ? ZJ : []
+        return fB(BB, TB, dB, VB)
+      }(BB, TB, dB, null != VB ? VB : TB => {
+        var dB;
+        return null != (dB = BB.outEdges(TB)) ? dB : []
       })
     }
-    var NJ = qJ;
+    var ZB = YB;
 
-    function OJ(JJ, cJ, ZJ, FJ) {
-      let UJ = FJ;
-      for (; JJ.hasNode(UJ);) UJ = lJ(FJ);
-      return ZJ.dummy = cJ, JJ.setNode(UJ, ZJ), UJ
+    function XB(BB, TB, dB, VB) {
+      let yB = VB;
+      for (; BB.hasNode(yB);) yB = eB(VB);
+      return dB.dummy = TB, BB.setNode(yB, dB), yB
     }
 
-    function TJ(JJ) {
-      let cJ = new NJ({
-        multigraph: JJ.isMultigraph()
-      }).setGraph(JJ.graph());
-      return JJ.nodes().forEach((ZJ => {
-        JJ.children(ZJ).length || cJ.setNode(ZJ, JJ.node(ZJ))
-      })), JJ.edges().forEach((ZJ => {
-        cJ.setEdge(ZJ, JJ.edge(ZJ))
-      })), cJ
+    function WB(BB) {
+      let TB = new ZB({
+        multigraph: BB.isMultigraph()
+      }).setGraph(BB.graph());
+      return BB.nodes().forEach((dB => {
+        BB.children(dB).length || TB.setNode(dB, BB.node(dB))
+      })), BB.edges().forEach((dB => {
+        TB.setEdge(dB, BB.edge(dB))
+      })), TB
     }
 
-    function CJ(JJ, cJ) {
-      let ZJ, FJ, UJ = JJ.x,
-        eJ = JJ.y,
-        XJ = cJ.x - UJ,
-        AJ = cJ.y - eJ,
-        qJ = JJ.width / 2,
-        jJ = JJ.height / 2;
-      if (!XJ && !AJ) throw new Error("Not possible to find intersection inside of the rectangle");
-      return Math.abs(AJ) * qJ > Math.abs(XJ) * jJ ? (AJ < 0 && (jJ = -jJ), ZJ = jJ * XJ / AJ, FJ = jJ) : (XJ < 0 && (qJ = -qJ), ZJ = qJ, FJ = qJ * AJ / XJ), {
-        x: UJ + ZJ,
-        y: eJ + FJ
+    function hB(BB, TB) {
+      let dB, VB, yB = BB.x,
+        pB = BB.y,
+        lB = TB.x - yB,
+        JB = TB.y - pB,
+        YB = BB.width / 2,
+        gB = BB.height / 2;
+      if (!lB && !JB) throw new Error("Not possible to find intersection inside of the rectangle");
+      return Math.abs(JB) * YB > Math.abs(lB) * gB ? (JB < 0 && (gB = -gB), dB = gB * lB / JB, VB = gB) : (lB < 0 && (YB = -YB), dB = YB, VB = YB * JB / lB), {
+        x: yB + dB,
+        y: pB + VB
       }
     }
 
-    function uJ(JJ) {
-      let cJ = Jc(aJ(JJ) + 1).map((() => []));
-      return JJ.nodes().forEach((ZJ => {
-        let FJ = JJ.node(ZJ),
-          UJ = FJ.rank;
-        void 0 !== UJ && (cJ[UJ] || (cJ[UJ] = []), cJ[UJ][FJ.order] = ZJ)
-      })), cJ
+    function CB(BB) {
+      let TB = BT(jB(BB) + 1).map((() => []));
+      return BB.nodes().forEach((dB => {
+        let VB = BB.node(dB),
+          yB = VB.rank;
+        void 0 !== yB && (TB[yB] || (TB[yB] = []), TB[yB][VB.order] = dB)
+      })), TB
     }
 
-    function iJ(JJ, cJ, ZJ, FJ) {
-      let UJ = {
+    function GB(BB, TB, dB, VB) {
+      let yB = {
         width: 0,
         height: 0
       };
-      return arguments.length >= 4 && (UJ.rank = ZJ, UJ.order = FJ), OJ(JJ, "border", UJ, cJ)
+      return arguments.length >= 4 && (yB.rank = dB, yB.order = VB), XB(BB, "border", yB, TB)
     }
-    var RJ = 65535;
+    var qB = 65535;
 
-    function LJ(JJ, cJ) {
-      if (cJ.length > RJ) {
-        let ZJ = function(JJ) {
-          let cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : RJ,
-            ZJ = [];
-          for (let FJ = 0; FJ < JJ.length; FJ += cJ) {
-            let UJ = JJ.slice(FJ, FJ + cJ);
-            ZJ.push(UJ)
+    function xB(BB, TB) {
+      if (TB.length > qB) {
+        let dB = function(BB) {
+          let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : qB,
+            dB = [];
+          for (let VB = 0; VB < BB.length; VB += TB) {
+            let yB = BB.slice(VB, VB + TB);
+            dB.push(yB)
           }
-          return ZJ
-        }(cJ);
-        return JJ(...ZJ.map((cJ => JJ(...cJ))))
+          return dB
+        }(TB);
+        return BB(...dB.map((TB => BB(...TB))))
       }
-      return JJ(...cJ)
+      return BB(...TB)
     }
 
-    function aJ(JJ) {
-      let cJ = JJ.nodes().map((cJ => {
-        let ZJ = JJ.node(cJ).rank;
-        return void 0 === ZJ ? Number.MIN_VALUE : ZJ
+    function jB(BB) {
+      let TB = BB.nodes().map((TB => {
+        let dB = BB.node(TB).rank;
+        return void 0 === dB ? Number.MIN_VALUE : dB
       }));
-      return LJ(Math.max, cJ)
+      return xB(Math.max, TB)
     }
 
-    function BJ(JJ, cJ) {
-      let ZJ = Date.now();
+    function AB(BB, TB) {
+      let dB = Date.now();
       try {
-        return cJ()
+        return TB()
       } finally {
-        console.log(JJ + " time: " + (Date.now() - ZJ) + "ms")
+        console.log(BB + " time: " + (Date.now() - dB) + "ms")
       }
     }
 
-    function tJ(JJ, cJ) {
-      return cJ()
+    function bB(BB, TB) {
+      return TB()
     }
-    var oJ = 0;
+    var nB = 0;
 
-    function lJ(JJ) {
-      return JJ + "" + ++oJ
-    }
-
-    function Jc(JJ, cJ) {
-      let ZJ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      null == cJ && (cJ = JJ, JJ = 0);
-      let FJ = JJ => JJ < cJ;
-      ZJ < 0 && (FJ = JJ => cJ < JJ);
-      let UJ = [];
-      for (let eJ = JJ; FJ(eJ); eJ += ZJ) UJ.push(eJ);
-      return UJ
+    function eB(BB) {
+      return BB + "" + ++nB
     }
 
-    function cc(JJ, cJ) {
-      let ZJ = {};
-      for (let FJ of cJ) void 0 !== JJ[FJ] && (ZJ[FJ] = JJ[FJ]);
-      return ZJ
+    function BT(BB, TB) {
+      let dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      null == TB && (TB = BB, BB = 0);
+      let VB = BB => BB < TB;
+      dB < 0 && (VB = BB => TB < BB);
+      let yB = [];
+      for (let pB = BB; VB(pB); pB += dB) yB.push(pB);
+      return yB
     }
 
-    function Zc(JJ, cJ) {
-      let ZJ;
-      return ZJ = "string" == typeof cJ ? JJ => JJ[cJ] : cJ, Object.entries(JJ).reduce(((JJ, cJ) => {
-        let [FJ, UJ] = cJ;
-        return JJ[FJ] = ZJ(UJ, FJ), JJ
+    function TT(BB, TB) {
+      let dB = {};
+      for (let VB of TB) void 0 !== BB[VB] && (dB[VB] = BB[VB]);
+      return dB
+    }
+
+    function dT(BB, TB) {
+      let dB;
+      return dB = "string" == typeof TB ? BB => BB[TB] : TB, Object.entries(BB).reduce(((BB, TB) => {
+        let [VB, yB] = TB;
+        return BB[VB] = dB(yB, VB), BB
       }), {})
     }
-    var Fc = "\0";
+    var VT = "\0";
 
-    function Uc(JJ, cJ, ZJ) {
-      var FJ, UJ, eJ, XJ, AJ, qJ;
-      if (!(JJ && cJ && ZJ && "edge" === cJ.dummy && "edge" === ZJ.dummy && cJ.edgeObj && ZJ.edgeObj && JJ[cJ.edgeObj.v] && JJ[ZJ.edgeObj.v] && JJ[cJ.edgeObj.w] && JJ[ZJ.edgeObj.w])) return 0;
-      let jJ = !0;
-      cJ.edgeObj.w === ZJ.edgeObj.w && (jJ = !1);
-      let YJ = jJ ? null != (UJ = null == (FJ = JJ[cJ.edgeObj.v]) ? void 0 : FJ.rank) ? UJ : NaN : null != (XJ = null == (eJ = JJ[cJ.edgeObj.w]) ? void 0 : eJ.rank) ? XJ : NaN,
-        hJ = Object.entries(JJ).find((JJ => {
-          var ZJ, FJ;
-          return (null == (ZJ = JJ[1].edgeObj) ? void 0 : ZJ.v) === cJ.edgeObj.v && (null == (FJ = JJ[1].edgeObj) ? void 0 : FJ.w) === cJ.edgeObj.w && JJ[1].rank === YJ
+    function yT(BB, TB, dB) {
+      var VB, yB, pB, lB, JB, YB;
+      if (!(BB && TB && dB && "edge" === TB.dummy && "edge" === dB.dummy && TB.edgeObj && dB.edgeObj && BB[TB.edgeObj.v] && BB[dB.edgeObj.v] && BB[TB.edgeObj.w] && BB[dB.edgeObj.w])) return 0;
+      let gB = !0;
+      TB.edgeObj.w === dB.edgeObj.w && (gB = !1);
+      let oB = gB ? null != (yB = null == (VB = BB[TB.edgeObj.v]) ? void 0 : VB.rank) ? yB : NaN : null != (lB = null == (pB = BB[TB.edgeObj.w]) ? void 0 : pB.rank) ? lB : NaN,
+        kB = Object.entries(BB).find((BB => {
+          var dB, VB;
+          return (null == (dB = BB[1].edgeObj) ? void 0 : dB.v) === TB.edgeObj.v && (null == (VB = BB[1].edgeObj) ? void 0 : VB.w) === TB.edgeObj.w && BB[1].rank === oB
         })),
-        DJ = Object.entries(JJ).find((JJ => {
-          var cJ, FJ;
-          return (null == (cJ = JJ[1].edgeObj) ? void 0 : cJ.v) === ZJ.edgeObj.v && (null == (FJ = JJ[1].edgeObj) ? void 0 : FJ.w) === ZJ.edgeObj.w && JJ[1].rank === YJ
+        LB = Object.entries(BB).find((BB => {
+          var TB, VB;
+          return (null == (TB = BB[1].edgeObj) ? void 0 : TB.v) === dB.edgeObj.v && (null == (VB = BB[1].edgeObj) ? void 0 : VB.w) === dB.edgeObj.w && BB[1].rank === oB
         }));
-      if (!hJ || !DJ) return 0;
-      let sJ = null != (AJ = hJ[1].order) ? AJ : NaN,
-        nJ = null != (qJ = DJ[1].order) ? qJ : NaN;
-      return isNaN(sJ - nJ) ? 0 : sJ - nJ
+      if (!kB || !LB) return 0;
+      let OB = null != (JB = kB[1].order) ? JB : NaN,
+        DB = null != (YB = LB[1].order) ? YB : NaN;
+      return isNaN(OB - DB) ? 0 : OB - DB
     }
-    var ec = "3.1.1";
+    var pT = "3.1.1";
 
-    function Xc(JJ) {
-      JJ._prev._next = JJ._next, JJ._next._prev = JJ._prev, delete JJ._next, delete JJ._prev
+    function lT(BB) {
+      BB._prev._next = BB._next, BB._next._prev = BB._prev, delete BB._next, delete BB._prev
     }
 
-    function Ac(JJ, cJ) {
-      if ("_next" !== JJ && "_prev" !== JJ) return cJ
+    function JT(BB, TB) {
+      if ("_next" !== BB && "_prev" !== BB) return TB
     }
-    var qc = class {
+    var YT = class {
         constructor() {
-          UJ(this, "_sentinel");
-          let JJ = {};
-          JJ._next = JJ._prev = JJ, this._sentinel = JJ
+          yB(this, "_sentinel");
+          let BB = {};
+          BB._next = BB._prev = BB, this._sentinel = BB
         }
         dequeue() {
-          let JJ = this._sentinel,
-            cJ = JJ._prev;
-          if (cJ !== JJ) return Xc(cJ), cJ
+          let BB = this._sentinel,
+            TB = BB._prev;
+          if (TB !== BB) return lT(TB), TB
         }
-        enqueue(JJ) {
-          let cJ = this._sentinel;
-          JJ._prev && JJ._next && Xc(JJ), JJ._next = cJ._next, cJ._next._prev = JJ, cJ._next = JJ, JJ._prev = cJ
+        enqueue(BB) {
+          let TB = this._sentinel;
+          BB._prev && BB._next && lT(BB), BB._next = TB._next, TB._next._prev = BB, TB._next = BB, BB._prev = TB
         }
         toString() {
-          let JJ = [],
-            cJ = this._sentinel,
-            ZJ = cJ._prev;
-          for (; ZJ !== cJ;) JJ.push(JSON.stringify(ZJ, Ac)), ZJ = ZJ._prev;
-          return "[" + JJ.join(", ") + "]"
+          let BB = [],
+            TB = this._sentinel,
+            dB = TB._prev;
+          for (; dB !== TB;) BB.push(JSON.stringify(dB, JT)), dB = dB._prev;
+          return "[" + BB.join(", ") + "]"
         }
       },
-      jc = () => 1;
+      gT = () => 1;
 
-    function Yc(JJ, cJ) {
-      if (JJ.nodeCount() <= 1) return [];
-      let ZJ = function(JJ, cJ) {
-        let ZJ = new NJ,
-          FJ = 0,
-          UJ = 0;
-        JJ.nodes().forEach((JJ => {
-          ZJ.setNode(JJ, {
-            v: JJ,
+    function oT(BB, TB) {
+      if (BB.nodeCount() <= 1) return [];
+      let dB = function(BB, TB) {
+        let dB = new ZB,
+          VB = 0,
+          yB = 0;
+        BB.nodes().forEach((BB => {
+          dB.setNode(BB, {
+            v: BB,
             in: 0,
             out: 0
           })
-        })), JJ.edges().forEach((JJ => {
-          let eJ = ZJ.edge(JJ.v, JJ.w) || 0,
-            XJ = cJ(JJ),
-            AJ = eJ + XJ;
-          ZJ.setEdge(JJ.v, JJ.w, AJ);
-          let qJ = ZJ.node(JJ.v),
-            jJ = ZJ.node(JJ.w);
-          UJ = Math.max(UJ, qJ.out += XJ), FJ = Math.max(FJ, jJ.in += XJ)
+        })), BB.edges().forEach((BB => {
+          let pB = dB.edge(BB.v, BB.w) || 0,
+            lB = TB(BB),
+            JB = pB + lB;
+          dB.setEdge(BB.v, BB.w, JB);
+          let YB = dB.node(BB.v),
+            gB = dB.node(BB.w);
+          yB = Math.max(yB, YB.out += lB), VB = Math.max(VB, gB.in += lB)
         }));
-        let eJ = function(JJ) {
-            let cJ = [];
-            for (let ZJ = 0; ZJ < JJ; ZJ++) cJ.push(ZJ);
-            return cJ
-          }(UJ + FJ + 3).map((() => new qc)),
-          XJ = FJ + 1;
-        return ZJ.nodes().forEach((JJ => {
-          Dc(eJ, XJ, ZJ.node(JJ))
+        let pB = function(BB) {
+            let TB = [];
+            for (let dB = 0; dB < BB; dB++) TB.push(dB);
+            return TB
+          }(yB + VB + 3).map((() => new YT)),
+          lB = VB + 1;
+        return dB.nodes().forEach((BB => {
+          LT(pB, lB, dB.node(BB))
         })), {
-          graph: ZJ,
-          buckets: eJ,
-          zeroIdx: XJ
+          graph: dB,
+          buckets: pB,
+          zeroIdx: lB
         }
-      }(JJ, cJ || jc);
-      return function(JJ, cJ, ZJ) {
-        var FJ;
-        let UJ, eJ = [],
-          XJ = cJ[cJ.length - 1],
-          AJ = cJ[0];
-        for (; JJ.nodeCount();) {
-          for (; UJ = AJ.dequeue();) hc(JJ, cJ, ZJ, UJ);
-          for (; UJ = XJ.dequeue();) hc(JJ, cJ, ZJ, UJ);
-          if (JJ.nodeCount())
-            for (let XJ = cJ.length - 2; XJ > 0; --XJ)
-              if (UJ = null == (FJ = cJ[XJ]) ? void 0 : FJ.dequeue(), UJ) {
-                eJ = eJ.concat(hc(JJ, cJ, ZJ, UJ, !0) || []);
+      }(BB, TB || gT);
+      return function(BB, TB, dB) {
+        var VB;
+        let yB, pB = [],
+          lB = TB[TB.length - 1],
+          JB = TB[0];
+        for (; BB.nodeCount();) {
+          for (; yB = JB.dequeue();) kT(BB, TB, dB, yB);
+          for (; yB = lB.dequeue();) kT(BB, TB, dB, yB);
+          if (BB.nodeCount())
+            for (let lB = TB.length - 2; lB > 0; --lB)
+              if (yB = null == (VB = TB[lB]) ? void 0 : VB.dequeue(), yB) {
+                pB = pB.concat(kT(BB, TB, dB, yB, !0) || []);
                 break
               }
         }
-        return eJ
-      }(ZJ.graph, ZJ.buckets, ZJ.zeroIdx).flatMap((cJ => JJ.outEdges(cJ.v, cJ.w) || []))
+        return pB
+      }(dB.graph, dB.buckets, dB.zeroIdx).flatMap((TB => BB.outEdges(TB.v, TB.w) || []))
     }
 
-    function hc(JJ, cJ, ZJ, FJ, UJ) {
-      let eJ = [],
-        XJ = UJ ? eJ : void 0;
-      return (JJ.inEdges(FJ.v) || []).forEach((FJ => {
-        let XJ = JJ.edge(FJ),
-          AJ = JJ.node(FJ.v);
-        UJ && eJ.push({
-          v: FJ.v,
-          w: FJ.w
-        }), AJ.out -= XJ, Dc(cJ, ZJ, AJ)
-      })), (JJ.outEdges(FJ.v) || []).forEach((FJ => {
-        let UJ = JJ.edge(FJ),
-          eJ = FJ.w,
-          XJ = JJ.node(eJ);
-        XJ.in -= UJ, Dc(cJ, ZJ, XJ)
-      })), JJ.removeNode(FJ.v), XJ
+    function kT(BB, TB, dB, VB, yB) {
+      let pB = [],
+        lB = yB ? pB : void 0;
+      return (BB.inEdges(VB.v) || []).forEach((VB => {
+        let lB = BB.edge(VB),
+          JB = BB.node(VB.v);
+        yB && pB.push({
+          v: VB.v,
+          w: VB.w
+        }), JB.out -= lB, LT(TB, dB, JB)
+      })), (BB.outEdges(VB.v) || []).forEach((VB => {
+        let yB = BB.edge(VB),
+          pB = VB.w,
+          lB = BB.node(pB);
+        lB.in -= yB, LT(TB, dB, lB)
+      })), BB.removeNode(VB.v), lB
     }
 
-    function Dc(JJ, cJ, ZJ) {
-      var FJ, UJ, eJ;
-      ZJ.out ? ZJ.in ? null == (eJ = JJ[ZJ.out - ZJ.in + cJ]) || eJ.enqueue(ZJ) : null == (UJ = JJ[JJ.length - 1]) || UJ.enqueue(ZJ) : null == (FJ = JJ[0]) || FJ.enqueue(ZJ)
+    function LT(BB, TB, dB) {
+      var VB, yB, pB;
+      dB.out ? dB.in ? null == (pB = BB[dB.out - dB.in + TB]) || pB.enqueue(dB) : null == (yB = BB[BB.length - 1]) || yB.enqueue(dB) : null == (VB = BB[0]) || VB.enqueue(dB)
     }
 
-    function sc(JJ, cJ) {
-      var ZJ;
-      ("greedy" === JJ.graph().acyclicer ? Yc(JJ, (ZJ = JJ, JJ => ZJ.edge(JJ).weight)) : function(JJ, cJ) {
-        let ZJ = [],
-          FJ = {},
-          UJ = {};
+    function OT(BB, TB) {
+      var dB;
+      ("greedy" === BB.graph().acyclicer ? oT(BB, (dB = BB, BB => dB.edge(BB).weight)) : function(BB, TB) {
+        let dB = [],
+          VB = {},
+          yB = {};
 
-        function eJ(cJ) {
-          Object.hasOwn(UJ, cJ) || (UJ[cJ] = !0, FJ[cJ] = !0, JJ.outEdges(cJ).forEach((JJ => {
-            Object.hasOwn(FJ, JJ.w) ? ZJ.push(JJ) : eJ(JJ.w)
-          })), delete FJ[cJ])
+        function pB(TB) {
+          Object.hasOwn(yB, TB) || (yB[TB] = !0, VB[TB] = !0, BB.outEdges(TB).forEach((BB => {
+            Object.hasOwn(VB, BB.w) ? dB.push(BB) : pB(BB.w)
+          })), delete VB[TB])
         }
 
-        function XJ(eJ) {
-          var AJ;
-          Object.hasOwn(UJ, eJ) || (UJ[eJ] = !0, FJ[eJ] = !0, null == (AJ = JJ.outEdges(eJ)) || AJ.forEach((UJ => {
-            var AJ, qJ;
-            Object.hasOwn(FJ, UJ.w) || (null == (AJ = cJ.node(eJ)) ? void 0 : AJ.rank) > (null == (qJ = cJ.node(UJ.w)) ? void 0 : qJ.rank) && function(JJ, cJ, ZJ) {
-              let FJ = new Set;
+        function lB(pB) {
+          var JB;
+          Object.hasOwn(yB, pB) || (yB[pB] = !0, VB[pB] = !0, null == (JB = BB.outEdges(pB)) || JB.forEach((yB => {
+            var JB, YB;
+            Object.hasOwn(VB, yB.w) || (null == (JB = TB.node(pB)) ? void 0 : JB.rank) > (null == (YB = TB.node(yB.w)) ? void 0 : YB.rank) && function(BB, TB, dB) {
+              let VB = new Set;
 
-              function UJ(cJ) {
-                var eJ;
-                if (JJ.sources().includes(cJ)) return !0;
-                FJ.add(cJ);
-                for (let XJ of null != (eJ = JJ.inEdges(cJ)) ? eJ : [])
-                  if ((XJ.v !== ZJ.v || XJ.w !== ZJ.w) && !FJ.has(XJ.v) && UJ(XJ.v)) return !0;
+              function yB(TB) {
+                var pB;
+                if (BB.sources().includes(TB)) return !0;
+                VB.add(TB);
+                for (let lB of null != (pB = BB.inEdges(TB)) ? pB : [])
+                  if ((lB.v !== dB.v || lB.w !== dB.w) && !VB.has(lB.v) && yB(lB.v)) return !0;
                 return !1
               }
-              return UJ(cJ)
-            }(JJ, UJ.w, UJ) ? ZJ.push(UJ) : XJ(UJ.w)
-          })), delete FJ[eJ])
+              return yB(TB)
+            }(BB, yB.w, yB) ? dB.push(yB) : lB(yB.w)
+          })), delete VB[pB])
         }
-        let AJ = eJ;
-        return cJ && "function" == typeof cJ.node && (AJ = XJ), JJ.sources().forEach(AJ), JJ.nodes().forEach(AJ), ZJ
-      }(JJ, null != cJ ? cJ : null)).forEach((cJ => {
-        let ZJ = JJ.edge(cJ);
-        JJ.removeEdge(cJ), ZJ.forwardName = cJ.name, ZJ.reversed = !0, JJ.setEdge(cJ.w, cJ.v, ZJ, lJ("rev"))
+        let JB = pB;
+        return TB && "function" == typeof TB.node && (JB = lB), BB.sources().forEach(JB), BB.nodes().forEach(JB), dB
+      }(BB, null != TB ? TB : null)).forEach((TB => {
+        let dB = BB.edge(TB);
+        BB.removeEdge(TB), dB.forwardName = TB.name, dB.reversed = !0, BB.setEdge(TB.w, TB.v, dB, eB("rev"))
       }))
     }
 
-    function nc(JJ) {
-      JJ.graph().dummyChains = [], JJ.edges().forEach((cJ => function(JJ, cJ) {
-        let ZJ, FJ, UJ, eJ = cJ.v,
-          XJ = JJ.node(eJ).rank,
-          AJ = cJ.w,
-          qJ = JJ.node(AJ).rank,
-          jJ = cJ.name,
-          YJ = JJ.edge(cJ),
-          hJ = YJ.labelRank;
-        if (qJ === XJ + 1) return;
-        for (JJ.removeEdge(cJ), UJ = 0, ++XJ; XJ < qJ; ++UJ, ++XJ) YJ.points = [], FJ = {
+    function DT(BB) {
+      BB.graph().dummyChains = [], BB.edges().forEach((TB => function(BB, TB) {
+        let dB, VB, yB, pB = TB.v,
+          lB = BB.node(pB).rank,
+          JB = TB.w,
+          YB = BB.node(JB).rank,
+          gB = TB.name,
+          oB = BB.edge(TB),
+          kB = oB.labelRank;
+        if (YB === lB + 1) return;
+        for (BB.removeEdge(TB), yB = 0, ++lB; lB < YB; ++yB, ++lB) oB.points = [], VB = {
           width: 0,
           height: 0,
-          edgeLabel: YJ,
-          edgeObj: cJ,
-          rank: XJ
-        }, ZJ = OJ(JJ, "edge", FJ, "_d"), XJ === hJ && (FJ.width = YJ.width, FJ.height = YJ.height, FJ.dummy = "edge-label", FJ.labelpos = YJ.labelpos), JJ.setEdge(eJ, ZJ, {
-          weight: YJ.weight
-        }, jJ), 0 === UJ && JJ.graph().dummyChains.push(ZJ), eJ = ZJ;
-        JJ.setEdge(eJ, AJ, {
-          weight: YJ.weight
-        }, jJ)
-      }(JJ, cJ)))
+          edgeLabel: oB,
+          edgeObj: TB,
+          rank: lB
+        }, dB = XB(BB, "edge", VB, "_d"), lB === kB && (VB.width = oB.width, VB.height = oB.height, VB.dummy = "edge-label", VB.labelpos = oB.labelpos), BB.setEdge(pB, dB, {
+          weight: oB.weight
+        }, gB), 0 === yB && BB.graph().dummyChains.push(dB), pB = dB;
+        BB.setEdge(pB, JB, {
+          weight: oB.weight
+        }, gB)
+      }(BB, TB)))
     }
 
-    function Gc(JJ) {
-      let cJ = {};
-      JJ.sources().forEach((function ZJ(FJ) {
-        let UJ = JJ.node(FJ);
-        if (Object.hasOwn(cJ, FJ)) return UJ.rank;
-        cJ[FJ] = !0;
-        let eJ = JJ.outEdges(FJ),
-          XJ = eJ ? eJ.map((cJ => null == cJ ? Number.POSITIVE_INFINITY : ZJ(cJ.w) - JJ.edge(cJ).minlen)) : [],
-          AJ = LJ(Math.min, XJ);
-        return AJ === Number.POSITIVE_INFINITY && (AJ = 0), UJ.rank = AJ
+    function uT(BB) {
+      let TB = {};
+      BB.sources().forEach((function dB(VB) {
+        let yB = BB.node(VB);
+        if (Object.hasOwn(TB, VB)) return yB.rank;
+        TB[VB] = !0;
+        let pB = BB.outEdges(VB),
+          lB = pB ? pB.map((TB => null == TB ? Number.POSITIVE_INFINITY : dB(TB.w) - BB.edge(TB).minlen)) : [],
+          JB = xB(Math.min, lB);
+        return JB === Number.POSITIVE_INFINITY && (JB = 0), yB.rank = JB
       }))
     }
 
-    function fc(JJ, cJ) {
-      return JJ.node(cJ.w).rank - JJ.node(cJ.v).rank - JJ.edge(cJ).minlen
+    function HT(BB, TB) {
+      return BB.node(TB.w).rank - BB.node(TB.v).rank - BB.edge(TB).minlen
     }
-    var xc = function(JJ) {
-      let cJ = new NJ({
+    var ET = function(BB) {
+      let TB = new ZB({
           directed: !1
         }),
-        ZJ = JJ.nodes();
-      if (0 === ZJ.length) throw new Error("Graph must have at least one node");
-      let FJ, UJ, eJ = ZJ[0],
-        XJ = JJ.nodeCount();
-      for (cJ.setNode(eJ, {}); rc(cJ, JJ) < XJ && (FJ = vc(cJ, JJ), FJ);) UJ = cJ.hasNode(FJ.v) ? fc(JJ, FJ) : -fc(JJ, FJ), mc(cJ, JJ, UJ);
-      return cJ
+        dB = BB.nodes();
+      if (0 === dB.length) throw new Error("Graph must have at least one node");
+      let VB, yB, pB = dB[0],
+        lB = BB.nodeCount();
+      for (TB.setNode(pB, {}); vT(TB, BB) < lB && (VB = mT(TB, BB), VB);) yB = TB.hasNode(VB.v) ? HT(BB, VB) : -HT(BB, VB), iT(TB, BB, yB);
+      return TB
     };
 
-    function rc(JJ, cJ) {
-      return JJ.nodes().forEach((function ZJ(FJ) {
-        let UJ = cJ.nodeEdges(FJ);
-        UJ && UJ.forEach((UJ => {
-          let eJ = UJ.v,
-            XJ = FJ === eJ ? UJ.w : eJ;
-          !JJ.hasNode(XJ) && !fc(cJ, UJ) && (JJ.setNode(XJ, {}), JJ.setEdge(FJ, XJ, {}), ZJ(XJ))
+    function vT(BB, TB) {
+      return BB.nodes().forEach((function dB(VB) {
+        let yB = TB.nodeEdges(VB);
+        yB && yB.forEach((yB => {
+          let pB = yB.v,
+            lB = VB === pB ? yB.w : pB;
+          !BB.hasNode(lB) && !HT(TB, yB) && (BB.setNode(lB, {}), BB.setEdge(VB, lB, {}), dB(lB))
         }))
-      })), JJ.nodeCount()
+      })), BB.nodeCount()
     }
 
-    function vc(JJ, cJ) {
-      return cJ.edges().reduce(((ZJ, FJ) => {
-        let UJ = Number.POSITIVE_INFINITY;
-        return JJ.hasNode(FJ.v) !== JJ.hasNode(FJ.w) && (UJ = fc(cJ, FJ)), UJ < ZJ[0] ? [UJ, FJ] : ZJ
+    function mT(BB, TB) {
+      return TB.edges().reduce(((dB, VB) => {
+        let yB = Number.POSITIVE_INFINITY;
+        return BB.hasNode(VB.v) !== BB.hasNode(VB.w) && (yB = HT(TB, VB)), yB < dB[0] ? [yB, VB] : dB
       }), [Number.POSITIVE_INFINITY, null])[1]
     }
 
-    function mc(JJ, cJ, ZJ) {
-      JJ.nodes().forEach((JJ => cJ.node(JJ).rank += ZJ))
+    function iT(BB, TB, dB) {
+      BB.nodes().forEach((BB => TB.node(BB).rank += dB))
     }
     var {
-      preorder: Qc,
-      postorder: Ec
-    } = xJ, Vc = Kc;
+      preorder: NT,
+      postorder: tT
+    } = EB, fT = sT;
 
-    function Kc(JJ) {
-      JJ = function(JJ) {
-        let cJ = (new NJ).setGraph(JJ.graph());
-        return JJ.nodes().forEach((ZJ => cJ.setNode(ZJ, JJ.node(ZJ)))), JJ.edges().forEach((ZJ => {
-          let FJ = cJ.edge(ZJ.v, ZJ.w) || {
+    function sT(BB) {
+      BB = function(BB) {
+        let TB = (new ZB).setGraph(BB.graph());
+        return BB.nodes().forEach((dB => TB.setNode(dB, BB.node(dB)))), BB.edges().forEach((dB => {
+          let VB = TB.edge(dB.v, dB.w) || {
               weight: 0,
               minlen: 1
             },
-            UJ = JJ.edge(ZJ);
-          cJ.setEdge(ZJ.v, ZJ.w, {
-            weight: FJ.weight + UJ.weight,
-            minlen: Math.max(FJ.minlen, UJ.minlen)
+            yB = BB.edge(dB);
+          TB.setEdge(dB.v, dB.w, {
+            weight: VB.weight + yB.weight,
+            minlen: Math.max(VB.minlen, yB.minlen)
           })
-        })), cJ
-      }(JJ), Gc(JJ);
-      let cJ, ZJ, FJ = xc(JJ);
-      for (Ic(FJ), yc(FJ, JJ); cJ = bc(FJ);) ZJ = wc(FJ, JJ, cJ), Wc(FJ, JJ, cJ, ZJ)
+        })), TB
+      }(BB), uT(BB);
+      let TB, dB, VB = ET(BB);
+      for (wT(VB), MT(VB, BB); TB = FT(VB);) dB = KT(VB, BB, TB), rT(VB, BB, TB, dB)
     }
 
-    function yc(JJ, cJ) {
-      let ZJ = Ec(JJ, JJ.nodes());
-      ZJ = ZJ.slice(0, ZJ.length - 1), ZJ.forEach((ZJ => function(JJ, cJ, ZJ) {
-        let FJ = JJ.node(ZJ).parent,
-          UJ = JJ.edge(ZJ, FJ);
-        UJ.cutvalue = Sc(JJ, cJ, ZJ)
-      }(JJ, cJ, ZJ)))
+    function MT(BB, TB) {
+      let dB = tT(BB, BB.nodes());
+      dB = dB.slice(0, dB.length - 1), dB.forEach((dB => function(BB, TB, dB) {
+        let VB = BB.node(dB).parent,
+          yB = BB.edge(dB, VB);
+        yB.cutvalue = zT(BB, TB, dB)
+      }(BB, TB, dB)))
     }
 
-    function Sc(JJ, cJ, ZJ) {
-      let FJ = JJ.node(ZJ).parent,
-        UJ = !0,
-        eJ = cJ.edge(ZJ, FJ),
-        XJ = 0;
-      eJ || (UJ = !1, eJ = cJ.edge(FJ, ZJ)), XJ = eJ.weight;
-      let AJ = cJ.nodeEdges(ZJ);
-      return AJ && AJ.forEach((eJ => {
-        let AJ = eJ.v === ZJ,
-          qJ = AJ ? eJ.w : eJ.v;
-        if (qJ !== FJ) {
-          let FJ = AJ === UJ,
-            jJ = cJ.edge(eJ).weight;
-          if (XJ += FJ ? jJ : -jJ, function(JJ, cJ, ZJ) {
-              return JJ.hasEdge(cJ, ZJ)
-            }(JJ, ZJ, qJ)) {
-            let cJ = JJ.edge(ZJ, qJ).cutvalue;
-            XJ += FJ ? -cJ : cJ
+    function zT(BB, TB, dB) {
+      let VB = BB.node(dB).parent,
+        yB = !0,
+        pB = TB.edge(dB, VB),
+        lB = 0;
+      pB || (yB = !1, pB = TB.edge(VB, dB)), lB = pB.weight;
+      let JB = TB.nodeEdges(dB);
+      return JB && JB.forEach((pB => {
+        let JB = pB.v === dB,
+          YB = JB ? pB.w : pB.v;
+        if (YB !== VB) {
+          let VB = JB === yB,
+            gB = TB.edge(pB).weight;
+          if (lB += VB ? gB : -gB, function(BB, TB, dB) {
+              return BB.hasEdge(TB, dB)
+            }(BB, dB, YB)) {
+            let TB = BB.edge(dB, YB).cutvalue;
+            lB += VB ? -TB : TB
           }
         }
-      })), XJ
+      })), lB
     }
 
-    function Ic(JJ, cJ) {
-      arguments.length < 2 && (cJ = JJ.nodes()[0]), Mc(JJ, {}, 1, cJ)
+    function wT(BB, TB) {
+      arguments.length < 2 && (TB = BB.nodes()[0]), UT(BB, {}, 1, TB)
     }
 
-    function Mc(JJ, cJ, ZJ, FJ, UJ) {
-      let eJ = ZJ,
-        XJ = JJ.node(FJ);
-      cJ[FJ] = !0;
-      let AJ = JJ.neighbors(FJ);
-      return AJ && AJ.forEach((UJ => {
-        Object.hasOwn(cJ, UJ) || (ZJ = Mc(JJ, cJ, ZJ, UJ, FJ))
-      })), XJ.low = eJ, XJ.lim = ZJ++, UJ ? XJ.parent = UJ : delete XJ.parent, ZJ
+    function UT(BB, TB, dB, VB, yB) {
+      let pB = dB,
+        lB = BB.node(VB);
+      TB[VB] = !0;
+      let JB = BB.neighbors(VB);
+      return JB && JB.forEach((yB => {
+        Object.hasOwn(TB, yB) || (dB = UT(BB, TB, dB, yB, VB))
+      })), lB.low = pB, lB.lim = dB++, yB ? lB.parent = yB : delete lB.parent, dB
     }
 
-    function bc(JJ) {
-      return JJ.edges().find((cJ => JJ.edge(cJ).cutvalue < 0))
+    function FT(BB) {
+      return BB.edges().find((TB => BB.edge(TB).cutvalue < 0))
     }
 
-    function wc(JJ, cJ, ZJ) {
-      let FJ = ZJ.v,
-        UJ = ZJ.w;
-      cJ.hasEdge(FJ, UJ) || (FJ = ZJ.w, UJ = ZJ.v);
-      let eJ = JJ.node(FJ),
-        XJ = JJ.node(UJ),
-        AJ = eJ,
-        qJ = !1;
-      return eJ.lim > XJ.lim && (AJ = XJ, qJ = !0), cJ.edges().filter((cJ => qJ === gc(JJ, JJ.node(cJ.v), AJ) && qJ !== gc(JJ, JJ.node(cJ.w), AJ))).reduce(((JJ, ZJ) => fc(cJ, ZJ) < fc(cJ, JJ) ? ZJ : JJ))
+    function KT(BB, TB, dB) {
+      let VB = dB.v,
+        yB = dB.w;
+      TB.hasEdge(VB, yB) || (VB = dB.w, yB = dB.v);
+      let pB = BB.node(VB),
+        lB = BB.node(yB),
+        JB = pB,
+        YB = !1;
+      return pB.lim > lB.lim && (JB = lB, YB = !0), TB.edges().filter((TB => YB === IT(BB, BB.node(TB.v), JB) && YB !== IT(BB, BB.node(TB.w), JB))).reduce(((BB, dB) => HT(TB, dB) < HT(TB, BB) ? dB : BB))
     }
 
-    function Wc(JJ, cJ, ZJ, FJ) {
-      let UJ = ZJ.v,
-        eJ = ZJ.w;
-      JJ.removeEdge(UJ, eJ), JJ.setEdge(FJ.v, FJ.w, {}), Ic(JJ), yc(JJ, cJ),
-        function(JJ, cJ) {
-          let ZJ = JJ.nodes().find((cJ => !JJ.node(cJ).parent));
-          if (!ZJ) return;
-          let FJ = Qc(JJ, [ZJ]);
-          FJ = FJ.slice(1), FJ.forEach((ZJ => {
-            let FJ = JJ.node(ZJ).parent,
-              UJ = cJ.edge(ZJ, FJ),
-              eJ = !1;
-            UJ || (UJ = cJ.edge(FJ, ZJ), eJ = !0), cJ.node(ZJ).rank = cJ.node(FJ).rank + (eJ ? UJ.minlen : -UJ.minlen)
+    function rT(BB, TB, dB, VB) {
+      let yB = dB.v,
+        pB = dB.w;
+      BB.removeEdge(yB, pB), BB.setEdge(VB.v, VB.w, {}), wT(BB), MT(BB, TB),
+        function(BB, TB) {
+          let dB = BB.nodes().find((TB => !BB.node(TB).parent));
+          if (!dB) return;
+          let VB = NT(BB, [dB]);
+          VB = VB.slice(1), VB.forEach((dB => {
+            let VB = BB.node(dB).parent,
+              yB = TB.edge(dB, VB),
+              pB = !1;
+            yB || (yB = TB.edge(VB, dB), pB = !0), TB.node(dB).rank = TB.node(VB).rank + (pB ? yB.minlen : -yB.minlen)
           }))
-        }(JJ, cJ)
+        }(BB, TB)
     }
 
-    function gc(JJ, cJ, ZJ) {
-      return ZJ.low <= cJ.lim && cJ.lim <= ZJ.lim
+    function IT(BB, TB, dB) {
+      return dB.low <= TB.lim && TB.lim <= dB.lim
     }
-    Kc.initLowLimValues = Ic, Kc.initCutValues = yc, Kc.calcCutValue = Sc, Kc.leaveEdge = bc, Kc.enterEdge = wc, Kc.exchangeEdges = Wc;
-    var Hc = function(JJ) {
-      let cJ = JJ.graph().ranker;
-      if ("function" == typeof cJ) return cJ(JJ);
-      switch (cJ) {
+    sT.initLowLimValues = wT, sT.initCutValues = MT, sT.calcCutValue = zT, sT.leaveEdge = FT, sT.enterEdge = KT, sT.exchangeEdges = rT;
+    var cT = function(BB) {
+      let TB = BB.graph().ranker;
+      if ("function" == typeof TB) return TB(BB);
+      switch (TB) {
         case "network-simplex":
         default:
-          kc(JJ);
+          PT(BB);
           break;
         case "tight-tree":
-          ! function(JJ) {
-            Gc(JJ), xc(JJ)
-          }(JJ);
+          ! function(BB) {
+            uT(BB), ET(BB)
+          }(BB);
           break;
         case "longest-path":
-          Pc(JJ);
+          ST(BB);
         case "none":
       }
     };
-    var Pc = Gc;
+    var ST = uT;
 
-    function kc(JJ) {
-      Vc(JJ)
+    function PT(BB) {
+      fT(BB)
     }
-    var pc = function(JJ) {
-      let cJ = function(JJ) {
-          let cJ = {},
-            ZJ = 0;
+    var QT = function(BB) {
+      let TB = function(BB) {
+          let TB = {},
+            dB = 0;
 
-          function FJ(UJ) {
-            let eJ = ZJ;
-            JJ.children(UJ).forEach(FJ), cJ[UJ] = {
-              low: eJ,
-              lim: ZJ++
+          function VB(yB) {
+            let pB = dB;
+            BB.children(yB).forEach(VB), TB[yB] = {
+              low: pB,
+              lim: dB++
             }
           }
-          return JJ.children(Fc).forEach(FJ), cJ
-        }(JJ),
-        ZJ = JJ.graph();
-      if (!Array.isArray(ZJ.dummyChains)) return;
-      ZJ.dummyChains.forEach((ZJ => {
-        let FJ = JJ.node(ZJ),
-          UJ = FJ.edgeObj,
-          eJ = function(JJ, cJ, ZJ, FJ) {
-            let UJ, eJ = [],
-              XJ = [],
-              AJ = Math.min(cJ[ZJ].low, cJ[FJ].low),
-              qJ = Math.max(cJ[ZJ].lim, cJ[FJ].lim);
-            UJ = ZJ;
+          return BB.children(VT).forEach(VB), TB
+        }(BB),
+        dB = BB.graph();
+      if (!Array.isArray(dB.dummyChains)) return;
+      dB.dummyChains.forEach((dB => {
+        let VB = BB.node(dB),
+          yB = VB.edgeObj,
+          pB = function(BB, TB, dB, VB) {
+            let yB, pB = [],
+              lB = [],
+              JB = Math.min(TB[dB].low, TB[VB].low),
+              YB = Math.max(TB[dB].lim, TB[VB].lim);
+            yB = dB;
             do {
-              UJ = JJ.parent(UJ), eJ.push(UJ)
-            } while (UJ && (cJ[UJ].low > AJ || qJ > cJ[UJ].lim));
-            let jJ = UJ,
-              YJ = FJ;
+              yB = BB.parent(yB), pB.push(yB)
+            } while (yB && (TB[yB].low > JB || YB > TB[yB].lim));
+            let gB = yB,
+              oB = VB;
             for (;
-              (YJ = JJ.parent(YJ)) !== jJ;) XJ.push(YJ);
+              (oB = BB.parent(oB)) !== gB;) lB.push(oB);
             return {
-              path: eJ.concat(XJ.reverse()),
-              lca: jJ
+              path: pB.concat(lB.reverse()),
+              lca: gB
             }
-          }(JJ, cJ, UJ.v, UJ.w),
-          XJ = eJ.path,
-          AJ = eJ.lca,
-          qJ = 0,
-          jJ = XJ[qJ],
-          YJ = !0;
-        for (; ZJ !== UJ.w;) {
-          if (FJ = JJ.node(ZJ), YJ) {
+          }(BB, TB, yB.v, yB.w),
+          lB = pB.path,
+          JB = pB.lca,
+          YB = 0,
+          gB = lB[YB],
+          oB = !0;
+        for (; dB !== yB.w;) {
+          if (VB = BB.node(dB), oB) {
             for (;
-              (jJ = XJ[qJ]) !== AJ && JJ.node(jJ).maxRank < FJ.rank;) qJ++;
-            jJ === AJ && (YJ = !1)
+              (gB = lB[YB]) !== JB && BB.node(gB).maxRank < VB.rank;) YB++;
+            gB === JB && (oB = !1)
           }
-          if (!YJ) {
-            for (; qJ < XJ.length - 1 && JJ.node(XJ[qJ + 1]).minRank <= FJ.rank;) qJ++;
-            jJ = XJ[qJ]
+          if (!oB) {
+            for (; YB < lB.length - 1 && BB.node(lB[YB + 1]).minRank <= VB.rank;) YB++;
+            gB = lB[YB]
           }
-          void 0 !== jJ && JJ.setParent(ZJ, jJ), ZJ = JJ.successors(ZJ)[0]
+          void 0 !== gB && BB.setParent(dB, gB), dB = BB.successors(dB)[0]
         }
       }))
     };
 
-    function dc(JJ) {
-      let cJ = OJ(JJ, "root", {}, "_root"),
-        ZJ = function(JJ) {
-          let cJ = {};
+    function RT(BB) {
+      let TB = XB(BB, "root", {}, "_root"),
+        dB = function(BB) {
+          let TB = {};
 
-          function ZJ(FJ, UJ) {
-            let eJ = JJ.children(FJ);
-            eJ && eJ.length && eJ.forEach((JJ => ZJ(JJ, UJ + 1))), cJ[FJ] = UJ
+          function dB(VB, yB) {
+            let pB = BB.children(VB);
+            pB && pB.length && pB.forEach((BB => dB(BB, yB + 1))), TB[VB] = yB
           }
-          return JJ.children(Fc).forEach((JJ => ZJ(JJ, 1))), cJ
-        }(JJ),
-        FJ = Object.values(ZJ),
-        UJ = LJ(Math.max, FJ) - 1,
-        eJ = 2 * UJ + 1;
-      JJ.graph().nestingRoot = cJ, JJ.edges().forEach((cJ => JJ.edge(cJ).minlen *= eJ));
-      let XJ = function(JJ) {
-        return JJ.edges().reduce(((cJ, ZJ) => cJ + JJ.edge(ZJ).weight), 0)
-      }(JJ) + 1;
-      JJ.children(Fc).forEach((FJ => {
-        zc(JJ, cJ, eJ, XJ, UJ, ZJ, FJ)
-      })), JJ.graph().nodeRankFactor = eJ
+          return BB.children(VT).forEach((BB => dB(BB, 1))), TB
+        }(BB),
+        VB = Object.values(dB),
+        yB = xB(Math.max, VB) - 1,
+        pB = 2 * yB + 1;
+      BB.graph().nestingRoot = TB, BB.edges().forEach((TB => BB.edge(TB).minlen *= pB));
+      let lB = function(BB) {
+        return BB.edges().reduce(((TB, dB) => TB + BB.edge(dB).weight), 0)
+      }(BB) + 1;
+      BB.children(VT).forEach((VB => {
+        aT(BB, TB, pB, lB, yB, dB, VB)
+      })), BB.graph().nodeRankFactor = pB
     }
 
-    function zc(JJ, cJ, ZJ, FJ, UJ, eJ, XJ) {
-      var AJ;
-      let qJ = JJ.children(XJ);
-      if (!qJ.length) return void(XJ !== cJ && JJ.setEdge(cJ, XJ, {
+    function aT(BB, TB, dB, VB, yB, pB, lB) {
+      var JB;
+      let YB = BB.children(lB);
+      if (!YB.length) return void(lB !== TB && BB.setEdge(TB, lB, {
         weight: 0,
-        minlen: ZJ
+        minlen: dB
       }));
-      let jJ = iJ(JJ, "_bt"),
-        YJ = iJ(JJ, "_bb"),
-        hJ = JJ.node(XJ);
-      JJ.setParent(jJ, XJ), hJ.borderTop = jJ, JJ.setParent(YJ, XJ), hJ.borderBottom = YJ, qJ.forEach((AJ => {
-        var qJ;
-        zc(JJ, cJ, ZJ, FJ, UJ, eJ, AJ);
-        let hJ = JJ.node(AJ),
-          DJ = hJ.borderTop ? hJ.borderTop : AJ,
-          sJ = hJ.borderBottom ? hJ.borderBottom : AJ,
-          nJ = hJ.borderTop ? FJ : 2 * FJ,
-          GJ = DJ !== sJ ? 1 : UJ - (null != (qJ = eJ[XJ]) ? qJ : 0) + 1;
-        JJ.setEdge(jJ, DJ, {
-          weight: nJ,
-          minlen: GJ,
+      let gB = GB(BB, "_bt"),
+        oB = GB(BB, "_bb"),
+        kB = BB.node(lB);
+      BB.setParent(gB, lB), kB.borderTop = gB, BB.setParent(oB, lB), kB.borderBottom = oB, YB.forEach((JB => {
+        var YB;
+        aT(BB, TB, dB, VB, yB, pB, JB);
+        let kB = BB.node(JB),
+          LB = kB.borderTop ? kB.borderTop : JB,
+          OB = kB.borderBottom ? kB.borderBottom : JB,
+          DB = kB.borderTop ? VB : 2 * VB,
+          uB = LB !== OB ? 1 : yB - (null != (YB = pB[lB]) ? YB : 0) + 1;
+        BB.setEdge(gB, LB, {
+          weight: DB,
+          minlen: uB,
           nestingEdge: !0
-        }), JJ.setEdge(sJ, YJ, {
-          weight: nJ,
-          minlen: GJ,
+        }), BB.setEdge(OB, oB, {
+          weight: DB,
+          minlen: uB,
           nestingEdge: !0
         })
-      })), JJ.parent(XJ) || JJ.setEdge(cJ, jJ, {
+      })), BB.parent(lB) || BB.setEdge(TB, gB, {
         weight: 0,
-        minlen: UJ + (null != (AJ = eJ[XJ]) ? AJ : 0)
+        minlen: yB + (null != (JB = pB[lB]) ? JB : 0)
       })
     }
-    var Nc = function(JJ) {
-      JJ.children(Fc).forEach((function cJ(ZJ) {
-        let FJ = JJ.children(ZJ),
-          UJ = JJ.node(ZJ);
-        if (FJ.length && FJ.forEach(cJ), UJ && Object.hasOwn(UJ, "minRank")) {
-          UJ.borderLeft = [], UJ.borderRight = [];
-          for (let cJ = UJ.minRank, FJ = UJ.maxRank + 1; cJ < FJ; ++cJ) Oc(JJ, "borderLeft", "_bl", ZJ, UJ, cJ), Oc(JJ, "borderRight", "_br", ZJ, UJ, cJ)
+    var ZT = function(BB) {
+      BB.children(VT).forEach((function TB(dB) {
+        let VB = BB.children(dB),
+          yB = BB.node(dB);
+        if (VB.length && VB.forEach(TB), yB && Object.hasOwn(yB, "minRank")) {
+          yB.borderLeft = [], yB.borderRight = [];
+          for (let TB = yB.minRank, VB = yB.maxRank + 1; TB < VB; ++TB) XT(BB, "borderLeft", "_bl", dB, yB, TB), XT(BB, "borderRight", "_br", dB, yB, TB)
         }
       }))
     };
 
-    function Oc(JJ, cJ, ZJ, FJ, UJ, eJ) {
-      let XJ = {
+    function XT(BB, TB, dB, VB, yB, pB) {
+      let lB = {
           width: 0,
           height: 0,
-          rank: eJ,
-          borderType: cJ
+          rank: pB,
+          borderType: TB
         },
-        AJ = UJ[cJ][eJ - 1],
-        qJ = OJ(JJ, "border", XJ, ZJ);
-      UJ[cJ][eJ] = qJ, JJ.setParent(qJ, FJ), AJ && JJ.setEdge(AJ, qJ, {
+        JB = yB[TB][pB - 1],
+        YB = XB(BB, "border", lB, dB);
+      yB[TB][pB] = YB, BB.setParent(YB, VB), JB && BB.setEdge(JB, YB, {
         weight: 1
       })
     }
 
-    function Tc(JJ) {
-      var cJ;
-      let ZJ = null == (cJ = JJ.graph().rankdir) ? void 0 : cJ.toLowerCase();
-      ("bt" === ZJ || "rl" === ZJ) && function(JJ) {
-        JJ.nodes().forEach((cJ => ic(JJ.node(cJ)))), JJ.edges().forEach((cJ => {
-          var ZJ;
-          let FJ = JJ.edge(cJ);
-          null == (ZJ = FJ.points) || ZJ.forEach(ic), Object.hasOwn(FJ, "y") && ic(FJ)
+    function WT(BB) {
+      var TB;
+      let dB = null == (TB = BB.graph().rankdir) ? void 0 : TB.toLowerCase();
+      ("bt" === dB || "rl" === dB) && function(BB) {
+        BB.nodes().forEach((TB => GT(BB.node(TB)))), BB.edges().forEach((TB => {
+          var dB;
+          let VB = BB.edge(TB);
+          null == (dB = VB.points) || dB.forEach(GT), Object.hasOwn(VB, "y") && GT(VB)
         }))
-      }(JJ), ("lr" === ZJ || "rl" === ZJ) && (function(JJ) {
-        JJ.nodes().forEach((cJ => Rc(JJ.node(cJ)))), JJ.edges().forEach((cJ => {
-          var ZJ;
-          let FJ = JJ.edge(cJ);
-          null == (ZJ = FJ.points) || ZJ.forEach(Rc), Object.hasOwn(FJ, "x") && Rc(FJ)
+      }(BB), ("lr" === dB || "rl" === dB) && (function(BB) {
+        BB.nodes().forEach((TB => qT(BB.node(TB)))), BB.edges().forEach((TB => {
+          var dB;
+          let VB = BB.edge(TB);
+          null == (dB = VB.points) || dB.forEach(qT), Object.hasOwn(VB, "x") && qT(VB)
         }))
-      }(JJ), Cc(JJ))
+      }(BB), hT(BB))
     }
 
-    function Cc(JJ) {
-      JJ.nodes().forEach((cJ => uc(JJ.node(cJ)))), JJ.edges().forEach((cJ => uc(JJ.edge(cJ))))
+    function hT(BB) {
+      BB.nodes().forEach((TB => CT(BB.node(TB)))), BB.edges().forEach((TB => CT(BB.edge(TB))))
     }
 
-    function uc(JJ) {
-      let cJ = JJ.width;
-      JJ.width = JJ.height, JJ.height = cJ
+    function CT(BB) {
+      let TB = BB.width;
+      BB.width = BB.height, BB.height = TB
     }
 
-    function ic(JJ) {
-      JJ.y = -JJ.y
+    function GT(BB) {
+      BB.y = -BB.y
     }
 
-    function Rc(JJ) {
-      let cJ = JJ.x;
-      JJ.x = JJ.y, JJ.y = cJ
+    function qT(BB) {
+      let TB = BB.x;
+      BB.x = BB.y, BB.y = TB
     }
 
-    function Lc(JJ) {
-      let cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-        ZJ = {},
-        FJ = JJ.nodes().filter((cJ => !JJ.children(cJ).length)),
-        UJ = FJ.map((cJ => JJ.node(cJ).rank)),
-        eJ = Jc(LJ(Math.max, UJ) + 1).map((() => []));
-      return FJ.sort(((cJ, ZJ) => JJ.node(cJ).rank - JJ.node(ZJ).rank)).forEach((function FJ(UJ) {
-        if (ZJ[UJ]) return;
-        ZJ[UJ] = !0;
-        let XJ = JJ.node(UJ);
-        eJ[XJ.rank].push(UJ);
-        let AJ = JJ.successors(UJ);
-        AJ && [...AJ].sort(((ZJ, FJ) => function(ZJ, FJ) {
-          let UJ = JJ.node(ZJ),
-            eJ = JJ.node(FJ);
-          return Uc(cJ, UJ, eJ)
-        }(ZJ, FJ))).forEach(FJ)
-      })), eJ
+    function xT(BB) {
+      let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+        dB = {},
+        VB = BB.nodes().filter((TB => !BB.children(TB).length)),
+        yB = VB.map((TB => BB.node(TB).rank)),
+        pB = BT(xB(Math.max, yB) + 1).map((() => []));
+      return VB.sort(((TB, dB) => BB.node(TB).rank - BB.node(dB).rank)).forEach((function VB(yB) {
+        if (dB[yB]) return;
+        dB[yB] = !0;
+        let lB = BB.node(yB);
+        pB[lB.rank].push(yB);
+        let JB = BB.successors(yB);
+        JB && [...JB].sort(((dB, VB) => function(dB, VB) {
+          let yB = BB.node(dB),
+            pB = BB.node(VB);
+          return yT(TB, yB, pB)
+        }(dB, VB))).forEach(VB)
+      })), pB
     }
 
-    function ac(JJ, cJ) {
-      let ZJ = 0;
-      for (let FJ = 1; FJ < cJ.length; ++FJ) ZJ += Bc(JJ, cJ[FJ - 1], cJ[FJ]);
-      return ZJ
+    function jT(BB, TB) {
+      let dB = 0;
+      for (let VB = 1; VB < TB.length; ++VB) dB += AT(BB, TB[VB - 1], TB[VB]);
+      return dB
     }
 
-    function Bc(JJ, cJ, ZJ) {
-      let FJ = function(JJ, cJ) {
-          return JJ.reduce(((JJ, ZJ, FJ) => (JJ[ZJ] = cJ[FJ], JJ)), {})
-        }(ZJ, ZJ.map(((JJ, cJ) => cJ))),
-        UJ = cJ.flatMap((cJ => {
-          let ZJ = JJ.outEdges(cJ);
-          return ZJ ? ZJ.map((cJ => ({
-            pos: FJ[cJ.w],
-            weight: JJ.edge(cJ).weight
-          }))).sort(((JJ, cJ) => JJ.pos - cJ.pos)) : []
+    function AT(BB, TB, dB) {
+      let VB = function(BB, TB) {
+          return BB.reduce(((BB, dB, VB) => (BB[dB] = TB[VB], BB)), {})
+        }(dB, dB.map(((BB, TB) => TB))),
+        yB = TB.flatMap((TB => {
+          let dB = BB.outEdges(TB);
+          return dB ? dB.map((TB => ({
+            pos: VB[TB.w],
+            weight: BB.edge(TB).weight
+          }))).sort(((BB, TB) => BB.pos - TB.pos)) : []
         })),
-        eJ = 1;
-      for (; eJ < ZJ.length;) eJ <<= 1;
-      let XJ = 2 * eJ - 1;
-      eJ -= 1;
-      let AJ = new Array(XJ).fill(0),
-        qJ = 0;
-      return UJ.forEach((JJ => {
-        let cJ = JJ.pos + eJ;
-        AJ[cJ] += JJ.weight;
-        let ZJ = 0;
-        for (; cJ > 0;) cJ % 2 && (ZJ += AJ[cJ + 1]), cJ = cJ - 1 >> 1, AJ[cJ] += JJ.weight;
-        qJ += JJ.weight * ZJ
-      })), qJ
+        pB = 1;
+      for (; pB < dB.length;) pB <<= 1;
+      let lB = 2 * pB - 1;
+      pB -= 1;
+      let JB = new Array(lB).fill(0),
+        YB = 0;
+      return yB.forEach((BB => {
+        let TB = BB.pos + pB;
+        JB[TB] += BB.weight;
+        let dB = 0;
+        for (; TB > 0;) TB % 2 && (dB += JB[TB + 1]), TB = TB - 1 >> 1, JB[TB] += BB.weight;
+        YB += BB.weight * dB
+      })), YB
     }
 
-    function tc(JJ, cJ) {
-      let ZJ = {};
-      return JJ.forEach(((JJ, cJ) => {
-          let FJ = {
+    function bT(BB, TB) {
+      let dB = {};
+      return BB.forEach(((BB, TB) => {
+          let VB = {
             indegree: 0,
             in: [],
             out: [],
-            vs: [JJ.v],
-            i: cJ
+            vs: [BB.v],
+            i: TB
           };
-          void 0 !== JJ.barycenter && (FJ.barycenter = JJ.barycenter, FJ.weight = JJ.weight), ZJ[JJ.v] = FJ
-        })), cJ.edges().forEach((JJ => {
-          let cJ = ZJ[JJ.v],
-            FJ = ZJ[JJ.w];
-          void 0 !== cJ && void 0 !== FJ && (FJ.indegree++, cJ.out.push(FJ))
+          void 0 !== BB.barycenter && (VB.barycenter = BB.barycenter, VB.weight = BB.weight), dB[BB.v] = VB
+        })), TB.edges().forEach((BB => {
+          let TB = dB[BB.v],
+            VB = dB[BB.w];
+          void 0 !== TB && void 0 !== VB && (VB.indegree++, TB.out.push(VB))
         })),
-        function(JJ) {
-          let cJ = [];
+        function(BB) {
+          let TB = [];
 
-          function ZJ(JJ) {
-            return cJ => {
-              cJ.merged || (void 0 === cJ.barycenter || void 0 === JJ.barycenter || cJ.barycenter >= JJ.barycenter) && function(JJ, cJ) {
-                let ZJ = 0,
-                  FJ = 0;
-                JJ.weight && (ZJ += JJ.barycenter * JJ.weight, FJ += JJ.weight), cJ.weight && (ZJ += cJ.barycenter * cJ.weight, FJ += cJ.weight), JJ.vs = cJ.vs.concat(JJ.vs), JJ.barycenter = ZJ / FJ, JJ.weight = FJ, JJ.i = Math.min(cJ.i, JJ.i), cJ.merged = !0
-              }(JJ, cJ)
+          function dB(BB) {
+            return TB => {
+              TB.merged || (void 0 === TB.barycenter || void 0 === BB.barycenter || TB.barycenter >= BB.barycenter) && function(BB, TB) {
+                let dB = 0,
+                  VB = 0;
+                BB.weight && (dB += BB.barycenter * BB.weight, VB += BB.weight), TB.weight && (dB += TB.barycenter * TB.weight, VB += TB.weight), BB.vs = TB.vs.concat(BB.vs), BB.barycenter = dB / VB, BB.weight = VB, BB.i = Math.min(TB.i, BB.i), TB.merged = !0
+              }(BB, TB)
             }
           }
 
-          function FJ(cJ) {
-            return ZJ => {
-              ZJ.in.push(cJ), 0 === --ZJ.indegree && JJ.push(ZJ)
+          function VB(TB) {
+            return dB => {
+              dB.in.push(TB), 0 === --dB.indegree && BB.push(dB)
             }
           }
-          for (; JJ.length;) {
-            let UJ = JJ.pop();
-            cJ.push(UJ), UJ.in.reverse().forEach(ZJ(UJ)), UJ.out.forEach(FJ(UJ))
+          for (; BB.length;) {
+            let yB = BB.pop();
+            TB.push(yB), yB.in.reverse().forEach(dB(yB)), yB.out.forEach(VB(yB))
           }
-          return cJ.filter((JJ => !JJ.merged)).map((JJ => cc(JJ, ["vs", "i", "barycenter", "weight"])))
-        }(Object.values(ZJ).filter((JJ => !JJ.indegree)))
+          return TB.filter((BB => !BB.merged)).map((BB => TT(BB, ["vs", "i", "barycenter", "weight"])))
+        }(Object.values(dB).filter((BB => !BB.indegree)))
     }
 
-    function oc(JJ, cJ, ZJ, FJ, UJ) {
-      let eJ = {},
-        XJ = null,
-        AJ = null,
-        qJ = UJ;
-      "boolean" == typeof cJ ? (qJ = cJ, eJ = {}) : cJ && (eJ = cJ, XJ = null != ZJ ? ZJ : null, AJ = null != FJ ? FJ : null);
-      let jJ = function(JJ, cJ) {
-          let ZJ = {
+    function nT(BB, TB, dB, VB, yB) {
+      let pB = {},
+        lB = null,
+        JB = null,
+        YB = yB;
+      "boolean" == typeof TB ? (YB = TB, pB = {}) : TB && (pB = TB, lB = null != dB ? dB : null, JB = null != VB ? VB : null);
+      let gB = function(BB, TB) {
+          let dB = {
             lhs: [],
             rhs: []
           };
-          return JJ.forEach((JJ => {
-            cJ(JJ) ? ZJ.lhs.push(JJ) : ZJ.rhs.push(JJ)
-          })), ZJ
-        }(JJ, (JJ => Object.hasOwn(JJ, "barycenter"))),
-        YJ = jJ.lhs,
-        hJ = jJ.rhs.sort(((JJ, cJ) => cJ.i - JJ.i)),
-        DJ = [],
-        sJ = 0,
-        nJ = 0,
-        GJ = 0;
-      YJ.sort(function(JJ, cJ, ZJ) {
-        return (FJ, UJ) => {
-          if (FJ.barycenter < UJ.barycenter) return -1;
-          if (FJ.barycenter > UJ.barycenter) return 1;
-          if (JJ && ("string" == typeof FJ.vs[0] || "string" == typeof UJ.vs[0])) {
-            let ZJ = JJ.node(FJ.vs[0]),
-              eJ = JJ.node(UJ.vs[0]),
-              XJ = Uc(cJ, ZJ, eJ);
-            if (0 !== XJ) return XJ
+          return BB.forEach((BB => {
+            TB(BB) ? dB.lhs.push(BB) : dB.rhs.push(BB)
+          })), dB
+        }(BB, (BB => Object.hasOwn(BB, "barycenter"))),
+        oB = gB.lhs,
+        kB = gB.rhs.sort(((BB, TB) => TB.i - BB.i)),
+        LB = [],
+        OB = 0,
+        DB = 0,
+        uB = 0;
+      oB.sort(function(BB, TB, dB) {
+        return (VB, yB) => {
+          if (VB.barycenter < yB.barycenter) return -1;
+          if (VB.barycenter > yB.barycenter) return 1;
+          if (BB && ("string" == typeof VB.vs[0] || "string" == typeof yB.vs[0])) {
+            let dB = BB.node(VB.vs[0]),
+              pB = BB.node(yB.vs[0]),
+              lB = yT(TB, dB, pB);
+            if (0 !== lB) return lB
           }
-          return ZJ ? UJ.i - FJ.i : FJ.i - UJ.i
+          return dB ? yB.i - VB.i : VB.i - yB.i
         }
-      }(AJ, XJ, !!qJ));
-      for (let [xJ, rJ] of Object.entries(eJ)) {
-        let JJ = YJ.findIndex((JJ => JJ.vs[0] === xJ));
-        YJ.splice(JJ + 1, 0, rJ)
+      }(JB, lB, !!YB));
+      for (let [EB, vB] of Object.entries(pB)) {
+        let BB = oB.findIndex((BB => BB.vs[0] === EB));
+        oB.splice(BB + 1, 0, vB)
       }
-      GJ = lc(DJ, hJ, GJ), YJ.forEach((JJ => {
-        GJ += JJ.vs.length, DJ.push(JJ.vs), sJ += JJ.barycenter * JJ.weight, nJ += JJ.weight, GJ = lc(DJ, hJ, GJ)
+      uB = eT(LB, kB, uB), oB.forEach((BB => {
+        uB += BB.vs.length, LB.push(BB.vs), OB += BB.barycenter * BB.weight, DB += BB.weight, uB = eT(LB, kB, uB)
       }));
-      let fJ = {
-        vs: DJ.flat(1)
+      let HB = {
+        vs: LB.flat(1)
       };
-      return nJ && (fJ.barycenter = sJ / nJ, fJ.weight = nJ), fJ
+      return DB && (HB.barycenter = OB / DB, HB.weight = DB), HB
     }
 
-    function lc(JJ, cJ, ZJ) {
-      let FJ;
-      for (; cJ.length && (FJ = cJ[cJ.length - 1]).i <= ZJ;) cJ.pop(), JJ.push(FJ.vs), ZJ++;
-      return ZJ
+    function eT(BB, TB, dB) {
+      let VB;
+      for (; TB.length && (VB = TB[TB.length - 1]).i <= dB;) TB.pop(), BB.push(VB.vs), dB++;
+      return dB
     }
 
-    function JZ(JJ, cJ, ZJ, FJ, UJ) {
-      var eJ, XJ, AJ, qJ, jJ, YJ, hJ, DJ, sJ, nJ, GJ;
-      let fJ = null,
-        xJ = UJ;
-      "boolean" == typeof FJ ? (xJ = FJ, fJ = null) : void 0 !== FJ && (fJ = FJ);
-      let rJ = JJ.children(cJ),
-        vJ = JJ.node(cJ),
-        mJ = vJ ? vJ.borderLeft : void 0,
-        QJ = vJ ? vJ.borderRight : void 0,
-        EJ = {};
-      mJ && (rJ = rJ.filter((JJ => JJ !== mJ && JJ !== QJ)));
-      let VJ = function(JJ) {
-        return (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : []).map((cJ => {
-          let ZJ = JJ.inEdges(cJ);
-          if (!ZJ || !ZJ.length) return {
-            v: cJ
+    function Bd(BB, TB, dB, VB, yB) {
+      var pB, lB, JB, YB, gB, oB, kB, LB, OB, DB, uB;
+      let HB = null,
+        EB = yB;
+      "boolean" == typeof VB ? (EB = VB, HB = null) : void 0 !== VB && (HB = VB);
+      let vB = BB.children(TB),
+        mB = BB.node(TB),
+        iB = mB ? mB.borderLeft : void 0,
+        NB = mB ? mB.borderRight : void 0,
+        tB = {};
+      iB && (vB = vB.filter((BB => BB !== iB && BB !== NB)));
+      let fB = function(BB) {
+        return (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : []).map((TB => {
+          let dB = BB.inEdges(TB);
+          if (!dB || !dB.length) return {
+            v: TB
           };
           {
-            let FJ = ZJ.reduce(((cJ, ZJ) => {
-              let FJ = JJ.edge(ZJ),
-                UJ = JJ.node(ZJ.v);
+            let VB = dB.reduce(((TB, dB) => {
+              let VB = BB.edge(dB),
+                yB = BB.node(dB.v);
               return {
-                sum: cJ.sum + FJ.weight * UJ.order,
-                weight: cJ.weight + FJ.weight
+                sum: TB.sum + VB.weight * yB.order,
+                weight: TB.weight + VB.weight
               }
             }), {
               sum: 0,
               weight: 0
             });
             return {
-              v: cJ,
-              barycenter: FJ.sum / FJ.weight,
-              weight: FJ.weight
+              v: TB,
+              barycenter: VB.sum / VB.weight,
+              weight: VB.weight
             }
           }
         }))
-      }(JJ, rJ);
-      VJ.forEach((cJ => {
-        if (JJ.children(cJ.v).length) {
+      }(BB, vB);
+      fB.forEach((TB => {
+        if (BB.children(TB.v).length) {
           let {
-            result: FJ
-          } = JZ(JJ, cJ.v, ZJ, fJ, xJ);
-          EJ[cJ.v] = FJ, Object.hasOwn(FJ, "barycenter") && function(JJ, cJ) {
-            void 0 !== JJ.barycenter ? (JJ.barycenter = (JJ.barycenter * JJ.weight + cJ.barycenter * cJ.weight) / (JJ.weight + cJ.weight), JJ.weight += cJ.weight) : (JJ.barycenter = cJ.barycenter, JJ.weight = cJ.weight)
-          }(cJ, FJ)
+            result: VB
+          } = Bd(BB, TB.v, dB, HB, EB);
+          tB[TB.v] = VB, Object.hasOwn(VB, "barycenter") && function(BB, TB) {
+            void 0 !== BB.barycenter ? (BB.barycenter = (BB.barycenter * BB.weight + TB.barycenter * TB.weight) / (BB.weight + TB.weight), BB.weight += TB.weight) : (BB.barycenter = TB.barycenter, BB.weight = TB.weight)
+          }(TB, VB)
         }
       }));
-      let KJ = tc(VJ, ZJ);
-      ! function(JJ, cJ) {
-        JJ.forEach((JJ => {
-          JJ.vs = JJ.vs.flatMap((JJ => cJ[JJ] ? cJ[JJ].vs : JJ))
+      let sB = bT(fB, dB);
+      ! function(BB, TB) {
+        BB.forEach((BB => {
+          BB.vs = BB.vs.flatMap((BB => TB[BB] ? TB[BB].vs : BB))
         }))
-      }(KJ, EJ);
-      let yJ = {},
-        SJ = !1;
-      for (let MJ = 0; MJ < KJ.length; MJ++)
-        for (let cJ = MJ + 1; cJ < KJ.length; cJ++)
-          if (KJ[MJ] && KJ[cJ] && null != (eJ = KJ[MJ]) && eJ.barycenter && null != (XJ = KJ[cJ]) && XJ.barycenter && (null == (AJ = KJ[MJ]) ? void 0 : AJ.barycenter) === KJ[cJ].barycenter) {
-            let ZJ = null != (jJ = null == (qJ = KJ[MJ]) ? void 0 : qJ.vs[0]) ? jJ : "",
-              FJ = null != (hJ = null == (YJ = KJ[cJ]) ? void 0 : YJ.vs[0]) ? hJ : "",
-              UJ = JJ.node(ZJ),
-              eJ = JJ.node(FJ);
-            if ("edge" === UJ.dummy && "edge" === eJ.dummy && (null == (DJ = UJ.edgeObj) ? void 0 : DJ.v) === (null == (sJ = eJ.edgeObj) ? void 0 : sJ.v) && (null == (nJ = UJ.edgeObj) ? void 0 : nJ.w) === (null == (GJ = eJ.edgeObj) ? void 0 : GJ.w)) {
-              if (UJ.edgeLabel.reversed) {
-                yJ[FJ] = KJ[MJ], KJ.splice(MJ, 1), MJ--;
+      }(sB, tB);
+      let MB = {},
+        zB = !1;
+      for (let UB = 0; UB < sB.length; UB++)
+        for (let TB = UB + 1; TB < sB.length; TB++)
+          if (sB[UB] && sB[TB] && null != (pB = sB[UB]) && pB.barycenter && null != (lB = sB[TB]) && lB.barycenter && (null == (JB = sB[UB]) ? void 0 : JB.barycenter) === sB[TB].barycenter) {
+            let dB = null != (gB = null == (YB = sB[UB]) ? void 0 : YB.vs[0]) ? gB : "",
+              VB = null != (kB = null == (oB = sB[TB]) ? void 0 : oB.vs[0]) ? kB : "",
+              yB = BB.node(dB),
+              pB = BB.node(VB);
+            if ("edge" === yB.dummy && "edge" === pB.dummy && (null == (LB = yB.edgeObj) ? void 0 : LB.v) === (null == (OB = pB.edgeObj) ? void 0 : OB.v) && (null == (DB = yB.edgeObj) ? void 0 : DB.w) === (null == (uB = pB.edgeObj) ? void 0 : uB.w)) {
+              if (yB.edgeLabel.reversed) {
+                MB[VB] = sB[UB], sB.splice(UB, 1), UB--;
                 break
               }
-              yJ[ZJ] = KJ[cJ], KJ.splice(cJ, 1), cJ--
-            } else SJ = !0
-          } let IJ = oc(KJ, yJ, fJ, JJ, xJ);
-      if (mJ && QJ) {
-        IJ.vs = [mJ, IJ.vs, QJ].flat(1);
-        let cJ = JJ.predecessors(mJ);
-        if (cJ && cJ.length) {
-          let ZJ = JJ.node(cJ[0]),
-            FJ = JJ.predecessors(QJ),
-            UJ = JJ.node(FJ[0]);
-          Object.hasOwn(IJ, "barycenter") || (IJ.barycenter = 0, IJ.weight = 0), IJ.barycenter = (IJ.barycenter * IJ.weight + ZJ.order + UJ.order) / (IJ.weight + 2), IJ.weight += 2
+              MB[dB] = sB[TB], sB.splice(TB, 1), TB--
+            } else zB = !0
+          } let wB = nT(sB, MB, HB, BB, EB);
+      if (iB && NB) {
+        wB.vs = [iB, wB.vs, NB].flat(1);
+        let TB = BB.predecessors(iB);
+        if (TB && TB.length) {
+          let dB = BB.node(TB[0]),
+            VB = BB.predecessors(NB),
+            yB = BB.node(VB[0]);
+          Object.hasOwn(wB, "barycenter") || (wB.barycenter = 0, wB.weight = 0), wB.barycenter = (wB.barycenter * wB.weight + dB.order + yB.order) / (wB.weight + 2), wB.weight += 2
         }
       }
-      return Object.defineProperty(IJ, "result", {
-        value: IJ,
+      return Object.defineProperty(wB, "result", {
+        value: wB,
         enumerable: !1,
         configurable: !0,
         writable: !0
-      }), Object.defineProperty(IJ, "usedBias", {
-        value: SJ,
+      }), Object.defineProperty(wB, "usedBias", {
+        value: zB,
         enumerable: !1,
         configurable: !0,
         writable: !0
-      }), IJ
+      }), wB
     }
 
-    function cZ(JJ, cJ, ZJ, FJ) {
-      FJ || (FJ = JJ.nodes());
-      let UJ = function(JJ) {
-          let cJ;
-          for (; JJ.hasNode(cJ = lJ("_root")););
-          return cJ
-        }(JJ),
-        eJ = new NJ({
+    function Td(BB, TB, dB, VB) {
+      VB || (VB = BB.nodes());
+      let yB = function(BB) {
+          let TB;
+          for (; BB.hasNode(TB = eB("_root")););
+          return TB
+        }(BB),
+        pB = new ZB({
           compound: !0
         }).setGraph({
-          root: UJ
-        }).setDefaultNodeLabel((cJ => JJ.node(cJ)));
-      return FJ.forEach((FJ => {
-        let XJ = JJ.node(FJ),
-          AJ = JJ.parent(FJ);
-        if (XJ.rank === cJ || XJ.minRank <= cJ && cJ <= XJ.maxRank) {
-          eJ.setNode(FJ), eJ.setParent(FJ, AJ || UJ);
-          let qJ = JJ[ZJ](FJ);
-          qJ && qJ.forEach((cJ => {
-            let ZJ = cJ.v === FJ ? cJ.w : cJ.v,
-              UJ = eJ.edge(ZJ, FJ),
-              XJ = void 0 !== UJ ? UJ.weight : 0;
-            eJ.setEdge(ZJ, FJ, {
-              weight: JJ.edge(cJ).weight + XJ
+          root: yB
+        }).setDefaultNodeLabel((TB => BB.node(TB)));
+      return VB.forEach((VB => {
+        let lB = BB.node(VB),
+          JB = BB.parent(VB);
+        if (lB.rank === TB || lB.minRank <= TB && TB <= lB.maxRank) {
+          pB.setNode(VB), pB.setParent(VB, JB || yB);
+          let YB = BB[dB](VB);
+          YB && YB.forEach((TB => {
+            let dB = TB.v === VB ? TB.w : TB.v,
+              yB = pB.edge(dB, VB),
+              lB = void 0 !== yB ? yB.weight : 0;
+            pB.setEdge(dB, VB, {
+              weight: BB.edge(TB).weight + lB
             })
-          })), Object.hasOwn(XJ, "minRank") && eJ.setNode(FJ, {
-            borderLeft: XJ.borderLeft[cJ],
-            borderRight: XJ.borderRight[cJ]
+          })), Object.hasOwn(lB, "minRank") && pB.setNode(VB, {
+            borderLeft: lB.borderLeft[TB],
+            borderRight: lB.borderRight[TB]
           })
         }
-      })), eJ
+      })), pB
     }
 
-    function ZZ(JJ) {
-      let cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        ZJ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-      if ("function" == typeof cJ.customOrder) return void cJ.customOrder(JJ, ZZ);
-      let FJ = aJ(JJ),
-        UJ = FZ(JJ, Jc(1, FJ + 1), "inEdges"),
-        eJ = FZ(JJ, Jc(FJ - 1, -1, -1), "outEdges"),
-        XJ = Lc(JJ, ZJ);
-      if (eZ(JJ, XJ), cJ.disableOptimalOrderHeuristic) return;
-      let AJ, qJ = Number.POSITIVE_INFINITY,
-        jJ = cJ.constraints || [];
-      for (let YJ = 0, hJ = 0; hJ < 4; ++YJ, ++hJ) {
-        UZ(YJ % 2 ? UJ : eJ, YJ % 4 >= 2, jJ, ZJ), XJ = uJ(JJ);
-        let cJ = ac(JJ, XJ);
-        cJ < qJ ? (hJ = 0, AJ = Object.assign({}, XJ), qJ = cJ) : cJ === qJ && (AJ = structuredClone(XJ))
+    function dd(BB) {
+      let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      if ("function" == typeof TB.customOrder) return void TB.customOrder(BB, dd);
+      let VB = jB(BB),
+        yB = Vd(BB, BT(1, VB + 1), "inEdges"),
+        pB = Vd(BB, BT(VB - 1, -1, -1), "outEdges"),
+        lB = xT(BB, dB);
+      if (pd(BB, lB), TB.disableOptimalOrderHeuristic) return;
+      let JB, YB = Number.POSITIVE_INFINITY,
+        gB = TB.constraints || [];
+      for (let oB = 0, kB = 0; kB < 4; ++oB, ++kB) {
+        yd(oB % 2 ? yB : pB, oB % 4 >= 2, gB, dB), lB = CB(BB);
+        let TB = jT(BB, lB);
+        TB < YB ? (kB = 0, JB = Object.assign({}, lB), YB = TB) : TB === YB && (JB = structuredClone(lB))
       }
-      eZ(JJ, AJ)
+      pd(BB, JB)
     }
 
-    function FZ(JJ, cJ, ZJ) {
-      let FJ = new Map,
-        UJ = (JJ, cJ) => {
-          FJ.has(JJ) || FJ.set(JJ, []), FJ.get(JJ).push(cJ)
+    function Vd(BB, TB, dB) {
+      let VB = new Map,
+        yB = (BB, TB) => {
+          VB.has(BB) || VB.set(BB, []), VB.get(BB).push(TB)
         };
-      for (let eJ of JJ.nodes()) {
-        let cJ = JJ.node(eJ);
-        if ("number" == typeof cJ.rank && UJ(cJ.rank, eJ), "number" == typeof cJ.minRank && "number" == typeof cJ.maxRank)
-          for (let JJ = cJ.minRank; JJ <= cJ.maxRank; JJ++) JJ !== cJ.rank && UJ(JJ, eJ)
+      for (let pB of BB.nodes()) {
+        let TB = BB.node(pB);
+        if ("number" == typeof TB.rank && yB(TB.rank, pB), "number" == typeof TB.minRank && "number" == typeof TB.maxRank)
+          for (let BB = TB.minRank; BB <= TB.maxRank; BB++) BB !== TB.rank && yB(BB, pB)
       }
-      return cJ.map((function(cJ) {
-        return cZ(JJ, cJ, ZJ, FJ.get(cJ) || [])
+      return TB.map((function(TB) {
+        return Td(BB, TB, dB, VB.get(TB) || [])
       }))
     }
 
-    function UZ(JJ, cJ, ZJ, FJ) {
-      let UJ = !0,
-        eJ = new NJ;
-      JJ.forEach((function(JJ) {
-        ZJ.forEach((JJ => eJ.setEdge(JJ.left, JJ.right)));
-        let XJ = JJ.graph().root,
+    function yd(BB, TB, dB, VB) {
+      let yB = !0,
+        pB = new ZB;
+      BB.forEach((function(BB) {
+        dB.forEach((BB => pB.setEdge(BB.left, BB.right)));
+        let lB = BB.graph().root,
           {
-            result: AJ,
-            usedBias: qJ
-          } = JZ(JJ, XJ, eJ, FJ, UJ);
-        cJ && qJ && (UJ = !UJ), AJ.vs.forEach(((cJ, ZJ) => JJ.node(cJ).order = ZJ)),
-          function(JJ, cJ, ZJ) {
-            let FJ, UJ = {};
-            ZJ.forEach((ZJ => {
-              let eJ, XJ, AJ = JJ.parent(ZJ);
-              for (; AJ;) {
-                if (eJ = JJ.parent(AJ), eJ ? (XJ = UJ[eJ], UJ[eJ] = AJ) : (XJ = FJ, FJ = AJ), XJ && XJ !== AJ) return void cJ.setEdge(XJ, AJ);
-                AJ = eJ
+            result: JB,
+            usedBias: YB
+          } = Bd(BB, lB, pB, VB, yB);
+        TB && YB && (yB = !yB), JB.vs.forEach(((TB, dB) => BB.node(TB).order = dB)),
+          function(BB, TB, dB) {
+            let VB, yB = {};
+            dB.forEach((dB => {
+              let pB, lB, JB = BB.parent(dB);
+              for (; JB;) {
+                if (pB = BB.parent(JB), pB ? (lB = yB[pB], yB[pB] = JB) : (lB = VB, VB = JB), lB && lB !== JB) return void TB.setEdge(lB, JB);
+                JB = pB
               }
             }))
-          }(JJ, eJ, AJ.vs)
+          }(BB, pB, JB.vs)
       }))
     }
 
-    function eZ(JJ, cJ) {
-      Object.values(cJ).forEach((cJ => cJ.forEach(((cJ, ZJ) => JJ.node(cJ).order = ZJ))))
+    function pd(BB, TB) {
+      Object.values(TB).forEach((TB => TB.forEach(((TB, dB) => BB.node(TB).order = dB))))
     }
 
-    function XZ(JJ, cJ, ZJ) {
-      if (cJ > ZJ) {
-        let JJ = cJ;
-        cJ = ZJ, ZJ = JJ
+    function ld(BB, TB, dB) {
+      if (TB > dB) {
+        let BB = TB;
+        TB = dB, dB = BB
       }
-      let FJ = JJ[cJ];
-      FJ || (JJ[cJ] = FJ = {}), FJ[ZJ] = !0
+      let VB = BB[TB];
+      VB || (BB[TB] = VB = {}), VB[dB] = !0
     }
 
-    function AZ(JJ, cJ, ZJ) {
-      if (cJ > ZJ) {
-        let JJ = cJ;
-        cJ = ZJ, ZJ = JJ
+    function Jd(BB, TB, dB) {
+      if (TB > dB) {
+        let BB = TB;
+        TB = dB, dB = BB
       }
-      let FJ = JJ[cJ];
-      return void 0 !== FJ && Object.hasOwn(FJ, ZJ)
+      let VB = BB[TB];
+      return void 0 !== VB && Object.hasOwn(VB, dB)
     }
 
-    function qZ(JJ, cJ, ZJ, FJ) {
-      let UJ = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-        eJ = {},
-        XJ = function(JJ, cJ, ZJ, FJ) {
-          let UJ = new NJ,
-            eJ = JJ.graph(),
-            XJ = function(JJ, cJ, ZJ) {
-              return (FJ, UJ, eJ) => {
-                let XJ, AJ = FJ.node(UJ),
-                  qJ = FJ.node(eJ),
-                  jJ = 0;
-                if (jJ += AJ.width / 2, Object.hasOwn(AJ, "labelpos")) switch (AJ.labelpos.toLowerCase()) {
+    function Yd(BB, TB, dB, VB) {
+      let yB = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+        pB = {},
+        lB = function(BB, TB, dB, VB) {
+          let yB = new ZB,
+            pB = BB.graph(),
+            lB = function(BB, TB, dB) {
+              return (VB, yB, pB) => {
+                let lB, JB = VB.node(yB),
+                  YB = VB.node(pB),
+                  gB = 0;
+                if (gB += JB.width / 2, Object.hasOwn(JB, "labelpos")) switch (JB.labelpos.toLowerCase()) {
                   case "l":
-                    XJ = -AJ.width / 2;
+                    lB = -JB.width / 2;
                     break;
                   case "r":
-                    XJ = AJ.width / 2
+                    lB = JB.width / 2
                 }
-                if (XJ && (jJ += ZJ ? XJ : -XJ), XJ = void 0, jJ += (AJ.dummy ? cJ : JJ) / 2, jJ += (qJ.dummy ? cJ : JJ) / 2, jJ += qJ.width / 2, Object.hasOwn(qJ, "labelpos")) switch (qJ.labelpos.toLowerCase()) {
+                if (lB && (gB += dB ? lB : -lB), lB = void 0, gB += (JB.dummy ? TB : BB) / 2, gB += (YB.dummy ? TB : BB) / 2, gB += YB.width / 2, Object.hasOwn(YB, "labelpos")) switch (YB.labelpos.toLowerCase()) {
                   case "l":
-                    XJ = qJ.width / 2;
+                    lB = YB.width / 2;
                     break;
                   case "r":
-                    XJ = -qJ.width / 2
+                    lB = -YB.width / 2
                 }
-                return XJ && (jJ += ZJ ? XJ : -XJ), jJ
+                return lB && (gB += dB ? lB : -lB), gB
               }
-            }(eJ.nodesep, eJ.edgesep, FJ);
-          return cJ.forEach((cJ => {
-            let FJ;
-            cJ.forEach((cJ => {
-              let eJ = ZJ[cJ];
-              if (void 0 !== eJ) {
-                if (UJ.setNode(eJ), void 0 !== FJ) {
-                  let AJ = ZJ[FJ];
-                  if (void 0 !== AJ) {
-                    let ZJ = UJ.edge(AJ, eJ);
-                    UJ.setEdge(AJ, eJ, Math.max(XJ(JJ, cJ, FJ), ZJ || 0))
+            }(pB.nodesep, pB.edgesep, VB);
+          return TB.forEach((TB => {
+            let VB;
+            TB.forEach((TB => {
+              let pB = dB[TB];
+              if (void 0 !== pB) {
+                if (yB.setNode(pB), void 0 !== VB) {
+                  let JB = dB[VB];
+                  if (void 0 !== JB) {
+                    let dB = yB.edge(JB, pB);
+                    yB.setEdge(JB, pB, Math.max(lB(BB, TB, VB), dB || 0))
                   }
                 }
-                FJ = cJ
+                VB = TB
               }
             }))
-          })), UJ
-        }(JJ, cJ, ZJ, UJ),
-        AJ = UJ ? "borderLeft" : "borderRight";
+          })), yB
+        }(BB, TB, dB, yB),
+        JB = yB ? "borderLeft" : "borderRight";
 
-      function qJ(JJ, cJ) {
-        let ZJ = XJ.nodes().slice(),
-          FJ = {},
-          UJ = ZJ.pop();
-        for (; UJ;) {
-          if (FJ[UJ]) JJ(UJ);
+      function YB(BB, TB) {
+        let dB = lB.nodes().slice(),
+          VB = {},
+          yB = dB.pop();
+        for (; yB;) {
+          if (VB[yB]) BB(yB);
           else {
-            FJ[UJ] = !0, ZJ.push(UJ);
-            for (let JJ of cJ(UJ)) ZJ.push(JJ)
+            VB[yB] = !0, dB.push(yB);
+            for (let BB of TB(yB)) dB.push(BB)
           }
-          UJ = ZJ.pop()
+          yB = dB.pop()
         }
       }
-      return qJ((function(JJ) {
-        let cJ = XJ.inEdges(JJ);
-        eJ[JJ] = cJ ? cJ.reduce(((JJ, cJ) => {
-          var ZJ;
-          let FJ = null != (ZJ = eJ[cJ.v]) ? ZJ : 0,
-            UJ = XJ.edge(cJ);
-          return Math.max(JJ, FJ + (void 0 !== UJ ? UJ : 0))
+      return YB((function(BB) {
+        let TB = lB.inEdges(BB);
+        pB[BB] = TB ? TB.reduce(((BB, TB) => {
+          var dB;
+          let VB = null != (dB = pB[TB.v]) ? dB : 0,
+            yB = lB.edge(TB);
+          return Math.max(BB, VB + (void 0 !== yB ? yB : 0))
         }), 0) : 0
-      }), (function(JJ) {
-        return XJ.predecessors(JJ) || []
-      })), qJ((function(cJ) {
-        let ZJ = XJ.outEdges(cJ),
-          FJ = Number.POSITIVE_INFINITY;
-        ZJ && (FJ = ZJ.reduce(((JJ, cJ) => {
-          let ZJ = eJ[cJ.w],
-            FJ = XJ.edge(cJ);
-          return Math.min(JJ, (void 0 !== ZJ ? ZJ : 0) - (void 0 !== FJ ? FJ : 0))
+      }), (function(BB) {
+        return lB.predecessors(BB) || []
+      })), YB((function(TB) {
+        let dB = lB.outEdges(TB),
+          VB = Number.POSITIVE_INFINITY;
+        dB && (VB = dB.reduce(((BB, TB) => {
+          let dB = pB[TB.w],
+            VB = lB.edge(TB);
+          return Math.min(BB, (void 0 !== dB ? dB : 0) - (void 0 !== VB ? VB : 0))
         }), Number.POSITIVE_INFINITY));
-        let UJ = JJ.node(cJ);
-        FJ !== Number.POSITIVE_INFINITY && UJ.borderType !== AJ && (eJ[cJ] = Math.max(void 0 !== eJ[cJ] ? eJ[cJ] : 0, FJ))
-      }), (function(JJ) {
-        return XJ.successors(JJ) || []
-      })), Object.keys(FJ).forEach((JJ => {
-        var cJ;
-        let FJ = ZJ[JJ];
-        void 0 !== FJ && (eJ[JJ] = null != (cJ = eJ[FJ]) ? cJ : 0)
-      })), eJ
+        let yB = BB.node(TB);
+        VB !== Number.POSITIVE_INFINITY && yB.borderType !== JB && (pB[TB] = Math.max(void 0 !== pB[TB] ? pB[TB] : 0, VB))
+      }), (function(BB) {
+        return lB.successors(BB) || []
+      })), Object.keys(VB).forEach((BB => {
+        var TB;
+        let VB = dB[BB];
+        void 0 !== VB && (pB[BB] = null != (TB = pB[VB]) ? TB : 0)
+      })), pB
     }
 
-    function jZ(JJ, cJ) {
-      let ZJ, FJ = uJ(JJ),
-        UJ = Object.assign(function(JJ, cJ) {
-          let ZJ = {};
-          return cJ.length && cJ.reduce((function(cJ, FJ) {
-            let UJ = 0,
-              eJ = 0,
-              XJ = cJ.length,
-              AJ = FJ[FJ.length - 1];
-            return FJ.forEach(((cJ, qJ) => {
-              let jJ = function(JJ, cJ) {
-                  if (JJ.node(cJ).dummy) {
-                    let ZJ = JJ.predecessors(cJ);
-                    if (ZJ) return ZJ.find((cJ => JJ.node(cJ).dummy))
+    function gd(BB, TB) {
+      let dB, VB = CB(BB),
+        yB = Object.assign(function(BB, TB) {
+          let dB = {};
+          return TB.length && TB.reduce((function(TB, VB) {
+            let yB = 0,
+              pB = 0,
+              lB = TB.length,
+              JB = VB[VB.length - 1];
+            return VB.forEach(((TB, YB) => {
+              let gB = function(BB, TB) {
+                  if (BB.node(TB).dummy) {
+                    let dB = BB.predecessors(TB);
+                    if (dB) return dB.find((TB => BB.node(TB).dummy))
                   }
-                }(JJ, cJ),
-                YJ = jJ ? JJ.node(jJ).order : XJ;
-              (jJ || cJ === AJ) && (FJ.slice(eJ, qJ + 1).forEach((cJ => {
-                let FJ = JJ.predecessors(cJ);
-                FJ && FJ.forEach((FJ => {
-                  let eJ = JJ.node(FJ),
-                    XJ = eJ.order;
-                  (XJ < UJ || YJ < XJ) && (!eJ.dummy || !JJ.node(cJ).dummy) && XZ(ZJ, FJ, cJ)
+                }(BB, TB),
+                oB = gB ? BB.node(gB).order : lB;
+              (gB || TB === JB) && (VB.slice(pB, YB + 1).forEach((TB => {
+                let VB = BB.predecessors(TB);
+                VB && VB.forEach((VB => {
+                  let pB = BB.node(VB),
+                    lB = pB.order;
+                  (lB < yB || oB < lB) && (!pB.dummy || !BB.node(TB).dummy) && ld(dB, VB, TB)
                 }))
-              })), eJ = qJ + 1, UJ = YJ)
-            })), FJ
-          })), ZJ
-        }(JJ, FJ), function(JJ, cJ) {
-          let ZJ = {};
+              })), pB = YB + 1, yB = oB)
+            })), VB
+          })), dB
+        }(BB, VB), function(BB, TB) {
+          let dB = {};
 
-          function FJ(cJ, FJ, UJ, eJ, XJ) {
-            Jc(FJ, UJ).forEach((FJ => {
-              let UJ = cJ[FJ];
-              if (void 0 !== UJ && JJ.node(UJ).dummy) {
-                let cJ = JJ.predecessors(UJ);
-                cJ && cJ.forEach((cJ => {
-                  if (void 0 === cJ) return;
-                  let FJ = JJ.node(cJ);
-                  FJ.dummy && (FJ.order < eJ || FJ.order > XJ) && XZ(ZJ, cJ, UJ)
+          function VB(TB, VB, yB, pB, lB) {
+            BT(VB, yB).forEach((VB => {
+              let yB = TB[VB];
+              if (void 0 !== yB && BB.node(yB).dummy) {
+                let TB = BB.predecessors(yB);
+                TB && TB.forEach((TB => {
+                  if (void 0 === TB) return;
+                  let VB = BB.node(TB);
+                  VB.dummy && (VB.order < pB || VB.order > lB) && ld(dB, TB, yB)
                 }))
               }
             }))
           }
-          return cJ.length && cJ.reduce((function(cJ, ZJ) {
-            let UJ = -1,
-              eJ = -1,
-              XJ = 0;
-            return ZJ.forEach(((AJ, qJ) => {
-              if ("border" === JJ.node(AJ).dummy) {
-                let cJ = JJ.predecessors(AJ);
-                if (cJ && cJ.length) {
-                  let AJ = cJ[0];
-                  if (void 0 === AJ) return;
-                  eJ = JJ.node(AJ).order, FJ(ZJ, XJ, qJ, UJ, eJ), XJ = qJ, UJ = eJ
+          return TB.length && TB.reduce((function(TB, dB) {
+            let yB = -1,
+              pB = -1,
+              lB = 0;
+            return dB.forEach(((JB, YB) => {
+              if ("border" === BB.node(JB).dummy) {
+                let TB = BB.predecessors(JB);
+                if (TB && TB.length) {
+                  let JB = TB[0];
+                  if (void 0 === JB) return;
+                  pB = BB.node(JB).order, VB(dB, lB, YB, yB, pB), lB = YB, yB = pB
                 }
               }
-              FJ(ZJ, XJ, ZJ.length, eJ, cJ.length)
-            })), ZJ
-          })), ZJ
-        }(JJ, FJ)),
-        eJ = {};
-      ["u", "d"].forEach((XJ => {
-        ZJ = "u" === XJ ? FJ : Object.values(FJ).reverse(), ["l", "r"].forEach((FJ => {
-          "r" === FJ && (ZJ = ZJ.map((JJ => Object.values(JJ).reverse())));
-          let AJ = function(JJ, cJ, ZJ, FJ, UJ) {
-              let eJ = {},
-                XJ = {},
-                AJ = {};
-              return cJ.forEach((JJ => {
-                JJ.forEach(((JJ, cJ) => {
-                  eJ[JJ] = JJ, XJ[JJ] = JJ, AJ[JJ] = cJ
+              VB(dB, lB, dB.length, pB, TB.length)
+            })), dB
+          })), dB
+        }(BB, VB)),
+        pB = {};
+      ["u", "d"].forEach((lB => {
+        dB = "u" === lB ? VB : Object.values(VB).reverse(), ["l", "r"].forEach((VB => {
+          "r" === VB && (dB = dB.map((BB => Object.values(BB).reverse())));
+          let JB = function(BB, TB, dB, VB, yB) {
+              let pB = {},
+                lB = {},
+                JB = {};
+              return TB.forEach((BB => {
+                BB.forEach(((BB, TB) => {
+                  pB[BB] = BB, lB[BB] = BB, JB[BB] = TB
                 }))
-              })), cJ.forEach((cJ => {
-                let qJ = -1,
-                  jJ = -1,
-                  YJ = !1,
-                  hJ = cJ,
-                  DJ = cJ.findIndex((cJ => (null == UJ ? void 0 : UJ.includes(cJ)) || YZ(cJ, JJ, UJ)));
-                DJ > 0 && (hJ = [cJ[DJ], ...cJ.slice(0, DJ), ...cJ.slice(DJ + 1)], YJ = !0), hJ.forEach((cJ => {
-                  var hJ;
-                  let DJ = FJ(cJ);
-                  if (DJ && DJ.length) {
-                    null != UJ && UJ.includes(cJ) && (DJ = DJ.filter((cJ => YZ(cJ, JJ, UJ))));
-                    let FJ = DJ.sort(((JJ, cJ) => {
-                        let ZJ = AJ[JJ],
-                          FJ = AJ[cJ];
-                        return (void 0 !== ZJ ? ZJ : 0) - (void 0 !== FJ ? FJ : 0)
+              })), TB.forEach((TB => {
+                let YB = -1,
+                  gB = -1,
+                  oB = !1,
+                  kB = TB,
+                  LB = TB.findIndex((TB => (null == yB ? void 0 : yB.includes(TB)) || od(TB, BB, yB)));
+                LB > 0 && (kB = [TB[LB], ...TB.slice(0, LB), ...TB.slice(LB + 1)], oB = !0), kB.forEach((TB => {
+                  var kB;
+                  let LB = VB(TB);
+                  if (LB && LB.length) {
+                    null != yB && yB.includes(TB) && (LB = LB.filter((TB => od(TB, BB, yB))));
+                    let VB = LB.sort(((BB, TB) => {
+                        let dB = JB[BB],
+                          VB = JB[TB];
+                        return (void 0 !== dB ? dB : 0) - (void 0 !== VB ? VB : 0)
                       })),
-                      sJ = (FJ.length - 1) / 2;
-                    for (let JJ = Math.floor(sJ), UJ = Math.ceil(sJ); JJ <= UJ; ++JJ) {
-                      let UJ = FJ[JJ];
-                      if (void 0 === UJ) continue;
-                      let DJ = AJ[UJ];
-                      if (void 0 !== DJ && XJ[cJ] === cJ && qJ < DJ && AJ[UJ] !== jJ && !AZ(ZJ, cJ, UJ)) {
-                        let JJ = eJ[UJ];
-                        void 0 !== JJ && (XJ[UJ] = cJ, XJ[cJ] = eJ[cJ] = JJ, qJ = DJ, YJ && (qJ = -1, jJ = null != (hJ = AJ[UJ]) ? hJ : -1, YJ = !1))
+                      OB = (VB.length - 1) / 2;
+                    for (let BB = Math.floor(OB), yB = Math.ceil(OB); BB <= yB; ++BB) {
+                      let yB = VB[BB];
+                      if (void 0 === yB) continue;
+                      let LB = JB[yB];
+                      if (void 0 !== LB && lB[TB] === TB && YB < LB && JB[yB] !== gB && !Jd(dB, TB, yB)) {
+                        let BB = pB[yB];
+                        void 0 !== BB && (lB[yB] = TB, lB[TB] = pB[TB] = BB, YB = LB, oB && (YB = -1, gB = null != (kB = JB[yB]) ? kB : -1, oB = !1))
                       }
                     }
                   }
                 }))
               })), {
-                root: eJ,
-                align: XJ
+                root: pB,
+                align: lB
               }
-            }(JJ, ZJ, UJ, (cJ => ("u" === XJ ? JJ.predecessors(cJ) : JJ.successors(cJ)) || []), cJ),
-            qJ = qZ(JJ, ZJ, AJ.root, AJ.align, "r" === FJ);
-          "r" === FJ && (qJ = Zc(qJ, (JJ => -JJ))), eJ[XJ + FJ] = qJ
+            }(BB, dB, yB, (TB => ("u" === lB ? BB.predecessors(TB) : BB.successors(TB)) || []), TB),
+            YB = Yd(BB, dB, JB.root, JB.align, "r" === VB);
+          "r" === VB && (YB = dT(YB, (BB => -BB))), pB[lB + VB] = YB
         }))
       }));
-      let XJ = function(JJ, cJ) {
-        return Object.values(cJ).reduce(((cJ, ZJ) => {
-          let FJ = Number.NEGATIVE_INFINITY,
-            UJ = Number.POSITIVE_INFINITY;
-          Object.entries(ZJ).forEach((cJ => {
-            let [ZJ, eJ] = cJ, XJ = function(JJ, cJ) {
-              return JJ.node(cJ).width
-            }(JJ, ZJ) / 2;
-            FJ = Math.max(eJ + XJ, FJ), UJ = Math.min(eJ - XJ, UJ)
+      let lB = function(BB, TB) {
+        return Object.values(TB).reduce(((TB, dB) => {
+          let VB = Number.NEGATIVE_INFINITY,
+            yB = Number.POSITIVE_INFINITY;
+          Object.entries(dB).forEach((TB => {
+            let [dB, pB] = TB, lB = function(BB, TB) {
+              return BB.node(TB).width
+            }(BB, dB) / 2;
+            VB = Math.max(pB + lB, VB), yB = Math.min(pB - lB, yB)
           }));
-          let eJ = FJ - UJ;
-          return eJ < cJ[0] && (cJ = [eJ, ZJ]), cJ
+          let pB = VB - yB;
+          return pB < TB[0] && (TB = [pB, dB]), TB
         }), [Number.POSITIVE_INFINITY, null])[1]
-      }(JJ, eJ);
-      return function(JJ, cJ) {
-          let ZJ = Object.values(cJ),
-            FJ = LJ(Math.min, ZJ),
-            UJ = LJ(Math.max, ZJ);
-          ["u", "d"].forEach((ZJ => {
-            ["l", "r"].forEach((eJ => {
-              let XJ = ZJ + eJ,
-                AJ = JJ[XJ];
-              if (!AJ || AJ === cJ) return;
-              let qJ = Object.values(AJ),
-                jJ = FJ - LJ(Math.min, qJ);
-              "l" !== eJ && (jJ = UJ - LJ(Math.max, qJ)), jJ && (JJ[XJ] = Zc(AJ, (JJ => JJ + jJ)))
+      }(BB, pB);
+      return function(BB, TB) {
+          let dB = Object.values(TB),
+            VB = xB(Math.min, dB),
+            yB = xB(Math.max, dB);
+          ["u", "d"].forEach((dB => {
+            ["l", "r"].forEach((pB => {
+              let lB = dB + pB,
+                JB = BB[lB];
+              if (!JB || JB === TB) return;
+              let YB = Object.values(JB),
+                gB = VB - xB(Math.min, YB);
+              "l" !== pB && (gB = yB - xB(Math.max, YB)), gB && (BB[lB] = dT(JB, (BB => BB + gB)))
             }))
           }))
-        }(eJ, XJ),
-        function(JJ) {
-          let cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
-            ZJ = JJ.ul;
-          return ZJ ? Zc(ZJ, ((ZJ, FJ) => {
-            var UJ, eJ;
-            if (cJ) {
-              let ZJ = cJ.toLowerCase(),
-                UJ = JJ[ZJ];
-              if (UJ && void 0 !== UJ[FJ]) return UJ[FJ]
+        }(pB, lB),
+        function(BB) {
+          let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
+            dB = BB.ul;
+          return dB ? dT(dB, ((dB, VB) => {
+            var yB, pB;
+            if (TB) {
+              let dB = TB.toLowerCase(),
+                yB = BB[dB];
+              if (yB && void 0 !== yB[VB]) return yB[VB]
             }
-            let XJ = Object.values(JJ).map((JJ => {
-              let cJ = JJ[FJ];
-              return void 0 !== cJ ? cJ : 0
-            })).sort(((JJ, cJ) => JJ - cJ));
-            return ((null != (UJ = XJ[1]) ? UJ : 0) + (null != (eJ = XJ[2]) ? eJ : 0)) / 2
+            let lB = Object.values(BB).map((BB => {
+              let TB = BB[VB];
+              return void 0 !== TB ? TB : 0
+            })).sort(((BB, TB) => BB - TB));
+            return ((null != (yB = lB[1]) ? yB : 0) + (null != (pB = lB[2]) ? pB : 0)) / 2
           })) : {}
-        }(eJ, JJ.graph().align)
+        }(pB, BB.graph().align)
     }
 
-    function YZ(JJ, cJ, ZJ) {
-      var FJ;
-      if (!ZJ) return !1;
-      let UJ = null == (FJ = cJ.node(JJ)) ? void 0 : FJ.edgeObj;
-      if (!UJ || cJ.node(JJ).edgeLabel.reversed) return !1;
-      let eJ = ZJ.indexOf(null == UJ ? void 0 : UJ.v),
-        XJ = ZJ.indexOf(null == UJ ? void 0 : UJ.w);
-      return -1 !== eJ && -1 !== XJ && eJ === (XJ + 1) % ZJ.length || eJ === (XJ - 1) % ZJ.length
+    function od(BB, TB, dB) {
+      var VB;
+      if (!dB) return !1;
+      let yB = null == (VB = TB.node(BB)) ? void 0 : VB.edgeObj;
+      if (!yB || TB.node(BB).edgeLabel.reversed) return !1;
+      let pB = dB.indexOf(null == yB ? void 0 : yB.v),
+        lB = dB.indexOf(null == yB ? void 0 : yB.w);
+      return -1 !== pB && -1 !== lB && pB === (lB + 1) % dB.length || pB === (lB - 1) % dB.length
     }
 
-    function hZ(JJ, cJ) {
-      (function(JJ) {
-        let cJ = uJ(JJ),
-          ZJ = JJ.graph(),
-          FJ = ZJ.ranksep,
-          UJ = ZJ.rankalign,
-          eJ = 0;
-        cJ.forEach((cJ => {
-          let ZJ = cJ.reduce(((cJ, ZJ) => {
-            var FJ;
-            let UJ = null != (FJ = JJ.node(ZJ).height) ? FJ : 0;
-            return cJ > UJ ? cJ : UJ
+    function kd(BB, TB) {
+      (function(BB) {
+        let TB = CB(BB),
+          dB = BB.graph(),
+          VB = dB.ranksep,
+          yB = dB.rankalign,
+          pB = 0;
+        TB.forEach((TB => {
+          let dB = TB.reduce(((TB, dB) => {
+            var VB;
+            let yB = null != (VB = BB.node(dB).height) ? VB : 0;
+            return TB > yB ? TB : yB
           }), 0);
-          cJ.forEach((cJ => {
-            let FJ = JJ.node(cJ);
-            FJ.y = "top" === UJ ? eJ + FJ.height / 2 : "bottom" === UJ ? eJ + ZJ - FJ.height / 2 : eJ + ZJ / 2
-          })), eJ += ZJ + FJ
+          TB.forEach((TB => {
+            let VB = BB.node(TB);
+            VB.y = "top" === yB ? pB + VB.height / 2 : "bottom" === yB ? pB + dB - VB.height / 2 : pB + dB / 2
+          })), pB += dB + VB
         }))
-      })(JJ = TJ(JJ)), Object.entries(jZ(JJ, cJ)).forEach((cJ => {
-        let [ZJ, FJ] = cJ;
-        return JJ.node(ZJ).x = FJ
+      })(BB = WB(BB)), Object.entries(gd(BB, TB)).forEach((TB => {
+        let [dB, VB] = TB;
+        return BB.node(dB).x = VB
       }))
     }
-    var DZ = new WeakMap;
+    var Ld = new WeakMap;
 
-    function sZ(JJ) {
-      return GZ(JJ, tJ, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}), JJ
+    function Od(BB) {
+      return ud(BB, bB, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}), BB
     }
 
-    function nZ(JJ, cJ, ZJ) {
-      let FJ = cJ;
-      for (; void 0 !== FJ;) {
-        let cJ = JJ.parent(FJ);
-        if (cJ === ZJ) return FJ;
-        FJ = cJ
+    function Dd(BB, TB, dB) {
+      let VB = TB;
+      for (; void 0 !== VB;) {
+        let TB = BB.parent(VB);
+        if (TB === dB) return VB;
+        VB = TB
       }
     }
 
-    function GZ(JJ, cJ, ZJ) {
-      var FJ;
-      let UJ = JJ.nodes().filter((cJ => JJ.children(cJ).length)),
-        eJ = {};
-      UJ.forEach((FJ => {
-        let UJ = JJ.node(FJ);
-        if (UJ && UJ.rankdir) {
-          let XJ = new NJ({
+    function ud(BB, TB, dB) {
+      var VB;
+      let yB = BB.nodes().filter((TB => BB.children(TB).length)),
+        pB = {};
+      yB.forEach((VB => {
+        let yB = BB.node(VB);
+        if (yB && yB.rankdir) {
+          let lB = new ZB({
             multigraph: !0,
             compound: !0
           });
-          XJ.setGraph({
-            rankdir: UJ.rankdir
+          lB.setGraph({
+            rankdir: yB.rankdir
           });
-          let AJ = JJ.children(FJ);
-          AJ.forEach((cJ => {
-            let ZJ = {
-              ...JJ.node(cJ)
+          let JB = BB.children(VB);
+          JB.forEach((TB => {
+            let dB = {
+              ...BB.node(TB)
             };
-            XJ.setNode(cJ, ZJ);
-            let UJ = JJ.parent(cJ);
-            UJ && UJ !== FJ && AJ.includes(UJ) && XJ.setParent(cJ, UJ)
+            lB.setNode(TB, dB);
+            let yB = BB.parent(TB);
+            yB && yB !== VB && JB.includes(yB) && lB.setParent(TB, yB)
           }));
-          let qJ = new Set;
-          JJ.edges().forEach((cJ => {
-            let ZJ = nZ(JJ, cJ.v, FJ),
-              UJ = nZ(JJ, cJ.w, FJ);
-            if (ZJ && UJ && ZJ !== UJ) {
-              let FJ = `${ZJ}\0${UJ}`;
-              qJ.has(FJ) || (qJ.add(FJ), XJ.setEdge(ZJ, UJ, {
-                ...JJ.edge(cJ)
+          let YB = new Set;
+          BB.edges().forEach((TB => {
+            let dB = Dd(BB, TB.v, VB),
+              yB = Dd(BB, TB.w, VB);
+            if (dB && yB && dB !== yB) {
+              let VB = `${dB}\0${yB}`;
+              YB.has(VB) || (YB.add(VB), lB.setEdge(dB, yB, {
+                ...BB.edge(TB)
               }))
             }
-          })), GZ(XJ, cJ, ZJ);
-          let jJ = SZ(XJ);
-          fZ(jJ, cJ, ZJ, null), xZ(XJ, jJ);
-          let YJ = 1 / 0,
-            hJ = 1 / 0,
-            DJ = -1 / 0,
-            sJ = -1 / 0;
-          XJ.nodes().forEach((JJ => {
-            if (JJ === FJ) return;
-            let cJ = XJ.node(JJ);
-            cJ && "number" == typeof cJ.x && "number" == typeof cJ.y && "number" == typeof cJ.width && "number" == typeof cJ.height && (YJ = Math.min(YJ, cJ.x - cJ.width / 2), DJ = Math.max(DJ, cJ.x + cJ.width / 2), hJ = Math.min(hJ, cJ.y - cJ.height / 2), sJ = Math.max(sJ, cJ.y + cJ.height / 2))
-          })), (!isFinite(YJ) || !isFinite(hJ) || !isFinite(DJ) || !isFinite(sJ)) && (YJ = hJ = 0, DJ = sJ = 0);
-          let nJ = DJ - YJ,
-            GJ = sJ - hJ;
-          eJ[FJ] = {
-            minX: YJ,
-            Ze: hJ,
-            maxX: DJ,
-            Fe: sJ,
-            width: nJ,
-            height: GJ,
-            offsetX: YJ,
-            offsetY: hJ
-          }, UJ._dagreClusterSubgraph = XJ
+          })), ud(lB, TB, dB);
+          let gB = wd(lB);
+          Hd(gB, TB, dB, null), Ed(lB, gB);
+          let oB = 1 / 0,
+            kB = 1 / 0,
+            LB = -1 / 0,
+            OB = -1 / 0;
+          lB.nodes().forEach((BB => {
+            if (BB === VB) return;
+            let TB = lB.node(BB);
+            TB && "number" == typeof TB.x && "number" == typeof TB.y && "number" == typeof TB.width && "number" == typeof TB.height && (oB = Math.min(oB, TB.x - TB.width / 2), LB = Math.max(LB, TB.x + TB.width / 2), kB = Math.min(kB, TB.y - TB.height / 2), OB = Math.max(OB, TB.y + TB.height / 2))
+          })), (!isFinite(oB) || !isFinite(kB) || !isFinite(LB) || !isFinite(OB)) && (oB = kB = 0, LB = OB = 0);
+          let DB = LB - oB,
+            uB = OB - kB;
+          pB[VB] = {
+            minX: oB,
+            UB: kB,
+            maxX: LB,
+            FB: OB,
+            width: DB,
+            height: uB,
+            offsetX: oB,
+            offsetY: kB
+          }, yB._dagreClusterSubgraph = lB
         }
       }));
-      let XJ = [],
-        AJ = new Map;
-      UJ.forEach((cJ => {
-        let ZJ = JJ.node(cJ);
-        ZJ && ZJ.rankdir && eJ[cJ] && AJ.set(cJ, (JJ.children(cJ) || []).filter((JJ => JJ !== cJ)))
+      let lB = [],
+        JB = new Map;
+      yB.forEach((TB => {
+        let dB = BB.node(TB);
+        dB && dB.rankdir && pB[TB] && JB.set(TB, (BB.children(TB) || []).filter((BB => BB !== TB)))
       }));
-      let qJ = new Set([...AJ.values()].flat()),
-        jJ = new Map;
-      AJ.forEach(((cJ, ZJ) => {
-        qJ.has(ZJ) || jJ.set(ZJ, (cJ => {
-          let ZJ = [],
-            FJ = (JJ.children(cJ) || []).filter((JJ => JJ !== cJ));
-          for (; FJ.length > 0;) {
-            let cJ = FJ.shift();
-            ZJ.push(cJ), (JJ.children(cJ) || []).filter((JJ => JJ !== cJ)).forEach((JJ => FJ.push(JJ)))
+      let YB = new Set([...JB.values()].flat()),
+        gB = new Map;
+      JB.forEach(((TB, dB) => {
+        YB.has(dB) || gB.set(dB, (TB => {
+          let dB = [],
+            VB = (BB.children(TB) || []).filter((BB => BB !== TB));
+          for (; VB.length > 0;) {
+            let TB = VB.shift();
+            dB.push(TB), (BB.children(TB) || []).filter((BB => BB !== TB)).forEach((BB => VB.push(BB)))
           }
-          return ZJ
-        })(ZJ))
+          return dB
+        })(dB))
       }));
-      let YJ = new Set([...jJ.values()].flat()),
-        hJ = JJ => {
-          for (let [cJ, ZJ] of jJ)
-            if (ZJ.includes(JJ)) return cJ;
-          return JJ
+      let oB = new Set([...gB.values()].flat()),
+        kB = BB => {
+          for (let [TB, dB] of gB)
+            if (dB.includes(BB)) return TB;
+          return BB
         },
-        DJ = [];
-      JJ.edges().forEach((cJ => {
-        (YJ.has(cJ.v) || YJ.has(cJ.w)) && DJ.push({
-          edge: cJ,
-          label: JJ.edge(cJ)
+        LB = [];
+      BB.edges().forEach((TB => {
+        (oB.has(TB.v) || oB.has(TB.w)) && LB.push({
+          edge: TB,
+          label: BB.edge(TB)
         })
       }));
-      let sJ = new Map;
-      YJ.forEach((cJ => {
-        let ZJ = JJ.parent(cJ);
-        sJ.set(cJ, "string" == typeof ZJ ? ZJ : void 0)
-      })), jJ.forEach(((cJ, ZJ) => {
-        let FJ = JJ.node(ZJ),
-          UJ = [];
-        cJ.forEach((cJ => {
-          let ZJ = JJ.node(cJ);
-          ZJ && (UJ.push({
-            id: cJ,
-            node: ZJ,
-            parent: sJ.get(cJ)
-          }), JJ.removeNode(cJ))
+      let OB = new Map;
+      oB.forEach((TB => {
+        let dB = BB.parent(TB);
+        OB.set(TB, "string" == typeof dB ? dB : void 0)
+      })), gB.forEach(((TB, dB) => {
+        let VB = BB.node(dB),
+          yB = [];
+        TB.forEach((TB => {
+          let dB = BB.node(TB);
+          dB && (yB.push({
+            id: TB,
+            node: dB,
+            parent: OB.get(TB)
+          }), BB.removeNode(TB))
         }));
-        let AJ = DJ.filter((JJ => {
+        let JB = LB.filter((BB => {
             let {
-              edge: ZJ
-            } = JJ;
-            return cJ.includes(ZJ.v) || cJ.includes(ZJ.w)
+              edge: dB
+            } = BB;
+            return TB.includes(dB.v) || TB.includes(dB.w)
           })),
-          qJ = eJ[ZJ];
-        FJ && (XJ.push({
-          clusterId: ZJ,
-          subgraph: FJ._dagreClusterSubgraph,
-          bounds: qJ,
-          children: cJ,
-          removedNodes: UJ,
-          removedEdges: AJ
-        }), FJ.width = qJ.width, FJ.height = qJ.height)
+          YB = pB[dB];
+        VB && (lB.push({
+          clusterId: dB,
+          subgraph: VB._dagreClusterSubgraph,
+          bounds: YB,
+          children: TB,
+          removedNodes: yB,
+          removedEdges: JB
+        }), VB.width = YB.width, VB.height = YB.height)
       }));
-      let nJ = new Set;
-      DJ.forEach((cJ => {
+      let DB = new Set;
+      LB.forEach((TB => {
         let {
-          edge: ZJ,
-          label: FJ
-        } = cJ, UJ = hJ(ZJ.v), eJ = hJ(ZJ.w);
-        if (UJ !== eJ && JJ.hasNode(UJ) && JJ.hasNode(eJ)) {
-          let cJ = `${UJ}\0${eJ}`;
-          nJ.has(cJ) || (nJ.add(cJ), JJ.setEdge(UJ, eJ, {
-            ...FJ,
+          edge: dB,
+          label: VB
+        } = TB, yB = kB(dB.v), pB = kB(dB.w);
+        if (yB !== pB && BB.hasNode(yB) && BB.hasNode(pB)) {
+          let TB = `${yB}\0${pB}`;
+          DB.has(TB) || (DB.add(TB), BB.setEdge(yB, pB, {
+            ...VB,
             width: 0,
             height: 0
           }))
         }
       }));
-      let GJ = SZ(JJ),
-        fJ = fZ(GJ, cJ, ZJ, null != (FJ = DZ.get(JJ)) ? FJ : null);
-      DZ.set(JJ, fJ), xZ(JJ, GJ), nJ.forEach((cJ => {
-        let ZJ = cJ.indexOf("\0"),
-          FJ = cJ.slice(0, ZJ),
-          UJ = cJ.slice(ZJ + 1);
-        JJ.hasEdge(FJ, UJ) && JJ.removeEdge(FJ, UJ)
-      })), XJ.forEach((cJ => {
+      let uB = wd(BB),
+        HB = Hd(uB, TB, dB, null != (VB = Ld.get(BB)) ? VB : null);
+      Ld.set(BB, HB), Ed(BB, uB), DB.forEach((TB => {
+        let dB = TB.indexOf("\0"),
+          VB = TB.slice(0, dB),
+          yB = TB.slice(dB + 1);
+        BB.hasEdge(VB, yB) && BB.removeEdge(VB, yB)
+      })), lB.forEach((TB => {
         let {
-          clusterId: ZJ,
-          subgraph: FJ,
-          bounds: UJ,
-          removedNodes: eJ,
-          removedEdges: XJ
-        } = cJ;
-        var AJ, qJ;
-        let jJ = JJ.node(ZJ),
-          YJ = null != (AJ = null == jJ ? void 0 : jJ.x) ? AJ : 0,
-          hJ = null != (qJ = null == jJ ? void 0 : jJ.y) ? qJ : 0,
-          DJ = (UJ.minX + UJ.maxX) / 2,
-          sJ = (UJ.Ze + UJ.Fe) / 2;
-        eJ.forEach((cJ => {
+          clusterId: dB,
+          subgraph: VB,
+          bounds: yB,
+          removedNodes: pB,
+          removedEdges: lB
+        } = TB;
+        var JB, YB;
+        let gB = BB.node(dB),
+          oB = null != (JB = null == gB ? void 0 : gB.x) ? JB : 0,
+          kB = null != (YB = null == gB ? void 0 : gB.y) ? YB : 0,
+          LB = (yB.minX + yB.maxX) / 2,
+          OB = (yB.UB + yB.FB) / 2;
+        pB.forEach((TB => {
           let {
-            id: ZJ,
-            node: FJ,
-            parent: UJ
-          } = cJ;
-          JJ.setNode(ZJ, FJ), void 0 !== UJ && JJ.setParent(ZJ, UJ)
-        })), XJ.forEach((cJ => {
+            id: dB,
+            node: VB,
+            parent: yB
+          } = TB;
+          BB.setNode(dB, VB), void 0 !== yB && BB.setParent(dB, yB)
+        })), lB.forEach((TB => {
           let {
-            edge: ZJ,
-            label: FJ
-          } = cJ;
-          JJ.setEdge(ZJ, FJ)
-        })), FJ.nodes().forEach((cJ => {
-          if (cJ === ZJ) return;
-          let UJ = FJ.node(cJ),
-            eJ = JJ.node(cJ);
-          eJ && UJ && "number" == typeof UJ.x && "number" == typeof UJ.y && (eJ.x = YJ + (UJ.x - DJ), eJ.y = hJ + (UJ.y - sJ))
-        })), delete jJ._dagreClusterSubgraph
-      })), UJ.forEach((cJ => {
-        var ZJ, FJ;
-        let UJ = JJ.node(cJ),
-          XJ = eJ[cJ];
-        if (UJ && UJ.rankdir && UJ._dagreClusterSubgraph && XJ) {
-          let eJ = UJ._dagreClusterSubgraph,
-            AJ = null != (ZJ = UJ.x) ? ZJ : 0,
-            qJ = null != (FJ = UJ.y) ? FJ : 0,
-            jJ = (XJ.minX + XJ.maxX) / 2,
-            YJ = (XJ.Ze + XJ.Fe) / 2;
-          eJ.nodes().forEach((ZJ => {
-            if (ZJ === cJ) return;
-            let FJ = eJ.node(ZJ),
-              UJ = JJ.node(ZJ);
-            if (UJ && FJ && "number" == typeof FJ.x && "number" == typeof FJ.y) {
-              let JJ = FJ.x - jJ,
-                cJ = FJ.y - YJ;
-              UJ.x = AJ + JJ, UJ.y = qJ + cJ
+            edge: dB,
+            label: VB
+          } = TB;
+          BB.setEdge(dB, VB)
+        })), VB.nodes().forEach((TB => {
+          if (TB === dB) return;
+          let yB = VB.node(TB),
+            pB = BB.node(TB);
+          pB && yB && "number" == typeof yB.x && "number" == typeof yB.y && (pB.x = oB + (yB.x - LB), pB.y = kB + (yB.y - OB))
+        })), delete gB._dagreClusterSubgraph
+      })), yB.forEach((TB => {
+        var dB, VB;
+        let yB = BB.node(TB),
+          lB = pB[TB];
+        if (yB && yB.rankdir && yB._dagreClusterSubgraph && lB) {
+          let pB = yB._dagreClusterSubgraph,
+            JB = null != (dB = yB.x) ? dB : 0,
+            YB = null != (VB = yB.y) ? VB : 0,
+            gB = (lB.minX + lB.maxX) / 2,
+            oB = (lB.UB + lB.FB) / 2;
+          pB.nodes().forEach((dB => {
+            if (dB === TB) return;
+            let VB = pB.node(dB),
+              yB = BB.node(dB);
+            if (yB && VB && "number" == typeof VB.x && "number" == typeof VB.y) {
+              let BB = VB.x - gB,
+                TB = VB.y - oB;
+              yB.x = JB + BB, yB.y = YB + TB
             }
-          })), delete UJ._dagreClusterSubgraph
+          })), delete yB._dagreClusterSubgraph
         }
       }))
     }
 
-    function fZ(JJ, cJ, ZJ) {
-      let FJ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-      var UJ, eJ;
-      let XJ = !1 !== (null == ZJ ? void 0 : ZJ.useDynamic),
-        AJ = XJ && null != (UJ = null == FJ ? void 0 : FJ.graph) ? UJ : null,
-        qJ = XJ && null != (eJ = null == FJ ? void 0 : FJ.rawNodes) ? eJ : null;
-      cJ("    makeSpaceForEdgeLabels", (() => function(JJ) {
-        let cJ = JJ.graph();
-        cJ.ranksep /= 2, JJ.edges().forEach((ZJ => {
-          var FJ;
-          let UJ = JJ.edge(ZJ);
-          UJ.minlen *= 2, "c" !== (null != (FJ = UJ.labelpos) ? FJ : "r").toLowerCase() && ("TB" === cJ.rankdir || "BT" === cJ.rankdir ? UJ.width += UJ.labeloffset : UJ.height += UJ.labeloffset)
+    function Hd(BB, TB, dB) {
+      let VB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+      var yB, pB;
+      let lB = !1 !== (null == dB ? void 0 : dB.useDynamic),
+        JB = lB && null != (yB = null == VB ? void 0 : VB.graph) ? yB : null,
+        YB = lB && null != (pB = null == VB ? void 0 : VB.rawNodes) ? pB : null;
+      TB("    makeSpaceForEdgeLabels", (() => function(BB) {
+        let TB = BB.graph();
+        TB.ranksep /= 2, BB.edges().forEach((dB => {
+          var VB;
+          let yB = BB.edge(dB);
+          yB.minlen *= 2, "c" !== (null != (VB = yB.labelpos) ? VB : "r").toLowerCase() && ("TB" === TB.rankdir || "BT" === TB.rankdir ? yB.width += yB.labeloffset : yB.height += yB.labeloffset)
         }))
-      }(JJ))), cJ("    removeSelfEdges", (() => function(JJ) {
-        JJ.edges().forEach((cJ => {
-          if (cJ.v === cJ.w) {
-            let ZJ = JJ.node(cJ.v);
-            ZJ.selfEdges || (ZJ.selfEdges = []), ZJ.selfEdges.push({
-              e: cJ,
-              label: JJ.edge(cJ)
-            }), JJ.removeEdge(cJ)
+      }(BB))), TB("    removeSelfEdges", (() => function(BB) {
+        BB.edges().forEach((TB => {
+          if (TB.v === TB.w) {
+            let dB = BB.node(TB.v);
+            dB.selfEdges || (dB.selfEdges = []), dB.selfEdges.push({
+              e: TB,
+              label: BB.edge(TB)
+            }), BB.removeEdge(TB)
           }
         }))
-      }(JJ))), cJ("    acyclic", (() => sc(JJ, AJ))), cJ("    nestingGraph.run", (() => dc(JJ))), cJ("    rank", (() => Hc(TJ(JJ)))), cJ("    injectEdgeLabelProxies", (() => function(JJ) {
-        JJ.edges().forEach((cJ => {
-          let ZJ = JJ.edge(cJ);
-          if (ZJ.width && ZJ.height) {
-            let ZJ = JJ.node(cJ.v),
-              FJ = {
-                rank: (JJ.node(cJ.w).rank - ZJ.rank) / 2 + ZJ.rank,
-                e: cJ
+      }(BB))), TB("    acyclic", (() => OT(BB, JB))), TB("    nestingGraph.run", (() => RT(BB))), TB("    rank", (() => cT(WB(BB)))), TB("    injectEdgeLabelProxies", (() => function(BB) {
+        BB.edges().forEach((TB => {
+          let dB = BB.edge(TB);
+          if (dB.width && dB.height) {
+            let dB = BB.node(TB.v),
+              VB = {
+                rank: (BB.node(TB.w).rank - dB.rank) / 2 + dB.rank,
+                e: TB
               };
-            OJ(JJ, "edge-proxy", FJ, "_ep")
+            XB(BB, "edge-proxy", VB, "_ep")
           }
         }))
-      }(JJ))), cJ("    removeEmptyRanks", (() => function(JJ) {
-        let cJ = JJ.nodes().map((cJ => JJ.node(cJ).rank)).filter((JJ => void 0 !== JJ)),
-          ZJ = LJ(Math.min, cJ),
-          FJ = [];
-        JJ.nodes().forEach((cJ => {
-          let UJ = JJ.node(cJ).rank - ZJ;
-          FJ[UJ] || (FJ[UJ] = []), FJ[UJ].push(cJ)
+      }(BB))), TB("    removeEmptyRanks", (() => function(BB) {
+        let TB = BB.nodes().map((TB => BB.node(TB).rank)).filter((BB => void 0 !== BB)),
+          dB = xB(Math.min, TB),
+          VB = [];
+        BB.nodes().forEach((TB => {
+          let yB = BB.node(TB).rank - dB;
+          VB[yB] || (VB[yB] = []), VB[yB].push(TB)
         }));
-        let UJ = 0,
-          eJ = JJ.graph().nodeRankFactor;
-        Array.from(FJ).forEach(((cJ, ZJ) => {
-          void 0 === cJ && ZJ % eJ !== 0 ? --UJ : void 0 !== cJ && UJ && cJ.forEach((cJ => JJ.node(cJ).rank += UJ))
+        let yB = 0,
+          pB = BB.graph().nodeRankFactor;
+        Array.from(VB).forEach(((TB, dB) => {
+          void 0 === TB && dB % pB !== 0 ? --yB : void 0 !== TB && yB && TB.forEach((TB => BB.node(TB).rank += yB))
         }))
-      }(JJ))), cJ("    nestingGraph.cleanup", (() => function(JJ) {
-        let cJ = JJ.graph();
-        JJ.removeNode(cJ.nestingRoot), delete cJ.nestingRoot, JJ.edges().forEach((cJ => {
-          JJ.edge(cJ).nestingEdge && JJ.removeEdge(cJ)
+      }(BB))), TB("    nestingGraph.cleanup", (() => function(BB) {
+        let TB = BB.graph();
+        BB.removeNode(TB.nestingRoot), delete TB.nestingRoot, BB.edges().forEach((TB => {
+          BB.edge(TB).nestingEdge && BB.removeEdge(TB)
         }))
-      }(JJ))), cJ("    normalizeRanks", (() => function(JJ) {
-        let cJ = JJ.nodes().map((cJ => {
-            let ZJ = JJ.node(cJ).rank;
-            return void 0 === ZJ ? Number.MAX_VALUE : ZJ
+      }(BB))), TB("    normalizeRanks", (() => function(BB) {
+        let TB = BB.nodes().map((TB => {
+            let dB = BB.node(TB).rank;
+            return void 0 === dB ? Number.MAX_VALUE : dB
           })),
-          ZJ = LJ(Math.min, cJ);
-        JJ.nodes().forEach((cJ => {
-          let FJ = JJ.node(cJ);
-          Object.hasOwn(FJ, "rank") && (FJ.rank -= ZJ)
+          dB = xB(Math.min, TB);
+        BB.nodes().forEach((TB => {
+          let VB = BB.node(TB);
+          Object.hasOwn(VB, "rank") && (VB.rank -= dB)
         }))
-      }(JJ))), cJ("    assignRankMinMax", (() => function(JJ) {
-        let cJ = 0;
-        JJ.nodes().forEach((ZJ => {
-          let FJ = JJ.node(ZJ);
-          FJ.borderTop && (FJ.minRank = JJ.node(FJ.borderTop).rank, FJ.maxRank = JJ.node(FJ.borderBottom).rank, cJ = Math.max(cJ, FJ.maxRank))
-        })), JJ.graph().maxRank = cJ
-      }(JJ))), cJ("    removeEdgeLabelProxies", (() => function(JJ) {
-        JJ.nodes().forEach((cJ => {
-          let ZJ = JJ.node(cJ);
-          if ("edge-proxy" === ZJ.dummy) {
-            let FJ = ZJ;
-            JJ.edge(FJ.e).labelRank = ZJ.rank, JJ.removeNode(cJ)
+      }(BB))), TB("    assignRankMinMax", (() => function(BB) {
+        let TB = 0;
+        BB.nodes().forEach((dB => {
+          let VB = BB.node(dB);
+          VB.borderTop && (VB.minRank = BB.node(VB.borderTop).rank, VB.maxRank = BB.node(VB.borderBottom).rank, TB = Math.max(TB, VB.maxRank))
+        })), BB.graph().maxRank = TB
+      }(BB))), TB("    removeEdgeLabelProxies", (() => function(BB) {
+        BB.nodes().forEach((TB => {
+          let dB = BB.node(TB);
+          if ("edge-proxy" === dB.dummy) {
+            let VB = dB;
+            BB.edge(VB.e).labelRank = dB.rank, BB.removeNode(TB)
           }
         }))
-      }(JJ))), cJ("    normalize.run", (() => nc(JJ))), cJ("    parentDummyChains", (() => pc(JJ))), cJ("    addBorderSegments", (() => Nc(JJ))), cJ("    order", (() => ZZ(JJ, ZJ, qJ))), cJ("    insertSelfEdges", (() => function(JJ) {
-        uJ(JJ).forEach((cJ => {
-          let ZJ = 0;
-          cJ.forEach(((cJ, FJ) => {
-            let UJ = JJ.node(cJ);
-            "number" != typeof UJ.rank && (UJ.rank = 0), UJ.order = FJ + ZJ, (UJ.selfEdges || []).forEach((cJ => {
-              OJ(JJ, "selfedge", {
-                width: cJ.label.width,
-                height: cJ.label.height,
-                rank: UJ.rank,
-                order: FJ + ++ZJ,
-                e: cJ.e,
-                edgeLabel: cJ.label
-              }, "_se"), (!Array.isArray(cJ.label.points) || 7 !== cJ.label.points.length) && (cJ.label.points = [{
+      }(BB))), TB("    normalize.run", (() => DT(BB))), TB("    parentDummyChains", (() => QT(BB))), TB("    addBorderSegments", (() => ZT(BB))), TB("    order", (() => dd(BB, dB, YB))), TB("    insertSelfEdges", (() => function(BB) {
+        CB(BB).forEach((TB => {
+          let dB = 0;
+          TB.forEach(((TB, VB) => {
+            let yB = BB.node(TB);
+            "number" != typeof yB.rank && (yB.rank = 0), yB.order = VB + dB, (yB.selfEdges || []).forEach((TB => {
+              XB(BB, "selfedge", {
+                width: TB.label.width,
+                height: TB.label.height,
+                rank: yB.rank,
+                order: VB + ++dB,
+                e: TB.e,
+                edgeLabel: TB.label
+              }, "_se"), (!Array.isArray(TB.label.points) || 7 !== TB.label.points.length) && (TB.label.points = [{
                 x: 0,
                 y: -10
               }, {
@@ -2328,199 +2328,199 @@ export const modules = {
                 x: 0,
                 y: 0
               }])
-            })), delete UJ.selfEdges
+            })), delete yB.selfEdges
           }))
         }))
-      }(JJ))), cJ("    adjustCoordinateSystem", (() => function(JJ) {
-        var cJ;
-        let ZJ = null == (cJ = JJ.graph().rankdir) ? void 0 : cJ.toLowerCase();
-        ("lr" === ZJ || "rl" === ZJ) && Cc(JJ)
-      }(JJ))), cJ("    position", (() => hZ(JJ, ZJ.corePath))), cJ("    positionSelfEdges", (() => function(JJ) {
-        JJ.nodes().forEach((cJ => {
-          let ZJ = JJ.node(cJ),
-            FJ = JJ => "number" == typeof JJ && isFinite(JJ);
-          if ("selfedge" === ZJ.dummy) {
-            let UJ = ZJ,
-              eJ = JJ.node(UJ.e.v),
-              XJ = FJ(null == eJ ? void 0 : eJ.x) ? eJ.x : 0,
-              AJ = FJ(null == eJ ? void 0 : eJ.y) ? eJ.y : 0,
-              qJ = FJ(null == eJ ? void 0 : eJ.width) ? eJ.width : 0,
-              jJ = FJ(null == eJ ? void 0 : eJ.height) ? eJ.height : 0,
-              YJ = FJ(ZJ.x) ? ZJ.x : XJ,
-              hJ = FJ(ZJ.y) ? ZJ.y : AJ,
-              DJ = qJ / 2,
-              sJ = jJ / 2;
-            UJ.edgeLabel.points = [{
-              x: YJ + DJ,
-              y: hJ - sJ
+      }(BB))), TB("    adjustCoordinateSystem", (() => function(BB) {
+        var TB;
+        let dB = null == (TB = BB.graph().rankdir) ? void 0 : TB.toLowerCase();
+        ("lr" === dB || "rl" === dB) && hT(BB)
+      }(BB))), TB("    position", (() => kd(BB, dB.corePath))), TB("    positionSelfEdges", (() => function(BB) {
+        BB.nodes().forEach((TB => {
+          let dB = BB.node(TB),
+            VB = BB => "number" == typeof BB && isFinite(BB);
+          if ("selfedge" === dB.dummy) {
+            let yB = dB,
+              pB = BB.node(yB.e.v),
+              lB = VB(null == pB ? void 0 : pB.x) ? pB.x : 0,
+              JB = VB(null == pB ? void 0 : pB.y) ? pB.y : 0,
+              YB = VB(null == pB ? void 0 : pB.width) ? pB.width : 0,
+              gB = VB(null == pB ? void 0 : pB.height) ? pB.height : 0,
+              oB = VB(dB.x) ? dB.x : lB,
+              kB = VB(dB.y) ? dB.y : JB,
+              LB = YB / 2,
+              OB = gB / 2;
+            yB.edgeLabel.points = [{
+              x: oB + LB,
+              y: kB - OB
             }, {
-              x: YJ + DJ,
-              y: hJ - sJ
+              x: oB + LB,
+              y: kB - OB
             }, {
-              x: YJ,
-              y: hJ
+              x: oB,
+              y: kB
             }, {
-              x: YJ - DJ,
-              y: hJ + sJ
+              x: oB - LB,
+              y: kB + OB
             }, {
-              x: YJ - DJ,
-              y: hJ + sJ
+              x: oB - LB,
+              y: kB + OB
             }, {
-              x: YJ,
-              y: hJ
+              x: oB,
+              y: kB
             }, {
-              x: YJ,
-              y: hJ
-            }], UJ.edgeLabel.x = YJ, UJ.edgeLabel.y = hJ, JJ.setEdge(UJ.e, UJ.edgeLabel), JJ.removeNode(cJ)
-          } else ZJ && Array.isArray(ZJ.selfEdges) && ZJ.selfEdges.forEach((JJ => {
-            if (!Array.isArray(JJ.label.points) || 7 !== JJ.label.points.length) {
-              let cJ = FJ(ZJ.x) ? ZJ.x : 0,
-                UJ = FJ(ZJ.y) ? ZJ.y : 0,
-                eJ = (FJ(ZJ.width) ? ZJ.width : 0) / 2,
-                XJ = (FJ(ZJ.height) ? ZJ.height : 0) / 2;
-              JJ.label.points = [{
-                x: cJ + eJ,
-                y: UJ - XJ
+              x: oB,
+              y: kB
+            }], yB.edgeLabel.x = oB, yB.edgeLabel.y = kB, BB.setEdge(yB.e, yB.edgeLabel), BB.removeNode(TB)
+          } else dB && Array.isArray(dB.selfEdges) && dB.selfEdges.forEach((BB => {
+            if (!Array.isArray(BB.label.points) || 7 !== BB.label.points.length) {
+              let TB = VB(dB.x) ? dB.x : 0,
+                yB = VB(dB.y) ? dB.y : 0,
+                pB = (VB(dB.width) ? dB.width : 0) / 2,
+                lB = (VB(dB.height) ? dB.height : 0) / 2;
+              BB.label.points = [{
+                x: TB + pB,
+                y: yB - lB
               }, {
-                x: cJ + eJ,
-                y: UJ - XJ
+                x: TB + pB,
+                y: yB - lB
               }, {
-                x: cJ,
-                y: UJ
+                x: TB,
+                y: yB
               }, {
-                x: cJ - eJ,
-                y: UJ + XJ
+                x: TB - pB,
+                y: yB + lB
               }, {
-                x: cJ - eJ,
-                y: UJ + XJ
+                x: TB - pB,
+                y: yB + lB
               }, {
-                x: cJ,
-                y: UJ
+                x: TB,
+                y: yB
               }, {
-                x: cJ,
-                y: UJ
+                x: TB,
+                y: yB
               }]
             }
           }))
         }))
-      }(JJ)));
-      let jJ = JSON.parse(JSON.stringify(JJ._nodes));
-      return cJ("    removeBorderNodes", (() => function(JJ) {
-        JJ.nodes().forEach((cJ => {
-          if (JJ.children(cJ).length) {
-            let ZJ = JJ.node(cJ),
-              FJ = JJ.node(ZJ.borderTop),
-              UJ = JJ.node(ZJ.borderBottom),
-              eJ = JJ.node(ZJ.borderLeft[ZJ.borderLeft.length - 1]),
-              XJ = JJ.node(ZJ.borderRight[ZJ.borderRight.length - 1]);
-            ZJ.width = Math.abs(XJ.x - eJ.x), ZJ.height = Math.abs(UJ.y - FJ.y), ZJ.x = eJ.x + ZJ.width / 2, ZJ.y = FJ.y + ZJ.height / 2
+      }(BB)));
+      let gB = JSON.parse(JSON.stringify(BB._nodes));
+      return TB("    removeBorderNodes", (() => function(BB) {
+        BB.nodes().forEach((TB => {
+          if (BB.children(TB).length) {
+            let dB = BB.node(TB),
+              VB = BB.node(dB.borderTop),
+              yB = BB.node(dB.borderBottom),
+              pB = BB.node(dB.borderLeft[dB.borderLeft.length - 1]),
+              lB = BB.node(dB.borderRight[dB.borderRight.length - 1]);
+            dB.width = Math.abs(lB.x - pB.x), dB.height = Math.abs(yB.y - VB.y), dB.x = pB.x + dB.width / 2, dB.y = VB.y + dB.height / 2
           }
-        })), JJ.nodes().forEach((cJ => {
-          "border" === JJ.node(cJ).dummy && JJ.removeNode(cJ)
+        })), BB.nodes().forEach((TB => {
+          "border" === BB.node(TB).dummy && BB.removeNode(TB)
         }))
-      }(JJ))), cJ("    normalize.undo", (() => function(JJ) {
-        JJ.graph().dummyChains.forEach((cJ => {
-          let ZJ, FJ = JJ.node(cJ),
-            UJ = FJ.edgeLabel;
-          for (JJ.setEdge(FJ.edgeObj, UJ); FJ.dummy;) ZJ = JJ.successors(cJ)[0], JJ.removeNode(cJ), UJ.points.push({
-            x: FJ.x,
-            y: FJ.y
-          }), "edge-label" === FJ.dummy && (UJ.x = FJ.x, UJ.y = FJ.y, UJ.width = FJ.width, UJ.height = FJ.height), cJ = ZJ, FJ = JJ.node(cJ)
+      }(BB))), TB("    normalize.undo", (() => function(BB) {
+        BB.graph().dummyChains.forEach((TB => {
+          let dB, VB = BB.node(TB),
+            yB = VB.edgeLabel;
+          for (BB.setEdge(VB.edgeObj, yB); VB.dummy;) dB = BB.successors(TB)[0], BB.removeNode(TB), yB.points.push({
+            x: VB.x,
+            y: VB.y
+          }), "edge-label" === VB.dummy && (yB.x = VB.x, yB.y = VB.y, yB.width = VB.width, yB.height = VB.height), TB = dB, VB = BB.node(TB)
         }))
-      }(JJ))), cJ("    fixupEdgeLabelCoords", (() => function(JJ) {
-        JJ.edges().forEach((cJ => {
-          let ZJ = JJ.edge(cJ);
-          if (Object.hasOwn(ZJ, "x")) switch (("l" === ZJ.labelpos || "r" === ZJ.labelpos) && (ZJ.width -= ZJ.labeloffset), ZJ.labelpos) {
+      }(BB))), TB("    fixupEdgeLabelCoords", (() => function(BB) {
+        BB.edges().forEach((TB => {
+          let dB = BB.edge(TB);
+          if (Object.hasOwn(dB, "x")) switch (("l" === dB.labelpos || "r" === dB.labelpos) && (dB.width -= dB.labeloffset), dB.labelpos) {
             case "l":
-              ZJ.x -= ZJ.width / 2 + ZJ.labeloffset;
+              dB.x -= dB.width / 2 + dB.labeloffset;
               break;
             case "r":
-              ZJ.x += ZJ.width / 2 + ZJ.labeloffset
+              dB.x += dB.width / 2 + dB.labeloffset
           }
         }))
-      }(JJ))), cJ("    undoCoordinateSystem", (() => Tc(JJ))), cJ("    translateGraph", (() => function(JJ) {
-        let cJ = Number.POSITIVE_INFINITY,
-          ZJ = 0,
-          FJ = Number.POSITIVE_INFINITY,
-          UJ = 0,
-          eJ = JJ.graph(),
-          XJ = eJ.marginx || 0,
-          AJ = eJ.marginy || 0;
+      }(BB))), TB("    undoCoordinateSystem", (() => WT(BB))), TB("    translateGraph", (() => function(BB) {
+        let TB = Number.POSITIVE_INFINITY,
+          dB = 0,
+          VB = Number.POSITIVE_INFINITY,
+          yB = 0,
+          pB = BB.graph(),
+          lB = pB.marginx || 0,
+          JB = pB.marginy || 0;
 
-        function qJ(JJ) {
-          let eJ = JJ.x,
-            XJ = JJ.y,
-            AJ = JJ.width,
-            qJ = JJ.height;
-          cJ = Math.min(cJ, eJ - AJ / 2), ZJ = Math.max(ZJ, eJ + AJ / 2), FJ = Math.min(FJ, XJ - qJ / 2), UJ = Math.max(UJ, XJ + qJ / 2)
+        function YB(BB) {
+          let pB = BB.x,
+            lB = BB.y,
+            JB = BB.width,
+            YB = BB.height;
+          TB = Math.min(TB, pB - JB / 2), dB = Math.max(dB, pB + JB / 2), VB = Math.min(VB, lB - YB / 2), yB = Math.max(yB, lB + YB / 2)
         }
-        JJ.nodes().forEach((cJ => qJ(JJ.node(cJ)))), JJ.edges().forEach((cJ => {
-          let ZJ = JJ.edge(cJ);
-          Object.hasOwn(ZJ, "x") && qJ(ZJ)
-        })), cJ -= XJ, FJ -= AJ, JJ.nodes().forEach((ZJ => {
-          let UJ = JJ.node(ZJ);
-          UJ.x -= cJ, UJ.y -= FJ
-        })), JJ.edges().forEach((ZJ => {
-          let UJ = JJ.edge(ZJ);
-          UJ.points.forEach((JJ => {
-            JJ.x -= cJ, JJ.y -= FJ
-          })), Object.hasOwn(UJ, "x") && (UJ.x -= cJ), Object.hasOwn(UJ, "y") && (UJ.y -= FJ)
-        })), eJ.width = ZJ - cJ + XJ, eJ.height = UJ - FJ + AJ
-      }(JJ))), cJ("    assignNodeIntersects", (() => function(JJ) {
-        JJ.edges().forEach((cJ => {
-          if (cJ.v === cJ.w) return;
-          let ZJ, FJ, UJ = JJ.edge(cJ),
-            eJ = JJ.node(cJ.v),
-            XJ = JJ.node(cJ.w);
-          UJ.points ? (ZJ = UJ.points[0], FJ = UJ.points[UJ.points.length - 1]) : (UJ.points = [], ZJ = XJ, FJ = eJ), UJ.points.unshift(CJ(eJ, ZJ)), UJ.points.push(CJ(XJ, FJ))
+        BB.nodes().forEach((TB => YB(BB.node(TB)))), BB.edges().forEach((TB => {
+          let dB = BB.edge(TB);
+          Object.hasOwn(dB, "x") && YB(dB)
+        })), TB -= lB, VB -= JB, BB.nodes().forEach((dB => {
+          let yB = BB.node(dB);
+          yB.x -= TB, yB.y -= VB
+        })), BB.edges().forEach((dB => {
+          let yB = BB.edge(dB);
+          yB.points.forEach((BB => {
+            BB.x -= TB, BB.y -= VB
+          })), Object.hasOwn(yB, "x") && (yB.x -= TB), Object.hasOwn(yB, "y") && (yB.y -= VB)
+        })), pB.width = dB - TB + lB, pB.height = yB - VB + JB
+      }(BB))), TB("    assignNodeIntersects", (() => function(BB) {
+        BB.edges().forEach((TB => {
+          if (TB.v === TB.w) return;
+          let dB, VB, yB = BB.edge(TB),
+            pB = BB.node(TB.v),
+            lB = BB.node(TB.w);
+          yB.points ? (dB = yB.points[0], VB = yB.points[yB.points.length - 1]) : (yB.points = [], dB = lB, VB = pB), yB.points.unshift(hB(pB, dB)), yB.points.push(hB(lB, VB))
         }))
-      }(JJ))), cJ("    reversePoints", (() => function(JJ) {
-        JJ.edges().forEach((cJ => {
-          let ZJ = JJ.edge(cJ);
-          ZJ.reversed && ZJ.points.reverse()
+      }(BB))), TB("    reversePoints", (() => function(BB) {
+        BB.edges().forEach((TB => {
+          let dB = BB.edge(TB);
+          dB.reversed && dB.points.reverse()
         }))
-      }(JJ))), cJ("    acyclic.undo", (() => function(JJ) {
-        JJ.edges().forEach((cJ => {
-          let ZJ = JJ.edge(cJ);
-          if (ZJ.reversed) {
-            JJ.removeEdge(cJ);
-            let FJ = ZJ.forwardName;
-            delete ZJ.reversed, delete ZJ.forwardName, JJ.setEdge(cJ.w, cJ.v, ZJ, FJ)
+      }(BB))), TB("    acyclic.undo", (() => function(BB) {
+        BB.edges().forEach((TB => {
+          let dB = BB.edge(TB);
+          if (dB.reversed) {
+            BB.removeEdge(TB);
+            let VB = dB.forwardName;
+            delete dB.reversed, delete dB.forwardName, BB.setEdge(TB.w, TB.v, dB, VB)
           }
         }))
-      }(JJ))), {
-        graph: JJ,
-        rawNodes: jJ
+      }(BB))), {
+        graph: BB,
+        rawNodes: gB
       }
     }
 
-    function xZ(JJ, cJ) {
-      JJ.nodes().forEach((ZJ => {
-        let FJ = JJ.node(ZJ),
-          UJ = cJ.node(ZJ);
-        FJ && (FJ.x = UJ.x, FJ.y = UJ.y, FJ.order = UJ.order, FJ.rank = UJ.rank, cJ.children(ZJ).length && (FJ.width = UJ.width, FJ.height = UJ.height))
-      })), JJ.edges().forEach((ZJ => {
-        let FJ = JJ.edge(ZJ),
-          UJ = cJ.edge(ZJ);
-        FJ.points = UJ.points, Object.hasOwn(UJ, "x") && (FJ.x = UJ.x, FJ.y = UJ.y)
-      })), JJ.graph().width = cJ.graph().width, JJ.graph().height = cJ.graph().height
+    function Ed(BB, TB) {
+      BB.nodes().forEach((dB => {
+        let VB = BB.node(dB),
+          yB = TB.node(dB);
+        VB && (VB.x = yB.x, VB.y = yB.y, VB.order = yB.order, VB.rank = yB.rank, TB.children(dB).length && (VB.width = yB.width, VB.height = yB.height))
+      })), BB.edges().forEach((dB => {
+        let VB = BB.edge(dB),
+          yB = TB.edge(dB);
+        VB.points = yB.points, Object.hasOwn(yB, "x") && (VB.x = yB.x, VB.y = yB.y)
+      })), BB.graph().width = TB.graph().width, BB.graph().height = TB.graph().height
     }
-    var rZ = ["nodesep", "edgesep", "ranksep", "marginx", "marginy"],
-      vZ = {
+    var vd = ["nodesep", "edgesep", "ranksep", "marginx", "marginy"],
+      md = {
         ranksep: 50,
         edgesep: 20,
         nodesep: 50,
         rankdir: "TB",
         rankalign: "center"
       },
-      mZ = ["acyclicer", "ranker", "rankdir", "align", "rankalign"],
-      QZ = ["width", "height", "rank"],
-      EZ = {
+      Nd = ["acyclicer", "ranker", "rankdir", "align", "rankalign"],
+      td = ["width", "height", "rank"],
+      fd = {
         width: 0,
         height: 0
       },
-      VZ = ["minlen", "weight", "width", "height", "labeloffset"],
-      KZ = {
+      sd = ["minlen", "weight", "width", "height", "labeloffset"],
+      Md = {
         minlen: 1,
         weight: 1,
         width: 0,
@@ -2528,73 +2528,73 @@ export const modules = {
         labeloffset: 10,
         labelpos: "r"
       },
-      yZ = ["labelpos"];
+      zd = ["labelpos"];
 
-    function SZ(JJ) {
-      let cJ = new NJ({
+    function wd(BB) {
+      let TB = new ZB({
           multigraph: !0,
           compound: !0
         }),
-        ZJ = MZ(JJ.graph());
-      return cJ.setGraph(Object.assign({}, vZ, IZ(ZJ, rZ), cc(ZJ, mZ))), JJ.nodes().forEach((ZJ => {
-        let FJ = IZ(MZ(JJ.node(ZJ)), QZ);
-        Object.keys(EZ).forEach((JJ => {
-          void 0 === FJ[JJ] && (FJ[JJ] = EZ[JJ])
-        })), cJ.setNode(ZJ, FJ);
-        let UJ = JJ.parent(ZJ);
-        void 0 !== UJ && cJ.setParent(ZJ, UJ)
-      })), JJ.edges().forEach((ZJ => {
-        let FJ = MZ(JJ.edge(ZJ));
-        cJ.setEdge(ZJ, Object.assign({}, KZ, IZ(FJ, VZ), cc(FJ, yZ)))
-      })), cJ
+        dB = Fd(BB.graph());
+      return TB.setGraph(Object.assign({}, md, Ud(dB, vd), TT(dB, Nd))), BB.nodes().forEach((dB => {
+        let VB = Ud(Fd(BB.node(dB)), td);
+        Object.keys(fd).forEach((BB => {
+          void 0 === VB[BB] && (VB[BB] = fd[BB])
+        })), TB.setNode(dB, VB);
+        let yB = BB.parent(dB);
+        void 0 !== yB && TB.setParent(dB, yB)
+      })), BB.edges().forEach((dB => {
+        let VB = Fd(BB.edge(dB));
+        TB.setEdge(dB, Object.assign({}, Md, Ud(VB, sd), TT(VB, zd)))
+      })), TB
     }
 
-    function IZ(JJ, cJ) {
-      return Zc(cc(JJ, cJ), Number)
+    function Ud(BB, TB) {
+      return dT(TT(BB, TB), Number)
     }
 
-    function MZ(JJ) {
-      let cJ = {};
-      return JJ && Object.entries(JJ).forEach((JJ => {
-        let [ZJ, FJ] = JJ;
-        "string" == typeof ZJ && (ZJ = ZJ.toLowerCase()), cJ[ZJ] = FJ
-      })), cJ
+    function Fd(BB) {
+      let TB = {};
+      return BB && Object.entries(BB).forEach((BB => {
+        let [dB, VB] = BB;
+        "string" == typeof dB && (dB = dB.toLowerCase()), TB[dB] = VB
+      })), TB
     }
 
-    function bZ(JJ) {
-      let cJ = uJ(JJ),
-        ZJ = new NJ({
+    function Kd(BB) {
+      let TB = CB(BB),
+        dB = new ZB({
           compound: !0,
           multigraph: !0
         }).setGraph({});
-      return JJ.nodes().forEach((cJ => {
-        ZJ.setNode(cJ, {
-          label: cJ
-        }), ZJ.setParent(cJ, "layer" + JJ.node(cJ).rank)
-      })), JJ.edges().forEach((JJ => ZJ.setEdge(JJ.v, JJ.w, {}, JJ.name))), cJ.forEach(((JJ, cJ) => {
-        let FJ = "layer" + cJ;
-        ZJ.setNode(FJ, {
+      return BB.nodes().forEach((TB => {
+        dB.setNode(TB, {
+          label: TB
+        }), dB.setParent(TB, "layer" + BB.node(TB).rank)
+      })), BB.edges().forEach((BB => dB.setEdge(BB.v, BB.w, {}, BB.name))), TB.forEach(((BB, TB) => {
+        let VB = "layer" + TB;
+        dB.setNode(VB, {
           rank: "same"
-        }), JJ.reduce(((JJ, cJ) => (ZJ.setEdge(JJ, cJ, {
+        }), BB.reduce(((BB, TB) => (dB.setEdge(BB, TB, {
           style: "invis"
-        }), cJ)))
-      })), ZJ
+        }), TB)))
+      })), dB
     }
-    var wZ = {
-        time: BJ,
-        notime: tJ
+    var rd = {
+        time: AB,
+        notime: bB
       },
-      WZ = {
-        graphlib: eJ,
-        version: ec,
-        layout: sZ,
-        debug: bZ,
+      Id = {
+        graphlib: pB,
+        version: pT,
+        layout: Od,
+        debug: Kd,
         util: {
-          time: BJ,
-          notime: tJ
+          time: AB,
+          notime: bB
         }
       }
   }
 };
 Object.freeze(modules);
-for (const JJ in modules) Object.freeze(modules[JJ]);
+for (const BB in modules) Object.freeze(modules[BB]);

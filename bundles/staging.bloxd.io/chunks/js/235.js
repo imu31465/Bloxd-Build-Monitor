@@ -1,583 +1,583 @@
 export const id = 235;
 export const ids = [235];
 export const modules = {
-  38884: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => eJ
+  38852: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => pB
     });
-    var FJ = ZJ(37660),
-      UJ = ZJ(36216);
-    class eJ {
-      static Instantiate(JJ) {
-        if (this.RegisteredExternalClasses && this.RegisteredExternalClasses[JJ]) return this.RegisteredExternalClasses[JJ];
-        const cJ = (0, UJ.e)(JJ);
-        if (cJ) return cJ;
-        FJ.c.Warn(JJ + " not found, you may have missed an import.");
-        const ZJ = JJ.split(".");
-        let eJ = "undefined" !== typeof window ? window : "undefined" !== typeof globalThis ? globalThis : this;
-        for (let FJ = 0, UJ = ZJ.length; FJ < UJ; FJ++) eJ = eJ[ZJ[FJ]];
-        return "function" !== typeof eJ ? null : eJ
+    var VB = dB(37651),
+      yB = dB(36166);
+    class pB {
+      static Instantiate(BB) {
+        if (this.RegisteredExternalClasses && this.RegisteredExternalClasses[BB]) return this.RegisteredExternalClasses[BB];
+        const TB = (0, yB.e)(BB);
+        if (TB) return TB;
+        VB.b.Warn(BB + " not found, you may have missed an import.");
+        const dB = BB.split(".");
+        let pB = "undefined" !== typeof window ? window : "undefined" !== typeof globalThis ? globalThis : this;
+        for (let VB = 0, yB = dB.length; VB < yB; VB++) pB = pB[dB[VB]];
+        return "function" !== typeof pB ? null : pB
       }
     }
-    eJ.RegisteredExternalClasses = {}
+    pB.RegisteredExternalClasses = {}
   },
-  38700: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      c: () => UJ
+  38657: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => yB
     });
-    var FJ = ZJ(38663);
-    class UJ {
+    var VB = dB(38606);
+    class yB {
       static get Now() {
-        return (0, FJ.i)() && window.performance && window.performance.now ? window.performance.now() : Date.now()
+        return (0, VB.h)() && window.performance && window.performance.now ? window.performance.now() : Date.now()
       }
     }
   },
-  38729: (JJ, cJ, ZJ) => {
-    function FJ(JJ) {
-      let cJ = 1;
+  38689: (BB, TB, dB) => {
+    function VB(BB) {
+      let TB = 1;
       do {
-        cJ *= 2
-      } while (cJ < JJ);
-      return cJ === JJ
+        TB *= 2
+      } while (TB < BB);
+      return TB === BB
     }
 
-    function UJ(JJ, cJ, ZJ) {
-      return JJ * (1 - ZJ) + cJ * ZJ
+    function yB(BB, TB, dB) {
+      return BB * (1 - dB) + TB * dB
     }
 
-    function eJ(JJ) {
-      const cJ = XJ(JJ),
-        ZJ = AJ(JJ);
-      return cJ - JJ > JJ - ZJ ? ZJ : cJ
+    function pB(BB) {
+      const TB = lB(BB),
+        dB = JB(BB);
+      return TB - BB > BB - dB ? dB : TB
     }
 
-    function XJ(JJ) {
-      return JJ--, JJ |= JJ >> 1, JJ |= JJ >> 2, JJ |= JJ >> 4, JJ |= JJ >> 8, JJ |= JJ >> 16, ++JJ
+    function lB(BB) {
+      return BB--, BB |= BB >> 1, BB |= BB >> 2, BB |= BB >> 4, BB |= BB >> 8, BB |= BB >> 16, ++BB
     }
 
-    function AJ(JJ) {
-      return JJ |= JJ >> 1, JJ |= JJ >> 2, JJ |= JJ >> 4, JJ |= JJ >> 8, (JJ |= JJ >> 16) - (JJ >> 1)
+    function JB(BB) {
+      return BB |= BB >> 1, BB |= BB >> 2, BB |= BB >> 4, BB |= BB >> 8, (BB |= BB >> 16) - (BB >> 1)
     }
 
-    function qJ(JJ, cJ) {
-      let ZJ;
+    function YB(BB, TB) {
+      let dB;
       switch (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 2) {
         case 1:
-          ZJ = AJ(JJ);
+          dB = JB(BB);
           break;
         case 2:
-          ZJ = eJ(JJ);
+          dB = pB(BB);
           break;
         default:
-          ZJ = XJ(JJ)
+          dB = lB(BB)
       }
-      return Math.min(ZJ, cJ)
+      return Math.min(dB, TB)
     }
-    ZJ.d(cJ, {
-      c: () => AJ,
-      d: () => qJ,
-      e: () => FJ,
-      g: () => UJ,
-      h: () => eJ
+    dB.d(TB, {
+      c: () => JB,
+      g: () => YB,
+      i: () => VB,
+      m: () => yB,
+      n: () => pB
     })
   },
-  38879: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      e: () => vJ,
-      g: () => QJ,
-      j: () => xJ,
-      m: () => rJ
+  38848: (BB, TB, dB) => {
+    dB.d(TB, {
+      c: () => mB,
+      g: () => NB,
+      h: () => EB,
+      i: () => vB
     });
-    var FJ, UJ = ZJ(36200),
-      eJ = ZJ(38663),
-      XJ = ZJ(37660),
-      AJ = ZJ(37658),
-      qJ = ZJ(38700),
-      jJ = ZJ(38677),
-      YJ = ZJ(38848),
-      hJ = ZJ(36192),
-      DJ = ZJ(38844),
-      sJ = ZJ(38689),
-      nJ = ZJ(38884),
-      GJ = ZJ(36865),
-      fJ = ZJ(38729);
-    class xJ {
+    var VB, yB = dB(36150),
+      pB = dB(38606),
+      lB = dB(37651),
+      JB = dB(37646),
+      YB = dB(38657),
+      gB = dB(38629),
+      oB = dB(38799),
+      kB = dB(36148),
+      LB = dB(38790),
+      OB = dB(38645),
+      DB = dB(38852),
+      uB = dB(36822),
+      HB = dB(38689);
+    class EB {
       static get BaseUrl() {
-        return DJ.g.BaseUrl
+        return LB.f.BaseUrl
       }
-      static set BaseUrl(JJ) {
-        DJ.g.BaseUrl = JJ
+      static set BaseUrl(BB) {
+        LB.f.BaseUrl = BB
       }
       static get CleanUrl() {
-        return DJ.g.CleanUrl
+        return LB.f.CleanUrl
       }
-      static set CleanUrl(JJ) {
-        DJ.g.CleanUrl = JJ
+      static set CleanUrl(BB) {
+        LB.f.CleanUrl = BB
       }
-      static IsAbsoluteUrl(JJ) {
-        return 0 === JJ.indexOf("//") || -1 !== JJ.indexOf("://") && (-1 !== JJ.indexOf(".") && (-1 !== JJ.indexOf("/") && (!(JJ.indexOf(":") > JJ.indexOf("/")) && (JJ.indexOf("://") < JJ.indexOf(".") || (0 === JJ.indexOf("data:") || 0 === JJ.indexOf("blob:"))))))
+      static IsAbsoluteUrl(BB) {
+        return 0 === BB.indexOf("//") || -1 !== BB.indexOf("://") && (-1 !== BB.indexOf(".") && (-1 !== BB.indexOf("/") && (!(BB.indexOf(":") > BB.indexOf("/")) && (BB.indexOf("://") < BB.indexOf(".") || (0 === BB.indexOf("data:") || 0 === BB.indexOf("blob:"))))))
       }
-      static set ScriptBaseUrl(JJ) {
-        DJ.g.ScriptBaseUrl = JJ
+      static set ScriptBaseUrl(BB) {
+        LB.f.ScriptBaseUrl = BB
       }
       static get ScriptBaseUrl() {
-        return DJ.g.ScriptBaseUrl
+        return LB.f.ScriptBaseUrl
       }
-      static set CDNBaseUrl(JJ) {
-        FJ.ScriptBaseUrl = JJ, FJ.AssetBaseUrl = JJ
+      static set CDNBaseUrl(BB) {
+        VB.ScriptBaseUrl = BB, VB.AssetBaseUrl = BB
       }
-      static set ScriptPreprocessUrl(JJ) {
-        DJ.g.ScriptPreprocessUrl = JJ
+      static set ScriptPreprocessUrl(BB) {
+        LB.f.ScriptPreprocessUrl = BB
       }
       static get ScriptPreprocessUrl() {
-        return DJ.g.ScriptPreprocessUrl
+        return LB.f.ScriptPreprocessUrl
       }
       static get DefaultRetryStrategy() {
-        return DJ.g.DefaultRetryStrategy
+        return LB.f.DefaultRetryStrategy
       }
-      static set DefaultRetryStrategy(JJ) {
-        DJ.g.DefaultRetryStrategy = JJ
+      static set DefaultRetryStrategy(BB) {
+        LB.f.DefaultRetryStrategy = BB
       }
       static get CorsBehavior() {
-        return DJ.g.CorsBehavior
+        return LB.f.CorsBehavior
       }
-      static set CorsBehavior(JJ) {
-        DJ.g.CorsBehavior = JJ
+      static set CorsBehavior(BB) {
+        LB.f.CorsBehavior = BB
       }
       static get UseFallbackTexture() {
-        return hJ.c.UseFallbackTexture
+        return kB.c.UseFallbackTexture
       }
-      static set UseFallbackTexture(JJ) {
-        hJ.c.UseFallbackTexture = JJ
+      static set UseFallbackTexture(BB) {
+        kB.c.UseFallbackTexture = BB
       }
       static get RegisteredExternalClasses() {
-        return nJ.d.RegisteredExternalClasses
+        return DB.d.RegisteredExternalClasses
       }
-      static set RegisteredExternalClasses(JJ) {
-        nJ.d.RegisteredExternalClasses = JJ
+      static set RegisteredExternalClasses(BB) {
+        DB.d.RegisteredExternalClasses = BB
       }
       static get fallbackTexture() {
-        return hJ.c.FallbackTexture
+        return kB.c.FallbackTexture
       }
-      static set fallbackTexture(JJ) {
-        hJ.c.FallbackTexture = JJ
+      static set fallbackTexture(BB) {
+        kB.c.FallbackTexture = BB
       }
-      static FetchToRef(JJ, cJ, ZJ, FJ, UJ, eJ) {
-        const XJ = 4 * ((Math.abs(JJ) * ZJ % ZJ | 0) + (Math.abs(cJ) * FJ % FJ | 0) * ZJ);
-        eJ.r = UJ[XJ] / 255, eJ.g = UJ[XJ + 1] / 255, eJ.b = UJ[XJ + 2] / 255, eJ.a = UJ[XJ + 3] / 255
+      static FetchToRef(BB, TB, dB, VB, yB, pB) {
+        const lB = 4 * ((Math.abs(BB) * dB % dB | 0) + (Math.abs(TB) * VB % VB | 0) * dB);
+        pB.r = yB[lB] / 255, pB.g = yB[lB + 1] / 255, pB.b = yB[lB + 2] / 255, pB.a = yB[lB + 3] / 255
       }
-      static Mix(JJ, cJ, ZJ) {
+      static Mix(BB, TB, dB) {
         return 0
       }
-      static Instantiate(JJ) {
-        return nJ.d.Instantiate(JJ)
+      static Instantiate(BB) {
+        return DB.d.Instantiate(BB)
       }
-      static SetImmediate(JJ) {
-        sJ.d.SetImmediate(JJ)
+      static SetImmediate(BB) {
+        OB.b.SetImmediate(BB)
       }
-      static IsExponentOfTwo(JJ) {
+      static IsExponentOfTwo(BB) {
         return !0
       }
-      static FloatRound(JJ) {
-        return Math.fround(JJ)
+      static FloatRound(BB) {
+        return Math.fround(BB)
       }
-      static GetFilename(JJ) {
-        const cJ = JJ.lastIndexOf("/");
-        return cJ < 0 ? JJ : JJ.substring(cJ + 1)
+      static GetFilename(BB) {
+        const TB = BB.lastIndexOf("/");
+        return TB < 0 ? BB : BB.substring(TB + 1)
       }
-      static GetFolderPath(JJ) {
-        let cJ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const ZJ = JJ.lastIndexOf("/");
-        return ZJ < 0 ? cJ ? JJ : "" : JJ.substring(0, ZJ + 1)
+      static GetFolderPath(BB) {
+        let TB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const dB = BB.lastIndexOf("/");
+        return dB < 0 ? TB ? BB : "" : BB.substring(0, dB + 1)
       }
-      static ToDegrees(JJ) {
-        return 180 * JJ / Math.PI
+      static ToDegrees(BB) {
+        return 180 * BB / Math.PI
       }
-      static ToRadians(JJ) {
-        return JJ * Math.PI / 180
+      static ToRadians(BB) {
+        return BB * Math.PI / 180
       }
-      static SmoothAngleChange(JJ, cJ) {
-        let ZJ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : .9;
-        const FJ = this.ToRadians(JJ),
-          UJ = this.ToRadians(cJ);
-        return this.ToDegrees(Math.atan2((1 - ZJ) * Math.sin(UJ) + ZJ * Math.sin(FJ), (1 - ZJ) * Math.cos(UJ) + ZJ * Math.cos(FJ)))
+      static SmoothAngleChange(BB, TB) {
+        let dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : .9;
+        const VB = this.ToRadians(BB),
+          yB = this.ToRadians(TB);
+        return this.ToDegrees(Math.atan2((1 - dB) * Math.sin(yB) + dB * Math.sin(VB), (1 - dB) * Math.cos(yB) + dB * Math.cos(VB)))
       }
-      static MakeArray(JJ, cJ) {
-        return !0 === cJ || void 0 !== JJ && null != JJ ? Array.isArray(JJ) ? JJ : [JJ] : null
+      static MakeArray(BB, TB) {
+        return !0 === TB || void 0 !== BB && null != BB ? Array.isArray(BB) ? BB : [BB] : null
       }
-      static GetPointerPrefix(JJ) {
-        return (0, eJ.i)() && !window.PointerEvent ? "mouse" : "pointer"
+      static GetPointerPrefix(BB) {
+        return (0, pB.h)() && !window.PointerEvent ? "mouse" : "pointer"
       }
-      static SetCorsBehavior(JJ, cJ) {
-        (0, DJ.A)(JJ, cJ)
+      static SetCorsBehavior(BB, TB) {
+        (0, LB.D)(BB, TB)
       }
-      static SetReferrerPolicyBehavior(JJ, cJ) {
-        cJ.referrerPolicy = JJ
+      static SetReferrerPolicyBehavior(BB, TB) {
+        TB.referrerPolicy = BB
       }
       static get PreprocessUrl() {
-        return DJ.g.PreprocessUrl
+        return LB.f.PreprocessUrl
       }
-      static set PreprocessUrl(JJ) {
-        DJ.g.PreprocessUrl = JJ
+      static set PreprocessUrl(BB) {
+        LB.f.PreprocessUrl = BB
       }
-      static LoadImage(JJ, cJ, ZJ, FJ, UJ, eJ) {
-        return (0, DJ.n)(JJ, cJ, ZJ, FJ, UJ, eJ)
+      static LoadImage(BB, TB, dB, VB, yB, pB) {
+        return (0, LB.s)(BB, TB, dB, VB, yB, pB)
       }
-      static LoadFile(JJ, cJ, ZJ, FJ, UJ, eJ) {
-        return (0, DJ.k)(JJ, cJ, ZJ, FJ, UJ, eJ)
+      static LoadFile(BB, TB, dB, VB, yB, pB) {
+        return (0, LB.q)(BB, TB, dB, VB, yB, pB)
       }
-      static async LoadFileAsync(JJ) {
-        let cJ = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        return await new Promise(((ZJ, FJ) => {
-          (0, DJ.k)(JJ, (JJ => {
-            ZJ(JJ)
-          }), void 0, void 0, cJ, ((JJ, cJ) => {
-            FJ(cJ)
+      static async LoadFileAsync(BB) {
+        let TB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        return await new Promise(((dB, VB) => {
+          (0, LB.q)(BB, (BB => {
+            dB(BB)
+          }), void 0, void 0, TB, ((BB, TB) => {
+            VB(TB)
           }))
         }))
       }
-      static GetAssetUrl(JJ) {
-        if (!JJ) return "";
-        if (FJ.AssetBaseUrl && JJ.startsWith(FJ._DefaultAssetsUrl)) {
-          const cJ = FJ.AssetBaseUrl.endsWith("/") ? FJ.AssetBaseUrl.slice(0, -1) : FJ.AssetBaseUrl;
-          return JJ.replace(FJ._DefaultAssetsUrl, cJ)
+      static GetAssetUrl(BB) {
+        if (!BB) return "";
+        if (VB.AssetBaseUrl && BB.startsWith(VB._DefaultAssetsUrl)) {
+          const TB = VB.AssetBaseUrl.endsWith("/") ? VB.AssetBaseUrl.slice(0, -1) : VB.AssetBaseUrl;
+          return BB.replace(VB._DefaultAssetsUrl, TB)
         }
-        return JJ
+        return BB
       }
-      static GetBabylonScriptURL(JJ, cJ) {
-        if (!JJ) return "";
-        if (JJ.startsWith(FJ._DefaultCdnUrl))
-          if (FJ.ScriptBaseUrl) {
-            const cJ = FJ.ScriptBaseUrl.endsWith("/") ? FJ.ScriptBaseUrl.slice(0, -1) : FJ.ScriptBaseUrl;
-            JJ = JJ.replace(FJ._DefaultCdnUrl, cJ)
-          } else if (FJ._CdnVersion) {
-          const cJ = `${FJ._DefaultCdnUrl}/v${FJ._CdnVersion}`;
-          JJ.startsWith(cJ) || (JJ = JJ.replace(FJ._DefaultCdnUrl, cJ))
+      static GetBabylonScriptURL(BB, TB) {
+        if (!BB) return "";
+        if (BB.startsWith(VB._DefaultCdnUrl))
+          if (VB.ScriptBaseUrl) {
+            const TB = VB.ScriptBaseUrl.endsWith("/") ? VB.ScriptBaseUrl.slice(0, -1) : VB.ScriptBaseUrl;
+            BB = BB.replace(VB._DefaultCdnUrl, TB)
+          } else if (VB._CdnVersion) {
+          const TB = `${VB._DefaultCdnUrl}/v${VB._CdnVersion}`;
+          BB.startsWith(TB) || (BB = BB.replace(VB._DefaultCdnUrl, TB))
         }
-        return JJ = FJ.ScriptPreprocessUrl(JJ), cJ && !FJ.IsAbsoluteUrl(JJ) && (JJ = FJ.GetAbsoluteUrl(JJ)), JJ
+        return BB = VB.ScriptPreprocessUrl(BB), TB && !VB.IsAbsoluteUrl(BB) && (BB = VB.GetAbsoluteUrl(BB)), BB
       }
-      static LoadBabylonScript(JJ, cJ, ZJ, UJ) {
-        JJ = FJ.GetBabylonScriptURL(JJ), FJ.LoadScript(JJ, cJ, ZJ)
+      static LoadBabylonScript(BB, TB, dB, yB) {
+        BB = VB.GetBabylonScriptURL(BB), VB.LoadScript(BB, TB, dB)
       }
-      static async LoadBabylonScriptAsync(JJ) {
-        return JJ = FJ.GetBabylonScriptURL(JJ), await FJ.LoadScriptAsync(JJ)
+      static async LoadBabylonScriptAsync(BB) {
+        return BB = VB.GetBabylonScriptURL(BB), await VB.LoadScriptAsync(BB)
       }
-      static _LoadScriptNative(JJ, cJ, ZJ, UJ) {
+      static _LoadScriptNative(BB, TB, dB, yB) {
         if (_native) {
           if (arguments.length > 4 && void 0 !== arguments[4] && arguments[4]) {
-            const JJ = "Loading a script as an ES module is not supported in Babylon Native";
-            return void ZJ?.(JJ, new Error(JJ))
+            const BB = "Loading a script as an ES module is not supported in Babylon Native";
+            return void dB?.(BB, new Error(BB))
           }
-          FJ.LoadFile(JJ, (JJ => {
+          VB.LoadFile(BB, (BB => {
             try {
-              Function(JJ).apply(null), cJ && cJ()
-            } catch (FJ) {
-              ZJ && ZJ("LoadScript Error", FJ)
+              Function(BB).apply(null), TB && TB()
+            } catch (VB) {
+              dB && dB("LoadScript Error", VB)
             }
-          }), void 0, void 0, !1, ((JJ, cJ) => {
-            ZJ && ZJ("LoadScript Error", cJ)
+          }), void 0, void 0, !1, ((BB, TB) => {
+            dB && dB("LoadScript Error", TB)
           }))
         }
       }
-      static _LoadScriptWeb(JJ, cJ, ZJ, FJ) {
-        let UJ = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+      static _LoadScriptWeb(BB, TB, dB, VB) {
+        let yB = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
         if ("function" === typeof importScripts) {
           try {
-            importScripts(JJ), cJ && cJ()
-          } catch (qJ) {
-            ZJ?.(`Unable to load script '${JJ}' in worker`, qJ)
+            importScripts(BB), TB && TB()
+          } catch (YB) {
+            dB?.(`Unable to load script '${BB}' in worker`, YB)
           }
           return
         }
-        if (!(0, eJ.i)()) return void ZJ?.(`Cannot load script '${JJ}' outside of a window or a worker`);
-        const XJ = document.getElementsByTagName("head")[0],
-          AJ = document.createElement("script");
-        UJ ? (AJ.setAttribute("type", "module"), AJ.innerText = JJ) : (AJ.setAttribute("type", "text/javascript"), AJ.setAttribute("src", JJ)), FJ && (AJ.id = FJ), AJ.onload = () => {
-          cJ && cJ()
-        }, AJ.onerror = cJ => {
-          ZJ && ZJ(`Unable to load script '${JJ}'`, cJ)
-        }, XJ.appendChild(AJ)
+        if (!(0, pB.h)()) return void dB?.(`Cannot load script '${BB}' outside of a window or a worker`);
+        const lB = document.getElementsByTagName("head")[0],
+          JB = document.createElement("script");
+        yB ? (JB.setAttribute("type", "module"), JB.innerText = BB) : (JB.setAttribute("type", "text/javascript"), JB.setAttribute("src", BB)), VB && (JB.id = VB), JB.onload = () => {
+          TB && TB()
+        }, JB.onerror = TB => {
+          dB && dB(`Unable to load script '${BB}'`, TB)
+        }, lB.appendChild(JB)
       }
-      static async LoadScriptAsync(JJ, cJ) {
-        return await new Promise(((ZJ, FJ) => {
-          this.LoadScript(JJ, (() => {
-            ZJ()
-          }), ((JJ, cJ) => {
-            FJ(cJ || new Error(JJ))
-          }), cJ)
+      static async LoadScriptAsync(BB, TB) {
+        return await new Promise(((dB, VB) => {
+          this.LoadScript(BB, (() => {
+            dB()
+          }), ((BB, TB) => {
+            VB(TB || new Error(BB))
+          }), TB)
         }))
       }
-      static ReadFileAsDataURL(JJ, cJ, ZJ) {
-        const FJ = new FileReader,
-          eJ = {
-            onCompleteObservable: new UJ.c,
-            abort: () => FJ.abort()
+      static ReadFileAsDataURL(BB, TB, dB) {
+        const VB = new FileReader,
+          pB = {
+            onCompleteObservable: new yB.e,
+            abort: () => VB.abort()
           };
-        return FJ.onloadend = () => {
-          eJ.onCompleteObservable.notifyObservers(eJ)
-        }, FJ.onload = JJ => {
-          cJ(JJ.target.result)
-        }, FJ.onprogress = ZJ, FJ.readAsDataURL(JJ), eJ
+        return VB.onloadend = () => {
+          pB.onCompleteObservable.notifyObservers(pB)
+        }, VB.onload = BB => {
+          TB(BB.target.result)
+        }, VB.onprogress = dB, VB.readAsDataURL(BB), pB
       }
-      static ReadFile(JJ, cJ, ZJ, FJ, UJ) {
-        return (0, DJ.p)(JJ, cJ, ZJ, FJ, UJ)
+      static ReadFile(BB, TB, dB, VB, yB) {
+        return (0, LB.t)(BB, TB, dB, VB, yB)
       }
-      static FileAsURL(JJ) {
-        const cJ = new Blob([JJ]);
-        return window.URL.createObjectURL(cJ)
+      static FileAsURL(BB) {
+        const TB = new Blob([BB]);
+        return window.URL.createObjectURL(TB)
       }
-      static Format(JJ) {
-        let cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-        return JJ.toFixed(cJ)
+      static Format(BB) {
+        let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+        return BB.toFixed(TB)
       }
-      static DeepCopy(JJ, cJ, ZJ, FJ) {
-        AJ.e.DeepCopy(JJ, cJ, ZJ, FJ)
+      static DeepCopy(BB, TB, dB, VB) {
+        JB.b.DeepCopy(BB, TB, dB, VB)
       }
-      static IsEmpty(JJ) {
-        for (const cJ in JJ)
-          if (Object.prototype.hasOwnProperty.call(JJ, cJ)) return !1;
+      static IsEmpty(BB) {
+        for (const TB in BB)
+          if (Object.prototype.hasOwnProperty.call(BB, TB)) return !1;
         return !0
       }
-      static RegisterTopRootEvents(JJ, cJ) {
-        for (let FJ = 0; FJ < cJ.length; FJ++) {
-          const UJ = cJ[FJ];
-          JJ.addEventListener(UJ.name, UJ.handler, !1);
+      static RegisterTopRootEvents(BB, TB) {
+        for (let VB = 0; VB < TB.length; VB++) {
+          const yB = TB[VB];
+          BB.addEventListener(yB.name, yB.handler, !1);
           try {
-            window.parent && window.parent.addEventListener(UJ.name, UJ.handler, !1)
-          } catch (ZJ) {}
+            window.parent && window.parent.addEventListener(yB.name, yB.handler, !1)
+          } catch (dB) {}
         }
       }
-      static UnregisterTopRootEvents(JJ, cJ) {
-        for (let FJ = 0; FJ < cJ.length; FJ++) {
-          const UJ = cJ[FJ];
-          JJ.removeEventListener(UJ.name, UJ.handler);
+      static UnregisterTopRootEvents(BB, TB) {
+        for (let VB = 0; VB < TB.length; VB++) {
+          const yB = TB[VB];
+          BB.removeEventListener(yB.name, yB.handler);
           try {
-            JJ.parent && JJ.parent.removeEventListener(UJ.name, UJ.handler)
-          } catch (ZJ) {}
+            BB.parent && BB.parent.removeEventListener(yB.name, yB.handler)
+          } catch (dB) {}
         }
       }
-      static async DumpFramebuffer(JJ, cJ, ZJ, FJ) {
-        throw (0, jJ.m)("DumpTools")
+      static async DumpFramebuffer(BB, TB, dB, VB) {
+        throw (0, gB.i)("DumpTools")
       }
-      static DumpData(JJ, cJ, ZJ, FJ) {
-        throw (0, jJ.m)("DumpTools")
+      static DumpData(BB, TB, dB, VB) {
+        throw (0, gB.i)("DumpTools")
       }
-      static async DumpDataAsync(JJ, cJ, ZJ) {
-        throw (0, jJ.m)("DumpTools")
+      static async DumpDataAsync(BB, TB, dB) {
+        throw (0, gB.i)("DumpTools")
       }
-      static _IsOffScreenCanvas(JJ) {
-        return void 0 !== JJ.convertToBlob
+      static _IsOffScreenCanvas(BB) {
+        return void 0 !== BB.convertToBlob
       }
-      static ToBlob(JJ, cJ) {
-        let ZJ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "image/png",
-          UJ = arguments.length > 3 ? arguments[3] : void 0;
-        FJ._IsOffScreenCanvas(JJ) || JJ.toBlob || (JJ.toBlob = function(JJ, cJ, ZJ) {
+      static ToBlob(BB, TB) {
+        let dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "image/png",
+          yB = arguments.length > 3 ? arguments[3] : void 0;
+        VB._IsOffScreenCanvas(BB) || BB.toBlob || (BB.toBlob = function(BB, TB, dB) {
           setTimeout((() => {
-            const FJ = atob(this.toDataURL(cJ, ZJ).split(",")[1]),
-              UJ = FJ.length,
-              eJ = new Uint8Array(UJ);
-            for (let JJ = 0; JJ < UJ; JJ++) eJ[JJ] = FJ.charCodeAt(JJ);
-            JJ(new Blob([eJ]))
+            const VB = atob(this.toDataURL(TB, dB).split(",")[1]),
+              yB = VB.length,
+              pB = new Uint8Array(yB);
+            for (let BB = 0; BB < yB; BB++) pB[BB] = VB.charCodeAt(BB);
+            BB(new Blob([pB]))
           }))
-        }), FJ._IsOffScreenCanvas(JJ) ? JJ.convertToBlob({
-          type: ZJ,
-          quality: UJ
-        }).then((JJ => cJ(JJ))) : JJ.toBlob((function(JJ) {
-          cJ(JJ)
-        }), ZJ, UJ)
+        }), VB._IsOffScreenCanvas(BB) ? BB.convertToBlob({
+          type: dB,
+          quality: yB
+        }).then((BB => TB(BB))) : BB.toBlob((function(BB) {
+          TB(BB)
+        }), dB, yB)
       }
-      static DownloadBlob(JJ, cJ) {
+      static DownloadBlob(BB, TB) {
         if ("download" in document.createElement("a")) {
-          if (!cJ) {
-            const JJ = new Date;
-            cJ = "screenshot_" + ((JJ.getFullYear() + "-" + (JJ.getMonth() + 1)).slice(2) + "-" + JJ.getDate() + "_" + JJ.getHours() + "-" + ("0" + JJ.getMinutes()).slice(-2)) + ".png"
+          if (!TB) {
+            const BB = new Date;
+            TB = "screenshot_" + ((BB.getFullYear() + "-" + (BB.getMonth() + 1)).slice(2) + "-" + BB.getDate() + "_" + BB.getHours() + "-" + ("0" + BB.getMinutes()).slice(-2)) + ".png"
           }
-          FJ.Download(JJ, cJ)
-        } else if (JJ && "undefined" !== typeof URL) {
-          const cJ = URL.createObjectURL(JJ),
-            ZJ = window.open("");
-          if (!ZJ) return;
-          const FJ = ZJ.document.createElement("img");
-          FJ.onload = function() {
-            URL.revokeObjectURL(cJ)
-          }, FJ.src = cJ, ZJ.document.body.appendChild(FJ)
+          VB.Download(BB, TB)
+        } else if (BB && "undefined" !== typeof URL) {
+          const TB = URL.createObjectURL(BB),
+            dB = window.open("");
+          if (!dB) return;
+          const VB = dB.document.createElement("img");
+          VB.onload = function() {
+            URL.revokeObjectURL(TB)
+          }, VB.src = TB, dB.document.body.appendChild(VB)
         }
       }
-      static EncodeScreenshotCanvasData(JJ, cJ) {
-        let ZJ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "image/png",
-          UJ = arguments.length > 3 ? arguments[3] : void 0,
-          eJ = arguments.length > 4 ? arguments[4] : void 0;
-        if ("string" !== typeof UJ && cJ) {
-          if (cJ) {
-            if (FJ._IsOffScreenCanvas(JJ)) return void JJ.convertToBlob({
-              type: ZJ,
-              quality: eJ
-            }).then((JJ => {
-              const ZJ = new FileReader;
-              ZJ.readAsDataURL(JJ), ZJ.onloadend = () => {
-                const JJ = ZJ.result;
-                cJ(JJ)
+      static EncodeScreenshotCanvasData(BB, TB) {
+        let dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "image/png",
+          yB = arguments.length > 3 ? arguments[3] : void 0,
+          pB = arguments.length > 4 ? arguments[4] : void 0;
+        if ("string" !== typeof yB && TB) {
+          if (TB) {
+            if (VB._IsOffScreenCanvas(BB)) return void BB.convertToBlob({
+              type: dB,
+              quality: pB
+            }).then((BB => {
+              const dB = new FileReader;
+              dB.readAsDataURL(BB), dB.onloadend = () => {
+                const BB = dB.result;
+                TB(BB)
               }
             }));
-            const UJ = JJ.toDataURL(ZJ, eJ);
-            cJ(UJ)
+            const yB = BB.toDataURL(dB, pB);
+            TB(yB)
           }
-        } else this.ToBlob(JJ, (function(JJ) {
-          JJ && FJ.DownloadBlob(JJ, UJ), cJ && cJ("")
-        }), ZJ, eJ)
+        } else this.ToBlob(BB, (function(BB) {
+          BB && VB.DownloadBlob(BB, yB), TB && TB("")
+        }), dB, pB)
       }
-      static Download(JJ, cJ) {
+      static Download(BB, TB) {
         if ("undefined" === typeof URL) return;
-        const ZJ = window.URL.createObjectURL(JJ),
-          FJ = document.createElement("a");
-        document.body.appendChild(FJ), FJ.style.display = "none", FJ.href = ZJ, FJ.download = cJ, FJ.addEventListener("click", (() => {
-          FJ.parentElement && FJ.parentElement.removeChild(FJ)
-        })), FJ.click(), window.URL.revokeObjectURL(ZJ)
+        const dB = window.URL.createObjectURL(BB),
+          VB = document.createElement("a");
+        document.body.appendChild(VB), VB.style.display = "none", VB.href = dB, VB.download = TB, VB.addEventListener("click", (() => {
+          VB.parentElement && VB.parentElement.removeChild(VB)
+        })), VB.click(), window.URL.revokeObjectURL(dB)
       }
-      static BackCompatCameraNoPreventDefault(JJ) {
-        return "boolean" === typeof JJ[0] ? JJ[0] : "boolean" === typeof JJ[1] && JJ[1]
+      static BackCompatCameraNoPreventDefault(BB) {
+        return "boolean" === typeof BB[0] ? BB[0] : "boolean" === typeof BB[1] && BB[1]
       }
-      static CreateScreenshot(JJ, cJ, ZJ, FJ) {
-        throw (0, jJ.m)("ScreenshotTools")
+      static CreateScreenshot(BB, TB, dB, VB) {
+        throw (0, gB.i)("ScreenshotTools")
       }
-      static async CreateScreenshotAsync(JJ, cJ, ZJ) {
-        throw (0, jJ.m)("ScreenshotTools")
+      static async CreateScreenshotAsync(BB, TB, dB) {
+        throw (0, gB.i)("ScreenshotTools")
       }
-      static CreateScreenshotUsingRenderTarget(JJ, cJ, ZJ, FJ) {
-        throw (0, jJ.m)("ScreenshotTools")
+      static CreateScreenshotUsingRenderTarget(BB, TB, dB, VB) {
+        throw (0, gB.i)("ScreenshotTools")
       }
-      static async CreateScreenshotUsingRenderTargetAsync(JJ, cJ, ZJ) {
-        throw (0, jJ.m)("ScreenshotTools")
+      static async CreateScreenshotUsingRenderTargetAsync(BB, TB, dB) {
+        throw (0, gB.i)("ScreenshotTools")
       }
       static RandomId() {
-        return (0, GJ.d)()
+        return (0, uB.c)()
       }
-      static IsBase64(JJ) {
-        return (0, DJ.j)(JJ)
+      static IsBase64(BB) {
+        return (0, LB.m)(BB)
       }
-      static DecodeBase64(JJ) {
-        return (0, DJ.c)(JJ)
+      static DecodeBase64(BB) {
+        return (0, LB.b)(BB)
       }
       static get errorsCount() {
-        return XJ.c.errorsCount
+        return lB.b.errorsCount
       }
-      static Log(JJ) {
-        XJ.c.Log(JJ)
+      static Log(BB) {
+        lB.b.Log(BB)
       }
-      static Warn(JJ) {
-        XJ.c.Warn(JJ)
+      static Warn(BB) {
+        lB.b.Warn(BB)
       }
-      static Error(JJ) {
-        XJ.c.Error(JJ)
+      static Error(BB) {
+        lB.b.Error(BB)
       }
       static get LogCache() {
-        return XJ.c.LogCache
+        return lB.b.LogCache
       }
       static ClearLogCache() {
-        XJ.c.ClearLogCache()
+        lB.b.ClearLogCache()
       }
-      static set LogLevels(JJ) {
-        XJ.c.LogLevels = JJ
+      static set LogLevels(BB) {
+        lB.b.LogLevels = BB
       }
-      static set PerformanceLogLevel(JJ) {
-        (JJ & FJ.PerformanceUserMarkLogLevel) !== FJ.PerformanceUserMarkLogLevel ? (JJ & FJ.PerformanceConsoleLogLevel) !== FJ.PerformanceConsoleLogLevel ? (FJ.StartPerformanceCounter = FJ._StartPerformanceCounterDisabled, FJ.EndPerformanceCounter = FJ._EndPerformanceCounterDisabled, _native?.disablePerformanceLogging?.()) : _native?.enablePerformanceLogging ? (_native.enablePerformanceLogging(2), FJ.StartPerformanceCounter = FJ._StartMarkNative, FJ.EndPerformanceCounter = FJ._EndMarkNative) : (FJ.StartPerformanceCounter = FJ._StartPerformanceConsole, FJ.EndPerformanceCounter = FJ._EndPerformanceConsole) : _native?.enablePerformanceLogging ? (_native.enablePerformanceLogging(1), FJ.StartPerformanceCounter = FJ._StartMarkNative, FJ.EndPerformanceCounter = FJ._EndMarkNative) : (FJ.StartPerformanceCounter = FJ._StartUserMark, FJ.EndPerformanceCounter = FJ._EndUserMark)
+      static set PerformanceLogLevel(BB) {
+        (BB & VB.PerformanceUserMarkLogLevel) !== VB.PerformanceUserMarkLogLevel ? (BB & VB.PerformanceConsoleLogLevel) !== VB.PerformanceConsoleLogLevel ? (VB.StartPerformanceCounter = VB._StartPerformanceCounterDisabled, VB.EndPerformanceCounter = VB._EndPerformanceCounterDisabled, _native?.disablePerformanceLogging?.()) : _native?.enablePerformanceLogging ? (_native.enablePerformanceLogging(2), VB.StartPerformanceCounter = VB._StartMarkNative, VB.EndPerformanceCounter = VB._EndMarkNative) : (VB.StartPerformanceCounter = VB._StartPerformanceConsole, VB.EndPerformanceCounter = VB._EndPerformanceConsole) : _native?.enablePerformanceLogging ? (_native.enablePerformanceLogging(1), VB.StartPerformanceCounter = VB._StartMarkNative, VB.EndPerformanceCounter = VB._EndMarkNative) : (VB.StartPerformanceCounter = VB._StartUserMark, VB.EndPerformanceCounter = VB._EndUserMark)
       }
-      static _StartPerformanceCounterDisabled(JJ, cJ) {}
-      static _EndPerformanceCounterDisabled(JJ, cJ) {}
-      static _StartUserMark(JJ) {
-        let cJ = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        if (!FJ._Performance) {
-          if (!(0, eJ.i)()) return;
-          FJ._Performance = window.performance
+      static _StartPerformanceCounterDisabled(BB, TB) {}
+      static _EndPerformanceCounterDisabled(BB, TB) {}
+      static _StartUserMark(BB) {
+        let TB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        if (!VB._Performance) {
+          if (!(0, pB.h)()) return;
+          VB._Performance = window.performance
         }
-        cJ && FJ._Performance.mark && FJ._Performance.mark(JJ + "-Begin")
+        TB && VB._Performance.mark && VB._Performance.mark(BB + "-Begin")
       }
-      static _EndUserMark(JJ) {
-        (!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && FJ._Performance.mark && (FJ._Performance.mark(JJ + "-End"), FJ._Performance.measure(JJ, JJ + "-Begin", JJ + "-End"))
+      static _EndUserMark(BB) {
+        (!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && VB._Performance.mark && (VB._Performance.mark(BB + "-End"), VB._Performance.measure(BB, BB + "-Begin", BB + "-End"))
       }
-      static _StartPerformanceConsole(JJ) {
-        let cJ = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        cJ && (FJ._StartUserMark(JJ, cJ), console.time && console.time(JJ))
+      static _StartPerformanceConsole(BB) {
+        let TB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        TB && (VB._StartUserMark(BB, TB), console.time && console.time(BB))
       }
-      static _EndPerformanceConsole(JJ) {
-        let cJ = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        cJ && (FJ._EndUserMark(JJ, cJ), console.timeEnd(JJ))
+      static _EndPerformanceConsole(BB) {
+        let TB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        TB && (VB._EndUserMark(BB, TB), console.timeEnd(BB))
       }
-      static _StartMarkNative(JJ) {
+      static _StartMarkNative(BB) {
         if ((!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && _native?.startPerformanceCounter)
-          if (FJ._NativePerformanceCounterHandles.has(JJ)) FJ.Warn(`Performance counter with name ${JJ} is already started.`);
+          if (VB._NativePerformanceCounterHandles.has(BB)) VB.Warn(`Performance counter with name ${BB} is already started.`);
           else {
-            const cJ = _native.startPerformanceCounter(JJ);
-            FJ._NativePerformanceCounterHandles.set(JJ, cJ)
+            const TB = _native.startPerformanceCounter(BB);
+            VB._NativePerformanceCounterHandles.set(BB, TB)
           }
       }
-      static _EndMarkNative(JJ) {
+      static _EndMarkNative(BB) {
         if ((!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && _native?.endPerformanceCounter) {
-          const cJ = FJ._NativePerformanceCounterHandles.get(JJ);
-          cJ ? (_native.endPerformanceCounter(cJ), FJ._NativePerformanceCounterHandles.delete(JJ)) : FJ.Warn(`Performance counter with name ${JJ} was not started.`)
+          const TB = VB._NativePerformanceCounterHandles.get(BB);
+          TB ? (_native.endPerformanceCounter(TB), VB._NativePerformanceCounterHandles.delete(BB)) : VB.Warn(`Performance counter with name ${BB} was not started.`)
         }
       }
       static get Now() {
-        return qJ.c.Now
+        return YB.d.Now
       }
-      static GetClassName(JJ) {
-        let cJ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          ZJ = null;
-        if (!cJ && JJ.getClassName) ZJ = JJ.getClassName();
+      static GetClassName(BB) {
+        let TB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          dB = null;
+        if (!TB && BB.getClassName) dB = BB.getClassName();
         else {
-          if (JJ instanceof Object) {
-            ZJ = (cJ ? JJ : Object.getPrototypeOf(JJ)).constructor.__bjsclassName__
+          if (BB instanceof Object) {
+            dB = (TB ? BB : Object.getPrototypeOf(BB)).constructor.__bjsclassName__
           }
-          ZJ || (ZJ = typeof JJ)
+          dB || (dB = typeof BB)
         }
-        return ZJ
+        return dB
       }
-      static First(JJ, cJ) {
-        for (const ZJ of JJ)
-          if (cJ(ZJ)) return ZJ;
+      static First(BB, TB) {
+        for (const dB of BB)
+          if (TB(dB)) return dB;
         return null
       }
-      static getFullClassName(JJ) {
-        let cJ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          ZJ = null,
-          FJ = null;
-        if (!cJ && JJ.getClassName) ZJ = JJ.getClassName();
+      static getFullClassName(BB) {
+        let TB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          dB = null,
+          VB = null;
+        if (!TB && BB.getClassName) dB = BB.getClassName();
         else {
-          if (JJ instanceof Object) {
-            const UJ = cJ ? JJ : Object.getPrototypeOf(JJ);
-            ZJ = UJ.constructor.__bjsclassName__, FJ = UJ.constructor.__bjsmoduleName__
+          if (BB instanceof Object) {
+            const yB = TB ? BB : Object.getPrototypeOf(BB);
+            dB = yB.constructor.__bjsclassName__, VB = yB.constructor.__bjsmoduleName__
           }
-          ZJ || (ZJ = typeof JJ)
+          dB || (dB = typeof BB)
         }
-        return ZJ ? (null != FJ ? FJ + "." : "") + ZJ : null
+        return dB ? (null != VB ? VB + "." : "") + dB : null
       }
-      static async DelayAsync(JJ) {
-        await new Promise((cJ => {
+      static async DelayAsync(BB) {
+        await new Promise((TB => {
           setTimeout((() => {
-            cJ()
-          }), JJ)
+            TB()
+          }), BB)
         }))
       }
       static IsSafari() {
-        return !!(0, eJ.h)() && /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
+        return !!(0, pB.f)() && /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
       }
     }
 
-    function rJ(JJ, cJ) {
-      return ZJ => {
-        ZJ.__bjsclassName__ = JJ, ZJ.__bjsmoduleName__ = null != cJ ? cJ : null
+    function vB(BB, TB) {
+      return dB => {
+        dB.__bjsclassName__ = BB, dB.__bjsmoduleName__ = null != TB ? TB : null
       }
     }
-    FJ = xJ, xJ.AssetBaseUrl = "", xJ.UseCustomRequestHeaders = !1, xJ.CustomRequestHeaders = YJ.d.CustomRequestHeaders, xJ.GetDOMTextContent = eJ.e, xJ._DefaultCdnUrl = "https://cdn.babylonjs.com", xJ._CdnVersion = "9.28.0", xJ._DefaultAssetsUrl = "https://assets.babylonjs.com/core", xJ.LoadScript = "undefined" === typeof _native ? FJ._LoadScriptWeb : FJ._LoadScriptNative, xJ.GetAbsoluteUrl = "object" === typeof document ? JJ => {
-      const cJ = document.createElement("a");
-      return cJ.href = JJ, cJ.href
-    } : "function" === typeof URL && "object" === typeof location ? JJ => new URL(JJ, location.origin).href : () => {
+    VB = EB, EB.AssetBaseUrl = "", EB.UseCustomRequestHeaders = !1, EB.CustomRequestHeaders = oB.c.CustomRequestHeaders, EB.GetDOMTextContent = pB.b, EB._DefaultCdnUrl = "https://cdn.babylonjs.com", EB._CdnVersion = "9.28.0", EB._DefaultAssetsUrl = "https://assets.babylonjs.com/core", EB.LoadScript = "undefined" === typeof _native ? VB._LoadScriptWeb : VB._LoadScriptNative, EB.GetAbsoluteUrl = "object" === typeof document ? BB => {
+      const TB = document.createElement("a");
+      return TB.href = BB, TB.href
+    } : "function" === typeof URL && "object" === typeof location ? BB => new URL(BB, location.origin).href : () => {
       throw new Error("Unable to get absolute URL. Override BABYLON.Tools.GetAbsoluteUrl to a custom implementation for the current context.")
-    }, xJ.NoneLogLevel = XJ.c.NoneLogLevel, xJ.MessageLogLevel = XJ.c.MessageLogLevel, xJ.WarningLogLevel = XJ.c.WarningLogLevel, xJ.ErrorLogLevel = XJ.c.ErrorLogLevel, xJ.AllLogLevel = XJ.c.AllLogLevel, xJ.IsWindowObjectExist = eJ.i, xJ.PerformanceNoneLogLevel = 0, xJ.PerformanceUserMarkLogLevel = 1, xJ.PerformanceConsoleLogLevel = 2, xJ._NativePerformanceCounterHandles = new Map, xJ.StartPerformanceCounter = FJ._StartPerformanceCounterDisabled, xJ.EndPerformanceCounter = FJ._EndPerformanceCounterDisabled;
-    class vJ {
-      constructor(JJ, cJ, ZJ) {
-        let FJ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        this.iterations = JJ, this.index = FJ - 1, this._done = !1, this._fn = cJ, this._successCallback = ZJ
+    }, EB.NoneLogLevel = lB.b.NoneLogLevel, EB.MessageLogLevel = lB.b.MessageLogLevel, EB.WarningLogLevel = lB.b.WarningLogLevel, EB.ErrorLogLevel = lB.b.ErrorLogLevel, EB.AllLogLevel = lB.b.AllLogLevel, EB.IsWindowObjectExist = pB.h, EB.PerformanceNoneLogLevel = 0, EB.PerformanceUserMarkLogLevel = 1, EB.PerformanceConsoleLogLevel = 2, EB._NativePerformanceCounterHandles = new Map, EB.StartPerformanceCounter = VB._StartPerformanceCounterDisabled, EB.EndPerformanceCounter = VB._EndPerformanceCounterDisabled;
+    class mB {
+      constructor(BB, TB, dB) {
+        let VB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        this.iterations = BB, this.index = VB - 1, this._done = !1, this._fn = TB, this._successCallback = dB
       }
       executeNext() {
         this._done || (this.index + 1 < this.iterations ? (++this.index, this._fn(this)) : this.breakLoop())
@@ -585,33 +585,33 @@ export const modules = {
       breakLoop() {
         this._done = !0, this._successCallback()
       }
-      static Run(JJ, cJ, ZJ) {
-        const FJ = new vJ(JJ, cJ, ZJ, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0);
-        return FJ.executeNext(), FJ
+      static Run(BB, TB, dB) {
+        const VB = new mB(BB, TB, dB, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0);
+        return VB.executeNext(), VB
       }
-      static SyncAsyncForLoop(JJ, cJ, ZJ, FJ, UJ) {
-        let eJ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
-        return vJ.Run(Math.ceil(JJ / cJ), (FJ => {
-          UJ && UJ() ? FJ.breakLoop() : setTimeout((() => {
-            for (let eJ = 0; eJ < cJ; ++eJ) {
-              const XJ = FJ.index * cJ + eJ;
-              if (XJ >= JJ) break;
-              if (ZJ(XJ), UJ && UJ()) {
-                FJ.breakLoop();
+      static SyncAsyncForLoop(BB, TB, dB, VB, yB) {
+        let pB = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
+        return mB.Run(Math.ceil(BB / TB), (VB => {
+          yB && yB() ? VB.breakLoop() : setTimeout((() => {
+            for (let pB = 0; pB < TB; ++pB) {
+              const lB = VB.index * TB + pB;
+              if (lB >= BB) break;
+              if (dB(lB), yB && yB()) {
+                VB.breakLoop();
                 break
               }
             }
-            FJ.executeNext()
-          }), eJ)
-        }), FJ)
+            VB.executeNext()
+          }), pB)
+        }), VB)
       }
     }
-    let mJ = !1;
+    let iB = !1;
 
-    function QJ() {
-      mJ || (mJ = !0, xJ.Mix = fJ.g, xJ.IsExponentOfTwo = fJ.e, hJ.c.FallbackTexture = "data:image/jpg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QBmRXhpZgAATU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAAExAAIAAAAQAAAATgAAAAAAAABgAAAAAQAAAGAAAAABcGFpbnQubmV0IDQuMC41AP/bAEMABAIDAwMCBAMDAwQEBAQFCQYFBQUFCwgIBgkNCw0NDQsMDA4QFBEODxMPDAwSGBITFRYXFxcOERkbGRYaFBYXFv/bAEMBBAQEBQUFCgYGChYPDA8WFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFv/AABEIAQABAAMBIgACEQEDEQH/xAAfAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgv/xAC1EAACAQMDAgQDBQUEBAAAAX0BAgMABBEFEiExQQYTUWEHInEUMoGRoQgjQrHBFVLR8CQzYnKCCQoWFxgZGiUmJygpKjQ1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4eLj5OXm5+jp6vHy8/T19vf4+fr/xAAfAQADAQEBAQEBAQEBAAAAAAAAAQIDBAUGBwgJCgv/xAC1EQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/APH6KKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76CiiigD5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BQooooA+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/voKKKKAPl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76CiiigD5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BQooooA+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/voKKKKAPl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76P//Z")
+    function NB() {
+      iB || (iB = !0, EB.Mix = HB.m, EB.IsExponentOfTwo = HB.i, kB.c.FallbackTexture = "data:image/jpg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QBmRXhpZgAATU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAAExAAIAAAAQAAAATgAAAAAAAABgAAAAAQAAAGAAAAABcGFpbnQubmV0IDQuMC41AP/bAEMABAIDAwMCBAMDAwQEBAQFCQYFBQUFCwgIBgkNCw0NDQsMDA4QFBEODxMPDAwSGBITFRYXFxcOERkbGRYaFBYXFv/bAEMBBAQEBQUFCgYGChYPDA8WFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFv/AABEIAQABAAMBIgACEQEDEQH/xAAfAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgv/xAC1EAACAQMDAgQDBQUEBAAAAX0BAgMABBEFEiExQQYTUWEHInEUMoGRoQgjQrHBFVLR8CQzYnKCCQoWFxgZGiUmJygpKjQ1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4eLj5OXm5+jp6vHy8/T19vf4+fr/xAAfAQADAQEBAQEBAQEBAAAAAAAAAQIDBAUGBwgJCgv/xAC1EQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/APH6KKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76CiiigD5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BQooooA+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/voKKKKAPl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76CiiigD5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BQooooA+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/voKKKKAPl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76P//Z")
     }
   }
 };
 Object.freeze(modules);
-for (const JJ in modules) Object.freeze(modules[JJ]);
+for (const BB in modules) Object.freeze(modules[BB]);

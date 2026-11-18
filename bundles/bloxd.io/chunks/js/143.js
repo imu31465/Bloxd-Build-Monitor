@@ -1,305 +1,305 @@
 export const id = 143;
 export const ids = [143];
 export const modules = {
-  8079: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      c: () => wJ,
-      e: () => SJ,
-      i: () => IJ
+  8122: (BB, TB, dB) => {
+    dB.d(TB, {
+      e: () => KB,
+      i: () => zB,
+      j: () => wB
     });
-    var FJ = ZJ(47),
-      UJ = ZJ(3966),
-      eJ = ZJ(1022),
-      XJ = ZJ(1326),
-      AJ = ZJ(17),
-      qJ = ZJ(2916),
-      jJ = ZJ(2001),
-      YJ = ZJ(1137),
-      hJ = ZJ(8114),
-      DJ = ZJ(1703),
-      sJ = ZJ(1743),
-      nJ = ZJ(1086),
-      GJ = ZJ(13),
-      fJ = ZJ(1528),
-      xJ = ZJ(926),
-      rJ = ZJ.n(xJ),
-      vJ = ZJ(8088),
-      mJ = ZJ(8092),
-      QJ = ZJ(8095),
-      EJ = ZJ(8066),
-      VJ = ZJ(8104),
-      KJ = (ZJ(8106), ZJ(990));
-    let yJ = null;
+    var VB = dB(62),
+      yB = dB(3951),
+      pB = dB(1011),
+      lB = dB(1317),
+      JB = dB(24),
+      YB = dB(2902),
+      gB = dB(1985),
+      oB = dB(1117),
+      kB = dB(8155),
+      LB = dB(1679),
+      OB = dB(1727),
+      DB = dB(1078),
+      uB = dB(21),
+      HB = dB(1507),
+      EB = dB(933),
+      vB = dB.n(EB),
+      mB = dB(8127),
+      iB = dB(8130),
+      NB = dB(8134),
+      tB = dB(8094),
+      fB = dB(8140),
+      sB = (dB(8147), dB(980));
+    let MB = null;
 
-    function SJ() {
-      return null !== yJ
+    function zB() {
+      return null !== MB
     }
 
-    function IJ() {
-      return "pad" === yJ
+    function wB() {
+      return "pad" === MB
     }
 
-    function MJ() {
-      return "inGame" === GJ.d.get("gameState") && !(0, fJ.l)()
+    function UB() {
+      return "inGame" === uB.d.get("gameState") && !(0, HB.l)()
     }
 
-    function bJ(JJ) {
-      return (0, mJ.v)(JJ, YJ.n, mJ.h, mJ.k, mJ.l)
+    function FB(BB) {
+      return (0, iB.v)(BB, oB.k, iB.g, iB.j, iB.k)
     }
-    const wJ = (0, FJ.memo)((function() {
+    const KB = (0, VB.memo)((function() {
       const {
-        t: JJ
-      } = (0, nJ.F)(), {
-        userContext: cJ
-      } = (0, eJ.d)(), [ZJ, GJ] = (0, FJ.useState)(null), [xJ, SJ] = (0, FJ.useState)(null), IJ = (0, FJ.useRef)(null), wJ = (0, FJ.useCallback)((JJ => {
-        IJ.current = JJ, SJ(JJ)
-      }), []), WJ = (0, FJ.useRef)(0), gJ = (0, FJ.useRef)(null), HJ = (0, FJ.useRef)({
+        t: BB
+      } = (0, DB.z)(), {
+        userContext: TB
+      } = (0, pB.b)(), [dB, uB] = (0, VB.useState)(null), [EB, zB] = (0, VB.useState)(null), wB = (0, VB.useRef)(null), KB = (0, VB.useCallback)((BB => {
+        wB.current = BB, zB(BB)
+      }), []), rB = (0, VB.useRef)(0), IB = (0, VB.useRef)(null), cB = (0, VB.useRef)({
         x: 0,
         y: 0
-      }), [PJ, kJ] = (0, FJ.useState)(0), pJ = (0, FJ.useMemo)((() => function(JJ) {
-        const cJ = [];
-        for (let FJ = 0; FJ < YJ.n; FJ++) {
-          var ZJ;
-          cJ.push(null !== (ZJ = JJ[FJ]) && void 0 !== ZJ ? ZJ : null)
+      }), [SB, PB] = (0, VB.useState)(0), QB = (0, VB.useMemo)((() => function(BB) {
+        const TB = [];
+        for (let VB = 0; VB < oB.k; VB++) {
+          var dB;
+          TB.push(null !== (dB = BB[VB]) && void 0 !== dB ? dB : null)
         }
-        return cJ
-      }((0, hJ.i)(cJ.getPlayerCosmetics().emote))), [cJ, PJ]);
-      (0, sJ.b)("cosmeticsUpdated", (JJ => {
-        JJ.some((JJ => JJ.local && "emote" === JJ.VF)) && kJ((JJ => JJ + 1))
+        return TB
+      }((0, kB.h)(TB.getPlayerCosmetics().emote))), [TB, SB]);
+      (0, OB.c)("cosmeticsUpdated", (BB => {
+        BB.some((BB => BB.local && "emote" === BB.tp)) && PB((BB => BB + 1))
       }));
-      const dJ = (0, FJ.useRef)(!1),
-        zJ = (0, FJ.useCallback)((function(JJ) {
-          let cJ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          "pad" === JJ && (0, QJ.g)(), dJ.current = cJ, HJ.current = {
+      const RB = (0, VB.useRef)(!1),
+        aB = (0, VB.useCallback)((function(BB) {
+          let TB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          "pad" === BB && (0, NB.h)(), RB.current = TB, cB.current = {
             x: 0,
             y: 0
-          }, wJ(null), GJ(JJ)
-        }), [wJ]),
-        NJ = (0, FJ.useCallback)((() => {
-          GJ(null), wJ(null), HJ.current = {
+          }, KB(null), uB(BB)
+        }), [KB]),
+        ZB = (0, VB.useCallback)((() => {
+          uB(null), KB(null), cB.current = {
             x: 0,
             y: 0
           }
-        }), [wJ]),
-        OJ = (0, FJ.useCallback)((JJ => {
-          if (Date.now() < WJ.current) return;
-          const cJ = (0, jJ.m)(JJ),
-            ZJ = !!cJ.holdUntilMove,
-            FJ = ZJ ? 600 : Math.ceil(1e3 * cJ.animation.animation_length / jJ.e) + 200;
-          WJ.current = Date.now() + FJ, gJ.current = JJ, DJ.gameBridge.send("playEmote", JJ), DJ.gameBridge.send("applyTemporaryThirdPerson", ZJ ? {} : {
-            durationMs: FJ
+        }), [KB]),
+        XB = (0, VB.useCallback)((BB => {
+          if (Date.now() < rB.current) return;
+          const TB = (0, gB.g)(BB),
+            dB = !!TB.holdUntilMove,
+            VB = dB ? 600 : Math.ceil(1e3 * TB.animation.animation_length / gB.b) + 200;
+          rB.current = Date.now() + VB, IB.current = BB, LB.gameBridge.send("playEmote", BB), LB.gameBridge.send("applyTemporaryThirdPerson", dB ? {} : {
+            durationMs: VB
           })
         }), []);
-      (0, XJ.i)("requestToggleEmoteWheel", (() => {
-        null === ZJ ? MJ() && zJ("click") : NJ()
-      })), (0, XJ.i)("requestEmoteWheelHoldOpen", (() => {
-        null === ZJ && MJ() && zJ((0, vJ.b)() ? "hold" : "click")
-      })), (0, XJ.i)("requestEmoteWheelPadOpen", (JJ => {
-        null !== ZJ || !MJ() || (0, EJ.d)() || (0, VJ.m)() || zJ("pad", JJ)
-      })), (0, XJ.i)("requestEmoteRepeatLast", (() => {
-        if (null !== ZJ || !MJ() || (0, EJ.d)() || (0, VJ.m)()) return;
-        const JJ = gJ.current;
-        null !== JJ && pJ.includes(JJ) ? OJ(JJ) : zJ("pad", !0)
+      (0, lB.e)("requestToggleEmoteWheel", (() => {
+        null === dB ? UB() && aB("click") : ZB()
+      })), (0, lB.e)("requestEmoteWheelHoldOpen", (() => {
+        null === dB && UB() && aB((0, mB.e)() ? "hold" : "click")
+      })), (0, lB.e)("requestEmoteWheelPadOpen", (BB => {
+        null !== dB || !UB() || (0, tB.e)() || (0, fB.r)() || aB("pad", BB)
+      })), (0, lB.e)("requestEmoteRepeatLast", (() => {
+        if (null !== dB || !UB() || (0, tB.e)() || (0, fB.r)()) return;
+        const BB = IB.current;
+        null !== BB && QB.includes(BB) ? XB(BB) : aB("pad", !0)
       }));
-      const TJ = () => {
-        const JJ = IJ.current,
-          cJ = null !== JJ ? pJ[JJ] : null;
-        null !== cJ && "pad" === ZJ && Date.now() < WJ.current || (NJ(), null !== cJ && OJ(cJ))
+      const WB = () => {
+        const BB = wB.current,
+          TB = null !== BB ? QB[BB] : null;
+        null !== TB && "pad" === dB && Date.now() < rB.current || (ZB(), null !== TB && XB(TB))
       };
-      (0, XJ.i)("emoteWheelPadAim", (JJ => {
-        if ("pad" !== ZJ) return;
-        const cJ = (0, mJ.F)(JJ, YJ.n, IJ.current);
-        wJ(null !== cJ && null !== pJ[cJ] ? cJ : null)
-      })), (0, XJ.i)("requestEmoteWheelPadCommit", (JJ => {
-        "pad" !== ZJ || JJ && dJ.current || TJ()
-      })), (0, XJ.i)("appManagerUpdated|activeInputDevice", (JJ => {
-        null !== ZJ && "pad" === ZJ !== ("gamepad" === JJ) && NJ()
-      })), (0, FJ.useLayoutEffect)((() => (yJ = ZJ, (0, qJ.s)("emoteWheel", "pad" === ZJ), AJ.i.Uf(qJ.m), () => {
-        yJ = null, (0, qJ.s)("emoteWheel", !1), AJ.i.Uf(qJ.m)
-      })), [ZJ]), (0, XJ.i)("requestEmoteWheelHoldRelease", (() => {
-        "hold" === ZJ && TJ()
-      })), (0, XJ.i)("requestEmoteWheelClose", (() => {
-        null !== ZJ && NJ()
-      })), (0, XJ.i)("appManagerUpdated|gameState", (JJ => {
-        "inGame" !== JJ && NJ()
+      (0, lB.e)("emoteWheelPadAim", (BB => {
+        if ("pad" !== dB) return;
+        const TB = (0, iB.C)(BB, oB.k, wB.current);
+        KB(null !== TB && null !== QB[TB] ? TB : null)
+      })), (0, lB.e)("requestEmoteWheelPadCommit", (BB => {
+        "pad" !== dB || BB && RB.current || WB()
+      })), (0, lB.e)("appManagerUpdated|activeInputDevice", (BB => {
+        null !== dB && "pad" === dB !== ("gamepad" === BB) && ZB()
+      })), (0, VB.useLayoutEffect)((() => (MB = dB, (0, YB.t)("emoteWheel", "pad" === dB), JB.h.yH(YB.l), () => {
+        MB = null, (0, YB.t)("emoteWheel", !1), JB.h.yH(YB.l)
+      })), [dB]), (0, lB.e)("requestEmoteWheelHoldRelease", (() => {
+        "hold" === dB && WB()
+      })), (0, lB.e)("requestEmoteWheelClose", (() => {
+        null !== dB && ZB()
+      })), (0, lB.e)("appManagerUpdated|gameState", (BB => {
+        "inGame" !== BB && ZB()
       }));
-      const CJ = () => {
-        (0, fJ.l)() && NJ()
+      const hB = () => {
+        (0, HB.l)() && ZB()
       };
-      if ((0, XJ.i)("appManagerUpdated|openEverythingMenuName", CJ), (0, XJ.i)("appManagerUpdated|openInGameMenuName", CJ), (0, XJ.i)("pointerLockUpdate", (JJ => {
-          JJ || "hold" !== ZJ || NJ()
-        })), (0, FJ.useEffect)((() => {
-          if (null === ZJ) return;
-          const JJ = JJ => {
-            "Escape" === JJ.key && (JJ.stopImmediatePropagation(), JJ.preventDefault(), NJ())
+      if ((0, lB.e)("appManagerUpdated|openEverythingMenuName", hB), (0, lB.e)("appManagerUpdated|openInGameMenuName", hB), (0, lB.e)("pointerLockUpdate", (BB => {
+          BB || "hold" !== dB || ZB()
+        })), (0, VB.useEffect)((() => {
+          if (null === dB) return;
+          const BB = BB => {
+            "Escape" === BB.key && (BB.stopImmediatePropagation(), BB.preventDefault(), ZB())
           };
-          return document.addEventListener("keydown", JJ, !0), () => {
-            document.removeEventListener("keydown", JJ, !0)
+          return document.addEventListener("keydown", BB, !0), () => {
+            document.removeEventListener("keydown", BB, !0)
           }
-        }), [ZJ, NJ]), (0, UJ.c)(!0, "click" === ZJ, "EmoteWheelOverlay"), (0, FJ.useEffect)((() => {
-          if ("hold" === ZJ) return DJ.gameBridge.send("holdEmoteWheel", !0), () => {
-            DJ.gameBridge.send("holdEmoteWheel", !1)
+        }), [dB, ZB]), (0, yB.d)(!0, "click" === dB, "EmoteWheelOverlay"), (0, VB.useEffect)((() => {
+          if ("hold" === dB) return LB.gameBridge.send("holdEmoteWheel", !0), () => {
+            LB.gameBridge.send("holdEmoteWheel", !1)
           }
-        }), [ZJ]), (0, FJ.useEffect)((() => {
-          if ("hold" !== ZJ) return;
-          const JJ = parseFloat(window.getComputedStyle(document.documentElement).fontSize),
-            cJ = mJ.t * JJ,
-            FJ = mJ.q * JJ,
-            UJ = JJ => {
-              let ZJ = HJ.current.x + JJ.movementX,
-                UJ = HJ.current.y + JJ.movementY;
-              const eJ = Math.hypot(ZJ, UJ);
-              if (eJ > cJ) {
-                const JJ = cJ / eJ;
-                ZJ *= JJ, UJ *= JJ
+        }), [dB]), (0, VB.useEffect)((() => {
+          if ("hold" !== dB) return;
+          const BB = parseFloat(window.getComputedStyle(document.documentElement).fontSize),
+            TB = iB.r * BB,
+            VB = iB.n * BB,
+            yB = BB => {
+              let dB = cB.current.x + BB.movementX,
+                yB = cB.current.y + BB.movementY;
+              const pB = Math.hypot(dB, yB);
+              if (pB > TB) {
+                const BB = TB / pB;
+                dB *= BB, yB *= BB
               }
-              HJ.current = {
-                x: ZJ,
-                y: UJ
-              }, wJ(function(JJ, cJ, ZJ, FJ) {
-                if (Math.hypot(JJ, cJ) < ZJ) return null;
-                const UJ = (0, mJ.y)(JJ, cJ, YJ.n);
-                return null === FJ[UJ] ? null : UJ
-              }(ZJ, UJ, FJ, pJ))
+              cB.current = {
+                x: dB,
+                y: yB
+              }, KB(function(BB, TB, dB, VB) {
+                if (Math.hypot(BB, TB) < dB) return null;
+                const yB = (0, iB.y)(BB, TB, oB.k);
+                return null === VB[yB] ? null : yB
+              }(dB, yB, VB, QB))
             };
-          return document.addEventListener("mousemove", UJ), () => {
-            document.removeEventListener("mousemove", UJ)
+          return document.addEventListener("mousemove", yB), () => {
+            document.removeEventListener("mousemove", yB)
           }
-        }), [ZJ, pJ, wJ]), null === ZJ) return null;
-      const uJ = "hold" === ZJ || "pad" === ZJ,
-        iJ = null !== xJ ? pJ[xJ] : null,
-        RJ = null !== iJ ? (0, jJ.m)(iJ).displayName : JJ("emotes:pickEmote");
-      return (0, KJ.jsx)("div", {
-        className: rJ()("EmoteWheelOverlay", {
-          EmoteWheelOverlayPad: "pad" === ZJ
+        }), [dB, QB, KB]), null === dB) return null;
+      const CB = "hold" === dB || "pad" === dB,
+        GB = null !== EB ? QB[EB] : null,
+        qB = null !== GB ? (0, gB.g)(GB).displayName : BB("emotes:pickEmote");
+      return (0, sB.jsx)("div", {
+        className: vB()("EmoteWheelOverlay", {
+          EmoteWheelOverlayPad: "pad" === dB
         }),
-        onMouseDown: JJ => {
-          JJ.target === JJ.currentTarget && NJ()
+        onMouseDown: BB => {
+          BB.target === BB.currentTarget && ZB()
         },
-        children: (0, KJ.jsxs)("div", {
+        children: (0, sB.jsxs)("div", {
           className: "EmoteWheel",
           style: {
-            width: 2 * mJ.t + "rem",
-            height: 2 * mJ.t + "rem"
+            width: 2 * iB.r + "rem",
+            height: 2 * iB.r + "rem"
           },
-          children: [(0, KJ.jsxs)("svg", {
+          children: [(0, sB.jsxs)("svg", {
             className: "EmoteWheelSvg",
-            viewBox: `0 0 ${mJ.p} ${mJ.p}`,
-            children: [pJ.map(((cJ, ZJ) => {
-              const FJ = null !== cJ,
-                UJ = uJ && ZJ === xJ;
-              return (0, KJ.jsx)("path", {
-                d: bJ(ZJ),
-                className: rJ()("EmoteWheelWedge", {
-                  EmoteWheelWedgeHighlighted: UJ,
-                  EmoteWheelWedgeDisabled: !FJ
+            viewBox: `0 0 ${iB.m} ${iB.m}`,
+            children: [QB.map(((TB, dB) => {
+              const VB = null !== TB,
+                yB = CB && dB === EB;
+              return (0, sB.jsx)("path", {
+                d: FB(dB),
+                className: vB()("EmoteWheelWedge", {
+                  EmoteWheelWedgeHighlighted: yB,
+                  EmoteWheelWedgeDisabled: !VB
                 }),
-                onClick: JJ => {
-                  JJ.stopPropagation(), null !== cJ && (JJ => {
-                    NJ(), OJ(JJ)
-                  })(cJ)
+                onClick: BB => {
+                  BB.stopPropagation(), null !== TB && (BB => {
+                    ZB(), XB(BB)
+                  })(TB)
                 },
-                "aria-label": null !== cJ ? (0, jJ.m)(cJ).displayName : JJ("emotes:emptySlot")
-              }, ZJ)
-            })), (0, KJ.jsx)("circle", {
+                "aria-label": null !== TB ? (0, gB.g)(TB).displayName : BB("emotes:emptySlot")
+              }, dB)
+            })), (0, sB.jsx)("circle", {
               className: "EmoteWheelOuterRing",
-              cx: mJ.h,
-              cy: mJ.h,
-              r: mJ.l
-            }), (0, KJ.jsx)("circle", {
+              cx: iB.g,
+              cy: iB.g,
+              r: iB.k
+            }), (0, sB.jsx)("circle", {
               className: "EmoteWheelInnerRing",
-              cx: mJ.h,
-              cy: mJ.h,
-              r: mJ.k
-            }), uJ && null !== xJ && (0, KJ.jsx)("path", {
+              cx: iB.g,
+              cy: iB.g,
+              r: iB.j
+            }), CB && null !== EB && (0, sB.jsx)("path", {
               className: "EmoteWheelWedgeOutline",
-              d: bJ(xJ)
+              d: FB(EB)
             })]
-          }), pJ.map(((JJ, cJ) => {
-            const ZJ = null !== JJ,
-              FJ = uJ && cJ === xJ,
-              UJ = (0, mJ.z)(cJ, YJ.n),
-              eJ = mJ.d * Math.cos(UJ),
-              XJ = mJ.d * Math.sin(UJ);
-            return (0, KJ.jsx)("div", {
-              className: rJ()("EmoteWheelSlotIcon", {
-                EmoteWheelSlotIconHighlighted: FJ,
-                EmoteWheelSlotIconDisabled: !ZJ
+          }), QB.map(((BB, TB) => {
+            const dB = null !== BB,
+              VB = CB && TB === EB,
+              yB = (0, iB.A)(TB, oB.k),
+              pB = iB.c * Math.cos(yB),
+              lB = iB.c * Math.sin(yB);
+            return (0, sB.jsx)("div", {
+              className: vB()("EmoteWheelSlotIcon", {
+                EmoteWheelSlotIconHighlighted: VB,
+                EmoteWheelSlotIconDisabled: !dB
               }),
               style: {
-                left: `calc(50% + ${eJ}rem)`,
-                top: `calc(50% + ${XJ}rem)`,
-                backgroundImage: ZJ ? `url(/textures/charSkins/previews/emote_${JJ}_preview.png)` : void 0
+                left: `calc(50% + ${pB}rem)`,
+                top: `calc(50% + ${lB}rem)`,
+                backgroundImage: dB ? `url(/textures/charSkins/previews/emote_${BB}_preview.png)` : void 0
               },
               "aria-hidden": !0
-            }, cJ)
-          })), (0, KJ.jsx)("div", {
+            }, TB)
+          })), (0, sB.jsx)("div", {
             className: "EmoteWheelHint SmallTextBold",
-            children: RJ
+            children: qB
           })]
         })
       })
     }))
   },
-  8070: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      e: () => DJ,
-      g: () => GJ,
-      h: () => fJ,
-      i: () => nJ,
-      k: () => sJ
+  8107: (BB, TB, dB) => {
+    dB.d(TB, {
+      e: () => LB,
+      g: () => uB,
+      k: () => HB,
+      l: () => DB,
+      p: () => OB
     });
-    var FJ = ZJ(47),
-      UJ = ZJ(8076),
-      eJ = ZJ(17),
-      XJ = ZJ(1703),
-      AJ = ZJ(578),
-      qJ = ZJ(29),
-      jJ = ZJ(1162),
-      YJ = ZJ(1725);
-    const hJ = 50;
-    const DJ = new class {
+    var VB = dB(62),
+      yB = dB(8116),
+      pB = dB(24),
+      lB = dB(1679),
+      JB = dB(618),
+      YB = dB(33),
+      gB = dB(1139),
+      oB = dB(1708);
+    const kB = 50;
+    const LB = new class {
       constructor() {
         this.state = {
           messages: [],
           reportedPlayers: [],
           channel: null
-        }, this.listeners = new Set, this.stopListening = [], this.nextClientChatMsgId = 0, this.subscribe = JJ => {
+        }, this.listeners = new Set, this.stopListening = [], this.nextClientChatMsgId = 0, this.subscribe = BB => {
           if (0 === this.listeners.size) {
-            var cJ, ZJ;
+            var TB, dB;
             this.state = {
               ...this.state,
-              channel: null !== (cJ = null === (ZJ = YJ.b.get("chatChannels")) || void 0 === ZJ ? void 0 : ZJ[0]) && void 0 !== cJ ? cJ : null
+              channel: null !== (TB = null === (dB = oB.c.get("chatChannels")) || void 0 === dB ? void 0 : dB[0]) && void 0 !== TB ? TB : null
             };
-            const JJ = eJ.i.subscribe("reportPlayer", (JJ => {
+            const BB = pB.h.subscribe("reportPlayer", (BB => {
               let {
-                playerEId: cJ
-              } = JJ;
+                playerEId: TB
+              } = BB;
               this.setState({
                 ...this.state,
-                reportedPlayers: [...this.state.reportedPlayers, cJ]
+                reportedPlayers: [...this.state.reportedPlayers, TB]
               })
             }));
-            this.stopListening = [XJ.gameBridge.subscribe("chatReceived", (JJ => {
+            this.stopListening = [lB.gameBridge.subscribe("chatReceived", (BB => {
               let {
-                serverChatMsgId: cJ,
-                content: ZJ,
-                author: FJ
-              } = JJ;
-              this.addMessage(cJ, ZJ, FJ)
+                serverChatMsgId: TB,
+                content: dB,
+                author: VB
+              } = BB;
+              this.addMessage(TB, dB, VB)
             })), () => {
-              eJ.i.unsubscribe(JJ)
-            }, YJ.b.subscribe("chatChannels", (JJ => {
-              var cJ;
+              pB.h.unsubscribe(BB)
+            }, oB.c.subscribe("chatChannels", (BB => {
+              var TB;
               this.setState({
                 ...this.state,
-                channel: null !== (cJ = null === JJ || void 0 === JJ ? void 0 : JJ[0]) && void 0 !== cJ ? cJ : null
+                channel: null !== (TB = null === BB || void 0 === BB ? void 0 : BB[0]) && void 0 !== TB ? TB : null
               })
             }))]
           }
-          return this.listeners.add(JJ), () => {
-            if (this.listeners.delete(JJ), 0 === this.listeners.size) {
-              for (const JJ of this.stopListening) JJ();
+          return this.listeners.add(BB), () => {
+            if (this.listeners.delete(BB), 0 === this.listeners.size) {
+              for (const BB of this.stopListening) BB();
               this.stopListening = [], this.state = {
                 messages: [],
                 reportedPlayers: [],
@@ -309,286 +309,286 @@ export const modules = {
           }
         }, this.getState = () => this.state
       }
-      addMessage(JJ, cJ) {
-        let ZJ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        const FJ = {
-          serverChatMsgId: JJ,
-          content: cJ,
+      addMessage(BB, TB) {
+        let dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        const VB = {
+          serverChatMsgId: BB,
+          content: TB,
           clientChatMsgId: this.nextClientChatMsgId++,
-          author: ZJ
+          author: dB
         };
         this.setState({
           ...this.state,
-          messages: [FJ, ...this.state.messages].slice(0, UJ.g)
+          messages: [VB, ...this.state.messages].slice(0, yB.f)
         })
       }
       selectNextChannel() {
-        const JJ = YJ.b.get("chatChannels");
-        if (JJ) {
-          const cJ = JJ.findIndex((JJ => {
-            var cJ;
-            return JJ.channelName === (null === (cJ = this.state.channel) || void 0 === cJ ? void 0 : cJ.channelName)
+        const BB = oB.c.get("chatChannels");
+        if (BB) {
+          const TB = BB.findIndex((BB => {
+            var TB;
+            return BB.channelName === (null === (TB = this.state.channel) || void 0 === TB ? void 0 : TB.channelName)
           }));
           this.setState({
             ...this.state,
-            channel: JJ[(cJ + 1) % JJ.length]
+            channel: BB[(TB + 1) % BB.length]
           })
         }
       }
-      setState(JJ) {
-        this.state = JJ;
-        for (const cJ of this.listeners) cJ()
+      setState(BB) {
+        this.state = BB;
+        for (const TB of this.listeners) TB()
       }
     };
 
-    function sJ() {
-      const [JJ, cJ] = (0, FJ.useState)(DJ.getState);
-      return (0, FJ.useEffect)((() => {
-        const JJ = DJ.subscribe((() => {
-          cJ(DJ.getState())
+    function OB() {
+      const [BB, TB] = (0, VB.useState)(LB.getState);
+      return (0, VB.useEffect)((() => {
+        const BB = LB.subscribe((() => {
+          TB(LB.getState())
         }));
-        return cJ(DJ.getState()), JJ
-      }), []), JJ
+        return TB(LB.getState()), BB
+      }), []), BB
     }
 
-    function nJ(JJ) {
-      var cJ, ZJ;
-      if (AJ.j && "/" !== JJ[0]) DJ.addMessage(null, [{
+    function DB(BB) {
+      var TB, dB;
+      if (JB.n && "/" !== BB[0]) LB.addMessage(null, [{
         str: "Cannot send chat messages in bloxdk12. Use /help for a list of commands."
       }]);
       else {
-        if (JJ.startsWith("/report")) {
-          var FJ;
-          const cJ = null !== (FJ = JJ.replace("/report", "").trim().split(" ")[0]) && void 0 !== FJ ? FJ : "";
-          if ("" === cJ) return void DJ.addMessage(null, [{
+        if (BB.startsWith("/report")) {
+          var VB;
+          const TB = null !== (VB = BB.replace("/report", "").trim().split(" ")[0]) && void 0 !== VB ? VB : "";
+          if ("" === TB) return void LB.addMessage(null, [{
             str: "You must type a player's name when reporting them.\nExample:\n/report Bob"
           }]);
-          const ZJ = XJ.gameBridge.latest("players"),
-            UJ = XJ.gameBridge.latest("hiddenPlayerNames"),
-            AJ = JJ => {
-              var FJ, eJ;
-              const XJ = null !== (FJ = null === (eJ = ZJ.byId[JJ]) || void 0 === eJ ? void 0 : eJ.name) && void 0 !== FJ ? FJ : null;
-              return null !== XJ && (XJ === cJ || (0, jJ.d)(XJ, UJ) === cJ)
+          const dB = lB.gameBridge.latest("players"),
+            yB = lB.gameBridge.latest("hiddenPlayerNames"),
+            JB = BB => {
+              var VB, pB;
+              const lB = null !== (VB = null === (pB = dB.byId[BB]) || void 0 === pB ? void 0 : pB.name) && void 0 !== VB ? VB : null;
+              return null !== lB && (lB === TB || (0, gB.d)(lB, yB) === TB)
             };
-          if (null !== ZJ.localId && AJ(ZJ.localId)) return void DJ.addMessage(null, [{
+          if (null !== dB.localId && JB(dB.localId)) return void LB.addMessage(null, [{
             str: "You cannot report yourself."
           }]);
-          for (const JJ of ZJ.ids)
-            if (AJ(JJ)) return eJ.i.Uf("OpenReportMenu", {
-              playerEId: JJ,
-              playerName: ZJ.byId[JJ].name,
-              JY: null,
+          for (const BB of dB.ids)
+            if (JB(BB)) return pB.h.yH("OpenReportMenu", {
+              playerEId: BB,
+              playerName: dB.byId[BB].name,
+              Jo: null,
               serverChatMsgId: null
             }), void console.log("Opening report menu...");
-          DJ.addMessage(null, [{
+          LB.addMessage(null, [{
             str: "Player not found in lobby."
           }])
         }
-        XJ.gameBridge.send("sendChatMessage", {
-            JY: JJ,
-            channelName: null !== (cJ = null === (ZJ = DJ.getState().channel) || void 0 === ZJ ? void 0 : ZJ.channelName) && void 0 !== cJ ? cJ : null
+        lB.gameBridge.send("sendChatMessage", {
+            Jo: BB,
+            channelName: null !== (TB = null === (dB = LB.getState().channel) || void 0 === dB ? void 0 : dB.channelName) && void 0 !== TB ? TB : null
           }),
-          function(JJ) {
-            var cJ;
-            const ZJ = null !== (cJ = qJ.j.getItem("recentlySentChatMsgs")) && void 0 !== cJ ? cJ : [];
-            ZJ.push(JJ), ZJ.length > hJ && ZJ.shift();
-            qJ.j.setItem("recentlySentChatMsgs", ZJ)
-          }(JJ)
+          function(BB) {
+            var TB;
+            const dB = null !== (TB = YB.j.getItem("recentlySentChatMsgs")) && void 0 !== TB ? TB : [];
+            dB.push(BB), dB.length > kB && dB.shift();
+            YB.j.setItem("recentlySentChatMsgs", dB)
+          }(BB)
       }
     }
 
-    function GJ() {
-      var JJ;
-      return null !== (JJ = qJ.j.getItem("recentlySentChatMsgs")) && void 0 !== JJ ? JJ : []
+    function uB() {
+      var BB;
+      return null !== (BB = YB.j.getItem("recentlySentChatMsgs")) && void 0 !== BB ? BB : []
     }
 
-    function fJ(JJ) {
-      var cJ;
-      let ZJ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      const FJ = null !== (cJ = qJ.j.getItem("recentlySentChatMsgs")) && void 0 !== cJ ? cJ : [],
-        UJ = FJ.length + 1,
-        eJ = ZJ ? (JJ % UJ + UJ) % UJ : Math.min(FJ.length, Math.max(0, JJ));
+    function HB(BB) {
+      var TB;
+      let dB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      const VB = null !== (TB = YB.j.getItem("recentlySentChatMsgs")) && void 0 !== TB ? TB : [],
+        yB = VB.length + 1,
+        pB = dB ? (BB % yB + yB) % yB : Math.min(VB.length, Math.max(0, BB));
       return {
-        stepsBack: eJ,
-        text: 0 === eJ ? "" : FJ[FJ.length - eJ]
+        stepsBack: pB,
+        text: 0 === pB ? "" : VB[VB.length - pB]
       }
     }
   },
-  8019: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => XJ,
-      g: () => eJ
+  8043: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => lB,
+      e: () => pB
     });
-    var FJ = ZJ(1769);
-    const UJ = /^(?:Key[A-Z]|Digit[0-9]|Arrow(?:Up|Down|Left|Right)|Space)$/,
-      eJ = JJ => "string" === typeof JJ.icon && "" !== JJ.icon && "string" === typeof JJ.keycode && UJ.test(JJ.keycode),
-      XJ = JJ => "Space" === JJ ? "_" : FJ.f[JJ]
+    var VB = dB(1751);
+    const yB = /^(?:Key[A-Z]|Digit[0-9]|Arrow(?:Up|Down|Left|Right)|Space)$/,
+      pB = BB => "string" === typeof BB.icon && "" !== BB.icon && "string" === typeof BB.keycode && yB.test(BB.keycode),
+      lB = BB => "Space" === BB ? "_" : VB.j[BB]
   },
-  8088: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      b: () => UJ
+  8127: (BB, TB, dB) => {
+    dB.d(TB, {
+      e: () => yB
     });
-    var FJ = ZJ(13);
+    var VB = dB(21);
 
-    function UJ() {
-      return !FJ.d.get("isTouchScreen") && null !== document.pointerLockElement
+    function yB() {
+      return !VB.d.get("isTouchScreen") && null !== document.pointerLockElement
     }
   },
-  8092: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      B: () => DJ,
-      F: () => sJ,
-      d: () => eJ,
-      h: () => AJ,
-      k: () => jJ,
-      l: () => qJ,
-      p: () => XJ,
-      q: () => UJ,
-      t: () => FJ,
-      v: () => nJ,
-      y: () => hJ,
-      z: () => YJ
+  8130: (BB, TB, dB) => {
+    dB.d(TB, {
+      A: () => oB,
+      B: () => LB,
+      C: () => OB,
+      c: () => pB,
+      g: () => JB,
+      j: () => gB,
+      k: () => YB,
+      m: () => lB,
+      n: () => yB,
+      r: () => VB,
+      v: () => DB,
+      y: () => kB
     });
-    const FJ = 14,
-      UJ = 6,
-      eJ = (FJ + UJ) / 2,
-      XJ = 200,
-      AJ = XJ / 2,
-      qJ = XJ / 2 - 1,
-      jJ = UJ / FJ * (XJ / 2),
-      YJ = (JJ, cJ) => -Math.PI / 2 + 2 * JJ * Math.PI / cJ,
-      hJ = (JJ, cJ, ZJ) => {
-        const FJ = 2 * Math.PI / ZJ;
-        return (Math.round((Math.atan2(cJ, JJ) + Math.PI / 2) / FJ) % ZJ + ZJ) % ZJ
+    const VB = 14,
+      yB = 6,
+      pB = (VB + yB) / 2,
+      lB = 200,
+      JB = lB / 2,
+      YB = lB / 2 - 1,
+      gB = yB / VB * (lB / 2),
+      oB = (BB, TB) => -Math.PI / 2 + 2 * BB * Math.PI / TB,
+      kB = (BB, TB, dB) => {
+        const VB = 2 * Math.PI / dB;
+        return (Math.round((Math.atan2(TB, BB) + Math.PI / 2) / VB) % dB + dB) % dB
       },
-      DJ = .5,
-      sJ = (JJ, cJ, ZJ) => Math.hypot(JJ.x, JJ.y) < DJ ? ZJ : hJ(JJ.x, JJ.y, cJ),
-      nJ = (JJ, cJ, ZJ, FJ, UJ) => {
-        const eJ = Math.PI / cJ,
-          XJ = YJ(JJ, cJ),
-          AJ = XJ - eJ,
-          qJ = XJ + eJ,
-          jJ = (JJ, cJ) => `${ZJ+JJ*Math.cos(cJ)} ${ZJ+JJ*Math.sin(cJ)}`;
-        return [`M ${jJ(FJ,AJ)}`, `L ${jJ(UJ,AJ)}`, `A ${UJ} ${UJ} 0 0 1 ${jJ(UJ,qJ)}`, `L ${jJ(FJ,qJ)}`, `A ${FJ} ${FJ} 0 0 0 ${jJ(FJ,AJ)}`, "Z"].join(" ")
+      LB = .5,
+      OB = (BB, TB, dB) => Math.hypot(BB.x, BB.y) < LB ? dB : kB(BB.x, BB.y, TB),
+      DB = (BB, TB, dB, VB, yB) => {
+        const pB = Math.PI / TB,
+          lB = oB(BB, TB),
+          JB = lB - pB,
+          YB = lB + pB,
+          gB = (BB, TB) => `${dB+BB*Math.cos(TB)} ${dB+BB*Math.sin(TB)}`;
+        return [`M ${gB(VB,JB)}`, `L ${gB(yB,JB)}`, `A ${yB} ${yB} 0 0 1 ${gB(yB,YB)}`, `L ${gB(VB,YB)}`, `A ${VB} ${VB} 0 0 0 ${gB(VB,JB)}`, "Z"].join(" ")
       }
   },
-  8131: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      c: () => XJ
+  8171: (BB, TB, dB) => {
+    dB.d(TB, {
+      b: () => lB
     });
-    var FJ = ZJ(47),
-      UJ = ZJ(8043),
-      eJ = ZJ(2175);
+    var VB = dB(62),
+      yB = dB(8070),
+      pB = dB(2139);
 
-    function XJ() {
-      const JJ = (0, eJ.f)("shopInfo"),
-        [, cJ] = (0, FJ.useReducer)((JJ => JJ + 1), 0);
-      return (0, eJ.e)("shopInfo", cJ), !(0, UJ.e)(JJ)
+    function lB() {
+      const BB = (0, pB.j)("shopInfo"),
+        [, TB] = (0, VB.useReducer)((BB => BB + 1), 0);
+      return (0, pB.i)("shopInfo", TB), !(0, yB.e)(BB)
     }
   },
-  8011: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      c: () => eJ,
-      g: () => XJ,
-      h: () => AJ,
-      i: () => UJ
+  8038: (BB, TB, dB) => {
+    dB.d(TB, {
+      b: () => pB,
+      f: () => lB,
+      h: () => JB,
+      i: () => yB
     });
-    var FJ = ZJ(8019);
-    const UJ = JJ => {
-        const cJ = [];
-        JJ.holdingGun && cJ.push({
+    var VB = dB(8043);
+    const yB = BB => {
+        const TB = [];
+        BB.holdingGun && TB.push({
           kind: "reload"
-        }), JJ.touchscreenActionButton && cJ.push({
+        }), BB.touchscreenActionButton && TB.push({
           kind: "touchButton",
-          label: JJ.touchscreenActionButton
+          label: BB.touchscreenActionButton
         });
-        for (const eJ of null !== (ZJ = null === (UJ = JJ.customButtons) || void 0 === UJ ? void 0 : UJ.filter(FJ.g)) && void 0 !== ZJ ? ZJ : []) {
-          var ZJ, UJ;
-          cJ.push({
+        for (const pB of null !== (dB = null === (yB = BB.customButtons) || void 0 === yB ? void 0 : yB.filter(VB.e)) && void 0 !== dB ? dB : []) {
+          var dB, yB;
+          TB.push({
             kind: "customButton",
-            id: eJ.id,
-            icon: eJ.icon,
-            description: eJ.description
+            id: pB.id,
+            icon: pB.icon,
+            description: pB.description
           })
         }
-        return cJ
+        return TB
       },
-      eJ = JJ => JJ.length >= 2,
-      XJ = JJ => "specialAction" !== JJ.kind,
-      AJ = (JJ, cJ) => {
-        if (null === JJ || null === cJ) return JJ === cJ;
-        if (JJ.kind !== cJ.kind) return !1;
-        switch (JJ.kind) {
+      pB = BB => BB.length >= 2,
+      lB = BB => "specialAction" !== BB.kind,
+      JB = (BB, TB) => {
+        if (null === BB || null === TB) return BB === TB;
+        if (BB.kind !== TB.kind) return !1;
+        switch (BB.kind) {
           case "reload":
             return !0;
           case "specialAction":
-            return JJ.action === cJ.action;
+            return BB.action === TB.action;
           case "customButton":
-            return JJ.id === cJ.id && JJ.icon === cJ.icon;
+            return BB.id === TB.id && BB.icon === TB.icon;
           case "touchButton":
-            return JJ.label === cJ.label
+            return BB.label === TB.label
         }
       }
   },
-  8004: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => YJ,
-      e: () => sJ,
-      g: () => hJ,
-      i: () => nJ
+  8031: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => oB,
+      e: () => OB,
+      i: () => kB,
+      k: () => DB
     });
-    var FJ = ZJ(47),
-      UJ = ZJ(17),
-      eJ = ZJ(1326),
-      XJ = ZJ(8011),
-      AJ = ZJ(8024);
-    let qJ = null;
-    const jJ = () => qJ,
-      YJ = JJ => {
-        (0, XJ.h)(qJ, JJ) || (qJ = JJ, UJ.i.Uf(AJ.d, qJ))
+    var VB = dB(62),
+      yB = dB(24),
+      pB = dB(1317),
+      lB = dB(8038),
+      JB = dB(8045);
+    let YB = null;
+    const gB = () => YB,
+      oB = BB => {
+        (0, lB.h)(YB, BB) || (YB = BB, yB.h.yH(JB.g, YB))
       },
-      hJ = () => {
-        const [JJ, cJ] = (0, FJ.useState)(jJ);
-        return (0, eJ.i)(AJ.d, cJ), JJ
+      kB = () => {
+        const [BB, TB] = (0, VB.useState)(gB);
+        return (0, pB.e)(JB.g, TB), BB
       };
-    let DJ = !1;
-    const sJ = JJ => {
-        JJ !== DJ && (DJ = JJ, UJ.i.Uf(AJ.g, JJ))
+    let LB = !1;
+    const OB = BB => {
+        BB !== LB && (LB = BB, yB.h.yH(JB.h, BB))
       },
-      nJ = () => {
-        const [JJ, cJ] = (0, FJ.useState)(DJ);
-        return (0, eJ.i)(AJ.g, cJ), JJ
+      DB = () => {
+        const [BB, TB] = (0, VB.useState)(LB);
+        return (0, pB.e)(JB.h, TB), BB
       }
   },
-  8024: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      c: () => eJ,
-      d: () => FJ,
-      g: () => UJ,
-      h: () => AJ,
-      i: () => qJ,
-      m: () => jJ,
-      q: () => XJ
+  8045: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => pB,
+      g: () => VB,
+      h: () => yB,
+      i: () => JB,
+      j: () => YB,
+      k: () => gB,
+      o: () => lB
     });
-    const FJ = "controllerActionHintChanged",
-      UJ = "controllerActionWheelHintChanged",
-      eJ = "controllerOpenChat",
-      XJ = "controllerSneakToggledChanged",
-      AJ = "controllerAttackLatchedChanged",
-      qJ = "controllerDropStackHoldChanged",
-      jJ = "controllerPickBlockHintChanged"
+    const VB = "controllerActionHintChanged",
+      yB = "controllerActionWheelHintChanged",
+      pB = "controllerOpenChat",
+      lB = "controllerSneakToggledChanged",
+      JB = "controllerAttackLatchedChanged",
+      YB = "controllerDropStackHoldChanged",
+      gB = "controllerPickBlockHintChanged"
   },
-  7988: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      b: () => XJ,
-      e: () => eJ,
-      f: () => qJ,
-      j: () => AJ
+  8016: (BB, TB, dB) => {
+    dB.d(TB, {
+      b: () => lB,
+      d: () => pB,
+      f: () => YB,
+      j: () => JB
     });
-    var FJ = ZJ(1326),
-      UJ = ZJ(1300);
-    const eJ = "controllerInventoryCursorChanged",
-      XJ = {
+    var VB = dB(1317),
+      yB = dB(1286);
+    const pB = "controllerInventoryCursorChanged",
+      lB = {
         showing: !1,
         kind: null,
         holding: !1,
@@ -602,199 +602,199 @@ export const modules = {
         dropStackHold: null,
         hotbarPicking: !1
       },
-      AJ = () => {
-        var JJ, cJ;
-        return (0, FJ.m)(eJ, null !== (JJ = null === (cJ = (0, UJ.f)()) || void 0 === cJ ? void 0 : cJ.getInventoryCursorState()) && void 0 !== JJ ? JJ : XJ)
+      JB = () => {
+        var BB, TB;
+        return (0, VB.f)(pB, null !== (BB = null === (TB = (0, yB.i)()) || void 0 === TB ? void 0 : TB.getInventoryCursorState()) && void 0 !== BB ? BB : lB)
       },
-      qJ = () => {
-        var JJ, cJ;
-        return null !== (JJ = null === (cJ = (0, UJ.f)()) || void 0 === cJ ? void 0 : cJ.isPadSteppingSlots()) && void 0 !== JJ && JJ
+      YB = () => {
+        var BB, TB;
+        return null !== (BB = null === (TB = (0, yB.i)()) || void 0 === TB ? void 0 : TB.isPadSteppingSlots()) && void 0 !== BB && BB
       }
   },
-  7982: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => DJ,
-      f: () => AJ,
-      j: () => qJ,
-      m: () => XJ,
-      q: () => eJ,
-      r: () => YJ,
-      v: () => hJ
+  8013: (BB, TB, dB) => {
+    dB.d(TB, {
+      c: () => LB,
+      g: () => JB,
+      i: () => YB,
+      k: () => lB,
+      n: () => pB,
+      r: () => oB,
+      s: () => kB
     });
-    let FJ = null;
-    const UJ = new Set,
-      eJ = JJ => (FJ = JJ, () => {
-        if (FJ === JJ) {
-          FJ = null;
-          for (const JJ of UJ) JJ()
+    let VB = null;
+    const yB = new Set,
+      pB = BB => (VB = BB, () => {
+        if (VB === BB) {
+          VB = null;
+          for (const BB of yB) BB()
         }
       }),
-      XJ = JJ => (UJ.add(JJ), () => {
-        UJ.delete(JJ)
+      lB = BB => (yB.add(BB), () => {
+        yB.delete(BB)
       }),
-      AJ = () => FJ,
-      qJ = () => null !== FJ;
-    let jJ = null;
-    const YJ = JJ => {
-        jJ = JJ
+      JB = () => VB,
+      YB = () => null !== VB;
+    let gB = null;
+    const oB = BB => {
+        gB = BB
       },
-      hJ = () => {
-        const JJ = jJ;
-        return jJ = null, JJ
+      kB = () => {
+        const BB = gB;
+        return gB = null, BB
       },
-      DJ = (JJ, cJ) => {
-        var ZJ, FJ;
-        return null !== (ZJ = null !== (FJ = JJ.find((JJ => JJ.element === cJ))) && void 0 !== FJ ? FJ : JJ.find((JJ => JJ.element.contains(cJ)))) && void 0 !== ZJ ? ZJ : null
+      LB = (BB, TB) => {
+        var dB, VB;
+        return null !== (dB = null !== (VB = BB.find((BB => BB.element === TB))) && void 0 !== VB ? VB : BB.find((BB => BB.element.contains(TB)))) && void 0 !== dB ? dB : null
       }
   },
-  7996: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      e: () => eJ,
-      g: () => XJ
+  8018: (BB, TB, dB) => {
+    dB.d(TB, {
+      c: () => pB,
+      g: () => lB
     });
-    var FJ = ZJ(47);
-    const UJ = new WeakMap,
-      eJ = JJ => {
-        var cJ, ZJ;
-        return null !== (cJ = null === (ZJ = UJ.get(JJ)) || void 0 === ZJ ? void 0 : ZJ.current) && void 0 !== cJ ? cJ : null
+    var VB = dB(62);
+    const yB = new WeakMap,
+      pB = BB => {
+        var TB, dB;
+        return null !== (TB = null === (dB = yB.get(BB)) || void 0 === dB ? void 0 : dB.current) && void 0 !== TB ? TB : null
       },
-      XJ = (JJ, cJ) => {
-        const ZJ = (0, FJ.useRef)(cJ);
-        ZJ.current = cJ;
-        const eJ = (0, FJ.useRef)(null);
-        (0, FJ.useEffect)((() => {
-          const cJ = JJ.current,
-            FJ = eJ.current;
-          cJ !== FJ && (FJ && UJ.get(FJ) === ZJ && UJ.delete(FJ), eJ.current = cJ, cJ && UJ.set(cJ, ZJ))
-        })), (0, FJ.useEffect)((() => () => {
-          const JJ = eJ.current;
-          JJ && UJ.get(JJ) === ZJ && UJ.delete(JJ), eJ.current = null
+      lB = (BB, TB) => {
+        const dB = (0, VB.useRef)(TB);
+        dB.current = TB;
+        const pB = (0, VB.useRef)(null);
+        (0, VB.useEffect)((() => {
+          const TB = BB.current,
+            VB = pB.current;
+          TB !== VB && (VB && yB.get(VB) === dB && yB.delete(VB), pB.current = TB, TB && yB.set(TB, dB))
+        })), (0, VB.useEffect)((() => () => {
+          const BB = pB.current;
+          BB && yB.get(BB) === dB && yB.delete(BB), pB.current = null
         }), [])
       }
   },
-  8120: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      e: () => AJ,
-      f: () => jJ,
-      h: () => hJ,
-      k: () => YJ,
-      o: () => qJ,
-      s: () => sJ
+  8164: (BB, TB, dB) => {
+    dB.d(TB, {
+      c: () => JB,
+      g: () => gB,
+      k: () => kB,
+      n: () => oB,
+      r: () => YB,
+      v: () => OB
     });
-    var FJ = ZJ(17),
-      UJ = ZJ(1786),
-      eJ = ZJ(1300),
-      XJ = ZJ(1294);
-    const AJ = JJ => {
-        var cJ, ZJ;
-        return (0, XJ.e)() && null !== (cJ = null === (ZJ = (0, eJ.f)()) || void 0 === ZJ ? void 0 : ZJ.getGlyphForNoaAction(JJ)) && void 0 !== cJ ? cJ : null
+    var VB = dB(24),
+      yB = dB(1764),
+      pB = dB(1286),
+      lB = dB(1275);
+    const JB = BB => {
+        var TB, dB;
+        return (0, lB.i)() && null !== (TB = null === (dB = (0, pB.i)()) || void 0 === dB ? void 0 : dB.getGlyphForNoaAction(BB)) && void 0 !== TB ? TB : null
       },
-      qJ = "controllerGlyph:",
-      jJ = JJ => {
-        var cJ, ZJ;
-        return null !== (cJ = null === (ZJ = (0, eJ.f)()) || void 0 === ZJ ? void 0 : ZJ.getPadGlyphIconName(JJ)) && void 0 !== cJ ? cJ : `${qJ}xbox/${JJ}`
+      YB = "controllerGlyph:",
+      gB = BB => {
+        var TB, dB;
+        return null !== (TB = null === (dB = (0, pB.i)()) || void 0 === dB ? void 0 : dB.getPadGlyphIconName(BB)) && void 0 !== TB ? TB : `${YB}xbox/${BB}`
       },
-      YJ = JJ => JJ.startsWith(qJ),
-      hJ = JJ => {
-        var cJ, ZJ;
-        return YJ(JJ) && null !== (cJ = null === (ZJ = (0, eJ.f)()) || void 0 === ZJ ? void 0 : ZJ.getPadGlyphIconUrl(JJ)) && void 0 !== cJ ? cJ : null
+      oB = BB => BB.startsWith(YB),
+      kB = BB => {
+        var TB, dB;
+        return oB(BB) && null !== (TB = null === (dB = (0, pB.i)()) || void 0 === dB ? void 0 : dB.getPadGlyphIconUrl(BB)) && void 0 !== TB ? TB : null
       },
-      DJ = ["customBindingsChanged", "appManagerUpdated|isTouchScreen", XJ.d, UJ.c, UJ.b],
-      sJ = JJ => {
-        const cJ = DJ.map((cJ => FJ.i.subscribe(cJ, JJ)));
+      LB = ["customBindingsChanged", "appManagerUpdated|isTouchScreen", lB.e, yB.e, yB.d],
+      OB = BB => {
+        const TB = LB.map((TB => VB.h.subscribe(TB, BB)));
         return () => {
-          for (const JJ of cJ) FJ.i.unsubscribe(JJ)
+          for (const BB of TB) VB.h.unsubscribe(BB)
         }
       }
   },
-  7977: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      b: () => UJ,
-      f: () => FJ
+  8009: (BB, TB, dB) => {
+    dB.d(TB, {
+      e: () => yB,
+      f: () => VB
     });
-    const FJ = "controllerOpenKeyboard",
-      UJ = "controllerKeyboardVisible"
+    const VB = "controllerOpenKeyboard",
+      yB = "controllerKeyboardVisible"
   },
-  8068: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => eJ,
-      f: () => UJ
+  8103: (BB, TB, dB) => {
+    dB.d(TB, {
+      b: () => pB,
+      c: () => yB
     });
-    let FJ = null;
-    const UJ = function(JJ) {
-        const cJ = {
-          cycle: JJ,
+    let VB = null;
+    const yB = function(BB) {
+        const TB = {
+          cycle: BB,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return FJ = cJ, () => {
-          FJ === cJ && (FJ = null)
+        return VB = TB, () => {
+          VB === TB && (VB = null)
         }
       },
-      eJ = () => {
-        var JJ;
-        return null !== (JJ = FJ) && void 0 !== JJ && JJ.canCycle() ? FJ.cycle : null
+      pB = () => {
+        var BB;
+        return null !== (BB = VB) && void 0 !== BB && BB.canCycle() ? VB.cycle : null
       }
   },
-  8104: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      b: () => UJ,
-      c: () => XJ,
-      e: () => eJ,
-      i: () => FJ,
-      j: () => AJ,
-      m: () => jJ,
-      q: () => YJ
+  8140: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => yB,
+      g: () => lB,
+      h: () => pB,
+      l: () => VB,
+      o: () => JB,
+      r: () => gB,
+      v: () => oB
     });
-    const FJ = "controllerActionWheelOpen",
-      UJ = "controllerActionWheelAim",
-      eJ = "controllerActionWheelCommit",
-      XJ = "controllerActionWheelClose",
-      AJ = "controllerActionWheelPick";
-    let qJ = !1;
-    const jJ = () => qJ,
-      YJ = JJ => {
-        qJ = JJ
+    const VB = "controllerActionWheelOpen",
+      yB = "controllerActionWheelAim",
+      pB = "controllerActionWheelCommit",
+      lB = "controllerActionWheelClose",
+      JB = "controllerActionWheelPick";
+    let YB = !1;
+    const gB = () => YB,
+      oB = BB => {
+        YB = BB
       }
   },
-  8095: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => eJ,
-      g: () => UJ
+  8134: (BB, TB, dB) => {
+    dB.d(TB, {
+      e: () => pB,
+      h: () => yB
     });
-    let FJ = 0;
-    const UJ = () => {
-        FJ++
+    let VB = 0;
+    const yB = () => {
+        VB++
       },
-      eJ = () => FJ
+      pB = () => VB
   },
-  8066: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => qJ,
-      g: () => UJ,
-      h: () => XJ,
-      k: () => eJ,
-      o: () => FJ,
-      s: () => jJ
+  8094: (BB, TB, dB) => {
+    dB.d(TB, {
+      e: () => YB,
+      g: () => yB,
+      i: () => lB,
+      m: () => pB,
+      p: () => VB,
+      s: () => gB
     });
-    const FJ = "controllerQuickChatWheelOpen",
-      UJ = "controllerQuickChatWheelAim",
-      eJ = "controllerQuickChatWheelCommit",
-      XJ = "controllerQuickChatWheelClose";
-    let AJ = !1;
-    const qJ = () => AJ,
-      jJ = JJ => {
-        AJ = JJ
+    const VB = "controllerQuickChatWheelOpen",
+      yB = "controllerQuickChatWheelAim",
+      pB = "controllerQuickChatWheelCommit",
+      lB = "controllerQuickChatWheelClose";
+    let JB = !1;
+    const YB = () => JB,
+      gB = BB => {
+        JB = BB
       }
   },
-  8178: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      e: () => AJ,
-      g: () => qJ
+  8204: (BB, TB, dB) => {
+    dB.d(TB, {
+      c: () => JB,
+      f: () => YB
     });
-    var FJ = ZJ(13),
-      UJ = ZJ(1213),
-      eJ = ZJ(80);
-    const XJ = {
+    var VB = dB(21),
+      yB = dB(1209),
+      pB = dB(95);
+    const lB = {
       blockMined: {
         pattern: [18],
         priority: 1,
@@ -837,155 +837,155 @@ export const modules = {
       }
     };
 
-    function AJ() {
-      return (0, eJ.isMobile)() && "function" === typeof navigator.vibrate
+    function JB() {
+      return (0, pB.isMobile)() && "function" === typeof navigator.vibrate
     }
-    const qJ = new class {
-      constructor(JJ) {
-        this.deps = JJ, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
+    const YB = new class {
+      constructor(BB) {
+        this.deps = BB, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
       }
-      play(JJ, cJ) {
-        var ZJ;
+      play(BB, TB) {
+        var dB;
         if (!this.deps.enabled()) return;
-        const FJ = XJ[JJ],
-          UJ = null !== cJ && void 0 !== cJ ? cJ : FJ.pattern;
-        if (null === UJ) return void console.warn("No vibration pattern for", JJ);
-        const eJ = this.deps.now();
-        eJ - this.lastAnyAt < 40 && FJ.priority < this.playingPriority || eJ - (null !== (ZJ = this.lastAt.get(JJ)) && void 0 !== ZJ ? ZJ : -1 / 0) < FJ.minGapMs || eJ < this.playingUntil && FJ.priority < this.playingPriority || (this.lastAt.set(JJ, eJ), this.lastAnyAt = eJ, this.playingUntil = eJ + UJ.reduce(((JJ, cJ) => JJ + cJ), 0), this.playingPriority = FJ.priority, this.deps.vibrate(UJ))
+        const VB = lB[BB],
+          yB = null !== TB && void 0 !== TB ? TB : VB.pattern;
+        if (null === yB) return void console.warn("No vibration pattern for", BB);
+        const pB = this.deps.now();
+        pB - this.lastAnyAt < 40 && VB.priority < this.playingPriority || pB - (null !== (dB = this.lastAt.get(BB)) && void 0 !== dB ? dB : -1 / 0) < VB.minGapMs || pB < this.playingUntil && VB.priority < this.playingPriority || (this.lastAt.set(BB, pB), this.lastAnyAt = pB, this.playingUntil = pB + yB.reduce(((BB, TB) => BB + TB), 0), this.playingPriority = VB.priority, this.deps.vibrate(yB))
       }
     }({
-      vibrate: JJ => {
-        navigator.vibrate([...JJ])
+      vibrate: BB => {
+        navigator.vibrate([...BB])
       },
       now: () => performance.now(),
-      enabled: () => AJ() && FJ.d.get("isTouchScreen") && FJ.d.get("clientEscMenuOptions").vibration && !(0, UJ.g)()
+      enabled: () => JB() && VB.d.get("isTouchScreen") && VB.d.get("clientEscMenuOptions").vibration && !(0, yB.h)()
     })
   },
-  8043: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      e: () => XJ
+  8070: (BB, TB, dB) => {
+    dB.d(TB, {
+      e: () => lB
     });
-    var FJ = ZJ(8052),
-      UJ = ZJ(535),
-      eJ = ZJ(112);
+    var VB = dB(8075),
+      yB = dB(572),
+      pB = dB(138);
 
-    function XJ(JJ) {
-      var cJ, ZJ;
-      if ((0, UJ.P)(JJ)) return !0;
-      const XJ = null !== (cJ = null === (ZJ = eJ.i[eJ.n]) || void 0 === ZJ ? void 0 : ZJ.adConfig.showRewardedAds) && void 0 !== cJ && cJ;
-      for (const UJ in JJ) {
-        const cJ = JJ[UJ];
-        if (null !== cJ && void 0 !== cJ && cJ.items)
-          for (const JJ in cJ.items)
-            if ((0, FJ.n)(cJ.items[JJ], XJ)) return !1
+    function lB(BB) {
+      var TB, dB;
+      if ((0, yB.M)(BB)) return !0;
+      const lB = null !== (TB = null === (dB = pB.q[pB.v]) || void 0 === dB ? void 0 : dB.adConfig.showRewardedAds) && void 0 !== TB && TB;
+      for (const yB in BB) {
+        const TB = BB[yB];
+        if (null !== TB && void 0 !== TB && TB.items)
+          for (const BB in TB.items)
+            if ((0, VB.m)(TB.items[BB], lB)) return !1
       }
       return !0
     }
   },
-  8076: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      c: () => UJ,
-      g: () => FJ
+  8116: (BB, TB, dB) => {
+    dB.d(TB, {
+      b: () => yB,
+      f: () => VB
     });
-    const FJ = 100;
+    const VB = 100;
 
-    function UJ(JJ) {
+    function yB(BB) {
       let {
-        translationKeys: cJ = !1
+        translationKeys: TB = !1
       } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      return JJ.map((JJ => {
-        var ZJ;
-        return null !== (ZJ = function(JJ, cJ) {
-          if ("string" === typeof JJ) return JJ;
-          const ZJ = "str" in JJ ? JJ.str : JJ;
-          if ("string" === typeof ZJ) return ZJ;
-          if ("entityName" in ZJ) return ZJ.entityName;
-          if (cJ && "translationKey" in ZJ) return `{${ZJ.translationKey}${void 0===ZJ.params?"":` ${JSON.stringify(ZJ.params)}`}}`;
+      return BB.map((BB => {
+        var dB;
+        return null !== (dB = function(BB, TB) {
+          if ("string" === typeof BB) return BB;
+          const dB = "str" in BB ? BB.str : BB;
+          if ("string" === typeof dB) return dB;
+          if ("entityName" in dB) return dB.entityName;
+          if (TB && "translationKey" in dB) return `{${dB.translationKey}${void 0===dB.params?"":` ${JSON.stringify(dB.params)}`}}`;
           return null
-        }(JJ, cJ)) && void 0 !== ZJ ? ZJ : " "
+        }(BB, TB)) && void 0 !== dB ? dB : " "
       })).join("")
     }
   },
-  8114: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      e: () => YJ,
-      i: () => AJ,
-      j: () => qJ
+  8155: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => oB,
+      h: () => JB,
+      i: () => YB
     });
-    var FJ = ZJ(1995),
-      UJ = ZJ(1137),
-      eJ = ZJ(2001);
-    const XJ = ",";
+    var VB = dB(1978),
+      yB = dB(1117),
+      pB = dB(1985);
+    const lB = ",";
 
-    function AJ(JJ) {
-      if (!JJ) return [];
-      const cJ = new Set,
-        ZJ = [];
-      for (const FJ of JJ.split(XJ)) {
-        const JJ = FJ.trim();
-        if ((0, eJ.n)(JJ) && !cJ.has(JJ) && (cJ.add(JJ), ZJ.push(JJ), ZJ.length >= UJ.n)) break
+    function JB(BB) {
+      if (!BB) return [];
+      const TB = new Set,
+        dB = [];
+      for (const VB of BB.split(lB)) {
+        const BB = VB.trim();
+        if ((0, pB.k)(BB) && !TB.has(BB) && (TB.add(BB), dB.push(BB), dB.length >= yB.k)) break
       }
-      return ZJ
+      return dB
     }
 
-    function qJ(JJ) {
-      const cJ = new Set,
-        ZJ = [];
-      for (const FJ of JJ)
-        if ((0, eJ.n)(FJ) && !cJ.has(FJ) && (cJ.add(FJ), ZJ.push(FJ), ZJ.length >= UJ.n)) break;
-      return ZJ.join(XJ)
+    function YB(BB) {
+      const TB = new Set,
+        dB = [];
+      for (const VB of BB)
+        if ((0, pB.k)(VB) && !TB.has(VB) && (TB.add(VB), dB.push(VB), dB.length >= yB.k)) break;
+      return dB.join(lB)
     }
 
-    function jJ() {
-      return qJ(eJ.i)
+    function gB() {
+      return YB(pB.e)
     }
 
-    function YJ(JJ) {
-      var cJ;
-      return "emote" === JJ ? jJ() : null !== (cJ = hJ[JJ][0]) && void 0 !== cJ ? cJ : DJ[JJ]
+    function oB(BB) {
+      var TB;
+      return "emote" === BB ? gB() : null !== (TB = kB[BB][0]) && void 0 !== TB ? TB : LB[BB]
     }
-    const hJ = UJ.s.reduce(((JJ, cJ) => {
-        const ZJ = [];
-        for (const eJ in FJ.g[cJ]) {
-          var UJ;
-          "default" === (null === (UJ = (0, FJ.i)(cJ, eJ)) || void 0 === UJ ? void 0 : UJ.cosmeticPack) && ZJ.push(eJ)
+    const kB = yB.q.reduce(((BB, TB) => {
+        const dB = [];
+        for (const pB in VB.d[TB]) {
+          var yB;
+          "default" === (null === (yB = (0, VB.h)(TB, pB)) || void 0 === yB ? void 0 : yB.cosmeticPack) && dB.push(pB)
         }
-        return JJ[cJ] = ZJ, JJ
+        return BB[TB] = dB, BB
       }), {}),
-      DJ = UJ.s.reduce(((JJ, cJ) => (JJ[cJ] = Object.keys(FJ.g[cJ])[0], JJ)), {})
+      LB = yB.q.reduce(((BB, TB) => (BB[TB] = Object.keys(VB.d[TB])[0], BB)), {})
   },
-  8052: (JJ, cJ, ZJ) => {
-    function FJ(JJ, cJ) {
-      return !JJ.hidden && (cJ || !JJ.isRewardedAd)
+  8075: (BB, TB, dB) => {
+    function VB(BB, TB) {
+      return !BB.hidden && (TB || !BB.isRewardedAd)
     }
 
-    function UJ(JJ) {
-      return "object" === typeof JJ ? JJ.option : JJ
+    function yB(BB) {
+      return "object" === typeof BB ? BB.option : BB
     }
 
-    function eJ(JJ, cJ) {
-      var ZJ;
-      if ("dropdown" === (null === (ZJ = JJ.userInput) || void 0 === ZJ ? void 0 : ZJ.type) && "object" === typeof JJ.userInput.dropdownOptions[0]) {
-        for (const ZJ of JJ.userInput.dropdownOptions)
-          if (UJ(ZJ) === cJ) return "object" === typeof ZJ ? ZJ.cost : JJ.cost;
-        console.error("Didn't find matching option for dropdown item. Item:", JJ, "input:", cJ)
+    function pB(BB, TB) {
+      var dB;
+      if ("dropdown" === (null === (dB = BB.userInput) || void 0 === dB ? void 0 : dB.type) && "object" === typeof BB.userInput.dropdownOptions[0]) {
+        for (const dB of BB.userInput.dropdownOptions)
+          if (yB(dB) === TB) return "object" === typeof dB ? dB.cost : BB.cost;
+        console.error("Didn't find matching option for dropdown item. Item:", BB, "input:", TB)
       }
-      return JJ.cost
+      return BB.cost
     }
 
-    function XJ(JJ, cJ, ZJ) {
-      var FJ;
-      const UJ = null !== (FJ = ZJ.excludedPlayers) && void 0 !== FJ ? FJ : [cJ];
-      return JJ.filter((JJ => !UJ.includes(JJ)))
+    function lB(BB, TB, dB) {
+      var VB;
+      const yB = null !== (VB = dB.excludedPlayers) && void 0 !== VB ? VB : [TB];
+      return BB.filter((BB => !yB.includes(BB)))
     }
-    ZJ.d(cJ, {
-      e: () => eJ,
-      g: () => UJ,
-      k: () => XJ,
-      n: () => FJ
+    dB.d(TB, {
+      e: () => pB,
+      i: () => yB,
+      k: () => lB,
+      m: () => VB
     })
   },
-  8106: () => {}
+  8147: () => {}
 };
 Object.freeze(modules);
-for (const JJ in modules) Object.freeze(modules[JJ]);
+for (const BB in modules) Object.freeze(modules[BB]);

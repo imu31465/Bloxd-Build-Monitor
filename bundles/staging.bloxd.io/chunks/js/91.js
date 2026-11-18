@@ -1,951 +1,951 @@
 export const id = 91;
 export const ids = [91, 176];
 export const modules = {
-  8468: (JJ, cJ, ZJ) => {
-    ZJ.r(cJ), ZJ.d(cJ, {
-      EverythingMenu: () => IU
+  8512: (BB, TB, dB) => {
+    dB.r(TB), dB.d(TB, {
+      EverythingMenu: () => Uy
     });
-    var FJ = ZJ(47),
-      UJ = ZJ(926),
-      eJ = ZJ.n(UJ),
-      XJ = ZJ(1086),
-      AJ = ZJ(942),
-      qJ = ZJ(1843),
-      jJ = ZJ(1009),
-      YJ = ZJ(990);
+    var VB = dB(62),
+      yB = dB(933),
+      pB = dB.n(yB),
+      lB = dB(1078),
+      JB = dB(946),
+      YB = dB(1815),
+      gB = dB(993),
+      oB = dB(980);
 
-    function hJ(JJ) {
+    function kB(BB) {
       let {
-        items: cJ,
-        onClick: ZJ,
-        selectedItemId: FJ,
-        className: UJ,
-        padStartsOnTab: hJ = !0
-      } = JJ;
+        items: TB,
+        onClick: dB,
+        selectedItemId: VB,
+        className: yB,
+        padStartsOnTab: kB = !0
+      } = BB;
       const {
-        t: DJ
-      } = (0, XJ.F)(), sJ = (0, jJ.h)(), nJ = [];
-      for (const eJ of cJ) {
-        var GJ;
-        const JJ = nJ[nJ.length - 1];
-        var fJ;
-        if (JJ && JJ.title === (null !== (GJ = eJ.section) && void 0 !== GJ ? GJ : null)) JJ.items.push(eJ);
-        else nJ.push({
-          title: null !== (fJ = eJ.section) && void 0 !== fJ ? fJ : null,
-          items: [eJ]
+        t: LB
+      } = (0, lB.z)(), OB = (0, gB.i)(), DB = [];
+      for (const pB of TB) {
+        var uB;
+        const BB = DB[DB.length - 1];
+        var HB;
+        if (BB && BB.title === (null !== (uB = pB.section) && void 0 !== uB ? uB : null)) BB.items.push(pB);
+        else DB.push({
+          title: null !== (HB = pB.section) && void 0 !== HB ? HB : null,
+          items: [pB]
         })
       }
-      return (0, YJ.jsx)("div", {
-        className: eJ()("MenuSideBarBody", UJ),
+      return (0, oB.jsx)("div", {
+        className: pB()("MenuSideBarBody", yB),
         "data-pad-tabs": "2",
-        children: nJ.map(((JJ, cJ) => {
-          var UJ;
-          return (0, YJ.jsxs)("div", {
+        children: DB.map(((BB, TB) => {
+          var yB;
+          return (0, oB.jsxs)("div", {
             className: "MenuSideBarSection",
-            children: [JJ.title && (0, YJ.jsx)("div", {
+            children: [BB.title && (0, oB.jsx)("div", {
               className: "MenuSideBarSectionTitle",
-              children: DJ(JJ.title)
-            }), JJ.items.map((JJ => {
-              var cJ;
-              const UJ = !!JJ.iconElement || !!JJ.faIcon;
-              return (0, YJ.jsxs)("div", {
+              children: LB(BB.title)
+            }), BB.items.map((BB => {
+              var TB;
+              const yB = !!BB.iconElement || !!BB.faIcon;
+              return (0, oB.jsxs)("div", {
                 "data-pad-tab": !0,
-                "data-pad-selected": FJ === JJ.id ? "true" : void 0,
-                "data-pad-default-focus": hJ && FJ === JJ.id || void 0,
-                className: eJ()("MenuSideBarBodyTab", {
-                  ActiveMenuSideBarBodyTab: FJ === JJ.id
+                "data-pad-selected": VB === BB.id ? "true" : void 0,
+                "data-pad-default-focus": kB && VB === BB.id || void 0,
+                className: pB()("MenuSideBarBodyTab", {
+                  ActiveMenuSideBarBodyTab: VB === BB.id
                 }),
                 onClick: () => {
-                  ZJ(JJ.id)
+                  dB(BB.id)
                 },
-                children: [UJ && (0, YJ.jsx)("div", {
+                children: [yB && (0, oB.jsx)("div", {
                   className: "MenuSideBarBodyTabIcon",
-                  children: null !== (cJ = JJ.iconElement) && void 0 !== cJ ? cJ : (0, YJ.jsx)(AJ.c, {
-                    name: JJ.faIcon
+                  children: null !== (TB = BB.iconElement) && void 0 !== TB ? TB : (0, oB.jsx)(JB.e, {
+                    name: BB.faIcon
                   })
-                }), (!sJ || !UJ) && (0, YJ.jsx)("div", {
-                  children: DJ(JJ.title)
-                }), JJ.redDot && (0, YJ.jsx)(qJ.e, {
+                }), (!OB || !yB) && (0, oB.jsx)("div", {
+                  children: LB(BB.title)
+                }), BB.redDot && (0, oB.jsx)(YB.b, {
                   top: "-0.2rem",
                   right: "-1rem"
                 })]
-              }, JJ.id)
+              }, BB.id)
             }))]
-          }, null !== (UJ = JJ.title) && void 0 !== UJ ? UJ : cJ)
+          }, null !== (yB = BB.title) && void 0 !== yB ? yB : TB)
         }))
       })
     }
-    var DJ = ZJ(2514),
-      sJ = ZJ(1022),
-      nJ = ZJ(2175),
-      GJ = ZJ(1017),
-      fJ = ZJ(1329),
-      xJ = ZJ(80),
-      rJ = ZJ(1703),
-      vJ = ZJ(2017),
-      mJ = ZJ(2023),
-      QJ = ZJ(1566),
-      EJ = ZJ(1232),
-      VJ = ZJ(4401),
-      KJ = ZJ(13),
-      yJ = ZJ(8476);
+    var LB = dB(2488),
+      OB = dB(1011),
+      DB = dB(2139),
+      uB = dB(1002),
+      HB = dB(1324),
+      EB = dB(95),
+      vB = dB(1679),
+      mB = dB(2006),
+      iB = dB(2011),
+      NB = dB(1555),
+      tB = dB(1225),
+      fB = dB(4411),
+      sB = dB(21),
+      MB = dB(8520);
 
-    function SJ(JJ) {
+    function zB(BB) {
       let {
-        setApplySettingsCallback: cJ
-      } = JJ;
+        setApplySettingsCallback: TB
+      } = BB;
       const {
-        clientEscMenuOptions: ZJ
-      } = (0, KJ.j)(["clientEscMenuOptions"]), [UJ, eJ] = (0, FJ.useState)(!1), [XJ, AJ] = (0, FJ.useState)(!1), [qJ, jJ] = (0, FJ.useState)(6400), [hJ, DJ] = (0, FJ.useState)(3600), [sJ, nJ] = (0, FJ.useState)(!1), [GJ, xJ] = (0, FJ.useState)(!1);
+        clientEscMenuOptions: dB
+      } = (0, sB.m)(["clientEscMenuOptions"]), [yB, pB] = (0, VB.useState)(!1), [lB, JB] = (0, VB.useState)(!1), [YB, gB] = (0, VB.useState)(6400), [kB, LB] = (0, VB.useState)(3600), [OB, DB] = (0, VB.useState)(!1), [uB, EB] = (0, VB.useState)(!1);
 
-      function rJ(JJ) {
-        const cJ = "screenshot" === JJ ? AJ : eJ;
-        cJ(!0);
-        const ZJ = sJ ? "normals" : GJ ? "depth" : null;
-        yJ.devTools.downloadScene(JJ, {
-          width: qJ,
-          height: hJ,
-          colouring: ZJ
-        }).catch((JJ => {
-          console.error("Couldn't download the scene", JJ)
+      function vB(BB) {
+        const TB = "screenshot" === BB ? JB : pB;
+        TB(!0);
+        const dB = OB ? "normals" : uB ? "depth" : null;
+        MB.devTools.downloadScene(BB, {
+          width: YB,
+          height: kB,
+          colouring: dB
+        }).catch((BB => {
+          console.error("Couldn't download the scene", BB)
         })).finally((() => {
-          cJ(!1)
+          TB(!1)
         }))
       }
-      return (0, YJ.jsxs)("div", {
+      return (0, oB.jsxs)("div", {
         className: "DeveloperToolsCategory",
-        children: [(0, YJ.jsx)(VJ.e, {
+        children: [(0, oB.jsx)(fB.e, {
           label: "Disable Ambient Occlusion",
-          checked: ZJ.disableAmbientOcclusion,
-          onClick: JJ => {
-            KJ.d.setClientEscMenuOptions({
-              disableAmbientOcclusion: JJ
-            }), cJ((() => VJ.l))
+          checked: dB.disableAmbientOcclusion,
+          onClick: BB => {
+            sB.d.setClientEscMenuOptions({
+              disableAmbientOcclusion: BB
+            }), TB((() => fB.n))
           },
           circleInfoText: "Disables ambient occlusion which is the shadow effect that makes corners and crevices darker."
-        }), yJ.devTools.supports("ambientLight") && (0, YJ.jsx)(VJ.h, {
+        }), MB.devTools.supports("ambientLight") && (0, oB.jsx)(fB.k, {
           name: "Ambient Lighting Intensity",
           min: 0,
           max: 1,
           step: .01,
-          initValue: ZJ.ambientLightIntensity,
-          onChange: JJ => {
-            yJ.devTools.setAmbientLightIntensity(JJ).then((() => {
-              KJ.d.setClientEscMenuOptions({
-                ambientLightIntensity: JJ
+          initValue: dB.ambientLightIntensity,
+          onChange: BB => {
+            MB.devTools.setAmbientLightIntensity(BB).then((() => {
+              sB.d.setClientEscMenuOptions({
+                ambientLightIntensity: BB
               })
-            })).catch((JJ => {
-              console.error("Couldn't set the ambient light", JJ)
+            })).catch((BB => {
+              console.error("Couldn't set the ambient light", BB)
             }))
           },
           circleInfoText: "Sets the intensity of the white ambient light in the scene. The default is 0.5."
-        }), yJ.devTools.supports("weaponRaycasts") && (0, YJ.jsx)(VJ.e, {
+        }), MB.devTools.supports("weaponRaycasts") && (0, oB.jsx)(fB.e, {
           label: "Show Weapon Raycasts",
-          checked: ZJ.showWeaponRaycasts,
-          onClick: JJ => {
-            KJ.d.setClientEscMenuOptions({
-              showWeaponRaycasts: JJ
+          checked: dB.showWeaponRaycasts,
+          onClick: BB => {
+            sB.d.setClientEscMenuOptions({
+              showWeaponRaycasts: BB
             })
           },
           circleInfoText: "Draws debug lines for the raw raycasts used by locally fired weapons."
-        }), yJ.devTools.supports("sceneDownload") && (0, YJ.jsxs)("div", {
+        }), MB.devTools.supports("sceneDownload") && (0, oB.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, YJ.jsxs)("div", {
+          children: [(0, oB.jsxs)("div", {
             className: "SettingBox WarningBorder",
-            children: [(0, YJ.jsx)(VJ.e, {
+            children: [(0, oB.jsx)(fB.e, {
               label: "Apply normal-based coloring",
-              checked: sJ,
-              onClick: JJ => {
-                nJ(JJ), JJ && xJ(!1)
+              checked: OB,
+              onClick: BB => {
+                DB(BB), BB && EB(!1)
               },
               circleInfoText: "Colors faces based on their normal direction (red=X, green=Y, blue=Z)."
-            }), (0, YJ.jsx)(VJ.e, {
+            }), (0, oB.jsx)(fB.e, {
               label: "Apply depth-based coloring",
-              checked: GJ,
-              onClick: JJ => {
-                xJ(JJ), JJ && nJ(!1)
+              checked: uB,
+              onClick: BB => {
+                EB(BB), BB && DB(!1)
               },
               circleInfoText: "Colors from white (near) to black (far) based on distance from camera. Only works for screenshot export."
-            }), (0, YJ.jsxs)("div", {
+            }), (0, oB.jsxs)("div", {
               className: "SettingBox DeveloperToolsCategoryScreenshotSettings",
-              children: [(0, YJ.jsx)("div", {
+              children: [(0, oB.jsx)("div", {
                 className: "SettingLabel",
                 children: "Screenshot size in pixels (width x height)"
-              }), (0, YJ.jsx)(QJ.e, {
+              }), (0, oB.jsx)(NB.e, {
                 className: "SettingsTextInput SmallTextLight",
-                onValueChange: (JJ, cJ) => {
-                  const ZJ = parseInt(JJ) || 6400;
-                  jJ(ZJ)
+                onValueChange: (BB, TB) => {
+                  const dB = parseInt(BB) || 6400;
+                  gB(dB)
                 },
                 placeholderText: "width",
                 maxLength: 10,
-                defaultValue: qJ.toString()
-              }), (0, YJ.jsx)("span", {
+                defaultValue: YB.toString()
+              }), (0, oB.jsx)("span", {
                 children: "X"
-              }), (0, YJ.jsx)(QJ.e, {
+              }), (0, oB.jsx)(NB.e, {
                 className: "SettingsTextInput SmallTextLight",
-                onValueChange: (JJ, cJ) => {
-                  const ZJ = parseInt(JJ) || 3600;
-                  DJ(ZJ)
+                onValueChange: (BB, TB) => {
+                  const dB = parseInt(BB) || 3600;
+                  LB(dB)
                 },
                 placeholderText: "height",
                 maxLength: 10,
-                defaultValue: hJ.toString()
+                defaultValue: kB.toString()
               })]
-            }), (0, YJ.jsxs)("div", {
+            }), (0, oB.jsxs)("div", {
               className: "DeveloperToolsCategoryExportButtons",
-              children: [(0, YJ.jsxs)(fJ.d, {
+              children: [(0, oB.jsxs)(HB.d, {
                 onClick: () => {
-                  rJ("screenshot")
+                  vB("screenshot")
                 },
-                disabled: XJ,
-                children: [XJ && (0, YJ.jsx)(EJ.c, {}), "Download Screenshot"]
-              }), (0, YJ.jsxs)(fJ.d, {
+                disabled: lB,
+                children: [lB && (0, oB.jsx)(tB.b, {}), "Download Screenshot"]
+              }), (0, oB.jsxs)(HB.d, {
                 onClick: () => {
-                  rJ("glb")
+                  vB("glb")
                 },
-                disabled: UJ,
-                children: [UJ && (0, YJ.jsx)(EJ.c, {}), "Download GLB"]
+                disabled: yB,
+                children: [yB && (0, oB.jsx)(tB.b, {}), "Download GLB"]
               })]
             })]
-          }), (0, YJ.jsx)("div", {
+          }), (0, oB.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
             children: 'To download GLB of scene with textures you need to "Disable Block Texture Atlas" in graphic settings first (you will need to reload the page to apply the setting).'
           })]
         })]
       })
     }
-    var IJ = ZJ(112),
-      MJ = ZJ(1028),
-      bJ = ZJ(1098),
-      wJ = ZJ(2516),
-      WJ = ZJ(1406),
-      gJ = ZJ(1168),
-      HJ = ZJ(1133),
-      PJ = ZJ(2578),
-      kJ = ZJ(1817),
-      pJ = ZJ(1389),
-      dJ = ZJ(235),
-      zJ = ZJ(2027),
-      NJ = ZJ(2039),
-      OJ = ZJ(1259),
-      TJ = ZJ(1112),
-      CJ = ZJ(4301),
-      uJ = ZJ(1357),
-      iJ = ZJ(3129),
-      RJ = ZJ(2328),
-      LJ = ZJ(2009);
+    var wB = dB(138),
+      UB = dB(1020),
+      FB = dB(1089),
+      KB = dB(2491),
+      rB = dB(1407),
+      IB = dB(1147),
+      cB = dB(1113),
+      SB = dB(2554),
+      PB = dB(1791),
+      QB = dB(1393),
+      RB = dB(279),
+      aB = dB(2015),
+      ZB = dB(2028),
+      XB = dB(1249),
+      WB = dB(1096),
+      hB = dB(4284),
+      CB = dB(1353),
+      GB = dB(3154),
+      qB = dB(2315),
+      xB = dB(1997);
 
-    function aJ(JJ) {
+    function jB(BB) {
       let {
-        showing: cJ
-      } = JJ;
+        showing: TB
+      } = BB;
       const {
-        t: ZJ
-      } = (0, XJ.F)(), {
-        data: FJ,
-        failed: UJ
-      } = (0, RJ.d)(iJ.h, cJ);
-      return 0 === (null === FJ || void 0 === FJ ? void 0 : FJ.length) || null === FJ && !UJ ? null : (0, YJ.jsxs)("div", {
+        t: dB
+      } = (0, lB.z)(), {
+        data: VB,
+        failed: yB
+      } = (0, qB.e)(GB.c, TB);
+      return 0 === (null === VB || void 0 === VB ? void 0 : VB.length) || null === VB && !yB ? null : (0, oB.jsxs)("div", {
         className: "SettingBox AccountSettingsPaymentHistory",
-        children: [(0, YJ.jsx)("div", {
+        children: [(0, oB.jsx)("div", {
           className: "AccountSettingsLabel",
-          children: ZJ("paymentHistory:title")
-        }), null === FJ && UJ && (0, YJ.jsx)("div", {
+          children: dB("paymentHistory:title")
+        }), null === VB && yB && (0, oB.jsx)("div", {
           className: "AccountSettingsPaymentHistoryError",
-          children: ZJ("paymentHistory:loadFailed")
-        }), null !== FJ && (0, YJ.jsx)("ul", {
+          children: dB("paymentHistory:loadFailed")
+        }), null !== VB && (0, oB.jsx)("ul", {
           className: "PaymentHistoryList",
-          children: FJ.map((JJ => (0, YJ.jsxs)("li", {
+          children: VB.map((BB => (0, oB.jsxs)("li", {
             className: "PaymentHistoryEntry",
-            children: [(0, YJ.jsx)(LJ.b, {
-              entry: JJ
-            }), (0, YJ.jsxs)("div", {
+            children: [(0, oB.jsx)(xB.d, {
+              entry: BB
+            }), (0, oB.jsxs)("div", {
               className: "PaymentHistoryEntryText",
-              children: [(0, YJ.jsx)("div", {
-                children: (0, LJ.j)(ZJ, JJ)
-              }), (0, YJ.jsxs)("div", {
+              children: [(0, oB.jsx)("div", {
+                children: (0, xB.j)(dB, BB)
+              }), (0, oB.jsxs)("div", {
                 className: "PaymentHistoryEntryDate",
-                children: [new Date(JJ.at).toLocaleDateString(), "number" === typeof JJ.orderId && ` \xb7 ${ZJ("paymentHistory:order",{orderId:JJ.orderId})}`]
+                children: [new Date(BB.at).toLocaleDateString(), "number" === typeof BB.orderId && ` \xb7 ${dB("paymentHistory:order",{orderId:BB.orderId})}`]
               })]
             })]
-          }, (0, iJ.e)(JJ))))
+          }, (0, GB.b)(BB))))
         })]
       })
     }
-    var BJ = ZJ(1144),
-      tJ = ZJ(1247),
-      oJ = ZJ(1201);
+    var AB = dB(1126),
+      bB = dB(1235),
+      nB = dB(1201);
 
-    function lJ() {
+    function eB() {
       const {
-        userContext: JJ,
-        isUserContextUpdating: cJ
-      } = (0, sJ.d)(), {
-        t: ZJ
-      } = (0, XJ.F)(), [UJ, eJ] = (0, FJ.useState)(!1), [AJ, qJ] = (0, FJ.useState)(null), jJ = cJ || UJ;
-      return (0, YJ.jsxs)("div", {
+        userContext: BB,
+        isUserContextUpdating: TB
+      } = (0, OB.b)(), {
+        t: dB
+      } = (0, lB.z)(), [yB, pB] = (0, VB.useState)(!1), [JB, YB] = (0, VB.useState)(null), gB = TB || yB;
+      return (0, oB.jsxs)("div", {
         className: "AccountSettingsDeleteAccountButtonContainer",
-        children: [(0, YJ.jsxs)(fJ.I, {
+        children: [(0, oB.jsxs)(HB.K, {
           onClick: async function() {
-            if (!UJ) {
-              eJ(!0);
+            if (!yB) {
+              pB(!0);
               try {
-                const cJ = await async function() {
-                  if (!0 !== await tJ.NotificationProvider.showPromptPopup({
+                const TB = await async function() {
+                  if (!0 !== await bB.NotificationProvider.showPromptPopup({
                       title: "auth:deleteAccountPopupTitleNamed",
                       textOpts: {
                         title: {
-                          playerName: (0, gJ.d)(JJ.getPlayerName(), !xJ.featureFlags.canSeeRealPlayerNames)
+                          playerName: (0, IB.c)(BB.getPlayerName(), !EB.featureFlags.canSeeRealPlayerNames)
                         }
                       },
-                      subtitle: (0, IJ.b)() ? "auth:discordActivityDeleteAccountWarning" : "auth:deleteAccountWarning",
+                      subtitle: (0, wB.d)() ? "auth:discordActivityDeleteAccountWarning" : "auth:deleteAccountWarning",
                       confirmText: "auth:deleteAccount",
                       destructive: !0,
                       confirmTooltip: "auth:deleteAccountPopupConfirmTooltip",
                       cancelText: "general:cancel",
                       cancelTooltip: "auth:deleteAccountPopupCancelTooltip"
-                    }).getResult()) return BJ.b.ok();
-                  const cJ = await (0, MJ.postJsonWithMetricsCookiesAndJsonResponse)(`${bJ.clientSideServerUrls.indexUrl}/index/metrics/revoke-cookies`, {
-                    gameState: KJ.d.get("gameState")
+                    }).getResult()) return AB.d.ok();
+                  const TB = await (0, UB.postJsonWithMetricsCookiesAndJsonResponse)(`${FB.clientSideServerUrls.indexUrl}/index/metrics/revoke-cookies`, {
+                    gameState: sB.d.get("gameState")
                   }, {
                     retries: 3
-                  }, JJ.getMetricsCookies());
-                  if (cJ.error) return BJ.b.error(cJ.error);
-                  (0, IJ.b)() && (await oJ.j.discordActivity()).exit("User deleted their account");
-                  return (0, MJ.forgetStoredGuestAccount)(JJ.whamm), (0, MJ.forceGlobalSignOut)(!0), BJ.b.ok()
-                }(), ZJ = cJ.isError() ? cJ.asError().message : null;
-                qJ(ZJ)
-              } catch (cJ) {
-                console.error("Failed to delete account:", cJ), qJ(ZJ("auth:genericDeleteAccountError"))
+                  }, BB.getMetricsCookies());
+                  if (TB.error) return AB.d.error(TB.error);
+                  (0, wB.d)() && (await nB.k.discordActivity()).exit("User deleted their account");
+                  return (0, UB.forgetStoredGuestAccount)(BB.whamm), (0, UB.forceGlobalSignOut)(!0), AB.d.ok()
+                }(), dB = TB.isError() ? TB.asError().message : null;
+                YB(dB)
+              } catch (TB) {
+                console.error("Failed to delete account:", TB), YB(dB("auth:genericDeleteAccountError"))
               }
-              eJ(!1)
+              pB(!1)
             }
           },
           className: "AccountSettingsDeleteAccountButton",
-          disabled: jJ,
-          children: [jJ && (0, YJ.jsx)("div", {
+          disabled: gB,
+          children: [gB && (0, oB.jsx)("div", {
             className: "DeletingAccountLoader",
-            children: (0, YJ.jsx)(EJ.c, {})
-          }), ZJ("auth:deleteAccount")]
-        }), AJ && (0, YJ.jsx)("div", {
+            children: (0, oB.jsx)(tB.b, {})
+          }), dB("auth:deleteAccount")]
+        }), JB && (0, oB.jsx)("div", {
           className: "DeleteAccountError",
-          children: AJ
+          children: JB
         })]
       })
     }
-    var Jc = ZJ(3072),
-      cc = ZJ(3086),
-      Zc = ZJ(3080);
+    var BT = dB(3080),
+      TT = dB(3099),
+      dT = dB(3096);
 
-    function Fc(JJ) {
+    function VT(BB) {
       let {
-        showing: cJ
-      } = JJ;
+        showing: TB
+      } = BB;
       const {
-        t: ZJ
-      } = (0, XJ.F)(), {
-        data: FJ,
-        failed: UJ
-      } = (0, RJ.d)(Jc.e, cJ), eJ = null === FJ ? null : (0, Jc.h)(FJ);
-      return (0, YJ.jsxs)("div", {
+        t: dB
+      } = (0, lB.z)(), {
+        data: VB,
+        failed: yB
+      } = (0, qB.e)(BT.b, TB), pB = null === VB ? null : (0, BT.c)(VB);
+      return (0, oB.jsxs)("div", {
         className: "SettingBox BlockedAndIgnoredPlayers",
-        children: [(0, YJ.jsx)("div", {
+        children: [(0, oB.jsx)("div", {
           className: "AccountSettingsLabel",
-          children: ZJ("settingsMenu:blockedAndIgnoredPlayers")
-        }), null === eJ && !UJ && (0, YJ.jsx)(EJ.c, {}), null === eJ && UJ && (0, YJ.jsxs)("div", {
+          children: dB("settingsMenu:blockedAndIgnoredPlayers")
+        }), null === pB && !yB && (0, oB.jsx)(tB.b, {}), null === pB && yB && (0, oB.jsxs)("div", {
           className: "BlockedAndIgnoredPlayersError",
-          children: [ZJ("settingsMenu:blockedAndIgnoredPlayersLoadFailed"), (0, YJ.jsx)(fJ.d, {
+          children: [dB("settingsMenu:blockedAndIgnoredPlayersLoadFailed"), (0, oB.jsx)(HB.d, {
             className: "SmallTextLight",
             onClick: () => {
-              Jc.e.refresh()
+              BT.b.refresh()
             },
-            children: ZJ("general:tryAgain")
+            children: dB("general:tryAgain")
           })]
-        }), 0 === (null === eJ || void 0 === eJ ? void 0 : eJ.length) && (0, YJ.jsx)("div", {
+        }), 0 === (null === pB || void 0 === pB ? void 0 : pB.length) && (0, oB.jsx)("div", {
           className: "BlockedAndIgnoredPlayersEmpty",
-          children: ZJ("settingsMenu:noBlockedOrIgnoredPlayers")
-        }), null !== eJ && eJ.length > 0 && (0, YJ.jsx)("ul", {
+          children: dB("settingsMenu:noBlockedOrIgnoredPlayers")
+        }), null !== pB && pB.length > 0 && (0, oB.jsx)("ul", {
           className: "BlockedAndIgnoredPlayersList",
-          children: eJ.map((JJ => {
+          children: pB.map((BB => {
             let {
-              name: cJ,
-              exclusion: FJ
-            } = JJ;
-            const UJ = Zc.f[FJ];
-            return (0, YJ.jsxs)("li", {
+              name: TB,
+              exclusion: VB
+            } = BB;
+            const yB = dT.f[VB];
+            return (0, oB.jsxs)("li", {
               className: "BlockedAndIgnoredPlayer",
-              children: [(0, YJ.jsx)("div", {
+              children: [(0, oB.jsx)("div", {
                 className: "BlockedAndIgnoredPlayerName",
-                children: cJ
-              }), (0, YJ.jsx)(fJ.g, {
+                children: TB
+              }), (0, oB.jsx)(HB.g, {
                 className: "SmallTextLight",
                 onClick: () => {
-                  (0, cc.e)(UJ, cJ)
+                  (0, TT.f)(yB, TB)
                 },
-                children: ZJ(Zc.h[UJ].text)
+                children: dB(dT.g[yB].text)
               })]
-            }, cJ)
+            }, TB)
           }))
         })]
       })
     }
-    const Uc = (0, FJ.memo)((function(JJ) {
-      var cJ;
+    const yT = (0, VB.memo)((function(BB) {
+      var TB;
       let {
-        showing: ZJ,
-        inGame: UJ
-      } = JJ;
+        showing: dB,
+        inGame: yB
+      } = BB;
       const {
-        t: qJ,
-        selectedLanguage: jJ
-      } = (0, XJ.F)(), {
-        hideSocialLocationFrom: hJ
-      } = (0, KJ.j)(["hideSocialLocationFrom"]), nJ = (0, DJ.c)(), {
-        userContext: GJ,
-        isUserContextUpdating: rJ
-      } = (0, sJ.d)(), [vJ, mJ] = (0, FJ.useState)(null !== (cJ = GJ.getPlayerName()) && void 0 !== cJ ? cJ : ""), [yJ, SJ] = (0, FJ.useState)(null), {
-        purchasing: iJ,
-        outcome: RJ,
-        purchase: LJ
-      } = (0, wJ.e)("/super-rank-welcome"), [BJ, tJ] = (0, FJ.useState)(!1), [oJ, Jc] = (0, FJ.useState)(!1), cc = (0, FJ.useRef)(null), Zc = (0, FJ.useRef)(null), Uc = (0, kJ.e)({
+        t: YB,
+        selectedLanguage: gB
+      } = (0, lB.z)(), {
+        hideSocialLocationFrom: kB
+      } = (0, sB.m)(["hideSocialLocationFrom"]), DB = (0, LB.b)(), {
+        userContext: uB,
+        isUserContextUpdating: vB
+      } = (0, OB.b)(), [mB, iB] = (0, VB.useState)(null !== (TB = uB.getPlayerName()) && void 0 !== TB ? TB : ""), [MB, zB] = (0, VB.useState)(null), {
+        purchasing: GB,
+        outcome: qB,
+        purchase: xB
+      } = (0, KB.b)("/super-rank-welcome"), [AB, bB] = (0, VB.useState)(!1), [nB, BT] = (0, VB.useState)(!1), TT = (0, VB.useRef)(null), dT = (0, VB.useRef)(null), yT = (0, PB.e)({
         showProgressUpdateMessage: !0,
         enabled: !0
-      }), ec = null === Uc, Xc = null !== Uc && void 0 !== Uc ? Uc : [], [Ac, qc] = (0, FJ.useState)([]), [jc, Yc] = (0, FJ.useState)(!1), hc = GJ.playerHasRank("youtuber"), Dc = (0, FJ.useCallback)((() => pJ.c.getPlayerProfile(GJ, {
-        lowerCaseName: GJ.getPlayerName().toLowerCase()
-      }).then((JJ => {
-        qc(JJ.socialLinks)
-      })).catch((JJ => {
-        console.error("Failed to refresh social links", JJ)
-      }))), [GJ]);
+      }), pT = null === yT, lT = null !== yT && void 0 !== yT ? yT : [], [JT, YT] = (0, VB.useState)([]), [gT, oT] = (0, VB.useState)(!1), kT = uB.playerHasRank("youtuber"), LT = (0, VB.useCallback)((() => QB.c.getPlayerProfile(uB, {
+        lowerCaseName: uB.getPlayerName().toLowerCase()
+      }).then((BB => {
+        YT(BB.socialLinks)
+      })).catch((BB => {
+        console.error("Failed to refresh social links", BB)
+      }))), [uB]);
 
-      function sc(JJ) {
-        JJ !== vJ && ((0, gJ.l)(JJ) ? (JJ = (0, gJ.p)(JJ), SJ("Only letters, numbers, and _")) : SJ(null), cc.current && (cc.current.value = JJ), mJ(JJ))
+      function OT(BB) {
+        BB !== mB && ((0, IB.k)(BB) ? (BB = (0, IB.n)(BB), zB("Only letters, numbers, and _")) : zB(null), TT.current && (TT.current.value = BB), iB(BB))
       }
-      return (0, FJ.useEffect)((() => (!0 === ZJ ? (clearInterval(Zc.current), Zc.current = setInterval(nJ, 1e3)) : clearInterval(Zc.current), () => {
-        clearInterval(Zc.current)
-      })), [ZJ, nJ]), (0, FJ.useEffect)((() => {
-        var JJ;
-        mJ(null !== (JJ = GJ.getPlayerName()) && void 0 !== JJ ? JJ : "")
-      }), [GJ]), (0, FJ.useEffect)((() => {
-        if (!ZJ || !hc || rJ) return;
-        let JJ = !1;
-        return Yc(!0), qc([]), pJ.c.getPlayerProfile(GJ, {
-          lowerCaseName: GJ.getPlayerName().toLowerCase()
-        }).then((cJ => {
-          JJ || qc(cJ.socialLinks)
-        })).catch((JJ => {
-          console.error("Failed to load social links", JJ)
+      return (0, VB.useEffect)((() => (!0 === dB ? (clearInterval(dT.current), dT.current = setInterval(DB, 1e3)) : clearInterval(dT.current), () => {
+        clearInterval(dT.current)
+      })), [dB, DB]), (0, VB.useEffect)((() => {
+        var BB;
+        iB(null !== (BB = uB.getPlayerName()) && void 0 !== BB ? BB : "")
+      }), [uB]), (0, VB.useEffect)((() => {
+        if (!dB || !kT || vB) return;
+        let BB = !1;
+        return oT(!0), YT([]), QB.c.getPlayerProfile(uB, {
+          lowerCaseName: uB.getPlayerName().toLowerCase()
+        }).then((TB => {
+          BB || YT(TB.socialLinks)
+        })).catch((BB => {
+          console.error("Failed to load social links", BB)
         })).finally((() => {
-          JJ || Yc(!1)
+          BB || oT(!1)
         })), () => {
-          JJ = !0
+          BB = !0
         }
-      }), [ZJ, hc, rJ, GJ]), (0, YJ.jsxs)("div", {
-        className: eJ()("SettingsMenuRightInner AccountSettings", {
-          AccountSettingsLocked: UJ
+      }), [dB, kT, vB, uB]), (0, oB.jsxs)("div", {
+        className: pB()("SettingsMenuRightInner AccountSettings", {
+          AccountSettingsLocked: yB
         }),
-        children: [UJ && (0, YJ.jsx)("div", {
+        children: [yB && (0, oB.jsx)("div", {
           className: "AccountSettingsInGameWarning",
-          children: qJ("settingsMenu:accountSettingsInGameWarning")
-        }), (0, YJ.jsxs)("div", {
+          children: YB("settingsMenu:accountSettingsInGameWarning")
+        }), (0, oB.jsxs)("div", {
           className: "SettingBox SetAccountNameDiv SmallTextLight",
-          children: [(0, YJ.jsxs)("div", {
+          children: [(0, oB.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsNameLabel",
-            children: [qJ("homePage:discordNamePopupTitle"), (0, YJ.jsxs)(WJ.LinkPreserveSearch, {
+            children: [YB("homePage:discordNamePopupTitle"), (0, oB.jsxs)(rB.LinkPreserveSearch, {
               className: "AccountSettingsViewProfile",
-              to: (0, HJ.h)({
-                name: GJ.getPlayerName()
+              to: (0, cB.h)({
+                name: uB.getPlayerName()
               }),
               onClick: () => {
-                KJ.d.set({
+                sB.d.set({
                   openEverythingMenuName: null
                 })
               },
-              children: [(0, YJ.jsx)(AJ.c, {
+              children: [(0, oB.jsx)(JB.e, {
                 name: "arrow-up-right-from-square"
-              }), " ", qJ("profileCard:viewProfile")]
+              }), " ", YB("profileCard:viewProfile")]
             })]
-          }), (0, YJ.jsxs)("div", {
+          }), (0, oB.jsxs)("div", {
             className: "EnterAccNameDivWrapper",
             "data-pad-initial-area": !0,
-            children: [(0, YJ.jsxs)("div", {
+            children: [(0, oB.jsxs)("div", {
               className: "EnterAccNameInputRow",
-              children: [xJ.featureFlags.canChangeName && (0, YJ.jsx)(QJ.e, {
+              children: [EB.featureFlags.canChangeName && (0, oB.jsx)(NB.e, {
                 className: "EnterName",
-                placeholderText: qJ("homePage:enterName"),
-                maxLength: gJ.i,
-                defaultValue: vJ,
-                onValueChange: JJ => {
-                  sc(JJ)
+                placeholderText: YB("homePage:enterName"),
+                maxLength: IB.e,
+                defaultValue: mB,
+                onValueChange: BB => {
+                  OT(BB)
                 },
-                forcedText: BJ || !xJ.featureFlags.canChangeName ? vJ : null,
+                forcedText: AB || !EB.featureFlags.canChangeName ? mB : null,
                 blurOnEnter: !0,
-                domRef: cc
-              }), (0, YJ.jsx)(fJ.d, {
+                domRef: TT
+              }), (0, oB.jsx)(HB.d, {
                 className: "ChooseRandomNameButton",
                 onClick: () => {
-                  sc((0, gJ.g)())
+                  OT((0, IB.d)())
                 },
-                children: (0, YJ.jsx)(AJ.c, {
+                children: (0, oB.jsx)(JB.e, {
                   name: "dice",
                   className: "ChooseRandomNameIcon"
                 })
-              }), !xJ.featureFlags.canChangeName && (0, YJ.jsx)("div", {
+              }), !EB.featureFlags.canChangeName && (0, oB.jsx)("div", {
                 className: "EnterName NoInput",
-                children: (0, gJ.d)(vJ, !xJ.featureFlags.canSeeRealPlayerNames)
+                children: (0, IB.c)(mB, !EB.featureFlags.canSeeRealPlayerNames)
               })]
-            }), (0, YJ.jsx)(fJ.d, {
+            }), (0, oB.jsx)(HB.d, {
               className: "ChooseNameButton",
-              disabled: BJ || vJ === GJ.getPlayerName(),
+              disabled: AB || mB === uB.getPlayerName(),
               onClick: () => {
-                vJ.length < gJ.k ? SJ(qJ("homePage:changeNameMinLengthError", {
-                  length: gJ.k
-                })) : vJ.length > gJ.i ? SJ(qJ("homePage:changeNameMaxLengthError", {
-                  length: gJ.i
-                })) : (tJ(!0), SJ(null), async function(JJ, cJ, ZJ, FJ) {
-                  const UJ = await (0, MJ.postJsonWithMetricsCookiesAndJsonResponse)(`${bJ.clientSideServerUrls.indexUrl}/index/name/update`, {
-                    name: JJ
+                mB.length < IB.i ? zB(YB("homePage:changeNameMinLengthError", {
+                  length: IB.i
+                })) : mB.length > IB.e ? zB(YB("homePage:changeNameMaxLengthError", {
+                  length: IB.e
+                })) : (bB(!0), zB(null), async function(BB, TB, dB, VB) {
+                  const yB = await (0, UB.postJsonWithMetricsCookiesAndJsonResponse)(`${FB.clientSideServerUrls.indexUrl}/index/name/update`, {
+                    name: BB
                   }, {
                     retries: 3
-                  }, cJ.getMetricsCookies()).catch((JJ => (console.error("Bad response from the server when trying to update name:", JJ), {
+                  }, TB.getMetricsCookies()).catch((BB => (console.error("Bad response from the server when trying to update name:", BB), {
                     err: "An error occurred trying to change your name! Please report on discord what steps you took to get this error message."
                   })));
-                  UJ.err ? (console.error("Error when trying to get with new name from DB", UJ.err), FJ(UJ.err)) : !0 === UJ.nameExists ? FJ("Name is already taken") : ZJ(JJ)
-                }(vJ, GJ, (JJ => {
-                  GJ.setPlayerName(JJ), tJ(!1)
-                }), (JJ => {
-                  SJ(JJ), tJ(!1)
+                  yB.err ? (console.error("Error when trying to get with new name from DB", yB.err), VB(yB.err)) : !0 === yB.nameExists ? VB("Name is already taken") : dB(BB)
+                }(mB, uB, (BB => {
+                  uB.setPlayerName(BB), bB(!1)
+                }), (BB => {
+                  zB(BB), bB(!1)
                 })))
               },
-              children: qJ("general:choose")
+              children: YB("general:choose")
             })]
-          }), yJ && (0, YJ.jsx)("div", {
+          }), MB && (0, oB.jsx)("div", {
             className: "ChooseAccNameError",
-            children: yJ
+            children: MB
           })]
-        }), (0, YJ.jsx)(VJ.e, {
+        }), (0, oB.jsx)(fB.e, {
           label: (() => {
-            if ((0, TJ.j)(hJ)) {
-              const JJ = (0, XJ.q)(jJ.code, "general:timeLeft"),
-                cJ = (0, dJ._)(JJ, Date.now(), hJ + TJ.i);
-              return `${qJ("settingsMenu:hideSocialLocation")} (${qJ("general:timeLeft",{time:cJ})})`
+            if ((0, WB.m)(kB)) {
+              const BB = (0, lB.m)(gB.code, "general:timeLeft"),
+                TB = (0, RB.cb)(BB, Date.now(), kB + WB.l);
+              return `${YB("settingsMenu:hideSocialLocation")} (${YB("general:timeLeft",{time:TB})})`
             }
-            return qJ("settingsMenu:hideSocialLocation")
+            return YB("settingsMenu:hideSocialLocation")
           })(),
           onClick: () => {
-            const JJ = !(0, TJ.j)(hJ);
-            (0, uJ.f)({
+            const BB = !(0, WB.m)(kB);
+            (0, CB.f)({
               id: "social.hide_location",
-              value: JJ ? "on" : "off"
-            }), Jc(!0), pJ.c.setHideSocialLocation(GJ, JJ).then((() => {
-              KJ.d.set({
-                hideSocialLocationFrom: JJ ? Date.now() : null
+              value: BB ? "on" : "off"
+            }), BT(!0), QB.c.setHideSocialLocation(uB, BB).then((() => {
+              sB.d.set({
+                hideSocialLocationFrom: BB ? Date.now() : null
               })
             })).finally((() => {
-              Jc(!1)
+              BT(!1)
             }))
           },
-          checked: (0, TJ.j)(hJ),
-          disabled: oJ
-        }), hc && (0, YJ.jsxs)("div", {
+          checked: (0, WB.m)(kB),
+          disabled: nB
+        }), kT && (0, oB.jsxs)("div", {
           className: "SettingBox AccountSettingsSocialLinks",
-          children: [(0, YJ.jsx)("div", {
+          children: [(0, oB.jsx)("div", {
             className: "AccountSettingsLabel",
-            children: qJ("settingsMenu:socialLinks")
-          }), jc && (0, YJ.jsx)(EJ.c, {}), !jc && (0, YJ.jsx)(CJ.d, {
-            socialLinks: Ac,
+            children: YB("settingsMenu:socialLinks")
+          }), gT && (0, oB.jsx)(tB.b, {}), !gT && (0, oB.jsx)(hB.e, {
+            socialLinks: JT,
             editable: !0,
-            userContext: GJ,
-            onLinksUpdated: Dc
+            userContext: uB,
+            onLinksUpdated: LT
           })]
-        }), (0, YJ.jsxs)("div", {
+        }), (0, oB.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, YJ.jsx)("div", {
+          children: [(0, oB.jsx)("div", {
             className: "AccountSettingsLabel",
-            children: qJ("auth:login")
-          }), ec && (0, YJ.jsx)(EJ.c, {}), !ec && 0 === Xc.length && (0, YJ.jsx)("div", {
+            children: YB("auth:login")
+          }), pT && (0, oB.jsx)(tB.b, {}), !pT && 0 === lT.length && (0, oB.jsx)("div", {
             className: "NoLoginOptions",
-            children: qJ("auth:noLoginOptions")
-          }), !ec && Xc.length > 0 && "crazygames" !== IJ.n && (0, YJ.jsx)("div", {
+            children: YB("auth:noLoginOptions")
+          }), !pT && lT.length > 0 && "crazygames" !== wB.v && (0, oB.jsx)("div", {
             className: "AccountSettingsLoginButtons",
-            children: Xc
-          }), !ec && Xc.length > 0 && "crazygames" === IJ.n && (0, YJ.jsxs)("div", {
+            children: lT
+          }), !pT && lT.length > 0 && "crazygames" === wB.v && (0, oB.jsxs)("div", {
             className: "AccountSettingsLoginButtons",
-            children: [Xc[0], Xc.length > 1 && (0, YJ.jsxs)(YJ.Fragment, {
-              children: [(0, YJ.jsxs)("div", {
+            children: [lT[0], lT.length > 1 && (0, oB.jsxs)(oB.Fragment, {
+              children: [(0, oB.jsxs)("div", {
                 className: "LegacyLoginOptionsHeader",
-                children: [(0, YJ.jsx)("span", {
+                children: [(0, oB.jsx)("span", {
                   className: "LegacyLoginOptionsTitle",
-                  children: qJ("auth:legacyLoginOptions")
-                }), (0, YJ.jsx)(OJ.e, {
+                  children: YB("auth:legacyLoginOptions")
+                }), (0, oB.jsx)(XB.e, {
                   className: "LegacyLoginOptionsInfoIcon",
-                  hoverInfo: qJ("auth:legacyLoginOptionsInfo")
+                  hoverInfo: YB("auth:legacyLoginOptionsInfo")
                 })]
-              }), (0, YJ.jsx)("div", {
+              }), (0, oB.jsx)("div", {
                 className: "LegacyAccountSettingsLoginButtons",
-                children: Xc.slice(1)
+                children: lT.slice(1)
               })]
             })]
-          }), xJ.featureFlags.useLogin && (null !== GJ.loggedInInfo || GJ.isLoggedIn()) && (0, YJ.jsxs)(YJ.Fragment, {
-            children: [(0, YJ.jsx)("div", {
+          }), EB.featureFlags.useLogin && (null !== uB.loggedInInfo || uB.isLoggedIn()) && (0, oB.jsxs)(oB.Fragment, {
+            children: [(0, oB.jsx)("div", {
               className: "AccountSettingsLoginDivider"
-            }), (0, YJ.jsxs)(fJ.I, {
+            }), (0, oB.jsxs)(HB.K, {
               onClick: () => {
-                (0, MJ.forceGlobalSignOut)()
+                (0, UB.forceGlobalSignOut)()
               },
               className: "AccountSettingsSignedInButton",
-              children: [(0, YJ.jsx)(AJ.c, {
+              children: [(0, oB.jsx)(JB.e, {
                 name: "right-from-bracket"
-              }), qJ("auth:signOut")]
+              }), YB("auth:signOut")]
             })]
           })]
-        }), !GJ.playerHasRank("super") && (0, NJ.siteSupportsPurchases)() && (0, YJ.jsxs)("div", {
+        }), !uB.playerHasRank("super") && (0, ZB.siteSupportsPurchases)() && (0, oB.jsxs)("div", {
           className: "SettingBox AccountSettingsSuperRank",
-          children: [(0, YJ.jsxs)("div", {
+          children: [(0, oB.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsLabelSuperRank",
-            children: [(0, YJ.jsx)(AJ.c, {
+            children: [(0, oB.jsx)(JB.e, {
               name: "bolt"
-            }), qJ("homePage:superRank")]
-          }), (0, YJ.jsxs)("div", {
+            }), YB("homePage:superRank")]
+          }), (0, oB.jsxs)("div", {
             className: "AccountSettingsSuperRankProlongContainer",
-            children: [(0, YJ.jsxs)(fJ.m, {
+            children: [(0, oB.jsxs)(HB.k, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, zJ.i)({
+                (0, aB.h)({
                   mode: "self",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, YJ.jsx)(AJ.c, {
+              children: [(0, oB.jsx)(JB.e, {
                 name: "bolt"
-              }), qJ("homePage:getSuperRank")]
-            }), (0, YJ.jsxs)(fJ.m, {
+              }), YB("homePage:getSuperRank")]
+            }), (0, oB.jsxs)(HB.k, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, zJ.i)({
+                (0, aB.h)({
                   mode: "gift",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, YJ.jsx)(AJ.c, {
+              children: [(0, oB.jsx)(JB.e, {
                 name: "bolt"
-              }), qJ("homePage:giftSuperRank")]
+              }), YB("homePage:giftSuperRank")]
             })]
           })]
-        }), GJ.playerHasRank("super") && (0, YJ.jsxs)("div", {
+        }), uB.playerHasRank("super") && (0, oB.jsxs)("div", {
           className: "SettingBox AccountSettingsSuperRank",
-          children: [(0, YJ.jsxs)("div", {
+          children: [(0, oB.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsLabelSuperRank",
-            children: [(0, YJ.jsx)(AJ.c, {
+            children: [(0, oB.jsx)(JB.e, {
               name: "bolt"
-            }), qJ("homePage:superRank"), (0, YJ.jsxs)("div", {
+            }), YB("homePage:superRank"), (0, oB.jsxs)("div", {
               className: "AccountSettingsSuperRankTimeLeft",
-              children: ["(", qJ("general:timeLeft", {
-                time: (0, dJ.$b)((0, XJ.q)(jJ.code, "general:timeLeft"), GJ.superRankInfo)
+              children: ["(", YB("general:timeLeft", {
+                time: (0, RB.lc)((0, lB.m)(gB.code, "general:timeLeft"), uB.superRankInfo)
               }), ")"]
             })]
-          }), (0, NJ.siteSupportsPurchases)() && (0, YJ.jsxs)("div", {
+          }), (0, ZB.siteSupportsPurchases)() && (0, oB.jsxs)("div", {
             className: "AccountSettingsSuperRankProlongContainer",
-            children: [(0, YJ.jsxs)(fJ.m, {
+            children: [(0, oB.jsxs)(HB.k, {
               className: "AccountSettingsSuperRankProlong",
-              loading: iJ,
+              loading: GB,
               onClick: () => {
-                LJ(PJ.i.id, null)
+                xB(SB.p.id, null)
               },
-              children: [(0, YJ.jsx)(AJ.c, {
+              children: [(0, oB.jsx)(JB.e, {
                 name: "bolt"
-              }), qJ("settingsMenu:getSuperRankAdditionalDaysPremiumCurrency", {
-                days: PJ.i.product.days,
-                price: PJ.i.price
+              }), YB("settingsMenu:getSuperRankAdditionalDaysPremiumCurrency", {
+                days: SB.p.product.days,
+                price: SB.p.price
               })]
-            }), (0, YJ.jsxs)(fJ.m, {
+            }), (0, oB.jsxs)(HB.k, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, zJ.i)({
+                (0, aB.h)({
                   mode: "gift",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, YJ.jsx)(AJ.c, {
+              children: [(0, oB.jsx)(JB.e, {
                 name: "bolt"
-              }), qJ("homePage:giftSuperRank")]
+              }), YB("homePage:giftSuperRank")]
             })]
-          }), RJ && (0, YJ.jsx)("div", {
+          }), qB && (0, oB.jsx)("div", {
             className: "AccountSettingsSuperRankProlongError SmallTextBold",
-            children: qJ(RJ.translationKey)
+            children: YB(qB.translationKey)
           })]
-        }), (0, YJ.jsx)(aJ, {
-          showing: ZJ
-        }), xJ.featureFlags.useSocialFeatures && (0, YJ.jsx)(Fc, {
-          showing: ZJ
-        }), (0, YJ.jsxs)("div", {
+        }), (0, oB.jsx)(jB, {
+          showing: dB
+        }), EB.featureFlags.useSocialFeatures && (0, oB.jsx)(VT, {
+          showing: dB
+        }), (0, oB.jsxs)("div", {
           className: "SettingBoxGroup AccountSettingsDeleteAccountGroup",
-          children: [(0, YJ.jsxs)("div", {
+          children: [(0, oB.jsxs)("div", {
             className: "SettingBox AccountSettingsDeleteAccount SettingBoxWarning",
-            children: [(0, YJ.jsx)("div", {
+            children: [(0, oB.jsx)("div", {
               className: "AccountSettingsDeleteAccountButtonTitle",
-              children: qJ("auth:deleteAccountButtonTitle")
-            }), (0, IJ.b)() && (0, YJ.jsx)("div", {
+              children: YB("auth:deleteAccountButtonTitle")
+            }), (0, wB.d)() && (0, oB.jsx)("div", {
               className: "AccountSettingsDeleteAccountButtonTitle",
-              children: qJ("auth:discordActivityKickWarning")
-            }), (0, YJ.jsx)(lJ, {})]
-          }), (0, YJ.jsx)("div", {
+              children: YB("auth:discordActivityKickWarning")
+            }), (0, oB.jsx)(eB, {})]
+          }), (0, oB.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
-            children: qJ("auth:deleteAccountWarning")
+            children: YB("auth:deleteAccountWarning")
           })]
         })]
       })
     }));
-    var ec = ZJ(8487),
-      Xc = ZJ(2623),
-      Ac = ZJ(1151),
-      qc = ZJ(1319);
-    const jc = (0, FJ.memo)((function(JJ) {
+    var pT = dB(8529),
+      lT = dB(2602),
+      JT = dB(1133),
+      YT = dB(1304);
+    const gT = (0, VB.memo)((function(BB) {
         let {
-          inGame: cJ
-        } = JJ;
+          inGame: TB
+        } = BB;
         const {
-          t: ZJ,
-          selectedLanguage: FJ
-        } = (0, XJ.F)(), {
-          clientEscMenuOptions: UJ,
-          showDebugOverlay: eJ
-        } = (0, KJ.j)(["clientEscMenuOptions", "showDebugOverlay"]), AJ = (0, nJ.f)("hideCoordinates");
-        let qJ = "settingsMenu:showCoordinates",
-          jJ = "settingsMenu:showChunkCoordinates";
+          t: dB,
+          selectedLanguage: VB
+        } = (0, lB.z)(), {
+          clientEscMenuOptions: yB,
+          showDebugOverlay: pB
+        } = (0, sB.m)(["clientEscMenuOptions", "showDebugOverlay"]), JB = (0, DB.j)("hideCoordinates");
+        let YB = "settingsMenu:showCoordinates",
+          gB = "settingsMenu:showChunkCoordinates";
 
-        function hJ(JJ) {
-          const cJ = new Intl.DisplayNames([JJ], {
+        function kB(BB) {
+          const TB = new Intl.DisplayNames([BB], {
             type: "language"
-          }).of(JJ);
-          return cJ.charAt(0).toUpperCase() + cJ.slice(1)
+          }).of(BB);
+          return TB.charAt(0).toUpperCase() + TB.slice(1)
         }
-        return AJ && (qJ = "settingsMenu:showCoordinatesHidden", jJ = "settingsMenu:showChunkCoordinatesHidden"), (0, YJ.jsxs)("div", {
+        return JB && (YB = "settingsMenu:showCoordinatesHidden", gB = "settingsMenu:showChunkCoordinatesHidden"), (0, oB.jsxs)("div", {
           className: "SettingsMenuRightInner",
-          children: [cJ && xJ.featureFlags.canUseInviteLinks && (0, YJ.jsxs)("div", {
+          children: [TB && EB.featureFlags.canUseInviteLinks && (0, oB.jsxs)("div", {
             className: "SettingBox",
-            children: [(0, YJ.jsx)("div", {
+            children: [(0, oB.jsx)("div", {
               className: "SettingsMenuInviteHeader",
-              children: ZJ("settingsMenu:inviteLink")
-            }), (0, YJ.jsx)(ec.g, {})]
-          }), (0, YJ.jsxs)("div", {
+              children: dB("settingsMenu:inviteLink")
+            }), (0, oB.jsx)(pT.f, {})]
+          }), (0, oB.jsxs)("div", {
             className: "SettingBox",
-            children: [(0, YJ.jsx)("div", {
+            children: [(0, oB.jsx)("div", {
               className: "SliderText",
               style: {
                 marginBottom: "10px"
               },
-              children: ZJ("settingsMenu:language")
-            }), (0, YJ.jsx)(Xc.d, {
-              options: Object.entries(XJ.k).map((JJ => {
-                let [cJ, ZJ] = JJ;
+              children: dB("settingsMenu:language")
+            }), (0, oB.jsx)(lT.e, {
+              options: Object.entries(lB.f).map((BB => {
+                let [TB, dB] = BB;
                 return {
-                  label: (0, YJ.jsxs)("div", {
+                  label: (0, oB.jsxs)("div", {
                     className: "SettingsMenuLanguageOption",
-                    children: [(0, YJ.jsx)("img", {
-                      src: ZJ.flagImg,
+                    children: [(0, oB.jsx)("img", {
+                      src: dB.flagImg,
                       alt: "flag"
-                    }), (0, YJ.jsxs)("span", {
-                      children: [hJ(cJ), " ", (0, YJ.jsxs)("span", {
+                    }), (0, oB.jsxs)("span", {
+                      children: [kB(TB), " ", (0, oB.jsxs)("span", {
                         className: "SettingsMenuLanguageOptionCode",
-                        children: ["(", cJ, ")"]
+                        children: ["(", TB, ")"]
                       })]
                     })]
                   }),
-                  value: cJ
+                  value: TB
                 }
               })),
-              value: FJ.code,
-              onChange: JJ => {
-                Ac.e.get().setCurrentLanguage(JJ.value)
+              value: VB.code,
+              onChange: BB => {
+                JT.f.get().setCurrentLanguage(BB.value)
               }
             })]
-          }), !(0, xJ.isMobileApp)() && (0, qc.g)() && xJ.featureFlags.useForceRotateForceFullscreenOverlay && (0, YJ.jsx)(VJ.e, {
-            label: ZJ("settingsMenu:disableFullscreenMode"),
-            checked: UJ.disableFullscreen,
-            onClick: JJ => {
-              KJ.d.setClientEscMenuOptions({
-                disableFullscreen: JJ
+          }), !(0, EB.isMobileApp)() && (0, YT.e)() && EB.featureFlags.useForceRotateForceFullscreenOverlay && (0, oB.jsx)(fB.e, {
+            label: dB("settingsMenu:disableFullscreenMode"),
+            checked: yB.disableFullscreen,
+            onClick: BB => {
+              sB.d.setClientEscMenuOptions({
+                disableFullscreen: BB
               })
             }
-          }), (0, YJ.jsx)(VJ.e, {
-            label: ZJ(qJ),
-            checked: UJ.showCoordinates,
-            onClick: JJ => {
-              KJ.d.setClientEscMenuOptions({
-                showCoordinates: JJ
+          }), (0, oB.jsx)(fB.e, {
+            label: dB(YB),
+            checked: yB.showCoordinates,
+            onClick: BB => {
+              sB.d.setClientEscMenuOptions({
+                showCoordinates: BB
               })
             },
-            disabled: AJ
-          }), (0, YJ.jsx)(VJ.e, {
-            label: ZJ(jJ),
-            checked: UJ.showChunkCoordinates,
-            onClick: JJ => {
-              KJ.d.setClientEscMenuOptions({
-                showChunkCoordinates: JJ
+            disabled: JB
+          }), (0, oB.jsx)(fB.e, {
+            label: dB(gB),
+            checked: yB.showChunkCoordinates,
+            onClick: BB => {
+              sB.d.setClientEscMenuOptions({
+                showChunkCoordinates: BB
               })
             },
-            disabled: AJ
-          }), (0, YJ.jsx)(VJ.e, {
-            label: ZJ("settingsMenu:showFps"),
-            checked: UJ.showFPS,
-            onClick: JJ => {
-              KJ.d.setClientEscMenuOptions({
-                showFPS: JJ
+            disabled: JB
+          }), (0, oB.jsx)(fB.e, {
+            label: dB("settingsMenu:showFps"),
+            checked: yB.showFPS,
+            onClick: BB => {
+              sB.d.setClientEscMenuOptions({
+                showFPS: BB
               })
             }
-          }), (0, YJ.jsx)(VJ.e, {
-            label: ZJ("settingsMenu:disableBunnyHopping"),
-            checked: UJ.disableBunnyHopping,
-            onClick: JJ => {
-              KJ.d.setClientEscMenuOptions({
-                disableBunnyHopping: JJ
+          }), (0, oB.jsx)(fB.e, {
+            label: dB("settingsMenu:disableBunnyHopping"),
+            checked: yB.disableBunnyHopping,
+            onClick: BB => {
+              sB.d.setClientEscMenuOptions({
+                disableBunnyHopping: BB
               })
             }
-          }), (0, oJ.v)() && (0, YJ.jsx)(VJ.e, {
-            label: ZJ("settingsMenu:showChat"),
-            checked: UJ.showChat,
-            onClick: JJ => {
-              KJ.d.setClientEscMenuOptions({
-                showChat: JJ
+          }), (0, nB.w)() && (0, oB.jsx)(fB.e, {
+            label: dB("settingsMenu:showChat"),
+            checked: yB.showChat,
+            onClick: BB => {
+              sB.d.setClientEscMenuOptions({
+                showChat: BB
               })
             }
-          }), (0, YJ.jsx)(VJ.e, {
-            label: ZJ("settingsMenu:showDebugOverlay"),
-            checked: eJ,
-            onClick: JJ => {
-              KJ.d.set({
-                showDebugOverlay: JJ
+          }), (0, oB.jsx)(fB.e, {
+            label: dB("settingsMenu:showDebugOverlay"),
+            checked: pB,
+            onClick: BB => {
+              sB.d.set({
+                showDebugOverlay: BB
               })
             }
-          }), xJ.featureFlags.useSocialFeatures && (0, YJ.jsx)(VJ.e, {
-            label: ZJ("settingsMenu:showFriendOnlineToasts"),
-            checked: UJ.showFriendOnlineToasts,
-            onClick: JJ => {
-              KJ.d.setClientEscMenuOptions({
-                showFriendOnlineToasts: JJ
+          }), EB.featureFlags.useSocialFeatures && (0, oB.jsx)(fB.e, {
+            label: dB("settingsMenu:showFriendOnlineToasts"),
+            checked: yB.showFriendOnlineToasts,
+            onClick: BB => {
+              sB.d.setClientEscMenuOptions({
+                showFriendOnlineToasts: BB
               })
             }
-          }), (0, YJ.jsx)(VJ.e, {
-            label: ZJ("settingsMenu:showNewItemIndicator"),
-            checked: UJ.showNewItemIndicator,
-            onClick: JJ => {
-              KJ.d.setClientEscMenuOptions({
-                showNewItemIndicator: JJ
+          }), (0, oB.jsx)(fB.e, {
+            label: dB("settingsMenu:showNewItemIndicator"),
+            checked: yB.showNewItemIndicator,
+            onClick: BB => {
+              sB.d.setClientEscMenuOptions({
+                showNewItemIndicator: BB
               })
             }
           })]
         })
       })),
-      Yc = (0, FJ.memo)((function() {
+      oT = (0, VB.memo)((function() {
         const {
-          t: JJ
-        } = (0, XJ.F)(), {
-          soundVolume: cJ,
-          musicVolume: ZJ
-        } = (0, KJ.j)(["soundVolume", "musicVolume"]);
-        return (0, YJ.jsxs)("div", {
+          t: BB
+        } = (0, lB.z)(), {
+          soundVolume: TB,
+          musicVolume: dB
+        } = (0, sB.m)(["soundVolume", "musicVolume"]);
+        return (0, oB.jsxs)("div", {
           className: "SettingsMenuRightInner",
-          children: [(0, YJ.jsx)(VJ.h, {
-            name: JJ("settingsMenu:musicVolume"),
+          children: [(0, oB.jsx)(fB.k, {
+            name: BB("settingsMenu:musicVolume"),
             min: 0,
             max: 1,
             step: .01,
-            initValue: ZJ,
-            onChange: JJ => {
-              KJ.d.set({
-                musicVolume: Math.round(100 * JJ) / 100
+            initValue: dB,
+            onChange: BB => {
+              sB.d.set({
+                musicVolume: Math.round(100 * BB) / 100
               })
             },
-            format: JJ => JJ.toFixed(2)
-          }), (0, YJ.jsx)(VJ.h, {
-            name: JJ("settingsMenu:soundEffectsVolume"),
+            format: BB => BB.toFixed(2)
+          }), (0, oB.jsx)(fB.k, {
+            name: BB("settingsMenu:soundEffectsVolume"),
             min: 0,
             max: 1,
             step: .01,
-            initValue: cJ,
-            onChange: JJ => {
-              KJ.d.set({
-                soundVolume: Math.round(100 * JJ) / 100
+            initValue: TB,
+            onChange: BB => {
+              sB.d.set({
+                soundVolume: Math.round(100 * BB) / 100
               })
             },
-            format: JJ => JJ.toFixed(2)
+            format: BB => BB.toFixed(2)
           })]
         })
       }));
-    var hc = ZJ(563),
-      Dc = ZJ(1326),
-      sc = ZJ(3137),
-      nc = ZJ(8493),
-      Gc = ZJ(2975);
-    const fc = {
+    var kT = dB(602),
+      LT = dB(1317),
+      OT = dB(3167),
+      DT = dB(8531),
+      uT = dB(2983);
+    const HT = {
       app: "notificationSettings:pushTargetsApp",
       browser: "notificationSettings:pushTargetsBrowser",
       msnPlay: "notificationSettings:pushTargetsMsnPlay"
     };
 
-    function xc() {
+    function ET() {
       const {
-        t: JJ
-      } = (0, XJ.F)(), cJ = (0, Gc.e)(), {
-        mobilePushNotificationsCanAsk: ZJ
-      } = (0, KJ.j)(["mobilePushNotificationsCanAsk"]), [UJ, eJ] = (0, FJ.useState)(null), [AJ, qJ] = (0, FJ.useState)(!1), [jJ, hJ] = (0, FJ.useState)(null), [DJ, sJ] = (0, FJ.useState)(!1), nJ = (0, FJ.useCallback)((() => {
-        (0, sc.d)().then((JJ => {
-          cJ.current && (eJ(JJ), qJ(!1))
-        })).catch((JJ => {
-          console.error("Failed to load push notification targets:", JJ), cJ.current && qJ(!0)
+        t: BB
+      } = (0, lB.z)(), TB = (0, uT.b)(), {
+        mobilePushNotificationsCanAsk: dB
+      } = (0, sB.m)(["mobilePushNotificationsCanAsk"]), [yB, pB] = (0, VB.useState)(null), [JB, YB] = (0, VB.useState)(!1), [gB, kB] = (0, VB.useState)(null), [LB, OB] = (0, VB.useState)(!1), DB = (0, VB.useCallback)((() => {
+        (0, OT.b)().then((BB => {
+          TB.current && (pB(BB), YB(!1))
+        })).catch((BB => {
+          console.error("Failed to load push notification targets:", BB), TB.current && YB(!0)
         }))
-      }), [cJ]), GJ = (0, FJ.useCallback)((() => {
-        (0, nc.c)().then((JJ => {
-          cJ.current && hJ((() => JJ))
+      }), [TB]), uB = (0, VB.useCallback)((() => {
+        (0, DT.b)().then((BB => {
+          TB.current && kB((() => BB))
         }))
-      }), [cJ]);
-      (0, FJ.useEffect)((() => {
-        nJ()
-      }), [nJ]), (0, FJ.useEffect)((() => {
-        GJ()
-      }), [GJ, ZJ]), (0, Dc.i)(sc.k, nJ);
-      const xJ = null === UJ ? [] : Object.keys(fc).filter((JJ => UJ[JJ] > 0));
-      return (0, YJ.jsxs)("div", {
+      }), [TB]);
+      (0, VB.useEffect)((() => {
+        DB()
+      }), [DB]), (0, VB.useEffect)((() => {
+        uB()
+      }), [uB, dB]), (0, LT.e)(OT.e, DB);
+      const EB = null === yB ? [] : Object.keys(HT).filter((BB => yB[BB] > 0));
+      return (0, oB.jsxs)("div", {
         className: "SettingBox PushNotificationSettings",
-        children: [(0, YJ.jsx)("div", {
+        children: [(0, oB.jsx)("div", {
           className: "SliderText",
-          children: JJ("notificationSettings:pushNotifications")
-        }), null === UJ && AJ && (0, YJ.jsx)("div", {
+          children: BB("notificationSettings:pushNotifications")
+        }), null === yB && JB && (0, oB.jsx)("div", {
           className: "PushNotificationSettingsText",
-          children: JJ("notificationSettings:pushTargetsLoadFailed")
-        }), null !== UJ && 0 === xJ.length && (0, YJ.jsx)("div", {
+          children: BB("notificationSettings:pushTargetsLoadFailed")
+        }), null !== yB && 0 === EB.length && (0, oB.jsx)("div", {
           className: "PushNotificationSettingsText",
-          children: JJ("notificationSettings:pushTargetsNone")
-        }), xJ.length > 0 && (0, YJ.jsx)("ul", {
+          children: BB("notificationSettings:pushTargetsNone")
+        }), EB.length > 0 && (0, oB.jsx)("ul", {
           className: "PushNotificationSettingsTargets",
-          children: xJ.map((cJ => {
-            var ZJ;
-            return (0, YJ.jsx)("li", {
-              children: JJ(fc[cJ], {
-                count: null !== (ZJ = null === UJ || void 0 === UJ ? void 0 : UJ[cJ]) && void 0 !== ZJ ? ZJ : 0
+          children: EB.map((TB => {
+            var dB;
+            return (0, oB.jsx)("li", {
+              children: BB(HT[TB], {
+                count: null !== (dB = null === yB || void 0 === yB ? void 0 : yB[TB]) && void 0 !== dB ? dB : 0
               })
-            }, cJ)
+            }, TB)
           }))
-        }), null !== jJ && (0, YJ.jsx)(fJ.d, {
+        }), null !== gB && (0, oB.jsx)(HB.d, {
           className: "PushNotificationSettingsButton",
-          loading: DJ,
+          loading: LB,
           onClick: () => {
-            sJ(!0), jJ().catch((JJ => {
-              console.error("Failed to turn on push notifications:", JJ)
+            OB(!0), gB().catch((BB => {
+              console.error("Failed to turn on push notifications:", BB)
             })).finally((() => {
-              cJ.current && (sJ(!1), GJ())
+              TB.current && (OB(!1), uB())
             }))
           },
-          children: JJ("notificationSettings:pushTurnOn")
+          children: BB("notificationSettings:pushTurnOn")
         })]
       })
     }
-    const rc = {
+    const vT = {
         toastAndTray: {
           label: "notificationSettings:friendRequestsAll",
           info: "notificationSettings:friendRequestsAllInfo"
@@ -959,465 +959,465 @@ export const modules = {
           info: "notificationSettings:friendRequestsOffInfo"
         }
       },
-      vc = (0, FJ.memo)((function() {
+      mT = (0, VB.memo)((function() {
         const {
-          t: JJ
-        } = (0, XJ.F)(), {
-          clientEscMenuOptions: cJ
-        } = (0, KJ.j)(["clientEscMenuOptions"]);
-        return (0, YJ.jsxs)("div", {
+          t: BB
+        } = (0, lB.z)(), {
+          clientEscMenuOptions: TB
+        } = (0, sB.m)(["clientEscMenuOptions"]);
+        return (0, oB.jsxs)("div", {
           className: "SettingsMenuRightInner",
-          children: [(0, YJ.jsx)(VJ.f, {
-            label: JJ("notificationSettings:friendRequests"),
-            options: hc.b.map((cJ => ({
-              value: cJ,
-              label: JJ(rc[cJ].label)
+          children: [(0, oB.jsx)(fB.g, {
+            label: BB("notificationSettings:friendRequests"),
+            options: kT.d.map((TB => ({
+              value: TB,
+              label: BB(vT[TB].label)
             }))),
-            value: cJ.friendRequestNotifications,
-            onChange: JJ => {
-              KJ.d.setClientEscMenuOptions({
-                friendRequestNotifications: JJ
+            value: TB.friendRequestNotifications,
+            onChange: BB => {
+              sB.d.setClientEscMenuOptions({
+                friendRequestNotifications: BB
               })
             },
-            circleInfoText: (0, YJ.jsx)("div", {
+            circleInfoText: (0, oB.jsx)("div", {
               className: "NotificationSettingLevelsInfo",
-              children: hc.b.map((cJ => (0, YJ.jsxs)("div", {
-                children: [(0, YJ.jsx)("b", {
-                  children: JJ(rc[cJ].label)
-                }), ": ", JJ(rc[cJ].info)]
-              }, cJ)))
+              children: kT.d.map((TB => (0, oB.jsxs)("div", {
+                children: [(0, oB.jsx)("b", {
+                  children: BB(vT[TB].label)
+                }), ": ", BB(vT[TB].info)]
+              }, TB)))
             })
-          }), (0, YJ.jsx)(xc, {})]
+          }), (0, oB.jsx)(ET, {})]
         })
       }));
-    var mc = ZJ(3933),
-      Qc = ZJ(157),
-      Ec = ZJ(223),
-      Vc = ZJ(6004),
-      Kc = ZJ(2938),
-      yc = ZJ(8502),
-      Sc = ZJ(535),
-      Ic = ZJ(17);
-    var Mc = ZJ(547),
-      bc = ZJ(29),
-      wc = ZJ(3833);
-    const Wc = new Map([
+    var iT = dB(3924),
+      NT = dB(184),
+      tT = dB(256),
+      fT = dB(5994),
+      sT = dB(2939),
+      MT = dB(8540),
+      zT = dB(572),
+      wT = dB(24);
+    var UT = dB(586),
+      FT = dB(33),
+      KT = dB(3825);
+    const rT = new Map([
       ["chunkHorizAddDist", "horizontal"],
       ["chunkVertAddDist", "vertical"]
     ]);
 
-    function gc(JJ) {
-      return Wc.has(JJ) ? rJ.gameBridge.lookup("EQ", null) : null
+    function IT(BB) {
+      return rT.has(BB) ? vB.gameBridge.lookup("Tm", null) : null
     }
 
-    function Hc(JJ) {
-      if (!(0, Sc.P)(KJ.d.get("clientEscMenuOptions")[JJ])) return KJ.d.get("clientEscMenuOptions")[JJ];
-      const cJ = gc(JJ);
-      return null !== cJ ? cJ[Wc.get(JJ)] : bc.j.getItem(JJ)
+    function cT(BB) {
+      if (!(0, zT.M)(sB.d.get("clientEscMenuOptions")[BB])) return sB.d.get("clientEscMenuOptions")[BB];
+      const TB = IT(BB);
+      return null !== TB ? TB[rT.get(BB)] : FT.j.getItem(BB)
     }
 
-    function Pc(JJ, cJ) {
-      if ("useTouchControls" === JJ) return void(0, wc.b)(cJ);
-      JJ in KJ.d.get("clientEscMenuOptions") && KJ.d.setClientEscMenuOptions({
-        [JJ]: cJ
+    function ST(BB, TB) {
+      if ("useTouchControls" === BB) return void(0, KT.e)(TB);
+      BB in sB.d.get("clientEscMenuOptions") && sB.d.setClientEscMenuOptions({
+        [BB]: TB
       });
-      const ZJ = gc(JJ);
-      null !== ZJ && rJ.gameBridge.send("setChunkAddDistance", {
-        ...ZJ,
-        [Wc.get(JJ)]: cJ
-      }), bc.j.setItem(JJ, cJ)
+      const dB = IT(BB);
+      null !== dB && vB.gameBridge.send("setChunkAddDistance", {
+        ...dB,
+        [rT.get(BB)]: TB
+      }), FT.j.setItem(BB, TB)
     }
-    var kc = ZJ(8511),
-      pc = ZJ(8517),
-      dc = ZJ(8526),
-      zc = ZJ(3926);
+    var PT = dB(8545),
+      QT = dB(8547),
+      RT = dB(8552),
+      aT = dB(3921);
 
-    function Nc(JJ) {
-      var cJ, UJ, AJ, qJ;
+    function ZT(BB) {
+      var TB, yB, JB, YB;
       let {
-        minChunkAddDist: jJ,
-        getValue: hJ,
-        onChange: DJ,
-        setApplySettingsCallback: sJ
-      } = JJ;
+        minChunkAddDist: gB,
+        getValue: kB,
+        onChange: LB,
+        setApplySettingsCallback: OB
+      } = BB;
       const {
-        t: GJ
-      } = (0, XJ.F)(), {
-        clientEscMenuOptions: fJ
-      } = (0, KJ.j)(["clientEscMenuOptions", "showDistantNametags"]), rJ = (0, FJ.useRef)(hJ("showFog")), vJ = (0, FJ.useRef)(fJ.antiAliasing), mJ = (0, FJ.useRef)(fJ.useWebGpu), [QJ, EJ] = (0, FJ.useState)(null), [SJ, IJ] = (0, FJ.useState)((() => (0, Kc.d)(xJ.featureFlags.settings.canUseShaderPacks))), [MJ] = (0, FJ.useState)((() => KJ.d.isWebGpuDefaultOff())), [bJ] = (0, FJ.useState)(Ec.e);
-      (0, FJ.useEffect)((() => {
-        let JJ = !1;
-        return (0, xJ.hasUsableWebGpuAdapter)().then((cJ => {
-          JJ || EJ(cJ)
-        })), (0, Kc.k)(xJ.featureFlags.settings.canUseShaderPacks) && (0, Vc.f)().then((async cJ => {
-          const FJ = null !== cJ && await async function(JJ) {
+        t: uB
+      } = (0, lB.z)(), {
+        clientEscMenuOptions: HB
+      } = (0, sB.m)(["clientEscMenuOptions", "showDistantNametags"]), vB = (0, VB.useRef)(kB("showFog")), mB = (0, VB.useRef)(HB.antiAliasing), iB = (0, VB.useRef)(HB.useWebGpu), [NB, tB] = (0, VB.useState)(null), [zB, wB] = (0, VB.useState)((() => (0, sT.f)(EB.featureFlags.settings.canUseShaderPacks))), [UB] = (0, VB.useState)((() => sB.d.isWebGpuDefaultOff())), [FB] = (0, VB.useState)(tT.g);
+      (0, VB.useEffect)((() => {
+        let BB = !1;
+        return (0, EB.hasUsableWebGpuAdapter)().then((TB => {
+          BB || tB(TB)
+        })), (0, sT.k)(EB.featureFlags.settings.canUseShaderPacks) && (0, fT.d)().then((async TB => {
+          const VB = null !== TB && await async function(BB) {
             const [{
-              isShaderPackActive: cJ
+              isShaderPackActive: TB
             }, {
-              loadPageShaderPackCompiler: FJ
-            }] = await Promise.all([ZJ.e(120).then((() => ZJ(5996))), Promise.all([ZJ.e(126), ZJ.e(124), ZJ.e(123)]).then((() => ZJ(5960)))]);
-            return cJ(JJ, await FJ())
-          }(cJ);
-          JJ || IJ(FJ)
+              loadPageShaderPackCompiler: VB
+            }] = await Promise.all([dB.e(120).then((() => dB(5987))), Promise.all([dB.e(126), dB.e(124), dB.e(123)]).then((() => dB(5949)))]);
+            return TB(BB, await VB())
+          }(TB);
+          BB || wB(VB)
         })), () => {
-          JJ = !0
+          BB = !0
         }
       }), []);
-      const wJ = function(JJ, cJ, ZJ, FJ, UJ) {
-          return (0, yc.e)(ZJ, FJ) && !0 === cJ ? {
+      const KB = function(BB, TB, dB, VB, yB) {
+          return (0, MT.d)(dB, VB) && !0 === TB ? {
             translationKey: "settingsMenu:newWebGpuForcedOnByShaderPack",
             checked: !0,
             disabled: !0
           } : {
-            translationKey: !1 !== cJ ? "settingsMenu:newWebGpu" : UJ ? "settingsMenu:newWebGpuDisabledUntilRestart" : "settingsMenu:newWebGpuUnsupported",
-            checked: JJ && !1 !== cJ,
-            disabled: !0 !== cJ
+            translationKey: !1 !== TB ? "settingsMenu:newWebGpu" : yB ? "settingsMenu:newWebGpuDisabledUntilRestart" : "settingsMenu:newWebGpuUnsupported",
+            checked: BB && !1 !== TB,
+            disabled: !0 !== TB
           }
-        }(fJ.useWebGpu, QJ, SJ, MJ, bJ),
-        WJ = (fJ.useWebGpu || (0, yc.e)(SJ, MJ)) && SJ && !0 === QJ,
-        gJ = (0, nJ.f)("lightingOverride"),
-        HJ = !(0, Sc.P)(gJ);
-      let PJ = "settingsMenu:enableLighting";
-      HJ && (PJ = gJ ? "settingsMenu:enableLightingForcedOn" : "settingsMenu:enableLightingForcedOff");
-      const kJ = JJ => {
-          var cJ, ZJ, FJ;
-          const UJ = null !== (cJ = JJ.showFog) && void 0 !== cJ ? cJ : hJ("showFog"),
-            eJ = null !== (ZJ = JJ.antiAliasing) && void 0 !== ZJ ? ZJ : fJ.antiAliasing,
-            XJ = null !== (FJ = JJ.useWebGpu) && void 0 !== FJ ? FJ : fJ.useWebGpu,
-            AJ = !Mc.r && UJ !== rJ.current || eJ !== vJ.current || XJ !== mJ.current;
-          sJ(AJ ? () => VJ.l : null)
+        }(HB.useWebGpu, NB, zB, UB, FB),
+        rB = (HB.useWebGpu || (0, MT.d)(zB, UB)) && zB && !0 === NB,
+        IB = (0, DB.j)("lightingOverride"),
+        cB = !(0, zT.M)(IB);
+      let SB = "settingsMenu:enableLighting";
+      cB && (SB = IB ? "settingsMenu:enableLightingForcedOn" : "settingsMenu:enableLightingForcedOff");
+      const PB = BB => {
+          var TB, dB, VB;
+          const yB = null !== (TB = BB.showFog) && void 0 !== TB ? TB : kB("showFog"),
+            pB = null !== (dB = BB.antiAliasing) && void 0 !== dB ? dB : HB.antiAliasing,
+            lB = null !== (VB = BB.useWebGpu) && void 0 !== VB ? VB : HB.useWebGpu,
+            JB = !UT.p && yB !== vB.current || pB !== mB.current || lB !== iB.current;
+          OB(JB ? () => fB.n : null)
         },
-        pJ = (0, nJ.f)("fogChunkDistanceOverride"),
-        dJ = (0, nJ.f)("fogBlockDistanceOverride"),
-        zJ = !(0, Sc.P)(pJ) || !(0, Sc.P)(dJ),
-        NJ = zJ ? "settingsMenu:showFogForcedOn" : "settingsMenu:showFog",
-        [OJ, TJ] = (0, mc.e)(jJ),
-        [CJ, uJ] = (0, zc.c)(jJ),
-        iJ = GJ("settingsMenu:chunkLoadDistanceDeviceLimit"),
-        RJ = CJ < OJ,
-        LJ = Math.min(null !== (cJ = hJ("chunkHorizAddDist")) && void 0 !== cJ ? cJ : jJ[0], CJ),
-        aJ = !zJ && function(JJ, cJ) {
-          return !0 === JJ.showFog && JJ.fogChunkDistance > cJ
-        }(fJ, LJ);
-      return (0, YJ.jsxs)("div", {
+        QB = (0, DB.j)("fogChunkDistanceOverride"),
+        RB = (0, DB.j)("fogBlockDistanceOverride"),
+        aB = !(0, zT.M)(QB) || !(0, zT.M)(RB),
+        ZB = aB ? "settingsMenu:showFogForcedOn" : "settingsMenu:showFog",
+        [XB, WB] = (0, iT.g)(gB),
+        [hB, CB] = (0, aT.d)(gB),
+        GB = uB("settingsMenu:chunkLoadDistanceDeviceLimit"),
+        qB = hB < XB,
+        xB = Math.min(null !== (TB = kB("chunkHorizAddDist")) && void 0 !== TB ? TB : gB[0], hB),
+        jB = !aB && function(BB, TB) {
+          return !0 === BB.showFog && BB.fogChunkDistance > TB
+        }(HB, xB);
+      return (0, oB.jsxs)("div", {
         className: "SettingsMenuRightInner",
-        children: [(0, YJ.jsx)(VJ.h, {
-          name: GJ("settingsMenu:horizontalChunkLoadDistance"),
-          min: jJ[0],
-          max: OJ,
-          selectableMax: CJ,
-          cappedNote: iJ,
+        children: [(0, oB.jsx)(fB.k, {
+          name: uB("settingsMenu:horizontalChunkLoadDistance"),
+          min: gB[0],
+          max: XB,
+          selectableMax: hB,
+          cappedNote: GB,
           step: 1,
-          initValue: LJ,
-          onChange: JJ => {
-            !0 === hJ("showFog") && JJ < hJ("fogChunkDistance") && DJ("fogChunkDistance", JJ), DJ("chunkHorizAddDist", JJ), Ic.i.Uf("updatedChunkLoadDist")
+          initValue: xB,
+          onChange: BB => {
+            !0 === kB("showFog") && BB < kB("fogChunkDistance") && LB("fogChunkDistance", BB), LB("chunkHorizAddDist", BB), wT.h.yH("updatedChunkLoadDist")
           },
-          circleInfoText: GJ("settingsMenu:chunkLoadDistanceInfo")
-        }), (0, YJ.jsx)(VJ.h, {
-          name: GJ("settingsMenu:verticalChunkLoadDistance"),
-          min: jJ[1],
-          max: TJ,
-          selectableMax: uJ,
-          cappedNote: RJ ? void 0 : iJ,
+          circleInfoText: uB("settingsMenu:chunkLoadDistanceInfo")
+        }), (0, oB.jsx)(fB.k, {
+          name: uB("settingsMenu:verticalChunkLoadDistance"),
+          min: gB[1],
+          max: WB,
+          selectableMax: CB,
+          cappedNote: qB ? void 0 : GB,
           step: 1,
-          initValue: Math.min(null !== (UJ = hJ("chunkVertAddDist")) && void 0 !== UJ ? UJ : jJ[1], uJ),
-          onChange: JJ => {
-            DJ("chunkVertAddDist", JJ), Ic.i.Uf("updatedChunkLoadDist")
+          initValue: Math.min(null !== (yB = kB("chunkVertAddDist")) && void 0 !== yB ? yB : gB[1], CB),
+          onChange: BB => {
+            LB("chunkVertAddDist", BB), wT.h.yH("updatedChunkLoadDist")
           },
-          circleInfoText: GJ("settingsMenu:chunkLoadDistanceInfo"),
+          circleInfoText: uB("settingsMenu:chunkLoadDistanceInfo"),
           className: "VerticalChunkLoadSlider"
-        }), (0, YJ.jsx)(VJ.e, {
-          label: GJ("settingsMenu:chunkFadeIn"),
-          checked: fJ.chunkFadeIn,
-          onClick: JJ => {
-            KJ.d.setClientEscMenuOptions({
-              chunkFadeIn: JJ
+        }), (0, oB.jsx)(fB.e, {
+          label: uB("settingsMenu:chunkFadeIn"),
+          checked: HB.chunkFadeIn,
+          onClick: BB => {
+            sB.d.setClientEscMenuOptions({
+              chunkFadeIn: BB
             })
           },
-          circleInfoText: GJ("settingsMenu:chunkFadeInInfo")
-        }), yJ.devTools.supports("chunkBorders") && (0, YJ.jsx)(VJ.e, {
-          label: GJ("settingsMenu:showChunkBorders"),
-          checked: fJ.showChunkBorders,
-          onClick: JJ => {
-            KJ.d.setClientEscMenuOptions({
-              showChunkBorders: JJ
+          circleInfoText: uB("settingsMenu:chunkFadeInInfo")
+        }), MB.devTools.supports("chunkBorders") && (0, oB.jsx)(fB.e, {
+          label: uB("settingsMenu:showChunkBorders"),
+          checked: HB.showChunkBorders,
+          onClick: BB => {
+            sB.d.setClientEscMenuOptions({
+              showChunkBorders: BB
             })
           },
-          circleInfoText: GJ("settingsMenu:showChunkBordersInfo")
-        }), (0, YJ.jsx)(VJ.e, {
-          label: GJ(PJ),
-          checked: fJ.enableLighting,
-          onClick: JJ => {
-            KJ.d.setClientEscMenuOptions({
-              enableLighting: JJ
+          circleInfoText: uB("settingsMenu:showChunkBordersInfo")
+        }), (0, oB.jsx)(fB.e, {
+          label: uB(SB),
+          checked: HB.enableLighting,
+          onClick: BB => {
+            sB.d.setClientEscMenuOptions({
+              enableLighting: BB
             })
           },
-          disabled: HJ
-        }), (0, YJ.jsxs)("div", {
+          disabled: cB
+        }), (0, oB.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, YJ.jsx)(VJ.e, {
-            label: GJ(NJ),
-            checked: fJ.showFog,
-            onClick: JJ => {
-              kJ({
-                showFog: JJ
-              }), KJ.d.setClientEscMenuOptions({
-                showFog: JJ
+          children: [(0, oB.jsx)(fB.e, {
+            label: uB(ZB),
+            checked: HB.showFog,
+            onClick: BB => {
+              PB({
+                showFog: BB
+              }), sB.d.setClientEscMenuOptions({
+                showFog: BB
               })
             },
-            disabled: zJ,
-            className: eJ()({
-              SettingBoxWarning: aJ
+            disabled: aB,
+            className: pB()({
+              SettingBoxWarning: jB
             })
-          }), (0, YJ.jsx)(VJ.h, {
-            name: GJ("settingsMenu:fogChunkDistance"),
-            min: jJ[0],
-            max: Qc.c.maxChunkHorizAddDistance,
+          }), (0, oB.jsx)(fB.k, {
+            name: uB("settingsMenu:fogChunkDistance"),
+            min: gB[0],
+            max: NT.c.maxChunkHorizAddDistance,
             step: 1,
-            initValue: null !== (AJ = fJ.fogChunkDistance) && void 0 !== AJ ? AJ : jJ[0],
-            onChange: JJ => {
-              KJ.d.setClientEscMenuOptions({
-                fogChunkDistance: JJ
-              }), Ic.i.Uf("fogChunkDistanceChanged", JJ)
+            initValue: null !== (JB = HB.fogChunkDistance) && void 0 !== JB ? JB : gB[0],
+            onChange: BB => {
+              sB.d.setClientEscMenuOptions({
+                fogChunkDistance: BB
+              }), wT.h.yH("fogChunkDistanceChanged", BB)
             },
-            circleInfoText: GJ("settingsMenu:fogChunkDistanceInfo"),
-            disabled: zJ || !1 === hJ("showFog"),
-            className: eJ()({
-              SettingBoxWarning: aJ
+            circleInfoText: uB("settingsMenu:fogChunkDistanceInfo"),
+            disabled: aB || !1 === kB("showFog"),
+            className: pB()({
+              SettingBoxWarning: jB
             })
-          }), aJ && (0, YJ.jsx)("div", {
+          }), jB && (0, oB.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
-            children: GJ("settingsMenu:fogChunkDistanceInfo")
+            children: uB("settingsMenu:fogChunkDistanceInfo")
           })]
-        }), !Mc.r && (0, YJ.jsx)(VJ.e, {
-          label: GJ(WJ ? "settingsMenu:disableBlockTextureAtlasUnavailableWithShaderPack" : "settingsMenu:disableBlockTextureAtlas"),
-          checked: !WJ && fJ.disableTexAtlas,
-          onClick: JJ => {
-            KJ.d.setClientEscMenuOptions({
-              disableTexAtlas: JJ
+        }), !UT.p && (0, oB.jsx)(fB.e, {
+          label: uB(rB ? "settingsMenu:disableBlockTextureAtlasUnavailableWithShaderPack" : "settingsMenu:disableBlockTextureAtlas"),
+          checked: !rB && HB.disableTexAtlas,
+          onClick: BB => {
+            sB.d.setClientEscMenuOptions({
+              disableTexAtlas: BB
             })
           },
-          circleInfoText: GJ("settingsMenu:disableBlockTextureAtlasInfo"),
-          disabled: WJ
-        }), (0, YJ.jsx)(VJ.h, {
-          name: GJ("settingsMenu:fieldOfView"),
+          circleInfoText: uB("settingsMenu:disableBlockTextureAtlasInfo"),
+          disabled: rB
+        }), (0, oB.jsx)(fB.k, {
+          name: uB("settingsMenu:fieldOfView"),
           min: 50,
           max: 160,
           step: 1,
-          initValue: fJ.cameraFOV,
-          onChange: JJ => {
-            KJ.d.setClientEscMenuOptions({
-              cameraFOV: JJ
+          initValue: HB.cameraFOV,
+          onChange: BB => {
+            sB.d.setClientEscMenuOptions({
+              cameraFOV: BB
             })
           }
-        }), (0, YJ.jsx)(VJ.e, {
-          label: GJ("settingsMenu:disableViewBobbing"),
-          checked: fJ.disableBobbing,
-          onClick: JJ => {
-            KJ.d.setClientEscMenuOptions({
-              disableBobbing: JJ
+        }), (0, oB.jsx)(fB.e, {
+          label: uB("settingsMenu:disableViewBobbing"),
+          checked: HB.disableBobbing,
+          onClick: BB => {
+            sB.d.setClientEscMenuOptions({
+              disableBobbing: BB
             })
           },
-          circleInfoText: GJ("settingsMenu:disableViewBobbingInfo")
-        }), (0, YJ.jsx)(VJ.e, {
-          label: GJ("settingsMenu:antiAliasing"),
-          checked: fJ.antiAliasing,
-          onClick: JJ => {
-            kJ({
-              antiAliasing: JJ
-            }), (0, kc.e)("antiAliasing"), KJ.d.setClientEscMenuOptions({
-              antiAliasing: JJ
+          circleInfoText: uB("settingsMenu:disableViewBobbingInfo")
+        }), (0, oB.jsx)(fB.e, {
+          label: uB("settingsMenu:antiAliasing"),
+          checked: HB.antiAliasing,
+          onClick: BB => {
+            PB({
+              antiAliasing: BB
+            }), (0, PT.e)("antiAliasing"), sB.d.setClientEscMenuOptions({
+              antiAliasing: BB
             })
           },
-          circleInfoText: GJ("settingsMenu:antiAliasingInfo")
-        }), (0, YJ.jsx)(VJ.h, {
-          name: GJ("settingsMenu:pixelScale"),
+          circleInfoText: uB("settingsMenu:antiAliasingInfo")
+        }), (0, oB.jsx)(fB.k, {
+          name: uB("settingsMenu:pixelScale"),
           min: 1,
           max: 8,
           step: 1,
-          initValue: null !== (qJ = fJ.pixelScale) && void 0 !== qJ ? qJ : 1,
-          onChange: JJ => {
-            (JJ !== KJ.d.get("clientEscMenuOptions").pixelScale || (0, dc.n)()) && (0, kc.e)("pixelScale"), KJ.d.setClientEscMenuOptions({
-              pixelScale: JJ
+          initValue: null !== (YB = HB.pixelScale) && void 0 !== YB ? YB : 1,
+          onChange: BB => {
+            (BB !== sB.d.get("clientEscMenuOptions").pixelScale || (0, RT.n)()) && (0, PT.e)("pixelScale"), sB.d.setClientEscMenuOptions({
+              pixelScale: BB
             })
           },
-          circleInfoText: GJ("settingsMenu:pixelScaleInfo"),
-          format: JJ => `${JJ}x`
-        }), (0, YJ.jsx)(VJ.e, {
-          label: GJ("settingsMenu:pixelSmoothing"),
-          checked: fJ.pixelSmoothing,
-          onClick: JJ => {
-            KJ.d.setClientEscMenuOptions({
-              pixelSmoothing: JJ
+          circleInfoText: uB("settingsMenu:pixelScaleInfo"),
+          format: BB => `${BB}x`
+        }), (0, oB.jsx)(fB.e, {
+          label: uB("settingsMenu:pixelSmoothing"),
+          checked: HB.pixelSmoothing,
+          onClick: BB => {
+            sB.d.setClientEscMenuOptions({
+              pixelSmoothing: BB
             })
           },
-          circleInfoText: GJ("settingsMenu:pixelSmoothingInfo")
-        }), Mc.r && (0, YJ.jsx)(VJ.e, {
-          label: GJ("settingsMenu:distantNametags"),
-          checked: (0, pc.b)(),
-          onClick: JJ => {
-            KJ.d.set({
-              showDistantNametags: JJ
+          circleInfoText: uB("settingsMenu:pixelSmoothingInfo")
+        }), UT.p && (0, oB.jsx)(fB.e, {
+          label: uB("settingsMenu:distantNametags"),
+          checked: (0, QT.b)(),
+          onClick: BB => {
+            sB.d.set({
+              showDistantNametags: BB
             })
           },
-          circleInfoText: GJ("settingsMenu:distantNametagsInfo")
-        }), (0, YJ.jsx)(VJ.e, {
-          label: GJ(wJ.translationKey),
-          checked: wJ.checked,
-          onClick: JJ => {
-            kJ({
-              useWebGpu: JJ
-            }), KJ.d.setClientEscMenuOptions({
-              useWebGpu: JJ
+          circleInfoText: uB("settingsMenu:distantNametagsInfo")
+        }), (0, oB.jsx)(fB.e, {
+          label: uB(KB.translationKey),
+          checked: KB.checked,
+          onClick: BB => {
+            PB({
+              useWebGpu: BB
+            }), sB.d.setClientEscMenuOptions({
+              useWebGpu: BB
             })
           },
-          circleInfoText: GJ("settingsMenu:newWebGpuInfo"),
-          disabled: wJ.disabled
+          circleInfoText: uB("settingsMenu:newWebGpuInfo"),
+          disabled: KB.disabled
         })]
       })
     }
-    var Oc = ZJ(8546),
-      Tc = ZJ(8167),
-      Cc = ZJ(8176),
-      uc = ZJ(1297),
-      ic = ZJ(4397),
-      Rc = ZJ(8550),
-      Lc = ZJ(1743),
-      ac = ZJ(3758),
-      Bc = ZJ(1747),
-      tc = ZJ(567);
-    const oc = (0, FJ.memo)((function() {
+    var XT = dB(8559),
+      WT = dB(8194),
+      hT = dB(8196),
+      CT = dB(1277),
+      GT = dB(4408),
+      qT = dB(8565),
+      xT = dB(1727),
+      jT = dB(3762),
+      AT = dB(1736),
+      bT = dB(610);
+    const nT = (0, VB.memo)((function() {
       const {
-        clientEscMenuOptions: JJ
-      } = (0, KJ.j)(["clientEscMenuOptions"]), {
-        recording: cJ,
-        clipping: ZJ,
-        hasClipBuffer: UJ
-      } = (0, Lc.f)("replayRecorder"), XJ = (0, Lc.d)("connectedGame", (JJ => JJ.replay)), AJ = (0, ac.f)(), qJ = !1 === (0, nJ.f)("canRecordReplays");
-      (0, FJ.useEffect)((() => {
-        rJ.gameBridge.send("setRecorderPrefs", {
-          clipping: JJ.enableClipping,
-          clipSeconds: JJ.clipDurationSeconds
+        clientEscMenuOptions: BB
+      } = (0, sB.m)(["clientEscMenuOptions"]), {
+        recording: TB,
+        clipping: dB,
+        hasClipBuffer: yB
+      } = (0, xT.i)("replayRecorder"), lB = (0, xT.g)("connectedGame", (BB => BB.replay)), JB = (0, jT.l)(), YB = !1 === (0, DB.j)("canRecordReplays");
+      (0, VB.useEffect)((() => {
+        vB.gameBridge.send("setRecorderPrefs", {
+          clipping: BB.enableClipping,
+          clipSeconds: BB.clipDurationSeconds
         })
-      }), [JJ.enableClipping, JJ.clipDurationSeconds]);
-      const jJ = AJ || XJ,
-        hJ = !jJ && !qJ,
-        DJ = cJ || hJ,
-        sJ = hJ,
-        GJ = sJ && ZJ && !cJ;
+      }), [BB.enableClipping, BB.clipDurationSeconds]);
+      const gB = JB || lB,
+        kB = !gB && !YB,
+        LB = TB || kB,
+        OB = kB,
+        uB = OB && dB && !TB;
 
-      function xJ() {
-        DJ && rJ.gameBridge.send("toggleRecording", null)
+      function EB() {
+        LB && vB.gameBridge.send("toggleRecording", null)
       }
-      return (0, YJ.jsxs)("div", {
+      return (0, oB.jsxs)("div", {
         className: "SettingsMenuRightInner ReplayViewerCategory",
-        children: [(0, YJ.jsxs)("div", {
+        children: [(0, oB.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, YJ.jsx)("div", {
+          children: [(0, oB.jsx)("div", {
             className: "ReplayViewerCategoryRecordingRow",
-            children: cJ ? (0, YJ.jsxs)(YJ.Fragment, {
-              children: [(0, YJ.jsxs)(fJ.I, {
+            children: TB ? (0, oB.jsxs)(oB.Fragment, {
+              children: [(0, oB.jsxs)(HB.K, {
                 className: "ReplayViewerCategoryButton",
-                onClick: xJ,
-                disabled: !DJ,
-                children: [(0, YJ.jsx)("span", {
+                onClick: EB,
+                disabled: !LB,
+                children: [(0, oB.jsx)("span", {
                   children: "Stop Recording"
-                }), (0, YJ.jsx)(Bc.e, {
+                }), (0, oB.jsx)(AT.d, {
                   noaAction: "recordGame"
                 })]
-              }), (0, YJ.jsx)(Rc.d, {
+              }), (0, oB.jsx)(qT.c, {
                 className: "ReplayViewerCategoryRecordingIndicator"
               })]
-            }) : (0, YJ.jsxs)(fJ.d, {
+            }) : (0, oB.jsxs)(HB.d, {
               className: "ReplayViewerCategoryButton",
-              onClick: xJ,
-              disabled: !DJ,
-              children: [(0, YJ.jsx)("span", {
+              onClick: EB,
+              disabled: !LB,
+              children: [(0, oB.jsx)("span", {
                 children: "Start Recording"
-              }), (0, YJ.jsx)(Bc.e, {
+              }), (0, oB.jsx)(AT.d, {
                 noaAction: "recordGame"
               })]
             })
-          }), qJ && (0, YJ.jsx)("div", {
+          }), YB && (0, oB.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Recording is turned off in this game."
-          }), jJ && !cJ && (0, YJ.jsx)("div", {
+          }), gB && !TB && (0, oB.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Close Replay Mode to start recording."
           })]
-        }), (0, YJ.jsxs)("div", {
+        }), (0, oB.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, YJ.jsx)(VJ.e, {
+          children: [(0, oB.jsx)(fB.e, {
             label: "Enable clipping",
-            checked: JJ.enableClipping,
-            disabled: !sJ,
-            onClick: function(JJ) {
-              sJ && KJ.d.setClientEscMenuOptions({
-                enableClipping: JJ
+            checked: BB.enableClipping,
+            disabled: !OB,
+            onClick: function(BB) {
+              OB && sB.d.setClientEscMenuOptions({
+                enableClipping: BB
               })
             },
-            className: eJ()({
-              SettingBoxDisabled: !sJ
+            className: pB()({
+              SettingBoxDisabled: !OB
             })
-          }), (0, YJ.jsx)(VJ.h, {
+          }), (0, oB.jsx)(fB.k, {
             name: "Clip duration (seconds)",
-            min: tc.j,
-            max: tc.i,
-            step: tc.c,
-            initValue: JJ.clipDurationSeconds,
-            onChange: function(JJ) {
-              KJ.d.setClientEscMenuOptions({
-                clipDurationSeconds: JJ
+            min: bT.i,
+            max: bT.f,
+            step: bT.b,
+            initValue: BB.clipDurationSeconds,
+            onChange: function(BB) {
+              sB.d.setClientEscMenuOptions({
+                clipDurationSeconds: BB
               })
             },
             circleInfoText: "Longer clip durations use more memory and may affect performance.",
-            disabled: !sJ || !JJ.enableClipping
+            disabled: !OB || !BB.enableClipping
           })]
-        }), (0, YJ.jsxs)("div", {
+        }), (0, oB.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, YJ.jsxs)(fJ.d, {
+          children: [(0, oB.jsxs)(HB.d, {
             className: "ReplayViewerCategoryButton",
             onClick: function() {
-              GJ && rJ.gameBridge.send("saveClip", null)
+              uB && vB.gameBridge.send("saveClip", null)
             },
-            disabled: !GJ,
-            children: [(0, YJ.jsx)("span", {
+            disabled: !uB,
+            children: [(0, oB.jsx)("span", {
               children: "Record clip"
-            }), (0, YJ.jsx)(Bc.e, {
+            }), (0, oB.jsx)(AT.d, {
               noaAction: "recordClip"
             })]
-          }), JJ.enableClipping && !UJ && sJ && !cJ && (0, YJ.jsx)("div", {
+          }), BB.enableClipping && !yB && OB && !TB && (0, oB.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Clip buffer is filling \u2014 play for a moment, then save."
-          }), cJ && (0, YJ.jsx)("div", {
+          }), TB && (0, oB.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Clipping pauses while a full recording is active."
           })]
-        }), (0, YJ.jsxs)("div", {
+        }), (0, oB.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, YJ.jsxs)(fJ.d, {
+          children: [(0, oB.jsxs)(HB.d, {
             className: "ReplayViewerCategoryButton",
             onClick: function() {
-              (0, ac.d)(!0), KJ.d.set({
+              (0, jT.j)(!0), sB.d.set({
                 openEverythingMenuName: null
               })
             },
-            disabled: AJ,
-            children: [(0, YJ.jsx)("span", {
+            disabled: JB,
+            children: [(0, oB.jsx)("span", {
               children: "Open Replay Mode"
-            }), (0, YJ.jsx)(Bc.e, {
+            }), (0, oB.jsx)(AT.d, {
               noaAction: "replayViewerOpen"
             })]
-          }), AJ && (0, YJ.jsx)("div", {
+          }), JB && (0, oB.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Replay Mode is already open."
           })]
-        }), (0, YJ.jsxs)("div", {
+        }), (0, oB.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, YJ.jsx)("div", {
+          children: [(0, oB.jsx)("div", {
             className: "ReplayViewerCategoryTutorialTitle",
             children: "How to use Replay Mode"
-          }), (0, YJ.jsx)("iframe", {
+          }), (0, oB.jsx)("iframe", {
             className: "ReplayViewerCategoryTutorial",
             src: "https://www.youtube.com/embed/-FsT0rNSuYA?playsinline=1&rel=0",
             title: "How to use Replay Mode",
@@ -1428,9 +1428,9 @@ export const modules = {
         })]
       })
     }));
-    var lc = ZJ(227),
-      JZ = ZJ(1671);
-    const cZ = {
+    var eT = dB(270),
+      Bd = dB(1652);
+    const Td = {
       account: {
         icon: "fa-solid fa-user",
         displayName: "homePage:account"
@@ -1452,11 +1452,11 @@ export const modules = {
         displayName: "settingsMenu:graphics"
       },
       controls: {
-        icon: () => (0, YJ.jsx)("svg", {
+        icon: () => (0, oB.jsx)("svg", {
           className: "svg-inline--fa",
           viewBox: "0 0 640 512",
           "aria-hidden": "true",
-          children: (0, YJ.jsx)("path", {
+          children: (0, oB.jsx)("path", {
             fill: "currentColor",
             d: "M256 20H384A36 36 0 0 1 420 56V208A36 36 0 0 1 384 244H256A36 36 0 0 1 220 208V56A36 36 0 0 1 256 20ZM262 166L378 166L320 90ZM36 268H164A36 36 0 0 1 200 304V456A36 36 0 0 1 164 492H36A36 36 0 0 1 0 456V304A36 36 0 0 1 36 268ZM134 438L134 322L58 380ZM256 268H384A36 36 0 0 1 420 304V456A36 36 0 0 1 384 492H256A36 36 0 0 1 220 456V304A36 36 0 0 1 256 268ZM378 346L262 346L320 422ZM476 268H604A36 36 0 0 1 640 304V456A36 36 0 0 1 604 492H476A36 36 0 0 1 440 456V304A36 36 0 0 1 476 268ZM506 322L506 438L582 380Z"
           })
@@ -1471,7 +1471,7 @@ export const modules = {
         icon: "fa-solid fa-folder-image",
         displayName: "settingsMenu:texturePack"
       },
-      Jn: {
+      pD: {
         icon: "fa-solid fa-sparkle",
         displayName: "settingsMenu:shaderPack"
       },
@@ -1497,819 +1497,819 @@ export const modules = {
       }
     };
 
-    function ZZ() {
-      return Promise.all([ZJ.e(126), ZJ.e(124), ZJ.e(118), ZJ.e(115)]).then((() => ZJ(39853))).then((JJ => ({
-        default: JJ.ShaderPackCategory
-      })), (JJ => (console.error("Failed to load the shader pack settings", JJ), {
-        default: FZ
+    function dd() {
+      return Promise.all([dB.e(126), dB.e(124), dB.e(118), dB.e(115)]).then((() => dB(39804))).then((BB => ({
+        default: BB.ShaderPackCategory
+      })), (BB => (console.error("Failed to load the shader pack settings", BB), {
+        default: Vd
       })))
     }
 
-    function FZ() {
+    function Vd() {
       const {
-        t: JJ
-      } = (0, XJ.F)();
-      return (0, YJ.jsx)("div", {
+        t: BB
+      } = (0, lB.z)();
+      return (0, oB.jsx)("div", {
         className: "SettingsMenuRightInner",
-        children: JJ("shaderPack:tabLoadFailed")
+        children: BB("shaderPack:tabLoadFailed")
       })
     }
-    var UZ = ZJ(1294);
-    const eZ = (0, FJ.lazy)((() => ZJ.e(252).then((() => ZJ(39846))).then((JJ => ({
-        default: JJ.BloxdInformation
+    var yd = dB(1275);
+    const pd = (0, VB.lazy)((() => dB.e(252).then((() => dB(39788))).then((BB => ({
+        default: BB.BloxdInformation
       }))))),
-      XZ = (0, FJ.lazy)(ZZ);
+      ld = (0, VB.lazy)(dd);
 
-    function AZ(JJ) {
-      return JJ ? "general" : "account"
+    function Jd(BB) {
+      return BB ? "general" : "account"
     }
-    const qZ = new Map,
-      jZ = (0, FJ.memo)((function(JJ) {
+    const Yd = new Map,
+      gd = (0, VB.memo)((function(BB) {
         let {
-          show: cJ,
-          setBeforeResumeCallback: ZJ
-        } = JJ;
-        (0, GJ.d)();
+          show: TB,
+          setBeforeResumeCallback: dB
+        } = BB;
+        (0, uB.e)();
         const {
-          gameState: UJ,
-          openSettingsCategory: eJ
-        } = (0, KJ.j)(["gameState", "openSettingsCategory"]), {
-          userContext: qJ
-        } = (0, sJ.d)(), {
-          t: jJ
-        } = (0, XJ.F)(), QJ = (0, DJ.c)(), EJ = (0, nJ.f)("minChunkAddDist"), VJ = "inGame" === UJ, [yJ, MJ] = (0, FJ.useState)(AZ(VJ)), [bJ, wJ] = (0, FJ.useState)(null), [WJ, gJ] = (0, FJ.useState)([]), HJ = (0, FJ.useRef)(function() {
-          const JJ = new Date,
-            cJ = 6 * (JJ.getMonth() + JJ.getDate()) % lc.r.length;
-          return [...lc.r, ...lc.r].slice(cJ, cJ + 6)
-        }()), PJ = (0, FJ.useRef)(null), kJ = (0, Dc.m)(uc.i, (0, uc.e)()), pJ = Object.keys(cZ).filter((JJ => {
-          switch (JJ) {
+          gameState: yB,
+          openSettingsCategory: pB
+        } = (0, sB.m)(["gameState", "openSettingsCategory"]), {
+          userContext: YB
+        } = (0, OB.b)(), {
+          t: gB
+        } = (0, lB.z)(), NB = (0, LB.b)(), tB = (0, DB.j)("minChunkAddDist"), fB = "inGame" === yB, [MB, UB] = (0, VB.useState)(Jd(fB)), [FB, KB] = (0, VB.useState)(null), [rB, IB] = (0, VB.useState)([]), cB = (0, VB.useRef)(function() {
+          const BB = new Date,
+            TB = 6 * (BB.getMonth() + BB.getDate()) % eT.s.length;
+          return [...eT.s, ...eT.s].slice(TB, TB + 6)
+        }()), SB = (0, VB.useRef)(null), PB = (0, LT.f)(CT.j, (0, CT.c)()), QB = Object.keys(Td).filter((BB => {
+          switch (BB) {
             case "replayViewer":
-              return VJ;
+              return fB;
             case "developerTools":
-              return qJ.playerHasRank("developer") || !1;
+              return YB.playerHasRank("developer") || !1;
             case "texturePack":
-              return xJ.featureFlags.settings.canChangeTexturePack;
-            case "Jn":
-              return xJ.featureFlags.settings.canUseShaderPacks;
+              return EB.featureFlags.settings.canChangeTexturePack;
+            case "pD":
+              return EB.featureFlags.settings.canUseShaderPacks;
             case "notifications":
-              return xJ.featureFlags.useSocialFeatures;
+              return EB.featureFlags.useSocialFeatures;
             case "alternativeDomains":
-              return "crazygames" !== IJ.n;
+              return "crazygames" !== wB.v;
             case "controller":
-              return xJ.featureFlags.useControllerSupport && (kJ || "controller" === yJ);
+              return EB.featureFlags.useControllerSupport && (PB || "controller" === MB);
             default:
               return !0
           }
         }));
-        (0, Dc.i)("toggleFullCoordinateOverlay", (() => {
-          const JJ = Hc("showCoordinates") && Hc("showChunkCoordinates") && Hc("showFPS");
-          Pc("showCoordinates", !JJ), Pc("showChunkCoordinates", !JJ), Pc("showFPS", !JJ), QJ()
-        })), (0, Dc.i)("updatedChunkLoadDist", (() => {
-          QJ()
-        })), (0, FJ.useEffect)((() => {
-          if (wJ(null), null === KJ.d.get("openSettingsCategory")) {
-            const JJ = (0, UZ.e)() ? qZ.get(VJ) : void 0;
-            MJ(JJ && pJ.includes(JJ) ? JJ : AZ(VJ))
+        (0, LT.e)("toggleFullCoordinateOverlay", (() => {
+          const BB = cT("showCoordinates") && cT("showChunkCoordinates") && cT("showFPS");
+          ST("showCoordinates", !BB), ST("showChunkCoordinates", !BB), ST("showFPS", !BB), NB()
+        })), (0, LT.e)("updatedChunkLoadDist", (() => {
+          NB()
+        })), (0, VB.useEffect)((() => {
+          if (KB(null), null === sB.d.get("openSettingsCategory")) {
+            const BB = (0, yd.i)() ? Yd.get(fB) : void 0;
+            UB(BB && QB.includes(BB) ? BB : Jd(fB))
           }
-        }), [cJ]), (0, FJ.useEffect)((() => {
-          null !== eJ && (MJ(eJ), qZ.set(VJ, eJ), KJ.d.set({
+        }), [TB]), (0, VB.useEffect)((() => {
+          null !== pB && (UB(pB), Yd.set(fB, pB), sB.d.set({
             openSettingsCategory: null
           }))
-        }), [eJ, VJ]), (0, FJ.useLayoutEffect)((() => {
-          PJ.current && (PJ.current.scrollTop = 0)
-        }), [yJ, cJ]), (0, FJ.useEffect)((() => {
-          "updateLog" === yJ && (0, mJ.e)().then(gJ)
-        }), [yJ]), (0, FJ.useEffect)((() => {
-          if ((0, Sc.P)(EJ)) return;
-          const [JJ, cJ] = (0, Oc.b)(), [ZJ, FJ] = (0, mc.e)(EJ), UJ = (0, JZ.f)(EJ[0], JJ, ZJ), eJ = (0, JZ.f)(EJ[1], cJ, FJ);
-          rJ.gameBridge.send("setChunkAddDistance", {
-            horizontal: UJ,
-            vertical: eJ
+        }), [pB, fB]), (0, VB.useLayoutEffect)((() => {
+          SB.current && (SB.current.scrollTop = 0)
+        }), [MB, TB]), (0, VB.useEffect)((() => {
+          "updateLog" === MB && (0, iB.d)().then(IB)
+        }), [MB]), (0, VB.useEffect)((() => {
+          if ((0, zT.M)(tB)) return;
+          const [BB, TB] = (0, XT.d)(), [dB, VB] = (0, iT.g)(tB), yB = (0, Bd.d)(tB[0], BB, dB), pB = (0, Bd.d)(tB[1], TB, VB);
+          vB.gameBridge.send("setChunkAddDistance", {
+            horizontal: yB,
+            vertical: pB
           })
-        }), [EJ]);
-        const dJ = (0, FJ.useCallback)((async () => {
-          bJ && (await bJ(), wJ(null))
-        }), [bJ]);
+        }), [tB]);
+        const RB = (0, VB.useCallback)((async () => {
+          FB && (await FB(), KB(null))
+        }), [FB]);
 
-        function zJ() {
-          KJ.d.set({
+        function aB() {
+          sB.d.set({
             openEverythingMenuName: null
           })
         }
-        return (0, FJ.useEffect)((() => {
-          ZJ((() => dJ))
-        }), [dJ, ZJ]), (0, YJ.jsxs)("div", {
+        return (0, VB.useEffect)((() => {
+          dB((() => RB))
+        }), [RB, dB]), (0, oB.jsxs)("div", {
           className: "SettingsMenu Menu",
-          style: cJ ? {} : {
+          style: TB ? {} : {
             display: "none"
           },
-          children: [(0, YJ.jsx)("div", {
+          children: [(0, oB.jsx)("div", {
             className: "MenuSideBar",
-            children: (0, YJ.jsx)("div", {
+            children: (0, oB.jsx)("div", {
               className: "MenuSideBarBody",
-              children: (0, YJ.jsx)(hJ, {
-                items: pJ.map((JJ => {
-                  const cJ = cZ[JJ].icon;
+              children: (0, oB.jsx)(kB, {
+                items: QB.map((BB => {
+                  const TB = Td[BB].icon;
                   return {
-                    id: JJ,
-                    faIcon: "string" === typeof cJ ? cJ : void 0,
-                    iconElement: "string" === typeof cJ ? void 0 : (0, YJ.jsx)(cJ, {}),
-                    title: jJ(cZ[JJ].displayName),
+                    id: BB,
+                    faIcon: "string" === typeof TB ? TB : void 0,
+                    iconElement: "string" === typeof TB ? void 0 : (0, oB.jsx)(TB, {}),
+                    title: gB(Td[BB].displayName),
                     redDot: !1
                   }
                 })),
-                selectedItemId: yJ,
-                onClick: JJ => {
-                  !async function(JJ) {
-                    await dJ(), MJ(JJ), qZ.set(VJ, JJ)
-                  }(JJ)
+                selectedItemId: MB,
+                onClick: BB => {
+                  !async function(BB) {
+                    await RB(), UB(BB), Yd.set(fB, BB)
+                  }(BB)
                 }
               })
             })
-          }), (0, YJ.jsxs)("div", {
-            ref: PJ,
+          }), (0, oB.jsxs)("div", {
+            ref: SB,
             className: "MenuBody SettingsMenuRight",
-            children: ["account" === yJ && (0, YJ.jsx)(Uc, {
-              showing: cJ,
-              inGame: VJ
-            }), "general" === yJ && (0, YJ.jsx)(jc, {
-              inGame: VJ
-            }), "audio" === yJ && (0, YJ.jsx)(Yc, {}), "notifications" === yJ && (0, YJ.jsx)(vc, {}), "graphics" === yJ && (0, YJ.jsx)(Nc, {
-              minChunkAddDist: null !== EJ && void 0 !== EJ ? EJ : [2, 2],
-              getValue: Hc,
-              onChange: Pc,
-              setApplySettingsCallback: wJ
-            }), "controls" === yJ && (0, YJ.jsx)(Tc.h, {}), "controller" === yJ && xJ.featureFlags.useControllerSupport && (0, YJ.jsx)(Cc.b, {}), xJ.featureFlags.settings.canChangeTexturePack && "texturePack" === yJ && (0, YJ.jsx)(ic.e, {
-              setApplySettingsCallback: wJ
-            }), xJ.featureFlags.settings.canUseShaderPacks && "Jn" === yJ && (0, YJ.jsx)(FJ.Suspense, {
+            children: ["account" === MB && (0, oB.jsx)(yT, {
+              showing: TB,
+              inGame: fB
+            }), "general" === MB && (0, oB.jsx)(gT, {
+              inGame: fB
+            }), "audio" === MB && (0, oB.jsx)(oT, {}), "notifications" === MB && (0, oB.jsx)(mT, {}), "graphics" === MB && (0, oB.jsx)(ZT, {
+              minChunkAddDist: null !== tB && void 0 !== tB ? tB : [2, 2],
+              getValue: cT,
+              onChange: ST,
+              setApplySettingsCallback: KB
+            }), "controls" === MB && (0, oB.jsx)(WT.f, {}), "controller" === MB && EB.featureFlags.useControllerSupport && (0, oB.jsx)(hT.e, {}), EB.featureFlags.settings.canChangeTexturePack && "texturePack" === MB && (0, oB.jsx)(GT.c, {
+              setApplySettingsCallback: KB
+            }), EB.featureFlags.settings.canUseShaderPacks && "pD" === MB && (0, oB.jsx)(VB.Suspense, {
               fallback: null,
-              children: (0, YJ.jsx)(XZ, {
-                setApplySettingsCallback: wJ
+              children: (0, oB.jsx)(ld, {
+                setApplySettingsCallback: KB
               })
-            }), "updateLog" === yJ && (0, YJ.jsx)("div", {
+            }), "updateLog" === MB && (0, oB.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, YJ.jsx)("div", {
+              children: (0, oB.jsx)("div", {
                 className: "UpdateLogsContainer",
-                children: WJ.map(((JJ, cJ) => (0, YJ.jsx)(vJ.d, {
-                  updateLog: JJ,
-                  index: cJ,
-                  close: zJ
-                }, cJ)))
+                children: rB.map(((BB, TB) => (0, oB.jsx)(mB.b, {
+                  updateLog: BB,
+                  index: TB,
+                  close: aB
+                }, TB)))
               })
-            }), "information" === yJ && (0, YJ.jsx)("div", {
+            }), "information" === MB && (0, oB.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, YJ.jsx)(FJ.Suspense, {
+              children: (0, oB.jsx)(VB.Suspense, {
                 fallback: null,
-                children: (0, YJ.jsx)(eZ, {})
+                children: (0, oB.jsx)(pd, {})
               })
-            }), "alternativeDomains" === yJ && (0, YJ.jsxs)("div", {
+            }), "alternativeDomains" === MB && (0, oB.jsxs)("div", {
               className: "SettingsMenuRightInner",
-              children: [(0, YJ.jsx)("div", {
+              children: [(0, oB.jsx)("div", {
                 className: "AlternativeDomainsTitle",
-                children: jJ("settingsMenu:unblockedDomainsDescription")
-              }), (0, YJ.jsx)("div", {
+                children: gB("settingsMenu:unblockedDomainsDescription")
+              }), (0, oB.jsx)("div", {
                 className: "AlternativeDomainsList",
-                children: HJ.current.map((JJ => (0, YJ.jsxs)(fJ.d, {
+                children: cB.current.map((BB => (0, oB.jsxs)(HB.d, {
                   onClick: () => {
-                    window.open(`https://${JJ}`)
+                    window.open(`https://${BB}`)
                   },
-                  children: [(0, YJ.jsx)(AJ.c, {
+                  children: [(0, oB.jsx)(JB.e, {
                     name: "arrow-up-right-from-square"
-                  }), " ", JJ]
-                }, JJ)))
+                  }), " ", BB]
+                }, BB)))
               })]
-            }), "replayViewer" === yJ && (0, YJ.jsx)(oc, {}), "developerTools" === yJ && (0, YJ.jsx)("div", {
+            }), "replayViewer" === MB && (0, oB.jsx)(nT, {}), "developerTools" === MB && (0, oB.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, YJ.jsx)(SJ, {
-                setApplySettingsCallback: wJ
+              children: (0, oB.jsx)(zB, {
+                setApplySettingsCallback: KB
               })
-            }), null !== bJ && (0, YJ.jsx)("div", {
+            }), null !== FB && (0, oB.jsx)("div", {
               className: "SettingsMenuRightFooter",
-              children: (0, YJ.jsx)(fJ.d, {
+              children: (0, oB.jsx)(HB.d, {
                 className: "SettingsMenuRightFooterButton",
-                onClick: dJ,
-                children: jJ("general:apply")
+                onClick: RB,
+                children: gB("general:apply")
               })
             })]
           })]
         })
       }));
-    var YZ = ZJ(2260);
-    const hZ = ["characters", "emote", "skin", "hat", "head", "eyebrows", "eyes", "back", "body", "legs", "shoes", "profileEffect", "cape", "nameColour"],
-      DZ = (0, FJ.lazy)((() => Promise.resolve().then((() => ZJ(4069))).then((JJ => {
-        JJ.needGameClientAfterPaint();
-        const cJ = JJ.matchmakingLibrariesPromise.then((JJ => (0, YZ.e)(JJ.loadCharacterCustomisationUI(), (JJ => JJ.CharacterCustomisationUI))));
-        return Promise.all([JJ.ensureGameSetup(), cJ]).then((JJ => {
-          let [, cJ] = JJ;
-          return cJ
+    var od = dB(2237);
+    const kd = ["characters", "emote", "skin", "hat", "head", "eyebrows", "eyes", "back", "body", "legs", "shoes", "profileEffect", "cape", "nameColour"],
+      Ld = (0, VB.lazy)((() => Promise.resolve().then((() => dB(4064))).then((BB => {
+        BB.needGameClientAfterPaint();
+        const TB = BB.matchmakingLibrariesPromise.then((BB => (0, od.e)(BB.loadCharacterCustomisationUI(), (BB => BB.CharacterCustomisationUI))));
+        return Promise.all([BB.ensureGameSetup(), TB]).then((BB => {
+          let [, TB] = BB;
+          return TB
         }))
       }))));
 
-    function sZ(JJ) {
+    function Od(BB) {
       let {
-        show: cJ
-      } = JJ;
+        show: TB
+      } = BB;
       const {
-        userContext: ZJ
-      } = (0, sJ.d)(), [UJ, eJ] = (0, FJ.useState)("characters");
-      if (!cJ) return null;
-      const XJ = hZ.filter((JJ => "cape" !== JJ && "nameColour" !== JJ || ZJ.getPlayerRanks().includes("super") || (0, NJ.siteSupportsPurchases)())).map((JJ => ({
-        id: JJ,
-        faIcon: lc.x[JJ],
-        title: lc.z[JJ],
+        userContext: dB
+      } = (0, OB.b)(), [yB, pB] = (0, VB.useState)("characters");
+      if (!TB) return null;
+      const lB = kd.filter((BB => "cape" !== BB && "nameColour" !== BB || dB.getPlayerRanks().includes("super") || (0, ZB.siteSupportsPurchases)())).map((BB => ({
+        id: BB,
+        faIcon: eT.C[BB],
+        title: eT.E[BB],
         redDot: !1
       })));
-      return (0, YJ.jsxs)("div", {
+      return (0, oB.jsxs)("div", {
         className: "Menu CharCustomisation",
-        children: [(0, YJ.jsx)("div", {
+        children: [(0, oB.jsx)("div", {
           className: "MenuSideBar",
-          children: (0, YJ.jsx)(hJ, {
-            items: XJ,
-            selectedItemId: UJ,
-            onClick: JJ => {
-              eJ(JJ)
+          children: (0, oB.jsx)(kB, {
+            items: lB,
+            selectedItemId: yB,
+            onClick: BB => {
+              pB(BB)
             }
           })
-        }), (0, YJ.jsx)("div", {
+        }), (0, oB.jsx)("div", {
           className: "MenuBody",
-          children: (0, YJ.jsx)(FJ.Suspense, {
-            fallback: (0, YJ.jsx)("div", {
+          children: (0, oB.jsx)(VB.Suspense, {
+            fallback: (0, oB.jsx)("div", {
               className: "CharacterCustomisationLoading",
-              children: (0, YJ.jsx)(EJ.c, {})
+              children: (0, oB.jsx)(tB.b, {})
             }),
-            children: (0, YJ.jsx)(DZ, {
-              selectedTab: UJ
+            children: (0, oB.jsx)(Ld, {
+              selectedTab: yB
             })
           })
         })]
       })
     }
-    var nZ = ZJ(1341),
-      GZ = ZJ(8557),
-      fZ = ZJ(3950),
-      xZ = ZJ(2910),
-      rZ = ZJ(2946),
-      vZ = ZJ(8580),
-      mZ = ZJ(8052),
-      QZ = ZJ(8563),
-      EZ = ZJ(8571),
-      VZ = ZJ(1688),
-      KZ = ZJ(1675),
-      yZ = ZJ(4323),
-      SZ = ZJ(1162),
-      IZ = ZJ(1122),
-      MZ = ZJ(1560),
-      bZ = ZJ(8145);
-    class wZ {
-      constructor(JJ) {
-        this.info = JJ
+    var Dd = dB(1345),
+      ud = dB(8570),
+      Hd = dB(3942),
+      Ed = dB(2898),
+      vd = dB(2947),
+      md = dB(8594),
+      Nd = dB(8075),
+      td = dB(8578),
+      fd = dB(8591),
+      sd = dB(1666),
+      Md = dB(1657),
+      zd = dB(4312),
+      wd = dB(1139),
+      Ud = dB(1105),
+      Fd = dB(1546),
+      Kd = dB(8178);
+    class rd {
+      constructor(BB) {
+        this.info = BB
       }
-      static fromShopInfo(JJ) {
-        const cJ = {};
-        for (const ZJ in JJ) {
-          const FJ = !0 === JJ[ZJ].redDot && !0 !== JJ[ZJ].forceRemoveRedDot;
-          cJ[ZJ] = {
-            redDot: FJ,
+      static fromShopInfo(BB) {
+        const TB = {};
+        for (const dB in BB) {
+          const VB = !0 === BB[dB].redDot && !0 !== BB[dB].forceRemoveRedDot;
+          TB[dB] = {
+            redDot: VB,
             items: {}
           };
-          for (const UJ in JJ[ZJ].items) {
-            const FJ = JJ[ZJ].items[UJ],
-              eJ = !0 === FJ.redDot && !0 !== FJ.forceRemoveRedDot;
-            cJ[ZJ].items[UJ] = {
-              redDot: eJ
+          for (const yB in BB[dB].items) {
+            const VB = BB[dB].items[yB],
+              pB = !0 === VB.redDot && !0 !== VB.forceRemoveRedDot;
+            TB[dB].items[yB] = {
+              redDot: pB
             }
           }
         }
-        return new wZ(cJ)
+        return new rd(TB)
       }
       anyCategoryHasRedDots() {
-        for (const JJ in this.info)
-          if (this.categoryHasRedDot(JJ)) return !0;
+        for (const BB in this.info)
+          if (this.categoryHasRedDot(BB)) return !0;
         return !1
       }
-      doesCategoryExist(JJ) {
-        return !(0, Sc.P)(this.info[JJ])
+      doesCategoryExist(BB) {
+        return !(0, zT.M)(this.info[BB])
       }
-      categoryHasRedDot(JJ) {
-        return !0 === this.info[JJ].redDot
+      categoryHasRedDot(BB) {
+        return !0 === this.info[BB].redDot
       }
-      updateCategoryRedDot(JJ, cJ) {
-        this.info[JJ].redDot = cJ
+      updateCategoryRedDot(BB, TB) {
+        this.info[BB].redDot = TB
       }
-      doesItemExist(JJ, cJ) {
-        return this.doesCategoryExist(JJ) && !(0, Sc.P)(this.info[JJ].items[cJ])
+      doesItemExist(BB, TB) {
+        return this.doesCategoryExist(BB) && !(0, zT.M)(this.info[BB].items[TB])
       }
-      itemHasRedDot(JJ, cJ) {
-        return !0 === this.info[JJ].items[cJ].redDot
+      itemHasRedDot(BB, TB) {
+        return !0 === this.info[BB].items[TB].redDot
       }
-      updateItemRedDot(JJ, cJ, ZJ) {
-        this.info[JJ].items[cJ].redDot = ZJ
+      updateItemRedDot(BB, TB, dB) {
+        this.info[BB].items[TB].redDot = dB
       }
       shallowCopy() {
-        return new wZ(this.info)
+        return new rd(this.info)
       }
     }
 
-    function WZ(JJ, cJ) {
-      return `${JJ}\x1f${cJ}`
+    function Id(BB, TB) {
+      return `${BB}\x1f${TB}`
     }
 
-    function gZ(JJ) {
-      return JJ ? Object.keys(JJ).sort(((cJ, ZJ) => {
-        var FJ, UJ, eJ, XJ;
-        const AJ = (null !== (FJ = null === (UJ = JJ[ZJ]) || void 0 === UJ ? void 0 : UJ.sortPriority) && void 0 !== FJ ? FJ : 0) - (null !== (eJ = null === (XJ = JJ[cJ]) || void 0 === XJ ? void 0 : XJ.sortPriority) && void 0 !== eJ ? eJ : 0);
-        return 0 !== AJ ? AJ : cJ.localeCompare(ZJ)
+    function cd(BB) {
+      return BB ? Object.keys(BB).sort(((TB, dB) => {
+        var VB, yB, pB, lB;
+        const JB = (null !== (VB = null === (yB = BB[dB]) || void 0 === yB ? void 0 : yB.sortPriority) && void 0 !== VB ? VB : 0) - (null !== (pB = null === (lB = BB[TB]) || void 0 === lB ? void 0 : lB.sortPriority) && void 0 !== pB ? pB : 0);
+        return 0 !== JB ? JB : TB.localeCompare(dB)
       })) : []
     }
 
-    function HZ(JJ, cJ) {
-      return !(0, Sc.P)(cJ) && !(0, Sc.P)(JJ) && cJ in JJ
+    function Sd(BB, TB) {
+      return !(0, zT.M)(TB) && !(0, zT.M)(BB) && TB in BB
     }
-    const PZ = (0, FJ.memo)((function(JJ) {
-      var cJ, ZJ;
+    const Pd = (0, VB.memo)((function(BB) {
+      var TB, dB;
       let {
-        show: UJ
-      } = JJ;
-      const XJ = (0, Lc.d)("players", OZ),
-        AJ = (0, Lc.d)("players", TZ),
-        [jJ, DJ] = (0, FJ.useState)({
+        show: yB
+      } = BB;
+      const lB = (0, xT.g)("players", Wd),
+        JB = (0, xT.g)("players", hd),
+        [gB, LB] = (0, VB.useState)({
           shopInfo: {},
           userInputsPerItem: {},
-          redDotInfo: wZ.fromShopInfo({}),
+          redDotInfo: rd.fromShopInfo({}),
           currencyAmounts: {},
           selectedCategoryKey: null,
           onBoughtInfo: null,
           awaitingPurchase: !1
         }),
-        sJ = (0, FJ.useRef)(""),
-        GJ = (0, FJ.useRef)(null),
-        xJ = (0, FJ.useRef)(0),
-        vJ = (0, FJ.useRef)(void 0),
-        mJ = (0, FJ.useRef)(null),
-        QJ = (0, FJ.useRef)(jJ),
-        EJ = jJ.redDotInfo.anyCategoryHasRedDots(),
-        [VJ, yJ] = (0, FJ.useState)(null),
-        SJ = (0, FJ.useRef)(!1);
-      let MJ = !1,
-        bJ = 0,
-        wJ = 0;
-      if (jJ.currencyAmounts) {
-        for (const JJ in jJ.currencyAmounts) {
-          var WJ;
-          const cJ = jJ.currencyAmounts[JJ];
-          cJ.hidden || (bJ++, (null === (WJ = cJ.subtext) || void 0 === WJ ? void 0 : WJ.length) > 0 && wJ++)
+        OB = (0, VB.useRef)(""),
+        uB = (0, VB.useRef)(null),
+        EB = (0, VB.useRef)(0),
+        mB = (0, VB.useRef)(void 0),
+        iB = (0, VB.useRef)(null),
+        NB = (0, VB.useRef)(gB),
+        tB = gB.redDotInfo.anyCategoryHasRedDots(),
+        [fB, MB] = (0, VB.useState)(null),
+        zB = (0, VB.useRef)(!1);
+      let UB = !1,
+        FB = 0,
+        KB = 0;
+      if (gB.currencyAmounts) {
+        for (const BB in gB.currencyAmounts) {
+          var rB;
+          const TB = gB.currencyAmounts[BB];
+          TB.hidden || (FB++, (null === (rB = TB.subtext) || void 0 === rB ? void 0 : rB.length) > 0 && KB++)
         }
-        MJ = bJ + wJ > 4
-      }(0, FJ.useEffect)((() => {
-        Ic.i.Uf("showShopIconRedDot", EJ, !0)
-      }), [EJ]), (0, FJ.useEffect)((() => {
-        rJ.gameBridge.send("setShopOpen", UJ), UJ || (clearTimeout(vJ.current), DJ((JJ => JJ.awaitingPurchase ? {
-          ...JJ,
+        UB = FB + KB > 4
+      }(0, VB.useEffect)((() => {
+        wT.h.yH("showShopIconRedDot", tB, !0)
+      }), [tB]), (0, VB.useEffect)((() => {
+        vB.gameBridge.send("setShopOpen", yB), yB || (clearTimeout(mB.current), LB((BB => BB.awaitingPurchase ? {
+          ...BB,
           awaitingPurchase: !1
-        } : JJ)))
-      }), [UJ]), (0, FJ.useEffect)((() => () => {
-        rJ.gameBridge.send("setShopOpen", !1), clearTimeout(vJ.current)
-      }), []), (0, FJ.useEffect)((() => {
-        QJ.current = jJ
-      }), [jJ]), (0, FJ.useEffect)((() => {
-        if (null === VJ) return;
-        return (0, MZ.d)("pointerdown", (JJ => {
-          const cJ = JJ.target;
-          null !== cJ && void 0 !== cJ && cJ.closest(".ShopItem") || yJ(null)
+        } : BB)))
+      }), [yB]), (0, VB.useEffect)((() => () => {
+        vB.gameBridge.send("setShopOpen", !1), clearTimeout(mB.current)
+      }), []), (0, VB.useEffect)((() => {
+        NB.current = gB
+      }), [gB]), (0, VB.useEffect)((() => {
+        if (null === fB) return;
+        return (0, Fd.c)("pointerdown", (BB => {
+          const TB = BB.target;
+          null !== TB && void 0 !== TB && TB.closest(".ShopItem") || MB(null)
         }))
-      }), [VJ]);
-      const gJ = JJ => {
-          DJ((cJ => ({
-            ...cJ,
-            ...JJ
+      }), [fB]);
+      const IB = BB => {
+          LB((TB => ({
+            ...TB,
+            ...BB
           })))
         },
-        HJ = JJ => {
-          var cJ;
-          clearTimeout(null === (cJ = jJ.onBoughtInfo) || void 0 === cJ ? void 0 : cJ.timeout);
-          const ZJ = setTimeout((() => {
-            gJ({
+        cB = BB => {
+          var TB;
+          clearTimeout(null === (TB = gB.onBoughtInfo) || void 0 === TB ? void 0 : TB.timeout);
+          const dB = setTimeout((() => {
+            IB({
               onBoughtInfo: null
             })
           }), 3e3);
-          sJ.current = JJ, gJ({
+          OB.current = BB, IB({
             onBoughtInfo: {
-              text: JJ,
-              timeout: ZJ
+              text: BB,
+              timeout: dB
             }
           })
         },
-        PJ = JJ => {
+        SB = BB => {
           const {
-            shopInfo: cJ,
-            userInputsPerItem: ZJ,
-            redDotInfo: FJ,
-            autoSelectCategory: eJ
-          } = function(JJ, cJ, ZJ, FJ, UJ, eJ) {
-            if ((0, Sc.P)(JJ) || 0 === Object.keys(JJ).length) return {
+            shopInfo: TB,
+            userInputsPerItem: dB,
+            redDotInfo: VB,
+            autoSelectCategory: pB
+          } = function(BB, TB, dB, VB, yB, pB) {
+            if ((0, zT.M)(BB) || 0 === Object.keys(BB).length) return {
               shopInfo: {},
               userInputsPerItem: {},
-              redDotInfo: wZ.fromShopInfo({}),
+              redDotInfo: rd.fromShopInfo({}),
               autoSelectCategory: null
             };
-            const XJ = IJ.i[IJ.n].adConfig.showRewardedAds,
-              AJ = {};
-            let qJ = null;
-            for (const fJ in JJ) {
-              const cJ = JJ[fJ],
-                ZJ = {};
-              let FJ = !1;
-              for (const JJ in cJ.items) {
-                const UJ = cJ.items[JJ];
-                (0, mZ.n)(UJ, XJ) && (ZJ[JJ] = UJ, FJ = !0)
+            const lB = wB.q[wB.v].adConfig.showRewardedAds,
+              JB = {};
+            let YB = null;
+            for (const HB in BB) {
+              const TB = BB[HB],
+                dB = {};
+              let VB = !1;
+              for (const BB in TB.items) {
+                const yB = TB.items[BB];
+                (0, Nd.m)(yB, lB) && (dB[BB] = yB, VB = !0)
               }
-              FJ && (AJ[fJ] = {
-                ...cJ,
-                items: ZJ
-              }, !0 === cJ.autoSelectCategory && (qJ = fJ))
+              VB && (JB[HB] = {
+                ...TB,
+                items: dB
+              }, !0 === TB.autoSelectCategory && (YB = HB))
             }
-            const jJ = {},
-              YJ = (JJ, cJ, FJ, XJ) => {
-                var AJ, qJ;
-                const YJ = WZ(JJ, cJ),
-                  hJ = null !== (AJ = ZJ[YJ]) && void 0 !== AJ ? AJ : ZJ[cJ];
-                if (null !== (qJ = XJ.userInput) && void 0 !== qJ && qJ.type) switch (XJ.userInput.type) {
+            const gB = {},
+              oB = (BB, TB, VB, lB) => {
+                var JB, YB;
+                const oB = Id(BB, TB),
+                  kB = null !== (JB = dB[oB]) && void 0 !== JB ? JB : dB[TB];
+                if (null !== (YB = lB.userInput) && void 0 !== YB && YB.type) switch (lB.userInput.type) {
                   case "dropdown": {
-                    var DJ;
-                    const JJ = !hJ || !XJ.userInput.dropdownOptions.some((JJ => (0, mZ.g)(JJ) === hJ)),
-                      cJ = XJ.userInput.shouldResetSelectionOnOptionsChange && ("dropdown" !== (null === FJ || void 0 === FJ || null === (DJ = FJ.userInput) || void 0 === DJ ? void 0 : DJ.type) || JSON.stringify(FJ.userInput.dropdownOptions) !== JSON.stringify(XJ.userInput.dropdownOptions)),
-                      ZJ = XJ.userInput,
-                      UJ = !(0, Sc.P)(ZJ.initialValue) && ZJ.dropdownOptions.some((JJ => (0, mZ.g)(JJ) === ZJ.initialValue));
-                    var sJ;
-                    return void(JJ || cJ ? UJ ? jJ[YJ] = null !== (sJ = XJ.userInput.initialValue) && void 0 !== sJ ? sJ : null : XJ.userInput.dropdownOptions.length > 0 ? jJ[YJ] = (0, mZ.g)(XJ.userInput.dropdownOptions[0]) : jJ[YJ] = null : jJ[YJ] = hJ)
+                    var LB;
+                    const BB = !kB || !lB.userInput.dropdownOptions.some((BB => (0, Nd.i)(BB) === kB)),
+                      TB = lB.userInput.shouldResetSelectionOnOptionsChange && ("dropdown" !== (null === VB || void 0 === VB || null === (LB = VB.userInput) || void 0 === LB ? void 0 : LB.type) || JSON.stringify(VB.userInput.dropdownOptions) !== JSON.stringify(lB.userInput.dropdownOptions)),
+                      dB = lB.userInput,
+                      yB = !(0, zT.M)(dB.initialValue) && dB.dropdownOptions.some((BB => (0, Nd.i)(BB) === dB.initialValue));
+                    var OB;
+                    return void(BB || TB ? yB ? gB[oB] = null !== (OB = lB.userInput.initialValue) && void 0 !== OB ? OB : null : lB.userInput.dropdownOptions.length > 0 ? gB[oB] = (0, Nd.i)(lB.userInput.dropdownOptions[0]) : gB[oB] = null : gB[oB] = kB)
                   }
                   case "text":
                   case "number":
-                    var nJ, GJ, fJ;
-                    return void((null === FJ || void 0 === FJ ? void 0 : FJ.userInput) !== XJ.userInput ? jJ[YJ] = null !== (nJ = null !== (GJ = XJ.userInput.initialValue) && void 0 !== GJ ? GJ : hJ) && void 0 !== nJ ? nJ : "" : jJ[YJ] = null !== (fJ = null !== hJ && void 0 !== hJ ? hJ : XJ.userInput.initialValue) && void 0 !== fJ ? fJ : "");
+                    var DB, uB, HB;
+                    return void((null === VB || void 0 === VB ? void 0 : VB.userInput) !== lB.userInput ? gB[oB] = null !== (DB = null !== (uB = lB.userInput.initialValue) && void 0 !== uB ? uB : kB) && void 0 !== DB ? DB : "" : gB[oB] = null !== (HB = null !== kB && void 0 !== kB ? kB : lB.userInput.initialValue) && void 0 !== HB ? HB : "");
                   case "color":
-                    var xJ, rJ, vJ;
-                    return void((null === FJ || void 0 === FJ ? void 0 : FJ.userInput) !== XJ.userInput ? jJ[YJ] = null !== (xJ = null !== (rJ = XJ.userInput.initialValue) && void 0 !== rJ ? rJ : hJ) && void 0 !== xJ ? xJ : "#000000" : jJ[YJ] = null !== (vJ = null !== hJ && void 0 !== hJ ? hJ : XJ.userInput.initialValue) && void 0 !== vJ ? vJ : "#000000");
+                    var EB, vB, mB;
+                    return void((null === VB || void 0 === VB ? void 0 : VB.userInput) !== lB.userInput ? gB[oB] = null !== (EB = null !== (vB = lB.userInput.initialValue) && void 0 !== vB ? vB : kB) && void 0 !== EB ? EB : "#000000" : gB[oB] = null !== (mB = null !== kB && void 0 !== kB ? kB : lB.userInput.initialValue) && void 0 !== mB ? mB : "#000000");
                   case "player": {
-                    const JJ = (0, mZ.k)(UJ, eJ, XJ.userInput);
-                    return void(hJ && JJ.includes(hJ) ? jJ[YJ] = hJ : jJ[YJ] = JJ.length > 0 ? JJ[0] : null)
+                    const BB = (0, Nd.k)(yB, pB, lB.userInput);
+                    return void(kB && BB.includes(kB) ? gB[oB] = kB : gB[oB] = BB.length > 0 ? BB[0] : null)
                   }
                 }
               };
-            for (const fJ in AJ)
-              for (const JJ in AJ[fJ].items) {
-                var hJ;
-                const ZJ = AJ[fJ].items[JJ];
-                YJ(fJ, JJ, null === (hJ = cJ[fJ]) || void 0 === hJ ? void 0 : hJ.items[JJ], ZJ)
+            for (const HB in JB)
+              for (const BB in JB[HB].items) {
+                var kB;
+                const dB = JB[HB].items[BB];
+                oB(HB, BB, null === (kB = TB[HB]) || void 0 === kB ? void 0 : kB.items[BB], dB)
               }
-            const DJ = wZ.fromShopInfo(AJ);
-            for (const fJ in AJ) {
-              var sJ;
-              if (FJ.doesCategoryExist(fJ)) {
-                (null === (sJ = cJ[fJ]) || void 0 === sJ ? void 0 : sJ.redDot) === AJ[fJ].redDot && DJ.updateCategoryRedDot(fJ, FJ.categoryHasRedDot(fJ));
-                for (const JJ in AJ[fJ].items) {
-                  var nJ, GJ;
-                  FJ.doesItemExist(fJ, JJ) && (null === (nJ = cJ[fJ]) || void 0 === nJ || null === (GJ = nJ.items[JJ]) || void 0 === GJ ? void 0 : GJ.redDot) === AJ[fJ].items[JJ].redDot && DJ.updateItemRedDot(fJ, JJ, FJ.itemHasRedDot(fJ, JJ))
+            const LB = rd.fromShopInfo(JB);
+            for (const HB in JB) {
+              var OB;
+              if (VB.doesCategoryExist(HB)) {
+                (null === (OB = TB[HB]) || void 0 === OB ? void 0 : OB.redDot) === JB[HB].redDot && LB.updateCategoryRedDot(HB, VB.categoryHasRedDot(HB));
+                for (const BB in JB[HB].items) {
+                  var DB, uB;
+                  VB.doesItemExist(HB, BB) && (null === (DB = TB[HB]) || void 0 === DB || null === (uB = DB.items[BB]) || void 0 === uB ? void 0 : uB.redDot) === JB[HB].items[BB].redDot && LB.updateItemRedDot(HB, BB, VB.itemHasRedDot(HB, BB))
                 }
               }
             }
             return {
-              shopInfo: AJ,
-              userInputsPerItem: jJ,
-              redDotInfo: DJ,
-              autoSelectCategory: qJ
+              shopInfo: JB,
+              userInputsPerItem: gB,
+              redDotInfo: LB,
+              autoSelectCategory: YB
             }
-          }(JJ, jJ.shopInfo, jJ.userInputsPerItem, jJ.redDotInfo, XJ, AJ), qJ = {
-            shopInfo: cJ,
-            userInputsPerItem: ZJ,
-            redDotInfo: FJ
+          }(BB, gB.shopInfo, gB.userInputsPerItem, gB.redDotInfo, lB, JB), YB = {
+            shopInfo: TB,
+            userInputsPerItem: dB,
+            redDotInfo: VB
           };
-          if (null === eJ || UJ)
-            if (cJ[jJ.selectedCategoryKey]) qJ.selectedCategoryKey = jJ.selectedCategoryKey;
+          if (null === pB || yB)
+            if (TB[gB.selectedCategoryKey]) YB.selectedCategoryKey = gB.selectedCategoryKey;
             else {
-              const JJ = gZ(cJ);
-              qJ.selectedCategoryKey = JJ.length > 0 ? JJ[0] : null
+              const BB = cd(TB);
+              YB.selectedCategoryKey = BB.length > 0 ? BB[0] : null
             }
-          else qJ.selectedCategoryKey = eJ;
-          return 0 === Object.keys(cJ).length && UJ && KJ.d.set({
+          else YB.selectedCategoryKey = pB;
+          return 0 === Object.keys(TB).length && yB && sB.d.set({
             openEverythingMenuName: null
-          }), qJ
+          }), YB
         },
-        kJ = (JJ, cJ) => {
-          if (null === cJ || !JJ.shopInfo[cJ]) return JJ;
-          let ZJ = JJ.redDotInfo;
-          return ZJ.categoryHasRedDot(cJ) && (ZJ.updateCategoryRedDot(cJ, !1), ZJ = ZJ.shallowCopy()), {
-            ...JJ,
-            selectedCategoryKey: cJ,
-            redDotInfo: ZJ
+        PB = (BB, TB) => {
+          if (null === TB || !BB.shopInfo[TB]) return BB;
+          let dB = BB.redDotInfo;
+          return dB.categoryHasRedDot(TB) && (dB.updateCategoryRedDot(TB, !1), dB = dB.shallowCopy()), {
+            ...BB,
+            selectedCategoryKey: TB,
+            redDotInfo: dB
           }
         },
-        pJ = JJ => {
-          DJ((cJ => kJ(cJ, JJ)))
+        QB = BB => {
+          LB((TB => PB(TB, BB)))
         };
-      (0, Dc.i)(bZ.j, (() => {
-        DJ((JJ => {
-          const cJ = (0, bZ.l)(gZ(JJ.shopInfo), JJ.selectedCategoryKey, (cJ => (0, bZ.i)(JJ.shopInfo[cJ].items)));
-          return cJ === JJ.selectedCategoryKey ? JJ : kJ(JJ, cJ)
+      (0, LT.e)(Kd.k, (() => {
+        LB((BB => {
+          const TB = (0, Kd.o)(cd(BB.shopInfo), BB.selectedCategoryKey, (TB => (0, Kd.g)(BB.shopInfo[TB].items)));
+          return TB === BB.selectedCategoryKey ? BB : PB(BB, TB)
         }))
-      })), (0, Dc.i)("showShopFromServer", (JJ => {
+      })), (0, LT.e)("showShopFromServer", (BB => {
         let {
-          toggle: cJ,
-          WZ: ZJ
-        } = JJ;
-        ZJ && pJ(ZJ), 0 === Object.keys(jJ.shopInfo).length || cJ && UJ ? KJ.d.set({
+          toggle: TB,
+          kd: dB
+        } = BB;
+        dB && QB(dB), 0 === Object.keys(gB.shopInfo).length || TB && yB ? sB.d.set({
           openEverythingMenuName: null
-        }) : KJ.d.set({
-          openEverythingMenuName: lc.m.SHOP
+        }) : sB.d.set({
+          openEverythingMenuName: eT.m.SHOP
         })
-      })), (0, Dc.i)("closeShopOnDamaged", (() => {
-        UJ && KJ.d.set({
+      })), (0, LT.e)("closeShopOnDamaged", (() => {
+        yB && sB.d.set({
           openEverythingMenuName: null
         })
-      })), (0, Dc.i)("overShopInfo", (JJ => {
-        HJ(JJ)
-      })), (0, nJ.e)("currencyAmounts", (JJ => {
-        var cJ;
-        const ZJ = mJ.current;
-        ZJ && (null === JJ || void 0 === JJ || null === (cJ = JJ[ZJ.currency]) || void 0 === cJ ? void 0 : cJ.amount) === ZJ.amountBefore ? gJ({
-          currencyAmounts: JJ
-        }) : (mJ.current = null, gJ({
-          currencyAmounts: JJ,
+      })), (0, LT.e)("overShopInfo", (BB => {
+        cB(BB)
+      })), (0, DB.i)("currencyAmounts", (BB => {
+        var TB;
+        const dB = iB.current;
+        dB && (null === BB || void 0 === BB || null === (TB = BB[dB.currency]) || void 0 === TB ? void 0 : TB.amount) === dB.amountBefore ? IB({
+          currencyAmounts: BB
+        }) : (iB.current = null, IB({
+          currencyAmounts: BB,
           awaitingPurchase: !1
         }))
-      })), (0, nJ.e)("shopInfo", (JJ => {
-        gJ({
-          ...PJ(JJ),
+      })), (0, DB.i)("shopInfo", (BB => {
+        IB({
+          ...SB(BB),
           awaitingPurchase: !1
         })
       }));
-      const zJ = (0, FJ.useRef)({
-        playerIds: XJ,
-        localPlayerId: AJ
+      const aB = (0, VB.useRef)({
+        playerIds: lB,
+        localPlayerId: JB
       });
-      (0, FJ.useEffect)((() => {
-        zJ.current.playerIds === XJ && zJ.current.localPlayerId === AJ || (zJ.current = {
-          playerIds: XJ,
-          localPlayerId: AJ
-        }, DJ((JJ => {
-          const cJ = PJ(JJ.shopInfo);
+      (0, VB.useEffect)((() => {
+        aB.current.playerIds === lB && aB.current.localPlayerId === JB || (aB.current = {
+          playerIds: lB,
+          localPlayerId: JB
+        }, LB((BB => {
+          const TB = SB(BB.shopInfo);
           return {
-            ...JJ,
-            ...cJ
+            ...BB,
+            ...TB
           }
         })))
-      }), [XJ, AJ]);
-      const NJ = jJ.selectedCategoryKey,
-        OJ = (JJ, cJ) => {
-          var ZJ, FJ;
-          return (isNaN(cJ) || (0, Sc.P)(JJ.currency) || HZ(jJ.currencyAmounts, JJ.currency) && cJ <= jJ.currencyAmounts[JJ.currency].amount) && (null === (ZJ = JJ.canBuy) || void 0 === ZJ || ZJ) && !(null !== (FJ = JJ.hidden) && void 0 !== FJ && FJ)
+      }), [lB, JB]);
+      const ZB = gB.selectedCategoryKey,
+        XB = (BB, TB) => {
+          var dB, VB;
+          return (isNaN(TB) || (0, zT.M)(BB.currency) || Sd(gB.currencyAmounts, BB.currency) && TB <= gB.currencyAmounts[BB.currency].amount) && (null === (dB = BB.canBuy) || void 0 === dB || dB) && !(null !== (VB = BB.hidden) && void 0 !== VB && VB)
         },
-        TJ = (JJ, cJ) => {
-          var ZJ, FJ, UJ;
-          const XJ = WZ(NJ, JJ),
-            AJ = jJ.shopInfo[NJ].items[JJ],
-            hJ = jJ.userInputsPerItem[XJ],
-            DJ = (0, mZ.e)(AJ, hJ),
-            sJ = OJ(AJ, DJ),
-            nJ = AJ.enchant,
-            GJ = nJ ? (0, dJ.lb)(null !== (ZJ = AJ.customTitle) && void 0 !== ZJ ? ZJ : JJ, {
-              colour: dJ.gb[nJ.tier]
-            }) : null !== (FJ = AJ.customTitle) && void 0 !== FJ ? FJ : JJ,
-            EJ = cJ => {
-              const ZJ = null !== cJ && void 0 !== cJ ? cJ : hJ,
-                FJ = void 0 !== cJ ? (0, mZ.e)(AJ, cJ) : DJ;
-              OJ(AJ, FJ) && null !== ZJ && ((JJ, cJ, ZJ) => {
-                const FJ = jJ.selectedCategoryKey,
-                  UJ = WZ(FJ, JJ),
-                  eJ = null !== ZJ && void 0 !== ZJ ? ZJ : jJ.userInputsPerItem[UJ],
-                  XJ = {
-                    categoryKey: FJ,
-                    itemKey: JJ,
-                    userInput: eJ
+        WB = (BB, TB) => {
+          var dB, VB, yB;
+          const lB = Id(ZB, BB),
+            JB = gB.shopInfo[ZB].items[BB],
+            kB = gB.userInputsPerItem[lB],
+            LB = (0, Nd.e)(JB, kB),
+            OB = XB(JB, LB),
+            DB = JB.enchant,
+            uB = DB ? (0, RB.qb)(null !== (dB = JB.customTitle) && void 0 !== dB ? dB : BB, {
+              colour: RB.lb[DB.tier]
+            }) : null !== (VB = JB.customTitle) && void 0 !== VB ? VB : BB,
+            tB = TB => {
+              const dB = null !== TB && void 0 !== TB ? TB : kB,
+                VB = void 0 !== TB ? (0, Nd.e)(JB, TB) : LB;
+              XB(JB, VB) && null !== dB && ((BB, TB, dB) => {
+                const VB = gB.selectedCategoryKey,
+                  yB = Id(VB, BB),
+                  pB = null !== dB && void 0 !== dB ? dB : gB.userInputsPerItem[yB],
+                  lB = {
+                    categoryKey: VB,
+                    itemKey: BB,
+                    userInput: pB
                   };
-                if (cJ.isRewardedAd) {
-                  if (Date.now() - xJ.current < 5e3) return;
-                  (0, oJ.bb)((() => {
-                    var ZJ, FJ, eJ;
+                if (TB.isRewardedAd) {
+                  if (Date.now() - EB.current < 5e3) return;
+                  (0, nB.$)((() => {
+                    var dB, VB, pB;
                     console.log("bought rewarded ad");
-                    const AJ = XJ.categoryKey ? null === (ZJ = QJ.current.shopInfo[XJ.categoryKey]) || void 0 === ZJ ? void 0 : ZJ.items[JJ] : null;
-                    AJ && AJ.isRewardedAd ? (null === (FJ = cJ.userInput) || void 0 === FJ ? void 0 : FJ.type) === (null === AJ || void 0 === AJ || null === (eJ = AJ.userInput) || void 0 === eJ ? void 0 : eJ.type) ? (XJ.userInput = QJ.current.userInputsPerItem[UJ], rJ.gameBridge.send("buyShopItem", XJ), cJ.onBoughtMessage && HJ(cJ.onBoughtMessage)) : console.warn("Shop item input type changed, early out") : console.warn("Shop item no longer valid or a rewarded ad, early out")
-                  })), xJ.current = Date.now()
+                    const JB = lB.categoryKey ? null === (dB = NB.current.shopInfo[lB.categoryKey]) || void 0 === dB ? void 0 : dB.items[BB] : null;
+                    JB && JB.isRewardedAd ? (null === (VB = TB.userInput) || void 0 === VB ? void 0 : VB.type) === (null === JB || void 0 === JB || null === (pB = JB.userInput) || void 0 === pB ? void 0 : pB.type) ? (lB.userInput = NB.current.userInputsPerItem[yB], vB.gameBridge.send("buyShopItem", lB), TB.onBoughtMessage && cB(TB.onBoughtMessage)) : console.warn("Shop item input type changed, early out") : console.warn("Shop item no longer valid or a rewarded ad, early out")
+                  })), EB.current = Date.now()
                 } else {
-                  rJ.gameBridge.send("buyShopItem", XJ), gJ({
+                  vB.gameBridge.send("buyShopItem", lB), IB({
                     awaitingPurchase: !0
-                  }), clearTimeout(vJ.current), vJ.current = setTimeout((() => {
-                    mJ.current = null, gJ({
+                  }), clearTimeout(mB.current), mB.current = setTimeout((() => {
+                    iB.current = null, IB({
                       awaitingPurchase: !1
                     })
                   }), 1e3);
-                  const JJ = (0, mZ.e)(cJ, eJ);
-                  if (mJ.current = null, !isNaN(JJ) && HZ(jJ.currencyAmounts, cJ.currency)) {
-                    0 !== JJ && (mJ.current = {
-                      currency: cJ.currency,
-                      amountBefore: jJ.currencyAmounts[cJ.currency].amount
+                  const BB = (0, Nd.e)(TB, pB);
+                  if (iB.current = null, !isNaN(BB) && Sd(gB.currencyAmounts, TB.currency)) {
+                    0 !== BB && (iB.current = {
+                      currency: TB.currency,
+                      amountBefore: gB.currencyAmounts[TB.currency].amount
                     });
-                    const ZJ = {
-                      ...jJ.currencyAmounts
+                    const dB = {
+                      ...gB.currencyAmounts
                     };
-                    ZJ[cJ.currency].amount -= JJ, gJ({
-                      currencyAmounts: ZJ
+                    dB[TB.currency].amount -= BB, IB({
+                      currencyAmounts: dB
                     })
                   }
-                  cJ.onBoughtMessage && HJ(cJ.onBoughtMessage)
+                  TB.onBoughtMessage && cB(TB.onBoughtMessage)
                 }
-              })(JJ, AJ, cJ);
-              let UJ = jJ.redDotInfo;
-              UJ.itemHasRedDot(NJ, JJ) && (UJ.updateItemRedDot(NJ, JJ, !1), UJ = UJ.shallowCopy()), gJ({
-                redDotInfo: UJ
+              })(BB, JB, TB);
+              let yB = gB.redDotInfo;
+              yB.itemHasRedDot(ZB, BB) && (yB.updateItemRedDot(ZB, BB, !1), yB = yB.shallowCopy()), IB({
+                redDotInfo: yB
               })
             };
-          return (0, YJ.jsxs)("div", {
-            className: eJ()("ShopItem", {
-              ShopItemNoInput: !AJ.userInput,
-              ShopItemNoInputCanBuy: !AJ.userInput && sJ,
-              ShopItemNoInputSelected: AJ.isSelected,
-              ShopItemEnchant: !!nJ
+          return (0, oB.jsxs)("div", {
+            className: pB()("ShopItem", {
+              ShopItemNoInput: !JB.userInput,
+              ShopItemNoInputCanBuy: !JB.userInput && OB,
+              ShopItemNoInputSelected: JB.isSelected,
+              ShopItemEnchant: !!DB
             }),
-            "data-pad-focusable": !AJ.userInput || void 0,
-            "data-pad-unavailable": !AJ.userInput && !sJ || void 0,
-            "data-pad-repeat": null !== (UJ = (0, bZ.b)(AJ)) && void 0 !== UJ ? UJ : void 0,
-            "data-pad-repeat-wait": jJ.awaitingPurchase || void 0,
+            "data-pad-focusable": !JB.userInput || void 0,
+            "data-pad-unavailable": !JB.userInput && !OB || void 0,
+            "data-pad-repeat": null !== (yB = (0, Kd.b)(JB)) && void 0 !== yB ? yB : void 0,
+            "data-pad-repeat-wait": gB.awaitingPurchase || void 0,
             onClick: () => {
-              if (nJ && SJ.current) {
-                if (VJ !== XJ) return void yJ(XJ);
-                yJ(null)
+              if (DB && zB.current) {
+                if (fB !== lB) return void MB(lB);
+                MB(null)
               }
-              AJ.userInput || EJ()
+              JB.userInput || tB()
             },
-            onPointerDown: JJ => {
-              nJ && (SJ.current = (0, EZ.t)(JJ))
+            onPointerDown: BB => {
+              DB && (zB.current = (0, fd.r)(BB))
             },
-            onPointerEnter: JJ => {
-              nJ && !(0, EZ.t)(JJ) && yJ(XJ)
+            onPointerEnter: BB => {
+              DB && !(0, fd.r)(BB) && MB(lB)
             },
-            onPointerLeave: JJ => {
-              nJ && !(0, EZ.t)(JJ) && yJ((JJ => JJ === XJ ? null : JJ))
+            onPointerLeave: BB => {
+              DB && !(0, fd.r)(BB) && MB((BB => BB === lB ? null : BB))
             },
             style: {
-              zIndex: Object.keys(jJ.shopInfo[NJ].items).length - cJ
+              zIndex: Object.keys(gB.shopInfo[ZB].items).length - TB
             },
-            children: [jJ.redDotInfo.itemHasRedDot(NJ, JJ) && (0, YJ.jsx)(qJ.e, {
+            children: [gB.redDotInfo.itemHasRedDot(ZB, BB) && (0, oB.jsx)(YB.b, {
               top: "-6px",
               right: "-6px"
-            }), AJ.badge && (0, YJ.jsx)("div", {
+            }), JB.badge && (0, oB.jsx)("div", {
               className: "ShopBadgeContainer",
-              children: (0, YJ.jsx)("div", {
-                className: eJ()("ShopBadgeMain", AJ.badge.type),
-                children: (0, YJ.jsx)(KZ.d, {
-                  text: AJ.badge.text
+              children: (0, oB.jsx)("div", {
+                className: pB()("ShopBadgeMain", JB.badge.type),
+                children: (0, oB.jsx)(Md.e, {
+                  text: JB.badge.text
                 })
               })
-            }), (0, YJ.jsx)("div", {
+            }), (0, oB.jsx)("div", {
               className: "ShopItemLeft",
-              children: AJ.image && (0, YJ.jsx)(kZ, {
-                item: AJ,
+              children: JB.image && (0, oB.jsx)(Qd, {
+                item: JB,
                 minWidth: 5,
                 minHeight: 4.8
               })
-            }), (0, YJ.jsxs)("div", {
+            }), (0, oB.jsxs)("div", {
               className: "ShopItemRight",
-              children: [(0, YJ.jsxs)("div", {
+              children: [(0, oB.jsxs)("div", {
                 className: "ShopItemHeader",
-                children: [(0, YJ.jsx)("div", {
+                children: [(0, oB.jsx)("div", {
                   className: "ShopItemHeaderTitle",
-                  children: (0, YJ.jsx)(KZ.d, {
-                    text: GJ
+                  children: (0, oB.jsx)(Md.e, {
+                    text: uB
                   })
-                }), (0, YJ.jsx)("div", {
+                }), (0, oB.jsx)("div", {
                   className: "ShopItemHeaderDescription",
-                  children: (0, YJ.jsx)(KZ.d, {
-                    text: AJ.description
+                  children: (0, oB.jsx)(Md.e, {
+                    text: JB.description
                   })
                 })]
-              }), AJ.userInput && (0, YJ.jsxs)("div", {
+              }), JB.userInput && (0, oB.jsxs)("div", {
                 className: "ShopItemInputsContainer",
-                onClick: JJ => {
-                  JJ.stopPropagation()
+                onClick: BB => {
+                  BB.stopPropagation()
                 },
-                children: [(0, YJ.jsx)(zZ, {
-                  item: AJ,
-                  currInput: hJ,
-                  updateInput: cJ => {
-                    ((JJ, cJ, ZJ) => {
-                      const FJ = WZ(JJ, cJ),
-                        UJ = {
-                          ...jJ.userInputsPerItem
+                children: [(0, oB.jsx)(Zd, {
+                  item: JB,
+                  currInput: kB,
+                  updateInput: TB => {
+                    ((BB, TB, dB) => {
+                      const VB = Id(BB, TB),
+                        yB = {
+                          ...gB.userInputsPerItem
                         };
-                      UJ[FJ] = ZJ, gJ({
-                        userInputsPerItem: UJ
+                      yB[VB] = dB, IB({
+                        userInputsPerItem: yB
                       })
-                    })(NJ, JJ, cJ)
+                    })(ZB, BB, TB)
                   },
-                  onSubmit: JJ => {
-                    EJ(JJ)
+                  onSubmit: BB => {
+                    tB(BB)
                   }
-                }), ("dropdown" !== AJ.userInput.type || !AJ.userInput.autoSubmit) && (0, YJ.jsx)(fJ.d, {
+                }), ("dropdown" !== JB.userInput.type || !JB.userInput.autoSubmit) && (0, oB.jsx)(HB.d, {
                   className: "ItemCostButton",
-                  disabled: !sJ && null !== hJ,
+                  disabled: !OB && null !== kB,
                   onClick: () => {
-                    EJ()
+                    tB()
                   },
-                  children: (0, YJ.jsx)(dZ, {
-                    item: AJ,
-                    cost: DJ,
-                    currencyAmounts: jJ.currencyAmounts
+                  children: (0, oB.jsx)(ad, {
+                    item: JB,
+                    cost: LB,
+                    currencyAmounts: gB.currencyAmounts
                   })
                 })]
               })]
-            }), !AJ.userInput && (0, YJ.jsx)("div", {
+            }), !JB.userInput && (0, oB.jsx)("div", {
               className: "ShopItemNoInputCost",
-              children: (0, YJ.jsx)(dZ, {
-                item: AJ,
-                cost: DJ,
-                currencyAmounts: jJ.currencyAmounts
+              children: (0, oB.jsx)(ad, {
+                item: JB,
+                cost: LB,
+                currencyAmounts: gB.currencyAmounts
               })
-            }), nJ && VJ === XJ && (0, YJ.jsxs)("div", {
+            }), DB && fB === lB && (0, oB.jsxs)("div", {
               className: "ShopItemEnchantInfo SmallTextBold",
-              children: [(0, YJ.jsx)(KZ.d, {
-                text: GJ
-              }), (0, YJ.jsx)("div", {
+              children: [(0, oB.jsx)(Md.e, {
+                text: uB
+              }), (0, oB.jsx)("div", {
                 className: "ShopItemEnchantInfoDescription",
-                children: (0, YJ.jsx)(KZ.d, {
-                  text: (0, QZ.d)("", nJ.enchantments, nJ.enchantmentData)
+                children: (0, oB.jsx)(Md.e, {
+                  text: (0, td.b)("", DB.enchantments, DB.enchantmentData)
                 })
               })]
             })]
-          }, XJ)
+          }, lB)
         };
-      return (0, YJ.jsx)(xZ.b, {
+      return (0, oB.jsx)(Ed.c, {
         className: "Menu ShopBody",
-        show: UJ,
-        children: 0 !== Object.keys(jJ.shopInfo).length && (0, YJ.jsxs)(YJ.Fragment, {
-          children: [(0, YJ.jsxs)("div", {
+        show: yB,
+        children: 0 !== Object.keys(gB.shopInfo).length && (0, oB.jsxs)(oB.Fragment, {
+          children: [(0, oB.jsxs)("div", {
             className: "MenuSideBar",
-            children: [(0, YJ.jsx)(hJ, {
-              items: gZ(jJ.shopInfo).map((JJ => {
-                var cJ;
+            children: [(0, oB.jsx)(kB, {
+              items: cd(gB.shopInfo).map((BB => {
+                var TB;
                 return {
-                  id: JJ,
-                  title: null !== (cJ = jJ.shopInfo[JJ].customTitle) && void 0 !== cJ ? cJ : JJ,
-                  redDot: jJ.redDotInfo.categoryHasRedDot(JJ)
+                  id: BB,
+                  title: null !== (TB = gB.shopInfo[BB].customTitle) && void 0 !== TB ? TB : BB,
+                  redDot: gB.redDotInfo.categoryHasRedDot(BB)
                 }
               })),
-              selectedItemId: NJ,
-              onClick: pJ,
-              padStartsOnTab: (0, bZ.e)(NJ)
-            }), (0, YJ.jsx)("div", {
+              selectedItemId: ZB,
+              onClick: QB,
+              padStartsOnTab: (0, Kd.d)(ZB)
+            }), (0, oB.jsx)("div", {
               className: "MenuSideBarFooter",
-              children: jJ.currencyAmounts && Object.keys(jJ.currencyAmounts).map((JJ => {
-                var cJ;
-                const ZJ = jJ.currencyAmounts[JJ];
-                return ZJ.hidden ? null : (0, YJ.jsxs)("div", {
-                  className: "ShopCurrencyDiv " + (MJ ? "SmallText" : ""),
-                  children: [(0, YJ.jsxs)("div", {
+              children: gB.currencyAmounts && Object.keys(gB.currencyAmounts).map((BB => {
+                var TB;
+                const dB = gB.currencyAmounts[BB];
+                return dB.hidden ? null : (0, oB.jsxs)("div", {
+                  className: "ShopCurrencyDiv " + (UB ? "SmallText" : ""),
+                  children: [(0, oB.jsxs)("div", {
                     className: "ShopCurrencyDetails",
-                    children: [(0, YJ.jsx)("div", {
+                    children: [(0, oB.jsx)("div", {
                       className: "ShopCurrencyAmtIcon",
                       style: {
-                        color: ZJ.iconColour
+                        color: dB.iconColour
                       },
-                      children: (0, YJ.jsx)(CZ, {
-                        iconName: ZJ.icon
+                      children: (0, oB.jsx)(Cd, {
+                        iconName: dB.icon
                       })
-                    }), "\xa0", (0, vZ.b)(ZJ.amount, 6)]
-                  }), (null === (cJ = ZJ.subtext) || void 0 === cJ ? void 0 : cJ.length) > 0 && (0, YJ.jsx)("div", {
+                    }), "\xa0", (0, md.b)(dB.amount, 6)]
+                  }), (null === (TB = dB.subtext) || void 0 === TB ? void 0 : TB.length) > 0 && (0, oB.jsx)("div", {
                     className: "ShopCurrencySubtext",
-                    children: (0, YJ.jsx)(KZ.d, {
-                      text: ZJ.subtext
+                    children: (0, oB.jsx)(Md.e, {
+                      text: dB.subtext
                     })
                   })]
-                }, JJ)
+                }, BB)
               }))
             })]
-          }), (0, YJ.jsxs)("div", {
+          }), (0, oB.jsxs)("div", {
             className: "MenuBody ShopMenuBody",
-            children: [(0, YJ.jsx)("div", {
-              className: eJ()("ShopOnBoughtInfo", {
-                ShopOnBoughtInfoShow: null !== jJ.onBoughtInfo
+            children: [(0, oB.jsx)("div", {
+              className: pB()("ShopOnBoughtInfo", {
+                ShopOnBoughtInfoShow: null !== gB.onBoughtInfo
               }),
-              children: (0, YJ.jsx)(KZ.d, {
-                text: sJ.current
+              children: (0, oB.jsx)(Md.e, {
+                text: OB.current
               })
-            }), (0, YJ.jsx)("div", {
+            }), (0, oB.jsx)("div", {
               className: "ShopItemsWrapper",
-              children: (0, YJ.jsxs)("div", {
+              children: (0, oB.jsxs)("div", {
                 className: "ShopItemsInner",
-                children: [(null === (cJ = jJ.shopInfo[NJ]) || void 0 === cJ ? void 0 : cJ.description) && (0, YJ.jsx)("div", {
+                children: [(null === (TB = gB.shopInfo[ZB]) || void 0 === TB ? void 0 : TB.description) && (0, oB.jsx)("div", {
                   className: "ShopCategoryDescription",
-                  children: (0, YJ.jsx)(KZ.d, {
-                    text: jJ.shopInfo[NJ].description
+                  children: (0, oB.jsx)(Md.e, {
+                    text: gB.shopInfo[ZB].description
                   })
-                }), UJ && (0, YJ.jsx)("div", {
+                }), yB && (0, oB.jsx)("div", {
                   className: "ShopItems",
-                  ref: GJ,
+                  ref: uB,
                   "data-pad-initial-area": !0,
-                  children: gZ(null === (ZJ = jJ.shopInfo[NJ]) || void 0 === ZJ ? void 0 : ZJ.items).map(((JJ, cJ) => TJ(JJ, cJ)))
+                  children: cd(null === (dB = gB.shopInfo[ZB]) || void 0 === dB ? void 0 : dB.items).map(((BB, TB) => WB(BB, TB)))
                 })]
               })
             })]
@@ -2318,1926 +2318,1926 @@ export const modules = {
       })
     }));
 
-    function kZ(JJ) {
+    function Qd(BB) {
       let {
-        item: cJ,
-        minWidth: ZJ,
-        minHeight: FJ
-      } = JJ;
+        item: TB,
+        minWidth: dB,
+        minHeight: VB
+      } = BB;
       const {
-        image: UJ,
-        schematicId: eJ,
-        imageColour: XJ
-      } = cJ;
-      if (eJ) return (0, YJ.jsx)("div", {
+        image: yB,
+        schematicId: pB,
+        imageColour: lB
+      } = TB;
+      if (pB) return (0, oB.jsx)("div", {
         className: "ShopSchematic",
         style: {
-          width: `${ZJ}rem`,
-          height: `${FJ}rem`
+          width: `${dB}rem`,
+          height: `${VB}rem`
         },
-        children: (0, YJ.jsx)(yZ.e, {
+        children: (0, oB.jsx)(zd.e, {
           game: {
-            schematicId: eJ
+            schematicId: pB
           }
         })
       });
-      var qJ, jJ;
-      if ((0, VZ.e)(UJ)) return (0, YJ.jsx)("div", {
+      var YB, gB;
+      if ((0, sd.d)(yB)) return (0, oB.jsx)("div", {
         className: "ShopBlock",
         style: {
-          minWidth: `${ZJ}rem`,
+          minWidth: `${dB}rem`,
           height: "0",
-          minHeight: `${FJ}rem`
+          minHeight: `${VB}rem`
         },
-        children: (0, YJ.jsx)(VZ.d, {
-          itemName: UJ,
-          amount: null !== (qJ = cJ.amount) && void 0 !== qJ ? qJ : 0,
-          amountFontSize: FJ / 4 + "rem",
-          enchantmentTier: null === (jJ = cJ.enchant) || void 0 === jJ ? void 0 : jJ.tier
+        children: (0, oB.jsx)(sd.c, {
+          itemName: yB,
+          amount: null !== (YB = TB.amount) && void 0 !== YB ? YB : 0,
+          amountFontSize: VB / 4 + "rem",
+          enchantmentTier: null === (gB = TB.enchant) || void 0 === gB ? void 0 : gB.tier
         })
       });
-      const hJ = UJ.slice(-4);
-      return ".jpg" === hJ || ".png" === hJ ? (0, YJ.jsx)(pZ, {
-        image: UJ,
-        minWidth: ZJ
-      }) : (0, YJ.jsx)(AJ.c, {
-        name: UJ,
+      const kB = yB.slice(-4);
+      return ".jpg" === kB || ".png" === kB ? (0, oB.jsx)(Rd, {
+        image: yB,
+        minWidth: dB
+      }) : (0, oB.jsx)(JB.e, {
+        name: yB,
         className: "SelectedItemImage",
         style: {
-          color: XJ
+          color: lB
         }
       })
     }
 
-    function pZ(JJ) {
+    function Rd(BB) {
       let {
-        image: cJ,
-        minWidth: ZJ
-      } = JJ;
+        image: TB,
+        minWidth: dB
+      } = BB;
       const {
-        gameNameWithVariation: FJ
-      } = (0, Lc.f)("connectedGame"), UJ = cJ.endsWith(".jpg");
-      return (0, YJ.jsx)("img", {
-        className: eJ()({
-          ShopPixelImage: !UJ
+        gameNameWithVariation: VB
+      } = (0, xT.i)("connectedGame"), yB = TB.endsWith(".jpg");
+      return (0, oB.jsx)("img", {
+        className: pB()({
+          ShopPixelImage: !yB
         }),
         style: {
-          width: `${UJ?1.6*ZJ:ZJ}rem`,
+          width: `${yB?1.6*dB:dB}rem`,
           height: "auto",
           fontSize: "1.25rem"
         },
-        src: `/textures/games/${(0,dJ.Jb)(FJ)}/${cJ}`,
-        alt: cJ,
+        src: `/textures/games/${(0,RB.Vb)(VB)}/${TB}`,
+        alt: TB,
         draggable: !1
       })
     }
 
-    function dZ(JJ) {
+    function ad(BB) {
       let {
-        item: cJ,
-        cost: ZJ,
-        currencyAmounts: FJ
-      } = JJ;
-      const UJ = !isNaN(ZJ) && 0 !== ZJ && HZ(FJ, cJ.currency);
-      let eJ = null;
-      return cJ.buyButtonText ? eJ = cJ.buyButtonText : UJ ? (eJ = ZJ, cJ.sell && (eJ = -1 * ZJ), eJ = eJ.toString()) : 0 === ZJ ? eJ = "Free" : cJ.isRewardedAd && (eJ = "Watch ad"), (0, Sc.P)(eJ) || " " === eJ ? null : (0, YJ.jsxs)("div", {
+        item: TB,
+        cost: dB,
+        currencyAmounts: VB
+      } = BB;
+      const yB = !isNaN(dB) && 0 !== dB && Sd(VB, TB.currency);
+      let pB = null;
+      return TB.buyButtonText ? pB = TB.buyButtonText : yB ? (pB = dB, TB.sell && (pB = -1 * dB), pB = pB.toString()) : 0 === dB ? pB = "Free" : TB.isRewardedAd && (pB = "Watch ad"), (0, zT.M)(pB) || " " === pB ? null : (0, oB.jsxs)("div", {
         className: "BuyItemCostAndIcon",
-        children: [UJ && (0, YJ.jsx)("div", {
+        children: [yB && (0, oB.jsx)("div", {
           style: {
-            color: FJ[cJ.currency].iconColour
+            color: VB[TB.currency].iconColour
           },
           className: "BuyItemIcon",
-          children: (0, YJ.jsx)(CZ, {
-            iconName: FJ[cJ.currency].icon
+          children: (0, oB.jsx)(Cd, {
+            iconName: VB[TB.currency].icon
           })
-        }), (0, YJ.jsx)("div", {
+        }), (0, oB.jsx)("div", {
           className: "BuyItemCost",
-          children: (0, YJ.jsx)(KZ.d, {
-            text: eJ
+          children: (0, oB.jsx)(Md.e, {
+            text: pB
           })
         })]
       })
     }
 
-    function zZ(JJ) {
+    function Zd(BB) {
       let {
-        item: cJ,
-        currInput: ZJ,
-        updateInput: UJ,
-        onSubmit: eJ
-      } = JJ;
+        item: TB,
+        currInput: dB,
+        updateInput: yB,
+        onSubmit: pB
+      } = BB;
       const {
-        t: AJ
-      } = (0, XJ.F)(), qJ = (0, FJ.useRef)(null);
-      if ((0, FJ.useEffect)((() => {
-          const JJ = qJ.current;
-          JJ && JJ.value !== ZJ && document.activeElement !== JJ && (JJ.value = null !== ZJ && void 0 !== ZJ ? ZJ : "")
-        }), [ZJ]), !cJ.userInput) return null;
-      let jJ = cJ.userInput;
-      if (xJ.featureFlags.sanitizeShopInput && "text" === cJ.userInput.type && (jJ = {
+        t: JB
+      } = (0, lB.z)(), YB = (0, VB.useRef)(null);
+      if ((0, VB.useEffect)((() => {
+          const BB = YB.current;
+          BB && BB.value !== dB && document.activeElement !== BB && (BB.value = null !== dB && void 0 !== dB ? dB : "")
+        }), [dB]), !TB.userInput) return null;
+      let gB = TB.userInput;
+      if (EB.featureFlags.sanitizeShopInput && "text" === TB.userInput.type && (gB = {
           type: "number",
           placeholderText: "Numbers Only"
-        }), "text" === jJ.type || "number" === jJ.type) {
-        var hJ, DJ;
-        console.assert(void 0 !== ZJ, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(cJ)}`);
-        const JJ = "text" === jJ.type && jJ.wordCharsOnly;
-        return (0, YJ.jsx)("div", {
+        }), "text" === gB.type || "number" === gB.type) {
+        var kB, LB;
+        console.assert(void 0 !== dB, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(TB)}`);
+        const BB = "text" === gB.type && gB.wordCharsOnly;
+        return (0, oB.jsx)("div", {
           className: "ShopItemUserInput ShopItemUserInputTextWrapper",
-          children: (0, YJ.jsx)(QJ.e, {
+          children: (0, oB.jsx)(NB.e, {
             className: "ShopItemUserInputText",
-            placeholderText: AJ(jJ.placeholderText),
-            defaultValue: ZJ,
-            domRef: qJ,
-            onValueChange: (cJ, ZJ) => {
-              !0 === JJ && (cJ = (0, IZ.hb)(cJ)), qJ.current.value = cJ, UJ(cJ)
+            placeholderText: JB(gB.placeholderText),
+            defaultValue: dB,
+            domRef: YB,
+            onValueChange: (TB, dB) => {
+              !0 === BB && (TB = (0, Ud.qb)(TB)), YB.current.value = TB, yB(TB)
             },
-            onEnter: eJ,
-            type: jJ.type
-          }, (null !== (hJ = jJ.initialValue) && void 0 !== hJ ? hJ : "") + (null !== (DJ = jJ.placeholderText) && void 0 !== DJ ? DJ : ""))
+            onEnter: pB,
+            type: gB.type
+          }, (null !== (kB = gB.initialValue) && void 0 !== kB ? kB : "") + (null !== (LB = gB.placeholderText) && void 0 !== LB ? LB : ""))
         })
       }
-      if ("dropdown" === jJ.type) {
-        console.assert(void 0 !== ZJ, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(cJ)}`);
-        const JJ = jJ.autoSubmit;
-        return (0, YJ.jsx)("div", {
+      if ("dropdown" === gB.type) {
+        console.assert(void 0 !== dB, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(TB)}`);
+        const BB = gB.autoSubmit;
+        return (0, oB.jsx)("div", {
           className: "ShopItemUserInput ShopItemUserInputDropdown",
-          children: (0, YJ.jsx)(Xc.d, {
-            options: jJ.dropdownOptions.map((JJ => (0, mZ.g)(JJ))),
-            value: ZJ,
-            onChange: cJ => {
+          children: (0, oB.jsx)(lT.e, {
+            options: gB.dropdownOptions.map((BB => (0, Nd.i)(BB))),
+            value: dB,
+            onChange: TB => {
               let {
-                value: ZJ
-              } = cJ;
-              UJ(ZJ), JJ && eJ(ZJ)
+                value: dB
+              } = TB;
+              yB(dB), BB && pB(dB)
             }
           })
         })
       }
-      return "player" === jJ.type ? (0, YJ.jsx)(NZ, {
-        userInput: jJ,
-        currInput: ZJ,
-        updateInput: UJ
-      }) : "color" === jJ.type ? (0, YJ.jsx)("div", {
+      return "player" === gB.type ? (0, oB.jsx)(Xd, {
+        userInput: gB,
+        currInput: dB,
+        updateInput: yB
+      }) : "color" === gB.type ? (0, oB.jsx)("div", {
         className: "ShopItemUserInput ShopItemUserInputColor",
-        children: (0, YJ.jsx)("input", {
+        children: (0, oB.jsx)("input", {
           type: "color",
-          value: ZJ,
-          onChange: JJ => {
-            UJ(JJ.target.value)
+          value: dB,
+          onChange: BB => {
+            yB(BB.target.value)
           }
         })
       }) : null
     }
 
-    function NZ(JJ) {
+    function Xd(BB) {
       let {
-        userInput: cJ,
-        currInput: ZJ,
-        updateInput: FJ
-      } = JJ;
-      const UJ = (0, Lc.f)("players"),
-        eJ = (0, Lc.f)("hiddenPlayerNames"),
-        XJ = (0, mZ.k)(UJ.ids, UJ.localId, cJ);
-      return (0, YJ.jsx)("div", {
+        userInput: TB,
+        currInput: dB,
+        updateInput: VB
+      } = BB;
+      const yB = (0, xT.i)("players"),
+        pB = (0, xT.i)("hiddenPlayerNames"),
+        lB = (0, Nd.k)(yB.ids, yB.localId, TB);
+      return (0, oB.jsx)("div", {
         className: "ShopItemUserInput ShopItemUserInputDropdown",
-        children: (0, YJ.jsx)(Xc.d, {
-          options: XJ.map((JJ => {
+        children: (0, oB.jsx)(lT.e, {
+          options: lB.map((BB => {
             const {
-              name: cJ
-            } = UJ.byId[JJ];
+              name: TB
+            } = yB.byId[BB];
             return {
-              value: JJ,
-              label: null === cJ ? "" : (0, SZ.g)(cJ, eJ)
+              value: BB,
+              label: null === TB ? "" : (0, wd.g)(TB, pB)
             }
           })),
-          value: ZJ,
-          onChange: JJ => {
+          value: dB,
+          onChange: BB => {
             let {
-              value: cJ
-            } = JJ;
-            FJ(cJ)
+              value: TB
+            } = BB;
+            VB(TB)
           }
         })
       })
     }
 
-    function OZ(JJ) {
+    function Wd(BB) {
       let {
-        ids: cJ
-      } = JJ;
-      return cJ
+        ids: TB
+      } = BB;
+      return TB
     }
 
-    function TZ(JJ) {
+    function hd(BB) {
       let {
-        localId: cJ
-      } = JJ;
-      return cJ
+        localId: TB
+      } = BB;
+      return TB
     }
 
-    function CZ(JJ) {
+    function Cd(BB) {
       let {
-        iconName: cJ
-      } = JJ;
-      return rJ.gameBridge.lookup("isItemName", cJ) ? (0, YJ.jsx)(VZ.d, {
-        itemName: cJ,
+        iconName: TB
+      } = BB;
+      return vB.gameBridge.lookup("isItemName", TB) ? (0, oB.jsx)(sd.c, {
+        itemName: TB,
         amount: 1
-      }) : (0, YJ.jsx)(AJ.c, {
-        name: cJ,
+      }) : (0, oB.jsx)(JB.e, {
+        name: TB,
         className: "2x"
       })
     }
-    var uZ = ZJ(1528);
-    const iZ = (0, ZJ(1300).g)((JJ => JJ.PadLobbyShortcuts)),
-      RZ = (0, FJ.lazy)((() => Promise.resolve().then((() => ZJ(4069))).then((JJ => ({
-        default: JJ.Lobbyleaderboard
+    var Gd = dB(1507);
+    const qd = (0, dB(1286).l)((BB => BB.PadLobbyShortcuts)),
+      xd = (0, VB.lazy)((() => Promise.resolve().then((() => dB(4064))).then((BB => ({
+        default: BB.Lobbyleaderboard
       })))));
 
-    function LZ(JJ) {
+    function jd(BB) {
       let {
-        show: cJ
-      } = JJ;
-      return cJ ? (0, YJ.jsxs)(YJ.Fragment, {
-        children: [(0, YJ.jsx)(iZ, {}), (0, YJ.jsx)(FJ.Suspense, {
-          fallback: (0, YJ.jsx)("div", {
+        show: TB
+      } = BB;
+      return TB ? (0, oB.jsxs)(oB.Fragment, {
+        children: [(0, oB.jsx)(qd, {}), (0, oB.jsx)(VB.Suspense, {
+          fallback: (0, oB.jsx)("div", {
             className: "CharacterCustomisationLoading",
-            children: (0, YJ.jsx)(EJ.c, {})
+            children: (0, oB.jsx)(tB.b, {})
           }),
-          children: (0, YJ.jsx)(RZ, {})
+          children: (0, oB.jsx)(xd, {})
         })]
       }) : null
     }
-    var aZ = ZJ(1454),
-      BZ = ZJ(2527),
-      tZ = ZJ(1599),
-      oZ = ZJ(2324),
-      lZ = ZJ(1387),
-      JF = ZJ(1335),
-      cF = ZJ(2508),
-      ZF = ZJ(1906),
-      FF = ZJ(2518),
-      UF = ZJ(2077);
-    const eF = "storeRecentGiftRecipients",
-      XF = new Map;
+    var Ad = dB(1457),
+      bd = dB(2500),
+      nd = dB(1596),
+      ed = dB(2312),
+      BV = dB(1385),
+      TV = dB(1330),
+      dV = dB(2485),
+      VV = dB(1876),
+      yV = dB(2498),
+      pV = dB(2051);
+    const lV = "storeRecentGiftRecipients",
+      JV = new Map;
 
-    function AF() {
+    function YV() {
       try {
-        const JJ = bc.j.getItem(eF);
-        return Array.isArray(JJ) ? JJ.filter((JJ => "string" === typeof(null === JJ || void 0 === JJ ? void 0 : JJ.name) && JJ.name.length > 0)).map((JJ => ({
-          name: JJ.name,
-          cosmetics: JJ.cosmetics && "object" === typeof JJ.cosmetics ? JJ.cosmetics : null
+        const BB = FT.j.getItem(lV);
+        return Array.isArray(BB) ? BB.filter((BB => "string" === typeof(null === BB || void 0 === BB ? void 0 : BB.name) && BB.name.length > 0)).map((BB => ({
+          name: BB.name,
+          cosmetics: BB.cosmetics && "object" === typeof BB.cosmetics ? BB.cosmetics : null
         }))) : []
       } catch {
         return []
       }
     }
 
-    function qF(JJ) {
-      var cJ;
-      const [ZJ, UJ] = (0, FJ.useState)(""), [eJ, XJ] = (0, FJ.useState)("search"), [AJ, qJ] = (0, FJ.useState)(null), [jJ, YJ] = (0, FJ.useState)(null), hJ = (0, FJ.useRef)(null), DJ = (0, FJ.useRef)(null);
-      (0, FJ.useEffect)((() => () => {
-        hJ.current && clearTimeout(hJ.current)
+    function gV(BB) {
+      var TB;
+      const [dB, yB] = (0, VB.useState)(""), [pB, lB] = (0, VB.useState)("search"), [JB, YB] = (0, VB.useState)(null), [gB, oB] = (0, VB.useState)(null), kB = (0, VB.useRef)(null), LB = (0, VB.useRef)(null);
+      (0, VB.useEffect)((() => () => {
+        kB.current && clearTimeout(kB.current)
       }), []);
-      const sJ = null !== (cJ = null === AJ || void 0 === AJ ? void 0 : AJ.name) && void 0 !== cJ ? cJ : null;
+      const OB = null !== (TB = null === JB || void 0 === JB ? void 0 : JB.name) && void 0 !== TB ? TB : null;
 
-      function nJ() {
-        hJ.current && (clearTimeout(hJ.current), hJ.current = null)
-      }(0, FJ.useEffect)((() => {
-        if (null === sJ || JJ === MJ.NULL_USER_CONTEXT) return;
-        const cJ = sJ.toLowerCase();
-        if (cJ === JJ.getPlayerName().toLowerCase()) return void YJ({
-          name: sJ,
+      function DB() {
+        kB.current && (clearTimeout(kB.current), kB.current = null)
+      }(0, VB.useEffect)((() => {
+        if (null === OB || BB === UB.NULL_USER_CONTEXT) return;
+        const TB = OB.toLowerCase();
+        if (TB === BB.getPlayerName().toLowerCase()) return void oB({
+          name: OB,
           result: {
             giftRecipientFound: !1,
             giftRecipientError: "store:giftRecipientIsYou"
           }
         });
-        const ZJ = XF.get(cJ);
-        if (ZJ) return void YJ({
-          name: sJ,
-          result: ZJ
+        const dB = JV.get(TB);
+        if (dB) return void oB({
+          name: OB,
+          result: dB
         });
-        let FJ = !1;
-        return async function(JJ, cJ) {
+        let VB = !1;
+        return async function(BB, TB) {
           try {
-            const ZJ = await (0, MJ.postJsonWithMetricsCookiesAndJsonResponse)(`${bJ.clientSideServerUrls.indexUrl}/index/xsolla/gift-recipient`, {
-              giftRecipientName: cJ
+            const dB = await (0, UB.postJsonWithMetricsCookiesAndJsonResponse)(`${FB.clientSideServerUrls.indexUrl}/index/xsolla/gift-recipient`, {
+              giftRecipientName: TB
             }, {
               retries: 1
-            }, JJ.getMetricsCookies());
-            if ("boolean" !== typeof(null === ZJ || void 0 === ZJ ? void 0 : ZJ.giftRecipientFound)) throw new Error(`Unexpected gift recipient lookup response: ${JSON.stringify(ZJ)}`);
-            return ZJ
-          } catch (ZJ) {
-            return console.error("Failed to look up gift recipient:", ZJ), {
+            }, BB.getMetricsCookies());
+            if ("boolean" !== typeof(null === dB || void 0 === dB ? void 0 : dB.giftRecipientFound)) throw new Error(`Unexpected gift recipient lookup response: ${JSON.stringify(dB)}`);
+            return dB
+          } catch (dB) {
+            return console.error("Failed to look up gift recipient:", dB), {
               giftRecipientFound: !1,
               giftRecipientError: "store:giftRecipientLookupFailed"
             }
           }
-        }(JJ, sJ).catch((JJ => (console.error("Gift recipient lookup failed:", JJ), {
+        }(BB, OB).catch((BB => (console.error("Gift recipient lookup failed:", BB), {
           giftRecipientFound: !1,
           giftRecipientError: "store:giftRecipientLookupFailed"
-        }))).then((JJ => {
-          !0 !== JJ.giftRecipientFound && "store:giftRecipientLookupFailed" === JJ.giftRecipientError || XF.set(cJ, JJ), FJ || YJ({
-            name: sJ,
-            result: JJ
+        }))).then((BB => {
+          !0 !== BB.giftRecipientFound && "store:giftRecipientLookupFailed" === BB.giftRecipientError || JV.set(TB, BB), VB || oB({
+            name: OB,
+            result: BB
           })
         })), () => {
-          FJ = !0
+          VB = !0
         }
-      }), [sJ, JJ]);
-      const GJ = (0, FJ.useMemo)((() => {
-        const JJ = ZJ.trim();
-        if (!JJ) return {
+      }), [OB, BB]);
+      const uB = (0, VB.useMemo)((() => {
+        const BB = dB.trim();
+        if (!BB) return {
           status: "none"
         };
-        if (!AJ || AJ.name !== JJ || (null === jJ || void 0 === jJ ? void 0 : jJ.name) !== AJ.name) return {
+        if (!JB || JB.name !== BB || (null === gB || void 0 === gB ? void 0 : gB.name) !== JB.name) return {
           status: "pending",
-          name: JJ
+          name: BB
         };
-        const cJ = jJ.result;
-        return !1 === cJ.giftRecipientFound ? {
+        const TB = gB.result;
+        return !1 === TB.giftRecipientFound ? {
           status: "error",
-          name: AJ.name,
-          error: cJ.giftRecipientError
+          name: JB.name,
+          error: TB.giftRecipientError
         } : {
           status: "found",
-          name: cJ.giftRecipientName,
-          ownedPacks: cJ.giftRecipientOwnedPacks,
-          hasSuperRank: cJ.giftRecipientHasSuperRank
+          name: TB.giftRecipientName,
+          ownedPacks: TB.giftRecipientOwnedPacks,
+          hasSuperRank: TB.giftRecipientHasSuperRank
         }
-      }), [ZJ, AJ, jJ]);
-      (0, FJ.useEffect)((() => {
-        "found" === GJ.status && "typed" === (null === AJ || void 0 === AJ ? void 0 : AJ.source) && DJ.current !== GJ.name && (DJ.current = GJ.name, (0, uJ.f)({
+      }), [dB, JB, gB]);
+      (0, VB.useEffect)((() => {
+        "found" === uB.status && "typed" === (null === JB || void 0 === JB ? void 0 : JB.source) && LB.current !== uB.name && (LB.current = uB.name, (0, CB.f)({
           id: "store.gift_recipient",
           value: "typed"
         }))
-      }), [GJ, AJ]);
-      const fJ = (null === jJ || void 0 === jJ ? void 0 : jJ.name) === (null === AJ || void 0 === AJ ? void 0 : AJ.name) ? null === jJ || void 0 === jJ ? void 0 : jJ.result : null,
-        xJ = !0 === (null === fJ || void 0 === fJ ? void 0 : fJ.giftRecipientFound) ? fJ.giftRecipientCosmetics : null;
+      }), [uB, JB]);
+      const HB = (null === gB || void 0 === gB ? void 0 : gB.name) === (null === JB || void 0 === JB ? void 0 : JB.name) ? null === gB || void 0 === gB ? void 0 : gB.result : null,
+        EB = !0 === (null === HB || void 0 === HB ? void 0 : HB.giftRecipientFound) ? HB.giftRecipientCosmetics : null;
       return {
-        query: ZJ,
-        via: eJ,
-        recipient: GJ,
-        recipientCosmetics: xJ,
-        type: function(JJ) {
-          UJ(JJ), XJ("search"), nJ();
-          const cJ = JJ.trim();
-          cJ ? hJ.current = setTimeout((() => {
-            qJ({
-              name: cJ,
+        query: dB,
+        via: pB,
+        recipient: uB,
+        recipientCosmetics: EB,
+        type: function(BB) {
+          yB(BB), lB("search"), DB();
+          const TB = BB.trim();
+          TB ? kB.current = setTimeout((() => {
+            YB({
+              name: TB,
               source: "typed"
             })
-          }), 400) : qJ(null)
+          }), 400) : YB(null)
         },
-        choose: function(JJ, cJ) {
-          nJ(), UJ(JJ), XJ("typed" === cJ ? "search" : "prefilled" === cJ ? "prefilled" : "suggestion"), qJ({
-            name: JJ,
-            source: cJ
-          }), "typed" !== cJ && "prefilled" !== cJ && (0, uJ.f)({
+        choose: function(BB, TB) {
+          DB(), yB(BB), lB("typed" === TB ? "search" : "prefilled" === TB ? "prefilled" : "suggestion"), YB({
+            name: BB,
+            source: TB
+          }), "typed" !== TB && "prefilled" !== TB && (0, CB.f)({
             id: "store.gift_recipient",
-            value: cJ
+            value: TB
           })
         },
         clear: function() {
-          nJ(), UJ(""), XJ("search"), qJ(null)
+          DB(), yB(""), lB("search"), YB(null)
         },
-        recordGift: function(JJ, cJ) {
-          ! function(JJ) {
-            XF.delete(JJ.toLowerCase())
-          }(JJ), YJ((ZJ => {
-            if (!ZJ || ZJ.name.toLowerCase() !== JJ.toLowerCase() || !0 !== ZJ.result.giftRecipientFound || "superRank" === cJ) return ZJ;
-            const FJ = ZJ.result.giftRecipientOwnedPacks;
+        recordGift: function(BB, TB) {
+          ! function(BB) {
+            JV.delete(BB.toLowerCase())
+          }(BB), oB((dB => {
+            if (!dB || dB.name.toLowerCase() !== BB.toLowerCase() || !0 !== dB.result.giftRecipientFound || "superRank" === TB) return dB;
+            const VB = dB.result.giftRecipientOwnedPacks;
             return {
-              ...ZJ,
+              ...dB,
               result: {
-                ...ZJ.result,
-                giftRecipientOwnedPacks: FJ.includes(cJ) ? FJ : [...FJ, cJ]
+                ...dB.result,
+                giftRecipientOwnedPacks: VB.includes(TB) ? VB : [...VB, TB]
               }
             }
           }))
         }
       }
     }
-    var jF = ZJ(2068),
-      YF = ZJ(4073),
-      hF = ZJ(2595),
-      DF = ZJ(2601);
-    const sF = ["pointerdown", "pointermove", "keydown", "wheel", "touchstart", "scroll", "blur", "focus"];
-    var nF = ZJ(2032),
-      GF = ZJ(521),
-      fF = ZJ(1537),
-      xF = ZJ(2112),
-      rF = ZJ(2246);
+    var oV = dB(2047),
+      kV = dB(4070),
+      LV = dB(232),
+      OV = dB(2575);
+    const DV = ["pointerdown", "pointermove", "keydown", "wheel", "touchstart", "scroll", "blur", "focus"];
+    var uV = dB(2023),
+      HV = dB(554),
+      EV = dB(1514),
+      vV = dB(2085),
+      mV = dB(2208);
 
-    function vF(JJ) {
+    function iV(BB) {
       let {
-        cosmetics: cJ
-      } = JJ;
-      return (0, YJ.jsx)("span", {
+        cosmetics: TB
+      } = BB;
+      return (0, oB.jsx)("span", {
         className: "StoreRecipientAvatar",
-        children: (0, YJ.jsx)(xF.e, {
-          cosmetics: cJ
+        children: (0, oB.jsx)(vV.e, {
+          cosmetics: TB
         })
       })
     }
 
-    function mF(JJ, cJ) {
-      var ZJ, FJ;
-      const UJ = null !== (ZJ = JJ.friend) && void 0 !== ZJ ? ZJ : {
+    function NV(BB, TB) {
+      var dB, VB;
+      const yB = null !== (dB = BB.friend) && void 0 !== dB ? dB : {
         isError: !1,
-        name: JJ.name,
+        name: BB.name,
         ranks: [],
-        cosmetics: null !== (FJ = JJ.cosmetics) && void 0 !== FJ ? FJ : {},
-        nameColour: GF.d,
+        cosmetics: null !== (VB = BB.cosmetics) && void 0 !== VB ? VB : {},
+        nameColour: HV.d,
         location: {
           status: "noGamePlayed"
         }
       };
-      return cJ ? {
-        ...UJ,
-        cosmetics: cJ
-      } : UJ
+      return TB ? {
+        ...yB,
+        cosmetics: TB
+      } : yB
     }
 
-    function QF(JJ) {
+    function tV(BB) {
       let {
-        recipient: cJ
-      } = JJ;
-      return "pending" === cJ.status ? (0, YJ.jsx)("span", {
+        recipient: TB
+      } = BB;
+      return "pending" === TB.status ? (0, oB.jsx)("span", {
         className: "StoreRecipientStatus",
-        children: (0, YJ.jsx)(EJ.c, {})
-      }) : "found" === cJ.status ? (0, YJ.jsx)(AJ.c, {
+        children: (0, oB.jsx)(tB.b, {})
+      }) : "found" === TB.status ? (0, oB.jsx)(JB.e, {
         name: "check",
         className: "StoreRecipientStatus StoreRecipientStatusFound"
       }) : null
     }
 
-    function EF(JJ) {
-      var cJ;
+    function fV(BB) {
+      var TB;
       let {
-        selfName: ZJ,
-        giftRecipient: UJ,
-        suggestionsVersion: qJ,
-        pulseSignal: jJ,
-        disabled: hJ
-      } = JJ;
+        selfName: dB,
+        giftRecipient: yB,
+        suggestionsVersion: YB,
+        pulseSignal: gB,
+        disabled: kB
+      } = BB;
       const {
-        t: DJ
-      } = (0, XJ.F)(), sJ = (0, fF.k)(), nJ = (0, FJ.useRef)(null), GJ = (0, FJ.useRef)(null), {
-        query: rJ,
-        via: vJ,
-        recipient: mJ,
-        recipientCosmetics: EJ
-      } = UJ, VJ = (0, UF.j)(rJ), KJ = (0, FJ.useMemo)((() => {
-        const JJ = xJ.featureFlags.useSocialFeatures ? sJ.friends.filter((JJ => !JJ.isError)) : [];
-        return (0, UF.h)({
-          onlineFriends: (0, fF.f)(JJ),
-          recentRecipients: AF(),
-          friends: JJ,
-          selfName: ZJ,
+        t: LB
+      } = (0, lB.z)(), OB = (0, EV.k)(), DB = (0, VB.useRef)(null), uB = (0, VB.useRef)(null), {
+        query: vB,
+        via: mB,
+        recipient: iB,
+        recipientCosmetics: tB
+      } = yB, fB = (0, pV.k)(vB), sB = (0, VB.useMemo)((() => {
+        const BB = EB.featureFlags.useSocialFeatures ? OB.friends.filter((BB => !BB.isError)) : [];
+        return (0, pV.g)({
+          onlineFriends: (0, EV.f)(BB),
+          recentRecipients: YV(),
+          friends: BB,
+          selfName: dB,
           max: 8
         })
-      }), [sJ.friends, ZJ, qJ]), yJ = rJ.trim().toLowerCase(), SJ = "search" !== vJ && yJ ? KJ.find((JJ => JJ.name.toLowerCase() === yJ)) : void 0, IJ = SJ && "prefilled" === vJ ? [SJ, ...KJ.filter((JJ => JJ !== SJ))] : KJ, MJ = "" !== yJ && !SJ, bJ = MJ ? rJ : "", wJ = IJ.length > 0;
-      (0, FJ.useEffect)((() => {
-        nJ.current && nJ.current.value !== bJ && (nJ.current.value = bJ)
-      }), [bJ]), (0, FJ.useEffect)((() => {
-        nJ.current && (nJ.current.disabled = hJ)
-      }), [hJ, jJ]);
-      const WJ = (0, FJ.useRef)(0);
+      }), [OB.friends, dB, YB]), MB = vB.trim().toLowerCase(), zB = "search" !== mB && MB ? sB.find((BB => BB.name.toLowerCase() === MB)) : void 0, wB = zB && "prefilled" === mB ? [zB, ...sB.filter((BB => BB !== zB))] : sB, UB = "" !== MB && !zB, FB = UB ? vB : "", KB = wB.length > 0;
+      (0, VB.useEffect)((() => {
+        DB.current && DB.current.value !== FB && (DB.current.value = FB)
+      }), [FB]), (0, VB.useEffect)((() => {
+        DB.current && (DB.current.disabled = kB)
+      }), [kB, gB]);
+      const rB = (0, VB.useRef)(0);
 
-      function HJ() {
-        "self" !== VJ && (0, uJ.f)({
+      function cB() {
+        "self" !== fB && (0, CB.f)({
           id: "store.mode",
           value: "self"
-        }), UJ.clear()
+        }), yB.clear()
       }
 
-      function PJ(JJ) {
-        var cJ, ZJ;
-        if (hJ) return;
-        if (" " === JJ.key || "Enter" === JJ.key) return JJ.preventDefault(), void JJ.currentTarget.click();
-        const FJ = Array.from(null !== (cJ = null === (ZJ = GJ.current) || void 0 === ZJ ? void 0 : ZJ.querySelectorAll("[role=radio]")) && void 0 !== cJ ? cJ : []),
-          UJ = FJ.indexOf(JJ.currentTarget);
-        let eJ;
-        "ArrowRight" === JJ.key || "ArrowDown" === JJ.key ? eJ = FJ[(UJ + 1) % FJ.length] : "ArrowLeft" === JJ.key || "ArrowUp" === JJ.key ? eJ = FJ[(UJ - 1 + FJ.length) % FJ.length] : "Home" === JJ.key ? eJ = FJ[0] : "End" === JJ.key && (eJ = FJ[FJ.length - 1]), eJ && (JJ.preventDefault(), eJ.focus(), eJ.click())
-      }(0, FJ.useEffect)((() => {
-        var JJ;
-        jJ > WJ.current && !hJ && (WJ.current = jJ, null === (JJ = nJ.current) || void 0 === JJ || JJ.focus())
-      }), [jJ, hJ]);
-      const kJ = "self" === VJ,
-        pJ = null !== (cJ = null === SJ || void 0 === SJ ? void 0 : SJ.name) && void 0 !== cJ ? cJ : null,
-        dJ = "error" === mJ.status ? mJ.error : null,
-        zJ = "store:giftRecipientLookupFailed" === dJ;
-      return (0, YJ.jsxs)("div", {
-        className: eJ()("StoreRecipientStrip", {
-          StoreRecipientStripDisabled: hJ,
-          StoreRecipientStripNoChips: !wJ
+      function SB(BB) {
+        var TB, dB;
+        if (kB) return;
+        if (" " === BB.key || "Enter" === BB.key) return BB.preventDefault(), void BB.currentTarget.click();
+        const VB = Array.from(null !== (TB = null === (dB = uB.current) || void 0 === dB ? void 0 : dB.querySelectorAll("[role=radio]")) && void 0 !== TB ? TB : []),
+          yB = VB.indexOf(BB.currentTarget);
+        let pB;
+        "ArrowRight" === BB.key || "ArrowDown" === BB.key ? pB = VB[(yB + 1) % VB.length] : "ArrowLeft" === BB.key || "ArrowUp" === BB.key ? pB = VB[(yB - 1 + VB.length) % VB.length] : "Home" === BB.key ? pB = VB[0] : "End" === BB.key && (pB = VB[VB.length - 1]), pB && (BB.preventDefault(), pB.focus(), pB.click())
+      }(0, VB.useEffect)((() => {
+        var BB;
+        gB > rB.current && !kB && (rB.current = gB, null === (BB = DB.current) || void 0 === BB || BB.focus())
+      }), [gB, kB]);
+      const PB = "self" === fB,
+        QB = null !== (TB = null === zB || void 0 === zB ? void 0 : zB.name) && void 0 !== TB ? TB : null,
+        RB = "error" === iB.status ? iB.error : null,
+        aB = "store:giftRecipientLookupFailed" === RB;
+      return (0, oB.jsxs)("div", {
+        className: pB()("StoreRecipientStrip", {
+          StoreRecipientStripDisabled: kB,
+          StoreRecipientStripNoChips: !KB
         }),
-        children: [(0, YJ.jsx)("span", {
+        children: [(0, oB.jsx)("span", {
           className: "StoreRecipientLabel",
           "aria-hidden": !0,
-          children: DJ("store:buyingFor")
-        }), (0, YJ.jsxs)("div", {
-          ref: GJ,
+          children: LB("store:buyingFor")
+        }), (0, oB.jsxs)("div", {
+          ref: uB,
           className: "StoreRecipientRadios",
           role: "radiogroup",
-          "aria-label": DJ("store:whoIsItFor"),
-          children: [(0, YJ.jsxs)("div", {
+          "aria-label": LB("store:whoIsItFor"),
+          children: [(0, oB.jsxs)("div", {
             role: "radio",
             "data-pad-focusable": !0,
-            "aria-checked": kJ,
-            tabIndex: hJ || !kJ && null !== pJ ? -1 : 0,
-            className: eJ()("StoreRecipientMe", {
-              StoreRecipientChecked: kJ
+            "aria-checked": PB,
+            tabIndex: kB || !PB && null !== QB ? -1 : 0,
+            className: pB()("StoreRecipientMe", {
+              StoreRecipientChecked: PB
             }),
             onClick: () => {
-              hJ || HJ()
+              kB || cB()
             },
-            onKeyDown: PJ,
-            children: [(0, YJ.jsx)(AJ.c, {
+            onKeyDown: SB,
+            children: [(0, oB.jsx)(JB.e, {
               name: "user"
-            }), " ", DJ("store:me")]
-          }), wJ && (0, YJ.jsx)("div", {
+            }), " ", LB("store:me")]
+          }), KB && (0, oB.jsx)("div", {
             className: "StoreRecipientChips",
-            children: IJ.map((JJ => {
-              const cJ = JJ === SJ;
-              return (0, YJ.jsx)("div", {
+            children: wB.map((BB => {
+              const TB = BB === zB;
+              return (0, oB.jsx)("div", {
                 role: "radio",
                 "data-pad-focusable": !0,
-                "aria-checked": cJ,
-                tabIndex: !hJ && cJ ? 0 : -1,
-                title: JJ.name,
-                className: eJ()("StoreRecipientChip", {
-                  StoreRecipientChecked: cJ
+                "aria-checked": TB,
+                tabIndex: !kB && TB ? 0 : -1,
+                title: BB.name,
+                className: pB()("StoreRecipientChip", {
+                  StoreRecipientChecked: TB
                 }),
                 onClick: () => {
-                  hJ || function(JJ) {
-                    "gift" !== VJ && (0, uJ.f)({
+                  kB || function(BB) {
+                    "gift" !== fB && (0, CB.f)({
                       id: "store.mode",
                       value: "gift"
-                    }), UJ.choose(JJ.name, JJ.kind)
-                  }(JJ)
+                    }), yB.choose(BB.name, BB.kind)
+                  }(BB)
                 },
-                onKeyDown: PJ,
-                children: (0, YJ.jsx)(rF.g, {
-                  playerSocialPreview: mF(JJ, cJ ? EJ : null),
+                onKeyDown: SB,
+                children: (0, oB.jsx)(mV.i, {
+                  playerSocialPreview: NV(BB, TB ? tB : null),
                   opensProfileCard: !1,
-                  isFriend: null !== JJ.friend,
+                  isFriend: null !== BB.friend,
                   hideFriendBadge: !0,
-                  showLocation: null !== JJ.friend,
-                  status: null === JJ.friend ? null : void 0,
-                  trailing: cJ ? (0, YJ.jsx)(QF, {
-                    recipient: mJ
+                  showLocation: null !== BB.friend,
+                  status: null === BB.friend ? null : void 0,
+                  trailing: TB ? (0, oB.jsx)(tV, {
+                    recipient: iB
                   }) : void 0
                 })
-              }, JJ.name)
+              }, BB.name)
             }))
           })]
-        }), (0, YJ.jsxs)("div", {
-          className: eJ()("StoreRecipientSearch", {
-            StoreRecipientChecked: MJ,
-            StoreRecipientSearchPulse: jJ > 0 && !MJ,
-            StoreRecipientSearchError: null !== dJ && !zJ
+        }), (0, oB.jsxs)("div", {
+          className: pB()("StoreRecipientSearch", {
+            StoreRecipientChecked: UB,
+            StoreRecipientSearchPulse: gB > 0 && !UB,
+            StoreRecipientSearchError: null !== RB && !aB
           }),
           onClick: () => {
-            var JJ;
-            null === (JJ = nJ.current) || void 0 === JJ || JJ.focus()
+            var BB;
+            null === (BB = DB.current) || void 0 === BB || BB.focus()
           },
-          children: [MJ && "found" === mJ.status && EJ && (0, YJ.jsx)(vF, {
-            cosmetics: EJ
-          }), !(MJ && "found" === mJ.status && EJ) && (0, YJ.jsx)(AJ.c, {
+          children: [UB && "found" === iB.status && tB && (0, oB.jsx)(iV, {
+            cosmetics: tB
+          }), !(UB && "found" === iB.status && tB) && (0, oB.jsx)(JB.e, {
             name: "magnifying-glass",
             className: "StoreRecipientSearchIcon"
-          }), (0, YJ.jsx)(QJ.e, {
+          }), (0, oB.jsx)(NB.e, {
             className: "StoreRecipientSearchInput",
-            domRef: nJ,
-            placeholderText: DJ("store:searchName"),
-            defaultValue: bJ,
-            maxLength: gJ.i,
-            onValueChange: function(JJ) {
-              "gift" !== VJ && JJ.trim() && (0, uJ.f)({
+            domRef: DB,
+            placeholderText: LB("store:searchName"),
+            defaultValue: FB,
+            maxLength: IB.e,
+            onValueChange: function(BB) {
+              "gift" !== fB && BB.trim() && (0, CB.f)({
                 id: "store.mode",
                 value: "gift"
-              }), UJ.type(JJ)
+              }), yB.type(BB)
             },
             onEnter: () => {
-              var JJ;
-              const cJ = null === (JJ = nJ.current) || void 0 === JJ ? void 0 : JJ.value.trim();
-              cJ && UJ.choose(cJ, "typed")
+              var BB;
+              const TB = null === (BB = DB.current) || void 0 === BB ? void 0 : BB.value.trim();
+              TB && yB.choose(TB, "typed")
             },
             blurOnEnter: !0
-          }), MJ && (0, YJ.jsx)(QF, {
-            recipient: mJ
-          }), MJ && (0, YJ.jsx)("div", {
-            ...(0, fJ.U)({
-              disabled: hJ
+          }), UB && (0, oB.jsx)(tV, {
+            recipient: iB
+          }), UB && (0, oB.jsx)("div", {
+            ...(0, HB._)({
+              disabled: kB
             }),
-            "aria-label": DJ("store:clearRecipient"),
-            title: DJ("store:clearRecipient"),
+            "aria-label": LB("store:clearRecipient"),
+            title: LB("store:clearRecipient"),
             className: "StoreRecipientClear",
-            onClick: JJ => {
-              JJ.stopPropagation(), hJ || HJ()
+            onClick: BB => {
+              BB.stopPropagation(), kB || cB()
             },
-            children: (0, YJ.jsx)(AJ.c, {
+            children: (0, oB.jsx)(JB.e, {
               name: "xmark"
             })
           })]
-        }, jJ), dJ && (0, YJ.jsx)("div", {
-          className: eJ()("StoreRecipientPopover", {
-            StoreRecipientPopoverSoft: zJ
+        }, gB), RB && (0, oB.jsx)("div", {
+          className: pB()("StoreRecipientPopover", {
+            StoreRecipientPopoverSoft: aB
           }),
           role: "status",
-          children: DJ(dJ)
+          children: LB(RB)
         })]
       })
     }
-    var VF = ZJ(2085),
-      KF = ZJ(2013),
-      yF = ZJ(3065),
-      SF = ZJ(2615),
-      IF = ZJ(2042);
-    const MF = ZJ.p + "static/media/superRankPreviewPoster.e64783181b692cc31e08.webp";
+    var sV = dB(2053),
+      MV = dB(2001),
+      zV = dB(3078),
+      wV = dB(2592),
+      UV = dB(2034);
+    const FV = dB.p + "static/media/superRankPreviewPoster.e64783181b692cc31e08.webp";
 
-    function bF() {
-      (0, IF.f)(MF, {
+    function KV() {
+      (0, UV.m)(FV, {
         lowPriority: !1
       })
     }
 
-    function wF(JJ) {
+    function rV(BB) {
       let {
-        onBack: cJ,
-        cta: ZJ,
-        recipient: UJ,
-        afterCta: eJ
-      } = JJ;
+        onBack: TB,
+        cta: dB,
+        recipient: yB,
+        afterCta: pB
+      } = BB;
       const {
-        t: qJ
-      } = (0, XJ.F)(), [jJ, hJ] = (0, FJ.useState)("starting"), DJ = (0, FJ.useRef)(null), sJ = (0, Gc.e)(), nJ = (0, FJ.useRef)(null), GJ = (0, FJ.useCallback)((() => {
-        const JJ = DJ.current;
-        null !== JJ.error && JJ.load();
-        const cJ = JJ.play();
-        nJ.current = cJ, cJ.catch((JJ => {
-          (0, yF.c)("Failed to play Super Rank video", JJ), sJ.current && nJ.current === cJ && hJ("failed")
+        t: YB
+      } = (0, lB.z)(), [gB, kB] = (0, VB.useState)("starting"), LB = (0, VB.useRef)(null), OB = (0, uT.b)(), DB = (0, VB.useRef)(null), uB = (0, VB.useCallback)((() => {
+        const BB = LB.current;
+        null !== BB.error && BB.load();
+        const TB = BB.play();
+        DB.current = TB, TB.catch((BB => {
+          (0, zV.e)("Failed to play Super Rank video", BB), OB.current && DB.current === TB && kB("failed")
         }))
-      }), [sJ]);
-      return (0, FJ.useEffect)((() => {
-        const JJ = DJ.current;
-        let cJ;
+      }), [OB]);
+      return (0, VB.useEffect)((() => {
+        const BB = LB.current;
+        let TB;
 
-        function ZJ() {
-          clearTimeout(cJ), cJ = setTimeout(GJ, 3e3)
+        function dB() {
+          clearTimeout(TB), TB = setTimeout(uB, 3e3)
         }
-        return GJ(), JJ.addEventListener("ended", ZJ), () => {
-          clearTimeout(cJ), JJ.removeEventListener("ended", ZJ)
+        return uB(), BB.addEventListener("ended", dB), () => {
+          clearTimeout(TB), BB.removeEventListener("ended", dB)
         }
-      }), [GJ]), (0, YJ.jsxs)("div", {
+      }), [uB]), (0, oB.jsxs)("div", {
         className: "StoreSuperRankDetail",
-        children: [(0, YJ.jsxs)("div", {
+        children: [(0, oB.jsxs)("div", {
           className: "StoreDetailHeader",
-          children: [(0, YJ.jsx)(fJ.b, {
+          children: [(0, oB.jsx)(HB.b, {
             className: "StoreDetailBackButton",
-            onClick: cJ,
+            onClick: TB,
             padBack: !0,
-            children: qJ("general:back")
-          }), (0, YJ.jsxs)("div", {
+            children: YB("general:back")
+          }), (0, oB.jsxs)("div", {
             className: "StoreTileTitle StoreSuperRankTitle",
-            children: [(0, YJ.jsx)(AJ.c, {
+            children: [(0, oB.jsx)(JB.e, {
               name: "bolt"
-            }), " ", qJ("homePage:superRank")]
-          }), UJ]
-        }), (0, YJ.jsxs)("div", {
+            }), " ", YB("homePage:superRank")]
+          }), yB]
+        }), (0, oB.jsxs)("div", {
           className: "StoreSuperRankDetailBody",
-          children: [(0, YJ.jsxs)("div", {
+          children: [(0, oB.jsxs)("div", {
             className: "StoreSuperRankVideo",
-            children: [(0, YJ.jsx)("video", {
-              ref: DJ,
-              src: `${bJ.clientSideServerUrls.staticUrl}/videos/SuperRankPreview.mp4`,
-              poster: MF,
+            children: [(0, oB.jsx)("video", {
+              ref: LB,
+              src: `${FB.clientSideServerUrls.staticUrl}/videos/SuperRankPreview.mp4`,
+              poster: FV,
               muted: !0,
               playsInline: !0,
-              controls: "playing" === jJ,
+              controls: "playing" === gB,
               onPlaying: () => {
-                hJ("playing")
+                kB("playing")
               },
               onError: () => {
-                hJ("failed")
+                kB("failed")
               }
-            }), ("failed" === jJ || "loading" === jJ) && (0, YJ.jsx)("div", {
+            }), ("failed" === gB || "loading" === gB) && (0, oB.jsx)("div", {
               className: "StoreSuperRankPlay",
-              children: (0, YJ.jsx)(fJ.d, {
-                ariaLabel: qJ("general:play"),
-                loading: "loading" === jJ,
+              children: (0, oB.jsx)(HB.d, {
+                ariaLabel: YB("general:play"),
+                loading: "loading" === gB,
                 onClick: () => {
-                  hJ("loading"), GJ()
+                  kB("loading"), uB()
                 },
                 touchPressOn: "pointerup",
-                children: (0, YJ.jsx)(AJ.c, {
+                children: (0, oB.jsx)(JB.e, {
                   name: "play"
                 })
               })
             })]
-          }), (0, YJ.jsxs)("div", {
+          }), (0, oB.jsxs)("div", {
             className: "StoreSuperRankDetailSide",
-            children: [(0, YJ.jsx)("div", {
+            children: [(0, oB.jsx)("div", {
               className: "StoreSuperRankDetailTable",
-              children: (0, YJ.jsx)(SF.c, {})
-            }), (0, YJ.jsxs)("div", {
+              children: (0, oB.jsx)(wV.b, {})
+            }), (0, oB.jsxs)("div", {
               className: "StoreTileActions",
-              children: [ZJ, eJ]
+              children: [dB, pB]
             })]
           })]
         })]
       })
     }
-    var WF = ZJ(2258),
-      gF = ZJ(3019),
-      HF = ZJ(2589);
-    const PF = [GF.w.yellow, GF.w.green, GF.w.aqua, GF.w.blue, GF.w.purple, GF.w.red];
+    var IV = dB(2228),
+      cV = dB(3031),
+      SV = dB(2567);
+    const PV = [HV.t.yellow, HV.t.green, HV.t.aqua, HV.t.blue, HV.t.purple, HV.t.red];
 
-    function kF(JJ) {
-      return "needsRecipient" === JJ || "lookingUp" === JJ || "gift" === JJ || "recipientOwns" === JJ || "recipientSharesOwned" === JJ
+    function QV(BB) {
+      return "needsRecipient" === BB || "lookingUp" === BB || "gift" === BB || "recipientOwns" === BB || "recipientSharesOwned" === BB
     }
 
-    function pF(JJ) {
+    function RV(BB) {
       const {
-        onKeyDown: cJ,
-        ...ZJ
-      } = (0, fJ.U)();
+        onKeyDown: TB,
+        ...dB
+      } = (0, HB._)();
       return {
-        ...ZJ,
-        "aria-label": JJ,
-        onKeyDown: JJ => {
-          JJ.target === JJ.currentTarget && (null === cJ || void 0 === cJ || cJ(JJ))
+        ...dB,
+        "aria-label": BB,
+        onKeyDown: BB => {
+          BB.target === BB.currentTarget && (null === TB || void 0 === TB || TB(BB))
         }
       }
     }
 
-    function dF(JJ) {
+    function aV(BB) {
       let {
-        text: cJ
-      } = JJ;
-      return (0, YJ.jsx)("span", {
+        text: TB
+      } = BB;
+      return (0, oB.jsx)("span", {
         className: "StoreRainbowText",
-        children: Array.from(cJ).map(((JJ, cJ) => (0, YJ.jsx)("span", {
+        children: Array.from(TB).map(((BB, TB) => (0, oB.jsx)("span", {
           style: {
-            color: PF[cJ % PF.length]
+            color: PV[TB % PV.length]
           },
-          children: JJ
-        }, cJ)))
+          children: BB
+        }, TB)))
       })
     }
-    const zF = {
+    const ZV = {
       recipientOwns: "store:alreadyOwns",
       sharesOwned: "store:sharesOwned",
       recipientSharesOwned: "store:recipientSharesOwned"
     };
 
-    function NF(JJ) {
+    function XV(BB) {
       let {
-        state: cJ,
-        item: ZJ,
-        price: FJ,
-        busy: UJ,
-        highlight: qJ = !1,
-        onAct: jJ,
-        onNeedRecipient: hJ,
-        onLogin: DJ = ZF.b
-      } = JJ;
+        state: TB,
+        item: dB,
+        price: VB,
+        busy: yB,
+        highlight: YB = !1,
+        onAct: gB,
+        onNeedRecipient: kB,
+        onLogin: LB = VV.d
+      } = BB;
       const {
-        t: sJ
-      } = (0, XJ.F)(), nJ = "superRank" === ZJ ? PJ.i.product.days : null, GJ = JJ => null === nJ ? sJ(JJ ? "general:gift" : "general:buy") : sJ(JJ ? "store:giftDays" : "store:buyDays", {
-        days: nJ
-      }), xJ = (JJ, cJ) => (0, YJ.jsxs)(YJ.Fragment, {
-        children: [cJ && (0, YJ.jsx)("span", {
+        t: OB
+      } = (0, lB.z)(), DB = "superRank" === dB ? SB.p.product.days : null, uB = BB => null === DB ? OB(BB ? "general:gift" : "general:buy") : OB(BB ? "store:giftDays" : "store:buyDays", {
+        days: DB
+      }), EB = (BB, TB) => (0, oB.jsxs)(oB.Fragment, {
+        children: [TB && (0, oB.jsx)("span", {
           className: "StoreCtaIcon",
-          children: cJ
-        }), null === JJ && (0, YJ.jsx)("span", {
+          children: TB
+        }), null === BB && (0, oB.jsx)("span", {
           className: "StoreCtaLabel StoreCtaLabelPending"
-        }), null !== JJ && (0, YJ.jsx)("span", {
+        }), null !== BB && (0, oB.jsx)("span", {
           className: "StoreCtaLabel",
-          title: JJ,
-          children: JJ
-        }), (0, YJ.jsxs)("span", {
+          title: BB,
+          children: BB
+        }), (0, oB.jsxs)("span", {
           className: "StoreCtaPrice",
-          children: ["\xb7", (0, YJ.jsx)(KF.e, {
-            amount: FJ
+          children: ["\xb7", (0, oB.jsx)(MV.e, {
+            amount: VB
           })]
         })]
       });
-      let rJ;
-      switch (cJ) {
+      let vB;
+      switch (TB) {
         case "pending":
-          rJ = (0, YJ.jsx)(fJ.m, {
+          vB = (0, oB.jsx)(HB.k, {
             className: "StoreCtaButton",
             disabled: !0,
-            children: xJ(null)
+            children: EB(null)
           });
           break;
         case "login":
-          rJ = (0, YJ.jsx)(fJ.m, {
+          vB = (0, oB.jsx)(HB.k, {
             className: "StoreCtaButton",
-            onClick: DJ,
-            children: xJ(sJ("store:logIn"))
+            onClick: LB,
+            children: EB(OB("store:logIn"))
           });
           break;
         case "owned":
-          rJ = (0, YJ.jsx)(fJ.g, {
+          vB = (0, oB.jsx)(HB.g, {
             className: "StoreCtaButton",
             onClick: () => {
-              KJ.d.set({
-                openEverythingMenuName: lc.m.CUSTOMISATION
+              sB.d.set({
+                openEverythingMenuName: eT.m.CUSTOMISATION
               })
             },
-            children: (0, YJ.jsxs)("span", {
+            children: (0, oB.jsxs)("span", {
               className: "StoreCtaLabel",
-              children: [(0, YJ.jsx)(AJ.c, {
+              children: [(0, oB.jsx)(JB.e, {
                 name: "shirt"
-              }), " ", sJ("store:equip")]
+              }), " ", OB("store:equip")]
             })
           });
           break;
         case "recipientOwns":
         case "sharesOwned":
         case "recipientSharesOwned":
-          rJ = (0, YJ.jsx)(fJ.m, {
+          vB = (0, oB.jsx)(HB.k, {
             className: "StoreCtaButton",
             disabled: !0,
-            children: (0, YJ.jsx)("span", {
+            children: (0, oB.jsx)("span", {
               className: "StoreCtaLabel",
-              children: sJ(zF[cJ])
+              children: OB(ZV[TB])
             })
           });
           break;
         case "needsRecipient":
         case "lookingUp":
         case "gift":
-          rJ = (0, YJ.jsx)(fJ.m, {
+          vB = (0, oB.jsx)(HB.k, {
             className: "StoreCtaButton",
-            disabled: "needsRecipient" === cJ || null === FJ,
-            loading: "lookingUp" === cJ || UJ,
-            onClick: jJ,
+            disabled: "needsRecipient" === TB || null === VB,
+            loading: "lookingUp" === TB || yB,
+            onClick: gB,
             analyticsClick: {
               id: "store.gift",
-              value: ZJ
+              value: dB
             },
-            children: xJ(GJ(!0), UF.b)
+            children: EB(uB(!0), pV.d)
           });
           break;
         case "buy":
         case "recharge":
-          rJ = (0, YJ.jsx)(fJ.m, {
+          vB = (0, oB.jsx)(HB.k, {
             className: "StoreCtaButton",
-            loading: UJ,
-            disabled: null === FJ,
-            onClick: jJ,
+            loading: yB,
+            disabled: null === VB,
+            onClick: gB,
             analyticsClick: {
               id: "store.buy",
-              value: ZJ
+              value: dB
             },
-            children: xJ(GJ(!1))
+            children: EB(uB(!1))
           })
       }
-      return (0, YJ.jsx)("div", {
-        className: eJ()("StoreCta", {
-          StoreCtaHighlight: qJ
+      return (0, oB.jsx)("div", {
+        className: pB()("StoreCta", {
+          StoreCtaHighlight: YB
         }),
-        onClick: JJ => {
-          JJ.stopPropagation(), "needsRecipient" === cJ && hJ()
+        onClick: BB => {
+          BB.stopPropagation(), "needsRecipient" === TB && kB()
         },
-        children: rJ
+        children: vB
       })
     }
 
-    function OF() {
+    function WV() {
       const {
-        t: JJ
-      } = (0, XJ.F)();
-      return (0, YJ.jsxs)("ul", {
+        t: BB
+      } = (0, lB.z)();
+      return (0, oB.jsxs)("ul", {
         className: "StorePerks",
-        children: [(0, YJ.jsxs)("li", {
-          children: [(0, YJ.jsx)(AJ.c, {
+        children: [(0, oB.jsxs)("li", {
+          children: [(0, oB.jsx)(JB.e, {
             name: "check"
-          }), (0, YJ.jsx)(dF, {
-            text: JJ("store:colourfulNames")
+          }), (0, oB.jsx)(aV, {
+            text: BB("store:colourfulNames")
           })]
-        }), (0, YJ.jsxs)("li", {
-          children: [(0, YJ.jsx)(AJ.c, {
+        }), (0, oB.jsxs)("li", {
+          children: [(0, oB.jsx)(JB.e, {
             name: "check"
-          }), JJ("store:perkCapes")]
-        }), (0, YJ.jsxs)("li", {
-          children: [(0, YJ.jsx)(AJ.c, {
+          }), BB("store:perkCapes")]
+        }), (0, oB.jsxs)("li", {
+          children: [(0, oB.jsx)(JB.e, {
             name: "check"
-          }), JJ("store:perkNoAdverts")]
-        }), (0, YJ.jsxs)("li", {
-          children: [(0, YJ.jsx)(AJ.c, {
+          }), BB("store:perkNoAdverts")]
+        }), (0, oB.jsxs)("li", {
+          children: [(0, oB.jsx)(JB.e, {
             name: "check"
-          }), JJ("store:perkFriends", {
-            count: (0, TJ.b)(["super"])
+          }), BB("store:perkFriends", {
+            count: (0, WB.e)(["super"])
           })]
         })]
       })
     }
 
-    function TF(JJ) {
+    function hV(BB) {
       let {
-        daysLeft: cJ,
-        totalDays: ZJ,
-        urgent: FJ
-      } = JJ;
+        daysLeft: TB,
+        totalDays: dB,
+        urgent: VB
+      } = BB;
       const {
-        t: UJ
-      } = (0, XJ.F)(), AJ = ZJ > 0 ? Math.min(1, Math.max(.03, cJ / ZJ)) : 1;
-      return (0, YJ.jsxs)("div", {
-        className: eJ()("StoreSuperRankMeterArea", {
-          StoreSuperRankMeterUrgent: FJ
+        t: yB
+      } = (0, lB.z)(), JB = dB > 0 ? Math.min(1, Math.max(.03, TB / dB)) : 1;
+      return (0, oB.jsxs)("div", {
+        className: pB()("StoreSuperRankMeterArea", {
+          StoreSuperRankMeterUrgent: VB
         }),
-        children: [(0, YJ.jsx)("span", {
+        children: [(0, oB.jsx)("span", {
           className: "StoreSuperRankDaysLeft",
-          children: 1 === cJ ? UJ("store:oneDayLeft") : UJ("store:daysLeft", {
-            days: cJ
+          children: 1 === TB ? yB("store:oneDayLeft") : yB("store:daysLeft", {
+            days: TB
           })
-        }), (0, YJ.jsx)("div", {
+        }), (0, oB.jsx)("div", {
           className: "StoreSuperRankMeter",
-          children: (0, YJ.jsx)("i", {
+          children: (0, oB.jsx)("i", {
             style: {
-              width: 100 * AJ + "%"
+              width: 100 * JB + "%"
             }
           })
         })]
       })
     }
 
-    function CF(JJ) {
+    function CV(BB) {
       let {
-        state: cJ,
-        urgent: ZJ,
-        daysLeft: FJ,
-        totalDays: UJ,
-        recipientHasSuperRank: qJ,
-        busy: jJ,
-        highlight: hJ,
-        onOpen: DJ,
-        onAct: sJ,
-        onNeedRecipient: nJ,
-        onLogin: GJ
-      } = JJ;
+        state: TB,
+        urgent: dB,
+        daysLeft: VB,
+        totalDays: yB,
+        recipientHasSuperRank: YB,
+        busy: gB,
+        highlight: kB,
+        onOpen: LB,
+        onAct: OB,
+        onNeedRecipient: DB,
+        onLogin: uB
+      } = BB;
       const {
-        t: fJ
-      } = (0, XJ.F)(), xJ = kF(cJ), {
-        days: rJ
-      } = PJ.i.product, vJ = fJ("store:recipientHasSuperRank", {
-        giftDays: rJ
+        t: HB
+      } = (0, lB.z)(), EB = QV(TB), {
+        days: vB
+      } = SB.p.product, mB = HB("store:recipientHasSuperRank", {
+        giftDays: vB
       });
-      return (0, YJ.jsxs)("div", {
-        className: eJ()("StoreTile StoreSuperRankTile", {
-          StoreTileGift: xJ,
-          StoreSuperRankTileUrgent: "recharge" === cJ && ZJ,
-          StoreSuperRankTileWithChip: qJ,
-          StoreSuperRankTileGiftReady: "gift" === cJ
+      return (0, oB.jsxs)("div", {
+        className: pB()("StoreTile StoreSuperRankTile", {
+          StoreTileGift: EB,
+          StoreSuperRankTileUrgent: "recharge" === TB && dB,
+          StoreSuperRankTileWithChip: YB,
+          StoreSuperRankTileGiftReady: "gift" === TB
         }),
-        ...pF(fJ("homePage:superRank")),
+        ...RV(HB("homePage:superRank")),
         "data-store-item": "superRank",
-        onPointerEnter: bF,
-        onFocus: bF,
-        onClick: DJ,
-        children: [(0, YJ.jsx)("div", {
+        onPointerEnter: KV,
+        onFocus: KV,
+        onClick: LB,
+        children: [(0, oB.jsx)("div", {
           className: "StoreSuperRankArt",
           style: {
-            backgroundImage: `url(${nF.d})`
+            backgroundImage: `url(${uV.c})`
           }
-        }), xJ && (0, YJ.jsx)("div", {
+        }), EB && (0, oB.jsx)("div", {
           className: "StoreGiftRibbon"
-        }), (0, YJ.jsxs)("div", {
+        }), (0, oB.jsxs)("div", {
           className: "StoreTileContent",
-          children: [qJ && (0, YJ.jsx)("span", {
+          children: [YB && (0, oB.jsx)("span", {
             className: "StoreChip StoreChipGift",
-            title: vJ,
-            children: vJ
-          }), (0, YJ.jsxs)("div", {
+            title: mB,
+            children: mB
+          }), (0, oB.jsxs)("div", {
             className: "StoreTileTitle StoreSuperRankTitle",
-            children: [(0, YJ.jsx)(AJ.c, {
+            children: [(0, oB.jsx)(JB.e, {
               name: "bolt"
-            }), " ", fJ("homePage:superRank")]
-          }), xJ && (0, YJ.jsx)("div", {
+            }), " ", HB("homePage:superRank")]
+          }), EB && (0, oB.jsx)("div", {
             className: "StoreTilePitch",
-            children: fJ("store:giftPitch", {
-              days: rJ
+            children: HB("store:giftPitch", {
+              days: vB
             })
-          }), "recharge" === cJ && (0, YJ.jsx)(TF, {
-            daysLeft: FJ,
-            totalDays: UJ,
-            urgent: ZJ
-          }), (0, YJ.jsx)(OF, {}), (0, YJ.jsxs)("div", {
+          }), "recharge" === TB && (0, oB.jsx)(hV, {
+            daysLeft: VB,
+            totalDays: yB,
+            urgent: dB
+          }), (0, oB.jsx)(WV, {}), (0, oB.jsxs)("div", {
             className: "StoreTileActions",
-            children: [(0, YJ.jsx)(NF, {
-              state: cJ,
+            children: [(0, oB.jsx)(XV, {
+              state: TB,
               item: "superRank",
-              price: PJ.i.price,
-              busy: jJ,
-              highlight: hJ,
-              onAct: sJ,
-              onNeedRecipient: nJ,
-              onLogin: GJ
-            }), "needsRecipient" === cJ && (0, YJ.jsx)("span", {
+              price: SB.p.price,
+              busy: gB,
+              highlight: kB,
+              onAct: OB,
+              onNeedRecipient: DB,
+              onLogin: uB
+            }), "needsRecipient" === TB && (0, oB.jsx)("span", {
               className: "StoreTileNote StoreTileNoteGift",
-              children: fJ("store:pickRecipientFirst")
-            }), "recharge" === cJ && ZJ && (0, YJ.jsx)("span", {
+              children: HB("store:pickRecipientFirst")
+            }), "recharge" === TB && dB && (0, oB.jsx)("span", {
               className: "StoreTileNote StoreSuperRankEnding",
-              children: 1 === FJ ? fJ("store:endsInOneDay") : fJ("store:endsInDays", {
-                days: FJ
+              children: 1 === VB ? HB("store:endsInOneDay") : HB("store:endsInDays", {
+                days: VB
               })
             })]
           })]
         })]
       })
     }
-    const uF = {
+    const GV = {
       standard: "StorePackTileStandard",
       enhanced: "StorePackTileEnhanced",
       premium: "StorePackTilePremium"
     };
 
-    function iF(JJ) {
-      var cJ;
+    function qV(BB) {
+      var TB;
       let {
-        pack: ZJ,
-        state: UJ,
-        busy: qJ,
-        onOpen: jJ,
-        onAct: hJ,
-        onNeedRecipient: DJ,
-        onLogin: sJ
-      } = JJ;
+        pack: dB,
+        state: yB,
+        busy: YB,
+        onOpen: gB,
+        onAct: kB,
+        onNeedRecipient: LB,
+        onLogin: OB
+      } = BB;
       const {
-        t: nJ
-      } = (0, XJ.F)(), GJ = aZ.e[ZJ], fJ = cF.h[ZJ], xJ = (0, nF.l)(ZJ), rJ = (0, FJ.useRef)(null);
-      (0, HF.j)(ZJ, rJ);
-      const vJ = kF(UJ),
-        mJ = null !== (cJ = GJ.displayName) && void 0 !== cJ ? cJ : ZJ,
-        QJ = (0, gF.b)((() => {
-          (0, WF.d)();
-          const JJ = (0, HF.d)(ZJ);
-          void 0 !== JJ && (0, IF.f)((0, HF.c)(JJ))
+        t: DB
+      } = (0, lB.z)(), uB = Ad.c[dB], HB = dV.n[dB], EB = (0, uV.k)(dB), vB = (0, VB.useRef)(null);
+      (0, SV.h)(dB, vB);
+      const mB = QV(yB),
+        iB = null !== (TB = uB.displayName) && void 0 !== TB ? TB : dB,
+        NB = (0, cV.e)((() => {
+          (0, IV.d)();
+          const BB = (0, SV.e)(dB);
+          void 0 !== BB && (0, UV.m)((0, SV.b)(BB))
         })),
-        [EJ] = (0, FJ.useState)(DF.j);
-      return (0, YJ.jsxs)("div", {
-        className: eJ()("StoreTile StorePackTile", GJ.tier && uF[GJ.tier], {
-          StorePackTileOwned: "owned" === UJ,
-          StorePackTileRecipientOwns: "recipientOwns" === UJ,
-          StoreTileGift: vJ
+        [tB] = (0, VB.useState)(OV.j);
+      return (0, oB.jsxs)("div", {
+        className: pB()("StoreTile StorePackTile", uB.tier && GV[uB.tier], {
+          StorePackTileOwned: "owned" === yB,
+          StorePackTileRecipientOwns: "recipientOwns" === yB,
+          StoreTileGift: mB
         }),
-        ...pF(mJ),
-        ref: rJ,
-        "data-store-item": ZJ,
-        onClick: jJ,
-        onPointerMove: JJ => {
-          "mouse" !== JJ.pointerType || 0 === JJ.movementX && 0 === JJ.movementY || EJ || QJ.start()
+        ...RV(iB),
+        ref: vB,
+        "data-store-item": dB,
+        onClick: gB,
+        onPointerMove: BB => {
+          "mouse" !== BB.pointerType || 0 === BB.movementX && 0 === BB.movementY || tB || NB.start()
         },
-        onPointerLeave: QJ.cancel,
-        children: [fJ && (0, YJ.jsx)(fJ, {}), (0, YJ.jsx)("div", {
+        onPointerLeave: NB.cancel,
+        children: [HB && (0, oB.jsx)(HB, {}), (0, oB.jsx)("div", {
           className: "StorePackCharacters",
-          children: xJ.map((JJ => (0, YJ.jsx)("div", {
+          children: EB.map((BB => (0, oB.jsx)("div", {
             className: "StorePackCharacter",
             style: {
-              backgroundImage: `url(${(0,nF.h)(JJ)})`
+              backgroundImage: `url(${(0,uV.g)(BB)})`
             }
-          }, JJ)))
-        }), (0, YJ.jsx)("div", {
+          }, BB)))
+        }), (0, oB.jsx)("div", {
           className: "StoreTileScrim"
-        }), vJ && (0, YJ.jsx)("div", {
+        }), mB && (0, oB.jsx)("div", {
           className: "StoreGiftRibbon"
-        }), (0, YJ.jsxs)("div", {
+        }), (0, oB.jsxs)("div", {
           className: "StoreTileContent",
-          children: [(0, YJ.jsx)("div", {
+          children: [(0, oB.jsx)("div", {
             className: "StoreTileTitle",
-            children: mJ
-          }), (0, YJ.jsxs)("div", {
+            children: iB
+          }), (0, oB.jsxs)("div", {
             className: "StoreTileMeta",
-            children: [nJ("store:itemCount", {
-              count: (0, VF.d)(ZJ)
-            }), "owned" === UJ && (0, YJ.jsxs)("span", {
+            children: [DB("store:itemCount", {
+              count: (0, sV.e)(dB)
+            }), "owned" === yB && (0, oB.jsxs)("span", {
               className: "StoreTileOwned",
-              children: [" \xb7 ", (0, YJ.jsx)(AJ.c, {
+              children: [" \xb7 ", (0, oB.jsx)(JB.e, {
                 name: "check"
-              }), " ", nJ("general:owned")]
+              }), " ", DB("general:owned")]
             })]
-          }), (0, YJ.jsx)(NF, {
-            state: UJ,
-            item: ZJ,
-            price: (0, PJ.f)(ZJ),
-            busy: qJ,
-            onAct: hJ,
-            onNeedRecipient: DJ,
-            onLogin: sJ
+          }), (0, oB.jsx)(XV, {
+            state: yB,
+            item: dB,
+            price: (0, SB.h)(dB),
+            busy: YB,
+            onAct: kB,
+            onNeedRecipient: LB,
+            onLogin: OB
           })]
         })]
       })
     }
-    var RF = ZJ(2556),
-      LF = ZJ(1239);
-    const aF = {
+    var xV = dB(2525),
+      jV = dB(1229);
+    const AV = {
       standard: "StoreCharacterCardStandard",
       enhanced: "StoreCharacterCardEnhanced",
       premium: "StoreCharacterCardPremium"
     };
 
-    function BF(JJ) {
-      var cJ, ZJ;
+    function bV(BB) {
+      var TB, dB;
       let {
-        tile: UJ,
-        busy: qJ,
-        highlight: jJ,
-        onAct: hJ,
-        onNeedRecipient: DJ,
-        onLogin: sJ
-      } = JJ;
+        tile: yB,
+        busy: YB,
+        highlight: gB,
+        onAct: kB,
+        onNeedRecipient: LB,
+        onLogin: OB
+      } = BB;
       const {
-        t: nJ
-      } = (0, XJ.F)(), {
-        pack: GJ,
-        state: fJ
-      } = UJ, xJ = aZ.e[GJ], rJ = (0, aZ.i)(GJ), vJ = cF.h[(0, nF.k)(GJ)], mJ = null !== (cJ = xJ.tier) && void 0 !== cJ ? cJ : "standard", QJ = (0, FJ.useRef)(null);
-      return (0, LF.e)(QJ, "standard" !== mJ), (0, YJ.jsxs)("div", {
-        ref: QJ,
-        className: eJ()("StoreCharacterCard", aF[mJ], {
-          StoreCharacterCardOwned: "owned" === fJ || "recipientOwns" === fJ,
-          StoreCharacterCardGift: kF(fJ)
+        t: DB
+      } = (0, lB.z)(), {
+        pack: uB,
+        state: HB
+      } = yB, EB = Ad.c[uB], vB = (0, Ad.d)(uB), mB = dV.n[(0, uV.i)(uB)], iB = null !== (TB = EB.tier) && void 0 !== TB ? TB : "standard", NB = (0, VB.useRef)(null);
+      return (0, jV.e)(NB, "standard" !== iB), (0, oB.jsxs)("div", {
+        ref: NB,
+        className: pB()("StoreCharacterCard", AV[iB], {
+          StoreCharacterCardOwned: "owned" === HB || "recipientOwns" === HB,
+          StoreCharacterCardGift: QV(HB)
         }),
-        "data-store-item": GJ,
-        children: [(0, YJ.jsxs)("div", {
+        "data-store-item": uB,
+        children: [(0, oB.jsxs)("div", {
           className: "StoreCharacterArt",
-          children: [vJ && (0, YJ.jsx)(vJ, {
+          children: [mB && (0, oB.jsx)(mB, {
             simple: !0
-          }), (0, YJ.jsx)("div", {
+          }), (0, oB.jsx)("div", {
             className: "StoreCharacterHalo"
-          }), (0, YJ.jsx)("div", {
+          }), (0, oB.jsx)("div", {
             className: "StoreCharacterFigure",
             style: {
-              backgroundImage: `url(${(0,nF.h)(rJ)})`
+              backgroundImage: `url(${(0,uV.g)(vB)})`
             }
-          }), "owned" === fJ && (0, YJ.jsx)("span", {
+          }), "owned" === HB && (0, oB.jsx)("span", {
             className: "StoreCharacterOwned",
-            title: nJ("general:owned"),
-            "aria-label": nJ("general:owned"),
-            children: (0, YJ.jsx)(AJ.c, {
+            title: DB("general:owned"),
+            "aria-label": DB("general:owned"),
+            children: (0, oB.jsx)(JB.e, {
               name: "check"
             })
           })]
-        }), (0, YJ.jsxs)("div", {
+        }), (0, oB.jsxs)("div", {
           className: "StoreCharacterPlate",
-          children: [(0, YJ.jsx)("div", {
+          children: [(0, oB.jsx)("div", {
             className: "StoreCharacterName",
-            children: null !== (ZJ = xJ.displayName) && void 0 !== ZJ ? ZJ : GJ
-          }), (0, YJ.jsx)(NF, {
-            state: fJ,
-            item: GJ,
-            price: (0, PJ.f)(GJ),
-            busy: qJ,
-            highlight: jJ,
-            onAct: hJ,
-            onNeedRecipient: DJ,
-            onLogin: sJ
+            children: null !== (dB = EB.displayName) && void 0 !== dB ? dB : uB
+          }), (0, oB.jsx)(XV, {
+            state: HB,
+            item: uB,
+            price: (0, SB.h)(uB),
+            busy: YB,
+            highlight: gB,
+            onAct: kB,
+            onNeedRecipient: LB,
+            onLogin: OB
           })]
         })]
       })
     }
 
-    function tF(JJ) {
+    function nV(BB) {
       let {
-        tiles: cJ,
-        busy: ZJ,
-        highlightItem: FJ,
-        onAct: UJ,
-        onNeedRecipient: eJ,
-        onLogin: XJ
-      } = JJ;
-      return (0, YJ.jsx)("div", {
+        tiles: TB,
+        busy: dB,
+        highlightItem: VB,
+        onAct: yB,
+        onNeedRecipient: pB,
+        onLogin: lB
+      } = BB;
+      return (0, oB.jsx)("div", {
         className: "StoreCharacterGrid",
-        children: cJ.map((JJ => (0, YJ.jsx)(BF, {
-          tile: JJ,
-          busy: ZJ,
-          highlight: FJ === JJ.pack,
+        children: TB.map((BB => (0, oB.jsx)(bV, {
+          tile: BB,
+          busy: dB,
+          highlight: VB === BB.pack,
           onAct: () => {
-            UJ(JJ.pack)
+            yB(BB.pack)
           },
-          onNeedRecipient: eJ,
+          onNeedRecipient: pB,
           onLogin: () => {
-            XJ(JJ.pack)
+            lB(BB.pack)
           }
-        }, JJ.pack)))
+        }, BB.pack)))
       })
     }
 
-    function oF(JJ) {
+    function eV(BB) {
       let {
-        title: cJ
-      } = JJ;
-      return (0, YJ.jsx)("h2", {
+        title: TB
+      } = BB;
+      return (0, oB.jsx)("h2", {
         className: "StoreSectionDivider",
-        children: (0, YJ.jsx)("span", {
+        children: (0, oB.jsx)("span", {
           className: "StoreSectionDividerTitle",
-          children: cJ
+          children: TB
         })
       })
     }
 
-    function lF(JJ) {
+    function By(BB) {
       let {
-        layout: cJ,
-        bundleGift: ZJ,
-        superRankDaysLeft: FJ,
-        superRankTotalDays: UJ,
-        busy: eJ,
-        highlightItem: AJ,
-        onOpen: qJ,
-        onAct: jJ,
-        onNeedRecipient: hJ,
-        onLogin: DJ
-      } = JJ;
+        layout: TB,
+        bundleGift: dB,
+        superRankDaysLeft: VB,
+        superRankTotalDays: yB,
+        busy: pB,
+        highlightItem: JB,
+        onOpen: YB,
+        onAct: gB,
+        onNeedRecipient: kB,
+        onLogin: LB
+      } = BB;
       const {
-        t: sJ
-      } = (0, XJ.F)(), nJ = cJ.packs.filter((JJ => void 0 === (0, aZ.i)(JJ.pack))), GJ = cJ.packs.filter((JJ => void 0 !== (0, aZ.i)(JJ.pack)));
-      return (0, YJ.jsxs)(YJ.Fragment, {
-        children: [(0, YJ.jsx)(RF.d, {
+        t: OB
+      } = (0, lB.z)(), DB = TB.packs.filter((BB => void 0 === (0, Ad.d)(BB.pack))), uB = TB.packs.filter((BB => void 0 !== (0, Ad.d)(BB.pack)));
+      return (0, oB.jsxs)(oB.Fragment, {
+        children: [(0, oB.jsx)(xV.b, {
           className: "StoreSuperGems",
-          gift: ZJ
-        }), (0, YJ.jsx)(oF, {
-          title: sJ("store:rank")
-        }), (0, YJ.jsx)(CF, {
-          state: cJ.superRank.state,
-          urgent: cJ.superRank.urgent,
-          daysLeft: FJ,
-          totalDays: UJ,
-          recipientHasSuperRank: cJ.recipientHasSuperRank,
-          busy: eJ,
-          highlight: "superRank" === AJ,
+          gift: dB
+        }), (0, oB.jsx)(eV, {
+          title: OB("store:rank")
+        }), (0, oB.jsx)(CV, {
+          state: TB.superRank.state,
+          urgent: TB.superRank.urgent,
+          daysLeft: VB,
+          totalDays: yB,
+          recipientHasSuperRank: TB.recipientHasSuperRank,
+          busy: pB,
+          highlight: "superRank" === JB,
           onOpen: () => {
-            qJ("superRank")
+            YB("superRank")
           },
           onAct: () => {
-            jJ("superRank")
+            gB("superRank")
           },
-          onNeedRecipient: hJ,
+          onNeedRecipient: kB,
           onLogin: () => {
-            DJ("superRank")
+            LB("superRank")
           }
-        }), (0, YJ.jsx)(oF, {
-          title: sJ("store:bundles")
-        }), (0, YJ.jsx)("div", {
+        }), (0, oB.jsx)(eV, {
+          title: OB("store:bundles")
+        }), (0, oB.jsx)("div", {
           className: "StorePackGrid",
-          children: nJ.map((JJ => (0, YJ.jsx)(iF, {
-            pack: JJ.pack,
-            state: JJ.state,
-            busy: eJ,
+          children: DB.map((BB => (0, oB.jsx)(qV, {
+            pack: BB.pack,
+            state: BB.state,
+            busy: pB,
             onOpen: () => {
-              qJ(JJ.pack)
+              YB(BB.pack)
             },
             onAct: () => {
-              jJ(JJ.pack)
+              gB(BB.pack)
             },
-            onNeedRecipient: hJ,
+            onNeedRecipient: kB,
             onLogin: () => {
-              DJ(JJ.pack)
+              LB(BB.pack)
             }
-          }, JJ.pack)))
-        }), (0, YJ.jsx)(oF, {
-          title: sJ("store:characters")
-        }), (0, YJ.jsx)(tF, {
-          tiles: GJ,
-          busy: eJ,
-          highlightItem: AJ,
-          onAct: jJ,
-          onNeedRecipient: hJ,
-          onLogin: DJ
+          }, BB.pack)))
+        }), (0, oB.jsx)(eV, {
+          title: OB("store:characters")
+        }), (0, oB.jsx)(nV, {
+          tiles: uB,
+          busy: pB,
+          highlightItem: JB,
+          onAct: gB,
+          onNeedRecipient: kB,
+          onLogin: LB
         })]
       })
     }
 
-    function JU(JJ) {
+    function Ty(BB) {
       let {
-        state: cJ,
-        mode: ZJ,
-        giftName: FJ,
-        busy: UJ,
-        highlight: eJ,
-        purchaseError: AJ,
-        onBack: qJ,
-        onChooseRecipient: jJ,
-        onAct: hJ,
-        onLogin: DJ
-      } = JJ;
+        state: TB,
+        mode: dB,
+        giftName: VB,
+        busy: yB,
+        highlight: pB,
+        purchaseError: JB,
+        onBack: YB,
+        onChooseRecipient: gB,
+        onAct: kB,
+        onLogin: LB
+      } = BB;
       const {
-        t: sJ
-      } = (0, XJ.F)();
-      return (0, YJ.jsx)(wF, {
-        onBack: qJ,
-        recipient: "gift" === ZJ && (0, YJ.jsxs)(YJ.Fragment, {
-          children: [FJ && (0, YJ.jsxs)("span", {
+        t: OB
+      } = (0, lB.z)();
+      return (0, oB.jsx)(rV, {
+        onBack: YB,
+        recipient: "gift" === dB && (0, oB.jsxs)(oB.Fragment, {
+          children: [VB && (0, oB.jsxs)("span", {
             className: "StoreDetailRecipient",
-            title: sJ("store:giftFor", {
-              name: FJ
+            title: OB("store:giftFor", {
+              name: VB
             }),
-            children: [UF.b, " ", sJ("store:giftFor", {
-              name: FJ
+            children: [pV.d, " ", OB("store:giftFor", {
+              name: VB
             })]
-          }), !FJ && (0, YJ.jsxs)("div", {
-            ...(0, fJ.U)(),
+          }), !VB && (0, oB.jsxs)("div", {
+            ...(0, HB._)(),
             className: "StoreDetailRecipient StoreDetailRecipientChoose",
-            onClick: jJ,
-            children: [UF.b, " ", sJ("store:chooseRecipient")]
+            onClick: gB,
+            children: [pV.d, " ", OB("store:chooseRecipient")]
           })]
         }),
-        cta: (0, YJ.jsx)(NF, {
-          state: cJ,
+        cta: (0, oB.jsx)(XV, {
+          state: TB,
           item: "superRank",
-          price: PJ.i.price,
-          busy: UJ,
-          highlight: eJ,
-          onAct: hJ,
-          onNeedRecipient: jJ,
-          onLogin: DJ
+          price: SB.p.price,
+          busy: yB,
+          highlight: pB,
+          onAct: kB,
+          onNeedRecipient: gB,
+          onLogin: LB
         }),
-        afterCta: (0, YJ.jsx)(YJ.Fragment, {
-          children: AJ && (0, YJ.jsx)("span", {
+        afterCta: (0, oB.jsx)(oB.Fragment, {
+          children: JB && (0, oB.jsx)("span", {
             className: "StoreTileNote StoreTileNoteError",
-            children: sJ(AJ)
+            children: OB(JB)
           })
         })
       })
     }
-    const cU = {
+    const dy = {
         kind: "board"
       },
-      ZU = [...aZ.p, ...aZ.m];
-    let FU = !1;
+      Vy = [...Ad.n, ...Ad.l];
+    let yy = !1;
 
-    function UU(JJ) {
-      return "superRank" === JJ.kind ? "superRank" : "pack" === JJ.kind ? JJ.pack : null
+    function py(BB) {
+      return "superRank" === BB.kind ? "superRank" : "pack" === BB.kind ? BB.pack : null
     }
 
-    function eU(JJ) {
-      return "found" === JJ.status || "error" === JJ.status && "store:giftRecipientLookupFailed" === JJ.error ? JJ.name : null
-    }(0, zJ.q)(BZ.prefetchPremiumCurrencyBundles);
-    const XU = (0, FJ.memo)((function(JJ) {
-      var cJ, UJ;
+    function ly(BB) {
+      return "found" === BB.status || "error" === BB.status && "store:giftRecipientLookupFailed" === BB.error ? BB.name : null
+    }(0, aB.p)(bd.prefetchPremiumCurrencyBundles);
+    const Jy = (0, VB.memo)((function(BB) {
+      var TB, yB;
       let {
-        show: AJ
-      } = JJ;
+        show: JB
+      } = BB;
       const {
-        t: qJ
-      } = (0, XJ.F)(), {
-        userContext: jJ
-      } = (0, sJ.d)(), hJ = jJ !== MJ.NULL_USER_CONTEXT, DJ = qF(jJ), [nJ, fJ] = (0, GJ.d)(), {
-        page: xJ,
-        urlMode: rJ,
-        goTo: vJ
-      } = (0, jF.f)(), mJ = UU(xJ), {
-        openEverythingMenuName: QJ,
-        gameState: EJ
-      } = (0, KJ.j)(["openEverythingMenuName", "gameState"]), VJ = null !== QJ;
-      ! function(JJ, cJ) {
-        const [UJ] = (0, FJ.useState)(DF.j), [eJ, XJ] = (0, FJ.useState)(!1);
-        UJ && cJ && !eJ && XJ(!0);
-        const AJ = (0, UZ.q)(),
-          qJ = UJ && eJ && JJ && !AJ;
-        (0, FJ.useEffect)((() => {
-          if (!qJ) return;
-          let JJ = null,
-            cJ = null,
-            FJ = null;
-          const UJ = () => !document.hasFocus() || document.activeElement instanceof HTMLIFrameElement || (0, BZ.isXsollaCheckoutInControl)(),
-            eJ = () => {
-              var ZJ;
-              null === (ZJ = FJ) || void 0 === ZJ || ZJ(), FJ = null, null !== JJ && (clearTimeout(JJ), JJ = null), null !== cJ && (clearTimeout(cJ), cJ = null)
+        t: YB
+      } = (0, lB.z)(), {
+        userContext: gB
+      } = (0, OB.b)(), kB = gB !== UB.NULL_USER_CONTEXT, LB = gV(gB), [DB, HB] = (0, uB.e)(), {
+        page: EB,
+        urlMode: vB,
+        goTo: mB
+      } = (0, oV.c)(), iB = py(EB), {
+        openEverythingMenuName: NB,
+        gameState: tB
+      } = (0, sB.m)(["openEverythingMenuName", "gameState"]), fB = null !== NB;
+      ! function(BB, TB) {
+        const [yB] = (0, VB.useState)(OV.j), [pB, lB] = (0, VB.useState)(!1);
+        yB && TB && !pB && lB(!0);
+        const JB = (0, yd.r)(),
+          YB = yB && pB && BB && !JB;
+        (0, VB.useEffect)((() => {
+          if (!YB) return;
+          let BB = null,
+            TB = null,
+            VB = null;
+          const yB = () => !document.hasFocus() || document.activeElement instanceof HTMLIFrameElement || (0, bd.isXsollaCheckoutInControl)(),
+            pB = () => {
+              var dB;
+              null === (dB = VB) || void 0 === dB || dB(), VB = null, null !== BB && (clearTimeout(BB), BB = null), null !== TB && (clearTimeout(TB), TB = null)
             },
-            XJ = () => {
-              (0, YF.m)(!1), (0, YF.l)(!1), eJ(), JJ = setTimeout((() => {
-                JJ = null, FJ = (0, hF.e)((() => {
-                  FJ = null, UJ() ? XJ() : ((0, YF.m)(!0), cJ = setTimeout((() => {
-                    cJ = null, FJ = (0, hF.e)((() => {
-                      FJ = null, UJ() ? XJ() : (0, YF.l)(!0)
+            lB = () => {
+              (0, kV.n)(!1), (0, kV.m)(!1), pB(), BB = setTimeout((() => {
+                BB = null, VB = (0, LV.e)((() => {
+                  VB = null, yB() ? lB() : ((0, kV.n)(!0), TB = setTimeout((() => {
+                    TB = null, VB = (0, LV.e)((() => {
+                      VB = null, yB() ? lB() : (0, kV.m)(!0)
                     }))
-                  }), 3e3), Promise.resolve().then((() => ZJ(4069))).then((JJ => {
-                    JJ.startBackgroundGameSetup()
-                  }), (JJ => {
-                    console.warn("Background game setup: its chunk failed to load", JJ)
+                  }), 3e3), Promise.resolve().then((() => dB(4064))).then((BB => {
+                    BB.startBackgroundGameSetup()
+                  }), (BB => {
+                    console.warn("Background game setup: its chunk failed to load", BB)
                   })))
                 }))
               }), 2e3)
             };
-          for (const ZJ of sF) window.addEventListener(ZJ, XJ, {
+          for (const dB of DV) window.addEventListener(dB, lB, {
             capture: !0,
             passive: !0
           });
-          return XJ(), () => {
-            for (const JJ of sF) window.removeEventListener(JJ, XJ, {
+          return lB(), () => {
+            for (const BB of DV) window.removeEventListener(BB, lB, {
               capture: !0
             });
-            eJ(), (0, YF.m)(!1), (0, YF.l)(!1)
+            pB(), (0, kV.n)(!1), (0, kV.m)(!1)
           }
-        }), [qJ])
-      }(AJ && VJ, "pack" === xJ.kind);
-      const yJ = "landingPage" === EJ;
-      (0, FJ.useEffect)((() => {
-        VJ && (0, BZ.prefetchPremiumCurrencyBundles)()
-      }), [VJ]), (0, FJ.useEffect)((() => {
-        VJ && !AJ && yJ && (0, nF.t)()
-      }), [VJ, AJ, yJ]);
-      const [SJ, IJ] = (0, FJ.useState)(0), [bJ, wJ] = (0, FJ.useState)(null), [WJ, gJ] = (0, FJ.useState)(null), [HJ, kJ] = (0, FJ.useState)(null), [pJ, OJ] = (0, FJ.useState)(null), TJ = (0, FJ.useRef)(null), CJ = (0, FJ.useRef)(null), iJ = (0, FJ.useRef)(!1), RJ = (0, zJ.z)(), LJ = (0, FJ.useRef)(0), aJ = (0, FJ.useRef)(!1);
+        }), [YB])
+      }(JB && fB, "pack" === EB.kind);
+      const MB = "landingPage" === tB;
+      (0, VB.useEffect)((() => {
+        fB && (0, bd.prefetchPremiumCurrencyBundles)()
+      }), [fB]), (0, VB.useEffect)((() => {
+        fB && !JB && MB && (0, uV.p)()
+      }), [fB, JB, MB]);
+      const [zB, wB] = (0, VB.useState)(0), [FB, KB] = (0, VB.useState)(null), [rB, IB] = (0, VB.useState)(null), [cB, PB] = (0, VB.useState)(null), [QB, XB] = (0, VB.useState)(null), WB = (0, VB.useRef)(null), hB = (0, VB.useRef)(null), GB = (0, VB.useRef)(!1), qB = (0, aB.y)(), xB = (0, VB.useRef)(0), jB = (0, VB.useRef)(!1);
 
-      function BJ() {
-        IJ((JJ => JJ + 1))
-      }(0, FJ.useEffect)((() => {
-        if (AJ) {
-          if (FU = !0, RJ && RJ.seq !== LJ.current) {
-            var JJ, cJ;
-            LJ.current = RJ.seq;
-            const ZJ = (0, zJ.c)(RJ);
-            rJ || vJ(ZJ), OJ(RJ.highlight && null !== (JJ = null !== (cJ = UU(ZJ)) && void 0 !== cJ ? cJ : RJ.openItem) && void 0 !== JJ ? JJ : null), gJ(null), "gift" === RJ.mode && RJ.giftRecipientName ? DJ.choose(RJ.giftRecipientName, "prefilled") : "current" !== RJ.mode && DJ.clear(), "gift" !== RJ.mode || RJ.giftRecipientName || BJ(), (0, uJ.f)({
+      function AB() {
+        wB((BB => BB + 1))
+      }(0, VB.useEffect)((() => {
+        if (JB) {
+          if (yy = !0, qB && qB.seq !== xB.current) {
+            var BB, TB;
+            xB.current = qB.seq;
+            const dB = (0, aB.c)(qB);
+            vB || mB(dB), XB(qB.highlight && null !== (BB = null !== (TB = py(dB)) && void 0 !== TB ? TB : qB.openItem) && void 0 !== BB ? BB : null), IB(null), "gift" === qB.mode && qB.giftRecipientName ? LB.choose(qB.giftRecipientName, "prefilled") : "current" !== qB.mode && LB.clear(), "gift" !== qB.mode || qB.giftRecipientName || AB(), (0, CB.f)({
               id: "store.open",
-              value: RJ.source
+              value: qB.source
             })
-          } else aJ.current || (0, uJ.f)({
+          } else jB.current || (0, CB.f)({
             id: "store.open",
             value: "menuTab"
           });
-          aJ.current = !0
-        } else aJ.current = !1
-      }), [AJ, RJ]), (0, FJ.useEffect)((() => {
-        if (!pJ) return;
-        const JJ = setTimeout((() => {
-          OJ(null)
+          jB.current = !0
+        } else jB.current = !1
+      }), [JB, qB]), (0, VB.useEffect)((() => {
+        if (!QB) return;
+        const BB = setTimeout((() => {
+          XB(null)
         }), 4e3);
         return () => {
-          clearTimeout(JJ)
+          clearTimeout(BB)
         }
-      }), [pJ]), (0, FJ.useEffect)((() => {
-        const JJ = TJ.current;
-        var cJ;
-        if (AJ && JJ)
-          if (mJ) CJ.current = mJ, null === (cJ = JJ.querySelector(".StoreDetailBackButton, .CosmeticShopDetailBackButton")) || void 0 === cJ || cJ.focus();
-          else if (CJ.current) {
-          var ZJ;
-          null === (ZJ = JJ.querySelector(`[data-store-item="${CJ.current}"]`)) || void 0 === ZJ || ZJ.focus(), CJ.current = null
+      }), [QB]), (0, VB.useEffect)((() => {
+        const BB = WB.current;
+        var TB;
+        if (JB && BB)
+          if (iB) hB.current = iB, null === (TB = BB.querySelector(".StoreDetailBackButton, .CosmeticShopDetailBackButton")) || void 0 === TB || TB.focus();
+          else if (hB.current) {
+          var dB;
+          null === (dB = BB.querySelector(`[data-store-item="${hB.current}"]`)) || void 0 === dB || dB.focus(), hB.current = null
         }
-      }), [mJ, AJ]), (0, FJ.useEffect)((() => {
-        gJ(null)
-      }), [DJ.query]), (0, FJ.useEffect)((() => {
-        if (!HJ) return;
-        const JJ = setTimeout((() => {
-          kJ(null)
+      }), [iB, JB]), (0, VB.useEffect)((() => {
+        IB(null)
+      }), [LB.query]), (0, VB.useEffect)((() => {
+        if (!cB) return;
+        const BB = setTimeout((() => {
+          PB(null)
         }), 8e3);
         return () => {
-          clearTimeout(JJ)
+          clearTimeout(BB)
         }
-      }), [HJ]);
-      const tJ = jJ.superRankInfo,
-        oJ = tJ ? (0, dJ.ac)(tJ) : 0,
-        lJ = (0, UF.f)(oJ),
-        Jc = oJ > 0,
-        cc = jJ.isLoggedIn(),
-        Zc = jJ.getOwnedCosmeticPacks(),
-        Fc = (0, UF.j)(DJ.query),
-        Uc = (0, UF.e)({
-          mode: Fc,
-          loggedIn: hJ ? cc : null,
-          hasSuperRank: Jc,
-          superRankDaysLeft: lJ,
-          ownedPacks: Zc,
-          packs: ZU,
-          recipient: DJ.recipient
+      }), [cB]);
+      const bB = gB.superRankInfo,
+        nB = bB ? (0, RB.oc)(bB) : 0,
+        eB = (0, pV.f)(nB),
+        BT = nB > 0,
+        TT = gB.isLoggedIn(),
+        dT = gB.getOwnedCosmeticPacks(),
+        VT = (0, pV.k)(LB.query),
+        yT = (0, pV.e)({
+          mode: VT,
+          loggedIn: kB ? TT : null,
+          hasSuperRank: BT,
+          superRankDaysLeft: eB,
+          ownedPacks: dT,
+          packs: Vy,
+          recipient: LB.recipient
         });
-      (0, FJ.useEffect)((() => {
-        if (!cc || !AJ) return;
-        const JJ = (0, zJ.y)();
-        var cJ;
-        JJ && ("superRank" === (cJ = JJ.item) || ZU.includes(cJ)) && ((0, uJ.f)({
+      (0, VB.useEffect)((() => {
+        if (!TT || !JB) return;
+        const BB = (0, aB.w)();
+        var TB;
+        BB && ("superRank" === (TB = BB.item) || Vy.includes(TB)) && ((0, CB.f)({
           id: "store.login_resume",
-          value: JJ.item
-        }), (0, zJ.i)({
-          mode: JJ.mode,
+          value: BB.item
+        }), (0, aB.h)({
+          mode: BB.mode,
           source: "loginResume",
-          giftRecipientName: "gift" === JJ.mode && JJ.recipient ? JJ.recipient : void 0,
-          openItem: JJ.item,
+          giftRecipientName: "gift" === BB.mode && BB.recipient ? BB.recipient : void 0,
+          openItem: BB.item,
           highlight: !0
         }))
-      }), [cc, AJ]);
-      const ec = (0, UF.l)({
-        hasSuperRank: cc && Jc,
-        superRankDaysLeft: lJ,
-        openedThisSession: FU || AJ
+      }), [TT, JB]);
+      const pT = (0, pV.o)({
+        hasSuperRank: TT && BT,
+        superRankDaysLeft: eB,
+        openedThisSession: yy || JB
       });
-      if ((0, FJ.useEffect)((() => {
-          (0, zJ.u)(ec)
-        }), [ec]), !AJ || !(0, NJ.siteSupportsPurchases)()) return null;
-      const Xc = fJ > nJ && nJ <= 700,
-        Ac = !Xc && fJ <= 420,
-        qc = "gift" === Fc ? eU(DJ.recipient) : null,
-        jc = null !== bJ;
+      if ((0, VB.useEffect)((() => {
+          (0, aB.s)(pT)
+        }), [pT]), !JB || !(0, ZB.siteSupportsPurchases)()) return null;
+      const lT = HB > DB && DB <= 700,
+        JT = !lT && HB <= 420,
+        YT = "gift" === VT ? ly(LB.recipient) : null,
+        gT = null !== FB;
 
-      function Yc(JJ) {
-        (0, zJ.o)({
-          item: JJ,
-          mode: Fc,
-          recipient: "gift" === Fc ? DJ.query.trim() : ""
-        }), (0, ZF.b)()
+      function oT(BB) {
+        (0, aB.n)({
+          item: BB,
+          mode: VT,
+          recipient: "gift" === VT ? LB.query.trim() : ""
+        }), (0, VV.d)()
       }
 
-      function hc(JJ, cJ) {
-        (0, uJ.f)({
+      function kT(BB, TB) {
+        (0, CB.f)({
           id: "store.purchase_done",
-          value: `${cJ?"gift":"self"}:${JJ}`
-        }), cJ && (DJ.recordGift(cJ.name, JJ), Dc(cJ))
+          value: `${TB?"gift":"self"}:${BB}`
+        }), TB && (LB.recordGift(TB.name, BB), LT(TB))
       }
 
-      function Dc(JJ) {
-        ! function(JJ) {
+      function LT(BB) {
+        ! function(BB) {
           try {
-            bc.j.setItem(eF, (0, UF.p)(AF(), JJ))
+            FT.j.setItem(lV, (0, pV.s)(YV(), BB))
           } catch {}
         }({
-          name: JJ.name,
-          cosmetics: JJ.cosmetics
-        }), vJ(cU), kJ((cJ => {
-          var ZJ;
+          name: BB.name,
+          cosmetics: BB.cosmetics
+        }), mB(dy), PB((TB => {
+          var dB;
           return {
-            name: JJ.name,
-            seq: (null !== (ZJ = null === cJ || void 0 === cJ ? void 0 : cJ.seq) && void 0 !== ZJ ? ZJ : 0) + 1
+            name: BB.name,
+            seq: (null !== (dB = null === TB || void 0 === TB ? void 0 : TB.seq) && void 0 !== dB ? dB : 0) + 1
           }
         }))
       }
-      async function sc(JJ) {
-        var cJ, ZJ;
-        if (iJ.current) return;
-        if (!cc) return void Yc(JJ);
-        gJ(null), OJ(null);
-        const FJ = "gift" === Fc ? {
-          name: eU(DJ.recipient),
-          cosmetics: DJ.recipientCosmetics
+      async function OT(BB) {
+        var TB, dB;
+        if (GB.current) return;
+        if (!TT) return void oT(BB);
+        IB(null), XB(null);
+        const VB = "gift" === VT ? {
+          name: ly(LB.recipient),
+          cosmetics: LB.recipientCosmetics
         } : null;
-        if (FJ && !FJ.name) return void BJ();
-        const UJ = "superRank" === JJ ? PJ.i.id : (0, PJ.e)(JJ);
-        iJ.current = !0;
-        const eJ = await (0, FF.e)(UJ, null !== (cJ = null === FJ || void 0 === FJ ? void 0 : FJ.name) && void 0 !== cJ ? cJ : null);
-        if (iJ.current = !1, !eJ) return;
-        wJ(JJ);
-        const XJ = await oZ.c.purchase(UJ, null !== (ZJ = null === FJ || void 0 === FJ ? void 0 : FJ.name) && void 0 !== ZJ ? ZJ : null);
-        wJ(null), XJ ? gJ(XJ) : (hc(JJ, FJ), FJ || (await (0, lZ.flushClientAnalyticsEvents)(), (0, tZ.refreshWithoutConfirmation)("superRank" === JJ ? "/super-rank-welcome" : `/pack-welcome/${JJ}`)))
+        if (VB && !VB.name) return void AB();
+        const yB = "superRank" === BB ? SB.p.id : (0, SB.e)(BB);
+        GB.current = !0;
+        const pB = await (0, yV.b)(yB, null !== (TB = null === VB || void 0 === VB ? void 0 : VB.name) && void 0 !== TB ? TB : null);
+        if (GB.current = !1, !pB) return;
+        KB(BB);
+        const lB = await ed.c.purchase(yB, null !== (dB = null === VB || void 0 === VB ? void 0 : VB.name) && void 0 !== dB ? dB : null);
+        KB(null), lB ? IB(lB) : (kT(BB, VB), VB || (await (0, BV.flushClientAnalyticsEvents)(), (0, nd.refreshWithoutConfirmation)("superRank" === BB ? "/super-rank-welcome" : `/pack-welcome/${BB}`)))
       }
-      const nc = eJ()("Store", {
-        StoreGift: "gift" === Fc,
-        StorePortrait: Xc,
-        StoreCompact: Ac
+      const DT = pB()("Store", {
+        StoreGift: "gift" === VT,
+        StorePortrait: lT,
+        StoreCompact: JT
       });
-      if ("pack" === xJ.kind) {
-        const JJ = xJ.pack,
-          cJ = Uc.packs.find((cJ => cJ.pack === JJ));
-        return (0, YJ.jsx)("div", {
-          ref: TJ,
+      if ("pack" === EB.kind) {
+        const BB = EB.pack,
+          TB = yT.packs.find((TB => TB.pack === BB));
+        return (0, oB.jsx)("div", {
+          ref: WB,
           className: "CosmeticShopContainer",
-          children: (0, YJ.jsx)(cF.e, {
-            pack: JJ,
+          children: (0, oB.jsx)(dV.h, {
+            pack: BB,
             onBack: () => {
-              vJ(cU)
+              mB(dy)
             },
-            onPurchased: cJ => {
-              hc(JJ, cJ ? {
-                name: cJ,
+            onPurchased: TB => {
+              kT(BB, TB ? {
+                name: TB,
                 cosmetics: null
               } : null)
             },
-            giftCta: "gift" === Fc && qc && cJ && (0, YJ.jsxs)(YJ.Fragment, {
-              children: [(0, YJ.jsx)(NF, {
-                state: cJ.state,
-                item: JJ,
-                price: (Gc = JJ, "superRank" === Gc ? PJ.i.price : (0, PJ.f)(Gc)),
-                busy: jc,
+            giftCta: "gift" === VT && YT && TB && (0, oB.jsxs)(oB.Fragment, {
+              children: [(0, oB.jsx)(XV, {
+                state: TB.state,
+                item: BB,
+                price: (uT = BB, "superRank" === uT ? SB.p.price : (0, SB.h)(uT)),
+                busy: gT,
                 onAct: () => {
-                  sc(JJ)
+                  OT(BB)
                 },
                 onNeedRecipient: () => {
-                  vJ(cU), BJ()
+                  mB(dy), AB()
                 }
-              }), WJ && (0, YJ.jsx)("span", {
+              }), rB && (0, oB.jsx)("span", {
                 className: "CosmeticShopGiftError SmallTextBold",
-                children: qJ(WJ)
+                children: YB(rB)
               })]
             }),
-            ownedPacks: Zc,
-            startAsGift: "gift" === Fc,
-            initialGiftRecipient: "gift" === Fc ? null !== qc && void 0 !== qc ? qc : DJ.query.trim() : "",
-            highlightCta: pJ === JJ
-          }, JJ)
+            ownedPacks: dT,
+            startAsGift: "gift" === VT,
+            initialGiftRecipient: "gift" === VT ? null !== YT && void 0 !== YT ? YT : LB.query.trim() : "",
+            highlightCta: QB === BB
+          }, BB)
         })
       }
-      var Gc;
-      return "superRank" === xJ.kind ? (0, YJ.jsx)("div", {
-        ref: TJ,
-        className: eJ()(nc, "StoreDetailView"),
-        children: (0, YJ.jsx)(JU, {
-          state: Uc.superRank.state,
-          mode: Fc,
-          giftName: qc,
-          busy: jc,
-          highlight: "superRank" === pJ,
-          purchaseError: WJ,
+      var uT;
+      return "superRank" === EB.kind ? (0, oB.jsx)("div", {
+        ref: WB,
+        className: pB()(DT, "StoreDetailView"),
+        children: (0, oB.jsx)(Ty, {
+          state: yT.superRank.state,
+          mode: VT,
+          giftName: YT,
+          busy: gT,
+          highlight: "superRank" === QB,
+          purchaseError: rB,
           onBack: () => {
-            vJ(cU)
+            mB(dy)
           },
           onChooseRecipient: () => {
-            vJ(cU), BJ()
+            mB(dy), AB()
           },
           onAct: () => {
-            sc("superRank")
+            OT("superRank")
           },
           onLogin: () => {
-            Yc("superRank")
+            oT("superRank")
           }
         })
-      }) : (0, YJ.jsxs)("div", {
-        ref: TJ,
-        className: nc,
-        children: [(0, YJ.jsx)("div", {
+      }) : (0, oB.jsxs)("div", {
+        ref: WB,
+        className: DT,
+        children: [(0, oB.jsx)("div", {
           className: "StoreTopRow",
-          children: (0, YJ.jsx)(EF, {
-            selfName: hJ ? jJ.getPlayerName() : "",
-            giftRecipient: DJ,
-            suggestionsVersion: null !== (cJ = null === HJ || void 0 === HJ ? void 0 : HJ.seq) && void 0 !== cJ ? cJ : 0,
-            pulseSignal: SJ,
-            disabled: jc || !hJ
+          children: (0, oB.jsx)(fV, {
+            selfName: kB ? gB.getPlayerName() : "",
+            giftRecipient: LB,
+            suggestionsVersion: null !== (TB = null === cB || void 0 === cB ? void 0 : cB.seq) && void 0 !== TB ? TB : 0,
+            pulseSignal: zB,
+            disabled: gT || !kB
           })
-        }), HJ && (0, YJ.jsxs)("div", {
+        }), cB && (0, oB.jsxs)("div", {
           className: "StoreNotice StoreNoticeGiftSent",
           onClick: () => {
-            kJ(null)
+            PB(null)
           },
-          children: [(0, YJ.jsx)(JF.c, {
-            showSignal: HJ.seq
-          }), UF.b, " ", qJ("store:giftSent", {
-            name: HJ.name
+          children: [(0, oB.jsx)(TV.c, {
+            showSignal: cB.seq
+          }), pV.d, " ", YB("store:giftSent", {
+            name: cB.name
           })]
-        }, HJ.seq), !HJ && WJ && (0, YJ.jsx)("div", {
+        }, cB.seq), !cB && rB && (0, oB.jsx)("div", {
           className: "StoreNotice StoreNoticeError",
-          children: qJ(WJ)
-        }), (0, YJ.jsx)(lF, {
-          layout: Uc,
-          bundleGift: "gift" === Fc ? {
-            recipientName: qc,
-            lookingUp: "pending" === DJ.recipient.status,
-            busy: jc,
-            onNeedRecipient: BJ,
-            onSent: JJ => {
-              (0, uJ.f)({
+          children: YB(rB)
+        }), (0, oB.jsx)(By, {
+          layout: yT,
+          bundleGift: "gift" === VT ? {
+            recipientName: YT,
+            lookingUp: "pending" === LB.recipient.status,
+            busy: gT,
+            onNeedRecipient: AB,
+            onSent: BB => {
+              (0, CB.f)({
                 id: "store.purchase_done",
                 value: "gift:superGems"
-              }), Dc({
-                name: JJ,
-                cosmetics: DJ.recipientCosmetics
+              }), LT({
+                name: BB,
+                cosmetics: LB.recipientCosmetics
               })
             }
           } : null,
-          superRankDaysLeft: lJ,
-          superRankTotalDays: null !== (UJ = null === tJ || void 0 === tJ ? void 0 : tJ.superRankForDays) && void 0 !== UJ ? UJ : 0,
-          busy: jc,
-          highlightItem: pJ,
-          onOpen: function(JJ) {
-            (0, uJ.f)({
+          superRankDaysLeft: eB,
+          superRankTotalDays: null !== (yB = null === bB || void 0 === bB ? void 0 : bB.superRankForDays) && void 0 !== yB ? yB : 0,
+          busy: gT,
+          highlightItem: QB,
+          onOpen: function(BB) {
+            (0, CB.f)({
               id: "store.item_open",
-              value: JJ
-            }), vJ((0, zJ.f)(JJ))
+              value: BB
+            }), mB((0, aB.e)(BB))
           },
-          onAct: sc,
-          onNeedRecipient: BJ,
-          onLogin: Yc
+          onAct: OT,
+          onNeedRecipient: AB,
+          onLogin: oT
         })]
       })
     }));
-    var AU = ZJ(2321),
-      qU = ZJ(8139),
-      jU = ZJ(2381),
-      YU = ZJ(2240),
-      hU = ZJ(2275),
-      DU = ZJ(2289),
-      sU = ZJ(2292),
-      nU = ZJ(2372),
-      GU = ZJ(2359),
-      fU = ZJ(2344),
-      xU = ZJ(2100),
-      rU = ZJ(2133),
-      vU = ZJ(2117),
-      mU = ZJ(1813),
-      QU = ZJ(2294),
-      EU = ZJ(2142);
+    var Yy = dB(2305),
+      gy = dB(8175),
+      oy = dB(2366),
+      ky = dB(2195),
+      Ly = dB(2258),
+      Oy = dB(2264),
+      Dy = dB(2271),
+      uy = dB(2355),
+      Hy = dB(2338),
+      Ey = dB(2328),
+      vy = dB(2063),
+      my = dB(2094),
+      iy = dB(2088),
+      Ny = dB(1788),
+      ty = dB(2277),
+      fy = dB(2097);
 
-    function VU(JJ) {
+    function sy(BB) {
       let {
-        show: cJ
-      } = JJ;
-      return cJ ? (0, YJ.jsx)(KU, {}) : null
+        show: TB
+      } = BB;
+      return TB ? (0, oB.jsx)(My, {}) : null
     }
 
-    function KU() {
+    function My() {
       const {
-        t: JJ
-      } = (0, XJ.F)(), {
-        followsLeader: cJ
-      } = (0, YU.g)(), {
-        loading: ZJ,
-        friends: UJ,
-        requests: qJ,
-        invites: jJ
-      } = (0, fF.k)(), {
-        userContext: hJ
-      } = (0, sJ.d)(), [DJ, nJ] = (0, FJ.useState)(EU.i);
-      (0, FJ.useEffect)((() => {
-        (0, EU.b)()
+        t: BB
+      } = (0, lB.z)(), {
+        followsLeader: TB
+      } = (0, ky.f)(), {
+        loading: dB,
+        friends: yB,
+        requests: YB,
+        invites: gB
+      } = (0, EV.k)(), {
+        userContext: kB
+      } = (0, OB.b)(), [LB, DB] = (0, VB.useState)(fy.i);
+      (0, VB.useEffect)((() => {
+        (0, fy.b)()
       }), []);
-      const GJ = qJ.map((JJ => JJ.name)),
+      const uB = YB.map((BB => BB.name)),
         {
-          state: xJ,
-          recentRequesters: rJ
-        } = (0, GU.j)(),
-        vJ = new Map([...("loaded" === xJ.status ? xJ.recentPlayers : []).map((JJ => [JJ.preview.name, JJ])), ...rJ.map((JJ => [JJ.name, JJ]))]),
-        mJ = (0, FJ.useRef)(null),
-        [VJ, KJ] = (0, FJ.useState)(""),
-        [yJ, SJ] = (0, FJ.useState)("Enter"),
-        [IJ, MJ] = (0, FJ.useState)(null);
+          state: EB,
+          recentRequesters: vB
+        } = (0, Hy.o)(),
+        mB = new Map([...("loaded" === EB.status ? EB.recentPlayers : []).map((BB => [BB.preview.name, BB])), ...vB.map((BB => [BB.name, BB]))]),
+        iB = (0, VB.useRef)(null),
+        [fB, sB] = (0, VB.useState)(""),
+        [MB, zB] = (0, VB.useState)("Enter"),
+        [wB, UB] = (0, VB.useState)(null);
 
-      function bJ() {
-        VJ && (SJ("Loading"), (0, vU.j)(VJ, "social_menu").then((JJ => {
-          if (mJ.current) switch (JJ.kind) {
+      function FB() {
+        fB && (zB("Loading"), (0, iy.f)(fB, "social_menu").then((BB => {
+          if (iB.current) switch (BB.kind) {
             case "sent":
-              SJ("Success");
+              zB("Success");
               break;
             case "becameFriends":
-              SJ("BecameFriends");
+              zB("BecameFriends");
               break;
             case "failed":
-              MJ(JJ.message), SJ("Error")
+              UB(BB.message), zB("Error")
           }
         })))
       }
-      return (0, FJ.useEffect)((() => {
-        if ("Enter" === yJ || "Loading" === yJ) return;
-        const JJ = setTimeout((() => {
-          mJ.current.value = "", KJ(""), SJ("Enter")
-        }), "Success" === yJ ? 1e3 : 4e3);
+      return (0, VB.useEffect)((() => {
+        if ("Enter" === MB || "Loading" === MB) return;
+        const BB = setTimeout((() => {
+          iB.current.value = "", sB(""), zB("Enter")
+        }), "Success" === MB ? 1e3 : 4e3);
         return () => {
-          clearTimeout(JJ)
+          clearTimeout(BB)
         }
-      }), [yJ]), (0, YJ.jsx)("div", {
+      }), [MB]), (0, oB.jsx)("div", {
         className: "SocialMenu",
-        children: (0, YJ.jsxs)("div", {
+        children: (0, oB.jsxs)("div", {
           className: "SocialMenuInner",
-          children: [(0, YJ.jsxs)("div", {
+          children: [(0, oB.jsxs)("div", {
             className: "SocialMenuColumn",
-            children: [(0, YJ.jsxs)("div", {
+            children: [(0, oB.jsxs)("div", {
               className: "SocialMenuBox SocialMenuAddFriend",
-              children: [(0, YJ.jsx)(sU.c, {
-                label: JJ("socialBar:addFriend")
-              }), (0, YJ.jsxs)("div", {
+              children: [(0, oB.jsx)(Dy.e, {
+                label: BB("socialBar:addFriend")
+              }), (0, oB.jsxs)("div", {
                 className: "AddFriendBody",
-                children: [(0, YJ.jsxs)("div", {
-                  className: eJ()("AddFriendBodyOverlay", {
-                    [`AddFriendBodyOverlay${yJ}`]: !0
+                children: [(0, oB.jsxs)("div", {
+                  className: pB()("AddFriendBodyOverlay", {
+                    [`AddFriendBodyOverlay${MB}`]: !0
                   }),
-                  children: ["Loading" === yJ && (0, YJ.jsx)(EJ.c, {}), "Success" === yJ && (0, YJ.jsx)(AJ.c, {
+                  children: ["Loading" === MB && (0, oB.jsx)(tB.b, {}), "Success" === MB && (0, oB.jsx)(JB.e, {
                     name: "check"
-                  }), "BecameFriends" === yJ && (0, YJ.jsx)(YJ.Fragment, {
-                    children: JJ("socialBar:nowFriends", {
-                      playerName: VJ
+                  }), "BecameFriends" === MB && (0, oB.jsx)(oB.Fragment, {
+                    children: BB("socialBar:nowFriends", {
+                      playerName: fB
                     })
-                  }), "Error" === yJ && IJ && (0, YJ.jsx)(YJ.Fragment, {
-                    children: JJ(IJ.translationKey, IJ.params)
+                  }), "Error" === MB && wB && (0, oB.jsx)(oB.Fragment, {
+                    children: BB(wB.translationKey, wB.params)
                   })]
-                }), (0, YJ.jsxs)("div", {
+                }), (0, oB.jsxs)("div", {
                   className: "PlayerSearch",
-                  children: [(0, YJ.jsx)(QJ.e, {
+                  children: [(0, oB.jsx)(NB.e, {
                     className: "PlayerSearchInput",
-                    placeholderText: JJ("socialBar:enterPlayerName"),
-                    domRef: mJ,
-                    onValueChange: JJ => {
-                      KJ((0, gJ.p)(JJ)), mJ.current.value = (0, gJ.p)(JJ)
+                    placeholderText: BB("socialBar:enterPlayerName"),
+                    domRef: iB,
+                    onValueChange: BB => {
+                      sB((0, IB.n)(BB)), iB.current.value = (0, IB.n)(BB)
                     },
                     onEnter: () => {
-                      VJ && (0, uJ.f)({
+                      fB && (0, CB.f)({
                         id: "social.add_friend",
                         value: "social_menu"
-                      }), bJ()
+                      }), FB()
                     }
-                  }), (0, YJ.jsxs)(fJ.d, {
+                  }), (0, oB.jsxs)(HB.d, {
                     className: "PlayerSearchInputButton SmallTextLight",
                     onClick: () => {
-                      bJ()
+                      FB()
                     },
                     analyticsClick: {
                       id: "social.add_friend",
                       value: "social_menu"
                     },
-                    children: [(0, YJ.jsx)(AJ.c, {
+                    children: [(0, oB.jsx)(JB.e, {
                       name: "user-plus"
-                    }), " ", JJ("socialBar:sendRequest")]
+                    }), " ", BB("socialBar:sendRequest")]
                   })]
                 })]
-              }), (0, YJ.jsx)(QU.b, {
+              }), (0, oB.jsx)(ty.b, {
                 surface: "social_menu",
                 prefetchOnMount: !0
               })]
-            }), jJ.length > 0 && (0, YJ.jsxs)("div", {
+            }), gB.length > 0 && (0, oB.jsxs)("div", {
               className: "SocialMenuBox SocialMenuInvites",
-              children: [(0, YJ.jsx)(sU.c, {
-                label: JJ("socialBar:invites"),
-                meta: jJ.length
-              }), jJ.map((cJ => (0, YJ.jsxs)("div", {
+              children: [(0, oB.jsx)(Dy.e, {
+                label: BB("socialBar:invites"),
+                meta: gB.length
+              }), gB.map((TB => (0, oB.jsxs)("div", {
                 className: "SocialMenuInvite",
-                children: [(0, YJ.jsx)("div", {
+                children: [(0, oB.jsx)("div", {
                   className: "SocialMenuInviteIcon",
-                  children: (0, YJ.jsx)(xU.c, {
-                    invite: cJ
+                  children: (0, oB.jsx)(vy.e, {
+                    invite: TB
                   })
-                }), (0, YJ.jsx)("div", {
+                }), (0, oB.jsx)("div", {
                   className: "SocialMenuInviteText",
-                  children: (0, YJ.jsx)(xU.d, {
-                    invite: cJ
+                  children: (0, oB.jsx)(vy.g, {
+                    invite: TB
                   })
-                }), (0, YJ.jsx)(fJ.m, {
+                }), (0, oB.jsx)(HB.k, {
                   className: "SocialMenuInviteJoin SmallTextLight",
                   onClick: () => {
-                    (0, rU.e)(cJ)
+                    (0, my.f)(TB)
                   },
                   analyticsClick: {
                     id: "social.accept_invite",
-                    value: `social_menu:${cJ.destination.kind}`
+                    value: `social_menu:${TB.destination.kind}`
                   },
-                  children: JJ("general:join")
-                }), (0, YJ.jsx)(OJ.g, {
-                  tooltipInner: (0, YJ.jsx)(YJ.Fragment, {
-                    children: JJ("general:decline")
+                  children: BB("general:join")
+                }), (0, oB.jsx)(XB.h, {
+                  tooltipInner: (0, oB.jsx)(oB.Fragment, {
+                    children: BB("general:decline")
                   }),
                   delayShow: 0,
-                  children: (0, YJ.jsx)(fJ.g, {
+                  children: (0, oB.jsx)(HB.g, {
                     className: "SocialMenuInviteDecline",
-                    padDefaultFocus: "invite" === (null === DJ || void 0 === DJ ? void 0 : DJ.kind) && DJ.inviteId === cJ.id,
+                    padDefaultFocus: "invite" === (null === LB || void 0 === LB ? void 0 : LB.kind) && LB.inviteId === TB.id,
                     onClick: () => {
-                      fF.b.declineInvite(cJ.id)
+                      EV.e.declineInvite(TB.id)
                     },
                     analyticsClick: {
                       id: "social.decline_invite",
-                      value: `social_menu:${cJ.destination.kind}`
+                      value: `social_menu:${TB.destination.kind}`
                     },
-                    children: (0, YJ.jsx)(AJ.c, {
+                    children: (0, oB.jsx)(JB.e, {
                       name: "xmark"
                     })
                   })
                 })]
-              }, cJ.id)))]
-            }), (0, YJ.jsxs)("div", {
-              className: eJ()("SocialMenuBox SocialMenuRequests", {
-                SocialMenuBoxEmpty: !ZJ && 0 === qJ.length
+              }, TB.id)))]
+            }), (0, oB.jsxs)("div", {
+              className: pB()("SocialMenuBox SocialMenuRequests", {
+                SocialMenuBoxEmpty: !dB && 0 === YB.length
               }),
-              children: [(0, YJ.jsx)(sU.c, {
-                label: (0, YJ.jsxs)(YJ.Fragment, {
-                  children: [(0, YJ.jsx)(AJ.c, {
-                    name: mU.g
-                  }), " ", JJ("socialBar:requests")]
+              children: [(0, oB.jsx)(Dy.e, {
+                label: (0, oB.jsxs)(oB.Fragment, {
+                  children: [(0, oB.jsx)(JB.e, {
+                    name: Ny.h
+                  }), " ", BB("socialBar:requests")]
                 }),
-                meta: (0, YJ.jsxs)(YJ.Fragment, {
-                  children: [qJ.length, qJ.length === TJ.n && (0, YJ.jsx)("span", {
+                meta: (0, oB.jsxs)(oB.Fragment, {
+                  children: [YB.length, YB.length === WB.p && (0, oB.jsx)("span", {
                     className: "SocialSectionTitleLimit",
-                    children: JJ("socialBar:limitReached")
+                    children: BB("socialBar:limitReached")
                   })]
                 })
-              }), ZJ && (0, YJ.jsx)("div", {
+              }), dB && (0, oB.jsx)("div", {
                 className: "SocialMenuLoading",
-                children: (0, YJ.jsx)(EJ.c, {})
-              }), !ZJ && 0 === qJ.length && (0, YJ.jsx)("div", {
+                children: (0, oB.jsx)(tB.b, {})
+              }), !dB && 0 === YB.length && (0, oB.jsx)("div", {
                 className: "SocialMenuEmpty",
-                children: JJ("socialBar:noFriendRequests")
-              }), !ZJ && qJ.length > 0 && (0, YJ.jsx)("div", {
+                children: BB("socialBar:noFriendRequests")
+              }), !dB && YB.length > 0 && (0, oB.jsx)("div", {
                 className: "PlayerRows",
-                children: (0, YJ.jsx)(fU.c, {
+                children: (0, oB.jsx)(Ey.b, {
                   lazyLoadedClassName: "SocialMenuRequestsLazy",
-                  observerUpdateDeps: [qJ],
-                  children: qJ.map(((cJ, ZJ) => {
-                    const FJ = vJ.get(cJ.name);
-                    return (0, YJ.jsxs)(DU.e, {
-                      playerSocialPreview: cJ,
-                      zIndex: qJ.length - ZJ,
-                      padDefaultFocus: (0, EU.g)(DJ, cJ.name, ZJ),
-                      status: FJ && (0, YJ.jsx)(nU.e, {
-                        gameNameWithVariation: FJ.gameNameWithVariation,
-                        isPrivateLobby: FJ.isPrivateLobby
+                  observerUpdateDeps: [YB],
+                  children: YB.map(((TB, dB) => {
+                    const VB = mB.get(TB.name);
+                    return (0, oB.jsxs)(Oy.g, {
+                      playerSocialPreview: TB,
+                      zIndex: YB.length - dB,
+                      padDefaultFocus: (0, fy.f)(LB, TB.name, dB),
+                      status: VB && (0, oB.jsx)(uy.e, {
+                        gameNameWithVariation: VB.gameNameWithVariation,
+                        isPrivateLobby: VB.isPrivateLobby
                       }),
-                      children: [(0, YJ.jsx)(OJ.g, {
-                        tooltipInner: (0, YJ.jsx)(YJ.Fragment, {
-                          children: JJ("general:accept")
+                      children: [(0, oB.jsx)(XB.h, {
+                        tooltipInner: (0, oB.jsx)(oB.Fragment, {
+                          children: BB("general:accept")
                         }),
                         delayShow: 0,
-                        children: (0, YJ.jsx)(fJ.d, {
+                        children: (0, oB.jsx)(HB.d, {
                           className: "FriendRequestButton",
                           onClick: () => {
-                            nJ((0, EU.e)(GJ, ZJ)), (0, vU.h)(cJ.name, !0, {
+                            DB((0, fy.e)(uB, dB)), (0, iy.d)(TB.name, !0, {
                               source: "social_menu",
                               announceFriend: !1
                             })
@@ -4246,19 +4246,19 @@ export const modules = {
                             id: "social.accept_friend_request",
                             value: "social_menu"
                           },
-                          children: (0, YJ.jsx)(AJ.c, {
+                          children: (0, oB.jsx)(JB.e, {
                             name: "check"
                           })
                         })
-                      }), (0, YJ.jsx)(OJ.g, {
-                        tooltipInner: (0, YJ.jsx)(YJ.Fragment, {
-                          children: JJ("general:decline")
+                      }), (0, oB.jsx)(XB.h, {
+                        tooltipInner: (0, oB.jsx)(oB.Fragment, {
+                          children: BB("general:decline")
                         }),
                         delayShow: 0,
-                        children: (0, YJ.jsx)(fJ.g, {
+                        children: (0, oB.jsx)(HB.g, {
                           className: "FriendRequestButton",
                           onClick: () => {
-                            nJ((0, EU.e)(GJ, ZJ)), (0, vU.h)(cJ.name, !1, {
+                            DB((0, fy.e)(uB, dB)), (0, iy.d)(TB.name, !1, {
                               source: "social_menu"
                             })
                           },
@@ -4266,62 +4266,62 @@ export const modules = {
                             id: "social.decline_friend_request",
                             value: "social_menu"
                           },
-                          children: (0, YJ.jsx)(AJ.c, {
+                          children: (0, oB.jsx)(JB.e, {
                             name: "xmark"
                           })
                         })
                       })]
-                    }, `${cJ.name}_${cJ.isError}`)
+                    }, `${TB.name}_${TB.isError}`)
                   }))
                 })
               })]
-            }), (0, YJ.jsx)(nU.k, {})]
-          }), (0, YJ.jsxs)("div", {
+            }), (0, oB.jsx)(uy.j, {})]
+          }), (0, oB.jsxs)("div", {
             className: "SocialMenuColumn",
-            children: [(0, YJ.jsxs)("div", {
+            children: [(0, oB.jsxs)("div", {
               className: "SocialMenuBox SocialMenuParty",
-              children: [(0, YJ.jsx)(sU.c, {
-                label: JJ("socialBar:party")
-              }), (0, YJ.jsx)(hU.d, {})]
-            }), (0, YJ.jsxs)("div", {
+              children: [(0, oB.jsx)(Dy.e, {
+                label: BB("socialBar:party")
+              }), (0, oB.jsx)(Ly.b, {})]
+            }), (0, oB.jsxs)("div", {
               className: "SocialMenuBox SocialMenuFriends",
-              children: [(0, YJ.jsx)(sU.c, {
-                label: (0, YJ.jsxs)(YJ.Fragment, {
-                  children: [(0, YJ.jsx)(AJ.c, {
-                    name: mU.e
-                  }), " ", JJ("socialBar:friends")]
+              children: [(0, oB.jsx)(Dy.e, {
+                label: (0, oB.jsxs)(oB.Fragment, {
+                  children: [(0, oB.jsx)(JB.e, {
+                    name: Ny.e
+                  }), " ", BB("socialBar:friends")]
                 }),
-                meta: (0, YJ.jsxs)(YJ.Fragment, {
-                  children: [UJ.length, UJ.length >= (0, TJ.b)(hJ.getPlayerRanks()) && (0, YJ.jsx)("span", {
+                meta: (0, oB.jsxs)(oB.Fragment, {
+                  children: [yB.length, yB.length >= (0, WB.e)(kB.getPlayerRanks()) && (0, oB.jsx)("span", {
                     className: "SocialSectionTitleLimit",
-                    children: JJ("socialBar:limitReached")
+                    children: BB("socialBar:limitReached")
                   })]
                 })
-              }), ZJ && (0, YJ.jsx)("div", {
+              }), dB && (0, oB.jsx)("div", {
                 className: "SocialMenuLoading",
-                children: (0, YJ.jsx)(EJ.c, {})
-              }), !ZJ && 0 === UJ.length && (0, YJ.jsx)("div", {
+                children: (0, oB.jsx)(tB.b, {})
+              }), !dB && 0 === yB.length && (0, oB.jsx)("div", {
                 className: "SocialMenuEmpty",
-                children: JJ("socialBar:noFriends")
-              }), !ZJ && UJ.length > 0 && (0, YJ.jsx)("div", {
+                children: BB("socialBar:noFriends")
+              }), !dB && yB.length > 0 && (0, oB.jsx)("div", {
                 className: "PlayerRows",
-                children: (0, YJ.jsx)(fU.c, {
+                children: (0, oB.jsx)(Ey.b, {
                   lazyLoadedClassName: "SocialMenuFriendsLazy",
-                  observerUpdateDeps: [UJ],
-                  children: UJ.map(((JJ, ZJ) => (0, YJ.jsx)(DU.e, {
-                    playerSocialPreview: JJ,
+                  observerUpdateDeps: [yB],
+                  children: yB.map(((BB, dB) => (0, oB.jsx)(Oy.g, {
+                    playerSocialPreview: BB,
                     isFriend: !0,
                     hideFriendBadge: !0,
-                    onFriendRemoved: JJ => {
-                      fF.b.removeFriendFromState(JJ)
+                    onFriendRemoved: BB => {
+                      EV.e.removeFriendFromState(BB)
                     },
-                    zIndex: UJ.length - ZJ,
-                    children: (0, YJ.jsx)(DU.d, {
-                      friend: JJ,
-                      followsLeader: cJ,
+                    zIndex: yB.length - dB,
+                    children: (0, oB.jsx)(Oy.c, {
+                      friend: BB,
+                      followsLeader: TB,
                       analyticsSurface: "social_menu"
                     })
-                  }, `${JJ.name}_${JJ.isError}`)))
+                  }, `${BB.name}_${BB.isError}`)))
                 })
               })]
             })]
@@ -4329,230 +4329,230 @@ export const modules = {
         })
       })
     }
-    var yU = ZJ(2215);
-    const SU = JJ => {
+    var zy = dB(2180);
+    const wy = BB => {
         let {
-          action: cJ,
-          padAction: ZJ
-        } = JJ;
+          action: TB,
+          padAction: dB
+        } = BB;
         const {
-          isTouchScreen: FJ
-        } = (0, KJ.j)(["isTouchScreen"]), UJ = (0, UZ.q)();
-        return FJ && !UJ ? null : (0, YJ.jsx)(Bc.e, {
+          isTouchScreen: VB
+        } = (0, sB.m)(["isTouchScreen"]), yB = (0, yd.r)();
+        return VB && !yB ? null : (0, oB.jsx)(AT.d, {
           className: "EverythingMenuTabKey",
-          noaAction: cJ,
+          noaAction: TB,
           padHidesKey: !0,
-          padMenuShortcut: ZJ
+          padMenuShortcut: dB
         })
       },
-      IU = (0, FJ.memo)((function() {
+      Uy = (0, VB.memo)((function() {
         const {
-          t: JJ
-        } = (0, XJ.F)(), {
-          gameState: cJ,
-          openEverythingMenuName: ZJ,
-          initSdkSelectorFinished: UJ
-        } = (0, KJ.j)(["gameState", "openEverythingMenuName", "initSdkSelectorFinished"]), {
-          userContext: AJ
-        } = (0, sJ.d)(), qJ = (0, NJ.siteSupportsPurchases)(), jJ = (0, zJ.B)(), hJ = (JJ, cJ) => (0, YJ.jsx)(SU, {
-          action: JJ,
-          padAction: cJ
-        }), [DJ, nJ] = (0, FJ.useState)(null), GJ = (0, FJ.useRef)(null), rJ = {
-          ..."inGame" === cJ ? {} : (0, fJ.U)({
+          t: BB
+        } = (0, lB.z)(), {
+          gameState: TB,
+          openEverythingMenuName: dB,
+          initSdkSelectorFinished: yB
+        } = (0, sB.m)(["gameState", "openEverythingMenuName", "initSdkSelectorFinished"]), {
+          userContext: JB
+        } = (0, OB.b)(), YB = (0, ZB.siteSupportsPurchases)(), gB = (0, aB.C)(), kB = (BB, TB) => (0, oB.jsx)(wy, {
+          action: BB,
+          padAction: TB
+        }), [LB, DB] = (0, VB.useState)(null), uB = (0, VB.useRef)(null), vB = {
+          ..."inGame" === TB ? {} : (0, HB._)({
             focusOnClick: !1
           }),
-          ...nZ.e
-        }, vJ = null !== ZJ, mJ = ZJ !== lc.m.COSMETIC_SHOP;
-        async function QJ() {
+          ...Dd.e
+        }, mB = null !== dB, iB = dB !== eT.m.COSMETIC_SHOP;
+        async function NB() {
           await async function() {
-            if (!DJ) return;
-            await DJ(), nJ(null)
-          }(), KJ.d.set({
+            if (!LB) return;
+            await LB(), DB(null)
+          }(), sB.d.set({
             openEverythingMenuName: null
           })
         }
-        const EJ = (0, FJ.useMemo)((() => "inGame" === cJ ? {
-          text: JJ("settingsMenu:exitGame"),
+        const tB = (0, VB.useMemo)((() => "inGame" === TB ? {
+          text: BB("settingsMenu:exitGame"),
           onClick: () => {
-            (0, qU.c)()
+            (0, gy.d)()
           }
-        } : (0, IJ.b)() ? {
-          text: JJ("settingsMenu:exitGame"),
+        } : (0, wB.d)() ? {
+          text: BB("settingsMenu:exitGame"),
           onClick: () => {
-            oJ.j.discordActivity().then((JJ => {
-              JJ.exit("User exited the game")
+            nB.k.discordActivity().then((BB => {
+              BB.exit("User exited the game")
             }))
           }
-        } : null), [cJ, JJ]);
-        const VJ = (0, YJ.jsx)("div", {
+        } : null), [TB, BB]);
+        const fB = (0, oB.jsx)("div", {
           className: "EverythingMenuCloseButtonClickZone",
           onClick: () => {
-            QJ()
+            NB()
           },
-          children: (0, YJ.jsx)(fJ.j, {
+          children: (0, oB.jsx)(HB.i, {
             className: "EverythingMenuCloseButton"
           })
         });
-        return (0, YJ.jsx)(GZ.c, {
-          showing: vJ,
+        return (0, oB.jsx)(ud.d, {
+          showing: mB,
           globallyUniqueKey: "EverythingMenu",
           alwaysMountChildren: !0,
-          keepsMovement: ZJ === lc.m.SHOP,
-          doGameplayStartStopOnShow: "inGame" === cJ,
-          children: (0, YJ.jsx)(xZ.b, {
+          keepsMovement: dB === eT.m.SHOP,
+          doGameplayStartStopOnShow: "inGame" === TB,
+          children: (0, oB.jsx)(Ed.c, {
             className: "EverythingMenuContainer",
-            show: vJ,
-            children: (0, YJ.jsx)(fZ.c, {
+            show: mB,
+            children: (0, oB.jsx)(Hd.b, {
               close: () => {
-                QJ()
+                NB()
               },
               togglePointerLock: !1,
-              children: (0, YJ.jsxs)("div", {
+              children: (0, oB.jsxs)("div", {
                 className: "EverythingMenu",
-                children: [!(0, uZ.k)(ZJ) && (0, YJ.jsxs)("div", {
+                children: [!(0, Gd.j)(dB) && (0, oB.jsxs)("div", {
                   className: "EverythingMenuTabList",
-                  children: [(0, YJ.jsxs)("div", {
+                  children: [(0, oB.jsxs)("div", {
                     className: "EverythingMenuTabListButtonContainer EverythingMenuTabListButtonContainerStart",
-                    children: [EJ && (0, YJ.jsx)(fJ.b, {
+                    children: [tB && (0, oB.jsx)(HB.b, {
                       className: "EverythingMenuBackButton",
                       padDestructive: !0,
                       onClick: () => {
-                        EJ.onClick()
+                        tB.onClick()
                       },
-                      children: EJ.text
-                    }), vJ && qJ && (0, YJ.jsx)("div", {
-                      ...rJ,
+                      children: tB.text
+                    }), mB && YB && (0, oB.jsx)("div", {
+                      ...vB,
                       className: "EverythingMenuWallet",
-                      title: JJ("homePage:getPremiumCurrency"),
+                      title: BB("homePage:getPremiumCurrency"),
                       onClick: () => {
-                        (0, zJ.i)({
+                        (0, aB.h)({
                           mode: "current",
                           source: "menuWallet"
                         })
                       },
-                      children: (0, YJ.jsx)(AU.c, {})
+                      children: (0, oB.jsx)(Yy.h, {})
                     })]
-                  }), (0, YJ.jsxs)("div", {
+                  }), (0, oB.jsxs)("div", {
                     className: "EverythingMenuTabListInner",
                     "data-pad-tabs": "1",
-                    children: [(0, YJ.jsxs)("div", {
-                      ...rJ,
+                    children: [(0, oB.jsxs)("div", {
+                      ...vB,
                       "data-pad-tab": !0,
-                      "data-pad-selected": ZJ === lc.m.SETTINGS ? "true" : void 0,
-                      className: eJ()("EverythingMenuTab", {
-                        EverythingMenuTabActive: ZJ === lc.m.SETTINGS
+                      "data-pad-selected": dB === eT.m.SETTINGS ? "true" : void 0,
+                      className: pB()("EverythingMenuTab", {
+                        EverythingMenuTabActive: dB === eT.m.SETTINGS
                       }),
                       onClick: () => {
-                        KJ.d.set({
-                          openEverythingMenuName: lc.m.SETTINGS
+                        sB.d.set({
+                          openEverythingMenuName: eT.m.SETTINGS
                         })
                       },
-                      children: [JJ("general:settings"), hJ("OpenSettings", "pause")]
-                    }), (0, YJ.jsxs)("div", {
-                      ...rJ,
+                      children: [BB("general:settings"), kB("OpenSettings", "pause")]
+                    }), (0, oB.jsxs)("div", {
+                      ...vB,
                       "data-pad-tab": !0,
-                      "data-pad-selected": ZJ === lc.m.CUSTOMISATION ? "true" : void 0,
-                      className: eJ()("EverythingMenuTab", {
-                        EverythingMenuTabActive: ZJ === lc.m.CUSTOMISATION
+                      "data-pad-selected": dB === eT.m.CUSTOMISATION ? "true" : void 0,
+                      className: pB()("EverythingMenuTab", {
+                        EverythingMenuTabActive: dB === eT.m.CUSTOMISATION
                       }),
                       onClick: () => {
-                        KJ.d.set({
-                          openEverythingMenuName: lc.m.CUSTOMISATION
+                        sB.d.set({
+                          openEverythingMenuName: eT.m.CUSTOMISATION
                         })
                       },
-                      children: [JJ("general:player"), hJ("OpenCharacterCustomization")]
-                    }), xJ.featureFlags.useSocialFeatures && (0, YJ.jsxs)("div", {
-                      ...rJ,
+                      children: [BB("general:player"), kB("OpenCharacterCustomization")]
+                    }), EB.featureFlags.useSocialFeatures && (0, oB.jsxs)("div", {
+                      ...vB,
                       "data-pad-tab": !0,
-                      "data-pad-selected": ZJ === lc.m.SOCIAL ? "true" : void 0,
-                      className: eJ()("EverythingMenuTab", {
-                        EverythingMenuTabActive: ZJ === lc.m.SOCIAL
+                      "data-pad-selected": dB === eT.m.SOCIAL ? "true" : void 0,
+                      className: pB()("EverythingMenuTab", {
+                        EverythingMenuTabActive: dB === eT.m.SOCIAL
                       }),
-                      ...(0, uJ.d)({
+                      ...(0, CB.b)({
                         id: "social.open_menu",
                         value: "menu_tab"
-                      }, ZJ === lc.m.SOCIAL),
+                      }, dB === eT.m.SOCIAL),
                       onClick: () => {
-                        KJ.d.set({
-                          openEverythingMenuName: lc.m.SOCIAL
+                        sB.d.set({
+                          openEverythingMenuName: eT.m.SOCIAL
                         })
                       },
-                      children: [JJ("socialBar:social"), (0, YJ.jsx)(yU.d, {})]
-                    }), qJ && (0, YJ.jsxs)("div", {
-                      ...rJ,
+                      children: [BB("socialBar:social"), (0, oB.jsx)(zy.c, {})]
+                    }), YB && (0, oB.jsxs)("div", {
+                      ...vB,
                       "data-pad-tab": !0,
-                      "data-pad-selected": ZJ === lc.m.COSMETIC_SHOP ? "true" : void 0,
-                      className: eJ()("EverythingMenuTab EverythingMenuTabCosmeticShop", {
-                        EverythingMenuTabActive: ZJ === lc.m.COSMETIC_SHOP
+                      "data-pad-selected": dB === eT.m.COSMETIC_SHOP ? "true" : void 0,
+                      className: pB()("EverythingMenuTab EverythingMenuTabCosmeticShop", {
+                        EverythingMenuTabActive: dB === eT.m.COSMETIC_SHOP
                       }),
                       onClick: () => {
-                        KJ.d.set({
-                          openEverythingMenuName: lc.m.COSMETIC_SHOP
+                        sB.d.set({
+                          openEverythingMenuName: eT.m.COSMETIC_SHOP
                         })
                       },
-                      children: [(0, YJ.jsx)("span", {
+                      children: [(0, oB.jsx)("span", {
                         className: "EverythingMenuTabCosmeticShopText",
-                        children: JJ("store:title")
-                      }), "dot" === jJ && (0, YJ.jsx)("span", {
+                        children: BB("store:title")
+                      }), "dot" === gB && (0, oB.jsx)("span", {
                         className: "EverythingMenuTabStoreBadge EverythingMenuTabStoreDot"
                       })]
-                    }), "inGame" === cJ && (0, YJ.jsxs)("div", {
-                      ...rJ,
+                    }), "inGame" === TB && (0, oB.jsxs)("div", {
+                      ...vB,
                       "data-pad-tab": !0,
-                      "data-pad-selected": ZJ === lc.m.LOBBY_LEADERBOARD ? "true" : void 0,
-                      className: eJ()("EverythingMenuTab", {
-                        EverythingMenuTabActive: ZJ === lc.m.LOBBY_LEADERBOARD
+                      "data-pad-selected": dB === eT.m.LOBBY_LEADERBOARD ? "true" : void 0,
+                      className: pB()("EverythingMenuTab", {
+                        EverythingMenuTabActive: dB === eT.m.LOBBY_LEADERBOARD
                       }),
                       onClick: () => {
-                        KJ.d.set({
-                          openEverythingMenuName: lc.m.LOBBY_LEADERBOARD
+                        sB.d.set({
+                          openEverythingMenuName: eT.m.LOBBY_LEADERBOARD
                         })
                       },
-                      children: [JJ("general:lobby"), hJ("OpenLobbyLeaderboard", "leaderboard")]
+                      children: [BB("general:lobby"), kB("OpenLobbyLeaderboard", "leaderboard")]
                     })]
-                  }), (0, YJ.jsx)("div", {
+                  }), (0, oB.jsx)("div", {
                     className: "EverythingMenuTabListButtonContainer EverythingMenuTabListButtonContainerEnd",
-                    children: VJ
+                    children: fB
                   })]
-                }), (0, uZ.k)(ZJ) && VJ, (0, YJ.jsxs)("div", {
+                }), (0, Gd.j)(dB) && fB, (0, oB.jsxs)("div", {
                   className: "EverythingMenuBody",
                   "data-pad-initial-area": !0,
                   style: {
-                    "--everythingMenuBodyBackgroundOpacity": "inGame" === cJ ? "0.85" : "1"
+                    "--everythingMenuBodyBackgroundOpacity": "inGame" === TB ? "0.85" : "1"
                   },
-                  children: [(0, YJ.jsx)(jZ, {
-                    show: ZJ === lc.m.SETTINGS,
-                    setBeforeResumeCallback: nJ
-                  }), (0, YJ.jsx)(sZ, {
-                    show: ZJ === lc.m.CUSTOMISATION
-                  }), (0, YJ.jsx)(FJ.Suspense, {
+                  children: [(0, oB.jsx)(gd, {
+                    show: dB === eT.m.SETTINGS,
+                    setBeforeResumeCallback: DB
+                  }), (0, oB.jsx)(Od, {
+                    show: dB === eT.m.CUSTOMISATION
+                  }), (0, oB.jsx)(VB.Suspense, {
                     fallback: null,
-                    children: (0, YJ.jsx)(PZ, {
-                      show: ZJ === lc.m.SHOP
+                    children: (0, oB.jsx)(Pd, {
+                      show: dB === eT.m.SHOP
                     })
-                  }), (0, YJ.jsx)(LZ, {
-                    show: ZJ === lc.m.LOBBY_LEADERBOARD
-                  }), (0, YJ.jsx)(XU, {
-                    show: ZJ === lc.m.COSMETIC_SHOP
-                  }), (0, YJ.jsx)(VU, {
-                    show: ZJ === lc.m.SOCIAL
+                  }), (0, oB.jsx)(jd, {
+                    show: dB === eT.m.LOBBY_LEADERBOARD
+                  }), (0, oB.jsx)(Jy, {
+                    show: dB === eT.m.COSMETIC_SHOP
+                  }), (0, oB.jsx)(sy, {
+                    show: dB === eT.m.SOCIAL
                   })]
-                }), !(0, xJ.isMobileApp)() && (0, rZ.f)(AJ.getPlayerRanks()) && (0, YJ.jsx)(xZ.b, {
-                  ref: GJ,
+                }), !(0, EB.isMobileApp)() && (0, vd.h)(JB.getPlayerRanks()) && (0, oB.jsx)(Ed.c, {
+                  ref: uB,
                   className: "EverythingMenuBannerDiv",
-                  show: mJ,
+                  show: iB,
                   "data-pad-hint-bar-avoid": !0,
                   "data-pad-no-step-in": !0,
-                  children: (0, YJ.jsx)(jU.b, {
+                  children: (0, oB.jsx)(oy.b, {
                     info: {
                       adId: 2,
                       adType: "leaderboard",
                       adAlias: "banner_shop"
                     },
                     sizeInfo: {
-                      parentRef: GJ
+                      parentRef: uB
                     },
-                    showing: vJ && mJ,
+                    showing: mB && iB,
                     verticalAlign: "center",
                     horizontalAlign: "center",
                     noFillShowBloxdAdProbability: 1
@@ -4564,135 +4564,135 @@ export const modules = {
         })
       }))
   },
-  8563: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => eJ
+  8578: (BB, TB, dB) => {
+    dB.d(TB, {
+      b: () => pB
     });
-    var FJ = ZJ(235),
-      UJ = ZJ(8565);
+    var VB = dB(279),
+      yB = dB(8584);
 
-    function eJ(JJ, cJ, ZJ) {
-      const eJ = Object.entries(cJ).sort(((JJ, cJ) => cJ[1] - JJ[1])),
-        XJ = (0, FJ.lb)(JJ);
-      XJ.push(JJ ? "\n\n" : "\n");
-      for (const [UJ, nJ] of eJ) {
-        var AJ, qJ, jJ;
-        const JJ = null !== (AJ = null === ZJ || void 0 === ZJ || null === (qJ = ZJ[UJ]) || void 0 === qJ ? void 0 : qJ.icon) && void 0 !== AJ ? AJ : `${UJ} Enchantment`;
-        XJ.push({
-          icon: JJ,
+    function pB(BB, TB, dB) {
+      const pB = Object.entries(TB).sort(((BB, TB) => TB[1] - BB[1])),
+        lB = (0, VB.qb)(BB);
+      lB.push(BB ? "\n\n" : "\n");
+      for (const [yB, DB] of pB) {
+        var JB, YB, gB;
+        const BB = null !== (JB = null === dB || void 0 === dB || null === (YB = dB[yB]) || void 0 === YB ? void 0 : YB.icon) && void 0 !== JB ? JB : `${yB} Enchantment`;
+        lB.push({
+          icon: BB,
           style: {
             fontSize: "1.5rem"
           }
-        }), XJ.push({
-          str: `${UJ} ${null!==(jJ=(0,FJ.O)(nJ))&&void 0!==jJ?jJ:nJ}\n`
+        }), lB.push({
+          str: `${yB} ${null!==(gB=(0,VB.U)(DB))&&void 0!==gB?gB:DB}\n`
         })
       }
-      XJ.push({
+      lB.push({
         str: "\n"
       });
-      for (const [FJ, nJ] of eJ) {
-        var YJ, hJ, DJ, sJ;
-        const JJ = null !== (YJ = null === ZJ || void 0 === ZJ || null === (hJ = ZJ[FJ]) || void 0 === hJ ? void 0 : hJ.icon) && void 0 !== YJ ? YJ : `${FJ} Enchantment`,
-          cJ = null !== (DJ = null === ZJ || void 0 === ZJ || null === (sJ = ZJ[FJ]) || void 0 === sJ ? void 0 : sJ.description) && void 0 !== DJ ? DJ : (0, UJ.j)(FJ);
-        XJ.push({
-          icon: JJ,
+      for (const [VB, DB] of pB) {
+        var oB, kB, LB, OB;
+        const BB = null !== (oB = null === dB || void 0 === dB || null === (kB = dB[VB]) || void 0 === kB ? void 0 : kB.icon) && void 0 !== oB ? oB : `${VB} Enchantment`,
+          TB = null !== (LB = null === dB || void 0 === dB || null === (OB = dB[VB]) || void 0 === OB ? void 0 : OB.description) && void 0 !== LB ? LB : (0, yB.g)(VB);
+        lB.push({
+          icon: BB,
           style: {
             fontSize: "1.25rem",
             opacity: .75
           }
-        }), XJ.push({
-          str: cJ,
+        }), lB.push({
+          str: TB,
           style: {
             fontSize: "0.8em",
             fontWeight: "normal",
             opacity: .75
           }
-        }), XJ.push({
+        }), lB.push({
           str: "\n"
         })
       }
-      return XJ
+      return lB
     }
   },
-  8571: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      e: () => jJ,
-      f: () => rJ,
-      j: () => fJ,
-      l: () => qJ,
-      m: () => xJ,
-      q: () => YJ,
-      t: () => DJ,
-      x: () => GJ,
-      z: () => hJ
+  8591: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => gB,
+      g: () => vB,
+      j: () => HB,
+      k: () => YB,
+      m: () => EB,
+      p: () => oB,
+      r: () => LB,
+      t: () => uB,
+      v: () => kB
     });
-    var FJ = ZJ(227),
-      UJ = ZJ(535),
-      eJ = ZJ(235),
-      XJ = ZJ(3715),
-      AJ = ZJ(8563);
+    var VB = dB(270),
+      yB = dB(572),
+      pB = dB(279),
+      lB = dB(3706),
+      JB = dB(8578);
 
-    function qJ(JJ, cJ) {
-      var ZJ;
+    function YB(BB, TB) {
+      var dB;
       let {
-        player: FJ,
-        chestOrCreative: UJ
-      } = JJ;
-      var eJ;
-      return cJ < FJ.length ? null !== (eJ = FJ[cJ]) && void 0 !== eJ ? eJ : null : null !== (ZJ = UJ[cJ - FJ.length]) && void 0 !== ZJ ? ZJ : null
+        player: VB,
+        chestOrCreative: yB
+      } = BB;
+      var pB;
+      return TB < VB.length ? null !== (pB = VB[TB]) && void 0 !== pB ? pB : null : null !== (dB = yB[TB - VB.length]) && void 0 !== dB ? dB : null
     }
 
-    function jJ(JJ) {
-      var cJ;
-      return null !== (cJ = JJ.amount) && void 0 !== cJ ? cJ : 0
+    function gB(BB) {
+      var TB;
+      return null !== (TB = BB.amount) && void 0 !== TB ? TB : 0
     }
 
-    function YJ(JJ) {
-      return 0 === JJ.button || void 0 === JJ.button
+    function oB(BB) {
+      return 0 === BB.button || void 0 === BB.button
     }
 
-    function hJ(JJ) {
-      return !!JJ.shiftKey
+    function kB(BB) {
+      return !!BB.shiftKey
     }
 
-    function DJ(JJ) {
-      return "touches" in JJ || "touch" === JJ.pointerType || "pen" === JJ.pointerType
+    function LB(BB) {
+      return "touches" in BB || "touch" === BB.pointerType || "pen" === BB.pointerType
     }
-    const sJ = new Set,
-      nJ = 50;
+    const OB = new Set,
+      DB = 50;
 
-    function GJ(JJ, cJ) {
-      var ZJ;
-      const FJ = null === (ZJ = JJ[cJ]) || void 0 === ZJ ? void 0 : ZJ.displayName;
-      return (0, UJ.P)(FJ) ? "string" !== typeof cJ ? "" : (!sJ.has(cJ) && sJ.size < nJ && (sJ.add(cJ), console.warn(`No item called "${cJ}", so its hover shows the name as given`)), cJ) : FJ
+    function uB(BB, TB) {
+      var dB;
+      const VB = null === (dB = BB[TB]) || void 0 === dB ? void 0 : dB.displayName;
+      return (0, yB.M)(VB) ? "string" !== typeof TB ? "" : (!OB.has(TB) && OB.size < DB && (OB.add(TB), console.warn(`No item called "${TB}", so its hover shows the name as given`)), TB) : VB
     }
 
-    function fJ(JJ, cJ, ZJ) {
-      var qJ, jJ, YJ, hJ, DJ, sJ, nJ, fJ, xJ, rJ, vJ, mJ, QJ, EJ;
-      const VJ = JJ.attributes,
-        KJ = null !== (qJ = null === (jJ = cJ[JJ.name]) || void 0 === jJ ? void 0 : jJ.rootName) && void 0 !== qJ ? qJ : JJ.name,
-        yJ = null !== (YJ = null !== (hJ = VJ.customDisplayName) && void 0 !== hJ ? hJ : null === (DJ = cJ[JJ.name]) || void 0 === DJ ? void 0 : DJ.displayName) && void 0 !== YJ ? YJ : GJ(cJ, KJ);
-      let SJ = yJ;
-      const IJ = null === (sJ = VJ.customAttributes) || void 0 === sJ ? void 0 : sJ.enchantmentTier;
-      IJ && (SJ = (0, eJ.lb)(yJ, {
-        colour: eJ.gb[IJ]
+    function HB(BB, TB, dB) {
+      var YB, gB, oB, kB, LB, OB, DB, HB, EB, vB, mB, iB, NB, tB;
+      const fB = BB.attributes,
+        sB = null !== (YB = null === (gB = TB[BB.name]) || void 0 === gB ? void 0 : gB.rootName) && void 0 !== YB ? YB : BB.name,
+        MB = null !== (oB = null !== (kB = fB.customDisplayName) && void 0 !== kB ? kB : null === (LB = TB[BB.name]) || void 0 === LB ? void 0 : LB.displayName) && void 0 !== oB ? oB : uB(TB, sB);
+      let zB = MB;
+      const wB = null === (OB = fB.customAttributes) || void 0 === OB ? void 0 : OB.enchantmentTier;
+      wB && (zB = (0, pB.qb)(MB, {
+        colour: pB.lb[wB]
       }));
-      const MJ = null !== (nJ = null !== (fJ = null !== (xJ = function(JJ, cJ) {
-        var ZJ;
-        if (void 0 === JJ || null !== (ZJ = cJ.customAttributes) && void 0 !== ZJ && ZJ.author) return JJ;
-        const UJ = (0, FJ.Sb)(JJ);
-        return UJ.every((JJ => "string" === typeof JJ)) ? JJ : UJ.map((JJ => "string" === typeof JJ ? JJ : {
-          icon: JJ.icon,
+      const UB = null !== (DB = null !== (HB = null !== (EB = function(BB, TB) {
+        var dB;
+        if (void 0 === BB || null !== (dB = TB.customAttributes) && void 0 !== dB && dB.author) return BB;
+        const yB = (0, VB.hc)(BB);
+        return yB.every((BB => "string" === typeof BB)) ? BB : yB.map((BB => "string" === typeof BB ? BB : {
+          icon: BB.icon,
           style: {
             fontSize: "1.5em"
           }
         }))
-      }(VJ.customDescription, VJ)) && void 0 !== xJ ? xJ : null === (rJ = cJ[JJ.name]) || void 0 === rJ ? void 0 : rJ.description) && void 0 !== fJ ? fJ : null === (vJ = cJ[KJ]) || void 0 === vJ ? void 0 : vJ.description) && void 0 !== nJ ? nJ : "";
-      let bJ = MJ;
-      if (null !== (mJ = VJ.customAttributes) && void 0 !== mJ && mJ.enchantments) bJ = (0, AJ.d)(MJ, VJ.customAttributes.enchantments, VJ.customAttributes.enchantmentData);
-      else if (ZJ[KJ]) bJ = (0, eJ.lb)(MJ), bJ.push({
+      }(fB.customDescription, fB)) && void 0 !== EB ? EB : null === (vB = TB[BB.name]) || void 0 === vB ? void 0 : vB.description) && void 0 !== HB ? HB : null === (mB = TB[sB]) || void 0 === mB ? void 0 : mB.description) && void 0 !== DB ? DB : "";
+      let FB = UB;
+      if (null !== (iB = fB.customAttributes) && void 0 !== iB && iB.enchantments) FB = (0, JB.b)(UB, fB.customAttributes.enchantments, fB.customAttributes.enchantmentData);
+      else if (dB[sB]) FB = (0, pB.qb)(UB), FB.push({
         str: "\n"
-      }), bJ.push({
+      }), FB.push({
         str: "Enchantable",
         style: {
           fontSize: "0.8em",
@@ -4700,765 +4700,765 @@ export const modules = {
           opacity: .4
         }
       });
-      else if (null !== (QJ = VJ.customAttributes) && void 0 !== QJ && QJ.mobSettings) {
-        var wJ, WJ;
-        const JJ = VJ.customAttributes.mobSettings;
-        var gJ, HJ;
-        if (bJ = [], (0, UJ.P)(VJ.customAttributes.health) || (bJ.push({
+      else if (null !== (NB = fB.customAttributes) && void 0 !== NB && NB.mobSettings) {
+        var KB, rB;
+        const BB = fB.customAttributes.mobSettings;
+        var IB, cB;
+        if (FB = [], (0, yB.M)(fB.customAttributes.health) || (FB.push({
             str: "\n"
-          }), bJ.push({
+          }), FB.push({
             icon: "Health",
             style: {
               fontSize: "1.5em"
             }
-          }), bJ.push({
+          }), FB.push({
             str: " "
-          }), bJ.push({
-            str: VJ.customAttributes.health.toString()
-          }), (0, UJ.P)(JJ.maxHealth) || (bJ.push({
+          }), FB.push({
+            str: fB.customAttributes.health.toString()
+          }), (0, yB.M)(BB.maxHealth) || (FB.push({
             str: "/"
-          }), bJ.push({
-            str: JJ.maxHealth.toString()
-          }))), !(0, UJ.P)(JJ.attackDamage) && JJ.attackDamage > 0 && (bJ.push({
+          }), FB.push({
+            str: BB.maxHealth.toString()
+          }))), !(0, yB.M)(BB.attackDamage) && BB.attackDamage > 0 && (FB.push({
             str: "\n"
-          }), bJ.push({
+          }), FB.push({
             icon: "Iron Sword",
             style: {
               fontSize: "1.5em"
             }
-          }), bJ.push({
+          }), FB.push({
             str: " "
-          }), bJ.push({
-            str: JJ.attackDamage.toString()
-          })), !(0, UJ.P)(JJ.secondaryAttackDamage) && JJ.secondaryAttackDamage > 0 && (bJ.push({
+          }), FB.push({
+            str: BB.attackDamage.toString()
+          })), !(0, yB.M)(BB.secondaryAttackDamage) && BB.secondaryAttackDamage > 0 && (FB.push({
             str: "\n"
-          }), bJ.push({
+          }), FB.push({
             icon: "Stone Crossbow",
             style: {
               fontSize: "1.5em"
             }
-          }), bJ.push({
+          }), FB.push({
             str: " "
-          }), bJ.push({
-            str: JJ.secondaryAttackDamage.toString()
-          })), (0, UJ.P)(JJ.baseRunningSpeed) || (bJ.push({
+          }), FB.push({
+            str: BB.secondaryAttackDamage.toString()
+          })), (0, yB.M)(BB.baseRunningSpeed) || (FB.push({
             str: "\n"
-          }), bJ.push({
+          }), FB.push({
             icon: "Speed",
             style: {
               fontSize: "1.5em"
             }
-          }), bJ.push({
+          }), FB.push({
             str: " "
-          }), bJ.push({
-            str: JJ.baseRunningSpeed.toFixed(2)
-          })), "Saddled" === JJ.metaInfo) bJ.push({
+          }), FB.push({
+            str: BB.baseRunningSpeed.toFixed(2)
+          })), "Saddled" === BB.metaInfo) FB.push({
           str: "\n"
-        }), bJ.push({
+        }), FB.push({
           str: {
             translationKey: "general:has"
           }
-        }), bJ.push({
+        }), FB.push({
           str: " "
-        }), bJ.push({
-          icon: null !== (gJ = null === (HJ = JJ.tameInfo) || void 0 === HJ ? void 0 : HJ.saddleItemName) && void 0 !== gJ ? gJ : "Saddle",
+        }), FB.push({
+          icon: null !== (IB = null === (cB = BB.tameInfo) || void 0 === cB ? void 0 : cB.saddleItemName) && void 0 !== IB ? IB : "Saddle",
           style: {
             fontSize: "1.5em"
           }
         });
-        if (bJ.push({
+        if (FB.push({
             str: "\n"
-          }), bJ.push({
+          }), FB.push({
             str: "\n"
-          }), JJ.petInfo && null !== (wJ = JJ.tameInfo) && void 0 !== wJ && wJ.supportsFriendship) {
-          const cJ = XJ.b.getIconsFromFriendshipPoints(JJ.petInfo.friendshipPoints);
-          for (const JJ of cJ) bJ.push({
-            icon: JJ,
+          }), BB.petInfo && null !== (KB = BB.tameInfo) && void 0 !== KB && KB.supportsFriendship) {
+          const TB = lB.e.getIconsFromFriendshipPoints(BB.petInfo.friendshipPoints);
+          for (const BB of TB) FB.push({
+            icon: BB,
             style: {
               fontSize: "1.5em"
             }
           });
-          bJ.push({
+          FB.push({
             str: "\n"
           });
-          const ZJ = XJ.b.getMobHungerLevel(JJ.petInfo.lastFedAt);
-          for (const JJ of XJ.b.hungerLevelIcons[ZJ]) bJ.push({
-            icon: JJ,
+          const dB = lB.e.getMobHungerLevel(BB.petInfo.lastFedAt);
+          for (const BB of lB.e.hungerLevelIcons[dB]) FB.push({
+            icon: BB,
             style: {
               fontSize: "1.5em"
             }
           });
-          bJ.push({
+          FB.push({
             str: " "
-          }), bJ.push({
-            str: XJ.b.hungerLevelTranslations[ZJ],
+          }), FB.push({
+            str: lB.e.hungerLevelTranslations[dB],
             style: {
               fontWeight: "bolder"
             }
           })
         }
-        if (JJ.tameInfo && null !== (WJ = JJ.tameInfo) && void 0 !== WJ && WJ.supportsFriendship) {
-          var PJ, kJ;
-          let cJ = null !== (PJ = JJ.tameInfo.likedFoods) && void 0 !== PJ ? PJ : [];
-          bJ.push({
+        if (BB.tameInfo && null !== (rB = BB.tameInfo) && void 0 !== rB && rB.supportsFriendship) {
+          var SB, PB;
+          let TB = null !== (SB = BB.tameInfo.likedFoods) && void 0 !== SB ? SB : [];
+          FB.push({
             str: "\n"
-          }), bJ.push({
+          }), FB.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: XJ.b.feedTextColours[XJ.b.MobFoodType.Superliked]
+              color: lB.e.feedTextColours[lB.e.MobFoodType.Superliked]
             }
-          }), bJ.push({
+          }), FB.push({
             str: " "
-          }), null !== (kJ = JJ.petInfo) && void 0 !== kJ && kJ.superlikedFoodKnown ? (bJ.push({
-            icon: JJ.petInfo.superlikedFood,
+          }), null !== (PB = BB.petInfo) && void 0 !== PB && PB.superlikedFoodKnown ? (FB.push({
+            icon: BB.petInfo.superlikedFood,
             style: {
               fontSize: "1.5em"
             }
-          }), cJ = cJ.filter((cJ => cJ !== JJ.petInfo.superlikedFood))) : bJ.push({
+          }), TB = TB.filter((TB => TB !== BB.petInfo.superlikedFood))) : FB.push({
             icon: "Question Mark",
             style: {
               fontSize: "1.5em"
             }
-          }), bJ.push({
+          }), FB.push({
             str: "\n"
-          }), bJ.push({
+          }), FB.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: XJ.b.feedTextColours[XJ.b.MobFoodType.Liked]
+              color: lB.e.feedTextColours[lB.e.MobFoodType.Liked]
             }
-          }), bJ.push({
+          }), FB.push({
             str: " "
           });
-          for (const JJ of cJ) bJ.push({
-            icon: JJ,
+          for (const BB of TB) FB.push({
+            icon: BB,
             style: {
               fontSize: "1.5em"
             }
           });
-          bJ.push({
+          FB.push({
             str: "\n"
-          }), bJ.push({
+          }), FB.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: XJ.b.feedTextColours[XJ.b.MobFoodType.Neutral]
+              color: lB.e.feedTextColours[lB.e.MobFoodType.Neutral]
             }
-          }), bJ.push({
+          }), FB.push({
             str: " "
           });
-          for (const ZJ of null !== (pJ = JJ.tameInfo.neutralFoods) && void 0 !== pJ ? pJ : []) {
-            var pJ;
-            bJ.push({
-              icon: ZJ,
+          for (const dB of null !== (QB = BB.tameInfo.neutralFoods) && void 0 !== QB ? QB : []) {
+            var QB;
+            FB.push({
+              icon: dB,
               style: {
                 fontSize: "1.5em"
               }
             })
           }
-          bJ.push({
+          FB.push({
             str: "\n"
-          }), bJ.push({
+          }), FB.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: XJ.b.feedTextColours[XJ.b.MobFoodType.Disliked]
+              color: lB.e.feedTextColours[lB.e.MobFoodType.Disliked]
             }
-          }), bJ.push({
+          }), FB.push({
             str: " "
           });
-          for (const ZJ of null !== (dJ = JJ.tameInfo.dislikedFoods) && void 0 !== dJ ? dJ : []) {
-            var dJ;
-            bJ.push({
-              icon: ZJ,
+          for (const dB of null !== (RB = BB.tameInfo.dislikedFoods) && void 0 !== RB ? RB : []) {
+            var RB;
+            FB.push({
+              icon: dB,
               style: {
                 fontSize: "1.5em"
               }
             })
           }
         }
-        bJ.length > 0 ? (bJ.shift(), bJ.unshift(...(0, eJ.lb)(MJ))) : bJ = (0, eJ.lb)(MJ)
+        FB.length > 0 ? (FB.shift(), FB.unshift(...(0, pB.qb)(UB))) : FB = (0, pB.qb)(UB)
       }
       return {
-        name: SJ,
-        desc: bJ,
-        fontStyle: null !== (EJ = VJ.customAttributes) && void 0 !== EJ && EJ.author ? "italic" : "normal"
+        name: zB,
+        desc: FB,
+        fontStyle: null !== (tB = fB.customAttributes) && void 0 !== tB && tB.author ? "italic" : "normal"
       }
     }
 
-    function xJ(JJ, cJ, ZJ, FJ) {
-      const UJ = qJ(JJ, ZJ),
-        eJ = qJ(JJ, FJ);
-      if (!UJ) return !1;
-      const XJ = cJ[UJ.name].armourReduction,
-        AJ = cJ[eJ.name].armourReduction;
-      if (AJ === XJ) {
-        var jJ, YJ, hJ, DJ;
-        const JJ = null !== (jJ = null === (YJ = UJ.attributes.customAttributes) || void 0 === YJ ? void 0 : YJ.enchantmentTier) && void 0 !== jJ ? jJ : "Tier 0",
-          cJ = null !== (hJ = null === (DJ = eJ.attributes.customAttributes) || void 0 === DJ ? void 0 : DJ.enchantmentTier) && void 0 !== hJ ? hJ : "Tier 0";
-        return parseInt(JJ.replace("Tier ", "")) >= parseInt(cJ.replace("Tier ", ""))
+    function EB(BB, TB, dB, VB) {
+      const yB = YB(BB, dB),
+        pB = YB(BB, VB);
+      if (!yB) return !1;
+      const lB = TB[yB.name].armourReduction,
+        JB = TB[pB.name].armourReduction;
+      if (JB === lB) {
+        var gB, oB, kB, LB;
+        const BB = null !== (gB = null === (oB = yB.attributes.customAttributes) || void 0 === oB ? void 0 : oB.enchantmentTier) && void 0 !== gB ? gB : "Tier 0",
+          TB = null !== (kB = null === (LB = pB.attributes.customAttributes) || void 0 === LB ? void 0 : LB.enchantmentTier) && void 0 !== kB ? kB : "Tier 0";
+        return parseInt(BB.replace("Tier ", "")) >= parseInt(TB.replace("Tier ", ""))
       }
-      return XJ > AJ
+      return lB > JB
     }
 
-    function rJ(JJ) {
-      let cJ;
-      if ("number" === typeof JJ) {
-        const ZJ = document.querySelector(`[data-inven-idx="${JJ}"]`);
-        if (!ZJ) return null;
-        cJ = ZJ.getBoundingClientRect()
-      } else cJ = JJ.getBoundingClientRect();
+    function vB(BB) {
+      let TB;
+      if ("number" === typeof BB) {
+        const dB = document.querySelector(`[data-inven-idx="${BB}"]`);
+        if (!dB) return null;
+        TB = dB.getBoundingClientRect()
+      } else TB = BB.getBoundingClientRect();
       return {
-        x: cJ.left + cJ.width / 2,
-        y: cJ.top + cJ.height / 2
+        x: TB.left + TB.width / 2,
+        y: TB.top + TB.height / 2
       }
     }
   },
-  8487: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => sJ,
-      g: () => nJ,
-      j: () => GJ
+  8529: (BB, TB, dB) => {
+    dB.d(TB, {
+      c: () => OB,
+      f: () => DB,
+      g: () => uB
     });
-    var FJ = ZJ(1329),
-      UJ = ZJ(47),
-      eJ = ZJ(1201),
-      XJ = ZJ(3950),
-      AJ = ZJ(2102),
-      qJ = ZJ(1086),
-      jJ = ZJ(80),
-      YJ = ZJ(1743),
-      hJ = ZJ(1232),
-      DJ = ZJ(990);
+    var VB = dB(1324),
+      yB = dB(62),
+      pB = dB(1201),
+      lB = dB(3942),
+      JB = dB(2068),
+      YB = dB(1078),
+      gB = dB(95),
+      oB = dB(1727),
+      kB = dB(1225),
+      LB = dB(980);
 
-    function sJ(JJ) {
+    function OB(BB) {
       let {
-        show: cJ,
-        onClose: ZJ
-      } = JJ;
+        show: TB,
+        onClose: dB
+      } = BB;
       const {
-        requestedGameNameWithVariation: FJ,
-        lobbyName: UJ,
-        shownLobbyName: eJ
-      } = (0, YJ.f)("connectedGame"), qJ = (0, AJ.c)(FJ, UJ, !1);
-      return jJ.featureFlags.canUseInviteLinks && (0, DJ.jsx)(XJ.c, {
-        show: cJ,
-        close: ZJ,
+        requestedGameNameWithVariation: VB,
+        lobbyName: yB,
+        shownLobbyName: pB
+      } = (0, oB.i)("connectedGame"), YB = (0, JB.d)(VB, yB, !1);
+      return gB.featureFlags.canUseInviteLinks && (0, LB.jsx)(lB.b, {
+        show: TB,
+        close: dB,
         padShowsHud: !0,
         togglePointerLock: !1,
         globallyUniqueKey: "InviteLinkBox",
         doGameplayStartStopOnShow: !0,
-        children: (0, DJ.jsxs)("div", {
+        children: (0, LB.jsxs)("div", {
           className: "InviteLinkBox AnimFadeInScaleUp",
-          children: [(0, DJ.jsx)("div", {
+          children: [(0, LB.jsx)("div", {
             className: "InviteLinkBoxHeader SmallTextBold",
             children: "Invite Friends"
-          }), (0, DJ.jsxs)("div", {
+          }), (0, LB.jsxs)("div", {
             className: "InviteLinkBoxDescription SmallTextLight",
-            children: [(0, DJ.jsx)("div", {
+            children: [(0, LB.jsx)("div", {
               className: "InviteLinkBoxSubheader SmallTextBold",
               children: '"Join Lobby Name" Button Info'
-            }), "Game: ", null === qJ ? (0, DJ.jsx)(hJ.c, {}) : qJ, (0, DJ.jsx)("br", {}), "Lobby Name: ", eJ, (0, DJ.jsx)("br", {}), (0, DJ.jsx)("br", {}), (0, DJ.jsx)("br", {}), (0, DJ.jsx)("div", {
+            }), "Game: ", null === YB ? (0, LB.jsx)(kB.b, {}) : YB, (0, LB.jsx)("br", {}), "Lobby Name: ", pB, (0, LB.jsx)("br", {}), (0, LB.jsx)("br", {}), (0, LB.jsx)("br", {}), (0, LB.jsx)("div", {
               className: "InviteLinkBoxSubheader SmallTextBold",
               children: "Link"
             })]
-          }), (0, DJ.jsx)(nJ, {})]
+          }), (0, LB.jsx)(DB, {})]
         })
       })
     }
 
-    function nJ() {
-      var JJ;
+    function DB() {
+      var BB;
       const {
-        t: cJ
-      } = (0, qJ.F)(), ZJ = null !== (JJ = GJ(jJ.featureFlags.canUseInviteLinks)) && void 0 !== JJ ? JJ : "Loading Link...", [eJ, XJ] = (0, UJ.useState)(0), [AJ, YJ] = (0, UJ.useReducer)((JJ => JJ + 1), 0);
-      return (0, UJ.useEffect)((() => {
-        const JJ = setTimeout((() => {
-          YJ()
+        t: TB
+      } = (0, YB.z)(), dB = null !== (BB = uB(gB.featureFlags.canUseInviteLinks)) && void 0 !== BB ? BB : "Loading Link...", [pB, lB] = (0, yB.useState)(0), [JB, oB] = (0, yB.useReducer)((BB => BB + 1), 0);
+      return (0, yB.useEffect)((() => {
+        const BB = setTimeout((() => {
+          oB()
         }), 1100);
         return () => {
-          clearTimeout(JJ)
+          clearTimeout(BB)
         }
-      }), [eJ]), jJ.featureFlags.canUseInviteLinks && (0, DJ.jsxs)("div", {
+      }), [pB]), gB.featureFlags.canUseInviteLinks && (0, LB.jsxs)("div", {
         className: "InviteLinkInnerWrapper",
-        children: [(0, DJ.jsx)("div", {
+        children: [(0, LB.jsx)("div", {
           className: "InviteLinkInner",
-          children: ZJ
-        }), (0, DJ.jsx)(FJ.d, {
+          children: dB
+        }), (0, LB.jsx)(VB.d, {
           className: "InviteLinkCopyButton",
           onClick: () => {
-            navigator.clipboard.writeText(ZJ).catch((JJ => {
-              console.error("Failed to copy invite link:", JJ)
-            })), XJ(Date.now())
+            navigator.clipboard.writeText(dB).catch((BB => {
+              console.error("Failed to copy invite link:", BB)
+            })), lB(Date.now())
           },
-          disabled: Date.now() - eJ < 1e3,
-          children: Date.now() - eJ < 1e3 ? cJ("general:copied") : cJ("general:copy")
+          disabled: Date.now() - pB < 1e3,
+          children: Date.now() - pB < 1e3 ? TB("general:copied") : TB("general:copy")
         })]
       })
     }
 
-    function GJ(JJ) {
-      const [cJ, ZJ] = (0, UJ.useState)(null);
-      return (0, UJ.useEffect)((() => {
-        if (!JJ) return;
-        let cJ = !0;
-        return (0, eJ.y)().then((JJ => {
-          cJ && ZJ(JJ)
-        })).catch((JJ => {
-          console.error("Failed to get invite link:", JJ)
+    function uB(BB) {
+      const [TB, dB] = (0, yB.useState)(null);
+      return (0, yB.useEffect)((() => {
+        if (!BB) return;
+        let TB = !0;
+        return (0, pB.z)().then((BB => {
+          TB && dB(BB)
+        })).catch((BB => {
+          console.error("Failed to get invite link:", BB)
         })), () => {
-          cJ = !1
+          TB = !1
         }
-      }), [JJ]), cJ
+      }), [BB]), TB
     }
   },
-  8550: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => jJ
+  8565: (BB, TB, dB) => {
+    dB.d(TB, {
+      c: () => gB
     });
-    var FJ = ZJ(47),
-      UJ = ZJ(926),
-      eJ = ZJ.n(UJ),
-      XJ = ZJ(1743),
-      AJ = ZJ(990);
+    var VB = dB(62),
+      yB = dB(933),
+      pB = dB.n(yB),
+      lB = dB(1727),
+      JB = dB(980);
 
-    function qJ(JJ) {
-      const cJ = Math.floor(JJ / 3600),
-        ZJ = Math.floor(JJ % 3600 / 60),
-        FJ = Math.floor(JJ % 60),
-        UJ = `${ZJ.toString().padStart(2,"0")}:${FJ.toString().padStart(2,"0")}`;
-      return cJ > 0 ? `${cJ}:${UJ}` : UJ
+    function YB(BB) {
+      const TB = Math.floor(BB / 3600),
+        dB = Math.floor(BB % 3600 / 60),
+        VB = Math.floor(BB % 60),
+        yB = `${dB.toString().padStart(2,"0")}:${VB.toString().padStart(2,"0")}`;
+      return TB > 0 ? `${TB}:${yB}` : yB
     }
-    const jJ = (0, FJ.memo)((function(JJ) {
+    const gB = (0, VB.memo)((function(BB) {
       let {
-        className: cJ
-      } = JJ;
+        className: TB
+      } = BB;
       const {
-        recording: ZJ,
-        seconds: FJ
-      } = (0, XJ.f)("replayRecorder");
-      return ZJ ? (0, AJ.jsxs)("div", {
-        className: eJ()("RecordingIndicator", cJ),
-        children: [(0, AJ.jsx)("span", {
+        recording: dB,
+        seconds: VB
+      } = (0, lB.i)("replayRecorder");
+      return dB ? (0, JB.jsxs)("div", {
+        className: pB()("RecordingIndicator", TB),
+        children: [(0, JB.jsx)("span", {
           className: "RecordingIndicatorDot"
-        }), (0, AJ.jsx)("span", {
+        }), (0, JB.jsx)("span", {
           className: "RecordingIndicatorLabel",
           children: "REC"
-        }), (0, AJ.jsx)("span", {
+        }), (0, JB.jsx)("span", {
           className: "RecordingIndicatorTime",
-          children: qJ(FJ)
+          children: YB(VB)
         })]
       }) : null
     }))
   },
-  8167: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => IJ,
-      h: () => SJ
+  8194: (BB, TB, dB) => {
+    dB.d(TB, {
+      b: () => wB,
+      f: () => zB
     });
-    var FJ = ZJ(1086),
-      UJ = ZJ(47),
-      eJ = ZJ(1756),
-      XJ = ZJ(1769),
-      AJ = ZJ(926),
-      qJ = ZJ.n(AJ),
-      jJ = ZJ(1329),
-      YJ = ZJ(13),
-      hJ = ZJ(80),
-      DJ = ZJ(93),
-      sJ = ZJ(4401),
-      nJ = ZJ(2175),
-      GJ = ZJ(105),
-      fJ = ZJ(1778),
-      xJ = ZJ(1782),
-      rJ = ZJ(8176),
-      vJ = ZJ(227),
-      mJ = ZJ(990);
-    const QJ = {
+    var VB = dB(1078),
+      yB = dB(62),
+      pB = dB(1738),
+      lB = dB(1751),
+      JB = dB(933),
+      YB = dB.n(JB),
+      gB = dB(1324),
+      oB = dB(21),
+      kB = dB(95),
+      LB = dB(105),
+      OB = dB(4411),
+      DB = dB(2139),
+      uB = dB(127),
+      HB = dB(1754),
+      EB = dB(1757),
+      vB = dB(8196),
+      mB = dB(270),
+      iB = dB(980);
+    const NB = {
       floating: "settingsMenu:joystickFloating",
       fixed_shown: "settingsMenu:joystickFixed",
       fixed_hidden: "settingsMenu:joystickHidden"
     };
-    var EJ = ZJ(8178);
-    const VJ = [function() {
+    var tB = dB(8204);
+    const fB = [function() {
       const {
-        t: JJ
-      } = (0, FJ.F)(), {
-        joystickMode: cJ,
-        touchSpeedCurve: ZJ,
-        autorun: UJ,
-        jumpLock: eJ
-      } = (0, YJ.j)(["clientEscMenuOptions"]).clientEscMenuOptions;
-      return (0, mJ.jsxs)(mJ.Fragment, {
-        children: [(0, mJ.jsx)(sJ.f, {
-          label: JJ("settingsMenu:joystick"),
-          options: vJ.nb.map((cJ => ({
-            value: cJ,
-            label: JJ(QJ[cJ])
+        t: BB
+      } = (0, VB.z)(), {
+        joystickMode: TB,
+        touchSpeedCurve: dB,
+        autorun: yB,
+        jumpLock: pB
+      } = (0, oB.m)(["clientEscMenuOptions"]).clientEscMenuOptions;
+      return (0, iB.jsxs)(iB.Fragment, {
+        children: [(0, iB.jsx)(OB.g, {
+          label: BB("settingsMenu:joystick"),
+          options: mB.wb.map((TB => ({
+            value: TB,
+            label: BB(NB[TB])
           }))),
-          value: cJ,
-          onChange: JJ => {
-            YJ.d.setClientEscMenuOptions({
-              joystickMode: JJ
+          value: TB,
+          onChange: BB => {
+            oB.d.setClientEscMenuOptions({
+              joystickMode: BB
             })
           },
-          circleInfoText: JJ("settingsMenu:joystickInfo")
-        }), (0, mJ.jsx)(sJ.e, {
-          label: JJ("settingsMenu:preciseWalking"),
-          checked: ZJ,
-          onClick: JJ => {
-            YJ.d.setClientEscMenuOptions({
-              touchSpeedCurve: JJ
+          circleInfoText: BB("settingsMenu:joystickInfo")
+        }), (0, iB.jsx)(OB.e, {
+          label: BB("settingsMenu:preciseWalking"),
+          checked: dB,
+          onClick: BB => {
+            oB.d.setClientEscMenuOptions({
+              touchSpeedCurve: BB
             })
           },
-          circleInfoText: JJ("settingsMenu:preciseWalkingInfo")
-        }), (0, mJ.jsx)(sJ.e, {
-          label: JJ("settingsMenu:autoRun"),
-          checked: UJ,
-          onClick: JJ => {
-            YJ.d.setClientEscMenuOptions({
-              autorun: JJ
+          circleInfoText: BB("settingsMenu:preciseWalkingInfo")
+        }), (0, iB.jsx)(OB.e, {
+          label: BB("settingsMenu:autoRun"),
+          checked: yB,
+          onClick: BB => {
+            oB.d.setClientEscMenuOptions({
+              autorun: BB
             })
           },
-          circleInfoText: JJ("settingsMenu:autoRunInfo")
-        }), (0, mJ.jsx)(sJ.e, {
-          label: JJ("settingsMenu:jumpLock"),
-          checked: eJ,
-          onClick: JJ => {
-            YJ.d.setClientEscMenuOptions({
-              jumpLock: JJ
+          circleInfoText: BB("settingsMenu:autoRunInfo")
+        }), (0, iB.jsx)(OB.e, {
+          label: BB("settingsMenu:jumpLock"),
+          checked: pB,
+          onClick: BB => {
+            oB.d.setClientEscMenuOptions({
+              jumpLock: BB
             })
           },
-          circleInfoText: JJ("settingsMenu:jumpLockInfo")
+          circleInfoText: BB("settingsMenu:jumpLockInfo")
         })]
       })
     }, function() {
       const {
-        t: JJ
-      } = (0, FJ.F)(), {
-        clientEscMenuOptions: cJ
-      } = (0, YJ.j)(["clientEscMenuOptions"]);
-      return (0, mJ.jsx)(sJ.e, {
-        label: JJ("touchSettings:actionButtons"),
-        checked: cJ.touchActionButtons,
-        onClick: JJ => {
-          YJ.d.setClientEscMenuOptions({
-            touchActionButtons: JJ
+        t: BB
+      } = (0, VB.z)(), {
+        clientEscMenuOptions: TB
+      } = (0, oB.m)(["clientEscMenuOptions"]);
+      return (0, iB.jsx)(OB.e, {
+        label: BB("touchSettings:actionButtons"),
+        checked: TB.touchActionButtons,
+        onClick: BB => {
+          oB.d.setClientEscMenuOptions({
+            touchActionButtons: BB
           })
         },
-        circleInfoText: JJ("touchSettings:actionButtonsInfo")
+        circleInfoText: BB("touchSettings:actionButtonsInfo")
       })
     }, function() {
       const {
-        t: JJ
-      } = (0, FJ.F)(), {
-        clientEscMenuOptions: cJ
-      } = (0, YJ.j)(["clientEscMenuOptions"]);
-      return (0, EJ.e)() ? (0, mJ.jsx)(sJ.e, {
-        label: JJ("settingsMenu:vibration"),
-        checked: cJ.vibration,
-        onClick: JJ => {
-          YJ.d.setClientEscMenuOptions({
-            vibration: JJ
+        t: BB
+      } = (0, VB.z)(), {
+        clientEscMenuOptions: TB
+      } = (0, oB.m)(["clientEscMenuOptions"]);
+      return (0, tB.c)() ? (0, iB.jsx)(OB.e, {
+        label: BB("settingsMenu:vibration"),
+        checked: TB.vibration,
+        onClick: BB => {
+          oB.d.setClientEscMenuOptions({
+            vibration: BB
           })
         },
-        circleInfoText: JJ("settingsMenu:vibrationInfo")
+        circleInfoText: BB("settingsMenu:vibrationInfo")
       }) : null
     }];
 
-    function KJ() {
-      return (0, mJ.jsx)(mJ.Fragment, {
-        children: VJ.map(((JJ, cJ) => (0, mJ.jsx)(JJ, {}, cJ)))
+    function sB() {
+      return (0, iB.jsx)(iB.Fragment, {
+        children: fB.map(((BB, TB) => (0, iB.jsx)(BB, {}, TB)))
       })
     }
-    var yJ = ZJ(3833);
+    var MB = dB(3825);
 
-    function SJ() {
+    function zB() {
       const {
-        t: JJ
-      } = (0, FJ.F)(), {
-        isTouchScreen: cJ,
-        clientEscMenuOptions: ZJ,
-        gameState: XJ
-      } = (0, YJ.j)(["isTouchScreen", "clientEscMenuOptions", "gameState"]), AJ = (0, nJ.f)("ezBridging"), qJ = (0, nJ.f)("ezTowering"), fJ = "inGame" !== XJ || !0 === AJ, xJ = (0, GJ.e)() && ("inGame" !== XJ || !0 === qJ), [, vJ] = (0, UJ.useReducer)((JJ => JJ + 1), 0), QJ = (0, rJ.d)(), [EJ, VJ] = (0, UJ.useState)(yJ.e);
-      return (0, mJ.jsxs)("div", {
+        t: BB
+      } = (0, VB.z)(), {
+        isTouchScreen: TB,
+        clientEscMenuOptions: dB,
+        gameState: lB
+      } = (0, oB.m)(["isTouchScreen", "clientEscMenuOptions", "gameState"]), JB = (0, DB.j)("ezBridging"), YB = (0, DB.j)("ezTowering"), HB = "inGame" !== lB || !0 === JB, EB = (0, uB.h)() && ("inGame" !== lB || !0 === YB), [, mB] = (0, yB.useReducer)((BB => BB + 1), 0), NB = (0, vB.f)(), [tB, fB] = (0, yB.useState)(MB.f);
+      return (0, iB.jsxs)("div", {
         className: "SettingsMenuRightInner",
-        children: [QJ && (0, mJ.jsxs)("div", {
+        children: [NB && (0, iB.jsxs)("div", {
           className: "SettingBox ControlsControllerNote",
-          children: [(0, mJ.jsx)("div", {
-            children: JJ("controller:settingsControlsNote")
-          }), (0, mJ.jsx)(jJ.O, {
+          children: [(0, iB.jsx)("div", {
+            children: BB("controller:settingsControlsNote")
+          }), (0, iB.jsx)(gB.T, {
             onClick: () => {
-              YJ.d.set({
+              oB.d.set({
                 openSettingsCategory: "controller"
               })
             },
-            children: JJ("controller:settingsOpenController")
+            children: BB("controller:settingsOpenController")
           })]
-        }), (0, hJ.isTouchscreen)() && !(0, hJ.isMobile)() ? (0, mJ.jsx)(mJ.Fragment, {
-          children: (0, mJ.jsx)(sJ.e, {
-            label: JJ("settingsMenu:useTouchControls"),
-            checked: EJ,
-            onClick: JJ => {
-              (0, yJ.b)(JJ), VJ(JJ)
+        }), (0, kB.isTouchscreen)() && !(0, kB.isMobile)() ? (0, iB.jsx)(iB.Fragment, {
+          children: (0, iB.jsx)(OB.e, {
+            label: BB("settingsMenu:useTouchControls"),
+            checked: tB,
+            onClick: BB => {
+              (0, MB.e)(BB), fB(BB)
             }
           })
-        }) : null, cJ && (0, mJ.jsx)(KJ, {}), fJ && (0, mJ.jsx)(sJ.e, {
-          label: JJ("settingsMenu:ezBridging"),
-          checked: ZJ.ezBridging,
-          onClick: JJ => {
-            YJ.d.setClientEscMenuOptions({
-              ezBridging: JJ
+        }) : null, TB && (0, iB.jsx)(sB, {}), HB && (0, iB.jsx)(OB.e, {
+          label: BB("settingsMenu:ezBridging"),
+          checked: dB.ezBridging,
+          onClick: BB => {
+            oB.d.setClientEscMenuOptions({
+              ezBridging: BB
             })
           },
-          circleInfoText: JJ("settingsMenu:ezBridgingInfo")
-        }), xJ && (0, mJ.jsx)(sJ.e, {
-          label: JJ("settingsMenu:ezTowering"),
-          checked: ZJ.ezTowering,
-          onClick: JJ => {
-            YJ.d.setClientEscMenuOptions({
-              ezTowering: JJ
+          circleInfoText: BB("settingsMenu:ezBridgingInfo")
+        }), EB && (0, iB.jsx)(OB.e, {
+          label: BB("settingsMenu:ezTowering"),
+          checked: dB.ezTowering,
+          onClick: BB => {
+            oB.d.setClientEscMenuOptions({
+              ezTowering: BB
             })
           },
-          circleInfoText: JJ("settingsMenu:ezToweringInfo")
-        }), (0, mJ.jsx)(sJ.e, {
-          label: JJ("settingsMenu:crouchToggle"),
-          checked: ZJ.crouchIsToggle,
-          onClick: JJ => {
-            YJ.d.setClientEscMenuOptions({
-              crouchIsToggle: JJ
+          circleInfoText: BB("settingsMenu:ezToweringInfo")
+        }), (0, iB.jsx)(OB.e, {
+          label: BB("settingsMenu:crouchToggle"),
+          checked: dB.crouchIsToggle,
+          onClick: BB => {
+            oB.d.setClientEscMenuOptions({
+              crouchIsToggle: BB
             })
           },
-          circleInfoText: JJ("settingsMenu:crouchToggleInfo")
-        }), (0, mJ.jsx)(sJ.e, {
-          label: JJ("settingsMenu:hideUiToggle"),
-          checked: ZJ.hideUiIsToggle,
-          onClick: JJ => {
-            YJ.d.setClientEscMenuOptions({
-              hideUiIsToggle: JJ
+          circleInfoText: BB("settingsMenu:crouchToggleInfo")
+        }), (0, iB.jsx)(OB.e, {
+          label: BB("settingsMenu:hideUiToggle"),
+          checked: dB.hideUiIsToggle,
+          onClick: BB => {
+            oB.d.setClientEscMenuOptions({
+              hideUiIsToggle: BB
             })
           },
-          circleInfoText: JJ("settingsMenu:hideUiToggleInfo")
-        }), "mouseOnly" !== (0, DJ.e)() && (0, mJ.jsx)(sJ.h, {
-          name: JJ("settingsMenu:touchscreenSensitivity"),
+          circleInfoText: BB("settingsMenu:hideUiToggleInfo")
+        }), "mouseOnly" !== (0, LB.e)() && (0, iB.jsx)(OB.k, {
+          name: BB("settingsMenu:touchscreenSensitivity"),
           min: 1,
           max: 900,
           step: 1,
-          initValue: ZJ.touchscreenSensitivity,
-          onChange: JJ => {
-            YJ.d.setClientEscMenuOptions({
-              touchscreenSensitivity: JJ
+          initValue: dB.touchscreenSensitivity,
+          onChange: BB => {
+            oB.d.setClientEscMenuOptions({
+              touchscreenSensitivity: BB
             })
           }
-        }), !(0, hJ.isMobile)() && (0, mJ.jsx)(sJ.h, {
-          name: JJ("settingsMenu:mouseSensitivity"),
+        }), !(0, kB.isMobile)() && (0, iB.jsx)(OB.k, {
+          name: BB("settingsMenu:mouseSensitivity"),
           min: 1,
           max: 200,
           step: 1,
-          initValue: ZJ.mouseSensitivity,
-          onChange: JJ => {
-            YJ.d.setClientEscMenuOptions({
-              mouseSensitivity: JJ
+          initValue: dB.mouseSensitivity,
+          onChange: BB => {
+            oB.d.setClientEscMenuOptions({
+              mouseSensitivity: BB
             })
           }
-        }), !(0, hJ.isMobile)() && (0, mJ.jsxs)("div", {
+        }), !(0, kB.isMobile)() && (0, iB.jsxs)("div", {
           className: "ControlsContainer",
-          children: [(0, mJ.jsx)("div", {
+          children: [(0, iB.jsx)("div", {
             className: "SliderText",
-            children: JJ("settingsMenu:keyBindings")
-          }), eJ.f.map((cJ => (0, mJ.jsx)(IJ, {
-            title: JJ(cJ.name.translationKey, cJ.name.params),
-            defaultOpen: eJ.j.has(cJ.id),
-            children: cJ.actions.map((JJ => (0, mJ.jsx)(MJ, {
-              noaAction: JJ,
-              forceUpdate: vJ,
-              clashesWith: cJ.clashesWith,
-              showPadGlyph: QJ
-            }, JJ)))
-          }, cJ.name.translationKey))), (0, mJ.jsx)(jJ.I, {
+            children: BB("settingsMenu:keyBindings")
+          }), pB.f.map((TB => (0, iB.jsx)(wB, {
+            title: BB(TB.name.translationKey, TB.name.params),
+            defaultOpen: pB.g.has(TB.id),
+            children: TB.actions.map((BB => (0, iB.jsx)(UB, {
+              noaAction: BB,
+              forceUpdate: mB,
+              clashesWith: TB.clashesWith,
+              showPadGlyph: NB
+            }, BB)))
+          }, TB.name.translationKey))), (0, iB.jsx)(gB.K, {
             className: "ResetBindingsButton",
             onClick: () => {
-              (0, eJ.H)(), vJ()
+              (0, pB.y)(), mB()
             },
-            children: JJ("controls:resetBindings")
+            children: BB("controls:resetBindings")
           })]
         })]
       })
     }
 
-    function IJ(JJ) {
+    function wB(BB) {
       let {
-        title: cJ,
-        defaultOpen: ZJ,
-        children: FJ
-      } = JJ;
-      const [eJ, XJ] = (0, UJ.useState)(ZJ);
-      return (0, mJ.jsxs)("div", {
-        className: qJ()("ControlsSection", {
-          Collapsed: !eJ
+        title: TB,
+        defaultOpen: dB,
+        children: VB
+      } = BB;
+      const [pB, lB] = (0, yB.useState)(dB);
+      return (0, iB.jsxs)("div", {
+        className: YB()("ControlsSection", {
+          Collapsed: !pB
         }),
-        children: [(0, mJ.jsxs)("div", {
+        children: [(0, iB.jsxs)("div", {
           className: "ControlsSectionHeader",
           "data-pad-focusable": !0,
           onClick: () => {
-            XJ(!eJ)
+            lB(!pB)
           },
-          children: [(0, mJ.jsx)("div", {
+          children: [(0, iB.jsx)("div", {
             className: "ControlsSectionTitle",
-            children: cJ
-          }), (0, mJ.jsx)("div", {
+            children: TB
+          }), (0, iB.jsx)("div", {
             className: "ControlsSectionChevron",
             children: "\u25be"
           })]
-        }), eJ && (0, mJ.jsx)("div", {
+        }), pB && (0, iB.jsx)("div", {
           className: "ControlsSectionRows",
-          children: FJ
+          children: VB
         })]
       })
     }
 
-    function MJ(JJ) {
+    function UB(BB) {
       let {
-        noaAction: cJ,
-        forceUpdate: ZJ,
-        clashesWith: AJ,
-        showPadGlyph: YJ
-      } = JJ;
+        noaAction: TB,
+        forceUpdate: dB,
+        clashesWith: JB,
+        showPadGlyph: oB
+      } = BB;
       const {
-        t: hJ
-      } = (0, FJ.F)(), DJ = (0, xJ.b)(cJ), [sJ, nJ] = (0, UJ.useState)(!1), [GJ, rJ] = (0, UJ.useState)("controls:clickToEnterNewBinding"), [vJ, QJ] = (0, UJ.useState)(null), [EJ, VJ] = (0, UJ.useState)(null), KJ = (0, UJ.useRef)(null);
-      (0, UJ.useEffect)((() => {
-        sJ && KJ.current && KJ.current.focus()
-      }), [sJ]);
-      const yJ = eJ.z[cJ].filter((JJ => XJ.f[JJ]));
-      let SJ = null;
-      const IJ = [],
-        MJ = AJ.flatMap((JJ => {
-          var cJ, ZJ;
-          return null !== (cJ = null === (ZJ = eJ.f.find((cJ => cJ.id === JJ))) || void 0 === ZJ ? void 0 : ZJ.actions) && void 0 !== cJ ? cJ : []
+        t: kB
+      } = (0, VB.z)(), LB = (0, EB.b)(TB), [OB, DB] = (0, yB.useState)(!1), [uB, vB] = (0, yB.useState)("controls:clickToEnterNewBinding"), [mB, NB] = (0, yB.useState)(null), [tB, fB] = (0, yB.useState)(null), sB = (0, yB.useRef)(null);
+      (0, yB.useEffect)((() => {
+        OB && sB.current && sB.current.focus()
+      }), [OB]);
+      const MB = pB.r[TB].filter((BB => lB.j[BB]));
+      let zB = null;
+      const wB = [],
+        UB = JB.flatMap((BB => {
+          var TB, dB;
+          return null !== (TB = null === (dB = pB.f.find((TB => TB.id === BB))) || void 0 === dB ? void 0 : dB.actions) && void 0 !== TB ? TB : []
         }));
-      for (const FJ of MJ) {
-        if (FJ === cJ) continue;
-        const JJ = eJ.z[FJ];
-        for (const cJ of JJ) yJ.includes(cJ) && IJ.push(hJ(eJ.A[FJ].translationKey, eJ.A[FJ].params))
+      for (const VB of UB) {
+        if (VB === TB) continue;
+        const BB = pB.r[VB];
+        for (const TB of BB) MB.includes(TB) && wB.push(kB(pB.u[VB].translationKey, pB.u[VB].params))
       }
-      IJ.length > 0 && (SJ = hJ("controls:sharedBindingsWarning") + " ", SJ += IJ.join(", "));
-      const bJ = () => {
-          nJ(!1), QJ(null), rJ("controls:clickToEnterNewBinding"), VJ(null)
+      wB.length > 0 && (zB = kB("controls:sharedBindingsWarning") + " ", zB += wB.join(", "));
+      const FB = () => {
+          DB(!1), NB(null), vB("controls:clickToEnterNewBinding"), fB(null)
         },
-        wJ = () => "BindingInput_" + cJ;
-      return (0, mJ.jsxs)("div", {
-        className: qJ()("ControlRow", {
-          WarningBorder: null !== SJ
+        KB = () => "BindingInput_" + TB;
+      return (0, iB.jsxs)("div", {
+        className: YB()("ControlRow", {
+          WarningBorder: null !== zB
         }),
-        children: [(0, mJ.jsxs)("div", {
+        children: [(0, iB.jsxs)("div", {
           className: "ControlRowInner",
-          children: [(0, mJ.jsxs)("div", {
+          children: [(0, iB.jsxs)("div", {
             className: "ControlName",
-            children: [hJ(eJ.A[cJ].translationKey, eJ.A[cJ].params), YJ && DJ && (0, mJ.jsx)(fJ.e, {
-              glyph: DJ,
+            children: [kB(pB.u[TB].translationKey, pB.u[TB].params), oB && LB && (0, iB.jsx)(HB.c, {
+              glyph: LB,
               className: "ControlPadGlyph"
             })]
-          }), (0, mJ.jsxs)("div", {
+          }), (0, iB.jsxs)("div", {
             className: "ControlBindingsContainer",
-            children: [(0, mJ.jsxs)("div", {
+            children: [(0, iB.jsxs)("div", {
               className: "ControlBindingsList",
-              children: [yJ.map((JJ => (0, mJ.jsxs)("div", {
+              children: [MB.map((BB => (0, iB.jsxs)("div", {
                 className: "ControlBinding",
-                children: [(0, mJ.jsx)("div", {
-                  children: (0, eJ.r)(JJ)
-                }), (0, mJ.jsx)("div", {
+                children: [(0, iB.jsx)("div", {
+                  children: (0, pB.k)(BB)
+                }), (0, iB.jsx)("div", {
                   className: "ControlBindingRemoveIcon",
                   "data-pad-focusable": !0,
                   onClick: () => {
-                    const FJ = (0, eJ.C)(cJ, JJ);
-                    FJ.isError() ? VJ(FJ.asError().message) : VJ(null), ZJ()
+                    const VB = (0, pB.v)(TB, BB);
+                    VB.isError() ? fB(VB.asError().message) : fB(null), dB()
                   },
                   children: "\xd7"
                 })]
-              }, JJ))), !sJ && (0, mJ.jsx)("div", {
+              }, BB))), !OB && (0, iB.jsx)("div", {
                 className: "ControlBinding ControlBindingAdd",
                 onClick: () => {
-                  nJ(!0), VJ(null)
+                  DB(!0), fB(null)
                 },
-                children: (0, mJ.jsx)("div", {
+                children: (0, iB.jsx)("div", {
                   className: "ControlBindingAddIcon",
                   children: "+"
                 })
               })]
-            }), sJ && (0, mJ.jsxs)("div", {
+            }), OB && (0, iB.jsxs)("div", {
               className: "ControlBindingAddInput",
-              children: [(0, mJ.jsxs)("div", {
+              children: [(0, iB.jsxs)("div", {
                 className: "InputContainer",
-                children: [(0, mJ.jsx)("div", {
+                children: [(0, iB.jsx)("div", {
                   className: "InputOverlay",
-                  children: vJ ? (0, eJ.r)(vJ) : (0, mJ.jsx)("div", {
+                  children: mB ? (0, pB.k)(mB) : (0, iB.jsx)("div", {
                     className: "InputOverlayPlaceholder",
-                    children: hJ(GJ)
+                    children: kB(uB)
                   })
-                }), (0, mJ.jsx)("input", {
-                  ref: KJ,
-                  id: wJ(),
+                }), (0, iB.jsx)("input", {
+                  ref: sB,
+                  id: KB(),
                   "data-pad-no-osk": !0,
                   defaultValue: "",
-                  onKeyDown: JJ => {
-                    if ("Escape" === JJ.code) return bJ(), JJ.preventDefault(), void JJ.stopPropagation();
-                    const cJ = JJ.code;
-                    XJ.c.includes(cJ) ? (VJ(null), QJ(cJ)) : (VJ("controls:keyIsReserved"), QJ(null)), JJ.preventDefault(), JJ.stopPropagation()
+                  onKeyDown: BB => {
+                    if ("Escape" === BB.code) return FB(), BB.preventDefault(), void BB.stopPropagation();
+                    const TB = BB.code;
+                    lB.e.includes(TB) ? (fB(null), NB(TB)) : (fB("controls:keyIsReserved"), NB(null)), BB.preventDefault(), BB.stopPropagation()
                   },
-                  onMouseDown: JJ => {
-                    const cJ = "Mouse" + (JJ.button + 1);
-                    document.activeElement && document.activeElement.id === wJ() ? XJ.c.includes(cJ) ? (VJ(null), QJ(cJ)) : (VJ("controls:keyIsReserved"), QJ(null)) : rJ("controls:enterNewBinding"), JJ.stopPropagation()
+                  onMouseDown: BB => {
+                    const TB = "Mouse" + (BB.button + 1);
+                    document.activeElement && document.activeElement.id === KB() ? lB.e.includes(TB) ? (fB(null), NB(TB)) : (fB("controls:keyIsReserved"), NB(null)) : vB("controls:enterNewBinding"), BB.stopPropagation()
                   },
                   onBlur: () => {
-                    rJ("controls:clickToEnterNewBinding")
+                    vB("controls:clickToEnterNewBinding")
                   }
                 })]
-              }), (0, mJ.jsx)(jJ.d, {
-                onPointerDown: JJ => {
-                  JJ.preventDefault()
+              }), (0, iB.jsx)(gB.d, {
+                onPointerDown: BB => {
+                  BB.preventDefault()
                 },
                 onClick: () => {
-                  (0, eJ.e)(cJ, vJ), ZJ(), bJ()
+                  (0, pB.e)(TB, mB), dB(), FB()
                 },
                 className: "ControlBindingAddButton",
-                disabled: null === vJ,
-                children: hJ("general:add")
-              }), (0, mJ.jsx)("div", {
+                disabled: null === mB,
+                children: kB("general:add")
+              }), (0, iB.jsx)("div", {
                 className: "ControlBindingAddCancel",
                 onClick: () => {
-                  bJ()
+                  FB()
                 },
                 children: "\xd7"
               })]
-            }), EJ && (0, mJ.jsx)("div", {
+            }), tB && (0, iB.jsx)("div", {
               className: "ControlBindingError",
-              children: hJ(EJ)
+              children: kB(tB)
             })]
           })]
-        }), SJ && (0, mJ.jsx)("div", {
+        }), zB && (0, iB.jsx)("div", {
           className: "ControlRowWarning",
-          children: SJ
+          children: zB
         })]
       })
     }
   },
-  4301: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => fJ
+  4284: (BB, TB, dB) => {
+    dB.d(TB, {
+      e: () => HB
     });
-    var FJ = ZJ(926),
-      UJ = ZJ.n(FJ),
-      eJ = ZJ(4054),
-      XJ = ZJ(1086),
-      AJ = ZJ(942),
-      qJ = ZJ(1329),
-      jJ = ZJ(1389),
-      YJ = ZJ(1247),
-      hJ = ZJ(2189),
-      DJ = ZJ(990);
-    const sJ = {
+    var VB = dB(933),
+      yB = dB.n(VB),
+      pB = dB(4042),
+      lB = dB(1078),
+      JB = dB(946),
+      YB = dB(1324),
+      gB = dB(1393),
+      oB = dB(1235),
+      kB = dB(2160),
+      LB = dB(980);
+    const OB = {
       youtube: {
         icon: "youtube",
         color: "#FF0033",
@@ -5486,291 +5486,291 @@ export const modules = {
       }
     };
 
-    function nJ(JJ) {
+    function DB(BB) {
       let {
-        platform: cJ
-      } = JJ;
-      const ZJ = "youtube" === cJ;
-      return (0, DJ.jsxs)("span", {
-        className: UJ()("PlayerProfileSocialLinkIcon", {
-          PlayerProfileSocialLinkIconYoutube: ZJ
+        platform: TB
+      } = BB;
+      const dB = "youtube" === TB;
+      return (0, LB.jsxs)("span", {
+        className: yB()("PlayerProfileSocialLinkIcon", {
+          PlayerProfileSocialLinkIconYoutube: dB
         }),
-        children: [ZJ && (0, DJ.jsx)(hJ.d, {
+        children: [dB && (0, LB.jsx)(kB.d, {
           variant: "white"
-        }), !ZJ && (0, DJ.jsx)(AJ.c, {
-          name: sJ[cJ].icon,
+        }), !dB && (0, LB.jsx)(JB.e, {
+          name: OB[TB].icon,
           kit: "brands"
         })]
       })
     }
 
-    function GJ(JJ) {
+    function uB(BB) {
       let {
-        platform: cJ,
-        link: ZJ,
-        editable: FJ,
-        userContext: UJ,
-        onLinksUpdated: hJ
-      } = JJ;
+        platform: TB,
+        link: dB,
+        editable: VB,
+        userContext: yB,
+        onLinksUpdated: kB
+      } = BB;
       const {
-        t: GJ
-      } = (0, XJ.F)(), fJ = sJ[cJ];
-      if (!ZJ && !FJ) return null;
+        t: uB
+      } = (0, lB.z)(), HB = OB[TB];
+      if (!dB && !VB) return null;
 
-      function xJ() {
-        var JJ;
-        if (!UJ || !hJ) return;
-        YJ.NotificationProvider.showInputPopup({
+      function EB() {
+        var BB;
+        if (!yB || !kB) return;
+        oB.NotificationProvider.showInputPopup({
           title: "homePage:profileSocialLinkEditTitle",
           textOpts: {
             title: {
-              platform: fJ.name
+              platform: HB.name
             }
           },
-          prefixText: eJ.s[cJ],
+          prefixText: pB.x[TB],
           placeholderText: "playBloxd",
-          initialValue: null !== (JJ = null === ZJ || void 0 === ZJ ? void 0 : ZJ.handle) && void 0 !== JJ ? JJ : "",
+          initialValue: null !== (BB = null === dB || void 0 === dB ? void 0 : dB.handle) && void 0 !== BB ? BB : "",
           maxLength: 30,
           submitText: "general:save",
-          secondaryButtonText: ZJ ? "general:remove" : void 0
-        }).getResult().then((async JJ => {
-          if ("notificationTornDown" !== JJ && null !== JJ) try {
-            "submit" === JJ.type ? await jJ.c.setSocialLink(UJ, cJ, JJ.value) : await jJ.c.clearSocialLink(UJ, cJ), hJ()
-          } catch (ZJ) {
-            console.error("Failed to update social link", ZJ), YJ.NotificationProvider.showAlertPopup({
-              title: ZJ.errorMessageForUser,
+          secondaryButtonText: dB ? "general:remove" : void 0
+        }).getResult().then((async BB => {
+          if ("notificationTornDown" !== BB && null !== BB) try {
+            "submit" === BB.type ? await gB.c.setSocialLink(yB, TB, BB.value) : await gB.c.clearSocialLink(yB, TB), kB()
+          } catch (dB) {
+            console.error("Failed to update social link", dB), oB.NotificationProvider.showAlertPopup({
+              title: dB.errorMessageForUser,
               confirmText: "general:ok"
             })
           }
         }))
       }
-      if (ZJ) {
-        const JJ = `@${ZJ.handle}`;
-        return (0, DJ.jsxs)("a", {
+      if (dB) {
+        const BB = `@${dB.handle}`;
+        return (0, LB.jsxs)("a", {
           className: "PlayerProfileSocialLink",
           style: {
-            background: fJ.color
+            background: HB.color
           },
-          href: ZJ.profileUrl,
+          href: dB.profileUrl,
           target: "_blank",
           rel: "noopener noreferrer",
-          children: [(0, DJ.jsxs)("div", {
+          children: [(0, LB.jsxs)("div", {
             className: "PlayerProfileSocialLinkMain",
-            children: [(0, DJ.jsx)(nJ, {
-              platform: cJ
-            }), (0, DJ.jsx)("span", {
+            children: [(0, LB.jsx)(DB, {
+              platform: TB
+            }), (0, LB.jsx)("span", {
               className: "PlayerProfileSocialLinkText",
-              children: (0, DJ.jsx)("span", {
+              children: (0, LB.jsx)("span", {
                 className: "PlayerProfileSocialLinkName SmallTextBold",
-                children: JJ
+                children: BB
               })
             })]
-          }), FJ && (0, DJ.jsx)("button", {
+          }), VB && (0, LB.jsx)("button", {
             type: "button",
             className: "PlayerProfileSocialLinkEditButton",
-            ...(0, qJ.U)({
+            ...(0, YB._)({
               stopPropagation: !0
             }),
-            onClick: JJ => {
-              JJ.stopPropagation(), JJ.preventDefault(), xJ()
+            onClick: BB => {
+              BB.stopPropagation(), BB.preventDefault(), EB()
             },
-            children: (0, DJ.jsx)(AJ.c, {
+            children: (0, LB.jsx)(JB.e, {
               name: "pen-to-square"
             })
-          }), !FJ && (0, DJ.jsx)("span", {
+          }), !VB && (0, LB.jsx)("span", {
             className: "PlayerProfileSocialLinkArrow",
-            children: (0, DJ.jsx)(AJ.c, {
+            children: (0, LB.jsx)(JB.e, {
               name: "arrow-up-right-from-square"
             })
           })]
         })
       }
-      return (0, DJ.jsxs)("button", {
+      return (0, LB.jsxs)("button", {
         type: "button",
         className: "PlayerProfileSocialLink PlayerProfileSocialLinkUnlinked",
         style: {
-          background: fJ.color
+          background: HB.color
         },
-        ...(0, qJ.U)(),
+        ...(0, YB._)(),
         onClick: () => {
-          xJ()
+          EB()
         },
-        children: [(0, DJ.jsx)(nJ, {
-          platform: cJ
-        }), (0, DJ.jsxs)("span", {
+        children: [(0, LB.jsx)(DB, {
+          platform: TB
+        }), (0, LB.jsxs)("span", {
           className: "PlayerProfileSocialLinkText",
-          children: [(0, DJ.jsx)("span", {
+          children: [(0, LB.jsx)("span", {
             className: "PlayerProfileSocialLinkName SmallTextBold",
-            children: fJ.name
-          }), (0, DJ.jsx)("span", {
+            children: HB.name
+          }), (0, LB.jsx)("span", {
             className: "PlayerProfileSocialLinkCount SmallTextLight",
-            children: GJ("homePage:profileSocialLinkAdd")
+            children: uB("homePage:profileSocialLinkAdd")
           })]
-        }), (0, DJ.jsx)("span", {
+        }), (0, LB.jsx)("span", {
           className: "PlayerProfileSocialLinkEditButton",
-          children: (0, DJ.jsx)(AJ.c, {
+          children: (0, LB.jsx)(JB.e, {
             name: "pen-to-square"
           })
         })]
       })
     }
 
-    function fJ(JJ) {
+    function HB(BB) {
       let {
-        socialLinks: cJ,
-        editable: ZJ = !1,
-        userContext: FJ,
-        onLinksUpdated: UJ
-      } = JJ;
-      if (!ZJ && 0 === cJ.length) return null;
-      const XJ = new Map(cJ.map((JJ => [JJ.platform, JJ]))),
-        AJ = ZJ ? eJ.o : cJ.map((JJ => JJ.platform));
-      return (0, DJ.jsx)("div", {
+        socialLinks: TB,
+        editable: dB = !1,
+        userContext: VB,
+        onLinksUpdated: yB
+      } = BB;
+      if (!dB && 0 === TB.length) return null;
+      const lB = new Map(TB.map((BB => [BB.platform, BB]))),
+        JB = dB ? pB.w : TB.map((BB => BB.platform));
+      return (0, LB.jsx)("div", {
         className: "PlayerProfileSocialLinks",
-        children: (0, DJ.jsx)("div", {
+        children: (0, LB.jsx)("div", {
           className: "PlayerProfileSocialLinksList",
-          children: AJ.map((JJ => (0, DJ.jsx)(GJ, {
-            platform: JJ,
-            link: XJ.get(JJ),
-            editable: ZJ,
-            userContext: FJ,
-            onLinksUpdated: UJ
-          }, JJ)))
+          children: JB.map((BB => (0, LB.jsx)(uB, {
+            platform: BB,
+            link: lB.get(BB),
+            editable: dB,
+            userContext: VB,
+            onLinksUpdated: yB
+          }, BB)))
         })
       })
     }
   },
-  8557: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      c: () => eJ
+  8570: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => pB
     });
-    var FJ = ZJ(3957),
-      UJ = ZJ(3966);
+    var VB = dB(3948),
+      yB = dB(3951);
 
-    function eJ(JJ) {
+    function pB(BB) {
       let {
-        children: cJ,
-        showing: ZJ,
-        globallyUniqueKey: eJ,
-        alwaysMountChildren: XJ = !1,
-        doGameplayStartStopOnShow: AJ = !0,
-        keepsMovement: qJ = !1
-      } = JJ;
-      return (0, UJ.c)(!0, ZJ, eJ, qJ), (0, FJ.c)(AJ, ZJ), ZJ || XJ ? cJ : null
+        children: TB,
+        showing: dB,
+        globallyUniqueKey: pB,
+        alwaysMountChildren: lB = !1,
+        doGameplayStartStopOnShow: JB = !0,
+        keepsMovement: YB = !1
+      } = BB;
+      return (0, yB.d)(!0, dB, pB, YB), (0, VB.e)(JB, dB), dB || lB ? TB : null
     }
   },
-  8139: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      c: () => AJ
+  8175: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => JB
     });
-    var FJ = ZJ(13),
-      UJ = ZJ(2924),
-      eJ = ZJ(1247),
-      XJ = ZJ(1294);
-    const AJ = async () => {
-      if ((0, XJ.e)()) {
-        if (!0 !== await eJ.NotificationProvider.showPromptPopup({
+    var VB = dB(21),
+      yB = dB(2925),
+      pB = dB(1235),
+      lB = dB(1275);
+    const JB = async () => {
+      if ((0, lB.i)()) {
+        if (!0 !== await pB.NotificationProvider.showPromptPopup({
             title: "controller:menusLeaveGameTitle",
             confirmText: "controller:menusLeaveGameLeave",
             cancelText: "controller:menusLeaveGameStay",
             destructive: !0
-          }).getResult() || "inGame" !== FJ.d.get("gameState")) return
-      }(0, UJ.e)()
+          }).getResult() || "inGame" !== VB.d.get("gameState")) return
+      }(0, yB.b)()
     }
   },
-  8145: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      b: () => qJ,
-      e: () => eJ,
-      i: () => XJ,
-      j: () => UJ,
-      l: () => AJ
+  8178: (BB, TB, dB) => {
+    dB.d(TB, {
+      b: () => YB,
+      d: () => pB,
+      g: () => lB,
+      k: () => yB,
+      o: () => JB
     });
-    var FJ = ZJ(1734);
-    const UJ = "controllerPadShopOpen",
-      eJ = JJ => FJ.j.includes(JJ),
-      XJ = JJ => Object.values(JJ).some((JJ => !1 !== JJ.canBuy && !JJ.isRewardedAd)),
-      AJ = (JJ, cJ, ZJ) => {
-        var FJ, UJ, XJ, AJ;
-        const qJ = JJ.filter((JJ => !eJ(JJ))),
-          jJ = null !== cJ && JJ.includes(cJ) ? cJ : null;
-        return null !== jJ && !eJ(jJ) && ZJ(jJ) ? jJ : null !== (FJ = null !== (UJ = null !== (XJ = null !== (AJ = qJ.find(ZJ)) && void 0 !== AJ ? AJ : qJ[0]) && void 0 !== XJ ? XJ : jJ) && void 0 !== UJ ? UJ : JJ[0]) && void 0 !== FJ ? FJ : null
+    var VB = dB(1711);
+    const yB = "controllerPadShopOpen",
+      pB = BB => VB.f.includes(BB),
+      lB = BB => Object.values(BB).some((BB => !1 !== BB.canBuy && !BB.isRewardedAd)),
+      JB = (BB, TB, dB) => {
+        var VB, yB, lB, JB;
+        const YB = BB.filter((BB => !pB(BB))),
+          gB = null !== TB && BB.includes(TB) ? TB : null;
+        return null !== gB && !pB(gB) && dB(gB) ? gB : null !== (VB = null !== (yB = null !== (lB = null !== (JB = YB.find(dB)) && void 0 !== JB ? JB : YB[0]) && void 0 !== lB ? lB : gB) && void 0 !== yB ? yB : BB[0]) && void 0 !== VB ? VB : null
       },
-      qJ = JJ => JJ.userInput || JJ.isRewardedAd || "boolean" === typeof JJ.isSelected ? null : JSON.stringify([JJ.image, JJ.cost, JJ.currency, JJ.amount, JJ.customTitle, JJ.buyButtonText, JJ.description, JJ.canBuy])
+      YB = BB => BB.userInput || BB.isRewardedAd || "boolean" === typeof BB.isSelected ? null : JSON.stringify([BB.image, BB.cost, BB.currency, BB.amount, BB.customTitle, BB.buyButtonText, BB.description, BB.canBuy])
   },
-  8176: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      b: () => jJ,
-      d: () => YJ
+  8196: (BB, TB, dB) => {
+    dB.d(TB, {
+      e: () => gB,
+      f: () => oB
     });
-    var FJ = ZJ(47),
-      UJ = ZJ(1326),
-      eJ = ZJ(1786),
-      XJ = ZJ(1300),
-      AJ = ZJ(1314),
-      qJ = ZJ(990);
-    const jJ = () => {
-        const JJ = (0, XJ.s)();
-        if ((0, FJ.useEffect)((() => {
-            (0, XJ.k)()
-          }), []), !JJ) return null;
+    var VB = dB(62),
+      yB = dB(1317),
+      pB = dB(1764),
+      lB = dB(1286),
+      JB = dB(1299),
+      YB = dB(980);
+    const gB = () => {
+        const BB = (0, lB.y)();
+        if ((0, VB.useEffect)((() => {
+            (0, lB.p)()
+          }), []), !BB) return null;
         const {
-          ControllerCategory: cJ
-        } = JJ;
-        return (0, qJ.jsx)(AJ.e, {
-          children: (0, qJ.jsx)(cJ, {})
+          ControllerCategory: TB
+        } = BB;
+        return (0, YB.jsx)(JB.c, {
+          children: (0, YB.jsx)(TB, {})
         })
       },
-      YJ = () => {
-        var JJ;
-        const cJ = (0, XJ.s)(),
-          [, ZJ] = (0, FJ.useReducer)((JJ => JJ + 1), 0);
-        return (0, UJ.i)(eJ.b, ZJ), null !== (JJ = null === cJ || void 0 === cJ ? void 0 : cJ.hasActivePad()) && void 0 !== JJ && JJ
+      oB = () => {
+        var BB;
+        const TB = (0, lB.y)(),
+          [, dB] = (0, VB.useReducer)((BB => BB + 1), 0);
+        return (0, yB.e)(pB.d, dB), null !== (BB = null === TB || void 0 === TB ? void 0 : TB.hasActivePad()) && void 0 !== BB && BB
       }
   },
-  8482: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      c: () => FJ
+  8527: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => VB
     });
-    const FJ = new Set(["chunkBorders"])
+    const VB = new Set(["chunkBorders"])
   },
-  8476: (JJ, cJ, ZJ) => {
-    ZJ.r(cJ), ZJ.d(cJ, {
-      ALL_DEV_TOOLS: () => XJ,
-      coreDevTools: () => jJ,
-      devTools: () => qJ
+  8520: (BB, TB, dB) => {
+    dB.r(TB), dB.d(TB, {
+      ALL_DEV_TOOLS: () => lB,
+      coreDevTools: () => gB,
+      devTools: () => YB
     });
-    var FJ = ZJ(547),
-      UJ = ZJ(1192),
-      eJ = ZJ(8482);
-    const XJ = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
-    async function AJ() {
+    var VB = dB(586),
+      yB = dB(1185),
+      pB = dB(8527);
+    const lB = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
+    async function JB() {
       const {
-        noaDevTools: JJ
-      } = await ZJ.e(218).then((() => ZJ(39848)));
-      return JJ
+        noaDevTools: BB
+      } = await dB.e(218).then((() => dB(39796)));
+      return BB
     }
-    const qJ = new class {
+    const YB = new class {
         constructor() {
-          this.loadHost = AJ, this.tools = XJ
+          this.loadHost = JB, this.tools = lB
         }
-        setHost(JJ) {
-          this.tools = null === JJ ? XJ : JJ.tools, this.loadHost = null === JJ ? AJ : async () => JJ
+        setHost(BB) {
+          this.tools = null === BB ? lB : BB.tools, this.loadHost = null === BB ? JB : async () => BB
         }
-        supports(JJ) {
-          return this.tools.has(JJ)
+        supports(BB) {
+          return this.tools.has(BB)
         }
-        async downloadScene(JJ, cJ) {
-          const ZJ = await this.loadHost();
-          await ZJ.downloadScene(JJ, cJ)
+        async downloadScene(BB, TB) {
+          const dB = await this.loadHost();
+          await dB.downloadScene(BB, TB)
         }
-        async setAmbientLightIntensity(JJ) {
-          const cJ = await this.loadHost();
-          await cJ.setAmbientLightIntensity(JJ)
+        async setAmbientLightIntensity(BB) {
+          const TB = await this.loadHost();
+          await TB.setAmbientLightIntensity(BB)
         }
       },
-      jJ = {
-        tools: eJ.c,
+      gB = {
+        tools: pB.d,
         downloadScene: async () => {
           throw new Error("This client can't download the scene")
         },
@@ -5778,53 +5778,53 @@ export const modules = {
           throw new Error("This client can't set the ambient light")
         }
       };
-    FJ.r && qJ.setHost(jJ), (0, UJ.s)((() => {
-      qJ.setHost(jJ)
+    VB.p && YB.setHost(gB), (0, yB.r)((() => {
+      YB.setHost(gB)
     }))
   },
-  6004: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      e: () => UJ,
-      f: () => eJ
+  5994: (BB, TB, dB) => {
+    dB.d(TB, {
+      b: () => yB,
+      d: () => pB
     });
-    var FJ = ZJ(29);
-    const UJ = "shaderPack";
-    async function eJ() {
-      var JJ;
-      let cJ = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (JJ = await FJ.g.getItem(UJ, cJ)) && void 0 !== JJ ? JJ : null
+    var VB = dB(33);
+    const yB = "shaderPack";
+    async function pB() {
+      var BB;
+      let TB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (BB = await VB.f.getItem(yB, TB)) && void 0 !== BB ? BB : null
     }
   },
-  8502: (JJ, cJ, ZJ) => {
-    function FJ(JJ, cJ) {
-      return JJ && !cJ
+  8540: (BB, TB, dB) => {
+    function VB(BB, TB) {
+      return BB && !TB
     }
-    ZJ.d(cJ, {
-      e: () => FJ
+    dB.d(TB, {
+      d: () => VB
     })
   },
-  8541: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      c: () => eJ
+  8556: (BB, TB, dB) => {
+    dB.d(TB, {
+      b: () => pB
     });
-    var FJ = ZJ(957);
+    var VB = dB(955);
 
-    function UJ() {
-      var JJ, cJ;
-      return null !== (JJ = null === (cJ = screen.orientation) || void 0 === cJ ? void 0 : cJ.type) && void 0 !== JJ ? JJ : innerWidth > innerHeight ? "landscape" : "portrait"
+    function yB() {
+      var BB, TB;
+      return null !== (BB = null === (TB = screen.orientation) || void 0 === TB ? void 0 : TB.type) && void 0 !== BB ? BB : innerWidth > innerHeight ? "landscape" : "portrait"
     }
-    const eJ = new class {
+    const pB = new class {
       constructor() {
         this.holding = !1, this.heldOrientation = "", this.releaseTimer = void 0, this.longHoldTimer = void 0, this.resizers = new Set, this.releaseWhenShown = () => {
           document.hidden || (document.removeEventListener("visibilitychange", this.releaseWhenShown), this.release())
         }
       }
       isHeld() {
-        return this.holding && UJ() !== this.heldOrientation && (this.holding = !1), this.holding
+        return this.holding && yB() !== this.heldOrientation && (this.holding = !1), this.holding
       }
       hold() {
-        this.heldOrientation = UJ(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
-          this.holding && (0, FJ.MG)(new Error("Game view size held for 60 s"))
+        this.heldOrientation = yB(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
+          this.holding && (0, VB.wu)(new Error("Game view size held for 60 s"))
         }), 6e4)
       }
       release() {
@@ -5832,55 +5832,55 @@ export const modules = {
           if (document.hidden) document.addEventListener("visibilitychange", this.releaseWhenShown);
           else {
             this.holding = !1;
-            for (const JJ of this.resizers) JJ()
+            for (const BB of this.resizers) BB()
           }
         }), 1e3)
       }
-      heldSizer(JJ) {
-        let cJ = !1;
+      heldSizer(BB) {
+        let TB = !1;
         return () => {
-          if (cJ && this.isHeld()) return null;
-          const ZJ = JJ();
-          return cJ ||= null !== ZJ, ZJ
+          if (TB && this.isHeld()) return null;
+          const dB = BB();
+          return TB ||= null !== dB, dB
         }
       }
-      onRelease(JJ) {
-        return this.resizers.add(JJ), () => {
-          this.resizers.delete(JJ)
+      onRelease(BB) {
+        return this.resizers.add(BB), () => {
+          this.resizers.delete(BB)
         }
       }
     }
   },
-  8546: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      b: () => AJ
+  8559: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => JB
     });
-    var FJ = ZJ(157),
-      UJ = ZJ(1671),
-      eJ = ZJ(29);
-    const XJ = 2;
+    var VB = dB(184),
+      yB = dB(1652),
+      pB = dB(33);
+    const lB = 2;
 
-    function AJ() {
-      let JJ = qJ("chunkHorizAddDist", FJ.c.defaultChunkHorizAddDistance),
-        cJ = qJ("chunkVertAddDist", FJ.c.defaultChunkVertAddDistance);
-      return JJ = (0, UJ.f)(JJ, XJ, FJ.c.maxChunkHorizAddDistance), cJ = (0, UJ.f)(cJ, XJ, FJ.c.maxChunkVertAddDistance), [JJ, cJ]
+    function JB() {
+      let BB = YB("chunkHorizAddDist", VB.c.defaultChunkHorizAddDistance),
+        TB = YB("chunkVertAddDist", VB.c.defaultChunkVertAddDistance);
+      return BB = (0, yB.d)(BB, lB, VB.c.maxChunkHorizAddDistance), TB = (0, yB.d)(TB, lB, VB.c.maxChunkVertAddDistance), [BB, TB]
     }
 
-    function qJ(JJ, cJ) {
-      const ZJ = eJ.j.getItem(JJ),
-        FJ = "number" === typeof ZJ || "string" === typeof ZJ ? Number(ZJ) : Number.NaN;
-      return Number.isFinite(FJ) ? FJ : cJ
+    function YB(BB, TB) {
+      const dB = pB.j.getItem(BB),
+        VB = "number" === typeof dB || "string" === typeof dB ? Number(dB) : Number.NaN;
+      return Number.isFinite(VB) ? VB : TB
     }
   },
-  8178: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      e: () => AJ,
-      g: () => qJ
+  8204: (BB, TB, dB) => {
+    dB.d(TB, {
+      c: () => JB,
+      f: () => YB
     });
-    var FJ = ZJ(13),
-      UJ = ZJ(1213),
-      eJ = ZJ(80);
-    const XJ = {
+    var VB = dB(21),
+      yB = dB(1209),
+      pB = dB(95);
+    const lB = {
       blockMined: {
         pattern: [18],
         priority: 1,
@@ -5923,111 +5923,111 @@ export const modules = {
       }
     };
 
-    function AJ() {
-      return (0, eJ.isMobile)() && "function" === typeof navigator.vibrate
+    function JB() {
+      return (0, pB.isMobile)() && "function" === typeof navigator.vibrate
     }
-    const qJ = new class {
-      constructor(JJ) {
-        this.deps = JJ, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
+    const YB = new class {
+      constructor(BB) {
+        this.deps = BB, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
       }
-      play(JJ, cJ) {
-        var ZJ;
+      play(BB, TB) {
+        var dB;
         if (!this.deps.enabled()) return;
-        const FJ = XJ[JJ],
-          UJ = null !== cJ && void 0 !== cJ ? cJ : FJ.pattern;
-        if (null === UJ) return void console.warn("No vibration pattern for", JJ);
-        const eJ = this.deps.now();
-        eJ - this.lastAnyAt < 40 && FJ.priority < this.playingPriority || eJ - (null !== (ZJ = this.lastAt.get(JJ)) && void 0 !== ZJ ? ZJ : -1 / 0) < FJ.minGapMs || eJ < this.playingUntil && FJ.priority < this.playingPriority || (this.lastAt.set(JJ, eJ), this.lastAnyAt = eJ, this.playingUntil = eJ + UJ.reduce(((JJ, cJ) => JJ + cJ), 0), this.playingPriority = FJ.priority, this.deps.vibrate(UJ))
+        const VB = lB[BB],
+          yB = null !== TB && void 0 !== TB ? TB : VB.pattern;
+        if (null === yB) return void console.warn("No vibration pattern for", BB);
+        const pB = this.deps.now();
+        pB - this.lastAnyAt < 40 && VB.priority < this.playingPriority || pB - (null !== (dB = this.lastAt.get(BB)) && void 0 !== dB ? dB : -1 / 0) < VB.minGapMs || pB < this.playingUntil && VB.priority < this.playingPriority || (this.lastAt.set(BB, pB), this.lastAnyAt = pB, this.playingUntil = pB + yB.reduce(((BB, TB) => BB + TB), 0), this.playingPriority = VB.priority, this.deps.vibrate(yB))
       }
     }({
-      vibrate: JJ => {
-        navigator.vibrate([...JJ])
+      vibrate: BB => {
+        navigator.vibrate([...BB])
       },
       now: () => performance.now(),
-      enabled: () => AJ() && FJ.d.get("isTouchScreen") && FJ.d.get("clientEscMenuOptions").vibration && !(0, UJ.g)()
+      enabled: () => JB() && VB.d.get("isTouchScreen") && VB.d.get("clientEscMenuOptions").vibration && !(0, yB.h)()
     })
   },
-  8493: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      c: () => sJ,
-      d: () => DJ
+  8531: (BB, TB, dB) => {
+    dB.d(TB, {
+      b: () => OB,
+      e: () => LB
     });
-    var FJ = ZJ(13),
-      UJ = ZJ(1572),
-      eJ = ZJ(29),
-      XJ = ZJ(1247),
-      AJ = ZJ(3134),
-      qJ = ZJ(1357),
-      jJ = ZJ(1294);
-    const YJ = 2592e5,
-      hJ = "notificationOptInLastPromptedAt";
-    async function DJ() {
-      var JJ;
-      const cJ = await sJ();
-      if (null === cJ) return;
-      const ZJ = null !== (JJ = eJ.j.getItem(hJ)) && void 0 !== JJ ? JJ : 0;
-      if (Date.now() - ZJ < YJ) return;
-      if ((0, jJ.e)()) return;
-      const FJ = await XJ.NotificationProvider.showPromptPopup({
+    var VB = dB(21),
+      yB = dB(1573),
+      pB = dB(33),
+      lB = dB(1235),
+      JB = dB(3160),
+      YB = dB(1353),
+      gB = dB(1275);
+    const oB = 2592e5,
+      kB = "notificationOptInLastPromptedAt";
+    async function LB() {
+      var BB;
+      const TB = await OB();
+      if (null === TB) return;
+      const dB = null !== (BB = pB.j.getItem(kB)) && void 0 !== BB ? BB : 0;
+      if (Date.now() - dB < oB) return;
+      if ((0, gB.i)()) return;
+      const VB = await lB.NotificationProvider.showPromptPopup({
         icon: "bell",
         title: "mobilePushNotifications:optInTitle",
-        subtitle: UJ.d.supports("notifications") ? "mobilePushNotifications:optInSubtitle" : "mobilePushNotifications:optInSubtitleBrowser",
+        subtitle: yB.d.supports("notifications") ? "mobilePushNotifications:optInSubtitle" : "mobilePushNotifications:optInSubtitleBrowser",
         confirmText: "mobilePushNotifications:optInConfirm",
         cancelText: "mobilePushNotifications:optInCancel",
         padStartsOnCancel: !0
       }).getResult();
-      "notificationTornDown" !== FJ && (eJ.j.setItem(hJ, Date.now()), (0, qJ.f)({
-        id: !0 === FJ ? "push.allow" : "push.deny",
-        value: UJ.d.supports("notifications") ? "app" : "browser"
-      }), !0 === FJ && cJ().catch((JJ => {
-        console.error("Failed to ask for push notifications:", JJ)
+      "notificationTornDown" !== VB && (pB.j.setItem(kB, Date.now()), (0, YB.f)({
+        id: !0 === VB ? "push.allow" : "push.deny",
+        value: yB.d.supports("notifications") ? "app" : "browser"
+      }), !0 === VB && TB().catch((BB => {
+        console.error("Failed to ask for push notifications:", BB)
       })))
     }
-    async function sJ() {
-      return await UJ.d.ready, UJ.d.supports("notifications") ? FJ.d.get("mobilePushNotificationsCanAsk") ? async () => {
-        UJ.d.request("notifications.requestPermission", {}).then((JJ => {
+    async function OB() {
+      return await yB.d.ready, yB.d.supports("notifications") ? VB.d.get("mobilePushNotificationsCanAsk") ? async () => {
+        yB.d.request("notifications.requestPermission", {}).then((BB => {
           let {
-            canAsk: cJ
-          } = JJ;
-          FJ.d.set({
-            mobilePushNotificationsCanAsk: cJ
+            canAsk: TB
+          } = BB;
+          VB.d.set({
+            mobilePushNotificationsCanAsk: TB
           })
-        }), (JJ => {
-          console.error("The app couldn't ask for push notifications:", JJ)
+        }), (BB => {
+          console.error("The app couldn't ask for push notifications:", BB)
         }))
-      }: null: await AJ.d.canAsk() ? () => AJ.d.requestPermission() : null
+      }: null: await JB.c.canAsk() ? () => JB.c.requestPermission() : null
     }
   },
-  8517: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      b: () => AJ,
-      d: () => qJ
+  8547: (BB, TB, dB) => {
+    dB.d(TB, {
+      b: () => JB,
+      d: () => YB
     });
-    var FJ = ZJ(13);
-    const UJ = 24,
-      eJ = "farNametags",
-      XJ = 1e5;
+    var VB = dB(21);
+    const yB = 24,
+      pB = "farNametags",
+      lB = 1e5;
 
-    function AJ() {
-      var JJ;
-      return null === (JJ = FJ.d.get("showDistantNametags")) || void 0 === JJ || JJ
+    function JB() {
+      var BB;
+      return null === (BB = VB.d.get("showDistantNametags")) || void 0 === BB || BB
     }
 
-    function qJ() {
-      var JJ;
-      return null !== (JJ = function() {
-        const JJ = new URLSearchParams(window.location.search).get(eJ),
-          cJ = null === JJ || "" === JJ ? NaN : Number(JJ);
-        return Number.isFinite(cJ) && cJ >= 0 ? Math.min(cJ, XJ) : null
-      }()) && void 0 !== JJ ? JJ : AJ() ? 0 : UJ
+    function YB() {
+      var BB;
+      return null !== (BB = function() {
+        const BB = new URLSearchParams(window.location.search).get(pB),
+          TB = null === BB || "" === BB ? NaN : Number(BB);
+        return Number.isFinite(TB) && TB >= 0 ? Math.min(TB, lB) : null
+      }()) && void 0 !== BB ? BB : JB() ? 0 : yB
     }
   },
-  8580: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      b: () => UJ,
-      e: () => XJ
+  8594: (BB, TB, dB) => {
+    dB.d(TB, {
+      b: () => yB,
+      c: () => lB
     });
-    const FJ = [{
+    const VB = [{
       threshold: 10n ** 180n,
       suffix: "NoQig"
     }, {
@@ -6209,79 +6209,79 @@ export const modules = {
       suffix: "K"
     }];
 
-    function UJ(JJ) {
-      let cJ, ZJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
-      if ("number" === typeof JJ) {
-        if (!Number.isFinite(JJ)) return "0";
-        if (Math.abs(JJ) < 100) {
-          const cJ = JJ < 0 ? "-" : "",
-            ZJ = Math.abs(JJ);
-          return ZJ >= 10 ? `${cJ}${ZJ.toFixed(1).replace(/\.0$/,"")}` : `${cJ}${ZJ.toFixed(2).replace(/\.?0+$/,"")}`
+    function yB(BB) {
+      let TB, dB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
+      if ("number" === typeof BB) {
+        if (!Number.isFinite(BB)) return "0";
+        if (Math.abs(BB) < 100) {
+          const TB = BB < 0 ? "-" : "",
+            dB = Math.abs(BB);
+          return dB >= 10 ? `${TB}${dB.toFixed(1).replace(/\.0$/,"")}` : `${TB}${dB.toFixed(2).replace(/\.?0+$/,"")}`
         }
-        cJ = BigInt(Math.floor(JJ))
-      } else cJ = JJ;
-      const UJ = cJ < 0n ? -cJ : cJ,
-        eJ = cJ < 0n ? "-" : "",
-        XJ = UJ.toString();
-      if (XJ.length <= ZJ) return `${eJ}${XJ}`;
-      const AJ = 3 * Math.floor((XJ.length - 1) / 3);
-      if (AJ < 3) return `${eJ}${XJ}`;
-      if (AJ > 3 * FJ.length) {
-        const JJ = XJ[0],
-          cJ = XJ.slice(1, 3).replace(/0+$/, "");
-        return `${eJ}${cJ?`${JJ}.${cJ}`:JJ}e${XJ.length-1}`
+        TB = BigInt(Math.floor(BB))
+      } else TB = BB;
+      const yB = TB < 0n ? -TB : TB,
+        pB = TB < 0n ? "-" : "",
+        lB = yB.toString();
+      if (lB.length <= dB) return `${pB}${lB}`;
+      const JB = 3 * Math.floor((lB.length - 1) / 3);
+      if (JB < 3) return `${pB}${lB}`;
+      if (JB > 3 * VB.length) {
+        const BB = lB[0],
+          TB = lB.slice(1, 3).replace(/0+$/, "");
+        return `${pB}${TB?`${BB}.${TB}`:BB}e${lB.length-1}`
       }
       const {
-        threshold: qJ,
-        suffix: jJ
-      } = FJ[FJ.length - AJ / 3], YJ = UJ / qJ, hJ = Number(1000n * (UJ % qJ) / qJ), DJ = Number(YJ) + hJ / 1e3;
-      let sJ;
-      return sJ = DJ >= 100 ? Math.floor(DJ).toString() : DJ >= 10 ? DJ.toFixed(1).replace(/\.0$/, "") : DJ.toFixed(2).replace(/\.?0+$/, ""), `${eJ}${sJ}${jJ}`
+        threshold: YB,
+        suffix: gB
+      } = VB[VB.length - JB / 3], oB = yB / YB, kB = Number(1000n * (yB % YB) / YB), LB = Number(oB) + kB / 1e3;
+      let OB;
+      return OB = LB >= 100 ? Math.floor(LB).toString() : LB >= 10 ? LB.toFixed(1).replace(/\.0$/, "") : LB.toFixed(2).replace(/\.?0+$/, ""), `${pB}${OB}${gB}`
     }
-    const eJ = FJ.map((JJ => {
+    const pB = VB.map((BB => {
       let {
-        threshold: cJ,
-        suffix: ZJ
-      } = JJ;
+        threshold: TB,
+        suffix: dB
+      } = BB;
       return {
-        threshold: Number(cJ),
-        suffix: ZJ
+        threshold: Number(TB),
+        suffix: dB
       }
-    })).filter((JJ => {
+    })).filter((BB => {
       let {
-        threshold: cJ
-      } = JJ;
-      return Number.isFinite(cJ)
+        threshold: TB
+      } = BB;
+      return Number.isFinite(TB)
     }));
 
-    function XJ(JJ) {
-      const cJ = Math.abs(JJ),
-        ZJ = JJ < 0 ? "-" : "";
+    function lB(BB) {
+      const TB = Math.abs(BB),
+        dB = BB < 0 ? "-" : "";
       for (const {
-          threshold: FJ,
-          suffix: UJ
+          threshold: VB,
+          suffix: yB
         }
-        of eJ)
-        if (cJ >= FJ) {
-          const JJ = cJ / FJ;
-          if (JJ >= 1e3) return `${ZJ}${cJ.toExponential(2).replace("e+","e")}`;
-          let eJ;
-          return eJ = JJ >= 100 ? Math.floor(JJ).toString() : JJ >= 10 ? JJ.toFixed(1).replace(/\.0$/, "") : JJ.toFixed(2).replace(/\.?0+$/, ""), `${ZJ}${eJ}${UJ}`
-        } return `${ZJ}${cJ}`
+        of pB)
+        if (TB >= VB) {
+          const BB = TB / VB;
+          if (BB >= 1e3) return `${dB}${TB.toExponential(2).replace("e+","e")}`;
+          let pB;
+          return pB = BB >= 100 ? Math.floor(BB).toString() : BB >= 10 ? BB.toFixed(1).replace(/\.0$/, "") : BB.toFixed(2).replace(/\.?0+$/, ""), `${dB}${pB}${yB}`
+        } return `${dB}${TB}`
     }
   },
-  8565: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => YJ,
-      e: () => DJ,
-      h: () => hJ,
-      j: () => XJ,
-      n: () => jJ,
-      p: () => qJ
+  8584: (BB, TB, dB) => {
+    dB.d(TB, {
+      b: () => oB,
+      c: () => LB,
+      d: () => kB,
+      g: () => lB,
+      k: () => gB,
+      o: () => YB
     });
-    var FJ = ZJ(235);
-    const UJ = ["Wood Enchanting Table", "Stone Enchanting Table", "Iron Enchanting Table", "Gold Enchanting Table", "Diamond Enchanting Table"],
-      eJ = {
+    var VB = dB(279);
+    const yB = ["Wood Enchanting Table", "Stone Enchanting Table", "Iron Enchanting Table", "Gold Enchanting Table", "Diamond Enchanting Table"],
+      pB = {
         Damage: {
           translationKey: "enchantments:damageDescription"
         },
@@ -6356,13 +6356,13 @@ export const modules = {
         }
       };
 
-    function XJ(JJ) {
-      var cJ;
-      return null !== (cJ = eJ[JJ]) && void 0 !== cJ ? cJ : {
+    function lB(BB) {
+      var TB;
+      return null !== (TB = pB[BB]) && void 0 !== TB ? TB : {
         translationKey: ""
       }
     }
-    const AJ = {
+    const JB = {
       "Wood Enchanting Table": [{
         min: 1,
         max: 2
@@ -6415,94 +6415,94 @@ export const modules = {
       }]
     };
 
-    function qJ(JJ) {
-      return UJ.includes(JJ)
+    function YB(BB) {
+      return yB.includes(BB)
     }
 
-    function jJ(JJ) {
-      var cJ;
-      return !0 === (null === JJ || void 0 === JJ || null === (cJ = JJ.customAttributes) || void 0 === cJ ? void 0 : cJ.cannotEnchant)
+    function gB(BB) {
+      var TB;
+      return !0 === (null === BB || void 0 === BB || null === (TB = BB.customAttributes) || void 0 === TB ? void 0 : TB.cannotEnchant)
     }
 
-    function YJ(JJ, cJ) {
+    function oB(BB, TB) {
       const {
-        max: ZJ
-      } = AJ[JJ].at(-1);
-      return cJ <= ZJ
+        max: dB
+      } = JB[BB].at(-1);
+      return TB <= dB
     }
 
-    function hJ(JJ) {
-      const cJ = Math.sin(JJ / 80),
-        ZJ = JJ => {
-          if (JJ <= 0) return 0;
-          if (JJ > 1) return 1;
-          let cJ = 0;
-          const ZJ = [1, 7, 21, 35, 35, 21, 7, 1];
-          for (let FJ = 0; FJ < ZJ.length; FJ++) {
-            cJ += (FJ % 2 === 0 ? 1 : -1) * ZJ[FJ] * Math.pow(JJ, 2 + FJ) / (2 + FJ)
+    function kB(BB) {
+      const TB = Math.sin(BB / 80),
+        dB = BB => {
+          if (BB <= 0) return 0;
+          if (BB > 1) return 1;
+          let TB = 0;
+          const dB = [1, 7, 21, 35, 35, 21, 7, 1];
+          for (let VB = 0; VB < dB.length; VB++) {
+            TB += (VB % 2 === 0 ? 1 : -1) * dB[VB] * Math.pow(BB, 2 + VB) / (2 + VB)
           }
-          return 72 * cJ
+          return 72 * TB
         },
-        FJ = .3 - .78 * cJ,
-        UJ = .5 - .78 * cJ,
-        eJ = .6 - .7 * cJ,
-        XJ = .8 - .6 * cJ;
-      let AJ = ZJ(FJ),
-        qJ = ZJ(UJ) - AJ,
-        jJ = ZJ(eJ) - qJ - AJ,
-        YJ = ZJ(XJ) - jJ - qJ - AJ;
-      FJ < .041 && (qJ /= 1 - AJ, jJ /= 1 - AJ, YJ /= 1 - AJ, AJ = 0), UJ < .041 && (AJ /= 1 - qJ, jJ /= 1 - qJ, YJ /= 1 - qJ, qJ = 0), eJ < .041 && (AJ /= 1 - jJ, qJ /= 1 - jJ, YJ /= 1 - jJ, jJ = 0), XJ < .041 && (AJ /= 1 - YJ, qJ /= 1 - YJ, jJ /= 1 - YJ, YJ = 0);
+        VB = .3 - .78 * TB,
+        yB = .5 - .78 * TB,
+        pB = .6 - .7 * TB,
+        lB = .8 - .6 * TB;
+      let JB = dB(VB),
+        YB = dB(yB) - JB,
+        gB = dB(pB) - YB - JB,
+        oB = dB(lB) - gB - YB - JB;
+      VB < .041 && (YB /= 1 - JB, gB /= 1 - JB, oB /= 1 - JB, JB = 0), yB < .041 && (JB /= 1 - YB, gB /= 1 - YB, oB /= 1 - YB, YB = 0), pB < .041 && (JB /= 1 - gB, YB /= 1 - gB, oB /= 1 - gB, gB = 0), lB < .041 && (JB /= 1 - oB, YB /= 1 - oB, gB /= 1 - oB, oB = 0);
       return {
-        commonProb: AJ,
-        uncommonProb: qJ,
-        rareProb: jJ,
-        epicProb: YJ,
-        legendaryProb: 1 - (YJ + jJ + qJ + AJ)
+        commonProb: JB,
+        uncommonProb: YB,
+        rareProb: gB,
+        epicProb: oB,
+        legendaryProb: 1 - (oB + gB + YB + JB)
       }
     }
 
-    function DJ(JJ, cJ) {
+    function LB(BB, TB) {
       const {
-        min: ZJ,
-        max: UJ
-      } = AJ[JJ][cJ], eJ = FJ.c.sampleUniformIntDistribution(ZJ, UJ, "includeMax");
+        min: dB,
+        max: yB
+      } = JB[BB][TB], pB = VB.e.sampleUniformIntDistribution(dB, yB, "includeMax");
       return {
-        ...hJ(eJ),
-        level: eJ
+        ...kB(pB),
+        level: pB
       }
     }
   },
-  8052: (JJ, cJ, ZJ) => {
-    function FJ(JJ, cJ) {
-      return !JJ.hidden && (cJ || !JJ.isRewardedAd)
+  8075: (BB, TB, dB) => {
+    function VB(BB, TB) {
+      return !BB.hidden && (TB || !BB.isRewardedAd)
     }
 
-    function UJ(JJ) {
-      return "object" === typeof JJ ? JJ.option : JJ
+    function yB(BB) {
+      return "object" === typeof BB ? BB.option : BB
     }
 
-    function eJ(JJ, cJ) {
-      var ZJ;
-      if ("dropdown" === (null === (ZJ = JJ.userInput) || void 0 === ZJ ? void 0 : ZJ.type) && "object" === typeof JJ.userInput.dropdownOptions[0]) {
-        for (const ZJ of JJ.userInput.dropdownOptions)
-          if (UJ(ZJ) === cJ) return "object" === typeof ZJ ? ZJ.cost : JJ.cost;
-        console.error("Didn't find matching option for dropdown item. Item:", JJ, "input:", cJ)
+    function pB(BB, TB) {
+      var dB;
+      if ("dropdown" === (null === (dB = BB.userInput) || void 0 === dB ? void 0 : dB.type) && "object" === typeof BB.userInput.dropdownOptions[0]) {
+        for (const dB of BB.userInput.dropdownOptions)
+          if (yB(dB) === TB) return "object" === typeof dB ? dB.cost : BB.cost;
+        console.error("Didn't find matching option for dropdown item. Item:", BB, "input:", TB)
       }
-      return JJ.cost
+      return BB.cost
     }
 
-    function XJ(JJ, cJ, ZJ) {
-      var FJ;
-      const UJ = null !== (FJ = ZJ.excludedPlayers) && void 0 !== FJ ? FJ : [cJ];
-      return JJ.filter((JJ => !UJ.includes(JJ)))
+    function lB(BB, TB, dB) {
+      var VB;
+      const yB = null !== (VB = dB.excludedPlayers) && void 0 !== VB ? VB : [TB];
+      return BB.filter((BB => !yB.includes(BB)))
     }
-    ZJ.d(cJ, {
-      e: () => eJ,
-      g: () => UJ,
-      k: () => XJ,
-      n: () => FJ
+    dB.d(TB, {
+      e: () => pB,
+      i: () => yB,
+      k: () => lB,
+      m: () => VB
     })
   }
 };
 Object.freeze(modules);
-for (const JJ in modules) Object.freeze(modules[JJ]);
+for (const BB in modules) Object.freeze(modules[BB]);

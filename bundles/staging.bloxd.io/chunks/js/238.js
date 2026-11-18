@@ -1,58 +1,58 @@
 export const id = 238;
 export const ids = [238];
 export const modules = {
-  38976: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      e: () => SJ
+  38963: (BB, TB, dB) => {
+    dB.d(TB, {
+      e: () => zB
     });
-    var FJ = ZJ(38800),
-      UJ = ZJ(38806),
-      eJ = ZJ(36174),
-      XJ = ZJ(38982),
-      AJ = ZJ(39006),
-      qJ = ZJ(38946),
-      jJ = ZJ(38879);
-    let YJ = (() => {
-      var JJ;
-      let cJ, ZJ, XJ, AJ, YJ, hJ, DJ, sJ, nJ, GJ, fJ, xJ = [],
-        rJ = [],
-        vJ = [],
-        mJ = [],
-        QJ = [],
-        EJ = [],
-        VJ = [],
-        KJ = [],
-        yJ = [],
-        SJ = [],
-        IJ = [],
-        MJ = [],
-        bJ = [],
-        wJ = [],
-        WJ = [],
-        gJ = [],
-        HJ = [],
-        PJ = [],
-        kJ = [],
-        pJ = [],
-        dJ = [],
-        zJ = [];
-      return JJ = class {
+    var VB = dB(38745),
+      yB = dB(38750),
+      pB = dB(36126),
+      lB = dB(38968),
+      JB = dB(38992),
+      YB = dB(38938),
+      gB = dB(38848);
+    let oB = (() => {
+      var BB;
+      let TB, dB, lB, JB, oB, kB, LB, OB, DB, uB, HB, EB = [],
+        vB = [],
+        mB = [],
+        iB = [],
+        NB = [],
+        tB = [],
+        fB = [],
+        sB = [],
+        MB = [],
+        zB = [],
+        wB = [],
+        UB = [],
+        FB = [],
+        KB = [],
+        rB = [],
+        IB = [],
+        cB = [],
+        SB = [],
+        PB = [],
+        QB = [],
+        RB = [],
+        aB = [];
+      return BB = class {
         constructor() {
-          this.keysUp = (0, FJ.e)(this, xJ, [38]), this.keysUpward = ((0, FJ.e)(this, rJ), (0, FJ.e)(this, vJ, [33])), this.keysDown = ((0, FJ.e)(this, mJ), (0, FJ.e)(this, QJ, [40])), this.keysDownward = ((0, FJ.e)(this, EJ), (0, FJ.e)(this, VJ, [34])), this.keysLeft = ((0, FJ.e)(this, KJ), (0, FJ.e)(this, yJ, [37])), this.keysRight = ((0, FJ.e)(this, SJ), (0, FJ.e)(this, IJ, [39])), this.rotationSpeed = ((0, FJ.e)(this, MJ), (0, FJ.e)(this, bJ, .5)), this.keysRotateLeft = ((0, FJ.e)(this, wJ), (0, FJ.e)(this, WJ, [])), this.keysRotateRight = ((0, FJ.e)(this, gJ), (0, FJ.e)(this, HJ, [])), this.keysRotateUp = ((0, FJ.e)(this, PJ), (0, FJ.e)(this, kJ, [])), this.keysRotateDown = ((0, FJ.e)(this, pJ), (0, FJ.e)(this, dJ, [])), this._keys = ((0, FJ.e)(this, zJ), new Array)
+          this.keysUp = (0, VB.h)(this, EB, [38]), this.keysUpward = ((0, VB.h)(this, vB), (0, VB.h)(this, mB, [33])), this.keysDown = ((0, VB.h)(this, iB), (0, VB.h)(this, NB, [40])), this.keysDownward = ((0, VB.h)(this, tB), (0, VB.h)(this, fB, [34])), this.keysLeft = ((0, VB.h)(this, sB), (0, VB.h)(this, MB, [37])), this.keysRight = ((0, VB.h)(this, zB), (0, VB.h)(this, wB, [39])), this.rotationSpeed = ((0, VB.h)(this, UB), (0, VB.h)(this, FB, .5)), this.keysRotateLeft = ((0, VB.h)(this, KB), (0, VB.h)(this, rB, [])), this.keysRotateRight = ((0, VB.h)(this, IB), (0, VB.h)(this, cB, [])), this.keysRotateUp = ((0, VB.h)(this, SB), (0, VB.h)(this, PB, [])), this.keysRotateDown = ((0, VB.h)(this, QB), (0, VB.h)(this, RB, [])), this._keys = ((0, VB.h)(this, aB), new Array)
         }
-        attachControl(JJ) {
-          JJ = jJ.j.BackCompatCameraNoPreventDefault(arguments), this._onCanvasBlurObserver || (this._scene = this.camera.Qy(), this._engine = this._scene.gn(), this._onCanvasBlurObserver = this._engine.onCanvasBlurObservable.add((() => {
+        attachControl(BB) {
+          BB = gB.h.BackCompatCameraNoPreventDefault(arguments), this._onCanvasBlurObserver || (this._scene = this.camera.jU(), this._engine = this._scene.PD(), this._onCanvasBlurObserver = this._engine.onCanvasBlurObservable.add((() => {
             this._keys.length = 0
-          })), this._onKeyboardObserver = this._scene.onKeyboardObservable.add((cJ => {
-            const ZJ = cJ.event;
-            if (!ZJ.metaKey)
-              if (cJ.type === qJ.c.KEYDOWN) {
-                if (-1 !== this.keysUp.indexOf(ZJ.keyCode) || -1 !== this.keysDown.indexOf(ZJ.keyCode) || -1 !== this.keysLeft.indexOf(ZJ.keyCode) || -1 !== this.keysRight.indexOf(ZJ.keyCode) || -1 !== this.keysUpward.indexOf(ZJ.keyCode) || -1 !== this.keysDownward.indexOf(ZJ.keyCode) || -1 !== this.keysRotateLeft.indexOf(ZJ.keyCode) || -1 !== this.keysRotateRight.indexOf(ZJ.keyCode) || -1 !== this.keysRotateUp.indexOf(ZJ.keyCode) || -1 !== this.keysRotateDown.indexOf(ZJ.keyCode)) {
-                  -1 === this._keys.indexOf(ZJ.keyCode) && this._keys.push(ZJ.keyCode), JJ || ZJ.preventDefault()
+          })), this._onKeyboardObserver = this._scene.onKeyboardObservable.add((TB => {
+            const dB = TB.event;
+            if (!dB.metaKey)
+              if (TB.type === YB.e.KEYDOWN) {
+                if (-1 !== this.keysUp.indexOf(dB.keyCode) || -1 !== this.keysDown.indexOf(dB.keyCode) || -1 !== this.keysLeft.indexOf(dB.keyCode) || -1 !== this.keysRight.indexOf(dB.keyCode) || -1 !== this.keysUpward.indexOf(dB.keyCode) || -1 !== this.keysDownward.indexOf(dB.keyCode) || -1 !== this.keysRotateLeft.indexOf(dB.keyCode) || -1 !== this.keysRotateRight.indexOf(dB.keyCode) || -1 !== this.keysRotateUp.indexOf(dB.keyCode) || -1 !== this.keysRotateDown.indexOf(dB.keyCode)) {
+                  -1 === this._keys.indexOf(dB.keyCode) && this._keys.push(dB.keyCode), BB || dB.preventDefault()
                 }
-              } else if (-1 !== this.keysUp.indexOf(ZJ.keyCode) || -1 !== this.keysDown.indexOf(ZJ.keyCode) || -1 !== this.keysLeft.indexOf(ZJ.keyCode) || -1 !== this.keysRight.indexOf(ZJ.keyCode) || -1 !== this.keysUpward.indexOf(ZJ.keyCode) || -1 !== this.keysDownward.indexOf(ZJ.keyCode) || -1 !== this.keysRotateLeft.indexOf(ZJ.keyCode) || -1 !== this.keysRotateRight.indexOf(ZJ.keyCode) || -1 !== this.keysRotateUp.indexOf(ZJ.keyCode) || -1 !== this.keysRotateDown.indexOf(ZJ.keyCode)) {
-              const cJ = this._keys.indexOf(ZJ.keyCode);
-              cJ >= 0 && this._keys.splice(cJ, 1), JJ || ZJ.preventDefault()
+              } else if (-1 !== this.keysUp.indexOf(dB.keyCode) || -1 !== this.keysDown.indexOf(dB.keyCode) || -1 !== this.keysLeft.indexOf(dB.keyCode) || -1 !== this.keysRight.indexOf(dB.keyCode) || -1 !== this.keysUpward.indexOf(dB.keyCode) || -1 !== this.keysDownward.indexOf(dB.keyCode) || -1 !== this.keysRotateLeft.indexOf(dB.keyCode) || -1 !== this.keysRotateRight.indexOf(dB.keyCode) || -1 !== this.keysRotateUp.indexOf(dB.keyCode) || -1 !== this.keysRotateDown.indexOf(dB.keyCode)) {
+              const TB = this._keys.indexOf(dB.keyCode);
+              TB >= 0 && this._keys.splice(TB, 1), BB || dB.preventDefault()
             }
           })))
         }
@@ -61,18 +61,18 @@ export const modules = {
         }
         checkInputs() {
           if (this._onKeyboardObserver) {
-            const JJ = this.camera,
-              cJ = JJ.movement.input,
-              ZJ = cJ.getEntry("keyboard", "translate"),
-              FJ = cJ.getEntry("keyboard", "rotate"),
-              UJ = FJ?.sensitivity ?? 1,
-              XJ = JJ._localDirection.K9(0, 0, 0);
-            for (let eJ = 0; eJ < this._keys.length; eJ++) {
-              const cJ = this._keys[eJ]; - 1 !== this.keysLeft.indexOf(cJ) ? XJ.x -= 1 : -1 !== this.keysUp.indexOf(cJ) ? XJ.z += 1 : -1 !== this.keysRight.indexOf(cJ) ? XJ.x += 1 : -1 !== this.keysDown.indexOf(cJ) ? XJ.z -= 1 : -1 !== this.keysUpward.indexOf(cJ) ? XJ.y += 1 : -1 !== this.keysDownward.indexOf(cJ) ? XJ.y -= 1 : -1 !== this.keysRotateLeft.indexOf(cJ) ? FJ && (JJ.cameraRotation.y -= this._getLocalRotation() * UJ) : -1 !== this.keysRotateRight.indexOf(cJ) ? FJ && (JJ.cameraRotation.y += this._getLocalRotation() * UJ) : -1 !== this.keysRotateUp.indexOf(cJ) ? FJ && (JJ.cameraRotation.x -= this._getLocalRotation() * UJ) : -1 !== this.keysRotateDown.indexOf(cJ) && FJ && (JJ.cameraRotation.x += this._getLocalRotation() * UJ)
+            const BB = this.camera,
+              TB = BB.movement.input,
+              dB = TB.getEntry("keyboard", "translate"),
+              VB = TB.getEntry("keyboard", "rotate"),
+              yB = VB?.sensitivity ?? 1,
+              lB = BB._localDirection.YBB(0, 0, 0);
+            for (let pB = 0; pB < this._keys.length; pB++) {
+              const TB = this._keys[pB]; - 1 !== this.keysLeft.indexOf(TB) ? lB.x -= 1 : -1 !== this.keysUp.indexOf(TB) ? lB.z += 1 : -1 !== this.keysRight.indexOf(TB) ? lB.x += 1 : -1 !== this.keysDown.indexOf(TB) ? lB.z -= 1 : -1 !== this.keysUpward.indexOf(TB) ? lB.y += 1 : -1 !== this.keysDownward.indexOf(TB) ? lB.y -= 1 : -1 !== this.keysRotateLeft.indexOf(TB) ? VB && (BB.cameraRotation.y -= this._getLocalRotation() * yB) : -1 !== this.keysRotateRight.indexOf(TB) ? VB && (BB.cameraRotation.y += this._getLocalRotation() * yB) : -1 !== this.keysRotateUp.indexOf(TB) ? VB && (BB.cameraRotation.x -= this._getLocalRotation() * yB) : -1 !== this.keysRotateDown.indexOf(TB) && VB && (BB.cameraRotation.x += this._getLocalRotation() * yB)
             }
-            if (ZJ && (0 !== XJ.x || 0 !== XJ.y || 0 !== XJ.z)) {
-              const cJ = JJ._computeLocalCameraSpeed() * (ZJ.sensitivity ?? 1);
-              XJ.normalize().scaleInPlace(cJ), JJ.Qy().useRightHandedSystem && (XJ.z *= -1), JJ.getViewMatrix().invertToRef(JJ._cameraTransformMatrix), eJ.j.TransformNormalToRef(XJ, JJ._cameraTransformMatrix, JJ._transformedDirection), JJ.cameraDirection.addInPlace(JJ._transformedDirection)
+            if (dB && (0 !== lB.x || 0 !== lB.y || 0 !== lB.z)) {
+              const TB = BB._computeLocalCameraSpeed() * (dB.sensitivity ?? 1);
+              lB.normalize().scaleInPlace(TB), BB.jU().useRightHandedSystem && (lB.z *= -1), BB.getViewMatrix().invertToRef(BB._cameraTransformMatrix), pB.p.TransformNormalToRef(lB, BB._cameraTransformMatrix, BB._transformedDirection), BB.cameraDirection.addInPlace(BB._transformedDirection)
             }
           }
         }
@@ -86,237 +86,237 @@ export const modules = {
           return "keyboard"
         }
         _getLocalRotation() {
-          const JJ = this.camera._calculateHandednessMultiplier();
-          return this.rotationSpeed * this._engine.getDeltaTime() / 1e3 * JJ
+          const BB = this.camera._calculateHandednessMultiplier();
+          return this.rotationSpeed * this._engine.getDeltaTime() / 1e3 * BB
         }
       }, (() => {
-        const eJ = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        cJ = [(0, UJ.F)()], ZJ = [(0, UJ.F)()], XJ = [(0, UJ.F)()], AJ = [(0, UJ.F)()], YJ = [(0, UJ.F)()], hJ = [(0, UJ.F)()], DJ = [(0, UJ.F)()], sJ = [(0, UJ.F)()], nJ = [(0, UJ.F)()], GJ = [(0, UJ.F)()], fJ = [(0, UJ.F)()], (0, FJ.d)(null, null, cJ, {
+        const pB = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        TB = [(0, yB.W)()], dB = [(0, yB.W)()], lB = [(0, yB.W)()], JB = [(0, yB.W)()], oB = [(0, yB.W)()], kB = [(0, yB.W)()], LB = [(0, yB.W)()], OB = [(0, yB.W)()], DB = [(0, yB.W)()], uB = [(0, yB.W)()], HB = [(0, yB.W)()], (0, VB.g)(null, null, TB, {
           kind: "field",
           name: "keysUp",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "keysUp" in JJ,
-            get: JJ => JJ.keysUp,
-            set: (JJ, cJ) => {
-              JJ.keysUp = cJ
+            has: BB => "keysUp" in BB,
+            get: BB => BB.keysUp,
+            set: (BB, TB) => {
+              BB.keysUp = TB
             }
           },
-          metadata: eJ
-        }, xJ, rJ), (0, FJ.d)(null, null, ZJ, {
+          metadata: pB
+        }, EB, vB), (0, VB.g)(null, null, dB, {
           kind: "field",
           name: "keysUpward",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "keysUpward" in JJ,
-            get: JJ => JJ.keysUpward,
-            set: (JJ, cJ) => {
-              JJ.keysUpward = cJ
+            has: BB => "keysUpward" in BB,
+            get: BB => BB.keysUpward,
+            set: (BB, TB) => {
+              BB.keysUpward = TB
             }
           },
-          metadata: eJ
-        }, vJ, mJ), (0, FJ.d)(null, null, XJ, {
+          metadata: pB
+        }, mB, iB), (0, VB.g)(null, null, lB, {
           kind: "field",
           name: "keysDown",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "keysDown" in JJ,
-            get: JJ => JJ.keysDown,
-            set: (JJ, cJ) => {
-              JJ.keysDown = cJ
+            has: BB => "keysDown" in BB,
+            get: BB => BB.keysDown,
+            set: (BB, TB) => {
+              BB.keysDown = TB
             }
           },
-          metadata: eJ
-        }, QJ, EJ), (0, FJ.d)(null, null, AJ, {
+          metadata: pB
+        }, NB, tB), (0, VB.g)(null, null, JB, {
           kind: "field",
           name: "keysDownward",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "keysDownward" in JJ,
-            get: JJ => JJ.keysDownward,
-            set: (JJ, cJ) => {
-              JJ.keysDownward = cJ
+            has: BB => "keysDownward" in BB,
+            get: BB => BB.keysDownward,
+            set: (BB, TB) => {
+              BB.keysDownward = TB
             }
           },
-          metadata: eJ
-        }, VJ, KJ), (0, FJ.d)(null, null, YJ, {
+          metadata: pB
+        }, fB, sB), (0, VB.g)(null, null, oB, {
           kind: "field",
           name: "keysLeft",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "keysLeft" in JJ,
-            get: JJ => JJ.keysLeft,
-            set: (JJ, cJ) => {
-              JJ.keysLeft = cJ
+            has: BB => "keysLeft" in BB,
+            get: BB => BB.keysLeft,
+            set: (BB, TB) => {
+              BB.keysLeft = TB
             }
           },
-          metadata: eJ
-        }, yJ, SJ), (0, FJ.d)(null, null, hJ, {
+          metadata: pB
+        }, MB, zB), (0, VB.g)(null, null, kB, {
           kind: "field",
           name: "keysRight",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "keysRight" in JJ,
-            get: JJ => JJ.keysRight,
-            set: (JJ, cJ) => {
-              JJ.keysRight = cJ
+            has: BB => "keysRight" in BB,
+            get: BB => BB.keysRight,
+            set: (BB, TB) => {
+              BB.keysRight = TB
             }
           },
-          metadata: eJ
-        }, IJ, MJ), (0, FJ.d)(null, null, DJ, {
+          metadata: pB
+        }, wB, UB), (0, VB.g)(null, null, LB, {
           kind: "field",
           name: "rotationSpeed",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "rotationSpeed" in JJ,
-            get: JJ => JJ.rotationSpeed,
-            set: (JJ, cJ) => {
-              JJ.rotationSpeed = cJ
+            has: BB => "rotationSpeed" in BB,
+            get: BB => BB.rotationSpeed,
+            set: (BB, TB) => {
+              BB.rotationSpeed = TB
             }
           },
-          metadata: eJ
-        }, bJ, wJ), (0, FJ.d)(null, null, sJ, {
+          metadata: pB
+        }, FB, KB), (0, VB.g)(null, null, OB, {
           kind: "field",
           name: "keysRotateLeft",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "keysRotateLeft" in JJ,
-            get: JJ => JJ.keysRotateLeft,
-            set: (JJ, cJ) => {
-              JJ.keysRotateLeft = cJ
+            has: BB => "keysRotateLeft" in BB,
+            get: BB => BB.keysRotateLeft,
+            set: (BB, TB) => {
+              BB.keysRotateLeft = TB
             }
           },
-          metadata: eJ
-        }, WJ, gJ), (0, FJ.d)(null, null, nJ, {
+          metadata: pB
+        }, rB, IB), (0, VB.g)(null, null, DB, {
           kind: "field",
           name: "keysRotateRight",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "keysRotateRight" in JJ,
-            get: JJ => JJ.keysRotateRight,
-            set: (JJ, cJ) => {
-              JJ.keysRotateRight = cJ
+            has: BB => "keysRotateRight" in BB,
+            get: BB => BB.keysRotateRight,
+            set: (BB, TB) => {
+              BB.keysRotateRight = TB
             }
           },
-          metadata: eJ
-        }, HJ, PJ), (0, FJ.d)(null, null, GJ, {
+          metadata: pB
+        }, cB, SB), (0, VB.g)(null, null, uB, {
           kind: "field",
           name: "keysRotateUp",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "keysRotateUp" in JJ,
-            get: JJ => JJ.keysRotateUp,
-            set: (JJ, cJ) => {
-              JJ.keysRotateUp = cJ
+            has: BB => "keysRotateUp" in BB,
+            get: BB => BB.keysRotateUp,
+            set: (BB, TB) => {
+              BB.keysRotateUp = TB
             }
           },
-          metadata: eJ
-        }, kJ, pJ), (0, FJ.d)(null, null, fJ, {
+          metadata: pB
+        }, PB, QB), (0, VB.g)(null, null, HB, {
           kind: "field",
           name: "keysRotateDown",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "keysRotateDown" in JJ,
-            get: JJ => JJ.keysRotateDown,
-            set: (JJ, cJ) => {
-              JJ.keysRotateDown = cJ
+            has: BB => "keysRotateDown" in BB,
+            get: BB => BB.keysRotateDown,
+            set: (BB, TB) => {
+              BB.keysRotateDown = TB
             }
           },
-          metadata: eJ
-        }, dJ, zJ), eJ && Object.defineProperty(JJ, Symbol.metadata, {
+          metadata: pB
+        }, RB, aB), pB && Object.defineProperty(BB, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: eJ
+          value: pB
         })
-      })(), JJ
+      })(), BB
     })();
-    AJ.d.FreeCameraKeyboardMoveInput = YJ;
-    var hJ = ZJ(36200),
-      DJ = ZJ(38938);
-    let sJ = (() => {
-      var JJ;
-      let cJ, ZJ, eJ = [],
-        XJ = [],
-        AJ = [],
-        qJ = [];
-      return JJ = class {
-        _applyPointerRotation(JJ, cJ) {
+    JB.c.FreeCameraKeyboardMoveInput = oB;
+    var kB = dB(36150),
+      LB = dB(38930);
+    let OB = (() => {
+      var BB;
+      let TB, dB, pB = [],
+        lB = [],
+        JB = [],
+        YB = [];
+      return BB = class {
+        _applyPointerRotation(BB, TB) {
           this._pointerConditions.button = this._currentActiveButton;
-          const ZJ = this.camera.movement.input.resolveInteraction("pointer", this._pointerConditions);
-          if (!ZJ || "rotate" !== ZJ.interaction) return;
-          const FJ = ZJ.pT ?? ZJ.sensitivity ?? 1 / this.angularSensibility,
-            UJ = ZJ.aT ?? ZJ.sensitivity ?? 1 / this.angularSensibility;
-          this.camera.cameraRotation.y += JJ * FJ, this.camera.cameraRotation.x += cJ * UJ
+          const dB = this.camera.movement.input.resolveInteraction("pointer", this._pointerConditions);
+          if (!dB || "rotate" !== dB.interaction) return;
+          const VB = dB.eC ?? dB.sensitivity ?? 1 / this.angularSensibility,
+            yB = dB.yG ?? dB.sensitivity ?? 1 / this.angularSensibility;
+          this.camera.cameraRotation.y += BB * VB, this.camera.cameraRotation.x += TB * yB
         }
         constructor() {
-          let JJ = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-          this.touchEnabled = JJ, this.buttons = (0, FJ.e)(this, eJ, [0, 1, 2]), this.angularSensibility = ((0, FJ.e)(this, XJ), (0, FJ.e)(this, AJ, 2e3)), this._pointerInput = (0, FJ.e)(this, qJ), this._previousPosition = null, this.onPointerMovedObservable = new hJ.c, this._allowCameraRotation = !0, this._currentActiveButton = -1, this._activePointerId = -1, this._pointerConditions = {}
+          let BB = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+          this.touchEnabled = BB, this.buttons = (0, VB.h)(this, pB, [0, 1, 2]), this.angularSensibility = ((0, VB.h)(this, lB), (0, VB.h)(this, JB, 2e3)), this._pointerInput = (0, VB.h)(this, YB), this._previousPosition = null, this.onPointerMovedObservable = new kB.e, this._allowCameraRotation = !0, this._currentActiveButton = -1, this._activePointerId = -1, this._pointerConditions = {}
         }
-        attachControl(JJ) {
-          JJ = jJ.j.BackCompatCameraNoPreventDefault(arguments);
-          const cJ = this.camera.gn(),
-            ZJ = cJ.getInputElement();
-          this._pointerInput || (this._pointerInput = FJ => {
-            const UJ = FJ.event,
-              eJ = "touch" === UJ.pointerType;
-            if (!this.touchEnabled && eJ) return;
-            if (FJ.type !== DJ.c.POINTERMOVE && -1 === this.buttons.indexOf(UJ.button)) return;
-            const XJ = UJ.target;
-            if (FJ.type === DJ.c.POINTERDOWN) {
-              if (eJ && -1 !== this._activePointerId || !eJ && -1 !== this._currentActiveButton) return;
-              this._activePointerId = UJ.pointerId;
+        attachControl(BB) {
+          BB = gB.h.BackCompatCameraNoPreventDefault(arguments);
+          const TB = this.camera.PD(),
+            dB = TB.getInputElement();
+          this._pointerInput || (this._pointerInput = VB => {
+            const yB = VB.event,
+              pB = "touch" === yB.pointerType;
+            if (!this.touchEnabled && pB) return;
+            if (VB.type !== LB.d.POINTERMOVE && -1 === this.buttons.indexOf(yB.button)) return;
+            const lB = yB.target;
+            if (VB.type === LB.d.POINTERDOWN) {
+              if (pB && -1 !== this._activePointerId || !pB && -1 !== this._currentActiveButton) return;
+              this._activePointerId = yB.pointerId;
               try {
-                XJ?.setPointerCapture(UJ.pointerId)
-              } catch (AJ) {} - 1 === this._currentActiveButton && (this._currentActiveButton = UJ.button), this._previousPosition = {
-                x: UJ.clientX,
-                y: UJ.clientY
-              }, JJ || (UJ.preventDefault(), ZJ && ZJ.focus()), cJ.isPointerLock && this._onMouseMove && this._onMouseMove(FJ.event)
-            } else if (FJ.type === DJ.c.POINTERUP) {
-              if (eJ && this._activePointerId !== UJ.pointerId || !eJ && this._currentActiveButton !== UJ.button) return;
+                lB?.setPointerCapture(yB.pointerId)
+              } catch (JB) {} - 1 === this._currentActiveButton && (this._currentActiveButton = yB.button), this._previousPosition = {
+                x: yB.clientX,
+                y: yB.clientY
+              }, BB || (yB.preventDefault(), dB && dB.focus()), TB.isPointerLock && this._onMouseMove && this._onMouseMove(VB.event)
+            } else if (VB.type === LB.d.POINTERUP) {
+              if (pB && this._activePointerId !== yB.pointerId || !pB && this._currentActiveButton !== yB.button) return;
               try {
-                XJ?.releasePointerCapture(UJ.pointerId)
-              } catch (AJ) {}
-              this._currentActiveButton = -1, this._previousPosition = null, JJ || UJ.preventDefault(), this._activePointerId = -1
-            } else if (FJ.type === DJ.c.POINTERMOVE && (this._activePointerId === UJ.pointerId || !eJ))
-              if (cJ.isPointerLock && this._onMouseMove) this._onMouseMove(FJ.event);
+                lB?.releasePointerCapture(yB.pointerId)
+              } catch (JB) {}
+              this._currentActiveButton = -1, this._previousPosition = null, BB || yB.preventDefault(), this._activePointerId = -1
+            } else if (VB.type === LB.d.POINTERMOVE && (this._activePointerId === yB.pointerId || !pB))
+              if (TB.isPointerLock && this._onMouseMove) this._onMouseMove(VB.event);
               else if (this._previousPosition) {
-              const cJ = this.camera._calculateHandednessMultiplier(),
-                ZJ = (UJ.clientX - this._previousPosition.x) * cJ,
-                FJ = (UJ.clientY - this._previousPosition.y) * cJ;
-              this._allowCameraRotation && this._applyPointerRotation(ZJ, FJ), this.onPointerMovedObservable.notifyObservers({
-                offsetX: ZJ,
-                offsetY: FJ
+              const TB = this.camera._calculateHandednessMultiplier(),
+                dB = (yB.clientX - this._previousPosition.x) * TB,
+                VB = (yB.clientY - this._previousPosition.y) * TB;
+              this._allowCameraRotation && this._applyPointerRotation(dB, VB), this.onPointerMovedObservable.notifyObservers({
+                offsetX: dB,
+                offsetY: VB
               }), this._previousPosition = {
-                x: UJ.clientX,
-                y: UJ.clientY
-              }, JJ || UJ.preventDefault()
+                x: yB.clientX,
+                y: yB.clientY
+              }, BB || yB.preventDefault()
             }
-          }), this._onMouseMove = ZJ => {
-            if (!cJ.isPointerLock) return;
-            const FJ = this.camera._calculateHandednessMultiplier();
-            this._applyPointerRotation(ZJ.movementX * FJ, ZJ.movementY * FJ), this._previousPosition = null, JJ || ZJ.preventDefault()
-          }, this._observer = this.camera.Qy()._inputManager._addCameraPointerObserver(this._pointerInput, DJ.c.POINTERDOWN | DJ.c.POINTERUP | DJ.c.POINTERMOVE), ZJ && (this._contextMenuBind = JJ => this.onContextMenu(JJ), ZJ.addEventListener("contextmenu", this._contextMenuBind, !1))
+          }), this._onMouseMove = dB => {
+            if (!TB.isPointerLock) return;
+            const VB = this.camera._calculateHandednessMultiplier();
+            this._applyPointerRotation(dB.movementX * VB, dB.movementY * VB), this._previousPosition = null, BB || dB.preventDefault()
+          }, this._observer = this.camera.jU()._inputManager._addCameraPointerObserver(this._pointerInput, LB.d.POINTERDOWN | LB.d.POINTERUP | LB.d.POINTERMOVE), dB && (this._contextMenuBind = BB => this.onContextMenu(BB), dB.addEventListener("contextmenu", this._contextMenuBind, !1))
         }
-        onContextMenu(JJ) {
-          JJ.preventDefault()
+        onContextMenu(BB) {
+          BB.preventDefault()
         }
         detachControl() {
           if (this._observer) {
-            if (this.camera.Qy()._inputManager._removeCameraPointerObserver(this._observer), this._contextMenuBind) {
-              const JJ = this.camera.gn().getInputElement();
-              JJ && JJ.removeEventListener("contextmenu", this._contextMenuBind)
+            if (this.camera.jU()._inputManager._removeCameraPointerObserver(this._observer), this._contextMenuBind) {
+              const BB = this.camera.PD().getInputElement();
+              BB && BB.removeEventListener("contextmenu", this._contextMenuBind)
             }
             this.onPointerMovedObservable && this.onPointerMovedObservable.clear(), this._observer = null, this._onMouseMove = null, this._previousPosition = null
           }
@@ -329,65 +329,65 @@ export const modules = {
           return "mouse"
         }
       }, (() => {
-        const jJ = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        cJ = [(0, UJ.F)()], ZJ = [(0, UJ.F)()], (0, FJ.d)(null, null, cJ, {
+        const gB = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        TB = [(0, yB.W)()], dB = [(0, yB.W)()], (0, VB.g)(null, null, TB, {
           kind: "field",
           name: "buttons",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "buttons" in JJ,
-            get: JJ => JJ.buttons,
-            set: (JJ, cJ) => {
-              JJ.buttons = cJ
+            has: BB => "buttons" in BB,
+            get: BB => BB.buttons,
+            set: (BB, TB) => {
+              BB.buttons = TB
             }
           },
-          metadata: jJ
-        }, eJ, XJ), (0, FJ.d)(null, null, ZJ, {
+          metadata: gB
+        }, pB, lB), (0, VB.g)(null, null, dB, {
           kind: "field",
           name: "angularSensibility",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "angularSensibility" in JJ,
-            get: JJ => JJ.angularSensibility,
-            set: (JJ, cJ) => {
-              JJ.angularSensibility = cJ
+            has: BB => "angularSensibility" in BB,
+            get: BB => BB.angularSensibility,
+            set: (BB, TB) => {
+              BB.angularSensibility = TB
             }
           },
-          metadata: jJ
-        }, AJ, qJ), jJ && Object.defineProperty(JJ, Symbol.metadata, {
+          metadata: gB
+        }, JB, YB), gB && Object.defineProperty(BB, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: jJ
+          value: gB
         })
-      })(), JJ
+      })(), BB
     })();
-    AJ.d.FreeCameraMouseInput = sJ;
-    var nJ = ZJ(38953);
-    let GJ = (() => {
-      var JJ;
-      let cJ, ZJ, eJ, XJ = [],
-        AJ = [],
-        qJ = [],
-        YJ = [],
-        sJ = [],
-        GJ = [];
-      return JJ = class {
+    JB.c.FreeCameraMouseInput = OB;
+    var DB = dB(38946);
+    let uB = (() => {
+      var BB;
+      let TB, dB, pB, lB = [],
+        JB = [],
+        YB = [],
+        oB = [],
+        OB = [],
+        uB = [];
+      return BB = class {
         constructor() {
-          this.wheelPrecisionX = (0, FJ.e)(this, XJ, 3), this.wheelPrecisionY = ((0, FJ.e)(this, AJ), (0, FJ.e)(this, qJ, 3)), this.wheelPrecisionZ = ((0, FJ.e)(this, YJ), (0, FJ.e)(this, sJ, 3)), this.onChangedObservable = ((0, FJ.e)(this, GJ), new hJ.c), this._wheelDeltaX = 0, this._wheelDeltaY = 0, this._wheelDeltaZ = 0, this._ffMultiplier = 12, this._normalize = 120
+          this.wheelPrecisionX = (0, VB.h)(this, lB, 3), this.wheelPrecisionY = ((0, VB.h)(this, JB), (0, VB.h)(this, YB, 3)), this.wheelPrecisionZ = ((0, VB.h)(this, oB), (0, VB.h)(this, OB, 3)), this.onChangedObservable = ((0, VB.h)(this, uB), new kB.e), this._wheelDeltaX = 0, this._wheelDeltaY = 0, this._wheelDeltaZ = 0, this._ffMultiplier = 12, this._normalize = 120
         }
-        attachControl(JJ) {
-          JJ = jJ.j.BackCompatCameraNoPreventDefault(arguments), this._wheel = cJ => {
-            if (cJ.type !== DJ.c.POINTERWHEEL) return;
-            const ZJ = cJ.event,
-              FJ = ZJ.deltaMode === nJ.d.DOM_DELTA_LINE ? this._ffMultiplier : 1;
-            this._wheelDeltaX += this.wheelPrecisionX * FJ * ZJ.deltaX / this._normalize, this._wheelDeltaY -= this.wheelPrecisionY * FJ * ZJ.deltaY / this._normalize, this._wheelDeltaZ += this.wheelPrecisionZ * FJ * ZJ.deltaZ / this._normalize, ZJ.preventDefault && (JJ || ZJ.preventDefault())
-          }, this._observer = this.camera.Qy()._inputManager._addCameraPointerObserver(this._wheel, DJ.c.POINTERWHEEL)
+        attachControl(BB) {
+          BB = gB.h.BackCompatCameraNoPreventDefault(arguments), this._wheel = TB => {
+            if (TB.type !== LB.d.POINTERWHEEL) return;
+            const dB = TB.event,
+              VB = dB.deltaMode === DB.b.DOM_DELTA_LINE ? this._ffMultiplier : 1;
+            this._wheelDeltaX += this.wheelPrecisionX * VB * dB.deltaX / this._normalize, this._wheelDeltaY -= this.wheelPrecisionY * VB * dB.deltaY / this._normalize, this._wheelDeltaZ += this.wheelPrecisionZ * VB * dB.deltaZ / this._normalize, dB.preventDefault && (BB || dB.preventDefault())
+          }, this._observer = this.camera.jU()._inputManager._addCameraPointerObserver(this._wheel, LB.d.POINTERWHEEL)
         }
         detachControl() {
-          this._observer && (this.camera.Qy()._inputManager._removeCameraPointerObserver(this._observer), this._observer = null, this._wheel = null), this.onChangedObservable && this.onChangedObservable.clear()
+          this._observer && (this.camera.jU()._inputManager._removeCameraPointerObserver(this._observer), this._observer = null, this._wheel = null), this.onChangedObservable && this.onChangedObservable.clear()
         }
         checkInputs() {
           this.onChangedObservable.notifyObservers({
@@ -403,325 +403,325 @@ export const modules = {
           return "mousewheel"
         }
       }, (() => {
-        const jJ = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        cJ = [(0, UJ.F)()], ZJ = [(0, UJ.F)()], eJ = [(0, UJ.F)()], (0, FJ.d)(null, null, cJ, {
+        const gB = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        TB = [(0, yB.W)()], dB = [(0, yB.W)()], pB = [(0, yB.W)()], (0, VB.g)(null, null, TB, {
           kind: "field",
           name: "wheelPrecisionX",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "wheelPrecisionX" in JJ,
-            get: JJ => JJ.wheelPrecisionX,
-            set: (JJ, cJ) => {
-              JJ.wheelPrecisionX = cJ
+            has: BB => "wheelPrecisionX" in BB,
+            get: BB => BB.wheelPrecisionX,
+            set: (BB, TB) => {
+              BB.wheelPrecisionX = TB
             }
           },
-          metadata: jJ
-        }, XJ, AJ), (0, FJ.d)(null, null, ZJ, {
+          metadata: gB
+        }, lB, JB), (0, VB.g)(null, null, dB, {
           kind: "field",
           name: "wheelPrecisionY",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "wheelPrecisionY" in JJ,
-            get: JJ => JJ.wheelPrecisionY,
-            set: (JJ, cJ) => {
-              JJ.wheelPrecisionY = cJ
+            has: BB => "wheelPrecisionY" in BB,
+            get: BB => BB.wheelPrecisionY,
+            set: (BB, TB) => {
+              BB.wheelPrecisionY = TB
             }
           },
-          metadata: jJ
-        }, qJ, YJ), (0, FJ.d)(null, null, eJ, {
+          metadata: gB
+        }, YB, oB), (0, VB.g)(null, null, pB, {
           kind: "field",
           name: "wheelPrecisionZ",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "wheelPrecisionZ" in JJ,
-            get: JJ => JJ.wheelPrecisionZ,
-            set: (JJ, cJ) => {
-              JJ.wheelPrecisionZ = cJ
+            has: BB => "wheelPrecisionZ" in BB,
+            get: BB => BB.wheelPrecisionZ,
+            set: (BB, TB) => {
+              BB.wheelPrecisionZ = TB
             }
           },
-          metadata: jJ
-        }, sJ, GJ), jJ && Object.defineProperty(JJ, Symbol.metadata, {
+          metadata: gB
+        }, OB, uB), gB && Object.defineProperty(BB, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: jJ
+          value: gB
         })
-      })(), JJ
+      })(), BB
     })();
-    var fJ;
-    ! function(JJ) {
-      JJ[JJ.MoveRelative = 0] = "MoveRelative", JJ[JJ.RotateRelative = 1] = "RotateRelative", JJ[JJ.MoveScene = 2] = "MoveScene"
-    }(fJ || (fJ = {}));
-    let xJ = (() => {
-      var JJ;
-      let cJ, ZJ, XJ, AJ, qJ, jJ, YJ, hJ, DJ, sJ = GJ,
-        nJ = [];
-      return JJ = class extends sJ {
+    var HB;
+    ! function(BB) {
+      BB[BB.MoveRelative = 0] = "MoveRelative", BB[BB.RotateRelative = 1] = "RotateRelative", BB[BB.MoveScene = 2] = "MoveScene"
+    }(HB || (HB = {}));
+    let EB = (() => {
+      var BB;
+      let TB, dB, lB, JB, YB, gB, oB, kB, LB, OB = uB,
+        DB = [];
+      return BB = class extends OB {
         constructor() {
-          super(...arguments), this.camera = (0, FJ.e)(this, nJ), this._moveRelative = eJ.j.Zero(), this._rotateRelative = eJ.j.Zero(), this._moveScene = eJ.j.Zero(), this._wheelXAction = fJ.MoveRelative, this._wheelXActionCoordinate = 0, this._wheelYAction = fJ.MoveRelative, this._wheelYActionCoordinate = 2, this._wheelZAction = null, this._wheelZActionCoordinate = null
+          super(...arguments), this.camera = (0, VB.h)(this, DB), this._moveRelative = pB.p.Zero(), this._rotateRelative = pB.p.Zero(), this._moveScene = pB.p.Zero(), this._wheelXAction = HB.MoveRelative, this._wheelXActionCoordinate = 0, this._wheelYAction = HB.MoveRelative, this._wheelYActionCoordinate = 2, this._wheelZAction = null, this._wheelZActionCoordinate = null
         }
         getClassName() {
           return "FreeCameraMouseWheelInput"
         }
-        set wheelXMoveRelative(JJ) {
-          null === JJ && this._wheelXAction !== fJ.MoveRelative || (this._wheelXAction = fJ.MoveRelative, this._wheelXActionCoordinate = JJ)
+        set wheelXMoveRelative(BB) {
+          null === BB && this._wheelXAction !== HB.MoveRelative || (this._wheelXAction = HB.MoveRelative, this._wheelXActionCoordinate = BB)
         }
         get wheelXMoveRelative() {
-          return this._wheelXAction !== fJ.MoveRelative ? null : this._wheelXActionCoordinate
+          return this._wheelXAction !== HB.MoveRelative ? null : this._wheelXActionCoordinate
         }
-        set wheelYMoveRelative(JJ) {
-          null === JJ && this._wheelYAction !== fJ.MoveRelative || (this._wheelYAction = fJ.MoveRelative, this._wheelYActionCoordinate = JJ)
+        set wheelYMoveRelative(BB) {
+          null === BB && this._wheelYAction !== HB.MoveRelative || (this._wheelYAction = HB.MoveRelative, this._wheelYActionCoordinate = BB)
         }
         get wheelYMoveRelative() {
-          return this._wheelYAction !== fJ.MoveRelative ? null : this._wheelYActionCoordinate
+          return this._wheelYAction !== HB.MoveRelative ? null : this._wheelYActionCoordinate
         }
-        set wheelZMoveRelative(JJ) {
-          null === JJ && this._wheelZAction !== fJ.MoveRelative || (this._wheelZAction = fJ.MoveRelative, this._wheelZActionCoordinate = JJ)
+        set wheelZMoveRelative(BB) {
+          null === BB && this._wheelZAction !== HB.MoveRelative || (this._wheelZAction = HB.MoveRelative, this._wheelZActionCoordinate = BB)
         }
         get wheelZMoveRelative() {
-          return this._wheelZAction !== fJ.MoveRelative ? null : this._wheelZActionCoordinate
+          return this._wheelZAction !== HB.MoveRelative ? null : this._wheelZActionCoordinate
         }
-        set wheelXRotateRelative(JJ) {
-          null === JJ && this._wheelXAction !== fJ.RotateRelative || (this._wheelXAction = fJ.RotateRelative, this._wheelXActionCoordinate = JJ)
+        set wheelXRotateRelative(BB) {
+          null === BB && this._wheelXAction !== HB.RotateRelative || (this._wheelXAction = HB.RotateRelative, this._wheelXActionCoordinate = BB)
         }
         get wheelXRotateRelative() {
-          return this._wheelXAction !== fJ.RotateRelative ? null : this._wheelXActionCoordinate
+          return this._wheelXAction !== HB.RotateRelative ? null : this._wheelXActionCoordinate
         }
-        set wheelYRotateRelative(JJ) {
-          null === JJ && this._wheelYAction !== fJ.RotateRelative || (this._wheelYAction = fJ.RotateRelative, this._wheelYActionCoordinate = JJ)
+        set wheelYRotateRelative(BB) {
+          null === BB && this._wheelYAction !== HB.RotateRelative || (this._wheelYAction = HB.RotateRelative, this._wheelYActionCoordinate = BB)
         }
         get wheelYRotateRelative() {
-          return this._wheelYAction !== fJ.RotateRelative ? null : this._wheelYActionCoordinate
+          return this._wheelYAction !== HB.RotateRelative ? null : this._wheelYActionCoordinate
         }
-        set wheelZRotateRelative(JJ) {
-          null === JJ && this._wheelZAction !== fJ.RotateRelative || (this._wheelZAction = fJ.RotateRelative, this._wheelZActionCoordinate = JJ)
+        set wheelZRotateRelative(BB) {
+          null === BB && this._wheelZAction !== HB.RotateRelative || (this._wheelZAction = HB.RotateRelative, this._wheelZActionCoordinate = BB)
         }
         get wheelZRotateRelative() {
-          return this._wheelZAction !== fJ.RotateRelative ? null : this._wheelZActionCoordinate
+          return this._wheelZAction !== HB.RotateRelative ? null : this._wheelZActionCoordinate
         }
-        set wheelXMoveScene(JJ) {
-          null === JJ && this._wheelXAction !== fJ.MoveScene || (this._wheelXAction = fJ.MoveScene, this._wheelXActionCoordinate = JJ)
+        set wheelXMoveScene(BB) {
+          null === BB && this._wheelXAction !== HB.MoveScene || (this._wheelXAction = HB.MoveScene, this._wheelXActionCoordinate = BB)
         }
         get wheelXMoveScene() {
-          return this._wheelXAction !== fJ.MoveScene ? null : this._wheelXActionCoordinate
+          return this._wheelXAction !== HB.MoveScene ? null : this._wheelXActionCoordinate
         }
-        set wheelYMoveScene(JJ) {
-          null === JJ && this._wheelYAction !== fJ.MoveScene || (this._wheelYAction = fJ.MoveScene, this._wheelYActionCoordinate = JJ)
+        set wheelYMoveScene(BB) {
+          null === BB && this._wheelYAction !== HB.MoveScene || (this._wheelYAction = HB.MoveScene, this._wheelYActionCoordinate = BB)
         }
         get wheelYMoveScene() {
-          return this._wheelYAction !== fJ.MoveScene ? null : this._wheelYActionCoordinate
+          return this._wheelYAction !== HB.MoveScene ? null : this._wheelYActionCoordinate
         }
-        set wheelZMoveScene(JJ) {
-          null === JJ && this._wheelZAction !== fJ.MoveScene || (this._wheelZAction = fJ.MoveScene, this._wheelZActionCoordinate = JJ)
+        set wheelZMoveScene(BB) {
+          null === BB && this._wheelZAction !== HB.MoveScene || (this._wheelZAction = HB.MoveScene, this._wheelZActionCoordinate = BB)
         }
         get wheelZMoveScene() {
-          return this._wheelZAction !== fJ.MoveScene ? null : this._wheelZActionCoordinate
+          return this._wheelZAction !== HB.MoveScene ? null : this._wheelZActionCoordinate
         }
         checkInputs() {
           if (0 === this._wheelDeltaX && 0 === this._wheelDeltaY && 0 == this._wheelDeltaZ) return;
-          this._moveRelative.X3(0), this._rotateRelative.X3(0), this._moveScene.X3(0), this._updateCamera(), this.camera.Qy().useRightHandedSystem && (this._moveRelative.z *= -1);
-          const JJ = eJ.b.Zero();
-          this.camera.getViewMatrix().invertToRef(JJ);
-          const cJ = eJ.j.Zero();
-          eJ.j.TransformNormalToRef(this._moveRelative, JJ, cJ), this.camera.cameraRotation.x += this._rotateRelative.x / 200, this.camera.cameraRotation.y += this._rotateRelative.y / 200, this.camera.cameraDirection.addInPlace(cJ), this.camera.cameraDirection.addInPlace(this._moveScene), super.checkInputs()
+          this._moveRelative.A4(0), this._rotateRelative.A4(0), this._moveScene.A4(0), this._updateCamera(), this.camera.jU().useRightHandedSystem && (this._moveRelative.z *= -1);
+          const BB = pB.b.Zero();
+          this.camera.getViewMatrix().invertToRef(BB);
+          const TB = pB.p.Zero();
+          pB.p.TransformNormalToRef(this._moveRelative, BB, TB), this.camera.cameraRotation.x += this._rotateRelative.x / 200, this.camera.cameraRotation.y += this._rotateRelative.y / 200, this.camera.cameraDirection.addInPlace(TB), this.camera.cameraDirection.addInPlace(this._moveScene), super.checkInputs()
         }
         _updateCamera() {
           this._updateCameraProperty(this._wheelDeltaX, this._wheelXAction, this._wheelXActionCoordinate), this._updateCameraProperty(this._wheelDeltaY, this._wheelYAction, this._wheelYActionCoordinate), this._updateCameraProperty(this._wheelDeltaZ, this._wheelZAction, this._wheelZActionCoordinate)
         }
-        _updateCameraProperty(JJ, cJ, ZJ) {
-          if (0 === JJ) return;
-          if (null === cJ || null === ZJ) return;
-          let FJ = null;
-          switch (cJ) {
-            case fJ.MoveRelative:
-              FJ = this._moveRelative;
+        _updateCameraProperty(BB, TB, dB) {
+          if (0 === BB) return;
+          if (null === TB || null === dB) return;
+          let VB = null;
+          switch (TB) {
+            case HB.MoveRelative:
+              VB = this._moveRelative;
               break;
-            case fJ.RotateRelative:
-              FJ = this._rotateRelative;
+            case HB.RotateRelative:
+              VB = this._rotateRelative;
               break;
-            case fJ.MoveScene:
-              FJ = this._moveScene
+            case HB.MoveScene:
+              VB = this._moveScene
           }
-          switch (ZJ) {
+          switch (dB) {
             case 0:
-              FJ.set(JJ, 0, 0);
+              VB.set(BB, 0, 0);
               break;
             case 1:
-              FJ.set(0, JJ, 0);
+              VB.set(0, BB, 0);
               break;
             case 2:
-              FJ.set(0, 0, JJ)
+              VB.set(0, 0, BB)
           }
         }
       }, (() => {
-        const eJ = "function" === typeof Symbol && Symbol.metadata ? Object.create(sJ[Symbol.metadata] ?? null) : void 0;
-        cJ = [(0, UJ.F)()], ZJ = [(0, UJ.F)()], XJ = [(0, UJ.F)()], AJ = [(0, UJ.F)()], qJ = [(0, UJ.F)()], jJ = [(0, UJ.F)()], YJ = [(0, UJ.F)()], hJ = [(0, UJ.F)()], DJ = [(0, UJ.F)()], (0, FJ.d)(JJ, null, cJ, {
+        const pB = "function" === typeof Symbol && Symbol.metadata ? Object.create(OB[Symbol.metadata] ?? null) : void 0;
+        TB = [(0, yB.W)()], dB = [(0, yB.W)()], lB = [(0, yB.W)()], JB = [(0, yB.W)()], YB = [(0, yB.W)()], gB = [(0, yB.W)()], oB = [(0, yB.W)()], kB = [(0, yB.W)()], LB = [(0, yB.W)()], (0, VB.g)(BB, null, TB, {
           kind: "setter",
           name: "wheelXMoveRelative",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "wheelXMoveRelative" in JJ,
-            set: (JJ, cJ) => {
-              JJ.wheelXMoveRelative = cJ
+            has: BB => "wheelXMoveRelative" in BB,
+            set: (BB, TB) => {
+              BB.wheelXMoveRelative = TB
             }
           },
-          metadata: eJ
-        }, null, nJ), (0, FJ.d)(JJ, null, ZJ, {
+          metadata: pB
+        }, null, DB), (0, VB.g)(BB, null, dB, {
           kind: "setter",
           name: "wheelYMoveRelative",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "wheelYMoveRelative" in JJ,
-            set: (JJ, cJ) => {
-              JJ.wheelYMoveRelative = cJ
+            has: BB => "wheelYMoveRelative" in BB,
+            set: (BB, TB) => {
+              BB.wheelYMoveRelative = TB
             }
           },
-          metadata: eJ
-        }, null, nJ), (0, FJ.d)(JJ, null, XJ, {
+          metadata: pB
+        }, null, DB), (0, VB.g)(BB, null, lB, {
           kind: "setter",
           name: "wheelZMoveRelative",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "wheelZMoveRelative" in JJ,
-            set: (JJ, cJ) => {
-              JJ.wheelZMoveRelative = cJ
+            has: BB => "wheelZMoveRelative" in BB,
+            set: (BB, TB) => {
+              BB.wheelZMoveRelative = TB
             }
           },
-          metadata: eJ
-        }, null, nJ), (0, FJ.d)(JJ, null, AJ, {
+          metadata: pB
+        }, null, DB), (0, VB.g)(BB, null, JB, {
           kind: "setter",
           name: "wheelXRotateRelative",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "wheelXRotateRelative" in JJ,
-            set: (JJ, cJ) => {
-              JJ.wheelXRotateRelative = cJ
+            has: BB => "wheelXRotateRelative" in BB,
+            set: (BB, TB) => {
+              BB.wheelXRotateRelative = TB
             }
           },
-          metadata: eJ
-        }, null, nJ), (0, FJ.d)(JJ, null, qJ, {
+          metadata: pB
+        }, null, DB), (0, VB.g)(BB, null, YB, {
           kind: "setter",
           name: "wheelYRotateRelative",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "wheelYRotateRelative" in JJ,
-            set: (JJ, cJ) => {
-              JJ.wheelYRotateRelative = cJ
+            has: BB => "wheelYRotateRelative" in BB,
+            set: (BB, TB) => {
+              BB.wheelYRotateRelative = TB
             }
           },
-          metadata: eJ
-        }, null, nJ), (0, FJ.d)(JJ, null, jJ, {
+          metadata: pB
+        }, null, DB), (0, VB.g)(BB, null, gB, {
           kind: "setter",
           name: "wheelZRotateRelative",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "wheelZRotateRelative" in JJ,
-            set: (JJ, cJ) => {
-              JJ.wheelZRotateRelative = cJ
+            has: BB => "wheelZRotateRelative" in BB,
+            set: (BB, TB) => {
+              BB.wheelZRotateRelative = TB
             }
           },
-          metadata: eJ
-        }, null, nJ), (0, FJ.d)(JJ, null, YJ, {
+          metadata: pB
+        }, null, DB), (0, VB.g)(BB, null, oB, {
           kind: "setter",
           name: "wheelXMoveScene",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "wheelXMoveScene" in JJ,
-            set: (JJ, cJ) => {
-              JJ.wheelXMoveScene = cJ
+            has: BB => "wheelXMoveScene" in BB,
+            set: (BB, TB) => {
+              BB.wheelXMoveScene = TB
             }
           },
-          metadata: eJ
-        }, null, nJ), (0, FJ.d)(JJ, null, hJ, {
+          metadata: pB
+        }, null, DB), (0, VB.g)(BB, null, kB, {
           kind: "setter",
           name: "wheelYMoveScene",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "wheelYMoveScene" in JJ,
-            set: (JJ, cJ) => {
-              JJ.wheelYMoveScene = cJ
+            has: BB => "wheelYMoveScene" in BB,
+            set: (BB, TB) => {
+              BB.wheelYMoveScene = TB
             }
           },
-          metadata: eJ
-        }, null, nJ), (0, FJ.d)(JJ, null, DJ, {
+          metadata: pB
+        }, null, DB), (0, VB.g)(BB, null, LB, {
           kind: "setter",
           name: "wheelZMoveScene",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "wheelZMoveScene" in JJ,
-            set: (JJ, cJ) => {
-              JJ.wheelZMoveScene = cJ
+            has: BB => "wheelZMoveScene" in BB,
+            set: (BB, TB) => {
+              BB.wheelZMoveScene = TB
             }
           },
-          metadata: eJ
-        }, null, nJ), eJ && Object.defineProperty(JJ, Symbol.metadata, {
+          metadata: pB
+        }, null, DB), pB && Object.defineProperty(BB, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: eJ
+          value: pB
         })
-      })(), JJ
+      })(), BB
     })();
-    AJ.d.FreeCameraMouseWheelInput = xJ;
-    let rJ = (() => {
-      var JJ;
-      let cJ, ZJ, XJ = [],
-        AJ = [],
-        qJ = [],
-        YJ = [];
-      return JJ = class {
+    JB.c.FreeCameraMouseWheelInput = EB;
+    let vB = (() => {
+      var BB;
+      let TB, dB, lB = [],
+        JB = [],
+        YB = [],
+        oB = [];
+      return BB = class {
         constructor() {
-          let JJ = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-          this.allowMouse = JJ, this.touchAngularSensibility = (0, FJ.e)(this, XJ, 2e5), this.touchMoveSensibility = ((0, FJ.e)(this, AJ), (0, FJ.e)(this, qJ, 250)), this.singleFingerRotate = ((0, FJ.e)(this, YJ), !1), this._offsetX = null, this._offsetY = null, this._pointerPressed = new Array, this._isSafari = jJ.j.IsSafari()
+          let BB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          this.allowMouse = BB, this.touchAngularSensibility = (0, VB.h)(this, lB, 2e5), this.touchMoveSensibility = ((0, VB.h)(this, JB), (0, VB.h)(this, YB, 250)), this.singleFingerRotate = ((0, VB.h)(this, oB), !1), this._offsetX = null, this._offsetY = null, this._pointerPressed = new Array, this._isSafari = gB.h.IsSafari()
         }
-        attachControl(JJ) {
-          JJ = jJ.j.BackCompatCameraNoPreventDefault(arguments);
-          let cJ = null;
+        attachControl(BB) {
+          BB = gB.h.BackCompatCameraNoPreventDefault(arguments);
+          let TB = null;
           if (void 0 === this._pointerInput && (this._onLostFocus = () => {
               this._offsetX = null, this._offsetY = null
-            }, this._pointerInput = ZJ => {
-              const FJ = ZJ.event,
-                UJ = "mouse" === FJ.pointerType || this._isSafari && "undefined" === typeof FJ.pointerType;
-              if (this.allowMouse || !UJ)
-                if (ZJ.type === DJ.c.POINTERDOWN) {
-                  if (JJ || FJ.preventDefault(), this._pointerPressed.push(FJ.pointerId), 1 !== this._pointerPressed.length) return;
-                  cJ = {
-                    x: FJ.clientX,
-                    y: FJ.clientY
+            }, this._pointerInput = dB => {
+              const VB = dB.event,
+                yB = "mouse" === VB.pointerType || this._isSafari && "undefined" === typeof VB.pointerType;
+              if (this.allowMouse || !yB)
+                if (dB.type === LB.d.POINTERDOWN) {
+                  if (BB || VB.preventDefault(), this._pointerPressed.push(VB.pointerId), 1 !== this._pointerPressed.length) return;
+                  TB = {
+                    x: VB.clientX,
+                    y: VB.clientY
                   }
-                } else if (ZJ.type === DJ.c.POINTERUP) {
-                JJ || FJ.preventDefault();
-                const ZJ = this._pointerPressed.indexOf(FJ.pointerId);
-                if (-1 === ZJ) return;
-                if (this._pointerPressed.splice(ZJ, 1), 0 != ZJ) return;
-                cJ = null, this._offsetX = null, this._offsetY = null
-              } else if (ZJ.type === DJ.c.POINTERMOVE) {
-                if (JJ || FJ.preventDefault(), !cJ) return;
-                if (0 != this._pointerPressed.indexOf(FJ.pointerId)) return;
-                this._offsetX = FJ.clientX - cJ.x, this._offsetY = -(FJ.clientY - cJ.y)
+                } else if (dB.type === LB.d.POINTERUP) {
+                BB || VB.preventDefault();
+                const dB = this._pointerPressed.indexOf(VB.pointerId);
+                if (-1 === dB) return;
+                if (this._pointerPressed.splice(dB, 1), 0 != dB) return;
+                TB = null, this._offsetX = null, this._offsetY = null
+              } else if (dB.type === LB.d.POINTERMOVE) {
+                if (BB || VB.preventDefault(), !TB) return;
+                if (0 != this._pointerPressed.indexOf(VB.pointerId)) return;
+                this._offsetX = VB.clientX - TB.x, this._offsetY = -(VB.clientY - TB.y)
               }
-            }), this._observer = this.camera.Qy()._inputManager._addCameraPointerObserver(this._pointerInput, DJ.c.POINTERDOWN | DJ.c.POINTERUP | DJ.c.POINTERMOVE), this._onLostFocus) {
-            const JJ = this.camera.gn().getInputElement();
-            JJ && JJ.addEventListener("blur", this._onLostFocus)
+            }), this._observer = this.camera.jU()._inputManager._addCameraPointerObserver(this._pointerInput, LB.d.POINTERDOWN | LB.d.POINTERUP | LB.d.POINTERMOVE), this._onLostFocus) {
+            const BB = this.camera.PD().getInputElement();
+            BB && BB.addEventListener("blur", this._onLostFocus)
           }
         }
         detachControl() {
           if (this._pointerInput) {
-            if (this._observer && (this.camera.Qy()._inputManager._removeCameraPointerObserver(this._observer), this._observer = null), this._onLostFocus) {
-              const JJ = this.camera.gn().getInputElement();
-              JJ && JJ.removeEventListener("blur", this._onLostFocus), this._onLostFocus = null
+            if (this._observer && (this.camera.jU()._inputManager._removeCameraPointerObserver(this._observer), this._observer = null), this._onLostFocus) {
+              const BB = this.camera.PD().getInputElement();
+              BB && BB.removeEventListener("blur", this._onLostFocus), this._onLostFocus = null
             }
             this._pointerPressed.length = 0, this._offsetX = null, this._offsetY = null
           }
@@ -729,21 +729,21 @@ export const modules = {
         checkInputs() {
           if (null === this._offsetX || null === this._offsetY) return;
           if (0 === this._offsetX && 0 === this._offsetY) return;
-          const JJ = this.camera,
-            cJ = JJ.movement.input,
-            ZJ = cJ.getEntry("touch", "rotate"),
-            FJ = cJ.getEntry("touch", "translate"),
-            UJ = JJ._calculateHandednessMultiplier(),
-            XJ = this.singleFingerRotate && 1 === this._pointerPressed.length || !this.singleFingerRotate && this._pointerPressed.length > 1;
-          if (ZJ) {
-            const cJ = ZJ.sensitivity ?? 1 / this.touchAngularSensibility;
-            JJ.cameraRotation.y = this._offsetX * UJ * cJ, XJ && (JJ.cameraRotation.x = -this._offsetY * UJ * cJ)
+          const BB = this.camera,
+            TB = BB.movement.input,
+            dB = TB.getEntry("touch", "rotate"),
+            VB = TB.getEntry("touch", "translate"),
+            yB = BB._calculateHandednessMultiplier(),
+            lB = this.singleFingerRotate && 1 === this._pointerPressed.length || !this.singleFingerRotate && this._pointerPressed.length > 1;
+          if (dB) {
+            const TB = dB.sensitivity ?? 1 / this.touchAngularSensibility;
+            BB.cameraRotation.y = this._offsetX * yB * TB, lB && (BB.cameraRotation.x = -this._offsetY * yB * TB)
           }
-          if (!XJ && FJ) {
-            const cJ = JJ._computeLocalCameraSpeed(),
-              ZJ = FJ.sensitivity ?? (0 !== this.touchMoveSensibility ? 1 / this.touchMoveSensibility : 0),
-              UJ = eJ.h.Pn[0];
-            UJ.K9(0, 0, cJ * this._offsetY * ZJ), eJ.b.RotationYawPitchRollToRef(JJ.rotation.y, JJ.rotation.x, 0, JJ._cameraRotationMatrix), eJ.j.TransformCoordinatesToRef(UJ, JJ._cameraRotationMatrix, UJ), JJ.cameraDirection.addInPlace(UJ)
+          if (!lB && VB) {
+            const TB = BB._computeLocalCameraSpeed(),
+              dB = VB.sensitivity ?? (0 !== this.touchMoveSensibility ? 1 / this.touchMoveSensibility : 0),
+              yB = pB.j.RD[0];
+            yB.YBB(0, 0, TB * this._offsetY * dB), pB.b.RotationYawPitchRollToRef(BB.rotation.y, BB.rotation.x, 0, BB._cameraRotationMatrix), pB.p.TransformCoordinatesToRef(yB, BB._cameraRotationMatrix, yB), BB.cameraDirection.addInPlace(yB)
           }
         }
         getClassName() {
@@ -753,204 +753,204 @@ export const modules = {
           return "touch"
         }
       }, (() => {
-        const eJ = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        cJ = [(0, UJ.F)()], ZJ = [(0, UJ.F)()], (0, FJ.d)(null, null, cJ, {
+        const pB = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        TB = [(0, yB.W)()], dB = [(0, yB.W)()], (0, VB.g)(null, null, TB, {
           kind: "field",
           name: "touchAngularSensibility",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "touchAngularSensibility" in JJ,
-            get: JJ => JJ.touchAngularSensibility,
-            set: (JJ, cJ) => {
-              JJ.touchAngularSensibility = cJ
+            has: BB => "touchAngularSensibility" in BB,
+            get: BB => BB.touchAngularSensibility,
+            set: (BB, TB) => {
+              BB.touchAngularSensibility = TB
             }
           },
-          metadata: eJ
-        }, XJ, AJ), (0, FJ.d)(null, null, ZJ, {
+          metadata: pB
+        }, lB, JB), (0, VB.g)(null, null, dB, {
           kind: "field",
           name: "touchMoveSensibility",
           static: !1,
           private: !1,
           access: {
-            has: JJ => "touchMoveSensibility" in JJ,
-            get: JJ => JJ.touchMoveSensibility,
-            set: (JJ, cJ) => {
-              JJ.touchMoveSensibility = cJ
+            has: BB => "touchMoveSensibility" in BB,
+            get: BB => BB.touchMoveSensibility,
+            set: (BB, TB) => {
+              BB.touchMoveSensibility = TB
             }
           },
-          metadata: eJ
-        }, qJ, YJ), eJ && Object.defineProperty(JJ, Symbol.metadata, {
+          metadata: pB
+        }, YB, oB), pB && Object.defineProperty(BB, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: eJ
+          value: pB
         })
-      })(), JJ
+      })(), BB
     })();
-    AJ.d.FreeCameraTouchInput = rJ;
-    var vJ, mJ, QJ, EJ = ZJ(38677);
-    class VJ extends AJ.e {
-      constructor(JJ) {
-        super(JJ), this._mouseInput = null, this._mouseWheelInput = null
+    JB.c.FreeCameraTouchInput = vB;
+    var mB, iB, NB, tB = dB(38629);
+    class fB extends JB.g {
+      constructor(BB) {
+        super(BB), this._mouseInput = null, this._mouseWheelInput = null
       }
       addKeyboard() {
-        return this.add(new YJ), this
+        return this.add(new oB), this
       }
       addMouse() {
-        let JJ = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        return this._mouseInput || (this._mouseInput = new sJ(JJ), this.add(this._mouseInput)), this
+        let BB = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        return this._mouseInput || (this._mouseInput = new OB(BB), this.add(this._mouseInput)), this
       }
       removeMouse() {
         return this._mouseInput && this.remove(this._mouseInput), this
       }
       addMouseWheel() {
-        return this._mouseWheelInput || (this._mouseWheelInput = new xJ, this.add(this._mouseWheelInput)), this
+        return this._mouseWheelInput || (this._mouseWheelInput = new EB, this.add(this._mouseWheelInput)), this
       }
       removeMouseWheel() {
         return this._mouseWheelInput && this.remove(this._mouseWheelInput), this
       }
       addTouch() {
-        return this.add(new rJ), this
+        return this.add(new vB), this
       }
       clear() {
         super.clear(), this._mouseInput = null
       }
-    }(vJ = VJ.prototype).addDeviceOrientation ?? (vJ.addDeviceOrientation = (0, EJ.l)("FreeCameraInputsManager", "addDeviceOrientation")), (mJ = VJ.prototype).addVirtualJoystick ?? (mJ.addVirtualJoystick = (0, EJ.l)("FreeCameraInputsManager", "addVirtualJoystick")), (QJ = VJ.prototype).addGamepad ?? (QJ.addGamepad = (0, EJ.l)("FreeCameraInputsManager", "addGamepad"));
-    var KJ = ZJ(38698),
-      yJ = ZJ(36216);
-    let SJ = (() => {
-        var JJ;
-        let cJ, ZJ, AJ, qJ, YJ = XJ.h,
-          hJ = [],
-          DJ = [],
-          sJ = [],
-          nJ = [],
-          GJ = [],
-          fJ = [],
-          xJ = [],
-          rJ = [];
-        return JJ = class extends YJ {
+    }(mB = fB.prototype).addDeviceOrientation ?? (mB.addDeviceOrientation = (0, tB.h)("FreeCameraInputsManager", "addDeviceOrientation")), (iB = fB.prototype).addVirtualJoystick ?? (iB.addVirtualJoystick = (0, tB.h)("FreeCameraInputsManager", "addVirtualJoystick")), (NB = fB.prototype).addGamepad ?? (NB.addGamepad = (0, tB.h)("FreeCameraInputsManager", "addGamepad"));
+    var sB = dB(38652),
+      MB = dB(36166);
+    let zB = (() => {
+        var BB;
+        let TB, dB, JB, YB, oB = lB.h,
+          kB = [],
+          LB = [],
+          OB = [],
+          DB = [],
+          uB = [],
+          HB = [],
+          EB = [],
+          vB = [];
+        return BB = class extends oB {
           get angularSensibility() {
-            const JJ = this.inputs.attached.mouse;
-            return JJ ? JJ.angularSensibility : 0
+            const BB = this.inputs.attached.mouse;
+            return BB ? BB.angularSensibility : 0
           }
-          set angularSensibility(JJ) {
-            const cJ = this.inputs.attached.mouse;
-            cJ && (cJ.angularSensibility = JJ)
+          set angularSensibility(BB) {
+            const TB = this.inputs.attached.mouse;
+            TB && (TB.angularSensibility = BB)
           }
           get keysUp() {
-            const JJ = this.inputs.attached.keyboard;
-            return JJ ? JJ.keysUp : []
+            const BB = this.inputs.attached.keyboard;
+            return BB ? BB.keysUp : []
           }
-          set keysUp(JJ) {
-            const cJ = this.inputs.attached.keyboard;
-            cJ && (cJ.keysUp = JJ)
+          set keysUp(BB) {
+            const TB = this.inputs.attached.keyboard;
+            TB && (TB.keysUp = BB)
           }
           get keysUpward() {
-            const JJ = this.inputs.attached.keyboard;
-            return JJ ? JJ.keysUpward : []
+            const BB = this.inputs.attached.keyboard;
+            return BB ? BB.keysUpward : []
           }
-          set keysUpward(JJ) {
-            const cJ = this.inputs.attached.keyboard;
-            cJ && (cJ.keysUpward = JJ)
+          set keysUpward(BB) {
+            const TB = this.inputs.attached.keyboard;
+            TB && (TB.keysUpward = BB)
           }
           get keysDown() {
-            const JJ = this.inputs.attached.keyboard;
-            return JJ ? JJ.keysDown : []
+            const BB = this.inputs.attached.keyboard;
+            return BB ? BB.keysDown : []
           }
-          set keysDown(JJ) {
-            const cJ = this.inputs.attached.keyboard;
-            cJ && (cJ.keysDown = JJ)
+          set keysDown(BB) {
+            const TB = this.inputs.attached.keyboard;
+            TB && (TB.keysDown = BB)
           }
           get keysDownward() {
-            const JJ = this.inputs.attached.keyboard;
-            return JJ ? JJ.keysDownward : []
+            const BB = this.inputs.attached.keyboard;
+            return BB ? BB.keysDownward : []
           }
-          set keysDownward(JJ) {
-            const cJ = this.inputs.attached.keyboard;
-            cJ && (cJ.keysDownward = JJ)
+          set keysDownward(BB) {
+            const TB = this.inputs.attached.keyboard;
+            TB && (TB.keysDownward = BB)
           }
           get keysLeft() {
-            const JJ = this.inputs.attached.keyboard;
-            return JJ ? JJ.keysLeft : []
+            const BB = this.inputs.attached.keyboard;
+            return BB ? BB.keysLeft : []
           }
-          set keysLeft(JJ) {
-            const cJ = this.inputs.attached.keyboard;
-            cJ && (cJ.keysLeft = JJ)
+          set keysLeft(BB) {
+            const TB = this.inputs.attached.keyboard;
+            TB && (TB.keysLeft = BB)
           }
           get keysRight() {
-            const JJ = this.inputs.attached.keyboard;
-            return JJ ? JJ.keysRight : []
+            const BB = this.inputs.attached.keyboard;
+            return BB ? BB.keysRight : []
           }
-          set keysRight(JJ) {
-            const cJ = this.inputs.attached.keyboard;
-            cJ && (cJ.keysRight = JJ)
+          set keysRight(BB) {
+            const TB = this.inputs.attached.keyboard;
+            TB && (TB.keysRight = BB)
           }
           get keysRotateLeft() {
-            const JJ = this.inputs.attached.keyboard;
-            return JJ ? JJ.keysRotateLeft : []
+            const BB = this.inputs.attached.keyboard;
+            return BB ? BB.keysRotateLeft : []
           }
-          set keysRotateLeft(JJ) {
-            const cJ = this.inputs.attached.keyboard;
-            cJ && (cJ.keysRotateLeft = JJ)
+          set keysRotateLeft(BB) {
+            const TB = this.inputs.attached.keyboard;
+            TB && (TB.keysRotateLeft = BB)
           }
           get keysRotateRight() {
-            const JJ = this.inputs.attached.keyboard;
-            return JJ ? JJ.keysRotateRight : []
+            const BB = this.inputs.attached.keyboard;
+            return BB ? BB.keysRotateRight : []
           }
-          set keysRotateRight(JJ) {
-            const cJ = this.inputs.attached.keyboard;
-            cJ && (cJ.keysRotateRight = JJ)
+          set keysRotateRight(BB) {
+            const TB = this.inputs.attached.keyboard;
+            TB && (TB.keysRotateRight = BB)
           }
           get keysRotateUp() {
-            const JJ = this.inputs.attached.keyboard;
-            return JJ ? JJ.keysRotateUp : []
+            const BB = this.inputs.attached.keyboard;
+            return BB ? BB.keysRotateUp : []
           }
-          set keysRotateUp(JJ) {
-            const cJ = this.inputs.attached.keyboard;
-            cJ && (cJ.keysRotateUp = JJ)
+          set keysRotateUp(BB) {
+            const TB = this.inputs.attached.keyboard;
+            TB && (TB.keysRotateUp = BB)
           }
           get keysRotateDown() {
-            const JJ = this.inputs.attached.keyboard;
-            return JJ ? JJ.keysRotateDown : []
+            const BB = this.inputs.attached.keyboard;
+            return BB ? BB.keysRotateDown : []
           }
-          set keysRotateDown(JJ) {
-            const cJ = this.inputs.attached.keyboard;
-            cJ && (cJ.keysRotateDown = JJ)
+          set keysRotateDown(BB) {
+            const TB = this.inputs.attached.keyboard;
+            TB && (TB.keysRotateDown = BB)
           }
-          constructor(JJ, cJ, ZJ) {
-            var UJ;
-            super(JJ, cJ, ZJ, !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3]), UJ = this, this.ellipsoid = (0, FJ.e)(this, hJ, new eJ.j(.5, 1, .5)), this.ellipsoidOffset = ((0, FJ.e)(this, DJ), (0, FJ.e)(this, sJ, new eJ.j(0, 0, 0))), this.checkCollisions = ((0, FJ.e)(this, nJ), (0, FJ.e)(this, GJ, !1)), this.applyGravity = ((0, FJ.e)(this, fJ), (0, FJ.e)(this, xJ, !1)), this.inputs = (0, FJ.e)(this, rJ), this._needMoveForGravity = !1, this._oldPosition = eJ.j.Zero(), this._diffPosition = eJ.j.Zero(), this._newPosition = eJ.j.Zero(), this._collisionMask = -1, this._onCollisionPositionChange = function(JJ, cJ) {
-              let ZJ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-              UJ._newPosition.rZJ(cJ), UJ._newPosition.subtractToRef(UJ._oldPosition, UJ._diffPosition), UJ._diffPosition.length() > KJ.e.CollisionsEpsilon && (UJ.position.addToRef(UJ._diffPosition, UJ._deferredPositionUpdate), UJ._deferOnly ? UJ._deferredUpdated = !0 : UJ.position.rZJ(UJ._deferredPositionUpdate), UJ.oh && ZJ && UJ.oh(ZJ))
-            }, this.inputs = new VJ(this), this.inputs.addKeyboard().addMouse()
+          constructor(BB, TB, dB) {
+            var yB;
+            super(BB, TB, dB, !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3]), yB = this, this.ellipsoid = (0, VB.h)(this, kB, new pB.p(.5, 1, .5)), this.ellipsoidOffset = ((0, VB.h)(this, LB), (0, VB.h)(this, OB, new pB.p(0, 0, 0))), this.checkCollisions = ((0, VB.h)(this, DB), (0, VB.h)(this, uB, !1)), this.applyGravity = ((0, VB.h)(this, HB), (0, VB.h)(this, EB, !1)), this.inputs = (0, VB.h)(this, vB), this._needMoveForGravity = !1, this._oldPosition = pB.p.Zero(), this._diffPosition = pB.p.Zero(), this._newPosition = pB.p.Zero(), this._collisionMask = -1, this._onCollisionPositionChange = function(BB, TB) {
+              let dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+              yB._newPosition.bdB(TB), yB._newPosition.subtractToRef(yB._oldPosition, yB._diffPosition), yB._diffPosition.length() > sB.c.CollisionsEpsilon && (yB.position.addToRef(yB._diffPosition, yB._deferredPositionUpdate), yB._deferOnly ? yB._deferredUpdated = !0 : yB.position.bdB(yB._deferredPositionUpdate), yB.vL && dB && yB.vL(dB))
+            }, this.inputs = new fB(this), this.inputs.addKeyboard().addMouse()
           }
-          attachControl(JJ, cJ) {
-            cJ = jJ.j.BackCompatCameraNoPreventDefault(arguments), this.inputs.attachElement(cJ)
+          attachControl(BB, TB) {
+            TB = gB.h.BackCompatCameraNoPreventDefault(arguments), this.inputs.attachElement(TB)
           }
           detachControl() {
-            this.inputs.detachElement(), this.cameraDirection = new eJ.j(0, 0, 0), this.cameraRotation = new eJ.i(0, 0)
+            this.inputs.detachElement(), this.cameraDirection = new pB.p(0, 0, 0), this.cameraRotation = new pB.l(0, 0)
           }
           get collisionMask() {
             return this._collisionMask
           }
-          set collisionMask(JJ) {
-            this._collisionMask = isNaN(JJ) ? -1 : JJ
+          set collisionMask(BB) {
+            this._collisionMask = isNaN(BB) ? -1 : BB
           }
-          _collideWithWorld(JJ) {
-            let cJ;
-            cJ = this.parent ? eJ.j.TransformCoordinates(this.position, this.parent.getWorldMatrix()) : this.position, cJ.subtractFromFloatsToRef(0, this.ellipsoid.y, 0, this._oldPosition), this._oldPosition.addInPlace(this.ellipsoidOffset);
-            const ZJ = this.Qy().collisionCoordinator;
-            this._collider || (this._collider = ZJ.createCollider()), this._collider._radius = this.ellipsoid, this._collider.collisionMask = this._collisionMask;
-            let FJ = JJ;
-            this.applyGravity && (FJ = JJ.add(this.Qy().gravity)), ZJ.getNewPosition(this._oldPosition, FJ, this._collider, 3, null, this._onCollisionPositionChange, this.uniqueId)
+          _collideWithWorld(BB) {
+            let TB;
+            TB = this.parent ? pB.p.TransformCoordinates(this.position, this.parent.getWorldMatrix()) : this.position, TB.subtractFromFloatsToRef(0, this.ellipsoid.y, 0, this._oldPosition), this._oldPosition.addInPlace(this.ellipsoidOffset);
+            const dB = this.jU().collisionCoordinator;
+            this._collider || (this._collider = dB.createCollider()), this._collider._radius = this.ellipsoid, this._collider.collisionMask = this._collisionMask;
+            let VB = BB;
+            this.applyGravity && (VB = BB.add(this.jU().gravity)), dB.getNewPosition(this._oldPosition, VB, this._collider, 3, null, this._onCollisionPositionChange, this.uniqueId)
           }
           _checkInputs() {
-            this._localDirection || (this._localDirection = eJ.j.Zero(), this._transformedDirection = eJ.j.Zero()), this.inputs.checkInputs(), super._checkInputs()
+            this._localDirection || (this._localDirection = pB.p.Zero(), this._transformedDirection = pB.p.Zero()), this.inputs.checkInputs(), super._checkInputs()
           }
-          set needMoveForGravity(JJ) {
-            this._needMoveForGravity = JJ
+          set needMoveForGravity(BB) {
+            this._needMoveForGravity = BB
           }
           get needMoveForGravity() {
             return this._needMoveForGravity
@@ -959,7 +959,7 @@ export const modules = {
             return this._needMoveForGravity || Math.abs(this.cameraDirection.x) > 0 || Math.abs(this.cameraDirection.y) > 0 || Math.abs(this.cameraDirection.z) > 0
           }
           _updatePosition() {
-            this.checkCollisions && this.Qy().collisionsEnabled ? this._collideWithWorld(this.cameraDirection) : super._updatePosition()
+            this.checkCollisions && this.jU().collisionsEnabled ? this._collideWithWorld(this.cameraDirection) : super._updatePosition()
           }
           dispose() {
             this.inputs.clear(), super.dispose()
@@ -968,70 +968,70 @@ export const modules = {
             return "FreeCamera"
           }
         }, (() => {
-          const eJ = "function" === typeof Symbol && Symbol.metadata ? Object.create(YJ[Symbol.metadata] ?? null) : void 0;
-          cJ = [(0, UJ.E)()], ZJ = [(0, UJ.E)()], AJ = [(0, UJ.F)()], qJ = [(0, UJ.F)()], (0, FJ.d)(null, null, cJ, {
+          const pB = "function" === typeof Symbol && Symbol.metadata ? Object.create(oB[Symbol.metadata] ?? null) : void 0;
+          TB = [(0, yB.T)()], dB = [(0, yB.T)()], JB = [(0, yB.W)()], YB = [(0, yB.W)()], (0, VB.g)(null, null, TB, {
             kind: "field",
             name: "ellipsoid",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "ellipsoid" in JJ,
-              get: JJ => JJ.ellipsoid,
-              set: (JJ, cJ) => {
-                JJ.ellipsoid = cJ
+              has: BB => "ellipsoid" in BB,
+              get: BB => BB.ellipsoid,
+              set: (BB, TB) => {
+                BB.ellipsoid = TB
               }
             },
-            metadata: eJ
-          }, hJ, DJ), (0, FJ.d)(null, null, ZJ, {
+            metadata: pB
+          }, kB, LB), (0, VB.g)(null, null, dB, {
             kind: "field",
             name: "ellipsoidOffset",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "ellipsoidOffset" in JJ,
-              get: JJ => JJ.ellipsoidOffset,
-              set: (JJ, cJ) => {
-                JJ.ellipsoidOffset = cJ
+              has: BB => "ellipsoidOffset" in BB,
+              get: BB => BB.ellipsoidOffset,
+              set: (BB, TB) => {
+                BB.ellipsoidOffset = TB
               }
             },
-            metadata: eJ
-          }, sJ, nJ), (0, FJ.d)(null, null, AJ, {
+            metadata: pB
+          }, OB, DB), (0, VB.g)(null, null, JB, {
             kind: "field",
             name: "checkCollisions",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "checkCollisions" in JJ,
-              get: JJ => JJ.checkCollisions,
-              set: (JJ, cJ) => {
-                JJ.checkCollisions = cJ
+              has: BB => "checkCollisions" in BB,
+              get: BB => BB.checkCollisions,
+              set: (BB, TB) => {
+                BB.checkCollisions = TB
               }
             },
-            metadata: eJ
-          }, GJ, fJ), (0, FJ.d)(null, null, qJ, {
+            metadata: pB
+          }, uB, HB), (0, VB.g)(null, null, YB, {
             kind: "field",
             name: "applyGravity",
             static: !1,
             private: !1,
             access: {
-              has: JJ => "applyGravity" in JJ,
-              get: JJ => JJ.applyGravity,
-              set: (JJ, cJ) => {
-                JJ.applyGravity = cJ
+              has: BB => "applyGravity" in BB,
+              get: BB => BB.applyGravity,
+              set: (BB, TB) => {
+                BB.applyGravity = TB
               }
             },
-            metadata: eJ
-          }, xJ, rJ), eJ && Object.defineProperty(JJ, Symbol.metadata, {
+            metadata: pB
+          }, EB, vB), pB && Object.defineProperty(BB, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: eJ
+            value: pB
           })
-        })(), JJ
+        })(), BB
       })(),
-      IJ = !1;
-    IJ || (IJ = !0, (0, yJ.f)("BABYLON.FreeCamera", SJ))
+      wB = !1;
+    wB || (wB = !0, (0, MB.g)("BABYLON.FreeCamera", zB))
   }
 };
 Object.freeze(modules);
-for (const JJ in modules) Object.freeze(modules[JJ]);
+for (const BB in modules) Object.freeze(modules[BB]);

@@ -1,53 +1,53 @@
 export const id = 77;
 export const ids = [77];
 export const modules = {
-  4171: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      c: () => mJ,
-      d: () => xJ
+  4167: (BB, TB, dB) => {
+    dB.d(TB, {
+      c: () => iB,
+      f: () => EB
     });
-    var FJ = ZJ(1197),
-      UJ = ZJ(17);
-    var eJ = ZJ(235);
-    var XJ = ZJ(535);
-    var AJ = ZJ(2146),
-      qJ = ZJ(4176),
-      jJ = ZJ(4207),
-      YJ = ZJ(4217);
-    class hJ {
-      constructor(JJ, cJ, ZJ, FJ, UJ, eJ) {
-        this.id = JJ, this.type = cJ, this.parameters = ZJ, this.tearDownNotification = FJ, this.onDonePromise = UJ, this.resolveRequest = eJ
+    var VB = dB(1193),
+      yB = dB(24);
+    var pB = dB(279);
+    var lB = dB(572);
+    var JB = dB(2101),
+      YB = dB(4169),
+      gB = dB(4199),
+      oB = dB(4209);
+    class kB {
+      constructor(BB, TB, dB, VB, yB, pB) {
+        this.id = BB, this.type = TB, this.parameters = dB, this.tearDownNotification = VB, this.onDonePromise = yB, this.resolveRequest = pB
       }
     }
-    const DJ = new Set(["primary-fire", "alt-fire", "TouchDig", "TouchInteract", "TouchBoost"]);
-    class sJ {
-      constructor(JJ, cJ, ZJ, FJ, UJ, eJ) {
-        this.id = JJ, this.type = cJ, this.parameters = ZJ, this.resolveRequest = FJ, this.onDonePromise = UJ, this.tearDownNotification = eJ, this.mouseSub = null, this.stopInputActions = null, this.stopShellTicks = null, this.tickSub = null, this.implementation = void 0, this.isCompleted = !1;
-        const XJ = xJ[cJ];
-        if (!XJ) throw console.error(`No QTE implementation registered for type: ${cJ}`), new Error(`No QTE implementation registered for type: ${cJ}`);
-        this.implementation = new XJ(ZJ, (JJ => {
-          this.isCompleted = !0, this.resolveRequest(JJ)
+    const LB = new Set(["primary-fire", "alt-fire", "TouchDig", "TouchInteract", "TouchBoost"]);
+    class OB {
+      constructor(BB, TB, dB, VB, yB, pB) {
+        this.id = BB, this.type = TB, this.parameters = dB, this.resolveRequest = VB, this.onDonePromise = yB, this.tearDownNotification = pB, this.mouseSub = null, this.stopInputActions = null, this.stopShellTicks = null, this.tickSub = null, this.implementation = void 0, this.isCompleted = !1;
+        const lB = EB[TB];
+        if (!lB) throw console.error(`No QTE implementation registered for type: ${TB}`), new Error(`No QTE implementation registered for type: ${TB}`);
+        this.implementation = new lB(dB, (BB => {
+          this.isCompleted = !0, this.resolveRequest(BB)
         }), this.tearDownNotification), this.setupInputHandlers()
       }
       setupInputHandlers() {
-        this.mouseSub = UJ.i.subscribe("QTEMouseState", (JJ => {
+        this.mouseSub = yB.h.subscribe("QTEMouseState", (BB => {
           let {
-            isDown: cJ
-          } = JJ;
-          this.isCompleted || this.implementation.handleMouseInput(cJ)
-        })), this.stopInputActions = (0, jJ.g)((JJ => {
-          this.isCompleted || !DJ.has(JJ.action) && !(0, jJ.e)(JJ) || this.implementation.handleMouseInput(JJ.down)
-        })), this.tickSub = UJ.i.subscribe("noaTick", (JJ => {
+            isDown: TB
+          } = BB;
+          this.isCompleted || this.implementation.handleMouseInput(TB)
+        })), this.stopInputActions = (0, gB.f)((BB => {
+          this.isCompleted || !LB.has(BB.action) && !(0, gB.c)(BB) || this.implementation.handleMouseInput(BB.down)
+        })), this.tickSub = yB.h.subscribe("noaTick", (BB => {
           if (this.isCompleted) return;
-          const cJ = JJ / 1e3;
-          this.implementation.handleTick(cJ)
-        })), this.stopShellTicks = (0, qJ.w)((() => {
-          this.isCompleted || this.implementation.handleTick(AJ.y / 1e3)
+          const TB = BB / 1e3;
+          this.implementation.handleTick(TB)
+        })), this.stopShellTicks = (0, YB.w)((() => {
+          this.isCompleted || this.implementation.handleTick(JB.x / 1e3)
         }))
       }
       cleanup() {
-        var JJ, cJ;
-        this.mouseSub && (UJ.i.unsubscribe(this.mouseSub), this.mouseSub = null), null === (JJ = this.stopInputActions) || void 0 === JJ || JJ.call(this), this.stopInputActions = null, null === (cJ = this.stopShellTicks) || void 0 === cJ || cJ.call(this), this.stopShellTicks = null, this.tickSub && (UJ.i.unsubscribe(this.tickSub), this.tickSub = null)
+        var BB, TB;
+        this.mouseSub && (yB.h.unsubscribe(this.mouseSub), this.mouseSub = null), null === (BB = this.stopInputActions) || void 0 === BB || BB.call(this), this.stopInputActions = null, null === (TB = this.stopShellTicks) || void 0 === TB || TB.call(this), this.stopShellTicks = null, this.tickSub && (yB.h.unsubscribe(this.tickSub), this.tickSub = null)
       }
       async waitUntilDone() {
         await this.onDonePromise
@@ -59,28 +59,28 @@ export const modules = {
         this.isCompleted = !0, this.cleanup(), this.implementation.tearDown()
       }
     }
-    const nJ = new FJ.e,
-      GJ = new Map;
-    let fJ = null;
-    const xJ = {
+    const DB = new VB.b,
+      uB = new Map;
+    let HB = null;
+    const EB = {
       progressBar: class {
-        constructor(JJ, cJ, ZJ) {
-          var FJ, UJ, eJ, XJ;
-          this.resolveRequest = cJ, this.tearDownNotification = ZJ, this.progress = 0, this.yU = void 0, this.SU = void 0, this.IU = void 0, this.isCompleted = !1, this.clickCount = 0, this.parameters = void 0, this.type = "progressBar";
-          const AJ = JJ;
-          this.yU = null !== (FJ = AJ.yU) && void 0 !== FJ ? FJ : .075, this.SU = null !== (UJ = AJ.SU) && void 0 !== UJ ? UJ : 1, this.progress = null !== (eJ = AJ.KU) && void 0 !== eJ ? eJ : 30, this.IU = null !== (XJ = AJ.IU) && void 0 !== XJ && XJ, this.parameters = AJ
+        constructor(BB, TB, dB) {
+          var VB, yB, pB, lB;
+          this.resolveRequest = TB, this.tearDownNotification = dB, this.progress = 0, this.yV = void 0, this.pV = void 0, this.lV = void 0, this.isCompleted = !1, this.clickCount = 0, this.parameters = void 0, this.type = "progressBar";
+          const JB = BB;
+          this.yV = null !== (VB = JB.yV) && void 0 !== VB ? VB : .075, this.pV = null !== (yB = JB.pV) && void 0 !== yB ? yB : 1, this.progress = null !== (pB = JB.VV) && void 0 !== pB ? pB : 30, this.lV = null !== (lB = JB.lV) && void 0 !== lB && lB, this.parameters = JB
         }
-        handleMouseInput(JJ) {
-          JJ && !this.isCompleted && (this.clickCount++, this.progress += this.SU, this.progress >= 100 && this.complete(!0))
+        handleMouseInput(BB) {
+          BB && !this.isCompleted && (this.clickCount++, this.progress += this.pV, this.progress >= 100 && this.complete(!0))
         }
         handleTick() {
           if (!this.isCompleted)
-            if (this.progress -= this.yU, this.IU && this.progress <= 0) this.complete(!1);
+            if (this.progress -= this.yV, this.lV && this.progress <= 0) this.complete(!1);
             else if (this.progress <= 0) this.progress = 0;
           else if (this.progress >= 100) return void this.complete(!0)
         }
-        complete(JJ) {
-          this.isCompleted = !0, this.resolveRequest(JJ)
+        complete(BB) {
+          this.isCompleted = !0, this.resolveRequest(BB)
         }
         getState() {
           return {
@@ -98,30 +98,30 @@ export const modules = {
         }
       },
       timedClick: class {
-        constructor(JJ, cJ, ZJ) {
-          var FJ;
-          this.resolveRequest = cJ, this.tearDownNotification = ZJ, this.startTime = void 0, this.timeWindowMs = void 0, this.isCompleted = !1, this.parameters = void 0, this.type = "timedClick", this.parameters = JJ, this.timeWindowMs = null !== (FJ = this.parameters.wU) && void 0 !== FJ ? FJ : 3e3, this.startTime = Date.now()
+        constructor(BB, TB, dB) {
+          var VB;
+          this.resolveRequest = TB, this.tearDownNotification = dB, this.startTime = void 0, this.timeWindowMs = void 0, this.isCompleted = !1, this.parameters = void 0, this.type = "timedClick", this.parameters = BB, this.timeWindowMs = null !== (VB = this.parameters.gV) && void 0 !== VB ? VB : 3e3, this.startTime = Date.now()
         }
-        handleMouseInput(JJ) {
-          if (!JJ || this.isCompleted) return;
+        handleMouseInput(BB) {
+          if (!BB || this.isCompleted) return;
           Date.now() - this.startTime <= this.timeWindowMs && this.complete(!0)
         }
         handleTick() {
           if (this.isCompleted) return;
           Date.now() - this.startTime > this.timeWindowMs && this.complete(!1)
         }
-        complete(JJ) {
-          this.isCompleted = !0, this.resolveRequest(JJ)
+        complete(BB) {
+          this.isCompleted = !0, this.resolveRequest(BB)
         }
         getState() {
-          const JJ = Date.now() - this.startTime,
-            cJ = Math.max(0, this.timeWindowMs - JJ);
+          const BB = Date.now() - this.startTime,
+            TB = Math.max(0, this.timeWindowMs - BB);
           return {
             type: this.type,
             parameters: this.parameters,
             state: {
-              timeRemaining: cJ,
-              wU: this.timeWindowMs
+              timeRemaining: TB,
+              gV: this.timeWindowMs
             },
             isActive: !0
           }
@@ -131,49 +131,49 @@ export const modules = {
         }
       },
       gravityBar: class {
-        constructor(JJ, cJ, ZJ) {
-          var FJ;
-          this.resolveRequest = cJ, this.tearDownNotification = ZJ, this.parameters = void 0, this.type = "gravityBar", this.catchZonePosition = .5, this.catchZoneVelocity = 0, this.isMouseDown = !1, this.moverPosition = .5, this.moverTarget = Math.random(), this.ticksUntilDirectionChange = void 0, this.progress = void 0, this.isCompleted = !1;
-          const UJ = JJ;
+        constructor(BB, TB, dB) {
+          var VB;
+          this.resolveRequest = TB, this.tearDownNotification = dB, this.parameters = void 0, this.type = "gravityBar", this.catchZonePosition = .5, this.catchZoneVelocity = 0, this.isMouseDown = !1, this.moverPosition = .5, this.moverTarget = Math.random(), this.ticksUntilDirectionChange = void 0, this.progress = void 0, this.isCompleted = !1;
+          const yB = BB;
           this.parameters = {
-            ...UJ,
-            PU: eJ.c.clamp(UJ.PU, .05, 1)
-          }, this.progress = null !== (FJ = UJ.KU) && void 0 !== FJ ? FJ : 30, this.ticksUntilDirectionChange = this.randomNumTicksUntilDirectionChange()
+            ...yB,
+            OV: pB.e.clamp(yB.OV, .05, 1)
+          }, this.progress = null !== (VB = yB.VV) && void 0 !== VB ? VB : 30, this.ticksUntilDirectionChange = this.randomNumTicksUntilDirectionChange()
         }
-        handleMouseInput(JJ) {
-          this.isMouseDown = JJ
+        handleMouseInput(BB) {
+          this.isMouseDown = BB
         }
-        handleTick(JJ) {
-          this.isCompleted || (this.updateMover(), this.updateCatchZone(), this.updateProgress(JJ))
+        handleTick(BB) {
+          this.isCompleted || (this.updateMover(), this.updateCatchZone(), this.updateProgress(BB))
         }
         updateMover() {
           this.ticksUntilDirectionChange--, (this.ticksUntilDirectionChange <= 0 || Math.abs(this.moverPosition - this.moverTarget) < .02) && this.pickNewMoverTarget();
-          const JJ = Math.sign(this.moverTarget - this.moverPosition);
-          this.moverPosition += JJ * this.parameters.kU * .004, this.moverPosition = Math.max(0, Math.min(1, this.moverPosition))
+          const BB = Math.sign(this.moverTarget - this.moverPosition);
+          this.moverPosition += BB * this.parameters.DV * .004, this.moverPosition = Math.max(0, Math.min(1, this.moverPosition))
         }
         pickNewMoverTarget() {
           this.moverTarget = Math.random(), this.ticksUntilDirectionChange = this.randomNumTicksUntilDirectionChange()
         }
         randomNumTicksUntilDirectionChange() {
-          const JJ = eJ.c.clamp(1 - .7 * this.parameters.pU, 0, 1.4);
-          return Math.floor(60 * JJ + 40 * Math.random())
+          const BB = pB.e.clamp(1 - .7 * this.parameters.uV, 0, 1.4);
+          return Math.floor(60 * BB + 40 * Math.random())
         }
         updateCatchZone() {
-          this.isMouseDown ? this.catchZoneVelocity += .001 * this.parameters.dU : this.catchZoneVelocity -= .001 * this.parameters.gravity, this.catchZoneVelocity *= .92, this.catchZoneVelocity = eJ.c.clampAbs(this.catchZoneVelocity, .03), this.catchZonePosition += this.catchZoneVelocity;
-          const JJ = this.parameters.PU / 2,
-            cJ = JJ,
-            ZJ = 1 - JJ;
-          this.catchZonePosition <= cJ ? (this.catchZonePosition = cJ, this.catchZoneVelocity = 0) : this.catchZonePosition >= ZJ && (this.catchZonePosition = ZJ, this.catchZoneVelocity = 0)
+          this.isMouseDown ? this.catchZoneVelocity += .001 * this.parameters.HV : this.catchZoneVelocity -= .001 * this.parameters.gravity, this.catchZoneVelocity *= .92, this.catchZoneVelocity = pB.e.clampAbs(this.catchZoneVelocity, .03), this.catchZonePosition += this.catchZoneVelocity;
+          const BB = this.parameters.OV / 2,
+            TB = BB,
+            dB = 1 - BB;
+          this.catchZonePosition <= TB ? (this.catchZonePosition = TB, this.catchZoneVelocity = 0) : this.catchZonePosition >= dB && (this.catchZonePosition = dB, this.catchZoneVelocity = 0)
         }
         isMoverInCatchZone() {
-          const JJ = this.parameters.PU / 2;
-          return this.moverPosition >= this.catchZonePosition - JJ && this.moverPosition <= this.catchZonePosition + JJ
+          const BB = this.parameters.OV / 2;
+          return this.moverPosition >= this.catchZonePosition - BB && this.moverPosition <= this.catchZonePosition + BB
         }
-        updateProgress(JJ) {
-          this.isMoverInCatchZone() ? this.progress += this.parameters.zU * JJ : this.progress -= this.parameters.NU * JJ, this.progress >= 100 ? (this.progress = 100, this.complete(!0)) : this.parameters.IU && this.progress <= 0 ? (this.progress = 0, this.complete(!1)) : this.progress < 0 && (this.progress = 0)
+        updateProgress(BB) {
+          this.isMoverInCatchZone() ? this.progress += this.parameters.EV * BB : this.progress -= this.parameters.vV * BB, this.progress >= 100 ? (this.progress = 100, this.complete(!0)) : this.parameters.lV && this.progress <= 0 ? (this.progress = 0, this.complete(!1)) : this.progress < 0 && (this.progress = 0)
         }
-        complete(JJ) {
-          this.isCompleted = !0, this.resolveRequest(JJ)
+        complete(BB) {
+          this.isCompleted = !0, this.resolveRequest(BB)
         }
         getState() {
           return {
@@ -181,7 +181,7 @@ export const modules = {
             parameters: this.parameters,
             state: {
               catchZonePosition: this.catchZonePosition,
-              PU: this.parameters.PU,
+              OV: this.parameters.OV,
               moverPosition: this.moverPosition,
               progress: this.progress,
               isCatching: this.isMoverInCatchZone()
@@ -194,38 +194,38 @@ export const modules = {
         }
       },
       precisionBar: class {
-        constructor(JJ, cJ, ZJ) {
-          var FJ, UJ, XJ, AJ, qJ;
-          this.resolveRequest = cJ, this.tearDownNotification = ZJ, this.startTime = void 0, this.speed = void 0, this.TU = void 0, this.isCompleted = !1, this.markerPosition = 0, this.parameters = void 0, this.type = "precisionBar";
-          const jJ = JJ;
+        constructor(BB, TB, dB) {
+          var VB, yB, lB, JB, YB;
+          this.resolveRequest = TB, this.tearDownNotification = dB, this.startTime = void 0, this.speed = void 0, this.iV = void 0, this.isCompleted = !1, this.markerPosition = 0, this.parameters = void 0, this.type = "precisionBar";
+          const gB = BB;
           this.parameters = {
-            ...jJ,
-            speed: null !== (FJ = jJ.speed) && void 0 !== FJ ? FJ : .5,
-            TU: eJ.c.clamp(jJ.TU, .05, 1),
-            label: null !== (UJ = jJ.label) && void 0 !== UJ ? UJ : [{
+            ...gB,
+            speed: null !== (VB = gB.speed) && void 0 !== VB ? VB : .5,
+            iV: pB.e.clamp(gB.iV, .05, 1),
+            label: null !== (yB = gB.label) && void 0 !== yB ? yB : [{
               str: "Click when the marker is within the green zone."
             }],
-            icon: null !== (XJ = jJ.icon) && void 0 !== XJ ? XJ : null,
-            scale: null !== (AJ = jJ.scale) && void 0 !== AJ ? AJ : 1,
-            rotation: null !== (qJ = jJ.rotation) && void 0 !== qJ ? qJ : 0
-          }, this.speed = this.parameters.speed, this.TU = this.parameters.TU, this.startTime = Date.now()
+            icon: null !== (lB = gB.icon) && void 0 !== lB ? lB : null,
+            scale: null !== (JB = gB.scale) && void 0 !== JB ? JB : 1,
+            rotation: null !== (YB = gB.rotation) && void 0 !== YB ? YB : 0
+          }, this.speed = this.parameters.speed, this.iV = this.parameters.iV, this.startTime = Date.now()
         }
-        handleMouseInput(JJ) {
-          if (JJ) {
+        handleMouseInput(BB) {
+          if (BB) {
             this.updateMarkerPosition();
-            const JJ = Math.abs(this.markerPosition - .5) <= this.TU / 2;
-            this.complete(JJ)
+            const BB = Math.abs(this.markerPosition - .5) <= this.iV / 2;
+            this.complete(BB)
           }
         }
         handleTick() {
           this.isCompleted || this.updateMarkerPosition()
         }
         updateMarkerPosition() {
-          const JJ = (Date.now() - this.startTime) / 1e3 * this.speed % 1;
-          this.markerPosition = JJ <= .5 ? 2 * JJ : 2 - 2 * JJ
+          const BB = (Date.now() - this.startTime) / 1e3 * this.speed % 1;
+          this.markerPosition = BB <= .5 ? 2 * BB : 2 - 2 * BB
         }
-        complete(JJ) {
-          this.isCompleted = !0, this.resolveRequest(JJ)
+        complete(BB) {
+          this.isCompleted = !0, this.resolveRequest(BB)
         }
         getState() {
           return this.updateMarkerPosition(), {
@@ -242,29 +242,29 @@ export const modules = {
         }
       },
       rhythmClick: class {
-        constructor(JJ, cJ, ZJ) {
-          this.resolveRequest = cJ, this.tearDownNotification = ZJ, this.parameters = void 0, this.type = "rhythmClick", this.shrinkStartTime = void 0, this.isCompleted = !1, this.successes = 0, this.misses = 0, this.lastClickResult = null, this.parameters = JJ, this.shrinkStartTime = Date.now()
+        constructor(BB, TB, dB) {
+          this.resolveRequest = TB, this.tearDownNotification = dB, this.parameters = void 0, this.type = "rhythmClick", this.shrinkStartTime = void 0, this.isCompleted = !1, this.successes = 0, this.misses = 0, this.lastClickResult = null, this.parameters = BB, this.shrinkStartTime = Date.now()
         }
-        handleMouseInput(JJ) {
-          if (!JJ || this.isCompleted) return;
-          const cJ = this.getOuterCircleProgress();
-          if (cJ <= this.parameters.RU && cJ >= -this.parameters.RU) {
-            if (this.successes++, this.lastClickResult = !0, this.successes >= this.parameters.uU) return void this.complete(!0)
+        handleMouseInput(BB) {
+          if (!BB || this.isCompleted) return;
+          const TB = this.getOuterCircleProgress();
+          if (TB <= this.parameters.sV && TB >= -this.parameters.sV) {
+            if (this.successes++, this.lastClickResult = !0, this.successes >= this.parameters.tV) return void this.complete(!0)
           } else this.handleMiss();
           this.shrinkStartTime = Date.now()
         }
         handleMiss() {
-          this.misses++, this.lastClickResult = !1, !(0, XJ.P)(this.parameters.LU) && this.misses > this.parameters.LU ? this.complete(!1) : this.shrinkStartTime = Date.now()
+          this.misses++, this.lastClickResult = !1, !(0, lB.M)(this.parameters.MV) && this.misses > this.parameters.MV ? this.complete(!1) : this.shrinkStartTime = Date.now()
         }
         handleTick() {
           if (this.isCompleted) return;
-          this.getOuterCircleProgress() < -this.parameters.RU && this.handleMiss()
+          this.getOuterCircleProgress() < -this.parameters.sV && this.handleMiss()
         }
         getOuterCircleProgress() {
-          return 1 - (Date.now() - this.shrinkStartTime) / this.parameters.iU
+          return 1 - (Date.now() - this.shrinkStartTime) / this.parameters.fV
         }
-        complete(JJ) {
-          this.isCompleted = !0, this.resolveRequest(JJ)
+        complete(BB) {
+          this.isCompleted = !0, this.resolveRequest(BB)
         }
         getState() {
           return {
@@ -273,7 +273,7 @@ export const modules = {
             state: {
               outerCircleProgress: this.getOuterCircleProgress(),
               successes: this.successes,
-              uU: this.parameters.uU,
+              tV: this.parameters.tV,
               misses: this.misses,
               lastClickResult: this.lastClickResult
             },
@@ -286,61 +286,61 @@ export const modules = {
       }
     };
 
-    function rJ() {
-      (0, YJ.g)(AJ.D.Qte, fJ ? AJ.D.Qte : 0), fJ ? UJ.i.Uf("qteStateUpdated", fJ.getState()) : UJ.i.Uf("qteStateUpdated", {
+    function vB() {
+      (0, oB.f)(JB.A.Qte, HB ? JB.A.Qte : 0), HB ? yB.h.yH("qteStateUpdated", HB.getState()) : yB.h.yH("qteStateUpdated", {
         type: null,
         typeSpecificParameters: null,
         isActive: !1
       })
     }
-    class vJ {
-      constructor(JJ, cJ) {
-        this.resultPromise = JJ, this.tearDownQTE = cJ
+    class mB {
+      constructor(BB, TB) {
+        this.resultPromise = BB, this.tearDownQTE = TB
       }
-      static create(JJ, cJ, ZJ) {
-        const FJ = Promise.race([JJ, cJ]);
-        return new vJ(FJ, ZJ)
+      static create(BB, TB, dB) {
+        const VB = Promise.race([BB, TB]);
+        return new mB(VB, dB)
       }
       async getResult() {
         return await this.resultPromise
       }
     }
-    class mJ {
-      static queueQTE(JJ, cJ, ZJ) {
-        let FJ, UJ;
-        const eJ = new Promise((JJ => {
-            FJ = JJ
+    class iB {
+      static queueQTE(BB, TB, dB) {
+        let VB, yB;
+        const pB = new Promise((BB => {
+            VB = BB
           })),
-          XJ = new Promise((JJ => {
-            UJ = () => {
-              JJ("qteTornDown")
+          lB = new Promise((BB => {
+            yB = () => {
+              BB("qteTornDown")
             }
           })),
-          AJ = Promise.race([eJ, XJ]).then((() => {})),
-          qJ = new hJ(JJ, cJ, ZJ, UJ, AJ, FJ);
-        return GJ.set(JJ, qJ), nJ.enqueue(qJ), fJ || this.processNextQTE(), vJ.create(eJ, XJ, UJ)
+          JB = Promise.race([pB, lB]).then((() => {})),
+          YB = new kB(BB, TB, dB, yB, JB, VB);
+        return uB.set(BB, YB), DB.enqueue(YB), HB || this.processNextQTE(), mB.create(pB, lB, yB)
       }
       static async processNextQTE() {
-        if (fJ || nJ.jn()) return void(nJ.jn() && fJ && (fJ = null, rJ()));
-        const JJ = await nJ.dequeue();
-        if (!GJ.has(JJ.id)) return void await this.processNextQTE();
-        GJ.delete(JJ.id);
-        const cJ = new sJ(JJ.id, JJ.type, JJ.parameters, JJ.resolveRequest, JJ.onDonePromise, JJ.tearDownNotification);
-        fJ = cJ, rJ();
+        if (HB || DB.OD()) return void(DB.OD() && HB && (HB = null, vB()));
+        const BB = await DB.dequeue();
+        if (!uB.has(BB.id)) return void await this.processNextQTE();
+        uB.delete(BB.id);
+        const TB = new OB(BB.id, BB.type, BB.parameters, BB.resolveRequest, BB.onDonePromise, BB.tearDownNotification);
+        HB = TB, vB();
         try {
-          await cJ.waitUntilDone()
-        } catch (ZJ) {
-          console.error("Error while waiting for QTE to resolve:", ZJ.stack)
+          await TB.waitUntilDone()
+        } catch (dB) {
+          console.error("Error while waiting for QTE to resolve:", dB.stack)
         }
-        fJ === cJ && (fJ.cleanup(), fJ = null, rJ()), await this.processNextQTE()
+        HB === TB && (HB.cleanup(), HB = null, vB()), await this.processNextQTE()
       }
-      static cancelQTE(JJ) {
-        if (fJ && fJ.id === JJ) return fJ.tearDown(), fJ = null, rJ(), void this.processNextQTE();
-        const cJ = GJ.get(JJ);
-        cJ && (GJ.delete(JJ), cJ.tearDownNotification())
+      static cancelQTE(BB) {
+        if (HB && HB.id === BB) return HB.tearDown(), HB = null, vB(), void this.processNextQTE();
+        const TB = uB.get(BB);
+        TB && (uB.delete(BB), TB.tearDownNotification())
       }
       static getCurrentState() {
-        return fJ ? fJ.getState() : {
+        return HB ? HB.getState() : {
           type: null,
           parameters: null,
           state: null,
@@ -348,55 +348,55 @@ export const modules = {
         }
       }
       static reset() {
-        fJ && (fJ.tearDown(), fJ = null), GJ.forEach(((JJ, cJ) => {
-          this.cancelQTE(cJ)
-        })), nJ.emptyQueue(), GJ.clear(), rJ()
+        HB && (HB.tearDown(), HB = null), uB.forEach(((BB, TB) => {
+          this.cancelQTE(TB)
+        })), DB.emptyQueue(), uB.clear(), vB()
       }
     }
   },
-  4198: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      $: () => MJ,
-      A: () => FJ,
-      Cb: () => GJ,
-      D: () => eJ,
-      Db: () => PJ,
-      E: () => jJ,
-      G: () => NJ,
-      Hb: () => UJ,
-      J: () => YJ,
-      K: () => qJ,
-      Lb: () => zJ,
-      N: () => rJ,
-      P: () => mJ,
-      S: () => QJ,
-      U: () => vJ,
-      W: () => EJ,
-      Z: () => HJ,
-      _: () => WJ,
-      cb: () => VJ,
-      e: () => dJ,
-      fb: () => SJ,
-      g: () => pJ,
-      ib: () => KJ,
-      jb: () => xJ,
-      k: () => sJ,
-      l: () => kJ,
-      m: () => DJ,
-      mb: () => fJ,
-      nb: () => yJ,
-      p: () => hJ,
-      pb: () => gJ,
-      rb: () => IJ,
-      t: () => XJ,
-      tb: () => bJ,
-      w: () => AJ,
-      wb: () => wJ,
-      yb: () => nJ
+  4192: (BB, TB, dB) => {
+    dB.d(TB, {
+      $: () => UB,
+      A: () => pB,
+      Ab: () => uB,
+      C: () => gB,
+      Db: () => SB,
+      G: () => ZB,
+      Hb: () => yB,
+      J: () => oB,
+      Jb: () => aB,
+      L: () => YB,
+      P: () => vB,
+      Q: () => iB,
+      R: () => NB,
+      S: () => mB,
+      V: () => tB,
+      X: () => cB,
+      _: () => rB,
+      ab: () => fB,
+      cb: () => zB,
+      e: () => RB,
+      eb: () => sB,
+      f: () => QB,
+      fb: () => EB,
+      h: () => OB,
+      hb: () => HB,
+      i: () => PB,
+      l: () => LB,
+      lb: () => MB,
+      m: () => kB,
+      p: () => lB,
+      pb: () => IB,
+      qb: () => wB,
+      t: () => JB,
+      tb: () => FB,
+      w: () => VB,
+      wb: () => KB,
+      zb: () => DB
     });
-    const FJ = 32,
-      UJ = 33.333333333333336,
-      eJ = {
+    const VB = 32,
+      yB = 33.333333333333336,
+      pB = {
         AbiVersion: 0,
         Status: 1,
         LastError: 2,
@@ -430,18 +430,18 @@ export const modules = {
         PacingLagUs: 30,
         TerrainDrawn: 31
       },
-      XJ = {
+      lB = {
         NotYet: 0,
         Drawn: 1,
         Backstop: 2,
         HeldBackstop: 3
       },
-      AJ = {
+      JB = {
         NotDrawn: 0,
         Drawn: 1,
         Paced: 2
       },
-      qJ = {
+      YB = {
         AheadMask: 15,
         Joining: 64,
         Tiered: 128,
@@ -449,7 +449,7 @@ export const modules = {
         SwitchesShift: 20,
         CountMask: 4095
       },
-      jJ = {
+      gB = {
         KeyDown: 1,
         KeyUp: 2,
         MouseMove: 3,
@@ -477,12 +477,12 @@ export const modules = {
         PadLook: 25,
         EnvPrefs: 32
       },
-      YJ = {
+      oB = {
         Frame: 1,
         Open: 2,
         Close: 3
       },
-      hJ = {
+      kB = {
         RawMessage: 1,
         CoreErrors: 2,
         LocalHurt: 16,
@@ -534,7 +534,7 @@ export const modules = {
         RenderReload: 3,
         TerrainTexturesWanted: 4
       },
-      DJ = {
+      LB = {
         EntityInfo: 1,
         EntityTable: 2,
         CoreErrors: 4,
@@ -544,10 +544,10 @@ export const modules = {
         PlayerHud: 64,
         GameCalls: 128
       },
-      sJ = 4,
-      nJ = 4,
-      GJ = 65535,
-      fJ = {
+      OB = 4,
+      DB = 4,
+      uB = 65535,
+      HB = {
         Open: 1,
         TooLarge: 2,
         NothingStaged: 3,
@@ -560,7 +560,7 @@ export const modules = {
         ModuleTrap: 10,
         Port: 11
       },
-      xJ = {
+      EB = {
         Busy: 0,
         Range: 1,
         OtherBody: 2,
@@ -568,12 +568,12 @@ export const modules = {
         Corrupt: 4,
         Ended: 5
       },
-      rJ = 88,
-      vJ = 0,
-      mJ = 24,
-      QJ = 48,
-      EJ = 80,
-      VJ = {
+      vB = 88,
+      mB = 0,
+      iB = 24,
+      NB = 48,
+      tB = 80,
+      fB = {
         FilePartDone: 526,
         FileDone: 527,
         Control: 528,
@@ -584,18 +584,18 @@ export const modules = {
         Killfeed: 533,
         Session: 534
       },
-      KJ = {
+      sB = {
         ToggleRecording: 0,
         SaveClip: 1,
         ViewerOpened: 2,
         ViewerClosed: 3
       },
-      yJ = {
+      MB = {
         Clip: 0,
         Recording: 1,
         Edited: 2
       },
-      SJ = {
+      zB = {
         RecordingStarted: 0,
         RecordingStopped: 1,
         RecordingDiscarded: 2,
@@ -613,34 +613,34 @@ export const modules = {
         SaveFailed: 14,
         RecordingTurnedOff: 15
       },
-      IJ = {
+      wB = {
         Cleared: 0,
         Text: 1,
         Int: 2,
         Double: 3
       },
-      MJ = 65535,
-      bJ = {
+      UB = 65535,
+      FB = {
         FlyingText: 1,
         PlayerKilled: 2,
         Killfeed: 3
       },
-      wJ = {
+      KB = {
         None: 0,
         Paused: 1,
         Playing: 2,
         Cropping: 3,
         Loading: 4
       },
-      WJ = 2,
-      gJ = {
+      rB = 2,
+      IB = {
         UiText: 0,
         Environment: 6,
         Hud: 12,
         Count: 19
       },
-      HJ = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
-      PJ = {
+      cB = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
+      SB = {
         SkyTable: 600,
         SkyImagesReady: 601,
         SkyTableHeaderBytes: 8,
@@ -652,7 +652,7 @@ export const modules = {
         CubeFaces: 6,
         Failed: 0
       },
-      kJ = {
+      PB = {
         Bytes: 88,
         Inclination: 0,
         Turbidity: 1,
@@ -679,7 +679,7 @@ export const modules = {
         PresentAt: 80,
         FlagsAt: 84
       },
-      pJ = {
+      QB = {
         None: 0,
         InputOverCapacity: 1,
         InputTruncated: 2,
@@ -835,8 +835,8 @@ export const modules = {
         ReplayDrops: 87,
         ReplayRecorderDrops: 304
       },
-      dJ = 8,
-      zJ = {
+      RB = 8,
+      aB = {
         GameCodeMessage: 4,
         NewOtherEntitySettings: 23,
         NewClientOptions: 37,
@@ -861,288 +861,288 @@ export const modules = {
         WorldVariation: 5,
         EditItemCraftingRecipes: 78
       },
-      NJ = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
+      ZB = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
   },
-  4176: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      A: () => MJ,
-      B: () => rJ,
-      E: () => XJ,
-      F: () => AJ,
-      H: () => yJ,
-      c: () => KJ,
-      e: () => mJ,
-      f: () => wJ,
-      i: () => bJ,
-      m: () => xJ,
-      o: () => EJ,
-      p: () => vJ,
-      s: () => QJ,
-      w: () => SJ,
-      y: () => IJ
+  4169: (BB, TB, dB) => {
+    dB.d(TB, {
+      A: () => wB,
+      D: () => UB,
+      H: () => vB,
+      K: () => lB,
+      N: () => JB,
+      P: () => MB,
+      e: () => sB,
+      g: () => iB,
+      j: () => KB,
+      n: () => FB,
+      p: () => EB,
+      s: () => tB,
+      t: () => mB,
+      v: () => NB,
+      w: () => zB
     });
-    var FJ = ZJ(4182);
-    const UJ = {
+    var VB = dB(4177);
+    const yB = {
       lockPointer: () => !1,
       unlockPointer: () => {},
       leaveGame: () => {}
     };
-    let eJ = UJ;
+    let pB = yB;
 
-    function XJ(JJ) {
-      eJ = null !== JJ && void 0 !== JJ ? JJ : UJ
+    function lB(BB) {
+      pB = null !== BB && void 0 !== BB ? BB : yB
     }
 
-    function AJ() {
-      return eJ
+    function JB() {
+      return pB
     }
-    const qJ = new Set,
-      jJ = new Set;
-    let YJ = -1;
-    const hJ = new Set,
-      DJ = new Set;
-    let sJ = 0,
-      nJ = 0;
-    const GJ = new Set,
-      fJ = new Set;
+    const YB = new Set,
+      gB = new Set;
+    let oB = -1;
+    const kB = new Set,
+      LB = new Set;
+    let OB = 0,
+      DB = 0;
+    const uB = new Set,
+      HB = new Set;
 
-    function xJ(JJ) {
-      return qJ.add(JJ), () => {
-        qJ.delete(JJ)
+    function EB(BB) {
+      return YB.add(BB), () => {
+        YB.delete(BB)
       }
     }
 
-    function rJ(JJ, cJ) {
-      for (const FJ of qJ) try {
-        FJ(JJ)
-      } catch (ZJ) {
-        cJ(ZJ)
+    function vB(BB, TB) {
+      for (const VB of YB) try {
+        VB(BB)
+      } catch (dB) {
+        TB(dB)
       }
     }
 
-    function vJ(JJ) {
-      return jJ.add(JJ), () => {
-        jJ.delete(JJ)
+    function mB(BB) {
+      return gB.add(BB), () => {
+        gB.delete(BB)
       }
     }
 
-    function mJ(JJ, cJ) {
-      const ZJ = YJ < 0 ? 0 : JJ - YJ;
-      YJ = JJ;
-      for (const UJ of jJ) try {
-        UJ(ZJ)
-      } catch (FJ) {
-        cJ(FJ)
+    function iB(BB, TB) {
+      const dB = oB < 0 ? 0 : BB - oB;
+      oB = BB;
+      for (const yB of gB) try {
+        yB(dB)
+      } catch (VB) {
+        TB(VB)
       }
     }
 
-    function QJ(JJ) {
-      return hJ.add(JJ), () => {
-        hJ.delete(JJ)
+    function NB(BB) {
+      return kB.add(BB), () => {
+        kB.delete(BB)
       }
     }
 
-    function EJ(JJ) {
-      return DJ.add(JJ), () => {
-        DJ.delete(JJ)
+    function tB(BB) {
+      return LB.add(BB), () => {
+        LB.delete(BB)
       }
     }
-    let VJ = 0;
+    let fB = 0;
 
-    function KJ(JJ) {
-      VJ += JJ
+    function sB(BB) {
+      fB += BB
     }
 
-    function yJ() {
-      const JJ = VJ;
-      return VJ = 0, JJ
+    function MB() {
+      const BB = fB;
+      return fB = 0, BB
     }
 
-    function SJ(JJ) {
-      return GJ.add(JJ), () => {
-        GJ.delete(JJ)
-      }
-    }
-
-    function IJ(JJ) {
-      return fJ.add(JJ), () => {
-        fJ.delete(JJ)
+    function zB(BB) {
+      return uB.add(BB), () => {
+        uB.delete(BB)
       }
     }
 
-    function MJ() {
-      sJ = 0, nJ = 0, YJ = -1
+    function wB(BB) {
+      return HB.add(BB), () => {
+        HB.delete(BB)
+      }
     }
 
-    function bJ(JJ, cJ) {
-      if ("paced" === JJ) return nJ += cJ, null;
-      if ("drawn" !== JJ && "skipped" !== JJ) return null;
-      const ZJ = cJ + nJ;
-      return nJ = 0, ZJ
+    function UB() {
+      OB = 0, DB = 0, oB = -1
     }
 
-    function wJ(JJ, cJ, ZJ, UJ) {
-      const eJ = (0, FJ.g)(cJ),
-        XJ = JJ > 0 ? performance.now() : 0;
-      for (let FJ = 0; FJ < JJ; FJ++)
-        for (const JJ of GJ) try {
-          JJ()
-        } catch (AJ) {
-          UJ(AJ)
+    function FB(BB, TB) {
+      if ("paced" === BB) return DB += TB, null;
+      if ("drawn" !== BB && "skipped" !== BB) return null;
+      const dB = TB + DB;
+      return DB = 0, dB
+    }
+
+    function KB(BB, TB, dB, yB) {
+      const pB = (0, VB.k)(TB),
+        lB = BB > 0 ? performance.now() : 0;
+      for (let VB = 0; VB < BB; VB++)
+        for (const BB of uB) try {
+          BB()
+        } catch (JB) {
+          yB(JB)
         }
-      if (JJ > 0 && KJ(performance.now() - XJ), null !== ZJ) {
-        for (const JJ of hJ) try {
-          JJ(ZJ)
-        } catch (AJ) {
-          UJ(AJ)
+      if (BB > 0 && sB(performance.now() - lB), null !== dB) {
+        for (const BB of kB) try {
+          BB(dB)
+        } catch (JB) {
+          yB(JB)
         }
-        sJ += ZJ
+        OB += dB
       }
-      if ("drawn" === cJ) {
-        const JJ = sJ;
-        sJ = 0;
-        for (const cJ of DJ) try {
-          cJ(JJ)
-        } catch (AJ) {
-          UJ(AJ)
+      if ("drawn" === TB) {
+        const BB = OB;
+        OB = 0;
+        for (const TB of LB) try {
+          TB(BB)
+        } catch (JB) {
+          yB(JB)
         }
       }
-      for (const FJ of fJ) try {
-        FJ(JJ, eJ)
-      } catch (AJ) {
-        UJ(AJ)
+      for (const VB of HB) try {
+        VB(BB, pB)
+      } catch (JB) {
+        yB(JB)
       }
     }
   },
-  4189: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      Ac: () => jc,
-      Bb: () => UJ.i,
-      Bd: () => dJ,
-      C: () => WJ,
-      Cb: () => KJ,
-      Dc: () => Fc,
-      Ec: () => FJ.cb,
-      Ed: () => uJ,
-      Fb: () => pJ,
-      G: () => Dc,
-      I: () => tJ,
-      Ib: () => bJ,
-      Ic: () => FJ.fb,
-      Jb: () => IJ,
-      Jd: () => TJ,
-      Lc: () => FJ.ib,
-      Ld: () => RJ,
-      M: () => FJ.g,
-      Mc: () => oJ,
-      Md: () => iJ,
-      N: () => jJ,
-      Nb: () => FJ.J,
-      O: () => FJ.k,
-      Oc: () => FJ.jb,
-      Pd: () => Xc,
-      Qb: () => wJ,
-      R: () => aJ,
-      Sc: () => FJ.mb,
-      Sd: () => nc,
-      T: () => FJ.p,
-      Tb: () => QJ,
-      Uc: () => FJ.nb,
-      Ud: () => mJ,
-      Vb: () => ec,
-      Vd: () => LJ,
-      W: () => FJ.t,
-      Yc: () => FJ.rb,
-      Yd: () => PJ,
-      Z: () => FJ.w,
-      Zb: () => vJ,
-      ad: () => FJ.tb,
-      ae: () => HJ,
-      b: () => Jc,
-      bb: () => hJ,
-      bc: () => Yc,
-      cc: () => UJ.p,
-      cd: () => FJ.wb,
-      d: () => GJ,
-      eb: () => rJ,
-      ec: () => xJ,
-      ee: () => gJ,
-      f: () => nJ,
-      fd: () => SJ,
-      fe: () => qJ,
-      hc: () => Zc,
-      he: () => kJ,
-      ib: () => FJ.A,
-      ic: () => FJ.N,
-      id: () => FJ.yb,
-      ie: () => Gc,
-      j: () => qc,
-      kc: () => FJ.P,
-      kd: () => FJ.Cb,
-      lb: () => FJ.D,
-      lc: () => FJ.S,
-      me: () => sJ,
-      n: () => yJ,
-      nc: () => FJ.U,
-      nd: () => FJ.Hb,
-      ob: () => NJ,
-      pb: () => Uc,
-      q: () => VJ,
-      r: () => FJ.e,
-      rb: () => YJ,
-      rc: () => FJ.W,
-      rd: () => eJ,
-      s: () => hc,
-      sb: () => FJ.E,
-      ub: () => CJ,
-      ud: () => fJ,
-      vb: () => BJ,
-      vc: () => FJ.$,
-      vd: () => Ac,
-      w: () => MJ,
-      wb: () => lJ,
-      wd: () => zJ,
-      xc: () => sc,
-      z: () => XJ,
-      zb: () => cc,
-      zd: () => OJ
+  4186: (BB, TB, dB) => {
+    dB.d(TB, {
+      $c: () => VB.qb,
+      $d: () => cB,
+      B: () => VB.f,
+      Bb: () => TT,
+      Bc: () => OT,
+      Bd: () => aB,
+      Cc: () => gT,
+      Cd: () => XB,
+      Db: () => yB.g,
+      Dd: () => RB,
+      Eb: () => sB,
+      F: () => gB,
+      Fb: () => QB,
+      Fd: () => CB,
+      G: () => VB.h,
+      Gc: () => VT,
+      I: () => jB,
+      Jb: () => FB,
+      Jd: () => WB,
+      K: () => VB.m,
+      Kc: () => VB.ab,
+      M: () => VB.p,
+      Mb: () => wB,
+      Mc: () => VB.cb,
+      Md: () => qB,
+      Nc: () => VB.eb,
+      Nd: () => GB,
+      Ob: () => VB.J,
+      P: () => VB.t,
+      Pd: () => lT,
+      Rc: () => nB,
+      Rd: () => DT,
+      Sb: () => KB,
+      T: () => kB,
+      Tc: () => VB.fb,
+      Ud: () => iB,
+      Wb: () => NB,
+      Wc: () => VB.hb,
+      Wd: () => xB,
+      X: () => vB,
+      Yb: () => pT,
+      Yc: () => VB.lb,
+      Zb: () => mB,
+      _: () => VB.w,
+      _d: () => SB,
+      ac: () => oT,
+      b: () => BT,
+      cb: () => VB.A,
+      cc: () => yB.o,
+      ce: () => IB,
+      dd: () => VB.tb,
+      ec: () => EB,
+      f: () => uB,
+      fb: () => ZB,
+      fe: () => YB,
+      g: () => DB,
+      hb: () => yT,
+      hc: () => dT,
+      hd: () => VB.wb,
+      i: () => YT,
+      ic: () => VB.P,
+      j: () => MB,
+      je: () => PB,
+      kc: () => VB.Q,
+      kd: () => zB,
+      l: () => fB,
+      lb: () => oB,
+      le: () => uT,
+      mc: () => VB.R,
+      n: () => VB.e,
+      nd: () => VB.zb,
+      od: () => VB.Ab,
+      pb: () => VB.C,
+      pc: () => VB.S,
+      pe: () => OB,
+      q: () => kT,
+      r: () => UB,
+      s: () => lB,
+      sd: () => VB.Hb,
+      t: () => rB,
+      tb: () => hB,
+      tc: () => VB.V,
+      ud: () => pB,
+      v: () => LT,
+      vb: () => AB,
+      vd: () => HB,
+      x: () => bB,
+      xc: () => VB.$,
+      xd: () => JT,
+      yb: () => eB
     });
-    var FJ = ZJ(4198),
-      UJ = ZJ(2146);
-    const eJ = Math.round(1e3 / FJ.Hb),
-      XJ = 4,
-      AJ = 2;
+    var VB = dB(4192),
+      yB = dB(2101);
+    const pB = Math.round(1e3 / VB.Hb),
+      lB = 4,
+      JB = 2;
 
-    function qJ() {
-      return crypto.getRandomValues(new Uint32Array(AJ))
+    function YB() {
+      return crypto.getRandomValues(new Uint32Array(JB))
     }
-    const jJ = {
+    const gB = {
         Ok: 0,
         Errors: 1,
         Fatal: 2
       },
-      YJ = 16,
-      hJ = {
+      oB = 16,
+      kB = {
         Draws: 1,
         NetAll: 2
       },
-      DJ = {
+      LB = {
         ShowFog: 1,
         Lighting: 2,
         ChunkFade: 4
       };
 
-    function sJ(JJ) {
-      return (JJ.nametagsHidden ? EJ.NametagsHidden : 0) | (JJ.crouchToggle ? EJ.CrouchToggle : 0) | (JJ.bhopDisabled ? EJ.BhopDisabled : 0) | (JJ.disableBobbing ? EJ.DisableBobbing : 0) | (JJ.ezTowering ? EJ.EzTowering : 0) | (JJ.ezBridging ? EJ.EzBridging : 0) | (JJ.showChunkBorders ? EJ.ShowChunkBorders : 0) | (JJ.edgeGuard ? EJ.EdgeGuard : 0)
+    function OB(BB) {
+      return (BB.nametagsHidden ? tB.NametagsHidden : 0) | (BB.crouchToggle ? tB.CrouchToggle : 0) | (BB.bhopDisabled ? tB.BhopDisabled : 0) | (BB.disableBobbing ? tB.DisableBobbing : 0) | (BB.ezTowering ? tB.EzTowering : 0) | (BB.ezBridging ? tB.EzBridging : 0) | (BB.showChunkBorders ? tB.ShowChunkBorders : 0) | (BB.edgeGuard ? tB.EdgeGuard : 0)
     }
-    const nJ = {
+    const DB = {
         Flags: 0,
         PhysicsVersion: 1,
         InbuiltOverwritten: 2,
         AltComplete: 3,
         ProbeUsedProp: 4
       },
-      GJ = {
+      uB = {
         Ready: 1,
         SendFnReplaced: 2,
         Butto: 4,
@@ -1150,7 +1150,7 @@ export const modules = {
         CheckFuncHit: 128,
         OriginStackHit: 256
       },
-      fJ = {
+      HB = {
         None: 0,
         Untrusted: 2,
         FewProperties: 3,
@@ -1159,7 +1159,7 @@ export const modules = {
         En: 6,
         Fr: 7
       },
-      xJ = {
+      EB = {
         StackCheck: 0,
         ConfirmMesh: 1,
         IndexPassReplaced: 2,
@@ -1168,20 +1168,20 @@ export const modules = {
         Held: 6,
         PlayerKilledSubs: 7
       },
-      rJ = 5,
-      vJ = 4294967295;
+      vB = 5,
+      mB = 4294967295;
 
-    function mJ(JJ) {
-      return (JJ.showFog ? DJ.ShowFog : 0) | (JJ.lighting ? DJ.Lighting : 0) | (JJ.chunkFade ? DJ.ChunkFade : 0)
+    function iB(BB) {
+      return (BB.showFog ? LB.ShowFog : 0) | (BB.lighting ? LB.Lighting : 0) | (BB.chunkFade ? LB.ChunkFade : 0)
     }
-    const QJ = {
+    const NB = {
         ResetFirst: 1,
         AdStart: 2,
         PreventMovement: 4,
         AdEnd: 8,
         PayloadMaxBytes: 1 << 20
       },
-      EJ = {
+      tB = {
         NametagsHidden: 1,
         CrouchToggle: 2,
         BhopDisabled: 4,
@@ -1192,50 +1192,50 @@ export const modules = {
         EdgeGuard: 128,
         All: 255
       },
-      VJ = {
+      fB = {
         Release: 1,
         KeepTouches: 2
       },
-      KJ = {
+      sB = {
         Point: 1,
         Stamped: 2
       },
-      yJ = {
+      MB = {
         Add: 1,
         Clear: 2
       },
-      SJ = 1,
-      IJ = 8,
-      MJ = 16777215,
-      bJ = 4,
-      wJ = {
+      zB = 1,
+      wB = 8,
+      UB = 16777215,
+      FB = 4,
+      KB = {
         Resume: 1
       },
-      WJ = {
+      rB = {
         Held: 1
       };
 
-    function gJ(JJ, cJ) {
-      return (JJ | cJ << 8) >>> 0
+    function IB(BB, TB) {
+      return (BB | TB << 8) >>> 0
     }
 
-    function HJ(JJ) {
-      return 255 & JJ
+    function cB(BB) {
+      return 255 & BB
     }
 
-    function PJ(JJ) {
-      return JJ >>> 8
+    function SB(BB) {
+      return BB >>> 8
     }
 
-    function kJ(JJ) {
-      return JJ + 3 & -4
+    function PB(BB) {
+      return BB + 3 & -4
     }
-    const pJ = 16777216,
-      dJ = 16,
-      zJ = 8,
-      NJ = 8,
-      OJ = 16777216,
-      TJ = {
+    const QB = 16777216,
+      RB = 20;
+    const aB = 8,
+      ZB = 8,
+      XB = 16777216,
+      WB = {
         JobResult: 1,
         WorkerStarted: 2,
         WorkerLost: 3,
@@ -1243,19 +1243,19 @@ export const modules = {
         WorldgenStarted: 5,
         WorldgenLost: 6
       },
-      CJ = {
+      hB = {
         Ok: 0,
         Refused: 1,
         Trapped: 2,
         NotHeld: 3,
         HeapRefused: 4
       },
-      uJ = 16,
-      iJ = {
+      CB = 16,
+      GB = {
         Lost: 0,
         Gone: 1
       },
-      RJ = {
+      qB = {
         Init: 1,
         Mesh: 2,
         WorldgenSeed: 3,
@@ -1263,18 +1263,18 @@ export const modules = {
         Retire: 5
       };
 
-    function LJ(JJ) {
-      return JJ === RJ.WorldgenSeed || JJ === RJ.Generate
+    function xB(BB) {
+      return BB === qB.WorldgenSeed || BB === qB.Generate
     }
-    const aJ = 4,
-      BJ = 99,
-      tJ = {
+    const jB = 4,
+      AB = 99,
+      bB = {
         PAIRS_MAX: 16,
         FIXED_WORDS: 2,
         PAIR_WORDS: 2,
         WORDS_MAX: 34
       },
-      oJ = {
+      nB = {
         BYTES: 12,
         WEBGPU: 1,
         GL: 2,
@@ -1282,40 +1282,40 @@ export const modules = {
         LOST: 0,
         PIPELINE_FAILED: 1
       },
-      lJ = 12,
-      Jc = 16,
-      cc = 4,
-      Zc = 12,
-      Fc = {
+      eB = 12,
+      BT = 16,
+      TT = 4,
+      dT = 12,
+      VT = {
         SessionBased: 1,
         ReplayOffer: 2
       },
-      Uc = 4,
-      ec = 8,
-      Xc = 8,
-      Ac = {
+      yT = 4,
+      pT = 8,
+      lT = 8,
+      JT = {
         HEAD_BYTES: 28,
         UPDATE: 1,
         REMOVE: 2
       },
-      qc = {
+      YT = {
         Crit: 1,
         HitSelf: 2
       },
-      jc = {
+      gT = {
         BYTES: 16,
         STRING_TYPE_BYTES: 24,
         STRING_TYPE: 65535,
         ERROR: 65534
       },
-      Yc = {
+      oT = {
         None: 0,
         Bytes: 1,
         Msgpack: 2,
         MsgpackBin: 3
       },
-      hc = 12,
-      Dc = {
+      kT = 12,
+      LT = {
         Activated: 1,
         Error: 2,
         Left: 3,
@@ -1324,102 +1324,102 @@ export const modules = {
         Resumed: 6,
         ResumeRefused: 7
       },
-      sc = 67108864;
+      OT = 67108864;
 
-    function nc(JJ) {
-      for (const [cJ, ZJ] of Object.entries(FJ.g))
-        if (ZJ === JJ) return cJ;
-      return `Unknown${JJ}`
+    function DT(BB) {
+      for (const [TB, dB] of Object.entries(VB.f))
+        if (dB === BB) return TB;
+      return `Unknown${BB}`
     }
 
-    function Gc(JJ) {
+    function uT(BB) {
       return {
-        status: JJ[FJ.D.Status],
-        lastError: JJ[FJ.D.LastError],
-        lastErrorDetail: JJ[FJ.D.LastErrorDetail],
-        errorCount: JJ[FJ.D.ErrorCount],
-        frameIndex: JJ[FJ.D.FrameIndex],
-        tickIndex: JJ[FJ.D.TickIndex],
-        renderPending: JJ[FJ.D.RenderPending],
-        firstView: JJ[FJ.D.FirstView],
-        chunksCancelled: JJ[FJ.D.ChunksCancelled]
+        status: BB[VB.A.Status],
+        lastError: BB[VB.A.LastError],
+        lastErrorDetail: BB[VB.A.LastErrorDetail],
+        errorCount: BB[VB.A.ErrorCount],
+        frameIndex: BB[VB.A.FrameIndex],
+        tickIndex: BB[VB.A.TickIndex],
+        renderPending: BB[VB.A.RenderPending],
+        firstView: BB[VB.A.FirstView],
+        chunksCancelled: BB[VB.A.ChunksCancelled]
       }
     }
   },
-  4182: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      c: () => XJ,
-      e: () => eJ,
-      g: () => UJ
+  4177: (BB, TB, dB) => {
+    dB.d(TB, {
+      e: () => lB,
+      h: () => pB,
+      k: () => yB
     });
-    var FJ = ZJ(4189);
+    var VB = dB(4186);
 
-    function UJ(JJ) {
-      return "none" !== JJ
+    function yB(BB) {
+      return "none" !== BB
     }
 
-    function eJ(JJ, cJ) {
-      if (!JJ) return "none";
-      switch (cJ) {
-        case FJ.Z.Drawn:
+    function pB(BB, TB) {
+      if (!BB) return "none";
+      switch (TB) {
+        case VB.P.Drawn:
           return "drawn";
-        case FJ.Z.Paced:
+        case VB.P.Paced:
           return "paced";
         default:
           return "skipped"
       }
     }
 
-    function XJ(JJ) {
-      return "drawn" === JJ
+    function lB(BB) {
+      return "drawn" === BB
     }
   },
-  4207: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => qJ,
-      e: () => eJ,
-      g: () => AJ
+  4199: (BB, TB, dB) => {
+    dB.d(TB, {
+      b: () => YB,
+      c: () => pB,
+      f: () => JB
     });
-    var FJ = ZJ(2146),
-      UJ = ZJ(4210);
+    var VB = dB(2101),
+      yB = dB(4206);
 
-    function eJ(JJ) {
+    function pB(BB) {
       let {
-        action: cJ,
-        flags: ZJ
-      } = JJ;
-      return "mid-fire" === cJ && 0 !== (ZJ & FJ.e.AltLeftClick)
+        action: TB,
+        flags: dB
+      } = BB;
+      return "mid-fire" === TB && 0 !== (dB & VB.e.AltLeftClick)
     }
-    const XJ = new Set;
+    const lB = new Set;
 
-    function AJ(JJ) {
-      return XJ.add(JJ), () => {
-        XJ.delete(JJ)
+    function JB(BB) {
+      return lB.add(BB), () => {
+        lB.delete(BB)
       }
     }
 
-    function qJ(JJ) {
-      const cJ = UJ.c[255 & JJ];
-      if (void 0 === cJ) return;
-      const ZJ = JJ >>> 8 & 255,
-        eJ = {
-          action: cJ,
-          down: 0 !== (ZJ & FJ.e.Down),
-          flags: ZJ,
-          press: JJ >>> 16
+    function YB(BB) {
+      const TB = yB.e[255 & BB];
+      if (void 0 === TB) return;
+      const dB = BB >>> 8 & 255,
+        pB = {
+          action: TB,
+          down: 0 !== (dB & VB.e.Down),
+          flags: dB,
+          press: BB >>> 16
         };
-      for (const FJ of XJ) FJ(eJ)
+      for (const VB of lB) VB(pB)
     }
   },
-  4210: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      c: () => UJ,
-      e: () => eJ,
-      h: () => XJ,
-      l: () => FJ,
-      o: () => AJ
+  4206: (BB, TB, dB) => {
+    dB.d(TB, {
+      e: () => yB,
+      i: () => pB,
+      j: () => lB,
+      n: () => VB,
+      q: () => JB
     });
-    const FJ = {
+    const VB = {
         Mouse1: 1,
         Mouse2: 2,
         Mouse3: 3,
@@ -1616,8 +1616,8 @@ export const modules = {
         TouchAttack: 194,
         TouchUse: 195
       },
-      UJ = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
-      eJ = {
+      yB = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
+      pB = {
         forward: [21, 46],
         backward: [31, 49],
         left: [30, 47],
@@ -1680,63 +1680,63 @@ export const modules = {
         replayRecordKeyframe: [24],
         replayExportVideo: [40]
       },
-      XJ = {
+      lB = {
         jump: [188],
         crouch: [189],
         SwapCameraZoom: [190],
         "primary-fire": [194],
         "alt-fire": [195]
       },
-      AJ = [16]
+      JB = [16]
   },
-  4217: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => AJ,
-      e: () => XJ,
-      g: () => jJ
+  4209: (BB, TB, dB) => {
+    dB.d(TB, {
+      c: () => JB,
+      d: () => lB,
+      f: () => gB
     });
-    var FJ = ZJ(2146),
-      UJ = ZJ(2153);
-    const eJ = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
+    var VB = dB(2101),
+      yB = dB(2109);
+    const pB = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
 
-    function XJ(JJ) {
-      return JJ instanceof HTMLElement && (!!(JJ.isContentEditable || JJ instanceof HTMLTextAreaElement || JJ instanceof HTMLSelectElement) || JJ instanceof HTMLInputElement && !eJ.has(JJ.type))
+    function lB(BB) {
+      return BB instanceof HTMLElement && (!!(BB.isContentEditable || BB instanceof HTMLTextAreaElement || BB instanceof HTMLSelectElement) || BB instanceof HTMLInputElement && !pB.has(BB.type))
     }
 
-    function AJ(JJ) {
-      let cJ = null;
-      const ZJ = ZJ => {
-          const UJ = XJ(ZJ);
-          UJ !== cJ && (cJ = UJ, JJ(FJ.l.UiCapture, FJ.D.Keyboard, 0, 0, UJ ? FJ.D.Keyboard : 0))
+    function JB(BB) {
+      let TB = null;
+      const dB = dB => {
+          const yB = lB(dB);
+          yB !== TB && (TB = yB, BB(VB.k.UiCapture, VB.A.Keyboard, 0, 0, yB ? VB.A.Keyboard : 0))
         },
-        UJ = JJ => {
-          ZJ(JJ.target)
+        yB = BB => {
+          dB(BB.target)
         },
-        eJ = JJ => {
-          ZJ(JJ.relatedTarget)
+        pB = BB => {
+          dB(BB.relatedTarget)
         },
-        AJ = () => {
-          ZJ(document.activeElement)
+        JB = () => {
+          dB(document.activeElement)
         },
-        qJ = {
+        YB = {
           capture: !0,
           passive: !0
         };
-      return document.addEventListener("focusin", UJ, qJ), document.addEventListener("focusout", eJ, qJ), document.addEventListener("keydown", AJ, qJ), ZJ(document.activeElement), () => {
-        document.removeEventListener("focusin", UJ, qJ), document.removeEventListener("focusout", eJ, qJ), document.removeEventListener("keydown", AJ, qJ)
+      return document.addEventListener("focusin", yB, YB), document.addEventListener("focusout", pB, YB), document.addEventListener("keydown", JB, YB), dB(document.activeElement), () => {
+        document.removeEventListener("focusin", yB, YB), document.removeEventListener("focusout", pB, YB), document.removeEventListener("keydown", JB, YB)
       }
     }
-    const qJ = new Map;
+    const YB = new Map;
 
-    function jJ(JJ, cJ) {
-      var ZJ;
-      let FJ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
-      qJ.set(FJ, (null !== (ZJ = qJ.get(FJ)) && void 0 !== ZJ ? ZJ : 0) & ~JJ | cJ & JJ);
-      let eJ = 0;
-      for (const UJ of qJ.values()) eJ |= UJ;
-      return (0, UJ.H)(JJ, eJ & JJ)
+    function gB(BB, TB) {
+      var dB;
+      let VB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
+      YB.set(VB, (null !== (dB = YB.get(VB)) && void 0 !== dB ? dB : 0) & ~BB | TB & BB);
+      let pB = 0;
+      for (const yB of YB.values()) pB |= yB;
+      return (0, yB.x)(BB, pB & BB)
     }
   }
 };
 Object.freeze(modules);
-for (const JJ in modules) Object.freeze(modules[JJ]);
+for (const BB in modules) Object.freeze(modules[BB]);

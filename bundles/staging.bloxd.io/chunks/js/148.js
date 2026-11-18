@@ -1,11 +1,11 @@
 export const id = 148;
 export const ids = [148];
 export const modules = {
-  8205: (JJ, cJ, ZJ) => {
-    ZJ.r(cJ), ZJ.d(cJ, {
-      pageBody: () => FJ
+  8234: (BB, TB, dB) => {
+    dB.r(TB), dB.d(TB, {
+      pageBody: () => VB
     });
-    const FJ = {
+    const VB = {
       whatIs: ["What if every sword, block and piece of armour came from a Lucky Block? Lucky Bedwars is the Bedwars mode where they do. Four teams of up to four players each get their own base and a bed to protect. Open Lucky Blocks for random weapons, armour, blocks and wild surprises, then race to break every other team's bed. You never know what you'll get, so expect lots of chaos, and every match is free to jump into from your browser."],
       howToPlay: ["Before the match, your lobby votes on a map. You start with four Lucky Blocks. The first Basic Building and Basic Weapon blocks you open give you team wool and a weapon, so you're ready to go. Generators at your base and in the centre of the map keep the loot coming. Better armour equips itself automatically, and your compass points to the nearest enemy.", "Opening blocks, getting kills and breaking beds earns Clovers. Spend them at your Lucky Trader on the Lucky Blocks you want, or chip in 50 Clovers at a time towards team upgrades like the Bed Trap. Turn unwanted loot into Clovers in the Recycle tab. Twice a match, a random event shakes things up, and late in the game the arena starts to shrink. You can respawn as long as your bed stands, but once it's gone, dying makes you a spectator. The last team standing wins."],
       features: ["4 Teams of up to 4 Players", "Building, Weapon, Armour and Food Lucky Blocks in Basic, Rare and Super Rarities", "Evil Lucky Blocks with Nasty Surprises", "Wild Items: Lucky Bombs, Swap Orbs, Fireballs, Iceballs, Toxin Balls and Void Nets", "Random Events: Blood Moon, Lucky Crown, Masquerade, Simon Says, Lucky Storm and Tiny Titans", "Bed Trap Team Upgrades", "4 Maps: Lucky Islands, Helicarrier, Nuclear and Turtles", "Leaderboards"],
@@ -34,4 +34,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const JJ in modules) Object.freeze(modules[JJ]);
+for (const BB in modules) Object.freeze(modules[BB]);

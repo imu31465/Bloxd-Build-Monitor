@@ -1,68 +1,68 @@
 export const id = 331;
 export const ids = [331];
 export const modules = {
-  41204: (JJ, cJ, ZJ) => {
-    function FJ(JJ) {
-      return Math.floor(JJ / 8)
+  41235: (BB, TB, dB) => {
+    function VB(BB) {
+      return Math.floor(BB / 8)
     }
 
-    function UJ(JJ) {
-      return 1 << JJ % 8
+    function yB(BB) {
+      return 1 << BB % 8
     }
-    ZJ.d(cJ, {
-      OptimizeIndices: () => XJ
+    dB.d(TB, {
+      OptimizeIndices: () => lB
     });
-    class eJ {
-      constructor(JJ) {
-        this.size = JJ, this._byteArray = new Uint8Array(Math.ceil(this.size / 8))
+    class pB {
+      constructor(BB) {
+        this.size = BB, this._byteArray = new Uint8Array(Math.ceil(this.size / 8))
       }
-      get(JJ) {
-        if (JJ >= this.size) throw new RangeError("Bit index out of range");
-        const cJ = FJ(JJ),
-          ZJ = UJ(JJ);
-        return 0 !== (this._byteArray[cJ] & ZJ)
+      get(BB) {
+        if (BB >= this.size) throw new RangeError("Bit index out of range");
+        const TB = VB(BB),
+          dB = yB(BB);
+        return 0 !== (this._byteArray[TB] & dB)
       }
-      set(JJ, cJ) {
-        if (JJ >= this.size) throw new RangeError("Bit index out of range");
-        const ZJ = FJ(JJ),
-          eJ = UJ(JJ);
-        cJ ? this._byteArray[ZJ] |= eJ : this._byteArray[ZJ] &= ~eJ
+      set(BB, TB) {
+        if (BB >= this.size) throw new RangeError("Bit index out of range");
+        const dB = VB(BB),
+          pB = yB(BB);
+        TB ? this._byteArray[dB] |= pB : this._byteArray[dB] &= ~pB
       }
     }
 
-    function XJ(JJ) {
-      const cJ = [],
-        ZJ = JJ.length / 3;
-      for (let eJ = 0; eJ < ZJ; eJ++) cJ.push([JJ[3 * eJ], JJ[3 * eJ + 1], JJ[3 * eJ + 2]]);
-      const FJ = new Map;
-      for (let eJ = 0; eJ < cJ.length; eJ++) {
-        const JJ = cJ[eJ];
-        for (const cJ of JJ) {
-          let JJ = FJ.get(cJ);
-          JJ || FJ.set(cJ, JJ = []), JJ.push(eJ)
+    function lB(BB) {
+      const TB = [],
+        dB = BB.length / 3;
+      for (let pB = 0; pB < dB; pB++) TB.push([BB[3 * pB], BB[3 * pB + 1], BB[3 * pB + 2]]);
+      const VB = new Map;
+      for (let pB = 0; pB < TB.length; pB++) {
+        const BB = TB[pB];
+        for (const TB of BB) {
+          let BB = VB.get(TB);
+          BB || VB.set(TB, BB = []), BB.push(pB)
         }
       }
-      const UJ = new eJ(ZJ),
-        XJ = [],
-        AJ = JJ => {
-          const ZJ = [JJ];
-          for (; ZJ.length > 0;) {
-            const JJ = ZJ.pop();
-            if (!UJ.get(JJ)) {
-              UJ.set(JJ, !0), XJ.push(cJ[JJ]);
-              for (const eJ of cJ[JJ]) {
-                const JJ = FJ.get(eJ);
-                if (!JJ) return;
-                for (const cJ of JJ) UJ.get(cJ) || ZJ.push(cJ)
+      const yB = new pB(dB),
+        lB = [],
+        JB = BB => {
+          const dB = [BB];
+          for (; dB.length > 0;) {
+            const BB = dB.pop();
+            if (!yB.get(BB)) {
+              yB.set(BB, !0), lB.push(TB[BB]);
+              for (const pB of TB[BB]) {
+                const BB = VB.get(pB);
+                if (!BB) return;
+                for (const TB of BB) yB.get(TB) || dB.push(TB)
               }
             }
           }
         };
-      for (let eJ = 0; eJ < ZJ; eJ++) UJ.get(eJ) || AJ(eJ);
-      let qJ = 0;
-      for (const eJ of XJ) JJ[qJ++] = eJ[0], JJ[qJ++] = eJ[1], JJ[qJ++] = eJ[2]
+      for (let pB = 0; pB < dB; pB++) yB.get(pB) || JB(pB);
+      let YB = 0;
+      for (const pB of lB) BB[YB++] = pB[0], BB[YB++] = pB[1], BB[YB++] = pB[2]
     }
   }
 };
 Object.freeze(modules);
-for (const JJ in modules) Object.freeze(modules[JJ]);
+for (const BB in modules) Object.freeze(modules[BB]);

@@ -1,77 +1,77 @@
 export const id = 186;
 export const ids = [186];
 export const modules = {
-  38076: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      b: () => FJ
+  38065: (BB, TB, dB) => {
+    dB.d(TB, {
+      e: () => VB
     });
-    class FJ {
-      constructor(JJ, cJ) {
-        this.read = JJ, this.apply = cJ, this.release = null
+    class VB {
+      constructor(BB, TB) {
+        this.read = BB, this.apply = TB, this.release = null
       }
-      turn(JJ, cJ) {
-        const ZJ = null === this.release ? this.read() : this.release.transitionMs;
+      turn(BB, TB) {
+        const dB = null === this.release ? this.read() : this.release.transitionMs;
         this.stop(!1), this.apply({
-          forcedCameraDirectionTransitionMs: cJ,
-          forcedCameraDirection: [JJ[0], JJ[1], JJ[2]]
+          forcedCameraDirectionTransitionMs: TB,
+          forcedCameraDirection: [BB[0], BB[1], BB[2]]
         }), this.release = {
           timer: setTimeout((() => {
             this.stop(!0)
-          }), cJ + 100),
-          transitionMs: ZJ
+          }), TB + 100),
+          transitionMs: dB
         }
       }
       dispose() {
         this.stop(!0)
       }
-      stop(JJ) {
-        null !== this.release && (clearTimeout(this.release.timer), JJ && this.apply({
+      stop(BB) {
+        null !== this.release && (clearTimeout(this.release.timer), BB && this.apply({
           forcedCameraDirection: null,
           forcedCameraDirectionTransitionMs: this.release.transitionMs
         }), this.release = null)
       }
     }
   },
-  37633: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      e: () => eJ,
-      g: () => UJ
+  37614: (BB, TB, dB) => {
+    dB.d(TB, {
+      c: () => pB,
+      g: () => yB
     });
-    const FJ = new Map;
+    const VB = new Map;
 
-    function UJ(JJ, cJ) {
-      FJ.set(JJ, cJ)
+    function yB(BB, TB) {
+      VB.set(BB, TB)
     }
 
-    function eJ(JJ) {
-      return JJ ? FJ.get(JJ) : void 0
+    function pB(BB) {
+      return BB ? VB.get(BB) : void 0
     }
   },
-  38566: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      b: () => UJ
+  38509: (BB, TB, dB) => {
+    dB.d(TB, {
+      b: () => yB
     });
-    var FJ = ZJ(37201);
+    var VB = dB(37157);
 
-    function UJ(JJ, cJ, ZJ) {
-      var UJ, eJ, XJ, AJ, qJ, jJ, YJ;
-      const hJ = (0, FJ.d)(JJ, cJ, ZJ[0], ZJ[1], ZJ[2]),
-        DJ = hJ ? null !== (UJ = hJ.textCell) && void 0 !== UJ ? UJ : hJ.rect.anchor : ZJ,
-        sJ = cJ(DJ[0], DJ[1], DJ[2]);
+    function yB(BB, TB, dB) {
+      var yB, pB, lB, JB, YB, gB, oB;
+      const kB = (0, VB.b)(BB, TB, dB[0], dB[1], dB[2]),
+        LB = kB ? null !== (yB = kB.textCell) && void 0 !== yB ? yB : kB.rect.anchor : dB,
+        OB = TB(LB[0], LB[1], LB[2]);
       return {
-        pos: [ZJ[0], ZJ[1], ZJ[2]],
-        noticeboardSpan: hJ && {
-          width: hJ.rect.width,
-          height: hJ.rect.height
+        pos: [dB[0], dB[1], dB[2]],
+        noticeboardSpan: kB && {
+          width: kB.rect.width,
+          height: kB.rect.height
         },
-        text: null !== (eJ = null === sJ || void 0 === sJ || null === (XJ = sJ.persisted) || void 0 === XJ || null === (AJ = XJ.shared) || void 0 === AJ ? void 0 : AJ.text) && void 0 !== eJ ? eJ : "",
-        textSize: null !== (qJ = null === sJ || void 0 === sJ || null === (jJ = sJ.persisted) || void 0 === jJ || null === (YJ = jJ.shared) || void 0 === YJ ? void 0 : YJ.textSize) && void 0 !== qJ ? qJ : null
+        text: null !== (pB = null === OB || void 0 === OB || null === (lB = OB.persisted) || void 0 === lB || null === (JB = lB.shared) || void 0 === JB ? void 0 : JB.text) && void 0 !== pB ? pB : "",
+        textSize: null !== (YB = null === OB || void 0 === OB || null === (gB = OB.persisted) || void 0 === gB || null === (oB = gB.shared) || void 0 === oB ? void 0 : oB.textSize) && void 0 !== YB ? YB : null
       }
     }
   },
-  37496: (JJ, cJ, ZJ) => {
-    function FJ(JJ) {
-      switch (JJ.kind) {
+  37458: (BB, TB, dB) => {
+    function VB(BB) {
+      switch (BB.kind) {
         case void 0:
         case "flatEmissive":
           return !1;
@@ -80,452 +80,452 @@ export const modules = {
           return !0
       }
     }
-    ZJ.d(cJ, {
-      e: () => UJ,
-      f: () => eJ,
-      j: () => FJ
+    dB.d(TB, {
+      e: () => yB,
+      h: () => pB,
+      k: () => VB
     });
-    const UJ = 4,
-      eJ = 3
+    const yB = 4,
+      pB = 3
   },
-  38103: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      e: () => UJ,
-      f: () => eJ
+  38093: (BB, TB, dB) => {
+    dB.d(TB, {
+      c: () => yB,
+      e: () => pB
     });
-    var FJ = ZJ(235);
-    const UJ = new Set(["bedwars", "bridgeBattle", "buildAFactory2", "classic", "clutch", "containmentBreach", "cooking", "defusal", "frontline", "goalRush", "luckyBedwars", "ninetyNineNights", "oneBlock", "plots", "pvpCiv", "skyIslands", "skyblock", "tsunami"]);
-    class eJ {
-      constructor(JJ) {
-        this.importGame = JJ, this.loads = new Map, this.loaded = new Map
+    var VB = dB(279);
+    const yB = new Set(["bedwars", "bridgeBattle", "buildAFactory2", "classic", "clutch", "containmentBreach", "cooking", "defusal", "frontline", "goalRush", "luckyBedwars", "ninetyNineNights", "oneBlock", "plots", "pvpCiv", "skyIslands", "skyblock", "tsunami"]);
+    class pB {
+      constructor(BB) {
+        this.importGame = BB, this.loads = new Map, this.loaded = new Map
       }
-      load(JJ) {
-        const cJ = (0, FJ.Jb)(JJ);
-        if (!UJ.has(cJ)) return Promise.resolve(void 0);
-        let ZJ = this.loads.get(cJ);
-        return ZJ || (ZJ = this.importGame(cJ).then((JJ => {
-          const ZJ = JJ.default;
-          if ("function" !== typeof ZJ) throw new Error(`${cJ}'s client code has no default-exported factory`);
-          return this.loaded.set(cJ, ZJ), ZJ
-        })).catch((JJ => {
-          throw this.loads.delete(cJ), JJ
-        })), this.loads.set(cJ, ZJ)), ZJ
+      load(BB) {
+        const TB = (0, VB.Vb)(BB);
+        if (!yB.has(TB)) return Promise.resolve(void 0);
+        let dB = this.loads.get(TB);
+        return dB || (dB = this.importGame(TB).then((BB => {
+          const dB = BB.default;
+          if ("function" !== typeof dB) throw new Error(`${TB}'s client code has no default-exported factory`);
+          return this.loaded.set(TB, dB), dB
+        })).catch((BB => {
+          throw this.loads.delete(TB), BB
+        })), this.loads.set(TB, dB)), dB
       }
-      loadedFactory(JJ) {
-        const cJ = (0, FJ.Jb)(JJ);
-        if (!UJ.has(cJ)) return;
-        const ZJ = this.loaded.get(cJ);
-        if (!ZJ) throw new Error(`${cJ}'s client code started before it loaded`);
-        return ZJ
+      loadedFactory(BB) {
+        const TB = (0, VB.Vb)(BB);
+        if (!yB.has(TB)) return;
+        const dB = this.loaded.get(TB);
+        if (!dB) throw new Error(`${TB}'s client code started before it loaded`);
+        return dB
       }
     }
   },
-  38573: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      c: () => XJ
+  38518: (BB, TB, dB) => {
+    dB.d(TB, {
+      b: () => lB
     });
-    var FJ = ZJ(8719),
-      UJ = ZJ(35740),
-      eJ = ZJ(2778);
+    var VB = dB(8746),
+      yB = dB(35681),
+      pB = dB(2760);
 
-    function XJ(JJ) {
-      if (JJ === FJ.e) return 0;
-      const cJ = (0, eJ.c)(JJ);
-      if (void 0 !== cJ && cJ <= UJ.MAX_BLOCK_ID) return cJ;
-      const ZJ = (0, eJ.c)(JJ.split("|")[0]);
-      if (void 0 !== ZJ && ZJ <= UJ.MAX_BLOCK_ID && (0, UJ.rootMetaDescOf)(ZJ) === JJ) return ZJ;
-      throw new Error(`Invalid block name. You sent ${JJ}. The only valid block names are 'Air' and those contained within the blockMetadata.ts file`)
+    function lB(BB) {
+      if (BB === VB.c) return 0;
+      const TB = (0, pB.b)(BB);
+      if (void 0 !== TB && TB <= yB.MAX_BLOCK_ID) return TB;
+      const dB = (0, pB.b)(BB.split("|")[0]);
+      if (void 0 !== dB && dB <= yB.MAX_BLOCK_ID && (0, yB.rootMetaDescOf)(dB) === BB) return dB;
+      throw new Error(`Invalid block name. You sent ${BB}. The only valid block names are 'Air' and those contained within the blockMetadata.ts file`)
     }
   },
-  38162: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      e: () => UJ
+  38149: (BB, TB, dB) => {
+    dB.d(TB, {
+      b: () => yB
     });
-    var FJ = ZJ(13);
-    class UJ {
-      constructor(JJ) {
-        this.screen = JJ, this.hidesHud = !1
+    var VB = dB(21);
+    class yB {
+      constructor(BB) {
+        this.screen = BB, this.hidesHud = !1
       }
-      show(JJ, cJ) {
-        this.screen.setFade(JJ.colour, JJ.alpha), this.screen.setLetterbox(!0 === cJ.letterbox, JJ.alpha < 1), this.setHudHidden(!0 === cJ.hideHud)
+      show(BB, TB) {
+        this.screen.setFade(BB.colour, BB.alpha), this.screen.setLetterbox(!0 === TB.letterbox, BB.alpha < 1), this.setHudHidden(!0 === TB.hideHud)
       }
       clear() {
         this.screen.clear(), this.setHudHidden(!1)
       }
-      setHudHidden(JJ) {
-        this.hidesHud !== JJ && (this.hidesHud = JJ, FJ.d.set({
-          isUiHiddenByCamera: JJ
+      setHudHidden(BB) {
+        this.hidesHud !== BB && (this.hidesHud = BB, VB.d.set({
+          isUiHiddenByCamera: BB
         }))
       }
     }
   },
-  38120: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      b: () => FJ,
-      f: () => DJ,
-      i: () => hJ,
-      m: () => XJ,
-      n: () => nJ,
-      p: () => qJ,
-      s: () => GJ,
-      t: () => jJ,
-      v: () => AJ,
-      x: () => YJ
+  38106: (BB, TB, dB) => {
+    dB.d(TB, {
+      A: () => gB,
+      D: () => JB,
+      F: () => oB,
+      e: () => VB,
+      i: () => LB,
+      j: () => kB,
+      l: () => lB,
+      p: () => DB,
+      t: () => YB,
+      w: () => uB
     });
-    const FJ = Math.PI / 2 - .001,
-      UJ = 2 * Math.PI,
-      eJ = 1e-9;
+    const VB = Math.PI / 2 - .001,
+      yB = 2 * Math.PI,
+      pB = 1e-9;
 
-    function XJ(JJ, cJ) {
-      cJ.heading = JJ.heading, cJ.pitch = JJ.pitch
+    function lB(BB, TB) {
+      TB.heading = BB.heading, TB.pitch = BB.pitch
     }
 
-    function AJ(JJ, cJ) {
-      const ZJ = cJ - JJ;
-      return ZJ - UJ * Math.floor((ZJ + Math.PI) / UJ)
+    function JB(BB, TB) {
+      const dB = TB - BB;
+      return dB - yB * Math.floor((dB + Math.PI) / yB)
     }
 
-    function qJ(JJ, cJ, ZJ) {
-      return JJ + AJ(JJ, cJ) * ZJ
+    function YB(BB, TB, dB) {
+      return BB + JB(BB, TB) * dB
     }
 
-    function jJ(JJ) {
-      if (!Number.isFinite(JJ)) return JJ;
-      const cJ = JJ - UJ * Math.floor(JJ / UJ);
-      return cJ < UJ ? cJ : 0
+    function gB(BB) {
+      if (!Number.isFinite(BB)) return BB;
+      const TB = BB - yB * Math.floor(BB / yB);
+      return TB < yB ? TB : 0
     }
 
-    function YJ(JJ, cJ) {
-      return JJ + AJ(JJ, cJ)
+    function oB(BB, TB) {
+      return BB + JB(BB, TB)
     }
 
-    function hJ(JJ) {
-      return Math.max(-FJ, Math.min(FJ, JJ))
+    function kB(BB) {
+      return Math.max(-VB, Math.min(VB, BB))
     }
 
-    function DJ(JJ, cJ, ZJ) {
-      const FJ = Math.cos(cJ);
-      return ZJ[0] = FJ * Math.sin(JJ), ZJ[1] = -Math.sin(cJ), ZJ[2] = FJ * Math.cos(JJ), ZJ
+    function LB(BB, TB, dB) {
+      const VB = Math.cos(TB);
+      return dB[0] = VB * Math.sin(BB), dB[1] = -Math.sin(TB), dB[2] = VB * Math.cos(BB), dB
     }
 
-    function sJ(JJ, cJ, ZJ, FJ) {
-      const UJ = Math.sqrt(JJ * JJ + ZJ * ZJ);
-      return UJ < eJ && Math.abs(cJ) < eJ || (UJ >= eJ && (FJ.heading = Math.atan2(JJ, ZJ)), FJ.pitch = hJ(Math.atan2(-cJ, UJ) + 0)), FJ
+    function OB(BB, TB, dB, VB) {
+      const yB = Math.sqrt(BB * BB + dB * dB);
+      return yB < pB && Math.abs(TB) < pB || (yB >= pB && (VB.heading = Math.atan2(BB, dB)), VB.pitch = kB(Math.atan2(-TB, yB) + 0)), VB
     }
 
-    function nJ(JJ, cJ) {
-      return sJ(JJ[0], JJ[1], JJ[2], cJ)
+    function DB(BB, TB) {
+      return OB(BB[0], BB[1], BB[2], TB)
     }
 
-    function GJ(JJ, cJ, ZJ) {
-      return sJ(cJ[0] - JJ[0], cJ[1] - JJ[1], cJ[2] - JJ[2], ZJ)
+    function uB(BB, TB, dB) {
+      return OB(TB[0] - BB[0], TB[1] - BB[1], TB[2] - BB[2], dB)
     }
   },
-  38157: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      c: () => eJ,
-      f: () => UJ
+  38140: (BB, TB, dB) => {
+    dB.d(TB, {
+      b: () => pB,
+      c: () => yB
     });
-    var FJ = ZJ(38120);
+    var VB = dB(38106);
 
-    function UJ(JJ) {
-      var cJ;
-      const ZJ = "default" === JJ.mode ? "movement" : null !== (cJ = JJ.playerFacing) && void 0 !== cJ ? cJ : "movement";
-      return "cursor" === ZJ ? {
-        facing: ZJ,
+    function yB(BB) {
+      var TB;
+      const dB = "default" === BB.mode ? "movement" : null !== (TB = BB.playerFacing) && void 0 !== TB ? TB : "movement";
+      return "cursor" === dB ? {
+        facing: dB,
         mouseTurns: null
       } : {
-        facing: ZJ,
-        mouseTurns: "default" !== JJ.mode && void 0 !== JJ.playerLook ? "look" : "view"
+        facing: dB,
+        mouseTurns: "default" !== BB.mode && void 0 !== BB.playerLook ? "look" : "view"
       }
     }
 
-    function eJ(JJ, cJ, ZJ, UJ, eJ, XJ) {
-      return XJ.bK = 0, XJ.zK = 0, XJ.pointedAt = void 0, void 0 !== UJ ? eJ ? (XJ.pointedAt = UJ, JJ) : (0, FJ.t)(UJ.heading) : eJ ? (XJ.bK = cJ, XJ.zK = ZJ, JJ) : (0, FJ.t)(JJ + cJ)
+    function pB(BB, TB, dB, yB, pB, lB) {
+      return lB.pU = 0, lB.kU = 0, lB.pointedAt = void 0, void 0 !== yB ? pB ? (lB.pointedAt = yB, BB) : (0, VB.A)(yB.heading) : pB ? (lB.pU = TB, lB.kU = dB, BB) : (0, VB.A)(BB + TB)
     }
   },
-  38134: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => TJ
+  38117: (BB, TB, dB) => {
+    dB.d(TB, {
+      b: () => WB
     });
-    var FJ = ZJ(38141),
-      UJ = ZJ(38120),
-      eJ = ZJ(36007);
+    var VB = dB(38125),
+      yB = dB(38106),
+      pB = dB(35946);
 
-    function XJ(JJ, cJ, ZJ, FJ) {
-      if (!(FJ > 0)) return cJ;
-      const UJ = cJ > JJ ? Math.min(cJ, JJ + ZJ / FJ) : Math.max(cJ, JJ - ZJ / FJ);
-      return Math.abs(cJ - UJ) < 1e-9 ? cJ : UJ
+    function lB(BB, TB, dB, VB) {
+      if (!(VB > 0)) return TB;
+      const yB = TB > BB ? Math.min(TB, BB + dB / VB) : Math.max(TB, BB - dB / VB);
+      return Math.abs(TB - yB) < 1e-9 ? TB : yB
     }
-    class AJ {
+    class JB {
       constructor() {
         this.phase = null, this.outMs = 0, this.holdMs = 0, this.inMs = 0, this.heldMs = 0, this.sinceTurnMs = 1 / 0, this.clearMs = 1 / 0, this.waiting = null, this.screen = {
-          colour: FJ.f,
+          colour: VB.h,
           alpha: 0
         }
       }
       getScreen() {
         return this.screen
       }
-      fadeOut(JJ) {
-        !this.isGoingOut() && this.sinceTurnMs < FJ.k.minFadeTurnMs ? this.waiting = {
+      fadeOut(BB) {
+        !this.isGoingOut() && this.sinceTurnMs < VB.m.minFadeTurnMs ? this.waiting = {
           turn: "out",
-          transition: JJ
-        } : (this.waiting = null, this.startOut(JJ))
+          transition: BB
+        } : (this.waiting = null, this.startOut(BB))
       }
-      fadeIn(JJ) {
-        this.isGoingOut() ? this.sinceTurnMs < FJ.k.minFadeTurnMs ? this.waiting = {
+      fadeIn(BB) {
+        this.isGoingOut() ? this.sinceTurnMs < VB.m.minFadeTurnMs ? this.waiting = {
           turn: "in",
-          minMs: JJ
-        } : (this.waiting = null, this.startIn(JJ)) : this.waiting = null
+          minMs: BB
+        } : (this.waiting = null, this.startIn(BB)) : this.waiting = null
       }
-      advance(JJ) {
-        const cJ = this.waiting;
-        if (null === cJ) return this.step(JJ);
-        const ZJ = FJ.k.minFadeTurnMs - this.sinceTurnMs;
-        if (ZJ > JJ) return this.step(JJ);
-        const UJ = this.step(ZJ);
-        return this.waiting = null, "out" === cJ.turn ? this.startOut(cJ.transition) : this.startIn(cJ.minMs), this.step(JJ - ZJ) || UJ
+      advance(BB) {
+        const TB = this.waiting;
+        if (null === TB) return this.step(BB);
+        const dB = VB.m.minFadeTurnMs - this.sinceTurnMs;
+        if (dB > BB) return this.step(BB);
+        const yB = this.step(dB);
+        return this.waiting = null, "out" === TB.turn ? this.startOut(TB.transition) : this.startIn(TB.minMs), this.step(BB - dB) || yB
       }
       isGoingOut() {
         return "out" === this.phase || "hold" === this.phase
       }
-      startOut(JJ) {
-        ("in" === this.phase || null === this.phase && this.clearMs < FJ.k.minFadeTurnMs) && (this.sinceTurnMs = 0), this.phase = "out", 0 === this.screen.alpha && (this.screen.colour = JJ.colour), this.outMs = JJ.outMs, this.holdMs = JJ.holdMs, this.inMs = JJ.inMs
+      startOut(BB) {
+        ("in" === this.phase || null === this.phase && this.clearMs < VB.m.minFadeTurnMs) && (this.sinceTurnMs = 0), this.phase = "out", 0 === this.screen.alpha && (this.screen.colour = BB.colour), this.outMs = BB.outMs, this.holdMs = BB.holdMs, this.inMs = BB.inMs
       }
-      startIn(JJ) {
-        this.isGoingOut() && (this.sinceTurnMs = 0), this.phase = "in", this.inMs = Math.max(JJ, this.inMs)
+      startIn(BB) {
+        this.isGoingOut() && (this.sinceTurnMs = 0), this.phase = "in", this.inMs = Math.max(BB, this.inMs)
       }
-      step(JJ) {
-        const cJ = this.screen;
-        this.sinceTurnMs += JJ, null === this.phase && (this.clearMs += JJ);
-        let ZJ = !1,
-          UJ = JJ;
+      step(BB) {
+        const TB = this.screen;
+        this.sinceTurnMs += BB, null === this.phase && (this.clearMs += BB);
+        let dB = !1,
+          yB = BB;
         if ("out" === this.phase) {
-          const FJ = (1 - cJ.alpha) * this.outMs;
-          if (cJ.alpha = XJ(cJ.alpha, 1, JJ, this.outMs), cJ.alpha < 1) return !1;
-          this.phase = "hold", this.heldMs = 0, UJ = Math.max(0, JJ - FJ), ZJ = !0
+          const VB = (1 - TB.alpha) * this.outMs;
+          if (TB.alpha = lB(TB.alpha, 1, BB, this.outMs), TB.alpha < 1) return !1;
+          this.phase = "hold", this.heldMs = 0, yB = Math.max(0, BB - VB), dB = !0
         }
-        let eJ = JJ;
+        let pB = BB;
         if ("hold" === this.phase) {
-          this.heldMs += UJ;
-          const JJ = Math.min(this.heldMs - this.holdMs, this.sinceTurnMs - FJ.k.minFadeTurnMs);
-          if (JJ < 0 || ZJ) return ZJ;
-          this.phase = "in", this.sinceTurnMs = JJ, eJ = JJ
+          this.heldMs += yB;
+          const BB = Math.min(this.heldMs - this.holdMs, this.sinceTurnMs - VB.m.minFadeTurnMs);
+          if (BB < 0 || dB) return dB;
+          this.phase = "in", this.sinceTurnMs = BB, pB = BB
         }
-        return "in" === this.phase && (cJ.alpha = XJ(cJ.alpha, 0, eJ, this.inMs), cJ.alpha <= 0 && (this.phase = null, this.clearMs = 0)), ZJ
+        return "in" === this.phase && (TB.alpha = lB(TB.alpha, 0, pB, this.inMs), TB.alpha <= 0 && (this.phase = null, this.clearMs = 0)), dB
       }
     }
-    var qJ = ZJ(38117),
-      jJ = ZJ(38148),
-      YJ = ZJ(1671),
-      hJ = ZJ(35637);
+    var YB = dB(38102),
+      gB = dB(38134),
+      oB = dB(1652),
+      kB = dB(35566);
 
-    function DJ(JJ, cJ) {
-      for (let ZJ = 0; ZJ < cJ.length; ZJ++) cJ[ZJ] = JJ[ZJ]
+    function LB(BB, TB) {
+      for (let dB = 0; dB < TB.length; dB++) TB[dB] = BB[dB]
     }
 
-    function sJ(JJ, cJ) {
-      var ZJ;
-      return null !== (ZJ = JJ.fov) && void 0 !== ZJ ? ZJ : cJ.getDefaultFov()
+    function OB(BB, TB) {
+      var dB;
+      return null !== (dB = BB.fov) && void 0 !== dB ? dB : TB.getDefaultFov()
     }
 
-    function nJ(JJ, cJ, ZJ, FJ, UJ) {
-      const eJ = 2 / FJ,
-        XJ = Math.exp(-eJ * UJ);
-      for (let AJ = 0; AJ < JJ.length; AJ++) {
-        const FJ = JJ[AJ] - ZJ[AJ],
-          qJ = (cJ[AJ] + eJ * FJ) * UJ;
-        JJ[AJ] = ZJ[AJ] + (FJ + qJ) * XJ, cJ[AJ] = (cJ[AJ] - eJ * qJ) * XJ
+    function DB(BB, TB, dB, VB, yB) {
+      const pB = 2 / VB,
+        lB = Math.exp(-pB * yB);
+      for (let JB = 0; JB < BB.length; JB++) {
+        const VB = BB[JB] - dB[JB],
+          YB = (TB[JB] + pB * VB) * yB;
+        BB[JB] = dB[JB] + (VB + YB) * lB, TB[JB] = (TB[JB] - pB * YB) * lB
       }
     }
-    class GJ {
-      constructor(JJ, cJ, ZJ, FJ) {
-        var eJ, XJ, AJ, qJ, jJ;
-        this.settings = JJ, this.zh = cJ, this.targets = ZJ, this.base = void 0, this.closestDistance = void 0, this.furthestDistance = void 0, this.goal = void 0, this.framedTargets = !1, this.smoothed = [0, 0, 0, 0, 0, 0], this.jf = [0, 0, 0, 0, 0, 0], this.started = !1, this.angles = {
+    class uB {
+      constructor(BB, TB, dB, VB) {
+        var pB, lB, JB, YB, gB;
+        this.settings = BB, this.JL = TB, this.targets = dB, this.base = void 0, this.closestDistance = void 0, this.furthestDistance = void 0, this.goal = void 0, this.framedTargets = !1, this.smoothed = [0, 0, 0, 0, 0, 0], this.bu = [0, 0, 0, 0, 0, 0], this.started = !1, this.angles = {
           heading: 0,
           pitch: 0
         }, this.points = [], this.forward = [0, 0, 0], this.base = {
-          heading: (0, UJ.t)((0, YJ.k)(null !== (eJ = JJ.viewHeading) && void 0 !== eJ ? eJ : 0)),
-          pitch: (0, UJ.i)((0, YJ.k)(null !== (XJ = JJ.viewElevation) && void 0 !== XJ ? XJ : 45))
-        }, this.closestDistance = null !== (AJ = JJ.closestDistance) && void 0 !== AJ ? AJ : Math.min(6, null !== (qJ = JJ.furthestDistance) && void 0 !== qJ ? qJ : 1 / 0), this.furthestDistance = null !== (jJ = JJ.furthestDistance) && void 0 !== jJ ? jJ : Math.max(64, this.closestDistance);
-        const hJ = (0, UJ.f)(this.base.heading, this.base.pitch, this.forward),
-          DJ = FJ.position,
-          sJ = this.closestDistance;
-        this.goal = [DJ[0] + hJ[0] * sJ, DJ[1] + hJ[1] * sJ, DJ[2] + hJ[2] * sJ, sJ, this.base.heading, this.base.pitch]
+          heading: (0, yB.A)((0, oB.j)(null !== (pB = BB.viewHeading) && void 0 !== pB ? pB : 0)),
+          pitch: (0, yB.j)((0, oB.j)(null !== (lB = BB.viewElevation) && void 0 !== lB ? lB : 45))
+        }, this.closestDistance = null !== (JB = BB.closestDistance) && void 0 !== JB ? JB : Math.min(6, null !== (YB = BB.furthestDistance) && void 0 !== YB ? YB : 1 / 0), this.furthestDistance = null !== (gB = BB.furthestDistance) && void 0 !== gB ? gB : Math.max(64, this.closestDistance);
+        const kB = (0, yB.i)(this.base.heading, this.base.pitch, this.forward),
+          LB = VB.position,
+          OB = this.closestDistance;
+        this.goal = [LB[0] + kB[0] * OB, LB[1] + kB[1] * OB, LB[2] + kB[2] * OB, OB, this.base.heading, this.base.pitch]
       }
-      update(JJ, cJ, ZJ) {
-        var FJ, eJ;
-        this.placeGoal(null !== (FJ = this.settings.fov) && void 0 !== FJ ? FJ : this.zh.getBaseFov()), this.goal[4] = (0, UJ.x)(this.smoothed[4], this.base.heading), this.goal[5] = this.base.pitch;
-        const XJ = null !== (eJ = this.settings.smoothMs) && void 0 !== eJ ? eJ : 400;
-        !this.started || XJ < 1 ? (DJ(this.goal, this.smoothed), this.jf.fill(0), this.started = !0) : nJ(this.smoothed, this.jf, this.goal, XJ, JJ), this.angles.heading = this.smoothed[4], this.angles.pitch = (0, UJ.i)(this.smoothed[5]), cJ.apply(this.angles, ZJ);
-        const AJ = (0, UJ.f)(ZJ.heading, ZJ.pitch, this.forward);
-        for (let UJ = 0; UJ < 3; UJ++) ZJ.position[UJ] = this.smoothed[UJ] - AJ[UJ] * this.smoothed[3];
-        ZJ.fov = sJ(this.settings, this.zh)
+      update(BB, TB, dB) {
+        var VB, pB;
+        this.placeGoal(null !== (VB = this.settings.fov) && void 0 !== VB ? VB : this.JL.getBaseFov()), this.goal[4] = (0, yB.F)(this.smoothed[4], this.base.heading), this.goal[5] = this.base.pitch;
+        const lB = null !== (pB = this.settings.smoothMs) && void 0 !== pB ? pB : 400;
+        !this.started || lB < 1 ? (LB(this.goal, this.smoothed), this.bu.fill(0), this.started = !0) : DB(this.smoothed, this.bu, this.goal, lB, BB), this.angles.heading = this.smoothed[4], this.angles.pitch = (0, yB.j)(this.smoothed[5]), TB.apply(this.angles, dB);
+        const JB = (0, yB.i)(dB.heading, dB.pitch, this.forward);
+        for (let yB = 0; yB < 3; yB++) dB.position[yB] = this.smoothed[yB] - JB[yB] * this.smoothed[3];
+        dB.fov = OB(this.settings, this.JL)
       }
-      continueFrom(JJ) {
-        JJ instanceof GJ && (DJ(JJ.goal, this.goal), DJ(JJ.smoothed, this.smoothed), DJ(JJ.jf, this.jf), this.framedTargets = JJ.framedTargets, this.started = JJ.started)
+      continueFrom(BB) {
+        BB instanceof uB && (LB(BB.goal, this.goal), LB(BB.smoothed, this.smoothed), LB(BB.bu, this.bu), this.framedTargets = BB.framedTargets, this.started = BB.started)
       }
       reset() {
-        this.jf.fill(0), this.started = !1
+        this.bu.fill(0), this.started = !1
       }
-      placeGoal(JJ) {
-        var cJ;
-        let ZJ = 0;
-        for (const YJ of this.settings.targets) {
-          const JJ = this.targets.currentAimPoint(YJ);
-          JJ && (0, qJ.j)(JJ, this.pointAt(ZJ++))
+      placeGoal(BB) {
+        var TB;
+        let dB = 0;
+        for (const oB of this.settings.targets) {
+          const BB = this.targets.currentAimPoint(oB);
+          BB && (0, YB.j)(BB, this.pointAt(dB++))
         }
-        if (ZJ > 0) this.framedTargets = !0;
+        if (dB > 0) this.framedTargets = !0;
         else if (!this.framedTargets) {
-          const JJ = this.targets.aimPoint(this.zh.localPlayerId);
-          JJ && (0, qJ.j)(JJ, this.pointAt(ZJ++))
+          const BB = this.targets.aimPoint(this.JL.localPlayerId);
+          BB && (0, YB.j)(BB, this.pointAt(dB++))
         }
-        const FJ = this.goal;
-        if (0 === ZJ) return void(FJ[3] = this.withinDistances(FJ[3]));
-        for (let qJ = 0; qJ < 3; qJ++) {
-          let JJ = 1 / 0,
-            cJ = -1 / 0;
-          for (let FJ = 0; FJ < ZJ; FJ++) JJ = Math.min(JJ, this.points[FJ][qJ]), cJ = Math.max(cJ, this.points[FJ][qJ]);
-          FJ[qJ] = (JJ + cJ) / 2
+        const VB = this.goal;
+        if (0 === dB) return void(VB[3] = this.withinDistances(VB[3]));
+        for (let YB = 0; YB < 3; YB++) {
+          let BB = 1 / 0,
+            TB = -1 / 0;
+          for (let VB = 0; VB < dB; VB++) BB = Math.min(BB, this.points[VB][YB]), TB = Math.max(TB, this.points[VB][YB]);
+          VB[YB] = (BB + TB) / 2
         }
-        let UJ = 0;
-        for (let qJ = 0; qJ < ZJ; qJ++) {
-          const JJ = this.points[qJ];
-          UJ = Math.max(UJ, Math.hypot(JJ[0] - FJ[0], JJ[1] - FJ[1], JJ[2] - FJ[2]))
+        let yB = 0;
+        for (let YB = 0; YB < dB; YB++) {
+          const BB = this.points[YB];
+          yB = Math.max(yB, Math.hypot(BB[0] - VB[0], BB[1] - VB[1], BB[2] - VB[2]))
         }
-        const eJ = Math.tan((0, YJ.k)(JJ) / 2),
-          XJ = Math.atan(eJ * (!0 === this.settings.letterbox ? hJ.f : 1)),
-          AJ = Math.atan(eJ * this.zh.getAspectRatio()),
-          jJ = (UJ + (null !== (cJ = this.settings.padding) && void 0 !== cJ ? cJ : 2)) / Math.sin(Math.min(XJ, AJ));
-        FJ[3] = this.withinDistances(jJ)
+        const pB = Math.tan((0, oB.j)(BB) / 2),
+          lB = Math.atan(pB * (!0 === this.settings.letterbox ? kB.h : 1)),
+          JB = Math.atan(pB * this.JL.getAspectRatio()),
+          gB = (yB + (null !== (TB = this.settings.padding) && void 0 !== TB ? TB : 2)) / Math.sin(Math.min(lB, JB));
+        VB[3] = this.withinDistances(gB)
       }
-      withinDistances(JJ) {
-        return Math.min(this.furthestDistance, Math.max(this.closestDistance, JJ))
+      withinDistances(BB) {
+        return Math.min(this.furthestDistance, Math.max(this.closestDistance, BB))
       }
-      pointAt(JJ) {
-        return JJ === this.points.length && this.points.push([0, 0, 0]), this.points[JJ]
+      pointAt(BB) {
+        return BB === this.points.length && this.points.push([0, 0, 0]), this.points[BB]
       }
     }
-    class fJ {
-      constructor(JJ) {
-        this.limits = JJ, this.yawOffset = 0, this.pitchOffset = 0, this.idleMs = 0, this.pointedAt = null
+    class HB {
+      constructor(BB) {
+        this.limits = BB, this.yawOffset = 0, this.pitchOffset = 0, this.idleMs = 0, this.pointedAt = null
       }
-      continueFrom(JJ) {
-        this.limits && (this.yawOffset = JJ.yawOffset, this.pitchOffset = JJ.pitchOffset, this.idleMs = JJ.idleMs)
+      continueFrom(BB) {
+        this.limits && (this.yawOffset = BB.yawOffset, this.pitchOffset = BB.pitchOffset, this.idleMs = BB.idleMs)
       }
-      update(JJ, cJ) {
-        const ZJ = this.limits;
-        if (!ZJ) return;
-        const FJ = Number.isFinite(cJ.bK) ? cJ.bK : 0,
-          UJ = Number.isFinite(cJ.zK) ? cJ.zK : 0;
-        if (cJ.pointedAt) this.idleMs = 0, this.pointedAt = {
-          heading: cJ.pointedAt.heading,
-          pitch: cJ.pointedAt.pitch
+      update(BB, TB) {
+        const dB = this.limits;
+        if (!dB) return;
+        const VB = Number.isFinite(TB.pU) ? TB.pU : 0,
+          yB = Number.isFinite(TB.kU) ? TB.kU : 0;
+        if (TB.pointedAt) this.idleMs = 0, this.pointedAt = {
+          heading: TB.pointedAt.heading,
+          pitch: TB.pointedAt.pitch
         };
-        else if (0 !== FJ || 0 !== UJ) this.idleMs = 0, this.yawOffset += FJ, this.pitchOffset += UJ;
+        else if (0 !== VB || 0 !== yB) this.idleMs = 0, this.yawOffset += VB, this.pitchOffset += yB;
         else {
-          const cJ = Math.max(0, this.idleMs + JJ - 200) - Math.max(0, this.idleMs - 200);
-          if (this.idleMs += JJ, void 0 !== ZJ.returnMs && cJ > 0) {
-            const JJ = ZJ.returnMs > 0 ? Math.exp(-3 * cJ / ZJ.returnMs) : 0;
-            this.yawOffset *= JJ, this.pitchOffset *= JJ
+          const TB = Math.max(0, this.idleMs + BB - 200) - Math.max(0, this.idleMs - 200);
+          if (this.idleMs += BB, void 0 !== dB.returnMs && TB > 0) {
+            const BB = dB.returnMs > 0 ? Math.exp(-3 * TB / dB.returnMs) : 0;
+            this.yawOffset *= BB, this.pitchOffset *= BB
           }
         }
-        this.clampOffsets(ZJ)
+        this.clampOffsets(dB)
       }
-      clampOffsets(JJ) {
-        if (JJ.maxYaw >= 180) this.yawOffset = (0, UJ.v)(0, this.yawOffset);
+      clampOffsets(BB) {
+        if (BB.maxYaw >= 180) this.yawOffset = (0, yB.D)(0, this.yawOffset);
         else {
-          const cJ = (0, YJ.k)(JJ.maxYaw);
-          this.yawOffset = Math.max(-cJ, Math.min(cJ, this.yawOffset))
+          const TB = (0, oB.j)(BB.maxYaw);
+          this.yawOffset = Math.max(-TB, Math.min(TB, this.yawOffset))
         }
-        const cJ = (0, YJ.k)(JJ.maxPitch);
-        this.pitchOffset = Math.max(-cJ, Math.min(cJ, this.pitchOffset))
+        const TB = (0, oB.j)(BB.maxPitch);
+        this.pitchOffset = Math.max(-TB, Math.min(TB, this.pitchOffset))
       }
-      apply(JJ, cJ) {
-        this.pointedAt && this.limits && (this.yawOffset = (0, UJ.v)(JJ.heading, this.pointedAt.heading), this.pitchOffset = this.pointedAt.pitch - JJ.pitch, this.pointedAt = null, this.clampOffsets(this.limits));
-        const ZJ = (0, UJ.i)(JJ.pitch + this.pitchOffset);
-        this.pitchOffset = ZJ - JJ.pitch, cJ.heading = (0, UJ.t)(JJ.heading + this.yawOffset), cJ.pitch = ZJ
+      apply(BB, TB) {
+        this.pointedAt && this.limits && (this.yawOffset = (0, yB.D)(BB.heading, this.pointedAt.heading), this.pitchOffset = this.pointedAt.pitch - BB.pitch, this.pointedAt = null, this.clampOffsets(this.limits));
+        const dB = (0, yB.j)(BB.pitch + this.pitchOffset);
+        this.pitchOffset = dB - BB.pitch, TB.heading = (0, yB.A)(BB.heading + this.yawOffset), TB.pitch = dB
       }
-      unapply(JJ, cJ) {
-        cJ.heading = (0, UJ.t)(JJ.heading - this.yawOffset), cJ.pitch = (0, UJ.i)(JJ.pitch - this.pitchOffset)
+      unapply(BB, TB) {
+        TB.heading = (0, yB.A)(BB.heading - this.yawOffset), TB.pitch = (0, yB.j)(BB.pitch - this.pitchOffset)
       }
     }
-    const xJ = 1e-6;
+    const EB = 1e-6;
 
-    function rJ(JJ) {
-      return Math.sqrt(JJ[0] * JJ[0] + JJ[1] * JJ[1] + JJ[2] * JJ[2])
+    function vB(BB) {
+      return Math.sqrt(BB[0] * BB[0] + BB[1] * BB[1] + BB[2] * BB[2])
     }
 
-    function vJ(JJ, cJ, ZJ, FJ, UJ) {
-      const eJ = UJ * UJ,
-        XJ = eJ * UJ;
-      return (2 * XJ - 3 * eJ + 1) * JJ + (XJ - 2 * eJ + UJ) * cJ + (-2 * XJ + 3 * eJ) * ZJ + (XJ - eJ) * FJ
+    function mB(BB, TB, dB, VB, yB) {
+      const pB = yB * yB,
+        lB = pB * yB;
+      return (2 * lB - 3 * pB + 1) * BB + (lB - 2 * pB + yB) * TB + (-2 * lB + 3 * pB) * dB + (lB - pB) * VB
     }
 
-    function mJ(JJ, cJ, ZJ, FJ, UJ) {
-      const eJ = UJ * UJ;
-      return (6 * eJ - 6 * UJ) * JJ + (3 * eJ - 4 * UJ + 1) * cJ + (-6 * eJ + 6 * UJ) * ZJ + (3 * eJ - 2 * UJ) * FJ
+    function iB(BB, TB, dB, VB, yB) {
+      const pB = yB * yB;
+      return (6 * pB - 6 * yB) * BB + (3 * pB - 4 * yB + 1) * TB + (-6 * pB + 6 * yB) * dB + (3 * pB - 2 * yB) * VB
     }
 
-    function QJ(JJ, cJ) {
-      const ZJ = cJ[0] - JJ[0],
-        FJ = cJ[1] - JJ[1],
-        UJ = cJ[2] - JJ[2];
-      return Math.sqrt(ZJ * ZJ + FJ * FJ + UJ * UJ)
+    function NB(BB, TB) {
+      const dB = TB[0] - BB[0],
+        VB = TB[1] - BB[1],
+        yB = TB[2] - BB[2];
+      return Math.sqrt(dB * dB + VB * VB + yB * yB)
     }
 
-    function EJ(JJ, cJ, ZJ, FJ, UJ, eJ) {
-      for (let XJ = 0; XJ < 3; XJ++) eJ[XJ] = UJ ? JJ[XJ] * FJ : ZJ[XJ] - cJ[XJ];
-      return UJ && function(JJ, cJ) {
-        const ZJ = rJ(JJ);
-        if (ZJ > cJ) {
-          const FJ = cJ / ZJ;
-          JJ[0] *= FJ, JJ[1] *= FJ, JJ[2] *= FJ
+    function tB(BB, TB, dB, VB, yB, pB) {
+      for (let lB = 0; lB < 3; lB++) pB[lB] = yB ? BB[lB] * VB : dB[lB] - TB[lB];
+      return yB && function(BB, TB) {
+        const dB = vB(BB);
+        if (dB > TB) {
+          const VB = TB / dB;
+          BB[0] *= VB, BB[1] *= VB, BB[2] *= VB
         }
-      }(eJ, 3 * QJ(cJ, ZJ)), eJ
+      }(pB, 3 * NB(TB, dB)), pB
     }
 
-    function VJ(JJ, cJ, ZJ, FJ) {
-      for (let UJ = 0; UJ < 3; UJ++) FJ[UJ] = 6 * (cJ[UJ] - JJ[UJ]) - 2 * ZJ[UJ];
-      if (rJ(FJ) < xJ)
-        for (let UJ = 0; UJ < 3; UJ++) FJ[UJ] = cJ[UJ] - JJ[UJ];
-      return FJ
+    function fB(BB, TB, dB, VB) {
+      for (let yB = 0; yB < 3; yB++) VB[yB] = 6 * (TB[yB] - BB[yB]) - 2 * dB[yB];
+      if (vB(VB) < EB)
+        for (let yB = 0; yB < 3; yB++) VB[yB] = TB[yB] - BB[yB];
+      return VB
     }
 
-    function KJ(JJ, cJ) {
-      return [2 * cJ[0] - JJ[0], 2 * cJ[1] - JJ[1], 2 * cJ[2] - JJ[2]]
+    function sB(BB, TB) {
+      return [2 * TB[0] - BB[0], 2 * TB[1] - BB[1], 2 * TB[2] - BB[2]]
     }
 
-    function yJ(JJ, cJ, ZJ, FJ, UJ, eJ, XJ) {
-      if (!eJ && !XJ) return 0;
-      const AJ = eJ ? JJ : 2 * cJ - ZJ,
-        qJ = XJ ? ZJ : 2 * cJ - JJ,
-        jJ = eJ ? FJ : UJ,
-        YJ = XJ ? UJ : FJ,
-        hJ = (cJ - AJ) / jJ,
-        DJ = (qJ - cJ) / YJ;
-      if (hJ * DJ <= 0) return 0;
-      const sJ = (qJ - AJ) / (jJ + YJ),
-        nJ = 3 * Math.min(Math.abs(hJ), Math.abs(DJ));
-      return Math.max(-nJ, Math.min(nJ, sJ))
+    function MB(BB, TB, dB, VB, yB, pB, lB) {
+      if (!pB && !lB) return 0;
+      const JB = pB ? BB : 2 * TB - dB,
+        YB = lB ? dB : 2 * TB - BB,
+        gB = pB ? VB : yB,
+        oB = lB ? yB : VB,
+        kB = (TB - JB) / gB,
+        LB = (YB - TB) / oB;
+      if (kB * LB <= 0) return 0;
+      const OB = (YB - JB) / (gB + oB),
+        DB = 3 * Math.min(Math.abs(kB), Math.abs(LB));
+      return Math.max(-DB, Math.min(DB, OB))
     }
 
-    function SJ(JJ, cJ, ZJ, FJ, UJ, eJ, XJ) {
+    function zB(BB, TB, dB, VB, yB, pB, lB) {
       const {
-        u: AJ,
-        segmentMs: qJ
-      } = JJ;
-      if (!JJ.curved) return ZJ + (FJ - ZJ) * AJ;
-      return vJ(ZJ, yJ(cJ, ZJ, FJ, JJ.beforeMs, qJ, eJ, !0) * qJ, FJ, yJ(ZJ, FJ, UJ, qJ, JJ.afterMs, !0, XJ) * qJ, AJ)
+        u: JB,
+        segmentMs: YB
+      } = BB;
+      if (!BB.curved) return dB + (VB - dB) * JB;
+      return mB(dB, MB(TB, dB, VB, BB.beforeMs, YB, pB, !0) * YB, VB, MB(dB, VB, yB, YB, BB.afterMs, !0, lB) * YB, JB)
     }
 
-    function IJ(JJ) {
-      return Math.abs(JJ.pitch) >= UJ.b
+    function wB(BB) {
+      return Math.abs(BB.pitch) >= yB.e
     }
-    class MJ {
-      constructor(JJ, cJ, ZJ, FJ, UJ) {
-        this.nodes = JJ, this.prevNodes = ZJ, this.nextNodes = FJ, this.tangents = void 0, this.derivative = [0, 0, 0], this.beforeAngles = {
+    class UB {
+      constructor(BB, TB, dB, VB, yB) {
+        this.nodes = BB, this.prevNodes = dB, this.nextNodes = VB, this.tangents = void 0, this.derivative = [0, 0, 0], this.beforeAngles = {
           heading: 0,
           pitch: 0
         }, this.fromAngles = {
@@ -540,84 +540,84 @@ export const modules = {
         }, this.borrowedAngles = {
           heading: 0,
           pitch: 0
-        }, this.tangents = JJ.map(((JJ, ZJ) => this.nodeTangent(cJ, UJ, ZJ)))
+        }, this.tangents = BB.map(((BB, dB) => this.nodeTangent(TB, yB, dB)))
       }
-      sample(JJ, cJ, ZJ) {
+      sample(BB, TB, dB) {
         const {
-          index: FJ,
-          toIndex: eJ,
-          segmentMs: XJ,
-          curved: AJ
-        } = JJ, qJ = this.fromAngles, jJ = this.toAngles, YJ = this.nodeAngles(FJ, ZJ.position, cJ, qJ), hJ = this.nodeAngles(eJ, ZJ.position, cJ, jJ);
-        if (XJ > 0 && "aim" !== YJ && "aim" !== hJ && this.liveTangent(JJ, qJ)) return ZJ.heading = (0, UJ.t)(qJ.heading), void(ZJ.pitch = qJ.pitch);
-        if ("none" === YJ && "none" === hJ) return;
-        !AJ && XJ > 0 && ("tangent" === YJ && this.liveTangent(JJ, qJ), "tangent" === hJ && this.liveTangent(JJ, jJ)), "none" === YJ ? (0, UJ.m)(jJ, qJ) : "none" === hJ && (0, UJ.m)(qJ, jJ);
-        const DJ = AJ && JJ.beforeIndex >= 0 && "none" !== this.nodeAngles(JJ.beforeIndex, ZJ.position, cJ, this.beforeAngles),
-          sJ = AJ && JJ.afterIndex >= 0 && "none" !== this.nodeAngles(JJ.afterIndex, ZJ.position, cJ, this.afterAngles),
-          nJ = (0, UJ.x)(qJ.heading, jJ.heading),
-          GJ = SJ(JJ, DJ ? (0, UJ.x)(qJ.heading, this.beforeAngles.heading) : 0, qJ.heading, nJ, sJ ? (0, UJ.x)(nJ, this.afterAngles.heading) : 0, DJ, sJ);
-        ZJ.heading = (0, UJ.t)(GJ), ZJ.pitch = (0, UJ.i)(SJ(JJ, this.beforeAngles.pitch, qJ.pitch, jJ.pitch, this.afterAngles.pitch, DJ, sJ))
+          index: VB,
+          toIndex: pB,
+          segmentMs: lB,
+          curved: JB
+        } = BB, YB = this.fromAngles, gB = this.toAngles, oB = this.nodeAngles(VB, dB.position, TB, YB), kB = this.nodeAngles(pB, dB.position, TB, gB);
+        if (lB > 0 && "aim" !== oB && "aim" !== kB && this.liveTangent(BB, YB)) return dB.heading = (0, yB.A)(YB.heading), void(dB.pitch = YB.pitch);
+        if ("none" === oB && "none" === kB) return;
+        !JB && lB > 0 && ("tangent" === oB && this.liveTangent(BB, YB), "tangent" === kB && this.liveTangent(BB, gB)), "none" === oB ? (0, yB.l)(gB, YB) : "none" === kB && (0, yB.l)(YB, gB);
+        const LB = JB && BB.beforeIndex >= 0 && "none" !== this.nodeAngles(BB.beforeIndex, dB.position, TB, this.beforeAngles),
+          OB = JB && BB.afterIndex >= 0 && "none" !== this.nodeAngles(BB.afterIndex, dB.position, TB, this.afterAngles),
+          DB = (0, yB.F)(YB.heading, gB.heading),
+          uB = zB(BB, LB ? (0, yB.F)(YB.heading, this.beforeAngles.heading) : 0, YB.heading, DB, OB ? (0, yB.F)(DB, this.afterAngles.heading) : 0, LB, OB);
+        dB.heading = (0, yB.A)(uB), dB.pitch = (0, yB.j)(zB(BB, this.beforeAngles.pitch, YB.pitch, gB.pitch, this.afterAngles.pitch, LB, OB))
       }
-      nodeAngles(JJ, cJ, ZJ, FJ) {
-        const UJ = this.rawNodeAngles(JJ, cJ, ZJ, FJ);
-        return "none" !== UJ && IJ(FJ) && !this.borrowHeading(this.prevNodes[JJ], cJ, ZJ, FJ) && this.borrowHeading(this.nextNodes[JJ], cJ, ZJ, FJ), UJ
+      nodeAngles(BB, TB, dB, VB) {
+        const yB = this.rawNodeAngles(BB, TB, dB, VB);
+        return "none" !== yB && wB(VB) && !this.borrowHeading(this.prevNodes[BB], TB, dB, VB) && this.borrowHeading(this.nextNodes[BB], TB, dB, VB), yB
       }
-      borrowHeading(JJ, cJ, ZJ, FJ) {
-        const UJ = this.borrowedAngles;
-        return !(JJ < 0 || "none" === this.rawNodeAngles(JJ, cJ, ZJ, UJ) || IJ(UJ)) && (FJ.heading = UJ.heading, !0)
+      borrowHeading(BB, TB, dB, VB) {
+        const yB = this.borrowedAngles;
+        return !(BB < 0 || "none" === this.rawNodeAngles(BB, TB, dB, yB) || wB(yB)) && (VB.heading = yB.heading, !0)
       }
-      rawNodeAngles(JJ, cJ, ZJ, FJ) {
-        const eJ = this.nodes[JJ].keyframe;
-        if (eJ.lookDirection) return (0, UJ.n)(eJ.lookDirection, FJ), "aim";
-        if (void 0 !== eJ.lookAt) {
-          const JJ = ZJ(eJ.lookAt);
-          if (JJ) return (0, UJ.s)(cJ, JJ, FJ), "aim"
+      rawNodeAngles(BB, TB, dB, VB) {
+        const pB = this.nodes[BB].keyframe;
+        if (pB.lookDirection) return (0, yB.p)(pB.lookDirection, VB), "aim";
+        if (void 0 !== pB.lookAt) {
+          const BB = dB(pB.lookAt);
+          if (BB) return (0, yB.w)(TB, BB, VB), "aim"
         }
-        const XJ = this.tangents[JJ];
-        return XJ ? ((0, UJ.m)(XJ, FJ), "tangent") : "none"
+        const lB = this.tangents[BB];
+        return lB ? ((0, yB.l)(lB, VB), "tangent") : "none"
       }
-      liveTangent(JJ, cJ) {
-        const ZJ = this.nodes[JJ.index].position,
-          FJ = this.nodes[JJ.toIndex].position,
-          eJ = this.derivative;
-        for (let UJ = 0; UJ < 3; UJ++) eJ[UJ] = mJ(ZJ[UJ], JJ.fromTangent[UJ], FJ[UJ], JJ.toTangent[UJ], JJ.u);
-        return rJ(eJ) > 1e-9 ? ((0, UJ.n)(eJ, cJ), !0) : !(QJ(ZJ, FJ) < xJ) && ((0, UJ.n)(VJ(ZJ, FJ, JJ.u < .5 ? JJ.toTangent : JJ.fromTangent, eJ), cJ), !0)
+      liveTangent(BB, TB) {
+        const dB = this.nodes[BB.index].position,
+          VB = this.nodes[BB.toIndex].position,
+          pB = this.derivative;
+        for (let yB = 0; yB < 3; yB++) pB[yB] = iB(dB[yB], BB.fromTangent[yB], VB[yB], BB.toTangent[yB], BB.u);
+        return vB(pB) > 1e-9 ? ((0, yB.p)(pB, TB), !0) : !(NB(dB, VB) < EB) && ((0, yB.p)(fB(dB, VB, BB.u < .5 ? BB.toTangent : BB.fromTangent, pB), TB), !0)
       }
-      nodeTangent(JJ, cJ, ZJ) {
-        var FJ;
-        const eJ = JJ[ZJ];
-        if (rJ(eJ) > 1e-9) return (0, UJ.n)(eJ, {
+      nodeTangent(BB, TB, dB) {
+        var VB;
+        const pB = BB[dB];
+        if (vB(pB) > 1e-9) return (0, yB.p)(pB, {
           heading: 0,
           pitch: 0
         });
-        const XJ = null !== (FJ = this.restDirectionTo(ZJ, ZJ + 1, JJ, cJ)) && void 0 !== FJ ? FJ : this.restDirectionTo(ZJ, ZJ - 1, JJ, cJ);
-        return XJ ? (0, UJ.n)(XJ, {
+        const lB = null !== (VB = this.restDirectionTo(dB, dB + 1, BB, TB)) && void 0 !== VB ? VB : this.restDirectionTo(dB, dB - 1, BB, TB);
+        return lB ? (0, yB.p)(lB, {
           heading: 0,
           pitch: 0
         }) : null
       }
-      restDirectionTo(JJ, cJ, ZJ, FJ) {
-        const UJ = this.nodes[JJ],
-          eJ = this.nodes[cJ];
-        if (!eJ || QJ(UJ.position, eJ.position) < xJ) return null;
-        const [XJ, AJ] = cJ > JJ ? [UJ, eJ] : [eJ, UJ], qJ = EJ(ZJ[cJ], XJ.position, AJ.position, AJ.timeMs - XJ.timeMs, FJ, [0, 0, 0]);
-        return VJ(XJ.position, AJ.position, qJ, [0, 0, 0])
+      restDirectionTo(BB, TB, dB, VB) {
+        const yB = this.nodes[BB],
+          pB = this.nodes[TB];
+        if (!pB || NB(yB.position, pB.position) < EB) return null;
+        const [lB, JB] = TB > BB ? [yB, pB] : [pB, yB], YB = tB(dB[TB], lB.position, JB.position, JB.timeMs - lB.timeMs, VB, [0, 0, 0]);
+        return fB(lB.position, JB.position, YB, [0, 0, 0])
       }
     }
 
-    function bJ(JJ, cJ) {
-      const ZJ = JJ.lookDirection || cJ.lookDirection ? function(JJ, cJ) {
-        if (!JJ || !cJ) return JJ === cJ;
-        const ZJ = rJ(JJ),
-          FJ = rJ(cJ);
-        return Math.hypot(JJ[0] / ZJ - cJ[0] / FJ, JJ[1] / ZJ - cJ[1] / FJ, JJ[2] / ZJ - cJ[2] / FJ) < xJ
-      }(JJ.lookDirection, cJ.lookDirection) : (FJ = JJ.lookAt, UJ = cJ.lookAt, "object" !== typeof FJ || "object" !== typeof UJ ? FJ === UJ : QJ(FJ, UJ) < xJ);
-      var FJ, UJ;
-      return QJ(JJ.position, cJ.position) < xJ && JJ.fov === cJ.fov && ZJ
+    function FB(BB, TB) {
+      const dB = BB.lookDirection || TB.lookDirection ? function(BB, TB) {
+        if (!BB || !TB) return BB === TB;
+        const dB = vB(BB),
+          VB = vB(TB);
+        return Math.hypot(BB[0] / dB - TB[0] / VB, BB[1] / dB - TB[1] / VB, BB[2] / dB - TB[2] / VB) < EB
+      }(BB.lookDirection, TB.lookDirection) : (VB = BB.lookAt, yB = TB.lookAt, "object" !== typeof VB || "object" !== typeof yB ? VB === yB : NB(VB, yB) < EB);
+      var VB, yB;
+      return NB(BB.position, TB.position) < EB && BB.fov === TB.fov && dB
     }
-    class wJ {
-      constructor(JJ, cJ, ZJ) {
-        if (this.smooth = cJ, this.nodes = void 0, this.velocities = void 0, this.prevNodes = void 0, this.nextNodes = void 0, this.prevGaps = void 0, this.nextGaps = void 0, this.loopMs = void 0, this.aim = void 0, this.segment = {
+    class KB {
+      constructor(BB, TB, dB) {
+        if (this.smooth = TB, this.nodes = void 0, this.velocities = void 0, this.prevNodes = void 0, this.nextNodes = void 0, this.prevGaps = void 0, this.nextGaps = void 0, this.loopMs = void 0, this.aim = void 0, this.segment = {
             index: 0,
             toIndex: 0,
             u: 0,
@@ -629,306 +629,306 @@ export const modules = {
             afterMs: 0,
             fromTangent: [0, 0, 0],
             toTangent: [0, 0, 0]
-          }, 0 === JJ.length) throw new Error("A camera path needs at least one keyframe");
-        for (let eJ = 1; eJ < JJ.length; eJ++)
-          if (!(JJ[eJ].timeMs > JJ[eJ - 1].timeMs)) throw new Error("Camera path keyframe times must strictly increase");
-        this.nodes = JJ.map((JJ => {
-          var cJ;
+          }, 0 === BB.length) throw new Error("A camera path needs at least one keyframe");
+        for (let pB = 1; pB < BB.length; pB++)
+          if (!(BB[pB].timeMs > BB[pB - 1].timeMs)) throw new Error("Camera path keyframe times must strictly increase");
+        this.nodes = BB.map((BB => {
+          var TB;
           return {
-            timeMs: JJ.timeMs,
-            position: [...JJ.position],
-            keyframe: JJ,
-            easing: (0, eJ.q)(null !== (cJ = JJ.easing) && void 0 !== cJ ? cJ : "linear")
+            timeMs: BB.timeMs,
+            position: [...BB.position],
+            keyframe: BB,
+            easing: (0, pB.j)(null !== (TB = BB.easing) && void 0 !== TB ? TB : "linear")
           }
         }));
-        const FJ = this.nodes[0],
-          UJ = this.nodes[this.nodes.length - 1],
-          XJ = ZJ && this.nodes.length > 1;
-        XJ && !bJ(FJ.keyframe, UJ.keyframe) && this.nodes.push({
-          ...FJ,
-          timeMs: UJ.timeMs + (UJ.timeMs - FJ.timeMs) / (this.nodes.length - 1)
-        }), this.loopMs = XJ ? this.nodes[this.nodes.length - 1].timeMs - FJ.timeMs : 0, this.prevNodes = this.nodes.map(((JJ, cJ) => this.neighbour(cJ, -1))), this.nextNodes = this.nodes.map(((JJ, cJ) => this.neighbour(cJ, 1))), this.prevGaps = this.prevNodes.map(((JJ, cJ) => JJ >= 0 ? this.gapMs(cJ, -1) : 0)), this.nextGaps = this.nextNodes.map(((JJ, cJ) => JJ >= 0 ? this.gapMs(cJ, 1) : 0)), this.velocities = this.nodes.map(((JJ, cJ) => {
-          const ZJ = this.prevNodes[cJ],
-            FJ = this.nextNodes[cJ];
-          return function(JJ, cJ, ZJ, FJ, UJ, eJ) {
-            if (eJ[0] = 0, eJ[1] = 0, eJ[2] = 0, !JJ && !ZJ) return eJ;
-            const XJ = null !== JJ && void 0 !== JJ ? JJ : KJ(null !== ZJ && void 0 !== ZJ ? ZJ : cJ, cJ),
-              AJ = null !== ZJ && void 0 !== ZJ ? ZJ : KJ(null !== JJ && void 0 !== JJ ? JJ : cJ, cJ),
-              qJ = JJ ? FJ : UJ,
-              jJ = ZJ ? UJ : FJ,
-              YJ = QJ(XJ, cJ),
-              hJ = QJ(cJ, AJ);
-            if (YJ < xJ || hJ < xJ) return eJ;
-            const DJ = Math.sqrt(YJ),
-              sJ = Math.sqrt(hJ),
-              nJ = (DJ + sJ) / (qJ + jJ);
-            for (let GJ = 0; GJ < 3; GJ++) {
-              const JJ = (cJ[GJ] - XJ[GJ]) / DJ - (AJ[GJ] - XJ[GJ]) / (DJ + sJ) + (AJ[GJ] - cJ[GJ]) / sJ;
-              eJ[GJ] = JJ * nJ
+        const VB = this.nodes[0],
+          yB = this.nodes[this.nodes.length - 1],
+          lB = dB && this.nodes.length > 1;
+        lB && !FB(VB.keyframe, yB.keyframe) && this.nodes.push({
+          ...VB,
+          timeMs: yB.timeMs + (yB.timeMs - VB.timeMs) / (this.nodes.length - 1)
+        }), this.loopMs = lB ? this.nodes[this.nodes.length - 1].timeMs - VB.timeMs : 0, this.prevNodes = this.nodes.map(((BB, TB) => this.neighbour(TB, -1))), this.nextNodes = this.nodes.map(((BB, TB) => this.neighbour(TB, 1))), this.prevGaps = this.prevNodes.map(((BB, TB) => BB >= 0 ? this.gapMs(TB, -1) : 0)), this.nextGaps = this.nextNodes.map(((BB, TB) => BB >= 0 ? this.gapMs(TB, 1) : 0)), this.velocities = this.nodes.map(((BB, TB) => {
+          const dB = this.prevNodes[TB],
+            VB = this.nextNodes[TB];
+          return function(BB, TB, dB, VB, yB, pB) {
+            if (pB[0] = 0, pB[1] = 0, pB[2] = 0, !BB && !dB) return pB;
+            const lB = null !== BB && void 0 !== BB ? BB : sB(null !== dB && void 0 !== dB ? dB : TB, TB),
+              JB = null !== dB && void 0 !== dB ? dB : sB(null !== BB && void 0 !== BB ? BB : TB, TB),
+              YB = BB ? VB : yB,
+              gB = dB ? yB : VB,
+              oB = NB(lB, TB),
+              kB = NB(TB, JB);
+            if (oB < EB || kB < EB) return pB;
+            const LB = Math.sqrt(oB),
+              OB = Math.sqrt(kB),
+              DB = (LB + OB) / (YB + gB);
+            for (let uB = 0; uB < 3; uB++) {
+              const BB = (TB[uB] - lB[uB]) / LB - (JB[uB] - lB[uB]) / (LB + OB) + (JB[uB] - TB[uB]) / OB;
+              pB[uB] = BB * DB
             }
-            return eJ
-          }(ZJ >= 0 ? this.nodes[ZJ].position : null, JJ.position, FJ >= 0 ? this.nodes[FJ].position : null, this.prevGaps[cJ], this.nextGaps[cJ], [0, 0, 0])
-        })), this.aim = new MJ(this.nodes, this.velocities, this.prevNodes, this.nextNodes, cJ)
+            return pB
+          }(dB >= 0 ? this.nodes[dB].position : null, BB.position, VB >= 0 ? this.nodes[VB].position : null, this.prevGaps[TB], this.nextGaps[TB], [0, 0, 0])
+        })), this.aim = new UB(this.nodes, this.velocities, this.prevNodes, this.nextNodes, TB)
       }
-      sample(JJ, cJ, ZJ, FJ) {
-        const UJ = this.findSegment(this.pathTime(JJ));
-        this.samplePosition(UJ, FJ.position), this.aim.sample(UJ, cJ, FJ);
+      sample(BB, TB, dB, VB) {
+        const yB = this.findSegment(this.pathTime(BB));
+        this.samplePosition(yB, VB.position), this.aim.sample(yB, TB, VB);
         const {
-          beforeIndex: eJ,
-          afterIndex: XJ
-        } = UJ;
-        FJ.fov = SJ(UJ, eJ >= 0 ? this.fovAt(eJ, ZJ) : 0, this.fovAt(UJ.index, ZJ), this.fovAt(UJ.toIndex, ZJ), XJ >= 0 ? this.fovAt(XJ, ZJ) : 0, eJ >= 0, XJ >= 0)
+          beforeIndex: pB,
+          afterIndex: lB
+        } = yB;
+        VB.fov = zB(yB, pB >= 0 ? this.fovAt(pB, dB) : 0, this.fovAt(yB.index, dB), this.fovAt(yB.toIndex, dB), lB >= 0 ? this.fovAt(lB, dB) : 0, pB >= 0, lB >= 0)
       }
-      pathTime(JJ) {
-        const cJ = this.nodes[0].timeMs;
-        if (this.loopMs <= 0 || JJ <= cJ) return JJ;
-        const ZJ = JJ - cJ;
-        return cJ + ZJ - this.loopMs * Math.floor(ZJ / this.loopMs)
+      pathTime(BB) {
+        const TB = this.nodes[0].timeMs;
+        if (this.loopMs <= 0 || BB <= TB) return BB;
+        const dB = BB - TB;
+        return TB + dB - this.loopMs * Math.floor(dB / this.loopMs)
       }
-      findSegment(JJ) {
-        const cJ = this.nodes,
-          ZJ = this.segment;
-        let FJ = ZJ.index;
-        for (JJ < cJ[FJ].timeMs && (FJ = 0); FJ < cJ.length - 2 && cJ[FJ + 1].timeMs <= JJ;) FJ++;
-        const UJ = Math.min(FJ + 1, cJ.length - 1),
-          XJ = cJ[UJ].timeMs - cJ[FJ].timeMs;
-        return ZJ.index = FJ, ZJ.toIndex = UJ, ZJ.segmentMs = XJ, ZJ.u = XJ > 0 ? (0, eJ.m)((JJ - cJ[FJ].timeMs) / XJ, cJ[FJ].easing) : 1, ZJ.curved = this.smooth && XJ > 0, ZJ.beforeIndex = this.prevNodes[FJ], ZJ.afterIndex = this.nextNodes[UJ], ZJ.beforeMs = this.prevGaps[FJ], ZJ.afterMs = this.nextGaps[UJ], ZJ
+      findSegment(BB) {
+        const TB = this.nodes,
+          dB = this.segment;
+        let VB = dB.index;
+        for (BB < TB[VB].timeMs && (VB = 0); VB < TB.length - 2 && TB[VB + 1].timeMs <= BB;) VB++;
+        const yB = Math.min(VB + 1, TB.length - 1),
+          lB = TB[yB].timeMs - TB[VB].timeMs;
+        return dB.index = VB, dB.toIndex = yB, dB.segmentMs = lB, dB.u = lB > 0 ? (0, pB.i)((BB - TB[VB].timeMs) / lB, TB[VB].easing) : 1, dB.curved = this.smooth && lB > 0, dB.beforeIndex = this.prevNodes[VB], dB.afterIndex = this.nextNodes[yB], dB.beforeMs = this.prevGaps[VB], dB.afterMs = this.nextGaps[yB], dB
       }
-      samplePosition(JJ, cJ) {
+      samplePosition(BB, TB) {
         const {
-          fromTangent: ZJ,
-          toTangent: FJ,
-          curved: UJ
-        } = JJ, eJ = this.nodes[JJ.index].position, XJ = this.nodes[JJ.toIndex].position;
-        EJ(this.velocities[JJ.index], eJ, XJ, JJ.segmentMs, UJ, ZJ), EJ(this.velocities[JJ.toIndex], eJ, XJ, JJ.segmentMs, UJ, FJ);
-        const AJ = JJ.u;
-        for (let qJ = 0; qJ < 3; qJ++) cJ[qJ] = UJ ? vJ(eJ[qJ], ZJ[qJ], XJ[qJ], FJ[qJ], AJ) : eJ[qJ] + (XJ[qJ] - eJ[qJ]) * AJ
+          fromTangent: dB,
+          toTangent: VB,
+          curved: yB
+        } = BB, pB = this.nodes[BB.index].position, lB = this.nodes[BB.toIndex].position;
+        tB(this.velocities[BB.index], pB, lB, BB.segmentMs, yB, dB), tB(this.velocities[BB.toIndex], pB, lB, BB.segmentMs, yB, VB);
+        const JB = BB.u;
+        for (let YB = 0; YB < 3; YB++) TB[YB] = yB ? mB(pB[YB], dB[YB], lB[YB], VB[YB], JB) : pB[YB] + (lB[YB] - pB[YB]) * JB
       }
-      fovAt(JJ, cJ) {
-        var ZJ;
-        return null !== (ZJ = this.nodes[JJ].keyframe.fov) && void 0 !== ZJ ? ZJ : cJ
+      fovAt(BB, TB) {
+        var dB;
+        return null !== (dB = this.nodes[BB].keyframe.fov) && void 0 !== dB ? dB : TB
       }
-      neighbour(JJ, cJ) {
-        const ZJ = this.nodes.length - 1,
-          FJ = JJ + cJ;
-        return FJ >= 0 && FJ <= ZJ ? FJ : this.loopMs <= 0 || ZJ < 2 ? -1 : FJ < 0 ? ZJ - 1 : 1
+      neighbour(BB, TB) {
+        const dB = this.nodes.length - 1,
+          VB = BB + TB;
+        return VB >= 0 && VB <= dB ? VB : this.loopMs <= 0 || dB < 2 ? -1 : VB < 0 ? dB - 1 : 1
       }
-      gapMs(JJ, cJ) {
-        const ZJ = this.nodes.length - 1;
-        if (1 === cJ) {
-          const cJ = JJ === ZJ ? 0 : JJ;
-          return this.nodes[cJ + 1].timeMs - this.nodes[cJ].timeMs
+      gapMs(BB, TB) {
+        const dB = this.nodes.length - 1;
+        if (1 === TB) {
+          const TB = BB === dB ? 0 : BB;
+          return this.nodes[TB + 1].timeMs - this.nodes[TB].timeMs
         }
-        const FJ = 0 === JJ ? ZJ : JJ;
-        return this.nodes[FJ].timeMs - this.nodes[FJ - 1].timeMs
+        const VB = 0 === BB ? dB : BB;
+        return this.nodes[VB].timeMs - this.nodes[VB - 1].timeMs
       }
     }
-    class WJ {
-      constructor(JJ) {
-        this.zh = JJ, this.lastFeet = new Map, this.lastAimPoints = new Map, this.lastHeadings = new Map, this.readFeet = void 0, this.readAimPoint = void 0, this.readFeet = cJ => JJ.getEntityPosition(cJ), this.readAimPoint = cJ => JJ.getEntityAimPoint(cJ)
+    class rB {
+      constructor(BB) {
+        this.JL = BB, this.lastFeet = new Map, this.lastAimPoints = new Map, this.lastHeadings = new Map, this.readFeet = void 0, this.readAimPoint = void 0, this.readFeet = TB => BB.getEntityPosition(TB), this.readAimPoint = TB => BB.getEntityAimPoint(TB)
       }
-      aimPoint(JJ) {
-        return "string" !== typeof JJ ? (0, qJ.p)(JJ, 3) ? JJ : null : this.resolve(JJ, this.readAimPoint, this.lastAimPoints)
+      aimPoint(BB) {
+        return "string" !== typeof BB ? (0, YB.q)(BB, 3) ? BB : null : this.resolve(BB, this.readAimPoint, this.lastAimPoints)
       }
-      currentAimPoint(JJ) {
-        const cJ = "string" === typeof JJ ? this.zh.getEntityAimPoint(JJ) : JJ;
-        return cJ && (0, qJ.p)(cJ, 3) ? cJ : null
+      currentAimPoint(BB) {
+        const TB = "string" === typeof BB ? this.JL.getEntityAimPoint(BB) : BB;
+        return TB && (0, YB.q)(TB, 3) ? TB : null
       }
-      feetPosition(JJ) {
-        return this.resolve(JJ, this.readFeet, this.lastFeet)
+      feetPosition(BB) {
+        return this.resolve(BB, this.readFeet, this.lastFeet)
       }
-      heading(JJ) {
-        const cJ = this.zh.getEntityHeading(JJ);
-        if (null !== cJ && Number.isFinite(cJ)) return this.lastHeadings.set(JJ, cJ), cJ;
-        const ZJ = this.lastHeadings.get(JJ);
-        return void 0 !== ZJ ? ZJ : JJ === this.zh.localPlayerId ? 0 : this.heading(this.zh.localPlayerId)
+      heading(BB) {
+        const TB = this.JL.getEntityHeading(BB);
+        if (null !== TB && Number.isFinite(TB)) return this.lastHeadings.set(BB, TB), TB;
+        const dB = this.lastHeadings.get(BB);
+        return void 0 !== dB ? dB : BB === this.JL.localPlayerId ? 0 : this.heading(this.JL.localPlayerId)
       }
-      resolve(JJ, cJ, ZJ) {
-        const FJ = cJ(JJ);
-        let UJ = ZJ.get(JJ);
-        return FJ && (0, qJ.p)(FJ, 3) ? (UJ || (UJ = [0, 0, 0], ZJ.set(JJ, UJ)), UJ[0] = FJ[0], UJ[1] = FJ[1], UJ[2] = FJ[2], UJ) : UJ || (JJ === this.zh.localPlayerId ? null : this.resolve(this.zh.localPlayerId, cJ, ZJ))
+      resolve(BB, TB, dB) {
+        const VB = TB(BB);
+        let yB = dB.get(BB);
+        return VB && (0, YB.q)(VB, 3) ? (yB || (yB = [0, 0, 0], dB.set(BB, yB)), yB[0] = VB[0], yB[1] = VB[1], yB[2] = VB[2], yB) : yB || (BB === this.JL.localPlayerId ? null : this.resolve(this.JL.localPlayerId, TB, dB))
       }
     }
 
-    function gJ(JJ) {
+    function IB(BB) {
       return {
-        heading: JJ.heading,
-        pitch: JJ.pitch
+        heading: BB.heading,
+        pitch: BB.pitch
       }
     }
 
-    function HJ(JJ, cJ) {
-      Number.isFinite(JJ.heading) && Number.isFinite(JJ.pitch) || (0, UJ.m)(cJ, JJ)
+    function cB(BB, TB) {
+      Number.isFinite(BB.heading) && Number.isFinite(BB.pitch) || (0, yB.l)(TB, BB)
     }
 
-    function PJ(JJ, cJ, ZJ, FJ, eJ) {
-      if (cJ) return void(0, UJ.n)(cJ, eJ);
-      const XJ = FJ.aimPoint(ZJ);
-      XJ && (0, UJ.s)(JJ, XJ, eJ)
+    function SB(BB, TB, dB, VB, pB) {
+      if (TB) return void(0, yB.p)(TB, pB);
+      const lB = VB.aimPoint(dB);
+      lB && (0, yB.w)(BB, lB, pB)
     }
-    class kJ {
-      constructor(JJ, cJ, ZJ, FJ) {
-        this.settings = JJ, this.zh = cJ, this.targets = ZJ, this.base = void 0, this.base = gJ(FJ)
+    class PB {
+      constructor(BB, TB, dB, VB) {
+        this.settings = BB, this.JL = TB, this.targets = dB, this.base = void 0, this.base = IB(VB)
       }
-      update(JJ, cJ, ZJ) {
-        var FJ;
-        const UJ = this.settings;
-        (0, qJ.j)(UJ.position, ZJ.position), PJ(UJ.position, UJ.lookDirection, null !== (FJ = UJ.lookAt) && void 0 !== FJ ? FJ : this.zh.localPlayerId, this.targets, this.base), cJ.apply(this.base, ZJ), ZJ.fov = sJ(UJ, this.zh)
+      update(BB, TB, dB) {
+        var VB;
+        const yB = this.settings;
+        (0, YB.j)(yB.position, dB.position), SB(yB.position, yB.lookDirection, null !== (VB = yB.lookAt) && void 0 !== VB ? VB : this.JL.localPlayerId, this.targets, this.base), TB.apply(this.base, dB), dB.fov = OB(yB, this.JL)
       }
-      continueFrom(JJ) {
-        JJ instanceof kJ && (0, UJ.m)(JJ.base, this.base)
+      continueFrom(BB) {
+        BB instanceof PB && (0, yB.l)(BB.base, this.base)
       }
-      reset(JJ) {
-        HJ(this.base, JJ)
+      reset(BB) {
+        cB(this.base, BB)
       }
     }
-    class pJ {
-      constructor(JJ, cJ, ZJ, FJ) {
-        this.settings = JJ, this.zh = cJ, this.targets = ZJ, this.base = void 0, this.goal = void 0, this.lastFeet = [0, 0, 0], this.foundFeet = !1, this.smoothed = [0, 0, 0], this.jf = [0, 0, 0], this.started = !1, this.distance = -1, this.toCamera = [0, 0, 0], this.aimOrigin = [0, 0, 0], this.base = gJ(FJ), this.goal = [...FJ.position]
+    class QB {
+      constructor(BB, TB, dB, VB) {
+        this.settings = BB, this.JL = TB, this.targets = dB, this.base = void 0, this.goal = void 0, this.lastFeet = [0, 0, 0], this.foundFeet = !1, this.smoothed = [0, 0, 0], this.bu = [0, 0, 0], this.started = !1, this.distance = -1, this.toCamera = [0, 0, 0], this.aimOrigin = [0, 0, 0], this.base = IB(VB), this.goal = [...VB.position]
       }
-      update(JJ, cJ, ZJ) {
-        var FJ, UJ, eJ;
-        const XJ = this.settings,
-          AJ = null !== (FJ = XJ.target) && void 0 !== FJ ? FJ : this.zh.localPlayerId,
-          jJ = this.targets.feetPosition(AJ);
-        let YJ = !1;
-        jJ && (YJ = this.foundFeet && QJ(this.lastFeet, jJ) > 32 + .1 * JJ, (0, qJ.j)(jJ, this.lastFeet), this.foundFeet = !0, this.placeGoal(jJ, AJ));
-        const hJ = null !== (UJ = XJ.smoothMs) && void 0 !== UJ ? UJ : 0;
-        !this.started || hJ < 1 || YJ ? ((0, qJ.j)(this.goal, this.smoothed), this.jf.fill(0), this.started = !0) : nJ(this.smoothed, this.jf, this.goal, hJ, JJ), YJ && (this.distance = -1), (0, qJ.j)(this.smoothed, ZJ.position);
-        const DJ = !0 === XJ.avoidTerrain ? this.pullIn(AJ, JJ, ZJ) : 1;
-        let GJ = this.goal;
-        if ("target" === XJ.offsetSpace) GJ = ZJ.position;
-        else if (DJ < 1) {
-          GJ = this.aimOrigin;
-          for (let JJ = 0; JJ < 3; JJ++) GJ[JJ] = ZJ.position[JJ] + (this.goal[JJ] - this.smoothed[JJ]) * DJ
+      update(BB, TB, dB) {
+        var VB, yB, pB;
+        const lB = this.settings,
+          JB = null !== (VB = lB.target) && void 0 !== VB ? VB : this.JL.localPlayerId,
+          gB = this.targets.feetPosition(JB);
+        let oB = !1;
+        gB && (oB = this.foundFeet && NB(this.lastFeet, gB) > 32 + .1 * BB, (0, YB.j)(gB, this.lastFeet), this.foundFeet = !0, this.placeGoal(gB, JB));
+        const kB = null !== (yB = lB.smoothMs) && void 0 !== yB ? yB : 0;
+        !this.started || kB < 1 || oB ? ((0, YB.j)(this.goal, this.smoothed), this.bu.fill(0), this.started = !0) : DB(this.smoothed, this.bu, this.goal, kB, BB), oB && (this.distance = -1), (0, YB.j)(this.smoothed, dB.position);
+        const LB = !0 === lB.avoidTerrain ? this.pullIn(JB, BB, dB) : 1;
+        let uB = this.goal;
+        if ("target" === lB.offsetSpace) uB = dB.position;
+        else if (LB < 1) {
+          uB = this.aimOrigin;
+          for (let BB = 0; BB < 3; BB++) uB[BB] = dB.position[BB] + (this.goal[BB] - this.smoothed[BB]) * LB
         }
-        PJ(GJ, XJ.lookDirection, null !== (eJ = XJ.lookAt) && void 0 !== eJ ? eJ : AJ, this.targets, this.base), cJ.apply(this.base, ZJ), ZJ.fov = sJ(XJ, this.zh)
+        SB(uB, lB.lookDirection, null !== (pB = lB.lookAt) && void 0 !== pB ? pB : JB, this.targets, this.base), TB.apply(this.base, dB), dB.fov = OB(lB, this.JL)
       }
-      continueFrom(JJ) {
-        JJ instanceof pJ && (0, FJ.q)(JJ.settings.target, this.settings.target) && ((0, UJ.m)(JJ.base, this.base), (0, qJ.j)(JJ.goal, this.goal), (0, qJ.j)(JJ.lastFeet, this.lastFeet), this.foundFeet = JJ.foundFeet, (0, qJ.j)(JJ.smoothed, this.smoothed), (0, qJ.j)(JJ.jf, this.jf), this.started = JJ.started, !0 === JJ.settings.avoidTerrain && (this.distance = JJ.distance))
+      continueFrom(BB) {
+        BB instanceof QB && (0, VB.w)(BB.settings.target, this.settings.target) && ((0, yB.l)(BB.base, this.base), (0, YB.j)(BB.goal, this.goal), (0, YB.j)(BB.lastFeet, this.lastFeet), this.foundFeet = BB.foundFeet, (0, YB.j)(BB.smoothed, this.smoothed), (0, YB.j)(BB.bu, this.bu), this.started = BB.started, !0 === BB.settings.avoidTerrain && (this.distance = BB.distance))
       }
-      reset(JJ) {
-        HJ(this.base, JJ), this.jf.fill(0), this.started = !1, this.distance = -1
+      reset(BB) {
+        cB(this.base, BB), this.bu.fill(0), this.started = !1, this.distance = -1
       }
-      pullIn(JJ, cJ, ZJ) {
-        const FJ = this.targets.aimPoint(JJ);
-        if (!FJ) return 1;
-        const UJ = ZJ.position,
-          eJ = QJ(FJ, UJ);
-        if (!(eJ > 0)) return 1;
-        const XJ = this.toCamera;
-        for (let qJ = 0; qJ < 3; qJ++) XJ[qJ] = (UJ[qJ] - FJ[qJ]) / eJ;
-        const AJ = function(JJ, cJ, ZJ) {
-          return JJ < 0 || cJ < JJ ? cJ : cJ + (JJ - cJ) * Math.exp(-ZJ / 150)
-        }(this.distance, function(JJ, cJ, ZJ, FJ) {
-          const UJ = JJ.raycastTerrain(cJ, ZJ, FJ);
-          return null !== UJ && Number.isFinite(UJ) ? Math.min(FJ, Math.max(0, UJ - .2)) : FJ
-        }(this.zh, FJ, XJ, eJ), cJ);
-        if (eJ - AJ < .001) return this.distance = -1, 1;
-        this.distance = AJ;
-        for (let qJ = 0; qJ < 3; qJ++) UJ[qJ] = FJ[qJ] + XJ[qJ] * AJ;
-        return AJ / eJ
+      pullIn(BB, TB, dB) {
+        const VB = this.targets.aimPoint(BB);
+        if (!VB) return 1;
+        const yB = dB.position,
+          pB = NB(VB, yB);
+        if (!(pB > 0)) return 1;
+        const lB = this.toCamera;
+        for (let YB = 0; YB < 3; YB++) lB[YB] = (yB[YB] - VB[YB]) / pB;
+        const JB = function(BB, TB, dB) {
+          return BB < 0 || TB < BB ? TB : TB + (BB - TB) * Math.exp(-dB / 150)
+        }(this.distance, function(BB, TB, dB, VB) {
+          const yB = BB.raycastTerrain(TB, dB, VB);
+          return null !== yB && Number.isFinite(yB) ? Math.min(VB, Math.max(0, yB - .2)) : VB
+        }(this.JL, VB, lB, pB), TB);
+        if (pB - JB < .001) return this.distance = -1, 1;
+        this.distance = JB;
+        for (let YB = 0; YB < 3; YB++) yB[YB] = VB[YB] + lB[YB] * JB;
+        return JB / pB
       }
-      placeGoal(JJ, cJ) {
-        const ZJ = this.settings.offset;
-        let FJ = ZJ[0],
-          UJ = ZJ[2];
+      placeGoal(BB, TB) {
+        const dB = this.settings.offset;
+        let VB = dB[0],
+          yB = dB[2];
         if ("target" === this.settings.offsetSpace) {
-          const JJ = this.targets.heading(cJ),
-            eJ = Math.cos(JJ),
-            XJ = Math.sin(JJ);
-          FJ = ZJ[0] * eJ + ZJ[2] * XJ, UJ = -ZJ[0] * XJ + ZJ[2] * eJ
+          const BB = this.targets.heading(TB),
+            pB = Math.cos(BB),
+            lB = Math.sin(BB);
+          VB = dB[0] * pB + dB[2] * lB, yB = -dB[0] * lB + dB[2] * pB
         }
-        this.goal[0] = JJ[0] + FJ, this.goal[1] = JJ[1] + ZJ[1], this.goal[2] = JJ[2] + UJ
+        this.goal[0] = BB[0] + VB, this.goal[1] = BB[1] + dB[1], this.goal[2] = BB[2] + yB
       }
     }
-    class dJ {
-      constructor(JJ, cJ, ZJ, FJ) {
-        var UJ, eJ;
-        this.settings = JJ, this.zh = cJ, this.sampler = void 0, this.base = void 0, this.resolveTarget = void 0, this.elapsedMs = 0, this.sampler = JJ.keyframes.length > 0 ? new wJ(JJ.keyframes, null === (UJ = JJ.smooth) || void 0 === UJ || UJ, null !== (eJ = JJ.loop) && void 0 !== eJ && eJ) : null, this.base = (0, qJ.g)(FJ, (0, qJ.n)()), this.resolveTarget = JJ => ZJ.aimPoint(JJ)
+    class RB {
+      constructor(BB, TB, dB, VB) {
+        var yB, pB;
+        this.settings = BB, this.JL = TB, this.sampler = void 0, this.base = void 0, this.resolveTarget = void 0, this.elapsedMs = 0, this.sampler = BB.keyframes.length > 0 ? new KB(BB.keyframes, null === (yB = BB.smooth) || void 0 === yB || yB, null !== (pB = BB.loop) && void 0 !== pB && pB) : null, this.base = (0, YB.f)(VB, (0, YB.l)()), this.resolveTarget = BB => dB.aimPoint(BB)
       }
-      update(JJ, cJ, ZJ) {
-        this.elapsedMs += JJ;
-        const FJ = sJ(this.settings, this.zh);
-        this.sampler ? this.sampler.sample(this.elapsedMs, this.resolveTarget, FJ, this.base) : this.base.fov = FJ, (0, qJ.j)(this.base.position, ZJ.position), ZJ.fov = this.base.fov, cJ.apply(this.base, ZJ)
+      update(BB, TB, dB) {
+        this.elapsedMs += BB;
+        const VB = OB(this.settings, this.JL);
+        this.sampler ? this.sampler.sample(this.elapsedMs, this.resolveTarget, VB, this.base) : this.base.fov = VB, (0, YB.j)(this.base.position, dB.position), dB.fov = this.base.fov, TB.apply(this.base, dB)
       }
-      continueFrom(JJ) {
-        JJ instanceof dJ && (0, FJ.q)(JJ.settings.keyframes, this.settings.keyframes) && (this.elapsedMs = JJ.elapsedMs, (0, qJ.g)(JJ.base, this.base))
+      continueFrom(BB) {
+        BB instanceof RB && (0, VB.w)(BB.settings.keyframes, this.settings.keyframes) && (this.elapsedMs = BB.elapsedMs, (0, YB.f)(BB.base, this.base))
       }
-      reset(JJ) {
-        HJ(this.base, JJ), Number.isFinite(this.elapsedMs) || (this.elapsedMs = 0)
+      reset(BB) {
+        cB(this.base, BB), Number.isFinite(this.elapsedMs) || (this.elapsedMs = 0)
       }
     }
 
-    function zJ(JJ, cJ) {
-      return (0, FJ.u)(JJ, cJ)
+    function aB(BB, TB) {
+      return (0, VB.y)(BB, TB)
     }
-    class NJ {
-      constructor(JJ, cJ, ZJ) {
-        var FJ;
-        this.settings = JJ, this.zh = cJ, this.pose = void 0, this.lastGoodPose = void 0, this.look = void 0, this.targets = void 0, this.mode = void 0, this.warnedNonFinite = !1;
-        const UJ = null !== ZJ && ZJ.settings.mode === JJ.mode,
-          eJ = UJ ? ZJ.pose : cJ.getDefaultPose();
-        this.pose = (0, qJ.g)(eJ, (0, qJ.n)()), this.lastGoodPose = (0, qJ.g)(UJ ? ZJ.lastGoodPose : eJ, (0, qJ.n)()), this.look = new fJ(JJ.playerLook), this.targets = null !== (FJ = null === ZJ || void 0 === ZJ ? void 0 : ZJ.targets) && void 0 !== FJ ? FJ : new WJ(cJ);
-        const XJ = (0, qJ.g)(eJ, (0, qJ.n)());
-        UJ && ZJ.look.unapply(XJ, XJ), this.mode = function(JJ, cJ, ZJ, FJ) {
-          switch (JJ.mode) {
+    class ZB {
+      constructor(BB, TB, dB) {
+        var VB;
+        this.settings = BB, this.JL = TB, this.pose = void 0, this.lastGoodPose = void 0, this.look = void 0, this.targets = void 0, this.mode = void 0, this.warnedNonFinite = !1;
+        const yB = null !== dB && dB.settings.mode === BB.mode,
+          pB = yB ? dB.pose : TB.getDefaultPose();
+        this.pose = (0, YB.f)(pB, (0, YB.l)()), this.lastGoodPose = (0, YB.f)(yB ? dB.lastGoodPose : pB, (0, YB.l)()), this.look = new HB(BB.playerLook), this.targets = null !== (VB = null === dB || void 0 === dB ? void 0 : dB.targets) && void 0 !== VB ? VB : new rB(TB);
+        const lB = (0, YB.f)(pB, (0, YB.l)());
+        yB && dB.look.unapply(lB, lB), this.mode = function(BB, TB, dB, VB) {
+          switch (BB.mode) {
             case "fixed":
-              return new kJ(JJ, cJ, ZJ, FJ);
+              return new PB(BB, TB, dB, VB);
             case "follow":
-              return new pJ(JJ, cJ, ZJ, FJ);
+              return new QB(BB, TB, dB, VB);
             case "path":
-              return new dJ(JJ, cJ, ZJ, FJ);
+              return new RB(BB, TB, dB, VB);
             case "frame":
-              return new GJ(JJ, cJ, ZJ, FJ)
+              return new uB(BB, TB, dB, VB)
           }
-        }(JJ, cJ, this.targets, XJ), UJ && (this.look.continueFrom(ZJ.look), this.mode.continueFrom(ZJ.mode))
+        }(BB, TB, this.targets, lB), yB && (this.look.continueFrom(dB.look), this.mode.continueFrom(dB.mode))
       }
-      update(JJ, cJ) {
-        return this.look.update(JJ, cJ), this.mode.update(JJ, this.look, this.pose), (0, qJ.o)(this.pose) ? (0, qJ.g)(this.pose, this.lastGoodPose) : (this.warnedNonFinite || (console.warn("Scripted camera produced a non-finite pose; holding the last good one"), this.warnedNonFinite = !0), (0, qJ.g)(this.lastGoodPose, this.pose), this.mode.reset((0, qJ.o)(this.lastGoodPose) ? this.lastGoodPose : this.zh.getDefaultPose())), this.pose
+      update(BB, TB) {
+        return this.look.update(BB, TB), this.mode.update(BB, this.look, this.pose), (0, YB.o)(this.pose) ? (0, YB.f)(this.pose, this.lastGoodPose) : (this.warnedNonFinite || (console.warn("Scripted camera produced a non-finite pose; holding the last good one"), this.warnedNonFinite = !0), (0, YB.f)(this.lastGoodPose, this.pose), this.mode.reset((0, YB.o)(this.lastGoodPose) ? this.lastGoodPose : this.JL.getDefaultPose())), this.pose
       }
     }
 
-    function OJ(JJ) {
-      return [0, 0, JJ[2], JJ[3]]
+    function XB(BB) {
+      return [0, 0, BB[2], BB[3]]
     }
-    class TJ {
-      constructor(JJ) {
-        this.zh = JJ, this.settings = {
+    class WB {
+      constructor(BB) {
+        this.JL = BB, this.settings = {
           mode: "default"
-        }, this.pending = null, this.fade = new AJ, this.shot = null, this.blend = null, this.mixed = (0, qJ.n)(), this.output = (0, qJ.n)(), this.hasOutput = !1, this.loadingPositions = [], this.loadingSlots = Array.from({
+        }, this.pending = null, this.fade = new JB, this.shot = null, this.blend = null, this.mixed = (0, YB.l)(), this.output = (0, YB.l)(), this.hasOutput = !1, this.loadingPositions = [], this.loadingSlots = Array.from({
           length: 3
         }, (() => [0, 0, 0]))
       }
-      setSettings(JJ) {
-        const cJ = (0, jJ.b)(JJ);
-        if ((0, FJ.q)(cJ, this.pending ? this.pending.settings : this.settings)) return;
-        const ZJ = zJ(this.settings, cJ);
-        if (void 0 !== cJ.transition && !ZJ) return this.pending = {
-          settings: cJ,
-          shot: "default" === cJ.mode ? null : new NJ(cJ, this.zh, null)
-        }, void this.fade.fadeOut(cJ.transition);
-        const UJ = null !== this.pending;
-        this.pending = null, !UJ && ZJ || this.fade.fadeIn(FJ.k.minTransitionFadeMs), this.show(cJ, !1)
+      setSettings(BB) {
+        const TB = (0, gB.b)(BB);
+        if ((0, VB.w)(TB, this.pending ? this.pending.settings : this.settings)) return;
+        const dB = aB(this.settings, TB);
+        if (void 0 !== TB.transition && !dB) return this.pending = {
+          settings: TB,
+          shot: "default" === TB.mode ? null : new ZB(TB, this.JL, null)
+        }, void this.fade.fadeOut(TB.transition);
+        const yB = null !== this.pending;
+        this.pending = null, !yB && dB || this.fade.fadeIn(VB.m.minTransitionFadeMs), this.show(TB, !1)
       }
-      show(JJ, cJ) {
-        var ZJ, UJ;
-        if ((0, FJ.q)(JJ, this.settings)) return;
-        const XJ = !cJ && zJ(this.settings, JJ);
-        this.settings = JJ;
-        const AJ = null !== this.blend && this.blend.elapsedMs > 0,
-          jJ = (0, qJ.g)(this.hasOutput ? this.output : this.zh.getDefaultPose(), (0, qJ.n)());
-        if (this.shot = "default" === JJ.mode ? null : new NJ(JJ, this.zh, cJ ? null : this.shot), XJ) return;
-        const YJ = cJ || !this.shot && !this.hasOutput ? 0 : null !== (ZJ = JJ.blendInMs) && void 0 !== ZJ ? ZJ : 0;
-        if (YJ <= 0) return void(this.blend = null);
-        const hJ = (0, eJ.q)(null !== (UJ = JJ.blendEasing) && void 0 !== UJ ? UJ : "easeInOut");
+      show(BB, TB) {
+        var dB, yB;
+        if ((0, VB.w)(BB, this.settings)) return;
+        const lB = !TB && aB(this.settings, BB);
+        this.settings = BB;
+        const JB = null !== this.blend && this.blend.elapsedMs > 0,
+          gB = (0, YB.f)(this.hasOutput ? this.output : this.JL.getDefaultPose(), (0, YB.l)());
+        if (this.shot = "default" === BB.mode ? null : new ZB(BB, this.JL, TB ? null : this.shot), lB) return;
+        const oB = TB || !this.shot && !this.hasOutput ? 0 : null !== (dB = BB.blendInMs) && void 0 !== dB ? dB : 0;
+        if (oB <= 0) return void(this.blend = null);
+        const kB = (0, pB.j)(null !== (yB = BB.blendEasing) && void 0 !== yB ? yB : "easeInOut");
         this.blend = {
-          from: jJ,
+          from: gB,
           fromScripted: this.hasOutput,
           headingDelta: NaN,
           elapsedMs: 0,
-          durationMs: YJ,
-          easing: AJ ? OJ(hJ) : hJ
+          durationMs: oB,
+          easing: JB ? XB(kB) : kB
         }
       }
       getSettings() {
@@ -943,66 +943,66 @@ export const modules = {
       isActive() {
         return null !== this.shot || null !== this.blend
       }
-      update(JJ, cJ) {
-        const ZJ = Number.isFinite(JJ) && JJ > 0 ? JJ : 0;
-        if (this.fade.advance(ZJ) && null !== this.pending) {
+      update(BB, TB) {
+        const dB = Number.isFinite(BB) && BB > 0 ? BB : 0;
+        if (this.fade.advance(dB) && null !== this.pending) {
           const {
-            settings: JJ
+            settings: BB
           } = this.pending;
-          this.pending = null, this.show(JJ, !0)
+          this.pending = null, this.show(BB, !0)
         }
         this.loadingPositions.length = 0;
-        const FJ = this.pending;
-        if (null !== FJ && void 0 !== FJ && FJ.shot) {
-          const JJ = "path" === FJ.settings.mode ? 0 : ZJ;
-          this.noteLoadingPosition(FJ.shot.update(JJ, qJ.d).position)
+        const VB = this.pending;
+        if (null !== VB && void 0 !== VB && VB.shot) {
+          const BB = "path" === VB.settings.mode ? 0 : dB;
+          this.noteLoadingPosition(VB.shot.update(BB, YB.d).position)
         }
         if (!this.isActive()) return this.hasOutput = !1, null;
-        const XJ = this.shot ? this.shot.update(ZJ, cJ) : this.zh.getDefaultPose();
-        this.shot && this.noteLoadingPosition(XJ.position);
-        const AJ = this.blend;
-        if (!AJ) return this.writeOutput(XJ);
-        AJ.elapsedMs += ZJ;
-        const jJ = Math.min(1, AJ.elapsedMs / AJ.durationMs);
-        if (AJ.headingDelta = Number.isFinite(AJ.headingDelta) ? (0, UJ.x)(AJ.headingDelta, XJ.heading - AJ.from.heading) : (0, UJ.v)(AJ.from.heading, XJ.heading), (0, qJ.t)(AJ.from, XJ, AJ.headingDelta, (0, eJ.m)(jJ, AJ.easing), this.mixed), jJ >= 1) {
+        const lB = this.shot ? this.shot.update(dB, TB) : this.JL.getDefaultPose();
+        this.shot && this.noteLoadingPosition(lB.position);
+        const JB = this.blend;
+        if (!JB) return this.writeOutput(lB);
+        JB.elapsedMs += dB;
+        const gB = Math.min(1, JB.elapsedMs / JB.durationMs);
+        if (JB.headingDelta = Number.isFinite(JB.headingDelta) ? (0, yB.F)(JB.headingDelta, lB.heading - JB.from.heading) : (0, yB.D)(JB.from.heading, lB.heading), (0, YB.r)(JB.from, lB, JB.headingDelta, (0, pB.i)(gB, JB.easing), this.mixed), gB >= 1) {
           if (this.blend = null, !this.shot) return this.hasOutput = !1, null
-        } else AJ.fromScripted && this.noteLoadingPosition(AJ.from.position);
+        } else JB.fromScripted && this.noteLoadingPosition(JB.from.position);
         return this.writeOutput(this.mixed)
       }
-      noteLoadingPosition(JJ) {
-        if (JJ.every(Number.isFinite)) {
-          const cJ = this.loadingPositions;
-          cJ.push((0, qJ.j)(JJ, this.loadingSlots[cJ.length]))
+      noteLoadingPosition(BB) {
+        if (BB.every(Number.isFinite)) {
+          const TB = this.loadingPositions;
+          TB.push((0, YB.j)(BB, this.loadingSlots[TB.length]))
         }
       }
-      writeOutput(JJ) {
-        const cJ = this.output;
-        (0, qJ.o)(JJ) ? (0, qJ.g)(JJ, cJ) : this.hasOutput || (0, qJ.g)(this.zh.getDefaultPose(), cJ), cJ.pitch = (0, UJ.i)(cJ.pitch);
-        const ZJ = this.zh.getDefaultFov(),
-          eJ = Number.isFinite(ZJ) && ZJ > 0 && ZJ < 180,
-          XJ = eJ ? Math.min(FJ.k.minFov, ZJ) : FJ.k.minFov,
-          AJ = eJ ? Math.max(FJ.k.maxFov, ZJ) : FJ.k.maxFov;
-        return cJ.fov = Number.isFinite(cJ.fov) ? Math.min(AJ, Math.max(XJ, cJ.fov)) : AJ, this.hasOutput = !0, cJ
+      writeOutput(BB) {
+        const TB = this.output;
+        (0, YB.o)(BB) ? (0, YB.f)(BB, TB) : this.hasOutput || (0, YB.f)(this.JL.getDefaultPose(), TB), TB.pitch = (0, yB.j)(TB.pitch);
+        const dB = this.JL.getDefaultFov(),
+          pB = Number.isFinite(dB) && dB > 0 && dB < 180,
+          lB = pB ? Math.min(VB.m.minFov, dB) : VB.m.minFov,
+          JB = pB ? Math.max(VB.m.maxFov, dB) : VB.m.maxFov;
+        return TB.fov = Number.isFinite(TB.fov) ? Math.min(JB, Math.max(lB, TB.fov)) : JB, this.hasOutput = !0, TB
       }
     }
   },
-  38117: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => UJ,
-      g: () => AJ,
-      j: () => XJ,
-      n: () => eJ,
-      o: () => jJ,
-      p: () => qJ,
-      t: () => YJ
+  38102: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => yB,
+      f: () => JB,
+      j: () => lB,
+      l: () => pB,
+      o: () => gB,
+      q: () => YB,
+      r: () => oB
     });
-    var FJ = ZJ(38120);
-    const UJ = {
-      bK: 0,
-      zK: 0
+    var VB = dB(38106);
+    const yB = {
+      pU: 0,
+      kU: 0
     };
 
-    function eJ() {
+    function pB() {
       return {
         position: [0, 0, 0],
         heading: 0,
@@ -1011,196 +1011,196 @@ export const modules = {
       }
     }
 
-    function XJ(JJ, cJ) {
-      return cJ[0] = JJ[0], cJ[1] = JJ[1], cJ[2] = JJ[2], cJ
+    function lB(BB, TB) {
+      return TB[0] = BB[0], TB[1] = BB[1], TB[2] = BB[2], TB
     }
 
-    function AJ(JJ, cJ) {
-      return XJ(JJ.position, cJ.position), cJ.heading = JJ.heading, cJ.pitch = JJ.pitch, cJ.fov = JJ.fov, cJ
+    function JB(BB, TB) {
+      return lB(BB.position, TB.position), TB.heading = BB.heading, TB.pitch = BB.pitch, TB.fov = BB.fov, TB
     }
 
-    function qJ(JJ, cJ) {
-      return Array.isArray(JJ) && JJ.length === cJ && JJ.every(Number.isFinite)
+    function YB(BB, TB) {
+      return Array.isArray(BB) && BB.length === TB && BB.every(Number.isFinite)
     }
 
-    function jJ(JJ) {
-      return qJ(JJ.position, 3) && Number.isFinite(JJ.heading) && Number.isFinite(JJ.pitch) && Number.isFinite(JJ.fov)
+    function gB(BB) {
+      return YB(BB.position, 3) && Number.isFinite(BB.heading) && Number.isFinite(BB.pitch) && Number.isFinite(BB.fov)
     }
 
-    function YJ(JJ, cJ, ZJ, UJ, eJ) {
-      for (let FJ = 0; FJ < 3; FJ++) eJ.position[FJ] = JJ.position[FJ] + (cJ.position[FJ] - JJ.position[FJ]) * UJ;
-      return eJ.heading = (0, FJ.t)(JJ.heading + ZJ * UJ), eJ.pitch = JJ.pitch + (cJ.pitch - JJ.pitch) * UJ, eJ.fov = JJ.fov + (cJ.fov - JJ.fov) * UJ, eJ
+    function oB(BB, TB, dB, yB, pB) {
+      for (let VB = 0; VB < 3; VB++) pB.position[VB] = BB.position[VB] + (TB.position[VB] - BB.position[VB]) * yB;
+      return pB.heading = (0, VB.A)(BB.heading + dB * yB), pB.pitch = BB.pitch + (TB.pitch - BB.pitch) * yB, pB.fov = BB.fov + (TB.fov - BB.fov) * yB, pB
     }
   },
-  38148: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      b: () => VJ,
-      c: () => DJ
+  38134: (BB, TB, dB) => {
+    dB.d(TB, {
+      b: () => fB,
+      f: () => LB
     });
-    var FJ = ZJ(38141),
-      UJ = ZJ(38117);
-    const eJ = FJ.h,
-      XJ = FJ.l;
+    var VB = dB(38125),
+      yB = dB(38102);
+    const pB = VB.l,
+      lB = VB.q;
 
-    function AJ(JJ, cJ, ZJ, FJ) {
-      return Number.isFinite(JJ) ? Math.min(ZJ, Math.max(cJ, JJ)) : FJ
+    function JB(BB, TB, dB, VB) {
+      return Number.isFinite(BB) ? Math.min(dB, Math.max(TB, BB)) : VB
     }
 
-    function qJ(JJ, cJ, ZJ) {
-      return void 0 !== JJ && Number.isFinite(JJ) ? Math.min(ZJ, Math.max(cJ, JJ)) : void 0
+    function YB(BB, TB, dB) {
+      return void 0 !== BB && Number.isFinite(BB) ? Math.min(dB, Math.max(TB, BB)) : void 0
     }
 
-    function jJ(JJ) {
-      const cJ = FJ.k.maxCoordinate;
-      return [Math.min(cJ, Math.max(-cJ, JJ[0])), Math.min(cJ, Math.max(-cJ, JJ[1])), Math.min(cJ, Math.max(-cJ, JJ[2]))]
+    function gB(BB) {
+      const TB = VB.m.maxCoordinate;
+      return [Math.min(TB, Math.max(-TB, BB[0])), Math.min(TB, Math.max(-TB, BB[1])), Math.min(TB, Math.max(-TB, BB[2]))]
     }
 
-    function YJ(JJ) {
-      return "string" === typeof JJ ? JJ : (0, UJ.p)(JJ, 3) ? jJ(JJ) : void 0
+    function oB(BB) {
+      return "string" === typeof BB ? BB : (0, yB.q)(BB, 3) ? gB(BB) : void 0
     }
-    const hJ = new RegExp(FJ.o);
+    const kB = new RegExp(VB.u);
 
-    function DJ(JJ) {
-      return "string" === typeof JJ && hJ.test(JJ)
+    function LB(BB) {
+      return "string" === typeof BB && kB.test(BB)
     }
 
-    function sJ(JJ) {
-      const cJ = [];
-      if (!Array.isArray(JJ)) return cJ;
-      for (const ZJ of JJ.slice(0, FJ.k.maxFrameTargets)) {
-        const JJ = YJ(ZJ);
-        void 0 === JJ || "string" === typeof JJ && !DJ(JJ) || cJ.push(JJ)
+    function OB(BB) {
+      const TB = [];
+      if (!Array.isArray(BB)) return TB;
+      for (const dB of BB.slice(0, VB.m.maxFrameTargets)) {
+        const BB = oB(dB);
+        void 0 === BB || "string" === typeof BB && !LB(BB) || TB.push(BB)
       }
-      return cJ
+      return TB
     }
 
-    function nJ(JJ) {
-      if (!(0, UJ.p)(JJ, 3)) return;
-      const cJ = Math.max(Math.abs(JJ[0]), Math.abs(JJ[1]), Math.abs(JJ[2])),
-        ZJ = Math.hypot(JJ[0] / cJ, JJ[1] / cJ, JJ[2] / cJ);
-      return 0 === cJ || cJ * ZJ < FJ.k.minDirectionLength ? void 0 : [JJ[0] / cJ / ZJ, JJ[1] / cJ / ZJ, JJ[2] / cJ / ZJ]
+    function DB(BB) {
+      if (!(0, yB.q)(BB, 3)) return;
+      const TB = Math.max(Math.abs(BB[0]), Math.abs(BB[1]), Math.abs(BB[2])),
+        dB = Math.hypot(BB[0] / TB, BB[1] / TB, BB[2] / TB);
+      return 0 === TB || TB * dB < VB.m.minDirectionLength ? void 0 : [BB[0] / TB / dB, BB[1] / TB / dB, BB[2] / TB / dB]
     }
 
-    function GJ(JJ) {
-      if (void 0 !== JJ) return "string" === typeof JJ ? eJ.includes(JJ) ? JJ : void 0 : (0, UJ.p)(JJ, 4) ? [AJ(JJ[0], 0, 1, 0), AJ(JJ[1], FJ.k.minEasingY, FJ.k.maxEasingY, 0), AJ(JJ[2], 0, 1, 1), AJ(JJ[3], FJ.k.minEasingY, FJ.k.maxEasingY, 1)] : "linear"
+    function uB(BB) {
+      if (void 0 !== BB) return "string" === typeof BB ? pB.includes(BB) ? BB : void 0 : (0, yB.q)(BB, 4) ? [JB(BB[0], 0, 1, 0), JB(BB[1], VB.m.minEasingY, VB.m.maxEasingY, 0), JB(BB[2], 0, 1, 1), JB(BB[3], VB.m.minEasingY, VB.m.maxEasingY, 1)] : "linear"
     }
 
-    function fJ(JJ) {
-      if (JJ) return {
-        maxYaw: AJ(JJ.maxYaw, 0, FJ.k.maxPlayerLook, 0),
-        maxPitch: AJ(JJ.maxPitch, 0, FJ.k.maxPlayerLook, 0),
-        returnMs: qJ(JJ.returnMs, 0, FJ.k.maxReturnMs)
+    function HB(BB) {
+      if (BB) return {
+        maxYaw: JB(BB.maxYaw, 0, VB.m.maxPlayerLook, 0),
+        maxPitch: JB(BB.maxPitch, 0, VB.m.maxPlayerLook, 0),
+        returnMs: YB(BB.returnMs, 0, VB.m.maxReturnMs)
       }
     }
-    const xJ = new RegExp(FJ.d);
+    const EB = new RegExp(VB.d);
 
-    function rJ(JJ) {
-      var cJ;
-      if ("object" !== typeof JJ || null === JJ) return;
-      const ZJ = FJ.k.maxTransitionMs,
-        UJ = FJ.k.minTransitionFadeMs;
+    function vB(BB) {
+      var TB;
+      if ("object" !== typeof BB || null === BB) return;
+      const dB = VB.m.maxTransitionMs,
+        yB = VB.m.minTransitionFadeMs;
       return {
-        colour: "string" === typeof JJ.colour && xJ.test(JJ.colour) ? JJ.colour : FJ.f,
-        outMs: AJ(JJ.outMs, UJ, ZJ, UJ),
-        holdMs: AJ(null !== (cJ = JJ.holdMs) && void 0 !== cJ ? cJ : 0, 0, ZJ, 0),
-        inMs: AJ(JJ.inMs, UJ, ZJ, UJ)
+        colour: "string" === typeof BB.colour && EB.test(BB.colour) ? BB.colour : VB.h,
+        outMs: JB(BB.outMs, yB, dB, yB),
+        holdMs: JB(null !== (TB = BB.holdMs) && void 0 !== TB ? TB : 0, 0, dB, 0),
+        inMs: JB(BB.inMs, yB, dB, yB)
       }
     }
 
-    function vJ(JJ) {
-      return !0 === JJ || void 0
+    function mB(BB) {
+      return !0 === BB || void 0
     }
 
-    function mJ(JJ) {
-      if ("object" !== typeof JJ || null === JJ) return !1;
-      const cJ = JJ.lookAt;
-      return Number.isFinite(JJ.timeMs) && (0, UJ.p)(JJ.position, 3) && (void 0 === cJ || "string" === typeof cJ || (0, UJ.p)(cJ, 3))
+    function iB(BB) {
+      if ("object" !== typeof BB || null === BB) return !1;
+      const TB = BB.lookAt;
+      return Number.isFinite(BB.timeMs) && (0, yB.q)(BB.position, 3) && (void 0 === TB || "string" === typeof TB || (0, yB.q)(TB, 3))
     }
 
-    function QJ(JJ) {
+    function NB(BB) {
       return {
-        ...JJ,
-        timeMs: AJ(JJ.timeMs, 0, FJ.k.maxPathMs, 0),
-        position: jJ(JJ.position),
-        lookAt: YJ(JJ.lookAt),
-        lookDirection: nJ(JJ.lookDirection),
-        fov: qJ(JJ.fov, FJ.k.minFov, FJ.k.maxFov),
-        easing: GJ(JJ.easing)
+        ...BB,
+        timeMs: JB(BB.timeMs, 0, VB.m.maxPathMs, 0),
+        position: gB(BB.position),
+        lookAt: oB(BB.lookAt),
+        lookDirection: DB(BB.lookDirection),
+        fov: YB(BB.fov, VB.m.minFov, VB.m.maxFov),
+        easing: uB(BB.easing)
       }
     }
 
-    function EJ(JJ) {
-      const cJ = [];
-      if (!Array.isArray(JJ)) return cJ;
-      for (const ZJ of JJ.slice(0, FJ.k.maxKeyframes)) {
-        if (!mJ(ZJ)) continue;
-        const JJ = QJ(ZJ);
-        (0 === cJ.length || JJ.timeMs > cJ[cJ.length - 1].timeMs) && cJ.push(JJ)
+    function tB(BB) {
+      const TB = [];
+      if (!Array.isArray(BB)) return TB;
+      for (const dB of BB.slice(0, VB.m.maxKeyframes)) {
+        if (!iB(dB)) continue;
+        const BB = NB(dB);
+        (0 === TB.length || BB.timeMs > TB[TB.length - 1].timeMs) && TB.push(BB)
       }
-      return cJ
+      return TB
     }
 
-    function VJ(JJ) {
-      if ("object" !== typeof JJ || null === JJ) return {
+    function fB(BB) {
+      if ("object" !== typeof BB || null === BB) return {
         mode: "default"
       };
-      const cJ = {
-          blendInMs: qJ(JJ.blendInMs, 0, FJ.k.maxBlendInMs),
-          blendEasing: GJ(JJ.blendEasing),
-          transition: rJ(JJ.transition),
-          letterbox: vJ(JJ.letterbox),
-          hideHud: vJ(JJ.hideHud)
+      const TB = {
+          blendInMs: YB(BB.blendInMs, 0, VB.m.maxBlendInMs),
+          blendEasing: uB(BB.blendEasing),
+          transition: vB(BB.transition),
+          letterbox: mB(BB.letterbox),
+          hideHud: mB(BB.hideHud)
         },
-        ZJ = {
+        dB = {
           mode: "default",
-          ...cJ
+          ...TB
         };
-      if ("default" === JJ.mode || "fixed" === JJ.mode && !(0, UJ.p)(JJ.position, 3)) return ZJ;
-      const eJ = {
-        ...cJ,
-        fov: qJ(JJ.fov, FJ.k.minFov, FJ.k.maxFov),
-        playerFacing: (hJ = JJ.playerFacing, XJ.includes(hJ) ? hJ : void 0),
-        playerLook: fJ(JJ.playerLook)
+      if ("default" === BB.mode || "fixed" === BB.mode && !(0, yB.q)(BB.position, 3)) return dB;
+      const pB = {
+        ...TB,
+        fov: YB(BB.fov, VB.m.minFov, VB.m.maxFov),
+        playerFacing: (kB = BB.playerFacing, lB.includes(kB) ? kB : void 0),
+        playerLook: HB(BB.playerLook)
       };
-      var hJ, DJ;
-      switch (JJ.mode) {
+      var kB, LB;
+      switch (BB.mode) {
         case "fixed":
           return {
-            ...JJ, ...eJ, position: jJ(JJ.position), lookAt: YJ(JJ.lookAt), lookDirection: nJ(JJ.lookDirection)
+            ...BB, ...pB, position: gB(BB.position), lookAt: oB(BB.lookAt), lookDirection: DB(BB.lookDirection)
           };
         case "follow":
           return {
-            ...JJ, ...eJ, target: "string" === typeof JJ.target ? JJ.target : void 0, lookAt: YJ(JJ.lookAt), offset: (DJ = JJ.offset, Array.isArray(DJ) ? [AJ(DJ[0], -FJ.k.maxOffset, FJ.k.maxOffset, 0), AJ(DJ[1], -FJ.k.maxOffset, FJ.k.maxOffset, 0), AJ(DJ[2], -FJ.k.maxOffset, FJ.k.maxOffset, 0)] : [0, 0, 0]), lookDirection: nJ(JJ.lookDirection), smoothMs: qJ(JJ.smoothMs, 0, FJ.k.maxSmoothMs)
+            ...BB, ...pB, target: "string" === typeof BB.target ? BB.target : void 0, lookAt: oB(BB.lookAt), offset: (LB = BB.offset, Array.isArray(LB) ? [JB(LB[0], -VB.m.maxOffset, VB.m.maxOffset, 0), JB(LB[1], -VB.m.maxOffset, VB.m.maxOffset, 0), JB(LB[2], -VB.m.maxOffset, VB.m.maxOffset, 0)] : [0, 0, 0]), lookDirection: DB(BB.lookDirection), smoothMs: YB(BB.smoothMs, 0, VB.m.maxSmoothMs)
           };
         case "path":
           return {
-            ...JJ, ...eJ, keyframes: EJ(JJ.keyframes)
+            ...BB, ...pB, keyframes: tB(BB.keyframes)
           };
         case "frame":
           return {
-            ...JJ, ...eJ, targets: sJ(JJ.targets), viewHeading: qJ(JJ.viewHeading, -FJ.k.maxFrameHeading, FJ.k.maxFrameHeading), viewElevation: qJ(JJ.viewElevation, 0, FJ.k.maxFrameElevation), padding: qJ(JJ.padding, 0, FJ.k.maxFrameDistance), closestDistance: qJ(JJ.closestDistance, 0, FJ.k.maxFrameDistance), furthestDistance: qJ(JJ.furthestDistance, 0, FJ.k.maxFrameDistance), smoothMs: qJ(JJ.smoothMs, 0, FJ.k.maxSmoothMs)
+            ...BB, ...pB, targets: OB(BB.targets), viewHeading: YB(BB.viewHeading, -VB.m.maxFrameHeading, VB.m.maxFrameHeading), viewElevation: YB(BB.viewElevation, 0, VB.m.maxFrameElevation), padding: YB(BB.padding, 0, VB.m.maxFrameDistance), closestDistance: YB(BB.closestDistance, 0, VB.m.maxFrameDistance), furthestDistance: YB(BB.furthestDistance, 0, VB.m.maxFrameDistance), smoothMs: YB(BB.smoothMs, 0, VB.m.maxSmoothMs)
           };
         default:
-          return ZJ
+          return dB
       }
     }
   },
-  37639: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      b: () => AJ
+  37629: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => JB
     });
-    var FJ = ZJ(1122);
+    var VB = dB(1105);
 
-    function UJ(JJ) {
-      const cJ = /(\d*\.?\d+)px/.exec(JJ);
-      return cJ ? Number(cJ[1]) : null
+    function yB(BB) {
+      const TB = /(\d*\.?\d+)px/.exec(BB);
+      return TB ? Number(TB[1]) : null
     }
 
-    function eJ(JJ) {
-      return JJ.split(/[\s,]+/).pop()
+    function pB(BB) {
+      return BB.split(/[\s,]+/).pop()
     }
-    let XJ = !1;
-    const AJ = {
+    let lB = !1;
+    const JB = {
       debug: !1,
       align: "center",
       vAlign: "middle",
@@ -1211,360 +1211,360 @@ export const modules = {
       font: "Arial",
       lineHeight: null,
       justify: !1,
-      drawText: function(JJ, cJ, FJ, AJ, qJ, jJ) {
-        if (qJ <= 0 || jJ <= 0 || this.fontSize <= 0) return {
+      drawText: function(BB, TB, VB, JB, YB, gB) {
+        if (YB <= 0 || gB <= 0 || this.fontSize <= 0) return {
           height: 0
         };
         const {
-          fontStyle: YJ,
-          fontVariant: hJ,
-          fontWeight: DJ,
-          fontSize: sJ,
-          font: nJ
-        } = this, GJ = [YJ, hJ, DJ, `${sJ}px`, nJ].filter(Boolean).join(" "), fJ = [
-          [DJ, `${sJ}px`, eJ(nJ)].filter(Boolean).join(" "), `${sJ}px sans-serif`
-        ], xJ = JJ.font, rJ = function(JJ, cJ, ZJ) {
-          for (const FJ of cJ) {
-            JJ.font = FJ;
-            const cJ = UJ(JJ.font),
-              XJ = eJ(FJ);
-            if (null !== cJ && Math.abs(cJ - ZJ) <= .5 && JJ.font.toLowerCase().includes(XJ.toLowerCase())) return FJ
+          fontStyle: oB,
+          fontVariant: kB,
+          fontWeight: LB,
+          fontSize: OB,
+          font: DB
+        } = this, uB = [oB, kB, LB, `${OB}px`, DB].filter(Boolean).join(" "), HB = [
+          [LB, `${OB}px`, pB(DB)].filter(Boolean).join(" "), `${OB}px sans-serif`
+        ], EB = BB.font, vB = function(BB, TB, dB) {
+          for (const VB of TB) {
+            BB.font = VB;
+            const TB = yB(BB.font),
+              lB = pB(VB);
+            if (null !== TB && Math.abs(TB - dB) <= .5 && BB.font.toLowerCase().includes(lB.toLowerCase())) return VB
           }
           return null
-        }(JJ, [GJ, ...fJ], sJ);
-        rJ !== GJ && function(JJ, cJ, FJ) {
-          XJ || (XJ = !0, Promise.resolve().then((() => ZJ(957))).then((ZJ => {
+        }(BB, [uB, ...HB], OB);
+        vB !== uB && function(BB, TB, VB) {
+          lB || (lB = !0, Promise.resolve().then((() => dB(955))).then((dB => {
             let {
-              MG: UJ
-            } = ZJ;
-            UJ(new Error("A canvas didn't take canvasTxt's font"), {
-              font: JJ,
-              ys: cJ,
-              drawnWith: null !== FJ && void 0 !== FJ ? FJ : "the kept font, scaled"
+              wu: yB
+            } = dB;
+            yB(new Error("A canvas didn't take canvasTxt's font"), {
+              font: BB,
+              RO: TB,
+              drawnWith: null !== VB && void 0 !== VB ? VB : "the kept font, scaled"
             })
           })).catch((() => {})))
-        }(GJ, xJ, rJ);
-        const vJ = UJ(JJ.font);
-        if (null === rJ && null !== vJ && vJ > 0) {
-          const ZJ = sJ / vJ;
-          JJ.save();
+        }(uB, EB, vB);
+        const mB = yB(BB.font);
+        if (null === vB && null !== mB && mB > 0) {
+          const dB = OB / mB;
+          BB.save();
           try {
-            return JJ.scale(ZJ, ZJ), {
-              height: this.drawLines(JJ, cJ, FJ / ZJ, AJ / ZJ, qJ / ZJ, jJ / ZJ, vJ).height * ZJ
+            return BB.scale(dB, dB), {
+              height: this.drawLines(BB, TB, VB / dB, JB / dB, YB / dB, gB / dB, mB).height * dB
             }
           } finally {
-            JJ.restore()
+            BB.restore()
           }
         }
-        return this.drawLines(JJ, cJ, FJ, AJ, qJ, jJ, sJ)
+        return this.drawLines(BB, TB, VB, JB, YB, gB, OB)
       },
-      drawLines: function(JJ, cJ, ZJ, UJ, eJ, XJ, AJ) {
-        const qJ = ZJ + eJ,
-          jJ = UJ + XJ;
-        let YJ, hJ = UJ + XJ / 2 + AJ / 2;
-        "right" === this.align ? (YJ = qJ, JJ.textAlign = "right") : "left" === this.align ? (YJ = ZJ, JJ.textAlign = "left") : (YJ = ZJ + eJ / 2, JJ.textAlign = "center");
-        for (const FJ of cJ) {
-          JJ.measureText(FJ).width >= eJ && (cJ = cJ.replace(FJ, ""))
+      drawLines: function(BB, TB, dB, yB, pB, lB, JB) {
+        const YB = dB + pB,
+          gB = yB + lB;
+        let oB, kB = yB + lB / 2 + JB / 2;
+        "right" === this.align ? (oB = YB, BB.textAlign = "right") : "left" === this.align ? (oB = dB, BB.textAlign = "left") : (oB = dB + pB / 2, BB.textAlign = "center");
+        for (const VB of TB) {
+          BB.measureText(VB).width >= pB && (TB = TB.replace(VB, ""))
         }
-        cJ = (0, FJ.V)(cJ);
-        const DJ = [],
-          sJ = cJ.split("\n"),
-          nJ = this.justify ? JJ.measureText("\u200a").width : 0;
-        sJ.forEach((cJ => {
-          let ZJ = JJ.measureText(cJ).width;
-          if (ZJ <= eJ) DJ.push(cJ);
+        TB = (0, VB.V)(TB);
+        const LB = [],
+          OB = TB.split("\n"),
+          DB = this.justify ? BB.measureText("\u200a").width : 0;
+        OB.forEach((TB => {
+          let dB = BB.measureText(TB).width;
+          if (dB <= pB) LB.push(TB);
           else {
-            let FJ = cJ;
-            const UJ = eJ;
-            let XJ, AJ, qJ;
-            for (ZJ = JJ.measureText(FJ).width; ZJ > UJ;) {
-              for (XJ = 0, AJ = 0, qJ = ""; AJ < UJ;) XJ++, qJ = FJ.substr(0, XJ), AJ = JJ.measureText(qJ).width;
-              XJ--, qJ = qJ.substr(0, XJ);
-              const cJ = XJ;
-              if (" " !== FJ.substr(XJ, 1)) {
+            let VB = TB;
+            const yB = pB;
+            let lB, JB, YB;
+            for (dB = BB.measureText(VB).width; dB > yB;) {
+              for (lB = 0, JB = 0, YB = ""; JB < yB;) lB++, YB = VB.substr(0, lB), JB = BB.measureText(YB).width;
+              lB--, YB = YB.substr(0, lB);
+              const TB = lB;
+              if (" " !== VB.substr(lB, 1)) {
                 for (;
-                  " " !== FJ.substr(XJ, 1) && 0 !== XJ;) XJ--;
-                0 === XJ && (XJ = cJ), qJ = FJ.substr(0, XJ)
+                  " " !== VB.substr(lB, 1) && 0 !== lB;) lB--;
+                0 === lB && (lB = TB), YB = VB.substr(0, lB)
               }
-              qJ = this.justify ? this.justifyLine(JJ, qJ, nJ, "\u200a", eJ) : qJ, FJ = FJ.substr(XJ), ZJ = JJ.measureText(FJ).width, DJ.push(qJ)
+              YB = this.justify ? this.justifyLine(BB, YB, DB, "\u200a", pB) : YB, VB = VB.substr(lB), dB = BB.measureText(VB).width, LB.push(YB)
             }
-            ZJ > 0 && DJ.push(FJ)
+            dB > 0 && LB.push(VB)
           }
         }));
-        const GJ = this.lineHeight ? this.lineHeight : this.getTextHeight(JJ, cJ),
-          fJ = GJ * (DJ.length - 1),
-          xJ = fJ / 2;
-        let rJ = UJ;
-        "top" === this.vAlign ? hJ = UJ + AJ : "bottom" === this.vAlign ? (hJ = jJ - fJ, rJ = jJ) : (rJ = UJ + XJ / 2, hJ -= xJ), DJ.forEach((cJ => {
-          cJ = cJ.trim(), JJ.fillText(cJ, YJ, hJ), hJ += GJ
-        })), this.debug && (JJ.lineWidth = 3, JJ.strokeStyle = "#00909e", JJ.strokeRect(ZJ, UJ, eJ, XJ), JJ.lineWidth = 2, JJ.strokeStyle = "#f6d743", JJ.beginPath(), JJ.moveTo(YJ, UJ), JJ.lineTo(YJ, jJ), JJ.stroke(), JJ.strokeStyle = "#ff6363", JJ.beginPath(), JJ.moveTo(ZJ, rJ), JJ.lineTo(qJ, rJ), JJ.stroke());
+        const uB = this.lineHeight ? this.lineHeight : this.getTextHeight(BB, TB),
+          HB = uB * (LB.length - 1),
+          EB = HB / 2;
+        let vB = yB;
+        "top" === this.vAlign ? kB = yB + JB : "bottom" === this.vAlign ? (kB = gB - HB, vB = gB) : (vB = yB + lB / 2, kB -= EB), LB.forEach((TB => {
+          TB = TB.trim(), BB.fillText(TB, oB, kB), kB += uB
+        })), this.debug && (BB.lineWidth = 3, BB.strokeStyle = "#00909e", BB.strokeRect(dB, yB, pB, lB), BB.lineWidth = 2, BB.strokeStyle = "#f6d743", BB.beginPath(), BB.moveTo(oB, yB), BB.lineTo(oB, gB), BB.stroke(), BB.strokeStyle = "#ff6363", BB.beginPath(), BB.moveTo(dB, vB), BB.lineTo(YB, vB), BB.stroke());
         return {
-          height: fJ + GJ
+          height: HB + uB
         }
       },
-      getTextHeight: function(JJ, cJ) {
-        const ZJ = JJ.textBaseline;
-        JJ.textBaseline = "bottom";
+      getTextHeight: function(BB, TB) {
+        const dB = BB.textBaseline;
+        BB.textBaseline = "bottom";
         const {
-          actualBoundingBoxAscent: FJ
-        } = JJ.measureText(cJ);
-        return JJ.textBaseline = ZJ, FJ
+          actualBoundingBoxAscent: VB
+        } = BB.measureText(TB);
+        return BB.textBaseline = dB, VB
       },
-      justifyLine: function(JJ, cJ, ZJ, FJ, UJ) {
-        const eJ = cJ.trim(),
-          XJ = JJ.measureText(eJ).width,
-          AJ = eJ.split(/\s+/).length - 1,
-          qJ = Math.floor((UJ - XJ) / ZJ);
-        if (AJ <= 0 || qJ <= 0) return eJ;
-        const jJ = Math.floor(qJ / AJ);
-        let YJ = qJ - AJ * jJ,
-          hJ = [];
-        for (let DJ = 0; DJ < jJ; DJ++) hJ.push(FJ);
-        hJ = hJ.join("");
-        return eJ.replace(/\s+/g, (JJ => {
-          const cJ = YJ > 0 ? hJ + FJ : hJ;
-          return YJ--, JJ + cJ
+      justifyLine: function(BB, TB, dB, VB, yB) {
+        const pB = TB.trim(),
+          lB = BB.measureText(pB).width,
+          JB = pB.split(/\s+/).length - 1,
+          YB = Math.floor((yB - lB) / dB);
+        if (JB <= 0 || YB <= 0) return pB;
+        const gB = Math.floor(YB / JB);
+        let oB = YB - JB * gB,
+          kB = [];
+        for (let LB = 0; LB < gB; LB++) kB.push(VB);
+        kB = kB.join("");
+        return pB.replace(/\s+/g, (BB => {
+          const TB = oB > 0 ? kB + VB : kB;
+          return oB--, BB + TB
         }))
       }
     }
   },
-  38071: (JJ, cJ, ZJ) => {
-    function FJ(JJ, cJ) {
-      return cJ.set(JJ), cJ
+  38061: (BB, TB, dB) => {
+    function VB(BB, TB) {
+      return TB.set(BB), TB
     }
-    ZJ.d(cJ, {
-      e: () => FJ
+    dB.d(TB, {
+      d: () => VB
     })
   },
-  37642: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      c: () => GJ,
-      d: () => nJ,
-      h: () => DJ,
-      k: () => YJ,
-      o: () => hJ
+  37636: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => uB,
+      g: () => DB,
+      h: () => LB,
+      k: () => oB,
+      o: () => kB
     });
-    var FJ = ZJ(3726),
-      UJ = ZJ(235);
-    const eJ = 1024,
-      XJ = 1536,
-      AJ = 2 * FJ.k + 1,
-      qJ = new Intl.NumberFormat("en", {
+    var VB = dB(3716),
+      yB = dB(279);
+    const pB = 1024,
+      lB = 1536,
+      JB = 2 * VB.k + 1,
+      YB = new Intl.NumberFormat("en", {
         maximumSignificantDigits: 15
       }),
-      jJ = 1.5;
+      gB = 1.5;
 
-    function YJ(JJ, cJ, ZJ) {
-      if ("string" !== typeof JJ) return cJ;
+    function oB(BB, TB, dB) {
+      if ("string" !== typeof BB) return TB;
       try {
-        const ZJ = JSON.parse(JJ);
-        return ZJ && "object" === typeof ZJ ? ZJ : cJ
-      } catch (FJ) {
-        return void 0 !== ZJ && console.error(`Couldn't parse ${ZJ}`, FJ), cJ
+        const dB = JSON.parse(BB);
+        return dB && "object" === typeof dB ? dB : TB
+      } catch (VB) {
+        return void 0 !== dB && console.error(`Couldn't parse ${dB}`, VB), TB
       }
     }
 
-    function hJ(JJ) {
-      return YJ(JJ, null, "a leaderboard's rows")
+    function kB(BB) {
+      return oB(BB, null, "a leaderboard's rows")
     }
 
-    function DJ(JJ, cJ) {
-      var ZJ, FJ;
-      return null !== cJ && void 0 !== cJ ? cJ : {
-        status: null !== (ZJ = JJ.status) && void 0 !== ZJ ? ZJ : "loading",
-        entries: null !== (FJ = JJ.entries) && void 0 !== FJ ? FJ : []
+    function LB(BB, TB) {
+      var dB, VB;
+      return null !== TB && void 0 !== TB ? TB : {
+        status: null !== (dB = BB.status) && void 0 !== dB ? dB : "loading",
+        entries: null !== (VB = BB.entries) && void 0 !== VB ? VB : []
       }
     }
 
-    function sJ(JJ, cJ) {
-      return "number" === typeof JJ && Number.isFinite(JJ) && JJ > 0 ? JJ : cJ
+    function OB(BB, TB) {
+      return "number" === typeof BB && Number.isFinite(BB) && BB > 0 ? BB : TB
     }
 
-    function nJ(JJ, cJ) {
-      const ZJ = sJ(JJ.size, 1);
-      let FJ = sJ(JJ.width, sJ(2.5 * ZJ, 2.5)),
-        UJ = sJ(JJ.height, sJ(3.75 * ZJ, 3.75));
-      Number.isFinite(eJ * UJ / FJ) && Number.isFinite(XJ * FJ / UJ) || (FJ = 2.5, UJ = 3.75);
-      const AJ = UJ / FJ,
-        qJ = Math.max(1, Math.min(eJ, cJ / AJ));
+    function DB(BB, TB) {
+      const dB = OB(BB.size, 1);
+      let VB = OB(BB.width, OB(2.5 * dB, 2.5)),
+        yB = OB(BB.height, OB(3.75 * dB, 3.75));
+      Number.isFinite(pB * yB / VB) && Number.isFinite(lB * VB / yB) || (VB = 2.5, yB = 3.75);
+      const JB = yB / VB,
+        YB = Math.max(1, Math.min(pB, TB / JB));
       return {
-        width: FJ,
-        height: UJ,
-        layoutWidth: Math.max(eJ, XJ / AJ),
-        layoutHeight: Math.max(XJ, eJ * AJ),
-        pixelWidth: Math.round(qJ),
-        pixelHeight: Math.round(Math.max(1, Math.min(cJ, qJ * AJ)))
+        width: VB,
+        height: yB,
+        layoutWidth: Math.max(pB, lB / JB),
+        layoutHeight: Math.max(lB, pB * JB),
+        pixelWidth: Math.round(YB),
+        pixelHeight: Math.round(Math.max(1, Math.min(TB, YB * JB)))
       }
     }
 
-    function GJ(JJ, cJ, ZJ, XJ, YJ, hJ) {
-      JJ.setTransform(1, 0, 0, 1, 0, 0), JJ.fillStyle = UJ.D.defaultNameTagBackground, JJ.fillRect(0, 0, cJ, ZJ), JJ.scale(cJ / XJ.layoutWidth, ZJ / XJ.layoutHeight), JJ.translate((XJ.layoutWidth - eJ) / 2, 0),
-        function(JJ, cJ, ZJ, eJ) {
-          var XJ, YJ, hJ, DJ;
+    function uB(BB, TB, dB, lB, oB, kB) {
+      BB.setTransform(1, 0, 0, 1, 0, 0), BB.fillStyle = yB.L.defaultNameTagBackground, BB.fillRect(0, 0, TB, dB), BB.scale(TB / lB.layoutWidth, dB / lB.layoutHeight), BB.translate((lB.layoutWidth - pB) / 2, 0),
+        function(BB, TB, dB, pB) {
+          var lB, oB, kB, LB;
           const {
-            top: sJ,
-            around: nJ,
-            showPlayerText: GJ,
-            localPlayerDbId: rJ
-          } = ZJ, {
-            whiteUiText: vJ,
-            grayUiText: mJ,
-            yellowUiText: QJ
-          } = UJ.D;
-          JJ.textBaseline = "middle";
-          const EJ = function(cJ, ZJ, FJ, UJ, eJ, XJ) {
-              let AJ = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
-              JJ.font = `bold ${UJ}px 'Jetbrains Mono', monospace`, JJ.fillStyle = eJ, JJ.textAlign = AJ;
-              let qJ = cJ.replace(/[\r\n\t]/g, " ");
-              if (JJ.measureText(qJ).width > XJ) {
-                for (; qJ.length > 0 && JJ.measureText(`${qJ}\u2026`).width > XJ;) qJ = qJ.slice(0, -1);
-                qJ += "\u2026"
+            top: OB,
+            around: DB,
+            showPlayerText: uB,
+            localPlayerDbId: vB
+          } = dB, {
+            whiteUiText: mB,
+            grayUiText: iB,
+            yellowUiText: NB
+          } = yB.L;
+          BB.textBaseline = "middle";
+          const tB = function(TB, dB, VB, yB, pB, lB) {
+              let JB = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
+              BB.font = `bold ${yB}px 'Jetbrains Mono', monospace`, BB.fillStyle = pB, BB.textAlign = JB;
+              let YB = TB.replace(/[\r\n\t]/g, " ");
+              if (BB.measureText(YB).width > lB) {
+                for (; YB.length > 0 && BB.measureText(`${YB}\u2026`).width > lB;) YB = YB.slice(0, -1);
+                YB += "\u2026"
               }
-              JJ.fillText(qJ, ZJ, FJ)
+              BB.fillText(YB, dB, VB)
             },
-            VJ = cJ => {
-              JJ.fillStyle = vJ, JJ.globalAlpha = .15, JJ.fillRect(24, cJ, 976, 2), JJ.globalAlpha = 1
+            fB = TB => {
+              BB.fillStyle = mB, BB.globalAlpha = .15, BB.fillRect(24, TB, 976, 2), BB.globalAlpha = 1
             },
-            KJ = null === rJ ? null : (0, UJ.fc)(rJ),
-            yJ = JJ => null !== KJ && JJ.playerHash === KJ,
-            SJ = fJ(sJ.entries, FJ.n),
-            IJ = "ready" === sJ.status && SJ.length > 0,
-            MJ = null === nJ ? [] : fJ(nJ.entries, AJ),
-            bJ = SJ.some(yJ),
-            wJ = null === nJ ? null : function(JJ) {
-              const cJ = JJ;
-              if (!cJ || !Number.isFinite(cJ.rank) || !Number.isFinite(cJ.tied) || !Number.isFinite(cJ.total)) return null;
-              return cJ
-            }(nJ.standing),
-            WJ = MJ.find(yJ),
-            gJ = SJ.find(yJ),
-            HJ = null === wJ || void 0 === WJ ? null : {
-              value: WJ.value,
-              rank: wJ.rank
+            sB = null === vB ? null : (0, yB.tc)(vB),
+            MB = BB => null !== sB && BB.playerHash === sB,
+            zB = HB(OB.entries, VB.o),
+            wB = "ready" === OB.status && zB.length > 0,
+            UB = null === DB ? [] : HB(DB.entries, JB),
+            FB = zB.some(MB),
+            KB = null === DB ? null : function(BB) {
+              const TB = BB;
+              if (!TB || !Number.isFinite(TB.rank) || !Number.isFinite(TB.tied) || !Number.isFinite(TB.total)) return null;
+              return TB
+            }(DB.standing),
+            rB = UB.find(MB),
+            IB = zB.find(MB),
+            cB = null === KB || void 0 === rB ? null : {
+              value: rB.value,
+              rank: KB.rank
             },
-            PJ = xJ(SJ, void 0 === gJ || gJ.value === (null === HJ || void 0 === HJ ? void 0 : HJ.value) ? HJ : null),
-            kJ = xJ(MJ, HJ),
-            pJ = (JJ, cJ) => {
-              const ZJ = JJ.findIndex(yJ);
-              return ZJ >= 0 ? cJ[ZJ] : null
+            SB = EB(zB, void 0 === IB || IB.value === (null === cB || void 0 === cB ? void 0 : cB.value) ? cB : null),
+            PB = EB(UB, cB),
+            QB = (BB, TB) => {
+              const dB = BB.findIndex(MB);
+              return dB >= 0 ? TB[dB] : null
             },
-            dJ = null !== (XJ = null !== (YJ = null === wJ || void 0 === wJ ? void 0 : wJ.rank) && void 0 !== YJ ? YJ : pJ(MJ, kJ)) && void 0 !== XJ ? XJ : pJ(SJ, PJ);
-          JJ.font = "bold 34px 'Jetbrains Mono', monospace";
-          const zJ = [...IJ ? PJ : [], ...bJ ? [] : kJ],
-            NJ = Math.min(280, Math.max(0, ...zJ.map((cJ => JJ.measureText(qJ.format(cJ)).width)))),
-            OJ = NJ <= 80,
-            TJ = OJ ? 80 : 32 + NJ,
-            CJ = OJ ? 148 : TJ + 28,
-            uJ = 660 - CJ;
-          EJ(`TOP ${FJ.n}  /  ALL TIME`, 24, 52, 28, mJ, 976), EJ(GJ ? String(null !== (hJ = cJ.title) && void 0 !== hJ ? hJ : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, vJ, 976), EJ("RANK", 32, 174, 28, mJ, CJ - 40), EJ("PLAYER", CJ, 174, 28, mJ, uJ), EJ(GJ ? String(null !== (DJ = cJ.scoreLabel) && void 0 !== DJ ? DJ : "Score").slice(0, 24) : "Score", 992, 174, 28, mJ, 304, "right"), VJ(202);
-          const iJ = (eJ - 232) / (FJ.n + jJ + AJ),
-            RJ = 208 + FJ.n * iJ,
-            LJ = RJ + jJ * iJ,
-            aJ = (cJ, ZJ, FJ, UJ) => {
-              const eJ = yJ(cJ);
-              JJ.fillStyle = eJ ? QJ : vJ, JJ.globalAlpha = eJ ? .15 : UJ ? .035 : 0, JJ.fillRect(24, FJ - iJ / 2 + 1, 976, iJ - 2), JJ.globalAlpha = 1;
-              const XJ = eJ ? QJ : vJ;
-              EJ(qJ.format(ZJ), TJ, FJ, 34, XJ, OJ ? 80 : NJ, OJ ? "center" : "right"), EJ(GJ ? String(cJ.name).slice(0, 64) : "Player", CJ, FJ, 34, XJ, uJ);
-              const AJ = qJ.format(cJ.value);
-              EJ(JJ.measureText(AJ).width > 304 ? cJ.value.toExponential(6) : AJ, 992, FJ, 34, XJ, 304, "right")
+            RB = null !== (lB = null !== (oB = null === KB || void 0 === KB ? void 0 : KB.rank) && void 0 !== oB ? oB : QB(UB, PB)) && void 0 !== lB ? lB : QB(zB, SB);
+          BB.font = "bold 34px 'Jetbrains Mono', monospace";
+          const aB = [...wB ? SB : [], ...FB ? [] : PB],
+            ZB = Math.min(280, Math.max(0, ...aB.map((TB => BB.measureText(YB.format(TB)).width)))),
+            XB = ZB <= 80,
+            WB = XB ? 80 : 32 + ZB,
+            hB = XB ? 148 : WB + 28,
+            CB = 660 - hB;
+          tB(`TOP ${VB.o}  /  ALL TIME`, 24, 52, 28, iB, 976), tB(uB ? String(null !== (kB = TB.title) && void 0 !== kB ? kB : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, mB, 976), tB("RANK", 32, 174, 28, iB, hB - 40), tB("PLAYER", hB, 174, 28, iB, CB), tB(uB ? String(null !== (LB = TB.scoreLabel) && void 0 !== LB ? LB : "Score").slice(0, 24) : "Score", 992, 174, 28, iB, 304, "right"), fB(202);
+          const GB = (pB - 232) / (VB.o + gB + JB),
+            qB = 208 + VB.o * GB,
+            xB = qB + gB * GB,
+            jB = (TB, dB, VB, yB) => {
+              const pB = MB(TB);
+              BB.fillStyle = pB ? NB : mB, BB.globalAlpha = pB ? .15 : yB ? .035 : 0, BB.fillRect(24, VB - GB / 2 + 1, 976, GB - 2), BB.globalAlpha = 1;
+              const lB = pB ? NB : mB;
+              tB(YB.format(dB), WB, VB, 34, lB, XB ? 80 : ZB, XB ? "center" : "right"), tB(uB ? String(TB.name).slice(0, 64) : "Player", hB, VB, 34, lB, CB);
+              const JB = YB.format(TB.value);
+              tB(BB.measureText(JB).width > 304 ? TB.value.toExponential(6) : JB, 992, VB, 34, lB, 304, "right")
             };
-          if (IJ)
-            for (const [FJ, UJ] of SJ.entries()) aJ(UJ, PJ[FJ], 208 + (FJ + .5) * iJ, FJ % 2 === 0);
+          if (wB)
+            for (const [VB, yB] of zB.entries()) jB(yB, SB[VB], 208 + (VB + .5) * GB, VB % 2 === 0);
           else {
-            const JJ = "error" === sJ.status,
-              cJ = JJ ? "Couldn't load leaderboard" : "ready" === sJ.status ? "No scores yet" : "Loading leaderboard\u2026",
-              ZJ = JJ ? "Trying again shortly" : "ready" === sJ.status ? "Be the first on the board!" : "Fetching the top players",
-              FJ = (208 + RJ) / 2;
-            EJ(cJ, 512, FJ - 28, 40, JJ ? UJ.D.redUiText : vJ, 960, "center"), EJ(ZJ, 512, FJ + 27, 30, mJ, 960, "center")
+            const BB = "error" === OB.status,
+              TB = BB ? "Couldn't load leaderboard" : "ready" === OB.status ? "No scores yet" : "Loading leaderboard\u2026",
+              dB = BB ? "Trying again shortly" : "ready" === OB.status ? "Be the first on the board!" : "Fetching the top players",
+              VB = (208 + qB) / 2;
+            tB(TB, 512, VB - 28, 40, BB ? yB.L.redUiText : mB, 960, "center"), tB(dB, 512, VB + 27, 30, iB, 960, "center")
           }
-          const BJ = RJ + jJ * iJ / 2;
-          if (null === dJ) VJ(BJ);
+          const AB = qB + gB * GB / 2;
+          if (null === RB) fB(AB);
           else {
-            const cJ = null === wJ ? 0 : wJ.tied - 1,
-              ZJ = `YOUR RANK #${qJ.format(dJ)}${null===wJ?"":` of ${qJ.format(wJ.total)}`}`;
-            JJ.font = "bold 36px 'Jetbrains Mono', monospace";
-            const FJ = Math.max(20, Math.min(36, Math.floor(34560 / JJ.measureText(ZJ).width)));
-            EJ(ZJ, 512, BJ - (cJ > 0 ? 15 : 0), FJ, QJ, 960, "center"), cJ > 0 && EJ(`Tied with ${qJ.format(cJ)} other${1===cJ?"":"s"}`, 512, BJ + 24, 24, mJ, 960, "center")
+            const TB = null === KB ? 0 : KB.tied - 1,
+              dB = `YOUR RANK #${YB.format(RB)}${null===KB?"":` of ${YB.format(KB.total)}`}`;
+            BB.font = "bold 36px 'Jetbrains Mono', monospace";
+            const VB = Math.max(20, Math.min(36, Math.floor(34560 / BB.measureText(dB).width)));
+            tB(dB, 512, AB - (TB > 0 ? 15 : 0), VB, NB, 960, "center"), TB > 0 && tB(`Tied with ${YB.format(TB)} other${1===TB?"":"s"}`, 512, AB + 24, 24, iB, 960, "center")
           }
-          if (null === nJ) return;
-          const tJ = LJ + AJ * iJ / 2;
-          if (bJ) EJ(`You're in the top ${FJ.n}!`, 512, tJ, 40, QJ, 960, "center");
-          else if (0 === MJ.length) EJ("You're not on this board yet", 512, tJ, 34, mJ, 960, "center");
+          if (null === DB) return;
+          const bB = xB + JB * GB / 2;
+          if (FB) tB(`You're in the top ${VB.o}!`, 512, bB, 40, NB, 960, "center");
+          else if (0 === UB.length) tB("You're not on this board yet", 512, bB, 34, iB, 960, "center");
           else
-            for (const [FJ, UJ] of MJ.entries()) aJ(UJ, kJ[FJ], LJ + (FJ + .5) * iJ, FJ % 2 === 0)
-        }(JJ, YJ, hJ, XJ.layoutHeight)
+            for (const [VB, yB] of UB.entries()) jB(yB, PB[VB], xB + (VB + .5) * GB, VB % 2 === 0)
+        }(BB, oB, kB, lB.layoutHeight)
     }
 
-    function fJ(JJ, cJ) {
-      return Array.isArray(JJ) ? JJ.slice(0, cJ).filter((JJ => JJ && Number.isFinite(JJ.rank) && Number.isFinite(JJ.value))) : []
+    function HB(BB, TB) {
+      return Array.isArray(BB) ? BB.slice(0, TB).filter((BB => BB && Number.isFinite(BB.rank) && Number.isFinite(BB.value))) : []
     }
 
-    function xJ(JJ, cJ) {
-      const ZJ = [];
-      let FJ = !1;
-      return JJ.forEach(((UJ, eJ) => {
-        if (null !== cJ && UJ.value === cJ.value) return void ZJ.push(cJ.rank);
-        const XJ = eJ > 0 && UJ.value === JJ[eJ - 1].value;
-        XJ || (FJ = 0 === eJ && 1 !== UJ.rank), ZJ.push(XJ && !FJ ? ZJ[eJ - 1] : UJ.rank)
-      })), ZJ
+    function EB(BB, TB) {
+      const dB = [];
+      let VB = !1;
+      return BB.forEach(((yB, pB) => {
+        if (null !== TB && yB.value === TB.value) return void dB.push(TB.rank);
+        const lB = pB > 0 && yB.value === BB[pB - 1].value;
+        lB || (VB = 0 === pB && 1 !== yB.rank), dB.push(lB && !VB ? dB[pB - 1] : yB.rank)
+      })), dB
     }
   },
-  37818: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => UJ,
-      g: () => eJ
+  37829: (BB, TB, dB) => {
+    dB.d(TB, {
+      b: () => yB,
+      e: () => pB
     });
-    const FJ = 32;
+    const VB = 32;
 
-    function UJ(JJ) {
-      return Array.from(JJ).length
+    function yB(BB) {
+      return Array.from(BB).length
     }
 
-    function eJ(JJ) {
-      const cJ = [""];
-      let ZJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        UJ = "";
-      const eJ = () => {
-        cJ.push(""), ZJ = 0, UJ = ""
+    function pB(BB) {
+      const TB = [""];
+      let dB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        yB = "";
+      const pB = () => {
+        TB.push(""), dB = 0, yB = ""
       };
-      for (const XJ of JJ.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
-        if (/^\r?\n$/.test(XJ)) eJ();
-        else if (/^\s+$/.test(XJ)) UJ += XJ;
-      else if (XJ.length > 0) {
-        const JJ = Array.from(XJ);
-        ZJ > 0 && ZJ + UJ.length + JJ.length > FJ && eJ(), cJ[cJ.length - 1] += UJ, ZJ += UJ.length, UJ = "";
-        for (const UJ of JJ) ZJ >= FJ && eJ(), cJ[cJ.length - 1] += UJ, ZJ++
+      for (const lB of BB.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
+        if (/^\r?\n$/.test(lB)) pB();
+        else if (/^\s+$/.test(lB)) yB += lB;
+      else if (lB.length > 0) {
+        const BB = Array.from(lB);
+        dB > 0 && dB + yB.length + BB.length > VB && pB(), TB[TB.length - 1] += yB, dB += yB.length, yB = "";
+        for (const yB of BB) dB >= VB && pB(), TB[TB.length - 1] += yB, dB++
       }
-      return cJ[cJ.length - 1] += UJ, cJ
+      return TB[TB.length - 1] += yB, TB
     }
   },
-  38062: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => XJ
+  38056: (BB, TB, dB) => {
+    dB.d(TB, {
+      b: () => lB
     });
-    var FJ = ZJ(35685),
-      UJ = ZJ.n(FJ);
-    const eJ = [1, 1, 1];
+    var VB = dB(35634),
+      yB = dB.n(VB);
+    const pB = [1, 1, 1];
 
-    function XJ(JJ) {
-      if (!JJ) return [...eJ];
+    function lB(BB) {
+      if (!BB) return [...pB];
       try {
-        const [cJ, ZJ, FJ] = UJ()(JJ).rgb().array();
-        return [cJ / 255, ZJ / 255, FJ / 255]
-      } catch (cJ) {
-        return console.warn(`Invalid groundArrowPath colour "${JJ}":`, cJ), [...eJ]
+        const [TB, dB, VB] = yB()(BB).rgb().array();
+        return [TB / 255, dB / 255, VB / 255]
+      } catch (TB) {
+        return console.warn(`Invalid groundArrowPath colour "${BB}":`, TB), [...pB]
       }
     }
   },
-  33431: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      b: () => eJ,
-      c: () => AJ,
-      g: () => XJ,
-      h: () => UJ,
-      l: () => FJ
+  33435: (BB, TB, dB) => {
+    dB.d(TB, {
+      e: () => pB,
+      f: () => JB,
+      h: () => lB,
+      l: () => yB,
+      n: () => VB
     });
-    const FJ = {
+    const VB = {
         default: {
           type: "earth",
           vertexTint: [137, 207, 240]
@@ -1651,41 +1651,41 @@ export const modules = {
           pz: "/textures/skyBoxes/space_white/_pz.jpg"
         }
       },
-      UJ = "/textures/dayNight/sun.png",
-      eJ = "/textures/dayNight/moon.png",
-      XJ = "/textures/dayNight/stars",
-      AJ = ["_px.png", "_py.png", "_pz.png", "_nx.png", "_ny.png", "_nz.png"]
+      yB = "/textures/dayNight/sun.png",
+      pB = "/textures/dayNight/moon.png",
+      lB = "/textures/dayNight/stars",
+      JB = ["_px.png", "_py.png", "_pz.png", "_nx.png", "_ny.png", "_nz.png"]
   },
-  38141: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => YJ,
-      f: () => hJ,
-      h: () => FJ,
-      k: () => qJ,
-      l: () => UJ,
-      o: () => jJ,
-      q: () => AJ,
-      u: () => XJ
+  38125: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => oB,
+      h: () => kB,
+      l: () => VB,
+      m: () => YB,
+      q: () => yB,
+      u: () => gB,
+      w: () => JB,
+      y: () => lB
     });
-    const FJ = ["linear", "easeIn", "easeOut", "easeInOut"],
-      UJ = ["movement", "camera", "cursor"],
-      eJ = ["targets", "playerFacing", "blendInMs", "blendEasing", "transition", "letterbox", "hideHud"];
+    const VB = ["linear", "easeIn", "easeOut", "easeInOut"],
+      yB = ["movement", "camera", "cursor"],
+      pB = ["targets", "playerFacing", "blendInMs", "blendEasing", "transition", "letterbox", "hideHud"];
 
-    function XJ(JJ, cJ) {
-      return AJ(JJ, cJ, eJ)
+    function lB(BB, TB) {
+      return JB(BB, TB, pB)
     }
 
-    function AJ(JJ, cJ) {
-      let ZJ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      if (JJ === cJ || Number.isNaN(JJ) && Number.isNaN(cJ)) return !0;
-      if ("object" !== typeof JJ || "object" !== typeof cJ || null === JJ || null === cJ || Array.isArray(JJ) !== Array.isArray(cJ)) return !1;
-      const FJ = JJ,
-        UJ = cJ;
-      for (const eJ of new Set([...Object.keys(FJ), ...Object.keys(UJ)]))
-        if (!ZJ.includes(eJ) && !AJ(FJ[eJ], UJ[eJ])) return !1;
+    function JB(BB, TB) {
+      let dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      if (BB === TB || Number.isNaN(BB) && Number.isNaN(TB)) return !0;
+      if ("object" !== typeof BB || "object" !== typeof TB || null === BB || null === TB || Array.isArray(BB) !== Array.isArray(TB)) return !1;
+      const VB = BB,
+        yB = TB;
+      for (const pB of new Set([...Object.keys(VB), ...Object.keys(yB)]))
+        if (!dB.includes(pB) && !JB(VB[pB], yB[pB])) return !1;
       return !0
     }
-    const qJ = {
+    const YB = {
         maxBlendInMs: 1e4,
         minFov: 10,
         maxFov: 120,
@@ -1707,10 +1707,10 @@ export const modules = {
         minEasingY: -1,
         maxEasingY: 2
       },
-      jJ = "^-[1-9][0-9]*$",
-      YJ = "^#[0-9a-fA-F]{6}$",
-      hJ = "#000000"
+      gB = "^-[1-9][0-9]*$",
+      oB = "^#[0-9a-fA-F]{6}$",
+      kB = "#000000"
   }
 };
 Object.freeze(modules);
-for (const JJ in modules) Object.freeze(modules[JJ]);
+for (const BB in modules) Object.freeze(modules[BB]);

@@ -1,19 +1,19 @@
 export const id = 349;
 export const ids = [349];
 export const modules = {
-  59672: (JJ, cJ, ZJ) => {
-    ZJ.r(cJ), ZJ.d(cJ, {
-      lodPixelShader: () => XJ
+  59978: (BB, TB, dB) => {
+    dB.r(TB), dB.d(TB, {
+      lodPixelShader: () => lB
     });
-    var FJ = ZJ(38658);
-    const UJ = "lodPixelShader",
-      eJ = "precision highp float;const float GammaEncodePowerApprox=1.0/2.2;varying vec2 vUV;uniform sampler2D textureSampler;uniform float lod;uniform vec2 texSize;uniform int gamma;void main(void)\n{ivec2 textureDimensions=textureSize(textureSampler,0);gl_FragColor=texelFetch(textureSampler,ivec2(vUV*vec2(textureDimensions)),int(lod));if (gamma==0) {gl_FragColor.rgb=pow(gl_FragColor.rgb,vec3(GammaEncodePowerApprox));}}\n";
-    FJ.b.ShadersStore[UJ] || (FJ.b.ShadersStore[UJ] = eJ);
-    const XJ = {
-      name: UJ,
-      shader: eJ
+    var VB = dB(38595);
+    const yB = "lodPixelShader",
+      pB = "precision highp float;const float GammaEncodePowerApprox=1.0/2.2;varying vec2 vUV;uniform sampler2D textureSampler;uniform float lod;uniform vec2 texSize;uniform int gamma;void main(void)\n{ivec2 textureDimensions=textureSize(textureSampler,0);gl_FragColor=texelFetch(textureSampler,ivec2(vUV*vec2(textureDimensions)),int(lod));if (gamma==0) {gl_FragColor.rgb=pow(gl_FragColor.rgb,vec3(GammaEncodePowerApprox));}}\n";
+    VB.e.ShadersStore[yB] || (VB.e.ShadersStore[yB] = pB);
+    const lB = {
+      name: yB,
+      shader: pB
     }
   }
 };
 Object.freeze(modules);
-for (const JJ in modules) Object.freeze(modules[JJ]);
+for (const BB in modules) Object.freeze(modules[BB]);

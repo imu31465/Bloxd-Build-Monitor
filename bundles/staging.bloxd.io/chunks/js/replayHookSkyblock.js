@@ -1,91 +1,91 @@
 export const id = 45;
 export const ids = [45];
 export const modules = {
-  37626: (JJ, cJ, ZJ) => {
-    ZJ.r(cJ), ZJ.d(cJ, {
-      SkyblockEntityFacing: () => AJ,
-      needsSkyblockEntityFacing: () => XJ
+  37605: (BB, TB, dB) => {
+    dB.r(TB), dB.d(TB, {
+      SkyblockEntityFacing: () => JB,
+      needsSkyblockEntityFacing: () => lB
     });
-    var FJ = ZJ(37524),
-      UJ = ZJ(3726),
-      eJ = ZJ(37633);
+    var VB = dB(37502),
+      yB = dB(3716),
+      pB = dB(37614);
 
-    function XJ(JJ, cJ) {
-      if (JJ.metaInfo === FJ.n || "Iron Guardian" === JJ.type || "Gold Guardian" === JJ.type) return !0;
-      if ("Pig" === JJ.type) return "sitting" === JJ.pose;
-      if ("Person" !== JJ.meshKind || void 0 === JJ.meshOpts) return !1;
-      let ZJ = null === cJ || void 0 === cJ ? void 0 : cJ.get(JJ.meshOpts);
-      if (void 0 === ZJ) {
-        var eJ, XJ;
-        const FJ = (0, UJ.i)(JJ);
-        ZJ = !1, "pig_napoleon" === (null === FJ || void 0 === FJ || null === (eJ = FJ.opts.textures) || void 0 === eJ ? void 0 : eJ.head) ? ZJ = !0 : "npc_pig_head" === (null === FJ || void 0 === FJ || null === (XJ = FJ.opts.textures) || void 0 === XJ ? void 0 : XJ.head) && (ZJ = "sitting" === FJ.opts.pose || "sitting"), cJ && (cJ.size >= 256 && cJ.clear(), cJ.set(JJ.meshOpts, ZJ))
+    function lB(BB, TB) {
+      if (BB.metaInfo === VB.m || "Iron Guardian" === BB.type || "Gold Guardian" === BB.type) return !0;
+      if ("Pig" === BB.type) return "sitting" === BB.pose;
+      if ("Person" !== BB.meshKind || void 0 === BB.meshOpts) return !1;
+      let dB = null === TB || void 0 === TB ? void 0 : TB.get(BB.meshOpts);
+      if (void 0 === dB) {
+        var pB, lB;
+        const VB = (0, yB.g)(BB);
+        dB = !1, "pig_napoleon" === (null === VB || void 0 === VB || null === (pB = VB.opts.textures) || void 0 === pB ? void 0 : pB.head) ? dB = !0 : "npc_pig_head" === (null === VB || void 0 === VB || null === (lB = VB.opts.textures) || void 0 === lB ? void 0 : lB.head) && (dB = "sitting" === VB.opts.pose || "sitting"), TB && (TB.size >= 256 && TB.clear(), TB.set(BB.meshOpts, dB))
       }
-      return "sitting" === ZJ ? "sitting" === JJ.pose : ZJ
-    }(0, eJ.g)("skyblock", ((JJ, cJ) => {
-      cJ.setFacingTolerance(XJ(JJ) ? 0 : null)
+      return "sitting" === dB ? "sitting" === BB.pose : dB
+    }(0, pB.g)("skyblock", ((BB, TB) => {
+      TB.setFacingTolerance(lB(BB) ? 0 : null)
     }));
-    class AJ {
-      constructor(JJ) {
-        let cJ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        this.api = JJ, this.alsoVisit = cJ, this.facing = new Set, this.nextFacing = new Set, this.meshFacingCache = new Map, this.visit = JJ => {
-          var cJ;
-          const ZJ = this.api.getEntityInfo(JJ);
-          ZJ && (XJ(ZJ, this.meshFacingCache) && (this.api.setFacingTolerance(JJ, 0), this.nextFacing.add(JJ)), null === (cJ = this.alsoVisit) || void 0 === cJ || cJ.call(this, JJ, ZJ))
+    class JB {
+      constructor(BB) {
+        let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        this.api = BB, this.alsoVisit = TB, this.facing = new Set, this.nextFacing = new Set, this.meshFacingCache = new Map, this.visit = BB => {
+          var TB;
+          const dB = this.api.getEntityInfo(BB);
+          dB && (lB(dB, this.meshFacingCache) && (this.api.setFacingTolerance(BB, 0), this.nextFacing.add(BB)), null === (TB = this.alsoVisit) || void 0 === TB || TB.call(this, BB, dB))
         }
       }
-      Hh() {
+      dL() {
         const {
-          api: JJ
-        } = this, cJ = this.nextFacing;
-        JJ.forEachEntity(this.visit);
-        for (const ZJ of this.facing) cJ.has(ZJ) || JJ.setFacingTolerance(ZJ, null);
-        this.facing.clear(), this.nextFacing = this.facing, this.facing = cJ
+          api: BB
+        } = this, TB = this.nextFacing;
+        BB.forEachEntity(this.visit);
+        for (const dB of this.facing) TB.has(dB) || BB.setFacingTolerance(dB, null);
+        this.facing.clear(), this.nextFacing = this.facing, this.facing = TB
       }
       dispose() {
-        for (const JJ of this.facing) this.api.setFacingTolerance(JJ, null);
+        for (const BB of this.facing) this.api.setFacingTolerance(BB, null);
         this.facing.clear(), this.meshFacingCache.clear()
       }
     }
   },
-  37524: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => XJ,
-      g: () => AJ,
-      j: () => FJ,
-      l: () => eJ,
-      n: () => UJ,
-      o: () => qJ
+  37502: (BB, TB, dB) => {
+    dB.d(TB, {
+      e: () => lB,
+      i: () => JB,
+      j: () => VB,
+      l: () => pB,
+      m: () => yB,
+      n: () => YB
     });
-    const FJ = "skyblockDungeons",
-      UJ = "skyblockHeldBoss",
-      eJ = "dungeonEnter ",
-      XJ = Object.freeze({
+    const VB = "skyblockDungeons",
+      yB = "skyblockHeldBoss",
+      pB = "dungeonEnter ",
+      lB = Object.freeze({
         easy: "skyblockGame:difficultyEasy",
         medium: "skyblockGame:difficultyMedium",
         hard: "skyblockGame:difficultyHard",
         insane: "skyblockGame:difficultyInsane"
       }),
-      AJ = Object.freeze({
+      JB = Object.freeze({
         easy: "#77b326",
         medium: "#eac03d",
         hard: "#df7622",
         insane: "#e74d4d"
       });
 
-    function qJ(JJ) {
-      let cJ = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-      const ZJ = Math.max(0, Math.floor(JJ)),
-        FJ = Math.floor(ZJ % 1e3 / 100),
-        UJ = Math.floor(ZJ / 1e3),
-        eJ = UJ % 60,
-        XJ = Math.floor(UJ / 60),
-        AJ = XJ % 60,
-        qJ = Math.floor(XJ / 60),
-        jJ = JJ => JJ < 10 ? `0${JJ}` : String(JJ),
-        YJ = cJ ? `.${FJ}` : "";
-      return qJ > 0 ? `${qJ}:${jJ(AJ)}:${jJ(eJ)}${YJ}` : `${AJ}:${jJ(eJ)}${YJ}`
+    function YB(BB) {
+      let TB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+      const dB = Math.max(0, Math.floor(BB)),
+        VB = Math.floor(dB % 1e3 / 100),
+        yB = Math.floor(dB / 1e3),
+        pB = yB % 60,
+        lB = Math.floor(yB / 60),
+        JB = lB % 60,
+        YB = Math.floor(lB / 60),
+        gB = BB => BB < 10 ? `0${BB}` : String(BB),
+        oB = TB ? `.${VB}` : "";
+      return YB > 0 ? `${YB}:${gB(JB)}:${gB(pB)}${oB}` : `${JB}:${gB(pB)}${oB}`
     }
   }
 };
 Object.freeze(modules);
-for (const JJ in modules) Object.freeze(modules[JJ]);
+for (const BB in modules) Object.freeze(modules[BB]);

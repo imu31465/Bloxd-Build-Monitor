@@ -1,161 +1,161 @@
 export const id = 180;
 export const ids = [180];
 export const modules = {
-  8610: (JJ, cJ, ZJ) => {
-    ZJ.r(cJ), ZJ.d(cJ, {
-      packDisplayName: () => nJ,
-      packModelMessage: () => GJ,
-      packModelSummary: () => xJ,
-      refusedPackModels: () => fJ
+  8623: (BB, TB, dB) => {
+    dB.r(TB), dB.d(TB, {
+      packDisplayName: () => DB,
+      packModelMessage: () => uB,
+      packModelSummary: () => EB,
+      refusedPackModels: () => HB
     });
-    var FJ = ZJ(8615),
-      UJ = ZJ(8620);
-    const eJ = "DRACO",
-      XJ = 0,
-      AJ = 1,
-      qJ = 0,
-      jJ = 1,
-      YJ = 32768;
+    var VB = dB(8629),
+      yB = dB(8634);
+    const pB = "DRACO",
+      lB = 0,
+      JB = 1,
+      YB = 0,
+      gB = 1,
+      oB = 32768;
 
-    function hJ(JJ) {
-      const cJ = new DataView(JJ.buffer, JJ.byteOffset, JJ.byteLength);
-      let ZJ = 0;
-      const FJ = () => {
-          if (ZJ >= JJ.byteLength) throw new RangeError("past the stream");
-          return JJ[ZJ++]
+    function kB(BB) {
+      const TB = new DataView(BB.buffer, BB.byteOffset, BB.byteLength);
+      let dB = 0;
+      const VB = () => {
+          if (dB >= BB.byteLength) throw new RangeError("past the stream");
+          return BB[dB++]
         },
-        UJ = () => {
-          if (ZJ + 4 > JJ.byteLength) throw new RangeError("past the stream");
-          const FJ = cJ.getUint32(ZJ, !0);
-          return ZJ += 4, FJ
+        yB = () => {
+          if (dB + 4 > BB.byteLength) throw new RangeError("past the stream");
+          const VB = TB.getUint32(dB, !0);
+          return dB += 4, VB
         },
-        hJ = () => {
-          let JJ = 0;
-          for (let cJ = 0; cJ < 35; cJ += 7) {
-            const ZJ = FJ();
-            if (JJ += (127 & ZJ) * 2 ** cJ, 0 === (128 & ZJ)) return JJ
+        kB = () => {
+          let BB = 0;
+          for (let TB = 0; TB < 35; TB += 7) {
+            const dB = VB();
+            if (BB += (127 & dB) * 2 ** TB, 0 === (128 & dB)) return BB
           }
           throw new RangeError("varint too long")
         };
       try {
-        for (let JJ = 0; JJ < eJ.length; JJ++)
-          if (FJ() !== eJ.charCodeAt(JJ)) return null;
-        const cJ = FJ(),
-          DJ = FJ(),
-          sJ = FJ(),
-          nJ = FJ(),
-          GJ = FJ() | FJ() << 8;
-        if (2 !== cJ) return null;
-        0 !== (GJ & YJ) && function(JJ, cJ, ZJ) {
-          const FJ = () => {
-              cJ(ZJ())
+        for (let BB = 0; BB < pB.length; BB++)
+          if (VB() !== pB.charCodeAt(BB)) return null;
+        const TB = VB(),
+          LB = VB(),
+          OB = VB(),
+          DB = VB(),
+          uB = VB() | VB() << 8;
+        if (2 !== TB) return null;
+        0 !== (uB & oB) && function(BB, TB, dB) {
+          const VB = () => {
+              TB(dB())
             },
-            UJ = () => {
-              let ZJ = 1,
-                UJ = !0;
-              for (; ZJ > 0;) {
-                ZJ--, UJ || FJ(), UJ = !1;
-                const eJ = JJ();
-                for (let ZJ = 0; ZJ < eJ; ZJ++) FJ(), cJ(JJ());
-                ZJ += JJ()
+            yB = () => {
+              let dB = 1,
+                yB = !0;
+              for (; dB > 0;) {
+                dB--, yB || VB(), yB = !1;
+                const pB = BB();
+                for (let dB = 0; dB < pB; dB++) VB(), TB(BB());
+                dB += BB()
               }
             },
-            eJ = JJ();
-          for (let XJ = 0; XJ < eJ; XJ++) JJ(), UJ();
-          UJ()
-        }(hJ, (cJ => {
-          if (ZJ + cJ > JJ.byteLength) throw new RangeError("past the stream");
-          ZJ += cJ
-        }), FJ);
-        const fJ = DJ < 2 ? UJ : hJ;
-        if (sJ === XJ) return {
+            pB = BB();
+          for (let lB = 0; lB < pB; lB++) BB(), yB();
+          yB()
+        }(kB, (TB => {
+          if (dB + TB > BB.byteLength) throw new RangeError("past the stream");
+          dB += TB
+        }), VB);
+        const HB = LB < 2 ? yB : kB;
+        if (OB === lB) return {
           faces: 0,
-          vertices: UJ()
+          vertices: yB()
         };
-        if (sJ !== AJ) return null;
-        if (nJ === qJ) {
+        if (OB !== JB) return null;
+        if (DB === YB) {
           return {
-            faces: fJ(),
-            vertices: fJ()
+            faces: HB(),
+            vertices: HB()
           }
         }
-        if (nJ !== jJ) return null;
-        FJ(), DJ < 2 && hJ();
-        const xJ = hJ();
+        if (DB !== gB) return null;
+        VB(), LB < 2 && kB();
+        const EB = kB();
         return {
-          faces: hJ(),
-          vertices: xJ
+          faces: kB(),
+          vertices: EB
         }
       } catch {
         return null
       }
     }
 
-    function DJ(JJ, cJ, ZJ) {
-      var FJ, UJ;
-      if (null === (FJ = null === (UJ = JJ.extensionsUsed) || void 0 === UJ ? void 0 : UJ.includes("KHR_draco_mesh_compression")) || void 0 === FJ || !FJ) return null;
-      for (const nJ of null !== (eJ = JJ.meshes) && void 0 !== eJ ? eJ : []) {
-        var eJ;
-        for (const FJ of nJ.primitives) {
-          var XJ, AJ, qJ, jJ, YJ, DJ;
-          const UJ = null === (XJ = FJ.extensions) || void 0 === XJ ? void 0 : XJ.KHR_draco_mesh_compression;
-          if ("object" !== typeof UJ || null === UJ) continue;
-          const eJ = null === (AJ = JJ.bufferViews) || void 0 === AJ ? void 0 : AJ[UJ.bufferView];
-          if (null === cJ || void 0 === eJ) return sJ;
-          const nJ = null !== (qJ = eJ.byteOffset) && void 0 !== qJ ? qJ : 0,
-            GJ = hJ(cJ.subarray(nJ, nJ + eJ.byteLength));
-          if (null === GJ && !ZJ) continue;
-          const fJ = null !== (jJ = JJ.accessors) && void 0 !== jJ ? jJ : [],
-            xJ = null === (YJ = fJ[FJ.attributes.POSITION]) || void 0 === YJ ? void 0 : YJ.count,
-            rJ = void 0 === FJ.indices ? 0 : null === (DJ = fJ[FJ.indices]) || void 0 === DJ ? void 0 : DJ.count;
-          if (null === GJ || void 0 === xJ || void 0 === rJ || 3 * GJ.faces !== rJ || GJ.vertices > xJ) return sJ
+    function LB(BB, TB, dB) {
+      var VB, yB;
+      if (null === (VB = null === (yB = BB.extensionsUsed) || void 0 === yB ? void 0 : yB.includes("KHR_draco_mesh_compression")) || void 0 === VB || !VB) return null;
+      for (const DB of null !== (pB = BB.meshes) && void 0 !== pB ? pB : []) {
+        var pB;
+        for (const VB of DB.primitives) {
+          var lB, JB, YB, gB, oB, LB;
+          const yB = null === (lB = VB.extensions) || void 0 === lB ? void 0 : lB.KHR_draco_mesh_compression;
+          if ("object" !== typeof yB || null === yB) continue;
+          const pB = null === (JB = BB.bufferViews) || void 0 === JB ? void 0 : JB[yB.bufferView];
+          if (null === TB || void 0 === pB) return OB;
+          const DB = null !== (YB = pB.byteOffset) && void 0 !== YB ? YB : 0,
+            uB = kB(TB.subarray(DB, DB + pB.byteLength));
+          if (null === uB && !dB) continue;
+          const HB = null !== (gB = BB.accessors) && void 0 !== gB ? gB : [],
+            EB = null === (oB = HB[VB.attributes.POSITION]) || void 0 === oB ? void 0 : oB.count,
+            vB = void 0 === VB.indices ? 0 : null === (LB = HB[VB.indices]) || void 0 === LB ? void 0 : LB.count;
+          if (null === uB || void 0 === EB || void 0 === vB || 3 * uB.faces !== vB || uB.vertices > EB) return OB
         }
       }
       return null
     }
-    const sJ = "has a Draco stream whose counts don't match its accessors";
+    const OB = "has a Draco stream whose counts don't match its accessors";
 
-    function nJ(JJ) {
-      var cJ;
-      return null !== (cJ = JJ.name) && void 0 !== cJ ? cJ : JJ.fromFolderName || JJ.id
+    function DB(BB) {
+      var TB;
+      return null !== (TB = BB.name) && void 0 !== TB ? TB : BB.fromFolderName || BB.id
     }
 
-    function GJ(JJ, cJ, ZJ) {
-      return `Texture pack "${JJ}": model "${cJ}" was not loaded because it ${ZJ}. The default model is used instead.`
+    function uB(BB, TB, dB) {
+      return `Texture pack "${BB}": model "${TB}" was not loaded because it ${dB}. The default model is used instead.`
     }
 
-    function fJ(JJ, cJ, ZJ) {
+    function HB(BB, TB, dB) {
       let {
-        strictDraco: eJ = !1
+        strictDraco: pB = !1
       } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const XJ = {};
-      for (const [AJ, qJ] of Object.entries(cJ)) {
-        let cJ;
-        if (qJ.startsWith("data:")) try {
-          const JJ = new Uint8Array((0, UJ.w)(qJ));
-          if (cJ = (0, FJ.d)(JJ), null === cJ) {
+      const lB = {};
+      for (const [JB, YB] of Object.entries(TB)) {
+        let TB;
+        if (YB.startsWith("data:")) try {
+          const BB = new Uint8Array((0, yB.u)(YB));
+          if (TB = (0, VB.d)(BB), null === TB) {
             const {
-              json: ZJ,
-              bin: FJ
-            } = (0, UJ.F)(JJ);
-            cJ = DJ(ZJ, FJ, eJ)
+              json: dB,
+              bin: VB
+            } = (0, yB.y)(BB);
+            TB = LB(dB, VB, pB)
           }
         } catch {
-          cJ = "is not a binary glTF 2.0 file"
-        } else cJ = "loads data from outside the file";
-        cJ && (XJ[AJ] = cJ, ZJ && console.warn(GJ(JJ, AJ, cJ)))
+          TB = "is not a binary glTF 2.0 file"
+        } else TB = "loads data from outside the file";
+        TB && (lB[JB] = TB, dB && console.warn(uB(BB, JB, TB)))
       }
-      return XJ
+      return lB
     }
 
-    function xJ(JJ, cJ) {
-      const ZJ = Object.keys(cJ);
-      if (0 === ZJ.length) return null;
-      if (1 === ZJ.length) return GJ(JJ, ZJ[0], cJ[ZJ[0]]);
-      const FJ = ZJ.map((JJ => `"${JJ}" ${cJ[JJ]}`)).join("; ");
-      return `Texture pack "${JJ}": ${ZJ.length} models were not loaded (${FJ}). The default models are used instead.`
+    function EB(BB, TB) {
+      const dB = Object.keys(TB);
+      if (0 === dB.length) return null;
+      if (1 === dB.length) return uB(BB, dB[0], TB[dB[0]]);
+      const VB = dB.map((BB => `"${BB}" ${TB[BB]}`)).join("; ");
+      return `Texture pack "${BB}": ${dB.length} models were not loaded (${VB}). The default models are used instead.`
     }
   }
 };
 Object.freeze(modules);
-for (const JJ in modules) Object.freeze(modules[JJ]);
+for (const BB in modules) Object.freeze(modules[BB]);

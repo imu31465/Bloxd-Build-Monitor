@@ -1,15 +1,15 @@
 export const id = 59;
 export const ids = [53, 59, 85];
 export const modules = {
-  35998: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => XJ,
-      f: () => AJ
+  35941: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => lB,
+      h: () => JB
     });
-    var FJ = ZJ(17);
-    const UJ = 1500,
-      eJ = 1e3,
-      XJ = {
+    var VB = dB(24);
+    const yB = 1500,
+      pB = 1e3,
+      lB = {
         recordingStarted: {
           text: "Started recording",
           type: "Success"
@@ -93,23 +93,23 @@ export const modules = {
         }
       };
 
-    function AJ(JJ) {
-      var cJ;
-      const ZJ = null !== (cJ = JJ.timeoutMs) && void 0 !== cJ ? cJ : "Error" === JJ.type ? UJ : eJ;
-      FJ.i.Uf("showBottomMessage", {
-        message: JJ.text,
-        timeoutLength: ZJ,
-        type: JJ.type
+    function JB(BB) {
+      var TB;
+      const dB = null !== (TB = BB.timeoutMs) && void 0 !== TB ? TB : "Error" === BB.type ? yB : pB;
+      VB.h.yH("showBottomMessage", {
+        message: BB.text,
+        timeoutLength: dB,
+        type: BB.type
       })
     }
   },
-  36009: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      c: () => FJ,
-      e: () => UJ
+  35950: (BB, TB, dB) => {
+    dB.d(TB, {
+      c: () => VB,
+      g: () => yB
     });
-    const FJ = "data-replay-ui-active",
-      UJ = [{
+    const VB = "data-replay-ui-active",
+      yB = [{
         group: "middleTextTop",
         dataAttr: "data-replay-hide-middle-text-top",
         label: "Middle text top"
@@ -159,78 +159,78 @@ export const modules = {
         label: "Everything else"
       }]
   },
-  36014: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      b: () => jJ,
-      e: () => hJ,
-      h: () => YJ
+  35959: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => gB,
+      e: () => kB,
+      g: () => oB
     });
-    var FJ = ZJ(13),
-      UJ = ZJ(17),
-      eJ = ZJ(36009);
+    var VB = dB(21),
+      yB = dB(24),
+      pB = dB(35950);
 
-    function XJ() {
-      const JJ = {};
+    function lB() {
+      const BB = {};
       for (const {
-          group: cJ
+          group: TB
         }
-        of eJ.e) JJ[cJ] = !0;
-      return JJ
+        of pB.g) BB[TB] = !0;
+      return BB
     }
-    let AJ = XJ();
+    let JB = lB();
 
-    function qJ() {
-      UJ.i.Uf("replayViewer|uiVisibilityChanged")
-    }
-
-    function jJ() {
-      return AJ
+    function YB() {
+      yB.h.yH("replayViewer|uiVisibilityChanged")
     }
 
-    function YJ(JJ, cJ) {
-      AJ[JJ] !== cJ && (AJ = {
-        ...AJ,
-        [JJ]: cJ
-      }, "nametag" === JJ && FJ.d.set({
-        areNametagsHidden: !cJ
-      }), qJ())
+    function gB() {
+      return JB
     }
 
-    function hJ() {
-      AJ = XJ(), FJ.d.set({
+    function oB(BB, TB) {
+      JB[BB] !== TB && (JB = {
+        ...JB,
+        [BB]: TB
+      }, "nametag" === BB && VB.d.set({
+        areNametagsHidden: !TB
+      }), YB())
+    }
+
+    function kB() {
+      JB = lB(), VB.d.set({
         areNametagsHidden: !1
-      }), qJ()
+      }), YB()
     }
   },
-  38196: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      d: () => bJ
+  38176: (BB, TB, dB) => {
+    dB.d(TB, {
+      d: () => FB
     });
-    var FJ = ZJ(1620),
-      UJ = ZJ(1247),
-      eJ = ZJ(47),
-      XJ = ZJ(926),
-      AJ = ZJ.n(XJ),
-      qJ = ZJ(1329),
-      jJ = ZJ(80);
-    const YJ = ["video/webm;codecs=vp9,opus", "video/webm;codecs=vp8,opus", "video/webm;codecs=vp9", "video/webm;codecs=vp8", "video/webm"],
-      hJ = ["video/mp4;codecs=avc1,mp4a.40.2", "video/mp4;codecs=avc1.42E01E,mp4a.40.2", "video/mp4;codecs=avc1", "video/mp4"];
+    var VB = dB(1612),
+      yB = dB(1235),
+      pB = dB(62),
+      lB = dB(933),
+      JB = dB.n(lB),
+      YB = dB(1324),
+      gB = dB(95);
+    const oB = ["video/webm;codecs=vp9,opus", "video/webm;codecs=vp8,opus", "video/webm;codecs=vp9", "video/webm;codecs=vp8", "video/webm"],
+      kB = ["video/mp4;codecs=avc1,mp4a.40.2", "video/mp4;codecs=avc1.42E01E,mp4a.40.2", "video/mp4;codecs=avc1", "video/mp4"];
 
-    function DJ(JJ) {
-      return "webm" === JJ ? YJ : hJ
+    function LB(BB) {
+      return "webm" === BB ? oB : kB
     }
 
-    function sJ(JJ) {
-      for (const cJ of JJ)
-        if ("undefined" !== typeof MediaRecorder && MediaRecorder.isTypeSupported(cJ)) return cJ;
+    function OB(BB) {
+      for (const TB of BB)
+        if ("undefined" !== typeof MediaRecorder && MediaRecorder.isTypeSupported(TB)) return TB;
       return null
     }
 
-    function nJ(JJ) {
-      return null !== sJ(DJ(JJ))
+    function DB(BB) {
+      return null !== OB(LB(BB))
     }
-    var GJ = ZJ(990);
-    const fJ = [{
+    var uB = dB(980);
+    const HB = [{
       id: "webm",
       label: "WebM",
       description: "Usually less screen tearing, but may not play in all media players."
@@ -240,177 +240,177 @@ export const modules = {
       description: "Works in more players, but may show graphical glitches on some devices."
     }];
 
-    function xJ() {
-      return nJ("webm") ? "webm" : nJ("mp4") ? "mp4" : "webm"
+    function EB() {
+      return DB("webm") ? "webm" : DB("mp4") ? "mp4" : "webm"
     }
 
-    function rJ(JJ) {
+    function vB(BB) {
       let {
-        cards: cJ
-      } = JJ;
-      return (0, GJ.jsx)("div", {
+        cards: TB
+      } = BB;
+      return (0, uB.jsx)("div", {
         className: "ReplayVideoExportOptionCards",
-        children: cJ.map((JJ => (0, GJ.jsxs)("div", {
+        children: TB.map((BB => (0, uB.jsxs)("div", {
           className: "ReplayVideoExportOptionColumn",
-          children: [(0, GJ.jsx)("div", {
-            className: AJ()("ReplayVideoExportOptionCard", {
-              Selected: JJ.selected,
-              Disabled: JJ.disabled
+          children: [(0, uB.jsx)("div", {
+            className: JB()("ReplayVideoExportOptionCard", {
+              Selected: BB.selected,
+              Disabled: BB.disabled
             }),
             onClick: () => {
-              JJ.disabled || JJ.onSelect()
+              BB.disabled || BB.onSelect()
             },
-            children: (0, GJ.jsxs)("div", {
+            children: (0, uB.jsxs)("div", {
               className: "ReplayVideoExportOptionCardBody",
-              children: [(0, GJ.jsx)("div", {
+              children: [(0, uB.jsx)("div", {
                 className: "ReplayVideoExportOptionCardLabel",
-                children: JJ.label
-              }), (0, GJ.jsx)("div", {
+                children: BB.label
+              }), (0, uB.jsx)("div", {
                 className: "ReplayVideoExportOptionCardDescription",
-                children: JJ.description
+                children: BB.description
               })]
             })
-          }), JJ.disabled && JJ.disabledReason && (0, GJ.jsx)("div", {
+          }), BB.disabled && BB.disabledReason && (0, uB.jsx)("div", {
             className: "ReplayVideoExportOptionError SmallTextLight",
-            children: JJ.disabledReason
+            children: BB.disabledReason
           })]
-        }, JJ.id)))
+        }, BB.id)))
       })
     }
-    const vJ = (0, eJ.memo)((function(JJ) {
+    const mB = (0, pB.memo)((function(BB) {
       let {
-        hasPlaybackMark: cJ,
-        canIncludeUi: ZJ,
-        includeUiDisabledReason: FJ,
-        selectionRef: UJ,
-        closePopup: XJ
-      } = JJ;
-      const AJ = nJ("webm") || nJ("mp4"),
-        [YJ, hJ] = (0, eJ.useState)(xJ),
-        [DJ, sJ] = (0, eJ.useState)(ZJ),
-        vJ = AJ && nJ(YJ);
-      if (!AJ) {
-        const JJ = (0, jJ.isMobile)() ? "screen recording" : "OBS";
-        return (0, GJ.jsxs)("div", {
+        hasPlaybackMark: TB,
+        canIncludeUi: dB,
+        includeUiDisabledReason: VB,
+        selectionRef: yB,
+        closePopup: lB
+      } = BB;
+      const JB = DB("webm") || DB("mp4"),
+        [oB, kB] = (0, pB.useState)(EB),
+        [LB, OB] = (0, pB.useState)(dB),
+        mB = JB && DB(oB);
+      if (!JB) {
+        const BB = (0, gB.isMobile)() ? "screen recording" : "OBS";
+        return (0, uB.jsxs)("div", {
           className: "PromptPopupNotification ReplayVideoExportOptionsPopup",
-          children: [(0, GJ.jsx)("div", {
+          children: [(0, uB.jsx)("div", {
             className: "PromptPopupNotificationTitle SmallTextBold",
             children: "Can't export video"
-          }), (0, GJ.jsx)("div", {
+          }), (0, uB.jsx)("div", {
             className: "PromptPopupNotificationSubtitle SmallTextLight",
-            children: `Your device does not support exporting. Try recording with an external software like ${JJ}.`
-          }), (0, GJ.jsx)("div", {
+            children: `Your device does not support exporting. Try recording with an external software like ${BB}.`
+          }), (0, uB.jsx)("div", {
             className: "PromptPopupNotificationBody",
-            children: (0, GJ.jsx)(qJ.I, {
+            children: (0, uB.jsx)(YB.K, {
               className: "PromptPopupNotificationBodyButton",
               onClick: () => {
-                UJ.options = null, XJ()
+                yB.options = null, lB()
               },
               children: "Close"
             })
           })]
         })
       }
-      const mJ = cJ ? "This will only play the range you've set.\nYou won't be able to cancel once it begins.\n\nDon't touch the mouse or keyboard until it finishes." : "This will play the whole recording from the start.\nYou won't be able to cancel once it begins.\n\nDon't touch the mouse or keyboard until it finishes.",
-        QJ = [{
+      const iB = TB ? "This will only play the range you've set.\nYou won't be able to cancel once it begins.\n\nDon't touch the mouse or keyboard until it finishes." : "This will play the whole recording from the start.\nYou won't be able to cancel once it begins.\n\nDon't touch the mouse or keyboard until it finishes.",
+        NB = [{
           id: "withoutUi",
           label: "Without UI",
           description: "Usually cleaner and sharper.",
-          selected: !DJ,
+          selected: !LB,
           disabled: !1,
           disabledReason: null,
           onSelect: () => {
-            sJ(!1)
+            OB(!1)
           }
         }, {
           id: "withUi",
           label: "With UI",
           description: "Includes HUD elements. May look worse on some devices.",
-          selected: DJ,
-          disabled: !ZJ,
-          disabledReason: FJ,
+          selected: LB,
+          disabled: !dB,
+          disabledReason: VB,
           onSelect: () => {
-            sJ(!0)
+            OB(!0)
           }
         }],
-        EJ = fJ.map((JJ => {
-          const cJ = nJ(JJ.id);
+        tB = HB.map((BB => {
+          const TB = DB(BB.id);
           return {
-            id: JJ.id,
-            label: JJ.label,
-            description: JJ.description,
-            selected: YJ === JJ.id,
-            disabled: !cJ,
+            id: BB.id,
+            label: BB.label,
+            description: BB.description,
+            selected: oB === BB.id,
+            disabled: !TB,
             disabledReason: "Your device doesn't support this format",
             onSelect: () => {
-              hJ(JJ.id)
+              kB(BB.id)
             }
           }
         }));
-      return (0, GJ.jsxs)("div", {
+      return (0, uB.jsxs)("div", {
         className: "PromptPopupNotification ReplayVideoExportOptionsPopup",
-        children: [(0, GJ.jsx)("div", {
+        children: [(0, uB.jsx)("div", {
           className: "PromptPopupNotificationTitle SmallTextBold",
           children: "Export video?"
-        }), (0, GJ.jsx)("div", {
+        }), (0, uB.jsx)("div", {
           className: "PromptPopupNotificationSubtitle SmallTextLight",
-          children: mJ
-        }), (0, GJ.jsxs)("div", {
+          children: iB
+        }), (0, uB.jsxs)("div", {
           className: "ReplayVideoExportOptionsSection",
-          children: [(0, GJ.jsx)("div", {
+          children: [(0, uB.jsx)("div", {
             className: "ReplayVideoExportOptionsSectionLabel SmallTextBold",
             children: "UI"
-          }), (0, GJ.jsx)(rJ, {
-            cards: QJ
+          }), (0, uB.jsx)(vB, {
+            cards: NB
           })]
-        }), (0, GJ.jsxs)("div", {
+        }), (0, uB.jsxs)("div", {
           className: "ReplayVideoExportOptionsSection",
-          children: [(0, GJ.jsx)("div", {
+          children: [(0, uB.jsx)("div", {
             className: "ReplayVideoExportOptionsSectionLabel SmallTextBold",
             children: "Format"
-          }), (0, GJ.jsx)(rJ, {
-            cards: EJ
+          }), (0, uB.jsx)(vB, {
+            cards: tB
           })]
-        }), (0, GJ.jsxs)("div", {
+        }), (0, uB.jsxs)("div", {
           className: "PromptPopupNotificationBody",
-          children: [(0, GJ.jsx)(qJ.m, {
+          children: [(0, uB.jsx)(YB.k, {
             className: "PromptPopupNotificationBodyButton PromptPopupNotificationBodyPrimaryButton",
-            disabled: !vJ,
+            disabled: !mB,
             onClick: () => {
-              UJ.options = {
-                format: YJ,
-                includeUi: ZJ && DJ
-              }, XJ()
+              yB.options = {
+                format: oB,
+                includeUi: dB && LB
+              }, lB()
             },
             children: "Export"
-          }), (0, GJ.jsx)(qJ.I, {
+          }), (0, uB.jsx)(YB.K, {
             className: "PromptPopupNotificationBodyButton",
             onClick: () => {
-              UJ.options = null, XJ()
+              yB.options = null, lB()
             },
             children: "Cancel"
           })]
         })]
       })
     }));
-    var mJ = ZJ(4259),
-      QJ = ZJ(36009),
-      EJ = ZJ(36014);
-    let VJ = null;
+    var iB = dB(4258),
+      NB = dB(35950),
+      tB = dB(35959);
+    let fB = null;
 
-    function KJ() {
+    function sB() {
       return function() {
-        const JJ = (0, EJ.b)();
+        const BB = (0, tB.d)();
         for (const {
-            group: cJ,
-            dataAttr: ZJ
+            group: TB,
+            dataAttr: dB
           }
-          of QJ.e)
-          if (ZJ && JJ[cJ]) return !0;
+          of NB.g)
+          if (dB && BB[TB]) return !0;
         return !1
       }() ? function() {
-        var JJ;
-        return "function" === typeof(null === (JJ = navigator.mediaDevices) || void 0 === JJ ? void 0 : JJ.getDisplayMedia)
+        var BB;
+        return "function" === typeof(null === (BB = navigator.mediaDevices) || void 0 === BB ? void 0 : BB.getDisplayMedia)
       }() ? {
         canIncludeUi: !0,
         includeUiDisabledReason: null
@@ -422,237 +422,237 @@ export const modules = {
         includeUiDisabledReason: "No UI to include"
       }
     }
-    async function yJ(JJ, cJ, ZJ) {
-      return JJ ? async function() {
-        const JJ = await navigator.mediaDevices.getDisplayMedia({
+    async function MB(BB, TB, dB) {
+      return BB ? async function() {
+        const BB = await navigator.mediaDevices.getDisplayMedia({
           video: !0,
           audio: !1,
           preferCurrentTab: !0,
           selfBrowserSurface: "include"
         });
-        for (const cJ of JJ.getAudioTracks()) cJ.stop(), JJ.removeTrack(cJ);
-        return JJ
-      }(): cJ().captureStream(Math.max(1, Math.round(ZJ)))
+        for (const TB of BB.getAudioTracks()) TB.stop(), BB.removeTrack(TB);
+        return BB
+      }(): TB().captureStream(Math.max(1, Math.round(dB)))
     }
-    var SJ = ZJ(38033);
-    let IJ = !1;
+    var zB = dB(38028);
+    let wB = !1;
 
-    function MJ(JJ) {
-      JJ.holdInput(!1), (0, SJ.f)(!1)
+    function UB(BB) {
+      BB.holdInput(!1), (0, zB.f)(!1)
     }
-    async function bJ(JJ) {
-      var cJ, ZJ;
-      if ((0, SJ.c)() || IJ) return;
-      const eJ = JJ();
-      if (!eJ) return;
-      IJ = !0;
-      let XJ = null;
-      const AJ = eJ.playbackMarkInTick,
+    async function FB(BB) {
+      var TB, dB;
+      if ((0, zB.c)() || wB) return;
+      const pB = BB();
+      if (!pB) return;
+      wB = !0;
+      let lB = null;
+      const JB = pB.playbackMarkInTick,
         {
-          canIncludeUi: qJ,
-          includeUiDisabledReason: jJ
-        } = KJ();
+          canIncludeUi: YB,
+          includeUiDisabledReason: gB
+        } = sB();
       try {
-        XJ = await async function(JJ) {
+        lB = await async function(BB) {
           let {
-            hasPlaybackMark: cJ,
-            canIncludeUi: ZJ,
-            includeUiDisabledReason: FJ
-          } = JJ;
-          const eJ = {
+            hasPlaybackMark: TB,
+            canIncludeUi: dB,
+            includeUiDisabledReason: VB
+          } = BB;
+          const pB = {
               options: null
             },
-            XJ = UJ.NotificationProvider.showCustomPopup({
-              body: JJ => (0, GJ.jsx)(vJ, {
-                hasPlaybackMark: cJ,
-                canIncludeUi: ZJ,
-                includeUiDisabledReason: FJ,
-                selectionRef: eJ,
-                closePopup: JJ
+            lB = yB.NotificationProvider.showCustomPopup({
+              body: BB => (0, uB.jsx)(mB, {
+                hasPlaybackMark: TB,
+                canIncludeUi: dB,
+                includeUiDisabledReason: VB,
+                selectionRef: pB,
+                closePopup: BB
               }),
               disableExitButton: !0,
               disablePressBackgroundToClose: !0,
               unlockPointerKey: "replayVideoExportOptions"
             });
-          return "notificationTornDown" === await XJ.getResult() ? null : eJ.options
+          return "notificationTornDown" === await lB.getResult() ? null : pB.options
         }({
-          hasPlaybackMark: null !== AJ,
-          canIncludeUi: qJ,
-          includeUiDisabledReason: jJ
+          hasPlaybackMark: null !== JB,
+          canIncludeUi: YB,
+          includeUiDisabledReason: gB
         })
       } finally {
-        IJ = !1
+        wB = !1
       }
-      if (!XJ) return;
-      const YJ = null !== (cJ = null === (ZJ = eJ.startFailure) || void 0 === ZJ ? void 0 : ZJ.call(eJ)) && void 0 !== cJ ? cJ : null;
-      if (null !== YJ) return void UJ.NotificationProvider.showAlertPopup({
+      if (!lB) return;
+      const oB = null !== (TB = null === (dB = pB.startFailure) || void 0 === dB ? void 0 : dB.call(pB)) && void 0 !== TB ? TB : null;
+      if (null !== oB) return void yB.NotificationProvider.showAlertPopup({
         title: "Video export failed",
-        subtitle: YJ
+        subtitle: oB
       });
-      if (! function(JJ) {
-          return !(0, SJ.c)() && ((0, SJ.f)(!0), JJ.holdInput(!0), !0)
-        }(eJ)) return;
-      let hJ = null;
+      if (! function(BB) {
+          return !(0, zB.c)() && ((0, zB.f)(!0), BB.holdInput(!0), !0)
+        }(pB)) return;
+      let kB = null;
       try {
-        hJ = await yJ(XJ.includeUi, (() => eJ.canvas()), eJ.Gy)
-      } catch (wJ) {
-        return console.error("Failed to create video stream for export", wJ), MJ(eJ), void UJ.NotificationProvider.showAlertPopup({
+        kB = await MB(lB.includeUi, (() => pB.canvas()), pB.WU)
+      } catch (KB) {
+        return console.error("Failed to create video stream for export", KB), UB(pB), void yB.NotificationProvider.showAlertPopup({
           title: "Video export failed",
-          subtitle: wJ instanceof Error ? wJ.message : "Could not start capture."
+          subtitle: KB instanceof Error ? KB.message : "Could not start capture."
         })
       }
-      let nJ = null;
-      const fJ = [];
-      let xJ = null,
-        rJ = null;
+      let DB = null;
+      const HB = [];
+      let EB = null,
+        vB = null;
       try {
-        var QJ, EJ, bJ;
-        nJ = eJ.playbackSpeed(), eJ.closeViewer(), eJ.setPlaybackSpeed(1), eJ.pause(), eJ.seekToTick(null !== AJ && void 0 !== AJ ? AJ : 0);
-        const JJ = await async function() {
-          const JJ = mJ.b.masterGain;
-          if (!mJ.b.ctx || !JJ) return null;
-          await mJ.b.ctx.resume();
-          const cJ = mJ.b.ctx.createMediaStreamDestination();
-          JJ.connect(cJ), VJ = cJ;
-          const [ZJ] = cJ.stream.getAudioTracks();
-          return null !== ZJ && void 0 !== ZJ ? ZJ : null
+        var NB, tB, FB;
+        DB = pB.playbackSpeed(), pB.closeViewer(), pB.setPlaybackSpeed(1), pB.pause(), pB.seekToTick(null !== JB && void 0 !== JB ? JB : 0);
+        const BB = await async function() {
+          const BB = iB.b.masterGain;
+          if (!iB.b.ctx || !BB) return null;
+          await iB.b.ctx.resume();
+          const TB = iB.b.ctx.createMediaStreamDestination();
+          BB.connect(TB), fB = TB;
+          const [dB] = TB.stream.getAudioTracks();
+          return null !== dB && void 0 !== dB ? dB : null
         }();
-        rJ = new MediaStream;
-        for (const FJ of hJ.getVideoTracks()) rJ.addTrack(FJ);
-        JJ && rJ.addTrack(JJ);
-        const cJ = function(JJ) {
-          const cJ = sJ(DJ(JJ));
-          if (!cJ) throw new Error(`No MediaRecorder mime type available for ${JJ}`);
-          return cJ
-        }(XJ.format);
-        xJ = new MediaRecorder(rJ, {
-          mimeType: cJ,
+        vB = new MediaStream;
+        for (const VB of kB.getVideoTracks()) vB.addTrack(VB);
+        BB && vB.addTrack(BB);
+        const TB = function(BB) {
+          const TB = OB(LB(BB));
+          if (!TB) throw new Error(`No MediaRecorder mime type available for ${BB}`);
+          return TB
+        }(lB.format);
+        EB = new MediaRecorder(vB, {
+          mimeType: TB,
           videoBitsPerSecond: 8e6
-        }), xJ.ondataavailable = JJ => {
-          JJ.data.size > 0 && fJ.push(JJ.data)
+        }), EB.ondataavailable = BB => {
+          BB.data.size > 0 && HB.push(BB.data)
         };
-        const ZJ = new Promise((JJ => {
-          xJ.onstop = () => {
-            JJ()
+        const dB = new Promise((BB => {
+          EB.onstop = () => {
+            BB()
           }
         }));
-        await (null === (QJ = eJ.seekSettled) || void 0 === QJ ? void 0 : QJ.call(eJ));
-        const [qJ] = hJ.getVideoTracks();
-        xJ.start(250), eJ.play();
-        const jJ = await
-        function(JJ, cJ, ZJ) {
-          return new Promise((FJ => {
-            let UJ = !1;
-            const eJ = JJ => {
-                UJ || (UJ = !0, AJ(), cJ.removeEventListener("ended", XJ), FJ(JJ))
+        await (null === (NB = pB.seekSettled) || void 0 === NB ? void 0 : NB.call(pB));
+        const [YB] = kB.getVideoTracks();
+        EB.start(250), pB.play();
+        const gB = await
+        function(BB, TB, dB) {
+          return new Promise((VB => {
+            let yB = !1;
+            const pB = BB => {
+                yB || (yB = !0, JB(), TB.removeEventListener("ended", lB), VB(BB))
               },
-              XJ = () => {
-                eJ("captureLost")
+              lB = () => {
+                pB("captureLost")
               },
-              AJ = JJ.watchPlayback((() => {
-                JJ.isPlaying() || eJ("completed")
+              JB = BB.watchPlayback((() => {
+                BB.isPlaying() || pB("completed")
               }));
-            cJ.addEventListener("ended", XJ), ZJ.onerror = () => {
-              eJ("recorderError")
-            }, "ended" !== cJ.readyState ? JJ.isPlaying() || eJ("completed") : eJ("captureLost")
+            TB.addEventListener("ended", lB), dB.onerror = () => {
+              pB("recorderError")
+            }, "ended" !== TB.readyState ? BB.isPlaying() || pB("completed") : pB("captureLost")
           }))
-        }(eJ, qJ, xJ);
-        if (eJ.pause(), "inactive" !== xJ.state && xJ.stop(), await ZJ, "captureLost" === jJ) return void UJ.NotificationProvider.showAlertPopup({
+        }(pB, YB, EB);
+        if (pB.pause(), "inactive" !== EB.state && EB.stop(), await dB, "captureLost" === gB) return void yB.NotificationProvider.showAlertPopup({
           title: "Video export stopped",
           subtitle: "Screen sharing ended before the replay finished. Nothing was saved."
         });
-        if ("recorderError" === jJ) return void UJ.NotificationProvider.showAlertPopup({
+        if ("recorderError" === gB) return void yB.NotificationProvider.showAlertPopup({
           title: "Video export failed",
           subtitle: "The recorder encountered an error. Nothing was saved."
         });
-        const YJ = null !== (EJ = null === (bJ = eJ.playbackFailure) || void 0 === bJ ? void 0 : bJ.call(eJ)) && void 0 !== EJ ? EJ : null;
-        if (null !== YJ) return void UJ.NotificationProvider.showAlertPopup({
+        const oB = null !== (tB = null === (FB = pB.playbackFailure) || void 0 === FB ? void 0 : FB.call(pB)) && void 0 !== tB ? tB : null;
+        if (null !== oB) return void yB.NotificationProvider.showAlertPopup({
           title: "Video export failed",
-          subtitle: `${YJ} Nothing was saved.`
+          subtitle: `${oB} Nothing was saved.`
         });
-        const GJ = new Blob(fJ, {
-          type: cJ
+        const uB = new Blob(HB, {
+          type: TB
         });
-        GJ.size > 0 ? (0, FJ.d)(GJ, function(JJ, cJ) {
-          const ZJ = function(JJ) {
-            return "mp4" === JJ ? "mp4" : "webm"
-          }(cJ);
-          if (JJ) return `${JJ.replace(/\.bloxdreplay$/i,"")}.${ZJ}`;
-          return `bloxd-replay-${Date.now()}.${ZJ}`
-        }(eJ.fileName(), XJ.format)) : UJ.NotificationProvider.showAlertPopup({
+        uB.size > 0 ? (0, VB.c)(uB, function(BB, TB) {
+          const dB = function(BB) {
+            return "mp4" === BB ? "mp4" : "webm"
+          }(TB);
+          if (BB) return `${BB.replace(/\.bloxdreplay$/i,"")}.${dB}`;
+          return `bloxd-replay-${Date.now()}.${dB}`
+        }(pB.fileName(), lB.format)) : yB.NotificationProvider.showAlertPopup({
           title: "Video export failed",
           subtitle: "No video data was captured. Try again."
         })
-      } catch (wJ) {
-        console.error("Replay video export failed", wJ), UJ.NotificationProvider.showAlertPopup({
+      } catch (KB) {
+        console.error("Replay video export failed", KB), yB.NotificationProvider.showAlertPopup({
           title: "Video export failed",
-          subtitle: wJ instanceof Error ? wJ.message : "Something went wrong while exporting."
+          subtitle: KB instanceof Error ? KB.message : "Something went wrong while exporting."
         })
       } finally {
-        if (xJ && "inactive" !== xJ.state) try {
-          xJ.stop()
-        } catch (wJ) {
-          console.error("Failed to stop MediaRecorder", wJ)
+        if (EB && "inactive" !== EB.state) try {
+          EB.stop()
+        } catch (KB) {
+          console.error("Failed to stop MediaRecorder", KB)
         }! function() {
-          const JJ = mJ.b.masterGain;
-          if (VJ && JJ) {
+          const BB = iB.b.masterGain;
+          if (fB && BB) {
             try {
-              JJ.disconnect(VJ)
-            } catch (wJ) {
-              console.error("Failed to disconnect Howler export tee", wJ)
+              BB.disconnect(fB)
+            } catch (KB) {
+              console.error("Failed to disconnect Howler export tee", KB)
             }
-            VJ = null
-          } else VJ = null
+            fB = null
+          } else fB = null
         }();
-        for (const JJ of hJ.getTracks()) JJ.stop();
-        if (rJ)
-          for (const JJ of rJ.getTracks()) JJ.stop();
-        null !== nJ && eJ.setPlaybackSpeed(nJ), eJ.pause(), MJ(eJ), eJ.reopenViewer()
+        for (const BB of kB.getTracks()) BB.stop();
+        if (vB)
+          for (const BB of vB.getTracks()) BB.stop();
+        null !== DB && pB.setPlaybackSpeed(DB), pB.pause(), UB(pB), pB.reopenViewer()
       }
     }
   },
-  4259: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      Howl: () => FJ.Howl,
-      b: () => FJ.Howler,
-      readyAudioContext: () => UJ
+  4258: (BB, TB, dB) => {
+    dB.d(TB, {
+      Howl: () => VB.Howl,
+      b: () => VB.Howler,
+      readyAudioContext: () => yB
     });
-    var FJ = ZJ(4267);
+    var VB = dB(4262);
 
-    function UJ() {
-      const JJ = FJ.Howler;
-      var cJ;
-      (JJ.volume(), JJ.ctx && JJ.autoUnlock) && (null === (cJ = JJ._unlockAudio) || void 0 === cJ || cJ.call(JJ))
+    function yB() {
+      const BB = VB.Howler;
+      var TB;
+      (BB.volume(), BB.ctx && BB.autoUnlock) && (null === (TB = BB._unlockAudio) || void 0 === TB || TB.call(BB))
     }
-    FJ.Howler._mobileUnloaded = !0
+    VB.Howler._mobileUnloaded = !0
   },
-  41240: (JJ, cJ, ZJ) => {
-    ZJ.d(cJ, {
-      b: () => FJ,
-      d: () => UJ
+  41274: (BB, TB, dB) => {
+    dB.d(TB, {
+      b: () => VB,
+      d: () => yB
     });
-    const FJ = ["recording", "freecam", "keyframe"];
+    const VB = ["recording", "freecam", "keyframe"];
 
-    function UJ() {
-      const JJ = crypto.getRandomValues(new Uint32Array(2));
-      return BigInt(JJ[1]) << 32n | BigInt(JJ[0])
+    function yB() {
+      const BB = crypto.getRandomValues(new Uint32Array(2));
+      return BigInt(BB[1]) << 32n | BigInt(BB[0])
     }
   },
-  41272: (JJ, cJ, ZJ) => {
-    ZJ.r(cJ), ZJ.d(cJ, {
-      HOLD_TIMEOUT_MS: () => AJ,
-      ReplayViewer: () => jJ
+  41304: (BB, TB, dB) => {
+    dB.r(TB), dB.d(TB, {
+      HOLD_TIMEOUT_MS: () => JB,
+      ReplayViewer: () => gB
     });
-    var FJ = ZJ(35998),
-      UJ = ZJ(36014),
-      eJ = ZJ(4189),
-      XJ = ZJ(41240);
-    const AJ = 1e4,
-      qJ = new Set(["Jn"]);
-    class jJ {
-      constructor(JJ) {
-        var cJ;
-        this.deps = JJ, this.id = 0, this.fileName = null, this.fileHandle = null, this.unsavedChanges = !1, this.suggestSaveAs = !1, this.playback = !1, this.opening = !1, this.loadingOpens = 0, this.epoch = 0, this.holds = new Map, this.seekAsked = !1, this.cropAsked = !1, this.cropRunning = !1, this.settleFrames = 0, this.pendingSave = null, this.pendingOpen = null, this.saveRefused = !1, this.edits = 0, this.editsAtSave = null, this.lastView = null, this.now = void 0, this.now = null !== (cJ = JJ.now) && void 0 !== cJ ? cJ : () => performance.now()
+    var VB = dB(35941),
+      yB = dB(35959),
+      pB = dB(4186),
+      lB = dB(41274);
+    const JB = 1e4,
+      YB = new Set(["pD"]);
+    class gB {
+      constructor(BB) {
+        var TB;
+        this.deps = BB, this.id = 0, this.fileName = null, this.fileHandle = null, this.unsavedChanges = !1, this.suggestSaveAs = !1, this.playback = !1, this.opening = !1, this.loadingOpens = 0, this.epoch = 0, this.holds = new Map, this.seekAsked = !1, this.cropAsked = !1, this.cropRunning = !1, this.settleFrames = 0, this.pendingSave = null, this.pendingOpen = null, this.saveRefused = !1, this.edits = 0, this.editsAtSave = null, this.lastView = null, this.now = void 0, this.now = null !== (TB = BB.now) && void 0 !== TB ? TB : () => performance.now()
       }
       get inPlayback() {
         return this.playback
@@ -661,123 +661,123 @@ export const modules = {
         return this.lastView
       }
       get isOpen() {
-        return null !== this.lastView && this.lastView.state !== eJ.cd.None
+        return null !== this.lastView && this.lastView.state !== pB.hd.None
       }
       get keyframes() {
         return this.deps.client.keyframes()
       }
-      get hj() {
+      get Dg() {
         return [...this.holds.keys()]
       }
       get savePending() {
         return null !== this.pendingSave
       }
       get saveRefusal() {
-        return this.cropping ? FJ.d.cropBusy.text : null
+        return this.cropping ? VB.d.cropBusy.text : null
       }
       get cropping() {
         return this.cropAsked || this.cropRunning
       }
-      async open(JJ, cJ) {
-        var ZJ, UJ, XJ, AJ;
+      async open(BB, TB) {
+        var dB, yB, lB, JB;
         const {
-          client: qJ
+          client: YB
         } = this.deps;
         if (!this.playback) {
-          if (!qJ.setPlayback(!0)) throw new Error(FJ.d.cantOpen.text);
+          if (!YB.setPlayback(!0)) throw new Error(VB.d.cantOpen.text);
           this.playback = !0
         }
         this.hold("opening"), this.loadingOpens++;
-        const jJ = this.epoch;
-        let YJ;
+        const gB = this.epoch;
+        let oB;
         try {
-          YJ = await qJ.open(JJ)
+          oB = await YB.open(BB)
         } finally {
           this.loadingOpens--
         }
-        if (jJ !== this.epoch) throw new Error(FJ.d.coreStopped.text);
-        if ("opening" !== YJ) {
+        if (gB !== this.epoch) throw new Error(VB.d.coreStopped.text);
+        if ("opening" !== oB) {
           this.opening || 0 !== this.loadingOpens || this.release("opening");
-          const JJ = function(JJ) {
-            switch (JJ) {
+          const BB = function(BB) {
+            switch (BB) {
               case "reloading":
                 return null;
               case "stopped":
-              case eJ.Sc.ModuleTrap:
-                return FJ.d.coreStopped;
-              case eJ.Sc.ModuleLoad:
-                return FJ.d.viewerLoadFailed;
-              case eJ.Sc.TooLarge:
-                return FJ.d.cantOpen
+              case pB.Wc.ModuleTrap:
+                return VB.d.coreStopped;
+              case pB.Wc.ModuleLoad:
+                return VB.d.viewerLoadFailed;
+              case pB.Wc.TooLarge:
+                return VB.d.cantOpen
             }
-          }(YJ);
-          if (null === JJ) return;
-          throw new Error(JJ.text)
+          }(oB);
+          if (null === BB) return;
+          throw new Error(BB.text)
         }
-        return this.rejectSave(new Error(FJ.d.saveClosed.text)), this.fileName = null !== (ZJ = null !== (UJ = cJ.fileName) && void 0 !== UJ ? UJ : null === (XJ = cJ.fileHandle) || void 0 === XJ ? void 0 : XJ.name) && void 0 !== ZJ ? ZJ : null, this.fileHandle = null !== (AJ = cJ.fileHandle) && void 0 !== AJ ? AJ : null, this.unsavedChanges = !1, this.suggestSaveAs = !1, this.opening = !0, this.cropAsked = !1, this.cropRunning = !1, this.seekAsked = !1, this.hold("opening"), this.id++, this.deps.onChange(), this.settleOpen(null), new Promise(((JJ, cJ) => {
+        return this.rejectSave(new Error(VB.d.saveClosed.text)), this.fileName = null !== (dB = null !== (yB = TB.fileName) && void 0 !== yB ? yB : null === (lB = TB.fileHandle) || void 0 === lB ? void 0 : lB.name) && void 0 !== dB ? dB : null, this.fileHandle = null !== (JB = TB.fileHandle) && void 0 !== JB ? JB : null, this.unsavedChanges = !1, this.suggestSaveAs = !1, this.opening = !0, this.cropAsked = !1, this.cropRunning = !1, this.seekAsked = !1, this.hold("opening"), this.id++, this.deps.onChange(), this.settleOpen(null), new Promise(((BB, TB) => {
           this.pendingOpen = {
-            resolve: JJ,
-            reject: cJ
+            resolve: BB,
+            reject: TB
           }
         }))
       }
       play() {
-        this.holds.has("Jn") || this.deps.client.play()
+        this.holds.has("pD") || this.deps.client.play()
       }
       pause() {
         this.deps.client.pause()
       }
       holdForShaderPackFailure() {
-        this.isOpen && this.pause(), this.hold("Jn")
+        this.isOpen && this.pause(), this.hold("pD")
       }
-      seek(JJ) {
-        let cJ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const ZJ = this.lastView;
-        null !== ZJ && (cJ || JJ < ZJ.Hh) && (this.seekAsked = !0, this.hold("seek")), this.deps.client.seek(JJ, cJ)
+      seek(BB) {
+        let TB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const dB = this.lastView;
+        null !== dB && (TB || BB < dB.dL) && (this.seekAsked = !0, this.hold("seek")), this.deps.client.seek(BB, TB)
       }
-      setSpeed(JJ) {
-        this.deps.client.setSpeed(JJ)
+      setSpeed(BB) {
+        this.deps.client.setSpeed(BB)
       }
-      setCameraMode(JJ) {
-        this.deps.client.setCameraMode(JJ)
+      setCameraMode(BB) {
+        this.deps.client.setCameraMode(BB)
       }
       cycleCameraMode() {
-        const JJ = this.lastView;
-        null !== JJ && JJ.state !== eJ.cd.None && this.setCameraMode(XJ.b[(XJ.b.indexOf(JJ.cameraMode) + 1) % XJ.b.length])
+        const BB = this.lastView;
+        null !== BB && BB.state !== pB.hd.None && this.setCameraMode(lB.b[(lB.b.indexOf(BB.cameraMode) + 1) % lB.b.length])
       }
       addKeyframe() {
         this.edited(this.deps.client.addKeyframe())
       }
-      setKeyframe(JJ) {
-        this.edited(this.deps.client.setKeyframe(JJ))
+      setKeyframe(BB) {
+        this.edited(this.deps.client.setKeyframe(BB))
       }
-      moveKeyframe(JJ, cJ) {
-        this.edited(this.deps.client.moveKeyframe(JJ, cJ))
+      moveKeyframe(BB, TB) {
+        this.edited(this.deps.client.moveKeyframe(BB, TB))
       }
-      deleteKeyframes(JJ, cJ) {
-        this.edited(this.deps.client.deleteKeyframes(JJ, cJ))
+      deleteKeyframes(BB, TB) {
+        this.edited(this.deps.client.deleteKeyframes(BB, TB))
       }
-      setMark(JJ) {
-        this.edited(this.deps.client.setMark(JJ))
+      setMark(BB) {
+        this.edited(this.deps.client.setMark(BB))
       }
-      crop(JJ, cJ) {
-        return !(cJ <= JJ) && (null !== this.pendingSave ? (this.deps.notify(FJ.d.saveBusy), !1) : !!this.deps.client.crop(JJ, cJ) && (this.cropAsked = !0, this.hold("crop"), !0))
+      crop(BB, TB) {
+        return !(TB <= BB) && (null !== this.pendingSave ? (this.deps.notify(VB.d.saveBusy), !1) : !!this.deps.client.crop(BB, TB) && (this.cropAsked = !0, this.hold("crop"), !0))
       }
       save() {
-        return null !== this.pendingSave ? Promise.reject(new Error(FJ.d.saveBusy.text)) : new Promise(((JJ, cJ) => {
-          const ZJ = {
-            resolve: JJ,
-            reject: cJ
+        return null !== this.pendingSave ? Promise.reject(new Error(VB.d.saveBusy.text)) : new Promise(((BB, TB) => {
+          const dB = {
+            resolve: BB,
+            reject: TB
           };
-          this.pendingSave = ZJ, this.editsAtSave = this.edits, this.deps.client.save((0, XJ.d)()).then((JJ => {
-            this.pendingSave === ZJ && this.saveStarted(JJ)
-          }), (JJ => {
-            this.pendingSave === ZJ && this.rejectSave(JJ instanceof Error ? JJ : new Error(String(JJ)))
+          this.pendingSave = dB, this.editsAtSave = this.edits, this.deps.client.save((0, lB.d)()).then((BB => {
+            this.pendingSave === dB && this.saveStarted(BB)
+          }), (BB => {
+            this.pendingSave === dB && this.rejectSave(BB instanceof Error ? BB : new Error(String(BB)))
           }))
         }))
       }
-      saveStarted(JJ) {
-        switch (JJ) {
+      saveStarted(BB) {
+        switch (BB) {
           case "sealing":
             return;
           case "busy":
@@ -788,37 +788,37 @@ export const modules = {
             return void this.saveFailed(!1)
         }
       }
-      markSaved(JJ, cJ) {
-        var ZJ, FJ;
-        this.fileHandle = JJ, this.fileName = null !== (ZJ = null !== (FJ = null === JJ || void 0 === JJ ? void 0 : JJ.name) && void 0 !== FJ ? FJ : cJ) && void 0 !== ZJ ? ZJ : this.fileName, this.unsavedChanges = null !== this.editsAtSave && this.edits !== this.editsAtSave, this.editsAtSave = null, this.suggestSaveAs = !1, this.deps.onChange()
+      markSaved(BB, TB) {
+        var dB, VB;
+        this.fileHandle = BB, this.fileName = null !== (dB = null !== (VB = null === BB || void 0 === BB ? void 0 : BB.name) && void 0 !== VB ? VB : TB) && void 0 !== dB ? dB : this.fileName, this.unsavedChanges = null !== this.editsAtSave && this.edits !== this.editsAtSave, this.editsAtSave = null, this.suggestSaveAs = !1, this.deps.onChange()
       }
       end() {
-        this.epoch++, this.resetInFlight(), this.releaseAll(), this.settleOpen(new Error(FJ.d.coreStopped.text)), this.rejectSave(new Error(FJ.d.saveClosed.text)), this.lastView = null, this.deps.onChange()
+        this.epoch++, this.resetInFlight(), this.releaseAll(), this.settleOpen(new Error(VB.d.coreStopped.text)), this.rejectSave(new Error(VB.d.saveClosed.text)), this.lastView = null, this.deps.onChange()
       }
       afterFrame() {
-        var JJ, cJ, ZJ;
-        const FJ = this.deps.client.view(),
-          XJ = FJ !== this.lastView;
-        this.lastView = FJ, this.opening && null !== FJ && FJ.state !== eJ.cd.None && FJ.totalTicks > 0 && (this.opening = !1, this.settleFrames = 2, this.settleOpen(null), (0, UJ.e)()), this.cropAsked ? (this.cropAsked = !1, null !== FJ && FJ.state === eJ.cd.Cropping ? this.cropRunning = !0 : this.cropped()) : this.cropRunning && null !== FJ && FJ.state !== eJ.cd.Cropping && (this.cropRunning = !1, this.cropped()), this.seekAsked && (this.seekAsked = !1, this.settleFrames = 2), this.settleFrames > 0 && this.settleFrames--;
-        const jJ = 0 === this.settleFrames && 0 === (null !== (JJ = null === (cJ = (ZJ = this.deps).meshPending) || void 0 === cJ ? void 0 : cJ.call(ZJ)) && void 0 !== JJ ? JJ : 0);
-        this.holds.has("opening") && !this.opening && 0 === this.loadingOpens && jJ && this.release("opening"), this.holds.has("seek") && jJ && this.release("seek"), this.holds.has("crop") && !this.cropRunning && jJ && this.release("crop");
-        const YJ = this.now();
-        for (const [UJ, eJ] of this.holds) !qJ.has(UJ) && YJ - eJ >= AJ && (this.release(UJ), "opening" === UJ && (this.opening = !1, this.settleOpen(null)));
-        this.saveRefused && !this.cropping && this.saveFailed(!1), XJ && this.deps.onChange()
+        var BB, TB, dB;
+        const VB = this.deps.client.view(),
+          lB = VB !== this.lastView;
+        this.lastView = VB, this.opening && null !== VB && VB.state !== pB.hd.None && VB.totalTicks > 0 && (this.opening = !1, this.settleFrames = 2, this.settleOpen(null), (0, yB.e)()), this.cropAsked ? (this.cropAsked = !1, null !== VB && VB.state === pB.hd.Cropping ? this.cropRunning = !0 : this.cropped()) : this.cropRunning && null !== VB && VB.state !== pB.hd.Cropping && (this.cropRunning = !1, this.cropped()), this.seekAsked && (this.seekAsked = !1, this.settleFrames = 2), this.settleFrames > 0 && this.settleFrames--;
+        const gB = 0 === this.settleFrames && 0 === (null !== (BB = null === (TB = (dB = this.deps).meshPending) || void 0 === TB ? void 0 : TB.call(dB)) && void 0 !== BB ? BB : 0);
+        this.holds.has("opening") && !this.opening && 0 === this.loadingOpens && gB && this.release("opening"), this.holds.has("seek") && gB && this.release("seek"), this.holds.has("crop") && !this.cropRunning && gB && this.release("crop");
+        const oB = this.now();
+        for (const [yB, pB] of this.holds) !YB.has(yB) && oB - pB >= JB && (this.release(yB), "opening" === yB && (this.opening = !1, this.settleOpen(null)));
+        this.saveRefused && !this.cropping && this.saveFailed(!1), lB && this.deps.onChange()
       }
       cropped() {
-        (0, UJ.e)(), this.id++, this.unsavedChanges = !0, this.suggestSaveAs = null !== this.fileHandle || null !== this.fileName, this.settleFrames = 2
+        (0, yB.e)(), this.id++, this.unsavedChanges = !0, this.suggestSaveAs = null !== this.fileHandle || null !== this.fileName, this.settleFrames = 2
       }
-      onFailed(JJ) {
-        switch (JJ.reason) {
-          case eJ.Sc.TooLarge:
+      onFailed(BB) {
+        switch (BB.reason) {
+          case pB.Wc.TooLarge:
             break;
-          case eJ.Sc.Open:
-          case eJ.Sc.NothingStaged:
-            this.opening = !1, this.release("opening"), null === this.pendingOpen && this.deps.notify(FJ.d.cantOpen), this.settleOpen(new Error(FJ.d.cantOpen.text));
+          case pB.Wc.Open:
+          case pB.Wc.NothingStaged:
+            this.opening = !1, this.release("opening"), null === this.pendingOpen && this.deps.notify(VB.d.cantOpen), this.settleOpen(new Error(VB.d.cantOpen.text));
             break;
-          case eJ.Sc.Crop:
-            if (JJ.code === eJ.Oc.Busy) {
+          case pB.Wc.Crop:
+            if (BB.code === pB.Tc.Busy) {
               this.cropBusy();
               break
             }
@@ -826,166 +826,166 @@ export const modules = {
               this.saveFailed(!1);
               break
             }
-            this.cropAsked = !1, this.cropRunning = !1, this.release("crop"), this.deps.notify(FJ.d.cropFailed);
+            this.cropAsked = !1, this.cropRunning = !1, this.release("crop"), this.deps.notify(VB.d.cropFailed);
             break;
-          case eJ.Sc.ModuleTrap:
-          case eJ.Sc.ModuleLoad:
-          case eJ.Sc.Port:
-            this.moduleEnded(JJ.reason === eJ.Sc.ModuleTrap ? FJ.d.coreStopped : FJ.d.cantOpen);
+          case pB.Wc.ModuleTrap:
+          case pB.Wc.ModuleLoad:
+          case pB.Wc.Port:
+            this.moduleEnded(BB.reason === pB.Wc.ModuleTrap ? VB.d.coreStopped : VB.d.cantOpen);
             break;
-          case eJ.Sc.NotLive:
+          case pB.Wc.NotLive:
             console.warn("[bloxd-wasm-client] the core refused a recorder command in playback");
             break;
           default:
-            console.warn(`[bloxd-wasm-client] the replay module refused a command (ReplayFailed ${JJ.reason})`), this.seekAsked = !1, this.release("seek")
+            console.warn(`[bloxd-wasm-client] the replay module refused a command (ReplayFailed ${BB.reason})`), this.seekAsked = !1, this.release("seek")
         }
         this.deps.onChange()
       }
-      moduleEnded(JJ) {
-        this.resetInFlight(), this.release("opening"), this.release("seek"), this.release("crop"), null === this.pendingOpen && this.deps.notify(JJ), this.settleOpen(new Error(JJ.text))
+      moduleEnded(BB) {
+        this.resetInFlight(), this.release("opening"), this.release("seek"), this.release("crop"), null === this.pendingOpen && this.deps.notify(BB), this.settleOpen(new Error(BB.text))
       }
-      saveDone(JJ) {
-        const cJ = this.pendingSave;
-        this.pendingSave = null, this.saveRefused = !1, null === cJ || void 0 === cJ || cJ.resolve(JJ)
+      saveDone(BB) {
+        const TB = this.pendingSave;
+        this.pendingSave = null, this.saveRefused = !1, null === TB || void 0 === TB || TB.resolve(BB)
       }
-      saveFailed(JJ) {
-        this.rejectSave(new Error(JJ ? FJ.d.saveBusy.text : "The replay couldn't be saved"))
+      saveFailed(BB) {
+        this.rejectSave(new Error(BB ? VB.d.saveBusy.text : "The replay couldn't be saved"))
       }
-      edited(JJ) {
-        JJ && !this.cropping && (this.edits++, this.unsavedChanges = !0, this.deps.onChange())
+      edited(BB) {
+        BB && !this.cropping && (this.edits++, this.unsavedChanges = !0, this.deps.onChange())
       }
       cropBusy() {
-        null !== this.pendingSave && this.saveRefused ? this.rejectSave(new Error(FJ.d.cropBusy.text)) : this.deps.notify(FJ.d.cropBusy)
+        null !== this.pendingSave && this.saveRefused ? this.rejectSave(new Error(VB.d.cropBusy.text)) : this.deps.notify(VB.d.cropBusy)
       }
       resetInFlight() {
         this.opening = !1, this.seekAsked = !1, this.cropAsked = !1, this.cropRunning = !1, this.settleFrames = 0
       }
-      settleOpen(JJ) {
-        const cJ = this.pendingOpen;
-        this.pendingOpen = null, null === JJ ? null === cJ || void 0 === cJ || cJ.resolve() : null === cJ || void 0 === cJ || cJ.reject(JJ)
+      settleOpen(BB) {
+        const TB = this.pendingOpen;
+        this.pendingOpen = null, null === BB ? null === TB || void 0 === TB || TB.resolve() : null === TB || void 0 === TB || TB.reject(BB)
       }
-      rejectSave(JJ) {
-        const cJ = this.pendingSave;
-        this.pendingSave = null, this.saveRefused = !1, null === cJ || void 0 === cJ || cJ.reject(JJ)
+      rejectSave(BB) {
+        const TB = this.pendingSave;
+        this.pendingSave = null, this.saveRefused = !1, null === TB || void 0 === TB || TB.reject(BB)
       }
-      hold(JJ) {
-        const cJ = 0 === this.holds.size;
-        this.holds.set(JJ, this.now()), cJ && this.deps.setHoldDraws(!0)
+      hold(BB) {
+        const TB = 0 === this.holds.size;
+        this.holds.set(BB, this.now()), TB && this.deps.setHoldDraws(!0)
       }
-      release(JJ) {
-        this.holds.delete(JJ) && 0 === this.holds.size && this.deps.setHoldDraws(!1)
+      release(BB) {
+        this.holds.delete(BB) && 0 === this.holds.size && this.deps.setHoldDraws(!1)
       }
       releaseAll() {
         this.holds.size > 0 && (this.holds.clear(), this.deps.setHoldDraws(!1))
       }
     }
   },
-  41265: (JJ, cJ, ZJ) => {
-    ZJ.r(cJ), ZJ.d(cJ, {
-      MESH_TAIL_MS: () => jJ,
-      PLAY_START_TIMEOUT_MS: () => AJ,
-      startWasmReplayVideoExport: () => hJ
+  41299: (BB, TB, dB) => {
+    dB.r(TB), dB.d(TB, {
+      MESH_TAIL_MS: () => gB,
+      PLAY_START_TIMEOUT_MS: () => JB,
+      startWasmReplayVideoExport: () => kB
     });
-    var FJ = ZJ(38196),
-      UJ = ZJ(41272),
-      eJ = ZJ(4189),
-      XJ = ZJ(2161);
-    const AJ = UJ.HOLD_TIMEOUT_MS + 5e3,
-      qJ = 50,
-      jJ = 200;
+    var VB = dB(38176),
+      yB = dB(41304),
+      pB = dB(4186),
+      lB = dB(2117);
+    const JB = yB.HOLD_TIMEOUT_MS + 5e3,
+      YB = 50,
+      gB = 200;
 
-    function YJ(JJ) {
-      var cJ;
-      return (null === (cJ = JJ.view) || void 0 === cJ ? void 0 : cJ.state) === eJ.cd.Cropping || JJ.hj.includes("crop")
+    function oB(BB) {
+      var TB;
+      return (null === (TB = BB.view) || void 0 === TB ? void 0 : TB.state) === pB.hd.Cropping || BB.Dg.includes("crop")
     }
 
-    function hJ(JJ) {
-      return (0, FJ.d)((() => function(JJ) {
-        var cJ, ZJ, FJ, UJ, hJ, DJ;
-        const sJ = JJ.viewer(),
-          nJ = null !== (cJ = null === sJ || void 0 === sJ ? void 0 : sJ.view) && void 0 !== cJ ? cJ : null,
-          GJ = JJ.canvas();
-        if (!sJ || !nJ || nJ.state === eJ.cd.None || 0 === nJ.totalTicks || !GJ || YJ(sJ)) return null;
-        const fJ = null !== (ZJ = JJ.now) && void 0 !== ZJ ? ZJ : () => performance.now(),
-          xJ = sJ.id,
-          rJ = () => {
-            const cJ = JJ.viewer();
-            return cJ === sJ && cJ.id === xJ && cJ.isOpen ? cJ : null
+    function kB(BB) {
+      return (0, VB.d)((() => function(BB) {
+        var TB, dB, VB, yB, kB, LB;
+        const OB = BB.viewer(),
+          DB = null !== (TB = null === OB || void 0 === OB ? void 0 : OB.view) && void 0 !== TB ? TB : null,
+          uB = BB.canvas();
+        if (!OB || !DB || DB.state === pB.hd.None || 0 === DB.totalTicks || !uB || oB(OB)) return null;
+        const HB = null !== (dB = BB.now) && void 0 !== dB ? dB : () => performance.now(),
+          EB = OB.id,
+          vB = () => {
+            const TB = BB.viewer();
+            return TB === OB && TB.id === EB && TB.isOpen ? TB : null
           },
-          vJ = Math.min(null !== (FJ = null === (UJ = nJ.mark) || void 0 === UJ ? void 0 : UJ.outTick) && void 0 !== FJ ? FJ : 1 / 0, nJ.totalTicks - 1);
-        let mJ = null,
-          QJ = !1;
-        const EJ = () => {
-          var JJ, cJ;
-          return (null === (JJ = rJ()) || void 0 === JJ || null === (cJ = JJ.view) || void 0 === cJ ? void 0 : cJ.state) === eJ.cd.Playing
+          mB = Math.min(null !== (VB = null === (yB = DB.mark) || void 0 === yB ? void 0 : yB.outTick) && void 0 !== VB ? VB : 1 / 0, DB.totalTicks - 1);
+        let iB = null,
+          NB = !1;
+        const tB = () => {
+          var BB, TB;
+          return (null === (BB = vB()) || void 0 === BB || null === (TB = BB.view) || void 0 === TB ? void 0 : TB.state) === pB.hd.Playing
         };
         return {
-          Gy: eJ.rd,
-          playbackMarkInTick: null !== (hJ = null === (DJ = nJ.mark) || void 0 === DJ ? void 0 : DJ.inTick) && void 0 !== hJ ? hJ : null,
+          WU: pB.ud,
+          playbackMarkInTick: null !== (kB = null === (LB = DB.mark) || void 0 === LB ? void 0 : LB.inTick) && void 0 !== kB ? kB : null,
           startFailure: () => {
-            const JJ = rJ();
-            return null === JJ ? "Another replay opened. Export it again from there." : YJ(JJ) ? "Wait for the crop to finish, then export again." : null
+            const BB = vB();
+            return null === BB ? "Another replay opened. Export it again from there." : oB(BB) ? "Wait for the crop to finish, then export again." : null
           },
           fileName: () => {
-            var JJ, cJ;
-            return null !== (JJ = null === (cJ = rJ()) || void 0 === cJ ? void 0 : cJ.fileName) && void 0 !== JJ ? JJ : null
+            var BB, TB;
+            return null !== (BB = null === (TB = vB()) || void 0 === TB ? void 0 : TB.fileName) && void 0 !== BB ? BB : null
           },
           playbackSpeed: () => {
-            var JJ, cJ, ZJ;
-            return null !== (JJ = null === (cJ = rJ()) || void 0 === cJ || null === (ZJ = cJ.view) || void 0 === ZJ ? void 0 : ZJ.speed) && void 0 !== JJ ? JJ : 1
+            var BB, TB, dB;
+            return null !== (BB = null === (TB = vB()) || void 0 === TB || null === (dB = TB.view) || void 0 === dB ? void 0 : dB.speed) && void 0 !== BB ? BB : 1
           },
-          setPlaybackSpeed: JJ => {
-            var cJ;
-            null === (cJ = rJ()) || void 0 === cJ || cJ.setSpeed(JJ)
+          setPlaybackSpeed: BB => {
+            var TB;
+            null === (TB = vB()) || void 0 === TB || TB.setSpeed(BB)
           },
           play: () => {
-            var JJ;
-            QJ = !1, mJ = fJ(), null === (JJ = rJ()) || void 0 === JJ || JJ.play()
+            var BB;
+            NB = !1, iB = HB(), null === (BB = vB()) || void 0 === BB || BB.play()
           },
           pause: () => {
-            var JJ;
-            null === (JJ = rJ()) || void 0 === JJ || JJ.pause()
+            var BB;
+            null === (BB = vB()) || void 0 === BB || BB.pause()
           },
-          seekToTick: JJ => {
-            var cJ;
-            null === (cJ = rJ()) || void 0 === cJ || cJ.seek(JJ, !0)
+          seekToTick: BB => {
+            var TB;
+            null === (TB = vB()) || void 0 === TB || TB.seek(BB, !0)
           },
-          seekSettled: () => new Promise((JJ => {
-            const cJ = setInterval((() => {
-              const ZJ = rJ();
-              null === ZJ ? (clearInterval(cJ), JJ()) : ZJ.hj.includes("seek") || (clearInterval(cJ), setTimeout(JJ, jJ))
-            }), qJ)
+          seekSettled: () => new Promise((BB => {
+            const TB = setInterval((() => {
+              const dB = vB();
+              null === dB ? (clearInterval(TB), BB()) : dB.Dg.includes("seek") || (clearInterval(TB), setTimeout(BB, gB))
+            }), YB)
           })),
           isPlaying: () => {
-            var JJ, cJ, ZJ;
-            return null !== mJ && null !== rJ() && (!!EJ() || !QJ && (null !== (JJ = null === (cJ = rJ()) || void 0 === cJ || null === (ZJ = cJ.view) || void 0 === ZJ ? void 0 : ZJ.Hh) && void 0 !== JJ ? JJ : 0) < vJ && fJ() - mJ < AJ)
+            var BB, TB, dB;
+            return null !== iB && null !== vB() && (!!tB() || !NB && (null !== (BB = null === (TB = vB()) || void 0 === TB || null === (dB = TB.view) || void 0 === dB ? void 0 : dB.dL) && void 0 !== BB ? BB : 0) < mB && HB() - iB < JB)
           },
-          watchPlayback: cJ => {
-            const ZJ = JJ.watchViewer((() => {
-                QJ ||= null !== mJ && EJ(), cJ()
+          watchPlayback: TB => {
+            const dB = BB.watchViewer((() => {
+                NB ||= null !== iB && tB(), TB()
               })),
-              FJ = setTimeout(cJ, AJ + 1);
+              VB = setTimeout(TB, JB + 1);
             return () => {
-              clearTimeout(FJ), ZJ()
+              clearTimeout(VB), dB()
             }
           },
           playbackFailure: () => {
-            var JJ, cJ;
-            const ZJ = rJ();
-            return null === ZJ ? "The replay closed before the video finished." : (null !== (JJ = null === (cJ = ZJ.view) || void 0 === cJ ? void 0 : cJ.Hh) && void 0 !== JJ ? JJ : 0) >= vJ ? null : QJ ? "The replay stopped before the video finished." : "The replay didn't start playing."
+            var BB, TB;
+            const dB = vB();
+            return null === dB ? "The replay closed before the video finished." : (null !== (BB = null === (TB = dB.view) || void 0 === TB ? void 0 : TB.dL) && void 0 !== BB ? BB : 0) >= mB ? null : NB ? "The replay stopped before the video finished." : "The replay didn't start playing."
           },
-          canvas: () => GJ,
+          canvas: () => uB,
           closeViewer: () => {
-            JJ.requestViewer("close")
+            BB.requestViewer("close")
           },
           reopenViewer: () => {
-            JJ.requestViewer("open")
+            BB.requestViewer("open")
           },
-          holdInput: XJ.d
+          holdInput: lB.d
         }
-      }(JJ)))
+      }(BB)))
     }
   }
 };
 Object.freeze(modules);
-for (const JJ in modules) Object.freeze(modules[JJ]);
+for (const BB in modules) Object.freeze(modules[BB]);
