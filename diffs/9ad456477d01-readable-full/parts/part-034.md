@@ -17,8 +17,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 190;
  export const ids = [190];
  export const modules = {
--  40247: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40252: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40247: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40252: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        default: () => ⟦2-char-id⟧
      });

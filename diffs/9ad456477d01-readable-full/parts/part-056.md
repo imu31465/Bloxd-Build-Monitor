@@ -2,10 +2,965 @@
 
 - Base: e7e20713782fba2472c7866f1ac5b84e503e7647
 - Build: 9ad456477d01ce4e7883eecb0f575724f962561f
-- Files in this part: 2
+- Files in this part: 4
 
 <details>
-<summary><code>bundles/staging.bloxd.io/chunks/js/worldgenWorker.js</code> · modified · +1690 / -1684</summary>
+<summary><code>bundles/staging.bloxd.io/chunks/js/wasmReplayVideoExport.js</code> · modified · +99 / -99</summary>
+
+JavaScript comparison masks only two-character identifiers. Strings, comments, member properties, object keys, and all other source changes remain visible.
+
+<details>
+<summary>Hunk 1 · Change · +3 / -3</summary>
+
+```diff
+@@ -1,12 +1,12 @@
+ export const ⟦2-char-id⟧ = 59;
+ export const ids = [53, 59, 85];
+ export const modules = {
+-  35998: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  35941: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
+     ⟦2-char-id⟧.d(⟦2-char-id⟧, {
+       d: () => ⟦2-char-id⟧,
+-      f: () => ⟦2-char-id⟧
++      h: () => ⟦2-char-id⟧
+     });
+-    var ⟦2-char-id⟧ = ⟦2-char-id⟧(17);
++    var ⟦2-char-id⟧ = ⟦2-char-id⟧(24);
+     const ⟦2-char-id⟧ = 1500,
+       ⟦2-char-id⟧ = 1⟦2-char-id⟧,
+       ⟦2-char-id⟧ = {
+```
+
+</details>
+
+<details>
+<summary>Hunk 2 · Change · +4 / -4</summary>
+
+```diff
+@@ -95,18 +95,18 @@
+ 
+     function ⟦2-char-id⟧(⟦2-char-id⟧) {
+       var ⟦2-char-id⟧;
+-      const ⟦2-char-id⟧ = null !== (⟦2-char-id⟧ = ⟦2-char-id⟧.timeoutMs) && void 0 !== ⟦2-char-id⟧ ? cJ : "Error" === ⟦2-char-id⟧.type ? UJ : ⟦2-char-id⟧;
+-      ⟦2-char-id⟧.i.Uf("showBottomMessage", {
++      const ⟦2-char-id⟧ = null !== (⟦2-char-id⟧ = ⟦2-char-id⟧.timeoutMs) && void 0 !== ⟦2-char-id⟧ ? TB : "Error" === ⟦2-char-id⟧.type ? yB : ⟦2-char-id⟧;
++      ⟦2-char-id⟧.h.yH("showBottomMessage", {
+         message: ⟦2-char-id⟧.text,
+         timeoutLength: ⟦2-char-id⟧,
+         type: ⟦2-char-id⟧.type
+       })
+     }
+   },
+-  36009: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  35950: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
+     ⟦2-char-id⟧.d(⟦2-char-id⟧, {
+       c: () => ⟦2-char-id⟧,
+-      e: () => ⟦2-char-id⟧
++      g: () => ⟦2-char-id⟧
+     });
+     const ⟦2-char-id⟧ = "data-replay-ui-active",
+       ⟦2-char-id⟧ = [{
+```
+
+</details>
+
+<details>
+<summary>Hunk 3 · Change · +8 / -8</summary>
+
+```diff
+@@ -159,28 +159,28 @@
+         label: "Everything else"
+       }]
+   },
+-  36014: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  35959: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
+     ⟦2-char-id⟧.d(⟦2-char-id⟧, {
+-      b: () => ⟦2-char-id⟧,
++      d: () => ⟦2-char-id⟧,
+       e: () => ⟦2-char-id⟧,
+-      h: () => ⟦2-char-id⟧
++      g: () => ⟦2-char-id⟧
+     });
+-    var ⟦2-char-id⟧ = ⟦2-char-id⟧(13),
+-      ⟦2-char-id⟧ = ⟦2-char-id⟧(17),
+-      ⟦2-char-id⟧ = ⟦2-char-id⟧(36009);
++    var ⟦2-char-id⟧ = ⟦2-char-id⟧(21),
++      ⟦2-char-id⟧ = ⟦2-char-id⟧(24),
++      ⟦2-char-id⟧ = ⟦2-char-id⟧(35950);
+ 
+     function ⟦2-char-id⟧() {
+       const ⟦2-char-id⟧ = {};
+       for (const {
+           group: ⟦2-char-id⟧
+         }
+-        of ⟦2-char-id⟧.e) ⟦2-char-id⟧[⟦2-char-id⟧] = !0;
++        of ⟦2-char-id⟧.g) ⟦2-char-id⟧[⟦2-char-id⟧] = !0;
+       return ⟦2-char-id⟧
+     }
+     let ⟦2-char-id⟧ = ⟦2-char-id⟧();
+ 
+     function ⟦2-char-id⟧() {
+-      ⟦2-char-id⟧.i.Uf("replayViewer|uiVisibilityChanged")
++      ⟦2-char-id⟧.h.yH("replayViewer|uiVisibilityChanged")
+     }
+ 
+     function ⟦2-char-id⟧() {
+```
+
+</details>
+
+<details>
+<summary>Hunk 4 · Change · +1 / -1</summary>
+
+```diff
+@@ -189,7 +189,7 @@
+ 
+     function ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧) {
+       ⟦2-char-id⟧[⟦2-char-id⟧] !== ⟦2-char-id⟧ && (⟦2-char-id⟧ = {
+-        ...AJ,
++        ...JB,
+         [⟦2-char-id⟧]: ⟦2-char-id⟧
+       }, "nametag" === ⟦2-char-id⟧ && ⟦2-char-id⟧.d.set({
+         areNametagsHidden: !⟦2-char-id⟧
+```
+
+</details>
+
+<details>
+<summary>Hunk 5 · Change · +8 / -8</summary>
+
+```diff
+@@ -202,22 +202,22 @@
+       }), ⟦2-char-id⟧()
+     }
+   },
+-  38196: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  38176: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
+     ⟦2-char-id⟧.d(⟦2-char-id⟧, {
+       d: () => ⟦2-char-id⟧
+     });
+-    var ⟦2-char-id⟧ = ⟦2-char-id⟧(1620),
+-      ⟦2-char-id⟧ = ⟦2-char-id⟧(1247),
+-      ⟦2-char-id⟧ = ⟦2-char-id⟧(47),
+-      ⟦2-char-id⟧ = ⟦2-char-id⟧(926),
++    var ⟦2-char-id⟧ = ⟦2-char-id⟧(1612),
++      ⟦2-char-id⟧ = ⟦2-char-id⟧(1235),
++      ⟦2-char-id⟧ = ⟦2-char-id⟧(62),
++      ⟦2-char-id⟧ = ⟦2-char-id⟧(933),
+       ⟦2-char-id⟧ = ⟦2-char-id⟧.n(⟦2-char-id⟧),
+-      ⟦2-char-id⟧ = ⟦2-char-id⟧(1329),
+-      ⟦2-char-id⟧ = ⟦2-char-id⟧(80);
++      ⟦2-char-id⟧ = ⟦2-char-id⟧(1324),
++      ⟦2-char-id⟧ = ⟦2-char-id⟧(95);
+     const ⟦2-char-id⟧ = ["video/webm;codecs=vp9,opus", "video/webm;codecs=vp8,opus", "video/webm;codecs=vp9", "video/webm;codecs=vp8", "video/webm"],
+       ⟦2-char-id⟧ = ["video/mp4;codecs=avc1,mp4a.40.2", "video/mp4;codecs=avc1.42E01E,mp4a.40.2", "video/mp4;codecs=avc1", "video/mp4"];
+ 
+     function ⟦2-char-id⟧(⟦2-char-id⟧) {
+-      return "webm" === ⟦2-char-id⟧ ? YJ : ⟦2-char-id⟧
++      return "webm" === ⟦2-char-id⟧ ? oB : ⟦2-char-id⟧
+     }
+ 
+     function ⟦2-char-id⟧(⟦2-char-id⟧) {
+```
+
+</details>
+
+<details>
+<summary>Hunk 6 · Change · +1 / -1</summary>
+
+```diff
+@@ -229,7 +229,7 @@
+     function ⟦2-char-id⟧(⟦2-char-id⟧) {
+       return null !== ⟦2-char-id⟧(⟦2-char-id⟧(⟦2-char-id⟧))
+     }
+-    var ⟦2-char-id⟧ = ⟦2-char-id⟧(990);
++    var ⟦2-char-id⟧ = ⟦2-char-id⟧(980);
+     const ⟦2-char-id⟧ = [{
+       id: "webm",
+       label: "WebM",
+```
+
+</details>
+
+<details>
+<summary>Hunk 7 · Change · +2 / -2</summary>
+
+```diff
+@@ -298,10 +298,10 @@
+             children: "Can't export video"
+           }), (0, ⟦2-char-id⟧.jsx)("div", {
+             className: "PromptPopupNotificationSubtitle SmallTextLight",
+-            children: `Your device does not support exporting. Try recording with an external software like ${JJ}.`
++            children: `Your device does not support exporting. Try recording with an external software like ${BB}.`
+           }), (0, ⟦2-char-id⟧.jsx)("div", {
+             className: "PromptPopupNotificationBody",
+-            children: (0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.I, {
++            children: (0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.K, {
+               className: "PromptPopupNotificationBodyButton",
+               onClick: () => {
+                 ⟦2-char-id⟧.options = null, ⟦2-char-id⟧()
+```
+
+</details>
+
+<details>
+<summary>Hunk 8 · Change · +1 / -1</summary>
+
+```diff
+@@ -373,7 +373,7 @@
+           })]
+         }), (0, ⟦2-char-id⟧.jsxs)("div", {
+           className: "PromptPopupNotificationBody",
+-          children: [(0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.m, {
++          children: [(0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.k, {
+             className: "PromptPopupNotificationBodyButton PromptPopupNotificationBodyPrimaryButton",
+             disabled: !⟦2-char-id⟧,
+             onClick: () => {
+```
+
+</details>
+
+<details>
+<summary>Hunk 9 · Change · +1 / -1</summary>
+
+```diff
+@@ -383,7 +383,7 @@
+               }, ⟦2-char-id⟧()
+             },
+             children: "Export"
+-          }), (0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.I, {
++          }), (0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.K, {
+             className: "PromptPopupNotificationBodyButton",
+             onClick: () => {
+               ⟦2-char-id⟧.options = null, ⟦2-char-id⟧()
+```
+
+</details>
+
+<details>
+<summary>Hunk 10 · Change · +5 / -5</summary>
+
+```diff
+@@ -393,19 +393,19 @@
+         })]
+       })
+     }));
+-    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4259),
+-      ⟦2-char-id⟧ = ⟦2-char-id⟧(36009),
+-      ⟦2-char-id⟧ = ⟦2-char-id⟧(36014);
++    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4258),
++      ⟦2-char-id⟧ = ⟦2-char-id⟧(35950),
++      ⟦2-char-id⟧ = ⟦2-char-id⟧(35959);
+     let ⟦2-char-id⟧ = null;
+ 
+     function ⟦2-char-id⟧() {
+       return function() {
+-        const ⟦2-char-id⟧ = (0, ⟦2-char-id⟧.b)();
++        const ⟦2-char-id⟧ = (0, ⟦2-char-id⟧.d)();
+         for (const {
+             group: ⟦2-char-id⟧,
+             dataAttr: ⟦2-char-id⟧
+           }
+-          of ⟦2-char-id⟧.e)
++          of ⟦2-char-id⟧.g)
+           if (⟦2-char-id⟧ && ⟦2-char-id⟧[⟦2-char-id⟧]) return !0;
+         return !1
+       }() ? function() {
+```
+
+</details>
+
+<details>
+<summary>Hunk 11 · Change · +1 / -1</summary>
+
+```diff
+@@ -434,7 +434,7 @@
+         return ⟦2-char-id⟧
+       }(): ⟦2-char-id⟧().captureStream(Math.max(1, Math.round(⟦2-char-id⟧)))
+     }
+-    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38033);
++    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38028);
+     let ⟦2-char-id⟧ = !1;
+ 
+     function ⟦2-char-id⟧(⟦2-char-id⟧) {
+```
+
+</details>
+
+<details>
+<summary>Hunk 12 · Change · +1 / -1</summary>
+
+```diff
+@@ -484,7 +484,7 @@
+         ⟦2-char-id⟧ = !1
+       }
+       if (!⟦2-char-id⟧) return;
+-      const ⟦2-char-id⟧ = null !== (⟦2-char-id⟧ = null === (⟦2-char-id⟧ = ⟦2-char-id⟧.startFailure) || void 0 === ⟦2-char-id⟧ ? void 0 : ⟦2-char-id⟧.call(⟦2-char-id⟧)) && void 0 !== ⟦2-char-id⟧ ? cJ : null;
++      const ⟦2-char-id⟧ = null !== (⟦2-char-id⟧ = null === (⟦2-char-id⟧ = ⟦2-char-id⟧.startFailure) || void 0 === ⟦2-char-id⟧ ? void 0 : ⟦2-char-id⟧.call(⟦2-char-id⟧)) && void 0 !== ⟦2-char-id⟧ ? TB : null;
+       if (null !== ⟦2-char-id⟧) return void ⟦2-char-id⟧.NotificationProvider.showAlertPopup({
+         title: "Video export failed",
+         subtitle: ⟦2-char-id⟧
+```
+
+</details>
+
+<details>
+<summary>Hunk 13 · Change · +1 / -1</summary>
+
+```diff
+@@ -494,7 +494,7 @@
+         }(⟦2-char-id⟧)) return;
+       let ⟦2-char-id⟧ = null;
+       try {
+-        ⟦2-char-id⟧ = await ⟦2-char-id⟧(⟦2-char-id⟧.includeUi, (() => ⟦2-char-id⟧.canvas()), ⟦2-char-id⟧.Gy)
++        ⟦2-char-id⟧ = await ⟦2-char-id⟧(⟦2-char-id⟧.includeUi, (() => ⟦2-char-id⟧.canvas()), ⟦2-char-id⟧.WU)
+       } catch (⟦2-char-id⟧) {
+         return console.error("Failed to create video stream for export", ⟦2-char-id⟧), ⟦2-char-id⟧(⟦2-char-id⟧), void ⟦2-char-id⟧.NotificationProvider.showAlertPopup({
+           title: "Video export failed",
+```
+
+</details>
+
+<details>
+<summary>Hunk 14 · Change · +1 / -1</summary>
+
+```diff
+@@ -507,7 +507,7 @@
+         ⟦2-char-id⟧ = null;
+       try {
+         var ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧;
+-        ⟦2-char-id⟧ = ⟦2-char-id⟧.playbackSpeed(), ⟦2-char-id⟧.closeViewer(), ⟦2-char-id⟧.setPlaybackSpeed(1), ⟦2-char-id⟧.pause(), ⟦2-char-id⟧.seekToTick(null !== ⟦2-char-id⟧ && void 0 !== ⟦2-char-id⟧ ? AJ : 0);
++        ⟦2-char-id⟧ = ⟦2-char-id⟧.playbackSpeed(), ⟦2-char-id⟧.closeViewer(), ⟦2-char-id⟧.setPlaybackSpeed(1), ⟦2-char-id⟧.pause(), ⟦2-char-id⟧.seekToTick(null !== ⟦2-char-id⟧ && void 0 !== ⟦2-char-id⟧ ? JB : 0);
+         const ⟦2-char-id⟧ = await async function() {
+           const ⟦2-char-id⟧ = ⟦2-char-id⟧.b.masterGain;
+           if (!⟦2-char-id⟧.b.ctx || !⟦2-char-id⟧) return null;
+```
+
+</details>
+
+<details>
+<summary>Hunk 15 · Change · +2 / -2</summary>
+
+```diff
+@@ -515,14 +515,14 @@
+           const ⟦2-char-id⟧ = ⟦2-char-id⟧.b.ctx.createMediaStreamDestination();
+           ⟦2-char-id⟧.connect(⟦2-char-id⟧), ⟦2-char-id⟧ = ⟦2-char-id⟧;
+           const [⟦2-char-id⟧] = ⟦2-char-id⟧.stream.getAudioTracks();
+-          return null !== ⟦2-char-id⟧ && void 0 !== ⟦2-char-id⟧ ? ZJ : null
++          return null !== ⟦2-char-id⟧ && void 0 !== ⟦2-char-id⟧ ? dB : null
+         }();
+         ⟦2-char-id⟧ = new MediaStream;
+         for (const ⟦2-char-id⟧ of ⟦2-char-id⟧.getVideoTracks()) ⟦2-char-id⟧.addTrack(⟦2-char-id⟧);
+         ⟦2-char-id⟧ && ⟦2-char-id⟧.addTrack(⟦2-char-id⟧);
+         const ⟦2-char-id⟧ = function(⟦2-char-id⟧) {
+           const ⟦2-char-id⟧ = ⟦2-char-id⟧(⟦2-char-id⟧(⟦2-char-id⟧));
+-          if (!⟦2-char-id⟧) throw new Error(`No MediaRecorder mime type available for ${JJ}`);
++          if (!⟦2-char-id⟧) throw new Error(`No MediaRecorder mime type available for ${BB}`);
+           return ⟦2-char-id⟧
+         }(⟦2-char-id⟧.format);
+         ⟦2-char-id⟧ = new MediaRecorder(⟦2-char-id⟧, {
+```
+
+</details>
+
+<details>
+<summary>Hunk 16 · Change · +5 / -5</summary>
+
+```diff
+@@ -565,20 +565,20 @@
+           title: "Video export failed",
+           subtitle: "The recorder encountered an error. Nothing was saved."
+         });
+-        const ⟦2-char-id⟧ = null !== (⟦2-char-id⟧ = null === (⟦2-char-id⟧ = ⟦2-char-id⟧.playbackFailure) || void 0 === ⟦2-char-id⟧ ? void 0 : ⟦2-char-id⟧.call(⟦2-char-id⟧)) && void 0 !== ⟦2-char-id⟧ ? EJ : null;
++        const ⟦2-char-id⟧ = null !== (⟦2-char-id⟧ = null === (⟦2-char-id⟧ = ⟦2-char-id⟧.playbackFailure) || void 0 === ⟦2-char-id⟧ ? void 0 : ⟦2-char-id⟧.call(⟦2-char-id⟧)) && void 0 !== ⟦2-char-id⟧ ? tB : null;
+         if (null !== ⟦2-char-id⟧) return void ⟦2-char-id⟧.NotificationProvider.showAlertPopup({
+           title: "Video export failed",
+-          subtitle: `${YJ} Nothing was saved.`
++          subtitle: `${oB} Nothing was saved.`
+         });
+         const ⟦2-char-id⟧ = new Blob(⟦2-char-id⟧, {
+           type: ⟦2-char-id⟧
+         });
+-        ⟦2-char-id⟧.size > 0 ? (0, ⟦2-char-id⟧.d)(⟦2-char-id⟧, function(⟦2-char-id⟧, ⟦2-char-id⟧) {
++        ⟦2-char-id⟧.size > 0 ? (0, ⟦2-char-id⟧.c)(⟦2-char-id⟧, function(⟦2-char-id⟧, ⟦2-char-id⟧) {
+           const ⟦2-char-id⟧ = function(⟦2-char-id⟧) {
+             return "mp4" === ⟦2-char-id⟧ ? "mp4" : "webm"
+           }(⟦2-char-id⟧);
+-          if (⟦2-char-id⟧) return `${JJ.replace(/\.bloxdreplay$/i,"")}.${ZJ}`;
+-          return `bloxd-replay-${Date.now()}.${ZJ}`
++          if (⟦2-char-id⟧) return `${BB.replace(/\.bloxdreplay$/i,"")}.${dB}`;
++          return `bloxd-replay-${Date.now()}.${dB}`
+         }(⟦2-char-id⟧.fileName(), ⟦2-char-id⟧.format)) : ⟦2-char-id⟧.NotificationProvider.showAlertPopup({
+           title: "Video export failed",
+           subtitle: "No video data was captured. Try again."
+```
+
+</details>
+
+<details>
+<summary>Hunk 17 · Change · +2 / -2</summary>
+
+```diff
+@@ -611,13 +611,13 @@
+       }
+     }
+   },
+-  4259: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  4258: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
+     ⟦2-char-id⟧.d(⟦2-char-id⟧, {
+       Howl: () => ⟦2-char-id⟧.Howl,
+       b: () => ⟦2-char-id⟧.Howler,
+       readyAudioContext: () => ⟦2-char-id⟧
+     });
+-    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4267);
++    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4262);
+ 
+     function ⟦2-char-id⟧() {
+       const ⟦2-char-id⟧ = ⟦2-char-id⟧.Howler;
+```
+
+</details>
+
+<details>
+<summary>Hunk 18 · Change · +1 / -1</summary>
+
+```diff
+@@ -626,7 +626,7 @@
+     }
+     ⟦2-char-id⟧.Howler._mobileUnloaded = !0
+   },
+-  41240: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  41274: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
+     ⟦2-char-id⟧.d(⟦2-char-id⟧, {
+       b: () => ⟦2-char-id⟧,
+       d: () => ⟦2-char-id⟧
+```
+
+</details>
+
+<details>
+<summary>Hunk 19 · Change · +7 / -7</summary>
+
+```diff
+@@ -638,21 +638,21 @@
+       return BigInt(⟦2-char-id⟧[1]) << 32n | BigInt(⟦2-char-id⟧[0])
+     }
+   },
+-  41272: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  41304: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
+     ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
+       HOLD_TIMEOUT_MS: () => ⟦2-char-id⟧,
+       ReplayViewer: () => ⟦2-char-id⟧
+     });
+-    var ⟦2-char-id⟧ = ⟦2-char-id⟧(35998),
+-      ⟦2-char-id⟧ = ⟦2-char-id⟧(36014),
+-      ⟦2-char-id⟧ = ⟦2-char-id⟧(4189),
+-      ⟦2-char-id⟧ = ⟦2-char-id⟧(41240);
++    var ⟦2-char-id⟧ = ⟦2-char-id⟧(35941),
++      ⟦2-char-id⟧ = ⟦2-char-id⟧(35959),
++      ⟦2-char-id⟧ = ⟦2-char-id⟧(4186),
++      ⟦2-char-id⟧ = ⟦2-char-id⟧(41274);
+     const ⟦2-char-id⟧ = 1⟦2-char-id⟧,
+-      ⟦2-char-id⟧ = new Set(["Jn"]);
++      ⟦2-char-id⟧ = new Set(["pD"]);
+     class ⟦2-char-id⟧ {
+       constructor(⟦2-char-id⟧) {
+         var ⟦2-char-id⟧;
+-        this.deps = ⟦2-char-id⟧, this.id = 0, this.fileName = null, this.fileHandle = null, this.unsavedChanges = !1, this.suggestSaveAs = !1, this.playback = !1, this.opening = !1, this.loadingOpens = 0, this.epoch = 0, this.holds = new Map, this.seekAsked = !1, this.cropAsked = !1, this.cropRunning = !1, this.settleFrames = 0, this.pendingSave = null, this.pendingOpen = null, this.saveRefused = !1, this.edits = 0, this.editsAtSave = null, this.lastView = null, this.now = void 0, this.now = null !== (⟦2-char-id⟧ = ⟦2-char-id⟧.now) && void 0 !== ⟦2-char-id⟧ ? cJ : () => performance.now()
++        this.deps = ⟦2-char-id⟧, this.id = 0, this.fileName = null, this.fileHandle = null, this.unsavedChanges = !1, this.suggestSaveAs = !1, this.playback = !1, this.opening = !1, this.loadingOpens = 0, this.epoch = 0, this.holds = new Map, this.seekAsked = !1, this.cropAsked = !1, this.cropRunning = !1, this.settleFrames = 0, this.pendingSave = null, this.pendingOpen = null, this.saveRefused = !1, this.edits = 0, this.editsAtSave = null, this.lastView = null, this.now = void 0, this.now = null !== (⟦2-char-id⟧ = ⟦2-char-id⟧.now) && void 0 !== ⟦2-char-id⟧ ? TB : () => performance.now()
+       }
+       get inPlayback() {
+         return this.playback
+```
+
+</details>
+
+<details>
+<summary>Hunk 20 · Change · +1 / -1</summary>
+
+```diff
+@@ -661,7 +661,7 @@
+         return this.lastView
+       }
+       get isOpen() {
+-        return null !== this.lastView && this.lastView.state !== ⟦2-char-id⟧.cd.None
++        return null !== this.lastView && this.lastView.state !== ⟦2-char-id⟧.hd.None
+       }
+       get keyframes() {
+         return this.deps.client.keyframes()
+```
+
+</details>
+
+<details>
+<summary>Hunk 21 · Change · +4 / -4</summary>
+
+```diff
+@@ -703,18 +703,18 @@
+               case "reloading":
+                 return null;
+               case "stopped":
+-              case ⟦2-char-id⟧.Sc.ModuleTrap:
++              case ⟦2-char-id⟧.Wc.ModuleTrap:
+                 return ⟦2-char-id⟧.d.coreStopped;
+-              case ⟦2-char-id⟧.Sc.ModuleLoad:
++              case ⟦2-char-id⟧.Wc.ModuleLoad:
+                 return ⟦2-char-id⟧.d.viewerLoadFailed;
+-              case ⟦2-char-id⟧.Sc.TooLarge:
++              case ⟦2-char-id⟧.Wc.TooLarge:
+                 return ⟦2-char-id⟧.d.cantOpen
+             }
+           }(⟦2-char-id⟧);
+           if (null === ⟦2-char-id⟧) return;
+           throw new Error(⟦2-char-id⟧.text)
+         }
+-        return this.rejectSave(new Error(⟦2-char-id⟧.d.saveClosed.text)), this.fileName = null !== (⟦2-char-id⟧ = null !== (⟦2-char-id⟧ = ⟦2-char-id⟧.fileName) && void 0 !== ⟦2-char-id⟧ ? UJ : null === (⟦2-char-id⟧ = ⟦2-char-id⟧.fileHandle) || void 0 === ⟦2-char-id⟧ ? void 0 : ⟦2-char-id⟧.name) && void 0 !== ⟦2-char-id⟧ ? ZJ : null, this.fileHandle = null !== (⟦2-char-id⟧ = ⟦2-char-id⟧.fileHandle) && void 0 !== ⟦2-char-id⟧ ? AJ : null, this.unsavedChanges = !1, this.suggestSaveAs = !1, this.opening = !0, this.cropAsked = !1, this.cropRunning = !1, this.seekAsked = !1, this.hold("opening"), this.id++, this.deps.onChange(), this.settleOpen(null), new Promise(((⟦2-char-id⟧, ⟦2-char-id⟧) => {
++        return this.rejectSave(new Error(⟦2-char-id⟧.d.saveClosed.text)), this.fileName = null !== (⟦2-char-id⟧ = null !== (⟦2-char-id⟧ = ⟦2-char-id⟧.fileName) && void 0 !== ⟦2-char-id⟧ ? yB : null === (⟦2-char-id⟧ = ⟦2-char-id⟧.fileHandle) || void 0 === ⟦2-char-id⟧ ? void 0 : ⟦2-char-id⟧.name) && void 0 !== ⟦2-char-id⟧ ? dB : null, this.fileHandle = null !== (⟦2-char-id⟧ = ⟦2-char-id⟧.fileHandle) && void 0 !== ⟦2-char-id⟧ ? JB : null, this.unsavedChanges = !1, this.suggestSaveAs = !1, this.opening = !0, this.cropAsked = !1, this.cropRunning = !1, this.seekAsked = !1, this.hold("opening"), this.id++, this.deps.onChange(), this.settleOpen(null), new Promise(((⟦2-char-id⟧, ⟦2-char-id⟧) => {
+           this.pendingOpen = {
+             resolve: ⟦2-char-id⟧,
+             reject: ⟦2-char-id⟧
+```
+
+</details>
+
+<details>
+<summary>Hunk 22 · Change · +3 / -3</summary>
+
+```diff
+@@ -722,18 +722,18 @@
+         }))
+       }
+       play() {
+-        this.holds.has("Jn") || this.deps.client.play()
++        this.holds.has("pD") || this.deps.client.play()
+       }
+       pause() {
+         this.deps.client.pause()
+       }
+       holdForShaderPackFailure() {
+-        this.isOpen && this.pause(), this.hold("Jn")
++        this.isOpen && this.pause(), this.hold("pD")
+       }
+       seek(⟦2-char-id⟧) {
+         let ⟦2-char-id⟧ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+         const ⟦2-char-id⟧ = this.lastView;
+-        null !== ⟦2-char-id⟧ && (⟦2-char-id⟧ || ⟦2-char-id⟧ < ⟦2-char-id⟧.Hh) && (this.seekAsked = !0, this.hold("seek")), this.deps.client.seek(⟦2-char-id⟧, ⟦2-char-id⟧)
++        null !== ⟦2-char-id⟧ && (⟦2-char-id⟧ || ⟦2-char-id⟧ < ⟦2-char-id⟧.dL) && (this.seekAsked = !0, this.hold("seek")), this.deps.client.seek(⟦2-char-id⟧, ⟦2-char-id⟧)
+       }
+       setSpeed(⟦2-char-id⟧) {
+         this.deps.client.setSpeed(⟦2-char-id⟧)
+```
+
+</details>
+
+<details>
+<summary>Hunk 23 · Change · +1 / -1</summary>
+
+```diff
+@@ -743,7 +743,7 @@
+       }
+       cycleCameraMode() {
+         const ⟦2-char-id⟧ = this.lastView;
+-        null !== ⟦2-char-id⟧ && ⟦2-char-id⟧.state !== ⟦2-char-id⟧.cd.None && this.setCameraMode(⟦2-char-id⟧.b[(⟦2-char-id⟧.b.indexOf(⟦2-char-id⟧.cameraMode) + 1) % ⟦2-char-id⟧.b.length])
++        null !== ⟦2-char-id⟧ && ⟦2-char-id⟧.state !== ⟦2-char-id⟧.hd.None && this.setCameraMode(⟦2-char-id⟧.b[(⟦2-char-id⟧.b.indexOf(⟦2-char-id⟧.cameraMode) + 1) % ⟦2-char-id⟧.b.length])
+       }
+       addKeyframe() {
+         this.edited(this.deps.client.addKeyframe())
+```
+
+</details>
+
+<details>
+<summary>Hunk 24 · Change · +1 / -1</summary>
+
+```diff
+@@ -772,7 +772,7 @@
+           this.pendingSave = ⟦2-char-id⟧, this.editsAtSave = this.edits, this.deps.client.save((0, ⟦2-char-id⟧.d)()).then((⟦2-char-id⟧ => {
+             this.pendingSave === ⟦2-char-id⟧ && this.saveStarted(⟦2-char-id⟧)
+           }), (⟦2-char-id⟧ => {
+-            this.pendingSave === ⟦2-char-id⟧ && this.rejectSave(⟦2-char-id⟧ instanceof Error ? JJ : new Error(String(⟦2-char-id⟧)))
++            this.pendingSave === ⟦2-char-id⟧ && this.rejectSave(⟦2-char-id⟧ instanceof Error ? BB : new Error(String(⟦2-char-id⟧)))
+           }))
+         }))
+       }
+```
+
+</details>
+
+<details>
+<summary>Hunk 25 · Change · +1 / -1</summary>
+
+```diff
+@@ -790,7 +790,7 @@
+       }
+       markSaved(⟦2-char-id⟧, ⟦2-char-id⟧) {
+         var ⟦2-char-id⟧, ⟦2-char-id⟧;
+-        this.fileHandle = ⟦2-char-id⟧, this.fileName = null !== (⟦2-char-id⟧ = null !== (⟦2-char-id⟧ = null === ⟦2-char-id⟧ || void 0 === ⟦2-char-id⟧ ? void 0 : ⟦2-char-id⟧.name) && void 0 !== ⟦2-char-id⟧ ? FJ : ⟦2-char-id⟧) && void 0 !== ⟦2-char-id⟧ ? ZJ : this.fileName, this.unsavedChanges = null !== this.editsAtSave && this.edits !== this.editsAtSave, this.editsAtSave = null, this.suggestSaveAs = !1, this.deps.onChange()
++        this.fileHandle = ⟦2-char-id⟧, this.fileName = null !== (⟦2-char-id⟧ = null !== (⟦2-char-id⟧ = null === ⟦2-char-id⟧ || void 0 === ⟦2-char-id⟧ ? void 0 : ⟦2-char-id⟧.name) && void 0 !== ⟦2-char-id⟧ ? VB : ⟦2-char-id⟧) && void 0 !== ⟦2-char-id⟧ ? dB : this.fileName, this.unsavedChanges = null !== this.editsAtSave && this.edits !== this.editsAtSave, this.editsAtSave = null, this.suggestSaveAs = !1, this.deps.onChange()
+       }
+       end() {
+         this.epoch++, this.resetInFlight(), this.releaseAll(), this.settleOpen(new Error(⟦2-char-id⟧.d.coreStopped.text)), this.rejectSave(new Error(⟦2-char-id⟧.d.saveClosed.text)), this.lastView = null, this.deps.onChange()
+```
+
+</details>
+
+<details>
+<summary>Hunk 26 · Change · +2 / -2</summary>
+
+```diff
+@@ -799,8 +799,8 @@
+         var ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧;
+         const ⟦2-char-id⟧ = this.deps.client.view(),
+           ⟦2-char-id⟧ = ⟦2-char-id⟧ !== this.lastView;
+-        this.lastView = ⟦2-char-id⟧, this.opening && null !== ⟦2-char-id⟧ && ⟦2-char-id⟧.state !== ⟦2-char-id⟧.cd.None && ⟦2-char-id⟧.totalTicks > 0 && (this.opening = !1, this.settleFrames = 2, this.settleOpen(null), (0, ⟦2-char-id⟧.e)()), this.cropAsked ? (this.cropAsked = !1, null !== ⟦2-char-id⟧ && ⟦2-char-id⟧.state === ⟦2-char-id⟧.cd.Cropping ? this.cropRunning = !0 : this.cropped()) : this.cropRunning && null !== ⟦2-char-id⟧ && ⟦2-char-id⟧.state !== ⟦2-char-id⟧.cd.Cropping && (this.cropRunning = !1, this.cropped()), this.seekAsked && (this.seekAsked = !1, this.settleFrames = 2), this.settleFrames > 0 && this.settleFrames--;
+-        const ⟦2-char-id⟧ = 0 === this.settleFrames && 0 === (null !== (⟦2-char-id⟧ = null === (⟦2-char-id⟧ = (⟦2-char-id⟧ = this.deps).meshPending) || void 0 === ⟦2-char-id⟧ ? void 0 : ⟦2-char-id⟧.call(⟦2-char-id⟧)) && void 0 !== ⟦2-char-id⟧ ? JJ : 0);
++        this.lastView = ⟦2-char-id⟧, this.opening && null !== ⟦2-char-id⟧ && ⟦2-char-id⟧.state !== ⟦2-char-id⟧.hd.None && ⟦2-char-id⟧.totalTicks > 0 && (this.opening = !1, this.settleFrames = 2, this.settleOpen(null), (0, ⟦2-char-id⟧.e)()), this.cropAsked ? (this.cropAsked = !1, null !== ⟦2-char-id⟧ && ⟦2-char-id⟧.state === ⟦2-char-id⟧.hd.Cropping ? this.cropRunning = !0 : this.cropped()) : this.cropRunning && null !== ⟦2-char-id⟧ && ⟦2-char-id⟧.state !== ⟦2-char-id⟧.hd.Cropping && (this.cropRunning = !1, this.cropped()), this.seekAsked && (this.seekAsked = !1, this.settleFrames = 2), this.settleFrames > 0 && this.settleFrames--;
++        const ⟦2-char-id⟧ = 0 === this.settleFrames && 0 === (null !== (⟦2-char-id⟧ = null === (⟦2-char-id⟧ = (⟦2-char-id⟧ = this.deps).meshPending) || void 0 === ⟦2-char-id⟧ ? void 0 : ⟦2-char-id⟧.call(⟦2-char-id⟧)) && void 0 !== ⟦2-char-id⟧ ? BB : 0);
+         this.holds.has("opening") && !this.opening && 0 === this.loadingOpens && ⟦2-char-id⟧ && this.release("opening"), this.holds.has("seek") && ⟦2-char-id⟧ && this.release("seek"), this.holds.has("crop") && !this.cropRunning && ⟦2-char-id⟧ && this.release("crop");
+         const ⟦2-char-id⟧ = this.now();
+         for (const [⟦2-char-id⟧, ⟦2-char-id⟧] of this.holds) !⟦2-char-id⟧.has(⟦2-char-id⟧) && ⟦2-char-id⟧ - ⟦2-char-id⟧ >= ⟦2-char-id⟧ && (this.release(⟦2-char-id⟧), "opening" === ⟦2-char-id⟧ && (this.opening = !1, this.settleOpen(null)));
+```
+
+</details>
+
+<details>
+<summary>Hunk 27 · Change · +5 / -5</summary>
+
+```diff
+@@ -811,14 +811,14 @@
+       }
+       onFailed(⟦2-char-id⟧) {
+         switch (⟦2-char-id⟧.reason) {
+-          case ⟦2-char-id⟧.Sc.TooLarge:
++          case ⟦2-char-id⟧.Wc.TooLarge:
+             break;
+-          case ⟦2-char-id⟧.Sc.Open:
+-          case ⟦2-char-id⟧.Sc.NothingStaged:
++          case ⟦2-char-id⟧.Wc.Open:
++          case ⟦2-char-id⟧.Wc.NothingStaged:
+             this.opening = !1, this.release("opening"), null === this.pendingOpen && this.deps.notify(⟦2-char-id⟧.d.cantOpen), this.settleOpen(new Error(⟦2-char-id⟧.d.cantOpen.text));
+             break;
+-          case ⟦2-char-id⟧.Sc.Crop:
+-            if (⟦2-char-id⟧.code === ⟦2-char-id⟧.Oc.Busy) {
++          case ⟦2-char-id⟧.Wc.Crop:
++            if (⟦2-char-id⟧.code === ⟦2-char-id⟧.Tc.Busy) {
+               this.cropBusy();
+               break
+             }
+```
+
+</details>
+
+<details>
+<summary>Hunk 28 · Change · +6 / -6</summary>
+
+```diff
+@@ -828,16 +828,16 @@
+             }
+             this.cropAsked = !1, this.cropRunning = !1, this.release("crop"), this.deps.notify(⟦2-char-id⟧.d.cropFailed);
+             break;
+-          case ⟦2-char-id⟧.Sc.ModuleTrap:
+-          case ⟦2-char-id⟧.Sc.ModuleLoad:
+-          case ⟦2-char-id⟧.Sc.Port:
+-            this.moduleEnded(⟦2-char-id⟧.reason === ⟦2-char-id⟧.Sc.ModuleTrap ? ⟦2-char-id⟧.d.coreStopped : ⟦2-char-id⟧.d.cantOpen);
++          case ⟦2-char-id⟧.Wc.ModuleTrap:
++          case ⟦2-char-id⟧.Wc.ModuleLoad:
++          case ⟦2-char-id⟧.Wc.Port:
++            this.moduleEnded(⟦2-char-id⟧.reason === ⟦2-char-id⟧.Wc.ModuleTrap ? ⟦2-char-id⟧.d.coreStopped : ⟦2-char-id⟧.d.cantOpen);
+             break;
+-          case ⟦2-char-id⟧.Sc.NotLive:
++          case ⟦2-char-id⟧.Wc.NotLive:
+             console.warn("[bloxd-wasm-client] the core refused a recorder command in playback");
+             break;
+           default:
+-            console.warn(`[bloxd-wasm-client] the replay module refused a command (ReplayFailed ${JJ.reason})`), this.seekAsked = !1, this.release("seek")
++            console.warn(`[bloxd-wasm-client] the replay module refused a command (ReplayFailed ${BB.reason})`), this.seekAsked = !1, this.release("seek")
+         }
+         this.deps.onChange()
+       }
+```
+
+</details>
+
+<details>
+<summary>Hunk 29 · Change · +17 / -17</summary>
+
+```diff
+@@ -880,59 +880,59 @@
+       }
+     }
+   },
+-  41265: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  41299: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
+     ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
+       MESH_TAIL_MS: () => ⟦2-char-id⟧,
+       PLAY_START_TIMEOUT_MS: () => ⟦2-char-id⟧,
+       startWasmReplayVideoExport: () => ⟦2-char-id⟧
+     });
+-    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38196),
+-      ⟦2-char-id⟧ = ⟦2-char-id⟧(41272),
+-      ⟦2-char-id⟧ = ⟦2-char-id⟧(4189),
+-      ⟦2-char-id⟧ = ⟦2-char-id⟧(2161);
++    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38176),
++      ⟦2-char-id⟧ = ⟦2-char-id⟧(41304),
++      ⟦2-char-id⟧ = ⟦2-char-id⟧(4186),
++      ⟦2-char-id⟧ = ⟦2-char-id⟧(2117);
+     const ⟦2-char-id⟧ = ⟦2-char-id⟧.HOLD_TIMEOUT_MS + 5⟦2-char-id⟧,
+       ⟦2-char-id⟧ = 50,
+       ⟦2-char-id⟧ = 200;
+ 
+     function ⟦2-char-id⟧(⟦2-char-id⟧) {
+       var ⟦2-char-id⟧;
+-      return (null === (⟦2-char-id⟧ = ⟦2-char-id⟧.view) || void 0 === ⟦2-char-id⟧ ? void 0 : ⟦2-char-id⟧.state) === ⟦2-char-id⟧.cd.Cropping || ⟦2-char-id⟧.hj.includes("crop")
++      return (null === (⟦2-char-id⟧ = ⟦2-char-id⟧.view) || void 0 === ⟦2-char-id⟧ ? void 0 : ⟦2-char-id⟧.state) === ⟦2-char-id⟧.hd.Cropping || ⟦2-char-id⟧.Dg.includes("crop")
+     }
+ 
+     function ⟦2-char-id⟧(⟦2-char-id⟧) {
+       return (0, ⟦2-char-id⟧.d)((() => function(⟦2-char-id⟧) {
+         var ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧;
+         const ⟦2-char-id⟧ = ⟦2-char-id⟧.viewer(),
+-          ⟦2-char-id⟧ = null !== (⟦2-char-id⟧ = null === ⟦2-char-id⟧ || void 0 === ⟦2-char-id⟧ ? void 0 : ⟦2-char-id⟧.view) && void 0 !== ⟦2-char-id⟧ ? cJ : null,
++          ⟦2-char-id⟧ = null !== (⟦2-char-id⟧ = null === ⟦2-char-id⟧ || void 0 === ⟦2-char-id⟧ ? void 0 : ⟦2-char-id⟧.view) && void 0 !== ⟦2-char-id⟧ ? TB : null,
+           ⟦2-char-id⟧ = ⟦2-char-id⟧.canvas();
+-        if (!⟦2-char-id⟧ || !⟦2-char-id⟧ || ⟦2-char-id⟧.state === ⟦2-char-id⟧.cd.None || 0 === ⟦2-char-id⟧.totalTicks || !⟦2-char-id⟧ || ⟦2-char-id⟧(⟦2-char-id⟧)) return null;
+-        const ⟦2-char-id⟧ = null !== (⟦2-char-id⟧ = ⟦2-char-id⟧.now) && void 0 !== ⟦2-char-id⟧ ? ZJ : () => performance.now(),
++        if (!⟦2-char-id⟧ || !⟦2-char-id⟧ || ⟦2-char-id⟧.state === ⟦2-char-id⟧.hd.None || 0 === ⟦2-char-id⟧.totalTicks || !⟦2-char-id⟧ || ⟦2-char-id⟧(⟦2-char-id⟧)) return null;
++        const ⟦2-char-id⟧ = null !== (⟦2-char-id⟧ = ⟦2-char-id⟧.now) && void 0 !== ⟦2-char-id⟧ ? dB : () => performance.now(),
+           ⟦2-char-id⟧ = ⟦2-char-id⟧.id,
+           ⟦2-char-id⟧ = () => {
+             const ⟦2-char-id⟧ = ⟦2-char-id⟧.viewer();
+-            return ⟦2-char-id⟧ === ⟦2-char-id⟧ && ⟦2-char-id⟧.id === ⟦2-char-id⟧ && ⟦2-char-id⟧.isOpen ? cJ : null
+-          },
+-          ⟦2-char-id⟧ = Math.min(null !== (⟦2-char-id⟧ = null === (⟦2-char-id⟧ = ⟦2-char-id⟧.mark) || void 0 === ⟦2-char-id⟧ ? void 0 : ⟦2-char-id⟧.outTick) && void 0 !== ⟦2-char-id⟧ ? FJ : 1 / 0, ⟦2-char-id⟧.totalTicks - 1);
++            return ⟦2-char-id⟧ === ⟦2-char-id⟧ && ⟦2-char-id⟧.id === ⟦2-char-id⟧ && ⟦2-char-id⟧.isOpen ? TB : null
++          },
++          ⟦2-char-id⟧ = Math.min(null !== (⟦2-char-id⟧ = null === (⟦2-char-id⟧ = ⟦2-char-id⟧.mark) || void 0 === ⟦2-char-id⟧ ? void 0 : ⟦2-char-id⟧.outTick) && void 0 !== ⟦2-char-id⟧ ? VB : 1 / 0, ⟦2-char-id⟧.totalTicks - 1);
+         let ⟦2-char-id⟧ = null,
+           ⟦2-char-id⟧ = !1;
+         const ⟦2-char-id⟧ = () => {
+           var ⟦2-char-id⟧, ⟦2-char-id⟧;
+-          return (null === (⟦2-char-id⟧ = ⟦2-char-id⟧()) || void 0 === ⟦2-char-id⟧ || null === (⟦2-char-id⟧ = ⟦2-char-id⟧.view) || void 0 === ⟦2-char-id⟧ ? void 0 : ⟦2-char-id⟧.state) === ⟦2-char-id⟧.cd.Playing
++          return (null === (⟦2-char-id⟧ = ⟦2-char-id⟧()) || void 0 === ⟦2-char-id⟧ || null === (⟦2-char-id⟧ = ⟦2-char-id⟧.view) || void 0 === ⟦2-char-id⟧ ? void 0 : ⟦2-char-id⟧.state) === ⟦2-char-id⟧.hd.Playing
+         };
+         return {
+-          Gy: ⟦2-char-id⟧.rd,
+-          playbackMarkInTick: null !== (⟦2-char-id⟧ = null === (⟦2-char-id⟧ = ⟦2-char-id⟧.mark) || void 0 === ⟦2-char-id⟧ ? void 0 : ⟦2-char-id⟧.inTick) && void 0 !== ⟦2-char-id⟧ ? hJ : null,
++          WU: ⟦2-char-id⟧.ud,
++          playbackMarkInTick: null !== (⟦2-char-id⟧ = null === (⟦2-char-id⟧ = ⟦2-char-id⟧.mark) || void 0 === ⟦2-char-id⟧ ? void 0 : ⟦2-char-id⟧.inTick) && void 0 !== ⟦2-char-id⟧ ? kB : null,
+           startFailure: () => {
+             const ⟦2-char-id⟧ = ⟦2-char-id⟧();
+             return null === ⟦2-char-id⟧ ? "Another replay opened. Export it again from there." : ⟦2-char-id⟧(⟦2-char-id⟧) ? "Wait for the crop to finish, then export again." : null
+           },
+           fileName: () => {
+             var ⟦2-char-id⟧, ⟦2-char-id⟧;
+-            return null !== (⟦2-char-id⟧ = null === (⟦2-char-id⟧ = ⟦2-char-id⟧()) || void 0 === ⟦2-char-id⟧ ? void 0 : ⟦2-char-id⟧.fileName) && void 0 !== ⟦2-char-id⟧ ? JJ : null
++            return null !== (⟦2-char-id⟧ = null === (⟦2-char-id⟧ = ⟦2-char-id⟧()) || void 0 === ⟦2-char-id⟧ ? void 0 : ⟦2-char-id⟧.fileName) && void 0 !== ⟦2-char-id⟧ ? BB : null
+           },
+           playbackSpeed: () => {
+             var ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧;
+-            return null !== (⟦2-char-id⟧ = null === (⟦2-char-id⟧ = ⟦2-char-id⟧()) || void 0 === ⟦2-char-id⟧ || null === (⟦2-char-id⟧ = ⟦2-char-id⟧.view) || void 0 === ⟦2-char-id⟧ ? void 0 : ⟦2-char-id⟧.speed) && void 0 !== ⟦2-char-id⟧ ? JJ : 1
++            return null !== (⟦2-char-id⟧ = null === (⟦2-char-id⟧ = ⟦2-char-id⟧()) || void 0 === ⟦2-char-id⟧ || null === (⟦2-char-id⟧ = ⟦2-char-id⟧.view) || void 0 === ⟦2-char-id⟧ ? void 0 : ⟦2-char-id⟧.speed) && void 0 !== ⟦2-char-id⟧ ? BB : 1
+           },
+           setPlaybackSpeed: ⟦2-char-id⟧ => {
+             var ⟦2-char-id⟧;
+```
+
+</details>
+
+<details>
+<summary>Hunk 30 · Change · +2 / -2</summary>
+
+```diff
+@@ -953,12 +953,12 @@
+           seekSettled: () => new Promise((⟦2-char-id⟧ => {
+             const ⟦2-char-id⟧ = setInterval((() => {
+               const ⟦2-char-id⟧ = ⟦2-char-id⟧();
+-              null === ⟦2-char-id⟧ ? (clearInterval(⟦2-char-id⟧), ⟦2-char-id⟧()) : ⟦2-char-id⟧.hj.includes("seek") || (clearInterval(⟦2-char-id⟧), setTimeout(⟦2-char-id⟧, ⟦2-char-id⟧))
++              null === ⟦2-char-id⟧ ? (clearInterval(⟦2-char-id⟧), ⟦2-char-id⟧()) : ⟦2-char-id⟧.Dg.includes("seek") || (clearInterval(⟦2-char-id⟧), setTimeout(⟦2-char-id⟧, ⟦2-char-id⟧))
+             }), ⟦2-char-id⟧)
+           })),
+           isPlaying: () => {
+             var ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧;
+-            return null !== ⟦2-char-id⟧ && null !== ⟦2-char-id⟧() && (!!⟦2-char-id⟧() || !⟦2-char-id⟧ && (null !== (⟦2-char-id⟧ = null === (⟦2-char-id⟧ = ⟦2-char-id⟧()) || void 0 === ⟦2-char-id⟧ || null === (⟦2-char-id⟧ = ⟦2-char-id⟧.view) || void 0 === ⟦2-char-id⟧ ? void 0 : ⟦2-char-id⟧.Hh) && void 0 !== ⟦2-char-id⟧ ? JJ : 0) < ⟦2-char-id⟧ && ⟦2-char-id⟧() - ⟦2-char-id⟧ < ⟦2-char-id⟧)
++            return null !== ⟦2-char-id⟧ && null !== ⟦2-char-id⟧() && (!!⟦2-char-id⟧() || !⟦2-char-id⟧ && (null !== (⟦2-char-id⟧ = null === (⟦2-char-id⟧ = ⟦2-char-id⟧()) || void 0 === ⟦2-char-id⟧ || null === (⟦2-char-id⟧ = ⟦2-char-id⟧.view) || void 0 === ⟦2-char-id⟧ ? void 0 : ⟦2-char-id⟧.dL) && void 0 !== ⟦2-char-id⟧ ? BB : 0) < ⟦2-char-id⟧ && ⟦2-char-id⟧() - ⟦2-char-id⟧ < ⟦2-char-id⟧)
+           },
+           watchPlayback: ⟦2-char-id⟧ => {
+             const ⟦2-char-id⟧ = ⟦2-char-id⟧.watchViewer((() => {
+```
+
+</details>
+
+<details>
+<summary>Hunk 31 · Change · +1 / -1</summary>
+
+```diff
+@@ -972,7 +972,7 @@
+           playbackFailure: () => {
+             var ⟦2-char-id⟧, ⟦2-char-id⟧;
+             const ⟦2-char-id⟧ = ⟦2-char-id⟧();
+-            return null === ⟦2-char-id⟧ ? "The replay closed before the video finished." : (null !== (⟦2-char-id⟧ = null === (⟦2-char-id⟧ = ⟦2-char-id⟧.view) || void 0 === ⟦2-char-id⟧ ? void 0 : ⟦2-char-id⟧.Hh) && void 0 !== ⟦2-char-id⟧ ? JJ : 0) >= ⟦2-char-id⟧ ? null : ⟦2-char-id⟧ ? "The replay stopped before the video finished." : "The replay didn't start playing."
++            return null === ⟦2-char-id⟧ ? "The replay closed before the video finished." : (null !== (⟦2-char-id⟧ = null === (⟦2-char-id⟧ = ⟦2-char-id⟧.view) || void 0 === ⟦2-char-id⟧ ? void 0 : ⟦2-char-id⟧.dL) && void 0 !== ⟦2-char-id⟧ ? BB : 0) >= ⟦2-char-id⟧ ? null : ⟦2-char-id⟧ ? "The replay stopped before the video finished." : "The replay didn't start playing."
+           },
+           canvas: () => ⟦2-char-id⟧,
+           closeViewer: () => {
+```
+
+</details>
+
+</details>
+
+<details>
+<summary><code>bundles/staging.bloxd.io/chunks/js/wasmZstdDecoder.js</code> · modified · +9 / -9</summary>
+
+JavaScript comparison masks only two-character identifiers. Strings, comments, member properties, object keys, and all other source changes remain visible.
+
+<details>
+<summary>Hunk 1 · Change · +1 / -1</summary>
+
+```diff
+@@ -1,7 +1,7 @@
+ export const ⟦2-char-id⟧ = 60;
+ export const ids = [60];
+ export const modules = {
+-  39858: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  39813: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
+     ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
+       ZstdErrorCode: () => ⟦2-char-id⟧,
+       ZstdFrameDecoder: () => ⟦2-char-id⟧
+```
+
+</details>
+
+<details>
+<summary>Hunk 2 · Change · +1 / -1</summary>
+
+```diff
+@@ -55,7 +55,7 @@
+           const ⟦2-char-id⟧ = 3 == ⟦2-char-id⟧ ? 4 : ⟦2-char-id⟧,
+             ⟦2-char-id⟧ = ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧);
+           ⟦2-char-id⟧ += ⟦2-char-id⟧;
+-          const ⟦2-char-id⟧ = ⟦2-char-id⟧ ? 1 << qJ : ⟦2-char-id⟧,
++          const ⟦2-char-id⟧ = ⟦2-char-id⟧ ? 1 << YB : ⟦2-char-id⟧,
+             ⟦2-char-id⟧ = ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) + (1 == ⟦2-char-id⟧ && 256);
+           let ⟦2-char-id⟧ = ⟦2-char-id⟧;
+           if (!⟦2-char-id⟧) {
+```
+
+</details>
+
+<details>
+<summary>Hunk 3 · Change · +2 / -2</summary>
+
+```diff
+@@ -63,13 +63,13 @@
+             ⟦2-char-id⟧ = ⟦2-char-id⟧ + (⟦2-char-id⟧ >> 3) * (7 & ⟦2-char-id⟧[5])
+           }
+           ⟦2-char-id⟧ > 2145386496 && ⟦2-char-id⟧(1);
+-          const ⟦2-char-id⟧ = new ⟦2-char-id⟧((1 == ⟦2-char-id⟧ ? ⟦2-char-id⟧ || fJ : ⟦2-char-id⟧ ? 0 : ⟦2-char-id⟧) + 12);
++          const ⟦2-char-id⟧ = new ⟦2-char-id⟧((1 == ⟦2-char-id⟧ ? ⟦2-char-id⟧ || HB : ⟦2-char-id⟧ ? 0 : ⟦2-char-id⟧) + 12);
+           return ⟦2-char-id⟧[0] = 1, ⟦2-char-id⟧[4] = 4, ⟦2-char-id⟧[8] = 8, {
+             b: ⟦2-char-id⟧ + ⟦2-char-id⟧,
+             y: 0,
+             l: 0,
+             d: ⟦2-char-id⟧,
+-            w: ⟦2-char-id⟧ && 1 != ⟦2-char-id⟧ ? cJ : ⟦2-char-id⟧.subarray(12),
++            w: ⟦2-char-id⟧ && 1 != ⟦2-char-id⟧ ? TB : ⟦2-char-id⟧.subarray(12),
+             e: ⟦2-char-id⟧,
+             o: new ⟦2-char-id⟧(⟦2-char-id⟧.buffer, 0, 3),
+             u: ⟦2-char-id⟧,
+```
+
+</details>
+
+<details>
+<summary>Hunk 4 · Change · +1 / -1</summary>
+
+```diff
+@@ -269,7 +269,7 @@
+                 })(⟦2-char-id⟧, ⟦2-char-id⟧);
+                 ⟦2-char-id⟧ += ⟦2-char-id⟧ - (⟦2-char-id⟧ = ⟦2-char-id⟧[0]), ⟦2-char-id⟧.h = ⟦2-char-id⟧ = ⟦2-char-id⟧[1]
+               } else ⟦2-char-id⟧ || ⟦2-char-id⟧(0);
+-              (⟦2-char-id⟧ ? SJ : ⟦2-char-id⟧)(⟦2-char-id⟧.subarray(⟦2-char-id⟧, ⟦2-char-id⟧ += ⟦2-char-id⟧), ⟦2-char-id⟧.subarray(⟦2-char-id⟧), ⟦2-char-id⟧)
++              (⟦2-char-id⟧ ? zB : ⟦2-char-id⟧)(⟦2-char-id⟧.subarray(⟦2-char-id⟧, ⟦2-char-id⟧ += ⟦2-char-id⟧), ⟦2-char-id⟧.subarray(⟦2-char-id⟧), ⟦2-char-id⟧)
+             }
+             let ⟦2-char-id⟧ = ⟦2-char-id⟧[⟦2-char-id⟧++];
+             if (⟦2-char-id⟧) {
+```
+
+</details>
+
+<details>
+<summary>Hunk 5 · Change · +1 / -1</summary>
+
+```diff
+@@ -334,7 +334,7 @@
+               if (⟦2-char-id⟧ != ⟦2-char-id⟧)
+                 for (; ⟦2-char-id⟧ < ⟦2-char-id⟧.length;) ⟦2-char-id⟧[⟦2-char-id⟧++] = ⟦2-char-id⟧[⟦2-char-id⟧++];
+               else ⟦2-char-id⟧ = ⟦2-char-id⟧.length;
+-              ⟦2-char-id⟧ ? ⟦2-char-id⟧.y += SJ : ⟦2-char-id⟧ = ⟦2-char-id⟧(⟦2-char-id⟧, 0, ⟦2-char-id⟧)
++              ⟦2-char-id⟧ ? ⟦2-char-id⟧.y += zB : ⟦2-char-id⟧ = ⟦2-char-id⟧(⟦2-char-id⟧, 0, ⟦2-char-id⟧)
+             } else if (⟦2-char-id⟧) {
+               if (⟦2-char-id⟧.y += ⟦2-char-id⟧, ⟦2-char-id⟧)
+                 for (let ⟦2-char-id⟧ = 0; ⟦2-char-id⟧ < ⟦2-char-id⟧; ++⟦2-char-id⟧) ⟦2-char-id⟧[⟦2-char-id⟧] = ⟦2-char-id⟧[⟦2-char-id⟧ + ⟦2-char-id⟧]
+```
+
+</details>
+
+<details>
+<summary>Hunk 6 · Change · +1 / -1</summary>
+
+```diff
+@@ -358,7 +358,7 @@
+       }
+       push(⟦2-char-id⟧) {
+         if (this.done) return;
+-        if (this.parts.push(⟦2-char-id⟧), this.hj += ⟦2-char-id⟧.length, this.hj < this.needed) return;
++        if (this.parts.push(⟦2-char-id⟧), this.Dg += ⟦2-char-id⟧.length, this.Dg < this.needed) return;
+         const ⟦2-char-id⟧ = ((⟦2-char-id⟧, ⟦2-char-id⟧) => {
+           if (1 == ⟦2-char-id⟧.length) return ⟦2-char-id⟧[0];
+           const ⟦2-char-id⟧ = new ⟦2-char-id⟧(⟦2-char-id⟧);
+```
+
+</details>
+
+<details>
+<summary>Hunk 7 · Change · +1 / -1</summary>
+
+```diff
+@@ -367,7 +367,7 @@
+             ⟦2-char-id⟧.set(⟦2-char-id⟧, ⟦2-char-id⟧), ⟦2-char-id⟧ += ⟦2-char-id⟧.length
+           }
+           return ⟦2-char-id⟧
+-        })(this.parts, this.hj);
++        })(this.parts, this.Dg);
+         let ⟦2-char-id⟧ = this.st;
+         if (!⟦2-char-id⟧) {
+           const ⟦2-char-id⟧ = ⟦2-char-id⟧(⟦2-char-id⟧, new ⟦2-char-id⟧(0));
+```
+
+</details>
+
+<details>
+<summary>Hunk 8 · Change · +1 / -1</summary>
+
+```diff
+@@ -396,7 +396,7 @@
+         }
+         this.decoded = ⟦2-char-id⟧.y;
+         const ⟦2-char-id⟧ = ⟦2-char-id⟧.subarray(⟦2-char-id⟧.b);
+-        this.parts = ⟦2-char-id⟧.length ? [⟦2-char-id⟧] : [], this.hj = ⟦2-char-id⟧.length, ⟦2-char-id⟧.b = 0
++        this.parts = ⟦2-char-id⟧.length ? [⟦2-char-id⟧] : [], this.Dg = ⟦2-char-id⟧.length, ⟦2-char-id⟧.b = 0
+       }
+     }
+   }
+```
+
+</details>
+
+</details>
+
+<details>
+<summary><code>bundles/staging.bloxd.io/chunks/js/worldgenWorker.js</code> · modified · +1684 / -1678</summary>
 
 JavaScript comparison masks only two-character identifiers. Strings, comments, member properties, object keys, and all other source changes remain visible.
 
@@ -89,10 +1044,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
            return ⟦2-char-id⟧
          }
        },
--      36692: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-      36692: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -        var ⟦2-char-id⟧ = ⟦2-char-id⟧(36698),
 -          ⟦2-char-id⟧ = ⟦2-char-id⟧(36700),
-+      36627: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++      36627: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +        var ⟦2-char-id⟧ = ⟦2-char-id⟧(36631),
 +          ⟦2-char-id⟧ = ⟦2-char-id⟧(36636),
            ⟦2-char-id⟧ = "undefined" !== typeof Float64Array;
@@ -110,11 +1065,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
            return (0, ⟦2-char-id⟧[⟦2-char-id⟧ + 1])(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧)
          }
        },
--      59592: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-      59592: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -        var ⟦2-char-id⟧ = ⟦2-char-id⟧(59601).integer,
 -          ⟦2-char-id⟧ = ⟦2-char-id⟧(59607),
 -          ⟦2-char-id⟧ = ⟦2-char-id⟧(59610);
-+      59891: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++      59891: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +        var ⟦2-char-id⟧ = ⟦2-char-id⟧(59894).integer,
 +          ⟦2-char-id⟧ = ⟦2-char-id⟧(59900),
 +          ⟦2-char-id⟧ = ⟦2-char-id⟧(59902);
@@ -133,11 +1088,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
            this.samplePoints = [], this.currentPoint = null, this.processList.length = 0
          }, ⟦2-char-id⟧.exports = ⟦2-char-id⟧
        },
--      59616: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-      59616: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -        var ⟦2-char-id⟧ = ⟦2-char-id⟧(59601).array,
 -          ⟦2-char-id⟧ = ⟦2-char-id⟧(59607),
 -          ⟦2-char-id⟧ = ⟦2-char-id⟧(59610);
-+      59918: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++      59918: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +        var ⟦2-char-id⟧ = ⟦2-char-id⟧(59894).array,
 +          ⟦2-char-id⟧ = ⟦2-char-id⟧(59900),
 +          ⟦2-char-id⟧ = ⟦2-char-id⟧(59902);
@@ -156,9 +1111,9 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
            this.samplePoints = [], this.currentPoint = null, this.processList.length = 0
          }, ⟦2-char-id⟧.exports = ⟦2-char-id⟧
        },
--      59610: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-      59610: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -        var ⟦2-char-id⟧ = ⟦2-char-id⟧(59613);
-+      59902: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++      59902: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +        var ⟦2-char-id⟧ = ⟦2-char-id⟧(59909);
          var ⟦2-char-id⟧ = {};
          ⟦2-char-id⟧.exports = function(⟦2-char-id⟧) {
@@ -175,10 +1130,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
            }(⟦2-char-id⟧)), ⟦2-char-id⟧[⟦2-char-id⟧]
          }
        },
--      59583: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-      59583: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -        var ⟦2-char-id⟧ = ⟦2-char-id⟧(59592),
 -          ⟦2-char-id⟧ = ⟦2-char-id⟧(59616);
-+      59889: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++      59889: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +        var ⟦2-char-id⟧ = ⟦2-char-id⟧(59891),
 +          ⟦2-char-id⟧ = ⟦2-char-id⟧(59918);
  
@@ -230,9 +1185,9 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
            }
          }
        },
--      36711: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-      36711: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -        var ⟦2-char-id⟧ = ⟦2-char-id⟧(36715);
-+      36649: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++      36649: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +        var ⟦2-char-id⟧ = ⟦2-char-id⟧(36656);
  
          function ⟦2-char-id⟧(⟦2-char-id⟧) {
@@ -266,8 +1221,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
            return ⟦2-char-id⟧ + 1 | (~⟦2-char-id⟧ & -~⟦2-char-id⟧) - 1 >>> ⟦2-char-id⟧(⟦2-char-id⟧) + 1
          }
        },
--      59523: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+      59835: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-      59523: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++      59835: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
          ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -          e: () => ⟦2-char-id⟧
 +          d: () => ⟦2-char-id⟧
@@ -882,8 +1837,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
            }
          }
        },
--      518: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+      551: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-      518: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++      551: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
          ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -          b: () => ⟦2-char-id⟧
 +          c: () => ⟦2-char-id⟧
@@ -921,8 +1876,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
            }
          }
        },
--      59564: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+      59872: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-      59564: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++      59872: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
          ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -          d: () => ⟦2-char-id⟧
 +          c: () => ⟦2-char-id⟧
@@ -948,8 +1903,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
            }
          }
        },
--      38085: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+      38074: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-      38085: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++      38074: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
          ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -          e: () => ⟦2-char-id⟧
 +          c: () => ⟦2-char-id⟧
@@ -973,8 +1928,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
            }
          }
        },
--      59618: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+      59925: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-      59618: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++      59925: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
          ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -          b: () => ⟦2-char-id⟧,
 -          f: () => ⟦2-char-id⟧
@@ -1012,8 +1967,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
            ⟦2-char-id⟧.prev.next = ⟦2-char-id⟧.next, ⟦2-char-id⟧.next.prev = ⟦2-char-id⟧.prev
          }
        },
--      59566: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+      59874: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-      59566: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++      59874: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
          ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -          c: () => ⟦2-char-id⟧,
 -          d: () => ⟦2-char-id⟧,
@@ -5210,8 +6165,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
            }
          }
        },
--      59622: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+      59927: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-      59622: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++      59927: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
          ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -          c: () => ⟦2-char-id⟧,
 -          d: () => ⟦2-char-id⟧,
@@ -5350,9 +6305,9 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
                stoneFrequencies: ⟦2-char-id⟧,
                stonesTotalFrequency: ⟦2-char-id⟧
 -            } = this.Ke[⟦2-char-id⟧], ⟦2-char-id⟧ = {
--              stoneTypeId: ⟦2-char-id⟧[⟦2-char-id⟧(⟦2-char-id⟧, UJ, new ⟦2-char-id⟧.g(`${JJ[0]}|${JJ[1]}|${this.seed}Modifiers`))].stoneId
+-              stoneTypeId: ⟦2-char-id⟧[⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧, new ⟦2-char-id⟧.g(`${JJ[0]}|${JJ[1]}|${this.seed}Modifiers`))].stoneId
 +            } = this.bB[⟦2-char-id⟧], ⟦2-char-id⟧ = {
-+              stoneTypeId: ⟦2-char-id⟧[⟦2-char-id⟧(⟦2-char-id⟧, yB, new ⟦2-char-id⟧.g(`${BB[0]}|${BB[1]}|${this.seed}Modifiers`))].stoneId
++              stoneTypeId: ⟦2-char-id⟧[⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧, new ⟦2-char-id⟧.g(`${BB[0]}|${BB[1]}|${this.seed}Modifiers`))].stoneId
              };
              return this.mostRecentlyAccessedModifier = ⟦2-char-id⟧, this.mostRecentlyAccessedModifierPt[0] = ⟦2-char-id⟧[0], this.mostRecentlyAccessedModifierPt[1] = ⟦2-char-id⟧[1], ⟦2-char-id⟧
            }
@@ -5514,8 +6469,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
            }))
          }
        },
--      59556: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+      59863: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-      59556: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++      59863: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
          ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -          c: () => ⟦2-char-id⟧
 +          e: () => ⟦2-char-id⟧
@@ -5683,8 +6638,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
          }
          const ⟦2-char-id⟧ = 12
        },
--      59532: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+      59843: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-      59532: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++      59843: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
          ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -          e: () => ⟦2-char-id⟧,
 -          h: () => ⟦2-char-id⟧,
@@ -5816,8 +6771,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
            }
          }
        },
--      59574: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+      59881: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-      59574: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++      59881: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
          ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -          e: () => ⟦2-char-id⟧
 +          c: () => ⟦2-char-id⟧
@@ -5986,8 +6941,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
            }
          }
        },
--      59630: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+      59932: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-      59630: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++      59932: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
          ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
            WorldGenerator: () => ⟦2-char-id⟧
          });
@@ -7171,7 +8126,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 234 · Change · +4 / -4</summary>
+<summary>Hunk 234 · Change · +3 / -3</summary>
 
 ```diff
 @@ -8756,18 +8756,18 @@
@@ -7188,8 +8143,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
              }, {
                minItems: 2,
                maxItems: 4,
--              items: [⟦2-char-id⟧, oJ, lJ, ⟦2-char-id⟧]
-+              items: [⟦2-char-id⟧, nB, eB, ⟦2-char-id⟧]
+               items: [⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
              }]
            }),
 -          [⟦2-char-id⟧.i.EPIC]: new ⟦2-char-id⟧({
@@ -7224,15 +8178,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 236 · Change · +2 / -2</summary>
+<summary>Hunk 236 · Change · +1 / -1</summary>
 
 ```diff
-@@ -8801,10 +8801,10 @@
-             }, {
-               minItems: 2,
-               maxItems: 3,
--              items: [⟦2-char-id⟧, Jc, ⟦2-char-id⟧]
-+              items: [⟦2-char-id⟧, BT, ⟦2-char-id⟧]
+@@ -8804,7 +8804,7 @@
+               items: [⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
              }]
            }),
 -          [⟦2-char-id⟧.i.LEGENDARY]: new ⟦2-char-id⟧({
@@ -7270,40 +8220,6 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 <summary>Hunk 238 · Change · +1 / -1</summary>
 
 ```diff
-@@ -8846,7 +8846,7 @@
-             }, {
-               minItems: 4,
-               maxItems: 5,
--              items: [⟦2-char-id⟧, Jc, {
-+              items: [⟦2-char-id⟧, BT, {
-                 name: "Moonstone",
-                 frequency: 1,
-                 amount: {
-```
-
-</details>
-
-<details>
-<summary>Hunk 239 · Change · +1 / -1</summary>
-
-```diff
-@@ -8857,7 +8857,7 @@
-             }, {
-               minItems: 1,
-               maxItems: 1,
--              items: (⟦2-char-id⟧ = 1, aJ([{
-+              items: (⟦2-char-id⟧ = 1, jB([{
-                 name: "Caught Mob Spirit_Golem Default",
-                 frequency: 1,
-                 amount: null,
-```
-
-</details>
-
-<details>
-<summary>Hunk 240 · Change · +1 / -1</summary>
-
-```diff
 @@ -8934,7 +8934,7 @@
              return {
                data: {
@@ -7318,7 +8234,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 241 · Change · +4 / -4</summary>
+<summary>Hunk 239 · Change · +4 / -4</summary>
 
 ```diff
 @@ -8944,23 +8944,23 @@
@@ -7354,7 +8270,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 242 · Change · +1 / -1</summary>
+<summary>Hunk 240 · Change · +1 / -1</summary>
 
 ```diff
 @@ -8975,7 +8975,7 @@
@@ -7371,7 +8287,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 243 · Change · +1 / -1</summary>
+<summary>Hunk 241 · Change · +1 / -1</summary>
 
 ```diff
 @@ -8989,7 +8989,7 @@
@@ -7388,7 +8304,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 244 · Change · +3 / -3</summary>
+<summary>Hunk 242 · Change · +3 / -3</summary>
 
 ```diff
 @@ -9018,11 +9018,11 @@
@@ -7411,7 +8327,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 245 · Change · +1 / -1</summary>
+<summary>Hunk 243 · Change · +1 / -1</summary>
 
 ```diff
 @@ -9030,7 +9030,7 @@
@@ -7428,7 +8344,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 246 · Change · +1 / -1</summary>
+<summary>Hunk 244 · Change · +1 / -1</summary>
 
 ```diff
 @@ -9040,7 +9040,7 @@
@@ -7445,7 +8361,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 247 · Change · +1 / -1</summary>
+<summary>Hunk 245 · Change · +1 / -1</summary>
 
 ```diff
 @@ -9059,7 +9059,7 @@
@@ -7462,7 +8378,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 248 · Change · +2 / -2</summary>
+<summary>Hunk 246 · Change · +2 / -2</summary>
 
 ```diff
 @@ -9076,14 +9076,14 @@
@@ -7487,7 +8403,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 249 · Change · +1 / -1</summary>
+<summary>Hunk 247 · Change · +1 / -1</summary>
 
 ```diff
 @@ -9091,7 +9091,7 @@
@@ -7504,7 +8420,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 250 · Change · +1 / -1</summary>
+<summary>Hunk 248 · Change · +1 / -1</summary>
 
 ```diff
 @@ -9102,7 +9102,7 @@
@@ -7521,7 +8437,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 251 · Change · +1 / -1</summary>
+<summary>Hunk 249 · Change · +1 / -1</summary>
 
 ```diff
 @@ -9121,7 +9121,7 @@
@@ -7538,7 +8454,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 252 · Change · +2 / -2</summary>
+<summary>Hunk 250 · Change · +2 / -2</summary>
 
 ```diff
 @@ -9142,8 +9142,8 @@
@@ -7557,7 +8473,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 253 · Change · +3 / -3</summary>
+<summary>Hunk 251 · Change · +3 / -3</summary>
 
 ```diff
 @@ -9156,16 +9156,16 @@
@@ -7585,7 +8501,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 254 · Change · +3 / -3</summary>
+<summary>Hunk 252 · Change · +3 / -3</summary>
 
 ```diff
 @@ -9212,10 +9212,10 @@
@@ -7607,7 +8523,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 255 · Change · +10 / -10</summary>
+<summary>Hunk 253 · Change · +10 / -10</summary>
 
 ```diff
 @@ -9242,19 +9242,19 @@
@@ -7645,7 +8561,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 256 · Change · +2 / -2</summary>
+<summary>Hunk 254 · Change · +2 / -2</summary>
 
 ```diff
 @@ -9263,10 +9263,10 @@
@@ -7666,7 +8582,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 257 · Change · +4 / -4</summary>
+<summary>Hunk 255 · Change · +4 / -4</summary>
 
 ```diff
 @@ -9289,16 +9289,16 @@
@@ -7695,7 +8611,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 258 · Change · +1 / -1</summary>
+<summary>Hunk 256 · Change · +1 / -1</summary>
 
 ```diff
 @@ -9319,7 +9319,7 @@
@@ -7712,7 +8628,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 259 · Change · +2 / -2</summary>
+<summary>Hunk 257 · Change · +2 / -2</summary>
 
 ```diff
 @@ -9328,10 +9328,10 @@
@@ -7733,7 +8649,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 260 · Change · +1 / -1</summary>
+<summary>Hunk 258 · Change · +1 / -1</summary>
 
 ```diff
 @@ -9339,7 +9339,7 @@
@@ -7750,7 +8666,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 261 · Change · +1 / -1</summary>
+<summary>Hunk 259 · Change · +1 / -1</summary>
 
 ```diff
 @@ -9349,7 +9349,7 @@
@@ -7767,7 +8683,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 262 · Change · +1 / -1</summary>
+<summary>Hunk 260 · Change · +1 / -1</summary>
 
 ```diff
 @@ -9357,7 +9357,7 @@
@@ -7784,7 +8700,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 263 · Change · +1 / -1</summary>
+<summary>Hunk 261 · Change · +1 / -1</summary>
 
 ```diff
 @@ -9365,7 +9365,7 @@
@@ -7801,7 +8717,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 264 · Change · +1 / -1</summary>
+<summary>Hunk 262 · Change · +1 / -1</summary>
 
 ```diff
 @@ -9375,7 +9375,7 @@
@@ -7818,7 +8734,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 265 · Change · +1 / -1</summary>
+<summary>Hunk 263 · Change · +1 / -1</summary>
 
 ```diff
 @@ -9385,7 +9385,7 @@
@@ -7835,7 +8751,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 266 · Change · +1 / -1</summary>
+<summary>Hunk 264 · Change · +1 / -1</summary>
 
 ```diff
 @@ -9395,7 +9395,7 @@
@@ -7852,7 +8768,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 267 · Change · +1 / -1</summary>
+<summary>Hunk 265 · Change · +1 / -1</summary>
 
 ```diff
 @@ -9403,7 +9403,7 @@
@@ -7869,7 +8785,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 268 · Change · +1 / -1</summary>
+<summary>Hunk 266 · Change · +1 / -1</summary>
 
 ```diff
 @@ -9413,7 +9413,7 @@
@@ -7886,7 +8802,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 269 · Change · +1 / -1</summary>
+<summary>Hunk 267 · Change · +1 / -1</summary>
 
 ```diff
 @@ -9423,7 +9423,7 @@
@@ -7903,7 +8819,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 270 · Change · +1 / -1</summary>
+<summary>Hunk 268 · Change · +1 / -1</summary>
 
 ```diff
 @@ -9431,7 +9431,7 @@
@@ -7920,7 +8836,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 271 · Change · +1 / -1</summary>
+<summary>Hunk 269 · Change · +1 / -1</summary>
 
 ```diff
 @@ -9441,7 +9441,7 @@
@@ -7937,7 +8853,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 272 · Change · +1 / -1</summary>
+<summary>Hunk 270 · Change · +1 / -1</summary>
 
 ```diff
 @@ -9451,7 +9451,7 @@
@@ -7954,7 +8870,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 273 · Change · +1 / -1</summary>
+<summary>Hunk 271 · Change · +1 / -1</summary>
 
 ```diff
 @@ -9461,7 +9461,7 @@
@@ -7971,7 +8887,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 274 · Change · +2 / -2</summary>
+<summary>Hunk 272 · Change · +2 / -2</summary>
 
 ```diff
 @@ -9471,8 +9471,8 @@
@@ -7990,7 +8906,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 275 · Change · +3 / -3</summary>
+<summary>Hunk 273 · Change · +3 / -3</summary>
 
 ```diff
 @@ -9546,12 +9546,12 @@
@@ -8014,7 +8930,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 276 · Change · +8 / -8</summary>
+<summary>Hunk 274 · Change · +8 / -8</summary>
 
 ```diff
 @@ -9559,26 +9559,26 @@
@@ -8057,7 +8973,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 277 · Change · +2 / -2</summary>
+<summary>Hunk 275 · Change · +2 / -2</summary>
 
 ```diff
 @@ -9599,8 +9599,8 @@
@@ -8076,7 +8992,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 278 · Change · +2 / -2</summary>
+<summary>Hunk 276 · Change · +2 / -2</summary>
 
 ```diff
 @@ -9615,8 +9615,8 @@
@@ -8095,7 +9011,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 279 · Change · +3 / -3</summary>
+<summary>Hunk 277 · Change · +3 / -3</summary>
 
 ```diff
 @@ -9633,11 +9633,11 @@
@@ -8118,7 +9034,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 280 · Change · +3 / -3</summary>
+<summary>Hunk 278 · Change · +3 / -3</summary>
 
 ```diff
 @@ -9662,13 +9662,13 @@
@@ -8143,7 +9059,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 281 · Change · +4 / -4</summary>
+<summary>Hunk 279 · Change · +4 / -4</summary>
 
 ```diff
 @@ -9743,16 +9743,16 @@
@@ -8172,7 +9088,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 282 · Change · +1 / -1</summary>
+<summary>Hunk 280 · Change · +1 / -1</summary>
 
 ```diff
 @@ -9778,7 +9778,7 @@
@@ -8189,7 +9105,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 283 · Change · +1 / -1</summary>
+<summary>Hunk 281 · Change · +1 / -1</summary>
 
 ```diff
 @@ -9803,7 +9803,7 @@
@@ -8206,7 +9122,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 284 · Change · +2 / -2</summary>
+<summary>Hunk 282 · Change · +2 / -2</summary>
 
 ```diff
 @@ -9813,11 +9813,11 @@
@@ -8228,7 +9144,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 285 · Change · +1 / -1</summary>
+<summary>Hunk 283 · Change · +1 / -1</summary>
 
 ```diff
 @@ -9834,7 +9834,7 @@
@@ -8245,7 +9161,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 286 · Change · +1 / -1</summary>
+<summary>Hunk 284 · Change · +1 / -1</summary>
 
 ```diff
 @@ -9847,7 +9847,7 @@
@@ -8262,7 +9178,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 287 · Change · +1 / -1</summary>
+<summary>Hunk 285 · Change · +1 / -1</summary>
 
 ```diff
 @@ -9867,7 +9867,7 @@
@@ -8279,7 +9195,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 288 · Change · +5 / -5</summary>
+<summary>Hunk 286 · Change · +5 / -5</summary>
 
 ```diff
 @@ -9879,23 +9879,23 @@
@@ -8316,7 +9232,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 289 · Change · +2 / -2</summary>
+<summary>Hunk 287 · Change · +2 / -2</summary>
 
 ```diff
 @@ -9921,10 +9921,10 @@
@@ -8337,7 +9253,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 290 · Change · +2 / -2</summary>
+<summary>Hunk 288 · Change · +2 / -2</summary>
 
 ```diff
 @@ -9936,10 +9936,10 @@
@@ -8358,7 +9274,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 291 · Change · +1 / -1</summary>
+<summary>Hunk 289 · Change · +1 / -1</summary>
 
 ```diff
 @@ -9960,7 +9960,7 @@
@@ -8375,7 +9291,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 292 · Change · +1 / -1</summary>
+<summary>Hunk 290 · Change · +1 / -1</summary>
 
 ```diff
 @@ -9974,7 +9974,7 @@
@@ -8392,10 +9308,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 293 · Change · +2 / -2</summary>
+<summary>Hunk 291 · Change · +1 / -1</summary>
 
 ```diff
-@@ -10001,14 +10001,14 @@
+@@ -10001,7 +10001,7 @@
            getCellInfo(⟦2-char-id⟧, ⟦2-char-id⟧) {
              if (⟦2-char-id⟧ === this.lastReadInfo.cellX && ⟦2-char-id⟧ === this.lastReadInfo.cellZ) return this.lastReadInfo.info;
              const ⟦2-char-id⟧ = this.waterBodyInfos.get(⟦2-char-id⟧, ⟦2-char-id⟧);
@@ -8404,20 +9320,12 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
              const ⟦2-char-id⟧ = this.getCellOrigin(⟦2-char-id⟧, ⟦2-char-id⟧),
                ⟦2-char-id⟧ = this.biomeSelector.generate(⟦2-char-id⟧[0], ⟦2-char-id⟧[1]),
                ⟦2-char-id⟧ = this.noWaterHeightmapGenerator.getNoWaterHeightmapVal(⟦2-char-id⟧[0], ⟦2-char-id⟧[1], ⟦2-char-id⟧),
-               ⟦2-char-id⟧ = {
-                 origin: ⟦2-char-id⟧,
-                 originNoWaterHeight: ⟦2-char-id⟧,
--                downhill: this.getDownhillFromCell(⟦2-char-id⟧, cJ, ⟦2-char-id⟧),
-+                downhill: this.getDownhillFromCell(⟦2-char-id⟧, TB, ⟦2-char-id⟧),
-                 uphills: null,
-                 incomingFlux: null,
-                 selfFlux: this.getRainfall(⟦2-char-id⟧[0], ⟦2-char-id⟧[1]),
 ```
 
 </details>
 
 <details>
-<summary>Hunk 294 · Change · +2 / -2</summary>
+<summary>Hunk 292 · Change · +2 / -2</summary>
 
 ```diff
 @@ -10065,12 +10065,12 @@
@@ -8440,7 +9348,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 295 · Change · +40 / -40</summary>
+<summary>Hunk 293 · Change · +40 / -40</summary>
 
 ```diff
 @@ -10110,95 +10110,95 @@
@@ -8584,7 +9492,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 296 · Change · +2 / -2</summary>
+<summary>Hunk 294 · Change · +2 / -2</summary>
 
 ```diff
 @@ -10208,8 +10208,8 @@
@@ -8603,7 +9511,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 297 · Change · +9 / -9</summary>
+<summary>Hunk 295 · Change · +9 / -9</summary>
 
 ```diff
 @@ -10219,24 +10219,24 @@
@@ -8645,7 +9553,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 298 · Change · +23 / -23</summary>
+<summary>Hunk 296 · Change · +23 / -23</summary>
 
 ```diff
 @@ -10245,45 +10245,45 @@
@@ -8722,7 +9630,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 299 · Change · +2 / -2</summary>
+<summary>Hunk 297 · Change · +2 / -2</summary>
 
 ```diff
 @@ -10302,14 +10302,14 @@
@@ -8747,7 +9655,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 300 · Change · +2 / -2</summary>
+<summary>Hunk 298 · Change · +2 / -2</summary>
 
 ```diff
 @@ -10319,13 +10319,13 @@
@@ -8771,7 +9679,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 301 · Change · +10 / -10</summary>
+<summary>Hunk 299 · Change · +10 / -10</summary>
 
 ```diff
 @@ -10344,29 +10344,29 @@
@@ -8819,7 +9727,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 302 · Change · +2 / -2</summary>
+<summary>Hunk 300 · Change · +2 / -2</summary>
 
 ```diff
 @@ -10383,12 +10383,12 @@
@@ -8842,7 +9750,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 303 · Change · +2 / -2</summary>
+<summary>Hunk 301 · Change · +2 / -2</summary>
 
 ```diff
 @@ -10402,13 +10402,13 @@
@@ -8866,7 +9774,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 304 · Change · +1 / -1</summary>
+<summary>Hunk 302 · Change · +1 / -1</summary>
 
 ```diff
 @@ -10428,7 +10428,7 @@
@@ -8883,7 +9791,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 305 · Change · +14 / -14</summary>
+<summary>Hunk 303 · Change · +14 / -14</summary>
 
 ```diff
 @@ -10442,34 +10442,34 @@
@@ -8940,7 +9848,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 306 · Change · +13 / -13</summary>
+<summary>Hunk 304 · Change · +13 / -13</summary>
 
 ```diff
 @@ -10477,32 +10477,32 @@
@@ -8994,7 +9902,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 307 · Change · +9 / -9</summary>
+<summary>Hunk 305 · Change · +9 / -9</summary>
 
 ```diff
 @@ -10513,20 +10513,20 @@
@@ -9032,7 +9940,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 308 · Change · +4 / -4</summary>
+<summary>Hunk 306 · Change · +4 / -4</summary>
 
 ```diff
 @@ -10535,10 +10535,10 @@
@@ -9055,7 +9963,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 309 · Change · +1 / -1</summary>
+<summary>Hunk 307 · Change · +1 / -1</summary>
 
 ```diff
 @@ -10549,7 +10549,7 @@
@@ -9072,7 +9980,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 310 · Change · +1 / -1</summary>
+<summary>Hunk 308 · Change · +1 / -1</summary>
 
 ```diff
 @@ -10559,7 +10559,7 @@
@@ -9089,7 +9997,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 311 · Change · +1 / -1</summary>
+<summary>Hunk 309 · Change · +1 / -1</summary>
 
 ```diff
 @@ -10573,7 +10573,7 @@
@@ -9106,7 +10014,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 312 · Change · +8 / -8</summary>
+<summary>Hunk 310 · Change · +8 / -8</summary>
 
 ```diff
 @@ -10583,21 +10583,21 @@
@@ -9144,7 +10052,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 313 · Change · +11 / -11</summary>
+<summary>Hunk 311 · Change · +11 / -11</summary>
 
 ```diff
 @@ -10610,28 +10610,28 @@
@@ -9192,7 +10100,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 314 · Change · +14 / -14</summary>
+<summary>Hunk 312 · Change · +14 / -14</summary>
 
 ```diff
 @@ -10639,40 +10639,40 @@
@@ -9255,7 +10163,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 315 · Change · +2 / -2</summary>
+<summary>Hunk 313 · Change · +2 / -2</summary>
 
 ```diff
 @@ -10681,13 +10681,13 @@
@@ -9279,7 +10187,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 316 · Change · +1 / -1</summary>
+<summary>Hunk 314 · Change · +1 / -1</summary>
 
 ```diff
 @@ -10706,7 +10706,7 @@
@@ -9296,7 +10204,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 317 · Change · +1 / -1</summary>
+<summary>Hunk 315 · Change · +1 / -1</summary>
 
 ```diff
 @@ -10714,7 +10714,7 @@
@@ -9313,7 +10221,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 318 · Change · +6 / -6</summary>
+<summary>Hunk 316 · Change · +6 / -6</summary>
 
 ```diff
 @@ -10724,24 +10724,24 @@
@@ -9352,7 +10260,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 319 · Change · +1 / -1</summary>
+<summary>Hunk 317 · Change · +1 / -1</summary>
 
 ```diff
 @@ -10762,7 +10762,7 @@
@@ -9369,7 +10277,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 320 · Change · +1 / -1</summary>
+<summary>Hunk 318 · Change · +1 / -1</summary>
 
 ```diff
 @@ -10795,7 +10795,7 @@
@@ -9386,7 +10294,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 321 · Change · +15 / -15</summary>
+<summary>Hunk 319 · Change · +15 / -15</summary>
 
 ```diff
 @@ -10813,32 +10813,32 @@
@@ -9404,8 +10312,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
            }
          }
        },
--      59540: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+      59848: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-      59540: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++      59848: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
          ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -          e: () => ⟦2-char-id⟧,
 +          b: () => ⟦2-char-id⟧,
@@ -9442,7 +10350,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 322 · Change · +1 / -1</summary>
+<summary>Hunk 320 · Change · +1 / -1</summary>
 
 ```diff
 @@ -10851,7 +10851,7 @@
@@ -9459,7 +10367,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 323 · Change · +1 / -1</summary>
+<summary>Hunk 321 · Change · +1 / -1</summary>
 
 ```diff
 @@ -11060,7 +11060,7 @@
@@ -9476,15 +10384,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 324 · Change · +1 / -1</summary>
+<summary>Hunk 322 · Change · +1 / -1</summary>
 
 ```diff
 @@ -11089,7 +11089,7 @@
              ⟦2-char-id⟧ = ((⟦2-char-id⟧[0] - ⟦2-char-id⟧[0]) * (⟦2-char-id⟧[0] - ⟦2-char-id⟧[0]) + (⟦2-char-id⟧[1] - ⟦2-char-id⟧[1]) * (⟦2-char-id⟧[1] - ⟦2-char-id⟧[1])) / ⟦2-char-id⟧;
            let ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧;
            return ⟦2-char-id⟧ < 0 ? (⟦2-char-id⟧ = ⟦2-char-id⟧[0], ⟦2-char-id⟧ = ⟦2-char-id⟧[1], ⟦2-char-id⟧ = 0) : ⟦2-char-id⟧ > 1 ? (⟦2-char-id⟧ = ⟦2-char-id⟧[0], ⟦2-char-id⟧ = ⟦2-char-id⟧[1], ⟦2-char-id⟧ = 1) : (⟦2-char-id⟧ = ⟦2-char-id⟧[0] + ⟦2-char-id⟧ * (⟦2-char-id⟧[0] - ⟦2-char-id⟧[0]), ⟦2-char-id⟧ = ⟦2-char-id⟧[1] + ⟦2-char-id⟧ * (⟦2-char-id⟧[1] - ⟦2-char-id⟧[1]), ⟦2-char-id⟧ = ⟦2-char-id⟧), {
--            DA: ⟦2-char-id⟧(⟦2-char-id⟧, eJ, ⟦2-char-id⟧),
-+            cg: ⟦2-char-id⟧(⟦2-char-id⟧, pB, ⟦2-char-id⟧),
+-            DA: ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧),
++            cg: ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧),
              fracAlong: ⟦2-char-id⟧,
              lineSegmentLength: Math.sqrt(⟦2-char-id⟧)
            }
@@ -9493,7 +10401,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 325 · Change · +1 / -1</summary>
+<summary>Hunk 323 · Change · +1 / -1</summary>
 
 ```diff
 @@ -11120,7 +11120,7 @@
@@ -9510,7 +10418,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 326 · Change · +1 / -1</summary>
+<summary>Hunk 324 · Change · +1 / -1</summary>
 
 ```diff
 @@ -11145,7 +11145,7 @@
@@ -9527,7 +10435,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 327 · Change · +1 / -1</summary>
+<summary>Hunk 325 · Change · +1 / -1</summary>
 
 ```diff
 @@ -11153,7 +11153,7 @@
@@ -9544,7 +10452,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 328 · Change · +1 / -1</summary>
+<summary>Hunk 326 · Change · +1 / -1</summary>
 
 ```diff
 @@ -11281,7 +11281,7 @@
@@ -9561,7 +10469,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 329 · Change · +1 / -1</summary>
+<summary>Hunk 327 · Change · +1 / -1</summary>
 
 ```diff
 @@ -11330,7 +11330,7 @@
@@ -9578,15 +10486,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 330 · Change · +4 / -4</summary>
+<summary>Hunk 328 · Change · +4 / -4</summary>
 
 ```diff
 @@ -11360,14 +11360,14 @@
            }
          }
        },
--      59543: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+      59857: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-      59543: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++      59857: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
          ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +          b: () => ⟦2-char-id⟧,
            c: () => ⟦2-char-id⟧,
@@ -9605,15 +10513,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 331 · Change · +7 / -7</summary>
+<summary>Hunk 329 · Change · +7 / -7</summary>
 
 ```diff
 @@ -11381,14 +11381,14 @@
            ⟦2-char-id⟧ = -1⟦2-char-id⟧,
            ⟦2-char-id⟧ = 2
        },
--      59549: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+      59859: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-      59549: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++      59859: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
          ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -          c: () => ⟦2-char-id⟧,
 -          f: () => ⟦2-char-id⟧,
@@ -9635,15 +10543,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 332 · Change · +4 / -4</summary>
+<summary>Hunk 330 · Change · +4 / -4</summary>
 
 ```diff
 @@ -11407,14 +11407,14 @@
              return ⟦2-char-id⟧[⟦2-char-id⟧.DistanceToNearestFixedPrefab = 0] = "DistanceToNearestFixedPrefab", ⟦2-char-id⟧[⟦2-char-id⟧.HeightOfNearestFixedPrefab = 1] = "HeightOfNearestFixedPrefab", ⟦2-char-id⟧[⟦2-char-id⟧.NumFields = 2] = "NumFields", ⟦2-char-id⟧
            }({})
        },
--      3735: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+      3734: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-      3735: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++      3734: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
          ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -          c: () => ⟦2-char-id⟧,
 -          f: () => ⟦2-char-id⟧,
@@ -9662,7 +10570,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 333 · Change · +3 / -3</summary>
+<summary>Hunk 331 · Change · +3 / -3</summary>
 
 ```diff
 @@ -11440,15 +11440,15 @@
@@ -9689,7 +10597,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 334 · Change · +1 / -1</summary>
+<summary>Hunk 332 · Change · +1 / -1</summary>
 
 ```diff
 @@ -11473,7 +11473,7 @@
@@ -9706,7 +10614,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 335 · Change · +1 / -1</summary>
+<summary>Hunk 333 · Change · +1 / -1</summary>
 
 ```diff
 @@ -11483,7 +11483,7 @@
@@ -9723,15 +10631,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 336 · Change · +10 / -10</summary>
+<summary>Hunk 334 · Change · +10 / -10</summary>
 
 ```diff
 @@ -11499,20 +11499,20 @@
            }
          }
        },
--      535: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+      572: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-      535: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++      572: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
          ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -          B: () => ⟦2-char-id⟧,
 -          E: () => ⟦2-char-id⟧,
@@ -9762,15 +10670,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 337 · Change · +2 / -2</summary>
+<summary>Hunk 335 · Change · +2 / -2</summary>
 
 ```diff
 @@ -11550,11 +11550,11 @@
            return null === ⟦2-char-id⟧ || void 0 === ⟦2-char-id⟧ ? void 0 : ⟦2-char-id⟧.id
          }
        },
--      538: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+      581: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-      538: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++      581: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
          ⟦2-char-id⟧.d(⟦2-char-id⟧, {
            b: () => ⟦2-char-id⟧
          });
@@ -9784,7 +10692,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 338 · Change · +6 / -6</summary>
+<summary>Hunk 336 · Change · +6 / -6</summary>
 
 ```diff
 @@ -11577,12 +11577,12 @@
@@ -9811,7 +10719,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 339 · Change · +1 / -1</summary>
+<summary>Hunk 337 · Change · +1 / -1</summary>
 
 ```diff
 @@ -11653,7 +11653,7 @@
@@ -9828,7 +10736,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 340 · Change · +15 / -15</summary>
+<summary>Hunk 338 · Change · +15 / -15</summary>
 
 ```diff
 @@ -11668,27 +11668,27 @@
@@ -9879,7 +10787,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 341 · Change · +2 / -2</summary>
+<summary>Hunk 339 · Change · +2 / -2</summary>
 
 ```diff
 @@ -11723,12 +11723,12 @@
@@ -9902,7 +10810,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 342 · Change · +1 / -1</summary>
+<summary>Hunk 340 · Change · +1 / -1</summary>
 
 ```diff
 @@ -11766,7 +11766,7 @@
@@ -9919,7 +10827,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 343 · Change · +2 / -2</summary>
+<summary>Hunk 341 · Change · +2 / -2</summary>
 
 ```diff
 @@ -11787,8 +11787,8 @@
@@ -9938,7 +10846,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 344 · Change · +4 / -4</summary>
+<summary>Hunk 342 · Change · +4 / -4</summary>
 
 ```diff
 @@ -11806,12 +11806,12 @@
@@ -9963,7 +10871,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 345 · Change · +3 / -3</summary>
+<summary>Hunk 343 · Change · +3 / -3</summary>
 
 ```diff
 @@ -11834,9 +11834,9 @@
@@ -9984,7 +10892,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 346 · Change · +8 / -8</summary>
+<summary>Hunk 344 · Change · +8 / -8</summary>
 
 ```diff
 @@ -11846,28 +11846,28 @@
@@ -10029,7 +10937,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 347 · Change · +27 / -27</summary>
+<summary>Hunk 345 · Change · +27 / -27</summary>
 
 ```diff
 @@ -11878,104 +11878,104 @@
@@ -10169,7 +11077,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 348 · Change · +2 / -2</summary>
+<summary>Hunk 346 · Change · +2 / -2</summary>
 
 ```diff
 @@ -11985,11 +11985,11 @@
@@ -10191,7 +11099,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 349 · Change · +1 / -1</summary>
+<summary>Hunk 347 · Change · +1 / -1</summary>
 
 ```diff
 @@ -12066,7 +12066,7 @@
@@ -10208,7 +11116,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 350 · Change · +1 / -1</summary>
+<summary>Hunk 348 · Change · +1 / -1</summary>
 
 ```diff
 @@ -12090,7 +12090,7 @@
@@ -10225,10 +11133,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 351 · Change · +17 / -17</summary>
+<summary>Hunk 349 · Change · +16 / -16</summary>
 
 ```diff
-@@ -12120,61 +12120,61 @@
+@@ -12120,58 +12120,58 @@
  
    function ⟦2-char-id⟧() {
      return function(⟦2-char-id⟧, ⟦2-char-id⟧) {
@@ -10302,17 +11210,13 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +          if (⟦2-char-id⟧[⟦2-char-id⟧].UB < ⟦2-char-id⟧[⟦2-char-id⟧ - 1].FB) throw new Error(`Custom world-gen layers overlap: [${dB[VB-1].UB}, ${dB[VB-1].FB}) and [${dB[VB].UB}, ${dB[VB].FB})`)
        }(⟦2-char-id⟧, ⟦2-char-id⟧), this.layerEntries = ⟦2-char-id⟧.map((⟦2-char-id⟧ => ({
          layer: ⟦2-char-id⟧,
--        generator: new ⟦2-char-id⟧(⟦2-char-id⟧, cJ, FJ, UJ, eJ, XJ, ZJ, null, ⟦2-char-id⟧)
-+        generator: new ⟦2-char-id⟧(⟦2-char-id⟧, TB, VB, yB, pB, lB, dB, null, ⟦2-char-id⟧)
-       })))
-     }
-     getChunk(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) {
+         generator: new ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, null, ⟦2-char-id⟧)
 ```
 
 </details>
 
 <details>
-<summary>Hunk 352 · Change · +1 / -1</summary>
+<summary>Hunk 350 · Change · +1 / -1</summary>
 
 ```diff
 @@ -12183,7 +12183,7 @@
@@ -10329,7 +11233,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 353 · Change · +46 / -45</summary>
+<summary>Hunk 351 · Change · +46 / -45</summary>
 
 ```diff
 @@ -12201,96 +12201,97 @@
@@ -10480,7 +11384,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 354 · Change · +1 / -1</summary>
+<summary>Hunk 352 · Change · +1 / -1</summary>
 
 ```diff
 @@ -12307,7 +12308,7 @@
@@ -10497,7 +11401,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 355 · Change · +3 / -3</summary>
+<summary>Hunk 353 · Change · +3 / -3</summary>
 
 ```diff
 @@ -12350,16 +12351,16 @@
@@ -10525,7 +11429,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 356 · Change · +1 / -1</summary>
+<summary>Hunk 354 · Change · +1 / -1</summary>
 
 ```diff
 @@ -12372,7 +12373,7 @@
@@ -10542,7 +11446,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 357 · Change · +3 / -3</summary>
+<summary>Hunk 355 · Change · +3 / -3</summary>
 
 ```diff
 @@ -12381,15 +12382,15 @@
@@ -10569,7 +11473,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 358 · Change · +3 / -3</summary>
+<summary>Hunk 356 · Change · +3 / -3</summary>
 
 ```diff
 @@ -12399,16 +12400,16 @@
@@ -10597,7 +11501,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 359 · Change · +1 / -1</summary>
+<summary>Hunk 357 · Change · +1 / -1</summary>
 
 ```diff
 @@ -12419,7 +12420,7 @@
@@ -10614,7 +11518,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 360 · Change · +1 / -0</summary>
+<summary>Hunk 358 · Change · +1 / -0</summary>
 
 ```diff
 @@ -12431,6 +12432,7 @@
@@ -10630,7 +11534,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 361 · Change · +9 / -9</summary>
+<summary>Hunk 359 · Change · +9 / -9</summary>
 
 ```diff
 @@ -12438,21 +12440,21 @@
@@ -10669,7 +11573,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 362 · Change · +4 / -0</summary>
+<summary>Hunk 360 · Change · +4 / -0</summary>
 
 ```diff
 @@ -12460,24 +12462,28 @@
@@ -10720,8 +11624,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 63;
  export const ids = [63];
  export const modules = {
--  35511: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  35430: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  35511: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  35430: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 +      c: () => ⟦2-char-id⟧
@@ -10757,8 +11661,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }
      }
    },
--  42011: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  42059: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  42011: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  42059: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        createWorldgenWorker: () => ⟦2-char-id⟧,
        prefetchWorldgenWorker: () => ⟦2-char-id⟧,

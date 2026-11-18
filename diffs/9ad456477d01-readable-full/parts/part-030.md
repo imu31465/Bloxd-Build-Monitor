@@ -108,8 +108,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 100;
  export const ids = [100];
  export const modules = {
--  4409: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  4423: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  4409: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  4423: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      function ⟦2-char-id⟧(⟦2-char-id⟧) {
        return ⟦2-char-id⟧ = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(⟦2-char-id⟧) {
          return typeof ⟦2-char-id⟧
@@ -274,8 +274,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
      var ⟦2-char-id⟧ = ⟦2-char-id⟧;
      ⟦2-char-id⟧.default = ⟦2-char-id⟧
    },
--  4407: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  4415: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  4407: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  4415: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      var ⟦2-char-id⟧;
 -    ⟦2-char-id⟧.c = void 0;
 -    var ⟦2-char-id⟧ = ((⟦2-char-id⟧ = ⟦2-char-id⟧(4409)) && ⟦2-char-id⟧.__esModule ? FJ : {
@@ -303,9 +303,9 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return Math.min(Math.max(⟦2-char-id⟧, ⟦2-char-id⟧), ⟦2-char-id⟧)
      }
    },
--  4375: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4375: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4383);
-+  4384: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4384: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4388);
  
      function ⟦2-char-id⟧() {}
@@ -322,17 +322,17 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧.PropTypes = ⟦2-char-id⟧, ⟦2-char-id⟧
      }
    },
--  4367: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4367: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.exports = ⟦2-char-id⟧(4375)()
-+  4376: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4376: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.exports = ⟦2-char-id⟧(4384)()
    },
 -  4383: ⟦2-char-id⟧ => {
 +  4388: ⟦2-char-id⟧ => {
      ⟦2-char-id⟧.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
    },
--  4412: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  4427: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  4412: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  4427: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        default: () => ⟦2-char-id⟧
      });
@@ -360,7 +360,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary><code>bundles/staging.bloxd.io/chunks/js/101.js</code> · modified · +146 / -146</summary>
+<summary><code>bundles/staging.bloxd.io/chunks/js/101.js</code> · modified · +141 / -141</summary>
 
 JavaScript comparison masks only two-character identifiers. Strings, comments, member properties, object keys, and all other source changes remain visible.
 
@@ -372,9 +372,9 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 101;
  export const ids = [101, 117];
  export const modules = {
--  4375: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4375: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4383);
-+  4384: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4384: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4388);
  
      function ⟦2-char-id⟧() {}
@@ -391,18 +391,18 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧.PropTypes = ⟦2-char-id⟧, ⟦2-char-id⟧
      }
    },
--  4367: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4367: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.exports = ⟦2-char-id⟧(4375)()
 -  },
 -  4383: ⟦2-char-id⟧ => {
-+  4376: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4376: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.exports = ⟦2-char-id⟧(4384)()
 +  },
 +  4388: ⟦2-char-id⟧ => {
      ⟦2-char-id⟧.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
    },
--  5926: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5921: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5926: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5921: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        ShaderPackPublishForm: () => ⟦2-char-id⟧
      });
@@ -502,20 +502,18 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 5 · Change · +2 / -2</summary>
+<summary>Hunk 5 · Change · +1 / -1</summary>
 
 ```diff
-@@ -130,8 +130,8 @@
+@@ -130,7 +130,7 @@
            }), (0, ⟦2-char-id⟧.jsxs)("div", {
              className: "ShaderPackPublishPackSize",
              children: [⟦2-char-id⟧("shaderPackListing:sizeValue", {
 -              kilobytes: String((0, ⟦2-char-id⟧.Q)(⟦2-char-id⟧.sourceBytes))
--            }), " \xb7", " ", VJ("shaderPackListing:filesValue", {
 +              kilobytes: String((0, ⟦2-char-id⟧.O)(⟦2-char-id⟧.sourceBytes))
-+            }), " \xb7", " ", fB("shaderPackListing:filesValue", {
+             }), " \xb7", " ", ⟦2-char-id⟧("shaderPackListing:filesValue", {
                files: String(⟦2-char-id⟧.pack.files.length)
              })]
-           }), (0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧, {
 ```
 
 </details>
@@ -561,10 +559,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 8 · Change · +8 / -8</summary>
+<summary>Hunk 8 · Change · +7 / -7</summary>
 
 ```diff
-@@ -179,35 +179,35 @@
+@@ -179,33 +179,33 @@
                const {
                  name: ⟦2-char-id⟧,
                  description: ⟦2-char-id⟧
@@ -603,11 +601,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -          children: [(0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.c, {
 +          children: [(0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.e, {
              name: "upload"
--          }), " ", VJ(⟦2-char-id⟧ ? "shaderPackListing:uploadButton" : "shaderPackListing:publishButton")]
-+          }), " ", fB(⟦2-char-id⟧ ? "shaderPackListing:uploadButton" : "shaderPackListing:publishButton")]
+           }), " ", ⟦2-char-id⟧(⟦2-char-id⟧ ? "shaderPackListing:uploadButton" : "shaderPackListing:publishButton")]
          })]
-       })
-     }
 ```
 
 </details>
@@ -630,7 +625,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 10 · Change · +5 / -5</summary>
+<summary>Hunk 10 · Change · +3 / -3</summary>
 
 ```diff
 @@ -227,16 +227,16 @@
@@ -640,17 +635,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -          children: [(0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.c, {
 +          children: [(0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.e, {
              name: "circle-check"
--          }), " ", ZJ("shaderPackListing:publishReady")]
-+          }), " ", dB("shaderPackListing:publishReady")]
+           }), " ", ⟦2-char-id⟧("shaderPackListing:publishReady")]
          }), ⟦2-char-id⟧.offInStrict.length > 0 && (0, ⟦2-char-id⟧.jsxs)(⟦2-char-id⟧.Fragment, {
            children: [(0, ⟦2-char-id⟧.jsxs)("div", {
              className: "ShaderPackPublishNote Warning",
 -            children: [(0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.c, {
 +            children: [(0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.e, {
                name: "triangle-exclamation"
--            }), " ", ZJ("shaderPack:offInStrict")]
+             }), " ", ⟦2-char-id⟧("shaderPack:offInStrict")]
 -          }), (0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.e, {
-+            }), " ", dB("shaderPack:offInStrict")]
 +          }), (0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.c, {
              diagnostics: ⟦2-char-id⟧.offInStrict,
              t: ⟦2-char-id⟧
@@ -660,7 +653,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 11 · Change · +3 / -3</summary>
+<summary>Hunk 11 · Change · +2 / -2</summary>
 
 ```diff
 @@ -244,10 +244,10 @@
@@ -670,9 +663,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -          children: [(0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.c, {
 +          children: [(0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.e, {
              name: "triangle-exclamation"
--          }), " ", ZJ("shaderPackListing:publishHasErrors")]
+           }), " ", ⟦2-char-id⟧("shaderPackListing:publishHasErrors")]
 -        }), (0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.e, {
-+          }), " ", dB("shaderPackListing:publishHasErrors")]
 +        }), (0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.c, {
            diagnostics: ⟦2-char-id⟧.errors,
            more: ⟦2-char-id⟧.moreErrors,
@@ -714,8 +706,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        })
      }
    },
--  5919: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5917: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5919: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5917: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        default: () => ⟦2-char-id⟧
      });
@@ -780,8 +772,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        })
      }
    },
--  5903: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5906: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5903: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5906: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧,
 -      c: () => ⟦2-char-id⟧,
@@ -847,8 +839,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }
      }
    },
--  5886: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5891: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5886: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5891: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      A: () => ⟦2-char-id⟧,
 -      C: () => ⟦2-char-id⟧,
@@ -1024,8 +1016,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧ instanceof ⟦2-char-id⟧.b && ⟦2-char-id⟧.errorMessageForUser ? ⟦2-char-id⟧.errorMessageForUser : ⟦2-char-id⟧(⟦2-char-id⟧)
      }
    },
--  5910: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5913: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5910: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5913: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 +      e: () => ⟦2-char-id⟧
@@ -1044,8 +1036,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }]
      }
    },
--  6004: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5994: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  6004: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5994: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧,
 -      f: () => ⟦2-char-id⟧
@@ -1061,11 +1053,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      return null !== (⟦2-char-id⟧ = await ⟦2-char-id⟧.g.getItem(⟦2-char-id⟧, ⟦2-char-id⟧)) && void 0 !== ⟦2-char-id⟧ ? JJ : null
 -    }
 -  },
--  5889: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5889: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +      return null !== (⟦2-char-id⟧ = await ⟦2-char-id⟧.f.getItem(⟦2-char-id⟧, ⟦2-char-id⟧)) && void 0 !== ⟦2-char-id⟧ ? BB : null
 +    }
 +  },
-+  5898: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5898: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      B: () => ⟦2-char-id⟧,
 -      C: () => ⟦2-char-id⟧,
@@ -1161,8 +1153,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 102;
  export const ids = [102];
  export const modules = {
--  8181: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  8209: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  8181: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  8209: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        default: () => ⟦2-char-id⟧
      });
@@ -1918,8 +1910,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        })
      }
    },
--  4392: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  4400: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  4392: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  4400: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 +      c: () => ⟦2-char-id⟧
@@ -1939,8 +1931,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return await ⟦2-char-id⟧.json()
      }
    },
--  8192: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  8223: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  8192: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  8223: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 +      c: () => ⟦2-char-id⟧
@@ -1991,8 +1983,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }(⟦2-char-id⟧))
      }
    },
--  8187: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  8214: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  8187: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  8214: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        c: () => ⟦2-char-id⟧,
 -      e: () => ⟦2-char-id⟧,
@@ -2049,7 +2041,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary><code>bundles/staging.bloxd.io/chunks/js/103.js</code> · modified · +152 / -152</summary>
+<summary><code>bundles/staging.bloxd.io/chunks/js/103.js</code> · modified · +144 / -144</summary>
 
 JavaScript comparison masks only two-character identifiers. Strings, comments, member properties, object keys, and all other source changes remain visible.
 
@@ -2061,8 +2053,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 103;
  export const ids = [103];
  export const modules = {
--  4401: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  4411: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  4401: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  4411: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        e: () => ⟦2-char-id⟧,
 -      f: () => ⟦2-char-id⟧,
@@ -2218,8 +2210,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        })
      }
    },
--  6011: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5996: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  6011: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5996: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        default: () => ⟦2-char-id⟧
      });
@@ -2383,7 +2375,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 13 · Change · +3 / -3</summary>
+<summary>Hunk 13 · Change · +2 / -2</summary>
 
 ```diff
 @@ -346,10 +346,10 @@
@@ -2393,9 +2385,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -            children: [(0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.c, {
 +            children: [(0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.e, {
                name: "pen"
--            }), " ", XJ("shaderPackListing:rename")]
+             }), " ", ⟦2-char-id⟧("shaderPackListing:rename")]
 -          }), (0, ⟦2-char-id⟧.jsxs)(⟦2-char-id⟧.O, {
-+            }), " ", lB("shaderPackListing:rename")]
 +          }), (0, ⟦2-char-id⟧.jsxs)(⟦2-char-id⟧.T, {
              disabled: ⟦2-char-id⟧,
              onClick: () => {
@@ -2405,7 +2396,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 14 · Change · +3 / -3</summary>
+<summary>Hunk 14 · Change · +2 / -2</summary>
 
 ```diff
 @@ -367,10 +367,10 @@
@@ -2415,9 +2406,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -            children: [(0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.c, {
 +            children: [(0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.e, {
                name: "file-lines"
--            }), " ", XJ("shaderPackListing:editDescription")]
+             }), " ", ⟦2-char-id⟧("shaderPackListing:editDescription")]
 -          }), (0, ⟦2-char-id⟧.jsxs)(⟦2-char-id⟧.O, {
-+            }), " ", lB("shaderPackListing:editDescription")]
 +          }), (0, ⟦2-char-id⟧.jsxs)(⟦2-char-id⟧.T, {
              disabled: ⟦2-char-id⟧ || ⟦2-char-id⟧.isBanned && !⟦2-char-id⟧.listed,
              onClick: () => {
@@ -2427,29 +2417,35 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 15 · Change · +5 / -5</summary>
+<summary>Hunk 15 · Change · +1 / -1</summary>
 
 ```diff
-@@ -378,18 +378,18 @@
+@@ -378,7 +378,7 @@
                  listed: !⟦2-char-id⟧.listed
                })))
              },
 -            children: [(0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.c, {
 +            children: [(0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.e, {
                name: ⟦2-char-id⟧.listed ? "eye-slash" : "eye"
--            }), " ", XJ(⟦2-char-id⟧.listed ? "shaderPackListing:unlist" : "shaderPackListing:relist")]
-+            }), " ", lB(⟦2-char-id⟧.listed ? "shaderPackListing:unlist" : "shaderPackListing:relist")]
+             }), " ", ⟦2-char-id⟧(⟦2-char-id⟧.listed ? "shaderPackListing:unlist" : "shaderPackListing:relist")]
            }), !⟦2-char-id⟧.isBanned && (0, ⟦2-char-id⟧.jsxs)(⟦2-char-id⟧.d, {
-             disabled: ⟦2-char-id⟧,
+```
+
+</details>
+
+<details>
+<summary>Hunk 16 · Change · +2 / -2</summary>
+
+```diff
+@@ -386,10 +386,10 @@
              onClick: () => {
                ⟦2-char-id⟧(!⟦2-char-id⟧)
              },
 -            children: [(0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.c, {
 +            children: [(0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.e, {
                name: "upload"
--            }), " ", XJ("shaderPackListing:uploadVersion")]
+             }), " ", ⟦2-char-id⟧("shaderPackListing:uploadVersion")]
 -          }), (0, ⟦2-char-id⟧.jsxs)(⟦2-char-id⟧.J, {
-+            }), " ", lB("shaderPackListing:uploadVersion")]
 +          }), (0, ⟦2-char-id⟧.jsxs)(⟦2-char-id⟧.N, {
              disabled: ⟦2-char-id⟧ || ⟦2-char-id⟧.isBanned,
              onClick: () => {
@@ -2459,7 +2455,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 16 · Change · +6 / -6</summary>
+<summary>Hunk 17 · Change · +5 / -5</summary>
 
 ```diff
 @@ -400,26 +400,26 @@
@@ -2476,9 +2472,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -            children: [(0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.c, {
 +            children: [(0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.e, {
                name: "trash-can"
--            }), " ", XJ("general:delete")]
+             }), " ", ⟦2-char-id⟧("general:delete")]
 -          }), ⟦2-char-id⟧ && (0, ⟦2-char-id⟧.jsxs)(⟦2-char-id⟧.J, {
-+            }), " ", lB("general:delete")]
 +          }), ⟦2-char-id⟧ && (0, ⟦2-char-id⟧.jsxs)(⟦2-char-id⟧.N, {
              disabled: ⟦2-char-id⟧,
              onClick: () => {
@@ -2500,7 +2495,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 17 · Change · +8 / -8</summary>
+<summary>Hunk 18 · Change · +8 / -8</summary>
 
 ```diff
 @@ -433,14 +433,14 @@
@@ -2531,7 +2526,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 18 · Change · +2 / -2</summary>
+<summary>Hunk 19 · Change · +2 / -2</summary>
 
 ```diff
 @@ -448,12 +448,12 @@
@@ -2554,15 +2549,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 19 · Change · +1 / -1</summary>
+<summary>Hunk 20 · Change · +1 / -1</summary>
 
 ```diff
 @@ -463,7 +463,7 @@
            onSelect: ⟦2-char-id⟧ => {
              ⟦2-char-id⟧(⟦2-char-id⟧), ⟦2-char-id⟧(!1)
            },
--          imageUrl: ⟦2-char-id⟧ => (0, ⟦2-char-id⟧.q)(⟦2-char-id⟧, cJ, JJ, "thumb")
-+          imageUrl: ⟦2-char-id⟧ => (0, ⟦2-char-id⟧.r)(⟦2-char-id⟧, TB, BB, "thumb")
+-          imageUrl: ⟦2-char-id⟧ => (0, ⟦2-char-id⟧.q)(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, "thumb")
++          imageUrl: ⟦2-char-id⟧ => (0, ⟦2-char-id⟧.r)(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, "thumb")
          }), (0, ⟦2-char-id⟧.jsxs)("div", {
            className: "ShaderPackPreviewStage",
            children: [!⟦2-char-id⟧ && (0, ⟦2-char-id⟧.jsxs)("button", {
@@ -2571,7 +2566,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 20 · Change · +1 / -1</summary>
+<summary>Hunk 21 · Change · +1 / -1</summary>
 
 ```diff
 @@ -478,7 +478,7 @@
@@ -2588,7 +2583,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 21 · Change · +3 / -3</summary>
+<summary>Hunk 22 · Change · +2 / -2</summary>
 
 ```diff
 @@ -488,13 +488,13 @@
@@ -2598,13 +2593,12 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -            children: [(0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.c, {
 +            children: [(0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.e, {
                name: "arrows-left-right"
--            }), " ", ZJ("shaderPackListing:compare")]
-+            }), " ", dB("shaderPackListing:compare")]
+             }), " ", ⟦2-char-id⟧("shaderPackListing:compare")]
            }), ⟦2-char-id⟧ && null !== ⟦2-char-id⟧ && (0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧, {
              item: ⟦2-char-id⟧,
              packUrl: ⟦2-char-id⟧,
--            baselineUrl: (0, ⟦2-char-id⟧.l)(⟦2-char-id⟧, fJ, XJ, "large")
-+            baselineUrl: (0, ⟦2-char-id⟧.k)(⟦2-char-id⟧, HB, lB, "large")
+-            baselineUrl: (0, ⟦2-char-id⟧.l)(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, "large")
++            baselineUrl: (0, ⟦2-char-id⟧.k)(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, "large")
            }), ⟦2-char-id⟧ && (0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧, {
              side: "Left",
              onClick: () => {
@@ -2613,15 +2607,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 22 · Change · +2 / -2</summary>
+<summary>Hunk 23 · Change · +2 / -2</summary>
 
 ```diff
 @@ -509,9 +509,9 @@
              children: ⟦2-char-id⟧("shaderPackListing:withoutPack")
            })]
          }), ⟦2-char-id⟧ && (0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧, {
--          fullUrl: (0, ⟦2-char-id⟧.q)(⟦2-char-id⟧, cJ, XJ, "full"),
-+          fullUrl: (0, ⟦2-char-id⟧.r)(⟦2-char-id⟧, TB, lB, "full"),
+-          fullUrl: (0, ⟦2-char-id⟧.q)(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, "full"),
++          fullUrl: (0, ⟦2-char-id⟧.r)(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, "full"),
            largeUrl: ⟦2-char-id⟧,
 -          alt: ⟦2-char-id⟧(⟦2-char-id⟧.eb[⟦2-char-id⟧]),
 +          alt: ⟦2-char-id⟧(⟦2-char-id⟧.cb[⟦2-char-id⟧]),
@@ -2633,7 +2627,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 23 · Change · +1 / -1</summary>
+<summary>Hunk 24 · Change · +1 / -1</summary>
 
 ```diff
 @@ -527,7 +527,7 @@
@@ -2650,7 +2644,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 24 · Change · +2 / -2</summary>
+<summary>Hunk 25 · Change · +2 / -2</summary>
 
 ```diff
 @@ -544,9 +544,9 @@
@@ -2670,7 +2664,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 25 · Change · +5 / -5</summary>
+<summary>Hunk 26 · Change · +5 / -5</summary>
 
 ```diff
 @@ -562,20 +562,20 @@
@@ -2704,7 +2698,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 26 · Change · +2 / -2</summary>
+<summary>Hunk 27 · Change · +2 / -2</summary>
 
 ```diff
 @@ -595,10 +595,10 @@
@@ -2725,7 +2719,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 27 · Change · +1 / -1</summary>
+<summary>Hunk 28 · Change · +1 / -1</summary>
 
 ```diff
 @@ -621,7 +621,7 @@
@@ -2742,7 +2736,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 28 · Change · +1 / -1</summary>
+<summary>Hunk 29 · Change · +1 / -1</summary>
 
 ```diff
 @@ -647,7 +647,7 @@
@@ -2759,7 +2753,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 29 · Change · +3 / -3</summary>
+<summary>Hunk 30 · Change · +3 / -3</summary>
 
 ```diff
 @@ -655,9 +655,9 @@
@@ -2780,7 +2774,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 30 · Change · +2 / -2</summary>
+<summary>Hunk 31 · Change · +2 / -2</summary>
 
 ```diff
 @@ -670,11 +670,11 @@
@@ -2802,7 +2796,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 31 · Change · +1 / -1</summary>
+<summary>Hunk 32 · Change · +1 / -1</summary>
 
 ```diff
 @@ -694,7 +694,7 @@
@@ -2819,7 +2813,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 32 · Change · +1 / -1</summary>
+<summary>Hunk 33 · Change · +1 / -1</summary>
 
 ```diff
 @@ -704,7 +704,7 @@
@@ -2836,7 +2830,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 33 · Change · +1 / -1</summary>
+<summary>Hunk 34 · Change · +1 / -1</summary>
 
 ```diff
 @@ -721,7 +721,7 @@
@@ -2853,7 +2847,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 34 · Change · +4 / -4</summary>
+<summary>Hunk 35 · Change · +3 / -3</summary>
 
 ```diff
 @@ -730,16 +730,16 @@
@@ -2868,8 +2862,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -          children: [(0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.c, {
 +          children: [(0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.e, {
              name: ⟦2-char-id⟧ ? "check" : "download"
--          }), " ", ZJ(⟦2-char-id⟧ ? "shaderPackListing:inUse" : "shaderPackListing:use")]
-+          }), " ", dB(⟦2-char-id⟧ ? "shaderPackListing:inUse" : "shaderPackListing:use")]
+           }), " ", ⟦2-char-id⟧(⟦2-char-id⟧ ? "shaderPackListing:inUse" : "shaderPackListing:use")]
          }), !1 === ⟦2-char-id⟧ && (0, ⟦2-char-id⟧.jsx)("div", {
            className: "ShaderPackUseNote",
 -          children: ⟦2-char-id⟧((0, ⟦2-char-id⟧.e)() ? "shaderPack:needsWebGpuDisabledUntilRestart" : "shaderPack:needsWebGpu")
@@ -2882,7 +2875,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 35 · Change · +5 / -5</summary>
+<summary>Hunk 36 · Change · +5 / -5</summary>
 
 ```diff
 @@ -751,17 +751,17 @@
@@ -2913,7 +2906,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 36 · Change · +3 / -3</summary>
+<summary>Hunk 37 · Change · +3 / -3</summary>
 
 ```diff
 @@ -775,9 +775,9 @@
@@ -2934,7 +2927,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 37 · Change · +2 / -2</summary>
+<summary>Hunk 38 · Change · +2 / -2</summary>
 
 ```diff
 @@ -790,10 +790,10 @@
@@ -2945,8 +2938,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +          children: (0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.b, {})
          }), null !== ⟦2-char-id⟧ && (0, ⟦2-char-id⟧.jsxs)("div", {
            className: "ShaderPackInformationMessage",
--          children: [(0, ⟦2-char-id⟧.C)(⟦2-char-id⟧.error, cJ, "shaderPackListing:loadPackFailed"), (0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.d, {
-+          children: [(0, ⟦2-char-id⟧.D)(⟦2-char-id⟧.error, TB, "shaderPackListing:loadPackFailed"), (0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.d, {
+-          children: [(0, ⟦2-char-id⟧.C)(⟦2-char-id⟧.error, ⟦2-char-id⟧, "shaderPackListing:loadPackFailed"), (0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.d, {
++          children: [(0, ⟦2-char-id⟧.D)(⟦2-char-id⟧.error, ⟦2-char-id⟧, "shaderPackListing:loadPackFailed"), (0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.d, {
              onClick: ⟦2-char-id⟧,
              children: ⟦2-char-id⟧("general:tryAgain")
            })]
@@ -2955,7 +2948,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 38 · Change · +1 / -1</summary>
+<summary>Hunk 39 · Change · +1 / -1</summary>
 
 ```diff
 @@ -832,7 +832,7 @@
@@ -2972,7 +2965,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 39 · Change · +1 / -1</summary>
+<summary>Hunk 40 · Change · +1 / -1</summary>
 
 ```diff
 @@ -852,7 +852,7 @@
@@ -2989,7 +2982,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 40 · Change · +1 / -1</summary>
+<summary>Hunk 41 · Change · +1 / -1</summary>
 
 ```diff
 @@ -863,7 +863,7 @@
@@ -3006,10 +2999,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 41 · Change · +4 / -4</summary>
+<summary>Hunk 42 · Change · +3 / -3</summary>
 
 ```diff
-@@ -887,12 +887,12 @@
+@@ -887,10 +887,10 @@
                  alt: ""
                })]
              })
@@ -3021,17 +3014,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +            to: (0, ⟦2-char-id⟧.L)(⟦2-char-id⟧),
 +            children: ⟦2-char-id⟧(⟦2-char-id⟧.M[⟦2-char-id⟧])
            }, ⟦2-char-id⟧)))]
--        }), UJ, (0, ⟦2-char-id⟧.jsxs)("dl", {
-+        }), yB, (0, ⟦2-char-id⟧.jsxs)("dl", {
+         }), ⟦2-char-id⟧, (0, ⟦2-char-id⟧.jsxs)("dl", {
            className: "ShaderPackFactList",
-           children: [(0, ⟦2-char-id⟧.jsxs)("div", {
-             children: [(0, ⟦2-char-id⟧.jsx)("dt", {
 ```
 
 </details>
 
 <details>
-<summary>Hunk 42 · Change · +1 / -1</summary>
+<summary>Hunk 43 · Change · +1 / -1</summary>
 
 ```diff
 @@ -913,7 +913,7 @@
@@ -3048,7 +3038,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 43 · Change · +1 / -1</summary>
+<summary>Hunk 44 · Change · +1 / -1</summary>
 
 ```diff
 @@ -921,7 +921,7 @@
@@ -3065,7 +3055,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 44 · Change · +5 / -5</summary>
+<summary>Hunk 45 · Change · +5 / -5</summary>
 
 ```diff
 @@ -944,15 +944,15 @@
@@ -3080,8 +3070,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      if (⟦2-char-id⟧ - ⟦2-char-id⟧ <= 30 * ⟦2-char-id⟧.k) {
 +        const ⟦2-char-id⟧ = (0, ⟦2-char-id⟧.m)(⟦2-char-id⟧.code, "shaderPackListing:timeAgo");
          ⟦2-char-id⟧ = ⟦2-char-id⟧("shaderPackListing:timeAgo", {
--          time: (0, ⟦2-char-id⟧._)(⟦2-char-id⟧, ZJ, ⟦2-char-id⟧)
-+          time: (0, ⟦2-char-id⟧.cb)(⟦2-char-id⟧, dB, ⟦2-char-id⟧)
+-          time: (0, ⟦2-char-id⟧._)(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧)
++          time: (0, ⟦2-char-id⟧.cb)(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧)
          })
        }
 -      return (0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.g, {
@@ -3094,15 +3084,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 45 · Change · +4 / -4</summary>
+<summary>Hunk 46 · Change · +4 / -4</summary>
 
 ```diff
 @@ -964,13 +964,13 @@
        })
      }
    },
--  4426: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  4438: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  4426: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  4438: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 +      d: () => ⟦2-char-id⟧
@@ -3120,15 +3110,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 46 · Change · +5 / -5</summary>
+<summary>Hunk 47 · Change · +5 / -5</summary>
 
 ```diff
 @@ -1000,17 +1000,17 @@
        })
      }
    },
--  4433: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  4447: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  4433: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  4447: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧,
 -      i: () => ⟦2-char-id⟧
@@ -3151,15 +3141,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 47 · Change · +5 / -5</summary>
+<summary>Hunk 48 · Change · +5 / -5</summary>
 
 ```diff
 @@ -1031,17 +1031,17 @@
          }), [⟦2-char-id⟧])
        }
    },
--  6004: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5994: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  6004: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5994: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧,
 -      f: () => ⟦2-char-id⟧
@@ -3184,7 +3174,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary><code>bundles/staging.bloxd.io/chunks/js/104.js</code> · modified · +1841 / -1841</summary>
+<summary><code>bundles/staging.bloxd.io/chunks/js/104.js</code> · modified · +1802 / -1802</summary>
 
 JavaScript comparison masks only two-character identifiers. Strings, comments, member properties, object keys, and all other source changes remain visible.
 
@@ -3198,8 +3188,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 104;
  export const ids = [104];
  export const modules = {
--  5562: function(⟦2-char-id⟧, cJ, ⟦2-char-id⟧) {
-+  5572: function(⟦2-char-id⟧, TB, ⟦2-char-id⟧) {
+-  5562: function(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) {
++  5572: function(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) {
      var ⟦2-char-id⟧;
      ! function() {
        var ⟦2-char-id⟧, ⟦2-char-id⟧ = 1⟦2-char-id⟧,
@@ -3373,19 +3363,19 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }.call(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧)) || (⟦2-char-id⟧.exports = ⟦2-char-id⟧)
      }()
    },
--  5130: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5130: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4637)(⟦2-char-id⟧(4493), "DataView");
-+  5179: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5179: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4655)(⟦2-char-id⟧(4517), "DataView");
      ⟦2-char-id⟧.exports = ⟦2-char-id⟧
    },
--  4613: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4613: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4619),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4676),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4681),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4683),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4685);
-+  4639: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4639: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4642),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4694),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4698),
@@ -3406,13 +3396,13 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
      }
      ⟦2-char-id⟧.prototype.clear = ⟦2-char-id⟧, ⟦2-char-id⟧.prototype.delete = ⟦2-char-id⟧, ⟦2-char-id⟧.prototype.get = ⟦2-char-id⟧, ⟦2-char-id⟧.prototype.has = ⟦2-char-id⟧, ⟦2-char-id⟧.prototype.set = ⟦2-char-id⟧, ⟦2-char-id⟧.exports = ⟦2-char-id⟧
    },
--  4693: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4693: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4700),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4705),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4723),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4727),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4732);
-+  4711: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4711: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4713),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4721),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4739),
@@ -3433,17 +3423,17 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
      }
      ⟦2-char-id⟧.prototype.clear = ⟦2-char-id⟧, ⟦2-char-id⟧.prototype.delete = ⟦2-char-id⟧, ⟦2-char-id⟧.prototype.get = ⟦2-char-id⟧, ⟦2-char-id⟧.prototype.has = ⟦2-char-id⟧, ⟦2-char-id⟧.prototype.set = ⟦2-char-id⟧, ⟦2-char-id⟧.exports = ⟦2-char-id⟧
    },
--  4735: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4735: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4637)(⟦2-char-id⟧(4493), "Map");
-+  4757: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4757: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4655)(⟦2-char-id⟧(4517), "Map");
      ⟦2-char-id⟧.exports = ⟦2-char-id⟧
    },
--  4602: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4602: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4610),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4737),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4753),
-+  4625: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4625: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4632),
        ⟦2-char-id⟧ = ⟦2-char-id⟧(4759),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4765);
@@ -3465,23 +3455,23 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
      }
      ⟦2-char-id⟧.prototype.clear = ⟦2-char-id⟧, ⟦2-char-id⟧.prototype.delete = ⟦2-char-id⟧, ⟦2-char-id⟧.prototype.get = ⟦2-char-id⟧, ⟦2-char-id⟧.prototype.has = ⟦2-char-id⟧, ⟦2-char-id⟧.prototype.set = ⟦2-char-id⟧, ⟦2-char-id⟧.exports = ⟦2-char-id⟧
    },
--  5136: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5136: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4637)(⟦2-char-id⟧(4493), "Promise");
-+  5186: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5186: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4655)(⟦2-char-id⟧(4517), "Promise");
      ⟦2-char-id⟧.exports = ⟦2-char-id⟧
    },
--  5141: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5141: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4637)(⟦2-char-id⟧(4493), "Set");
-+  5195: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5195: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4655)(⟦2-char-id⟧(4517), "Set");
      ⟦2-char-id⟧.exports = ⟦2-char-id⟧
    },
--  4977: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4977: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4602),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4979),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4988);
-+  5015: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5015: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4625),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5017),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5020);
@@ -3500,14 +3490,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
      }
      ⟦2-char-id⟧.prototype.add = ⟦2-char-id⟧.prototype.push = ⟦2-char-id⟧, ⟦2-char-id⟧.prototype.has = ⟦2-char-id⟧, ⟦2-char-id⟧.exports = ⟦2-char-id⟧
    },
--  4938: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4938: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4693),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4943),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4952),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4959),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4961),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4963);
-+  4956: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4956: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4711),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4962),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4969),
@@ -3529,21 +3519,21 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
      }
      ⟦2-char-id⟧.prototype.clear = ⟦2-char-id⟧, ⟦2-char-id⟧.prototype.delete = ⟦2-char-id⟧, ⟦2-char-id⟧.prototype.get = ⟦2-char-id⟧, ⟦2-char-id⟧.prototype.has = ⟦2-char-id⟧, ⟦2-char-id⟧.prototype.set = ⟦2-char-id⟧, ⟦2-char-id⟧.exports = ⟦2-char-id⟧
    },
--  4521: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4521: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4493).Symbol;
-+  4553: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4553: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4517).Symbol;
      ⟦2-char-id⟧.exports = ⟦2-char-id⟧
    },
--  5005: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5005: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4493).Uint8Array;
-+  5041: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5041: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4517).Uint8Array;
      ⟦2-char-id⟧.exports = ⟦2-char-id⟧
    },
--  5147: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5147: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4637)(⟦2-char-id⟧(4493), "WeakMap");
-+  5204: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5204: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4655)(⟦2-char-id⟧(4517), "WeakMap");
      ⟦2-char-id⟧.exports = ⟦2-char-id⟧
    },
@@ -3589,9 +3579,9 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧
      }
    },
--  5360: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5360: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5366);
-+  5385: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5385: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5391);
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧, ⟦2-char-id⟧) {
        return !!(null == ⟦2-char-id⟧ ? 0 : ⟦2-char-id⟧.length) && ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧, 0) > -1
@@ -3605,14 +3595,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return !1
      }
    },
--  5060: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5060: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5066),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4905),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4548),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5071),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4872),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5085),
-+  5095: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5095: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5101),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4922),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4580),
@@ -3662,9 +3652,9 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧.split("")
      }
    },
--  4711: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4711: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4714);
-+  4726: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4726: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4735);
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧, ⟦2-char-id⟧) {
        for (var ⟦2-char-id⟧ = ⟦2-char-id⟧.length; ⟦2-char-id⟧--;)
@@ -3672,9 +3662,9 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return -1
      }
    },
--  5610: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5610: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5310);
-+  5629: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5629: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5348);
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) {
        "__proto__" == ⟦2-char-id⟧ && ⟦2-char-id⟧ ? ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧, {
@@ -3691,17 +3681,17 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }) : ⟦2-char-id⟧[⟦2-char-id⟧] = ⟦2-char-id⟧
      }
    },
--  5230: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5230: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5239),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5254)(⟦2-char-id⟧);
-+  5281: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5281: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5284),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5294)(⟦2-char-id⟧);
      ⟦2-char-id⟧.exports = ⟦2-char-id⟧
    },
--  5630: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5630: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5230);
-+  5648: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5648: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5281);
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧, ⟦2-char-id⟧) {
        var ⟦2-char-id⟧ = !0;
@@ -3718,9 +3708,9 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        })), ⟦2-char-id⟧
      }
    },
--  5519: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5519: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4509);
-+  5542: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5542: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4539);
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) {
        for (var ⟦2-char-id⟧ = -1, ⟦2-char-id⟧ = ⟦2-char-id⟧.length; ++⟦2-char-id⟧ < ⟦2-char-id⟧;) {
@@ -3745,10 +3735,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return -1
      }
    },
--  4891: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4891: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4897),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4899);
-+  4900: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4900: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4907),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4915);
      ⟦2-char-id⟧.exports = function ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) {
@@ -3766,26 +3756,26 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧
      }
    },
--  5244: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5244: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5246)();
-+  5287: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5287: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5290)();
      ⟦2-char-id⟧.exports = ⟦2-char-id⟧
    },
--  5239: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5239: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5244),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5053);
-+  5284: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5284: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5287),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5086);
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧, ⟦2-char-id⟧) {
        return ⟦2-char-id⟧ && ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧)
      }
    },
--  4563: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4563: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4572),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4783);
-+  4601: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4601: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4603),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4800);
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧, ⟦2-char-id⟧) {
@@ -3793,13 +3783,13 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      return ⟦2-char-id⟧ && ⟦2-char-id⟧ == ⟦2-char-id⟧ ? JJ : void 0
 -    }
 -  },
--  5027: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5027: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4897),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4548);
 +      return ⟦2-char-id⟧ && ⟦2-char-id⟧ == ⟦2-char-id⟧ ? BB : void 0
 +    }
 +  },
-+  5064: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5064: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4907),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4580);
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) {
@@ -3807,14 +3797,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      return ⟦2-char-id⟧(⟦2-char-id⟧) ? eJ : ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧(⟦2-char-id⟧))
 -    }
 -  },
--  4512: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4512: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4521),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4530),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4537),
 +      return ⟦2-char-id⟧(⟦2-char-id⟧) ? pB : ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧(⟦2-char-id⟧))
 +    }
 +  },
-+  4544: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4544: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4553),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4555),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4560),
@@ -3835,11 +3825,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return null != ⟦2-char-id⟧ && ⟦2-char-id⟧ in Object(⟦2-char-id⟧)
      }
    },
--  5366: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5366: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5372),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5380),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5382);
-+  5391: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5391: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5397),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5399),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5402);
@@ -3847,27 +3837,27 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧ === ⟦2-char-id⟧ ? ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) : ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧)
      }
    },
--  4911: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4911: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4512),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4540);
-+  4928: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4928: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4544),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4566);
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧) {
        return ⟦2-char-id⟧(⟦2-char-id⟧) && "[object Arguments]" == ⟦2-char-id⟧(⟦2-char-id⟧)
      }
    },
--  4967: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4967: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4970),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4540);
-+  4997: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4997: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4999),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4566);
      ⟦2-char-id⟧.exports = function ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) {
 -      return ⟦2-char-id⟧ === ⟦2-char-id⟧ || (null == ⟦2-char-id⟧ || null == ⟦2-char-id⟧ || !⟦2-char-id⟧(⟦2-char-id⟧) && !⟦2-char-id⟧(⟦2-char-id⟧) ? ⟦2-char-id⟧ !== ⟦2-char-id⟧ && ⟦2-char-id⟧ !== ZJ : ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧))
 -    }
 -  },
--  4970: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4970: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4938),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4974),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5⟦2-char-id⟧),
@@ -3879,7 +3869,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      return ⟦2-char-id⟧ === ⟦2-char-id⟧ || (null == ⟦2-char-id⟧ || null == ⟦2-char-id⟧ || !⟦2-char-id⟧(⟦2-char-id⟧) && !⟦2-char-id⟧(⟦2-char-id⟧) ? ⟦2-char-id⟧ !== ⟦2-char-id⟧ && ⟦2-char-id⟧ !== dB : ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧))
 +    }
 +  },
-+  4999: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4999: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4956),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5006),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5035),
@@ -3926,10 +3916,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return !!⟦2-char-id⟧ && (⟦2-char-id⟧ || (⟦2-char-id⟧ = new ⟦2-char-id⟧), ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧))
      }
    },
--  4932: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4932: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4938),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4967);
-+  4951: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4951: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4956),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4997);
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) {
@@ -3953,12 +3943,12 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧ !== ⟦2-char-id⟧
      }
    },
--  4639: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4639: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4641),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4648),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4480),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4663),
-+  4657: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4657: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4660),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4669),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4505),
@@ -3981,14 +3971,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      return !(!⟦2-char-id⟧(⟦2-char-id⟧) || ⟦2-char-id⟧(⟦2-char-id⟧)) && (⟦2-char-id⟧(⟦2-char-id⟧) ? DJ : ⟦2-char-id⟧).test(⟦2-char-id⟧(⟦2-char-id⟧))
 -    }
 -  },
--  5092: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5092: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4512),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4866),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4540),
 +      return !(!⟦2-char-id⟧(⟦2-char-id⟧) || ⟦2-char-id⟧(⟦2-char-id⟧)) && (⟦2-char-id⟧(⟦2-char-id⟧) ? LB : ⟦2-char-id⟧).test(⟦2-char-id⟧(⟦2-char-id⟧))
 +    }
 +  },
-+  5129: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5129: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4544),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4877),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4566),
@@ -3997,13 +3987,13 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧(⟦2-char-id⟧) && ⟦2-char-id⟧(⟦2-char-id⟧.length) && !!⟦2-char-id⟧[⟦2-char-id⟧(⟦2-char-id⟧)]
      }
    },
--  4923: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4923: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4928),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5169),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5196),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4548),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5205);
-+  4936: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4936: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4943),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5232),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5255),
@@ -4013,13 +4003,13 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      return "function" == typeof ⟦2-char-id⟧ ? JJ : null == ⟦2-char-id⟧ ? eJ : "object" == typeof ⟦2-char-id⟧ ? ⟦2-char-id⟧(⟦2-char-id⟧) ? ⟦2-char-id⟧(⟦2-char-id⟧[0], ⟦2-char-id⟧[1]) : ⟦2-char-id⟧(⟦2-char-id⟧) : ⟦2-char-id⟧(⟦2-char-id⟧)
 -    }
 -  },
--  5108: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5108: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5111),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5116),
 +      return "function" == typeof ⟦2-char-id⟧ ? BB : null == ⟦2-char-id⟧ ? pB : "object" == typeof ⟦2-char-id⟧ ? ⟦2-char-id⟧(⟦2-char-id⟧) ? ⟦2-char-id⟧(⟦2-char-id⟧[0], ⟦2-char-id⟧[1]) : ⟦2-char-id⟧(⟦2-char-id⟧) : ⟦2-char-id⟧(⟦2-char-id⟧)
 +    }
 +  },
-+  5141: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5141: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5146),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5155),
        ⟦2-char-id⟧ = Object.prototype.hasOwnProperty;
@@ -4043,10 +4033,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧ < ⟦2-char-id⟧
      }
    },
--  5221: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5221: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5230),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4860);
-+  5276: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5276: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5281),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4870);
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧, ⟦2-char-id⟧) {
@@ -4064,11 +4054,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        })), ⟦2-char-id⟧
      }
    },
--  4928: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4928: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4932),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5152),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5167);
-+  4943: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4943: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4951),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5212),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5223);
@@ -4087,7 +4077,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }
      }
    },
--  5169: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5169: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4967),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4561),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5177),
@@ -4095,7 +4085,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5158),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5167),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4783);
-+  5232: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5232: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4997),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4599),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5234),
@@ -4118,7 +4108,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }
      }
    },
--  4917: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4917: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4777),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4563),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4923),
@@ -4128,7 +4118,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5265),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5196),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4548);
-+  4932: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4932: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4798),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4601),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4936),
@@ -4161,9 +4151,9 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }
      }
    },
--  5213: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5213: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4563);
-+  5270: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5270: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4601);
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧) {
        return function(⟦2-char-id⟧) {
@@ -4181,11 +4171,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧
      }
    },
--  5283: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5283: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5196),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5291),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5300);
-+  5318: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5318: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5255),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5325),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5338);
@@ -4193,11 +4183,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧(⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧), ⟦2-char-id⟧ + "")
      }
    },
--  5305: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5305: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5307),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5310),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5196),
-+  5340: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5340: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5342),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5348),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5255),
@@ -4227,9 +4217,9 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧
      }
    },
--  5694: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5694: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5230);
-+  5711: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5711: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5281);
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧, ⟦2-char-id⟧) {
        var ⟦2-char-id⟧;
@@ -4261,12 +4251,12 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧
      }
    },
--  4775: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4775: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4521),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4777),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4548),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4509),
-+  4794: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4794: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4553),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4798),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4580),
@@ -4286,9 +4276,9 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return "0" == ⟦2-char-id⟧ && 1 / ⟦2-char-id⟧ == -1 / 0 ? "-0" : ⟦2-char-id⟧
      }
    },
--  4503: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4503: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4507),
-+  4533: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4533: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4537),
        ⟦2-char-id⟧ = /^\s+/;
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧) {
@@ -4303,14 +4293,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }
      }
    },
--  5356: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5356: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4977),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5360),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5386),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4997),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5395),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5017);
-+  5381: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5381: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5015),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5385),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5406),
@@ -4359,12 +4349,12 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧.has(⟦2-char-id⟧)
      }
    },
--  4572: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4572: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4548),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4578),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4587),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4767);
-+  4603: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4603: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4580),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4608),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4612),
@@ -4373,24 +4363,24 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      return ⟦2-char-id⟧(⟦2-char-id⟧) ? JJ : ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧) ? [⟦2-char-id⟧] : ⟦2-char-id⟧(⟦2-char-id⟧(⟦2-char-id⟧))
 -    }
 -  },
--  5433: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5433: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5438);
 +      return ⟦2-char-id⟧(⟦2-char-id⟧) ? BB : ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧) ? [⟦2-char-id⟧] : ⟦2-char-id⟧(⟦2-char-id⟧(⟦2-char-id⟧))
 +    }
 +  },
-+  5447: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5447: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5455);
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) {
        var ⟦2-char-id⟧ = ⟦2-char-id⟧.length;
 -      return ⟦2-char-id⟧ = void 0 === ⟦2-char-id⟧ ? UJ : ⟦2-char-id⟧, !⟦2-char-id⟧ && ⟦2-char-id⟧ >= ⟦2-char-id⟧ ? JJ : ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧)
 -    }
 -  },
--  5274: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5274: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4509);
 +      return ⟦2-char-id⟧ = void 0 === ⟦2-char-id⟧ ? yB : ⟦2-char-id⟧, !⟦2-char-id⟧ && ⟦2-char-id⟧ >= ⟦2-char-id⟧ ? BB : ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧)
 +    }
 +  },
-+  5310: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5310: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4539);
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧, ⟦2-char-id⟧) {
        if (⟦2-char-id⟧ !== ⟦2-char-id⟧) {
@@ -4407,9 +4397,9 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return 0
      }
    },
--  5265: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5265: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5274);
-+  5308: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5308: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5310);
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) {
        for (var ⟦2-char-id⟧ = -1, ⟦2-char-id⟧ = ⟦2-char-id⟧.criteria, ⟦2-char-id⟧ = ⟦2-char-id⟧.criteria, ⟦2-char-id⟧ = ⟦2-char-id⟧.length, ⟦2-char-id⟧ = ⟦2-char-id⟧.length; ++⟦2-char-id⟧ < ⟦2-char-id⟧;) {
@@ -4420,15 +4410,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧.index - ⟦2-char-id⟧.index
      }
    },
--  4654: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4654: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4493)["__core-js_shared__"];
-+  4674: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4674: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4517)["__core-js_shared__"];
      ⟦2-char-id⟧.exports = ⟦2-char-id⟧
    },
--  5254: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5254: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4860);
-+  5294: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5294: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4870);
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧, ⟦2-char-id⟧) {
        return function(⟦2-char-id⟧, ⟦2-char-id⟧) {
@@ -4454,12 +4444,12 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }
      }
    },
--  5424: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5424: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5433),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5442),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5445),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4767);
-+  5442: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5442: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5447),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5461),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5466),
@@ -4479,11 +4469,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }
      }
    },
--  5707: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5707: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4923),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4860),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5053);
-+  5720: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5720: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4936),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4870),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5086);
@@ -4502,11 +4492,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }
      }
    },
--  4843: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4843: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4848),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4853),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4880);
-+  4858: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4858: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4863),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4865),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4890);
@@ -4516,11 +4506,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }
      }
    },
--  5395: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5395: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5141),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5402),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5017),
-+  5412: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5412: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5195),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5418),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5053),
@@ -4529,9 +4519,9 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        } : ⟦2-char-id⟧;
      ⟦2-char-id⟧.exports = ⟦2-char-id⟧
    },
--  5310: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5310: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4637),
-+  5348: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5348: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4655),
        ⟦2-char-id⟧ = function() {
          try {
@@ -4548,11 +4538,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }();
      ⟦2-char-id⟧.exports = ⟦2-char-id⟧
    },
--  4974: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4974: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4977),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4992),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4997);
-+  5006: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5006: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5015),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5024),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5029);
@@ -4588,14 +4578,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧.delete(⟦2-char-id⟧), ⟦2-char-id⟧.delete(⟦2-char-id⟧), ⟦2-char-id⟧
      }
    },
--  5e3: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5e3: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4521),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5005),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4714),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4974),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5011),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5017),
-+  5035: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5035: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4553),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5041),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4735),
@@ -4617,9 +4607,9 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return !1
      }
    },
--  5022: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5022: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5024),
-+  5058: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5058: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5061),
        ⟦2-char-id⟧ = Object.prototype.hasOwnProperty;
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) {
@@ -4653,16 +4643,16 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧.delete(⟦2-char-id⟧), ⟦2-char-id⟧.delete(⟦2-char-id⟧), ⟦2-char-id⟧
      }
    },
--  4496: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  4525: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  4496: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  4525: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      var ⟦2-char-id⟧ = "object" == typeof ⟦2-char-id⟧.g && ⟦2-char-id⟧.g && ⟦2-char-id⟧.g.Object === Object && ⟦2-char-id⟧.g;
      ⟦2-char-id⟧.exports = ⟦2-char-id⟧
    },
--  5024: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5024: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5027),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5032),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5053);
-+  5061: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5061: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5064),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5068),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5086);
@@ -4670,19 +4660,19 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧)
      }
    },
--  4742: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4742: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4750);
-+  4766: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4766: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4768);
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧, ⟦2-char-id⟧) {
        var ⟦2-char-id⟧ = ⟦2-char-id⟧.__data__;
        return ⟦2-char-id⟧(⟦2-char-id⟧) ? ⟦2-char-id⟧["string" == typeof ⟦2-char-id⟧ ? "string" : "hash"] : ⟦2-char-id⟧.map
      }
    },
--  5152: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5152: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5158),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5053);
-+  5212: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5212: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5216),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5086);
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧) {
@@ -4700,10 +4690,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧
      }
    },
--  4637: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4637: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4639),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4669);
-+  4655: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4655: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4657),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4690);
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧, ⟦2-char-id⟧) {
@@ -4711,18 +4701,18 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      return ⟦2-char-id⟧(⟦2-char-id⟧) ? ZJ : void 0
 -    }
 -  },
--  5673: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5673: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5122)(Object.getPrototypeOf, Object);
 +      return ⟦2-char-id⟧(⟦2-char-id⟧) ? dB : void 0
 +    }
 +  },
-+  5682: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5682: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5163)(Object.getPrototypeOf, Object);
      ⟦2-char-id⟧.exports = ⟦2-char-id⟧
    },
--  4530: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4530: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4521),
-+  4555: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4555: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4553),
        ⟦2-char-id⟧ = Object.prototype,
        ⟦2-char-id⟧ = ⟦2-char-id⟧.hasOwnProperty,
@@ -4742,13 +4732,13 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      return ⟦2-char-id⟧ && (⟦2-char-id⟧ ? ⟦2-char-id⟧[⟦2-char-id⟧] = ZJ : delete ⟦2-char-id⟧[⟦2-char-id⟧]), ⟦2-char-id⟧
 -    }
 -  },
--  5032: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5032: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5040),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5046),
 +      return ⟦2-char-id⟧ && (⟦2-char-id⟧ ? ⟦2-char-id⟧[⟦2-char-id⟧] = dB : delete ⟦2-char-id⟧[⟦2-char-id⟧]), ⟦2-char-id⟧
 +    }
 +  },
-+  5068: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5068: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5076),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5081),
        ⟦2-char-id⟧ = Object.prototype.propertyIsEnumerable,
@@ -4766,7 +4756,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        } : ⟦2-char-id⟧;
      ⟦2-char-id⟧.exports = ⟦2-char-id⟧
    },
--  5128: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5128: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5130),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4735),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5136),
@@ -4774,7 +4764,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5147),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4512),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4663),
-+  5170: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5170: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5179),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4757),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5186),
@@ -4822,14 +4812,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return null == ⟦2-char-id⟧ ? void 0 : ⟦2-char-id⟧[⟦2-char-id⟧]
      }
    },
--  5193: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5193: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4572),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4905),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4548),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4872),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4866),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4783);
-+  5249: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5249: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4603),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4922),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4580),
@@ -4855,9 +4845,9 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧.test(⟦2-char-id⟧)
      }
    },
--  4619: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4619: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4628);
-+  4642: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4642: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4648);
      ⟦2-char-id⟧.exports = function() {
        this.__data__ = ⟦2-char-id⟧ ? ⟦2-char-id⟧(null) : {}, this.size = 0
@@ -4870,9 +4860,9 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return this.size -= ⟦2-char-id⟧ ? 1 : 0, ⟦2-char-id⟧
      }
    },
--  4681: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4681: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4628),
-+  4698: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4698: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4648),
        ⟦2-char-id⟧ = Object.prototype.hasOwnProperty;
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧) {
@@ -4889,9 +4879,9 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧.call(⟦2-char-id⟧, ⟦2-char-id⟧) ? ⟦2-char-id⟧[⟦2-char-id⟧] : void 0
      }
    },
--  4683: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4683: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4628),
-+  4702: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4702: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4648),
        ⟦2-char-id⟧ = Object.prototype.hasOwnProperty;
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧) {
@@ -4899,20 +4889,20 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧ ? void 0 !== ⟦2-char-id⟧[⟦2-char-id⟧] : ⟦2-char-id⟧.call(⟦2-char-id⟧, ⟦2-char-id⟧)
      }
    },
--  4685: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4685: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4628);
-+  4706: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4706: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4648);
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧, ⟦2-char-id⟧) {
        var ⟦2-char-id⟧ = this.__data__;
        return this.size += this.has(⟦2-char-id⟧) ? 0 : 1, ⟦2-char-id⟧[⟦2-char-id⟧] = ⟦2-char-id⟧ && void 0 === ⟦2-char-id⟧ ? "__lodash_hash_undefined__" : ⟦2-char-id⟧, this
      }
    },
--  4899: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4899: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4521),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4905),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4548),
-+  4915: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4915: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4553),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4922),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4580),
@@ -4929,12 +4919,12 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return !!(⟦2-char-id⟧ = null == ⟦2-char-id⟧ ? 9007199254740991 : ⟦2-char-id⟧) && ("number" == ⟦2-char-id⟧ || "symbol" != ⟦2-char-id⟧ && ⟦2-char-id⟧.test(⟦2-char-id⟧)) && ⟦2-char-id⟧ > -1 && ⟦2-char-id⟧ % 1 == 0 && ⟦2-char-id⟧ < ⟦2-char-id⟧
      }
    },
--  4853: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4853: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4714),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4860),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4872),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4480);
-+  4865: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4865: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4735),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4870),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4885),
@@ -4945,10 +4935,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return !!("number" == ⟦2-char-id⟧ ? ⟦2-char-id⟧(⟦2-char-id⟧) && ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧.length) : "string" == ⟦2-char-id⟧ && ⟦2-char-id⟧ in ⟦2-char-id⟧) && ⟦2-char-id⟧(⟦2-char-id⟧[⟦2-char-id⟧], ⟦2-char-id⟧)
      }
    },
--  4578: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4578: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4548),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4509),
-+  4608: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4608: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4580),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4539),
        ⟦2-char-id⟧ = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
@@ -4973,12 +4963,12 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      return "string" == ⟦2-char-id⟧ || "number" == ⟦2-char-id⟧ || "symbol" == ⟦2-char-id⟧ || "boolean" == ⟦2-char-id⟧ ? "__proto__" !== JJ : null === ⟦2-char-id⟧
 -    }
 -  },
--  4648: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4648: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4654),
 +      return "string" == ⟦2-char-id⟧ || "number" == ⟦2-char-id⟧ || "symbol" == ⟦2-char-id⟧ || "boolean" == ⟦2-char-id⟧ ? "__proto__" !== BB : null === ⟦2-char-id⟧
 +    }
 +  },
-+  4669: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4669: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4674),
        ⟦2-char-id⟧ = function() {
          var ⟦2-char-id⟧ = /[^.]+$/.exec(⟦2-char-id⟧ && ⟦2-char-id⟧.keys && ⟦2-char-id⟧.keys.IE_PROTO || "");
@@ -4997,9 +4987,9 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧ === ("function" == typeof ⟦2-char-id⟧ && ⟦2-char-id⟧.prototype || ⟦2-char-id⟧)
      }
    },
--  5158: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5158: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4480);
-+  5216: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5216: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4505);
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧) {
        return ⟦2-char-id⟧ === ⟦2-char-id⟧ && !⟦2-char-id⟧(⟦2-char-id⟧)
@@ -5011,9 +5001,9 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        this.__data__ = [], this.size = 0
      }
    },
--  4705: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4705: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4711),
-+  4721: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4721: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4726),
        ⟦2-char-id⟧ = Array.prototype.splice;
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧) {
@@ -5030,9 +5020,9 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return !(⟦2-char-id⟧ < 0) && (⟦2-char-id⟧ == ⟦2-char-id⟧.length - 1 ? ⟦2-char-id⟧.pop() : ⟦2-char-id⟧.call(⟦2-char-id⟧, ⟦2-char-id⟧, 1), --this.size, !0)
      }
    },
--  4723: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4723: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4711);
-+  4739: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4739: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4726);
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧) {
        var ⟦2-char-id⟧ = this.__data__,
@@ -5040,17 +5030,17 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧ < 0 ? void 0 : ⟦2-char-id⟧[⟦2-char-id⟧][1]
      }
    },
--  4727: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4727: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4711);
-+  4747: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4747: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4726);
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧) {
        return ⟦2-char-id⟧(this.__data__, ⟦2-char-id⟧) > -1
      }
    },
--  4732: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4732: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4711);
-+  4752: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4752: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4726);
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧, ⟦2-char-id⟧) {
        var ⟦2-char-id⟧ = this.__data__,
@@ -5058,11 +5048,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧ < 0 ? (++this.size, ⟦2-char-id⟧.push([⟦2-char-id⟧, ⟦2-char-id⟧])) : ⟦2-char-id⟧[⟦2-char-id⟧][1] = ⟦2-char-id⟧, this
      }
    },
--  4610: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4610: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4613),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4693),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4735);
-+  4632: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4632: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4639),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4711),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4757);
@@ -5081,34 +5071,34 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }
      }
    },
--  4737: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4737: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4742);
-+  4759: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4759: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4766);
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧) {
        var ⟦2-char-id⟧ = ⟦2-char-id⟧(this, ⟦2-char-id⟧).delete(⟦2-char-id⟧);
        return this.size -= ⟦2-char-id⟧ ? 1 : 0, ⟦2-char-id⟧
      }
    },
--  4753: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4753: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4742);
-+  4771: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4771: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4766);
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧) {
        return ⟦2-char-id⟧(this, ⟦2-char-id⟧).get(⟦2-char-id⟧)
      }
    },
--  4759: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4759: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4742);
-+  4780: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4780: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4766);
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧) {
        return ⟦2-char-id⟧(this, ⟦2-char-id⟧).has(⟦2-char-id⟧)
      }
    },
--  4765: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4765: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4742);
-+  4782: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4782: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4766);
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧, ⟦2-char-id⟧) {
        var ⟦2-char-id⟧ = ⟦2-char-id⟧(this, ⟦2-char-id⟧),
@@ -5141,9 +5131,9 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }
      }
    },
--  4589: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4589: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4594);
-+  4618: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4618: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4621);
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧) {
        var ⟦2-char-id⟧ = ⟦2-char-id⟧(⟦2-char-id⟧, (function(⟦2-char-id⟧) {
@@ -5160,20 +5150,20 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧
      }
    },
--  4628: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4628: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4637)(Object, "create");
-+  4648: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4648: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4655)(Object, "create");
      ⟦2-char-id⟧.exports = ⟦2-char-id⟧
    },
--  5116: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5116: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5122)(Object.keys, Object);
-+  5155: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5155: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5163)(Object.keys, Object);
      ⟦2-char-id⟧.exports = ⟦2-char-id⟧
    },
--  5104: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5137: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5104: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5137: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧ = ⟦2-char-id⟧.nmd(⟦2-char-id⟧);
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4496),
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4525),
@@ -5207,9 +5197,9 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }
      }
    },
--  5291: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5291: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5294),
-+  5325: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5325: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5332),
        ⟦2-char-id⟧ = Math.max;
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) {
@@ -5226,9 +5216,9 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
          }
      }
    },
--  4493: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4493: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4496),
-+  4517: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4517: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4525),
        ⟦2-char-id⟧ = "object" == typeof self && self && self.Object === Object && self,
        ⟦2-char-id⟧ = ⟦2-char-id⟧ || ⟦2-char-id⟧ || Function("return this")();
@@ -5263,10 +5253,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        })), ⟦2-char-id⟧
      }
    },
--  5300: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5300: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5305),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5314)(⟦2-char-id⟧);
-+  5338: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5338: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5340),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5351)(⟦2-char-id⟧);
      ⟦2-char-id⟧.exports = ⟦2-char-id⟧
@@ -5288,9 +5278,9 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }
      }
    },
--  4943: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4943: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4693);
-+  4962: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4962: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4711);
      ⟦2-char-id⟧.exports = function() {
        this.__data__ = new ⟦2-char-id⟧, this.size = 0
@@ -5316,11 +5306,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return this.__data__.has(⟦2-char-id⟧)
      }
    },
--  4963: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4963: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4693),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4735),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4602);
-+  4991: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4991: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4711),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4757),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4625);
@@ -5347,11 +5337,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return -1
      }
    },
--  5445: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5445: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5447),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5442),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5453);
-+  5466: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5466: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5470),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5461),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5472);
@@ -5359,9 +5349,9 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧(⟦2-char-id⟧) ? ⟦2-char-id⟧(⟦2-char-id⟧) : ⟦2-char-id⟧(⟦2-char-id⟧)
      }
    },
--  4587: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4587: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4589),
-+  4612: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4612: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4618),
        ⟦2-char-id⟧ = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g,
        ⟦2-char-id⟧ = /\\(\\)?/g,
@@ -5378,9 +5368,9 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }));
      ⟦2-char-id⟧.exports = ⟦2-char-id⟧
    },
--  4783: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4783: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4509);
-+  4800: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4800: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4539);
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧) {
        if ("string" == typeof ⟦2-char-id⟧ || ⟦2-char-id⟧(⟦2-char-id⟧)) return ⟦2-char-id⟧;
@@ -5438,11 +5428,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }
      }
    },
--  4478: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4478: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4480),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4484),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4499),
-+  4497: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4497: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4505),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4510),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4529),
@@ -5472,13 +5462,13 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧ === ⟦2-char-id⟧ || ⟦2-char-id⟧ !== ⟦2-char-id⟧ && ⟦2-char-id⟧ !== ⟦2-char-id⟧
      }
    },
--  5619: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5619: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5623),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5630),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4923),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4548),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4853);
-+  5632: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5632: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5639),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5648),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4936),
@@ -5490,17 +5480,17 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧ && ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) && (⟦2-char-id⟧ = void 0), ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧(⟦2-char-id⟧, 3))
      }
    },
--  5701: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5701: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5707)(⟦2-char-id⟧(5714));
-+  5718: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5718: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5720)(⟦2-char-id⟧(5724));
      ⟦2-char-id⟧.exports = ⟦2-char-id⟧
    },
--  5714: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5714: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5372),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4923),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5719),
-+  5724: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5724: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5397),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4936),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5726),
@@ -5519,32 +5509,32 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧ < 0 && (⟦2-char-id⟧ = ⟦2-char-id⟧(⟦2-char-id⟧ + ⟦2-char-id⟧, 0)), ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧(⟦2-char-id⟧, 3), ⟦2-char-id⟧)
      }
    },
--  5549: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5549: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4891),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5553);
-+  5556: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5556: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4900),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5563);
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧, ⟦2-char-id⟧) {
        return ⟦2-char-id⟧(⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧), 1)
      }
    },
--  4561: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4561: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4563);
-+  4599: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4599: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4601);
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) {
        var ⟦2-char-id⟧ = null == ⟦2-char-id⟧ ? void 0 : ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧);
 -      return void 0 === ⟦2-char-id⟧ ? ZJ : ⟦2-char-id⟧
 -    }
 -  },
--  5177: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5177: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5184),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5193);
 +      return void 0 === ⟦2-char-id⟧ ? dB : ⟦2-char-id⟧
 +    }
 +  },
-+  5234: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5234: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5241),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5249);
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧, ⟦2-char-id⟧) {
@@ -5557,10 +5547,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧
      }
    },
--  4905: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4905: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4911),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4540),
-+  4922: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4922: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4928),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4566),
        ⟦2-char-id⟧ = Object.prototype,
@@ -5579,28 +5569,28 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
      var ⟦2-char-id⟧ = Array.isArray;
      ⟦2-char-id⟧.exports = ⟦2-char-id⟧
    },
--  4860: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4860: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4641),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4866);
-+  4870: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4870: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4660),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4877);
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧) {
        return null != ⟦2-char-id⟧ && ⟦2-char-id⟧(⟦2-char-id⟧.length) && !⟦2-char-id⟧(⟦2-char-id⟧)
      }
    },
--  5679: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5679: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4512),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4540);
-+  5686: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5686: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4544),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4566);
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧) {
        return !0 === ⟦2-char-id⟧ || !1 === ⟦2-char-id⟧ || ⟦2-char-id⟧(⟦2-char-id⟧) && "[object Boolean]" == ⟦2-char-id⟧(⟦2-char-id⟧)
      }
    },
--  5071: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5110: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5071: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5110: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧ = ⟦2-char-id⟧.nmd(⟦2-char-id⟧);
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4493),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5080),
@@ -5613,18 +5603,18 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        ⟦2-char-id⟧ = (⟦2-char-id⟧ ? ⟦2-char-id⟧.isBuffer : void 0) || ⟦2-char-id⟧;
      ⟦2-char-id⟧.exports = ⟦2-char-id⟧
    },
--  5557: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5557: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4967);
-+  5569: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5569: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4997);
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧, ⟦2-char-id⟧) {
        return ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧)
      }
    },
--  4641: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4641: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4512),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4480);
-+  4660: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4660: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4544),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4505);
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧) {
@@ -5639,9 +5629,9 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return "number" == typeof ⟦2-char-id⟧ && ⟦2-char-id⟧ > -1 && ⟦2-char-id⟧ % 1 == 0 && ⟦2-char-id⟧ <= 9007199254740991
      }
    },
--  4556: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4556: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4558);
-+  4582: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4582: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4590);
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧) {
        return ⟦2-char-id⟧(⟦2-char-id⟧) && ⟦2-char-id⟧ != +⟦2-char-id⟧
@@ -5653,10 +5643,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return null == ⟦2-char-id⟧
      }
    },
--  4558: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4558: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4512),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4540);
-+  4590: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4590: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4544),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4566);
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧) {
@@ -5676,11 +5666,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return null != ⟦2-char-id⟧ && "object" == typeof ⟦2-char-id⟧
      }
    },
--  5670: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5670: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4512),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5673),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4540),
-+  5673: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5673: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4544),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5682),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4566),
@@ -5699,11 +5689,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return "function" == typeof ⟦2-char-id⟧ && ⟦2-char-id⟧ instanceof ⟦2-char-id⟧ && ⟦2-char-id⟧.call(⟦2-char-id⟧) == ⟦2-char-id⟧
      }
    },
--  4545: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4545: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4512),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4548),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4540);
-+  4576: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4576: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4544),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4580),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4566);
@@ -5711,21 +5701,21 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return "string" == typeof ⟦2-char-id⟧ || !⟦2-char-id⟧(⟦2-char-id⟧) && ⟦2-char-id⟧(⟦2-char-id⟧) && "[object String]" == ⟦2-char-id⟧(⟦2-char-id⟧)
      }
    },
--  4509: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4509: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4512),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4540);
-+  4539: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4539: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4544),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4566);
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧) {
        return "symbol" == typeof ⟦2-char-id⟧ || ⟦2-char-id⟧(⟦2-char-id⟧) && "[object Symbol]" == ⟦2-char-id⟧(⟦2-char-id⟧)
      }
    },
--  5085: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5085: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5092),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5095),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5104),
-+  5120: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5120: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5129),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5134),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5137),
@@ -5733,11 +5723,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        ⟦2-char-id⟧ = ⟦2-char-id⟧ ? ⟦2-char-id⟧(⟦2-char-id⟧) : ⟦2-char-id⟧;
      ⟦2-char-id⟧.exports = ⟦2-char-id⟧
    },
--  5053: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5053: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5060),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5108),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4860);
-+  5086: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5086: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5095),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5141),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4870);
@@ -5752,12 +5742,12 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧ ? ⟦2-char-id⟧[⟦2-char-id⟧ - 1] : void 0
      }
    },
--  5553: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5553: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4777),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4923),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5221),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4548);
-+  5563: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5563: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4798),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4936),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5276),
@@ -5766,14 +5756,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      return (⟦2-char-id⟧(⟦2-char-id⟧) ? FJ : ⟦2-char-id⟧)(⟦2-char-id⟧, ⟦2-char-id⟧(⟦2-char-id⟧, 3))
 -    }
 -  },
--  5603: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5603: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5610),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5239),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4923);
 +      return (⟦2-char-id⟧(⟦2-char-id⟧) ? VB : ⟦2-char-id⟧)(⟦2-char-id⟧, ⟦2-char-id⟧(⟦2-char-id⟧, 3))
 +    }
 +  },
-+  5621: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5621: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5629),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5284),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4936);
@@ -5792,11 +5782,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        })), ⟦2-char-id⟧
      }
    },
--  5516: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5516: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5519),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5523),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5196);
-+  5535: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5535: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5542),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5546),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5255);
@@ -5804,9 +5794,9 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧ && ⟦2-char-id⟧.length ? ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) : void 0
      }
    },
--  4594: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4594: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4602);
-+  4621: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4621: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4625);
  
      function ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧) {
@@ -5823,11 +5813,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
      }
      ⟦2-char-id⟧.Cache = ⟦2-char-id⟧, ⟦2-char-id⟧.exports = ⟦2-char-id⟧
    },
--  5532: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5532: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5519),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5540),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5196);
-+  5550: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5550: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5542),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5554),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5255);
@@ -5839,20 +5829,20 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +  5418: ⟦2-char-id⟧ => {
      ⟦2-char-id⟧.exports = function() {}
    },
--  4484: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4484: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4493);
-+  4510: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4510: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4517);
      ⟦2-char-id⟧.exports = function() {
        return ⟦2-char-id⟧.Date.now()
      }
    },
--  5205: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5205: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5207),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5213),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4578),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4783);
-+  5259: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5259: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5262),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5270),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4608),
@@ -5861,19 +5851,19 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧(⟦2-char-id⟧) ? ⟦2-char-id⟧(⟦2-char-id⟧(⟦2-char-id⟧)) : ⟦2-char-id⟧(⟦2-char-id⟧)
      }
    },
--  4839: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4839: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4843)();
-+  4851: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4851: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4858)();
      ⟦2-char-id⟧.exports = ⟦2-char-id⟧
    },
--  5692: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5692: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4992),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4923),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5694),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4548),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4853);
-+  5703: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5703: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5024),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4936),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5711),
@@ -5885,12 +5875,12 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧ && ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) && (⟦2-char-id⟧ = void 0), ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧(⟦2-char-id⟧, 3))
      }
    },
--  4888: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4888: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4891),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4917),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5283),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4853),
-+  4897: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4897: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4900),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4932),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5318),
@@ -5922,10 +5912,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return !1
      }
    },
--  4476: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4476: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4478),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4480);
-+  4492: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4492: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4497),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4505);
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) {
@@ -5943,21 +5933,21 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        })
      }
    },
--  4880: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4880: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4499),
-+  4890: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4890: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4529),
        ⟦2-char-id⟧ = 1 / 0;
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧) {
 -      return ⟦2-char-id⟧ ? (⟦2-char-id⟧ = ⟦2-char-id⟧(⟦2-char-id⟧)) === ⟦2-char-id⟧ || ⟦2-char-id⟧ === -1 / 0 ? 17976931348623157e292 * (⟦2-char-id⟧ < 0 ? -1 : 1) : ⟦2-char-id⟧ === ⟦2-char-id⟧ ? JJ : 0 : 0 === ⟦2-char-id⟧ ? JJ : 0
 -    }
 -  },
--  5719: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5719: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4880);
 +      return ⟦2-char-id⟧ ? (⟦2-char-id⟧ = ⟦2-char-id⟧(⟦2-char-id⟧)) === ⟦2-char-id⟧ || ⟦2-char-id⟧ === -1 / 0 ? 17976931348623157e292 * (⟦2-char-id⟧ < 0 ? -1 : 1) : ⟦2-char-id⟧ === ⟦2-char-id⟧ ? BB : 0 : 0 === ⟦2-char-id⟧ ? BB : 0
 +    }
 +  },
-+  5726: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5726: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4890);
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧) {
        var ⟦2-char-id⟧ = ⟦2-char-id⟧(⟦2-char-id⟧),
@@ -5965,14 +5955,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      return ⟦2-char-id⟧ === ⟦2-char-id⟧ ? ⟦2-char-id⟧ ? ⟦2-char-id⟧ - ZJ : cJ : 0
 -    }
 -  },
--  4499: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4499: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4503),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4480),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(4509),
 +      return ⟦2-char-id⟧ === ⟦2-char-id⟧ ? ⟦2-char-id⟧ ? ⟦2-char-id⟧ - dB : TB : 0
 +    }
 +  },
-+  4529: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4529: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4533),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4505),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(4539),
@@ -5998,32 +5988,32 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧ || ⟦2-char-id⟧.test(⟦2-char-id⟧) ? ⟦2-char-id⟧(⟦2-char-id⟧.slice(2), ⟦2-char-id⟧ ? 2 : 8) : ⟦2-char-id⟧.test(⟦2-char-id⟧) ? NaN : +⟦2-char-id⟧
      }
    },
--  4767: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4767: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4775);
-+  4789: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4789: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4794);
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧) {
        return null == ⟦2-char-id⟧ ? "" : ⟦2-char-id⟧(⟦2-char-id⟧)
      }
    },
--  5353: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5353: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4923),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5356);
-+  5377: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5377: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(4936),
 +      ⟦2-char-id⟧ = ⟦2-char-id⟧(5381);
      ⟦2-char-id⟧.exports = function(⟦2-char-id⟧, ⟦2-char-id⟧) {
        return ⟦2-char-id⟧ && ⟦2-char-id⟧.length ? ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧(⟦2-char-id⟧, 2)) : []
      }
    },
--  5422: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5422: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5424)("toUpperCase");
-+  5434: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5434: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(5442)("toUpperCase");
      ⟦2-char-id⟧.exports = ⟦2-char-id⟧
    },
--  5483: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5495: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5483: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5495: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +      e: () => ⟦2-char-id⟧
@@ -6068,23 +6058,6 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 <summary>Hunk 74 · Change · +1 / -1</summary>
 
 ```diff
-@@ -2669,7 +2669,7 @@
-         circular: ⟦2-char-id⟧,
-         comparator: ⟦2-char-id⟧,
-         createState: ⟦2-char-id⟧,
--        equals: ⟦2-char-id⟧ ? ⟦2-char-id⟧(⟦2-char-id⟧) : (⟦2-char-id⟧ = ⟦2-char-id⟧, function(⟦2-char-id⟧, cJ, ZJ, FJ, UJ, eJ, ⟦2-char-id⟧) {
-+        equals: ⟦2-char-id⟧ ? ⟦2-char-id⟧(⟦2-char-id⟧) : (⟦2-char-id⟧ = ⟦2-char-id⟧, function(⟦2-char-id⟧, TB, dB, VB, yB, pB, ⟦2-char-id⟧) {
-           return ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧)
-         }),
-         strict: ⟦2-char-id⟧
-```
-
-</details>
-
-<details>
-<summary>Hunk 75 · Change · +1 / -1</summary>
-
-```diff
 @@ -2795,7 +2795,7 @@
            }
            return ("string" === ⟦2-char-id⟧ ? String : Number)(⟦2-char-id⟧)
@@ -6099,7 +6072,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 76 · Change · +1 / -1</summary>
+<summary>Hunk 75 · Change · +1 / -1</summary>
 
 ```diff
 @@ -2973,7 +2973,7 @@
@@ -6116,7 +6089,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 77 · Change · +1 / -1</summary>
+<summary>Hunk 76 · Change · +1 / -1</summary>
 
 ```diff
 @@ -3029,7 +3029,7 @@
@@ -6133,7 +6106,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 78 · Change · +3 / -3</summary>
+<summary>Hunk 77 · Change · +3 / -3</summary>
 
 ```diff
 @@ -3091,19 +3091,19 @@
@@ -6164,7 +6137,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 79 · Change · +1 / -1</summary>
+<summary>Hunk 78 · Change · +1 / -1</summary>
 
 ```diff
 @@ -3120,7 +3120,7 @@
@@ -6181,7 +6154,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 80 · Change · +1 / -1</summary>
+<summary>Hunk 79 · Change · +1 / -1</summary>
 
 ```diff
 @@ -3163,7 +3163,7 @@
@@ -6198,7 +6171,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 81 · Change · +1 / -1</summary>
+<summary>Hunk 80 · Change · +1 / -1</summary>
 
 ```diff
 @@ -3254,7 +3254,7 @@
@@ -6215,27 +6188,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 82 · Change · +1 / -1</summary>
+<summary>Hunk 81 · Change · +1 / -1</summary>
 
 ```diff
-@@ -3341,7 +3341,7 @@
-             style: ⟦2-char-id⟧
-           }, ⟦2-char-id⟧(⟦2-char-id⟧);
-           ⟦2-char-id⟧.state = {
--            style: ⟦2-char-id⟧ ? ⟦2-char-id⟧({}, AJ, ⟦2-char-id⟧) : ⟦2-char-id⟧
-+            style: ⟦2-char-id⟧ ? ⟦2-char-id⟧({}, JB, ⟦2-char-id⟧) : ⟦2-char-id⟧
-           }
-         } else ⟦2-char-id⟧.state = {
-           style: {}
-```
-
-</details>
-
-<details>
-<summary>Hunk 83 · Change · +4 / -4</summary>
-
-```diff
-@@ -3372,21 +3372,21 @@
+@@ -3372,7 +3372,7 @@
                if (!(⟦2-char-id⟧(⟦2-char-id⟧.to, ⟦2-char-id⟧) && ⟦2-char-id⟧.canBegin && ⟦2-char-id⟧.isActive)) {
                  var ⟦2-char-id⟧ = !⟦2-char-id⟧.canBegin || !⟦2-char-id⟧.isActive;
                  this.manager && this.manager.stop(), this.stopJSAnimation && this.stopJSAnimation();
@@ -6243,10 +6199,16 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +                var ⟦2-char-id⟧ = ⟦2-char-id⟧ || ⟦2-char-id⟧ ? JB : ⟦2-char-id⟧.to;
                  if (this.state && ⟦2-char-id⟧) {
                    var ⟦2-char-id⟧ = {
--                    style: ⟦2-char-id⟧ ? ⟦2-char-id⟧({}, UJ, ⟦2-char-id⟧) : ⟦2-char-id⟧
-+                    style: ⟦2-char-id⟧ ? ⟦2-char-id⟧({}, yB, ⟦2-char-id⟧) : ⟦2-char-id⟧
-                   };
-                   (⟦2-char-id⟧ && ⟦2-char-id⟧[⟦2-char-id⟧] !== ⟦2-char-id⟧ || !⟦2-char-id⟧ && ⟦2-char-id⟧ !== ⟦2-char-id⟧) && this.setState(⟦2-char-id⟧)
+                     style: ⟦2-char-id⟧ ? ⟦2-char-id⟧({}, ⟦2-char-id⟧, ⟦2-char-id⟧) : ⟦2-char-id⟧
+```
+
+</details>
+
+<details>
+<summary>Hunk 82 · Change · +1 / -1</summary>
+
+```diff
+@@ -3381,7 +3381,7 @@
                  }
                  this.runAnimation(⟦2-char-id⟧(⟦2-char-id⟧({}, this.props), {}, {
                    from: ⟦2-char-id⟧,
@@ -6255,18 +6217,12 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
                  }))
                }
              } else {
-               var ⟦2-char-id⟧ = {
--                style: ⟦2-char-id⟧ ? ⟦2-char-id⟧({}, UJ, ⟦2-char-id⟧) : ⟦2-char-id⟧
-+                style: ⟦2-char-id⟧ ? ⟦2-char-id⟧({}, yB, ⟦2-char-id⟧) : ⟦2-char-id⟧
-               };
-               this.state && ⟦2-char-id⟧ && (⟦2-char-id⟧ && ⟦2-char-id⟧[⟦2-char-id⟧] !== ⟦2-char-id⟧ || !⟦2-char-id⟧ && ⟦2-char-id⟧ !== ⟦2-char-id⟧) && this.setState(⟦2-char-id⟧)
-             }
 ```
 
 </details>
 
 <details>
-<summary>Hunk 84 · Change · +1 / -1</summary>
+<summary>Hunk 83 · Change · +1 / -1</summary>
 
 ```diff
 @@ -3418,7 +3418,7 @@
@@ -6283,7 +6239,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 85 · Change · +1 / -1</summary>
+<summary>Hunk 84 · Change · +1 / -1</summary>
 
 ```diff
 @@ -3431,7 +3431,7 @@
@@ -6300,7 +6256,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 86 · Change · +1 / -1</summary>
+<summary>Hunk 85 · Change · +1 / -1</summary>
 
 ```diff
 @@ -3464,7 +3464,7 @@
@@ -6317,7 +6273,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 87 · Change · +1 / -1</summary>
+<summary>Hunk 86 · Change · +1 / -1</summary>
 
 ```diff
 @@ -3490,7 +3490,7 @@
@@ -6334,7 +6290,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 88 · Change · +1 / -1</summary>
+<summary>Hunk 87 · Change · +1 / -1</summary>
 
 ```diff
 @@ -3516,7 +3516,7 @@
@@ -6351,50 +6307,32 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 89 · Change · +6 / -6</summary>
+<summary>Hunk 88 · Change · +1 / -1</summary>
 
 ```diff
-@@ -3528,20 +3528,20 @@
-       onAnimationEnd: function() {},
-       onAnimationStart: function() {}
-     }, ⟦2-char-id⟧.propTypes = {
--      from: ⟦2-char-id⟧().oneOfType([⟦2-char-id⟧().object, eJ().string]),
--      to: ⟦2-char-id⟧().oneOfType([⟦2-char-id⟧().object, eJ().string]),
-+      from: ⟦2-char-id⟧().oneOfType([⟦2-char-id⟧().object, pB().string]),
-+      to: ⟦2-char-id⟧().oneOfType([⟦2-char-id⟧().object, pB().string]),
+@@ -3532,7 +3532,7 @@
+       to: ⟦2-char-id⟧().oneOfType([⟦2-char-id⟧().object, ⟦2-char-id⟧().string]),
        attributeName: ⟦2-char-id⟧().string,
        duration: ⟦2-char-id⟧().number,
 -      Fs: ⟦2-char-id⟧().number,
--      easing: ⟦2-char-id⟧().oneOfType([⟦2-char-id⟧().string, eJ().func]),
 +      tO: ⟦2-char-id⟧().number,
-+      easing: ⟦2-char-id⟧().oneOfType([⟦2-char-id⟧().string, pB().func]),
+       easing: ⟦2-char-id⟧().oneOfType([⟦2-char-id⟧().string, ⟦2-char-id⟧().func]),
        steps: ⟦2-char-id⟧().arrayOf(⟦2-char-id⟧().shape({
          duration: ⟦2-char-id⟧().number.isRequired,
-         style: ⟦2-char-id⟧().object.isRequired,
--        easing: ⟦2-char-id⟧().oneOfType([⟦2-char-id⟧().oneOf(["ease", "ease-in", "ease-out", "ease-in-out", "linear"]), eJ().func]),
-+        easing: ⟦2-char-id⟧().oneOfType([⟦2-char-id⟧().oneOf(["ease", "ease-in", "ease-out", "ease-in-out", "linear"]), pB().func]),
-         properties: ⟦2-char-id⟧().arrayOf("string"),
-         onAnimationEnd: ⟦2-char-id⟧().func
-       })),
--      children: ⟦2-char-id⟧().oneOfType([⟦2-char-id⟧().node, eJ().func]),
-+      children: ⟦2-char-id⟧().oneOfType([⟦2-char-id⟧().node, pB().func]),
-       isActive: ⟦2-char-id⟧().bool,
-       canBegin: ⟦2-char-id⟧().bool,
-       onAnimationEnd: ⟦2-char-id⟧().func,
 ```
 
 </details>
 
 <details>
-<summary>Hunk 90 · Change · +17 / -17</summary>
+<summary>Hunk 89 · Change · +17 / -17</summary>
 
 ```diff
 @@ -3551,31 +3551,31 @@
      };
      const ⟦2-char-id⟧ = ⟦2-char-id⟧
    },
--  5728: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5732: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5728: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5732: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        c: () => ⟦2-char-id⟧
      });
@@ -6443,7 +6381,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 91 · Change · +1 / -1</summary>
+<summary>Hunk 90 · Change · +1 / -1</summary>
 
 ```diff
 @@ -3698,7 +3698,7 @@
@@ -6460,7 +6398,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 92 · Change · +1 / -1</summary>
+<summary>Hunk 91 · Change · +1 / -1</summary>
 
 ```diff
 @@ -3709,7 +3709,7 @@
@@ -6477,24 +6415,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 93 · Change · +1 / -1</summary>
-
-```diff
-@@ -3734,7 +3734,7 @@
-         }), ⟦2-char-id⟧ && ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧)
-       }(⟦2-char-id⟧, ⟦2-char-id⟧), ⟦2-char-id⟧ = ⟦2-char-id⟧, ⟦2-char-id⟧ = [{
-         key: "renderDots",
--        value: function(⟦2-char-id⟧, ZJ, ⟦2-char-id⟧) {
-+        value: function(⟦2-char-id⟧, dB, ⟦2-char-id⟧) {
-           var ⟦2-char-id⟧ = this.props.isAnimationActive,
-             ⟦2-char-id⟧ = this.state.isAnimationFinished;
-           if (⟦2-char-id⟧ && !⟦2-char-id⟧) return null;
-```
-
-</details>
-
-<details>
-<summary>Hunk 94 · Change · +2 / -2</summary>
+<summary>Hunk 92 · Change · +2 / -2</summary>
 
 ```diff
 @@ -3742,8 +3742,8 @@
@@ -6513,7 +6434,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 95 · Change · +1 / -1</summary>
+<summary>Hunk 93 · Change · +1 / -1</summary>
 
 ```diff
 @@ -3762,7 +3762,7 @@
@@ -6530,7 +6451,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 96 · Change · +3 / -3</summary>
+<summary>Hunk 94 · Change · +3 / -3</summary>
 
 ```diff
 @@ -3779,10 +3779,10 @@
@@ -6552,7 +6473,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 97 · Change · +3 / -3</summary>
+<summary>Hunk 95 · Change · +3 / -3</summary>
 
 ```diff
 @@ -3801,11 +3801,11 @@
@@ -6575,24 +6496,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 98 · Change · +1 / -1</summary>
-
-```diff
-@@ -3817,7 +3817,7 @@
-         }
-       }, {
-         key: "renderAreaStatically",
--        value: function(⟦2-char-id⟧, cJ, ZJ, ⟦2-char-id⟧) {
-+        value: function(⟦2-char-id⟧, TB, dB, ⟦2-char-id⟧) {
-           var ⟦2-char-id⟧ = this.props,
-             ⟦2-char-id⟧ = ⟦2-char-id⟧.layout,
-             ⟦2-char-id⟧ = ⟦2-char-id⟧.type,
-```
-
-</details>
-
-<details>
-<summary>Hunk 99 · Change · +2 / -2</summary>
+<summary>Hunk 96 · Change · +2 / -2</summary>
 
 ```diff
 @@ -3825,9 +3825,9 @@
@@ -6612,7 +6516,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 100 · Change · +2 / -2</summary>
+<summary>Hunk 97 · Change · +2 / -2</summary>
 
 ```diff
 @@ -3835,14 +3835,14 @@
@@ -6637,7 +6541,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 101 · Change · +2 / -2</summary>
+<summary>Hunk 98 · Change · +2 / -2</summary>
 
 ```diff
 @@ -3866,8 +3866,8 @@
@@ -6656,7 +6560,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 102 · Change · +1 / -1</summary>
+<summary>Hunk 99 · Change · +1 / -1</summary>
 
 ```diff
 @@ -3897,7 +3897,7 @@
@@ -6673,7 +6577,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 103 · Change · +2 / -2</summary>
+<summary>Hunk 100 · Change · +2 / -2</summary>
 
 ```diff
 @@ -3911,9 +3911,9 @@
@@ -6693,7 +6597,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 104 · Change · +2 / -2</summary>
+<summary>Hunk 101 · Change · +2 / -2</summary>
 
 ```diff
 @@ -3950,12 +3950,12 @@
@@ -6716,7 +6620,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 105 · Change · +6 / -6</summary>
+<summary>Hunk 102 · Change · +6 / -6</summary>
 
 ```diff
 @@ -3963,18 +3963,18 @@
@@ -6749,7 +6653,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 106 · Change · +1 / -1</summary>
+<summary>Hunk 103 · Change · +1 / -1</summary>
 
 ```diff
 @@ -4015,7 +4015,7 @@
@@ -6766,7 +6670,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 107 · Change · +4 / -4</summary>
+<summary>Hunk 104 · Change · +4 / -4</summary>
 
 ```diff
 @@ -4023,14 +4023,14 @@
@@ -6793,7 +6697,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 108 · Change · +1 / -1</summary>
+<summary>Hunk 105 · Change · +1 / -1</summary>
 
 ```diff
 @@ -4056,7 +4056,7 @@
@@ -6810,7 +6714,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 109 · Change · +1 / -1</summary>
+<summary>Hunk 106 · Change · +1 / -1</summary>
 
 ```diff
 @@ -4068,7 +4068,7 @@
@@ -6827,7 +6731,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 110 · Change · +2 / -2</summary>
+<summary>Hunk 107 · Change · +2 / -2</summary>
 
 ```diff
 @@ -4099,10 +4099,10 @@
@@ -6848,15 +6752,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 111 · Change · +18 / -18</summary>
+<summary>Hunk 108 · Change · +18 / -18</summary>
 
 ```diff
 @@ -4110,28 +4110,28 @@
        return ⟦2-char-id⟧
      }))
    },
--  5637: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5650: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5637: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5650: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 +      b: () => ⟦2-char-id⟧
@@ -6903,7 +6807,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 112 · Change · +1 / -1</summary>
+<summary>Hunk 109 · Change · +1 / -1</summary>
 
 ```diff
 @@ -4187,7 +4187,7 @@
@@ -6920,7 +6824,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 113 · Change · +1 / -1</summary>
+<summary>Hunk 110 · Change · +1 / -1</summary>
 
 ```diff
 @@ -4239,7 +4239,7 @@
@@ -6937,7 +6841,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 114 · Change · +1 / -1</summary>
+<summary>Hunk 111 · Change · +1 / -1</summary>
 
 ```diff
 @@ -4366,7 +4366,7 @@
@@ -6954,7 +6858,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 115 · Change · +1 / -1</summary>
+<summary>Hunk 112 · Change · +1 / -1</summary>
 
 ```diff
 @@ -4377,7 +4377,7 @@
@@ -6971,7 +6875,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 116 · Change · +2 / -2</summary>
+<summary>Hunk 113 · Change · +2 / -2</summary>
 
 ```diff
 @@ -4409,10 +4409,10 @@
@@ -6992,7 +6896,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 117 · Change · +2 / -2</summary>
+<summary>Hunk 114 · Change · +2 / -2</summary>
 
 ```diff
 @@ -4421,9 +4421,9 @@
@@ -7012,7 +6916,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 118 · Change · +2 / -2</summary>
+<summary>Hunk 115 · Change · +2 / -2</summary>
 
 ```diff
 @@ -4441,8 +4441,8 @@
@@ -7031,7 +6935,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 119 · Change · +1 / -1</summary>
+<summary>Hunk 116 · Change · +1 / -1</summary>
 
 ```diff
 @@ -4483,7 +4483,7 @@
@@ -7048,7 +6952,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 120 · Change · +1 / -1</summary>
+<summary>Hunk 117 · Change · +1 / -1</summary>
 
 ```diff
 @@ -4503,7 +4503,7 @@
@@ -7065,7 +6969,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 121 · Change · +1 / -1</summary>
+<summary>Hunk 118 · Change · +1 / -1</summary>
 
 ```diff
 @@ -4511,7 +4511,7 @@
@@ -7082,7 +6986,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 122 · Change · +1 / -1</summary>
+<summary>Hunk 119 · Change · +1 / -1</summary>
 
 ```diff
 @@ -4535,7 +4535,7 @@
@@ -7099,7 +7003,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 123 · Change · +1 / -1</summary>
+<summary>Hunk 120 · Change · +1 / -1</summary>
 
 ```diff
 @@ -4550,7 +4550,7 @@
@@ -7116,7 +7020,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 124 · Change · +7 / -7</summary>
+<summary>Hunk 121 · Change · +7 / -7</summary>
 
 ```diff
 @@ -4580,21 +4580,21 @@
@@ -7153,7 +7057,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 125 · Change · +1 / -1</summary>
+<summary>Hunk 122 · Change · +1 / -1</summary>
 
 ```diff
 @@ -4624,7 +4624,7 @@
@@ -7170,7 +7074,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 126 · Change · +1 / -1</summary>
+<summary>Hunk 123 · Change · +1 / -1</summary>
 
 ```diff
 @@ -4641,7 +4641,7 @@
@@ -7187,7 +7091,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 127 · Change · +5 / -5</summary>
+<summary>Hunk 124 · Change · +5 / -5</summary>
 
 ```diff
 @@ -4649,20 +4649,20 @@
@@ -7221,7 +7125,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 128 · Change · +2 / -2</summary>
+<summary>Hunk 125 · Change · +2 / -2</summary>
 
 ```diff
 @@ -4670,14 +4670,14 @@
@@ -7246,7 +7150,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 129 · Change · +2 / -2</summary>
+<summary>Hunk 126 · Change · +2 / -2</summary>
 
 ```diff
 @@ -4685,14 +4685,14 @@
@@ -7271,7 +7175,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 130 · Change · +3 / -3</summary>
+<summary>Hunk 127 · Change · +3 / -3</summary>
 
 ```diff
 @@ -4704,18 +4704,18 @@
@@ -7301,15 +7205,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 131 · Change · +14 / -14</summary>
+<summary>Hunk 128 · Change · +14 / -14</summary>
 
 ```diff
 @@ -4728,24 +4728,24 @@
        }, ⟦2-char-id⟧)
      }))
    },
--  5737: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5747: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5737: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5747: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +      b: () => ⟦2-char-id⟧
@@ -7348,7 +7252,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 132 · Change · +1 / -1</summary>
+<summary>Hunk 129 · Change · +1 / -1</summary>
 
 ```diff
 @@ -4869,7 +4869,7 @@
@@ -7365,16 +7269,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 133 · Change · +2 / -2</summary>
+<summary>Hunk 130 · Change · +1 / -1</summary>
 
 ```diff
-@@ -4894,8 +4894,8 @@
-         }), ⟦2-char-id⟧ && ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧)
+@@ -4895,7 +4895,7 @@
        }(⟦2-char-id⟧, ⟦2-char-id⟧), ⟦2-char-id⟧ = ⟦2-char-id⟧, ⟦2-char-id⟧ = [{
          key: "renderTickItem",
--        value: function(⟦2-char-id⟧, cJ, ⟦2-char-id⟧) {
+         value: function(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) {
 -          var ⟦2-char-id⟧ = (0, ⟦2-char-id⟧.d)(⟦2-char-id⟧.className, "recharts-cartesian-axis-tick-value");
-+        value: function(⟦2-char-id⟧, TB, ⟦2-char-id⟧) {
 +          var ⟦2-char-id⟧ = (0, ⟦2-char-id⟧.e)(⟦2-char-id⟧.className, "recharts-cartesian-axis-tick-value");
            return ⟦2-char-id⟧.isValidElement(⟦2-char-id⟧) ? ⟦2-char-id⟧.cloneElement(⟦2-char-id⟧, ⟦2-char-id⟧(⟦2-char-id⟧({}, ⟦2-char-id⟧), {}, {
              className: ⟦2-char-id⟧
@@ -7384,7 +7286,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 134 · Change · +1 / -1</summary>
+<summary>Hunk 131 · Change · +1 / -1</summary>
 
 ```diff
 @@ -4912,7 +4912,7 @@
@@ -7401,7 +7303,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 135 · Change · +1 / -1</summary>
+<summary>Hunk 132 · Change · +1 / -1</summary>
 
 ```diff
 @@ -4940,7 +4940,7 @@
@@ -7418,7 +7320,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 136 · Change · +1 / -1</summary>
+<summary>Hunk 133 · Change · +1 / -1</summary>
 
 ```diff
 @@ -4961,7 +4961,7 @@
@@ -7435,7 +7337,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 137 · Change · +1 / -1</summary>
+<summary>Hunk 134 · Change · +1 / -1</summary>
 
 ```diff
 @@ -5016,7 +5016,7 @@
@@ -7452,22 +7354,27 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 138 · Change · +3 / -3</summary>
+<summary>Hunk 135 · Change · +1 / -1</summary>
 
 ```diff
-@@ -5037,17 +5037,17 @@
+@@ -5037,7 +5037,7 @@
              })
            }
            return ⟦2-char-id⟧.createElement("line", ⟦2-char-id⟧({}, ⟦2-char-id⟧, {
--            className: (0, ⟦2-char-id⟧.d)("recharts-cartesian-axis-line", AJ()(⟦2-char-id⟧, "className"))
-+            className: (0, ⟦2-char-id⟧.e)("recharts-cartesian-axis-line", JB()(⟦2-char-id⟧, "className"))
+-            className: (0, ⟦2-char-id⟧.d)("recharts-cartesian-axis-line", ⟦2-char-id⟧()(⟦2-char-id⟧, "className"))
++            className: (0, ⟦2-char-id⟧.e)("recharts-cartesian-axis-line", ⟦2-char-id⟧()(⟦2-char-id⟧, "className"))
            }))
          }
        }, {
-         key: "renderTicks",
--        value: function(⟦2-char-id⟧, ZJ, ⟦2-char-id⟧) {
-+        value: function(⟦2-char-id⟧, dB, ⟦2-char-id⟧) {
-           var ⟦2-char-id⟧ = this,
+```
+
+</details>
+
+<details>
+<summary>Hunk 136 · Change · +1 / -1</summary>
+
+```diff
+@@ -5047,7 +5047,7 @@
              ⟦2-char-id⟧ = this.props,
              ⟦2-char-id⟧ = ⟦2-char-id⟧.tickLine,
              ⟦2-char-id⟧ = ⟦2-char-id⟧.stroke,
@@ -7481,7 +7388,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 139 · Change · +4 / -4</summary>
+<summary>Hunk 137 · Change · +4 / -4</summary>
 
 ```diff
 @@ -5055,15 +5055,15 @@
@@ -7509,7 +7416,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 140 · Change · +3 / -3</summary>
+<summary>Hunk 138 · Change · +3 / -3</summary>
 
 ```diff
 @@ -5076,11 +5076,11 @@
@@ -7521,9 +7428,9 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
                  className: "recharts-cartesian-axis-tick",
                  key: "tick-".concat(⟦2-char-id⟧.value, "-").concat(⟦2-char-id⟧.coordinate, "-").concat(⟦2-char-id⟧.tickCoord)
 -              }, (0, ⟦2-char-id⟧.n)(⟦2-char-id⟧.props, ⟦2-char-id⟧, ⟦2-char-id⟧)), ⟦2-char-id⟧ && ⟦2-char-id⟧.createElement("line", ⟦2-char-id⟧({}, ⟦2-char-id⟧, ⟦2-char-id⟧, {
--                className: (0, ⟦2-char-id⟧.d)("recharts-cartesian-axis-tick-line", AJ()(⟦2-char-id⟧, "className"))
+-                className: (0, ⟦2-char-id⟧.d)("recharts-cartesian-axis-tick-line", ⟦2-char-id⟧()(⟦2-char-id⟧, "className"))
 +              }, (0, ⟦2-char-id⟧.o)(⟦2-char-id⟧.props, ⟦2-char-id⟧, ⟦2-char-id⟧)), ⟦2-char-id⟧ && ⟦2-char-id⟧.createElement("line", ⟦2-char-id⟧({}, ⟦2-char-id⟧, ⟦2-char-id⟧, {
-+                className: (0, ⟦2-char-id⟧.e)("recharts-cartesian-axis-tick-line", JB()(⟦2-char-id⟧, "className"))
++                className: (0, ⟦2-char-id⟧.e)("recharts-cartesian-axis-tick-line", ⟦2-char-id⟧()(⟦2-char-id⟧, "className"))
                })), ⟦2-char-id⟧ && ⟦2-char-id⟧.renderTickItem(⟦2-char-id⟧, ⟦2-char-id⟧, "".concat(⟦2-char-id⟧()(⟦2-char-id⟧) ? ⟦2-char-id⟧(⟦2-char-id⟧.value, ⟦2-char-id⟧) : ⟦2-char-id⟧.value).concat(⟦2-char-id⟧ || "")))
              }));
            return ⟦2-char-id⟧.createElement("g", {
@@ -7532,7 +7439,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 141 · Change · +3 / -3</summary>
+<summary>Hunk 139 · Change · +3 / -3</summary>
 
 ```diff
 @@ -5102,12 +5102,12 @@
@@ -7556,7 +7463,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 142 · Change · +1 / -1</summary>
+<summary>Hunk 140 · Change · +1 / -1</summary>
 
 ```diff
 @@ -5130,7 +5130,7 @@
@@ -7573,15 +7480,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 143 · Change · +10 / -10</summary>
+<summary>Hunk 141 · Change · +10 / -10</summary>
 
 ```diff
 @@ -5138,20 +5138,20 @@
        interval: "preserveEnd"
      })
    },
--  5750: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5766: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5750: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5766: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        c: () => ⟦2-char-id⟧
      });
@@ -7612,7 +7519,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 144 · Change · +1 / -1</summary>
+<summary>Hunk 142 · Change · +1 / -1</summary>
 
 ```diff
 @@ -5198,7 +5198,7 @@
@@ -7629,7 +7536,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 145 · Change · +1 / -1</summary>
+<summary>Hunk 143 · Change · +1 / -1</summary>
 
 ```diff
 @@ -5267,7 +5267,7 @@
@@ -7646,7 +7553,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 146 · Change · +1 / -1</summary>
+<summary>Hunk 144 · Change · +1 / -1</summary>
 
 ```diff
 @@ -5344,7 +5344,7 @@
@@ -7663,7 +7570,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 147 · Change · +1 / -1</summary>
+<summary>Hunk 145 · Change · +1 / -1</summary>
 
 ```diff
 @@ -5382,7 +5382,7 @@
@@ -7680,7 +7587,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 148 · Change · +2 / -2</summary>
+<summary>Hunk 146 · Change · +2 / -2</summary>
 
 ```diff
 @@ -5406,8 +5406,8 @@
@@ -7699,7 +7606,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 149 · Change · +2 / -2</summary>
+<summary>Hunk 147 · Change · +2 / -2</summary>
 
 ```diff
 @@ -5421,8 +5421,8 @@
@@ -7718,7 +7625,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 150 · Change · +13 / -13</summary>
+<summary>Hunk 148 · Change · +13 / -13</summary>
 
 ```diff
 @@ -5443,20 +5443,20 @@
@@ -7760,7 +7667,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 151 · Change · +3 / -3</summary>
+<summary>Hunk 149 · Change · +3 / -3</summary>
 
 ```diff
 @@ -5465,9 +5465,9 @@
@@ -7781,7 +7688,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 152 · Change · +1 / -1</summary>
+<summary>Hunk 150 · Change · +1 / -1</summary>
 
 ```diff
 @@ -5476,7 +5476,7 @@
@@ -7798,7 +7705,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 153 · Change · +1 / -1</summary>
+<summary>Hunk 151 · Change · +1 / -1</summary>
 
 ```diff
 @@ -5488,7 +5488,7 @@
@@ -7815,15 +7722,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 154 · Change · +5 / -5</summary>
+<summary>Hunk 152 · Change · +5 / -5</summary>
 
 ```diff
 @@ -5524,14 +5524,14 @@
      }
      ⟦2-char-id⟧.displayName = "CartesianGrid"
    },
--  5571: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5576: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5571: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5576: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        c: () => ⟦2-char-id⟧
      });
@@ -7843,7 +7750,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 155 · Change · +1 / -1</summary>
+<summary>Hunk 153 · Change · +1 / -1</summary>
 
 ```diff
 @@ -5674,7 +5674,7 @@
@@ -7860,7 +7767,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 156 · Change · +1 / -1</summary>
+<summary>Hunk 154 · Change · +1 / -1</summary>
 
 ```diff
 @@ -5706,7 +5706,7 @@
@@ -7877,7 +7784,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 157 · Change · +1 / -1</summary>
+<summary>Hunk 155 · Change · +1 / -1</summary>
 
 ```diff
 @@ -5767,7 +5767,7 @@
@@ -7894,7 +7801,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 158 · Change · +1 / -1</summary>
+<summary>Hunk 156 · Change · +1 / -1</summary>
 
 ```diff
 @@ -5778,7 +5778,7 @@
@@ -7911,15 +7818,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 159 · Change · +17 / -17</summary>
+<summary>Hunk 157 · Change · +17 / -17</summary>
 
 ```diff
 @@ -5795,28 +5795,28 @@
        layout: "horizontal"
      }), ⟦2-char-id⟧(⟦2-char-id⟧, "displayName", "ErrorBar")
    },
--  5733: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5737: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5733: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5737: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 +      c: () => ⟦2-char-id⟧
@@ -7965,7 +7872,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 160 · Change · +1 / -1</summary>
+<summary>Hunk 158 · Change · +1 / -1</summary>
 
 ```diff
 @@ -5962,7 +5962,7 @@
@@ -7982,7 +7889,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 161 · Change · +1 / -1</summary>
+<summary>Hunk 159 · Change · +1 / -1</summary>
 
 ```diff
 @@ -5989,7 +5989,7 @@
@@ -7999,7 +7906,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 162 · Change · +1 / -1</summary>
+<summary>Hunk 160 · Change · +1 / -1</summary>
 
 ```diff
 @@ -6052,7 +6052,7 @@
@@ -8016,7 +7923,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 163 · Change · +1 / -1</summary>
+<summary>Hunk 161 · Change · +1 / -1</summary>
 
 ```diff
 @@ -6065,7 +6065,7 @@
@@ -8033,17 +7940,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 164 · Change · +3 / -3</summary>
+<summary>Hunk 162 · Change · +2 / -2</summary>
 
 ```diff
-@@ -6078,14 +6078,14 @@
-         }
-       }, {
-         key: "renderDots",
--        value: function(⟦2-char-id⟧, ZJ, ⟦2-char-id⟧) {
-+        value: function(⟦2-char-id⟧, dB, ⟦2-char-id⟧) {
-           if (this.props.isAnimationActive && !this.state.isAnimationFinished) return null;
-           var ⟦2-char-id⟧ = this.props,
+@@ -6084,8 +6084,8 @@
              ⟦2-char-id⟧ = ⟦2-char-id⟧.dot,
              ⟦2-char-id⟧ = ⟦2-char-id⟧.points,
              ⟦2-char-id⟧ = ⟦2-char-id⟧.dataKey,
@@ -8059,10 +7959,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 165 · Change · +3 / -3</summary>
+<summary>Hunk 163 · Change · +1 / -1</summary>
 
 ```diff
-@@ -6104,20 +6104,20 @@
+@@ -6104,7 +6104,7 @@
              ⟦2-char-id⟧ = {
                clipPath: ⟦2-char-id⟧ ? "url(#clipPath-".concat(⟦2-char-id⟧ ? "" : "dots-").concat(⟦2-char-id⟧, ")") : null
              };
@@ -8071,13 +7971,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
              className: "recharts-line-dots",
              key: "dots"
            }, ⟦2-char-id⟧), ⟦2-char-id⟧)
-         }
-       }, {
-         key: "renderCurveStatically",
--        value: function(⟦2-char-id⟧, cJ, ZJ, ⟦2-char-id⟧) {
-+        value: function(⟦2-char-id⟧, TB, dB, ⟦2-char-id⟧) {
-           var ⟦2-char-id⟧ = this.props,
-             ⟦2-char-id⟧ = ⟦2-char-id⟧.type,
+```
+
+</details>
+
+<details>
+<summary>Hunk 164 · Change · +1 / -1</summary>
+
+```diff
+@@ -6117,7 +6117,7 @@
              ⟦2-char-id⟧ = ⟦2-char-id⟧.layout,
              ⟦2-char-id⟧ = ⟦2-char-id⟧.connectNulls,
              ⟦2-char-id⟧ = (⟦2-char-id⟧.ref, ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧)),
@@ -8091,7 +7993,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 166 · Change · +1 / -1</summary>
+<summary>Hunk 165 · Change · +1 / -1</summary>
 
 ```diff
 @@ -6127,7 +6127,7 @@
@@ -8108,7 +8010,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 167 · Change · +2 / -2</summary>
+<summary>Hunk 166 · Change · +2 / -2</summary>
 
 ```diff
 @@ -6149,8 +6149,8 @@
@@ -8127,7 +8029,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 168 · Change · +2 / -2</summary>
+<summary>Hunk 167 · Change · +2 / -2</summary>
 
 ```diff
 @@ -6235,12 +6235,12 @@
@@ -8150,7 +8052,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 169 · Change · +6 / -6</summary>
+<summary>Hunk 168 · Change · +6 / -6</summary>
 
 ```diff
 @@ -6248,18 +6248,18 @@
@@ -8183,7 +8085,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 170 · Change · +2 / -2</summary>
+<summary>Hunk 169 · Change · +2 / -2</summary>
 
 ```diff
 @@ -6295,8 +6295,8 @@
@@ -8202,7 +8104,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 171 · Change · +1 / -1</summary>
+<summary>Hunk 170 · Change · +1 / -1</summary>
 
 ```diff
 @@ -6320,7 +6320,7 @@
@@ -8219,7 +8121,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 172 · Change · +1 / -1</summary>
+<summary>Hunk 171 · Change · +1 / -1</summary>
 
 ```diff
 @@ -6342,7 +6342,7 @@
@@ -8236,7 +8138,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 173 · Change · +1 / -1</summary>
+<summary>Hunk 172 · Change · +1 / -1</summary>
 
 ```diff
 @@ -6354,7 +6354,7 @@
@@ -8253,15 +8155,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 174 · Change · +14 / -14</summary>
+<summary>Hunk 173 · Change · +14 / -14</summary>
 
 ```diff
 @@ -6369,24 +6369,24 @@
        }, ⟦2-char-id⟧)
      }))
    },
--  5690: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5699: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5690: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5699: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 +      d: () => ⟦2-char-id⟧
@@ -8300,7 +8202,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 175 · Change · +1 / -1</summary>
+<summary>Hunk 174 · Change · +1 / -1</summary>
 
 ```diff
 @@ -6479,7 +6479,7 @@
@@ -8317,7 +8219,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 176 · Change · +4 / -4</summary>
+<summary>Hunk 175 · Change · +4 / -4</summary>
 
 ```diff
 @@ -6545,10 +6545,10 @@
@@ -8340,7 +8242,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 177 · Change · +1 / -1</summary>
+<summary>Hunk 176 · Change · +1 / -1</summary>
 
 ```diff
 @@ -6561,7 +6561,7 @@
@@ -8357,7 +8259,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 178 · Change · +1 / -1</summary>
+<summary>Hunk 177 · Change · +1 / -1</summary>
 
 ```diff
 @@ -6576,7 +6576,7 @@
@@ -8374,7 +8276,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 179 · Change · +3 / -3</summary>
+<summary>Hunk 178 · Change · +3 / -3</summary>
 
 ```diff
 @@ -6592,15 +6592,15 @@
@@ -8401,7 +8303,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 180 · Change · +5 / -5</summary>
+<summary>Hunk 179 · Change · +5 / -5</summary>
 
 ```diff
 @@ -6610,20 +6610,20 @@
@@ -8435,15 +8337,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 181 · Change · +7 / -7</summary>
+<summary>Hunk 180 · Change · +7 / -7</summary>
 
 ```diff
 @@ -6669,15 +6669,15 @@
        position: "middle"
      })
    },
--  5735: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5739: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5735: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5739: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 +      e: () => ⟦2-char-id⟧
@@ -8466,7 +8368,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 182 · Change · +1 / -1</summary>
+<summary>Hunk 181 · Change · +1 / -1</summary>
 
 ```diff
 @@ -6747,7 +6747,7 @@
@@ -8483,7 +8385,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 183 · Change · +5 / -5</summary>
+<summary>Hunk 182 · Change · +5 / -5</summary>
 
 ```diff
 @@ -6762,11 +6762,11 @@
@@ -8508,7 +8410,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 184 · Change · +1 / -1</summary>
+<summary>Hunk 183 · Change · +1 / -1</summary>
 
 ```diff
 @@ -6774,7 +6774,7 @@
@@ -8525,15 +8427,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 185 · Change · +7 / -7</summary>
+<summary>Hunk 184 · Change · +7 / -7</summary>
 
 ```diff
 @@ -6825,15 +6825,15 @@
        allowDuplicatedCategory: !0
      })
    },
--  5747: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5757: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5747: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5757: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +      b: () => ⟦2-char-id⟧
@@ -8556,7 +8458,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 186 · Change · +1 / -1</summary>
+<summary>Hunk 185 · Change · +1 / -1</summary>
 
 ```diff
 @@ -6903,7 +6903,7 @@
@@ -8573,7 +8475,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 187 · Change · +5 / -5</summary>
+<summary>Hunk 186 · Change · +5 / -5</summary>
 
 ```diff
 @@ -6917,11 +6917,11 @@
@@ -8598,7 +8500,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 188 · Change · +1 / -1</summary>
+<summary>Hunk 187 · Change · +1 / -1</summary>
 
 ```diff
 @@ -6929,7 +6929,7 @@
@@ -8615,15 +8517,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 189 · Change · +6 / -6</summary>
+<summary>Hunk 188 · Change · +6 / -6</summary>
 
 ```diff
 @@ -6980,16 +6980,16 @@
        reversed: !1
      })
    },
--  5744: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5754: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5744: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5754: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        e: () => ⟦2-char-id⟧
      });
@@ -8646,7 +8548,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 190 · Change · +1 / -1</summary>
+<summary>Hunk 189 · Change · +1 / -1</summary>
 
 ```diff
 @@ -7050,7 +7050,7 @@
@@ -8663,7 +8565,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 191 · Change · +1 / -1</summary>
+<summary>Hunk 190 · Change · +1 / -1</summary>
 
 ```diff
 @@ -7060,7 +7060,7 @@
@@ -8680,7 +8582,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 192 · Change · +3 / -3</summary>
+<summary>Hunk 191 · Change · +3 / -3</summary>
 
 ```diff
 @@ -7070,12 +7070,12 @@
@@ -8704,7 +8606,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 193 · Change · +4 / -4</summary>
+<summary>Hunk 192 · Change · +4 / -4</summary>
 
 ```diff
 @@ -7089,16 +7089,16 @@
@@ -8733,7 +8635,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 194 · Change · +4 / -4</summary>
+<summary>Hunk 193 · Change · +4 / -4</summary>
 
 ```diff
 @@ -7106,11 +7106,11 @@
@@ -8757,7 +8659,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 195 · Change · +1 / -1</summary>
+<summary>Hunk 194 · Change · +1 / -1</summary>
 
 ```diff
 @@ -7139,7 +7139,7 @@
@@ -8774,7 +8676,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 196 · Change · +1 / -1</summary>
+<summary>Hunk 195 · Change · +1 / -1</summary>
 
 ```diff
 @@ -7154,7 +7154,7 @@
@@ -8791,7 +8693,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 197 · Change · +1 / -1</summary>
+<summary>Hunk 196 · Change · +1 / -1</summary>
 
 ```diff
 @@ -7173,7 +7173,7 @@
@@ -8808,15 +8710,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 198 · Change · +27 / -27</summary>
+<summary>Hunk 197 · Change · +27 / -27</summary>
 
 ```diff
 @@ -7188,51 +7188,51 @@
        })))
      }
    },
--  5757: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5773: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5757: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5773: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        e: () => ⟦2-char-id⟧
      });
@@ -8850,8 +8752,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +        formatAxisMap: ⟦2-char-id⟧.c
        })
    },
--  4826: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  4845: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  4826: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  4845: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 +      c: () => ⟦2-char-id⟧
@@ -8895,7 +8797,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 199 · Change · +1 / -1</summary>
+<summary>Hunk 198 · Change · +1 / -1</summary>
 
 ```diff
 @@ -7302,7 +7302,7 @@
@@ -8912,7 +8814,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 200 · Change · +8 / -8</summary>
+<summary>Hunk 199 · Change · +8 / -8</summary>
 
 ```diff
 @@ -7337,14 +7337,14 @@
@@ -8943,7 +8845,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 201 · Change · +3 / -3</summary>
+<summary>Hunk 200 · Change · +3 / -3</summary>
 
 ```diff
 @@ -7379,13 +7379,13 @@
@@ -8951,9 +8853,9 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
          ⟦2-char-id⟧ = ⟦2-char-id⟧.isActive,
          ⟦2-char-id⟧ = ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧);
 -      return "string" === typeof ⟦2-char-id⟧ ? ⟦2-char-id⟧.createElement(⟦2-char-id⟧.c, ⟦2-char-id⟧({
--        option: ⟦2-char-id⟧.createElement(⟦2-char-id⟧.b, zJ({
+-        option: ⟦2-char-id⟧.createElement(⟦2-char-id⟧.b, ⟦2-char-id⟧({
 +      return "string" === typeof ⟦2-char-id⟧ ? ⟦2-char-id⟧.createElement(⟦2-char-id⟧.d, ⟦2-char-id⟧({
-+        option: ⟦2-char-id⟧.createElement(⟦2-char-id⟧.e, aB({
++        option: ⟦2-char-id⟧.createElement(⟦2-char-id⟧.e, ⟦2-char-id⟧({
            type: ⟦2-char-id⟧
          }, ⟦2-char-id⟧)),
          isActive: ⟦2-char-id⟧,
@@ -8968,7 +8870,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 202 · Change · +1 / -1</summary>
+<summary>Hunk 201 · Change · +1 / -1</summary>
 
 ```diff
 @@ -7493,7 +7493,7 @@
@@ -8985,7 +8887,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 203 · Change · +1 / -1</summary>
+<summary>Hunk 202 · Change · +1 / -1</summary>
 
 ```diff
 @@ -7512,7 +7512,7 @@
@@ -9002,7 +8904,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 204 · Change · +4 / -4</summary>
+<summary>Hunk 203 · Change · +4 / -4</summary>
 
 ```diff
 @@ -7533,15 +7533,15 @@
@@ -9030,7 +8932,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 205 · Change · +2 / -2</summary>
+<summary>Hunk 204 · Change · +2 / -2</summary>
 
 ```diff
 @@ -7562,8 +7562,8 @@
@@ -9049,7 +8951,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 206 · Change · +1 / -1</summary>
+<summary>Hunk 205 · Change · +1 / -1</summary>
 
 ```diff
 @@ -7595,7 +7595,7 @@
@@ -9066,7 +8968,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 207 · Change · +1 / -1</summary>
+<summary>Hunk 206 · Change · +1 / -1</summary>
 
 ```diff
 @@ -7616,7 +7616,7 @@
@@ -9083,7 +8985,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 208 · Change · +2 / -2</summary>
+<summary>Hunk 207 · Change · +2 / -2</summary>
 
 ```diff
 @@ -7646,8 +7646,8 @@
@@ -9102,7 +9004,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 209 · Change · +1 / -1</summary>
+<summary>Hunk 208 · Change · +1 / -1</summary>
 
 ```diff
 @@ -7655,7 +7655,7 @@
@@ -9119,7 +9021,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 210 · Change · +2 / -2</summary>
+<summary>Hunk 209 · Change · +2 / -2</summary>
 
 ```diff
 @@ -7677,9 +7677,9 @@
@@ -9139,7 +9041,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 211 · Change · +7 / -7</summary>
+<summary>Hunk 210 · Change · +7 / -7</summary>
 
 ```diff
 @@ -7702,22 +7702,22 @@
@@ -9177,7 +9079,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 212 · Change · +1 / -1</summary>
+<summary>Hunk 211 · Change · +1 / -1</summary>
 
 ```diff
 @@ -7747,7 +7747,7 @@
@@ -9194,7 +9096,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 213 · Change · +1 / -1</summary>
+<summary>Hunk 212 · Change · +1 / -1</summary>
 
 ```diff
 @@ -7761,7 +7761,7 @@
@@ -9211,7 +9113,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 214 · Change · +1 / -1</summary>
+<summary>Hunk 213 · Change · +1 / -1</summary>
 
 ```diff
 @@ -7796,7 +7796,7 @@
@@ -9228,7 +9130,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 215 · Change · +1 / -1</summary>
+<summary>Hunk 214 · Change · +1 / -1</summary>
 
 ```diff
 @@ -7804,7 +7804,7 @@
@@ -9245,7 +9147,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 216 · Change · +30 / -30</summary>
+<summary>Hunk 215 · Change · +30 / -30</summary>
 
 ```diff
 @@ -7842,55 +7842,55 @@
@@ -9279,8 +9181,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +        formatAxisMap: ⟦2-char-id⟧.c
        })
    },
--  4833: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  4847: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  4833: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  4847: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +      b: () => ⟦2-char-id⟧
@@ -9339,7 +9241,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 217 · Change · +1 / -1</summary>
+<summary>Hunk 216 · Change · +1 / -1</summary>
 
 ```diff
 @@ -7935,7 +7935,7 @@
@@ -9356,7 +9258,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 218 · Change · +1 / -1</summary>
+<summary>Hunk 217 · Change · +1 / -1</summary>
 
 ```diff
 @@ -8046,7 +8046,7 @@
@@ -9373,7 +9275,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 219 · Change · +1 / -1</summary>
+<summary>Hunk 218 · Change · +1 / -1</summary>
 
 ```diff
 @@ -8127,7 +8127,7 @@
@@ -9390,7 +9292,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 220 · Change · +2 / -2</summary>
+<summary>Hunk 219 · Change · +2 / -2</summary>
 
 ```diff
 @@ -8297,14 +8297,14 @@
@@ -9415,7 +9317,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 221 · Change · +1 / -1</summary>
+<summary>Hunk 220 · Change · +1 / -1</summary>
 
 ```diff
 @@ -8377,7 +8377,7 @@
@@ -9432,7 +9334,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 222 · Change · +2 / -2</summary>
+<summary>Hunk 221 · Change · +2 / -2</summary>
 
 ```diff
 @@ -8410,8 +8410,8 @@
@@ -9451,7 +9353,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 223 · Change · +1 / -1</summary>
+<summary>Hunk 222 · Change · +1 / -1</summary>
 
 ```diff
 @@ -8423,7 +8423,7 @@
@@ -9468,7 +9370,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 224 · Change · +1 / -1</summary>
+<summary>Hunk 223 · Change · +1 / -1</summary>
 
 ```diff
 @@ -8492,7 +8492,7 @@
@@ -9485,7 +9387,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 225 · Change · +2 / -2</summary>
+<summary>Hunk 224 · Change · +2 / -2</summary>
 
 ```diff
 @@ -8540,9 +8540,9 @@
@@ -9505,7 +9407,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 226 · Change · +6 / -6</summary>
+<summary>Hunk 225 · Change · +6 / -6</summary>
 
 ```diff
 @@ -8564,12 +8564,12 @@
@@ -9532,7 +9434,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 227 · Change · +1 / -1</summary>
+<summary>Hunk 226 · Change · +1 / -1</summary>
 
 ```diff
 @@ -8672,7 +8672,7 @@
@@ -9549,7 +9451,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 228 · Change · +3 / -3</summary>
+<summary>Hunk 227 · Change · +3 / -3</summary>
 
 ```diff
 @@ -8700,15 +8700,15 @@
@@ -9576,7 +9478,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 229 · Change · +1 / -1</summary>
+<summary>Hunk 228 · Change · +1 / -1</summary>
 
 ```diff
 @@ -8718,7 +8718,7 @@
@@ -9593,7 +9495,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 230 · Change · +5 / -5</summary>
+<summary>Hunk 229 · Change · +5 / -5</summary>
 
 ```diff
 @@ -8727,14 +8727,14 @@
@@ -9621,7 +9523,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 231 · Change · +2 / -2</summary>
+<summary>Hunk 230 · Change · +2 / -2</summary>
 
 ```diff
 @@ -8757,13 +8757,13 @@
@@ -9645,7 +9547,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 232 · Change · +1 / -1</summary>
+<summary>Hunk 231 · Change · +1 / -1</summary>
 
 ```diff
 @@ -8866,7 +8866,7 @@
@@ -9662,7 +9564,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 233 · Change · +4 / -4</summary>
+<summary>Hunk 232 · Change · +4 / -4</summary>
 
 ```diff
 @@ -8897,10 +8897,10 @@
@@ -9685,7 +9587,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 234 · Change · +1 / -1</summary>
+<summary>Hunk 233 · Change · +1 / -1</summary>
 
 ```diff
 @@ -8911,7 +8911,7 @@
@@ -9702,7 +9604,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 235 · Change · +5 / -5</summary>
+<summary>Hunk 234 · Change · +5 / -5</summary>
 
 ```diff
 @@ -8931,15 +8931,15 @@
@@ -9731,7 +9633,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 236 · Change · +5 / -5</summary>
+<summary>Hunk 235 · Change · +5 / -5</summary>
 
 ```diff
 @@ -8980,20 +8980,20 @@
@@ -9765,7 +9667,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 237 · Change · +1 / -1</summary>
+<summary>Hunk 236 · Change · +1 / -1</summary>
 
 ```diff
 @@ -9002,7 +9002,7 @@
@@ -9782,7 +9684,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 238 · Change · +5 / -5</summary>
+<summary>Hunk 237 · Change · +5 / -5</summary>
 
 ```diff
 @@ -9011,15 +9011,15 @@
@@ -9811,7 +9713,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 239 · Change · +1 / -1</summary>
+<summary>Hunk 238 · Change · +1 / -1</summary>
 
 ```diff
 @@ -9056,7 +9056,7 @@
@@ -9828,7 +9730,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 240 · Change · +1 / -1</summary>
+<summary>Hunk 239 · Change · +1 / -1</summary>
 
 ```diff
 @@ -9076,7 +9076,7 @@
@@ -9845,7 +9747,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 241 · Change · +2 / -2</summary>
+<summary>Hunk 240 · Change · +2 / -2</summary>
 
 ```diff
 @@ -9126,8 +9126,8 @@
@@ -9864,7 +9766,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 242 · Change · +1 / -1</summary>
+<summary>Hunk 241 · Change · +1 / -1</summary>
 
 ```diff
 @@ -9171,7 +9171,7 @@
@@ -9881,36 +9783,34 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 243 · Change · +3 / -3</summary>
+<summary>Hunk 242 · Change · +2 / -2</summary>
 
 ```diff
-@@ -9232,9 +9232,9 @@
+@@ -9232,8 +9232,8 @@
              width: ⟦2-char-id⟧,
              height: ⟦2-char-id⟧
            }, ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧));
 -        return (0, ⟦2-char-id⟧.C)(⟦2-char-id⟧) && (0, ⟦2-char-id⟧.C)(⟦2-char-id⟧) && (0, ⟦2-char-id⟧.C)(⟦2-char-id⟧) && (0, ⟦2-char-id⟧.C)(⟦2-char-id⟧) && (0, ⟦2-char-id⟧.C)(⟦2-char-id⟧) && (0, ⟦2-char-id⟧.C)(⟦2-char-id⟧) ? ⟦2-char-id⟧.createElement("path", ⟦2-char-id⟧({}, (0, ⟦2-char-id⟧.c)(⟦2-char-id⟧, !0), {
 -          className: (0, ⟦2-char-id⟧.d)("recharts-cross", ⟦2-char-id⟧),
--          d: ⟦2-char-id⟧(⟦2-char-id⟧, eJ, hJ, sJ, AJ, ⟦2-char-id⟧)
 +        return (0, ⟦2-char-id⟧.y)(⟦2-char-id⟧) && (0, ⟦2-char-id⟧.y)(⟦2-char-id⟧) && (0, ⟦2-char-id⟧.y)(⟦2-char-id⟧) && (0, ⟦2-char-id⟧.y)(⟦2-char-id⟧) && (0, ⟦2-char-id⟧.y)(⟦2-char-id⟧) && (0, ⟦2-char-id⟧.y)(⟦2-char-id⟧) ? ⟦2-char-id⟧.createElement("path", ⟦2-char-id⟧({}, (0, ⟦2-char-id⟧.d)(⟦2-char-id⟧, !0), {
 +          className: (0, ⟦2-char-id⟧.e)("recharts-cross", ⟦2-char-id⟧),
-+          d: ⟦2-char-id⟧(⟦2-char-id⟧, pB, kB, OB, JB, ⟦2-char-id⟧)
+           d: ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧)
          })) : null
        };
- 
 ```
 
 </details>
 
 <details>
-<summary>Hunk 244 · Change · +1 / -1</summary>
+<summary>Hunk 243 · Change · +1 / -1</summary>
 
 ```diff
 @@ -9245,7 +9245,7 @@
          ⟦2-char-id⟧ = ⟦2-char-id⟧.startAngle,
          ⟦2-char-id⟧ = ⟦2-char-id⟧.endAngle;
        return {
--        points: [(0, ⟦2-char-id⟧.m)(⟦2-char-id⟧, ZJ, FJ, ⟦2-char-id⟧), (0, ⟦2-char-id⟧.m)(⟦2-char-id⟧, ZJ, FJ, ⟦2-char-id⟧)],
-+        points: [(0, ⟦2-char-id⟧.j)(⟦2-char-id⟧, dB, VB, ⟦2-char-id⟧), (0, ⟦2-char-id⟧.j)(⟦2-char-id⟧, dB, VB, ⟦2-char-id⟧)],
+-        points: [(0, ⟦2-char-id⟧.m)(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧), (0, ⟦2-char-id⟧.m)(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧)],
++        points: [(0, ⟦2-char-id⟧.j)(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧), (0, ⟦2-char-id⟧.j)(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧)],
          cx: ⟦2-char-id⟧,
          cy: ⟦2-char-id⟧,
          radius: ⟦2-char-id⟧,
@@ -9919,7 +9819,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 245 · Change · +1 / -1</summary>
+<summary>Hunk 244 · Change · +1 / -1</summary>
 
 ```diff
 @@ -9253,7 +9253,7 @@
@@ -9936,7 +9836,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 246 · Change · +2 / -2</summary>
+<summary>Hunk 245 · Change · +2 / -2</summary>
 
 ```diff
 @@ -9266,8 +9266,8 @@
@@ -9955,7 +9855,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 247 · Change · +1 / -1</summary>
+<summary>Hunk 246 · Change · +1 / -1</summary>
 
 ```diff
 @@ -9322,7 +9322,7 @@
@@ -9972,7 +9872,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 248 · Change · +5 / -5</summary>
+<summary>Hunk 247 · Change · +5 / -5</summary>
 
 ```diff
 @@ -9342,21 +9342,21 @@
@@ -10007,7 +9907,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 249 · Change · +6 / -6</summary>
+<summary>Hunk 248 · Change · +5 / -5</summary>
 
 ```diff
 @@ -9369,21 +9369,21 @@
@@ -10017,9 +9917,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -        }, ⟦2-char-id⟧ = ⟦2-char-id⟧.c
 +        }, ⟦2-char-id⟧ = ⟦2-char-id⟧.e
        } else ⟦2-char-id⟧ = {
--        points: ⟦2-char-id⟧(⟦2-char-id⟧, qJ, ⟦2-char-id⟧)
+         points: ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧)
 -      }, ⟦2-char-id⟧ = ⟦2-char-id⟧.e;
-+        points: ⟦2-char-id⟧(⟦2-char-id⟧, YB, ⟦2-char-id⟧)
 +      }, ⟦2-char-id⟧ = ⟦2-char-id⟧.b;
        var ⟦2-char-id⟧ = ⟦2-char-id⟧(⟦2-char-id⟧(⟦2-char-id⟧(⟦2-char-id⟧({
          stroke: "#ccc",
@@ -10043,7 +9942,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 250 · Change · +1 / -1</summary>
+<summary>Hunk 249 · Change · +1 / -1</summary>
 
 ```diff
 @@ -9561,7 +9561,7 @@
@@ -10060,7 +9959,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 251 · Change · +2 / -2</summary>
+<summary>Hunk 250 · Change · +2 / -2</summary>
 
 ```diff
 @@ -9583,11 +9583,11 @@
@@ -10082,7 +9981,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 252 · Change · +4 / -4</summary>
+<summary>Hunk 251 · Change · +4 / -4</summary>
 
 ```diff
 @@ -9598,12 +9598,12 @@
@@ -10107,7 +10006,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 253 · Change · +1 / -1</summary>
+<summary>Hunk 252 · Change · +1 / -1</summary>
 
 ```diff
 @@ -9617,7 +9617,7 @@
@@ -10124,7 +10023,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 254 · Change · +2 / -2</summary>
+<summary>Hunk 253 · Change · +2 / -2</summary>
 
 ```diff
 @@ -9637,14 +9637,14 @@
@@ -10149,7 +10048,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 255 · Change · +12 / -12</summary>
+<summary>Hunk 254 · Change · +12 / -12</summary>
 
 ```diff
 @@ -9696,38 +9696,38 @@
@@ -10208,7 +10107,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 256 · Change · +1 / -1</summary>
+<summary>Hunk 255 · Change · +1 / -1</summary>
 
 ```diff
 @@ -9740,7 +9740,7 @@
@@ -10225,7 +10124,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 257 · Change · +1 / -1</summary>
+<summary>Hunk 256 · Change · +1 / -1</summary>
 
 ```diff
 @@ -9756,7 +9756,7 @@
@@ -10242,7 +10141,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 258 · Change · +1 / -1</summary>
+<summary>Hunk 257 · Change · +1 / -1</summary>
 
 ```diff
 @@ -9787,7 +9787,7 @@
@@ -10259,7 +10158,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 259 · Change · +1 / -1</summary>
+<summary>Hunk 258 · Change · +1 / -1</summary>
 
 ```diff
 @@ -9815,7 +9815,7 @@
@@ -10276,7 +10175,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 260 · Change · +1 / -1</summary>
+<summary>Hunk 259 · Change · +1 / -1</summary>
 
 ```diff
 @@ -9873,7 +9873,7 @@
@@ -10293,7 +10192,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 261 · Change · +3 / -3</summary>
+<summary>Hunk 260 · Change · +3 / -3</summary>
 
 ```diff
 @@ -9894,13 +9894,13 @@
@@ -10318,7 +10217,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 262 · Change · +3 / -3</summary>
+<summary>Hunk 261 · Change · +3 / -3</summary>
 
 ```diff
 @@ -9908,12 +9908,12 @@
@@ -10342,36 +10241,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 263 · Change · +1 / -1</summary>
+<summary>Hunk 262 · Change · +1 / -1</summary>
 
 ```diff
-@@ -9926,7 +9926,7 @@
-               }
-               var ⟦2-char-id⟧ = ⟦2-char-id⟧ && ⟦2-char-id⟧.type && ⟦2-char-id⟧.type.getComposedData;
-               ⟦2-char-id⟧ && ⟦2-char-id⟧.push({
--                props: ⟦2-char-id⟧(⟦2-char-id⟧({}, TJ(⟦2-char-id⟧(⟦2-char-id⟧({}, ⟦2-char-id⟧), {}, {
-+                props: ⟦2-char-id⟧(⟦2-char-id⟧({}, WB(⟦2-char-id⟧(⟦2-char-id⟧({}, ⟦2-char-id⟧), {}, {
-                   displayedData: ⟦2-char-id⟧,
-                   props: ⟦2-char-id⟧,
-                   dataKey: ⟦2-char-id⟧,
-```
-
-</details>
-
-<details>
-<summary>Hunk 264 · Change · +3 / -3</summary>
-
-```diff
-@@ -9938,10 +9938,10 @@
-                   layout: ⟦2-char-id⟧,
-                   dataStartIndex: ⟦2-char-id⟧,
-                   dataEndIndex: ⟦2-char-id⟧
--                }))), {}, VZ(⟦2-char-id⟧(⟦2-char-id⟧({
-+                }))), {}, sd(⟦2-char-id⟧(⟦2-char-id⟧({
+@@ -9941,7 +9941,7 @@
+                 }))), {}, ⟦2-char-id⟧(⟦2-char-id⟧(⟦2-char-id⟧({
                    key: ⟦2-char-id⟧.key || "item-".concat(⟦2-char-id⟧)
--                }, fJ, ⟦2-char-id⟧[⟦2-char-id⟧]), rJ, ⟦2-char-id⟧[⟦2-char-id⟧]), "animationId", ⟦2-char-id⟧)),
+                 }, ⟦2-char-id⟧, ⟦2-char-id⟧[⟦2-char-id⟧]), ⟦2-char-id⟧, ⟦2-char-id⟧[⟦2-char-id⟧]), "animationId", ⟦2-char-id⟧)),
 -                childIndex: (0, ⟦2-char-id⟧.t)(⟦2-char-id⟧, ⟦2-char-id⟧.children),
-+                }, HB, ⟦2-char-id⟧[⟦2-char-id⟧]), vB, ⟦2-char-id⟧[⟦2-char-id⟧]), "animationId", ⟦2-char-id⟧)),
 +                childIndex: (0, ⟦2-char-id⟧.v)(⟦2-char-id⟧, ⟦2-char-id⟧.children),
                  item: ⟦2-char-id⟧
                })
@@ -10381,7 +10258,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 265 · Change · +1 / -1</summary>
+<summary>Hunk 263 · Change · +1 / -1</summary>
 
 ```diff
 @@ -9951,7 +9951,7 @@
@@ -10398,7 +10275,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 266 · Change · +2 / -2</summary>
+<summary>Hunk 264 · Change · +2 / -2</summary>
 
 ```diff
 @@ -9962,8 +9962,8 @@
@@ -10417,7 +10294,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 267 · Change · +3 / -3</summary>
+<summary>Hunk 265 · Change · +3 / -3</summary>
 
 ```diff
 @@ -9984,12 +9984,12 @@
@@ -10441,7 +10318,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 268 · Change · +2 / -2</summary>
+<summary>Hunk 266 · Change · +2 / -2</summary>
 
 ```diff
 @@ -9997,14 +9997,14 @@
@@ -10466,7 +10343,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 269 · Change · +3 / -3</summary>
+<summary>Hunk 267 · Change · +3 / -3</summary>
 
 ```diff
 @@ -10021,15 +10021,15 @@
@@ -10493,7 +10370,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 270 · Change · +2 / -2</summary>
+<summary>Hunk 268 · Change · +2 / -2</summary>
 
 ```diff
 @@ -10143,9 +10143,9 @@
@@ -10513,7 +10390,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 271 · Change · +1 / -1</summary>
+<summary>Hunk 269 · Change · +1 / -1</summary>
 
 ```diff
 @@ -10219,7 +10219,7 @@
@@ -10530,7 +10407,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 272 · Change · +1 / -1</summary>
+<summary>Hunk 270 · Change · +1 / -1</summary>
 
 ```diff
 @@ -10237,7 +10237,7 @@
@@ -10547,7 +10424,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 273 · Change · +2 / -2</summary>
+<summary>Hunk 271 · Change · +2 / -2</summary>
 
 ```diff
 @@ -10260,9 +10260,9 @@
@@ -10567,7 +10444,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 274 · Change · +4 / -4</summary>
+<summary>Hunk 272 · Change · +4 / -4</summary>
 
 ```diff
 @@ -10272,17 +10272,17 @@
@@ -10597,7 +10474,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 275 · Change · +1 / -1</summary>
+<summary>Hunk 273 · Change · +1 / -1</summary>
 
 ```diff
 @@ -10300,7 +10300,7 @@
@@ -10614,7 +10491,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 276 · Change · +1 / -1</summary>
+<summary>Hunk 274 · Change · +1 / -1</summary>
 
 ```diff
 @@ -10319,7 +10319,7 @@
@@ -10631,7 +10508,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 277 · Change · +1 / -1</summary>
+<summary>Hunk 275 · Change · +1 / -1</summary>
 
 ```diff
 @@ -10327,7 +10327,7 @@
@@ -10648,7 +10525,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 278 · Change · +1 / -1</summary>
+<summary>Hunk 276 · Change · +1 / -1</summary>
 
 ```diff
 @@ -10335,7 +10335,7 @@
@@ -10665,7 +10542,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 279 · Change · +4 / -4</summary>
+<summary>Hunk 277 · Change · +4 / -4</summary>
 
 ```diff
 @@ -10350,11 +10350,11 @@
@@ -10689,7 +10566,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 280 · Change · +2 / -2</summary>
+<summary>Hunk 278 · Change · +2 / -2</summary>
 
 ```diff
 @@ -10400,12 +10400,12 @@
@@ -10712,7 +10589,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 281 · Change · +1 / -1</summary>
+<summary>Hunk 279 · Change · +1 / -1</summary>
 
 ```diff
 @@ -10420,7 +10420,7 @@
@@ -10729,7 +10606,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 282 · Change · +5 / -5</summary>
+<summary>Hunk 280 · Change · +5 / -5</summary>
 
 ```diff
 @@ -10433,19 +10433,19 @@
@@ -10762,7 +10639,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 283 · Change · +1 / -1</summary>
+<summary>Hunk 281 · Change · +1 / -1</summary>
 
 ```diff
 @@ -10457,7 +10457,7 @@
@@ -10779,7 +10656,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 284 · Change · +1 / -1</summary>
+<summary>Hunk 282 · Change · +1 / -1</summary>
 
 ```diff
 @@ -10543,7 +10543,7 @@
@@ -10796,7 +10673,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 285 · Change · +2 / -2</summary>
+<summary>Hunk 283 · Change · +2 / -2</summary>
 
 ```diff
 @@ -10563,8 +10563,8 @@
@@ -10815,7 +10692,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 286 · Change · +1 / -1</summary>
+<summary>Hunk 284 · Change · +1 / -1</summary>
 
 ```diff
 @@ -10579,7 +10579,7 @@
@@ -10832,7 +10709,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 287 · Change · +2 / -2</summary>
+<summary>Hunk 285 · Change · +2 / -2</summary>
 
 ```diff
 @@ -10618,8 +10618,8 @@
@@ -10851,7 +10728,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 288 · Change · +1 / -1</summary>
+<summary>Hunk 286 · Change · +1 / -1</summary>
 
 ```diff
 @@ -10627,7 +10627,7 @@
@@ -10868,7 +10745,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 289 · Change · +2 / -2</summary>
+<summary>Hunk 287 · Change · +2 / -2</summary>
 
 ```diff
 @@ -10637,10 +10637,10 @@
@@ -10889,7 +10766,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 290 · Change · +1 / -1</summary>
+<summary>Hunk 288 · Change · +1 / -1</summary>
 
 ```diff
 @@ -10650,7 +10650,7 @@
@@ -10906,7 +10783,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 291 · Change · +2 / -2</summary>
+<summary>Hunk 289 · Change · +2 / -2</summary>
 
 ```diff
 @@ -10664,8 +10664,8 @@
@@ -10925,7 +10802,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 292 · Change · +2 / -2</summary>
+<summary>Hunk 290 · Change · +2 / -2</summary>
 
 ```diff
 @@ -10693,8 +10693,8 @@
@@ -10944,7 +10821,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 293 · Change · +1 / -1</summary>
+<summary>Hunk 291 · Change · +1 / -1</summary>
 
 ```diff
 @@ -10706,7 +10706,7 @@
@@ -10961,15 +10838,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 294 · Change · +2 / -2</summary>
+<summary>Hunk 292 · Change · +1 / -1</summary>
 
 ```diff
-@@ -10733,10 +10733,10 @@
-               }
-             }, {
-               key: "filterFormatItem",
--              value: function(⟦2-char-id⟧, cJ, ⟦2-char-id⟧) {
-+              value: function(⟦2-char-id⟧, TB, ⟦2-char-id⟧) {
+@@ -10736,7 +10736,7 @@
+               value: function(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) {
                  for (var ⟦2-char-id⟧ = this.state.formattedGraphicalItems, ⟦2-char-id⟧ = 0, ⟦2-char-id⟧ = ⟦2-char-id⟧.length; ⟦2-char-id⟧ < ⟦2-char-id⟧; ⟦2-char-id⟧++) {
                    var ⟦2-char-id⟧ = ⟦2-char-id⟧[⟦2-char-id⟧];
 -                  if (⟦2-char-id⟧.item === ⟦2-char-id⟧ || ⟦2-char-id⟧.props.key === ⟦2-char-id⟧.key || ⟦2-char-id⟧ === (0, ⟦2-char-id⟧.k)(⟦2-char-id⟧.item.type) && ⟦2-char-id⟧ === ⟦2-char-id⟧.childIndex) return ⟦2-char-id⟧
@@ -10982,7 +10855,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 295 · Change · +9 / -1</summary>
+<summary>Hunk 293 · Change · +9 / -1</summary>
 
 ```diff
 @@ -10804,8 +10804,16 @@
@@ -11008,7 +10881,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 296 · Change · +3 / -11</summary>
+<summary>Hunk 294 · Change · +3 / -11</summary>
 
 ```diff
 @@ -10813,26 +10821,18 @@
@@ -11046,7 +10919,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 297 · Change · +1 / -1</summary>
+<summary>Hunk 295 · Change · +1 / -1</summary>
 
 ```diff
 @@ -10842,7 +10842,7 @@
@@ -11063,7 +10936,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 298 · Change · +7 / -7</summary>
+<summary>Hunk 296 · Change · +7 / -7</summary>
 
 ```diff
 @@ -10853,31 +10853,31 @@
@@ -11110,7 +10983,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 299 · Change · +2 / -2</summary>
+<summary>Hunk 297 · Change · +2 / -2</summary>
 
 ```diff
 @@ -10888,13 +10888,13 @@
@@ -11134,7 +11007,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 300 · Change · +1 / -1</summary>
+<summary>Hunk 298 · Change · +1 / -1</summary>
 
 ```diff
 @@ -10944,7 +10944,7 @@
@@ -11151,7 +11024,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 301 · Change · +4 / -4</summary>
+<summary>Hunk 299 · Change · +4 / -4</summary>
 
 ```diff
 @@ -10968,10 +10968,10 @@
@@ -11174,7 +11047,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 302 · Change · +1 / -1</summary>
+<summary>Hunk 300 · Change · +1 / -1</summary>
 
 ```diff
 @@ -10991,7 +10991,7 @@
@@ -11191,15 +11064,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 303 · Change · +13 / -13</summary>
+<summary>Hunk 301 · Change · +13 / -13</summary>
 
 ```diff
 @@ -11004,31 +11004,31 @@
          return ⟦2-char-id⟧.displayName = ⟦2-char-id⟧.displayName, ⟦2-char-id⟧
        }
    },
--  5646: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5656: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5646: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5656: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 +      c: () => ⟦2-char-id⟧
@@ -11209,8 +11082,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
      };
      ⟦2-char-id⟧.displayName = "Cell"
    },
--  5585: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5596: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5585: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5596: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 +      c: () => ⟦2-char-id⟧
@@ -11244,7 +11117,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 304 · Change · +1 / -1</summary>
+<summary>Hunk 302 · Change · +1 / -1</summary>
 
 ```diff
 @@ -11115,7 +11115,7 @@
@@ -11261,7 +11134,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 305 · Change · +1 / -1</summary>
+<summary>Hunk 303 · Change · +1 / -1</summary>
 
 ```diff
 @@ -11136,7 +11136,7 @@
@@ -11278,7 +11151,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 306 · Change · +6 / -6</summary>
+<summary>Hunk 304 · Change · +6 / -6</summary>
 
 ```diff
 @@ -11154,17 +11154,17 @@
@@ -11310,7 +11183,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 307 · Change · +1 / -1</summary>
+<summary>Hunk 305 · Change · +1 / -1</summary>
 
 ```diff
 @@ -11183,7 +11183,7 @@
@@ -11327,7 +11200,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 308 · Change · +1 / -1</summary>
+<summary>Hunk 306 · Change · +1 / -1</summary>
 
 ```diff
 @@ -11211,7 +11211,7 @@
@@ -11344,7 +11217,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 309 · Change · +3 / -3</summary>
+<summary>Hunk 307 · Change · +3 / -3</summary>
 
 ```diff
 @@ -11323,9 +11323,9 @@
@@ -11365,7 +11238,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 310 · Change · +1 / -1</summary>
+<summary>Hunk 308 · Change · +1 / -1</summary>
 
 ```diff
 @@ -11336,7 +11336,7 @@
@@ -11382,7 +11255,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 311 · Change · +2 / -2</summary>
+<summary>Hunk 309 · Change · +2 / -2</summary>
 
 ```diff
 @@ -11358,11 +11358,11 @@
@@ -11404,7 +11277,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 312 · Change · +5 / -5</summary>
+<summary>Hunk 310 · Change · +5 / -5</summary>
 
 ```diff
 @@ -11387,26 +11387,26 @@
@@ -11444,7 +11317,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 313 · Change · +1 / -1</summary>
+<summary>Hunk 311 · Change · +1 / -1</summary>
 
 ```diff
 @@ -11421,7 +11421,7 @@
@@ -11461,7 +11334,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 314 · Change · +1 / -1</summary>
+<summary>Hunk 312 · Change · +1 / -1</summary>
 
 ```diff
 @@ -11432,7 +11432,7 @@
@@ -11478,15 +11351,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 315 · Change · +10 / -10</summary>
+<summary>Hunk 313 · Change · +10 / -10</summary>
 
 ```diff
 @@ -11456,23 +11456,23 @@
        return [⟦2-char-id⟧].concat(⟦2-char-id⟧(⟦2-char-id⟧))
      }
    },
--  5653: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5660: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5653: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5660: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        d: () => ⟦2-char-id⟧
      });
@@ -11520,7 +11393,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 316 · Change · +1 / -1</summary>
+<summary>Hunk 314 · Change · +1 / -1</summary>
 
 ```diff
 @@ -11552,7 +11552,7 @@
@@ -11537,7 +11410,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 317 · Change · +1 / -1</summary>
+<summary>Hunk 315 · Change · +1 / -1</summary>
 
 ```diff
 @@ -11584,7 +11584,7 @@
@@ -11554,7 +11427,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 318 · Change · +3 / -3</summary>
+<summary>Hunk 316 · Change · +3 / -3</summary>
 
 ```diff
 @@ -11592,18 +11592,18 @@
@@ -11584,7 +11457,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 319 · Change · +1 / -1</summary>
+<summary>Hunk 317 · Change · +1 / -1</summary>
 
 ```diff
 @@ -11615,7 +11615,7 @@
@@ -11601,15 +11474,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 320 · Change · +9 / -9</summary>
+<summary>Hunk 318 · Change · +9 / -9</summary>
 
 ```diff
 @@ -11637,18 +11637,18 @@
        }(⟦2-char-id⟧.label, ⟦2-char-id⟧)].concat(⟦2-char-id⟧(⟦2-char-id⟧)) : ⟦2-char-id⟧
      }
    },
--  5406: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5420: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5406: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5420: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +      e: () => ⟦2-char-id⟧
@@ -11637,7 +11510,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 321 · Change · +1 / -1</summary>
+<summary>Hunk 319 · Change · +1 / -1</summary>
 
 ```diff
 @@ -11739,7 +11739,7 @@
@@ -11654,7 +11527,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 322 · Change · +1 / -1</summary>
+<summary>Hunk 320 · Change · +1 / -1</summary>
 
 ```diff
 @@ -11766,7 +11766,7 @@
@@ -11671,7 +11544,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 323 · Change · +1 / -1</summary>
+<summary>Hunk 321 · Change · +1 / -1</summary>
 
 ```diff
 @@ -11805,7 +11805,7 @@
@@ -11688,7 +11561,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 324 · Change · +3 / -3</summary>
+<summary>Hunk 322 · Change · +3 / -3</summary>
 
 ```diff
 @@ -11841,18 +11841,18 @@
@@ -11718,7 +11591,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 325 · Change · +1 / -1</summary>
+<summary>Hunk 323 · Change · +1 / -1</summary>
 
 ```diff
 @@ -11876,7 +11876,7 @@
@@ -11735,7 +11608,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 326 · Change · +2 / -2</summary>
+<summary>Hunk 324 · Change · +2 / -2</summary>
 
 ```diff
 @@ -11895,8 +11895,8 @@
@@ -11754,7 +11627,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 327 · Change · +1 / -1</summary>
+<summary>Hunk 325 · Change · +1 / -1</summary>
 
 ```diff
 @@ -11990,7 +11990,7 @@
@@ -11771,7 +11644,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 328 · Change · +1 / -1</summary>
+<summary>Hunk 326 · Change · +1 / -1</summary>
 
 ```diff
 @@ -12041,7 +12041,7 @@
@@ -11788,15 +11661,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 329 · Change · +1 / -1</summary>
+<summary>Hunk 327 · Change · +1 / -1</summary>
 
 ```diff
 @@ -12134,7 +12134,7 @@
              var ⟦2-char-id⟧ = ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧);
              return ⟦2-char-id⟧.createElement(⟦2-char-id⟧, ⟦2-char-id⟧)
            }(⟦2-char-id⟧, ⟦2-char-id⟧(⟦2-char-id⟧({}, this.props), {}, {
--            payload: (0, ⟦2-char-id⟧.c)(⟦2-char-id⟧, AJ, ⟦2-char-id⟧)
-+            payload: (0, ⟦2-char-id⟧.d)(⟦2-char-id⟧, JB, ⟦2-char-id⟧)
+-            payload: (0, ⟦2-char-id⟧.c)(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧)
++            payload: (0, ⟦2-char-id⟧.d)(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧)
            })))
          }
        }]) && ⟦2-char-id⟧(⟦2-char-id⟧.prototype, ⟦2-char-id⟧), ⟦2-char-id⟧ && ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧), Object.defineProperty(⟦2-char-id⟧, "prototype", {
@@ -11805,15 +11678,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 330 · Change · +8 / -8</summary>
+<summary>Hunk 328 · Change · +8 / -8</summary>
 
 ```diff
 @@ -12149,17 +12149,17 @@
        verticalAlign: "bottom"
      })
    },
--  4464: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  4477: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  4464: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  4477: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 +      d: () => ⟦2-char-id⟧
@@ -11839,7 +11712,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 331 · Change · +1 / -1</summary>
+<summary>Hunk 329 · Change · +1 / -1</summary>
 
 ```diff
 @@ -12204,7 +12204,7 @@
@@ -11856,7 +11729,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 332 · Change · +1 / -1</summary>
+<summary>Hunk 330 · Change · +1 / -1</summary>
 
 ```diff
 @@ -12276,7 +12276,7 @@
@@ -11873,7 +11746,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 333 · Change · +1 / -1</summary>
+<summary>Hunk 331 · Change · +1 / -1</summary>
 
 ```diff
 @@ -12299,7 +12299,7 @@
@@ -11890,7 +11763,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 334 · Change · +5 / -5</summary>
+<summary>Hunk 332 · Change · +5 / -5</summary>
 
 ```diff
 @@ -12329,11 +12329,11 @@
@@ -11915,7 +11788,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 335 · Change · +1 / -1</summary>
+<summary>Hunk 333 · Change · +1 / -1</summary>
 
 ```diff
 @@ -12350,7 +12350,7 @@
@@ -11932,15 +11805,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 336 · Change · +8 / -8</summary>
+<summary>Hunk 334 · Change · +8 / -8</summary>
 
 ```diff
 @@ -12362,18 +12362,18 @@
        }, ⟦2-char-id⟧)
      }))
    },
--  5488: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5504: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5488: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5504: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        e: () => ⟦2-char-id⟧
      });
@@ -11967,7 +11840,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 337 · Change · +1 / -1</summary>
+<summary>Hunk 335 · Change · +1 / -1</summary>
 
 ```diff
 @@ -12445,7 +12445,7 @@
@@ -11984,7 +11857,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 338 · Change · +2 / -2</summary>
+<summary>Hunk 336 · Change · +2 / -2</summary>
 
 ```diff
 @@ -12473,10 +12473,10 @@
@@ -12005,7 +11878,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 339 · Change · +6 / -6</summary>
+<summary>Hunk 337 · Change · +6 / -6</summary>
 
 ```diff
 @@ -12517,23 +12517,23 @@
@@ -12043,7 +11916,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 340 · Change · +2 / -2</summary>
+<summary>Hunk 338 · Change · +2 / -2</summary>
 
 ```diff
 @@ -12648,10 +12648,10 @@
@@ -12064,7 +11937,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 341 · Change · +1 / -1</summary>
+<summary>Hunk 339 · Change · +1 / -1</summary>
 
 ```diff
 @@ -12669,7 +12669,7 @@
@@ -12081,7 +11954,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 342 · Change · +1 / -1</summary>
+<summary>Hunk 340 · Change · +1 / -1</summary>
 
 ```diff
 @@ -12680,7 +12680,7 @@
@@ -12098,7 +11971,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 343 · Change · +1 / -1</summary>
+<summary>Hunk 341 · Change · +1 / -1</summary>
 
 ```diff
 @@ -12710,7 +12710,7 @@
@@ -12115,7 +11988,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 344 · Change · +1 / -1</summary>
+<summary>Hunk 342 · Change · +1 / -1</summary>
 
 ```diff
 @@ -12753,7 +12753,7 @@
@@ -12132,7 +12005,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 345 · Change · +3 / -3</summary>
+<summary>Hunk 343 · Change · +3 / -3</summary>
 
 ```diff
 @@ -12771,9 +12771,9 @@
@@ -12153,7 +12026,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 346 · Change · +13 / -13</summary>
+<summary>Hunk 344 · Change · +13 / -13</summary>
 
 ```diff
 @@ -12788,35 +12788,35 @@
@@ -12184,8 +12057,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
          })))
        }
    },
--  5336: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5365: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5336: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5365: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +      b: () => ⟦2-char-id⟧
@@ -12210,7 +12083,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 347 · Change · +1 / -1</summary>
+<summary>Hunk 345 · Change · +1 / -1</summary>
 
 ```diff
 @@ -12915,7 +12915,7 @@
@@ -12227,7 +12100,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 348 · Change · +1 / -1</summary>
+<summary>Hunk 346 · Change · +1 / -1</summary>
 
 ```diff
 @@ -12925,7 +12925,7 @@
@@ -12244,7 +12117,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 349 · Change · +3 / -3</summary>
+<summary>Hunk 347 · Change · +3 / -3</summary>
 
 ```diff
 @@ -12956,9 +12956,9 @@
@@ -12265,7 +12138,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 350 · Change · +1 / -1</summary>
+<summary>Hunk 348 · Change · +1 / -1</summary>
 
 ```diff
 @@ -12970,7 +12970,7 @@
@@ -12282,7 +12155,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 351 · Change · +2 / -2</summary>
+<summary>Hunk 349 · Change · +2 / -2</summary>
 
 ```diff
 @@ -12996,9 +12996,9 @@
@@ -12302,7 +12175,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 352 · Change · +1 / -1</summary>
+<summary>Hunk 350 · Change · +1 / -1</summary>
 
 ```diff
 @@ -13038,7 +13038,7 @@
@@ -12319,7 +12192,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 353 · Change · +1 / -1</summary>
+<summary>Hunk 351 · Change · +1 / -1</summary>
 
 ```diff
 @@ -13055,7 +13055,7 @@
@@ -12336,7 +12209,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 354 · Change · +2 / -2</summary>
+<summary>Hunk 352 · Change · +2 / -2</summary>
 
 ```diff
 @@ -13068,10 +13068,10 @@
@@ -12357,7 +12230,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 355 · Change · +1 / -1</summary>
+<summary>Hunk 353 · Change · +1 / -1</summary>
 
 ```diff
 @@ -13165,7 +13165,7 @@
@@ -12374,7 +12247,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 356 · Change · +2 / -2</summary>
+<summary>Hunk 354 · Change · +2 / -2</summary>
 
 ```diff
 @@ -13189,8 +13189,8 @@
@@ -12393,7 +12266,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 357 · Change · +2 / -2</summary>
+<summary>Hunk 355 · Change · +2 / -2</summary>
 
 ```diff
 @@ -13341,8 +13341,8 @@
@@ -12412,7 +12285,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 358 · Change · +1 / -1</summary>
+<summary>Hunk 356 · Change · +1 / -1</summary>
 
 ```diff
 @@ -13435,7 +13435,7 @@
@@ -12429,7 +12302,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 359 · Change · +2 / -2</summary>
+<summary>Hunk 357 · Change · +2 / -2</summary>
 
 ```diff
 @@ -13479,8 +13479,8 @@
@@ -12448,7 +12321,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 360 · Change · +1 / -1</summary>
+<summary>Hunk 358 · Change · +1 / -1</summary>
 
 ```diff
 @@ -13525,7 +13525,7 @@
@@ -12465,15 +12338,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 361 · Change · +5 / -5</summary>
+<summary>Hunk 359 · Change · +5 / -5</summary>
 
 ```diff
 @@ -13545,13 +13545,13 @@
        wrapperStyle: {}
      })
    },
--  5332: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5361: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5332: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5361: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 +      c: () => ⟦2-char-id⟧
@@ -12492,7 +12365,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 362 · Change · +7 / -7</summary>
+<summary>Hunk 360 · Change · +7 / -7</summary>
 
 ```diff
 @@ -13585,21 +13585,21 @@
@@ -12509,8 +12382,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }), ⟦2-char-id⟧)
      }))
    },
--  5324: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5357: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5324: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5357: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 +      e: () => ⟦2-char-id⟧
@@ -12529,7 +12402,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 363 · Change · +2 / -2</summary>
+<summary>Hunk 361 · Change · +2 / -2</summary>
 
 ```diff
 @@ -13646,8 +13646,8 @@
@@ -12548,15 +12421,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 364 · Change · +11 / -11</summary>
+<summary>Hunk 362 · Change · +11 / -11</summary>
 
 ```diff
 @@ -13656,26 +13656,26 @@
        }), ⟦2-char-id⟧.createElement("title", null, ⟦2-char-id⟧), ⟦2-char-id⟧.createElement("desc", null, ⟦2-char-id⟧), ⟦2-char-id⟧)
      }
    },
--  5698: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5713: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5698: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5713: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧,
        d: () => ⟦2-char-id⟧,
@@ -12594,7 +12467,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 365 · Change · +1 / -1</summary>
+<summary>Hunk 363 · Change · +1 / -1</summary>
 
 ```diff
 @@ -13686,7 +13686,7 @@
@@ -12611,7 +12484,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 366 · Change · +2 / -2</summary>
+<summary>Hunk 364 · Change · +2 / -2</summary>
 
 ```diff
 @@ -13731,13 +13731,13 @@
@@ -12635,15 +12508,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 367 · Change · +3 / -3</summary>
+<summary>Hunk 365 · Change · +3 / -3</summary>
 
 ```diff
 @@ -13758,11 +13758,11 @@
          return (0, ⟦2-char-id⟧.useContext)(⟦2-char-id⟧)
        }
    },
--  5722: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5730: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5722: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5730: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 +      b: () => ⟦2-char-id⟧
@@ -12658,24 +12531,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 368 · Change · +1 / -1</summary>
-
-```diff
-@@ -14069,7 +14069,7 @@
-       lineTo: function(⟦2-char-id⟧, ⟦2-char-id⟧) {
-         this._context.lineTo(⟦2-char-id⟧, ⟦2-char-id⟧)
-       },
--      bezierCurveTo: function(⟦2-char-id⟧, cJ, ZJ, FJ, UJ, ⟦2-char-id⟧) {
-+      bezierCurveTo: function(⟦2-char-id⟧, TB, dB, VB, yB, ⟦2-char-id⟧) {
-         this._context.bezierCurveTo(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧)
-       }
-     }, ⟦2-char-id⟧.prototype = {
-```
-
-</details>
-
-<details>
-<summary>Hunk 369 · Change · +3 / -3</summary>
+<summary>Hunk 366 · Change · +3 / -3</summary>
 
 ```diff
 @@ -14125,9 +14125,9 @@
@@ -12696,7 +12552,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 370 · Change · +1 / -1</summary>
+<summary>Hunk 367 · Change · +1 / -1</summary>
 
 ```diff
 @@ -14138,7 +14138,7 @@
@@ -12713,7 +12569,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 371 · Change · +4 / -4</summary>
+<summary>Hunk 368 · Change · +4 / -4</summary>
 
 ```diff
 @@ -14150,12 +14150,12 @@
@@ -12738,7 +12594,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 372 · Change · +1 / -1</summary>
+<summary>Hunk 369 · Change · +1 / -1</summary>
 
 ```diff
 @@ -14165,7 +14165,7 @@
@@ -12755,7 +12611,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 373 · Change · +7 / -7</summary>
+<summary>Hunk 370 · Change · +7 / -7</summary>
 
 ```diff
 @@ -14190,18 +14190,18 @@
@@ -12789,7 +12645,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 374 · Change · +7 / -7</summary>
+<summary>Hunk 371 · Change · +7 / -7</summary>
 
 ```diff
 @@ -14209,21 +14209,21 @@
@@ -12826,7 +12682,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 375 · Change · +1 / -1</summary>
+<summary>Hunk 372 · Change · +1 / -1</summary>
 
 ```diff
 @@ -14278,7 +14278,7 @@
@@ -12843,7 +12699,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 376 · Change · +1 / -1</summary>
+<summary>Hunk 373 · Change · +1 / -1</summary>
 
 ```diff
 @@ -14346,7 +14346,7 @@
@@ -12860,7 +12716,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 377 · Change · +1 / -1</summary>
+<summary>Hunk 374 · Change · +1 / -1</summary>
 
 ```diff
 @@ -14366,7 +14366,7 @@
@@ -12877,7 +12733,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 378 · Change · +8 / -8</summary>
+<summary>Hunk 375 · Change · +8 / -8</summary>
 
 ```diff
 @@ -14375,21 +14375,21 @@
@@ -12893,8 +12749,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
          }))
        }
    },
--  5471: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5487: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5471: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5487: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +      e: () => ⟦2-char-id⟧
@@ -12915,7 +12771,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 379 · Change · +2 / -2</summary>
+<summary>Hunk 376 · Change · +2 / -2</summary>
 
 ```diff
 @@ -14405,8 +14405,8 @@
@@ -12934,15 +12790,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 380 · Change · +7 / -7</summary>
+<summary>Hunk 377 · Change · +7 / -7</summary>
 
 ```diff
 @@ -14414,15 +14414,15 @@
        })) : null
      }
    },
--  5480: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5489: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5480: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5489: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧,
 -      g: () => ⟦2-char-id⟧
@@ -12965,7 +12821,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 381 · Change · +1 / -1</summary>
+<summary>Hunk 378 · Change · +1 / -1</summary>
 
 ```diff
 @@ -14521,7 +14521,7 @@
@@ -12982,7 +12838,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 382 · Change · +1 / -1</summary>
+<summary>Hunk 379 · Change · +1 / -1</summary>
 
 ```diff
 @@ -14535,7 +14535,7 @@
@@ -12999,7 +12855,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 383 · Change · +2 / -2</summary>
+<summary>Hunk 380 · Change · +2 / -2</summary>
 
 ```diff
 @@ -14596,8 +14596,8 @@
@@ -13018,7 +12874,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 384 · Change · +13 / -13</summary>
+<summary>Hunk 381 · Change · +11 / -11</summary>
 
 ```diff
 @@ -14619,35 +14619,35 @@
@@ -13039,20 +12895,18 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -          }, ⟦2-char-id⟧.createElement("path", ⟦2-char-id⟧({}, (0, ⟦2-char-id⟧.c)(⟦2-char-id⟧, !0), {
 +          }, ⟦2-char-id⟧.createElement("path", ⟦2-char-id⟧({}, (0, ⟦2-char-id⟧.d)(⟦2-char-id⟧, !0), {
              className: ⟦2-char-id⟧,
--            d: ⟦2-char-id⟧(⟦2-char-id⟧, hJ, UJ, AJ, ⟦2-char-id⟧),
-+            d: ⟦2-char-id⟧(⟦2-char-id⟧, kB, yB, JB, ⟦2-char-id⟧),
+             d: ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧),
              ref: ⟦2-char-id⟧
            })))
 -        })) : ⟦2-char-id⟧.createElement("path", ⟦2-char-id⟧({}, (0, ⟦2-char-id⟧.c)(⟦2-char-id⟧, !0), {
 +        })) : ⟦2-char-id⟧.createElement("path", ⟦2-char-id⟧({}, (0, ⟦2-char-id⟧.d)(⟦2-char-id⟧, !0), {
            className: ⟦2-char-id⟧,
--          d: ⟦2-char-id⟧(⟦2-char-id⟧, GJ, xJ, rJ, ⟦2-char-id⟧)
-+          d: ⟦2-char-id⟧(⟦2-char-id⟧, uB, EB, vB, ⟦2-char-id⟧)
+           d: ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧)
          }))
        }
    },
--  5681: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5690: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5681: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5690: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +      e: () => ⟦2-char-id⟧
@@ -13075,7 +12929,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 385 · Change · +1 / -1</summary>
+<summary>Hunk 382 · Change · +1 / -1</summary>
 
 ```diff
 @@ -14702,7 +14702,7 @@
@@ -13092,7 +12946,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 386 · Change · +6 / -6</summary>
+<summary>Hunk 383 · Change · +6 / -6</summary>
 
 ```diff
 @@ -14721,13 +14721,13 @@
@@ -13104,13 +12958,13 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +          ⟦2-char-id⟧ = ⟦2-char-id⟧ ? yB : ⟦2-char-id⟧ + ⟦2-char-id⟧ * ⟦2-char-id⟧,
 +          ⟦2-char-id⟧ = ⟦2-char-id⟧ ? ⟦2-char-id⟧ - ⟦2-char-id⟧ * kB : ⟦2-char-id⟧;
          return {
--          center: (0, ⟦2-char-id⟧.m)(⟦2-char-id⟧, ZJ, YJ, ⟦2-char-id⟧),
--          circleTangency: (0, ⟦2-char-id⟧.m)(⟦2-char-id⟧, ZJ, FJ, ⟦2-char-id⟧),
--          lineTangency: (0, ⟦2-char-id⟧.m)(⟦2-char-id⟧, ZJ, ⟦2-char-id⟧ * Math.cos(⟦2-char-id⟧ * ⟦2-char-id⟧.e), ⟦2-char-id⟧),
+-          center: (0, ⟦2-char-id⟧.m)(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧),
+-          circleTangency: (0, ⟦2-char-id⟧.m)(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧),
+-          lineTangency: (0, ⟦2-char-id⟧.m)(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧ * Math.cos(⟦2-char-id⟧ * ⟦2-char-id⟧.e), ⟦2-char-id⟧),
 -          sq: ⟦2-char-id⟧
-+          center: (0, ⟦2-char-id⟧.j)(⟦2-char-id⟧, dB, oB, ⟦2-char-id⟧),
-+          circleTangency: (0, ⟦2-char-id⟧.j)(⟦2-char-id⟧, dB, VB, ⟦2-char-id⟧),
-+          lineTangency: (0, ⟦2-char-id⟧.j)(⟦2-char-id⟧, dB, ⟦2-char-id⟧ * Math.cos(⟦2-char-id⟧ * ⟦2-char-id⟧.e), ⟦2-char-id⟧),
++          center: (0, ⟦2-char-id⟧.j)(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧),
++          circleTangency: (0, ⟦2-char-id⟧.j)(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧),
++          lineTangency: (0, ⟦2-char-id⟧.j)(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧ * Math.cos(⟦2-char-id⟧ * ⟦2-char-id⟧.e), ⟦2-char-id⟧),
 +          bl: ⟦2-char-id⟧
          }
        },
@@ -13120,7 +12974,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 387 · Change · +5 / -5</summary>
+<summary>Hunk 384 · Change · +5 / -5</summary>
 
 ```diff
 @@ -14737,15 +14737,15 @@
@@ -13149,7 +13003,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 388 · Change · +2 / -2</summary>
+<summary>Hunk 385 · Change · +2 / -2</summary>
 
 ```diff
 @@ -14774,9 +14774,9 @@
@@ -13169,7 +13023,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 389 · Change · +1 / -1</summary>
+<summary>Hunk 386 · Change · +1 / -1</summary>
 
 ```diff
 @@ -14787,7 +14787,7 @@
@@ -13186,7 +13040,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 390 · Change · +1 / -1</summary>
+<summary>Hunk 387 · Change · +1 / -1</summary>
 
 ```diff
 @@ -14799,7 +14799,7 @@
@@ -13203,7 +13057,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 391 · Change · +1 / -1</summary>
+<summary>Hunk 388 · Change · +1 / -1</summary>
 
 ```diff
 @@ -14811,7 +14811,7 @@
@@ -13220,7 +13074,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 392 · Change · +1 / -1</summary>
+<summary>Hunk 389 · Change · +1 / -1</summary>
 
 ```diff
 @@ -14835,7 +14835,7 @@
@@ -13237,7 +13091,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 393 · Change · +1 / -1</summary>
+<summary>Hunk 390 · Change · +1 / -1</summary>
 
 ```diff
 @@ -14848,7 +14848,7 @@
@@ -13254,7 +13108,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 394 · Change · +5 / -5</summary>
+<summary>Hunk 391 · Change · +5 / -5</summary>
 
 ```diff
 @@ -14871,19 +14871,19 @@
@@ -13269,8 +13123,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
          }))
        }
    },
--  5415: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5426: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5415: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5426: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 +      e: () => ⟦2-char-id⟧
@@ -13287,7 +13141,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 395 · Change · +4 / -4</summary>
+<summary>Hunk 392 · Change · +4 / -4</summary>
 
 ```diff
 @@ -14960,11 +14960,11 @@
@@ -13311,7 +13165,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 396 · Change · +1 / -1</summary>
+<summary>Hunk 393 · Change · +1 / -1</summary>
 
 ```diff
 @@ -15020,7 +15020,7 @@
@@ -13328,7 +13182,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 397 · Change · +2 / -2</summary>
+<summary>Hunk 394 · Change · +2 / -2</summary>
 
 ```diff
 @@ -15071,9 +15071,9 @@
@@ -13348,7 +13202,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 398 · Change · +3 / -3</summary>
+<summary>Hunk 395 · Change · +3 / -3</summary>
 
 ```diff
 @@ -15088,10 +15088,10 @@
@@ -13370,15 +13224,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 399 · Change · +13 / -13</summary>
+<summary>Hunk 396 · Change · +13 / -13</summary>
 
 ```diff
 @@ -15123,27 +15123,27 @@
        ⟦2-char-id⟧["symbol".concat(⟦2-char-id⟧()(⟦2-char-id⟧))] = ⟦2-char-id⟧
      }
    },
--  5662: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5668: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5662: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5668: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧,
 +      d: () => ⟦2-char-id⟧,
@@ -13419,7 +13273,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 400 · Change · +1 / -1</summary>
+<summary>Hunk 397 · Change · +1 / -1</summary>
 
 ```diff
 @@ -15242,7 +15242,7 @@
@@ -13436,7 +13290,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 401 · Change · +2 / -2</summary>
+<summary>Hunk 398 · Change · +2 / -2</summary>
 
 ```diff
 @@ -15288,8 +15288,8 @@
@@ -13455,7 +13309,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 402 · Change · +9 / -9</summary>
+<summary>Hunk 399 · Change · +7 / -7</summary>
 
 ```diff
 @@ -15314,27 +15314,27 @@
@@ -13475,15 +13329,13 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -          }, ⟦2-char-id⟧.createElement("path", ⟦2-char-id⟧({}, (0, ⟦2-char-id⟧.c)(⟦2-char-id⟧, !0), {
 +          }, ⟦2-char-id⟧.createElement("path", ⟦2-char-id⟧({}, (0, ⟦2-char-id⟧.d)(⟦2-char-id⟧, !0), {
              className: ⟦2-char-id⟧,
--            d: ⟦2-char-id⟧(⟦2-char-id⟧, jJ, UJ, XJ, ⟦2-char-id⟧),
-+            d: ⟦2-char-id⟧(⟦2-char-id⟧, gB, yB, lB, ⟦2-char-id⟧),
+             d: ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧),
              ref: ⟦2-char-id⟧
            })))
 -        })) : ⟦2-char-id⟧.createElement("g", null, ⟦2-char-id⟧.createElement("path", ⟦2-char-id⟧({}, (0, ⟦2-char-id⟧.c)(⟦2-char-id⟧, !0), {
 +        })) : ⟦2-char-id⟧.createElement("g", null, ⟦2-char-id⟧.createElement("path", ⟦2-char-id⟧({}, (0, ⟦2-char-id⟧.d)(⟦2-char-id⟧, !0), {
            className: ⟦2-char-id⟧,
--          d: ⟦2-char-id⟧(⟦2-char-id⟧, qJ, jJ, YJ, ⟦2-char-id⟧)
-+          d: ⟦2-char-id⟧(⟦2-char-id⟧, YB, gB, oB, ⟦2-char-id⟧)
+           d: ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧)
          })))
        },
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(5681),
@@ -13500,7 +13352,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 403 · Change · +1 / -1</summary>
+<summary>Hunk 400 · Change · +1 / -1</summary>
 
 ```diff
 @@ -15398,7 +15398,7 @@
@@ -13517,7 +13369,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 404 · Change · +3 / -3</summary>
+<summary>Hunk 401 · Change · +3 / -3</summary>
 
 ```diff
 @@ -15416,15 +15416,15 @@
@@ -13544,7 +13396,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 405 · Change · +1 / -1</summary>
+<summary>Hunk 402 · Change · +1 / -1</summary>
 
 ```diff
 @@ -15435,7 +15435,7 @@
@@ -13561,7 +13413,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 406 · Change · +1 / -1</summary>
+<summary>Hunk 403 · Change · +1 / -1</summary>
 
 ```diff
 @@ -15457,7 +15457,7 @@
@@ -13578,7 +13430,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 407 · Change · +1 / -1</summary>
+<summary>Hunk 404 · Change · +1 / -1</summary>
 
 ```diff
 @@ -15510,7 +15510,7 @@
@@ -13595,15 +13447,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 408 · Change · +12 / -12</summary>
+<summary>Hunk 405 · Change · +12 / -12</summary>
 
 ```diff
 @@ -15520,22 +15520,22 @@
        return ⟦2-char-id⟧.indexOf(⟦2-char-id⟧[⟦2-char-id⟧.length - 1])
      }
    },
--  5601: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5612: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5601: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5612: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧,
 -      h: () => ⟦2-char-id⟧,
@@ -13638,7 +13490,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 409 · Change · +1 / -1</summary>
+<summary>Hunk 406 · Change · +1 / -1</summary>
 
 ```diff
 @@ -15595,7 +15595,7 @@
@@ -13655,7 +13507,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 410 · Change · +1 / -1</summary>
+<summary>Hunk 407 · Change · +1 / -1</summary>
 
 ```diff
 @@ -15613,7 +15613,7 @@
@@ -13672,7 +13524,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 411 · Change · +4 / -4</summary>
+<summary>Hunk 408 · Change · +4 / -4</summary>
 
 ```diff
 @@ -15626,24 +15626,24 @@
@@ -13709,7 +13561,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 412 · Change · +1 / -1</summary>
+<summary>Hunk 409 · Change · +1 / -1</summary>
 
 ```diff
 @@ -15656,7 +15656,7 @@
@@ -13726,7 +13578,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 413 · Change · +1 / -1</summary>
+<summary>Hunk 410 · Change · +1 / -1</summary>
 
 ```diff
 @@ -15746,7 +15746,7 @@
@@ -13743,15 +13595,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 414 · Change · +19 / -19</summary>
+<summary>Hunk 411 · Change · +19 / -19</summary>
 
 ```diff
 @@ -15794,40 +15794,40 @@
        return Math.abs(⟦2-char-id⟧)
      }
    },
--  5497: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5518: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5497: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5518: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧,
 -      d: () => ⟦2-char-id⟧,
@@ -13811,7 +13663,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 415 · Change · +2 / -2</summary>
+<summary>Hunk 412 · Change · +2 / -2</summary>
 
 ```diff
 @@ -15837,8 +15837,8 @@
@@ -13830,7 +13682,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 416 · Change · +1 / -1</summary>
+<summary>Hunk 413 · Change · +1 / -1</summary>
 
 ```diff
 @@ -15856,7 +15856,7 @@
@@ -13847,7 +13699,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 417 · Change · +1 / -1</summary>
+<summary>Hunk 414 · Change · +1 / -1</summary>
 
 ```diff
 @@ -15898,7 +15898,7 @@
@@ -13864,7 +13716,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 418 · Change · +1 / -1</summary>
+<summary>Hunk 415 · Change · +1 / -1</summary>
 
 ```diff
 @@ -15924,7 +15924,7 @@
@@ -13881,7 +13733,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 419 · Change · +6 / -6</summary>
+<summary>Hunk 416 · Change · +6 / -6</summary>
 
 ```diff
 @@ -15974,12 +15974,12 @@
@@ -13908,7 +13760,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 420 · Change · +2 / -2</summary>
+<summary>Hunk 417 · Change · +2 / -2</summary>
 
 ```diff
 @@ -16162,12 +16162,12 @@
@@ -13931,7 +13783,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 421 · Change · +1 / -1</summary>
+<summary>Hunk 418 · Change · +1 / -1</summary>
 
 ```diff
 @@ -16198,7 +16198,7 @@
@@ -13948,7 +13800,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 422 · Change · +1 / -1</summary>
+<summary>Hunk 419 · Change · +1 / -1</summary>
 
 ```diff
 @@ -16214,7 +16214,7 @@
@@ -13965,7 +13817,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 423 · Change · +2 / -2</summary>
+<summary>Hunk 420 · Change · +2 / -2</summary>
 
 ```diff
 @@ -16241,10 +16241,10 @@
@@ -13986,7 +13838,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 424 · Change · +1 / -1</summary>
+<summary>Hunk 421 · Change · +1 / -1</summary>
 
 ```diff
 @@ -16258,7 +16258,7 @@
@@ -14003,7 +13855,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 425 · Change · +3 / -3</summary>
+<summary>Hunk 422 · Change · +3 / -3</summary>
 
 ```diff
 @@ -16266,16 +16266,16 @@
@@ -14031,7 +13883,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 426 · Change · +1 / -1</summary>
+<summary>Hunk 423 · Change · +1 / -1</summary>
 
 ```diff
 @@ -16287,7 +16287,7 @@
@@ -14048,7 +13900,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 427 · Change · +3 / -3</summary>
+<summary>Hunk 424 · Change · +3 / -3</summary>
 
 ```diff
 @@ -16299,19 +16299,19 @@
@@ -14079,7 +13931,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 428 · Change · +1 / -1</summary>
+<summary>Hunk 425 · Change · +1 / -1</summary>
 
 ```diff
 @@ -16354,7 +16354,7 @@
@@ -14096,7 +13948,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 429 · Change · +2 / -2</summary>
+<summary>Hunk 426 · Change · +2 / -2</summary>
 
 ```diff
 @@ -16409,11 +16409,11 @@
@@ -14118,7 +13970,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 430 · Change · +1 / -1</summary>
+<summary>Hunk 427 · Change · +1 / -1</summary>
 
 ```diff
 @@ -16439,7 +16439,7 @@
@@ -14135,7 +13987,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 431 · Change · +2 / -2</summary>
+<summary>Hunk 428 · Change · +2 / -2</summary>
 
 ```diff
 @@ -16508,11 +16508,11 @@
@@ -14157,7 +14009,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 432 · Change · +1 / -1</summary>
+<summary>Hunk 429 · Change · +1 / -1</summary>
 
 ```diff
 @@ -16537,7 +16537,7 @@
@@ -14174,7 +14026,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 433 · Change · +1 / -1</summary>
+<summary>Hunk 430 · Change · +1 / -1</summary>
 
 ```diff
 @@ -16577,7 +16577,7 @@
@@ -14191,7 +14043,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 434 · Change · +1 / -1</summary>
+<summary>Hunk 431 · Change · +1 / -1</summary>
 
 ```diff
 @@ -16602,7 +16602,7 @@
@@ -14208,7 +14060,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 435 · Change · +2 / -2</summary>
+<summary>Hunk 432 · Change · +2 / -2</summary>
 
 ```diff
 @@ -16615,14 +16615,14 @@
@@ -14233,7 +14085,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 436 · Change · +2 / -2</summary>
+<summary>Hunk 433 · Change · +2 / -2</summary>
 
 ```diff
 @@ -16645,8 +16645,8 @@
@@ -14252,7 +14104,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 437 · Change · +2 / -2</summary>
+<summary>Hunk 434 · Change · +2 / -2</summary>
 
 ```diff
 @@ -16656,8 +16656,8 @@
@@ -14271,7 +14123,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 438 · Change · +1 / -1</summary>
+<summary>Hunk 435 · Change · +1 / -1</summary>
 
 ```diff
 @@ -16669,7 +16669,7 @@
@@ -14288,7 +14140,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 439 · Change · +1 / -1</summary>
+<summary>Hunk 436 · Change · +1 / -1</summary>
 
 ```diff
 @@ -16779,7 +16779,7 @@
@@ -14305,7 +14157,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 440 · Change · +1 / -1</summary>
+<summary>Hunk 437 · Change · +1 / -1</summary>
 
 ```diff
 @@ -16831,7 +16831,7 @@
@@ -14322,7 +14174,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 441 · Change · +1 / -1</summary>
+<summary>Hunk 438 · Change · +1 / -1</summary>
 
 ```diff
 @@ -16914,7 +16914,7 @@
@@ -14339,7 +14191,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 442 · Change · +1 / -1</summary>
+<summary>Hunk 439 · Change · +1 / -1</summary>
 
 ```diff
 @@ -16927,7 +16927,7 @@
@@ -14356,7 +14208,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 443 · Change · +1 / -1</summary>
+<summary>Hunk 440 · Change · +1 / -1</summary>
 
 ```diff
 @@ -16962,7 +16962,7 @@
@@ -14373,7 +14225,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 444 · Change · +1 / -1</summary>
+<summary>Hunk 441 · Change · +1 / -1</summary>
 
 ```diff
 @@ -17011,7 +17011,7 @@
@@ -14390,7 +14242,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 445 · Change · +1 / -1</summary>
+<summary>Hunk 442 · Change · +1 / -1</summary>
 
 ```diff
 @@ -17024,7 +17024,7 @@
@@ -14407,7 +14259,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 446 · Change · +1 / -1</summary>
+<summary>Hunk 443 · Change · +1 / -1</summary>
 
 ```diff
 @@ -17093,7 +17093,7 @@
@@ -14424,7 +14276,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 447 · Change · +1 / -1</summary>
+<summary>Hunk 444 · Change · +1 / -1</summary>
 
 ```diff
 @@ -17184,7 +17184,7 @@
@@ -14441,7 +14293,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 448 · Change · +1 / -1</summary>
+<summary>Hunk 445 · Change · +1 / -1</summary>
 
 ```diff
 @@ -17204,7 +17204,7 @@
@@ -14458,7 +14310,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 449 · Change · +1 / -1</summary>
+<summary>Hunk 446 · Change · +1 / -1</summary>
 
 ```diff
 @@ -17213,7 +17213,7 @@
@@ -14475,7 +14327,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 450 · Change · +1 / -1</summary>
+<summary>Hunk 447 · Change · +1 / -1</summary>
 
 ```diff
 @@ -17352,7 +17352,7 @@
@@ -14492,7 +14344,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 451 · Change · +2 / -2</summary>
+<summary>Hunk 448 · Change · +2 / -2</summary>
 
 ```diff
 @@ -17397,9 +17397,9 @@
@@ -14512,7 +14364,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 452 · Change · +1 / -1</summary>
+<summary>Hunk 449 · Change · +1 / -1</summary>
 
 ```diff
 @@ -17698,7 +17698,7 @@
@@ -14529,7 +14381,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 453 · Change · +1 / -1</summary>
+<summary>Hunk 450 · Change · +1 / -1</summary>
 
 ```diff
 @@ -17715,7 +17715,7 @@
@@ -14546,7 +14398,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 454 · Change · +1 / -1</summary>
+<summary>Hunk 451 · Change · +1 / -1</summary>
 
 ```diff
 @@ -17725,7 +17725,7 @@
@@ -14563,7 +14415,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 455 · Change · +1 / -1</summary>
+<summary>Hunk 452 · Change · +1 / -1</summary>
 
 ```diff
 @@ -17749,7 +17749,7 @@
@@ -14580,7 +14432,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 456 · Change · +1 / -1</summary>
+<summary>Hunk 453 · Change · +1 / -1</summary>
 
 ```diff
 @@ -17842,7 +17842,7 @@
@@ -14597,82 +14449,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 457 · Change · +5 / -5</summary>
-
-```diff
-@@ -18021,23 +18021,23 @@
-             "%": ⟦2-char-id⟧
-           },
-           ⟦2-char-id⟧ = {
--            a: function(⟦2-char-id⟧, cJ, ⟦2-char-id⟧) {
-+            a: function(⟦2-char-id⟧, TB, ⟦2-char-id⟧) {
-               var ⟦2-char-id⟧ = ⟦2-char-id⟧.exec(⟦2-char-id⟧.slice(⟦2-char-id⟧));
-               return ⟦2-char-id⟧ ? (⟦2-char-id⟧.w = ⟦2-char-id⟧.get(⟦2-char-id⟧[0].toLowerCase()), ⟦2-char-id⟧ + ⟦2-char-id⟧[0].length) : -1
-             },
--            A: function(⟦2-char-id⟧, cJ, ⟦2-char-id⟧) {
-+            A: function(⟦2-char-id⟧, TB, ⟦2-char-id⟧) {
-               var ⟦2-char-id⟧ = ⟦2-char-id⟧.exec(⟦2-char-id⟧.slice(⟦2-char-id⟧));
-               return ⟦2-char-id⟧ ? (⟦2-char-id⟧.w = ⟦2-char-id⟧.get(⟦2-char-id⟧[0].toLowerCase()), ⟦2-char-id⟧ + ⟦2-char-id⟧[0].length) : -1
-             },
--            b: function(⟦2-char-id⟧, cJ, ⟦2-char-id⟧) {
-+            b: function(⟦2-char-id⟧, TB, ⟦2-char-id⟧) {
-               var ⟦2-char-id⟧ = ⟦2-char-id⟧.exec(⟦2-char-id⟧.slice(⟦2-char-id⟧));
-               return ⟦2-char-id⟧ ? (⟦2-char-id⟧.m = ⟦2-char-id⟧.get(⟦2-char-id⟧[0].toLowerCase()), ⟦2-char-id⟧ + ⟦2-char-id⟧[0].length) : -1
-             },
--            B: function(⟦2-char-id⟧, cJ, ⟦2-char-id⟧) {
-+            B: function(⟦2-char-id⟧, TB, ⟦2-char-id⟧) {
-               var ⟦2-char-id⟧ = ⟦2-char-id⟧.exec(⟦2-char-id⟧.slice(⟦2-char-id⟧));
-               return ⟦2-char-id⟧ ? (⟦2-char-id⟧.m = ⟦2-char-id⟧.get(⟦2-char-id⟧[0].toLowerCase()), ⟦2-char-id⟧ + ⟦2-char-id⟧[0].length) : -1
-             },
--            c: function(⟦2-char-id⟧, ZJ, ⟦2-char-id⟧) {
-+            c: function(⟦2-char-id⟧, dB, ⟦2-char-id⟧) {
-               return ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧)
-             },
-             d: ⟦2-char-id⟧,
-```
-
-</details>
-
-<details>
-<summary>Hunk 458 · Change · +1 / -1</summary>
-
-```diff
-@@ -18051,7 +18051,7 @@
-             L: ⟦2-char-id⟧,
-             m: ⟦2-char-id⟧,
-             M: ⟦2-char-id⟧,
--            p: function(⟦2-char-id⟧, cJ, ⟦2-char-id⟧) {
-+            p: function(⟦2-char-id⟧, TB, ⟦2-char-id⟧) {
-               var ⟦2-char-id⟧ = ⟦2-char-id⟧.exec(⟦2-char-id⟧.slice(⟦2-char-id⟧));
-               return ⟦2-char-id⟧ ? (⟦2-char-id⟧.p = ⟦2-char-id⟧.get(⟦2-char-id⟧[0].toLowerCase()), ⟦2-char-id⟧ + ⟦2-char-id⟧[0].length) : -1
-             },
-```
-
-</details>
-
-<details>
-<summary>Hunk 459 · Change · +2 / -2</summary>
-
-```diff
-@@ -18064,10 +18064,10 @@
-             V: ⟦2-char-id⟧,
-             w: ⟦2-char-id⟧,
-             W: ⟦2-char-id⟧,
--            x: function(⟦2-char-id⟧, cJ, ⟦2-char-id⟧) {
-+            x: function(⟦2-char-id⟧, TB, ⟦2-char-id⟧) {
-               return ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧)
-             },
--            X: function(⟦2-char-id⟧, cJ, ⟦2-char-id⟧) {
-+            X: function(⟦2-char-id⟧, TB, ⟦2-char-id⟧) {
-               return ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧)
-             },
-             y: ⟦2-char-id⟧,
-```
-
-</details>
-
-<details>
-<summary>Hunk 460 · Change · +2 / -2</summary>
+<summary>Hunk 454 · Change · +2 / -2</summary>
 
 ```diff
 @@ -18147,8 +18147,8 @@
@@ -14691,7 +14468,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 461 · Change · +12 / -12</summary>
+<summary>Hunk 455 · Change · +12 / -12</summary>
 
 ```diff
 @@ -18163,29 +18163,29 @@
@@ -14741,7 +14518,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 462 · Change · +2 / -2</summary>
+<summary>Hunk 456 · Change · +2 / -2</summary>
 
 ```diff
 @@ -18221,11 +18221,11 @@
@@ -14763,10 +14540,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 463 · Change · +5 / -5</summary>
+<summary>Hunk 457 · Change · +1 / -1</summary>
 
 ```diff
-@@ -18273,26 +18273,26 @@
+@@ -18273,7 +18273,7 @@
            for (var ⟦2-char-id⟧ = arguments.length, ⟦2-char-id⟧ = new Array(⟦2-char-id⟧), ⟦2-char-id⟧ = 0; ⟦2-char-id⟧ < ⟦2-char-id⟧; ⟦2-char-id⟧++) ⟦2-char-id⟧[⟦2-char-id⟧] = arguments[⟦2-char-id⟧];
            return ⟦2-char-id⟧ && ⟦2-char-id⟧.every((function(⟦2-char-id⟧, ⟦2-char-id⟧) {
              return ⟦2-char-id⟧ === ⟦2-char-id⟧[⟦2-char-id⟧]
@@ -14775,35 +14552,12 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
          }
        };
      const ⟦2-char-id⟧ = {
--      rangeStep: function(⟦2-char-id⟧, cJ, ⟦2-char-id⟧) {
-+      rangeStep: function(⟦2-char-id⟧, TB, ⟦2-char-id⟧) {
-         for (var ⟦2-char-id⟧ = new(⟦2-char-id⟧())(⟦2-char-id⟧), ⟦2-char-id⟧ = 0, ⟦2-char-id⟧ = []; ⟦2-char-id⟧.lt(⟦2-char-id⟧) && ⟦2-char-id⟧ < 1⟦2-char-id⟧;) ⟦2-char-id⟧.push(⟦2-char-id⟧.toNumber()), ⟦2-char-id⟧ = ⟦2-char-id⟧.add(⟦2-char-id⟧), ⟦2-char-id⟧++;
-         return ⟦2-char-id⟧
-       },
-       getDigitCount: function(⟦2-char-id⟧) {
-         return 0 === ⟦2-char-id⟧ ? 1 : Math.floor(new(⟦2-char-id⟧())(⟦2-char-id⟧).abs().log(10).toNumber()) + 1
-       },
--      interpolateNumber: ⟦2-char-id⟧((function(⟦2-char-id⟧, cJ, ⟦2-char-id⟧) {
-+      interpolateNumber: ⟦2-char-id⟧((function(⟦2-char-id⟧, TB, ⟦2-char-id⟧) {
-         var ⟦2-char-id⟧ = +⟦2-char-id⟧;
-         return ⟦2-char-id⟧ + ⟦2-char-id⟧ * (+⟦2-char-id⟧ - ⟦2-char-id⟧)
-       })),
--      uninterpolateNumber: ⟦2-char-id⟧((function(⟦2-char-id⟧, cJ, ⟦2-char-id⟧) {
-+      uninterpolateNumber: ⟦2-char-id⟧((function(⟦2-char-id⟧, TB, ⟦2-char-id⟧) {
-         var ⟦2-char-id⟧ = ⟦2-char-id⟧ - +⟦2-char-id⟧;
-         return (⟦2-char-id⟧ - ⟦2-char-id⟧) / (⟦2-char-id⟧ = ⟦2-char-id⟧ || 1 / 0)
-       })),
--      uninterpolateTruncation: ⟦2-char-id⟧((function(⟦2-char-id⟧, cJ, ⟦2-char-id⟧) {
-+      uninterpolateTruncation: ⟦2-char-id⟧((function(⟦2-char-id⟧, TB, ⟦2-char-id⟧) {
-         var ⟦2-char-id⟧ = ⟦2-char-id⟧ - +⟦2-char-id⟧;
-         return ⟦2-char-id⟧ = ⟦2-char-id⟧ || 1 / 0, Math.max(0, Math.min(1, (⟦2-char-id⟧ - ⟦2-char-id⟧) / ⟦2-char-id⟧))
-       }))
 ```
 
 </details>
 
 <details>
-<summary>Hunk 464 · Change · +1 / -1</summary>
+<summary>Hunk 458 · Change · +1 / -1</summary>
 
 ```diff
 @@ -18364,7 +18364,7 @@
@@ -14820,7 +14574,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 465 · Change · +1 / -1</summary>
+<summary>Hunk 459 · Change · +1 / -1</summary>
 
 ```diff
 @@ -18392,7 +18392,7 @@
@@ -14837,7 +14591,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 466 · Change · +4 / -4</summary>
+<summary>Hunk 460 · Change · +4 / -4</summary>
 
 ```diff
 @@ -18458,10 +18458,10 @@
@@ -14860,7 +14614,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 467 · Change · +1 / -1</summary>
+<summary>Hunk 461 · Change · +1 / -1</summary>
 
 ```diff
 @@ -18529,7 +18529,7 @@
@@ -14877,7 +14631,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 468 · Change · +1 / -1</summary>
+<summary>Hunk 462 · Change · +1 / -1</summary>
 
 ```diff
 @@ -18539,7 +18539,7 @@
@@ -14894,7 +14648,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 469 · Change · +2 / -2</summary>
+<summary>Hunk 463 · Change · +2 / -2</summary>
 
 ```diff
 @@ -18548,14 +18548,14 @@
@@ -14919,7 +14673,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 470 · Change · +1 / -1</summary>
+<summary>Hunk 464 · Change · +1 / -1</summary>
 
 ```diff
 @@ -18563,7 +18563,7 @@
@@ -14936,7 +14690,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 471 · Change · +2 / -2</summary>
+<summary>Hunk 465 · Change · +2 / -2</summary>
 
 ```diff
 @@ -18571,9 +18571,9 @@
@@ -14956,7 +14710,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 472 · Change · +1 / -1</summary>
+<summary>Hunk 466 · Change · +1 / -1</summary>
 
 ```diff
 @@ -18613,7 +18613,7 @@
@@ -14973,7 +14727,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 473 · Change · +1 / -1</summary>
+<summary>Hunk 467 · Change · +1 / -1</summary>
 
 ```diff
 @@ -18632,7 +18632,7 @@
@@ -14990,7 +14744,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 474 · Change · +2 / -2</summary>
+<summary>Hunk 468 · Change · +2 / -2</summary>
 
 ```diff
 @@ -18640,11 +18640,11 @@
@@ -15002,8 +14756,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
                ⟦2-char-id⟧[⟦2-char-id⟧].push({
                  item: ⟦2-char-id⟧[0],
                  stackList: ⟦2-char-id⟧.slice(1),
--                barSize: ⟦2-char-id⟧()(⟦2-char-id⟧) ? void 0 : (0, ⟦2-char-id⟧.l)(⟦2-char-id⟧, ZJ, 0)
-+                barSize: ⟦2-char-id⟧()(⟦2-char-id⟧) ? void 0 : (0, ⟦2-char-id⟧.n)(⟦2-char-id⟧, dB, 0)
+-                barSize: ⟦2-char-id⟧()(⟦2-char-id⟧) ? void 0 : (0, ⟦2-char-id⟧.l)(⟦2-char-id⟧, ⟦2-char-id⟧, 0)
++                barSize: ⟦2-char-id⟧()(⟦2-char-id⟧) ? void 0 : (0, ⟦2-char-id⟧.n)(⟦2-char-id⟧, ⟦2-char-id⟧, 0)
                })
              }
            }
@@ -15012,7 +14766,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 475 · Change · +1 / -1</summary>
+<summary>Hunk 469 · Change · +1 / -1</summary>
 
 ```diff
 @@ -18659,7 +18659,7 @@
@@ -15029,7 +14783,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 476 · Change · +1 / -1</summary>
+<summary>Hunk 470 · Change · +1 / -1</summary>
 
 ```diff
 @@ -18677,7 +18677,7 @@
@@ -15046,7 +14800,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 477 · Change · +1 / -1</summary>
+<summary>Hunk 471 · Change · +1 / -1</summary>
 
 ```diff
 @@ -18689,7 +18689,7 @@
@@ -15063,7 +14817,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 478 · Change · +1 / -1</summary>
+<summary>Hunk 472 · Change · +1 / -1</summary>
 
 ```diff
 @@ -18717,7 +18717,7 @@
@@ -15080,7 +14834,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 479 · Change · +4 / -4</summary>
+<summary>Hunk 473 · Change · +4 / -4</summary>
 
 ```diff
 @@ -18728,16 +18728,16 @@
@@ -15109,7 +14863,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 480 · Change · +2 / -2</summary>
+<summary>Hunk 474 · Change · +2 / -2</summary>
 
 ```diff
 @@ -18802,8 +18802,8 @@
@@ -15128,7 +14882,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 481 · Change · +3 / -3</summary>
+<summary>Hunk 475 · Change · +3 / -3</summary>
 
 ```diff
 @@ -18851,16 +18851,16 @@
@@ -15156,7 +14910,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 482 · Change · +3 / -3</summary>
+<summary>Hunk 476 · Change · +3 / -3</summary>
 
 ```diff
 @@ -18869,14 +18869,14 @@
@@ -15182,7 +14936,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 483 · Change · +2 / -2</summary>
+<summary>Hunk 477 · Change · +2 / -2</summary>
 
 ```diff
 @@ -18900,11 +18900,11 @@
@@ -15204,7 +14958,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 484 · Change · +1 / -1</summary>
+<summary>Hunk 478 · Change · +1 / -1</summary>
 
 ```diff
 @@ -18967,7 +18967,7 @@
@@ -15221,7 +14975,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 485 · Change · +4 / -4</summary>
+<summary>Hunk 479 · Change · +4 / -4</summary>
 
 ```diff
 @@ -18982,13 +18982,13 @@
@@ -15247,7 +15001,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 486 · Change · +2 / -2</summary>
+<summary>Hunk 480 · Change · +2 / -2</summary>
 
 ```diff
 @@ -19006,14 +19006,14 @@
@@ -15272,24 +15026,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 487 · Change · +1 / -1</summary>
-
-```diff
-@@ -19055,7 +19055,7 @@
-         if (⟦2-char-id⟧ && "number" === ⟦2-char-id⟧) {
-           var ⟦2-char-id⟧ = ⟦2-char-id⟧.domain();
-           return {
--            niceTicks: ⟦2-char-id⟧(⟦2-char-id⟧, UJ, ⟦2-char-id⟧)
-+            niceTicks: ⟦2-char-id⟧(⟦2-char-id⟧, yB, ⟦2-char-id⟧)
-           }
-         }
-         return null
-```
-
-</details>
-
-<details>
-<summary>Hunk 488 · Change · +1 / -1</summary>
+<summary>Hunk 481 · Change · +1 / -1</summary>
 
 ```diff
 @@ -19070,7 +19070,7 @@
@@ -15306,7 +15043,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 489 · Change · +1 / -1</summary>
+<summary>Hunk 482 · Change · +1 / -1</summary>
 
 ```diff
 @@ -19085,7 +19085,7 @@
@@ -15323,7 +15060,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 490 · Change · +2 / -2</summary>
+<summary>Hunk 483 · Change · +2 / -2</summary>
 
 ```diff
 @@ -19095,13 +19095,13 @@
@@ -15347,7 +15084,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 491 · Change · +1 / -1</summary>
+<summary>Hunk 484 · Change · +1 / -1</summary>
 
 ```diff
 @@ -19114,7 +19114,7 @@
@@ -15364,7 +15101,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 492 · Change · +2 / -2</summary>
+<summary>Hunk 485 · Change · +2 / -2</summary>
 
 ```diff
 @@ -19129,12 +19129,12 @@
@@ -15387,7 +15124,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 493 · Change · +1 / -1</summary>
+<summary>Hunk 486 · Change · +1 / -1</summary>
 
 ```diff
 @@ -19159,7 +19159,7 @@
@@ -15404,7 +15141,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 494 · Change · +1 / -1</summary>
+<summary>Hunk 487 · Change · +1 / -1</summary>
 
 ```diff
 @@ -19170,7 +19170,7 @@
@@ -15421,15 +15158,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 495 · Change · +4 / -4</summary>
+<summary>Hunk 488 · Change · +4 / -4</summary>
 
 ```diff
 @@ -19184,12 +19184,12 @@
          })
        }
    },
--  5490: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5512: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5490: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5512: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧,
 -      f: () => ⟦2-char-id⟧
@@ -15446,7 +15183,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 496 · Change · +1 / -1</summary>
+<summary>Hunk 489 · Change · +1 / -1</summary>
 
 ```diff
 @@ -19234,7 +19234,7 @@
@@ -15463,7 +15200,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 497 · Change · +1 / -1</summary>
+<summary>Hunk 490 · Change · +1 / -1</summary>
 
 ```diff
 @@ -19258,7 +19258,7 @@
@@ -15480,15 +15217,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 498 · Change · +15 / -15</summary>
+<summary>Hunk 491 · Change · +15 / -15</summary>
 
 ```diff
 @@ -19298,31 +19298,31 @@
          }
        }
    },
--  4543: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  4572: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  4543: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  4572: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        C: () => ⟦2-char-id⟧,
 -      E: () => ⟦2-char-id⟧,
@@ -15535,7 +15272,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 499 · Change · +5 / -5</summary>
+<summary>Hunk 492 · Change · +5 / -5</summary>
 
 ```diff
 @@ -19392,12 +19392,12 @@
@@ -15545,11 +15282,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -        return ⟦2-char-id⟧(⟦2-char-id⟧) && ⟦2-char-id⟧(⟦2-char-id⟧) ? ⟦2-char-id⟧ - cJ : ⟦2-char-id⟧()(⟦2-char-id⟧) && ⟦2-char-id⟧()(⟦2-char-id⟧) ? ⟦2-char-id⟧.localeCompare(⟦2-char-id⟧) : ⟦2-char-id⟧ instanceof Date && ⟦2-char-id⟧ instanceof Date ? ⟦2-char-id⟧.getTime() - ⟦2-char-id⟧.getTime() : String(⟦2-char-id⟧).localeCompare(String(⟦2-char-id⟧))
 -      }
 -  },
--  5343: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5343: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +        return ⟦2-char-id⟧(⟦2-char-id⟧) && ⟦2-char-id⟧(⟦2-char-id⟧) ? ⟦2-char-id⟧ - TB : ⟦2-char-id⟧()(⟦2-char-id⟧) && ⟦2-char-id⟧()(⟦2-char-id⟧) ? ⟦2-char-id⟧.localeCompare(⟦2-char-id⟧) : ⟦2-char-id⟧ instanceof Date && ⟦2-char-id⟧ instanceof Date ? ⟦2-char-id⟧.getTime() - ⟦2-char-id⟧.getTime() : String(⟦2-char-id⟧).localeCompare(String(⟦2-char-id⟧))
 +      }
 +  },
-+  5372: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5372: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 +      d: () => ⟦2-char-id⟧
@@ -15561,15 +15298,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 500 · Change · +2 / -2</summary>
+<summary>Hunk 493 · Change · +2 / -2</summary>
 
 ```diff
 @@ -19415,9 +19415,9 @@
        }
      }
    },
--  5598: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5606: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5598: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5606: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +      e: () => ⟦2-char-id⟧
@@ -15581,15 +15318,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 501 · Change · +1 / -1</summary>
+<summary>Hunk 494 · Change · +1 / -1</summary>
 
 ```diff
 @@ -19425,7 +19425,7 @@
        return ⟦2-char-id⟧ && (⟦2-char-id⟧ = "extendDomain"), ⟦2-char-id⟧ === ⟦2-char-id⟧
      }
    },
--  4794: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  4812: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  4794: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  4812: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        e: () => ⟦2-char-id⟧
      });
@@ -15598,15 +15335,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 502 · Change · +4 / -4</summary>
+<summary>Hunk 495 · Change · +4 / -4</summary>
 
 ```diff
 @@ -19433,13 +19433,13 @@
        for (var ⟦2-char-id⟧ = arguments.length, ⟦2-char-id⟧ = new Array(⟦2-char-id⟧ > 2 ? ⟦2-char-id⟧ - 2 : 0), ⟦2-char-id⟧ = 2; ⟦2-char-id⟧ < ⟦2-char-id⟧; ⟦2-char-id⟧++) ⟦2-char-id⟧[⟦2-char-id⟧ - 2] = arguments[⟦2-char-id⟧]
      }
    },
--  5590: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5601: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5590: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5601: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        e: () => ⟦2-char-id⟧,
 -      i: () => ⟦2-char-id⟧,
@@ -15624,7 +15361,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 503 · Change · +1 / -1</summary>
+<summary>Hunk 496 · Change · +1 / -1</summary>
 
 ```diff
 @@ -19484,7 +19484,7 @@
@@ -15641,15 +15378,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 504 · Change · +18 / -18</summary>
+<summary>Hunk 497 · Change · +18 / -18</summary>
 
 ```diff
 @@ -19580,34 +19580,34 @@
          }) : null
        }
    },
--  4797: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  4819: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  4797: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  4819: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧,
 -      f: () => ⟦2-char-id⟧,
@@ -15702,7 +15439,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 505 · Change · +1 / -1</summary>
+<summary>Hunk 498 · Change · +1 / -1</summary>
 
 ```diff
 @@ -19653,7 +19653,7 @@
@@ -15719,7 +15456,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 506 · Change · +1 / -1</summary>
+<summary>Hunk 499 · Change · +1 / -1</summary>
 
 ```diff
 @@ -19684,7 +19684,7 @@
@@ -15736,7 +15473,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 507 · Change · +2 / -2</summary>
+<summary>Hunk 500 · Change · +2 / -2</summary>
 
 ```diff
 @@ -19701,8 +19701,8 @@
@@ -15755,7 +15492,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 508 · Change · +1 / -1</summary>
+<summary>Hunk 501 · Change · +1 / -1</summary>
 
 ```diff
 @@ -19730,7 +19730,7 @@
@@ -15772,15 +15509,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 509 · Change · +1 / -1</summary>
+<summary>Hunk 502 · Change · +1 / -1</summary>
 
 ```diff
 @@ -19759,7 +19759,7 @@
          return ⟦2-char-id⟧(⟦2-char-id⟧).indexOf(⟦2-char-id⟧)
        }
    },
--  4812: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  4839: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  4812: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  4839: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      function ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧) {
        for (var ⟦2-char-id⟧ in ⟦2-char-id⟧)
          if ({}.hasOwnProperty.call(⟦2-char-id⟧, ⟦2-char-id⟧) && (!{}.hasOwnProperty.call(⟦2-char-id⟧, ⟦2-char-id⟧) || ⟦2-char-id⟧[⟦2-char-id⟧] !== ⟦2-char-id⟧[⟦2-char-id⟧])) return !1;
@@ -15789,7 +15526,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 510 · Change · +6 / -6</summary>
+<summary>Hunk 503 · Change · +6 / -6</summary>
 
 ```diff
 @@ -19768,16 +19768,16 @@
@@ -15800,8 +15537,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      d: () => ⟦2-char-id⟧
      })
    },
--  5575: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5581: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5575: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5581: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 +      c: () => ⟦2-char-id⟧
@@ -15820,7 +15557,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 511 · Change · +1 / -1</summary>
+<summary>Hunk 504 · Change · +1 / -1</summary>
 
 ```diff
 @@ -19822,7 +19822,7 @@
@@ -15837,7 +15574,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 512 · Change · +2 / -2</summary>
+<summary>Hunk 505 · Change · +2 / -2</summary>
 
 ```diff
 @@ -19835,9 +19835,9 @@
@@ -15857,7 +15594,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 513 · Change · +11 / -11</summary>
+<summary>Hunk 506 · Change · +11 / -11</summary>
 
 ```diff
 @@ -19862,39 +19862,39 @@
@@ -15876,8 +15613,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        })
      }
    },
--  5347: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5375: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5347: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5375: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +      d: () => ⟦2-char-id⟧
@@ -15893,8 +15630,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return !0 === ⟦2-char-id⟧ ? ⟦2-char-id⟧()(⟦2-char-id⟧, ⟦2-char-id⟧) : ⟦2-char-id⟧()(⟦2-char-id⟧) ? ⟦2-char-id⟧()(⟦2-char-id⟧, ⟦2-char-id⟧) : ⟦2-char-id⟧
      }
    },
--  4817: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  4842: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  4817: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  4842: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧,
        d: () => ⟦2-char-id⟧,
@@ -15916,7 +15653,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 514 · Change · +1 / -1</summary>
+<summary>Hunk 507 · Change · +1 / -1</summary>
 
 ```diff
 @@ -19904,7 +19904,7 @@
@@ -15933,7 +15670,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 515 · Change · +1 / -1</summary>
+<summary>Hunk 508 · Change · +1 / -1</summary>
 
 ```diff
 @@ -19936,7 +19936,7 @@
@@ -15950,7 +15687,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 516 · Change · +13 / -13</summary>
+<summary>Hunk 509 · Change · +13 / -13</summary>
 
 ```diff
 @@ -19956,28 +19956,28 @@
@@ -16000,21 +15737,21 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 517 · Change · +4 / -4</summary>
+<summary>Hunk 510 · Change · +4 / -4</summary>
 
 ```diff
 @@ -19986,10 +19986,10 @@
        return ⟦2-char-id⟧(⟦2-char-id⟧) === ⟦2-char-id⟧
      }
    },
--  4799: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  4799: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.exports = ⟦2-char-id⟧(4807)
 -  },
--  4468: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  4827: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  4468: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  4827: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.exports = ⟦2-char-id⟧(4832)
 +  },
-+  4486: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  4486: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      function ⟦2-char-id⟧(⟦2-char-id⟧) {
        var ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧ = "";
        if ("string" == typeof ⟦2-char-id⟧ || "number" == typeof ⟦2-char-id⟧) ⟦2-char-id⟧ += ⟦2-char-id⟧;
@@ -16023,7 +15760,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 518 · Change · +7 / -7</summary>
+<summary>Hunk 511 · Change · +7 / -7</summary>
 
 ```diff
 @@ -20002,23 +20002,23 @@
@@ -16038,8 +15775,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧
      }
    },
--  5502: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5521: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5502: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5521: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧,
 -      d: () => ⟦2-char-id⟧
@@ -16062,7 +15799,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 519 · Change · +2 / -2</summary>
+<summary>Hunk 512 · Change · +2 / -2</summary>
 
 ```diff
 @@ -20031,8 +20031,8 @@
@@ -16081,15 +15818,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 520 · Change · +1 / -1</summary>
+<summary>Hunk 513 · Change · +1 / -1</summary>
 
 ```diff
 @@ -20079,7 +20079,7 @@
        return ⟦2-char-id⟧(⟦2-char-id⟧.apply(null, arguments).paddingInner(1))
      }
    },
--  5507: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5526: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5507: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5526: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      function ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧) {
        switch (arguments.length) {
          case 0:
@@ -16098,15 +15835,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 521 · Change · +2 / -2</summary>
+<summary>Hunk 514 · Change · +2 / -2</summary>
 
 ```diff
 @@ -20110,9 +20110,9 @@
        g: () => ⟦2-char-id⟧
      })
    },
--  5509: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5532: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5509: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5532: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧,
 +      c: () => ⟦2-char-id⟧,
@@ -16118,7 +15855,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 522 · Change · +1 / -1</summary>
+<summary>Hunk 515 · Change · +1 / -1</summary>
 
 ```diff
 @@ -20173,7 +20173,7 @@
@@ -16135,15 +15872,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 523 · Change · +7 / -7</summary>
+<summary>Hunk 516 · Change · +7 / -7</summary>
 
 ```diff
 @@ -20204,27 +20204,27 @@
        }, ⟦2-char-id⟧.g.apply(⟦2-char-id⟧, arguments), ⟦2-char-id⟧
      }
    },
--  5583: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5588: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5583: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5588: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        e: () => ⟦2-char-id⟧
      });
@@ -16153,11 +15890,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      return "object" === typeof ⟦2-char-id⟧ && "length" in ⟦2-char-id⟧ ? JJ : Array.from(⟦2-char-id⟧)
 -    }
 -  },
--  5461: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5461: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +      return "object" === typeof ⟦2-char-id⟧ && "length" in ⟦2-char-id⟧ ? BB : Array.from(⟦2-char-id⟧)
 +    }
 +  },
-+  5478: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5478: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      function ⟦2-char-id⟧(⟦2-char-id⟧) {
        return function() {
          return ⟦2-char-id⟧
@@ -16168,8 +15905,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      d: () => ⟦2-char-id⟧
      })
    },
--  5463: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5481: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5463: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5481: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        b: () => ⟦2-char-id⟧
      });
@@ -16178,7 +15915,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 524 · Change · +2 / -2</summary>
+<summary>Hunk 517 · Change · +2 / -2</summary>
 
 ```diff
 @@ -20239,9 +20239,9 @@
@@ -16198,7 +15935,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 525 · Change · +5 / -5</summary>
+<summary>Hunk 518 · Change · +5 / -5</summary>
 
 ```diff
 @@ -20251,22 +20251,22 @@
@@ -16234,7 +15971,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 526 · Change · +1 / -1</summary>
+<summary>Hunk 519 · Change · +1 / -1</summary>
 
 ```diff
 @@ -20274,7 +20274,7 @@
@@ -16251,7 +15988,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 527 · Change · +6 / -6</summary>
+<summary>Hunk 520 · Change · +6 / -6</summary>
 
 ```diff
 @@ -20286,22 +20286,22 @@
@@ -16288,7 +16025,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 528 · Change · +1 / -1</summary>
+<summary>Hunk 521 · Change · +1 / -1</summary>
 
 ```diff
 @@ -20315,7 +20315,7 @@
@@ -16305,15 +16042,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 529 · Change · +1 / -1</summary>
+<summary>Hunk 522 · Change · +1 / -1</summary>
 
 ```diff
 @@ -20323,7 +20323,7 @@
      }
      ⟦2-char-id⟧.prototype
    },
--  5319: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5353: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5319: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5353: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        b: () => ⟦2-char-id⟧
      });
@@ -16338,8 +16075,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 105;
  export const ids = [105];
  export const modules = {
--  5783: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5798: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5783: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5798: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        Graph: () => ⟦2-char-id⟧,
        debug: () => ⟦2-char-id⟧,
@@ -17255,7 +16992,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary><code>bundles/staging.bloxd.io/chunks/js/106.js</code> · modified · +72 / -72</summary>
+<summary><code>bundles/staging.bloxd.io/chunks/js/106.js</code> · modified · +71 / -71</summary>
 
 JavaScript comparison masks only two-character identifiers. Strings, comments, member properties, object keys, and all other source changes remain visible.
 
@@ -17267,8 +17004,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 106;
  export const ids = [106];
  export const modules = {
--  35669: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  35607: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  35669: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  35607: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧,
 -      c: () => ⟦2-char-id⟧
@@ -17367,8 +17104,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        })
      }
    },
--  35797: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  35741: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  35797: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  35741: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧,
 -      d: () => ⟦2-char-id⟧,
@@ -17398,8 +17135,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      return (0, ⟦2-char-id⟧.d)().physics[⟦2-char-id⟧][1]
      }
    },
--  35783: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  35725: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  35783: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  35725: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +      d: () => ⟦2-char-id⟧
@@ -17457,23 +17194,6 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 <summary>Hunk 5 · Change · +1 / -1</summary>
 
 ```diff
-@@ -227,7 +227,7 @@
-         this._howl.volume(this._volumeMultiplier.getTotalMultipliedVal(), ⟦2-char-id⟧);
-         const ⟦2-char-id⟧ = {
-           stop: () => (this._howl.stop(⟦2-char-id⟧), ⟦2-char-id⟧),
--          fade: (⟦2-char-id⟧, ZJ, ⟦2-char-id⟧) => (this._howl.fade(⟦2-char-id⟧, ZJ, FJ, ⟦2-char-id⟧), ⟦2-char-id⟧),
-+          fade: (⟦2-char-id⟧, dB, ⟦2-char-id⟧) => (this._howl.fade(⟦2-char-id⟧, dB, VB, ⟦2-char-id⟧), ⟦2-char-id⟧),
-           rate: ⟦2-char-id⟧ => (this._howl.rate(⟦2-char-id⟧, ⟦2-char-id⟧), ⟦2-char-id⟧),
-           stopsAtOnce: () => this._howl.playing(⟦2-char-id⟧) && !this._howl._playLock,
-           isAlive: () => {
-```
-
-</details>
-
-<details>
-<summary>Hunk 6 · Change · +1 / -1</summary>
-
-```diff
 @@ -239,7 +239,7 @@
            getRelativeVolume: () => ⟦2-char-id⟧,
            setRelativeVolume: ⟦2-char-id⟧ => {
@@ -17488,7 +17208,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 7 · Change · +1 / -1</summary>
+<summary>Hunk 6 · Change · +1 / -1</summary>
 
 ```diff
 @@ -280,7 +280,7 @@
@@ -17505,7 +17225,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 8 · Change · +5 / -5</summary>
+<summary>Hunk 7 · Change · +5 / -5</summary>
 
 ```diff
 @@ -301,19 +301,19 @@
@@ -17538,7 +17258,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 9 · Change · +6 / -6</summary>
+<summary>Hunk 8 · Change · +6 / -6</summary>
 
 ```diff
 @@ -329,19 +329,19 @@
@@ -17556,9 +17276,9 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
          if (!⟦2-char-id⟧) {
            if (!this.spatialVoices.admit({
 -              group: ⟦2-char-id⟧.has(⟦2-char-id⟧) ? null : (0, ⟦2-char-id⟧.j)(⟦2-char-id⟧),
--              loudness: (0, ⟦2-char-id⟧.h)(⟦2-char-id⟧, jJ().DA(⟦2-char-id⟧, ⟦2-char-id⟧), ⟦2-char-id⟧),
+-              loudness: (0, ⟦2-char-id⟧.h)(⟦2-char-id⟧, ⟦2-char-id⟧().DA(⟦2-char-id⟧, ⟦2-char-id⟧), ⟦2-char-id⟧),
 +              group: ⟦2-char-id⟧.has(⟦2-char-id⟧) ? null : (0, ⟦2-char-id⟧.k)(⟦2-char-id⟧),
-+              loudness: (0, ⟦2-char-id⟧.h)(⟦2-char-id⟧, gB().cg(⟦2-char-id⟧, ⟦2-char-id⟧), ⟦2-char-id⟧),
++              loudness: (0, ⟦2-char-id⟧.h)(⟦2-char-id⟧, ⟦2-char-id⟧().cg(⟦2-char-id⟧, ⟦2-char-id⟧), ⟦2-char-id⟧),
                startMs: performance.now(),
                getDurationMs: () => {
                  var ⟦2-char-id⟧, ⟦2-char-id⟧;
@@ -17572,7 +17292,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 10 · Change · +2 / -2</summary>
+<summary>Hunk 9 · Change · +2 / -2</summary>
 
 ```diff
 @@ -359,11 +359,11 @@
@@ -17584,8 +17304,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }
      }
    },
--  35858: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  35814: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  35858: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  35814: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      function ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧) {
        var ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧;
        return ⟦2-char-id⟧.name === ⟦2-char-id⟧.name && ((null === (⟦2-char-id⟧ = ⟦2-char-id⟧.attributes) || void 0 === ⟦2-char-id⟧ || null === (⟦2-char-id⟧ = ⟦2-char-id⟧.customAttributes) || void 0 === ⟦2-char-id⟧ ? void 0 : ⟦2-char-id⟧.stackKey) === (null === (⟦2-char-id⟧ = ⟦2-char-id⟧.attributes) || void 0 === ⟦2-char-id⟧ || null === (⟦2-char-id⟧ = ⟦2-char-id⟧.customAttributes) || void 0 === ⟦2-char-id⟧ ? void 0 : ⟦2-char-id⟧.stackKey) && (!0 !== (null === (⟦2-char-id⟧ = ⟦2-char-id⟧.attributes) || void 0 === ⟦2-char-id⟧ || null === (⟦2-char-id⟧ = ⟦2-char-id⟧.customAttributes) || void 0 === ⟦2-char-id⟧ ? void 0 : ⟦2-char-id⟧.unstackable) && !0 !== (null === (⟦2-char-id⟧ = ⟦2-char-id⟧.attributes) || void 0 === ⟦2-char-id⟧ || null === (⟦2-char-id⟧ = ⟦2-char-id⟧.customAttributes) || void 0 === ⟦2-char-id⟧ ? void 0 : ⟦2-char-id⟧.unstackable)))
@@ -17594,15 +17314,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 11 · Change · +7 / -7</summary>
+<summary>Hunk 10 · Change · +7 / -7</summary>
 
 ```diff
 @@ -372,15 +372,15 @@
        c: () => ⟦2-char-id⟧
      })
    },
--  5817: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5839: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5817: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5839: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧,
 +      e: () => ⟦2-char-id⟧,
@@ -17639,8 +17359,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 107;
  export const ids = [107];
  export const modules = {
--  5822: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5841: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5822: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5841: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        b: () => ⟦2-char-id⟧
      });
@@ -17668,7 +17388,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary><code>bundles/staging.bloxd.io/chunks/js/108.js</code> · modified · +294 / -294</summary>
+<summary><code>bundles/staging.bloxd.io/chunks/js/108.js</code> · modified · +288 / -288</summary>
 
 JavaScript comparison masks only two-character identifiers. Strings, comments, member properties, object keys, and all other source changes remain visible.
 
@@ -17680,8 +17400,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 108;
  export const ids = [108, 379];
  export const modules = {
--  35458: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  35364: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  35458: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  35364: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        default: () => ⟦2-char-id⟧
      });
@@ -17815,15 +17535,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 5 · Change · +2 / -2</summary>
+<summary>Hunk 5 · Change · +1 / -1</summary>
 
 ```diff
-@@ -136,10 +136,10 @@
-                 className: "GameEventPanelLive",
-                 children: [(0, ⟦2-char-id⟧.jsx)("span", {
-                   className: "GameEventPanelLiveDot"
--                }), FJ("gameEvents:live")]
-+                }), VB("gameEvents:live")]
+@@ -139,7 +139,7 @@
+                 }), ⟦2-char-id⟧("gameEvents:live")]
                }), (0, ⟦2-char-id⟧.jsxs)("span", {
                  className: "GameEventPanelEndsIn",
 -                children: [⟦2-char-id⟧("gameEvents:endsIn"), (0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.e, {
@@ -18540,10 +18256,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 28 · Change · +4 / -4</summary>
+<summary>Hunk 28 · Change · +1 / -1</summary>
 
 ```diff
-@@ -826,24 +826,24 @@
+@@ -826,7 +826,7 @@
              children: (0, ⟦2-char-id⟧.jsxs)("div", {
                className: "GameInformationButtonInner",
                children: [⟦2-char-id⟧ && (0, ⟦2-char-id⟧.jsxs)(⟦2-char-id⟧.Fragment, {
@@ -18551,11 +18267,16 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +                children: [(0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.e, {
                    name: "play"
                  }), " "]
--              }), zJ("homePage:quickPlay")]
-+              }), aB("homePage:quickPlay")]
-             })
-           })
-         });
+               }), ⟦2-char-id⟧("homePage:quickPlay")]
+```
+
+</details>
+
+<details>
+<summary>Hunk 29 · Change · +2 / -2</summary>
+
+```diff
+@@ -836,14 +836,14 @@
        (0, ⟦2-char-id⟧.useEffect)((() => {
          if (!⟦2-char-id⟧ || ⟦2-char-id⟧) return;
          let ⟦2-char-id⟧ = !0;
@@ -18577,7 +18298,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 29 · Change · +2 / -2</summary>
+<summary>Hunk 30 · Change · +2 / -2</summary>
 
 ```diff
 @@ -855,11 +855,11 @@
@@ -18599,7 +18320,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 30 · Change · +5 / -5</summary>
+<summary>Hunk 31 · Change · +5 / -5</summary>
 
 ```diff
 @@ -876,15 +876,15 @@
@@ -18628,7 +18349,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 31 · Change · +1 / -1</summary>
+<summary>Hunk 32 · Change · +1 / -1</summary>
 
 ```diff
 @@ -897,7 +897,7 @@
@@ -18645,7 +18366,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 32 · Change · +4 / -4</summary>
+<summary>Hunk 33 · Change · +4 / -4</summary>
 
 ```diff
 @@ -908,15 +908,15 @@
@@ -18673,7 +18394,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 33 · Change · +9 / -9</summary>
+<summary>Hunk 34 · Change · +9 / -9</summary>
 
 ```diff
 @@ -925,36 +925,36 @@
@@ -18727,7 +18448,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 34 · Change · +2 / -2</summary>
+<summary>Hunk 35 · Change · +2 / -2</summary>
 
 ```diff
 @@ -969,11 +969,11 @@
@@ -18749,7 +18470,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 35 · Change · +2 / -2</summary>
+<summary>Hunk 36 · Change · +2 / -2</summary>
 
 ```diff
 @@ -984,10 +984,10 @@
@@ -18770,7 +18491,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 36 · Change · +8 / -8</summary>
+<summary>Hunk 37 · Change · +7 / -7</summary>
 
 ```diff
 @@ -1000,25 +1000,25 @@
@@ -18790,8 +18511,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -                        children: [(0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.c, {
 +                        children: [(0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.e, {
                            name: "star-christmas"
--                        }), " ", zJ("studio:viewInStudio")]
-+                        }), " ", aB("studio:viewInStudio")]
+                         }), " ", ⟦2-char-id⟧("studio:viewInStudio")]
                        }), ⟦2-char-id⟧ && ⟦2-char-id⟧.playerHasRank("developer") && (0, ⟦2-char-id⟧.jsxs)(⟦2-char-id⟧.d, {
                          className: "CustomGameChip AnimFadeIn",
                          onClick: () => {
@@ -18812,7 +18532,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 37 · Change · +1 / -1</summary>
+<summary>Hunk 38 · Change · +1 / -1</summary>
 
 ```diff
 @@ -1026,7 +1026,7 @@
@@ -18829,7 +18549,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 38 · Change · +2 / -2</summary>
+<summary>Hunk 39 · Change · +2 / -2</summary>
 
 ```diff
 @@ -1034,14 +1034,14 @@
@@ -18854,7 +18574,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 39 · Change · +2 / -2</summary>
+<summary>Hunk 40 · Change · +2 / -2</summary>
 
 ```diff
 @@ -1055,14 +1055,14 @@
@@ -18879,7 +18599,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 40 · Change · +5 / -5</summary>
+<summary>Hunk 41 · Change · +5 / -5</summary>
 
 ```diff
 @@ -1073,20 +1073,20 @@
@@ -18913,7 +18633,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 41 · Change · +2 / -2</summary>
+<summary>Hunk 42 · Change · +2 / -2</summary>
 
 ```diff
 @@ -1103,12 +1103,12 @@
@@ -18936,7 +18656,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 42 · Change · +5 / -5</summary>
+<summary>Hunk 43 · Change · +4 / -4</summary>
 
 ```diff
 @@ -1117,19 +1117,19 @@
@@ -18946,8 +18666,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -                            children: [(0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.c, {
 +                            children: [(0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.e, {
                                name: "play"
--                            }), " ", zJ("homePage:rejoinLobbyNumber", {
-+                            }), " ", aB("homePage:rejoinLobbyNumber", {
+                             }), " ", ⟦2-char-id⟧("homePage:rejoinLobbyNumber", {
                                number: ⟦2-char-id⟧[0]
                              })]
                            })
@@ -18969,7 +18688,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 43 · Change · +1 / -1</summary>
+<summary>Hunk 44 · Change · +1 / -1</summary>
 
 ```diff
 @@ -1138,7 +1138,7 @@
@@ -18986,7 +18705,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 44 · Change · +2 / -2</summary>
+<summary>Hunk 45 · Change · +2 / -2</summary>
 
 ```diff
 @@ -1160,14 +1160,14 @@
@@ -19011,10 +18730,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 45 · Change · +7 / -7</summary>
+<summary>Hunk 46 · Change · +1 / -1</summary>
 
 ```diff
-@@ -1190,38 +1190,38 @@
+@@ -1190,7 +1190,7 @@
                    }),
                    children: [!0 === ⟦2-char-id⟧.showWorldsInsteadOfCustomLobbies && (0, ⟦2-char-id⟧.jsxs)("h2", {
                      className: "LobbyCollectionTitle",
@@ -19023,11 +18742,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
                        name: "planet-ringed",
                        kit: "duotone"
                      }), (0, ⟦2-char-id⟧.jsxs)("div", {
-                       className: "LobbyCollectionTitleText",
-                       children: [(0, ⟦2-char-id⟧.jsx)("div", {
-                         className: "LobbyCollectionTitleTextBackground"
--                      }), zJ("game:worlds")]
-+                      }), aB("game:worlds")]
+```
+
+</details>
+
+<details>
+<summary>Hunk 47 · Change · +1 / -1</summary>
+
+```diff
+@@ -1201,7 +1201,7 @@
                      })]
                    }), !1 === ⟦2-char-id⟧.showWorldsInsteadOfCustomLobbies && (0, ⟦2-char-id⟧.jsxs)("h2", {
                      className: "LobbyCollectionTitle",
@@ -19036,10 +18759,17 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
                        name: "joystick"
                      }), (0, ⟦2-char-id⟧.jsxs)("div", {
                        className: "LobbyCollectionTitleText",
-                       children: [(0, ⟦2-char-id⟧.jsx)("div", {
+```
+
+</details>
+
+<details>
+<summary>Hunk 48 · Change · +3 / -3</summary>
+
+```diff
+@@ -1209,19 +1209,19 @@
                          className: "LobbyCollectionTitleTextBackground"
--                      }), zJ("homePage:customLobbies")]
-+                      }), aB("homePage:customLobbies")]
+                       }), ⟦2-char-id⟧("homePage:customLobbies")]
                      })]
 -                  }), (0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.O, {
 +                  }), (0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.T, {
@@ -19065,7 +18795,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 46 · Change · +1 / -1</summary>
+<summary>Hunk 49 · Change · +1 / -1</summary>
 
 ```diff
 @@ -1232,7 +1232,7 @@
@@ -19082,7 +18812,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 47 · Change · +1 / -1</summary>
+<summary>Hunk 50 · Change · +1 / -1</summary>
 
 ```diff
 @@ -1243,7 +1243,7 @@
@@ -19099,7 +18829,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 48 · Change · +20 / -20</summary>
+<summary>Hunk 51 · Change · +20 / -20</summary>
 
 ```diff
 @@ -1264,47 +1264,47 @@
@@ -19140,8 +18870,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        })
      }
    },
--  5842: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5855: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5842: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5855: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 +      c: () => ⟦2-char-id⟧
@@ -19175,7 +18905,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 49 · Change · +1 / -1</summary>
+<summary>Hunk 52 · Change · +1 / -1</summary>
 
 ```diff
 @@ -1315,7 +1315,7 @@
@@ -19192,7 +18922,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 50 · Change · +1 / -1</summary>
+<summary>Hunk 53 · Change · +1 / -1</summary>
 
 ```diff
 @@ -1324,7 +1324,7 @@
@@ -19209,7 +18939,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 51 · Change · +3 / -3</summary>
+<summary>Hunk 54 · Change · +3 / -3</summary>
 
 ```diff
 @@ -1340,13 +1340,13 @@
@@ -19234,7 +18964,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 52 · Change · +2 / -2</summary>
+<summary>Hunk 55 · Change · +2 / -2</summary>
 
 ```diff
 @@ -1362,9 +1362,9 @@
@@ -19254,7 +18984,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 53 · Change · +1 / -1</summary>
+<summary>Hunk 56 · Change · +1 / -1</summary>
 
 ```diff
 @@ -1390,7 +1390,7 @@
@@ -19271,7 +19001,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 54 · Change · +7 / -7</summary>
+<summary>Hunk 57 · Change · +7 / -7</summary>
 
 ```diff
 @@ -1399,35 +1399,35 @@
@@ -19322,7 +19052,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 55 · Change · +1 / -1</summary>
+<summary>Hunk 58 · Change · +1 / -1</summary>
 
 ```diff
 @@ -1437,7 +1437,7 @@
@@ -19339,15 +19069,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 56 · Change · +5 / -5</summary>
+<summary>Hunk 59 · Change · +5 / -5</summary>
 
 ```diff
 @@ -1447,13 +1447,13 @@
        })
      }
    },
--  8192: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  8223: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  8192: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  8223: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 +      c: () => ⟦2-char-id⟧
@@ -19366,7 +19096,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 57 · Change · +13 / -13</summary>
+<summary>Hunk 60 · Change · +13 / -13</summary>
 
 ```diff
 @@ -1461,34 +1461,34 @@
@@ -19398,8 +19128,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }(⟦2-char-id⟧))
      }
    },
--  35489: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  35399: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  35489: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  35399: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧,
 -      c: () => ⟦2-char-id⟧
@@ -19422,7 +19152,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 58 · Change · +5 / -5</summary>
+<summary>Hunk 61 · Change · +5 / -5</summary>
 
 ```diff
 @@ -1497,12 +1497,12 @@
@@ -19448,7 +19178,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 59 · Change · +3 / -3</summary>
+<summary>Hunk 62 · Change · +3 / -3</summary>
 
 ```diff
 @@ -1513,14 +1513,14 @@
@@ -19474,15 +19204,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 60 · Change · +10 / -10</summary>
+<summary>Hunk 63 · Change · +10 / -10</summary>
 
 ```diff
 @@ -1528,27 +1528,27 @@
        })) : () => {}
      }
    },
--  8187: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  8214: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  8187: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  8214: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        c: () => ⟦2-char-id⟧,
 -      e: () => ⟦2-char-id⟧,
@@ -19520,7 +19250,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 61 · Change · +3 / -3</summary>
+<summary>Hunk 64 · Change · +3 / -3</summary>
 
 ```diff
 @@ -1560,15 +1560,15 @@
@@ -19533,8 +19263,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }))
      }
    },
--  35494: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  35404: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  35494: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  35404: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        d: () => ⟦2-char-id⟧,
 -      e: () => ⟦2-char-id⟧
@@ -19561,8 +19291,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 109;
  export const ids = [109];
  export const modules = {
--  5852: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5862: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5852: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5862: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        default: () => ⟦2-char-id⟧
      });
@@ -19657,8 +19387,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 110;
  export const ids = [110];
  export const modules = {
--  5857: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5868: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5857: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5868: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        default: () => ⟦2-char-id⟧
      });
@@ -19694,8 +19424,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 111;
  export const ids = [111];
  export const modules = {
--  5865: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5871: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5865: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5871: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        default: () => ⟦2-char-id⟧
      });
@@ -19803,8 +19533,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 112;
  export const ids = [112];
  export const modules = {
--  5871: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5879: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5871: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5879: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        default: () => ⟦2-char-id⟧
      });
@@ -19867,7 +19597,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary><code>bundles/staging.bloxd.io/chunks/js/113.js</code> · modified · +79 / -79</summary>
+<summary><code>bundles/staging.bloxd.io/chunks/js/113.js</code> · modified · +78 / -78</summary>
 
 JavaScript comparison masks only two-character identifiers. Strings, comments, member properties, object keys, and all other source changes remain visible.
 
@@ -19879,8 +19609,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 113;
  export const ids = [113];
  export const modules = {
--  5878: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5884: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5878: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5884: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        default: () => ⟦2-char-id⟧
      });
@@ -19970,8 +19700,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
              className: "ShaderPackCardLink",
              children: [⟦2-char-id⟧ && (0, ⟦2-char-id⟧.jsx)("img", {
                className: "ShaderPackCardImage",
--              src: (0, ⟦2-char-id⟧.q)(⟦2-char-id⟧.clientSideServerUrls.s3Url, hJ, ZJ, "thumb"),
-+              src: (0, ⟦2-char-id⟧.r)(⟦2-char-id⟧.clientSideServerUrls.s3Url, kB, dB, "thumb"),
+-              src: (0, ⟦2-char-id⟧.q)(⟦2-char-id⟧.clientSideServerUrls.s3Url, ⟦2-char-id⟧, ⟦2-char-id⟧, "thumb"),
++              src: (0, ⟦2-char-id⟧.r)(⟦2-char-id⟧.clientSideServerUrls.s3Url, ⟦2-char-id⟧, ⟦2-char-id⟧, "thumb"),
                width: ⟦2-char-id⟧,
                height: ⟦2-char-id⟧,
                loading: "lazy",
@@ -20067,8 +19797,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
              return (0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧, {
                pack: ⟦2-char-id⟧,
                view: ⟦2-char-id⟧,
--              notice: ⟦2-char-id⟧.owner ? (0, ⟦2-char-id⟧.U)(⟦2-char-id⟧.owner, !(null === (⟦2-char-id⟧ = ⟦2-char-id⟧.live) || void 0 === ⟦2-char-id⟧ || !⟦2-char-id⟧.renderId), YJ, ⟦2-char-id⟧)[0] : void 0
-+              notice: ⟦2-char-id⟧.owner ? (0, ⟦2-char-id⟧.V)(⟦2-char-id⟧.owner, !(null === (⟦2-char-id⟧ = ⟦2-char-id⟧.live) || void 0 === ⟦2-char-id⟧ || !⟦2-char-id⟧.renderId), oB, ⟦2-char-id⟧)[0] : void 0
+-              notice: ⟦2-char-id⟧.owner ? (0, ⟦2-char-id⟧.U)(⟦2-char-id⟧.owner, !(null === (⟦2-char-id⟧ = ⟦2-char-id⟧.live) || void 0 === ⟦2-char-id⟧ || !⟦2-char-id⟧.renderId), ⟦2-char-id⟧, ⟦2-char-id⟧)[0] : void 0
++              notice: ⟦2-char-id⟧.owner ? (0, ⟦2-char-id⟧.V)(⟦2-char-id⟧.owner, !(null === (⟦2-char-id⟧ = ⟦2-char-id⟧.live) || void 0 === ⟦2-char-id⟧ || !⟦2-char-id⟧.renderId), ⟦2-char-id⟧, ⟦2-char-id⟧)[0] : void 0
              }, ⟦2-char-id⟧.packId)
            }))
          }), null !== ⟦2-char-id⟧ && 0 === ⟦2-char-id⟧ && (0, ⟦2-char-id⟧.jsx)("div", {
@@ -20292,7 +20022,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 18 · Change · +14 / -14</summary>
+<summary>Hunk 18 · Change · +13 / -13</summary>
 
 ```diff
 @@ -320,58 +320,58 @@
@@ -20313,8 +20043,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -              children: [(0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.c, {
 +              children: [(0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.e, {
                  name: "upload"
--              }), " ", VJ("shaderPackListing:publish")]
-+              }), " ", fB("shaderPackListing:publish")]
+               }), " ", ⟦2-char-id⟧("shaderPackListing:publish")]
              })]
            }), !⟦2-char-id⟧ && ⟦2-char-id⟧ && (0, ⟦2-char-id⟧.jsxs)("div", {
              className: "ShaderPackBrowseFeatures",
@@ -20402,8 +20131,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
            children: (0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.e, {
              selected: ⟦2-char-id⟧,
              onSelect: ⟦2-char-id⟧,
--            imageUrl: ⟦2-char-id⟧ => null === ⟦2-char-id⟧ ? null : (0, ⟦2-char-id⟧.l)(⟦2-char-id⟧.clientSideServerUrls.s3Url, jc, JJ, "thumb")
-+            imageUrl: ⟦2-char-id⟧ => null === ⟦2-char-id⟧ ? null : (0, ⟦2-char-id⟧.k)(⟦2-char-id⟧.clientSideServerUrls.s3Url, gT, BB, "thumb")
+-            imageUrl: ⟦2-char-id⟧ => null === ⟦2-char-id⟧ ? null : (0, ⟦2-char-id⟧.l)(⟦2-char-id⟧.clientSideServerUrls.s3Url, ⟦2-char-id⟧, ⟦2-char-id⟧, "thumb")
++            imageUrl: ⟦2-char-id⟧ => null === ⟦2-char-id⟧ ? null : (0, ⟦2-char-id⟧.k)(⟦2-char-id⟧.clientSideServerUrls.s3Url, ⟦2-char-id⟧, ⟦2-char-id⟧, "thumb")
            })
          }), (0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧, {
            results: ⟦2-char-id⟧,
@@ -20459,8 +20188,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 114;
  export const ids = [114];
  export const modules = {
--  5896: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5902: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5896: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5902: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        b: () => ⟦2-char-id⟧
      });
@@ -20503,8 +20232,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }) : null
      }
    },
--  5913: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5915: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5913: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5915: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        e: () => ⟦2-char-id⟧
      });
@@ -20563,11 +20292,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        })
      }
    },
--  5903: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5903: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧,
 -      c: () => ⟦2-char-id⟧,
-+  5906: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5906: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      d: () => ⟦2-char-id⟧,
        g: () => ⟦2-char-id⟧,
@@ -20632,12 +20361,12 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }
      }
    },
--  5886: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5886: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      A: () => ⟦2-char-id⟧,
 -      C: () => ⟦2-char-id⟧,
 -      G: () => ⟦2-char-id⟧,
-+  5891: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5891: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      $: () => ⟦2-char-id⟧,
 +      D: () => ⟦2-char-id⟧,
@@ -20811,13 +20540,13 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧ instanceof ⟦2-char-id⟧.b && ⟦2-char-id⟧.errorMessageForUser ? ⟦2-char-id⟧.errorMessageForUser : ⟦2-char-id⟧(⟦2-char-id⟧)
      }
    },
--  5910: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5910: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 -    });
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(47),
 -      ⟦2-char-id⟧ = ⟦2-char-id⟧(29);
-+  5913: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5913: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      e: () => ⟦2-char-id⟧
 +    });
@@ -20833,7 +20562,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }]
      }
    },
--  5889: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5889: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      B: () => ⟦2-char-id⟧,
 -      C: () => ⟦2-char-id⟧,
@@ -20841,7 +20570,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      G: () => ⟦2-char-id⟧,
 -      I: () => ⟦2-char-id⟧,
 -      L: () => ⟦2-char-id⟧,
-+  5898: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5898: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      A: () => ⟦2-char-id⟧,
 +      D: () => ⟦2-char-id⟧,
@@ -20919,7 +20648,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary><code>bundles/staging.bloxd.io/chunks/js/115.js</code> · modified · +98 / -98</summary>
+<summary><code>bundles/staging.bloxd.io/chunks/js/115.js</code> · modified · +97 / -97</summary>
 
 JavaScript comparison masks only two-character identifiers. Strings, comments, member properties, object keys, and all other source changes remain visible.
 
@@ -20931,8 +20660,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 115;
  export const ids = [115];
  export const modules = {
--  39853: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  39804: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  39853: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  39804: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        ShaderPackCategory: () => ⟦2-char-id⟧
      });
@@ -21012,7 +20741,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 3 · Change · +8 / -8</summary>
+<summary>Hunk 3 · Change · +7 / -7</summary>
 
 ```diff
 @@ -73,25 +73,25 @@
@@ -21042,9 +20771,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -            children: [(0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.c, {
 +            children: [(0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.e, {
                name: "triangle-exclamation"
--            }), XJ("shaderPack:offInStrict")]
+             }), ⟦2-char-id⟧("shaderPack:offInStrict")]
 -          }), (0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.e, {
-+            }), lB("shaderPack:offInStrict")]
 +          }), (0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.c, {
              diagnostics: ⟦2-char-id⟧,
              t: ⟦2-char-id⟧
@@ -21199,8 +20927,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        })
      }
    },
--  5886: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5891: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5886: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5891: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      A: () => ⟦2-char-id⟧,
 -      C: () => ⟦2-char-id⟧,
@@ -21376,8 +21104,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧ instanceof ⟦2-char-id⟧.b && ⟦2-char-id⟧.errorMessageForUser ? ⟦2-char-id⟧.errorMessageForUser : ⟦2-char-id⟧(⟦2-char-id⟧)
      }
    },
--  5889: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5898: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5889: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5898: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      B: () => ⟦2-char-id⟧,
 -      C: () => ⟦2-char-id⟧,
@@ -21461,7 +21189,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary><code>bundles/staging.bloxd.io/chunks/js/116.js</code> · modified · +118 / -118</summary>
+<summary><code>bundles/staging.bloxd.io/chunks/js/116.js</code> · modified · +117 / -117</summary>
 
 JavaScript comparison masks only two-character identifiers. Strings, comments, member properties, object keys, and all other source changes remain visible.
 
@@ -21473,8 +21201,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 116;
  export const ids = [116, 119, 120, 123];
  export const modules = {
--  5951: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5940: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5951: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5940: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧.f,
 -      e: () => ⟦2-char-id⟧,
@@ -21491,8 +21219,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        program: ⟦2-char-id⟧
      })))))
    },
--  39262: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  39236: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  39262: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  39236: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧,
 +      e: () => ⟦2-char-id⟧,
@@ -21581,23 +21309,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 4 · Change · +10 / -10</summary>
+<summary>Hunk 4 · Change · +9 / -9</summary>
 
 ```diff
-@@ -86,25 +86,25 @@
-       };
-       return {
-         kind: "loaded",
--        stored: (0, ⟦2-char-id⟧.toStoredShaderPack)(⟦2-char-id⟧, YJ, {
-+        stored: (0, ⟦2-char-id⟧.toStoredShaderPack)(⟦2-char-id⟧, oB, {
-           packId: ⟦2-char-id⟧.packId,
-           sourceHash: ⟦2-char-id⟧.sourceHash
-         })
+@@ -93,18 +93,18 @@
        }
      }
    },
--  39943: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  39918: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  39943: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  39918: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        followListingUpdates: () => ⟦2-char-id⟧
      });
@@ -21741,8 +21461,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return void 0 === ⟦2-char-id⟧ || (await (0, ⟦2-char-id⟧.replaceShaderPack)(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) ? (null !== ⟦2-char-id⟧ && ⟦2-char-id⟧.files === ⟦2-char-id⟧.files || (0, ⟦2-char-id⟧.markShaderPackChangePending)(), !0) : (console.warn("Didn't apply the shader pack listing's update: the stored pack changed or couldn't be written"), !0))
      }
    },
--  5996: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5987: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5996: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5987: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        forgetShaderPackActiveHint: () => ⟦2-char-id⟧,
        isOtherApiVersion: () => ⟦2-char-id⟧,
@@ -21877,8 +21597,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧) ? ⟦2-char-id⟧.j.setItem(⟦2-char-id⟧.d, !0) : ⟦2-char-id⟧.j.removeItem(⟦2-char-id⟧.d)
      }
    },
--  5977: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5973: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5977: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5973: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        loadShaderPackTextures: () => ⟦2-char-id⟧,
        shaderPackTextures: () => ⟦2-char-id⟧
@@ -21913,8 +21633,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧
      }
    },
--  5994: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5985: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5994: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5985: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧,
 +      c: () => ⟦2-char-id⟧,
@@ -21992,8 +21712,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }
      }
    },
--  5889: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5898: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5889: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5898: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      B: () => ⟦2-char-id⟧,
 -      C: () => ⟦2-char-id⟧,
@@ -22069,8 +21789,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      return `${BB}/${function(BB,TB,dB){return`shaderPacks/baseline/${⟦2-char-id⟧}/${⟦2-char-id⟧}-${⟦2-char-id⟧}.webp`}(TB,dB,VB)}`
      }
    },
--  5934: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5924: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5934: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5924: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧,
 +      c: () => ⟦2-char-id⟧,
@@ -22227,7 +21947,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary><code>bundles/staging.bloxd.io/chunks/js/117.js</code> · modified · +48 / -48</summary>
+<summary><code>bundles/staging.bloxd.io/chunks/js/117.js</code> · modified · +43 / -43</summary>
 
 JavaScript comparison masks only two-character identifiers. Strings, comments, member properties, object keys, and all other source changes remain visible.
 
@@ -22239,8 +21959,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 117;
  export const ids = [117];
  export const modules = {
--  5926: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5921: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5926: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5921: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        ShaderPackPublishForm: () => ⟦2-char-id⟧
      });
@@ -22340,20 +22060,18 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 4 · Change · +2 / -2</summary>
+<summary>Hunk 4 · Change · +1 / -1</summary>
 
 ```diff
-@@ -80,8 +80,8 @@
+@@ -80,7 +80,7 @@
            }), (0, ⟦2-char-id⟧.jsxs)("div", {
              className: "ShaderPackPublishPackSize",
              children: [⟦2-char-id⟧("shaderPackListing:sizeValue", {
 -              kilobytes: String((0, ⟦2-char-id⟧.Q)(⟦2-char-id⟧.sourceBytes))
--            }), " \xb7", " ", VJ("shaderPackListing:filesValue", {
 +              kilobytes: String((0, ⟦2-char-id⟧.O)(⟦2-char-id⟧.sourceBytes))
-+            }), " \xb7", " ", fB("shaderPackListing:filesValue", {
+             }), " \xb7", " ", ⟦2-char-id⟧("shaderPackListing:filesValue", {
                files: String(⟦2-char-id⟧.pack.files.length)
              })]
-           }), (0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧, {
 ```
 
 </details>
@@ -22399,10 +22117,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 7 · Change · +8 / -8</summary>
+<summary>Hunk 7 · Change · +7 / -7</summary>
 
 ```diff
-@@ -129,35 +129,35 @@
+@@ -129,33 +129,33 @@
                const {
                  name: ⟦2-char-id⟧,
                  description: ⟦2-char-id⟧
@@ -22441,11 +22159,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -          children: [(0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.c, {
 +          children: [(0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.e, {
              name: "upload"
--          }), " ", VJ(⟦2-char-id⟧ ? "shaderPackListing:uploadButton" : "shaderPackListing:publishButton")]
-+          }), " ", fB(⟦2-char-id⟧ ? "shaderPackListing:uploadButton" : "shaderPackListing:publishButton")]
+           }), " ", ⟦2-char-id⟧(⟦2-char-id⟧ ? "shaderPackListing:uploadButton" : "shaderPackListing:publishButton")]
          })]
-       })
-     }
 ```
 
 </details>
@@ -22468,7 +22183,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 9 · Change · +5 / -5</summary>
+<summary>Hunk 9 · Change · +3 / -3</summary>
 
 ```diff
 @@ -177,16 +177,16 @@
@@ -22478,17 +22193,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -          children: [(0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.c, {
 +          children: [(0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.e, {
              name: "circle-check"
--          }), " ", ZJ("shaderPackListing:publishReady")]
-+          }), " ", dB("shaderPackListing:publishReady")]
+           }), " ", ⟦2-char-id⟧("shaderPackListing:publishReady")]
          }), ⟦2-char-id⟧.offInStrict.length > 0 && (0, ⟦2-char-id⟧.jsxs)(⟦2-char-id⟧.Fragment, {
            children: [(0, ⟦2-char-id⟧.jsxs)("div", {
              className: "ShaderPackPublishNote Warning",
 -            children: [(0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.c, {
 +            children: [(0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.e, {
                name: "triangle-exclamation"
--            }), " ", ZJ("shaderPack:offInStrict")]
+             }), " ", ⟦2-char-id⟧("shaderPack:offInStrict")]
 -          }), (0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.e, {
-+            }), " ", dB("shaderPack:offInStrict")]
 +          }), (0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.c, {
              diagnostics: ⟦2-char-id⟧.offInStrict,
              t: ⟦2-char-id⟧
@@ -22498,7 +22211,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 10 · Change · +3 / -3</summary>
+<summary>Hunk 10 · Change · +2 / -2</summary>
 
 ```diff
 @@ -194,10 +194,10 @@
@@ -22508,9 +22221,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -          children: [(0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.c, {
 +          children: [(0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.e, {
              name: "triangle-exclamation"
--          }), " ", ZJ("shaderPackListing:publishHasErrors")]
+           }), " ", ⟦2-char-id⟧("shaderPackListing:publishHasErrors")]
 -        }), (0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.e, {
-+          }), " ", dB("shaderPackListing:publishHasErrors")]
 +        }), (0, ⟦2-char-id⟧.jsx)(⟦2-char-id⟧.c, {
            diagnostics: ⟦2-char-id⟧.errors,
            more: ⟦2-char-id⟧.moreErrors,
@@ -22547,7 +22259,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary><code>bundles/staging.bloxd.io/chunks/js/118.js</code> · modified · +113 / -113</summary>
+<summary><code>bundles/staging.bloxd.io/chunks/js/118.js</code> · modified · +111 / -111</summary>
 
 JavaScript comparison masks only two-character identifiers. Strings, comments, member properties, object keys, and all other source changes remain visible.
 
@@ -22559,8 +22271,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 118;
  export const ids = [118, 120, 123];
  export const modules = {
--  5939: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5932: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5939: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5932: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 +      c: () => ⟦2-char-id⟧
@@ -22604,8 +22316,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        })
      }
    },
--  5955: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5943: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5955: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5943: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        e: () => ⟦2-char-id⟧,
        g: () => ⟦2-char-id⟧
@@ -22642,40 +22354,6 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 <summary>Hunk 4 · Change · +1 / -1</summary>
 
 ```diff
-@@ -125,7 +125,7 @@
-           method: ⟦2-char-id⟧,
-           encrypted: 0 !== (1 & ⟦2-char-id⟧),
-           compressedSize: ⟦2-char-id⟧,
--          dataOffset: ⟦2-char-id⟧(⟦2-char-id⟧, sJ, UJ, ⟦2-char-id⟧)
-+          dataOffset: ⟦2-char-id⟧(⟦2-char-id⟧, OB, yB, ⟦2-char-id⟧)
-         })
-       }
-       return ⟦2-char-id⟧
-```
-
-</details>
-
-<details>
-<summary>Hunk 5 · Change · +1 / -1</summary>
-
-```diff
-@@ -192,7 +192,7 @@
-         return async function(⟦2-char-id⟧) {
-           return ⟦2-char-id⟧(⟦2-char-id⟧(⟦2-char-id⟧).map((⟦2-char-id⟧ => ({
-             path: ⟦2-char-id⟧.path,
--            read: ⟦2-char-id⟧ => ⟦2-char-id⟧(⟦2-char-id⟧, cJ, ⟦2-char-id⟧)
-+            read: ⟦2-char-id⟧ => ⟦2-char-id⟧(⟦2-char-id⟧, TB, ⟦2-char-id⟧)
-           }))))
-         }(new Uint8Array(await ⟦2-char-id⟧.arrayBuffer()))
-       }
-```
-
-</details>
-
-<details>
-<summary>Hunk 6 · Change · +1 / -1</summary>
-
-```diff
 @@ -210,7 +210,7 @@
            const ⟦2-char-id⟧ = ⟦2-char-id⟧[0].path.slice(0, ⟦2-char-id⟧ + 1);
            if (!⟦2-char-id⟧.every((⟦2-char-id⟧ => ⟦2-char-id⟧.path.startsWith(⟦2-char-id⟧)))) return ⟦2-char-id⟧;
@@ -22690,7 +22368,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 7 · Change · +3 / -3</summary>
+<summary>Hunk 5 · Change · +3 / -3</summary>
 
 ```diff
 @@ -246,11 +246,11 @@
@@ -22713,7 +22391,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 8 · Change · +5 / -5</summary>
+<summary>Hunk 6 · Change · +5 / -5</summary>
 
 ```diff
 @@ -259,15 +259,15 @@
@@ -22742,7 +22420,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 9 · Change · +2 / -2</summary>
+<summary>Hunk 7 · Change · +2 / -2</summary>
 
 ```diff
 @@ -308,8 +308,8 @@
@@ -22761,7 +22439,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 10 · Change · +1 / -1</summary>
+<summary>Hunk 8 · Change · +1 / -1</summary>
 
 ```diff
 @@ -319,7 +319,7 @@
@@ -22778,7 +22456,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 11 · Change · +2 / -2</summary>
+<summary>Hunk 9 · Change · +2 / -2</summary>
 
 ```diff
 @@ -332,14 +332,14 @@
@@ -22803,7 +22481,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 12 · Change · +2 / -2</summary>
+<summary>Hunk 10 · Change · +2 / -2</summary>
 
 ```diff
 @@ -351,10 +351,10 @@
@@ -22824,7 +22502,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 13 · Change · +1 / -1</summary>
+<summary>Hunk 11 · Change · +1 / -1</summary>
 
 ```diff
 @@ -382,7 +382,7 @@
@@ -22841,7 +22519,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 14 · Change · +1 / -1</summary>
+<summary>Hunk 12 · Change · +1 / -1</summary>
 
 ```diff
 @@ -393,7 +393,7 @@
@@ -22858,15 +22536,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 15 · Change · +8 / -8</summary>
+<summary>Hunk 13 · Change · +8 / -8</summary>
 
 ```diff
 @@ -402,37 +402,37 @@
        }
      }
    },
--  5944: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5934: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5944: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5934: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        b: () => ⟦2-char-id⟧,
 -      c: () => ⟦2-char-id⟧,
@@ -22912,7 +22590,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 16 · Change · +9 / -9</summary>
+<summary>Hunk 14 · Change · +9 / -9</summary>
 
 ```diff
 @@ -453,24 +453,24 @@
@@ -22927,8 +22605,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      return [...dB.values()]
      }
    },
--  5951: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5940: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5951: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5940: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧.f,
 -      e: () => ⟦2-char-id⟧,
@@ -22944,8 +22622,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        program: ⟦2-char-id⟧
      })))))
    },
--  5996: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5987: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5996: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5987: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        forgetShaderPackActiveHint: () => ⟦2-char-id⟧,
        isOtherApiVersion: () => ⟦2-char-id⟧,
@@ -22954,7 +22632,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 17 · Change · +8 / -8</summary>
+<summary>Hunk 15 · Change · +8 / -8</summary>
 
 ```diff
 @@ -487,21 +487,21 @@
@@ -22992,7 +22670,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 18 · Change · +3 / -3</summary>
+<summary>Hunk 16 · Change · +3 / -3</summary>
 
 ```diff
 @@ -525,14 +525,14 @@
@@ -23018,7 +22696,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 19 · Change · +10 / -10</summary>
+<summary>Hunk 17 · Change · +10 / -10</summary>
 
 ```diff
 @@ -569,19 +569,19 @@
@@ -23056,7 +22734,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 20 · Change · +7 / -7</summary>
+<summary>Hunk 18 · Change · +7 / -7</summary>
 
 ```diff
 @@ -591,37 +591,37 @@
@@ -23080,8 +22758,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧) ? ⟦2-char-id⟧.j.setItem(⟦2-char-id⟧.d, !0) : ⟦2-char-id⟧.j.removeItem(⟦2-char-id⟧.d)
      }
    },
--  5977: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5973: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5977: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5973: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        loadShaderPackTextures: () => ⟦2-char-id⟧,
        shaderPackTextures: () => ⟦2-char-id⟧
@@ -23109,15 +22787,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 21 · Change · +8 / -8</summary>
+<summary>Hunk 19 · Change · +8 / -8</summary>
 
 ```diff
 @@ -630,24 +630,24 @@
        return ⟦2-char-id⟧
      }
    },
--  5994: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5985: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5994: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5985: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧,
 +      c: () => ⟦2-char-id⟧,
@@ -23150,7 +22828,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 22 · Change · +1 / -1</summary>
+<summary>Hunk 20 · Change · +1 / -1</summary>
 
 ```diff
 @@ -678,7 +678,7 @@
@@ -23167,7 +22845,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 23 · Change · +3 / -3</summary>
+<summary>Hunk 21 · Change · +3 / -3</summary>
 
 ```diff
 @@ -692,9 +692,9 @@
@@ -23188,15 +22866,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 24 · Change · +8 / -8</summary>
+<summary>Hunk 22 · Change · +8 / -8</summary>
 
 ```diff
 @@ -711,17 +711,17 @@
        }
      }
    },
--  5934: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5924: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5934: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5924: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧,
 +      c: () => ⟦2-char-id⟧,
@@ -23222,7 +22900,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 25 · Change · +1 / -1</summary>
+<summary>Hunk 23 · Change · +1 / -1</summary>
 
 ```diff
 @@ -736,7 +736,7 @@
@@ -23239,7 +22917,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 26 · Change · +1 / -1</summary>
+<summary>Hunk 24 · Change · +1 / -1</summary>
 
 ```diff
 @@ -745,7 +745,7 @@
@@ -23256,7 +22934,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 27 · Change · +2 / -2</summary>
+<summary>Hunk 25 · Change · +2 / -2</summary>
 
 ```diff
 @@ -753,10 +753,10 @@
@@ -23277,7 +22955,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 28 · Change · +4 / -4</summary>
+<summary>Hunk 26 · Change · +4 / -4</summary>
 
 ```diff
 @@ -781,10 +781,10 @@
@@ -23300,7 +22978,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 29 · Change · +1 / -1</summary>
+<summary>Hunk 27 · Change · +1 / -1</summary>
 
 ```diff
 @@ -817,7 +817,7 @@
@@ -23317,7 +22995,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 30 · Change · +1 / -1</summary>
+<summary>Hunk 28 · Change · +1 / -1</summary>
 
 ```diff
 @@ -873,7 +873,7 @@
@@ -23334,7 +23012,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 31 · Change · +1 / -1</summary>
+<summary>Hunk 29 · Change · +1 / -1</summary>
 
 ```diff
 @@ -883,7 +883,7 @@
@@ -23353,7 +23031,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary><code>bundles/staging.bloxd.io/chunks/js/119.js</code> · modified · +83 / -83</summary>
+<summary><code>bundles/staging.bloxd.io/chunks/js/119.js</code> · modified · +82 / -82</summary>
 
 JavaScript comparison masks only two-character identifiers. Strings, comments, member properties, object keys, and all other source changes remain visible.
 
@@ -23365,8 +23043,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 119;
  export const ids = [119, 120, 123];
  export const modules = {
--  5951: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5940: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5951: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5940: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧.f,
 -      e: () => ⟦2-char-id⟧,
@@ -23382,8 +23060,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        program: ⟦2-char-id⟧
      })))))
    },
--  39262: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  39236: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  39262: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  39236: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧,
 +      e: () => ⟦2-char-id⟧,
@@ -23472,23 +23150,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 4 · Change · +2 / -2</summary>
+<summary>Hunk 4 · Change · +1 / -1</summary>
 
 ```diff
-@@ -86,14 +86,14 @@
-       };
-       return {
-         kind: "loaded",
--        stored: (0, ⟦2-char-id⟧.toStoredShaderPack)(⟦2-char-id⟧, YJ, {
-+        stored: (0, ⟦2-char-id⟧.toStoredShaderPack)(⟦2-char-id⟧, oB, {
-           packId: ⟦2-char-id⟧.packId,
-           sourceHash: ⟦2-char-id⟧.sourceHash
-         })
+@@ -93,7 +93,7 @@
        }
      }
    },
--  5996: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5987: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5996: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5987: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        forgetShaderPackActiveHint: () => ⟦2-char-id⟧,
        isOtherApiVersion: () => ⟦2-char-id⟧,
@@ -23623,8 +23293,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧) ? ⟦2-char-id⟧.j.setItem(⟦2-char-id⟧.d, !0) : ⟦2-char-id⟧.j.removeItem(⟦2-char-id⟧.d)
      }
    },
--  5977: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5973: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5977: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5973: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        loadShaderPackTextures: () => ⟦2-char-id⟧,
        shaderPackTextures: () => ⟦2-char-id⟧
@@ -23659,8 +23329,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧
      }
    },
--  5994: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5985: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5994: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5985: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧,
 +      c: () => ⟦2-char-id⟧,
@@ -23738,8 +23408,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }
      }
    },
--  5934: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5924: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5934: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5924: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧,
 +      c: () => ⟦2-char-id⟧,
@@ -23908,8 +23578,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 120;
  export const ids = [120, 123];
  export const modules = {
--  5951: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5940: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5951: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5940: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧.f,
 -      e: () => ⟦2-char-id⟧,
@@ -23925,8 +23595,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        program: ⟦2-char-id⟧
      })))))
    },
--  5996: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5987: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5996: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5987: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        forgetShaderPackActiveHint: () => ⟦2-char-id⟧,
        isOtherApiVersion: () => ⟦2-char-id⟧,
@@ -24064,8 +23734,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧) ? ⟦2-char-id⟧.j.setItem(⟦2-char-id⟧.d, !0) : ⟦2-char-id⟧.j.removeItem(⟦2-char-id⟧.d)
      }
    },
--  5977: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5973: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5977: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5973: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        loadShaderPackTextures: () => ⟦2-char-id⟧,
        shaderPackTextures: () => ⟦2-char-id⟧
@@ -24100,8 +23770,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧
      }
    },
--  5934: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5924: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5934: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5924: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧,
 +      c: () => ⟦2-char-id⟧,
@@ -24270,8 +23940,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 121;
  export const ids = [120, 121, 123];
  export const modules = {
--  5951: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5940: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5951: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5940: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧.f,
 -      e: () => ⟦2-char-id⟧,
@@ -24288,8 +23958,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        program: ⟦2-char-id⟧
      })))))
    },
--  5996: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5987: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5996: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5987: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        forgetShaderPackActiveHint: () => ⟦2-char-id⟧,
        isOtherApiVersion: () => ⟦2-char-id⟧,
@@ -24427,8 +24097,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧) ? ⟦2-char-id⟧.j.setItem(⟦2-char-id⟧.d, !0) : ⟦2-char-id⟧.j.removeItem(⟦2-char-id⟧.d)
      }
    },
--  6004: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5994: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  6004: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5994: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧,
 -      f: () => ⟦2-char-id⟧
@@ -24446,8 +24116,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      return null !== (⟦2-char-id⟧ = await ⟦2-char-id⟧.f.getItem(⟦2-char-id⟧, ⟦2-char-id⟧)) && void 0 !== ⟦2-char-id⟧ ? BB : null
      }
    },
--  5977: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5973: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5977: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5973: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        loadShaderPackTextures: () => ⟦2-char-id⟧,
        shaderPackTextures: () => ⟦2-char-id⟧
@@ -24482,8 +24152,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧
      }
    },
--  5934: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5924: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5934: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5924: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧,
 +      c: () => ⟦2-char-id⟧,
@@ -24652,8 +24322,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 122;
  export const ids = [122, 123];
  export const modules = {
--  5951: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5940: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5951: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5940: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧.f,
 -      e: () => ⟦2-char-id⟧,
@@ -24670,8 +24340,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        program: ⟦2-char-id⟧
      })))))
    },
--  38169: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  38153: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  38169: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  38153: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        ShaderPackPage: () => ⟦2-char-id⟧,
        harnessShaderPackMode: () => ⟦2-char-id⟧,
@@ -24769,8 +24439,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return null
      }
    },
--  6004: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5994: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  6004: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5994: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧,
 -      f: () => ⟦2-char-id⟧
@@ -24788,8 +24458,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      return null !== (⟦2-char-id⟧ = await ⟦2-char-id⟧.f.getItem(⟦2-char-id⟧, ⟦2-char-id⟧)) && void 0 !== ⟦2-char-id⟧ ? BB : null
      }
    },
--  5977: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5973: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5977: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5973: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        loadShaderPackTextures: () => ⟦2-char-id⟧,
        shaderPackTextures: () => ⟦2-char-id⟧
@@ -24824,8 +24494,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧
      }
    },
--  5934: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5924: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5934: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5924: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧,
 +      c: () => ⟦2-char-id⟧,
@@ -24994,8 +24664,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 123;
  export const ids = [123];
  export const modules = {
--  5977: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5973: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5977: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5973: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        loadShaderPackTextures: () => ⟦2-char-id⟧,
        shaderPackTextures: () => ⟦2-char-id⟧
@@ -25030,8 +24700,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧
      }
    },
--  5934: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5924: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5934: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5924: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧,
 +      c: () => ⟦2-char-id⟧,
@@ -25188,7 +24858,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary><code>bundles/staging.bloxd.io/chunks/js/124.js</code> · modified · +160 / -160</summary>
+<summary><code>bundles/staging.bloxd.io/chunks/js/124.js</code> · modified · +159 / -159</summary>
 
 JavaScript comparison masks only two-character identifiers. Strings, comments, member properties, object keys, and all other source changes remain visible.
 
@@ -25200,8 +24870,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 124;
  export const ids = [124];
  export const modules = {
--  5960: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5949: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5960: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5949: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        loadPageShaderPackCompiler: () => ⟦2-char-id⟧
      });
@@ -25736,9 +25406,9 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        if (!⟦2-char-id⟧) {
          let ⟦2-char-id⟧, ⟦2-char-id⟧;
          ⟦2-char-id⟧ = {
--          W4: (⟦2-char-id⟧, ⟦2-char-id⟧) => ⟦2-char-id⟧(⟦2-char-id⟧, (() => function(⟦2-char-id⟧, cJ, ⟦2-char-id⟧) {
+-          W4: (⟦2-char-id⟧, ⟦2-char-id⟧) => ⟦2-char-id⟧(⟦2-char-id⟧, (() => function(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) {
 -            const ⟦2-char-id⟧ = ⟦2-char-id⟧.W4(⟦2-char-id⟧.map((⟦2-char-id⟧ => ⟦2-char-id⟧.path)), ⟦2-char-id⟧.map((⟦2-char-id⟧ => ⟦2-char-id⟧.source)), ...Zc(⟦2-char-id⟧), ⟦2-char-id⟧.aliases.map((⟦2-char-id⟧ => ⟦2-char-id⟧.name)), ⟦2-char-id⟧.aliases.map((⟦2-char-id⟧ => ⟦2-char-id⟧.texture)), ⟦2-char-id⟧.aliases.map((⟦2-char-id⟧ => ⟦2-char-id⟧.kind)));
-+          iBB: (⟦2-char-id⟧, ⟦2-char-id⟧) => ⟦2-char-id⟧(⟦2-char-id⟧, (() => function(⟦2-char-id⟧, TB, ⟦2-char-id⟧) {
++          iBB: (⟦2-char-id⟧, ⟦2-char-id⟧) => ⟦2-char-id⟧(⟦2-char-id⟧, (() => function(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) {
 +            const ⟦2-char-id⟧ = ⟦2-char-id⟧.iBB(⟦2-char-id⟧.map((⟦2-char-id⟧ => ⟦2-char-id⟧.path)), ⟦2-char-id⟧.map((⟦2-char-id⟧ => ⟦2-char-id⟧.source)), ...dT(⟦2-char-id⟧), ⟦2-char-id⟧.aliases.map((⟦2-char-id⟧ => ⟦2-char-id⟧.name)), ⟦2-char-id⟧.aliases.map((⟦2-char-id⟧ => ⟦2-char-id⟧.texture)), ⟦2-char-id⟧.aliases.map((⟦2-char-id⟧ => ⟦2-char-id⟧.kind)));
              let ⟦2-char-id⟧ = !1;
              try {
@@ -25761,17 +25431,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 13 · Change · +13 / -13</summary>
+<summary>Hunk 13 · Change · +12 / -12</summary>
 
 ```diff
-@@ -533,42 +533,42 @@
-             } finally {
-               ⟦2-char-id⟧ || ⟦2-char-id⟧.free()
-             }
--          }(⟦2-char-id⟧, cJ, ⟦2-char-id⟧))),
-+          }(⟦2-char-id⟧, TB, ⟦2-char-id⟧))),
-           mapValidationMessage: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-             const ⟦2-char-id⟧ = ⟦2-char-id⟧.get(⟦2-char-id⟧);
+@@ -539,36 +539,36 @@
              if (!⟦2-char-id⟧) throw new Error("mapValidationMessage takes a validation module this compiler made");
              return ⟦2-char-id⟧(JSON.parse(⟦2-char-id⟧(⟦2-char-id⟧, (() => ⟦2-char-id⟧.pack.mapValidationMessage(⟦2-char-id⟧.index, ⟦2-char-id⟧.lineNum, ⟦2-char-id⟧.linePos, ⟦2-char-id⟧.message, ⟦2-char-id⟧.type)))))
            },
@@ -25847,13 +25510,13 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      (0, ⟦2-char-id⟧.g)(⟦2-char-id⟧, `Shader pack wasm ${BB}, so shader packs can't run: ${TB}`, ⟦2-char-id⟧, `shader_pack_${BB}`)
      }
    },
--  5974: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  5974: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.exports = ⟦2-char-id⟧.p + "static/media/bloxd_wasm_shader_pack_bg.9d0df9a4b52e12bb7a45.wasm"
-+  5966: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  5966: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.exports = ⟦2-char-id⟧.p + "static/media/bloxd_wasm_shader_pack_bg.effae8a78082d73d2340.wasm"
    },
--  5963: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5953: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5963: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5953: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 +      c: () => ⟦2-char-id⟧
@@ -25900,8 +25563,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      throw new ⟦2-char-id⟧.j(`${BB} has no release digest, so this build refuses it`)
      }
    },
--  5982: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5975: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5982: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5975: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        c: () => ⟦2-char-id⟧,
 -      d: () => ⟦2-char-id⟧,
@@ -25990,8 +25653,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }))
      }
    },
--  5986: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5981: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5986: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5981: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧,
 -      f: () => ⟦2-char-id⟧,
@@ -26021,8 +25684,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 125;
  export const ids = [125, 192];
  export const modules = {
--  35414: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  35319: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  35414: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  35319: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        reportCappedWasmFailure: () => ⟦2-char-id⟧,
        reportWasmFailure: () => ⟦2-char-id⟧
@@ -26042,8 +25705,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      (0, ⟦2-char-id⟧.i)(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, !1, ⟦2-char-id⟧)
      }
    },
--  35405: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  35311: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  35405: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  35311: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧,
 -      c: () => ⟦2-char-id⟧,
@@ -26145,18 +25808,18 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      (0, ⟦2-char-id⟧.g)(⟦2-char-id⟧, `Bloxd wasm ${BB}, so the game can't start: ${TB}`, ⟦2-char-id⟧, ⟦2-char-id⟧)
      }
    },
--  35452: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  35452: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.exports = ⟦2-char-id⟧.p + "static/media/bloxd_wasm_bg.d6cb02368a1f50c0df7d.wasm"
-+  35358: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  35358: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.exports = ⟦2-char-id⟧.p + "static/media/bloxd_wasm_bg.83d4d2ae0f6df4b285af.wasm"
    },
--  35428: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  35428: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.exports = ⟦2-char-id⟧.p + "static/media/bloxd_wasm_textures_bg.91449dd66a7e88721c00.wasm"
-+  35335: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  35335: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.exports = ⟦2-char-id⟧.p + "static/media/bloxd_wasm_textures_bg.1218b8b300c47f90e7ad.wasm"
    },
--  35441: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  35348: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  35441: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  35348: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        e: () => ⟦2-char-id⟧,
 -      i: () => ⟦2-char-id⟧
@@ -26213,8 +25876,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      return (0, ⟦2-char-id⟧.d)(⟦2-char-id⟧, (0, ⟦2-char-id⟧.c)(⟦2-char-id⟧.name), ⟦2-char-id⟧)
      }
    },
--  35436: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  35343: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  35436: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  35343: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      b: () => ⟦2-char-id⟧,
        d: () => ⟦2-char-id⟧,
@@ -27725,8 +27388,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      return (0, ⟦2-char-id⟧.M)((() => ⟦2-char-id⟧), ⟦2-char-id⟧, ⟦2-char-id⟧)
      }
    },
--  5963: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5953: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5963: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5953: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 +      c: () => ⟦2-char-id⟧
@@ -27773,8 +27436,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      throw new ⟦2-char-id⟧.j(`${BB} has no release digest, so this build refuses it`)
      }
    },
--  35425: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  35331: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  35425: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  35331: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      function ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧) {
 -      return new Error(`${JJ}: ${cJ instanceof Error?`${⟦2-char-id⟧.name}: ${⟦2-char-id⟧.message}`:String(cJ)}`, {
 +      return new Error(`${BB}: ${TB instanceof Error?`${⟦2-char-id⟧.name}: ${⟦2-char-id⟧.message}`:String(TB)}`, {
@@ -27786,8 +27449,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      c: () => ⟦2-char-id⟧
      })
    },
--  35417: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  35322: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  35417: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  35322: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      e: () => ⟦2-char-id⟧,
 +      g: () => ⟦2-char-id⟧
@@ -27807,7 +27470,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      })), ⟦2-char-id⟧
 +    }
 +  },
-+  35355: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  35355: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        b: () => ⟦2-char-id⟧,
 -      f: () => ⟦2-char-id⟧
@@ -27828,7 +27491,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      })), ⟦2-char-id⟧
 -    }
 -  },
--  35447: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  35447: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧,
 -      c: () => ⟦2-char-id⟧
@@ -27948,8 +27611,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
                  return {
                    ok: ⟦2-char-id⟧,
                    status: ⟦2-char-id⟧,
--                  body: ⟦2-char-id⟧(⟦2-char-id⟧.Y, cJ, [])
-+                  body: ⟦2-char-id⟧(⟦2-char-id⟧.Z, TB, [])
+-                  body: ⟦2-char-id⟧(⟦2-char-id⟧.Y, ⟦2-char-id⟧, [])
++                  body: ⟦2-char-id⟧(⟦2-char-id⟧.Z, ⟦2-char-id⟧, [])
                  }
                } catch {
 -                throw new Error(`${JJ} came in a response a page script made`)
@@ -28141,8 +27804,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 126;
  export const ids = [126];
  export const modules = {
--  5971: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5959: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5971: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5959: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧,
 -      d: () => ⟦2-char-id⟧,
@@ -28233,12 +27896,12 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
      const ⟦2-char-id⟧ = ⟦2-char-id⟧("rx", ⟦2-char-id⟧("HTMLCanvasElement"), "getContext"),
        ⟦2-char-id⟧ = ["createShader", "shaderSource", "compileShader", "createProgram", "linkProgram", "useProgram", "drawArrays", "drawElements", "depthFunc", "depthMask", "enable", "disable", "blendFuncSeparate", "colorMask"],
        ⟦2-char-id⟧ = {
--        webgpu: [...Zc("gd", cc("GPUDevice"), ["createShaderModule", "createRenderPipeline", "createCommandEncoder"]), ...Zc("gq", cc("GPUQueue"), ["submit", "writeBuffer"]), ...Zc("ge", cc("GPUCommandEncoder"), ["beginRenderPass", "finish"]), ...Zc("gp", cc("GPURenderPassEncoder"), ["setPipeline", "setBindGroup", "draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect", "executeBundles"]), ⟦2-char-id⟧],
--        webgl: [...Zc("g2", cc("WebGL2RenderingContext"), [...Uc, "drawArraysInstanced", "drawElementsInstanced"]), ⟦2-char-id⟧],
--        webgl1: [...Zc("g1", cc("WebGLRenderingContext"), ⟦2-char-id⟧), ⟦2-char-id⟧]
-+        webgpu: [...dT("gd", TT("GPUDevice"), ["createShaderModule", "createRenderPipeline", "createCommandEncoder"]), ...dT("gq", TT("GPUQueue"), ["submit", "writeBuffer"]), ...dT("ge", TT("GPUCommandEncoder"), ["beginRenderPass", "finish"]), ...dT("gp", TT("GPURenderPassEncoder"), ["setPipeline", "setBindGroup", "draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect", "executeBundles"]), ⟦2-char-id⟧],
-+        webgl: [...dT("g2", TT("WebGL2RenderingContext"), [...yT, "drawArraysInstanced", "drawElementsInstanced"]), ⟦2-char-id⟧],
-+        webgl1: [...dT("g1", TT("WebGLRenderingContext"), ⟦2-char-id⟧), ⟦2-char-id⟧]
+-        webgpu: [...Zc("gd", ⟦2-char-id⟧("GPUDevice"), ["createShaderModule", "createRenderPipeline", "createCommandEncoder"]), ...Zc("gq", ⟦2-char-id⟧("GPUQueue"), ["submit", "writeBuffer"]), ...Zc("ge", ⟦2-char-id⟧("GPUCommandEncoder"), ["beginRenderPass", "finish"]), ...Zc("gp", ⟦2-char-id⟧("GPURenderPassEncoder"), ["setPipeline", "setBindGroup", "draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect", "executeBundles"]), ⟦2-char-id⟧],
+-        webgl: [...Zc("g2", ⟦2-char-id⟧("WebGL2RenderingContext"), [...Uc, "drawArraysInstanced", "drawElementsInstanced"]), ⟦2-char-id⟧],
+-        webgl1: [...Zc("g1", ⟦2-char-id⟧("WebGLRenderingContext"), ⟦2-char-id⟧), ⟦2-char-id⟧]
++        webgpu: [...dT("gd", ⟦2-char-id⟧("GPUDevice"), ["createShaderModule", "createRenderPipeline", "createCommandEncoder"]), ...dT("gq", ⟦2-char-id⟧("GPUQueue"), ["submit", "writeBuffer"]), ...dT("ge", ⟦2-char-id⟧("GPUCommandEncoder"), ["beginRenderPass", "finish"]), ...dT("gp", ⟦2-char-id⟧("GPURenderPassEncoder"), ["setPipeline", "setBindGroup", "draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect", "executeBundles"]), ⟦2-char-id⟧],
++        webgl: [...dT("g2", ⟦2-char-id⟧("WebGL2RenderingContext"), [...yT, "drawArraysInstanced", "drawElementsInstanced"]), ⟦2-char-id⟧],
++        webgl1: [...dT("g1", ⟦2-char-id⟧("WebGLRenderingContext"), ⟦2-char-id⟧), ⟦2-char-id⟧]
        };
      let ⟦2-char-id⟧ = [];
  
@@ -28340,8 +28003,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 127;
  export const ids = [127];
  export const modules = {
--  40460: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40452: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40460: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40452: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        compilePagePack: () => ⟦2-char-id⟧,
        prefetchCompiler: () => ⟦2-char-id⟧,
@@ -28393,8 +28056,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }
      }
    },
--  5996: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5987: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5996: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5987: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        forgetShaderPackActiveHint: () => ⟦2-char-id⟧,
        isOtherApiVersion: () => ⟦2-char-id⟧,
@@ -28532,8 +28195,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧) ? ⟦2-char-id⟧.j.setItem(⟦2-char-id⟧.d, !0) : ⟦2-char-id⟧.j.removeItem(⟦2-char-id⟧.d)
      }
    },
--  5994: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  5985: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  5994: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  5985: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧,
 +      c: () => ⟦2-char-id⟧,
@@ -28606,12 +28269,12 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary><code>bundles/staging.bloxd.io/chunks/js/128.js</code> · modified · +1185 / -1185</summary>
+<summary><code>bundles/staging.bloxd.io/chunks/js/128.js</code> · modified · +1058 / -1058</summary>
 
 JavaScript comparison masks only two-character identifiers. Strings, comments, member properties, object keys, and all other source changes remain visible.
 
 <details>
-<summary>Hunk 1 · Change · +32 / -32</summary>
+<summary>Hunk 1 · Change · +26 / -26</summary>
 
 ```diff
 @@ -1,46 +1,46 @@
@@ -28620,7 +28283,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 128;
  export const ids = [128];
  export const modules = {
--  6045: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  6045: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6049);
 -    ⟦2-char-id⟧.c = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -28628,7 +28291,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      icon: [⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData]
 -    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.c, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
 -  },
--  6057: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  6057: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6059);
 -    ⟦2-char-id⟧.c = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -28637,7 +28300,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.c, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
 -  },
 -  6064: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+  6031: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  6031: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6035);
 +    ⟦2-char-id⟧.c = {
 +      prefix: ⟦2-char-id⟧.prefix,
@@ -28645,7 +28308,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      icon: [⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData]
 +    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.c, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
 +  },
-+  6040: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  6040: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6042);
 +    ⟦2-char-id⟧.e = {
 +      prefix: ⟦2-char-id⟧.prefix,
@@ -28659,16 +28322,13 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        ⟦2-char-id⟧ = "f107",
        ⟦2-char-id⟧ = "M169.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 306.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z";
 -    ⟦2-char-id⟧.d = {
--      prefix: "fas",
--      iconName: ⟦2-char-id⟧,
--      icon: [384, 512, FJ, UJ, ⟦2-char-id⟧]
++    ⟦2-char-id⟧.b = {
+       prefix: "fas",
+       iconName: ⟦2-char-id⟧,
+       icon: [384, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.d
 -  },
 -  6068: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+    ⟦2-char-id⟧.b = {
-+      prefix: "fas",
-+      iconName: ⟦2-char-id⟧,
-+      icon: [384, 512, VB, yB, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.c = ⟦2-char-id⟧.b
 +  },
 +  6053: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -28677,16 +28337,13 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        ⟦2-char-id⟧ = "f106",
        ⟦2-char-id⟧ = "M169.4 137.4c12.5-12.5 32.8-12.5 45.3 0l160 160c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L192 205.3 54.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l160-160z";
 -    ⟦2-char-id⟧.b = {
--      prefix: "fas",
--      iconName: ⟦2-char-id⟧,
--      icon: [384, 512, FJ, UJ, ⟦2-char-id⟧]
++    ⟦2-char-id⟧.d = {
+       prefix: "fas",
+       iconName: ⟦2-char-id⟧,
+       icon: [384, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.c = ⟦2-char-id⟧.b
 -  },
 -  6059: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+    ⟦2-char-id⟧.d = {
-+      prefix: "fas",
-+      iconName: ⟦2-char-id⟧,
-+      icon: [384, 512, VB, yB, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.d
 +  },
 +  6042: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -28698,15 +28355,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 2 · Change · +2 / -2</summary>
+<summary>Hunk 2 · Change · +1 / -1</summary>
 
 ```diff
-@@ -51,10 +51,10 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [384, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [384, 512, VB, yB, ⟦2-char-id⟧]
+@@ -54,7 +54,7 @@
+       icon: [384, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.faAnglesUp = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 384, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
 -  6071: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -28719,18 +28372,16 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 3 · Change · +25 / -25</summary>
+<summary>Hunk 3 · Change · +18 / -18</summary>
 
 ```diff
-@@ -62,43 +62,43 @@
-     ⟦2-char-id⟧.e = {
+@@ -63,42 +63,42 @@
        prefix: "fas",
        iconName: ⟦2-char-id⟧,
--      icon: [384, 512, FJ, UJ, ⟦2-char-id⟧]
+       icon: [384, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.i = ⟦2-char-id⟧.e
 -  },
 -  6076: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+      icon: [384, 512, VB, yB, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.e
 +  },
 +  6068: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -28741,14 +28392,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.e = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.e
 -  },
 -  6083: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.c = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.c
 +  },
 +  6077: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -28757,16 +28408,13 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        ⟦2-char-id⟧ = "f062",
        ⟦2-char-id⟧ = "M214.6 9.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 109.3 160 480c0 17.7 14.3 32 32 32s32-14.3 32-32l0-370.7 105.4 105.4c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z";
 -    ⟦2-char-id⟧.e = {
--      prefix: "fas",
--      iconName: ⟦2-char-id⟧,
--      icon: [384, 512, FJ, UJ, ⟦2-char-id⟧]
++    ⟦2-char-id⟧.c = {
+       prefix: "fas",
+       iconName: ⟦2-char-id⟧,
+       icon: [384, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.i = ⟦2-char-id⟧.e
 -  },
 -  6091: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+    ⟦2-char-id⟧.c = {
-+      prefix: "fas",
-+      iconName: ⟦2-char-id⟧,
-+      icon: [384, 512, VB, yB, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.c
 +  },
 +  6082: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -28775,16 +28423,13 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        ⟦2-char-id⟧ = "f342",
        ⟦2-char-id⟧ = "M214.6 9.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 109.3 160 352c0 17.7 14.3 32 32 32s32-14.3 32-32l0-242.7 73.4 73.4c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-128-128zM32 448c-17.7 0-32 14.3-32 32s14.3 32 32 32l320 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 448z";
 -    ⟦2-char-id⟧.c = {
--      prefix: "fas",
--      iconName: ⟦2-char-id⟧,
--      icon: [384, 512, FJ, UJ, ⟦2-char-id⟧]
++    ⟦2-char-id⟧.b = {
+       prefix: "fas",
+       iconName: ⟦2-char-id⟧,
+       icon: [384, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.d = ⟦2-char-id⟧.c
 -  },
 -  6094: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+    ⟦2-char-id⟧.b = {
-+      prefix: "fas",
-+      iconName: ⟦2-char-id⟧,
-+      icon: [384, 512, VB, yB, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.c = ⟦2-char-id⟧.b
 +  },
 +  6086: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -28796,20 +28441,16 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 4 · Change · +12 / -12</summary>
+<summary>Hunk 4 · Change · +11 / -11</summary>
 
 ```diff
-@@ -109,26 +109,26 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
+@@ -112,23 +112,23 @@
+       icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.faArrowUpRightFromSquare = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 512, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
--  6096: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  6096: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6103);
-+  6092: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  6092: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6097);
 +    ⟦2-char-id⟧.b = {
 +      prefix: ⟦2-char-id⟧.prefix,
@@ -28817,7 +28458,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      icon: [⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData]
 +    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.b, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
 +  },
-+  6100: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  6100: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6105);
      ⟦2-char-id⟧.e = {
        prefix: ⟦2-char-id⟧.prefix,
@@ -28825,7 +28466,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        icon: [⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData]
      }, ⟦2-char-id⟧.h = ⟦2-char-id⟧.e, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
    },
--  6111: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  6111: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6116);
 -    ⟦2-char-id⟧.c = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -28843,15 +28484,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 5 · Change · +2 / -2</summary>
+<summary>Hunk 5 · Change · +1 / -1</summary>
 
 ```diff
-@@ -139,10 +139,10 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [576, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [576, 512, VB, yB, ⟦2-char-id⟧]
+@@ -142,7 +142,7 @@
+       icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.faArrowsLeftRight = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 576, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
 -  6118: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -28864,15 +28501,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 6 · Change · +2 / -2</summary>
+<summary>Hunk 6 · Change · +1 / -1</summary>
 
 ```diff
-@@ -153,10 +153,10 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
+@@ -156,7 +156,7 @@
+       icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.faArrowsRotate = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 512, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
 -  6103: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -28885,15 +28518,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 7 · Change · +2 / -2</summary>
+<summary>Hunk 7 · Change · +1 / -1</summary>
 
 ```diff
-@@ -167,10 +167,10 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
+@@ -170,7 +170,7 @@
+       icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.faArrowsUpDownLeftRight = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 512, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
 -  6122: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -28906,18 +28535,16 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 8 · Change · +4 / -4</summary>
+<summary>Hunk 8 · Change · +3 / -3</summary>
 
 ```diff
-@@ -178,10 +178,10 @@
-     ⟦2-char-id⟧.c = {
+@@ -179,9 +179,9 @@
        prefix: "fas",
        iconName: ⟦2-char-id⟧,
--      icon: [448, 512, FJ, UJ, ⟦2-char-id⟧]
+       icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.c
 -  },
 -  6127: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+      icon: [448, 512, VB, yB, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.c
 +  },
 +  6121: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -28929,18 +28556,16 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 9 · Change · +9 / -9</summary>
+<summary>Hunk 9 · Change · +7 / -7</summary>
 
 ```diff
-@@ -189,20 +189,20 @@
-     ⟦2-char-id⟧.d = {
+@@ -190,19 +190,19 @@
        prefix: "fas",
        iconName: ⟦2-char-id⟧,
--      icon: [448, 512, FJ, UJ, ⟦2-char-id⟧]
+       icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.d
 -  },
 -  6130: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+      icon: [448, 512, VB, yB, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.d
 +  },
 +  6124: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -28951,11 +28576,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +    ⟦2-char-id⟧.e = {
        prefix: "fas",
        iconName: "ban",
--      icon: [512, 512, ZJ, FJ, ⟦2-char-id⟧]
+       icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.d
 -  },
 -  6135: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+      icon: [512, 512, dB, VB, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.h = ⟦2-char-id⟧.e
 +  },
 +  6126: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -28967,15 +28591,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 10 · Change · +14 / -14</summary>
+<summary>Hunk 10 · Change · +12 / -12</summary>
 
 ```diff
-@@ -213,31 +213,31 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [448, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [448, 512, VB, yB, ⟦2-char-id⟧]
+@@ -216,28 +216,28 @@
+       icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.faBars = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 448, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
 -  6139: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -28987,11 +28607,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +    ⟦2-char-id⟧.b = {
        prefix: "fas",
        iconName: "bee",
--      icon: [512, 512, ZJ, FJ, ⟦2-char-id⟧]
+       icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.i = ⟦2-char-id⟧.e
 -  },
 -  6144: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+      icon: [512, 512, dB, VB, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.b
 +  },
 +  6134: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -29002,14 +28621,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.b = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [448, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.b
 -  },
 -  6146: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.e = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [448, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.e
 +  },
 +  6142: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -29021,18 +28640,16 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 11 · Change · +4 / -4</summary>
+<summary>Hunk 11 · Change · +3 / -3</summary>
 
 ```diff
-@@ -245,10 +245,10 @@
-     ⟦2-char-id⟧.b = {
+@@ -246,9 +246,9 @@
        prefix: "fas",
        iconName: ⟦2-char-id⟧,
--      icon: [448, 512, FJ, UJ, ⟦2-char-id⟧]
+       icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.b
 -  },
 -  6155: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+      icon: [448, 512, VB, yB, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.c = ⟦2-char-id⟧.b
 +  },
 +  6145: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -29044,15 +28661,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 12 · Change · +16 / -16</summary>
+<summary>Hunk 12 · Change · +15 / -15</summary>
 
 ```diff
-@@ -259,32 +259,32 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [448, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [448, 512, VB, yB, ⟦2-char-id⟧]
+@@ -262,29 +262,29 @@
+       icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.faBolt = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 448, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
 -  6161: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -29064,14 +28677,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.b = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [448, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.d = ⟦2-char-id⟧.b
 -  },
 -  6169: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.c = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [448, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.c
 +  },
 +  6155: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -29082,14 +28695,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.d = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [448, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.d
 -  },
 -  6173: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.c = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [448, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.c
 +  },
 +  6158: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -29101,18 +28714,16 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 13 · Change · +11 / -11</summary>
+<summary>Hunk 13 · Change · +7 / -7</summary>
 
 ```diff
-@@ -292,21 +292,21 @@
-     ⟦2-char-id⟧.b = {
+@@ -293,20 +293,20 @@
        prefix: "fas",
        iconName: ⟦2-char-id⟧,
--      icon: [320, 512, FJ, UJ, ⟦2-char-id⟧]
+       icon: [320, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.b
 -  },
 -  6182: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+      icon: [320, 512, VB, yB, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.c = ⟦2-char-id⟧.b
 +  },
 +  6161: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -29121,16 +28732,13 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        ⟦2-char-id⟧ = "f0d9",
        ⟦2-char-id⟧ = "M7.7 235.8c-10.3 12.6-9.5 31.1 2.2 42.8l128 128c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6l0-256c0-12.9-7.8-24.6-19.8-29.6s-25.7-2.2-34.9 6.9l-128 128-2.2 2.4z";
 -    ⟦2-char-id⟧.e = {
--      prefix: "fas",
--      iconName: ⟦2-char-id⟧,
--      icon: [256, 512, FJ, UJ, ⟦2-char-id⟧]
++    ⟦2-char-id⟧.c = {
+       prefix: "fas",
+       iconName: ⟦2-char-id⟧,
+       icon: [256, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.e
 -  },
 -  6189: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+    ⟦2-char-id⟧.c = {
-+      prefix: "fas",
-+      iconName: ⟦2-char-id⟧,
-+      icon: [256, 512, VB, yB, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.d = ⟦2-char-id⟧.c
 +  },
 +  6170: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -29142,18 +28750,16 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 14 · Change · +11 / -11</summary>
+<summary>Hunk 14 · Change · +7 / -7</summary>
 
 ```diff
-@@ -314,21 +314,21 @@
-     ⟦2-char-id⟧.b = {
+@@ -315,20 +315,20 @@
        prefix: "fas",
        iconName: ⟦2-char-id⟧,
--      icon: [256, 512, FJ, UJ, ⟦2-char-id⟧]
+       icon: [256, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.b
 -  },
 -  6192: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+      icon: [256, 512, VB, yB, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.c = ⟦2-char-id⟧.b
 +  },
 +  6178: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -29162,16 +28768,13 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        ⟦2-char-id⟧ = "f0d8",
        ⟦2-char-id⟧ = "M140.3 135.2c12.6-10.3 31.1-9.5 42.8 2.2l128 128c9.2 9.2 11.9 22.9 6.9 34.9S301.4 320 288.5 320l-256 0c-12.9 0-24.6-7.8-29.6-19.8S.7 274.5 9.9 265.4l128-128 2.4-2.2z";
 -    ⟦2-char-id⟧.b = {
--      prefix: "fas",
--      iconName: ⟦2-char-id⟧,
--      icon: [320, 512, FJ, UJ, ⟦2-char-id⟧]
++    ⟦2-char-id⟧.c = {
+       prefix: "fas",
+       iconName: ⟦2-char-id⟧,
+       icon: [320, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.b
 -  },
 -  6196: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+    ⟦2-char-id⟧.c = {
-+      prefix: "fas",
-+      iconName: ⟦2-char-id⟧,
-+      icon: [320, 512, VB, yB, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.c
 +  },
 +  6182: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -29183,15 +28786,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 15 · Change · +16 / -16</summary>
+<summary>Hunk 15 · Change · +12 / -12</summary>
 
 ```diff
-@@ -339,32 +339,32 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [640, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [640, 512, VB, yB, ⟦2-char-id⟧]
+@@ -342,29 +342,29 @@
+       icon: [640, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.faCartShopping = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 640, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
 -  6200: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -29203,14 +28802,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.c = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [448, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.c
 -  },
 -  6203: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.b = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [448, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.d = ⟦2-char-id⟧.b
 +  },
 +  6194: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -29219,16 +28818,13 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        ⟦2-char-id⟧ = "f441",
        ⟦2-char-id⟧ = "M192-32c106 0 192 86 192 192l0 133.5c0 17-6.8 33.2-18.7 45.2L320 384 370.8 434.7c8.5 8.5 13.2 20 13.2 32 0 25-20.3 45.2-45.2 45.3L45.3 512c-25 0-45.2-20.3-45.2-45.3 0-12 4.8-23.5 13.2-32L64 384 64 349.4c0-18.7 8.2-36.4 22.3-48.6l89.7-76.8-48 0-12.1 12.1c-12.7 12.7-30 19.9-48 19.9-37.5 0-67.9-30.4-67.9-67.9l0-8.7c0-22.8 8.2-44.9 23.1-62.3L96 32 96 0c0-17.7 14.3-32 32-32l64 0zM160 72a24 24 0 1 0 0 48 24 24 0 1 0 0-48z";
 -    ⟦2-char-id⟧.b = {
--      prefix: "fas",
--      iconName: ⟦2-char-id⟧,
--      icon: [384, 512, FJ, UJ, ⟦2-char-id⟧]
++    ⟦2-char-id⟧.c = {
+       prefix: "fas",
+       iconName: ⟦2-char-id⟧,
+       icon: [384, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.b
 -  },
 -  6208: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+    ⟦2-char-id⟧.c = {
-+      prefix: "fas",
-+      iconName: ⟦2-char-id⟧,
-+      icon: [384, 512, VB, yB, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.c
 +  },
 +  6201: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -29240,18 +28836,16 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 16 · Change · +4 / -4</summary>
+<summary>Hunk 16 · Change · +3 / -3</summary>
 
 ```diff
-@@ -372,10 +372,10 @@
-     ⟦2-char-id⟧.c = {
+@@ -373,9 +373,9 @@
        prefix: "fas",
        iconName: ⟦2-char-id⟧,
--      icon: [384, 512, FJ, UJ, ⟦2-char-id⟧]
+       icon: [384, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.d = ⟦2-char-id⟧.c
 -  },
 -  6213: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+      icon: [384, 512, VB, yB, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.c
 +  },
 +  6205: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -29263,18 +28857,16 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 17 · Change · +11 / -11</summary>
+<summary>Hunk 17 · Change · +10 / -10</summary>
 
 ```diff
-@@ -383,21 +383,21 @@
-     ⟦2-char-id⟧.e = {
+@@ -384,20 +384,20 @@
        prefix: "fas",
        iconName: ⟦2-char-id⟧,
--      icon: [384, 512, FJ, UJ, ⟦2-char-id⟧]
+       icon: [384, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.i = ⟦2-char-id⟧.e
 -  },
 -  6221: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+      icon: [384, 512, VB, yB, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.e
 +  },
 +  6209: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -29285,14 +28877,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.e = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.h = ⟦2-char-id⟧.e
 -  },
 -  6227: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.c = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.c
 +  },
 +  6215: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -29304,15 +28896,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 18 · Change · +2 / -2</summary>
+<summary>Hunk 18 · Change · +1 / -1</summary>
 
 ```diff
-@@ -408,10 +408,10 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
+@@ -411,7 +411,7 @@
+       icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.faCircleInfo = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 512, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
 -  6231: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -29325,15 +28913,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 19 · Change · +9 / -9</summary>
+<summary>Hunk 19 · Change · +8 / -8</summary>
 
 ```diff
-@@ -422,21 +422,21 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
+@@ -425,18 +425,18 @@
+       icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.faCirclePlus = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 512, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
 -  6239: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -29345,14 +28929,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.d = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.d
 -  },
 -  6244: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.e = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.e
 +  },
 +  6231: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -29364,20 +28948,16 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 20 · Change · +4 / -4</summary>
+<summary>Hunk 20 · Change · +3 / -3</summary>
 
 ```diff
-@@ -447,18 +447,18 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [576, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [576, 512, VB, yB, ⟦2-char-id⟧]
+@@ -450,15 +450,15 @@
+       icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.faClockRotateLeft = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 576, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
--  6248: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  6248: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6254);
-+  6237: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  6237: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6242);
      ⟦2-char-id⟧.c = {
        prefix: ⟦2-char-id⟧.prefix,
@@ -29395,15 +28975,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 21 · Change · +2 / -2</summary>
+<summary>Hunk 21 · Change · +1 / -1</summary>
 
 ```diff
-@@ -466,10 +466,10 @@
-     ⟦2-char-id⟧.d = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
+@@ -469,7 +469,7 @@
+       icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.d
    },
 -  6266: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -29416,20 +28992,16 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 22 · Change · +4 / -4</summary>
+<summary>Hunk 22 · Change · +3 / -3</summary>
 
 ```diff
-@@ -480,18 +480,18 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
+@@ -483,15 +483,15 @@
+       icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.faCommentDots = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 512, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
--  6269: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  6269: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6266);
-+  6257: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  6257: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6249);
      ⟦2-char-id⟧.b = {
        prefix: ⟦2-char-id⟧.prefix,
@@ -29447,18 +29019,16 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 23 · Change · +4 / -4</summary>
+<summary>Hunk 23 · Change · +3 / -3</summary>
 
 ```diff
-@@ -499,10 +499,10 @@
-     ⟦2-char-id⟧.b = {
+@@ -500,9 +500,9 @@
        prefix: "fas",
        iconName: ⟦2-char-id⟧,
--      icon: [448, 512, FJ, UJ, ⟦2-char-id⟧]
+       icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.b
 -  },
 -  6283: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+      icon: [448, 512, VB, yB, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.d = ⟦2-char-id⟧.b
 +  },
 +  6267: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -29470,15 +29040,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 24 · Change · +2 / -2</summary>
+<summary>Hunk 24 · Change · +1 / -1</summary>
 
 ```diff
-@@ -513,10 +513,10 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [384, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [384, 512, VB, yB, ⟦2-char-id⟧]
+@@ -516,7 +516,7 @@
+       icon: [384, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.faComputerMouse = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 384, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
 -  6287: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -29491,15 +29057,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 25 · Change · +16 / -16</summary>
+<summary>Hunk 25 · Change · +15 / -15</summary>
 
 ```diff
-@@ -524,32 +524,32 @@
-     ⟦2-char-id⟧.d = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
+@@ -527,29 +527,29 @@
+       icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.d
    },
 -  6294: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -29511,14 +29073,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.c = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [448, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.c
 -  },
 -  6300: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.e = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [448, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.e
 +  },
 +  6291: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -29529,14 +29091,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.e = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [576, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.e
 -  },
 -  6304: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.b = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [576, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.c = ⟦2-char-id⟧.b
 +  },
 +  6295: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -29548,18 +29110,16 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 26 · Change · +70 / -70</summary>
+<summary>Hunk 26 · Change · +69 / -69</summary>
 
 ```diff
-@@ -557,100 +557,100 @@
-     ⟦2-char-id⟧.c = {
+@@ -558,99 +558,99 @@
        prefix: "fas",
        iconName: ⟦2-char-id⟧,
--      icon: [576, 512, FJ, UJ, ⟦2-char-id⟧]
+       icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.c
 -  },
 -  6313: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+      icon: [576, 512, VB, yB, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.c
 +  },
 +  6301: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -29570,14 +29130,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.d = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.h = ⟦2-char-id⟧.d
 -  },
 -  6317: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.e = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.i = ⟦2-char-id⟧.e
 +  },
 +  6307: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -29588,10 +29148,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.d = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.d
 -  },
--  6321: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  6321: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6324);
 -    ⟦2-char-id⟧.e = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -29603,10 +29163,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +    ⟦2-char-id⟧.e = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.h = ⟦2-char-id⟧.e
 +  },
-+  6316: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  6316: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6322);
 +    ⟦2-char-id⟧.d = {
 +      prefix: ⟦2-char-id⟧.prefix,
@@ -29622,10 +29182,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.c = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.c
 -  },
--  6336: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  6336: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6345);
 -    ⟦2-char-id⟧.e = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -29637,10 +29197,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +    ⟦2-char-id⟧.e = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.e
 +  },
-+  6335: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  6335: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6341);
 +    ⟦2-char-id⟧.b = {
 +      prefix: ⟦2-char-id⟧.prefix,
@@ -29656,14 +29216,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.b = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [448, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.d = ⟦2-char-id⟧.b
 -  },
 -  6358: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [448, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.h = ⟦2-char-id⟧.d
 +  },
 +  6356: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -29674,14 +29234,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.b = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [448, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.b
 -  },
 -  6366: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.c = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [448, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.c
 +  },
 +  6365: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -29692,10 +29252,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.c = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [448, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.d = ⟦2-char-id⟧.c
 -  },
--  6368: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  6368: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6373);
 -    ⟦2-char-id⟧.d = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -29707,10 +29267,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +    ⟦2-char-id⟧.d = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [448, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.d
 +  },
-+  6372: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  6372: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6376);
 +    ⟦2-char-id⟧.c = {
 +      prefix: ⟦2-char-id⟧.prefix,
@@ -29727,18 +29287,13 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 27 · Change · +57 / -57</summary>
+<summary>Hunk 27 · Change · +51 / -51</summary>
 
 ```diff
-@@ -661,87 +661,87 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [448, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [448, 512, VB, yB, ⟦2-char-id⟧]
+@@ -665,83 +665,83 @@
      }, ⟦2-char-id⟧.faEllipsis = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 448, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
--  6390: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+   6390: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6381);
 -    ⟦2-char-id⟧.d = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -29747,7 +29302,6 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    }, ⟦2-char-id⟧.h = ⟦2-char-id⟧.d, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
 -  },
 -  6393: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+  6390: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6385);
 +    ⟦2-char-id⟧.d = {
 +      prefix: ⟦2-char-id⟧.prefix,
@@ -29760,12 +29314,13 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        ⟦2-char-id⟧ = [10069, 10071, 61738],
        ⟦2-char-id⟧ = "M64 432c22.1 0 40 17.9 40 40s-17.9 40-40 40-40-17.9-40-40c0-22.1 17.9-40 40-40zM64 0c26.5 0 48 21.5 48 48 0 .6 0 1.1 0 1.7l-16 304c-.9 17-15 30.3-32 30.3S33 370.7 32 353.7L16 49.7c0-.6 0-1.1 0-1.7 0-26.5 21.5-48 48-48z";
 -    ⟦2-char-id⟧.c = {
--      prefix: "fas",
--      iconName: ⟦2-char-id⟧,
--      icon: [128, 512, FJ, "21", ⟦2-char-id⟧]
++    ⟦2-char-id⟧.b = {
+       prefix: "fas",
+       iconName: ⟦2-char-id⟧,
+       icon: [128, 512, ⟦2-char-id⟧, "21", ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.c
 -  },
--  6402: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  6402: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6410);
 -    ⟦2-char-id⟧.b = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -29774,13 +29329,9 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    }, ⟦2-char-id⟧.d = ⟦2-char-id⟧.b, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
 -  },
 -  6414: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+    ⟦2-char-id⟧.b = {
-+      prefix: "fas",
-+      iconName: ⟦2-char-id⟧,
-+      icon: [128, 512, VB, "21", ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.b
 +  },
-+  6405: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  6405: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6414);
 +    ⟦2-char-id⟧.c = {
 +      prefix: ⟦2-char-id⟧.prefix,
@@ -29796,10 +29347,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.b = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [448, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.b
 -  },
--  6420: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  6420: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6094);
 -    ⟦2-char-id⟧.d = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -29811,10 +29362,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +    ⟦2-char-id⟧.c = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [448, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.c
 +  },
-+  6428: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  6428: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6086);
 +    ⟦2-char-id⟧.e = {
 +      prefix: ⟦2-char-id⟧.prefix,
@@ -29830,11 +29381,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +    ⟦2-char-id⟧.e = {
        prefix: "fas",
        iconName: "eye",
--      icon: [576, 512, ZJ, FJ, ⟦2-char-id⟧]
+       icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.c
 -  },
 -  6431: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+      icon: [576, 512, dB, VB, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.h = ⟦2-char-id⟧.e
 +  },
 +  6438: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -29845,12 +29395,12 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.b = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [576, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.b
 +    ⟦2-char-id⟧.e = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [576, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.e
    },
    6440: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -29861,14 +29411,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.b = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.b
 -  },
 -  6345: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.c = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.c
 +  },
 +  6341: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -29880,15 +29430,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 28 · Change · +9 / -9</summary>
+<summary>Hunk 28 · Change · +8 / -8</summary>
 
 ```diff
-@@ -752,21 +752,21 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
+@@ -755,18 +755,18 @@
+       icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.faFaceDizzy = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 512, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
 -  6443: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -29900,14 +29446,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.e = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.e
 -  },
 -  6446: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.b = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.c = ⟦2-char-id⟧.b
 +  },
 +  6456: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -29919,15 +29465,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 29 · Change · +2 / -2</summary>
+<summary>Hunk 29 · Change · +1 / -1</summary>
 
 ```diff
-@@ -777,10 +777,10 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
+@@ -780,7 +780,7 @@
+       icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.faFaceSmile = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 512, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
 -  6453: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -29940,18 +29482,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 30 · Change · +10 / -10</summary>
+<summary>Hunk 30 · Change · +9 / -9</summary>
 
 ```diff
-@@ -788,18 +788,18 @@
-     ⟦2-char-id⟧.d = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
+@@ -791,15 +791,15 @@
+       icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.d
    },
--  6455: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  6455: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6461);
 -    ⟦2-char-id⟧.e = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -29960,7 +29498,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.e, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
 -  },
 -  6461: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+  6470: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  6470: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6477);
 +    ⟦2-char-id⟧.d = {
 +      prefix: ⟦2-char-id⟧.prefix,
@@ -29977,20 +29515,16 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 31 · Change · +12 / -12</summary>
+<summary>Hunk 31 · Change · +11 / -11</summary>
 
 ```diff
-@@ -810,26 +810,26 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
+@@ -813,23 +813,23 @@
+       icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.faFeatherPointed = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 512, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
--  6469: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  6469: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6476);
-+  6483: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  6483: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6490);
      ⟦2-char-id⟧.e = {
        prefix: ⟦2-char-id⟧.prefix,
@@ -29998,7 +29532,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        icon: [⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData]
      }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.e, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
    },
--  6481: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  6481: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6484);
 -    ⟦2-char-id⟧.c = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -30007,7 +29541,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.c, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
 -  },
 -  6476: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+  6498: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  6498: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6504);
 +    ⟦2-char-id⟧.d = {
 +      prefix: ⟦2-char-id⟧.prefix,
@@ -30024,18 +29558,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 32 · Change · +67 / -67</summary>
+<summary>Hunk 32 · Change · +63 / -63</summary>
 
 ```diff
-@@ -840,103 +840,103 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [384, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [384, 512, VB, yB, ⟦2-char-id⟧]
+@@ -843,100 +843,100 @@
+       icon: [384, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.faFileLines = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 384, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
--  6488: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  6488: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6476);
 -    ⟦2-char-id⟧.c = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -30044,7 +29574,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.c, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
 -  },
 -  6491: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+  6512: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  6512: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6490);
 +    ⟦2-char-id⟧.e = {
 +      prefix: ⟦2-char-id⟧.prefix,
@@ -30060,14 +29590,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.d = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [448, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.d
 -  },
 -  6499: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.b = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [448, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.b
 +  },
 +  6527: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -30078,10 +29608,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.e = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [448, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.h = ⟦2-char-id⟧.e
 -  },
--  6504: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  6504: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6511);
 -    ⟦2-char-id⟧.c = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -30093,10 +29623,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +    ⟦2-char-id⟧.b = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [448, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.b
 +  },
-+  6535: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  6535: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6544);
 +    ⟦2-char-id⟧.d = {
 +      prefix: ⟦2-char-id⟧.prefix,
@@ -30112,14 +29642,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.c = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [448, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.d = ⟦2-char-id⟧.c
 -  },
 -  6522: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.b = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [448, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.d = ⟦2-char-id⟧.b
 +  },
 +  6556: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -30130,14 +29660,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.e = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.e
 -  },
 -  6525: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.d
 +  },
 +  6565: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -30148,14 +29678,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.d = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.d
 -  },
 -  6533: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.e = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.h = ⟦2-char-id⟧.e
 +  },
 +  6574: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -30166,14 +29696,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.d = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [576, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.d
 -  },
 -  6535: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.e = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [576, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.e
 +  },
 +  6577: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -30182,16 +29712,13 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        ⟦2-char-id⟧ = "f11b",
        ⟦2-char-id⟧ = "M448 64c106 0 192 86 192 192S554 448 448 448l-256 0C86 448 0 362 0 256S86 64 192 64l256 0zM192 176c-13.3 0-24 10.7-24 24l0 32-32 0c-13.3 0-24 10.7-24 24s10.7 24 24 24l32 0 0 32c0 13.3 10.7 24 24 24s24-10.7 24-24l0-32 32 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-32 0 0-32c0-13.3-10.7-24-24-24zm240 96a32 32 0 1 0 0 64 32 32 0 1 0 0-64zm64-96a32 32 0 1 0 0 64 32 32 0 1 0 0-64z";
 -    ⟦2-char-id⟧.e = {
--      prefix: "fas",
--      iconName: ⟦2-char-id⟧,
--      icon: [640, 512, FJ, UJ, ⟦2-char-id⟧]
++    ⟦2-char-id⟧.b = {
+       prefix: "fas",
+       iconName: ⟦2-char-id⟧,
+       icon: [640, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.i = ⟦2-char-id⟧.e
 -  },
 -  6544: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+    ⟦2-char-id⟧.b = {
-+      prefix: "fas",
-+      iconName: ⟦2-char-id⟧,
-+      icon: [640, 512, VB, yB, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.b
 +  },
 +  6581: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -30203,15 +29730,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 33 · Change · +2 / -2</summary>
+<summary>Hunk 33 · Change · +1 / -1</summary>
 
 ```diff
-@@ -947,10 +947,10 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
+@@ -950,7 +950,7 @@
+       icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.faGaugeHigh = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 512, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
 -  6254: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -30224,15 +29747,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 34 · Change · +20 / -20</summary>
+<summary>Hunk 34 · Change · +1 / -1</summary>
 
 ```diff
-@@ -961,42 +961,42 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
+@@ -964,7 +964,7 @@
+       icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.faGear = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 512, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
 -  6547: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -30240,14 +29759,21 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
      var ⟦2-char-id⟧ = [128142],
        ⟦2-char-id⟧ = "f3a5",
        ⟦2-char-id⟧ = "M116.7 33.8c4.5-6.1 11.7-9.8 19.3-9.8l240 0c7.6 0 14.8 3.6 19.3 9.8l112 152c6.8 9.2 6.1 21.9-1.5 30.4l-232 256c-4.5 5-11 7.9-17.8 7.9s-13.2-2.9-17.8-7.9l-232-256c-7.7-8.5-8.3-21.2-1.5-30.4l112-152zm38.5 39.8c-3.3 2.5-4.2 7-2.1 10.5L210.5 179.8 63.3 192c-4.1 .3-7.3 3.8-7.3 8s3.2 7.6 7.3 8l192 16c.4 0 .9 0 1.3 0l192-16c4.1-.3 7.3-3.8 7.3-8s-3.2-7.6-7.3-8l-147.2-12.3 57.4-95.6c2.1-3.5 1.2-8.1-2.1-10.5s-7.9-2-10.7 1L256 172.2 165.9 74.6c-2.8-3-7.4-3.4-10.7-1z";
-     ⟦2-char-id⟧.d = {
+```
+
+</details>
+
+<details>
+<summary>Hunk 35 · Change · +14 / -14</summary>
+
+```diff
+@@ -972,31 +972,31 @@
        prefix: "fas",
        iconName: "gem",
--      icon: [512, 512, ZJ, FJ, ⟦2-char-id⟧]
+       icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.d
 -  },
 -  6552: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+      icon: [512, 512, dB, VB, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.d
 +  },
 +  6587: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -30258,14 +29784,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.e = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.i = ⟦2-char-id⟧.e
 -  },
 -  6556: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.b = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.c = ⟦2-char-id⟧.b
 +  },
 +  6593: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -30274,16 +29800,13 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        ⟦2-char-id⟧ = "f6e3",
        ⟦2-char-id⟧ = "M246.9 18.3L271 3.8c21.6-13 46.3-19.8 71.5-19.8 36.8 0 72.2 14.6 98.2 40.7l63.9 63.9c15 15 23.4 35.4 23.4 56.6l0 30.9 19.7 19.7 0 0c15.6-15.6 40.9-15.6 56.6 0s15.6 40.9 0 56.6l-64 64c-15.6 15.6-40.9 15.6-56.6 0s-15.6-40.9 0-56.6L464 240 433.1 240c-21.2 0-41.6-8.4-56.6-23.4l-49.1-49.1c-15-15-23.4-35.4-23.4-56.6l0-12.7c0-11.2-5.9-21.7-15.5-27.4l-41.6-25c-10.4-6.2-10.4-21.2 0-27.4zM50.7 402.7l222.1-222.1 90.5 90.5-222.1 222.1c-25 25-65.5 25-90.5 0s-25-65.5 0-90.5z";
 -    ⟦2-char-id⟧.c = {
--      prefix: "fas",
--      iconName: ⟦2-char-id⟧,
--      icon: [640, 512, FJ, UJ, ⟦2-char-id⟧]
++    ⟦2-char-id⟧.d = {
+       prefix: "fas",
+       iconName: ⟦2-char-id⟧,
+       icon: [640, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.c
 -  },
 -  6565: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+    ⟦2-char-id⟧.d = {
-+      prefix: "fas",
-+      iconName: ⟦2-char-id⟧,
-+      icon: [640, 512, VB, yB, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.d
 +  },
 +  6601: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -30295,18 +29818,16 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 35 · Change · +4 / -4</summary>
+<summary>Hunk 36 · Change · +3 / -3</summary>
 
 ```diff
-@@ -1004,10 +1004,10 @@
-     ⟦2-char-id⟧.d = {
+@@ -1005,9 +1005,9 @@
        prefix: "fas",
        iconName: ⟦2-char-id⟧,
--      icon: [448, 512, FJ, UJ, ⟦2-char-id⟧]
+       icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.d
 -  },
 -  6511: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+      icon: [448, 512, VB, yB, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.h = ⟦2-char-id⟧.d
 +  },
 +  6544: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -30318,15 +29839,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 36 · Change · +60 / -60</summary>
+<summary>Hunk 37 · Change · +59 / -59</summary>
 
 ```diff
-@@ -1018,92 +1018,92 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [384, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [384, 512, VB, yB, ⟦2-char-id⟧]
+@@ -1021,89 +1021,89 @@
+       icon: [384, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.faHandFist = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 384, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
 -  6570: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -30338,14 +29855,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.e = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [576, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.e
 -  },
 -  6579: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.b = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [576, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.b
 +  },
 +  6610: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -30356,14 +29873,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.d = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.d
 -  },
 -  6588: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.c = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.c
 +  },
 +  6617: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -30374,14 +29891,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.d = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [576, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.d
 -  },
 -  6597: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.e = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [576, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.i = ⟦2-char-id⟧.e
 +  },
 +  6619: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -30392,14 +29909,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.d = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.d
 -  },
 -  6606: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.e = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.e
 +  },
 +  6625: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -30410,14 +29927,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.b = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.c = ⟦2-char-id⟧.b
 -  },
 -  6608: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.e = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.e
 +  },
 +  6627: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -30428,10 +29945,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.e = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.i = ⟦2-char-id⟧.e
 -  },
--  6615: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  6615: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6620);
 -    ⟦2-char-id⟧.d = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -30439,7 +29956,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      icon: [⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData]
 -    }, ⟦2-char-id⟧.h = ⟦2-char-id⟧.d, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
 -  },
--  6626: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  6626: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6244);
 -    ⟦2-char-id⟧.e = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -30451,10 +29968,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +    ⟦2-char-id⟧.d = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.d
 +  },
-+  6632: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  6632: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6635);
 +    ⟦2-char-id⟧.b = {
 +      prefix: ⟦2-char-id⟧.prefix,
@@ -30462,7 +29979,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      icon: [⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData]
 +    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.b, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
 +  },
-+  6642: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  6642: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6231);
 +    ⟦2-char-id⟧.c = {
 +      prefix: ⟦2-char-id⟧.prefix,
@@ -30479,15 +29996,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 37 · Change · +24 / -24</summary>
+<summary>Hunk 38 · Change · +23 / -23</summary>
 
 ```diff
-@@ -1114,40 +1114,40 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [384, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [384, 512, VB, yB, ⟦2-char-id⟧]
+@@ -1117,37 +1117,37 @@
+       icon: [384, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.faHourglass = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 384, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
 -  6636: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -30499,10 +30012,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.d = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [576, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.d
 -  },
--  6645: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  6645: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6630);
 -    ⟦2-char-id⟧.d = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -30514,10 +30027,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +    ⟦2-char-id⟧.b = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [576, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.b
 +  },
-+  6663: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  6663: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6651);
 +    ⟦2-char-id⟧.c = {
 +      prefix: ⟦2-char-id⟧.prefix,
@@ -30533,14 +30046,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.d = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.d
 -  },
 -  6620: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.c = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.c
 +  },
 +  6635: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -30552,15 +30065,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 38 · Change · +38 / -38</summary>
+<summary>Hunk 39 · Change · +37 / -37</summary>
 
 ```diff
-@@ -1158,62 +1158,62 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
+@@ -1161,59 +1161,59 @@
+       icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.faIcons = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 512, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
 -  6651: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -30572,14 +30081,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.c = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [448, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.c
 -  },
 -  6660: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.e = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [448, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.h = ⟦2-char-id⟧.e
 +  },
 +  6674: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -30590,10 +30099,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.d = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [576, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.d
 -  },
--  6669: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  6669: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6227);
 -    ⟦2-char-id⟧.b = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -30605,10 +30114,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +    ⟦2-char-id⟧.b = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [576, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.c = ⟦2-char-id⟧.b
 +  },
-+  6677: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  6677: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6215);
 +    ⟦2-char-id⟧.e = {
 +      prefix: ⟦2-char-id⟧.prefix,
@@ -30624,14 +30133,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.d = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [448, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.d
 -  },
 -  6680: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.b = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [448, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.b
 +  },
 +  6684: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -30642,14 +30151,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.e = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.h = ⟦2-char-id⟧.e
 -  },
 -  6684: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.d
 +  },
 +  6687: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -30661,18 +30170,16 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 39 · Change · +16 / -16</summary>
+<summary>Hunk 40 · Change · +12 / -12</summary>
 
 ```diff
-@@ -1221,32 +1221,32 @@
-     ⟦2-char-id⟧.e = {
+@@ -1222,31 +1222,31 @@
        prefix: "fas",
        iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
+       icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.e
 -  },
 -  6688: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.i = ⟦2-char-id⟧.e
 +  },
 +  6691: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -30681,14 +30188,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        ⟦2-char-id⟧ = "f0eb",
        ⟦2-char-id⟧ = "M292.9 384c7.3-22.3 21.9-42.5 38.4-59.9 32.7-34.4 52.7-80.9 52.7-132.1 0-106-86-192-192-192S0 86 0 192c0 51.2 20 97.7 52.7 132.1 16.5 17.4 31.2 37.6 38.4 59.9l201.7 0zM288 432l-192 0 0 16c0 44.2 35.8 80 80 80l32 0c44.2 0 80-35.8 80-80l0-16zM184 112c-39.8 0-72 32.2-72 72 0 13.3-10.7 24-24 24s-24-10.7-24-24c0-66.3 53.7-120 120-120 13.3 0 24 10.7 24 24s-10.7 24-24 24z";
 -    ⟦2-char-id⟧.e = {
--      prefix: "fas",
--      iconName: ⟦2-char-id⟧,
--      icon: [384, 512, FJ, UJ, ⟦2-char-id⟧]
--    }, ⟦2-char-id⟧.h = ⟦2-char-id⟧.e
 +    ⟦2-char-id⟧.d = {
-+      prefix: "fas",
-+      iconName: ⟦2-char-id⟧,
-+      icon: [384, 512, VB, yB, ⟦2-char-id⟧]
+       prefix: "fas",
+       iconName: ⟦2-char-id⟧,
+       icon: [384, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
+-    }, ⟦2-char-id⟧.h = ⟦2-char-id⟧.e
 +    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.d
    },
    6697: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -30699,14 +30203,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.d = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [576, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.d
 -  },
 -  6704: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.b = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [576, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.c = ⟦2-char-id⟧.b
 +  },
 +  6699: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -30718,18 +30222,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 40 · Change · +10 / -10</summary>
+<summary>Hunk 41 · Change · +9 / -9</summary>
 
 ```diff
-@@ -1257,18 +1257,18 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
+@@ -1260,15 +1260,15 @@
+       icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.faList = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 512, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
--  6707: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  6707: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6704);
 -    ⟦2-char-id⟧.e = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -30738,7 +30238,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    }, ⟦2-char-id⟧.i = ⟦2-char-id⟧.e, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
 -  },
 -  6713: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+  6704: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  6704: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6699);
 +    ⟦2-char-id⟧.c = {
 +      prefix: ⟦2-char-id⟧.prefix,
@@ -30755,32 +30255,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 41 · Change · +1 / -1</summary>
+<summary>Hunk 42 · Change · +12 / -12</summary>
 
 ```diff
-@@ -1279,7 +1279,7 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [384, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [384, 512, VB, yB, ⟦2-char-id⟧]
-     }, ⟦2-char-id⟧.faLocationCheck = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 384, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
-   },
-   6715: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-```
-
-</details>
-
-<details>
-<summary>Hunk 42 · Change · +16 / -16</summary>
-
-```diff
-@@ -1293,32 +1293,32 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [384, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [384, 512, VB, yB, ⟦2-char-id⟧]
+@@ -1296,29 +1296,29 @@
+       icon: [384, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.faLocationXmark = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 384, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
 -  6723: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -30790,16 +30269,13 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        ⟦2-char-id⟧ = "f023",
        ⟦2-char-id⟧ = "M128 96l0 64 128 0 0-64c0-35.3-28.7-64-64-64s-64 28.7-64 64zM64 160l0-64C64 25.3 121.3-32 192-32S320 25.3 320 96l0 64c35.3 0 64 28.7 64 64l0 224c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 224c0-35.3 28.7-64 64-64z";
 -    ⟦2-char-id⟧.e = {
--      prefix: "fas",
--      iconName: ⟦2-char-id⟧,
--      icon: [384, 512, FJ, UJ, ⟦2-char-id⟧]
++    ⟦2-char-id⟧.c = {
+       prefix: "fas",
+       iconName: ⟦2-char-id⟧,
+       icon: [384, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.e
 -  },
 -  6729: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+    ⟦2-char-id⟧.c = {
-+      prefix: "fas",
-+      iconName: ⟦2-char-id⟧,
-+      icon: [384, 512, VB, yB, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.d = ⟦2-char-id⟧.c
 +  },
 +  6733: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -30810,14 +30286,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.e = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [576, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.e
 -  },
 -  6731: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.c = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [576, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.c
 +  },
 +  6736: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -30829,18 +30305,13 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 43 · Change · +32 / -32</summary>
+<summary>Hunk 43 · Change · +30 / -30</summary>
 
 ```diff
-@@ -1329,42 +1329,42 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
+@@ -1333,38 +1333,38 @@
      }, ⟦2-char-id⟧.faMagnifyingGlass = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 512, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
--  6740: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+   6740: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6746);
 -    ⟦2-char-id⟧.c = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -30848,7 +30319,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      icon: [⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData]
 -    }, ⟦2-char-id⟧.d = ⟦2-char-id⟧.c, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
 -  },
--  6748: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  6748: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6713);
 -    ⟦2-char-id⟧.e = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -30856,8 +30327,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      icon: [⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData]
 -    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.e, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
 -  },
--  6753: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  6740: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  6753: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6749);
 +    ⟦2-char-id⟧.c = {
 +      prefix: ⟦2-char-id⟧.prefix,
@@ -30865,7 +30335,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      icon: [⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData]
 +    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.c, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
 +  },
-+  6755: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  6755: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6707);
 +    ⟦2-char-id⟧.b = {
 +      prefix: ⟦2-char-id⟧.prefix,
@@ -30873,7 +30343,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      icon: [⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData]
 +    }, ⟦2-char-id⟧.c = ⟦2-char-id⟧.b, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
 +  },
-+  6759: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  6759: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      var ⟦2-char-id⟧ = ⟦2-char-id⟧(6715);
 -    ⟦2-char-id⟧.e = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -30881,14 +30351,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      icon: [⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData]
 -    }, ⟦2-char-id⟧.h = ⟦2-char-id⟧.e, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
 -  },
--  6762: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  6762: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.c = {
 +      prefix: ⟦2-char-id⟧.prefix,
 +      iconName: ⟦2-char-id⟧.iconName,
 +      icon: [⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData]
 +    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.c, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
 +  },
-+  6767: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  6767: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      var ⟦2-char-id⟧ = ⟦2-char-id⟧(6715);
 -    ⟦2-char-id⟧.e = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -30912,18 +30382,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 44 · Change · +68 / -68</summary>
+<summary>Hunk 44 · Change · +67 / -67</summary>
 
 ```diff
-@@ -1375,100 +1375,100 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [448, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [448, 512, VB, yB, ⟦2-char-id⟧]
+@@ -1378,97 +1378,97 @@
+       icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.faMinus = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 448, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
--  6774: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  6774: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6781);
 -    ⟦2-char-id⟧.e = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -30932,7 +30398,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.e, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
 -  },
 -  6785: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+  6783: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  6783: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6789);
 +    ⟦2-char-id⟧.d = {
 +      prefix: ⟦2-char-id⟧.prefix,
@@ -30948,10 +30414,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.d = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.d
 -  },
--  6794: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  6794: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6283);
 -    ⟦2-char-id⟧.e = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -30963,10 +30429,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +    ⟦2-char-id⟧.e = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.h = ⟦2-char-id⟧.e
 +  },
-+  6801: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  6801: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6267);
 +    ⟦2-char-id⟧.e = {
 +      prefix: ⟦2-char-id⟧.prefix,
@@ -30982,14 +30448,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.c = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.c
 -  },
 -  6805: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.e = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.i = ⟦2-char-id⟧.e
 +  },
 +  6813: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -31000,10 +30466,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.e = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [576, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.e
 -  },
--  6808: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  6808: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6135);
 -    ⟦2-char-id⟧.b = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -31015,10 +30481,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +    ⟦2-char-id⟧.d = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [576, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.d
 +  },
-+  6816: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  6816: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6126);
 +    ⟦2-char-id⟧.d = {
 +      prefix: ⟦2-char-id⟧.prefix,
@@ -31034,14 +30500,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.e = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.e
 -  },
 -  6818: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.d
 +  },
 +  6822: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -31052,14 +30518,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.e = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.h = ⟦2-char-id⟧.e
 -  },
 -  6824: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.c = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.c
 +  },
 +  6831: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -31070,14 +30536,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.d = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.d
 -  },
 -  6484: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.e = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.e
 +  },
 +  6504: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -31089,15 +30555,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 45 · Change · +14 / -14</summary>
+<summary>Hunk 45 · Change · +9 / -9</summary>
 
 ```diff
-@@ -1479,31 +1479,31 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
+@@ -1482,28 +1482,28 @@
+       icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.faPaste = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 512, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
 -  6831: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -31107,16 +30569,13 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        ⟦2-char-id⟧ = "f04c",
        ⟦2-char-id⟧ = "M48 32C21.5 32 0 53.5 0 80L0 432c0 26.5 21.5 48 48 48l64 0c26.5 0 48-21.5 48-48l0-352c0-26.5-21.5-48-48-48L48 32zm224 0c-26.5 0-48 21.5-48 48l0 352c0 26.5 21.5 48 48 48l64 0c26.5 0 48-21.5 48-48l0-352c0-26.5-21.5-48-48-48l-64 0z";
 -    ⟦2-char-id⟧.c = {
--      prefix: "fas",
--      iconName: ⟦2-char-id⟧,
--      icon: [384, 512, FJ, UJ, ⟦2-char-id⟧]
++    ⟦2-char-id⟧.d = {
+       prefix: "fas",
+       iconName: ⟦2-char-id⟧,
+       icon: [384, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.c
 -  },
 -  6834: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+    ⟦2-char-id⟧.d = {
-+      prefix: "fas",
-+      iconName: ⟦2-char-id⟧,
-+      icon: [384, 512, VB, yB, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.d
 +  },
 +  6843: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -31127,11 +30586,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +    ⟦2-char-id⟧.d = {
        prefix: "fas",
        iconName: "pen",
--      icon: [512, 512, ZJ, FJ, ⟦2-char-id⟧]
+       icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.i = ⟦2-char-id⟧.e
 -  },
 -  6842: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+      icon: [512, 512, dB, VB, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.d
 +  },
 +  6846: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -31143,18 +30601,16 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 46 · Change · +4 / -4</summary>
+<summary>Hunk 46 · Change · +3 / -3</summary>
 
 ```diff
-@@ -1511,10 +1511,10 @@
-     ⟦2-char-id⟧.c = {
+@@ -1512,9 +1512,9 @@
        prefix: "fas",
        iconName: ⟦2-char-id⟧,
--      icon: [640, 512, FJ, UJ, ⟦2-char-id⟧]
+       icon: [640, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.c
 -  },
 -  6373: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+      icon: [640, 512, VB, yB, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.c
 +  },
 +  6376: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -31166,15 +30622,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 47 · Change · +2 / -2</summary>
+<summary>Hunk 47 · Change · +1 / -1</summary>
 
 ```diff
-@@ -1525,10 +1525,10 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
+@@ -1528,7 +1528,7 @@
+       icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.faPenToSquare = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 512, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
 -  6746: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -31187,15 +30639,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 48 · Change · +37 / -37</summary>
+<summary>Hunk 48 · Change · +36 / -36</summary>
 
 ```diff
-@@ -1539,65 +1539,65 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [384, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [384, 512, VB, yB, ⟦2-char-id⟧]
+@@ -1542,62 +1542,62 @@
+       icon: [384, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.faPerson = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 384, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
 -  6846: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -31207,14 +30655,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.e = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [576, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.i = ⟦2-char-id⟧.e
 -  },
 -  6855: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [576, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.d
 +  },
 +  6854: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -31225,14 +30673,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.b = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [576, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.c = ⟦2-char-id⟧.b
 -  },
 -  6859: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [576, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.d
 +  },
 +  6857: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -31243,14 +30691,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.b = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [576, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.c = ⟦2-char-id⟧.b
 -  },
 -  6865: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.c = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [576, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.d = ⟦2-char-id⟧.c
 +  },
 +  6864: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -31261,14 +30709,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.b = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.b
 -  },
 -  6869: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.c = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.c
 +  },
 +  6866: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -31279,14 +30727,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.c = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [448, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.d = ⟦2-char-id⟧.c
 -  },
 -  6049: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [448, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.d
 +  },
 +  6035: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -31298,20 +30746,16 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 49 · Change · +41 / -41</summary>
+<summary>Hunk 49 · Change · +40 / -40</summary>
 
 ```diff
-@@ -1607,67 +1607,67 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [448, 512, FJ, "2b", ⟦2-char-id⟧]
-+      icon: [448, 512, VB, "2b", ⟦2-char-id⟧]
+@@ -1610,64 +1610,64 @@
+       icon: [448, 512, ⟦2-char-id⟧, "2b", ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.faPlus = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 448, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = "2b", ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
--  6877: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  6877: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6231);
-+  6871: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  6871: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6220);
      ⟦2-char-id⟧.e = {
        prefix: ⟦2-char-id⟧.prefix,
@@ -31328,14 +30772,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.c = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.c
 -  },
 -  6887: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.b = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.d = ⟦2-char-id⟧.b
 +  },
 +  6877: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -31346,14 +30790,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.c = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [576, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.c
 -  },
 -  6891: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [576, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.d
 +  },
 +  6881: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -31364,10 +30808,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.c = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.c
 -  },
--  6900: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  6900: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6906);
 -    ⟦2-char-id⟧.b = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -31375,7 +30819,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      icon: [⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData]
 -    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.b, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
 -  },
--  6909: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  6909: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6118);
 -    ⟦2-char-id⟧.b = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -31387,10 +30831,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +    ⟦2-char-id⟧.e = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.h = ⟦2-char-id⟧.e
 +  },
-+  6890: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  6890: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6895);
 +    ⟦2-char-id⟧.b = {
 +      prefix: ⟦2-char-id⟧.prefix,
@@ -31398,7 +30842,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      icon: [⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData]
 +    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.b, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
 +  },
-+  6901: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  6901: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6109);
 +    ⟦2-char-id⟧.e = {
 +      prefix: ⟦2-char-id⟧.prefix,
@@ -31415,15 +30859,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 50 · Change · +17 / -17</summary>
+<summary>Hunk 50 · Change · +16 / -16</summary>
 
 ```diff
-@@ -1678,29 +1678,29 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
+@@ -1681,26 +1681,26 @@
+       icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.faRightFromBracket = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 512, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
 -  6926: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -31435,10 +30875,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.e = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.i = ⟦2-char-id⟧.e
 -  },
--  6928: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  6928: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6906);
 -    ⟦2-char-id⟧.c = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -31450,10 +30890,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +    ⟦2-char-id⟧.c = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.c
 +  },
-+  6912: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  6912: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6895);
 +    ⟦2-char-id⟧.b = {
 +      prefix: ⟦2-char-id⟧.prefix,
@@ -31470,15 +30910,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 51 · Change · +2 / -2</summary>
+<summary>Hunk 51 · Change · +1 / -1</summary>
 
 ```diff
-@@ -1711,10 +1711,10 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
+@@ -1714,7 +1714,7 @@
+       icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.faRotateRight = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 512, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
 -  6324: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -31491,18 +30927,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 52 · Change · +10 / -10</summary>
+<summary>Hunk 52 · Change · +9 / -9</summary>
 
 ```diff
-@@ -1725,18 +1725,18 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
+@@ -1728,15 +1728,15 @@
+       icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.faScissors = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 512, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
--  6934: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  6934: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6731);
 -    ⟦2-char-id⟧.d = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -31511,7 +30943,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.d, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
 -  },
 -  6942: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+  6919: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  6919: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6736);
 +    ⟦2-char-id⟧.c = {
 +      prefix: ⟦2-char-id⟧.prefix,
@@ -31528,18 +30960,22 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 53 · Change · +17 / -17</summary>
+<summary>Hunk 53 · Change · +16 / -16</summary>
 
 ```diff
-@@ -1747,26 +1747,26 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
+@@ -1750,23 +1750,23 @@
+       icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.faShield = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 512, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
--  6947: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
++  6935: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6942);
++    ⟦2-char-id⟧.c = {
++      prefix: ⟦2-char-id⟧.prefix,
++      iconName: ⟦2-char-id⟧.iconName,
++      icon: [⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData]
++    }, ⟦2-char-id⟧.d = ⟦2-char-id⟧.c, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
++  },
+   6947: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6952);
 -    ⟦2-char-id⟧.d = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -31547,9 +30983,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      icon: [⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData]
 -    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.d, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
 -  },
--  6959: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  6935: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
-     var ⟦2-char-id⟧ = ⟦2-char-id⟧(6942);
+-  6959: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
+-    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6942);
 -    ⟦2-char-id⟧.d = {
 -      prefix: ⟦2-char-id⟧.prefix,
 -      iconName: ⟦2-char-id⟧.iconName,
@@ -31557,13 +30992,6 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.d, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
 -  },
 -  6952: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+    ⟦2-char-id⟧.c = {
-+      prefix: ⟦2-char-id⟧.prefix,
-+      iconName: ⟦2-char-id⟧.iconName,
-+      icon: [⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData]
-+    }, ⟦2-char-id⟧.d = ⟦2-char-id⟧.c, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
-+  },
-+  6947: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6928);
 +    ⟦2-char-id⟧.e = {
 +      prefix: ⟦2-char-id⟧.prefix,
@@ -31580,15 +31008,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 54 · Change · +9 / -9</summary>
+<summary>Hunk 54 · Change · +5 / -5</summary>
 
 ```diff
-@@ -1777,21 +1777,21 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
+@@ -1780,18 +1780,18 @@
+       icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.faShieldHalved = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 512, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
 -  6966: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -31598,16 +31022,13 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        ⟦2-char-id⟧ = "f553",
        ⟦2-char-id⟧ = "M320.2 112c44.2 0 80-35.8 80-80l53.5 0c17 0 33.3 6.7 45.3 18.7L617.6 169.4c12.5 12.5 12.5 32.8 0 45.3l-50.7 50.7c-12.5 12.5-32.8 12.5-45.3 0l-41.4-41.4 0 224c0 35.3-28.7 64-64 64l-192 0c-35.3 0-64-28.7-64-64l0-224-41.4 41.4c-12.5 12.5-32.8 12.5-45.3 0L22.9 214.6c-12.5-12.5-12.5-32.8 0-45.3L141.5 50.7c12-12 28.3-18.7 45.3-18.7l53.5 0c0 44.2 35.8 80 80 80z";
 -    ⟦2-char-id⟧.c = {
--      prefix: "fas",
--      iconName: ⟦2-char-id⟧,
--      icon: [640, 512, FJ, UJ, ⟦2-char-id⟧]
++    ⟦2-char-id⟧.b = {
+       prefix: "fas",
+       iconName: ⟦2-char-id⟧,
+       icon: [640, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.c
 -  },
 -  6971: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+    ⟦2-char-id⟧.b = {
-+      prefix: "fas",
-+      iconName: ⟦2-char-id⟧,
-+      icon: [640, 512, VB, yB, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.d = ⟦2-char-id⟧.b
 +  },
 +  6962: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -31619,17 +31040,16 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 55 · Change · +20 / -20</summary>
+<summary>Hunk 55 · Change · +19 / -19</summary>
 
 ```diff
-@@ -1799,26 +1799,26 @@
-     ⟦2-char-id⟧.e = {
+@@ -1800,25 +1800,25 @@
        prefix: "fas",
        iconName: ⟦2-char-id⟧,
--      icon: [640, 512, FJ, UJ, ⟦2-char-id⟧]
+       icon: [640, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.e
 -  },
--  6973: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  6973: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6196);
 -    ⟦2-char-id⟧.e = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -31637,7 +31057,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      icon: [⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData]
 -    }, ⟦2-char-id⟧.h = ⟦2-char-id⟧.e, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
 -  },
--  6980: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  6980: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6918);
 -    ⟦2-char-id⟧.c = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -31646,10 +31066,9 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.c, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
 -  },
 -  6986: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+      icon: [640, 512, VB, yB, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.e
 +  },
-+  6968: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  6968: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6182);
 +    ⟦2-char-id⟧.e = {
 +      prefix: ⟦2-char-id⟧.prefix,
@@ -31657,7 +31076,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      icon: [⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData]
 +    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.e, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
 +  },
-+  6972: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  6972: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6903);
 +    ⟦2-char-id⟧.b = {
 +      prefix: ⟦2-char-id⟧.prefix,
@@ -31674,17 +31093,16 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 56 · Change · +12 / -12</summary>
+<summary>Hunk 56 · Change · +11 / -11</summary>
 
 ```diff
-@@ -1826,18 +1826,18 @@
-     ⟦2-char-id⟧.b = {
+@@ -1827,17 +1827,17 @@
        prefix: "fas",
        iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
+       icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.d = ⟦2-char-id⟧.b
 -  },
--  6995: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  6995: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6446);
 -    ⟦2-char-id⟧.d = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -31693,10 +31111,9 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.d, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
 -  },
 -  6998: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.b
 +  },
-+  6979: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  6979: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6456);
 +    ⟦2-char-id⟧.e = {
 +      prefix: ⟦2-char-id⟧.prefix,
@@ -31713,15 +31130,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 57 · Change · +9 / -9</summary>
+<summary>Hunk 57 · Change · +8 / -8</summary>
 
 ```diff
-@@ -1845,21 +1845,21 @@
-     ⟦2-char-id⟧.b = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
+@@ -1848,18 +1848,18 @@
+       icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.b
    },
 -  7004: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -31733,14 +31146,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.e = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.h = ⟦2-char-id⟧.e
 -  },
 -  7012: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.d
 +  },
 +  7003: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -31752,15 +31165,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 58 · Change · +2 / -2</summary>
+<summary>Hunk 58 · Change · +1 / -1</summary>
 
 ```diff
-@@ -1867,10 +1867,10 @@
-     ⟦2-char-id⟧.c = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [448, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [448, 512, VB, yB, ⟦2-char-id⟧]
+@@ -1870,7 +1870,7 @@
+       icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.c
    },
 -  6781: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -31773,15 +31182,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 59 · Change · +63 / -63</summary>
+<summary>Hunk 59 · Change · +62 / -62</summary>
 
 ```diff
-@@ -1881,97 +1881,97 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [448, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [448, 512, VB, yB, ⟦2-char-id⟧]
+@@ -1884,94 +1884,94 @@
+       icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.faSquareMinus = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 448, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
 -  7016: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -31793,14 +31198,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.d = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [576, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.h = ⟦2-char-id⟧.d
 -  },
 -  7010: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.e = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [576, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.e
 +  },
 +  6995: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -31811,14 +31216,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.b = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.b
 -  },
 -  7023: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.h = ⟦2-char-id⟧.d
 +  },
 +  7015: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -31829,10 +31234,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.d = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.d
 -  },
--  7029: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  7029: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6768);
 -    ⟦2-char-id⟧.b = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -31844,10 +31249,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +    ⟦2-char-id⟧.b = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.c = ⟦2-char-id⟧.b
 +  },
-+  7020: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  7020: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6776);
 +    ⟦2-char-id⟧.d = {
 +      prefix: ⟦2-char-id⟧.prefix,
@@ -31863,14 +31268,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.d = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [576, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.d
 -  },
 -  7039: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.e = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [576, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.e
 +  },
 +  7027: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -31881,10 +31286,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.b = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.b
 -  },
--  7042: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  7042: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6118);
 -    ⟦2-char-id⟧.b = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -31892,7 +31297,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      icon: [⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData]
 -    }, ⟦2-char-id⟧.c = ⟦2-char-id⟧.b, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
 -  },
--  7044: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  7044: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6544);
 -    ⟦2-char-id⟧.b = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -31900,15 +31305,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      icon: [⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData]
 -    }, ⟦2-char-id⟧.c = ⟦2-char-id⟧.b, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
 -  },
--  7052: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  7052: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6544);
 +    ⟦2-char-id⟧.c = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.c
 +  },
-+  7035: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  7035: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6109);
 +    ⟦2-char-id⟧.b = {
 +      prefix: ⟦2-char-id⟧.prefix,
@@ -31916,7 +31321,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      icon: [⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData]
 +    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.b, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
 +  },
-+  7041: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  7041: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6581);
      ⟦2-char-id⟧.b = {
        prefix: ⟦2-char-id⟧.prefix,
@@ -31925,7 +31330,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
      }, ⟦2-char-id⟧.d = ⟦2-char-id⟧.b, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
    },
 -  7058: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+  7047: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  7047: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6581);
 +    ⟦2-char-id⟧.e = {
 +      prefix: ⟦2-char-id⟧.prefix,
@@ -31942,18 +31347,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 60 · Change · +10 / -10</summary>
+<summary>Hunk 60 · Change · +9 / -9</summary>
 
 ```diff
-@@ -1979,18 +1979,18 @@
-     ⟦2-char-id⟧.c = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
+@@ -1982,15 +1982,15 @@
+       icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.d = ⟦2-char-id⟧.c
    },
--  7066: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  7066: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(7069);
 -    ⟦2-char-id⟧.c = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -31962,7 +31363,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.c, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
 -  },
 -  7069: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+  7063: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  7063: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(7065);
 +    ⟦2-char-id⟧.e = {
 +      prefix: ⟦2-char-id⟧.prefix,
@@ -31979,15 +31380,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 61 · Change · +2 / -2</summary>
+<summary>Hunk 61 · Change · +1 / -1</summary>
 
 ```diff
-@@ -2001,10 +2001,10 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [448, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [448, 512, VB, yB, ⟦2-char-id⟧]
+@@ -2004,7 +2004,7 @@
+       icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.faTrashCan = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 448, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
 -  6410: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -32000,15 +31397,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 62 · Change · +42 / -42</summary>
+<summary>Hunk 62 · Change · +38 / -38</summary>
 
 ```diff
-@@ -2015,76 +2015,76 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
+@@ -2018,73 +2018,73 @@
+       icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.faTriangleExclamation = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 512, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
 -  7076: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -32020,14 +31413,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.c = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.c
 -  },
 -  7079: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.e = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.i = ⟦2-char-id⟧.e
 +  },
 +  7078: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -32038,14 +31431,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.d = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [448, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.h = ⟦2-char-id⟧.d
 -  },
 -  7088: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.c = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [448, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.c
 +  },
 +  7080: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -32056,14 +31449,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.b = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [448, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.c = ⟦2-char-id⟧.b
 -  },
 -  7090: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.e = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [448, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.e
 +  },
 +  7088: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -32074,14 +31467,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.e = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [448, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.h = ⟦2-char-id⟧.e
 -  },
 -  7099: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.b = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [448, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.d = ⟦2-char-id⟧.b
 +  },
 +  7093: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -32092,12 +31485,12 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.d = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [448, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.d
 +    ⟦2-char-id⟧.b = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [448, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.d = ⟦2-char-id⟧.b
    },
    7101: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -32106,16 +31499,13 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        ⟦2-char-id⟧ = "f4fc",
        ⟦2-char-id⟧ = "M286 304c98.5 0 178.3 79.8 178.3 178.3 0 16.4-13.3 29.7-29.7 29.7L78 512c-16.4 0-29.7-13.3-29.7-29.7 0-98.5 79.8-178.3 178.3-178.3l59.4 0zM585.7 105.9c7.8-10.7 22.8-13.1 33.5-5.3s13.1 22.8 5.3 33.5L522.1 274.9c-4.2 5.7-10.7 9.4-17.7 9.8s-14-2.2-18.9-7.3l-46.4-48c-9.2-9.5-9-24.7 .6-33.9 9.5-9.2 24.7-8.9 33.9 .6l26.5 27.4 85.6-117.7zM256.3 248a120 120 0 1 1 0-240 120 120 0 1 1 0 240z";
 -    ⟦2-char-id⟧.e = {
--      prefix: "fas",
--      iconName: ⟦2-char-id⟧,
--      icon: [640, 512, FJ, UJ, ⟦2-char-id⟧]
++    ⟦2-char-id⟧.c = {
+       prefix: "fas",
+       iconName: ⟦2-char-id⟧,
+       icon: [640, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.h = ⟦2-char-id⟧.e
 -  },
 -  7106: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+    ⟦2-char-id⟧.c = {
-+      prefix: "fas",
-+      iconName: ⟦2-char-id⟧,
-+      icon: [640, 512, VB, yB, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.c
 +  },
 +  7110: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -32127,17 +31517,16 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 63 · Change · +12 / -12</summary>
+<summary>Hunk 63 · Change · +11 / -11</summary>
 
 ```diff
-@@ -2092,18 +2092,18 @@
-     ⟦2-char-id⟧.e = {
+@@ -2093,17 +2093,17 @@
        prefix: "fas",
        iconName: ⟦2-char-id⟧,
--      icon: [576, 512, FJ, UJ, ⟦2-char-id⟧]
+       icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.h = ⟦2-char-id⟧.e
 -  },
--  7113: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  7113: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(7119);
 -    ⟦2-char-id⟧.b = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -32146,10 +31535,9 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    }, ⟦2-char-id⟧.d = ⟦2-char-id⟧.b, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
 -  },
 -  7119: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+      icon: [576, 512, VB, yB, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.e
 +  },
-+  7117: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  7117: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(7126);
 +    ⟦2-char-id⟧.e = {
 +      prefix: ⟦2-char-id⟧.prefix,
@@ -32166,15 +31554,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 64 · Change · +2 / -2</summary>
+<summary>Hunk 64 · Change · +1 / -1</summary>
 
 ```diff
-@@ -2114,10 +2114,10 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [576, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [576, 512, VB, yB, ⟦2-char-id⟧]
+@@ -2117,7 +2117,7 @@
+       icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.faUserGroup = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 576, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
 -  7127: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -32187,15 +31571,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 65 · Change · +2 / -2</summary>
+<summary>Hunk 65 · Change · +1 / -1</summary>
 
 ```diff
-@@ -2128,10 +2128,10 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [576, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [576, 512, VB, yB, ⟦2-char-id⟧]
+@@ -2131,7 +2131,7 @@
+       icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.faUserGroupCrown = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 576, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
 -  7130: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -32208,18 +31588,16 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 66 · Change · +4 / -4</summary>
+<summary>Hunk 66 · Change · +3 / -3</summary>
 
 ```diff
-@@ -2139,10 +2139,10 @@
-     ⟦2-char-id⟧.c = {
+@@ -2140,9 +2140,9 @@
        prefix: "fas",
        iconName: ⟦2-char-id⟧,
--      icon: [640, 512, FJ, UJ, ⟦2-char-id⟧]
+       icon: [640, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.c
 -  },
 -  7132: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+      icon: [640, 512, VB, yB, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.c
 +  },
 +  7148: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -32231,18 +31609,16 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 67 · Change · +26 / -26</summary>
+<summary>Hunk 67 · Change · +25 / -25</summary>
 
 ```diff
-@@ -2150,40 +2150,40 @@
-     ⟦2-char-id⟧.c = {
+@@ -2151,39 +2151,39 @@
        prefix: "fas",
        iconName: ⟦2-char-id⟧,
--      icon: [640, 512, FJ, UJ, ⟦2-char-id⟧]
+       icon: [640, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.c
 -  },
 -  7137: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+      icon: [640, 512, VB, yB, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.c
 +  },
 +  7154: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -32253,14 +31629,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.d = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [576, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.d
 -  },
 -  7139: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.e = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [576, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.h = ⟦2-char-id⟧.e
 +  },
 +  7163: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -32271,10 +31647,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.e = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [576, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.i = ⟦2-char-id⟧.e
 -  },
--  7144: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  7144: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(7127);
 -    ⟦2-char-id⟧.b = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -32286,10 +31662,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +    ⟦2-char-id⟧.d = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [576, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.h = ⟦2-char-id⟧.d
 +  },
-+  7171: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  7171: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(7135);
 +    ⟦2-char-id⟧.d = {
 +      prefix: ⟦2-char-id⟧.prefix,
@@ -32306,18 +31682,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 68 · Change · +10 / -10</summary>
+<summary>Hunk 68 · Change · +9 / -9</summary>
 
 ```diff
-@@ -2194,18 +2194,18 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [576, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [576, 512, VB, yB, ⟦2-char-id⟧]
+@@ -2197,15 +2197,15 @@
+       icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.faVideo = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 576, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
--  7156: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  7156: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(7147);
 -    ⟦2-char-id⟧.b = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -32326,7 +31698,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.b, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
 -  },
 -  7163: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+  7184: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  7184: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(7177);
 +    ⟦2-char-id⟧.e = {
 +      prefix: ⟦2-char-id⟧.prefix,
@@ -32343,18 +31715,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 69 · Change · +10 / -10</summary>
+<summary>Hunk 69 · Change · +9 / -9</summary>
 
 ```diff
-@@ -2216,18 +2216,18 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
+@@ -2219,15 +2219,15 @@
+       icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.faVolume = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 512, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
--  7165: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  7165: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(7171);
 -    ⟦2-char-id⟧.e = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -32363,7 +31731,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    }, ⟦2-char-id⟧.h = ⟦2-char-id⟧.e, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
 -  },
 -  7171: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+  7191: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  7191: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(7199);
 +    ⟦2-char-id⟧.e = {
 +      prefix: ⟦2-char-id⟧.prefix,
@@ -32380,18 +31748,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 70 · Change · +10 / -10</summary>
+<summary>Hunk 70 · Change · +9 / -9</summary>
 
 ```diff
-@@ -2238,18 +2238,18 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [448, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [448, 512, VB, yB, ⟦2-char-id⟧]
+@@ -2241,15 +2241,15 @@
+       icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.faVolumeLow = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 448, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
--  7180: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  7180: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(7163);
 -    ⟦2-char-id⟧.e = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -32400,7 +31764,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.e, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
 -  },
 -  7185: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+  7207: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  7207: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(7186);
 +    ⟦2-char-id⟧.c = {
 +      prefix: ⟦2-char-id⟧.prefix,
@@ -32417,17 +31781,16 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 71 · Change · +12 / -12</summary>
+<summary>Hunk 71 · Change · +11 / -11</summary>
 
 ```diff
-@@ -2257,18 +2257,18 @@
-     ⟦2-char-id⟧.e = {
+@@ -2258,17 +2258,17 @@
        prefix: "fas",
        iconName: ⟦2-char-id⟧,
--      icon: [576, 512, FJ, UJ, ⟦2-char-id⟧]
+       icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.h = ⟦2-char-id⟧.e
 -  },
--  7187: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  7187: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6410);
 -    ⟦2-char-id⟧.d = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -32436,10 +31799,9 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.d, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
 -  },
 -  7192: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+      icon: [576, 512, VB, yB, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.e
 +  },
-+  7219: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  7219: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6414);
 +    ⟦2-char-id⟧.e = {
 +      prefix: ⟦2-char-id⟧.prefix,
@@ -32456,18 +31818,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 72 · Change · +46 / -46</summary>
+<summary>Hunk 72 · Change · +41 / -41</summary>
 
 ```diff
-@@ -2279,68 +2279,68 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [576, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [576, 512, VB, yB, ⟦2-char-id⟧]
+@@ -2282,65 +2282,65 @@
+       icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.faWifi = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 576, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
--  7200: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  7200: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(7192);
 -    ⟦2-char-id⟧.c = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -32475,7 +31833,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      icon: [⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData]
 -    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.c, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
 -  },
--  7208: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  7208: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(7192);
 -    ⟦2-char-id⟧.b = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -32484,7 +31842,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    }, ⟦2-char-id⟧.d = ⟦2-char-id⟧.b, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
 -  },
 -  7216: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+  7236: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  7236: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(7227);
 +    ⟦2-char-id⟧.e = {
 +      prefix: ⟦2-char-id⟧.prefix,
@@ -32492,7 +31850,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      icon: [⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData]
 +    }, ⟦2-char-id⟧.i = ⟦2-char-id⟧.e, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
 +  },
-+  7240: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  7240: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(7227);
 +    ⟦2-char-id⟧.e = {
 +      prefix: ⟦2-char-id⟧.prefix,
@@ -32508,14 +31866,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧.b = {
 -      prefix: "fas",
 -      iconName: ⟦2-char-id⟧,
--      icon: [576, 512, FJ, UJ, ⟦2-char-id⟧]
+-      icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.b
 -  },
 -  7221: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.e = {
 +      prefix: "fas",
 +      iconName: ⟦2-char-id⟧,
-+      icon: [576, 512, VB, yB, ⟦2-char-id⟧]
++      icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.h = ⟦2-char-id⟧.e
 +  },
 +  7249: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -32525,11 +31883,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +    ⟦2-char-id⟧.d = {
        prefix: "fas",
        iconName: "x",
--      icon: [384, 512, ZJ, "58", ⟦2-char-id⟧]
+       icon: [384, 512, ⟦2-char-id⟧, "58", ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.c = ⟦2-char-id⟧.b
 -  },
 -  7230: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
-+      icon: [384, 512, dB, "58", ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.d
 +  },
 +  7258: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -32538,12 +31895,13 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        ⟦2-char-id⟧ = "f00d",
        ⟦2-char-id⟧ = "M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z";
 -    ⟦2-char-id⟧.e = {
--      prefix: "fas",
--      iconName: ⟦2-char-id⟧,
--      icon: [384, 512, FJ, UJ, ⟦2-char-id⟧]
++    ⟦2-char-id⟧.d = {
+       prefix: "fas",
+       iconName: ⟦2-char-id⟧,
+       icon: [384, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.e
 -  },
--  7235: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  7235: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6155);
 -    ⟦2-char-id⟧.d = {
 -      prefix: ⟦2-char-id⟧.prefix,
@@ -32551,14 +31909,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      icon: [⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData]
 -    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.d, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
 -  },
--  7244: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+    ⟦2-char-id⟧.d = {
-+      prefix: "fas",
-+      iconName: ⟦2-char-id⟧,
-+      icon: [384, 512, VB, yB, ⟦2-char-id⟧]
+-  7244: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.d
 +  },
-+  7265: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  7265: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6145);
 +    ⟦2-char-id⟧.c = {
 +      prefix: ⟦2-char-id⟧.prefix,
@@ -32566,7 +31920,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      icon: [⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData]
 +    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.c, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
 +  },
-+  7273: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  7273: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        c: () => ⟦2-char-id⟧,
 -      e: () => ⟦2-char-id⟧
@@ -32581,12 +31935,12 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary><code>bundles/staging.bloxd.io/chunks/js/129.js</code> · modified · +158 / -158</summary>
+<summary><code>bundles/staging.bloxd.io/chunks/js/129.js</code> · modified · +152 / -152</summary>
 
 JavaScript comparison masks only two-character identifiers. Strings, comments, member properties, object keys, and all other source changes remain visible.
 
 <details>
-<summary>Hunk 1 · Change · +5 / -5</summary>
+<summary>Hunk 1 · Change · +4 / -4</summary>
 
 ```diff
 @@ -1,18 +1,18 @@
@@ -32603,9 +31957,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +    ⟦2-char-id⟧.b = {
        prefix: "fab",
        iconName: ⟦2-char-id⟧,
--      icon: [576, 512, FJ, UJ, ⟦2-char-id⟧]
+       icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.h = ⟦2-char-id⟧.d
-+      icon: [576, 512, VB, yB, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.b
    },
 -  6155: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -32618,15 +31971,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 2 · Change · +26 / -26</summary>
+<summary>Hunk 2 · Change · +21 / -21</summary>
 
 ```diff
-@@ -23,72 +23,72 @@
-     ⟦2-char-id⟧.definition = {
-       prefix: "fas",
-       iconName: ⟦2-char-id⟧,
--      icon: [448, 512, FJ, UJ, ⟦2-char-id⟧]
-+      icon: [448, 512, VB, yB, ⟦2-char-id⟧]
+@@ -26,69 +26,69 @@
+       icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
      }, ⟦2-char-id⟧.faBolt = ⟦2-char-id⟧.definition, ⟦2-char-id⟧.prefix = "fas", ⟦2-char-id⟧.iconName = ⟦2-char-id⟧, ⟦2-char-id⟧.width = 448, ⟦2-char-id⟧.height = 512, ⟦2-char-id⟧.ligatures = ⟦2-char-id⟧, ⟦2-char-id⟧.unicode = ⟦2-char-id⟧, ⟦2-char-id⟧.svgPathData = ⟦2-char-id⟧, ⟦2-char-id⟧.aliases = ⟦2-char-id⟧
    },
 -  6865: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -32639,9 +31988,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +    ⟦2-char-id⟧.c = {
        prefix: "fas",
        iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
+       icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.b
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.f = ⟦2-char-id⟧.c
    },
 -  7004: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -32654,9 +32002,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +    ⟦2-char-id⟧.d = {
        prefix: "fas",
        iconName: ⟦2-char-id⟧,
--      icon: [512, 512, FJ, UJ, ⟦2-char-id⟧]
+       icon: [512, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.h = ⟦2-char-id⟧.e
-+      icon: [512, 512, VB, yB, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.d
    },
 -  7090: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -32669,9 +32016,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +    ⟦2-char-id⟧.b = {
        prefix: "fas",
        iconName: ⟦2-char-id⟧,
--      icon: [448, 512, FJ, UJ, ⟦2-char-id⟧]
+       icon: [448, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.h = ⟦2-char-id⟧.e
-+      icon: [448, 512, VB, yB, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.d = ⟦2-char-id⟧.b
    },
 -  7216: (⟦2-char-id⟧, ⟦2-char-id⟧) => {
@@ -32684,15 +32030,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +    ⟦2-char-id⟧.e = {
        prefix: "fas",
        iconName: ⟦2-char-id⟧,
--      icon: [576, 512, FJ, UJ, ⟦2-char-id⟧]
+       icon: [576, 512, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧]
 -    }, ⟦2-char-id⟧.e = ⟦2-char-id⟧.b
-+      icon: [576, 512, VB, yB, ⟦2-char-id⟧]
 +    }, ⟦2-char-id⟧.h = ⟦2-char-id⟧.e
    },
--  7235: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  7235: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6155);
 -    ⟦2-char-id⟧.d = {
-+  7265: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  7265: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(6145);
 +    ⟦2-char-id⟧.c = {
        prefix: ⟦2-char-id⟧.prefix,
@@ -32701,8 +32046,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.d, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
 +    }, ⟦2-char-id⟧.g = ⟦2-char-id⟧.c, ⟦2-char-id⟧.prefix, ⟦2-char-id⟧.iconName, ⟦2-char-id⟧.width, ⟦2-char-id⟧.height, ⟦2-char-id⟧.aliases, ⟦2-char-id⟧.unicode, ⟦2-char-id⟧.svgPathData, ⟦2-char-id⟧.aliases
    },
--  39508: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  39470: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  39508: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  39470: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧,
 -      d: () => ⟦2-char-id⟧
@@ -32757,8 +32102,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return null !== (⟦2-char-id⟧ = null === (⟦2-char-id⟧ = ⟦2-char-id⟧) || void 0 === ⟦2-char-id⟧ ? void 0 : ⟦2-char-id⟧.has(⟦2-char-id⟧)) && void 0 !== ⟦2-char-id⟧ && ⟦2-char-id⟧
      }
    },
--  39499: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  39467: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  39499: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  39467: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧,
 -      h: () => ⟦2-char-id⟧
@@ -32795,8 +32140,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        })), ⟦2-char-id⟧
      }
    },
--  41244: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  41287: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  41244: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  41287: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        c: () => ⟦2-char-id⟧,
        e: () => ⟦2-char-id⟧,
@@ -33052,8 +32397,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }
      }
    },
--  41242: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  41278: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  41242: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  41278: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧,
 -      e: () => ⟦2-char-id⟧
@@ -33668,8 +33013,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 130;
  export const ids = [130];
  export const modules = {
--  7400: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  7406: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  7400: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  7406: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        encodeBinaryMessageWithMetricsCookies: () => ⟦2-char-id⟧
      });
@@ -33697,8 +33042,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 131;
  export const ids = [131];
  export const modules = {
--  7406: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  7413: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  7406: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  7413: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        BloxdDiscordSDK: () => ⟦2-char-id⟧,
        DiscordLoginCancelledError: () => ⟦2-char-id⟧,
@@ -33852,8 +33197,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 132;
  export const ids = [132];
  export const modules = {
--  7412: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  7420: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  7412: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  7420: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        BloxdFirebaseSdk: () => ⟦2-char-id⟧
      });
@@ -34075,8 +33420,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 133;
  export const ids = [133];
  export const modules = {
--  7420: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  7426: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  7420: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  7426: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        BloxdDiscordActivitySdk: () => ⟦2-char-id⟧
      });

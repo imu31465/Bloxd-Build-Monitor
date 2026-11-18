@@ -5,7 +5,7 @@
 - Files in this part: 4
 
 <details>
-<summary><code>bundles/staging.bloxd.io/chunks/js/186.js</code> · modified · +302 / -302</summary>
+<summary><code>bundles/staging.bloxd.io/chunks/js/186.js</code> · modified · +296 / -296</summary>
 
 JavaScript comparison masks only two-character identifiers. Strings, comments, member properties, object keys, and all other source changes remain visible.
 
@@ -17,10 +17,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 186;
  export const ids = [186];
  export const modules = {
--  38076: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  38076: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
-+  38065: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  38065: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      e: () => ⟦2-char-id⟧
      });
@@ -38,10 +38,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }
      }
    },
--  37633: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  37633: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧,
-+  37614: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  37614: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      c: () => ⟦2-char-id⟧,
        g: () => ⟦2-char-id⟧
@@ -59,8 +59,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧ ? ⟦2-char-id⟧.get(⟦2-char-id⟧) : void 0
      }
    },
--  38566: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  38509: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  38566: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  38509: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        b: () => ⟦2-char-id⟧
      });
@@ -95,8 +95,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }
      }
    },
--  37496: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  37458: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  37496: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  37458: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      function ⟦2-char-id⟧(⟦2-char-id⟧) {
        switch (⟦2-char-id⟧.kind) {
          case void 0:
@@ -120,11 +120,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
      const ⟦2-char-id⟧ = 4,
        ⟦2-char-id⟧ = 3
    },
--  38103: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  38103: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧,
 -      f: () => ⟦2-char-id⟧
-+  38093: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  38093: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      c: () => ⟦2-char-id⟧,
 +      e: () => ⟦2-char-id⟧
@@ -161,10 +161,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }
      }
    },
--  38573: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  38573: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
-+  38518: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  38518: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      b: () => ⟦2-char-id⟧
      });
@@ -190,10 +190,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      throw new Error(`Invalid block name. You sent ${BB}. The only valid block names are 'Air' and those contained within the blockMetadata.ts file`)
      }
    },
--  38162: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  38162: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
-+  38149: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  38149: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      b: () => ⟦2-char-id⟧
      });
@@ -214,11 +214,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }
      }
    },
--  38120: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  38120: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧,
 -      f: () => ⟦2-char-id⟧,
-+  38106: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  38106: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      A: () => ⟦2-char-id⟧,
 +      D: () => ⟦2-char-id⟧,
@@ -267,11 +267,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧(⟦2-char-id⟧[0] - ⟦2-char-id⟧[0], ⟦2-char-id⟧[1] - ⟦2-char-id⟧[1], ⟦2-char-id⟧[2] - ⟦2-char-id⟧[2], ⟦2-char-id⟧)
      }
    },
--  38157: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  38157: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧,
 -      f: () => ⟦2-char-id⟧
-+  38140: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  38140: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      b: () => ⟦2-char-id⟧,
 +      c: () => ⟦2-char-id⟧
@@ -302,10 +302,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      return ⟦2-char-id⟧.pU = 0, ⟦2-char-id⟧.kU = 0, ⟦2-char-id⟧.pointedAt = void 0, void 0 !== ⟦2-char-id⟧ ? ⟦2-char-id⟧ ? (⟦2-char-id⟧.pointedAt = ⟦2-char-id⟧, ⟦2-char-id⟧) : (0, ⟦2-char-id⟧.A)(⟦2-char-id⟧.heading) : ⟦2-char-id⟧ ? (⟦2-char-id⟧.pU = ⟦2-char-id⟧, ⟦2-char-id⟧.kU = ⟦2-char-id⟧, ⟦2-char-id⟧) : (0, ⟦2-char-id⟧.A)(⟦2-char-id⟧ + ⟦2-char-id⟧)
      }
    },
--  38134: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  38134: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
-+  38117: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  38117: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      b: () => ⟦2-char-id⟧
      });
@@ -1175,8 +1175,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }
      }
    },
--  38117: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  38102: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  38117: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  38102: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        d: () => ⟦2-char-id⟧,
 -      g: () => ⟦2-char-id⟧,
@@ -1216,8 +1216,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      return ⟦2-char-id⟧.heading = (0, ⟦2-char-id⟧.A)(⟦2-char-id⟧.heading + ⟦2-char-id⟧ * ⟦2-char-id⟧), ⟦2-char-id⟧.pitch = ⟦2-char-id⟧.pitch + (⟦2-char-id⟧.pitch - ⟦2-char-id⟧.pitch) * ⟦2-char-id⟧, ⟦2-char-id⟧.fov = ⟦2-char-id⟧.fov + (⟦2-char-id⟧.fov - ⟦2-char-id⟧.fov) * ⟦2-char-id⟧, ⟦2-char-id⟧
      }
    },
--  38148: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  38134: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  38148: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  38134: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        b: () => ⟦2-char-id⟧,
 -      c: () => ⟦2-char-id⟧
@@ -1322,10 +1322,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 45 · Change · +6 / -6</summary>
+<summary>Hunk 45 · Change · +4 / -4</summary>
 
 ```diff
-@@ -1097,13 +1097,13 @@
+@@ -1097,12 +1097,12 @@
      function ⟦2-char-id⟧(⟦2-char-id⟧) {
        var ⟦2-char-id⟧;
        if ("object" !== typeof ⟦2-char-id⟧ || null === ⟦2-char-id⟧) return;
@@ -1335,16 +1335,13 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +        ⟦2-char-id⟧ = ⟦2-char-id⟧.m.minTransitionFadeMs;
        return {
 -        colour: "string" === typeof ⟦2-char-id⟧.colour && ⟦2-char-id⟧.test(⟦2-char-id⟧.colour) ? ⟦2-char-id⟧.colour : ⟦2-char-id⟧.f,
--        outMs: ⟦2-char-id⟧(⟦2-char-id⟧.outMs, UJ, ZJ, ⟦2-char-id⟧),
--        holdMs: ⟦2-char-id⟧(null !== (⟦2-char-id⟧ = ⟦2-char-id⟧.holdMs) && void 0 !== ⟦2-char-id⟧ ? cJ : 0, 0, ZJ, 0),
--        inMs: ⟦2-char-id⟧(⟦2-char-id⟧.inMs, UJ, ZJ, ⟦2-char-id⟧)
 +        colour: "string" === typeof ⟦2-char-id⟧.colour && ⟦2-char-id⟧.test(⟦2-char-id⟧.colour) ? ⟦2-char-id⟧.colour : ⟦2-char-id⟧.h,
-+        outMs: ⟦2-char-id⟧(⟦2-char-id⟧.outMs, yB, dB, ⟦2-char-id⟧),
-+        holdMs: ⟦2-char-id⟧(null !== (⟦2-char-id⟧ = ⟦2-char-id⟧.holdMs) && void 0 !== ⟦2-char-id⟧ ? TB : 0, 0, dB, 0),
-+        inMs: ⟦2-char-id⟧(⟦2-char-id⟧.inMs, yB, dB, ⟦2-char-id⟧)
+         outMs: ⟦2-char-id⟧(⟦2-char-id⟧.outMs, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧),
+-        holdMs: ⟦2-char-id⟧(null !== (⟦2-char-id⟧ = ⟦2-char-id⟧.holdMs) && void 0 !== ⟦2-char-id⟧ ? cJ : 0, 0, ⟦2-char-id⟧, 0),
++        holdMs: ⟦2-char-id⟧(null !== (⟦2-char-id⟧ = ⟦2-char-id⟧.holdMs) && void 0 !== ⟦2-char-id⟧ ? TB : 0, 0, ⟦2-char-id⟧, 0),
+         inMs: ⟦2-char-id⟧(⟦2-char-id⟧.inMs, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧)
        }
      }
- 
 ```
 
 </details>
@@ -1444,8 +1441,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
            };
          case "follow":
            return {
--            ...JJ, ...eJ, target: "string" === typeof ⟦2-char-id⟧.target ? ⟦2-char-id⟧.target : void 0, lookAt: ⟦2-char-id⟧(⟦2-char-id⟧.lookAt), offset: (⟦2-char-id⟧ = ⟦2-char-id⟧.offset, Array.isArray(⟦2-char-id⟧) ? [⟦2-char-id⟧(⟦2-char-id⟧[0], -⟦2-char-id⟧.k.maxOffset, ⟦2-char-id⟧.k.maxOffset, 0), AJ(⟦2-char-id⟧[1], -⟦2-char-id⟧.k.maxOffset, ⟦2-char-id⟧.k.maxOffset, 0), AJ(⟦2-char-id⟧[2], -⟦2-char-id⟧.k.maxOffset, ⟦2-char-id⟧.k.maxOffset, 0)] : [0, 0, 0]), lookDirection: ⟦2-char-id⟧(⟦2-char-id⟧.lookDirection), smoothMs: ⟦2-char-id⟧(⟦2-char-id⟧.smoothMs, 0, ⟦2-char-id⟧.k.maxSmoothMs)
-+            ...BB, ...pB, target: "string" === typeof ⟦2-char-id⟧.target ? ⟦2-char-id⟧.target : void 0, lookAt: ⟦2-char-id⟧(⟦2-char-id⟧.lookAt), offset: (⟦2-char-id⟧ = ⟦2-char-id⟧.offset, Array.isArray(⟦2-char-id⟧) ? [⟦2-char-id⟧(⟦2-char-id⟧[0], -⟦2-char-id⟧.m.maxOffset, ⟦2-char-id⟧.m.maxOffset, 0), JB(⟦2-char-id⟧[1], -⟦2-char-id⟧.m.maxOffset, ⟦2-char-id⟧.m.maxOffset, 0), JB(⟦2-char-id⟧[2], -⟦2-char-id⟧.m.maxOffset, ⟦2-char-id⟧.m.maxOffset, 0)] : [0, 0, 0]), lookDirection: ⟦2-char-id⟧(⟦2-char-id⟧.lookDirection), smoothMs: ⟦2-char-id⟧(⟦2-char-id⟧.smoothMs, 0, ⟦2-char-id⟧.m.maxSmoothMs)
+-            ...JJ, ...eJ, target: "string" === typeof ⟦2-char-id⟧.target ? ⟦2-char-id⟧.target : void 0, lookAt: ⟦2-char-id⟧(⟦2-char-id⟧.lookAt), offset: (⟦2-char-id⟧ = ⟦2-char-id⟧.offset, Array.isArray(⟦2-char-id⟧) ? [⟦2-char-id⟧(⟦2-char-id⟧[0], -⟦2-char-id⟧.k.maxOffset, ⟦2-char-id⟧.k.maxOffset, 0), ⟦2-char-id⟧(⟦2-char-id⟧[1], -⟦2-char-id⟧.k.maxOffset, ⟦2-char-id⟧.k.maxOffset, 0), ⟦2-char-id⟧(⟦2-char-id⟧[2], -⟦2-char-id⟧.k.maxOffset, ⟦2-char-id⟧.k.maxOffset, 0)] : [0, 0, 0]), lookDirection: ⟦2-char-id⟧(⟦2-char-id⟧.lookDirection), smoothMs: ⟦2-char-id⟧(⟦2-char-id⟧.smoothMs, 0, ⟦2-char-id⟧.k.maxSmoothMs)
++            ...BB, ...pB, target: "string" === typeof ⟦2-char-id⟧.target ? ⟦2-char-id⟧.target : void 0, lookAt: ⟦2-char-id⟧(⟦2-char-id⟧.lookAt), offset: (⟦2-char-id⟧ = ⟦2-char-id⟧.offset, Array.isArray(⟦2-char-id⟧) ? [⟦2-char-id⟧(⟦2-char-id⟧[0], -⟦2-char-id⟧.m.maxOffset, ⟦2-char-id⟧.m.maxOffset, 0), ⟦2-char-id⟧(⟦2-char-id⟧[1], -⟦2-char-id⟧.m.maxOffset, ⟦2-char-id⟧.m.maxOffset, 0), ⟦2-char-id⟧(⟦2-char-id⟧[2], -⟦2-char-id⟧.m.maxOffset, ⟦2-char-id⟧.m.maxOffset, 0)] : [0, 0, 0]), lookDirection: ⟦2-char-id⟧(⟦2-char-id⟧.lookDirection), smoothMs: ⟦2-char-id⟧(⟦2-char-id⟧.smoothMs, 0, ⟦2-char-id⟧.m.maxSmoothMs)
            };
          case "path":
            return {
@@ -1462,10 +1459,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }
      }
    },
--  37639: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  37639: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
-+  37629: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  37629: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      d: () => ⟦2-char-id⟧
      });
@@ -1479,24 +1476,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 50 · Change · +1 / -1</summary>
-
-```diff
-@@ -1211,7 +1211,7 @@
-       font: "Arial",
-       lineHeight: null,
-       justify: !1,
--      drawText: function(⟦2-char-id⟧, cJ, FJ, AJ, qJ, ⟦2-char-id⟧) {
-+      drawText: function(⟦2-char-id⟧, TB, VB, JB, YB, ⟦2-char-id⟧) {
-         if (⟦2-char-id⟧ <= 0 || ⟦2-char-id⟧ <= 0 || this.fontSize <= 0) return {
-           height: 0
-         };
-```
-
-</details>
-
-<details>
-<summary>Hunk 51 · Change · +2 / -2</summary>
+<summary>Hunk 50 · Change · +2 / -2</summary>
 
 ```diff
 @@ -1221,8 +1221,8 @@
@@ -1515,7 +1495,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 52 · Change · +5 / -5</summary>
+<summary>Hunk 51 · Change · +5 / -5</summary>
 
 ```diff
 @@ -1231,16 +1231,16 @@
@@ -1545,41 +1525,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 53 · Change · +1 / -1</summary>
-
-```diff
-@@ -1250,7 +1250,7 @@
-           ⟦2-char-id⟧.save();
-           try {
-             return ⟦2-char-id⟧.scale(⟦2-char-id⟧, ⟦2-char-id⟧), {
--              height: this.drawLines(⟦2-char-id⟧, cJ, ⟦2-char-id⟧ / ⟦2-char-id⟧, ⟦2-char-id⟧ / ⟦2-char-id⟧, ⟦2-char-id⟧ / ⟦2-char-id⟧, ⟦2-char-id⟧ / ⟦2-char-id⟧, ⟦2-char-id⟧).height * ⟦2-char-id⟧
-+              height: this.drawLines(⟦2-char-id⟧, TB, ⟦2-char-id⟧ / ⟦2-char-id⟧, ⟦2-char-id⟧ / ⟦2-char-id⟧, ⟦2-char-id⟧ / ⟦2-char-id⟧, ⟦2-char-id⟧ / ⟦2-char-id⟧, ⟦2-char-id⟧).height * ⟦2-char-id⟧
-             }
-           } finally {
-             ⟦2-char-id⟧.restore()
-```
-
-</details>
-
-<details>
-<summary>Hunk 54 · Change · +1 / -1</summary>
-
-```diff
-@@ -1258,7 +1258,7 @@
-         }
-         return this.drawLines(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧)
-       },
--      drawLines: function(⟦2-char-id⟧, cJ, ZJ, UJ, eJ, XJ, ⟦2-char-id⟧) {
-+      drawLines: function(⟦2-char-id⟧, TB, dB, yB, pB, lB, ⟦2-char-id⟧) {
-         const ⟦2-char-id⟧ = ⟦2-char-id⟧ + ⟦2-char-id⟧,
-           ⟦2-char-id⟧ = ⟦2-char-id⟧ + ⟦2-char-id⟧;
-         let ⟦2-char-id⟧, ⟦2-char-id⟧ = ⟦2-char-id⟧ + ⟦2-char-id⟧ / 2 + ⟦2-char-id⟧ / 2;
-```
-
-</details>
-
-<details>
-<summary>Hunk 55 · Change · +1 / -1</summary>
+<summary>Hunk 52 · Change · +1 / -1</summary>
 
 ```diff
 @@ -1295,7 +1295,7 @@
@@ -1596,24 +1542,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 56 · Change · +1 / -1</summary>
-
-```diff
-@@ -1310,7 +1310,7 @@
-         } = ⟦2-char-id⟧.measureText(⟦2-char-id⟧);
-         return ⟦2-char-id⟧.textBaseline = ⟦2-char-id⟧, ⟦2-char-id⟧
-       },
--      justifyLine: function(⟦2-char-id⟧, cJ, ZJ, FJ, ⟦2-char-id⟧) {
-+      justifyLine: function(⟦2-char-id⟧, TB, dB, VB, ⟦2-char-id⟧) {
-         const ⟦2-char-id⟧ = ⟦2-char-id⟧.trim(),
-           ⟦2-char-id⟧ = ⟦2-char-id⟧.measureText(⟦2-char-id⟧).width,
-           ⟦2-char-id⟧ = ⟦2-char-id⟧.split(/\s+/).length - 1,
-```
-
-</details>
-
-<details>
-<summary>Hunk 57 · Change · +8 / -8</summary>
+<summary>Hunk 53 · Change · +8 / -8</summary>
 
 ```diff
 @@ -1322,30 +1322,30 @@
@@ -1627,8 +1556,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }
      }
    },
--  38071: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  38061: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  38071: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  38061: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      function ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧) {
        return ⟦2-char-id⟧.set(⟦2-char-id⟧), ⟦2-char-id⟧
      }
@@ -1637,10 +1566,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      d: () => ⟦2-char-id⟧
      })
    },
--  37642: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  37642: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧,
-+  37636: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  37636: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        d: () => ⟦2-char-id⟧,
 +      g: () => ⟦2-char-id⟧,
@@ -1660,7 +1589,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 58 · Change · +2 / -2</summary>
+<summary>Hunk 54 · Change · +2 / -2</summary>
 
 ```diff
 @@ -1358,9 +1358,9 @@
@@ -1680,7 +1609,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 59 · Change · +8 / -8</summary>
+<summary>Hunk 55 · Change · +8 / -8</summary>
 
 ```diff
 @@ -1370,14 +1370,14 @@
@@ -1711,7 +1640,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 60 · Change · +1 / -1</summary>
+<summary>Hunk 56 · Change · +1 / -1</summary>
 
 ```diff
 @@ -1398,7 +1398,7 @@
@@ -1728,7 +1657,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 61 · Change · +3 / -3</summary>
+<summary>Hunk 57 · Change · +3 / -3</summary>
 
 ```diff
 @@ -1410,14 +1410,14 @@
@@ -1754,7 +1683,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 62 · Change · +2 / -2</summary>
+<summary>Hunk 58 · Change · +2 / -2</summary>
 
 ```diff
 @@ -1425,9 +1425,9 @@
@@ -1774,7 +1703,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 63 · Change · +9 / -9</summary>
+<summary>Hunk 59 · Change · +9 / -9</summary>
 
 ```diff
 @@ -1442,28 +1442,28 @@
@@ -1820,7 +1749,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 64 · Change · +4 / -4</summary>
+<summary>Hunk 60 · Change · +4 / -4</summary>
 
 ```diff
 @@ -1475,20 +1475,20 @@
@@ -1853,18 +1782,18 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 65 · Change · +4 / -4</summary>
+<summary>Hunk 61 · Change · +4 / -4</summary>
 
 ```diff
 @@ -1509,10 +1509,10 @@
        })), ⟦2-char-id⟧
      }
    },
--  37818: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  37818: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧,
 -      g: () => ⟦2-char-id⟧
-+  37829: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  37829: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      b: () => ⟦2-char-id⟧,
 +      e: () => ⟦2-char-id⟧
@@ -1876,17 +1805,17 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 66 · Change · +12 / -12</summary>
+<summary>Hunk 62 · Change · +12 / -12</summary>
 
 ```diff
 @@ -1538,31 +1538,31 @@
        return ⟦2-char-id⟧[⟦2-char-id⟧.length - 1] += ⟦2-char-id⟧, ⟦2-char-id⟧
      }
    },
--  38062: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  38062: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
-+  38056: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  38056: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      b: () => ⟦2-char-id⟧
      });
@@ -1907,12 +1836,12 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }
      }
    },
--  33431: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  33431: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧,
 -      c: () => ⟦2-char-id⟧,
 -      g: () => ⟦2-char-id⟧,
-+  33435: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  33435: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      e: () => ⟦2-char-id⟧,
 +      f: () => ⟦2-char-id⟧,
@@ -1928,15 +1857,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 67 · Change · +5 / -5</summary>
+<summary>Hunk 63 · Change · +5 / -5</summary>
 
 ```diff
 @@ -1656,16 +1656,16 @@
        ⟦2-char-id⟧ = "/textures/dayNight/stars",
        ⟦2-char-id⟧ = ["_px.png", "_py.png", "_pz.png", "_nx.png", "_ny.png", "_nz.png"]
    },
--  38141: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  38125: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  38141: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  38125: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        d: () => ⟦2-char-id⟧,
 -      f: () => ⟦2-char-id⟧,
@@ -1972,8 +1901,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 187;
  export const ids = [187];
  export const modules = {
--  33439: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  33444: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  33439: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  33444: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        animatedBlockTextures: () => ⟦2-char-id⟧,
        armourAtlasUrl: () => ⟦2-char-id⟧,
@@ -4589,8 +4518,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 188;
  export const ids = [188];
  export const modules = {
--  35396: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  35303: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  35396: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  35303: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        WasmTextureWorker: () => ⟦2-char-id⟧
      });
@@ -4902,8 +4831,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 189;
  export const ids = [189];
  export const modules = {
--  40228: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40230: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40228: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40230: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        loadGlbAsset: () => ⟦2-char-id⟧,
        loadGlbTree: () => ⟦2-char-id⟧
@@ -4917,8 +4846,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        ⟦2-char-id⟧ = ⟦2-char-id⟧.n(⟦2-char-id⟧);
  
      function ⟦2-char-id⟧() {
--      return ⟦2-char-id⟧()('(()=>{class ⟦2-char-id⟧ extends Error{}function ⟦2-char-id⟧(⟦2-char-id⟧,⟦2-char-id⟧){const ⟦2-char-id⟧=⟦2-char-id⟧._malloc(⟦2-char-id⟧);if(0===⟦2-char-id⟧)throw new ⟦2-char-id⟧(`Draco: the decoder\'s heap refused ${ZJ} bytes`);return ⟦2-char-id⟧}function ⟦2-char-id⟧(⟦2-char-id⟧){return{[⟦2-char-id⟧.DT_FLOAT32]:[Float32Array,5126],[⟦2-char-id⟧.DT_INT8]:[Int8Array,5120],[⟦2-char-id⟧.DT_INT16]:[Int16Array,5122],[⟦2-char-id⟧.DT_INT32]:[Int32Array,5124],[⟦2-char-id⟧.DT_UINT8]:[Uint8Array,5121],[⟦2-char-id⟧.DT_UINT16]:[Uint16Array,5123],[⟦2-char-id⟧.DT_UINT32]:[Uint32Array,5125]}}function ⟦2-char-id⟧(⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧){let ⟦2-char-id⟧=null,⟦2-char-id⟧=null,⟦2-char-id⟧=null;try{⟦2-char-id⟧=new ⟦2-char-id⟧.Decoder,⟦2-char-id⟧=new ⟦2-char-id⟧.DecoderBuffer,⟦2-char-id⟧.Init(⟦2-char-id⟧,⟦2-char-id⟧.byteLength);let ⟦2-char-id⟧=0;const ⟦2-char-id⟧=⟦2-char-id⟧.GetEncodedGeometryType(⟦2-char-id⟧);if(⟦2-char-id⟧===⟦2-char-id⟧.TRIANGULAR_MESH){const ⟦2-char-id⟧=new ⟦2-char-id⟧.Mesh;⟦2-char-id⟧=⟦2-char-id⟧;const ⟦2-char-id⟧=⟦2-char-id⟧.DecodeBufferToMesh(⟦2-char-id⟧,⟦2-char-id⟧);if(!⟦2-char-id⟧.ok()||0===⟦2-char-id⟧.ptr)throw new ⟦2-char-id⟧(⟦2-char-id⟧.error_msg());⟦2-char-id⟧=3*⟦2-char-id⟧.num_faces()}else{if(⟦2-char-id⟧!==⟦2-char-id⟧.POINT_CLOUD)throw new ⟦2-char-id⟧(`Draco: Cannot decode invalid geometry type ${hJ}`);{const ⟦2-char-id⟧=new ⟦2-char-id⟧.PointCloud;⟦2-char-id⟧=⟦2-char-id⟧;const ⟦2-char-id⟧=⟦2-char-id⟧.DecodeBufferToPointCloud(⟦2-char-id⟧,⟦2-char-id⟧);if(!⟦2-char-id⟧.ok()||!⟦2-char-id⟧.ptr)throw new ⟦2-char-id⟧(⟦2-char-id⟧.error_msg())}}const ⟦2-char-id⟧=⟦2-char-id⟧.num_points();if(⟦2-char-id⟧!==⟦2-char-id⟧.vertices||⟦2-char-id⟧!==⟦2-char-id⟧.indices)throw new ⟦2-char-id⟧(`Draco: decoded ${DJ} vertices and ${YJ} indices, the accessors declare ${eJ.vertices} and ${eJ.indices}`);const ⟦2-char-id⟧=⟦2-char-id⟧(⟦2-char-id⟧),⟦2-char-id⟧=[];for(const{kind:⟦2-char-id⟧,id:⟦2-char-id⟧,components:⟦2-char-id⟧}of ⟦2-char-id⟧){const ⟦2-char-id⟧=⟦2-char-id⟧.GetAttributeByUniqueId(⟦2-char-id⟧,⟦2-char-id⟧);if(!⟦2-char-id⟧||0===⟦2-char-id⟧.ptr)throw new ⟦2-char-id⟧(`Draco: no attribute with id ${ZJ} (${cJ})`);const ⟦2-char-id⟧=⟦2-char-id⟧.data_type();if(!⟦2-char-id⟧[⟦2-char-id⟧])throw new ⟦2-char-id⟧(`Draco: Cannot decode invalid data type ${eJ}`);if(⟦2-char-id⟧.num_components()!==⟦2-char-id⟧)throw new ⟦2-char-id⟧(`Draco: ${cJ} decodes to ${UJ.num_components()} components, its accessor declares ${FJ}`);⟦2-char-id⟧.push([⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧])}return ⟦2-char-id⟧({dracoDecoder:⟦2-char-id⟧,geometry:⟦2-char-id⟧,triangles:⟦2-char-id⟧===⟦2-char-id⟧.TRIANGULAR_MESH,numPoints:⟦2-char-id⟧,numIndices:⟦2-char-id⟧,attributes:⟦2-char-id⟧})}finally{⟦2-char-id⟧&&⟦2-char-id⟧.destroy(⟦2-char-id⟧),⟦2-char-id⟧&&⟦2-char-id⟧.destroy(⟦2-char-id⟧),⟦2-char-id⟧&&⟦2-char-id⟧.destroy(⟦2-char-id⟧)}}const ⟦2-char-id⟧=self;let ⟦2-char-id⟧=null;self.onmessage=⟦2-char-id⟧=>{let{data:⟦2-char-id⟧}=⟦2-char-id⟧;if("init"===⟦2-char-id⟧.id){try{importScripts(⟦2-char-id⟧.url),⟦2-char-id⟧=DracoDecoderModule({wasmBinary:⟦2-char-id⟧.wasmBinary}),⟦2-char-id⟧.postMessage({id:"initDone"})}catch(⟦2-char-id⟧){⟦2-char-id⟧.postMessage({id:"initError",message:⟦2-char-id⟧ instanceof Error?⟦2-char-id⟧.message:String(⟦2-char-id⟧)})}return}const{seq:⟦2-char-id⟧,data:⟦2-char-id⟧,attributeIds:⟦2-char-id⟧,expected:⟦2-char-id⟧}=⟦2-char-id⟧;⟦2-char-id⟧?⟦2-char-id⟧.then((⟦2-char-id⟧=>{try{const ⟦2-char-id⟧=function(⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧){const ⟦2-char-id⟧=Object.keys(⟦2-char-id⟧).map((⟦2-char-id⟧=>({kind:⟦2-char-id⟧,id:⟦2-char-id⟧[⟦2-char-id⟧],components:⟦2-char-id⟧.components[⟦2-char-id⟧]})));return ⟦2-char-id⟧(⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧,(⟦2-char-id⟧=>{let{dracoDecoder:⟦2-char-id⟧,geometry:⟦2-char-id⟧,triangles:⟦2-char-id⟧,numPoints:⟦2-char-id⟧,numIndices:⟦2-char-id⟧,attributes:⟦2-char-id⟧}=⟦2-char-id⟧;const ⟦2-char-id⟧=⟦2-char-id⟧(⟦2-char-id⟧);let ⟦2-char-id⟧=null;if(⟦2-char-id⟧){const ⟦2-char-id⟧=4*⟦2-char-id⟧,⟦2-char-id⟧=⟦2-char-id⟧(⟦2-char-id⟧,⟦2-char-id⟧);try{⟦2-char-id⟧.GetTrianglesUInt32Array(⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧),⟦2-char-id⟧=new Uint32Array(⟦2-char-id⟧),⟦2-char-id⟧.set(new Uint32Array(⟦2-char-id⟧.HEAPF32.buffer,⟦2-char-id⟧,⟦2-char-id⟧))}finally{⟦2-char-id⟧._free(⟦2-char-id⟧)}}const ⟦2-char-id⟧=[];for(const[⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧]of ⟦2-char-id⟧){const[⟦2-char-id⟧]=⟦2-char-id⟧[⟦2-char-id⟧],⟦2-char-id⟧=⟦2-char-id⟧.num_components(),⟦2-char-id⟧=⟦2-char-id⟧*⟦2-char-id⟧,⟦2-char-id⟧=⟦2-char-id⟧*⟦2-char-id⟧.BYTES_PER_ELEMENT,⟦2-char-id⟧=⟦2-char-id⟧(⟦2-char-id⟧,⟦2-char-id⟧);try{⟦2-char-id⟧.GetAttributeDataArrayForAllPoints(⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧),⟦2-char-id⟧.push({kind:⟦2-char-id⟧,data:new ⟦2-char-id⟧(⟦2-char-id⟧.HEAPF32.buffer,hJ,⟦2-char-id⟧).slice(),size:⟦2-char-id⟧,byteOffset:⟦2-char-id⟧.byte_offset(),byteStride:⟦2-char-id⟧.byte_stride(),normalized:⟦2-char-id⟧.normalized()})}finally{⟦2-char-id⟧._free(⟦2-char-id⟧)}}return{indices:⟦2-char-id⟧,attributes:⟦2-char-id⟧,totalVertices:⟦2-char-id⟧}}))}(⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧),⟦2-char-id⟧=⟦2-char-id⟧.attributes.map((⟦2-char-id⟧=>⟦2-char-id⟧.data.buffer));⟦2-char-id⟧.indices&&⟦2-char-id⟧.push(⟦2-char-id⟧.indices.buffer),⟦2-char-id⟧.postMessage({id:"decoded",seq:⟦2-char-id⟧,...eJ},⟦2-char-id⟧)}catch(⟦2-char-id⟧){⟦2-char-id⟧.postMessage({id:"decodeError",seq:⟦2-char-id⟧,message:⟦2-char-id⟧ instanceof Error?⟦2-char-id⟧.message:String(⟦2-char-id⟧)})}}),(⟦2-char-id⟧=>{⟦2-char-id⟧.postMessage({id:"decodeError",seq:⟦2-char-id⟧,message:⟦2-char-id⟧ instanceof Error?⟦2-char-id⟧.message:String(⟦2-char-id⟧)})})):⟦2-char-id⟧.postMessage({id:"decodeError",seq:⟦2-char-id⟧,message:"Draco: the decoder module is not loaded"})}})();', "Worker", void 0, ⟦2-char-id⟧.p + "dracoDecode.worker.96fc4702.worker.js")
-+      return ⟦2-char-id⟧()('(()=>{class ⟦2-char-id⟧ extends Error{}function ⟦2-char-id⟧(⟦2-char-id⟧,⟦2-char-id⟧){const ⟦2-char-id⟧=⟦2-char-id⟧._malloc(⟦2-char-id⟧);if(0===⟦2-char-id⟧)throw new ⟦2-char-id⟧(`Draco: the decoder\'s heap refused ${dB} bytes`);return ⟦2-char-id⟧}function ⟦2-char-id⟧(⟦2-char-id⟧){return{[⟦2-char-id⟧.DT_FLOAT32]:[Float32Array,5126],[⟦2-char-id⟧.DT_INT8]:[Int8Array,5120],[⟦2-char-id⟧.DT_INT16]:[Int16Array,5122],[⟦2-char-id⟧.DT_INT32]:[Int32Array,5124],[⟦2-char-id⟧.DT_UINT8]:[Uint8Array,5121],[⟦2-char-id⟧.DT_UINT16]:[Uint16Array,5123],[⟦2-char-id⟧.DT_UINT32]:[Uint32Array,5125]}}function ⟦2-char-id⟧(⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧){let ⟦2-char-id⟧=null,⟦2-char-id⟧=null,⟦2-char-id⟧=null;try{⟦2-char-id⟧=new ⟦2-char-id⟧.Decoder,⟦2-char-id⟧=new ⟦2-char-id⟧.DecoderBuffer,⟦2-char-id⟧.Init(⟦2-char-id⟧,⟦2-char-id⟧.byteLength);let ⟦2-char-id⟧=0;const ⟦2-char-id⟧=⟦2-char-id⟧.GetEncodedGeometryType(⟦2-char-id⟧);if(⟦2-char-id⟧===⟦2-char-id⟧.TRIANGULAR_MESH){const ⟦2-char-id⟧=new ⟦2-char-id⟧.Mesh;⟦2-char-id⟧=⟦2-char-id⟧;const ⟦2-char-id⟧=⟦2-char-id⟧.DecodeBufferToMesh(⟦2-char-id⟧,⟦2-char-id⟧);if(!⟦2-char-id⟧.ok()||0===⟦2-char-id⟧.ptr)throw new ⟦2-char-id⟧(⟦2-char-id⟧.error_msg());⟦2-char-id⟧=3*⟦2-char-id⟧.num_faces()}else{if(⟦2-char-id⟧!==⟦2-char-id⟧.POINT_CLOUD)throw new ⟦2-char-id⟧(`Draco: Cannot decode invalid geometry type ${kB}`);{const ⟦2-char-id⟧=new ⟦2-char-id⟧.PointCloud;⟦2-char-id⟧=⟦2-char-id⟧;const ⟦2-char-id⟧=⟦2-char-id⟧.DecodeBufferToPointCloud(⟦2-char-id⟧,⟦2-char-id⟧);if(!⟦2-char-id⟧.ok()||!⟦2-char-id⟧.ptr)throw new ⟦2-char-id⟧(⟦2-char-id⟧.error_msg())}}const ⟦2-char-id⟧=⟦2-char-id⟧.num_points();if(⟦2-char-id⟧!==⟦2-char-id⟧.vertices||⟦2-char-id⟧!==⟦2-char-id⟧.indices)throw new ⟦2-char-id⟧(`Draco: decoded ${LB} vertices and ${oB} indices, the accessors declare ${pB.vertices} and ${pB.indices}`);const ⟦2-char-id⟧=⟦2-char-id⟧(⟦2-char-id⟧),⟦2-char-id⟧=[];for(const{kind:⟦2-char-id⟧,id:⟦2-char-id⟧,components:⟦2-char-id⟧}of ⟦2-char-id⟧){const ⟦2-char-id⟧=⟦2-char-id⟧.GetAttributeByUniqueId(⟦2-char-id⟧,⟦2-char-id⟧);if(!⟦2-char-id⟧||0===⟦2-char-id⟧.ptr)throw new ⟦2-char-id⟧(`Draco: no attribute with id ${dB} (${TB})`);const ⟦2-char-id⟧=⟦2-char-id⟧.data_type();if(!⟦2-char-id⟧[⟦2-char-id⟧])throw new ⟦2-char-id⟧(`Draco: Cannot decode invalid data type ${pB}`);if(⟦2-char-id⟧.num_components()!==⟦2-char-id⟧)throw new ⟦2-char-id⟧(`Draco: ${TB} decodes to ${yB.num_components()} components, its accessor declares ${VB}`);⟦2-char-id⟧.push([⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧])}return ⟦2-char-id⟧({dracoDecoder:⟦2-char-id⟧,geometry:⟦2-char-id⟧,triangles:⟦2-char-id⟧===⟦2-char-id⟧.TRIANGULAR_MESH,numPoints:⟦2-char-id⟧,numIndices:⟦2-char-id⟧,attributes:⟦2-char-id⟧})}finally{⟦2-char-id⟧&&⟦2-char-id⟧.destroy(⟦2-char-id⟧),⟦2-char-id⟧&&⟦2-char-id⟧.destroy(⟦2-char-id⟧),⟦2-char-id⟧&&⟦2-char-id⟧.destroy(⟦2-char-id⟧)}}const ⟦2-char-id⟧=self;let ⟦2-char-id⟧=null;self.onmessage=⟦2-char-id⟧=>{let{data:⟦2-char-id⟧}=⟦2-char-id⟧;if("init"===⟦2-char-id⟧.id){try{importScripts(⟦2-char-id⟧.url),⟦2-char-id⟧=DracoDecoderModule({wasmBinary:⟦2-char-id⟧.wasmBinary}),⟦2-char-id⟧.postMessage({id:"initDone"})}catch(⟦2-char-id⟧){⟦2-char-id⟧.postMessage({id:"initError",message:⟦2-char-id⟧ instanceof Error?⟦2-char-id⟧.message:String(⟦2-char-id⟧)})}return}const{seq:⟦2-char-id⟧,data:⟦2-char-id⟧,attributeIds:⟦2-char-id⟧,expected:⟦2-char-id⟧}=⟦2-char-id⟧;⟦2-char-id⟧?⟦2-char-id⟧.then((⟦2-char-id⟧=>{try{const ⟦2-char-id⟧=function(⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧){const ⟦2-char-id⟧=Object.keys(⟦2-char-id⟧).map((⟦2-char-id⟧=>({kind:⟦2-char-id⟧,id:⟦2-char-id⟧[⟦2-char-id⟧],components:⟦2-char-id⟧.components[⟦2-char-id⟧]})));return ⟦2-char-id⟧(⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧,(⟦2-char-id⟧=>{let{dracoDecoder:⟦2-char-id⟧,geometry:⟦2-char-id⟧,triangles:⟦2-char-id⟧,numPoints:⟦2-char-id⟧,numIndices:⟦2-char-id⟧,attributes:⟦2-char-id⟧}=⟦2-char-id⟧;const ⟦2-char-id⟧=⟦2-char-id⟧(⟦2-char-id⟧);let ⟦2-char-id⟧=null;if(⟦2-char-id⟧){const ⟦2-char-id⟧=4*⟦2-char-id⟧,⟦2-char-id⟧=⟦2-char-id⟧(⟦2-char-id⟧,⟦2-char-id⟧);try{⟦2-char-id⟧.GetTrianglesUInt32Array(⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧),⟦2-char-id⟧=new Uint32Array(⟦2-char-id⟧),⟦2-char-id⟧.set(new Uint32Array(⟦2-char-id⟧.HEAPF32.buffer,⟦2-char-id⟧,⟦2-char-id⟧))}finally{⟦2-char-id⟧._free(⟦2-char-id⟧)}}const ⟦2-char-id⟧=[];for(const[⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧]of ⟦2-char-id⟧){const[⟦2-char-id⟧]=⟦2-char-id⟧[⟦2-char-id⟧],⟦2-char-id⟧=⟦2-char-id⟧.num_components(),⟦2-char-id⟧=⟦2-char-id⟧*⟦2-char-id⟧,⟦2-char-id⟧=⟦2-char-id⟧*⟦2-char-id⟧.BYTES_PER_ELEMENT,⟦2-char-id⟧=⟦2-char-id⟧(⟦2-char-id⟧,⟦2-char-id⟧);try{⟦2-char-id⟧.GetAttributeDataArrayForAllPoints(⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧),⟦2-char-id⟧.push({kind:⟦2-char-id⟧,data:new ⟦2-char-id⟧(⟦2-char-id⟧.HEAPF32.buffer,kB,⟦2-char-id⟧).slice(),size:⟦2-char-id⟧,byteOffset:⟦2-char-id⟧.byte_offset(),byteStride:⟦2-char-id⟧.byte_stride(),normalized:⟦2-char-id⟧.normalized()})}finally{⟦2-char-id⟧._free(⟦2-char-id⟧)}}return{indices:⟦2-char-id⟧,attributes:⟦2-char-id⟧,totalVertices:⟦2-char-id⟧}}))}(⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧),⟦2-char-id⟧=⟦2-char-id⟧.attributes.map((⟦2-char-id⟧=>⟦2-char-id⟧.data.buffer));⟦2-char-id⟧.indices&&⟦2-char-id⟧.push(⟦2-char-id⟧.indices.buffer),⟦2-char-id⟧.postMessage({id:"decoded",seq:⟦2-char-id⟧,...pB},⟦2-char-id⟧)}catch(⟦2-char-id⟧){⟦2-char-id⟧.postMessage({id:"decodeError",seq:⟦2-char-id⟧,message:⟦2-char-id⟧ instanceof Error?⟦2-char-id⟧.message:String(⟦2-char-id⟧)})}}),(⟦2-char-id⟧=>{⟦2-char-id⟧.postMessage({id:"decodeError",seq:⟦2-char-id⟧,message:⟦2-char-id⟧ instanceof Error?⟦2-char-id⟧.message:String(⟦2-char-id⟧)})})):⟦2-char-id⟧.postMessage({id:"decodeError",seq:⟦2-char-id⟧,message:"Draco: the decoder module is not loaded"})}})();', "Worker", void 0, ⟦2-char-id⟧.p + "dracoDecode.worker.5148e5d9.worker.js")
+-      return ⟦2-char-id⟧()('(()=>{class ⟦2-char-id⟧ extends Error{}function ⟦2-char-id⟧(⟦2-char-id⟧,⟦2-char-id⟧){const ⟦2-char-id⟧=⟦2-char-id⟧._malloc(⟦2-char-id⟧);if(0===⟦2-char-id⟧)throw new ⟦2-char-id⟧(`Draco: the decoder\'s heap refused ${ZJ} bytes`);return ⟦2-char-id⟧}function ⟦2-char-id⟧(⟦2-char-id⟧){return{[⟦2-char-id⟧.DT_FLOAT32]:[Float32Array,5126],[⟦2-char-id⟧.DT_INT8]:[Int8Array,5120],[⟦2-char-id⟧.DT_INT16]:[Int16Array,5122],[⟦2-char-id⟧.DT_INT32]:[Int32Array,5124],[⟦2-char-id⟧.DT_UINT8]:[Uint8Array,5121],[⟦2-char-id⟧.DT_UINT16]:[Uint16Array,5123],[⟦2-char-id⟧.DT_UINT32]:[Uint32Array,5125]}}function ⟦2-char-id⟧(⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧){let ⟦2-char-id⟧=null,⟦2-char-id⟧=null,⟦2-char-id⟧=null;try{⟦2-char-id⟧=new ⟦2-char-id⟧.Decoder,⟦2-char-id⟧=new ⟦2-char-id⟧.DecoderBuffer,⟦2-char-id⟧.Init(⟦2-char-id⟧,⟦2-char-id⟧.byteLength);let ⟦2-char-id⟧=0;const ⟦2-char-id⟧=⟦2-char-id⟧.GetEncodedGeometryType(⟦2-char-id⟧);if(⟦2-char-id⟧===⟦2-char-id⟧.TRIANGULAR_MESH){const ⟦2-char-id⟧=new ⟦2-char-id⟧.Mesh;⟦2-char-id⟧=⟦2-char-id⟧;const ⟦2-char-id⟧=⟦2-char-id⟧.DecodeBufferToMesh(⟦2-char-id⟧,⟦2-char-id⟧);if(!⟦2-char-id⟧.ok()||0===⟦2-char-id⟧.ptr)throw new ⟦2-char-id⟧(⟦2-char-id⟧.error_msg());⟦2-char-id⟧=3*⟦2-char-id⟧.num_faces()}else{if(⟦2-char-id⟧!==⟦2-char-id⟧.POINT_CLOUD)throw new ⟦2-char-id⟧(`Draco: Cannot decode invalid geometry type ${hJ}`);{const ⟦2-char-id⟧=new ⟦2-char-id⟧.PointCloud;⟦2-char-id⟧=⟦2-char-id⟧;const ⟦2-char-id⟧=⟦2-char-id⟧.DecodeBufferToPointCloud(⟦2-char-id⟧,⟦2-char-id⟧);if(!⟦2-char-id⟧.ok()||!⟦2-char-id⟧.ptr)throw new ⟦2-char-id⟧(⟦2-char-id⟧.error_msg())}}const ⟦2-char-id⟧=⟦2-char-id⟧.num_points();if(⟦2-char-id⟧!==⟦2-char-id⟧.vertices||⟦2-char-id⟧!==⟦2-char-id⟧.indices)throw new ⟦2-char-id⟧(`Draco: decoded ${DJ} vertices and ${YJ} indices, the accessors declare ${eJ.vertices} and ${eJ.indices}`);const ⟦2-char-id⟧=⟦2-char-id⟧(⟦2-char-id⟧),⟦2-char-id⟧=[];for(const{kind:⟦2-char-id⟧,id:⟦2-char-id⟧,components:⟦2-char-id⟧}of ⟦2-char-id⟧){const ⟦2-char-id⟧=⟦2-char-id⟧.GetAttributeByUniqueId(⟦2-char-id⟧,⟦2-char-id⟧);if(!⟦2-char-id⟧||0===⟦2-char-id⟧.ptr)throw new ⟦2-char-id⟧(`Draco: no attribute with id ${ZJ} (${cJ})`);const ⟦2-char-id⟧=⟦2-char-id⟧.data_type();if(!⟦2-char-id⟧[⟦2-char-id⟧])throw new ⟦2-char-id⟧(`Draco: Cannot decode invalid data type ${eJ}`);if(⟦2-char-id⟧.num_components()!==⟦2-char-id⟧)throw new ⟦2-char-id⟧(`Draco: ${cJ} decodes to ${UJ.num_components()} components, its accessor declares ${FJ}`);⟦2-char-id⟧.push([⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧])}return ⟦2-char-id⟧({dracoDecoder:⟦2-char-id⟧,geometry:⟦2-char-id⟧,triangles:⟦2-char-id⟧===⟦2-char-id⟧.TRIANGULAR_MESH,numPoints:⟦2-char-id⟧,numIndices:⟦2-char-id⟧,attributes:⟦2-char-id⟧})}finally{⟦2-char-id⟧&&⟦2-char-id⟧.destroy(⟦2-char-id⟧),⟦2-char-id⟧&&⟦2-char-id⟧.destroy(⟦2-char-id⟧),⟦2-char-id⟧&&⟦2-char-id⟧.destroy(⟦2-char-id⟧)}}const ⟦2-char-id⟧=self;let ⟦2-char-id⟧=null;self.onmessage=⟦2-char-id⟧=>{let{data:⟦2-char-id⟧}=⟦2-char-id⟧;if("init"===⟦2-char-id⟧.id){try{importScripts(⟦2-char-id⟧.url),⟦2-char-id⟧=DracoDecoderModule({wasmBinary:⟦2-char-id⟧.wasmBinary}),⟦2-char-id⟧.postMessage({id:"initDone"})}catch(⟦2-char-id⟧){⟦2-char-id⟧.postMessage({id:"initError",message:⟦2-char-id⟧ instanceof Error?⟦2-char-id⟧.message:String(⟦2-char-id⟧)})}return}const{seq:⟦2-char-id⟧,data:⟦2-char-id⟧,attributeIds:⟦2-char-id⟧,expected:⟦2-char-id⟧}=⟦2-char-id⟧;⟦2-char-id⟧?⟦2-char-id⟧.then((⟦2-char-id⟧=>{try{const ⟦2-char-id⟧=function(⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧){const ⟦2-char-id⟧=Object.keys(⟦2-char-id⟧).map((⟦2-char-id⟧=>({kind:⟦2-char-id⟧,id:⟦2-char-id⟧[⟦2-char-id⟧],components:⟦2-char-id⟧.components[⟦2-char-id⟧]})));return ⟦2-char-id⟧(⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧,(⟦2-char-id⟧=>{let{dracoDecoder:⟦2-char-id⟧,geometry:⟦2-char-id⟧,triangles:⟦2-char-id⟧,numPoints:⟦2-char-id⟧,numIndices:⟦2-char-id⟧,attributes:⟦2-char-id⟧}=⟦2-char-id⟧;const ⟦2-char-id⟧=⟦2-char-id⟧(⟦2-char-id⟧);let ⟦2-char-id⟧=null;if(⟦2-char-id⟧){const ⟦2-char-id⟧=4*⟦2-char-id⟧,⟦2-char-id⟧=⟦2-char-id⟧(⟦2-char-id⟧,⟦2-char-id⟧);try{⟦2-char-id⟧.GetTrianglesUInt32Array(⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧),⟦2-char-id⟧=new Uint32Array(⟦2-char-id⟧),⟦2-char-id⟧.set(new Uint32Array(⟦2-char-id⟧.HEAPF32.buffer,⟦2-char-id⟧,⟦2-char-id⟧))}finally{⟦2-char-id⟧._free(⟦2-char-id⟧)}}const ⟦2-char-id⟧=[];for(const[⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧]of ⟦2-char-id⟧){const[⟦2-char-id⟧]=⟦2-char-id⟧[⟦2-char-id⟧],⟦2-char-id⟧=⟦2-char-id⟧.num_components(),⟦2-char-id⟧=⟦2-char-id⟧*⟦2-char-id⟧,⟦2-char-id⟧=⟦2-char-id⟧*⟦2-char-id⟧.BYTES_PER_ELEMENT,⟦2-char-id⟧=⟦2-char-id⟧(⟦2-char-id⟧,⟦2-char-id⟧);try{⟦2-char-id⟧.GetAttributeDataArrayForAllPoints(⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧),⟦2-char-id⟧.push({kind:⟦2-char-id⟧,data:new ⟦2-char-id⟧(⟦2-char-id⟧.HEAPF32.buffer,⟦2-char-id⟧,⟦2-char-id⟧).slice(),size:⟦2-char-id⟧,byteOffset:⟦2-char-id⟧.byte_offset(),byteStride:⟦2-char-id⟧.byte_stride(),normalized:⟦2-char-id⟧.normalized()})}finally{⟦2-char-id⟧._free(⟦2-char-id⟧)}}return{indices:⟦2-char-id⟧,attributes:⟦2-char-id⟧,totalVertices:⟦2-char-id⟧}}))}(⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧),⟦2-char-id⟧=⟦2-char-id⟧.attributes.map((⟦2-char-id⟧=>⟦2-char-id⟧.data.buffer));⟦2-char-id⟧.indices&&⟦2-char-id⟧.push(⟦2-char-id⟧.indices.buffer),⟦2-char-id⟧.postMessage({id:"decoded",seq:⟦2-char-id⟧,...eJ},⟦2-char-id⟧)}catch(⟦2-char-id⟧){⟦2-char-id⟧.postMessage({id:"decodeError",seq:⟦2-char-id⟧,message:⟦2-char-id⟧ instanceof Error?⟦2-char-id⟧.message:String(⟦2-char-id⟧)})}}),(⟦2-char-id⟧=>{⟦2-char-id⟧.postMessage({id:"decodeError",seq:⟦2-char-id⟧,message:⟦2-char-id⟧ instanceof Error?⟦2-char-id⟧.message:String(⟦2-char-id⟧)})})):⟦2-char-id⟧.postMessage({id:"decodeError",seq:⟦2-char-id⟧,message:"Draco: the decoder module is not loaded"})}})();', "Worker", void 0, ⟦2-char-id⟧.p + "dracoDecode.worker.96fc4702.worker.js")
++      return ⟦2-char-id⟧()('(()=>{class ⟦2-char-id⟧ extends Error{}function ⟦2-char-id⟧(⟦2-char-id⟧,⟦2-char-id⟧){const ⟦2-char-id⟧=⟦2-char-id⟧._malloc(⟦2-char-id⟧);if(0===⟦2-char-id⟧)throw new ⟦2-char-id⟧(`Draco: the decoder\'s heap refused ${dB} bytes`);return ⟦2-char-id⟧}function ⟦2-char-id⟧(⟦2-char-id⟧){return{[⟦2-char-id⟧.DT_FLOAT32]:[Float32Array,5126],[⟦2-char-id⟧.DT_INT8]:[Int8Array,5120],[⟦2-char-id⟧.DT_INT16]:[Int16Array,5122],[⟦2-char-id⟧.DT_INT32]:[Int32Array,5124],[⟦2-char-id⟧.DT_UINT8]:[Uint8Array,5121],[⟦2-char-id⟧.DT_UINT16]:[Uint16Array,5123],[⟦2-char-id⟧.DT_UINT32]:[Uint32Array,5125]}}function ⟦2-char-id⟧(⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧){let ⟦2-char-id⟧=null,⟦2-char-id⟧=null,⟦2-char-id⟧=null;try{⟦2-char-id⟧=new ⟦2-char-id⟧.Decoder,⟦2-char-id⟧=new ⟦2-char-id⟧.DecoderBuffer,⟦2-char-id⟧.Init(⟦2-char-id⟧,⟦2-char-id⟧.byteLength);let ⟦2-char-id⟧=0;const ⟦2-char-id⟧=⟦2-char-id⟧.GetEncodedGeometryType(⟦2-char-id⟧);if(⟦2-char-id⟧===⟦2-char-id⟧.TRIANGULAR_MESH){const ⟦2-char-id⟧=new ⟦2-char-id⟧.Mesh;⟦2-char-id⟧=⟦2-char-id⟧;const ⟦2-char-id⟧=⟦2-char-id⟧.DecodeBufferToMesh(⟦2-char-id⟧,⟦2-char-id⟧);if(!⟦2-char-id⟧.ok()||0===⟦2-char-id⟧.ptr)throw new ⟦2-char-id⟧(⟦2-char-id⟧.error_msg());⟦2-char-id⟧=3*⟦2-char-id⟧.num_faces()}else{if(⟦2-char-id⟧!==⟦2-char-id⟧.POINT_CLOUD)throw new ⟦2-char-id⟧(`Draco: Cannot decode invalid geometry type ${kB}`);{const ⟦2-char-id⟧=new ⟦2-char-id⟧.PointCloud;⟦2-char-id⟧=⟦2-char-id⟧;const ⟦2-char-id⟧=⟦2-char-id⟧.DecodeBufferToPointCloud(⟦2-char-id⟧,⟦2-char-id⟧);if(!⟦2-char-id⟧.ok()||!⟦2-char-id⟧.ptr)throw new ⟦2-char-id⟧(⟦2-char-id⟧.error_msg())}}const ⟦2-char-id⟧=⟦2-char-id⟧.num_points();if(⟦2-char-id⟧!==⟦2-char-id⟧.vertices||⟦2-char-id⟧!==⟦2-char-id⟧.indices)throw new ⟦2-char-id⟧(`Draco: decoded ${LB} vertices and ${oB} indices, the accessors declare ${pB.vertices} and ${pB.indices}`);const ⟦2-char-id⟧=⟦2-char-id⟧(⟦2-char-id⟧),⟦2-char-id⟧=[];for(const{kind:⟦2-char-id⟧,id:⟦2-char-id⟧,components:⟦2-char-id⟧}of ⟦2-char-id⟧){const ⟦2-char-id⟧=⟦2-char-id⟧.GetAttributeByUniqueId(⟦2-char-id⟧,⟦2-char-id⟧);if(!⟦2-char-id⟧||0===⟦2-char-id⟧.ptr)throw new ⟦2-char-id⟧(`Draco: no attribute with id ${dB} (${TB})`);const ⟦2-char-id⟧=⟦2-char-id⟧.data_type();if(!⟦2-char-id⟧[⟦2-char-id⟧])throw new ⟦2-char-id⟧(`Draco: Cannot decode invalid data type ${pB}`);if(⟦2-char-id⟧.num_components()!==⟦2-char-id⟧)throw new ⟦2-char-id⟧(`Draco: ${TB} decodes to ${yB.num_components()} components, its accessor declares ${VB}`);⟦2-char-id⟧.push([⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧])}return ⟦2-char-id⟧({dracoDecoder:⟦2-char-id⟧,geometry:⟦2-char-id⟧,triangles:⟦2-char-id⟧===⟦2-char-id⟧.TRIANGULAR_MESH,numPoints:⟦2-char-id⟧,numIndices:⟦2-char-id⟧,attributes:⟦2-char-id⟧})}finally{⟦2-char-id⟧&&⟦2-char-id⟧.destroy(⟦2-char-id⟧),⟦2-char-id⟧&&⟦2-char-id⟧.destroy(⟦2-char-id⟧),⟦2-char-id⟧&&⟦2-char-id⟧.destroy(⟦2-char-id⟧)}}const ⟦2-char-id⟧=self;let ⟦2-char-id⟧=null;self.onmessage=⟦2-char-id⟧=>{let{data:⟦2-char-id⟧}=⟦2-char-id⟧;if("init"===⟦2-char-id⟧.id){try{importScripts(⟦2-char-id⟧.url),⟦2-char-id⟧=DracoDecoderModule({wasmBinary:⟦2-char-id⟧.wasmBinary}),⟦2-char-id⟧.postMessage({id:"initDone"})}catch(⟦2-char-id⟧){⟦2-char-id⟧.postMessage({id:"initError",message:⟦2-char-id⟧ instanceof Error?⟦2-char-id⟧.message:String(⟦2-char-id⟧)})}return}const{seq:⟦2-char-id⟧,data:⟦2-char-id⟧,attributeIds:⟦2-char-id⟧,expected:⟦2-char-id⟧}=⟦2-char-id⟧;⟦2-char-id⟧?⟦2-char-id⟧.then((⟦2-char-id⟧=>{try{const ⟦2-char-id⟧=function(⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧){const ⟦2-char-id⟧=Object.keys(⟦2-char-id⟧).map((⟦2-char-id⟧=>({kind:⟦2-char-id⟧,id:⟦2-char-id⟧[⟦2-char-id⟧],components:⟦2-char-id⟧.components[⟦2-char-id⟧]})));return ⟦2-char-id⟧(⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧,(⟦2-char-id⟧=>{let{dracoDecoder:⟦2-char-id⟧,geometry:⟦2-char-id⟧,triangles:⟦2-char-id⟧,numPoints:⟦2-char-id⟧,numIndices:⟦2-char-id⟧,attributes:⟦2-char-id⟧}=⟦2-char-id⟧;const ⟦2-char-id⟧=⟦2-char-id⟧(⟦2-char-id⟧);let ⟦2-char-id⟧=null;if(⟦2-char-id⟧){const ⟦2-char-id⟧=4*⟦2-char-id⟧,⟦2-char-id⟧=⟦2-char-id⟧(⟦2-char-id⟧,⟦2-char-id⟧);try{⟦2-char-id⟧.GetTrianglesUInt32Array(⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧),⟦2-char-id⟧=new Uint32Array(⟦2-char-id⟧),⟦2-char-id⟧.set(new Uint32Array(⟦2-char-id⟧.HEAPF32.buffer,⟦2-char-id⟧,⟦2-char-id⟧))}finally{⟦2-char-id⟧._free(⟦2-char-id⟧)}}const ⟦2-char-id⟧=[];for(const[⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧]of ⟦2-char-id⟧){const[⟦2-char-id⟧]=⟦2-char-id⟧[⟦2-char-id⟧],⟦2-char-id⟧=⟦2-char-id⟧.num_components(),⟦2-char-id⟧=⟦2-char-id⟧*⟦2-char-id⟧,⟦2-char-id⟧=⟦2-char-id⟧*⟦2-char-id⟧.BYTES_PER_ELEMENT,⟦2-char-id⟧=⟦2-char-id⟧(⟦2-char-id⟧,⟦2-char-id⟧);try{⟦2-char-id⟧.GetAttributeDataArrayForAllPoints(⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧),⟦2-char-id⟧.push({kind:⟦2-char-id⟧,data:new ⟦2-char-id⟧(⟦2-char-id⟧.HEAPF32.buffer,⟦2-char-id⟧,⟦2-char-id⟧).slice(),size:⟦2-char-id⟧,byteOffset:⟦2-char-id⟧.byte_offset(),byteStride:⟦2-char-id⟧.byte_stride(),normalized:⟦2-char-id⟧.normalized()})}finally{⟦2-char-id⟧._free(⟦2-char-id⟧)}}return{indices:⟦2-char-id⟧,attributes:⟦2-char-id⟧,totalVertices:⟦2-char-id⟧}}))}(⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧,⟦2-char-id⟧),⟦2-char-id⟧=⟦2-char-id⟧.attributes.map((⟦2-char-id⟧=>⟦2-char-id⟧.data.buffer));⟦2-char-id⟧.indices&&⟦2-char-id⟧.push(⟦2-char-id⟧.indices.buffer),⟦2-char-id⟧.postMessage({id:"decoded",seq:⟦2-char-id⟧,...pB},⟦2-char-id⟧)}catch(⟦2-char-id⟧){⟦2-char-id⟧.postMessage({id:"decodeError",seq:⟦2-char-id⟧,message:⟦2-char-id⟧ instanceof Error?⟦2-char-id⟧.message:String(⟦2-char-id⟧)})}}),(⟦2-char-id⟧=>{⟦2-char-id⟧.postMessage({id:"decodeError",seq:⟦2-char-id⟧,message:⟦2-char-id⟧ instanceof Error?⟦2-char-id⟧.message:String(⟦2-char-id⟧)})})):⟦2-char-id⟧.postMessage({id:"decodeError",seq:⟦2-char-id⟧,message:"Draco: the decoder module is not loaded"})}})();', "Worker", void 0, ⟦2-char-id⟧.p + "dracoDecode.worker.5148e5d9.worker.js")
      }
      const ⟦2-char-id⟧ = 1⟦2-char-id⟧;
      let ⟦2-char-id⟧ = null,
@@ -6083,8 +6012,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -            iG: this.iG,
 +            Gu: this.Gu,
              sets: {
--              ...(0, ⟦2-char-id⟧.d)(this.asset, JJ, FJ, ⟦2-char-id⟧),
-+              ...(0, ⟦2-char-id⟧.b)(this.asset, BB, VB, ⟦2-char-id⟧),
+-              ...(0, ⟦2-char-id⟧.d)(this.asset, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧),
++              ...(0, ⟦2-char-id⟧.b)(this.asset, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧),
                fillMode: ⟦2-char-id⟧
              },
              unrendered: !0
@@ -6165,8 +6094,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        wasmBinaryUrl: new URL(⟦2-char-id⟧.wasmBinaryUrl, location.href).href
      })
    },
--  40234: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40235: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40234: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40235: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 +      c: () => ⟦2-char-id⟧
@@ -6206,12 +6135,12 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }
      }
    },
--  40245: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40244: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40245: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40244: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.exports = ⟦2-char-id⟧.p + "static/media/draco_decoder_gltf_v2_1.1207caa8c6e38dc2aa04.wasm"
    },
--  40239: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40238: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40239: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40238: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.exports = ⟦2-char-id⟧.p + "static/media/draco_wasm_wrapper_gltf_v2_1.8b33994b6159ad3fc976.js"
    }
  };

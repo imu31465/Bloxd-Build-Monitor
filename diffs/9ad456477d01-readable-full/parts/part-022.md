@@ -17,8 +17,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 90;
  export const ids = [90];
  export const modules = {
--  28177: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  28237: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  28177: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  28237: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      var ⟦2-char-id⟧ = {
 -      "./Player_Atlas.png": 27204,
 -      "./astro_set_1_attachable.png": 27209,
@@ -229,10 +229,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return Object.keys(⟦2-char-id⟧)
 -    }, ⟦2-char-id⟧.resolve = ⟦2-char-id⟧, ⟦2-char-id⟧.exports = ⟦2-char-id⟧, ⟦2-char-id⟧.id = 28177
 -  },
--  32666: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  32666: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    }, ⟦2-char-id⟧.resolve = ⟦2-char-id⟧, ⟦2-char-id⟧.exports = ⟦2-char-id⟧, ⟦2-char-id⟧.id = 28237
 +  },
-+  32665: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  32665: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      var ⟦2-char-id⟧ = {
 -      "./67/67_Model.glb": 32671,
 -      "./67/67_Reconstructed.glb": 32676,
@@ -514,10 +514,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return Object.keys(⟦2-char-id⟧)
 -    }, ⟦2-char-id⟧.resolve = ⟦2-char-id⟧, ⟦2-char-id⟧.exports = ⟦2-char-id⟧, ⟦2-char-id⟧.id = 32666
 -  },
--  26441: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  26441: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    }, ⟦2-char-id⟧.resolve = ⟦2-char-id⟧, ⟦2-char-id⟧.exports = ⟦2-char-id⟧, ⟦2-char-id⟧.id = 32665
 +  },
-+  26527: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  26527: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      var ⟦2-char-id⟧ = {
 -      "./67/67_Atlas.png": 26447,
 -      "./67/variations/0_67_default.png": 26449,
@@ -1142,10 +1142,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return Object.keys(⟦2-char-id⟧)
 -    }, ⟦2-char-id⟧.resolve = ⟦2-char-id⟧, ⟦2-char-id⟧.exports = ⟦2-char-id⟧, ⟦2-char-id⟧.id = 26441
 -  },
--  28184: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  28184: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    }, ⟦2-char-id⟧.resolve = ⟦2-char-id⟧, ⟦2-char-id⟧.exports = ⟦2-char-id⟧, ⟦2-char-id⟧.id = 26527
 +  },
-+  28245: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  28245: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      var ⟦2-char-id⟧ = {
 -      "./2_block.glb": 28193,
 -      "./67.glb": 28197,
@@ -2770,10 +2770,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return Object.keys(⟦2-char-id⟧)
 -    }, ⟦2-char-id⟧.resolve = ⟦2-char-id⟧, ⟦2-char-id⟧.exports = ⟦2-char-id⟧, ⟦2-char-id⟧.id = 28184
 -  },
--  8728: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  8728: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    }, ⟦2-char-id⟧.resolve = ⟦2-char-id⟧, ⟦2-char-id⟧.exports = ⟦2-char-id⟧, ⟦2-char-id⟧.id = 28245
 +  },
-+  8766: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  8766: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      var ⟦2-char-id⟧ = {
 -      "./allium.png": 8733,
 -      "./alloy_kiln_back.png": 8742,
@@ -5620,10 +5620,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return Object.keys(⟦2-char-id⟧)
 -    }, ⟦2-char-id⟧.resolve = ⟦2-char-id⟧, ⟦2-char-id⟧.exports = ⟦2-char-id⟧, ⟦2-char-id⟧.id = 8728
 -  },
--  25913: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  25913: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    }, ⟦2-char-id⟧.resolve = ⟦2-char-id⟧, ⟦2-char-id⟧.exports = ⟦2-char-id⟧, ⟦2-char-id⟧.id = 8766
 +  },
-+  25962: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  25962: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      var ⟦2-char-id⟧ = {
 -      "./Air Walk.png": 25916,
 -      "./Antlers Bonus.png": 25924,
@@ -5834,10 +5834,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return Object.keys(⟦2-char-id⟧)
 -    }, ⟦2-char-id⟧.resolve = ⟦2-char-id⟧, ⟦2-char-id⟧.exports = ⟦2-char-id⟧, ⟦2-char-id⟧.id = 25913
 -  },
--  16477: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  16477: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    }, ⟦2-char-id⟧.resolve = ⟦2-char-id⟧, ⟦2-char-id⟧.exports = ⟦2-char-id⟧, ⟦2-char-id⟧.id = 25962
 +  },
-+  16576: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  16576: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      var ⟦2-char-id⟧ = {
 -      "./67.png": 16483,
 -      "./67_projectile_base.png": 16485,
@@ -9296,10 +9296,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return Object.keys(⟦2-char-id⟧)
 -    }, ⟦2-char-id⟧.resolve = ⟦2-char-id⟧, ⟦2-char-id⟧.exports = ⟦2-char-id⟧, ⟦2-char-id⟧.id = 16477
 -  },
--  8631: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  8631: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    }, ⟦2-char-id⟧.resolve = ⟦2-char-id⟧, ⟦2-char-id⟧.exports = ⟦2-char-id⟧, ⟦2-char-id⟧.id = 16576
 +  },
-+  8644: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  8644: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      blockMetadata: () => ⟦2-char-id⟧.m,
 +      blockMetadata: () => ⟦2-char-id⟧.h,
@@ -9425,8 +9425,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      return ⟦2-char-id⟧.n[⟦2-char-id⟧]
      }
    },
--  33431: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  33435: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  33431: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  33435: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧,
 -      c: () => ⟦2-char-id⟧,
@@ -9452,8 +9452,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        ⟦2-char-id⟧ = "/textures/dayNight/stars",
        ⟦2-char-id⟧ = ["_px.png", "_py.png", "_pz.png", "_nx.png", "_ny.png", "_nz.png"]
    },
--  8719: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  8746: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  8719: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  8746: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧,
 -      h: () => ⟦2-char-id⟧

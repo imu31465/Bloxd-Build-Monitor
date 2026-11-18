@@ -2,7 +2,7 @@
 
 - Base: e7e20713782fba2472c7866f1ac5b84e503e7647
 - Build: 9ad456477d01ce4e7883eecb0f575724f962561f
-- Files in this part: 48
+- Files in this part: 45
 
 <details>
 <summary><code>bundles/staging.bloxd.io/chunks/js/280.js</code> · modified · +16 / -16</summary>
@@ -17,8 +17,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 280;
  export const ids = [280];
  export const modules = {
--  40219: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40218: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40219: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40218: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        collectImportedWorldCodePluginNames: () => ⟦2-char-id⟧
      });
@@ -132,8 +132,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 281;
  export const ids = [281];
  export const modules = {
--  40205: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40202: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40205: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40202: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        default: () => ⟦2-char-id⟧
      });
@@ -496,8 +496,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 282;
  export const ids = [282];
  export const modules = {
--  40225: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40222: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40225: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40222: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        ensureLocalBloxdTypes: () => ⟦2-char-id⟧
      });
@@ -651,8 +651,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 283;
  export const ids = [283];
  export const modules = {
--  40276: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40270: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40276: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40270: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        installImageBitmapTextureLoader: () => ⟦2-char-id⟧
      });
@@ -717,8 +717,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        })))
      }
    },
--  40284: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40275: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40284: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40275: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧.i,
 -      d: () => ⟦2-char-id⟧.n
@@ -751,8 +751,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 284;
  export const ids = [284];
  export const modules = {
--  40339: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40326: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40339: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40326: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 +      d: () => ⟦2-char-id⟧
@@ -817,8 +817,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      ⟦2-char-id⟧.IK().boundingBox.intersectsMinMax(⟦2-char-id⟧.rVB, ⟦2-char-id⟧.KVB) && ⟦2-char-id⟧.entries.push(⟦2-char-id⟧)
      }
    },
--  40344: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40332: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40344: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40332: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        c: () => ⟦2-char-id⟧
      });
@@ -914,8 +914,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }
      }
    },
--  40347: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40339: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40347: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40339: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        d: () => ⟦2-char-id⟧
      });
@@ -1025,8 +1025,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      return this._submeshesOctree.update(⟦2-char-id⟧.minimumWorld, ⟦2-char-id⟧.maximumWorld, this.oN), this._submeshesOctree
      })
    },
--  40294: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40293: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40294: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40293: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      b: () => ⟦2-char-id⟧,
        d: () => ⟦2-char-id⟧,
@@ -1145,8 +1145,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
          switch (⟦2-char-id⟧) {
            case "y": {
              const ⟦2-char-id⟧ = (this.origin.y - ⟦2-char-id⟧) / this.direction.y;
--            return ⟦2-char-id⟧ > 0 ? null : new ⟦2-char-id⟧.j(this.origin.x + this.direction.x * -⟦2-char-id⟧, cJ, this.origin.z + this.direction.z * -⟦2-char-id⟧)
-+            return ⟦2-char-id⟧ > 0 ? null : new ⟦2-char-id⟧.p(this.origin.x + this.direction.x * -⟦2-char-id⟧, TB, this.origin.z + this.direction.z * -⟦2-char-id⟧)
+-            return ⟦2-char-id⟧ > 0 ? null : new ⟦2-char-id⟧.j(this.origin.x + this.direction.x * -⟦2-char-id⟧, ⟦2-char-id⟧, this.origin.z + this.direction.z * -⟦2-char-id⟧)
++            return ⟦2-char-id⟧ > 0 ? null : new ⟦2-char-id⟧.p(this.origin.x + this.direction.x * -⟦2-char-id⟧, ⟦2-char-id⟧, this.origin.z + this.direction.z * -⟦2-char-id⟧)
            }
            case "x": {
              const ⟦2-char-id⟧ = (this.origin.x - ⟦2-char-id⟧) / this.direction.x;
@@ -1531,8 +1531,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧._TmpVector3 = (0, ⟦2-char-id⟧.e)(6, ⟦2-char-id⟧.j.Zero), ⟦2-char-id⟧._RayDistant = ⟦2-char-id⟧.Zero(), ⟦2-char-id⟧._Smallnum = 1e-8, ⟦2-char-id⟧._Rayl = 1⟦2-char-id⟧
 +    ⟦2-char-id⟧._TmpVector3 = (0, ⟦2-char-id⟧.b)(6, ⟦2-char-id⟧.p.Zero), ⟦2-char-id⟧._RayDistant = ⟦2-char-id⟧.Zero(), ⟦2-char-id⟧._Smallnum = 1e-8, ⟦2-char-id⟧._Rayl = 1⟦2-char-id⟧
    },
--  40289: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40287: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40289: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40287: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧.y
 +      d: () => ⟦2-char-id⟧.v
@@ -1581,8 +1581,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      return (0, ⟦2-char-id⟧.k)(this, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧)
      })
    },
--  40302: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40295: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40302: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40295: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 +      e: () => ⟦2-char-id⟧
@@ -1844,8 +1844,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧ || (⟦2-char-id⟧ = !0, ⟦2-char-id⟧.b.AddNodeConstructor("Light_Type_1", ((⟦2-char-id⟧, ⟦2-char-id⟧) => () => new ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧.j.Zero(), ⟦2-char-id⟧))), (0, ⟦2-char-id⟧.f)("BABYLON.DirectionalLight", ⟦2-char-id⟧))
 +    ⟦2-char-id⟧ || (⟦2-char-id⟧ = !0, ⟦2-char-id⟧.e.AddNodeConstructor("Light_Type_1", ((⟦2-char-id⟧, ⟦2-char-id⟧) => () => new ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧.p.Zero(), ⟦2-char-id⟧))), (0, ⟦2-char-id⟧.g)("BABYLON.DirectionalLight", ⟦2-char-id⟧))
    },
--  40322: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40308: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40322: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40308: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 +      d: () => ⟦2-char-id⟧
@@ -4539,8 +4539,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
      let ⟦2-char-id⟧ = !1;
      ⟦2-char-id⟧ || (⟦2-char-id⟧ = !0, ⟦2-char-id⟧._ParseParticleSystem = ⟦2-char-id⟧.Parse)
    },
--  40354: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40355: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40354: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40355: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        SkyMaterial: () => ⟦2-char-id⟧,
        _MaxColorValueForRenderTarget: () => ⟦2-char-id⟧
@@ -4988,7 +4988,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary><code>bundles/staging.bloxd.io/chunks/js/285.js</code> · modified · +116 / -116</summary>
+<summary><code>bundles/staging.bloxd.io/chunks/js/285.js</code> · modified · +114 / -114</summary>
 
 JavaScript comparison masks only two-character identifiers. Strings, comments, member properties, object keys, and all other source changes remain visible.
 
@@ -5000,8 +5000,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 285;
  export const ids = [285];
  export const modules = {
--  40432: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40420: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40432: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40420: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        b: () => ⟦2-char-id⟧,
 -      f: () => ⟦2-char-id⟧,
@@ -5110,8 +5110,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }
      }
    },
--  40382: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40375: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40382: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40375: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        c: () => ⟦2-char-id⟧,
 -      f: () => ⟦2-char-id⟧,
@@ -5131,8 +5131,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        ⟦2-char-id⟧ = globalThis.GPUShaderStage;
      globalThis.GPUColorWrite
    },
--  40448: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40438: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40448: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40438: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      function ⟦2-char-id⟧(⟦2-char-id⟧) {
        ⟦2-char-id⟧(⟦2-char-id⟧.splice(0))
      }
@@ -5148,8 +5148,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        b: () => ⟦2-char-id⟧
      })
    },
--  40435: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40425: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40435: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40425: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        e: () => ⟦2-char-id⟧,
 -      f: () => ⟦2-char-id⟧,
@@ -5174,8 +5174,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }
      }
    },
--  40446: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40432: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40446: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40432: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        e: () => ⟦2-char-id⟧,
        f: () => ⟦2-char-id⟧,
@@ -5191,15 +5191,15 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        ⟦2-char-id⟧ = Float64Array,
        ⟦2-char-id⟧ = Uint32Array
    },
--  40450: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40446: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40450: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40446: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        e: () => ⟦2-char-id⟧
      });
      var ⟦2-char-id⟧ = 16
    },
--  40373: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40369: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40373: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40369: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        c: () => ⟦2-char-id⟧
      });
@@ -5220,10 +5220,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        throw ⟦2-char-id⟧.lite = ⟦2-char-id⟧, ⟦2-char-id⟧
      }
    },
--  40416: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40416: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
-+  40397: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40397: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      b: () => ⟦2-char-id⟧
      });
@@ -5239,14 +5239,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      return (0, ⟦2-char-id⟧.c)(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧)
 -    }
 -  },
--  40390: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40390: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +        ⟦2-char-id⟧ = void 0 !== ⟦2-char-id⟧ || 0 !== ⟦2-char-id⟧ || 32 !== ⟦2-char-id⟧ ? `${dB??""}:${yB}:${pB}` : "";
 +      return (0, ⟦2-char-id⟧.d)(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧)
 +    }
 +  },
-+  40377: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40377: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      d: () => ⟦2-char-id⟧
      });
@@ -5264,10 +5264,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        ⟦2-char-id⟧(⟦2-char-id⟧.texture)
      }
    },
--  40399: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40399: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
-+  40381: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40381: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      d: () => ⟦2-char-id⟧
      });
@@ -5292,11 +5292,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        return ⟦2-char-id⟧ || ⟦2-char-id⟧.set(⟦2-char-id⟧, ⟦2-char-id⟧ = ⟦2-char-id⟧.createSampler(⟦2-char-id⟧)), ⟦2-char-id⟧
      }
    },
--  40439: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40439: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧,
 -      g: () => ⟦2-char-id⟧
-+  40429: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40429: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      d: () => ⟦2-char-id⟧,
 +      e: () => ⟦2-char-id⟧
@@ -5449,15 +5449,12 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 21 · Change · +3 / -3</summary>
+<summary>Hunk 21 · Change · +2 / -2</summary>
 
 ```diff
-@@ -624,11 +624,11 @@
-             if (⟦2-char-id⟧._disposed) throw new Error("RenderTask has been disposed.");
-             ⟦2-char-id⟧._recordExplicit ? ⟦2-char-id⟧._recordExplicit(⟦2-char-id⟧, !0) : ⟦2-char-id⟧(⟦2-char-id⟧, !1 !== ⟦2-char-id⟧.autoMirror ? ⟦2-char-id⟧._renderables.slice() : ⟦2-char-id⟧._renderables, !0)
+@@ -626,9 +626,9 @@
            },
--          execute: () => function(⟦2-char-id⟧, cJ, ⟦2-char-id⟧) {
-+          execute: () => function(⟦2-char-id⟧, TB, ⟦2-char-id⟧) {
+           execute: () => function(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) {
              if (!1 === ⟦2-char-id⟧.enabled) return 0;
 -            const ⟦2-char-id⟧ = ⟦2-char-id⟧.iG;
 +            const ⟦2-char-id⟧ = ⟦2-char-id⟧.Gu;
@@ -5506,18 +5503,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 24 · Change · +2 / -2</summary>
+<summary>Hunk 24 · Change · +1 / -1</summary>
 
 ```diff
-@@ -676,14 +676,14 @@
-             const ⟦2-char-id⟧ = ⟦2-char-id⟧._currentEncoder.beginRenderPass(⟦2-char-id⟧._renderPassDescriptor),
-               ⟦2-char-id⟧ = ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧);
-             return ⟦2-char-id⟧.end(), ⟦2-char-id⟧
--          }(⟦2-char-id⟧, cJ, ⟦2-char-id⟧),
-+          }(⟦2-char-id⟧, TB, ⟦2-char-id⟧),
-           dispose() {
-             if (⟦2-char-id⟧._disposed) return;
-             ⟦2-char-id⟧._disposed = !0;
+@@ -683,7 +683,7 @@
              const ⟦2-char-id⟧ = ⟦2-char-id⟧._pendingMeshes;
              ⟦2-char-id⟧ && (⟦2-char-id⟧.length = 0);
              for (const ⟦2-char-id⟧ of ⟦2-char-id⟧._renderables) ⟦2-char-id⟧._retireRenderable?.(⟦2-char-id⟧.engine, ⟦2-char-id⟧);
@@ -5649,11 +5638,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
      }
      var ⟦2-char-id⟧ = (⟦2-char-id⟧, ⟦2-char-id⟧) => ⟦2-char-id⟧.order - ⟦2-char-id⟧.order
    },
--  40425: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40425: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧,
 -      h: () => ⟦2-char-id⟧
-+  40412: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40412: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      c: () => ⟦2-char-id⟧,
 +      d: () => ⟦2-char-id⟧
@@ -5719,10 +5708,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        ⟦2-char-id⟧ && "dynamic" === ⟦2-char-id⟧.kind && (⟦2-char-id⟧.source = ⟦2-char-id⟧, ⟦2-char-id⟧.flipY = ⟦2-char-id⟧, ⟦2-char-id⟧.premultipliedAlpha = ⟦2-char-id⟧), ⟦2-char-id⟧.texture.mipLevelCount > 1 && (0, ⟦2-char-id⟧.generateMipmaps)(⟦2-char-id⟧, ⟦2-char-id⟧.texture)
      }
    },
--  40421: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40421: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
-+  40405: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40405: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      d: () => ⟦2-char-id⟧
      });
@@ -5827,8 +5816,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }
      }
    },
--  40403: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40385: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40403: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40385: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        generateMipmaps: () => ⟦2-char-id⟧,
        recordMipmaps: () => ⟦2-char-id⟧
@@ -5904,8 +5893,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }
      }
    },
--  40408: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40388: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40408: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40388: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      function ⟦2-char-id⟧(⟦2-char-id⟧, ⟦2-char-id⟧) {
        return Math.floor(Math.log2(Math.max(⟦2-char-id⟧, ⟦2-char-id⟧))) + 1
      }
@@ -5921,11 +5910,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        d: () => ⟦2-char-id⟧
      })
    },
--  40364: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40364: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧,
 -      d: () => ⟦2-char-id⟧
-+  40362: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40362: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      c: () => ⟦2-char-id⟧,
 +      e: () => ⟦2-char-id⟧
@@ -5998,8 +5987,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 286;
  export const ids = [286];
  export const modules = {
--  40476: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40463: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40476: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40463: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +      e: () => ⟦2-char-id⟧
@@ -6102,8 +6091,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧._FileFaces = [new ⟦2-char-id⟧("right", new ⟦2-char-id⟧.j(1, 0, 0), new ⟦2-char-id⟧.j(0, 0, -1), new ⟦2-char-id⟧.j(0, -1, 0)), new ⟦2-char-id⟧("left", new ⟦2-char-id⟧.j(-1, 0, 0), new ⟦2-char-id⟧.j(0, 0, 1), new ⟦2-char-id⟧.j(0, -1, 0)), new ⟦2-char-id⟧("up", new ⟦2-char-id⟧.j(0, 1, 0), new ⟦2-char-id⟧.j(1, 0, 0), new ⟦2-char-id⟧.j(0, 0, 1)), new ⟦2-char-id⟧("down", new ⟦2-char-id⟧.j(0, -1, 0), new ⟦2-char-id⟧.j(1, 0, 0), new ⟦2-char-id⟧.j(0, 0, -1)), new ⟦2-char-id⟧("front", new ⟦2-char-id⟧.j(0, 0, 1), new ⟦2-char-id⟧.j(1, 0, 0), new ⟦2-char-id⟧.j(0, -1, 0)), new ⟦2-char-id⟧("back", new ⟦2-char-id⟧.j(0, 0, -1), new ⟦2-char-id⟧.j(-1, 0, 0), new ⟦2-char-id⟧.j(0, -1, 0))], ⟦2-char-id⟧.MAX_HDRI_VALUE = 4096, ⟦2-char-id⟧.PRESERVE_CLAMPED_COLORS = !1
 +    ⟦2-char-id⟧._FileFaces = [new ⟦2-char-id⟧("right", new ⟦2-char-id⟧.p(1, 0, 0), new ⟦2-char-id⟧.p(0, 0, -1), new ⟦2-char-id⟧.p(0, -1, 0)), new ⟦2-char-id⟧("left", new ⟦2-char-id⟧.p(-1, 0, 0), new ⟦2-char-id⟧.p(0, 0, 1), new ⟦2-char-id⟧.p(0, -1, 0)), new ⟦2-char-id⟧("up", new ⟦2-char-id⟧.p(0, 1, 0), new ⟦2-char-id⟧.p(1, 0, 0), new ⟦2-char-id⟧.p(0, 0, 1)), new ⟦2-char-id⟧("down", new ⟦2-char-id⟧.p(0, -1, 0), new ⟦2-char-id⟧.p(1, 0, 0), new ⟦2-char-id⟧.p(0, 0, -1)), new ⟦2-char-id⟧("front", new ⟦2-char-id⟧.p(0, 0, 1), new ⟦2-char-id⟧.p(1, 0, 0), new ⟦2-char-id⟧.p(0, -1, 0)), new ⟦2-char-id⟧("back", new ⟦2-char-id⟧.p(0, 0, -1), new ⟦2-char-id⟧.p(-1, 0, 0), new ⟦2-char-id⟧.p(0, -1, 0))], ⟦2-char-id⟧.MAX_HDRI_VALUE = 4096, ⟦2-char-id⟧.PRESERVE_CLAMPED_COLORS = !1
    },
--  40473: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40461: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40473: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40461: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        DDSTools: () => ⟦2-char-id⟧
      });
@@ -6342,8 +6331,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 287;
  export const ids = [286, 287];
  export const modules = {
--  40491: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40475: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40491: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40475: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        _DDSTextureLoader: () => ⟦2-char-id⟧
      });
@@ -6396,8 +6385,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }
      }
    },
--  40476: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40463: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40476: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40463: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +      e: () => ⟦2-char-id⟧
@@ -6500,8 +6489,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    ⟦2-char-id⟧._FileFaces = [new ⟦2-char-id⟧("right", new ⟦2-char-id⟧.j(1, 0, 0), new ⟦2-char-id⟧.j(0, 0, -1), new ⟦2-char-id⟧.j(0, -1, 0)), new ⟦2-char-id⟧("left", new ⟦2-char-id⟧.j(-1, 0, 0), new ⟦2-char-id⟧.j(0, 0, 1), new ⟦2-char-id⟧.j(0, -1, 0)), new ⟦2-char-id⟧("up", new ⟦2-char-id⟧.j(0, 1, 0), new ⟦2-char-id⟧.j(1, 0, 0), new ⟦2-char-id⟧.j(0, 0, 1)), new ⟦2-char-id⟧("down", new ⟦2-char-id⟧.j(0, -1, 0), new ⟦2-char-id⟧.j(1, 0, 0), new ⟦2-char-id⟧.j(0, 0, -1)), new ⟦2-char-id⟧("front", new ⟦2-char-id⟧.j(0, 0, 1), new ⟦2-char-id⟧.j(1, 0, 0), new ⟦2-char-id⟧.j(0, -1, 0)), new ⟦2-char-id⟧("back", new ⟦2-char-id⟧.j(0, 0, -1), new ⟦2-char-id⟧.j(-1, 0, 0), new ⟦2-char-id⟧.j(0, -1, 0))], ⟦2-char-id⟧.MAX_HDRI_VALUE = 4096, ⟦2-char-id⟧.PRESERVE_CLAMPED_COLORS = !1
 +    ⟦2-char-id⟧._FileFaces = [new ⟦2-char-id⟧("right", new ⟦2-char-id⟧.p(1, 0, 0), new ⟦2-char-id⟧.p(0, 0, -1), new ⟦2-char-id⟧.p(0, -1, 0)), new ⟦2-char-id⟧("left", new ⟦2-char-id⟧.p(-1, 0, 0), new ⟦2-char-id⟧.p(0, 0, 1), new ⟦2-char-id⟧.p(0, -1, 0)), new ⟦2-char-id⟧("up", new ⟦2-char-id⟧.p(0, 1, 0), new ⟦2-char-id⟧.p(1, 0, 0), new ⟦2-char-id⟧.p(0, 0, 1)), new ⟦2-char-id⟧("down", new ⟦2-char-id⟧.p(0, -1, 0), new ⟦2-char-id⟧.p(1, 0, 0), new ⟦2-char-id⟧.p(0, 0, -1)), new ⟦2-char-id⟧("front", new ⟦2-char-id⟧.p(0, 0, 1), new ⟦2-char-id⟧.p(1, 0, 0), new ⟦2-char-id⟧.p(0, -1, 0)), new ⟦2-char-id⟧("back", new ⟦2-char-id⟧.p(0, 0, -1), new ⟦2-char-id⟧.p(-1, 0, 0), new ⟦2-char-id⟧.p(0, -1, 0))], ⟦2-char-id⟧.MAX_HDRI_VALUE = 4096, ⟦2-char-id⟧.PRESERVE_CLAMPED_COLORS = !1
    },
--  40473: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40461: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40473: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40461: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        DDSTools: () => ⟦2-char-id⟧
      });
@@ -6740,8 +6729,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 288;
  export const ids = [288];
  export const modules = {
--  40499: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40488: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40499: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40488: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        _ENVTextureLoader: () => ⟦2-char-id⟧
      });
@@ -6994,8 +6983,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }
      }
    },
--  40542: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40538: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40542: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40538: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 +      e: () => ⟦2-char-id⟧
@@ -7032,8 +7021,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }))
      }
    },
--  40476: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40463: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40476: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40463: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +      e: () => ⟦2-char-id⟧
@@ -7138,8 +7127,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +    }
 +    ⟦2-char-id⟧._FileFaces = [new ⟦2-char-id⟧("right", new ⟦2-char-id⟧.p(1, 0, 0), new ⟦2-char-id⟧.p(0, 0, -1), new ⟦2-char-id⟧.p(0, -1, 0)), new ⟦2-char-id⟧("left", new ⟦2-char-id⟧.p(-1, 0, 0), new ⟦2-char-id⟧.p(0, 0, 1), new ⟦2-char-id⟧.p(0, -1, 0)), new ⟦2-char-id⟧("up", new ⟦2-char-id⟧.p(0, 1, 0), new ⟦2-char-id⟧.p(1, 0, 0), new ⟦2-char-id⟧.p(0, 0, 1)), new ⟦2-char-id⟧("down", new ⟦2-char-id⟧.p(0, -1, 0), new ⟦2-char-id⟧.p(1, 0, 0), new ⟦2-char-id⟧.p(0, 0, -1)), new ⟦2-char-id⟧("front", new ⟦2-char-id⟧.p(0, 0, 1), new ⟦2-char-id⟧.p(1, 0, 0), new ⟦2-char-id⟧.p(0, -1, 0)), new ⟦2-char-id⟧("back", new ⟦2-char-id⟧.p(0, 0, -1), new ⟦2-char-id⟧.p(-1, 0, 0), new ⟦2-char-id⟧.p(0, -1, 0))], ⟦2-char-id⟧.MAX_HDRI_VALUE = 4096, ⟦2-char-id⟧.PRESERVE_CLAMPED_COLORS = !1
    },
--  40512: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40506: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40512: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40506: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 +      b: () => ⟦2-char-id⟧
@@ -7227,8 +7216,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 289;
  export const ids = [289];
  export const modules = {
--  40483: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40470: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40483: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40470: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        _IESTextureLoader: () => ⟦2-char-id⟧
      });
@@ -7307,8 +7296,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 290;
  export const ids = [290];
  export const modules = {
--  40497: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40479: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40497: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40479: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        _BasisTextureLoader: () => ⟦2-char-id⟧
      });
@@ -7491,7 +7480,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary><code>bundles/staging.bloxd.io/chunks/js/291.js</code> · modified · +219 / -219</summary>
+<summary><code>bundles/staging.bloxd.io/chunks/js/291.js</code> · modified · +216 / -216</summary>
 
 JavaScript comparison masks only two-character identifiers. Strings, comments, member properties, object keys, and all other source changes remain visible.
 
@@ -7503,8 +7492,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 291;
  export const ids = [291];
  export const modules = {
--  40527: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40516: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40527: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40516: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 +      b: () => ⟦2-char-id⟧
@@ -8029,8 +8018,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    Object.getOwnPropertyDescriptor(⟦2-char-id⟧.prototype, "noPrePassRenderer") || Object.defineProperty(⟦2-char-id⟧.prototype, "noPrePassRenderer", (0, ⟦2-char-id⟧.h)("RenderTargetTexture", "noPrePassRenderer"))
 +    Object.getOwnPropertyDescriptor(⟦2-char-id⟧.prototype, "noPrePassRenderer") || Object.defineProperty(⟦2-char-id⟧.prototype, "noPrePassRenderer", (0, ⟦2-char-id⟧.d)("RenderTargetTexture", "noPrePassRenderer"))
    },
--  40506: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40501: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40506: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40501: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧,
 -      i: () => ⟦2-char-id⟧
@@ -8062,8 +8051,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
          const ⟦2-char-id⟧ = ⟦2-char-id⟧.positions ?? ⟦2-char-id⟧.positions,
            ⟦2-char-id⟧ = ⟦2-char-id⟧.indices ?? ⟦2-char-id⟧.indices;
          this.engine = ⟦2-char-id⟧, this._vertexBuffers = {
--          [⟦2-char-id⟧.n.PositionKind]: new ⟦2-char-id⟧.n(⟦2-char-id⟧, ZJ, ⟦2-char-id⟧.n.PositionKind, !1, !1, 2)
-+          [⟦2-char-id⟧.m.PositionKind]: new ⟦2-char-id⟧.m(⟦2-char-id⟧, dB, ⟦2-char-id⟧.m.PositionKind, !1, !1, 2)
+-          [⟦2-char-id⟧.n.PositionKind]: new ⟦2-char-id⟧.n(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧.n.PositionKind, !1, !1, 2)
++          [⟦2-char-id⟧.m.PositionKind]: new ⟦2-char-id⟧.m(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧.m.PositionKind, !1, !1, 2)
          }, this._indexBuffer = ⟦2-char-id⟧.createIndexBuffer(⟦2-char-id⟧), this._indexBufferLength = ⟦2-char-id⟧.length, this._onContextRestoredObserver = ⟦2-char-id⟧.onContextRestoredObservable.add((() => {
            this._indexBuffer = ⟦2-char-id⟧.createIndexBuffer(⟦2-char-id⟧);
            for (const ⟦2-char-id⟧ in this._vertexBuffers) {
@@ -8153,10 +8142,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 30 · Change · +6 / -6</summary>
+<summary>Hunk 30 · Change · +1 / -1</summary>
 
 ```diff
-@@ -912,28 +912,28 @@
+@@ -912,7 +912,7 @@
            uniformsNames: ⟦2-char-id⟧ || this.options.uniforms,
            uniformBuffersNames: this.options.uniformBuffers,
            samplers: ⟦2-char-id⟧ || this.options.samplers,
@@ -8165,11 +8154,16 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
            fallbacks: null,
            onCompiled: ⟦2-char-id⟧ ?? this.options.onCompiled,
            onError: ⟦2-char-id⟧ ?? null,
-           indexParameters: ⟦2-char-id⟧ || this.options.indexParameters,
--          processCodeAfterIncludes: ⟦2-char-id⟧?.processCodeAfterIncludes ? (⟦2-char-id⟧, ⟦2-char-id⟧) => ⟦2-char-id⟧.processCodeAfterIncludes(this.name, JJ, ⟦2-char-id⟧) : null,
--          processFinalCode: ⟦2-char-id⟧?.processFinalCode ? (⟦2-char-id⟧, ⟦2-char-id⟧) => ⟦2-char-id⟧.processFinalCode(this.name, JJ, ⟦2-char-id⟧) : null,
-+          processCodeAfterIncludes: ⟦2-char-id⟧?.processCodeAfterIncludes ? (⟦2-char-id⟧, ⟦2-char-id⟧) => ⟦2-char-id⟧.processCodeAfterIncludes(this.name, BB, ⟦2-char-id⟧) : null,
-+          processFinalCode: ⟦2-char-id⟧?.processFinalCode ? (⟦2-char-id⟧, ⟦2-char-id⟧) => ⟦2-char-id⟧.processFinalCode(this.name, BB, ⟦2-char-id⟧) : null,
+```
+
+</details>
+
+<details>
+<summary>Hunk 31 · Change · +3 / -3</summary>
+
+```diff
+@@ -921,19 +921,19 @@
+           processFinalCode: ⟦2-char-id⟧?.processFinalCode ? (⟦2-char-id⟧, ⟦2-char-id⟧) => ⟦2-char-id⟧.processFinalCode(this.name, ⟦2-char-id⟧, ⟦2-char-id⟧) : null,
            shaderLanguage: this.options.shaderLanguage,
            extraInitializationsAsync: ⟦2-char-id⟧
 -        }, this.options.engine) : this._drawWrapper.effect = new ⟦2-char-id⟧.d(this._shaderPath, this.options.attributeNames, ⟦2-char-id⟧ || this.options.uniforms, ⟦2-char-id⟧ || this.options.samplerNames, this.options.engine, ⟦2-char-id⟧, void 0, ⟦2-char-id⟧ || this.options.onCompiled, void 0, void 0, void 0, this.options.shaderLanguage, ⟦2-char-id⟧), this.onEffectCreatedObservable.notifyObservers(this._drawWrapper.effect)
@@ -8186,8 +8180,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
      }
      ⟦2-char-id⟧.ForceGLSL = !1, ⟦2-char-id⟧._CustomShaderCodeProcessing = {}
    },
--  40538: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40532: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40538: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40532: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        Dispose: () => ⟦2-char-id⟧,
        DumpData: () => ⟦2-char-id⟧,
@@ -8196,7 +8190,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 31 · Change · +10 / -10</summary>
+<summary>Hunk 32 · Change · +10 / -10</summary>
 
 ```diff
 @@ -943,22 +943,22 @@
@@ -8237,7 +8231,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 32 · Change · +4 / -4</summary>
+<summary>Hunk 33 · Change · +4 / -4</summary>
 
 ```diff
 @@ -970,13 +970,13 @@
@@ -8263,7 +8257,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 33 · Change · +2 / -2</summary>
+<summary>Hunk 34 · Change · +2 / -2</summary>
 
 ```diff
 @@ -1002,14 +1002,14 @@
@@ -8288,7 +8282,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 34 · Change · +1 / -1</summary>
+<summary>Hunk 35 · Change · +1 / -1</summary>
 
 ```diff
 @@ -1024,7 +1024,7 @@
@@ -8305,7 +8299,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 35 · Change · +2 / -2</summary>
+<summary>Hunk 36 · Change · +2 / -2</summary>
 
 ```diff
 @@ -1051,9 +1051,9 @@
@@ -8325,7 +8319,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 36 · Change · +12 / -12</summary>
+<summary>Hunk 37 · Change · +12 / -12</summary>
 
 ```diff
 @@ -1079,22 +1079,22 @@
@@ -8336,8 +8330,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      ⟦2-char-id⟧.h.DumpData = ⟦2-char-id⟧, ⟦2-char-id⟧.h.DumpDataAsync = ⟦2-char-id⟧, ⟦2-char-id⟧.h.DumpFramebuffer = ⟦2-char-id⟧
      }
    },
--  40520: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40510: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40520: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40510: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧,
 -      f: () => ⟦2-char-id⟧,
@@ -8368,7 +8362,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 37 · Change · +5 / -5</summary>
+<summary>Hunk 38 · Change · +5 / -5</summary>
 
 ```diff
 @@ -1102,18 +1102,18 @@
@@ -8387,10 +8381,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +          ...TB
          };
 -        super(⟦2-char-id⟧, ⟦2-char-id⟧.e.FragmentUrl, {
--          effectWrapper: "number" !== typeof ⟦2-char-id⟧ && ⟦2-char-id⟧.effectWrapper ? void 0 : new ⟦2-char-id⟧.e(⟦2-char-id⟧, ZJ, ⟦2-char-id⟧),
+-          effectWrapper: "number" !== typeof ⟦2-char-id⟧ && ⟦2-char-id⟧.effectWrapper ? void 0 : new ⟦2-char-id⟧.e(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧),
 -          ...FJ
 +        super(⟦2-char-id⟧, ⟦2-char-id⟧.g.FragmentUrl, {
-+          effectWrapper: "number" !== typeof ⟦2-char-id⟧ && ⟦2-char-id⟧.effectWrapper ? void 0 : new ⟦2-char-id⟧.g(⟦2-char-id⟧, dB, ⟦2-char-id⟧),
++          effectWrapper: "number" !== typeof ⟦2-char-id⟧ && ⟦2-char-id⟧.effectWrapper ? void 0 : new ⟦2-char-id⟧.g(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧),
 +          ...VB
          })
        }
@@ -8400,7 +8394,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 38 · Change · +7 / -7</summary>
+<summary>Hunk 39 · Change · +7 / -7</summary>
 
 ```diff
 @@ -1136,26 +1136,26 @@
@@ -8419,11 +8413,11 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +            ...TB
            };
 -          super(⟦2-char-id⟧, ⟦2-char-id⟧.e.FragmentUrl, {
--            effectWrapper: "number" !== typeof ⟦2-char-id⟧ && ⟦2-char-id⟧.effectWrapper ? void 0 : new ⟦2-char-id⟧.c(⟦2-char-id⟧, ZJ, ⟦2-char-id⟧),
+-            effectWrapper: "number" !== typeof ⟦2-char-id⟧ && ⟦2-char-id⟧.effectWrapper ? void 0 : new ⟦2-char-id⟧.c(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧),
 -            ...UJ
 -          }), (0, ⟦2-char-id⟧.e)(this, ⟦2-char-id⟧)
 +          super(⟦2-char-id⟧, ⟦2-char-id⟧.g.FragmentUrl, {
-+            effectWrapper: "number" !== typeof ⟦2-char-id⟧ && ⟦2-char-id⟧.effectWrapper ? void 0 : new ⟦2-char-id⟧.e(⟦2-char-id⟧, dB, ⟦2-char-id⟧),
++            effectWrapper: "number" !== typeof ⟦2-char-id⟧ && ⟦2-char-id⟧.effectWrapper ? void 0 : new ⟦2-char-id⟧.e(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧),
 +            ...yB
 +          }), (0, ⟦2-char-id⟧.h)(this, ⟦2-char-id⟧)
          }
@@ -8442,7 +8436,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 39 · Change · +3 / -3</summary>
+<summary>Hunk 40 · Change · +3 / -3</summary>
 
 ```diff
 @@ -1173,11 +1173,11 @@
@@ -8465,7 +8459,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 40 · Change · +2 / -2</summary>
+<summary>Hunk 41 · Change · +2 / -2</summary>
 
 ```diff
 @@ -1208,12 +1208,12 @@
@@ -8488,7 +8482,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 41 · Change · +5 / -5</summary>
+<summary>Hunk 42 · Change · +5 / -5</summary>
 
 ```diff
 @@ -1277,17 +1277,17 @@
@@ -8519,7 +8513,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 42 · Change · +2 / -2</summary>
+<summary>Hunk 43 · Change · +2 / -2</summary>
 
 ```diff
 @@ -1295,14 +1295,14 @@
@@ -8544,7 +8538,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 43 · Change · +1 / -1</summary>
+<summary>Hunk 44 · Change · +1 / -1</summary>
 
 ```diff
 @@ -1313,7 +1313,7 @@
@@ -8561,7 +8555,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 44 · Change · +1 / -1</summary>
+<summary>Hunk 45 · Change · +1 / -1</summary>
 
 ```diff
 @@ -1323,7 +1323,7 @@
@@ -8578,7 +8572,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 45 · Change · +1 / -1</summary>
+<summary>Hunk 46 · Change · +1 / -1</summary>
 
 ```diff
 @@ -1335,7 +1335,7 @@
@@ -8595,15 +8589,12 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 46 · Change · +6 / -6</summary>
+<summary>Hunk 47 · Change · +5 / -5</summary>
 
 ```diff
-@@ -1366,16 +1366,16 @@
-       return ⟦2-char-id⟧
-     }
+@@ -1368,14 +1368,14 @@
      const ⟦2-char-id⟧ = {
--      CreateResizedCopy: function(⟦2-char-id⟧, cJ, ⟦2-char-id⟧) {
-+      CreateResizedCopy: function(⟦2-char-id⟧, TB, ⟦2-char-id⟧) {
+       CreateResizedCopy: function(⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) {
          let ⟦2-char-id⟧ = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
 -        const ⟦2-char-id⟧ = ⟦2-char-id⟧.Qy(),
 -          ⟦2-char-id⟧ = ⟦2-char-id⟧.gn(),
@@ -8626,7 +8617,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 47 · Change · +13 / -13</summary>
+<summary>Hunk 48 · Change · +13 / -13</summary>
 
 ```diff
 @@ -1387,26 +1387,26 @@
@@ -8639,8 +8630,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        GetTextureDataAsync: ⟦2-char-id⟧
      }
    },
--  40501: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40496: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40501: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40496: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        e: () => ⟦2-char-id⟧
      });
@@ -8674,7 +8665,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 48 · Change · +3 / -3</summary>
+<summary>Hunk 49 · Change · +3 / -3</summary>
 
 ```diff
 @@ -1440,13 +1440,13 @@
@@ -8699,7 +8690,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 49 · Change · +2 / -2</summary>
+<summary>Hunk 50 · Change · +2 / -2</summary>
 
 ```diff
 @@ -1499,10 +1499,10 @@
@@ -8720,7 +8711,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 50 · Change · +4 / -4</summary>
+<summary>Hunk 51 · Change · +4 / -4</summary>
 
 ```diff
 @@ -1516,22 +1516,22 @@
@@ -8755,7 +8746,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 51 · Change · +1 / -1</summary>
+<summary>Hunk 52 · Change · +1 / -1</summary>
 
 ```diff
 @@ -1541,7 +1541,7 @@
@@ -8772,7 +8763,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 52 · Change · +1 / -1</summary>
+<summary>Hunk 53 · Change · +1 / -1</summary>
 
 ```diff
 @@ -1549,7 +1549,7 @@
@@ -8789,7 +8780,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 53 · Change · +1 / -1</summary>
+<summary>Hunk 54 · Change · +1 / -1</summary>
 
 ```diff
 @@ -1564,7 +1564,7 @@
@@ -8806,7 +8797,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 54 · Change · +1 / -1</summary>
+<summary>Hunk 55 · Change · +1 / -1</summary>
 
 ```diff
 @@ -1631,7 +1631,7 @@
@@ -8823,7 +8814,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 55 · Change · +3 / -3</summary>
+<summary>Hunk 56 · Change · +3 / -3</summary>
 
 ```diff
 @@ -1651,9 +1651,9 @@
@@ -8844,7 +8835,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 56 · Change · +2 / -2</summary>
+<summary>Hunk 57 · Change · +2 / -2</summary>
 
 ```diff
 @@ -1665,11 +1665,11 @@
@@ -8866,7 +8857,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 57 · Change · +1 / -1</summary>
+<summary>Hunk 58 · Change · +1 / -1</summary>
 
 ```diff
 @@ -1683,7 +1683,7 @@
@@ -8883,7 +8874,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 58 · Change · +2 / -2</summary>
+<summary>Hunk 59 · Change · +2 / -2</summary>
 
 ```diff
 @@ -1697,9 +1697,9 @@
@@ -8903,7 +8894,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 59 · Change · +1 / -1</summary>
+<summary>Hunk 60 · Change · +1 / -1</summary>
 
 ```diff
 @@ -1727,7 +1727,7 @@
@@ -8920,7 +8911,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 60 · Change · +1 / -1</summary>
+<summary>Hunk 61 · Change · +1 / -1</summary>
 
 ```diff
 @@ -1737,7 +1737,7 @@
@@ -8937,7 +8928,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 61 · Change · +1 / -1</summary>
+<summary>Hunk 62 · Change · +1 / -1</summary>
 
 ```diff
 @@ -1747,7 +1747,7 @@
@@ -8954,7 +8945,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 62 · Change · +1 / -1</summary>
+<summary>Hunk 63 · Change · +1 / -1</summary>
 
 ```diff
 @@ -1760,7 +1760,7 @@
@@ -8971,7 +8962,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 63 · Change · +1 / -1</summary>
+<summary>Hunk 64 · Change · +1 / -1</summary>
 
 ```diff
 @@ -1773,7 +1773,7 @@
@@ -8988,7 +8979,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 64 · Change · +1 / -1</summary>
+<summary>Hunk 65 · Change · +1 / -1</summary>
 
 ```diff
 @@ -1786,7 +1786,7 @@
@@ -9005,7 +8996,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 65 · Change · +1 / -1</summary>
+<summary>Hunk 66 · Change · +1 / -1</summary>
 
 ```diff
 @@ -1799,7 +1799,7 @@
@@ -9022,7 +9013,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 66 · Change · +1 / -1</summary>
+<summary>Hunk 67 · Change · +1 / -1</summary>
 
 ```diff
 @@ -1812,7 +1812,7 @@
@@ -9039,7 +9030,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 67 · Change · +1 / -1</summary>
+<summary>Hunk 68 · Change · +1 / -1</summary>
 
 ```diff
 @@ -1825,7 +1825,7 @@
@@ -9056,7 +9047,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 68 · Change · +1 / -1</summary>
+<summary>Hunk 69 · Change · +1 / -1</summary>
 
 ```diff
 @@ -1838,7 +1838,7 @@
@@ -9073,7 +9064,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 69 · Change · +1 / -1</summary>
+<summary>Hunk 70 · Change · +1 / -1</summary>
 
 ```diff
 @@ -1851,7 +1851,7 @@
@@ -9090,7 +9081,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 70 · Change · +1 / -1</summary>
+<summary>Hunk 71 · Change · +1 / -1</summary>
 
 ```diff
 @@ -1864,7 +1864,7 @@
@@ -9107,7 +9098,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 71 · Change · +1 / -1</summary>
+<summary>Hunk 72 · Change · +1 / -1</summary>
 
 ```diff
 @@ -1877,7 +1877,7 @@
@@ -9124,7 +9115,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 72 · Change · +1 / -1</summary>
+<summary>Hunk 73 · Change · +1 / -1</summary>
 
 ```diff
 @@ -1890,7 +1890,7 @@
@@ -9141,7 +9132,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 73 · Change · +1 / -1</summary>
+<summary>Hunk 74 · Change · +1 / -1</summary>
 
 ```diff
 @@ -1903,7 +1903,7 @@
@@ -9158,7 +9149,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 74 · Change · +1 / -1</summary>
+<summary>Hunk 75 · Change · +1 / -1</summary>
 
 ```diff
 @@ -1916,7 +1916,7 @@
@@ -9175,7 +9166,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 75 · Change · +12 / -12</summary>
+<summary>Hunk 76 · Change · +12 / -12</summary>
 
 ```diff
 @@ -1940,28 +1940,28 @@
@@ -9199,8 +9190,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      }, (0, ⟦2-char-id⟧.g)("BABYLON.PostProcess", ⟦2-char-id⟧))
      }
    },
--  40531: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40525: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40531: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40525: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧,
 -      e: () => ⟦2-char-id⟧
@@ -9224,7 +9215,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 76 · Change · +3 / -3</summary>
+<summary>Hunk 77 · Change · +3 / -3</summary>
 
 ```diff
 @@ -1971,15 +1971,15 @@
@@ -9253,7 +9244,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary><code>bundles/staging.bloxd.io/chunks/js/292.js</code> · modified · +10 / -10</summary>
+<summary><code>bundles/staging.bloxd.io/chunks/js/292.js</code> · modified · +4 / -4</summary>
 
 JavaScript comparison masks only two-character identifiers. Strings, comments, member properties, object keys, and all other source changes remain visible.
 
@@ -9265,8 +9256,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 292;
  export const ids = [292];
  export const modules = {
--  40545: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40541: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40545: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40541: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        _HDRTextureLoader: () => ⟦2-char-id⟧
      });
@@ -9280,34 +9271,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 2 · Change · +6 / -6</summary>
-
-```diff
-@@ -16,12 +16,12 @@
-           ⟦2-char-id⟧ = 4
-         } else ⟦2-char-id⟧ = 3;
-         return {
--          front: this.CreateCubemapTexture(⟦2-char-id⟧, this.FACE_FRONT, JJ, cJ, ZJ, eJ, XJ, ⟦2-char-id⟧),
--          back: this.CreateCubemapTexture(⟦2-char-id⟧, this.FACE_BACK, JJ, cJ, ZJ, eJ, XJ, ⟦2-char-id⟧),
--          left: this.CreateCubemapTexture(⟦2-char-id⟧, this.FACE_LEFT, JJ, cJ, ZJ, eJ, XJ, ⟦2-char-id⟧),
--          right: this.CreateCubemapTexture(⟦2-char-id⟧, this.FACE_RIGHT, JJ, cJ, ZJ, eJ, XJ, ⟦2-char-id⟧),
--          up: this.CreateCubemapTexture(⟦2-char-id⟧, this.FACE_UP, JJ, cJ, ZJ, eJ, XJ, ⟦2-char-id⟧),
--          down: this.CreateCubemapTexture(⟦2-char-id⟧, this.FACE_DOWN, JJ, cJ, ZJ, eJ, XJ, ⟦2-char-id⟧),
-+          front: this.CreateCubemapTexture(⟦2-char-id⟧, this.FACE_FRONT, BB, TB, dB, pB, lB, ⟦2-char-id⟧),
-+          back: this.CreateCubemapTexture(⟦2-char-id⟧, this.FACE_BACK, BB, TB, dB, pB, lB, ⟦2-char-id⟧),
-+          left: this.CreateCubemapTexture(⟦2-char-id⟧, this.FACE_LEFT, BB, TB, dB, pB, lB, ⟦2-char-id⟧),
-+          right: this.CreateCubemapTexture(⟦2-char-id⟧, this.FACE_RIGHT, BB, TB, dB, pB, lB, ⟦2-char-id⟧),
-+          up: this.CreateCubemapTexture(⟦2-char-id⟧, this.FACE_UP, BB, TB, dB, pB, lB, ⟦2-char-id⟧),
-+          down: this.CreateCubemapTexture(⟦2-char-id⟧, this.FACE_DOWN, BB, TB, dB, pB, lB, ⟦2-char-id⟧),
-           size: ⟦2-char-id⟧,
-           type: 1,
-           format: 4,
-```
-
-</details>
-
-<details>
-<summary>Hunk 3 · Change · +1 / -1</summary>
+<summary>Hunk 2 · Change · +1 / -1</summary>
 
 ```diff
 @@ -149,7 +149,7 @@
@@ -9324,7 +9288,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 4 · Change · +1 / -1</summary>
+<summary>Hunk 3 · Change · +1 / -1</summary>
 
 ```diff
 @@ -165,7 +165,7 @@
@@ -9343,7 +9307,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary><code>bundles/staging.bloxd.io/chunks/js/293.js</code> · modified · +33 / -33</summary>
+<summary><code>bundles/staging.bloxd.io/chunks/js/293.js</code> · modified · +32 / -32</summary>
 
 JavaScript comparison masks only two-character identifiers. Strings, comments, member properties, object keys, and all other source changes remain visible.
 
@@ -9355,8 +9319,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 293;
  export const ids = [293];
  export const modules = {
--  40551: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40543: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40551: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40543: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        _KTXTextureLoader: () => ⟦2-char-id⟧
      });
@@ -9415,16 +9379,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 4 · Change · +2 / -2</summary>
+<summary>Hunk 4 · Change · +1 / -1</summary>
 
 ```diff
-@@ -61,8 +61,8 @@
-         if (⟦2-char-id⟧.data) switch (⟦2-char-id⟧.data.action) {
+@@ -62,7 +62,7 @@
            case "init": {
              const ⟦2-char-id⟧ = ⟦2-char-id⟧.data.urls;
--            ⟦2-char-id⟧ && (⟦2-char-id⟧.jsDecoderModule && "undefined" === typeof ⟦2-char-id⟧ && (importScripts(⟦2-char-id⟧.jsDecoderModule), ⟦2-char-id⟧ = KTX2DECODER), YJ(⟦2-char-id⟧)), ⟦2-char-id⟧.data.wasmBinaries && ⟦2-char-id⟧(void 0, {
+             ⟦2-char-id⟧ && (⟦2-char-id⟧.jsDecoderModule && "undefined" === typeof ⟦2-char-id⟧ && (importScripts(⟦2-char-id⟧.jsDecoderModule), ⟦2-char-id⟧ = KTX2DECODER), ⟦2-char-id⟧(⟦2-char-id⟧)), ⟦2-char-id⟧.data.wasmBinaries && ⟦2-char-id⟧(void 0, {
 -              ...ZJ.data.wasmBinaries,
-+            ⟦2-char-id⟧ && (⟦2-char-id⟧.jsDecoderModule && "undefined" === typeof ⟦2-char-id⟧ && (importScripts(⟦2-char-id⟧.jsDecoderModule), ⟦2-char-id⟧ = KTX2DECODER), oB(⟦2-char-id⟧)), ⟦2-char-id⟧.data.wasmBinaries && ⟦2-char-id⟧(void 0, {
 +              ...dB.data.wasmBinaries,
                jsDecoderModule: ⟦2-char-id⟧
              }), ⟦2-char-id⟧ = new ⟦2-char-id⟧.KTX2Decoder, postMessage({
@@ -9589,8 +9551,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        }
      }
    },
--  40556: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40546: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40556: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40546: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 +      c: () => ⟦2-char-id⟧
@@ -9604,7 +9566,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary><code>bundles/staging.bloxd.io/chunks/js/294.js</code> · modified · +11 / -11</summary>
+<summary><code>bundles/staging.bloxd.io/chunks/js/294.js</code> · modified · +5 / -5</summary>
 
 JavaScript comparison masks only two-character identifiers. Strings, comments, member properties, object keys, and all other source changes remain visible.
 
@@ -9616,8 +9578,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 294;
  export const ids = [294];
  export const modules = {
--  40564: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40552: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40564: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40552: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        _TGATextureLoader: () => ⟦2-char-id⟧
      });
@@ -9652,10 +9614,10 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary>Hunk 3 · Change · +2 / -2</summary>
+<summary>Hunk 3 · Change · +1 / -1</summary>
 
 ```diff
-@@ -82,12 +82,12 @@
+@@ -82,7 +82,7 @@
        }
        const ⟦2-char-id⟧ = "_getImageData" + (⟦2-char-id⟧ ? "Grey" : "") + ⟦2-char-id⟧.pixel_size + "bits",
          ⟦2-char-id⟧ = ⟦2-char-id⟧[⟦2-char-id⟧](⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧);
@@ -9664,97 +9626,6 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
      }
      const ⟦2-char-id⟧ = {
        GetTGAHeader: ⟦2-char-id⟧,
-       UploadContent: ⟦2-char-id⟧,
--      _getImageData8bits: function(⟦2-char-id⟧, cJ, ZJ, FJ, UJ, eJ, XJ, AJ, ⟦2-char-id⟧) {
-+      _getImageData8bits: function(⟦2-char-id⟧, TB, dB, VB, yB, pB, lB, JB, ⟦2-char-id⟧) {
-         const ⟦2-char-id⟧ = ⟦2-char-id⟧,
-           ⟦2-char-id⟧ = ⟦2-char-id⟧,
-           ⟦2-char-id⟧ = ⟦2-char-id⟧.width,
-```
-
-</details>
-
-<details>
-<summary>Hunk 4 · Change · +1 / -1</summary>
-
-```diff
-@@ -98,7 +98,7 @@
-           for (⟦2-char-id⟧ = ⟦2-char-id⟧; ⟦2-char-id⟧ !== ⟦2-char-id⟧; ⟦2-char-id⟧ += ⟦2-char-id⟧, ⟦2-char-id⟧++) ⟦2-char-id⟧ = ⟦2-char-id⟧[⟦2-char-id⟧], ⟦2-char-id⟧[4 * (⟦2-char-id⟧ + ⟦2-char-id⟧ * ⟦2-char-id⟧) + 3] = 255, ⟦2-char-id⟧[4 * (⟦2-char-id⟧ + ⟦2-char-id⟧ * ⟦2-char-id⟧) + 2] = ⟦2-char-id⟧[3 * ⟦2-char-id⟧ + 0], ⟦2-char-id⟧[4 * (⟦2-char-id⟧ + ⟦2-char-id⟧ * ⟦2-char-id⟧) + 1] = ⟦2-char-id⟧[3 * ⟦2-char-id⟧ + 1], ⟦2-char-id⟧[4 * (⟦2-char-id⟧ + ⟦2-char-id⟧ * ⟦2-char-id⟧) + 0] = ⟦2-char-id⟧[3 * ⟦2-char-id⟧ + 2];
-         return ⟦2-char-id⟧
-       },
--      _getImageData16bits: function(⟦2-char-id⟧, cJ, ZJ, FJ, UJ, eJ, XJ, AJ, ⟦2-char-id⟧) {
-+      _getImageData16bits: function(⟦2-char-id⟧, TB, dB, VB, yB, pB, lB, JB, ⟦2-char-id⟧) {
-         const ⟦2-char-id⟧ = ⟦2-char-id⟧,
-           ⟦2-char-id⟧ = ⟦2-char-id⟧.width,
-           ⟦2-char-id⟧ = ⟦2-char-id⟧.height;
-```
-
-</details>
-
-<details>
-<summary>Hunk 5 · Change · +1 / -1</summary>
-
-```diff
-@@ -114,7 +114,7 @@
-           }
-         return ⟦2-char-id⟧
-       },
--      _getImageData24bits: function(⟦2-char-id⟧, cJ, ZJ, FJ, UJ, eJ, XJ, AJ, ⟦2-char-id⟧) {
-+      _getImageData24bits: function(⟦2-char-id⟧, TB, dB, VB, yB, pB, lB, JB, ⟦2-char-id⟧) {
-         const ⟦2-char-id⟧ = ⟦2-char-id⟧,
-           ⟦2-char-id⟧ = ⟦2-char-id⟧.width,
-           ⟦2-char-id⟧ = ⟦2-char-id⟧.height;
-```
-
-</details>
-
-<details>
-<summary>Hunk 6 · Change · +1 / -1</summary>
-
-```diff
-@@ -124,7 +124,7 @@
-           for (⟦2-char-id⟧ = ⟦2-char-id⟧; ⟦2-char-id⟧ !== ⟦2-char-id⟧; ⟦2-char-id⟧ += ⟦2-char-id⟧, ⟦2-char-id⟧ += 3) ⟦2-char-id⟧[4 * (⟦2-char-id⟧ + ⟦2-char-id⟧ * ⟦2-char-id⟧) + 3] = 255, ⟦2-char-id⟧[4 * (⟦2-char-id⟧ + ⟦2-char-id⟧ * ⟦2-char-id⟧) + 2] = ⟦2-char-id⟧[⟦2-char-id⟧ + 0], ⟦2-char-id⟧[4 * (⟦2-char-id⟧ + ⟦2-char-id⟧ * ⟦2-char-id⟧) + 1] = ⟦2-char-id⟧[⟦2-char-id⟧ + 1], ⟦2-char-id⟧[4 * (⟦2-char-id⟧ + ⟦2-char-id⟧ * ⟦2-char-id⟧) + 0] = ⟦2-char-id⟧[⟦2-char-id⟧ + 2];
-         return ⟦2-char-id⟧
-       },
--      _getImageData32bits: function(⟦2-char-id⟧, cJ, ZJ, FJ, UJ, eJ, XJ, AJ, ⟦2-char-id⟧) {
-+      _getImageData32bits: function(⟦2-char-id⟧, TB, dB, VB, yB, pB, lB, JB, ⟦2-char-id⟧) {
-         const ⟦2-char-id⟧ = ⟦2-char-id⟧,
-           ⟦2-char-id⟧ = ⟦2-char-id⟧.width,
-           ⟦2-char-id⟧ = ⟦2-char-id⟧.height;
-```
-
-</details>
-
-<details>
-<summary>Hunk 7 · Change · +1 / -1</summary>
-
-```diff
-@@ -134,7 +134,7 @@
-           for (⟦2-char-id⟧ = ⟦2-char-id⟧; ⟦2-char-id⟧ !== ⟦2-char-id⟧; ⟦2-char-id⟧ += ⟦2-char-id⟧, ⟦2-char-id⟧ += 4) ⟦2-char-id⟧[4 * (⟦2-char-id⟧ + ⟦2-char-id⟧ * ⟦2-char-id⟧) + 2] = ⟦2-char-id⟧[⟦2-char-id⟧ + 0], ⟦2-char-id⟧[4 * (⟦2-char-id⟧ + ⟦2-char-id⟧ * ⟦2-char-id⟧) + 1] = ⟦2-char-id⟧[⟦2-char-id⟧ + 1], ⟦2-char-id⟧[4 * (⟦2-char-id⟧ + ⟦2-char-id⟧ * ⟦2-char-id⟧) + 0] = ⟦2-char-id⟧[⟦2-char-id⟧ + 2], ⟦2-char-id⟧[4 * (⟦2-char-id⟧ + ⟦2-char-id⟧ * ⟦2-char-id⟧) + 3] = ⟦2-char-id⟧[⟦2-char-id⟧ + 3];
-         return ⟦2-char-id⟧
-       },
--      _getImageDataGrey8bits: function(⟦2-char-id⟧, cJ, ZJ, FJ, UJ, eJ, XJ, AJ, ⟦2-char-id⟧) {
-+      _getImageDataGrey8bits: function(⟦2-char-id⟧, TB, dB, VB, yB, pB, lB, JB, ⟦2-char-id⟧) {
-         const ⟦2-char-id⟧ = ⟦2-char-id⟧,
-           ⟦2-char-id⟧ = ⟦2-char-id⟧.width,
-           ⟦2-char-id⟧ = ⟦2-char-id⟧.height;
-```
-
-</details>
-
-<details>
-<summary>Hunk 8 · Change · +1 / -1</summary>
-
-```diff
-@@ -144,7 +144,7 @@
-           for (⟦2-char-id⟧ = ⟦2-char-id⟧; ⟦2-char-id⟧ !== ⟦2-char-id⟧; ⟦2-char-id⟧ += ⟦2-char-id⟧, ⟦2-char-id⟧++) ⟦2-char-id⟧ = ⟦2-char-id⟧[⟦2-char-id⟧], ⟦2-char-id⟧[4 * (⟦2-char-id⟧ + ⟦2-char-id⟧ * ⟦2-char-id⟧) + 0] = ⟦2-char-id⟧, ⟦2-char-id⟧[4 * (⟦2-char-id⟧ + ⟦2-char-id⟧ * ⟦2-char-id⟧) + 1] = ⟦2-char-id⟧, ⟦2-char-id⟧[4 * (⟦2-char-id⟧ + ⟦2-char-id⟧ * ⟦2-char-id⟧) + 2] = ⟦2-char-id⟧, ⟦2-char-id⟧[4 * (⟦2-char-id⟧ + ⟦2-char-id⟧ * ⟦2-char-id⟧) + 3] = 255;
-         return ⟦2-char-id⟧
-       },
--      _getImageDataGrey16bits: function(⟦2-char-id⟧, cJ, ZJ, FJ, UJ, eJ, XJ, AJ, ⟦2-char-id⟧) {
-+      _getImageDataGrey16bits: function(⟦2-char-id⟧, TB, dB, VB, yB, pB, lB, JB, ⟦2-char-id⟧) {
-         const ⟦2-char-id⟧ = ⟦2-char-id⟧,
-           ⟦2-char-id⟧ = ⟦2-char-id⟧.width,
-           ⟦2-char-id⟧ = ⟦2-char-id⟧.height;
 ```
 
 </details>
@@ -9774,8 +9645,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 295;
  export const ids = [295];
  export const modules = {
--  40572: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40560: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40572: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40560: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        ReadExrDataAsync: () => ⟦2-char-id⟧,
        _ExrTextureLoader: () => ⟦2-char-id⟧
@@ -9992,8 +9863,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 296;
  export const ids = [296];
  export const modules = {
--  40725: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40726: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40725: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40726: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        c: () => ⟦2-char-id⟧
      });
@@ -10008,8 +9879,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40643: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40630: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40643: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40630: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 +      d: () => ⟦2-char-id⟧
@@ -10025,8 +9896,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40597: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40585: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40597: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40585: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        b: () => ⟦2-char-id⟧
      });
@@ -10043,8 +9914,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40581: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40563: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40581: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40563: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        defaultVertexShader: () => ⟦2-char-id⟧
      });
@@ -10147,24 +10018,24 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary><code>bundles/staging.bloxd.io/chunks/js/297.js</code> · modified · +336 / -336</summary>
+<summary><code>bundles/staging.bloxd.io/chunks/js/297.js</code> · modified · +329 / -329</summary>
 
 JavaScript comparison masks only two-character identifiers. Strings, comments, member properties, object keys, and all other source changes remain visible.
 
 <details>
-<summary>Hunk 1 · Change · +336 / -336</summary>
+<summary>Hunk 1 · Change · +28 / -28</summary>
 
 ```diff
-@@ -1,404 +1,404 @@
+@@ -1,40 +1,40 @@
  export const ⟦2-char-id⟧ = 297;
  export const ids = [297];
  export const modules = {
--  40704: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40704: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 -    });
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
-+  40701: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40701: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      b: () => ⟦2-char-id⟧
 +    });
@@ -10177,7 +10048,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40613: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40613: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 -    });
@@ -10188,7 +10059,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40599: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40599: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      c: () => ⟦2-char-id⟧
 +    });
@@ -10201,7 +10072,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40609: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40609: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 -    });
@@ -10212,7 +10083,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40597: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40597: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      b: () => ⟦2-char-id⟧
 +    });
@@ -10220,24 +10091,25 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
      const ⟦2-char-id⟧ = "bonesDeclaration",
        ⟦2-char-id⟧ = "#if NUM_BONE_INFLUENCERS>0\nattribute vec4 matricesIndices;attribute vec4 matricesWeights;\n#if NUM_BONE_INFLUENCERS>4\nattribute vec4 matricesIndicesExtra;attribute vec4 matricesWeightsExtra;\n#endif\n#ifndef BAKED_VERTEX_ANIMATION_TEXTURE\n#ifdef BONETEXTURE\nuniform highp sampler2D boneSampler;uniform vec2 boneTextureInfo;\n#else\nuniform mat4 mBones[BonesPerMesh];\n#endif\n#ifdef BONES_VELOCITY_ENABLED\nuniform mat4 mPreviousBones[BonesPerMesh];\n#endif\n#ifdef BONETEXTURE\n#define inline\nmat4 readMatrixFromRawSampler(sampler2D smp,float index)\n{\n#if defined(WEBGL2) || defined(WEBGPU)\nint offset=int(index)*4; \nint textureWidth=int(boneTextureInfo.x);int y=int(offset)/textureWidth;int x=int(offset) % textureWidth;vec4 m0=texelFetch(smp,ivec2(x+0,y),0);vec4 m1=texelFetch(smp,ivec2(x+1,y),0);vec4 m2=texelFetch(smp,ivec2(x+2,y),0);vec4 m3=texelFetch(smp,ivec2(x+3,y),0);return mat4(m0,m1,m2,m3);\n#else\nfloat offset=index*4.0;float y=floor(offset/boneTextureInfo.x);float x=offset-y*boneTextureInfo.x;float dy=1.0/boneTextureInfo.y;float dx=1.0/boneTextureInfo.x;vec4 m0=texture2D(smp,vec2(dx*(x+0.5),dy*(y+0.5)));vec4 m1=texture2D(smp,vec2(dx*(x+1.5),dy*(y+0.5)));vec4 m2=texture2D(smp,vec2(dx*(x+2.5),dy*(y+0.5)));vec4 m3=texture2D(smp,vec2(dx*(x+3.5),dy*(y+0.5))); \nreturn mat4(m0,m1,m2,m3);\n#endif\n}\n#endif\n#endif\n#endif\n";
 -    ⟦2-char-id⟧.b.IncludesShadersStore[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStore[⟦2-char-id⟧] = ⟦2-char-id⟧);
--    const ⟦2-char-id⟧ = {
--      name: ⟦2-char-id⟧,
--      shader: ⟦2-char-id⟧
--    }
--  },
--  40699: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
--    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
++    ⟦2-char-id⟧.e.IncludesShadersStore[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStore[⟦2-char-id⟧] = ⟦2-char-id⟧);
+     const ⟦2-char-id⟧ = {
+       name: ⟦2-char-id⟧,
+       shader: ⟦2-char-id⟧
+```
+
+</details>
+
+<details>
+<summary>Hunk 2 · Change · +301 / -301</summary>
+
+```diff
+@@ -42,363 +42,363 @@
+   },
+   40699: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
+     ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 -    });
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
-+    ⟦2-char-id⟧.e.IncludesShadersStore[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStore[⟦2-char-id⟧] = ⟦2-char-id⟧);
-+    const ⟦2-char-id⟧ = {
-+      name: ⟦2-char-id⟧,
-+      shader: ⟦2-char-id⟧
-+    }
-+  },
-+  40699: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
-+    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      c: () => ⟦2-char-id⟧
 +    });
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
@@ -10249,7 +10121,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40730: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40730: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 -    });
@@ -10260,7 +10132,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40728: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40728: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      e: () => ⟦2-char-id⟧
 +    });
@@ -10273,7 +10145,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40648: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40648: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 -    });
@@ -10284,7 +10156,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40633: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40633: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      c: () => ⟦2-char-id⟧
 +    });
@@ -10297,7 +10169,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40583: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40583: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 -    });
@@ -10308,7 +10180,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40570: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40570: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      e: () => ⟦2-char-id⟧
 +    });
@@ -10321,7 +10193,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40733: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40733: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 -    });
@@ -10332,7 +10204,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40730: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40730: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      c: () => ⟦2-char-id⟧
 +    });
@@ -10345,7 +10217,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40651: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40651: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 -    });
@@ -10356,7 +10228,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40638: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40638: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      d: () => ⟦2-char-id⟧
 +    });
@@ -10369,7 +10241,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40602: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40602: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 -    });
@@ -10380,7 +10252,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40595: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40595: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      b: () => ⟦2-char-id⟧
 +    });
@@ -10393,7 +10265,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40618: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40618: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 -    });
@@ -10404,7 +10276,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40604: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40604: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      d: () => ⟦2-char-id⟧
 +    });
@@ -10417,7 +10289,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40696: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40696: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 -    });
@@ -10428,7 +10300,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40694: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40694: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      c: () => ⟦2-char-id⟧
 +    });
@@ -10441,7 +10313,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40657: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40657: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 -    });
@@ -10452,7 +10324,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40647: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40647: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      e: () => ⟦2-char-id⟧
 +    });
@@ -10465,7 +10337,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40663: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40663: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 -    });
@@ -10476,7 +10348,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40656: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40656: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      b: () => ⟦2-char-id⟧
 +    });
@@ -10489,7 +10361,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40676: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40676: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 -    });
@@ -10500,7 +10372,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40680: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40680: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      c: () => ⟦2-char-id⟧
 +    });
@@ -10513,7 +10385,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40744: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40744: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 -    });
@@ -10524,7 +10396,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40753: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40753: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      c: () => ⟦2-char-id⟧
 +    });
@@ -10537,7 +10409,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40628: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40628: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 -    });
@@ -10548,7 +10420,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40619: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40619: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      b: () => ⟦2-char-id⟧
 +    });
@@ -10561,7 +10433,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40594: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40594: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 -    });
@@ -10572,7 +10444,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40580: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40580: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      d: () => ⟦2-char-id⟧
 +    });
@@ -10585,7 +10457,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40693: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40693: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 -    });
@@ -10596,7 +10468,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40686: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40686: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      d: () => ⟦2-char-id⟧
 +    });
@@ -10609,7 +10481,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40669: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40669: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 -    });
@@ -10620,7 +10492,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40673: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40673: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      b: () => ⟦2-char-id⟧
 +    });
@@ -10633,7 +10505,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40685: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40685: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 -    });
@@ -10644,7 +10516,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40684: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40684: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      e: () => ⟦2-char-id⟧
 +    });
@@ -10657,7 +10529,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40666: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40666: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 -    });
@@ -10668,7 +10540,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40665: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40665: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      e: () => ⟦2-char-id⟧
 +    });
@@ -10681,7 +10553,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40708: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40708: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 -    });
@@ -10692,7 +10564,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40705: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40705: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      d: () => ⟦2-char-id⟧
 +    });
@@ -10705,7 +10577,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40625: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40625: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 -    });
@@ -10716,7 +10588,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40613: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40613: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      d: () => ⟦2-char-id⟧
 +    });
@@ -10729,7 +10601,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40636: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40636: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 -    });
@@ -10740,7 +10612,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40623: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40623: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      e: () => ⟦2-char-id⟧
 +    });
@@ -10753,7 +10625,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40721: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40721: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 -    });
@@ -10764,7 +10636,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40720: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40720: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      b: () => ⟦2-char-id⟧
 +    });
@@ -10777,7 +10649,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40585: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40585: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 -    });
@@ -10788,7 +10660,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40574: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40574: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      e: () => ⟦2-char-id⟧
 +    });
@@ -10801,7 +10673,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40737: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40737: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 -    });
@@ -10812,7 +10684,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40738: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40738: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      e: () => ⟦2-char-id⟧
 +    });
@@ -10825,7 +10697,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40599: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40599: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 -    });
@@ -10836,7 +10708,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40588: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40588: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      b: () => ⟦2-char-id⟧
 +    });
@@ -10849,7 +10721,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40715: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40715: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 -    });
@@ -10860,7 +10732,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40711: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40711: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      e: () => ⟦2-char-id⟧
 +    });
@@ -10873,7 +10745,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40739: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40739: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 -    });
@@ -10884,7 +10756,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40745: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40745: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      d: () => ⟦2-char-id⟧
 +    });
@@ -10903,20 +10775,20 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary><code>bundles/staging.bloxd.io/chunks/js/298.js</code> · modified · +52 / -52</summary>
+<summary><code>bundles/staging.bloxd.io/chunks/js/298.js</code> · modified · +79 / -79</summary>
 
 JavaScript comparison masks only two-character identifiers. Strings, comments, member properties, object keys, and all other source changes remain visible.
 
 <details>
-<summary>Hunk 1 · Change · +52 / -52</summary>
+<summary>Hunk 1 · Change · +37 / -76</summary>
 
 ```diff
-@@ -1,183 +1,183 @@
+@@ -1,170 +1,131 @@
  export const ⟦2-char-id⟧ = 298;
  export const ids = [298];
  export const modules = {
--  40757: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40766: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40757: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40766: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 +      b: () => ⟦2-char-id⟧
@@ -10932,8 +10804,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40880: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40891: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40880: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40891: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        b: () => ⟦2-char-id⟧
      });
@@ -10948,8 +10820,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40772: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40793: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40772: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40793: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        d: () => ⟦2-char-id⟧
      });
@@ -10964,8 +10836,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40776: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40802: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40776: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40802: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 +      d: () => ⟦2-char-id⟧
@@ -10981,8 +10853,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40779: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40805: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40779: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40805: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        c: () => ⟦2-char-id⟧
      });
@@ -10997,8 +10869,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40628: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40619: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40628: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40619: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +      b: () => ⟦2-char-id⟧
@@ -11014,8 +10886,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40594: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40580: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40594: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40580: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 +      d: () => ⟦2-char-id⟧
@@ -11031,8 +10903,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40770: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40784: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40770: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40784: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +      b: () => ⟦2-char-id⟧
@@ -11048,8 +10920,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40905: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40916: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40905: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40916: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        c: () => ⟦2-char-id⟧
      });
@@ -11064,81 +10936,116 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40808: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40833: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
-     ⟦2-char-id⟧.d(⟦2-char-id⟧, {
+-  40808: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
+-    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
-+      b: () => ⟦2-char-id⟧
+-    });
+-    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
+-    const ⟦2-char-id⟧ = "reflectionFunction",
+-      ⟦2-char-id⟧ = "vec3 computeFixedEquirectangularCoords(vec4 worldPos,vec3 worldNormal,vec3 direction)\n{float lon=atan(direction.z,direction.x);float lat=acos(direction.y);vec2 sphereCoords=vec2(lon,lat)*RECIPROCAL_PI2*2.0;float s=sphereCoords.x*0.5+0.5;float t=sphereCoords.y;return vec3(s,t,0); }\nvec3 computeMirroredFixedEquirectangularCoords(vec4 worldPos,vec3 worldNormal,vec3 direction)\n{float lon=atan(direction.z,direction.x);float lat=acos(direction.y);vec2 sphereCoords=vec2(lon,lat)*RECIPROCAL_PI2*2.0;float s=sphereCoords.x*0.5+0.5;float t=sphereCoords.y;return vec3(1.0-s,t,0); }\nvec3 computeEquirectangularCoords(vec4 worldPos,vec3 worldNormal,vec3 eyePosition,mat4 reflectionMatrix)\n{vec3 cameraToVertex=normalize(worldPos.xyz-eyePosition);vec3 r=normalize(reflect(cameraToVertex,worldNormal));r=vec3(reflectionMatrix*vec4(r,0));float lon=atan(r.z,r.x);float lat=acos(r.y);vec2 sphereCoords=vec2(lon,lat)*RECIPROCAL_PI2*2.0;float s=sphereCoords.x*0.5+0.5;float t=sphereCoords.y;return vec3(s,t,0);}\nvec3 computeSphericalCoords(vec4 worldPos,vec3 worldNormal,mat4 view,mat4 reflectionMatrix)\n{vec3 viewDir=normalize(vec3(view*worldPos));vec3 viewNormal=normalize(vec3(view*vec4(worldNormal,0.0)));vec3 r=reflect(viewDir,viewNormal);r=vec3(reflectionMatrix*vec4(r,0));r.z=r.z-1.0;float m=2.0*length(r);return vec3(r.x/m+0.5,1.0-r.y/m-0.5,0);}\nvec3 computePlanarCoords(vec4 worldPos,vec3 worldNormal,vec3 eyePosition,mat4 reflectionMatrix)\n{vec3 viewDir=worldPos.xyz-eyePosition;vec3 coords=normalize(reflect(viewDir,worldNormal));return vec3(reflectionMatrix*vec4(coords,1));}\nvec3 computeCubicCoords(vec4 worldPos,vec3 worldNormal,vec3 eyePosition,mat4 reflectionMatrix)\n{vec3 viewDir=normalize(worldPos.xyz-eyePosition);vec3 coords=reflect(viewDir,worldNormal);coords=vec3(reflectionMatrix*vec4(coords,0));\n#ifdef INVERTCUBICMAP\ncoords.y*=-1.0;\n#endif\nreturn coords;}\nvec3 computeCubicLocalCoords(vec4 worldPos,vec3 worldNormal,vec3 eyePosition,mat4 reflectionMatrix,vec3 reflectionSize,vec3 reflectionPosition)\n{vec3 viewDir=normalize(worldPos.xyz-eyePosition);vec3 coords=reflect(viewDir,worldNormal);coords=parallaxCorrectNormal(worldPos.xyz,coords,reflectionSize,reflectionPosition);coords=vec3(reflectionMatrix*vec4(coords,0));\n#ifdef INVERTCUBICMAP\ncoords.y*=-1.0;\n#endif\nreturn coords;}\nvec3 computeProjectionCoords(vec4 worldPos,mat4 view,mat4 reflectionMatrix)\n{return vec3(reflectionMatrix*(view*worldPos));}\nvec3 computeSkyBoxCoords(vec3 positionW,mat4 reflectionMatrix)\n{return vec3(reflectionMatrix*vec4(positionW,1.));}\n#ifdef REFLECTION\nvec3 computeReflectionCoords(vec4 worldPos,vec3 worldNormal)\n{\n#ifdef REFLECTIONMAP_MIRROREDEQUIRECTANGULAR_FIXED\nvec3 direction=normalize(vDirectionW);return computeMirroredFixedEquirectangularCoords(worldPos,worldNormal,direction);\n#endif\n#ifdef REFLECTIONMAP_EQUIRECTANGULAR_FIXED\nvec3 direction=normalize(vDirectionW);return computeFixedEquirectangularCoords(worldPos,worldNormal,direction);\n#endif\n#ifdef REFLECTIONMAP_EQUIRECTANGULAR\nreturn computeEquirectangularCoords(worldPos,worldNormal,vEyePosition.xyz,reflectionMatrix);\n#endif\n#ifdef REFLECTIONMAP_SPHERICAL\nreturn computeSphericalCoords(worldPos,worldNormal,view,reflectionMatrix);\n#endif\n#ifdef REFLECTIONMAP_PLANAR\nreturn computePlanarCoords(worldPos,worldNormal,vEyePosition.xyz,reflectionMatrix);\n#endif\n#ifdef REFLECTIONMAP_CUBIC\n#ifdef USE_LOCAL_REFLECTIONMAP_CUBIC\nreturn computeCubicLocalCoords(worldPos,worldNormal,vEyePosition.xyz,reflectionMatrix,vReflectionSize,vReflectionPosition);\n#else\nreturn computeCubicCoords(worldPos,worldNormal,vEyePosition.xyz,reflectionMatrix);\n#endif\n#endif\n#ifdef REFLECTIONMAP_PROJECTION\nreturn computeProjectionCoords(worldPos,view,reflectionMatrix);\n#endif\n#ifdef REFLECTIONMAP_SKYBOX\nreturn computeSkyBoxCoords(vPositionUVW,reflectionMatrix);\n#endif\n#ifdef REFLECTIONMAP_EXPLICIT\nreturn vec3(0,0,0);\n#endif\n}\n#endif\n";
+-    ⟦2-char-id⟧.b.IncludesShadersStore[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStore[⟦2-char-id⟧] = ⟦2-char-id⟧);
+-    const ⟦2-char-id⟧ = {
+-      name: ⟦2-char-id⟧,
+-      shader: ⟦2-char-id⟧
+-    }
+-  },
+-  40800: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
+-    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
+-      c: () => ⟦2-char-id⟧
+-    });
+-    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
+-    const ⟦2-char-id⟧ = "samplerFragmentDeclaration",
+-      ⟦2-char-id⟧ = "#ifdef _DEFINENAME_\n#if _DEFINENAME_DIRECTUV==1\n#define v_VARYINGNAME_UV vMainUV1\n#elif _DEFINENAME_DIRECTUV==2\n#define v_VARYINGNAME_UV vMainUV2\n#elif _DEFINENAME_DIRECTUV==3\n#define v_VARYINGNAME_UV vMainUV3\n#elif _DEFINENAME_DIRECTUV==4\n#define v_VARYINGNAME_UV vMainUV4\n#elif _DEFINENAME_DIRECTUV==5\n#define v_VARYINGNAME_UV vMainUV5\n#elif _DEFINENAME_DIRECTUV==6\n#define v_VARYINGNAME_UV vMainUV6\n#else\nvarying vec2 v_VARYINGNAME_UV;\n#endif\nuniform sampler2D _SAMPLERNAME_Sampler;\n#endif\n";
+-    ⟦2-char-id⟧.b.IncludesShadersStore[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStore[⟦2-char-id⟧] = ⟦2-char-id⟧);
+-    const ⟦2-char-id⟧ = {
+-      name: ⟦2-char-id⟧,
+-      shader: ⟦2-char-id⟧
+-    }
+-  },
+-  40585: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
+-    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
+-      c: () => ⟦2-char-id⟧
+-    });
+-    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
+-    const ⟦2-char-id⟧ = "sceneUboDeclaration",
+-      ⟦2-char-id⟧ = "layout(std140,column_major) uniform;uniform Scene {mat4 viewProjection;\n#ifdef MULTIVIEW\nmat4 viewProjectionR;\n#endif \nmat4 view;mat4 projection;vec4 vEyePosition;mat4 inverseProjection;};\n";
+-    ⟦2-char-id⟧.b.IncludesShadersStore[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStore[⟦2-char-id⟧] = ⟦2-char-id⟧);
+-    const ⟦2-char-id⟧ = {
+-      name: ⟦2-char-id⟧,
+-      shader: ⟦2-char-id⟧
+-    }
+-  },
+-  40792: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40833: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
+     ⟦2-char-id⟧.d(⟦2-char-id⟧, {
+       b: () => ⟦2-char-id⟧
      });
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
-+    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
-     const ⟦2-char-id⟧ = "reflectionFunction",
-       ⟦2-char-id⟧ = "vec3 computeFixedEquirectangularCoords(vec4 worldPos,vec3 worldNormal,vec3 direction)\n{float lon=atan(direction.z,direction.x);float lat=acos(direction.y);vec2 sphereCoords=vec2(lon,lat)*RECIPROCAL_PI2*2.0;float s=sphereCoords.x*0.5+0.5;float t=sphereCoords.y;return vec3(s,t,0); }\nvec3 computeMirroredFixedEquirectangularCoords(vec4 worldPos,vec3 worldNormal,vec3 direction)\n{float lon=atan(direction.z,direction.x);float lat=acos(direction.y);vec2 sphereCoords=vec2(lon,lat)*RECIPROCAL_PI2*2.0;float s=sphereCoords.x*0.5+0.5;float t=sphereCoords.y;return vec3(1.0-s,t,0); }\nvec3 computeEquirectangularCoords(vec4 worldPos,vec3 worldNormal,vec3 eyePosition,mat4 reflectionMatrix)\n{vec3 cameraToVertex=normalize(worldPos.xyz-eyePosition);vec3 r=normalize(reflect(cameraToVertex,worldNormal));r=vec3(reflectionMatrix*vec4(r,0));float lon=atan(r.z,r.x);float lat=acos(r.y);vec2 sphereCoords=vec2(lon,lat)*RECIPROCAL_PI2*2.0;float s=sphereCoords.x*0.5+0.5;float t=sphereCoords.y;return vec3(s,t,0);}\nvec3 computeSphericalCoords(vec4 worldPos,vec3 worldNormal,mat4 view,mat4 reflectionMatrix)\n{vec3 viewDir=normalize(vec3(view*worldPos));vec3 viewNormal=normalize(vec3(view*vec4(worldNormal,0.0)));vec3 r=reflect(viewDir,viewNormal);r=vec3(reflectionMatrix*vec4(r,0));r.z=r.z-1.0;float m=2.0*length(r);return vec3(r.x/m+0.5,1.0-r.y/m-0.5,0);}\nvec3 computePlanarCoords(vec4 worldPos,vec3 worldNormal,vec3 eyePosition,mat4 reflectionMatrix)\n{vec3 viewDir=worldPos.xyz-eyePosition;vec3 coords=normalize(reflect(viewDir,worldNormal));return vec3(reflectionMatrix*vec4(coords,1));}\nvec3 computeCubicCoords(vec4 worldPos,vec3 worldNormal,vec3 eyePosition,mat4 reflectionMatrix)\n{vec3 viewDir=normalize(worldPos.xyz-eyePosition);vec3 coords=reflect(viewDir,worldNormal);coords=vec3(reflectionMatrix*vec4(coords,0));\n#ifdef INVERTCUBICMAP\ncoords.y*=-1.0;\n#endif\nreturn coords;}\nvec3 computeCubicLocalCoords(vec4 worldPos,vec3 worldNormal,vec3 eyePosition,mat4 reflectionMatrix,vec3 reflectionSize,vec3 reflectionPosition)\n{vec3 viewDir=normalize(worldPos.xyz-eyePosition);vec3 coords=reflect(viewDir,worldNormal);coords=parallaxCorrectNormal(worldPos.xyz,coords,reflectionSize,reflectionPosition);coords=vec3(reflectionMatrix*vec4(coords,0));\n#ifdef INVERTCUBICMAP\ncoords.y*=-1.0;\n#endif\nreturn coords;}\nvec3 computeProjectionCoords(vec4 worldPos,mat4 view,mat4 reflectionMatrix)\n{return vec3(reflectionMatrix*(view*worldPos));}\nvec3 computeSkyBoxCoords(vec3 positionW,mat4 reflectionMatrix)\n{return vec3(reflectionMatrix*vec4(positionW,1.));}\n#ifdef REFLECTION\nvec3 computeReflectionCoords(vec4 worldPos,vec3 worldNormal)\n{\n#ifdef REFLECTIONMAP_MIRROREDEQUIRECTANGULAR_FIXED\nvec3 direction=normalize(vDirectionW);return computeMirroredFixedEquirectangularCoords(worldPos,worldNormal,direction);\n#endif\n#ifdef REFLECTIONMAP_EQUIRECTANGULAR_FIXED\nvec3 direction=normalize(vDirectionW);return computeFixedEquirectangularCoords(worldPos,worldNormal,direction);\n#endif\n#ifdef REFLECTIONMAP_EQUIRECTANGULAR\nreturn computeEquirectangularCoords(worldPos,worldNormal,vEyePosition.xyz,reflectionMatrix);\n#endif\n#ifdef REFLECTIONMAP_SPHERICAL\nreturn computeSphericalCoords(worldPos,worldNormal,view,reflectionMatrix);\n#endif\n#ifdef REFLECTIONMAP_PLANAR\nreturn computePlanarCoords(worldPos,worldNormal,vEyePosition.xyz,reflectionMatrix);\n#endif\n#ifdef REFLECTIONMAP_CUBIC\n#ifdef USE_LOCAL_REFLECTIONMAP_CUBIC\nreturn computeCubicLocalCoords(worldPos,worldNormal,vEyePosition.xyz,reflectionMatrix,vReflectionSize,vReflectionPosition);\n#else\nreturn computeCubicCoords(worldPos,worldNormal,vEyePosition.xyz,reflectionMatrix);\n#endif\n#endif\n#ifdef REFLECTIONMAP_PROJECTION\nreturn computeProjectionCoords(worldPos,view,reflectionMatrix);\n#endif\n#ifdef REFLECTIONMAP_SKYBOX\nreturn computeSkyBoxCoords(vPositionUVW,reflectionMatrix);\n#endif\n#ifdef REFLECTIONMAP_EXPLICIT\nreturn vec3(0,0,0);\n#endif\n}\n#endif\n";
+-    const ⟦2-char-id⟧ = "shadowsFragmentFunctions",
+-      ⟦2-char-id⟧ = "#ifdef SHADOWS\n#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\n#define TEXTUREFUNC(s,c,l) texture2DLodEXT(s,c,l)\n#else\n#define TEXTUREFUNC(s,c,b) texture2D(s,c,b)\n#endif\n#ifndef SHADOWFLOAT\nfloat unpack(vec4 color)\n{const vec4 bit_shift=vec4(1.0/(255.0*255.0*255.0),1.0/(255.0*255.0),1.0/255.0,1.0);return dot(color,bit_shift);}\n#endif\nfloat computeFallOff(float value,vec2 clipSpace,float frustumEdgeFalloff)\n{float mask=smoothstep(1.0-frustumEdgeFalloff,1.00000012,clamp(dot(clipSpace,clipSpace),0.,1.));return mix(value,1.0,mask);}\n#define inline\nfloat computeShadowCube(vec3 worldPos,vec3 lightPosition,samplerCube shadowSampler,float darkness,vec2 depthValues)\n{vec3 directionToLight=worldPos-lightPosition;float depth=length(directionToLight);depth=(depth+depthValues.x)/(depthValues.y);depth=clamp(depth,0.,1.0);directionToLight=normalize(directionToLight);directionToLight.y=-directionToLight.y;\n#ifndef SHADOWFLOAT\nfloat shadow=unpack(textureCube(shadowSampler,directionToLight));\n#else\nfloat shadow=textureCube(shadowSampler,directionToLight).x;\n#endif\nreturn depth>shadow ? darkness : 1.0;}\n#define inline\nfloat computeShadowWithPoissonSamplingCube(vec3 worldPos,vec3 lightPosition,samplerCube shadowSampler,float mapSize,float darkness,vec2 depthValues)\n{vec3 directionToLight=worldPos-lightPosition;float depth=length(directionToLight);depth=(depth+depthValues.x)/(depthValues.y);depth=clamp(depth,0.,1.0);directionToLight=normalize(directionToLight);directionToLight.y=-directionToLight.y;float visibility=1.;vec3 poissonDisk[4];poissonDisk[0]=vec3(-1.0,1.0,-1.0);poissonDisk[1]=vec3(1.0,-1.0,-1.0);poissonDisk[2]=vec3(-1.0,-1.0,-1.0);poissonDisk[3]=vec3(1.0,-1.0,1.0);\n#ifndef SHADOWFLOAT\nif (unpack(textureCube(shadowSampler,directionToLight+poissonDisk[0]*mapSize))<depth) visibility-=0.25;if (unpack(textureCube(shadowSampler,directionToLight+poissonDisk[1]*mapSize))<depth) visibility-=0.25;if (unpack(textureCube(shadowSampler,directionToLight+poissonDisk[2]*mapSize))<depth) visibility-=0.25;if (unpack(textureCube(shadowSampler,directionToLight+poissonDisk[3]*mapSize))<depth) visibility-=0.25;\n#else\nif (textureCube(shadowSampler,directionToLight+poissonDisk[0]*mapSize).x<depth) visibility-=0.25;if (textureCube(shadowSampler,directionToLight+poissonDisk[1]*mapSize).x<depth) visibility-=0.25;if (textureCube(shadowSampler,directionToLight+poissonDisk[2]*mapSize).x<depth) visibility-=0.25;if (textureCube(shadowSampler,directionToLight+poissonDisk[3]*mapSize).x<depth) visibility-=0.25;\n#endif\nreturn min(1.0,visibility+darkness);}\n#define inline\nfloat computeShadowWithESMCube(vec3 worldPos,vec3 lightPosition,samplerCube shadowSampler,float darkness,float depthScale,vec2 depthValues)\n{vec3 directionToLight=worldPos-lightPosition;float depth=length(directionToLight);depth=(depth+depthValues.x)/(depthValues.y);float shadowPixelDepth=clamp(depth,0.,1.0);directionToLight=normalize(directionToLight);directionToLight.y=-directionToLight.y;\n#ifndef SHADOWFLOAT\nfloat shadowMapSample=unpack(textureCube(shadowSampler,directionToLight));\n#else\nfloat shadowMapSample=textureCube(shadowSampler,directionToLight).x;\n#endif\nfloat esm=1.0-clamp(exp(min(87.,depthScale*shadowPixelDepth))*shadowMapSample,0.,1.-darkness);return esm;}\n#define inline\nfloat computeShadowWithCloseESMCube(vec3 worldPos,vec3 lightPosition,samplerCube shadowSampler,float darkness,float depthScale,vec2 depthValues)\n{vec3 directionToLight=worldPos-lightPosition;float depth=length(directionToLight);depth=(depth+depthValues.x)/(depthValues.y);float shadowPixelDepth=clamp(depth,0.,1.0);directionToLight=normalize(directionToLight);directionToLight.y=-directionToLight.y;\n#ifndef SHADOWFLOAT\nfloat shadowMapSample=unpack(textureCube(shadowSampler,directionToLight));\n#else\nfloat shadowMapSample=textureCube(shadowSampler,directionToLight).x;\n#endif\nfloat esm=clamp(exp(min(87.,-depthScale*(shadowPixelDepth-shadowMapSample))),darkness,1.);return esm;}\n#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\n#define inline\nfloat computeShadowCSM(float layer,vec4 vPositionFromLight,float depthMetric,highp sampler2DArray shadowSampler,float darkness,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec2 uv=0.5*clipSpace.xy+vec2(0.5);vec3 uvLayer=vec3(uv.x,uv.y,layer);float shadowPixelDepth=clamp(depthMetric,0.,1.0);\n#ifndef SHADOWFLOAT\nfloat shadow=unpack(texture2D(shadowSampler,uvLayer));\n#else\nfloat shadow=texture2D(shadowSampler,uvLayer).x;\n#endif\nreturn shadowPixelDepth>shadow ? computeFallOff(darkness,clipSpace.xy,frustumEdgeFalloff) : 1.;}\n#endif\n#define inline\nfloat computeShadow(vec4 vPositionFromLight,float depthMetric,sampler2D shadowSampler,float darkness,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec2 uv=0.5*clipSpace.xy+vec2(0.5);if (uv.x<0. || uv.x>1.0 || uv.y<0. || uv.y>1.0)\n{return 1.0;}\nelse\n{float shadowPixelDepth=clamp(depthMetric,0.,1.0);\n#ifndef SHADOWFLOAT\nfloat shadow=unpack(TEXTUREFUNC(shadowSampler,uv,0.));\n#else\nfloat shadow=TEXTUREFUNC(shadowSampler,uv,0.).x;\n#endif\nreturn shadowPixelDepth>shadow ? computeFallOff(darkness,clipSpace.xy,frustumEdgeFalloff) : 1.;}}\n#define inline\nfloat computeShadowWithPoissonSampling(vec4 vPositionFromLight,float depthMetric,sampler2D shadowSampler,float mapSize,float darkness,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec2 uv=0.5*clipSpace.xy+vec2(0.5);if (uv.x<0. || uv.x>1.0 || uv.y<0. || uv.y>1.0)\n{return 1.0;}\nelse\n{float shadowPixelDepth=clamp(depthMetric,0.,1.0);float visibility=1.;vec2 poissonDisk[4];poissonDisk[0]=vec2(-0.94201624,-0.39906216);poissonDisk[1]=vec2(0.94558609,-0.76890725);poissonDisk[2]=vec2(-0.094184101,-0.92938870);poissonDisk[3]=vec2(0.34495938,0.29387760);\n#ifndef SHADOWFLOAT\nif (unpack(TEXTUREFUNC(shadowSampler,uv+poissonDisk[0]*mapSize,0.))<shadowPixelDepth) visibility-=0.25;if (unpack(TEXTUREFUNC(shadowSampler,uv+poissonDisk[1]*mapSize,0.))<shadowPixelDepth) visibility-=0.25;if (unpack(TEXTUREFUNC(shadowSampler,uv+poissonDisk[2]*mapSize,0.))<shadowPixelDepth) visibility-=0.25;if (unpack(TEXTUREFUNC(shadowSampler,uv+poissonDisk[3]*mapSize,0.))<shadowPixelDepth) visibility-=0.25;\n#else\nif (TEXTUREFUNC(shadowSampler,uv+poissonDisk[0]*mapSize,0.).x<shadowPixelDepth) visibility-=0.25;if (TEXTUREFUNC(shadowSampler,uv+poissonDisk[1]*mapSize,0.).x<shadowPixelDepth) visibility-=0.25;if (TEXTUREFUNC(shadowSampler,uv+poissonDisk[2]*mapSize,0.).x<shadowPixelDepth) visibility-=0.25;if (TEXTUREFUNC(shadowSampler,uv+poissonDisk[3]*mapSize,0.).x<shadowPixelDepth) visibility-=0.25;\n#endif\nreturn computeFallOff(min(1.0,visibility+darkness),clipSpace.xy,frustumEdgeFalloff);}}\n#define inline\nfloat computeShadowWithESM(vec4 vPositionFromLight,float depthMetric,sampler2D shadowSampler,float darkness,float depthScale,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec2 uv=0.5*clipSpace.xy+vec2(0.5);if (uv.x<0. || uv.x>1.0 || uv.y<0. || uv.y>1.0)\n{return 1.0;}\nelse\n{float shadowPixelDepth=clamp(depthMetric,0.,1.0);\n#ifndef SHADOWFLOAT\nfloat shadowMapSample=unpack(TEXTUREFUNC(shadowSampler,uv,0.));\n#else\nfloat shadowMapSample=TEXTUREFUNC(shadowSampler,uv,0.).x;\n#endif\nfloat esm=1.0-clamp(exp(min(87.,depthScale*shadowPixelDepth))*shadowMapSample,0.,1.-darkness);return computeFallOff(esm,clipSpace.xy,frustumEdgeFalloff);}}\n#define inline\nfloat computeShadowWithCloseESM(vec4 vPositionFromLight,float depthMetric,sampler2D shadowSampler,float darkness,float depthScale,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec2 uv=0.5*clipSpace.xy+vec2(0.5);if (uv.x<0. || uv.x>1.0 || uv.y<0. || uv.y>1.0)\n{return 1.0;}\nelse\n{float shadowPixelDepth=clamp(depthMetric,0.,1.0); \n#ifndef SHADOWFLOAT\nfloat shadowMapSample=unpack(TEXTUREFUNC(shadowSampler,uv,0.));\n#else\nfloat shadowMapSample=TEXTUREFUNC(shadowSampler,uv,0.).x;\n#endif\nfloat esm=clamp(exp(min(87.,-depthScale*(shadowPixelDepth-shadowMapSample))),darkness,1.);return computeFallOff(esm,clipSpace.xy,frustumEdgeFalloff);}}\n#ifdef IS_NDC_HALF_ZRANGE\n#define ZINCLIP clipSpace.z\n#else\n#define ZINCLIP uvDepth.z\n#endif\n#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\n#define SMALLEST_ABOVE_ZERO 1.1754943508e-38\n#define GREATEST_LESS_THAN_ONE 0.99999994\n#define DISABLE_UNIFORMITY_ANALYSIS\n#define inline\nfloat computeShadowWithCSMPCF1(float layer,vec4 vPositionFromLight,float depthMetric,highp sampler2DArrayShadow shadowSampler,float darkness,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec3 uvDepth=vec3(0.5*clipSpace.xyz+vec3(0.5));\n#ifdef USE_REVERSE_DEPTHBUFFER\nuvDepth.z=clamp(ZINCLIP,SMALLEST_ABOVE_ZERO,1.);\n#else\nuvDepth.z=clamp(ZINCLIP,0.,GREATEST_LESS_THAN_ONE);\n#endif\nvec4 uvDepthLayer=vec4(uvDepth.x,uvDepth.y,layer,uvDepth.z);float shadow=texture2D(shadowSampler,uvDepthLayer);shadow=mix(darkness,1.,shadow);return computeFallOff(shadow,clipSpace.xy,frustumEdgeFalloff);}\n#define inline\nfloat computeShadowWithCSMPCF3(float layer,vec4 vPositionFromLight,float depthMetric,highp sampler2DArrayShadow shadowSampler,vec2 shadowMapSizeAndInverse,float darkness,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec3 uvDepth=vec3(0.5*clipSpace.xyz+vec3(0.5));\n#ifdef USE_REVERSE_DEPTHBUFFER\nuvDepth.z=clamp(ZINCLIP,SMALLEST_ABOVE_ZERO,1.);\n#else\nuvDepth.z=clamp(ZINCLIP,0.,GREATEST_LESS_THAN_ONE);\n#endif\nvec2 uv=uvDepth.xy*shadowMapSizeAndInverse.x; \nuv+=0.5; \nvec2 st=fract(uv); \nvec2 base_uv=floor(uv)-0.5; \nbase_uv*=shadowMapSizeAndInverse.y; \nvec2 uvw0=3.-2.*st;vec2 uvw1=1.+2.*st;vec2 u=vec2((2.-st.x)/uvw0.x-1.,st.x/uvw1.x+1.)*shadowMapSizeAndInverse.y;vec2 v=vec2((2.-st.y)/uvw0.y-1.,st.y/uvw1.y+1.)*shadowMapSizeAndInverse.y;float shadow=0.;shadow+=uvw0.x*uvw0.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[0],v[0]),layer,uvDepth.z));shadow+=uvw1.x*uvw0.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[1],v[0]),layer,uvDepth.z));shadow+=uvw0.x*uvw1.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[0],v[1]),layer,uvDepth.z));shadow+=uvw1.x*uvw1.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[1],v[1]),layer,uvDepth.z));shadow=shadow/16.;shadow=mix(darkness,1.,shadow);return computeFallOff(shadow,clipSpace.xy,frustumEdgeFalloff);}\n#define inline\nfloat computeShadowWithCSMPCF5(float layer,vec4 vPositionFromLight,float depthMetric,highp sampler2DArrayShadow shadowSampler,vec2 shadowMapSizeAndInverse,float darkness,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec3 uvDepth=vec3(0.5*clipSpace.xyz+vec3(0.5));\n#ifdef USE_REVERSE_DEPTHBUFFER\nuvDepth.z=clamp(ZINCLIP,SMALLEST_ABOVE_ZERO,1.);\n#else\nuvDepth.z=clamp(ZINCLIP,0.,GREATEST_LESS_THAN_ONE);\n#endif\nvec2 uv=uvDepth.xy*shadowMapSizeAndInverse.x; \nuv+=0.5; \nvec2 st=fract(uv); \nvec2 base_uv=floor(uv)-0.5; \nbase_uv*=shadowMapSizeAndInverse.y; \nvec2 uvw0=4.-3.*st;vec2 uvw1=vec2(7.);vec2 uvw2=1.+3.*st;vec3 u=vec3((3.-2.*st.x)/uvw0.x-2.,(3.+st.x)/uvw1.x,st.x/uvw2.x+2.)*shadowMapSizeAndInverse.y;vec3 v=vec3((3.-2.*st.y)/uvw0.y-2.,(3.+st.y)/uvw1.y,st.y/uvw2.y+2.)*shadowMapSizeAndInverse.y;float shadow=0.;shadow+=uvw0.x*uvw0.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[0],v[0]),layer,uvDepth.z));shadow+=uvw1.x*uvw0.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[1],v[0]),layer,uvDepth.z));shadow+=uvw2.x*uvw0.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[2],v[0]),layer,uvDepth.z));shadow+=uvw0.x*uvw1.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[0],v[1]),layer,uvDepth.z));shadow+=uvw1.x*uvw1.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[1],v[1]),layer,uvDepth.z));shadow+=uvw2.x*uvw1.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[2],v[1]),layer,uvDepth.z));shadow+=uvw0.x*uvw2.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[0],v[2]),layer,uvDepth.z));shadow+=uvw1.x*uvw2.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[1],v[2]),layer,uvDepth.z));shadow+=uvw2.x*uvw2.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[2],v[2]),layer,uvDepth.z));shadow=shadow/144.;shadow=mix(darkness,1.,shadow);return computeFallOff(shadow,clipSpace.xy,frustumEdgeFalloff);}\n#define inline\nfloat computeShadowWithPCF1(vec4 vPositionFromLight,float depthMetric,highp sampler2DShadow shadowSampler,float darkness,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec3 uvDepth=vec3(0.5*clipSpace.xyz+vec3(0.5));uvDepth.z=ZINCLIP;if (depthMetric<0.0 || depthMetric>1.0 || uvDepth.x<0. || uvDepth.x>1.0 || uvDepth.y<0. || uvDepth.y>1.0) {return 1.0;} else {float shadow=TEXTUREFUNC(shadowSampler,uvDepth,0.);shadow=mix(darkness,1.,shadow);return computeFallOff(shadow,clipSpace.xy,frustumEdgeFalloff);}}\n#define inline\nfloat computeShadowWithPCF3(vec4 vPositionFromLight,float depthMetric,highp sampler2DShadow shadowSampler,vec2 shadowMapSizeAndInverse,float darkness,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec3 uvDepth=vec3(0.5*clipSpace.xyz+vec3(0.5));uvDepth.z=ZINCLIP;if (depthMetric<0.0 || depthMetric>1.0 || uvDepth.x<0. || uvDepth.x>1.0 || uvDepth.y<0. || uvDepth.y>1.0) {return 1.0;} else {vec2 uv=uvDepth.xy*shadowMapSizeAndInverse.x; \nuv+=0.5; \nvec2 st=fract(uv); \nvec2 base_uv=floor(uv)-0.5; \nbase_uv*=shadowMapSizeAndInverse.y; \nvec2 uvw0=3.-2.*st;vec2 uvw1=1.+2.*st;vec2 u=vec2((2.-st.x)/uvw0.x-1.,st.x/uvw1.x+1.)*shadowMapSizeAndInverse.y;vec2 v=vec2((2.-st.y)/uvw0.y-1.,st.y/uvw1.y+1.)*shadowMapSizeAndInverse.y;float shadow=0.;shadow+=uvw0.x*uvw0.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[0],v[0]),uvDepth.z),0.);shadow+=uvw1.x*uvw0.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[1],v[0]),uvDepth.z),0.);shadow+=uvw0.x*uvw1.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[0],v[1]),uvDepth.z),0.);shadow+=uvw1.x*uvw1.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[1],v[1]),uvDepth.z),0.);shadow=shadow/16.;shadow=mix(darkness,1.,shadow);return computeFallOff(shadow,clipSpace.xy,frustumEdgeFalloff);}}\n#define inline\nfloat computeShadowWithPCF5(vec4 vPositionFromLight,float depthMetric,highp sampler2DShadow shadowSampler,vec2 shadowMapSizeAndInverse,float darkness,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec3 uvDepth=vec3(0.5*clipSpace.xyz+vec3(0.5));uvDepth.z=ZINCLIP;if (depthMetric<0.0 || depthMetric>1.0 || uvDepth.x<0. || uvDepth.x>1.0 || uvDepth.y<0. || uvDepth.y>1.0) {return 1.0;} else {vec2 uv=uvDepth.xy*shadowMapSizeAndInverse.x; \nuv+=0.5; \nvec2 st=fract(uv); \nvec2 base_uv=floor(uv)-0.5; \nbase_uv*=shadowMapSizeAndInverse.y; \nvec2 uvw0=4.-3.*st;vec2 uvw1=vec2(7.);vec2 uvw2=1.+3.*st;vec3 u=vec3((3.-2.*st.x)/uvw0.x-2.,(3.+st.x)/uvw1.x,st.x/uvw2.x+2.)*shadowMapSizeAndInverse.y;vec3 v=vec3((3.-2.*st.y)/uvw0.y-2.,(3.+st.y)/uvw1.y,st.y/uvw2.y+2.)*shadowMapSizeAndInverse.y;float shadow=0.;shadow+=uvw0.x*uvw0.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[0],v[0]),uvDepth.z),0.);shadow+=uvw1.x*uvw0.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[1],v[0]),uvDepth.z),0.);shadow+=uvw2.x*uvw0.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[2],v[0]),uvDepth.z),0.);shadow+=uvw0.x*uvw1.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[0],v[1]),uvDepth.z),0.);shadow+=uvw1.x*uvw1.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[1],v[1]),uvDepth.z),0.);shadow+=uvw2.x*uvw1.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[2],v[1]),uvDepth.z),0.);shadow+=uvw0.x*uvw2.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[0],v[2]),uvDepth.z),0.);shadow+=uvw1.x*uvw2.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[1],v[2]),uvDepth.z),0.);shadow+=uvw2.x*uvw2.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[2],v[2]),uvDepth.z),0.);shadow=shadow/144.;shadow=mix(darkness,1.,shadow);return computeFallOff(shadow,clipSpace.xy,frustumEdgeFalloff);}}\nconst vec3 PoissonSamplers32[64]=vec3[64](\nvec3(0.06407013,0.05409927,0.),\nvec3(0.7366577,0.5789394,0.),\nvec3(-0.6270542,-0.5320278,0.),\nvec3(-0.4096107,0.8411095,0.),\nvec3(0.6849564,-0.4990818,0.),\nvec3(-0.874181,-0.04579735,0.),\nvec3(0.9989998,0.0009880066,0.),\nvec3(-0.004920578,-0.9151649,0.),\nvec3(0.1805763,0.9747483,0.),\nvec3(-0.2138451,0.2635818,0.),\nvec3(0.109845,0.3884785,0.),\nvec3(0.06876755,-0.3581074,0.),\nvec3(0.374073,-0.7661266,0.),\nvec3(0.3079132,-0.1216763,0.),\nvec3(-0.3794335,-0.8271583,0.),\nvec3(-0.203878,-0.07715034,0.),\nvec3(0.5912697,0.1469799,0.),\nvec3(-0.88069,0.3031784,0.),\nvec3(0.5040108,0.8283722,0.),\nvec3(-0.5844124,0.5494877,0.),\nvec3(0.6017799,-0.1726654,0.),\nvec3(-0.5554981,0.1559997,0.),\nvec3(-0.3016369,-0.3900928,0.),\nvec3(-0.5550632,-0.1723762,0.),\nvec3(0.925029,0.2995041,0.),\nvec3(-0.2473137,0.5538505,0.),\nvec3(0.9183037,-0.2862392,0.),\nvec3(0.2469421,0.6718712,0.),\nvec3(0.3916397,-0.4328209,0.),\nvec3(-0.03576927,-0.6220032,0.),\nvec3(-0.04661255,0.7995201,0.),\nvec3(0.4402924,0.3640312,0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.)\n);const vec3 PoissonSamplers64[64]=vec3[64](\nvec3(-0.613392,0.617481,0.),\nvec3(0.170019,-0.040254,0.),\nvec3(-0.299417,0.791925,0.),\nvec3(0.645680,0.493210,0.),\nvec3(-0.651784,0.717887,0.),\nvec3(0.421003,0.027070,0.),\nvec3(-0.817194,-0.271096,0.),\nvec3(-0.705374,-0.668203,0.),\nvec3(0.977050,-0.108615,0.),\nvec3(0.063326,0.142369,0.),\nvec3(0.203528,0.214331,0.),\nvec3(-0.667531,0.326090,0.),\nvec3(-0.098422,-0.295755,0.),\nvec3(-0.885922,0.215369,0.),\nvec3(0.566637,0.605213,0.),\nvec3(0.039766,-0.396100,0.),\nvec3(0.751946,0.453352,0.),\nvec3(0.078707,-0.715323,0.),\nvec3(-0.075838,-0.529344,0.),\nvec3(0.724479,-0.580798,0.),\nvec3(0.222999,-0.215125,0.),\nvec3(-0.467574,-0.405438,0.),\nvec3(-0.248268,-0.814753,0.),\nvec3(0.354411,-0.887570,0.),\nvec3(0.175817,0.382366,0.),\nvec3(0.487472,-0.063082,0.),\nvec3(-0.084078,0.898312,0.),\nvec3(0.488876,-0.783441,0.),\nvec3(0.470016,0.217933,0.),\nvec3(-0.696890,-0.549791,0.),\nvec3(-0.149693,0.605762,0.),\nvec3(0.034211,0.979980,0.),\nvec3(0.503098,-0.308878,0.),\nvec3(-0.016205,-0.872921,0.),\nvec3(0.385784,-0.393902,0.),\nvec3(-0.146886,-0.859249,0.),\nvec3(0.643361,0.164098,0.),\nvec3(0.634388,-0.049471,0.),\nvec3(-0.688894,0.007843,0.),\nvec3(0.464034,-0.188818,0.),\nvec3(-0.440840,0.137486,0.),\nvec3(0.364483,0.511704,0.),\nvec3(0.034028,0.325968,0.),\nvec3(0.099094,-0.308023,0.),\nvec3(0.693960,-0.366253,0.),\nvec3(0.678884,-0.204688,0.),\nvec3(0.001801,0.780328,0.),\nvec3(0.145177,-0.898984,0.),\nvec3(0.062655,-0.611866,0.),\nvec3(0.315226,-0.604297,0.),\nvec3(-0.780145,0.486251,0.),\nvec3(-0.371868,0.882138,0.),\nvec3(0.200476,0.494430,0.),\nvec3(-0.494552,-0.711051,0.),\nvec3(0.612476,0.705252,0.),\nvec3(-0.578845,-0.768792,0.),\nvec3(-0.772454,-0.090976,0.),\nvec3(0.504440,0.372295,0.),\nvec3(0.155736,0.065157,0.),\nvec3(0.391522,0.849605,0.),\nvec3(-0.620106,-0.328104,0.),\nvec3(0.789239,-0.419965,0.),\nvec3(-0.545396,0.538133,0.),\nvec3(-0.178564,-0.596057,0.)\n);\n#define inline\nfloat computeShadowWithCSMPCSS(float layer,vec4 vPositionFromLight,float depthMetric,highp sampler2DArray depthSampler,highp sampler2DArrayShadow shadowSampler,float shadowMapSizeInverse,float lightSizeUV,float darkness,float frustumEdgeFalloff,int searchTapCount,int pcfTapCount,vec3[64] poissonSamplers,vec2 lightSizeUVCorrection,float depthCorrection,float penumbraDarkness)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec3 uvDepth=vec3(0.5*clipSpace.xyz+vec3(0.5));\n#ifdef USE_REVERSE_DEPTHBUFFER\nuvDepth.z=clamp(ZINCLIP,SMALLEST_ABOVE_ZERO,1.);\n#else\nuvDepth.z=clamp(ZINCLIP,0.,GREATEST_LESS_THAN_ONE);\n#endif\nvec4 uvDepthLayer=vec4(uvDepth.x,uvDepth.y,layer,uvDepth.z);float blockerDepth=0.0;float sumBlockerDepth=0.0;float numBlocker=0.0;for (int i=0; i<searchTapCount; i ++) {blockerDepth=texture2D(depthSampler,vec3(uvDepth.xy+(lightSizeUV*lightSizeUVCorrection*shadowMapSizeInverse*PoissonSamplers32[i].xy),layer)).r;if (blockerDepth<depthMetric) {sumBlockerDepth+=blockerDepth;numBlocker++;}}\nfloat avgBlockerDepth=sumBlockerDepth/numBlocker;float AAOffset=shadowMapSizeInverse*10.;float penumbraRatio=((depthMetric-avgBlockerDepth)*depthCorrection+AAOffset);vec4 filterRadius=vec4(penumbraRatio*lightSizeUV*lightSizeUVCorrection*shadowMapSizeInverse,0.,0.);float random=getRand(vPositionFromLight.xy);float rotationAngle=random*3.1415926;vec2 rotationVector=vec2(cos(rotationAngle),sin(rotationAngle));float shadow=0.;for (int i=0; i<pcfTapCount; i++) {vec4 offset=vec4(poissonSamplers[i],0.);offset=vec4(offset.x*rotationVector.x-offset.y*rotationVector.y,offset.y*rotationVector.x+offset.x*rotationVector.y,0.,0.);shadow+=texture2D(shadowSampler,uvDepthLayer+offset*filterRadius);}\nshadow/=float(pcfTapCount);shadow=mix(shadow,1.,min((depthMetric-avgBlockerDepth)*depthCorrection*penumbraDarkness,1.));shadow=mix(darkness,1.,shadow);if (numBlocker<1.0) {return 1.0;}\nelse\n{return computeFallOff(shadow,clipSpace.xy,frustumEdgeFalloff);}}\n#define inline\nfloat computeShadowWithPCSS(vec4 vPositionFromLight,float depthMetric,sampler2D depthSampler,highp sampler2DShadow shadowSampler,float shadowMapSizeInverse,float lightSizeUV,float darkness,float frustumEdgeFalloff,int searchTapCount,int pcfTapCount,vec3[64] poissonSamplers)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec3 uvDepth=vec3(0.5*clipSpace.xyz+vec3(0.5));uvDepth.z=ZINCLIP;if (depthMetric<0.0 || depthMetric>1.0 || uvDepth.x<0. || uvDepth.x>1.0 || uvDepth.y<0. || uvDepth.y>1.0) {return 1.0;} else {float blockerDepth=0.0;float sumBlockerDepth=0.0;float numBlocker=0.0;for (int i=0; i<searchTapCount; i ++) {blockerDepth=TEXTUREFUNC(depthSampler,uvDepth.xy+(lightSizeUV*shadowMapSizeInverse*PoissonSamplers32[i].xy),0.).r;if (blockerDepth<depthMetric) {sumBlockerDepth+=blockerDepth;numBlocker++;}}\nif (numBlocker<1.0) {return 1.0;}\nelse\n{float avgBlockerDepth=sumBlockerDepth/numBlocker;float AAOffset=shadowMapSizeInverse*10.;float penumbraRatio=((depthMetric-avgBlockerDepth)+AAOffset);float filterRadius=penumbraRatio*lightSizeUV*shadowMapSizeInverse;float random=getRand(vPositionFromLight.xy);float rotationAngle=random*3.1415926;vec2 rotationVector=vec2(cos(rotationAngle),sin(rotationAngle));float shadow=0.;for (int i=0; i<pcfTapCount; i++) {vec3 offset=poissonSamplers[i];offset=vec3(offset.x*rotationVector.x-offset.y*rotationVector.y,offset.y*rotationVector.x+offset.x*rotationVector.y,0.);shadow+=TEXTUREFUNC(shadowSampler,uvDepth+offset*filterRadius,0.);}\nshadow/=float(pcfTapCount);shadow=mix(shadow,1.,depthMetric-avgBlockerDepth);shadow=mix(darkness,1.,shadow);return computeFallOff(shadow,clipSpace.xy,frustumEdgeFalloff);}}}\n#define inline\nfloat computeShadowWithPCSS16(vec4 vPositionFromLight,float depthMetric,sampler2D depthSampler,highp sampler2DShadow shadowSampler,float shadowMapSizeInverse,float lightSizeUV,float darkness,float frustumEdgeFalloff)\n{return computeShadowWithPCSS(vPositionFromLight,depthMetric,depthSampler,shadowSampler,shadowMapSizeInverse,lightSizeUV,darkness,frustumEdgeFalloff,16,16,PoissonSamplers32);}\n#define inline\nfloat computeShadowWithPCSS32(vec4 vPositionFromLight,float depthMetric,sampler2D depthSampler,highp sampler2DShadow shadowSampler,float shadowMapSizeInverse,float lightSizeUV,float darkness,float frustumEdgeFalloff)\n{return computeShadowWithPCSS(vPositionFromLight,depthMetric,depthSampler,shadowSampler,shadowMapSizeInverse,lightSizeUV,darkness,frustumEdgeFalloff,16,32,PoissonSamplers32);}\n#define inline\nfloat computeShadowWithPCSS64(vec4 vPositionFromLight,float depthMetric,sampler2D depthSampler,highp sampler2DShadow shadowSampler,float shadowMapSizeInverse,float lightSizeUV,float darkness,float frustumEdgeFalloff)\n{return computeShadowWithPCSS(vPositionFromLight,depthMetric,depthSampler,shadowSampler,shadowMapSizeInverse,lightSizeUV,darkness,frustumEdgeFalloff,32,64,PoissonSamplers64);}\n#define inline\nfloat computeShadowWithCSMPCSS16(float layer,vec4 vPositionFromLight,float depthMetric,highp sampler2DArray depthSampler,highp sampler2DArrayShadow shadowSampler,float shadowMapSizeInverse,float lightSizeUV,float darkness,float frustumEdgeFalloff,vec2 lightSizeUVCorrection,float depthCorrection,float penumbraDarkness)\n{return computeShadowWithCSMPCSS(layer,vPositionFromLight,depthMetric,depthSampler,shadowSampler,shadowMapSizeInverse,lightSizeUV,darkness,frustumEdgeFalloff,16,16,PoissonSamplers32,lightSizeUVCorrection,depthCorrection,penumbraDarkness);}\n#define inline\nfloat computeShadowWithCSMPCSS32(float layer,vec4 vPositionFromLight,float depthMetric,highp sampler2DArray depthSampler,highp sampler2DArrayShadow shadowSampler,float shadowMapSizeInverse,float lightSizeUV,float darkness,float frustumEdgeFalloff,vec2 lightSizeUVCorrection,float depthCorrection,float penumbraDarkness)\n{return computeShadowWithCSMPCSS(layer,vPositionFromLight,depthMetric,depthSampler,shadowSampler,shadowMapSizeInverse,lightSizeUV,darkness,frustumEdgeFalloff,16,32,PoissonSamplers32,lightSizeUVCorrection,depthCorrection,penumbraDarkness);}\n#define inline\nfloat computeShadowWithCSMPCSS64(float layer,vec4 vPositionFromLight,float depthMetric,highp sampler2DArray depthSampler,highp sampler2DArrayShadow shadowSampler,float shadowMapSizeInverse,float lightSizeUV,float darkness,float frustumEdgeFalloff,vec2 lightSizeUVCorrection,float depthCorrection,float penumbraDarkness)\n{return computeShadowWithCSMPCSS(layer,vPositionFromLight,depthMetric,depthSampler,shadowSampler,shadowMapSizeInverse,lightSizeUV,darkness,frustumEdgeFalloff,32,64,PoissonSamplers64,lightSizeUVCorrection,depthCorrection,penumbraDarkness);}\n#endif\n#endif\n";
 -    ⟦2-char-id⟧.b.IncludesShadersStore[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStore[⟦2-char-id⟧] = ⟦2-char-id⟧);
++    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
++    const ⟦2-char-id⟧ = "reflectionFunction",
++      ⟦2-char-id⟧ = "vec3 computeFixedEquirectangularCoords(vec4 worldPos,vec3 worldNormal,vec3 direction)\n{float lon=atan(direction.z,direction.x);float lat=acos(direction.y);vec2 sphereCoords=vec2(lon,lat)*RECIPROCAL_PI2*2.0;float s=sphereCoords.x*0.5+0.5;float t=sphereCoords.y;return vec3(s,t,0); }\nvec3 computeMirroredFixedEquirectangularCoords(vec4 worldPos,vec3 worldNormal,vec3 direction)\n{float lon=atan(direction.z,direction.x);float lat=acos(direction.y);vec2 sphereCoords=vec2(lon,lat)*RECIPROCAL_PI2*2.0;float s=sphereCoords.x*0.5+0.5;float t=sphereCoords.y;return vec3(1.0-s,t,0); }\nvec3 computeEquirectangularCoords(vec4 worldPos,vec3 worldNormal,vec3 eyePosition,mat4 reflectionMatrix)\n{vec3 cameraToVertex=normalize(worldPos.xyz-eyePosition);vec3 r=normalize(reflect(cameraToVertex,worldNormal));r=vec3(reflectionMatrix*vec4(r,0));float lon=atan(r.z,r.x);float lat=acos(r.y);vec2 sphereCoords=vec2(lon,lat)*RECIPROCAL_PI2*2.0;float s=sphereCoords.x*0.5+0.5;float t=sphereCoords.y;return vec3(s,t,0);}\nvec3 computeSphericalCoords(vec4 worldPos,vec3 worldNormal,mat4 view,mat4 reflectionMatrix)\n{vec3 viewDir=normalize(vec3(view*worldPos));vec3 viewNormal=normalize(vec3(view*vec4(worldNormal,0.0)));vec3 r=reflect(viewDir,viewNormal);r=vec3(reflectionMatrix*vec4(r,0));r.z=r.z-1.0;float m=2.0*length(r);return vec3(r.x/m+0.5,1.0-r.y/m-0.5,0);}\nvec3 computePlanarCoords(vec4 worldPos,vec3 worldNormal,vec3 eyePosition,mat4 reflectionMatrix)\n{vec3 viewDir=worldPos.xyz-eyePosition;vec3 coords=normalize(reflect(viewDir,worldNormal));return vec3(reflectionMatrix*vec4(coords,1));}\nvec3 computeCubicCoords(vec4 worldPos,vec3 worldNormal,vec3 eyePosition,mat4 reflectionMatrix)\n{vec3 viewDir=normalize(worldPos.xyz-eyePosition);vec3 coords=reflect(viewDir,worldNormal);coords=vec3(reflectionMatrix*vec4(coords,0));\n#ifdef INVERTCUBICMAP\ncoords.y*=-1.0;\n#endif\nreturn coords;}\nvec3 computeCubicLocalCoords(vec4 worldPos,vec3 worldNormal,vec3 eyePosition,mat4 reflectionMatrix,vec3 reflectionSize,vec3 reflectionPosition)\n{vec3 viewDir=normalize(worldPos.xyz-eyePosition);vec3 coords=reflect(viewDir,worldNormal);coords=parallaxCorrectNormal(worldPos.xyz,coords,reflectionSize,reflectionPosition);coords=vec3(reflectionMatrix*vec4(coords,0));\n#ifdef INVERTCUBICMAP\ncoords.y*=-1.0;\n#endif\nreturn coords;}\nvec3 computeProjectionCoords(vec4 worldPos,mat4 view,mat4 reflectionMatrix)\n{return vec3(reflectionMatrix*(view*worldPos));}\nvec3 computeSkyBoxCoords(vec3 positionW,mat4 reflectionMatrix)\n{return vec3(reflectionMatrix*vec4(positionW,1.));}\n#ifdef REFLECTION\nvec3 computeReflectionCoords(vec4 worldPos,vec3 worldNormal)\n{\n#ifdef REFLECTIONMAP_MIRROREDEQUIRECTANGULAR_FIXED\nvec3 direction=normalize(vDirectionW);return computeMirroredFixedEquirectangularCoords(worldPos,worldNormal,direction);\n#endif\n#ifdef REFLECTIONMAP_EQUIRECTANGULAR_FIXED\nvec3 direction=normalize(vDirectionW);return computeFixedEquirectangularCoords(worldPos,worldNormal,direction);\n#endif\n#ifdef REFLECTIONMAP_EQUIRECTANGULAR\nreturn computeEquirectangularCoords(worldPos,worldNormal,vEyePosition.xyz,reflectionMatrix);\n#endif\n#ifdef REFLECTIONMAP_SPHERICAL\nreturn computeSphericalCoords(worldPos,worldNormal,view,reflectionMatrix);\n#endif\n#ifdef REFLECTIONMAP_PLANAR\nreturn computePlanarCoords(worldPos,worldNormal,vEyePosition.xyz,reflectionMatrix);\n#endif\n#ifdef REFLECTIONMAP_CUBIC\n#ifdef USE_LOCAL_REFLECTIONMAP_CUBIC\nreturn computeCubicLocalCoords(worldPos,worldNormal,vEyePosition.xyz,reflectionMatrix,vReflectionSize,vReflectionPosition);\n#else\nreturn computeCubicCoords(worldPos,worldNormal,vEyePosition.xyz,reflectionMatrix);\n#endif\n#endif\n#ifdef REFLECTIONMAP_PROJECTION\nreturn computeProjectionCoords(worldPos,view,reflectionMatrix);\n#endif\n#ifdef REFLECTIONMAP_SKYBOX\nreturn computeSkyBoxCoords(vPositionUVW,reflectionMatrix);\n#endif\n#ifdef REFLECTIONMAP_EXPLICIT\nreturn vec3(0,0,0);\n#endif\n}\n#endif\n";
 +    ⟦2-char-id⟧.e.IncludesShadersStore[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStore[⟦2-char-id⟧] = ⟦2-char-id⟧);
      const ⟦2-char-id⟧ = {
        name: ⟦2-char-id⟧,
        shader: ⟦2-char-id⟧
-     }
+```
+
+</details>
+
+<details>
+<summary>Hunk 2 · Change · +42 / -3</summary>
+
+```diff
+@@ -172,12 +133,51 @@
    },
--  40800: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40830: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+   40830: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +      e: () => ⟦2-char-id⟧
      });
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
-     const ⟦2-char-id⟧ = "samplerFragmentDeclaration",
-       ⟦2-char-id⟧ = "#ifdef _DEFINENAME_\n#if _DEFINENAME_DIRECTUV==1\n#define v_VARYINGNAME_UV vMainUV1\n#elif _DEFINENAME_DIRECTUV==2\n#define v_VARYINGNAME_UV vMainUV2\n#elif _DEFINENAME_DIRECTUV==3\n#define v_VARYINGNAME_UV vMainUV3\n#elif _DEFINENAME_DIRECTUV==4\n#define v_VARYINGNAME_UV vMainUV4\n#elif _DEFINENAME_DIRECTUV==5\n#define v_VARYINGNAME_UV vMainUV5\n#elif _DEFINENAME_DIRECTUV==6\n#define v_VARYINGNAME_UV vMainUV6\n#else\nvarying vec2 v_VARYINGNAME_UV;\n#endif\nuniform sampler2D _SAMPLERNAME_Sampler;\n#endif\n";
--    ⟦2-char-id⟧.b.IncludesShadersStore[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStore[⟦2-char-id⟧] = ⟦2-char-id⟧);
++    const ⟦2-char-id⟧ = "samplerFragmentDeclaration",
++      ⟦2-char-id⟧ = "#ifdef _DEFINENAME_\n#if _DEFINENAME_DIRECTUV==1\n#define v_VARYINGNAME_UV vMainUV1\n#elif _DEFINENAME_DIRECTUV==2\n#define v_VARYINGNAME_UV vMainUV2\n#elif _DEFINENAME_DIRECTUV==3\n#define v_VARYINGNAME_UV vMainUV3\n#elif _DEFINENAME_DIRECTUV==4\n#define v_VARYINGNAME_UV vMainUV4\n#elif _DEFINENAME_DIRECTUV==5\n#define v_VARYINGNAME_UV vMainUV5\n#elif _DEFINENAME_DIRECTUV==6\n#define v_VARYINGNAME_UV vMainUV6\n#else\nvarying vec2 v_VARYINGNAME_UV;\n#endif\nuniform sampler2D _SAMPLERNAME_Sampler;\n#endif\n";
 +    ⟦2-char-id⟧.e.IncludesShadersStore[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStore[⟦2-char-id⟧] = ⟦2-char-id⟧);
-     const ⟦2-char-id⟧ = {
-       name: ⟦2-char-id⟧,
-       shader: ⟦2-char-id⟧
-     }
-   },
--  40585: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40574: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
-     ⟦2-char-id⟧.d(⟦2-char-id⟧, {
--      c: () => ⟦2-char-id⟧
++    const ⟦2-char-id⟧ = {
++      name: ⟦2-char-id⟧,
++      shader: ⟦2-char-id⟧
++    }
++  },
++  40574: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      e: () => ⟦2-char-id⟧
-     });
--    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
++    });
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
-     const ⟦2-char-id⟧ = "sceneUboDeclaration",
-       ⟦2-char-id⟧ = "layout(std140,column_major) uniform;uniform Scene {mat4 viewProjection;\n#ifdef MULTIVIEW\nmat4 viewProjectionR;\n#endif \nmat4 view;mat4 projection;vec4 vEyePosition;mat4 inverseProjection;};\n";
--    ⟦2-char-id⟧.b.IncludesShadersStore[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStore[⟦2-char-id⟧] = ⟦2-char-id⟧);
++    const ⟦2-char-id⟧ = "sceneUboDeclaration",
++      ⟦2-char-id⟧ = "layout(std140,column_major) uniform;uniform Scene {mat4 viewProjection;\n#ifdef MULTIVIEW\nmat4 viewProjectionR;\n#endif \nmat4 view;mat4 projection;vec4 vEyePosition;mat4 inverseProjection;};\n";
 +    ⟦2-char-id⟧.e.IncludesShadersStore[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStore[⟦2-char-id⟧] = ⟦2-char-id⟧);
-     const ⟦2-char-id⟧ = {
-       name: ⟦2-char-id⟧,
-       shader: ⟦2-char-id⟧
-     }
-   },
--  40792: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40821: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
-     ⟦2-char-id⟧.d(⟦2-char-id⟧, {
--      b: () => ⟦2-char-id⟧
++    const ⟦2-char-id⟧ = {
++      name: ⟦2-char-id⟧,
++      shader: ⟦2-char-id⟧
++    }
++  },
++  40821: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      d: () => ⟦2-char-id⟧
-     });
--    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
++    });
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
-     const ⟦2-char-id⟧ = "shadowsFragmentFunctions",
-       ⟦2-char-id⟧ = "#ifdef SHADOWS\n#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\n#define TEXTUREFUNC(s,c,l) texture2DLodEXT(s,c,l)\n#else\n#define TEXTUREFUNC(s,c,b) texture2D(s,c,b)\n#endif\n#ifndef SHADOWFLOAT\nfloat unpack(vec4 color)\n{const vec4 bit_shift=vec4(1.0/(255.0*255.0*255.0),1.0/(255.0*255.0),1.0/255.0,1.0);return dot(color,bit_shift);}\n#endif\nfloat computeFallOff(float value,vec2 clipSpace,float frustumEdgeFalloff)\n{float mask=smoothstep(1.0-frustumEdgeFalloff,1.00000012,clamp(dot(clipSpace,clipSpace),0.,1.));return mix(value,1.0,mask);}\n#define inline\nfloat computeShadowCube(vec3 worldPos,vec3 lightPosition,samplerCube shadowSampler,float darkness,vec2 depthValues)\n{vec3 directionToLight=worldPos-lightPosition;float depth=length(directionToLight);depth=(depth+depthValues.x)/(depthValues.y);depth=clamp(depth,0.,1.0);directionToLight=normalize(directionToLight);directionToLight.y=-directionToLight.y;\n#ifndef SHADOWFLOAT\nfloat shadow=unpack(textureCube(shadowSampler,directionToLight));\n#else\nfloat shadow=textureCube(shadowSampler,directionToLight).x;\n#endif\nreturn depth>shadow ? darkness : 1.0;}\n#define inline\nfloat computeShadowWithPoissonSamplingCube(vec3 worldPos,vec3 lightPosition,samplerCube shadowSampler,float mapSize,float darkness,vec2 depthValues)\n{vec3 directionToLight=worldPos-lightPosition;float depth=length(directionToLight);depth=(depth+depthValues.x)/(depthValues.y);depth=clamp(depth,0.,1.0);directionToLight=normalize(directionToLight);directionToLight.y=-directionToLight.y;float visibility=1.;vec3 poissonDisk[4];poissonDisk[0]=vec3(-1.0,1.0,-1.0);poissonDisk[1]=vec3(1.0,-1.0,-1.0);poissonDisk[2]=vec3(-1.0,-1.0,-1.0);poissonDisk[3]=vec3(1.0,-1.0,1.0);\n#ifndef SHADOWFLOAT\nif (unpack(textureCube(shadowSampler,directionToLight+poissonDisk[0]*mapSize))<depth) visibility-=0.25;if (unpack(textureCube(shadowSampler,directionToLight+poissonDisk[1]*mapSize))<depth) visibility-=0.25;if (unpack(textureCube(shadowSampler,directionToLight+poissonDisk[2]*mapSize))<depth) visibility-=0.25;if (unpack(textureCube(shadowSampler,directionToLight+poissonDisk[3]*mapSize))<depth) visibility-=0.25;\n#else\nif (textureCube(shadowSampler,directionToLight+poissonDisk[0]*mapSize).x<depth) visibility-=0.25;if (textureCube(shadowSampler,directionToLight+poissonDisk[1]*mapSize).x<depth) visibility-=0.25;if (textureCube(shadowSampler,directionToLight+poissonDisk[2]*mapSize).x<depth) visibility-=0.25;if (textureCube(shadowSampler,directionToLight+poissonDisk[3]*mapSize).x<depth) visibility-=0.25;\n#endif\nreturn min(1.0,visibility+darkness);}\n#define inline\nfloat computeShadowWithESMCube(vec3 worldPos,vec3 lightPosition,samplerCube shadowSampler,float darkness,float depthScale,vec2 depthValues)\n{vec3 directionToLight=worldPos-lightPosition;float depth=length(directionToLight);depth=(depth+depthValues.x)/(depthValues.y);float shadowPixelDepth=clamp(depth,0.,1.0);directionToLight=normalize(directionToLight);directionToLight.y=-directionToLight.y;\n#ifndef SHADOWFLOAT\nfloat shadowMapSample=unpack(textureCube(shadowSampler,directionToLight));\n#else\nfloat shadowMapSample=textureCube(shadowSampler,directionToLight).x;\n#endif\nfloat esm=1.0-clamp(exp(min(87.,depthScale*shadowPixelDepth))*shadowMapSample,0.,1.-darkness);return esm;}\n#define inline\nfloat computeShadowWithCloseESMCube(vec3 worldPos,vec3 lightPosition,samplerCube shadowSampler,float darkness,float depthScale,vec2 depthValues)\n{vec3 directionToLight=worldPos-lightPosition;float depth=length(directionToLight);depth=(depth+depthValues.x)/(depthValues.y);float shadowPixelDepth=clamp(depth,0.,1.0);directionToLight=normalize(directionToLight);directionToLight.y=-directionToLight.y;\n#ifndef SHADOWFLOAT\nfloat shadowMapSample=unpack(textureCube(shadowSampler,directionToLight));\n#else\nfloat shadowMapSample=textureCube(shadowSampler,directionToLight).x;\n#endif\nfloat esm=clamp(exp(min(87.,-depthScale*(shadowPixelDepth-shadowMapSample))),darkness,1.);return esm;}\n#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\n#define inline\nfloat computeShadowCSM(float layer,vec4 vPositionFromLight,float depthMetric,highp sampler2DArray shadowSampler,float darkness,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec2 uv=0.5*clipSpace.xy+vec2(0.5);vec3 uvLayer=vec3(uv.x,uv.y,layer);float shadowPixelDepth=clamp(depthMetric,0.,1.0);\n#ifndef SHADOWFLOAT\nfloat shadow=unpack(texture2D(shadowSampler,uvLayer));\n#else\nfloat shadow=texture2D(shadowSampler,uvLayer).x;\n#endif\nreturn shadowPixelDepth>shadow ? computeFallOff(darkness,clipSpace.xy,frustumEdgeFalloff) : 1.;}\n#endif\n#define inline\nfloat computeShadow(vec4 vPositionFromLight,float depthMetric,sampler2D shadowSampler,float darkness,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec2 uv=0.5*clipSpace.xy+vec2(0.5);if (uv.x<0. || uv.x>1.0 || uv.y<0. || uv.y>1.0)\n{return 1.0;}\nelse\n{float shadowPixelDepth=clamp(depthMetric,0.,1.0);\n#ifndef SHADOWFLOAT\nfloat shadow=unpack(TEXTUREFUNC(shadowSampler,uv,0.));\n#else\nfloat shadow=TEXTUREFUNC(shadowSampler,uv,0.).x;\n#endif\nreturn shadowPixelDepth>shadow ? computeFallOff(darkness,clipSpace.xy,frustumEdgeFalloff) : 1.;}}\n#define inline\nfloat computeShadowWithPoissonSampling(vec4 vPositionFromLight,float depthMetric,sampler2D shadowSampler,float mapSize,float darkness,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec2 uv=0.5*clipSpace.xy+vec2(0.5);if (uv.x<0. || uv.x>1.0 || uv.y<0. || uv.y>1.0)\n{return 1.0;}\nelse\n{float shadowPixelDepth=clamp(depthMetric,0.,1.0);float visibility=1.;vec2 poissonDisk[4];poissonDisk[0]=vec2(-0.94201624,-0.39906216);poissonDisk[1]=vec2(0.94558609,-0.76890725);poissonDisk[2]=vec2(-0.094184101,-0.92938870);poissonDisk[3]=vec2(0.34495938,0.29387760);\n#ifndef SHADOWFLOAT\nif (unpack(TEXTUREFUNC(shadowSampler,uv+poissonDisk[0]*mapSize,0.))<shadowPixelDepth) visibility-=0.25;if (unpack(TEXTUREFUNC(shadowSampler,uv+poissonDisk[1]*mapSize,0.))<shadowPixelDepth) visibility-=0.25;if (unpack(TEXTUREFUNC(shadowSampler,uv+poissonDisk[2]*mapSize,0.))<shadowPixelDepth) visibility-=0.25;if (unpack(TEXTUREFUNC(shadowSampler,uv+poissonDisk[3]*mapSize,0.))<shadowPixelDepth) visibility-=0.25;\n#else\nif (TEXTUREFUNC(shadowSampler,uv+poissonDisk[0]*mapSize,0.).x<shadowPixelDepth) visibility-=0.25;if (TEXTUREFUNC(shadowSampler,uv+poissonDisk[1]*mapSize,0.).x<shadowPixelDepth) visibility-=0.25;if (TEXTUREFUNC(shadowSampler,uv+poissonDisk[2]*mapSize,0.).x<shadowPixelDepth) visibility-=0.25;if (TEXTUREFUNC(shadowSampler,uv+poissonDisk[3]*mapSize,0.).x<shadowPixelDepth) visibility-=0.25;\n#endif\nreturn computeFallOff(min(1.0,visibility+darkness),clipSpace.xy,frustumEdgeFalloff);}}\n#define inline\nfloat computeShadowWithESM(vec4 vPositionFromLight,float depthMetric,sampler2D shadowSampler,float darkness,float depthScale,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec2 uv=0.5*clipSpace.xy+vec2(0.5);if (uv.x<0. || uv.x>1.0 || uv.y<0. || uv.y>1.0)\n{return 1.0;}\nelse\n{float shadowPixelDepth=clamp(depthMetric,0.,1.0);\n#ifndef SHADOWFLOAT\nfloat shadowMapSample=unpack(TEXTUREFUNC(shadowSampler,uv,0.));\n#else\nfloat shadowMapSample=TEXTUREFUNC(shadowSampler,uv,0.).x;\n#endif\nfloat esm=1.0-clamp(exp(min(87.,depthScale*shadowPixelDepth))*shadowMapSample,0.,1.-darkness);return computeFallOff(esm,clipSpace.xy,frustumEdgeFalloff);}}\n#define inline\nfloat computeShadowWithCloseESM(vec4 vPositionFromLight,float depthMetric,sampler2D shadowSampler,float darkness,float depthScale,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec2 uv=0.5*clipSpace.xy+vec2(0.5);if (uv.x<0. || uv.x>1.0 || uv.y<0. || uv.y>1.0)\n{return 1.0;}\nelse\n{float shadowPixelDepth=clamp(depthMetric,0.,1.0); \n#ifndef SHADOWFLOAT\nfloat shadowMapSample=unpack(TEXTUREFUNC(shadowSampler,uv,0.));\n#else\nfloat shadowMapSample=TEXTUREFUNC(shadowSampler,uv,0.).x;\n#endif\nfloat esm=clamp(exp(min(87.,-depthScale*(shadowPixelDepth-shadowMapSample))),darkness,1.);return computeFallOff(esm,clipSpace.xy,frustumEdgeFalloff);}}\n#ifdef IS_NDC_HALF_ZRANGE\n#define ZINCLIP clipSpace.z\n#else\n#define ZINCLIP uvDepth.z\n#endif\n#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\n#define SMALLEST_ABOVE_ZERO 1.1754943508e-38\n#define GREATEST_LESS_THAN_ONE 0.99999994\n#define DISABLE_UNIFORMITY_ANALYSIS\n#define inline\nfloat computeShadowWithCSMPCF1(float layer,vec4 vPositionFromLight,float depthMetric,highp sampler2DArrayShadow shadowSampler,float darkness,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec3 uvDepth=vec3(0.5*clipSpace.xyz+vec3(0.5));\n#ifdef USE_REVERSE_DEPTHBUFFER\nuvDepth.z=clamp(ZINCLIP,SMALLEST_ABOVE_ZERO,1.);\n#else\nuvDepth.z=clamp(ZINCLIP,0.,GREATEST_LESS_THAN_ONE);\n#endif\nvec4 uvDepthLayer=vec4(uvDepth.x,uvDepth.y,layer,uvDepth.z);float shadow=texture2D(shadowSampler,uvDepthLayer);shadow=mix(darkness,1.,shadow);return computeFallOff(shadow,clipSpace.xy,frustumEdgeFalloff);}\n#define inline\nfloat computeShadowWithCSMPCF3(float layer,vec4 vPositionFromLight,float depthMetric,highp sampler2DArrayShadow shadowSampler,vec2 shadowMapSizeAndInverse,float darkness,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec3 uvDepth=vec3(0.5*clipSpace.xyz+vec3(0.5));\n#ifdef USE_REVERSE_DEPTHBUFFER\nuvDepth.z=clamp(ZINCLIP,SMALLEST_ABOVE_ZERO,1.);\n#else\nuvDepth.z=clamp(ZINCLIP,0.,GREATEST_LESS_THAN_ONE);\n#endif\nvec2 uv=uvDepth.xy*shadowMapSizeAndInverse.x; \nuv+=0.5; \nvec2 st=fract(uv); \nvec2 base_uv=floor(uv)-0.5; \nbase_uv*=shadowMapSizeAndInverse.y; \nvec2 uvw0=3.-2.*st;vec2 uvw1=1.+2.*st;vec2 u=vec2((2.-st.x)/uvw0.x-1.,st.x/uvw1.x+1.)*shadowMapSizeAndInverse.y;vec2 v=vec2((2.-st.y)/uvw0.y-1.,st.y/uvw1.y+1.)*shadowMapSizeAndInverse.y;float shadow=0.;shadow+=uvw0.x*uvw0.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[0],v[0]),layer,uvDepth.z));shadow+=uvw1.x*uvw0.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[1],v[0]),layer,uvDepth.z));shadow+=uvw0.x*uvw1.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[0],v[1]),layer,uvDepth.z));shadow+=uvw1.x*uvw1.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[1],v[1]),layer,uvDepth.z));shadow=shadow/16.;shadow=mix(darkness,1.,shadow);return computeFallOff(shadow,clipSpace.xy,frustumEdgeFalloff);}\n#define inline\nfloat computeShadowWithCSMPCF5(float layer,vec4 vPositionFromLight,float depthMetric,highp sampler2DArrayShadow shadowSampler,vec2 shadowMapSizeAndInverse,float darkness,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec3 uvDepth=vec3(0.5*clipSpace.xyz+vec3(0.5));\n#ifdef USE_REVERSE_DEPTHBUFFER\nuvDepth.z=clamp(ZINCLIP,SMALLEST_ABOVE_ZERO,1.);\n#else\nuvDepth.z=clamp(ZINCLIP,0.,GREATEST_LESS_THAN_ONE);\n#endif\nvec2 uv=uvDepth.xy*shadowMapSizeAndInverse.x; \nuv+=0.5; \nvec2 st=fract(uv); \nvec2 base_uv=floor(uv)-0.5; \nbase_uv*=shadowMapSizeAndInverse.y; \nvec2 uvw0=4.-3.*st;vec2 uvw1=vec2(7.);vec2 uvw2=1.+3.*st;vec3 u=vec3((3.-2.*st.x)/uvw0.x-2.,(3.+st.x)/uvw1.x,st.x/uvw2.x+2.)*shadowMapSizeAndInverse.y;vec3 v=vec3((3.-2.*st.y)/uvw0.y-2.,(3.+st.y)/uvw1.y,st.y/uvw2.y+2.)*shadowMapSizeAndInverse.y;float shadow=0.;shadow+=uvw0.x*uvw0.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[0],v[0]),layer,uvDepth.z));shadow+=uvw1.x*uvw0.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[1],v[0]),layer,uvDepth.z));shadow+=uvw2.x*uvw0.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[2],v[0]),layer,uvDepth.z));shadow+=uvw0.x*uvw1.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[0],v[1]),layer,uvDepth.z));shadow+=uvw1.x*uvw1.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[1],v[1]),layer,uvDepth.z));shadow+=uvw2.x*uvw1.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[2],v[1]),layer,uvDepth.z));shadow+=uvw0.x*uvw2.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[0],v[2]),layer,uvDepth.z));shadow+=uvw1.x*uvw2.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[1],v[2]),layer,uvDepth.z));shadow+=uvw2.x*uvw2.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[2],v[2]),layer,uvDepth.z));shadow=shadow/144.;shadow=mix(darkness,1.,shadow);return computeFallOff(shadow,clipSpace.xy,frustumEdgeFalloff);}\n#define inline\nfloat computeShadowWithPCF1(vec4 vPositionFromLight,float depthMetric,highp sampler2DShadow shadowSampler,float darkness,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec3 uvDepth=vec3(0.5*clipSpace.xyz+vec3(0.5));uvDepth.z=ZINCLIP;if (depthMetric<0.0 || depthMetric>1.0 || uvDepth.x<0. || uvDepth.x>1.0 || uvDepth.y<0. || uvDepth.y>1.0) {return 1.0;} else {float shadow=TEXTUREFUNC(shadowSampler,uvDepth,0.);shadow=mix(darkness,1.,shadow);return computeFallOff(shadow,clipSpace.xy,frustumEdgeFalloff);}}\n#define inline\nfloat computeShadowWithPCF3(vec4 vPositionFromLight,float depthMetric,highp sampler2DShadow shadowSampler,vec2 shadowMapSizeAndInverse,float darkness,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec3 uvDepth=vec3(0.5*clipSpace.xyz+vec3(0.5));uvDepth.z=ZINCLIP;if (depthMetric<0.0 || depthMetric>1.0 || uvDepth.x<0. || uvDepth.x>1.0 || uvDepth.y<0. || uvDepth.y>1.0) {return 1.0;} else {vec2 uv=uvDepth.xy*shadowMapSizeAndInverse.x; \nuv+=0.5; \nvec2 st=fract(uv); \nvec2 base_uv=floor(uv)-0.5; \nbase_uv*=shadowMapSizeAndInverse.y; \nvec2 uvw0=3.-2.*st;vec2 uvw1=1.+2.*st;vec2 u=vec2((2.-st.x)/uvw0.x-1.,st.x/uvw1.x+1.)*shadowMapSizeAndInverse.y;vec2 v=vec2((2.-st.y)/uvw0.y-1.,st.y/uvw1.y+1.)*shadowMapSizeAndInverse.y;float shadow=0.;shadow+=uvw0.x*uvw0.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[0],v[0]),uvDepth.z),0.);shadow+=uvw1.x*uvw0.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[1],v[0]),uvDepth.z),0.);shadow+=uvw0.x*uvw1.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[0],v[1]),uvDepth.z),0.);shadow+=uvw1.x*uvw1.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[1],v[1]),uvDepth.z),0.);shadow=shadow/16.;shadow=mix(darkness,1.,shadow);return computeFallOff(shadow,clipSpace.xy,frustumEdgeFalloff);}}\n#define inline\nfloat computeShadowWithPCF5(vec4 vPositionFromLight,float depthMetric,highp sampler2DShadow shadowSampler,vec2 shadowMapSizeAndInverse,float darkness,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec3 uvDepth=vec3(0.5*clipSpace.xyz+vec3(0.5));uvDepth.z=ZINCLIP;if (depthMetric<0.0 || depthMetric>1.0 || uvDepth.x<0. || uvDepth.x>1.0 || uvDepth.y<0. || uvDepth.y>1.0) {return 1.0;} else {vec2 uv=uvDepth.xy*shadowMapSizeAndInverse.x; \nuv+=0.5; \nvec2 st=fract(uv); \nvec2 base_uv=floor(uv)-0.5; \nbase_uv*=shadowMapSizeAndInverse.y; \nvec2 uvw0=4.-3.*st;vec2 uvw1=vec2(7.);vec2 uvw2=1.+3.*st;vec3 u=vec3((3.-2.*st.x)/uvw0.x-2.,(3.+st.x)/uvw1.x,st.x/uvw2.x+2.)*shadowMapSizeAndInverse.y;vec3 v=vec3((3.-2.*st.y)/uvw0.y-2.,(3.+st.y)/uvw1.y,st.y/uvw2.y+2.)*shadowMapSizeAndInverse.y;float shadow=0.;shadow+=uvw0.x*uvw0.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[0],v[0]),uvDepth.z),0.);shadow+=uvw1.x*uvw0.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[1],v[0]),uvDepth.z),0.);shadow+=uvw2.x*uvw0.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[2],v[0]),uvDepth.z),0.);shadow+=uvw0.x*uvw1.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[0],v[1]),uvDepth.z),0.);shadow+=uvw1.x*uvw1.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[1],v[1]),uvDepth.z),0.);shadow+=uvw2.x*uvw1.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[2],v[1]),uvDepth.z),0.);shadow+=uvw0.x*uvw2.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[0],v[2]),uvDepth.z),0.);shadow+=uvw1.x*uvw2.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[1],v[2]),uvDepth.z),0.);shadow+=uvw2.x*uvw2.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[2],v[2]),uvDepth.z),0.);shadow=shadow/144.;shadow=mix(darkness,1.,shadow);return computeFallOff(shadow,clipSpace.xy,frustumEdgeFalloff);}}\nconst vec3 PoissonSamplers32[64]=vec3[64](\nvec3(0.06407013,0.05409927,0.),\nvec3(0.7366577,0.5789394,0.),\nvec3(-0.6270542,-0.5320278,0.),\nvec3(-0.4096107,0.8411095,0.),\nvec3(0.6849564,-0.4990818,0.),\nvec3(-0.874181,-0.04579735,0.),\nvec3(0.9989998,0.0009880066,0.),\nvec3(-0.004920578,-0.9151649,0.),\nvec3(0.1805763,0.9747483,0.),\nvec3(-0.2138451,0.2635818,0.),\nvec3(0.109845,0.3884785,0.),\nvec3(0.06876755,-0.3581074,0.),\nvec3(0.374073,-0.7661266,0.),\nvec3(0.3079132,-0.1216763,0.),\nvec3(-0.3794335,-0.8271583,0.),\nvec3(-0.203878,-0.07715034,0.),\nvec3(0.5912697,0.1469799,0.),\nvec3(-0.88069,0.3031784,0.),\nvec3(0.5040108,0.8283722,0.),\nvec3(-0.5844124,0.5494877,0.),\nvec3(0.6017799,-0.1726654,0.),\nvec3(-0.5554981,0.1559997,0.),\nvec3(-0.3016369,-0.3900928,0.),\nvec3(-0.5550632,-0.1723762,0.),\nvec3(0.925029,0.2995041,0.),\nvec3(-0.2473137,0.5538505,0.),\nvec3(0.9183037,-0.2862392,0.),\nvec3(0.2469421,0.6718712,0.),\nvec3(0.3916397,-0.4328209,0.),\nvec3(-0.03576927,-0.6220032,0.),\nvec3(-0.04661255,0.7995201,0.),\nvec3(0.4402924,0.3640312,0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.)\n);const vec3 PoissonSamplers64[64]=vec3[64](\nvec3(-0.613392,0.617481,0.),\nvec3(0.170019,-0.040254,0.),\nvec3(-0.299417,0.791925,0.),\nvec3(0.645680,0.493210,0.),\nvec3(-0.651784,0.717887,0.),\nvec3(0.421003,0.027070,0.),\nvec3(-0.817194,-0.271096,0.),\nvec3(-0.705374,-0.668203,0.),\nvec3(0.977050,-0.108615,0.),\nvec3(0.063326,0.142369,0.),\nvec3(0.203528,0.214331,0.),\nvec3(-0.667531,0.326090,0.),\nvec3(-0.098422,-0.295755,0.),\nvec3(-0.885922,0.215369,0.),\nvec3(0.566637,0.605213,0.),\nvec3(0.039766,-0.396100,0.),\nvec3(0.751946,0.453352,0.),\nvec3(0.078707,-0.715323,0.),\nvec3(-0.075838,-0.529344,0.),\nvec3(0.724479,-0.580798,0.),\nvec3(0.222999,-0.215125,0.),\nvec3(-0.467574,-0.405438,0.),\nvec3(-0.248268,-0.814753,0.),\nvec3(0.354411,-0.887570,0.),\nvec3(0.175817,0.382366,0.),\nvec3(0.487472,-0.063082,0.),\nvec3(-0.084078,0.898312,0.),\nvec3(0.488876,-0.783441,0.),\nvec3(0.470016,0.217933,0.),\nvec3(-0.696890,-0.549791,0.),\nvec3(-0.149693,0.605762,0.),\nvec3(0.034211,0.979980,0.),\nvec3(0.503098,-0.308878,0.),\nvec3(-0.016205,-0.872921,0.),\nvec3(0.385784,-0.393902,0.),\nvec3(-0.146886,-0.859249,0.),\nvec3(0.643361,0.164098,0.),\nvec3(0.634388,-0.049471,0.),\nvec3(-0.688894,0.007843,0.),\nvec3(0.464034,-0.188818,0.),\nvec3(-0.440840,0.137486,0.),\nvec3(0.364483,0.511704,0.),\nvec3(0.034028,0.325968,0.),\nvec3(0.099094,-0.308023,0.),\nvec3(0.693960,-0.366253,0.),\nvec3(0.678884,-0.204688,0.),\nvec3(0.001801,0.780328,0.),\nvec3(0.145177,-0.898984,0.),\nvec3(0.062655,-0.611866,0.),\nvec3(0.315226,-0.604297,0.),\nvec3(-0.780145,0.486251,0.),\nvec3(-0.371868,0.882138,0.),\nvec3(0.200476,0.494430,0.),\nvec3(-0.494552,-0.711051,0.),\nvec3(0.612476,0.705252,0.),\nvec3(-0.578845,-0.768792,0.),\nvec3(-0.772454,-0.090976,0.),\nvec3(0.504440,0.372295,0.),\nvec3(0.155736,0.065157,0.),\nvec3(0.391522,0.849605,0.),\nvec3(-0.620106,-0.328104,0.),\nvec3(0.789239,-0.419965,0.),\nvec3(-0.545396,0.538133,0.),\nvec3(-0.178564,-0.596057,0.)\n);\n#define inline\nfloat computeShadowWithCSMPCSS(float layer,vec4 vPositionFromLight,float depthMetric,highp sampler2DArray depthSampler,highp sampler2DArrayShadow shadowSampler,float shadowMapSizeInverse,float lightSizeUV,float darkness,float frustumEdgeFalloff,int searchTapCount,int pcfTapCount,vec3[64] poissonSamplers,vec2 lightSizeUVCorrection,float depthCorrection,float penumbraDarkness)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec3 uvDepth=vec3(0.5*clipSpace.xyz+vec3(0.5));\n#ifdef USE_REVERSE_DEPTHBUFFER\nuvDepth.z=clamp(ZINCLIP,SMALLEST_ABOVE_ZERO,1.);\n#else\nuvDepth.z=clamp(ZINCLIP,0.,GREATEST_LESS_THAN_ONE);\n#endif\nvec4 uvDepthLayer=vec4(uvDepth.x,uvDepth.y,layer,uvDepth.z);float blockerDepth=0.0;float sumBlockerDepth=0.0;float numBlocker=0.0;for (int i=0; i<searchTapCount; i ++) {blockerDepth=texture2D(depthSampler,vec3(uvDepth.xy+(lightSizeUV*lightSizeUVCorrection*shadowMapSizeInverse*PoissonSamplers32[i].xy),layer)).r;if (blockerDepth<depthMetric) {sumBlockerDepth+=blockerDepth;numBlocker++;}}\nfloat avgBlockerDepth=sumBlockerDepth/numBlocker;float AAOffset=shadowMapSizeInverse*10.;float penumbraRatio=((depthMetric-avgBlockerDepth)*depthCorrection+AAOffset);vec4 filterRadius=vec4(penumbraRatio*lightSizeUV*lightSizeUVCorrection*shadowMapSizeInverse,0.,0.);float random=getRand(vPositionFromLight.xy);float rotationAngle=random*3.1415926;vec2 rotationVector=vec2(cos(rotationAngle),sin(rotationAngle));float shadow=0.;for (int i=0; i<pcfTapCount; i++) {vec4 offset=vec4(poissonSamplers[i],0.);offset=vec4(offset.x*rotationVector.x-offset.y*rotationVector.y,offset.y*rotationVector.x+offset.x*rotationVector.y,0.,0.);shadow+=texture2D(shadowSampler,uvDepthLayer+offset*filterRadius);}\nshadow/=float(pcfTapCount);shadow=mix(shadow,1.,min((depthMetric-avgBlockerDepth)*depthCorrection*penumbraDarkness,1.));shadow=mix(darkness,1.,shadow);if (numBlocker<1.0) {return 1.0;}\nelse\n{return computeFallOff(shadow,clipSpace.xy,frustumEdgeFalloff);}}\n#define inline\nfloat computeShadowWithPCSS(vec4 vPositionFromLight,float depthMetric,sampler2D depthSampler,highp sampler2DShadow shadowSampler,float shadowMapSizeInverse,float lightSizeUV,float darkness,float frustumEdgeFalloff,int searchTapCount,int pcfTapCount,vec3[64] poissonSamplers)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec3 uvDepth=vec3(0.5*clipSpace.xyz+vec3(0.5));uvDepth.z=ZINCLIP;if (depthMetric<0.0 || depthMetric>1.0 || uvDepth.x<0. || uvDepth.x>1.0 || uvDepth.y<0. || uvDepth.y>1.0) {return 1.0;} else {float blockerDepth=0.0;float sumBlockerDepth=0.0;float numBlocker=0.0;for (int i=0; i<searchTapCount; i ++) {blockerDepth=TEXTUREFUNC(depthSampler,uvDepth.xy+(lightSizeUV*shadowMapSizeInverse*PoissonSamplers32[i].xy),0.).r;if (blockerDepth<depthMetric) {sumBlockerDepth+=blockerDepth;numBlocker++;}}\nif (numBlocker<1.0) {return 1.0;}\nelse\n{float avgBlockerDepth=sumBlockerDepth/numBlocker;float AAOffset=shadowMapSizeInverse*10.;float penumbraRatio=((depthMetric-avgBlockerDepth)+AAOffset);float filterRadius=penumbraRatio*lightSizeUV*shadowMapSizeInverse;float random=getRand(vPositionFromLight.xy);float rotationAngle=random*3.1415926;vec2 rotationVector=vec2(cos(rotationAngle),sin(rotationAngle));float shadow=0.;for (int i=0; i<pcfTapCount; i++) {vec3 offset=poissonSamplers[i];offset=vec3(offset.x*rotationVector.x-offset.y*rotationVector.y,offset.y*rotationVector.x+offset.x*rotationVector.y,0.);shadow+=TEXTUREFUNC(shadowSampler,uvDepth+offset*filterRadius,0.);}\nshadow/=float(pcfTapCount);shadow=mix(shadow,1.,depthMetric-avgBlockerDepth);shadow=mix(darkness,1.,shadow);return computeFallOff(shadow,clipSpace.xy,frustumEdgeFalloff);}}}\n#define inline\nfloat computeShadowWithPCSS16(vec4 vPositionFromLight,float depthMetric,sampler2D depthSampler,highp sampler2DShadow shadowSampler,float shadowMapSizeInverse,float lightSizeUV,float darkness,float frustumEdgeFalloff)\n{return computeShadowWithPCSS(vPositionFromLight,depthMetric,depthSampler,shadowSampler,shadowMapSizeInverse,lightSizeUV,darkness,frustumEdgeFalloff,16,16,PoissonSamplers32);}\n#define inline\nfloat computeShadowWithPCSS32(vec4 vPositionFromLight,float depthMetric,sampler2D depthSampler,highp sampler2DShadow shadowSampler,float shadowMapSizeInverse,float lightSizeUV,float darkness,float frustumEdgeFalloff)\n{return computeShadowWithPCSS(vPositionFromLight,depthMetric,depthSampler,shadowSampler,shadowMapSizeInverse,lightSizeUV,darkness,frustumEdgeFalloff,16,32,PoissonSamplers32);}\n#define inline\nfloat computeShadowWithPCSS64(vec4 vPositionFromLight,float depthMetric,sampler2D depthSampler,highp sampler2DShadow shadowSampler,float shadowMapSizeInverse,float lightSizeUV,float darkness,float frustumEdgeFalloff)\n{return computeShadowWithPCSS(vPositionFromLight,depthMetric,depthSampler,shadowSampler,shadowMapSizeInverse,lightSizeUV,darkness,frustumEdgeFalloff,32,64,PoissonSamplers64);}\n#define inline\nfloat computeShadowWithCSMPCSS16(float layer,vec4 vPositionFromLight,float depthMetric,highp sampler2DArray depthSampler,highp sampler2DArrayShadow shadowSampler,float shadowMapSizeInverse,float lightSizeUV,float darkness,float frustumEdgeFalloff,vec2 lightSizeUVCorrection,float depthCorrection,float penumbraDarkness)\n{return computeShadowWithCSMPCSS(layer,vPositionFromLight,depthMetric,depthSampler,shadowSampler,shadowMapSizeInverse,lightSizeUV,darkness,frustumEdgeFalloff,16,16,PoissonSamplers32,lightSizeUVCorrection,depthCorrection,penumbraDarkness);}\n#define inline\nfloat computeShadowWithCSMPCSS32(float layer,vec4 vPositionFromLight,float depthMetric,highp sampler2DArray depthSampler,highp sampler2DArrayShadow shadowSampler,float shadowMapSizeInverse,float lightSizeUV,float darkness,float frustumEdgeFalloff,vec2 lightSizeUVCorrection,float depthCorrection,float penumbraDarkness)\n{return computeShadowWithCSMPCSS(layer,vPositionFromLight,depthMetric,depthSampler,shadowSampler,shadowMapSizeInverse,lightSizeUV,darkness,frustumEdgeFalloff,16,32,PoissonSamplers32,lightSizeUVCorrection,depthCorrection,penumbraDarkness);}\n#define inline\nfloat computeShadowWithCSMPCSS64(float layer,vec4 vPositionFromLight,float depthMetric,highp sampler2DArray depthSampler,highp sampler2DArrayShadow shadowSampler,float shadowMapSizeInverse,float lightSizeUV,float darkness,float frustumEdgeFalloff,vec2 lightSizeUVCorrection,float depthCorrection,float penumbraDarkness)\n{return computeShadowWithCSMPCSS(layer,vPositionFromLight,depthMetric,depthSampler,shadowSampler,shadowMapSizeInverse,lightSizeUV,darkness,frustumEdgeFalloff,32,64,PoissonSamplers64,lightSizeUVCorrection,depthCorrection,penumbraDarkness);}\n#endif\n#endif\n";
--    ⟦2-char-id⟧.b.IncludesShadersStore[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStore[⟦2-char-id⟧] = ⟦2-char-id⟧);
++    const ⟦2-char-id⟧ = "shadowsFragmentFunctions",
++      ⟦2-char-id⟧ = "#ifdef SHADOWS\n#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\n#define TEXTUREFUNC(s,c,l) texture2DLodEXT(s,c,l)\n#else\n#define TEXTUREFUNC(s,c,b) texture2D(s,c,b)\n#endif\n#ifndef SHADOWFLOAT\nfloat unpack(vec4 color)\n{const vec4 bit_shift=vec4(1.0/(255.0*255.0*255.0),1.0/(255.0*255.0),1.0/255.0,1.0);return dot(color,bit_shift);}\n#endif\nfloat computeFallOff(float value,vec2 clipSpace,float frustumEdgeFalloff)\n{float mask=smoothstep(1.0-frustumEdgeFalloff,1.00000012,clamp(dot(clipSpace,clipSpace),0.,1.));return mix(value,1.0,mask);}\n#define inline\nfloat computeShadowCube(vec3 worldPos,vec3 lightPosition,samplerCube shadowSampler,float darkness,vec2 depthValues)\n{vec3 directionToLight=worldPos-lightPosition;float depth=length(directionToLight);depth=(depth+depthValues.x)/(depthValues.y);depth=clamp(depth,0.,1.0);directionToLight=normalize(directionToLight);directionToLight.y=-directionToLight.y;\n#ifndef SHADOWFLOAT\nfloat shadow=unpack(textureCube(shadowSampler,directionToLight));\n#else\nfloat shadow=textureCube(shadowSampler,directionToLight).x;\n#endif\nreturn depth>shadow ? darkness : 1.0;}\n#define inline\nfloat computeShadowWithPoissonSamplingCube(vec3 worldPos,vec3 lightPosition,samplerCube shadowSampler,float mapSize,float darkness,vec2 depthValues)\n{vec3 directionToLight=worldPos-lightPosition;float depth=length(directionToLight);depth=(depth+depthValues.x)/(depthValues.y);depth=clamp(depth,0.,1.0);directionToLight=normalize(directionToLight);directionToLight.y=-directionToLight.y;float visibility=1.;vec3 poissonDisk[4];poissonDisk[0]=vec3(-1.0,1.0,-1.0);poissonDisk[1]=vec3(1.0,-1.0,-1.0);poissonDisk[2]=vec3(-1.0,-1.0,-1.0);poissonDisk[3]=vec3(1.0,-1.0,1.0);\n#ifndef SHADOWFLOAT\nif (unpack(textureCube(shadowSampler,directionToLight+poissonDisk[0]*mapSize))<depth) visibility-=0.25;if (unpack(textureCube(shadowSampler,directionToLight+poissonDisk[1]*mapSize))<depth) visibility-=0.25;if (unpack(textureCube(shadowSampler,directionToLight+poissonDisk[2]*mapSize))<depth) visibility-=0.25;if (unpack(textureCube(shadowSampler,directionToLight+poissonDisk[3]*mapSize))<depth) visibility-=0.25;\n#else\nif (textureCube(shadowSampler,directionToLight+poissonDisk[0]*mapSize).x<depth) visibility-=0.25;if (textureCube(shadowSampler,directionToLight+poissonDisk[1]*mapSize).x<depth) visibility-=0.25;if (textureCube(shadowSampler,directionToLight+poissonDisk[2]*mapSize).x<depth) visibility-=0.25;if (textureCube(shadowSampler,directionToLight+poissonDisk[3]*mapSize).x<depth) visibility-=0.25;\n#endif\nreturn min(1.0,visibility+darkness);}\n#define inline\nfloat computeShadowWithESMCube(vec3 worldPos,vec3 lightPosition,samplerCube shadowSampler,float darkness,float depthScale,vec2 depthValues)\n{vec3 directionToLight=worldPos-lightPosition;float depth=length(directionToLight);depth=(depth+depthValues.x)/(depthValues.y);float shadowPixelDepth=clamp(depth,0.,1.0);directionToLight=normalize(directionToLight);directionToLight.y=-directionToLight.y;\n#ifndef SHADOWFLOAT\nfloat shadowMapSample=unpack(textureCube(shadowSampler,directionToLight));\n#else\nfloat shadowMapSample=textureCube(shadowSampler,directionToLight).x;\n#endif\nfloat esm=1.0-clamp(exp(min(87.,depthScale*shadowPixelDepth))*shadowMapSample,0.,1.-darkness);return esm;}\n#define inline\nfloat computeShadowWithCloseESMCube(vec3 worldPos,vec3 lightPosition,samplerCube shadowSampler,float darkness,float depthScale,vec2 depthValues)\n{vec3 directionToLight=worldPos-lightPosition;float depth=length(directionToLight);depth=(depth+depthValues.x)/(depthValues.y);float shadowPixelDepth=clamp(depth,0.,1.0);directionToLight=normalize(directionToLight);directionToLight.y=-directionToLight.y;\n#ifndef SHADOWFLOAT\nfloat shadowMapSample=unpack(textureCube(shadowSampler,directionToLight));\n#else\nfloat shadowMapSample=textureCube(shadowSampler,directionToLight).x;\n#endif\nfloat esm=clamp(exp(min(87.,-depthScale*(shadowPixelDepth-shadowMapSample))),darkness,1.);return esm;}\n#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\n#define inline\nfloat computeShadowCSM(float layer,vec4 vPositionFromLight,float depthMetric,highp sampler2DArray shadowSampler,float darkness,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec2 uv=0.5*clipSpace.xy+vec2(0.5);vec3 uvLayer=vec3(uv.x,uv.y,layer);float shadowPixelDepth=clamp(depthMetric,0.,1.0);\n#ifndef SHADOWFLOAT\nfloat shadow=unpack(texture2D(shadowSampler,uvLayer));\n#else\nfloat shadow=texture2D(shadowSampler,uvLayer).x;\n#endif\nreturn shadowPixelDepth>shadow ? computeFallOff(darkness,clipSpace.xy,frustumEdgeFalloff) : 1.;}\n#endif\n#define inline\nfloat computeShadow(vec4 vPositionFromLight,float depthMetric,sampler2D shadowSampler,float darkness,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec2 uv=0.5*clipSpace.xy+vec2(0.5);if (uv.x<0. || uv.x>1.0 || uv.y<0. || uv.y>1.0)\n{return 1.0;}\nelse\n{float shadowPixelDepth=clamp(depthMetric,0.,1.0);\n#ifndef SHADOWFLOAT\nfloat shadow=unpack(TEXTUREFUNC(shadowSampler,uv,0.));\n#else\nfloat shadow=TEXTUREFUNC(shadowSampler,uv,0.).x;\n#endif\nreturn shadowPixelDepth>shadow ? computeFallOff(darkness,clipSpace.xy,frustumEdgeFalloff) : 1.;}}\n#define inline\nfloat computeShadowWithPoissonSampling(vec4 vPositionFromLight,float depthMetric,sampler2D shadowSampler,float mapSize,float darkness,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec2 uv=0.5*clipSpace.xy+vec2(0.5);if (uv.x<0. || uv.x>1.0 || uv.y<0. || uv.y>1.0)\n{return 1.0;}\nelse\n{float shadowPixelDepth=clamp(depthMetric,0.,1.0);float visibility=1.;vec2 poissonDisk[4];poissonDisk[0]=vec2(-0.94201624,-0.39906216);poissonDisk[1]=vec2(0.94558609,-0.76890725);poissonDisk[2]=vec2(-0.094184101,-0.92938870);poissonDisk[3]=vec2(0.34495938,0.29387760);\n#ifndef SHADOWFLOAT\nif (unpack(TEXTUREFUNC(shadowSampler,uv+poissonDisk[0]*mapSize,0.))<shadowPixelDepth) visibility-=0.25;if (unpack(TEXTUREFUNC(shadowSampler,uv+poissonDisk[1]*mapSize,0.))<shadowPixelDepth) visibility-=0.25;if (unpack(TEXTUREFUNC(shadowSampler,uv+poissonDisk[2]*mapSize,0.))<shadowPixelDepth) visibility-=0.25;if (unpack(TEXTUREFUNC(shadowSampler,uv+poissonDisk[3]*mapSize,0.))<shadowPixelDepth) visibility-=0.25;\n#else\nif (TEXTUREFUNC(shadowSampler,uv+poissonDisk[0]*mapSize,0.).x<shadowPixelDepth) visibility-=0.25;if (TEXTUREFUNC(shadowSampler,uv+poissonDisk[1]*mapSize,0.).x<shadowPixelDepth) visibility-=0.25;if (TEXTUREFUNC(shadowSampler,uv+poissonDisk[2]*mapSize,0.).x<shadowPixelDepth) visibility-=0.25;if (TEXTUREFUNC(shadowSampler,uv+poissonDisk[3]*mapSize,0.).x<shadowPixelDepth) visibility-=0.25;\n#endif\nreturn computeFallOff(min(1.0,visibility+darkness),clipSpace.xy,frustumEdgeFalloff);}}\n#define inline\nfloat computeShadowWithESM(vec4 vPositionFromLight,float depthMetric,sampler2D shadowSampler,float darkness,float depthScale,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec2 uv=0.5*clipSpace.xy+vec2(0.5);if (uv.x<0. || uv.x>1.0 || uv.y<0. || uv.y>1.0)\n{return 1.0;}\nelse\n{float shadowPixelDepth=clamp(depthMetric,0.,1.0);\n#ifndef SHADOWFLOAT\nfloat shadowMapSample=unpack(TEXTUREFUNC(shadowSampler,uv,0.));\n#else\nfloat shadowMapSample=TEXTUREFUNC(shadowSampler,uv,0.).x;\n#endif\nfloat esm=1.0-clamp(exp(min(87.,depthScale*shadowPixelDepth))*shadowMapSample,0.,1.-darkness);return computeFallOff(esm,clipSpace.xy,frustumEdgeFalloff);}}\n#define inline\nfloat computeShadowWithCloseESM(vec4 vPositionFromLight,float depthMetric,sampler2D shadowSampler,float darkness,float depthScale,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec2 uv=0.5*clipSpace.xy+vec2(0.5);if (uv.x<0. || uv.x>1.0 || uv.y<0. || uv.y>1.0)\n{return 1.0;}\nelse\n{float shadowPixelDepth=clamp(depthMetric,0.,1.0); \n#ifndef SHADOWFLOAT\nfloat shadowMapSample=unpack(TEXTUREFUNC(shadowSampler,uv,0.));\n#else\nfloat shadowMapSample=TEXTUREFUNC(shadowSampler,uv,0.).x;\n#endif\nfloat esm=clamp(exp(min(87.,-depthScale*(shadowPixelDepth-shadowMapSample))),darkness,1.);return computeFallOff(esm,clipSpace.xy,frustumEdgeFalloff);}}\n#ifdef IS_NDC_HALF_ZRANGE\n#define ZINCLIP clipSpace.z\n#else\n#define ZINCLIP uvDepth.z\n#endif\n#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\n#define SMALLEST_ABOVE_ZERO 1.1754943508e-38\n#define GREATEST_LESS_THAN_ONE 0.99999994\n#define DISABLE_UNIFORMITY_ANALYSIS\n#define inline\nfloat computeShadowWithCSMPCF1(float layer,vec4 vPositionFromLight,float depthMetric,highp sampler2DArrayShadow shadowSampler,float darkness,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec3 uvDepth=vec3(0.5*clipSpace.xyz+vec3(0.5));\n#ifdef USE_REVERSE_DEPTHBUFFER\nuvDepth.z=clamp(ZINCLIP,SMALLEST_ABOVE_ZERO,1.);\n#else\nuvDepth.z=clamp(ZINCLIP,0.,GREATEST_LESS_THAN_ONE);\n#endif\nvec4 uvDepthLayer=vec4(uvDepth.x,uvDepth.y,layer,uvDepth.z);float shadow=texture2D(shadowSampler,uvDepthLayer);shadow=mix(darkness,1.,shadow);return computeFallOff(shadow,clipSpace.xy,frustumEdgeFalloff);}\n#define inline\nfloat computeShadowWithCSMPCF3(float layer,vec4 vPositionFromLight,float depthMetric,highp sampler2DArrayShadow shadowSampler,vec2 shadowMapSizeAndInverse,float darkness,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec3 uvDepth=vec3(0.5*clipSpace.xyz+vec3(0.5));\n#ifdef USE_REVERSE_DEPTHBUFFER\nuvDepth.z=clamp(ZINCLIP,SMALLEST_ABOVE_ZERO,1.);\n#else\nuvDepth.z=clamp(ZINCLIP,0.,GREATEST_LESS_THAN_ONE);\n#endif\nvec2 uv=uvDepth.xy*shadowMapSizeAndInverse.x; \nuv+=0.5; \nvec2 st=fract(uv); \nvec2 base_uv=floor(uv)-0.5; \nbase_uv*=shadowMapSizeAndInverse.y; \nvec2 uvw0=3.-2.*st;vec2 uvw1=1.+2.*st;vec2 u=vec2((2.-st.x)/uvw0.x-1.,st.x/uvw1.x+1.)*shadowMapSizeAndInverse.y;vec2 v=vec2((2.-st.y)/uvw0.y-1.,st.y/uvw1.y+1.)*shadowMapSizeAndInverse.y;float shadow=0.;shadow+=uvw0.x*uvw0.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[0],v[0]),layer,uvDepth.z));shadow+=uvw1.x*uvw0.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[1],v[0]),layer,uvDepth.z));shadow+=uvw0.x*uvw1.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[0],v[1]),layer,uvDepth.z));shadow+=uvw1.x*uvw1.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[1],v[1]),layer,uvDepth.z));shadow=shadow/16.;shadow=mix(darkness,1.,shadow);return computeFallOff(shadow,clipSpace.xy,frustumEdgeFalloff);}\n#define inline\nfloat computeShadowWithCSMPCF5(float layer,vec4 vPositionFromLight,float depthMetric,highp sampler2DArrayShadow shadowSampler,vec2 shadowMapSizeAndInverse,float darkness,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec3 uvDepth=vec3(0.5*clipSpace.xyz+vec3(0.5));\n#ifdef USE_REVERSE_DEPTHBUFFER\nuvDepth.z=clamp(ZINCLIP,SMALLEST_ABOVE_ZERO,1.);\n#else\nuvDepth.z=clamp(ZINCLIP,0.,GREATEST_LESS_THAN_ONE);\n#endif\nvec2 uv=uvDepth.xy*shadowMapSizeAndInverse.x; \nuv+=0.5; \nvec2 st=fract(uv); \nvec2 base_uv=floor(uv)-0.5; \nbase_uv*=shadowMapSizeAndInverse.y; \nvec2 uvw0=4.-3.*st;vec2 uvw1=vec2(7.);vec2 uvw2=1.+3.*st;vec3 u=vec3((3.-2.*st.x)/uvw0.x-2.,(3.+st.x)/uvw1.x,st.x/uvw2.x+2.)*shadowMapSizeAndInverse.y;vec3 v=vec3((3.-2.*st.y)/uvw0.y-2.,(3.+st.y)/uvw1.y,st.y/uvw2.y+2.)*shadowMapSizeAndInverse.y;float shadow=0.;shadow+=uvw0.x*uvw0.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[0],v[0]),layer,uvDepth.z));shadow+=uvw1.x*uvw0.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[1],v[0]),layer,uvDepth.z));shadow+=uvw2.x*uvw0.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[2],v[0]),layer,uvDepth.z));shadow+=uvw0.x*uvw1.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[0],v[1]),layer,uvDepth.z));shadow+=uvw1.x*uvw1.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[1],v[1]),layer,uvDepth.z));shadow+=uvw2.x*uvw1.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[2],v[1]),layer,uvDepth.z));shadow+=uvw0.x*uvw2.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[0],v[2]),layer,uvDepth.z));shadow+=uvw1.x*uvw2.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[1],v[2]),layer,uvDepth.z));shadow+=uvw2.x*uvw2.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[2],v[2]),layer,uvDepth.z));shadow=shadow/144.;shadow=mix(darkness,1.,shadow);return computeFallOff(shadow,clipSpace.xy,frustumEdgeFalloff);}\n#define inline\nfloat computeShadowWithPCF1(vec4 vPositionFromLight,float depthMetric,highp sampler2DShadow shadowSampler,float darkness,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec3 uvDepth=vec3(0.5*clipSpace.xyz+vec3(0.5));uvDepth.z=ZINCLIP;if (depthMetric<0.0 || depthMetric>1.0 || uvDepth.x<0. || uvDepth.x>1.0 || uvDepth.y<0. || uvDepth.y>1.0) {return 1.0;} else {float shadow=TEXTUREFUNC(shadowSampler,uvDepth,0.);shadow=mix(darkness,1.,shadow);return computeFallOff(shadow,clipSpace.xy,frustumEdgeFalloff);}}\n#define inline\nfloat computeShadowWithPCF3(vec4 vPositionFromLight,float depthMetric,highp sampler2DShadow shadowSampler,vec2 shadowMapSizeAndInverse,float darkness,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec3 uvDepth=vec3(0.5*clipSpace.xyz+vec3(0.5));uvDepth.z=ZINCLIP;if (depthMetric<0.0 || depthMetric>1.0 || uvDepth.x<0. || uvDepth.x>1.0 || uvDepth.y<0. || uvDepth.y>1.0) {return 1.0;} else {vec2 uv=uvDepth.xy*shadowMapSizeAndInverse.x; \nuv+=0.5; \nvec2 st=fract(uv); \nvec2 base_uv=floor(uv)-0.5; \nbase_uv*=shadowMapSizeAndInverse.y; \nvec2 uvw0=3.-2.*st;vec2 uvw1=1.+2.*st;vec2 u=vec2((2.-st.x)/uvw0.x-1.,st.x/uvw1.x+1.)*shadowMapSizeAndInverse.y;vec2 v=vec2((2.-st.y)/uvw0.y-1.,st.y/uvw1.y+1.)*shadowMapSizeAndInverse.y;float shadow=0.;shadow+=uvw0.x*uvw0.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[0],v[0]),uvDepth.z),0.);shadow+=uvw1.x*uvw0.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[1],v[0]),uvDepth.z),0.);shadow+=uvw0.x*uvw1.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[0],v[1]),uvDepth.z),0.);shadow+=uvw1.x*uvw1.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[1],v[1]),uvDepth.z),0.);shadow=shadow/16.;shadow=mix(darkness,1.,shadow);return computeFallOff(shadow,clipSpace.xy,frustumEdgeFalloff);}}\n#define inline\nfloat computeShadowWithPCF5(vec4 vPositionFromLight,float depthMetric,highp sampler2DShadow shadowSampler,vec2 shadowMapSizeAndInverse,float darkness,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec3 uvDepth=vec3(0.5*clipSpace.xyz+vec3(0.5));uvDepth.z=ZINCLIP;if (depthMetric<0.0 || depthMetric>1.0 || uvDepth.x<0. || uvDepth.x>1.0 || uvDepth.y<0. || uvDepth.y>1.0) {return 1.0;} else {vec2 uv=uvDepth.xy*shadowMapSizeAndInverse.x; \nuv+=0.5; \nvec2 st=fract(uv); \nvec2 base_uv=floor(uv)-0.5; \nbase_uv*=shadowMapSizeAndInverse.y; \nvec2 uvw0=4.-3.*st;vec2 uvw1=vec2(7.);vec2 uvw2=1.+3.*st;vec3 u=vec3((3.-2.*st.x)/uvw0.x-2.,(3.+st.x)/uvw1.x,st.x/uvw2.x+2.)*shadowMapSizeAndInverse.y;vec3 v=vec3((3.-2.*st.y)/uvw0.y-2.,(3.+st.y)/uvw1.y,st.y/uvw2.y+2.)*shadowMapSizeAndInverse.y;float shadow=0.;shadow+=uvw0.x*uvw0.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[0],v[0]),uvDepth.z),0.);shadow+=uvw1.x*uvw0.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[1],v[0]),uvDepth.z),0.);shadow+=uvw2.x*uvw0.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[2],v[0]),uvDepth.z),0.);shadow+=uvw0.x*uvw1.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[0],v[1]),uvDepth.z),0.);shadow+=uvw1.x*uvw1.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[1],v[1]),uvDepth.z),0.);shadow+=uvw2.x*uvw1.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[2],v[1]),uvDepth.z),0.);shadow+=uvw0.x*uvw2.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[0],v[2]),uvDepth.z),0.);shadow+=uvw1.x*uvw2.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[1],v[2]),uvDepth.z),0.);shadow+=uvw2.x*uvw2.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[2],v[2]),uvDepth.z),0.);shadow=shadow/144.;shadow=mix(darkness,1.,shadow);return computeFallOff(shadow,clipSpace.xy,frustumEdgeFalloff);}}\nconst vec3 PoissonSamplers32[64]=vec3[64](\nvec3(0.06407013,0.05409927,0.),\nvec3(0.7366577,0.5789394,0.),\nvec3(-0.6270542,-0.5320278,0.),\nvec3(-0.4096107,0.8411095,0.),\nvec3(0.6849564,-0.4990818,0.),\nvec3(-0.874181,-0.04579735,0.),\nvec3(0.9989998,0.0009880066,0.),\nvec3(-0.004920578,-0.9151649,0.),\nvec3(0.1805763,0.9747483,0.),\nvec3(-0.2138451,0.2635818,0.),\nvec3(0.109845,0.3884785,0.),\nvec3(0.06876755,-0.3581074,0.),\nvec3(0.374073,-0.7661266,0.),\nvec3(0.3079132,-0.1216763,0.),\nvec3(-0.3794335,-0.8271583,0.),\nvec3(-0.203878,-0.07715034,0.),\nvec3(0.5912697,0.1469799,0.),\nvec3(-0.88069,0.3031784,0.),\nvec3(0.5040108,0.8283722,0.),\nvec3(-0.5844124,0.5494877,0.),\nvec3(0.6017799,-0.1726654,0.),\nvec3(-0.5554981,0.1559997,0.),\nvec3(-0.3016369,-0.3900928,0.),\nvec3(-0.5550632,-0.1723762,0.),\nvec3(0.925029,0.2995041,0.),\nvec3(-0.2473137,0.5538505,0.),\nvec3(0.9183037,-0.2862392,0.),\nvec3(0.2469421,0.6718712,0.),\nvec3(0.3916397,-0.4328209,0.),\nvec3(-0.03576927,-0.6220032,0.),\nvec3(-0.04661255,0.7995201,0.),\nvec3(0.4402924,0.3640312,0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.)\n);const vec3 PoissonSamplers64[64]=vec3[64](\nvec3(-0.613392,0.617481,0.),\nvec3(0.170019,-0.040254,0.),\nvec3(-0.299417,0.791925,0.),\nvec3(0.645680,0.493210,0.),\nvec3(-0.651784,0.717887,0.),\nvec3(0.421003,0.027070,0.),\nvec3(-0.817194,-0.271096,0.),\nvec3(-0.705374,-0.668203,0.),\nvec3(0.977050,-0.108615,0.),\nvec3(0.063326,0.142369,0.),\nvec3(0.203528,0.214331,0.),\nvec3(-0.667531,0.326090,0.),\nvec3(-0.098422,-0.295755,0.),\nvec3(-0.885922,0.215369,0.),\nvec3(0.566637,0.605213,0.),\nvec3(0.039766,-0.396100,0.),\nvec3(0.751946,0.453352,0.),\nvec3(0.078707,-0.715323,0.),\nvec3(-0.075838,-0.529344,0.),\nvec3(0.724479,-0.580798,0.),\nvec3(0.222999,-0.215125,0.),\nvec3(-0.467574,-0.405438,0.),\nvec3(-0.248268,-0.814753,0.),\nvec3(0.354411,-0.887570,0.),\nvec3(0.175817,0.382366,0.),\nvec3(0.487472,-0.063082,0.),\nvec3(-0.084078,0.898312,0.),\nvec3(0.488876,-0.783441,0.),\nvec3(0.470016,0.217933,0.),\nvec3(-0.696890,-0.549791,0.),\nvec3(-0.149693,0.605762,0.),\nvec3(0.034211,0.979980,0.),\nvec3(0.503098,-0.308878,0.),\nvec3(-0.016205,-0.872921,0.),\nvec3(0.385784,-0.393902,0.),\nvec3(-0.146886,-0.859249,0.),\nvec3(0.643361,0.164098,0.),\nvec3(0.634388,-0.049471,0.),\nvec3(-0.688894,0.007843,0.),\nvec3(0.464034,-0.188818,0.),\nvec3(-0.440840,0.137486,0.),\nvec3(0.364483,0.511704,0.),\nvec3(0.034028,0.325968,0.),\nvec3(0.099094,-0.308023,0.),\nvec3(0.693960,-0.366253,0.),\nvec3(0.678884,-0.204688,0.),\nvec3(0.001801,0.780328,0.),\nvec3(0.145177,-0.898984,0.),\nvec3(0.062655,-0.611866,0.),\nvec3(0.315226,-0.604297,0.),\nvec3(-0.780145,0.486251,0.),\nvec3(-0.371868,0.882138,0.),\nvec3(0.200476,0.494430,0.),\nvec3(-0.494552,-0.711051,0.),\nvec3(0.612476,0.705252,0.),\nvec3(-0.578845,-0.768792,0.),\nvec3(-0.772454,-0.090976,0.),\nvec3(0.504440,0.372295,0.),\nvec3(0.155736,0.065157,0.),\nvec3(0.391522,0.849605,0.),\nvec3(-0.620106,-0.328104,0.),\nvec3(0.789239,-0.419965,0.),\nvec3(-0.545396,0.538133,0.),\nvec3(-0.178564,-0.596057,0.)\n);\n#define inline\nfloat computeShadowWithCSMPCSS(float layer,vec4 vPositionFromLight,float depthMetric,highp sampler2DArray depthSampler,highp sampler2DArrayShadow shadowSampler,float shadowMapSizeInverse,float lightSizeUV,float darkness,float frustumEdgeFalloff,int searchTapCount,int pcfTapCount,vec3[64] poissonSamplers,vec2 lightSizeUVCorrection,float depthCorrection,float penumbraDarkness)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec3 uvDepth=vec3(0.5*clipSpace.xyz+vec3(0.5));\n#ifdef USE_REVERSE_DEPTHBUFFER\nuvDepth.z=clamp(ZINCLIP,SMALLEST_ABOVE_ZERO,1.);\n#else\nuvDepth.z=clamp(ZINCLIP,0.,GREATEST_LESS_THAN_ONE);\n#endif\nvec4 uvDepthLayer=vec4(uvDepth.x,uvDepth.y,layer,uvDepth.z);float blockerDepth=0.0;float sumBlockerDepth=0.0;float numBlocker=0.0;for (int i=0; i<searchTapCount; i ++) {blockerDepth=texture2D(depthSampler,vec3(uvDepth.xy+(lightSizeUV*lightSizeUVCorrection*shadowMapSizeInverse*PoissonSamplers32[i].xy),layer)).r;if (blockerDepth<depthMetric) {sumBlockerDepth+=blockerDepth;numBlocker++;}}\nfloat avgBlockerDepth=sumBlockerDepth/numBlocker;float AAOffset=shadowMapSizeInverse*10.;float penumbraRatio=((depthMetric-avgBlockerDepth)*depthCorrection+AAOffset);vec4 filterRadius=vec4(penumbraRatio*lightSizeUV*lightSizeUVCorrection*shadowMapSizeInverse,0.,0.);float random=getRand(vPositionFromLight.xy);float rotationAngle=random*3.1415926;vec2 rotationVector=vec2(cos(rotationAngle),sin(rotationAngle));float shadow=0.;for (int i=0; i<pcfTapCount; i++) {vec4 offset=vec4(poissonSamplers[i],0.);offset=vec4(offset.x*rotationVector.x-offset.y*rotationVector.y,offset.y*rotationVector.x+offset.x*rotationVector.y,0.,0.);shadow+=texture2D(shadowSampler,uvDepthLayer+offset*filterRadius);}\nshadow/=float(pcfTapCount);shadow=mix(shadow,1.,min((depthMetric-avgBlockerDepth)*depthCorrection*penumbraDarkness,1.));shadow=mix(darkness,1.,shadow);if (numBlocker<1.0) {return 1.0;}\nelse\n{return computeFallOff(shadow,clipSpace.xy,frustumEdgeFalloff);}}\n#define inline\nfloat computeShadowWithPCSS(vec4 vPositionFromLight,float depthMetric,sampler2D depthSampler,highp sampler2DShadow shadowSampler,float shadowMapSizeInverse,float lightSizeUV,float darkness,float frustumEdgeFalloff,int searchTapCount,int pcfTapCount,vec3[64] poissonSamplers)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec3 uvDepth=vec3(0.5*clipSpace.xyz+vec3(0.5));uvDepth.z=ZINCLIP;if (depthMetric<0.0 || depthMetric>1.0 || uvDepth.x<0. || uvDepth.x>1.0 || uvDepth.y<0. || uvDepth.y>1.0) {return 1.0;} else {float blockerDepth=0.0;float sumBlockerDepth=0.0;float numBlocker=0.0;for (int i=0; i<searchTapCount; i ++) {blockerDepth=TEXTUREFUNC(depthSampler,uvDepth.xy+(lightSizeUV*shadowMapSizeInverse*PoissonSamplers32[i].xy),0.).r;if (blockerDepth<depthMetric) {sumBlockerDepth+=blockerDepth;numBlocker++;}}\nif (numBlocker<1.0) {return 1.0;}\nelse\n{float avgBlockerDepth=sumBlockerDepth/numBlocker;float AAOffset=shadowMapSizeInverse*10.;float penumbraRatio=((depthMetric-avgBlockerDepth)+AAOffset);float filterRadius=penumbraRatio*lightSizeUV*shadowMapSizeInverse;float random=getRand(vPositionFromLight.xy);float rotationAngle=random*3.1415926;vec2 rotationVector=vec2(cos(rotationAngle),sin(rotationAngle));float shadow=0.;for (int i=0; i<pcfTapCount; i++) {vec3 offset=poissonSamplers[i];offset=vec3(offset.x*rotationVector.x-offset.y*rotationVector.y,offset.y*rotationVector.x+offset.x*rotationVector.y,0.);shadow+=TEXTUREFUNC(shadowSampler,uvDepth+offset*filterRadius,0.);}\nshadow/=float(pcfTapCount);shadow=mix(shadow,1.,depthMetric-avgBlockerDepth);shadow=mix(darkness,1.,shadow);return computeFallOff(shadow,clipSpace.xy,frustumEdgeFalloff);}}}\n#define inline\nfloat computeShadowWithPCSS16(vec4 vPositionFromLight,float depthMetric,sampler2D depthSampler,highp sampler2DShadow shadowSampler,float shadowMapSizeInverse,float lightSizeUV,float darkness,float frustumEdgeFalloff)\n{return computeShadowWithPCSS(vPositionFromLight,depthMetric,depthSampler,shadowSampler,shadowMapSizeInverse,lightSizeUV,darkness,frustumEdgeFalloff,16,16,PoissonSamplers32);}\n#define inline\nfloat computeShadowWithPCSS32(vec4 vPositionFromLight,float depthMetric,sampler2D depthSampler,highp sampler2DShadow shadowSampler,float shadowMapSizeInverse,float lightSizeUV,float darkness,float frustumEdgeFalloff)\n{return computeShadowWithPCSS(vPositionFromLight,depthMetric,depthSampler,shadowSampler,shadowMapSizeInverse,lightSizeUV,darkness,frustumEdgeFalloff,16,32,PoissonSamplers32);}\n#define inline\nfloat computeShadowWithPCSS64(vec4 vPositionFromLight,float depthMetric,sampler2D depthSampler,highp sampler2DShadow shadowSampler,float shadowMapSizeInverse,float lightSizeUV,float darkness,float frustumEdgeFalloff)\n{return computeShadowWithPCSS(vPositionFromLight,depthMetric,depthSampler,shadowSampler,shadowMapSizeInverse,lightSizeUV,darkness,frustumEdgeFalloff,32,64,PoissonSamplers64);}\n#define inline\nfloat computeShadowWithCSMPCSS16(float layer,vec4 vPositionFromLight,float depthMetric,highp sampler2DArray depthSampler,highp sampler2DArrayShadow shadowSampler,float shadowMapSizeInverse,float lightSizeUV,float darkness,float frustumEdgeFalloff,vec2 lightSizeUVCorrection,float depthCorrection,float penumbraDarkness)\n{return computeShadowWithCSMPCSS(layer,vPositionFromLight,depthMetric,depthSampler,shadowSampler,shadowMapSizeInverse,lightSizeUV,darkness,frustumEdgeFalloff,16,16,PoissonSamplers32,lightSizeUVCorrection,depthCorrection,penumbraDarkness);}\n#define inline\nfloat computeShadowWithCSMPCSS32(float layer,vec4 vPositionFromLight,float depthMetric,highp sampler2DArray depthSampler,highp sampler2DArrayShadow shadowSampler,float shadowMapSizeInverse,float lightSizeUV,float darkness,float frustumEdgeFalloff,vec2 lightSizeUVCorrection,float depthCorrection,float penumbraDarkness)\n{return computeShadowWithCSMPCSS(layer,vPositionFromLight,depthMetric,depthSampler,shadowSampler,shadowMapSizeInverse,lightSizeUV,darkness,frustumEdgeFalloff,16,32,PoissonSamplers32,lightSizeUVCorrection,depthCorrection,penumbraDarkness);}\n#define inline\nfloat computeShadowWithCSMPCSS64(float layer,vec4 vPositionFromLight,float depthMetric,highp sampler2DArray depthSampler,highp sampler2DArrayShadow shadowSampler,float shadowMapSizeInverse,float lightSizeUV,float darkness,float frustumEdgeFalloff,vec2 lightSizeUVCorrection,float depthCorrection,float penumbraDarkness)\n{return computeShadowWithCSMPCSS(layer,vPositionFromLight,depthMetric,depthSampler,shadowSampler,shadowMapSizeInverse,lightSizeUV,darkness,frustumEdgeFalloff,32,64,PoissonSamplers64,lightSizeUVCorrection,depthCorrection,penumbraDarkness);}\n#endif\n#endif\n";
 +    ⟦2-char-id⟧.e.IncludesShadersStore[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStore[⟦2-char-id⟧] = ⟦2-char-id⟧);
-     const ⟦2-char-id⟧ = {
-       name: ⟦2-char-id⟧,
-       shader: ⟦2-char-id⟧
-     }
-   },
--  40830: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40848: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
-     ⟦2-char-id⟧.d(⟦2-char-id⟧, {
--      c: () => ⟦2-char-id⟧
++    const ⟦2-char-id⟧ = {
++      name: ⟦2-char-id⟧,
++      shader: ⟦2-char-id⟧
++    }
++  },
++  40848: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      d: () => ⟦2-char-id⟧
-     });
--    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
++    });
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
      const ⟦2-char-id⟧ = "textureRepetitionFunctions",
        ⟦2-char-id⟧ = "#if TEXTURE_REPETITION_MODE>0\nvec4 _texRepHash4(vec2 p) {return fract(sin(vec4(\n1.0+dot(p,vec2(37.0,17.0)),\n2.0+dot(p,vec2(11.0,47.0)),\n3.0+dot(p,vec2(41.0,29.0)),\n4.0+dot(p,vec2(23.0,31.0))\n))*103.0);}\n#endif\n#if TEXTURE_REPETITION_MODE==1\nvec4 _texRepSample(sampler2D samp,vec2 uv) {float k=texture2D(samp,0.005*uv).x;float index=k*8.0;float f=fract(index);float i=floor(index+0.5);float ib=floor(index);f=min(f,1.0-f)*2.0;vec2 offa=sin(vec2(3.0,7.0)*i);vec2 offb=sin(vec2(3.0,7.0)*ib);vec2 dx=dFdx(uv);vec2 dy=dFdy(uv);vec4 cola=textureGrad(samp,uv+0.3*offa,dx,dy);vec4 colb=textureGrad(samp,uv+0.3*offb,dx,dy);float colSum=cola.x+cola.y+cola.z-colb.x-colb.y-colb.z;return mix(cola,colb,smoothstep(0.2,0.8,f-0.1*colSum));}\n#elif TEXTURE_REPETITION_MODE==2\n#ifndef TEXTURE_REPETITION_M_PI\n#define TEXTURE_REPETITION_M_PI 3.14159265358979\n#endif\nvec2 _texRepHexHash(vec2 p) {vec2 r=mat2(127.1,269.5,311.7,183.3)*p;return fract(sin(r)*43758.5453);}\nvoid _texRepTriangleGrid(\nout float w1,out float w2,out float w3,\nout ivec2 vertex1,out ivec2 vertex2,out ivec2 vertex3,\nvec2 st\n) {st*=2.0*sqrt(3.0);mat2 gridToSkewedGrid=mat2(1.0,0.0,-0.57735027,1.15470054);vec2 skewedCoord=gridToSkewedGrid*st;ivec2 baseId=ivec2(floor(skewedCoord));vec3 temp=vec3(fract(skewedCoord),0.0);temp.z=1.0-temp.x-temp.y;float s=step(0.0,-temp.z);float s2=2.0*s-1.0;w1=-temp.z*s2;w2=s-temp.y*s2;w3=s-temp.x*s2;vertex1=baseId+ivec2(int(s),int(s));vertex2=baseId+ivec2(int(s),int(1.0-s));vertex3=baseId+ivec2(int(1.0-s),int(s));}\nvec2 _texRepMakeCenST(ivec2 Vertex) {mat2 invSkewMat=mat2(1.0,0.0,0.5,1.0/1.15470054);return (invSkewMat*vec2(Vertex))/(2.0*sqrt(3.0));}\nmat2 _texRepLoadRot2x2(ivec2 idx,float rotStr) {float angle=float(abs(idx.x*idx.y)+abs(idx.x+idx.y))+TEXTURE_REPETITION_M_PI;angle=mod(angle,2.0*TEXTURE_REPETITION_M_PI);if (angle<0.0) angle+=2.0*TEXTURE_REPETITION_M_PI;if (angle>TEXTURE_REPETITION_M_PI) angle-=TEXTURE_REPETITION_M_PI;angle*=rotStr;float cs=cos(angle);float si=sin(angle);return mat2(cs,si,-si,cs);}\nvec3 _texRepGain3(vec3 x,float r) {float k=log(1.0-r)/log(0.5);vec3 s=2.0*step(0.5,x);vec3 m=2.0*(1.0-s);vec3 res=0.5*s+0.25*m*pow(max(vec3(0.0),s+x*m),vec3(k));return res/(res.x+res.y+res.z);}\nvec4 _texRepSample(sampler2D samp,vec2 uv) {float rotStrength=vTextureRepetitionHexTilingParams.x;float fallOffContrast=vTextureRepetitionHexTilingParams.y;float expVal=vTextureRepetitionHexTilingParams.z;float r=vTextureRepetitionHexTilingParams.w;vec2 dSTdx=dFdx(uv);vec2 dSTdy=dFdy(uv);float w1,w2,w3;ivec2 vertex1,vertex2,vertex3;_texRepTriangleGrid(w1,w2,w3,vertex1,vertex2,vertex3,uv);mat2 rot1=_texRepLoadRot2x2(vertex1,rotStrength);mat2 rot2=_texRepLoadRot2x2(vertex2,rotStrength);mat2 rot3=_texRepLoadRot2x2(vertex3,rotStrength);vec2 cen1=_texRepMakeCenST(vertex1);vec2 cen2=_texRepMakeCenST(vertex2);vec2 cen3=_texRepMakeCenST(vertex3);vec2 st1=(uv-cen1)*rot1+cen1+_texRepHexHash(vec2(vertex1));vec2 st2=(uv-cen2)*rot2+cen2+_texRepHexHash(vec2(vertex2));vec2 st3=(uv-cen3)*rot3+cen3+_texRepHexHash(vec2(vertex3));vec4 c1=textureGrad(samp,st1,dSTdx*rot1,dSTdy*rot1);vec4 c2=textureGrad(samp,st2,dSTdx*rot2,dSTdy*rot2);vec4 c3=textureGrad(samp,st3,dSTdx*rot3,dSTdy*rot3);vec3 Lw=vec3(0.299,0.587,0.114);vec3 Dw=vec3(dot(c1.rgb,Lw),dot(c2.rgb,Lw),dot(c3.rgb,Lw));Dw=mix(vec3(1.0),Dw,fallOffContrast);vec3 W=Dw*pow(vec3(w1,w2,w3),vec3(expVal));W/=(W.x+W.y+W.z);if (r != 0.5) {W=_texRepGain3(W,r);}\nreturn W.x*c1+W.y*c2+W.z*c3;}\n#elif TEXTURE_REPETITION_MODE==3\nvec4 _texRepSample(sampler2D samp,vec2 uv) {vec2 iuv=floor(uv);vec2 fuv=fract(uv);vec4 ofa=_texRepHash4(iuv+vec2(0.0,0.0));vec4 ofb=_texRepHash4(iuv+vec2(1.0,0.0));vec4 ofc=_texRepHash4(iuv+vec2(0.0,1.0));vec4 ofd=_texRepHash4(iuv+vec2(1.0,1.0));vec2 dx=dFdx(uv);vec2 dy=dFdy(uv);ofa.zw=sign(ofa.zw-0.5);ofb.zw=sign(ofb.zw-0.5);ofc.zw=sign(ofc.zw-0.5);ofd.zw=sign(ofd.zw-0.5);vec2 uva=uv*ofa.zw+ofa.xy; vec2 ddxa=dx*ofa.zw; vec2 ddya=dy*ofa.zw;vec2 uvb=uv*ofb.zw+ofb.xy; vec2 ddxb=dx*ofb.zw; vec2 ddyb=dy*ofb.zw;vec2 uvc=uv*ofc.zw+ofc.xy; vec2 ddxc=dx*ofc.zw; vec2 ddyc=dy*ofc.zw;vec2 uvd=uv*ofd.zw+ofd.xy; vec2 ddxd=dx*ofd.zw; vec2 ddyd=dy*ofd.zw;vec2 b=smoothstep(0.25,0.75,fuv);return mix(\nmix(textureGrad(samp,uva,ddxa,ddya),textureGrad(samp,uvb,ddxb,ddyb),b.x),\nmix(textureGrad(samp,uvc,ddxc,ddyc),textureGrad(samp,uvd,ddxd,ddyd),b.x),\nb.y\n);}\n#elif TEXTURE_REPETITION_MODE==4\nvec4 _texRepSample(sampler2D samp,vec2 uv) {vec2 p=floor(uv);vec2 f=fract(uv);vec2 dx=dFdx(uv);vec2 dy=dFdy(uv);vec4 va=vec4(0.0);float wt=0.0;float w2=0.0;for (int j=-1; j<=1; j++) {for (int i=-1; i<=1; i++) {vec2 g=vec2(float(i),float(j));vec4 o=_texRepHash4(p+g);vec2 r=g-f+o.xy;float d=dot(r,r);float w=exp(-5.0*d);vec4 c=textureGrad(samp,uv+o.zw,dx,dy);va+=w*c;wt+=w;w2+=w*w;}}\nfloat mean=0.3;vec4 res=mean+(va-wt*mean)/sqrt(w2);return mix(va/wt,res,0.4);}\n#endif\n#if TEXTURE_REPETITION_MODE>0\n#define TEXRD(s,uv) _texRepSample(s,uv)\n#else\n#define TEXRD(s,uv) texture2D(s,uv)\n#endif\n#define TEXRD_DEFINED\n";
@@ -11166,12 +11073,12 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 299;
  export const ids = [299];
  export const modules = {
--  40866: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40866: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 -    });
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
-+  40882: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40882: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      b: () => ⟦2-char-id⟧
 +    });
@@ -11184,7 +11091,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40840: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40840: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 -    });
@@ -11196,7 +11103,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40861: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40861: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      b: () => ⟦2-char-id⟧
 +    });
@@ -11210,7 +11117,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40833: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40833: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 -    });
@@ -11221,7 +11128,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40855: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40855: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      b: () => ⟦2-char-id⟧
 +    });
@@ -11234,7 +11141,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40859: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40859: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 -    });
@@ -11245,7 +11152,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40873: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40873: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      b: () => ⟦2-char-id⟧
 +    });
@@ -11258,7 +11165,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40848: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40848: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 -    });
@@ -11269,7 +11176,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40866: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40866: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      e: () => ⟦2-char-id⟧
 +    });
@@ -11282,7 +11189,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40602: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40602: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 -    });
@@ -11293,7 +11200,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40595: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40595: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      b: () => ⟦2-char-id⟧
 +    });
@@ -11306,7 +11213,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40759: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40759: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 -    });
@@ -11317,7 +11224,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40771: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40771: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      c: () => ⟦2-char-id⟧
 +    });
@@ -11330,7 +11237,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  60010: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  60010: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 -    });
@@ -11341,7 +11248,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  60310: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  60310: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      e: () => ⟦2-char-id⟧
 +    });
@@ -11354,14 +11261,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  60018: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  60018: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.e.IncludesShadersStore[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStore[⟦2-char-id⟧] = ⟦2-char-id⟧);
 +    const ⟦2-char-id⟧ = {
 +      name: ⟦2-char-id⟧,
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  60314: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  60314: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        d: () => ⟦2-char-id⟧
      });
@@ -11375,7 +11282,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  60025: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  60025: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 -    });
@@ -11386,7 +11293,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  60319: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  60319: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      c: () => ⟦2-char-id⟧
 +    });
@@ -11399,7 +11306,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  60041: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  60041: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 -    });
@@ -11410,7 +11317,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  60332: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  60332: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      b: () => ⟦2-char-id⟧
 +    });
@@ -11423,7 +11330,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  60032: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  60032: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 -    });
@@ -11434,7 +11341,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  60325: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  60325: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      b: () => ⟦2-char-id⟧
 +    });
@@ -11447,7 +11354,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  59780: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  59780: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 -    });
@@ -11458,7 +11365,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  60082: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  60082: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      c: () => ⟦2-char-id⟧
 +    });
@@ -11471,7 +11378,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  59803: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  59803: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 -    });
@@ -11482,7 +11389,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  60105: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  60105: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      c: () => ⟦2-char-id⟧
 +    });
@@ -11495,7 +11402,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  59856: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  59856: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 -    });
@@ -11506,7 +11413,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  60154: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  60154: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      b: () => ⟦2-char-id⟧
 +    });
@@ -11519,7 +11426,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40808: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40808: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 -    });
@@ -11530,7 +11437,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40833: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40833: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      b: () => ⟦2-char-id⟧
 +    });
@@ -11543,7 +11450,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40800: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40800: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 -    });
@@ -11554,7 +11461,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40830: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40830: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      e: () => ⟦2-char-id⟧
 +    });
@@ -11567,7 +11474,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  60008: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  60008: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 -    });
@@ -11578,7 +11485,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  60304: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  60304: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      d: () => ⟦2-char-id⟧
 +    });
@@ -11591,7 +11498,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40585: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40585: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 -    });
@@ -11602,7 +11509,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40574: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40574: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      e: () => ⟦2-char-id⟧
 +    });
@@ -11615,14 +11522,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  60101: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  60101: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.e.IncludesShadersStore[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStore[⟦2-char-id⟧] = ⟦2-char-id⟧);
 +    const ⟦2-char-id⟧ = {
 +      name: ⟦2-char-id⟧,
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  60390: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  60390: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        geometryPixelShader: () => ⟦2-char-id⟧
      });
@@ -11692,24 +11599,24 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary><code>bundles/staging.bloxd.io/chunks/js/300.js</code> · modified · +186 / -186</summary>
+<summary><code>bundles/staging.bloxd.io/chunks/js/300.js</code> · modified · +179 / -179</summary>
 
 JavaScript comparison masks only two-character identifiers. Strings, comments, member properties, object keys, and all other source changes remain visible.
 
 <details>
-<summary>Hunk 1 · Change · +186 / -186</summary>
+<summary>Hunk 1 · Change · +28 / -28</summary>
 
 ```diff
-@@ -1,240 +1,240 @@
+@@ -1,40 +1,40 @@
  export const ⟦2-char-id⟧ = 300;
  export const ids = [300];
  export const modules = {
--  40704: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40704: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 -    });
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
-+  40701: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40701: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      b: () => ⟦2-char-id⟧
 +    });
@@ -11722,7 +11629,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40613: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40613: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 -    });
@@ -11733,7 +11640,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40599: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40599: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      c: () => ⟦2-char-id⟧
 +    });
@@ -11746,7 +11653,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40609: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40609: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 -    });
@@ -11757,7 +11664,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40597: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40597: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      b: () => ⟦2-char-id⟧
 +    });
@@ -11765,24 +11672,25 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
      const ⟦2-char-id⟧ = "bonesDeclaration",
        ⟦2-char-id⟧ = "#if NUM_BONE_INFLUENCERS>0\nattribute vec4 matricesIndices;attribute vec4 matricesWeights;\n#if NUM_BONE_INFLUENCERS>4\nattribute vec4 matricesIndicesExtra;attribute vec4 matricesWeightsExtra;\n#endif\n#ifndef BAKED_VERTEX_ANIMATION_TEXTURE\n#ifdef BONETEXTURE\nuniform highp sampler2D boneSampler;uniform vec2 boneTextureInfo;\n#else\nuniform mat4 mBones[BonesPerMesh];\n#endif\n#ifdef BONES_VELOCITY_ENABLED\nuniform mat4 mPreviousBones[BonesPerMesh];\n#endif\n#ifdef BONETEXTURE\n#define inline\nmat4 readMatrixFromRawSampler(sampler2D smp,float index)\n{\n#if defined(WEBGL2) || defined(WEBGPU)\nint offset=int(index)*4; \nint textureWidth=int(boneTextureInfo.x);int y=int(offset)/textureWidth;int x=int(offset) % textureWidth;vec4 m0=texelFetch(smp,ivec2(x+0,y),0);vec4 m1=texelFetch(smp,ivec2(x+1,y),0);vec4 m2=texelFetch(smp,ivec2(x+2,y),0);vec4 m3=texelFetch(smp,ivec2(x+3,y),0);return mat4(m0,m1,m2,m3);\n#else\nfloat offset=index*4.0;float y=floor(offset/boneTextureInfo.x);float x=offset-y*boneTextureInfo.x;float dy=1.0/boneTextureInfo.y;float dx=1.0/boneTextureInfo.x;vec4 m0=texture2D(smp,vec2(dx*(x+0.5),dy*(y+0.5)));vec4 m1=texture2D(smp,vec2(dx*(x+1.5),dy*(y+0.5)));vec4 m2=texture2D(smp,vec2(dx*(x+2.5),dy*(y+0.5)));vec4 m3=texture2D(smp,vec2(dx*(x+3.5),dy*(y+0.5))); \nreturn mat4(m0,m1,m2,m3);\n#endif\n}\n#endif\n#endif\n#endif\n";
 -    ⟦2-char-id⟧.b.IncludesShadersStore[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStore[⟦2-char-id⟧] = ⟦2-char-id⟧);
--    const ⟦2-char-id⟧ = {
--      name: ⟦2-char-id⟧,
--      shader: ⟦2-char-id⟧
--    }
--  },
--  40699: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
--    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
++    ⟦2-char-id⟧.e.IncludesShadersStore[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStore[⟦2-char-id⟧] = ⟦2-char-id⟧);
+     const ⟦2-char-id⟧ = {
+       name: ⟦2-char-id⟧,
+       shader: ⟦2-char-id⟧
+```
+
+</details>
+
+<details>
+<summary>Hunk 2 · Change · +151 / -151</summary>
+
+```diff
+@@ -42,199 +42,199 @@
+   },
+   40699: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
+     ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 -    });
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
-+    ⟦2-char-id⟧.e.IncludesShadersStore[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStore[⟦2-char-id⟧] = ⟦2-char-id⟧);
-+    const ⟦2-char-id⟧ = {
-+      name: ⟦2-char-id⟧,
-+      shader: ⟦2-char-id⟧
-+    }
-+  },
-+  40699: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
-+    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      c: () => ⟦2-char-id⟧
 +    });
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
@@ -11794,7 +11702,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40725: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40725: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 -    });
@@ -11805,7 +11713,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40726: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40726: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      c: () => ⟦2-char-id⟧
 +    });
@@ -11818,7 +11726,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40730: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40730: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 -    });
@@ -11829,7 +11737,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40728: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40728: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      e: () => ⟦2-char-id⟧
 +    });
@@ -11842,7 +11750,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40648: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40648: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 -    });
@@ -11853,7 +11761,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40633: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40633: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      c: () => ⟦2-char-id⟧
 +    });
@@ -11866,7 +11774,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  59783: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  59783: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 -    });
@@ -11877,7 +11785,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  60090: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  60090: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      b: () => ⟦2-char-id⟧
 +    });
@@ -11890,7 +11798,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40618: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40618: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 -    });
@@ -11901,7 +11809,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40604: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40604: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      d: () => ⟦2-char-id⟧
 +    });
@@ -11914,7 +11822,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40696: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40696: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 -    });
@@ -11925,7 +11833,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40694: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40694: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      c: () => ⟦2-char-id⟧
 +    });
@@ -11938,7 +11846,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40693: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40693: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 -    });
@@ -11949,7 +11857,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40686: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40686: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      d: () => ⟦2-char-id⟧
 +    });
@@ -11962,7 +11870,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40669: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40669: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 -    });
@@ -11973,7 +11881,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40673: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40673: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      b: () => ⟦2-char-id⟧
 +    });
@@ -11986,7 +11894,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40685: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40685: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 -    });
@@ -11997,7 +11905,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40684: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40684: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      e: () => ⟦2-char-id⟧
 +    });
@@ -12010,7 +11918,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40666: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40666: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 -    });
@@ -12021,7 +11929,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40665: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40665: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      e: () => ⟦2-char-id⟧
 +    });
@@ -12034,7 +11942,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40585: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40585: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 -    });
@@ -12045,7 +11953,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40574: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40574: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      e: () => ⟦2-char-id⟧
 +    });
@@ -12058,14 +11966,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  60098: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  60098: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.e.IncludesShadersStore[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStore[⟦2-char-id⟧] = ⟦2-char-id⟧);
 +    const ⟦2-char-id⟧ = {
 +      name: ⟦2-char-id⟧,
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  60385: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  60385: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        geometryVertexShader: () => ⟦2-char-id⟧
      });
@@ -12146,8 +12054,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 301;
  export const ids = [301];
  export const modules = {
--  40597: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40585: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40597: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40585: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        b: () => ⟦2-char-id⟧
      });
@@ -12164,8 +12072,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40753: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40759: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40753: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40759: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        defaultPixelShader: () => ⟦2-char-id⟧
      });
@@ -12294,8 +12202,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 302;
  export const ids = [302];
  export const modules = {
--  40859: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40873: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40859: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40873: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +      b: () => ⟦2-char-id⟧
@@ -12311,8 +12219,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40848: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40866: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40848: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40866: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 +      e: () => ⟦2-char-id⟧
@@ -12328,8 +12236,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40897: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40911: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40897: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40911: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +      b: () => ⟦2-char-id⟧
@@ -12345,8 +12253,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40857: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40870: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40857: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40870: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 +      c: () => ⟦2-char-id⟧
@@ -12362,8 +12270,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40602: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40595: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40602: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40595: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +      b: () => ⟦2-char-id⟧
@@ -12379,8 +12287,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40813: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40835: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40813: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40835: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 +      c: () => ⟦2-char-id⟧
@@ -12396,8 +12304,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40821: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40844: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40821: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40844: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 +      c: () => ⟦2-char-id⟧
@@ -12413,8 +12321,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40676: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40680: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40676: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40680: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        c: () => ⟦2-char-id⟧
      });
@@ -12429,8 +12337,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40890: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40903: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40890: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40903: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 +      b: () => ⟦2-char-id⟧
@@ -12446,8 +12354,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40759: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40771: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40759: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40771: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 +      c: () => ⟦2-char-id⟧
@@ -12463,8 +12371,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40761: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40780: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40761: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40780: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 +      c: () => ⟦2-char-id⟧
@@ -12499,8 +12407,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 303;
  export const ids = [303];
  export const modules = {
--  40859: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40873: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40859: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40873: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +      b: () => ⟦2-char-id⟧
@@ -12516,8 +12424,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40848: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40866: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40848: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40866: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 +      e: () => ⟦2-char-id⟧
@@ -12533,8 +12441,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40897: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40911: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40897: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40911: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +      b: () => ⟦2-char-id⟧
@@ -12550,8 +12458,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40857: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40870: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40857: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40870: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 +      c: () => ⟦2-char-id⟧
@@ -12567,8 +12475,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40602: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40595: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40602: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40595: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +      b: () => ⟦2-char-id⟧
@@ -12584,8 +12492,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40676: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40680: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40676: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40680: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        c: () => ⟦2-char-id⟧
      });
@@ -12600,8 +12508,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40890: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40903: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40890: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40903: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 +      b: () => ⟦2-char-id⟧
@@ -12617,8 +12525,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  59456: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  59779: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  59456: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  59779: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        skyPixelShader: () => ⟦2-char-id⟧
      });
@@ -12676,8 +12584,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 304;
  export const ids = [304];
  export const modules = {
--  40602: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40595: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40602: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40595: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +      b: () => ⟦2-char-id⟧
@@ -12693,8 +12601,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  59641: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  59942: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  59641: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  59942: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        rgbdDecodePixelShader: () => ⟦2-char-id⟧
      });
@@ -12732,8 +12640,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 305;
  export const ids = [305];
  export const modules = {
--  40602: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40595: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40602: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40595: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +      b: () => ⟦2-char-id⟧
@@ -12749,8 +12657,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  59652: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  59959: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  59652: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  59959: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        rgbdEncodePixelShader: () => ⟦2-char-id⟧
      });
@@ -12776,20 +12684,20 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary><code>bundles/staging.bloxd.io/chunks/js/306.js</code> · modified · +57 / -57</summary>
+<summary><code>bundles/staging.bloxd.io/chunks/js/306.js</code> · modified · +80 / -80</summary>
 
 JavaScript comparison masks only two-character identifiers. Strings, comments, member properties, object keys, and all other source changes remain visible.
 
 <details>
-<summary>Hunk 1 · Change · +57 / -57</summary>
+<summary>Hunk 1 · Change · +11 / -11</summary>
 
 ```diff
-@@ -1,170 +1,170 @@
+@@ -1,40 +1,40 @@
  export const ⟦2-char-id⟧ = 306;
  export const ids = [306];
  export const modules = {
--  40704: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40701: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40704: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40701: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        b: () => ⟦2-char-id⟧
      });
@@ -12804,8 +12712,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40613: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40599: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40613: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40599: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 +      c: () => ⟦2-char-id⟧
@@ -12821,8 +12729,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40609: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40597: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40609: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40597: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 +      b: () => ⟦2-char-id⟧
@@ -12836,10 +12744,17 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
      const ⟦2-char-id⟧ = {
        name: ⟦2-char-id⟧,
        shader: ⟦2-char-id⟧
-     }
+```
+
+</details>
+
+<details>
+<summary>Hunk 2 · Change · +29 / -3</summary>
+
+```diff
+@@ -42,12 +42,38 @@
    },
--  40699: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40699: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+   40699: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 +      c: () => ⟦2-char-id⟧
@@ -12850,132 +12765,162 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        ⟦2-char-id⟧ = "#ifndef BAKED_VERTEX_ANIMATION_TEXTURE\n#if NUM_BONE_INFLUENCERS>0\nmat4 influence;\n#ifdef BONETEXTURE\ninfluence=readMatrixFromRawSampler(boneSampler,matricesIndices[0])*matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndices[1])*matricesWeights[1];\n#endif\n#if NUM_BONE_INFLUENCERS>2\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndices[2])*matricesWeights[2];\n#endif\n#if NUM_BONE_INFLUENCERS>3\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndices[3])*matricesWeights[3];\n#endif\n#if NUM_BONE_INFLUENCERS>4\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndicesExtra[0])*matricesWeightsExtra[0];\n#endif\n#if NUM_BONE_INFLUENCERS>5\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndicesExtra[1])*matricesWeightsExtra[1];\n#endif\n#if NUM_BONE_INFLUENCERS>6\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndicesExtra[2])*matricesWeightsExtra[2];\n#endif\n#if NUM_BONE_INFLUENCERS>7\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndicesExtra[3])*matricesWeightsExtra[3];\n#endif\n#else\ninfluence=mBones[int(matricesIndices[0])]*matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\ninfluence+=mBones[int(matricesIndices[1])]*matricesWeights[1];\n#endif\n#if NUM_BONE_INFLUENCERS>2\ninfluence+=mBones[int(matricesIndices[2])]*matricesWeights[2];\n#endif\n#if NUM_BONE_INFLUENCERS>3\ninfluence+=mBones[int(matricesIndices[3])]*matricesWeights[3];\n#endif\n#if NUM_BONE_INFLUENCERS>4\ninfluence+=mBones[int(matricesIndicesExtra[0])]*matricesWeightsExtra[0];\n#endif\n#if NUM_BONE_INFLUENCERS>5\ninfluence+=mBones[int(matricesIndicesExtra[1])]*matricesWeightsExtra[1];\n#endif\n#if NUM_BONE_INFLUENCERS>6\ninfluence+=mBones[int(matricesIndicesExtra[2])]*matricesWeightsExtra[2];\n#endif\n#if NUM_BONE_INFLUENCERS>7\ninfluence+=mBones[int(matricesIndicesExtra[3])]*matricesWeightsExtra[3];\n#endif\n#endif\nfinalWorld=finalWorld*influence;\n#endif\n#endif\n";
 -    ⟦2-char-id⟧.b.IncludesShadersStore[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStore[⟦2-char-id⟧] = ⟦2-char-id⟧);
 +    ⟦2-char-id⟧.e.IncludesShadersStore[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStore[⟦2-char-id⟧] = ⟦2-char-id⟧);
-     const ⟦2-char-id⟧ = {
-       name: ⟦2-char-id⟧,
-       shader: ⟦2-char-id⟧
-     }
-   },
--  40730: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40728: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
-     ⟦2-char-id⟧.d(⟦2-char-id⟧, {
--      c: () => ⟦2-char-id⟧
++    const ⟦2-char-id⟧ = {
++      name: ⟦2-char-id⟧,
++      shader: ⟦2-char-id⟧
++    }
++  },
++  40728: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      e: () => ⟦2-char-id⟧
-     });
--    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
++    });
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
-     const ⟦2-char-id⟧ = "clipPlaneVertex",
-       ⟦2-char-id⟧ = "#ifdef CLIPPLANE\nfClipDistance=dot(worldPos,vClipPlane);\n#endif\n#ifdef CLIPPLANE2\nfClipDistance2=dot(worldPos,vClipPlane2);\n#endif\n#ifdef CLIPPLANE3\nfClipDistance3=dot(worldPos,vClipPlane3);\n#endif\n#ifdef CLIPPLANE4\nfClipDistance4=dot(worldPos,vClipPlane4);\n#endif\n#ifdef CLIPPLANE5\nfClipDistance5=dot(worldPos,vClipPlane5);\n#endif\n#ifdef CLIPPLANE6\nfClipDistance6=dot(worldPos,vClipPlane6);\n#endif\n";
--    ⟦2-char-id⟧.b.IncludesShadersStore[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStore[⟦2-char-id⟧] = ⟦2-char-id⟧);
++    const ⟦2-char-id⟧ = "clipPlaneVertex",
++      ⟦2-char-id⟧ = "#ifdef CLIPPLANE\nfClipDistance=dot(worldPos,vClipPlane);\n#endif\n#ifdef CLIPPLANE2\nfClipDistance2=dot(worldPos,vClipPlane2);\n#endif\n#ifdef CLIPPLANE3\nfClipDistance3=dot(worldPos,vClipPlane3);\n#endif\n#ifdef CLIPPLANE4\nfClipDistance4=dot(worldPos,vClipPlane4);\n#endif\n#ifdef CLIPPLANE5\nfClipDistance5=dot(worldPos,vClipPlane5);\n#endif\n#ifdef CLIPPLANE6\nfClipDistance6=dot(worldPos,vClipPlane6);\n#endif\n";
 +    ⟦2-char-id⟧.e.IncludesShadersStore[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStore[⟦2-char-id⟧] = ⟦2-char-id⟧);
-     const ⟦2-char-id⟧ = {
-       name: ⟦2-char-id⟧,
-       shader: ⟦2-char-id⟧
-     }
-   },
--  40648: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40633: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
-     ⟦2-char-id⟧.d(⟦2-char-id⟧, {
--      e: () => ⟦2-char-id⟧
++    const ⟦2-char-id⟧ = {
++      name: ⟦2-char-id⟧,
++      shader: ⟦2-char-id⟧
++    }
++  },
++  40633: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      c: () => ⟦2-char-id⟧
-     });
--    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
++    });
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
-     const ⟦2-char-id⟧ = "clipPlaneVertexDeclaration",
-       ⟦2-char-id⟧ = "#ifdef CLIPPLANE\nuniform vec4 vClipPlane;varying float fClipDistance;\n#endif\n#ifdef CLIPPLANE2\nuniform vec4 vClipPlane2;varying float fClipDistance2;\n#endif\n#ifdef CLIPPLANE3\nuniform vec4 vClipPlane3;varying float fClipDistance3;\n#endif\n#ifdef CLIPPLANE4\nuniform vec4 vClipPlane4;varying float fClipDistance4;\n#endif\n#ifdef CLIPPLANE5\nuniform vec4 vClipPlane5;varying float fClipDistance5;\n#endif\n#ifdef CLIPPLANE6\nuniform vec4 vClipPlane6;varying float fClipDistance6;\n#endif\n";
--    ⟦2-char-id⟧.b.IncludesShadersStore[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStore[⟦2-char-id⟧] = ⟦2-char-id⟧);
++    const ⟦2-char-id⟧ = "clipPlaneVertexDeclaration",
++      ⟦2-char-id⟧ = "#ifdef CLIPPLANE\nuniform vec4 vClipPlane;varying float fClipDistance;\n#endif\n#ifdef CLIPPLANE2\nuniform vec4 vClipPlane2;varying float fClipDistance2;\n#endif\n#ifdef CLIPPLANE3\nuniform vec4 vClipPlane3;varying float fClipDistance3;\n#endif\n#ifdef CLIPPLANE4\nuniform vec4 vClipPlane4;varying float fClipDistance4;\n#endif\n#ifdef CLIPPLANE5\nuniform vec4 vClipPlane5;varying float fClipDistance5;\n#endif\n#ifdef CLIPPLANE6\nuniform vec4 vClipPlane6;varying float fClipDistance6;\n#endif\n";
 +    ⟦2-char-id⟧.e.IncludesShadersStore[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStore[⟦2-char-id⟧] = ⟦2-char-id⟧);
      const ⟦2-char-id⟧ = {
        name: ⟦2-char-id⟧,
        shader: ⟦2-char-id⟧
-     }
-   },
--  40733: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40730: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+```
+
+</details>
+
+<details>
+<summary>Hunk 3 · Change · +40 / -66</summary>
+
+```diff
+@@ -57,114 +83,88 @@
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
--      d: () => ⟦2-char-id⟧
-+      c: () => ⟦2-char-id⟧
+       c: () => ⟦2-char-id⟧
      });
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
-+    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
-     const ⟦2-char-id⟧ = "fogVertex",
-       ⟦2-char-id⟧ = "#ifdef FOG\nvFogDistance=(view*worldPos).xyz;\n#endif\n";
+-    const ⟦2-char-id⟧ = "clipPlaneVertex",
+-      ⟦2-char-id⟧ = "#ifdef CLIPPLANE\nfClipDistance=dot(worldPos,vClipPlane);\n#endif\n#ifdef CLIPPLANE2\nfClipDistance2=dot(worldPos,vClipPlane2);\n#endif\n#ifdef CLIPPLANE3\nfClipDistance3=dot(worldPos,vClipPlane3);\n#endif\n#ifdef CLIPPLANE4\nfClipDistance4=dot(worldPos,vClipPlane4);\n#endif\n#ifdef CLIPPLANE5\nfClipDistance5=dot(worldPos,vClipPlane5);\n#endif\n#ifdef CLIPPLANE6\nfClipDistance6=dot(worldPos,vClipPlane6);\n#endif\n";
 -    ⟦2-char-id⟧.b.IncludesShadersStore[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStore[⟦2-char-id⟧] = ⟦2-char-id⟧);
++    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
++    const ⟦2-char-id⟧ = "fogVertex",
++      ⟦2-char-id⟧ = "#ifdef FOG\nvFogDistance=(view*worldPos).xyz;\n#endif\n";
 +    ⟦2-char-id⟧.e.IncludesShadersStore[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStore[⟦2-char-id⟧] = ⟦2-char-id⟧);
      const ⟦2-char-id⟧ = {
        name: ⟦2-char-id⟧,
        shader: ⟦2-char-id⟧
      }
    },
--  40651: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40638: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
-     ⟦2-char-id⟧.d(⟦2-char-id⟧, {
--      c: () => ⟦2-char-id⟧
-+      d: () => ⟦2-char-id⟧
-     });
--    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
-+    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
-     const ⟦2-char-id⟧ = "fogVertexDeclaration",
-       ⟦2-char-id⟧ = "#ifdef FOG\nvarying vec3 vFogDistance;\n#endif\n";
--    ⟦2-char-id⟧.b.IncludesShadersStore[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStore[⟦2-char-id⟧] = ⟦2-char-id⟧);
-+    ⟦2-char-id⟧.e.IncludesShadersStore[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStore[⟦2-char-id⟧] = ⟦2-char-id⟧);
-     const ⟦2-char-id⟧ = {
-       name: ⟦2-char-id⟧,
-       shader: ⟦2-char-id⟧
-     }
-   },
--  40618: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40604: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
-     ⟦2-char-id⟧.d(⟦2-char-id⟧, {
--      c: () => ⟦2-char-id⟧
-+      d: () => ⟦2-char-id⟧
-     });
--    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
-+    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
-     const ⟦2-char-id⟧ = "instancesDeclaration",
-       ⟦2-char-id⟧ = "#ifdef INSTANCES\nattribute vec4 world0;attribute vec4 world1;attribute vec4 world2;attribute vec4 world3;\n#ifdef INSTANCESCOLOR\nattribute vec4 instanceColor;\n#endif\n#if defined(THIN_INSTANCES) && !defined(WORLD_UBO)\nuniform mat4 world;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nattribute vec4 previousWorld0;attribute vec4 previousWorld1;attribute vec4 previousWorld2;attribute vec4 previousWorld3;\n#ifdef THIN_INSTANCES\nuniform mat4 previousWorld;\n#endif\n#endif\n#else\n#if !defined(WORLD_UBO)\nuniform mat4 world;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nuniform mat4 previousWorld;\n#endif\n#endif\n";
--    ⟦2-char-id⟧.b.IncludesShadersStore[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStore[⟦2-char-id⟧] = ⟦2-char-id⟧);
-+    ⟦2-char-id⟧.e.IncludesShadersStore[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStore[⟦2-char-id⟧] = ⟦2-char-id⟧);
-     const ⟦2-char-id⟧ = {
-       name: ⟦2-char-id⟧,
-       shader: ⟦2-char-id⟧
-     }
-   },
--  40696: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40694: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
-     ⟦2-char-id⟧.d(⟦2-char-id⟧, {
--      d: () => ⟦2-char-id⟧
-+      c: () => ⟦2-char-id⟧
-     });
--    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
-+    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
-     const ⟦2-char-id⟧ = "instancesVertex",
-       ⟦2-char-id⟧ = "#ifdef INSTANCES\nmat4 finalWorld=mat4(world0,world1,world2,world3);\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nmat4 finalPreviousWorld=mat4(previousWorld0,previousWorld1,\npreviousWorld2,previousWorld3);\n#endif\n#ifdef THIN_INSTANCES\nfinalWorld=world*finalWorld;\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nfinalPreviousWorld=previousWorld*finalPreviousWorld;\n#endif\n#endif\n#else\nmat4 finalWorld=world;\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nmat4 finalPreviousWorld=previousWorld;\n#endif\n#endif\n";
--    ⟦2-char-id⟧.b.IncludesShadersStore[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStore[⟦2-char-id⟧] = ⟦2-char-id⟧);
-+    ⟦2-char-id⟧.e.IncludesShadersStore[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStore[⟦2-char-id⟧] = ⟦2-char-id⟧);
-     const ⟦2-char-id⟧ = {
-       name: ⟦2-char-id⟧,
-       shader: ⟦2-char-id⟧
-     }
-   },
--  40739: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40745: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40648: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40638: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 +      d: () => ⟦2-char-id⟧
      });
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
-+    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
-     const ⟦2-char-id⟧ = "vertexColorMixing",
-       ⟦2-char-id⟧ = "#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvColor=vec4(1.0);\n#ifdef VERTEXCOLOR\n#ifdef VERTEXALPHA\nvColor*=colorUpdated;\n#else\nvColor.rgb*=colorUpdated.rgb;\n#endif\n#endif\n#ifdef INSTANCESCOLOR\nvColor*=instanceColor;\n#endif\n#endif\n";
+-    const ⟦2-char-id⟧ = "clipPlaneVertexDeclaration",
+-      ⟦2-char-id⟧ = "#ifdef CLIPPLANE\nuniform vec4 vClipPlane;varying float fClipDistance;\n#endif\n#ifdef CLIPPLANE2\nuniform vec4 vClipPlane2;varying float fClipDistance2;\n#endif\n#ifdef CLIPPLANE3\nuniform vec4 vClipPlane3;varying float fClipDistance3;\n#endif\n#ifdef CLIPPLANE4\nuniform vec4 vClipPlane4;varying float fClipDistance4;\n#endif\n#ifdef CLIPPLANE5\nuniform vec4 vClipPlane5;varying float fClipDistance5;\n#endif\n#ifdef CLIPPLANE6\nuniform vec4 vClipPlane6;varying float fClipDistance6;\n#endif\n";
 -    ⟦2-char-id⟧.b.IncludesShadersStore[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStore[⟦2-char-id⟧] = ⟦2-char-id⟧);
++    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
++    const ⟦2-char-id⟧ = "fogVertexDeclaration",
++      ⟦2-char-id⟧ = "#ifdef FOG\nvarying vec3 vFogDistance;\n#endif\n";
 +    ⟦2-char-id⟧.e.IncludesShadersStore[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStore[⟦2-char-id⟧] = ⟦2-char-id⟧);
      const ⟦2-char-id⟧ = {
        name: ⟦2-char-id⟧,
        shader: ⟦2-char-id⟧
      }
    },
--  41222: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  41252: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40733: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40604: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
+     ⟦2-char-id⟧.d(⟦2-char-id⟧, {
+       d: () => ⟦2-char-id⟧
+     });
+-    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
+-    const ⟦2-char-id⟧ = "fogVertex",
+-      ⟦2-char-id⟧ = "#ifdef FOG\nvFogDistance=(view*worldPos).xyz;\n#endif\n";
+-    ⟦2-char-id⟧.b.IncludesShadersStore[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStore[⟦2-char-id⟧] = ⟦2-char-id⟧);
++    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
++    const ⟦2-char-id⟧ = "instancesDeclaration",
++      ⟦2-char-id⟧ = "#ifdef INSTANCES\nattribute vec4 world0;attribute vec4 world1;attribute vec4 world2;attribute vec4 world3;\n#ifdef INSTANCESCOLOR\nattribute vec4 instanceColor;\n#endif\n#if defined(THIN_INSTANCES) && !defined(WORLD_UBO)\nuniform mat4 world;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nattribute vec4 previousWorld0;attribute vec4 previousWorld1;attribute vec4 previousWorld2;attribute vec4 previousWorld3;\n#ifdef THIN_INSTANCES\nuniform mat4 previousWorld;\n#endif\n#endif\n#else\n#if !defined(WORLD_UBO)\nuniform mat4 world;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nuniform mat4 previousWorld;\n#endif\n#endif\n";
++    ⟦2-char-id⟧.e.IncludesShadersStore[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStore[⟦2-char-id⟧] = ⟦2-char-id⟧);
+     const ⟦2-char-id⟧ = {
+       name: ⟦2-char-id⟧,
+       shader: ⟦2-char-id⟧
+     }
+   },
+-  40651: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40694: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
+     ⟦2-char-id⟧.d(⟦2-char-id⟧, {
+       c: () => ⟦2-char-id⟧
+     });
+-    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
+-    const ⟦2-char-id⟧ = "fogVertexDeclaration",
+-      ⟦2-char-id⟧ = "#ifdef FOG\nvarying vec3 vFogDistance;\n#endif\n";
+-    ⟦2-char-id⟧.b.IncludesShadersStore[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStore[⟦2-char-id⟧] = ⟦2-char-id⟧);
++    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
++    const ⟦2-char-id⟧ = "instancesVertex",
++      ⟦2-char-id⟧ = "#ifdef INSTANCES\nmat4 finalWorld=mat4(world0,world1,world2,world3);\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nmat4 finalPreviousWorld=mat4(previousWorld0,previousWorld1,\npreviousWorld2,previousWorld3);\n#endif\n#ifdef THIN_INSTANCES\nfinalWorld=world*finalWorld;\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nfinalPreviousWorld=previousWorld*finalPreviousWorld;\n#endif\n#endif\n#else\nmat4 finalWorld=world;\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nmat4 finalPreviousWorld=previousWorld;\n#endif\n#endif\n";
++    ⟦2-char-id⟧.e.IncludesShadersStore[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStore[⟦2-char-id⟧] = ⟦2-char-id⟧);
+     const ⟦2-char-id⟧ = {
+       name: ⟦2-char-id⟧,
+       shader: ⟦2-char-id⟧
+     }
+   },
+-  40618: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40745: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
+     ⟦2-char-id⟧.d(⟦2-char-id⟧, {
+-      c: () => ⟦2-char-id⟧
++      d: () => ⟦2-char-id⟧
+     });
+-    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
+-    const ⟦2-char-id⟧ = "instancesDeclaration",
+-      ⟦2-char-id⟧ = "#ifdef INSTANCES\nattribute vec4 world0;attribute vec4 world1;attribute vec4 world2;attribute vec4 world3;\n#ifdef INSTANCESCOLOR\nattribute vec4 instanceColor;\n#endif\n#if defined(THIN_INSTANCES) && !defined(WORLD_UBO)\nuniform mat4 world;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nattribute vec4 previousWorld0;attribute vec4 previousWorld1;attribute vec4 previousWorld2;attribute vec4 previousWorld3;\n#ifdef THIN_INSTANCES\nuniform mat4 previousWorld;\n#endif\n#endif\n#else\n#if !defined(WORLD_UBO)\nuniform mat4 world;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nuniform mat4 previousWorld;\n#endif\n#endif\n";
+-    ⟦2-char-id⟧.b.IncludesShadersStore[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStore[⟦2-char-id⟧] = ⟦2-char-id⟧);
++    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
++    const ⟦2-char-id⟧ = "vertexColorMixing",
++      ⟦2-char-id⟧ = "#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvColor=vec4(1.0);\n#ifdef VERTEXCOLOR\n#ifdef VERTEXALPHA\nvColor*=colorUpdated;\n#else\nvColor.rgb*=colorUpdated.rgb;\n#endif\n#endif\n#ifdef INSTANCESCOLOR\nvColor*=instanceColor;\n#endif\n#endif\n";
++    ⟦2-char-id⟧.e.IncludesShadersStore[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStore[⟦2-char-id⟧] = ⟦2-char-id⟧);
+     const ⟦2-char-id⟧ = {
+       name: ⟦2-char-id⟧,
+       shader: ⟦2-char-id⟧
+     }
+   },
+-  40696: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
+-    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
+-      d: () => ⟦2-char-id⟧
+-    });
+-    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
+-    const ⟦2-char-id⟧ = "instancesVertex",
+-      ⟦2-char-id⟧ = "#ifdef INSTANCES\nmat4 finalWorld=mat4(world0,world1,world2,world3);\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nmat4 finalPreviousWorld=mat4(previousWorld0,previousWorld1,\npreviousWorld2,previousWorld3);\n#endif\n#ifdef THIN_INSTANCES\nfinalWorld=world*finalWorld;\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nfinalPreviousWorld=previousWorld*finalPreviousWorld;\n#endif\n#endif\n#else\nmat4 finalWorld=world;\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nmat4 finalPreviousWorld=previousWorld;\n#endif\n#endif\n";
+-    ⟦2-char-id⟧.b.IncludesShadersStore[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStore[⟦2-char-id⟧] = ⟦2-char-id⟧);
+-    const ⟦2-char-id⟧ = {
+-      name: ⟦2-char-id⟧,
+-      shader: ⟦2-char-id⟧
+-    }
+-  },
+-  40739: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
+-    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
+-      e: () => ⟦2-char-id⟧
+-    });
+-    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
+-    const ⟦2-char-id⟧ = "vertexColorMixing",
+-      ⟦2-char-id⟧ = "#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvColor=vec4(1.0);\n#ifdef VERTEXCOLOR\n#ifdef VERTEXALPHA\nvColor*=colorUpdated;\n#else\nvColor.rgb*=colorUpdated.rgb;\n#endif\n#endif\n#ifdef INSTANCESCOLOR\nvColor*=instanceColor;\n#endif\n#endif\n";
+-    ⟦2-char-id⟧.b.IncludesShadersStore[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStore[⟦2-char-id⟧] = ⟦2-char-id⟧);
+-    const ⟦2-char-id⟧ = {
+-      name: ⟦2-char-id⟧,
+-      shader: ⟦2-char-id⟧
+-    }
+-  },
+-  41222: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  41252: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        colorVertexShader: () => ⟦2-char-id⟧
      });
@@ -13031,8 +12976,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 307;
  export const ids = [307];
  export const modules = {
--  40618: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40604: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40618: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40604: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +      d: () => ⟦2-char-id⟧
@@ -13048,8 +12993,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40696: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40694: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40696: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40694: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 +      c: () => ⟦2-char-id⟧
@@ -13065,8 +13010,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  60142: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  60429: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  60142: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  60429: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        greasedLineVertexShader: () => ⟦2-char-id⟧
      });
@@ -13106,8 +13051,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 308;
  export const ids = [308];
  export const modules = {
--  40725: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40726: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40725: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40726: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        c: () => ⟦2-char-id⟧
      });
@@ -13122,8 +13067,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40643: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40630: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40643: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40630: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 +      d: () => ⟦2-char-id⟧
@@ -13139,8 +13084,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  59783: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  60090: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  59783: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  60090: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +      b: () => ⟦2-char-id⟧
@@ -13156,8 +13101,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  59780: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  60082: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  59780: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  60082: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 +      c: () => ⟦2-char-id⟧
@@ -13173,8 +13118,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  59777: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  60080: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  59777: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  60080: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 +      c: () => ⟦2-char-id⟧
@@ -13192,8 +13137,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  59773: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  60078: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  59773: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  60078: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        pbrVertexShader: () => ⟦2-char-id⟧
      });
@@ -13305,8 +13250,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 309;
  export const ids = [309];
  export const modules = {
--  40730: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40728: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40730: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40728: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +      e: () => ⟦2-char-id⟧
@@ -13322,8 +13267,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40648: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40633: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40648: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40633: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 +      c: () => ⟦2-char-id⟧
@@ -13339,8 +13284,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40733: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40730: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40733: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40730: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 +      c: () => ⟦2-char-id⟧
@@ -13356,8 +13301,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40651: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40638: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40651: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40638: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +      d: () => ⟦2-char-id⟧
@@ -13373,8 +13318,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40676: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40680: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40676: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40680: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        c: () => ⟦2-char-id⟧
      });
@@ -13389,8 +13334,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40744: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40753: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40744: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40753: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 +      c: () => ⟦2-char-id⟧
@@ -13406,8 +13351,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  59439: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  59770: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  59439: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  59770: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        particlesVertexShader: () => ⟦2-char-id⟧
      });
@@ -13454,8 +13399,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 310;
  export const ids = [310];
  export const modules = {
--  40730: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40728: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40730: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40728: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +      e: () => ⟦2-char-id⟧
@@ -13471,8 +13416,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40648: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40633: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40648: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40633: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 +      c: () => ⟦2-char-id⟧
@@ -13488,8 +13433,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40733: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40730: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40733: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40730: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 +      c: () => ⟦2-char-id⟧
@@ -13505,8 +13450,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40651: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40638: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40651: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40638: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +      d: () => ⟦2-char-id⟧
@@ -13522,8 +13467,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40676: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40680: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40676: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40680: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        c: () => ⟦2-char-id⟧
      });
@@ -13538,8 +13483,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40744: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40753: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40744: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40753: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 +      c: () => ⟦2-char-id⟧
@@ -13555,8 +13500,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  59452: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  59775: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  59452: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  59775: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        skyVertexShader: () => ⟦2-char-id⟧
      });
@@ -13604,8 +13549,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 311;
  export const ids = [311];
  export const modules = {
--  40866: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40882: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40866: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40882: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        b: () => ⟦2-char-id⟧
      });
@@ -13620,8 +13565,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40840: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40861: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40840: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40861: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        b: () => ⟦2-char-id⟧
      });
@@ -13638,8 +13583,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40833: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40855: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40833: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40855: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 +      b: () => ⟦2-char-id⟧
@@ -13655,8 +13600,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40785: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40814: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40785: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40814: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        e: () => ⟦2-char-id⟧
      });
@@ -13671,8 +13616,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40873: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40886: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40873: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40886: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +      b: () => ⟦2-char-id⟧
@@ -13688,8 +13633,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40887: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40897: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40887: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40897: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 +      c: () => ⟦2-char-id⟧
@@ -13722,8 +13667,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 312;
  export const ids = [312];
  export const modules = {
--  40859: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40873: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40859: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40873: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +      b: () => ⟦2-char-id⟧
@@ -13739,8 +13684,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40848: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40866: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40848: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40866: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 +      e: () => ⟦2-char-id⟧
@@ -13756,8 +13701,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40897: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40911: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40897: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40911: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +      b: () => ⟦2-char-id⟧
@@ -13773,8 +13718,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40857: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40870: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40857: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40870: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 +      c: () => ⟦2-char-id⟧
@@ -13790,8 +13735,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  41230: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  41260: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  41230: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  41260: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        colorPixelShader: () => ⟦2-char-id⟧
      });
@@ -13835,8 +13780,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 313;
  export const ids = [313];
  export const modules = {
--  41070: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  41075: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  41070: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  41075: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 +      e: () => ⟦2-char-id⟧
@@ -13852,8 +13797,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40976: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40990: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40976: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40990: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 +      e: () => ⟦2-char-id⟧
@@ -13869,8 +13814,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40925: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40939: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40925: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40939: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        b: () => ⟦2-char-id⟧
      });
@@ -13887,8 +13832,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40942: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40947: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40942: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40947: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +      b: () => ⟦2-char-id⟧
@@ -13904,8 +13849,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40915: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40931: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40915: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40931: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 +      c: () => ⟦2-char-id⟧
@@ -13921,8 +13866,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40910: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40924: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40910: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40924: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        defaultVertexShaderWGSL: () => ⟦2-char-id⟧
      });
@@ -14031,8 +13976,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 314;
  export const ids = [314];
  export const modules = {
--  40957: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40966: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40957: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40966: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 +      c: () => ⟦2-char-id⟧
@@ -14048,8 +13993,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  41038: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  41044: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  41038: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  41044: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 +      d: () => ⟦2-char-id⟧
@@ -14065,8 +14010,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40917: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40933: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40917: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40933: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +      e: () => ⟦2-char-id⟧
@@ -14082,8 +14027,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40915: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40931: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40915: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40931: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 +      c: () => ⟦2-char-id⟧
@@ -14099,8 +14044,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  60131: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  60418: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  60131: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  60418: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        greasedLineVertexShaderWGSL: () => ⟦2-char-id⟧
      });
@@ -14144,8 +14089,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 315;
  export const ids = [315];
  export const modules = {
--  40925: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40939: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40925: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40939: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        b: () => ⟦2-char-id⟧
      });
@@ -14162,8 +14107,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40942: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40947: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40942: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40947: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +      b: () => ⟦2-char-id⟧
@@ -14179,8 +14124,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40915: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40931: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40915: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40931: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 +      c: () => ⟦2-char-id⟧
@@ -14196,8 +14141,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  41091: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  41103: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  41091: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  41103: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        defaultPixelShaderWGSL: () => ⟦2-char-id⟧
      });
@@ -14323,8 +14268,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 316;
  export const ids = [316];
  export const modules = {
--  40942: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40947: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40942: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40947: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +      b: () => ⟦2-char-id⟧
@@ -14340,8 +14285,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  59891: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  60197: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  59891: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  60197: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 +      c: () => ⟦2-char-id⟧
@@ -14357,8 +14302,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40915: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40931: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40915: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40931: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 +      c: () => ⟦2-char-id⟧
@@ -14391,12 +14336,12 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 317;
  export const ids = [317];
  export const modules = {
--  41050: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41050: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 -    });
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
-+  41055: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41055: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      e: () => ⟦2-char-id⟧
 +    });
@@ -14409,7 +14354,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40953: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40953: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 -    });
@@ -14420,7 +14365,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40958: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40958: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      b: () => ⟦2-char-id⟧
 +    });
@@ -14433,7 +14378,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40948: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40948: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 -    });
@@ -14444,7 +14389,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40949: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40949: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      d: () => ⟦2-char-id⟧
 +    });
@@ -14457,7 +14402,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  41044: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41044: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 -    });
@@ -14468,7 +14413,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41053: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41053: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      e: () => ⟦2-char-id⟧
 +    });
@@ -14481,7 +14426,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  41070: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41070: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 -    });
@@ -14492,7 +14437,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41075: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41075: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      e: () => ⟦2-char-id⟧
 +    });
@@ -14505,7 +14450,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  41073: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41073: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 -    });
@@ -14516,7 +14461,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41078: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41078: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      c: () => ⟦2-char-id⟧
 +    });
@@ -14529,7 +14474,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40981: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40981: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 -    });
@@ -14540,7 +14485,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40994: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40994: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      e: () => ⟦2-char-id⟧
 +    });
@@ -14553,7 +14498,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  59896: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  59896: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 -    });
@@ -14564,7 +14509,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  60203: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  60203: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      d: () => ⟦2-char-id⟧
 +    });
@@ -14577,7 +14522,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40957: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40957: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 -    });
@@ -14588,7 +14533,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40966: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40966: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      c: () => ⟦2-char-id⟧
 +    });
@@ -14601,7 +14546,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  41038: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41038: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 -    });
@@ -14612,7 +14557,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41044: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41044: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      d: () => ⟦2-char-id⟧
 +    });
@@ -14625,7 +14570,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  41032: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41032: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 -    });
@@ -14636,7 +14581,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41042: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41042: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      c: () => ⟦2-char-id⟧
 +    });
@@ -14649,7 +14594,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  41e3: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41e3: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 -    });
@@ -14660,7 +14605,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41018: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41018: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      c: () => ⟦2-char-id⟧
 +    });
@@ -14673,14 +14618,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  41024: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41024: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
 +    const ⟦2-char-id⟧ = {
 +      name: ⟦2-char-id⟧,
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41033: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41033: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        b: () => ⟦2-char-id⟧
      });
@@ -14694,14 +14639,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40998: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40998: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
 +    const ⟦2-char-id⟧ = {
 +      name: ⟦2-char-id⟧,
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41012: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41012: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        b: () => ⟦2-char-id⟧
      });
@@ -14715,7 +14660,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40915: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40915: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 -    });
@@ -14726,7 +14671,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40931: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40931: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      c: () => ⟦2-char-id⟧
 +    });
@@ -14739,14 +14684,14 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  60089: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  60089: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
 +    const ⟦2-char-id⟧ = {
 +      name: ⟦2-char-id⟧,
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  60371: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  60371: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        geometryVertexShaderWGSL: () => ⟦2-char-id⟧
      });
@@ -14811,12 +14756,12 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 318;
  export const ids = [318];
  export const modules = {
--  41050: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41050: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 -    });
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
-+  41055: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41055: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      e: () => ⟦2-char-id⟧
 +    });
@@ -14829,7 +14774,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40953: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40953: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 -    });
@@ -14840,7 +14785,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40958: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40958: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      b: () => ⟦2-char-id⟧
 +    });
@@ -14853,7 +14798,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40948: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40948: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 -    });
@@ -14864,7 +14809,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40949: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40949: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      d: () => ⟦2-char-id⟧
 +    });
@@ -14877,7 +14822,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  41044: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41044: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 -    });
@@ -14888,7 +14833,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41053: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41053: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      e: () => ⟦2-char-id⟧
 +    });
@@ -14901,7 +14846,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  41073: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41073: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 -    });
@@ -14912,7 +14857,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41078: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41078: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      c: () => ⟦2-char-id⟧
 +    });
@@ -14925,7 +14870,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40981: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40981: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 -    });
@@ -14936,7 +14881,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40994: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40994: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      e: () => ⟦2-char-id⟧
 +    });
@@ -14949,7 +14894,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  41077: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41077: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 -    });
@@ -14960,7 +14905,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41083: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41083: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      d: () => ⟦2-char-id⟧
 +    });
@@ -14973,7 +14918,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40987: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40987: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 -    });
@@ -14984,7 +14929,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41001: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41001: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      d: () => ⟦2-char-id⟧
 +    });
@@ -14997,7 +14942,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40957: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40957: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 -    });
@@ -15008,7 +14953,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40966: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40966: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      c: () => ⟦2-char-id⟧
 +    });
@@ -15021,7 +14966,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  41038: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41038: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 -    });
@@ -15032,7 +14977,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41044: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41044: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      d: () => ⟦2-char-id⟧
 +    });
@@ -15045,7 +14990,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40989: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40989: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 -    });
@@ -15056,7 +15001,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41005: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41005: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      e: () => ⟦2-char-id⟧
 +    });
@@ -15069,7 +15014,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  41002: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41002: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 -    });
@@ -15080,7 +15025,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41020: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41020: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      e: () => ⟦2-char-id⟧
 +    });
@@ -15093,7 +15038,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  41089: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41089: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 -    });
@@ -15104,7 +15049,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41097: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41097: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      b: () => ⟦2-char-id⟧
 +    });
@@ -15117,7 +15062,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40967: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40967: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 -    });
@@ -15128,7 +15073,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40980: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40980: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      d: () => ⟦2-char-id⟧
 +    });
@@ -15141,7 +15086,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40917: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40917: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 -    });
@@ -15152,7 +15097,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40933: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40933: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      e: () => ⟦2-char-id⟧
 +    });
@@ -15165,7 +15110,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  41032: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41032: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 -    });
@@ -15176,7 +15121,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41042: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41042: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      c: () => ⟦2-char-id⟧
 +    });
@@ -15189,7 +15134,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  41e3: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41e3: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 -    });
@@ -15200,7 +15145,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41018: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41018: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      c: () => ⟦2-char-id⟧
 +    });
@@ -15213,7 +15158,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  41024: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41024: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 -    });
@@ -15224,7 +15169,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41033: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41033: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      b: () => ⟦2-char-id⟧
 +    });
@@ -15237,7 +15182,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40998: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40998: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 -    });
@@ -15248,7 +15193,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41012: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41012: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      b: () => ⟦2-char-id⟧
 +    });
@@ -15261,7 +15206,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  41059: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41059: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 -    });
@@ -15272,7 +15217,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41063: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41063: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      c: () => ⟦2-char-id⟧
 +    });
@@ -15285,7 +15230,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40962: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40962: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 -    });
@@ -15296,7 +15241,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40975: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40975: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      d: () => ⟦2-char-id⟧
 +    });
@@ -15309,7 +15254,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40970: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40970: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 -    });
@@ -15320,7 +15265,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40987: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40987: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      b: () => ⟦2-char-id⟧
 +    });
@@ -15333,7 +15278,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  41066: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41066: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 -    });
@@ -15344,7 +15289,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41070: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41070: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      b: () => ⟦2-char-id⟧
 +    });
@@ -15357,7 +15302,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  41080: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41080: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 -    });
@@ -15368,7 +15313,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41088: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41088: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      c: () => ⟦2-char-id⟧
 +    });
@@ -15381,7 +15326,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40933: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40933: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 -    });
@@ -15392,7 +15337,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40944: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40944: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      e: () => ⟦2-char-id⟧
 +    });
@@ -15405,7 +15350,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  41061: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41061: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 -    });
@@ -15416,7 +15361,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41067: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41067: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      e: () => ⟦2-char-id⟧
 +    });
@@ -15429,7 +15374,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  41082: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41082: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 -    });
@@ -15440,7 +15385,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41095: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41095: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      d: () => ⟦2-char-id⟧
 +    });
@@ -15453,7 +15398,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  41008: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41008: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 -    });
@@ -15464,7 +15409,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41028: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41028: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      d: () => ⟦2-char-id⟧
 +    });
@@ -15477,7 +15422,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  41015: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41015: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 -    });
@@ -15488,7 +15433,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41030: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41030: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      e: () => ⟦2-char-id⟧
 +    });
@@ -15519,12 +15464,12 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 319;
  export const ids = [319];
  export const modules = {
--  41169: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41169: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 -    });
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
-+  41195: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41195: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      d: () => ⟦2-char-id⟧
 +    });
@@ -15537,7 +15482,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  41159: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41159: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 -    });
@@ -15548,7 +15493,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41180: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41180: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      c: () => ⟦2-char-id⟧
 +    });
@@ -15561,7 +15506,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  41121: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41121: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 -    });
@@ -15572,7 +15517,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41132: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41132: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      e: () => ⟦2-char-id⟧
 +    });
@@ -15585,7 +15530,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  41180: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41180: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 -    });
@@ -15596,7 +15541,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41205: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41205: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      b: () => ⟦2-char-id⟧
 +    });
@@ -15609,7 +15554,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  41190: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41190: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 -    });
@@ -15620,7 +15565,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41223: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41223: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      d: () => ⟦2-char-id⟧
 +    });
@@ -15633,7 +15578,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  41164: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41164: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 -    });
@@ -15644,7 +15589,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41189: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41189: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      d: () => ⟦2-char-id⟧
 +    });
@@ -15657,7 +15602,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  41141: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41141: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 -    });
@@ -15668,7 +15613,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41151: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41151: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      d: () => ⟦2-char-id⟧
 +    });
@@ -15681,7 +15626,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  41146: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41146: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 -    });
@@ -15692,7 +15637,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41153: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41153: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      e: () => ⟦2-char-id⟧
 +    });
@@ -15705,7 +15650,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  41117: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41117: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 -    });
@@ -15716,7 +15661,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41122: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41122: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      e: () => ⟦2-char-id⟧
 +    });
@@ -15729,7 +15674,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  41002: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41002: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 -    });
@@ -15740,7 +15685,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41020: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41020: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      e: () => ⟦2-char-id⟧
 +    });
@@ -15753,7 +15698,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  41188: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41188: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 -    });
@@ -15764,7 +15709,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41219: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41219: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      d: () => ⟦2-char-id⟧
 +    });
@@ -15777,7 +15722,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  41119: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41119: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 -    });
@@ -15788,7 +15733,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41126: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41126: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      b: () => ⟦2-char-id⟧
 +    });
@@ -15801,7 +15746,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40967: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40967: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 -    });
@@ -15812,7 +15757,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40980: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40980: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      d: () => ⟦2-char-id⟧
 +    });
@@ -15825,7 +15770,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  41199: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41199: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 -    });
@@ -15836,7 +15781,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41225: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41225: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      c: () => ⟦2-char-id⟧
 +    });
@@ -15849,7 +15794,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  40917: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  40917: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 -    });
@@ -15860,7 +15805,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  40933: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  40933: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      e: () => ⟦2-char-id⟧
 +    });
@@ -15873,7 +15818,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  41097: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41097: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 -    });
@@ -15884,7 +15829,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41108: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41108: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      d: () => ⟦2-char-id⟧
 +    });
@@ -15897,7 +15842,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  41112: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41112: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 -    });
@@ -15908,7 +15853,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41117: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41117: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      c: () => ⟦2-char-id⟧
 +    });
@@ -15921,7 +15866,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  41202: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41202: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 -    });
@@ -15932,7 +15877,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41229: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41229: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      c: () => ⟦2-char-id⟧
 +    });
@@ -15945,7 +15890,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  41104: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41104: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 -    });
@@ -15957,7 +15902,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41115: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41115: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      b: () => ⟦2-char-id⟧
 +    });
@@ -15971,7 +15916,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  41134: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41134: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 -    });
@@ -15982,7 +15927,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41149: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41149: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      e: () => ⟦2-char-id⟧
 +    });
@@ -15995,7 +15940,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  41130: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41130: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 -    });
@@ -16006,7 +15951,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41147: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41147: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      e: () => ⟦2-char-id⟧
 +    });
@@ -16019,7 +15964,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  41124: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41124: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 -    });
@@ -16030,7 +15975,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41138: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41138: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      d: () => ⟦2-char-id⟧
 +    });
@@ -16043,7 +15988,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -      shader: ⟦2-char-id⟧
 -    }
 -  },
--  41151: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
+-  41151: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 -    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 -    });
@@ -16054,7 +15999,7 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 +      shader: ⟦2-char-id⟧
 +    }
 +  },
-+  41157: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
++  41157: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
 +    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      d: () => ⟦2-char-id⟧
 +    });
@@ -16085,8 +16030,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 320;
  export const ids = [320];
  export const modules = {
--  41169: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  41195: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  41169: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  41195: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        d: () => ⟦2-char-id⟧
      });
@@ -16101,8 +16046,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  41159: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  41180: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  41159: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  41180: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 +      c: () => ⟦2-char-id⟧
@@ -16118,8 +16063,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  41190: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  41223: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  41190: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  41223: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 +      d: () => ⟦2-char-id⟧
@@ -16135,8 +16080,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  41164: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  41189: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  41164: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  41189: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +      d: () => ⟦2-char-id⟧
@@ -16152,8 +16097,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40942: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40947: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40942: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40947: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +      b: () => ⟦2-char-id⟧
@@ -16169,8 +16114,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  41141: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  41151: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  41141: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  41151: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +      d: () => ⟦2-char-id⟧
@@ -16186,8 +16131,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  41146: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  41153: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  41146: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  41153: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 +      e: () => ⟦2-char-id⟧
@@ -16203,8 +16148,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  41002: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  41020: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  41002: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  41020: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 +      e: () => ⟦2-char-id⟧
@@ -16220,8 +16165,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  41188: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  41219: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  41188: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  41219: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 +      d: () => ⟦2-char-id⟧
@@ -16237,8 +16182,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  41199: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  41225: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  41199: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  41225: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 +      c: () => ⟦2-char-id⟧
@@ -16254,8 +16199,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  41097: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  41108: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  41097: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  41108: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 +      d: () => ⟦2-char-id⟧
@@ -16271,8 +16216,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  41104: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  41115: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  41104: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  41115: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 +      b: () => ⟦2-char-id⟧
@@ -16290,8 +16235,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  59437: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  59765: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  59437: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  59765: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        particlesPixelShaderWGSL: () => ⟦2-char-id⟧
      });
@@ -16359,8 +16304,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 321;
  export const ids = [321];
  export const modules = {
--  41169: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  41195: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  41169: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  41195: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        d: () => ⟦2-char-id⟧
      });
@@ -16375,8 +16320,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  41159: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  41180: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  41159: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  41180: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 +      c: () => ⟦2-char-id⟧
@@ -16392,8 +16337,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  41190: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  41223: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  41190: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  41223: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
 +      d: () => ⟦2-char-id⟧
@@ -16409,8 +16354,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  41164: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  41189: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  41164: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  41189: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +      d: () => ⟦2-char-id⟧
@@ -16426,8 +16371,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40942: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40947: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40942: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40947: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +      b: () => ⟦2-char-id⟧
@@ -16443,8 +16388,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  41002: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  41020: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  41002: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  41020: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 +      e: () => ⟦2-char-id⟧
@@ -16460,8 +16405,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  41188: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  41219: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  41188: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  41219: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 +      d: () => ⟦2-char-id⟧
@@ -16477,8 +16422,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  59470: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  59790: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  59470: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  59790: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        skyPixelShaderWGSL: () => ⟦2-char-id⟧
      });
@@ -16536,8 +16481,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 322;
  export const ids = [322];
  export const modules = {
--  40942: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40947: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40942: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40947: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +      b: () => ⟦2-char-id⟧
@@ -16553,8 +16498,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  59636: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  59938: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  59636: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  59938: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        rgbdDecodePixelShaderWGSL: () => ⟦2-char-id⟧
      });
@@ -16592,8 +16537,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
  export const ⟦2-char-id⟧ = 323;
  export const ids = [323];
  export const modules = {
--  40942: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40947: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40942: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40947: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      c: () => ⟦2-char-id⟧
 +      b: () => ⟦2-char-id⟧
@@ -16609,8 +16554,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  59654: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  59964: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  59654: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  59964: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        rgbdEncodePixelShaderWGSL: () => ⟦2-char-id⟧
      });
@@ -16636,20 +16581,20 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 </details>
 
 <details>
-<summary><code>bundles/staging.bloxd.io/chunks/js/324.js</code> · modified · +57 / -57</summary>
+<summary><code>bundles/staging.bloxd.io/chunks/js/324.js</code> · modified · +115 / -115</summary>
 
 JavaScript comparison masks only two-character identifiers. Strings, comments, member properties, object keys, and all other source changes remain visible.
 
 <details>
-<summary>Hunk 1 · Change · +57 / -57</summary>
+<summary>Hunk 1 · Change · +90 / -12</summary>
 
 ```diff
-@@ -1,170 +1,170 @@
+@@ -1,40 +1,118 @@
  export const ⟦2-char-id⟧ = 324;
  export const ids = [324];
  export const modules = {
--  41050: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  41055: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  41050: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  41055: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 +      e: () => ⟦2-char-id⟧
@@ -16665,8 +16610,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40953: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40958: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40953: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40958: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      d: () => ⟦2-char-id⟧
 +      b: () => ⟦2-char-id⟧
@@ -16682,8 +16627,8 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        shader: ⟦2-char-id⟧
      }
    },
--  40948: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40949: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  40948: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  40949: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
 +      d: () => ⟦2-char-id⟧
@@ -16694,147 +16639,213 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
        ⟦2-char-id⟧ = "#if NUM_BONE_INFLUENCERS>0\n#ifndef USE_VERTEX_PULLING\nattribute matricesIndices : vec4f;attribute matricesWeights : vec4f;\n#if NUM_BONE_INFLUENCERS>4\nattribute matricesIndicesExtra : vec4f;attribute matricesWeightsExtra : vec4f;\n#endif\n#endif\n#ifndef BAKED_VERTEX_ANIMATION_TEXTURE\n#ifdef BONETEXTURE\nvar boneSampler : texture_2d<f32>;uniform boneTextureInfo : vec2f;\n#else\nuniform mBones : array<mat4x4f,BonesPerMesh>;\n#endif\n#ifdef BONES_VELOCITY_ENABLED\nuniform mPreviousBones : array<mat4x4f,BonesPerMesh>;\n#endif\n#ifdef BONETEXTURE\nfn readMatrixFromRawSampler(smp : texture_2d<f32>,index : f32)->mat4x4f\n{let offset=i32(index)*4; \nlet textureWidth=i32(uniforms.boneTextureInfo.x);let y=offset/textureWidth;let x=offset % textureWidth;let m0=textureLoad(smp,vec2<i32>(x+0,y),0);let m1=textureLoad(smp,vec2<i32>(x+1,y),0);let m2=textureLoad(smp,vec2<i32>(x+2,y),0);let m3=textureLoad(smp,vec2<i32>(x+3,y),0);return mat4x4f(m0,m1,m2,m3);}\n#endif\n#endif\n#endif\n";
 -    ⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
 +    ⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-     const ⟦2-char-id⟧ = {
-       name: ⟦2-char-id⟧,
-       shader: ⟦2-char-id⟧
-     }
-   },
--  41044: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  41053: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
-     ⟦2-char-id⟧.d(⟦2-char-id⟧, {
-       e: () => ⟦2-char-id⟧
-     });
--    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
-+    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
-     const ⟦2-char-id⟧ = "bonesVertex",
-       ⟦2-char-id⟧ = "#ifndef BAKED_VERTEX_ANIMATION_TEXTURE\n#if NUM_BONE_INFLUENCERS>0\nvar influence : mat4x4<f32>;\n#ifdef BONETEXTURE\ninfluence=readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndices[0])*vertexInputs.matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\ninfluence=influence+readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndices[1])*vertexInputs.matricesWeights[1];\n#endif \n#if NUM_BONE_INFLUENCERS>2\ninfluence=influence+readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndices[2])*vertexInputs.matricesWeights[2];\n#endif \n#if NUM_BONE_INFLUENCERS>3\ninfluence=influence+readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndices[3])*vertexInputs.matricesWeights[3];\n#endif \n#if NUM_BONE_INFLUENCERS>4\ninfluence=influence+readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndicesExtra[0])*vertexInputs.matricesWeightsExtra[0];\n#endif \n#if NUM_BONE_INFLUENCERS>5\ninfluence=influence+readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndicesExtra[1])*vertexInputs.matricesWeightsExtra[1];\n#endif \n#if NUM_BONE_INFLUENCERS>6\ninfluence=influence+readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndicesExtra[2])*vertexInputs.matricesWeightsExtra[2];\n#endif \n#if NUM_BONE_INFLUENCERS>7\ninfluence=influence+readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndicesExtra[3])*vertexInputs.matricesWeightsExtra[3];\n#endif \n#else \ninfluence=uniforms.mBones[i32(vertexInputs.matricesIndices[0])]*vertexInputs.matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\ninfluence=influence+uniforms.mBones[i32(vertexInputs.matricesIndices[1])]*vertexInputs.matricesWeights[1];\n#endif \n#if NUM_BONE_INFLUENCERS>2\ninfluence=influence+uniforms.mBones[i32(vertexInputs.matricesIndices[2])]*vertexInputs.matricesWeights[2];\n#endif \n#if NUM_BONE_INFLUENCERS>3\ninfluence=influence+uniforms.mBones[i32(vertexInputs.matricesIndices[3])]*vertexInputs.matricesWeights[3];\n#endif \n#if NUM_BONE_INFLUENCERS>4\ninfluence=influence+uniforms.mBones[i32(vertexInputs.matricesIndicesExtra[0])]*vertexInputs.matricesWeightsExtra[0];\n#endif \n#if NUM_BONE_INFLUENCERS>5\ninfluence=influence+uniforms.mBones[i32(vertexInputs.matricesIndicesExtra[1])]*vertexInputs.matricesWeightsExtra[1];\n#endif \n#if NUM_BONE_INFLUENCERS>6\ninfluence=influence+uniforms.mBones[i32(vertexInputs.matricesIndicesExtra[2])]*vertexInputs.matricesWeightsExtra[2];\n#endif \n#if NUM_BONE_INFLUENCERS>7\ninfluence=influence+uniforms.mBones[i32(vertexInputs.matricesIndicesExtra[3])]*vertexInputs.matricesWeightsExtra[3];\n#endif \n#endif\nfinalWorld=finalWorld*influence;\n#endif\n#endif\n";
--    ⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-+    ⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-     const ⟦2-char-id⟧ = {
-       name: ⟦2-char-id⟧,
-       shader: ⟦2-char-id⟧
-     }
-   },
--  41073: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  41078: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
-     ⟦2-char-id⟧.d(⟦2-char-id⟧, {
--      d: () => ⟦2-char-id⟧
-+      c: () => ⟦2-char-id⟧
-     });
--    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
-+    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
-     const ⟦2-char-id⟧ = "clipPlaneVertex",
-       ⟦2-char-id⟧ = "#ifdef CLIPPLANE\nvertexOutputs.fClipDistance=dot(worldPos,uniforms.vClipPlane);\n#endif\n#ifdef CLIPPLANE2\nvertexOutputs.fClipDistance2=dot(worldPos,uniforms.vClipPlane2);\n#endif\n#ifdef CLIPPLANE3\nvertexOutputs.fClipDistance3=dot(worldPos,uniforms.vClipPlane3);\n#endif\n#ifdef CLIPPLANE4\nvertexOutputs.fClipDistance4=dot(worldPos,uniforms.vClipPlane4);\n#endif\n#ifdef CLIPPLANE5\nvertexOutputs.fClipDistance5=dot(worldPos,uniforms.vClipPlane5);\n#endif\n#ifdef CLIPPLANE6\nvertexOutputs.fClipDistance6=dot(worldPos,uniforms.vClipPlane6);\n#endif\n";
--    ⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-+    ⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-     const ⟦2-char-id⟧ = {
-       name: ⟦2-char-id⟧,
-       shader: ⟦2-char-id⟧
-     }
-   },
--  40981: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40994: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
-     ⟦2-char-id⟧.d(⟦2-char-id⟧, {
--      d: () => ⟦2-char-id⟧
++    const ⟦2-char-id⟧ = {
++      name: ⟦2-char-id⟧,
++      shader: ⟦2-char-id⟧
++    }
++  },
++  41053: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 +      e: () => ⟦2-char-id⟧
-     });
--    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
++    });
 +    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
-     const ⟦2-char-id⟧ = "clipPlaneVertexDeclaration",
-       ⟦2-char-id⟧ = "#ifdef CLIPPLANE\nuniform vClipPlane: vec4<f32>;varying fClipDistance: f32;\n#endif\n#ifdef CLIPPLANE2\nuniform vClipPlane2: vec4<f32>;varying fClipDistance2: f32;\n#endif\n#ifdef CLIPPLANE3\nuniform vClipPlane3: vec4<f32>;varying fClipDistance3: f32;\n#endif\n#ifdef CLIPPLANE4\nuniform vClipPlane4: vec4<f32>;varying fClipDistance4: f32;\n#endif\n#ifdef CLIPPLANE5\nuniform vClipPlane5: vec4<f32>;varying fClipDistance5: f32;\n#endif\n#ifdef CLIPPLANE6\nuniform vClipPlane6: vec4<f32>;varying fClipDistance6: f32;\n#endif\n";
--    ⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
++    const ⟦2-char-id⟧ = "bonesVertex",
++      ⟦2-char-id⟧ = "#ifndef BAKED_VERTEX_ANIMATION_TEXTURE\n#if NUM_BONE_INFLUENCERS>0\nvar influence : mat4x4<f32>;\n#ifdef BONETEXTURE\ninfluence=readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndices[0])*vertexInputs.matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\ninfluence=influence+readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndices[1])*vertexInputs.matricesWeights[1];\n#endif \n#if NUM_BONE_INFLUENCERS>2\ninfluence=influence+readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndices[2])*vertexInputs.matricesWeights[2];\n#endif \n#if NUM_BONE_INFLUENCERS>3\ninfluence=influence+readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndices[3])*vertexInputs.matricesWeights[3];\n#endif \n#if NUM_BONE_INFLUENCERS>4\ninfluence=influence+readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndicesExtra[0])*vertexInputs.matricesWeightsExtra[0];\n#endif \n#if NUM_BONE_INFLUENCERS>5\ninfluence=influence+readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndicesExtra[1])*vertexInputs.matricesWeightsExtra[1];\n#endif \n#if NUM_BONE_INFLUENCERS>6\ninfluence=influence+readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndicesExtra[2])*vertexInputs.matricesWeightsExtra[2];\n#endif \n#if NUM_BONE_INFLUENCERS>7\ninfluence=influence+readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndicesExtra[3])*vertexInputs.matricesWeightsExtra[3];\n#endif \n#else \ninfluence=uniforms.mBones[i32(vertexInputs.matricesIndices[0])]*vertexInputs.matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\ninfluence=influence+uniforms.mBones[i32(vertexInputs.matricesIndices[1])]*vertexInputs.matricesWeights[1];\n#endif \n#if NUM_BONE_INFLUENCERS>2\ninfluence=influence+uniforms.mBones[i32(vertexInputs.matricesIndices[2])]*vertexInputs.matricesWeights[2];\n#endif \n#if NUM_BONE_INFLUENCERS>3\ninfluence=influence+uniforms.mBones[i32(vertexInputs.matricesIndices[3])]*vertexInputs.matricesWeights[3];\n#endif \n#if NUM_BONE_INFLUENCERS>4\ninfluence=influence+uniforms.mBones[i32(vertexInputs.matricesIndicesExtra[0])]*vertexInputs.matricesWeightsExtra[0];\n#endif \n#if NUM_BONE_INFLUENCERS>5\ninfluence=influence+uniforms.mBones[i32(vertexInputs.matricesIndicesExtra[1])]*vertexInputs.matricesWeightsExtra[1];\n#endif \n#if NUM_BONE_INFLUENCERS>6\ninfluence=influence+uniforms.mBones[i32(vertexInputs.matricesIndicesExtra[2])]*vertexInputs.matricesWeightsExtra[2];\n#endif \n#if NUM_BONE_INFLUENCERS>7\ninfluence=influence+uniforms.mBones[i32(vertexInputs.matricesIndicesExtra[3])]*vertexInputs.matricesWeightsExtra[3];\n#endif \n#endif\nfinalWorld=finalWorld*influence;\n#endif\n#endif\n";
++    ⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
++    const ⟦2-char-id⟧ = {
++      name: ⟦2-char-id⟧,
++      shader: ⟦2-char-id⟧
++    }
++  },
++  41078: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
++      c: () => ⟦2-char-id⟧
++    });
++    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
++    const ⟦2-char-id⟧ = "clipPlaneVertex",
++      ⟦2-char-id⟧ = "#ifdef CLIPPLANE\nvertexOutputs.fClipDistance=dot(worldPos,uniforms.vClipPlane);\n#endif\n#ifdef CLIPPLANE2\nvertexOutputs.fClipDistance2=dot(worldPos,uniforms.vClipPlane2);\n#endif\n#ifdef CLIPPLANE3\nvertexOutputs.fClipDistance3=dot(worldPos,uniforms.vClipPlane3);\n#endif\n#ifdef CLIPPLANE4\nvertexOutputs.fClipDistance4=dot(worldPos,uniforms.vClipPlane4);\n#endif\n#ifdef CLIPPLANE5\nvertexOutputs.fClipDistance5=dot(worldPos,uniforms.vClipPlane5);\n#endif\n#ifdef CLIPPLANE6\nvertexOutputs.fClipDistance6=dot(worldPos,uniforms.vClipPlane6);\n#endif\n";
++    ⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
++    const ⟦2-char-id⟧ = {
++      name: ⟦2-char-id⟧,
++      shader: ⟦2-char-id⟧
++    }
++  },
++  40994: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
++      e: () => ⟦2-char-id⟧
++    });
++    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
++    const ⟦2-char-id⟧ = "clipPlaneVertexDeclaration",
++      ⟦2-char-id⟧ = "#ifdef CLIPPLANE\nuniform vClipPlane: vec4<f32>;varying fClipDistance: f32;\n#endif\n#ifdef CLIPPLANE2\nuniform vClipPlane2: vec4<f32>;varying fClipDistance2: f32;\n#endif\n#ifdef CLIPPLANE3\nuniform vClipPlane3: vec4<f32>;varying fClipDistance3: f32;\n#endif\n#ifdef CLIPPLANE4\nuniform vClipPlane4: vec4<f32>;varying fClipDistance4: f32;\n#endif\n#ifdef CLIPPLANE5\nuniform vClipPlane5: vec4<f32>;varying fClipDistance5: f32;\n#endif\n#ifdef CLIPPLANE6\nuniform vClipPlane6: vec4<f32>;varying fClipDistance6: f32;\n#endif\n";
++    ⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
++    const ⟦2-char-id⟧ = {
++      name: ⟦2-char-id⟧,
++      shader: ⟦2-char-id⟧
++    }
++  },
++  41083: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
++      d: () => ⟦2-char-id⟧
++    });
++    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
++    const ⟦2-char-id⟧ = "fogVertex",
++      ⟦2-char-id⟧ = "#ifdef FOG\n#ifdef SCENE_UBO\nvertexOutputs.vFogDistance=(scene.view*worldPos).xyz;\n#else\nvertexOutputs.vFogDistance=(uniforms.view*worldPos).xyz;\n#endif\n#endif\n";
++    ⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
++    const ⟦2-char-id⟧ = {
++      name: ⟦2-char-id⟧,
++      shader: ⟦2-char-id⟧
++    }
++  },
++  41001: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
++      d: () => ⟦2-char-id⟧
++    });
++    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
++    const ⟦2-char-id⟧ = "fogVertexDeclaration",
++      ⟦2-char-id⟧ = "#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n";
++    ⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
++    const ⟦2-char-id⟧ = {
++      name: ⟦2-char-id⟧,
++      shader: ⟦2-char-id⟧
++    }
++  },
++  40966: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
++      c: () => ⟦2-char-id⟧
++    });
++    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
++    const ⟦2-char-id⟧ = "instancesDeclaration",
++      ⟦2-char-id⟧ = "#ifdef INSTANCES\nattribute world0 : vec4<f32>;attribute world1 : vec4<f32>;attribute world2 : vec4<f32>;attribute world3 : vec4<f32>;\n#ifdef INSTANCESCOLOR\nattribute instanceColor : vec4<f32>;\n#endif\n#if defined(THIN_INSTANCES) && !defined(WORLD_UBO)\nuniform world : mat4x4<f32>;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nattribute previousWorld0 : vec4<f32>;attribute previousWorld1 : vec4<f32>;attribute previousWorld2 : vec4<f32>;attribute previousWorld3 : vec4<f32>;\n#ifdef THIN_INSTANCES\nuniform previousWorld : mat4x4<f32>;\n#endif\n#endif\n#else\n#if !defined(WORLD_UBO)\nuniform world : mat4x4<f32>;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nuniform previousWorld : mat4x4<f32>;\n#endif\n#endif\n";
 +    ⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
      const ⟦2-char-id⟧ = {
        name: ⟦2-char-id⟧,
        shader: ⟦2-char-id⟧
-     }
+```
+
+</details>
+
+<details>
+<summary>Hunk 2 · Change · +25 / -103</summary>
+
+```diff
+@@ -42,129 +120,51 @@
    },
--  41077: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  41083: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+   41044: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
--      b: () => ⟦2-char-id⟧
+-      e: () => ⟦2-char-id⟧
 +      d: () => ⟦2-char-id⟧
      });
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
-+    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
-     const ⟦2-char-id⟧ = "fogVertex",
-       ⟦2-char-id⟧ = "#ifdef FOG\n#ifdef SCENE_UBO\nvertexOutputs.vFogDistance=(scene.view*worldPos).xyz;\n#else\nvertexOutputs.vFogDistance=(uniforms.view*worldPos).xyz;\n#endif\n#endif\n";
+-    const ⟦2-char-id⟧ = "bonesVertex",
+-      ⟦2-char-id⟧ = "#ifndef BAKED_VERTEX_ANIMATION_TEXTURE\n#if NUM_BONE_INFLUENCERS>0\nvar influence : mat4x4<f32>;\n#ifdef BONETEXTURE\ninfluence=readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndices[0])*vertexInputs.matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\ninfluence=influence+readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndices[1])*vertexInputs.matricesWeights[1];\n#endif \n#if NUM_BONE_INFLUENCERS>2\ninfluence=influence+readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndices[2])*vertexInputs.matricesWeights[2];\n#endif \n#if NUM_BONE_INFLUENCERS>3\ninfluence=influence+readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndices[3])*vertexInputs.matricesWeights[3];\n#endif \n#if NUM_BONE_INFLUENCERS>4\ninfluence=influence+readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndicesExtra[0])*vertexInputs.matricesWeightsExtra[0];\n#endif \n#if NUM_BONE_INFLUENCERS>5\ninfluence=influence+readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndicesExtra[1])*vertexInputs.matricesWeightsExtra[1];\n#endif \n#if NUM_BONE_INFLUENCERS>6\ninfluence=influence+readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndicesExtra[2])*vertexInputs.matricesWeightsExtra[2];\n#endif \n#if NUM_BONE_INFLUENCERS>7\ninfluence=influence+readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndicesExtra[3])*vertexInputs.matricesWeightsExtra[3];\n#endif \n#else \ninfluence=uniforms.mBones[i32(vertexInputs.matricesIndices[0])]*vertexInputs.matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\ninfluence=influence+uniforms.mBones[i32(vertexInputs.matricesIndices[1])]*vertexInputs.matricesWeights[1];\n#endif \n#if NUM_BONE_INFLUENCERS>2\ninfluence=influence+uniforms.mBones[i32(vertexInputs.matricesIndices[2])]*vertexInputs.matricesWeights[2];\n#endif \n#if NUM_BONE_INFLUENCERS>3\ninfluence=influence+uniforms.mBones[i32(vertexInputs.matricesIndices[3])]*vertexInputs.matricesWeights[3];\n#endif \n#if NUM_BONE_INFLUENCERS>4\ninfluence=influence+uniforms.mBones[i32(vertexInputs.matricesIndicesExtra[0])]*vertexInputs.matricesWeightsExtra[0];\n#endif \n#if NUM_BONE_INFLUENCERS>5\ninfluence=influence+uniforms.mBones[i32(vertexInputs.matricesIndicesExtra[1])]*vertexInputs.matricesWeightsExtra[1];\n#endif \n#if NUM_BONE_INFLUENCERS>6\ninfluence=influence+uniforms.mBones[i32(vertexInputs.matricesIndicesExtra[2])]*vertexInputs.matricesWeightsExtra[2];\n#endif \n#if NUM_BONE_INFLUENCERS>7\ninfluence=influence+uniforms.mBones[i32(vertexInputs.matricesIndicesExtra[3])]*vertexInputs.matricesWeightsExtra[3];\n#endif \n#endif\nfinalWorld=finalWorld*influence;\n#endif\n#endif\n";
 -    ⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
++    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
++    const ⟦2-char-id⟧ = "instancesVertex",
++      ⟦2-char-id⟧ = "#ifdef INSTANCES\nvar finalWorld=mat4x4<f32>(vertexInputs.world0,vertexInputs.world1,vertexInputs.world2,vertexInputs.world3);\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nvar finalPreviousWorld=mat4x4<f32>(\nvertexInputs.previousWorld0,vertexInputs.previousWorld1,\nvertexInputs.previousWorld2,vertexInputs.previousWorld3);\n#endif\n#ifdef THIN_INSTANCES\n#if !defined(WORLD_UBO)\nfinalWorld=uniforms.world*finalWorld;\n#else\nfinalWorld=mesh.world*finalWorld;\n#endif\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nfinalPreviousWorld=uniforms.previousWorld*finalPreviousWorld;\n#endif\n#endif\n#else\n#if !defined(WORLD_UBO)\nvar finalWorld=uniforms.world;\n#else\nvar finalWorld=mesh.world;\n#endif\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nvar finalPreviousWorld=uniforms.previousWorld;\n#endif\n#endif\n";
 +    ⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
      const ⟦2-char-id⟧ = {
        name: ⟦2-char-id⟧,
        shader: ⟦2-char-id⟧
      }
    },
--  40987: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  41001: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-  41073: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  41095: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        d: () => ⟦2-char-id⟧
      });
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
-+    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
-     const ⟦2-char-id⟧ = "fogVertexDeclaration",
-       ⟦2-char-id⟧ = "#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n";
+-    const ⟦2-char-id⟧ = "clipPlaneVertex",
+-      ⟦2-char-id⟧ = "#ifdef CLIPPLANE\nvertexOutputs.fClipDistance=dot(worldPos,uniforms.vClipPlane);\n#endif\n#ifdef CLIPPLANE2\nvertexOutputs.fClipDistance2=dot(worldPos,uniforms.vClipPlane2);\n#endif\n#ifdef CLIPPLANE3\nvertexOutputs.fClipDistance3=dot(worldPos,uniforms.vClipPlane3);\n#endif\n#ifdef CLIPPLANE4\nvertexOutputs.fClipDistance4=dot(worldPos,uniforms.vClipPlane4);\n#endif\n#ifdef CLIPPLANE5\nvertexOutputs.fClipDistance5=dot(worldPos,uniforms.vClipPlane5);\n#endif\n#ifdef CLIPPLANE6\nvertexOutputs.fClipDistance6=dot(worldPos,uniforms.vClipPlane6);\n#endif\n";
 -    ⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
++    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
++    const ⟦2-char-id⟧ = "vertexColorMixing",
++      ⟦2-char-id⟧ = "#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvertexOutputs.vColor=vec4f(1.0);\n#ifdef VERTEXCOLOR\n#ifdef VERTEXALPHA\nvertexOutputs.vColor*=colorUpdated;\n#else\nvertexOutputs.vColor=vec4f(vertexOutputs.vColor.rgb*colorUpdated.rgb,vertexOutputs.vColor.a);\n#endif\n#endif\n#ifdef INSTANCESCOLOR\nvertexOutputs.vColor*=vertexInputs.instanceColor;\n#endif\n#endif\n";
 +    ⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
      const ⟦2-char-id⟧ = {
        name: ⟦2-char-id⟧,
        shader: ⟦2-char-id⟧
      }
    },
--  40957: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40966: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
-     ⟦2-char-id⟧.d(⟦2-char-id⟧, {
+-  40981: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
+-    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
+-      d: () => ⟦2-char-id⟧
+-    });
+-    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
+-    const ⟦2-char-id⟧ = "clipPlaneVertexDeclaration",
+-      ⟦2-char-id⟧ = "#ifdef CLIPPLANE\nuniform vClipPlane: vec4<f32>;varying fClipDistance: f32;\n#endif\n#ifdef CLIPPLANE2\nuniform vClipPlane2: vec4<f32>;varying fClipDistance2: f32;\n#endif\n#ifdef CLIPPLANE3\nuniform vClipPlane3: vec4<f32>;varying fClipDistance3: f32;\n#endif\n#ifdef CLIPPLANE4\nuniform vClipPlane4: vec4<f32>;varying fClipDistance4: f32;\n#endif\n#ifdef CLIPPLANE5\nuniform vClipPlane5: vec4<f32>;varying fClipDistance5: f32;\n#endif\n#ifdef CLIPPLANE6\nuniform vClipPlane6: vec4<f32>;varying fClipDistance6: f32;\n#endif\n";
+-    ⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
+-    const ⟦2-char-id⟧ = {
+-      name: ⟦2-char-id⟧,
+-      shader: ⟦2-char-id⟧
+-    }
+-  },
+-  41077: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
+-    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
+-      b: () => ⟦2-char-id⟧
+-    });
+-    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
+-    const ⟦2-char-id⟧ = "fogVertex",
+-      ⟦2-char-id⟧ = "#ifdef FOG\n#ifdef SCENE_UBO\nvertexOutputs.vFogDistance=(scene.view*worldPos).xyz;\n#else\nvertexOutputs.vFogDistance=(uniforms.view*worldPos).xyz;\n#endif\n#endif\n";
+-    ⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
+-    const ⟦2-char-id⟧ = {
+-      name: ⟦2-char-id⟧,
+-      shader: ⟦2-char-id⟧
+-    }
+-  },
+-  40987: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
+-    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
+-      d: () => ⟦2-char-id⟧
+-    });
+-    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
+-    const ⟦2-char-id⟧ = "fogVertexDeclaration",
+-      ⟦2-char-id⟧ = "#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n";
+-    ⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
+-    const ⟦2-char-id⟧ = {
+-      name: ⟦2-char-id⟧,
+-      shader: ⟦2-char-id⟧
+-    }
+-  },
+-  40957: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
+-    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      e: () => ⟦2-char-id⟧
-+      c: () => ⟦2-char-id⟧
-     });
+-    });
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
-+    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
-     const ⟦2-char-id⟧ = "instancesDeclaration",
-       ⟦2-char-id⟧ = "#ifdef INSTANCES\nattribute world0 : vec4<f32>;attribute world1 : vec4<f32>;attribute world2 : vec4<f32>;attribute world3 : vec4<f32>;\n#ifdef INSTANCESCOLOR\nattribute instanceColor : vec4<f32>;\n#endif\n#if defined(THIN_INSTANCES) && !defined(WORLD_UBO)\nuniform world : mat4x4<f32>;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nattribute previousWorld0 : vec4<f32>;attribute previousWorld1 : vec4<f32>;attribute previousWorld2 : vec4<f32>;attribute previousWorld3 : vec4<f32>;\n#ifdef THIN_INSTANCES\nuniform previousWorld : mat4x4<f32>;\n#endif\n#endif\n#else\n#if !defined(WORLD_UBO)\nuniform world : mat4x4<f32>;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nuniform previousWorld : mat4x4<f32>;\n#endif\n#endif\n";
+-    const ⟦2-char-id⟧ = "instancesDeclaration",
+-      ⟦2-char-id⟧ = "#ifdef INSTANCES\nattribute world0 : vec4<f32>;attribute world1 : vec4<f32>;attribute world2 : vec4<f32>;attribute world3 : vec4<f32>;\n#ifdef INSTANCESCOLOR\nattribute instanceColor : vec4<f32>;\n#endif\n#if defined(THIN_INSTANCES) && !defined(WORLD_UBO)\nuniform world : mat4x4<f32>;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nattribute previousWorld0 : vec4<f32>;attribute previousWorld1 : vec4<f32>;attribute previousWorld2 : vec4<f32>;attribute previousWorld3 : vec4<f32>;\n#ifdef THIN_INSTANCES\nuniform previousWorld : mat4x4<f32>;\n#endif\n#endif\n#else\n#if !defined(WORLD_UBO)\nuniform world : mat4x4<f32>;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nuniform previousWorld : mat4x4<f32>;\n#endif\n#endif\n";
 -    ⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-+    ⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-     const ⟦2-char-id⟧ = {
-       name: ⟦2-char-id⟧,
-       shader: ⟦2-char-id⟧
-     }
-   },
--  41038: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  41044: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
-     ⟦2-char-id⟧.d(⟦2-char-id⟧, {
+-    const ⟦2-char-id⟧ = {
+-      name: ⟦2-char-id⟧,
+-      shader: ⟦2-char-id⟧
+-    }
+-  },
+-  41038: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
+-    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
-+      d: () => ⟦2-char-id⟧
-     });
+-    });
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
-+    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
-     const ⟦2-char-id⟧ = "instancesVertex",
-       ⟦2-char-id⟧ = "#ifdef INSTANCES\nvar finalWorld=mat4x4<f32>(vertexInputs.world0,vertexInputs.world1,vertexInputs.world2,vertexInputs.world3);\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nvar finalPreviousWorld=mat4x4<f32>(\nvertexInputs.previousWorld0,vertexInputs.previousWorld1,\nvertexInputs.previousWorld2,vertexInputs.previousWorld3);\n#endif\n#ifdef THIN_INSTANCES\n#if !defined(WORLD_UBO)\nfinalWorld=uniforms.world*finalWorld;\n#else\nfinalWorld=mesh.world*finalWorld;\n#endif\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nfinalPreviousWorld=uniforms.previousWorld*finalPreviousWorld;\n#endif\n#endif\n#else\n#if !defined(WORLD_UBO)\nvar finalWorld=uniforms.world;\n#else\nvar finalWorld=mesh.world;\n#endif\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nvar finalPreviousWorld=uniforms.previousWorld;\n#endif\n#endif\n";
+-    const ⟦2-char-id⟧ = "instancesVertex",
+-      ⟦2-char-id⟧ = "#ifdef INSTANCES\nvar finalWorld=mat4x4<f32>(vertexInputs.world0,vertexInputs.world1,vertexInputs.world2,vertexInputs.world3);\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nvar finalPreviousWorld=mat4x4<f32>(\nvertexInputs.previousWorld0,vertexInputs.previousWorld1,\nvertexInputs.previousWorld2,vertexInputs.previousWorld3);\n#endif\n#ifdef THIN_INSTANCES\n#if !defined(WORLD_UBO)\nfinalWorld=uniforms.world*finalWorld;\n#else\nfinalWorld=mesh.world*finalWorld;\n#endif\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nfinalPreviousWorld=uniforms.previousWorld*finalPreviousWorld;\n#endif\n#endif\n#else\n#if !defined(WORLD_UBO)\nvar finalWorld=uniforms.world;\n#else\nvar finalWorld=mesh.world;\n#endif\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nvar finalPreviousWorld=uniforms.previousWorld;\n#endif\n#endif\n";
 -    ⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-+    ⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-     const ⟦2-char-id⟧ = {
-       name: ⟦2-char-id⟧,
-       shader: ⟦2-char-id⟧
-     }
-   },
--  41082: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  41095: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
-     ⟦2-char-id⟧.d(⟦2-char-id⟧, {
+-    const ⟦2-char-id⟧ = {
+-      name: ⟦2-char-id⟧,
+-      shader: ⟦2-char-id⟧
+-    }
+-  },
+-  41082: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
+-    ⟦2-char-id⟧.d(⟦2-char-id⟧, {
 -      b: () => ⟦2-char-id⟧
-+      d: () => ⟦2-char-id⟧
-     });
+-    });
 -    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
-+    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
-     const ⟦2-char-id⟧ = "vertexColorMixing",
-       ⟦2-char-id⟧ = "#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvertexOutputs.vColor=vec4f(1.0);\n#ifdef VERTEXCOLOR\n#ifdef VERTEXALPHA\nvertexOutputs.vColor*=colorUpdated;\n#else\nvertexOutputs.vColor=vec4f(vertexOutputs.vColor.rgb*colorUpdated.rgb,vertexOutputs.vColor.a);\n#endif\n#endif\n#ifdef INSTANCESCOLOR\nvertexOutputs.vColor*=vertexInputs.instanceColor;\n#endif\n#endif\n";
+-    const ⟦2-char-id⟧ = "vertexColorMixing",
+-      ⟦2-char-id⟧ = "#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvertexOutputs.vColor=vec4f(1.0);\n#ifdef VERTEXCOLOR\n#ifdef VERTEXALPHA\nvertexOutputs.vColor*=colorUpdated;\n#else\nvertexOutputs.vColor=vec4f(vertexOutputs.vColor.rgb*colorUpdated.rgb,vertexOutputs.vColor.a);\n#endif\n#endif\n#ifdef INSTANCESCOLOR\nvertexOutputs.vColor*=vertexInputs.instanceColor;\n#endif\n#endif\n";
 -    ⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-+    ⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-     const ⟦2-char-id⟧ = {
-       name: ⟦2-char-id⟧,
-       shader: ⟦2-char-id⟧
-     }
-   },
--  41211: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  41239: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
+-    const ⟦2-char-id⟧ = {
+-      name: ⟦2-char-id⟧,
+-      shader: ⟦2-char-id⟧
+-    }
+-  },
+-  41211: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
++  41239: (⟦2-char-id⟧, ⟦2-char-id⟧, ⟦2-char-id⟧) => {
      ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
        colorVertexShaderWGSL: () => ⟦2-char-id⟧
      });
@@ -16868,478 +16879,6 @@ JavaScript comparison masks only two-character identifiers. Strings, comments, m
 -    for (const ⟦2-char-id⟧ of ⟦2-char-id⟧) ⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧.name] || (⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧.name] = ⟦2-char-id⟧.shader);
 +    ⟦2-char-id⟧.e.ShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.e.ShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
 +    const ⟦2-char-id⟧ = [⟦2-char-id⟧.d, ⟦2-char-id⟧.b, ⟦2-char-id⟧.e, ⟦2-char-id⟧.d, ⟦2-char-id⟧.c, ⟦2-char-id⟧.d, ⟦2-char-id⟧.e, ⟦2-char-id⟧.e, ⟦2-char-id⟧.c, ⟦2-char-id⟧.d, ⟦2-char-id⟧.d];
-+    for (const ⟦2-char-id⟧ of ⟦2-char-id⟧) ⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧.name] || (⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧.name] = ⟦2-char-id⟧.shader);
-     const ⟦2-char-id⟧ = {
-       name: ⟦2-char-id⟧,
-       shader: ⟦2-char-id⟧
-```
-
-</details>
-
-</details>
-
-<details>
-<summary><code>bundles/staging.bloxd.io/chunks/js/325.js</code> · modified · +53 / -53</summary>
-
-JavaScript comparison masks only two-character identifiers. Strings, comments, member properties, object keys, and all other source changes remain visible.
-
-<details>
-<summary>Hunk 1 · Change · +53 / -53</summary>
-
-```diff
-@@ -1,105 +1,105 @@
- export const ⟦2-char-id⟧ = 325;
- export const ids = [325];
- export const modules = {
--  41070: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  41075: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
-     ⟦2-char-id⟧.d(⟦2-char-id⟧, {
--      b: () => ⟦2-char-id⟧
-+      e: () => ⟦2-char-id⟧
-     });
--    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
-+    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
-     const ⟦2-char-id⟧ = "bumpVertex",
-       ⟦2-char-id⟧ = "#if defined(BUMP) || defined(PARALLAX) || defined(CLEARCOAT_BUMP) || defined(ANISOTROPIC)\n#if defined(TANGENT) && defined(NORMAL)\nvar tbnNormal: vec3f=normalize(normalUpdated);var tbnTangent: vec3f=normalize(tangentUpdated.xyz);var tbnBitangent: vec3f=cross(tbnNormal,tbnTangent)*tangentUpdated.w;var matTemp= mat3x3f(finalWorld[0].xyz,finalWorld[1].xyz,finalWorld[2].xyz)* mat3x3f(tbnTangent,tbnBitangent,tbnNormal);vertexOutputs.vTBN0=matTemp[0];vertexOutputs.vTBN1=matTemp[1];vertexOutputs.vTBN2=matTemp[2];\n#endif\n#endif\n";
--    ⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-+    ⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-     const ⟦2-char-id⟧ = {
-       name: ⟦2-char-id⟧,
-       shader: ⟦2-char-id⟧
-     }
-   },
--  40976: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40990: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
-     ⟦2-char-id⟧.d(⟦2-char-id⟧, {
--      d: () => ⟦2-char-id⟧
-+      e: () => ⟦2-char-id⟧
-     });
--    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
-+    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
-     const ⟦2-char-id⟧ = "bumpVertexDeclaration",
-       ⟦2-char-id⟧ = "#if defined(BUMP) || defined(PARALLAX) || defined(CLEARCOAT_BUMP) || defined(ANISOTROPIC)\n#if defined(TANGENT) && defined(NORMAL) \nvarying vTBN0: vec3f;varying vTBN1: vec3f;varying vTBN2: vec3f;\n#endif\n#endif\n";
--    ⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-+    ⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-     const ⟦2-char-id⟧ = {
-       name: ⟦2-char-id⟧,
-       shader: ⟦2-char-id⟧
-     }
-   },
--  59896: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  60203: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
-     ⟦2-char-id⟧.d(⟦2-char-id⟧, {
--      b: () => ⟦2-char-id⟧
-+      d: () => ⟦2-char-id⟧
-     });
--    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
-+    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
-     const ⟦2-char-id⟧ = "harmonicsFunctions",
-       ⟦2-char-id⟧ = "#ifdef USESPHERICALFROMREFLECTIONMAP\n#ifdef SPHERICAL_HARMONICS\nfn computeEnvironmentIrradiance(normal: vec3f)->vec3f {return uniforms.vSphericalL00\n+ uniforms.vSphericalL1_1*(normal.y)\n+ uniforms.vSphericalL10*(normal.z)\n+ uniforms.vSphericalL11*(normal.x)\n+ uniforms.vSphericalL2_2*(normal.y*normal.x)\n+ uniforms.vSphericalL2_1*(normal.y*normal.z)\n+ uniforms.vSphericalL20*((3.0*normal.z*normal.z)-1.0)\n+ uniforms.vSphericalL21*(normal.z*normal.x)\n+ uniforms.vSphericalL22*(normal.x*normal.x-(normal.y*normal.y));}\n#else\nfn computeEnvironmentIrradiance(normal: vec3f)->vec3f {var Nx: f32=normal.x;var Ny: f32=normal.y;var Nz: f32=normal.z;var C1: vec3f=uniforms.vSphericalZZ.rgb;var Cx: vec3f=uniforms.vSphericalX.rgb;var Cy: vec3f=uniforms.vSphericalY.rgb;var Cz: vec3f=uniforms.vSphericalZ.rgb;var Cxx_zz: vec3f=uniforms.vSphericalXX_ZZ.rgb;var Cyy_zz: vec3f=uniforms.vSphericalYY_ZZ.rgb;var Cxy: vec3f=uniforms.vSphericalXY.rgb;var Cyz: vec3f=uniforms.vSphericalYZ.rgb;var Czx: vec3f=uniforms.vSphericalZX.rgb;var a1: vec3f=Cyy_zz*Ny+Cy;var a2: vec3f=Cyz*Nz+a1;var b1: vec3f=Czx*Nz+Cx;var b2: vec3f=Cxy*Ny+b1;var b3: vec3f=Cxx_zz*Nx+b2;var t1: vec3f=Cz *Nz+C1;var t2: vec3f=a2 *Ny+t1;var t3: vec3f=b3 *Nx+t2;return t3;}\n#endif\n#endif\n";
--    ⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-+    ⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-     const ⟦2-char-id⟧ = {
-       name: ⟦2-char-id⟧,
-       shader: ⟦2-char-id⟧
-     }
-   },
--  59882: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  60190: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
-     ⟦2-char-id⟧.d(⟦2-char-id⟧, {
-       c: () => ⟦2-char-id⟧
-     });
--    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
--    ⟦2-char-id⟧(40915), ⟦2-char-id⟧(40917);
-+    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
-+    ⟦2-char-id⟧(40931), ⟦2-char-id⟧(40933);
-     const ⟦2-char-id⟧ = "pbrUboDeclaration",
-       ⟦2-char-id⟧ = "uniform vAlbedoInfos: vec2f;uniform vBaseWeightInfos: vec2f;uniform vBaseDiffuseRoughnessInfos: vec2f;uniform vAmbientInfos: vec4f;uniform vOpacityInfos: vec2f;uniform vEmissiveInfos: vec2f;uniform vLightmapInfos: vec2f;uniform vReflectivityInfos: vec3f;uniform vMicroSurfaceSamplerInfos: vec2f;uniform vBumpInfos: vec3f;uniform albedoMatrix: mat4x4f;uniform baseWeightMatrix: mat4x4f;uniform baseDiffuseRoughnessMatrix: mat4x4f;uniform ambientMatrix: mat4x4f;uniform opacityMatrix: mat4x4f;uniform emissiveMatrix: mat4x4f;uniform lightmapMatrix: mat4x4f;uniform reflectivityMatrix: mat4x4f;uniform microSurfaceSamplerMatrix: mat4x4f;uniform bumpMatrix: mat4x4f;uniform vTangentSpaceParams: vec2f;uniform vAlbedoColor: vec4f;uniform baseWeight: f32;uniform baseDiffuseRoughness: f32;uniform vLightingIntensity: vec4f;uniform pointSize: f32;uniform vReflectivityColor: vec4f;uniform vEmissiveColor: vec3f;uniform vAmbientColor: vec3f;uniform vDebugMode: vec2f;uniform vMetallicReflectanceFactors: vec4f;uniform vMetallicReflectanceInfos: vec2f;uniform metallicReflectanceMatrix: mat4x4f;uniform vReflectanceInfos: vec2f;uniform reflectanceMatrix: mat4x4f;uniform cameraInfo: vec4f;uniform vTextureRepetitionHexTilingParams: vec4f;uniform vReflectionInfos: vec2f;uniform reflectionMatrix: mat4x4f;uniform vReflectionMicrosurfaceInfos: vec3f;uniform vReflectionPosition: vec3f;uniform vReflectionSize: vec3f;uniform vReflectionFilteringInfo: vec2f;uniform vReflectionDominantDirection: vec3f;uniform vReflectionColor: vec3f;uniform vSphericalL00: vec3f;uniform vSphericalL1_1: vec3f;uniform vSphericalL10: vec3f;uniform vSphericalL11: vec3f;uniform vSphericalL2_2: vec3f;uniform vSphericalL2_1: vec3f;uniform vSphericalL20: vec3f;uniform vSphericalL21: vec3f;uniform vSphericalL22: vec3f;uniform vSphericalX: vec3f;uniform vSphericalY: vec3f;uniform vSphericalZ: vec3f;uniform vSphericalXX_ZZ: vec3f;uniform vSphericalYY_ZZ: vec3f;uniform vSphericalZZ: vec3f;uniform vSphericalXY: vec3f;uniform vSphericalYZ: vec3f;uniform vSphericalZX: vec3f;\n#define ADDITIONAL_UBO_DECLARATION\n#include<sceneUboDeclaration>\n#include<meshUboDeclaration>\n";
--    ⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-+    ⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-     const ⟦2-char-id⟧ = {
-       name: ⟦2-char-id⟧,
-       shader: ⟦2-char-id⟧
-     }
-   },
--  59876: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  60181: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
-     ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
-       pbrVertexShaderWGSL: () => ⟦2-char-id⟧
-     });
--    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658),
--      ⟦2-char-id⟧ = ⟦2-char-id⟧(40915),
--      ⟦2-char-id⟧ = ⟦2-char-id⟧(40917),
--      ⟦2-char-id⟧ = ⟦2-char-id⟧(59882),
-+    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595),
-+      ⟦2-char-id⟧ = ⟦2-char-id⟧(40931),
-       ⟦2-char-id⟧ = ⟦2-char-id⟧(40933),
--      ⟦2-char-id⟧ = ⟦2-char-id⟧(40967),
--      ⟦2-char-id⟧ = ⟦2-char-id⟧(40942),
--      ⟦2-char-id⟧ = ⟦2-char-id⟧(59891),
--      ⟦2-char-id⟧ = ⟦2-char-id⟧(40948),
--      ⟦2-char-id⟧ = ⟦2-char-id⟧(40953),
--      ⟦2-char-id⟧ = ⟦2-char-id⟧(40957),
--      ⟦2-char-id⟧ = ⟦2-char-id⟧(40962),
--      ⟦2-char-id⟧ = ⟦2-char-id⟧(40970),
--      ⟦2-char-id⟧ = ⟦2-char-id⟧(59896),
--      ⟦2-char-id⟧ = ⟦2-char-id⟧(40976),
--      ⟦2-char-id⟧ = ⟦2-char-id⟧(40981),
-+      ⟦2-char-id⟧ = ⟦2-char-id⟧(60190),
-+      ⟦2-char-id⟧ = ⟦2-char-id⟧(40944),
-+      ⟦2-char-id⟧ = ⟦2-char-id⟧(40980),
-+      ⟦2-char-id⟧ = ⟦2-char-id⟧(40947),
-+      ⟦2-char-id⟧ = ⟦2-char-id⟧(60197),
-+      ⟦2-char-id⟧ = ⟦2-char-id⟧(40949),
-+      ⟦2-char-id⟧ = ⟦2-char-id⟧(40958),
-+      ⟦2-char-id⟧ = ⟦2-char-id⟧(40966),
-+      ⟦2-char-id⟧ = ⟦2-char-id⟧(40975),
-       ⟦2-char-id⟧ = ⟦2-char-id⟧(40987),
--      ⟦2-char-id⟧ = ⟦2-char-id⟧(40989),
--      ⟦2-char-id⟧ = ⟦2-char-id⟧(40998),
--      ⟦2-char-id⟧ = ⟦2-char-id⟧(41⟦2-char-id⟧),
--      ⟦2-char-id⟧ = ⟦2-char-id⟧(41002),
--      ⟦2-char-id⟧ = ⟦2-char-id⟧(41008),
--      ⟦2-char-id⟧ = ⟦2-char-id⟧(41015),
--      ⟦2-char-id⟧ = ⟦2-char-id⟧(41024),
--      ⟦2-char-id⟧ = ⟦2-char-id⟧(41032),
--      ⟦2-char-id⟧ = ⟦2-char-id⟧(41038),
-+      ⟦2-char-id⟧ = ⟦2-char-id⟧(60203),
-+      ⟦2-char-id⟧ = ⟦2-char-id⟧(40990),
-+      ⟦2-char-id⟧ = ⟦2-char-id⟧(40994),
-+      ⟦2-char-id⟧ = ⟦2-char-id⟧(41001),
-+      ⟦2-char-id⟧ = ⟦2-char-id⟧(41005),
-+      ⟦2-char-id⟧ = ⟦2-char-id⟧(41012),
-+      ⟦2-char-id⟧ = ⟦2-char-id⟧(41018),
-+      ⟦2-char-id⟧ = ⟦2-char-id⟧(41020),
-+      ⟦2-char-id⟧ = ⟦2-char-id⟧(41028),
-+      ⟦2-char-id⟧ = ⟦2-char-id⟧(41030),
-+      ⟦2-char-id⟧ = ⟦2-char-id⟧(41033),
-+      ⟦2-char-id⟧ = ⟦2-char-id⟧(41042),
-       ⟦2-char-id⟧ = ⟦2-char-id⟧(41044),
--      ⟦2-char-id⟧ = ⟦2-char-id⟧(41050),
--      ⟦2-char-id⟧ = ⟦2-char-id⟧(41059),
--      ⟦2-char-id⟧ = ⟦2-char-id⟧(41061),
--      ⟦2-char-id⟧ = ⟦2-char-id⟧(41066),
-+      ⟦2-char-id⟧ = ⟦2-char-id⟧(41053),
-+      ⟦2-char-id⟧ = ⟦2-char-id⟧(41055),
-+      ⟦2-char-id⟧ = ⟦2-char-id⟧(41063),
-+      ⟦2-char-id⟧ = ⟦2-char-id⟧(41067),
-       ⟦2-char-id⟧ = ⟦2-char-id⟧(41070),
--      ⟦2-char-id⟧ = ⟦2-char-id⟧(41073),
--      ⟦2-char-id⟧ = ⟦2-char-id⟧(41077),
--      ⟦2-char-id⟧ = ⟦2-char-id⟧(41080),
--      ⟦2-char-id⟧ = ⟦2-char-id⟧(41082),
--      ⟦2-char-id⟧ = ⟦2-char-id⟧(41089);
-+      ⟦2-char-id⟧ = ⟦2-char-id⟧(41075),
-+      ⟦2-char-id⟧ = ⟦2-char-id⟧(41078),
-+      ⟦2-char-id⟧ = ⟦2-char-id⟧(41083),
-+      ⟦2-char-id⟧ = ⟦2-char-id⟧(41088),
-+      ⟦2-char-id⟧ = ⟦2-char-id⟧(41095),
-+      ⟦2-char-id⟧ = ⟦2-char-id⟧(41097);
-     const ⟦2-char-id⟧ = "pbrVertexShader",
-       ⟦2-char-id⟧ = "#define PBR_VERTEX_SHADER\n#include<pbrUboDeclaration>\n#define CUSTOM_VERTEX_BEGIN\n#ifndef USE_VERTEX_PULLING\nattribute position: vec3f;\n#ifdef NORMAL\nattribute normal: vec3f;\n#endif\n#ifdef TANGENT\nattribute tangent: vec4f;\n#endif\n#ifdef UV1\nattribute uv: vec2f;\n#endif\n#include<uvAttributeDeclaration>[2..7]\n#ifdef VERTEXCOLOR\nattribute color: vec4f;\n#endif\n#endif\n#include<mainUVVaryingDeclaration>[1..7]\n#include<helperFunctions>\n#include<pbrBRDFFunctions>\n#include<bonesDeclaration>\n#include<bakedVertexAnimationDeclaration>\n#include<instancesDeclaration>\n#include<prePassVertexDeclaration>\n#include<samplerVertexDeclaration>(_DEFINENAME_,ALBEDO,_VARYINGNAME_,Albedo)\n#include<samplerVertexDeclaration>(_DEFINENAME_,BASE_WEIGHT,_VARYINGNAME_,BaseWeight)\n#include<samplerVertexDeclaration>(_DEFINENAME_,BASE_DIFFUSE_ROUGHNESS,_VARYINGNAME_,BaseDiffuseRoughness)\n#include<samplerVertexDeclaration>(_DEFINENAME_,DETAIL,_VARYINGNAME_,Detail)\n#include<samplerVertexDeclaration>(_DEFINENAME_,AMBIENT,_VARYINGNAME_,Ambient)\n#include<samplerVertexDeclaration>(_DEFINENAME_,OPACITY,_VARYINGNAME_,Opacity)\n#include<samplerVertexDeclaration>(_DEFINENAME_,EMISSIVE,_VARYINGNAME_,Emissive)\n#include<samplerVertexDeclaration>(_DEFINENAME_,LIGHTMAP,_VARYINGNAME_,Lightmap)\n#include<samplerVertexDeclaration>(_DEFINENAME_,REFLECTIVITY,_VARYINGNAME_,Reflectivity)\n#include<samplerVertexDeclaration>(_DEFINENAME_,MICROSURFACEMAP,_VARYINGNAME_,MicroSurfaceSampler)\n#include<samplerVertexDeclaration>(_DEFINENAME_,METALLIC_REFLECTANCE,_VARYINGNAME_,MetallicReflectance)\n#include<samplerVertexDeclaration>(_DEFINENAME_,REFLECTANCE,_VARYINGNAME_,Reflectance)\n#include<samplerVertexDeclaration>(_DEFINENAME_,BUMP,_VARYINGNAME_,Bump)\n#include<samplerVertexDeclaration>(_DEFINENAME_,DECAL,_VARYINGNAME_,Decal)\n#ifdef CLEARCOAT\n#include<samplerVertexDeclaration>(_DEFINENAME_,CLEARCOAT_TEXTURE,_VARYINGNAME_,ClearCoat)\n#include<samplerVertexDeclaration>(_DEFINENAME_,CLEARCOAT_TEXTURE_ROUGHNESS,_VARYINGNAME_,ClearCoatRoughness)\n#include<samplerVertexDeclaration>(_DEFINENAME_,CLEARCOAT_BUMP,_VARYINGNAME_,ClearCoatBump)\n#include<samplerVertexDeclaration>(_DEFINENAME_,CLEARCOAT_TINT_TEXTURE,_VARYINGNAME_,ClearCoatTint)\n#endif\n#ifdef IRIDESCENCE\n#include<samplerVertexDeclaration>(_DEFINENAME_,IRIDESCENCE_TEXTURE,_VARYINGNAME_,Iridescence)\n#include<samplerVertexDeclaration>(_DEFINENAME_,IRIDESCENCE_THICKNESS_TEXTURE,_VARYINGNAME_,IridescenceThickness)\n#endif\n#ifdef SHEEN\n#include<samplerVertexDeclaration>(_DEFINENAME_,SHEEN_TEXTURE,_VARYINGNAME_,Sheen)\n#include<samplerVertexDeclaration>(_DEFINENAME_,SHEEN_TEXTURE_ROUGHNESS,_VARYINGNAME_,SheenRoughness)\n#endif\n#ifdef ANISOTROPIC\n#include<samplerVertexDeclaration>(_DEFINENAME_,ANISOTROPIC_TEXTURE,_VARYINGNAME_,Anisotropy)\n#endif\n#ifdef SUBSURFACE\n#include<samplerVertexDeclaration>(_DEFINENAME_,SS_THICKNESSANDMASK_TEXTURE,_VARYINGNAME_,Thickness)\n#include<samplerVertexDeclaration>(_DEFINENAME_,SS_REFRACTIONINTENSITY_TEXTURE,_VARYINGNAME_,RefractionIntensity)\n#include<samplerVertexDeclaration>(_DEFINENAME_,SS_TRANSLUCENCYINTENSITY_TEXTURE,_VARYINGNAME_,TranslucencyIntensity)\n#include<samplerVertexDeclaration>(_DEFINENAME_,SS_TRANSLUCENCYCOLOR_TEXTURE,_VARYINGNAME_,TranslucencyColor)\n#endif\nvarying vPositionW: vec3f;\n#if DEBUGMODE>0\nvarying vClipSpacePosition: vec4f;\n#endif\n#ifdef NORMAL\nvarying vNormalW: vec3f;\n#if defined(USESPHERICALFROMREFLECTIONMAP) && defined(USESPHERICALINVERTEX)\nvarying vEnvironmentIrradiance: vec3f;\n#include<harmonicsFunctions>\n#endif\n#endif\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvarying vColor: vec4f;\n#endif\n#include<bumpVertexDeclaration>\n#include<clipPlaneVertexDeclaration>\n#include<fogVertexDeclaration>\n#include<lightVxUboDeclaration>[0..maxSimultaneousLights]\n#include<morphTargetsVertexGlobalDeclaration>\n#include<morphTargetsVertexDeclaration>[0..maxSimultaneousMorphTargets]\n#ifdef REFLECTIONMAP_SKYBOX\nvarying vPositionUVW: vec3f;\n#endif\n#if defined(REFLECTIONMAP_EQUIRECTANGULAR_FIXED) || defined(REFLECTIONMAP_MIRROREDEQUIRECTANGULAR_FIXED)\nvarying vDirectionW: vec3f;\n#endif\n#if defined(CLUSTLIGHT_BATCH) && CLUSTLIGHT_BATCH>0\nvarying vViewDepth: f32;\n#endif\n#include<logDepthDeclaration>\n#include<vertexPullingDeclaration>\n#define CUSTOM_VERTEX_DEFINITIONS\n@vertex\nfn main(input : VertexInputs)->FragmentInputs {\n#define CUSTOM_VERTEX_MAIN_BEGIN\n#ifdef USE_VERTEX_PULLING\nvar positionUpdated: vec3f=vec3f(0.0);\n#ifdef NORMAL\nvar normalUpdated: vec3f=vec3f(0.0);\n#endif\n#ifdef TANGENT\nvar tangentUpdated: vec4f=vec4f(0.0);\n#endif\n#ifdef UV1\nvar uvUpdated: vec2f=vec2f(0.0);\n#endif\n#ifdef UV2\nvar uv2Updated: vec2f=vec2f(0.0);\n#endif\n#ifdef VERTEXCOLOR\nvar colorUpdated: vec4f=vec4f(0.0);\n#endif\n#else\nvar positionUpdated: vec3f=vertexInputs.position;\n#ifdef NORMAL\nvar normalUpdated: vec3f=vertexInputs.normal;\n#endif\n#ifdef TANGENT\nvar tangentUpdated: vec4f=vertexInputs.tangent;\n#endif\n#ifdef UV1\nvar uvUpdated: vec2f=vertexInputs.uv;\n#endif\n#ifdef UV2\nvar uv2Updated: vec2f=vertexInputs.uv2;\n#endif\n#ifdef VERTEXCOLOR\nvar colorUpdated: vec4f=vertexInputs.color;\n#endif\n#endif\n#include<vertexPullingVertex>\n#include<morphTargetsVertexGlobal>\n#include<morphTargetsVertex>[0..maxSimultaneousMorphTargets]\n#ifdef REFLECTIONMAP_SKYBOX\nvertexOutputs.vPositionUVW=positionUpdated;\n#endif\n#define CUSTOM_VERTEX_UPDATE_POSITION\n#define CUSTOM_VERTEX_UPDATE_NORMAL\n#include<instancesVertex>\n#if defined(PREPASS) && ((defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR)) && !defined(BONES_VELOCITY_ENABLED)\nvertexOutputs.vCurrentPosition=scene.viewProjection*finalWorld*vec4f(positionUpdated,1.0);vertexOutputs.vPreviousPosition=uniforms.previousViewProjection*finalPreviousWorld*vec4f(positionUpdated,1.0);\n#endif\n#ifdef USE_VERTEX_PULLING\n#include<bonesVertex>(vertexInputs.matricesIndices,vp_matricesIndices,vertexInputs.matricesWeights,vp_matricesWeights,vertexInputs.matricesIndicesExtra,vp_matricesIndicesExtra,vertexInputs.matricesWeightsExtra,vp_matricesWeightsExtra)\n#include<bakedVertexAnimation>(vertexInputs.matricesIndices,vp_matricesIndices,vertexInputs.matricesWeights,vp_matricesWeights,vertexInputs.matricesIndicesExtra,vp_matricesIndicesExtra,vertexInputs.matricesWeightsExtra,vp_matricesWeightsExtra)\n#else\n#include<bonesVertex>\n#include<bakedVertexAnimation>\n#endif\nvar worldPos: vec4f=finalWorld* vec4f(positionUpdated,1.0);vertexOutputs.vPositionW= worldPos.xyz;\n#ifdef PREPASS\n#include<prePassVertex>\n#endif\n#ifdef NORMAL\nvar normalWorld: mat3x3f= mat3x3f(finalWorld[0].xyz,finalWorld[1].xyz,finalWorld[2].xyz);\n#if defined(INSTANCES) && defined(THIN_INSTANCES)\nvertexOutputs.vNormalW=normalUpdated/ vec3f(dot(normalWorld[0],normalWorld[0]),dot(normalWorld[1],normalWorld[1]),dot(normalWorld[2],normalWorld[2]));vertexOutputs.vNormalW=normalize(normalWorld*vertexOutputs.vNormalW);\n#else\n#ifdef NONUNIFORMSCALING\nnormalWorld=transposeMat3(inverseMat3(normalWorld));\n#endif\nvertexOutputs.vNormalW=normalize(normalWorld*normalUpdated);\n#endif\n#if defined(USESPHERICALFROMREFLECTIONMAP) && defined(USESPHERICALINVERTEX)\n#if BASE_DIFFUSE_MODEL != BRDF_DIFFUSE_MODEL_LAMBERT && BASE_DIFFUSE_MODEL != BRDF_DIFFUSE_MODEL_LEGACY\nvar viewDirectionW: vec3f=normalize(scene.vEyePosition.xyz-vertexOutputs.vPositionW);var NdotV: f32=max(dot(vertexOutputs.vNormalW,viewDirectionW),0.0);var roughNormal: vec3f=mix(vertexOutputs.vNormalW,viewDirectionW,(0.5*(1.0-NdotV))*uniforms.baseDiffuseRoughness);var reflectionVector: vec3f= (uniforms.reflectionMatrix* vec4f(roughNormal,0)).xyz;\n#else\nvar reflectionVector: vec3f= (uniforms.reflectionMatrix* vec4f(vertexOutputs.vNormalW,0)).xyz;\n#endif\n#ifdef REFLECTIONMAP_OPPOSITEZ\nreflectionVector.z*=-1.0;\n#endif\nvertexOutputs.vEnvironmentIrradiance=computeEnvironmentIrradiance(reflectionVector);\n#endif\n#endif\n#define CUSTOM_VERTEX_UPDATE_WORLDPOS\n#ifdef MULTIVIEW\nif (gl_ViewID_OVR==0u) {vertexOutputs.position=scene.viewProjection*worldPos;} else {vertexOutputs.position=scene.viewProjectionR*worldPos;}\n#else\nvertexOutputs.position=scene.viewProjection*worldPos;\n#endif\n#if DEBUGMODE>0\nvertexOutputs.vClipSpacePosition=vertexOutputs.position;\n#endif\n#if defined(REFLECTIONMAP_EQUIRECTANGULAR_FIXED) || defined(REFLECTIONMAP_MIRROREDEQUIRECTANGULAR_FIXED)\nvertexOutputs.vDirectionW=normalize((finalWorld*vec4f(positionUpdated,0.0)).xyz);\n#endif\n#if defined(CLUSTLIGHT_BATCH) && CLUSTLIGHT_BATCH>0\n#ifdef RIGHT_HANDED\nvertexOutputs.vViewDepth=-(scene.view*worldPos).z;\n#else\nvertexOutputs.vViewDepth=(scene.view*worldPos).z;\n#endif\n#endif\n#ifndef UV1\nvar uvUpdated: vec2f= vec2f(0.,0.);\n#endif\n#ifdef MAINUV1\nvertexOutputs.vMainUV1=uvUpdated;\n#endif\n#ifndef UV2\nvar uv2Updated: vec2f= vec2f(0.,0.);\n#endif\n#ifdef MAINUV2\nvertexOutputs.vMainUV2=uv2Updated;\n#endif\n#include<uvVariableDeclaration>[3..7]\n#include<samplerVertexImplementation>(_DEFINENAME_,ALBEDO,_VARYINGNAME_,Albedo,_MATRIXNAME_,albedo,_INFONAME_,AlbedoInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,BASE_WEIGHT,_VARYINGNAME_,BaseWeight,_MATRIXNAME_,baseWeight,_INFONAME_,BaseWeightInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,BASE_DIFFUSE_ROUGHNESS,_VARYINGNAME_,BaseDiffuseRoughness,_MATRIXNAME_,baseDiffuseRoughness,_INFONAME_,BaseDiffuseRoughnessInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,DETAIL,_VARYINGNAME_,Detail,_MATRIXNAME_,detail,_INFONAME_,DetailInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,AMBIENT,_VARYINGNAME_,Ambient,_MATRIXNAME_,ambient,_INFONAME_,AmbientInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,OPACITY,_VARYINGNAME_,Opacity,_MATRIXNAME_,opacity,_INFONAME_,OpacityInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,EMISSIVE,_VARYINGNAME_,Emissive,_MATRIXNAME_,emissive,_INFONAME_,EmissiveInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,LIGHTMAP,_VARYINGNAME_,Lightmap,_MATRIXNAME_,lightmap,_INFONAME_,LightmapInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,REFLECTIVITY,_VARYINGNAME_,Reflectivity,_MATRIXNAME_,reflectivity,_INFONAME_,ReflectivityInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,MICROSURFACEMAP,_VARYINGNAME_,MicroSurfaceSampler,_MATRIXNAME_,microSurfaceSampler,_INFONAME_,MicroSurfaceSamplerInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,METALLIC_REFLECTANCE,_VARYINGNAME_,MetallicReflectance,_MATRIXNAME_,metallicReflectance,_INFONAME_,MetallicReflectanceInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,REFLECTANCE,_VARYINGNAME_,Reflectance,_MATRIXNAME_,reflectance,_INFONAME_,ReflectanceInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,BUMP,_VARYINGNAME_,Bump,_MATRIXNAME_,bump,_INFONAME_,BumpInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,DECAL,_VARYINGNAME_,Decal,_MATRIXNAME_,decal,_INFONAME_,DecalInfos.x)\n#ifdef CLEARCOAT\n#include<samplerVertexImplementation>(_DEFINENAME_,CLEARCOAT_TEXTURE,_VARYINGNAME_,ClearCoat,_MATRIXNAME_,clearCoat,_INFONAME_,ClearCoatInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,CLEARCOAT_TEXTURE_ROUGHNESS,_VARYINGNAME_,ClearCoatRoughness,_MATRIXNAME_,clearCoatRoughness,_INFONAME_,ClearCoatInfos.z)\n#include<samplerVertexImplementation>(_DEFINENAME_,CLEARCOAT_BUMP,_VARYINGNAME_,ClearCoatBump,_MATRIXNAME_,clearCoatBump,_INFONAME_,ClearCoatBumpInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,CLEARCOAT_TINT_TEXTURE,_VARYINGNAME_,ClearCoatTint,_MATRIXNAME_,clearCoatTint,_INFONAME_,ClearCoatTintInfos.x)\n#endif\n#ifdef IRIDESCENCE\n#include<samplerVertexImplementation>(_DEFINENAME_,IRIDESCENCE_TEXTURE,_VARYINGNAME_,Iridescence,_MATRIXNAME_,iridescence,_INFONAME_,IridescenceInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,IRIDESCENCE_THICKNESS_TEXTURE,_VARYINGNAME_,IridescenceThickness,_MATRIXNAME_,iridescenceThickness,_INFONAME_,IridescenceInfos.z)\n#endif\n#ifdef SHEEN\n#include<samplerVertexImplementation>(_DEFINENAME_,SHEEN_TEXTURE,_VARYINGNAME_,Sheen,_MATRIXNAME_,sheen,_INFONAME_,SheenInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,SHEEN_TEXTURE_ROUGHNESS,_VARYINGNAME_,SheenRoughness,_MATRIXNAME_,sheenRoughness,_INFONAME_,SheenInfos.z)\n#endif\n#ifdef ANISOTROPIC\n#include<samplerVertexImplementation>(_DEFINENAME_,ANISOTROPIC_TEXTURE,_VARYINGNAME_,Anisotropy,_MATRIXNAME_,anisotropy,_INFONAME_,AnisotropyInfos.x)\n#endif\n#ifdef SUBSURFACE\n#include<samplerVertexImplementation>(_DEFINENAME_,SS_THICKNESSANDMASK_TEXTURE,_VARYINGNAME_,Thickness,_MATRIXNAME_,thickness,_INFONAME_,ThicknessInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,SS_REFRACTIONINTENSITY_TEXTURE,_VARYINGNAME_,RefractionIntensity,_MATRIXNAME_,refractionIntensity,_INFONAME_,RefractionIntensityInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,SS_TRANSLUCENCYINTENSITY_TEXTURE,_VARYINGNAME_,TranslucencyIntensity,_MATRIXNAME_,translucencyIntensity,_INFONAME_,TranslucencyIntensityInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,SS_TRANSLUCENCYCOLOR_TEXTURE,_VARYINGNAME_,TranslucencyColor,_MATRIXNAME_,translucencyColor,_INFONAME_,TranslucencyColorInfos.x)\n#endif\n#include<bumpVertex>\n#include<clipPlaneVertex>\n#include<fogVertex>\n#include<shadowsVertex>[0..maxSimultaneousLights]\n#include<vertexColorMixing>\n#include<logDepthVertex>\n#define CUSTOM_VERTEX_MAIN_END\n}";
--    ⟦2-char-id⟧.b.ShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.b.ShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
--    const ⟦2-char-id⟧ = [⟦2-char-id⟧.e, ⟦2-char-id⟧.c, ⟦2-char-id⟧.c, ⟦2-char-id⟧.c, ⟦2-char-id⟧.b, ⟦2-char-id⟧.c, ⟦2-char-id⟧.b, ⟦2-char-id⟧.b, ⟦2-char-id⟧.d, ⟦2-char-id⟧.e, ⟦2-char-id⟧.b, ⟦2-char-id⟧.d, ⟦2-char-id⟧.b, ⟦2-char-id⟧.d, ⟦2-char-id⟧.d, ⟦2-char-id⟧.d, ⟦2-char-id⟧.d, ⟦2-char-id⟧.b, ⟦2-char-id⟧.b, ⟦2-char-id⟧.b, ⟦2-char-id⟧.e, ⟦2-char-id⟧.c, ⟦2-char-id⟧.b, ⟦2-char-id⟧.b, ⟦2-char-id⟧.b, ⟦2-char-id⟧.e, ⟦2-char-id⟧.b, ⟦2-char-id⟧.d, ⟦2-char-id⟧.d, ⟦2-char-id⟧.c, ⟦2-char-id⟧.b, ⟦2-char-id⟧.d, ⟦2-char-id⟧.b, ⟦2-char-id⟧.c, ⟦2-char-id⟧.b, ⟦2-char-id⟧.b];
--    for (const ⟦2-char-id⟧ of ⟦2-char-id⟧) ⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧.name] || (⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧.name] = ⟦2-char-id⟧.shader);
-+    ⟦2-char-id⟧.e.ShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.e.ShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-+    const ⟦2-char-id⟧ = [⟦2-char-id⟧.c, ⟦2-char-id⟧.e, ⟦2-char-id⟧.c, ⟦2-char-id⟧.e, ⟦2-char-id⟧.d, ⟦2-char-id⟧.b, ⟦2-char-id⟧.c, ⟦2-char-id⟧.d, ⟦2-char-id⟧.b, ⟦2-char-id⟧.c, ⟦2-char-id⟧.d, ⟦2-char-id⟧.b, ⟦2-char-id⟧.d, ⟦2-char-id⟧.e, ⟦2-char-id⟧.e, ⟦2-char-id⟧.d, ⟦2-char-id⟧.e, ⟦2-char-id⟧.b, ⟦2-char-id⟧.c, ⟦2-char-id⟧.e, ⟦2-char-id⟧.d, ⟦2-char-id⟧.e, ⟦2-char-id⟧.b, ⟦2-char-id⟧.c, ⟦2-char-id⟧.d, ⟦2-char-id⟧.e, ⟦2-char-id⟧.e, ⟦2-char-id⟧.c, ⟦2-char-id⟧.e, ⟦2-char-id⟧.b, ⟦2-char-id⟧.e, ⟦2-char-id⟧.c, ⟦2-char-id⟧.d, ⟦2-char-id⟧.c, ⟦2-char-id⟧.d, ⟦2-char-id⟧.b];
-+    for (const ⟦2-char-id⟧ of ⟦2-char-id⟧) ⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧.name] || (⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧.name] = ⟦2-char-id⟧.shader);
-     const ⟦2-char-id⟧ = {
-       name: ⟦2-char-id⟧,
-       shader: ⟦2-char-id⟧
-```
-
-</details>
-
-</details>
-
-<details>
-<summary><code>bundles/staging.bloxd.io/chunks/js/326.js</code> · modified · +33 / -33</summary>
-
-JavaScript comparison masks only two-character identifiers. Strings, comments, member properties, object keys, and all other source changes remain visible.
-
-<details>
-<summary>Hunk 1 · Change · +33 / -33</summary>
-
-```diff
-@@ -1,100 +1,100 @@
- export const ⟦2-char-id⟧ = 326;
- export const ids = [326];
- export const modules = {
--  41073: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  41078: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
-     ⟦2-char-id⟧.d(⟦2-char-id⟧, {
--      d: () => ⟦2-char-id⟧
-+      c: () => ⟦2-char-id⟧
-     });
--    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
-+    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
-     const ⟦2-char-id⟧ = "clipPlaneVertex",
-       ⟦2-char-id⟧ = "#ifdef CLIPPLANE\nvertexOutputs.fClipDistance=dot(worldPos,uniforms.vClipPlane);\n#endif\n#ifdef CLIPPLANE2\nvertexOutputs.fClipDistance2=dot(worldPos,uniforms.vClipPlane2);\n#endif\n#ifdef CLIPPLANE3\nvertexOutputs.fClipDistance3=dot(worldPos,uniforms.vClipPlane3);\n#endif\n#ifdef CLIPPLANE4\nvertexOutputs.fClipDistance4=dot(worldPos,uniforms.vClipPlane4);\n#endif\n#ifdef CLIPPLANE5\nvertexOutputs.fClipDistance5=dot(worldPos,uniforms.vClipPlane5);\n#endif\n#ifdef CLIPPLANE6\nvertexOutputs.fClipDistance6=dot(worldPos,uniforms.vClipPlane6);\n#endif\n";
--    ⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-+    ⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-     const ⟦2-char-id⟧ = {
-       name: ⟦2-char-id⟧,
-       shader: ⟦2-char-id⟧
-     }
-   },
--  40981: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40994: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
-     ⟦2-char-id⟧.d(⟦2-char-id⟧, {
--      d: () => ⟦2-char-id⟧
-+      e: () => ⟦2-char-id⟧
-     });
--    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
-+    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
-     const ⟦2-char-id⟧ = "clipPlaneVertexDeclaration",
-       ⟦2-char-id⟧ = "#ifdef CLIPPLANE\nuniform vClipPlane: vec4<f32>;varying fClipDistance: f32;\n#endif\n#ifdef CLIPPLANE2\nuniform vClipPlane2: vec4<f32>;varying fClipDistance2: f32;\n#endif\n#ifdef CLIPPLANE3\nuniform vClipPlane3: vec4<f32>;varying fClipDistance3: f32;\n#endif\n#ifdef CLIPPLANE4\nuniform vClipPlane4: vec4<f32>;varying fClipDistance4: f32;\n#endif\n#ifdef CLIPPLANE5\nuniform vClipPlane5: vec4<f32>;varying fClipDistance5: f32;\n#endif\n#ifdef CLIPPLANE6\nuniform vClipPlane6: vec4<f32>;varying fClipDistance6: f32;\n#endif\n";
--    ⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-+    ⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-     const ⟦2-char-id⟧ = {
-       name: ⟦2-char-id⟧,
-       shader: ⟦2-char-id⟧
-     }
-   },
--  41077: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  41083: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
-     ⟦2-char-id⟧.d(⟦2-char-id⟧, {
--      b: () => ⟦2-char-id⟧
-+      d: () => ⟦2-char-id⟧
-     });
--    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
-+    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
-     const ⟦2-char-id⟧ = "fogVertex",
-       ⟦2-char-id⟧ = "#ifdef FOG\n#ifdef SCENE_UBO\nvertexOutputs.vFogDistance=(scene.view*worldPos).xyz;\n#else\nvertexOutputs.vFogDistance=(uniforms.view*worldPos).xyz;\n#endif\n#endif\n";
--    ⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-+    ⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-     const ⟦2-char-id⟧ = {
-       name: ⟦2-char-id⟧,
-       shader: ⟦2-char-id⟧
-     }
-   },
--  40987: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  41001: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
-     ⟦2-char-id⟧.d(⟦2-char-id⟧, {
-       d: () => ⟦2-char-id⟧
-     });
--    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
-+    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
-     const ⟦2-char-id⟧ = "fogVertexDeclaration",
-       ⟦2-char-id⟧ = "#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n";
--    ⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-+    ⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-     const ⟦2-char-id⟧ = {
-       name: ⟦2-char-id⟧,
-       shader: ⟦2-char-id⟧
-     }
-   },
--  41002: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  41020: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
-     ⟦2-char-id⟧.d(⟦2-char-id⟧, {
--      b: () => ⟦2-char-id⟧
-+      e: () => ⟦2-char-id⟧
-     });
--    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
-+    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
-     const ⟦2-char-id⟧ = "logDepthDeclaration",
-       ⟦2-char-id⟧ = "#ifdef LOGARITHMICDEPTH\nuniform logarithmicDepthConstant: f32;varying vFragmentDepth: f32;\n#endif\n";
--    ⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-+    ⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-     const ⟦2-char-id⟧ = {
-       name: ⟦2-char-id⟧,
-       shader: ⟦2-char-id⟧
-     }
-   },
--  41089: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  41097: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
-     ⟦2-char-id⟧.d(⟦2-char-id⟧, {
-       b: () => ⟦2-char-id⟧
-     });
--    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
-+    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
-     const ⟦2-char-id⟧ = "logDepthVertex",
-       ⟦2-char-id⟧ = "#ifdef LOGARITHMICDEPTH\nvertexOutputs.vFragmentDepth=1.0+vertexOutputs.position.w;vertexOutputs.position.z=log2(max(0.000001,vertexOutputs.vFragmentDepth))*uniforms.logarithmicDepthConstant;\n#endif\n";
--    ⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-+    ⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-     const ⟦2-char-id⟧ = {
-       name: ⟦2-char-id⟧,
-       shader: ⟦2-char-id⟧
-     }
-   },
--  59429: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  59756: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
-     ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
-       particlesVertexShaderWGSL: () => ⟦2-char-id⟧
-     });
--    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658),
--      ⟦2-char-id⟧ = ⟦2-char-id⟧(40981),
--      ⟦2-char-id⟧ = ⟦2-char-id⟧(40987),
--      ⟦2-char-id⟧ = ⟦2-char-id⟧(41002),
--      ⟦2-char-id⟧ = ⟦2-char-id⟧(41073),
--      ⟦2-char-id⟧ = ⟦2-char-id⟧(41077),
--      ⟦2-char-id⟧ = ⟦2-char-id⟧(41089);
-+    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595),
-+      ⟦2-char-id⟧ = ⟦2-char-id⟧(40994),
-+      ⟦2-char-id⟧ = ⟦2-char-id⟧(41001),
-+      ⟦2-char-id⟧ = ⟦2-char-id⟧(41020),
-+      ⟦2-char-id⟧ = ⟦2-char-id⟧(41078),
-+      ⟦2-char-id⟧ = ⟦2-char-id⟧(41083),
-+      ⟦2-char-id⟧ = ⟦2-char-id⟧(41097);
-     const ⟦2-char-id⟧ = "particlesVertexShader",
-       ⟦2-char-id⟧ = "attribute position: vec3f;attribute color: vec4f;attribute angle: f32;attribute size: vec2f;\n#ifdef ANIMATESHEET\nattribute cellIndex: f32;\n#endif\n#ifndef BILLBOARD\nattribute direction: vec3f;\n#endif\n#ifdef BILLBOARDSTRETCHED\nattribute direction: vec3f;\n#endif\n#ifdef RAMPGRADIENT\nattribute remapData: vec4f;\n#endif\nattribute offset: vec2f;uniform view: mat4x4f;uniform projection: mat4x4f;uniform translationPivot: vec2f;\n#ifdef PREPASS\nuniform cameraInfo: vec2f;\n#if defined(LOCAL) && defined(PREPASS_LOCAL_POSITION)\nuniform inverseEmitterWM: mat4x4f;uniform geometryWorldOffset: vec3f;\n#endif\n#ifdef PREPASS_POSITION\nvarying vGeometryPositionW: vec3f;\n#endif\n#ifdef PREPASS_WORLD_NORMAL\nvarying vGeometryNormalW: vec3f;\n#endif\n#ifdef PREPASS_NORMAL\nvarying vGeometryNormalV: vec3f;\n#endif\n#ifdef PREPASS_LOCAL_POSITION\nvarying vPosition: vec3f;\n#endif\n#ifdef PREPASS_DEPTH\nvarying vViewPos: vec3f;\n#endif\n#ifdef PREPASS_NORMALIZED_VIEW_DEPTH\nvarying vNormViewDepth: f32;\n#endif\n#endif\n#ifdef ANIMATESHEET\nuniform particlesInfos: vec3f; \n#endif\nvarying vUV: vec2f;varying vColor: vec4f;\n#ifdef POSITIONW_AS_VARYING\nvarying vPositionW: vec3f;\n#endif\n#ifdef RAMPGRADIENT\nvarying remapRanges: vec4f;\n#endif\n#if defined(BILLBOARD) && !defined(BILLBOARDY) && !defined(BILLBOARDSTRETCHED)\nuniform invView: mat4x4f;\n#endif\n#include<clipPlaneVertexDeclaration>\n#include<fogVertexDeclaration>\n#include<logDepthDeclaration>\n#ifdef BILLBOARD\nuniform eyePosition: vec3f;\n#endif\nfn rotate(yaxis: vec3f,rotatedCorner: vec3f)->vec3f {var xaxis: vec3f=normalize(cross( vec3f(0.,1.0,0.),yaxis));var zaxis: vec3f=normalize(cross(yaxis,xaxis));var row0: vec3f= vec3f(xaxis.x,xaxis.y,xaxis.z);var row1: vec3f= vec3f(yaxis.x,yaxis.y,yaxis.z);var row2: vec3f= vec3f(zaxis.x,zaxis.y,zaxis.z);var rotMatrix: mat3x3f= mat3x3f(row0,row1,row2);var alignedCorner: vec3f=rotMatrix*rotatedCorner;return vertexInputs.position+alignedCorner;}\n#ifdef BILLBOARDSTRETCHED\nfn rotateAlign(toCamera: vec3f,rotatedCorner: vec3f)->vec3f {var normalizedToCamera: vec3f=normalize(toCamera);var normalizedCrossDirToCamera: vec3f=normalize(cross(normalize(vertexInputs.direction),normalizedToCamera));var row0: vec3f= vec3f(normalizedCrossDirToCamera.x,normalizedCrossDirToCamera.y,normalizedCrossDirToCamera.z);var row2: vec3f= vec3f(normalizedToCamera.x,normalizedToCamera.y,normalizedToCamera.z);\n#ifdef BILLBOARDSTRETCHED_LOCAL\nvar row1: vec3f=normalize(vertexInputs.direction);\n#else\nvar crossProduct: vec3f=normalize(cross(normalizedToCamera,normalizedCrossDirToCamera));var row1: vec3f= vec3f(crossProduct.x,crossProduct.y,crossProduct.z);\n#endif\nvar rotMatrix: mat3x3f= mat3x3f(row0,row1,row2);var alignedCorner: vec3f=rotMatrix*rotatedCorner;return vertexInputs.position+alignedCorner;}\nfn stretchedNormal(toCamera: vec3f,stretchDirection: vec3f)->vec3f {let normalizedToCamera: vec3f=normalize(toCamera);let normalizedCrossDirToCamera: vec3f=normalize(cross(normalize(stretchDirection),normalizedToCamera));\n#ifdef BILLBOARDSTRETCHED_LOCAL\nlet row1: vec3f=normalize(stretchDirection);\n#else\nlet row1: vec3f=normalize(cross(normalizedToCamera,normalizedCrossDirToCamera));\n#endif\nreturn normalize(cross(normalizedCrossDirToCamera,row1));}\n#endif\n#define CUSTOM_VERTEX_DEFINITIONS\n@vertex\nfn main(input : VertexInputs)->FragmentInputs {\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvar cornerPos: vec2f;var vPositionW: vec3f;\n#ifdef PREPASS\nvar geometryNormalW: vec3f;\n#endif\ncornerPos=( vec2f(vertexInputs.offset.x-0.5,vertexInputs.offset.y -0.5)-uniforms.translationPivot)*vertexInputs.size;\n#ifdef BILLBOARD\nvar rotatedCorner: vec3f;\n#ifdef BILLBOARDY\nrotatedCorner.x=cornerPos.x*cos(vertexInputs.angle)-cornerPos.y*sin(vertexInputs.angle)+uniforms.translationPivot.x;rotatedCorner.z=cornerPos.x*sin(vertexInputs.angle)+cornerPos.y*cos(vertexInputs.angle)+uniforms.translationPivot.y;rotatedCorner.y=0.;var yaxis: vec3f=vertexInputs.position-uniforms.eyePosition;yaxis.y=0.;vPositionW=rotate(normalize(yaxis),rotatedCorner);\n#ifdef PREPASS\ngeometryNormalW=normalize(yaxis);\n#endif\nvar viewPos: vec3f=(uniforms.view* vec4f(vPositionW,1.0)).xyz;\n#elif defined(BILLBOARDSTRETCHED)\nrotatedCorner.x=cornerPos.x*cos(vertexInputs.angle)-cornerPos.y*sin(vertexInputs.angle)+uniforms.translationPivot.x;rotatedCorner.y=cornerPos.x*sin(vertexInputs.angle)+cornerPos.y*cos(vertexInputs.angle)+uniforms.translationPivot.y;rotatedCorner.z=0.;var toCamera: vec3f=vertexInputs.position-uniforms.eyePosition;vPositionW=rotateAlign(toCamera,rotatedCorner);\n#ifdef PREPASS\ngeometryNormalW=stretchedNormal(toCamera,vertexInputs.direction);\n#endif\nvar viewPos: vec3f=(uniforms.view* vec4f(vPositionW,1.0)).xyz;\n#else\nrotatedCorner.x=cornerPos.x*cos(vertexInputs.angle)-cornerPos.y*sin(vertexInputs.angle)+uniforms.translationPivot.x;rotatedCorner.y=cornerPos.x*sin(vertexInputs.angle)+cornerPos.y*cos(vertexInputs.angle)+uniforms.translationPivot.y;rotatedCorner.z=0.;var viewPos: vec3f=(uniforms.view* vec4f(vertexInputs.position,1.0)).xyz+rotatedCorner;vPositionW=(uniforms.invView* vec4f(viewPos,1)).xyz;\n#ifdef PREPASS\ngeometryNormalW=normalize((uniforms.invView*vec4f(0.0,0.0,1.0,0.0)).xyz);\n#endif\n#endif\n#ifdef RAMPGRADIENT\nvertexOutputs.remapRanges=vertexInputs.remapData;\n#endif\nvertexOutputs.position=uniforms.projection* vec4f(viewPos,1.0);\n#else\nvar rotatedCorner: vec3f;rotatedCorner.x=cornerPos.x*cos(vertexInputs.angle)-cornerPos.y*sin(vertexInputs.angle)+uniforms.translationPivot.x;rotatedCorner.z=cornerPos.x*sin(vertexInputs.angle)+cornerPos.y*cos(vertexInputs.angle)+uniforms.translationPivot.y;rotatedCorner.y=0.;var yaxis: vec3f=normalize(vertexInputs.direction);vPositionW=rotate(yaxis,rotatedCorner);\n#ifdef PREPASS\ngeometryNormalW=yaxis;\n#endif\nvertexOutputs.position=uniforms.projection*uniforms.view* vec4f(vPositionW,1.0);\n#endif\nvertexOutputs.vColor=vertexInputs.color;\n#ifdef ANIMATESHEET\nvar rowOffset: f32=floor(vertexInputs.cellIndex*uniforms.particlesInfos.z);var columnOffset: f32=vertexInputs.cellIndex-rowOffset/uniforms.particlesInfos.z;var uvScale: vec2f=uniforms.particlesInfos.xy;var uvOffset: vec2f= vec2f(vertexInputs.offset.x ,1.0-vertexInputs.offset.y);vertexOutputs.vUV=(uvOffset+ vec2f(columnOffset,rowOffset))*uvScale;\n#else\nvertexOutputs.vUV=vertexInputs.offset;\n#endif\n#if defined(CLIPPLANE) || defined(CLIPPLANE2) || defined(CLIPPLANE3) || defined(CLIPPLANE4) || defined(CLIPPLANE5) || defined(CLIPPLANE6) || defined(FOG)\nvar worldPos: vec4f= vec4f(vPositionW,1.0);\n#endif\n#ifdef POSITIONW_AS_VARYING\nvertexOutputs.vPositionW=vPositionW;\n#endif\n#include<clipPlaneVertex>\n#include<fogVertex>\n#include<logDepthVertex>\n#ifdef PREPASS\nlet geometryViewPosition: vec4f=uniforms.view*vec4f(vPositionW,1.0);\n#if defined(PREPASS_NORMAL) || defined(PREPASS_WORLD_NORMAL)\nvar geometryNormalV=normalize((uniforms.view*vec4f(geometryNormalW,0.0)).xyz);let geometryViewDirection=select(vec3f(0.0,0.0,geometryViewPosition.z),geometryViewPosition.xyz,uniforms.projection[3][3]==0.0);if (dot(geometryNormalV,geometryViewDirection)>0.0) {geometryNormalV=-geometryNormalV;geometryNormalW=-geometryNormalW;}\n#endif\n#ifdef PREPASS_POSITION\nvertexOutputs.vGeometryPositionW=vPositionW;\n#endif\n#ifdef PREPASS_WORLD_NORMAL\nvertexOutputs.vGeometryNormalW=normalize(geometryNormalW);\n#endif\n#ifdef PREPASS_NORMAL\nvertexOutputs.vGeometryNormalV=geometryNormalV;\n#endif\n#ifdef PREPASS_LOCAL_POSITION\n#ifdef LOCAL\nvar geometryRenderPosition=vPositionW;\n#if defined(BILLBOARD) && !defined(BILLBOARDY) && !defined(BILLBOARDSTRETCHED)\ngeometryRenderPosition=vertexInputs.position+(uniforms.invView*vec4f(rotatedCorner,0.0)).xyz;\n#endif\nvertexOutputs.vPosition=(uniforms.inverseEmitterWM*vec4f(geometryRenderPosition-uniforms.geometryWorldOffset,1.0)).xyz;\n#else\nvertexOutputs.vPosition=vPositionW;\n#endif\n#endif\n#ifdef PREPASS_DEPTH\nvertexOutputs.vViewPos=geometryViewPosition.xyz;\n#endif\n#ifdef PREPASS_NORMALIZED_VIEW_DEPTH\nvertexOutputs.vNormViewDepth=(geometryViewPosition.z-uniforms.cameraInfo.x)/(uniforms.cameraInfo.y-uniforms.cameraInfo.x);\n#endif\n#endif\n#define CUSTOM_VERTEX_MAIN_END\n}";
--    ⟦2-char-id⟧.b.ShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.b.ShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
--    const ⟦2-char-id⟧ = [⟦2-char-id⟧.d, ⟦2-char-id⟧.d, ⟦2-char-id⟧.b, ⟦2-char-id⟧.d, ⟦2-char-id⟧.b, ⟦2-char-id⟧.b];
--    for (const ⟦2-char-id⟧ of ⟦2-char-id⟧) ⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧.name] || (⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧.name] = ⟦2-char-id⟧.shader);
-+    ⟦2-char-id⟧.e.ShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.e.ShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-+    const ⟦2-char-id⟧ = [⟦2-char-id⟧.e, ⟦2-char-id⟧.d, ⟦2-char-id⟧.e, ⟦2-char-id⟧.c, ⟦2-char-id⟧.d, ⟦2-char-id⟧.b];
-+    for (const ⟦2-char-id⟧ of ⟦2-char-id⟧) ⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧.name] || (⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧.name] = ⟦2-char-id⟧.shader);
-     const ⟦2-char-id⟧ = {
-       name: ⟦2-char-id⟧,
-       shader: ⟦2-char-id⟧
-```
-
-</details>
-
-</details>
-
-<details>
-<summary><code>bundles/staging.bloxd.io/chunks/js/327.js</code> · modified · +33 / -33</summary>
-
-JavaScript comparison masks only two-character identifiers. Strings, comments, member properties, object keys, and all other source changes remain visible.
-
-<details>
-<summary>Hunk 1 · Change · +33 / -33</summary>
-
-```diff
-@@ -1,100 +1,100 @@
- export const ⟦2-char-id⟧ = 327;
- export const ids = [327];
- export const modules = {
--  41073: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  41078: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
-     ⟦2-char-id⟧.d(⟦2-char-id⟧, {
--      d: () => ⟦2-char-id⟧
-+      c: () => ⟦2-char-id⟧
-     });
--    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
-+    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
-     const ⟦2-char-id⟧ = "clipPlaneVertex",
-       ⟦2-char-id⟧ = "#ifdef CLIPPLANE\nvertexOutputs.fClipDistance=dot(worldPos,uniforms.vClipPlane);\n#endif\n#ifdef CLIPPLANE2\nvertexOutputs.fClipDistance2=dot(worldPos,uniforms.vClipPlane2);\n#endif\n#ifdef CLIPPLANE3\nvertexOutputs.fClipDistance3=dot(worldPos,uniforms.vClipPlane3);\n#endif\n#ifdef CLIPPLANE4\nvertexOutputs.fClipDistance4=dot(worldPos,uniforms.vClipPlane4);\n#endif\n#ifdef CLIPPLANE5\nvertexOutputs.fClipDistance5=dot(worldPos,uniforms.vClipPlane5);\n#endif\n#ifdef CLIPPLANE6\nvertexOutputs.fClipDistance6=dot(worldPos,uniforms.vClipPlane6);\n#endif\n";
--    ⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-+    ⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-     const ⟦2-char-id⟧ = {
-       name: ⟦2-char-id⟧,
-       shader: ⟦2-char-id⟧
-     }
-   },
--  40981: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  40994: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
-     ⟦2-char-id⟧.d(⟦2-char-id⟧, {
--      d: () => ⟦2-char-id⟧
-+      e: () => ⟦2-char-id⟧
-     });
--    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
-+    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
-     const ⟦2-char-id⟧ = "clipPlaneVertexDeclaration",
-       ⟦2-char-id⟧ = "#ifdef CLIPPLANE\nuniform vClipPlane: vec4<f32>;varying fClipDistance: f32;\n#endif\n#ifdef CLIPPLANE2\nuniform vClipPlane2: vec4<f32>;varying fClipDistance2: f32;\n#endif\n#ifdef CLIPPLANE3\nuniform vClipPlane3: vec4<f32>;varying fClipDistance3: f32;\n#endif\n#ifdef CLIPPLANE4\nuniform vClipPlane4: vec4<f32>;varying fClipDistance4: f32;\n#endif\n#ifdef CLIPPLANE5\nuniform vClipPlane5: vec4<f32>;varying fClipDistance5: f32;\n#endif\n#ifdef CLIPPLANE6\nuniform vClipPlane6: vec4<f32>;varying fClipDistance6: f32;\n#endif\n";
--    ⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-+    ⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-     const ⟦2-char-id⟧ = {
-       name: ⟦2-char-id⟧,
-       shader: ⟦2-char-id⟧
-     }
-   },
--  41077: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  41083: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
-     ⟦2-char-id⟧.d(⟦2-char-id⟧, {
--      b: () => ⟦2-char-id⟧
-+      d: () => ⟦2-char-id⟧
-     });
--    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
-+    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
-     const ⟦2-char-id⟧ = "fogVertex",
-       ⟦2-char-id⟧ = "#ifdef FOG\n#ifdef SCENE_UBO\nvertexOutputs.vFogDistance=(scene.view*worldPos).xyz;\n#else\nvertexOutputs.vFogDistance=(uniforms.view*worldPos).xyz;\n#endif\n#endif\n";
--    ⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-+    ⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-     const ⟦2-char-id⟧ = {
-       name: ⟦2-char-id⟧,
-       shader: ⟦2-char-id⟧
-     }
-   },
--  40987: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  41001: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
-     ⟦2-char-id⟧.d(⟦2-char-id⟧, {
-       d: () => ⟦2-char-id⟧
-     });
--    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
-+    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
-     const ⟦2-char-id⟧ = "fogVertexDeclaration",
-       ⟦2-char-id⟧ = "#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n";
--    ⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-+    ⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-     const ⟦2-char-id⟧ = {
-       name: ⟦2-char-id⟧,
-       shader: ⟦2-char-id⟧
-     }
-   },
--  41002: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  41020: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
-     ⟦2-char-id⟧.d(⟦2-char-id⟧, {
--      b: () => ⟦2-char-id⟧
-+      e: () => ⟦2-char-id⟧
-     });
--    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
-+    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
-     const ⟦2-char-id⟧ = "logDepthDeclaration",
-       ⟦2-char-id⟧ = "#ifdef LOGARITHMICDEPTH\nuniform logarithmicDepthConstant: f32;varying vFragmentDepth: f32;\n#endif\n";
--    ⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-+    ⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-     const ⟦2-char-id⟧ = {
-       name: ⟦2-char-id⟧,
-       shader: ⟦2-char-id⟧
-     }
-   },
--  41089: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  41097: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
-     ⟦2-char-id⟧.d(⟦2-char-id⟧, {
-       b: () => ⟦2-char-id⟧
-     });
--    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658);
-+    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595);
-     const ⟦2-char-id⟧ = "logDepthVertex",
-       ⟦2-char-id⟧ = "#ifdef LOGARITHMICDEPTH\nvertexOutputs.vFragmentDepth=1.0+vertexOutputs.position.w;vertexOutputs.position.z=log2(max(0.000001,vertexOutputs.vFragmentDepth))*uniforms.logarithmicDepthConstant;\n#endif\n";
--    ⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-+    ⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-     const ⟦2-char-id⟧ = {
-       name: ⟦2-char-id⟧,
-       shader: ⟦2-char-id⟧
-     }
-   },
--  59463: (⟦2-char-id⟧, cJ, ⟦2-char-id⟧) => {
-+  59786: (⟦2-char-id⟧, TB, ⟦2-char-id⟧) => {
-     ⟦2-char-id⟧.r(⟦2-char-id⟧), ⟦2-char-id⟧.d(⟦2-char-id⟧, {
-       skyVertexShaderWGSL: () => ⟦2-char-id⟧
-     });
--    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38658),
--      ⟦2-char-id⟧ = ⟦2-char-id⟧(41002),
--      ⟦2-char-id⟧ = ⟦2-char-id⟧(40981),
--      ⟦2-char-id⟧ = ⟦2-char-id⟧(40987),
--      ⟦2-char-id⟧ = ⟦2-char-id⟧(41073),
--      ⟦2-char-id⟧ = ⟦2-char-id⟧(41089),
--      ⟦2-char-id⟧ = ⟦2-char-id⟧(41077);
-+    var ⟦2-char-id⟧ = ⟦2-char-id⟧(38595),
-+      ⟦2-char-id⟧ = ⟦2-char-id⟧(41020),
-+      ⟦2-char-id⟧ = ⟦2-char-id⟧(40994),
-+      ⟦2-char-id⟧ = ⟦2-char-id⟧(41001),
-+      ⟦2-char-id⟧ = ⟦2-char-id⟧(41078),
-+      ⟦2-char-id⟧ = ⟦2-char-id⟧(41097),
-+      ⟦2-char-id⟧ = ⟦2-char-id⟧(41083);
-     const ⟦2-char-id⟧ = "skyVertexShader",
-       ⟦2-char-id⟧ = "attribute position: vec3f;\n#ifdef VERTEXCOLOR\nattribute color: vec4f;\n#endif\nuniform world: mat4x4f;uniform view: mat4x4f;uniform viewProjection: mat4x4f;\n#ifdef POINTSIZE\nuniform pointSize: f32;\n#endif\nvarying vPositionW: vec3f;\n#ifdef VERTEXCOLOR\nvarying vColor: vec4f;\n#endif\n#include<logDepthDeclaration>\n#include<clipPlaneVertexDeclaration>\n#include<fogVertexDeclaration>\n#define CUSTOM_VERTEX_DEFINITIONS\n@vertex\nfn main(input : VertexInputs)->FragmentInputs {\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvertexOutputs.position=uniforms.viewProjection*uniforms.world* vec4f(vertexInputs.position,1.0);var worldPos: vec4f=uniforms.world* vec4f(vertexInputs.position,1.0);vertexOutputs.vPositionW= worldPos.xyz;\n#include<clipPlaneVertex>\n#include<logDepthVertex>\n#include<fogVertex>\n#ifdef VERTEXCOLOR\nvertexOutputs.vColor=vertexInputs.color;\n#endif\n#define CUSTOM_VERTEX_MAIN_END\n}\n";
--    ⟦2-char-id⟧.b.ShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.b.ShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
--    const ⟦2-char-id⟧ = [⟦2-char-id⟧.b, ⟦2-char-id⟧.d, ⟦2-char-id⟧.d, ⟦2-char-id⟧.d, ⟦2-char-id⟧.b, ⟦2-char-id⟧.b];
--    for (const ⟦2-char-id⟧ of ⟦2-char-id⟧) ⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧.name] || (⟦2-char-id⟧.b.IncludesShadersStoreWGSL[⟦2-char-id⟧.name] = ⟦2-char-id⟧.shader);
-+    ⟦2-char-id⟧.e.ShadersStoreWGSL[⟦2-char-id⟧] || (⟦2-char-id⟧.e.ShadersStoreWGSL[⟦2-char-id⟧] = ⟦2-char-id⟧);
-+    const ⟦2-char-id⟧ = [⟦2-char-id⟧.e, ⟦2-char-id⟧.e, ⟦2-char-id⟧.d, ⟦2-char-id⟧.c, ⟦2-char-id⟧.b, ⟦2-char-id⟧.d];
 +    for (const ⟦2-char-id⟧ of ⟦2-char-id⟧) ⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧.name] || (⟦2-char-id⟧.e.IncludesShadersStoreWGSL[⟦2-char-id⟧.name] = ⟦2-char-id⟧.shader);
      const ⟦2-char-id⟧ = {
        name: ⟦2-char-id⟧,
