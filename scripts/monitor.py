@@ -675,6 +675,7 @@ def normalize_minified_js_identifiers(source: str) -> str:
     identifier_pattern = re.compile(r"[A-Za-z_$][A-Za-z0-9_$]*")
     index = 0
     length = len(source)
+    brace_stack = []
 
     while index < length:
         char = source[index]
@@ -738,6 +739,34 @@ def normalize_minified_js_identifiers(source: str) -> str:
                 index = end
                 continue
 
+        if char == "{":
+            previous = index - 1
+            while previous >= 0 and source[previous].isspace():
+                previous -= 1
+            previous_char = source[previous] if previous >= 0 else ""
+            prefix = source[max(0, index - 96):index].rstrip()
+            previous_word_match = re.search(r"([A-Za-z_$][A-Za-z0-9_$]*)\s*$", prefix)
+            previous_word = previous_word_match.group(1) if previous_word_match else ""
+            is_class_body = bool(re.search(
+                r"\bclass\s+[A-Za-z_$][A-Za-z0-9_$]*(?:\s+extends\s+[^{}]+)?$",
+                prefix,
+            ))
+            is_object_literal = (
+                previous_char in "=(:,["
+                or previous_word in {"return", "yield", "default", "const", "let", "var"}
+                or (bool(brace_stack) and brace_stack[-1] == "object" and previous_char in "{,")
+            )
+            brace_stack.append("class" if is_class_body else ("object" if is_object_literal else "block"))
+            output.append(char)
+            index += 1
+            continue
+        if char == "}":
+            if brace_stack:
+                brace_stack.pop()
+            output.append(char)
+            index += 1
+            continue
+
         if char in ("'", '"') or ord(char) == 96:
             quote = char
             end = index + 1
@@ -781,8 +810,10 @@ def normalize_minified_js_identifiers(source: str) -> str:
         next_char = source[following] if following < length else ""
         is_member_property = previous_char == "."
         is_object_key = next_char == ":"
-        is_shorthand_key = previous_char in "{," and next_char in ",}"
-        is_method_key = previous_char in "{," and next_char == "("
+        in_object_literal = bool(brace_stack and brace_stack[-1] == "object")
+        in_class_body = bool(brace_stack and brace_stack[-1] == "class")
+        is_shorthand_key = in_object_literal and previous_char in "{," and next_char in ",}"
+        is_method_key = (in_object_literal or in_class_body) and previous_char in "{," and next_char == "("
         is_keyword = identifier in keywords
 
         if (

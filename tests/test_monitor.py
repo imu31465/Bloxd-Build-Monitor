@@ -668,6 +668,17 @@ class MonitorTests(unittest.TestCase):
         self.assertIn("exports", normalized)
         self.assertIn("'(()=>{", normalized)
 
+        arguments_source = "function fn(BB, cJ) { return BB + cJ; }"
+        arguments_normalized = monitor.normalize_minified_js_identifiers(arguments_source)
+        self.assertNotIn("BB", arguments_normalized)
+        self.assertNotIn("cJ", arguments_normalized)
+
+        object_source = "const data = { xy, id: value, method() {} };"
+        object_normalized = monitor.normalize_minified_js_identifiers(object_source)
+        self.assertIn("{ xy,", object_normalized)
+        self.assertIn("id:", object_normalized)
+        self.assertIn("method()", object_normalized)
+
         ordinary = 'const message = "No UI changes";'
         self.assertEqual(monitor.normalize_minified_js_identifiers(ordinary), ordinary)
 
