@@ -2,7 +2,7 @@
 
 Latest Bloxd build per environment, detected by the external Cloudflare Worker in `cloudflare/` (one poll per minute). GitHub Actions is dispatched only when a bundle changes; its built-in schedule is a six-hour fallback.
 Every bundle is beautified and archived under stable logical paths: main.js, main.css, chunks/js/<chunk-id-or-name>.js, and matching CSS paths. Original CDN file names, URLs, and hashes are retained in .monitor-state.json.
-This keeps each Webpack chunk on the same Git path across builds, so GitHub shows a normal file modification instead of delete/add. The last 5 build snapshots are kept for diff browsing; older snapshots are squashed into a rolling baseline.
+This keeps each Webpack chunk on the same Git path across builds, so GitHub shows a normal file modification instead of delete/add. Every detected build is saved as a new ordinary commit. The current files on `main` show the latest build, while every previous snapshot remains accessible through Git history. Build history is never squashed or force-pushed.
 `CHANGES.md` uses green/red diff highlighting and links to a per-build readable report.
 
 `diffs/` contains one collapsed `<details>` section per readable changed file. Generated JavaScript bundle diffs and `.monitor-state.json` are omitted to avoid minification and hash noise.

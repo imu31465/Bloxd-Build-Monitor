@@ -7,7 +7,7 @@ logical paths (main.js, chunks/js/<chunk-id-or-name>.js, and matching CSS
 paths), while their original CDN file names, hashes, and URLs are retained in
 .monitor-state.json. This lets Git compare the same chunk across builds as a
 normal file modification instead of a delete/add caused by CDN hash names.
-The workflow keeps the latest RETENTION build snapshots for diff browsing.
+Every detected build is committed as a new ordinary commit on main. Files at stable paths show the latest build, while previous build trees remain accessible through Git history. The workflow never squashes old snapshots or force-pushes main.
 """
 from __future__ import annotations
 
@@ -769,9 +769,9 @@ def render_readme(state: dict) -> str:
         " paths. Original CDN file names, URLs, and hashes are retained in"
         " .monitor-state.json.",
         "This keeps each Webpack chunk on the same Git path across builds, so"
-        " GitHub shows a normal file modification instead of delete/add. The"
-        " last 5 build snapshots are kept for diff browsing; older snapshots"
-        " are squashed into a rolling baseline.",
+        " GitHub shows a normal file modification instead of delete/add."
+        " Every build update is a new commit; previous build snapshots remain"
+        " accessible in Git history and are never squashed or force-pushed.",
         "`CHANGES.md` uses green/red diff highlighting and links to a per-build readable report.",
         "`diffs/` contains one collapsed `<details>` section per readable changed file. Generated JavaScript bundle diffs and `.monitor-state.json` are omitted to avoid minification and hash noise.",
         "",

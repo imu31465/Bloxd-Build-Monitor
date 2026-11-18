@@ -24,9 +24,6 @@ concurrency:
   # Keep one active run and coalesce newer dispatches into the pending run.
   cancel-in-progress: false
 
-env:
-  RETENTION: '5' # number of build snapshots kept as commits for diff browsing
-
 jobs:
   monitor:
     runs-on: ubuntu-latest
@@ -35,7 +32,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # full history so per-build diffs stay browsable
+          fetch-depth: 0 # full history; every build snapshot is retained
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -71,18 +68,9 @@ jobs:
               commit_title="Bloxd build update"
             fi
             git commit -m "$commit_title" -m "Per-file details: CHANGES.md"
-            # Keep only the newest $RETENTION snapshots; squash everything older
-            # than the retention window into a single rolling baseline commit.
-            count=$(git rev-list --count HEAD)
-            drop=$((count - RETENTION))
-            if [ "$drop" -gt 0 ]; then
-              anchor=$(git rev-list --first-parent HEAD | tail -n $((drop + 1)) | head -n 1)
-              newroot=$(git commit-tree "$(git rev-parse "${anchor}^{tree}")" \
-                -m "Rolling baseline (older build snapshots squashed)")
-              git rebase --onto "$newroot" "$anchor" main
-            fi
-            echo "History now holds $(git rev-list --count HEAD) snapshots."
-            git push --force origin main
+            # Keep every build snapshot as a permanent, ordinary commit.
+            echo "Build snapshot committed: $(git rev-parse HEAD)"
+            git push origin main
           }
 
           echo "=== one-shot probe $(date -u '+%Y-%m-%dT%H:%M:%SZ') ==="

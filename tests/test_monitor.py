@@ -639,6 +639,16 @@ class MonitorTests(unittest.TestCase):
             self.assertNotIn("MinifiedIdentifier", report)
             self.assertNotIn(".monitor-state.json", report)
 
+    def test_workflow_preserves_every_build_commit(self):
+        workflow_path = monitor.ROOT / ".github" / "workflows" / "monitor.yml"
+        workflow = workflow_path.read_text(encoding="utf-8")
+        self.assertIn("fetch-depth: 0", workflow)
+        self.assertIn("git push origin main", workflow)
+        self.assertNotIn("RETENTION:", workflow)
+        self.assertNotIn("git push --force", workflow)
+        self.assertNotIn("git rebase", workflow)
+        self.assertNotIn("Rolling baseline", workflow)
+
     def test_render_changes_baseline_section(self):
         current_state = {
             "bloxd.io": {
