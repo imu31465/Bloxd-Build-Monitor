@@ -2,7 +2,7 @@
 
 Bundle files use stable Webpack paths. Generated JavaScript bundle code is summarized by file metadata rather than pasted as token-level diffs.
 
-Readable per-file diff: [diffs/9ad456477d01-readable-preview.md](diffs/9ad456477d01-readable-preview.md)
+Readable per-file diff: [diffs/9ad456477d01-readable-full/index.md](diffs/9ad456477d01-readable-full/index.md)
 
 ## bloxd.io — symm5.2e035caa → l9xvfg.c0ace454
 
