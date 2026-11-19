@@ -650,6 +650,44 @@ class MonitorTests(unittest.TestCase):
             self.assertIn("Binary file changed", report)
             self.assertIn("two-character identifiers", report)
 
+    def test_paginated_diff_report_splits_files_and_writes_small_pages(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+
+            def git(*args):
+                subprocess.run(
+                    ["git", *args], cwd=root, check=True,
+                    stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                )
+
+            git("init", "-q")
+            git("config", "user.name", "Test")
+            git("config", "user.email", "test@example.invalid")
+            names = [f"file-{number}.txt" for number in range(8)]
+            for name in names:
+                path = root / name
+                path.write_text("\\n".join(f"old-{name}-{line}-" + "x" * 80 for line in range(16)) + "\\n", encoding="utf-8")
+            git("add", "-A")
+            git("commit", "-qm", "baseline")
+
+            for name in names:
+                path = root / name
+                path.write_text("\\n".join(f"new-{name}-{line}-" + "y" * 80 for line in range(16)) + "\\n", encoding="utf-8")
+
+            result = monitor.write_paginated_readable_diff_report(
+                root, "test build", "diffs/test-build/index.md", max_part_bytes=9000,
+            )
+            index = (root / "diffs/test-build/index.md").read_text(encoding="utf-8")
+            pages = sorted((root / "diffs/test-build/parts").glob("part-*.md"))
+            self.assertGreater(result["pages"], 1)
+            self.assertEqual(len(pages), result["pages"])
+            self.assertIn("[Part 001](parts/part-001.md)", index)
+            rendered_pages = "\\n".join(page.read_text(encoding="utf-8") for page in pages)
+            for name in names:
+                self.assertIn(name, rendered_pages)
+            self.assertLessEqual(result["largest_page_bytes"], 9000)
+            self.assertTrue(all(page.stat().st_size <= 9000 for page in pages))
+
     def test_normalize_minified_js_identifiers_preserves_strings_and_properties(self):
         source = 'const BB = obj.id + config.xy + "BB"; // TB\nconst key = { id: BB };'
         normalized = monitor.normalize_minified_js_identifiers(source)

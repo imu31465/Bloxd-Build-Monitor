@@ -661,7 +661,7 @@ def readable_diff_report_path(now_text: str, state: dict, updated_envs: list) ->
         re.sub(r"[^A-Za-z0-9_-]+", "-", str(state[env].get("build", env))).strip("-")
         for env in updated_envs
     )
-    return f"diffs/{timestamp}-{build_slug}.md"
+    return f"diffs/{timestamp}-{build_slug}/index.md"
 
 
 def normalize_minified_js_identifiers(source: str) -> str:
@@ -906,7 +906,8 @@ def render_readable_diff_report(
     fence = chr(96) * 3
 
     for relative in paths:
-        if relative in excluded:
+        # Per-build reports are generated from bundle changes, never diffed recursively.
+        if relative in excluded or relative.startswith("diffs/"):
             continue
 
         old_result = subprocess.run(
@@ -1037,6 +1038,192 @@ def render_readable_diff_report(
     lines.extend(sections or ["No changed files were found."])
     return "\n".join(lines).rstrip() + "\n"
 
+MAX_DIFF_REPORT_PART_BYTES = 8 * 1024 * 1024
+MAX_SINGLE_DIFF_HUNK_BYTES = 80 * 1024 * 1024
+
+
+def split_top_level_file_sections(report: str) -> tuple[list[str], list[list[str]]]:
+    """Split the report header from balanced top-level per-file <details> blocks."""
+    prefix: list[str] = []
+    blocks: list[list[str]] = []
+    current: list[str] | None = None
+    depth = 0
+    for line in report.splitlines():
+        if line == "<details>":
+            if depth == 0:
+                current = [line]
+            else:
+                assert current is not None
+                current.append(line)
+            depth += 1
+            continue
+        if line == "</details>":
+            if depth <= 0 or current is None:
+                raise RuntimeError("Unbalanced closing </details> in generated diff report")
+            current.append(line)
+            depth -= 1
+            if depth == 0:
+                blocks.append(current)
+                current = None
+            continue
+        if depth:
+            assert current is not None
+            current.append(line)
+        else:
+            prefix.append(line)
+    if depth or current is not None:
+        raise RuntimeError("Unbalanced <details> in generated diff report")
+    return prefix, blocks
+
+
+def split_oversized_file_section(
+    block: list[str], max_part_bytes: int
+) -> list[list[str]]:
+    """Split a large file wrapper between independent hunk boxes, if necessary."""
+    encoded_size = len(("\n".join(block) + "\n").encode("utf-8"))
+    if encoded_size <= max_part_bytes:
+        return [block]
+
+    nested: list[list[str]] = []
+    nested_start: int | None = None
+    depth = 1
+    for index, line in enumerate(block[1:], start=1):
+        if line == "<details>":
+            if depth == 1:
+                nested_start = index
+            depth += 1
+        elif line == "</details>":
+            depth -= 1
+            if depth == 1 and nested_start is not None:
+                nested.append(block[nested_start:index + 1])
+                nested_start = None
+            elif depth < 0:
+                raise RuntimeError("Unbalanced nested diff section")
+    if not nested:
+        if encoded_size > MAX_SINGLE_DIFF_HUNK_BYTES:
+            raise RuntimeError(
+                f"One diff section is {encoded_size:,} bytes; refusing to create a GitHub-incompatible report"
+            )
+        return [block]
+
+    prefix = block[:block.index(nested[0][0])]
+    last_hunk_end = max(
+        index for index, line in enumerate(block) if line == "</details>"
+    )
+    suffix = block[last_hunk_end + 1:]
+    groups: list[list[list[str]]] = []
+    current: list[list[str]] = []
+    current_size = len(("\n".join(prefix + suffix) + "\n").encode("utf-8"))
+
+    for hunk in nested:
+        hunk_size = len(("\n".join(hunk) + "\n").encode("utf-8"))
+        if hunk_size > MAX_SINGLE_DIFF_HUNK_BYTES:
+            raise RuntimeError(
+                f"One diff hunk is {hunk_size:,} bytes; refusing to create a GitHub-incompatible report"
+            )
+        if current and current_size + hunk_size > max_part_bytes:
+            groups.append(current)
+            current = []
+            current_size = len(("\n".join(prefix + suffix) + "\n").encode("utf-8"))
+        if hunk_size + current_size > MAX_SINGLE_DIFF_HUNK_BYTES:
+            raise RuntimeError("A per-file diff section exceeds the safe GitHub file-size limit")
+        current.append(hunk)
+        current_size += hunk_size
+    if current:
+        groups.append(current)
+
+    return [prefix + [line for hunk in group for line in hunk] + suffix for group in groups]
+
+
+def write_paginated_readable_diff_report(
+    root: Path,
+    title: str,
+    index_relative_path: str,
+    base_ref: str = "HEAD",
+    max_part_bytes: int = MAX_DIFF_REPORT_PART_BYTES,
+) -> dict:
+    """Write a navigable multi-page diff report without oversized GitHub files."""
+    if max_part_bytes < 1024:
+        raise ValueError("max_part_bytes must be at least 1024 bytes")
+    index_path = Path(index_relative_path)
+    if index_path.is_absolute() or ".." in index_path.parts or not str(index_path).startswith("diffs/"):
+        raise ValueError("The report index must be inside diffs/")
+
+    report = render_readable_diff_report(root, title, base_ref=base_ref)
+    prefix, file_blocks = split_top_level_file_sections(report)
+    expanded_blocks: list[list[str]] = []
+    for block in file_blocks:
+        expanded_blocks.extend(split_oversized_file_section(block, max_part_bytes))
+
+    pages: list[list[list[str]]] = []
+    current_page: list[list[str]] = []
+    current_size = 0
+    page_budget = max_part_bytes - 1024
+    for block in expanded_blocks:
+        block_size = len(("\n".join(block) + "\n").encode("utf-8"))
+        if current_page and current_size + block_size > page_budget:
+            pages.append(current_page)
+            current_page = []
+            current_size = 0
+        if block_size > page_budget and block_size > MAX_SINGLE_DIFF_HUNK_BYTES:
+            raise RuntimeError(f"A file diff is too large to paginate safely: {block_size:,} bytes")
+        current_page.append(block)
+        current_size += block_size
+    if current_page:
+        pages.append(current_page)
+
+    destination = root / index_path.parent
+    parts_dir = destination / "parts"
+    parts_dir.mkdir(parents=True, exist_ok=True)
+    for stale in parts_dir.glob("part-*.md"):
+        stale.unlink()
+
+    part_links: list[str] = []
+    written_sizes: list[int] = []
+    for number, page_blocks in enumerate(pages, start=1):
+        filename = f"part-{number:03d}.md"
+        page = [
+            f"# Readable build diff — {title}",
+            "",
+            f"- Part: {number} / {len(pages)}",
+            f"- File sections: {len(page_blocks)}",
+            "",
+            *[line for block in page_blocks for line in block],
+        ]
+        content = "\n".join(page).rstrip() + "\n"
+        page_path = parts_dir / filename
+        page_path.write_text(content, encoding="utf-8")
+        page_size = page_path.stat().st_size
+        if page_size > MAX_SINGLE_DIFF_HUNK_BYTES:
+            raise RuntimeError(f"Generated report page exceeds safe size: {page_path} ({page_size:,} bytes)")
+        written_sizes.append(page_size)
+        part_links.append(f"- [Part {number:03d}](parts/{filename}) — {len(page_blocks)} file sections")
+
+    index_lines = list(prefix)
+    index_lines.extend([
+        "## Diff pages",
+        "",
+        f"- File sections: {len(expanded_blocks)}",
+        f"- Pages: {len(pages)}",
+        f"- Largest page: {max(written_sizes, default=0):,} bytes",
+        "",
+        *(part_links or ["No changed text or binary files were found."]),
+    ])
+    index_path_full = root / index_path
+    index_path_full.parent.mkdir(parents=True, exist_ok=True)
+    index_path_full.write_text("\n".join(index_lines).rstrip() + "\n", encoding="utf-8")
+
+    result = {
+        "index": str(index_path).replace("\\", "/"),
+        "pages": len(pages),
+        "file_sections": len(expanded_blocks),
+        "largest_page_bytes": max(written_sizes, default=0),
+        "total_page_bytes": sum(written_sizes),
+    }
+    print("Paginated readable diff report: " + json.dumps(result, ensure_ascii=False))
+    return result
+
+
 def render_readme(state: dict) -> str:
     lines = [
         "# Bloxd Build Monitor",
@@ -1051,7 +1238,7 @@ def render_readme(state: dict) -> str:
         " Every build update is a new commit; previous build snapshots remain"
         " accessible in Git history and are never squashed or force-pushed.",
         "`CHANGES.md` uses green/red diff highlighting and links to a per-build readable report.",
-        "`diffs/` includes every changed file, with a separate collapsible section for each file and each diff hunk. JavaScript comparison masks only two-character identifiers to suppress minifier-name churn; other code and manifest changes remain visible.",
+        "Per-build reports under `diffs/` are paginated to stay below GitHub file-size limits. Every changed file and independent diff hunk remains separately collapsible; JavaScript comparison masks only two-character identifiers.",
         "",
         "| Environment | Checked at (JST) | Build | Main bundle |",
         "|---|---|---|---|",
@@ -1115,15 +1302,10 @@ def main() -> int:
         CHANGES_PATH.write_text(
             render_changes(previous, persistent, updated, now_text, report_path), encoding="utf-8"
         )
-        report_file = ROOT / report_path
-        report_file.parent.mkdir(parents=True, exist_ok=True)
-        report_file.write_text(
-            render_readable_diff_report(
-                ROOT,
-                f"{now_text} — " + ", ".join(persistent[env]["build"] for env in updated),
-                exclude_paths={report_path},
-            ),
-            encoding="utf-8",
+        write_paginated_readable_diff_report(
+            ROOT,
+            f"{now_text} — " + ", ".join(persistent[env]["build"] for env in updated),
+            report_path,
         )
 
     for environment, record in persistent.items():
