@@ -184,6 +184,28 @@ def main() -> int:
     run_git("cat-file", "-e", f"{base_ref}^{{commit}}")
     run_git("cat-file", "-e", f"{head_ref}^{{commit}}")
 
+    if request.get("mode") == "build-report":
+        index_relative_path = f"{output_dir}/index.md"
+        title = request.get("title") or f"Historical build — {head_ref[:12]}"
+        monitor.write_paginated_readable_diff_report(
+            ROOT,
+            title,
+            index_relative_path,
+            base_ref=base_ref,
+            head_ref=head_ref,
+            max_part_bytes=int(request.get("max_part_bytes", monitor.MAX_DIFF_REPORT_PART_BYTES)),
+        )
+        changes_path = ROOT / "CHANGES.md"
+        changes = changes_path.read_text(encoding="utf-8")
+        changes = re.sub(
+            r"Readable per-file diff: \\[[^\\]]+\\]\\([^)]+\\)",
+            f"Readable per-file diff: [{index_relative_path}]({index_relative_path})",
+            changes,
+            count=1,
+        )
+        changes_path.write_text(changes, encoding="utf-8")
+        return 0
+
     paths = [
         path for path in run_git("diff", "--name-only", "-z", base_ref, head_ref, "--").split("\0")
         if path and not path.startswith("diffs/")

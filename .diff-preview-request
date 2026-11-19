@@ -1,0 +1,8 @@
+{
+  "mode": "build-report",
+  "base": "0a4def0ded1e5754e091107525600bc8415360bb",
+  "head": "cfeab08772c84d231fbd21d8aa860ed9bba6a62c",
+  "output_dir": "diffs/202611191908-zyyatq-17720d1c-zyyatq-17720d1c",
+  "title": "2026-11-19T19:08 JST — zyyatq.17720d1c, zyyatq.17720d1c",
+  "max_part_bytes": 8388608
+}

@@ -688,6 +688,67 @@ class MonitorTests(unittest.TestCase):
             self.assertLessEqual(result["largest_page_bytes"], 9000)
             self.assertTrue(all(page.stat().st_size <= 9000 for page in pages))
 
+    def test_large_file_sections_keep_wrapper_and_use_explicit_head_ref(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+
+            def git(*args):
+                subprocess.run(
+                    ["git", *args], cwd=root, check=True,
+                    stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                )
+
+            relative = "bundles/e/chunks/css/large.css"
+            path = root / relative
+            path.parent.mkdir(parents=True, exist_ok=True)
+            old_lines = []
+            new_lines = []
+            for number in range(16):
+                old_lines.append(f".old-{number} {{ color: red; }}" + " " * 100)
+                new_lines.append(f".new-{number} {{ color: green; }}" + " " * 100)
+                for context in range(10):
+                    line = f".keep-{number}-{context} {{ color: blue; }}"
+                    old_lines.append(line)
+                    new_lines.append(line)
+
+            git("init", "-q")
+            git("config", "user.name", "Test")
+            git("config", "user.email", "test@example.invalid")
+            path.write_text("\\n".join(old_lines) + "\\n", encoding="utf-8")
+            git("add", "-A")
+            git("commit", "-qm", "baseline")
+            base_ref = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=root, text=True).strip()
+
+            path.write_text("\\n".join(new_lines) + "\\n", encoding="utf-8")
+            git("add", "-A")
+            git("commit", "-qm", "target build")
+            head_ref = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=root, text=True).strip()
+
+            path.write_text("WORKTREE-ONLY-SENTINEL\\n", encoding="utf-8")
+            result = monitor.write_paginated_readable_diff_report(
+                root,
+                "large target build",
+                "diffs/test-large/index.md",
+                base_ref=base_ref,
+                head_ref=head_ref,
+                max_part_bytes=8192,
+            )
+
+            index = (root / "diffs/test-large/index.md").read_text(encoding="utf-8")
+            pages = sorted((root / "diffs/test-large/parts").glob("part-*.md"))
+            self.assertGreater(result["pages"], 1)
+            self.assertEqual(result["pages"], len(pages))
+            for page in pages:
+                content = page.read_text(encoding="utf-8")
+                self.assertIn(f"<summary><code>{relative}</code> · modified", content)
+                self.assertIn("<details>\\n<summary>Hunk", content)
+                self.assertLessEqual(page.stat().st_size, 8192)
+            combined = "\\n".join(page.read_text(encoding="utf-8") for page in pages)
+            self.assertIn(".new-0", combined)
+            self.assertNotIn("WORKTREE-ONLY-SENTINEL", combined)
+            self.assertIn("[Part 001](parts/part-001.md)", index)
+            self.assertLess(index.count("\\n\\n\\n"), 3)
+
     def test_normalize_minified_js_identifiers_preserves_strings_and_properties(self):
         source = 'const BB = obj.id + config.xy + "BB"; // TB\nconst key = { id: BB };'
         normalized = monitor.normalize_minified_js_identifiers(source)

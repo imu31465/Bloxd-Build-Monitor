@@ -36,6 +36,12 @@ jobs:
         with:
           fetch-depth: 0 # full history; every build snapshot is retained
 
+      - name: Sync checkout with latest main
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          git checkout -B main origin/main
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:

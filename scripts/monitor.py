@@ -880,6 +880,7 @@ def render_readable_diff_report(
     title: str,
     base_ref: str = "HEAD",
     exclude_paths: set[str] | None = None,
+    head_ref: str | None = None,
 ) -> str:
     """Render every changed file, with a separate collapsible box for every diff hunk."""
     def git_output(*args: str) -> str:
@@ -897,8 +898,12 @@ def render_readable_diff_report(
             raise RuntimeError(f"git {' '.join(args)} failed: {result.stderr.strip()}")
         return result.stdout
 
-    tracked = git_output("diff", "--name-only", "-z", base_ref, "--").split("\0")
-    untracked = git_output("ls-files", "--others", "--exclude-standard", "-z").split("\0")
+    if head_ref:
+        tracked = git_output("diff", "--name-only", "-z", base_ref, head_ref, "--").split("\0")
+        untracked = []
+    else:
+        tracked = git_output("diff", "--name-only", "-z", base_ref, "--").split("\0")
+        untracked = git_output("ls-files", "--others", "--exclude-standard", "-z").split("\0")
     paths = sorted({path for path in tracked + untracked if path})
     sections = []
     excluded = set(exclude_paths or ())
@@ -919,9 +924,20 @@ def render_readable_diff_report(
         )
         old_exists = old_result.returncode == 0
         old_bytes = old_result.stdout if old_exists else b""
-        current_path = root / relative
-        new_exists = current_path.is_file()
-        new_bytes = current_path.read_bytes() if new_exists else b""
+        if head_ref:
+            new_result = subprocess.run(
+                ["git", "show", f"{head_ref}:{relative}"],
+                cwd=root,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                check=False,
+            )
+            new_exists = new_result.returncode == 0
+            new_bytes = new_result.stdout if new_exists else b""
+        else:
+            current_path = root / relative
+            new_exists = current_path.is_file()
+            new_bytes = current_path.read_bytes() if new_exists else b""
 
         status = "new" if not old_exists else ("deleted" if not new_exists else "modified")
         summary_prefix = f"<code>{html.escape(relative)}</code> · {status}"
@@ -1048,10 +1064,12 @@ def split_top_level_file_sections(report: str) -> tuple[list[str], list[list[str
     blocks: list[list[str]] = []
     current: list[str] | None = None
     depth = 0
+    seen_file_section = False
     for line in report.splitlines():
         if line == "<details>":
             if depth == 0:
                 current = [line]
+                seen_file_section = True
             else:
                 assert current is not None
                 current.append(line)
@@ -1069,7 +1087,7 @@ def split_top_level_file_sections(report: str) -> tuple[list[str], list[list[str
         if depth:
             assert current is not None
             current.append(line)
-        else:
+        elif not seen_file_section:
             prefix.append(line)
     if depth or current is not None:
         raise RuntimeError("Unbalanced <details> in generated diff report")
@@ -1084,7 +1102,7 @@ def split_oversized_file_section(
     if encoded_size <= max_part_bytes:
         return [block]
 
-    nested: list[list[str]] = []
+    nested: list[tuple[int, int, list[str]]] = []
     nested_start: int | None = None
     depth = 1
     for index, line in enumerate(block[1:], start=1):
@@ -1095,10 +1113,12 @@ def split_oversized_file_section(
         elif line == "</details>":
             depth -= 1
             if depth == 1 and nested_start is not None:
-                nested.append(block[nested_start:index + 1])
+                nested.append((nested_start, index + 1, block[nested_start:index + 1]))
                 nested_start = None
             elif depth < 0:
                 raise RuntimeError("Unbalanced nested diff section")
+    if depth != 1:
+        raise RuntimeError("Unbalanced file wrapper while splitting an oversized diff section")
     if not nested:
         if encoded_size > MAX_SINGLE_DIFF_HUNK_BYTES:
             raise RuntimeError(
@@ -1106,16 +1126,13 @@ def split_oversized_file_section(
             )
         return [block]
 
-    prefix = block[:block.index(nested[0][0])]
-    last_hunk_end = max(
-        index for index, line in enumerate(block) if line == "</details>"
-    )
-    suffix = block[last_hunk_end + 1:]
+    prefix = block[:nested[0][0]]
+    suffix = block[nested[-1][1]:]
     groups: list[list[list[str]]] = []
     current: list[list[str]] = []
     current_size = len(("\n".join(prefix + suffix) + "\n").encode("utf-8"))
 
-    for hunk in nested:
+    for _, _, hunk in nested:
         hunk_size = len(("\n".join(hunk) + "\n").encode("utf-8"))
         if hunk_size > MAX_SINGLE_DIFF_HUNK_BYTES:
             raise RuntimeError(
@@ -1132,6 +1149,7 @@ def split_oversized_file_section(
     if current:
         groups.append(current)
 
+    # Repeat the per-file wrapper and heading on every page fragment.
     return [prefix + [line for hunk in group for line in hunk] + suffix for group in groups]
 
 
@@ -1140,6 +1158,7 @@ def write_paginated_readable_diff_report(
     title: str,
     index_relative_path: str,
     base_ref: str = "HEAD",
+    head_ref: str | None = None,
     max_part_bytes: int = MAX_DIFF_REPORT_PART_BYTES,
 ) -> dict:
     """Write a navigable multi-page diff report without oversized GitHub files."""
@@ -1149,7 +1168,7 @@ def write_paginated_readable_diff_report(
     if index_path.is_absolute() or ".." in index_path.parts or not str(index_path).startswith("diffs/"):
         raise ValueError("The report index must be inside diffs/")
 
-    report = render_readable_diff_report(root, title, base_ref=base_ref)
+    report = render_readable_diff_report(root, title, base_ref=base_ref, head_ref=head_ref)
     prefix, file_blocks = split_top_level_file_sections(report)
     expanded_blocks: list[list[str]] = []
     for block in file_blocks:
