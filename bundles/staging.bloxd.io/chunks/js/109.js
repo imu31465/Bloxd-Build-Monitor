@@ -1,1100 +1,665 @@
 export const id = 109;
 export const ids = [109];
 export const modules = {
-  5862: (BB, TB, dB) => {
-    dB.r(TB), dB.d(TB, {
-      default: () => uB
+  8298: (YY, rY, DY) => {
+    DY.r(rY), DY.d(rY, {
+      default: () => ar
     });
-    var VB = dB(1078),
-      yB = dB(138),
-      pB = dB(212),
-      lB = dB(1324),
-      JB = dB(1201),
-      YB = dB(21),
-      gB = dB(1573),
-      oB = dB(2873),
-      kB = dB(2595),
-      LB = dB(980);
+    var FY = DY(1501),
+      AY = DY(19),
+      IY = DY(4229),
+      RY = DY(61),
+      OY = DY(1430);
+    var gY = DY(1808),
+      aY = DY(1488),
+      vY = DY(1346),
+      uY = DY(1211),
+      sY = DY(4201);
+    const iY = {
+      private: "customLobby:cantJoinPrivate",
+      notWhitelisted: "customLobby:cantJoinNotWhitelisted",
+      banned: "customLobby:cantJoinBanned",
+      adminLocked: "customLobby:cantJoinAdminLocked"
+    };
+    var yY = DY(4147),
+      QY = DY(183),
+      oY = DY(1159),
+      WY = DY(25),
+      EY = DY(1253),
+      mY = DY(1699),
+      VY = DY(99),
+      SY = DY(1314),
+      lY = DY(1413),
+      TY = DY(4077),
+      eY = DY(3914),
+      NY = DY(2838),
+      BY = DY(1125);
+    const cY = "https://discord.gg/playbloxd";
 
-    function OB() {
+    function KY(YY) {
+      let {
+        failure: rY
+      } = YY;
       const {
-        t: BB
-      } = (0, VB.z)(), TB = !(0, pB.shouldUseUkPrivacyPolicy)();
-      return (0, LB.jsxs)("div", {
-        className: "LegalText",
-        children: [(0, LB.jsx)("div", {
-          className: "BloxdInformationHeader FullyFancyText",
-          children: BB("homePage:privacyPolicy")
-        }), (0, LB.jsx)("p", {
-          children: (0, LB.jsxs)("em", {
-            children: ["Last updated: ", oB.i.toLocaleDateString()]
+        t: DY
+      } = (0, uY.C)(), FY = "chosen" === rY.packSource, AY = VY.featureFlags.useDiscord ? FY ? "texturePackLoad:failedHelpCustomPack" : "texturePackLoad:failedHelp" : FY ? "texturePackLoad:failedHelpCustomPackNoDiscord" : "texturePackLoad:failedHelpNoDiscord";
+      return (0, BY.jsxs)(BY.Fragment, {
+        children: [DY(AY, {
+          code: rY.code
+        }), "default" !== rY.packSource && rY.code === NY.k.Error && (0, BY.jsxs)("div", {
+          style: {
+            paddingTop: "1rem",
+            overflowWrap: "anywhere"
+          },
+          children: [DY("texturePackLoad:details"), " ", rY.reason]
+        }), VY.featureFlags.useDiscord && (0, BY.jsx)("div", {
+          style: {
+            paddingTop: "1rem"
+          },
+          children: (0, BY.jsx)("a", {
+            href: cY,
+            target: "_blank",
+            rel: "noreferrer",
+            children: DY("texturePackLoad:reportOnDiscord")
           })
-        }), (0, LB.jsx)("p", {
-          children: "This Privacy Policy outlines how Bloxd LTD collects, uses, and protects your information when you visit and interact with Bloxd.io. This document is intended to provide clarity on our practices and your rights concerning your data."
-        }), (0, LB.jsx)("h2", {
-          children: "1. Who We Are"
-        }), (0, LB.jsx)("p", {
-          children: "At Bloxd.io, we take your privacy\u2014and the privacy of your children\u2014very seriously. This Privacy Policy explains how we collect, use, and protect the information of both you and your child when you use our website. Our goal is to make sure you understand what information we collect, why we collect it, and how we keep it safe. We also want to ensure that you know your rights and how you can exercise them."
-        }), (0, LB.jsx)("p", {
-          children: "Whether you\u2019re a parent, guardian, or player, this document is designed to provide you with clear and straightforward information about our privacy practices. We\u2019re committed to providing a safe and enjoyable environment for our younger players while respecting the privacy and concerns of parents and guardians."
-        }), (0, LB.jsx)("h2", {
-          children: "2. Information We Collect, Why We Collect It, and How It Is Used"
-        }), (0, LB.jsx)("h3", {
-          children: "2.1 Visitors"
-        }), (0, LB.jsx)("h4", {
-          children: "2.1.1 Data Collection and Usage"
-        }), (0, LB.jsxs)("p", {
-          children: ["When you interact with Bloxd.io, certain data is collected to ensure the website operates correctly and securely. By default, we apply the highest level of privacy protection for all visitors. This means that we collect only the minimal amount of information necessary to operate the website and ensure its functionality. The following types of information may be collected:", " "]
-        }), (0, LB.jsxs)("table", {
-          children: [(0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Type of Information"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "What We Collect"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Why We Collect It"
-              })
-            })]
-          }), (0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Technical Info"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "IP address, browser type, device type, screen resolution, language selection"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "To ensure the website functions correctly and displays in your preferred language."
-              })
-            })]
-          }), (0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Usage Info"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Pages visited, time spent on pages, clicks, and interactions"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "To analyze how the website is used and to improve player experience."
-              })
-            })]
-          }), (0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Cookie Info"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsxs)("p", {
-                children: ["Cookies that store settings, advert frequency, fraud prevention", TB ? ", and with your consent, enable personalized advertising" : ""]
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsxs)("p", {
-                children: ["To enhance your experience by remembering your preferences, save your game progress, and ensure ads are displayed an appropriate number of times and to prevent fraudulent activity.", TB ? " With your consent, cookies may also be used to enable personalized advertising based on your interests." : ""]
-              })
-            })]
-          }), (0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Moderation Info"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Anonymized IP address, Chat logs, username, reports"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "To maintain a safe environment in chat rooms and enforce community guidelines."
-              })
-            })]
-          })]
-        }), (0, LB.jsx)("p", {
-          children: "Data Retention:\xa0Data related to visitors is retained as long as the account is active, or 14 months after your last play session. If a user requests account deletion, the associated data will be deleted promptly, typically within 30 days after the request is processed."
-        }), (0, LB.jsx)("h3", {
-          children: "2.2 Chat Rooms"
-        }), (0, LB.jsx)("p", {
-          children: "Bloxd.io includes online social features, such as chat rooms, where players can interact. We implement several measures to ensure chat safety:"
-        }), (0, LB.jsxs)("ul", {
-          children: [(0, LB.jsx)("li", {
-            children: "Automated Moderation: Tools are used to automatically detect and filter inappropriate content."
-          }), (0, LB.jsx)("li", {
-            children: "Manual Moderation: Human moderators review flagged content to ensure compliance with our chat safety rules."
-          }), (0, LB.jsx)("li", {
-            children: "User Reports: players can report content they believe violates guidelines, and it will be reviewed by moderators."
-          })]
-        }), (0, LB.jsx)("p", {
-          children: "Before participating in chat rooms, players and their guardians are encouraged to review our Community Conduct."
-        }), (0, LB.jsx)("h3", {
-          children: "2.3 Registered players"
-        }), (0, LB.jsx)("h4", {
-          children: "2.3.1 Age Requirements and Parental Consent"
-        }), (0, LB.jsxs)("p", {
-          children: ["Accounts on Bloxd.io can only be created by players aged 13 or older, or by younger players with parental consent. For those registering through Google, Google will verify the user\u2019s age and obtain parental consent if required. For more details, refer to", " ", (0, LB.jsx)("a", {
-            href: "https://families.google.com/familylink/privacy/child-policy",
-            children: "Google\u2019s Child Privacy Policy"
-          }), "."]
-        }), (0, LB.jsx)("h4", {
-          children: "2.3.2 Data Collection for Registered Players"
-        }), (0, LB.jsx)("p", {
-          children: "When creating an account, the following data is collected to provide personalized services and enhance user experience:"
-        }), (0, LB.jsxs)("table", {
-          children: [(0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Type of Information"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "What We Collect"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Why We Collect It"
-              })
-            })]
-          }), (0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Account Info"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Username, email address"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "To create and manage user accounts."
-              })
-            })]
-          }), (0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Profile Info"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Optional profile details (e.g., avatar)"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "To personalize the user experience."
-              })
-            })]
-          }), (0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Technical Info"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "IP address, device type, browser type"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "To secure accounts and ensure the website functions correctly."
-              })
-            })]
-          }), (0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Usage Info"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Pages visited, site interactions"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "To improve the user experience and offer tailored features."
-              })
-            })]
-          })]
-        }), (0, LB.jsx)("p", {
-          children: "Data Retention: Data related to registered players is retained for as long as the account is active, 14 months after your last play session or If a user requests account deletion, the associated data will be deleted promptly, typically within 30 days after the request is processed."
-        }), (0, LB.jsx)("h3", {
-          children: "2.3.3 Data Collection for Store Purchases"
-        }), (0, LB.jsx)("p", {
-          children: "When making a store purchase as a registered player, the following data is collected by us or our payment partners listed in section 3.3 to provide a compliant checkout experience and access to their purchase:"
-        }), (0, LB.jsxs)("table", {
-          children: [(0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Type of Information"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "What We Collect"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Why We Collect It"
-              })
-            })]
-          }), (0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Account Info"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "User ID, email address"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "To attach any purchase made to your account."
-              })
-            })]
-          }), (0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Technical Info"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Transaction ID, IP address, device type, browser type"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Combat fraud and reporting."
-              })
-            })]
-          }), (0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Usage Info"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Pages visited, site interactions, purchase history"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "To secure accounts and ensure the website functions correctly."
-              })
-            })]
-          }), (0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Usage Info"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Pages visited, site interactions"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "To improve the user experience and offer tailored features after purchase."
-              })
-            })]
-          }), (0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Payment Info"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Payment Information, Billing address "
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "To complete and validate your purchase"
-              })
-            })]
-          })]
-        }), (0, LB.jsx)("p", {
-          children: "Our payment providers, who act as our merchant of record, securely collect payment information and handle it according to the required security & law. Payment information is not shared with or processed by bloxd."
-        }), (0, LB.jsx)("p", {
-          children: "Data Retention: Data related to purchases can be stored for up to 5 years after fulfilling the purposes for which the data were collected to combat fraud and for reporting purposes."
-        }), (0, LB.jsx)("h3", {
-          children: "2.4 When You Contact Us"
-        }), (0, LB.jsx)("p", {
-          children: "When you reach out to us, we collect information to help us respond to you effectively:"
-        }), (0, LB.jsxs)("table", {
-          children: [(0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Type of Information"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "What We Collect"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Why We Collect It"
-              })
-            })]
-          }), (0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Contact Info"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Your email address or phone number"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "To get back to you about your questions or concerns."
-              })
-            })]
-          }), (0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Message Content"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "What you say in your message"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "To understand and address your issue or feedback."
-              })
-            })]
-          }), (0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Technical Info"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Date, time, and details of how you contacted us"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "For security and to ensure we respond appropriately."
-              })
-            })]
-          })]
-        }), (0, LB.jsx)("p", {
-          children: "Data Retention:\xa0We will retain the personal data collected from your inquiries for up to\xa0three months after your query is resolved or closed. This extended period allows us to ensure that any follow-up questions can be addressed. If the inquiry is from a child under the age of 13, any data collected will be deleted as soon as possible."
-        }), (0, LB.jsx)("h2", {
-          children: "3. Third-Party Data Use"
-        }), (0, LB.jsx)("h3", {
-          children: "3.1 Scope of This Privacy Policy"
-        }), (0, LB.jsxs)("p", {
-          children: ["This Privacy Policy applies only to the Bloxd.io game and its related services when accessed through the official Bloxd.io website or our mobile apps (such as those on iOS and Android).", " "]
-        }), (0, LB.jsx)("p", {
-          children: "If you use Bloxd.io through a third-party platform or website, this Privacy Policy does not cover those environments. We recommend checking the privacy policies of those sites or platforms and making sure you understand how your data is used before engaging with them."
-        }), (0, LB.jsx)("p", {
-          children: "We may also work with third-party services for some features in our game. These third parties have their own privacy policies, which apply in addition to ours. We encourage you to review those policies as well."
-        }), (0, LB.jsx)("h3", {
-          children: "3.2 Advertisers"
-        }), (0, LB.jsx)("p", {
-          children: "Bloxd.io displays ads from selected partners. On our website, ads are managed and delivered by our web advertising partners; within our mobile apps (available on iOS and Android), ads are delivered through Google AdMob."
-        }), TB && (0, LB.jsx)("p", {
-          children: "With your consent, we may display personalized ads tailored to your interests based on information such as your browsing history, device information, your device\u2019s advertising identifier, and your interactions with our site and apps. Where you do not provide consent, you will only be shown non-personalized ads."
-        }), !TB && (0, LB.jsx)("p", {
-          children: "These ads are non-personalized, meaning they are not based on your personal data or browsing behavior, but rather on general context. We do not collect personal data from children under 13 for advertising purposes."
-        }), (0, LB.jsx)("p", {
-          children: "Where the EU or UK General Data Protection Regulation (GDPR) applies, our website asks for your advertising and cookie choices through a consent prompt registered with the IAB Transparency and Consent Framework when you first visit. You can review, change or withdraw your consent at any time through the consent settings link shown in the footer of our home page and at the top of this Privacy Policy, or by contacting us. Withdrawing consent does not affect processing carried out before you withdrew it."
-        }), (0, LB.jsx)("h3", {
-          children: "3.3 Service Providers"
-        }), (0, LB.jsx)("p", {
-          children: "We work with trusted third-party service providers to help operate the website and deliver services effectively. These providers only receive the data necessary to perform their functions and are required to maintain the confidentiality and security of your information. The key service providers we work with are categorized as follows:"
-        }), (0, LB.jsx)("h4", {
-          children: "Hosting and Data Storage"
-        }), (0, LB.jsxs)("table", {
-          children: [(0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Service Provider"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "What They Collect"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "What They Do"
-              })
-            })]
-          }), (0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "AWS Cloud"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Data storage and processing"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Hosts our servers and stores backup, data securely."
-              })
-            })]
-          }), (0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Digital Ocean"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Data storage and processing"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Hosts our servers and stores data securely."
-              })
-            })]
-          }), (0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Google Firebase"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Email, User data, app usage data, device information"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Provides backend services including database for registered users"
-              })
-            })]
-          })]
-        }), (0, LB.jsx)("h4", {
-          children: "Website Security and Performance"
-        }), (0, LB.jsxs)("table", {
-          children: [(0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Service Provider"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "What They Collect"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "What They Do"
-              })
-            })]
-          }), (0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: (0, LB.jsx)("a", {
-                  href: "https://www.cloudflare.com/en-gb/privacypolicy/",
-                  children: "Cloudflare"
-                })
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "IP addresses, browser types, device information"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Provides\xa0website security, performance optimization, and protection against malicious attacks."
-              })
-            })]
-          }), (0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: (0, LB.jsx)("a", {
-                  href: "https://policies.google.com/privacy",
-                  children: "Google reCAPTCHA"
-                })
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "IP addresses, browser types, device information"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Protection against malicious attacks."
-              })
-            })]
-          })]
-        }), (0, LB.jsx)("h4", {
-          children: "Advertising Management"
-        }), (0, LB.jsxs)("table", {
-          children: [(0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Service Provider"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "What They Collect"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "What They Do"
-              })
-            })]
-          }), (0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: (0, LB.jsx)("a", {
-                  href: "https://adinplay.com/privacy-policy",
-                  children: "Adinplay"
-                })
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsxs)("p", {
-                children: ["Advertiser data, ad performance data", TB ? ", personalized with your consent" : ""]
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Manages and delivers in-game advertisements on our website."
-              })
-            })]
-          }), (0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: (0, LB.jsx)("a", {
-                  href: "https://aditude.com/privacy",
-                  children: "Aditude"
-                })
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsxs)("p", {
-                children: ["Advertiser data, ad performance data", TB ? ", personalized with your consent" : ""]
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Manages and delivers in-game advertisements on our website."
-              })
-            })]
-          }), (0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: (0, LB.jsx)("a", {
-                  href: "https://policies.google.com/privacy",
-                  children: "Google Ads Manager"
-                })
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsxs)("p", {
-                children: ["Advertiser data, ad performance data", TB ? ", personalized with your consent" : ""]
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Manages and optimizes the display of advertisements on our website."
-              })
-            })]
-          }), (0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: (0, LB.jsx)("a", {
-                  href: "https://nitropay.com/privacy",
-                  children: "Nitro (NitroPay)"
-                })
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsxs)("p", {
-                children: ["Advertiser data, ad performance data", TB ? ", personalized with your consent" : ""]
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Manages and delivers in-game advertisements on our website, and manages advertising consent and opt-out choices."
-              })
-            })]
-          }), (0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: (0, LB.jsx)("a", {
-                  href: "https://policies.google.com/privacy",
-                  children: "Google AdMob"
-                })
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsxs)("p", {
-                children: ["Device advertising identifier, IP address, app usage and ad interaction data", TB ? ", personalized with your consent" : ""]
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Delivers banner, interstitial, and rewarded ads within our iOS and Android mobile apps."
-              })
-            })]
-          })]
-        }), (0, LB.jsx)("h4", {
-          children: "Analytics"
-        }), (0, LB.jsxs)("table", {
-          children: [(0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Service Provider"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "What They Collect"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "What They Do"
-              })
-            })]
-          }), (0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: (0, LB.jsx)("a", {
-                  href: "https://policies.google.com/technologies/partner-sites",
-                  children: "Google Analytics"
-                })
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Usage data, pages visited, interactions on the site"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Analyzes website usage to help us understand how the site is used and improve user experience."
-              })
-            })]
-          }), (0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: (0, LB.jsx)("a", {
-                  href: "https://docs.bytebrew.io/BBSettings/privacypolicy",
-                  children: "ByteBrew"
-                })
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Usage data, device data, interactions on the site"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Analyzes website usage to help us understand how the site is used and improve user experience."
-              })
-            })]
-          })]
-        }), (0, LB.jsx)("h4", {
-          children: "Content Moderation"
-        }), (0, LB.jsxs)("table", {
-          children: [(0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Service Provider"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "What They Collect"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "What They Do"
-              })
-            })]
-          }), (0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: (0, LB.jsx)("a", {
-                  href: "https://www.lassomoderation.com/privacy-policy/",
-                  children: "Lasso Moderation"
-                })
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Anonymized IP addresses, chat logs, usernames, reports, custom lobby metadata, custom game metadata, thumbnail uploads"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Provides automated and manual moderation services to ensure chat safety and compliance with guidelines."
-              })
-            })]
-          }), (0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: (0, LB.jsx)("a", {
-                  href: "https://www.purgomalum.com/",
-                  children: "PurgoMalum"
-                })
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Chat logs"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Provides profanity filtering for moderating chat messages."
-              })
-            })]
-          })]
-        }), (0, LB.jsx)("h4", {
-          children: "Payment Providers"
-        }), (0, LB.jsxs)("table", {
-          children: [(0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Service Provider"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "What They Collect"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "What They Do"
-              })
-            })]
-          }), (0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: (0, LB.jsx)("a", {
-                  href: "https://xsolla.com/privacypolicy",
-                  children: "Xsolla"
-                })
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "User ID, Email Address, IP addresses, Purchase History, Purchase Request"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Act as our merchant of record, handling all our secure payment protection insurance and checkout experience to complete your purchase and handle payment support."
-              })
-            })]
-          })]
-        }), (0, LB.jsx)("h4", {
-          children: "Platform Integrations"
-        }), (0, LB.jsxs)("table", {
-          children: [(0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Service Provider"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Information Processed"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "What They Do"
-              })
-            })]
-          }), (0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: (0, LB.jsx)("a", {
-                  href: "http://www.google.com/policies/privacy",
-                  children: "YouTube API Services"
-                })
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Public YouTube channel identifiers submitted by creators"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Retrieves and displays publicly available YouTube content."
-              })
-            })]
-          })]
-        }), (0, LB.jsx)("h3", {
-          children: "3.4 YouTube API Services"
-        }), (0, LB.jsxs)("p", {
-          children: ["Bloxd.io uses YouTube API Services to show YouTube videos, livestreams and Shorts from Bloxd creators on our homepage, and to find the YouTube channel that a creator links to their Bloxd profile. By using these features, you agree to be bound by the", " ", (0, LB.jsx)("a", {
-            href: "https://www.youtube.com/t/terms",
-            children: "YouTube Terms of Service"
-          }), "."]
-        }), (0, LB.jsxs)("p", {
-          children: ["YouTube API Services are provided by Google. Google\u2019s use of information is described in the Google Privacy Policy at", " ", (0, LB.jsx)("a", {
-            href: "http://www.google.com/policies/privacy",
-            children: "http://www.google.com/policies/privacy"
-          }), "."]
-        }), (0, LB.jsx)("p", {
-          children: "We only retrieve publicly available YouTube data: video titles, thumbnails, publish dates, view and live viewer counts and live status, and the channel ID for a YouTube handle a creator adds to their profile. We do not ask you to sign in with YouTube or Google for these features, and we do not access your YouTube account. Creators can remove their linked YouTube handle from their profile, or contact us to remove it, at any time; this deletes the stored channel ID straight away, and deleting an account removes it too."
-        }), (0, LB.jsx)("h2", {
-          children: "4. Cookies and Tracking Technologies"
-        }), (0, LB.jsx)("h3", {
-          children: "4.1 What Are Cookies?"
-        }), (0, LB.jsx)("p", {
-          children: "Cookies are small data files stored on your device that help identify you when you visit a website. They allow the site to remember your preferences and provide a smoother experience."
-        }), (0, LB.jsx)("h3", {
-          children: "4.2 Types of Cookies We Use"
-        }), (0, LB.jsx)("p", {
-          children: "We use different types of cookies to enhance your experience and ensure that Bloxd.io\xa0functions properly. Here\u2019s what each type of cookie does:"
-        }), (0, LB.jsxs)("table", {
-          children: [(0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Type of Cookie"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Purpose"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Example"
-              })
-            })]
-          }), (0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Functional Cookies"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Ensure the website works properly by enabling basic functions like navigation and settings."
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Remembering your game settings, progress or language preferences."
-              })
-            })]
-          }), (0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Analytical Cookies"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Help us understand how players use the site by collecting anonymized data (e.g., pages visited)."
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Tracking the number of visitors or identifying popular game features."
-              })
-            })]
-          }), (0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Ad Cookies"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsxs)("p", {
-                children: ["Manage ad display frequency, prevent repetitive ads, and help detect fraudulent activity", TB ? ", and with your consent, enable personalized advertising based on your interests and browsing behavior." : "."]
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsxs)("p", {
-                children: ["Ensuring the same ad doesn\u2019t appear too frequently or detecting fraudulent ad interactions", TB ? ", and when you consent, showing you ads that are more relevant to your interests." : "."]
-              })
-            })]
-          }), (0, LB.jsxs)("tr", {
-            children: [(0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Notice Acceptance Cookies"
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Record whether you have acknowledged or accepted notices, such as our cookie policy."
-              })
-            }), (0, LB.jsx)("td", {
-              children: (0, LB.jsx)("p", {
-                children: "Storing your acceptance of our cookie banner or other notifications."
-              })
-            })]
-          })]
-        }), (0, LB.jsx)("h3", {
-          children: "4.3 Managing Cookies"
-        }), (0, LB.jsx)("p", {
-          children: "You can control cookie settings through your browser. Below are links to guides on how to manage cookies for common browsers:"
-        }), (0, LB.jsxs)("ul", {
-          children: [(0, LB.jsx)("li", {
-            children: "Google Chrome: Go to Settings > Privacy and Security > Clear browsing data > Cookies and other site data."
-          }), (0, LB.jsx)("li", {
-            children: "Mozilla Firefox: Go to Options > Privacy & Security > Cookies and Site Data > Clear Data."
-          }), (0, LB.jsx)("li", {
-            children: "Safari: Go to Preferences > Privacy > Manage Website Data > Remove All."
-          }), (0, LB.jsx)("li", {
-            children: "Microsoft Edge: Go to Settings > Cookies and site permissions > Manage and delete cookies and site data."
-          })]
-        }), (0, LB.jsx)("h2", {
-          children: "5. Security Measures"
-        }), (0, LB.jsx)("p", {
-          children: "We take the security of your data seriously. We implement various measures to ensure your personal information is protected and manage it according to applicable data protection laws."
-        }), (0, LB.jsx)("h3", {
-          children: "5.1 Technologies and Procedures"
-        }), (0, LB.jsxs)("ul", {
-          children: [(0, LB.jsx)("li", {
-            children: "We use encryption\xa0and other security technologies to safeguard your personal information during transmission and storage."
-          }), (0, LB.jsx)("li", {
-            children: "Our servers are hosted by trusted partners who apply high security standards to protect the data we store."
-          }), (0, LB.jsx)("li", {
-            children: "We regularly monitor our systems for potential vulnerabilities and use firewalls and anti-virus software to prevent unauthorized access."
-          })]
-        }), (0, LB.jsx)("h3", {
-          children: "5.2 Staff Training and Compliance"
-        }), (0, LB.jsxs)("ul", {
-          children: [(0, LB.jsx)("li", {
-            children: "Our team is trained to manage your data securely and in accordance with data protection laws like GDPR\xa0and COPPA."
-          }), (0, LB.jsx)("li", {
-            children: "Internal procedures are in place to ensure that only authorized personnel can access sensitive data."
-          })]
-        }), (0, LB.jsx)("h3", {
-          children: "5.3 Data Breach Notification"
-        }), (0, LB.jsx)("p", {
-          children: "In the unlikely event of a data breach that affects your personal information:"
-        }), (0, LB.jsxs)("ul", {
-          children: [(0, LB.jsx)("li", {
-            children: "We will promptly notify\xa0affected users, as required by law."
-          }), (0, LB.jsx)("li", {
-            children: "The notification will include:"
-          })]
-        }), (0, LB.jsxs)("ul", {
-          children: [(0, LB.jsx)("li", {
-            children: "What data was compromised."
-          }), (0, LB.jsx)("li", {
-            children: "The steps we are taking to resolve the issue and protect your data."
-          }), (0, LB.jsx)("li", {
-            children: "Recommendations for what you can do to protect yourself (e.g., change passwords)."
-          })]
-        }), (0, LB.jsx)("p", {
-          children: "We take all necessary steps to ensure that breaches are addressed swiftly to minimize any potential harm."
-        }), (0, LB.jsx)("h2", {
-          children: "6. International Data Transfers"
-        }), (0, LB.jsx)("p", {
-          children: "Your data may be transferred to servers in other countries. All international transfers comply with relevant data protection regulations, ensuring that your information is safeguarded."
-        }), (0, LB.jsx)("h2", {
-          children: "7. Data Retention"
-        }), (0, LB.jsx)("p", {
-          children: "We retain your data only for as long as necessary to fulfil the purposes outlined in this policy:"
-        }), (0, LB.jsxs)("ul", {
-          children: [(0, LB.jsx)("li", {
-            children: "Technical and Usage Data:\xa0Retained for 14 months after your last visit to the site or until you request removal and the removal is verified."
-          }), (0, LB.jsx)("li", {
-            children: "Personal Data for Registered players:\xa0Retained for as long as the account is active. Upon request for account deletion, data will be removed promptly, typically within 30 days after the request is processed."
-          }), (0, LB.jsx)("li", {
-            children: "Contact Information:\xa0Retained for three months after the query is resolved or closed. If personal data from children is collected, it will be deleted as soon as possible."
-          }), (0, LB.jsx)("li", {
-            children: "Cookies:\xa0Cookies are retained for varying periods, depending on their purpose. Functional cookies are typically retained for as long as they are needed to operate the site, while analytical cookies may be retained for a shorter period to analyze site performance."
-          }), (0, LB.jsx)("li", {
-            children: "YouTube API Data:\xa0Public video metadata retrieved from YouTube API Services is refreshed every hour and is never kept for more than 24 hours. Creator-linked YouTube handles and channel IDs are retained while the link remains on the account and deleted as soon as it is removed."
-          })]
-        }), (0, LB.jsx)("p", {
-          children: "If we collect personal data beyond what is outlined above, we will remove it as soon as possible once it is no longer needed."
-        }), (0, LB.jsx)("h2", {
-          children: "8. Your Rights"
-        }), (0, LB.jsx)("h3", {
-          children: "8.1 Your Choices and Control"
-        }), (0, LB.jsx)("p", {
-          children: "As a user of Bloxd.io, you have the right to:"
-        }), (0, LB.jsxs)("ul", {
-          children: [(0, LB.jsx)("li", {
-            children: "Access Your Data: Request a copy of the personal information we hold about you."
-          }), (0, LB.jsx)("li", {
-            children: "Correct Your Data: Ask us to correct any inaccurate or incomplete information."
-          }), (0, LB.jsx)("li", {
-            children: "Delete Your Data: Request the deletion of your personal information when it is no longer needed."
-          }), (0, LB.jsx)("li", {
-            children: "Limit Data Collection: Request that we limit the collection or use of your data."
-          }), (0, LB.jsx)("li", {
-            children: "Object to Data Processing: Object to certain types of data processing, such as for marketing purposes."
-          }), (0, LB.jsx)("li", {
-            children: "Withdraw Consent: Where we rely on your consent, withdraw it at any time, as described in section 3.2."
-          })]
-        }), (0, LB.jsx)("h3", {
-          children: "8.2 Parental Choices and Control "
-        }), (0, LB.jsx)("p", {
-          children: "As a verified parent or guardian of a child using Bloxd.io, you have the right to:"
-        }), (0, LB.jsxs)("ul", {
-          children: [(0, LB.jsx)("li", {
-            children: "Access Your Child\u2019s Data: Request a copy of the personal information we\u2019ve collected about your child, including details like username, email address, and chat logs."
-          }), (0, LB.jsx)("li", {
-            children: "Correct Your Child\u2019s Data: Ask us to correct any inaccurate or incomplete information about your child."
-          }), (0, LB.jsx)("li", {
-            children: "Delete Your Child\u2019s Data: Request the deletion of your child\u2019s account and all associated data. Once verified, we will delete this data promptly, typically within 30 days. This will also remove any saved progress in the game."
-          }), (0, LB.jsx)("li", {
-            children: "Limit Data Collection for Your Child: Request that we limit the collection or use of certain types of data, such as usage information, from your child."
-          })]
-        }), (0, LB.jsx)("h3", {
-          children: "8.3 How to Exercise Your Rights"
-        }), (0, LB.jsx)("p", {
-          children: "To exercise any of these rights, contact us using the information provided below. We may require proof of identity before proceeding with your request. Responses will typically be provided within 30 days."
-        }), (0, LB.jsx)("h3", {
-          children: "8.4 Your California Privacy Rights"
-        }), (0, LB.jsx)("p", {
-          children: "If you are a California resident, the California Consumer Privacy Act, as amended by the California Privacy Rights Act (together, the \u201cCCPA\u201d), gives you the rights below. This section supplements the rest of this Privacy Policy."
-        }), (0, LB.jsx)("p", {
-          children: "Personal Information We Collect: In the past 12 months we have collected the following categories of personal information, from you, from your device, and from the service providers listed in section 3.3, for the purposes described in sections 2 and 3:"
-        }), (0, LB.jsxs)("ul", {
-          children: [(0, LB.jsx)("li", {
-            children: "Identifiers, such as your username, email address, user ID, IP address and device advertising identifiers."
-          }), (0, LB.jsx)("li", {
-            children: "Internet or other electronic network activity information, such as pages visited, interactions with our website and ad interactions."
-          }), (0, LB.jsx)("li", {
-            children: "Commercial information, such as your purchase history."
-          })]
-        }), (0, LB.jsx)("p", {
-          children: "Sale and Sharing of Personal Information: Our advertising partners listed in section 3.3 may collect identifiers and internet or other electronic network activity information through cookies and similar technologies on our website to deliver and measure ads. This may be considered a \u201csale\u201d or \u201csharing\u201d of personal information under the CCPA."
-        }), (0, LB.jsx)("p", {
-          children: "Under the CCPA, you have the right to:"
-        }), (0, LB.jsxs)("ul", {
-          children: [(0, LB.jsx)("li", {
-            children: "Know: Request the categories and specific pieces of personal information we have collected about you, and how we use and disclose it."
-          }), (0, LB.jsx)("li", {
-            children: "Delete: Request the deletion of personal information we have collected from you."
-          }), (0, LB.jsx)("li", {
-            children: "Correct: Ask us to correct inaccurate personal information we hold about you."
-          }), (0, LB.jsx)("li", {
-            children: "Opt Out of Sale or Sharing: Opt out of the sale or sharing of your personal information."
-          }), (0, LB.jsx)("li", {
-            children: "Non-Discrimination: Exercise any of these rights without being treated differently by us."
-          })]
-        }), (0, LB.jsxs)("p", {
-          children: ["To opt out of the sale or sharing of your personal information, use the \u201cDo Not Sell My Personal Information\u201d link shown to California visitors in the footer of our home page and at the top of this Privacy Policy, or email us at", " ", (0, LB.jsx)("a", {
-            href: "mailto:privacy@bloxd.io",
-            children: "privacy@bloxd.io"
-          }), ". To exercise your other rights, contact us as described in section 8.3. You may also ask an authorized agent to make a request on your behalf; we may ask the agent for proof of your permission and ask you to verify your identity with us."]
-        }), (0, LB.jsx)("h2", {
-          children: "9. Contact Us"
-        }), (0, LB.jsx)("p", {
-          children: "Got questions or concerns? We\u2019re here to help. Reach out to us at:"
-        }), (0, LB.jsxs)("ul", {
-          children: [(0, LB.jsxs)("li", {
-            children: ["Email: ", (0, LB.jsx)("a", {
-              href: "mailto:privacy@bloxd.io",
-              children: "privacy@bloxd.io"
-            })]
-          }), (0, LB.jsx)("li", {
-            children: "Address: Bloxd LTD, 86-90 Paul Street, London, England, United Kingdom, EC2A 4NE"
-          })]
-        }), (0, LB.jsx)("h2", {
-          children: "10. Updates to This Policy"
-        }), (0, LB.jsx)("p", {
-          children: "We may update this policy occasionally to reflect changes in our practices or the law. When we do, we\u2019ll update the \u201cLast updated\u201d date at the top. Please check back occasionally to stay informed."
         })]
       })
     }
+    var HY = DY(2216),
+      zY = DY(1330),
+      ZY = DY(778),
+      CY = DY(1233),
+      fY = DY(1057),
+      jY = DY(1471),
+      hY = DY(1231),
+      dY = DY(2872),
+      JY = DY(2743),
+      MY = DY(1351),
+      wY = DY(1337),
+      bY = DY(4569),
+      XY = DY(8307),
+      qY = DY(2602);
 
-    function DB() {
+    function pY(YY) {
+      let {
+        onApply: rY,
+        onSkip: DY
+      } = YY;
       const {
-        adMobPrivacyOptionsRequired: BB
-      } = (0, YB.m)(["adMobPrivacyOptionsRequired"]);
-      if (!BB) return null;
-      return (0, LB.jsx)(lB.d, {
-        className: "PrivacyChoicesButton",
-        onClick: () => {
-          (async () => {
-            try {
-              await gB.d.request("ads.showPrivacyOptions", {})
-            } catch (BB) {
-              console.error("Failed to open AdMob privacy options:", BB)
-            }
-          })()
+        t: FY
+      } = (0, uY.C)();
+      return (0, RY.useEffect)((() => {
+        qY.f.skipPlayWait()
+      }), []), (0, BY.jsx)(MY.i, {
+        icon: "download",
+        title: "customTexturePack:downloadTitle",
+        subtitle: (0, BY.jsxs)("div", {
+          className: "CustomTexturePackDownloaderSubtitleText",
+          children: [FY("customTexturePack:downloadPrompt"), (0, BY.jsx)("div", {
+            className: "CustomTexturePackDownloaderWarningText",
+            children: FY("customTexturePack:authorWarning")
+          }), (0, BY.jsx)("div", {
+            className: "CustomTexturePackDownloaderSecondaryText",
+            children: FY("customTexturePack:existingPackSaved")
+          })]
+        }),
+        confirm: {
+          text: "general:apply",
+          onClick: rY
         },
-        children: "Manage Privacy Choices"
+        cancel: {
+          text: "customTexturePack:skip",
+          onClick: DY
+        }
       })
     }
+    async function kY() {
+      let YY = !1;
+      const rY = vY.NotificationProvider.showCustomPopup({
+        body: rY => (0, BY.jsx)(pY, {
+          onApply: () => {
+            YY = !0, rY()
+          },
+          onSkip: rY
+        }),
+        disableExitButton: !0,
+        disablePressBackgroundToClose: !0
+      });
+      return await rY.getResult(), YY
+    }
+    let GY = {
+      wanted: !1
+    };
+    let xY = null;
 
-    function uB() {
-      return (0, LB.jsxs)(LB.Fragment, {
-        children: [(0, yB.d)() && (0, LB.jsx)(LB.Fragment, {
-          children: (0, LB.jsx)(lB.d, {
-            className: "PrivacyChoicesButton",
-            onClick: () => {
-              (0, JB.q)()
-            },
-            children: "Adjust Discord Privacy Choices"
+    function nY(YY) {
+      YY.setGamePackConfirm(kY), xY = YY
+    }
+    var PY = DY(3069);
+
+    function UY(YY) {
+      let {
+        schematicId: rY,
+        texturePackKey: DY,
+        onClose: FY
+      } = YY;
+      const [AY, IY] = (0, RY.useState)("prompt"), [OY, gY] = (0, RY.useState)(null), aY = (0, PY.b)();
+
+      function vY() {
+        FY()
+      }
+      return "prompt" === AY ? (0, BY.jsx)(pY, {
+        onApply: async function() {
+          IY("downloading");
+          try {
+            const YY = await async function(YY, rY) {
+              const DY = await (0, bY.d)(rY);
+              if (DY) return {
+                pack: DY,
+                key: rY
+              };
+              const FY = await oY.userContextManager.getCurrentUserContext(),
+                AY = (await jY.e.getGame(FY, YY, !0)).customTexturePackKey;
+              if (!AY) return null;
+              const IY = await (0, bY.d)(AY);
+              if (!IY) throw new Error("The texture pack could not be found");
+              return {
+                pack: IY,
+                key: AY
+              }
+            }(rY, DY);
+            if (!aY.current) return;
+            if (!YY) return void FY();
+            if ((0, dY.l)(YY.pack)) return void IY("refused");
+            JY.d.setFromJson(YY.pack, "customGame"), await JY.d.saveTemporaryTexturePack(YY.key), aY.current && (0, mY.reloadBloxd)()
+          } catch (YY) {
+            gY(YY instanceof Error ? YY.message : String(YY)), IY("error")
+          }
+        },
+        onSkip: vY
+      }) : "downloading" === AY ? (0, BY.jsx)(MY.i, {
+        icon: "download",
+        title: "customTexturePack:downloading",
+        subtitle: (0, BY.jsx)("div", {
+          className: "CustomTexturePackDownloaderLogoLoaderContainer",
+          children: (0, BY.jsx)(wY.c, {
+            showFace: !0
           })
-        }), (0, LB.jsx)(DB, {}), (0, LB.jsx)(kB.c, {
-          className: "PrivacyPolicyLinks"
-        }), (0, LB.jsx)(OB, {})]
+        })
+      }) : "error" === AY ? (0, BY.jsx)(MY.i, {
+        icon: "face-worried",
+        title: "customTexturePack:errorTitle",
+        subtitle: OY,
+        confirm: {
+          text: "customTexturePack:refreshPage",
+          onClick: () => {
+            window.location.reload()
+          }
+        },
+        cancel: {
+          text: "customTexturePack:skip",
+          onClick: vY
+        }
+      }) : "refused" === AY ? (0, BY.jsx)(MY.i, {
+        icon: "face-worried",
+        title: "customTexturePack:cantApplyTitle",
+        subtitle: "customTexturePack:gamePackHasExternalUrls",
+        confirm: {
+          text: "general:continue",
+          onClick: vY
+        }
+      }) : null
+    }
+    var LY = DY(8317),
+      tY = DY(3877),
+      Yr = DY(1729),
+      rr = DY(2817),
+      Dr = DY(3e3),
+      Fr = DY(4252),
+      Ar = DY(1298),
+      Ir = DY(649),
+      Rr = DY(732);
+
+    function Or() {
+      const YY = AY.b.get("clientEscMenuOptions");
+      gY.gameBridge.send("setLookSensitivity", AY.b.get("isTouchScreen") ? (0, Rr.j)(YY) : YY.mouseSensitivity)
+    }
+    async function gr(YY, rY, DY) {
+      const FY = (0, Fr.L)(rY);
+      async function RY(YY, rY, DY, FY) {
+        var RY;
+        if (FY.aborted) return null;
+        null === AY.b.get("gameEntrySource") && (0, AY.g)("directPlayUrl"), Ir.r && (0, XY.e)().catch((() => {})), AY.b.set({
+          gameState: "findingLobby"
+        }), WY.g.vo("loadingScreenState", "loadingPage:findingLobby");
+        const OY = await oY.userContextManager.getCurrentUserContext();
+        gY.gameBridge.send("setRequestedGame", {
+          gameNameWithVariation: rY,
+          discordContext: YY instanceof CY.g ? YY.getSerialisableParams() : null
+        }), (0, Yr.e)();
+        const aY = await async function(YY, rY, DY, FY, AY) {
+          try {
+            await IY.reqLibsLoadedPromise
+          } catch (RY) {
+            return EY.e.errorWithCode(RY.toString(), QY.l.LOAD_REQUIRED_LIBS, {
+              error: RY,
+              severity: "medium"
+            })
+          }
+          return WY.g.vo("matchmakeAndPlayStepCompleted", {
+            step: QY.l.LOAD_REQUIRED_LIBS,
+            totalSubSteps: 1
+          }), (0, IY.matchmakeAndPlayMaybeUnloaded)(YY, rY, DY, FY, AY)
+        }(YY, rY, DY, OY, FY), vY = aY.isError() ? aY.asError() : null;
+        if (vY && !vY.debugResult.Hr) {
+          console.log("Failed to join lobby:", vY.message);
+          const YY = "timedOut" === vY.debugResult.gameServerUnreachable;
+          (0, rr.e)("matchmake_failed", vY.message, YY ? "CONNECT_TO_GAME_SERVER_TIMEOUT" : QY.l[vY.code])
+        }
+        if (FY.aborted) return gY.gameBridge.send("leaveGame", {
+          reloadPath: null
+        }), null;
+        if (null !== vY && void 0 !== vY && vY.debugResult.Hr) return console.log("Join cancelled:", vY.message), null;
+        if (vY) return aY;
+        const {
+          gameNameWithVariation: uY,
+          lobbyName: sY,
+          addLobbyToRecentlyPlayed: iY
+        } = aY.getValue();
+        let yY;
+        Or(), (0, Ar.F)().setGameViewShown(!0);
+        const mY = null === (RY = ZY.d[uY]) || void 0 === RY ? void 0 : RY.recentlyPlayedAs;
+        return yY = (0, fY.l)(uY) ? {
+          type: "custom",
+          name: "",
+          schematicId: (0, fY.r)(uY),
+          recentLobbies: []
+        } : "classic" !== uY || (0, hY.P)(sY) ? mY ? {
+          type: "bloxd",
+          gameNameWithVariation: mY,
+          recentLobbies: []
+        } : {
+          type: "bloxd",
+          gameNameWithVariation: uY,
+          recentLobbies: []
+        } : {
+          type: "bloxd",
+          gameNameWithVariation: "classic_worlds",
+          recentLobbies: []
+        }, jY.e.addRecentlyPlayedGame(OY, yY, iY && !mY ? sY : void 0).then((YY => {
+          OY.setRecentlyPlayedGames(YY)
+        })).catch((YY => {
+          console.error("Failed to record recently played game", YY)
+        })), (0, SY.I)(), aY
+      }
+      return FY && (0, AY.g)("updateRejoin"), (0, Dr.j)((async AY => {
+        try {
+          let OY = YY,
+            gY = await RY(OY, rY, DY, AY);
+          for (let YY = 0; FY && YY < Fr.l; YY++) {
+            var IY;
+            if (null === (IY = gY) || void 0 === IY || !IY.isError() || gY.asError().code !== QY.l.REQUEST_TO_MATCHMAKING) break;
+            if (!await (0, Fr.O)((0, Fr.x)(YY), AY)) return gY;
+            OY = (0, Fr.y)(OY, YY + 1, "string" === typeof OY && (0, hY.P)(OY)), gY = await RY(OY, rY, DY, AY)
+          }
+          return gY
+        } catch (OY) {
+          if ((0, rr.e)("matchmake_failed", OY, "unexpected"), gY.gameBridge.send("leaveGame", {
+              reloadPath: AY.aborted ? null : "/"
+            }), AY.aborted) return null;
+          throw OY
+        }
+      }), (async YY => {
+        var DY;
+        if (FY) return;
+        const AY = (0, SY.E)();
+        null !== AY && (await AY, YY.aborted) || (null !== (DY = ZY.d[rY]) && void 0 !== DY && DY.playAdBeforeMatchmaking ? (qY.f.skipPlayWait(), await new Promise((YY => {
+          (0, SY.W)((() => {
+            YY(!0)
+          }), "video_start")
+        }))) : (0, SY.W)((() => {}), "video_start"))
+      }))
+    }
+
+    function ar() {
+      const {
+        t: YY
+      } = (0, uY.C)(), rY = (0, aY.useNavigatePreserveSearch)(), DY = (0, FY.u)(), WY = (0, FY.D)(), EY = (0, RY.useRef)({
+        t: YY,
+        navigate: rY
+      });
+      EY.current = {
+        t: YY,
+        navigate: rY
+      };
+      const cY = (0, RY.useRef)("");
+      cY.current = DY.pathname + DY.search;
+      const {
+        gameState: ZY,
+        clientEscMenuOptions: CY
+      } = (0, AY.j)(["gameState", "clientEscMenuOptions"]), dY = (0, RY.useRef)(null), MY = (0, RY.useRef)(null);
+      var wY;
+      (0, Dr.n)(), (0, Dr.o)(), wY = Ir.r, (0, RY.useEffect)((() => {
+        if (!wY) return;
+        let YY = !0;
+        return (0, XY.e)().then((rY => {
+          YY && nY(rY)
+        })).catch((() => {})), () => {
+          var rY;
+          YY = !1, GY.wanted = !1, null === (rY = xY) || void 0 === rY || rY.setGamePackConfirm(null), xY = null
+        }
+      }), [wY]), (0, RY.useEffect)((() => {
+        var YY;
+        (0, IY.needGameClientNow)();
+        const {
+          t: rY,
+          navigate: FY
+        } = EY.current, RY = (0, LY.e)(WY, DY.search);
+        if (WY.lobbyName && !new URLSearchParams(DY.search).has("lobby")) return void FY((0, zY.d)(RY.gameNameWithVariation, RY.lobbyName), {
+          replace: !0
+        });
+        let OY = Promise.resolve({
+          shouldMatchmake: !0
+        });
+        if ("/play/discord-custom-lobby" === DY.pathname) {
+          const YY = AY.b.get("discordContext");
+          if (!YY) return void FY("/");
+          OY = yY.e.setupDiscordLobby(YY, "classic").then((() => ({
+            shouldMatchmake: !0,
+            discordContext: YY
+          }))).catch((rY => (console.error("Failed to setup discord lobby", rY), {
+            shouldMatchmake: !1,
+            discordContext: YY
+          })))
+        } else if (!RY.gameNameWithVariation || !(0, hY.O)(RY.gameNameWithVariation)) return console.error(`Valid game name with variation is required. Received ${RY.gameNameWithVariation}`), void FY(-1);
+        if (RY.gameNameWithVariation === dY.current && RY.lobbyName === MY.current) return;
+        if (gY.gameBridge.latest("connectedGame").replay) return void(0, Dr.g)(null);
+        (0, SY.F)(), AY.b.set({
+          gameState: "loadingScreen"
+        });
+        const aY = function() {
+          GY.wanted = !1;
+          const YY = {
+            wanted: !0
+          };
+          return GY = YY, () => YY.wanted
+        }();
+        if ("releaseCountdown" === (null === (YY = (0, HY.g)(RY.gameNameWithVariation)) || void 0 === YY ? void 0 : YY.type)) return console.error(`Game hasn't been released yet: ${RY.gameNameWithVariation}`), void FY(-1);
+        const uY = RY.gameNameWithVariation;
+        if (uY && (Ir.r || (0, fY.l)(uY))) {
+          const YY = Ir.r ? Promise.all([(0, XY.e)(), oY.userContextManager.getCurrentUserContext()]).then((YY => {
+            let [rY, DY] = YY;
+            if (aY()) return nY(rY), rY.packForGame(uY, DY, aY)
+          })) : async function(YY) {
+            await JY.d.indexedDbValuesAreLoaded();
+            const rY = await oY.userContextManager.getCurrentUserContext(),
+              DY = (0, fY.r)(YY);
+            let FY;
+            try {
+              FY = await jY.e.getGame(rY, DY, !0)
+            } catch (RY) {
+              return void console.error("Failed to get game", RY)
+            }
+            const AY = FY.customTexturePackKey;
+            if (!AY) return void(JY.d.isUsingTemporaryTexturePack() && ((0, mY.reloadBloxd)(), await new Promise((() => {}))));
+            if (JY.d.isUsingTemporaryTexturePack() && JY.d.getTemporaryTexturePackSource() === AY) return;
+            const IY = vY.NotificationProvider.showCustomPopup({
+              body: YY => (0, BY.jsx)(UY, {
+                schematicId: DY,
+                texturePackKey: AY,
+                onClose: YY
+              }),
+              disableExitButton: !0,
+              disablePressBackgroundToClose: !0
+            });
+            await IY.getResult()
+          }(uY), rY = OY;
+          OY = YY.catch((YY => {
+            console.error("Failed to check for custom texture pack", YY)
+          })).then((() => rY))
+        }(0, Dr.g)(null);
+        let lY = !1;
+        const ZY = DY.pathname + DY.search,
+          CY = () => !lY && cY.current === ZY;
+        return OY.then((YY => {
+          let {
+            shouldMatchmake: DY,
+            discordContext: IY
+          } = YY;
+          CY() && (DY ? gr(null !== IY && void 0 !== IY ? IY : RY.lobbyName, IY ? "classic" : RY.gameNameWithVariation, RY.directJoinVmUrl).then((YY => {
+            var DY, IY;
+            if (null !== YY && CY())
+              if (YY.isError()) {
+                var OY;
+                const aY = YY.asError(),
+                  uY = null !== (OY = aY.debugResult.severity) && void 0 !== OY ? OY : "high";
+                if (aY.code === QY.l.SHADER_PACK) return void(0, tY.c)(aY.message, FY);
+                const yY = AY.b.get("gameEntrySource"),
+                  oY = aY.code === QY.l.INITIALISE_WEBGL ? (0, eY.e)() : null,
+                  {
+                    error: WY
+                  } = aY.debugResult,
+                  EY = aY.code === QY.l.REQUEST_TO_MATCHMAKING ? function(YY) {
+                    var rY;
+                    return null !== (rY = Object.keys(sY.e).find((rY => sY.e[rY] === YY))) && void 0 !== rY ? rY : null
+                  }(aY.message) : null;
+                let SY;
+                if (null !== EY) vY.NotificationProvider.showPromptPopup({
+                  icon: "lock",
+                  title: rY((IY = EY, "notWhitelisted" === IY ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld")),
+                  subtitle: rY(iY[EY]),
+                  confirmText: rY("general:ok"),
+                  cancelText: ""
+                }), SY = Promise.resolve(!1);
+                else if (null !== oY) SY = (0, eY.l)(oY);
+                else if (WY instanceof NY.o) DY = WY, SY = vY.NotificationProvider.showPromptPopup({
+                  icon: "face-dizzy",
+                  title: "texturePackLoad:failedTitle",
+                  subtitle: (0, BY.jsx)(KY, {
+                    failure: DY
+                  }),
+                  confirmText: "general:tryAgain",
+                  cancelText: "general:back"
+                }).getResult().then((YY => !0 === YY));
+                else {
+                  let YY;
+                  switch (uY) {
+                    case "low":
+                      YY = "face-diagonal-mouth";
+                      break;
+                    case "medium":
+                      YY = "face-worried";
+                      break;
+                    case "high":
+                      YY = "face-dizzy"
+                  }
+                  SY = vY.NotificationProvider.showPromptPopup({
+                    icon: YY,
+                    title: QY.x[aY.code],
+                    subtitle: (0, BY.jsxs)(BY.Fragment, {
+                      children: [aY.debugResult.gameServerUnreachable ? rY((0, VY.isMobile)() ? "general:gameServerUnreachableMobile" : "general:gameServerUnreachable") : aY.message, aY.debugResult.error instanceof Error && (0, BY.jsx)("div", {
+                        style: {
+                          fontSize: "0.9rem",
+                          paddingTop: "1rem"
+                        },
+                        children: (0, BY.jsx)(TY.c, {
+                          errorString: aY.debugResult.error.stack
+                        })
+                      })]
+                    }),
+                    confirmText: rY("general:tryAgain"),
+                    cancelText: rY("general:cancel")
+                  }).getResult().then((YY => !0 === YY))
+                }
+                SY.then((YY => {
+                  if (YY) {
+                    (0, AY.g)(yY);
+                    const YY = (0, zY.d)(RY.gameNameWithVariation, RY.lobbyName);
+                    "low" === uY ? FY(YY) : (0, mY.reloadBloxd)(YY)
+                  }
+                })), gY.gameBridge.send("leaveGame", {
+                  reloadPath: "/"
+                }), FY(-1)
+              } else {
+                dY.current = YY.getValue().gameNameWithVariation, MY.current = YY.getValue().lobbyName;
+                const rY = (0, zY.d)(dY.current, YY.getValue().lobbyName);
+                FY(rY, {
+                  replace: !0
+                })
+              }
+          })).catch((YY => {
+            if (!CY()) return;
+            vY.NotificationProvider.showPromptPopup({
+              icon: "face-dizzy",
+              title: "Unexpected Error",
+              subtitle: (0, BY.jsxs)(BY.Fragment, {
+                children: [rY("homePage:pleaseCopyError"), (0, BY.jsx)("div", {
+                  style: {
+                    fontSize: "0.9rem",
+                    paddingTop: "1rem"
+                  },
+                  children: (0, BY.jsx)(TY.c, {
+                    errorString: YY.stack
+                  })
+                })]
+              }),
+              confirmText: rY("general:tryAgain"),
+              cancelText: rY("general:cancel")
+            }).getResult().then((YY => {
+              !0 === YY && (0, mY.reloadBloxd)((0, zY.d)(RY.gameNameWithVariation, RY.lobbyName))
+            })), FY(-1)
+          })) : FY(-1))
+        })), () => {
+          lY = !0
+        }
+      }), [WY, DY.search, DY.pathname]), (0, RY.useEffect)((() => {
+        CY.disableFullscreen && (0, lY.d)() ? (0, lY.k)() : !CY.disableFullscreen && (0, lY.g)() && (0, lY.u)()
+      }), [ZY, CY]), (0, RY.useEffect)((() => {
+        "inGame" === ZY && Or()
+      }), [ZY, CY]), (0, RY.useEffect)((() => {
+        "inGame" !== ZY && AY.b.set({
+          openInGameMenuName: null
+        })
+      }), [ZY]);
+      const bY = function(YY) {
+        const rY = (0, AY.e)(YY),
+          [DY, FY] = (0, RY.useState)(0),
+          [IY, gY] = (0, RY.useState)(!1);
+        (0, OY.g)("gameJoined", (() => {
+          (0, AY.e)(AY.b.get("gameState")) && (FY((YY => YY + 1)), gY(!0))
+        })), (0, RY.useEffect)((() => {
+          rY || gY(!1)
+        }), [rY]);
+        const aY = "inGame" === YY;
+        return {
+          mounted: aY || rY && IY,
+          shown: aY,
+          key: DY
+        }
+      }(ZY);
+      return (0, BY.jsx)(BY.Fragment, {
+        children: bY.mounted && (0, BY.jsx)(IY.InGameUi, {
+          shown: bY.shown
+        }, bY.key)
       })
+    }
+  },
+  4569: (YY, rY, DY) => {
+    DY.d(rY, {
+      d: () => AY
+    });
+    var FY = DY(1222);
+    async function AY(YY) {
+      const rY = await fetch(`${FY.clientSideServerUrls.s3Url}/${YY}`, {
+        headers: {
+          Accept: "application/json"
+        }
+      });
+      if (404 === rY.status || 403 === rY.status) return null;
+      if (!rY.ok) throw new Error(`Failed to download the texture pack (${rY.status})`);
+      return await rY.json()
+    }
+  },
+  8317: (YY, rY, DY) => {
+    DY.d(rY, {
+      e: () => RY
+    });
+    var FY = DY(1330),
+      AY = DY(1231),
+      IY = DY(625);
+
+    function RY(YY) {
+      return YY = function(YY, rY) {
+        var DY;
+        const FY = new URLSearchParams(rY),
+          AY = FY.get("lobby"),
+          IY = FY.get("vm"),
+          RY = null !== (DY = AY) && void 0 !== DY ? DY : YY.lobbyName,
+          OY = null !== IY && void 0 !== IY ? IY : YY.directJoinVmUrl;
+        if (RY === YY.lobbyName && OY === YY.directJoinVmUrl) return YY;
+        return {
+          ...YY,
+          lobbyName: RY,
+          directJoinVmUrl: OY
+        }
+      }(YY, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ""), YY = function(YY) {
+        if ((0, IY.H)(YY.directJoinVmUrl)) return YY;
+        const rY = (0, AY.Z)(YY.directJoinVmUrl);
+        null === rY && (YY.directJoinVmUrl = void 0);
+        return YY
+      }(YY = function(YY) {
+        if ((0, IY.H)(YY.gameNameWithVariation)) return YY;
+        return YY.gameNameWithVariation = (0, FY.m)(YY.gameNameWithVariation), YY
+      }(YY))
+    }
+  },
+  8309: (YY, rY, DY) => {
+    DY.d(rY, {
+      e: () => IY,
+      h: () => AY
+    });
+    let FY = !1;
+
+    function AY() {
+      FY = !0
+    }
+
+    function IY() {
+      return FY
+    }
+  },
+  8307: (YY, rY, DY) => {
+    DY.d(rY, {
+      e: () => vY,
+      f: () => uY
+    });
+    var FY = DY(2743),
+      AY = DY(2137),
+      IY = DY(2785),
+      RY = DY(4220),
+      OY = DY(3082),
+      gY = DY(8309);
+    let aY = null;
+
+    function vY() {
+      return RY.e.cancelDownloadForJoin(), (0, OY.b)(), (0, AY.c)(), (0, gY.h)(), (0, IY.i)(), Promise.all([DY.e(69), DY.e(72), DY.e(71), DY.e(70), DY.e(83), DY.e(258), DY.e(237), DY.e(211), DY.e(235), DY.e(207), DY.e(46)]).then((() => DY(39778))).catch((() => {})), Promise.all([DY.e(74), DY.e(133), DY.e(87), DY.e(55)]).then((() => DY(39865))).then((YY => {
+        let {
+          startJoinLoad: rY
+        } = YY;
+        rY()
+      }), (() => {})), aY ??= Promise.all([DY.e(71), DY.e(74), DY.e(130), DY.e(73), DY.e(133), DY.e(261), DY.e(185), DY.e(87), DY.e(86), DY.e(85), DY.e(207), DY.e(60)]).then((() => DY(39960))).then((YY => (YY.startWasmPlay(), YY.followPageUiPack((YY => {
+        FY.d.showGamePack(YY)
+      })), YY)), (YY => {
+        throw aY = null, YY
+      })), aY
+    }
+
+    function uY() {
+      return Promise.all([DY.e(71), DY.e(74), DY.e(130), DY.e(73), DY.e(133), DY.e(261), DY.e(185), DY.e(87), DY.e(86), DY.e(85), DY.e(207), DY.e(60)]).then((() => DY(39960))).then((YY => {
+        YY.startWasmPreviews(), YY.prefetchWasmPreviews()
+      }))
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

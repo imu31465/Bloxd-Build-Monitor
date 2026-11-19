@@ -1,212 +1,273 @@
 export const id = 135;
 export const ids = [135];
 export const modules = {
-  7443: (BB, TB, dB) => {
-    dB.r(TB), dB.d(TB, {
-      BloxdMsnAccountSdk: () => kB,
-      MsnSdkAdaptor: () => uB,
-      msnMockIdentityStorageKey: () => YB
+  40808: (YY, rY, DY) => {
+    DY.r(rY), DY.d(rY, {
+      compilePagePack: () => aY,
+      prefetchCompiler: () => OY,
+      reconcileHint: () => gY
     });
-    var VB = dB(1204),
-      yB = dB(1068),
-      pB = dB(2947),
-      lB = dB(572);
-    dB(33);
-    const JB = "https://assets.msn.com/staticsb/statics/latest/msstart-games-sdk/msstart-v1.0.0-rc.23.min.js",
-      YB = "msnMockIdentity";
-    let gB = null;
+    var FY = DY(6182),
+      AY = DY(6221),
+      IY = DY(6194),
+      RY = DY(6212);
 
-    function oB() {
-      return gB ??= async function() {
-        await (0, yB.c)(JB, {}, !1);
-        for (let BB = 0; BB < 50 && !window.$msstart; BB++) await (0, lB.T)(100)
-      }(), gB
+    function OY() {
+      (0, FY.loadPageShaderPackCompiler)()
     }
-    class kB {
-      constructor() {}
-      static async setup() {
-        try {
-          await Promise.race([oB(), (0, lB.T)(1e4).then((() => {
-            throw new Error("Not loaded after 10000ms")
-          }))])
-        } catch (BB) {
-          return console.error("MSN Play SDK failed to load, so MSN Play accounts are unavailable:", BB), null
-        }
-        return window.$msstart ? new kB : (console.error("MSN Play SDK script loaded but window.$msstart is missing, so MSN Play accounts are unavailable"), null)
-      }
-      async getSignedInUser() {
-        try {
-          return await Promise.race([window.$msstart.getSignedInUserAsync(), (0, lB.T)(1e4).then((() => {
-            throw new Error("No answer after 10000ms")
-          }))])
-        } catch (BB) {
-          return "USER_NOT_CONSENTED" !== (null === BB || void 0 === BB ? void 0 : BB.code) && console.error("Failed to get the signed-in MSN Play player:", BB), null
-        }
-      }
-      async signIn() {
-        return null !== null ? null : await window.$msstart.signInAsync()
-      }
+    async function gY() {
+      const YY = await (0, FY.loadPageShaderPackCompiler)();
+      await (YY ? (0, AY.reconcileStoredShaderPackHint)(YY) : (0, AY.forgetShaderPackActiveHint)())
     }
-    const LB = 20,
-      OB = {
-        top: [{
-          width: 970,
-          height: 250
-        }, {
-          width: 728,
-          height: 90
-        }, {
-          width: 320,
-          height: 50
-        }],
-        right: [{
-          width: 300,
-          height: 600
-        }, {
-          width: 160,
-          height: 600
-        }, {
-          width: 300,
-          height: 250
-        }, {
-          width: 320,
-          height: 50
-        }],
-        left: [{
-          width: 300,
-          height: 600
-        }, {
-          width: 160,
-          height: 600
-        }, {
-          width: 300,
-          height: 250
-        }, {
-          width: 320,
-          height: 50
-        }]
-      },
-      DB = {
-        leaderboard: {
-          1: ["right", "left"],
-          5: ["top", "left"]
-        },
-        square: {
-          1: []
-        },
-        skyscraper: {
-          2: []
-        }
+    async function aY(YY) {
+      const rY = await (0, FY.loadPageShaderPackCompiler)();
+      if (!rY) return {
+        status: "none"
       };
-    class uB extends VB.e {
-      constructor() {
-        super(), this.name = "msn", this.currentlyShowingBannerPlacement = null, this.isCurrentlyClearingAllBanners = !1
-      }
-      static async setup() {
-        return await oB(), new uB
-      }
-      playVideoAd(BB, TB) {
-        this.playVideoOrRewarded("video", BB, BB)
-      }
-      playRewarded(BB, TB) {
-        this.playVideoOrRewarded("rewarded", BB, TB)
-      }
-      canShowBloxdAd(BB) {
-        for (const TB in DB)
-          if (BB.adId in DB[TB]) return !1;
-        return !0
-      }
-      async renderBanner(BB) {
-        if (null !== this.currentlyShowingBannerPlacement) return void console.log(`AD ${(0,pB.d)(BB)}: msn placement is already showing so not requesting`);
-        const TB = DB[BB.adType][BB.adId];
-        if ((0, lB.M)(TB)) return void console.warn(`AD ${(0,pB.d)(BB)}: no msn placement is configured for this bloxd placement so not showing any ad`);
-        const dB = [];
-        for (const VB of TB)
-          for (const BB of OB[VB])
-            if (BB.width <= window.innerWidth - 40 && BB.height <= window.innerHeight - 40) {
-              const TB = {
-                placement: VB,
-                width: BB.width,
-                height: BB.height
-              };
-              if (!dB.some((BB => EB(TB, BB)))) {
-                dB.push(TB);
-                break
-              }
-            } if (dB.length > 0) {
-          console.log(`AD ${(0,pB.d)(BB)}: Attempting to show msn units: `, dB);
-          const TB = dB.map((BB => `${BB.placement}:${BB.width}x${BB.height}`));
-          this.currentlyShowingBannerPlacement = {
-            placementId: (0, pB.d)(BB),
-            renderPromise: window.$msstart.showDisplayAdsAsync(TB).then((() => {
-              console.log(`AD ${(0,pB.d)(BB)}: Successfully request msn banner ad`)
-            })).catch((TB => {
-              console.log(`AD ${(0,pB.d)(BB)}: Error while requesting msn banner ad`, TB)
-            }))
-          }
-        } else console.warn(`AD ${(0,pB.d)(BB)}: couldn't find an msn unit that fit screen size`)
-      }
-      async clearBanner(BB) {
-        null !== this.currentlyShowingBannerPlacement && (0, pB.d)(BB) === this.currentlyShowingBannerPlacement.placementId && (console.log(`AD ${(0,pB.d)(BB)}: Attempting to clear msn banner ads for banner`, BB), await this.clearAllBannerAds())
-      }
-      async clearAllBannerAds() {
-        try {
-          if (this.isCurrentlyClearingAllBanners) return;
-          this.isCurrentlyClearingAllBanners = !0, null !== this.currentlyShowingBannerPlacement && await this.currentlyShowingBannerPlacement.renderPromise, await window.$msstart.hideDisplayAdsAsync(), console.log("AD: Successfully cleared all msn banner ads")
-        } catch (BB) {
-          console.log("AD: Error while clearing all msn banner ads", BB)
-        } finally {
-          this.currentlyShowingBannerPlacement = null, this.isCurrentlyClearingAllBanners = !1
+      const DY = await (0, RY.c)(YY, rY),
+        OY = (0, AY.storedPackOutcome)(DY, rY);
+      if ("none" === OY.kind) return {
+        status: "none"
+      };
+      const gY = rY.I6((0, AY.storedShaderPackFiles)(DY), (0, IY.shaderPackTextures)());
+      if ("blocked" === OY.kind) return {
+        status: "blocked",
+        messageKey: OY.messageKey,
+        variants: 0 === gY.errors.length ? gY.variants : null
+      };
+      if (gY.errors.length > 0) return console.error("Shader pack failed to compile after passing validation", gY.errors), {
+        status: "none"
+      };
+      const {
+        name: aY,
+        keepCircleShadows: vY
+      } = DY.manifest;
+      return {
+        status: "active",
+        pack: {
+          name: aY,
+          variants: gY.variants,
+          keepCircleShadows: !0 === vY
         }
       }
-      playVideoOrRewarded(BB, TB, dB) {
-        const VB = TB => {
-          console.error(`AD: Error while playing MSN ${BB} ad: `, TB), document.getElementById("GenericVideoWrapper").style.display = "none", window.adCompleteSoResume(), dB()
-        };
-        if (window.$msstart) {
-          console.log(`AD: Attempting to play MSN ${BB} ad`), document.getElementById("GenericVideoWrapper").style.display = "flex";
-          const dB = async () => {
-            try {
-              const dB = await window.$msstart.loadAdsAsync("rewarded" === BB),
-                VB = await window.$msstart.showAdsAsync(dB.instanceId);
-              this.clearAllBannerAds(), await VB.showAdsCompletedAsync, console.log(`AD: Successfully finished MSN ${BB} ad`), document.getElementById("GenericVideoWrapper").style.display = "none", window.adCompleteSoResume(), TB()
-            } catch (dB) {
-              VB(dB)
-            }
-          };
-          window.adStartSoPause(null, {
-            preventMovement: !0
-          }), dB()
-        } else VB(`AD: Can't play MSN ${BB} ad because sdk is not loaded`)
-      }
     }
+  },
+  6221: (YY, rY, DY) => {
+    DY.r(rY), DY.d(rY, {
+      forgetShaderPackActiveHint: () => KY,
+      isOtherApiVersion: () => eY,
+      isShaderPackActive: () => VY,
+      isShaderPackChangePending: () => TY,
+      markShaderPackChangePending: () => lY,
+      pageShaderPackValidationVersion: () => NY,
+      reconcileStoredShaderPackHint: () => cY,
+      removeShaderPack: () => mY,
+      replaceShaderPack: () => oY,
+      saveShaderPack: () => QY,
+      shaderPackNeedsCheck: () => BY,
+      storedPackOutcome: () => SY,
+      storedShaderPackFiles: () => sY,
+      toStoredShaderPack: () => uY
+    });
+    var FY = DY(6150),
+      AY = DY(6168),
+      IY = DY(40),
+      RY = DY(3015),
+      OY = DY(6230),
+      gY = DY(6194);
+    const aY = "shaderPackChangePending";
+    let vY = null;
 
-    function HB(BB) {
-      let TB, dB;
-      switch (BB.placement) {
-        case "top":
-          TB = (window.innerWidth - BB.width) / 2, dB = LB;
-          break;
-        case "right":
-          TB = window.innerWidth - BB.width - LB, dB = window.innerHeight / 2 - BB.height / 2 - 10;
-          break;
-        case "left":
-          TB = LB, dB = window.innerHeight / 2 - BB.height / 2 - 10
-      }
+    function uY(YY, rY, DY) {
       return {
-        x1: TB,
-        y1: dB,
-        x2: TB + BB.width,
-        y2: dB + BB.height
+        manifest: YY.manifest,
+        files: (0, FY.z)(YY.files),
+        validation: rY,
+        ...DY && {
+          listing: DY
+        }
       }
     }
 
-    function EB(BB, TB) {
-      const dB = HB(BB),
-        VB = HB(TB);
-      return !(dB.x2 <= VB.x1 || VB.x2 <= dB.x1 || dB.y2 <= VB.y1 || VB.y2 <= dB.y1)
+    function sY(YY) {
+      return Object.keys(YY.files).map((rY => ({
+        path: rY,
+        source: YY.files[rY]
+      })))
+    }
+    let iY = Promise.resolve();
+
+    function yY(YY) {
+      const rY = iY.then(YY);
+      return iY = rY.catch((() => {})), rY
+    }
+
+    function QY(YY, rY) {
+      return yY((() => WY(YY, rY)))
+    }
+
+    function oY(YY, rY, DY) {
+      return yY((async () => JSON.stringify(await (0, OY.e)()) === JSON.stringify(YY) && (null === rY ? (await EY(), !0) : WY(rY, DY))))
+    }
+    async function WY(YY, rY) {
+      const DY = await IY.i.setItem(OY.c, YY);
+      return DY && HY(YY, rY), DY
+    }
+    async function EY() {
+      await IY.i.removeItem(OY.c), IY.m.removeItem(RY.b)
+    }
+
+    function mY() {
+      return yY(EY)
+    }
+
+    function VY(YY, rY) {
+      return "active" === SY(YY, rY).kind
+    }
+
+    function SY(YY, rY) {
+      var DY;
+      return null === YY ? {
+        kind: "none",
+        reason: "nothingStored"
+      } : eY(YY) ? {
+        kind: "none",
+        reason: "otherApiVersion"
+      } : !1 !== (null === (DY = YY.validation) || void 0 === DY ? void 0 : DY.ok) || YY.validation.fromRecheck ? null === rY ? {
+        kind: "none",
+        reason: "noCompiler"
+      } : BY(YY, rY) ? {
+        kind: "blocked",
+        messageKey: "shaderPack:failedUnchecked"
+      } : YY.validation.ok ? {
+        kind: "active"
+      } : {
+        kind: "blocked",
+        messageKey: "shaderPack:failedValidation"
+      } : {
+        kind: "none",
+        reason: "failedWhenLoaded"
+      }
+    }
+
+    function lY() {
+      IY.q.setItem(aY, performance.timeOrigin)
+    }
+
+    function TY() {
+      return IY.q.getItem(aY) === performance.timeOrigin
+    }
+
+    function eY(YY) {
+      return !(0, AY.j)(YY.manifest.apiVersion)
+    }
+
+    function NY(YY) {
+      return vY ??= YY.aT((0, gY.shaderPackTextures)()), vY
+    }
+
+    function BY(YY, rY) {
+      var DY;
+      return (null === (DY = YY.validation) || void 0 === DY ? void 0 : DY.headerVersion) !== NY(rY)
+    }
+
+    function cY(YY) {
+      return yY((async () => {
+        HY(await (0, OY.e)(!0), YY)
+      }))
+    }
+
+    function KY() {
+      return yY((async () => {
+        IY.m.removeItem(RY.b)
+      }))
+    }
+
+    function HY(YY, rY) {
+      VY(YY, rY) ? IY.m.setItem(RY.b, !0) : IY.m.removeItem(RY.b)
+    }
+  },
+  6212: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => gY,
+      g: () => OY
+    });
+    var FY = DY(6221),
+      AY = DY(6194),
+      IY = DY(121);
+    const RY = 100;
+    async function OY(YY, rY) {
+      var DY;
+      let FY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (DY = navigator.gpu) && void 0 !== DY ? DY : null;
+      const RY = YY.I6(rY, (0, AY.shaderPackTextures)());
+      if (RY.errors.length > 0) return aY(YY, RY.errors, RY.offInStrict);
+      const OY = await async function(YY) {
+        if (!YY) return null;
+        try {
+          const rY = await (0, IY.B)(YY);
+          return rY ? await rY.requestDevice() : null
+        } catch (rY) {
+          return console.error("Couldn't get a WebGPU device to validate the shader pack.", rY), null
+        }
+      }(FY);
+      if (!OY) return null;
+      let gY = !1;
+      OY.lost.then((() => {
+        gY = !0
+      }));
+      try {
+        const rY = await Promise.all(RY.validationModules.map((rY => async function(YY, rY, DY) {
+          rY.pushErrorScope("validation");
+          const FY = rY.createShaderModule({
+              code: DY.code
+            }),
+            AY = rY.popErrorScope(),
+            {
+              messages: IY
+            } = await FY.getCompilationInfo(),
+            RY = IY.filter((YY => "error" === YY.type)).map((rY => YY.mapValidationMessage(DY, rY))),
+            OY = await AY;
+          OY && 0 === RY.length && RY.push({
+            file: null,
+            line: 0,
+            message: OY.message,
+            variants: [DY.key]
+          });
+          return RY
+        }(YY, OY, rY))));
+        return gY ? null : aY(YY, YY.FDY(rY.flat()), RY.offInStrict)
+      } catch (vY) {
+        return console.error("Couldn't validate the shader pack on WebGPU.", vY), null
+      } finally {
+        OY.destroy()
+      }
+    }
+    async function gY(YY, rY) {
+      var DY;
+      if (!(0, FY.shaderPackNeedsCheck)(YY, rY) || (0, FY.isOtherApiVersion)(YY)) return YY;
+      const AY = await OY(rY, (0, FY.storedShaderPackFiles)(YY));
+      if (!AY) return YY;
+      const IY = !1 === (null === (DY = YY.validation) || void 0 === DY ? void 0 : DY.ok) && !YY.validation.fromRecheck,
+        RY = {
+          ...YY,
+          validation: IY ? AY : {
+            ...AY,
+            fromRecheck: !0
+          }
+        };
+      return await (0, FY.replaceShaderPack)(YY, RY, rY) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), RY
+    }
+
+    function aY(YY, rY, DY) {
+      return {
+        headerVersion: (0, FY.pageShaderPackValidationVersion)(YY),
+        ok: 0 === rY.length,
+        errors: rY.slice(0, RY),
+        moreErrors: Math.max(0, rY.length - RY),
+        offInStrict: DY
+      }
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

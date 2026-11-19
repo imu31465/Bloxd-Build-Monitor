@@ -1,884 +1,701 @@
 export const id = 239;
 export const ids = [239];
 export const modules = {
-  39016: (BB, TB, dB) => {
-    dB.d(TB, {
-      c: () => LB
+  38962: (YY, rY, DY) => {
+    DY.r(rY), DY.d(rY, {
+      default: () => xY
     });
-    var VB = dB(38745),
-      yB = dB(38750),
-      pB = dB(36126),
-      lB = dB(36183),
-      JB = dB(38980),
-      YB = dB(38880),
-      gB = dB(36166),
-      oB = dB(38960),
-      kB = dB(38772);
-    let LB = (() => {
-      var BB, TB;
-      let dB, LB, OB, DB, uB, HB, EB, vB, mB, iB, NB, tB, fB, sB = JB.e,
-        MB = [],
-        zB = [],
-        wB = [],
-        UB = [],
-        FB = [],
-        KB = [],
-        rB = [],
-        IB = [],
-        cB = [],
-        SB = [],
-        PB = [],
-        QB = [],
-        RB = [],
-        aB = [],
-        ZB = [],
-        XB = [],
-        WB = [],
-        hB = [],
-        CB = [],
-        GB = [],
-        qB = [];
-      return BB = class extends sB {
-        get range() {
-          return this._range
-        }
-        set range(BB) {
-          this._range = BB, this._inverseSquaredRange = 1 / (this.range * this.range)
-        }
-        get intensityMode() {
-          return this._intensityMode
-        }
-        set intensityMode(BB) {
-          this._intensityMode = BB, this._computePhotometricScale()
-        }
-        get radius() {
-          return this._radius
-        }
-        set radius(BB) {
-          this._radius = BB, this._computePhotometricScale()
-        }
-        get renderPriority() {
-          return (0, VB.b)(this, TB, "f")
-        }
-        set renderPriority(BB) {
-          (0, VB.f)(this, TB, BB, "f")
-        }
-        get shadowEnabled() {
-          return this._shadowEnabled
-        }
-        set shadowEnabled(BB) {
-          this._shadowEnabled !== BB && (this._shadowEnabled = BB, this._markMeshesAsLightDirty())
-        }
-        get includedOnlyMeshes() {
-          return this._includedOnlyMeshes
-        }
-        set includedOnlyMeshes(BB) {
-          this._includedOnlyMeshes = BB, this._hookArrayForIncludedOnly(BB)
-        }
-        get excludedMeshes() {
-          return this._excludedMeshes
-        }
-        set excludedMeshes(BB) {
-          this._excludedMeshes = BB, this._hookArrayForExcluded(BB)
-        }
-        get excludeWithLayerMask() {
-          return this._excludeWithLayerMask
-        }
-        set excludeWithLayerMask(BB) {
-          this._excludeWithLayerMask = BB, this._resyncMeshes()
-        }
-        get includeOnlyWithLayerMask() {
-          return this._includeOnlyWithLayerMask
-        }
-        set includeOnlyWithLayerMask(BB) {
-          this._includeOnlyWithLayerMask = BB, this._resyncMeshes()
-        }
-        get lightmapMode() {
-          return this._lightmapMode
-        }
-        set lightmapMode(BB) {
-          this._lightmapMode !== BB && (this._lightmapMode = BB, this._markMeshesAsLightDirty())
-        }
-        getViewMatrix(BB) {
-          return null
-        }
-        getProjectionMatrix(BB, TB) {
-          return null
-        }
-        constructor(dB, yB, pB) {
-          super(dB, yB, !1), this.diffuse = ((0, VB.h)(this, MB), (0, VB.h)(this, zB, new lB.c(1, 1, 1))), this.specular = ((0, VB.h)(this, wB), (0, VB.h)(this, UB, new lB.c(1, 1, 1))), this.falloffType = ((0, VB.h)(this, FB), (0, VB.h)(this, KB, BB.FALLOFF_DEFAULT)), this.intensity = ((0, VB.h)(this, rB), (0, VB.h)(this, IB, 1)), this._range = ((0, VB.h)(this, cB), Number.MAX_VALUE), this._inverseSquaredRange = 0, this._photometricScale = 1, this._intensityMode = BB.INTENSITYMODE_AUTOMATIC, this._radius = 1e-5, this._renderPriority = (0, VB.h)(this, SB, void 0), TB.set(this, ((0, VB.h)(this, PB), (0, VB.h)(this, QB, 0))), this._shadowEnabled = ((0, VB.h)(this, RB), (0, VB.h)(this, aB, !0)), this._includedOnlyMeshes = (0, VB.h)(this, ZB), this._excludeWithLayerMask = (0, VB.h)(this, XB, 0), this._includeOnlyWithLayerMask = ((0, VB.h)(this, WB), (0, VB.h)(this, hB, 0)), this._lightmapMode = ((0, VB.h)(this, CB), (0, VB.h)(this, GB, 0)), this._shadowGenerators = ((0, VB.h)(this, qB), null), this._excludedMeshesIds = new Array, this._includedOnlyMeshesIds = new Array, this._currentViewDepth = 0, this._clusteredContainer = null, this._isLight = !0, pB || this.jU().addLight(this), this._uniformBuffer = new YB.c(this.jU().PD(), void 0, void 0, dB), this._buildUniformLayout(), this.includedOnlyMeshes = [], this.excludedMeshes = [], pB || this._resyncMeshes()
-        }
-        transferTexturesToEffect(BB, TB) {
-          return this
-        }
-        _bindLight(BB, TB, dB, VB) {
-          let yB = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
-          const pB = BB.toString();
-          let JB = !1;
-          if (this._uniformBuffer.bindToEffect(dB, "Light" + pB), this._renderId !== TB.getRenderId() || this._lastUseSpecular !== VB || !this._uniformBuffer.useUbo) {
-            this._renderId = TB.getRenderId(), this._lastUseSpecular = VB;
-            const BB = this.getScaledIntensity();
-            this.transferToEffect(dB, pB), this.diffuse.scaleToRef(BB, lB.h.Color3[0]), this._uniformBuffer.updateColor4("vLightDiffuse", lB.h.Color3[0], this.range, pB), VB && (this.specular.scaleToRef(BB, lB.h.Color3[1]), this._uniformBuffer.updateColor4("vLightSpecular", lB.h.Color3[1], this.radius, pB)), JB = !0
-          }
-          if (this.transferTexturesToEffect(dB, pB), TB.shadowsEnabled && this.shadowEnabled && yB) {
-            const BB = this.getShadowGenerator(TB.activeCamera) ?? this.getShadowGenerator();
-            BB && (BB.bindShadowLight(pB, dB), JB = !0)
-          }
-          JB ? this._uniformBuffer.update() : this._uniformBuffer.bindUniformBuffer()
-        }
-        getClassName() {
-          return "Light"
-        }
-        toString(BB) {
-          let TB = "Name: " + this.name;
-          if (TB += ", type: " + ["Point", "Directional", "Spot", "Hemispheric", "Clustered"][this.getTypeID()], this.animations)
-            for (let dB = 0; dB < this.animations.length; dB++) TB += ", animation[0]: " + this.animations[dB].toString(BB);
-          return TB
-        }
-        _syncParentEnabledState() {
-          super._syncParentEnabledState(), this.WdB() || this._resyncMeshes()
-        }
-        hN(BB) {
-          super.hN(BB), this._resyncMeshes()
-        }
-        getShadowGenerator() {
-          let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-          return null === this._shadowGenerators ? null : this._shadowGenerators.get(BB) ?? null
-        }
-        getShadowGenerators() {
-          return this._shadowGenerators
-        }
-        getAbsolutePosition() {
-          return pB.p.Zero()
-        }
-        canAffectMesh(BB) {
-          return !BB || !(this.includedOnlyMeshes && this.includedOnlyMeshes.length > 0 && -1 === this.includedOnlyMeshes.indexOf(BB)) && (!(this.excludedMeshes && this.excludedMeshes.length > 0 && -1 !== this.excludedMeshes.indexOf(BB)) && ((0 === this.includeOnlyWithLayerMask || 0 !== (this.includeOnlyWithLayerMask & BB.layerMask)) && !(0 !== this.excludeWithLayerMask && this.excludeWithLayerMask & BB.layerMask)))
-        }
-        dispose(BB) {
-          let TB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          if (this._shadowGenerators) {
-            const BB = this._shadowGenerators.values();
-            for (let TB = BB.next(); !0 !== TB.done; TB = BB.next()) {
-              TB.value.dispose()
-            }
-            this._shadowGenerators = null
-          }
-          if (this.jU().stopAnimation(this), this._parentContainer) {
-            const BB = this._parentContainer.lights.indexOf(this);
-            BB > -1 && this._parentContainer.lights.splice(BB, 1), this._parentContainer = null
-          }
-          for (const dB of this.jU().meshes) dB._removeLightSource(this, !0);
-          this._uniformBuffer.dispose(), this.jU().removeLight(this), super.dispose(BB, TB)
-        }
-        getTypeID() {
-          return 0
-        }
-        getScaledIntensity() {
-          return this._photometricScale * this.intensity
-        }
-        clone(TB) {
-          let dB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-          const VB = BB.GetConstructorFromName(this.getTypeID(), TB, this.jU());
-          if (!VB) return null;
-          const yB = kB.c.Clone(VB, this);
-          return TB && (yB.name = TB), dB && (yB.parent = dB), yB.hN(this.isEnabled()), this.onClonedObservable.notifyObservers(yB), yB
-        }
-        serialize() {
-          const BB = kB.c.Serialize(this);
-          if (BB.uniqueId = this.uniqueId, BB.type = this.getTypeID(), this.parent && this.parent._serializeAsParent(BB), this.excludedMeshes.length > 0) {
-            BB.excludedMeshesIds = [];
-            for (const TB of this.excludedMeshes) BB.excludedMeshesIds.push(TB.id)
-          }
-          if (this.includedOnlyMeshes.length > 0) {
-            BB.includedOnlyMeshesIds = [];
-            for (const TB of this.includedOnlyMeshes) BB.includedOnlyMeshesIds.push(TB.id)
-          }
-          return kB.c.AppendSerializedAnimations(this, BB), BB.ek = this.serializeAnimationRanges(), BB.isEnabled = this.isEnabled(), BB
-        }
-        static GetConstructorFromName(BB, TB, dB) {
-          const VB = JB.e.Construct("Light_Type_" + BB, TB, dB);
-          return VB || null
-        }
-        static Parse(TB, dB) {
-          let VB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-          const yB = BB.GetConstructorFromName(TB.type, TB.name, dB);
-          if (!yB) return null;
-          const pB = kB.c.Parse(yB, TB, dB, VB);
-          if (TB.excludedMeshesIds && (pB._excludedMeshesIds = TB.excludedMeshesIds), TB.includedOnlyMeshesIds && (pB._includedOnlyMeshesIds = TB.includedOnlyMeshesIds), void 0 !== TB.parentId && (pB._waitingParentId = TB.parentId), void 0 !== TB.parentInstanceIndex && (pB._waitingParentInstanceIndex = TB.parentInstanceIndex), void 0 !== TB.falloffType && (pB.falloffType = TB.falloffType), void 0 !== TB.lightmapMode && (pB.lightmapMode = TB.lightmapMode), TB.animations) {
-            for (let BB = 0; BB < TB.animations.length; BB++) {
-              const dB = TB.animations[BB],
-                VB = (0, gB.e)("BABYLON.Animation");
-              VB && pB.animations.push(VB.Parse(dB))
-            }
-            JB.e.ParseAnimationRanges(pB, TB, dB)
-          }
-          return TB.autoAnimate && dB.beginAnimation(pB, TB.autoAnimateFrom, TB.autoAnimateTo, TB.autoAnimateLoop, TB.autoAnimateSpeed || 1), void 0 !== TB.isEnabled && pB.hN(TB.isEnabled), pB._onParsed(TB, dB, VB), pB
-        }
-        _onParsed(BB, TB) {}
-        _hookArrayForExcluded(BB) {
-          var TB = this;
-          const dB = BB.push;
-          BB.push = function() {
-            for (var VB = arguments.length, yB = new Array(VB), pB = 0; pB < VB; pB++) yB[pB] = arguments[pB];
-            const lB = dB.apply(BB, yB);
-            if (TB._clusteredContainer) return lB;
-            for (const BB of yB) BB._resyncLightSource(TB);
-            return lB
-          };
-          const VB = BB.splice;
-          BB.splice = (TB, dB) => {
-            const yB = VB.call(BB, TB, dB ?? BB.length);
-            if (this._clusteredContainer) return yB;
-            for (const BB of yB) BB._resyncLightSource(this);
-            return yB
-          }, this._resyncMeshes()
-        }
-        _hookArrayForIncludedOnly(BB) {
-          var TB = this;
-          const dB = BB.push;
-          BB.push = function() {
-            for (var VB = arguments.length, yB = new Array(VB), pB = 0; pB < VB; pB++) yB[pB] = arguments[pB];
-            const lB = dB.apply(BB, yB);
-            return TB._resyncMeshes(), lB
-          };
-          const VB = BB.splice;
-          BB.splice = (TB, dB) => {
-            const yB = VB.call(BB, TB, dB ?? BB.length);
-            return this._resyncMeshes(), yB
-          }, this._resyncMeshes()
-        }
-        _resyncMeshes() {
-          if (!this._clusteredContainer)
-            for (const BB of this.jU().meshes) BB._resyncLightSource(this)
-        }
-        _markMeshesAsLightDirty() {
-          for (const BB of this.jU().meshes) - 1 !== BB.lightSources.indexOf(this) && BB._markSubMeshesAsLightDirty()
-        }
-        _computePhotometricScale() {
-          this._photometricScale = this._getPhotometricScale(), this.jU().resetCachedMaterial()
-        }
-        _getPhotometricScale() {
-          let TB = 0;
-          const dB = this.getTypeID();
-          let VB = this.intensityMode;
-          switch (VB === BB.INTENSITYMODE_AUTOMATIC && (VB = dB === BB.LIGHTTYPEID_DIRECTIONALLIGHT ? BB.INTENSITYMODE_ILLUMINANCE : BB.INTENSITYMODE_LUMINOUSINTENSITY), dB) {
-            case BB.LIGHTTYPEID_POINTLIGHT:
-            case BB.LIGHTTYPEID_SPOTLIGHT:
-              switch (VB) {
-                case BB.INTENSITYMODE_LUMINOUSPOWER:
-                  TB = 1 / (4 * Math.PI);
-                  break;
-                case BB.INTENSITYMODE_LUMINOUSINTENSITY:
-                  TB = 1;
-                  break;
-                case BB.INTENSITYMODE_LUMINANCE:
-                  TB = this.radius * this.radius
-              }
-              break;
-            case BB.LIGHTTYPEID_DIRECTIONALLIGHT:
-              switch (VB) {
-                case BB.INTENSITYMODE_ILLUMINANCE:
-                  TB = 1;
-                  break;
-                case BB.INTENSITYMODE_LUMINANCE: {
-                  let BB = this.radius;
-                  BB = Math.max(BB, .001);
-                  TB = 2 * Math.PI * (1 - Math.cos(BB));
-                  break
-                }
-              }
-              break;
-            case BB.LIGHTTYPEID_HEMISPHERICLIGHT:
-            case BB.LIGHTTYPEID_RECT_AREALIGHT:
-              TB = 1
-          }
-          return TB
-        }
-        _reorderLightsInScene() {
-          const BB = this.jU();
-          0 != this._renderPriority && (BB.requireLightSorting = !0), this.jU().sortLightsByPriority()
-        }
-        areLightTexturesReady() {
-          return !0
-        }
-        _isReady() {
-          return !0
-        }
-      }, TB = new WeakMap, (() => {
-        const TB = "function" === typeof Symbol && Symbol.metadata ? Object.create(sB[Symbol.metadata] ?? null) : void 0;
-        dB = [(0, yB.s)()], LB = [(0, yB.s)()], OB = [(0, yB.W)()], DB = [(0, yB.W)()], uB = [(0, yB.W)()], HB = [(0, yB.W)()], EB = [(0, yB.W)()], vB = [(0, yB.W)()], mB = [(0, yB.i)("_reorderLightsInScene")], iB = [(0, yB.W)("shadowEnabled")], NB = [(0, yB.W)("excludeWithLayerMask")], tB = [(0, yB.W)("includeOnlyWithLayerMask")], fB = [(0, yB.W)("lightmapMode")], (0, VB.g)(BB, null, uB, {
-          kind: "getter",
-          name: "range",
-          static: !1,
-          private: !1,
-          access: {
-            has: BB => "range" in BB,
-            get: BB => BB.range
-          },
-          metadata: TB
-        }, null, MB), (0, VB.g)(BB, null, HB, {
-          kind: "getter",
-          name: "intensityMode",
-          static: !1,
-          private: !1,
-          access: {
-            has: BB => "intensityMode" in BB,
-            get: BB => BB.intensityMode
-          },
-          metadata: TB
-        }, null, MB), (0, VB.g)(BB, null, EB, {
-          kind: "getter",
-          name: "radius",
-          static: !1,
-          private: !1,
-          access: {
-            has: BB => "radius" in BB,
-            get: BB => BB.radius
-          },
-          metadata: TB
-        }, null, MB), (0, VB.g)(BB, null, mB, {
-          kind: "accessor",
-          name: "renderPriority",
-          static: !1,
-          private: !1,
-          access: {
-            has: BB => "renderPriority" in BB,
-            get: BB => BB.renderPriority,
-            set: (BB, TB) => {
-              BB.renderPriority = TB
-            }
-          },
-          metadata: TB
-        }, QB, RB), (0, VB.g)(null, null, dB, {
-          kind: "field",
-          name: "diffuse",
-          static: !1,
-          private: !1,
-          access: {
-            has: BB => "diffuse" in BB,
-            get: BB => BB.diffuse,
-            set: (BB, TB) => {
-              BB.diffuse = TB
-            }
-          },
-          metadata: TB
-        }, zB, wB), (0, VB.g)(null, null, LB, {
-          kind: "field",
-          name: "specular",
-          static: !1,
-          private: !1,
-          access: {
-            has: BB => "specular" in BB,
-            get: BB => BB.specular,
-            set: (BB, TB) => {
-              BB.specular = TB
-            }
-          },
-          metadata: TB
-        }, UB, FB), (0, VB.g)(null, null, OB, {
-          kind: "field",
-          name: "falloffType",
-          static: !1,
-          private: !1,
-          access: {
-            has: BB => "falloffType" in BB,
-            get: BB => BB.falloffType,
-            set: (BB, TB) => {
-              BB.falloffType = TB
-            }
-          },
-          metadata: TB
-        }, KB, rB), (0, VB.g)(null, null, DB, {
-          kind: "field",
-          name: "intensity",
-          static: !1,
-          private: !1,
-          access: {
-            has: BB => "intensity" in BB,
-            get: BB => BB.intensity,
-            set: (BB, TB) => {
-              BB.intensity = TB
-            }
-          },
-          metadata: TB
-        }, IB, cB), (0, VB.g)(null, null, vB, {
-          kind: "field",
-          name: "_renderPriority",
-          static: !1,
-          private: !1,
-          access: {
-            has: BB => "_renderPriority" in BB,
-            get: BB => BB._renderPriority,
-            set: (BB, TB) => {
-              BB._renderPriority = TB
-            }
-          },
-          metadata: TB
-        }, SB, PB), (0, VB.g)(null, null, iB, {
-          kind: "field",
-          name: "_shadowEnabled",
-          static: !1,
-          private: !1,
-          access: {
-            has: BB => "_shadowEnabled" in BB,
-            get: BB => BB._shadowEnabled,
-            set: (BB, TB) => {
-              BB._shadowEnabled = TB
-            }
-          },
-          metadata: TB
-        }, aB, ZB), (0, VB.g)(null, null, NB, {
-          kind: "field",
-          name: "_excludeWithLayerMask",
-          static: !1,
-          private: !1,
-          access: {
-            has: BB => "_excludeWithLayerMask" in BB,
-            get: BB => BB._excludeWithLayerMask,
-            set: (BB, TB) => {
-              BB._excludeWithLayerMask = TB
-            }
-          },
-          metadata: TB
-        }, XB, WB), (0, VB.g)(null, null, tB, {
-          kind: "field",
-          name: "_includeOnlyWithLayerMask",
-          static: !1,
-          private: !1,
-          access: {
-            has: BB => "_includeOnlyWithLayerMask" in BB,
-            get: BB => BB._includeOnlyWithLayerMask,
-            set: (BB, TB) => {
-              BB._includeOnlyWithLayerMask = TB
-            }
-          },
-          metadata: TB
-        }, hB, CB), (0, VB.g)(null, null, fB, {
-          kind: "field",
-          name: "_lightmapMode",
-          static: !1,
-          private: !1,
-          access: {
-            has: BB => "_lightmapMode" in BB,
-            get: BB => BB._lightmapMode,
-            set: (BB, TB) => {
-              BB._lightmapMode = TB
-            }
-          },
-          metadata: TB
-        }, GB, qB), TB && Object.defineProperty(BB, Symbol.metadata, {
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-          value: TB
-        })
-      })(), BB.FALLOFF_DEFAULT = oB.b.FALLOFF_DEFAULT, BB.FALLOFF_PHYSICAL = oB.b.FALLOFF_PHYSICAL, BB.FALLOFF_GLTF = oB.b.FALLOFF_GLTF, BB.FALLOFF_STANDARD = oB.b.FALLOFF_STANDARD, BB.LIGHTMAP_DEFAULT = oB.b.LIGHTMAP_DEFAULT, BB.LIGHTMAP_SPECULAR = oB.b.LIGHTMAP_SPECULAR, BB.LIGHTMAP_SHADOWSONLY = oB.b.LIGHTMAP_SHADOWSONLY, BB.INTENSITYMODE_AUTOMATIC = oB.b.INTENSITYMODE_AUTOMATIC, BB.INTENSITYMODE_LUMINOUSPOWER = oB.b.INTENSITYMODE_LUMINOUSPOWER, BB.INTENSITYMODE_LUMINOUSINTENSITY = oB.b.INTENSITYMODE_LUMINOUSINTENSITY, BB.INTENSITYMODE_ILLUMINANCE = oB.b.INTENSITYMODE_ILLUMINANCE, BB.INTENSITYMODE_LUMINANCE = oB.b.INTENSITYMODE_LUMINANCE, BB.LIGHTTYPEID_POINTLIGHT = oB.b.LIGHTTYPEID_POINTLIGHT, BB.LIGHTTYPEID_DIRECTIONALLIGHT = oB.b.LIGHTTYPEID_DIRECTIONALLIGHT, BB.LIGHTTYPEID_SPOTLIGHT = oB.b.LIGHTTYPEID_SPOTLIGHT, BB.LIGHTTYPEID_HEMISPHERICLIGHT = oB.b.LIGHTTYPEID_HEMISPHERICLIGHT, BB.LIGHTTYPEID_RECT_AREALIGHT = oB.b.LIGHTTYPEID_RECT_AREALIGHT, BB
-    })()
-  },
-  38980: (BB, TB, dB) => {
-    dB.d(TB, {
-      e: () => kB
-    });
-    var VB = dB(38745),
-      yB = dB(36126),
-      pB = dB(38750),
-      lB = dB(36150),
-      JB = dB(36148),
-      YB = dB(38629),
-      gB = dB(38772);
-    class oB {
-      constructor() {
-        this._doNotSerialize = !1, this._isDisposed = !1, this._sceneRootNodesIndex = -1, this._isEnabled = !0, this._isParentEnabled = !0, this._isReady = !0, this._onEnabledStateChangedObservable = new lB.e, this._onEffectiveEnabledStateChangedObservable = null, this._onClonedObservable = new lB.e, this._inheritVisibility = !1, this._isVisible = !0
-      }
-    }
-    let kB = (() => {
-      var BB;
-      let TB, dB, kB, LB, OB, DB = [],
-        uB = [],
-        HB = [],
-        EB = [],
-        vB = [],
-        mB = [],
-        iB = [],
-        NB = [],
-        tB = [],
-        fB = [];
-      return BB = class {
-        static AddNodeConstructor(BB, TB) {
-          this._NodeConstructors[BB] = TB
-        }
-        static Construct(BB, TB, dB, VB) {
-          const yB = this._NodeConstructors[BB];
-          return yB ? yB(TB, dB, VB) : null
-        }
-        set accessibilityTag(BB) {
-          this._accessibilityTag = BB, this.onAccessibilityTagChangedObservable.notifyObservers(BB)
-        }
-        get accessibilityTag() {
-          return this._accessibilityTag
-        }
-        get doNotSerialize() {
-          return !!this._nodeDataStorage._doNotSerialize || !!this._parentNode && this._parentNode.doNotSerialize
-        }
-        set doNotSerialize(BB) {
-          this._nodeDataStorage._doNotSerialize = BB
-        }
-        WdB() {
-          return this._nodeDataStorage._isDisposed
-        }
-        set parent(BB) {
-          if (this._parentNode === BB) return;
-          const TB = this._parentNode;
-          if (this._parentNode && void 0 !== this._parentNode._children && null !== this._parentNode._children) {
-            const TB = this._parentNode._children.indexOf(this); - 1 !== TB && this._parentNode._children.splice(TB, 1), BB || this._nodeDataStorage._isDisposed || this._addToSceneRootNodes()
-          }
-          this._parentNode = BB, this._isDirty = !0, this._parentNode && (void 0 !== this._parentNode._children && null !== this._parentNode._children || (this._parentNode._children = new Array), this._parentNode._children.push(this), TB || this._removeFromSceneRootNodes()), this._syncParentEnabledState()
-        }
-        get parent() {
-          return this._parentNode
-        }
-        get inheritVisibility() {
-          return this._nodeDataStorage._inheritVisibility
-        }
-        set inheritVisibility(BB) {
-          this._nodeDataStorage._inheritVisibility = BB
-        }
-        get isVisible() {
-          return !(this.inheritVisibility && this._parentNode && !this._parentNode.isVisible) && this._nodeDataStorage._isVisible
-        }
-        set isVisible(BB) {
-          this._nodeDataStorage._isVisible = BB
-        }
-        _serializeAsParent(BB) {
-          BB.parentId = this.uniqueId
-        }
-        _addToSceneRootNodes() {
-          -1 === this._nodeDataStorage._sceneRootNodesIndex && (this._nodeDataStorage._sceneRootNodesIndex = this._scene.rootNodes.length, this._scene.rootNodes.push(this))
-        }
-        _removeFromSceneRootNodes() {
-          if (-1 !== this._nodeDataStorage._sceneRootNodesIndex) {
-            const BB = this._scene.rootNodes,
-              TB = BB.length - 1;
-            BB[this._nodeDataStorage._sceneRootNodesIndex] = BB[TB], BB[this._nodeDataStorage._sceneRootNodesIndex]._nodeDataStorage._sceneRootNodesIndex = this._nodeDataStorage._sceneRootNodesIndex, this._scene.rootNodes.pop(), this._nodeDataStorage._sceneRootNodesIndex = -1
-          }
-        }
-        get animationPropertiesOverride() {
-          return this._animationPropertiesOverride ? this._animationPropertiesOverride : this._scene.animationPropertiesOverride
-        }
-        set animationPropertiesOverride(BB) {
-          this._animationPropertiesOverride = BB
-        }
-        getClassName() {
-          return "Node"
-        }
-        set onDispose(BB) {
-          this._onDisposeObserver && this.lF.remove(this._onDisposeObserver), this._onDisposeObserver = this.lF.add(BB)
-        }
-        get onEnabledStateChangedObservable() {
-          return this._nodeDataStorage._onEnabledStateChangedObservable
-        }
-        get onEffectiveEnabledStateChangedObservable() {
-          var BB;
-          return (BB = this._nodeDataStorage)._onEffectiveEnabledStateChangedObservable ?? (BB._onEffectiveEnabledStateChangedObservable = new lB.e)
-        }
-        get onClonedObservable() {
-          return this._nodeDataStorage._onClonedObservable
-        }
-        constructor(BB) {
-          let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-            dB = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-          this._isDirty = !1, this._nodeDataStorage = new oB, this.name = (0, VB.h)(this, DB, void 0), this.id = ((0, VB.h)(this, uB), (0, VB.h)(this, HB, void 0)), this.uniqueId = ((0, VB.h)(this, EB), (0, VB.h)(this, vB, void 0)), this.state = ((0, VB.h)(this, mB), (0, VB.h)(this, iB, "")), this.metadata = ((0, VB.h)(this, NB), (0, VB.h)(this, tB, null)), this._internalMetadata = (0, VB.h)(this, fB), this.reservedDataStore = null, this._accessibilityTag = null, this.onAccessibilityTagChangedObservable = new lB.e, this._parentContainer = null, this.animations = [], this._ranges = {}, this.onReady = null, this._currentRenderId = -1, this._parentUpdateId = -1, this._childUpdateId = -1, this._waitingParentId = null, this._waitingParentInstanceIndex = null, this._waitingParsedUniqueId = null, this._cache = {}, this._parentNode = null, this._children = null, this._worldMatrix = yB.b.Identity(), this._worldMatrixDeterminant = 0, this._worldMatrixDeterminantIsDirty = !0, this._animationPropertiesOverride = null, this._isNode = !0, this.lF = new lB.e, this._onDisposeObserver = null, this._behaviors = new Array, this.name = BB, this.id = BB, this._scene = TB || JB.c.LastCreatedScene, this.uniqueId = this._scene.getUniqueId(), this._initCache(), dB && this._addToSceneRootNodes()
-        }
-        jU() {
-          return this._scene
-        }
-        PD() {
-          return this._scene.PD()
-        }
-        addBehavior(BB) {
-          let TB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          return -1 !== this._behaviors.indexOf(BB) || (BB.init(), this._scene.isLoading && !TB ? this._scene.onDataLoadedObservable.addOnce((() => {
-            this._behaviors.includes(BB) && BB.attach(this)
-          })) : BB.attach(this), this._behaviors.push(BB)), this
-        }
-        removeBehavior(BB) {
-          const TB = this._behaviors.indexOf(BB);
-          return -1 === TB || (this._behaviors.splice(TB, 1), BB.detach()), this
-        }
-        get behaviors() {
-          return this._behaviors
-        }
-        getBehaviorByName(BB) {
-          for (const TB of this._behaviors)
-            if (TB.name === BB) return TB;
-          return null
-        }
-        getWorldMatrix() {
-          return this._currentRenderId !== this._scene.getRenderId() && this.computeWorldMatrix(), this._worldMatrix
-        }
-        _getWorldMatrixDeterminant() {
-          return this._worldMatrixDeterminantIsDirty && (this._worldMatrixDeterminantIsDirty = !1, this._worldMatrixDeterminant = this._worldMatrix.determinant()), this._worldMatrixDeterminant
-        }
-        get worldMatrixFromCache() {
-          return this._worldMatrix
-        }
-        _initCache() {
-          this._cache = {}
-        }
-        updateCache(BB) {
-          !BB && this.isSynchronized() || this._updateCache()
-        }
-        _getActionManagerForTrigger(BB) {
-          return this.parent ? this.parent._getActionManagerForTrigger(BB, !1) : null
-        }
-        _updateCache(BB) {}
-        _isSynchronized() {
-          return !0
-        }
-        _markSyncedWithParent() {
-          this._parentNode && (this._parentUpdateId = this._parentNode._childUpdateId)
-        }
-        isSynchronizedWithParent() {
-          return !this._parentNode || !this._parentNode._isDirty && this._parentUpdateId === this._parentNode._childUpdateId && this._parentNode.isSynchronized()
-        }
-        isSynchronized() {
-          return !(this._parentNode && !this.isSynchronizedWithParent()) && this._isSynchronized()
-        }
-        isReady() {
-          return this._nodeDataStorage._isReady
-        }
-        VdB(BB) {
-          return this._currentRenderId = Number.MAX_VALUE, this._isDirty = !0, this
-        }
-        isEnabled() {
-          return !1 === (!(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0]) ? this._nodeDataStorage._isEnabled : !!this._nodeDataStorage._isEnabled && this._nodeDataStorage._isParentEnabled
-        }
-        _hasEffectiveEnabledStateObservers() {
-          const BB = this._nodeDataStorage._onEffectiveEnabledStateChangedObservable;
-          return !!BB && BB.hasObservers()
-        }
-        _syncParentEnabledState() {
-          const BB = this._hasEffectiveEnabledStateObservers(),
-            TB = BB ? this.isEnabled() : null;
-          if (this._nodeDataStorage._isParentEnabled = !this._parentNode || this._parentNode.isEnabled(), this._children)
-            for (const dB of this._children) dB._syncParentEnabledState();
-          if (BB) {
-            const BB = this.isEnabled();
-            BB !== TB && this._nodeDataStorage._onEffectiveEnabledStateChangedObservable.notifyObservers(BB)
-          }
-        }
-        hN(BB) {
-          if (this._nodeDataStorage._isEnabled === BB) return;
-          const TB = this._hasEffectiveEnabledStateObservers(),
-            dB = TB ? this.isEnabled() : null;
-          if (this._nodeDataStorage._isEnabled = BB, this._syncParentEnabledState(), this._nodeDataStorage._onEnabledStateChangedObservable.notifyObservers(BB), TB) {
-            const BB = this.isEnabled();
-            BB !== dB && this._nodeDataStorage._onEffectiveEnabledStateChangedObservable.notifyObservers(BB)
-          }
-        }
-        isDescendantOf(BB) {
-          return !!this.parent && (this.parent === BB || this.parent.isDescendantOf(BB))
-        }
-        _getDescendants(BB) {
-          let TB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            dB = arguments.length > 2 ? arguments[2] : void 0;
-          if (this._children)
-            for (let VB = 0; VB < this._children.length; VB++) {
-              const yB = this._children[VB];
-              dB && !dB(yB) || BB.push(yB), TB || yB._getDescendants(BB, !1, dB)
-            }
-        }
-        getDescendants(BB, TB) {
-          const dB = [];
-          return this._getDescendants(dB, BB, TB), dB
-        }
-        getChildMeshes(BB, TB) {
-          const dB = [];
-          return this._getDescendants(dB, BB, (BB => (!TB || TB(BB)) && void 0 !== BB.cullingStrategy)), dB
-        }
-        getChildren(BB) {
-          let TB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-          return this.getDescendants(TB, BB)
-        }
-        _setReady(BB) {
-          BB !== this._nodeDataStorage._isReady && (BB ? (this.onReady && this.onReady(this), this._nodeDataStorage._isReady = !0) : this._nodeDataStorage._isReady = !1)
-        }
-        getAnimationByName(BB) {
-          for (let TB = 0; TB < this.animations.length; TB++) {
-            const dB = this.animations[TB];
-            if (dB.name === BB) return dB
-          }
-          return null
-        }
-        createAnimationRange(TB, dB, VB) {
-          if (!this._ranges[TB]) {
-            this._ranges[TB] = BB._AnimationRangeFactory(TB, dB, VB);
-            for (let BB = 0, yB = this.animations.length; BB < yB; BB++) this.animations[BB] && this.animations[BB].createRange(TB, dB, VB)
-          }
-        }
-        deleteAnimationRange(BB) {
-          let TB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-          for (let dB = 0, VB = this.animations.length; dB < VB; dB++) this.animations[dB] && this.animations[dB].deleteRange(BB, TB);
-          this._ranges[BB] = null
-        }
-        getAnimationRange(BB) {
-          return this._ranges[BB] || null
-        }
-        clone(TB, dB, VB) {
-          const yB = gB.c.Clone((() => new BB(TB, this.jU())), this);
-          if (dB && (yB.parent = dB), !VB) {
-            const BB = this.getDescendants(!0);
-            for (let dB = 0; dB < BB.length; dB++) {
-              const VB = BB[dB];
-              VB.clone(TB + "." + VB.name, yB)
-            }
-          }
-          return yB
-        }
-        getAnimationRanges() {
-          const BB = [];
-          let TB;
-          for (TB in this._ranges) BB.push(this._ranges[TB]);
-          return BB
-        }
-        beginAnimation(BB, TB, dB, VB) {
-          const yB = this.getAnimationRange(BB);
-          return yB ? this._scene.beginAnimation(this, yB.from, yB.to, TB, dB, VB) : null
-        }
-        serializeAnimationRanges() {
-          const BB = [];
-          for (const TB in this._ranges) {
-            const dB = this._ranges[TB];
-            if (!dB) continue;
-            const VB = {};
-            VB.name = TB, VB.from = dB.from, VB.to = dB.to, BB.push(VB)
-          }
-          return BB
-        }
-        computeWorldMatrix(BB) {
-          return this._worldMatrix || (this._worldMatrix = yB.b.Identity()), this._worldMatrix
-        }
-        dispose(BB) {
-          let TB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          if (this._nodeDataStorage._isDisposed = !0, !BB) {
-            const dB = this.getDescendants(!0);
-            for (const VB of dB) VB.dispose(BB, TB)
-          }
-          this.parent ? this.parent = null : this._removeFromSceneRootNodes(), this.lF.notifyObservers(this), this.lF.clear(), this.onEnabledStateChangedObservable.clear(), this._nodeDataStorage._onEffectiveEnabledStateChangedObservable?.clear(), this.onClonedObservable.clear();
-          for (const dB of this._behaviors) dB.detach();
-          this._behaviors.length = 0, this.metadata = null
-        }
-        static ParseAnimationRanges(BB, TB, dB) {
-          if (TB.ek)
-            for (let VB = 0; VB < TB.ek.length; VB++) {
-              const dB = TB.ek[VB];
-              BB.createAnimationRange(dB.name, dB.from, dB.to)
-            }
-        }
-        getHierarchyBoundingVectors() {
-          let BB, TB, dB = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
-            VB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-          this.jU().incrementRenderId(), this.computeWorldMatrix(!0);
-          const pB = this;
-          if (pB.IK && pB.oN) {
-            const dB = pB.IK();
-            BB = dB.boundingBox.minimumWorld.clone(), TB = dB.boundingBox.maximumWorld.clone()
-          } else BB = new yB.p(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE), TB = new yB.p(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE);
-          if (dB) {
-            const dB = this.getDescendants(!1);
-            for (const pB of dB) {
-              const dB = pB;
-              if (dB.computeWorldMatrix(!0), VB && !VB(dB)) continue;
-              if (!dB.IK || 0 === dB.getTotalVertices()) continue;
-              const lB = dB.IK().boundingBox,
-                JB = lB.minimumWorld,
-                YB = lB.maximumWorld;
-              yB.p.CheckExtends(JB, BB, TB), yB.p.CheckExtends(YB, BB, TB)
+    DY(6023);
+    var FY = DY(61),
+      AY = DY(38965),
+      IY = DY(39209),
+      RY = DY(39328),
+      OY = DY(39375),
+      gY = DY(39391),
+      aY = DY(36586),
+      vY = DY(36518),
+      uY = DY(39512),
+      sY = DY(39574),
+      iY = (DY(39602), DY(1231)),
+      yY = DY(213),
+      QY = DY(1211),
+      oY = DY(19),
+      WY = DY(2486),
+      EY = DY(1437),
+      mY = DY(1098),
+      VY = DY(6018),
+      SY = DY(6030),
+      lY = DY(3983),
+      TY = DY(1125);
+    const eY = 1.2,
+      NY = .2,
+      BY = .0066 * Math.PI / 180,
+      cY = new Set(["Escape", "KeyG"]),
+      KY = {
+        ArrowLeft: -1,
+        ArrowRight: 1
+      },
+      HY = "ArrowUp",
+      zY = new Set([...Object.keys(KY), HY, "ArrowDown"]),
+      ZY = 32,
+      CY = 1,
+      fY = 10,
+      jY = "F4",
+      hY = "Period",
+      dY = Math.PI / 2 - .001,
+      JY = Math.PI / 6,
+      MY = Math.PI / 6,
+      wY = 1.08,
+      bY = [{
+        name: "X",
+        direction: [1, 0, 0],
+        colour: "#e5534b"
+      }, {
+        name: "Y",
+        direction: [0, 1, 0],
+        colour: "#57ab5a"
+      }, {
+        name: "Z",
+        direction: [0, 0, 1],
+        colour: "#539bf5"
+      }],
+      XY = 24,
+      qY = 7,
+      pY = 4,
+      kY = .01,
+      GY = 4;
+
+    function xY(YY) {
+      let {
+        heatmap: rY,
+        scale: DY,
+        fullyOpaqueFrom: CY,
+        bounds: JY,
+        fitBounds: MY,
+        schematic: wY,
+        controls: bY,
+        onStepTime: XY,
+        onShowAllTime: qY,
+        onTogglePlaying: pY,
+        getReadout: GY = null
+      } = YY;
+      const {
+        t: xY
+      } = (0, QY.C)(), {
+        clientEscMenuOptions: Ir
+      } = (0, oY.j)(["clientEscMenuOptions"]), gr = (0, FY.useRef)(null), ar = (0, FY.useRef)(null), vr = (0, FY.useRef)(null), ur = (0, WY.d)(gr), [sr, ir] = (0, FY.useState)(!1), [yr, Qr] = (0, FY.useState)(!1), [or, Wr] = (0, FY.useState)(!0), Er = (0, FY.useRef)(!1), [mr, Vr] = (0, FY.useState)(!1), Sr = yr || !or && mr, [lr, Tr] = (0, FY.useState)(!1), [er, Nr] = (0, FY.useState)(!0), [Br, cr] = (0, FY.useState)(null), Kr = JY.min, [Hr, zr] = (0, FY.useState)(Kr);
+      Hr[0] === Kr[0] && Hr[1] === Kr[1] && Hr[2] === Kr[2] || (zr(Kr), null !== Br && cr({
+        ...Br,
+        position: Rr(Br.position, Rr(Hr, Or(Kr, -1)))
+      }));
+      const Zr = (0, FY.useMemo)((() => function(YY) {
+          return [YY.max[0] - YY.min[0] + 1, YY.max[1] - YY.min[1] + 1, YY.max[2] - YY.min[2] + 1]
+        }(JY)), [JY]),
+        Cr = (0, FY.useMemo)((() => function(YY, rY) {
+          const DY = [],
+            FY = [];
+          for (const [AY, IY] of Object.entries(YY.frequencies)) {
+            const YY = Number(AY);
+            for (const [AY, RY] of Object.entries(IY)) {
+              const IY = Number(AY);
+              for (const [AY, OY] of Object.entries(RY)) OY <= 0 || (DY.push(YY - rY[0], IY - rY[1], Number(AY) - rY[2]), FY.push(OY))
             }
           }
           return {
-            min: BB,
-            max: TB
+            positions: Int32Array.from(DY),
+            values: Float64Array.from(FY),
+            count: FY.length
           }
+        }(rY, Kr)), [rY, Kr]),
+        fr = eY * Ir.cameraFOV / 100,
+        jr = ur.height > 0 ? ur.width / ur.height : 1,
+        hr = (0, FY.useMemo)((() => function(YY, rY) {
+          return {
+            min: [YY.min[0] - rY[0], YY.min[1] - rY[1], YY.min[2] - rY[2]],
+            max: [YY.max[0] - rY[0] + 1, YY.max[1] - rY[1] + 1, YY.max[2] - rY[2] + 1]
+          }
+        }(MY, Kr)), [MY, Kr]),
+        dr = Dr(hr, jr, fr),
+        Jr = null !== Br && void 0 !== Br ? Br : dr,
+        Mr = (0, FY.useRef)({
+          fittedView: dr,
+          fieldOfView: fr,
+          mouseSensitivity: Ir.mouseSensitivity,
+          canLock: or
+        });
+      Mr.current = {
+        fittedView: dr,
+        fieldOfView: fr,
+        mouseSensitivity: Ir.mouseSensitivity,
+        canLock: or
+      };
+      const wr = (0, FY.useMemo)((() => {
+          if (!Sr) return null;
+          const YY = (YY, DY, FY) => {
+              var AY, IY, RY;
+              return null !== (AY = null === (IY = rY.frequencies[YY + Kr[0]]) || void 0 === IY || null === (RY = IY[DY + Kr[1]]) || void 0 === RY ? void 0 : RY[FY + Kr[2]]) && void 0 !== AY ? AY : 0
+            },
+            FY = function(YY, rY, DY, FY) {
+              let AY = 0,
+                IY = 1 / 0;
+              for (const uY of [0, 1, 2]) {
+                if (0 === rY[uY]) {
+                  if (YY[uY] < 0 || YY[uY] > DY[uY]) return null;
+                  continue
+                }
+                const FY = (0 - YY[uY]) / rY[uY],
+                  RY = (DY[uY] - YY[uY]) / rY[uY];
+                AY = Math.max(AY, Math.min(FY, RY)), IY = Math.min(IY, Math.max(FY, RY))
+              }
+              if (AY > IY) return null;
+              const RY = [0, 1, 2].map((FY => Math.min(DY[FY] - 1, Math.max(0, Math.floor(YY[FY] + rY[FY] * AY))))),
+                OY = [0, 1, 2].map((YY => Math.sign(rY[YY]))),
+                gY = [0, 1, 2].map((DY => {
+                  if (0 === OY[DY]) return 1 / 0;
+                  return ((OY[DY] > 0 ? RY[DY] + 1 : RY[DY]) - YY[DY]) / rY[DY]
+                })),
+                aY = [0, 1, 2].map((YY => 0 === OY[YY] ? 1 / 0 : Math.abs(1 / rY[YY])));
+              let vY = null;
+              for (;;) {
+                const YY = FY(RY[0], RY[1], RY[2]);
+                if (YY >= 1) return RY;
+                YY > 0 && (vY = [RY[0], RY[1], RY[2]]);
+                const rY = gY[0] < gY[1] ? gY[0] < gY[2] ? 0 : 2 : gY[1] < gY[2] ? 1 : 2;
+                if (gY[rY] > IY) return vY;
+                if (RY[rY] += OY[rY], gY[rY] += aY[rY], RY[rY] < 0 || RY[rY] >= DY[rY]) return vY
+              }
+            }(Jr.position, Yr(Jr), Zr, ((rY, FY, AY) => (0, VY.E)(YY(rY, FY, AY), DY, CY)));
+          return null === FY ? null : {
+            x: FY[0] + Kr[0],
+            y: FY[1] + Kr[1],
+            z: FY[2] + Kr[2],
+            value: YY(FY[0], FY[1], FY[2])
+          }
+        }), [Sr, rY, Kr, Jr, Zr, DY, CY]),
+        {
+          keyHandlers: br
+        } = (0, SY.i)({
+          isEnabled: Sr,
+          claimedKeyCodes: zY,
+          Ys: YY => {
+            cr((rY => function(YY, rY) {
+              const DY = [Math.sin(YY.heading), 0, Math.cos(YY.heading)],
+                FY = Rr(Rr(Or(DY, rY.forward), Or(rr(YY.heading), rY.right)), [0, rY.up, 0]);
+              return {
+                ...YY,
+                position: Rr(YY.position, FY)
+              }
+            }(null !== rY && void 0 !== rY ? rY : Mr.current.fittedView, YY)))
+          },
+          onZoomChange: Tr
+        });
+      (0, FY.useEffect)((() => {
+        const YY = ar.current;
+        if (!YY) return;
+        let rY;
+        try {
+          rY = function(YY, rY) {
+            const DY = new AY.c(YY, !0, {
+                stencil: !1
+              }, !0),
+              FY = new IY.c(DY),
+              [iY, yY, QY] = VY.W;
+            FY.clearColor = new aY.c(iY / 255, yY / 255, QY / 255, 1);
+            const oY = new RY.c("Heatmap3DCamera", vY.xy.Zero(), FY);
+            oY.fov = rY, oY.minZ = .05;
+            const WY = new OY.e("Heatmap3DLight", new vY.xy(.4, 1, -.6), FY);
+            WY.diffuse = aY.Color3.White(), WY.groundColor = aY.Color3.Black(), WY.specular = aY.Color3.Black();
+            const EY = new gY.StandardMaterial("Heatmap3DCellMaterial", FY);
+            EY.diffuseColor = new aY.Color3(.4, .4, .4), EY.emissiveColor = new aY.Color3(.62, .62, .62), EY.specularColor = aY.Color3.Black();
+            const mY = (0, uY.b)("Heatmap3DCells", {
+              size: 1
+            }, FY);
+            mY.material = EY, mY.Yo = !1, mY.Gy = !0, mY.isVisible = !1;
+            const SY = (0, uY.b)("Heatmap3DTranslucentCells", {
+              size: 1
+            }, FY);
+            SY.material = EY, SY.hasVertexAlpha = !0, SY.Yo = !1, SY.Gy = !0, SY.isVisible = !1;
+            const lY = new gY.StandardMaterial("Heatmap3DSchematicMaterial", FY);
+            lY.diffuseColor = new aY.Color3(.6, .6, .6), lY.emissiveColor = new aY.Color3(.4, .4, .4), lY.specularColor = aY.Color3.Black();
+            const TY = (0, uY.b)("Heatmap3DSchematicBlocks", {
+              size: 1
+            }, FY);
+            TY.material = lY, TY.Yo = !1, TY.Gy = !0, TY.isVisible = !1;
+            const eY = (0, sY.b)("Heatmap3DTarget", {
+              lines: tY([-.52, -.52, -.52], [.52, .52, .52])
+            }, FY);
+            return eY.color = new aY.Color3(.06, .14, .23), eY.renderingGroupId = 1, eY.Yo = !1, eY.isVisible = !1, {
+              engine: DY,
+              LQ: FY,
+              camera: oY,
+              cells: mY,
+              translucentCells: SY,
+              translucent: {
+                uv: new Float32Array(0),
+                colours: new Float32Array(0),
+                count: 0
+              },
+              translucentSortedFrom: null,
+              schematicBlocks: TY,
+              targetOutline: eY,
+              chunkGrid: null,
+              chunkGridCentre: null,
+              chunkGridOrigin: null,
+              targetFieldOfView: rY,
+              needsRender: !0
+            }
+          }(YY, Mr.current.fieldOfView)
+        } catch (DY) {
+          return console.error("Failed to start the 3D heatmap", DY), void ir(!0)
         }
-      }, (() => {
-        const yB = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        TB = [(0, pB.W)()], dB = [(0, pB.W)()], kB = [(0, pB.W)()], LB = [(0, pB.W)()], OB = [(0, pB.W)()], (0, VB.g)(null, null, TB, {
-          kind: "field",
-          name: "name",
-          static: !1,
-          private: !1,
-          access: {
-            has: BB => "name" in BB,
-            get: BB => BB.name,
-            set: (BB, TB) => {
-              BB.name = TB
-            }
+        return vr.current = rY, rY.engine.runRenderLoop((() => {
+          const YY = rY.camera;
+          YY.fov !== rY.targetFieldOfView && (YY.fov += (rY.targetFieldOfView - YY.fov) * (YY.fov > rY.targetFieldOfView ? .3 : .2), Math.abs(rY.targetFieldOfView - YY.fov) < 5e-4 && (YY.fov = rY.targetFieldOfView), rY.needsRender = !0), rY.needsRender && (rY.LQ.render(), rY.needsRender = !rY.LQ.isReady() || !rY.engine.areAllEffectsReady())
+        })), () => {
+          vr.current = null, rY.engine.dispose()
+        }
+      }), []), (0, FY.useEffect)((() => {
+        const YY = ar.current;
+        if (!YY) return;
+        const rY = () => {
+            Er.current = !1, Qr(document.pointerLockElement === YY)
           },
-          metadata: yB
-        }, DB, uB), (0, VB.g)(null, null, dB, {
-          kind: "field",
-          name: "id",
-          static: !1,
-          private: !1,
-          access: {
-            has: BB => "id" in BB,
-            get: BB => BB.id,
-            set: (BB, TB) => {
-              BB.id = TB
-            }
+          DY = () => {
+            Er.current && (Er.current = !1, Wr(!1))
           },
-          metadata: yB
-        }, HB, EB), (0, VB.g)(null, null, kB, {
-          kind: "field",
-          name: "uniqueId",
-          static: !1,
-          private: !1,
-          access: {
-            has: BB => "uniqueId" in BB,
-            get: BB => BB.uniqueId,
-            set: (BB, TB) => {
-              BB.uniqueId = TB
+          FY = rY => {
+            const DY = !Mr.current.canLock && document.activeElement === YY && 0 !== (1 & rY.buttons);
+            if (document.pointerLockElement !== YY && !DY) return;
+            const FY = Mr.current.mouseSensitivity * BY;
+            cr((YY => function(YY, rY, DY) {
+              const FY = 2 * Math.PI;
+              return {
+                ...YY,
+                heading: ((YY.heading + rY) % FY + FY) % FY,
+                pitch: Math.max(-dY, Math.min(dY, YY.pitch + DY))
+              }
+            }(null !== YY && void 0 !== YY ? YY : Mr.current.fittedView, rY.movementX * FY, rY.movementY * FY)))
+          };
+        return document.addEventListener("pointerlockchange", rY), document.addEventListener("pointerlockerror", DY), document.addEventListener("pointermove", FY), () => {
+          document.removeEventListener("pointerlockchange", rY), document.removeEventListener("pointerlockerror", DY), document.removeEventListener("pointermove", FY), document.pointerLockElement === YY && (0, lY.c)()
+        }
+      }), []), (0, FY.useEffect)((() => {
+        const YY = vr.current;
+        null !== YY && 0 !== ur.width && 0 !== ur.height && (YY.engine.resize(), YY.needsRender = !0)
+      }), [ur.width, ur.height]), (0, FY.useEffect)((() => {
+        const YY = vr.current;
+        null !== YY && (YY.targetFieldOfView = fr * (lr ? NY : 1))
+      }), [fr, lr]), (0, FY.useEffect)((() => {
+        const YY = vr.current;
+        null !== YY && function(YY, rY, DY, FY) {
+          const AY = [],
+            IY = [],
+            RY = [],
+            OY = [];
+          for (let gY = 0; gY < rY.count; gY++) {
+            const YY = rY.values[gY],
+              aY = (0, VY.E)(YY, DY, FY);
+            if (aY <= 0) continue;
+            const [vY, uY, sY] = (0, VY.v)((0, VY.P)(YY, DY)), iY = aY >= 1;
+            (iY ? AY : RY).push(rY.positions[3 * gY] + .5, rY.positions[3 * gY + 1] + .5, rY.positions[3 * gY + 2] + .5), (iY ? IY : OY).push(vY / 255, uY / 255, sY / 255, aY)
+          }
+          UY(YY.cells, Float32Array.from(AY), Float32Array.from(IY), IY.length / 4), YY.translucent = {
+            uv: Float32Array.from(RY),
+            colours: Float32Array.from(OY),
+            count: OY.length / 4
+          }, YY.translucentSortedFrom = null, LY(YY), YY.needsRender = !0
+        }(YY, Cr, DY, CY)
+      }), [Cr, DY, CY]), (0, FY.useEffect)((() => {
+        const YY = vr.current;
+        null !== YY && function(YY, rY) {
+          YY.chunkGridOrigin = rY, YY.chunkGridCentre = null, PY(YY)
+        }(YY, JY.min)
+      }), [JY]), (0, FY.useEffect)((() => {
+        const YY = vr.current;
+        null !== YY && function(YY, rY, DY) {
+          const FY = [],
+            AY = [];
+          if (null !== rY) {
+            const {
+              positions: YY,
+              colours: IY,
+              count: RY
+            } = rY.surface;
+            for (let rY = 0; rY < RY; rY++) {
+              const RY = [YY[3 * rY], YY[3 * rY + 1], YY[3 * rY + 2]];
+              [0, 1, 2].every((YY => RY[YY] >= DY.min[YY] - ZY && RY[YY] <= DY.max[YY] + ZY)) && (FY.push(RY[0] - DY.min[0] + .5, RY[1] - DY.min[1] + .5, RY[2] - DY.min[2] + .5), AY.push(IY[3 * rY] / 255, IY[3 * rY + 1] / 255, IY[3 * rY + 2] / 255, 1))
             }
+          }
+          UY(YY.schematicBlocks, Float32Array.from(FY), Float32Array.from(AY), AY.length / 4), YY.needsRender = !0
+        }(YY, wY, JY)
+      }), [wY, JY]), (0, FY.useEffect)((() => {
+        const YY = vr.current;
+        null !== YY && null !== YY.chunkGrid && (YY.chunkGrid.isVisible = er, YY.needsRender = !0)
+      }), [er, JY]), (0, FY.useEffect)((() => {
+        const YY = vr.current;
+        null !== YY && function(YY, rY, DY) {
+          const {
+            camera: FY
+          } = YY;
+          FY.position.set(rY.position[0], rY.position[1], rY.position[2]), FY.rotation.set(rY.pitch, rY.heading, 0);
+          const AY = (fY + 1) * yY.d.Jy * Math.sqrt(3);
+          FY.maxZ = Math.max(AY, Math.hypot(...Rr(rY.position, Or(Ar({
+            min: [0, 0, 0],
+            max: DY
+          }), -1))) + 2 * Math.hypot(...DY)), PY(YY), LY(YY), YY.needsRender = !0
+        }(YY, Jr, Zr)
+      }), [Jr, Zr]), (0, FY.useEffect)((() => {
+        const YY = vr.current;
+        null !== YY && (YY.targetOutline.isVisible = null !== wr, null !== wr && YY.targetOutline.position.set(wr.x - Kr[0] + .5, wr.y - Kr[1] + .5, wr.z - Kr[2] + .5), YY.needsRender = !0)
+      }), [wr, Kr]);
+      return (0, TY.jsxs)("div", {
+        className: "StudioHeatmapMap StudioHeatmap3D",
+        ref: gr,
+        children: [(0, TY.jsx)("canvas", {
+          className: "StudioHeatmapMapCanvas",
+          ref: ar,
+          style: {
+            width: `${ur.width}px`,
+            height: `${ur.height}px`
           },
-          metadata: yB
-        }, vB, mB), (0, VB.g)(null, null, LB, {
-          kind: "field",
-          name: "state",
-          static: !1,
-          private: !1,
-          access: {
-            has: BB => "state" in BB,
-            get: BB => BB.state,
-            set: (BB, TB) => {
-              BB.state = TB
-            }
+          tabIndex: 0,
+          "aria-label": xY("3D heatmap"),
+          onClick: () => {
+            const YY = ar.current;
+            if (null === YY) return;
+            if (YY.focus({
+                preventScroll: !0
+              }), yr || !or) return;
+            const rY = YY.requestPointerLock();
+            rY instanceof Promise ? rY.catch((YY => {
+              YY instanceof DOMException && ("WrongDocumentError" === YY.name || "NotSupportedError" === YY.name) && Wr(!1)
+            })) : Er.current = !0
           },
-          metadata: yB
-        }, iB, NB), (0, VB.g)(null, null, OB, {
-          kind: "field",
-          name: "metadata",
-          static: !1,
-          private: !1,
-          access: {
-            has: BB => "metadata" in BB,
-            get: BB => BB.metadata,
-            set: (BB, TB) => {
-              BB.metadata = TB
-            }
+          ...br,
+          onKeyDown: YY => {
+            if (Sr && cY.has(YY.code)) return YY.preventDefault(), void(() => {
+              const YY = ar.current;
+              null !== YY && document.pointerLockElement === YY ? (0, lY.c)() : null === YY || void 0 === YY || YY.blur()
+            })();
+            const rY = KY[YY.code];
+            return Sr && void 0 !== rY ? (YY.preventDefault(), void XY(rY)) : Sr && (0, SY.e)("replayPlayPause", YY.code) && !(0, SY.e)("Zoom", YY.code) ? (YY.preventDefault(), void(YY.repeat || pY())) : Sr && YY.code === HY ? (YY.preventDefault(), void qY()) : Sr && YY.code === hY ? (YY.preventDefault(), void cr(null)) : Sr && YY.code === jY ? (YY.preventDefault(), void Nr((YY => !YY))) : void br.onKeyDown(YY)
           },
-          metadata: yB
-        }, tB, fB), yB && Object.defineProperty(BB, Symbol.metadata, {
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-          value: yB
-        })
-      })(), BB._AnimationRangeFactory = (BB, TB, dB) => {
-        throw (0, YB.i)("AnimationRange")
-      }, BB._NodeConstructors = {}, BB
-    })()
+          onFocus: () => {
+            Vr(!0)
+          },
+          onBlur: () => {
+            Vr(!1), br.onBlur()
+          }
+        }), sr && (0, TY.jsx)("div", {
+          className: "StudioHeatmap3DUnavailable SmallTextLight",
+          children: xY("3D view isn't available in this browser.")
+        }), Sr && (0, TY.jsx)("div", {
+          className: "StudioHeatmap3DCrosshair"
+        }), (0, TY.jsx)("div", {
+          className: "StudioHeatmap3DCoordinates SmallTextLight",
+          children: Jr.position.map(((YY, rY) => (YY + Kr[rY]).toFixed(2))).join(" ")
+        }), er && (0, TY.jsx)(nY, {
+          heading: Jr.heading,
+          pitch: Jr.pitch,
+          onViewFrom: YY => {
+            const rY = Or(YY, -1),
+              DY = 0 === rY[1] ? {
+                heading: Math.atan2(rY[0], rY[2]),
+                pitch: 0
+              } : {
+                heading: Jr.heading,
+                pitch: rY[1] < 0 ? dY : -dY
+              };
+            cr(Dr(hr, jr, fr, DY))
+          },
+          onTurn: (YY, rY) => {
+            cr((DY => function(YY, rY, DY, FY) {
+              return Fr(YY, rY, {
+                heading: YY.heading + DY * kY,
+                pitch: Math.max(-dY, Math.min(dY, YY.pitch + FY * kY))
+              })
+            }(null !== DY && void 0 !== DY ? DY : Mr.current.fittedView, Ar(hr), YY, rY)))
+          },
+          onFlip: () => {
+            cr((YY => function(YY, rY) {
+              return Fr(YY, rY, {
+                heading: YY.heading + Math.PI,
+                pitch: -YY.pitch
+              })
+            }(null !== YY && void 0 !== YY ? YY : Mr.current.fittedView, Ar(hr))))
+          }
+        }), null !== wr && (0, TY.jsx)("div", {
+          className: "StudioHeatmapMapReadout SmallTextLight",
+          children: null === GY ? xY("studio:heatmapBlockReadout", {
+            x: wr.x,
+            y: wr.y,
+            z: wr.z,
+            count: (0, iY.S)(wr.value)
+          }) : GY(wr.x, wr.y, wr.z, wr.value)
+        }), (0, TY.jsxs)("div", {
+          className: "StudioHeatmapMapControls",
+          children: [bY, (0, TY.jsx)(EY.J, {
+            active: null === Br,
+            onClick: () => {
+              cr(null)
+            },
+            children: (0, TY.jsx)(mY.e, {
+              name: "eye"
+            })
+          })]
+        })]
+      })
+    }
+
+    function nY(YY) {
+      let {
+        heading: rY,
+        pitch: DY,
+        onViewFrom: AY,
+        onTurn: IY,
+        onFlip: RY
+      } = YY;
+      const {
+        t: OY
+      } = (0, QY.C)(), gY = (0, FY.useRef)(null), aY = Yr({
+        heading: rY,
+        pitch: DY
+      }), vY = rr(rY), uY = ar(aY, vY), sY = XY + qY + 2, iY = bY.flatMap((YY => [1, -1].map((rY => {
+        const DY = Or(YY.direction, rY);
+        return {
+          ...YY,
+          sign: rY,
+          direction: DY,
+          endX: sY + gr(DY, vY) * XY,
+          endY: sY - gr(DY, uY) * XY,
+          depth: gr(DY, aY)
+        }
+      })))).sort(((YY, rY) => rY.depth - YY.depth));
+      return (0, TY.jsxs)("svg", {
+        className: "StudioHeatmap3DGizmo",
+        width: 2 * sY,
+        height: 2 * sY,
+        "aria-hidden": !0,
+        onPointerDown: YY => {
+          var rY, DY;
+          YY.currentTarget.setPointerCapture(YY.pointerId);
+          const FY = YY.target,
+            AY = FY.getAttribute("data-end");
+          gY.current = {
+            pointerId: YY.pointerId,
+            x: YY.clientX,
+            y: YY.clientY,
+            travel: 0,
+            side: null === AY ? null : null !== (rY = null === (DY = iY[Number(AY)]) || void 0 === DY ? void 0 : DY.direction) && void 0 !== rY ? rY : null,
+            isOnMiddle: FY.hasAttribute("data-middle")
+          }
+        },
+        onPointerMove: YY => {
+          const rY = gY.current;
+          if (null === rY || rY.pointerId !== YY.pointerId) return;
+          const DY = YY.clientX - rY.x,
+            FY = YY.clientY - rY.y;
+          rY.x = YY.clientX, rY.y = YY.clientY, rY.travel += Math.abs(DY) + Math.abs(FY), rY.travel >= GY && IY(DY, FY)
+        },
+        onPointerUp: YY => {
+          const rY = gY.current;
+          gY.current = null, null === rY || rY.pointerId !== YY.pointerId || rY.travel >= GY || (null !== rY.side ? AY(rY.side) : rY.isOnMiddle && RY())
+        },
+        onPointerCancel: () => {
+          gY.current = null
+        },
+        children: [iY.map(((YY, rY) => {
+          const DY = YY.sign > 0;
+          return (0, TY.jsxs)("g", {
+            children: [(0, TY.jsx)("line", {
+              x1: sY,
+              y1: sY,
+              x2: YY.endX,
+              y2: YY.endY,
+              stroke: YY.colour,
+              strokeOpacity: DY ? 1 : .5,
+              strokeWidth: 2,
+              strokeLinecap: "round"
+            }), (0, TY.jsx)("circle", {
+              className: "StudioHeatmap3DGizmoEnd",
+              "data-end": rY,
+              cx: YY.endX,
+              cy: YY.endY,
+              r: DY ? qY : qY - 1,
+              fill: YY.colour,
+              fillOpacity: DY ? 1 : .3,
+              stroke: YY.colour,
+              strokeWidth: DY ? 0 : 1.5,
+              children: (0, TY.jsx)("title", {
+                children: `${OY("View from")} ${DY?"+":"\u2212"}${YY.name}`
+              })
+            }), DY && (0, TY.jsx)("text", {
+              pointerEvents: "none",
+              x: YY.endX,
+              y: YY.endY,
+              fill: "#151515",
+              fontSize: 9,
+              fontWeight: "bold",
+              textAnchor: "middle",
+              dominantBaseline: "central",
+              children: YY.name
+            })]
+          }, `${DY?"+":"-"}${YY.name}`)
+        })), (0, TY.jsx)("circle", {
+          className: "StudioHeatmap3DGizmoEnd",
+          "data-middle": !0,
+          cx: sY,
+          cy: sY,
+          r: pY,
+          fill: "#d0d0d0",
+          fillOpacity: .85,
+          children: (0, TY.jsx)("title", {
+            children: OY("View from the opposite side")
+          })
+        })]
+      })
+    }
+
+    function PY(YY) {
+      var rY, DY, FY;
+      const {
+        chunkGridOrigin: AY,
+        camera: IY
+      } = YY;
+      if (null === AY) return;
+      const RY = [IY.position.x, IY.position.y, IY.position.z],
+        OY = [0, 2].map((YY => Math.floor((RY[YY] + AY[YY]) / yY.d.Jy))),
+        gY = YY.chunkGridCentre;
+      if (null !== gY && gY.every(((YY, rY) => YY === OY[rY]))) return;
+      const uY = null === (rY = null === (DY = YY.chunkGrid) || void 0 === DY ? void 0 : DY.isVisible) || void 0 === rY || rY;
+      null === (FY = YY.chunkGrid) || void 0 === FY || FY.dispose();
+      const [iY, QY] = [0, 2].map(((YY, rY) => {
+        const DY = [];
+        for (let FY = OY[rY] - fY; FY <= OY[rY] + fY + 1; FY++) DY.push(FY * yY.d.Jy - AY[YY]);
+        return DY
+      })), oY = -AY[1], WY = [];
+      for (const aY of QY) WY.push([new vY.xy(iY[0], oY, aY), new vY.xy(iY[iY.length - 1], oY, aY)]);
+      for (const aY of iY) WY.push([new vY.xy(aY, oY, QY[0]), new vY.xy(aY, oY, QY[QY.length - 1])]);
+      const EY = (0, sY.b)("Heatmap3DChunkGrid", {
+        lines: WY
+      }, YY.LQ);
+      EY.color = new aY.Color3(.45, .6, .78), EY.Yo = !1, EY.isVisible = uY, YY.chunkGrid = EY, YY.chunkGridCentre = OY, YY.needsRender = !0
+    }
+
+    function UY(YY, rY, DY, FY) {
+      YY.j_("matrix", function(YY, rY) {
+        const DY = new Float32Array(16 * rY);
+        for (let FY = 0; FY < rY; FY++) {
+          const rY = 16 * FY;
+          DY[rY] = 1, DY[rY + 5] = 1, DY[rY + 10] = 1, DY[rY + 12] = YY[3 * FY], DY[rY + 13] = YY[3 * FY + 1], DY[rY + 14] = YY[3 * FY + 2], DY[rY + 15] = 1
+        }
+        return DY
+      }(rY, FY), 16, !0), YY.j_("color", DY, 4, !0), YY.isVisible = FY > 0
+    }
+
+    function LY(YY) {
+      const {
+        camera: rY,
+        translucent: DY
+      } = YY, FY = [rY.position.x, rY.position.y, rY.position.z], AY = YY.translucentSortedFrom;
+      if (null !== AY && Math.hypot(FY[0] - AY[0], FY[1] - AY[1], FY[2] - AY[2]) < CY) return;
+      YY.translucentSortedFrom = FY;
+      const IY = new Float64Array(DY.count),
+        RY = new Uint32Array(DY.count);
+      for (let aY = 0; aY < DY.count; aY++) {
+        const YY = DY.uv[3 * aY] - FY[0],
+          rY = DY.uv[3 * aY + 1] - FY[1],
+          AY = DY.uv[3 * aY + 2] - FY[2];
+        IY[aY] = YY * YY + rY * rY + AY * AY, RY[aY] = aY
+      }
+      RY.sort(((YY, rY) => IY[rY] - IY[YY]));
+      const OY = new Float32Array(3 * DY.count),
+        gY = new Float32Array(4 * DY.count);
+      RY.forEach(((YY, rY) => {
+        OY.set(DY.uv.subarray(3 * YY, 3 * YY + 3), 3 * rY), gY.set(DY.colours.subarray(4 * YY, 4 * YY + 4), 4 * rY)
+      })), UY(YY.translucentCells, OY, gY, DY.count), YY.needsRender = !0
+    }
+
+    function tY(YY, rY) {
+      const DY = (DY, FY, AY) => new vY.xy(0 === DY ? YY[0] : rY[0], 0 === FY ? YY[1] : rY[1], 0 === AY ? YY[2] : rY[2]),
+        FY = [];
+      for (const AY of [0, 1])
+        for (const YY of [0, 1]) FY.push([DY(0, AY, YY), DY(1, AY, YY)], [DY(AY, 0, YY), DY(AY, 1, YY)], [DY(AY, YY, 0), DY(AY, YY, 1)]);
+      return FY
+    }
+
+    function Yr(YY) {
+      return [Math.sin(YY.heading) * Math.cos(YY.pitch), -Math.sin(YY.pitch), Math.cos(YY.heading) * Math.cos(YY.pitch)]
+    }
+
+    function rr(YY) {
+      return [Math.cos(YY), 0, -Math.sin(YY)]
+    }
+
+    function Dr(YY, rY, DY) {
+      let FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
+        heading: JY,
+        pitch: MY
+      };
+      const AY = [YY.max[0] - YY.min[0], YY.max[1] - YY.min[1], YY.max[2] - YY.min[2]],
+        IY = Yr(FY),
+        RY = rr(FY.heading),
+        OY = ar(IY, RY),
+        gY = Math.tan(DY / 2),
+        aY = gY * rY;
+      let vY = 1;
+      for (const uY of [-AY[0] / 2, AY[0] / 2])
+        for (const YY of [-AY[1] / 2, AY[1] / 2])
+          for (const rY of [-AY[2] / 2, AY[2] / 2]) {
+            const DY = [uY, YY, rY],
+              FY = gr(DY, IY);
+            vY = Math.max(vY, Math.abs(gr(DY, RY)) / aY - FY, Math.abs(gr(DY, OY)) / gY - FY)
+          }
+      return {
+        position: Rr([YY.min[0] + AY[0] / 2, YY.min[1] + AY[1] / 2, YY.min[2] + AY[2] / 2], Or(IY, -vY * wY)),
+        heading: FY.heading,
+        pitch: FY.pitch
+      }
+    }
+
+    function Fr(YY, rY, DY) {
+      const FY = Ir(YY),
+        AY = Ir(DY),
+        IY = Rr(YY.position, Or(rY, -1)),
+        RY = [0, 1, 2].reduce(((YY, rY) => Rr(YY, Or(AY[rY], gr(IY, FY[rY])))), [0, 0, 0]);
+      return {
+        position: Rr(rY, RY),
+        heading: DY.heading,
+        pitch: DY.pitch
+      }
+    }
+
+    function Ar(YY) {
+      return Or(Rr(YY.min, YY.max), .5)
+    }
+
+    function Ir(YY) {
+      const rY = Yr(YY),
+        DY = rr(YY.heading);
+      return [rY, DY, ar(rY, DY)]
+    }
+
+    function Rr(YY, rY) {
+      return [YY[0] + rY[0], YY[1] + rY[1], YY[2] + rY[2]]
+    }
+
+    function Or(YY, rY) {
+      return [YY[0] * rY, YY[1] * rY, YY[2] * rY]
+    }
+
+    function gr(YY, rY) {
+      return YY[0] * rY[0] + YY[1] * rY[1] + YY[2] * rY[2]
+    }
+
+    function ar(YY, rY) {
+      return [YY[1] * rY[2] - YY[2] * rY[1], YY[2] * rY[0] - YY[0] * rY[2], YY[0] * rY[1] - YY[1] * rY[0]]
+    }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

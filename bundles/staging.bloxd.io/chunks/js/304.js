@@ -1,35 +1,176 @@
 export const id = 304;
 export const ids = [304];
 export const modules = {
-  40595: (BB, TB, dB) => {
-    dB.d(TB, {
-      b: () => lB
+  40917: (YY, rY, DY) => {
+    DY.r(rY), DY.d(rY, {
+      _TGATextureLoader: () => OY
     });
-    var VB = dB(38595);
-    const yB = "helperFunctions",
-      pB = "const float PI=3.1415926535897932384626433832795;const float TWO_PI=6.283185307179586;const float HALF_PI=1.5707963267948966;const float RECIPROCAL_PI=0.3183098861837907;const float RECIPROCAL_PI2=0.15915494309189535;const float RECIPROCAL_PI4=0.07957747154594767;const float HALF_MIN=5.96046448e-08; \nconst float LinearEncodePowerApprox=2.2;const float GammaEncodePowerApprox=1.0/LinearEncodePowerApprox;const vec3 LuminanceEncodeApprox=vec3(0.2126,0.7152,0.0722);const float Epsilon=0.0000001;\n#define saturate(x) clamp(x,0.0,1.0)\n#define absEps(x) abs(x)+Epsilon\n#define maxEps(x) max(x,Epsilon)\n#define saturateEps(x) clamp(x,Epsilon,1.0)\nmat3 transposeMat3(mat3 inMatrix) {vec3 i0=inMatrix[0];vec3 i1=inMatrix[1];vec3 i2=inMatrix[2];mat3 outMatrix=mat3(\nvec3(i0.x,i1.x,i2.x),\nvec3(i0.y,i1.y,i2.y),\nvec3(i0.z,i1.z,i2.z)\n);return outMatrix;}\nmat3 inverseMat3(mat3 inMatrix) {float a00=inMatrix[0][0],a01=inMatrix[0][1],a02=inMatrix[0][2];float a10=inMatrix[1][0],a11=inMatrix[1][1],a12=inMatrix[1][2];float a20=inMatrix[2][0],a21=inMatrix[2][1],a22=inMatrix[2][2];float b01=a22*a11-a12*a21;float b11=-a22*a10+a12*a20;float b21=a21*a10-a11*a20;float det=a00*b01+a01*b11+a02*b21;return mat3(b01,(-a22*a01+a02*a21),(a12*a01-a02*a11),\nb11,(a22*a00-a02*a20),(-a12*a00+a02*a10),\nb21,(-a21*a00+a01*a20),(a11*a00-a01*a10))/det;}\n#if USE_EXACT_SRGB_CONVERSIONS\nvec3 toLinearSpaceExact(vec3 color)\n{vec3 nearZeroSection=0.0773993808*color;vec3 remainingSection=pow(0.947867299*(color+vec3(0.055)),vec3(2.4));\n#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\nreturn mix(remainingSection,nearZeroSection,lessThanEqual(color,vec3(0.04045)));\n#else\nreturn\nvec3(\ncolor.r<=0.04045 ? nearZeroSection.r : remainingSection.r,\ncolor.g<=0.04045 ? nearZeroSection.g : remainingSection.g,\ncolor.b<=0.04045 ? nearZeroSection.b : remainingSection.b);\n#endif\n}\nvec3 toGammaSpaceExact(vec3 color)\n{vec3 nearZeroSection=12.92*color;vec3 remainingSection=1.055*pow(color,vec3(0.41666))-vec3(0.055);\n#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\nreturn mix(remainingSection,nearZeroSection,lessThanEqual(color,vec3(0.0031308)));\n#else\nreturn\nvec3(\ncolor.r<=0.0031308 ? nearZeroSection.r : remainingSection.r,\ncolor.g<=0.0031308 ? nearZeroSection.g : remainingSection.g,\ncolor.b<=0.0031308 ? nearZeroSection.b : remainingSection.b);\n#endif\n}\n#endif\nfloat toLinearSpace(float color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nfloat nearZeroSection=0.0773993808*color;float remainingSection=pow(0.947867299*(color+0.055),2.4);return color<=0.04045 ? nearZeroSection : remainingSection;\n#else\nreturn pow(color,LinearEncodePowerApprox);\n#endif\n}\nvec3 toLinearSpace(vec3 color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nreturn toLinearSpaceExact(color);\n#else\nreturn pow(color,vec3(LinearEncodePowerApprox));\n#endif\n}\nvec4 toLinearSpace(vec4 color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nreturn vec4(toLinearSpaceExact(color.rgb),color.a);\n#else\nreturn vec4(pow(color.rgb,vec3(LinearEncodePowerApprox)),color.a);\n#endif\n}\nfloat toGammaSpace(float color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nfloat nearZeroSection=12.92*color;float remainingSection=1.055*pow(color,0.41666)-0.055;return color<=0.0031308 ? nearZeroSection : remainingSection;\n#else\nreturn pow(color,GammaEncodePowerApprox);\n#endif\n}\nvec3 toGammaSpace(vec3 color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nreturn toGammaSpaceExact(color);\n#else\nreturn pow(color,vec3(GammaEncodePowerApprox));\n#endif\n}\nvec4 toGammaSpace(vec4 color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nreturn vec4(toGammaSpaceExact(color.rgb),color.a);\n#else\nreturn vec4(pow(color.rgb,vec3(GammaEncodePowerApprox)),color.a);\n#endif\n}\nfloat square(float value)\n{return value*value;}\nvec3 square(vec3 value)\n{return value*value;}\nfloat pow5(float value) {float sq=value*value;return sq*sq*value;}\nvec3 double_refract(vec3 I,vec3 N,float eta) {vec3 Tfront=refract(I,N,1.0/eta);vec3 Nback=normalize(reflect(N,Tfront));return refract(Tfront,-Nback,eta);}\nfloat getLuminanceUnclamped(vec3 color)\n{return dot(color,LuminanceEncodeApprox);}\nfloat getLuminance(vec3 color)\n{return saturate(getLuminanceUnclamped(color));}\nfloat getRand(vec2 seed) {return fract(sin(dot(seed.xy ,vec2(12.9898,78.233)))*43758.5453);}\nfloat dither(vec2 seed,float varianceAmount) {float rand=getRand(seed);float normVariance=varianceAmount/255.0;float dither=mix(-normVariance,normVariance,rand);return dither;}\nconst float rgbdMaxRange=255.;vec4 toRGBD(vec3 color) {float maxRGB=maxEps(max(color.r,max(color.g,color.b)));float D =max(rgbdMaxRange/maxRGB,1.);D =saturate(floor(D)/255.);vec3 rgb=color.rgb*D;rgb=toGammaSpace(rgb);return vec4(saturate(rgb),D);}\nvec3 fromRGBD(vec4 rgbd) {rgbd.rgb=toLinearSpace(rgbd.rgb);return rgbd.rgb/rgbd.a;}\nvec3 parallaxCorrectNormal( vec3 vertexPos,vec3 origVec,vec3 cubeSize,vec3 cubePos ) {vec3 invOrigVec=vec3(1.)/origVec;vec3 halfSize=cubeSize*0.5;vec3 intersecAtMaxPlane=(cubePos+halfSize-vertexPos)*invOrigVec;vec3 intersecAtMinPlane=(cubePos-halfSize-vertexPos)*invOrigVec;vec3 largestIntersec=max(intersecAtMaxPlane,intersecAtMinPlane);float distance=min(min(largestIntersec.x,largestIntersec.y),largestIntersec.z);vec3 intersectPositionWS=vertexPos+origVec*distance;return intersectPositionWS-cubePos;}\nvec3 equirectangularToCubemapDirection(vec2 uv) {float longitude=uv.x*TWO_PI-PI;float latitude=HALF_PI-uv.y*PI;vec3 direction;direction.x=cos(latitude)*sin(longitude);direction.y=sin(latitude);direction.z=cos(latitude)*cos(longitude);return direction;}\nfloat sqrtClamped(float value) {return sqrt(max(value,0.));}\nfloat avg(vec3 value) {return dot(value,vec3(0.333333333));}\n#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\nprecision highp int;uint extractBits(uint value,int offset,int width) {return (value>>offset) & ((1u<<width)-1u);}\nint onlyBitPosition(uint value) {return (floatBitsToInt(float(value))>>23)-0x7f;}\nvec3 singleScatterToMultiScatterAlbedo(vec3 rho_ss) {vec3 s=sqrt(max(vec3(1.0)-rho_ss,vec3(0.0)));return (vec3(1.0)-s)*(vec3(1.0)-vec3(0.139)*s)/(vec3(1.0)+vec3(1.17)*s);}\nvec3 multiScatterToSingleScatterAlbedo(vec3 rho_ms) {vec3 s=4.09712+4.20863*rho_ms-sqrt(9.59217+41.6808*rho_ms+17.7126*rho_ms*rho_ms);return 1.0-s*s;}\nvec3 multiScatterToSingleScatterAlbedo(vec3 rho_ms,float aniso) {vec3 s=4.09712+4.20863*rho_ms-sqrt(9.59217+41.6808*rho_ms+17.7126*rho_ms*rho_ms);return (1.0-s*s)/maxEps(1.0-aniso*s*s);}\nfloat min3(vec3 v) {return min(v.x,min(v.y,v.z));}\nfloat max3(vec3 v) {return max(v.x,max(v.y,v.z));}\nfloat uint2float(uint i) {return uintBitsToFloat(0x3F800000u | (i>>9u))-1.0;}\nvec2 plasticSequence(const uint rstate) {return vec2(uint2float(rstate*3242174889u),\nuint2float(rstate*2447445414u));}\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
+    var FY = DY(38040);
+
+    function AY(YY) {
+      let rY = 0;
+      return {
+        id_length: YY[rY++],
+        colormap_type: YY[rY++],
+        image_type: YY[rY++],
+        colormap_index: YY[rY++] | YY[rY++] << 8,
+        colormap_length: YY[rY++] | YY[rY++] << 8,
+        colormap_size: YY[rY++],
+        origin: [YY[rY++] | YY[rY++] << 8, YY[rY++] | YY[rY++] << 8],
+        width: YY[rY++] | YY[rY++] << 8,
+        height: YY[rY++] | YY[rY++] << 8,
+        pixel_size: YY[rY++],
+        flags: YY[17]
+      }
     }
-  },
-  59942: (BB, TB, dB) => {
-    dB.r(TB), dB.d(TB, {
-      rgbdDecodePixelShader: () => YB
-    });
-    var VB = dB(38595),
-      yB = dB(40595);
-    const pB = "rgbdDecodePixelShader",
-      lB = "varying vec2 vUV;uniform sampler2D textureSampler;\n#include<helperFunctions>\n#define CUSTOM_FRAGMENT_DEFINITIONS\nvoid main(void) \n{gl_FragColor=vec4(fromRGBD(texture2D(textureSampler,vUV)),1.0);}";
-    VB.e.ShadersStore[pB] || (VB.e.ShadersStore[pB] = lB);
-    const JB = [yB.b];
-    for (const gB of JB) VB.e.IncludesShadersStore[gB.name] || (VB.e.IncludesShadersStore[gB.name] = gB.shader);
-    const YB = {
-      name: pB,
-      shader: lB
+
+    function IY(YY, rY) {
+      if (rY.length < 19) return void FY.d.Error("Unable to load TGA file - Not enough data to contain header");
+      let DY = 18;
+      const IY = AY(rY);
+      if (IY.id_length + DY > rY.length) return void FY.d.Error("Unable to load TGA file - Not enough data");
+      DY += IY.id_length;
+      let OY, gY = !1,
+        aY = !1,
+        vY = !1;
+      switch (IY.image_type) {
+        case 9:
+          gY = !0;
+        case 1:
+          aY = !0;
+          break;
+        case 10:
+          gY = !0;
+        case 2:
+          break;
+        case 11:
+          gY = !0;
+        case 3:
+          vY = !0
+      }
+      const uY = IY.pixel_size >> 3,
+        sY = IY.width * IY.height * uY;
+      let iY, yY, QY, oY, WY, EY, mY;
+      if (aY && (iY = rY.subarray(DY, DY += IY.colormap_length * (IY.colormap_size >> 3))), gY) {
+        let YY, FY, AY;
+        OY = new Uint8Array(sY);
+        let IY = 0;
+        const RY = new Uint8Array(uY);
+        for (; DY < sY && IY < sY;)
+          if (YY = rY[DY++], FY = 1 + (127 & YY), 128 & YY) {
+            for (AY = 0; AY < uY; ++AY) RY[AY] = rY[DY++];
+            for (AY = 0; AY < FY; ++AY) OY.set(RY, IY + AY * uY);
+            IY += uY * FY
+          } else {
+            for (FY *= uY, AY = 0; AY < FY; ++AY) OY[IY + AY] = rY[DY++];
+            IY += FY
+          }
+      } else OY = rY.subarray(DY, DY + (aY ? IY.width * IY.height : sY));
+      switch ((48 & IY.flags) >> 4) {
+        default:
+        case 2:
+          yY = 0, oY = 1, mY = IY.width, QY = 0, WY = 1, EY = IY.height;
+          break;
+        case 0:
+          yY = 0, oY = 1, mY = IY.width, QY = IY.height - 1, WY = -1, EY = -1;
+          break;
+        case 3:
+          yY = IY.width - 1, oY = -1, mY = -1, QY = 0, WY = 1, EY = IY.height;
+          break;
+        case 1:
+          yY = IY.width - 1, oY = -1, mY = -1, QY = IY.height - 1, WY = -1, EY = -1
+      }
+      const VY = "_getImageData" + (vY ? "Grey" : "") + IY.pixel_size + "bits",
+        SY = RY[VY](IY, iY, OY, QY, WY, EY, yY, oY, mY);
+      YY.ky()._uploadDataToTextureDirectly(YY, SY)
+    }
+    const RY = {
+      GetTGAHeader: AY,
+      UploadContent: IY,
+      _getImageData8bits: function(YY, rY, DY, FY, AY, IY, RY, OY, gY) {
+        const aY = DY,
+          vY = rY,
+          uY = YY.width,
+          sY = YY.height;
+        let iY, yY, QY, oY = 0;
+        const WY = new Uint8Array(uY * sY * 4);
+        for (QY = FY; QY !== IY; QY += AY)
+          for (yY = RY; yY !== gY; yY += OY, oY++) iY = aY[oY], WY[4 * (yY + uY * QY) + 3] = 255, WY[4 * (yY + uY * QY) + 2] = vY[3 * iY + 0], WY[4 * (yY + uY * QY) + 1] = vY[3 * iY + 1], WY[4 * (yY + uY * QY) + 0] = vY[3 * iY + 2];
+        return WY
+      },
+      _getImageData16bits: function(YY, rY, DY, FY, AY, IY, RY, OY, gY) {
+        const aY = DY,
+          vY = YY.width,
+          uY = YY.height;
+        let sY, iY, yY, QY = 0;
+        const oY = new Uint8Array(vY * uY * 4);
+        for (yY = FY; yY !== IY; yY += AY)
+          for (iY = RY; iY !== gY; iY += OY, QY += 2) {
+            sY = aY[QY + 0] + (aY[QY + 1] << 8);
+            const YY = 255 * ((31744 & sY) >> 10) / 31 | 0,
+              rY = 255 * ((992 & sY) >> 5) / 31 | 0,
+              DY = 255 * (31 & sY) / 31 | 0;
+            oY[4 * (iY + vY * yY) + 0] = YY, oY[4 * (iY + vY * yY) + 1] = rY, oY[4 * (iY + vY * yY) + 2] = DY, oY[4 * (iY + vY * yY) + 3] = 32768 & sY ? 0 : 255
+          }
+        return oY
+      },
+      _getImageData24bits: function(YY, rY, DY, FY, AY, IY, RY, OY, gY) {
+        const aY = DY,
+          vY = YY.width,
+          uY = YY.height;
+        let sY, iY, yY = 0;
+        const QY = new Uint8Array(vY * uY * 4);
+        for (iY = FY; iY !== IY; iY += AY)
+          for (sY = RY; sY !== gY; sY += OY, yY += 3) QY[4 * (sY + vY * iY) + 3] = 255, QY[4 * (sY + vY * iY) + 2] = aY[yY + 0], QY[4 * (sY + vY * iY) + 1] = aY[yY + 1], QY[4 * (sY + vY * iY) + 0] = aY[yY + 2];
+        return QY
+      },
+      _getImageData32bits: function(YY, rY, DY, FY, AY, IY, RY, OY, gY) {
+        const aY = DY,
+          vY = YY.width,
+          uY = YY.height;
+        let sY, iY, yY = 0;
+        const QY = new Uint8Array(vY * uY * 4);
+        for (iY = FY; iY !== IY; iY += AY)
+          for (sY = RY; sY !== gY; sY += OY, yY += 4) QY[4 * (sY + vY * iY) + 2] = aY[yY + 0], QY[4 * (sY + vY * iY) + 1] = aY[yY + 1], QY[4 * (sY + vY * iY) + 0] = aY[yY + 2], QY[4 * (sY + vY * iY) + 3] = aY[yY + 3];
+        return QY
+      },
+      _getImageDataGrey8bits: function(YY, rY, DY, FY, AY, IY, RY, OY, gY) {
+        const aY = DY,
+          vY = YY.width,
+          uY = YY.height;
+        let sY, iY, yY, QY = 0;
+        const oY = new Uint8Array(vY * uY * 4);
+        for (yY = FY; yY !== IY; yY += AY)
+          for (iY = RY; iY !== gY; iY += OY, QY++) sY = aY[QY], oY[4 * (iY + vY * yY) + 0] = sY, oY[4 * (iY + vY * yY) + 1] = sY, oY[4 * (iY + vY * yY) + 2] = sY, oY[4 * (iY + vY * yY) + 3] = 255;
+        return oY
+      },
+      _getImageDataGrey16bits: function(YY, rY, DY, FY, AY, IY, RY, OY, gY) {
+        const aY = DY,
+          vY = YY.width,
+          uY = YY.height;
+        let sY, iY, yY = 0;
+        const QY = new Uint8Array(vY * uY * 4);
+        for (iY = FY; iY !== IY; iY += AY)
+          for (sY = RY; sY !== gY; sY += OY, yY += 2) QY[4 * (sY + vY * iY) + 0] = aY[yY + 0], QY[4 * (sY + vY * iY) + 1] = aY[yY + 0], QY[4 * (sY + vY * iY) + 2] = aY[yY + 0], QY[4 * (sY + vY * iY) + 3] = aY[yY + 1];
+        return QY
+      }
+    };
+    class OY {
+      constructor() {
+        this.supportCascades = !1
+      }
+      loadCubeData() {
+        throw ".env not supported in Cube."
+      }
+      loadData(YY, rY, DY) {
+        const FY = new Uint8Array(YY.buffer, YY.byteOffset, YY.byteLength),
+          RY = AY(FY);
+        DY(RY.width, RY.height, rY.generateMipMaps, !1, (() => {
+          IY(rY, FY)
+        }))
+      }
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

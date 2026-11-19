@@ -1,19 +1,17 @@
 export const id = 349;
 export const ids = [349];
 export const modules = {
-  59978: (BB, TB, dB) => {
-    dB.r(TB), dB.d(TB, {
-      lodPixelShader: () => lB
+  60283: (YY, rY, DY) => {
+    DY.d(rY, {
+      allocateF64Mat4: () => AY
     });
-    var VB = dB(38595);
-    const yB = "lodPixelShader",
-      pB = "precision highp float;const float GammaEncodePowerApprox=1.0/2.2;varying vec2 vUV;uniform sampler2D textureSampler;uniform float lod;uniform vec2 texSize;uniform int gamma;void main(void)\n{ivec2 textureDimensions=textureSize(textureSampler,0);gl_FragColor=texelFetch(textureSampler,ivec2(vUV*vec2(textureDimensions)),int(lod));if (gamma==0) {gl_FragColor.rgb=pow(gl_FragColor.rgb,vec3(GammaEncodePowerApprox));}}\n";
-    VB.e.ShadersStore[yB] || (VB.e.ShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
+    var FY = DY(40786);
+
+    function AY() {
+      return new FY.f(16)
     }
+    AY["@@MAT4_STORAGE_F64@@"] = !0
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

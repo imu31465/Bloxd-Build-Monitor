@@ -1,103 +1,1202 @@
 export const id = 201;
-export const ids = [201];
+export const ids = [201, 202];
 export const modules = {
-  35732: (BB, TB, dB) => {
-    dB.d(TB, {
-      c: () => MB,
-      g: () => UB,
-      h: () => zB,
-      i: () => wB
+  35731: (YY, rY, DY) => {
+    DY.d(rY, {
+      reportCappedWasmFailure: () => RY,
+      reportWasmFailure: () => IY
     });
-    const VB = JSON.parse('{"src":["/sounds/generatedSprites/gunSemiAutomatic.70debb5eaf.ogg","/sounds/generatedSprites/gunSemiAutomatic.70debb5eaf.m4a","/sounds/generatedSprites/gunSemiAutomatic.70debb5eaf.mp3","/sounds/generatedSprites/gunSemiAutomatic.70debb5eaf.ac3"],"sprite":{"semiAuto_cock_01":[0,500],"semiAuto_cock_02":[600,548.5714285714286],"semiAuto_cock_03":[1250,500],"semiAuto_cock_04":[1850,522.4489795918367],"semiAuto_cock_05":[2473.333333333333,500],"semiAuto_first_shot_01":[3073.333333333333,500],"semiAuto_magazine_load_01":[3673.3333333333335,548.5714285714286],"semiAuto_magazine_load_02":[4323.333333333333,500],"semiAuto_magazine_load_03":[4923.333333333333,548.5714285714286],"semiAuto_magazine_load_04":[5573.333333333333,500],"semiAuto_magazine_load_05":[6173.333333333333,500],"semiAuto_magazine_unload_01":[6773.333333333333,500],"semiAuto_magazine_unload_02":[7373.333333333333,500],"semiAuto_magazine_unload_03":[7973.333333333334,500],"semiAuto_magazine_unload_04":[8573.333333333334,500],"semiAuto_shot_01":[9173.333333333334,500],"semiAuto_shot_02":[9773.333333333334,500],"semiAuto_shot_03":[10373.333333333334,500],"semiAuto_shot_04":[10973.333333333332,500],"semiAuto_shot_05":[11573.333333333334,500],"semiAuto_shot_06":[12173.333333333334,500],"semiAuto_shot_07":[12773.333333333334,500],"semiAuto_shot_08":[13373.333333333334,500],"semiAuto_tail_only_shot_01":[13973.333333333332,2455.5102040816328]}}'),
-      yB = JSON.parse('{"src":["/sounds/generatedSprites/gunSubmachineGun.6129bebed2.ogg","/sounds/generatedSprites/gunSubmachineGun.6129bebed2.m4a","/sounds/generatedSprites/gunSubmachineGun.6129bebed2.mp3","/sounds/generatedSprites/gunSubmachineGun.6129bebed2.ac3"],"sprite":{"submachine_cock_01":[0,500],"submachine_cock_02":[600,500],"submachine_cock_03":[1200,500],"submachine_cock_04":[1800,500],"submachine_first_shot_01":[2400,500],"submachine_magazine_load_01":[3000,500],"submachine_magazine_load_02":[3600,500],"submachine_magazine_load_03":[4200,500],"submachine_magazine_load_04":[4800,500],"submachine_magazine_unload_01":[5400,500],"submachine_magazine_unload_02":[6000,500],"submachine_magazine_unload_03":[6600,500],"submachine_shot_01":[7200,500],"submachine_shot_02":[7800,500],"submachine_shot_03":[8400,500],"submachine_shot_04":[9000,500],"submachine_shot_05":[9600,500],"submachine_shot_06":[10200,500],"submachine_shot_07":[10800,500],"submachine_shot_08":[11400,500],"submachine_shot_09":[12000,500],"submachine_tail_only_shot_01":[12600,1858.8208616780046]}}'),
-      pB = JSON.parse('{"src":["/sounds/generatedSprites/gunPistol.feb2850573.ogg","/sounds/generatedSprites/gunPistol.feb2850573.m4a","/sounds/generatedSprites/gunPistol.feb2850573.mp3","/sounds/generatedSprites/gunPistol.feb2850573.ac3"],"sprite":{"pistol_cock_01":[0,510],"pistol_cock_02":[610,500],"pistol_cock_03":[1210,500],"pistol_cock_06":[1810,500],"pistol_magazine_load_01":[2410,500],"pistol_magazine_load_02":[3010,500],"pistol_magazine_load_03":[3610,500],"pistol_magazine_unload_01":[4210,500],"pistol_magazine_unload_02":[4810,500],"pistol_magazine_unload_03":[5410,500],"pistol_shot_01":[6010,1500],"pistol_shot_02":[7610,1569.591836734694],"pistol_shot_03":[9280,1735.8956916099773],"pistol_shot_04":[11116.666666666668,1526.7120181405896],"pistol_shot_05":[12746.666666666666,1442.2222222222224]}}'),
-      lB = JSON.parse('{"src":["/sounds/generatedSprites/gunRifle.020fa8997d.ogg","/sounds/generatedSprites/gunRifle.020fa8997d.m4a","/sounds/generatedSprites/gunRifle.020fa8997d.mp3","/sounds/generatedSprites/gunRifle.020fa8997d.ac3"],"sprite":{"rifle_cock_01":[0,705.3061224489796],"rifle_cock_02":[806.6666666666666,1149.3877551020407],"rifle_magazine_load_01":[2056.6666666666665,500],"rifle_magazine_load_02":[2656.6666666666665,500],"rifle_magazine_load_03":[3256.666666666667,500],"rifle_magazine_unload_01":[3856.6666666666665,500],"rifle_magazine_unload_02":[4456.666666666667,500],"rifle_magazine_unload_04":[5056.666666666667,500],"rifle_shot_01":[5656.666666666666,2115.918367346939],"rifle_shot_02":[7873.333333333333,2429.3877551020405],"rifle_shot_03":[10403.333333333334,2298.7755102040815],"rifle_shot_04":[12803.333333333332,2481.6326530612246]}}'),
-      JB = JSON.parse('{"src":["/sounds/generatedSprites/gunMisc.1209e1dd90.ogg","/sounds/generatedSprites/gunMisc.1209e1dd90.m4a","/sounds/generatedSprites/gunMisc.1209e1dd90.mp3","/sounds/generatedSprites/gunMisc.1209e1dd90.ac3"],"sprite":{"bullet_shell_bounce_general_07":[0,823.0612244897959],"bullet_shell_bounce_general_08":[923.3333333333334,907.0294784580499],"headshot_04":[1933.3333333333333,500],"headshot_06":[2533.333333333333,500],"headshot_08":[3133.3333333333335,500],"headshot_11":[3733.3333333333335,500]}}'),
-      YB = JSON.parse('{"src":["/sounds/generatedSprites/gunShotgun.7fc9371192.ogg","/sounds/generatedSprites/gunShotgun.7fc9371192.m4a","/sounds/generatedSprites/gunShotgun.7fc9371192.mp3","/sounds/generatedSprites/gunShotgun.7fc9371192.ac3"],"sprite":{"shotgun_cock_01":[0,914.2857142857142],"shotgun_cock_02":[1016.6666666666666,500],"shotgun_cock_03":[1616.6666666666667,679.1836734693878],"shotgun_cock_04":[2396.6666666666665,548.5714285714286],"shotgun_cock_05":[3046.666666666667,548.5714285714286],"shotgun_load_bullet_01":[3696.666666666667,548.5714285714286],"shotgun_load_bullet_02":[4346.666666666667,522.4489795918367],"shotgun_load_bullet_03":[4970,500],"shotgun_load_bullet_04":[5570,500],"shotgun_load_bullet_05":[6170,500],"shotgun_load_bullet_06":[6770,679.1836734693878],"shotgun_load_bullet_07":[7550,548.5714285714286],"shotgun_load_bullet_08":[8200,500],"shotgun_shot_01":[8800,2612.2448979591836],"shotgun_shot_02":[11513.333333333334,2507.7551020408164],"shotgun_shot_03":[14123.333333333334,2638.3673469387754],"shotgun_shot_04":[16863.333333333332,2037.5510204081634]}}'),
-      gB = JSON.parse('{"src":["/sounds/generatedSprites/dig.a7a2fdb15e.ogg","/sounds/generatedSprites/dig.a7a2fdb15e.m4a","/sounds/generatedSprites/dig.a7a2fdb15e.mp3","/sounds/generatedSprites/dig.a7a2fdb15e.ac3"],"sprite":{"cloth1":[0,1671.8367346938776],"cloth2":[1773.3333333333335,1671.8367346938776],"cloth3":[3546.666666666667,1671.8367346938776],"cloth4":[5320,1668.9342403628118],"glass1":[7090,1671.8367346938776],"glass2":[8863.333333333334,1671.8367346938776],"glass3":[10636.666666666666,1671.8367346938776],"grass1":[12410,500],"grass2":[13010,500],"grass3":[13610,835.9183673469388],"grass4":[14546.666666666666,835.9183673469388],"gravel1":[15483.333333333332,500],"gravel2":[16083.333333333332,500],"gravel3":[16683.333333333332,500],"gravel4":[17283.333333333336,500],"pickUp":[17883.333333333332,500],"sand1":[18483.333333333336,500],"sand2":[19083.333333333332,500],"sand3":[19683.333333333332,500],"sand4":[20283.333333333336,500],"snow1":[20883.333333333332,500],"snow2":[21483.333333333336,500],"snow3":[22083.333333333332,650.1587301587301],"snow4":[22836.666666666664,650.1587301587301],"stone1":[23590,500],"stone2":[24190,500],"stone3":[24790,500],"stone4":[25390,500],"wood1":[25990,928.7981859410431],"wood2":[27020,928.7981859410431],"wood3":[28050,928.7981859410431],"wood4":[29080,928.7981859410431]}}'),
-      oB = JSON.parse('{"src":["/sounds/generatedSprites/step.3c54391171.ogg","/sounds/generatedSprites/step.3c54391171.m4a","/sounds/generatedSprites/step.3c54391171.mp3","/sounds/generatedSprites/step.3c54391171.ac3"],"sprite":{"hit1":[0,557.2789115646258],"hit2":[660,650.1587301587301],"hit3":[1413.3333333333333,650.1587301587301],"step_cloth1":[2166.6666666666665,1671.8367346938776],"step_cloth2":[3940,1671.8367346938776],"step_cloth3":[5713.333333333333,1671.8367346938776],"step_cloth4":[7486.666666666666,1671.8367346938776],"step_grass1":[9260,500],"step_grass2":[9860,500],"step_grass3":[10460,500],"step_grass4":[11060,500],"step_grass5":[11660,1483.1746031746031],"step_gravel1":[13243.333333333334,1486.077097505669],"step_gravel2":[14830,1483.1746031746031],"step_gravel3":[16413.333333333336,1486.077097505669],"step_gravel4":[18000,1486.077097505669],"step_sand2":[19586.666666666664,1486.077097505669],"step_sand3":[21173.333333333332,1486.077097505669],"step_sand4":[22760,1486.077097505669],"step_sand5":[24346.666666666668,1486.077097505669],"step_snow1":[25933.333333333332,500],"step_snow2":[26533.333333333336,500],"step_snow3":[27133.333333333332,500],"step_snow4":[27733.333333333336,500],"step_stone1":[28333.333333333332,1486.077097505669],"step_stone2":[29920,1486.077097505669],"step_stone3":[31506.666666666668,1486.077097505669],"step_stone4":[33093.333333333336,1486.077097505669],"step_stone5":[34680,1486.077097505669],"step_stone6":[36266.666666666664,1486.077097505669],"step_wood1":[37853.33333333333,743.0385487528345],"step_wood2":[38696.666666666664,743.0385487528345],"step_wood3":[39540,743.0385487528345],"step_wood4":[40383.333333333336,743.0385487528345],"step_wood5":[41226.666666666664,743.0385487528345],"step_wood6":[42070,743.0385487528345],"sweep6":[42913.333333333336,1114.5578231292516]}}'),
-      kB = JSON.parse('{"src":["/sounds/generatedSprites/random.587c13bbcb.ogg","/sounds/generatedSprites/random.587c13bbcb.m4a","/sounds/generatedSprites/random.587c13bbcb.mp3","/sounds/generatedSprites/random.587c13bbcb.ac3"],"sprite":{"beep":[0,2455.5102040816328],"bow":[2556.6666666666665,500],"bucketEmpty1":[3156.6666666666665,1114.5578231292516],"bucketEmpty2":[4373.333333333333,1114.5578231292516],"bucketEmpty3":[5590,1114.5578231292516],"bucketFill1":[6806.666666666667,1021.6780045351475],"bucketFill2":[7930,1021.6780045351475],"bucketFill3":[9053.333333333332,1021.6780045351475],"burp":[10176.666666666666,500],"cannonFire1":[10776.666666666668,4880.748299319728],"cannonFire2":[15760,4880.748299319728],"cannonFire3":[20743.333333333332,4880.748299319728],"cashRegister":[25726.666666666668,3819.6825396825398],"chestClose":[29646.666666666668,557.2789115646258],"chestOpen":[30306.666666666668,743.0385487528345],"doorClose":[31150,835.9183673469388],"doorClose2":[32086.666666666664,835.9183673469388],"doorOpen-bloxd1":[33023.333333333336,743.0385487528345],"doorOpen-bloxd2":[33866.666666666664,835.9183673469388],"drink":[34803.333333333336,500],"eat1":[35403.333333333336,500],"equip_leather1":[36003.33333333333,928.7981859410431],"exp_collect":[37033.33333333333,1009.2063492063493],"exp_levelup":[38143.33333333333,1469.863945578231],"fallsmall":[39713.33333333333,1764.716553287982],"fireBurn":[41580,2827.3922902494332],"firecracker1":[44510,5302.857142857142],"firecracker2":[49913.333333333336,5250.6122448979595],"firecracker3":[55266.666666666664,5198.367346938776],"firecracker4":[60566.66666666667,5877.551020408164],"hoeTill1":[66546.66666666667,1114.5578231292516],"hoeTill2":[67763.33333333333,557.2789115646258],"hoeTill3":[68423.33333333333,928.7981859410431],"hoeTill4":[69453.33333333333,928.7981859410431],"laugh1":[70483.33333333333,898.3219954648525],"laugh2":[71483.33333333333,1919.092970521542],"laugh3":[73503.33333333333,1668.2766439909299],"magicAccent1":[75273.33333333333,5250.6122448979595],"magicAccent2":[80626.66666666667,5041.632653061224],"magicAccent3":[85770,4963.265306122449],"magicAccent4":[90833.33333333333,4728.163265306122],"splash1":[95663.33333333333,1114.5578231292516],"successfulBowHit":[96880,500],"trapdoorOpen":[97480,835.9183673469388]}}'),
-      LB = JSON.parse('{"src":["/sounds/generatedSprites/mob.ab04bae885.ogg","/sounds/generatedSprites/mob.ab04bae885.m4a","/sounds/generatedSprites/mob.ab04bae885.mp3","/sounds/generatedSprites/mob.ab04bae885.ac3"],"sprite":{"bearRoar1":[0,1011.1791383219954],"bearRoar2":[1113.3333333333333,793.6507936507936],"bearRoar3":[2009.9999999999998,764.2630385487529],"bearRoar4":[2876.6666666666665,781.9047619047619],"bearRoar5":[3760,646.6666666666666],"catHiss1":[4506.666666666667,1252.0861678004535],"catHiss2":[5860,1064.2403628117913],"catHiss3":[7026.666666666666,1082.6530612244899],"catHiss4":[8210,978.8662131519275],"catHurt1":[9290,809.795918367347],"catHurt2":[10200,779.4104308390023],"catHurt3":[11080,626.9387755102041],"catMeow1":[11810,1306.1224489795918],"catMeow2":[13216.666666666666,1384.4897959183672],"catMeow3":[14703.333333333334,1280],"catMeow4":[16083.333333333332,1567.3469387755101],"catMeow5":[17753.333333333332,1802.4489795918369],"cowHurt1":[19656.666666666668,522.6530612244899],"cowMoo1":[20280,1574.331065759637],"cowMoo2":[21956.666666666668,1947.4149659863947],"cowMoo3":[24006.666666666668,2099.342403628118],"croneAttack1":[26206.666666666668,500],"croneHurt1":[26806.666666666668,751.6780045351475],"croneIdle1":[27660,6756.8707482993195],"deerGrunt1":[34520,976.7346938775511],"deerHurt1":[35600,500],"dogBark1":[36200,500],"dogBark2":[36800,500],"dogBark3":[37400,500],"dogGrowl1":[38000,634.8979591836734],"dogGrowl2":[38736.666666666664,543.3560090702948],"dogGrowl3":[39383.333333333336,1361.360544217687],"dogHurt1":[40846.666666666664,500],"dogHurt2":[41446.666666666664,500],"fennecYip1":[42046.666666666664,500],"fennecYip2":[42646.66666666667,500],"fennecYip3":[43246.66666666667,500],"golemGrunt1":[43846.666666666664,6687.34693877551],"golemGrunt2":[50636.666666666664,4911.0204081632655],"gorillaIdle1":[55650,898.140589569161],"gorillaIdle2":[56650,825.3061224489796],"gorillaIdle3":[57576.66666666667,1357.233560090703],"gorillaIdle4":[59036.66666666667,1061.2698412698414],"gorillaRoar1":[60200,1002.6757369614512],"horseHurt1":[61303.333333333336,1044.8979591836735],"horseHurt2":[62450,1332.2448979591836],"horseIdle1":[63883.333333333336,1410.6122448979593],"horseIdle2":[65396.666666666664,634.3310657596371],"horseIdle3":[66133.33333333334,853.469387755102],"knightGrunt1":[67090,2026.6666666666667],"knightGrunt2":[69216.66666666667,2154.671201814059],"knightGrunt3":[71473.33333333333,1674.671201814059],"pigHurt1":[73250,705.6009070294784],"pigHurt2":[74056.66666666667,667.4603174603175],"pigHurt3":[74826.66666666667,500],"pigOink1":[75426.66666666666,976.7573696145124],"pigOink2":[76506.66666666666,1015.578231292517],"pigOink3":[77623.33333333333,500],"pigOink4":[78223.33333333333,500],"pigOink5":[78823.33333333334,519.4557823129252],"reaverAttack1":[79443.33333333333,4031.1111111111113],"reaverAttack2":[83576.66666666667,1552.0181405895692],"reaverAttack3":[85230,1857.5510204081634],"reaverGrunt1":[87190,5073.5600907029475],"reaverGrunt2":[92366.66666666666,2950.090702947846],"reaverGrunt3":[95420,6640.907029478458],"sheepBaa1":[102163.33333333333,1039.3877551020407],"sheepBaa2":[103303.33333333333,1243.968253968254],"sheepBaa3":[104650,827.7551020408164],"sheepBaa4":[105580,1048.1179138321997],"sheepHurt1":[106730,700.2721088435375],"skeletonRattle1":[107533.33333333333,1088.0045351473923],"skeletonRattle2":[108723.33333333333,1499.9773242630386],"skeletonRattle3":[110323.33333333334,750],"skeletonRattle4":[111173.33333333333,650.6575963718822],"stagGrunt1":[111926.66666666666,976.7346938775511],"stagHurt1":[113006.66666666666,500],"stalkerAttack1":[113606.66666666667,963.6281179138322],"stalkerIdle1":[114673.33333333333,2051.065759637188],"warperGrunt1":[116826.66666666667,2883.605442176871],"warperGrunt2":[119813.33333333333,6405.351473922902],"warperGrunt3":[126320,4806.530612244898],"warperGrunt4":[131226.66666666666,5781.768707482994],"warperGrunt5":[137110,4284.081632653061],"warperPhase1":[141496.66666666666,5867.256235827665],"warperPhase2":[147466.66666666666,5866.916099773242],"wraithGrunt1":[153436.66666666666,4111.995464852607],"wraithGrunt2":[157650,5173.333333333333],"wraithHurt":[162923.33333333334,4277.324263038548],"ZombieGrunt1":[167303.33333333334,2089.795918367347],"ZombieGrunt2":[169493.33333333334,2351.0204081632655],"ZombieGrunt3":[171946.66666666666,1750.204081632653],"ZombieHurt1":[173800,1593.4693877551022],"ZombieHurt2":[175496.66666666666,1906.938775510204],"ZombieHurt3":[177506.66666666666,1018.7755102040817],"ZombieHurt4":[178626.66666666666,1358.3673469387757]}}'),
-      OB = JSON.parse('{"src":["/sounds/generatedSprites/note.665b6b802f.ogg","/sounds/generatedSprites/note.665b6b802f.m4a","/sounds/generatedSprites/note.665b6b802f.mp3","/sounds/generatedSprites/note.665b6b802f.ac3"],"sprite":{"bass":[0,500],"bassattack":[600,500],"bd":[1200,500],"bigDrumSwish1":[1800,3892.2448979591836],"bigDrumSwish2":[5793.333333333333,3056.326530612245],"bigDrumSwish3":[8950,3578.7755102040815],"drumSwish1":[12630,4127.34693877551],"drumSwish2":[16860,4127.34693877551],"harp_pling":[21090,835.9183673469388],"hat":[22026.666666666668,500],"levelup":[22626.666666666664,4458.231292517006],"lowDrum1":[27186.666666666668,3683.265306122449],"lowDrum2":[30970,3840],"lowDrum3":[34910,4205.714285714285],"snare":[39216.66666666667,500],"sonarBeep":[39816.66666666667,4127.34693877551],"trumpetFlare":[44046.666666666664,1683.4467120181407],"trumpetNote1":[45833.333333333336,779.8412698412699],"trumpetNote2":[46713.33333333333,845.6916099773243],"trumpetNote3":[47660,1090.7256235827665]}}'),
-      DB = JSON.parse('{"src":["/sounds/generatedSprites/fishing.3fd57d6508.ogg","/sounds/generatedSprites/fishing.3fd57d6508.m4a","/sounds/generatedSprites/fishing.3fd57d6508.mp3","/sounds/generatedSprites/fishing.3fd57d6508.ac3"],"sprite":{"caughtFish":[0,1976.7573696145125],"reel":[2080,531.9501133786848]}}'),
-      uB = JSON.parse('{"src":["/sounds/generatedSprites/gameStart.c824a29ef8.ogg","/sounds/generatedSprites/gameStart.c824a29ef8.m4a","/sounds/generatedSprites/gameStart.c824a29ef8.mp3","/sounds/generatedSprites/gameStart.c824a29ef8.ac3"],"sprite":{"game_start_countdown_01":[0,1000.7709750566893],"game_start_countdown_02":[1103.3333333333333,994.9206349206348],"game_start_countdown_03":[2200,1000.7709750566893],"game_start_countdown_final":[3303.333333333333,1583.1065759637188]}}'),
-      HB = JSON.parse('{"src":["/sounds/generatedSprites/customGame_horror.b428f4f683.ogg","/sounds/generatedSprites/customGame_horror.b428f4f683.m4a","/sounds/generatedSprites/customGame_horror.b428f4f683.mp3","/sounds/generatedSprites/customGame_horror.b428f4f683.ac3"],"sprite":{"cryptWhoosh":[0,1700],"doorKnock":[1800,1173.3333333333333],"futureStrangePulse":[3073.333333333333,2874.6938775510203],"hauntedHorrorImpact":[6050,1072.857142857143],"horrorAccent1":[7223.333333333334,1919.5238095238096],"horrorFright":[9243.333333333334,1630.952380952381],"horrorMaleDrone":[10976.666666666666,7933.492063492064],"intensiveRainLoop":[19013.333333333332,13037.687074829933],"metalDoorKnock":[32153.333333333336,4219.410430839002],"ominousBellHit":[36473.333333333336,8756.621315192744],"pulseFromTheDark":[45330,7653.582766439909],"suspenseRiser":[53086.666666666664,6825.396825396825],"thunderRain":[60013.333333333336,12085.986394557824],"zapAccent1":[72200,500],"zapAccent2":[72800,500]}}'),
-      EB = JSON.parse('{"src":["/sounds/generatedSprites/crowd.144e07d77d.ogg","/sounds/generatedSprites/crowd.144e07d77d.m4a","/sounds/generatedSprites/crowd.144e07d77d.mp3","/sounds/generatedSprites/crowd.144e07d77d.ac3"],"sprite":{"crowdAmbience":[0,54935.51020408163],"crowdCheer":[55036.66666666667,6269.3877551020405],"refereeWhistle":[61406.666666666664,2089.795918367347]}}'),
-      vB = JSON.parse('{"src":["/sounds/generatedSprites/survivalFactory.fd0480008e.ogg","/sounds/generatedSprites/survivalFactory.fd0480008e.m4a","/sounds/generatedSprites/survivalFactory.fd0480008e.mp3","/sounds/generatedSprites/survivalFactory.fd0480008e.ac3"],"sprite":{"rocketEngineLoop":[0,13167.369614512472]}}'),
-      mB = JSON.parse('{"src":["/sounds/generatedSprites/rpg.ea7a80cc0e.ogg","/sounds/generatedSprites/rpg.ea7a80cc0e.m4a","/sounds/generatedSprites/rpg.ea7a80cc0e.mp3","/sounds/generatedSprites/rpg.ea7a80cc0e.ac3"],"sprite":{"rpgBeltCloth1":[0,722.5396825396826],"rpgBeltCloth2":[823.3333333333334,753.3106575963718],"rpgBeltHandle1":[1676.6666666666667,500],"rpgBeltHandle2":[2276.666666666667,500],"rpgBookClose":[2876.6666666666665,500],"rpgBookFlip1":[3476.6666666666665,768.6621315192745],"rpgBookFlip2":[4346.666666666667,500],"rpgBookFlip3":[4946.666666666666,500],"rpgBookOpen":[5546.666666666667,500],"rpgBookPlace1":[6146.666666666666,500],"rpgBookPlace2":[6746.666666666667,500],"rpgBookPlace3":[7346.666666666667,500],"rpgChop":[7946.666666666666,500],"rpgCloth1":[8546.666666666666,661.0430839002267],"rpgCloth2":[9310,500],"rpgCloth3":[9910,500],"rpgCloth4":[10510,500],"rpgCreak1":[11110,661.0430839002267],"rpgCreak2":[11873.333333333334,830.1587301587302],"rpgCreak3":[12806.666666666666,500],"rpgDoorClose1":[13406.666666666666,675.0566893424036],"rpgDoorClose2":[14183.333333333334,612.4943310657596],"rpgDoorClose3":[14896.666666666666,713.9455782312925],"rpgDoorClose4":[15713.333333333332,603.3786848072561],"rpgDoorOpen1":[16420,918.9795918367347],"rpgDoorOpen2":[17440,1413.3333333333333],"rpgDrawKnife1":[18953.333333333332,500],"rpgDrawKnife2":[19553.333333333336,500],"rpgDrawKnife3":[20153.333333333332,500],"rpgDropLeather":[20753.333333333332,500],"rpgFootstep00":[21353.333333333332,500],"rpgFootstep01":[21953.333333333332,500],"rpgFootstep02":[22553.333333333336,500],"rpgFootstep03":[23153.333333333332,500],"rpgFootstep04":[23753.333333333332,500],"rpgFootstep05":[24353.333333333332,500],"rpgFootstep06":[24953.333333333332,500],"rpgFootstep07":[25553.333333333336,500],"rpgFootstep08":[26153.333333333332,500],"rpgFootstep09":[26753.333333333332,500],"rpgHandleCoins1":[27353.333333333332,845.5328798185941],"rpgHandleCoins2":[28300,500],"rpgHandleSmallLeather1":[28900,500],"rpgHandleSmallLeather2":[29500,500],"rpgKnifeSlice1":[30100,599.546485260771],"rpgKnifeSlice2":[30800,568.798185941043],"rpgMetalClick":[31470,500],"rpgMetalLatch":[32070,500],"rpgMetalPot1":[32670,1460.4761904761906],"rpgMetalPot2":[34233.333333333336,937.7777777777778],"rpgMetalPot3":[35273.333333333336,907.0068027210884]}}'),
-      iB = JSON.parse('{"src":["/sounds/generatedSprites/ambient.061941de00.ogg","/sounds/generatedSprites/ambient.061941de00.m4a","/sounds/generatedSprites/ambient.061941de00.mp3","/sounds/generatedSprites/ambient.061941de00.ac3"],"sprite":{"lavaFlow":[0,34000]}}');
-    var NB = dB(1089);
-    const tB = {
-        gunSemiAutomatic: VB,
-        gunSubmachineGun: yB,
-        gunShotgun: YB,
-        gunRifle: lB,
-        gunPistol: pB,
-        gunMisc: JB,
-        dig: gB,
-        step: oB,
-        random: kB,
-        mob: LB,
-        note: OB,
-        fishing: DB,
-        gameStart: uB,
-        customGame_horror: HB,
-        crowd: EB,
-        survivalFactory: vB,
-        rpg: mB,
-        ambient: iB
-      },
-      fB = {};
-    for (const KB in tB) {
-      const BB = tB[KB];
-      for (const TB in BB.sprite) {
-        if (fB[TB]) throw new Error(`duplicate sound name ${TB} in ${fB[TB]} and ${KB}`);
-        fB[TB] = KB
+    var FY = DY(2817);
+    const AY = FY.b - 4;
+
+    function IY(YY, rY, DY) {
+      (0, FY.e)(YY, rY, DY, !1)
+    }
+
+    function RY(YY, rY, DY) {
+      (0, FY.e)(YY, rY, DY, !1, AY)
+    }
+  },
+  35725: (YY, rY, DY) => {
+    DY.d(rY, {
+      b: () => yY,
+      d: () => WY,
+      h: () => EY,
+      k: () => QY
+    });
+    var FY = DY(35734),
+      AY = DY(3312),
+      IY = DY(35747),
+      RY = DY(3316),
+      OY = DY(35731),
+      gY = DY(2589),
+      aY = DY(2834),
+      vY = DY(2812),
+      uY = DY(713);
+    const sY = "bloxdWasmFailureReported";
+
+    function iY() {
+      return "undefined" === typeof WebAssembly
+    }
+
+    function yY() {
+      return (0, FY.g)()
+    }
+
+    function QY() {
+      if (iY()) return "this browser has no WebAssembly";
+      const YY = (0, AY.r)();
+      return "compile" === YY || "instantiate" === YY ? `the core wasm didn't load here (${(0,AY.i)()})` : null
+    }
+    async function oY(YY) {
+      return await (0, IY.g)(IY.c, void 0, YY)
+    }
+
+    function WY() {
+      iY() || (0, uY.d)((() => {
+        oY()
+      }))
+    }
+
+    function EY() {
+      if (iY()) return async () => ((0, gY.f)("unsupported", 0), mY("unsupported", "This browser has no WebAssembly"), !1);
+      const YY = {
+        reloadFailedDownload: !0
+      };
+      return oY(YY), async () => {
+        var rY;
+        const DY = performance.now();
+        await oY(YY);
+        const FY = (performance.now() - DY) / 1e3;
+        if ((0, AY.Q)()) return (0, gY.f)("ready", FY), (0, RY.L)(IY.c.url()) && (0, OY.reportCappedWasmFailure)("wasm_load", aY.b.message, aY.b.code), !0;
+        const uY = vY.c[null !== (rY = (0, AY.r)()) && void 0 !== rY ? rY : "call"];
+        return (0, gY.f)(uY, FY), mY(uY, (0, AY.i)()), !1
       }
     }
-    for (const KB in tB) {
-      const BB = tB[KB];
-      for (let TB = 0; TB < BB.src.length; TB++) BB.src[TB] = NB.clientSideServerUrls.staticUrl + BB.src[TB]
-    }
-    const sB = {};
 
-    function MB(BB) {
-      if (sB[BB]) return FB(sB[BB]);
-      {
-        const TB = [];
-        let dB = null;
-        for (const VB in tB) {
-          const yB = tB[VB];
-          for (const pB in yB.sprite)
-            if (pB.startsWith(BB)) {
-              if (TB.push(pB), dB && dB !== VB) throw new Error(`Sound prefix ${BB} is in multiple sprite sheets: ${dB} and ${VB}`);
-              dB = VB
-            }
+    function mY(YY, rY) {
+      (0, vY.g)(sY, `Bloxd wasm ${YY}, so the game can't start: ${rY}`, rY, YY)
+    }
+  },
+  35755: (YY, rY, DY) => {
+    YY.exports = DY.p + "static/media/bloxd_wasm_bg.52c77c7fd2bf4e8aae98.wasm"
+  },
+  35742: (YY, rY, DY) => {
+    YY.exports = DY.p + "static/media/bloxd_wasm_textures_bg.acdf6176fc2ed1b0954f.wasm"
+  },
+  35747: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => cr,
+      g: () => Kr,
+      i: () => Hr
+    });
+    var FY = {};
+    DY.r(FY), DY.d(FY, {
+      zv: () => AY,
+      EnvelopeKind: () => IY,
+      Zv: () => RY,
+      PhysicsEngine: () => OY,
+      Cv: () => gY,
+      fv: () => aY,
+      jv: () => vY,
+      hv: () => uY,
+      Jv: () => sY,
+      Mv: () => iY,
+      wv: () => yY,
+      bv: () => QY,
+      Xv: () => oY,
+      qv: () => WY,
+      default: () => er,
+      initSync: () => Tr,
+      kv: () => EY,
+      Gv: () => mY,
+      xv: () => VY,
+      nv: () => SY,
+      Pv: () => lY,
+      Uv: () => TY,
+      Lv: () => eY,
+      tv: () => NY,
+      Yu: () => BY,
+      ru: () => cY,
+      Du: () => KY,
+      Fu: () => HY,
+      Au: () => zY,
+      Iu: () => ZY,
+      Ru: () => CY
+    });
+    class AY {
+      __destroy_into_raw() {
+        const YY = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, jY.unregister(this), YY
+      }
+      free() {
+        const YY = this.__destroy_into_raw();
+        Vr.ZLJL(YY, 0)
+      }
+      Ou() {
+        const YY = Vr.o50F(this.__wbg_ptr);
+        if (YY[2]) throw ir(YY[1]);
+        return YY[0] >>> 0
+      }
+      gu() {
+        return Vr.zSP3(this.__wbg_ptr) >>> 0
+      }
+      constructor() {
+        const YY = Vr.Gx9E();
+        return this.__wbg_ptr = YY, jY.register(this, this.__wbg_ptr, this), this
+      }
+      au() {
+        return Vr.VkT8(this.__wbg_ptr) >>> 0
+      }
+      vu(YY) {
+        const rY = Vr.pSfq(this.__wbg_ptr, YY);
+        if (rY[2]) throw ir(rY[1]);
+        return rY[0] >>> 0
+      }
+      uu(YY) {
+        const rY = Vr.IENT(this.__wbg_ptr, YY);
+        if (rY[2]) throw ir(rY[1]);
+        return rY[0] >>> 0
+      }
+    }
+    Symbol.dispose && (AY.prototype[Symbol.dispose] = AY.prototype.free);
+    const IY = Object.freeze({
+      Js: 0,
+      0: "Js",
+      Error: 1,
+      1: "Error",
+      LeaveRoom: 2,
+      2: "LeaveRoom",
+      RoomState: 3,
+      3: "RoomState",
+      RoomStatePatch: 4,
+      4: "RoomStatePatch",
+      RoomDataNone: 5,
+      5: "RoomDataNone",
+      RoomDataBin: 6,
+      6: "RoomDataBin",
+      RoomDataBytes: 7,
+      7: "RoomDataBytes",
+      Ignored: 8,
+      8: "Ignored",
+      StringType: 16,
+      16: "StringType"
+    });
+    class RY {
+      __destroy_into_raw() {
+        const YY = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, hY.unregister(this), YY
+      }
+      free() {
+        const YY = this.__destroy_into_raw();
+        Vr.YmRO(YY, 0)
+      }
+      Qu(YY, rY) {
+        const DY = Vr.sPt0(this.__wbg_ptr, YY, rY);
+        if (DY[2]) throw ir(DY[1]);
+        return DY[0] >>> 0
+      }
+      ou(YY) {
+        const rY = Vr.bPsL(this.__wbg_ptr, YY);
+        if (rY[2]) throw ir(rY[1]);
+        return rY[0] >>> 0
+      }
+      Wu() {
+        Vr.HttI(this.__wbg_ptr)
+      }
+      static Eu() {
+        return Vr.DS6z() >>> 0
+      }
+      mu() {
+        return Vr.YHvj(this.__wbg_ptr) >>> 0
+      }
+      Vu() {
+        const YY = Vr.CSBj(this.__wbg_ptr);
+        return 0 === YY[0] ? void 0 : YY[1]
+      }
+      Su() {
+        return Vr.CtLF(this.__wbg_ptr) >>> 0
+      }
+      lu() {
+        return Vr.r3Zz(this.__wbg_ptr) >>> 0
+      }
+      static yu() {
+        return Vr.afmj() >>> 0
+      }
+      constructor() {
+        const YY = Vr.Rf4d();
+        return this.__wbg_ptr = YY, hY.register(this, this.__wbg_ptr, this), this
+      }
+      Tu() {
+        return Vr.VcQp(this.__wbg_ptr) >>> 0
+      }
+      eu() {
+        return Vr.DjNK(this.__wbg_ptr) >>> 0
+      }
+      Nu() {
+        return Vr.JSmd(this.__wbg_ptr) >>> 0
+      }
+      iu(YY) {
+        return Vr.wsp9(this.__wbg_ptr, YY) >>> 0
+      }
+      reserve(YY, rY) {
+        const DY = Vr.Vdrd(this.__wbg_ptr, YY, rY);
+        if (DY[1]) throw ir(DY[0])
+      }
+      Ku(YY, rY) {
+        const DY = ar(YY, Vr.CSOe),
+          FY = Sr;
+        Vr.uH1x(this.__wbg_ptr, DY, FY, rY)
+      }
+      text() {
+        let YY, rY;
+        try {
+          const DY = Vr.vENx(this.__wbg_ptr);
+          return YY = DY[0], rY = DY[1], LY(DY[0], DY[1])
+        } finally {
+          Vr.CVNm(YY, rY, 1)
         }
-        return sB[BB] = TB, FB(TB)
+      }
+    }
+    Symbol.dispose && (RY.prototype[Symbol.dispose] = RY.prototype.free);
+    class OY {
+      __destroy_into_raw() {
+        const YY = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, dY.unregister(this), YY
+      }
+      free() {
+        const YY = this.__destroy_into_raw();
+        Vr.KeH8(YY, 0)
+      }
+      zu(YY, rY) {
+        pY(rY, AY);
+        const DY = Vr.Q4BK(this.__wbg_ptr, YY, rY.__wbg_ptr);
+        if (DY[2]) throw ir(DY[1]);
+        return DY[0] >>> 0
+      }
+      Cu() {
+        const YY = Vr.nNHV(this.__wbg_ptr);
+        if (YY[1]) throw ir(YY[0])
+      }
+      wu(YY, rY, DY, FY, AY, IY, RY, OY, aY, vY, uY) {
+        pY(YY, gY);
+        const sY = Vr.OkK0(this.__wbg_ptr, YY.__wbg_ptr, rY, DY, FY, AY, IY, RY, OY, aY, vY, uY);
+        if (sY[2]) throw ir(sY[1]);
+        return sY[0]
+      }
+      Xu() {
+        const YY = Vr.nM42(this.__wbg_ptr);
+        var rY = kY(YY[0], YY[1]).slice();
+        return Vr.CVNm(YY[0], 8 * YY[1], 8), rY
+      }
+      qu() {
+        return Vr.XrSG(this.__wbg_ptr) >>> 0
+      }
+      pu() {
+        return Vr.hVzB(this.__wbg_ptr) >>> 0
+      }
+      ku() {
+        return Vr.OfcJ(this.__wbg_ptr) >>> 0
+      }
+      constructor(YY, rY, DY, FY, AY, IY, RY, OY) {
+        const gY = Vr.FKEP(YY, rY, DY, FY, AY, IY, RY, OY);
+        if (gY[2]) throw ir(gY[1]);
+        return this.__wbg_ptr = gY[0], dY.register(this, this.__wbg_ptr, this), this
+      }
+      nu(YY) {
+        pY(YY, AY);
+        const rY = Vr.niRs(this.__wbg_ptr, YY.__wbg_ptr);
+        if (rY[2]) throw ir(rY[1]);
+        return rY[0] >>> 0
+      }
+      Pu(YY) {
+        const rY = Vr.kcVq(this.__wbg_ptr, YY);
+        if (rY[1]) throw ir(rY[0])
+      }
+      Uu() {
+        return Vr.au6S(this.__wbg_ptr) >>> 0
+      }
+      resume(YY, rY) {
+        pY(YY, gY), pY(rY, AY);
+        const DY = Vr.wFt2(this.__wbg_ptr, YY.__wbg_ptr, rY.__wbg_ptr);
+        if (DY[2]) throw ir(DY[1]);
+        return DY[0] >>> 0
+      }
+      Fs(YY) {
+        const rY = Vr.jVdc(this.__wbg_ptr, YY);
+        if (rY[1]) throw ir(rY[0])
+      }
+      Os(YY, rY) {
+        pY(rY, AY);
+        const DY = Vr.L9Zk(this.__wbg_ptr, YY, rY.__wbg_ptr);
+        if (DY[1]) throw ir(DY[0])
+      }
+      Qs(YY) {
+        const rY = ur(YY, Vr.CSOe),
+          DY = Sr,
+          FY = Vr.K8Iy(this.__wbg_ptr, rY, DY);
+        if (FY[1]) throw ir(FY[0])
+      }
+      ju(YY, rY, DY, FY, AY, IY) {
+        const RY = Vr.GnKF(this.__wbg_ptr, YY, rY, DY, FY, AY, IY);
+        if (RY[1]) throw ir(RY[0])
+      }
+      Ju(YY, rY, DY, FY) {
+        const AY = ar(YY, Vr.CSOe),
+          IY = Sr,
+          RY = ur(rY, Vr.CSOe),
+          OY = Sr,
+          gY = ur(DY, Vr.CSOe),
+          aY = Sr,
+          vY = ur(FY, Vr.CSOe),
+          uY = Sr,
+          sY = Vr.ji5K(this.__wbg_ptr, AY, IY, RY, OY, gY, aY, vY, uY);
+        if (sY[1]) throw ir(sY[0])
+      }
+      Ws(YY, rY) {
+        pY(rY, AY);
+        const DY = Vr.Zqxg(this.__wbg_ptr, YY, rY.__wbg_ptr);
+        if (DY[1]) throw ir(DY[0])
+      }
+      xu(YY, rY, DY) {
+        const FY = Vr.S13s(this.__wbg_ptr, YY, rY, DY);
+        if (FY[1]) throw ir(FY[0])
+      }
+      Vs(YY, rY, DY, FY, AY, IY, RY, OY, aY, vY) {
+        pY(YY, gY);
+        return Vr.yLpm(this.__wbg_ptr, YY.__wbg_ptr, rY, DY, FY, AY, IY, RY, OY, aY, vY)
+      }
+    }
+    Symbol.dispose && (OY.prototype[Symbol.dispose] = OY.prototype.free);
+    class gY {
+      static __wrap(YY) {
+        const rY = Object.create(gY.prototype);
+        return rY.__wbg_ptr = YY, JY.register(rY, rY.__wbg_ptr, rY), rY
+      }
+      __destroy_into_raw() {
+        const YY = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, JY.unregister(this), YY
+      }
+      free() {
+        const YY = this.__destroy_into_raw();
+        Vr.JmDd(YY, 0)
+      }
+      Ts(YY) {
+        const rY = Vr.pRsH(this.__wbg_ptr, YY);
+        if (rY[2]) throw ir(rY[1]);
+        return rY[0] >>> 0
+      }
+      es(YY, rY, DY) {
+        return Vr.nHFW(this.__wbg_ptr, YY, rY, DY)
+      }
+      Ns(YY, rY, DY) {
+        return Vr.oj9F(this.__wbg_ptr, YY, rY, DY) >>> 0
+      }
+      Bs(YY, rY, DY, FY) {
+        return 0 !== Vr.z83B(this.__wbg_ptr, YY, rY, DY, FY)
+      }
+      Ks() {
+        Vr.m0SC(this.__wbg_ptr)
+      }
+      zs(YY) {
+        const rY = Vr.CehP(this.__wbg_ptr, YY);
+        if (rY[3]) throw ir(rY[2]);
+        var DY = xY(rY[0], rY[1]).slice();
+        return Vr.CVNm(rY[0], 1 * rY[1], 1), DY
+      }
+      evict(YY, rY) {
+        return Vr.wVny(this.__wbg_ptr, YY, rY) >>> 0
+      }
+      Zs() {
+        Vr.B1Nx(this.__wbg_ptr)
+      }
+      Cs(YY, rY, DY) {
+        Vr.GLRT(this.__wbg_ptr, YY, rY, DY)
+      }
+      fs(YY) {
+        const rY = Vr.R3OO(this.__wbg_ptr, YY);
+        if (rY[1]) throw ir(rY[0])
+      }
+      hs() {
+        return Vr.NvOL(this.__wbg_ptr) >>> 0
+      }
+      ds() {
+        return Vr.HNjH(this.__wbg_ptr) >>> 0
+      }
+      Ms(YY, rY, DY) {
+        Vr.IB93(this.__wbg_ptr, YY, rY, DY)
+      }
+      Xs(YY, rY, DY) {
+        Vr.emQo(this.__wbg_ptr, YY, rY, DY)
+      }
+      qs() {
+        return Vr.Acrf(this.__wbg_ptr) >>> 0
+      }
+      Gs() {
+        return Vr.RCvS(this.__wbg_ptr) >>> 0
+      }
+      constructor() {
+        const YY = Vr.UyYN();
+        return this.__wbg_ptr = YY, JY.register(this, this.__wbg_ptr, this), this
+      }
+      static xs() {
+        const YY = Vr.Ly3G();
+        return gY.__wrap(YY)
+      }
+      Ps() {
+        return Vr.hTH1(this.__wbg_ptr) >>> 0
+      }
+      Us() {
+        return Vr.tldX(this.__wbg_ptr) >>> 0
+      }
+      Ls(YY, rY, DY, FY) {
+        const AY = Vr.D5iP(this.__wbg_ptr, YY, rY, DY, FY);
+        if (AY[1]) throw ir(AY[0])
+      }
+      Yi() {
+        return Vr.MeVV(this.__wbg_ptr) >>> 0
+      }
+      Di() {
+        return Vr.rdUY(this.__wbg_ptr) >>> 0
+      }
+      Fi(YY, rY, DY, FY) {
+        Vr.YQVN(this.__wbg_ptr, YY, rY, DY, FY)
+      }
+      Ai(YY) {
+        Vr.prYw(this.__wbg_ptr, YY)
+      }
+      Ri(YY, rY, DY, FY, AY) {
+        const IY = vr(rY, Vr.CSOe),
+          RY = Sr,
+          OY = ar(DY, Vr.CSOe),
+          gY = Sr,
+          aY = ur(FY, Vr.CSOe),
+          vY = Sr,
+          uY = Vr.tCCf(this.__wbg_ptr, YY, IY, RY, OY, gY, aY, vY, AY);
+        if (uY[1]) throw ir(uY[0])
+      }
+      Ii(YY, rY, DY, FY) {
+        const AY = vr(YY, Vr.CSOe),
+          IY = Sr,
+          RY = ar(rY, Vr.CSOe),
+          OY = Sr,
+          gY = ur(DY, Vr.CSOe),
+          aY = Sr,
+          vY = vr(FY, Vr.CSOe),
+          uY = Sr,
+          sY = Vr.HmYp(this.__wbg_ptr, AY, IY, RY, OY, gY, aY, vY, uY);
+        if (sY[1]) throw ir(sY[0])
+      }
+      ii(YY) {
+        const rY = vr(YY, Vr.CSOe),
+          DY = Sr,
+          FY = Vr.lbQJ(this.__wbg_ptr, rY, DY);
+        if (FY[1]) throw ir(FY[0])
+      }
+      yi() {
+        return Vr.uUm3(this.__wbg_ptr) >>> 0
+      }
+      Qi(YY) {
+        const rY = Vr.gTUg(this.__wbg_ptr, YY);
+        if (rY[2]) throw ir(rY[1]);
+        return rY[0] >>> 0
+      }
+      steer() {
+        return Vr.qhcz(this.__wbg_ptr) >>> 0
+      }
+      oi() {
+        const YY = Vr.kxvn(this.__wbg_ptr);
+        var rY = kY(YY[0], YY[1]).slice();
+        return Vr.CVNm(YY[0], 8 * YY[1], 8), rY
+      }
+      Wi() {
+        return Vr.hv3K(this.__wbg_ptr) >>> 0
+      }
+      tu() {
+        const YY = Vr.OPxT(this.__wbg_ptr);
+        var rY, DY, FY = (rY = YY[0], DY = YY[1], rY >>>= 0, (null !== UY && 0 !== UY.byteLength || (UY = new Int32Array(Vr.memory.buffer)), UY).subarray(rY / 4, rY / 4 + DY)).slice();
+        return Vr.CVNm(YY[0], 4 * YY[1], 4), FY
+      }
+    }
+    Symbol.dispose && (gY.prototype[Symbol.dispose] = gY.prototype.free);
+    class aY {
+      __destroy_into_raw() {
+        const YY = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, MY.unregister(this), YY
+      }
+      free() {
+        const YY = this.__destroy_into_raw();
+        Vr.YMtV(YY, 0)
+      }
+      Ei(YY) {
+        const rY = ar(YY, Vr.CSOe),
+          DY = Sr,
+          FY = Vr.AXZ9(this.__wbg_ptr, rY, DY);
+        if (FY[1]) throw ir(FY[0])
+      }
+      mi() {
+        return Vr.XW3P(this.__wbg_ptr) >>> 0
+      }
+      Vi() {
+        return Vr.GvsH(this.__wbg_ptr) >>> 0
+      }
+      constructor() {
+        const YY = Vr.AxyP();
+        return this.__wbg_ptr = YY, MY.register(this, this.__wbg_ptr, this), this
+      }
+      run(YY, rY) {
+        pY(YY, gY);
+        const DY = Vr.B3A5(this.__wbg_ptr, YY.__wbg_ptr, rY);
+        if (DY[2]) throw ir(DY[1]);
+        return DY[0] >>> 0
+      }
+      Si(YY) {
+        const rY = ar(YY, Vr.CSOe),
+          DY = Sr;
+        Vr.JXcw(this.__wbg_ptr, rY, DY)
+      }
+      li(YY) {
+        const rY = ar(YY, Vr.CSOe),
+          DY = Sr;
+        Vr.U9Gw(this.__wbg_ptr, rY, DY)
+      }
+    }
+    Symbol.dispose && (aY.prototype[Symbol.dispose] = aY.prototype.free);
+    class vY {
+      __destroy_into_raw() {
+        const YY = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, wY.unregister(this), YY
+      }
+      free() {
+        const YY = this.__destroy_into_raw();
+        Vr.uRTl(YY, 0)
+      }
+      Ni(YY, rY) {
+        const DY = vr(YY, Vr.CSOe),
+          FY = Sr;
+        return Vr.yNJ8(this.__wbg_ptr, DY, FY, rY) >>> 0
+      }
+      Bi(YY, rY, DY) {
+        pY(YY, gY);
+        const FY = vr(DY, Vr.CSOe),
+          AY = Sr,
+          IY = Vr.VT2P(this.__wbg_ptr, YY.__wbg_ptr, rY, FY, AY);
+        if (IY[2]) throw ir(IY[1]);
+        return IY[0] >>> 0
+      }
+      Ti(YY) {
+        return Vr.NIlh(this.__wbg_ptr, YY) >>> 0
+      }
+      constructor() {
+        const YY = Vr.U1wC();
+        return this.__wbg_ptr = YY, wY.register(this, this.__wbg_ptr, this), this
+      }
+      scan(YY, rY) {
+        pY(YY, gY);
+        const DY = Vr.hHbm(this.__wbg_ptr, YY.__wbg_ptr, rY);
+        if (DY[2]) throw ir(DY[1]);
+        return DY[0] >>> 0
+      }
+      zi(YY) {
+        const rY = vr(YY, Vr.CSOe),
+          DY = Sr;
+        Vr.Wqvh(this.__wbg_ptr, rY, DY)
+      }
+      Hi() {
+        return Vr.cucw(this.__wbg_ptr) >>> 0
+      }
+      Ki() {
+        return Vr.TshD(this.__wbg_ptr) >>> 0
+      }
+    }
+    Symbol.dispose && (vY.prototype[Symbol.dispose] = vY.prototype.free);
+    class uY {
+      __destroy_into_raw() {
+        const YY = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, bY.unregister(this), YY
+      }
+      free() {
+        const YY = this.__destroy_into_raw();
+        Vr.fsRb(YY, 0)
+      }
+      Ci(YY) {
+        const rY = Vr.feKB(this.__wbg_ptr, YY);
+        if (rY[2]) throw ir(rY[1]);
+        return rY[0] >>> 0
+      }
+      compute(YY, rY, DY, FY) {
+        var AY = Or(FY) ? 0 : sr(FY, Vr.CSOe, Vr.enEq),
+          IY = Sr;
+        const RY = Vr.yBbj(this.__wbg_ptr, YY, Or(rY) ? Number.MAX_SAFE_INTEGER : rY | 0, DY, AY, IY);
+        if (RY[2]) throw ir(RY[1]);
+        return RY[0] >>> 0
+      }
+      Ji(YY) {
+        const rY = sr(YY, Vr.CSOe, Vr.enEq),
+          DY = Sr;
+        Vr.s2iX(this.__wbg_ptr, rY, DY)
+      }
+      bi() {
+        return Vr.HLD0(this.__wbg_ptr)
+      }
+      Xi(YY) {
+        return Vr.s29E(this.__wbg_ptr, YY) >>> 0
+      }
+      qi() {
+        return Vr.gUmC(this.__wbg_ptr) >>> 0
+      }
+      ki() {
+        return Vr.ApYb(this.__wbg_ptr) >>> 0
+      }
+      Gi(YY, rY) {
+        const DY = Vr.klX4(this.__wbg_ptr, YY, rY);
+        if (DY[1]) throw ir(DY[0])
+      }
+      xi() {
+        return Vr.Fak3(this.__wbg_ptr) >>> 0
+      }
+      ni() {
+        return Vr.JeDH(this.__wbg_ptr) >>> 0
+      }
+      Pi() {
+        return Vr.G94K(this.__wbg_ptr) >>> 0
+      }
+      ji(YY, rY, DY) {
+        const FY = ar(YY, Vr.CSOe),
+          AY = Sr,
+          IY = ar(rY, Vr.CSOe),
+          RY = Sr,
+          OY = Vr.hsgp(this.__wbg_ptr, FY, AY, IY, RY, DY);
+        if (OY[1]) throw ir(OY[0])
+      }
+      Li() {
+        return Vr.eFBH(this.__wbg_ptr) >>> 0
+      }
+      mesh(YY, rY, DY, FY, AY) {
+        const IY = Vr.pri6(this.__wbg_ptr, YY, rY, DY, FY, AY);
+        if (IY[2]) throw ir(IY[1]);
+        return IY[0] >>> 0
+      }
+      constructor(YY, rY, DY, FY, AY, IY, RY, OY, gY, aY, vY, uY, sY, iY, yY, QY, oY, WY, EY, mY) {
+        const VY = gr(YY, Vr.CSOe),
+          SY = Sr,
+          lY = ur(rY, Vr.CSOe),
+          TY = Sr,
+          eY = ar(DY, Vr.CSOe),
+          NY = Sr,
+          BY = vr(FY, Vr.CSOe),
+          cY = Sr,
+          KY = vr(AY, Vr.CSOe),
+          HY = Sr,
+          zY = ar(IY, Vr.CSOe),
+          ZY = Sr,
+          CY = ar(RY, Vr.CSOe),
+          fY = Sr,
+          jY = ur(OY, Vr.CSOe),
+          hY = Sr,
+          dY = ur(gY, Vr.CSOe),
+          JY = Sr,
+          MY = vr(aY, Vr.CSOe),
+          wY = Sr;
+        var XY = Or(vY) ? 0 : gr(vY, Vr.CSOe),
+          qY = Sr;
+        const pY = ar(uY, Vr.CSOe),
+          kY = Sr,
+          GY = vr(sY, Vr.CSOe),
+          xY = Sr;
+        var nY = Or(iY) ? 0 : vr(iY, Vr.CSOe),
+          PY = Sr;
+        const UY = ur(yY, Vr.CSOe),
+          LY = Sr,
+          tY = Vr.Ibz6(VY, SY, lY, TY, eY, NY, BY, cY, KY, HY, zY, ZY, CY, fY, jY, hY, dY, JY, MY, wY, XY, qY, pY, kY, GY, xY, nY, PY, UY, LY, QY, oY, WY, EY, mY);
+        if (tY[2]) throw ir(tY[1]);
+        return this.__wbg_ptr = tY[0], bY.register(this, this.__wbg_ptr, this), this
+      }
+      Ui(YY, rY) {
+        const DY = ar(YY, Vr.CSOe),
+          FY = Sr,
+          AY = Vr.lyNn(this.__wbg_ptr, DY, FY, rY);
+        if (AY[3]) throw ir(AY[2]);
+        var IY = xY(AY[0], AY[1]).slice();
+        return Vr.CVNm(AY[0], 1 * AY[1], 1), IY
+      }
+      Yy(YY) {
+        Vr.dol5(this.__wbg_ptr, Or(YY) ? 16777215 : YY)
+      }
+      Dy(YY) {
+        return Vr.bvHm(this.__wbg_ptr, YY) >>> 0
+      }
+      Ay() {
+        return Vr.SIgR(this.__wbg_ptr) >>> 0
+      }
+      Fy() {
+        const YY = Vr.eW64(this.__wbg_ptr);
+        if (YY[2]) throw ir(YY[1]);
+        return 0 !== YY[0]
+      }
+      Iy() {
+        return Vr.diMx(this.__wbg_ptr) >>> 0
+      }
+      Ry() {
+        return Vr.HjIb(this.__wbg_ptr) >>> 0
+      }
+    }
+    Symbol.dispose && (uY.prototype[Symbol.dispose] = uY.prototype.free);
+    class sY {
+      __destroy_into_raw() {
+        const YY = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, XY.unregister(this), YY
+      }
+      free() {
+        const YY = this.__destroy_into_raw();
+        Vr.e8BZ(YY, 0)
+      }
+      compute(YY, rY, DY, FY) {
+        var AY = Or(FY) ? 0 : sr(FY, Vr.CSOe, Vr.enEq),
+          IY = Sr;
+        const RY = Vr.x8sy(this.__wbg_ptr, YY, Or(rY) ? Number.MAX_SAFE_INTEGER : rY | 0, DY, AY, IY);
+        if (RY[2]) throw ir(RY[1]);
+        return RY[0] >>> 0
+      }
+      Ji(YY) {
+        const rY = sr(YY, Vr.CSOe, Vr.enEq),
+          DY = Sr;
+        Vr.usgX(this.__wbg_ptr, rY, DY)
+      }
+      ni() {
+        return Vr.YE8m(this.__wbg_ptr) >>> 0
+      }
+      Pi() {
+        return Vr.B2YV(this.__wbg_ptr) >>> 0
+      }
+      Oy(YY) {
+        const rY = Vr.pcRi(this.__wbg_ptr, YY);
+        if (rY[2]) throw ir(rY[1]);
+        return rY[0] >>> 0
+      }
+      constructor(YY, rY, DY, FY, AY, IY) {
+        const RY = gr(YY, Vr.CSOe),
+          OY = Sr,
+          gY = ur(rY, Vr.CSOe),
+          aY = Sr,
+          vY = ar(DY, Vr.CSOe),
+          uY = Sr,
+          sY = vr(FY, Vr.CSOe),
+          iY = Sr,
+          yY = Vr.G3Z2(RY, OY, gY, aY, vY, uY, sY, iY, AY, IY);
+        if (yY[2]) throw ir(yY[1]);
+        return this.__wbg_ptr = yY[0], XY.register(this, this.__wbg_ptr, this), this
+      }
+      Ay() {
+        return Vr.n3Xd(this.__wbg_ptr) >>> 0
+      }
+      Fy() {
+        const YY = Vr.EGCZ(this.__wbg_ptr);
+        if (YY[2]) throw ir(YY[1]);
+        return 0 !== YY[0]
+      }
+      Iy() {
+        return Vr.wGtP(this.__wbg_ptr) >>> 0
       }
     }
 
-    function zB(BB) {
-      const TB = fB[BB];
-      if (void 0 === TB) throw new Error(`Invalid sound name ${BB} (not in any sprite sheet)`);
-      return TB
+    function iY() {
+      const YY = Vr.hGHO();
+      var rY = GY(YY[0], YY[1]).slice();
+      return Vr.CVNm(YY[0], 4 * YY[1], 4), rY
     }
 
-    function wB(BB, TB) {
-      if (!(BB in tB)) throw new Error("Invalid spriteTrack name");
-      return TB in tB[BB].sprite
+    function yY(YY, rY) {
+      let DY, FY;
+      try {
+        const AY = gr(YY, Vr.CSOe),
+          IY = Sr,
+          RY = sr(rY, Vr.CSOe, Vr.enEq),
+          OY = Sr,
+          gY = Vr.RxYi(AY, IY, RY, OY);
+        return DY = gY[0], FY = gY[1], LY(gY[0], gY[1])
+      } finally {
+        Vr.CVNm(DY, FY, 1)
+      }
     }
 
-    function UB(BB) {
-      if (!(BB in tB)) throw new Error("Invalid spritesheet name");
-      return tB[BB]
+    function QY() {
+      const YY = Vr.rOaD();
+      var rY = GY(YY[0], YY[1]).slice();
+      return Vr.CVNm(YY[0], 4 * YY[1], 4), rY
     }
 
-    function FB(BB) {
-      return BB[Math.floor(Math.random() * BB.length)]
+    function oY(YY) {
+      return 0 !== Vr.HOpn(YY)
+    }
+
+    function WY(YY, rY) {
+      const DY = sr(YY, Vr.CSOe, Vr.enEq),
+        FY = Sr,
+        AY = Vr.SHt4(DY, FY, rY);
+      if (AY[1]) throw ir(AY[0])
+    }
+
+    function EY() {
+      Vr.sKiG()
+    }
+
+    function mY() {
+      return Vr.I9y8() >>> 0
+    }
+
+    function VY(YY) {
+      return 0 !== Vr.tr6m(YY)
+    }
+
+    function SY(YY) {
+      return 0 !== Vr.IB7O(YY)
+    }
+
+    function lY(YY) {
+      Vr.i585(YY)
+    }
+
+    function TY() {
+      return Vr.au8t() >>> 0
+    }
+
+    function eY() {
+      return Vr.thtW() >>> 0
+    }
+
+    function NY() {
+      return 0 !== Vr.RM2V()
+    }
+
+    function BY() {
+      const YY = Vr.upo1();
+      var rY = GY(YY[0], YY[1]).slice();
+      return Vr.CVNm(YY[0], 4 * YY[1], 4), rY
+    }
+
+    function cY() {
+      const YY = Vr.QSPb();
+      var rY = GY(YY[0], YY[1]).slice();
+      return Vr.CVNm(YY[0], 4 * YY[1], 4), rY
+    }
+
+    function KY() {
+      const YY = Vr.ANn5();
+      var rY = GY(YY[0], YY[1]).slice();
+      return Vr.CVNm(YY[0], 4 * YY[1], 4), rY
+    }
+
+    function HY() {
+      return Vr.qDIH() >>> 0
+    }
+
+    function zY() {
+      Vr.GCN5()
+    }
+
+    function ZY() {
+      let YY, rY;
+      try {
+        const DY = Vr.rfUj();
+        return YY = DY[0], rY = DY[1], LY(DY[0], DY[1])
+      } finally {
+        Vr.CVNm(YY, rY, 1)
+      }
+    }
+
+    function CY(YY) {
+      Vr.Bmbf(qY(YY))
+    }
+
+    function fY() {
+      return {
+        __proto__: null,
+        juTM: {
+          __proto__: null,
+          Jtb5: function(YY, rY) {
+            return qY(Error(LY(YY, rY)))
+          },
+          dYst: function(YY, rY) {
+            throw new Error(LY(YY, rY))
+          },
+          LwdJ: function(YY) {
+            Ar(YY).call()
+          },
+          QNON: function(YY, rY) {
+            console.error(LY(YY, rY))
+          },
+          FnsU: function() {
+            return performance.now()
+          },
+          Ubkj: function(YY) {
+            ir(YY)
+          }
+        }
+      }
+    }
+    Symbol.dispose && (sY.prototype[Symbol.dispose] = sY.prototype.free);
+    const jY = "undefined" === typeof FinalizationRegistry ? {
+        register: () => {},
+        unregister: () => {}
+      } : new FinalizationRegistry((YY => Vr.ZLJL(YY, 1))),
+      hY = "undefined" === typeof FinalizationRegistry ? {
+        register: () => {},
+        unregister: () => {}
+      } : new FinalizationRegistry((YY => Vr.YmRO(YY, 1))),
+      dY = "undefined" === typeof FinalizationRegistry ? {
+        register: () => {},
+        unregister: () => {}
+      } : new FinalizationRegistry((YY => Vr.KeH8(YY, 1))),
+      JY = "undefined" === typeof FinalizationRegistry ? {
+        register: () => {},
+        unregister: () => {}
+      } : new FinalizationRegistry((YY => Vr.JmDd(YY, 1))),
+      MY = "undefined" === typeof FinalizationRegistry ? {
+        register: () => {},
+        unregister: () => {}
+      } : new FinalizationRegistry((YY => Vr.YMtV(YY, 1))),
+      wY = "undefined" === typeof FinalizationRegistry ? {
+        register: () => {},
+        unregister: () => {}
+      } : new FinalizationRegistry((YY => Vr.uRTl(YY, 1))),
+      bY = "undefined" === typeof FinalizationRegistry ? {
+        register: () => {},
+        unregister: () => {}
+      } : new FinalizationRegistry((YY => Vr.fsRb(YY, 1))),
+      XY = "undefined" === typeof FinalizationRegistry ? {
+        register: () => {},
+        unregister: () => {}
+      } : new FinalizationRegistry((YY => Vr.e8BZ(YY, 1)));
+
+    function qY(YY) {
+      Rr === Ir.length && Ir.push(Ir.length + 1);
+      const rY = Rr;
+      return Rr = Ir[rY], Ir[rY] = YY, rY
+    }
+
+    function pY(YY, rY) {
+      if (!(YY instanceof rY)) throw new Error(`expected instance of ${rY.name}`)
+    }
+
+    function kY(YY, rY) {
+      return YY >>>= 0, PY().subarray(YY / 8, YY / 8 + rY)
+    }
+
+    function GY(YY, rY) {
+      return YY >>>= 0, rr().subarray(YY / 4, YY / 4 + rY)
+    }
+
+    function xY(YY, rY) {
+      return YY >>>= 0, Fr().subarray(YY / 1, YY / 1 + rY)
+    }
+    let nY = null;
+
+    function PY() {
+      return null !== nY && 0 !== nY.byteLength || (nY = new Float64Array(Vr.memory.buffer)), nY
+    }
+    let UY = null;
+
+    function LY(YY, rY) {
+      return function(YY, rY) {
+        or += rY, or >= Qr && (yr = new TextDecoder("utf-8", {
+          ignoreBOM: !0,
+          fatal: !0
+        }), yr.decode(), or = rY);
+        return yr.decode(Fr().subarray(YY, YY + rY))
+      }(YY >>> 0, rY)
+    }
+    let tY = null;
+    let Yr = null;
+
+    function rr() {
+      return null !== Yr && 0 !== Yr.byteLength || (Yr = new Uint32Array(Vr.memory.buffer)), Yr
+    }
+    let Dr = null;
+
+    function Fr() {
+      return null !== Dr && 0 !== Dr.byteLength || (Dr = new Uint8Array(Vr.memory.buffer)), Dr
+    }
+
+    function Ar(YY) {
+      return Ir[YY]
+    }
+    let Ir = new Array(1024).fill(void 0);
+    Ir.push(void 0, null, !0, !1);
+    let Rr = Ir.length;
+
+    function Or(YY) {
+      return void 0 === YY || null === YY
+    }
+
+    function gr(YY, rY) {
+      const DY = rY(2 * YY.length, 2) >>> 0;
+      return (null !== tY && 0 !== tY.byteLength || (tY = new Uint16Array(Vr.memory.buffer)), tY).set(YY, DY / 2), Sr = YY.length, DY
+    }
+
+    function ar(YY, rY) {
+      const DY = rY(4 * YY.length, 4) >>> 0;
+      return rr().set(YY, DY / 4), Sr = YY.length, DY
+    }
+
+    function vr(YY, rY) {
+      const DY = rY(1 * YY.length, 1) >>> 0;
+      return Fr().set(YY, DY / 1), Sr = YY.length, DY
+    }
+
+    function ur(YY, rY) {
+      const DY = rY(8 * YY.length, 8) >>> 0;
+      return PY().set(YY, DY / 8), Sr = YY.length, DY
+    }
+
+    function sr(YY, rY, DY) {
+      if (void 0 === DY) {
+        const DY = Wr.encode(YY),
+          FY = rY(DY.length, 1) >>> 0;
+        return Fr().subarray(FY, FY + DY.length).set(DY), Sr = DY.length, FY
+      }
+      let FY = YY.length,
+        AY = rY(FY, 1) >>> 0;
+      const IY = Fr();
+      let RY = 0;
+      for (; RY < FY; RY++) {
+        const rY = YY.charCodeAt(RY);
+        if (rY > 127) break;
+        IY[AY + RY] = rY
+      }
+      if (RY !== FY) {
+        0 !== RY && (YY = YY.slice(RY)), AY = DY(AY, FY, FY = RY + 3 * YY.length, 1) >>> 0;
+        const rY = Fr().subarray(AY + RY, AY + FY);
+        RY += Wr.encodeInto(YY, rY).written, AY = DY(AY, FY, RY, 1) >>> 0
+      }
+      return Sr = RY, AY
+    }
+
+    function ir(YY) {
+      const rY = Ar(YY);
+      return function(YY) {
+        YY < 1028 || (Ir[YY] = Rr, Rr = YY)
+      }(YY), rY
+    }
+    let yr = new TextDecoder("utf-8", {
+      ignoreBOM: !0,
+      fatal: !0
+    });
+    yr.decode();
+    const Qr = 2146435072;
+    let or = 0;
+    const Wr = new TextEncoder;
+    "encodeInto" in Wr || (Wr.encodeInto = function(YY, rY) {
+      const DY = Wr.encode(YY);
+      return rY.set(DY), {
+        read: YY.length,
+        written: DY.length
+      }
+    });
+    let Er, mr, Vr, Sr = 0;
+
+    function lr(YY, rY) {
+      return mr = YY, Vr = YY.exports, Er = rY, nY = null, UY = null, tY = null, Yr = null, Dr = null, Vr.QMTD(), Vr
+    }
+
+    function Tr(YY) {
+      if (void 0 !== Vr) return Vr;
+      void 0 !== YY && (Object.getPrototypeOf(YY) === Object.prototype ? ({
+        module: YY
+      } = YY) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
+      const rY = fY();
+      YY instanceof WebAssembly.Module || (YY = new WebAssembly.Module(YY));
+      return lr(new WebAssembly.Instance(YY, rY), YY)
+    }
+    async function er(YY) {
+      if (void 0 !== Vr) return Vr;
+      void 0 !== YY && (Object.getPrototypeOf(YY) === Object.prototype ? ({
+        module_or_path: YY
+      } = YY) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
+      const rY = fY();
+      ("string" === typeof YY || "function" === typeof Request && YY instanceof Request || "function" === typeof URL && YY instanceof URL) && (YY = fetch(YY));
+      const {
+        instance: DY,
+        module: FY
+      } = await async function(YY, rY) {
+        if ("function" === typeof Response && YY instanceof Response) {
+          if (!YY.ok) throw new Error(`failed to fetch Wasm: ${YY.status} ${YY.statusText} fetching '${YY.url}'`);
+          if ("function" === typeof WebAssembly.instantiateStreaming) try {
+            return await WebAssembly.instantiateStreaming(YY, rY)
+          } catch (DY) {
+            if (! function(YY) {
+                switch (YY) {
+                  case "basic":
+                  case "cors":
+                  case "default":
+                    return !0
+                }
+                return !1
+              }(YY.type) || "application/wasm" === YY.headers.get("Content-Type")) throw DY;
+            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", DY)
+          }
+          const FY = await YY.arrayBuffer();
+          return await WebAssembly.instantiate(FY, rY)
+        } {
+          const DY = await WebAssembly.instantiate(YY, rY);
+          return DY instanceof WebAssembly.Instance ? {
+            instance: DY,
+            module: YY
+          } : DY
+        }
+      }(await YY, rY);
+      return lr(DY, FY)
+    }
+    var Nr = DY(3312),
+      Br = DY(35750);
+    const cr = {
+      name: Nr.b,
+      url: () => new DY.U(DY(35755)),
+      init: er,
+      bindings: FY
+    };
+
+    function Kr() {
+      let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : cr,
+        rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : cr,
+        DY = arguments.length > 2 ? arguments[2] : void 0;
+      return (0, Br.h)(YY, rY, DY)
+    }
+
+    function Hr(YY) {
+      return (0, Nr.N)((() => YY), FY, cr)
+    }
+  },
+  35739: (YY, rY, DY) => {
+    function FY(YY, rY) {
+      return new Error(`${YY}: ${rY instanceof Error?`${rY.name}: ${rY.message}`:String(rY)}`, {
+        cause: rY
+      })
+    }
+    DY.d(rY, {
+      d: () => FY
+    })
+  },
+  35734: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => RY,
+      g: () => gY
+    });
+    var FY = DY(3316),
+      AY = DY(6185),
+      IY = DY(35739);
+
+    function RY() {
+      return new URL(new DY.U(DY(35742)).href, globalThis.location?.href).href
+    }
+    let OY = null;
+
+    function gY() {
+      return OY ??= (async () => (0, FY.C)(new URL(RY()), (0, AY.d)("bloxd_wasm_textures")))().catch((YY => {
+        throw (0, IY.d)((0, FY.E)(YY), YY)
+      })), OY
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

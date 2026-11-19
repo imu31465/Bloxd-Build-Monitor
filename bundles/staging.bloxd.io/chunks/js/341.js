@@ -1,27 +1,68 @@
 export const id = 341;
 export const ids = [341];
 export const modules = {
-  59798: (BB, TB, dB) => {
-    function VB(BB, TB, dB, VB, yB, pB, lB) {
-      const JB = TB,
-        YB = VB,
-        gB = dB;
-      BB[gB + 0] = JB[YB + 0], BB[gB + 1] = JB[YB + 1], BB[gB + 2] = JB[YB + 2], BB[gB + 3] = JB[YB + 3], BB[gB + 4] = JB[YB + 4], BB[gB + 5] = JB[YB + 5], BB[gB + 6] = JB[YB + 6], BB[gB + 7] = JB[YB + 7], BB[gB + 8] = JB[YB + 8], BB[gB + 9] = JB[YB + 9], BB[gB + 10] = JB[YB + 10], BB[gB + 11] = JB[YB + 11], BB[gB + 12] = JB[YB + 12] - yB, BB[gB + 13] = JB[YB + 13] - pB, BB[gB + 14] = JB[YB + 14] - lB, BB[gB + 15] = JB[YB + 15]
+  41600: (YY, rY, DY) => {
+    function FY(YY) {
+      return Math.floor(YY / 8)
     }
 
-    function yB(BB) {
-      return (TB, dB, yB, pB) => {
-        const lB = BB.camera;
-        if (!lB) return void VB(TB, dB, yB, pB, 0, 0, 0);
-        const JB = lB.worldMatrix;
-        VB(TB, dB, yB, pB, JB[12], JB[13], JB[14])
+    function AY(YY) {
+      return 1 << YY % 8
+    }
+    DY.d(rY, {
+      OptimizeIndices: () => RY
+    });
+    class IY {
+      constructor(YY) {
+        this.size = YY, this._byteArray = new Uint8Array(Math.ceil(this.size / 8))
+      }
+      get(YY) {
+        if (YY >= this.size) throw new RangeError("Bit index out of range");
+        const rY = FY(YY),
+          DY = AY(YY);
+        return 0 !== (this._byteArray[rY] & DY)
+      }
+      set(YY, rY) {
+        if (YY >= this.size) throw new RangeError("Bit index out of range");
+        const DY = FY(YY),
+          IY = AY(YY);
+        rY ? this._byteArray[DY] |= IY : this._byteArray[DY] &= ~IY
       }
     }
-    dB.r(TB), dB.d(TB, {
-      makePackMeshWorld: () => yB,
-      packMat4IntoF32WithOffset: () => VB
-    })
+
+    function RY(YY) {
+      const rY = [],
+        DY = YY.length / 3;
+      for (let IY = 0; IY < DY; IY++) rY.push([YY[3 * IY], YY[3 * IY + 1], YY[3 * IY + 2]]);
+      const FY = new Map;
+      for (let IY = 0; IY < rY.length; IY++) {
+        const YY = rY[IY];
+        for (const rY of YY) {
+          let YY = FY.get(rY);
+          YY || FY.set(rY, YY = []), YY.push(IY)
+        }
+      }
+      const AY = new IY(DY),
+        RY = [],
+        OY = YY => {
+          const DY = [YY];
+          for (; DY.length > 0;) {
+            const YY = DY.pop();
+            if (!AY.get(YY)) {
+              AY.set(YY, !0), RY.push(rY[YY]);
+              for (const IY of rY[YY]) {
+                const YY = FY.get(IY);
+                if (!YY) return;
+                for (const rY of YY) AY.get(rY) || DY.push(rY)
+              }
+            }
+          }
+        };
+      for (let IY = 0; IY < DY; IY++) AY.get(IY) || OY(IY);
+      let gY = 0;
+      for (const IY of RY) YY[gY++] = IY[0], YY[gY++] = IY[1], YY[gY++] = IY[2]
+    }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

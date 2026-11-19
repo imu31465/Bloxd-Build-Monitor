@@ -1,322 +1,322 @@
 export const id = 14;
 export const ids = [14];
 export const modules = {
-  38233: (BB, TB, dB) => {
-    var VB = {
-      "./breach-zero-uncaught.webp": 38242,
-      "./breach-zero.webp": 38245,
-      "./brood-father-uncaught.webp": 38248,
-      "./brood-father.webp": 38256,
-      "./carousel-uncaught.webp": 38258,
-      "./carousel.webp": 38265,
-      "./deadlock-uncaught.webp": 38272,
-      "./deadlock.webp": 38280,
-      "./frost-revenant-uncaught.webp": 38288,
-      "./frost-revenant.webp": 38293,
-      "./hollow-choir-uncaught.webp": 38299,
-      "./hollow-choir.webp": 38304,
-      "./magma-warden-uncaught.webp": 38306,
-      "./magma-warden.webp": 38315,
-      "./patient-zero-uncaught.webp": 38318,
-      "./patient-zero.webp": 38324,
-      "./siege-engine-uncaught.webp": 38326,
-      "./siege-engine.webp": 38330,
-      "./warp-stalker-uncaught.webp": 38336,
-      "./warp-stalker.webp": 38338
+  38612: (YY, rY, DY) => {
+    var FY = {
+      "./breach-zero-uncaught.webp": 38614,
+      "./breach-zero.webp": 38622,
+      "./brood-father-uncaught.webp": 38631,
+      "./brood-father.webp": 38637,
+      "./carousel-uncaught.webp": 38645,
+      "./carousel.webp": 38648,
+      "./deadlock-uncaught.webp": 38650,
+      "./deadlock.webp": 38659,
+      "./frost-revenant-uncaught.webp": 38663,
+      "./frost-revenant.webp": 38670,
+      "./hollow-choir-uncaught.webp": 38678,
+      "./hollow-choir.webp": 38681,
+      "./magma-warden-uncaught.webp": 38686,
+      "./magma-warden.webp": 38694,
+      "./patient-zero-uncaught.webp": 38698,
+      "./patient-zero.webp": 38702,
+      "./siege-engine-uncaught.webp": 38709,
+      "./siege-engine.webp": 38717,
+      "./warp-stalker-uncaught.webp": 38726,
+      "./warp-stalker.webp": 38733
     };
 
-    function yB(BB) {
-      var TB = pB(BB);
-      return dB(TB)
+    function AY(YY) {
+      var rY = IY(YY);
+      return DY(rY)
     }
 
-    function pB(BB) {
-      if (!dB.o(VB, BB)) {
-        var TB = new Error("Cannot find module '" + BB + "'");
-        throw TB.code = "MODULE_NOT_FOUND", TB
+    function IY(YY) {
+      if (!DY.o(FY, YY)) {
+        var rY = new Error("Cannot find module '" + YY + "'");
+        throw rY.code = "MODULE_NOT_FOUND", rY
       }
-      return VB[BB]
+      return FY[YY]
     }
-    yB.keys = function() {
-      return Object.keys(VB)
-    }, yB.resolve = pB, BB.exports = yB, yB.id = 38233
+    AY.keys = function() {
+      return Object.keys(FY)
+    }, AY.resolve = IY, YY.exports = AY, AY.id = 38612
   },
-  35856: (BB, TB, dB) => {
-    dB.d(TB, {
-      c: () => sB,
-      f: () => tB,
-      h: () => fB,
-      l: () => DB
+  36263: (YY, rY, DY) => {
+    DY.d(rY, {
+      b: () => eY,
+      d: () => lY,
+      f: () => TY,
+      j: () => yY
     });
-    var VB = dB(933),
-      yB = dB.n(VB),
-      pB = dB(62),
-      lB = dB(72),
-      JB = dB(1251),
-      YB = dB(1324),
-      gB = dB(1249),
-      oB = dB(1165),
-      kB = dB(1078),
-      LB = dB(35860),
-      OB = dB(980);
+    var FY = DY(1092),
+      AY = DY.n(FY),
+      IY = DY(61),
+      RY = DY(76),
+      OY = DY(1359),
+      gY = DY(1437),
+      aY = DY(1354),
+      vY = DY(1284),
+      uY = DY(1211),
+      sY = DY(36268),
+      iY = DY(1125);
 
-    function DB(BB) {
-      const [TB, dB] = (0, pB.useState)((() => (0, LB.s)(BB)));
-      return (0, pB.useEffect)((() => (dB((0, LB.s)(BB)), (0, LB.T)((() => {
-        dB((0, LB.s)(BB))
-      })))), [BB]), TB
+    function yY(YY) {
+      const [rY, DY] = (0, IY.useState)((() => (0, sY.o)(YY)));
+      return (0, IY.useEffect)((() => (DY((0, sY.o)(YY)), (0, sY.O)((() => {
+        DY((0, sY.o)(YY))
+      })))), [YY]), rY
     }
 
-    function uB(BB, TB) {
-      "function" === typeof BB ? BB(TB) : BB && (BB.current = TB)
+    function QY(YY, rY) {
+      "function" === typeof YY ? YY(rY) : YY && (YY.current = rY)
     }
 
-    function HB(BB) {
+    function oY(YY) {
       let {
-        tutorial: TB,
-        step: dB,
-        enabled: VB = !0
-      } = BB;
-      const yB = DB(TB);
-      return VB && yB === dB
+        tutorial: rY,
+        step: DY,
+        enabled: FY = !0
+      } = YY;
+      const AY = yY(rY);
+      return FY && AY === DY
     }
 
-    function EB(BB, TB) {
-      const dB = (0, LB.w)(BB),
-        VB = dB.indexOf(TB);
-      return !dB.slice(VB + 1).some((TB => (0, LB.D)(BB, TB)))
+    function WY(YY, rY) {
+      const DY = (0, sY.r)(YY),
+        FY = DY.indexOf(rY);
+      return !DY.slice(FY + 1).some((rY => (0, sY.B)(YY, rY)))
     }
 
-    function vB(BB, TB, dB, VB) {
+    function EY(YY, rY, DY, FY) {
       let {
-        tutorial: yB,
-        step: pB,
-        waitForClick: lB = !1,
-        onPrevious: JB
-      } = BB;
-      const YB = TB && (0, LB.C)(yB, pB),
-        gB = TB && !EB(yB, pB),
-        kB = lB ? VB : dB;
-      let OB = null;
-      YB ? OB = () => {
-        null === JB || void 0 === JB || JB(), (0, LB.y)(yB, pB)
-      } : gB && (OB = () => {
-        (0, LB.o)(yB)
-      }), (0, oB.y)("popup", null !== kB && void 0 !== kB ? kB : dB, OB, TB && null !== kB, null, YB ? void 0 : "controller:menusSkipTutorial")
+        tutorial: AY,
+        step: IY,
+        waitForClick: RY = !1,
+        onPrevious: OY
+      } = YY;
+      const gY = rY && (0, sY.x)(AY, IY),
+        aY = rY && !WY(AY, IY),
+        uY = RY ? FY : DY;
+      let iY = null;
+      gY ? iY = () => {
+        null === OY || void 0 === OY || OY(), (0, sY.v)(AY, IY)
+      } : aY && (iY = () => {
+        (0, sY.k)(AY)
+      }), (0, vY.t)("popup", null !== uY && void 0 !== uY ? uY : DY, iY, rY && null !== uY, null, gY ? void 0 : "controller:menusSkipTutorial")
     }
 
-    function mB(BB) {
+    function mY(YY) {
       let {
-        tutorial: TB,
-        step: dB,
-        text: VB,
-        waitForClick: yB = !1,
-        onPrevious: pB
-      } = BB;
+        tutorial: rY,
+        step: DY,
+        text: FY,
+        waitForClick: AY = !1,
+        onPrevious: IY
+      } = YY;
       const {
-        t: lB
-      } = (0, kB.z)(), JB = EB(TB, dB);
-      return (0, OB.jsxs)(OB.Fragment, {
-        children: [(0, OB.jsx)("div", {
+        t: RY
+      } = (0, uY.C)(), OY = WY(rY, DY);
+      return (0, iY.jsxs)(iY.Fragment, {
+        children: [(0, iY.jsx)("div", {
           className: "TutorialStepText",
-          children: VB
-        }), (0, OB.jsxs)("div", {
+          children: FY
+        }), (0, iY.jsxs)("div", {
           className: "TutorialStepButtons",
-          children: [(0, LB.C)(TB, dB) && (0, OB.jsx)(YB.g, {
+          children: [(0, sY.x)(rY, DY) && (0, iY.jsx)(gY.j, {
             className: "TutorialStepButton",
             onClick: () => {
-              null === pB || void 0 === pB || pB(), (0, LB.y)(TB, dB)
+              null === IY || void 0 === IY || IY(), (0, sY.v)(rY, DY)
             },
-            children: lB("tutorial:back")
-          }), !yB && (0, OB.jsx)(YB.d, {
+            children: RY("tutorial:back")
+          }), !AY && (0, iY.jsx)(gY.f, {
             className: "TutorialStepButton",
             onClick: () => {
-              (0, LB.g)(dB)
+              (0, sY.d)(DY)
             },
             padDefaultFocus: !0,
-            children: lB(JB ? "tutorial:done" : "tutorial:next")
-          }), !JB && (0, OB.jsx)(YB.g, {
+            children: RY(OY ? "tutorial:done" : "tutorial:next")
+          }), !OY && (0, iY.jsx)(gY.j, {
             className: "TutorialStepButton",
             onClick: () => {
-              (0, LB.o)(TB)
+              (0, sY.k)(rY)
             },
-            children: lB("tutorial:skip")
+            children: RY("tutorial:skip")
           })]
         })]
       })
     }
-    const iB = 6;
+    const VY = 6;
 
-    function NB(BB) {
+    function SY(YY) {
       let {
-        rect: TB,
-        margin: dB
-      } = BB;
-      const VB = Math.max(0, TB.top - dB),
-        yB = TB.bottom + dB,
-        pB = Math.max(0, TB.left - dB),
-        lB = TB.right + dB;
-      return (0, OB.jsxs)(OB.Fragment, {
-        children: [(0, OB.jsx)("div", {
+        rect: rY,
+        margin: DY
+      } = YY;
+      const FY = Math.max(0, rY.top - DY),
+        AY = rY.bottom + DY,
+        IY = Math.max(0, rY.left - DY),
+        RY = rY.right + DY;
+      return (0, iY.jsxs)(iY.Fragment, {
+        children: [(0, iY.jsx)("div", {
           className: "TutorialSpotlightBackdrop",
           style: {
             top: 0,
             left: 0,
             right: 0,
-            height: VB
+            height: FY
           }
-        }), (0, OB.jsx)("div", {
+        }), (0, iY.jsx)("div", {
           className: "TutorialSpotlightBackdrop",
           style: {
-            top: yB,
+            top: AY,
             left: 0,
             right: 0,
             bottom: 0
           }
-        }), (0, OB.jsx)("div", {
+        }), (0, iY.jsx)("div", {
           className: "TutorialSpotlightBackdrop",
           style: {
-            top: VB,
+            top: FY,
             left: 0,
-            width: pB,
-            height: yB - VB
+            width: IY,
+            height: AY - FY
           }
-        }), (0, OB.jsx)("div", {
+        }), (0, iY.jsx)("div", {
           className: "TutorialSpotlightBackdrop",
           style: {
-            top: VB,
-            left: lB,
+            top: FY,
+            left: RY,
             right: 0,
-            height: yB - VB
+            height: AY - FY
           }
         })]
       })
     }
 
-    function tB(BB) {
+    function lY(YY) {
       let {
-        target: TB,
-        placement: dB,
-        boxRef: VB,
-        className: YB,
-        spotlightMargin: oB = iB,
-        children: kB
-      } = BB;
+        target: rY,
+        placement: DY,
+        boxRef: FY,
+        className: gY,
+        spotlightMargin: vY = VY,
+        children: uY
+      } = YY;
       const {
-        getArrowProps: LB,
-        getTooltipProps: DB,
-        setTooltipRef: uB,
-        setTriggerRef: HB
-      } = (0, JB.c)({
-        placement: dB,
+        getArrowProps: sY,
+        getTooltipProps: yY,
+        setTooltipRef: QY,
+        setTriggerRef: oY
+      } = (0, OY.d)({
+        placement: DY,
         trigger: null,
         visible: !0,
         interactive: !0,
         closeOnOutsideClick: !1,
-        offset: [0, oB]
+        offset: [0, vY]
       });
-      (0, pB.useLayoutEffect)((() => {
-        HB(TB)
-      }), [TB, HB]);
-      const EB = function(BB, TB) {
-        const [dB, VB] = (0, pB.useState)(null);
-        return (0, pB.useEffect)((() => {
-          if (!TB || !BB) return void VB(null);
-          let dB = 0,
-            yB = null;
-          const pB = () => {
-            const TB = BB.getBoundingClientRect();
-            yB && TB.left === yB.left && TB.top === yB.top && TB.width === yB.width && TB.height === yB.height || (yB = TB, VB(TB)), dB = requestAnimationFrame(pB)
+      (0, IY.useLayoutEffect)((() => {
+        oY(rY)
+      }), [rY, oY]);
+      const WY = function(YY, rY) {
+        const [DY, FY] = (0, IY.useState)(null);
+        return (0, IY.useEffect)((() => {
+          if (!rY || !YY) return void FY(null);
+          let DY = 0,
+            AY = null;
+          const IY = () => {
+            const rY = YY.getBoundingClientRect();
+            AY && rY.left === AY.left && rY.top === AY.top && rY.width === AY.width && rY.height === AY.height || (AY = rY, FY(rY)), DY = requestAnimationFrame(IY)
           };
-          return pB(), () => {
-            cancelAnimationFrame(dB)
+          return IY(), () => {
+            cancelAnimationFrame(DY)
           }
-        }), [BB, TB]), dB
-      }(TB, !0);
-      (0, pB.useEffect)((() => {
-        null === TB || void 0 === TB || TB.scrollIntoView({
+        }), [YY, rY]), DY
+      }(rY, !0);
+      (0, IY.useEffect)((() => {
+        null === rY || void 0 === rY || rY.scrollIntoView({
           block: "nearest",
           inline: "nearest"
         })
-      }), [TB]);
-      const vB = (0, pB.useCallback)((BB => {
-        uB(BB), VB && (VB.current = BB)
-      }), [uB, VB]);
-      return (0, lB.createPortal)((0, OB.jsxs)(OB.Fragment, {
-        children: [EB && (0, OB.jsx)(NB, {
-          rect: EB,
-          margin: oB
-        }), (0, OB.jsxs)("div", {
-          ref: vB,
-          ...DB({
-            className: yB()("tooltip-container SmallTextLight TutorialStep", YB)
+      }), [rY]);
+      const EY = (0, IY.useCallback)((YY => {
+        QY(YY), FY && (FY.current = YY)
+      }), [QY, FY]);
+      return (0, RY.createPortal)((0, iY.jsxs)(iY.Fragment, {
+        children: [WY && (0, iY.jsx)(SY, {
+          rect: WY,
+          margin: vY
+        }), (0, iY.jsxs)("div", {
+          ref: EY,
+          ...yY({
+            className: AY()("tooltip-container SmallTextLight TutorialStep", gY)
           }),
-          children: [kB, (0, OB.jsx)("div", {
-            ...LB({
+          children: [uY, (0, iY.jsx)("div", {
+            ...sY({
               className: "tooltip-arrow"
             })
           })]
         })]
-      }), (0, gB.k)())
+      }), (0, aY.h)())
     }
-    const fB = (0, pB.forwardRef)((function(BB, TB) {
+    const TY = (0, IY.forwardRef)((function(YY, rY) {
       let {
-        placement: dB = "right",
-        children: VB,
-        ...yB
-      } = BB;
-      const lB = HB(yB),
-        JB = (0, pB.useRef)(null),
-        YB = (0, pB.useRef)(null);
-      vB(yB, lB, JB, YB);
-      const [gB, oB] = (0, pB.useState)(null), kB = VB.ref, LB = (0, pB.useCallback)((BB => {
-        YB.current = BB, oB(BB), uB(TB, BB), uB(kB, BB)
-      }), [TB, kB]);
-      return (0, OB.jsxs)(OB.Fragment, {
-        children: [(0, pB.cloneElement)(VB, {
-          ref: LB
-        }), lB && (0, OB.jsx)(tB, {
-          target: gB,
-          placement: dB,
-          boxRef: JB,
-          children: (0, OB.jsx)(mB, {
-            ...yB
+        placement: DY = "right",
+        children: FY,
+        ...AY
+      } = YY;
+      const RY = oY(AY),
+        OY = (0, IY.useRef)(null),
+        gY = (0, IY.useRef)(null);
+      EY(AY, RY, OY, gY);
+      const [aY, vY] = (0, IY.useState)(null), uY = FY.ref, sY = (0, IY.useCallback)((YY => {
+        gY.current = YY, vY(YY), QY(rY, YY), QY(uY, YY)
+      }), [rY, uY]);
+      return (0, iY.jsxs)(iY.Fragment, {
+        children: [(0, IY.cloneElement)(FY, {
+          ref: sY
+        }), RY && (0, iY.jsx)(lY, {
+          target: aY,
+          placement: DY,
+          boxRef: OY,
+          children: (0, iY.jsx)(mY, {
+            ...AY
           })
         })]
       })
     }));
 
-    function sB(BB) {
-      const TB = HB(BB),
-        dB = (0, pB.useRef)(null);
-      return vB(BB, TB, dB, null), TB ? (0, lB.createPortal)((0, OB.jsx)("div", {
+    function eY(YY) {
+      const rY = oY(YY),
+        DY = (0, IY.useRef)(null);
+      return EY(YY, rY, DY, null), rY ? (0, RY.createPortal)((0, iY.jsx)("div", {
         className: "TutorialCentreBackdrop",
-        children: (0, OB.jsx)("div", {
-          ref: dB,
+        children: (0, iY.jsx)("div", {
+          ref: DY,
           className: "tooltip-container SmallTextLight TutorialStep TutorialCentreStep",
-          children: (0, OB.jsx)(mB, {
-            ...BB
+          children: (0, iY.jsx)(mY, {
+            ...YY
           })
         })
-      }), (0, gB.k)()) : null
+      }), (0, aY.h)()) : null
     }
   },
-  37506: (BB, TB, dB) => {
-    dB.d(TB, {
-      d: () => lB
+  37926: (YY, rY, DY) => {
+    DY.d(rY, {
+      e: () => RY
     });
-    const VB = 4,
-      yB = 12e3,
-      pB = 1e3;
-    class lB {
+    const FY = 4,
+      AY = 12e3,
+      IY = 1e3;
+    class RY {
       constructor() {
         let {
-          limit: BB = VB,
-          windowMs: TB = yB,
-          spacingMs: dB = pB,
-          now: lB = Date.now
+          limit: YY = FY,
+          windowMs: rY = AY,
+          spacingMs: DY = IY,
+          now: RY = Date.now
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        this.sent = [], this.lastSentAt = -1 / 0, this.timer = null, this.listeners = new Set, this.priority = new Set, this.limit = void 0, this.windowMs = void 0, this.spacingMs = void 0, this.now = void 0, this.limit = BB, this.windowMs = TB, this.spacingMs = dB, this.now = lB
+        this.sent = [], this.lastSentAt = -1 / 0, this.timer = null, this.listeners = new Set, this.priority = new Set, this.limit = void 0, this.windowMs = void 0, this.spacingMs = void 0, this.now = void 0, this.limit = YY, this.windowMs = rY, this.spacingMs = DY, this.now = RY
       }
       isPacing() {
         return !this.canSendPriority() || this.isPriorityWaiting()
@@ -325,139 +325,139 @@ export const modules = {
         return this.prune(), this.sent.length < this.limit && this.now() - this.lastSentAt >= this.spacingMs
       }
       tryStart() {
-        for (const BB of this.priority) BB.flush();
+        for (const YY of this.priority) YY.flush();
         return !this.isPacing() && (this.start(), !0)
       }
       start() {
         this.prune();
-        const BB = this.now();
-        this.sent.push(BB), this.lastSentAt = BB, this.schedule(), this.notify()
+        const YY = this.now();
+        this.sent.push(YY), this.lastSentAt = YY, this.schedule(), this.notify()
       }
-      addPriority(BB) {
-        return this.priority.add(BB), () => {
-          this.priority.delete(BB)
+      addPriority(YY) {
+        return this.priority.add(YY), () => {
+          this.priority.delete(YY)
         }
       }
-      subscribe(BB) {
-        return this.listeners.add(BB), () => {
-          this.listeners.delete(BB)
+      subscribe(YY) {
+        return this.listeners.add(YY), () => {
+          this.listeners.delete(YY)
         }
       }
       dispose() {
         this.clearTimer(), this.sent = [], this.listeners.clear(), this.priority.clear()
       }
       isPriorityWaiting() {
-        for (const BB of this.priority)
-          if (BB.waiting()) return !0;
+        for (const YY of this.priority)
+          if (YY.waiting()) return !0;
         return !1
       }
       prune() {
-        const BB = this.now() - this.windowMs;
-        for (; this.sent.length > 0 && this.sent[0] <= BB;) this.sent.shift()
+        const YY = this.now() - this.windowMs;
+        for (; this.sent.length > 0 && this.sent[0] <= YY;) this.sent.shift()
       }
       schedule() {
         this.clearTimer();
-        const BB = this.now(),
-          TB = this.lastSentAt + this.spacingMs,
-          dB = Math.min(TB > BB ? TB : 1 / 0, this.sent.length > 0 ? this.sent[0] + this.windowMs : 1 / 0);
-        dB !== 1 / 0 && (this.timer = setTimeout((() => {
+        const YY = this.now(),
+          rY = this.lastSentAt + this.spacingMs,
+          DY = Math.min(rY > YY ? rY : 1 / 0, this.sent.length > 0 ? this.sent[0] + this.windowMs : 1 / 0);
+        DY !== 1 / 0 && (this.timer = setTimeout((() => {
           this.timer = null, this.prune(), this.schedule(), this.notify()
-        }), Math.max(0, dB - BB)))
+        }), Math.max(0, DY - YY)))
       }
       notify() {
-        for (const BB of this.listeners) BB()
+        for (const YY of this.listeners) YY()
       }
       clearTimer() {
         null !== this.timer && (clearTimeout(this.timer), this.timer = null)
       }
     }
   },
-  35601: (BB, TB, dB) => {
-    dB.d(TB, {
-      A: () => vB,
-      c: () => pB,
-      e: () => uB,
-      i: () => HB,
-      k: () => JB,
-      n: () => LB,
-      r: () => EB,
-      s: () => kB,
-      v: () => mB,
-      x: () => DB
+  36034: (YY, rY, DY) => {
+    DY.d(rY, {
+      C: () => EY,
+      e: () => IY,
+      i: () => QY,
+      l: () => oY,
+      n: () => OY,
+      r: () => sY,
+      t: () => WY,
+      v: () => uY,
+      x: () => mY,
+      y: () => yY
     });
-    var VB = dB(21),
-      yB = dB(24);
-    const pB = "clientGameInventoryButtonsChanged",
-      lB = new Map;
+    var FY = DY(19),
+      AY = DY(25);
+    const IY = "clientGameInventoryButtonsChanged",
+      RY = new Map;
 
-    function JB() {
-      return [...lB.values()].sort(((BB, TB) => {
-        var dB, VB;
-        return (null !== (dB = BB.order) && void 0 !== dB ? dB : 0) - (null !== (VB = TB.order) && void 0 !== VB ? VB : 0)
+    function OY() {
+      return [...RY.values()].sort(((YY, rY) => {
+        var DY, FY;
+        return (null !== (DY = YY.order) && void 0 !== DY ? DY : 0) - (null !== (FY = rY.order) && void 0 !== FY ? FY : 0)
       }))
     }
-    let YB = null;
+    let gY = null;
 
-    function gB(BB) {
-      YB = BB
+    function aY(YY) {
+      gY = YY
     }
-    let oB = !1;
+    let vY = !1;
 
-    function kB(BB) {
-      oB = !0;
+    function uY(YY) {
+      vY = !0;
       try {
-        BB.onClick()
+        YY.onClick()
       } finally {
-        oB = !1
+        vY = !1
       }
-      BB.panel && "clientGame" === VB.d.get("openInGameMenuName") && gB(BB.id)
+      YY.panel && "clientGame" === FY.b.get("openInGameMenuName") && aY(YY.id)
     }
 
-    function LB() {
-      return oB
+    function sY() {
+      return vY
     }
 
-    function OB() {
-      return JB().filter((BB => BB.panel && !BB.disabled))
+    function iY() {
+      return OY().filter((YY => YY.panel && !YY.disabled))
     }
 
-    function DB(BB) {
-      const TB = OB(),
-        dB = TB.findIndex((BB => BB.id === YB));
-      return !(dB < 0 || TB.length < 2) && (kB(TB[(dB + BB + TB.length) % TB.length]), !0)
+    function yY(YY) {
+      const rY = iY(),
+        DY = rY.findIndex((YY => YY.id === gY));
+      return !(DY < 0 || rY.length < 2) && (uY(rY[(DY + YY + rY.length) % rY.length]), !0)
     }
 
-    function uB() {
-      return null !== YB && OB().length > 1
+    function QY() {
+      return null !== gY && iY().length > 1
     }
 
-    function HB() {
-      gB(null)
+    function oY() {
+      aY(null)
     }
 
-    function EB() {
-      "inventory" !== VB.d.get("openInGameMenuName") && gB(null)
+    function WY() {
+      "inventory" !== FY.b.get("openInGameMenuName") && aY(null)
     }
 
-    function vB() {
-      const BB = YB;
-      return gB(null), BB
+    function EY() {
+      const YY = gY;
+      return aY(null), YY
     }
 
-    function mB(BB) {
-      return lB.set(BB.id, BB), yB.h.yH(pB, JB(), !0), () => {
-        lB.get(BB.id) === BB && (lB.delete(BB.id), yB.h.yH(pB, JB()))
+    function mY(YY) {
+      return RY.set(YY.id, YY), AY.g.vo(IY, OY(), !0), () => {
+        RY.get(YY.id) === YY && (RY.delete(YY.id), AY.g.vo(IY, OY()))
       }
     }
   },
-  37480: (BB, TB, dB) => {
-    dB.d(TB, {
-      c: () => VB
+  37910: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => FY
     });
-    class VB {
-      constructor(BB, TB, dB) {
-        this.yH = BB, this.beforeOpen = TB, this.afterClose = dB, this.open = !1, this.ND = !1, this.snapshot = void 0, this.getSnapshot = () => this.snapshot, this.show = () => {
-          this.isEnabled() && !this.ND && (this.open = !0, this.beforeOpen(this), this.emit())
+    class FY {
+      constructor(YY, rY, DY) {
+        this.vo = YY, this.beforeOpen = rY, this.afterClose = DY, this.open = !1, this.Ky = !1, this.snapshot = void 0, this.getSnapshot = () => this.snapshot, this.show = () => {
+          this.isEnabled() && !this.Ky && (this.open = !0, this.beforeOpen(this), this.emit())
         }, this.close = () => {
           this.closePanel(!1)
         }, this.dismiss = () => {
@@ -470,300 +470,300 @@ export const modules = {
       showOrRefresh() {
         this.open ? this.emit() : this.show()
       }
-      closePanel(BB) {
-        this.open = !1, this.onClosed(), this.emit(), this.afterClose(BB)
+      closePanel(YY) {
+        this.open = !1, this.onClosed(), this.emit(), this.afterClose(YY)
       }
       onClosed() {}
       dispose() {
-        this.open = !1, this.emit(), this.ND = !0
+        this.open = !1, this.emit(), this.Ky = !0
       }
       isEnabled() {
         return !0
       }
       emit() {
-        this.ND || (this.snapshot = this.buildSnapshot(), this.yH(this.snapshot))
+        this.Ky || (this.snapshot = this.buildSnapshot(), this.vo(this.snapshot))
       }
     }
   },
-  35595: (BB, TB, dB) => {
-    dB.d(TB, {
-      c: () => JB,
-      g: () => HB,
-      h: () => EB,
-      j: () => LB,
-      k: () => gB,
-      o: () => uB,
-      p: () => OB,
-      r: () => oB
+  36032: (YY, rY, DY) => {
+    DY.d(rY, {
+      d: () => OY,
+      f: () => oY,
+      h: () => WY,
+      j: () => sY,
+      n: () => aY,
+      o: () => QY,
+      p: () => iY,
+      q: () => vY
     });
-    var VB = dB(21),
-      yB = dB(24),
-      pB = dB(1173),
-      lB = dB(35601);
-    const JB = "clientGameUiChanged";
-    let YB = null;
+    var FY = DY(19),
+      AY = DY(25),
+      IY = DY(1287),
+      RY = DY(36034);
+    const OY = "clientGameUiChanged";
+    let gY = null;
 
-    function gB() {
-      return YB
+    function aY() {
+      return gY
     }
 
-    function oB(BB, TB) {
-      const dB = {
-        content: BB,
-        menu: TB
+    function vY(YY, rY) {
+      const DY = {
+        content: YY,
+        menu: rY
       };
-      return YB = dB, yB.h.yH(JB, YB, !0), () => {
-        YB === dB && (YB = null, DB = !1, HB(), yB.h.yH(JB, null))
+      return gY = DY, AY.g.vo(OY, gY, !0), () => {
+        gY === DY && (gY = null, yY = !1, oY(), AY.g.vo(OY, null))
       }
     }
-    let kB = null;
+    let uY = null;
 
-    function LB() {
-      return kB
+    function sY() {
+      return uY
     }
 
-    function OB(BB) {
-      return kB = BB, () => {
-        kB === BB && (kB = null)
+    function iY(YY) {
+      return uY = YY, () => {
+        uY === YY && (uY = null)
       }
     }
-    let DB = !1;
+    let yY = !1;
 
-    function uB() {
-      const BB = VB.d.get("openInGameMenuName");
-      "clientGame" !== BB && (DB = "inventory" === BB), (0, lB.n)() || (0, lB.i)(), (0, pB.p)("InGameMenu"), VB.d.set({
+    function QY() {
+      const YY = FY.b.get("openInGameMenuName");
+      "clientGame" !== YY && (yY = "inventory" === YY), (0, RY.r)() || (0, RY.l)(), (0, IY.k)(IY.d), FY.b.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function HB() {
-      vB(!1)
+    function oY() {
+      EY(!1)
     }
 
-    function EB() {
-      vB(DB)
+    function WY() {
+      EY(yY)
     }
 
-    function vB(BB) {
-      "clientGame" === VB.d.get("openInGameMenuName") && VB.d.set({
-        openInGameMenuName: BB ? "inventory" : null
-      }), BB || (0, lB.i)(), DB = !1
+    function EY(YY) {
+      "clientGame" === FY.b.get("openInGameMenuName") && FY.b.set({
+        openInGameMenuName: YY ? "inventory" : null
+      }), YY || (0, RY.l)(), yY = !1
     }
   },
-  38224: (BB, TB, dB) => {
-    dB.r(TB), dB.d(TB, {
-      default: () => od
+  38609: (YY, rY, DY) => {
+    DY.r(rY), DY.d(rY, {
+      default: () => vD
     });
-    var VB = dB(62);
-    var yB = dB(21),
-      pB = dB(1662),
-      lB = dB(24),
-      JB = dB(35595),
-      YB = dB(933),
-      gB = dB.n(YB),
-      oB = dB(1317),
-      kB = dB(1078),
-      LB = dB(3942),
-      OB = dB(1229),
-      DB = dB(1324),
-      uB = dB(1666),
-      HB = dB(1249),
-      EB = dB(1657),
-      vB = dB(1727),
-      mB = dB(670);
-    const iB = dB(38233),
-      NB = Object.fromEntries(iB.keys().map((BB => [BB.replace(/^\.\/(.*)\.webp$/, "$1"), iB(BB)]))),
-      tB = new Set;
+    var FY = DY(61);
+    var AY = DY(19),
+      IY = DY(1786),
+      RY = DY(25),
+      OY = DY(36032),
+      gY = DY(1092),
+      aY = DY.n(gY),
+      vY = DY(1430),
+      uY = DY(1211),
+      sY = DY(4086),
+      iY = DY(1343),
+      yY = DY(1437),
+      QY = DY(1793),
+      oY = DY(1354),
+      WY = DY(1778),
+      EY = DY(1834),
+      mY = DY(229);
+    const VY = DY(38612),
+      SY = Object.fromEntries(VY.keys().map((YY => [YY.replace(/^\.\/(.*)\.webp$/, "$1"), VY(YY)]))),
+      lY = new Set;
 
-    function fB(BB, TB) {
-      const dB = TB ? BB : `${BB}-uncaught`,
-        VB = (0, mB.b)(NB, dB);
-      return void 0 !== VB || tB.has(dB) || (tB.add(dB), console.warn(`Containment Breach has no mugshot ${dB}: run tools/harnessCutouts/ContainmentMugshotCapture.ts`)), VB
+    function TY(YY, rY) {
+      const DY = rY ? YY : `${YY}-uncaught`,
+        FY = (0, mY.c)(SY, DY);
+      return void 0 !== FY || lY.has(DY) || (lY.add(DY), console.warn(`Containment Breach has no mugshot ${DY}: run tools/harnessCutouts/ContainmentMugshotCapture.ts`)), FY
     }
-    var sB = dB(980);
-    const MB = "containmentBreach",
-      zB = "Gold Coin";
+    var eY = DY(1125);
+    const NY = "containmentBreach",
+      BY = "Gold Coin";
 
-    function wB(BB) {
+    function cY(YY) {
       let {
-        open: TB,
-        onDismiss: dB,
-        title: VB,
-        className: yB,
-        decor: pB,
-        headerExtra: lB,
-        status: JB,
-        statusRefused: YB = !1,
-        children: oB
-      } = BB;
-      const kB = `${yB}Title`;
-      return (0, sB.jsx)(LB.b, {
-        show: TB,
-        close: dB,
+        open: rY,
+        onDismiss: DY,
+        title: FY,
+        className: AY,
+        decor: IY,
+        headerExtra: RY,
+        status: OY,
+        statusRefused: gY = !1,
+        children: vY
+      } = YY;
+      const uY = `${AY}Title`;
+      return (0, eY.jsx)(sY.e, {
+        show: rY,
+        close: DY,
         togglePointerLock: !1,
         className: "ContainmentBoardOverlay",
-        children: (0, sB.jsxs)("section", {
-          className: gB()("ContainmentBoardPanel", yB),
+        children: (0, eY.jsxs)("section", {
+          className: aY()("ContainmentBoardPanel", AY),
           role: "dialog",
           "aria-modal": "true",
-          "aria-labelledby": kB,
-          children: [pB && (0, sB.jsx)("div", {
+          "aria-labelledby": uY,
+          children: [IY && (0, eY.jsx)("div", {
             className: "BoardDecor",
             "aria-hidden": "true",
-            children: pB
-          }), (0, sB.jsxs)("header", {
+            children: IY
+          }), (0, eY.jsxs)("header", {
             className: "BoardHeader",
-            children: [(0, sB.jsx)("h2", {
-              id: kB,
+            children: [(0, eY.jsx)("h2", {
+              id: uY,
               className: "VisuallyHidden",
-              children: VB
-            }), lB, (0, sB.jsx)(DB.i, {
-              onClick: dB
+              children: FY
+            }), RY, (0, eY.jsx)(yY.k, {
+              onClick: DY
             })]
-          }), (0, sB.jsx)("div", {
+          }), (0, eY.jsx)("div", {
             className: "BoardBody",
-            children: oB
-          }), void 0 !== JB && (0, sB.jsx)("footer", {
-            className: gB()("BoardStatus", {
-              Refused: YB
+            children: vY
+          }), void 0 !== OY && (0, eY.jsx)("footer", {
+            className: aY()("BoardStatus", {
+              Refused: gY
             }),
-            children: JB
+            children: OY
           })]
         })
       })
     }
 
-    function UB(BB) {
+    function KY(YY) {
       let {
-        itemName: TB
-      } = BB;
-      return (0, sB.jsx)(uB.c, {
-        itemName: TB,
+        itemName: rY
+      } = YY;
+      return (0, eY.jsx)(QY.c, {
+        itemName: rY,
         amount: 0
       })
     }
 
-    function FB(BB) {
+    function HY(YY) {
       let {
-        anomalyId: TB,
-        caught: dB
-      } = BB;
-      const yB = (0, VB.useRef)(null);
-      return (0, OB.e)(yB, !dB), (0, sB.jsx)("span", {
-        ref: yB,
-        className: gB()("BoardMugshot", {
-          Uncaught: !dB
+        anomalyId: rY,
+        caught: DY
+      } = YY;
+      const AY = (0, FY.useRef)(null);
+      return (0, iY.b)(AY, !DY), (0, eY.jsx)("span", {
+        ref: AY,
+        className: aY()("BoardMugshot", {
+          Uncaught: !DY
         }),
-        children: (0, sB.jsx)("img", {
-          src: fB(TB, dB),
+        children: (0, eY.jsx)("img", {
+          src: TY(rY, DY),
           alt: "",
           draggable: !1
         })
       })
     }
 
-    function KB(BB) {
+    function zY(YY) {
       let {
-        itemName: TB,
-        amount: dB,
-        Dg: VB,
-        inTile: yB = !1
-      } = BB;
-      return (0, sB.jsx)(HB.h, {
+        itemName: rY,
+        amount: DY,
+        ja: FY,
+        inTile: AY = !1
+      } = YY;
+      return (0, eY.jsx)(oY.g, {
         delayShow: 200,
-        hoverOnly: yB,
+        hoverOnly: AY,
         placement: "top",
         tooltipClassName: "BoardChipTooltipBox",
-        tooltipInner: (0, sB.jsx)(IB, {
-          itemName: TB,
-          amount: dB,
-          Dg: VB
+        tooltipInner: (0, eY.jsx)(CY, {
+          itemName: rY,
+          amount: DY,
+          ja: FY
         }),
-        children: (0, sB.jsxs)("span", {
-          className: gB()("BoardChip", {
-            Short: void 0 !== VB && VB < dB
+        children: (0, eY.jsxs)("span", {
+          className: aY()("BoardChip", {
+            Short: void 0 !== FY && FY < DY
           }),
-          children: [(0, sB.jsx)("span", {
+          children: [(0, eY.jsx)("span", {
             className: "BoardChipIcon",
-            children: (0, sB.jsx)(UB, {
-              itemName: TB
+            children: (0, eY.jsx)(KY, {
+              itemName: rY
             })
-          }), dB.toLocaleString()]
+          }), DY.toLocaleString()]
         })
       })
     }
-    const rB = /^(.*?)\s*Salvaged from (?:an? )?(.+?)\.?$/;
+    const ZY = /^(.*?)\s*Salvaged from (?:an? )?(.+?)\.?$/;
 
-    function IB(BB) {
-      var TB;
+    function CY(YY) {
+      var rY;
       let {
-        itemName: dB,
-        amount: VB,
-        Dg: yB
-      } = BB;
+        itemName: DY,
+        amount: FY,
+        ja: AY
+      } = YY;
       const {
-        t: pB
-      } = (0, kB.z)(), lB = (0, vB.g)("itemInfo", (BB => BB[dB])), {
-        lore: JB,
-        droppedBy: YB
-      } = function(BB) {
-        if ("string" !== typeof BB) return {
-          lore: BB,
+        t: IY
+      } = (0, uY.C)(), RY = (0, EY.f)("itemInfo", (YY => YY[DY])), {
+        lore: OY,
+        droppedBy: gY
+      } = function(YY) {
+        if ("string" !== typeof YY) return {
+          lore: YY,
           droppedBy: null
         };
-        const TB = rB.exec(BB);
-        return null === TB ? {
-          lore: BB,
+        const rY = ZY.exec(YY);
+        return null === rY ? {
+          lore: YY,
           droppedBy: null
         } : {
-          lore: "" === TB[1] ? void 0 : TB[1],
-          droppedBy: TB[2]
+          lore: "" === rY[1] ? void 0 : rY[1],
+          droppedBy: rY[2]
         }
-      }(null === lB || void 0 === lB ? void 0 : lB.description);
-      return (0, sB.jsxs)("div", {
+      }(null === RY || void 0 === RY ? void 0 : RY.description);
+      return (0, eY.jsxs)("div", {
         className: "BoardChipTooltip",
-        children: [(0, sB.jsxs)("div", {
+        children: [(0, eY.jsxs)("div", {
           className: "BoardChipTooltipHeader",
-          children: [(0, sB.jsx)("span", {
+          children: [(0, eY.jsx)("span", {
             className: "BoardChipTooltipIcon",
-            children: (0, sB.jsx)(UB, {
-              itemName: dB
+            children: (0, eY.jsx)(KY, {
+              itemName: DY
             })
-          }), (0, sB.jsx)(EB.e, {
-            text: null !== (TB = null === lB || void 0 === lB ? void 0 : lB.displayName) && void 0 !== TB ? TB : dB,
+          }), (0, eY.jsx)(WY.b, {
+            text: null !== (rY = null === RY || void 0 === RY ? void 0 : RY.displayName) && void 0 !== rY ? rY : DY,
             className: "BoardChipTooltipName"
           })]
-        }), (void 0 !== JB || null !== YB) && (0, sB.jsxs)("div", {
+        }), (void 0 !== OY || null !== gY) && (0, eY.jsxs)("div", {
           className: "BoardChipTooltipBody",
-          children: [void 0 !== JB && (0, sB.jsx)(EB.e, {
-            text: JB,
+          children: [void 0 !== OY && (0, eY.jsx)(WY.b, {
+            text: OY,
             className: "BoardChipTooltipDescription"
-          }), null !== YB && (0, sB.jsxs)("span", {
+          }), null !== gY && (0, eY.jsxs)("span", {
             className: "BoardChipTooltipSource",
-            children: [(0, sB.jsx)("span", {
+            children: [(0, eY.jsx)("span", {
               className: "BoardChipTooltipLabel",
-              children: pB(`${MB}:chipDroppedBy`)
-            }), YB]
+              children: IY(`${NY}:chipDroppedBy`)
+            }), gY]
           })]
-        }), void 0 !== yB && (0, sB.jsxs)("div", {
-          className: gB()("BoardChipTooltipHeld", {
-            Short: yB < VB
+        }), void 0 !== AY && (0, eY.jsxs)("div", {
+          className: aY()("BoardChipTooltipHeld", {
+            Short: AY < FY
           }),
-          children: [(0, sB.jsx)("span", {
+          children: [(0, eY.jsx)("span", {
             className: "BoardChipTooltipLabel",
-            children: pB(`${MB}:chipYouHave`)
-          }), (0, sB.jsxs)("span", {
+            children: IY(`${NY}:chipYouHave`)
+          }), (0, eY.jsxs)("span", {
             className: "BoardChipTooltipCount",
-            children: [(0, sB.jsx)("span", {
+            children: [(0, eY.jsx)("span", {
               className: "BoardChipTooltipHeldAmount",
-              children: yB.toLocaleString()
-            }), ` / ${VB.toLocaleString()}`]
-          }), (0, sB.jsx)("span", {
+              children: AY.toLocaleString()
+            }), ` / ${FY.toLocaleString()}`]
+          }), (0, eY.jsx)("span", {
             className: "BoardChipTooltipMeter",
-            children: (0, sB.jsx)("span", {
+            children: (0, eY.jsx)("span", {
               style: {
-                width: (VB > 0 ? 100 * Math.min(1, yB / VB) : 100) + "%"
+                width: (FY > 0 ? 100 * Math.min(1, AY / FY) : 100) + "%"
               }
             })
           })]
@@ -771,81 +771,81 @@ export const modules = {
       })
     }
 
-    function cB(BB) {
+    function fY(YY) {
       let {
-        icon: TB,
-        name: dB,
-        selected: VB,
-        locked: yB,
-        className: pB,
-        buttonRef: lB,
-        onSelect: JB,
-        children: YB
-      } = BB;
-      return (0, sB.jsxs)("button", {
-        ref: lB,
+        icon: rY,
+        name: DY,
+        selected: FY,
+        locked: AY,
+        className: IY,
+        buttonRef: RY,
+        onSelect: OY,
+        children: gY
+      } = YY;
+      return (0, eY.jsxs)("button", {
+        ref: RY,
         type: "button",
-        className: gB()("BoardTile", pB, {
-          Selected: VB,
-          Locked: yB
+        className: aY()("BoardTile", IY, {
+          Selected: FY,
+          Locked: AY
         }),
-        onClick: JB,
-        children: [(0, sB.jsx)("span", {
+        onClick: OY,
+        children: [(0, eY.jsx)("span", {
           className: "BoardTileIcon",
-          children: TB
-        }), (0, sB.jsx)("span", {
+          children: rY
+        }), (0, eY.jsx)("span", {
           className: "BoardTileName",
-          children: dB
-        }), YB]
+          children: DY
+        }), gY]
       })
     }
 
-    function SB(BB) {
+    function jY(YY) {
       let {
-        icon: TB,
-        name: dB,
-        children: VB
-      } = BB;
-      return (0, sB.jsxs)("header", {
+        icon: rY,
+        name: DY,
+        children: FY
+      } = YY;
+      return (0, eY.jsxs)("header", {
         className: "BoardDetailHeader",
-        children: [(0, sB.jsx)("span", {
+        children: [(0, eY.jsx)("span", {
           className: "BoardDetailIcon",
-          children: TB
-        }), (0, sB.jsxs)("div", {
+          children: rY
+        }), (0, eY.jsxs)("div", {
           className: "BoardDetailHeading",
-          children: [(0, sB.jsx)("h3", {
-            children: dB
-          }), (0, sB.jsx)("span", {
+          children: [(0, eY.jsx)("h3", {
+            children: DY
+          }), (0, eY.jsx)("span", {
             className: "BoardDetailStatus",
-            children: VB
+            children: FY
           })]
         })]
       })
     }
 
-    function PB(BB) {
+    function hY(YY) {
       let {
-        coins: TB,
-        children: dB
-      } = BB;
-      return (0, sB.jsxs)("div", {
+        coins: rY,
+        children: DY
+      } = YY;
+      return (0, eY.jsxs)("div", {
         className: "BoardWallet",
-        children: [(0, sB.jsx)(KB, {
-          itemName: zB,
-          amount: TB
-        }), dB]
+        children: [(0, eY.jsx)(zY, {
+          itemName: BY,
+          amount: rY
+        }), DY]
       })
     }
-    var QB = dB(37480);
-    const RB = "containmentCodexView";
-    class aB extends QB.c {
+    var dY = DY(37910);
+    const JY = "containmentCodexView";
+    class MY extends dY.c {
       constructor() {
-        super(...arguments), this.entries = [], this.selectedId = "", this.snapshot = this.buildSnapshot(), this.select = BB => {
-          this.selectedId = BB, this.emit()
+        super(...arguments), this.entries = [], this.selectedId = "", this.snapshot = this.buildSnapshot(), this.select = YY => {
+          this.selectedId = YY, this.emit()
         }
       }
-      MD(BB) {
-        this.entries = BB.codexEntries, this.selectedId = this.entries[0].codexEntryId, this.showOrRefresh()
+      Cy(YY) {
+        this.entries = YY.codexEntries, this.selectedId = this.entries[0].codexEntryId, this.showOrRefresh()
       }
       buildSnapshot() {
         return {
@@ -855,55 +855,55 @@ export const modules = {
         }
       }
     }
-    const ZB = {
-        codexAnyDifficulty: `${MB}:codexNeedsAny`,
-        codexNormalOnly: `${MB}:codexNeedsNormal`,
-        codexHardOnly: `${MB}:codexNeedsHard`
+    const wY = {
+        codexAnyDifficulty: `${NY}:codexNeedsAny`,
+        codexNormalOnly: `${NY}:codexNeedsNormal`,
+        codexHardOnly: `${NY}:codexNeedsHard`
       },
-      XB = {
+      bY = {
         codexContained: "Contained",
         codexEncountered: "Sighted",
         codexUnidentified: "Unknown"
       },
-      WB = {
-        codexContained: `${MB}:codexContainedBadge`,
-        codexEncountered: `${MB}:codexEncounteredBadge`,
-        codexUnidentified: `${MB}:codexUnidentifiedBadge`
+      XY = {
+        codexContained: `${NY}:codexContainedBadge`,
+        codexEncountered: `${NY}:codexEncounteredBadge`,
+        codexUnidentified: `${NY}:codexUnidentifiedBadge`
       },
-      hB = ["94%", "81%", "88%", "46%", "72%"];
+      qY = ["94%", "81%", "88%", "46%", "72%"];
 
-    function CB(BB) {
+    function pY(YY) {
       let {
-        entry: TB
-      } = BB;
+        entry: rY
+      } = YY;
       const {
-        t: dB
-      } = (0, kB.z)();
-      return (0, sB.jsx)("span", {
-        className: gB()("BoardBadge", XB[TB.codexEntryState]),
-        children: dB(WB[TB.codexEntryState])
+        t: DY
+      } = (0, uY.C)();
+      return (0, eY.jsx)("span", {
+        className: aY()("BoardBadge", bY[rY.codexEntryState]),
+        children: DY(XY[rY.codexEntryState])
       })
     }
 
-    function GB(BB) {
+    function kY(YY) {
       const {
-        t: TB
-      } = (0, kB.z)();
-      return "codexUnidentified" === BB.codexEntryState ? TB(`${MB}:codexUnidentifiedName`) : BB.codexEntryName
+        t: rY
+      } = (0, uY.C)();
+      return "codexUnidentified" === YY.codexEntryState ? rY(`${NY}:codexUnidentifiedName`) : YY.codexEntryName
     }
 
-    function qB(BB) {
+    function GY(YY) {
       let {
-        entry: TB
-      } = BB;
-      return "codexUnidentified" === TB.codexEntryState ? (0, sB.jsx)(UB, {
+        entry: rY
+      } = YY;
+      return "codexUnidentified" === rY.codexEntryState ? (0, eY.jsx)(KY, {
         itemName: "Book"
-      }) : (0, sB.jsxs)("span", {
+      }) : (0, eY.jsxs)("span", {
         className: "CodexPhoto",
-        children: [(0, sB.jsx)(FB, {
-          anomalyId: TB.codexEntryId,
-          caught: "codexContained" === TB.codexEntryState
-        }), (0, sB.jsx)("img", {
+        children: [(0, eY.jsx)(HY, {
+          anomalyId: rY.codexEntryId,
+          caught: "codexContained" === rY.codexEntryState
+        }), (0, eY.jsx)("img", {
           className: "CodexPaperclip",
           src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAMCAYAAACulacQAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQ0lEQVR4nGNggIIXb97/X7V57/+Wvtn/GZDBqs17UQTgClahScBATHrlf5ySeHWimo9NMbokCp9OkmD/oasGCaJLAAC5ZUIBS85GiAAAAABJRU5ErkJggg==",
           alt: "",
@@ -912,27 +912,27 @@ export const modules = {
       })
     }
 
-    function xB(BB) {
+    function xY(YY) {
       let {
-        entry: TB,
-        selected: dB,
-        onSelect: VB
-      } = BB;
-      const yB = "codexUnidentified" === TB.codexEntryState;
-      return (0, sB.jsxs)(cB, {
-        icon: (0, sB.jsx)(qB, {
-          entry: TB
+        entry: rY,
+        selected: DY,
+        onSelect: FY
+      } = YY;
+      const AY = "codexUnidentified" === rY.codexEntryState;
+      return (0, eY.jsxs)(fY, {
+        icon: (0, eY.jsx)(GY, {
+          entry: rY
         }),
-        name: GB(TB),
-        selected: dB,
-        locked: yB,
-        className: gB()("CodexFolder", XB[TB.codexEntryState]),
+        name: kY(rY),
+        selected: DY,
+        locked: AY,
+        className: aY()("CodexFolder", bY[rY.codexEntryState]),
         onSelect: () => {
-          VB(TB.codexEntryId)
+          FY(rY.codexEntryId)
         },
-        children: [!yB && (0, sB.jsx)(CB, {
-          entry: TB
-        }), yB && (0, sB.jsx)("img", {
+        children: [!AY && (0, eY.jsx)(pY, {
+          entry: rY
+        }), AY && (0, eY.jsx)("img", {
           className: "CodexSeal",
           src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAARElEQVR4nGNggIIGHp7/MAzjw+TAnMf+/mB8RkQEjOGKYZLIgsiK4AqQJZA1gBXAOHgVwCRQJJEdCVOEYj8yQPciTAEAz0hgyamUqskAAAAASUVORK5CYII=",
           alt: "",
@@ -941,176 +941,176 @@ export const modules = {
       })
     }
 
-    function jB(BB) {
+    function nY(YY) {
       let {
-        count: TB
-      } = BB;
-      const dB = [];
-      for (let VB = Math.min(TB, 25); VB > 0; VB -= 5) dB.push(Math.min(VB, 5));
-      return (0, sB.jsx)("span", {
+        count: rY
+      } = YY;
+      const DY = [];
+      for (let FY = Math.min(rY, 25); FY > 0; FY -= 5) DY.push(Math.min(FY, 5));
+      return (0, eY.jsx)("span", {
         className: "CodexTallyMarks",
         "aria-hidden": "true",
-        children: dB.map(((BB, TB) => (0, sB.jsx)("span", {
-          className: gB()("CodexTallyGroup", {
-            Gate: 5 === BB
+        children: DY.map(((YY, rY) => (0, eY.jsx)("span", {
+          className: aY()("CodexTallyGroup", {
+            Gate: 5 === YY
           }),
           children: Array.from({
-            length: Math.min(BB, 4)
-          }, ((BB, TB) => (0, sB.jsx)("span", {
+            length: Math.min(YY, 4)
+          }, ((YY, rY) => (0, eY.jsx)("span", {
             className: "CodexTallyMark"
-          }, TB)))
-        }, TB)))
+          }, rY)))
+        }, rY)))
       })
     }
 
-    function AB(BB) {
+    function PY(YY) {
       let {
-        contained: TB,
-        total: dB
-      } = BB;
+        contained: rY,
+        total: DY
+      } = YY;
       const {
-        t: VB
-      } = (0, kB.z)();
-      return (0, sB.jsxs)("div", {
+        t: FY
+      } = (0, uY.C)();
+      return (0, eY.jsxs)("div", {
         className: "CodexProgress",
-        children: [VB(`${MB}:codexProgress`, {
-          contained: String(TB),
-          total: String(dB)
-        }), (0, sB.jsx)("span", {
+        children: [FY(`${NY}:codexProgress`, {
+          contained: String(rY),
+          total: String(DY)
+        }), (0, eY.jsx)("span", {
           className: "CodexProgressMeter",
-          children: (0, sB.jsx)("span", {
+          children: (0, eY.jsx)("span", {
             style: {
-              width: TB / dB * 100 + "%"
+              width: rY / DY * 100 + "%"
             }
           })
         })]
       })
     }
 
-    function bB(BB) {
+    function UY(YY) {
       let {
-        entry: TB,
-        fileNumber: dB
-      } = BB;
+        entry: rY,
+        fileNumber: DY
+      } = YY;
       const {
-        t: VB
-      } = (0, kB.z)(), yB = "codexContained" === TB.codexEntryState;
-      return (0, sB.jsx)("section", {
+        t: FY
+      } = (0, uY.C)(), AY = "codexContained" === rY.codexEntryState;
+      return (0, eY.jsx)("section", {
         className: "BoardDetail",
-        children: (0, sB.jsxs)("article", {
-          className: gB()("CodexDossier", XB[TB.codexEntryState]),
-          children: [(0, sB.jsx)("span", {
+        children: (0, eY.jsxs)("article", {
+          className: aY()("CodexDossier", bY[rY.codexEntryState]),
+          children: [(0, eY.jsx)("span", {
             className: "CodexFileNumber",
-            children: VB(`${MB}:codexFileNumber`, {
-              number: String(dB).padStart(3, "0")
+            children: FY(`${NY}:codexFileNumber`, {
+              number: String(DY).padStart(3, "0")
             })
-          }), (0, sB.jsx)(SB, {
-            icon: (0, sB.jsx)(qB, {
-              entry: TB
+          }), (0, eY.jsx)(jY, {
+            icon: (0, eY.jsx)(GY, {
+              entry: rY
             }),
-            name: GB(TB),
-            children: (0, sB.jsx)(CB, {
-              entry: TB
+            name: kY(rY),
+            children: (0, eY.jsx)(pY, {
+              entry: rY
             })
-          }), yB && (0, sB.jsxs)(sB.Fragment, {
-            children: [(0, sB.jsx)("p", {
+          }), AY && (0, eY.jsxs)(eY.Fragment, {
+            children: [(0, eY.jsx)("p", {
               className: "BoardDescription",
-              children: TB.codexEntryLore
-            }), (0, sB.jsxs)("p", {
+              children: rY.codexEntryLore
+            }), (0, eY.jsxs)("p", {
               className: "CodexTally",
-              children: [VB(`${MB}:codexContainments`, {
-                count: String(TB.codexEntryContainedCount)
-              }), (0, sB.jsx)(jB, {
-                count: TB.codexEntryContainedCount
+              children: [FY(`${NY}:codexContainments`, {
+                count: String(rY.codexEntryContainedCount)
+              }), (0, eY.jsx)(nY, {
+                count: rY.codexEntryContainedCount
               })]
-            }), (0, sB.jsx)("span", {
+            }), (0, eY.jsx)("span", {
               className: "CodexClosedStamp",
               "aria-hidden": "true",
-              children: VB(`${MB}:codexContainedBadge`)
+              children: FY(`${NY}:codexContainedBadge`)
             })]
-          }), !yB && (0, sB.jsxs)(sB.Fragment, {
-            children: [(0, sB.jsxs)("div", {
+          }), !AY && (0, eY.jsxs)(eY.Fragment, {
+            children: [(0, eY.jsxs)("div", {
               className: "CodexRedaction",
-              children: [hB.map((BB => (0, sB.jsx)("span", {
+              children: [qY.map((YY => (0, eY.jsx)("span", {
                 className: "CodexRedactedLine",
                 style: {
-                  width: BB
+                  width: YY
                 }
-              }, BB))), (0, sB.jsx)("p", {
+              }, YY))), (0, eY.jsx)("p", {
                 className: "CodexRedacted",
-                children: VB(`${MB}:codexRedacted`)
+                children: FY(`${NY}:codexRedacted`)
               })]
-            }), "" !== TB.codexEntryHint && (0, sB.jsxs)("aside", {
+            }), "" !== rY.codexEntryHint && (0, eY.jsxs)("aside", {
               className: "CodexNote",
-              children: [(0, sB.jsx)("h4", {
-                children: VB(`${MB}:codexHintLabel`)
-              }), (0, sB.jsx)("p", {
-                children: TB.codexEntryHint
+              children: [(0, eY.jsx)("h4", {
+                children: FY(`${NY}:codexHintLabel`)
+              }), (0, eY.jsx)("p", {
+                children: rY.codexEntryHint
               })]
-            }), (0, sB.jsx)("p", {
+            }), (0, eY.jsx)("p", {
               className: "CodexClearance",
-              children: VB(ZB[TB.codexEntryDifficulty])
+              children: FY(wY[rY.codexEntryDifficulty])
             })]
           })]
         })
       })
     }
 
-    function nB(BB) {
+    function LY(YY) {
       let {
-        controller: TB
-      } = BB;
-      const dB = (0, oB.f)(RB, TB.getSnapshot()),
+        controller: rY
+      } = YY;
+      const DY = (0, vY.k)(JY, rY.getSnapshot()),
         {
-          t: VB
-        } = (0, kB.z)();
-      if (0 === dB.entries.length) return null;
-      const yB = dB.entries.find((BB => BB.codexEntryId === dB.selectedId)),
-        pB = dB.entries.filter((BB => "codexContained" === BB.codexEntryState)).length,
-        lB = dB.entries.map((BB => BB.codexEntryId)).sort().indexOf(yB.codexEntryId) + 1;
-      return (0, sB.jsxs)(wB, {
-        open: dB.open,
-        onDismiss: TB.dismiss,
-        title: VB(`${MB}:codexTitle`),
+          t: FY
+        } = (0, uY.C)();
+      if (0 === DY.entries.length) return null;
+      const AY = DY.entries.find((YY => YY.codexEntryId === DY.selectedId)),
+        IY = DY.entries.filter((YY => "codexContained" === YY.codexEntryState)).length,
+        RY = DY.entries.map((YY => YY.codexEntryId)).sort().indexOf(AY.codexEntryId) + 1;
+      return (0, eY.jsxs)(cY, {
+        open: DY.open,
+        onDismiss: rY.dismiss,
+        title: FY(`${NY}:codexTitle`),
         className: "ContainmentCodexPanel",
-        headerExtra: (0, sB.jsx)(AB, {
-          contained: pB,
-          total: dB.entries.length
+        headerExtra: (0, eY.jsx)(PY, {
+          contained: IY,
+          total: DY.entries.length
         }),
-        children: [(0, sB.jsx)("div", {
+        children: [(0, eY.jsx)("div", {
           className: "BoardTiles",
-          children: dB.entries.map((BB => (0, sB.jsx)(xB, {
-            entry: BB,
-            selected: BB === yB,
-            onSelect: TB.select
-          }, BB.codexEntryId)))
-        }), (0, sB.jsx)(bB, {
-          entry: yB,
-          fileNumber: lB
+          children: DY.entries.map((YY => (0, eY.jsx)(xY, {
+            entry: YY,
+            selected: YY === AY,
+            onSelect: rY.select
+          }, YY.codexEntryId)))
+        }), (0, eY.jsx)(UY, {
+          entry: AY,
+          fileNumber: RY
         })]
       })
     }
-    var eB = dB(279);
-    class BT extends QB.c {
-      constructor(BB, TB, dB, VB, yB, pB) {
-        super(BB, TB, dB), this.pacer = VB, this.command = yB, this.predict = pB, this.board = null, this.confirmed = null, this.selectedId = "", this.notice = null, this.unsubscribePacer = void 0, this.select = BB => {
-          this.selectedId = BB, this.emit()
-        }, this.act = (BB, TB) => {
-          if (!this.open || null === this.board || !this.pacer.send(`${this.command} ${BB} ${TB}`, this.rollBack)) return;
-          const dB = this.predict(this.board, BB, TB);
-          null !== dB && (this.board = dB.board, this.notice = dB.notice, this.emit())
+    var tY = DY(341);
+    class Yr extends dY.c {
+      constructor(YY, rY, DY, FY, AY, IY) {
+        super(YY, rY, DY), this.pacer = FY, this.command = AY, this.predict = IY, this.board = null, this.confirmed = null, this.selectedId = "", this.notice = null, this.unsubscribePacer = void 0, this.select = YY => {
+          this.selectedId = YY, this.emit()
+        }, this.act = (YY, rY) => {
+          if (!this.open || null === this.board || !this.pacer.send(`${this.command} ${YY} ${rY}`, this.rollBack)) return;
+          const DY = this.predict(this.board, YY, rY);
+          null !== DY && (this.board = DY.board, this.notice = DY.notice, this.emit())
         }, this.rollBack = () => {
           this.board !== this.confirmed && (this.board = this.confirmed, this.notice = null)
-        }, this.unsubscribePacer = VB.subscribe((() => {
+        }, this.unsubscribePacer = FY.subscribe((() => {
           this.emit()
         }))
       }
-      MD(BB) {
-        const TB = this.messageOpens(BB);
-        if (TB && this.open) return this.board === this.confirmed && (this.board = BB), this.confirmed = BB, void this.emit();
-        if (this.board = BB, this.confirmed = BB, this.pacer.onReply(), TB) return this.notice = null, this.selectedId = this.openingSelection(BB), void this.show();
-        const dB = this.messageNotice(BB);
-        null !== dB && (this.notice = dB), this.emit()
+      Cy(YY) {
+        const rY = this.messageOpens(YY);
+        if (rY && this.open) return this.board === this.confirmed && (this.board = YY), this.confirmed = YY, void this.emit();
+        if (this.board = YY, this.confirmed = YY, this.pacer.onReply(), rY) return this.notice = null, this.selectedId = this.openingSelection(YY), void this.show();
+        const DY = this.messageNotice(YY);
+        null !== DY && (this.notice = DY), this.emit()
       }
       dispose() {
         this.unsubscribePacer(), super.dispose()
@@ -1120,153 +1120,153 @@ export const modules = {
       }
     }
 
-    function TT(BB, TB) {
-      return BB.loadoutCoins >= TB.loadoutCostCoins && TB.loadoutCostParts.every((TB => function(BB, TB) {
-        return dT(BB, TB).loadoutHeldPartAmount
-      }(BB, TB.loadoutPartCurrency) >= TB.loadoutPartAmount))
+    function rr(YY, rY) {
+      return YY.loadoutCoins >= rY.loadoutCostCoins && rY.loadoutCostParts.every((rY => function(YY, rY) {
+        return Dr(YY, rY).loadoutHeldPartAmount
+      }(YY, rY.loadoutPartCurrency) >= rY.loadoutPartAmount))
     }
 
-    function dT(BB, TB) {
-      return BB.loadoutHeldParts.find((BB => BB.loadoutHeldPartCurrency === TB))
+    function Dr(YY, rY) {
+      return YY.loadoutHeldParts.find((YY => YY.loadoutHeldPartCurrency === rY))
     }
 
-    function VT(BB, TB) {
-      return BB.loadoutSlots.find((BB => BB.loadoutSlotKind === TB))
+    function Fr(YY, rY) {
+      return YY.loadoutSlots.find((YY => YY.loadoutSlotKind === rY))
     }
 
-    function yT(BB) {
-      return BB.loadoutPerks.filter((BB => BB.loadoutPerkEquipped)).length >= BB.loadoutMaxPerks
+    function Ar(YY) {
+      return YY.loadoutPerks.filter((YY => YY.loadoutPerkEquipped)).length >= YY.loadoutMaxPerks
     }
 
-    function pT(BB, TB, dB) {
-      for (const yB of BB.loadoutSlots) {
-        const VB = yB.loadoutSlotOptions.find((BB => BB.loadoutOptionId === dB));
-        if (VB) return "loadoutArmour" === yB.loadoutSlotKind ? JT(BB, yB, VB, TB) : lT(BB, yB, VB, TB)
+    function Ir(YY, rY, DY) {
+      for (const AY of YY.loadoutSlots) {
+        const FY = AY.loadoutSlotOptions.find((YY => YY.loadoutOptionId === DY));
+        if (FY) return "loadoutArmour" === AY.loadoutSlotKind ? Or(YY, AY, FY, rY) : Rr(YY, AY, FY, rY)
       }
-      const VB = BB.loadoutPerks.find((BB => BB.loadoutPerkId === dB));
-      return VB ? function(BB, TB, dB) {
-        const VB = TB.loadoutPerkOwned,
-          yB = TB.loadoutPerkEquipped,
-          pB = TB.loadoutPerkName,
-          lB = yT(BB);
-        if ("loadoutUnlock" === dB) {
-          if (VB || !TT(BB, TB.loadoutPerkCost)) return null;
-          const dB = {
-            ...TB,
+      const FY = YY.loadoutPerks.find((YY => YY.loadoutPerkId === DY));
+      return FY ? function(YY, rY, DY) {
+        const FY = rY.loadoutPerkOwned,
+          AY = rY.loadoutPerkEquipped,
+          IY = rY.loadoutPerkName,
+          RY = Ar(YY);
+        if ("loadoutUnlock" === DY) {
+          if (FY || !rr(YY, rY.loadoutPerkCost)) return null;
+          const DY = {
+            ...rY,
             loadoutPerkOwned: !0,
-            loadoutPerkEquipped: !lB
+            loadoutPerkEquipped: !RY
           };
           return {
-            board: gT(oT(BB, TB.loadoutPerkCost), dB),
-            notice: kT(lB ? "loadoutNoticeUnlockedNoRoom" : "loadoutNoticeUnlocked", pB)
+            board: ar(vr(YY, rY.loadoutPerkCost), DY),
+            notice: ur(RY ? "loadoutNoticeUnlockedNoRoom" : "loadoutNoticeUnlocked", IY)
           }
         }
-        if ("loadoutUpgrade" === dB || !VB || "loadoutEquip" === dB === yB || !yB && lB) return null;
+        if ("loadoutUpgrade" === DY || !FY || "loadoutEquip" === DY === AY || !AY && RY) return null;
         return {
-          board: gT(BB, {
-            ...TB,
-            loadoutPerkEquipped: !yB
+          board: ar(YY, {
+            ...rY,
+            loadoutPerkEquipped: !AY
           }),
-          notice: kT(yB ? "loadoutNoticeUnequipped" : "loadoutNoticeEquipped", pB)
+          notice: ur(AY ? "loadoutNoticeUnequipped" : "loadoutNoticeEquipped", IY)
         }
-      }(BB, VB, TB) : null
+      }(YY, FY, rY) : null
     }
 
-    function lT(BB, TB, dB, VB) {
-      const yB = dB.loadoutOptionOwnedTier,
-        pB = dB.loadoutOptionName;
-      if ("loadoutEquip" === VB) return 0 === yB ? null : {
-        board: YT(BB, TB, dB.loadoutOptionId, null),
-        notice: kT("loadoutNoticeEquipped", pB)
+    function Rr(YY, rY, DY, FY) {
+      const AY = DY.loadoutOptionOwnedTier,
+        IY = DY.loadoutOptionName;
+      if ("loadoutEquip" === FY) return 0 === AY ? null : {
+        board: gr(YY, rY, DY.loadoutOptionId, null),
+        notice: ur("loadoutNoticeEquipped", IY)
       };
-      const lB = "loadoutUnlock" === VB;
-      if (lB && 0 !== yB || "loadoutUpgrade" === VB && (0 === yB || yB >= dB.loadoutOptionTiers.length) || "loadoutUnequip" === VB) return null;
-      const JB = dB.loadoutOptionTiers[yB].loadoutTierCost;
-      if (!TT(BB, JB)) return null;
-      const YB = {
-          ...dB,
-          loadoutOptionOwnedTier: yB + 1
+      const RY = "loadoutUnlock" === FY;
+      if (RY && 0 !== AY || "loadoutUpgrade" === FY && (0 === AY || AY >= DY.loadoutOptionTiers.length) || "loadoutUnequip" === FY) return null;
+      const OY = DY.loadoutOptionTiers[AY].loadoutTierCost;
+      if (!rr(YY, OY)) return null;
+      const gY = {
+          ...DY,
+          loadoutOptionOwnedTier: AY + 1
         },
-        gB = lB ? dB.loadoutOptionId : TB.loadoutSlotEquippedId;
+        aY = RY ? DY.loadoutOptionId : rY.loadoutSlotEquippedId;
       return {
-        board: YT(oT(BB, JB), TB, gB, YB),
-        notice: lB ? kT("loadoutNoticeUnlocked", pB) : kT("loadoutNoticeUpgraded", pB, yB + 1)
+        board: gr(vr(YY, OY), rY, aY, gY),
+        notice: RY ? ur("loadoutNoticeUnlocked", IY) : ur("loadoutNoticeUpgraded", IY, AY + 1)
       }
     }
 
-    function JT(BB, TB, dB, VB) {
-      const yB = dB.loadoutOptionOwnedTier > 0,
-        pB = dB.loadoutOptionName;
-      if ("loadoutEquip" === VB && yB) return {
-        board: YT(BB, TB, dB.loadoutOptionId, null),
-        notice: kT("loadoutNoticeEquipped", pB)
+    function Or(YY, rY, DY, FY) {
+      const AY = DY.loadoutOptionOwnedTier > 0,
+        IY = DY.loadoutOptionName;
+      if ("loadoutEquip" === FY && AY) return {
+        board: gr(YY, rY, DY.loadoutOptionId, null),
+        notice: ur("loadoutNoticeEquipped", IY)
       };
-      const lB = dB.loadoutOptionTiers[0].loadoutTierCost;
-      return "loadoutUnlock" !== VB || yB || !TT(BB, lB) ? null : {
-        board: YT(oT(BB, lB), TB, dB.loadoutOptionId, {
-          ...dB,
+      const RY = DY.loadoutOptionTiers[0].loadoutTierCost;
+      return "loadoutUnlock" !== FY || AY || !rr(YY, RY) ? null : {
+        board: gr(vr(YY, RY), rY, DY.loadoutOptionId, {
+          ...DY,
           loadoutOptionOwnedTier: 1
         }),
-        notice: kT("loadoutNoticeUnlocked", pB)
+        notice: ur("loadoutNoticeUnlocked", IY)
       }
     }
 
-    function YT(BB, TB, dB, VB) {
-      const yB = {
-        ...TB,
-        loadoutSlotEquippedId: dB,
-        loadoutSlotOptions: TB.loadoutSlotOptions.map((BB => null !== VB && BB.loadoutOptionId === VB.loadoutOptionId ? VB : BB))
+    function gr(YY, rY, DY, FY) {
+      const AY = {
+        ...rY,
+        loadoutSlotEquippedId: DY,
+        loadoutSlotOptions: rY.loadoutSlotOptions.map((YY => null !== FY && YY.loadoutOptionId === FY.loadoutOptionId ? FY : YY))
       };
       return {
-        ...BB,
-        loadoutSlots: BB.loadoutSlots.map((BB => BB === TB ? yB : BB))
+        ...YY,
+        loadoutSlots: YY.loadoutSlots.map((YY => YY === rY ? AY : YY))
       }
     }
 
-    function gT(BB, TB) {
+    function ar(YY, rY) {
       return {
-        ...BB,
-        loadoutPerks: BB.loadoutPerks.map((BB => BB.loadoutPerkId === TB.loadoutPerkId ? TB : BB))
+        ...YY,
+        loadoutPerks: YY.loadoutPerks.map((YY => YY.loadoutPerkId === rY.loadoutPerkId ? rY : YY))
       }
     }
 
-    function oT(BB, TB) {
+    function vr(YY, rY) {
       return {
-        ...BB,
-        loadoutCoins: BB.loadoutCoins - TB.loadoutCostCoins,
-        loadoutHeldParts: BB.loadoutHeldParts.map((BB => {
-          const dB = TB.loadoutCostParts.find((TB => TB.loadoutPartCurrency === BB.loadoutHeldPartCurrency));
-          return dB ? {
-            ...BB,
-            loadoutHeldPartAmount: BB.loadoutHeldPartAmount - dB.loadoutPartAmount
-          } : BB
+        ...YY,
+        loadoutCoins: YY.loadoutCoins - rY.loadoutCostCoins,
+        loadoutHeldParts: YY.loadoutHeldParts.map((YY => {
+          const DY = rY.loadoutCostParts.find((rY => rY.loadoutPartCurrency === YY.loadoutHeldPartCurrency));
+          return DY ? {
+            ...YY,
+            loadoutHeldPartAmount: YY.loadoutHeldPartAmount - DY.loadoutPartAmount
+          } : YY
         }))
       }
     }
 
-    function kT(BB, TB) {
+    function ur(YY, rY) {
       return {
-        loadoutNoticeKey: BB,
+        loadoutNoticeKey: YY,
         loadoutNoticeRefused: !1,
-        loadoutNoticeName: TB,
+        loadoutNoticeName: rY,
         loadoutNoticeTier: arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0
       }
     }
-    const LT = "containmentLoadoutView";
-    class OT extends BT {
-      constructor(BB, TB, dB, VB) {
-        super(BB, TB, dB, VB, "loadout", pT), this.slot = "loadoutPrimary", this.snapshot = this.buildSnapshot(), this.selectSlot = BB => {
-          this.slot = BB, this.selectedId = DT(this.board, BB), this.emit()
+    const sr = "containmentLoadoutView";
+    class ir extends Yr {
+      constructor(YY, rY, DY, FY) {
+        super(YY, rY, DY, FY, "loadout", Ir), this.slot = "loadoutPrimary", this.snapshot = this.buildSnapshot(), this.selectSlot = YY => {
+          this.slot = YY, this.selectedId = yr(this.board, YY), this.emit()
         }
       }
-      messageOpens(BB) {
-        return BB.loadoutMessageOpens
+      messageOpens(YY) {
+        return YY.loadoutMessageOpens
       }
-      messageNotice(BB) {
-        return BB.loadoutNotice
+      messageNotice(YY) {
+        return YY.loadoutNotice
       }
-      openingSelection(BB) {
-        return DT(BB, this.slot)
+      openingSelection(YY) {
+        return yr(YY, this.slot)
       }
       buildSnapshot() {
         return {
@@ -1280,765 +1280,765 @@ export const modules = {
       }
     }
 
-    function DT(BB, TB) {
-      if ("loadoutPerks" === TB) {
-        var dB;
-        const TB = BB.loadoutPerks;
-        return (null !== (dB = TB.find((BB => BB.loadoutPerkEquipped))) && void 0 !== dB ? dB : TB[0]).loadoutPerkId
+    function yr(YY, rY) {
+      if ("loadoutPerks" === rY) {
+        var DY;
+        const rY = YY.loadoutPerks;
+        return (null !== (DY = rY.find((YY => YY.loadoutPerkEquipped))) && void 0 !== DY ? DY : rY[0]).loadoutPerkId
       }
-      return VT(BB, TB).loadoutSlotEquippedId
+      return Fr(YY, rY).loadoutSlotEquippedId
     }
-    const uT = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAY0lEQVR4nGNgIAP8x4FRwP/sFt3/EYU6YBqGIwp1MBSDBUH4/3nW//83csD5DOgKfeKNsWIMhV+///qvbOT7/87cMjCG8TEUgiSLqlpRMEgMQ+HJvgy4aTAMEsPqc2KChyAAAFxNbnylK5O6AAAAAElFTkSuQmCC";
-    var HT = dB(35856),
-      ET = dB(1165);
-    const vT = {
-        loadoutPrimary: `${MB}:loadoutSlotPrimary`,
-        loadoutSecondary: `${MB}:loadoutSlotSecondary`,
-        loadoutOffensive: `${MB}:loadoutSlotOffensive`,
-        loadoutSelfHelp: `${MB}:loadoutSlotSelfHelp`,
-        loadoutArmour: `${MB}:loadoutSlotArmour`,
-        loadoutPerks: `${MB}:loadoutSlotPerks`
+    const Qr = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAY0lEQVR4nGNgIAP8x4FRwP/sFt3/EYU6YBqGIwp1MBSDBUH4/3nW//83csD5DOgKfeKNsWIMhV+///qvbOT7/87cMjCG8TEUgiSLqlpRMEgMQ+HJvgy4aTAMEsPqc2KChyAAAFxNbnylK5O6AAAAAElFTkSuQmCC";
+    var or = DY(36263),
+      Wr = DY(1284);
+    const Er = {
+        loadoutPrimary: `${NY}:loadoutSlotPrimary`,
+        loadoutSecondary: `${NY}:loadoutSlotSecondary`,
+        loadoutOffensive: `${NY}:loadoutSlotOffensive`,
+        loadoutSelfHelp: `${NY}:loadoutSlotSelfHelp`,
+        loadoutArmour: `${NY}:loadoutSlotArmour`,
+        loadoutPerks: `${NY}:loadoutSlotPerks`
       },
-      mT = {
+      mr = {
         section: "right",
-        dO: "bottom",
+        Ps: "bottom",
         act: "top"
       },
-      iT = (0, VB.createContext)({
+      Vr = (0, FY.createContext)({
         step: null,
         targetRef: () => {}
       });
 
-    function NT() {
+    function Sr() {
       const {
-        step: BB,
-        targetRef: TB
-      } = (0, VB.useContext)(iT);
-      return (dB, VB) => (null === BB || void 0 === BB ? void 0 : BB.kind) === dB && BB.id === VB ? TB : void 0
+        step: YY,
+        targetRef: rY
+      } = (0, FY.useContext)(Vr);
+      return (DY, FY) => (null === YY || void 0 === YY ? void 0 : YY.kind) === DY && YY.id === FY ? rY : void 0
     }
 
-    function tT(BB, TB) {
-      const dB = TB.loadoutTargetId;
-      if ("loadoutPerks" === TB.loadoutTargetSection) {
-        const TB = BB.loadoutPerks.find((BB => BB.loadoutPerkId === dB));
+    function lr(YY, rY) {
+      const DY = rY.loadoutTargetId;
+      if ("loadoutPerks" === rY.loadoutTargetSection) {
+        const rY = YY.loadoutPerks.find((YY => YY.loadoutPerkId === DY));
         return {
-          name: TB.loadoutPerkName,
-          owned: TB.loadoutPerkOwned,
-          equipped: TB.loadoutPerkEquipped
+          name: rY.loadoutPerkName,
+          owned: rY.loadoutPerkOwned,
+          equipped: rY.loadoutPerkEquipped
         }
       }
-      const VB = VT(BB, TB.loadoutTargetSection),
-        yB = VB.loadoutSlotOptions.find((BB => BB.loadoutOptionId === dB));
+      const FY = Fr(YY, rY.loadoutTargetSection),
+        AY = FY.loadoutSlotOptions.find((YY => YY.loadoutOptionId === DY));
       return {
-        name: yB.loadoutOptionName,
-        owned: yB.loadoutOptionOwnedTier > 0,
-        equipped: VB.loadoutSlotEquippedId === dB
+        name: AY.loadoutOptionName,
+        owned: AY.loadoutOptionOwnedTier > 0,
+        equipped: FY.loadoutSlotEquippedId === DY
       }
     }
 
-    function fT(BB, TB, dB, VB) {
-      const [yB, pB] = BB(`${MB}:${TB}`, {
-        [dB]: "\x01"
+    function Tr(YY, rY, DY, FY) {
+      const [AY, IY] = YY(`${NY}:${rY}`, {
+        [DY]: "\x01"
       }).split("\x01");
-      return (0, sB.jsxs)(sB.Fragment, {
-        children: [yB, (0, sB.jsx)("span", {
+      return (0, eY.jsxs)(eY.Fragment, {
+        children: [AY, (0, eY.jsx)("span", {
           className: "LoadoutWalkthroughName",
-          children: VB
-        }), pB]
+          children: FY
+        }), IY]
       })
     }
 
-    function sT(BB) {
+    function er(YY) {
       let {
-        view: TB,
-        onDismiss: dB,
-        children: yB
-      } = BB;
+        view: rY,
+        onDismiss: DY,
+        children: AY
+      } = YY;
       const {
-        t: pB
-      } = (0, kB.z)(), lB = TB.loadout, JB = TB.open ? lB.loadoutWalkthrough.map((BB => ({
-        target: BB,
-        info: tT(lB, BB)
-      }))).find((BB => {
+        t: IY
+      } = (0, uY.C)(), RY = rY.loadout, OY = rY.open ? RY.loadoutWalkthrough.map((YY => ({
+        target: YY,
+        info: lr(RY, YY)
+      }))).find((YY => {
         let {
-          info: TB
-        } = BB;
-        return !TB.equipped
+          info: rY
+        } = YY;
+        return !rY.equipped
       })) : void 0;
-      let YB = null,
-        gB = null;
-      if (void 0 !== JB) {
+      let gY = null,
+        aY = null;
+      if (void 0 !== OY) {
         const {
-          target: BB,
-          info: dB
-        } = JB;
-        TB.slot !== BB.loadoutTargetSection ? (YB = {
+          target: YY,
+          info: DY
+        } = OY;
+        rY.slot !== YY.loadoutTargetSection ? (gY = {
           kind: "section",
-          id: BB.loadoutTargetSection
-        }, gB = fT(pB, "loadoutWalkthroughSection", "section", pB(vT[BB.loadoutTargetSection]))) : TB.selectedId !== BB.loadoutTargetId ? (YB = {
-          kind: "dO",
-          id: BB.loadoutTargetId
-        }, gB = fT(pB, "loadoutWalkthroughPick", "name", dB.name)) : (YB = {
+          id: YY.loadoutTargetSection
+        }, aY = Tr(IY, "loadoutWalkthroughSection", "section", IY(Er[YY.loadoutTargetSection]))) : rY.selectedId !== YY.loadoutTargetId ? (gY = {
+          kind: "Ps",
+          id: YY.loadoutTargetId
+        }, aY = Tr(IY, "loadoutWalkthroughPick", "name", DY.name)) : (gY = {
           kind: "act",
-          id: BB.loadoutTargetId
-        }, gB = fT(pB, dB.owned ? "loadoutWalkthroughEquip" : "loadoutWalkthroughUnlock", "name", dB.name))
+          id: YY.loadoutTargetId
+        }, aY = Tr(IY, DY.owned ? "loadoutWalkthroughEquip" : "loadoutWalkthroughUnlock", "name", DY.name))
       }
-      const oB = null === YB ? null : function(BB) {
-          return `${BB.kind}:${BB.id}`
-        }(YB),
-        [LB, OB] = (0, VB.useState)(null),
-        DB = (0, VB.useCallback)((BB => {
-          OB((TB => null !== BB ? {
-            key: oB,
-            node: BB
-          } : (null === TB || void 0 === TB ? void 0 : TB.key) === oB ? null : TB))
-        }), [oB]),
-        uB = null !== oB && (null === LB || void 0 === LB ? void 0 : LB.key) === oB ? LB.node : null;
-      return (0, sB.jsxs)(iT.Provider, {
+      const vY = null === gY ? null : function(YY) {
+          return `${YY.kind}:${YY.id}`
+        }(gY),
+        [sY, iY] = (0, FY.useState)(null),
+        yY = (0, FY.useCallback)((YY => {
+          iY((rY => null !== YY ? {
+            key: vY,
+            node: YY
+          } : (null === rY || void 0 === rY ? void 0 : rY.key) === vY ? null : rY))
+        }), [vY]),
+        QY = null !== vY && (null === sY || void 0 === sY ? void 0 : sY.key) === vY ? sY.node : null;
+      return (0, eY.jsxs)(Vr.Provider, {
         value: {
-          step: YB,
-          targetRef: DB
+          step: gY,
+          targetRef: yY
         },
-        children: [yB, null !== YB && null !== uB && (0, sB.jsx)(MT, {
-          target: uB,
-          placement: mT[YB.kind],
-          onDismiss: dB,
-          children: gB
-        }, oB)]
+        children: [AY, null !== gY && null !== QY && (0, eY.jsx)(Nr, {
+          target: QY,
+          placement: mr[gY.kind],
+          onDismiss: DY,
+          children: aY
+        }, vY)]
       })
     }
 
-    function MT(BB) {
+    function Nr(YY) {
       let {
-        target: TB,
-        placement: dB,
-        onDismiss: yB,
-        children: pB
-      } = BB;
+        target: rY,
+        placement: DY,
+        onDismiss: AY,
+        children: IY
+      } = YY;
       const {
-        t: lB
-      } = (0, kB.z)(), JB = (0, VB.useRef)(TB);
-      return JB.current = TB, (0, ET.y)("popup", JB, yB), (0, sB.jsxs)(HT.f, {
-        target: TB,
-        placement: dB,
+        t: RY
+      } = (0, uY.C)(), OY = (0, FY.useRef)(rY);
+      return OY.current = rY, (0, Wr.t)("popup", OY, AY), (0, eY.jsxs)(or.d, {
+        target: rY,
+        placement: DY,
         className: "LoadoutWalkthroughStep",
         spotlightMargin: 10,
-        children: [(0, sB.jsxs)("div", {
+        children: [(0, eY.jsxs)("div", {
           className: "LoadoutWalkthroughHeader",
-          children: [(0, sB.jsx)("img", {
+          children: [(0, eY.jsx)("img", {
             className: "LoadoutWalkthroughPortrait",
-            src: uT,
+            src: Qr,
             alt: "",
             draggable: !1
-          }), (0, sB.jsx)("span", {
+          }), (0, eY.jsx)("span", {
             className: "LoadoutWalkthroughSpeaker",
-            children: lB(`${MB}:operatorName`)
-          }), (0, sB.jsx)(DB.i, {
-            onClick: yB,
-            ariaLabel: lB(`${MB}:loadoutWalkthroughClose`),
+            children: RY(`${NY}:operatorName`)
+          }), (0, eY.jsx)(yY.k, {
+            onClick: AY,
+            ariaLabel: RY(`${NY}:loadoutWalkthroughClose`),
             padIgnore: !0
           })]
-        }), (0, sB.jsx)("p", {
+        }), (0, eY.jsx)("p", {
           className: "LoadoutWalkthroughText",
-          children: pB
+          children: IY
         })]
       })
     }
-    const zT = new Set(["loadoutStatReload", "loadoutStatResupply"]);
+    const Br = new Set(["loadoutStatReload", "loadoutStatResupply"]);
 
-    function wT(BB) {
+    function cr(YY) {
       let {
-        cost: TB,
-        loadout: dB
-      } = BB;
+        cost: rY,
+        loadout: DY
+      } = YY;
       const {
-        t: VB
-      } = (0, kB.z)();
-      return TB.loadoutCostCoins <= 0 && 0 === TB.loadoutCostParts.length ? (0, sB.jsx)("span", {
+        t: FY
+      } = (0, uY.C)();
+      return rY.loadoutCostCoins <= 0 && 0 === rY.loadoutCostParts.length ? (0, eY.jsx)("span", {
         className: "LoadoutCost",
-        children: VB(`${MB}:loadoutFree`)
-      }) : (0, sB.jsxs)("span", {
+        children: FY(`${NY}:loadoutFree`)
+      }) : (0, eY.jsxs)("span", {
         className: "LoadoutCost",
-        children: [TB.loadoutCostCoins > 0 && (0, sB.jsx)(KB, {
-          itemName: zB,
-          amount: TB.loadoutCostCoins,
-          Dg: dB.loadoutCoins
-        }), TB.loadoutCostParts.map((BB => {
-          const TB = dT(dB, BB.loadoutPartCurrency);
-          return (0, sB.jsx)(KB, {
-            itemName: TB.loadoutHeldPartItem,
-            amount: BB.loadoutPartAmount,
-            Dg: TB.loadoutHeldPartAmount
-          }, BB.loadoutPartCurrency)
+        children: [rY.loadoutCostCoins > 0 && (0, eY.jsx)(zY, {
+          itemName: BY,
+          amount: rY.loadoutCostCoins,
+          ja: DY.loadoutCoins
+        }), rY.loadoutCostParts.map((YY => {
+          const rY = Dr(DY, YY.loadoutPartCurrency);
+          return (0, eY.jsx)(zY, {
+            itemName: rY.loadoutHeldPartItem,
+            amount: YY.loadoutPartAmount,
+            ja: rY.loadoutHeldPartAmount
+          }, YY.loadoutPartCurrency)
         }))]
       })
     }
-    const UT = {
-      loadoutStatFireRate: `${MB}:loadoutUnitPerMinute`,
-      loadoutStatReload: `${MB}:loadoutUnitSeconds`,
-      loadoutStatResupply: `${MB}:loadoutUnitSeconds`
+    const Kr = {
+      loadoutStatFireRate: `${NY}:loadoutUnitPerMinute`,
+      loadoutStatReload: `${NY}:loadoutUnitSeconds`,
+      loadoutStatResupply: `${NY}:loadoutUnitSeconds`
     };
 
-    function FT(BB) {
-      return "loadoutStatPotency" === BB.loadoutStatKind ? (0, eB.U)(BB.loadoutStatValue) : String(BB.loadoutStatValue)
+    function Hr(YY) {
+      return "loadoutStatPotency" === YY.loadoutStatKind ? (0, tY.R)(YY.loadoutStatValue) : String(YY.loadoutStatValue)
     }
 
-    function KT(BB) {
-      var TB;
+    function zr(YY) {
+      var rY;
       let {
-        option: dB
-      } = BB;
+        option: DY
+      } = YY;
       const {
-        t: VB
-      } = (0, kB.z)(), yB = dB.loadoutOptionTiers, pB = null === (TB = yB[0]) || void 0 === TB ? void 0 : TB.loadoutTierStats.map((BB => BB.loadoutStatKind));
-      if (!pB || 0 === pB.length) return null;
-      const lB = dB.loadoutOptionOwnedTier,
-        JB = (BB, TB) => {
-          var dB;
-          return null === (dB = yB[BB]) || void 0 === dB ? void 0 : dB.loadoutTierStats.find((BB => BB.loadoutStatKind === TB))
+        t: FY
+      } = (0, uY.C)(), AY = DY.loadoutOptionTiers, IY = null === (rY = AY[0]) || void 0 === rY ? void 0 : rY.loadoutTierStats.map((YY => YY.loadoutStatKind));
+      if (!IY || 0 === IY.length) return null;
+      const RY = DY.loadoutOptionOwnedTier,
+        OY = (YY, rY) => {
+          var DY;
+          return null === (DY = AY[YY]) || void 0 === DY ? void 0 : DY.loadoutTierStats.find((YY => YY.loadoutStatKind === rY))
         };
-      return (0, sB.jsxs)("table", {
+      return (0, eY.jsxs)("table", {
         className: "LoadoutTierTable",
-        children: [(0, sB.jsx)("thead", {
-          children: (0, sB.jsxs)("tr", {
-            children: [(0, sB.jsx)("th", {}), yB.map(((BB, TB) => (0, sB.jsx)("th", {
-              className: gB()({
-                Current: TB + 1 === lB,
-                Next: TB === lB
+        children: [(0, eY.jsx)("thead", {
+          children: (0, eY.jsxs)("tr", {
+            children: [(0, eY.jsx)("th", {}), AY.map(((YY, rY) => (0, eY.jsx)("th", {
+              className: aY()({
+                Current: rY + 1 === RY,
+                Next: rY === RY
               }),
-              children: VB(`${MB}:loadoutTier`, {
-                tier: (0, eB.U)(TB + 1)
+              children: FY(`${NY}:loadoutTier`, {
+                tier: (0, tY.R)(rY + 1)
               })
-            }, TB)))]
+            }, rY)))]
           })
-        }), (0, sB.jsx)("tbody", {
-          children: pB.map((BB => {
-            const TB = UT[BB];
-            return (0, sB.jsxs)("tr", {
-              children: [(0, sB.jsxs)("th", {
+        }), (0, eY.jsx)("tbody", {
+          children: IY.map((YY => {
+            const rY = Kr[YY];
+            return (0, eY.jsxs)("tr", {
+              children: [(0, eY.jsxs)("th", {
                 scope: "row",
-                children: [VB(`${MB}:${BB}`), TB && (0, sB.jsx)("span", {
+                children: [FY(`${NY}:${YY}`), rY && (0, eY.jsx)("span", {
                   className: "LoadoutStatUnit",
-                  children: VB(TB)
+                  children: FY(rY)
                 })]
-              }), yB.map(((TB, dB) => {
-                const VB = JB(dB, BB),
-                  yB = dB > 0 ? JB(dB - 1, BB) : void 0,
-                  pB = VB && yB ? VB.loadoutStatValue - yB.loadoutStatValue : 0,
-                  YB = zT.has(BB) ? pB < 0 : pB > 0,
-                  oB = dB === lB;
-                return (0, sB.jsxs)("td", {
-                  className: gB()({
-                    Current: dB + 1 === lB,
-                    Next: oB,
-                    Gain: YB,
-                    Owned: dB < lB
+              }), AY.map(((rY, DY) => {
+                const FY = OY(DY, YY),
+                  AY = DY > 0 ? OY(DY - 1, YY) : void 0,
+                  IY = FY && AY ? FY.loadoutStatValue - AY.loadoutStatValue : 0,
+                  gY = Br.has(YY) ? IY < 0 : IY > 0,
+                  vY = DY === RY;
+                return (0, eY.jsxs)("td", {
+                  className: aY()({
+                    Current: DY + 1 === RY,
+                    Next: vY,
+                    Gain: gY,
+                    Owned: DY < RY
                   }),
-                  children: [oB && YB && (0, sB.jsx)("span", {
+                  children: [vY && gY && (0, eY.jsx)("span", {
                     className: "LoadoutGainArrow",
                     "aria-hidden": "true",
-                    children: pB < 0 ? "\u25bc" : "\u25b2"
-                  }), VB ? FT(VB) : "-"]
-                }, dB)
+                    children: IY < 0 ? "\u25bc" : "\u25b2"
+                  }), FY ? Hr(FY) : "-"]
+                }, DY)
               }))]
-            }, BB)
+            }, YY)
           }))
         })]
       })
     }
 
-    function rT(BB) {
+    function Zr(YY) {
       let {
-        view: TB,
-        controller: dB,
-        slot: VB,
-        option: yB
-      } = BB;
+        view: rY,
+        controller: DY,
+        slot: FY,
+        option: AY
+      } = YY;
       const {
-        t: pB
-      } = (0, kB.z)(), lB = TB.loadout, JB = yB.loadoutOptionOwnedTier, YB = yB.loadoutOptionTiers.length, gB = VB.loadoutSlotEquippedId === yB.loadoutOptionId, oB = JB < YB ? yB.loadoutOptionTiers[JB].loadoutTierCost : null, LB = null !== oB && TT(lB, oB), OB = yB.loadoutOptionId, uB = NT();
-      return (0, sB.jsxs)(sB.Fragment, {
-        children: [(0, sB.jsx)(cT, {
-          icon: yB.loadoutOptionIcon,
-          name: yB.loadoutOptionName,
-          status: 0 === JB ? pB(`${MB}:loadoutLocked`) : YB > 1 ? pB(`${MB}:loadoutTier`, {
-            tier: (0, eB.U)(JB)
+        t: IY
+      } = (0, uY.C)(), RY = rY.loadout, OY = AY.loadoutOptionOwnedTier, gY = AY.loadoutOptionTiers.length, aY = FY.loadoutSlotEquippedId === AY.loadoutOptionId, vY = OY < gY ? AY.loadoutOptionTiers[OY].loadoutTierCost : null, sY = null !== vY && rr(RY, vY), iY = AY.loadoutOptionId, QY = Sr();
+      return (0, eY.jsxs)(eY.Fragment, {
+        children: [(0, eY.jsx)(fr, {
+          icon: AY.loadoutOptionIcon,
+          name: AY.loadoutOptionName,
+          status: 0 === OY ? IY(`${NY}:loadoutLocked`) : gY > 1 ? IY(`${NY}:loadoutTier`, {
+            tier: (0, tY.R)(OY)
           }) : null,
-          locked: 0 === JB,
-          equipped: gB
-        }), (0, sB.jsx)("p", {
+          locked: 0 === OY,
+          equipped: aY
+        }), (0, eY.jsx)("p", {
           className: "BoardDescription",
-          children: yB.loadoutOptionDescription
-        }), (0, sB.jsx)(KT, {
-          option: yB
-        }), (0, sB.jsxs)("div", {
-          ref: uB("act", OB),
+          children: AY.loadoutOptionDescription
+        }), (0, eY.jsx)(zr, {
+          option: AY
+        }), (0, eY.jsxs)("div", {
+          ref: QY("act", iY),
           className: "BoardActions",
-          children: [null !== oB && (0, sB.jsxs)("div", {
+          children: [null !== vY && (0, eY.jsxs)("div", {
             className: "LoadoutBuy",
-            children: [(0, sB.jsx)(wT, {
-              cost: oB,
-              loadout: lB
-            }), (0, sB.jsx)(DB.k, {
-              disabled: !LB || TB.pending,
+            children: [(0, eY.jsx)(cr, {
+              cost: vY,
+              loadout: RY
+            }), (0, eY.jsx)(yY.n, {
+              disabled: !sY || rY.pending,
               onClick: () => {
-                dB.act(0 === JB ? "loadoutUnlock" : "loadoutUpgrade", OB)
+                DY.act(0 === OY ? "loadoutUnlock" : "loadoutUpgrade", iY)
               },
-              children: 0 === JB ? pB(`${MB}:loadoutUnlock`) : pB(`${MB}:loadoutUpgrade`, {
-                tier: (0, eB.U)(JB + 1)
+              children: 0 === OY ? IY(`${NY}:loadoutUnlock`) : IY(`${NY}:loadoutUpgrade`, {
+                tier: (0, tY.R)(OY + 1)
               })
             })]
-          }), null === oB && YB > 1 && (0, sB.jsx)("span", {
+          }), null === vY && gY > 1 && (0, eY.jsx)("span", {
             className: "BoardHint",
-            children: pB(`${MB}:loadoutMaxed`)
-          }), JB > 0 && !gB && (0, sB.jsx)(DB.d, {
-            disabled: TB.pending,
+            children: IY(`${NY}:loadoutMaxed`)
+          }), OY > 0 && !aY && (0, eY.jsx)(yY.f, {
+            disabled: rY.pending,
             onClick: () => {
-              dB.act("loadoutEquip", OB)
+              DY.act("loadoutEquip", iY)
             },
-            children: pB(`${MB}:loadoutEquip`)
+            children: IY(`${NY}:loadoutEquip`)
           })]
         })]
       })
     }
 
-    function IT(BB) {
+    function Cr(YY) {
       let {
-        view: TB,
-        controller: dB,
-        perk: VB
-      } = BB;
+        view: rY,
+        controller: DY,
+        perk: FY
+      } = YY;
       const {
-        t: yB
-      } = (0, kB.z)(), pB = TB.loadout, lB = yT(pB), JB = VB.loadoutPerkId, YB = NT();
-      return (0, sB.jsxs)(sB.Fragment, {
-        children: [(0, sB.jsx)(cT, {
-          icon: VB.loadoutPerkIcon,
-          name: VB.loadoutPerkName,
-          status: VB.loadoutPerkOwned ? null : yB(`${MB}:loadoutLocked`),
-          locked: !VB.loadoutPerkOwned,
-          equipped: VB.loadoutPerkEquipped
-        }), (0, sB.jsx)("p", {
+        t: AY
+      } = (0, uY.C)(), IY = rY.loadout, RY = Ar(IY), OY = FY.loadoutPerkId, gY = Sr();
+      return (0, eY.jsxs)(eY.Fragment, {
+        children: [(0, eY.jsx)(fr, {
+          icon: FY.loadoutPerkIcon,
+          name: FY.loadoutPerkName,
+          status: FY.loadoutPerkOwned ? null : AY(`${NY}:loadoutLocked`),
+          locked: !FY.loadoutPerkOwned,
+          equipped: FY.loadoutPerkEquipped
+        }), (0, eY.jsx)("p", {
           className: "BoardDescription",
-          children: VB.loadoutPerkDescription
-        }), (0, sB.jsxs)("div", {
-          ref: YB("act", JB),
+          children: FY.loadoutPerkDescription
+        }), (0, eY.jsxs)("div", {
+          ref: gY("act", OY),
           className: "BoardActions",
-          children: [!VB.loadoutPerkOwned && (0, sB.jsxs)("div", {
+          children: [!FY.loadoutPerkOwned && (0, eY.jsxs)("div", {
             className: "LoadoutBuy",
-            children: [(0, sB.jsx)(wT, {
-              cost: VB.loadoutPerkCost,
-              loadout: pB
-            }), (0, sB.jsx)(DB.k, {
-              disabled: !TT(pB, VB.loadoutPerkCost) || TB.pending,
+            children: [(0, eY.jsx)(cr, {
+              cost: FY.loadoutPerkCost,
+              loadout: IY
+            }), (0, eY.jsx)(yY.n, {
+              disabled: !rr(IY, FY.loadoutPerkCost) || rY.pending,
               onClick: () => {
-                dB.act("loadoutUnlock", JB)
+                DY.act("loadoutUnlock", OY)
               },
-              children: yB(`${MB}:loadoutUnlock`)
+              children: AY(`${NY}:loadoutUnlock`)
             })]
-          }), VB.loadoutPerkOwned && !VB.loadoutPerkEquipped && (0, sB.jsx)(DB.d, {
-            disabled: lB || TB.pending,
+          }), FY.loadoutPerkOwned && !FY.loadoutPerkEquipped && (0, eY.jsx)(yY.f, {
+            disabled: RY || rY.pending,
             onClick: () => {
-              dB.act("loadoutEquip", JB)
+              DY.act("loadoutEquip", OY)
             },
-            children: yB(`${MB}:loadoutEquip`)
-          }), VB.loadoutPerkOwned && !VB.loadoutPerkEquipped && lB && (0, sB.jsx)("span", {
+            children: AY(`${NY}:loadoutEquip`)
+          }), FY.loadoutPerkOwned && !FY.loadoutPerkEquipped && RY && (0, eY.jsx)("span", {
             className: "BoardHint",
-            children: yB(`${MB}:loadoutSocketsFullHint`)
-          }), VB.loadoutPerkEquipped && (0, sB.jsx)(DB.T, {
-            disabled: TB.pending,
+            children: AY(`${NY}:loadoutSocketsFullHint`)
+          }), FY.loadoutPerkEquipped && (0, eY.jsx)(yY.J, {
+            disabled: rY.pending,
             onClick: () => {
-              dB.act("loadoutUnequip", JB)
+              DY.act("loadoutUnequip", OY)
             },
-            children: yB(`${MB}:loadoutUnequip`)
+            children: AY(`${NY}:loadoutUnequip`)
           })]
         })]
       })
     }
 
-    function cT(BB) {
+    function fr(YY) {
       let {
-        icon: TB,
-        name: dB,
-        status: VB,
-        locked: yB,
-        equipped: pB
-      } = BB;
+        icon: rY,
+        name: DY,
+        status: FY,
+        locked: AY,
+        equipped: IY
+      } = YY;
       const {
-        t: lB
-      } = (0, kB.z)();
-      return (0, sB.jsxs)(SB, {
-        icon: (0, sB.jsx)(UB, {
-          itemName: TB
+        t: RY
+      } = (0, uY.C)();
+      return (0, eY.jsxs)(jY, {
+        icon: (0, eY.jsx)(KY, {
+          itemName: rY
         }),
-        name: dB,
-        children: [null !== VB && (0, sB.jsx)("span", {
-          className: gB()("LoadoutStatusText", {
-            Locked: yB
+        name: DY,
+        children: [null !== FY && (0, eY.jsx)("span", {
+          className: aY()("LoadoutStatusText", {
+            Locked: AY
           }),
-          children: VB
-        }), pB && (0, sB.jsx)("span", {
+          children: FY
+        }), IY && (0, eY.jsx)("span", {
           className: "BoardBadge",
-          children: lB(`${MB}:loadoutEquippedBadge`)
+          children: RY(`${NY}:loadoutEquippedBadge`)
         })]
       })
     }
 
-    function ST(BB) {
+    function jr(YY) {
       let {
-        view: TB,
-        controller: dB
-      } = BB;
-      const VB = TB.loadout;
-      if ("loadoutPerks" === TB.slot) {
-        const BB = VB.loadoutPerks.find((BB => BB.loadoutPerkId === TB.selectedId));
-        return (0, sB.jsx)("section", {
+        view: rY,
+        controller: DY
+      } = YY;
+      const FY = rY.loadout;
+      if ("loadoutPerks" === rY.slot) {
+        const YY = FY.loadoutPerks.find((YY => YY.loadoutPerkId === rY.selectedId));
+        return (0, eY.jsx)("section", {
           className: "BoardDetail",
-          children: BB && (0, sB.jsx)(IT, {
-            view: TB,
-            controller: dB,
-            perk: BB
+          children: YY && (0, eY.jsx)(Cr, {
+            view: rY,
+            controller: DY,
+            perk: YY
           })
         })
       }
-      const yB = VT(VB, TB.slot),
-        pB = yB.loadoutSlotOptions.find((BB => BB.loadoutOptionId === TB.selectedId));
-      return (0, sB.jsx)("section", {
+      const AY = Fr(FY, rY.slot),
+        IY = AY.loadoutSlotOptions.find((YY => YY.loadoutOptionId === rY.selectedId));
+      return (0, eY.jsx)("section", {
         className: "BoardDetail",
-        children: pB && (0, sB.jsx)(rT, {
-          view: TB,
-          controller: dB,
-          slot: yB,
-          option: pB
+        children: IY && (0, eY.jsx)(Zr, {
+          view: rY,
+          controller: DY,
+          slot: AY,
+          option: IY
         })
       })
     }
 
-    function PT(BB) {
+    function hr(YY) {
       let {
-        owned: TB,
-        total: dB
-      } = BB;
-      return dB <= 1 ? null : (0, sB.jsx)("span", {
+        owned: rY,
+        total: DY
+      } = YY;
+      return DY <= 1 ? null : (0, eY.jsx)("span", {
         className: "LoadoutPips",
         children: Array.from({
-          length: dB
-        }, ((BB, dB) => (0, sB.jsx)("span", {
-          className: gB()("LoadoutPip", {
-            Filled: dB < TB
+          length: DY
+        }, ((YY, DY) => (0, eY.jsx)("span", {
+          className: aY()("LoadoutPip", {
+            Filled: DY < rY
           })
-        }, dB)))
+        }, DY)))
       })
     }
 
-    function QT(BB) {
+    function dr(YY) {
       let {
-        view: TB,
-        controller: dB
-      } = BB;
+        view: rY,
+        controller: DY
+      } = YY;
       const {
-        t: VB
-      } = (0, kB.z)(), yB = TB.loadout, pB = NT();
-      return (0, sB.jsxs)("nav", {
+        t: FY
+      } = (0, uY.C)(), AY = rY.loadout, IY = Sr();
+      return (0, eY.jsxs)("nav", {
         className: "LoadoutKit",
-        "aria-label": VB(`${MB}:loadoutKit`),
-        children: [yB.loadoutSlots.map((BB => {
-          const yB = BB.loadoutSlotOptions.find((TB => TB.loadoutOptionId === BB.loadoutSlotEquippedId));
-          return (0, sB.jsxs)("button", {
-            ref: pB("section", BB.loadoutSlotKind),
+        "aria-label": FY(`${NY}:loadoutKit`),
+        children: [AY.loadoutSlots.map((YY => {
+          const AY = YY.loadoutSlotOptions.find((rY => rY.loadoutOptionId === YY.loadoutSlotEquippedId));
+          return (0, eY.jsxs)("button", {
+            ref: IY("section", YY.loadoutSlotKind),
             type: "button",
-            className: gB()("LoadoutKitSlot", {
-              Selected: TB.slot === BB.loadoutSlotKind
+            className: aY()("LoadoutKitSlot", {
+              Selected: rY.slot === YY.loadoutSlotKind
             }),
             onClick: () => {
-              dB.selectSlot(BB.loadoutSlotKind)
+              DY.selectSlot(YY.loadoutSlotKind)
             },
-            children: [(0, sB.jsx)("span", {
+            children: [(0, eY.jsx)("span", {
               className: "LoadoutKitIcon",
-              children: yB && (0, sB.jsx)(UB, {
-                itemName: yB.loadoutOptionIcon
+              children: AY && (0, eY.jsx)(KY, {
+                itemName: AY.loadoutOptionIcon
               })
-            }), (0, sB.jsxs)("span", {
+            }), (0, eY.jsxs)("span", {
               className: "LoadoutKitText",
-              children: [(0, sB.jsxs)("span", {
+              children: [(0, eY.jsxs)("span", {
                 className: "LoadoutKitTop",
-                children: [(0, sB.jsx)("span", {
+                children: [(0, eY.jsx)("span", {
                   className: "LoadoutKitLabel",
-                  children: VB(vT[BB.loadoutSlotKind])
-                }), yB && (0, sB.jsx)(PT, {
-                  owned: yB.loadoutOptionOwnedTier,
-                  total: yB.loadoutOptionTiers.length
+                  children: FY(Er[YY.loadoutSlotKind])
+                }), AY && (0, eY.jsx)(hr, {
+                  owned: AY.loadoutOptionOwnedTier,
+                  total: AY.loadoutOptionTiers.length
                 })]
-              }), (0, sB.jsx)("span", {
+              }), (0, eY.jsx)("span", {
                 className: "LoadoutKitName",
-                children: null === yB || void 0 === yB ? void 0 : yB.loadoutOptionName
+                children: null === AY || void 0 === AY ? void 0 : AY.loadoutOptionName
               })]
             })]
-          }, BB.loadoutSlotKind)
-        })), (0, sB.jsx)(RT, {
-          view: TB,
-          controller: dB
+          }, YY.loadoutSlotKind)
+        })), (0, eY.jsx)(Jr, {
+          view: rY,
+          controller: DY
         })]
       })
     }
 
-    function RT(BB) {
+    function Jr(YY) {
       let {
-        view: TB,
-        controller: dB
-      } = BB;
+        view: rY,
+        controller: DY
+      } = YY;
       const {
-        t: VB
-      } = (0, kB.z)(), yB = TB.loadout, pB = yB.loadoutPerks.filter((BB => BB.loadoutPerkEquipped)), lB = NT();
-      return (0, sB.jsxs)("button", {
-        ref: lB("section", "loadoutPerks"),
+        t: FY
+      } = (0, uY.C)(), AY = rY.loadout, IY = AY.loadoutPerks.filter((YY => YY.loadoutPerkEquipped)), RY = Sr();
+      return (0, eY.jsxs)("button", {
+        ref: RY("section", "loadoutPerks"),
         type: "button",
-        className: gB()("LoadoutKitSlot", "LoadoutPerks", {
-          Selected: "loadoutPerks" === TB.slot
+        className: aY()("LoadoutKitSlot", "LoadoutPerks", {
+          Selected: "loadoutPerks" === rY.slot
         }),
         onClick: () => {
-          dB.selectSlot("loadoutPerks")
+          DY.selectSlot("loadoutPerks")
         },
-        children: [(0, sB.jsxs)("span", {
+        children: [(0, eY.jsxs)("span", {
           className: "LoadoutKitTop",
-          children: [(0, sB.jsx)("span", {
+          children: [(0, eY.jsx)("span", {
             className: "LoadoutKitLabel",
-            children: VB(vT.loadoutPerks)
-          }), (0, sB.jsx)("span", {
+            children: FY(Er.loadoutPerks)
+          }), (0, eY.jsx)("span", {
             className: "LoadoutPerkCount",
-            children: VB(`${MB}:loadoutPerkCount`, {
-              equipped: String(pB.length),
-              max: String(yB.loadoutMaxPerks)
+            children: FY(`${NY}:loadoutPerkCount`, {
+              equipped: String(IY.length),
+              max: String(AY.loadoutMaxPerks)
             })
           })]
-        }), (0, sB.jsx)("span", {
+        }), (0, eY.jsx)("span", {
           className: "LoadoutSockets",
           children: Array.from({
-            length: yB.loadoutMaxPerks
-          }, ((BB, TB) => {
-            const dB = pB[TB];
-            return (0, sB.jsxs)("span", {
-              className: gB()("LoadoutSocket", {
-                Filled: dB,
-                Empty: !dB
+            length: AY.loadoutMaxPerks
+          }, ((YY, rY) => {
+            const DY = IY[rY];
+            return (0, eY.jsxs)("span", {
+              className: aY()("LoadoutSocket", {
+                Filled: DY,
+                Empty: !DY
               }),
-              children: [(0, sB.jsx)("span", {
+              children: [(0, eY.jsx)("span", {
                 className: "LoadoutSocketWell",
-                children: dB && (0, sB.jsx)(UB, {
-                  itemName: dB.loadoutPerkIcon
+                children: DY && (0, eY.jsx)(KY, {
+                  itemName: DY.loadoutPerkIcon
                 })
-              }), (0, sB.jsx)("span", {
+              }), (0, eY.jsx)("span", {
                 className: "LoadoutSocketName",
-                children: dB ? dB.loadoutPerkName : VB(`${MB}:loadoutPerkSocketEmpty`)
+                children: DY ? DY.loadoutPerkName : FY(`${NY}:loadoutPerkSocketEmpty`)
               })]
-            }, TB)
+            }, rY)
           }))
         })]
       })
     }
 
-    function aT(BB) {
+    function Mr(YY) {
       let {
-        icon: TB,
-        name: dB,
-        selected: VB,
-        equipped: yB,
-        locked: pB,
-        ownedTier: lB,
-        tiers: JB,
-        buttonRef: YB,
-        onSelect: gB
-      } = BB;
+        icon: rY,
+        name: DY,
+        selected: FY,
+        equipped: AY,
+        locked: IY,
+        ownedTier: RY,
+        tiers: OY,
+        buttonRef: gY,
+        onSelect: aY
+      } = YY;
       const {
-        t: oB
-      } = (0, kB.z)();
-      return (0, sB.jsxs)(cB, {
-        icon: (0, sB.jsx)(UB, {
-          itemName: TB
+        t: vY
+      } = (0, uY.C)();
+      return (0, eY.jsxs)(fY, {
+        icon: (0, eY.jsx)(KY, {
+          itemName: rY
         }),
-        name: dB,
-        selected: VB,
-        locked: pB,
-        buttonRef: YB,
-        onSelect: gB,
-        children: [yB && (0, sB.jsx)("span", {
+        name: DY,
+        selected: FY,
+        locked: IY,
+        buttonRef: gY,
+        onSelect: aY,
+        children: [AY && (0, eY.jsx)("span", {
           className: "BoardBadge",
-          children: oB(`${MB}:loadoutEquippedBadge`)
-        }), pB && (0, sB.jsx)("span", {
+          children: vY(`${NY}:loadoutEquippedBadge`)
+        }), IY && (0, eY.jsx)("span", {
           className: "BoardBadge Muted",
-          children: oB(`${MB}:loadoutLocked`)
-        }), !pB && (0, sB.jsx)(PT, {
-          owned: lB,
-          total: JB
+          children: vY(`${NY}:loadoutLocked`)
+        }), !IY && (0, eY.jsx)(hr, {
+          owned: RY,
+          total: OY
         })]
       })
     }
 
-    function ZT(BB) {
+    function wr(YY) {
       let {
-        view: TB,
-        controller: dB
-      } = BB;
-      const VB = TB.loadout,
-        yB = NT();
-      if ("loadoutPerks" === TB.slot) return (0, sB.jsx)("div", {
+        view: rY,
+        controller: DY
+      } = YY;
+      const FY = rY.loadout,
+        AY = Sr();
+      if ("loadoutPerks" === rY.slot) return (0, eY.jsx)("div", {
         className: "BoardTiles",
-        children: VB.loadoutPerks.map((BB => (0, sB.jsx)(aT, {
-          icon: BB.loadoutPerkIcon,
-          name: BB.loadoutPerkName,
-          selected: TB.selectedId === BB.loadoutPerkId,
-          equipped: BB.loadoutPerkEquipped,
-          locked: !BB.loadoutPerkOwned,
+        children: FY.loadoutPerks.map((YY => (0, eY.jsx)(Mr, {
+          icon: YY.loadoutPerkIcon,
+          name: YY.loadoutPerkName,
+          selected: rY.selectedId === YY.loadoutPerkId,
+          equipped: YY.loadoutPerkEquipped,
+          locked: !YY.loadoutPerkOwned,
           ownedTier: 0,
           tiers: 0,
-          buttonRef: yB("dO", BB.loadoutPerkId),
+          buttonRef: AY("Ps", YY.loadoutPerkId),
           onSelect: () => {
-            dB.select(BB.loadoutPerkId)
+            DY.select(YY.loadoutPerkId)
           }
-        }, BB.loadoutPerkId)))
+        }, YY.loadoutPerkId)))
       });
-      const pB = VT(VB, TB.slot);
-      return (0, sB.jsx)("div", {
+      const IY = Fr(FY, rY.slot);
+      return (0, eY.jsx)("div", {
         className: "BoardTiles",
-        children: pB.loadoutSlotOptions.map((BB => (0, sB.jsx)(aT, {
-          icon: BB.loadoutOptionIcon,
-          name: BB.loadoutOptionName,
-          selected: TB.selectedId === BB.loadoutOptionId,
-          equipped: pB.loadoutSlotEquippedId === BB.loadoutOptionId,
-          locked: 0 === BB.loadoutOptionOwnedTier,
-          ownedTier: BB.loadoutOptionOwnedTier,
-          tiers: BB.loadoutOptionTiers.length,
-          buttonRef: yB("dO", BB.loadoutOptionId),
+        children: IY.loadoutSlotOptions.map((YY => (0, eY.jsx)(Mr, {
+          icon: YY.loadoutOptionIcon,
+          name: YY.loadoutOptionName,
+          selected: rY.selectedId === YY.loadoutOptionId,
+          equipped: IY.loadoutSlotEquippedId === YY.loadoutOptionId,
+          locked: 0 === YY.loadoutOptionOwnedTier,
+          ownedTier: YY.loadoutOptionOwnedTier,
+          tiers: YY.loadoutOptionTiers.length,
+          buttonRef: AY("Ps", YY.loadoutOptionId),
           onSelect: () => {
-            dB.select(BB.loadoutOptionId)
+            DY.select(YY.loadoutOptionId)
           }
-        }, BB.loadoutOptionId)))
+        }, YY.loadoutOptionId)))
       })
     }
 
-    function XT(BB) {
+    function br(YY) {
       let {
-        loadout: TB
-      } = BB;
-      return (0, sB.jsx)(PB, {
-        coins: TB.loadoutCoins,
-        children: TB.loadoutHeldParts.filter((BB => BB.loadoutHeldPartAmount > 0)).map((BB => (0, sB.jsx)(KB, {
-          itemName: BB.loadoutHeldPartItem,
-          amount: BB.loadoutHeldPartAmount
-        }, BB.loadoutHeldPartCurrency)))
+        loadout: rY
+      } = YY;
+      return (0, eY.jsx)(hY, {
+        coins: rY.loadoutCoins,
+        children: rY.loadoutHeldParts.filter((YY => YY.loadoutHeldPartAmount > 0)).map((YY => (0, eY.jsx)(zY, {
+          itemName: YY.loadoutHeldPartItem,
+          amount: YY.loadoutHeldPartAmount
+        }, YY.loadoutHeldPartCurrency)))
       })
     }
 
-    function WT(BB) {
+    function Xr(YY) {
       let {
-        controller: TB
-      } = BB;
-      const dB = (0, oB.f)(LT, TB.getSnapshot()),
+        controller: rY
+      } = YY;
+      const DY = (0, vY.k)(sr, rY.getSnapshot()),
         {
-          t: VB
-        } = (0, kB.z)();
-      if (null === dB.loadout) return null;
-      const yB = dB.notice;
-      return (0, sB.jsx)(sT, {
-        view: dB,
-        onDismiss: TB.dismiss,
-        children: (0, sB.jsxs)(wB, {
-          open: dB.open,
-          onDismiss: TB.dismiss,
-          title: VB(`${MB}:loadoutTitle`),
+          t: FY
+        } = (0, uY.C)();
+      if (null === DY.loadout) return null;
+      const AY = DY.notice;
+      return (0, eY.jsx)(er, {
+        view: DY,
+        onDismiss: rY.dismiss,
+        children: (0, eY.jsxs)(cY, {
+          open: DY.open,
+          onDismiss: rY.dismiss,
+          title: FY(`${NY}:loadoutTitle`),
           className: "ContainmentLoadoutPanel",
-          headerExtra: (0, sB.jsx)(XT, {
-            loadout: dB.loadout
+          headerExtra: (0, eY.jsx)(br, {
+            loadout: DY.loadout
           }),
-          statusRefused: null === yB || void 0 === yB ? void 0 : yB.loadoutNoticeRefused,
-          status: (0, sB.jsxs)(sB.Fragment, {
-            children: [(0, sB.jsx)("span", {
+          statusRefused: null === AY || void 0 === AY ? void 0 : AY.loadoutNoticeRefused,
+          status: (0, eY.jsxs)(eY.Fragment, {
+            children: [(0, eY.jsx)("span", {
               className: "LoadoutRadioBadge",
-              children: VB(`${MB}:loadoutRadioBadge`)
-            }), null !== yB && VB(`${MB}:${yB.loadoutNoticeKey}`, {
-              name: yB.loadoutNoticeName,
-              tier: (0, eB.U)(yB.loadoutNoticeTier),
-              max: String(dB.loadout.loadoutMaxPerks)
+              children: FY(`${NY}:loadoutRadioBadge`)
+            }), null !== AY && FY(`${NY}:${AY.loadoutNoticeKey}`, {
+              name: AY.loadoutNoticeName,
+              tier: (0, tY.R)(AY.loadoutNoticeTier),
+              max: String(DY.loadout.loadoutMaxPerks)
             })]
           }),
-          children: [(0, sB.jsx)(QT, {
-            view: dB,
-            controller: TB
-          }), (0, sB.jsx)(ZT, {
-            view: dB,
-            controller: TB
-          }), (0, sB.jsx)(ST, {
-            view: dB,
-            controller: TB
+          children: [(0, eY.jsx)(dr, {
+            view: DY,
+            controller: rY
+          }), (0, eY.jsx)(wr, {
+            view: DY,
+            controller: rY
+          }), (0, eY.jsx)(jr, {
+            view: DY,
+            controller: rY
           })]
         })
       })
     }
 
-    function hT(BB, TB, dB) {
-      const VB = BB.locatorEntries.find((BB => BB.locatorEntryId === dB));
-      if (!VB) return null;
-      const yB = VB.locatorEntryName;
-      if ("locatorDisarm" === TB) return VB.locatorEntryArmed ? {
-        board: CT(BB, null),
-        notice: GT("locatorNoticeDisarmed", yB)
+    function qr(YY, rY, DY) {
+      const FY = YY.locatorEntries.find((YY => YY.locatorEntryId === DY));
+      if (!FY) return null;
+      const AY = FY.locatorEntryName;
+      if ("locatorDisarm" === rY) return FY.locatorEntryArmed ? {
+        board: pr(YY, null),
+        notice: kr("locatorNoticeDisarmed", AY)
       } : null;
-      if ("locatorArm" === TB) return VB.locatorEntryOwned && !VB.locatorEntryArmed ? {
-        board: CT(BB, dB),
-        notice: GT("locatorNoticeArmed", yB)
+      if ("locatorArm" === rY) return FY.locatorEntryOwned && !FY.locatorEntryArmed ? {
+        board: pr(YY, DY),
+        notice: kr("locatorNoticeArmed", AY)
       } : null;
-      if (VB.locatorEntryOwned || BB.locatorCoins < VB.locatorEntryPrice) return null;
-      const pB = CT({
-        ...BB,
-        locatorCoins: BB.locatorCoins - VB.locatorEntryPrice
-      }, dB);
+      if (FY.locatorEntryOwned || YY.locatorCoins < FY.locatorEntryPrice) return null;
+      const IY = pr({
+        ...YY,
+        locatorCoins: YY.locatorCoins - FY.locatorEntryPrice
+      }, DY);
       return {
         board: {
-          ...pB,
-          locatorEntries: pB.locatorEntries.map((BB => BB.locatorEntryId === dB ? {
-            ...BB,
+          ...IY,
+          locatorEntries: IY.locatorEntries.map((YY => YY.locatorEntryId === DY ? {
+            ...YY,
             locatorEntryOwned: !0
-          } : BB))
+          } : YY))
         },
-        notice: GT("locatorNoticeBought", yB)
+        notice: kr("locatorNoticeBought", AY)
       }
     }
 
-    function CT(BB, TB) {
+    function pr(YY, rY) {
       return {
-        ...BB,
-        locatorEntries: BB.locatorEntries.map((BB => {
-          const dB = BB.locatorEntryId === TB;
-          return BB.locatorEntryArmed === dB ? BB : {
-            ...BB,
-            locatorEntryArmed: dB
+        ...YY,
+        locatorEntries: YY.locatorEntries.map((YY => {
+          const DY = YY.locatorEntryId === rY;
+          return YY.locatorEntryArmed === DY ? YY : {
+            ...YY,
+            locatorEntryArmed: DY
           }
         }))
       }
     }
 
-    function GT(BB, TB) {
+    function kr(YY, rY) {
       return {
-        locatorNoticeKey: BB,
+        locatorNoticeKey: YY,
         locatorNoticeRefused: !1,
-        locatorNoticeName: TB
+        locatorNoticeName: rY
       }
     }
-    const qT = "containmentLocatorView";
-    class xT extends BT {
-      constructor(BB, TB, dB, VB) {
-        super(BB, TB, dB, VB, "locator", hT), this.snapshot = this.buildSnapshot()
+    const Gr = "containmentLocatorView";
+    class xr extends Yr {
+      constructor(YY, rY, DY, FY) {
+        super(YY, rY, DY, FY, "locator", qr), this.snapshot = this.buildSnapshot()
       }
-      messageOpens(BB) {
-        return BB.locatorMessageOpens
+      messageOpens(YY) {
+        return YY.locatorMessageOpens
       }
-      messageNotice(BB) {
-        return BB.locatorNotice
+      messageNotice(YY) {
+        return YY.locatorNotice
       }
-      openingSelection(BB) {
-        var TB;
-        const dB = BB.locatorEntries;
-        return (null !== (TB = dB.find((BB => BB.locatorEntryArmed))) && void 0 !== TB ? TB : dB[0]).locatorEntryId
+      openingSelection(YY) {
+        var rY;
+        const DY = YY.locatorEntries;
+        return (null !== (rY = DY.find((YY => YY.locatorEntryArmed))) && void 0 !== rY ? rY : DY[0]).locatorEntryId
       }
       buildSnapshot() {
         return {
@@ -2050,245 +2050,245 @@ export const modules = {
         }
       }
     }
-    const jT = {
-        locatorContained: `${MB}:locatorFlavourContained`,
-        locatorEncountered: `${MB}:locatorFlavourEncountered`,
-        locatorUnseen: `${MB}:locatorFlavourUnseen`
+    const nr = {
+        locatorContained: `${NY}:locatorFlavourContained`,
+        locatorEncountered: `${NY}:locatorFlavourEncountered`,
+        locatorUnseen: `${NY}:locatorFlavourUnseen`
       },
-      AT = {
+      Pr = {
         codexAnyDifficulty: null,
-        codexNormalOnly: `${MB}:locatorAttunedNormal`,
-        codexHardOnly: `${MB}:locatorAttunedHard`
+        codexNormalOnly: `${NY}:locatorAttunedNormal`,
+        codexHardOnly: `${NY}:locatorAttunedHard`
       };
 
-    function bT() {
-      return (0, sB.jsx)(sB.Fragment, {
+    function Ur() {
+      return (0, eY.jsx)(eY.Fragment, {
         children: Array.from({
           length: 5
-        }, ((BB, TB) => (0, sB.jsx)("span", {
+        }, ((YY, rY) => (0, eY.jsx)("span", {
           className: "LocatorFly",
-          children: (0, sB.jsx)("img", {
+          children: (0, eY.jsx)("img", {
             src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAICAYAAADwdn+XAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAYElEQVR4nGNgoBboMlb5LyUjD8YgNtHyJ6/d+Q/CILa1lz9YAbo4DCDLYxjQv3gt3AYQG90AdHkUQ/qhkjAb0BURkgcDmAQMo7sSXR7deyiGoIvDvIOsGasB+ACyBmTNACS0go3ibhumAAAAAElFTkSuQmCC",
             alt: "",
             draggable: !1
           })
-        }, TB)))
+        }, rY)))
       })
     }
 
-    function nT(BB) {
+    function Lr(YY) {
       let {
-        entry: TB
-      } = BB;
+        entry: rY
+      } = YY;
       const {
-        t: dB
-      } = (0, kB.z)();
-      return TB.locatorEntryArmed ? (0, sB.jsx)("span", {
+        t: DY
+      } = (0, uY.C)();
+      return rY.locatorEntryArmed ? (0, eY.jsx)("span", {
         className: "BoardBadge Armed",
-        children: dB(`${MB}:locatorArmedBadge`)
-      }) : TB.locatorEntryOwned ? (0, sB.jsx)("span", {
+        children: DY(`${NY}:locatorArmedBadge`)
+      }) : rY.locatorEntryOwned ? (0, eY.jsx)("span", {
         className: "BoardBadge",
-        children: dB(`${MB}:locatorOwnedBadge`)
+        children: DY(`${NY}:locatorOwnedBadge`)
       }) : null
     }
 
-    function eT(BB) {
+    function tr(YY) {
       let {
-        entry: TB,
-        coins: dB,
-        inTile: VB = !1
-      } = BB;
-      return (0, sB.jsx)(KB, {
-        itemName: zB,
-        amount: TB.locatorEntryPrice,
-        Dg: dB,
-        inTile: VB
+        entry: rY,
+        coins: DY,
+        inTile: FY = !1
+      } = YY;
+      return (0, eY.jsx)(zY, {
+        itemName: BY,
+        amount: rY.locatorEntryPrice,
+        ja: DY,
+        inTile: FY
       })
     }
 
-    function Bd(BB) {
+    function YD(YY) {
       let {
-        view: TB,
-        controller: dB,
-        entry: VB
-      } = BB;
+        view: rY,
+        controller: DY,
+        entry: FY
+      } = YY;
       const {
-        t: yB
-      } = (0, kB.z)(), pB = VB.locatorEntryId, lB = TB.locators.locatorEntries.find((BB => BB.locatorEntryArmed && BB !== VB));
-      return (0, sB.jsxs)("div", {
+        t: AY
+      } = (0, uY.C)(), IY = FY.locatorEntryId, RY = rY.locators.locatorEntries.find((YY => YY.locatorEntryArmed && YY !== FY));
+      return (0, eY.jsxs)("div", {
         className: "BoardActions",
-        children: [VB.locatorEntryArmed && (0, sB.jsx)(DB.T, {
-          disabled: TB.pending,
+        children: [FY.locatorEntryArmed && (0, eY.jsx)(yY.J, {
+          disabled: rY.pending,
           onClick: () => {
-            dB.act("locatorDisarm", pB)
+            DY.act("locatorDisarm", IY)
           },
-          children: yB(`${MB}:locatorDisarm`)
-        }), VB.locatorEntryOwned && !VB.locatorEntryArmed && (0, sB.jsx)(DB.d, {
-          disabled: TB.pending,
+          children: AY(`${NY}:locatorDisarm`)
+        }), FY.locatorEntryOwned && !FY.locatorEntryArmed && (0, eY.jsx)(yY.f, {
+          disabled: rY.pending,
           onClick: () => {
-            dB.act("locatorArm", pB)
+            DY.act("locatorArm", IY)
           },
-          children: yB(`${MB}:locatorArm`)
-        }), !VB.locatorEntryOwned && (0, sB.jsxs)("div", {
+          children: AY(`${NY}:locatorArm`)
+        }), !FY.locatorEntryOwned && (0, eY.jsxs)("div", {
           className: "LocatorBuy",
-          children: [(0, sB.jsx)(eT, {
-            entry: VB,
-            coins: TB.locators.locatorCoins
-          }), (0, sB.jsx)(DB.k, {
-            disabled: TB.locators.locatorCoins < VB.locatorEntryPrice || TB.pending,
+          children: [(0, eY.jsx)(tr, {
+            entry: FY,
+            coins: rY.locators.locatorCoins
+          }), (0, eY.jsx)(yY.n, {
+            disabled: rY.locators.locatorCoins < FY.locatorEntryPrice || rY.pending,
             onClick: () => {
-              dB.act("locatorBuy", pB)
+              DY.act("locatorBuy", IY)
             },
-            children: yB(`${MB}:locatorBuy`)
+            children: AY(`${NY}:locatorBuy`)
           })]
-        }), lB && !VB.locatorEntryArmed && (0, sB.jsx)("span", {
+        }), RY && !FY.locatorEntryArmed && (0, eY.jsx)("span", {
           className: "BoardHint",
-          children: yB(`${MB}:locatorReplacesHint`, {
-            name: lB.locatorEntryName
+          children: AY(`${NY}:locatorReplacesHint`, {
+            name: RY.locatorEntryName
           })
         })]
       })
     }
 
-    function Td(BB) {
+    function rD(YY) {
       let {
-        entry: TB
-      } = BB;
-      return "locatorUnseen" === TB.locatorEntryStanding ? (0, sB.jsx)(UB, {
+        entry: rY
+      } = YY;
+      return "locatorUnseen" === rY.locatorEntryStanding ? (0, eY.jsx)(KY, {
         itemName: "Compass"
-      }) : (0, sB.jsx)(FB, {
-        anomalyId: TB.locatorEntryId,
-        caught: "locatorContained" === TB.locatorEntryStanding
+      }) : (0, eY.jsx)(HY, {
+        anomalyId: rY.locatorEntryId,
+        caught: "locatorContained" === rY.locatorEntryStanding
       })
     }
 
-    function dd(BB) {
+    function DD(YY) {
       let {
-        view: TB,
-        controller: dB,
-        entry: VB
-      } = BB;
+        view: rY,
+        controller: DY,
+        entry: FY
+      } = YY;
       const {
-        t: yB
-      } = (0, kB.z)(), pB = AT[VB.locatorEntryDifficulty];
-      return (0, sB.jsxs)("section", {
+        t: AY
+      } = (0, uY.C)(), IY = Pr[FY.locatorEntryDifficulty];
+      return (0, eY.jsxs)("section", {
         className: "BoardDetail",
-        children: [(0, sB.jsxs)("div", {
-          className: gB()("LocatorLabel", {
-            Armed: VB.locatorEntryArmed
+        children: [(0, eY.jsxs)("div", {
+          className: aY()("LocatorLabel", {
+            Armed: FY.locatorEntryArmed
           }),
-          children: [(0, sB.jsx)(SB, {
-            icon: (0, sB.jsx)(Td, {
-              entry: VB
+          children: [(0, eY.jsx)(jY, {
+            icon: (0, eY.jsx)(rD, {
+              entry: FY
             }),
-            name: yB(`${MB}:locatorName`, {
-              name: VB.locatorEntryName
+            name: AY(`${NY}:locatorName`, {
+              name: FY.locatorEntryName
             }),
-            children: (0, sB.jsx)(nT, {
-              entry: VB
+            children: (0, eY.jsx)(Lr, {
+              entry: FY
             })
-          }), (0, sB.jsx)("p", {
+          }), (0, eY.jsx)("p", {
             className: "BoardDescription",
-            children: yB(VB.locatorEntryArmed ? `${MB}:locatorFlavourArmed` : jT[VB.locatorEntryStanding])
-          }), null !== pB && (0, sB.jsx)("p", {
+            children: AY(FY.locatorEntryArmed ? `${NY}:locatorFlavourArmed` : nr[FY.locatorEntryStanding])
+          }), null !== IY && (0, eY.jsx)("p", {
             className: "LocatorAttuned",
-            children: yB(pB)
-          }), (0, sB.jsx)("p", {
+            children: AY(IY)
+          }), (0, eY.jsx)("p", {
             className: "BoardDescription LocatorUsage",
-            children: yB(`${MB}:locatorUsage`)
+            children: AY(`${NY}:locatorUsage`)
           })]
-        }), (0, sB.jsx)(Bd, {
-          view: TB,
-          controller: dB,
-          entry: VB
+        }), (0, eY.jsx)(YD, {
+          view: rY,
+          controller: DY,
+          entry: FY
         })]
       })
     }
 
-    function Vd(BB) {
+    function FD(YY) {
       let {
-        controller: TB
-      } = BB;
-      const dB = (0, oB.f)(qT, TB.getSnapshot()),
+        controller: rY
+      } = YY;
+      const DY = (0, vY.k)(Gr, rY.getSnapshot()),
         {
-          t: VB
-        } = (0, kB.z)(),
-        yB = dB.locators;
-      if (null === yB) return null;
-      const pB = yB.locatorEntries.find((BB => BB.locatorEntryId === dB.selectedId)),
-        lB = dB.notice;
-      return (0, sB.jsxs)(wB, {
-        open: dB.open,
-        onDismiss: TB.dismiss,
-        title: VB(`${MB}:locatorTitle`),
+          t: FY
+        } = (0, uY.C)(),
+        AY = DY.locators;
+      if (null === AY) return null;
+      const IY = AY.locatorEntries.find((YY => YY.locatorEntryId === DY.selectedId)),
+        RY = DY.notice;
+      return (0, eY.jsxs)(cY, {
+        open: DY.open,
+        onDismiss: rY.dismiss,
+        title: FY(`${NY}:locatorTitle`),
         className: "ContainmentLocatorPanel",
-        decor: (0, sB.jsx)(bT, {}),
-        headerExtra: (0, sB.jsx)(PB, {
-          coins: yB.locatorCoins
+        decor: (0, eY.jsx)(Ur, {}),
+        headerExtra: (0, eY.jsx)(hY, {
+          coins: AY.locatorCoins
         }),
-        statusRefused: null === lB || void 0 === lB ? void 0 : lB.locatorNoticeRefused,
-        status: (0, sB.jsxs)(sB.Fragment, {
-          children: [(0, sB.jsx)("span", {
+        statusRefused: null === RY || void 0 === RY ? void 0 : RY.locatorNoticeRefused,
+        status: (0, eY.jsxs)(eY.Fragment, {
+          children: [(0, eY.jsx)("span", {
             className: "LocatorKeeperBadge",
-            children: VB(`${MB}:locatorKeeperName`)
-          }), null !== lB && VB(`${MB}:${lB.locatorNoticeKey}`, {
-            name: lB.locatorNoticeName
+            children: FY(`${NY}:locatorKeeperName`)
+          }), null !== RY && FY(`${NY}:${RY.locatorNoticeKey}`, {
+            name: RY.locatorNoticeName
           })]
         }),
-        children: [(0, sB.jsx)("div", {
+        children: [(0, eY.jsx)("div", {
           className: "BoardTiles",
-          children: yB.locatorEntries.map((BB => (0, sB.jsxs)(cB, {
-            icon: (0, sB.jsx)(Td, {
-              entry: BB
+          children: AY.locatorEntries.map((YY => (0, eY.jsxs)(fY, {
+            icon: (0, eY.jsx)(rD, {
+              entry: YY
             }),
-            name: BB.locatorEntryName,
-            selected: BB === pB,
+            name: YY.locatorEntryName,
+            selected: YY === IY,
             locked: !1,
-            className: gB()("LocatorTag", {
-              Armed: BB.locatorEntryArmed
+            className: aY()("LocatorTag", {
+              Armed: YY.locatorEntryArmed
             }),
             onSelect: () => {
-              TB.select(BB.locatorEntryId)
+              rY.select(YY.locatorEntryId)
             },
-            children: [(0, sB.jsx)(nT, {
-              entry: BB
-            }), !BB.locatorEntryOwned && (0, sB.jsx)(eT, {
-              entry: BB,
-              coins: yB.locatorCoins,
+            children: [(0, eY.jsx)(Lr, {
+              entry: YY
+            }), !YY.locatorEntryOwned && (0, eY.jsx)(tr, {
+              entry: YY,
+              coins: AY.locatorCoins,
               inTile: !0
             })]
-          }, BB.locatorEntryId)))
-        }), (0, sB.jsx)(dd, {
-          view: dB,
-          controller: TB,
-          entry: pB
+          }, YY.locatorEntryId)))
+        }), (0, eY.jsx)(DD, {
+          view: DY,
+          controller: rY,
+          entry: IY
         })]
       })
     }
 
-    function yd(BB) {
+    function AD(YY) {
       let {
-        loadout: TB,
-        codex: dB,
-        locator: VB
-      } = BB;
-      return (0, sB.jsxs)(sB.Fragment, {
-        children: [(0, sB.jsx)(WT, {
-          controller: TB
-        }), (0, sB.jsx)(nB, {
-          controller: dB
-        }), (0, sB.jsx)(Vd, {
-          controller: VB
+        loadout: rY,
+        codex: DY,
+        locator: FY
+      } = YY;
+      return (0, eY.jsxs)(eY.Fragment, {
+        children: [(0, eY.jsx)(Xr, {
+          controller: rY
+        }), (0, eY.jsx)(LY, {
+          controller: DY
+        }), (0, eY.jsx)(FD, {
+          controller: FY
         })]
       })
     }
-    var pd = dB(37506);
-    class ld {
-      constructor(BB) {
-        let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
-        this.sendCommand = BB, this.budget = void 0, this.awaitingReply = !1, this.replyTimer = null, this.listeners = new Set, this.budget = new pd.d({
+    var ID = DY(37926);
+    class RD {
+      constructor(YY) {
+        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
+        this.sendCommand = YY, this.budget = void 0, this.awaitingReply = !1, this.replyTimer = null, this.listeners = new Set, this.budget = new ID.e({
           spacingMs: 0,
-          now: TB
+          now: rY
         }), this.budget.subscribe((() => {
           this.notify()
         }))
@@ -2296,17 +2296,17 @@ export const modules = {
       isPending() {
         return this.awaitingReply || this.budget.isPacing()
       }
-      send(BB, TB) {
+      send(YY, rY) {
         return !this.isPending() && (this.awaitingReply = !0, this.replyTimer = setTimeout((() => {
-          this.replyTimer = null, this.awaitingReply = !1, TB(), this.notify()
-        }), 8e3), this.budget.start(), this.sendCommand(BB), !0)
+          this.replyTimer = null, this.awaitingReply = !1, rY(), this.notify()
+        }), 8e3), this.budget.start(), this.sendCommand(YY), !0)
       }
       onReply() {
         this.awaitingReply = !1, this.clearReplyTimer()
       }
-      subscribe(BB) {
-        return this.listeners.add(BB), () => {
-          this.listeners.delete(BB)
+      subscribe(YY) {
+        return this.listeners.add(YY), () => {
+          this.listeners.delete(YY)
         }
       }
       dispose() {
@@ -2316,300 +2316,300 @@ export const modules = {
         null !== this.replyTimer && (clearTimeout(this.replyTimer), this.replyTimer = null)
       }
       notify() {
-        for (const BB of this.listeners) BB()
+        for (const YY of this.listeners) YY()
       }
     }
-    var Jd = dB(37493);
-    const Yd = new Map([
-      ["npc_general", uT],
-      ["npc_tentacle_guy", Jd]
+    var OD = DY(37918);
+    const gD = new Map([
+      ["npc_general", Qr],
+      ["npc_tentacle_guy", OD]
     ]);
 
-    function gd(BB) {
-      const TB = Yd.get(BB);
-      if (void 0 === TB) return null;
-      const dB = document.createElement("img");
-      return dB.src = TB, dB.alt = "", dB.draggable = !1, dB.style.imageRendering = "pixelated", dB
+    function aD(YY) {
+      const rY = gD.get(YY);
+      if (void 0 === rY) return null;
+      const DY = document.createElement("img");
+      return DY.src = rY, DY.alt = "", DY.draggable = !1, DY.style.imageRendering = "pixelated", DY
     }
-    const od = function() {
-      let BB, TB = !1,
-        dB = null,
-        YB = null;
-      const gB = [],
-        oB = BB => {
-          for (const TB of gB) TB !== BB && TB.close();
-          (0, JB.o)()
+    const vD = function() {
+      let YY, rY = !1,
+        DY = null,
+        gY = null;
+      const aY = [],
+        vY = YY => {
+          for (const rY of aY) rY !== YY && rY.close();
+          (0, OY.o)()
         },
-        kB = BB => {
-          BB && (0, JB.h)()
+        uY = YY => {
+          YY && (0, OY.h)()
         },
-        LB = new ld((TB => {
-          BB.sendCommand(TB)
+        sY = new RD((rY => {
+          YY.sendCommand(rY)
         })),
-        OB = new OT((BB => {
-          lB.h.yH(LT, BB, !0)
-        }), oB, kB, LB),
-        DB = new aB((BB => {
-          lB.h.yH(RB, BB, !0)
-        }), oB, kB),
-        uB = new xT((BB => {
-          lB.h.yH(qT, BB, !0)
-        }), oB, kB, LB);
-      gB.push(OB, DB, uB);
+        iY = new ir((YY => {
+          RY.g.vo(sr, YY, !0)
+        }), vY, uY, sY),
+        yY = new MY((YY => {
+          RY.g.vo(JY, YY, !0)
+        }), vY, uY),
+        QY = new xr((YY => {
+          RY.g.vo(Gr, YY, !0)
+        }), vY, uY, sY);
+      aY.push(iY, yY, QY);
       return {
-        onCreate: TB => {
-          BB = TB, dB = (0, JB.r)(null, {
-            content: (0, VB.createElement)(yd, {
-              loadout: OB,
-              codex: DB,
-              locator: uB
+        onCreate: rY => {
+          YY = rY, DY = (0, OY.q)(null, {
+            content: (0, FY.createElement)(AD, {
+              loadout: iY,
+              codex: yY,
+              locator: QY
             }),
             onClose: () => {
-              for (const BB of gB) BB.close()
+              for (const YY of aY) YY.close()
             }
-          }), YB = (0, pB.f)(gd)
+          }), gY = (0, IY.c)(aD)
         },
-        onReceivedMessageFromServer: (BB, TB) => {
-          "containmentLoadout" === BB ? OB.MD(TB) : "containmentLoadoutClose" === BB ? OB.isOpen() && (OB.close(), (0, JB.g)()) : "containmentCodex" === BB ? DB.MD(TB) : "containmentLocator" === BB && uB.MD(TB)
+        onReceivedMessageFromServer: (YY, rY) => {
+          "containmentLoadout" === YY ? iY.Cy(rY) : "containmentLoadoutClose" === YY ? iY.isOpen() && (iY.close(), (0, OY.f)()) : "containmentCodex" === YY ? yY.Cy(rY) : "containmentLocator" === YY && QY.Cy(rY)
         },
-        dL: () => {
-          TB || yB.d.get("loadingOverlayVisible") || (TB = !0, BB.sendCommand("containmentEntered"))
+        Zu: () => {
+          rY || AY.b.get("loadingOverlayVisible") || (rY = !0, YY.sendCommand("containmentEntered"))
         },
         onClose: () => {
-          var BB, TB;
-          null === (BB = dB) || void 0 === BB || BB(), dB = null, null === (TB = YB) || void 0 === TB || TB(), YB = null;
-          for (const dB of gB) dB.dispose();
-          LB.dispose()
+          var YY, rY;
+          null === (YY = DY) || void 0 === YY || YY(), DY = null, null === (rY = gY) || void 0 === rY || rY(), gY = null;
+          for (const DY of aY) DY.dispose();
+          sY.dispose()
         }
       }
     }
   },
-  35860: (BB, TB, dB) => {
-    dB.d(TB, {
-      C: () => KB,
-      D: () => MB,
-      G: () => SB,
-      K: () => PB,
-      O: () => QB,
-      R: () => cB,
-      T: () => RB,
-      e: () => YB,
-      g: () => UB,
-      k: () => JB,
-      o: () => IB,
-      s: () => zB,
-      w: () => tB,
-      y: () => rB
+  36268: (YY, rY, DY) => {
+    DY.d(rY, {
+      B: () => NY,
+      E: () => jY,
+      G: () => hY,
+      H: () => dY,
+      K: () => fY,
+      O: () => JY,
+      b: () => gY,
+      d: () => KY,
+      g: () => OY,
+      k: () => CY,
+      o: () => BY,
+      r: () => lY,
+      v: () => ZY,
+      x: () => zY
     });
-    var VB = dB(33);
-    const yB = {
+    var FY = DY(40);
+    const AY = {
         codeBlock: ["codeBlockIntro", "docsButton", "hideDocsButton", "aiHelperButton", "hideAiHelperButton", "worldCodeButton", "exportButton", "helpButton"],
         worldCode: ["worldCodeIntro", "docsButton", "hideDocsButton", "aiHelperButton", "hideAiHelperButton", "exportButton", "helpButton"]
       },
-      pB = ["docsButton", "docsPanel", "docsClientOptionsTab", "docsClientOptions", "docsApiReferenceTab", "docsApiReference", "docsCallbacksTab", "docsCallbacks", "hideDocsButton"],
-      lB = ["aiHelperButton", "aiPanel", "aiAskBox", "aiModelChip", "aiAnswer", "aiEdits", "aiGear", "aiNotes", "aiGameSettings", "hideAiHelperButton"],
-      JB = pB.filter((BB => "docsButton" !== BB)),
-      YB = lB.filter((BB => "aiHelperButton" !== BB)),
-      gB = "codeEditorTutorials",
-      oB = {
+      IY = ["docsButton", "docsPanel", "docsClientOptionsTab", "docsClientOptions", "docsApiReferenceTab", "docsApiReference", "docsCallbacksTab", "docsCallbacks", "hideDocsButton"],
+      RY = ["aiHelperButton", "aiPanel", "aiAskBox", "aiModelChip", "aiAnswer", "aiEdits", "aiGear", "aiNotes", "aiGameSettings", "hideAiHelperButton"],
+      OY = IY.filter((YY => "docsButton" !== YY)),
+      gY = RY.filter((YY => "aiHelperButton" !== YY)),
+      aY = "codeEditorTutorials",
+      vY = {
         codeBlockIntro: "codeBlockIntroShown",
         worldCodeIntro: "worldCodeIntroShown"
       },
-      kB = {
+      uY = {
         welcome: "welcomeComplete",
         docsOverview: "docsOverviewComplete",
         aiHelperOverview: "aiHelperOverviewComplete"
       };
-    let LB = null,
-      OB = null;
-    const DB = new Set,
-      uB = new Set;
-    let HB = null;
-    const EB = new Set,
-      vB = new Set;
+    let sY = null,
+      iY = null;
+    const yY = new Set,
+      QY = new Set;
+    let oY = null;
+    const WY = new Set,
+      EY = new Set;
 
-    function mB() {
-      vB.forEach((BB => {
-        BB()
+    function mY() {
+      EY.forEach((YY => {
+        YY()
       }))
     }
 
-    function iB() {
-      if (!LB) {
-        const BB = VB.j.getItem(gB);
-        LB = {
+    function VY() {
+      if (!sY) {
+        const YY = FY.m.getItem(aY);
+        sY = {
           codeBlockIntroShown: !1,
           worldCodeIntroShown: !1,
           welcomeComplete: !1,
           docsOverviewComplete: !1,
           aiHelperOverviewComplete: !1,
-          ..."object" === typeof BB && null !== BB ? BB : {}
+          ..."object" === typeof YY && null !== YY ? YY : {}
         }
       }
-      return LB
+      return sY
     }
 
-    function NB(BB) {
-      const TB = iB();
-      TB[BB] || (LB = {
-        ...TB,
-        [BB]: !0
-      }, VB.j.setItem(gB, LB))
+    function SY(YY) {
+      const rY = VY();
+      rY[YY] || (sY = {
+        ...rY,
+        [YY]: !0
+      }, FY.m.setItem(aY, sY))
     }
 
-    function tB(BB) {
-      return "docsOverview" === BB ? pB : "aiHelperOverview" === BB ? lB : OB ? yB[OB] : []
+    function lY(YY) {
+      return "docsOverview" === YY ? IY : "aiHelperOverview" === YY ? RY : iY ? AY[iY] : []
     }
 
-    function fB(BB) {
-      return ("worldCodeButton" !== BB || !iB().worldCodeIntroShown) && !EB.has(BB)
+    function TY(YY) {
+      return ("worldCodeButton" !== YY || !VY().worldCodeIntroShown) && !WY.has(YY)
     }
 
-    function sB(BB) {
-      var TB;
-      return (null === (TB = HB) || void 0 === TB ? void 0 : TB.name) === BB ? HB.stepsDone : DB
+    function eY(YY) {
+      var rY;
+      return (null === (rY = oY) || void 0 === rY ? void 0 : rY.name) === YY ? oY.stepsDone : yY
     }
 
-    function MB(BB, TB) {
-      if (! function(BB) {
-          return HB ? HB.name === BB : "welcome" === BB
-        }(BB) || !fB(TB) || sB(BB).has(TB)) return !1;
-      if (HB) return !0;
-      const dB = oB[TB];
-      return dB ? !iB()[dB] || uB.has(TB) : !iB()[kB[BB]]
+    function NY(YY, rY) {
+      if (! function(YY) {
+          return oY ? oY.name === YY : "welcome" === YY
+        }(YY) || !TY(rY) || eY(YY).has(rY)) return !1;
+      if (oY) return !0;
+      const DY = vY[rY];
+      return DY ? !VY()[DY] || QY.has(rY) : !VY()[uY[YY]]
     }
 
-    function zB(BB) {
-      var TB;
-      return null !== (TB = tB(BB).find((TB => MB(BB, TB)))) && void 0 !== TB ? TB : null
+    function BY(YY) {
+      var rY;
+      return null !== (rY = lY(YY).find((rY => NY(YY, rY)))) && void 0 !== rY ? rY : null
     }
 
-    function wB(BB) {
-      var TB;
-      NB(kB[BB]), (null === (TB = HB) || void 0 === TB ? void 0 : TB.name) === BB && (HB = null)
+    function cY(YY) {
+      var rY;
+      SY(uY[YY]), (null === (rY = oY) || void 0 === rY ? void 0 : rY.name) === YY && (oY = null)
     }
 
-    function UB(BB) {
-      const TB = (HB ? [HB.name] : ["welcome", "docsOverview"]).find((TB => zB(TB) === BB));
-      if (!TB) return;
-      sB(TB).add(BB);
-      const dB = oB[BB];
-      dB && (NB(dB), HB || uB.add(BB)), null === zB(TB) && wB(TB), mB()
+    function KY(YY) {
+      const rY = (oY ? [oY.name] : ["welcome", "docsOverview"]).find((rY => BY(rY) === YY));
+      if (!rY) return;
+      eY(rY).add(YY);
+      const DY = vY[YY];
+      DY && (SY(DY), oY || QY.add(YY)), null === BY(rY) && cY(rY), mY()
     }
 
-    function FB(BB, TB) {
-      const dB = tB(BB),
-        VB = sB(BB);
-      for (let yB = dB.indexOf(TB) - 1; yB >= 0; yB--)
-        if (VB.has(dB[yB]) && fB(dB[yB])) return dB[yB];
+    function HY(YY, rY) {
+      const DY = lY(YY),
+        FY = eY(YY);
+      for (let AY = DY.indexOf(rY) - 1; AY >= 0; AY--)
+        if (FY.has(DY[AY]) && TY(DY[AY])) return DY[AY];
       return null
     }
 
-    function KB(BB, TB) {
-      return null !== FB(BB, TB)
+    function zY(YY, rY) {
+      return null !== HY(YY, rY)
     }
 
-    function rB(BB, TB) {
-      const dB = FB(BB, TB);
-      dB && (sB(BB).delete(dB), mB())
+    function ZY(YY, rY) {
+      const DY = HY(YY, rY);
+      DY && (eY(YY).delete(DY), mY())
     }
 
-    function IB(BB) {
-      wB(BB), "welcome" === BB && tB("welcome").forEach((BB => {
-        const TB = oB[BB];
-        TB && NB(TB)
-      })), mB()
+    function CY(YY) {
+      cY(YY), "welcome" === YY && lY("welcome").forEach((YY => {
+        const rY = vY[YY];
+        rY && SY(rY)
+      })), mY()
     }
 
-    function cB(BB) {
-      HB = {
-        name: BB,
+    function fY(YY) {
+      oY = {
+        name: YY,
         stepsDone: new Set
-      }, mB()
+      }, mY()
     }
 
-    function SB() {
-      (HB || 0 !== DB.size || 0 !== uB.size) && (HB = null, DB.clear(), uB.clear(), mB())
+    function jY() {
+      (oY || 0 !== yY.size || 0 !== QY.size) && (oY = null, yY.clear(), QY.clear(), mY())
     }
 
-    function PB(BB, TB) {
-      const dB = TB ? BB : OB === BB ? null : OB;
-      dB !== OB && (OB = dB, mB())
+    function hY(YY, rY) {
+      const DY = rY ? YY : iY === YY ? null : iY;
+      DY !== iY && (iY = DY, mY())
     }
 
-    function QB(BB, TB) {
-      EB.has(BB) === TB && (TB ? EB.delete(BB) : EB.add(BB), mB())
+    function dY(YY, rY) {
+      WY.has(YY) === rY && (rY ? WY.delete(YY) : WY.add(YY), mY())
     }
 
-    function RB(BB) {
-      return vB.add(BB), () => {
-        vB.delete(BB)
+    function JY(YY) {
+      return EY.add(YY), () => {
+        EY.delete(YY)
       }
     }
   },
-  38242: (BB, TB, dB) => {
-    BB.exports = dB.p + "static/media/breach-zero-uncaught.c7d4410f99269ac1ee2f.webp"
+  38614: (YY, rY, DY) => {
+    YY.exports = DY.p + "static/media/breach-zero-uncaught.c7d4410f99269ac1ee2f.webp"
   },
-  38245: (BB, TB, dB) => {
-    BB.exports = dB.p + "static/media/breach-zero.ef5aacecf502228cd20b.webp"
+  38622: (YY, rY, DY) => {
+    YY.exports = DY.p + "static/media/breach-zero.ef5aacecf502228cd20b.webp"
   },
-  38248: (BB, TB, dB) => {
-    BB.exports = dB.p + "static/media/brood-father-uncaught.ee678432c71b7061fae1.webp"
+  38631: (YY, rY, DY) => {
+    YY.exports = DY.p + "static/media/brood-father-uncaught.ee678432c71b7061fae1.webp"
   },
-  38256: (BB, TB, dB) => {
-    BB.exports = dB.p + "static/media/brood-father.e48391955a574c1155fa.webp"
+  38637: (YY, rY, DY) => {
+    YY.exports = DY.p + "static/media/brood-father.e48391955a574c1155fa.webp"
   },
-  38258: (BB, TB, dB) => {
-    BB.exports = dB.p + "static/media/carousel-uncaught.a92757620f569f31d7d2.webp"
+  38645: (YY, rY, DY) => {
+    YY.exports = DY.p + "static/media/carousel-uncaught.a92757620f569f31d7d2.webp"
   },
-  38265: (BB, TB, dB) => {
-    BB.exports = dB.p + "static/media/carousel.5fc13db7958067d6e1a3.webp"
+  38648: (YY, rY, DY) => {
+    YY.exports = DY.p + "static/media/carousel.5fc13db7958067d6e1a3.webp"
   },
-  38272: (BB, TB, dB) => {
-    BB.exports = dB.p + "static/media/deadlock-uncaught.feadbdbbf2d040dce5c0.webp"
+  38650: (YY, rY, DY) => {
+    YY.exports = DY.p + "static/media/deadlock-uncaught.feadbdbbf2d040dce5c0.webp"
   },
-  38280: (BB, TB, dB) => {
-    BB.exports = dB.p + "static/media/deadlock.2bcaeaa57376fd78ddcb.webp"
+  38659: (YY, rY, DY) => {
+    YY.exports = DY.p + "static/media/deadlock.2bcaeaa57376fd78ddcb.webp"
   },
-  38288: (BB, TB, dB) => {
-    BB.exports = dB.p + "static/media/frost-revenant-uncaught.c0271636eeae988b1a40.webp"
+  38663: (YY, rY, DY) => {
+    YY.exports = DY.p + "static/media/frost-revenant-uncaught.c0271636eeae988b1a40.webp"
   },
-  38293: (BB, TB, dB) => {
-    BB.exports = dB.p + "static/media/frost-revenant.fed6021646d7f0f81876.webp"
+  38670: (YY, rY, DY) => {
+    YY.exports = DY.p + "static/media/frost-revenant.fed6021646d7f0f81876.webp"
   },
-  38299: (BB, TB, dB) => {
-    BB.exports = dB.p + "static/media/hollow-choir-uncaught.7eaab76a15f82bd79558.webp"
+  38678: (YY, rY, DY) => {
+    YY.exports = DY.p + "static/media/hollow-choir-uncaught.7eaab76a15f82bd79558.webp"
   },
-  38304: (BB, TB, dB) => {
-    BB.exports = dB.p + "static/media/hollow-choir.05f9c51994aecece852a.webp"
+  38681: (YY, rY, DY) => {
+    YY.exports = DY.p + "static/media/hollow-choir.05f9c51994aecece852a.webp"
   },
-  38306: (BB, TB, dB) => {
-    BB.exports = dB.p + "static/media/magma-warden-uncaught.5308736fbb8a503cdfc7.webp"
+  38686: (YY, rY, DY) => {
+    YY.exports = DY.p + "static/media/magma-warden-uncaught.5308736fbb8a503cdfc7.webp"
   },
-  38315: (BB, TB, dB) => {
-    BB.exports = dB.p + "static/media/magma-warden.cc4302a49a39ae962a31.webp"
+  38694: (YY, rY, DY) => {
+    YY.exports = DY.p + "static/media/magma-warden.cc4302a49a39ae962a31.webp"
   },
-  38318: (BB, TB, dB) => {
-    BB.exports = dB.p + "static/media/patient-zero-uncaught.1f9ec012a14c4dbdcc8f.webp"
+  38698: (YY, rY, DY) => {
+    YY.exports = DY.p + "static/media/patient-zero-uncaught.1f9ec012a14c4dbdcc8f.webp"
   },
-  38324: (BB, TB, dB) => {
-    BB.exports = dB.p + "static/media/patient-zero.cc76984bb20e9f9ace76.webp"
+  38702: (YY, rY, DY) => {
+    YY.exports = DY.p + "static/media/patient-zero.cc76984bb20e9f9ace76.webp"
   },
-  38326: (BB, TB, dB) => {
-    BB.exports = dB.p + "static/media/siege-engine-uncaught.88e0ad7fec37ba2b4a2e.webp"
+  38709: (YY, rY, DY) => {
+    YY.exports = DY.p + "static/media/siege-engine-uncaught.88e0ad7fec37ba2b4a2e.webp"
   },
-  38330: (BB, TB, dB) => {
-    BB.exports = dB.p + "static/media/siege-engine.b2e2382e415f4ae470ac.webp"
+  38717: (YY, rY, DY) => {
+    YY.exports = DY.p + "static/media/siege-engine.b2e2382e415f4ae470ac.webp"
   },
-  38336: (BB, TB, dB) => {
-    BB.exports = dB.p + "static/media/warp-stalker-uncaught.c3b1b82ecb18446b71b0.webp"
+  38726: (YY, rY, DY) => {
+    YY.exports = DY.p + "static/media/warp-stalker-uncaught.c3b1b82ecb18446b71b0.webp"
   },
-  38338: (BB, TB, dB) => {
-    BB.exports = dB.p + "static/media/warp-stalker.851972c629601b668aa7.webp"
+  38733: (YY, rY, DY) => {
+    YY.exports = DY.p + "static/media/warp-stalker.851972c629601b668aa7.webp"
   },
-  37493: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAYElEQVR4nGNgIBIwovH/45JnRFaUGN+Comr+whq4GiZ0RVycnGAMAlAxsC0sMN2fvn9DodEBzEQGdUV5hvNnV4JpGJuPkwtTIQh4umZhZWMonDqjGCsbHcCCBkQjs0kDAPeaHpfX1eroAAAAAElFTkSuQmCC"
+  37918: YY => {
+    YY.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAYElEQVR4nGNgIBIwovH/45JnRFaUGN+Comr+whq4GiZ0RVycnGAMAlAxsC0sMN2fvn9DodEBzEQGdUV5hvNnV4JpGJuPkwtTIQh4umZhZWMonDqjGCsbHcCCBkQjs0kDAPeaHpfX1eroAAAAAElFTkSuQmCC"
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

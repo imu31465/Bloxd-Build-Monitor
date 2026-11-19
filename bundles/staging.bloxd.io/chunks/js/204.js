@@ -1,277 +1,708 @@
 export const id = 204;
 export const ids = [204];
 export const modules = {
-  40261: (BB, TB, dB) => {
-    dB.r(TB), dB.d(TB, {
-      MobPreview: () => kB
+  35773: (YY, rY, DY) => {
+    DY.r(rY), DY.d(rY, {
+      CreateCustomLobby: () => HY
     });
-    var VB = dB(62),
-      yB = dB(933),
-      pB = dB.n(yB),
-      lB = dB(40263),
-      JB = dB(35817),
-      YB = dB(40266),
-      gB = dB(980);
+    DY(35778);
+    var FY = DY(4201),
+      AY = DY(61),
+      IY = DY(1654),
+      RY = DY(1092),
+      OY = DY.n(RY),
+      gY = DY(2722),
+      aY = DY(1159),
+      vY = DY(1222),
+      uY = DY(4147),
+      sY = DY(1437),
+      iY = DY(35782),
+      yY = DY(1211),
+      QY = DY(1330),
+      oY = DY(1488),
+      WY = DY(19),
+      EY = DY(1441),
+      mY = DY(625),
+      VY = DY(4516),
+      SY = DY(778),
+      lY = DY(1244),
+      TY = DY(1231),
+      eY = DY(4529),
+      NY = DY(1098),
+      BY = DY(35790),
+      cY = DY(35794),
+      KY = DY(1125);
 
-    function oB(BB) {
-      return JB.e.openMob(BB)
-    }
-    const kB = (0, VB.memo)((function(BB) {
+    function HY(YY) {
+      var rY, DY, RY, HY;
       let {
-        mobType: TB,
-        variation: dB = null,
-        animation: yB = YB.f,
-        className: JB
-      } = BB;
-      const kB = (0, VB.useRef)(null),
-        LB = (0, VB.useMemo)((() => ({
-          mobType: TB,
-          variation: dB,
-          animation: yB
-        })), [TB, dB, yB]);
-      return (0, lB.c)(kB, oB, LB), (0, gB.jsx)("div", {
-        className: pB()("MobPreview", JB),
-        ref: kB
-      })
-    }))
-  },
-  40263: (BB, TB, dB) => {
-    dB.d(TB, {
-      c: () => pB
-    });
-    var VB = dB(62),
-      yB = dB(2368);
-
-    function pB(BB, TB, dB) {
-      const pB = (0, VB.useRef)(null),
-        {
-          width: lB,
-          height: JB
-        } = (0, yB.b)(BB);
-      (0, VB.useEffect)((() => {
-        const dB = TB(BB.current);
-        return pB.current = dB, () => {
-          dB.close(), pB.current = null
-        }
-      }), [BB, TB]), (0, VB.useEffect)((() => {
-        lB <= 0 || JB <= 0 || pB.current.resize(lB, JB)
-      }), [lB, JB]), (0, VB.useEffect)((() => {
-        pB.current.show(dB)
-      }), [dB])
-    }
-  },
-  40266: (BB, TB, dB) => {
-    dB.d(TB, {
-      c: () => LB,
-      d: () => kB,
-      f: () => YB
-    });
-    var VB = dB(36496),
-      yB = dB(37598);
-
-    function pB(BB, TB) {
-      let [dB, VB, yB] = BB;
-      return [0, .5, 1].map((BB => ({
-        timeFraction: BB,
-        rotation: {
-          Xy: "catmull-rom-spline",
-          point: [dB, VB, yB + (.5 === BB ? TB : 0)]
-        }
-      })))
-    }
-
-    function lB(BB, TB, dB) {
-      return {
-        Sy: 3200,
-        loop: !0,
-        Qy: {
-          Root: {
-            timeline: [0, .5, 1].map((BB => ({
-              timeFraction: BB,
-              position: {
-                Xy: "catmull-rom-spline",
-                point: [0, .5 === BB ? .18 : 0, 0]
-              }
-            })))
-          },
-          HeadMesh: {
-            timeline: [0, .25, .75, 1].map((BB => ({
-              timeFraction: BB,
-              rotation: {
-                Xy: "catmull-rom-spline",
-                point: [0, .25 === BB ? .12 : .75 === BB ? -.12 : 0, 0]
-              }
-            })))
-          },
-          ArmLeftMesh: {
-            timeline: pB(BB, dB)
-          },
-          ArmRightMesh: {
-            timeline: pB(TB, -dB)
-          }
-        }
-      }
-    }
-    const JB = lB([0, 0, 0], [0, 0, 0], .07),
-      YB = (0, yB.b)((0, VB.h)(JB), "mobIdle"),
-      gB = lB([-.2 * Math.PI, -.15 * Math.PI, 0], [-.1 * Math.PI, .18 * Math.PI, 0], .02),
-      oB = lB([-.4 * Math.PI, -.15 * Math.PI, 0], [-.3 * Math.PI, .18 * Math.PI, 0], .02),
-      kB = (0, yB.b)((0, VB.h)(gB), "gunReady"),
-      LB = (0, yB.b)((0, VB.h)(oB), "gunAimed")
-  },
-  35819: (BB, TB, dB) => {
-    dB.d(TB, {
-      d: () => yB,
-      e: () => YB
-    });
-    const VB = {
-        yaw: .61 * Math.PI,
-        pitch: Math.PI / 2.05,
-        radius: 30,
-        target: [0, 0, 0]
-      },
-      yB = {
-        player: VB,
-        store: {
-          ...VB,
-          radius: 33,
-          target: [0, 3.9, 0]
-        }
+        gameNameWithVariation: zY,
+        close: ZY,
+        initialDefaultGamemode: CY
+      } = YY;
+      const {
+        t: fY
+      } = (0, yY.C)(), jY = (0, oY.useNavigatePreserveSearch)(), [hY, dY] = (0, AY.useState)("Enter"), [JY, MY] = (0, AY.useState)(""), wY = AY.useRef(null), bY = null === (rY = SY.d[zY]) || void 0 === rY ? void 0 : rY.showWorldsInsteadOfCustomLobbies, XY = bY ? 1 : null === (DY = SY.d[zY]) || void 0 === DY ? void 0 : DY.customLobbyCustomSchematicLimit, [qY, pY] = (0, AY.useState)(!bY);
+      CY || (CY = "classic_creative" === zY || "classic_creativeFlat" === zY ? "creative" : "classic" === zY ? "peaceful" : "survival");
+      const kY = {
+        baseOptions: {
+          gameNameWithVariation: bY ? "classic" : zY,
+          name: "",
+          visibility: "unlisted"
+        },
+        listedOptions: {
+          description: "",
+          color: "",
+          emojis: ""
+        },
+        mapOptions: {
+          mapType: "classic_creativeFlat" === zY ? "flat" : "default",
+          schematicIdList: []
+        },
+        worldOptions: null
       };
+      bY && (kY.worldOptions = {
+        defaultGamemode: CY,
+        disableProtectors: !1,
+        spawnProtection: !0,
+        disableTpRequests: !1,
+        disableTribeCreation: !1,
+        disableLobbySpawn: !1,
+        voidDeathHeight: -1e4,
+        worldBorder: null,
+        disableFallDamage: !0,
+        disableMobs: !1,
+        worldGenSeed: "",
+        enableSmpMarketplace: !1,
+        enableSurvivalGuns: !1,
+        enableSpawnReset: !1,
+        enableDayNight: !0
+      });
+      const [GY, xY] = (0, AY.useState)(kY), [nY, PY] = (0, AY.useState)(null);
 
-    function pB(BB, TB) {
-      BB instanceof Promise ? BB.then(TB).catch((BB => {
-        console.error("Couldn't open the preview", BB)
-      })) : TB(BB)
-    }
-    class lB {
-      constructor(BB) {
-        this.opened = null, this.view = null, this.size = null, this.closed = !1, pB(BB, (BB => {
-          this.closed ? BB.close() : (this.opened = BB, null !== this.size && BB.resize(this.size.width, this.size.height), null !== this.view && BB.show(this.view))
+      function UY(YY, rY) {
+        xY({
+          ...GY,
+          baseOptions: {
+            ...GY.baseOptions,
+            [YY]: rY
+          }
+        })
+      }
+
+      function LY(YY, rY) {
+        xY({
+          ...GY,
+          listedOptions: {
+            ...GY.listedOptions,
+            [YY]: rY
+          }
+        })
+      }
+
+      function tY(YY, rY) {
+        xY({
+          ...GY,
+          worldOptions: {
+            ...GY.worldOptions,
+            [YY]: rY
+          }
+        })
+      }
+
+      function Yr(YY) {
+        xY({
+          ...GY,
+          mapOptions: {
+            ...GY.mapOptions,
+            ...YY
+          }
+        })
+      }(0, AY.useEffect)((() => {
+        uY.e.getNewStarterName().then((YY => {
+          xY((rY => "" !== rY.baseOptions.name ? rY : {
+            ...rY,
+            baseOptions: {
+              ...rY.baseOptions,
+              name: YY
+            }
+          }))
+        })).catch((YY => {
+          console.error("Error getting new starter name:", YY)
         }))
-      }
-      show(BB) {
-        var TB;
-        this.view = BB, null === (TB = this.opened) || void 0 === TB || TB.show(BB)
-      }
-      resize(BB, TB) {
-        var dB;
-        this.size = {
-          width: BB,
-          height: TB
-        }, null === (dB = this.opened) || void 0 === dB || dB.resize(BB, TB)
-      }
-      close() {
-        var BB;
-        this.closed = !0, null === (BB = this.opened) || void 0 === BB || BB.close(), this.opened = null
-      }
-    }
-    class JB {
-      constructor(BB) {
-        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(BB).then((BB => BB.ready)), pB(BB, (BB => {
-          this.closed ? BB.close() : (this.opened = BB, null !== this.size && BB.resize(this.size.width, this.size.height))
+      }), []), (0, AY.useEffect)((() => {
+        "customSchematic" === GY.mapOptions.mapType && null === nY && (0, aY.postJsonWithMetricsCookiesAndJsonResponse)(`${vY.clientSideServerUrls.indexUrl}/index/schematic/get-owned-schematics`, {}, {
+          retries: 0,
+          minTimeout: 3e3
+        }).then((YY => {
+          PY(YY)
         }))
-      }
-      get dev() {
-        return this.opened.dev
-      }
-      isReady() {
-        var BB, TB;
-        return null !== (BB = null === (TB = this.opened) || void 0 === TB ? void 0 : TB.isReady()) && void 0 !== BB && BB
-      }
-      setCosmetic(BB, TB) {
-        var dB;
-        null === (dB = this.opened) || void 0 === dB || dB.setCosmetic(BB, TB)
-      }
-      playEmote(BB) {
-        var TB;
-        null === (TB = this.opened) || void 0 === TB || TB.playEmote(BB)
-      }
-      resetCamera() {
-        var BB;
-        null === (BB = this.opened) || void 0 === BB || BB.resetCamera()
-      }
-      async untilDrawn(BB) {
-        var TB;
-        await this.ready, await (null === (TB = this.opened) || void 0 === TB ? void 0 : TB.untilDrawn(BB))
-      }
-      resize(BB, TB) {
-        var dB;
-        this.size = {
-          width: BB,
-          height: TB
-        }, null === (dB = this.opened) || void 0 === dB || dB.resize(BB, TB)
-      }
-      close() {
-        var BB;
-        this.closed = !0, null === (BB = this.opened) || void 0 === BB || BB.close(), this.opened = null
-      }
-    }
-    const YB = new class {
-      constructor() {
-        this.host = null, this.makeDefault = null
-      }
-      setHost(BB) {
-        this.host = BB
-      }
-      setDefaultHost(BB) {
-        this.makeDefault = BB
-      }
-      current() {
-        if (null === this.host) {
-          if (null === this.makeDefault) throw new Error("no preview host");
-          this.host = this.makeDefault()
-        }
-        return this.host
-      }
-      openMob(BB) {
-        return new lB(this.current().openMob(BB))
-      }
-      openPet(BB) {
-        return new lB(this.current().openPet(BB))
-      }
-      openMobLineup(BB) {
-        return new lB(this.current().openMobLineup(BB))
-      }
-      openCharacter(BB, TB) {
-        return new JB(this.current().openCharacter(BB, TB))
-      }
+      }), [GY.mapOptions.mapType, nY]);
+      const rr = {
+          tpRequests: {
+            isEnabled: () => !GY.worldOptions.disableTpRequests,
+            mV: YY => {
+              tY("disableTpRequests", !YY)
+            }
+          },
+          spawnProtection: {
+            isEnabled: () => GY.worldOptions.spawnProtection,
+            mV: YY => {
+              tY("spawnProtection", YY)
+            }
+          },
+          spawnReset: {
+            isEnabled: () => GY.worldOptions.enableSpawnReset,
+            mV: YY => {
+              tY("enableSpawnReset", YY)
+            }
+          },
+          smpMarketplace: {
+            isEnabled: () => GY.worldOptions.enableSmpMarketplace,
+            mV: YY => {
+              tY("enableSmpMarketplace", YY)
+            }
+          },
+          survivalGuns: {
+            isEnabled: () => GY.worldOptions.enableSurvivalGuns,
+            mV: YY => {
+              tY("enableSurvivalGuns", YY)
+            }
+          },
+          fallDamage: {
+            isEnabled: () => !GY.worldOptions.disableFallDamage,
+            mV: YY => {
+              tY("disableFallDamage", !YY)
+            }
+          },
+          dayNight: {
+            isEnabled: () => GY.worldOptions.enableDayNight,
+            mV: YY => {
+              tY("enableDayNight", YY)
+            }
+          }
+        },
+        Dr = "Enter" !== hY,
+        Fr = (0, KY.jsx)(VY.f, {
+          className: "NameInput",
+          label: "general:name",
+          disabled: "Enter" !== hY,
+          children: (0, KY.jsx)(IY.d, {
+            domRef: wY,
+            onValueChange: (YY, rY) => {
+              const DY = (0, TY.ub)(YY);
+              UY("name", DY), wY.current.value = DY
+            },
+            maxLength: TY.Q,
+            defaultValue: GY.baseOptions.name
+          })
+        });
+      return (0, KY.jsxs)("div", {
+        className: OY()("CreateCustomLobby", {
+          CreateCustomLobbySuccess: "Success" === hY,
+          AdvancedMode: qY
+        }),
+        children: ["Success" === hY && (0, KY.jsxs)("div", {
+          className: "CreateCustomLobbySuccessOverlay",
+          children: [(0, KY.jsxs)("div", {
+            className: "CreateCustomLobbySuccessTitle FullyFancyText AnimFadeInScaleUp",
+            children: [(0, KY.jsx)(NY.e, {
+              name: "check"
+            }), (0, KY.jsx)(EY.b, {})]
+          }), (0, KY.jsx)("div", {
+            className: "CreateCustomLobbySuccessButtons AnimFadeInScaleUp",
+            children: (0, KY.jsx)(sY.n, {
+              padDefaultFocus: !0,
+              onClick: () => {
+                (0, WY.g)("worldCreation"), jY((0, QY.d)(zY, GY.baseOptions.name))
+              },
+              children: fY("homePage:joinLobbyName", {
+                lobbyName: GY.baseOptions.name
+              })
+            })
+          })]
+        }), (0, KY.jsx)("div", {
+          className: "CreateCustomLobbyTitleContainer",
+          children: (0, KY.jsx)("div", {
+            className: "CreateCustomLobbyTitle",
+            children: fY(bY ? "homePage:createWorld" : "homePage:createCustomLobby")
+          })
+        }), (0, KY.jsx)(cY.e, {
+          locked: Dr,
+          children: (0, KY.jsxs)("div", {
+            className: "CreateCustomLobbyFields",
+            children: [!qY && Fr, qY && (0, KY.jsxs)("div", {
+              className: "BloxdForm",
+              children: [(0, KY.jsx)("div", {
+                className: "SectionTitle",
+                children: fY("customLobby:generalOptions")
+              }), (0, KY.jsxs)("div", {
+                className: "SectionBody",
+                children: [Fr, (0, KY.jsx)(VY.f, {
+                  label: "customLobby:visibility",
+                  circleInfoText: fY("customLobby:visibilityDescription"),
+                  disabled: "Enter" !== hY,
+                  children: (0, KY.jsx)(gY.b, {
+                    options: FY.o.map((YY => ({
+                      value: YY,
+                      label: FY.g[YY]
+                    }))),
+                    value: GY.baseOptions.visibility,
+                    onChange: YY => {
+                      UY("visibility", YY.value)
+                    }
+                  })
+                })]
+              })]
+            }), bY && (0, KY.jsx)(BY.d, {
+              value: GY.worldOptions.defaultGamemode,
+              onChange: YY => {
+                tY("defaultGamemode", YY)
+              },
+              showAll: qY,
+              disabled: Dr
+            }), (bY || !(0, mY.H)(XY) && XY > 0) && (0, KY.jsx)(BY.e, {
+              mapTypes: bY ? FY.H : FY.n,
+              value: GY.mapOptions.mapType,
+              onChange: YY => {
+                const rY = {
+                  mapType: YY
+                };
+                "customSchematic" !== YY && (rY.schematicIdList = []), Yr(rY)
+              },
+              showAll: qY,
+              disabled: Dr,
+              children: "customSchematic" === GY.mapOptions.mapType && (0, KY.jsxs)(KY.Fragment, {
+                children: [(0, KY.jsxs)("div", {
+                  className: "SchematicListTitle AnimFadeIn",
+                  children: [bY && fY("customLobby:selectWorldSchematic"), !bY && fY("customLobby:selectCustomLobbySchematics", {
+                    schematicLimit: XY
+                  })]
+                }), (0, KY.jsx)("div", {
+                  className: OY()("SchematicListContainer AnimFadeIn", {
+                    SchematicListContainerDisabled: "Enter" !== hY
+                  }),
+                  children: (0, KY.jsx)(iY.b, {
+                    loading: null === nY,
+                    schematics: null !== nY && void 0 !== nY ? nY : [],
+                    onSchematicPicked: function(YY) {
+                      const rY = GY.mapOptions.schematicIdList;
+                      if (rY.includes(YY.schematicId)) Yr({
+                        schematicIdList: rY.filter((rY => rY !== YY.schematicId))
+                      });
+                      else {
+                        if (XY && GY.mapOptions.schematicIdList.length >= XY) return;
+                        Yr({
+                          schematicIdList: [...GY.mapOptions.schematicIdList, YY.schematicId]
+                        })
+                      }
+                    },
+                    selectedSchematicIdList: GY.mapOptions.schematicIdList,
+                    disableAutoExport: !0
+                  })
+                })]
+              })
+            }), qY && (0, KY.jsxs)("div", {
+              className: "BloxdForm",
+              children: [(0, KY.jsx)("div", {
+                className: "SectionTitle",
+                children: fY("customLobby:listedOptions")
+              }), (0, KY.jsxs)("div", {
+                className: "SectionBody",
+                children: [(0, KY.jsx)(VY.f, {
+                  label: "general:description",
+                  className: "CustomLobbyDescription",
+                  disabled: "Enter" !== hY,
+                  children: (0, KY.jsx)(IY.d, {
+                    onValueChange: (YY, rY) => {
+                      LY("description", YY)
+                    },
+                    maxLength: 100,
+                    defaultValue: GY.listedOptions.description
+                  })
+                }), (0, KY.jsx)(VY.f, {
+                  label: "general:color",
+                  circleInfoText: "customLobby:lobbyColorDescription",
+                  disabled: "Enter" !== hY,
+                  children: (0, KY.jsx)("div", {
+                    className: "OtherInput",
+                    children: (0, KY.jsx)("input", {
+                      type: "color",
+                      value: GY.listedOptions.color,
+                      onChange: YY => {
+                        LY("color", YY.target.value)
+                      }
+                    })
+                  })
+                }), (0, KY.jsx)(VY.f, {
+                  label: "general:emojis",
+                  circleInfoText: "customLobby:lobbyEmojisDescription",
+                  disabled: "Enter" !== hY,
+                  children: (0, KY.jsx)(IY.d, {
+                    onValueChange: (YY, rY) => {
+                      LY("emojis", YY)
+                    },
+                    maxLength: 6,
+                    defaultValue: GY.listedOptions.emojis
+                  })
+                })]
+              })]
+            }), qY && bY && (0, KY.jsxs)("div", {
+              className: "BloxdForm",
+              children: [(0, KY.jsx)("div", {
+                className: "SectionTitle",
+                children: fY("customLobby:advancedOptions")
+              }), (0, KY.jsxs)("div", {
+                className: "SectionBody",
+                children: [(0, KY.jsx)(VY.f, {
+                  label: "classic:worldGenSeed",
+                  disabled: "Enter" !== hY,
+                  children: (0, KY.jsx)(IY.d, {
+                    onValueChange: (YY, rY) => {
+                      tY("worldGenSeed", YY)
+                    },
+                    maxLength: TY.Q
+                  })
+                }), (0, KY.jsx)(VY.f, {
+                  label: "classic:disableProtectors",
+                  disabled: "Enter" !== hY,
+                  children: (0, KY.jsx)(VY.d, {
+                    checked: GY.worldOptions.disableProtectors,
+                    setChecked: YY => {
+                      tY("disableProtectors", YY)
+                    }
+                  })
+                }), (0, KY.jsx)(VY.f, {
+                  label: "classic:disableTribeCreation",
+                  disabled: "Enter" !== hY,
+                  children: (0, KY.jsx)(VY.d, {
+                    checked: GY.worldOptions.disableTribeCreation,
+                    setChecked: YY => {
+                      tY("disableTribeCreation", YY)
+                    }
+                  })
+                }), (0, KY.jsx)(VY.f, {
+                  label: "classic:voidDeathHeight",
+                  circleInfoText: "classic:voidDeathHeightDescription",
+                  disabled: "Enter" !== hY,
+                  children: (0, KY.jsx)("input", {
+                    type: "number",
+                    max: lY.E,
+                    value: null !== (RY = GY.worldOptions.voidDeathHeight) && void 0 !== RY ? RY : "",
+                    onChange: YY => {
+                      const rY = parseInt(YY.target.value);
+                      tY("voidDeathHeight", isNaN(rY) ? null : rY)
+                    }
+                  })
+                }), (0, KY.jsx)(VY.f, {
+                  label: "classic:disableLobbySpawn",
+                  disabled: "Enter" !== hY,
+                  children: (0, KY.jsx)(VY.d, {
+                    checked: GY.worldOptions.disableLobbySpawn,
+                    setChecked: YY => {
+                      tY("disableLobbySpawn", YY)
+                    }
+                  })
+                }), (0, KY.jsx)(VY.f, {
+                  label: "classic:worldBorder",
+                  circleInfoText: "classic:worldBorderDescription",
+                  disabled: "Enter" !== hY,
+                  children: (0, KY.jsx)("input", {
+                    type: "number",
+                    min: lY.K,
+                    max: lY.G,
+                    value: null !== (HY = GY.worldOptions.worldBorder) && void 0 !== HY ? HY : "",
+                    onChange: YY => {
+                      const rY = parseInt(YY.target.value);
+                      tY("worldBorder", isNaN(rY) ? null : rY)
+                    }
+                  })
+                }), (0, KY.jsx)(VY.f, {
+                  label: "classic:disableMobs",
+                  disabled: "Enter" !== hY,
+                  children: (0, KY.jsx)(VY.d, {
+                    checked: GY.worldOptions.disableMobs,
+                    setChecked: YY => {
+                      tY("disableMobs", YY)
+                    }
+                  })
+                })]
+              })]
+            }), bY && (0, KY.jsx)(eY.c, {
+              callbacks: rr,
+              disabled: "Enter" !== hY,
+              advancedMode: qY
+            })]
+          })
+        }), (0, KY.jsxs)("div", {
+          className: "CreateCustomLobbyFooter",
+          children: [(0, KY.jsx)(sY.n, {
+            className: "CreateCustomLobbyButton",
+            padDefaultFocus: !0,
+            loading: "Enter" !== hY,
+            onClick: () => {
+              !async function() {
+                if ("Enter" === hY) {
+                  dY("Loading"), MY("");
+                  try {
+                    await uY.e.createCustomLobby(GY), dY("Success")
+                  } catch (YY) {
+                    MY(YY.message), console.error(YY.message), dY("Enter")
+                  }
+                }
+              }()
+            },
+            children: fY("general:create")
+          }), bY && (0, KY.jsx)("div", {
+            className: "CreateCustomLobbyAdvancedToggle",
+            "data-pad-ignore": Dr || void 0,
+            children: (0, KY.jsx)(VY.f, {
+              label: "customLobby:showAdvancedOptions",
+              disabled: Dr,
+              onLabelClick: () => {
+                pY(!qY)
+              },
+              children: (0, KY.jsx)(VY.d, {
+                checked: qY,
+                setChecked: pY
+              })
+            })
+          }), JY && (0, KY.jsx)("div", {
+            className: "CreateCustomLobbyError AnimFadeInScaleUp",
+            children: JY
+          })]
+        })]
+      })
     }
   },
-  35817: (BB, TB, dB) => {
-    dB.d(TB, {
-      e: () => VB.e
+  35794: (YY, rY, DY) => {
+    DY.d(rY, {
+      e: () => gY
     });
-    var VB = dB(35819);
-    class yB {
-      constructor(BB) {
-        this.load = BB, this.loaded = null, this.loading = null
-      }
-      run(BB) {
-        return null !== this.loaded ? BB(this.loaded) : (this.loading ??= this.load().then((BB => (this.loaded = BB, BB)), (BB => {
-          throw this.loading = null, BB
-        })), this.loading.then(BB))
-      }
+    var FY = DY(1092),
+      AY = DY.n(FY),
+      IY = DY(61),
+      RY = DY(4140),
+      OY = DY(1125);
+
+    function gY(YY) {
+      let {
+        locked: rY,
+        children: DY
+      } = YY;
+      const FY = (0, IY.useRef)(null),
+        gY = (0, RY.c)(FY, "y");
+      return (0, OY.jsx)("div", {
+        ref: FY,
+        className: AY()("CreateCustomLobbyBody", {
+          CreateCustomLobbyBodyMoreAbove: gY.before,
+          CreateCustomLobbyBodyMoreBelow: gY.after
+        }),
+        "data-pad-ignore": rY || void 0,
+        children: DY
+      })
     }
-    class pB {
-      constructor() {
-        this.mobScene = new yB((() => Promise.all([dB.e(215), dB.e(214), dB.e(234), dB.e(235), dB.e(67), dB.e(66), dB.e(232), dB.e(65), dB.e(242), dB.e(236), dB.e(241), dB.e(239), dB.e(231), dB.e(206), dB.e(271), dB.e(211), dB.e(225), dB.e(237), dB.e(240), dB.e(126), dB.e(185), dB.e(207), dB.e(222), dB.e(205), dB.e(106), dB.e(68), dB.e(272), dB.e(146)]).then((() => dB(39925))))), this.characterScene = new yB((() => Promise.all([dB.e(215), dB.e(214), dB.e(234), dB.e(235), dB.e(67), dB.e(66), dB.e(232), dB.e(65), dB.e(242), dB.e(236), dB.e(241), dB.e(239), dB.e(231), dB.e(206), dB.e(271), dB.e(211), dB.e(225), dB.e(237), dB.e(240), dB.e(126), dB.e(185), dB.e(207), dB.e(222), dB.e(205), dB.e(106), dB.e(68), dB.e(272), dB.e(145)]).then((() => dB(40024)))))
-      }
-      openMob(BB) {
-        return this.mobScene.run((TB => TB.openMobPreview(BB)))
-      }
-      openPet(BB) {
-        return this.mobScene.run((TB => TB.openPetPreview(BB)))
-      }
-      openMobLineup(BB) {
-        return this.mobScene.run((TB => TB.openMobLineupPreview(BB)))
-      }
-      openCharacter(BB, TB) {
-        return this.characterScene.run((dB => dB.openCharacterPreview(BB, TB)))
-      }
+  },
+  35782: (YY, rY, DY) => {
+    DY.d(rY, {
+      b: () => vY,
+      d: () => sY
+    });
+    var FY = DY(61),
+      AY = DY(1346),
+      IY = DY(1211),
+      RY = DY(1337),
+      OY = DY(3061),
+      gY = DY(4507),
+      aY = DY(1125);
+
+    function vY(YY) {
+      let {
+        loading: rY,
+        schematics: DY,
+        onSchematicPicked: FY,
+        selectedSchematicIdList: AY = [],
+        disableAutoExport: gY
+      } = YY;
+      const {
+        t: vY
+      } = (0, IY.C)();
+      return (0, aY.jsxs)("div", {
+        className: "SchematicList",
+        children: [rY && (0, aY.jsx)(RY.c, {}), !rY && 0 === DY.length && (0, aY.jsx)("div", {
+          className: "NoSchematicsText",
+          children: vY("worldBuilder:noSavedSchematic")
+        }), !rY && DY.map((YY => (0, aY.jsx)(OY.g, {
+          source: {
+            type: "schematic",
+            schematic: YY
+          },
+          gameWidth: "25%",
+          useLongRatio: !0,
+          onClick: () => {
+            FY(YY)
+          },
+          isSelected: AY.includes(YY.schematicId),
+          hideCcu: !0,
+          hideFavourites: !0,
+          showPublishedChip: !0,
+          hideUnpublishedChip: !0,
+          disabled: YY.isAutoExported && gY,
+          disabledReason: "worldBuilder:autoExportDisabled"
+        }, YY.schematicId)))]
+      })
     }
-    VB.e.setDefaultHost((() => new pB))
-  }
+
+    function uY(YY) {
+      let {
+        ownedSchematics: rY,
+        currentWorldSchematicId: DY,
+        onClose: AY
+      } = YY;
+      const {
+        t: RY
+      } = (0, IY.C)(), [OY, uY] = (0, FY.useState)(null);
+      return (0, aY.jsxs)("div", {
+        className: "SchematicListWindow",
+        children: [null === OY && (0, aY.jsxs)(aY.Fragment, {
+          children: [(0, aY.jsx)("h1", {
+            className: "SchematicPopupTitle",
+            children: RY("worldBuilder:schematicList")
+          }), (0, aY.jsx)("h2", {
+            className: "SchematicPopupSubtitle",
+            children: RY("worldBuilder:clickSchematicForOptions")
+          }), (0, aY.jsx)("div", {
+            className: "SchematicPopupSchematicListContainer",
+            children: (0, aY.jsx)(vY, {
+              loading: !1,
+              schematics: rY,
+              onSchematicPicked: YY => {
+                uY(YY)
+              },
+              disableAutoExport: !1
+            })
+          })]
+        }), null !== OY && (0, aY.jsx)(gY.g, {
+          schematic: OY,
+          inSourceWorld: OY.schematicId === DY,
+          onSchematicUpdate: YY => {
+            uY(YY)
+          },
+          onClose: () => {
+            uY(null), AY()
+          }
+        })]
+      })
+    }
+
+    function sY(YY) {
+      let {
+        ownedSchematics: rY,
+        currentWorldSchematicId: DY,
+        onClose: FY
+      } = YY;
+      AY.NotificationProvider.showCustomPopup({
+        body: YY => (0, aY.jsx)(uY, {
+          ownedSchematics: rY,
+          currentWorldSchematicId: DY,
+          onClose: YY
+        }),
+        middleScreenPopupClassName: "SchematicPopup",
+        onClose: FY,
+        unlockPointerKey: "schematicListPopup"
+      })
+    }
+  },
+  35790: (YY, rY, DY) => {
+    DY.d(rY, {
+      d: () => aY,
+      e: () => vY
+    });
+    DY(61);
+    var FY = DY(1092),
+      AY = DY.n(FY),
+      IY = DY(4201),
+      RY = DY(332),
+      OY = DY(1211),
+      gY = DY(1125);
+
+    function aY(YY) {
+      let {
+        value: rY,
+        onChange: DY,
+        showAll: FY,
+        disabled: aY = !1
+      } = YY;
+      const {
+        t: vY
+      } = (0, OY.C)();
+      return (0, gY.jsxs)("div", {
+        className: AY()("BloxdForm GamemodeForm", {
+          BasicOptions: !FY
+        }),
+        children: [(0, gY.jsx)("div", {
+          className: "SectionTitle",
+          children: vY("classic:defaultGamemode")
+        }), (0, gY.jsx)("div", {
+          className: "SectionBody",
+          children: IY.D.map((YY => FY || (0, IY.v)(YY) ? (0, gY.jsx)("button", {
+            type: "button",
+            className: AY()("WorldGamemode", {
+              Selected: rY === YY
+            }),
+            disabled: aY,
+            onClick: () => {
+              DY(YY)
+            },
+            style: {
+              "--background-image": `url(${RY.v[YY]})`
+            },
+            children: RY.u[YY]
+          }, YY) : null))
+        })]
+      })
+    }
+
+    function vY(YY) {
+      let {
+        mapTypes: rY,
+        value: DY,
+        onChange: FY,
+        showAll: aY,
+        disabled: vY = !1,
+        children: uY
+      } = YY;
+      const {
+        t: sY
+      } = (0, OY.C)();
+      return (0, gY.jsxs)("div", {
+        className: AY()("BloxdForm MapTypeForm", {
+          BasicOptions: !aY
+        }),
+        children: [(0, gY.jsx)("div", {
+          className: "SectionTitle",
+          children: sY("customLobby:mapType")
+        }), (0, gY.jsx)("div", {
+          className: "SectionBody",
+          children: rY.map((YY => aY || (0, IY.z)(YY) ? (0, gY.jsx)("button", {
+            type: "button",
+            className: AY()("MapType", {
+              Selected: DY === YY
+            }),
+            disabled: vY,
+            onClick: () => {
+              FY(YY)
+            },
+            style: {
+              "--background-image": `url(${RY.q[YY]})`
+            },
+            children: RY.m[YY]
+          }, YY) : null))
+        }), uY]
+      })
+    }
+  },
+  35778: () => {}
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

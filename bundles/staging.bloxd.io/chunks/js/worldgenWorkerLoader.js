@@ -1,29 +1,29 @@
-export const id = 63;
-export const ids = [63];
+export const id = 68;
+export const ids = [68];
 export const modules = {
-  35430: (BB, TB, dB) => {
-    dB.d(TB, {
-      c: () => yB
+  35826: (YY, rY, DY) => {
+    DY.d(rY, {
+      d: () => AY
     });
-    const VB = {
-      wait: function(BB) {
-        return new Promise((TB => {
-          setTimeout(TB, BB)
+    const FY = {
+      wait: function(YY) {
+        return new Promise((rY => {
+          setTimeout(rY, YY)
         }))
       },
       stallMs: 2e4
     };
-    class yB {
-      constructor(BB) {
-        let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : VB;
-        this.url = BB, this.options = TB, this.timing = dB, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = BB
+    class AY {
+      constructor(YY) {
+        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : FY;
+        this.url = YY, this.options = rY, this.timing = DY, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = YY
       }
       ready() {
         if (null === this.fetched) {
-          const BB = new AbortController;
-          this.fetchAbort = BB, this.fetched = this.fetchWithRetries(BB.signal).finally((() => {
-            this.fetchAbort === BB && (this.fetchAbort = null)
+          const YY = new AbortController;
+          this.fetchAbort = YY, this.fetched = this.fetchWithRetries(YY.signal).finally((() => {
+            this.fetchAbort === YY && (this.fetchAbort = null)
           }))
         }
         return this.fetched
@@ -34,81 +34,81 @@ export const modules = {
       start() {
         return new Worker(this.scriptUrl, this.options)
       }
-      async fetchWithRetries(BB) {
-        for (let TB = 0;; TB++) {
-          const dB = new URL(this.url);
-          if (TB > 0 && dB.searchParams.set("cache-bust", `${Date.now()}-${TB}`), await this.fetchWhole(dB, BB)) return void(this.scriptUrl = dB);
-          if (TB >= 3 || BB.aborted) return;
-          if (await this.timing.wait(500 * 2 ** TB), BB.aborted) return
+      async fetchWithRetries(YY) {
+        for (let rY = 0;; rY++) {
+          const DY = new URL(this.url);
+          if (rY > 0 && DY.searchParams.set("cache-bust", `${Date.now()}-${rY}`), await this.fetchWhole(DY, YY)) return void(this.scriptUrl = DY);
+          if (rY >= 3 || YY.aborted) return;
+          if (await this.timing.wait(500 * 2 ** rY), YY.aborted) return
         }
       }
-      async fetchWhole(BB, TB) {
-        const dB = new AbortController;
-        let VB;
-        const yB = () => {
-            clearTimeout(VB), VB = setTimeout((() => {
-              dB.abort()
+      async fetchWhole(YY, rY) {
+        const DY = new AbortController;
+        let FY;
+        const AY = () => {
+            clearTimeout(FY), FY = setTimeout((() => {
+              DY.abort()
             }), this.timing.stallMs)
           },
-          pB = () => {
-            dB.abort()
+          IY = () => {
+            DY.abort()
           };
-        TB.addEventListener("abort", pB, {
+        rY.addEventListener("abort", IY, {
           once: !0
-        }), yB();
+        }), AY();
         try {
-          var lB;
-          const TB = await fetch(BB, {
-            signal: dB.signal
+          var RY;
+          const rY = await fetch(YY, {
+            signal: DY.signal
           });
-          if (!TB.ok) return !1;
-          const VB = null === (lB = TB.body) || void 0 === lB ? void 0 : lB.getReader();
-          if (!VB) return !1;
+          if (!rY.ok) return !1;
+          const FY = null === (RY = rY.body) || void 0 === RY ? void 0 : RY.getReader();
+          if (!FY) return !1;
           for (;;) {
             const {
-              done: BB
-            } = await VB.read();
-            if (BB) return !0;
-            yB()
+              done: YY
+            } = await FY.read();
+            if (YY) return !0;
+            AY()
           }
         } catch {
           return !1
         } finally {
-          clearTimeout(VB), TB.removeEventListener("abort", pB)
+          clearTimeout(FY), rY.removeEventListener("abort", IY)
         }
       }
     }
   },
-  42059: (BB, TB, dB) => {
-    dB.r(TB), dB.d(TB, {
-      createWorldgenWorker: () => gB,
-      prefetchWorldgenWorker: () => JB,
-      stopWorldgenWorkerPrefetch: () => YB,
-      worldgenWorkerReady: () => lB
+  42400: (YY, rY, DY) => {
+    DY.r(rY), DY.d(rY, {
+      createWorldgenWorker: () => aY,
+      prefetchWorldgenWorker: () => OY,
+      stopWorldgenWorkerPrefetch: () => gY,
+      worldgenWorkerReady: () => RY
     });
-    const VB = new(dB(35430).c)(new URL(dB.p + dB.u(62), dB.b), {
+    const FY = new(DY(35826).d)(new URL(DY.p + DY.u(67), DY.b), {
       name: "worldgenWorker",
       type: "module"
     });
-    let yB = !1,
-      pB = !1;
+    let AY = !1,
+      IY = !1;
 
-    function lB() {
-      return yB = !0, VB.ready()
+    function RY() {
+      return AY = !0, FY.ready()
     }
 
-    function JB() {
-      VB.ready()
+    function OY() {
+      FY.ready()
     }
 
-    function YB() {
-      yB || pB || (pB = !0, VB.cancel())
+    function gY() {
+      AY || IY || (IY = !0, FY.cancel())
     }
 
-    function gB() {
-      return VB.start()
+    function aY() {
+      return FY.start()
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

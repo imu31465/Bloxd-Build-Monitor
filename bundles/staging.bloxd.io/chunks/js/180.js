@@ -1,161 +1,37 @@
 export const id = 180;
 export const ids = [180];
 export const modules = {
-  8623: (BB, TB, dB) => {
-    dB.r(TB), dB.d(TB, {
-      packDisplayName: () => DB,
-      packModelMessage: () => uB,
-      packModelSummary: () => EB,
-      refusedPackModels: () => HB
+  8472: (YY, rY, DY) => {
+    DY.r(rY), DY.d(rY, {
+      pageBody: () => FY
     });
-    var VB = dB(8629),
-      yB = dB(8634);
-    const pB = "DRACO",
-      lB = 0,
-      JB = 1,
-      YB = 0,
-      gB = 1,
-      oB = 32768;
-
-    function kB(BB) {
-      const TB = new DataView(BB.buffer, BB.byteOffset, BB.byteLength);
-      let dB = 0;
-      const VB = () => {
-          if (dB >= BB.byteLength) throw new RangeError("past the stream");
-          return BB[dB++]
-        },
-        yB = () => {
-          if (dB + 4 > BB.byteLength) throw new RangeError("past the stream");
-          const VB = TB.getUint32(dB, !0);
-          return dB += 4, VB
-        },
-        kB = () => {
-          let BB = 0;
-          for (let TB = 0; TB < 35; TB += 7) {
-            const dB = VB();
-            if (BB += (127 & dB) * 2 ** TB, 0 === (128 & dB)) return BB
-          }
-          throw new RangeError("varint too long")
-        };
-      try {
-        for (let BB = 0; BB < pB.length; BB++)
-          if (VB() !== pB.charCodeAt(BB)) return null;
-        const TB = VB(),
-          LB = VB(),
-          OB = VB(),
-          DB = VB(),
-          uB = VB() | VB() << 8;
-        if (2 !== TB) return null;
-        0 !== (uB & oB) && function(BB, TB, dB) {
-          const VB = () => {
-              TB(dB())
-            },
-            yB = () => {
-              let dB = 1,
-                yB = !0;
-              for (; dB > 0;) {
-                dB--, yB || VB(), yB = !1;
-                const pB = BB();
-                for (let dB = 0; dB < pB; dB++) VB(), TB(BB());
-                dB += BB()
-              }
-            },
-            pB = BB();
-          for (let lB = 0; lB < pB; lB++) BB(), yB();
-          yB()
-        }(kB, (TB => {
-          if (dB + TB > BB.byteLength) throw new RangeError("past the stream");
-          dB += TB
-        }), VB);
-        const HB = LB < 2 ? yB : kB;
-        if (OB === lB) return {
-          faces: 0,
-          vertices: yB()
-        };
-        if (OB !== JB) return null;
-        if (DB === YB) {
-          return {
-            faces: HB(),
-            vertices: HB()
-          }
-        }
-        if (DB !== gB) return null;
-        VB(), LB < 2 && kB();
-        const EB = kB();
-        return {
-          faces: kB(),
-          vertices: EB
-        }
-      } catch {
-        return null
-      }
-    }
-
-    function LB(BB, TB, dB) {
-      var VB, yB;
-      if (null === (VB = null === (yB = BB.extensionsUsed) || void 0 === yB ? void 0 : yB.includes("KHR_draco_mesh_compression")) || void 0 === VB || !VB) return null;
-      for (const DB of null !== (pB = BB.meshes) && void 0 !== pB ? pB : []) {
-        var pB;
-        for (const VB of DB.primitives) {
-          var lB, JB, YB, gB, oB, LB;
-          const yB = null === (lB = VB.extensions) || void 0 === lB ? void 0 : lB.KHR_draco_mesh_compression;
-          if ("object" !== typeof yB || null === yB) continue;
-          const pB = null === (JB = BB.bufferViews) || void 0 === JB ? void 0 : JB[yB.bufferView];
-          if (null === TB || void 0 === pB) return OB;
-          const DB = null !== (YB = pB.byteOffset) && void 0 !== YB ? YB : 0,
-            uB = kB(TB.subarray(DB, DB + pB.byteLength));
-          if (null === uB && !dB) continue;
-          const HB = null !== (gB = BB.accessors) && void 0 !== gB ? gB : [],
-            EB = null === (oB = HB[VB.attributes.POSITION]) || void 0 === oB ? void 0 : oB.count,
-            vB = void 0 === VB.indices ? 0 : null === (LB = HB[VB.indices]) || void 0 === LB ? void 0 : LB.count;
-          if (null === uB || void 0 === EB || void 0 === vB || 3 * uB.faces !== vB || uB.vertices > EB) return OB
-        }
-      }
-      return null
-    }
-    const OB = "has a Draco stream whose counts don't match its accessors";
-
-    function DB(BB) {
-      var TB;
-      return null !== (TB = BB.name) && void 0 !== TB ? TB : BB.fromFolderName || BB.id
-    }
-
-    function uB(BB, TB, dB) {
-      return `Texture pack "${BB}": model "${TB}" was not loaded because it ${dB}. The default model is used instead.`
-    }
-
-    function HB(BB, TB, dB) {
-      let {
-        strictDraco: pB = !1
-      } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const lB = {};
-      for (const [JB, YB] of Object.entries(TB)) {
-        let TB;
-        if (YB.startsWith("data:")) try {
-          const BB = new Uint8Array((0, yB.u)(YB));
-          if (TB = (0, VB.d)(BB), null === TB) {
-            const {
-              json: dB,
-              bin: VB
-            } = (0, yB.y)(BB);
-            TB = LB(dB, VB, pB)
-          }
-        } catch {
-          TB = "is not a binary glTF 2.0 file"
-        } else TB = "loads data from outside the file";
-        TB && (lB[JB] = TB, dB && console.warn(uB(BB, JB, TB)))
-      }
-      return lB
-    }
-
-    function EB(BB, TB) {
-      const dB = Object.keys(TB);
-      if (0 === dB.length) return null;
-      if (1 === dB.length) return uB(BB, dB[0], TB[dB[0]]);
-      const VB = dB.map((BB => `"${BB}" ${TB[BB]}`)).join("; ");
-      return `Texture pack "${BB}": ${dB.length} models were not loaded (${VB}). The default models are used instead.`
+    const FY = {
+      whatIs: ["You might not be the only one checking in. Bloxd Horror Hotel sends you down an infinite hallway of hotel rooms, collecting items so you can level up and decorate a room of your own. Anyone can play for free, straight from a browser tab. Just be careful what's waiting behind the doors..."],
+      howToPlay: ["Your stay starts in a tiny room, so first things first: go and complain to the manager. The first upgrade is free. After that, upgrades cost items, beginning with a red bed you'll have to \"borrow\" from someone else's room. Head down the corridor to find what you need. Some doors open into bedrooms with strange guests. Others lead to forests, mines, mazes and buried treasure.", "Got the items? Use the home button on the left to fast travel back. You can keep upgrading all the way to level 22, change your room colours and invite friends round. You also get to decide whether PvP, visitors and editors are allowed in your room. Play nicely, though. Take down too many players in a row and the Angry Hotel Manager steps in, and you won't like what happens next. Oh, and if you hear a sudden spooky sound, there might be a skinwalker close by."],
+      features: ["An Infinite Hallway of Hotel Rooms to Explore", "Forest, Mining, Maze and Buried Treasure Rooms", "Quirky Guests Who Need Your Help", "Upgrade Your Room All the Way to Level 22", "Pick from a Range of Room Colours", "Invite Friends and Control PvP, Visitors and Editors", "A Creepy Skinwalker and a Secret Room to Find"],
+      tips: ["Talk to the manager first and grab your free room upgrade", "Check what your next upgrade costs, then go looking for those items in other rooms", "Help guests with their requests, like the thirsty guest in the desert room", "Use the home button on the left to fast travel back to your room", "Friends need a high enough room level before you can invite them", "Don't go on a streak of attacking other players, or the Angry Hotel Manager will definately step in", "Keep exploring. There's always another room further down the hall"],
+      similarGames: ["ninetyNineNights", "containmentBreach", "backrooms", "murderMystery"],
+      faq: [{
+        question: "What is Bloxd Horror Hotel?",
+        answer: "A spooky exploration game. You wander an endless hotel, collect items from other rooms and use them to upgrade and decorate your own."
+      }, {
+        question: "Does Horror Hotel really have infinite rooms?",
+        answer: "It does. The hallway just keeps going, with bedrooms, forests, mines, mazes and buried treasure rooms to find. There's even a secret room hidden somewhere."
+      }, {
+        question: "How do I upgrade my room in Horror Hotel?",
+        answer: "Talk to the manager. The first upgrade's free, then each level costs items you find around the hotel, starting with a red bed."
+      }, {
+        question: "What is the max room level in Horror Hotel?",
+        answer: "Level 22. Once you hit it, your room is maxed out."
+      }, {
+        question: "Can friends visit my hotel room?",
+        answer: "Yes, as long as their room level is high enough. You can also choose whether to allow visitors, editors and PvP."
+      }, {
+        question: "Is Horror Hotel scary?",
+        answer: "A bit! It's spooky, with odd guests, eerie sounds and a skinwalker lurking about. It's creepy rather than gory, and you can explore at your own pace."
+      }]
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

@@ -1,655 +1,669 @@
 export const id = 102;
 export const ids = [102];
 export const modules = {
-  8209: (BB, TB, dB) => {
-    dB.r(TB), dB.d(TB, {
-      default: () => gT
+  4483: (YY, rY, DY) => {
+    DY.d(rY, {
+      e: () => sY
     });
-    var VB = dB(1422),
-      yB = dB(21),
-      pB = dB(4064),
-      lB = dB(62),
-      JB = dB(1317);
-    var YB = dB(1679),
-      gB = dB(1407),
-      oB = dB(1235),
-      kB = dB(1078),
-      LB = dB(4027);
-    const OB = {
-      private: "customLobby:cantJoinPrivate",
-      notWhitelisted: "customLobby:cantJoinNotWhitelisted",
-      banned: "customLobby:cantJoinBanned",
-      adminLocked: "customLobby:cantJoinAdminLocked"
-    };
-    var DB = dB(3993),
-      uB = dB(163),
-      HB = dB(1020),
-      EB = dB(24),
-      vB = dB(1126),
-      mB = dB(1596),
-      iB = dB(95),
-      NB = dB(1201),
-      tB = dB(1304),
-      fB = dB(3934),
-      sB = dB(3808),
-      MB = dB(2729),
-      zB = dB(980);
-    const wB = "https://discord.gg/playbloxd";
+    var FY = DY(1092),
+      AY = DY.n(FY),
+      IY = DY(1098),
+      RY = DY(1337),
+      OY = DY(3082),
+      gY = DY(144),
+      aY = DY(3139),
+      vY = DY(3123),
+      uY = DY(1125);
 
-    function UB(BB) {
+    function sY(YY) {
       let {
-        failure: TB
-      } = BB;
-      const {
-        t: dB
-      } = (0, kB.z)(), VB = "chosen" === TB.packSource, yB = iB.featureFlags.useDiscord ? VB ? "texturePackLoad:failedHelpCustomPack" : "texturePackLoad:failedHelp" : VB ? "texturePackLoad:failedHelpCustomPackNoDiscord" : "texturePackLoad:failedHelpNoDiscord";
-      return (0, zB.jsxs)(zB.Fragment, {
-        children: [dB(yB, {
-          code: TB.code
-        }), "default" !== TB.packSource && TB.code === MB.j.Error && (0, zB.jsxs)("div", {
-          style: {
-            paddingTop: "1rem",
-            overflowWrap: "anywhere"
-          },
-          children: [dB("texturePackLoad:details"), " ", TB.reason]
-        }), iB.featureFlags.useDiscord && (0, zB.jsx)("div", {
-          style: {
-            paddingTop: "1rem"
-          },
-          children: (0, zB.jsx)("a", {
-            href: wB,
-            target: "_blank",
-            rel: "noreferrer",
-            children: dB("texturePackLoad:reportOnDiscord")
+        game: rY
+      } = YY;
+      const DY = (0, gY.h)() ? "large" : "small",
+        FY = (0, aY.c)(rY, DY),
+        sY = (0, OY.f)(FY),
+        iY = void 0 !== sY.blurhash;
+      return (0, uY.jsxs)("div", {
+        className: "SchematicImageContainer",
+        children: [sY.isLoading && !iY && (0, uY.jsx)(RY.c, {
+          loaderType: "Secondary"
+        }), !sY.failed && (null !== sY.src || iY) && (0, uY.jsx)("div", {
+          className: AY()("SchematicImage", vY.j, {
+            SchematicImageFadeIn: sY.fadeIn && !iY
+          }),
+          style: (0, vY.h)(sY),
+          children: (0, uY.jsx)(vY.d, {
+            image: sY
+          })
+        }), sY.failed && (0, uY.jsx)("div", {
+          className: "SchematicImageError",
+          children: (0, uY.jsx)(IY.e, {
+            name: "face-dizzy"
           })
         })]
       })
     }
-    var FB = dB(2076),
-      KB = dB(1214),
-      rB = dB(663),
-      IB = dB(1109),
-      cB = dB(900),
-      SB = dB(1393),
-      PB = dB(1105),
-      QB = dB(2768),
-      RB = dB(2614),
-      aB = dB(1242),
-      ZB = dB(1225),
-      XB = dB(4400),
-      WB = dB(8214),
-      hB = dB(2474);
+  },
+  4615: (YY, rY, DY) => {
+    DY.d(rY, {
+      e: () => iY
+    });
+    var FY = DY(61),
+      AY = DY(1092),
+      IY = DY.n(AY),
+      RY = DY(4536),
+      OY = DY(1337),
+      gY = DY(1211),
+      aY = DY(2746),
+      vY = DY(2872),
+      uY = DY(1098),
+      sY = DY(1125);
 
-    function CB(BB) {
+    function iY(YY) {
       let {
-        onApply: TB,
-        onSkip: dB
-      } = BB;
+        folderName: rY,
+        onTexturePackUpdated: AY,
+        disabled: iY = !1,
+        maxFileSizeMb: yY,
+        packOwner: QY
+      } = YY;
       const {
-        t: VB
-      } = (0, kB.z)();
-      return (0, lB.useEffect)((() => {
-        hB.h.skipPlayWait()
-      }), []), (0, zB.jsx)(aB.h, {
-        icon: "download",
-        title: "customTexturePack:downloadTitle",
-        subtitle: (0, zB.jsxs)("div", {
-          className: "CustomTexturePackDownloaderSubtitleText",
-          children: [VB("customTexturePack:downloadPrompt"), (0, zB.jsx)("div", {
-            className: "CustomTexturePackDownloaderWarningText",
-            children: VB("customTexturePack:authorWarning")
-          }), (0, zB.jsx)("div", {
-            className: "CustomTexturePackDownloaderSecondaryText",
-            children: VB("customTexturePack:existingPackSaved")
-          })]
-        }),
-        confirm: {
-          text: "general:apply",
-          onClick: TB
-        },
-        cancel: {
-          text: "customTexturePack:skip",
-          onClick: dB
-        }
-      })
-    }
-    async function GB() {
-      let BB = !1;
-      const TB = oB.NotificationProvider.showCustomPopup({
-        body: TB => (0, zB.jsx)(CB, {
-          onApply: () => {
-            BB = !0, TB()
-          },
-          onSkip: TB
-        }),
-        disableExitButton: !0,
-        disablePressBackgroundToClose: !0
-      });
-      return await TB.getResult(), BB
-    }
-    let qB = {
-      wanted: !1
-    };
-    let xB = null;
-
-    function jB(BB) {
-      BB.setGamePackConfirm(GB), xB = BB
-    }
-    var AB = dB(2983);
-
-    function bB(BB) {
-      let {
-        schematicId: TB,
-        texturePackKey: dB,
-        onClose: VB
-      } = BB;
-      const [yB, pB] = (0, lB.useState)("prompt"), [JB, YB] = (0, lB.useState)(null), gB = (0, AB.b)();
-
-      function oB() {
-        VB()
-      }
-      return "prompt" === yB ? (0, zB.jsx)(CB, {
-        onApply: async function() {
-          pB("downloading");
+        t: oY
+      } = (0, gY.C)(), [WY, EY] = (0, FY.useState)(!1), [mY, VY] = (0, FY.useState)(null), [SY, lY] = (0, FY.useState)(null), TY = (0, FY.useRef)(null);
+      const {
+        getRootProps: eY,
+        getInputProps: NY,
+        isDragActive: BY
+      } = (0, RY.d)({
+        onDrop: async function(YY) {
+          EY(!0);
           try {
-            const BB = await async function(BB, TB) {
-              const dB = await (0, XB.c)(TB);
-              if (dB) return {
-                pack: dB,
-                key: TB
-              };
-              const VB = await HB.userContextManager.getCurrentUserContext(),
-                yB = (await SB.c.getGame(VB, BB, !0)).customTexturePackKey;
-              if (!yB) return null;
-              const pB = await (0, XB.c)(yB);
-              if (!pB) throw new Error("The texture pack could not be found");
-              return {
-                pack: pB,
-                key: yB
-              }
-            }(TB, dB);
-            if (!gB.current) return;
-            if (!BB) return void VB();
-            if ((0, QB.m)(BB.pack)) return void pB("refused");
-            RB.b.setFromJson(BB.pack, "customGame"), await RB.b.saveTemporaryTexturePack(BB.key), gB.current && (0, mB.reloadBloxd)()
-          } catch (BB) {
-            YB(BB instanceof Error ? BB.message : String(BB)), pB("error")
-          }
-        },
-        onSkip: oB
-      }) : "downloading" === yB ? (0, zB.jsx)(aB.h, {
-        icon: "download",
-        title: "customTexturePack:downloading",
-        subtitle: (0, zB.jsx)("div", {
-          className: "CustomTexturePackDownloaderLogoLoaderContainer",
-          children: (0, zB.jsx)(ZB.b, {
-            showFace: !0
-          })
-        })
-      }) : "error" === yB ? (0, zB.jsx)(aB.h, {
-        icon: "face-worried",
-        title: "customTexturePack:errorTitle",
-        subtitle: JB,
-        confirm: {
-          text: "customTexturePack:refreshPage",
-          onClick: () => {
-            window.location.reload()
-          }
-        },
-        cancel: {
-          text: "customTexturePack:skip",
-          onClick: oB
-        }
-      }) : "refused" === yB ? (0, zB.jsx)(aB.h, {
-        icon: "face-worried",
-        title: "customTexturePack:cantApplyTitle",
-        subtitle: "customTexturePack:gamePackHasExternalUrls",
-        confirm: {
-          text: "general:continue",
-          onClick: oB
-        }
-      }) : null
-    }
-    var nB = dB(8223),
-      eB = dB(3780),
-      BT = dB(1622),
-      TT = dB(2702),
-      dT = dB(2925),
-      VT = dB(4081),
-      yT = dB(1185),
-      pT = dB(586),
-      lT = dB(615);
-
-    function JT() {
-      const BB = yB.d.get("clientEscMenuOptions");
-      YB.gameBridge.send("setLookSensitivity", yB.d.get("isTouchScreen") ? (0, lT.k)(BB) : BB.mouseSensitivity)
-    }
-    async function YT(BB, TB, dB) {
-      const VB = (0, VT.H)(TB);
-      async function lB(BB, TB, dB, VB) {
-        var lB;
-        if (VB.aborted) return null;
-        null === yB.d.get("gameEntrySource") && (0, yB.i)("directPlayUrl"), pT.p && (0, WB.c)().catch((() => {})), yB.d.set({
-          gameState: "findingLobby"
-        }), EB.h.yH("loadingScreenState", "loadingPage:findingLobby");
-        const JB = await HB.userContextManager.getCurrentUserContext();
-        YB.gameBridge.send("setRequestedGame", {
-          gameNameWithVariation: TB,
-          discordContext: BB instanceof IB.i ? BB.getSerialisableParams() : null
-        }), (0, BT.g)();
-        const gB = await async function(BB, TB, dB, VB, yB) {
-          try {
-            await pB.reqLibsLoadedPromise
-          } catch (lB) {
-            return vB.d.errorWithCode(lB.toString(), uB.i.LOAD_REQUIRED_LIBS, {
-              error: lB,
-              severity: "medium"
-            })
-          }
-          return EB.h.yH("matchmakeAndPlayStepCompleted", {
-            step: uB.i.LOAD_REQUIRED_LIBS,
-            totalSubSteps: 1
-          }), (0, pB.matchmakeAndPlayMaybeUnloaded)(BB, TB, dB, VB, yB)
-        }(BB, TB, dB, JB, VB), oB = gB.isError() ? gB.asError() : null;
-        if (oB && !oB.debugResult.IT) {
-          console.log("Failed to join lobby:", oB.message);
-          const BB = "timedOut" === oB.debugResult.gameServerUnreachable;
-          (0, TT.i)("matchmake_failed", oB.message, BB ? "CONNECT_TO_GAME_SERVER_TIMEOUT" : uB.i[oB.code])
-        }
-        if (VB.aborted) return YB.gameBridge.send("leaveGame", {
-          reloadPath: null
-        }), null;
-        if (null !== oB && void 0 !== oB && oB.debugResult.IT) return console.log("Join cancelled:", oB.message), null;
-        if (oB) return gB;
-        const {
-          gameNameWithVariation: kB,
-          lobbyName: LB,
-          addLobbyToRecentlyPlayed: OB
-        } = gB.getValue();
-        let DB;
-        JT(), (0, yT.z)().setGameViewShown(!0);
-        const mB = null === (lB = rB.e[kB]) || void 0 === lB ? void 0 : lB.recentlyPlayedAs;
-        return DB = (0, cB.j)(kB) ? {
-          type: "custom",
-          name: "",
-          schematicId: (0, cB.l)(kB),
-          recentLobbies: []
-        } : "classic" !== kB || (0, PB.O)(LB) ? mB ? {
-          type: "bloxd",
-          gameNameWithVariation: mB,
-          recentLobbies: []
-        } : {
-          type: "bloxd",
-          gameNameWithVariation: kB,
-          recentLobbies: []
-        } : {
-          type: "bloxd",
-          gameNameWithVariation: "classic_worlds",
-          recentLobbies: []
-        }, SB.c.addRecentlyPlayedGame(JB, DB, OB && !mB ? LB : void 0).then((BB => {
-          JB.setRecentlyPlayedGames(BB)
-        })).catch((BB => {
-          console.error("Failed to record recently played game", BB)
-        })), (0, NB.N)(), gB
-      }
-      return VB && (0, yB.i)("updateRejoin"), (0, dT.f)((async yB => {
-        try {
-          let JB = BB,
-            YB = await lB(JB, TB, dB, yB);
-          for (let BB = 0; VB && BB < VT.i; BB++) {
-            var pB;
-            if (null === (pB = YB) || void 0 === pB || !pB.isError() || YB.asError().code !== uB.i.REQUEST_TO_MATCHMAKING) break;
-            if (!await (0, VT.I)((0, VT.r)(BB), yB)) return YB;
-            JB = (0, VT.s)(JB, BB + 1, "string" === typeof JB && (0, PB.O)(JB)), YB = await lB(JB, TB, dB, yB)
-          }
-          return YB
-        } catch (JB) {
-          if ((0, TT.i)("matchmake_failed", JB, "unexpected"), YB.gameBridge.send("leaveGame", {
-              reloadPath: yB.aborted ? null : "/"
-            }), yB.aborted) return null;
-          throw JB
-        }
-      }), (async BB => {
-        var dB;
-        if (VB) return;
-        const yB = (0, NB.D)();
-        null !== yB && (await yB, BB.aborted) || (null !== (dB = rB.e[TB]) && void 0 !== dB && dB.playAdBeforeMatchmaking ? (hB.h.skipPlayWait(), await new Promise((BB => {
-          (0, NB.cb)((() => {
-            BB(!0)
-          }), "video_start")
-        }))) : (0, NB.cb)((() => {}), "video_start"))
-      }))
-    }
-
-    function gT() {
-      const {
-        t: BB
-      } = (0, kB.z)(), TB = (0, gB.useNavigatePreserveSearch)(), dB = (0, VB.o)(), EB = (0, VB.u)(), vB = (0, lB.useRef)({
-        t: BB,
-        navigate: TB
-      });
-      vB.current = {
-        t: BB,
-        navigate: TB
-      };
-      const wB = (0, lB.useRef)("");
-      wB.current = dB.pathname + dB.search;
-      const {
-        gameState: rB,
-        clientEscMenuOptions: IB
-      } = (0, yB.m)(["gameState", "clientEscMenuOptions"]), QB = (0, lB.useRef)(null), aB = (0, lB.useRef)(null);
-      var ZB;
-      (0, dT.i)(), (0, dT.j)(), ZB = pT.p, (0, lB.useEffect)((() => {
-        if (!ZB) return;
-        let BB = !0;
-        return (0, WB.c)().then((TB => {
-          BB && jB(TB)
-        })).catch((() => {})), () => {
-          var TB;
-          BB = !1, qB.wanted = !1, null === (TB = xB) || void 0 === TB || TB.setGamePackConfirm(null), xB = null
-        }
-      }), [ZB]), (0, lB.useEffect)((() => {
-        var BB;
-        (0, pB.needGameClientNow)();
-        const {
-          t: TB,
-          navigate: VB
-        } = vB.current, lB = (0, nB.c)(EB, dB.search);
-        if (EB.lobbyName && !new URLSearchParams(dB.search).has("lobby")) return void VB((0, KB.b)(lB.gameNameWithVariation, lB.lobbyName), {
-          replace: !0
-        });
-        let JB = Promise.resolve({
-          shouldMatchmake: !0
-        });
-        if ("/play/discord-custom-lobby" === dB.pathname) {
-          const BB = yB.d.get("discordContext");
-          if (!BB) return void VB("/");
-          JB = DB.e.setupDiscordLobby(BB, "classic").then((() => ({
-            shouldMatchmake: !0,
-            discordContext: BB
-          }))).catch((TB => (console.error("Failed to setup discord lobby", TB), {
-            shouldMatchmake: !1,
-            discordContext: BB
-          })))
-        } else if (!lB.gameNameWithVariation || !(0, PB.M)(lB.gameNameWithVariation)) return console.error(`Valid game name with variation is required. Received ${lB.gameNameWithVariation}`), void VB(-1);
-        if (lB.gameNameWithVariation === QB.current && lB.lobbyName === aB.current) return;
-        if (YB.gameBridge.latest("connectedGame").replay) return void(0, dT.c)(null);
-        (0, NB.J)(), yB.d.set({
-          gameState: "loadingScreen"
-        });
-        const gB = function() {
-          qB.wanted = !1;
-          const BB = {
-            wanted: !0
-          };
-          return qB = BB, () => BB.wanted
-        }();
-        if ("releaseCountdown" === (null === (BB = (0, FB.d)(lB.gameNameWithVariation)) || void 0 === BB ? void 0 : BB.type)) return console.error(`Game hasn't been released yet: ${lB.gameNameWithVariation}`), void VB(-1);
-        const kB = lB.gameNameWithVariation;
-        if (kB && (pT.p || (0, cB.j)(kB))) {
-          const BB = pT.p ? Promise.all([(0, WB.c)(), HB.userContextManager.getCurrentUserContext()]).then((BB => {
-            let [TB, dB] = BB;
-            if (gB()) return jB(TB), TB.packForGame(kB, dB, gB)
-          })) : async function(BB) {
-            await RB.b.indexedDbValuesAreLoaded();
-            const TB = await HB.userContextManager.getCurrentUserContext(),
-              dB = (0, cB.l)(BB);
-            let VB;
-            try {
-              VB = await SB.c.getGame(TB, dB, !0)
-            } catch (lB) {
-              return void console.error("Failed to get game", lB)
+            const rY = await (0, aY.r)(YY);
+            if ("customGame" === QY && (0, vY.l)(rY)) return void VY(oY(vY.d));
+            if (void 0 !== yY) {
+              const YY = JSON.stringify(rY).length / 1048576;
+              if (YY > yY) return void VY(`File size is too large. Max size is ${yY}MB. Current size is ${YY}MB.`)
             }
-            const yB = VB.customTexturePackKey;
-            if (!yB) return void(RB.b.isUsingTemporaryTexturePack() && ((0, mB.reloadBloxd)(), await new Promise((() => {}))));
-            if (RB.b.isUsingTemporaryTexturePack() && RB.b.getTemporaryTexturePackSource() === yB) return;
-            const pB = oB.NotificationProvider.showCustomPopup({
-              body: BB => (0, zB.jsx)(bB, {
-                schematicId: dB,
-                texturePackKey: yB,
-                onClose: BB
-              }),
-              disableExitButton: !0,
-              disablePressBackgroundToClose: !0
-            });
-            await pB.getResult()
-          }(kB), TB = JB;
-          JB = BB.catch((BB => {
-            console.error("Failed to check for custom texture pack", BB)
-          })).then((() => TB))
-        }(0, dT.c)(null);
-        let tB = !1;
-        const rB = dB.pathname + dB.search,
-          IB = () => !tB && wB.current === rB;
-        return JB.then((BB => {
-          let {
-            shouldMatchmake: dB,
-            discordContext: pB
-          } = BB;
-          IB() && (dB ? YT(null !== pB && void 0 !== pB ? pB : lB.lobbyName, pB ? "classic" : lB.gameNameWithVariation, lB.directJoinVmUrl).then((BB => {
-            var dB, pB;
-            if (null !== BB && IB())
-              if (BB.isError()) {
-                var JB;
-                const gB = BB.asError(),
-                  kB = null !== (JB = gB.debugResult.severity) && void 0 !== JB ? JB : "high";
-                if (gB.code === uB.i.SHADER_PACK) return void(0, eB.b)(gB.message, VB);
-                const DB = yB.d.get("gameEntrySource"),
-                  HB = gB.code === uB.i.INITIALISE_WEBGL ? (0, sB.b)() : null,
-                  {
-                    error: EB
-                  } = gB.debugResult,
-                  vB = gB.code === uB.i.REQUEST_TO_MATCHMAKING ? function(BB) {
-                    var TB;
-                    return null !== (TB = Object.keys(LB.b).find((TB => LB.b[TB] === BB))) && void 0 !== TB ? TB : null
-                  }(gB.message) : null;
-                let NB;
-                if (null !== vB) oB.NotificationProvider.showPromptPopup({
-                  icon: "lock",
-                  title: TB((pB = vB, "notWhitelisted" === pB ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld")),
-                  subtitle: TB(OB[vB]),
-                  confirmText: TB("general:ok"),
-                  cancelText: ""
-                }), NB = Promise.resolve(!1);
-                else if (null !== HB) NB = (0, sB.g)(HB);
-                else if (EB instanceof MB.k) dB = EB, NB = oB.NotificationProvider.showPromptPopup({
-                  icon: "face-dizzy",
-                  title: "texturePackLoad:failedTitle",
-                  subtitle: (0, zB.jsx)(UB, {
-                    failure: dB
-                  }),
-                  confirmText: "general:tryAgain",
-                  cancelText: "general:back"
-                }).getResult().then((BB => !0 === BB));
-                else {
-                  let BB;
-                  switch (kB) {
-                    case "low":
-                      BB = "face-diagonal-mouth";
-                      break;
-                    case "medium":
-                      BB = "face-worried";
-                      break;
-                    case "high":
-                      BB = "face-dizzy"
-                  }
-                  NB = oB.NotificationProvider.showPromptPopup({
-                    icon: BB,
-                    title: uB.w[gB.code],
-                    subtitle: (0, zB.jsxs)(zB.Fragment, {
-                      children: [gB.debugResult.gameServerUnreachable ? TB((0, iB.isMobile)() ? "general:gameServerUnreachableMobile" : "general:gameServerUnreachable") : gB.message, gB.debugResult.error instanceof Error && (0, zB.jsx)("div", {
-                        style: {
-                          fontSize: "0.9rem",
-                          paddingTop: "1rem"
-                        },
-                        children: (0, zB.jsx)(fB.b, {
-                          errorString: gB.debugResult.error.stack
-                        })
-                      })]
-                    }),
-                    confirmText: TB("general:tryAgain"),
-                    cancelText: TB("general:cancel")
-                  }).getResult().then((BB => !0 === BB))
-                }
-                NB.then((BB => {
-                  if (BB) {
-                    (0, yB.i)(DB);
-                    const BB = (0, KB.b)(lB.gameNameWithVariation, lB.lobbyName);
-                    "low" === kB ? VB(BB) : (0, mB.reloadBloxd)(BB)
-                  }
-                })), YB.gameBridge.send("leaveGame", {
-                  reloadPath: "/"
-                }), VB(-1)
-              } else {
-                QB.current = BB.getValue().gameNameWithVariation, aB.current = BB.getValue().lobbyName;
-                const TB = (0, KB.b)(QB.current, BB.getValue().lobbyName);
-                VB(TB, {
-                  replace: !0
-                })
-              }
-          })).catch((BB => {
-            if (!IB()) return;
-            oB.NotificationProvider.showPromptPopup({
-              icon: "face-dizzy",
-              title: "Unexpected Error",
-              subtitle: (0, zB.jsxs)(zB.Fragment, {
-                children: [TB("homePage:pleaseCopyError"), (0, zB.jsx)("div", {
-                  style: {
-                    fontSize: "0.9rem",
-                    paddingTop: "1rem"
-                  },
-                  children: (0, zB.jsx)(fB.b, {
-                    errorString: BB.stack
-                  })
-                })]
-              }),
-              confirmText: TB("general:tryAgain"),
-              cancelText: TB("general:cancel")
-            }).getResult().then((BB => {
-              !0 === BB && (0, mB.reloadBloxd)((0, KB.b)(lB.gameNameWithVariation, lB.lobbyName))
-            })), VB(-1)
-          })) : VB(-1))
-        })), () => {
-          tB = !0
-        }
-      }), [EB, dB.search, dB.pathname]), (0, lB.useEffect)((() => {
-        IB.disableFullscreen && (0, tB.d)() ? (0, tB.h)() : !IB.disableFullscreen && (0, tB.e)() && (0, tB.o)()
-      }), [rB, IB]), (0, lB.useEffect)((() => {
-        "inGame" === rB && JT()
-      }), [rB, IB]), (0, lB.useEffect)((() => {
-        "inGame" !== rB && yB.d.set({
-          openInGameMenuName: null
-        })
-      }), [rB]);
-      const XB = function(BB) {
-        const TB = (0, yB.g)(BB),
-          [dB, VB] = (0, lB.useState)(0),
-          [pB, YB] = (0, lB.useState)(!1);
-        (0, JB.e)("gameJoined", (() => {
-          (0, yB.g)(yB.d.get("gameState")) && (VB((BB => BB + 1)), YB(!0))
-        })), (0, lB.useEffect)((() => {
-          TB || YB(!1)
-        }), [TB]);
-        const gB = "inGame" === BB;
-        return {
-          mounted: gB || TB && pB,
-          shown: gB,
-          key: dB
-        }
-      }(rB);
-      return (0, zB.jsx)(zB.Fragment, {
-        children: XB.mounted && (0, zB.jsx)(pB.InGameUi, {
-          shown: XB.shown
-        }, XB.key)
+            VY(null), lY(null), AY(rY), TY.current = rY,
+              function(YY, rY) {
+                const FY = YY.modelOverrides;
+                FY && Promise.all([DY.e(190), DY.e(189)]).then((() => DY(8800))).then((DY => {
+                  let {
+                    packDisplayName: AY,
+                    refusedPackModels: IY,
+                    packModelSummary: RY
+                  } = DY;
+                  const OY = AY(YY.metaData);
+                  rY(RY(OY, IY(OY, FY, !1)))
+                })).catch((YY => {
+                  console.error("Checking the texture pack's models failed:", YY)
+                }))
+              }(rY, (YY => {
+                TY.current === rY && lY(YY)
+              }))
+          } catch {
+            VY("Invalid Texture Pack Folder")
+          } finally {
+            EY(!1)
+          }
+        },
+        useFsAccessApi: !1,
+        disabled: iY
+      });
+      return (0, sY.jsxs)("div", {
+        className: "CustomTexturePackContainer",
+        children: [(0, sY.jsxs)("div", {
+          className: "CustomTextureWarning",
+          children: [oY("settingsMenu:customTextureWarning"), ".", (0, sY.jsx)("br", {}), oY("settingsMenu:viewDocumentation"), ":", " ", (0, sY.jsx)("a", {
+            href: "https://github.com/Bloxdy/texturePacks",
+            target: "_blank",
+            rel: "noreferrer",
+            children: "github.com/Bloxdy/texturePacks"
+          })]
+        }), mY && (0, sY.jsxs)("div", {
+          className: "CustomTextureError",
+          children: [oY("general:error"), ": ", mY]
+        }), SY && (0, sY.jsx)("div", {
+          className: "CustomTextureError",
+          children: SY
+        }), (0, sY.jsxs)("div", {
+          ...eY({
+            className: IY()("CustomTextureFolderUpload", {
+              ActiveDrag: BY,
+              Disabled: iY
+            })
+          }),
+          children: [(0, sY.jsx)("input", {
+            ...NY({
+              webkitdirectory: "true"
+            })
+          }), WY && (0, sY.jsx)("div", {
+            className: "CustomTextureFolderUploadLoading",
+            children: (0, sY.jsx)(OY.c, {})
+          }), !WY && !BY && rY && (0, sY.jsxs)(sY.Fragment, {
+            children: [(0, sY.jsx)("div", {
+              className: "CustomTextureFolderUploadIcon Active",
+              children: (0, sY.jsx)(uY.e, {
+                name: "folder-image"
+              })
+            }), (0, sY.jsx)("div", {
+              className: "CustomTextureFolderUploadInstructions Active",
+              children: rY
+            })]
+          }), !WY && (BY || !rY) && (0, sY.jsxs)(sY.Fragment, {
+            children: [(0, sY.jsx)("div", {
+              className: "CustomTextureFolderUploadIcon",
+              children: (0, sY.jsx)(uY.e, {
+                name: "up-from-bracket"
+              })
+            }), (0, sY.jsx)("div", {
+              className: "CustomTextureFolderUploadInstructions",
+              children: "Drag and drop a Texture Pack folder here"
+            })]
+          })]
+        })]
       })
     }
   },
-  4400: (BB, TB, dB) => {
-    dB.d(TB, {
-      c: () => yB
+  4580: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => yY,
+      f: () => mY,
+      j: () => QY,
+      m: () => EY
     });
-    var VB = dB(1089);
-    async function yB(BB) {
-      const TB = await fetch(`${VB.clientSideServerUrls.s3Url}/${BB}`, {
-        headers: {
-          Accept: "application/json"
+    var FY = DY(61),
+      AY = DY(4589),
+      IY = DY(3920),
+      RY = DY(1354),
+      OY = DY(4608),
+      gY = DY(1092),
+      aY = DY.n(gY),
+      vY = DY(1346),
+      uY = DY(1699),
+      sY = DY(4613),
+      iY = DY(1125);
+
+    function yY(YY) {
+      let {
+        label: rY,
+        onClick: DY,
+        checked: FY,
+        circleInfoText: AY,
+        className: OY,
+        disabled: gY,
+        note: vY
+      } = YY;
+      return (0, iY.jsxs)("div", {
+        "aria-disabled": gY || void 0,
+        "data-pad-focusable": !0,
+        className: aY()("SettingBox CheckboxContainer", {
+          [OY]: OY,
+          SettingBoxDisabled: gY
+        }),
+        onClick: () => {
+          gY || DY(!FY)
+        },
+        children: [(0, iY.jsxs)("div", {
+          className: "CheckboxInputAndText",
+          children: [(0, iY.jsx)("label", {
+            className: "CheckboxClickableLabel",
+            children: (0, iY.jsx)(IY.d, {
+              className: "SettingsCheckbox",
+              checked: FY,
+              disabled: gY,
+              onChange: () => {}
+            })
+          }), (0, iY.jsxs)("div", {
+            className: "CheckboxText",
+            children: [rY, AY && (0, iY.jsx)("span", {
+              onClick: YY => YY.stopPropagation(),
+              children: (0, iY.jsx)(RY.d, {
+                className: "SettingsTextInputCircleInfo",
+                hoverInfo: AY
+              })
+            })]
+          })]
+        }), vY && (0, iY.jsx)("div", {
+          className: "SettingNote",
+          children: vY
+        })]
+      })
+    }
+
+    function QY(YY) {
+      let {
+        name: rY,
+        onChange: DY,
+        min: AY,
+        max: IY,
+        step: OY,
+        initValue: gY,
+        circleInfoText: vY,
+        format: uY,
+        className: sY,
+        padStep: yY,
+        disabled: QY = !1,
+        selectableMax: oY,
+        cappedNote: EY,
+        onChangeComplete: mY
+      } = YY;
+      const [VY, SY] = (0, FY.useState)(gY), lY = (0, FY.useRef)(gY);
+      (0, FY.useEffect)((() => {
+        lY.current = gY, SY(gY)
+      }), [gY]);
+      const TY = void 0 !== oY && oY < IY,
+        eY = TY ? {
+          "--slider-selectable": (oY - AY) / (IY - AY)
+        } : void 0;
+      return (0, iY.jsxs)("div", {
+        className: aY()("SettingBox SettingsSliderDiv", {
+          [sY]: sY,
+          SettingBoxDisabled: QY,
+          SliderCapped: TY
+        }),
+        style: eY,
+        children: [(0, iY.jsxs)("div", {
+          className: "SliderText",
+          children: [`${rY}: ${uY?uY(VY):VY}`, vY && (0, iY.jsx)(RY.d, {
+            className: "SettingsTextInputCircleInfo",
+            hoverInfo: vY
+          })]
+        }), (0, iY.jsx)("div", {
+          className: "SliderDiv",
+          children: (0, iY.jsx)(WY, {
+            value: VY,
+            min: AY,
+            max: IY,
+            step: OY,
+            onChange: YY => {
+              if (TY && YY >= oY && VY === oY) return;
+              const rY = TY ? Math.min(YY, oY) : YY;
+              lY.current = rY, SY(rY), DY(rY)
+            },
+            onChangeComplete: mY && (() => {
+              mY(lY.current)
+            }),
+            format: uY,
+            padStep: yY,
+            disabled: QY
+          })
+        }), TY && EY && (0, iY.jsx)("div", {
+          className: "SettingNote",
+          children: EY
+        })]
+      })
+    }
+    const oY = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
+
+    function WY(YY) {
+      var rY;
+      let {
+        value: DY,
+        min: IY,
+        max: RY,
+        step: OY,
+        onChange: gY,
+        orientation: aY,
+        reverse: vY,
+        setIsChanging: uY,
+        tooltip: yY,
+        labels: QY,
+        handleLabel: WY,
+        format: EY,
+        onChangeStart: mY,
+        onChangeComplete: VY,
+        padStep: SY,
+        disabled: lY = !1
+      } = YY;
+      const TY = (0, FY.useRef)(null),
+        eY = (0, FY.useRef)(null);
+      (0, FY.useLayoutEffect)((() => {
+        var YY, rY, DY;
+        const FY = null !== (YY = null === (rY = TY.current) || void 0 === rY ? void 0 : rY.querySelector(".rangeslider")) && void 0 !== YY ? YY : null;
+        null === FY || void 0 === FY || FY.setAttribute("data-pad-slider", ""), null === FY || void 0 === FY || FY.setAttribute("data-pad-focusable", ""), null === FY || void 0 === FY || null === (DY = FY.querySelector(".rangeslider__handle")) || void 0 === DY || DY.setAttribute("data-pad-slider-handle", ""), eY.current = FY
+      }), []), (0, FY.useLayoutEffect)((() => {
+        var YY, rY;
+        lY ? null === (YY = eY.current) || void 0 === YY || YY.setAttribute("aria-disabled", "true") : null === (rY = eY.current) || void 0 === rY || rY.removeAttribute("aria-disabled")
+      }), [lY]);
+      const NY = (null !== (rY = String(OY).split(".")[1]) && void 0 !== rY ? rY : "").length,
+        BY = YY => {
+          const rY = Number((Math.round((YY - IY) / OY) * OY + IY).toFixed(NY));
+          return Math.min(RY, Math.max(IY, rY))
+        },
+        cY = (0, FY.useRef)(VY);
+      cY.current = VY, (0, FY.useEffect)((() => {
+        const YY = TY.current;
+        if (!YY) return;
+        const rY = YY => {
+          var rY;
+          oY.has(YY.key) && (null === (rY = cY.current) || void 0 === rY || rY.call(cY))
+        };
+        return YY.addEventListener("keyup", rY), () => {
+          YY.removeEventListener("keyup", rY)
         }
+      }), []);
+      const KY = (0, FY.useRef)(!1);
+      return (0, sY.d)(eY, {
+        adjust: YY => {
+          if (lY) return;
+          const rY = null !== SY && void 0 !== SY ? SY : Math.max(OY, Math.round((RY - IY) / 20 / OY) * OY),
+            FY = BY(DY + YY * rY * (vY ? -1 : 1));
+          FY !== DY && (null === mY || void 0 === mY || mY(), gY(FY), null === VY || void 0 === VY || VY())
+        },
+        setFraction: YY => {
+          if (lY) return;
+          const rY = BY(IY + (vY ? 1 - YY : YY) * (RY - IY));
+          rY !== DY && (KY.current || (KY.current = !0, null === mY || void 0 === mY || mY()), gY(rY))
+        },
+        endDrag: () => {
+          KY.current && (KY.current = !1, null === VY || void 0 === VY || VY())
+        }
+      }), (0, iY.jsx)("div", {
+        ref: TY,
+        style: {
+          display: "contents"
+        },
+        children: (0, iY.jsx)(AY.b, {
+          value: DY,
+          min: IY,
+          max: RY,
+          step: OY,
+          onChange: gY,
+          orientation: aY,
+          reverse: vY,
+          tooltip: yY,
+          labels: QY,
+          handleLabel: WY,
+          format: EY,
+          onChangeStart: () => {
+            null === mY || void 0 === mY || mY(), null === uY || void 0 === uY || uY(!0)
+          },
+          onChangeComplete: () => {
+            null === uY || void 0 === uY || uY(!1), null === VY || void 0 === VY || VY()
+          }
+        })
+      })
+    }
+    async function EY() {
+      let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+      const rY = vY.NotificationProvider.showPromptPopup({
+        title: "settingsMenu:reloadPagePopupTitle",
+        subtitle: "settingsMenu:reloadPagePopupSubtitle",
+        confirmText: "settingsMenu:reloadPagePopupConfirm",
+        confirmTooltip: "",
+        cancelText: "general:cancel",
+        cancelTooltip: "",
+        unlockPointerKey: YY
       });
-      if (404 === TB.status || 403 === TB.status) return null;
-      if (!TB.ok) throw new Error(`Failed to download the texture pack (${TB.status})`);
-      return await TB.json()
+      !0 === await rY.getResult() && (0, uY.reloadBloxd)()
+    }
+
+    function mY(YY) {
+      let {
+        label: rY,
+        options: DY,
+        value: FY,
+        onChange: AY,
+        circleInfoText: IY
+      } = YY;
+      return (0, iY.jsxs)("div", {
+        className: "SettingBox SegmentedSettingRow",
+        children: [(0, iY.jsxs)("div", {
+          className: "SliderText",
+          children: [rY, IY && (0, iY.jsx)(RY.d, {
+            className: "SettingsTextInputCircleInfo",
+            hoverInfo: IY
+          })]
+        }), (0, iY.jsx)(OY.d, {
+          ariaLabel: rY,
+          options: DY,
+          value: FY,
+          onChange: AY
+        })]
+      })
     }
   },
-  8223: (BB, TB, dB) => {
-    dB.d(TB, {
-      c: () => lB
+  4578: (YY, rY, DY) => {
+    DY.d(rY, {
+      b: () => WY,
+      e: () => EY
     });
-    var VB = dB(1214),
-      yB = dB(1105),
-      pB = dB(572);
+    var FY = DY(2746),
+      AY = DY(2755),
+      IY = DY(61),
+      RY = DY(1092),
+      OY = DY.n(RY),
+      gY = DY(1337),
+      aY = DY(2743),
+      vY = DY(1346),
+      uY = DY(4580),
+      sY = DY(4615),
+      iY = DY(649),
+      yY = DY(4619),
+      QY = DY(1125);
 
-    function lB(BB) {
-      return BB = function(BB, TB) {
-        var dB;
-        const VB = new URLSearchParams(TB),
-          yB = VB.get("lobby"),
-          pB = VB.get("vm"),
-          lB = null !== (dB = yB) && void 0 !== dB ? dB : BB.lobbyName,
-          JB = null !== pB && void 0 !== pB ? pB : BB.directJoinVmUrl;
-        if (lB === BB.lobbyName && JB === BB.directJoinVmUrl) return BB;
-        return {
-          ...BB,
-          lobbyName: lB,
-          directJoinVmUrl: JB
+    function oY() {
+      (0, uY.m)("texturePackPickReload")
+    }
+
+    function WY(YY) {
+      var rY;
+      let {
+        setApplySettingsCallback: DY
+      } = YY;
+      const [, RY] = (0, IY.useReducer)((YY => YY + 1), 0), OY = (0, IY.useRef)(!1), gY = (0, IY.useRef)(null);
+
+      function WY(YY, rY) {
+        aY.d.setFromJson(YY, "player");
+        const FY = aY.d.saveTexturePack();
+        if (iY.r) {
+          const YY = aY.d.toJson();
+          FY.then((rY => {
+            rY && (0, yY.f)(YY, oY)
+          }))
+        } else OY.current ||= rY, gY.current !== aY.d.getId() || aY.d.getId() === AY.o.CUSTOM && OY.current ? DY((() => uY.m)) : DY(null);
+        RY()
+      }
+      async function mY(YY) {
+        if (aY.d.getId() !== YY.metaData.id) {
+          if (aY.d.getId() === AY.o.CUSTOM && aY.d.getFromFolderName()) {
+            const YY = vY.NotificationProvider.showPromptPopup({
+              title: "settingsMenu:loseChangesTitle",
+              subtitle: "settingsMenu:loseChangesSubtitle",
+              confirmText: "general:continue",
+              destructive: !0,
+              confirmTooltip: "",
+              cancelText: "general:cancel",
+              cancelTooltip: ""
+            });
+            if (!0 !== await YY.getResult()) return
+          }
+          WY(YY, !1)
         }
-      }(BB, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ""), BB = function(BB) {
-        if ((0, pB.M)(BB.directJoinVmUrl)) return BB;
-        const TB = (0, yB.db)(BB.directJoinVmUrl);
-        null === TB && (BB.directJoinVmUrl = void 0);
-        return BB
-      }(BB = function(BB) {
-        if ((0, pB.M)(BB.gameNameWithVariation)) return BB;
-        return BB.gameNameWithVariation = (0, VB.k)(BB.gameNameWithVariation), BB
-      }(BB))
+      }(0, IY.useEffect)((() => {
+        gY.current = aY.d.getId()
+      }), []);
+      const VY = FY.c,
+        SY = [VY, ...Object.values(AY.o).filter((YY => YY !== VY))];
+      return (0, QY.jsx)(QY.Fragment, {
+        children: (0, QY.jsxs)("div", {
+          className: "TexturePackCategory SettingsMenuRightInner",
+          children: [(0, QY.jsx)("div", {
+            className: "TexturePackList",
+            children: SY.map((YY => (0, QY.jsx)(EY, {
+              id: YY,
+              isSelected: YY === aY.d.getId(),
+              setSelected: mY
+            }, YY)))
+          }), aY.d.getId() === AY.o.CUSTOM && (0, QY.jsx)(sY.e, {
+            folderName: null !== (rY = aY.d.getFromFolderName()) && void 0 !== rY ? rY : null,
+            onTexturePackUpdated: function(YY) {
+              WY(YY, !0)
+            },
+            packOwner: "player"
+          })]
+        })
+      })
+    }
+
+    function EY(YY) {
+      let {
+        id: rY,
+        isSelected: DY,
+        setSelected: RY,
+        disabled: aY = !1
+      } = YY;
+      const [vY, uY] = (0, IY.useState)(!0), [sY, iY] = (0, IY.useState)(""), [yY, oY] = (0, IY.useState)(""), [WY, EY] = (0, IY.useState)(""), mY = (0, IY.useRef)({});
+      return (0, IY.useEffect)((() => {
+        (0, FY.o)(rY).then((YY => {
+          var rY;
+          YY && (mY.current = YY, uY(!1), iY(mY.current.metaData.name), oY(mY.current.metaData.author), EY(null !== (rY = mY.current.metaData.previewImage) && void 0 !== rY ? rY : ""))
+        })).catch((YY => {
+          console.warn(`Failed to fetch texture pack ${rY}`, YY)
+        }))
+      }), [rY]), (0, QY.jsxs)("div", {
+        "data-pad-focusable": !0,
+        "aria-disabled": aY || void 0,
+        className: OY()("TexturePack", {
+          Selected: DY,
+          Custom: rY === AY.o.CUSTOM,
+          Disabled: aY
+        }),
+        onClick: () => {
+          vY || aY || RY(mY.current)
+        },
+        children: [(0, QY.jsx)("div", {
+          className: "TexturePackBg",
+          style: {
+            backgroundImage: WY ? `url(${WY})` : void 0
+          }
+        }), vY && (0, QY.jsx)("div", {
+          className: "TexturePackName",
+          children: (0, QY.jsx)(gY.c, {})
+        }), !vY && sY && (0, QY.jsx)("div", {
+          className: "TexturePackName",
+          children: sY
+        }), !vY && yY && (0, QY.jsx)("div", {
+          className: "TexturePackAuthor",
+          children: yY
+        })]
+      })
     }
   },
-  8214: (BB, TB, dB) => {
-    dB.d(TB, {
-      c: () => oB,
-      g: () => LB,
-      i: () => kB
+  4608: (YY, rY, DY) => {
+    DY.d(rY, {
+      d: () => RY
     });
-    var VB = dB(2614),
-      yB = dB(2034),
-      pB = dB(2664),
-      lB = dB(4051),
-      JB = dB(2998);
-    let YB = null,
-      gB = !1;
+    var FY = DY(1092),
+      AY = DY.n(FY),
+      IY = DY(1125);
 
-    function oB() {
-      return lB.e.cancelDownloadForJoin(), (0, JB.d)(), (0, yB.i)(), gB = !0, (0, pB.h)(), Promise.all([dB.e(64), dB.e(67), dB.e(66), dB.e(65), dB.e(77), dB.e(228), dB.e(202), dB.e(226), dB.e(197), dB.e(43)]).then((() => dB(39407))).catch((() => {})), Promise.all([dB.e(126), dB.e(81), dB.e(51)]).then((() => dB(39476))).then((BB => {
-        let {
-          startJoinLoad: TB
-        } = BB;
-        TB()
-      }), (() => {})), YB ??= Promise.all([dB.e(66), dB.e(126), dB.e(122), dB.e(251), dB.e(177), dB.e(81), dB.e(80), dB.e(79), dB.e(197), dB.e(56)]).then((() => dB(39565))).then((BB => (BB.startWasmPlay(), BB.followPageUiPack((BB => {
-        VB.b.showGamePack(BB)
-      })), BB)), (BB => {
-        throw YB = null, BB
-      })), YB
+    function RY(YY) {
+      let {
+        options: rY,
+        value: DY,
+        onChange: FY,
+        ariaLabel: RY,
+        className: OY,
+        reselectable: gY = !1,
+        keepsFocus: aY = !1
+      } = YY;
+      return (0, IY.jsx)("div", {
+        className: AY()("SegmentedToggle", OY),
+        role: "group",
+        "aria-label": RY,
+        children: rY.map((YY => {
+          const rY = YY.value === DY;
+          return (0, IY.jsx)("button", {
+            type: "button",
+            "aria-pressed": rY,
+            "aria-label": YY.ariaLabel,
+            title: YY.ariaLabel,
+            className: AY()("SegmentedToggleOption SmallTextLight", {
+              SegmentedToggleOptionSelected: rY
+            }),
+            onMouseDown: aY ? YY => {
+              YY.preventDefault()
+            } : void 0,
+            onClick: () => {
+              rY && !gY || FY(YY.value)
+            },
+            children: YY.label
+          }, YY.value)
+        }))
+      })
+    }
+  },
+  4613: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => IY,
+      d: () => RY
+    });
+    var FY = DY(61);
+    const AY = new WeakMap,
+      IY = YY => {
+        var rY;
+        const DY = YY.closest("[data-pad-slider]");
+        return DY && null !== (rY = AY.get(DY)) && void 0 !== rY ? rY : null
+      },
+      RY = (YY, rY) => {
+        const DY = (0, FY.useRef)(rY);
+        DY.current = rY, (0, FY.useEffect)((() => {
+          if (YY.current) return ((YY, rY) => (AY.set(YY, rY), () => {
+            AY.get(YY) === rY && AY.delete(YY)
+          }))(YY.current, {
+            adjust: YY => {
+              DY.current.adjust(YY)
+            },
+            setFraction: YY => {
+              DY.current.setFraction(YY)
+            },
+            endDrag: () => {
+              DY.current.endDrag()
+            }
+          })
+        }), [YY])
+      }
+  },
+  4619: (YY, rY, DY) => {
+    DY.d(rY, {
+      e: () => OY,
+      f: () => RY
+    });
+    var FY = DY(2755),
+      AY = DY(4623);
+    let IY = null;
+
+    function RY(YY, rY) {
+      IY = {
+        pack: YY.metaData.id === FY.d ? null : YY,
+        prompt: rY
+      }
     }
 
-    function kB() {
-      return gB
+    function OY(YY, rY) {
+      const DY = IY;
+      null !== DY && (0, AY.c)(DY.pack, YY) && (IY = null, rY && DY.prompt())
+    }
+  },
+  4623: (YY, rY, DY) => {
+    function FY(YY, rY) {
+      return AY(YY, rY)
     }
 
-    function LB() {
-      return Promise.all([dB.e(66), dB.e(126), dB.e(122), dB.e(251), dB.e(177), dB.e(81), dB.e(80), dB.e(79), dB.e(197), dB.e(56)]).then((() => dB(39565))).then((BB => {
-        BB.startWasmPreviews(), BB.prefetchWasmPreviews()
-      }))
+    function AY(YY, rY) {
+      if (YY === rY) return !0;
+      if ("object" !== typeof YY || "object" !== typeof rY || null === YY || null === rY || Array.isArray(YY) !== Array.isArray(rY)) return !1;
+      const DY = YY,
+        FY = rY,
+        IY = Object.keys(DY);
+      return IY.length === Object.keys(FY).length && IY.every((YY => Object.prototype.hasOwnProperty.call(FY, YY) && AY(DY[YY], FY[YY])))
     }
+    DY.d(rY, {
+      c: () => FY
+    })
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

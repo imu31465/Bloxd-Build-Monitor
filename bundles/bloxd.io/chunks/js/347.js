@@ -1,19 +1,33 @@
 export const id = 347;
 export const ids = [347];
 export const modules = {
-  59968: (BB, TB, dB) => {
-    dB.r(TB), dB.d(TB, {
-      lod3DPixelShader: () => lB
+  60239: (YY, rY, DY) => {
+    DY.r(rY), DY.d(rY, {
+      WorldCodeAiDeepSeekNotice: () => RY,
+      deepSeekPrivacyPolicyUrl: () => IY
     });
-    var VB = dB(38595);
-    const yB = "lod3DPixelShader",
-      pB = "precision highp float;precision highp sampler3D;const float GammaEncodePowerApprox=1.0/2.2;varying vec2 vUV;uniform sampler3D textureSampler;uniform float lod;uniform float slice;uniform int gamma;void main(void)\n{ivec3 textureCoordinates=ivec3(vUV*vec2(textureSize(textureSampler,0).xy),int(slice));gl_FragColor=texelFetch(textureSampler,textureCoordinates,int(lod));if (gamma==0) {gl_FragColor.rgb=pow(gl_FragColor.rgb,vec3(GammaEncodePowerApprox));}}\n";
-    VB.e.ShadersStore[yB] || (VB.e.ShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
+    var FY = DY(1211),
+      AY = DY(1125);
+    const IY = "https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html";
+
+    function RY() {
+      const {
+        t: YY
+      } = (0, FY.C)();
+      return (0, AY.jsxs)(AY.Fragment, {
+        children: [YY("superBotXd:deepSeekNotice"), " ", (0, AY.jsxs)("a", {
+          className: "WorldCodeAiDeepSeekPolicyLink",
+          href: IY,
+          target: "_blank",
+          rel: "noreferrer noopener",
+          children: [YY("superBotXd:deepSeekPrivacyPolicy"), " ", (0, AY.jsx)("span", {
+            "aria-hidden": "true",
+            children: "\u2197"
+          })]
+        })]
+      })
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

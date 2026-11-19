@@ -1362,7 +1362,6 @@
   overflow: hidden;
   position: absolute;
   top: calc(var(--border-size) + var(--border-size)/2);
-  transition: border-radius .2s;
   width: calc(100% - var(--border-size)*2 - var(--border-size))
 }
 
@@ -1370,7 +1369,7 @@
   box-sizing: border-box;
   left: 0;
   top: 0;
-  transition: border .2s, border-top .2s, border-radius .2s
+  transition: border .2s, border-top .2s
 }
 
 .LogoLoader .LogoLoaderLoadingBar,
@@ -1383,18 +1382,17 @@
 .LogoLoader .LogoLoaderProgressBar .LogoLoaderProgressBarText {
   align-items: center;
   background-color: rgba(0, 0, 0, .6);
-  border-radius: 50%;
   box-sizing: border-box;
   color: var(--border-color-2);
   display: flex;
   font-size: .25em;
   font-weight: 800;
-  height: calc(100% - var(--border-size)*2 - var(--border-size));
+  height: calc(70% - var(--border-size)*2*.7);
+  inset: 0;
   justify-content: center;
-  left: calc(var(--border-size) + var(--border-size)/2);
+  margin: auto;
   position: absolute;
-  top: calc(var(--border-size) + var(--border-size)/2);
-  width: calc(100% - var(--border-size)*2 - var(--border-size))
+  width: calc(70% - var(--border-size)*2*.7)
 }
 
 .LogoLoader .LogoLoaderProgressBar svg {
@@ -1405,6 +1403,14 @@
   width: 100%
 }
 
+.LogoLoader.LogoLoaderIsLoading .LogoLoaderInner,
+.LogoLoader.LogoLoaderIsProgressBar .LogoLoaderInner {
+  height: calc(70% - var(--border-size)*2*.7);
+  inset: 0;
+  margin: auto;
+  width: calc(70% - var(--border-size)*2*.7)
+}
+
 .LogoLoader.LogoLoaderIsProgressBar .LogoLoaderLoadingBar {
   border: var(--border-size) solid var(--border-color-2);
   border-radius: 50%
@@ -1412,7 +1418,6 @@
 
 .LogoLoader.LogoLoaderIsProgressBar .LogoLoaderInner {
   -ms-interpolation-mode: nearest-neighbor;
-  border-radius: 50%;
   image-rendering: optimizeSpeed;
   image-rendering: -o-crisp-edges;
   image-rendering: pixelated;
@@ -1432,21 +1437,12 @@ html[data-app-covered] .WholeAppWrapper .LogoLoader:not(.LogoLoaderIsProgressBar
   animation-play-state: paused
 }
 
-.LogoLoader:not(.LogoLoaderIsProgressBar).LogoLoaderIsLoading .LogoLoaderInner {
-  border-radius: 50%
-}
-
 .LogoLoader:not(.LogoLoaderIsProgressBar):not(.LogoLoaderIsLoading) {
   --border-size: 0.2rem
 }
 
 .LogoLoader:not(.LogoLoaderIsProgressBar):not(.LogoLoaderIsLoading) .LogoLoaderLoadingBar {
-  border: var(--border-size) solid #2e80ee;
-  border-radius: min(.8rem, .25em)
-}
-
-.LogoLoader:not(.LogoLoaderIsProgressBar):not(.LogoLoaderIsLoading) .LogoLoaderInner {
-  border-radius: min(.8rem, .15em)
+  border: var(--border-size) solid #2e80ee
 }
 
 .GenericVideoWrapper {
@@ -1475,7 +1471,6 @@ html[data-app-covered] .WholeAppWrapper .LogoLoader:not(.LogoLoaderIsProgressBar
 .GenericVideoWrapper .NitroVideoSkip {
   background-color: rgba(26, 31, 46, .6);
   border: 1px solid #0f0f0f;
-  border-radius: 4px;
   bottom: 1rem;
   color: #fff;
   font-size: 1.2rem;
@@ -1961,6 +1956,24 @@ body {
   syntax: "<length>";
   inherits: true;
   initial-value: 0
+}
+
+:root {
+  --hud-viewport-height: 100vh;
+  --hud-auto-inset-top: max(var(--notchTop), 0.25rem);
+  --hud-auto-inset-right: max(var(--notchRight), 0.25rem);
+  --hud-auto-inset-bottom: max(min(3rem, var(--notchBottom)), 0.25rem);
+  --hud-auto-inset-left: max(var(--notchLeft), 0.25rem);
+  --hud-inset-top: var(--hud-safe-top, var(--hud-auto-inset-top));
+  --hud-inset-right: var(--hud-safe-right, var(--hud-auto-inset-right));
+  --hud-inset-bottom: var(--hud-safe-bottom, var(--hud-auto-inset-bottom));
+  --hud-inset-left: var(--hud-safe-left, var(--hud-auto-inset-left))
+}
+
+@supports(height:1dvh) {
+  :root {
+    --hud-viewport-height: 100dvh
+  }
 }
 
 html {
@@ -3111,8 +3124,7 @@ a {
 }
 
 .HudTextPanel.NoBackground .TextFromServerProgressBar {
-  border: 1px solid rgba(48, 58, 89, .4);
-  border-radius: 1px
+  border: 1px solid rgba(48, 58, 89, .4)
 }
 
 .TextFromServerProgressBar .TextFromServerProgressBarFill {
@@ -3167,7 +3179,6 @@ a {
   align-items: center;
   background-color: #303a59;
   border: .1em solid #838383;
-  border-radius: .5em;
   box-shadow: 0 .2em 0 #838383;
   box-sizing: border-box;
   color: #fff;
@@ -3328,10 +3339,14 @@ a {
   white-space: nowrap
 }
 
+.LoginButtonContainer .LoginButtonLinkedLabel,
+.LoginButtonContainer .LoginButtonUnlink {
+  font-size: 1rem;
+  margin-left: .6rem
+}
+
 .LoginButtonContainer .LoginButtonUnlink {
   align-self: center;
-  font-size: 1rem;
-  margin-left: .6rem;
   position: relative
 }
 
@@ -3341,6 +3356,14 @@ a {
     inset: min(0px, (100% - 44px)/2) min(0px, (100% - 44px)/2);
     position: absolute
   }
+}
+
+.LoginButtonContainer .LoginButtonLinkedLabel {
+  align-items: center;
+  color: #cfcfcf;
+  display: flex;
+  gap: .3em;
+  white-space: nowrap
 }
 
 .TopRightIconsContainer {
@@ -3372,16 +3395,16 @@ a {
 
 .TopRightIconsContainer .TopRightIcons.TouchInGame {
   align-items: center;
-  font-size: calc(max(36px, 3rem)*.66);
+  font-size: calc(max(28px, max(36px, 3rem) * var(--hud-menu-scale, 1))*.66);
   gap: 4px
 }
 
 .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightIcon>.UiItemIcon {
   align-items: center;
   display: flex;
-  height: max(36px, 3rem);
+  height: max(28px, max(36px, 3rem)*var(--hud-menu-scale, 1));
   justify-content: center;
-  width: max(36px, 3rem)
+  width: max(28px, max(36px, 3rem)*var(--hud-menu-scale, 1))
 }
 
 @media(pointer:coarse) {
@@ -3431,6 +3454,120 @@ a {
   position: relative
 }
 
+.HudMove-menu .RightElements .TopRightIconsContainer {
+  left: calc(var(--hud-menu-dx, 0)*100vw);
+  top: calc(var(--hud-menu-dy, 0)*var(--hud-viewport-height))
+}
+
+.TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon {
+  --camera-icon-box: max(28px, calc(max(36px, 3rem)*var(--hud-menu-scale, 1)));
+  font-size: calc(var(--camera-icon-box)*.66)
+}
+
+.TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon>.UiItemIcon {
+  height: var(--camera-icon-box);
+  width: var(--camera-icon-box)
+}
+
+.TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon>.UiItemIcon>.ScaleOnHover {
+  scale: calc(var(--hud-perspective-scale)/var(--hud-menu-scale, 1))
+}
+
+.HudHide-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon {
+  visibility: hidden
+}
+
+.HudMove-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon {
+  height: var(--camera-icon-box);
+  width: var(--camera-icon-box)
+}
+
+@media(pointer:coarse) {
+  .HudMove-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon {
+    box-sizing: border-box;
+    min-height: 44px;
+    min-width: 44px
+  }
+}
+
+.HudMove-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon {
+  --camera-key: calc(var(--touch-key-size, calc(5 * clamp(1rem, 1.45vw, 1.5rem))) * var(--hud-perspective-scale, 1))
+}
+
+@media(orientation:portrait)and (max-width:600px) {
+  .HudMove-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon {
+    --camera-key: calc(var(--touch-key-size, calc(5 * min(10px, 2.9vw))) * var(--hud-perspective-scale, 1))
+  }
+}
+
+.HudMove-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon>.UiItemIcon {
+  align-items: center;
+  background-color: rgba(60, 75, 104, .72);
+  border: 2px solid #0f0f0f;
+  box-shadow: inset 0 1.5px 0 #586e99, 0 3px 0 #1a1f2e;
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-shadow: -1px -1px 0 #000, -1px 0 0 #000, -1px 1px 0 #000, 0 -1px 0 #000, 0 0 0 #000, 0 1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000, 1px 1px 0 #000
+}
+
+.HudMove-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon>.UiItemIcon .svg-inline--fa path:only-of-type,
+.HudMove-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon>.UiItemIcon.svg-inline--fa path:only-of-type {
+  stroke: #000;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 2px;
+  stroke-linejoin: round;
+  paint-order: stroke fill
+}
+
+.HudMove-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon>.UiItemIcon {
+  font-size: calc(var(--camera-key)*.5);
+  height: var(--camera-key);
+  min-height: 0;
+  min-width: 0;
+  opacity: var(--hud-key-opacity, 1);
+  position: fixed;
+  right: var(--hud-inset-right);
+  top: var(--hud-inset-top);
+  width: var(--camera-key)
+}
+
+@media(pointer:coarse) {
+  .HudMove-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon>.UiItemIcon:before {
+    content: "";
+    inset: min(0px, (100% - 44px)/2) min(0px, (100% - 44px)/2);
+    position: absolute
+  }
+}
+
+.HudMove-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon>.UiItemIcon {
+  translate: calc(var(--hud-perspective-dx, 0)*100vw) calc(var(--hud-perspective-dy, 0)*var(--hud-viewport-height))
+}
+
+.HudMove-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon>.UiItemIcon .ScaleOnHover {
+  display: flex;
+  scale: none
+}
+
+.HudMove-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon>.UiItemIcon[data-pressing] {
+  background-color: rgba(75, 94, 130, .85);
+  box-shadow: inset 0 1.5px 0 #586e99, 0 1px 0 #1a1f2e;
+  opacity: 1;
+  transform: translateY(2px);
+  transition: none
+}
+
+.HudMove-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon>.UiItemIcon[data-pressing] .ScaleOnHover {
+  color: inherit;
+  transform: none
+}
+
+.TouchKeysRound.HudMove-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon>.UiItemIcon {
+  border-radius: 50%
+}
+
 .UiItemIcon {
   position: relative
 }
@@ -3454,7 +3591,6 @@ a {
   --pad-glyph-max-width: calc(2.1em + clamp(0px, min(100vh, 56.25vw) - 720px, 720px)*0.02);
   background-color: #303a59;
   border: .1em solid #838383;
-  border-radius: 999px;
   box-shadow: 0 .2em 0 #838383;
   box-sizing: content-box;
   color: #fff;
@@ -3549,7 +3685,6 @@ a {
 .NotificationBellContainer .NotificationBell .NotificationBellBadge {
   align-items: center;
   background-color: #e34f4f;
-  border-radius: .75em;
   box-sizing: border-box;
   color: #f2f2f2;
   display: flex;
@@ -3939,7 +4074,6 @@ a {
 }
 
 .CosmeticPackGrantedIcon {
-  border-radius: .4rem;
   font-size: 1rem;
   height: 3.9rem;
   overflow: hidden;
@@ -5240,7 +5374,6 @@ a {
 
 .UpdateLogsContainer .UpdateLog .UpdateLeft .UpdateAuthor img {
   background-color: #cfcfcf;
-  border-radius: 50%;
   height: 2rem;
   margin-right: .5rem;
   width: 2rem
@@ -5713,7 +5846,6 @@ a {
 
 .SocialCountBadge {
   align-items: center;
-  border-radius: .8rem;
   box-sizing: border-box;
   color: #303a59;
   display: flex;
@@ -6210,7 +6342,6 @@ a {
 
 .SocialBarContainer.Docked .SocialBarOuter .SocialBar .SocialBarInner .SocialBarFriends.SocialBarFriendsEmpty .SocialBarFriendsPlaceholderRows .SocialBarFriendsPlaceholderRow .SocialBarFriendsPlaceholderAvatar {
   background-color: hsla(0, 0%, 95%, .12);
-  border-radius: 50%;
   flex: 0 0 auto;
   height: 1.8rem;
   width: 1.8rem
@@ -7261,7 +7392,6 @@ a {
 .StoreWallet .StoreWalletPlusContainer {
   align-items: center;
   background-color: #c16088;
-  border-radius: .4rem;
   display: flex;
   height: 1.6rem;
   justify-content: center;
@@ -7455,7 +7585,6 @@ a {
 
 .LiveStreamPromotion .LiveStreamPromotionLiveBadge {
   background: #e34f4f;
-  border-radius: .35rem;
   color: #fff;
   font-size: 1.5rem;
   font-weight: 700;
@@ -7491,8 +7620,7 @@ a {
   --contrast-border-top: 1rem;
   --contrast-border-right: 1.5rem;
   --contrast-border-bottom: 0.5rem;
-  --contrast-border-left: 1.5rem;
-  --contrast-border-radius: 0.5rem 0.5rem 0 0
+  --contrast-border-left: 1.5rem
 }
 
 .AdBannerContainer .AdBannerExtraContrastAnchorTop,
@@ -7500,8 +7628,7 @@ a {
   --contrast-border-top: 0.5rem;
   --contrast-border-right: 1.5rem;
   --contrast-border-bottom: 1rem;
-  --contrast-border-left: 1.5rem;
-  --contrast-border-radius: 0 0 0.5rem 0.5rem
+  --contrast-border-left: 1.5rem
 }
 
 .AdBannerContainer .AdBannerExtraContrastAnchorLeft,
@@ -7509,8 +7636,7 @@ a {
   --contrast-border-top: 1rem;
   --contrast-border-right: 1.5rem;
   --contrast-border-bottom: 1.5rem;
-  --contrast-border-left: 0.5rem;
-  --contrast-border-radius: 0 0.5rem 0.5rem 0
+  --contrast-border-left: 0.5rem
 }
 
 .AdBannerContainer .AdBannerExtraContrastAnchorRight,
@@ -7518,8 +7644,7 @@ a {
   --contrast-border-top: 1rem;
   --contrast-border-right: 0.5rem;
   --contrast-border-bottom: 1.5rem;
-  --contrast-border-left: 1.5rem;
-  --contrast-border-radius: 0.5rem 0 0 0.5rem
+  --contrast-border-left: 1.5rem
 }
 
 .AdBannerContainer .AdBannerSlot {
@@ -7552,7 +7677,6 @@ a {
 
 .AdBannerContainer .AdBannerLoader.AdBannerLoaderExtraContrast {
   background-color: #f2f2f2;
-  border-radius: var(--contrast-border-radius);
   outline: 1px solid #000;
   padding: var(--contrast-border-top) var(--contrast-border-right) var(--contrast-border-bottom) var(--contrast-border-left)
 }
@@ -7593,7 +7717,6 @@ a {
 .AdBannerContainer .AdBanner.AdBannerExtraContrast {
   background-color: #fff;
   border-color: #f2f2f2 !important;
-  border-radius: var(--contrast-border-radius);
   border-style: solid !important;
   border-width: var(--contrast-border-top) var(--contrast-border-right) var(--contrast-border-bottom) var(--contrast-border-left) !important;
   outline: 1px solid #000;
@@ -7603,7 +7726,6 @@ a {
 
 .AdBannerContainer .AdBanner.AdBannerExtraContrast.AdBannerExtraContrastAnchorTop .AdBannerRemoveAds {
   border-bottom: 1px solid #000;
-  border-radius: 0 0 .4rem .4rem;
   border-top: none;
   bottom: auto;
   top: calc(100% + var(--contrast-border-bottom))
@@ -7629,7 +7751,6 @@ a {
   background-color: #f2f2f2;
   border: 1px solid #000;
   border-bottom: none;
-  border-radius: .4rem .4rem 0 0;
   bottom: calc(100% + var(--contrast-border-top));
   color: #333;
   cursor: pointer;
@@ -8039,7 +8160,6 @@ a {
 .AdBannerContainer .AdBanner.CosmeticPackAd .CosmeticPackAdOverlay .CosmeticPackAdFooter .CosmeticPackAdTitle .CosmeticPackAdItemCount {
   align-items: center;
   border: 3px solid #ffb914;
-  border-radius: 5px;
   color: #ffb914;
   display: flex;
   font-weight: 800;
@@ -8397,7 +8517,6 @@ a {
 
 .CosmeticPackOwned {
   background-color: #ffb914;
-  border-radius: .4rem;
   color: #fff;
   font-size: 1.2rem;
   padding: .1rem .5rem .2rem;
@@ -8415,7 +8534,6 @@ a {
 
 .CosmeticPackItemCount {
   border: .2rem solid #ffb914;
-  border-radius: .4rem;
   color: #ffb914;
   font-size: 1.2rem;
   font-weight: 800;
@@ -8800,7 +8918,6 @@ a {
   align-items: center;
   background-color: rgba(26, 31, 46, .6);
   border: none;
-  border-radius: 2rem;
   color: #fff;
   cursor: pointer;
   display: flex;
@@ -9086,11 +9203,20 @@ a {
   }
 }
 
+@media(orientation:portrait)and (max-width:600px) {
+  .MiddleScreenPopupBackground .MiddleScreenPopup.PremiumCurrencyPurchasePopup {
+    box-sizing: border-box;
+    max-width: none;
+    width: calc(100vw - 2rem)
+  }
+}
+
 .PremiumCurrencyPurchase {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  width: min(40rem, 90vw)
+  max-width: 100%;
+  width: 40rem
 }
 
 .PremiumCurrencyPurchase .PremiumCurrencyPurchaseTitle {
@@ -9101,7 +9227,6 @@ a {
 .PremiumCurrencyPurchase .PremiumCurrencyPurchaseCard {
   align-items: center;
   background: #3c4b68;
-  border-radius: .6rem;
   display: flex;
   gap: 1.2rem;
   min-height: 6.4rem;
@@ -9111,7 +9236,6 @@ a {
 .PremiumCurrencyPurchase .PremiumCurrencyPurchaseIcon {
   align-items: flex-end;
   background: #394980;
-  border-radius: .4rem;
   display: flex;
   flex-shrink: 0;
   height: 6.4rem;
@@ -9172,7 +9296,6 @@ a {
 }
 
 .PremiumCurrencyPurchase .PremiumCurrencyPurchaseBanner {
-  border-radius: .6rem;
   font-size: 1.5rem;
   font-weight: 800;
   padding: .6rem 1rem;
@@ -9200,14 +9323,28 @@ a {
   justify-content: center
 }
 
-.PremiumCurrencyPurchase .PremiumCurrencyPurchaseTopUpButton {
-  flex-shrink: 0;
-  font-size: 1.6rem
+.PremiumCurrencyPurchase .PremiumCurrencyPurchaseTopUp {
+  flex-wrap: wrap
 }
 
-.PremiumCurrencyPurchase .PremiumCurrencyPurchaseError {
-  color: #ff8a80;
-  font-size: 1.4rem
+.PremiumCurrencyPurchase .PremiumCurrencyPurchaseTopUp .PremiumCurrencyPurchaseCardText {
+  flex-basis: auto
+}
+
+.PremiumCurrencyPurchase .PremiumCurrencyPurchaseTopUp .PremiumCurrencyPurchaseTopUpNeed {
+  min-width: 100%;
+  width: 0
+}
+
+.PremiumCurrencyPurchase .PremiumCurrencyPurchaseTopUp .PremiumCurrencyPurchaseTopUpButton {
+  flex-shrink: 0;
+  font-size: 1.6rem;
+  margin-left: auto
+}
+
+.PremiumCurrencyPurchase .PremiumCurrencyPurchaseNotice {
+  font-size: 1.4rem;
+  text-align: inherit
 }
 
 .PremiumCurrencyPurchase .PremiumCurrencyPurchaseButtons {
@@ -9232,11 +9369,6 @@ a {
   width: 100%
 }
 
-.PremiumCurrencyBundles .PremiumCurrencyBundlesError {
-  color: #ff8a80;
-  text-align: center
-}
-
 .PremiumCurrencyBundles .PremiumCurrencyBundleGrid {
   grid-gap: 1rem;
   display: grid;
@@ -9245,11 +9377,14 @@ a {
   width: 100%
 }
 
+.PremiumCurrencyBundles .PremiumCurrencyBundleGrid[data-off-screen] .PremiumCurrencyBundle:before,
+html[data-app-covered] .WholeAppWrapper .PremiumCurrencyBundles .PremiumCurrencyBundleGrid .PremiumCurrencyBundle:before {
+  animation-play-state: paused
+}
+
 .PremiumCurrencyBundles .PremiumCurrencyBundle {
   --pileGlow: rgba(243, 138, 182, .18);
-  --rayLight: rgba(124, 131, 251, .35);
-  --rayDark: rgba(34, 42, 159, .2);
-  --raySpan: 15deg;
+  --rays: url("data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-100 -100 200 200%27><defs><radialGradient id=%27l%27 gradientUnits=%27userSpaceOnUse%27 cx=%270%27 cy=%270%27 r=%27100%27><stop offset=%27.15%27 stop-color=%27rgb%28124,131,251%29%27 stop-opacity=%270.35%27/><stop offset=%27.7%27 stop-color=%27rgb%28124,131,251%29%27 stop-opacity=%270%27/></radialGradient><radialGradient id=%27d%27 gradientUnits=%27userSpaceOnUse%27 cx=%270%27 cy=%270%27 r=%27100%27><stop offset=%27.15%27 stop-color=%27rgb%2834,42,159%29%27 stop-opacity=%270.2%27/><stop offset=%27.7%27 stop-color=%27rgb%2834,42,159%29%27 stop-opacity=%270%27/></radialGradient><g id=%27w%27><path fill=%27url%28%23l%29%27 d=%27M0 0L0 -71L18.38 -68.58Z%27/><path fill=%27url%28%23d%29%27 d=%27M0 0L18.38 -68.58L35.5 -61.49Z%27/></g></defs><use href=%27%23w%27/><use href=%27%23w%27 transform=%27rotate%2830%29%27/><use href=%27%23w%27 transform=%27rotate%2860%29%27/><use href=%27%23w%27 transform=%27rotate%2890%29%27/><use href=%27%23w%27 transform=%27rotate%28120%29%27/><use href=%27%23w%27 transform=%27rotate%28150%29%27/><use href=%27%23w%27 transform=%27rotate%28180%29%27/><use href=%27%23w%27 transform=%27rotate%28210%29%27/><use href=%27%23w%27 transform=%27rotate%28240%29%27/><use href=%27%23w%27 transform=%27rotate%28270%29%27/><use href=%27%23w%27 transform=%27rotate%28300%29%27/><use href=%27%23w%27 transform=%27rotate%28330%29%27/></svg>");
   --rayTurn: 60s;
   align-items: center;
   background: radial-gradient(circle at 50% 52%, #545efa, #463bd9 45%, #222a9f);
@@ -9268,11 +9403,9 @@ a {
 .PremiumCurrencyBundles .PremiumCurrencyBundle:before {
   animation: premiumCurrencyBundleRays var(--rayTurn) linear infinite;
   aspect-ratio: 1;
-  background: repeating-conic-gradient(var(--rayLight) 0deg var(--raySpan), var(--rayDark) var(--raySpan) calc(var(--raySpan)*2));
+  background: var(--rays) center/100% 100%;
   content: "";
   left: 50%;
-  -webkit-mask-image: radial-gradient(closest-side, #000 15%, transparent 70%);
-  mask-image: radial-gradient(closest-side, #000 15%, transparent 70%);
   pointer-events: none;
   position: absolute;
   top: 52%;
@@ -9416,17 +9549,13 @@ html[data-app-covered] .WholeAppWrapper .PremiumCurrencyBundles .PremiumCurrency
 .PremiumCurrencyBundles .PremiumCurrencyBundle.PremiumCurrencyBundleTier3,
 .PremiumCurrencyBundles .PremiumCurrencyBundle.PremiumCurrencyBundleTier4 {
   --pileGlow: rgba(243, 138, 182, .28);
-  --rayLight: rgba(143, 150, 252, .45);
-  --rayDark: rgba(34, 42, 159, .25);
-  --raySpan: 10deg;
+  --rays: url("data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-100 -100 200 200%27><defs><radialGradient id=%27l%27 gradientUnits=%27userSpaceOnUse%27 cx=%270%27 cy=%270%27 r=%27100%27><stop offset=%27.15%27 stop-color=%27rgb%28143,150,252%29%27 stop-opacity=%270.45%27/><stop offset=%27.7%27 stop-color=%27rgb%28143,150,252%29%27 stop-opacity=%270%27/></radialGradient><radialGradient id=%27d%27 gradientUnits=%27userSpaceOnUse%27 cx=%270%27 cy=%270%27 r=%27100%27><stop offset=%27.15%27 stop-color=%27rgb%2834,42,159%29%27 stop-opacity=%270.25%27/><stop offset=%27.7%27 stop-color=%27rgb%2834,42,159%29%27 stop-opacity=%270%27/></radialGradient><g id=%27w%27><path fill=%27url%28%23l%29%27 d=%27M0 0L0 -71L12.33 -69.92Z%27/><path fill=%27url%28%23d%29%27 d=%27M0 0L12.33 -69.92L24.28 -66.72Z%27/></g></defs><use href=%27%23w%27/><use href=%27%23w%27 transform=%27rotate%2820%29%27/><use href=%27%23w%27 transform=%27rotate%2840%29%27/><use href=%27%23w%27 transform=%27rotate%2860%29%27/><use href=%27%23w%27 transform=%27rotate%2880%29%27/><use href=%27%23w%27 transform=%27rotate%28100%29%27/><use href=%27%23w%27 transform=%27rotate%28120%29%27/><use href=%27%23w%27 transform=%27rotate%28140%29%27/><use href=%27%23w%27 transform=%27rotate%28160%29%27/><use href=%27%23w%27 transform=%27rotate%28180%29%27/><use href=%27%23w%27 transform=%27rotate%28200%29%27/><use href=%27%23w%27 transform=%27rotate%28220%29%27/><use href=%27%23w%27 transform=%27rotate%28240%29%27/><use href=%27%23w%27 transform=%27rotate%28260%29%27/><use href=%27%23w%27 transform=%27rotate%28280%29%27/><use href=%27%23w%27 transform=%27rotate%28300%29%27/><use href=%27%23w%27 transform=%27rotate%28320%29%27/><use href=%27%23w%27 transform=%27rotate%28340%29%27/></svg>");
   --rayTurn: 40s
 }
 
 .PremiumCurrencyBundles .PremiumCurrencyBundle.PremiumCurrencyBundleTier5 {
   --pileGlow: rgba(243, 138, 182, .4);
-  --rayLight: rgba(255, 185, 20, .3);
-  --rayDark: rgba(34, 42, 159, .25);
-  --raySpan: 7.5deg;
+  --rays: url("data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-100 -100 200 200%27><defs><radialGradient id=%27l%27 gradientUnits=%27userSpaceOnUse%27 cx=%270%27 cy=%270%27 r=%27100%27><stop offset=%27.15%27 stop-color=%27rgb%28255,185,20%29%27 stop-opacity=%270.3%27/><stop offset=%27.7%27 stop-color=%27rgb%28255,185,20%29%27 stop-opacity=%270%27/></radialGradient><radialGradient id=%27d%27 gradientUnits=%27userSpaceOnUse%27 cx=%270%27 cy=%270%27 r=%27100%27><stop offset=%27.15%27 stop-color=%27rgb%2834,42,159%29%27 stop-opacity=%270.25%27/><stop offset=%27.7%27 stop-color=%27rgb%2834,42,159%29%27 stop-opacity=%270%27/></radialGradient><g id=%27w%27><path fill=%27url%28%23l%29%27 d=%27M0 0L0 -71L9.27 -70.39Z%27/><path fill=%27url%28%23d%29%27 d=%27M0 0L9.27 -70.39L18.38 -68.58Z%27/></g></defs><use href=%27%23w%27/><use href=%27%23w%27 transform=%27rotate%2815%29%27/><use href=%27%23w%27 transform=%27rotate%2830%29%27/><use href=%27%23w%27 transform=%27rotate%2845%29%27/><use href=%27%23w%27 transform=%27rotate%2860%29%27/><use href=%27%23w%27 transform=%27rotate%2875%29%27/><use href=%27%23w%27 transform=%27rotate%2890%29%27/><use href=%27%23w%27 transform=%27rotate%28105%29%27/><use href=%27%23w%27 transform=%27rotate%28120%29%27/><use href=%27%23w%27 transform=%27rotate%28135%29%27/><use href=%27%23w%27 transform=%27rotate%28150%29%27/><use href=%27%23w%27 transform=%27rotate%28165%29%27/><use href=%27%23w%27 transform=%27rotate%28180%29%27/><use href=%27%23w%27 transform=%27rotate%28195%29%27/><use href=%27%23w%27 transform=%27rotate%28210%29%27/><use href=%27%23w%27 transform=%27rotate%28225%29%27/><use href=%27%23w%27 transform=%27rotate%28240%29%27/><use href=%27%23w%27 transform=%27rotate%28255%29%27/><use href=%27%23w%27 transform=%27rotate%28270%29%27/><use href=%27%23w%27 transform=%27rotate%28285%29%27/><use href=%27%23w%27 transform=%27rotate%28300%29%27/><use href=%27%23w%27 transform=%27rotate%28315%29%27/><use href=%27%23w%27 transform=%27rotate%28330%29%27/><use href=%27%23w%27 transform=%27rotate%28345%29%27/></svg>");
   --rayTurn: 25s
 }
 
@@ -9461,9 +9590,20 @@ html[data-app-covered] .WholeAppWrapper .PremiumCurrencyBundles .PremiumCurrency
   justify-content: center
 }
 
-.CheckoutError {
+.CheckoutNotice {
   color: #ff8a80;
   text-align: center
+}
+
+.CheckoutNotice.CheckoutNoticeInfo {
+  color: #85baff
+}
+
+.BundlesLoadFailed {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem
 }
 
 .SuperRankPerksTable {
@@ -10341,6 +10481,17 @@ html[data-app-covered] .WholeAppWrapper .PremiumCurrencyBundles .PremiumCurrency
   z-index: 20
 }
 
+.ReconnectingOverlay.ReconnectingOverlayRestoring {
+  justify-content: flex-start;
+  padding-top: 30dvh;
+  z-index: 1
+}
+
+.ReconnectingOverlay.ReconnectingOverlayRestoring .ReconnectingOverlayText {
+  font-size: min(2.5rem, 5vw, 6vh);
+  font-size: min(2.5rem, 5vw, 6dvh)
+}
+
 .ReconnectingOverlay.ReconnectingOverlayFrozen {
   background-color: rgba(26, 31, 46, .85);
   pointer-events: auto
@@ -11051,7 +11202,6 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
 
 .GameThumbnailDiscoverability .GameThumbnailDiscoverabilityChips .GameThumbnailDiscoverabilityChip {
   background: hsla(0, 0%, 51%, .45);
-  border-radius: .15rem;
   color: #f2f2f2;
   font-size: .65rem;
   padding: 0 .2rem
@@ -11138,7 +11288,6 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
 
 .ProfileCardHost .ProfileCard .ProfileCardGrabber .ProfileCardGrabberBar {
   background-color: hsla(0, 0%, 100%, .35);
-  border-radius: .15rem;
   height: .3rem;
   width: 3rem
 }
@@ -11328,7 +11477,6 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
 .ProfileCardHost .ProfileCard .ProfileCardInfo .ProfileCardStats .ProfileCardStat {
   align-items: center;
   background-color: rgba(0, 0, 0, .15);
-  border-radius: .3rem;
   display: flex;
   flex: 1 1;
   gap: .4rem;
@@ -11416,7 +11564,6 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
 
 .ProfileCardHost .ProfileCard .ProfileCardInfo .ProfileCardGames {
   background-color: rgba(0, 0, 0, .15);
-  border-radius: .3rem;
   margin: .4rem .9rem 0;
   padding: .3rem .5rem .5rem
 }
@@ -11686,8 +11833,20 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
 }
 
 .MakeReportOptions {
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
   padding: 0 3rem 1rem
+}
+
+.MakeReportOptions>* {
+  flex-shrink: 0
+}
+
+.MakeReportOptions .ReportPolicyCheckList {
+  flex-shrink: 1;
+  min-height: 0;
+  overflow-y: auto
 }
 
 .ReportTitle {
@@ -11699,6 +11858,7 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
 
 .ReportMessage,
 .ReportTitle {
+  flex-shrink: 0;
   height: 3rem;
   text-align: center;
   width: 100%
@@ -11877,7 +12037,6 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
 .DebugOverlay .DebugOverlaySection .DebugOverlayEntry .DebugOverlayToggle {
   background: hsla(0, 0%, 51%, .35);
   border: .1rem solid hsla(0, 0%, 51%, .5);
-  border-radius: .2rem;
   color: #a4a4a4;
   cursor: pointer;
   font: inherit;
@@ -12502,7 +12661,6 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
   align-items: center;
   background-color: rgba(0, 0, 0, .35);
   border: 1px solid #3c4b68;
-  border-radius: .3rem;
   display: flex;
   flex: 1 1;
   font-size: 1.2rem;
@@ -14098,7 +14256,6 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
   background-color: #ffb914;
   border: 1px solid #0f0f0f;
   border-radius: 0;
-  border-radius: 1rem;
   box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
   color: #fff;
   cursor: pointer;
@@ -14216,7 +14373,6 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
 .CreateCustomGameCTA .CTAIconArea {
   align-items: center;
   background-color: rgba(255, 185, 20, .15);
-  border-radius: 50%;
   color: #ffb914;
   display: flex;
   flex-shrink: 0;
@@ -14281,7 +14437,6 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
 .CreateCustomGameStepsPopup .StepsPopupHeader .StepsPopupIcon {
   align-items: center;
   background-color: rgba(255, 185, 20, .15);
-  border-radius: 50%;
   color: #ffb914;
   display: flex;
   font-size: 1.2rem;
@@ -14320,7 +14475,6 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
 .CreateCustomGameStepsPopup .StepsContainer .StepCard .StepNumber {
   align-items: center;
   background-color: rgba(255, 185, 20, .15);
-  border-radius: 50%;
   color: #ffb914;
   display: flex;
   flex-shrink: 0;
@@ -14591,8 +14745,7 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
 .YoutubeHomepageSection .YoutubeTile .YoutubeTileTitlePlaceholder,
 .YoutubeHomepageSection .YoutubeTile .YoutubeTileViewCountPlaceholder {
   animation: pulseYoutubePlaceholder 1s infinite;
-  background-color: hsla(0, 0%, 100%, .22);
-  border-radius: .2rem
+  background-color: hsla(0, 0%, 100%, .22)
 }
 
 @keyframes pulseYoutubePlaceholder {
@@ -14721,7 +14874,6 @@ html[data-app-covered] .WholeAppWrapper .YoutubeHomepageSection .YoutubeTile.You
 
 .YoutubeHomepageSection .YoutubeTile .YoutubeTileLiveBadge {
   background: #f03;
-  border-radius: .25rem;
   color: #fff;
   font-size: .85rem;
   font-weight: 800;

@@ -1,235 +1,383 @@
 export const id = 328;
 export const ids = [328];
 export const modules = {
-  41198: (BB, TB, dB) => {
-    dB.d(TB, {
-      d: () => lB
+  41395: (YY, rY, DY) => {
+    DY.d(rY, {
+      e: () => RY
     });
-    var VB = dB(38595);
-    const yB = "bumpFragment",
-      pB = "var uvOffset: vec2f= vec2f(0.0,0.0);\n#if defined(BUMP) || defined(PARALLAX) || defined(DETAIL)\n#ifdef NORMALXYSCALE\nvar normalScale: f32=1.0;\n#elif defined(BUMP)\nvar normalScale: f32=uniforms.vBumpInfos.y;\n#else\nvar normalScale: f32=1.0;\n#endif\n#if defined(TANGENT) && defined(NORMAL)\nvar TBN: mat3x3f=mat3x3<f32>(input.vTBN0,input.vTBN1,input.vTBN2); \n#elif defined(BUMP)\nvar TBNUV: vec2f=select(-fragmentInputs.vBumpUV,fragmentInputs.vBumpUV,fragmentInputs.frontFacing);var TBN: mat3x3f=cotangent_frame(normalW*normalScale,input.vPositionW,TBNUV,uniforms.vTangentSpaceParams);\n#else\nvar TBNUV: vec2f=select(-fragmentInputs.vDetailUV,fragmentInputs.vDetailUV,fragmentInputs.frontFacing);var TBN: mat3x3f=cotangent_frame(normalW*normalScale,input.vPositionW,TBNUV, vec2f(1.,1.));\n#endif\n#elif defined(ANISOTROPIC)\n#if defined(TANGENT) && defined(NORMAL)\nvar TBN: mat3x3f=mat3x3<f32>(input.vTBN0,input.vTBN1,input.vTBN2); \n#else\nvar TBNUV: vec2f=select( -fragmentInputs.vMainUV1,fragmentInputs.vMainUV1,fragmentInputs.frontFacing);var TBN: mat3x3f=cotangent_frame(normalW,input.vPositionW,TBNUV, vec2f(1.,1.));\n#endif\n#endif\n#ifdef PARALLAX\nvar invTBN: mat3x3f=transposeMat3(TBN);\n#ifdef PARALLAXOCCLUSION\nuvOffset=parallaxOcclusion(invTBN*-viewDirectionW,invTBN*normalW,fragmentInputs.vBumpUV,uniforms.vBumpInfos.z);\n#else\nuvOffset=parallaxOffset(invTBN*viewDirectionW,uniforms.vBumpInfos.z);\n#endif\n#endif\n#ifdef DETAIL\nvar detailColor: vec4f=textureSample(detailSampler,detailSamplerSampler,fragmentInputs.vDetailUV+uvOffset);var detailNormalRG: vec2f=detailColor.wy*2.0-1.0;var detailNormalB: f32=sqrt(1.-saturate(dot(detailNormalRG,detailNormalRG)));var detailNormal: vec3f= vec3f(detailNormalRG,detailNormalB);\n#endif\n#ifdef BUMP\n#ifdef OBJECTSPACE_NORMALMAP\n#define CUSTOM_FRAGMENT_BUMP_FRAGMENT\nnormalW=normalize(TEXRD(bumpSampler,bumpSamplerSampler,fragmentInputs.vBumpUV).xyz *2.0-1.0);normalW=normalize(mat3x3f(uniforms.normalMatrix[0].xyz,uniforms.normalMatrix[1].xyz,uniforms.normalMatrix[2].xyz)*normalW);\n#elif !defined(DETAIL)\nnormalW=perturbNormal(TBN,TEXRD(bumpSampler,bumpSamplerSampler,fragmentInputs.vBumpUV+uvOffset).xyz,uniforms.vBumpInfos.y);\n#else\nvar bumpNormal: vec3f=TEXRD(bumpSampler,bumpSamplerSampler,fragmentInputs.vBumpUV+uvOffset).xyz*2.0-1.0;\n#if DETAIL_NORMALBLENDMETHOD==0 \ndetailNormal=vec3f(detailNormal.xy*uniforms.vDetailInfos.z,detailNormal.z);var blendedNormal: vec3f=normalize( vec3f(bumpNormal.xy+detailNormal.xy,bumpNormal.z*detailNormal.z));\n#elif DETAIL_NORMALBLENDMETHOD==1 \ndetailNormal=vec3f(detailNormal.xy*uniforms.vDetailInfos.z,detailNormal.z);bumpNormal+= vec3f(0.0,0.0,1.0);detailNormal*= vec3f(-1.0,-1.0,1.0);var blendedNormal: vec3f=bumpNormal*dot(bumpNormal,detailNormal)/bumpNormal.z-detailNormal;\n#endif\nnormalW=perturbNormalBase(TBN,blendedNormal,uniforms.vBumpInfos.y);\n#endif\n#elif defined(DETAIL)\ndetailNormal=vec3f(detailNormal.xy*uniforms.vDetailInfos.z,detailNormal.z);normalW=perturbNormalBase(TBN,detailNormal,uniforms.vDetailInfos.z);\n#endif\n";
-    VB.e.IncludesShadersStoreWGSL[yB] || (VB.e.IncludesShadersStoreWGSL[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
+    var FY = DY(38998);
+    const AY = "bakedVertexAnimation",
+      IY = "#ifdef BAKED_VERTEX_ANIMATION_TEXTURE\n{\n#ifdef INSTANCES\nlet VATStartFrame: f32=vertexInputs.bakedVertexAnimationSettingsInstanced.x;let VATEndFrame: f32=vertexInputs.bakedVertexAnimationSettingsInstanced.y;let VATOffsetFrame: f32=vertexInputs.bakedVertexAnimationSettingsInstanced.z;let VATSpeed: f32=vertexInputs.bakedVertexAnimationSettingsInstanced.w;\n#else\nlet VATStartFrame: f32=uniforms.bakedVertexAnimationSettings.x;let VATEndFrame: f32=uniforms.bakedVertexAnimationSettings.y;let VATOffsetFrame: f32=uniforms.bakedVertexAnimationSettings.z;let VATSpeed: f32=uniforms.bakedVertexAnimationSettings.w;\n#endif\nlet totalFrames: f32=VATEndFrame-VATStartFrame+1.0;let time: f32=uniforms.bakedVertexAnimationTime*VATSpeed/totalFrames;let frameCorrection: f32=select(1.0,0.0,time<1.0);let numOfFrames: f32=totalFrames-frameCorrection;var VATFrameNum: f32=fract(time)*numOfFrames;VATFrameNum=(VATFrameNum+VATOffsetFrame) % numOfFrames;VATFrameNum=floor(VATFrameNum);VATFrameNum=VATFrameNum+VATStartFrame+frameCorrection;var VATInfluence : mat4x4<f32>;VATInfluence=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,vertexInputs.matricesIndices[0],VATFrameNum)*vertexInputs.matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\nVATInfluence=VATInfluence+readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,vertexInputs.matricesIndices[1],VATFrameNum)*vertexInputs.matricesWeights[1];\n#endif\n#if NUM_BONE_INFLUENCERS>2\nVATInfluence=VATInfluence+readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,vertexInputs.matricesIndices[2],VATFrameNum)*vertexInputs.matricesWeights[2];\n#endif\n#if NUM_BONE_INFLUENCERS>3\nVATInfluence=VATInfluence+readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,vertexInputs.matricesIndices[3],VATFrameNum)*vertexInputs.matricesWeights[3];\n#endif\n#if NUM_BONE_INFLUENCERS>4\nVATInfluence=VATInfluence+readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,vertexInputs.matricesIndicesExtra[0],VATFrameNum)*vertexInputs.matricesWeightsExtra[0];\n#endif\n#if NUM_BONE_INFLUENCERS>5\nVATInfluence=VATInfluence+readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,vertexInputs.matricesIndicesExtra[1],VATFrameNum)*vertexInputs.matricesWeightsExtra[1];\n#endif\n#if NUM_BONE_INFLUENCERS>6\nVATInfluence=VATInfluence+readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,vertexInputs.matricesIndicesExtra[2],VATFrameNum)*vertexInputs.matricesWeightsExtra[2];\n#endif\n#if NUM_BONE_INFLUENCERS>7\nVATInfluence=VATInfluence+readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,vertexInputs.matricesIndicesExtra[3],VATFrameNum)*vertexInputs.matricesWeightsExtra[3];\n#endif\nfinalWorld=finalWorld*VATInfluence;}\n#endif\n";
+    FY.b.IncludesShadersStoreWGSL[AY] || (FY.b.IncludesShadersStoreWGSL[AY] = IY);
+    const RY = {
+      name: AY,
+      shader: IY
     }
   },
-  41171: (BB, TB, dB) => {
-    dB.d(TB, {
-      b: () => lB
+  41284: (YY, rY, DY) => {
+    DY.d(rY, {
+      b: () => RY
     });
-    var VB = dB(38595);
-    dB(41147);
-    const yB = "bumpFragmentFunctions",
-      pB = "#if defined(BUMP)\n#include<samplerFragmentDeclaration>(_DEFINENAME_,BUMP,_VARYINGNAME_,Bump,_SAMPLERNAME_,bump)\n#endif\n#if defined(DETAIL)\n#include<samplerFragmentDeclaration>(_DEFINENAME_,DETAIL,_VARYINGNAME_,Detail,_SAMPLERNAME_,detail)\n#endif\n#if defined(BUMP) && defined(PARALLAX)\nconst minSamples: f32=4.;const maxSamples: f32=15.;const iMaxSamples: i32=15;fn parallaxOcclusion(vViewDirCoT: vec3f,vNormalCoT: vec3f,texCoord: vec2f,parallaxScale: f32)->vec2f {var parallaxLimit: f32=length(vViewDirCoT.xy)/vViewDirCoT.z;parallaxLimit*=parallaxScale;var vOffsetDir: vec2f=normalize(vViewDirCoT.xy);var vMaxOffset: vec2f=vOffsetDir*parallaxLimit;var numSamples: f32=maxSamples+(dot(vViewDirCoT,vNormalCoT)*(minSamples-maxSamples));var stepSize: f32=1.0/numSamples;var currRayHeight: f32=1.0;var vCurrOffset: vec2f= vec2f(0,0);var vLastOffset: vec2f= vec2f(0,0);var lastSampledHeight: f32=1.0;var currSampledHeight: f32=1.0;var keepWorking: bool=true;for (var i: i32=0; i<iMaxSamples; i++)\n{currSampledHeight=textureSample(bumpSampler,bumpSamplerSampler,texCoord+vCurrOffset).w;if (!keepWorking)\n{}\nelse if (currSampledHeight>currRayHeight)\n{var delta1: f32=currSampledHeight-currRayHeight;var delta2: f32=(currRayHeight+stepSize)-lastSampledHeight;var ratio: f32=delta1/(delta1+delta2);vCurrOffset=(ratio)* vLastOffset+(1.0-ratio)*vCurrOffset;keepWorking=false;}\nelse\n{currRayHeight-=stepSize;vLastOffset=vCurrOffset;\n#ifdef PARALLAX_RHS\nvCurrOffset-=stepSize*vMaxOffset;\n#else\nvCurrOffset+=stepSize*vMaxOffset;\n#endif\nlastSampledHeight=currSampledHeight;}}\nreturn vCurrOffset;}\nfn parallaxOffset(viewDir: vec3f,heightScale: f32)->vec2f\n{var height: f32=textureSample(bumpSampler,bumpSamplerSampler,fragmentInputs.vBumpUV).w;var texCoordOffset: vec2f=heightScale*viewDir.xy*height;\n#ifdef PARALLAX_RHS\nreturn texCoordOffset;\n#else\nreturn -texCoordOffset;\n#endif\n}\n#endif\n";
-    VB.e.IncludesShadersStoreWGSL[yB] || (VB.e.IncludesShadersStoreWGSL[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
+    var FY = DY(38998);
+    const AY = "bakedVertexAnimationDeclaration",
+      IY = "#ifdef BAKED_VERTEX_ANIMATION_TEXTURE\nuniform bakedVertexAnimationTime: f32;uniform bakedVertexAnimationSettings: vec4<f32>;var bakedVertexAnimationTexture : texture_2d<f32>;\n#ifdef INSTANCES\nattribute bakedVertexAnimationSettingsInstanced : vec4<f32>;\n#endif\nfn readMatrixFromRawSamplerVAT(smp : texture_2d<f32>,index : f32,frame : f32)->mat4x4<f32>\n{let offset=i32(index)*4;let frameUV=i32(frame);let m0=textureLoad(smp,vec2<i32>(offset+0,frameUV),0);let m1=textureLoad(smp,vec2<i32>(offset+1,frameUV),0);let m2=textureLoad(smp,vec2<i32>(offset+2,frameUV),0);let m3=textureLoad(smp,vec2<i32>(offset+3,frameUV),0);return mat4x4<f32>(m0,m1,m2,m3);}\n#endif\n";
+    FY.b.IncludesShadersStoreWGSL[AY] || (FY.b.IncludesShadersStoreWGSL[AY] = IY);
+    const RY = {
+      name: AY,
+      shader: IY
     }
   },
-  41166: (BB, TB, dB) => {
-    dB.d(TB, {
-      b: () => lB
+  41277: (YY, rY, DY) => {
+    DY.d(rY, {
+      e: () => RY
     });
-    var VB = dB(38595);
-    const yB = "bumpFragmentMainFunctions",
-      pB = "#ifndef TEXRD_DEFINED\nfn TEXRD(t: texture_2d<f32>,ts: sampler,uv: vec2f)->vec4f {return textureSample(t,ts,uv);}\n#define TEXRD_DEFINED\n#endif\n#if defined(BUMP) || defined(CLEARCOAT_BUMP) || defined(ANISOTROPIC) || defined(DETAIL)\n#if defined(TANGENT) && defined(NORMAL) \nvarying vTBN0: vec3f;varying vTBN1: vec3f;varying vTBN2: vec3f;\n#endif\n#ifdef OBJECTSPACE_NORMALMAP\nuniform normalMatrix: mat4x4f;fn toNormalMatrix(m: mat4x4f)->mat4x4f\n{var a00=m[0][0];var a01=m[0][1];var a02=m[0][2];var a03=m[0][3];var a10=m[1][0];var a11=m[1][1];var a12=m[1][2];var a13=m[1][3];var a20=m[2][0]; \nvar a21=m[2][1];var a22=m[2][2];var a23=m[2][3];var a30=m[3][0]; \nvar a31=m[3][1];var a32=m[3][2];var a33=m[3][3];var b00=a00*a11-a01*a10;var b01=a00*a12-a02*a10;var b02=a00*a13-a03*a10;var b03=a01*a12-a02*a11;var b04=a01*a13-a03*a11;var b05=a02*a13-a03*a12;var b06=a20*a31-a21*a30;var b07=a20*a32-a22*a30;var b08=a20*a33-a23*a30;var b09=a21*a32-a22*a31;var b10=a21*a33-a23*a31;var b11=a22*a33-a23*a32;var det=b00*b11-b01*b10+b02*b09+b03*b08-b04*b07+b05*b06;var mi=mat4x4<f32>(\n(a11*b11-a12*b10+a13*b09)/det,\n(a02*b10-a01*b11-a03*b09)/det,\n(a31*b05-a32*b04+a33*b03)/det,\n(a22*b04-a21*b05-a23*b03)/det,\n(a12*b08-a10*b11-a13*b07)/det,\n(a00*b11-a02*b08+a03*b07)/det,\n(a32*b02-a30*b05-a33*b01)/det,\n(a20*b05-a22*b02+a23*b01)/det,\n(a10*b10-a11*b08+a13*b06)/det,\n(a01*b08-a00*b10-a03*b06)/det,\n(a30*b04-a31*b02+a33*b00)/det,\n(a21*b02-a20*b04-a23*b00)/det,\n(a11*b07-a10*b09-a12*b06)/det,\n(a00*b09-a01*b07+a02*b06)/det,\n(a31*b01-a30*b03-a32*b00)/det,\n(a20*b03-a21*b01+a22*b00)/det);return mat4x4<f32>(mi[0][0],mi[1][0],mi[2][0],mi[3][0],\nmi[0][1],mi[1][1],mi[2][1],mi[3][1],\nmi[0][2],mi[1][2],mi[2][2],mi[3][2],\nmi[0][3],mi[1][3],mi[2][3],mi[3][3]);}\n#endif\nfn perturbNormalBase(cotangentFrame: mat3x3f,normal: vec3f,scale: f32)->vec3f\n{var output=normal;\n#ifdef NORMALXYSCALE\noutput=normalize(output* vec3f(scale,scale,1.0));\n#endif\nreturn normalize(cotangentFrame*output);}\nfn perturbNormal(cotangentFrame: mat3x3f,textureSample: vec3f,scale: f32)->vec3f\n{return perturbNormalBase(cotangentFrame,textureSample*2.0-1.0,scale);}\nfn cotangent_frame(normal: vec3f,p: vec3f,uv: vec2f,tangentSpaceParams: vec2f)->mat3x3f\n{var dp1: vec3f=dpdx(p);var dp2: vec3f=dpdy(p);var duv1: vec2f=dpdx(uv);var duv2: vec2f=dpdy(uv);var dp2perp: vec3f=cross(dp2,normal);var dp1perp: vec3f=cross(normal,dp1);var tangent: vec3f=dp2perp*duv1.x+dp1perp*duv2.x;var bitangent: vec3f=dp2perp*duv1.y+dp1perp*duv2.y;tangent*=tangentSpaceParams.x;bitangent*=tangentSpaceParams.y;var det: f32=max(dot(tangent,tangent),dot(bitangent,bitangent));var invmax: f32=select(inverseSqrt(det),0.0,det==0.0);return mat3x3f(tangent*invmax,bitangent*invmax,normal);}\n#endif\n";
-    VB.e.IncludesShadersStoreWGSL[yB] || (VB.e.IncludesShadersStoreWGSL[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
+    var FY = DY(38998);
+    const AY = "bonesDeclaration",
+      IY = "#if NUM_BONE_INFLUENCERS>0\n#ifndef USE_VERTEX_PULLING\nattribute matricesIndices : vec4f;attribute matricesWeights : vec4f;\n#if NUM_BONE_INFLUENCERS>4\nattribute matricesIndicesExtra : vec4f;attribute matricesWeightsExtra : vec4f;\n#endif\n#endif\n#ifndef BAKED_VERTEX_ANIMATION_TEXTURE\n#ifdef BONETEXTURE\nvar boneSampler : texture_2d<f32>;uniform boneTextureInfo : vec2f;\n#else\nuniform mBones : array<mat4x4f,BonesPerMesh>;\n#endif\n#ifdef BONES_VELOCITY_ENABLED\nuniform mPreviousBones : array<mat4x4f,BonesPerMesh>;\n#endif\n#ifdef BONETEXTURE\nfn readMatrixFromRawSampler(smp : texture_2d<f32>,index : f32)->mat4x4f\n{let offset=i32(index)*4; \nlet textureWidth=i32(uniforms.boneTextureInfo.x);let y=offset/textureWidth;let x=offset % textureWidth;let m0=textureLoad(smp,vec2<i32>(x+0,y),0);let m1=textureLoad(smp,vec2<i32>(x+1,y),0);let m2=textureLoad(smp,vec2<i32>(x+2,y),0);let m3=textureLoad(smp,vec2<i32>(x+3,y),0);return mat4x4f(m0,m1,m2,m3);}\n#endif\n#endif\n#endif\n";
+    FY.b.IncludesShadersStoreWGSL[AY] || (FY.b.IncludesShadersStoreWGSL[AY] = IY);
+    const RY = {
+      name: AY,
+      shader: IY
     }
   },
-  41195: (BB, TB, dB) => {
-    dB.d(TB, {
-      d: () => lB
+  41387: (YY, rY, DY) => {
+    DY.d(rY, {
+      e: () => RY
     });
-    var VB = dB(38595);
-    const yB = "clipPlaneFragment",
-      pB = "#if defined(CLIPPLANE) || defined(CLIPPLANE2) || defined(CLIPPLANE3) || defined(CLIPPLANE4) || defined(CLIPPLANE5) || defined(CLIPPLANE6)\nif (false) {}\n#endif\n#ifdef CLIPPLANE\nelse if (fragmentInputs.fClipDistance>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE2\nelse if (fragmentInputs.fClipDistance2>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE3\nelse if (fragmentInputs.fClipDistance3>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE4\nelse if (fragmentInputs.fClipDistance4>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE5\nelse if (fragmentInputs.fClipDistance5>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE6\nelse if (fragmentInputs.fClipDistance6>0.0)\n{discard;}\n#endif\n";
-    VB.e.IncludesShadersStoreWGSL[yB] || (VB.e.IncludesShadersStoreWGSL[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
+    var FY = DY(38998);
+    const AY = "bonesVertex",
+      IY = "#ifndef BAKED_VERTEX_ANIMATION_TEXTURE\n#if NUM_BONE_INFLUENCERS>0\nvar influence : mat4x4<f32>;\n#ifdef BONETEXTURE\ninfluence=readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndices[0])*vertexInputs.matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\ninfluence=influence+readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndices[1])*vertexInputs.matricesWeights[1];\n#endif \n#if NUM_BONE_INFLUENCERS>2\ninfluence=influence+readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndices[2])*vertexInputs.matricesWeights[2];\n#endif \n#if NUM_BONE_INFLUENCERS>3\ninfluence=influence+readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndices[3])*vertexInputs.matricesWeights[3];\n#endif \n#if NUM_BONE_INFLUENCERS>4\ninfluence=influence+readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndicesExtra[0])*vertexInputs.matricesWeightsExtra[0];\n#endif \n#if NUM_BONE_INFLUENCERS>5\ninfluence=influence+readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndicesExtra[1])*vertexInputs.matricesWeightsExtra[1];\n#endif \n#if NUM_BONE_INFLUENCERS>6\ninfluence=influence+readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndicesExtra[2])*vertexInputs.matricesWeightsExtra[2];\n#endif \n#if NUM_BONE_INFLUENCERS>7\ninfluence=influence+readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndicesExtra[3])*vertexInputs.matricesWeightsExtra[3];\n#endif \n#else \ninfluence=uniforms.mBones[i32(vertexInputs.matricesIndices[0])]*vertexInputs.matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\ninfluence=influence+uniforms.mBones[i32(vertexInputs.matricesIndices[1])]*vertexInputs.matricesWeights[1];\n#endif \n#if NUM_BONE_INFLUENCERS>2\ninfluence=influence+uniforms.mBones[i32(vertexInputs.matricesIndices[2])]*vertexInputs.matricesWeights[2];\n#endif \n#if NUM_BONE_INFLUENCERS>3\ninfluence=influence+uniforms.mBones[i32(vertexInputs.matricesIndices[3])]*vertexInputs.matricesWeights[3];\n#endif \n#if NUM_BONE_INFLUENCERS>4\ninfluence=influence+uniforms.mBones[i32(vertexInputs.matricesIndicesExtra[0])]*vertexInputs.matricesWeightsExtra[0];\n#endif \n#if NUM_BONE_INFLUENCERS>5\ninfluence=influence+uniforms.mBones[i32(vertexInputs.matricesIndicesExtra[1])]*vertexInputs.matricesWeightsExtra[1];\n#endif \n#if NUM_BONE_INFLUENCERS>6\ninfluence=influence+uniforms.mBones[i32(vertexInputs.matricesIndicesExtra[2])]*vertexInputs.matricesWeightsExtra[2];\n#endif \n#if NUM_BONE_INFLUENCERS>7\ninfluence=influence+uniforms.mBones[i32(vertexInputs.matricesIndicesExtra[3])]*vertexInputs.matricesWeightsExtra[3];\n#endif \n#endif\nfinalWorld=finalWorld*influence;\n#endif\n#endif\n";
+    FY.b.IncludesShadersStoreWGSL[AY] || (FY.b.IncludesShadersStoreWGSL[AY] = IY);
+    const RY = {
+      name: AY,
+      shader: IY
     }
   },
-  41180: (BB, TB, dB) => {
-    dB.d(TB, {
-      c: () => lB
+  41425: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => RY
     });
-    var VB = dB(38595);
-    const yB = "clipPlaneFragmentDeclaration",
-      pB = "#ifdef CLIPPLANE\nvarying fClipDistance: f32;\n#endif\n#ifdef CLIPPLANE2\nvarying fClipDistance2: f32;\n#endif\n#ifdef CLIPPLANE3\nvarying fClipDistance3: f32;\n#endif\n#ifdef CLIPPLANE4\nvarying fClipDistance4: f32;\n#endif\n#ifdef CLIPPLANE5\nvarying fClipDistance5: f32;\n#endif\n#ifdef CLIPPLANE6\nvarying fClipDistance6: f32;\n#endif\n";
-    VB.e.IncludesShadersStoreWGSL[yB] || (VB.e.IncludesShadersStoreWGSL[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
+    var FY = DY(38998);
+    const AY = "clipPlaneVertex",
+      IY = "#ifdef CLIPPLANE\nvertexOutputs.fClipDistance=dot(worldPos,uniforms.vClipPlane);\n#endif\n#ifdef CLIPPLANE2\nvertexOutputs.fClipDistance2=dot(worldPos,uniforms.vClipPlane2);\n#endif\n#ifdef CLIPPLANE3\nvertexOutputs.fClipDistance3=dot(worldPos,uniforms.vClipPlane3);\n#endif\n#ifdef CLIPPLANE4\nvertexOutputs.fClipDistance4=dot(worldPos,uniforms.vClipPlane4);\n#endif\n#ifdef CLIPPLANE5\nvertexOutputs.fClipDistance5=dot(worldPos,uniforms.vClipPlane5);\n#endif\n#ifdef CLIPPLANE6\nvertexOutputs.fClipDistance6=dot(worldPos,uniforms.vClipPlane6);\n#endif\n";
+    FY.b.IncludesShadersStoreWGSL[AY] || (FY.b.IncludesShadersStoreWGSL[AY] = IY);
+    const RY = {
+      name: AY,
+      shader: IY
     }
   },
-  41108: (BB, TB, dB) => {
-    dB.d(TB, {
-      d: () => lB
+  41315: (YY, rY, DY) => {
+    DY.d(rY, {
+      e: () => RY
     });
-    var VB = dB(38595);
-    const yB = "objectIdFunctions",
-      pB = "fn encodeObjectId(objectId: f32)->vec4f {\n#ifdef PREPASS_OBJECT_ID_R8\nreturn vec4f(objectId/255.0,0.0,0.0,1.0);\n#else\nlet id=i32(objectId);let encodedId=vec3f(\nf32((id>>16) & 0xFF),\nf32((id>>8) & 0xFF),\nf32(id & 0xFF)\n)/255.0;return vec4f(encodedId,select(0.0,1.0,id>0));\n#endif\n}\n";
-    VB.e.IncludesShadersStoreWGSL[yB] || (VB.e.IncludesShadersStoreWGSL[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
+    var FY = DY(38998);
+    const AY = "clipPlaneVertexDeclaration",
+      IY = "#ifdef CLIPPLANE\nuniform vClipPlane: vec4<f32>;varying fClipDistance: f32;\n#endif\n#ifdef CLIPPLANE2\nuniform vClipPlane2: vec4<f32>;varying fClipDistance2: f32;\n#endif\n#ifdef CLIPPLANE3\nuniform vClipPlane3: vec4<f32>;varying fClipDistance3: f32;\n#endif\n#ifdef CLIPPLANE4\nuniform vClipPlane4: vec4<f32>;varying fClipDistance4: f32;\n#endif\n#ifdef CLIPPLANE5\nuniform vClipPlane5: vec4<f32>;varying fClipDistance5: f32;\n#endif\n#ifdef CLIPPLANE6\nuniform vClipPlane6: vec4<f32>;varying fClipDistance6: f32;\n#endif\n";
+    FY.b.IncludesShadersStoreWGSL[AY] || (FY.b.IncludesShadersStoreWGSL[AY] = IY);
+    const RY = {
+      name: AY,
+      shader: IY
     }
   },
-  60347: (BB, TB, dB) => {
-    dB.d(TB, {
-      b: () => lB
+  41430: (YY, rY, DY) => {
+    DY.d(rY, {
+      b: () => RY
     });
-    var VB = dB(38595);
-    const yB = "openpbrDielectricReflectance",
-      pB = "struct ReflectanceParams\n{F0: f32,\nF90: f32,\ncoloredF0: vec3f,\ncoloredF90: vec3f,};\n#define pbr_inline\nfn dielectricReflectance(\ninsideIOR: f32,outsideIOR: f32,specularColor: vec3f,specularWeight: f32\n)->ReflectanceParams\n{var outParams: ReflectanceParams;let dielectricF0=pow((insideIOR-outsideIOR)/(insideIOR+outsideIOR),2.0);let f90Scale=clamp(2.0f*abs(insideIOR-outsideIOR),0.0f,1.0f);\n#if (DIELECTRIC_SPECULAR_MODEL==DIELECTRIC_SPECULAR_MODEL_OPENPBR)\nlet dielectricColorF90: vec3f=specularColor.rgb*vec3f(f90Scale);\n#else\nlet dielectricColorF90: vec3f=vec3f(f90Scale);\n#endif\n#if DIELECTRIC_SPECULAR_MODEL==DIELECTRIC_SPECULAR_MODEL_GLTF\nlet maxF0=max(specularColor.r,max(specularColor.g,specularColor.b));outParams.F0=dielectricF0*maxF0*specularWeight;\n#else\noutParams.F0=dielectricF0*specularWeight;\n#endif\noutParams.F90=f90Scale*specularWeight;outParams.coloredF0=vec3f(dielectricF0*specularWeight)*specularColor.rgb;outParams.coloredF90=dielectricColorF90*vec3f(specularWeight);return outParams;}\n";
-    VB.e.IncludesShadersStoreWGSL[yB] || (VB.e.IncludesShadersStoreWGSL[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
+    var FY = DY(38998);
+    const AY = "fogVertex",
+      IY = "#ifdef FOG\n#ifdef SCENE_UBO\nvertexOutputs.vFogDistance=(scene.view*worldPos).xyz;\n#else\nvertexOutputs.vFogDistance=(uniforms.view*worldPos).xyz;\n#endif\n#endif\n";
+    FY.b.IncludesShadersStoreWGSL[AY] || (FY.b.IncludesShadersStoreWGSL[AY] = IY);
+    const RY = {
+      name: AY,
+      shader: IY
     }
   },
-  60349: (BB, TB, dB) => {
-    dB.d(TB, {
-      c: () => lB
+  41322: (YY, rY, DY) => {
+    DY.d(rY, {
+      b: () => RY
     });
-    var VB = dB(38595);
-    const yB = "openpbrGeometryInfo",
-      pB = "struct geometryInfoOutParams\n{NdotV: f32,\nNdotVUnclamped: f32,\nenvironmentBrdf: vec3f,\nhorizonOcclusion: f32};struct geometryInfoAnisoOutParams\n{NdotV: f32,\nNdotVUnclamped: f32,\nenvironmentBrdf: vec3f,\nhorizonOcclusion: f32,\nanisotropy: f32,\nanisotropicTangent: vec3f,\nanisotropicBitangent: vec3f,\nTBN: mat3x3<f32>};fn geometryInfo(\nnormalW: vec3f,viewDirectionW: vec3f,roughness: f32,geometricNormalW: vec3f\n)->geometryInfoOutParams\n{var outParams: geometryInfoOutParams;outParams.NdotVUnclamped=dot(normalW,viewDirectionW);outParams.NdotV=absEps(outParams.NdotVUnclamped);\n#if defined(ENVIRONMENTBRDF)\noutParams.environmentBrdf=getBRDFLookup(outParams.NdotV,roughness);\n#else\noutParams.environmentBrdf=vec3f(0.0);\n#endif\noutParams.horizonOcclusion=1.0f;\n#if defined(ENVIRONMENTBRDF) && !defined(REFLECTIONMAP_SKYBOX)\n#ifdef HORIZONOCCLUSION\n#if defined(GEOMETRY_NORMAL) || defined(GEOMETRY_COAT_NORMAL)\n#ifdef REFLECTIONMAP_3D\noutParams.horizonOcclusion=environmentHorizonOcclusion(-viewDirectionW,normalW,geometricNormalW);\n#endif\n#endif\n#endif\n#endif\nreturn outParams;}\nfn geometryInfoAniso(\nnormalW: vec3f,viewDirectionW: vec3f,roughness: f32,geometricNormalW: vec3f\n,vAnisotropy: vec3f,TBN: mat3x3<f32>\n)->geometryInfoAnisoOutParams\n{let geoInfo: geometryInfoOutParams=geometryInfo(normalW,viewDirectionW,roughness,geometricNormalW);var outParams: geometryInfoAnisoOutParams;outParams.NdotV=geoInfo.NdotV;outParams.NdotVUnclamped=geoInfo.NdotVUnclamped;outParams.environmentBrdf=geoInfo.environmentBrdf;outParams.horizonOcclusion=geoInfo.horizonOcclusion;outParams.anisotropy=vAnisotropy.b;let anisotropyDirection: vec3f=vec3f(vAnisotropy.xy,0.);let anisoTBN: mat3x3<f32>=mat3x3<f32>(normalize(TBN[0]),normalize(TBN[1]),normalize(TBN[2]));outParams.anisotropicTangent=normalize(anisoTBN*anisotropyDirection);outParams.anisotropicBitangent=normalize(cross(anisoTBN[2],outParams.anisotropicTangent));outParams.TBN=TBN;return outParams;}\n";
-    VB.e.IncludesShadersStoreWGSL[yB] || (VB.e.IncludesShadersStoreWGSL[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
+    var FY = DY(38998);
+    const AY = "fogVertexDeclaration",
+      IY = "#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n";
+    FY.b.IncludesShadersStoreWGSL[AY] || (FY.b.IncludesShadersStoreWGSL[AY] = IY);
+    const RY = {
+      name: AY,
+      shader: IY
     }
   },
-  60354: (BB, TB, dB) => {
-    dB.d(TB, {
-      b: () => lB
+  41288: (YY, rY, DY) => {
+    DY.d(rY, {
+      d: () => RY
     });
-    var VB = dB(38595);
-    const yB = "openpbrIblFunctions",
-      pB = "#ifdef REFLECTION\nfn sampleIrradiance(\nsurfaceNormal: vec3f\n#if defined(NORMAL) && defined(USESPHERICALINVERTEX)\n,vEnvironmentIrradianceSH: vec3f\n#endif\n#if (defined(USESPHERICALFROMREFLECTIONMAP) && (!defined(NORMAL) || !defined(USESPHERICALINVERTEX))) || (defined(USEIRRADIANCEMAP) && defined(REFLECTIONMAP_3D))\n,iblMatrix: mat4x4f\n#endif\n#ifdef USEIRRADIANCEMAP\n#ifdef REFLECTIONMAP_3D\n,irradianceSampler: texture_cube<f32>\n,irradianceSamplerSampler: sampler\n#else\n,irradianceSampler: texture_2d<f32>\n,irradianceSamplerSampler: sampler\n#endif\n#ifdef USE_IRRADIANCE_DOMINANT_DIRECTION\n,reflectionDominantDirection: vec3f\n#endif\n#endif\n#ifdef REALTIME_FILTERING\n,reflectionFilteringInfo: vec2f\n#ifdef IBL_CDF_FILTERING\n,icdfSampler: texture_2d<f32>\n,icdfSamplerSampler: sampler\n#endif\n#endif\n,reflectionInfos: vec2f\n,viewDirectionW: vec3f\n,diffuseRoughness: f32\n,surfaceAlbedo: vec3f\n)->vec3f {var environmentIrradiance=vec3f(0.,0.,0.);\n#if (defined(USESPHERICALFROMREFLECTIONMAP) && (!defined(NORMAL) || !defined(USESPHERICALINVERTEX))) || (defined(USEIRRADIANCEMAP) && defined(REFLECTIONMAP_3D))\nvar irradianceVector=(iblMatrix*vec4f(surfaceNormal,0.0f)).xyz;var irradianceView=(iblMatrix*vec4f(viewDirectionW,0.0f)).xyz;\n#if !defined(USE_IRRADIANCE_DOMINANT_DIRECTION) && !defined(REALTIME_FILTERING)\n#if BASE_DIFFUSE_MODEL != BRDF_DIFFUSE_MODEL_LAMBERT && BASE_DIFFUSE_MODEL != BRDF_DIFFUSE_MODEL_LEGACY\n{let NdotV=max(dot(surfaceNormal,viewDirectionW),0.0f);irradianceVector=mix(irradianceVector,irradianceView,(0.5f*(1.0f-NdotV))*diffuseRoughness);}\n#endif\n#endif\n#ifdef REFLECTIONMAP_OPPOSITEZ\nirradianceVector.z*=-1.0;irradianceView.z*=-1.0;\n#endif\n#ifdef INVERTCUBICMAP\nirradianceVector.y*=-1.0;irradianceView.y*=-1.0;\n#endif\n#endif\n#ifdef USESPHERICALFROMREFLECTIONMAP\n#if defined(NORMAL) && defined(USESPHERICALINVERTEX)\nenvironmentIrradiance=vEnvironmentIrradianceSH;\n#else\n#if defined(REALTIME_FILTERING)\nenvironmentIrradiance=irradiance(reflectionSampler,reflectionSamplerSampler,irradianceVector,reflectionFilteringInfo,diffuseRoughness,surfaceAlbedo,irradianceView\n#ifdef IBL_CDF_FILTERING\n,icdfSampler\n,icdfSamplerSampler\n#endif\n);\n#else\nenvironmentIrradiance=computeEnvironmentIrradiance(irradianceVector);\n#endif\n#endif\n#elif defined(USEIRRADIANCEMAP)\n#ifdef REFLECTIONMAP_3D\nlet environmentIrradianceFromTexture: vec4f=textureSample(irradianceSampler,irradianceSamplerSampler,irradianceVector);\n#else\nlet environmentIrradianceFromTexture: vec4f=textureSample(irradianceSampler,irradianceSamplerSampler,reflectionCoords);\n#endif\nenvironmentIrradiance=environmentIrradianceFromTexture.rgb;\n#ifdef RGBDREFLECTION\nenvironmentIrradiance.rgb=fromRGBD(environmentIrradianceFromTexture);\n#endif\n#ifdef GAMMAREFLECTION\nenvironmentIrradiance.rgb=toLinearSpaceVec3(environmentIrradiance.rgb);\n#endif\n#ifdef USE_IRRADIANCE_DOMINANT_DIRECTION\nlet Ls: vec3f=normalize(reflectionDominantDirection);let NoL: f32=dot(irradianceVector,Ls);let NoV: f32=dot(irradianceVector,irradianceView);var diffuseRoughnessTerm=vec3f(1.0f);\n#if BASE_DIFFUSE_MODEL==BRDF_DIFFUSE_MODEL_EON\nlet LoV: f32=dot (Ls,irradianceView);let mag: f32=length(reflectionDominantDirection)*2.0f;let clampedAlbedo: vec3f=clamp(surfaceAlbedo,vec3f(0.1f),vec3f(1.0f));diffuseRoughnessTerm=diffuseBRDF_EON(clampedAlbedo,diffuseRoughness,NoL,NoV,LoV)*PI;diffuseRoughnessTerm=diffuseRoughnessTerm/clampedAlbedo;diffuseRoughnessTerm=mix(vec3f(1.0f),diffuseRoughnessTerm,sqrt(clamp(mag*NoV,0.0f,1.0f)));\n#elif BASE_DIFFUSE_MODEL==BRDF_DIFFUSE_MODEL_BURLEY\nlet H: vec3f=(irradianceView+Ls)*0.5f;let VoH: f32=dot(irradianceView,H);diffuseRoughnessTerm=vec3f(diffuseBRDF_Burley(NoL,NoV,VoH,diffuseRoughness)*PI);\n#endif\nenvironmentIrradiance=environmentIrradiance.rgb*diffuseRoughnessTerm;\n#endif\n#endif\nenvironmentIrradiance*=reflectionInfos.x;return environmentIrradiance;}\n#ifdef REFLECTIONMAP_3D\nfn createReflectionCoords(vPositionW: vec3f,normalW: vec3f)->vec3f\n#else\nfn createReflectionCoords(vPositionW: vec3f,normalW: vec3f)->vec2f\n#endif\n{var reflectionVector: vec3f=computeReflectionCoords(vec4f(vPositionW,1.0f),normalW);\n#ifdef REFLECTIONMAP_OPPOSITEZ\nreflectionVector.z*=-1.0;\n#endif\n#ifdef REFLECTIONMAP_3D\nvar reflectionCoords: vec3f=reflectionVector;\n#else\nvar reflectionCoords: vec2f=reflectionVector.xy;\n#ifdef REFLECTIONMAP_PROJECTION\nreflectionCoords/=reflectionVector.z;\n#endif\nreflectionCoords.y=1.0f-reflectionCoords.y;\n#endif\nreturn reflectionCoords;}\nfn sampleRadiance(\nalphaG: f32\n,reflectionMicrosurfaceInfos: vec3f\n,reflectionInfos: vec2f\n,geoInfo: geometryInfoOutParams\n#ifdef REFLECTIONMAP_3D\n,reflectionSampler: texture_cube<f32>\n,reflectionSamplerSampler: sampler\n,reflectionCoords: vec3f\n#else\n,reflectionSampler: texture_2d<f32>\n,reflectionSamplerSampler: sampler\n,reflectionCoords: vec2f\n#endif\n#ifdef REALTIME_FILTERING\n,reflectionFilteringInfo: vec2f\n#endif\n)->vec3f {var environmentRadiance: vec4f=vec4f(0.f,0.f,0.f,0.f);\n#if defined(LODINREFLECTIONALPHA) && !defined(REFLECTIONMAP_SKYBOX)\nvar reflectionLOD: f32=getLodFromAlphaG(reflectionMicrosurfaceInfos.x,alphaG,geoInfo.NdotVUnclamped);\n#elif defined(LINEARSPECULARREFLECTION)\nvar reflectionLOD: f32=getLinearLodFromRoughness(reflectionMicrosurfaceInfos.x,roughness);\n#else\nvar reflectionLOD: f32=getLodFromAlphaG(reflectionMicrosurfaceInfos.x,alphaG);\n#endif\nreflectionLOD=reflectionLOD*reflectionMicrosurfaceInfos.y+reflectionMicrosurfaceInfos.z;\n#ifdef REALTIME_FILTERING\nenvironmentRadiance=vec4f(radiance(alphaG,reflectionSampler,reflectionSamplerSampler,reflectionCoords,reflectionFilteringInfo),1.0f);\n#else\nenvironmentRadiance=textureSampleLevel(reflectionSampler,reflectionSamplerSampler,reflectionCoords,reflectionLOD);\n#endif\nvar envRadiance: vec3f=environmentRadiance.rgb;\n#ifdef RGBDREFLECTION\nenvRadiance=fromRGBD(environmentRadiance);\n#endif\n#ifdef GAMMAREFLECTION\nenvRadiance=toLinearSpaceVec3(environmentRadiance.rgb);\n#endif\nenvRadiance*=reflectionInfos.x;return envRadiance;}\n#if defined(ANISOTROPIC)\nfn sampleRadianceAnisotropic(\nalphaG: f32\n,reflectionMicrosurfaceInfos: vec3f\n,reflectionInfos: vec2f\n,geoInfo: geometryInfoAnisoOutParams\n,normalW: vec3f\n,viewDirectionW: vec3f\n,positionW: vec3f\n,noise: vec3f\n,isRefraction: bool\n,ior: f32\n#ifdef REFLECTIONMAP_3D\n,reflectionSampler: texture_cube<f32>\n,reflectionSamplerSampler: sampler\n#else\n,reflectionSampler: texture_2d<f32>\n,reflectionSamplerSampler: sampler\n#endif\n#ifdef REALTIME_FILTERING\n,reflectionFilteringInfo: vec2f\n#endif\n)->vec3f {var environmentRadiance: vec4f=vec4f(0.f,0.f,0.f,0.f);let alphaT=alphaG*sqrt(2.0f/(1.0f+(1.0f-geoInfo.anisotropy)*(1.0f-geoInfo.anisotropy)));let alphaB=(1.0f-geoInfo.anisotropy)*alphaT;let modifiedAlphaG=alphaB;\n#if defined(LODINREFLECTIONALPHA) && !defined(REFLECTIONMAP_SKYBOX)\nvar reflectionLOD: f32=getLodFromAlphaG(reflectionMicrosurfaceInfos.x,modifiedAlphaG,geoInfo.NdotVUnclamped);\n#elif defined(LINEARSPECULARREFLECTION)\nvar reflectionLOD: f32=getLinearLodFromRoughness(reflectionMicrosurfaceInfos.x,roughness);\n#else\nvar reflectionLOD: f32=getLodFromAlphaG(reflectionMicrosurfaceInfos.x,modifiedAlphaG);\n#endif\nreflectionLOD=reflectionLOD*reflectionMicrosurfaceInfos.y+reflectionMicrosurfaceInfos.z;\n#ifdef REALTIME_FILTERING\nvar view=(uniforms.reflectionMatrix*vec4f(viewDirectionW,0.0f)).xyz;var tangent=(uniforms.reflectionMatrix*vec4f(geoInfo.anisotropicTangent,0.0f)).xyz;var bitangent=(uniforms.reflectionMatrix*vec4f(geoInfo.anisotropicBitangent,0.0f)).xyz;var normal=(uniforms.reflectionMatrix*vec4f(normalW,0.0f)).xyz;\n#ifdef REFLECTIONMAP_OPPOSITEZ\nview.z*=-1.0f;tangent.z*=-1.0f;bitangent.z*=-1.0f;normal.z*=-1.0f;\n#endif\nenvironmentRadiance =\nvec4f(radianceAnisotropic(alphaT,alphaB,reflectionSampler,reflectionSamplerSampler,\nview,tangent,\nbitangent,normal,\nreflectionFilteringInfo,noise.xy,isRefraction,ior),\n1.0f);\n#else\nconst samples: i32=16;var radianceSample=vec4f(0.0);var accumulatedRadiance=vec3f(0.0);var sample_weight=0.0f;var total_weight=0.0f;let step=1.0f/f32(max(samples-1,1));for (var i: i32=0; i<samples; i++) {var t: f32=mix(-1.0,1.0,f32(i)*step);t+=step*2.0*noise.x;sample_weight=max(1.0-abs(t),0.001);sample_weight*=sample_weight;t*=min(4.0*alphaT*geoInfo.anisotropy,1.0);var bentNormal: vec3f;if (t<0.0) {let blend: f32=t+1.0;bentNormal=normalize(mix(-geoInfo.anisotropicTangent,normalW,blend));} else if (t>0.0) {let blend: f32=t;bentNormal=normalize(mix(normalW,geoInfo.anisotropicTangent,blend));} else {bentNormal=normalW;}\n#ifdef REFLECTIONMAP_3D\nvar reflectionCoords: vec3f;if (isRefraction) {reflectionCoords=double_refract(-viewDirectionW,bentNormal,ior);} else {reflectionCoords=reflect(-viewDirectionW,bentNormal);}\nreflectionCoords=(uniforms.reflectionMatrix*vec4f(reflectionCoords,0.f)).xyz;\n#ifdef REFLECTIONMAP_OPPOSITEZ\nreflectionCoords.z*=-1.0f;\n#endif\n#else\nvar sampleDirection: vec3f;if (isRefraction) {sampleDirection=double_refract(-viewDirectionW,bentNormal,ior);} else {sampleDirection=reflect(-viewDirectionW,bentNormal);}\nlet originalViewDirectionW: vec3f=normalize(scene.vEyePosition.xyz-positionW);let mappingNormalCandidate: vec3f=originalViewDirectionW+sampleDirection;var mappingNormal: vec3f;if (dot(mappingNormalCandidate,mappingNormalCandidate)>Epsilon) {mappingNormal=normalize(mappingNormalCandidate);} else {let perpendicularAxis: vec3f=select(vec3f(0.0f,1.0f,0.0f),vec3f(1.0f,0.0f,0.0f),abs(originalViewDirectionW.x)<0.9f);mappingNormal=normalize(cross(originalViewDirectionW,perpendicularAxis));}\nlet reflectionCoords: vec2f=createReflectionCoords(positionW,mappingNormal);\n#endif\nradianceSample=textureSampleLevel(reflectionSampler,reflectionSamplerSampler,reflectionCoords,reflectionLOD);\n#ifdef RGBDREFLECTION\naccumulatedRadiance+=vec3f(sample_weight)*fromRGBD(radianceSample);\n#elif defined(GAMMAREFLECTION)\naccumulatedRadiance+=vec3f(sample_weight)*toLinearSpaceVec3(radianceSample.rgb);\n#else\naccumulatedRadiance+=vec3f(sample_weight)*radianceSample.rgb;\n#endif\ntotal_weight+=sample_weight;}\nenvironmentRadiance=vec4f(accumulatedRadiance/vec3f(total_weight),1.0f);\n#endif\nenvironmentRadiance=vec4f(environmentRadiance.rgb*reflectionInfos.xxx,environmentRadiance.a);return environmentRadiance.rgb;}\n#endif\n#endif\n#ifdef ENVIRONMENTBRDF\nfn computeDielectricIblFresnel(reflectance: ReflectanceParams,environmentBrdf: vec3f)->f32\n{let dielectricIblFresnel: f32=getReflectanceFromBRDFWithEnvLookup(vec3f(reflectance.F0),vec3f(reflectance.F90),environmentBrdf).r;let dielectricECF: f32=1.0+reflectance.F0*(1.0/environmentBrdf.y-1.0);return clamp(dielectricIblFresnel*dielectricECF,0.0,1.0);}\nfn computeConductorIblFresnel(reflectance: ReflectanceParams,environmentBrdf: vec3f)->vec3f\n{\n#if (CONDUCTOR_SPECULAR_MODEL==CONDUCTOR_SPECULAR_MODEL_OPENPBR)\nlet openPBRBrdf: vec3f=vec3f(environmentBrdf.xy,environmentBrdf.z/BRDF_Z_SCALE);let b: vec3f =getF82B(reflectance.coloredF0,reflectance.coloredF90);let E_F82: vec3f=getF82DirectionalAlbedo(reflectance.coloredF0,vec3f(1.0),b,openPBRBrdf);let F_avg: vec3f=getF82AverageFresnel(reflectance.coloredF0,b);let ECF: vec3f =vec3f(1.0)+F_avg*(vec3f(1.0)/openPBRBrdf.y-vec3f(1.0));return clamp(E_F82*ECF,vec3f(0.0),vec3f(1.0));\n#else\nreturn getReflectanceFromBRDFLookup(reflectance.coloredF0,reflectance.coloredF90,environmentBrdf);\n#endif\n}\n#endif\n";
-    VB.e.IncludesShadersStoreWGSL[yB] || (VB.e.IncludesShadersStoreWGSL[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
+    var FY = DY(38998);
+    const AY = "instancesDeclaration",
+      IY = "#ifdef INSTANCES\nattribute world0 : vec4<f32>;attribute world1 : vec4<f32>;attribute world2 : vec4<f32>;attribute world3 : vec4<f32>;\n#ifdef INSTANCESCOLOR\nattribute instanceColor : vec4<f32>;\n#endif\n#if defined(THIN_INSTANCES) && !defined(WORLD_UBO)\nuniform world : mat4x4<f32>;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nattribute previousWorld0 : vec4<f32>;attribute previousWorld1 : vec4<f32>;attribute previousWorld2 : vec4<f32>;attribute previousWorld3 : vec4<f32>;\n#ifdef THIN_INSTANCES\nuniform previousWorld : mat4x4<f32>;\n#endif\n#endif\n#else\n#if !defined(WORLD_UBO)\nuniform world : mat4x4<f32>;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nuniform previousWorld : mat4x4<f32>;\n#endif\n#endif\n";
+    FY.b.IncludesShadersStoreWGSL[AY] || (FY.b.IncludesShadersStoreWGSL[AY] = IY);
+    const RY = {
+      name: AY,
+      shader: IY
     }
   },
-  60366: (BB, TB, dB) => {
-    dB.d(TB, {
-      d: () => lB
+  41382: (YY, rY, DY) => {
+    DY.d(rY, {
+      e: () => RY
     });
-    var VB = dB(38595);
-    const yB = "openpbrSubsurfaceLayerData",
-      pB = "var subsurface_weight: f32=uniforms.vSubsurfaceWeight;var subsurface_color: vec3f=uniforms.vSubsurfaceColor.rgb;var subsurface_radius: f32=uniforms.vSubsurfaceRadius;var subsurface_radius_scale: vec3f=uniforms.vSubsurfaceRadiusScale;var subsurface_scatter_anisotropy: f32=clamp(uniforms.vSubsurfaceScatterAnisotropy,-0.9999f,0.9999f);\n#ifdef SUBSURFACE_WEIGHT\nlet subsurfaceWeightFromTexture: vec4f=TEXRD(subsurfaceWeightSampler,subsurfaceWeightSamplerSampler,fragmentInputs.vSubsurfaceWeightUV+uvOffset);\n#endif\n#ifdef SUBSURFACE_COLOR\nlet subsurfaceColorFromTexture: vec4f=TEXRD(subsurfaceColorSampler,subsurfaceColorSamplerSampler,fragmentInputs.vSubsurfaceColorUV+uvOffset);\n#endif\n#ifdef SUBSURFACE_RADIUS_SCALE\nlet subsurfaceRadiusScaleFromTexture: vec4f=TEXRD(subsurfaceRadiusScaleSampler,subsurfaceRadiusScaleSamplerSampler,fragmentInputs.vSubsurfaceRadiusScaleUV+uvOffset);\n#endif\n#ifdef SUBSURFACE_WEIGHT\n#ifdef SUBSURFACE_WEIGHT_FROM_TEXTURE_ALPHA\nsubsurface_weight*=subsurfaceWeightFromTexture.a;\n#else\nsubsurface_weight*=subsurfaceWeightFromTexture.r;\n#endif\n#endif\n#ifdef SUBSURFACE_COLOR\n#ifdef SUBSURFACE_COLOR_GAMMA\nsubsurface_color*=toLinearSpaceVec3(subsurfaceColorFromTexture.rgb);\n#else\nsubsurface_color*=subsurfaceColorFromTexture.rgb;\n#endif\nsubsurface_color*=uniforms.vSubsurfaceColorInfos.y;\n#endif\n#ifdef SUBSURFACE_RADIUS_SCALE\nsubsurface_radius_scale*=subsurfaceRadiusScaleFromTexture.rgb;\n#endif\n";
-    VB.e.IncludesShadersStoreWGSL[yB] || (VB.e.IncludesShadersStoreWGSL[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
+    var FY = DY(38998);
+    const AY = "instancesVertex",
+      IY = "#ifdef INSTANCES\nvar finalWorld=mat4x4<f32>(vertexInputs.world0,vertexInputs.world1,vertexInputs.world2,vertexInputs.world3);\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nvar finalPreviousWorld=mat4x4<f32>(\nvertexInputs.previousWorld0,vertexInputs.previousWorld1,\nvertexInputs.previousWorld2,vertexInputs.previousWorld3);\n#endif\n#ifdef THIN_INSTANCES\n#if !defined(WORLD_UBO)\nfinalWorld=uniforms.world*finalWorld;\n#else\nfinalWorld=mesh.world*finalWorld;\n#endif\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nfinalPreviousWorld=uniforms.previousWorld*finalPreviousWorld;\n#endif\n#endif\n#else\n#if !defined(WORLD_UBO)\nvar finalWorld=uniforms.world;\n#else\nvar finalWorld=mesh.world;\n#endif\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nvar finalPreviousWorld=uniforms.previousWorld;\n#endif\n#endif\n";
+    FY.b.IncludesShadersStoreWGSL[AY] || (FY.b.IncludesShadersStoreWGSL[AY] = IY);
+    const RY = {
+      name: AY,
+      shader: IY
     }
   },
-  60359: (BB, TB, dB) => {
-    dB.d(TB, {
-      d: () => lB
+  41331: (YY, rY, DY) => {
+    DY.d(rY, {
+      b: () => RY
     });
-    var VB = dB(38595);
-    const yB = "openpbrTransmissionLayerData",
-      pB = "var transmission_weight: f32=uniforms.vTransmissionWeight;var transmission_color: vec3f=uniforms.vTransmissionColor.rgb;var transmission_depth: f32=uniforms.vTransmissionDepth;var transmission_scatter: vec3f=uniforms.vTransmissionScatter.rgb;var transmission_scatter_anisotropy: f32=clamp(uniforms.vTransmissionScatterAnisotropy,-0.9999f,0.9999f);var transmission_dispersion_scale: f32=uniforms.vTransmissionDispersionScale;var transmission_dispersion_abbe_number: f32=uniforms.vTransmissionDispersionAbbeNumber;\n#ifdef TRANSMISSION_WEIGHT\nlet transmissionWeightFromTexture: vec4f=TEXRD(transmissionWeightSampler,transmissionWeightSamplerSampler,fragmentInputs.vTransmissionWeightUV+uvOffset);\n#endif\n#ifdef TRANSMISSION_COLOR\nlet transmissionColorFromTexture: vec4f=TEXRD(transmissionColorSampler,transmissionColorSamplerSampler,fragmentInputs.vTransmissionColorUV+uvOffset);\n#endif\n#ifdef TRANSMISSION_DEPTH\nlet transmissionDepthFromTexture: vec4f=TEXRD(transmissionDepthSampler,transmissionDepthSamplerSampler,fragmentInputs.vTransmissionDepthUV+uvOffset);\n#endif\n#ifdef TRANSMISSION_SCATTER\nlet transmissionScatterFromTexture: vec4f=TEXRD(transmissionScatterSampler,transmissionScatterSamplerSampler,fragmentInputs.vTransmissionScatterUV+uvOffset);\n#endif\n#ifdef TRANSMISSION_DISPERSION_SCALE\nlet transmissionDispersionScaleFromTexture: vec4f=TEXRD(transmissionDispersionScaleSampler,transmissionDispersionScaleSamplerSampler,fragmentInputs.vTransmissionDispersionScaleUV+uvOffset);\n#endif\n#ifdef TRANSMISSION_WEIGHT\ntransmission_weight*=transmissionWeightFromTexture.r;\n#endif\n#ifdef TRANSMISSION_COLOR\n#ifdef TRANSMISSION_COLOR_GAMMA\ntransmission_color*=toLinearSpaceVec3(transmissionColorFromTexture.rgb);\n#else\ntransmission_color*=transmissionColorFromTexture.rgb;\n#endif\ntransmission_color*=uniforms.vTransmissionColorInfos.y;\n#endif\n#ifdef TRANSMISSION_DEPTH\ntransmission_depth*=transmissionDepthFromTexture.r;\n#endif\n#ifdef TRANSMISSION_SCATTER\ntransmission_scatter*=transmissionScatterFromTexture.rgb;\n#endif\n#ifdef TRANSMISSION_DISPERSION_SCALE\ntransmission_dispersion_scale*=transmissionDispersionScaleFromTexture.r;\n#endif\n";
-    VB.e.IncludesShadersStoreWGSL[yB] || (VB.e.IncludesShadersStoreWGSL[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
+    var FY = DY(38998);
+    const AY = "lightVxUboDeclaration",
+      IY = "#ifdef LIGHT{X}\nstruct Light{X}\n{vLightData: vec4f,\nvLightDiffuse: vec4f,\nvLightSpecular: vec4f,\n#ifdef SPOTLIGHT{X}\nvLightDirection: vec4f,\nvLightFalloff: vec4f,\n#elif defined(POINTLIGHT{X})\nvLightFalloff: vec4f,\n#elif defined(HEMILIGHT{X})\nvLightGround: vec3f,\n#elif defined(CLUSTLIGHT{X})\nvSliceData: vec2f,\nvSliceRanges: array<vec4f,CLUSTLIGHT_SLICES>,\n#endif\n#if defined(AREALIGHT{X}) && defined(AREALIGHTUSED) && defined(AREALIGHTSUPPORTED)\nvLightWidth: vec4f,\nvLightHeight: vec4f,\n#endif\nshadowsInfo: vec4f,\ndepthValues: vec2f} ;var<uniform> light{X} : Light{X};\n#ifdef SHADOW{X}\n#ifdef SHADOWCSM{X}\nuniform lightMatrix{X}: array<mat4x4f,SHADOWCSMNUM_CASCADES{X}>;varying vPositionFromLight{X}_0: vec4f;varying vDepthMetric{X}_0: f32;varying vPositionFromLight{X}_1: vec4f;varying vDepthMetric{X}_1: f32;varying vPositionFromLight{X}_2: vec4f;varying vDepthMetric{X}_2: f32;varying vPositionFromLight{X}_3: vec4f;varying vDepthMetric{X}_3: f32;varying vPositionFromCamera{X}: vec4f;\n#elif defined(SHADOWCUBE{X})\n#else\nvarying vPositionFromLight{X}: vec4f;varying vDepthMetric{X}: f32;uniform lightMatrix{X}: mat4x4f;\n#endif\n#endif\n#endif\n";
+    FY.b.IncludesShadersStoreWGSL[AY] || (FY.b.IncludesShadersStoreWGSL[AY] = IY);
+    const RY = {
+      name: AY,
+      shader: IY
     }
   },
-  60215: (BB, TB, dB) => {
-    dB.d(TB, {
-      b: () => lB
+  41353: (YY, rY, DY) => {
+    DY.d(rY, {
+      e: () => RY
     });
-    var VB = dB(38595);
-    const yB = "pbrFragmentReflectionDeclaration",
-      pB = "#ifdef REFLECTION\n#ifdef REFLECTIONMAP_3D\nvar reflectionSamplerSampler: sampler;var reflectionSampler: texture_cube<f32>;\n#ifdef LODBASEDMICROSFURACE\n#else\nvar reflectionLowSamplerSampler: sampler;var reflectionLowSampler: texture_cube<f32>;var reflectionHighSamplerSampler: sampler;var reflectionHighSampler: texture_cube<f32>;\n#endif\n#ifdef USEIRRADIANCEMAP\nvar irradianceSamplerSampler: sampler;var irradianceSampler: texture_cube<f32>;\n#endif\n#else\nvar reflectionSamplerSampler: sampler;var reflectionSampler: texture_2d<f32>;\n#ifdef LODBASEDMICROSFURACE\n#else\nvar reflectionLowSamplerSampler: sampler;var reflectionLowSampler: texture_2d<f32>;var reflectionHighSamplerSampler: sampler;var reflectionHighSampler: texture_2d<f32>;\n#endif\n#ifdef USEIRRADIANCEMAP\nvar irradianceSamplerSampler: sampler;var irradianceSampler: texture_2d<f32>;\n#endif\n#endif\n#ifdef REFLECTIONMAP_SKYBOX\nvarying vPositionUVW: vec3f;\n#else\n#if defined(REFLECTIONMAP_EQUIRECTANGULAR_FIXED) || defined(REFLECTIONMAP_MIRROREDEQUIRECTANGULAR_FIXED)\nvarying vDirectionW: vec3f;\n#endif\n#endif\n#endif\n";
-    VB.e.IncludesShadersStoreWGSL[yB] || (VB.e.IncludesShadersStoreWGSL[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
+    var FY = DY(38998);
+    const AY = "logDepthDeclaration",
+      IY = "#ifdef LOGARITHMICDEPTH\nuniform logarithmicDepthConstant: f32;varying vFragmentDepth: f32;\n#endif\n";
+    FY.b.IncludesShadersStoreWGSL[AY] || (FY.b.IncludesShadersStoreWGSL[AY] = IY);
+    const RY = {
+      name: AY,
+      shader: IY
     }
   },
-  60267: (BB, TB, dB) => {
-    dB.d(TB, {
-      d: () => lB
+  41447: (YY, rY, DY) => {
+    DY.d(rY, {
+      d: () => RY
     });
-    var VB = dB(38595);
-    const yB = "pbrIBLFunctions",
-      pB = "#if defined(REFLECTION) || defined(SS_REFRACTION)\nfn getLodFromAlphaG(cubeMapDimensionPixels: f32,microsurfaceAverageSlope: f32)->f32 {var microsurfaceAverageSlopeTexels: f32=cubeMapDimensionPixels*microsurfaceAverageSlope;var lod: f32=log2(microsurfaceAverageSlopeTexels);return lod;}\nfn getLinearLodFromRoughness(cubeMapDimensionPixels: f32,roughness: f32)->f32 {var lod: f32=log2(cubeMapDimensionPixels)*roughness;return lod;}\n#endif\n#if defined(ENVIRONMENTBRDF) && defined(RADIANCEOCCLUSION)\nfn environmentRadianceOcclusion(ambientOcclusion: f32,NdotVUnclamped: f32)->f32 {var temp: f32=NdotVUnclamped+ambientOcclusion;return saturate(temp*temp-1.0+ambientOcclusion);}\n#endif\n#if defined(ENVIRONMENTBRDF) && defined(HORIZONOCCLUSION)\nfn environmentHorizonOcclusion(view: vec3f,normal: vec3f,geometricNormal: vec3f)->f32 {var reflection: vec3f=reflect(view,normal);var temp: f32=saturate(1.0+1.1*dot(reflection,geometricNormal));return temp*temp;}\n#endif\n#if defined(LODINREFLECTIONALPHA) || defined(SS_LODINREFRACTIONALPHA)\nfn UNPACK_LOD(x: f32)->f32 {return (1.0-x)*255.0;}\nfn getLodFromAlphaGNdotV(cubeMapDimensionPixels: f32,alphaG: f32,NdotV: f32)->f32 {var microsurfaceAverageSlope: f32=alphaG;microsurfaceAverageSlope*=sqrt(abs(NdotV));return getLodFromAlphaG(cubeMapDimensionPixels,microsurfaceAverageSlope);}\n#endif\n";
-    VB.e.IncludesShadersStoreWGSL[yB] || (VB.e.IncludesShadersStoreWGSL[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
+    var FY = DY(38998);
+    const AY = "logDepthVertex",
+      IY = "#ifdef LOGARITHMICDEPTH\nvertexOutputs.vFragmentDepth=1.0+vertexOutputs.position.w;vertexOutputs.position.z=log2(max(0.000001,vertexOutputs.vFragmentDepth))*uniforms.logarithmicDepthConstant;\n#endif\n";
+    FY.b.IncludesShadersStoreWGSL[AY] || (FY.b.IncludesShadersStoreWGSL[AY] = IY);
+    const RY = {
+      name: AY,
+      shader: IY
     }
   },
-  41149: (BB, TB, dB) => {
-    dB.d(TB, {
-      e: () => lB
+  41299: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => RY
     });
-    var VB = dB(38595);
-    const yB = "reflectionFunction",
-      pB = "fn computeFixedEquirectangularCoords(worldPos: vec4f,worldNormal: vec3f,direction: vec3f)->vec3f\n{var lon: f32=atan2(direction.z,direction.x);var lat: f32=acos(direction.y);var sphereCoords: vec2f= vec2f(lon,lat)*RECIPROCAL_PI2*2.0;var s: f32=sphereCoords.x*0.5+0.5;var t: f32=sphereCoords.y;return vec3f(s,t,0); }\nfn computeMirroredFixedEquirectangularCoords(worldPos: vec4f,worldNormal: vec3f,direction: vec3f)->vec3f\n{var lon: f32=atan2(direction.z,direction.x);var lat: f32=acos(direction.y);var sphereCoords: vec2f= vec2f(lon,lat)*RECIPROCAL_PI2*2.0;var s: f32=sphereCoords.x*0.5+0.5;var t: f32=sphereCoords.y;return vec3f(1.0-s,t,0); }\nfn computeEquirectangularCoords(worldPos: vec4f,worldNormal: vec3f,eyePosition: vec3f,reflectionMatrix: mat4x4f)->vec3f\n{var cameraToVertex: vec3f=normalize(worldPos.xyz-eyePosition);var r: vec3f=normalize(reflect(cameraToVertex,worldNormal));r= (reflectionMatrix* vec4f(r,0)).xyz;var lon: f32=atan2(r.z,r.x);var lat: f32=acos(r.y);var sphereCoords: vec2f= vec2f(lon,lat)*RECIPROCAL_PI2*2.0;var s: f32=sphereCoords.x*0.5+0.5;var t: f32=sphereCoords.y;return vec3f(s,t,0);}\nfn computeSphericalCoords(worldPos: vec4f,worldNormal: vec3f,view: mat4x4f,reflectionMatrix: mat4x4f)->vec3f\n{var viewDir: vec3f=normalize((view*worldPos).xyz);var viewNormal: vec3f=normalize((view* vec4f(worldNormal,0.0)).xyz);var r: vec3f=reflect(viewDir,viewNormal);r= (reflectionMatrix* vec4f(r,0)).xyz;r.z=r.z-1.0;var m: f32=2.0*length(r);return vec3f(r.x/m+0.5,1.0-r.y/m-0.5,0);}\nfn computePlanarCoords(worldPos: vec4f,worldNormal: vec3f,eyePosition: vec3f,reflectionMatrix: mat4x4f)->vec3f\n{var viewDir: vec3f=worldPos.xyz-eyePosition;var coords: vec3f=normalize(reflect(viewDir,worldNormal));return (reflectionMatrix* vec4f(coords,1)).xyz;}\nfn computeCubicCoords(worldPos: vec4f,worldNormal: vec3f,eyePosition: vec3f,reflectionMatrix: mat4x4f)->vec3f\n{var viewDir: vec3f=normalize(worldPos.xyz-eyePosition);var coords: vec3f=reflect(viewDir,worldNormal);coords= (reflectionMatrix* vec4f(coords,0)).xyz;\n#ifdef INVERTCUBICMAP\ncoords.y*=-1.0;\n#endif\nreturn coords;}\nfn computeCubicLocalCoords(worldPos: vec4f,worldNormal: vec3f,eyePosition: vec3f,reflectionMatrix: mat4x4f,reflectionSize: vec3f,reflectionPosition: vec3f)->vec3f\n{var viewDir: vec3f=normalize(worldPos.xyz-eyePosition);var coords: vec3f=reflect(viewDir,worldNormal);coords=parallaxCorrectNormal(worldPos.xyz,coords,reflectionSize,reflectionPosition);coords=(reflectionMatrix* vec4f(coords,0)).xyz;\n#ifdef INVERTCUBICMAP\ncoords.y*=-1.0;\n#endif\nreturn coords;}\nfn computeProjectionCoords(worldPos: vec4f,view: mat4x4f,reflectionMatrix: mat4x4f)->vec3f\n{return (reflectionMatrix*(view*worldPos)).xyz;}\nfn computeSkyBoxCoords(positionW: vec3f,reflectionMatrix: mat4x4f)->vec3f\n{return (reflectionMatrix* vec4f(positionW,1.)).xyz;}\n#ifdef REFLECTION\nfn computeReflectionCoords(worldPos: vec4f,worldNormal: vec3f)->vec3f\n{\n#ifdef REFLECTIONMAP_MIRROREDEQUIRECTANGULAR_FIXED\nvar direction: vec3f=normalize(fragmentInputs.vDirectionW);return computeMirroredFixedEquirectangularCoords(worldPos,worldNormal,direction);\n#endif\n#ifdef REFLECTIONMAP_EQUIRECTANGULAR_FIXED\nvar direction: vec3f=normalize(fragmentInputs.vDirectionW);return computeFixedEquirectangularCoords(worldPos,worldNormal,direction);\n#endif\n#ifdef REFLECTIONMAP_EQUIRECTANGULAR\nreturn computeEquirectangularCoords(worldPos,worldNormal,scene.vEyePosition.xyz,uniforms.reflectionMatrix);\n#endif\n#ifdef REFLECTIONMAP_SPHERICAL\nreturn computeSphericalCoords(worldPos,worldNormal,scene.view,uniforms.reflectionMatrix);\n#endif\n#ifdef REFLECTIONMAP_PLANAR\nreturn computePlanarCoords(worldPos,worldNormal,scene.vEyePosition.xyz,uniforms.reflectionMatrix);\n#endif\n#ifdef REFLECTIONMAP_CUBIC\n#ifdef USE_LOCAL_REFLECTIONMAP_CUBIC\nreturn computeCubicLocalCoords(worldPos,worldNormal,scene.vEyePosition.xyz,uniforms.reflectionMatrix,uniforms.vReflectionSize,uniforms.vReflectionPosition);\n#else\nreturn computeCubicCoords(worldPos,worldNormal,scene.vEyePosition.xyz,uniforms.reflectionMatrix);\n#endif\n#endif\n#ifdef REFLECTIONMAP_PROJECTION\nreturn computeProjectionCoords(worldPos,scene.view,uniforms.reflectionMatrix);\n#endif\n#ifndef REFLECTIONMAP_CUBIC\n#ifdef REFLECTIONMAP_SKYBOX\nreturn computeSkyBoxCoords(fragmentInputs.vPositionUVW,uniforms.reflectionMatrix);\n#endif\n#endif\n#ifdef REFLECTIONMAP_EXPLICIT\nreturn vec3f(0,0,0);\n#endif\n}\n#endif\n";
-    VB.e.IncludesShadersStoreWGSL[yB] || (VB.e.IncludesShadersStoreWGSL[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
+    var FY = DY(38998);
+    const AY = "mainUVVaryingDeclaration",
+      IY = "#ifdef MAINUV{X}\nvarying vMainUV{X}: vec2f;\n#endif\n";
+    FY.b.IncludesShadersStoreWGSL[AY] || (FY.b.IncludesShadersStoreWGSL[AY] = IY);
+    const RY = {
+      name: AY,
+      shader: IY
     }
   },
-  41147: (BB, TB, dB) => {
-    dB.d(TB, {
-      e: () => lB
+  41261: (YY, rY, DY) => {
+    DY.d(rY, {
+      b: () => RY
     });
-    var VB = dB(38595);
-    const yB = "samplerFragmentDeclaration",
-      pB = "#ifdef _DEFINENAME_\n#if _DEFINENAME_DIRECTUV==1\n#define v_VARYINGNAME_UV vMainUV1\n#elif _DEFINENAME_DIRECTUV==2\n#define v_VARYINGNAME_UV vMainUV2\n#elif _DEFINENAME_DIRECTUV==3\n#define v_VARYINGNAME_UV vMainUV3\n#elif _DEFINENAME_DIRECTUV==4\n#define v_VARYINGNAME_UV vMainUV4\n#elif _DEFINENAME_DIRECTUV==5\n#define v_VARYINGNAME_UV vMainUV5\n#elif _DEFINENAME_DIRECTUV==6\n#define v_VARYINGNAME_UV vMainUV6\n#else\nvarying v_VARYINGNAME_UV: vec2f;\n#endif\nvar _SAMPLERNAME_SamplerSampler: sampler;var _SAMPLERNAME_Sampler: texture_2d<f32>;\n#endif\n";
-    VB.e.IncludesShadersStoreWGSL[yB] || (VB.e.IncludesShadersStoreWGSL[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
+    var FY = DY(38998);
+    const AY = "meshUboDeclaration",
+      IY = "struct Mesh {world : mat4x4<f32>,\nvisibility : f32,};var<uniform> mesh : Mesh;\n#define WORLD_UBO\n";
+    FY.b.IncludesShadersStoreWGSL[AY] || (FY.b.IncludesShadersStoreWGSL[AY] = IY);
+    const RY = {
+      name: AY,
+      shader: IY
     }
   },
-  60376: (BB, TB, dB) => {
-    dB.r(TB), dB.d(TB, {
-      geometryPixelShaderWGSL: () => MB
+  41375: (YY, rY, DY) => {
+    DY.d(rY, {
+      e: () => RY
     });
-    var VB = dB(38595),
-      yB = dB(41108),
-      pB = dB(41180),
-      lB = dB(41166),
-      JB = dB(41147),
-      YB = dB(41171),
-      gB = dB(40947),
-      oB = dB(60215),
-      kB = dB(40931),
-      LB = dB(60197),
-      OB = dB(60347),
-      DB = dB(60267),
-      uB = dB(41149),
-      HB = dB(60349),
-      EB = dB(60354),
-      vB = dB(41195),
-      mB = dB(41198),
-      iB = dB(60366),
-      NB = dB(60359);
-    const tB = "geometryPixelShader",
-      fB = "#ifdef BUMP\nvarying vWorldView0: vec4f;varying vWorldView1: vec4f;varying vWorldView2: vec4f;varying vWorldView3: vec4f;varying vNormalW: vec3f;\n#else\nvarying vNormalV: vec3f;\n#endif\nvarying vViewPos: vec4f;\n#if defined(POSITION) || defined(BUMP) || defined(IRRADIANCE)\nvarying vPositionW: vec3f;\n#endif\n#if defined(VELOCITY) || defined(VELOCITY_LINEAR)\nvarying vCurrentPosition: vec4f;varying vPreviousPosition: vec4f;\n#endif\n#ifdef NEED_UV\nvarying vUV: vec2f;\n#endif\n#ifdef BUMP\nuniform vBumpInfos: vec3f;uniform vTangentSpaceParams: vec2f;\n#endif\n#if defined(REFLECTIVITY)\n#if defined(ORMTEXTURE) || defined(SPECULARGLOSSINESSTEXTURE) || defined(REFLECTIVITYTEXTURE)\nvar reflectivitySamplerSampler: sampler;var reflectivitySampler: texture_2d<f32>;varying vReflectivityUV: vec2f;\n#else\n#ifdef METALLIC_TEXTURE\nvar metallicSamplerSampler: sampler;var metallicSampler: texture_2d<f32>;varying vMetallicUV: vec2f;\n#endif\n#ifdef ROUGHNESS_TEXTURE\nvar roughnessSamplerSampler: sampler;var roughnessSampler: texture_2d<f32>;varying vRoughnessUV: vec2f;\n#endif\n#endif\n#ifdef ALBEDOTEXTURE\nvarying vAlbedoUV: vec2f;var albedoSamplerSampler: sampler;var albedoSampler: texture_2d<f32>;\n#endif\n#ifdef REFLECTIVITYCOLOR\nuniform reflectivityColor: vec3f;\n#endif\n#ifdef ALBEDOCOLOR\nuniform albedoColor: vec3f;\n#endif\n#ifdef METALLIC\nuniform metallic: f32;\n#endif\n#if defined(ROUGHNESS) || defined(GLOSSINESS)\nuniform glossiness: f32;\n#endif\n#endif\n#if defined(ALPHATEST) && defined(NEED_UV)\nvar diffuseSamplerSampler: sampler;var diffuseSampler: texture_2d<f32>;uniform alphaCutOff: f32;\n#endif\n#ifdef OBJECT_ID\nuniform objectId: f32;\n#include<objectIdFunctions>\n#endif\n#ifdef MESH_BLEND_TAG\nuniform meshBlendTag: i32;\n#endif\n#include<clipPlaneFragmentDeclaration>\n#include<bumpFragmentMainFunctions>\n#include<bumpFragmentFunctions>\n#include<helperFunctions>\n#ifdef IRRADIANCE\n#include<pbrFragmentReflectionDeclaration>\n#ifdef REFLECTION\n#ifdef USEIRRADIANCEMAP\n#include<sceneUboDeclaration>\nuniform reflectionMatrix: mat4x4f;uniform vReflectionInfos: vec2f;uniform vReflectionDominantDirection: vec3f;\n#include<pbrBRDFFunctions>\n#include<openpbrDielectricReflectance>\n#include<pbrIBLFunctions>\n#include<reflectionFunction>\n#include<openpbrGeometryInfo>\n#include<openpbrIblFunctions>\n#elif defined(USESPHERICALFROMREFLECTIONMAP)\nvarying vEnvironmentIrradiance: vec3f;\n#endif\n#ifdef IBL_SHADOW_TEXTURE\nvar iblShadowSampler: texture_2d<f32>;var iblShadowSamplerSampler: sampler;uniform shadowTextureSize: vec2f;\n#endif\n#ifdef IRRADIANCE_SCATTER_MASK\nuniform vSubsurfaceWeight: f32;\n#include<samplerFragmentDeclaration>(_DEFINENAME_,SUBSURFACE_WEIGHT,_VARYINGNAME_,SubsurfaceWeight,_SAMPLERNAME_,subsurfaceWeight)\nuniform vSubsurfaceScatterAnisotropy: f32;uniform vTransmissionWeight: f32;\n#include<samplerFragmentDeclaration>(_DEFINENAME_,TRANSMISSION_WEIGHT,_VARYINGNAME_,TransmissionWeight,_SAMPLERNAME_,transmissionWeight)\nuniform vTransmissionScatterAnisotropy: f32;\n#endif\n#endif\n#endif\n@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {\n#include<clipPlaneFragment>\n#ifdef ALPHATEST\nif (textureSample(diffuseSampler,diffuseSamplerSampler,input.vUV).a<uniforms.alphaCutOff) {discard;}\n#endif\nvar normalOutput: vec3f;\n#ifdef BUMP\nvar normalW: vec3f=normalize(input.vNormalW);\n#include<bumpFragment>\n#ifdef NORMAL_WORLDSPACE\nnormalOutput=normalW;\n#else\nnormalOutput=normalize( (mat4x4f(input.vWorldView0,input.vWorldView1,input.vWorldView2,input.vWorldView3)* vec4f(normalW,0.0)).xyz);\n#endif\n#elif defined(HAS_NORMAL_ATTRIBUTE)\nnormalOutput=normalize(input.vNormalV);\n#elif defined(POSITION)\nnormalOutput=normalize(-cross(dpdx(input.vPositionW),dpdy(input.vPositionW)));\n#endif\n#ifdef ENCODE_NORMAL\nnormalOutput=normalOutput*0.5+0.5;\n#endif\nvar fragData: array<vec4<f32>,SCENE_MRT_COUNT>;\n#ifdef DEPTH\nfragData[DEPTH_INDEX]=vec4f(input.vViewPos.z/input.vViewPos.w,0.0,0.0,1.0);\n#endif\n#ifdef NORMAL\nfragData[NORMAL_INDEX]=vec4f(normalOutput,1.0);\n#endif\n#ifdef SCREENSPACE_DEPTH\nfragData[SCREENSPACE_DEPTH_INDEX]=vec4f(fragmentInputs.position.z,0.0,0.0,1.0);\n#endif\n#ifdef POSITION\nfragData[POSITION_INDEX]= vec4f(input.vPositionW,1.0);\n#endif\n#ifdef OBJECT_ID\nfragData[OBJECT_ID_INDEX]=encodeObjectId(uniforms.objectId);\n#endif\n#ifdef VELOCITY\nvar a: vec2f=(input.vCurrentPosition.xy/input.vCurrentPosition.w)*0.5+0.5;var b: vec2f=(input.vPreviousPosition.xy/input.vPreviousPosition.w)*0.5+0.5;var velocity: vec2f=abs(a-b);velocity= vec2f(pow(velocity.x,1.0/3.0),pow(velocity.y,1.0/3.0))*sign(a-b)*0.5+0.5;fragData[VELOCITY_INDEX]= vec4f(velocity,0.0,1.0);\n#endif\n#ifdef VELOCITY_LINEAR\nvar velocity : vec2f=vec2f(0.5)*((input.vPreviousPosition.xy /\ninput.vPreviousPosition.w) -\n(input.vCurrentPosition.xy /\ninput.vCurrentPosition.w));fragData[VELOCITY_LINEAR_INDEX]=vec4f(velocity,0.0,1.0);\n#endif\n#ifdef REFLECTIVITY\nvar reflectivity: vec4f= vec4f(0.0,0.0,0.0,1.0);\n#ifdef METALLICWORKFLOW\nvar metal: f32=1.0;var roughness: f32=1.0;\n#ifdef ORMTEXTURE\nmetal*=textureSample(reflectivitySampler,reflectivitySamplerSampler,input.vReflectivityUV).b;roughness*=textureSample(reflectivitySampler,reflectivitySamplerSampler,input.vReflectivityUV).g;\n#else\n#ifdef METALLIC_TEXTURE\nmetal*=textureSample(metallicSampler,metallicSamplerSampler,input.vMetallicUV).r;\n#endif\n#ifdef ROUGHNESS_TEXTURE\nroughness*=textureSample(roughnessSampler,roughnessSamplerSampler,input.vRoughnessUV).r;\n#endif\n#endif\n#ifdef METALLIC\nmetal*=uniforms.metallic;\n#endif\n#ifdef ROUGHNESS\nroughness*=(1.0-uniforms.glossiness); \n#endif\nreflectivity=vec4f(reflectivity.rgb,reflectivity.a-roughness);var color: vec3f= vec3f(1.0);\n#ifdef ALBEDOTEXTURE\ncolor=textureSample(albedoSampler,albedoSamplerSampler,input.vAlbedoUV).rgb;\n#ifdef GAMMAALBEDO\ncolor=toLinearSpaceVec4(color);\n#endif\n#endif\n#ifdef ALBEDOCOLOR\ncolor*=uniforms.albedoColor.xyz;\n#endif\nreflectivity=vec4f(mix( vec3f(0.04),color,metal),reflectivity.a);\n#else\n#if defined(SPECULARGLOSSINESSTEXTURE) || defined(REFLECTIVITYTEXTURE)\nreflectivity=textureSample(reflectivitySampler,reflectivitySamplerSampler,input.vReflectivityUV);\n#ifdef GAMMAREFLECTIVITYTEXTURE\nreflectivity=vec4f(toLinearSpaceVec3(reflectivity.rgb),reflectivity.a);\n#endif\n#else \n#ifdef REFLECTIVITYCOLOR\nreflectivity=vec4f(toLinearSpaceVec3(uniforms.reflectivityColor.xyz),1.0);\n#endif\n#endif\n#ifdef GLOSSINESSS\nreflectivity=vec4f(reflectivity.rgb,reflectivity.a*glossiness); \n#endif\n#endif\nfragData[REFLECTIVITY_INDEX]=reflectivity;\n#endif\n#ifdef IRRADIANCE\nvar irradiance: vec3f=vec3f(0.0);var irradiance_alpha: f32=1.0;\n#ifdef REFLECTION\n#ifdef IRRADIANCE_SCATTER_MASK\n#ifndef BUMP\nlet uvOffset: vec2f=vec2f(0.0);\n#endif\nvar vSubsurfaceColor: vec3f=vec3f(1.0);var vSubsurfaceRadius: f32=0.0;var vSubsurfaceRadiusScale: vec3f=vec3f(1.0);\n#include<openpbrSubsurfaceLayerData>(uniforms.vSubsurfaceColor,vSubsurfaceColor,uniforms.vSubsurfaceRadius,vSubsurfaceRadius,uniforms.vSubsurfaceRadiusScale,vSubsurfaceRadiusScale)\nvar vTransmissionDepth: f32=1.0;var vTransmissionColor: vec3f=vec3f(1.0);var vTransmissionScatter: vec3f=vec3f(0.0);var vTransmissionDispersionScale: f32=0.0;var vTransmissionDispersionAbbeNumber: f32=0.0;\n#include<openpbrTransmissionLayerData>(uniforms.vTransmissionDispersionScale,vTransmissionDispersionScale,uniforms.vTransmissionDispersionAbbeNumber,vTransmissionDispersionAbbeNumber,uniforms.vTransmissionColor,vTransmissionColor,uniforms.vTransmissionDepth,vTransmissionDepth,uniforms.vTransmissionScatter\\.,vTransmissionScatter.)\n#endif\n#ifdef IBL_SHADOW_TEXTURE\n#ifdef COLORED_IBL_SHADOWS\nlet iblShadowValue: vec3f=textureSample(iblShadowSampler,iblShadowSamplerSampler,fragmentInputs.position.xy/uniforms.shadowTextureSize).rgb;\n#else\nlet iblShadowValue: vec3f=vec3f(textureSample(iblShadowSampler,iblShadowSamplerSampler,fragmentInputs.position.xy/uniforms.shadowTextureSize).r);\n#endif\n#endif\n#if defined(USEIRRADIANCEMAP)\n#ifdef IRRADIANCE_SCATTER_MASK\nlet bendAmount: f32=subsurface_weight*-min(subsurface_scatter_anisotropy,0.0);let mixedBendAmount: f32=mix(bendAmount,-min(transmission_scatter_anisotropy,0.0),transmission_weight);let viewVector: vec3f=normalize(scene.vEyePosition.xyz-input.vPositionW);let bentNormal: vec3f=mix(normalOutput,viewVector,mixedBendAmount*dot(normalOutput,viewVector));\n#else\nlet bentNormal: vec3f=normalOutput;\n#endif\nirradiance=sampleIrradiance(\nbentNormal\n#if defined(NORMAL) && defined(USESPHERICALINVERTEX)\n,input.vEnvironmentIrradiance\n#endif\n#if (defined(USESPHERICALFROMREFLECTIONMAP) && (!defined(NORMAL) || !defined(USESPHERICALINVERTEX))) || (defined(USEIRRADIANCEMAP) && defined(REFLECTIONMAP_3D))\n,uniforms.reflectionMatrix\n#endif\n#ifdef USEIRRADIANCEMAP\n,irradianceSampler\n,irradianceSamplerSampler\n#ifdef USE_IRRADIANCE_DOMINANT_DIRECTION\n,uniforms.vReflectionDominantDirection\n#endif\n#endif\n#ifdef REALTIME_FILTERING\n,uniforms.vReflectionFilteringInfo\n#ifdef IBL_CDF_FILTERING\n,icdfSampler\n,icdfSamplerSampler\n#endif\n#endif\n,uniforms.vReflectionInfos\n,input.vViewPos.xyz\n,1.0\n,vec3f(1.0)\n);\n#elif defined(USESPHERICALFROMREFLECTIONMAP)\nirradiance=input.vEnvironmentIrradiance;\n#endif\n#ifdef IBL_SHADOW_TEXTURE\nirradiance*=iblShadowValue;\n#endif\n#ifdef IRRADIANCE_SCATTER_MASK\nirradiance_alpha=min(subsurface_weight+transmission_weight,1.0);\n#endif\n#endif\nfragData[IRRADIANCE_INDEX]=vec4f(irradiance,irradiance_alpha);\n#endif\n#if SCENE_MRT_COUNT>0\n#if defined(MESH_BLEND_TAG) && MESH_BLEND_TAG_INDEX==0\nfragmentOutputs.fragData0=vec4u(u32(uniforms.meshBlendTag),0u,0u,0u);\n#else\nfragmentOutputs.fragData0=fragData[0];\n#endif\n#endif\n#if SCENE_MRT_COUNT>1\n#if defined(MESH_BLEND_TAG) && MESH_BLEND_TAG_INDEX==1\nfragmentOutputs.fragData1=vec4u(u32(uniforms.meshBlendTag),0u,0u,0u);\n#else\nfragmentOutputs.fragData1=fragData[1];\n#endif\n#endif\n#if SCENE_MRT_COUNT>2\n#if defined(MESH_BLEND_TAG) && MESH_BLEND_TAG_INDEX==2\nfragmentOutputs.fragData2=vec4u(u32(uniforms.meshBlendTag),0u,0u,0u);\n#else\nfragmentOutputs.fragData2=fragData[2];\n#endif\n#endif\n#if SCENE_MRT_COUNT>3\n#if defined(MESH_BLEND_TAG) && MESH_BLEND_TAG_INDEX==3\nfragmentOutputs.fragData3=vec4u(u32(uniforms.meshBlendTag),0u,0u,0u);\n#else\nfragmentOutputs.fragData3=fragData[3];\n#endif\n#endif\n#if SCENE_MRT_COUNT>4\n#if defined(MESH_BLEND_TAG) && MESH_BLEND_TAG_INDEX==4\nfragmentOutputs.fragData4=vec4u(u32(uniforms.meshBlendTag),0u,0u,0u);\n#else\nfragmentOutputs.fragData4=fragData[4];\n#endif\n#endif\n#if SCENE_MRT_COUNT>5\n#if defined(MESH_BLEND_TAG) && MESH_BLEND_TAG_INDEX==5\nfragmentOutputs.fragData5=vec4u(u32(uniforms.meshBlendTag),0u,0u,0u);\n#else\nfragmentOutputs.fragData5=fragData[5];\n#endif\n#endif\n#if SCENE_MRT_COUNT>6\n#if defined(MESH_BLEND_TAG) && MESH_BLEND_TAG_INDEX==6\nfragmentOutputs.fragData6=vec4u(u32(uniforms.meshBlendTag),0u,0u,0u);\n#else\nfragmentOutputs.fragData6=fragData[6];\n#endif\n#endif\n#if SCENE_MRT_COUNT>7\n#if defined(MESH_BLEND_TAG) && MESH_BLEND_TAG_INDEX==7\nfragmentOutputs.fragData7=vec4u(u32(uniforms.meshBlendTag),0u,0u,0u);\n#else\nfragmentOutputs.fragData7=fragData[7];\n#endif\n#endif\n}\n";
-    VB.e.ShadersStoreWGSL[tB] || (VB.e.ShadersStoreWGSL[tB] = fB);
-    const sB = [yB.d, pB.c, lB.b, JB.e, YB.b, gB.b, oB.b, kB.c, LB.c, OB.b, DB.d, uB.e, HB.c, EB.b, vB.d, mB.d, iB.d, NB.d];
-    for (const zB of sB) VB.e.IncludesShadersStoreWGSL[zB.name] || (VB.e.IncludesShadersStoreWGSL[zB.name] = zB.shader);
-    const MB = {
-      name: tB,
-      shader: fB
+    var FY = DY(38998);
+    const AY = "morphTargetsVertex",
+      IY = "#ifdef MORPHTARGETS\n#ifdef MORPHTARGETS_TEXTURE\n#if {X}==0\nfor (var i=0; i<NUM_MORPH_INFLUENCERS; i=i+1) {if (f32(i)>=uniforms.morphTargetCount) {break;}\n#ifdef USE_VERTEX_PULLING\nvertexID=f32(vpVertexIndex)*uniforms.morphTargetTextureInfo.x;\n#else\nvertexID=f32(vertexInputs.vertexIndex)*uniforms.morphTargetTextureInfo.x;\n#endif\n#ifdef MORPHTARGETS_POSITION\n#ifdef USE_VERTEX_PULLING\npositionUpdated=positionUpdated+(readVector3FromRawSampler(i,vertexID)-vp_basePosition)*uniforms.morphTargetInfluences[i];\n#else\npositionUpdated=positionUpdated+(readVector3FromRawSampler(i,vertexID)-vertexInputs.position)*uniforms.morphTargetInfluences[i];\n#endif\n#endif\n#ifdef MORPHTARGETTEXTURE_HASPOSITIONS\nvertexID=vertexID+1.0;\n#endif\n#ifdef MORPHTARGETS_NORMAL\n#ifdef USE_VERTEX_PULLING\nnormalUpdated=normalUpdated+(readVector3FromRawSampler(i,vertexID) -vp_baseNormal)*uniforms.morphTargetInfluences[i];\n#else\nnormalUpdated=normalUpdated+(readVector3FromRawSampler(i,vertexID) -vertexInputs.normal)*uniforms.morphTargetInfluences[i];\n#endif\n#endif\n#ifdef MORPHTARGETTEXTURE_HASNORMALS\nvertexID=vertexID+1.0;\n#endif\n#ifdef MORPHTARGETS_UV\n#ifdef USE_VERTEX_PULLING\nuvUpdated=uvUpdated+(readVector3FromRawSampler(i,vertexID).xy-vp_baseUV)*uniforms.morphTargetInfluences[i];\n#else\nuvUpdated=uvUpdated+(readVector3FromRawSampler(i,vertexID).xy-vertexInputs.uv)*uniforms.morphTargetInfluences[i];\n#endif\n#endif\n#ifdef MORPHTARGETTEXTURE_HASUVS\nvertexID=vertexID+1.0;\n#endif\n#ifdef MORPHTARGETS_TANGENT\n#ifdef USE_VERTEX_PULLING\ntangentUpdated=vec4f(tangentUpdated.xyz+(readVector3FromRawSampler(i,vertexID) -vp_baseTangent.xyz)*uniforms.morphTargetInfluences[i],tangentUpdated.a);\n#else\ntangentUpdated=vec4f(tangentUpdated.xyz+(readVector3FromRawSampler(i,vertexID) -vertexInputs.tangent.xyz)*uniforms.morphTargetInfluences[i],tangentUpdated.a);\n#endif\n#endif\n#ifdef MORPHTARGETTEXTURE_HASTANGENTS\nvertexID=vertexID+1.0;\n#endif\n#ifdef MORPHTARGETS_UV2\n#ifdef USE_VERTEX_PULLING\nuv2Updated=uv2Updated+(readVector3FromRawSampler(i,vertexID).xy-vp_baseUV2)*uniforms.morphTargetInfluences[i];\n#else\nuv2Updated=uv2Updated+(readVector3FromRawSampler(i,vertexID).xy-vertexInputs.uv2)*uniforms.morphTargetInfluences[i];\n#endif\n#endif\n#ifdef MORPHTARGETS_COLOR\n#ifdef USE_VERTEX_PULLING\ncolorUpdated=colorUpdated+(readVector4FromRawSampler(i,vertexID)-vp_baseColor)*uniforms.morphTargetInfluences[i];\n#else\ncolorUpdated=colorUpdated+(readVector4FromRawSampler(i,vertexID)-vertexInputs.color)*uniforms.morphTargetInfluences[i];\n#endif\n#endif\n}\n#endif\n#else\n#ifdef MORPHTARGETS_POSITION\n#ifdef USE_VERTEX_PULLING\npositionUpdated=positionUpdated+(vertexInputs.position{X}-vp_basePosition)*uniforms.morphTargetInfluences[{X}];\n#else\npositionUpdated=positionUpdated+(vertexInputs.position{X}-vertexInputs.position)*uniforms.morphTargetInfluences[{X}];\n#endif\n#endif\n#ifdef MORPHTARGETS_NORMAL\n#ifdef USE_VERTEX_PULLING\nnormalUpdated=normalUpdated+(vertexInputs.normal{X}-vp_baseNormal)*uniforms.morphTargetInfluences[{X}];\n#else\nnormalUpdated=normalUpdated+(vertexInputs.normal{X}-vertexInputs.normal)*uniforms.morphTargetInfluences[{X}];\n#endif\n#endif\n#ifdef MORPHTARGETS_TANGENT\n#ifdef USE_VERTEX_PULLING\ntangentUpdated=vec4f(tangentUpdated.xyz+(vertexInputs.tangent{X}-vp_baseTangent.xyz)*uniforms.morphTargetInfluences[{X}],tangentUpdated.a);\n#else\ntangentUpdated=vec4f(tangentUpdated.xyz+(vertexInputs.tangent{X}-vertexInputs.tangent.xyz)*uniforms.morphTargetInfluences[{X}],tangentUpdated.a);\n#endif\n#endif\n#ifdef MORPHTARGETS_UV\n#ifdef USE_VERTEX_PULLING\nuvUpdated=uvUpdated+(vertexInputs.uv_{X}-vp_baseUV)*uniforms.morphTargetInfluences[{X}];\n#else\nuvUpdated=uvUpdated+(vertexInputs.uv_{X}-vertexInputs.uv)*uniforms.morphTargetInfluences[{X}];\n#endif\n#endif\n#ifdef MORPHTARGETS_UV2\n#ifdef USE_VERTEX_PULLING\nuv2Updated=uv2Updated+(vertexInputs.uv2_{X}-vp_baseUV2)*uniforms.morphTargetInfluences[{X}];\n#else\nuv2Updated=uv2Updated+(vertexInputs.uv2_{X}-vertexInputs.uv2)*uniforms.morphTargetInfluences[{X}];\n#endif\n#endif\n#ifdef MORPHTARGETS_COLOR\n#ifdef USE_VERTEX_PULLING\ncolorUpdated=colorUpdated+(vertexInputs.color{X}-vp_baseColor)*uniforms.morphTargetInfluences[{X}];\n#else\ncolorUpdated=colorUpdated+(vertexInputs.color{X}-vertexInputs.color)*uniforms.morphTargetInfluences[{X}];\n#endif\n#endif\n#endif\n#endif\n";
+    FY.b.IncludesShadersStoreWGSL[AY] || (FY.b.IncludesShadersStoreWGSL[AY] = IY);
+    const RY = {
+      name: AY,
+      shader: IY
+    }
+  },
+  41347: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => RY
+    });
+    var FY = DY(38998);
+    const AY = "morphTargetsVertexDeclaration",
+      IY = "#ifdef MORPHTARGETS\n#ifndef MORPHTARGETS_TEXTURE\n#ifdef MORPHTARGETS_POSITION\nattribute position{X} : vec3<f32>;\n#endif\n#ifdef MORPHTARGETS_NORMAL\nattribute normal{X} : vec3<f32>;\n#endif\n#ifdef MORPHTARGETS_TANGENT\nattribute tangent{X} : vec3<f32>;\n#endif\n#ifdef MORPHTARGETS_UV\nattribute uv_{X} : vec2<f32>;\n#endif\n#ifdef MORPHTARGETS_UV2\nattribute uv2_{X} : vec2<f32>;\n#endif\n#ifdef MORPHTARGETS_COLOR\nattribute color{X} : vec4<f32>;\n#endif\n#elif {X}==0\nuniform morphTargetCount: f32;\n#endif\n#endif\n";
+    FY.b.IncludesShadersStoreWGSL[AY] || (FY.b.IncludesShadersStoreWGSL[AY] = IY);
+    const RY = {
+      name: AY,
+      shader: IY
+    }
+  },
+  41367: (YY, rY, DY) => {
+    DY.d(rY, {
+      e: () => RY
+    });
+    var FY = DY(38998);
+    const AY = "morphTargetsVertexGlobal",
+      IY = "#ifdef MORPHTARGETS\n#ifdef MORPHTARGETS_TEXTURE\nvar vertexID : f32;\n#endif\n#endif\n";
+    FY.b.IncludesShadersStoreWGSL[AY] || (FY.b.IncludesShadersStoreWGSL[AY] = IY);
+    const RY = {
+      name: AY,
+      shader: IY
+    }
+  },
+  41340: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => RY
+    });
+    var FY = DY(38998);
+    const AY = "morphTargetsVertexGlobalDeclaration",
+      IY = "#ifdef MORPHTARGETS\nuniform morphTargetInfluences : array<f32,NUM_MORPH_INFLUENCERS>;\n#ifdef MORPHTARGETS_TEXTURE \nuniform morphTargetTextureIndices : array<f32,NUM_MORPH_INFLUENCERS>;uniform morphTargetTextureInfo : vec3<f32>;var morphTargets : texture_2d_array<f32>;fn readVector3FromRawSampler(targetIndex : i32,vertexIndex : f32)->vec3<f32>\n{ \nlet textureWidth: i32=i32(uniforms.morphTargetTextureInfo.y);let y: i32=i32(vertexIndex)/textureWidth;let x: i32=i32(vertexIndex) % textureWidth;return textureLoad(morphTargets,vec2i(x,y),i32(uniforms.morphTargetTextureIndices[targetIndex]),0).xyz;}\nfn readVector4FromRawSampler(targetIndex : i32,vertexIndex : f32)->vec4<f32>\n{ \nlet textureWidth: i32=i32(uniforms.morphTargetTextureInfo.y); \nlet y: i32=i32(vertexIndex)/textureWidth;let x: i32=i32(vertexIndex) % textureWidth;return textureLoad(morphTargets,vec2i(x,y),i32(uniforms.morphTargetTextureIndices[targetIndex]),0);}\n#endif\n#endif\n";
+    FY.b.IncludesShadersStoreWGSL[AY] || (FY.b.IncludesShadersStoreWGSL[AY] = IY);
+    const RY = {
+      name: AY,
+      shader: IY
+    }
+  },
+  41403: (YY, rY, DY) => {
+    DY.d(rY, {
+      e: () => RY
+    });
+    var FY = DY(38998);
+    const AY = "prePassVertex",
+      IY = "#ifdef PREPASS_DEPTH\nvertexOutputs.vViewPos=(scene.view*worldPos).rgb;\n#endif\n#ifdef PREPASS_NORMALIZED_VIEW_DEPTH\nvertexOutputs.vNormViewDepth=((scene.view*worldPos).z-uniforms.cameraInfo.x)/(uniforms.cameraInfo.y-uniforms.cameraInfo.x);\n#endif\n#ifdef PREPASS_LOCAL_POSITION\nvertexOutputs.vPosition=positionUpdated.xyz;\n#endif\n#if (defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR)) && defined(BONES_VELOCITY_ENABLED)\nvertexOutputs.vCurrentPosition=scene.viewProjection*worldPos;\n#if NUM_BONE_INFLUENCERS>0\nvar previousInfluence: mat4x4f;previousInfluence=uniforms.mPreviousBones[ i32(vertexInputs.matricesIndices[0])]*vertexInputs.matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\npreviousInfluence+=uniforms.mPreviousBones[ i32(vertexInputs.matricesIndices[1])]*vertexInputs.matricesWeights[1];\n#endif \n#if NUM_BONE_INFLUENCERS>2\npreviousInfluence+=uniforms.mPreviousBones[ i32(vertexInputs.matricesIndices[2])]*vertexInputs.matricesWeights[2];\n#endif \n#if NUM_BONE_INFLUENCERS>3\npreviousInfluence+=uniforms.mPreviousBones[ i32(vertexInputs.matricesIndices[3])]*vertexInputs.matricesWeights[3];\n#endif\n#if NUM_BONE_INFLUENCERS>4\npreviousInfluence+=uniforms.mPreviousBones[ i32(vertexInputs.matricesIndicesExtra[0])]*vertexInputs.matricesWeightsExtra[0];\n#endif \n#if NUM_BONE_INFLUENCERS>5\npreviousInfluence+=uniforms.mPreviousBones[ i32(vertexInputs.matricesIndicesExtra[1])]*vertexInputs.matricesWeightsExtra[1];\n#endif \n#if NUM_BONE_INFLUENCERS>6\npreviousInfluence+=uniforms.mPreviousBones[ i32(vertexInputs.matricesIndicesExtra[2])]*vertexInputs.matricesWeightsExtra[2];\n#endif \n#if NUM_BONE_INFLUENCERS>7\npreviousInfluence+=uniforms.mPreviousBones[ i32(vertexInputs.matricesIndicesExtra[3])]*vertexInputs.matricesWeightsExtra[3];\n#endif\nvertexOutputs.vPreviousPosition=uniforms.previousViewProjection*finalPreviousWorld*previousInfluence* vec4f(positionUpdated,1.0);\n#else\nvertexOutputs.vPreviousPosition=uniforms.previousViewProjection*finalPreviousWorld* vec4f(positionUpdated,1.0);\n#endif\n#endif\n";
+    FY.b.IncludesShadersStoreWGSL[AY] || (FY.b.IncludesShadersStoreWGSL[AY] = IY);
+    const RY = {
+      name: AY,
+      shader: IY
+    }
+  },
+  41290: (YY, rY, DY) => {
+    DY.d(rY, {
+      b: () => RY
+    });
+    var FY = DY(38998);
+    const AY = "prePassVertexDeclaration",
+      IY = "#ifdef PREPASS\n#ifdef PREPASS_LOCAL_POSITION\nvarying vPosition : vec3f;\n#endif\n#ifdef PREPASS_DEPTH\nvarying vViewPos: vec3f;\n#endif\n#ifdef PREPASS_NORMALIZED_VIEW_DEPTH\nvarying vNormViewDepth: f32;\n#endif\n#if defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR)\nuniform previousViewProjection: mat4x4f;varying vCurrentPosition: vec4f;varying vPreviousPosition: vec4f;\n#endif\n#endif\n";
+    FY.b.IncludesShadersStoreWGSL[AY] || (FY.b.IncludesShadersStoreWGSL[AY] = IY);
+    const RY = {
+      name: AY,
+      shader: IY
+    }
+  },
+  41303: (YY, rY, DY) => {
+    DY.d(rY, {
+      d: () => RY
+    });
+    var FY = DY(38998);
+    const AY = "samplerVertexDeclaration",
+      IY = "#if defined(_DEFINENAME_) && _DEFINENAME_DIRECTUV==0\nvarying v_VARYINGNAME_UV: vec2f;\n#endif\n";
+    FY.b.IncludesShadersStoreWGSL[AY] || (FY.b.IncludesShadersStoreWGSL[AY] = IY);
+    const RY = {
+      name: AY,
+      shader: IY
+    }
+  },
+  41415: (YY, rY, DY) => {
+    DY.d(rY, {
+      e: () => RY
+    });
+    var FY = DY(38998);
+    const AY = "samplerVertexImplementation",
+      IY = "#if defined(_DEFINENAME_) && _DEFINENAME_DIRECTUV==0\nif (uniforms.v_INFONAME_==0.)\n{vertexOutputs.v_VARYINGNAME_UV= (uniforms._MATRIXNAME_Matrix* vec4f(uvUpdated,1.0,0.0)).xy;}\n#ifdef UV2\nelse if (uniforms.v_INFONAME_==1.)\n{vertexOutputs.v_VARYINGNAME_UV= (uniforms._MATRIXNAME_Matrix* vec4f(uv2Updated,1.0,0.0)).xy;}\n#endif\n#ifdef UV3\nelse if (uniforms.v_INFONAME_==2.)\n{vertexOutputs.v_VARYINGNAME_UV= (uniforms._MATRIXNAME_Matrix* vec4f(vertexInputs.uv3,1.0,0.0)).xy;}\n#endif\n#ifdef UV4\nelse if (uniforms.v_INFONAME_==3.)\n{vertexOutputs.v_VARYINGNAME_UV= (uniforms._MATRIXNAME_Matrix* vec4f(vertexInputs.uv4,1.0,0.0)).xy;}\n#endif\n#ifdef UV5\nelse if (uniforms.v_INFONAME_==4.)\n{vertexOutputs.v_VARYINGNAME_UV= (uniforms._MATRIXNAME_Matrix* vec4f(vertexInputs.uv5,1.0,0.0)).xy;}\n#endif\n#ifdef UV6\nelse if (uniforms.v_INFONAME_==5.)\n{vertexOutputs.v_VARYINGNAME_UV= (uniforms._MATRIXNAME_Matrix* vec4f(vertexInputs.uv6,1.0,0.0)).xy;}\n#endif\n#endif\n";
+    FY.b.IncludesShadersStoreWGSL[AY] || (FY.b.IncludesShadersStoreWGSL[AY] = IY);
+    const RY = {
+      name: AY,
+      shader: IY
+    }
+  },
+  41434: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => RY
+    });
+    var FY = DY(38998);
+    const AY = "shadowsVertex",
+      IY = "#ifdef SHADOWS\n#if defined(SHADOWCSM{X})\n#ifdef SCENE_UBO\nvertexOutputs.vPositionFromCamera{X}=scene.view*worldPos;\n#else\nvertexOutputs.vPositionFromCamera{X}=uniforms.view*worldPos;\n#endif\n#if SHADOWCSMNUM_CASCADES{X}>0\nvertexOutputs.vPositionFromLight{X}_0=uniforms.lightMatrix{X}[0]*worldPos;\n#ifdef USE_REVERSE_DEPTHBUFFER\nvertexOutputs.vDepthMetric{X}_0=(-vertexOutputs.vPositionFromLight{X}_0.z+light{X}.depthValues.x)/light{X}.depthValues.y;\n#else\nvertexOutputs.vDepthMetric{X}_0= (vertexOutputs.vPositionFromLight{X}_0.z+light{X}.depthValues.x)/light{X}.depthValues.y;\n#endif\n#endif\n#if SHADOWCSMNUM_CASCADES{X}>1\nvertexOutputs.vPositionFromLight{X}_1=uniforms.lightMatrix{X}[1]*worldPos;\n#ifdef USE_REVERSE_DEPTHBUFFER\nvertexOutputs.vDepthMetric{X}_1=(-vertexOutputs.vPositionFromLight{X}_1.z+light{X}.depthValues.x)/light{X}.depthValues.y;\n#else\nvertexOutputs.vDepthMetric{X}_1= (vertexOutputs.vPositionFromLight{X}_1.z+light{X}.depthValues.x)/light{X}.depthValues.y;\n#endif\n#endif \n#if SHADOWCSMNUM_CASCADES{X}>2\nvertexOutputs.vPositionFromLight{X}_2=uniforms.lightMatrix{X}[2]*worldPos;\n#ifdef USE_REVERSE_DEPTHBUFFER\nvertexOutputs.vDepthMetric{X}_2=(-vertexOutputs.vPositionFromLight{X}_2.z+light{X}.depthValues.x)/light{X}.depthValues.y;\n#else\nvertexOutputs.vDepthMetric{X}_2= (vertexOutputs.vPositionFromLight{X}_2.z+light{X}.depthValues.x)/light{X}.depthValues.y;\n#endif\n#endif \n#if SHADOWCSMNUM_CASCADES{X}>3\nvertexOutputs.vPositionFromLight{X}_3=uniforms.lightMatrix{X}[3]*worldPos;\n#ifdef USE_REVERSE_DEPTHBUFFER\nvertexOutputs.vDepthMetric{X}_3=(-vertexOutputs.vPositionFromLight{X}_3.z+light{X}.depthValues.x)/light{X}.depthValues.y;\n#else\nvertexOutputs.vDepthMetric{X}_3= (vertexOutputs.vPositionFromLight{X}_3.z+light{X}.depthValues.x)/light{X}.depthValues.y;\n#endif\n#endif \n#elif defined(SHADOW{X}) && !defined(SHADOWCUBE{X})\nvertexOutputs.vPositionFromLight{X}=uniforms.lightMatrix{X}*worldPos;\n#ifdef USE_REVERSE_DEPTHBUFFER\nvertexOutputs.vDepthMetric{X}=(-vertexOutputs.vPositionFromLight{X}.z+light{X}.depthValues.x)/light{X}.depthValues.y;\n#else\nvertexOutputs.vDepthMetric{X}=(vertexOutputs.vPositionFromLight{X}.z+light{X}.depthValues.x)/light{X}.depthValues.y;\n#endif\n#endif\n#endif\n";
+    FY.b.IncludesShadersStoreWGSL[AY] || (FY.b.IncludesShadersStoreWGSL[AY] = IY);
+    const RY = {
+      name: AY,
+      shader: IY
+    }
+  },
+  41271: (YY, rY, DY) => {
+    DY.d(rY, {
+      d: () => RY
+    });
+    var FY = DY(38998);
+    const AY = "uvAttributeDeclaration",
+      IY = "#if defined(UV{X}) && !defined(USE_VERTEX_PULLING)\nattribute uv{X}: vec2f;\n#endif\n";
+    FY.b.IncludesShadersStoreWGSL[AY] || (FY.b.IncludesShadersStoreWGSL[AY] = IY);
+    const RY = {
+      name: AY,
+      shader: IY
+    }
+  },
+  41407: (YY, rY, DY) => {
+    DY.d(rY, {
+      d: () => RY
+    });
+    var FY = DY(38998);
+    const AY = "uvVariableDeclaration",
+      IY = "#ifdef MAINUV{X}\n#if !defined(UV{X})\nvar uv{X}: vec2f=vec2f(0.,0.);\n#elif defined(USE_VERTEX_PULLING)\nvar uv{X}: vec2f=uv{X}Updated;\n#else\nvar uv{X}: vec2f=vertexInputs.uv{X};\n#endif\nvertexOutputs.vMainUV{X}=uv{X};\n#endif\n";
+    FY.b.IncludesShadersStoreWGSL[AY] || (FY.b.IncludesShadersStoreWGSL[AY] = IY);
+    const RY = {
+      name: AY,
+      shader: IY
+    }
+  },
+  41442: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => RY
+    });
+    var FY = DY(38998);
+    const AY = "vertexColorMixing",
+      IY = "#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvertexOutputs.vColor=vec4f(1.0);\n#ifdef VERTEXCOLOR\n#ifdef VERTEXALPHA\nvertexOutputs.vColor*=colorUpdated;\n#else\nvertexOutputs.vColor=vec4f(vertexOutputs.vColor.rgb*colorUpdated.rgb,vertexOutputs.vColor.a);\n#endif\n#endif\n#ifdef INSTANCESCOLOR\nvertexOutputs.vColor*=vertexInputs.instanceColor;\n#endif\n#endif\n";
+    FY.b.IncludesShadersStoreWGSL[AY] || (FY.b.IncludesShadersStoreWGSL[AY] = IY);
+    const RY = {
+      name: AY,
+      shader: IY
+    }
+  },
+  41355: (YY, rY, DY) => {
+    DY.d(rY, {
+      e: () => RY
+    });
+    var FY = DY(38998);
+    const AY = "vertexPullingDeclaration",
+      IY = "#ifdef USE_VERTEX_PULLING\n#ifdef VERTEX_PULLING_USE_INDEX_BUFFER\nvar<storage,read> indices : array<u32>;\n#endif\nvar<storage,read> position : array<f32>;uniform vp_position_info : vec4f;\n#ifdef NORMAL\nvar<storage,read> normal : array<f32>;uniform vp_normal_info : vec4f;\n#endif\n#ifdef TANGENT\nvar<storage,read> tangent : array<f32>;uniform vp_tangent_info : vec4f;\n#endif\n#ifdef UV1\nvar<storage,read> uv : array<f32>;uniform vp_uv_info : vec4f;\n#define VP_UV1_SUPPORTED\n#endif\n#ifdef UV2\nvar<storage,read> uv2 : array<f32>;uniform vp_uv2_info : vec4f;\n#define VP_UV2_SUPPORTED\n#endif\n#ifdef UV3\nvar<storage,read> uv3 : array<f32>;uniform vp_uv3_info : vec4f;\n#define VP_UV3_SUPPORTED\n#endif\n#ifdef UV4\nvar<storage,read> uv4 : array<f32>;uniform vp_uv4_info : vec4f;\n#define VP_UV4_SUPPORTED\n#endif\n#ifdef UV5\nvar<storage,read> uv5 : array<f32>;uniform vp_uv5_info : vec4f;\n#define VP_UV5_SUPPORTED\n#endif\n#ifdef UV6\nvar<storage,read> uv6 : array<f32>;uniform vp_uv6_info : vec4f;\n#define VP_UV6_SUPPORTED\n#endif\n#ifdef VERTEXCOLOR\nvar<storage,read> color : array<f32>;uniform vp_color_info : vec4f;\n#endif\n#if NUM_BONE_INFLUENCERS>0\nvar<storage,read> matricesIndices : array<u32>;var<storage,read> matricesWeights : array<f32>;uniform vp_matricesIndices_info : vec4f;uniform vp_matricesWeights_info : vec4f;\n#if NUM_BONE_INFLUENCERS>4\nvar<storage,read> matricesIndicesExtra : array<u32>;var<storage,read> matricesWeightsExtra : array<f32>;uniform vp_matricesIndicesExtra_info : vec4f;uniform vp_matricesWeightsExtra_info : vec4f;\n#endif\n#endif\nfn vp_convertToFloat(word : u32,byteInWord : u32,dataType : u32,normalized : bool)->f32 {switch (dataType) {case 5120u: { \nlet shift=byteInWord*8u;let value=(word>>shift) & 0xFFu;let signedValue=f32(i32(value<<24u)>>24u);if (normalized) { return signedValue/127.0; }\nreturn signedValue;}\ncase 5121u: { \nlet shift=byteInWord*8u;let value=(word>>shift) & 0xFFu;if (normalized) { return f32(value)/255.0; }\nreturn f32(value);}\ncase 5122u: { \nlet shift=(byteInWord & 0xFFFFFFFEu)*8u;let value=(word>>shift) & 0xFFFFu;let signedValue=f32(i32(value<<16u)>>16u);if (normalized) { return signedValue/32767.0; }\nreturn signedValue;}\ncase 5123u: { \nlet shift=(byteInWord & 0xFFFFFFFEu)*8u;let value=(word>>shift) & 0xFFFFu;if (normalized) { return f32(value)/65535.0; }\nreturn f32(value);}\ncase 5126u: { \nreturn bitcast<f32>(word);}\ndefault: { return 0.0; }}}\nfn vp_componentSize(dataType : u32)->u32 {return select(select(2u,1u,dataType==5120u || dataType==5121u),4u,dataType==5126u);}\nfn vp_readVertexIndex(index : u32)->u32 {\n#ifndef VERTEX_PULLING_USE_INDEX_BUFFER\nreturn index;\n#else\n#ifdef VERTEX_PULLING_INDEX_BUFFER_32BITS\nreturn indices[index];\n#else\nlet u32_index=index/2u;let bit_offset=(index & 1u)*16u;return (indices[u32_index]>>bit_offset) & 0xFFFFu;\n#endif\n#endif\n}\nfn vp_readPositionValue(byteOffset : u32,dataType : u32,normalized : bool)->f32 {return vp_convertToFloat(bitcast<u32>(position[byteOffset/4u]),byteOffset % 4u,dataType,normalized);}\nfn vp_readPosition(info : vec4f,vertexIndex : u32)->vec3f {let baseOffset=u32(info.x);let stride=u32(info.y);let dataType=u32(info.z);let normalized=info.w != 0.0;let offset=baseOffset+vertexIndex*stride;let cs=vp_componentSize(dataType);return vec3f(\nvp_readPositionValue(offset,dataType,normalized),\nvp_readPositionValue(offset+cs,dataType,normalized),\nvp_readPositionValue(offset+cs*2u,dataType,normalized)\n);}\n#ifdef NORMAL\nfn vp_readNormalValue(byteOffset : u32,dataType : u32,normalized : bool)->f32 {return vp_convertToFloat(bitcast<u32>(normal[byteOffset/4u]),byteOffset % 4u,dataType,normalized);}\nfn vp_readNormal(info : vec4f,vertexIndex : u32)->vec3f {let baseOffset=u32(info.x);let stride=u32(info.y);let dataType=u32(info.z);let normalized=info.w != 0.0;let offset=baseOffset+vertexIndex*stride;let cs=vp_componentSize(dataType);return vec3f(\nvp_readNormalValue(offset,dataType,normalized),\nvp_readNormalValue(offset+cs,dataType,normalized),\nvp_readNormalValue(offset+cs*2u,dataType,normalized)\n);}\n#endif\n#ifdef TANGENT\nfn vp_readTangentValue(byteOffset : u32,dataType : u32,normalized : bool)->f32 {return vp_convertToFloat(bitcast<u32>(tangent[byteOffset/4u]),byteOffset % 4u,dataType,normalized);}\nfn vp_readTangent(info : vec4f,vertexIndex : u32)->vec4f {let baseOffset=u32(info.x);let stride=u32(info.y);let dataType=u32(info.z);let normalized=info.w != 0.0;let offset=baseOffset+vertexIndex*stride;let cs=vp_componentSize(dataType);return vec4f(\nvp_readTangentValue(offset,dataType,normalized),\nvp_readTangentValue(offset+cs,dataType,normalized),\nvp_readTangentValue(offset+cs*2u,dataType,normalized),\nvp_readTangentValue(offset+cs*3u,dataType,normalized)\n);}\n#endif\n#ifdef UV1\nfn vp_readUVValue(byteOffset : u32,dataType : u32,normalized : bool)->f32 {return vp_convertToFloat(bitcast<u32>(uv[byteOffset/4u]),byteOffset % 4u,dataType,normalized);}\nfn vp_readUV(info : vec4f,vertexIndex : u32)->vec2f {let baseOffset=u32(info.x);let stride=u32(info.y);let dataType=u32(info.z);let normalized=info.w != 0.0;let offset=baseOffset+vertexIndex*stride;let cs=vp_componentSize(dataType);return vec2f(\nvp_readUVValue(offset,dataType,normalized),\nvp_readUVValue(offset+cs,dataType,normalized)\n);}\n#endif\n#ifdef UV2\nfn vp_readUV2Value(byteOffset : u32,dataType : u32,normalized : bool)->f32 {return vp_convertToFloat(bitcast<u32>(uv2[byteOffset/4u]),byteOffset % 4u,dataType,normalized);}\nfn vp_readUV2(info : vec4f,vertexIndex : u32)->vec2f {let baseOffset=u32(info.x);let stride=u32(info.y);let dataType=u32(info.z);let normalized=info.w != 0.0;let offset=baseOffset+vertexIndex*stride;let cs=vp_componentSize(dataType);return vec2f(\nvp_readUV2Value(offset,dataType,normalized),\nvp_readUV2Value(offset+cs,dataType,normalized)\n);}\n#endif\n#ifdef UV3\nfn vp_readUV3Value(byteOffset : u32,dataType : u32,normalized : bool)->f32 {return vp_convertToFloat(bitcast<u32>(uv3[byteOffset/4u]),byteOffset % 4u,dataType,normalized);}\nfn vp_readUV3(info : vec4f,vertexIndex : u32)->vec2f {let baseOffset=u32(info.x);let stride=u32(info.y);let dataType=u32(info.z);let normalized=info.w != 0.0;let offset=baseOffset+vertexIndex*stride;let cs=vp_componentSize(dataType);return vec2f(\nvp_readUV3Value(offset,dataType,normalized),\nvp_readUV3Value(offset+cs,dataType,normalized)\n);}\n#endif\n#ifdef UV4\nfn vp_readUV4Value(byteOffset : u32,dataType : u32,normalized : bool)->f32 {return vp_convertToFloat(bitcast<u32>(uv4[byteOffset/4u]),byteOffset % 4u,dataType,normalized);}\nfn vp_readUV4(info : vec4f,vertexIndex : u32)->vec2f {let baseOffset=u32(info.x);let stride=u32(info.y);let dataType=u32(info.z);let normalized=info.w != 0.0;let offset=baseOffset+vertexIndex*stride;let cs=vp_componentSize(dataType);return vec2f(\nvp_readUV4Value(offset,dataType,normalized),\nvp_readUV4Value(offset+cs,dataType,normalized)\n);}\n#endif\n#ifdef UV5\nfn vp_readUV5Value(byteOffset : u32,dataType : u32,normalized : bool)->f32 {return vp_convertToFloat(bitcast<u32>(uv5[byteOffset/4u]),byteOffset % 4u,dataType,normalized);}\nfn vp_readUV5(info : vec4f,vertexIndex : u32)->vec2f {let baseOffset=u32(info.x);let stride=u32(info.y);let dataType=u32(info.z);let normalized=info.w != 0.0;let offset=baseOffset+vertexIndex*stride;let cs=vp_componentSize(dataType);return vec2f(\nvp_readUV5Value(offset,dataType,normalized),\nvp_readUV5Value(offset+cs,dataType,normalized)\n);}\n#endif\n#ifdef UV6\nfn vp_readUV6Value(byteOffset : u32,dataType : u32,normalized : bool)->f32 {return vp_convertToFloat(bitcast<u32>(uv6[byteOffset/4u]),byteOffset % 4u,dataType,normalized);}\nfn vp_readUV6(info : vec4f,vertexIndex : u32)->vec2f {let baseOffset=u32(info.x);let stride=u32(info.y);let dataType=u32(info.z);let normalized=info.w != 0.0;let offset=baseOffset+vertexIndex*stride;let cs=vp_componentSize(dataType);return vec2f(\nvp_readUV6Value(offset,dataType,normalized),\nvp_readUV6Value(offset+cs,dataType,normalized)\n);}\n#endif\n#ifdef VERTEXCOLOR\nfn vp_readColorValue(byteOffset : u32,dataType : u32,normalized : bool)->f32 {return vp_convertToFloat(bitcast<u32>(color[byteOffset/4u]),byteOffset % 4u,dataType,normalized);}\nfn vp_readColor(info : vec4f,vertexIndex : u32)->vec4f {let baseOffset=u32(info.x);let stride=u32(info.y);let dataType=u32(info.z);let normalized=info.w != 0.0;let offset=baseOffset+vertexIndex*stride;let cs=vp_componentSize(dataType);return vec4f(\nvp_readColorValue(offset,dataType,normalized),\nvp_readColorValue(offset+cs,dataType,normalized),\nvp_readColorValue(offset+cs*2u,dataType,normalized),\nvp_readColorValue(offset+cs*3u,dataType,normalized)\n);}\n#endif\n#if NUM_BONE_INFLUENCERS>0\nfn vp_readMatrixIndexValue(byteOffset : u32,dataType : u32,normalized : bool)->f32 {return vp_convertToFloat(matricesIndices[byteOffset/4u],byteOffset % 4u,dataType,normalized);}\nfn vp_readBoneIndices(info : vec4f,vertexIndex : u32)->vec4f {let baseOffset=u32(info.x);let stride=u32(info.y);let dataType=u32(info.z);let normalized=info.w != 0.0;let offset=baseOffset+vertexIndex*stride;let cs=vp_componentSize(dataType);return vec4f(\nvp_readMatrixIndexValue(offset,dataType,normalized),\nvp_readMatrixIndexValue(offset+cs,dataType,normalized),\nvp_readMatrixIndexValue(offset+cs*2u,dataType,normalized),\nvp_readMatrixIndexValue(offset+cs*3u,dataType,normalized)\n);}\nfn vp_readMatrixWeightValue(byteOffset : u32,dataType : u32,normalized : bool)->f32 {return vp_convertToFloat(bitcast<u32>(matricesWeights[byteOffset/4u]),byteOffset % 4u,dataType,normalized);}\nfn vp_readBoneWeights(info : vec4f,vertexIndex : u32)->vec4f {let baseOffset=u32(info.x);let stride=u32(info.y);let dataType=u32(info.z);let normalized=info.w != 0.0;let offset=baseOffset+vertexIndex*stride;let cs=vp_componentSize(dataType);return vec4f(\nvp_readMatrixWeightValue(offset,dataType,normalized),\nvp_readMatrixWeightValue(offset+cs,dataType,normalized),\nvp_readMatrixWeightValue(offset+cs*2u,dataType,normalized),\nvp_readMatrixWeightValue(offset+cs*3u,dataType,normalized)\n);}\n#if NUM_BONE_INFLUENCERS>4\nfn vp_readMatrixIndexExtraValue(byteOffset : u32,dataType : u32,normalized : bool)->f32 {return vp_convertToFloat(matricesIndicesExtra[byteOffset/4u],byteOffset % 4u,dataType,normalized);}\nfn vp_readBoneIndicesExtra(info : vec4f,vertexIndex : u32)->vec4f {let baseOffset=u32(info.x);let stride=u32(info.y);let dataType=u32(info.z);let normalized=info.w != 0.0;let offset=baseOffset+vertexIndex*stride;let cs=vp_componentSize(dataType);return vec4f(\nvp_readMatrixIndexExtraValue(offset,dataType,normalized),\nvp_readMatrixIndexExtraValue(offset+cs,dataType,normalized),\nvp_readMatrixIndexExtraValue(offset+cs*2u,dataType,normalized),\nvp_readMatrixIndexExtraValue(offset+cs*3u,dataType,normalized)\n);}\nfn vp_readMatrixWeightExtraValue(byteOffset : u32,dataType : u32,normalized : bool)->f32 {return vp_convertToFloat(bitcast<u32>(matricesWeightsExtra[byteOffset/4u]),byteOffset % 4u,dataType,normalized);}\nfn vp_readBoneWeightsExtra(info : vec4f,vertexIndex : u32)->vec4f {let baseOffset=u32(info.x);let stride=u32(info.y);let dataType=u32(info.z);let normalized=info.w != 0.0;let offset=baseOffset+vertexIndex*stride;let cs=vp_componentSize(dataType);return vec4f(\nvp_readMatrixWeightExtraValue(offset,dataType,normalized),\nvp_readMatrixWeightExtraValue(offset+cs,dataType,normalized),\nvp_readMatrixWeightExtraValue(offset+cs*2u,dataType,normalized),\nvp_readMatrixWeightExtraValue(offset+cs*3u,dataType,normalized)\n);}\n#endif\n#endif\n#endif\n";
+    FY.b.IncludesShadersStoreWGSL[AY] || (FY.b.IncludesShadersStoreWGSL[AY] = IY);
+    const RY = {
+      name: AY,
+      shader: IY
+    }
+  },
+  41362: (YY, rY, DY) => {
+    DY.d(rY, {
+      e: () => RY
+    });
+    var FY = DY(38998);
+    const AY = "vertexPullingVertex",
+      IY = "#ifdef USE_VERTEX_PULLING\nlet vpVertexIndex: u32=vp_readVertexIndex(vertexInputs.vertexIndex);positionUpdated=vp_readPosition(uniforms.vp_position_info,vpVertexIndex);\n#ifdef NORMAL\nnormalUpdated=vp_readNormal(uniforms.vp_normal_info,vpVertexIndex);\n#endif\n#ifdef TANGENT\ntangentUpdated=vp_readTangent(uniforms.vp_tangent_info,vpVertexIndex);\n#endif\n#ifdef UV1\nuvUpdated=vp_readUV(uniforms.vp_uv_info,vpVertexIndex);\n#endif\n#ifdef UV2\nuv2Updated=vp_readUV2(uniforms.vp_uv2_info,vpVertexIndex);\n#endif\n#ifdef UV3\nvar uv3Updated: vec2f=vp_readUV3(uniforms.vp_uv3_info,vpVertexIndex);\n#endif\n#ifdef UV4\nvar uv4Updated: vec2f=vp_readUV4(uniforms.vp_uv4_info,vpVertexIndex);\n#endif\n#ifdef UV5\nvar uv5Updated: vec2f=vp_readUV5(uniforms.vp_uv5_info,vpVertexIndex);\n#endif\n#ifdef UV6\nvar uv6Updated: vec2f=vp_readUV6(uniforms.vp_uv6_info,vpVertexIndex);\n#endif\n#ifdef VERTEXCOLOR\ncolorUpdated=vp_readColor(uniforms.vp_color_info,vpVertexIndex);\n#endif\n#ifdef MORPHTARGETS\nlet vp_basePosition: vec3f=positionUpdated;\n#ifdef NORMAL\nlet vp_baseNormal: vec3f=normalUpdated;\n#endif\n#ifdef TANGENT\nlet vp_baseTangent: vec4f=tangentUpdated;\n#endif\n#ifdef UV1\nlet vp_baseUV: vec2f=uvUpdated;\n#endif\n#ifdef UV2\nlet vp_baseUV2: vec2f=uv2Updated;\n#endif\n#ifdef VERTEXCOLOR\nlet vp_baseColor: vec4f=colorUpdated;\n#endif\n#endif\n#if NUM_BONE_INFLUENCERS>0\nvar vp_matricesIndices: vec4f=vp_readBoneIndices(uniforms.vp_matricesIndices_info,vpVertexIndex);var vp_matricesWeights: vec4f=vp_readBoneWeights(uniforms.vp_matricesWeights_info,vpVertexIndex);\n#if NUM_BONE_INFLUENCERS>4\nvar vp_matricesIndicesExtra: vec4f=vp_readBoneIndicesExtra(uniforms.vp_matricesIndicesExtra_info,vpVertexIndex);var vp_matricesWeightsExtra: vec4f=vp_readBoneWeightsExtra(uniforms.vp_matricesWeightsExtra_info,vpVertexIndex);\n#endif\n#endif\n#endif\n";
+    FY.b.IncludesShadersStoreWGSL[AY] || (FY.b.IncludesShadersStoreWGSL[AY] = IY);
+    const RY = {
+      name: AY,
+      shader: IY
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

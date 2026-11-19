@@ -1,232 +1,113 @@
 export const id = 210;
 export const ids = [210];
 export const modules = {
-  36132: (BB, TB, dB) => {
-    dB.d(TB, {
-      b: () => pB,
-      f: () => VB,
-      j: () => yB
+  36151: (YY, rY, DY) => {
+    DY.d(rY, {
+      d: () => zY,
+      g: () => fY,
+      k: () => ZY,
+      o: () => CY
     });
-    const VB = 1 / 2.2,
-      yB = 2.2;
-    Math.sqrt(5);
-    let pB = .001
-  },
-  36157: (BB, TB, dB) => {
-    function VB(BB) {
-      return parseInt(BB.toString().replace(/\W/g, ""))
-    }
-
-    function yB(BB, TB) {
-      let dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1401298e-51;
-      return Math.abs(BB - TB) <= dB
-    }
-
-    function pB(BB, TB, dB) {
-      let VB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1401298e-51;
-      return BB < TB - VB || BB > dB + VB
-    }
-
-    function lB(BB, TB) {
-      return BB === TB ? BB : Math.random() * (TB - BB) + BB
-    }
-
-    function JB(BB, TB, dB) {
-      return BB + (TB - BB) * dB
-    }
-
-    function YB(BB, TB, dB) {
-      let VB = HB(TB - BB, 360);
-      return VB > 180 && (VB -= 360), BB + VB * LB(dB)
-    }
-
-    function gB(BB, TB, dB) {
-      let VB;
-      return VB = BB != TB ? LB((dB - BB) / (TB - BB)) : 0, VB
-    }
-
-    function oB(BB, TB, dB, VB, yB) {
-      const pB = yB * yB,
-        lB = yB * pB;
-      return BB * (2 * lB - 3 * pB + 1) + dB * (-2 * lB + 3 * pB) + TB * (lB - 2 * pB + yB) + VB * (lB - pB)
-    }
-
-    function kB(BB, TB, dB, VB, yB) {
-      const pB = yB * yB;
-      return 6 * (pB - yB) * BB + (3 * pB - 4 * yB + 1) * TB + 6 * (-pB + yB) * dB + (3 * pB - 2 * yB) * VB
-    }
-
-    function LB(BB) {
-      let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      return Math.min(dB, Math.max(TB, BB))
-    }
-
-    function OB(BB) {
-      return BB -= 2 * Math.PI * Math.floor((BB + Math.PI) / (2 * Math.PI))
-    }
-
-    function DB(BB) {
-      const TB = BB.toString(16);
-      return BB <= 15 ? ("0" + TB).toUpperCase() : TB.toUpperCase()
-    }
-
-    function uB(BB) {
-      if (Math.log2) return Math.floor(Math.log2(BB));
-      if (BB < 0) return NaN;
-      if (0 === BB) return -1 / 0;
-      let TB = 0;
-      if (BB < 1) {
-        for (; BB < 1;) TB++, BB *= 2;
-        TB = -TB
-      } else if (BB > 1)
-        for (; BB > 1;) TB++, BB = Math.floor(BB / 2);
-      return TB
-    }
-
-    function HB(BB, TB) {
-      return BB - Math.floor(BB / TB) * TB
-    }
-
-    function EB(BB, TB, dB) {
-      return (BB - TB) / (dB - TB)
-    }
-
-    function vB(BB, TB, dB) {
-      return BB * (dB - TB) + TB
-    }
-
-    function mB(BB, TB) {
-      let dB = HB(TB - BB, 360);
-      return dB > 180 && (dB -= 360), dB
-    }
-
-    function iB(BB, TB) {
-      const dB = HB(BB, 2 * TB);
-      return TB - Math.abs(dB - TB)
-    }
-
-    function NB(BB, TB, dB) {
-      let VB = LB(dB);
-      return VB = -2 * VB * VB * VB + 3 * VB * VB, TB * VB + BB * (1 - VB)
-    }
-
-    function tB(BB, TB, dB) {
-      let VB;
-      return VB = Math.abs(TB - BB) <= dB ? TB : BB + Math.sign(TB - BB) * dB, VB
-    }
-
-    function fB(BB, TB, dB) {
-      const VB = mB(BB, TB);
-      let yB;
-      return yB = -dB < VB && VB < dB ? TB : tB(BB, TB = BB + VB, dB), yB
-    }
-
-    function sB(BB, TB, dB) {
-      return (BB - TB) / (dB - TB)
-    }
-
-    function MB(BB, TB, dB) {
-      return (dB - TB) * BB + TB
-    }
-
-    function zB(BB, TB) {
-      const dB = BB % TB;
-      return 0 === dB ? TB : zB(TB, dB)
-    }
-    dB.r(TB), dB.d(TB, {
-      Clamp: () => LB,
-      DeltaAngle: () => mB,
-      Denormalize: () => vB,
-      ExtractAsInt: () => VB,
-      Hermite: () => oB,
-      Hermite1stDerivative: () => kB,
-      HighestCommonFactor: () => zB,
-      ILog2: () => uB,
-      InverseLerp: () => gB,
-      Lerp: () => JB,
-      LerpAngle: () => YB,
-      MoveTowards: () => tB,
-      MoveTowardsAngle: () => fB,
-      Normalize: () => EB,
-      NormalizeRadians: () => OB,
-      OutsideRange: () => pB,
-      PercentToRange: () => MB,
-      PingPong: () => iB,
-      RandomRange: () => lB,
-      RangeToPercent: () => sB,
-      Repeat: () => HB,
-      SmoothStep: () => NB,
-      ToHex: () => DB,
-      WithinEpsilon: () => yB
-    })
-  },
-  36119: (BB, TB, dB) => {
-    dB.r(TB), dB.d(TB, {
-      Matrix: () => VB.b,
-      Quaternion: () => VB.f,
-      RegisterMathVector: () => VB.i,
-      TmpVectors: () => VB.j,
-      Vector2: () => VB.l,
-      RD: () => VB.p,
-      Vector4: () => VB.r
-    });
-    var VB = dB(36126);
-    (0, VB.i)()
-  },
-  36137: (BB, TB, dB) => {
-    function VB(BB, TB) {
-      const dB = [];
-      for (let VB = 0; VB < BB; ++VB) dB.push(TB());
-      return dB
-    }
-
-    function yB(BB, TB) {
-      return VB(BB, TB)
-    }
-    dB.d(TB, {
-      b: () => VB,
-      d: () => yB,
-      e: () => lB
-    });
-    const pB = ["push", "splice", "pop", "shift", "unshift"];
-
-    function lB(BB, TB) {
-      const dB = pB.map((dB => function(BB, TB, dB) {
-        const VB = BB[TB];
-        if ("function" !== typeof VB) return null;
-        const yB = function() {
-          const VB = BB.length,
-            pB = yB.previous.apply(BB, arguments);
-          return dB(TB, VB), pB
-        };
-        return VB.next = yB, yB.previous = VB, BB[TB] = yB, () => {
-          const dB = yB.previous;
-          if (!dB) return;
-          const VB = yB.next;
-          VB ? (dB.next = VB, VB.previous = dB) : (dB.next = void 0, BB[TB] = dB), yB.next = void 0, yB.previous = void 0
-        }
-      }(BB, dB, TB)));
-      return () => {
-        for (const BB of dB) BB?.()
+    const FY = JSON.parse('{"src":["/sounds/generatedSprites/gunSemiAutomatic.70debb5eaf.ogg","/sounds/generatedSprites/gunSemiAutomatic.70debb5eaf.m4a","/sounds/generatedSprites/gunSemiAutomatic.70debb5eaf.mp3","/sounds/generatedSprites/gunSemiAutomatic.70debb5eaf.ac3"],"sprite":{"semiAuto_cock_01":[0,500],"semiAuto_cock_02":[600,548.5714285714286],"semiAuto_cock_03":[1250,500],"semiAuto_cock_04":[1850,522.4489795918367],"semiAuto_cock_05":[2473.333333333333,500],"semiAuto_first_shot_01":[3073.333333333333,500],"semiAuto_magazine_load_01":[3673.3333333333335,548.5714285714286],"semiAuto_magazine_load_02":[4323.333333333333,500],"semiAuto_magazine_load_03":[4923.333333333333,548.5714285714286],"semiAuto_magazine_load_04":[5573.333333333333,500],"semiAuto_magazine_load_05":[6173.333333333333,500],"semiAuto_magazine_unload_01":[6773.333333333333,500],"semiAuto_magazine_unload_02":[7373.333333333333,500],"semiAuto_magazine_unload_03":[7973.333333333334,500],"semiAuto_magazine_unload_04":[8573.333333333334,500],"semiAuto_shot_01":[9173.333333333334,500],"semiAuto_shot_02":[9773.333333333334,500],"semiAuto_shot_03":[10373.333333333334,500],"semiAuto_shot_04":[10973.333333333332,500],"semiAuto_shot_05":[11573.333333333334,500],"semiAuto_shot_06":[12173.333333333334,500],"semiAuto_shot_07":[12773.333333333334,500],"semiAuto_shot_08":[13373.333333333334,500],"semiAuto_tail_only_shot_01":[13973.333333333332,2455.5102040816328]}}'),
+      AY = JSON.parse('{"src":["/sounds/generatedSprites/gunSubmachineGun.6129bebed2.ogg","/sounds/generatedSprites/gunSubmachineGun.6129bebed2.m4a","/sounds/generatedSprites/gunSubmachineGun.6129bebed2.mp3","/sounds/generatedSprites/gunSubmachineGun.6129bebed2.ac3"],"sprite":{"submachine_cock_01":[0,500],"submachine_cock_02":[600,500],"submachine_cock_03":[1200,500],"submachine_cock_04":[1800,500],"submachine_first_shot_01":[2400,500],"submachine_magazine_load_01":[3000,500],"submachine_magazine_load_02":[3600,500],"submachine_magazine_load_03":[4200,500],"submachine_magazine_load_04":[4800,500],"submachine_magazine_unload_01":[5400,500],"submachine_magazine_unload_02":[6000,500],"submachine_magazine_unload_03":[6600,500],"submachine_shot_01":[7200,500],"submachine_shot_02":[7800,500],"submachine_shot_03":[8400,500],"submachine_shot_04":[9000,500],"submachine_shot_05":[9600,500],"submachine_shot_06":[10200,500],"submachine_shot_07":[10800,500],"submachine_shot_08":[11400,500],"submachine_shot_09":[12000,500],"submachine_tail_only_shot_01":[12600,1858.8208616780046]}}'),
+      IY = JSON.parse('{"src":["/sounds/generatedSprites/gunPistol.feb2850573.ogg","/sounds/generatedSprites/gunPistol.feb2850573.m4a","/sounds/generatedSprites/gunPistol.feb2850573.mp3","/sounds/generatedSprites/gunPistol.feb2850573.ac3"],"sprite":{"pistol_cock_01":[0,510],"pistol_cock_02":[610,500],"pistol_cock_03":[1210,500],"pistol_cock_06":[1810,500],"pistol_magazine_load_01":[2410,500],"pistol_magazine_load_02":[3010,500],"pistol_magazine_load_03":[3610,500],"pistol_magazine_unload_01":[4210,500],"pistol_magazine_unload_02":[4810,500],"pistol_magazine_unload_03":[5410,500],"pistol_shot_01":[6010,1500],"pistol_shot_02":[7610,1569.591836734694],"pistol_shot_03":[9280,1735.8956916099773],"pistol_shot_04":[11116.666666666668,1526.7120181405896],"pistol_shot_05":[12746.666666666666,1442.2222222222224]}}'),
+      RY = JSON.parse('{"src":["/sounds/generatedSprites/gunRifle.020fa8997d.ogg","/sounds/generatedSprites/gunRifle.020fa8997d.m4a","/sounds/generatedSprites/gunRifle.020fa8997d.mp3","/sounds/generatedSprites/gunRifle.020fa8997d.ac3"],"sprite":{"rifle_cock_01":[0,705.3061224489796],"rifle_cock_02":[806.6666666666666,1149.3877551020407],"rifle_magazine_load_01":[2056.6666666666665,500],"rifle_magazine_load_02":[2656.6666666666665,500],"rifle_magazine_load_03":[3256.666666666667,500],"rifle_magazine_unload_01":[3856.6666666666665,500],"rifle_magazine_unload_02":[4456.666666666667,500],"rifle_magazine_unload_04":[5056.666666666667,500],"rifle_shot_01":[5656.666666666666,2115.918367346939],"rifle_shot_02":[7873.333333333333,2429.3877551020405],"rifle_shot_03":[10403.333333333334,2298.7755102040815],"rifle_shot_04":[12803.333333333332,2481.6326530612246]}}'),
+      OY = JSON.parse('{"src":["/sounds/generatedSprites/gunMisc.1209e1dd90.ogg","/sounds/generatedSprites/gunMisc.1209e1dd90.m4a","/sounds/generatedSprites/gunMisc.1209e1dd90.mp3","/sounds/generatedSprites/gunMisc.1209e1dd90.ac3"],"sprite":{"bullet_shell_bounce_general_07":[0,823.0612244897959],"bullet_shell_bounce_general_08":[923.3333333333334,907.0294784580499],"headshot_04":[1933.3333333333333,500],"headshot_06":[2533.333333333333,500],"headshot_08":[3133.3333333333335,500],"headshot_11":[3733.3333333333335,500]}}'),
+      gY = JSON.parse('{"src":["/sounds/generatedSprites/gunShotgun.7fc9371192.ogg","/sounds/generatedSprites/gunShotgun.7fc9371192.m4a","/sounds/generatedSprites/gunShotgun.7fc9371192.mp3","/sounds/generatedSprites/gunShotgun.7fc9371192.ac3"],"sprite":{"shotgun_cock_01":[0,914.2857142857142],"shotgun_cock_02":[1016.6666666666666,500],"shotgun_cock_03":[1616.6666666666667,679.1836734693878],"shotgun_cock_04":[2396.6666666666665,548.5714285714286],"shotgun_cock_05":[3046.666666666667,548.5714285714286],"shotgun_load_bullet_01":[3696.666666666667,548.5714285714286],"shotgun_load_bullet_02":[4346.666666666667,522.4489795918367],"shotgun_load_bullet_03":[4970,500],"shotgun_load_bullet_04":[5570,500],"shotgun_load_bullet_05":[6170,500],"shotgun_load_bullet_06":[6770,679.1836734693878],"shotgun_load_bullet_07":[7550,548.5714285714286],"shotgun_load_bullet_08":[8200,500],"shotgun_shot_01":[8800,2612.2448979591836],"shotgun_shot_02":[11513.333333333334,2507.7551020408164],"shotgun_shot_03":[14123.333333333334,2638.3673469387754],"shotgun_shot_04":[16863.333333333332,2037.5510204081634]}}'),
+      aY = JSON.parse('{"src":["/sounds/generatedSprites/dig.a7a2fdb15e.ogg","/sounds/generatedSprites/dig.a7a2fdb15e.m4a","/sounds/generatedSprites/dig.a7a2fdb15e.mp3","/sounds/generatedSprites/dig.a7a2fdb15e.ac3"],"sprite":{"cloth1":[0,1671.8367346938776],"cloth2":[1773.3333333333335,1671.8367346938776],"cloth3":[3546.666666666667,1671.8367346938776],"cloth4":[5320,1668.9342403628118],"glass1":[7090,1671.8367346938776],"glass2":[8863.333333333334,1671.8367346938776],"glass3":[10636.666666666666,1671.8367346938776],"grass1":[12410,500],"grass2":[13010,500],"grass3":[13610,835.9183673469388],"grass4":[14546.666666666666,835.9183673469388],"gravel1":[15483.333333333332,500],"gravel2":[16083.333333333332,500],"gravel3":[16683.333333333332,500],"gravel4":[17283.333333333336,500],"pickUp":[17883.333333333332,500],"sand1":[18483.333333333336,500],"sand2":[19083.333333333332,500],"sand3":[19683.333333333332,500],"sand4":[20283.333333333336,500],"snow1":[20883.333333333332,500],"snow2":[21483.333333333336,500],"snow3":[22083.333333333332,650.1587301587301],"snow4":[22836.666666666664,650.1587301587301],"stone1":[23590,500],"stone2":[24190,500],"stone3":[24790,500],"stone4":[25390,500],"wood1":[25990,928.7981859410431],"wood2":[27020,928.7981859410431],"wood3":[28050,928.7981859410431],"wood4":[29080,928.7981859410431]}}'),
+      vY = JSON.parse('{"src":["/sounds/generatedSprites/step.3c54391171.ogg","/sounds/generatedSprites/step.3c54391171.m4a","/sounds/generatedSprites/step.3c54391171.mp3","/sounds/generatedSprites/step.3c54391171.ac3"],"sprite":{"hit1":[0,557.2789115646258],"hit2":[660,650.1587301587301],"hit3":[1413.3333333333333,650.1587301587301],"step_cloth1":[2166.6666666666665,1671.8367346938776],"step_cloth2":[3940,1671.8367346938776],"step_cloth3":[5713.333333333333,1671.8367346938776],"step_cloth4":[7486.666666666666,1671.8367346938776],"step_grass1":[9260,500],"step_grass2":[9860,500],"step_grass3":[10460,500],"step_grass4":[11060,500],"step_grass5":[11660,1483.1746031746031],"step_gravel1":[13243.333333333334,1486.077097505669],"step_gravel2":[14830,1483.1746031746031],"step_gravel3":[16413.333333333336,1486.077097505669],"step_gravel4":[18000,1486.077097505669],"step_sand2":[19586.666666666664,1486.077097505669],"step_sand3":[21173.333333333332,1486.077097505669],"step_sand4":[22760,1486.077097505669],"step_sand5":[24346.666666666668,1486.077097505669],"step_snow1":[25933.333333333332,500],"step_snow2":[26533.333333333336,500],"step_snow3":[27133.333333333332,500],"step_snow4":[27733.333333333336,500],"step_stone1":[28333.333333333332,1486.077097505669],"step_stone2":[29920,1486.077097505669],"step_stone3":[31506.666666666668,1486.077097505669],"step_stone4":[33093.333333333336,1486.077097505669],"step_stone5":[34680,1486.077097505669],"step_stone6":[36266.666666666664,1486.077097505669],"step_wood1":[37853.33333333333,743.0385487528345],"step_wood2":[38696.666666666664,743.0385487528345],"step_wood3":[39540,743.0385487528345],"step_wood4":[40383.333333333336,743.0385487528345],"step_wood5":[41226.666666666664,743.0385487528345],"step_wood6":[42070,743.0385487528345],"sweep6":[42913.333333333336,1114.5578231292516]}}'),
+      uY = JSON.parse('{"src":["/sounds/generatedSprites/random.587c13bbcb.ogg","/sounds/generatedSprites/random.587c13bbcb.m4a","/sounds/generatedSprites/random.587c13bbcb.mp3","/sounds/generatedSprites/random.587c13bbcb.ac3"],"sprite":{"beep":[0,2455.5102040816328],"bow":[2556.6666666666665,500],"bucketEmpty1":[3156.6666666666665,1114.5578231292516],"bucketEmpty2":[4373.333333333333,1114.5578231292516],"bucketEmpty3":[5590,1114.5578231292516],"bucketFill1":[6806.666666666667,1021.6780045351475],"bucketFill2":[7930,1021.6780045351475],"bucketFill3":[9053.333333333332,1021.6780045351475],"burp":[10176.666666666666,500],"cannonFire1":[10776.666666666668,4880.748299319728],"cannonFire2":[15760,4880.748299319728],"cannonFire3":[20743.333333333332,4880.748299319728],"cashRegister":[25726.666666666668,3819.6825396825398],"chestClose":[29646.666666666668,557.2789115646258],"chestOpen":[30306.666666666668,743.0385487528345],"doorClose":[31150,835.9183673469388],"doorClose2":[32086.666666666664,835.9183673469388],"doorOpen-bloxd1":[33023.333333333336,743.0385487528345],"doorOpen-bloxd2":[33866.666666666664,835.9183673469388],"drink":[34803.333333333336,500],"eat1":[35403.333333333336,500],"equip_leather1":[36003.33333333333,928.7981859410431],"exp_collect":[37033.33333333333,1009.2063492063493],"exp_levelup":[38143.33333333333,1469.863945578231],"fallsmall":[39713.33333333333,1764.716553287982],"fireBurn":[41580,2827.3922902494332],"firecracker1":[44510,5302.857142857142],"firecracker2":[49913.333333333336,5250.6122448979595],"firecracker3":[55266.666666666664,5198.367346938776],"firecracker4":[60566.66666666667,5877.551020408164],"hoeTill1":[66546.66666666667,1114.5578231292516],"hoeTill2":[67763.33333333333,557.2789115646258],"hoeTill3":[68423.33333333333,928.7981859410431],"hoeTill4":[69453.33333333333,928.7981859410431],"laugh1":[70483.33333333333,898.3219954648525],"laugh2":[71483.33333333333,1919.092970521542],"laugh3":[73503.33333333333,1668.2766439909299],"magicAccent1":[75273.33333333333,5250.6122448979595],"magicAccent2":[80626.66666666667,5041.632653061224],"magicAccent3":[85770,4963.265306122449],"magicAccent4":[90833.33333333333,4728.163265306122],"splash1":[95663.33333333333,1114.5578231292516],"successfulBowHit":[96880,500],"trapdoorOpen":[97480,835.9183673469388]}}'),
+      sY = JSON.parse('{"src":["/sounds/generatedSprites/mob.ab04bae885.ogg","/sounds/generatedSprites/mob.ab04bae885.m4a","/sounds/generatedSprites/mob.ab04bae885.mp3","/sounds/generatedSprites/mob.ab04bae885.ac3"],"sprite":{"bearRoar1":[0,1011.1791383219954],"bearRoar2":[1113.3333333333333,793.6507936507936],"bearRoar3":[2009.9999999999998,764.2630385487529],"bearRoar4":[2876.6666666666665,781.9047619047619],"bearRoar5":[3760,646.6666666666666],"catHiss1":[4506.666666666667,1252.0861678004535],"catHiss2":[5860,1064.2403628117913],"catHiss3":[7026.666666666666,1082.6530612244899],"catHiss4":[8210,978.8662131519275],"catHurt1":[9290,809.795918367347],"catHurt2":[10200,779.4104308390023],"catHurt3":[11080,626.9387755102041],"catMeow1":[11810,1306.1224489795918],"catMeow2":[13216.666666666666,1384.4897959183672],"catMeow3":[14703.333333333334,1280],"catMeow4":[16083.333333333332,1567.3469387755101],"catMeow5":[17753.333333333332,1802.4489795918369],"cowHurt1":[19656.666666666668,522.6530612244899],"cowMoo1":[20280,1574.331065759637],"cowMoo2":[21956.666666666668,1947.4149659863947],"cowMoo3":[24006.666666666668,2099.342403628118],"croneAttack1":[26206.666666666668,500],"croneHurt1":[26806.666666666668,751.6780045351475],"croneIdle1":[27660,6756.8707482993195],"deerGrunt1":[34520,976.7346938775511],"deerHurt1":[35600,500],"dogBark1":[36200,500],"dogBark2":[36800,500],"dogBark3":[37400,500],"dogGrowl1":[38000,634.8979591836734],"dogGrowl2":[38736.666666666664,543.3560090702948],"dogGrowl3":[39383.333333333336,1361.360544217687],"dogHurt1":[40846.666666666664,500],"dogHurt2":[41446.666666666664,500],"fennecYip1":[42046.666666666664,500],"fennecYip2":[42646.66666666667,500],"fennecYip3":[43246.66666666667,500],"golemGrunt1":[43846.666666666664,6687.34693877551],"golemGrunt2":[50636.666666666664,4911.0204081632655],"gorillaIdle1":[55650,898.140589569161],"gorillaIdle2":[56650,825.3061224489796],"gorillaIdle3":[57576.66666666667,1357.233560090703],"gorillaIdle4":[59036.66666666667,1061.2698412698414],"gorillaRoar1":[60200,1002.6757369614512],"horseHurt1":[61303.333333333336,1044.8979591836735],"horseHurt2":[62450,1332.2448979591836],"horseIdle1":[63883.333333333336,1410.6122448979593],"horseIdle2":[65396.666666666664,634.3310657596371],"horseIdle3":[66133.33333333334,853.469387755102],"knightGrunt1":[67090,2026.6666666666667],"knightGrunt2":[69216.66666666667,2154.671201814059],"knightGrunt3":[71473.33333333333,1674.671201814059],"pigHurt1":[73250,705.6009070294784],"pigHurt2":[74056.66666666667,667.4603174603175],"pigHurt3":[74826.66666666667,500],"pigOink1":[75426.66666666666,976.7573696145124],"pigOink2":[76506.66666666666,1015.578231292517],"pigOink3":[77623.33333333333,500],"pigOink4":[78223.33333333333,500],"pigOink5":[78823.33333333334,519.4557823129252],"reaverAttack1":[79443.33333333333,4031.1111111111113],"reaverAttack2":[83576.66666666667,1552.0181405895692],"reaverAttack3":[85230,1857.5510204081634],"reaverGrunt1":[87190,5073.5600907029475],"reaverGrunt2":[92366.66666666666,2950.090702947846],"reaverGrunt3":[95420,6640.907029478458],"sheepBaa1":[102163.33333333333,1039.3877551020407],"sheepBaa2":[103303.33333333333,1243.968253968254],"sheepBaa3":[104650,827.7551020408164],"sheepBaa4":[105580,1048.1179138321997],"sheepHurt1":[106730,700.2721088435375],"skeletonRattle1":[107533.33333333333,1088.0045351473923],"skeletonRattle2":[108723.33333333333,1499.9773242630386],"skeletonRattle3":[110323.33333333334,750],"skeletonRattle4":[111173.33333333333,650.6575963718822],"stagGrunt1":[111926.66666666666,976.7346938775511],"stagHurt1":[113006.66666666666,500],"stalkerAttack1":[113606.66666666667,963.6281179138322],"stalkerIdle1":[114673.33333333333,2051.065759637188],"warperGrunt1":[116826.66666666667,2883.605442176871],"warperGrunt2":[119813.33333333333,6405.351473922902],"warperGrunt3":[126320,4806.530612244898],"warperGrunt4":[131226.66666666666,5781.768707482994],"warperGrunt5":[137110,4284.081632653061],"warperPhase1":[141496.66666666666,5867.256235827665],"warperPhase2":[147466.66666666666,5866.916099773242],"wraithGrunt1":[153436.66666666666,4111.995464852607],"wraithGrunt2":[157650,5173.333333333333],"wraithHurt":[162923.33333333334,4277.324263038548],"ZombieGrunt1":[167303.33333333334,2089.795918367347],"ZombieGrunt2":[169493.33333333334,2351.0204081632655],"ZombieGrunt3":[171946.66666666666,1750.204081632653],"ZombieHurt1":[173800,1593.4693877551022],"ZombieHurt2":[175496.66666666666,1906.938775510204],"ZombieHurt3":[177506.66666666666,1018.7755102040817],"ZombieHurt4":[178626.66666666666,1358.3673469387757]}}'),
+      iY = JSON.parse('{"src":["/sounds/generatedSprites/note.665b6b802f.ogg","/sounds/generatedSprites/note.665b6b802f.m4a","/sounds/generatedSprites/note.665b6b802f.mp3","/sounds/generatedSprites/note.665b6b802f.ac3"],"sprite":{"bass":[0,500],"bassattack":[600,500],"bd":[1200,500],"bigDrumSwish1":[1800,3892.2448979591836],"bigDrumSwish2":[5793.333333333333,3056.326530612245],"bigDrumSwish3":[8950,3578.7755102040815],"drumSwish1":[12630,4127.34693877551],"drumSwish2":[16860,4127.34693877551],"harp_pling":[21090,835.9183673469388],"hat":[22026.666666666668,500],"levelup":[22626.666666666664,4458.231292517006],"lowDrum1":[27186.666666666668,3683.265306122449],"lowDrum2":[30970,3840],"lowDrum3":[34910,4205.714285714285],"snare":[39216.66666666667,500],"sonarBeep":[39816.66666666667,4127.34693877551],"trumpetFlare":[44046.666666666664,1683.4467120181407],"trumpetNote1":[45833.333333333336,779.8412698412699],"trumpetNote2":[46713.33333333333,845.6916099773243],"trumpetNote3":[47660,1090.7256235827665]}}'),
+      yY = JSON.parse('{"src":["/sounds/generatedSprites/fishing.3fd57d6508.ogg","/sounds/generatedSprites/fishing.3fd57d6508.m4a","/sounds/generatedSprites/fishing.3fd57d6508.mp3","/sounds/generatedSprites/fishing.3fd57d6508.ac3"],"sprite":{"caughtFish":[0,1976.7573696145125],"reel":[2080,531.9501133786848]}}'),
+      QY = JSON.parse('{"src":["/sounds/generatedSprites/gameStart.c824a29ef8.ogg","/sounds/generatedSprites/gameStart.c824a29ef8.m4a","/sounds/generatedSprites/gameStart.c824a29ef8.mp3","/sounds/generatedSprites/gameStart.c824a29ef8.ac3"],"sprite":{"game_start_countdown_01":[0,1000.7709750566893],"game_start_countdown_02":[1103.3333333333333,994.9206349206348],"game_start_countdown_03":[2200,1000.7709750566893],"game_start_countdown_final":[3303.333333333333,1583.1065759637188]}}'),
+      oY = JSON.parse('{"src":["/sounds/generatedSprites/customGame_horror.b428f4f683.ogg","/sounds/generatedSprites/customGame_horror.b428f4f683.m4a","/sounds/generatedSprites/customGame_horror.b428f4f683.mp3","/sounds/generatedSprites/customGame_horror.b428f4f683.ac3"],"sprite":{"cryptWhoosh":[0,1700],"doorKnock":[1800,1173.3333333333333],"futureStrangePulse":[3073.333333333333,2874.6938775510203],"hauntedHorrorImpact":[6050,1072.857142857143],"horrorAccent1":[7223.333333333334,1919.5238095238096],"horrorFright":[9243.333333333334,1630.952380952381],"horrorMaleDrone":[10976.666666666666,7933.492063492064],"intensiveRainLoop":[19013.333333333332,13037.687074829933],"metalDoorKnock":[32153.333333333336,4219.410430839002],"ominousBellHit":[36473.333333333336,8756.621315192744],"pulseFromTheDark":[45330,7653.582766439909],"suspenseRiser":[53086.666666666664,6825.396825396825],"thunderRain":[60013.333333333336,12085.986394557824],"zapAccent1":[72200,500],"zapAccent2":[72800,500]}}'),
+      WY = JSON.parse('{"src":["/sounds/generatedSprites/crowd.144e07d77d.ogg","/sounds/generatedSprites/crowd.144e07d77d.m4a","/sounds/generatedSprites/crowd.144e07d77d.mp3","/sounds/generatedSprites/crowd.144e07d77d.ac3"],"sprite":{"crowdAmbience":[0,54935.51020408163],"crowdCheer":[55036.66666666667,6269.3877551020405],"refereeWhistle":[61406.666666666664,2089.795918367347]}}'),
+      EY = JSON.parse('{"src":["/sounds/generatedSprites/survivalFactory.fd0480008e.ogg","/sounds/generatedSprites/survivalFactory.fd0480008e.m4a","/sounds/generatedSprites/survivalFactory.fd0480008e.mp3","/sounds/generatedSprites/survivalFactory.fd0480008e.ac3"],"sprite":{"rocketEngineLoop":[0,13167.369614512472]}}'),
+      mY = JSON.parse('{"src":["/sounds/generatedSprites/rpg.ea7a80cc0e.ogg","/sounds/generatedSprites/rpg.ea7a80cc0e.m4a","/sounds/generatedSprites/rpg.ea7a80cc0e.mp3","/sounds/generatedSprites/rpg.ea7a80cc0e.ac3"],"sprite":{"rpgBeltCloth1":[0,722.5396825396826],"rpgBeltCloth2":[823.3333333333334,753.3106575963718],"rpgBeltHandle1":[1676.6666666666667,500],"rpgBeltHandle2":[2276.666666666667,500],"rpgBookClose":[2876.6666666666665,500],"rpgBookFlip1":[3476.6666666666665,768.6621315192745],"rpgBookFlip2":[4346.666666666667,500],"rpgBookFlip3":[4946.666666666666,500],"rpgBookOpen":[5546.666666666667,500],"rpgBookPlace1":[6146.666666666666,500],"rpgBookPlace2":[6746.666666666667,500],"rpgBookPlace3":[7346.666666666667,500],"rpgChop":[7946.666666666666,500],"rpgCloth1":[8546.666666666666,661.0430839002267],"rpgCloth2":[9310,500],"rpgCloth3":[9910,500],"rpgCloth4":[10510,500],"rpgCreak1":[11110,661.0430839002267],"rpgCreak2":[11873.333333333334,830.1587301587302],"rpgCreak3":[12806.666666666666,500],"rpgDoorClose1":[13406.666666666666,675.0566893424036],"rpgDoorClose2":[14183.333333333334,612.4943310657596],"rpgDoorClose3":[14896.666666666666,713.9455782312925],"rpgDoorClose4":[15713.333333333332,603.3786848072561],"rpgDoorOpen1":[16420,918.9795918367347],"rpgDoorOpen2":[17440,1413.3333333333333],"rpgDrawKnife1":[18953.333333333332,500],"rpgDrawKnife2":[19553.333333333336,500],"rpgDrawKnife3":[20153.333333333332,500],"rpgDropLeather":[20753.333333333332,500],"rpgFootstep00":[21353.333333333332,500],"rpgFootstep01":[21953.333333333332,500],"rpgFootstep02":[22553.333333333336,500],"rpgFootstep03":[23153.333333333332,500],"rpgFootstep04":[23753.333333333332,500],"rpgFootstep05":[24353.333333333332,500],"rpgFootstep06":[24953.333333333332,500],"rpgFootstep07":[25553.333333333336,500],"rpgFootstep08":[26153.333333333332,500],"rpgFootstep09":[26753.333333333332,500],"rpgHandleCoins1":[27353.333333333332,845.5328798185941],"rpgHandleCoins2":[28300,500],"rpgHandleSmallLeather1":[28900,500],"rpgHandleSmallLeather2":[29500,500],"rpgKnifeSlice1":[30100,599.546485260771],"rpgKnifeSlice2":[30800,568.798185941043],"rpgMetalClick":[31470,500],"rpgMetalLatch":[32070,500],"rpgMetalPot1":[32670,1460.4761904761906],"rpgMetalPot2":[34233.333333333336,937.7777777777778],"rpgMetalPot3":[35273.333333333336,907.0068027210884]}}'),
+      VY = JSON.parse('{"src":["/sounds/generatedSprites/ambient.061941de00.ogg","/sounds/generatedSprites/ambient.061941de00.m4a","/sounds/generatedSprites/ambient.061941de00.mp3","/sounds/generatedSprites/ambient.061941de00.ac3"],"sprite":{"lavaFlow":[0,34000]}}'),
+      SY = JSON.parse('{"src":["/sounds/generatedSprites/police.62f44243ba.ogg","/sounds/generatedSprites/police.62f44243ba.m4a","/sounds/generatedSprites/police.62f44243ba.mp3","/sounds/generatedSprites/police.62f44243ba.ac3"],"sprite":{"handcuffsLock":[0,626.9387755102041],"radioBeep":[730,650],"radioChatter":[1480,3372.9931972789113],"runningSteps":[4953.333333333333,3305.555555555555],"sirenChirp":[8360,924.1723356009071],"sirenWail":[9386.666666666666,5195.056689342404],"sirenYelp":[14683.333333333334,5239.3650793650795],"stunZap":[20023.333333333332,750],"whistle":[20873.333333333336,535.9183673469388]}}'),
+      lY = JSON.parse('{"src":["/sounds/generatedSprites/cars.c20944b87e.ogg","/sounds/generatedSprites/cars.c20944b87e.m4a","/sounds/generatedSprites/cars.c20944b87e.mp3","/sounds/generatedSprites/cars.c20944b87e.ac3"],"sprite":{"carCrash":[0,539.7732426303855],"carDoorClose":[640,570.7029478458049],"carDoorOpen":[1313.3333333333333,720.5895691609977],"carDriveLoop":[2136.6666666666665,29642.721088435374],"carEngineStart":[31880,2800],"carHorn":[34780,500],"carIdleLoop":[35380,27663.94557823129],"carLockChirp":[63146.66666666667,600],"indicatorTick":[63846.666666666664,5266.303854875283],"reverseBeep":[69213.33333333334,5254.512471655329],"seatbeltClick":[74570,500],"tyreScreech":[75170,2000],"vanIdleLoop":[77270,17625.011337868484]}}'),
+      TY = JSON.parse('{"src":["/sounds/generatedSprites/fire.feeec78627.ogg","/sounds/generatedSprites/fire.feeec78627.m4a","/sounds/generatedSprites/fire.feeec78627.mp3","/sounds/generatedSprites/fire.feeec78627.ac3"],"sprite":{"extinguisherSpray":[0,2598.7301587301586],"fireAlarmBell":[2700,7848.730158730158],"fireCrackle":[10650,17343.94557823129],"fireTruckHorn":[28096.666666666668,3546.485260770975]}}'),
+      eY = JSON.parse('{"src":["/sounds/generatedSprites/phoneAndMoney.3c9e296f9e.ogg","/sounds/generatedSprites/phoneAndMoney.3c9e296f9e.m4a","/sounds/generatedSprites/phoneAndMoney.3c9e296f9e.mp3","/sounds/generatedSprites/phoneAndMoney.3c9e296f9e.ac3"],"sprite":{"cameraShutter":[0,553.764172335601],"coinsDrop":[656.6666666666666,2106.190476190476],"jobComplete":[2863.3333333333335,2330.090702947846],"messageReceive":[5296.666666666667,600.204081632653],"phoneNotify":[6000,500],"phoneTap":[6600,500],"phoneVibrate":[7200,1062.7437641723357],"tillPurchase":[8363.333333333334,2754.4897959183672]}}'),
+      NY = JSON.parse('{"src":["/sounds/generatedSprites/town.9749c6052d.ogg","/sounds/generatedSprites/town.9749c6052d.m4a","/sounds/generatedSprites/town.9749c6052d.mp3","/sounds/generatedSprites/town.9749c6052d.ac3"],"sprite":{"crowdMurmur":[0,15708.140589569162],"doorbell":[15810,3017.4603174603176],"gateCreak":[18930,3720.9977324263036],"keysJingle":[22753.333333333332,2400],"kidsPlaying":[25253.333333333332,16534.67120181406],"parkBirds":[41890,13663.106575963719],"shopDoorbell":[55653.333333333336,925.0566893424036]}}');
+    var BY = DY(1222);
+    const cY = {
+        gunSemiAutomatic: FY,
+        gunSubmachineGun: AY,
+        gunShotgun: gY,
+        gunRifle: RY,
+        gunPistol: IY,
+        gunMisc: OY,
+        dig: aY,
+        step: vY,
+        random: uY,
+        mob: sY,
+        note: iY,
+        fishing: yY,
+        gameStart: QY,
+        customGame_horror: oY,
+        crowd: WY,
+        survivalFactory: EY,
+        rpg: mY,
+        ambient: VY,
+        police: SY,
+        cars: lY,
+        fire: TY,
+        phoneAndMoney: eY,
+        town: NY
+      },
+      KY = {};
+    for (const hY in cY) {
+      const YY = cY[hY];
+      for (const rY in YY.sprite) {
+        if (KY[rY]) throw new Error(`duplicate sound name ${rY} in ${KY[rY]} and ${hY}`);
+        KY[rY] = hY
       }
     }
-  },
-  36166: (BB, TB, dB) => {
-    dB.d(TB, {
-      e: () => pB,
-      g: () => yB
-    });
-    const VB = {};
+    for (const hY in cY) {
+      const YY = cY[hY];
+      for (let rY = 0; rY < YY.src.length; rY++) YY.src[rY] = BY.clientSideServerUrls.staticUrl + YY.src[rY]
+    }
+    const HY = {};
 
-    function yB(BB, TB) {
-      VB[BB] = TB
+    function zY(YY) {
+      if (HY[YY]) return jY(HY[YY]);
+      {
+        const rY = [];
+        let DY = null;
+        for (const FY in cY) {
+          const AY = cY[FY];
+          for (const IY in AY.sprite)
+            if (IY.startsWith(YY)) {
+              if (rY.push(IY), DY && DY !== FY) throw new Error(`Sound prefix ${YY} is in multiple sprite sheets: ${DY} and ${FY}`);
+              DY = FY
+            }
+        }
+        return HY[YY] = rY, jY(rY)
+      }
     }
 
-    function pB(BB) {
-      return VB[BB]
+    function ZY(YY) {
+      const rY = KY[YY];
+      if (void 0 === rY) throw new Error(`Invalid sound name ${YY} (not in any sprite sheet)`);
+      return rY
+    }
+
+    function CY(YY, rY) {
+      if (!(YY in cY)) throw new Error("Invalid spriteTrack name");
+      return rY in cY[YY].sprite
+    }
+
+    function fY(YY) {
+      if (!(YY in cY)) throw new Error("Invalid spritesheet name");
+      return cY[YY]
+    }
+
+    function jY(YY) {
+      return YY[Math.floor(Math.random() * YY.length)]
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

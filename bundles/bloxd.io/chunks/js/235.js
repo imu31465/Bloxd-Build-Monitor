@@ -1,617 +1,427 @@
 export const id = 235;
 export const ids = [235];
 export const modules = {
-  38852: (BB, TB, dB) => {
-    dB.d(TB, {
-      d: () => pB
+  39849: (YY, rY, DY) => {
+    DY.d(rY, {
+      b: () => IY,
+      e: () => RY
     });
-    var VB = dB(37651),
-      yB = dB(36166);
-    class pB {
-      static Instantiate(BB) {
-        if (this.RegisteredExternalClasses && this.RegisteredExternalClasses[BB]) return this.RegisteredExternalClasses[BB];
-        const TB = (0, yB.e)(BB);
-        if (TB) return TB;
-        VB.b.Warn(BB + " not found, you may have missed an import.");
-        const dB = BB.split(".");
-        let pB = "undefined" !== typeof window ? window : "undefined" !== typeof globalThis ? globalThis : this;
-        for (let VB = 0, yB = dB.length; VB < yB; VB++) pB = pB[dB[VB]];
-        return "function" !== typeof pB ? null : pB
-      }
+    var FY = DY(1818);
+    let AY = !1;
+
+    function IY() {
+      AY = !0
     }
-    pB.RegisteredExternalClasses = {}
-  },
-  38657: (BB, TB, dB) => {
-    dB.d(TB, {
-      d: () => yB
-    });
-    var VB = dB(38606);
-    class yB {
-      static get Now() {
-        return (0, VB.h)() && window.performance && window.performance.now ? window.performance.now() : Date.now()
-      }
+
+    function RY() {
+      AY && (AY = !1, (0, FY.e)())
     }
   },
-  38689: (BB, TB, dB) => {
-    function VB(BB) {
-      let TB = 1;
-      do {
-        TB *= 2
-      } while (TB < BB);
-      return TB === BB
-    }
-
-    function yB(BB, TB, dB) {
-      return BB * (1 - dB) + TB * dB
-    }
-
-    function pB(BB) {
-      const TB = lB(BB),
-        dB = JB(BB);
-      return TB - BB > BB - dB ? dB : TB
-    }
-
-    function lB(BB) {
-      return BB--, BB |= BB >> 1, BB |= BB >> 2, BB |= BB >> 4, BB |= BB >> 8, BB |= BB >> 16, ++BB
-    }
-
-    function JB(BB) {
-      return BB |= BB >> 1, BB |= BB >> 2, BB |= BB >> 4, BB |= BB >> 8, (BB |= BB >> 16) - (BB >> 1)
-    }
-
-    function YB(BB, TB) {
-      let dB;
-      switch (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 2) {
-        case 1:
-          dB = JB(BB);
-          break;
-        case 2:
-          dB = pB(BB);
-          break;
-        default:
-          dB = lB(BB)
-      }
-      return Math.min(dB, TB)
-    }
-    dB.d(TB, {
-      c: () => JB,
-      g: () => YB,
-      i: () => VB,
-      m: () => yB,
-      n: () => pB
-    })
-  },
-  38848: (BB, TB, dB) => {
-    dB.d(TB, {
-      c: () => mB,
-      g: () => NB,
-      h: () => EB,
-      i: () => vB
+  39806: (YY, rY, DY) => {
+    DY.d(rY, {
+      b: () => yY,
+      f: () => sY,
+      g: () => iY
     });
-    var VB, yB = dB(36150),
-      pB = dB(38606),
-      lB = dB(37651),
-      JB = dB(37646),
-      YB = dB(38657),
-      gB = dB(38629),
-      oB = dB(38799),
-      kB = dB(36148),
-      LB = dB(38790),
-      OB = dB(38645),
-      DB = dB(38852),
-      uB = dB(36822),
-      HB = dB(38689);
-    class EB {
-      static get BaseUrl() {
-        return LB.f.BaseUrl
+    var FY = DY(1820),
+      AY = DY(1289),
+      IY = DY(39693),
+      RY = DY(39725),
+      OY = DY(39728),
+      gY = DY(39739);
+    const aY = new AY.d;
+    let vY = !1;
+
+    function uY(YY) {
+      const rY = (0, IY.g)();
+      return null !== rY && +YY === rY.api.localId
+    }
+
+    function sY() {
+      vY || (vY = !0, (0, gY.l)(RY.p, (YY => {
+        var rY, DY;
+        const FY = (0, OY.f)(RY.p, YY);
+        if (!(0, OY.c)(FY)) return;
+        const AY = FY;
+        uY(AY.VY) && iY(AY.SY, {
+          icon: AY.TY,
+          level: AY.NY,
+          displayName: null !== (rY = AY.lY) && void 0 !== rY ? rY : null,
+          durationMs: null !== (DY = AY.eY) && void 0 !== DY ? DY : null
+        })
+      })), (0, gY.l)(RY.W, (YY => {
+        const rY = (0, OY.f)(RY.W, YY);
+        if (!(0, OY.c)(rY)) return;
+        const DY = rY;
+        uY(DY.VY) && FY.c.remove(DY.SY)
+      })), (0, gY.g)((() => {
+        FY.c.clear()
+      })))
+    }
+
+    function iY(YY, rY) {
+      FY.c.update(YY, rY), aY.forEach((rY => {
+        rY(YY)
+      }))
+    }
+    const yY = {
+      localEffectUpdated: {
+        watch: YY => aY.add(YY)
       }
-      static set BaseUrl(BB) {
-        LB.f.BaseUrl = BB
-      }
-      static get CleanUrl() {
-        return LB.f.CleanUrl
-      }
-      static set CleanUrl(BB) {
-        LB.f.CleanUrl = BB
-      }
-      static IsAbsoluteUrl(BB) {
-        return 0 === BB.indexOf("//") || -1 !== BB.indexOf("://") && (-1 !== BB.indexOf(".") && (-1 !== BB.indexOf("/") && (!(BB.indexOf(":") > BB.indexOf("/")) && (BB.indexOf("://") < BB.indexOf(".") || (0 === BB.indexOf("data:") || 0 === BB.indexOf("blob:"))))))
-      }
-      static set ScriptBaseUrl(BB) {
-        LB.f.ScriptBaseUrl = BB
-      }
-      static get ScriptBaseUrl() {
-        return LB.f.ScriptBaseUrl
-      }
-      static set CDNBaseUrl(BB) {
-        VB.ScriptBaseUrl = BB, VB.AssetBaseUrl = BB
-      }
-      static set ScriptPreprocessUrl(BB) {
-        LB.f.ScriptPreprocessUrl = BB
-      }
-      static get ScriptPreprocessUrl() {
-        return LB.f.ScriptPreprocessUrl
-      }
-      static get DefaultRetryStrategy() {
-        return LB.f.DefaultRetryStrategy
-      }
-      static set DefaultRetryStrategy(BB) {
-        LB.f.DefaultRetryStrategy = BB
-      }
-      static get CorsBehavior() {
-        return LB.f.CorsBehavior
-      }
-      static set CorsBehavior(BB) {
-        LB.f.CorsBehavior = BB
-      }
-      static get UseFallbackTexture() {
-        return kB.c.UseFallbackTexture
-      }
-      static set UseFallbackTexture(BB) {
-        kB.c.UseFallbackTexture = BB
-      }
-      static get RegisteredExternalClasses() {
-        return DB.d.RegisteredExternalClasses
-      }
-      static set RegisteredExternalClasses(BB) {
-        DB.d.RegisteredExternalClasses = BB
-      }
-      static get fallbackTexture() {
-        return kB.c.FallbackTexture
-      }
-      static set fallbackTexture(BB) {
-        kB.c.FallbackTexture = BB
-      }
-      static FetchToRef(BB, TB, dB, VB, yB, pB) {
-        const lB = 4 * ((Math.abs(BB) * dB % dB | 0) + (Math.abs(TB) * VB % VB | 0) * dB);
-        pB.r = yB[lB] / 255, pB.g = yB[lB + 1] / 255, pB.b = yB[lB + 2] / 255, pB.a = yB[lB + 3] / 255
-      }
-      static Mix(BB, TB, dB) {
-        return 0
-      }
-      static Instantiate(BB) {
-        return DB.d.Instantiate(BB)
-      }
-      static SetImmediate(BB) {
-        OB.b.SetImmediate(BB)
-      }
-      static IsExponentOfTwo(BB) {
-        return !0
-      }
-      static FloatRound(BB) {
-        return Math.fround(BB)
-      }
-      static GetFilename(BB) {
-        const TB = BB.lastIndexOf("/");
-        return TB < 0 ? BB : BB.substring(TB + 1)
-      }
-      static GetFolderPath(BB) {
-        let TB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const dB = BB.lastIndexOf("/");
-        return dB < 0 ? TB ? BB : "" : BB.substring(0, dB + 1)
-      }
-      static ToDegrees(BB) {
-        return 180 * BB / Math.PI
-      }
-      static ToRadians(BB) {
-        return BB * Math.PI / 180
-      }
-      static SmoothAngleChange(BB, TB) {
-        let dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : .9;
-        const VB = this.ToRadians(BB),
-          yB = this.ToRadians(TB);
-        return this.ToDegrees(Math.atan2((1 - dB) * Math.sin(yB) + dB * Math.sin(VB), (1 - dB) * Math.cos(yB) + dB * Math.cos(VB)))
-      }
-      static MakeArray(BB, TB) {
-        return !0 === TB || void 0 !== BB && null != BB ? Array.isArray(BB) ? BB : [BB] : null
-      }
-      static GetPointerPrefix(BB) {
-        return (0, pB.h)() && !window.PointerEvent ? "mouse" : "pointer"
-      }
-      static SetCorsBehavior(BB, TB) {
-        (0, LB.D)(BB, TB)
-      }
-      static SetReferrerPolicyBehavior(BB, TB) {
-        TB.referrerPolicy = BB
-      }
-      static get PreprocessUrl() {
-        return LB.f.PreprocessUrl
-      }
-      static set PreprocessUrl(BB) {
-        LB.f.PreprocessUrl = BB
-      }
-      static LoadImage(BB, TB, dB, VB, yB, pB) {
-        return (0, LB.s)(BB, TB, dB, VB, yB, pB)
-      }
-      static LoadFile(BB, TB, dB, VB, yB, pB) {
-        return (0, LB.q)(BB, TB, dB, VB, yB, pB)
-      }
-      static async LoadFileAsync(BB) {
-        let TB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        return await new Promise(((dB, VB) => {
-          (0, LB.q)(BB, (BB => {
-            dB(BB)
-          }), void 0, void 0, TB, ((BB, TB) => {
-            VB(TB)
-          }))
-        }))
-      }
-      static GetAssetUrl(BB) {
-        if (!BB) return "";
-        if (VB.AssetBaseUrl && BB.startsWith(VB._DefaultAssetsUrl)) {
-          const TB = VB.AssetBaseUrl.endsWith("/") ? VB.AssetBaseUrl.slice(0, -1) : VB.AssetBaseUrl;
-          return BB.replace(VB._DefaultAssetsUrl, TB)
+    }
+  },
+  39812: (YY, rY, DY) => {
+    DY.d(rY, {
+      b: () => vY
+    });
+    var FY = DY(4382),
+      AY = DY(4376),
+      IY = DY(39731),
+      RY = DY(39739);
+    const OY = new Set(FY.F),
+      gY = FY.F.map((YY => (new TextEncoder).encode(YY))),
+      aY = new Map;
+
+    function vY(YY, rY) {
+      var DY;
+      return null === (DY = aY.get(YY)) || void 0 === DY ? void 0 : DY[rY]
+    }(0, RY.l)(FY._b.NewOtherEntitySettings, (YY => {
+      YY.payloadKind === AY.dc.Msgpack && gY.some((rY => function(YY, rY) {
+        const DY = rY[0];
+        for (let FY = YY.indexOf(DY); - 1 !== FY && FY + rY.length <= YY.length; FY = YY.indexOf(DY, FY + 1)) {
+          let DY = 1;
+          for (; DY < rY.length && YY[FY + DY] === rY[DY];) DY++;
+          if (DY === rY.length) return !0
         }
-        return BB
-      }
-      static GetBabylonScriptURL(BB, TB) {
-        if (!BB) return "";
-        if (BB.startsWith(VB._DefaultCdnUrl))
-          if (VB.ScriptBaseUrl) {
-            const TB = VB.ScriptBaseUrl.endsWith("/") ? VB.ScriptBaseUrl.slice(0, -1) : VB.ScriptBaseUrl;
-            BB = BB.replace(VB._DefaultCdnUrl, TB)
-          } else if (VB._CdnVersion) {
-          const TB = `${VB._DefaultCdnUrl}/v${VB._CdnVersion}`;
-          BB.startsWith(TB) || (BB = BB.replace(VB._DefaultCdnUrl, TB))
+        return !1
+      }(YY.payload, rY))) && function(YY) {
+        if (null === YY || "object" !== typeof YY || null === YY.settings || "object" !== typeof YY.settings) return;
+        const rY = String(YY.eId),
+          DY = YY.settings;
+        let FY = aY.get(rY);
+        for (const AY in DY) {
+          if (!OY.has(AY)) continue;
+          const YY = DY[AY];
+          null === YY || void 0 === YY ? FY && delete FY[AY] : (FY ??= {}, FY[AY] = YY)
         }
-        return BB = VB.ScriptPreprocessUrl(BB), TB && !VB.IsAbsoluteUrl(BB) && (BB = VB.GetAbsoluteUrl(BB)), BB
-      }
-      static LoadBabylonScript(BB, TB, dB, yB) {
-        BB = VB.GetBabylonScriptURL(BB), VB.LoadScript(BB, TB, dB)
-      }
-      static async LoadBabylonScriptAsync(BB) {
-        return BB = VB.GetBabylonScriptURL(BB), await VB.LoadScriptAsync(BB)
-      }
-      static _LoadScriptNative(BB, TB, dB, yB) {
-        if (_native) {
-          if (arguments.length > 4 && void 0 !== arguments[4] && arguments[4]) {
-            const BB = "Loading a script as an ES module is not supported in Babylon Native";
-            return void dB?.(BB, new Error(BB))
+        FY && aY.set(rY, FY)
+      }((0, IY.e)(YY.payload))
+    })), (0, RY.g)((() => {
+      aY.clear()
+    }))
+  },
+  39798: (YY, rY, DY) => {
+    DY.d(rY, {
+      b: () => iY,
+      c: () => aY,
+      g: () => uY
+    });
+    var FY = DY(38367),
+      AY = DY(1816),
+      IY = DY(1289),
+      RY = DY(39725),
+      OY = DY(39728),
+      gY = DY(39739);
+    const aY = new FY.b;
+    let vY = {};
+
+    function uY(YY) {
+      return vY[YY]
+    }
+    const sY = new IY.d;
+
+    function iY(YY) {
+      return sY.add(YY)
+    }
+
+    function yY(YY) {
+      sY.callEach(YY, "a roster listener")
+    }(0, gY.l)(RY.eb, (YY => {
+      const rY = (0, OY.f)(RY.eb, YY);
+      if (void 0 === rY) return;
+      const DY = rY.jr.some((YY => {
+          let {
+            hr: rY,
+            dr: DY
+          } = YY;
+          return null !== DY && aY.has(rY) && aY.getName(rY) !== DY
+        })),
+        {
+          added: FY,
+          removed: IY,
+          settingChanges: gY
+        } = aY.apply(rY),
+        vY = new Set;
+      for (const AY of gY)
+        for (const YY in AY.settings) vY.add(YY);
+      const uY = DY || FY.length > 0 || IY.length > 0;
+      (uY || vY.has("hideNameSeed")) && function() {
+        const YY = new Map;
+        for (const rY of aY.ids()) {
+          const DY = aY.getName(rY),
+            FY = aY.getSetting(rY, "hideNameSeed");
+          void 0 !== DY && void 0 !== FY && null !== FY && YY.set(DY, FY)
+        }
+        AY.e.replaceAll(YY)
+      }(), yY({
+        kind: "roster",
+        members: uY,
+        settings: vY
+      })
+    })), (0, gY.l)(RY.T, (YY => {
+      const rY = (0, OY.f)(RY.T, YY);
+      if (void 0 !== rY) {
+        for (const {
+            YY: YY,
+            rY: DY,
+            DY: FY
           }
-          VB.LoadFile(BB, (BB => {
-            try {
-              Function(BB).apply(null), TB && TB()
-            } catch (VB) {
-              dB && dB("LoadScript Error", VB)
-            }
-          }), void 0, void 0, !1, ((BB, TB) => {
-            dB && dB("LoadScript Error", TB)
-          }))
+          of rY) vY[YY] = {
+          ...vY[YY],
+          [DY]: FY
+        };
+        yY({
+          kind: "cosmetics",
+          updates: rY
+        })
+      }
+    })), (0, gY.g)((() => {
+      aY.clear(), vY = {}, AY.e.clear(), yY({
+        kind: "reset"
+      })
+    })), (0, gY.h)((() => {
+      aY.clear(), yY({
+        kind: "reset"
+      })
+    }))
+  },
+  39823: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => cY,
+      e: () => oY,
+      g: () => ZY,
+      i: () => CY
+    });
+    var FY = DY(1270),
+      AY = DY(614),
+      IY = DY(99),
+      RY = DY(4382),
+      OY = DY(39683),
+      gY = DY(39717),
+      aY = DY(39693),
+      vY = DY(39812),
+      uY = DY(39798),
+      sY = DY(39728),
+      iY = DY(39739);
+
+    function yY(YY) {
+      let {
+        deadEId: rY,
+        killerEId: DY,
+        killerLifeformType: FY,
+        withItem: AY,
+        killstreak: IY
+      } = YY;
+      return {
+        killer: VY({
+          eId: DY,
+          lifeformType: FY
+        }),
+        victim: VY({
+          eId: rY
+        }),
+        withItem: AY,
+        killstreak: IY
+      }
+    }
+
+    function QY(YY) {
+      let {
+        killer: rY,
+        victim: DY,
+        withItem: FY
+      } = YY;
+      return {
+        killer: VY(rY),
+        victim: VY(DY),
+        withItem: FY,
+        killstreak: 0
+      }
+    }
+
+    function oY(YY) {
+      eY && BY((() => "killed" === YY.kind ? yY(YY.body) : QY(YY.body)))
+    }
+    const WY = "#2727f1",
+      EY = "#912c2c";
+
+    function mY(YY, rY) {
+      var DY;
+      return uY.c.has(YY) ? null === (DY = uY.c.getSettings(YY)) || void 0 === DY ? void 0 : DY[rY] : (0, vY.b)(YY, rY)
+    }
+
+    function VY(YY) {
+      var rY, DY, RY, OY, vY;
+      let {
+        eId: sY,
+        name: iY,
+        colour: yY,
+        lifeformType: QY
+      } = YY;
+      if (void 0 === sY || null === sY || "" === sY) {
+        const YY = iY || null;
+        return {
+          id: null,
+          shownName: YY,
+          lifeformType: null === YY && null !== QY && void 0 !== QY ? QY : null,
+          colour: yY || null,
+          local: !1,
+          realName: null
         }
       }
-      static _LoadScriptWeb(BB, TB, dB, VB) {
-        let yB = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        if ("function" === typeof importScripts) {
-          try {
-            importScripts(BB), TB && TB()
-          } catch (YB) {
-            dB?.(`Unable to load script '${BB}' in worker`, YB)
-          }
-          return
-        }
-        if (!(0, pB.h)()) return void dB?.(`Cannot load script '${BB}' outside of a window or a worker`);
-        const lB = document.getElementsByTagName("head")[0],
-          JB = document.createElement("script");
-        yB ? (JB.setAttribute("type", "module"), JB.innerText = BB) : (JB.setAttribute("type", "text/javascript"), JB.setAttribute("src", BB)), VB && (JB.id = VB), JB.onload = () => {
-          TB && TB()
-        }, JB.onerror = TB => {
-          dB && dB(`Unable to load script '${BB}'`, TB)
-        }, lB.appendChild(JB)
+      const oY = String(sY),
+        VY = null === (rY = (0, aY.g)()) || void 0 === rY ? void 0 : rY.api,
+        SY = void 0 !== VY && String(VY.localId) === oY,
+        lY = null !== (DY = uY.c.getName(oY)) && void 0 !== DY ? DY : null,
+        TY = null !== (RY = mY(oY, "hideNameSeed")) && void 0 !== RY ? RY : null;
+      let eY = null === lY ? null : (0, FY.d)(lY, !IY.featureFlags.canSeeRealPlayerNames, TY) || null,
+        NY = null;
+      if (null === eY && void 0 !== VY) {
+        const YY = VY.getEntityType(oY);
+        "Player" !== YY && (eY = (0, gY.l)(VY, +oY) || null), NY = AY.j.includes(YY) ? YY : null
       }
-      static async LoadScriptAsync(BB, TB) {
-        return await new Promise(((dB, VB) => {
-          this.LoadScript(BB, (() => {
-            dB()
-          }), ((BB, TB) => {
-            VB(TB || new Error(BB))
-          }), TB)
-        }))
+      return {
+        id: oY,
+        shownName: eY,
+        lifeformType: null === eY && null !== (OY = null !== (vY = NY) && void 0 !== vY ? vY : QY) && void 0 !== OY ? OY : null,
+        colour: yY || mY(oY, "killfeedColour") || (SY ? WY : EY),
+        local: SY,
+        realName: lY
       }
-      static ReadFileAsDataURL(BB, TB, dB) {
-        const VB = new FileReader,
-          pB = {
-            onCompleteObservable: new yB.e,
-            abort: () => VB.abort()
-          };
-        return VB.onloadend = () => {
-          pB.onCompleteObservable.notifyObservers(pB)
-        }, VB.onload = BB => {
-          TB(BB.target.result)
-        }, VB.onprogress = dB, VB.readAsDataURL(BB), pB
-      }
-      static ReadFile(BB, TB, dB, VB, yB) {
-        return (0, LB.t)(BB, TB, dB, VB, yB)
-      }
-      static FileAsURL(BB) {
-        const TB = new Blob([BB]);
-        return window.URL.createObjectURL(TB)
-      }
-      static Format(BB) {
-        let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-        return BB.toFixed(TB)
-      }
-      static DeepCopy(BB, TB, dB, VB) {
-        JB.b.DeepCopy(BB, TB, dB, VB)
-      }
-      static IsEmpty(BB) {
-        for (const TB in BB)
-          if (Object.prototype.hasOwnProperty.call(BB, TB)) return !1;
-        return !0
-      }
-      static RegisterTopRootEvents(BB, TB) {
-        for (let VB = 0; VB < TB.length; VB++) {
-          const yB = TB[VB];
-          BB.addEventListener(yB.name, yB.handler, !1);
-          try {
-            window.parent && window.parent.addEventListener(yB.name, yB.handler, !1)
-          } catch (dB) {}
-        }
-      }
-      static UnregisterTopRootEvents(BB, TB) {
-        for (let VB = 0; VB < TB.length; VB++) {
-          const yB = TB[VB];
-          BB.removeEventListener(yB.name, yB.handler);
-          try {
-            BB.parent && BB.parent.removeEventListener(yB.name, yB.handler)
-          } catch (dB) {}
-        }
-      }
-      static async DumpFramebuffer(BB, TB, dB, VB) {
-        throw (0, gB.i)("DumpTools")
-      }
-      static DumpData(BB, TB, dB, VB) {
-        throw (0, gB.i)("DumpTools")
-      }
-      static async DumpDataAsync(BB, TB, dB) {
-        throw (0, gB.i)("DumpTools")
-      }
-      static _IsOffScreenCanvas(BB) {
-        return void 0 !== BB.convertToBlob
-      }
-      static ToBlob(BB, TB) {
-        let dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "image/png",
-          yB = arguments.length > 3 ? arguments[3] : void 0;
-        VB._IsOffScreenCanvas(BB) || BB.toBlob || (BB.toBlob = function(BB, TB, dB) {
-          setTimeout((() => {
-            const VB = atob(this.toDataURL(TB, dB).split(",")[1]),
-              yB = VB.length,
-              pB = new Uint8Array(yB);
-            for (let BB = 0; BB < yB; BB++) pB[BB] = VB.charCodeAt(BB);
-            BB(new Blob([pB]))
-          }))
-        }), VB._IsOffScreenCanvas(BB) ? BB.convertToBlob({
-          type: dB,
-          quality: yB
-        }).then((BB => TB(BB))) : BB.toBlob((function(BB) {
-          TB(BB)
-        }), dB, yB)
-      }
-      static DownloadBlob(BB, TB) {
-        if ("download" in document.createElement("a")) {
-          if (!TB) {
-            const BB = new Date;
-            TB = "screenshot_" + ((BB.getFullYear() + "-" + (BB.getMonth() + 1)).slice(2) + "-" + BB.getDate() + "_" + BB.getHours() + "-" + ("0" + BB.getMinutes()).slice(-2)) + ".png"
-          }
-          VB.Download(BB, TB)
-        } else if (BB && "undefined" !== typeof URL) {
-          const TB = URL.createObjectURL(BB),
-            dB = window.open("");
-          if (!dB) return;
-          const VB = dB.document.createElement("img");
-          VB.onload = function() {
-            URL.revokeObjectURL(TB)
-          }, VB.src = TB, dB.document.body.appendChild(VB)
-        }
-      }
-      static EncodeScreenshotCanvasData(BB, TB) {
-        let dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "image/png",
-          yB = arguments.length > 3 ? arguments[3] : void 0,
-          pB = arguments.length > 4 ? arguments[4] : void 0;
-        if ("string" !== typeof yB && TB) {
-          if (TB) {
-            if (VB._IsOffScreenCanvas(BB)) return void BB.convertToBlob({
-              type: dB,
-              quality: pB
-            }).then((BB => {
-              const dB = new FileReader;
-              dB.readAsDataURL(BB), dB.onloadend = () => {
-                const BB = dB.result;
-                TB(BB)
+    }
+    const SY = 32;
+    let lY = [],
+      TY = null,
+      eY = !1,
+      NY = !1;
+
+    function BY(YY) {
+      null === TY ? (lY.length === SY && lY.shift(), lY.push(YY)) : TY(YY())
+    }
+
+    function cY() {
+      NY || (NY = !0, (0, iY.l)(RY._b.PlayerKilled, (YY => {
+        const rY = (0, sY.g)(YY);
+        (0, sY.c)(rY) && BY((() => yY(rY)))
+      })), (0, iY.l)(RY._b.CustomKillfeed, (YY => {
+        const rY = (0, sY.g)(YY);
+        (0, sY.c)(rY) && (0, sY.c)(rY.killer) && (0, sY.c)(rY.victim) && BY((() => QY(rY)))
+      })), (0, iY.g)((() => {
+        lY = []
+      })))
+    }
+    const KY = Object.freeze([0, 0, 0]),
+      HY = [0, 0, 0],
+      zY = [0, 0, 0],
+      ZY = {
+        kill: {
+          watch(YY) {
+            if (eY = !0, 0 === lY.length) return TY = YY, () => {
+              eY = !1, TY = null
+            };
+            const rY = setTimeout((() => {
+              const rY = lY;
+              lY = [], TY = YY;
+              for (const FY of rY) try {
+                YY(FY())
+              } catch (DY) {
+                console.error("[bloxd-wasm-client] a kept kill couldn't be handed on", DY)
               }
-            }));
-            const yB = BB.toDataURL(dB, pB);
-            TB(yB)
-          }
-        } else this.ToBlob(BB, (function(BB) {
-          BB && VB.DownloadBlob(BB, yB), TB && TB("")
-        }), dB, pB)
-      }
-      static Download(BB, TB) {
-        if ("undefined" === typeof URL) return;
-        const dB = window.URL.createObjectURL(BB),
-          VB = document.createElement("a");
-        document.body.appendChild(VB), VB.style.display = "none", VB.href = dB, VB.download = TB, VB.addEventListener("click", (() => {
-          VB.parentElement && VB.parentElement.removeChild(VB)
-        })), VB.click(), window.URL.revokeObjectURL(dB)
-      }
-      static BackCompatCameraNoPreventDefault(BB) {
-        return "boolean" === typeof BB[0] ? BB[0] : "boolean" === typeof BB[1] && BB[1]
-      }
-      static CreateScreenshot(BB, TB, dB, VB) {
-        throw (0, gB.i)("ScreenshotTools")
-      }
-      static async CreateScreenshotAsync(BB, TB, dB) {
-        throw (0, gB.i)("ScreenshotTools")
-      }
-      static CreateScreenshotUsingRenderTarget(BB, TB, dB, VB) {
-        throw (0, gB.i)("ScreenshotTools")
-      }
-      static async CreateScreenshotUsingRenderTargetAsync(BB, TB, dB) {
-        throw (0, gB.i)("ScreenshotTools")
-      }
-      static RandomId() {
-        return (0, uB.c)()
-      }
-      static IsBase64(BB) {
-        return (0, LB.m)(BB)
-      }
-      static DecodeBase64(BB) {
-        return (0, LB.b)(BB)
-      }
-      static get errorsCount() {
-        return lB.b.errorsCount
-      }
-      static Log(BB) {
-        lB.b.Log(BB)
-      }
-      static Warn(BB) {
-        lB.b.Warn(BB)
-      }
-      static Error(BB) {
-        lB.b.Error(BB)
-      }
-      static get LogCache() {
-        return lB.b.LogCache
-      }
-      static ClearLogCache() {
-        lB.b.ClearLogCache()
-      }
-      static set LogLevels(BB) {
-        lB.b.LogLevels = BB
-      }
-      static set PerformanceLogLevel(BB) {
-        (BB & VB.PerformanceUserMarkLogLevel) !== VB.PerformanceUserMarkLogLevel ? (BB & VB.PerformanceConsoleLogLevel) !== VB.PerformanceConsoleLogLevel ? (VB.StartPerformanceCounter = VB._StartPerformanceCounterDisabled, VB.EndPerformanceCounter = VB._EndPerformanceCounterDisabled, _native?.disablePerformanceLogging?.()) : _native?.enablePerformanceLogging ? (_native.enablePerformanceLogging(2), VB.StartPerformanceCounter = VB._StartMarkNative, VB.EndPerformanceCounter = VB._EndMarkNative) : (VB.StartPerformanceCounter = VB._StartPerformanceConsole, VB.EndPerformanceCounter = VB._EndPerformanceConsole) : _native?.enablePerformanceLogging ? (_native.enablePerformanceLogging(1), VB.StartPerformanceCounter = VB._StartMarkNative, VB.EndPerformanceCounter = VB._EndMarkNative) : (VB.StartPerformanceCounter = VB._StartUserMark, VB.EndPerformanceCounter = VB._EndUserMark)
-      }
-      static _StartPerformanceCounterDisabled(BB, TB) {}
-      static _EndPerformanceCounterDisabled(BB, TB) {}
-      static _StartUserMark(BB) {
-        let TB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        if (!VB._Performance) {
-          if (!(0, pB.h)()) return;
-          VB._Performance = window.performance
-        }
-        TB && VB._Performance.mark && VB._Performance.mark(BB + "-Begin")
-      }
-      static _EndUserMark(BB) {
-        (!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && VB._Performance.mark && (VB._Performance.mark(BB + "-End"), VB._Performance.measure(BB, BB + "-Begin", BB + "-End"))
-      }
-      static _StartPerformanceConsole(BB) {
-        let TB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        TB && (VB._StartUserMark(BB, TB), console.time && console.time(BB))
-      }
-      static _EndPerformanceConsole(BB) {
-        let TB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        TB && (VB._EndUserMark(BB, TB), console.timeEnd(BB))
-      }
-      static _StartMarkNative(BB) {
-        if ((!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && _native?.startPerformanceCounter)
-          if (VB._NativePerformanceCounterHandles.has(BB)) VB.Warn(`Performance counter with name ${BB} is already started.`);
-          else {
-            const TB = _native.startPerformanceCounter(BB);
-            VB._NativePerformanceCounterHandles.set(BB, TB)
-          }
-      }
-      static _EndMarkNative(BB) {
-        if ((!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && _native?.endPerformanceCounter) {
-          const TB = VB._NativePerformanceCounterHandles.get(BB);
-          TB ? (_native.endPerformanceCounter(TB), VB._NativePerformanceCounterHandles.delete(BB)) : VB.Warn(`Performance counter with name ${BB} was not started.`)
-        }
-      }
-      static get Now() {
-        return YB.d.Now
-      }
-      static GetClassName(BB) {
-        let TB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          dB = null;
-        if (!TB && BB.getClassName) dB = BB.getClassName();
-        else {
-          if (BB instanceof Object) {
-            dB = (TB ? BB : Object.getPrototypeOf(BB)).constructor.__bjsclassName__
-          }
-          dB || (dB = typeof BB)
-        }
-        return dB
-      }
-      static First(BB, TB) {
-        for (const dB of BB)
-          if (TB(dB)) return dB;
-        return null
-      }
-      static getFullClassName(BB) {
-        let TB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          dB = null,
-          VB = null;
-        if (!TB && BB.getClassName) dB = BB.getClassName();
-        else {
-          if (BB instanceof Object) {
-            const yB = TB ? BB : Object.getPrototypeOf(BB);
-            dB = yB.constructor.__bjsclassName__, VB = yB.constructor.__bjsmoduleName__
-          }
-          dB || (dB = typeof BB)
-        }
-        return dB ? (null != VB ? VB + "." : "") + dB : null
-      }
-      static async DelayAsync(BB) {
-        await new Promise((TB => {
-          setTimeout((() => {
-            TB()
-          }), BB)
-        }))
-      }
-      static IsSafari() {
-        return !!(0, pB.f)() && /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
-      }
-    }
-
-    function vB(BB, TB) {
-      return dB => {
-        dB.__bjsclassName__ = BB, dB.__bjsmoduleName__ = null != TB ? TB : null
-      }
-    }
-    VB = EB, EB.AssetBaseUrl = "", EB.UseCustomRequestHeaders = !1, EB.CustomRequestHeaders = oB.c.CustomRequestHeaders, EB.GetDOMTextContent = pB.b, EB._DefaultCdnUrl = "https://cdn.babylonjs.com", EB._CdnVersion = "9.28.0", EB._DefaultAssetsUrl = "https://assets.babylonjs.com/core", EB.LoadScript = "undefined" === typeof _native ? VB._LoadScriptWeb : VB._LoadScriptNative, EB.GetAbsoluteUrl = "object" === typeof document ? BB => {
-      const TB = document.createElement("a");
-      return TB.href = BB, TB.href
-    } : "function" === typeof URL && "object" === typeof location ? BB => new URL(BB, location.origin).href : () => {
-      throw new Error("Unable to get absolute URL. Override BABYLON.Tools.GetAbsoluteUrl to a custom implementation for the current context.")
-    }, EB.NoneLogLevel = lB.b.NoneLogLevel, EB.MessageLogLevel = lB.b.MessageLogLevel, EB.WarningLogLevel = lB.b.WarningLogLevel, EB.ErrorLogLevel = lB.b.ErrorLogLevel, EB.AllLogLevel = lB.b.AllLogLevel, EB.IsWindowObjectExist = pB.h, EB.PerformanceNoneLogLevel = 0, EB.PerformanceUserMarkLogLevel = 1, EB.PerformanceConsoleLogLevel = 2, EB._NativePerformanceCounterHandles = new Map, EB.StartPerformanceCounter = VB._StartPerformanceCounterDisabled, EB.EndPerformanceCounter = VB._EndPerformanceCounterDisabled;
-    class mB {
-      constructor(BB, TB, dB) {
-        let VB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        this.iterations = BB, this.index = VB - 1, this._done = !1, this._fn = TB, this._successCallback = dB
-      }
-      executeNext() {
-        this._done || (this.index + 1 < this.iterations ? (++this.index, this._fn(this)) : this.breakLoop())
-      }
-      breakLoop() {
-        this._done = !0, this._successCallback()
-      }
-      static Run(BB, TB, dB) {
-        const VB = new mB(BB, TB, dB, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0);
-        return VB.executeNext(), VB
-      }
-      static SyncAsyncForLoop(BB, TB, dB, VB, yB) {
-        let pB = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
-        return mB.Run(Math.ceil(BB / TB), (VB => {
-          yB && yB() ? VB.breakLoop() : setTimeout((() => {
-            for (let pB = 0; pB < TB; ++pB) {
-              const lB = VB.index * TB + pB;
-              if (lB >= BB) break;
-              if (dB(lB), yB && yB()) {
-                VB.breakLoop();
-                break
-              }
+            }), 0);
+            return () => {
+              clearTimeout(rY), eY = !1, TY = null
             }
-            VB.executeNext()
-          }), pB)
-        }), VB)
+          }
+        }
+      },
+      CY = {
+        localPos() {
+          const YY = (0, aY.g)();
+          if (null === YY) return KY;
+          const rY = YY.api.apiView;
+          for (let DY = 0; DY < 3; DY++) HY[DY] = OY.s.localPos(rY, 0, DY);
+          return HY
+        },
+        targetedBlockPos() {
+          const YY = (0, aY.g)();
+          if (null === YY || OY.s.targetBlockId(YY.api.apiView, 0) === OY.$c) return null;
+          for (let rY = 0; rY < 3; rY++) zY[rY] = OY.s.targetBlock(YY.api.apiView, 0, rY);
+          return zY
+        }
       }
-    }
-    let iB = !1;
-
-    function NB() {
-      iB || (iB = !0, EB.Mix = HB.m, EB.IsExponentOfTwo = HB.i, kB.c.FallbackTexture = "data:image/jpg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QBmRXhpZgAATU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAAExAAIAAAAQAAAATgAAAAAAAABgAAAAAQAAAGAAAAABcGFpbnQubmV0IDQuMC41AP/bAEMABAIDAwMCBAMDAwQEBAQFCQYFBQUFCwgIBgkNCw0NDQsMDA4QFBEODxMPDAwSGBITFRYXFxcOERkbGRYaFBYXFv/bAEMBBAQEBQUFCgYGChYPDA8WFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFv/AABEIAQABAAMBIgACEQEDEQH/xAAfAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgv/xAC1EAACAQMDAgQDBQUEBAAAAX0BAgMABBEFEiExQQYTUWEHInEUMoGRoQgjQrHBFVLR8CQzYnKCCQoWFxgZGiUmJygpKjQ1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4eLj5OXm5+jp6vHy8/T19vf4+fr/xAAfAQADAQEBAQEBAQEBAAAAAAAAAQIDBAUGBwgJCgv/xAC1EQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/APH6KKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76CiiigD5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BQooooA+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/voKKKKAPl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76CiiigD5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BQooooA+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/voKKKKAPl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76P//Z")
+  },
+  38367: (YY, rY, DY) => {
+    DY.d(rY, {
+      b: () => FY
+    });
+    class FY {
+      constructor() {
+        this.members = new Map
+      }
+      apply(YY) {
+        const rY = {
+          added: [],
+          removed: [],
+          settingChanges: []
+        };
+        for (const FY of YY.jr) {
+          let YY = this.members.get(FY.hr);
+          if (YY || (YY = {
+              name: null,
+              settings: {}
+            }, this.members.set(FY.hr, YY), rY.added.push(FY.hr)), null !== FY.dr && (YY.name = FY.dr), null !== FY.Jr || FY.Mr.length > 0) {
+            const DY = null === FY.Jr ? {} : JSON.parse(FY.Jr);
+            Object.assign(YY.settings, DY);
+            for (const rY of FY.Mr) delete YY.settings[rY], DY[rY] = void 0;
+            rY.settingChanges.push({
+              playerId: FY.hr,
+              settings: DY
+            })
+          }
+        }
+        for (const FY of YY.wr) {
+          const YY = this.members.get(FY);
+          var DY;
+          if (YY) this.members.delete(FY), rY.removed.push({
+            playerId: FY,
+            name: null !== (DY = YY.name) && void 0 !== DY ? DY : void 0
+          })
+        }
+        return rY
+      }
+      has(YY) {
+        return this.members.has(YY)
+      }
+      ids() {
+        return [...this.members.keys()]
+      }
+      getName(YY) {
+        var rY, DY;
+        return null !== (rY = null === (DY = this.members.get(YY)) || void 0 === DY ? void 0 : DY.name) && void 0 !== rY ? rY : void 0
+      }
+      getSettings(YY) {
+        var rY;
+        return null === (rY = this.members.get(YY)) || void 0 === rY ? void 0 : rY.settings
+      }
+      getSetting(YY, rY) {
+        var DY;
+        return null === (DY = this.members.get(YY)) || void 0 === DY ? void 0 : DY.settings[rY]
+      }
+      clear() {
+        this.members.clear()
+      }
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

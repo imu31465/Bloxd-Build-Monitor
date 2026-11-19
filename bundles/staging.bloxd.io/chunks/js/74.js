@@ -1,9 +1,509 @@
 export const id = 74;
 export const ids = [74];
 export const modules = {
-  4141: BB => {
-    BB.exports = "# Item Names (1532 items)\n\nWood Pickaxe\nStone Pickaxe\nIron Pickaxe\nGold Pickaxe\nDiamond Pickaxe\nMoonstone Pickaxe\nGolem Pickaxe\nWood Axe\nStone Axe\nIron Axe\nGold Axe\nDiamond Axe\nMoonstone Axe\nArtisan Axe\nWood Spade\nStone Spade\nIron Spade\nGold Spade\nDiamond Spade\nWood Sword\nStone Sword\nIron Sword\nGold Sword\nDiamond Sword\nKnight Sword\nWood Hoe\nStone Hoe\nIron Hoe\nGold Hoe\nDiamond Hoe\nFlashlight\nMining Helmet\nWood Helmet\nIron Helmet\nGold Helmet\nDiamond Helmet\nWood Chestplate\nIron Chestplate\nGold Chestplate\nDiamond Chestplate\nFur Chestplate\nWood Leggings\nIron Leggings\nGold Leggings\nDiamond Leggings\nWood Boots\nIron Boots\nGold Boots\nDiamond Boots\nSpiked Boots\nWood Gauntlets\nIron Gauntlets\nGold Gauntlets\nDiamond Gauntlets\nMilitary Helmet\nMilitary Chestplate\nMilitary Gauntlets\nMilitary Leggings\nMilitary Boots\nWhite Wood Helmet\nWhite Wood Chestplate\nWhite Wood Leggings\nWhite Wood Boots\nWhite Wood Gauntlets\nOrange Wood Helmet\nOrange Wood Chestplate\nOrange Wood Leggings\nOrange Wood Boots\nOrange Wood Gauntlets\nMagenta Wood Helmet\nMagenta Wood Chestplate\nMagenta Wood Leggings\nMagenta Wood Boots\nMagenta Wood Gauntlets\nLight Blue Wood Helmet\nLight Blue Wood Chestplate\nLight Blue Wood Leggings\nLight Blue Wood Boots\nLight Blue Wood Gauntlets\nYellow Wood Helmet\nYellow Wood Chestplate\nYellow Wood Leggings\nYellow Wood Boots\nYellow Wood Gauntlets\nLime Wood Helmet\nLime Wood Chestplate\nLime Wood Leggings\nLime Wood Boots\nLime Wood Gauntlets\nPink Wood Helmet\nPink Wood Chestplate\nPink Wood Leggings\nPink Wood Boots\nPink Wood Gauntlets\nGray Wood Helmet\nGray Wood Chestplate\nGray Wood Leggings\nGray Wood Boots\nGray Wood Gauntlets\nLight Gray Wood Helmet\nLight Gray Wood Chestplate\nLight Gray Wood Leggings\nLight Gray Wood Boots\nLight Gray Wood Gauntlets\nCyan Wood Helmet\nCyan Wood Chestplate\nCyan Wood Leggings\nCyan Wood Boots\nCyan Wood Gauntlets\nPurple Wood Helmet\nPurple Wood Chestplate\nPurple Wood Leggings\nPurple Wood Boots\nPurple Wood Gauntlets\nBlue Wood Helmet\nBlue Wood Chestplate\nBlue Wood Leggings\nBlue Wood Boots\nBlue Wood Gauntlets\nBrown Wood Helmet\nBrown Wood Chestplate\nBrown Wood Leggings\nBrown Wood Boots\nBrown Wood Gauntlets\nGreen Wood Helmet\nGreen Wood Chestplate\nGreen Wood Leggings\nGreen Wood Boots\nGreen Wood Gauntlets\nRed Wood Helmet\nRed Wood Chestplate\nRed Wood Leggings\nRed Wood Boots\nRed Wood Gauntlets\nBlack Wood Helmet\nBlack Wood Chestplate\nBlack Wood Leggings\nBlack Wood Boots\nBlack Wood Gauntlets\nShears\nArtisan Shears\nStick\nCoal\nRaw Iron\nIron Bar\nIron Fragment\nRaw Gold\nGold Bar\nGold Fragment\nDiamond\nDiamond Fragment\nMoonstone\nLunite\nMoonstone Fragment\nBowl\nPartially Full Bowl of Cranberries\nHalf Full Bowl of Cranberries\nNearly Full Bowl of Cranberries\nBowl of Cranberries\nMushroom Soup\nGlowing Soup\nNight Vision Soup\nCotton\nGold Crop\nBucket\nWater Bucket\nLava Bucket\nBoat\nINTERNAL_MESH_Boat\nObsidian Boat\nINTERNAL_MESH_Obsidian Boat\nSpeedboat\nINTERNAL_MESH_Speedboat\nWood Hang Glider\nINTERNAL_MESH_Wood Hang Glider\nIron Hang Glider\nINTERNAL_MESH_Iron Hang Glider\nGold Hang Glider\nINTERNAL_MESH_Gold Hang Glider\nDiamond Hang Glider\nINTERNAL_MESH_Diamond Hang Glider\nHovercraft\nINTERNAL_MESH_Hovercraft\nYellow Kart\nWhite Kart\nRed Kart\nPurple Kart\nPink Kart\nOrange Kart\nMagenta Kart\nLime Kart\nLight Gray Kart\nLight Blue Kart\nGreen Kart\nGray Kart\nCyan Kart\nBrown Kart\nBlue Kart\nBlack Kart\nINTERNAL_MESH_Yellow Kart\nINTERNAL_MESH_White Kart\nINTERNAL_MESH_Red Kart\nINTERNAL_MESH_Purple Kart\nINTERNAL_MESH_Pink Kart\nINTERNAL_MESH_Orange Kart\nINTERNAL_MESH_Magenta Kart\nINTERNAL_MESH_Lime Kart\nINTERNAL_MESH_Light Gray Kart\nINTERNAL_MESH_Light Blue Kart\nINTERNAL_MESH_Green Kart\nINTERNAL_MESH_Gray Kart\nINTERNAL_MESH_Cyan Kart\nINTERNAL_MESH_Brown Kart\nINTERNAL_MESH_Blue Kart\nINTERNAL_MESH_Black Kart\nOff Roader\nINTERNAL_MESH_Off Roader\nGold Mining Drill\nIron Mining Drill\nDiamond Mining Drill\nMoonstone Mining Drill\nArmored Car\nINTERNAL_MESH_Gold Mining Drill\nINTERNAL_MESH_Iron Mining Drill\nINTERNAL_MESH_Diamond Mining Drill\nINTERNAL_MESH_Moonstone Mining Drill\nINTERNAL_MESH_Armored Car\nLight Blue Car\nINTERNAL_MESH_Car\nSnowball\nSnowball Launcher\nPebble\nReinforced Pebble\nBullet\nBall\nReinforced Ball\nFrag Grenade\nMining Grenade\nSmoke Grenade\nMoonstone Orb\nFireball\nBouncy Bomb\nRPG\nObby RPG\nSuper RPG\nGrenade Launcher\nIceball\n67 Base Projectile\n67 Boosted Projectile\nCapitano Grenade\nScatter Pellet\nWood Bow\nWood Bow|meta|charging2\nWood Bow|meta|charging3\nWood Bow|meta|charging4\nStone Bow\nStone Bow|meta|charging2\nStone Bow|meta|charging3\nStone Bow|meta|charging4\nIron Bow\nIron Bow|meta|charging2\nIron Bow|meta|charging3\nIron Bow|meta|charging4\nGold Bow\nGold Bow|meta|charging2\nGold Bow|meta|charging3\nGold Bow|meta|charging4\nDiamond Bow\nDiamond Bow|meta|charging2\nDiamond Bow|meta|charging3\nDiamond Bow|meta|charging4\nWood Crossbow\nWood Crossbow|meta|charging2\nWood Crossbow|meta|charging3\nWood Crossbow|meta|charging4\nStone Crossbow\nStone Crossbow|meta|charging2\nStone Crossbow|meta|charging3\nStone Crossbow|meta|charging4\nIron Crossbow\nIron Crossbow|meta|charging2\nIron Crossbow|meta|charging3\nIron Crossbow|meta|charging4\nGold Crossbow\nGold Crossbow|meta|charging2\nGold Crossbow|meta|charging3\nGold Crossbow|meta|charging4\nDiamond Crossbow\nDiamond Crossbow|meta|charging2\nDiamond Crossbow|meta|charging3\nDiamond Crossbow|meta|charging4\nWood Crossbow Charged\nStone Crossbow Charged\nIron Crossbow Charged\nGold Crossbow Charged\nDiamond Crossbow Charged\nArrow\nCompass\nCompass|meta|dir2\nCompass|meta|dir3\nCompass|meta|dir4\nCompass|meta|dir5\nCompass|meta|dir6\nCompass|meta|dir7\nCompass|meta|dir8\nCompass|meta|dir9\nCompass|meta|dir10\nCompass|meta|dir11\nCompass|meta|dir12\nChunk Map\nBread\nBowl of Rice\nApple\nPlum\nCoconut\nCracked Coconut\nPear\nCherry\nBanana\nWatermelon Slice\nGold Watermelon Slice\nMelon Slice\nGold Melon Slice\nPumpkin Pie\nCorn\nCornbread\nChili Pepper\nMango\nCarrot\nGold Carrot\nRaw Potato\nBaked Potato\nBeetroot\nRaw Porkchop\nCooked Porkchop\nRaw Beef\nSteak\nRaw Mutton\nCooked Mutton\nRaw Venison\nCooked Venison\nRotten Flesh\nRotten Brain\nBone\nBone Meal\nLeather\nSaddle\nSpirit Saddle\nFur\nGolem Eye\nKnight Heart\nTeleport Heart\nFrost Shard\nMolten Cog\nChoir Bell\nSiege Core\nFlywheel\nRadiant Spark\nBrood Sac\nBandolier\nName Tag\nBook\nEmpty Bottle\nWater Bottle\nSlowness Potion\nSlowness Potion II\nSplash Slowness Potion\nSplash Slowness Potion II\nArrow of Slowness\nPoison Potion\nPoison Potion II\nSplash Poison Potion\nSplash Poison Potion II\nArrow of Poison\nWeakness Potion\nWeakness Potion II\nSplash Weakness Potion\nSplash Weakness Potion II\nArrow of Weakness\nInstant Damage Potion\nInstant Damage Potion II\nSplash Instant Damage Potion\nSplash Instant Damage Potion II\nArrow of Instant Damage\nMilk Potion\nSplash Milk Potion\nArrow of Milk\nSpeed Potion\nSpeed Potion II\nSplash Speed Potion\nSplash Speed Potion II\nArrow of Speed\nDefense Potion\nDefense Potion II\nSplash Defense Potion\nSplash Defense Potion II\nArrow of Defense\nStrength Potion\nStrength Potion II\nSplash Strength Potion\nSplash Strength Potion II\nArrow of Strength\nInvisibility Potion\nSplash Invisibility Potion\nArrow of Invisibility\nJump Potion\nJump Potion II\nSplash Jump Potion\nSplash Jump Potion II\nArrow of Jumping\nKnockback Potion\nSplash Knockback Potion\nSplash Knockback Potion II\nArrow of Knockback\nRegeneration Potion\nRegeneration Potion II\nSplash Regeneration Potion\nSplash Regeneration Potion II\nArrow of Regeneration\nInstant Healing Potion\nInstant Healing Potion II\nSplash Instant Healing Potion\nSplash Instant Healing Potion II\nArrow of Instant Healing\nHaste Potion\nHaste Potion II\nSplash Haste Potion\nSplash Haste Potion II\nArrow of Haste\nShield Potion\nShield Potion II\nSplash Shield Potion\nSplash Shield Potion II\nArrow of Shield\nDouble Jump Potion\nSplash Double Jump Potion\nArrow of Double Jump\nHeat Resistance Potion\nSplash Heat Resistance Potion\nArrow of Heat Resistance\nX-Ray Vision Potion\nSplash X-Ray Vision Potion\nArrow of X-Ray Vision\nMining Yield Potion\nMining Yield Potion II\nSplash Mining Yield Potion\nSplash Mining Yield Potion II\nArrow of Mining Yield\nBrain Rot Potion\nSplash Brain Rot Potion\nArrow of Brain Rot\nChaos Potion\nTeleportation Potion\nAmmo\nAK-47\nAK-47|RequiresAmmo\nM16\nM16|RequiresAmmo\nMP40\nMP40|RequiresAmmo\nTAR-21\nTAR-21|RequiresAmmo\nM1911\nM1911|RequiresAmmo\nOne Shot Pistol\nOne Shot Pistol|RequiresAmmo\nDouble Barrel\nDouble Barrel|RequiresAmmo\nAWP\nAWP|RequiresAmmo\nDeagle\nDeagle|RequiresAmmo\nStriker-12\nStriker-12|RequiresAmmo\nVSR\nVSR|RequiresAmmo\nDMR\nDMR|RequiresAmmo\nMinigun\nMinigun|RequiresAmmo\nFMR\nFMR|RequiresAmmo\nSKAR\nSKAR|RequiresAmmo\nBlock-19\nBlock-19|RequiresAmmo\nMini Izu\nMini Izu|RequiresAmmo\nGPMG\nGPMG|RequiresAmmo\nGold Coin\nUpdraft\nSnowdash\nFloor Creator\nMoonstone Remote Explosive\nMoonstone Remote\nIce Bridge\nMaple Planks Bridge\nMessy Stone Bridge\nYellow Balloon\nWhite Balloon\nRed Balloon\nPurple Balloon\nPink Balloon\nOrange Balloon\nMagenta Balloon\nLime Balloon\nLight Gray Balloon\nLight Blue Balloon\nGreen Balloon\nGray Balloon\nCyan Balloon\nBrown Balloon\nBlue Balloon\nBlack Balloon\nINTERNAL_MESH_Yellow Balloon\nINTERNAL_MESH_White Balloon\nINTERNAL_MESH_Red Balloon\nINTERNAL_MESH_Purple Balloon\nINTERNAL_MESH_Pink Balloon\nINTERNAL_MESH_Orange Balloon\nINTERNAL_MESH_Magenta Balloon\nINTERNAL_MESH_Lime Balloon\nINTERNAL_MESH_Light Gray Balloon\nINTERNAL_MESH_Light Blue Balloon\nINTERNAL_MESH_Green Balloon\nINTERNAL_MESH_Gray Balloon\nINTERNAL_MESH_Cyan Balloon\nINTERNAL_MESH_Brown Balloon\nINTERNAL_MESH_Blue Balloon\nINTERNAL_MESH_Black Balloon\nYellow Popup Tower\nWhite Popup Tower\nRed Popup Tower\nPurple Popup Tower\nPink Popup Tower\nOrange Popup Tower\nMagenta Popup Tower\nLime Popup Tower\nLight Gray Popup Tower\nLight Blue Popup Tower\nGreen Popup Tower\nGray Popup Tower\nCyan Popup Tower\nBrown Popup Tower\nBlue Popup Tower\nBlack Popup Tower\nYellow Paintball Gun\nWhite Paintball Gun\nRed Paintball Gun\nPurple Paintball Gun\nPink Paintball Gun\nOrange Paintball Gun\nMagenta Paintball Gun\nLime Paintball Gun\nLight Gray Paintball Gun\nLight Blue Paintball Gun\nGreen Paintball Gun\nGray Paintball Gun\nCyan Paintball Gun\nBrown Paintball Gun\nBlue Paintball Gun\nBlack Paintball Gun\nYellow Paintball\nWhite Paintball\nRed Paintball\nPurple Paintball\nPink Paintball\nOrange Paintball\nMagenta Paintball\nLime Paintball\nLight Gray Paintball\nLight Blue Paintball\nGreen Paintball\nGray Paintball\nCyan Paintball\nBrown Paintball\nBlue Paintball\nBlack Paintball\nYellow Heavy Paintball Gun\nWhite Heavy Paintball Gun\nRed Heavy Paintball Gun\nPurple Heavy Paintball Gun\nPink Heavy Paintball Gun\nOrange Heavy Paintball Gun\nMagenta Heavy Paintball Gun\nLime Heavy Paintball Gun\nLight Gray Heavy Paintball Gun\nLight Blue Heavy Paintball Gun\nGreen Heavy Paintball Gun\nGray Heavy Paintball Gun\nCyan Heavy Paintball Gun\nBrown Heavy Paintball Gun\nBlue Heavy Paintball Gun\nBlack Heavy Paintball Gun\nYellow Paintball Explosive Item\nWhite Paintball Explosive Item\nRed Paintball Explosive Item\nPurple Paintball Explosive Item\nPink Paintball Explosive Item\nOrange Paintball Explosive Item\nMagenta Paintball Explosive Item\nLime Paintball Explosive Item\nLight Gray Paintball Explosive Item\nLight Blue Paintball Explosive Item\nGreen Paintball Explosive Item\nGray Paintball Explosive Item\nCyan Paintball Explosive Item\nBrown Paintball Explosive Item\nBlue Paintball Explosive Item\nBlack Paintball Explosive Item\nYellow Sticky Paintball Explosive Item\nWhite Sticky Paintball Explosive Item\nRed Sticky Paintball Explosive Item\nPurple Sticky Paintball Explosive Item\nPink Sticky Paintball Explosive Item\nOrange Sticky Paintball Explosive Item\nMagenta Sticky Paintball Explosive Item\nLime Sticky Paintball Explosive Item\nLight Gray Sticky Paintball Explosive Item\nLight Blue Sticky Paintball Explosive Item\nGreen Sticky Paintball Explosive Item\nGray Sticky Paintball Explosive Item\nCyan Sticky Paintball Explosive Item\nBrown Sticky Paintball Explosive Item\nBlue Sticky Paintball Explosive Item\nBlack Sticky Paintball Explosive Item\nYellow Seeking Paintball Explosive Item\nWhite Seeking Paintball Explosive Item\nRed Seeking Paintball Explosive Item\nPurple Seeking Paintball Explosive Item\nPink Seeking Paintball Explosive Item\nOrange Seeking Paintball Explosive Item\nMagenta Seeking Paintball Explosive Item\nLime Seeking Paintball Explosive Item\nLight Gray Seeking Paintball Explosive Item\nLight Blue Seeking Paintball Explosive Item\nGreen Seeking Paintball Explosive Item\nGray Seeking Paintball Explosive Item\nCyan Seeking Paintball Explosive Item\nBrown Seeking Paintball Explosive Item\nBlue Seeking Paintball Explosive Item\nBlack Seeking Paintball Explosive Item\nYellow Quick Paintball Explosive Item\nWhite Quick Paintball Explosive Item\nRed Quick Paintball Explosive Item\nPurple Quick Paintball Explosive Item\nPink Quick Paintball Explosive Item\nOrange Quick Paintball Explosive Item\nMagenta Quick Paintball Explosive Item\nLime Quick Paintball Explosive Item\nLight Gray Quick Paintball Explosive Item\nLight Blue Quick Paintball Explosive Item\nGreen Quick Paintball Explosive Item\nGray Quick Paintball Explosive Item\nCyan Quick Paintball Explosive Item\nBrown Quick Paintball Explosive Item\nBlue Quick Paintball Explosive Item\nBlack Quick Paintball Explosive Item\nYellow Paint Bow\nYellow Paint Bow|meta|charging2\nYellow Paint Bow|meta|charging3\nYellow Paint Bow|meta|charging4\nWhite Paint Bow\nWhite Paint Bow|meta|charging2\nWhite Paint Bow|meta|charging3\nWhite Paint Bow|meta|charging4\nRed Paint Bow\nRed Paint Bow|meta|charging2\nRed Paint Bow|meta|charging3\nRed Paint Bow|meta|charging4\nPurple Paint Bow\nPurple Paint Bow|meta|charging2\nPurple Paint Bow|meta|charging3\nPurple Paint Bow|meta|charging4\nPink Paint Bow\nPink Paint Bow|meta|charging2\nPink Paint Bow|meta|charging3\nPink Paint Bow|meta|charging4\nOrange Paint Bow\nOrange Paint Bow|meta|charging2\nOrange Paint Bow|meta|charging3\nOrange Paint Bow|meta|charging4\nMagenta Paint Bow\nMagenta Paint Bow|meta|charging2\nMagenta Paint Bow|meta|charging3\nMagenta Paint Bow|meta|charging4\nLime Paint Bow\nLime Paint Bow|meta|charging2\nLime Paint Bow|meta|charging3\nLime Paint Bow|meta|charging4\nLight Gray Paint Bow\nLight Gray Paint Bow|meta|charging2\nLight Gray Paint Bow|meta|charging3\nLight Gray Paint Bow|meta|charging4\nLight Blue Paint Bow\nLight Blue Paint Bow|meta|charging2\nLight Blue Paint Bow|meta|charging3\nLight Blue Paint Bow|meta|charging4\nGreen Paint Bow\nGreen Paint Bow|meta|charging2\nGreen Paint Bow|meta|charging3\nGreen Paint Bow|meta|charging4\nGray Paint Bow\nGray Paint Bow|meta|charging2\nGray Paint Bow|meta|charging3\nGray Paint Bow|meta|charging4\nCyan Paint Bow\nCyan Paint Bow|meta|charging2\nCyan Paint Bow|meta|charging3\nCyan Paint Bow|meta|charging4\nBrown Paint Bow\nBrown Paint Bow|meta|charging2\nBrown Paint Bow|meta|charging3\nBrown Paint Bow|meta|charging4\nBlue Paint Bow\nBlue Paint Bow|meta|charging2\nBlue Paint Bow|meta|charging3\nBlue Paint Bow|meta|charging4\nBlack Paint Bow\nBlack Paint Bow|meta|charging2\nBlack Paint Bow|meta|charging3\nBlack Paint Bow|meta|charging4\nPig Spawn Orb\nCow Spawn Orb\nSheep Spawn Orb\nHorse Spawn Orb\nCamel Spawn Orb\nIron Goofy Golem Spawn Orb\nGold Goofy Golem Spawn Orb\nDiamond Goofy Golem Spawn Orb\nMoonstone Goofy Golem Spawn Orb\nDeer Spawn Orb\nSlime Spawn Orb\nWolf Spawn Orb\nWildcat Spawn Orb\nSpirit Golem Spawn Orb\nSpirit Wolf Spawn Orb\nSpirit Bear Spawn Orb\nSpirit Stag Spawn Orb\nSpirit Gorilla Spawn Orb\nBear Spawn Orb\nStag Spawn Orb\nGold Watermelon Stag Spawn Orb\nGorilla Spawn Orb\nCave Golem Spawn Orb\nDraugr Zombie Spawn Orb\nDraugr Skeleton Spawn Orb\nFrost Golem Spawn Orb\nFrost Zombie Spawn Orb\nFrost Skeleton Spawn Orb\nDraugr Knight Spawn Orb\nDraugr Huntress Spawn Orb\nMagma Golem Spawn Orb\nDraugr Warper Spawn Orb\nFrost Wraith Spawn Orb\nDraugr Reaver Spawn Orb\nStalker Spawn Orb\nCrone Spawn Orb\nIron Guardian Spawn Orb\nGold Guardian Spawn Orb\nDiamond Guardian Spawn Orb\nMoonstone Guardian Spawn Orb\nTiki Terror Spawn Orb\nMob Catcher\nCaught Mob Pig Default\nCaught Mob Cow Default\nCaught Mob Cow Cream\nCaught Mob Sheep Default\nCaught Mob Sheep Black\nCaught Mob Sheep Red\nCaught Mob Sheep Orange\nCaught Mob Sheep Pink\nCaught Mob Sheep Purple\nCaught Mob Sheep Yellow\nCaught Mob Sheep Blue\nCaught Mob Sheep Brown\nCaught Mob Sheep Cyan\nCaught Mob Sheep Gray\nCaught Mob Sheep Green\nCaught Mob Sheep Lightblue\nCaught Mob Sheep Lightgray\nCaught Mob Sheep Lime\nCaught Mob Sheep Magenta\nCaught Mob Horse Default\nCaught Mob Horse Black\nCaught Mob Horse Brown\nCaught Mob Horse Cream\nCaught Mob Camel Default\nCaught Mob Camel Brown\nCaught Mob Iron_Goofy_Golem Default\nCaught Mob Iron_Goofy_Golem Flaking\nCaught Mob Iron_Goofy_Golem Patchy\nCaught Mob Iron_Goofy_Golem Shedding\nCaught Mob Iron_Goofy_Golem Bare\nCaught Mob Iron_Goofy_Golem Stone\nCaught Mob Gold_Goofy_Golem Default\nCaught Mob Gold_Goofy_Golem Flaking\nCaught Mob Gold_Goofy_Golem Patchy\nCaught Mob Gold_Goofy_Golem Shedding\nCaught Mob Gold_Goofy_Golem Bare\nCaught Mob Gold_Goofy_Golem Stone\nCaught Mob Diamond_Goofy_Golem Default\nCaught Mob Diamond_Goofy_Golem Flaking\nCaught Mob Diamond_Goofy_Golem Patchy\nCaught Mob Diamond_Goofy_Golem Shedding\nCaught Mob Diamond_Goofy_Golem Bare\nCaught Mob Diamond_Goofy_Golem Stone\nCaught Mob Moonstone_Goofy_Golem Default\nCaught Mob Moonstone_Goofy_Golem Flaking\nCaught Mob Moonstone_Goofy_Golem Patchy\nCaught Mob Moonstone_Goofy_Golem Shedding\nCaught Mob Moonstone_Goofy_Golem Bare\nCaught Mob Moonstone_Goofy_Golem Stone\nCaught Mob Deer Default\nCaught Mob Slime Default\nCaught Mob Wolf Default\nCaught Mob Wolf White\nCaught Mob Wolf Brown\nCaught Mob Wolf Grey\nCaught Mob Wolf Spectral\nCaught Mob Wildcat Default\nCaught Mob Wildcat Tabby\nCaught Mob Wildcat Grey\nCaught Mob Wildcat Black\nCaught Mob Wildcat Calico\nCaught Mob Wildcat Siamese\nCaught Mob Wildcat Leopard\nCaught Mob Spirit_Golem Default\nCaught Mob Spirit_Wolf Default\nCaught Mob Spirit_Bear Default\nCaught Mob Spirit_Stag Default\nCaught Mob Spirit_Gorilla Default\nCaught Mob Bear Default\nCaught Mob Stag Default\nCaught Mob Gold_Watermelon_Stag Default\nCaught Mob Gorilla Default\nCaught Mob Cave_Golem Default\nCaught Mob Cave_Golem Iron\nCaught Mob Cave_Golem Corrupted\nCaught Mob Draugr_Zombie Default\nCaught Mob Draugr_Zombie Longhairchestplate\nCaught Mob Draugr_Zombie Longhairclothed\nCaught Mob Draugr_Zombie Shorthairclothed\nCaught Mob Draugr_Zombie Flower\nCaught Mob Draugr_Zombie Flower2\nCaught Mob Draugr_Zombie Mushroom\nCaught Mob Draugr_Zombie Vine\nCaught Mob Draugr_Zombie Vine2\nCaught Mob Draugr_Zombie Corrupted\nCaught Mob Draugr_Zombie Corrupted2\nCaught Mob Draugr_Skeleton Default\nCaught Mob Frost_Golem Default\nCaught Mob Frost_Zombie Default\nCaught Mob Frost_Zombie Longhairchestplate\nCaught Mob Frost_Zombie Shorthairclothed\nCaught Mob Frost_Skeleton Default\nCaught Mob Draugr_Knight Default\nCaught Mob Draugr_Huntress Default\nCaught Mob Draugr_Huntress Chainmail\nCaught Mob Magma_Golem Default\nCaught Mob Draugr_Warper Default\nCaught Mob Frost_Wraith Default\nCaught Mob Frost_Wraith Tattered\nCaught Mob Frost_Wraith Frostking\nCaught Mob Frost_Wraith Accursed\nCaught Mob Draugr_Reaver Default\nCaught Mob Stalker Default\nCaught Mob Stalker Crimson\nCaught Mob Stalker Frost\nCaught Mob Stalker Void\nCaught Mob Crone Default\nCaught Mob Iron_Guardian Default\nCaught Mob Gold_Guardian Default\nCaught Mob Diamond_Guardian Default\nCaught Mob Moonstone_Guardian Default\nCaught Mob Tiki_Terror Default\nCaught Mob Tiki_Terror Titan\nCaught Mob Tiki_Terror Tormentor\nCaught Mob Tiki_Terror Tyrant\nCaught Mob NPC Default\nCaught Mob NPC Emma\nCaught Mob NPC Leo\nCaught Mob NPC Isabel\nCaught Mob NPC Sanjay\nCaught Mob NPC Imara\nCaught Mob NPC Enoch\nCaught Mob NPC Sara\nCaught Mob NPC Carmen\nCaught Mob NPC Chef\nCaught Mob 67 Default\nCaught Mob Bobino_Musculino Default\nCaught Mob Capitano_Explovissimo Default\nCaught Mob Desert_Fennec Default\nCaught Mob Armour_Collector Default\nCaught Mob Furnace_Knight Default\nCaught Mob Lil_Knight Default\nCaught Mob Glass_Gremlin Default\nCaught Mob Glass_Bro Default\nCaught Mob Lord_Vulcan Default\nCaught Mob Zombie Default\nCaught Mob Skeleton Default\nCaught Mob Mummy Default\nCaught Mob Scorpion Default\nCaught Mob Vulcanite Default\nCaught Mob Evil_Tome Default\nCaught Mob Magma_Toad Default\nTimed Spike Bomb\nTimed Spike Bomb|meta|charging2\nTimed Spike Bomb|meta|charging3\nTimed Spike Bomb|meta|charging4\nToxin Ball\nAura XP Fragment\nAura XP Orb\nAura XP Potion\nAura XP Potion II\nSplash Aura XP Potion\nSplash Aura XP Potion II\nArrow of Aura XP\nFirecracker\nRainbow Firecracker\nYellow Firecracker\nWhite Firecracker\nRed Firecracker\nPurple Firecracker\nPink Firecracker\nOrange Firecracker\nMagenta Firecracker\nLime Firecracker\nLight Gray Firecracker\nLight Blue Firecracker\nGreen Firecracker\nGray Firecracker\nCyan Firecracker\nBrown Firecracker\nBlue Firecracker\nBlack Firecracker\nFirecracker Pebble\nRainbow Firecracker Pebble\nYellow Firecracker Pebble\nWhite Firecracker Pebble\nRed Firecracker Pebble\nPurple Firecracker Pebble\nPink Firecracker Pebble\nOrange Firecracker Pebble\nMagenta Firecracker Pebble\nLime Firecracker Pebble\nLight Gray Firecracker Pebble\nLight Blue Firecracker Pebble\nGreen Firecracker Pebble\nGray Firecracker Pebble\nCyan Firecracker Pebble\nBrown Firecracker Pebble\nBlue Firecracker Pebble\nBlack Firecracker Pebble\nWorldBuilder Wand\nRed Strongfish\nGreen Strongfish\nMoon Strongfish\nWheatfish\nMoonfish\nBombfish\nBoomerang Fish\nRoot Flounder\nAbyss Carp\nBoulder Bass\nBarnaclejaw\nCrystalized Wheatfish\nDarter\nShadow Darter\nElectric Eel\nGrass Snapper\nJungle Spinefish\nMangler Catfish\nMossback Arapaima\nSandbelly Piranha\nShadeback Ray\nMudbelly Tilapia\nMireback Carp\nRotslab Eel\nAether Minnow\nMurkborne Ray\nEldertide Leviathan\nOarfish\nAlpha Moon Strongfish\nBamboo Catfish\nBlackwater Bream\nBlackwater Leviathan\nBoned Sturgeon\nBull Shark\nChannel Sawfish\nCoastal Mullet\nCoelacanth\nDriftwood Catfish\nEagle Ray\nGiant Grouper\nGiant Moray\nGiant Stingray\nGolden Mahseer\nGreenfin Loach\nMangrove Herring\nMoonlit Boomerang Fish\nMoonstone Pupfish\nMudline Perch\nMurk Stingray\nNeedlefish\nNomai Moray\nPearlescent Moonfish\nRainbow Guppy\nRed Snapper\nReedglass Minnow\nReef Sardine\nRoot Perch\nRust Scad\nSeahorse\nSnakehead\nSpined Stickleback\nStone Grouper\nSumpback Carp\nSunset Minnow\nTarpon\nThreadfin Bream\nTri-Pointed Needlefish\nGame Dev Fish\nArmoured Searobin\nAsh Lionfish\nBarefrost Toothfish\nBlackfin Icefish\nBasalt Pipefish\nBrimstone Spikefish\nCinder Leviathan\nCrowned Flame Angelfish\nDeepwater Lanternfish\nDriftice Capelin\nEmber Chub\nEmbermark Wrasse\nEviota Vader\nFrost Herring\nFrost Wolf Eel\nFrostpaint Notie\nFrozen Grenadier\nGiant Trevally\nGlacial Lanternfish\nGlacial Silverfish\nHeatwarp Flounder\nHatchetfish\nIce Spined Notothenia\nIceshelf Skate\nIcy Sculpin\nLavaflow Trout\nLavawake Slopefish\nMagma Sardinella\nMagma Trout\nMarbled Moray Cod\nMolten Lotella Cod\nNorthern Wolffish\nPaleice Rockcod\nPermafrost Halibut\nPithead\nPolarflash Electron\nPyroclast Eel\nPyroscale Grouper\nRed Pyreside\nRimesnouted Lancetfish\nScorched Sunfish\nScored Dace\nSilver Dragonfish\nSnow Haddock\nVolcanic Catfish\nVolcanic Semperi\nRusty Rod\nLucky Rod\nSturdy Rod\nJungle Rod\nDraugr Rod\nCursed Rod\nTangle Resistant Rod\nSpeed Rod\nCarbon Rod\nDeep Sea Rod\nMaster Rod\nObsidian Rod\nMolten Magma Rod\nFrost Rod\nBlack Ice Rod\nMythic Rod\nAcorn\nAcorn Jelly\nCow's Milk\nCheese\nCaught Fish\nFish Fillet\nMeaty Bone\nBlinding Pebble\nSheep's Milk\nYoghurt Pot\nTruffle\nTruffle Oil\nOats\nPorridge\nDates\nDate Pudding\nPoop\nFertiliser\nMedkit\nWood Spear\nStone Spear\nIron Spear\nGold Spear\nDiamond Spear\nMoonstone Spear\nWood Dagger\nStone Dagger\nIron Dagger\nGold Dagger\nDiamond Dagger\nMoonstone Dagger\nWood Boomerang\nStone Boomerang\nIron Boomerang\nGold Boomerang\nDiamond Boomerang\nMoonstone Boomerang\nWood Club\nStone Club\nIron Club\nGold Club\nDiamond Club\nMoonstone Club\nWood Mace\nStone Mace\nIron Mace\nGold Mace\nDiamond Mace\nMoonstone Mace\nWood Whip\nStone Whip\nIron Whip\nGold Whip\nDiamond Whip\nMoonstone Whip\nBeef Stew\nChicken\nColeslaw\nEgg\nFish N Chips\nFried Rice\nLettuce\nOmelette\nOnion\nRed Cabbage\nRoast Dinner\nSalad\nStuffed Pepper\nSushi\nTomato\nVegetable Soup\nCommon Lottery Ticket\nUncommon Lottery Ticket\nRare Lottery Ticket\nEpic Lottery Ticket\nLegendary Lottery Ticket\nWood Clock\nWood Clock|meta|midnight\nWood Clock|meta|late_night\nWood Clock|meta|sunrise\nWood Clock|meta|early_day\nWood Clock|meta|late_day\nWood Clock|meta|sunset\nWood Clock|meta|early_night\nGold Clock\nGold Clock|meta|midnight\nGold Clock|meta|late_night\nGold Clock|meta|sunrise\nGold Clock|meta|early_day\nGold Clock|meta|late_day\nGold Clock|meta|sunset\nGold Clock|meta|early_night\nLucky Sword Upgrade\nLucky Armour Upgrade\nLucky Tools Upgrade\nLucky Clover\nVoid Net\nLucky Bomb\nUnlucky Bomb\nSwap Orb\nGolden Lucky Clover\nAmethite\nAmethite Fragment\nAmethite Pickaxe\nAmethite Axe\nAmethite Spade\nAmethite Sword\nAmethite Hoe\nAmethite Helmet\nAmethite Chestplate\nAmethite Leggings\nAmethite Boots\nAmethite Gauntlets\nAmethite Bow\nAmethite Bow|meta|charging2\nAmethite Bow|meta|charging3\nAmethite Bow|meta|charging4\nAmethite Crossbow\nAmethite Crossbow|meta|charging2\nAmethite Crossbow|meta|charging3\nAmethite Crossbow|meta|charging4\nAmethite Crossbow Charged\nAmethite Spear\nAmethite Dagger\nAmethite Boomerang\nAmethite Club\nAmethite Mace\nAmethite Whip\nMagmasteel\nMagmasteel Fragment\nMagmasteel Pickaxe\nMagmasteel Axe\nMagmasteel Spade\nMagmasteel Sword\nMagmasteel Hoe\nMagmasteel Helmet\nMagmasteel Chestplate\nMagmasteel Leggings\nMagmasteel Boots\nMagmasteel Gauntlets\nMagmasteel Bow\nMagmasteel Bow|meta|charging2\nMagmasteel Bow|meta|charging3\nMagmasteel Bow|meta|charging4\nMagmasteel Crossbow\nMagmasteel Crossbow|meta|charging2\nMagmasteel Crossbow|meta|charging3\nMagmasteel Crossbow|meta|charging4\nMagmasteel Crossbow Charged\nMagmasteel Spear\nMagmasteel Dagger\nMagmasteel Boomerang\nMagmasteel Club\nMagmasteel Mace\nMagmasteel Whip\nRubellite\nRubellite Fragment\nRubellite Pickaxe\nRubellite Axe\nRubellite Spade\nRubellite Sword\nRubellite Hoe\nRubellite Helmet\nRubellite Chestplate\nRubellite Leggings\nRubellite Boots\nRubellite Gauntlets\nRubellite Bow\nRubellite Bow|meta|charging2\nRubellite Bow|meta|charging3\nRubellite Bow|meta|charging4\nRubellite Crossbow\nRubellite Crossbow|meta|charging2\nRubellite Crossbow|meta|charging3\nRubellite Crossbow|meta|charging4\nRubellite Crossbow Charged\nRubellite Spear\nRubellite Dagger\nRubellite Boomerang\nRubellite Club\nRubellite Mace\nRubellite Whip\nSerpentite\nSerpentite Fragment\nSerpentite Pickaxe\nSerpentite Axe\nSerpentite Spade\nSerpentite Sword\nSerpentite Hoe\nSerpentite Helmet\nSerpentite Chestplate\nSerpentite Leggings\nSerpentite Boots\nSerpentite Gauntlets\nSerpentite Bow\nSerpentite Bow|meta|charging2\nSerpentite Bow|meta|charging3\nSerpentite Bow|meta|charging4\nSerpentite Crossbow\nSerpentite Crossbow|meta|charging2\nSerpentite Crossbow|meta|charging3\nSerpentite Crossbow|meta|charging4\nSerpentite Crossbow Charged\nSerpentite Spear\nSerpentite Dagger\nSerpentite Boomerang\nSerpentite Club\nSerpentite Mace\nSerpentite Whip\nCursemetal Helmet\nCursemetal Chestplate\nCursemetal Gauntlets\nCursemetal Leggings\nCursemetal Boots\nKingly Amethite Helmet\nKingly Amethite Chestplate\nKingly Amethite Gauntlets\nKingly Amethite Leggings\nKingly Amethite Boots\nKingly Diamond Helmet\nKingly Diamond Chestplate\nKingly Diamond Gauntlets\nKingly Diamond Leggings\nKingly Diamond Boots\nSanguine Shard\nSanguine Sword\nSanguine Bow\nSanguine Bow|meta|charging2\nSanguine Bow|meta|charging3\nSanguine Bow|meta|charging4\nSanguine Crossbow\nSanguine Crossbow|meta|charging2\nSanguine Crossbow|meta|charging3\nSanguine Crossbow|meta|charging4\nSanguine Crossbow Charged\nSanguine Spear\nSanguine Dagger\nSanguine Club\nSanguine Mace\nSanguine Whip\nSanguine Staff\nSanguine Helmet\nSanguine Chestplate\nSanguine Gauntlets\nSanguine Leggings\nSanguine Boots\nSpectral Shard\nSpectral Sword\nSpectral Bow\nSpectral Bow|meta|charging2\nSpectral Bow|meta|charging3\nSpectral Bow|meta|charging4\nSpectral Crossbow\nSpectral Crossbow|meta|charging2\nSpectral Crossbow|meta|charging3\nSpectral Crossbow|meta|charging4\nSpectral Crossbow Charged\nSpectral Spear\nSpectral Dagger\nSpectral Club\nSpectral Mace\nSpectral Whip\nSpectral Staff\nSpectral Helmet\nSpectral Chestplate\nSpectral Gauntlets\nSpectral Leggings\nSpectral Boots\nGeo Shard\nGeo Sword\nGeo Bow\nGeo Bow|meta|charging2\nGeo Bow|meta|charging3\nGeo Bow|meta|charging4\nGeo Crossbow\nGeo Crossbow|meta|charging2\nGeo Crossbow|meta|charging3\nGeo Crossbow|meta|charging4\nGeo Crossbow Charged\nGeo Spear\nGeo Dagger\nGeo Club\nGeo Mace\nGeo Whip\nGeo Staff\nGeo Helmet\nGeo Chestplate\nGeo Gauntlets\nGeo Leggings\nGeo Boots\nAstral Shard\nAstral Sword\nAstral Bow\nAstral Bow|meta|charging2\nAstral Bow|meta|charging3\nAstral Bow|meta|charging4\nAstral Crossbow\nAstral Crossbow|meta|charging2\nAstral Crossbow|meta|charging3\nAstral Crossbow|meta|charging4\nAstral Crossbow Charged\nAstral Spear\nAstral Dagger\nAstral Club\nAstral Mace\nAstral Whip\nAstral Staff\nAstral Helmet\nAstral Chestplate\nAstral Gauntlets\nAstral Leggings\nAstral Boots\nWooden Key\nStone Key\nIron Key\nGold Key\nDiamond Key\nCracked Rubellite Pickaxe\nGoldheart Engine\nDeepbite Drill Tip\nEmpty Fuel Cell\nBlackfire Fuel Cell\nDoom Rivet\nDoom Crest\nRaw Copper\nCopper Bar\nIron Grit\nGold Grit\nCopper Grit\nCharcoal\nRecall Beacon\nIron Hammer\nIron Plate\nCopper Wire\nMotor\nMachine Parts\nRelay Coil\nDeposit Seed (Copper)\nDeposit Seed (Gold)\nDeposit Seed (Voltite)\nDeposit Seed (Coal)\nDeposit Seed (Iron)\nDeposit Seed (Stone)\nSteel Bar\nGold Plate\nLogic Board\nMachine Hull\nRaw Voltite\nPower Coupler\nOre Lens\nHoming Beacon\nPull Charm\nVein Breaker\nVoltite Dust\nVoltite Cell\nSky Pack\nDusk Moss\nStar Alloy\nMoonstone Dust\nComet Shard\nComet Core\nStarbore Drill\nCore Tier 2\nCore Tier 3\nCore Tier 4\nCore Tier 5\nCore Tier 6\nCore Tier 7\nCore Tier 8\nCore Tier 9\nCore Tier 10\nArc Caster\nVoltplate Helmet\nVoltplate Chestplate\nVoltplate Gauntlets\nVoltplate Leggings\nVoltplate Boots\nWood Blade\nWood Guard\nWood Handle\nStone Blade\nStone Guard\nStone Handle\nIron Blade\nIron Guard\nIron Handle\nGold Blade\nGold Guard\nGold Handle\nDiamond Blade\nDiamond Guard\nDiamond Handle\nMoonstone Blade\nMoonstone Guard\nMoonstone Handle\nMagmasteel Blade\nMagmasteel Guard\nMagmasteel Handle\nSanguine Blade\nSanguine Guard\nSanguine Handle\nAstral Blade\nAstral Guard\nAstral Handle\nMoonstone Sword\nMagmaward Fuel\nRaw Uranium\nUranium Grit\nUranium Pellet\nPlutonium Pellet\nSpent Pellet\nGlow Dust\nBiomass\nGraphite\nContainment Plate\nHeat Exchanger\nFocus Lens\nNova Matter\nDeposit Seed (Uranium)\nReactor Blueprint\nWrench\nAdvanced Coupler\nNova Coupler\nCore Tier 11\nCore Tier 12\nCore Tier 13\nCore Tier 14\nCore Tier 15\nJet Chestplate\nNova Jet Chestplate\nNova Helmet\nNova Chestplate\nNova Gauntlets\nNova Leggings\nNova Boots\nNova Blade\nMob Cage\nCaged Pig\nCaged Cow\nCaged Sheep\nCaged Deer\nCaged Stag\nNova Multitool\nPocket Terminal\nComet Beacon\nNova Wrench\n"
+  4269: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => br,
+      d: () => uD,
+      h: () => Ur,
+      j: () => rD,
+      m: () => xr,
+      o: () => Lr,
+      s: () => dr,
+      w: () => pr,
+      x: () => Kr,
+      z: () => vD,
+      D: () => aD,
+      G: () => kr,
+      K: () => hr
+    });
+    var FY = DY(3312);
+    const AY = Function.prototype.toString,
+      IY = RegExp.prototype.exec,
+      RY = Reflect.apply,
+      OY = Function.prototype.call,
+      gY = Function.prototype.apply,
+      aY = Function.prototype.bind,
+      vY = Object.defineProperty,
+      uY = Uint8Array;
+    let sY, iY;
+    try {
+      sY = globalThis.crypto, iY = void 0 === sY || null === sY ? void 0 : sY.getRandomValues
+    } catch {}
+    const yY = "bloxdBindApply";
+    let QY;
+    try {
+      const YY = OY;
+      vY(YY, yY, {
+        __proto__: null,
+        value: aY,
+        configurable: !0
+      });
+      try {
+        QY = YY[yY](gY)
+      } finally {
+        delete YY[yY]
+      }
+    } catch {}
+    const oY = 16,
+      WY = 256,
+      EY = 0,
+      mY = 1,
+      VY = 2,
+      SY = 3;
+    let lY, TY = EY,
+      eY = RY,
+      NY = 0;
+
+    function BY(YY, rY) {
+      return YY === `function ${rY}() { [native code] }` || YY === `function ${rY}() {\n    [native code]\n}`
+    }
+    const cY = 0,
+      KY = 1,
+      HY = 2;
+    let zY = cY;
+
+    function ZY(YY, rY, DY) {
+      if (zY === HY && TY === mY && ! function() {
+          const YY = lY;
+          return NY >= WY && (eY(iY, sY, [YY]), NY = 0), YY[NY++] < 256 / oY
+        }()) return function(YY, rY, DY) {
+        return eY(YY, rY, DY ?? 0)
+      }(...arguments);
+      if (zY === cY || TY === VY) return RY(YY, rY, DY);
+      let FY;
+      zY = cY;
+      try {
+        TY === EY && (TY = SY, TY = function() {
+          const YY = RY(AY, RY, []);
+          if (BY(YY, "apply")) return VY;
+          if (null === RY(IY, /\(\.\.\.arguments\)/, [YY]) && null === RY(IY, /^function\s*\(\.\.\.[\w$]+\)/, [YY])) return VY;
+          if ("function" !== typeof QY || "function" !== typeof OY || "function" !== typeof gY || "function" !== typeof aY || "function" !== typeof vY || "function" !== typeof iY || "function" !== typeof uY || !BY(RY(AY, OY, []), "call") || !BY(RY(AY, gY, []), "apply") || !BY(RY(AY, aY, []), "bind") || !BY(RY(AY, vY, []), "defineProperty") || !BY(RY(AY, iY, []), "getRandomValues") || !BY(RY(AY, uY, []), "Uint8Array")) return VY;
+          const rY = QY,
+            DY = {},
+            FY = function(YY) {
+              return this === DY && YY === DY
+            };
+          try {
+            if (!0 !== rY(FY, DY, [DY])) return VY;
+            const YY = new uY(WY);
+            rY(iY, sY, [YY]), lY = YY
+          } catch {
+            return VY
+          }
+          return eY = rY, mY
+        }()), FY = RY(YY, rY, DY)
+      } catch (yY) {
+        throw TY = VY, yY
+      }
+      return zY = HY, FY
+    }
+    let CY = RY;
+
+    function fY() {
+      return (CY === RY ? 0 : 3) + zY
+    }
+
+    function jY() {
+      const YY = fY();
+      return CY = RY, YY
+    }
+
+    function hY(YY) {
+      CY = YY >= 3 ? ZY : RY, zY = YY % 3
+    }
+    const dY = Function.prototype.toString,
+      JY = Object.getOwnPropertyDescriptor,
+      MY = Object.prototype.hasOwnProperty,
+      wY = RegExp.prototype.exec,
+      bY = TextEncoder.prototype.encodeInto,
+      XY = String.prototype.startsWith,
+      qY = Number.prototype.toString,
+      pY = WeakMap.prototype.get,
+      kY = WeakMap.prototype.set,
+      GY = /^function ([\w$ ]*)\(\) \{\s*\[native code\]\s*\}$/,
+      xY = new TextEncoder,
+      nY = new Uint8Array(1024),
+      PY = 9999999,
+      UY = /^(wh:[^#]+)#[abnps]\d{1,7}\.[0-9a-z]{1,7}$/,
+      LY = new WeakMap;
+
+    function tY(YY) {
+      if ("function" !== typeof YY) return "#a0.0";
+      const rY = CY(pY, LY, [YY]);
+      if (void 0 !== rY) return rY;
+      const DY = CY(dY, YY, []),
+        FY = DY.length > PY ? PY : DY.length,
+        AY = `#${function(YY,rY){const DY=CY(wY,GY,[rY]);if(null===DY)return"s";const FY=DY[1];if("ProxyObject"===FY)return"p";if(""!==FY)return CY(XY,FY,["bound "])?"b":"n";try{const rY=JY(YY,"name"),DY=void 0!==rY&&CY(MY,rY,["value"])?rY.value:void 0;return"string"===typeof DY&&CY(XY,DY,["bound "])?"b":"p"}catch{return"p"}}(YY,DY)}${FY}.${function(YY){const{written:rY}=CY(bY,xY,[YY,nY]);let DY=2166136261;for(let FY=0;FY<rY;FY++)DY=(DY^nY[FY])>>>0,DY=DY+(DY<<1)+(DY<<4)+(DY<<7)+(DY<<8)+(DY<<24)>>>0;return CY(qY,DY,[36])}(DY)}`;
+      return CY(kY, LY, [YY, AY]), AY
+    }
+
+    function Yr(YY) {
+      const rY = CY(wY, UY, [YY]);
+      return null === rY ? YY : rY[1]
+    }
+    var rr = DY(3324);
+    const Dr = Function.prototype.toString,
+      Fr = Object.getOwnPropertyDescriptor,
+      Ar = RegExp.prototype.exec,
+      Ir = Object.prototype.hasOwnProperty,
+      Rr = Set.prototype.has,
+      Or = WeakMap.prototype.get,
+      gr = WeakMap.prototype.set,
+      ar = Reflect.get,
+      vr = Object.getPrototypeOf,
+      ur = "undefined" === typeof WebAssembly ? void 0 : WebAssembly;
+
+    function sr(YY, rY, DY) {
+      return {
+        code: YY,
+        holder: rY,
+        key: DY,
+        ...arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
+        native: new RegExp(`^function (get )?${DY}\\(\\) \\{\\s*\\[native code\\]\\s*\\}$`)
+      }
+    }
+
+    function ir() {
+      return ur
+    }
+    const yr = ur?.Instance.prototype,
+      Qr = ur?.Memory.prototype;
+
+    function or() {
+      return Qr
+    }
+    let Wr, Er;
+    try {
+      const YY = globalThis.crypto,
+        rY = YY?.subtle;
+      Wr = YY ? vr(YY) : void 0, Er = rY ? vr(rY) : void 0
+    } catch {}
+
+    function mr(YY, rY) {
+      for (let DY = YY; void 0 !== DY && null !== DY; DY = vr(DY)) {
+        const YY = Fr(DY, rY);
+        if (YY) return YY
+      }
+    }
+    const Vr = [sr("in", ir, "instantiate", {
+      tier: "weighted",
+      onNamespace: !0
+    }), sr("is", ir, "instantiateStreaming", {
+      tier: "weighted",
+      onNamespace: !0
+    }), sr("co", ir, "compile", {
+      tier: "weighted",
+      onNamespace: !0
+    }), sr("cs", ir, "compileStreaming", {
+      tier: "weighted",
+      onNamespace: !0
+    }), sr("mo", ir, "Module", {
+      isConstructor: !0,
+      tier: "punished",
+      onNamespace: !0
+    }), sr("it", ir, "Instance", {
+      isConstructor: !0,
+      tier: "punished",
+      onNamespace: !0
+    }), sr("me", ir, "Memory", {
+      isConstructor: !0,
+      tier: "punished",
+      onNamespace: !0
+    }), sr("ex", (function() {
+      return yr
+    }), "exports", {
+      isGetter: !0,
+      tier: "punished"
+    }), sr("bu", or, "buffer", {
+      isGetter: !0,
+      tier: "punished"
+    }), sr("gr", or, "grow", {
+      tier: "punished"
+    }), sr("rc", (function() {
+      return "undefined" === typeof Response ? void 0 : Response.prototype
+    }), "clone"), sr("cr", (function() {
+      return globalThis
+    }), "crypto", {
+      isGetter: !0,
+      tier: "punished",
+      inSecureContext: !0
+    }), sr("su", (function() {
+      return Wr
+    }), "subtle", {
+      isGetter: !0,
+      tier: "punished",
+      inSecureContext: !0
+    }), sr("dg", (function() {
+      return Er
+    }), "digest", {
+      tier: "punished",
+      inSecureContext: !0
+    })];
+
+    function Sr(YY) {
+      let rY;
+      try {
+        const DY = ar(globalThis, YY);
+        rY = "function" === typeof DY ? DY.prototype : void 0
+      } catch {}
+      return () => rY
+    }
+
+    function lr(YY, rY, DY) {
+      return DY.map((DY => sr(YY, rY, DY)))
+    }
+    const Tr = sr("rx", Sr("HTMLCanvasElement"), "getContext"),
+      er = ["createShader", "shaderSource", "compileShader", "createProgram", "linkProgram", "useProgram", "drawArrays", "drawElements", "depthFunc", "depthMask", "enable", "disable", "blendFuncSeparate", "colorMask"],
+      Nr = {
+        webgpu: [...lr("gd", Sr("GPUDevice"), ["createShaderModule", "createRenderPipeline", "createCommandEncoder"]), ...lr("gq", Sr("GPUQueue"), ["submit", "writeBuffer"]), ...lr("ge", Sr("GPUCommandEncoder"), ["beginRenderPass", "finish"]), ...lr("gp", Sr("GPURenderPassEncoder"), ["setPipeline", "setBindGroup", "draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect", "executeBundles"]), Tr],
+        webgl: [...lr("g2", Sr("WebGL2RenderingContext"), [...er, "drawArraysInstanced", "drawElementsInstanced"]), Tr],
+        webgl1: [...lr("g1", Sr("WebGLRenderingContext"), er), Tr]
+      };
+    let Br = [];
+    const cr = new WeakMap;
+
+    function Kr(YY, rY) {
+      const DY = jY();
+      try {
+        CY(gr, cr, [YY, rY])
+      } finally {
+        hY(DY)
+      }
+    }
+
+    function Hr(YY) {
+      try {
+        const rY = OD(YY),
+          DY = CY(Or, cr, [rY]);
+        return YD(DY, YY) ? zr(YY, !0) : `${zr(YY,!1)}${tY(DY??rY)}`
+      } catch {
+        return `${zr(YY,!1)}${tY(void 0)}`
+      }
+    }
+
+    function zr(YY, rY) {
+      let {
+        code: DY,
+        key: FY
+      } = YY;
+      return `wh:${DY}${rY?"-dbg":""}:${FY}`
+    }
+
+    function Zr(YY) {
+      return Object.values(Nr).flatMap((rY => rY.map((rY => zr(rY, YY)))))
+    }
+    const Cr = new Set(Zr(!0)),
+      fr = new Set([...Zr(!1), ...Cr]),
+      jr = zr(Tr, !1);
+
+    function hr(YY) {
+      Br = Nr[YY]
+    }
+
+    function dr(YY) {
+      const rY = jY();
+      try {
+        return Jr(YY) || Jr(Yr(YY))
+      } finally {
+        hY(rY)
+      }
+    }
+
+    function Jr(YY) {
+      return CY(Rr, fr, [YY])
+    }
+
+    function Mr(YY) {
+      return new Set(Vr.filter((rY => rY.tier === YY)).map((YY => `wh:${YY.code}`)))
+    }
+    const wr = Mr("punished"),
+      br = !1,
+      Xr = new Set(rr.b),
+      qr = Mr("weighted");
+
+    function pr(YY) {
+      const rY = jY();
+      try {
+        return Gr(Yr(YY))
+      } finally {
+        hY(rY)
+      }
+    }
+
+    function kr(YY) {
+      const rY = jY();
+      try {
+        return Yr(YY)
+      } finally {
+        hY(rY)
+      }
+    }
+
+    function Gr(YY) {
+      return CY(Rr, qr, [YY])
+    }
+
+    function xr(YY) {
+      const rY = jY();
+      try {
+        return nr(YY)
+      } finally {
+        hY(rY)
+      }
+    }
+
+    function nr(YY) {
+      return CY(Rr, Xr, [YY])
+    }
+
+    function Pr(YY) {
+      return "wb" === YY || CY(Rr, wr, [YY])
+    }
+
+    function Ur(YY) {
+      const rY = jY();
+      try {
+        return Pr(YY) || nr(YY)
+      } finally {
+        hY(rY)
+      }
+    }
+
+    function Lr(YY) {
+      const rY = jY();
+      try {
+        return "wb" === YY || br && Pr(YY)
+      } finally {
+        hY(rY)
+      }
+    }
+
+    function tr(YY, rY) {
+      let {
+        isGetter: DY
+      } = rY;
+      const FY = Fr(YY, DY ? "get" : "value");
+      return void 0 === FY ? void 0 : FY.value
+    }
+
+    function YD(YY, rY) {
+      let {
+        isConstructor: DY,
+        native: FY
+      } = rY;
+      return "function" === typeof YY && (!(!DY && CY(Ir, YY, ["prototype"])) && null !== CY(Ar, FY, [CY(Dr, YY, [])]))
+    }
+
+    function rD(YY, rY) {
+      return YD(YY, sr("", (() => {}), rY, arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? {
+        isConstructor: !0
+      } : {}))
+    }
+    let DD = null,
+      FD = !1;
+
+    function AD() {
+      try {
+        return globalThis.WebAssembly === ur
+      } catch {
+        return !1
+      }
+    }
+
+    function ID(YY) {
+      try {
+        return function(YY) {
+          const {
+            holder: rY,
+            key: DY,
+            onNamespace: FY,
+            inSecureContext: AY
+          } = YY, IY = rY(), RY = mr(IY, DY);
+          if (!RY) return !(AY && !0 === globalThis.isSecureContext);
+          const OY = tr(RY, YY);
+          if (!YD(OY, YY)) return !1;
+          if (FY) {
+            const rY = globalThis.WebAssembly;
+            if (rY !== IY && null !== rY && ("object" === typeof rY || "function" === typeof rY)) {
+              const FY = ar(rY, DY);
+              return FY === OY || void 0 === FY || YD(FY, YY)
+            }
+          }
+          return !0
+        }(YY)
+      } catch {
+        return !1
+      }
+    }
+
+    function RD(YY) {
+      const rY = `wh:${YY.code}`;
+      if ("punished" === YY.tier) return rY;
+      try {
+        return `${rY}${tY(OD(YY))}`
+      } catch {
+        return `${rY}${tY(void 0)}`
+      }
+    }
+
+    function OD(YY) {
+      const rY = mr(YY.holder(), YY.key),
+        DY = void 0 === rY ? void 0 : tr(rY, YY);
+      return YY.onNamespace && !AD() && YD(DY, YY) ? ar(globalThis.WebAssembly, YY.key) : DY
+    }
+
+    function gD(YY) {
+      if (Pr(YY)) return 5;
+      const rY = Yr(YY);
+      return Gr(rY) ? 4 : nr(YY) ? 3 : Jr(rY) ? function(YY) {
+        return CY(Rr, Cr, [YY])
+      }(rY) ? -1 : rY === jr ? 0 : 1 : 2
+    }
+
+    function aD() {
+      const YY = function() {
+        const YY = fY();
+        return TY === EY || TY === mY ? (CY = ZY, zY = KY) : CY = RY, YY
+      }();
+      try {
+        if (null === DD || !Pr(DD)) {
+          const YY = function() {
+            if (void 0 === ur) return null;
+            let YY = AD() ? null : "wh:wa";
+            const rY = rY => {
+              null !== rY && (null === YY || gD(rY) > gD(YY)) && (YY = rY)
+            };
+            for (let DY = 0; DY < Vr.length; DY++) {
+              const YY = Vr[DY];
+              void 0 === YY || ID(YY) || rY(RD(YY))
+            }
+            rY((0, rr.m)());
+            for (let DY = 0; DY < Br.length; DY++) {
+              const YY = Br[DY];
+              void 0 === YY || ID(YY) || rY(Hr(YY))
+            }
+            return YY
+          }();
+          (null === DD || null !== YY && gD(YY) > gD(DD)) && (DD = YY)
+        }
+      } finally {
+        hY(YY)
+      }
+    }
+
+    function vD() {
+      FD = !0
+    }
+
+    function uD() {
+      if (FD) return "wb";
+      if ((!(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0]) && aD(), null !== DD) return DD;
+      if (void 0 === ur) return "wn:unsupported";
+      const YY = (0, FY.r)();
+      return null === YY ? null : `wn:${YY}`
+    }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

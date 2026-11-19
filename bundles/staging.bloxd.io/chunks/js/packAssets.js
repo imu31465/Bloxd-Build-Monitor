@@ -1,286 +1,286 @@
-export const id = 41;
-export const ids = [41, 180];
+export const id = 44;
+export const ids = [44, 189];
 export const modules = {
-  8623: (BB, TB, dB) => {
-    dB.r(TB), dB.d(TB, {
-      packDisplayName: () => DB,
-      packModelMessage: () => uB,
-      packModelSummary: () => EB,
-      refusedPackModels: () => HB
+  8800: (YY, rY, DY) => {
+    DY.r(rY), DY.d(rY, {
+      packDisplayName: () => yY,
+      packModelMessage: () => QY,
+      packModelSummary: () => WY,
+      refusedPackModels: () => oY
     });
-    var VB = dB(8629),
-      yB = dB(8634);
-    const pB = "DRACO",
-      lB = 0,
-      JB = 1,
-      YB = 0,
-      gB = 1,
-      oB = 32768;
+    var FY = DY(8807),
+      AY = DY(8809);
+    const IY = "DRACO",
+      RY = 0,
+      OY = 1,
+      gY = 0,
+      aY = 1,
+      vY = 32768;
 
-    function kB(BB) {
-      const TB = new DataView(BB.buffer, BB.byteOffset, BB.byteLength);
-      let dB = 0;
-      const VB = () => {
-          if (dB >= BB.byteLength) throw new RangeError("past the stream");
-          return BB[dB++]
+    function uY(YY) {
+      const rY = new DataView(YY.buffer, YY.byteOffset, YY.byteLength);
+      let DY = 0;
+      const FY = () => {
+          if (DY >= YY.byteLength) throw new RangeError("past the stream");
+          return YY[DY++]
         },
-        yB = () => {
-          if (dB + 4 > BB.byteLength) throw new RangeError("past the stream");
-          const VB = TB.getUint32(dB, !0);
-          return dB += 4, VB
+        AY = () => {
+          if (DY + 4 > YY.byteLength) throw new RangeError("past the stream");
+          const FY = rY.getUint32(DY, !0);
+          return DY += 4, FY
         },
-        kB = () => {
-          let BB = 0;
-          for (let TB = 0; TB < 35; TB += 7) {
-            const dB = VB();
-            if (BB += (127 & dB) * 2 ** TB, 0 === (128 & dB)) return BB
+        uY = () => {
+          let YY = 0;
+          for (let rY = 0; rY < 35; rY += 7) {
+            const DY = FY();
+            if (YY += (127 & DY) * 2 ** rY, 0 === (128 & DY)) return YY
           }
           throw new RangeError("varint too long")
         };
       try {
-        for (let BB = 0; BB < pB.length; BB++)
-          if (VB() !== pB.charCodeAt(BB)) return null;
-        const TB = VB(),
-          LB = VB(),
-          OB = VB(),
-          DB = VB(),
-          uB = VB() | VB() << 8;
-        if (2 !== TB) return null;
-        0 !== (uB & oB) && function(BB, TB, dB) {
-          const VB = () => {
-              TB(dB())
+        for (let YY = 0; YY < IY.length; YY++)
+          if (FY() !== IY.charCodeAt(YY)) return null;
+        const rY = FY(),
+          sY = FY(),
+          iY = FY(),
+          yY = FY(),
+          QY = FY() | FY() << 8;
+        if (2 !== rY) return null;
+        0 !== (QY & vY) && function(YY, rY, DY) {
+          const FY = () => {
+              rY(DY())
             },
-            yB = () => {
-              let dB = 1,
-                yB = !0;
-              for (; dB > 0;) {
-                dB--, yB || VB(), yB = !1;
-                const pB = BB();
-                for (let dB = 0; dB < pB; dB++) VB(), TB(BB());
-                dB += BB()
+            AY = () => {
+              let DY = 1,
+                AY = !0;
+              for (; DY > 0;) {
+                DY--, AY || FY(), AY = !1;
+                const IY = YY();
+                for (let DY = 0; DY < IY; DY++) FY(), rY(YY());
+                DY += YY()
               }
             },
-            pB = BB();
-          for (let lB = 0; lB < pB; lB++) BB(), yB();
-          yB()
-        }(kB, (TB => {
-          if (dB + TB > BB.byteLength) throw new RangeError("past the stream");
-          dB += TB
-        }), VB);
-        const HB = LB < 2 ? yB : kB;
-        if (OB === lB) return {
+            IY = YY();
+          for (let RY = 0; RY < IY; RY++) YY(), AY();
+          AY()
+        }(uY, (rY => {
+          if (DY + rY > YY.byteLength) throw new RangeError("past the stream");
+          DY += rY
+        }), FY);
+        const oY = sY < 2 ? AY : uY;
+        if (iY === RY) return {
           faces: 0,
-          vertices: yB()
+          vertices: AY()
         };
-        if (OB !== JB) return null;
-        if (DB === YB) {
+        if (iY !== OY) return null;
+        if (yY === gY) {
           return {
-            faces: HB(),
-            vertices: HB()
+            faces: oY(),
+            vertices: oY()
           }
         }
-        if (DB !== gB) return null;
-        VB(), LB < 2 && kB();
-        const EB = kB();
+        if (yY !== aY) return null;
+        FY(), sY < 2 && uY();
+        const WY = uY();
         return {
-          faces: kB(),
-          vertices: EB
+          faces: uY(),
+          vertices: WY
         }
       } catch {
         return null
       }
     }
 
-    function LB(BB, TB, dB) {
-      var VB, yB;
-      if (null === (VB = null === (yB = BB.extensionsUsed) || void 0 === yB ? void 0 : yB.includes("KHR_draco_mesh_compression")) || void 0 === VB || !VB) return null;
-      for (const DB of null !== (pB = BB.meshes) && void 0 !== pB ? pB : []) {
-        var pB;
-        for (const VB of DB.primitives) {
-          var lB, JB, YB, gB, oB, LB;
-          const yB = null === (lB = VB.extensions) || void 0 === lB ? void 0 : lB.KHR_draco_mesh_compression;
-          if ("object" !== typeof yB || null === yB) continue;
-          const pB = null === (JB = BB.bufferViews) || void 0 === JB ? void 0 : JB[yB.bufferView];
-          if (null === TB || void 0 === pB) return OB;
-          const DB = null !== (YB = pB.byteOffset) && void 0 !== YB ? YB : 0,
-            uB = kB(TB.subarray(DB, DB + pB.byteLength));
-          if (null === uB && !dB) continue;
-          const HB = null !== (gB = BB.accessors) && void 0 !== gB ? gB : [],
-            EB = null === (oB = HB[VB.attributes.POSITION]) || void 0 === oB ? void 0 : oB.count,
-            vB = void 0 === VB.indices ? 0 : null === (LB = HB[VB.indices]) || void 0 === LB ? void 0 : LB.count;
-          if (null === uB || void 0 === EB || void 0 === vB || 3 * uB.faces !== vB || uB.vertices > EB) return OB
+    function sY(YY, rY, DY) {
+      var FY, AY;
+      if (null === (FY = null === (AY = YY.extensionsUsed) || void 0 === AY ? void 0 : AY.includes("KHR_draco_mesh_compression")) || void 0 === FY || !FY) return null;
+      for (const yY of null !== (IY = YY.meshes) && void 0 !== IY ? IY : []) {
+        var IY;
+        for (const FY of yY.primitives) {
+          var RY, OY, gY, aY, vY, sY;
+          const AY = null === (RY = FY.extensions) || void 0 === RY ? void 0 : RY.KHR_draco_mesh_compression;
+          if ("object" !== typeof AY || null === AY) continue;
+          const IY = null === (OY = YY.bufferViews) || void 0 === OY ? void 0 : OY[AY.bufferView];
+          if (null === rY || void 0 === IY) return iY;
+          const yY = null !== (gY = IY.byteOffset) && void 0 !== gY ? gY : 0,
+            QY = uY(rY.subarray(yY, yY + IY.byteLength));
+          if (null === QY && !DY) continue;
+          const oY = null !== (aY = YY.accessors) && void 0 !== aY ? aY : [],
+            WY = null === (vY = oY[FY.attributes.POSITION]) || void 0 === vY ? void 0 : vY.count,
+            EY = void 0 === FY.indices ? 0 : null === (sY = oY[FY.indices]) || void 0 === sY ? void 0 : sY.count;
+          if (null === QY || void 0 === WY || void 0 === EY || 3 * QY.faces !== EY || QY.vertices > WY) return iY
         }
       }
       return null
     }
-    const OB = "has a Draco stream whose counts don't match its accessors";
+    const iY = "has a Draco stream whose counts don't match its accessors";
 
-    function DB(BB) {
-      var TB;
-      return null !== (TB = BB.name) && void 0 !== TB ? TB : BB.fromFolderName || BB.id
+    function yY(YY) {
+      var rY;
+      return null !== (rY = YY.name) && void 0 !== rY ? rY : YY.fromFolderName || YY.id
     }
 
-    function uB(BB, TB, dB) {
-      return `Texture pack "${BB}": model "${TB}" was not loaded because it ${dB}. The default model is used instead.`
+    function QY(YY, rY, DY) {
+      return `Texture pack "${YY}": model "${rY}" was not loaded because it ${DY}. The default model is used instead.`
     }
 
-    function HB(BB, TB, dB) {
+    function oY(YY, rY, DY) {
       let {
-        strictDraco: pB = !1
+        strictDraco: IY = !1
       } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const lB = {};
-      for (const [JB, YB] of Object.entries(TB)) {
-        let TB;
-        if (YB.startsWith("data:")) try {
-          const BB = new Uint8Array((0, yB.u)(YB));
-          if (TB = (0, VB.d)(BB), null === TB) {
+      const RY = {};
+      for (const [OY, gY] of Object.entries(rY)) {
+        let rY;
+        if (gY.startsWith("data:")) try {
+          const YY = new Uint8Array((0, AY.u)(gY));
+          if (rY = (0, FY.d)(YY), null === rY) {
             const {
-              json: dB,
-              bin: VB
-            } = (0, yB.y)(BB);
-            TB = LB(dB, VB, pB)
+              json: DY,
+              bin: FY
+            } = (0, AY.B)(YY);
+            rY = sY(DY, FY, IY)
           }
         } catch {
-          TB = "is not a binary glTF 2.0 file"
-        } else TB = "loads data from outside the file";
-        TB && (lB[JB] = TB, dB && console.warn(uB(BB, JB, TB)))
+          rY = "is not a binary glTF 2.0 file"
+        } else rY = "loads data from outside the file";
+        rY && (RY[OY] = rY, DY && console.warn(QY(YY, OY, rY)))
       }
-      return lB
+      return RY
     }
 
-    function EB(BB, TB) {
-      const dB = Object.keys(TB);
-      if (0 === dB.length) return null;
-      if (1 === dB.length) return uB(BB, dB[0], TB[dB[0]]);
-      const VB = dB.map((BB => `"${BB}" ${TB[BB]}`)).join("; ");
-      return `Texture pack "${BB}": ${dB.length} models were not loaded (${VB}). The default models are used instead.`
+    function WY(YY, rY) {
+      const DY = Object.keys(rY);
+      if (0 === DY.length) return null;
+      if (1 === DY.length) return QY(YY, DY[0], rY[DY[0]]);
+      const FY = DY.map((YY => `"${YY}" ${rY[YY]}`)).join("; ");
+      return `Texture pack "${YY}": ${DY.length} models were not loaded (${FY}). The default models are used instead.`
     }
   },
-  60051: (BB, TB, dB) => {
-    dB.d(TB, {
-      packAssets: () => EB
+  60537: (YY, rY, DY) => {
+    DY.d(rY, {
+      packAssets: () => WY
     });
-    var VB = dB(2626),
-      yB = dB(2664),
-      pB = dB(8623),
-      lB = dB(2683),
-      JB = dB(2729);
+    var FY = DY(2755),
+      AY = DY(2785),
+      IY = DY(8800),
+      RY = DY(2802),
+      OY = DY(2838);
 
-    function YB(BB, TB, dB, VB) {
-      const yB = `${(0,lB.d)(BB,TB)}|sheets${dB}`;
-      return VB === JB.b ? yB : `${yB}|layers${VB}`
+    function gY(YY, rY, DY, FY) {
+      const AY = `${(0,RY.e)(YY,rY)}|sheets${DY}`;
+      return FY === OY.e ? AY : `${AY}|layers${FY}`
     }
-    var gB = dB(2734),
-      oB = dB(2646),
-      kB = dB(2633),
-      LB = dB(2690);
-    var OB = dB(42041);
-    const DB = 256;
-    let uB = null,
-      HB = null;
+    var aY = DY(2846),
+      vY = DY(2773),
+      uY = DY(2764),
+      sY = DY(2804);
+    var iY = DY(42383);
+    const yY = 256;
+    let QY = null,
+      oY = null;
 
-    function EB(BB) {
-      var TB;
-      let dB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : JB.b;
-      if ((null === (TB = uB) || void 0 === TB ? void 0 : TB.pack) === BB.pack && uB.maxLayerWidth === dB) return uB.assets;
-      const EB = (0, OB.f)(BB.pack, (0, OB.l)(BB));
-      if (null === EB || !(0, yB.g)(EB)) return Promise.resolve(null);
-      const mB = async function(BB, TB, dB) {
-        var OB;
-        const uB = null !== (OB = BB.textureOverrides) && void 0 !== OB ? OB : {},
+    function WY(YY) {
+      var rY;
+      let DY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : OY.e;
+      if ((null === (rY = QY) || void 0 === rY ? void 0 : rY.pack) === YY.pack && QY.maxLayerWidth === DY) return QY.assets;
+      const WY = (0, iY.g)(YY.pack, (0, iY.l)(YY));
+      if (null === WY || !(0, AY.e)(WY)) return Promise.resolve(null);
+      const mY = async function(YY, rY, DY) {
+        var iY;
+        const QY = null !== (iY = YY.textureOverrides) && void 0 !== iY ? iY : {},
           {
-            id: EB,
-            version: mB
-          } = BB.metaData,
-          iB = TB && EB !== VB.r.CUSTOM,
-          NB = {};
-        iB && (HB = NB);
-        let tB, fB, sB = iB ? await async function(BB, TB, dB, VB) {
-          const yB = YB(BB, TB, dB, JB.b),
-            pB = YB(BB, TB, dB, VB),
-            gB = await (0, lB.i)((BB => BB === yB || BB === pB));
-          return null !== gB && (VB === JB.b || gB.blockAtlasWidth <= VB) ? gB : null
-        }(EB, mB, DB, dB): null;
-        if (null === sB) {
+            id: WY,
+            version: mY
+          } = YY.metaData,
+          VY = rY && WY !== FY.o.CUSTOM,
+          SY = {};
+        VY && (oY = SY);
+        let lY, TY, eY = VY ? await async function(YY, rY, DY, FY) {
+          const AY = gY(YY, rY, DY, OY.e),
+            IY = gY(YY, rY, DY, FY),
+            aY = await (0, RY.k)((YY => YY === AY || YY === IY));
+          return null !== aY && (FY === OY.e || aY.blockAtlasWidth <= FY) ? aY : null
+        }(WY, mY, yY, DY): null;
+        if (null === eY) {
           const {
-            blockMetadata: BB,
-            getDefaultTexture: TB,
-            textureNameToIndex: pB
-          } = await (0, yB.k)(), JB = (0, oB.c)(BB, ((BB, dB) => ({
-            url: vB(uB, TB, BB, "block" === dB ? kB.g.BLOCK : kB.g.ITEM)
-          }))), gB = await
-          function(BB, TB, dB, VB, yB, pB) {
-            return (0, LB.c)((lB => lB.WasmTextureWorker.generateRequired(BB, TB, dB, VB, yB, pB)))
-          }(BB, pB, JB, EB === VB.d, dB, DB), OB = gB.assets;
-          sB = {
-            ...OB,
+            blockMetadata: YY,
+            getDefaultTexture: rY,
+            textureNameToIndex: IY
+          } = await (0, AY.j)(), OY = (0, vY.e)(YY, ((YY, DY) => ({
+            url: EY(QY, rY, YY, "block" === DY ? uY.e.BLOCK : uY.e.ITEM)
+          }))), aY = await
+          function(YY, rY, DY, FY, AY, IY) {
+            return (0, sY.b)((RY => RY.WasmTextureWorker.generateRequired(YY, rY, DY, FY, AY, IY)))
+          }(YY, IY, OY, WY === FY.d, DY, yY), iY = aY.assets;
+          eY = {
+            ...iY,
             averageColors: {}
-          }, tB = gB.averageColors(), iB && (fB = tB.then((async BB => {
-            null !== BB && HB === NB && await
-            function(BB, TB, dB, VB, yB) {
-              return (0, lB.k)(YB(BB, TB, VB, yB), dB)
-            }(EB, mB, {
-              ...OB,
-              averageColors: BB
-            }, DB, gB.layerCap)
+          }, lY = aY.averageColors(), VY && (TY = lY.then((async YY => {
+            null !== YY && oY === SY && await
+            function(YY, rY, DY, FY, AY) {
+              return (0, RY.o)(gY(YY, rY, FY, AY), DY)
+            }(WY, mY, {
+              ...iY,
+              averageColors: YY
+            }, yY, aY.layerCap)
           })))
         }
-        return function(BB, TB) {
-          var dB, VB;
-          let yB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Promise.resolve((JB = BB.averageColors, 0 === Object.keys(null !== JB && void 0 !== JB ? JB : {}).length ? null : BB.averageColors)),
-            lB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Promise.resolve();
-          var JB;
-          const YB = null !== (dB = TB.textureOverrides) && void 0 !== dB ? dB : {},
-            oB = null !== (VB = TB.modelOverrides) && void 0 !== VB ? VB : {},
-            kB = 0 === Object.keys(oB).length ? {} : (0, pB.refusedPackModels)((0, pB.packDisplayName)(TB.metaData), oB, !0, {
+        return function(YY, rY) {
+          var DY, FY;
+          let AY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Promise.resolve((OY = YY.averageColors, 0 === Object.keys(null !== OY && void 0 !== OY ? OY : {}).length ? null : YY.averageColors)),
+            RY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Promise.resolve();
+          var OY;
+          const gY = null !== (DY = rY.textureOverrides) && void 0 !== DY ? DY : {},
+            vY = null !== (FY = rY.modelOverrides) && void 0 !== FY ? FY : {},
+            uY = 0 === Object.keys(vY).length ? {} : (0, IY.refusedPackModels)((0, IY.packDisplayName)(rY.metaData), vY, !0, {
               strictDraco: !0
             }),
             {
-              animatedBlockTextures: LB,
-              rotatedBlockTextures: OB
-            } = BB,
-            DB = BB => {
-              var TB, dB;
-              return null !== (TB = null !== (dB = LB[BB]) && void 0 !== dB ? dB : OB[BB]) && void 0 !== TB ? TB : null
+              animatedBlockTextures: sY,
+              rotatedBlockTextures: iY
+            } = YY,
+            yY = YY => {
+              var rY, DY;
+              return null !== (rY = null !== (DY = sY[YY]) && void 0 !== DY ? DY : iY[YY]) && void 0 !== rY ? rY : null
             };
           return {
             terrain: {
-              atlasSheets: BB.blockAtlasArr,
-              texture: DB
+              atlasSheets: YY.blockAtlasArr,
+              texture: yY
             },
-            sheetPixels: [...BB.blockAtlasPixels],
-            heldUntil: lB,
-            sheetLayout: BB.imagesPerAtlas,
-            sheetWidth: BB.blockAtlasWidth,
-            armourAtlasUrl: BB.armourAtlas,
-            texture: BB => {
-              var TB, dB;
-              return null !== (TB = null !== (dB = DB(BB)) && void 0 !== dB ? dB : (0, gB.e)(YB, BB)) && void 0 !== TB ? TB : null
+            sheetPixels: [...YY.blockAtlasPixels],
+            heldUntil: RY,
+            sheetLayout: YY.imagesPerAtlas,
+            sheetWidth: YY.blockAtlasWidth,
+            armourAtlasUrl: YY.armourAtlas,
+            texture: YY => {
+              var rY, DY;
+              return null !== (rY = null !== (DY = yY(YY)) && void 0 !== DY ? DY : (0, aY.b)(gY, YY)) && void 0 !== rY ? rY : null
             },
-            model: BB => void 0 === kB[BB] && oB[BB] || null,
-            averageColours: yB
+            model: YY => void 0 === uY[YY] && vY[YY] || null,
+            averageColours: AY
           }
-        }(sB, BB, tB, fB)
-      }(EB, null === BB.gameSource, dB), iB = {
-        pack: BB.pack,
-        maxLayerWidth: dB,
-        assets: mB
+        }(eY, YY, lY, TY)
+      }(WY, null === YY.gameSource, DY), VY = {
+        pack: YY.pack,
+        maxLayerWidth: DY,
+        assets: mY
       };
-      return uB = iB, mB.catch((() => {
-        uB === iB && (uB = null)
-      })), mB
+      return QY = VY, mY.catch((() => {
+        QY === VY && (QY = null)
+      })), mY
     }
 
-    function vB(BB, TB, VB, yB) {
-      const pB = (0, gB.e)(BB, VB);
-      if (pB) return pB;
+    function EY(YY, rY, FY, AY) {
+      const IY = (0, aY.b)(YY, FY);
+      if (IY) return IY;
       try {
-        return TB(VB, yB).url
+        return rY(FY, AY).url
       } catch {
-        return dB(2782)
+        return DY(2879)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

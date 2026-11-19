@@ -1,135 +1,142 @@
-.StudioPage {
+.SleepingOverlay {
+  align-items: center;
+  background-color: rgba(26, 31, 46, .85);
+  contain: layout style paint;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  margin: 0 auto;
-  max-width: 100rem;
-  padding-bottom: 4rem
-}
-
-.StudioPage .StudioPageHeader {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: space-between
-}
-
-.StudioPage .StudioPageHeader .StudioPageTitle {
-  font-size: 2rem;
-  margin: 0
-}
-
-.StudioPage .StudioPageLoader {
-  display: flex;
-  justify-content: center;
-  padding: 4rem 0
-}
-
-.StudioPage .StudioPageMessage {
-  color: #cfcfcf;
-  font-size: 1.2rem;
-  padding: 4rem 0;
-  text-align: center
-}
-
-.StudioGameList .StudioPageHeader .GoldButton .ButtonBody {
-  font-size: 1rem
-}
-
-.StudioGameList .StudioGameListStatusChip {
-  background-color: #394980;
-  color: #cfcfcf;
-  display: inline-block;
-  font-size: .85em;
-  font-weight: 800;
-  padding: .15rem .6rem
-}
-
-.StudioGameList .StudioGameListStatusChip.StudioGameListStatusChipPublished {
-  background-color: rgba(29, 208, 109, .15);
-  color: #1dd06d
-}
-
-.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup {
-  display: flex;
-  gap: .5rem;
-  max-height: 75vh;
-  max-width: 55rem;
-  min-width: 40rem;
-  overflow-y: scroll;
-  text-align: left
-}
-
-.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SchematicPopupTitle {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin: 0
-}
-
-.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SchematicPopupSubtitle {
-  color: #cfcfcf;
-  font-size: 1rem;
-  font-weight: 700;
-  margin: 1rem 0 0
-}
-
-.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SchematicPopupSubtitle.Hidden {
-  display: none
-}
-
-.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SchematicPopupSchematicListContainer {
-  border: 2px solid #303a59;
-  border-radius: 0;
-  box-sizing: border-box;
-  overflow-y: auto;
-  padding: .5rem;
-  width: 100%
-}
-
-.SchematicImageContainer {
-  align-items: center;
-  display: flex;
-  font-size: 2rem;
   height: 100%;
+  isolation: isolate;
   justify-content: center;
   left: 0;
+  pointer-events: auto;
+  position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1
+  z-index: 12
 }
 
-.SchematicImageContainer .LogoLoaderOuter {
-  border-color: #a4a4a4 #f2f2f2 #f2f2f2
+.SleepingOverlay.enter {
+  opacity: 0
 }
 
-.SchematicImageContainer .SchematicImage {
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
+.SleepingOverlay.enter-active,
+.SleepingOverlay.exit {
+  opacity: 1
+}
+
+.SleepingOverlay.exit-active {
+  opacity: 0
+}
+
+.SleepingOverlay .SleepingOverlayBody {
+  box-sizing: border-box;
+  flex-direction: column;
+  padding: 0 1rem
+}
+
+.SleepingOverlay .SleepingOverlayBody,
+.SleepingOverlay .SleepingOverlayBody .SleepingOverlayPerkList {
+  align-items: center;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  min-width: auto;
   width: 100%
 }
 
-.SchematicImageContainer .SchematicImage.SchematicImageFadeIn {
-  animation-duration: .3s;
-  animation-fill-mode: backwards;
-  animation-iteration-count: 1;
-  animation-name: fadeIn;
-  isolation: isolate
+.SleepingOverlay .SleepingOverlayBody .SleepingOverlayPerkList .ButtonBody {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-weight: 800;
+  gap: 0;
+  justify-content: center;
+  padding: .5rem 1rem
 }
 
-.SchematicImageContainer .SchematicImageError {
+.SleepingOverlay .SleepingOverlayBody .SleepingOverlayPerkList .ButtonBody .SleepingOverlayPerkTitle {
+  align-items: center;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 800;
+  justify-content: center;
+  min-width: auto
+}
+
+.SleepingOverlay .SleepingOverlayBody .SleepingOverlayPerkList .ButtonBody .SleepingOverlayPerkDescription {
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
   color: #cfcfcf;
+  display: -webkit-box;
+  font-size: 1.25rem;
+  font-weight: 700;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  white-space: normal
+}
+
+.SleepingOverlay .SleepingOverlayBody .SleepingOverlayPerkBottom {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%
+}
+
+.SleepingOverlay .SleepingOverlayBody .SleepingOverlayPerkBottom .SleepingOverlayPerkBottomSide {
+  display: flex;
+  flex: 12rem 1 1;
+  gap: .5rem;
+  justify-content: flex-end
+}
+
+.SleepingOverlay .SleepingOverlayBody .SleepingOverlayPerkBottom .SleepingOverlayPerkBottomSide .SleepingOverlayBedIcon {
+  border-radius: 0;
+  font-size: 2rem
+}
+
+.SleepingOverlay .SleepingOverlayBody .SleepingOverlayPerkBottom .SleepingOverlayPerkBottomSide .SleepingOverlayBedIcon.SleepingOverlayBedIconActive {
+  border: 2px solid #ffb914
+}
+
+.SleepingOverlay .SleepingOverlayBody .SleepingOverlayPerkBottom .SleepingOverlayPerkBottomSide .SleepingOverlayBedIcon:not(.SleepingOverlayBedIconActive) {
+  border: 2px solid #cfcfcf;
   opacity: .4
 }
 
-.Table {
-  border-collapse: collapse;
-  width: 100%
+.SleepingOverlay .SleepingOverlayBody .SleepingOverlayPerkBottom .SleepingOverlayWakeUpButton {
+  font-size: 2rem
+}
+
+.SleepingOverlay .SleepingOverlayBody .SleepingOverlayPerkBottom .SleepingOverlayWakeUpButton .ButtonBody {
+  align-items: center;
+  display: flex;
+  font-weight: 700;
+  justify-content: center;
+  min-width: 15rem;
+  padding: 1rem
+}
+
+.DirectionalDamage {
+  left: 50%;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  z-index: 1
+}
+
+.DamageIndicator {
+  border: .4rem solid transparent;
+  border-radius: 50%;
+  border-top-color: #fc6464;
+  height: 3vw;
+  width: 3vw
+}
+
+.DamageIndicator.DamageIndicatorFullCircle {
+  border-color: #fc6464
 }
 
 @keyframes rainbowShimmer {
@@ -231,72 +238,134 @@
   }
 }
 
-.StudioTable {
-  background-color: #3c4b68;
-  border: 1px solid #0f0f0f;
-  border-radius: 0;
-  box-sizing: border-box;
-  text-align: left
-}
-
-.StudioTable thead {
-  background-color: #394980
-}
-
-.StudioTable thead th {
-  color: #a4a4a4;
-  font-size: .85em;
-  font-weight: 800;
-  padding: .75rem 1rem;
-  text-transform: uppercase
-}
-
-.StudioTable tbody tr {
-  border-top: 1px solid hsla(0, 0%, 95%, .1);
-  cursor: pointer
-}
-
-@media(hover:hover) {
-  .StudioTable tbody tr:hover {
-    background-color: #394980
-  }
-}
-
-.StudioTable tbody tr.pad-focused {
-  background-color: #394980
-}
-
-@media(hover:none) {
-  .StudioTable tbody tr:active {
-    background-color: #394980
-  }
-}
-
-.StudioTable tbody tr td {
-  padding: .6rem 1rem
-}
-
-.StudioTable .StudioTableGameCell {
+.Crosshair {
   align-items: center;
+  color: #fff;
   display: flex;
-  gap: .75rem
+  font-size: 1.3rem;
+  font-weight: 900;
+  justify-content: center;
+  left: 50%;
+  line-height: 1;
+  margin-top: -2px;
+  pointer-events: none;
+  position: fixed;
+  text-shadow: -1.2px 0 #000, 0 1.2px #000, 1.2px 0 #000, 0 -1.2px #000;
+  top: 50%;
+  translate: -50% -50%;
+  z-index: 1
 }
 
-.StudioTable .StudioTableGameCell .StudioTableThumbnail {
-  aspect-ratio: 3/2;
-  border-radius: 0;
-  flex-shrink: 0;
-  height: 3rem;
-  overflow: hidden;
-  position: relative
+.Crosshair.Touch {
+  font-size: max(1.3rem, 18px)
 }
 
-.StudioTable .StudioTableGameCell .StudioTableThumbnail .StudioTableThumbnailImage {
+.GunCrosshairWrapper {
+  transition: opacity .2s
+}
+
+.GunCrosshair {
+  background-color: #fff;
+  border: 1px solid #000;
+  position: fixed;
+  transition: transform .2s ease-out;
+  z-index: 1
+}
+
+.GunCrosshairOverlayWrapper {
+  height: 104vh;
+  height: 104dvh;
+  left: 50%;
+  pointer-events: none;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: filter .3s;
+  width: 104vw;
+  width: 104dvw;
+  z-index: 2
+}
+
+.GunCrosshairOverlayWrapper .GunCrosshairOverlay {
+  background-color: #000;
   height: 100%;
-  object-fit: cover;
+  left: 0;
+  -webkit-mask-image: radial-gradient(circle, transparent 40%, #000 41%);
+  mask-image: radial-gradient(circle, transparent 40%, #000 41%);
+  position: absolute;
+  top: 0;
   width: 100%
 }
 
-.StudioTable .StudioTableGameCell .StudioTableGameName {
-  font-weight: 800
+.GunCrosshairOverlayWrapper .GunCrosshairOverlayLine1,
+.GunCrosshairOverlayWrapper .GunCrosshairOverlayLine2 {
+  position: absolute
+}
+
+.GunCrosshairOverlayWrapper .GunCrosshairOverlayLine1 {
+  border-top: 1px dashed #000;
+  height: 1px;
+  left: 0;
+  top: 50%;
+  translate: 0 -25%;
+  width: 100%
+}
+
+.GunCrosshairOverlayWrapper .GunCrosshairOverlayLine2 {
+  border-left: 1px dashed #000;
+  height: 100%;
+  left: 50%;
+  top: 0;
+  translate: -25% 0;
+  width: 1px
+}
+
+.GunCrosshairOverlayWrapper .GunCrosshairOverlayDot {
+  border: 1px solid rgba(204, 20, 20, .5);
+  border-radius: 50%;
+  box-sizing: border-box;
+  height: 5px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  translate: -50% -50%;
+  width: 5px
+}
+
+.Crosshair.CrosshairInPreview {
+  position: absolute
+}
+
+.CrosshairShapes {
+  inset: 0;
+  pointer-events: none;
+  position: fixed;
+  z-index: 1
+}
+
+.CrosshairShapes.CrosshairInPreview {
+  position: absolute;
+  z-index: auto
+}
+
+.CrosshairShapes .CrosshairPart,
+.CrosshairShapes .CrosshairRing,
+.CrosshairShapes .CrosshairShapesOrigin,
+.CrosshairShapes .CrosshairShapesPress {
+  position: absolute
+}
+
+.CrosshairShapes .CrosshairShapesPress {
+  left: 0;
+  top: 0
+}
+
+.CrosshairShapes.CrosshairSpreads [data-arm] {
+  transition: left .2s ease-out, top .2s ease-out
+}
+
+.CrosshairShapes .CrosshairRing {
+  border-radius: 50%;
+  border-style: solid;
+  box-sizing: border-box
 }

@@ -1,40 +1,210 @@
 export const id = 151;
 export const ids = [151];
 export const modules = {
-  8248: (BB, TB, dB) => {
-    dB.r(TB), dB.d(TB, {
-      pageBody: () => VB
+  36034: (YY, rY, DY) => {
+    DY.d(rY, {
+      C: () => EY,
+      e: () => IY,
+      i: () => QY,
+      l: () => oY,
+      n: () => OY,
+      r: () => sY,
+      t: () => WY,
+      v: () => uY,
+      x: () => mY,
+      y: () => yY
     });
-    const VB = {
-      whatIs: ["Smash Lucky Blocks for random loot, funny surprises and some genuinely wild outcomes, then take on everyone else in a chaotic multiplayer PvP arena. In Bloxd Lucky Blocks Battlegrounds, whoever has the most kills when the arena resets wins the round. Lucky Bedwars is all about beds and Lucky Towers is about surviving on a pillar. This one's just a big arena where the Lucky Blocks never stop coming."],
-      howToPlay: ["You start in your own safe base, and nobody else can get in. Step out into the arena and a free Lucky Block lands with you every 15 seconds. Crack them open for weapons, armour, pets and surprises, then go and fight.", "Lucky Blocks, Weapon Lucky Blocks and Pet Lucky Blocks spawn on pads around the arena and come back every minute. Every 90 seconds an Ultra Lucky Block appears in the centre, and whoever grabs it first keeps it. You also get your own Ultra Lucky Block in your base every 5 minutes, and only you can see it. The arena resets every 15 minutes, and the player with the most kills wins the round. You keep your items through a reset, so you're ready to go straight away."],
-      features: ["Multiplayer Lucky Block PvP Arena", "A Free Lucky Block Every 15 Seconds", "Weapon and Pet Lucky Blocks on Pads Around the Map", "Ultra Lucky Block in the Centre Every 90 Seconds", "Your Own Ultra Lucky Block Every 5 Minutes", "Safe Personal Base Nobody Else Can Enter", "Kills Leaderboard and a New Round Every 15 Minutes"],
-      tips: ["Stay out in the arena. You don't get free Lucky Blocks while you're in your base", "The second the Ultra Lucky Block appears, head for the centre", "Open Pet Lucky Blocks for a pet that'll defend you from anyone who attacks you", "Need a breather? Go back to your base, because nobody can follow you in", "Inventory getting messy? Press F to clear it. You'll keep your armour, hotbar, arrows and firecrackers", "Pop home every 5 minutes to grab your own Ultra Lucky Block", "Watch the leaderboard on the right so you know who you need to beat"],
-      similarGames: ["luckyBedwars", "luckyTowers", "skywars", "bedwars"],
-      faq: [{
-        question: "What is Lucky Blocks Battlegrounds?",
-        answer: "A multiplayer lucky block PvP arena. You open Lucky Blocks for random loot, fight other players and try to end each 15-minute round with the most kills."
-      }, {
-        question: "How do you win Lucky Blocks Battlegrounds?",
-        answer: "Get the most kills before the arena resets. That happens every 15 minutes, and the top player wins the round."
-      }, {
-        question: "How do I get Lucky Blocks?",
-        answer: "You get a free one every 15 seconds while you're out in the arena. More spawn on pads around the map, and there's an Ultra Lucky Block in the centre every 90 seconds."
-      }, {
-        question: "What is the Ultra Lucky Block?",
-        answer: "An extra-special Lucky Block. One shows up in the middle of the arena every 90 seconds for everyone to race for, and you get your own in your base every 5 minutes as well."
-      }, {
-        question: "What's inside Bloxd lucky blocks?",
-        answer: "Pretty much anything, from weapons and armour to pets and funny surprises. Weapon Lucky Blocks and Pet Lucky Blocks give you a better chance of a weapon or a pet."
-      }, {
-        question: "Can other players attack me in my base?",
-        answer: "Nope. Other players can't get into your base, break its blocks or open its chests."
-      }, {
-        question: "Do I lose my items when the Lucky Block Battlegrounds arena resets?",
-        answer: "No, your inventory stays with you. Everyone's kills go back to zero for the new round, though."
-      }]
+    var FY = DY(19),
+      AY = DY(25);
+    const IY = "clientGameInventoryButtonsChanged",
+      RY = new Map;
+
+    function OY() {
+      return [...RY.values()].sort(((YY, rY) => {
+        var DY, FY;
+        return (null !== (DY = YY.order) && void 0 !== DY ? DY : 0) - (null !== (FY = rY.order) && void 0 !== FY ? FY : 0)
+      }))
     }
+    let gY = null;
+
+    function aY(YY) {
+      gY = YY
+    }
+    let vY = !1;
+
+    function uY(YY) {
+      vY = !0;
+      try {
+        YY.onClick()
+      } finally {
+        vY = !1
+      }
+      YY.panel && "clientGame" === FY.b.get("openInGameMenuName") && aY(YY.id)
+    }
+
+    function sY() {
+      return vY
+    }
+
+    function iY() {
+      return OY().filter((YY => YY.panel && !YY.disabled))
+    }
+
+    function yY(YY) {
+      const rY = iY(),
+        DY = rY.findIndex((YY => YY.id === gY));
+      return !(DY < 0 || rY.length < 2) && (uY(rY[(DY + YY + rY.length) % rY.length]), !0)
+    }
+
+    function QY() {
+      return null !== gY && iY().length > 1
+    }
+
+    function oY() {
+      aY(null)
+    }
+
+    function WY() {
+      "inventory" !== FY.b.get("openInGameMenuName") && aY(null)
+    }
+
+    function EY() {
+      const YY = gY;
+      return aY(null), YY
+    }
+
+    function mY(YY) {
+      return RY.set(YY.id, YY), AY.g.vo(IY, OY(), !0), () => {
+        RY.get(YY.id) === YY && (RY.delete(YY.id), AY.g.vo(IY, OY()))
+      }
+    }
+  },
+  36032: (YY, rY, DY) => {
+    DY.d(rY, {
+      d: () => OY,
+      f: () => oY,
+      h: () => WY,
+      j: () => sY,
+      n: () => aY,
+      o: () => QY,
+      p: () => iY,
+      q: () => vY
+    });
+    var FY = DY(19),
+      AY = DY(25),
+      IY = DY(1287),
+      RY = DY(36034);
+    const OY = "clientGameUiChanged";
+    let gY = null;
+
+    function aY() {
+      return gY
+    }
+
+    function vY(YY, rY) {
+      const DY = {
+        content: YY,
+        menu: rY
+      };
+      return gY = DY, AY.g.vo(OY, gY, !0), () => {
+        gY === DY && (gY = null, yY = !1, oY(), AY.g.vo(OY, null))
+      }
+    }
+    let uY = null;
+
+    function sY() {
+      return uY
+    }
+
+    function iY(YY) {
+      return uY = YY, () => {
+        uY === YY && (uY = null)
+      }
+    }
+    let yY = !1;
+
+    function QY() {
+      const YY = FY.b.get("openInGameMenuName");
+      "clientGame" !== YY && (yY = "inventory" === YY), (0, RY.r)() || (0, RY.l)(), (0, IY.k)(IY.d), FY.b.set({
+        openInGameMenuName: "clientGame",
+        openEverythingMenuName: null
+      })
+    }
+
+    function oY() {
+      EY(!1)
+    }
+
+    function WY() {
+      EY(yY)
+    }
+
+    function EY(YY) {
+      "clientGame" === FY.b.get("openInGameMenuName") && FY.b.set({
+        openInGameMenuName: YY ? "inventory" : null
+      }), YY || (0, RY.l)(), yY = !1
+    }
+  },
+  8173: (YY, rY, DY) => {
+    DY.d(rY, {
+      d: () => RY
+    });
+    var FY = DY(8181),
+      AY = DY(625),
+      IY = DY(144);
+
+    function RY(YY) {
+      var rY, DY;
+      if ((0, AY.H)(YY)) return !0;
+      const RY = null !== (rY = null === (DY = IY.l[IY.s]) || void 0 === DY ? void 0 : DY.adConfig.showRewardedAds) && void 0 !== rY && rY;
+      for (const AY in YY) {
+        const rY = YY[AY];
+        if (null !== rY && void 0 !== rY && rY.items)
+          for (const YY in rY.items)
+            if ((0, FY.m)(rY.items[YY], RY)) return !1
+      }
+      return !0
+    }
+  },
+  41656: (YY, rY, DY) => {
+    DY.r(rY), DY.d(rY, {
+      getClientGameMapKey: () => FY.j,
+      shopIsEmpty: () => AY.d
+    });
+    var FY = DY(36032),
+      AY = DY(8173)
+  },
+  8181: (YY, rY, DY) => {
+    function FY(YY, rY) {
+      return !YY.hidden && (rY || !YY.isRewardedAd)
+    }
+
+    function AY(YY) {
+      return "object" === typeof YY ? YY.option : YY
+    }
+
+    function IY(YY, rY) {
+      var DY;
+      if ("dropdown" === (null === (DY = YY.userInput) || void 0 === DY ? void 0 : DY.type) && "object" === typeof YY.userInput.dropdownOptions[0]) {
+        for (const DY of YY.userInput.dropdownOptions)
+          if (AY(DY) === rY) return "object" === typeof DY ? DY.cost : YY.cost;
+        console.error("Didn't find matching option for dropdown item. Item:", YY, "input:", rY)
+      }
+      return YY.cost
+    }
+
+    function RY(YY, rY, DY) {
+      var FY;
+      const AY = null !== (FY = DY.excludedPlayers) && void 0 !== FY ? FY : [rY];
+      return YY.filter((YY => !AY.includes(YY)))
+    }
+    DY.d(rY, {
+      c: () => IY,
+      e: () => AY,
+      i: () => RY,
+      m: () => FY
+    })
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

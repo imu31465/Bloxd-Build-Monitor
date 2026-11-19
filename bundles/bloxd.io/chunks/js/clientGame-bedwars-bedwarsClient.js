@@ -1,76 +1,76 @@
 export const id = 9;
 export const ids = [9];
 export const modules = {
-  38203: (BB, TB, dB) => {
-    dB.r(TB), dB.d(TB, {
-      default: () => yB
+  38591: (YY, rY, DY) => {
+    DY.r(rY), DY.d(rY, {
+      default: () => AY
     });
-    var VB = dB(36923);
-    const yB = function(BB, TB, dB) {
-      let yB;
+    var FY = DY(37376);
+    const AY = function(YY, rY, DY) {
+      let AY;
       return {
         plugins: {
-          placeAgainstBeds: (0, VB.c)()
+          placeAgainstBeds: (0, FY.d)()
         },
-        onCreate: BB => {
-          yB = BB
+        onCreate: YY => {
+          AY = YY
         },
-        onPlayerAltAction: (BB, TB, dB, VB, pB, lB) => {
-          ((BB, TB) => {
-            if (!TB || "Mesh" !== yB.getEntityType(TB)) return;
-            const dB = yB.getEntityName(TB);
-            "Upgrades" === dB ? yB.openShop(BB, !1, "Upgrades") : "Items" === dB && yB.openShop(BB, !1, "Recommended")
-          })(BB, lB)
+        onPlayerAltAction: (YY, rY, DY, FY, IY, RY) => {
+          ((YY, rY) => {
+            if (!rY || "Mesh" !== AY.getEntityType(rY)) return;
+            const DY = AY.getEntityName(rY);
+            "Upgrades" === DY ? AY.openShop(YY, !1, "Upgrades") : "Items" === DY && AY.openShop(YY, !1, "Recommended")
+          })(YY, RY)
         }
       }
     }
   },
-  36923: (BB, TB, dB) => {
-    dB.d(TB, {
-      c: () => JB
+  37376: (YY, rY, DY) => {
+    DY.d(rY, {
+      d: () => OY
     });
-    var VB = dB(279),
-      yB = dB(35894),
-      pB = dB(3896);
-    const lB = ["Leaf Bed", "_Leaf Bed Head", ...VB.Gc.flatMap((BB => [`${BB} Bed`, `_${BB} Bed Head`, `${BB} Strongbed`, `_${BB} Strongbed Head`]))];
+    var FY = DY(341),
+      AY = DY(36318),
+      IY = DY(4020);
+    const RY = ["Leaf Bed", "_Leaf Bed Head", ...FY.Fc.flatMap((YY => [`${YY} Bed`, `_${YY} Bed Head`, `${YY} Strongbed`, `_${YY} Strongbed Head`]))];
 
-    function JB() {
-      let BB;
+    function OY() {
+      let YY;
       return {
-        onCreate(TB) {
-          BB = TB
+        onCreate(rY) {
+          YY = rY
         },
-        altVetoBlocks: lB,
-        onPlayerAttemptAltAction(TB, dB, VB, lB, JB, YB) {
-          var gB;
-          if ((0, yB.e)(BB.getMetaInfo(JB).rootName) && !BB.isEntityInteractable(YB) && (0, pB.f)(null === (gB = BB.gdB(TB)) || void 0 === gB ? void 0 : gB.typeObj.type)) return "preventAction"
+        altVetoBlocks: RY,
+        onPlayerAttemptAltAction(rY, DY, FY, RY, OY, gY) {
+          var aY;
+          if ((0, AY.e)(YY.getMetaInfo(OY).rootName) && !YY.isEntityInteractable(gY) && (0, IY.f)(null === (aY = YY.rrY(rY)) || void 0 === aY ? void 0 : aY.typeObj.type)) return "preventAction"
         }
       }
     }
   },
-  35894: (BB, TB, dB) => {
-    function VB(BB) {
-      return BB.includes("Leaf Bed")
+  36318: (YY, rY, DY) => {
+    function FY(YY) {
+      return YY.includes("Leaf Bed")
     }
 
-    function yB(BB) {
-      return / Bed(?: Head)?(?:\||$)/.test(BB) && !VB(BB)
+    function AY(YY) {
+      return / Bed(?: Head)?(?:\||$)/.test(YY) && !FY(YY)
     }
 
-    function pB(BB) {
-      return BB.includes(" Strongbed")
+    function IY(YY) {
+      return YY.includes(" Strongbed")
     }
 
-    function lB(BB) {
-      return VB(BB) || yB(BB) || pB(BB)
+    function RY(YY) {
+      return FY(YY) || AY(YY) || IY(YY)
     }
-    dB.d(TB, {
-      e: () => lB,
-      h: () => VB,
-      l: () => pB,
-      p: () => yB
+    DY.d(rY, {
+      e: () => RY,
+      h: () => FY,
+      i: () => IY,
+      l: () => AY
     })
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

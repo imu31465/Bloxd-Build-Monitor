@@ -1,156 +1,369 @@
 export const id = 252;
 export const ids = [252];
 export const modules = {
-  39788: (BB, TB, dB) => {
-    dB.r(TB), dB.d(TB, {
-      BloxdInformation: () => OB
+  40663: (YY, rY, DY) => {
+    DY.d(rY, {
+      b: () => FY
     });
-    var VB = dB(1078),
-      yB = dB(62),
-      pB = dB(95),
-      lB = dB(1324),
-      JB = dB(138),
-      YB = dB(946),
-      gB = dB(980);
-    const oB = (0, yB.lazy)((() => dB.e(109).then((() => dB(5862))))),
-      kB = (0, yB.lazy)((() => dB.e(110).then((() => dB(5868)))));
-
-    function LB() {
-      return (0, gB.jsxs)("div", {
-        className: "LegalText",
-        children: [(0, gB.jsx)("div", {
-          className: "BloxdInformationHeader FullyFancyText",
-          children: "Security Exploit Bounty Program"
-        }), (0, gB.jsx)("p", {
-          children: "We have a program for reporting security exploits. Find an important security flaw in Bloxd? Report it through the process below. Please include steps to reproduce the exploit, including any relevant code if the exploit requires it. You will receive the reward if we verify and fix the exploit."
-        }), (0, gB.jsx)("h3", {
-          children: "1. How to Report"
-        }), (0, gB.jsxs)("p", {
-          children: ["Please follow the instructions on", " ", (0, gB.jsx)("a", {
-            href: "https://forms.gle/wUL8WiH3LbGiJBzF7",
-            target: "_blank",
-            rel: "noreferrer",
-            children: "this form"
-          }), " ", "to report the exploit."]
-        }), (0, gB.jsx)("h3", {
-          children: "2. Frequently Asked Questions"
-        }), (0, gB.jsx)("p", {
-          children: (0, gB.jsx)("b", {
-            children: "Q: When can I expect a response?"
-          })
-        }), (0, gB.jsx)("p", {
-          children: "A: If you've left any contact details, you will typically receive a response within two to four weeks, but we will try to respond as soon as possible."
-        }), (0, gB.jsx)("p", {
-          children: (0, gB.jsx)("b", {
-            children: "Q: Can I remain anonymous?"
-          })
-        }), (0, gB.jsx)("p", {
-          children: "A: Yes, but we will be unable to contact you for rewards if you do not leave any contact details."
-        }), (0, gB.jsx)("p", {
-          children: (0, gB.jsx)("b", {
-            children: "Q: What if multiple people report the same exploit, complete with repro steps?"
-          })
-        }), (0, gB.jsx)("p", {
-          children: "A: Typically, only the first reporter will receive the reward."
-        }), (0, gB.jsx)("p", {
-          children: (0, gB.jsx)("b", {
-            children: "Q: What is out of scope?"
-          })
-        }), (0, gB.jsxs)("p", {
-          children: ["A:", (0, gB.jsxs)("ul", {
-            children: [(0, gB.jsx)("li", {
-              children: "Social engineering / phishing"
-            }), (0, gB.jsx)("li", {
-              children: "DDoS attacks. If an attack requires a large number of computers to hit our servers with packets, it is out of scope. However, if a single computer/script can execute the attack, it is in scope of this programme."
-            }), (0, gB.jsx)("li", {
-              children: "Use of stolen credentials"
-            }), (0, gB.jsx)("li", {
-              children: "Data that is already public or user-supplied (e.g. usernames, chat, etc)"
-            }), (0, gB.jsx)("li", {
-              children: "Non-security related bugs - please report in #report-a-bug in our discord"
-            })]
-          })]
-        }), (0, gB.jsx)("p", {
-          children: (0, gB.jsx)("b", {
-            children: "Q: I'm banned in Bloxd, am I still eligible to submit exploits through this program?"
-          })
-        }), (0, gB.jsx)("p", {
-          children: "A: Yes, as long as you follow the rules laid out with respect to the exploit you are reporting. I.e. don't abuse or share the exploit, etc."
-        })]
-      })
-    }
-
-    function OB() {
-      const {
-        t: BB
-      } = (0, VB.z)(), [TB, dB] = (0, yB.useState)("partnersAndCredits"), OB = {
-        partnersAndCredits: {
-          title: pB.featureFlags.usePartnerLinks ? BB("homePage:partnersAndCredits") : BB("homePage:credits"),
-          content: (0, gB.jsxs)(gB.Fragment, {
-            children: [(0, gB.jsx)("div", {
-              className: "BloxdInformationHeader FullyFancyText",
-              children: pB.featureFlags.usePartnerLinks ? BB("homePage:partnersAndCredits") : BB("homePage:credits")
-            }), pB.featureFlags.usePartnerLinks && "\n\t\t\t\t\tPartners:\n\n\t\t\t\t\tcrazygames.com - https://www.crazygames.com/c/io\n\t\t\t\t\tnow.gg - https://now.gg/\n\t\t\t\t\tminijuegos.com - https://www.minijuegos.com/\n\t\t\t\t\tkevin.games - https://kevin.games/\n\t\t\t\t\tsilvergames.com - https://www.silvergames.com/\n\t\t\t\t\tplay123.com - https://play123.com/\n\n\t\t\t\t\t", "\n\t\t\t\t\t\tCool sites:\n\n\t\t\t\t\t\tBloxd Youtube Videos - https://www.youtube.com/ (duh)\n\n\t\t\t\t\t", '\n\t\t\t\t\tCredits:\n\n\t\t\t\t\tMusic:\n\t\t\t\t\tSignificant amount of music by Adigold on envato elements. Titles by Adigold:\n\t\t\t\t\tA Place to be Free\n\t\t\t\t\tButterfly Effect\n\t\t\t\t\tDreamless Sleep\n\t\t\t\t\tFrozen Pulse\n\t\t\t\t\tFrozen Skies\n\t\t\t\t\tHealing Thoughts\n\t\t\t\t\tHere Forever\n\t\t\t\t\tJust a Little Hope\n\t\t\t\t\tJust Like Heaven\n\t\t\t\t\tMemories Remain\n\t\t\t\t\tPlace to be\n\t\t\t\t\tThe Riverside\n\t\t\t\t\tThe Wonder\n\t\t\t\t\tVetrar\n\t\t\t\t\tFurther titles:\n\t\t\t\t\thighway-1-retro-gaming-version: Accessible on lonepeakmusic\'s bandcamp\n\t\t\t\t\theroic-demise-updated-version: Accessible on opengameart\n\t\t\t\t\thappy-arcade-tune: Accessible on opengameart\n\t\t\t\t\ttown-theme-rpg: Accessible on opengameart\n\t\t\t\t\t5-chiptunes-action: Accessible on opengameart\n\t\t\t\t\tslow-motion: Accessible on bensound - royalty free music section\n\t\t\t\t\tI Have Often Told You Stories (guitar instrumental) by Ivan Chew (c) copyright 2013 Licensed under a Creative Commons Attribution (3.0) license. Accessible on ccmixter under "ramblinglibrarian"\n\t\t\t\t\tReverie (small theme) by _ghost (c) copyright 2010 Licensed under a Creative Commons Attribution (3.0) license. Ft: Pitx. Accessible on ccmixter under "_ghost"\n\t\t\t\t\tSilence Await by Analog By Nature (c) copyright 2008 Licensed under a Creative Commons Attribution (3.0) license. Ft: oldDog. Accessible on ccmixter under "cdk"\n\t\t\t\t\tEthereal Space by Snowflake (c) copyright 2011 Licensed under a Creative Commons Attribution (3.0) license. Ft: Zep Hurme. Accessible on ccmixter under "snowflake"\n\t\t\t\t\tbuild-up-scenes-battle-ship: By Hot_Dope. Accessible on pixabay\n\t\t\t\t\tRaise The Sails: By SergePavkinMusic. Accessible on pixabay\n\t\t\t\t\tThe Epic Adventure: By The_Mountain. Accessible on pixabay\n\t\t\t\t\tCorsairs: By StudioKolomna. Accessible on uppbeat\n\t\t\t\t\tI am the Sea - Epic Pirate Battle Music. Supported by #TheROOMnoCopyRMusic\n\t\t\t\t\tPirates by Mojo Productions\n\t\t\t\t\tSneaky Jazz by Mojo Productions\n\t\t\t\t\tThe Sneaky by Mojo Productions\n\t\t\t\t\tThe Sneaky Jazz by Mojo Productions\n\t\t\t\t\tSpooky Scary Skeletons - 3mp1r3 Orchestral Cover (Instrumental): By 3MP-The-Rook (c) copyright 2021 Licensed under a Creative Commons Attribution (3.0) license. Accessible on newgrounds\n\n\n\t\t\t\t\tSkybox:\n\t\t\t\t\tspace-skyboxes-0. By StumpyStrust. Accessible on opengameart\n\t\t\t\t\tinterstellar-skybox. By Jockum Skoglund (hipshot). Accessible on opengameart\n\t\t\t\t\tgloomy-skybox. By Spiney. Accessible on opengameart\n\n\n\t\t\t\t\tMap builds:\n\t\t\t\t\tjar9 - Medieval Castle\n\t\t\t\t\tjar9 - Iron Man\'s Mansion\n\t\t\t\t\tjar9 - Hawaiian pineapple resort\n\t\t\t\t\tNot_Tred - Pyrage and The Century\n\t\t\t\t\tBubblesAndSuch - Hide and Seek Office map\n\t\t\t\t\tWeark - Dinosaur Murder Mystery map\n\t\t\t\t\tMavers - Jungle Theme Skywars map\n\t\t\t\t\tPigiama-Party-Crew - Skywars Castle map\n\t\t\t\t\tPigiama-Party-Crew - Skywars frozen map\n\t\t\t\t\tPartyFinger - Skywars Mushroom map\n\t\t\t\t\tSadClown - Skywars Simple Lego map\n\t\t\t\t\tP2H - Hide and Seek Western map (made for bloxd)\n\t\t\t\t\tjanuaryboy - Double Trouble pirates map (made for bloxd)\n\t\t\t\t\tjanuaryboy - Stowaway Seas pirates map (made for bloxd)\n\t\t\t\t\tjanuaryboy - Woesome Waters pirates map (made for bloxd)\n\t\t\t\t\tLadyHaley - Capture the Flag\n\n\n\t\t\t\t\tHome Screen Builds:\n\t\t\t\t\taxchitectmc (arch): valley town\n\t\t\t\t\tbush_man_ (B0ZO): Reactor Island / Elver\n\t\t\t\t\titz_parkour_queen (!Kat)\n\t\t\t\t\tthe_ccccc_83959 (the_ccccc)\n\t\t\t\t\tsnapshot0378 (AspectOfEntity)\n\t\t\t\t\tbanshee_61108 (Banshee)\n\t\t\t\t\tcreativeartisan856888 (L16_F51620)\n\t\t\t\t\tblazingcharlie (BlazingCharlie)\n\t\t\t\t\tkentaki65501 (\ud835\ude10\ud835\ude15\ud835\ude10\ud835\ude1b\ud835\ude10\ud835\ude08\ud835\ude13"\ud835\ude12")\n\n\n\t\t\t\t\tCharacter model:\n\t\t\t\t\tkenney bundle accessible on itch\n\n\n\t\t\t\t\tTextures:\n\t\t\t\t\tDronyazka\n\t\t\t\t\t1qayesy\n\t\t\t\t\tBlocd\n\t\t\t\t\tJanuaryBoy\n\t\t\t\t\tvinivieira\n\t\t\t\t\thttps://doughnutdev.itch.io/\n\t\t\t\t\tDigs - digs-simple-pack\n\t\t\t\t\thttps://dafluffypotato.itch.io/pixel-country-flags\n\n\n\t\t\t\t\tPet Paintings:\n\t\t\t\t\tJanuaryBoy\n\n\n\t\t\t\t\tSounds:\n\t\t\t\t\tgamemasteraudio\n\t\t\t\t\tSn0wShepherd - snowsong-total-sound-and-music-resource-pack\n\t\t\t\t\tFrawzy - enhanced-audio pack - accessible on curseforge\n\t\t\t\t\tOreCruncher (and sub contributors) - accessible on github via the OreCruncher/DynamicSurroundings repo\n\t\t\t\t\tWistanSound - pig, cow & sheep sounds pack\n\t\t\t\t\tKenney - rpg-audio pack - accessible on kenney.nl\n\n\n\t\t\t\t\tTranslations:\n\t\t\t\t\tArabic: GoldWaterMelon, MemeYou, faresaliahmed1234, Bloxd Builder, Toast123, Exinvity, Bruhbro, Coffee\n\t\t\t\t\tGerman: random, 1qayesy, LordDarknessYT, BRELJIS, Black_White, FJGaming, Tabby bee, Cougaran, SUPERJERRY, DigitalDragon\n\t\t\t\t\tSpanish: locomoco330, perky.11, mash_the_idiot, kilmepls, cisaa, Patata, MrT3, Sameiflovi, Monty Mole, MisterCasino\n\t\t\t\t\tFrench: .frenchgamer., ImBoop, Bloxd Builder, Elforeve, JaClol, lews123, LeVraiZouzou, Kontroleuh, kilmepls, _LightningStrike_, the_ccccc, ga\xeb, M.K, BearsBoi\n\t\t\t\t\tHindi: F22 Raptor, ObiloxYT, MucknDuck, SHUSH XD, __DUCK__\n\t\t\t\t\tIndonesian: zash, bool bola, kevin143, fedortam, Image\'s_MxD, THESECONDONE, Mozzy\n\t\t\t\t\tItalian: Star_mario, NAME VIOLTION4, Trespasser, Gabriel, Cougaran\n\t\t\t\t\tJapanese: tomoru1741, httpsnet, namu_namu, aaa_second, another_sky, pockymouse, Interactive\n\t\t\t\t\tDutch: brickswizard, Ryobagyatt-bloxd, MONKE, Thijssiee, Zethal_\n\t\t\t\t\tPortuguese: Da59Gigas, kilmepls, coding.cannoli\n\t\t\t\t\tPortuguese (Brazil): vinivieira, Muffinscott, pompom, kilmepls, noselastic, icyrlq, tokachiri\n\t\t\t\t\tRussian: Ryno2024, FOG_Batman17_WM, Bush, imlaggingbad, NahBro, Riddle, timofeycacti\n\t\t\t\t\tTamil: heheboi420, Tridentify\n\t\t\t\t\tTurkish: 1qayesy, iharqv, FOG_Batman17_WM, aryosta\n\t\t\t\t\tVietnamese: andye_da_Grass, that_asian_guy, ckn, Bready, Appa\n\t\t\t\t\tChinese (Simplified): AQLI, KHROTU, G2Lighter, Always yxZ, Baklava, Ender_, \u03c4Sean\ud83c\udde8\ud83c\uddf3\u03c4, ACreativeGoddess\n\t\t\t\t\tChinese (Traditional): AQLI, hkxd123, Jas_Mine_, Axolotl_Fox, happygamer, immortal, Idolized, Huh?\n\t\t\t\t\tUkrainian: xnutella, Ryno2024, shadow cat, Riddle\n\t\t\t\t\tPolish: PKcomander, ashxlek, tokachiri, LSVJ, 3ndii1337\n\t\t\t\t\tKorean: bobuk, Interactive\n\n\n\t\t\t\t\tMisc:\n\t\t\t\t\tMonogram font - https://datagoblin.itch.io/monogram\n\t\t\t\t\tTreasure Chests - DanSevenStar.xyz - treasure-chest-pixel-art-animation - accessible on opengameart\n\t\t\t\t\tTouch scroll icon created by Those Icons - accessible on Flaticon in the free-icons category under the "scroll" name\n\t\t\t\t\tThis product makes use of GeoLite2 data created by MaxMind, available from https://www.maxmind.com\n\t\t\t\t\t']
-          })
-        },
-        bloxdIngameRules: {
-          title: BB("homePage:bloxdIngameRules"),
-          content: (0, gB.jsxs)(gB.Fragment, {
-            children: [(0, gB.jsx)("div", {
-              className: "BloxdInformationHeader FullyFancyText",
-              children: BB("homePage:bloxdIngameRules")
-            }), "\n\t\t\t\t\t1. Be respectful of others.\n\n\t\t\t\t\t2. Don't harass or bully other players.\n\n\t\t\t\t\t3. Discriminatory jokes and hate speech (attacks on an individual or group based on their race, ethnicity, national origin, sex, gender, sexual orientation, religious affiliation, or disabilities) is not allowed.\n\n\t\t\t\t\t4. Cursing is not allowed, avoiding the swear filter is not allowed.\n\n\t\t\t\t\t5. Spamming is not allowed in any form.\n\n\t\t\t\t\t6. Don't post links.\n\n\t\t\t\t\t7. Don't do anything NSFW related or sexually suggestive.\n\n\t\t\t\t\t8. Online dating is not allowed.\n\n\t\t\t\t\t9. Don't use any offensive/inappropriate names.\n\n\t\t\t\t\t10. Don't impersonate staff or developers. This can include players if the player is clearly trying to impersonate you.\n\n\t\t\t\t\t11. No Hacking/Cheating/Autoclicking. Some clicking techniques such as drag clicking can be detected as autoclicking. Be careful using these techniques, if you are banned for autoclicking, you will not be unbanned.\n\n\t\t\t\t\t12. Creating, sharing, or using bloxd userscripts, extensions or other modifications is not allowed.\n\n\t\t\t\t\t13. Don't create boards/signs with inappropriate text.\n\n\t\t\t\t\t14. Don't create worlds lobbies for inappropriate purposes.\n\n\t\t\t\t\t15. Don't evade mutes or bans using alt accounts. Doing so will result in more action against your main account.\n\n\t\t\t\t\t16. Don't exploit duplication bugs. If you discover a serverside way to duplicate items, e.g.: the duped items stay when you leave and rejoin, then please carefully follow all the instructions in our Security Exploit Bounty Program.\n\n\t\t\t\t\t17. Don't trade ingame items for gift purchases (e.g. superrank).\n\t\t\t\t\t\n\t\t\t\t\t18. Advocating for or encouraging any of the above rule breaking is not allowed.\n\t\t\t\t"]
-          })
-        },
-        privacyPolicy: {
-          title: BB("homePage:privacyPolicy"),
-          content: (0, gB.jsx)(yB.Suspense, {
-            fallback: null,
-            children: (0, gB.jsx)(oB, {})
-          })
-        },
-        termsOfService: {
-          title: BB("homePage:termsOfService"),
-          content: (0, gB.jsx)(yB.Suspense, {
-            fallback: null,
-            children: (0, gB.jsx)(kB, {})
-          })
-        },
-        securityExploitBounties: {
-          title: BB("homePage:securityExploitBounties"),
-          content: (0, gB.jsx)(LB, {})
+    class FY {}
+    FY.AUTOSAMPLERSUFFIX = "Sampler", FY.DISABLEUA = "#define DISABLE_UNIFORMITY_ANALYSIS", FY.ALPHA_DISABLE = 0, FY.ALPHA_ADD = 1, FY.ALPHA_COMBINE = 2, FY.ALPHA_SUBTRACT = 3, FY.ALPHA_MULTIPLY = 4, FY.ALPHA_MAXIMIZED = 5, FY.ALPHA_ONEONE = 6, FY.ALPHA_PREMULTIPLIED = 7, FY.ALPHA_PREMULTIPLIED_PORTERDUFF = 8, FY.ALPHA_INTERPOLATE = 9, FY.ALPHA_SCREENMODE = 10, FY.ALPHA_ONEONE_ONEONE = 11, FY.ALPHA_ALPHATOCOLOR = 12, FY.ALPHA_REVERSEONEMINUS = 13, FY.ALPHA_SRC_DSTONEMINUSSRCALPHA = 14, FY.ALPHA_ONEONE_ONEZERO = 15, FY.ALPHA_EXCLUSION = 16, FY.ALPHA_LAYER_ACCUMULATE = 17, FY.ALPHA_MIN = 18, FY.ALPHA_MAX = 19, FY.ALPHA_DUAL_SRC0_ADD_SRC1xDST = 20, FY.ALPHA_REPLACE_COLOR = 21, FY.ALPHA_EQUATION_ADD = 0, FY.ALPHA_EQUATION_SUBSTRACT = 1, FY.ALPHA_EQUATION_REVERSE_SUBTRACT = 2, FY.ALPHA_EQUATION_MAX = 3, FY.ALPHA_EQUATION_MIN = 4, FY.ALPHA_EQUATION_DARKEN = 5, FY.DELAYLOADSTATE_NONE = 0, FY.DELAYLOADSTATE_LOADED = 1, FY.DELAYLOADSTATE_LOADING = 2, FY.DELAYLOADSTATE_NOTLOADED = 4, FY.NEVER = 512, FY.ALWAYS = 519, FY.LESS = 513, FY.EQUAL = 514, FY.LEQUAL = 515, FY.GREATER = 516, FY.GEQUAL = 518, FY.NOTEQUAL = 517, FY.KEEP = 7680, FY.ZERO = 0, FY.REPLACE = 7681, FY.INCR = 7682, FY.DECR = 7683, FY.INVERT = 5386, FY.INCR_WRAP = 34055, FY.DECR_WRAP = 34056, FY.TEXTURE_CLAMP_ADDRESSMODE = 0, FY.TEXTURE_WRAP_ADDRESSMODE = 1, FY.TEXTURE_MIRROR_ADDRESSMODE = 2, FY.TEXTURE_REPETITION_NONE = 0, FY.TEXTURE_REPETITION_NOISE_BLEND = 1, FY.TEXTURE_REPETITION_HEX_TILING = 2, FY.TEXTURE_REPETITION_TILE_RANDOMIZATION = 3, FY.TEXTURE_REPETITION_VORONOI_BOMBING = 4, FY.TEXTURE_CREATIONFLAG_STORAGE = 1, FY.TEXTUREFORMAT_ALPHA = 0, FY.TEXTUREFORMAT_LUMINANCE = 1, FY.TEXTUREFORMAT_LUMINANCE_ALPHA = 2, FY.TEXTUREFORMAT_RGB = 4, FY.TEXTUREFORMAT_RGBA = 5, FY.TEXTUREFORMAT_RED = 6, FY.TEXTUREFORMAT_R = 6, FY.TEXTUREFORMAT_R16_UNORM = 33322, FY.TEXTUREFORMAT_RG16_UNORM = 33324, FY.TEXTUREFORMAT_RGB16_UNORM = 32852, FY.TEXTUREFORMAT_RGBA16_UNORM = 32859, FY.TEXTUREFORMAT_R16_SNORM = 36760, FY.TEXTUREFORMAT_RG16_SNORM = 36761, FY.TEXTUREFORMAT_RGB16_SNORM = 36762, FY.TEXTUREFORMAT_RGBA16_SNORM = 36763, FY.TEXTUREFORMAT_RG = 7, FY.TEXTUREFORMAT_RED_INTEGER = 8, FY.TEXTUREFORMAT_R_INTEGER = 8, FY.TEXTUREFORMAT_RG_INTEGER = 9, FY.TEXTUREFORMAT_RGB_INTEGER = 10, FY.TEXTUREFORMAT_RGBA_INTEGER = 11, FY.TEXTUREFORMAT_BGRA = 12, FY.TEXTUREFORMAT_DEPTH24_STENCIL8 = 13, FY.TEXTUREFORMAT_DEPTH32_FLOAT = 14, FY.TEXTUREFORMAT_DEPTH16 = 15, FY.TEXTUREFORMAT_DEPTH24 = 16, FY.TEXTUREFORMAT_DEPTH24UNORM_STENCIL8 = 17, FY.TEXTUREFORMAT_DEPTH32FLOAT_STENCIL8 = 18, FY.TEXTUREFORMAT_STENCIL8 = 19, FY.TEXTUREFORMAT_UNDEFINED = 4294967295, FY.TEXTUREFORMAT_COMPRESSED_RGBA_BPTC_UNORM = 36492, FY.TEXTUREFORMAT_COMPRESSED_SRGB_ALPHA_BPTC_UNORM = 36493, FY.TEXTUREFORMAT_COMPRESSED_RGB_BPTC_UNSIGNED_FLOAT = 36495, FY.TEXTUREFORMAT_COMPRESSED_RGB_BPTC_SIGNED_FLOAT = 36494, FY.TEXTUREFORMAT_COMPRESSED_RGBA_S3TC_DXT5 = 33779, FY.TEXTUREFORMAT_COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT = 35919, FY.TEXTUREFORMAT_COMPRESSED_RGBA_S3TC_DXT3 = 33778, FY.TEXTUREFORMAT_COMPRESSED_SRGB_ALPHA_S3TC_DXT3_EXT = 35918, FY.TEXTUREFORMAT_COMPRESSED_RGBA_S3TC_DXT1 = 33777, FY.TEXTUREFORMAT_COMPRESSED_RGB_S3TC_DXT1 = 33776, FY.TEXTUREFORMAT_COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT = 35917, FY.TEXTUREFORMAT_COMPRESSED_SRGB_S3TC_DXT1_EXT = 35916, FY.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_4x4 = 37808, FY.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_5x4 = 37809, FY.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_5x5 = 37810, FY.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_6x5 = 37811, FY.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_6x6 = 37812, FY.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_8x5 = 37813, FY.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_8x6 = 37814, FY.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_8x8 = 37815, FY.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_10x5 = 37816, FY.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_10x6 = 37817, FY.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_10x8 = 37818, FY.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_10x10 = 37819, FY.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_12x10 = 37820, FY.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_12x12 = 37821, FY.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_4x4_KHR = 37840, FY.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_5x4_KHR = 37841, FY.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_5x5_KHR = 37842, FY.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_6x5_KHR = 37843, FY.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_6x6_KHR = 37844, FY.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_8x5_KHR = 37845, FY.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_8x6_KHR = 37846, FY.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_8x8_KHR = 37847, FY.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_10x5_KHR = 37848, FY.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_10x6_KHR = 37849, FY.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_10x8_KHR = 37850, FY.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_10x10_KHR = 37851, FY.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_12x10_KHR = 37852, FY.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_12x12_KHR = 37853, FY.TEXTUREFORMAT_COMPRESSED_RGB_ETC1_WEBGL = 36196, FY.TEXTUREFORMAT_COMPRESSED_RGB8_ETC2 = 37492, FY.TEXTUREFORMAT_COMPRESSED_SRGB8_ETC2 = 37493, FY.TEXTUREFORMAT_COMPRESSED_RGB8_PUNCHTHROUGH_ALPHA1_ETC2 = 37494, FY.TEXTUREFORMAT_COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2 = 37495, FY.TEXTUREFORMAT_COMPRESSED_RGBA8_ETC2_EAC = 37496, FY.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ETC2_EAC = 37497, FY.TEXTURETYPE_UNSIGNED_BYTE = 0, FY.TEXTURETYPE_UNSIGNED_INT = 0, FY.TEXTURETYPE_FLOAT = 1, FY.TEXTURETYPE_HALF_FLOAT = 2, FY.TEXTURETYPE_BYTE = 3, FY.TEXTURETYPE_SHORT = 4, FY.TEXTURETYPE_UNSIGNED_SHORT = 5, FY.TEXTURETYPE_INT = 6, FY.TEXTURETYPE_UNSIGNED_INTEGER = 7, FY.TEXTURETYPE_UNSIGNED_SHORT_4_4_4_4 = 8, FY.TEXTURETYPE_UNSIGNED_SHORT_5_5_5_1 = 9, FY.TEXTURETYPE_UNSIGNED_SHORT_5_6_5 = 10, FY.TEXTURETYPE_UNSIGNED_INT_2_10_10_10_REV = 11, FY.TEXTURETYPE_UNSIGNED_INT_24_8 = 12, FY.TEXTURETYPE_UNSIGNED_INT_10F_11F_11F_REV = 13, FY.TEXTURETYPE_UNSIGNED_INT_5_9_9_9_REV = 14, FY.TEXTURETYPE_FLOAT_32_UNSIGNED_INT_24_8_REV = 15, FY.TEXTURETYPE_UNDEFINED = 16, FY.TEXTURE_2D = 3553, FY.TEXTURE_2D_ARRAY = 35866, FY.TEXTURE_CUBE_MAP = 34067, FY.TEXTURE_CUBE_MAP_ARRAY = 3735928559, FY.TEXTURE_3D = 32879, FY.TEXTURE_NEAREST_SAMPLINGMODE = 1, FY.TEXTURE_NEAREST_NEAREST = 1, FY.TEXTURE_BILINEAR_SAMPLINGMODE = 2, FY.TEXTURE_LINEAR_LINEAR = 2, FY.TEXTURE_TRILINEAR_SAMPLINGMODE = 3, FY.TEXTURE_LINEAR_LINEAR_MIPLINEAR = 3, FY.TEXTURE_NEAREST_NEAREST_MIPNEAREST = 4, FY.TEXTURE_NEAREST_LINEAR_MIPNEAREST = 5, FY.TEXTURE_NEAREST_LINEAR_MIPLINEAR = 6, FY.TEXTURE_NEAREST_LINEAR = 7, FY.TEXTURE_NEAREST_NEAREST_MIPLINEAR = 8, FY.TEXTURE_LINEAR_NEAREST_MIPNEAREST = 9, FY.TEXTURE_LINEAR_NEAREST_MIPLINEAR = 10, FY.TEXTURE_LINEAR_LINEAR_MIPNEAREST = 11, FY.TEXTURE_LINEAR_NEAREST = 12, FY.TEXTURE_EXPLICIT_MODE = 0, FY.TEXTURE_SPHERICAL_MODE = 1, FY.TEXTURE_PLANAR_MODE = 2, FY.TEXTURE_CUBIC_MODE = 3, FY.TEXTURE_PROJECTION_MODE = 4, FY.TEXTURE_SKYBOX_MODE = 5, FY.TEXTURE_INVCUBIC_MODE = 6, FY.TEXTURE_EQUIRECTANGULAR_MODE = 7, FY.TEXTURE_FIXED_EQUIRECTANGULAR_MODE = 8, FY.TEXTURE_FIXED_EQUIRECTANGULAR_MIRRORED_MODE = 9, FY.TEXTURE_FILTERING_QUALITY_OFFLINE = 4096, FY.TEXTURE_FILTERING_QUALITY_HIGH = 64, FY.TEXTURE_FILTERING_QUALITY_MEDIUM = 16, FY.TEXTURE_FILTERING_QUALITY_LOW = 8, FY.SCALEMODE_FLOOR = 1, FY.SCALEMODE_NEAREST = 2, FY.SCALEMODE_CEILING = 3, FY.MATERIAL_TextureDirtyFlag = 1, FY.MATERIAL_LightDirtyFlag = 2, FY.MATERIAL_FresnelDirtyFlag = 4, FY.MATERIAL_AttributesDirtyFlag = 8, FY.MATERIAL_MiscDirtyFlag = 16, FY.MATERIAL_PrePassDirtyFlag = 32, FY.MATERIAL_ImageProcessingDirtyFlag = 64, FY.MATERIAL_AllDirtyFlag = 127, FY.MATERIAL_TriangleFillMode = 0, FY.MATERIAL_WireFrameFillMode = 1, FY.MATERIAL_PointFillMode = 2, FY.MATERIAL_PointListDrawMode = 3, FY.MATERIAL_LineListDrawMode = 4, FY.MATERIAL_LineLoopDrawMode = 5, FY.MATERIAL_LineStripDrawMode = 6, FY.MATERIAL_TriangleStripDrawMode = 7, FY.MATERIAL_TriangleFanDrawMode = 8, FY.MATERIAL_ClockWiseSideOrientation = 0, FY.MATERIAL_CounterClockWiseSideOrientation = 1, FY.MATERIAL_DIFFUSE_MODEL_E_OREN_NAYAR = 0, FY.MATERIAL_DIFFUSE_MODEL_BURLEY = 1, FY.MATERIAL_DIFFUSE_MODEL_LAMBERT = 2, FY.MATERIAL_DIFFUSE_MODEL_LEGACY = 3, FY.MATERIAL_DIELECTRIC_SPECULAR_MODEL_GLTF = 0, FY.MATERIAL_DIELECTRIC_SPECULAR_MODEL_OPENPBR = 1, FY.MATERIAL_CONDUCTOR_SPECULAR_MODEL_GLTF = 0, FY.MATERIAL_CONDUCTOR_SPECULAR_MODEL_OPENPBR = 1, FY.ACTION_NothingTrigger = 0, FY.ACTION_OnPickTrigger = 1, FY.ACTION_OnLeftPickTrigger = 2, FY.ACTION_OnRightPickTrigger = 3, FY.ACTION_OnCenterPickTrigger = 4, FY.ACTION_OnPickDownTrigger = 5, FY.ACTION_OnDoublePickTrigger = 6, FY.ACTION_OnPickUpTrigger = 7, FY.ACTION_OnPickOutTrigger = 16, FY.ACTION_OnLongPressTrigger = 8, FY.ACTION_OnPointerOverTrigger = 9, FY.ACTION_OnPointerOutTrigger = 10, FY.ACTION_OnEveryFrameTrigger = 11, FY.ACTION_OnIntersectionEnterTrigger = 12, FY.ACTION_OnIntersectionExitTrigger = 13, FY.ACTION_OnKeyDownTrigger = 14, FY.ACTION_OnKeyUpTrigger = 15, FY.PARTICLES_BILLBOARDMODE_Y = 2, FY.PARTICLES_BILLBOARDMODE_ALL = 7, FY.PARTICLES_BILLBOARDMODE_STRETCHED = 8, FY.PARTICLES_BILLBOARDMODE_STRETCHED_LOCAL = 9, FY.MESHES_CULLINGSTRATEGY_STANDARD = 0, FY.MESHES_CULLINGSTRATEGY_BOUNDINGSPHERE_ONLY = 1, FY.MESHES_CULLINGSTRATEGY_OPTIMISTIC_INCLUSION = 2, FY.MESHES_CULLINGSTRATEGY_OPTIMISTIC_INCLUSION_THEN_BSPHERE_ONLY = 3, FY.SCENELOADER_NO_LOGGING = 0, FY.SCENELOADER_MINIMAL_LOGGING = 1, FY.SCENELOADER_SUMMARY_LOGGING = 2, FY.SCENELOADER_DETAILED_LOGGING = 3, FY.PREPASS_IRRADIANCE_LEGACY_TEXTURE_TYPE = 0, FY.PREPASS_POSITION_TEXTURE_TYPE = 1, FY.PREPASS_VELOCITY_TEXTURE_TYPE = 2, FY.PREPASS_REFLECTIVITY_TEXTURE_TYPE = 3, FY.PREPASS_COLOR_TEXTURE_TYPE = 4, FY.PREPASS_DEPTH_TEXTURE_TYPE = 5, FY.PREPASS_NORMAL_TEXTURE_TYPE = 6, FY.PREPASS_ALBEDO_SQRT_TEXTURE_TYPE = 7, FY.PREPASS_WORLD_NORMAL_TEXTURE_TYPE = 8, FY.PREPASS_LOCAL_POSITION_TEXTURE_TYPE = 9, FY.PREPASS_SCREENSPACE_DEPTH_TEXTURE_TYPE = 10, FY.PREPASS_VELOCITY_LINEAR_TEXTURE_TYPE = 11, FY.PREPASS_ALBEDO_TEXTURE_TYPE = 12, FY.PREPASS_NORMALIZED_VIEW_DEPTH_TEXTURE_TYPE = 13, FY.PREPASS_IRRADIANCE_TEXTURE_TYPE = 14, FY.PREPASS_OBJECT_ID_TEXTURE_TYPE = 15, FY.PREPASS_MESH_BLEND_TAG_TEXTURE_TYPE = 16, FY.BUFFER_CREATIONFLAG_READ = 1, FY.BUFFER_CREATIONFLAG_WRITE = 2, FY.BUFFER_CREATIONFLAG_READWRITE = 3, FY.BUFFER_CREATIONFLAG_UNIFORM = 4, FY.BUFFER_CREATIONFLAG_VERTEX = 8, FY.BUFFER_CREATIONFLAG_INDEX = 16, FY.BUFFER_CREATIONFLAG_STORAGE = 32, FY.BUFFER_CREATIONFLAG_INDIRECT = 64, FY.RENDERPASS_MAIN = 0, FY.INPUT_ALT_KEY = 18, FY.INPUT_CTRL_KEY = 17, FY.INPUT_META_KEY1 = 91, FY.INPUT_META_KEY2 = 92, FY.INPUT_META_KEY3 = 93, FY.INPUT_SHIFT_KEY = 16, FY.SNAPSHOTRENDERING_STANDARD = 0, FY.SNAPSHOTRENDERING_FAST = 1, FY.PERSPECTIVE_CAMERA = 0, FY.ORTHOGRAPHIC_CAMERA = 1, FY.FOVMODE_VERTICAL_FIXED = 0, FY.FOVMODE_HORIZONTAL_FIXED = 1, FY.RIG_MODE_NONE = 0, FY.RIG_MODE_STEREOSCOPIC_ANAGLYPH = 10, FY.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_PARALLEL = 11, FY.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED = 12, FY.RIG_MODE_STEREOSCOPIC_OVERUNDER = 13, FY.RIG_MODE_STEREOSCOPIC_INTERLACED = 14, FY.RIG_MODE_VR = 20, FY.RIG_MODE_CUSTOM = 22, FY.MAX_SUPPORTED_UV_SETS = 6, FY.GL_ALPHA_EQUATION_ADD = 32774, FY.GL_ALPHA_EQUATION_MIN = 32775, FY.GL_ALPHA_EQUATION_MAX = 32776, FY.GL_ALPHA_EQUATION_SUBTRACT = 32778, FY.GL_ALPHA_EQUATION_REVERSE_SUBTRACT = 32779, FY.GL_ALPHA_FUNCTION_SRC = 768, FY.GL_ALPHA_FUNCTION_ONE_MINUS_SRC_COLOR = 769, FY.GL_ALPHA_FUNCTION_SRC_ALPHA = 770, FY.GL_ALPHA_FUNCTION_ONE_MINUS_SRC_ALPHA = 771, FY.GL_ALPHA_FUNCTION_DST_ALPHA = 772, FY.GL_ALPHA_FUNCTION_ONE_MINUS_DST_ALPHA = 773, FY.GL_ALPHA_FUNCTION_DST_COLOR = 774, FY.GL_ALPHA_FUNCTION_ONE_MINUS_DST_COLOR = 775, FY.GL_ALPHA_FUNCTION_SRC_ALPHA_SATURATED = 776, FY.GL_ALPHA_FUNCTION_CONSTANT_COLOR = 32769, FY.GL_ALPHA_FUNCTION_ONE_MINUS_CONSTANT_COLOR = 32770, FY.GL_ALPHA_FUNCTION_CONSTANT_ALPHA = 32771, FY.GL_ALPHA_FUNCTION_ONE_MINUS_CONSTANT_ALPHA = 32772, FY.GL_ALPHA_FUNCTION_SRC1_COLOR = 35065, FY.GL_ALPHA_FUNCTION_ONE_MINUS_SRC1_COLOR = 35066, FY.GL_ALPHA_FUNCTION_SRC1_ALPHA = 34185, FY.GL_ALPHA_FUNCTION_ONE_MINUS_SRC1_ALPHA = 35067, FY.SnippetUrl = "https://snippet.babylonjs.com", FY.FOGMODE_NONE = 0, FY.FOGMODE_EXP = 1, FY.FOGMODE_EXP2 = 2, FY.FOGMODE_LINEAR = 3, FY.BYTE = 5120, FY.UNSIGNED_BYTE = 5121, FY.SHORT = 5122, FY.UNSIGNED_SHORT = 5123, FY.INT = 5124, FY.UNSIGNED_INT = 5125, FY.FLOAT = 5126, FY.HALF_FLOAT = 5131, FY.PositionKind = "position", FY.NormalKind = "normal", FY.TangentKind = "tangent", FY.UVKind = "uv", FY.UV2Kind = "uv2", FY.UV3Kind = "uv3", FY.UV4Kind = "uv4", FY.UV5Kind = "uv5", FY.UV6Kind = "uv6", FY.ColorKind = "color", FY.ColorInstanceKind = "instanceColor", FY.MatricesIndicesKind = "matricesIndices", FY.MatricesWeightsKind = "matricesWeights", FY.MatricesIndicesExtraKind = "matricesIndicesExtra", FY.MatricesWeightsExtraKind = "matricesWeightsExtra", FY.ANIMATIONTYPE_FLOAT = 0, FY.ANIMATIONTYPE_VECTOR3 = 1, FY.ANIMATIONTYPE_QUATERNION = 2, FY.ANIMATIONTYPE_MATRIX = 3, FY.ANIMATIONTYPE_COLOR3 = 4, FY.ANIMATIONTYPE_COLOR4 = 7, FY.ANIMATIONTYPE_VECTOR2 = 5, FY.ANIMATIONTYPE_SIZE = 6, FY.ShadowMinZ = 0, FY.ShadowMaxZ = 1e4, FY.OUTLINELAYER_SAMPLING_TRIDIRECTIONAL = 0, FY.OUTLINELAYER_SAMPLING_OCTADIRECTIONAL = 1
+  },
+  40636: (YY, rY, DY) => {
+    DY.d(rY, {
+      d: () => gY
+    });
+    var FY = DY(39127),
+      AY = DY(39131),
+      IY = DY(36524),
+      RY = DY(39387),
+      OY = DY(39355);
+    let gY = (() => {
+      var YY;
+      let rY, DY, gY, aY, vY = RY.c,
+        uY = [];
+      return YY = class extends vY {
+        constructor() {
+          super(...arguments), this._position = (0, FY.j)(this, uY), this._needProjectionMatrixCompute = !0, this._viewMatrix = IY.e.Identity(), this._projectionMatrix = IY.e.Identity()
         }
-      };
-      return (0, gB.jsxs)("div", {
-        className: "BloxdInformation",
-        children: [(0, gB.jsxs)("div", {
-          className: "BloxdInformationSectionList",
-          children: [Object.keys(OB).map((VB => (0, gB.jsx)(lB.T, {
-            active: TB === VB,
-            onClick: () => {
-              dB(VB)
-            },
-            children: BB(OB[VB].title)
-          }, VB))), pB.featureFlags.usePartnerLinks && (0, gB.jsx)(gB.Fragment, {
-            children: (0, gB.jsxs)(lB.T, {
-              onClick: () => {
-                window.open("https://www.crazygames.com/c/io")
-              },
-              children: [(0, gB.jsx)(YB.e, {
-                name: "arrow-up-right-from-square"
-              }), " Crazy Games"]
-            })
-          })]
-        }), (0, gB.jsx)("div", {
-          className: "BloxdInformationContentWrapper",
-          children: OB[TB].content
-        }), (0, gB.jsxs)("div", {
-          className: "BloxdInformationText",
-          children: ["SiteUsed: ", JB.v, " | SubSiteUsed: ", JB.D]
-        })]
-      })
+        _setPosition(YY) {
+          this._position = YY
+        }
+        get position() {
+          return this._position
+        }
+        set position(YY) {
+          this._setPosition(YY)
+        }
+        _setDirection(YY) {
+          this._direction = YY
+        }
+        get direction() {
+          return this._direction
+        }
+        set direction(YY) {
+          this._setDirection(YY)
+        }
+        get shadowMinZ() {
+          return this._shadowMinZ
+        }
+        set shadowMinZ(YY) {
+          this._shadowMinZ = YY, this.forceProjectionMatrixCompute()
+        }
+        get shadowMaxZ() {
+          return this._shadowMaxZ
+        }
+        set shadowMaxZ(YY) {
+          this._shadowMaxZ = YY, this.forceProjectionMatrixCompute()
+        }
+        computeTransformedInformation() {
+          return !(!this.parent || !this.parent.getWorldMatrix) && (this.transformedPosition || (this.transformedPosition = IY.r.Zero()), IY.r.TransformCoordinatesToRef(this.position, this.parent.getWorldMatrix(), this.transformedPosition), this.direction && (this.transformedDirection || (this.transformedDirection = IY.r.Zero()), IY.r.TransformNormalToRef(this.direction, this.parent.getWorldMatrix(), this.transformedDirection)), !0)
+        }
+        getDepthScale() {
+          return 50
+        }
+        getShadowDirection(YY) {
+          return this.transformedDirection ? this.transformedDirection : this.direction
+        }
+        getAbsolutePosition() {
+          return this.transformedPosition ? this.transformedPosition : this.position
+        }
+        setDirectionToTarget(YY) {
+          return this.direction = IY.r.Normalize(YY.subtract(this.position)), this.direction
+        }
+        getRotation() {
+          this.direction.normalize();
+          const YY = IY.r.Cross(this.direction, OY.b.Y),
+            rY = IY.r.Cross(YY, this.direction);
+          return IY.r.RotationFromAxis(YY, rY, this.direction)
+        }
+        needCube() {
+          return !1
+        }
+        needProjectionMatrixCompute() {
+          return this._needProjectionMatrixCompute
+        }
+        forceProjectionMatrixCompute() {
+          this._needProjectionMatrixCompute = !0
+        }
+        _initCache() {
+          super._initCache(), this._cache.position = IY.r.Zero()
+        }
+        _isSynchronized() {
+          return !!this._cache.position.equals(this.position)
+        }
+        computeWorldMatrix(YY) {
+          return !YY && this.isSynchronized() ? (this._currentRenderId = this.hT().getRenderId(), this._worldMatrix) : (this._updateCache(), this._cache.position.brY(this.position), this._worldMatrix || (this._worldMatrix = IY.e.Identity()), IY.e.TranslationToRef(this.position.x, this.position.y, this.position.z, this._worldMatrix), this.parent && this.parent.getWorldMatrix && (this._worldMatrix.multiplyToRef(this.parent.getWorldMatrix(), this._worldMatrix), this._markSyncedWithParent()), this._worldMatrixDeterminantIsDirty = !0, this._worldMatrix)
+        }
+        getDepthMinZ(YY) {
+          return void 0 !== this.shadowMinZ ? this.shadowMinZ : YY?.minZ || 0
+        }
+        getDepthMaxZ(YY) {
+          return void 0 !== this.shadowMaxZ ? this.shadowMaxZ : YY?.maxZ || 1e4
+        }
+        setShadowProjectionMatrix(YY, rY, DY) {
+          return this.customProjectionMatrixBuilder ? this.customProjectionMatrixBuilder(rY, DY, YY) : this._setDefaultShadowProjectionMatrix(YY, rY, DY), this
+        }
+        _syncParentEnabledState() {
+          super._syncParentEnabledState(), this.parent && this.parent.getWorldMatrix || (this.transformedPosition = null, this.transformedDirection = null)
+        }
+        getViewMatrix(YY) {
+          const rY = IY.n.xy[0];
+          let DY = this.position;
+          this.computeTransformedInformation() && (DY = this.transformedPosition), IY.r.NormalizeToRef(this.getShadowDirection(YY), rY), 1 === Math.abs(IY.r.Dot(rY, IY.r.Up())) && (rY.z = 1e-13);
+          const FY = IY.n.xy[1];
+          return DY.addToRef(rY, FY), IY.e.LookAtLHToRef(DY, FY, IY.r.Up(), this._viewMatrix), this._viewMatrix
+        }
+        getProjectionMatrix(YY, rY) {
+          return this.setShadowProjectionMatrix(this._projectionMatrix, YY ?? this._viewMatrix, rY ?? []), this._projectionMatrix
+        }
+      }, (() => {
+        const IY = "function" === typeof Symbol && Symbol.metadata ? Object.create(vY[Symbol.metadata] ?? null) : void 0;
+        rY = [(0, AY.J)()], DY = [(0, AY.J)()], gY = [(0, AY.M)()], aY = [(0, AY.M)()], (0, FY.i)(YY, null, rY, {
+          kind: "getter",
+          name: "position",
+          static: !1,
+          private: !1,
+          access: {
+            has: YY => "position" in YY,
+            get: YY => YY.position
+          },
+          metadata: IY
+        }, null, uY), (0, FY.i)(YY, null, DY, {
+          kind: "getter",
+          name: "direction",
+          static: !1,
+          private: !1,
+          access: {
+            has: YY => "direction" in YY,
+            get: YY => YY.direction
+          },
+          metadata: IY
+        }, null, uY), (0, FY.i)(YY, null, gY, {
+          kind: "getter",
+          name: "shadowMinZ",
+          static: !1,
+          private: !1,
+          access: {
+            has: YY => "shadowMinZ" in YY,
+            get: YY => YY.shadowMinZ
+          },
+          metadata: IY
+        }, null, uY), (0, FY.i)(YY, null, aY, {
+          kind: "getter",
+          name: "shadowMaxZ",
+          static: !1,
+          private: !1,
+          access: {
+            has: YY => "shadowMaxZ" in YY,
+            get: YY => YY.shadowMaxZ
+          },
+          metadata: IY
+        }, null, uY), IY && Object.defineProperty(YY, Symbol.metadata, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: IY
+        })
+      })(), YY
+    })()
+  },
+  40654: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => AY
+    });
+    var FY = DY(39596);
+    class AY extends FY.i {
+      constructor(YY, rY, DY, AY, IY) {
+        let RY = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+          OY = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
+          gY = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 3,
+          aY = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0,
+          vY = arguments.length > 9 ? arguments[9] : void 0,
+          uY = arguments.length > 10 ? arguments[10] : void 0,
+          sY = arguments.length > 11 ? arguments[11] : void 0,
+          iY = arguments.length > 12 ? arguments[12] : void 0;
+        super(null, IY, !RY, OY, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, vY), this.format = AY, this._engine && (this._engine._caps.textureFloatLinearFiltering || 1 !== aY || (gY = 1), this._engine._caps.textureHalfFloatLinearFiltering || 2 !== aY || (gY = 1), this._texture = this._engine.createRawTexture(YY, rY, DY, AY, RY, OY, gY, null, aY, vY ?? 0, uY ?? !1, iY), this.wrapU = FY.i.CLAMP_ADDRESSMODE, this.wrapV = FY.i.CLAMP_ADDRESSMODE, this._waitingForData = !!sY && !YY)
+      }
+      update(YY) {
+        this.updateMipLevel(YY, 0)
+      }
+      updateMipLevel(YY, rY) {
+        this._getEngine().updateRawTexture(this._texture, YY, this._texture.format, this._texture.invertY, null, this._texture.type, this._texture._useSRGBBuffer, rY), this._waitingForData = !1
+      }
+      clone() {
+        if (!this._texture) return super.clone();
+        const YY = new AY(null, this.getSize().width, this.getSize().height, this.format, this.hT(), this._texture.generateMipMaps, this._invertY, this.samplingMode, this._texture.type, this._texture._creationFlags, this._useSRGBBuffer);
+        return YY._texture = this._texture, this._texture.incrementReferences(), YY
+      }
+      isReady() {
+        return super.isReady() && !this._waitingForData
+      }
+      static CreateLuminanceTexture(YY, rY, DY, FY) {
+        return new AY(YY, rY, DY, 1, FY, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3)
+      }
+      static CreateLuminanceAlphaTexture(YY, rY, DY, FY) {
+        return new AY(YY, rY, DY, 2, FY, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3)
+      }
+      static CreateAlphaTexture(YY, rY, DY, FY) {
+        return new AY(YY, rY, DY, 0, FY, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3)
+      }
+      static CreateRGBTexture(YY, rY, DY, FY) {
+        return new AY(YY, rY, DY, 4, FY, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0, arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0, arguments.length > 9 && void 0 !== arguments[9] && arguments[9])
+      }
+      static CreateRGBATexture(YY, rY, DY, FY) {
+        return new AY(YY, rY, DY, 5, FY, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0, arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0, arguments.length > 9 && void 0 !== arguments[9] && arguments[9], arguments.length > 10 && void 0 !== arguments[10] && arguments[10])
+      }
+      static CreateRGBAStorageTexture(YY, rY, DY, FY) {
+        return new AY(YY, rY, DY, 5, FY, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0, 1, arguments.length > 8 && void 0 !== arguments[8] && arguments[8])
+      }
+      static CreateRTexture(YY, rY, DY, IY) {
+        let RY = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          OY = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+          gY = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : FY.i.TRILINEAR_SAMPLINGMODE;
+        return new AY(YY, rY, DY, 6, IY, RY, OY, gY, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 1)
+      }
+      static CreateRStorageTexture(YY, rY, DY, IY) {
+        let RY = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          OY = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+          gY = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : FY.i.TRILINEAR_SAMPLINGMODE;
+        return new AY(YY, rY, DY, 6, IY, RY, OY, gY, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 1, 1)
+      }
     }
+  },
+  40700: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => FY.b
+    });
+    var FY = DY(39554);
+    (0, FY.c)()
+  },
+  40640: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => FY.d
+    });
+    var FY = DY(39576);
+    (0, FY.h)()
+  },
+  39576: (YY, rY, DY) => {
+    DY.d(rY, {
+      d: () => sY,
+      h: () => QY
+    });
+    var FY, AY, IY = DY(36588),
+      RY = DY(39270),
+      OY = DY(39514),
+      gY = DY(39582),
+      aY = DY(39414),
+      vY = DY(39587),
+      uY = DY(39029);
+    class sY extends OY.c {
+      _isShaderMaterial(YY) {
+        return !!YY && "ShaderMaterial" === YY.getClassName()
+      }
+      constructor(YY) {
+        let rY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
+          FY = arguments.length > 5 ? arguments[5] : void 0,
+          AY = arguments.length > 6 ? arguments[6] : void 0,
+          OY = arguments.length > 7 ? arguments[7] : void 0;
+        super(YY, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null, rY, arguments.length > 4 ? arguments[4] : void 0), this.useVertexColor = FY, this.useVertexAlpha = AY, this.color = new IY.c(1, 1, 1), this.alpha = 1, this._shaderLanguage = 0, this._ownsMaterial = !1, rY && (this.color = rY.color.clone(), this.alpha = rY.alpha, this.useVertexColor = rY.useVertexColor, this.useVertexAlpha = rY.useVertexAlpha), this.intersectionThreshold = .1;
+        const gY = {
+          attributes: [RY.l.PositionKind],
+          uniforms: ["world", "viewProjection"],
+          needAlphaBlending: !0,
+          defines: [],
+          useClipPlane: null,
+          shaderLanguage: 0
+        };
+        if (this.useVertexAlpha ? gY.defines.push("#define VERTEXALPHA") : gY.needAlphaBlending = !1, this.useVertexColor ? (gY.defines.push("#define VERTEXCOLOR"), gY.attributes.push(RY.l.ColorKind)) : (gY.uniforms.push("color"), this._color4 = new IY.d), OY) this.material = OY;
+        else {
+          this.hT().ky().isWebGPU && !sY.ForceGLSL && (this._shaderLanguage = 1), gY.shaderLanguage = this._shaderLanguage, gY.extraInitializationsAsync = async () => {
+            1 === this._shaderLanguage ? await Promise.all([DY.e(334).then((() => DY(41603))), DY.e(340).then((() => DY(41605)))]) : await Promise.all([DY.e(316).then((() => DY(41614))), DY.e(322).then((() => DY(41618)))])
+          };
+          const YY = new vY.t("colorShader", this.hT(), "color", gY, !1);
+          YY.doNotSerialize = !0, this._ownsMaterial = !0, this._setInternalMaterial(YY)
+        }
+      }
+      getClassName() {
+        return "LinesMesh"
+      }
+      get material() {
+        return this._internalAbstractMeshDataInfo._material
+      }
+      set material(YY) {
+        const rY = this.material;
+        if (rY === YY) return;
+        const DY = rY && this._ownsMaterial;
+        this._ownsMaterial = !1, this._setInternalMaterial(YY), DY && rY?.dispose()
+      }
+      _setInternalMaterial(YY) {
+        this._setMaterial(YY), this.material && (this.material.fillMode = aY.c.LineListDrawMode, this.material.disableLighting = !0)
+      }
+      get checkCollisions() {
+        return !1
+      }
+      set checkCollisions(YY) {}
+      _bind(YY, rY) {
+        if (!this._geometry) return this;
+        const DY = this.isUnIndexed ? null : this._geometry.getIndexBuffer();
+        if (!this._userInstancedBuffersStorage || this.hasThinInstances ? this._geometry._bind(rY, DY) : this._geometry._bind(rY, DY, this._userInstancedBuffersStorage.vertexBuffers, this._userInstancedBuffersStorage.vertexArrayObjects), !this.useVertexColor && this._isShaderMaterial(this.material)) {
+          const {
+            r: YY,
+            g: rY,
+            b: DY
+          } = this.color;
+          this._color4.set(YY, rY, DY, this.alpha), this.material.setColor4("color", this._color4)
+        }
+        return this
+      }
+      _draw(YY, rY, DY) {
+        if (!this._geometry || !this._geometry.getVertexBuffers() || !this._unIndexed && !this._geometry.getIndexBuffer()) return this;
+        const FY = this.hT().ky();
+        return this._unIndexed ? FY.drawArraysType(aY.c.LineListDrawMode, YY.verticesStart, YY.verticesCount, DY) : FY.drawElementsType(aY.c.LineListDrawMode, YY.indexStart, YY.indexCount, DY), this
+      }
+      dispose(YY) {
+        let rY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        (arguments.length > 2 ? arguments[2] : void 0) || (this._ownsMaterial || rY) && this.material?.dispose(!1, !1, !0), super.dispose(YY)
+      }
+      clone(YY) {
+        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          DY = arguments.length > 2 ? arguments[2] : void 0;
+        if (rY && void 0 === rY._addToSceneRootNodes) {
+          const DY = rY;
+          return DY.source = this, new sY(YY, this.hT(), DY.parent, DY.source, DY.doNotCloneChildren)
+        }
+        return new sY(YY, this.hT(), rY, this, DY)
+      }
+      createInstance(YY) {
+        const rY = new iY(YY, this);
+        if (this.YB) {
+          rY.YB = {};
+          for (const YY in this.YB) rY.YB[YY] = this.YB[YY]
+        }
+        return rY
+      }
+      serialize(YY) {
+        super.serialize(YY), YY.color = this.color.VDY(), YY.alpha = this.alpha
+      }
+      static Parse(YY, rY) {
+        const DY = new sY(YY.name, rY);
+        return DY.color = IY.c.FromArray(YY.color), DY.alpha = YY.alpha, DY
+      }
+    }
+    sY.ForceGLSL = !1;
+    class iY extends gY.d {
+      constructor(YY, rY) {
+        super(YY, rY), this.intersectionThreshold = rY.intersectionThreshold
+      }
+      getClassName() {
+        return "InstancedLinesMesh"
+      }
+    }
+    let yY = !1;
+
+    function QY() {
+      yY || (yY = !0, OY.c._LinesMeshParser = (YY, rY) => sY.Parse(YY, rY))
+    }(FY = sY.prototype).enableEdgesRendering ?? (FY.enableEdgesRendering = (0, uY.g)("LinesMesh", "enableEdgesRendering")), (AY = iY.prototype).enableEdgesRendering ?? (AY.enableEdgesRendering = (0, uY.g)("InstancedLinesMesh", "enableEdgesRendering"))
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

@@ -1,36 +1,54 @@
 export const id = 184;
 export const ids = [184];
 export const modules = {
-  39231: (BB, TB, dB) => {
-    dB.r(TB), dB.d(TB, {
-      FORMER_BLOCK_IMAGE_NAMES: () => VB.c,
-      textureAnimationData: () => yB.r,
-      textureNameToIndex: () => yB.u
+  8643: (YY, rY, DY) => {
+    DY.r(rY), DY.d(rY, {
+      ALL_DEV_TOOLS: () => RY,
+      coreDevTools: () => aY,
+      devTools: () => gY
     });
-    var VB = dB(37702),
-      yB = dB(8653)
-  },
-  8746: (BB, TB, dB) => {
-    dB.d(TB, {
-      c: () => yB,
-      d: () => pB
-    });
-    var VB = dB(8698);
-    const yB = "Air",
-      pB = Object.freeze(new VB.h(yB, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
-  },
-  37702: (BB, TB, dB) => {
-    dB.d(TB, {
-      c: () => VB,
-      g: () => yB
-    });
-    const VB = new Map(["graphite", "football", "torch", "torch_blue", "torch_cyan", "torch_green", "torch_orange", "torch_purple", "torch_red"].map((BB => [BB, `${BB}_block`])));
-
-    function yB(BB) {
-      var TB;
-      return null !== (TB = VB.get(BB)) && void 0 !== TB ? TB : BB
+    var FY = DY(649),
+      AY = DY(1298),
+      IY = DY(8647);
+    const RY = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
+    async function OY() {
+      const {
+        noaDevTools: YY
+      } = await DY.e(226).then((() => DY(40158)));
+      return YY
     }
+    const gY = new class {
+        constructor() {
+          this.loadHost = OY, this.tools = RY
+        }
+        setHost(YY) {
+          this.tools = null === YY ? RY : YY.tools, this.loadHost = null === YY ? OY : async () => YY
+        }
+        supports(YY) {
+          return this.tools.has(YY)
+        }
+        async downloadScene(YY, rY) {
+          const DY = await this.loadHost();
+          await DY.downloadScene(YY, rY)
+        }
+        async setAmbientLightIntensity(YY) {
+          const rY = await this.loadHost();
+          await rY.setAmbientLightIntensity(YY)
+        }
+      },
+      aY = {
+        tools: IY.d,
+        downloadScene: async () => {
+          throw new Error("This client can't download the scene")
+        },
+        setAmbientLightIntensity: async () => {
+          throw new Error("This client can't set the ambient light")
+        }
+      };
+    FY.r && gY.setHost(aY), (0, AY.w)((() => {
+      gY.setHost(aY)
+    }))
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

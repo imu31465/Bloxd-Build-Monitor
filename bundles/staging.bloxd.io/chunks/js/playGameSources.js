@@ -1,183 +1,183 @@
-export const id = 43;
-export const ids = [43];
+export const id = 46;
+export const ids = [46];
 export const modules = {
-  38528: (BB, TB, dB) => {
-    dB.d(TB, {
-      d: () => YB,
-      g: () => pB,
-      k: () => yB
+  38924: (YY, rY, DY) => {
+    DY.d(rY, {
+      e: () => gY,
+      i: () => IY,
+      m: () => AY
     });
-    const VB = 6e3;
+    const FY = 6e3;
 
-    function yB(BB, TB) {
-      return [Math.floor(BB[0] / TB) * TB, Math.floor(BB[1] / TB) * TB, Math.floor(BB[2] / TB) * TB]
+    function AY(YY, rY) {
+      return [Math.floor(YY[0] / rY) * rY, Math.floor(YY[1] / rY) * rY, Math.floor(YY[2] / rY) * rY]
     }
 
-    function pB(BB) {
-      const TB = (null !== BB && void 0 !== BB ? BB : "").match(/-?\d+(?:\.\d+)?/g);
-      return TB && TB.length >= 3 ? [Number(TB[0]), Number(TB[1]), Number(TB[2])] : null
+    function IY(YY) {
+      const rY = (null !== YY && void 0 !== YY ? YY : "").match(/-?\d+(?:\.\d+)?/g);
+      return rY && rY.length >= 3 ? [Number(rY[0]), Number(rY[1]), Number(rY[2])] : null
     }
 
-    function lB(BB, TB) {
-      return BB === TB ? String(BB) : `${BB}-${TB}`
+    function RY(YY, rY) {
+      return YY === rY ? String(YY) : `${YY}-${rY}`
     }
 
-    function JB(BB, TB, dB, VB) {
-      const yB = [];
-      let pB = new Map;
-      for (let lB = BB[2]; lB < BB[2] + TB; lB++) {
-        const JB = new Map;
-        let YB = BB[0];
-        for (; YB < BB[0] + TB;) {
-          const yB = VB(YB, dB, lB);
-          let gB = YB;
-          for (; gB + 1 < BB[0] + TB && VB(gB + 1, dB, lB) === yB;) gB++;
-          if (null !== yB) {
-            const BB = `${YB} ${gB} ${yB}`,
-              TB = pB.get(BB);
-            TB ? (TB.z1 = lB, pB.delete(BB), JB.set(BB, TB)) : JB.set(BB, {
-              x0: YB,
-              x1: gB,
-              z0: lB,
-              z1: lB,
-              name: yB
+    function OY(YY, rY, DY, FY) {
+      const AY = [];
+      let IY = new Map;
+      for (let RY = YY[2]; RY < YY[2] + rY; RY++) {
+        const OY = new Map;
+        let gY = YY[0];
+        for (; gY < YY[0] + rY;) {
+          const AY = FY(gY, DY, RY);
+          let aY = gY;
+          for (; aY + 1 < YY[0] + rY && FY(aY + 1, DY, RY) === AY;) aY++;
+          if (null !== AY) {
+            const YY = `${gY} ${aY} ${AY}`,
+              rY = IY.get(YY);
+            rY ? (rY.z1 = RY, IY.delete(YY), OY.set(YY, rY)) : OY.set(YY, {
+              x0: gY,
+              x1: aY,
+              z0: RY,
+              z1: RY,
+              name: AY
             })
           }
-          YB = gB + 1
+          gY = aY + 1
         }
-        yB.push(...pB.values()), pB = JB
+        AY.push(...IY.values()), IY = OY
       }
-      return yB.push(...pB.values()), yB.sort(((BB, TB) => BB.z0 - TB.z0 || BB.x0 - TB.x0)).map((BB => `x${lB(BB.x0,BB.x1)} z${lB(BB.z0,BB.z1)} ${BB.name}`))
+      return AY.push(...IY.values()), AY.sort(((YY, rY) => YY.z0 - rY.z0 || YY.x0 - rY.x0)).map((YY => `x${RY(YY.x0,YY.x1)} z${RY(YY.z0,YY.z1)} ${YY.name}`))
     }
 
-    function YB(BB, TB, dB, yB) {
-      let pB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : VB;
-      const YB = [BB[0] + TB - 1, BB[1] + TB - 1, BB[2] + TB - 1],
-        gB = null !== yB && yB.every(((TB, dB) => Math.floor(TB) >= BB[dB] && Math.floor(TB) <= YB[dB])),
-        oB = [`The chunk from ${BB.join(" ")} to ${YB.join(" ")}. Each line is one layer (y), with boxes of one block: x from-to, z from-to, then the block. Air is left out.`];
-      null !== yB && oB.push(`The player's feet are at ${yB.map(Math.floor).join(" ")}, ${gB?"in this chunk":"outside this chunk"}.`);
-      const kB = [];
-      for (let VB = BB[1]; VB <= YB[1]; VB++) {
-        const yB = JB(BB, TB, VB, dB).join("; "),
-          pB = kB[kB.length - 1];
-        (null === pB || void 0 === pB ? void 0 : pB.boxes) === yB ? pB.to = VB : kB.push({
-          from: VB,
-          to: VB,
-          boxes: yB
+    function gY(YY, rY, DY, AY) {
+      let IY = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : FY;
+      const gY = [YY[0] + rY - 1, YY[1] + rY - 1, YY[2] + rY - 1],
+        aY = null !== AY && AY.every(((rY, DY) => Math.floor(rY) >= YY[DY] && Math.floor(rY) <= gY[DY])),
+        vY = [`The chunk from ${YY.join(" ")} to ${gY.join(" ")}. Each line is one layer (y), with boxes of one block: x from-to, z from-to, then the block. Air is left out.`];
+      null !== AY && vY.push(`The player's feet are at ${AY.map(Math.floor).join(" ")}, ${aY?"in this chunk":"outside this chunk"}.`);
+      const uY = [];
+      for (let FY = YY[1]; FY <= gY[1]; FY++) {
+        const AY = OY(YY, rY, FY, DY).join("; "),
+          IY = uY[uY.length - 1];
+        (null === IY || void 0 === IY ? void 0 : IY.boxes) === AY ? IY.to = FY : uY.push({
+          from: FY,
+          to: FY,
+          boxes: AY
         })
       }
-      const LB = kB.filter((BB => "" !== BB.boxes));
-      0 === LB.length && oB.push("It is all air.");
-      let OB = oB.join("\n").length;
-      for (const VB of LB) {
-        const BB = `y${lB(VB.from,VB.to)}: ${VB.boxes}`;
-        if (OB += BB.length + 1, OB > pB) {
-          oB.push(`Cut short: the layers from y${VB.from} up aren't shown, as there are too many blocks.`);
+      const sY = uY.filter((YY => "" !== YY.boxes));
+      0 === sY.length && vY.push("It is all air.");
+      let iY = vY.join("\n").length;
+      for (const FY of sY) {
+        const YY = `y${RY(FY.from,FY.to)}: ${FY.boxes}`;
+        if (iY += YY.length + 1, iY > IY) {
+          vY.push(`Cut short: the layers from y${FY.from} up aren't shown, as there are too many blocks.`);
           break
         }
-        oB.push(BB)
+        vY.push(YY)
       }
-      return oB.join("\n")
+      return vY.join("\n")
     }
   },
-  8127: (BB, TB, dB) => {
-    dB.d(TB, {
-      e: () => yB
+  8208: (YY, rY, DY) => {
+    DY.d(rY, {
+      b: () => AY
     });
-    var VB = dB(21);
+    var FY = DY(19);
 
-    function yB() {
-      return !VB.d.get("isTouchScreen") && null !== document.pointerLockElement
+    function AY() {
+      return !FY.b.get("isTouchScreen") && null !== document.pointerLockElement
     }
   },
-  35908: (BB, TB, dB) => {
-    dB.d(TB, {
-      c: () => lB,
-      e: () => pB,
-      h: () => yB
+  36324: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => RY,
+      f: () => IY,
+      h: () => AY
     });
-    const VB = [.25, .5, 1, 2, 4, 8, 16];
+    const FY = [.25, .5, 1, 2, 4, 8, 16];
 
-    function yB(BB, TB) {
-      const dB = VB;
-      let yB = dB.indexOf(BB);
-      return -1 === yB && (yB = dB.findIndex((TB => TB >= BB)), -1 === yB && (yB = dB.length - 1)), "up" === TB ? dB[Math.min(yB + 1, dB.length - 1)] : dB[Math.max(yB - 1, 0)]
+    function AY(YY, rY) {
+      const DY = FY;
+      let AY = DY.indexOf(YY);
+      return -1 === AY && (AY = DY.findIndex((rY => rY >= YY)), -1 === AY && (AY = DY.length - 1)), "up" === rY ? DY[Math.min(AY + 1, DY.length - 1)] : DY[Math.max(AY - 1, 0)]
     }
 
-    function pB(BB) {
-      return BB <= VB[0]
+    function IY(YY) {
+      return YY <= FY[0]
     }
 
-    function lB(BB) {
-      return BB >= VB[VB.length - 1]
+    function RY(YY) {
+      return YY >= FY[FY.length - 1]
     }
   },
-  35497: (BB, TB, dB) => {
-    dB.d(TB, {
-      d: () => yB,
-      g: () => pB
+  35928: (YY, rY, DY) => {
+    DY.d(rY, {
+      e: () => AY,
+      i: () => IY
     });
-    let VB = !1;
+    let FY = !1;
 
-    function yB() {
-      return VB
+    function AY() {
+      return FY
     }
 
-    function pB(BB) {
-      return VB !== BB && (VB = BB, !0)
+    function IY(YY) {
+      return FY !== YY && (FY = YY, !0)
     }
   },
-  37912: (BB, TB, dB) => {
-    dB.d(TB, {
-      d: () => pB
+  38331: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => IY
     });
-    var VB = dB(24),
-      yB = dB(1708);
+    var FY = DY(25),
+      AY = DY(1823);
 
-    function pB(BB) {
+    function IY(YY) {
       let {
-        taskId: TB,
-        progress: dB
-      } = BB;
-      const VB = yB.c.get("_tasks");
-      null !== VB && void 0 !== VB && VB[TB] && yB.c.apply({
+        taskId: rY,
+        progress: DY
+      } = YY;
+      const FY = AY.b.get("_tasks");
+      null !== FY && void 0 !== FY && FY[rY] && AY.b.apply({
         _tasks: {
-          ...VB,
-          [TB]: {
-            ...VB[TB],
-            progress: dB
+          ...FY,
+          [rY]: {
+            ...FY[rY],
+            progress: DY
           }
         }
       })
     }
-    VB.h.subscribe("clientTaskProgress", (BB => {
-      pB(BB)
+    FY.g.subscribe("clientTaskProgress", (YY => {
+      IY(YY)
     }))
   },
-  38504: (BB, TB, dB) => {
-    dB.d(TB, {
-      e: () => LB,
-      f: () => DB,
-      j: () => gB,
-      k: () => kB,
-      m: () => YB,
-      o: () => lB,
-      s: () => oB,
-      u: () => uB
+  38895: (YY, rY, DY) => {
+    DY.d(rY, {
+      d: () => sY,
+      e: () => yY,
+      h: () => aY,
+      j: () => uY,
+      l: () => gY,
+      p: () => RY,
+      q: () => vY,
+      r: () => QY
     });
-    var VB = dB(1708),
-      yB = dB(24),
-      pB = dB(1719);
-    const lB = (0, pB.n)((function() {
-        var BB, TB, dB, yB;
+    var FY = DY(1823),
+      AY = DY(25),
+      IY = DY(1830);
+    const RY = (0, IY.k)((function() {
+        var YY, rY, DY, AY;
         return {
-          health: null !== (BB = VB.c.get("_health")) && void 0 !== BB ? BB : null,
-          maxHealth: null !== (TB = VB.c.get("_totalMaxHealth")) && void 0 !== TB ? TB : null,
-          shield: null !== (dB = VB.c.get("_shield")) && void 0 !== dB ? dB : null,
-          maxShield: null !== (yB = VB.c.get("maxShield")) && void 0 !== yB ? yB : null
+          health: null !== (YY = FY.b.get("_health")) && void 0 !== YY ? YY : null,
+          maxHealth: null !== (rY = FY.b.get("_totalMaxHealth")) && void 0 !== rY ? rY : null,
+          shield: null !== (DY = FY.b.get("_shield")) && void 0 !== DY ? DY : null,
+          maxShield: null !== (AY = FY.b.get("maxShield")) && void 0 !== AY ? AY : null
         }
-      }), [], (0, pB.j)("_health", "_totalMaxHealth", "_shield", "maxShield")),
-      JB = [{
+      }), [], (0, IY.i)("_health", "_totalMaxHealth", "_shield", "maxShield")),
+      OY = [{
         canFly: !1,
         flying: !1
       }, {
@@ -191,2219 +191,2374 @@ export const modules = {
         flying: !0
       }];
 
-    function YB(BB, TB) {
-      return JB[(BB ? 2 : 0) + (TB ? 1 : 0)]
+    function gY(YY, rY) {
+      return OY[(YY ? 2 : 0) + (rY ? 1 : 0)]
     }
-    const gB = (0, pB.n)((function() {
-      var BB;
-      return null !== (BB = VB.c.get("_aura")) && void 0 !== BB ? BB : null
-    }), [], (0, pB.j)("_aura"));
+    const aY = (0, IY.k)((function() {
+      var YY;
+      return null !== (YY = FY.b.get("_aura")) && void 0 !== YY ? YY : null
+    }), [], (0, IY.i)("_aura"));
 
-    function oB(BB) {
+    function vY(YY) {
       return {
-        watch: TB => (0, yB.i)("shotPlayer", (dB => {
+        watch: rY => (0, AY.j)("shotPlayer", (DY => {
           let {
-            playerId: VB,
-            damage: yB,
-            wasCrit: pB,
-            distance: lB
-          } = dB;
-          BB(VB) && TB({
-            damage: yB,
-            wasCrit: pB,
-            distance: lB
+            playerId: FY,
+            damage: AY,
+            wasCrit: IY,
+            distance: RY
+          } = DY;
+          YY(FY) && rY({
+            damage: AY,
+            wasCrit: IY,
+            distance: RY
           })
         }))
       }
     }
 
-    function kB(BB) {
-      return (0, pB.c)("chat", (TB => {
+    function uY(YY) {
+      return (0, IY.c)("chat", (rY => {
         let {
-          serverChatMsgId: dB,
-          content: VB,
-          chatterEId: yB
-        } = TB;
+          serverChatMsgId: DY,
+          content: FY,
+          chatterEId: AY
+        } = rY;
         return {
-          serverChatMsgId: null !== dB && void 0 !== dB ? dB : null,
-          content: VB,
-          author: yB ? BB(yB) : null
+          serverChatMsgId: null !== DY && void 0 !== DY ? DY : null,
+          content: FY,
+          author: AY ? YY(AY) : null
         }
       }))
     }
-    class LB {
+    class sY {
       constructor() {
         this.shown = null, this.needed = null, this.neededSince = 0
       }
-      update(BB) {
-        let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-        const dB = this.shown;
-        return BB !== this.needed && (this.needed = BB, this.neededSince = TB, null === BB && (this.shown = null)), this.shown !== this.needed && TB - this.neededSince > 200 && (this.shown = this.needed), this.shown !== dB
+      update(YY) {
+        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+        const DY = this.shown;
+        return YY !== this.needed && (this.needed = YY, this.neededSince = rY, null === YY && (this.shown = null)), this.shown !== this.needed && rY - this.neededSince > 200 && (this.shown = this.needed), this.shown !== DY
       }
     }
 
-    function OB(BB) {
+    function iY(YY) {
       return [{
-        translationKey: `touchKeys:${BB}`
+        translationKey: `touchKeys:${YY}`
       }]
     }
-    const DB = {
-      open: OB("open"),
-      close: OB("close"),
-      milk: OB("milk"),
-      shear: OB("shear"),
-      tame: OB("tame"),
-      feed: OB("feed"),
-      ride: OB("ride")
+    const yY = {
+      open: iY("open"),
+      close: iY("close"),
+      milk: iY("milk"),
+      shear: iY("shear"),
+      tame: iY("tame"),
+      feed: iY("feed"),
+      ride: iY("ride")
     };
 
-    function uB(BB) {
+    function QY(YY) {
       return [{
         translationKey: "touchKeys:tameWith"
       }, " ", {
-        icon: BB
+        icon: YY
       }]
     }
   },
-  39470: (BB, TB, dB) => {
-    dB.d(TB, {
-      e: () => JB,
-      f: () => lB
+  39862: (YY, rY, DY) => {
+    DY.d(rY, {
+      d: () => OY,
+      h: () => RY
     });
-    var VB = dB(2764);
-    let yB = null,
-      pB = null;
+    var FY = DY(2866);
+    let AY = null,
+      IY = null;
 
-    function lB() {
-      return pB ??= dB.e(193).then((() => dB(35362))).then((BB => {
+    function RY() {
+      return IY ??= DY.e(203).then((() => DY(35761))).then((YY => {
         let {
-          ITEM_SPRITES: TB,
-          ITEM_SPRITES_WITHOUT_FILE: dB,
-          ITEM_FILES_WITHOUT_SPRITE: pB
-        } = BB;
-        yB = function(BB, TB, dB) {
-          const yB = new Set,
-            pB = (0, VB.z)(TB);
-          let lB = 0;
-          for (const [VB, JB] of BB.entries()) VB === pB[lB] ? lB++ : yB.add(JB);
-          if ("" !== dB)
-            for (const JB of dB.split(VB.v)) yB.add(JB);
-          return yB
-        }(TB.split(VB.v), dB, pB)
-      }), (BB => {
-        throw pB = null, BB
-      })), pB
+          ITEM_SPRITES: rY,
+          ITEM_SPRITES_WITHOUT_FILE: DY,
+          ITEM_FILES_WITHOUT_SPRITE: IY
+        } = YY;
+        AY = function(YY, rY, DY) {
+          const AY = new Set,
+            IY = (0, FY.w)(rY);
+          let RY = 0;
+          for (const [FY, OY] of YY.entries()) FY === IY[RY] ? RY++ : AY.add(OY);
+          if ("" !== DY)
+            for (const OY of DY.split(FY.s)) AY.add(OY);
+          return AY
+        }(rY.split(FY.s), DY, IY)
+      }), (YY => {
+        throw IY = null, YY
+      })), IY
     }
 
-    function JB(BB) {
-      var TB, dB;
-      return null !== (TB = null === (dB = yB) || void 0 === dB ? void 0 : dB.has(BB)) && void 0 !== TB && TB
+    function OY(YY) {
+      var rY, DY;
+      return null !== (rY = null === (DY = AY) || void 0 === DY ? void 0 : DY.has(YY)) && void 0 !== rY && rY
     }
   },
-  38502: (BB, TB, dB) => {
-    function VB(BB, TB, dB) {
-      return Math.hypot(BB[0] - TB[0], BB[1] - TB[1], BB[2] - TB[2]) < dB + .5
+  38910: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => FY,
+      d: () => IY,
+      e: () => AY
+    });
+    const FY = 128;
+
+    function AY(YY, rY, DY, FY) {
+      const AY = 2 * rY - 1,
+        IY = 1 - 2 * DY,
+        RY = YY(0) - AY * YY(3),
+        OY = YY(4) - AY * YY(7),
+        gY = YY(8) - AY * YY(11),
+        aY = YY(1) - IY * YY(3),
+        vY = YY(5) - IY * YY(7),
+        uY = YY(9) - IY * YY(11);
+      FY[0] = OY * uY - gY * vY, FY[1] = gY * aY - RY * uY, FY[2] = RY * vY - OY * aY;
+      const sY = FY[0] * YY(3) + FY[1] * YY(7) + FY[2] * YY(11) < 0 ? -1 : 1,
+        iY = Math.hypot(FY[0], FY[1], FY[2]) * sY;
+      return FY[0] /= iY, FY[1] /= iY, FY[2] /= iY, FY
     }
-    dB.d(TB, {
-      d: () => VB
+
+    function IY(YY, rY, DY, FY, AY, IY) {
+      const RY = [Math.floor(rY[0]), Math.floor(rY[1]), Math.floor(rY[2])],
+        OY = [0, 0, 0],
+        gY = [1 / 0, 1 / 0, 1 / 0],
+        aY = [1 / 0, 1 / 0, 1 / 0];
+      for (let sY = 0; sY < 3; sY++) OY[sY] = Math.sign(DY[sY]), 0 !== OY[sY] && (aY[sY] = Math.abs(1 / DY[sY]), gY[sY] = (RY[sY] + (OY[sY] > 0 ? 1 : 0) - rY[sY]) / DY[sY]);
+      let vY = 0,
+        uY = Math.abs(DY[0]) > Math.abs(DY[1]) ? 0 : 1;
+      for (Math.abs(DY[2]) > Math.abs(DY[uY]) && (uY = 2); vY <= FY;) {
+        if (YY(RY[0], RY[1], RY[2])) return AY[0] = RY[0], AY[1] = RY[1], AY[2] = RY[2], IY[0] = 0, IY[1] = 0, IY[2] = 0, IY[uY] = -OY[uY], !0;
+        uY = gY[0] < gY[1] ? 0 : 1, gY[2] < gY[uY] && (uY = 2), vY = gY[uY], RY[uY] += OY[uY], gY[uY] += aY[uY]
+      }
+      return !1
+    }
+  },
+  38891: (YY, rY, DY) => {
+    function FY(YY, rY, DY) {
+      return Math.hypot(YY[0] - rY[0], YY[1] - rY[1], YY[2] - rY[2]) < DY + .5
+    }
+    DY.d(rY, {
+      c: () => FY
     })
   },
-  37930: (BB, TB, dB) => {
-    dB.d(TB, {
-      e: () => oB
+  38344: (YY, rY, DY) => {
+    DY.d(rY, {
+      e: () => vY
     });
-    var VB = dB(1105),
-      yB = dB(1214),
-      pB = dB(21),
-      lB = dB(1201),
-      JB = dB(1209),
-      YB = dB(1407),
-      gB = dB(35479);
+    var FY = DY(1231),
+      AY = DY(1330),
+      IY = DY(19),
+      RY = DY(1314),
+      OY = DY(1322),
+      gY = DY(1488),
+      aY = DY(35903);
 
-    function oB(BB) {
+    function vY(YY) {
       let {
-        DB: TB,
-        uB: dB
-      } = BB;
-      const oB = null !== TB && void 0 !== TB ? TB : (0, JB.e)().gameNameWithVariation;
-      (0, VB.M)(oB) && ((0, gB.i)(), (0, lB.cb)((() => {
-        console.log("Received matchmaking order from game server to game", TB), (0, pB.i)("inGameReplay"), (0, YB.navigatePreserveSearch)((0, yB.b)(oB, null !== dB && void 0 !== dB ? dB : void 0))
+        AD: rY,
+        RD: DY
+      } = YY;
+      const vY = null !== rY && void 0 !== rY ? rY : (0, OY.b)().gameNameWithVariation;
+      (0, FY.O)(vY) && ((0, aY.f)(), (0, RY.W)((() => {
+        console.log("Received matchmaking order from game server to game", rY), (0, IY.g)("inGameReplay"), (0, gY.navigatePreserveSearch)((0, AY.d)(vY, null !== DY && void 0 !== DY ? DY : void 0))
       }), "video_start"))
     }
   },
-  38113: (BB, TB, dB) => {
-    dB.d(TB, {
-      b: () => pB
+  38517: (YY, rY, DY) => {
+    DY.d(rY, {
+      e: () => IY
     });
-    var VB = dB(24),
-      yB = dB(1738);
+    var FY = DY(25),
+      AY = DY(1851);
 
-    function pB(BB) {
-      var TB, dB;
-      const pB = (0, yB.k)(null !== (TB = null === (dB = yB.r.toggleFreeCam) || void 0 === dB ? void 0 : dB[0]) && void 0 !== TB ? TB : null);
-      VB.h.yH("showBottomMessage", {
-        message: `Free Camera ${BB?"Enabled":"Disabled"}${pB?` - Press ${pB} to toggle`:""}`,
+    function IY(YY) {
+      var rY, DY;
+      const IY = (0, AY.n)(null !== (rY = null === (DY = AY.u.toggleFreeCam) || void 0 === DY ? void 0 : DY[0]) && void 0 !== rY ? rY : null);
+      FY.g.vo("showBottomMessage", {
+        message: `Free Camera ${YY?"Enabled":"Disabled"}${IY?` - Press ${IY} to toggle`:""}`,
         timeoutLength: 2e3,
         type: "Warning"
       })
     }
   },
-  37918: (BB, TB, dB) => {
-    dB.d(TB, {
-      b: () => YB,
-      c: () => lB,
-      g: () => JB,
-      i: () => gB
+  38336: (YY, rY, DY) => {
+    DY.d(rY, {
+      e: () => gY,
+      g: () => RY,
+      i: () => OY,
+      j: () => aY
     });
-    var VB = dB(24),
-      yB = dB(1235);
-    const pB = new Map;
+    var FY = DY(25),
+      AY = DY(1346);
+    const IY = new Map;
 
-    function lB(BB, TB) {
-      VB.h.yH("newUiRequest", {
-        id: BB,
-        clientParameters: TB
+    function RY(YY, rY) {
+      FY.g.vo("newUiRequest", {
+        id: YY,
+        clientParameters: rY
       }, !0)
     }
 
-    function JB(BB) {
-      VB.h.yH("removeUiRequest", BB, !0);
-      const TB = pB.get(BB);
-      TB && (TB.tearDownNotification(), pB.delete(BB))
+    function OY(YY) {
+      FY.g.vo("removeUiRequest", YY, !0);
+      const rY = IY.get(YY);
+      rY && (rY.tearDownNotification(), IY.delete(YY))
     }
 
-    function YB() {
-      VB.h.yH("clearUiRequests");
-      for (const BB of pB.values()) BB.tearDownNotification();
-      pB.clear()
+    function gY() {
+      FY.g.vo("clearUiRequests");
+      for (const YY of IY.values()) YY.tearDownNotification();
+      IY.clear()
     }
 
-    function gB(BB, TB, dB) {
-      const VB = yB.NotificationProvider.showPromptPopup({
-        title: TB,
+    function aY(YY, rY, DY) {
+      const FY = AY.NotificationProvider.showPromptPopup({
+        title: rY,
         confirmText: "general:yes",
         cancelText: "general:no",
         unlockPointerKey: "uiRequestPopup"
       });
-      pB.set(BB, VB), VB.getResult().then((TB => {
-        pB.delete(BB), "notificationTornDown" !== TB && dB(TB)
+      IY.set(YY, FY), FY.getResult().then((rY => {
+        IY.delete(YY), "notificationTornDown" !== rY && DY(rY)
       }))
     }
   },
-  38521: (BB, TB, dB) => {
-    dB.d(TB, {
-      d: () => kB,
-      h: () => LB
+  38917: (YY, rY, DY) => {
+    DY.d(rY, {
+      e: () => uY,
+      g: () => sY
     });
-    var VB = dB(184),
-      yB = dB(38528);
-    const pB = 20;
+    var FY = DY(213),
+      AY = DY(38924);
+    const IY = 20;
 
-    function lB(BB) {
-      return BB.map(Math.floor).join(" ")
+    function RY(YY) {
+      return YY.map(Math.floor).join(" ")
     }
 
-    function JB(BB) {
-      return null === BB.amount || 1 === BB.amount ? BB.name : `${BB.amount} ${BB.name}`
+    function OY(YY) {
+      return null === YY.amount || 1 === YY.amount ? YY.name : `${YY.amount} ${YY.name}`
     }
-    var YB = dB(38530),
-      gB = dB(1708),
-      oB = dB(1209);
+    var gY = DY(38927),
+      aY = DY(1823),
+      vY = DY(1322);
 
-    function kB(BB, TB) {
-      if (!BB) return YB.c;
-      const dB = BB.playerFeet();
-      if (!dB) return "The player isn't in the world yet, so no blocks can be seen.";
-      const pB = VB.c.UD,
-        lB = (0, yB.k)(null !== TB && void 0 !== TB ? TB : dB, pB),
-        JB = BB.chunkBlocks(lB);
-      return JB ? (0, yB.d)(lB, pB, ((TB, dB, VB) => {
-        const yB = JB(TB, dB, VB);
-        return 0 === yB ? null : BB.blockName(yB).split("|")[0]
-      }), dB) : `The chunk from ${lB.join(" ")} isn't loaded: only chunks near the player are. The player's feet are at ${dB.map(Math.floor).join(" ")}.`
+    function uY(YY, rY) {
+      if (!YY) return gY.b;
+      const DY = YY.playerFeet();
+      if (!DY) return "The player isn't in the world yet, so no blocks can be seen.";
+      const IY = FY.d.Jy,
+        RY = (0, AY.m)(null !== rY && void 0 !== rY ? rY : DY, IY),
+        OY = YY.chunkBlocks(RY);
+      return OY ? (0, AY.e)(RY, IY, ((rY, DY, FY) => {
+        const AY = OY(rY, DY, FY);
+        return 0 === AY ? null : YY.blockName(AY).split("|")[0]
+      }), DY) : `The chunk from ${RY.join(" ")} isn't loaded: only chunks near the player are. The player's feet are at ${DY.map(Math.floor).join(" ")}.`
     }
 
-    function LB(BB) {
-      var TB, dB, VB;
-      if (!BB) return YB.g;
-      const yB = BB.playerFeet();
-      if (!yB) return "The player isn't in the world yet, so nothing in it can be seen.";
+    function sY(YY) {
+      var rY, DY, FY;
+      if (!YY) return gY.e;
+      const AY = YY.playerFeet();
+      if (!AY) return "The player isn't in the world yet, so nothing in it can be seen.";
       const {
-        slots: kB,
-        heldSlot: LB
-      } = BB.inventory();
-      return function(BB) {
-        const TB = [];
-        null !== BB.game && TB.push(`Game: ${BB.game}.`);
-        const dB = null === BB.health ? "" : `, health ${Math.round(BB.health)}${null===BB.maxHealth?"":` of ${Math.round(BB.maxHealth)}`}`;
-        TB.push(`The player (the creator) stands at ${lB(BB.position)}${dB}, ${BB.creative?"in":"not in"} creative mode.`);
-        const VB = BB.slots[BB.heldSlot];
-        TB.push(VB ? `Holding (slot ${BB.heldSlot}): ${JB(VB)}.` : `Holding nothing (slot ${BB.heldSlot} is empty).`);
-        const yB = BB.slots.flatMap(((BB, TB) => BB ? [`slot ${TB}: ${JB(BB)}`] : []));
-        TB.push(yB.length > 0 ? `Inventory: ${yB.join(", ")}.` : "Inventory: empty.");
-        const YB = TB => Math.hypot(TB.position[0] - BB.position[0], TB.position[1] - BB.position[1], TB.position[2] - BB.position[2]),
-          gB = [...BB.nearby].sort(((BB, TB) => YB(BB) - YB(TB)));
-        if (0 === gB.length) TB.push("No other players or mobs are near enough to see.");
+        slots: uY,
+        heldSlot: sY
+      } = YY.inventory();
+      return function(YY) {
+        const rY = [];
+        null !== YY.game && rY.push(`Game: ${YY.game}.`);
+        const DY = null === YY.health ? "" : `, health ${Math.round(YY.health)}${null===YY.maxHealth?"":` of ${Math.round(YY.maxHealth)}`}`;
+        rY.push(`The player (the creator) stands at ${RY(YY.position)}${DY}, ${YY.creative?"in":"not in"} creative mode.`);
+        const FY = YY.slots[YY.heldSlot];
+        rY.push(FY ? `Holding (slot ${YY.heldSlot}): ${OY(FY)}.` : `Holding nothing (slot ${YY.heldSlot} is empty).`);
+        const AY = YY.slots.flatMap(((YY, rY) => YY ? [`slot ${rY}: ${OY(YY)}`] : []));
+        rY.push(AY.length > 0 ? `Inventory: ${AY.join(", ")}.` : "Inventory: empty.");
+        const gY = rY => Math.hypot(rY.position[0] - YY.position[0], rY.position[1] - YY.position[1], rY.position[2] - YY.position[2]),
+          aY = [...YY.nearby].sort(((YY, rY) => gY(YY) - gY(rY)));
+        if (0 === aY.length) rY.push("No other players or mobs are near enough to see.");
         else {
-          TB.push("Near them, nearest first:");
-          for (const BB of gB.slice(0, pB)) {
-            const dB = "player" === BB.kind ? `player "${BB.name||"?"}"` : BB.name && BB.name !== BB.kind ? `${BB.kind} "${BB.name}"` : BB.kind,
-              VB = Math.round(YB(BB));
-            TB.push(`- ${dB} at ${lB(BB.position)}, ${VB} block${1===VB?"":"s"} away`)
+          rY.push("Near them, nearest first:");
+          for (const YY of aY.slice(0, IY)) {
+            const DY = "player" === YY.kind ? `player "${YY.name||"?"}"` : YY.name && YY.name !== YY.kind ? `${YY.kind} "${YY.name}"` : YY.kind,
+              FY = Math.round(gY(YY));
+            rY.push(`- ${DY} at ${RY(YY.position)}, ${FY} block${1===FY?"":"s"} away`)
           }
-          gB.length > pB && TB.push(`- and ${gB.length-pB} more further away`)
+          aY.length > IY && rY.push(`- and ${aY.length-IY} more further away`)
         }
-        return BB.droppedItems > 0 && TB.push(`${BB.droppedItems} dropped item${1===BB.droppedItems?" is":"s are"} on the ground nearby.`), TB.join("\n")
+        return YY.droppedItems > 0 && rY.push(`${YY.droppedItems} dropped item${1===YY.droppedItems?" is":"s are"} on the ground nearby.`), rY.join("\n")
       }({
-        game: null !== (TB = (0, oB.e)().gameNameWithVariation) && void 0 !== TB ? TB : null,
-        position: yB,
-        health: null !== (dB = gB.c.get("_health")) && void 0 !== dB ? dB : null,
-        maxHealth: null !== (VB = gB.c.get("_totalMaxHealth")) && void 0 !== VB ? VB : null,
-        creative: !0 === gB.c.get("creative"),
-        heldSlot: LB,
-        slots: kB,
-        nearby: BB.nearby(),
-        droppedItems: BB.droppedItems()
+        game: null !== (rY = (0, vY.b)().gameNameWithVariation) && void 0 !== rY ? rY : null,
+        position: AY,
+        health: null !== (DY = aY.b.get("_health")) && void 0 !== DY ? DY : null,
+        maxHealth: null !== (FY = aY.b.get("_totalMaxHealth")) && void 0 !== FY ? FY : null,
+        creative: !0 === aY.b.get("creative"),
+        heldSlot: sY,
+        slots: uY,
+        nearby: YY.nearby(),
+        droppedItems: YY.droppedItems()
       })
     }
   },
-  37951: (BB, TB, dB) => {
-    dB.d(TB, {
-      e: () => JB,
-      g: () => YB,
-      i: () => gB
+  38356: (YY, rY, DY) => {
+    DY.d(rY, {
+      e: () => OY,
+      i: () => gY,
+      m: () => aY
     });
-    var VB = dB(1105),
-      yB = dB(900),
-      pB = dB(35832),
-      lB = dB(24);
+    var FY = DY(1231),
+      AY = DY(1057),
+      IY = DY(36244),
+      RY = DY(25);
 
-    function JB(BB) {
+    function OY(YY) {
       let {
-        lobbyName: TB,
-        gameNameWithVariation: dB
-      } = BB;
-      return !(0, VB.O)(TB) || null !== dB && (dB.startsWith("testGym") || (0, yB.j)(dB))
+        lobbyName: rY,
+        gameNameWithVariation: DY
+      } = YY;
+      return !(0, FY.P)(rY) || null !== DY && (DY.startsWith("testGym") || (0, AY.l)(DY))
     }
 
-    function YB(BB) {
-      return BB.Vp === pB.d.Leave || BB.Vp === pB.d.Cursor
+    function gY(YY) {
+      return YY.br === IY.c.Leave || YY.br === IY.c.Cursor
     }
 
-    function gB(BB) {
-      lB.h.yH("codeCollab", {
-        type: BB.Vp,
-        docKey: BB.yp,
-        version: BB.lp,
-        editorCount: BB.Jp,
-        peers: BB.Yp,
-        updates: BB.kp,
-        playerId: BB.Lp,
-        playerName: BB.Op,
-        colour: BB.Dp,
-        anchor: BB.Hp,
-        head: BB.Ep,
-        existingCursors: BB.vp,
-        files: BB.mp,
-        engineSettings: BB.ip
+    function aY(YY) {
+      RY.g.vo("codeCollab", {
+        type: YY.br,
+        docKey: YY.Xr,
+        version: YY.qr,
+        editorCount: YY.kr,
+        peers: YY.Gr,
+        updates: YY.nr,
+        playerId: YY.Pr,
+        playerName: YY.Ur,
+        colour: YY.Lr,
+        anchor: YY.tr,
+        head: YY.YD,
+        existingCursors: YY.rD,
+        files: YY.DD,
+        engineSettings: YY.FD
       })
     }
   },
-  39434: (BB, TB, dB) => {
-    dB.d(TB, {
-      C: () => AB,
-      G: () => PB,
-      K: () => FB,
-      M: () => SB,
-      N: () => UB,
-      Q: () => CB,
-      U: () => hB,
-      V: () => rB,
-      b: () => GB,
-      e: () => RB,
-      h: () => zB,
-      k: () => qB,
-      l: () => wB,
-      m: () => MB,
-      n: () => QB,
-      r: () => KB,
-      v: () => cB,
-      y: () => IB
+  39815: (YY, rY, DY) => {
+    DY.d(rY, {
+      B: () => fY,
+      F: () => CY,
+      H: () => PY,
+      I: () => hY,
+      J: () => HY,
+      M: () => jY,
+      O: () => KY,
+      Q: () => pY,
+      U: () => qY,
+      X: () => ZY,
+      e: () => kY,
+      i: () => JY,
+      j: () => BY,
+      l: () => GY,
+      n: () => cY,
+      r: () => NY,
+      u: () => dY,
+      y: () => zY
     });
-    var VB = dB(1275),
-      yB = dB(24),
-      pB = dB(1173),
-      lB = dB(2101),
-      JB = dB(4209),
-      YB = dB(4169);
-    let gB, oB = !1,
-      kB = !1,
-      LB = !1,
-      OB = !1;
-    const DB = 1300,
-      uB = 3e3;
-    let HB = 0,
-      EB = !1,
-      vB = !1,
-      mB = 0;
-    const iB = 2;
-    let NB = !1,
-      tB = !1;
-    const fB = new Set,
-      sB = new Set;
+    var FY = DY(1384),
+      AY = DY(25),
+      IY = DY(1287),
+      RY = DY(2251),
+      OY = DY(4396),
+      gY = DY(4365);
+    let aY, vY = !1,
+      uY = !1,
+      sY = !1,
+      iY = !1;
+    const yY = 1300,
+      QY = 3e3;
+    let oY = 0,
+      WY = !1,
+      EY = !1,
+      mY = 0;
+    const VY = 2;
+    let SY = !1,
+      lY = !1;
+    const TY = new Set,
+      eY = new Set;
 
-    function MB() {
-      return oB
+    function NY() {
+      return vY
     }
 
-    function zB() {
-      return vB
+    function BY() {
+      return EY
     }
 
-    function wB() {
-      return tB
+    function cY() {
+      return lY
     }
 
-    function UB() {
-      return (0, pB.r)() && !tB
+    function KY() {
+      return (0, IY.l)() && !lY
     }
 
-    function FB(BB) {
-      let TB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-      if (BB !== tB) {
-        tB = BB;
-        for (const BB of [...sB]) BB(tB);
-        TB && hB()
+    function HY(YY) {
+      let rY = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+      if (YY !== lY) {
+        lY = YY;
+        for (const YY of [...eY]) YY(lY);
+        rY && qY()
       }
     }
 
-    function KB(BB) {
-      return sB.add(BB), () => {
-        sB.delete(BB)
+    function zY(YY) {
+      return eY.add(YY), () => {
+        eY.delete(YY)
       }
     }
 
-    function rB() {
-      (0, JB.f)(lB.A.Menu, (0, pB.r)() ? 0 : lB.A.Menu)
+    function ZY() {
+      (0, OY.k)(RY.w.Menu, (0, IY.l)() ? 0 : RY.w.Menu)
     }
 
-    function IB() {
-      vB = !1, mB = 0, rB(), hB()
+    function CY() {
+      EY = !1, mY = 0, ZY(), qY()
     }
 
-    function cB(BB) {
-      return fB.add(BB), () => {
-        fB.delete(BB)
+    function fY(YY) {
+      return TY.add(YY), () => {
+        TY.delete(YY)
       }
     }
 
-    function SB(BB) {
-      kB = !1, BB !== oB && (oB = BB, OB = !1, clearTimeout(gB), LB = !oB && NB, oB ? (EB = !1, vB = !1, mB = 0) : UB() && !NB && (vB = !0), NB = !1, oB && !UB() && jB(), bB(), LB && hB())
+    function jY(YY) {
+      uY = !1, YY !== vY && (vY = YY, iY = !1, clearTimeout(aY), sY = !vY && SY, vY ? (WY = !1, EY = !1, mY = 0) : KY() && !SY && (EY = !0), SY = !1, vY && !KY() && nY(), UY(), sY && qY())
     }
 
-    function PB(BB) {
-      BB !== EB && (EB = BB, BB || hB())
+    function hY(YY) {
+      YY !== WY && (WY = YY, YY || qY())
     }
 
-    function QB() {
-      kB = !1, OB || !0 !== XB() || (OB = !0, clearTimeout(gB), gB = setTimeout(aB, DB))
+    function dY() {
+      uY = !1, iY || !0 !== bY() || (iY = !0, clearTimeout(aY), aY = setTimeout(MY, yY))
     }
 
-    function RB() {
-      return (!kB || performance.now() - HB > uB) && (kB = (0, YB.N)().lockPointer(), HB = performance.now()), kB
+    function JY() {
+      return (!uY || performance.now() - oY > QY) && (uY = (0, gY.D)().lockPointer(), oY = performance.now()), uY
     }
 
-    function aB() {
-      ZB() && WB() && RB()
+    function MY() {
+      wY() && XY() && JY()
     }
 
-    function ZB() {
-      return UB() && !oB && !EB && !(0, VB.i)()
+    function wY() {
+      return KY() && !vY && !WY && !(0, FY.f)()
     }
 
-    function XB() {
-      var BB;
-      return "undefined" === typeof navigator || null === (BB = navigator.userActivation) || void 0 === BB ? void 0 : BB.isActive
+    function bY() {
+      var YY;
+      return "undefined" === typeof navigator || null === (YY = navigator.userActivation) || void 0 === YY ? void 0 : YY.isActive
     }
 
-    function WB() {
-      return LB && (!navigator.userAgent.includes("Firefox/") || Boolean(document.fullscreenElement)) || !1 !== XB()
+    function XY() {
+      return sY && (!navigator.userAgent.includes("Firefox/") || Boolean(document.fullscreenElement)) || !1 !== bY()
     }
 
-    function hB() {
-      UB() ? ZB() && !vB && WB() && RB() : oB && !NB && jB()
+    function qY() {
+      KY() ? wY() && !EY && XY() && JY() : vY && !SY && nY()
     }
 
-    function CB() {
-      vB ? navigator.vendor.startsWith("Apple") ? xB() : mB = iB : hB()
+    function pY() {
+      EY ? navigator.vendor.startsWith("Apple") ? xY() : mY = VY : qY()
     }
 
-    function GB() {
-      mB > 0 && 0 === --mB && xB()
+    function kY() {
+      mY > 0 && 0 === --mY && xY()
     }
 
-    function qB() {
-      mB = 0
+    function GY() {
+      mY = 0
     }
 
-    function xB() {
-      ZB() && !0 === XB() && RB()
+    function xY() {
+      wY() && !0 === bY() && JY()
     }
 
-    function jB() {
-      NB = !0, (0, YB.N)().unlockPointer()
+    function nY() {
+      SY = !0, (0, gY.D)().unlockPointer()
     }
 
-    function AB() {
-      kB = !1, LB = !1, OB = !1, clearTimeout(gB), EB = !1, vB = !1, mB = 0, NB = !1;
-      const BB = oB;
-      oB = !1, BB && bB()
+    function PY() {
+      uY = !1, sY = !1, iY = !1, clearTimeout(aY), WY = !1, EY = !1, mY = 0, SY = !1;
+      const YY = vY;
+      vY = !1, YY && UY()
     }
 
-    function bB() {
-      for (const BB of [...fB]) BB(oB);
-      yB.h.yH("pointerLockUpdate", oB)
+    function UY() {
+      for (const YY of [...TY]) YY(vY);
+      AY.g.vo("pointerLockUpdate", vY)
     }
   },
-  39412: (BB, TB, dB) => {
-    dB.d(TB, {
-      b: () => LB,
-      c: () => JB,
-      e: () => kB,
-      f: () => gB,
-      i: () => lB,
-      l: () => oB,
-      o: () => YB
+  39785: (YY, rY, DY) => {
+    DY.d(rY, {
+      b: () => sY,
+      e: () => OY,
+      i: () => uY,
+      m: () => aY,
+      o: () => RY,
+      s: () => vY,
+      u: () => gY
     });
-    let VB = null,
-      yB = null,
-      pB = null;
+    let FY = null,
+      AY = null,
+      IY = null;
 
-    function lB(BB) {
-      VB = BB
+    function RY(YY) {
+      FY = YY
     }
 
-    function JB() {
-      return VB
+    function OY() {
+      return FY
     }
 
-    function YB(BB) {
-      yB = BB
+    function gY(YY) {
+      AY = YY
     }
 
-    function gB() {
-      return yB
+    function aY() {
+      return AY
     }
 
-    function oB(BB) {
-      pB = BB
+    function vY(YY) {
+      IY = YY
     }
 
-    function kB() {
-      return pB
+    function uY() {
+      return IY
     }
 
-    function LB() {
-      var BB, TB;
-      return !0 === (null === (BB = yB) || void 0 === BB || null === (TB = BB.currentViewer) || void 0 === TB ? void 0 : TB.inPlayback)
+    function sY() {
+      var YY, rY;
+      return !0 === (null === (YY = AY) || void 0 === YY || null === (rY = YY.currentViewer) || void 0 === rY ? void 0 : rY.inPlayback)
     }
   },
-  39454: (BB, TB, dB) => {
-    dB.r(TB), dB.d(TB, {
-      loadIcons: () => wB,
-      setIconFileOverrides: () => UB,
-      wasmIconLookups: () => RB,
-      wasmIconQueries: () => QB
+  39835: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => RY,
+      f: () => IY,
+      j: () => OY
     });
-    var VB = dB(3916),
-      yB = dB(3886),
-      pB = dB(39459),
-      lB = dB(1694),
-      JB = dB(1679),
-      YB = dB(2760),
-      gB = dB(2764);
-    let oB = null,
-      kB = null;
+    var FY = DY(39683),
+      AY = DY(39693);
 
-    function LB(BB) {
-      const TB = BB.startsWith(gB.n),
-        [dB, VB = dB, yB = dB] = (TB ? BB.slice(gB.n.length) : BB).split(gB.j);
+    function IY(YY) {
+      if (YY.queries.drawCensus() < FY.ub.BYTES) return null;
+      const rY = YY.memoryData(YY.scratch(), FY.ub.BYTES, 4, "the draw census");
+      return null === rY ? null : {
+        terrainOpaque: FY.ub.terrainOpaque(rY, 0),
+        terrainTransparent: FY.ub.terrainTransparent(rY, 0),
+        terrainPack: FY.ub.terrainPack(rY, 0),
+        earthSky: FY.ub.earthSky(rY, 0),
+        skyMeshes: FY.ub.skyMeshes(rY, 0),
+        regular: FY.ub.regular(rY, 0),
+        thin: FY.ub.thin(rY, 0),
+        line: FY.ub.line(rY, 0),
+        text: FY.ub.text(rY, 0),
+        particles: FY.ub.particles(rY, 0)
+      }
+    }
+
+    function RY(YY) {
+      const {
+        terrainOpaque: rY,
+        terrainTransparent: DY,
+        earthSky: FY,
+        skyMeshes: AY,
+        regular: IY,
+        thin: RY,
+        line: OY,
+        text: gY,
+        particles: aY
+      } = YY;
+      return rY + DY + FY + AY + IY + RY + OY + gY + aY
+    }
+
+    function OY() {
+      const YY = (0, AY.g)();
+      return !0 === (null === YY || void 0 === YY ? void 0 : YY.isCoreRunning) ? function(YY) {
+        const rY = IY(YY);
+        if (null === rY) return [];
+        const {
+          terrainOpaque: DY,
+          terrainTransparent: FY,
+          terrainPack: AY,
+          earthSky: OY,
+          skyMeshes: gY,
+          regular: aY,
+          thin: vY,
+          line: uY,
+          text: sY,
+          particles: iY
+        } = rY;
+        return [{
+          label: "Drawn",
+          value: `${RY(rY)}`
+        }, {
+          label: "Terrain",
+          value: `${DY} opaque / ${FY} transparent (${AY} shader pack)`
+        }, {
+          label: "Meshes / Thin bases",
+          value: `${aY} / ${vY}`
+        }, {
+          label: "Text / Lines",
+          value: `${sY} / ${uY}`
+        }, {
+          label: "Sky / Particles",
+          value: `${OY+gY} / ${iY}`
+        }]
+      }(YY.api) : []
+    }
+  },
+  39842: (YY, rY, DY) => {
+    DY.r(rY), DY.d(rY, {
+      loadIcons: () => cY,
+      setIconFileOverrides: () => KY,
+      wasmIconLookups: () => JY,
+      wasmIconQueries: () => dY
+    });
+    var FY = DY(4038),
+      AY = DY(4010),
+      IY = DY(39849),
+      RY = DY(1818),
+      OY = DY(1808),
+      gY = DY(2864),
+      aY = DY(2866);
+    let vY = null,
+      uY = null;
+
+    function sY(YY) {
+      const rY = YY.startsWith(aY.j),
+        [DY, FY = DY, AY = DY] = (rY ? YY.slice(aY.j.length) : YY).split(aY.f);
       return {
-        top: dB,
-        left: VB,
-        right: yB,
-        half: TB
+        top: DY,
+        left: FY,
+        right: AY,
+        half: rY
       }
     }
 
-    function OB(BB) {
-      const TB = null === oB ? void 0 : (0, YB.b)(BB),
-        dB = void 0 === TB ? 0 : oB.codes[TB];
-      return 0 === dB ? void 0 : oB.pool[dB - 1]
+    function iY(YY) {
+      const rY = null === vY ? void 0 : (0, gY.b)(YY),
+        DY = void 0 === rY ? 0 : vY.codes[rY];
+      return 0 === DY ? void 0 : vY.pool[DY - 1]
     }
-    var DB = dB(2751),
-      uB = dB(3869),
-      HB = dB(3909),
-      EB = dB(39467);
-    const vB = "item:";
-    let mB = null,
-      iB = null,
-      NB = null,
-      tB = null,
-      fB = !1,
-      sB = !1,
-      MB = null,
-      zB = 0;
+    var yY = DY(2862),
+      QY = DY(3992),
+      oY = DY(4035),
+      WY = DY(39858);
+    const EY = "item:";
+    let mY = null,
+      VY = null,
+      SY = null,
+      lY = null,
+      TY = !1,
+      eY = !1,
+      NY = null,
+      BY = 0;
 
-    function wB() {
-      return sB || (sB = !0, (0, HB.d)().then((BB => {
-        BB && (0, lB.c)()
-      }))), NB ??= Promise.all([(0, DB.g)(), (kB ??= dB.e(1).then((() => dB(41306))).then((BB => {
+    function cY() {
+      return eY || (eY = !0, (0, oY.i)().then((YY => {
+        YY && (0, RY.e)()
+      }))), SY ??= Promise.all([(0, yY.e)(), (uY ??= DY.e(1).then((() => DY(41667))).then((YY => {
         let {
-          BLOCK_FACE_RUNS: TB,
-          BLOCK_FACES: dB,
-          MAX_FACE_ITEM_ID: VB
-        } = BB;
-        oB = {
-          codes: (0, gB.B)(TB, VB + 1),
-          pool: dB.split(gB.v).map(LB)
+          BLOCK_FACE_RUNS: rY,
+          BLOCK_FACES: DY,
+          MAX_FACE_ITEM_ID: FY
+        } = YY;
+        vY = {
+          codes: (0, aY.y)(rY, FY + 1),
+          pool: DY.split(aY.s).map(sY)
         }
-      }), (BB => {
-        throw kB = null, BB
-      })), kB), (0, EB.f)(), dB.e(200).then((() => dB(35681)))]).then((BB => {
-        let [, , TB, dB] = BB;
-        TB.followBundledTextures(), mB = TB, iB = dB, (0, lB.c)()
-      }), (BB => {
-        NB = null, console.warn("[bloxd-wasm-client] the item icon tables did not load, so item icons stay blank", BB)
-      })), NB
+      }), (YY => {
+        throw uY = null, YY
+      })), uY), (0, WY.i)(), DY.e(186).then((() => DY(8770)))]).then((YY => {
+        let [, , rY, DY] = YY;
+        rY.followBundledTextures(), mY = rY, VY = DY, (0, RY.e)()
+      }), (YY => {
+        SY = null, console.warn("[bloxd-wasm-client] the item icon tables did not load, so item icons stay blank", YY)
+      })), SY
     }
 
-    function UB(BB) {
-      MB = BB, zB++, (0, lB.c)()
+    function KY(YY) {
+      NY = YY, BY++, (0, RY.e)()
     }
 
-    function FB(BB) {
-      var TB, dB;
-      return null !== (TB = null === (dB = MB) || void 0 === dB ? void 0 : dB.itemSprite(BB)) && void 0 !== TB ? TB : mB.itemSpriteUrl(BB)
+    function HY(YY) {
+      var rY, DY;
+      return null !== (rY = null === (DY = NY) || void 0 === DY ? void 0 : DY.itemSprite(YY)) && void 0 !== rY ? rY : mY.itemSpriteUrl(YY)
     }
 
-    function KB(BB) {
-      var TB, dB;
-      return null !== (TB = null === (dB = MB) || void 0 === dB ? void 0 : dB.blockTexture(BB)) && void 0 !== TB ? TB : mB.blockTextureUrl(BB)
+    function zY(YY) {
+      var rY, DY;
+      return null !== (rY = null === (DY = NY) || void 0 === DY ? void 0 : DY.blockTexture(YY)) && void 0 !== rY ? rY : mY.blockTextureUrl(YY)
     }
 
-    function rB(BB) {
-      var TB;
-      return null !== (TB = (0, DB.d)(BB)) && void 0 !== TB ? TB : BB
+    function ZY(YY) {
+      var rY;
+      return null !== (rY = (0, yY.b)(YY)) && void 0 !== rY ? rY : YY
     }
 
-    function IB(BB, TB) {
-      var dB, VB, yB;
-      return null !== (dB = null !== (VB = null !== (yB = KB(BB)) && void 0 !== yB ? yB : null === TB || void 0 === TB ? void 0 : TB.rotated[BB]) && void 0 !== VB ? VB : null === TB || void 0 === TB ? void 0 : TB.animated[BB]) && void 0 !== dB ? dB : mB.notFoundUrl()
+    function CY(YY, rY) {
+      var DY, FY, AY;
+      return null !== (DY = null !== (FY = null !== (AY = zY(YY)) && void 0 !== AY ? AY : null === rY || void 0 === rY ? void 0 : rY.rotated[YY]) && void 0 !== FY ? FY : null === rY || void 0 === rY ? void 0 : rY.animated[YY]) && void 0 !== DY ? DY : mY.notFoundUrl()
     }
 
-    function cB(BB) {
-      return void 0 !== (0, YB.b)(BB) ? BB : /^[1-9][0-9]*$/.test(BB) ? (0, YB.c)(Number(BB)) : void 0
+    function fY(YY) {
+      return void 0 !== (0, gY.b)(YY) ? YY : /^[1-9][0-9]*$/.test(YY) ? (0, gY.e)(Number(YY)) : void 0
     }
 
-    function SB(BB) {
-      var TB;
-      if (BB.startsWith(vB)) {
-        var dB;
-        const TB = (0, DB.d)(BB.slice(5));
-        return null !== (dB = void 0 === TB ? null : FB(TB)) && void 0 !== dB ? dB : mB.notFoundUrl()
+    function jY(YY) {
+      var rY;
+      if (YY.startsWith(EY)) {
+        var DY;
+        const rY = (0, yY.b)(YY.slice(5));
+        return null !== (DY = void 0 === rY ? null : HY(rY)) && void 0 !== DY ? DY : mY.notFoundUrl()
       }
-      return null !== (TB = mB.particleUrl(BB)) && void 0 !== TB ? TB : mB.notFoundUrl()
+      return null !== (rY = mY.particleUrl(YY)) && void 0 !== rY ? rY : mY.notFoundUrl()
     }
 
-    function PB(BB, TB) {
-      return "StairsBlock" === BB ? BB : TB ? "SlabBlock" : "CubeBlock"
+    function hY(YY, rY) {
+      return "StairsBlock" === YY ? YY : rY ? "SlabBlock" : "CubeBlock"
     }
-    const QB = {
-        async blockIcon(BB) {
-          var TB;
+    const dY = {
+        async blockIcon(YY) {
+          var rY;
           let {
-            name: VB,
-            size: yB,
-            lineWidth: pB
-          } = BB;
-          await wB();
-          const JB = null !== (TB = cB(VB)) && void 0 !== TB ? TB : VB,
-            gB = (0, HB.b)(JB, yB, pB);
-          if (null !== gB) return gB;
-          const oB = OB(JB),
-            kB = (0, YB.b)(JB),
-            LB = void 0 === kB || null === iB ? void 0 : iB.itemTypeNameOf(kB);
-          if (null === mB || void 0 === oB) return "";
-          const DB = [oB.top, oB.left, oB.right].some((BB => null === KB(BB))),
-            EB = DB ? await (tB ??= dB.e(187).then((() => dB(33444))).then((BB => (fB && (fB = !1, (0, lB.c)()), {
-              rotated: BB.rotatedBlockTextures,
-              animated: BB.animatedBlockTextures
-            })), (BB => (tB = null, fB = !0, console.warn("[bloxd-wasm-client] the built block atlas did not load, so some block icons stay blank", BB), null))), tB) : null;
-          if (DB && null === EB) return "";
-          const vB = {
-              top: IB(oB.top, EB),
-              left: IB(oB.left, EB),
-              right: IB(oB.right, EB),
-              itemType: PB(LB, oB.half)
+            name: FY,
+            size: AY,
+            lineWidth: IY
+          } = YY;
+          await cY();
+          const OY = null !== (rY = fY(FY)) && void 0 !== rY ? rY : FY,
+            aY = (0, oY.b)(OY, AY, IY);
+          if (null !== aY) return aY;
+          const vY = iY(OY),
+            uY = (0, gY.b)(OY),
+            sY = void 0 === uY || null === VY ? void 0 : VY.itemTypeNameOf(uY);
+          if (null === mY || void 0 === vY) return "";
+          const yY = [vY.top, vY.left, vY.right].some((YY => null === zY(YY))),
+            WY = yY ? await (lY ??= DY.e(196).then((() => DY(33702))).then((YY => (TY && (TY = !1, (0, RY.e)()), {
+              rotated: YY.rotatedBlockTextures,
+              animated: YY.animatedBlockTextures
+            })), (YY => (lY = null, TY = !0, console.warn("[bloxd-wasm-client] the built block atlas did not load, so some block icons stay blank", YY), null))), lY) : null;
+          if (yY && null === WY) return "";
+          const EY = {
+              top: CY(vY.top, WY),
+              left: CY(vY.left, WY),
+              right: CY(vY.right, WY),
+              itemType: hY(sY, vY.half)
             },
-            NB = 0 === zB ? JB : `${JB}#${zB}`;
-          return (await (0, uB.e)()).drawBlockIconUrl(NB, yB, pB, (() => vB))
+            SY = 0 === BY ? OY : `${OY}#${BY}`;
+          return (await (0, QY.b)()).drawBlockIconUrl(SY, AY, IY, (() => EY))
         }
       },
-      RB = {
-        itemIcon: function(BB) {
-          var TB, dB;
-          if (null === mB) return wB(), JB.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(BB);
-          if ((0, yB.l)(BB)) return {
+      JY = {
+        itemIcon: function(YY) {
+          var rY, DY;
+          if (null === mY) return cY(), OY.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(YY);
+          if ((0, AY.i)(YY)) return {
             kind: "icon",
-            url: null !== (dB = mB.ingameIconUrl(BB)) && void 0 !== dB ? dB : mB.notFoundUrl()
+            url: null !== (DY = mY.ingameIconUrl(YY)) && void 0 !== DY ? DY : mY.notFoundUrl()
           };
-          if (BB.startsWith(yB.e)) return {
+          if (YY.startsWith(AY.c)) return {
             kind: "icon",
-            url: SB(BB.slice(yB.e.length))
+            url: jY(YY.slice(AY.c.length))
           };
-          if (0 === (0, YB.d)()) return (0, pB.d)(), JB.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(BB);
-          const lB = null !== (TB = cB(BB)) && void 0 !== TB ? TB : BB,
-            gB = (0, YB.b)(lB),
-            oB = void 0 === gB ? void 0 : iB.itemTypeNameOf(gB);
-          if (void 0 !== OB(lB)) return {
+          if (0 === (0, gY.i)()) return (0, IY.b)(), OY.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(YY);
+          const RY = null !== (rY = fY(YY)) && void 0 !== rY ? rY : YY,
+            aY = (0, gY.b)(RY),
+            vY = void 0 === aY ? void 0 : VY.itemTypeNameOf(aY);
+          if (void 0 !== iY(RY)) return {
             kind: "drawnBlock"
           };
-          const kB = function(BB) {
-            var TB;
-            return null !== (TB = FB(rB(BB))) && void 0 !== TB ? TB : mB.notFoundUrl()
-          }(lB);
-          if ((0, HB.c)(lB) && ! function(BB) {
-              return null !== MB && (null !== MB.itemSprite(rB(BB)) || null !== MB.model(BB))
-            }(lB)) return {
+          const uY = function(YY) {
+            var rY;
+            return null !== (rY = HY(ZY(YY))) && void 0 !== rY ? rY : mY.notFoundUrl()
+          }(RY);
+          if ((0, oY.e)(RY) && ! function(YY) {
+              return null !== NY && (null !== NY.itemSprite(ZY(YY)) || null !== NY.model(YY))
+            }(RY)) return {
             kind: "model",
-            url: kB
+            url: uY
           };
-          if ("Gun" === oB) return {
+          if ("Gun" === vY) return {
             kind: "gun",
-            url: kB
+            url: uY
           };
-          if (void 0 !== gB && "GrayscaleArmour" === iB.itemTypeOf(gB) || Object.hasOwn(VB.e, lB)) {
-            var LB;
-            const TB = null !== (LB = (0, VB.f)(BB)) && void 0 !== LB ? LB : (0, VB.f)(lB);
-            if (TB) return {
+          if (void 0 !== aY && "GrayscaleArmour" === VY.itemTypeOf(aY) || Object.hasOwn(FY.b, RY)) {
+            var sY;
+            const rY = null !== (sY = (0, FY.e)(YY)) && void 0 !== sY ? sY : (0, FY.e)(RY);
+            if (rY) return {
               kind: "item",
-              url: kB,
-              tint: TB
+              url: uY,
+              tint: rY
             }
           }
           return {
             kind: "item",
-            url: kB
+            url: uY
           }
         },
-        hasIcon: function(BB) {
-          return void 0 !== cB(BB) || (0, yB.l)(BB) || BB.startsWith(yB.e)
+        hasIcon: function(YY) {
+          return void 0 !== fY(YY) || (0, AY.i)(YY) || YY.startsWith(AY.c)
         },
-        isItemName: function(BB) {
-          return void 0 !== cB(BB)
+        isItemName: function(YY) {
+          return void 0 !== fY(YY)
         }
       }
   },
-  39407: (BB, TB, dB) => {
-    dB.r(TB), dB.d(TB, {
-      attachPlayGameSources: () => rd,
-      playGameSources: () => Kd
+  39778: (YY, rY, DY) => {
+    DY.r(rY), DY.d(rY, {
+      attachPlayGameSources: () => qD,
+      playGameSources: () => XD
     });
-    var VB = dB(1679),
-      yB = dB(39412),
-      pB = dB(4169),
-      lB = dB(39322),
-      JB = dB(39417),
-      YB = dB(38504),
-      gB = dB(24),
-      oB = dB(4192),
-      kB = dB(4186),
-      LB = dB(39356),
-      OB = dB(39385),
-      DB = dB(39424),
-      uB = dB(39372);
-    (0, uB.n)(oB.Jb.Chat, (BB => {
-      if (BB.payloadKind !== kB.ac.Msgpack) return;
-      const TB = function(BB) {
-        if (null === BB || "object" !== typeof BB || !("content" in BB)) return null;
+    var FY = DY(1808),
+      AY = DY(39785),
+      IY = DY(4365),
+      RY = DY(39693),
+      OY = DY(39790),
+      gY = DY(38895),
+      aY = DY(25),
+      vY = DY(4382),
+      uY = DY(4376),
+      sY = DY(39731),
+      iY = DY(39752),
+      yY = DY(39798),
+      QY = DY(39739);
+    (0, QY.l)(vY._b.Chat, (YY => {
+      if (YY.payloadKind !== uY.dc.Msgpack) return;
+      const rY = function(YY) {
+        if (null === YY || "object" !== typeof YY || !("content" in YY)) return null;
         const {
-          chatMsgId: TB,
-          content: dB,
-          chatterEId: VB
-        } = BB;
+          chatMsgId: rY,
+          content: DY,
+          chatterEId: FY
+        } = YY;
         return {
-          serverChatMsgId: null !== TB && void 0 !== TB ? TB : void 0,
-          content: dB,
-          chatterEId: void 0 === VB || null === VB ? void 0 : String(VB)
+          serverChatMsgId: null !== rY && void 0 !== rY ? rY : void 0,
+          content: DY,
+          chatterEId: void 0 === FY || null === FY ? void 0 : String(FY)
         }
-      }((0, LB.c)(BB.payload));
-      null !== TB && gB.h.yH("chat", TB, !0)
+      }((0, sY.e)(YY.payload));
+      null !== rY && aY.g.vo("chat", rY, !0)
     }));
-    const HB = {
-        chatReceived: (0, YB.k)((function(BB) {
-          var TB, dB, VB;
+    const oY = {
+        chatReceived: (0, gY.j)((function(YY) {
+          var rY, DY, FY;
           return {
-            id: BB,
-            name: null !== (TB = DB.h.getName(BB)) && void 0 !== TB ? TB : null,
-            local: (0, OB.e)() === BB,
-            profileEffect: null !== (dB = null === (VB = (0, DB.i)(BB)) || void 0 === VB ? void 0 : VB.profileEffect) && void 0 !== dB ? dB : null
+            id: YY,
+            name: null !== (rY = yY.c.getName(YY)) && void 0 !== rY ? rY : null,
+            local: (0, iY.e)() === YY,
+            profileEffect: null !== (DY = null === (FY = (0, yY.g)(YY)) || void 0 === FY ? void 0 : FY.profileEffect) && void 0 !== DY ? DY : null
           }
         }))
       },
-      EB = {
-        sendChatMessage(BB) {
-          var TB;
+      WY = {
+        sendChatMessage(YY) {
+          var rY;
           let {
-            Jo: dB,
-            channelName: VB
-          } = BB;
-          null === (TB = (0, lB.i)()) || void 0 === TB || TB.clientApi.sendChat(dB, VB)
+            vv: DY,
+            channelName: FY
+          } = YY;
+          null === (rY = (0, RY.g)()) || void 0 === rY || rY.clientApi.sendChat(DY, FY)
         }
       };
-    var vB = dB(184),
-      mB = dB(1708),
-      iB = dB(39310),
-      NB = dB(38502);
-    const tB = [0, 0, 0],
-      fB = {
-        codeBlockClickable(BB) {
-          var TB;
-          const dB = (0, lB.i)();
-          if (null === dB || void 0 === dB || !dB.isSessionLive) return !1;
-          const VB = dB.api;
-          if (0 !== (iB.B.playerFlags(VB.apiView, 0) & iB.Bd.Crouching)) return !1;
-          const yB = VB.queries.directorEntity(VB.localId) >= iB.xb.BYTES ? VB.memoryData(VB.scratch(), iB.xb.BYTES, 8, "the local player's DirectorEntity") : null;
-          if (null === yB) return !1;
-          for (let pB = 0; pB < 3; pB++) tB[pB] = iB.xb.feet(yB, 0, pB);
-          return tB[1] += iB.xb.eyeHeight(yB, 0), (0, NB.d)(tB, BB, null !== (TB = mB.c.get("blockReach")) && void 0 !== TB ? TB : vB.c.uE)
+    var EY = DY(213),
+      mY = DY(1823),
+      VY = DY(39683),
+      SY = DY(38891);
+    const lY = [0, 0, 0],
+      TY = {
+        codeBlockClickable(YY) {
+          var rY;
+          const DY = (0, RY.g)();
+          if (null === DY || void 0 === DY || !DY.isSessionLive) return !1;
+          const FY = DY.api;
+          if (0 !== (VY.s.playerFlags(FY.apiView, 0) & VY.Cd.Crouching)) return !1;
+          const AY = FY.queries.directorEntity(FY.localId) >= VY.lb.BYTES ? FY.memoryData(FY.scratch(), VY.lb.BYTES, 8, "the local player's DirectorEntity") : null;
+          if (null === AY) return !1;
+          for (let IY = 0; IY < 3; IY++) lY[IY] = VY.lb.feet(AY, 0, IY);
+          return lY[1] += VY.lb.eyeHeight(AY, 0), (0, SY.c)(lY, YY, null !== (rY = mY.b.get("blockReach")) && void 0 !== rY ? rY : EY.d.UW)
         }
       },
-      sB = {
-        clickCodeBlock(BB) {
-          var TB;
-          null === (TB = (0, lB.i)()) || void 0 === TB || TB.clickCodeBlock(BB)
+      eY = {
+        clickCodeBlock(YY) {
+          var rY;
+          null === (rY = (0, RY.g)()) || void 0 === rY || rY.clickCodeBlock(YY)
         }
       };
-    var MB = dB(39338),
-      zB = dB(39428),
-      wB = dB(900),
-      UB = dB(37983),
-      FB = dB(4167),
-      KB = dB(39346),
-      rB = dB(39330),
-      IB = dB(39348);
+    var NY = DY(39708),
+      BY = DY(39806),
+      cY = DY(1057),
+      KY = DY(38400),
+      HY = DY(4361),
+      zY = DY(39725),
+      ZY = DY(39699),
+      CY = DY(39728);
 
-    function cB(BB) {
-      if (null === BB) return null;
-      const TB = [];
-      for (const dB of BB) {
-        const BB = Object.keys(dB)[0];
-        if ("Ed" === BB) {
+    function fY(YY) {
+      if (null === YY) return null;
+      const rY = [];
+      for (const DY of YY) {
+        const YY = Object.keys(DY)[0];
+        if ("RY" === YY) {
           const {
-            str: BB,
-            style: VB,
-            clickableUrl: yB
-          } = dB.Ed, pB = Object.keys(BB)[0], lB = BB[pB];
-          "string" !== pB && "styledEntityName" !== pB && "styledTranslatedText" !== pB || TB.push({
-            str: lB,
-            style: VB,
-            clickableUrl: yB
+            str: YY,
+            style: FY,
+            clickableUrl: AY
+          } = DY.RY, IY = Object.keys(YY)[0], RY = YY[IY];
+          "string" !== IY && "styledEntityName" !== IY && "styledTranslatedText" !== IY || rY.push({
+            str: RY,
+            style: FY,
+            clickableUrl: AY
           })
-        } else TB.push(dB[BB])
+        } else rY.push(DY[YY])
       }
-      return TB
+      return rY
     }
-    const SB = {
-      screenPos(BB) {
-        var TB, dB;
-        return null !== (TB = null === (dB = (0, lB.i)()) || void 0 === dB ? void 0 : dB.renderFrame.projectWorldPosToScreenPos(BB)) && void 0 !== TB ? TB : {
+    const jY = {
+      screenPos(YY) {
+        var rY, DY;
+        return null !== (rY = null === (DY = (0, RY.g)()) || void 0 === DY ? void 0 : DY.renderFrame.projectWorldPosToScreenPos(YY)) && void 0 !== rY ? rY : {
           x: 0,
           y: 0
         }
       }
     };
-    let PB = !1;
+    let hY = !1;
 
-    function QB() {
-      PB || (PB = !0, (0, uB.n)(oB.Jb.ProgressBarUpdate, (BB => {
-        const TB = (0, IB.h)(BB);
-        (0, IB.e)(TB) && gB.h.yH("progressBarUpdate", TB, !0)
-      })), (0, uB.n)(KB.w, (BB => {
-        const TB = (0, IB.f)(KB.w, BB);
-        TB && gB.h.yH("middleScreenBarInitiate", {
-          duration: TB.Zp,
-          Xp: TB.Xp,
-          horizBarRemOffset: TB.Wp
+    function dY() {
+      hY || (hY = !0, (0, QY.l)(vY._b.ProgressBarUpdate, (YY => {
+        const rY = (0, CY.g)(YY);
+        (0, CY.c)(rY) && aY.g.vo("progressBarUpdate", rY, !0)
+      })), (0, QY.l)(zY.A, (YY => {
+        const rY = (0, CY.f)(zY.A, YY);
+        rY && aY.g.vo("middleScreenBarInitiate", {
+          duration: rY.er,
+          Nr: rY.Nr,
+          horizBarRemOffset: rY.Br
         }, !0)
-      })), (0, uB.n)(oB.Jb.RemoveMiddleScreenBar, (() => {
-        gB.h.yH("middleScreenBarRemove")
-      })), (0, uB.n)(KB.db, (BB => {
-        const TB = (0, IB.f)(KB.db, BB);
-        if (TB) {
-          var dB;
-          const BB = TB.YB ? null === (dB = (0, lB.i)()) || void 0 === dB ? void 0 : dB.renderFrame.projectDirectionToScreenPos(TB.YB) : void 0;
-          gB.h.yH("sendHitmarker", {
-            jT: TB.jT,
-            screenPos: BB
+      })), (0, QY.l)(vY._b.RemoveMiddleScreenBar, (() => {
+        aY.g.vo("middleScreenBarRemove")
+      })), (0, QY.l)(zY.hb, (YY => {
+        const rY = (0, CY.f)(zY.hb, YY);
+        if (rY) {
+          var DY;
+          const YY = rY.iY ? null === (DY = (0, RY.g)()) || void 0 === DY ? void 0 : DY.renderFrame.projectDirectionToScreenPos(rY.iY) : void 0;
+          aY.g.vo("sendHitmarker", {
+            iD: rY.iD,
+            screenPos: YY
           }, !0)
         }
-      })), (0, uB.n)(KB.hb, (BB => {
-        const TB = (0, IB.f)(KB.hb, BB);
-        if (TB) {
+      })), (0, QY.l)(zY.lb, (YY => {
+        const rY = (0, CY.f)(zY.lb, YY);
+        if (rY) {
           const {
-            id: BB,
-            position: dB,
-            style: VB,
-            cp: yB,
-            Pp: pB
-          } = TB;
-          gB.h.yH("setDirectionArrow", {
-            id: BB,
-            position: dB,
-            style: VB,
-            text: cB(yB),
-            Pp: pB
+            id: YY,
+            position: DY,
+            style: FY,
+            IY: AY,
+            aY: IY
+          } = rY;
+          aY.g.vo("setDirectionArrow", {
+            id: YY,
+            position: DY,
+            style: FY,
+            text: fY(AY),
+            aY: IY
           }, !0)
         }
-      })), (0, uB.n)(KB.e, (BB => {
-        const TB = (0, IB.f)(KB.e, BB);
-        TB && gB.h.yH("clearDirectionArrow", {
-          id: TB.id
+      })), (0, QY.l)(zY.g, (YY => {
+        const rY = (0, CY.f)(zY.g, YY);
+        rY && aY.g.vo("clearDirectionArrow", {
+          id: rY.id
         }, !0)
-      })), (0, uB.n)(KB.q, (BB => {
-        const TB = (0, IB.f)(KB.q, BB);
-        TB && gB.h.yH("flyingMiddleMessage", {
-          content: cB(TB.Hd),
-          Nd: TB.Nd,
-          td: TB.td
+      })), (0, QY.l)(zY.s, (YY => {
+        const rY = (0, CY.f)(zY.s, YY);
+        rY && aY.g.vo("flyingMiddleMessage", {
+          content: fY(rY.jY),
+          hY: rY.hY,
+          dY: rY.dY
         }, !0)
-      })), (0, uB.n)(oB.Jb.WorldVariation, (BB => {
-        const TB = (0, IB.h)(BB);
-        if ("string" === typeof TB) {
-          const BB = TB === wB.f ? null : {
-            message: `Currently loaded as variation: ${TB}`,
+      })), (0, QY.l)(vY._b.WorldVariation, (YY => {
+        const rY = (0, CY.g)(YY);
+        if ("string" === typeof rY) {
+          const YY = rY === cY.g ? null : {
+            message: `Currently loaded as variation: ${rY}`,
             type: "Warning"
           };
-          gB.h.yH("showPermanentBottomMessage", BB, !0)
+          aY.g.vo("showPermanentBottomMessage", YY, !0)
         }
-      })), (0, uB.n)(KB.J, (BB => {
-        const TB = (0, IB.f)(KB.J, BB);
-        TB && function(BB, TB) {
+      })), (0, QY.l)(zY.N, (YY => {
+        const rY = (0, CY.f)(zY.N, YY);
+        rY && function(YY, rY) {
           const {
-            type: dB,
-            params: VB
-          } = (0, UB.i)(TB), yB = {
-            ...VB
+            type: DY,
+            params: FY
+          } = (0, KY.d)(rY), AY = {
+            ...FY
           };
-          for (const pB of UB.e) yB[pB] && (yB[pB] = cB(yB[pB]));
-          FB.c.queueQTE(BB, dB, yB).getResult().then((TB => {
-            var dB;
-            "boolean" === typeof TB && (null === (dB = (0, lB.i)()) || void 0 === dB || dB.send(rB.c.QteResponse, {
-              qteId: BB,
-              qteResponse: TB
+          for (const IY of KY.c) AY[IY] && (AY[IY] = fY(AY[IY]));
+          HY.b.queueQTE(YY, DY, AY).getResult().then((rY => {
+            var DY;
+            "boolean" === typeof rY && (null === (DY = (0, RY.g)()) || void 0 === DY || DY.send(ZY.d.QteResponse, {
+              qteId: YY,
+              qteResponse: rY
             }))
           }))
-        }(TB.id, TB.bd)
-      })), (0, uB.n)(KB.W, (BB => {
-        const TB = (0, IB.f)(KB.W, BB);
-        "number" === typeof TB && FB.c.cancelQTE(TB)
-      })), (0, uB.i)((() => {
-        FB.c.reset(), gB.h.yH("showPermanentBottomMessage", null, !0)
-      })), (0, uB.m)((() => {
-        FB.c.reset()
-      })), (0, uB.n)(oB.Jb.EditItemCraftingRecipes, (BB => {
-        const TB = (0, IB.h)(BB);
-        (0, IB.e)(TB) && gB.h.yH("craftingRecipesEdited", {
-          itemName: TB.craftingRecipeItemName,
-          recipesForItem: TB.recipesForItem
+        }(rY.id, rY.hD)
+      })), (0, QY.l)(zY.ab, (YY => {
+        const rY = (0, CY.f)(zY.ab, YY);
+        "number" === typeof rY && HY.b.cancelQTE(rY)
+      })), (0, QY.g)((() => {
+        HY.b.reset(), aY.g.vo("showPermanentBottomMessage", null, !0)
+      })), (0, QY.h)((() => {
+        HY.b.reset()
+      })), (0, QY.l)(vY._b.EditItemCraftingRecipes, (YY => {
+        const rY = (0, CY.g)(YY);
+        (0, CY.c)(rY) && aY.g.vo("craftingRecipesEdited", {
+          itemName: rY.craftingRecipeItemName,
+          recipesForItem: rY.recipesForItem
         })
-      })), (0, uB.n)(KB.T, (BB => {
-        const TB = (0, IB.f)(KB.T, BB);
-        TB && gB.h.yH("craftingRecipesEdited", {
-          itemName: TB.RT,
+      })), (0, QY.l)(zY.Y, (YY => {
+        const rY = (0, CY.f)(zY.Y, YY);
+        rY && aY.g.vo("craftingRecipesEdited", {
+          itemName: rY.mY,
           recipesForItem: []
         })
       })))
     }
-    var RB = dB(38113);
-    let aB = !1,
-      ZB = !1;
+    var JY = DY(19);
+    const MY = [{
+      allowed: !1,
+      movesFly: !1
+    }, {
+      allowed: !1,
+      movesFly: !0
+    }, {
+      allowed: !0,
+      movesFly: !1
+    }, {
+      allowed: !0,
+      movesFly: !0
+    }];
 
-    function XB() {
-      const BB = (0, lB.i)();
-      if (null === BB || void 0 === BB || !BB.isSessionLive) return void(aB = !1);
-      const TB = 0 !== (iB.B.playerFlags(BB.api.apiView, 0) & iB.Bd.FreeCam);
-      TB !== aB && (aB = TB, (0, RB.b)(TB))
+    function wY(YY) {
+      return VY.s.playerFlags(YY.api.apiView, 0)
     }
-    var WB = dB(279),
-      hB = dB(35984),
-      CB = dB(1719);
-    var GB = dB(39431),
-      qB = dB(39378);
-    const xB = {
+    const bY = {
+        freeCamera: (0, iY.b)((YY => () => {
+          const rY = YY.isSessionLive && 0 !== (wY(YY) & VY.Cd.FreeCamMoves),
+            DY = YY.freeCameraAllowed() && null === JY.b.get("scriptedCameraFacing");
+          return MY[(DY ? 2 : 0) + (rY ? 1 : 0)]
+        }), MY[0], (YY => (0, IY.s)(YY)))
+      },
+      XY = {
+        setFreeCameraMovesFly: YY => {
+          var rY;
+          null === (rY = (0, RY.g)()) || void 0 === rY || rY.setFreeCameraMovesFly(YY)
+        }
+      },
+      qY = {
+        freeCameraPos: () => {
+          const YY = (0, RY.g)();
+          return null !== YY && void 0 !== YY && YY.isSessionLive && YY.renderFrame.hasView && 0 !== (wY(YY) & VY.Cd.FreeCam) ? YY.renderFrame.cameraPosition : null
+        }
+      };
+    var pY = DY(38517);
+    let kY = !1,
+      GY = !1;
+
+    function xY() {
+      const YY = (0, RY.g)();
+      if (null === YY || void 0 === YY || !YY.isSessionLive) return void(kY = !1);
+      const rY = 0 !== (VY.s.playerFlags(YY.api.apiView, 0) & VY.Cd.FreeCam);
+      rY !== kY && (kY = rY, (0, pY.e)(rY))
+    }
+    var nY = DY(341),
+      PY = DY(36400),
+      UY = DY(1830);
+    var LY = DY(39812),
+      tY = DY(39747);
+    const Yr = {
       interactPrompt: null,
       blockText: null,
       neededTool: null
     };
-    let jB = "off";
+    let rr = "off";
 
-    function AB(BB) {
-      var TB;
-      return null === BB ? null : {
-        label: null !== (TB = (0, GB.b)(BB, "interactionPrompt")) && void 0 !== TB ? TB : null
+    function Dr(YY) {
+      var rY;
+      return null === YY ? null : {
+        label: null !== (rY = (0, LY.b)(YY, "interactionPrompt")) && void 0 !== rY ? rY : null
       }
     }
-    const bB = new Map([
-      [iB.Bc.Open, {
-        label: YB.f.open
+    const Fr = new Map([
+      [VY.oc.Open, {
+        label: gY.e.open
       }],
-      [iB.Bc.Close, {
-        label: YB.f.close
+      [VY.oc.Close, {
+        label: gY.e.close
       }],
-      [iB.Bc.Milk, {
-        label: YB.f.milk
+      [VY.oc.Milk, {
+        label: gY.e.milk
       }],
-      [iB.Bc.Shear, {
-        label: YB.f.shear
+      [VY.oc.Shear, {
+        label: gY.e.shear
       }],
-      [iB.Bc.Tame, {
-        label: YB.f.tame
+      [VY.oc.Tame, {
+        label: gY.e.tame
       }],
-      [iB.Bc.Feed, {
-        label: YB.f.feed
+      [VY.oc.Feed, {
+        label: gY.e.feed
       }],
-      [iB.Bc.Ride, {
-        label: YB.f.ride
+      [VY.oc.Ride, {
+        label: gY.e.ride
       }]
     ]);
-    class nB {
+    class Ar {
       constructor() {
-        this.target = xB, this.rY = iB.dd, this.optionName = null, this.pickaxe = new YB.e
+        this.target = Yr, this.rv = VY.$c, this.optionName = null, this.pickaxe = new gY.d
       }
-      read(BB) {
-        var TB;
-        const dB = iB.B.targetBlockId(BB.api.apiView, 0);
-        dB !== this.rY && (this.rY = dB, this.optionName = dB === iB.dd ? null : `${BB.tables.getMetaInfo(dB).rootName}CrosshairText`);
-        const VB = null === this.optionName ? null : null !== (TB = BB.tables.getClientOption(this.optionName)) && void 0 !== TB ? TB : null;
-        this.pickaxe.update(function(BB, TB) {
-          var dB, VB, yB;
-          if (0 === (iB.B.playerFlags(BB.api.apiView, 0) & iB.Bd.Breaking) || TB === iB.dd || 0 === TB) return null;
+      read(YY) {
+        var rY;
+        const DY = VY.s.targetBlockId(YY.api.apiView, 0);
+        DY !== this.rv && (this.rv = DY, this.optionName = DY === VY.$c ? null : `${YY.tables.getMetaInfo(DY).rootName}CrosshairText`);
+        const FY = null === this.optionName ? null : null !== (rY = YY.tables.getClientOption(this.optionName)) && void 0 !== rY ? rY : null;
+        this.pickaxe.update(function(YY, rY) {
+          var DY, FY, AY;
+          if (0 === (VY.s.playerFlags(YY.api.apiView, 0) & VY.Cd.Breaking) || rY === VY.$c || 0 === rY) return null;
           const {
-            tables: pB
-          } = BB;
-          if (!0 === pB.getClientOption("creative")) return null;
-          const lB = pB.nameOfId(TB),
-            JB = null === (dB = BB.items.Dg()) || void 0 === dB ? void 0 : dB.name,
-            YB = null !== (VB = pB.getItemStat(lB, "harvestLevel")) && void 0 !== VB ? VB : 0;
-          return (0, WB.Dc)({
-            blockHarvestType: pB.getDefaultItemStat(lB, "harvestType"),
-            blockHarvestLevel: pB.getDefaultItemStat(lB, "harvestLevel"),
-            harvestLevel: YB,
-            heldToolType: void 0 === JB ? void 0 : pB.getDefaultItemStat(JB, "harvests"),
-            heldToolLevel: void 0 === JB ? void 0 : pB.getDefaultItemStat(JB, "level")
-          }) && null !== (yB = hB.o[YB]) && void 0 !== yB ? yB : null
-        }(BB, dB)), BB.watchPromptPick(jB);
-        const yB = "touch" === jB ? function(BB) {
-          var TB;
-          const dB = BB.interactLabel;
-          return dB === iB.Bc.Entity ? AB(BB.promptEntity) : dB === iB.Bc.TameWith ? {
-            label: (0, YB.u)(BB.tables.nameOfId(BB.interactIcon))
-          } : null !== (TB = bB.get(dB)) && void 0 !== TB ? TB : null
-        }(BB) : AB(BB.promptEntity);
-        return this.target = (0, CB.r)(this.target, {
-          interactPrompt: yB,
-          blockText: VB,
+            tables: IY
+          } = YY;
+          if (!0 === IY.getClientOption("creative")) return null;
+          const RY = IY.nameOfId(rY),
+            OY = null === (DY = YY.items.ja()) || void 0 === DY ? void 0 : DY.name,
+            gY = null !== (FY = IY.getItemStat(RY, "harvestLevel")) && void 0 !== FY ? FY : 0;
+          return (0, nY.yc)({
+            blockHarvestType: IY.getDefaultItemStat(RY, "harvestType"),
+            blockHarvestLevel: IY.getDefaultItemStat(RY, "harvestLevel"),
+            harvestLevel: gY,
+            heldToolType: void 0 === OY ? void 0 : IY.getDefaultItemStat(OY, "harvests"),
+            heldToolLevel: void 0 === OY ? void 0 : IY.getDefaultItemStat(OY, "level")
+          }) && null !== (AY = PY.r[gY]) && void 0 !== AY ? AY : null
+        }(YY, DY)), YY.watchPromptPick(rr);
+        const AY = "touch" === rr ? function(YY) {
+          var rY;
+          const DY = YY.interactLabel;
+          return DY === VY.oc.Entity ? Dr(YY.promptEntity) : DY === VY.oc.TameWith ? {
+            label: (0, gY.r)(YY.tables.nameOfId(YY.interactIcon))
+          } : null !== (rY = Fr.get(DY)) && void 0 !== rY ? rY : null
+        }(YY) : Dr(YY.promptEntity);
+        return this.target = (0, UY.l)(this.target, {
+          interactPrompt: AY,
+          blockText: FY,
           neededTool: this.pickaxe.shown
         }), this.target
       }
     }
-    let eB = null;
-    const BT = {
+    let Ir = null;
+    const Rr = {
       current: () => {
-        var BB, TB;
-        return null !== (BB = null === (TB = eB) || void 0 === TB ? void 0 : TB.target) && void 0 !== BB ? BB : xB
+        var YY, rY;
+        return null !== (YY = null === (rY = Ir) || void 0 === rY ? void 0 : rY.target) && void 0 !== YY ? YY : Yr
       },
-      watch: BB => {
-        const TB = new nB;
-        eB = TB;
-        const dB = (0, OB.i)((dB => {
-          let VB = TB.read(dB);
-          BB(VB);
-          const yB = (0, pB.w)((() => {
-            const yB = TB.read(dB);
-            yB !== VB && (VB = yB, BB(yB))
+      watch: YY => {
+        const rY = new Ar;
+        Ir = rY;
+        const DY = (0, iY.g)((DY => {
+          let FY = rY.read(DY);
+          YY(FY);
+          const AY = (0, IY.w)((() => {
+            const AY = rY.read(DY);
+            AY !== FY && (FY = AY, YY(AY))
           }));
           return () => {
-            yB(), dB.watchPromptPick("off")
+            AY(), DY.watchPromptPick("off")
           }
         }));
         return () => {
-          dB(), eB === TB && (eB = null)
+          DY(), Ir === rY && (Ir = null)
         }
       }
     };
-    let TT = 0,
-      dT = 0;
-    const VT = {
-        health: YB.o,
-        aura: YB.j,
-        hotbar: qB.b.states.hotbar,
-        heldItemAim: qB.b.states.heldItemAim,
-        crouching: (0, OB.c)((BB => function(BB) {
-          const TB = () => 0 !== (iB.B.playerFlags(BB.apiView, 0) & iB.Bd.Crouching);
+    let Or = 0,
+      gr = 0;
+    const ar = {
+        health: gY.p,
+        aura: gY.h,
+        hotbar: tY.d.states.hotbar,
+        heldItemAim: tY.d.states.heldItemAim,
+        crouching: (0, iY.b)((YY => function(YY) {
+          const rY = () => 0 !== (VY.s.playerFlags(YY.apiView, 0) & VY.Cd.Crouching);
           return {
-            current: TB,
-            watch(BB) {
-              let dB = TB();
-              return (0, pB.v)((() => {
-                const VB = TB();
-                VB !== dB && (dB = VB, BB(VB))
+            current: rY,
+            watch(YY) {
+              let DY = rY();
+              return (0, IY.s)((() => {
+                const FY = rY();
+                FY !== DY && (DY = FY, YY(FY))
               }))
             }
           }
-        }(BB.api).current), !1, (BB => (0, pB.v)(BB))),
-        flight: (0, OB.c)((BB => () => function(BB) {
-          const TB = iB.B.playerFlags(BB.apiView, 0);
-          return (0, YB.m)(0 !== (TB & iB.Bd.CanFly), 0 !== (TB & iB.Bd.Flying))
-        }(BB.api)), (0, YB.m)(!1, !1), (BB => (0, pB.v)(BB))),
-        gliderBoostFuel: (0, OB.c)((BB => () => iB.B.gliderBoostFuel(BB.api.apiView, 0)), 0, (BB => (0, pB.v)(BB))),
-        crosshairTarget: BT
+        }(YY.api).current), !1, (YY => (0, IY.s)(YY))),
+        flight: (0, iY.b)((YY => () => function(YY) {
+          const rY = VY.s.playerFlags(YY.apiView, 0);
+          return (0, gY.l)(0 !== (rY & VY.Cd.CanFly), 0 !== (rY & VY.Cd.Flying))
+        }(YY.api)), (0, gY.l)(!1, !1), (YY => (0, IY.s)(YY))),
+        gliderBoostFuel: (0, iY.b)((YY => () => VY.s.gliderBoostFuel(YY.api.apiView, 0)), 0, (YY => (0, IY.s)(YY))),
+        crosshairTarget: Rr
       },
-      yT = {
-        hotbarSlotRequested: qB.b.events.hotbarSlotRequested,
-        hotbarScrolled: qB.b.events.hotbarScrolled,
-        numberKeyPressed: qB.b.events.numberKeyPressed,
-        shotDamageToShow: (0, YB.s)((BB => !0 === (0, GB.b)(BB, "showDamageAmounts")))
+      vr = {
+        hotbarSlotRequested: tY.d.events.hotbarSlotRequested,
+        hotbarScrolled: tY.d.events.hotbarScrolled,
+        numberKeyPressed: tY.d.events.numberKeyPressed,
+        shotDamageToShow: (0, gY.q)((YY => !0 === (0, LY.b)(YY, "showDamageAmounts")))
       },
-      pT = {
-        selectHotbarSlot: qB.b.commands.selectHotbarSlot,
-        setCrosshairInteractPrompt: BB => {
-          jB = BB
+      ur = {
+        selectHotbarSlot: tY.d.commands.selectHotbarSlot,
+        setCrosshairInteractPrompt: YY => {
+          rr = YY
         }
       },
-      lT = {
+      sr = {
         momentumFrac: function() {
-          var BB, TB, dB;
-          const VB = (0, lB.i)(),
-            yB = performance.now(),
-            pB = null === VB || void 0 === VB || null === (BB = VB.items.Dg()) || void 0 === BB || null === (TB = BB.attributes) || void 0 === TB || null === (dB = TB.customAttributes) || void 0 === dB ? void 0 : dB.enchantments;
-          return TT = null !== VB && null !== pB && void 0 !== pB && pB.Momentum ? 0 !== (iB.B.playerFlags(VB.api.apiView, 0) & iB.Bd.Breaking) ? Math.max(0, iB.B.momentumFrac(VB.api.apiView, 0)) : Math.max(0, TT - (yB - dT) / 1500) : 0, dT = yB, TT
+          var YY, rY, DY;
+          const FY = (0, RY.g)(),
+            AY = performance.now(),
+            IY = null === FY || void 0 === FY || null === (YY = FY.items.ja()) || void 0 === YY || null === (rY = YY.attributes) || void 0 === rY || null === (DY = rY.customAttributes) || void 0 === DY ? void 0 : DY.enchantments;
+          return Or = null !== FY && null !== IY && void 0 !== IY && IY.Momentum ? 0 !== (VY.s.playerFlags(FY.api.apiView, 0) & VY.Cd.Breaking) ? Math.max(0, VY.s.momentumFrac(FY.api.apiView, 0)) : Math.max(0, Or - (AY - gr) / 1500) : 0, gr = AY, Or
         }
       };
-    var JT = dB(39315),
-      YT = dB(1117),
-      gT = dB(21),
-      oT = dB(35497),
-      kT = dB(8127),
-      LT = dB(1507),
-      OT = dB(2101),
-      DT = dB(4199);
-    let uT = !1;
+    var ir = DY(39686),
+      yr = DY(1244),
+      Qr = DY(35928),
+      or = DY(8208),
+      Wr = DY(1619),
+      Er = DY(2251),
+      mr = DY(4386);
+    let Vr = !1;
 
-    function HT(BB) {
-      uT = BB
+    function Sr(YY) {
+      Vr = YY
     }
 
-    function ET() {
-      "inGame" !== gT.d.get("gameState") || (0, LT.o)() || gB.h.yH("ctrlCrouchWithoutFullscreen")
+    function lr() {
+      "inGame" !== JY.b.get("gameState") || (0, Wr.t)() || aY.g.vo("ctrlCrouchWithoutFullscreen")
     }
-    let vT = !1;
-    const mT = {
+    let Tr = !1;
+    const er = {
         OpenEmoteWheel: () => {
-          HT(!0), vT = !0, queueMicrotask((() => {
-            vT && (vT = !1, gB.h.yH("requestEmoteWheelHoldOpen"))
+          Sr(!0), Tr = !0, queueMicrotask((() => {
+            Tr && (Tr = !1, aY.g.vo("requestEmoteWheelHoldOpen"))
           }))
         },
         ToggleFullCoordinateOverlay: () => {
-          gB.h.yH("toggleFullCoordinateOverlay")
+          aY.g.vo("toggleFullCoordinateOverlay")
         },
         KeyYPressed: () => {
-          (0, oT.d)() || gB.h.yH("YKeyPressed")
+          (0, Qr.e)() || aY.g.vo("YKeyPressed")
         },
         KeyXPressed: () => {
-          (0, oT.d)() || gB.h.yH("XKeyPressed")
+          (0, Qr.e)() || aY.g.vo("XKeyPressed")
         },
-        CtrlCrouch: ET,
+        CtrlCrouch: lr,
         "primary-fire": () => {
-          gB.h.yH("mouseState", {
-            eg: YT.b.DownFirePrimary,
+          aY.g.vo("mouseState", {
+            sR: yr.c.DownFirePrimary,
             isDown: !0
           })
         },
         "alt-fire": () => {
-          gB.h.yH("mouseState", {
-            eg: YT.b.DownFireSecondary,
+          aY.g.vo("mouseState", {
+            sR: yr.c.DownFireSecondary,
             isDown: !0
           })
         },
         TouchHold: () => {
-          gB.h.yH("mouseState", {
-            eg: YT.b.TouchDownLong,
+          aY.g.vo("mouseState", {
+            sR: yr.c.TouchDownLong,
             isDown: !0
           })
         }
       },
-      iT = {
+      Nr = {
         OpenEmoteWheel: () => {
-          HT(!1), vT ? (vT = !1, (0, kT.e)() || gB.h.yH("requestEmoteWheelHoldOpen")) : gB.h.yH("requestEmoteWheelHoldRelease")
+          Sr(!1), Tr ? (Tr = !1, (0, or.b)() || aY.g.vo("requestEmoteWheelHoldOpen")) : aY.g.vo("requestEmoteWheelHoldRelease")
         },
-        CtrlCrouch: ET,
+        CtrlCrouch: lr,
         "primary-fire": () => {
-          gB.h.yH("mouseState", {
-            eg: YT.b.UpFirePrimary,
+          aY.g.vo("mouseState", {
+            sR: yr.c.UpFirePrimary,
             isDown: !1
           })
         },
         "alt-fire": () => {
-          gB.h.yH("mouseState", {
-            eg: YT.b.UpFireSecondary,
+          aY.g.vo("mouseState", {
+            sR: yr.c.UpFireSecondary,
             isDown: !1
           })
         },
         TouchDig: () => {
-          gB.h.yH("mouseState", {
-            eg: YT.b.UpFirePrimary,
+          aY.g.vo("mouseState", {
+            sR: yr.c.UpFirePrimary,
             isDown: !1
           })
         }
       };
-    let NT = !1;
+    let Br = !1;
 
-    function tT() {
-      NT || (NT = !0, (0, DT.f)((BB => {
-        if ((0, yB.b)()) return;
-        const TB = (0, DT.c)(BB) ? "primary-fire" : BB.action;
-        var dB;
-        if (BB.down) {
-          if (0 === (BB.flags & OT.e.Synthetic)) {
-            var VB;
-            null === (VB = mT[TB]) || void 0 === VB || VB.call(mT)
+    function cr() {
+      Br || (Br = !0, (0, mr.h)((YY => {
+        if ((0, AY.b)()) return;
+        const rY = (0, mr.e)(YY) ? "primary-fire" : YY.action;
+        var DY;
+        if (YY.down) {
+          if (0 === (YY.flags & Er.c.Synthetic)) {
+            var FY;
+            null === (FY = er[rY]) || void 0 === FY || FY.call(er)
           }
-        } else null === (dB = iT[TB]) || void 0 === dB || dB.call(iT)
+        } else null === (DY = Nr[rY]) || void 0 === DY || DY.call(Nr)
       })))
     }
-    var fT = dB(270),
-      sT = dB(95),
-      MT = dB(33),
-      zT = dB(39434),
-      wT = dB(1209),
-      UT = dB(37951);
-    let FT = !1;
-    const KT = {
-      sendCodeCollab(BB) {
-        var TB;
-        null === (TB = (0, lB.i)()) || void 0 === TB || TB.send(rB.c.CodeCollab, (0, rB.l)(BB), (0, UT.g)(BB))
+    var Kr = DY(332),
+      Hr = DY(99),
+      zr = DY(40),
+      Zr = DY(39815),
+      Cr = DY(1322),
+      fr = DY(38356);
+    let jr = !1;
+    const hr = {
+      sendCodeCollab(YY) {
+        var rY;
+        null === (rY = (0, RY.g)()) || void 0 === rY || rY.send(ZY.d.CodeCollab, (0, ZY.n)(YY), (0, fr.i)(YY))
       }
     };
-    let rT = null,
-      IT = !1,
-      cT = null;
+    let dr = null,
+      Jr = !1,
+      Mr = null;
 
-    function ST() {
-      return "inGame" === gT.d.get("gameState") && !(0, oT.d)()
+    function wr() {
+      return "inGame" === JY.b.get("gameState") && !(0, Qr.e)()
     }
-    const PT = {
-        OpenInventory: BB => {
-          (0, LT.u)(BB, "inventory", (0, JT.k)())
+    const br = {
+        OpenInventory: YY => {
+          (0, Wr.x)(YY, "inventory", (0, ir.j)())
         },
-        OpenShop: BB => {
-          rT && ST() && (0, LT.s)(BB, fT.m.SHOP, !rT.shopIsEmpty(mB.c.get("shopInfo")))
+        OpenShop: YY => {
+          dr && wr() && (0, Wr.v)(YY, Kr.t.SHOP, !dr.shopIsEmpty(mY.b.get("shopInfo")))
         },
-        OpenLobbyLeaderboard: BB => {
-          ST() && (0, LT.s)(BB, fT.m.LOBBY_LEADERBOARD, !!mB.c.get("lobbyLeaderboardInfo"))
+        OpenLobbyLeaderboard: YY => {
+          wr() && (0, Wr.v)(YY, Kr.t.LOBBY_LEADERBOARD, !!mY.b.get("lobbyLeaderboardInfo"))
         },
-        OpenTasksAndLeaderboard: BB => {
-          var TB;
-          const dB = null === (TB = rT) || void 0 === TB ? void 0 : TB.getClientGameMapKey();
-          dB ? (0, LT.v)(BB, !0, dB) : (0, LT.u)(BB, "retentionFeatures", !(!mB.c.get("_tasks") && !mB.c.get("_availableLeaderboards")))
+        OpenTasksAndLeaderboard: YY => {
+          var rY;
+          const DY = null === (rY = dr) || void 0 === rY ? void 0 : rY.getClientGameMapKey();
+          DY ? (0, Wr.z)(YY, !0, DY) : (0, Wr.x)(YY, "retentionFeatures", !(!mY.b.get("_tasks") && !mY.b.get("_availableLeaderboards")))
         },
-        OpenInviteLink: BB => {
-          (0, LT.u)(BB, "inviteLink", sT.featureFlags.canUseInviteLinks)
+        OpenInviteLink: YY => {
+          (0, Wr.x)(YY, "inviteLink", Hr.featureFlags.canUseInviteLinks)
         },
-        OpenCodeEditor: BB => {
-          ST() && function(BB) {
-            var TB;
-            const dB = (0, lB.i)(),
-              VB = null !== dB && void 0 !== dB && dB.isSessionLive ? dB.api : null,
-              yB = VB ? VB.Dv(VB.localId) : null,
-              pB = null !== (TB = null === yB || void 0 === yB ? void 0 : yB.map((BB => Math.floor(BB)))) && void 0 !== TB ? TB : null;
-            (0, LT.v)(BB, null !== pB && (0, UT.e)((0, wT.e)()), (() => {
-              gB.h.yH("EditLobbyCode", pB)
+        OpenCodeEditor: YY => {
+          wr() && function(YY) {
+            var rY;
+            const DY = (0, RY.g)(),
+              FY = null !== DY && void 0 !== DY && DY.isSessionLive ? DY.api : null,
+              AY = FY ? FY.lE(FY.localId) : null,
+              IY = null !== (rY = null === AY || void 0 === AY ? void 0 : AY.map((YY => Math.floor(YY)))) && void 0 !== rY ? rY : null;
+            (0, Wr.z)(YY, null !== IY && (0, fr.e)((0, Cr.b)()), (() => {
+              aY.g.vo("EditLobbyCode", IY)
             }))
-          }(BB)
+          }(YY)
         },
         HideUi: () => {
-          gB.h.yH("showUi", !1)
+          aY.g.vo("showUi", !1)
         }
       },
-      QT = {
+      Xr = {
         HideUi: () => {
-          gB.h.yH("showUi", !0)
+          aY.g.vo("showUi", !0)
         }
       };
 
-    function RT() {
-      IT || (IT = !0, dB.e(144).then((() => dB(41295))).then((BB => {
-        rT = BB
-      }), (BB => {
-        console.error("[bloxd-wasm-client] the menu keys' checks did not load", BB)
-      })), (0, zT.v)((BB => {
-        BB || !(0, zT.h)() || (0, sT.isMobile)() || !MT.j.getItem("disableFullscreen") || (0, LT.l)() || gT.d.set({
-          openEverythingMenuName: fT.m.SETTINGS
+    function qr() {
+      Jr || (Jr = !0, DY.e(151).then((() => DY(41656))).then((YY => {
+        dr = YY
+      }), (YY => {
+        console.error("[bloxd-wasm-client] the menu keys' checks did not load", YY)
+      })), (0, Zr.B)((YY => {
+        YY || !(0, Zr.j)() || (0, Hr.isMobile)() || !zr.m.getItem("disableFullscreen") || (0, Wr.p)() || JY.b.set({
+          openEverythingMenuName: Kr.t.SETTINGS
         })
-      })), (0, DT.f)((BB => {
+      })), (0, mr.h)((YY => {
         let {
-          action: TB,
-          down: dB,
-          press: VB
-        } = BB;
-        var pB, lB;
-        (0, yB.b)() || (dB ? null === (pB = PT[TB]) || void 0 === pB || pB.call(PT, function(BB) {
-          var TB;
-          if (0 === BB || (null === (TB = cT) || void 0 === TB ? void 0 : TB.press) !== BB) {
-            const TB = {
-              press: BB,
+          action: rY,
+          down: DY,
+          press: FY
+        } = YY;
+        var IY, RY;
+        (0, AY.b)() || (DY ? null === (IY = br[rY]) || void 0 === IY || IY.call(br, function(YY) {
+          var rY;
+          if (0 === YY || (null === (rY = Mr) || void 0 === rY ? void 0 : rY.press) !== YY) {
+            const rY = {
+              press: YY,
               event: new Event("inputAction")
             };
-            cT = TB, queueMicrotask((() => {
-              cT === TB && (cT = null)
+            Mr = rY, queueMicrotask((() => {
+              Mr === rY && (Mr = null)
             }))
           }
-          return cT.event
-        }(VB)) : null === (lB = QT[TB]) || void 0 === lB || lB.call(QT))
+          return Mr.event
+        }(FY)) : null === (RY = Xr[rY]) || void 0 === RY || RY.call(Xr))
       })))
     }
-    var aT = dB(37912),
-      ZT = dB(37930),
-      XT = dB(37918);
-    const WT = {
-      completeTask(BB) {
-        var TB;
-        null === (TB = (0, lB.i)()) || void 0 === TB || TB.send(rB.c.CompleteTask, (0, rB.n)(BB))
+    var pr = DY(38331),
+      kr = DY(38344),
+      Gr = DY(38336);
+    const xr = {
+      completeTask(YY) {
+        var rY;
+        null === (rY = (0, RY.g)()) || void 0 === rY || rY.send(ZY.d.CompleteTask, (0, ZY.r)(YY))
       },
-      setServerCookie(BB) {
-        var TB;
+      setServerCookie(YY) {
+        var rY;
         let {
-          key: dB,
-          value: VB
-        } = BB;
-        null === (TB = (0, lB.i)()) || void 0 === TB || TB.send(rB.c.GeneralCookieSet, (0, rB.u)({
-          Ng: dB,
-          tg: VB
+          key: DY,
+          value: FY
+        } = YY;
+        null === (rY = (0, RY.g)()) || void 0 === rY || rY.send(ZY.d.GeneralCookieSet, (0, ZY.w)({
+          ng: DY,
+          Pg: FY
         }))
       },
-      answerUiRequest(BB) {
-        var TB;
+      answerUiRequest(YY) {
+        var rY;
         let {
-          id: dB,
-          po: VB
-        } = BB;
-        null === (TB = (0, lB.i)()) || void 0 === TB || TB.send(rB.c.UiRequestResp, (0, rB.T)({
-          vo: dB,
-          fo: VB,
-          Mo: 5
+          id: DY,
+          ga: FY
+        } = YY;
+        null === (rY = (0, RY.g)()) || void 0 === rY || rY.send(ZY.d.UiRequestResp, (0, ZY.V)({
+          za: DY,
+          Za: FY,
+          Ca: 5
         }))
       },
-      chooseRewardedAd(BB) {
-        var TB;
+      chooseRewardedAd(YY) {
+        var rY;
         let {
-          id: dB,
-          po: VB
-        } = BB;
-        null === (TB = (0, lB.i)()) || void 0 === TB || TB.send(rB.c.UiRequestResponded, (0, rB.S)({
-          id: dB,
-          po: VB
+          id: DY,
+          ga: FY
+        } = YY;
+        null === (rY = (0, RY.g)()) || void 0 === rY || rY.send(ZY.d.UiRequestResponded, (0, ZY.T)({
+          id: DY,
+          ga: FY
         }))
       },
-      requestLeaderboard(BB) {
-        var TB;
+      requestLeaderboard(YY) {
+        var rY;
         let {
-          category: dB,
-          timeframe: VB,
-          seeTop: yB
-        } = BB;
-        null === (TB = (0, lB.i)()) || void 0 === TB || TB.send(rB.c.LeaderboardRequest, {
-          category: dB,
-          timeframe: VB,
-          seeTop: yB
+          category: DY,
+          timeframe: FY,
+          seeTop: AY
+        } = YY;
+        null === (rY = (0, RY.g)()) || void 0 === rY || rY.send(ZY.d.LeaderboardRequest, {
+          category: DY,
+          timeframe: FY,
+          seeTop: AY
         })
       }
     };
-    let hT = !1;
-    const CT = vB.c.lE / 2,
-      GT = [CT, -CT, -CT, -CT, CT, CT, -CT, CT],
-      qT = [0, 0, 0];
+    let nr = !1;
+    const Pr = EY.d.fW / 2,
+      Ur = [Pr, -Pr, -Pr, -Pr, Pr, Pr, -Pr, Pr],
+      Lr = [0, 0, 0];
 
-    function xT(BB, TB, dB) {
-      for (let VB = 0; VB < BB.length; VB += 2)
-        if (BB[VB] === TB && BB[VB + 1] === dB) return !0;
+    function tr(YY, rY, DY) {
+      for (let FY = 0; FY < YY.length; FY += 2)
+        if (YY[FY] === rY && YY[FY + 1] === DY) return !0;
       return !1
     }
-    const jT = {
+    const YD = {
       blocksStandingOn: function() {
-        const BB = (0, lB.i)();
-        if (null === BB) return [];
+        const YY = (0, RY.g)();
+        if (null === YY) return [];
         const {
-          api: TB,
-          chunks: dB,
-          tables: VB
-        } = BB;
-        if (!TB.readPosition(TB.localId, qT)) return [];
-        const [yB, pB, JB] = qT, YB = Math.ceil(pB) - 1, gB = [], oB = [];
-        for (let lB = 0; lB < GT.length; lB += 2) {
-          const BB = yB + GT[lB],
-            TB = JB + GT[lB + 1];
-          if (Number.isInteger(BB) || Number.isInteger(TB)) continue;
-          const pB = Math.floor(BB),
-            kB = Math.floor(TB);
-          if (xT(oB, pB, kB)) continue;
-          const LB = dB.rY(pB, YB, kB);
-          VB.isSolidBlockId(LB) && (oB.push(pB, kB), gB.push(VB.nameOfId(LB)))
+          api: rY,
+          chunks: DY,
+          tables: FY
+        } = YY;
+        if (!rY.readPosition(rY.localId, Lr)) return [];
+        const [AY, IY, OY] = Lr, gY = Math.ceil(IY) - 1, aY = [], vY = [];
+        for (let RY = 0; RY < Ur.length; RY += 2) {
+          const YY = AY + Ur[RY],
+            rY = OY + Ur[RY + 1];
+          if (Number.isInteger(YY) || Number.isInteger(rY)) continue;
+          const IY = Math.floor(YY),
+            uY = Math.floor(rY);
+          if (tr(vY, IY, uY)) continue;
+          const sY = DY.rv(IY, gY, uY);
+          FY.isSolidBlockId(sY) && (vY.push(IY, uY), aY.push(FY.nameOfId(sY)))
         }
-        return gB
+        return aY
       },
       dropAhead: function() {
-        const BB = (0, lB.i)();
-        return null !== BB && 0 !== (iB.B.playerFlags(BB.api.apiView, 0) & iB.Bd.DropAhead)
+        const YY = (0, RY.g)();
+        return null !== YY && 0 !== (VY.s.playerFlags(YY.api.apiView, 0) & VY.Cd.DropAhead)
       }
     };
-    var AT = dB(35908),
-      bT = dB(38028),
-      nT = dB(1235),
-      eT = dB(39390);
-    const Bd = new Set(["replayLoad", "replaySave", "replaySaveAs", "replayTimelineZoomIn", "replayTimelineZoomOut"]),
-      Td = new Set(["replaySkipBack", "replaySkipForward", "replaySpeedUp", "replaySpeedDown", "replayRecordKeyframe"]);
+    var rD = DY(36324),
+      DD = DY(38437),
+      FD = DY(1346),
+      AD = DY(39759);
+    const ID = new Set(["replayLoad", "replaySave", "replaySaveAs", "replayTimelineZoomIn", "replayTimelineZoomOut"]),
+      RD = new Set(["replaySkipBack", "replaySkipForward", "replaySpeedUp", "replaySpeedDown", "replayRecordKeyframe"]);
 
-    function dd() {
-      const BB = new Set;
+    function OD() {
+      const YY = new Set;
       return {
-        add: TB => (BB.add(TB), () => {
-          BB.delete(TB)
+        add: rY => (YY.add(rY), () => {
+          YY.delete(rY)
         }),
         fire() {
-          for (const TB of BB) TB()
+          for (const rY of YY) rY()
         }
       }
     }
-    const Vd = Object.freeze([]);
+    const gD = Object.freeze([]);
 
-    function yd(BB, TB) {
-      let dB, {
-        rereads: VB,
-        followLocalId: yB
-      } = TB;
-      const lB = () => (dB = (0, CB.r)(dB, BB()), dB);
+    function aD(YY, rY) {
+      let DY, {
+        rereads: FY,
+        followLocalId: AY
+      } = rY;
+      const RY = () => (DY = (0, UY.l)(DY, YY()), DY);
       return {
-        current: lB,
-        watch(BB) {
-          const TB = (0, DB.d)((TB => {
-            VB(TB) && BB(lB())
+        current: RY,
+        watch(YY) {
+          const rY = (0, yY.b)((rY => {
+            FY(rY) && YY(RY())
           }));
-          if (!yB) return TB;
-          let dB = (0, OB.e)();
-          const JB = (0, pB.w)((() => {
-            const TB = (0, OB.e)();
-            TB !== dB && (dB = TB, BB(lB()))
+          if (!AY) return rY;
+          let DY = (0, iY.e)();
+          const OY = (0, IY.w)((() => {
+            const rY = (0, iY.e)();
+            rY !== DY && (DY = rY, YY(RY()))
           }));
           return () => {
-            TB(), JB()
+            rY(), OY()
           }
         }
       }
     }
-    const pd = {
-        players: yd((function() {
-          const BB = DB.h.ids(),
-            TB = {};
-          for (const pB of BB) {
-            var dB, VB, yB;
-            TB[pB] = {
-              name: null !== (dB = DB.h.getName(pB)) && void 0 !== dB ? dB : null,
-              ranks: null !== (VB = DB.h.getSetting(pB, "ranks")) && void 0 !== VB ? VB : Vd,
-              cosmetics: null !== (yB = (0, DB.i)(pB)) && void 0 !== yB ? yB : null
+    const vD = {
+        players: aD((function() {
+          const YY = yY.c.ids(),
+            rY = {};
+          for (const IY of YY) {
+            var DY, FY, AY;
+            rY[IY] = {
+              name: null !== (DY = yY.c.getName(IY)) && void 0 !== DY ? DY : null,
+              ranks: null !== (FY = yY.c.getSetting(IY, "ranks")) && void 0 !== FY ? FY : gD,
+              cosmetics: null !== (AY = (0, yY.g)(IY)) && void 0 !== AY ? AY : null
             }
           }
           return {
-            ids: BB,
-            byId: TB,
-            localId: (0, OB.e)()
+            ids: YY,
+            byId: rY,
+            localId: (0, iY.e)()
           }
         }), {
-          rereads: BB => "roster" !== BB.kind || BB.members || BB.settings.has("ranks"),
+          rereads: YY => "roster" !== YY.kind || YY.members || YY.settings.has("ranks"),
           followLocalId: !0
         }),
-        lobbyLeaderboardRows: yd((function() {
-          const BB = {};
-          for (const yB of DB.h.ids()) {
-            var TB, dB, VB;
-            BB[yB] = {
-              colour: null !== (TB = DB.h.getSetting(yB, "colorInLobbyLeaderboard")) && void 0 !== TB ? TB : null,
-              values: null !== (dB = DB.h.getSetting(yB, "lobbyLeaderboardValues")) && void 0 !== dB ? dB : null,
-              tags: null !== (VB = DB.h.getSetting(yB, "lobbyLeaderboardTags")) && void 0 !== VB ? VB : null
+        lobbyLeaderboardRows: aD((function() {
+          const YY = {};
+          for (const AY of yY.c.ids()) {
+            var rY, DY, FY;
+            YY[AY] = {
+              colour: null !== (rY = yY.c.getSetting(AY, "colorInLobbyLeaderboard")) && void 0 !== rY ? rY : null,
+              values: null !== (DY = yY.c.getSetting(AY, "lobbyLeaderboardValues")) && void 0 !== DY ? DY : null,
+              tags: null !== (FY = yY.c.getSetting(AY, "lobbyLeaderboardTags")) && void 0 !== FY ? FY : null
             }
           }
-          return BB
+          return YY
         }), {
-          rereads: function(BB) {
-            if ("roster" !== BB.kind) return "reset" === BB.kind;
+          rereads: function(YY) {
+            if ("roster" !== YY.kind) return "reset" === YY.kind;
             const {
-              members: TB,
-              settings: dB
-            } = BB;
-            return TB || dB.has("colorInLobbyLeaderboard") || dB.has("lobbyLeaderboardValues") || dB.has("lobbyLeaderboardTags")
+              members: rY,
+              settings: DY
+            } = YY;
+            return rY || DY.has("colorInLobbyLeaderboard") || DY.has("lobbyLeaderboardValues") || DY.has("lobbyLeaderboardTags")
           },
           followLocalId: !1
         })
       },
-      ld = {
+      uD = {
         cosmeticsUpdated: {
-          watch: BB => (0, DB.d)((TB => {
-            if ("cosmetics" !== TB.kind) return;
-            const dB = (0, OB.e)();
-            BB(TB.updates.map((BB => {
+          watch: YY => (0, yY.b)((rY => {
+            if ("cosmetics" !== rY.kind) return;
+            const DY = (0, iY.e)();
+            YY(rY.updates.map((YY => {
               let {
-                Np: TB,
-                tp: VB,
-                sp: yB
-              } = BB;
+                YY: rY,
+                rY: FY,
+                DY: AY
+              } = YY;
               return {
-                local: TB === dB,
-                tp: VB,
-                sp: yB
+                local: rY === DY,
+                rY: FY,
+                DY: AY
               }
             })))
           }))
         }
       };
-    var Jd = dB(2465),
-      Yd = dB(1596),
-      gd = dB(965),
-      od = dB(39440);
-    let kd = !1,
-      Ld = null;
-    const Od = {
-      setShopOpen(BB) {
-        var TB;
-        null === (TB = (0, lB.i)()) || void 0 === TB || TB.send(rB.c.ShopMenuChanged, (0, rB.M)(BB))
+    var sD = DY(2579),
+      iD = DY(1699),
+      yD = DY(668),
+      QD = DY(39821);
+    let oD = !1,
+      WD = null;
+    const ED = {
+      setShopOpen(YY) {
+        var rY;
+        null === (rY = (0, RY.g)()) || void 0 === rY || rY.send(ZY.d.ShopMenuChanged, (0, ZY.O)(YY))
       },
-      buyShopItem(BB) {
-        var TB;
+      buyShopItem(YY) {
+        var rY;
         let {
-          categoryKey: dB,
-          itemKey: VB,
-          userInput: yB
-        } = BB;
-        null === (TB = (0, lB.i)()) || void 0 === TB || TB.send(rB.c.ItemBought, {
-          categoryKey: dB,
-          itemKey: VB,
-          shopVersion: mB.c.get("_shopVersion"),
-          userInput: yB
+          categoryKey: DY,
+          itemKey: FY,
+          userInput: AY
+        } = YY;
+        null === (rY = (0, RY.g)()) || void 0 === rY || rY.send(ZY.d.ItemBought, {
+          categoryKey: DY,
+          itemKey: FY,
+          shopVersion: mY.b.get("_shopVersion"),
+          userInput: AY
         })
       }
     };
-    let Dd = !1;
-    var ud = dB(4209);
-    const Hd = OT.A.LookFrozen | OT.A.ClicksSuppressed;
+    let mD = !1;
+    var VD = DY(4396);
+    const SD = Er.w.LookFrozen | Er.w.ClicksSuppressed;
 
-    function Ed(BB, TB) {
-      var dB;
-      null !== (dB = (0, lB.i)()) && void 0 !== dB && dB.send(BB, TB) || console.warn(`[bloxd-wasm-client] message ${BB} not sent: no live game or the core's command ring is full`)
-    }(0, uB.n)(KB.ib, (BB => {
-      const TB = (0, IB.f)(KB.ib, BB);
-      void 0 !== TB && gB.h.yH("setDiscordReportKey", TB)
+    function lD(YY, rY) {
+      var DY;
+      null !== (DY = (0, RY.g)()) && void 0 !== DY && DY.send(YY, rY) || console.warn(`[bloxd-wasm-client] message ${YY} not sent: no live game or the core's command ring is full`)
+    }(0, QY.l)(zY.pb, (YY => {
+      const rY = (0, CY.f)(zY.pb, YY);
+      void 0 !== rY && aY.g.vo("setDiscordReportKey", rY)
     }));
-    const vd = {
-      ignorePlayer(BB) {
-        Ed(rB.c.IgnoreUser, (0, rB.v)({
-          zg: BB
+    const TD = {
+      ignorePlayer(YY) {
+        lD(ZY.d.IgnoreUser, (0, ZY.z)({
+          ua: YY
         }))
       },
-      reportPlayer(BB) {
+      reportPlayer(YY) {
         let {
-          playerId: TB,
-          chatMsgId: dB,
-          yl: VB,
-          details: yB
-        } = BB;
-        Ed(rB.c.UserReport, (0, rB.$)({
-          cY: TB,
-          SY: dB,
-          yl: VB,
-          pl: yB
+          playerId: rY,
+          chatMsgId: DY,
+          Qa: FY,
+          details: AY
+        } = YY;
+        lD(ZY.d.UserReport, (0, ZY.ab)({
+          ia: rY,
+          ya: DY,
+          Qa: FY,
+          oa: AY
         }))
       },
-      reportWorldCodeChat(BB) {
+      reportWorldCodeChat(YY) {
         let {
-          chatMsgId: TB,
-          yl: dB,
-          details: VB
-        } = BB;
-        Ed(rB.c.UserReport, (0, rB.$)({
-          cY: "",
-          SY: TB,
-          yl: dB,
-          pl: VB
+          chatMsgId: rY,
+          Qa: DY,
+          details: FY
+        } = YY;
+        lD(ZY.d.UserReport, (0, ZY.ab)({
+          ia: "",
+          ya: rY,
+          Qa: DY,
+          oa: FY
         }))
       },
-      requestDiscordReportKey(BB) {
-        Ed(rB.c.ReqDiscordReportKey, (0, rB.H)(BB))
+      requestDiscordReportKey(YY) {
+        lD(ZY.d.ReqDiscordReportKey, (0, ZY.H)(YY))
       },
-      reportLobbyOrGame(BB) {
+      reportLobbyOrGame(YY) {
         let {
-          target: TB,
-          yl: dB,
-          details: VB
-        } = BB;
-        "customGame" === TB ? Ed(rB.c.CustomGameReport, (0, rB.q)({
-          yl: dB,
-          pl: VB
-        })) : Ed(rB.c.LobbyReport, (0, rB.z)({
-          yl: dB,
-          pl: VB
+          target: rY,
+          Qa: DY,
+          details: FY
+        } = YY;
+        "customGame" === rY ? lD(ZY.d.CustomGameReport, (0, ZY.u)({
+          Qa: DY,
+          oa: FY
+        })) : lD(ZY.d.LobbyReport, (0, ZY.B)({
+          Qa: DY,
+          oa: FY
         }))
       },
-      updateMyCosmetic(BB) {
-        Ed(rB.c.UpdateMyCosmetic, (0, rB.Y)(BB))
+      updateMyCosmetic(YY) {
+        lD(ZY.d.UpdateMyCosmetic, (0, ZY.$)(YY))
       },
-      holdEmoteWheel(BB) {
-        !BB || uT ? (0, ud.f)(Hd, BB ? Hd : 0) : gB.h.yH("requestEmoteWheelHoldRelease")
+      holdEmoteWheel(YY) {
+        !YY || Vr ? (0, VD.k)(SD, YY ? SD : 0) : aY.g.vo("requestEmoteWheelHoldRelease")
       }
     };
-    var md = dB(39445),
-      Nd = dB(1694),
-      td = dB(39448);
+    var eD = DY(39823),
+      ND = DY(8830),
+      BD = DY(38910);
+    const cD = [0, 0, 0],
+      KD = [0, 0, 0],
+      HD = [0, 0, 0],
+      zD = {
+        blockAtViewPoint(YY) {
+          let {
+            x: rY,
+            y: DY
+          } = YY;
+          const FY = (0, RY.g)();
+          if (null === FY || void 0 === FY || !FY.renderFrame.hasView) return null;
+          const {
+            renderFrame: AY,
+            clientApi: IY,
+            api: OY
+          } = FY;
+          let gY = 0;
+          return (0, BD.d)(((YY, rY, DY) => (gY = IY.getBlockId(YY, rY, DY), 0 !== gY)), AY.cameraPosition, (0, BD.e)((YY => VY.s.viewProj(OY.apiView, 0, YY)), rY, DY, cD), BD.c, KD, HD) ? {
+            pos: [KD[0], KD[1], KD[2]],
+            normal: [HD[0], HD[1], HD[2]],
+            name: (0, ND.f)(gY)
+          } : null
+        }
+      },
+      ZD = {
+        setBlockHighlight(YY) {
+          var rY;
+          null === (rY = (0, RY.g)()) || void 0 === rY || rY.setBlockHighlight(YY)
+        }
+      };
+    var CD = DY(1818),
+      fD = DY(39828),
+      jD = DY(39835),
+      hD = DY(39842);
+    var dD = DY(614),
+      JD = DY(38917);
 
-    function fd() {
-      const BB = (0, lB.i)();
-      return !0 === (null === BB || void 0 === BB ? void 0 : BB.isCoreRunning) ? function(BB) {
-        if (BB.queries.drawCensus() < iB.Fb.BYTES) return [];
-        const TB = BB.memoryData(BB.scratch(), iB.Fb.BYTES, 4, "the draw census");
-        if (null === TB) return [];
-        const dB = iB.Fb.terrainOpaque(TB, 0),
-          VB = iB.Fb.terrainTransparent(TB, 0),
-          yB = iB.Fb.earthSky(TB, 0),
-          pB = iB.Fb.skyMeshes(TB, 0),
-          lB = iB.Fb.regular(TB, 0),
-          JB = iB.Fb.thin(TB, 0),
-          YB = iB.Fb.line(TB, 0),
-          gB = iB.Fb.text(TB, 0),
-          oB = iB.Fb.particles(TB, 0);
-        return [{
-          label: "Drawn",
-          value: `${dB+VB+yB+pB+lB+JB+YB+gB+oB}`
-        }, {
-          label: "Terrain",
-          value: `${dB} opaque / ${VB} transparent (${iB.Fb.terrainPack(TB,0)} shader pack)`
-        }, {
-          label: "Meshes / Thin bases",
-          value: `${lB} / ${JB}`
-        }, {
-          label: "Text / Lines",
-          value: `${gB} / ${YB}`
-        }, {
-          label: "Sky / Particles",
-          value: `${yB+pB} / ${oB}`
-        }]
-      }(BB.api) : []
-    }
-    var sd = dB(39454);
-    var Md = dB(560),
-      zd = dB(38521);
-
-    function wd(BB) {
-      if (null === BB || void 0 === BB || !BB.isCoreRunning) return null;
+    function MD(YY) {
+      if (null === YY || void 0 === YY || !YY.isCoreRunning) return null;
       const {
-        api: TB,
-        chunks: dB,
-        items: VB,
-        tables: yB
-      } = BB;
+        api: rY,
+        chunks: DY,
+        items: FY,
+        tables: AY
+      } = YY;
       return {
         playerFeet() {
-          const BB = TB.Dv(TB.localId);
-          return null !== BB && void 0 !== BB && BB.every(Number.isFinite) ? BB : null
+          const YY = rY.lE(rY.localId);
+          return null !== YY && void 0 !== YY && YY.every(Number.isFinite) ? YY : null
         },
-        chunkBlocks: BB => dB.isLoaded(BB[0], BB[1], BB[2]) ? (BB, TB, VB) => dB.rY(BB, TB, VB) : null,
-        blockName: BB => yB.nameOfId(BB),
+        chunkBlocks: YY => DY.isLoaded(YY[0], YY[1], YY[2]) ? (YY, rY, FY) => DY.rv(YY, rY, FY) : null,
+        blockName: YY => AY.nameOfId(YY),
         inventory: () => ({
-          slots: VB.playerItems().map((BB => BB ? {
-            name: BB.name,
-            amount: BB.amount
+          slots: FY.playerItems().map((YY => YY ? {
+            name: YY.name,
+            amount: YY.amount
           } : null)),
-          heldSlot: VB.selectedSlot
+          heldSlot: FY.selectedSlot
         }),
         nearby() {
-          const dB = [];
-          for (let yB = 0; yB < TB.idStr.length; yB++) {
-            var VB;
-            const pB = TB.idStr[yB],
-              lB = TB.serverIds[yB],
-              JB = TB.kinds[yB];
-            if (null === pB || TB.isLocal(lB) || JB >>> iB.c !== iB.y.Lifeform) continue;
-            const YB = TB.Dv(lB),
-              gB = Md.l[JB & iB.g];
-            YB && void 0 !== gB && dB.push({
-              kind: "Player" === gB ? "player" : gB,
-              name: null !== (VB = BB.clientApi.getEntityName(pB)) && void 0 !== VB ? VB : null,
-              position: YB
+          const DY = [];
+          for (let AY = 0; AY < rY.idStr.length; AY++) {
+            var FY;
+            const IY = rY.idStr[AY],
+              RY = rY.serverIds[AY],
+              OY = rY.kinds[AY];
+            if (null === IY || rY.isLocal(RY) || OY >>> VY.b !== VY.o.Lifeform) continue;
+            const gY = rY.lE(RY),
+              aY = dD.j[OY & VY.d];
+            gY && void 0 !== aY && DY.push({
+              kind: "Player" === aY ? "player" : aY,
+              name: null !== (FY = YY.clientApi.getEntityName(IY)) && void 0 !== FY ? FY : null,
+              position: gY
             })
           }
-          return dB
+          return DY
         },
         droppedItems() {
-          let BB = 0;
-          for (let dB = 0; dB < TB.idStr.length; dB++) null !== TB.idStr[dB] && TB.kinds[dB] >>> iB.c === iB.y.Item && BB++;
-          return BB
+          let YY = 0;
+          for (let DY = 0; DY < rY.idStr.length; DY++) null !== rY.idStr[DY] && rY.kinds[DY] >>> VY.b === VY.o.Item && YY++;
+          return YY
         }
       }
     }
-    const Ud = {
-        worldCodeAiChunk: BB => Promise.resolve((0, zd.d)(wd((0, lB.i)()), BB)),
-        worldCodeAiGameState: () => Promise.resolve((0, zd.h)(wd((0, lB.i)())))
+    const wD = {
+        worldCodeAiChunk: YY => Promise.resolve((0, JD.e)(MD((0, RY.g)()), YY)),
+        worldCodeAiGameState: () => Promise.resolve((0, JD.g)(MD((0, RY.g)())))
       },
-      Fd = function(BB) {
-        const TB = dd(),
-          VB = dd(),
-          yB = new Set,
-          pB = new Set,
-          lB = () => {
-            var TB, dB;
-            return null !== (TB = null === (dB = BB.runtime()) || void 0 === dB ? void 0 : dB.currentViewer) && void 0 !== TB ? TB : null
+      bD = function(YY) {
+        const rY = OD(),
+          FY = OD(),
+          AY = new Set,
+          IY = new Set,
+          RY = () => {
+            var rY, DY;
+            return null !== (rY = null === (DY = YY.runtime()) || void 0 === DY ? void 0 : DY.currentViewer) && void 0 !== rY ? rY : null
           };
-        let JB = null,
-          YB = null;
-        const oB = (BB, TB) => ({
-            current: BB,
-            watch(dB) {
-              let VB = BB();
-              return TB.add((() => {
-                const TB = BB();
-                TB !== VB && (VB = TB, dB(TB))
+        let OY = null,
+          gY = null;
+        const vY = (YY, rY) => ({
+            current: YY,
+            watch(DY) {
+              let FY = YY();
+              return rY.add((() => {
+                const rY = YY();
+                rY !== FY && (FY = rY, DY(rY))
               }))
             }
           }),
-          LB = BB => ({
-            watch: TB => (BB.add(TB), () => {
-              BB.delete(TB)
+          sY = YY => ({
+            watch: rY => (YY.add(rY), () => {
+              YY.delete(rY)
             })
           }),
-          OB = BB => {
-            const TB = lB(),
-              dB = null === TB || void 0 === TB ? void 0 : TB.view;
-            TB && dB && TB.seek(Math.max(0, Math.min(dB.totalTicks - 1, dB.dL + BB * kB.ud)))
+          iY = YY => {
+            const rY = RY(),
+              DY = null === rY || void 0 === rY ? void 0 : rY.view;
+            rY && DY && rY.seek(Math.max(0, Math.min(DY.totalTicks - 1, DY.Zu + YY * uY.rd)))
           },
-          DB = {
-            replay: oB((() => {
-              var BB;
-              const TB = lB(),
-                dB = null !== (BB = null === TB || void 0 === TB ? void 0 : TB.view) && void 0 !== BB ? BB : null;
-              return null === TB || null === dB || dB.state === kB.hd.None ? (JB = null, null) : (JB = (0, CB.r)(JB, {
-                id: TB.id,
-                dL: dB.dL,
-                totalTicks: dB.totalTicks,
-                WU: kB.ud,
-                playing: dB.state === kB.hd.Playing,
-                speed: dB.speed,
-                cameraMode: dB.cameraMode,
-                freecam: "freecam" === dB.cameraMode
-              }), JB)
-            }), TB),
-            replayEdits: oB((() => {
-              var BB;
-              const TB = lB(),
-                dB = null !== (BB = null === TB || void 0 === TB ? void 0 : TB.view) && void 0 !== BB ? BB : null;
-              return null === TB || null === dB || dB.state === kB.hd.None ? (YB = null, null) : (YB = (0, CB.r)(YB, {
-                cameraKeyframes: [...TB.keyframes],
-                playbackMark: dB.mark,
-                fileName: TB.fileName,
-                unsavedChanges: TB.unsavedChanges,
-                suggestSaveAs: TB.suggestSaveAs
-              }), YB)
-            }), TB),
-            replayRecorder: oB((() => {
-              var TB, dB;
-              return null !== (TB = null === (dB = BB.runtime()) || void 0 === dB ? void 0 : dB.recorder.current) && void 0 !== TB ? TB : eT.c.states.replayRecorder.current()
-            }), VB),
+          yY = {
+            replay: vY((() => {
+              var YY;
+              const rY = RY(),
+                DY = null !== (YY = null === rY || void 0 === rY ? void 0 : rY.view) && void 0 !== YY ? YY : null;
+              return null === rY || null === DY || DY.state === uY.ed.None ? (OY = null, null) : (OY = (0, UY.l)(OY, {
+                id: rY.id,
+                Zu: DY.Zu,
+                totalTicks: DY.totalTicks,
+                eT: uY.rd,
+                playing: DY.state === uY.ed.Playing,
+                speed: DY.speed,
+                cameraMode: DY.cameraMode,
+                freecam: "freecam" === DY.cameraMode
+              }), OY)
+            }), rY),
+            replayEdits: vY((() => {
+              var YY;
+              const rY = RY(),
+                DY = null !== (YY = null === rY || void 0 === rY ? void 0 : rY.view) && void 0 !== YY ? YY : null;
+              return null === rY || null === DY || DY.state === uY.ed.None ? (gY = null, null) : (gY = (0, UY.l)(gY, {
+                cameraKeyframes: [...rY.keyframes],
+                playbackMark: DY.mark,
+                fileName: rY.fileName,
+                unsavedChanges: rY.unsavedChanges,
+                suggestSaveAs: rY.suggestSaveAs
+              }), gY)
+            }), rY),
+            replayRecorder: vY((() => {
+              var rY, DY;
+              return null !== (rY = null === (DY = YY.runtime()) || void 0 === DY ? void 0 : DY.recorder.current) && void 0 !== rY ? rY : AD.e.states.replayRecorder.current()
+            }), FY),
             replayVideoExporting: {
-              current: bT.c,
-              watch: BB => (0, gB.i)("replayViewer|videoExportChanged", (() => {
-                BB((0, bT.c)())
+              current: DD.d,
+              watch: YY => (0, aY.j)("replayViewer|videoExportChanged", (() => {
+                YY((0, DD.d)())
               }))
             }
           },
-          uB = {
-            replayUiActionRequested: LB(pB),
-            replayViewerRequested: LB(yB)
+          QY = {
+            replayUiActionRequested: sY(IY),
+            replayViewerRequested: sY(AY)
           },
-          HB = BB => {
-            for (const TB of yB) TB(BB)
+          oY = YY => {
+            for (const rY of AY) rY(YY)
           },
-          EB = () => {
-            var VB;
-            !0 === (null === (VB = lB()) || void 0 === VB ? void 0 : VB.isOpen) && Promise.all([dB.e(88), dB.e(59)]).then((() => dB(41299))).then((dB => {
+          WY = () => {
+            var FY;
+            !0 === (null === (FY = RY()) || void 0 === FY ? void 0 : FY.isOpen) && Promise.all([DY.e(95), DY.e(63)]).then((() => DY(41661))).then((DY => {
               let {
-                startWasmReplayVideoExport: VB
-              } = dB;
-              return VB({
-                viewer: lB,
+                startWasmReplayVideoExport: FY
+              } = DY;
+              return FY({
+                viewer: RY,
                 canvas: () => {
-                  var TB, dB;
-                  return null !== (TB = null === (dB = BB.canvas) || void 0 === dB ? void 0 : dB.call(BB)) && void 0 !== TB ? TB : null
+                  var rY, DY;
+                  return null !== (rY = null === (DY = YY.canvas) || void 0 === DY ? void 0 : DY.call(YY)) && void 0 !== rY ? rY : null
                 },
-                watchViewer: TB.add,
-                requestViewer: HB
+                watchViewer: rY.add,
+                requestViewer: oY
               })
-            }), (BB => {
-              console.error("Couldn't load the video export", BB), nT.NotificationProvider.showAlertPopup({
+            }), (YY => {
+              console.error("Couldn't load the video export", YY), FD.NotificationProvider.showAlertPopup({
                 title: "Video export failed",
                 subtitle: "Check your connection, then try again."
               })
-            })).catch((BB => {
-              console.error("The video export failed", BB)
+            })).catch((YY => {
+              console.error("The video export failed", YY)
             }))
           },
-          vB = {
-            replayAction(BB) {
-              if ((0, bT.c)()) return;
-              const TB = lB();
-              switch (BB) {
+          EY = {
+            replayAction(YY) {
+              if ((0, DD.d)()) return;
+              const rY = RY();
+              switch (YY) {
                 case "replaySkipBack":
-                  OB(-1);
+                  iY(-1);
                   break;
                 case "replaySkipForward":
-                  OB(1);
+                  iY(1);
                   break;
                 case "replaySpeedUp":
                 case "replaySpeedDown":
-                  null !== TB && void 0 !== TB && TB.view && TB.setSpeed((0, AT.h)(TB.view.speed, "replaySpeedUp" === BB ? "up" : "down"));
+                  null !== rY && void 0 !== rY && rY.view && rY.setSpeed((0, rD.h)(rY.view.speed, "replaySpeedUp" === YY ? "up" : "down"));
                   break;
                 case "replayRecordKeyframe":
-                  null === TB || void 0 === TB || TB.addKeyframe()
+                  null === rY || void 0 === rY || rY.addKeyframe()
               }
             },
-            setReplayPlaying(BB) {
-              var TB, dB;
-              (0, bT.c)() || (BB ? null === (TB = lB()) || void 0 === TB || TB.play() : null === (dB = lB()) || void 0 === dB || dB.pause())
+            setReplayPlaying(YY) {
+              var rY, DY;
+              (0, DD.d)() || (YY ? null === (rY = RY()) || void 0 === rY || rY.play() : null === (DY = RY()) || void 0 === DY || DY.pause())
             },
-            seekReplay(BB) {
-              var TB;
+            seekReplay(YY) {
+              var rY;
               let {
-                dL: dB,
-                ignorePlaybackMark: VB
-              } = BB;
-              null === (TB = lB()) || void 0 === TB || TB.seek(dB, null !== VB && void 0 !== VB && VB)
+                Zu: DY,
+                ignorePlaybackMark: FY
+              } = YY;
+              null === (rY = RY()) || void 0 === rY || rY.seek(DY, null !== FY && void 0 !== FY && FY)
             },
-            setReplayCameraMode(BB) {
-              var TB;
-              null === (TB = lB()) || void 0 === TB || TB.setCameraMode(BB)
+            setReplayCameraMode(YY) {
+              var rY;
+              null === (rY = RY()) || void 0 === rY || rY.setCameraMode(YY)
             },
             syncReplayCameraMode() {},
-            setReplayCameraKeyframe(BB) {
-              var TB;
-              null === (TB = lB()) || void 0 === TB || TB.setKeyframe(BB)
+            setReplayCameraKeyframe(YY) {
+              var rY;
+              null === (rY = RY()) || void 0 === rY || rY.setKeyframe(YY)
             },
-            moveReplayCameraKeyframe(BB) {
-              var TB;
+            moveReplayCameraKeyframe(YY) {
+              var rY;
               let {
-                from: dB,
-                to: VB
-              } = BB;
-              null === (TB = lB()) || void 0 === TB || TB.moveKeyframe(dB, VB)
+                from: DY,
+                to: FY
+              } = YY;
+              null === (rY = RY()) || void 0 === rY || rY.moveKeyframe(DY, FY)
             },
-            deleteReplayCameraKeyframes(BB) {
-              var TB;
+            deleteReplayCameraKeyframes(YY) {
+              var rY;
               let {
-                start: dB,
-                end: VB
-              } = BB;
-              null === (TB = lB()) || void 0 === TB || TB.deleteKeyframes(dB, VB)
+                start: DY,
+                end: FY
+              } = YY;
+              null === (rY = RY()) || void 0 === rY || rY.deleteKeyframes(DY, FY)
             },
-            setReplayPlaybackMark(BB) {
-              var TB;
-              null === (TB = lB()) || void 0 === TB || TB.setMark(BB)
+            setReplayPlaybackMark(YY) {
+              var rY;
+              null === (rY = RY()) || void 0 === rY || rY.setMark(YY)
             },
-            cropReplay(BB) {
-              var TB, dB;
+            cropReplay(YY) {
+              var rY, DY;
               let {
-                start: VB,
-                end: yB
-              } = BB;
-              return !(0, bT.c)() && (null !== (TB = null === (dB = lB()) || void 0 === dB ? void 0 : dB.crop(VB, yB)) && void 0 !== TB && TB)
+                start: FY,
+                end: AY
+              } = YY;
+              return !(0, DD.d)() && (null !== (rY = null === (DY = RY()) || void 0 === DY ? void 0 : DY.crop(FY, AY)) && void 0 !== rY && rY)
             },
-            holdReplayForShaderPackFailure(BB) {
-              const TB = lB();
-              TB && (TB.holdForShaderPackFailure(), function(BB) {
-                dB.e(122).then((() => dB(38153))).then((TB => {
+            holdReplayForShaderPackFailure(YY) {
+              const rY = RY();
+              rY && (rY.holdForShaderPackFailure(), function(YY) {
+                DY.e(130).then((() => DY(38553))).then((rY => {
                   let {
-                    shaderPackPage: dB
-                  } = TB;
-                  dB.block(BB)
-                })).catch((BB => {
-                  console.warn("[bloxd-wasm-client] the shader pack could not be blocked", BB)
+                    shaderPackPage: DY
+                  } = rY;
+                  DY.block(YY)
+                })).catch((YY => {
+                  console.warn("[bloxd-wasm-client] the shader pack could not be blocked", YY)
                 }))
-              }(BB))
+              }(YY))
             },
             exportReplayVideo() {
-              EB()
+              WY()
             },
             toggleRecording() {
-              var TB;
-              null === (TB = BB.runtime()) || void 0 === TB || TB.recorder.toggleRecording()
+              var rY;
+              null === (rY = YY.runtime()) || void 0 === rY || rY.recorder.toggleRecording()
             },
             saveClip() {
-              var TB;
-              null === (TB = BB.runtime()) || void 0 === TB || TB.recorder.saveClip()
+              var rY;
+              null === (rY = YY.runtime()) || void 0 === rY || rY.recorder.saveClip()
             },
-            setRecorderPrefs(TB) {
-              var dB;
+            setRecorderPrefs(rY) {
+              var DY;
               let {
-                clipping: VB,
-                clipSeconds: yB
-              } = TB;
-              null === (dB = BB.runtime()) || void 0 === dB || dB.recorder.setPrefs(VB, yB)
+                clipping: FY,
+                clipSeconds: AY
+              } = rY;
+              null === (DY = YY.runtime()) || void 0 === DY || DY.recorder.setPrefs(FY, AY)
             },
-            setReplayViewerOpen(TB) {
-              var dB;
-              (0, oT.g)(TB) && (null === (dB = BB.runtime()) || void 0 === dB || dB.recorder.viewerShown(TB))
+            setReplayViewerOpen(rY) {
+              var DY;
+              (0, Qr.i)(rY) && (null === (DY = YY.runtime()) || void 0 === DY || DY.recorder.viewerShown(rY))
             },
-            recordFlyingMiddleText(TB) {
-              var dB;
+            recordFlyingMiddleText(rY) {
+              var DY;
               let {
-                content: VB,
-                Nd: yB,
-                angle: pB,
-                td: lB
-              } = TB;
-              null === (dB = BB.runtime()) || void 0 === dB || dB.recorder.recordFlyingText(JSON.stringify(VB), yB, pB, lB)
+                content: FY,
+                hY: AY,
+                angle: IY,
+                dY: RY
+              } = rY;
+              null === (DY = YY.runtime()) || void 0 === DY || DY.recorder.recordFlyingText(JSON.stringify(FY), AY, IY, RY)
             },
-            dragReplayCamera(TB) {
-              var dB;
+            dragReplayCamera(rY) {
+              var DY;
               let {
-                dx: VB,
-                dy: yB
-              } = TB;
-              null === (dB = BB.freecam()) || void 0 === dB || dB.drag(VB, yB)
+                dx: FY,
+                dy: AY
+              } = rY;
+              null === (DY = YY.freecam()) || void 0 === DY || DY.drag(FY, AY)
             },
-            moveReplayFreecam(TB) {
-              var dB;
-              null === (dB = BB.freecam()) || void 0 === dB || dB.move(TB)
+            moveReplayFreecam(rY) {
+              var DY;
+              null === (DY = YY.freecam()) || void 0 === DY || DY.move(rY)
             },
-            holdReplayFreecamVertical(TB) {
-              var dB;
+            holdReplayFreecamVertical(rY) {
+              var DY;
               let {
-                action: VB,
-                Dg: yB
-              } = TB;
-              null === (dB = BB.freecam()) || void 0 === dB || dB.holdVertical(VB, yB)
+                action: FY,
+                ja: AY
+              } = rY;
+              null === (DY = YY.freecam()) || void 0 === DY || DY.holdVertical(FY, AY)
             }
           },
-          mB = BB => {
-            var TB;
-            const dB = lB(),
-              VB = null !== (TB = null === dB || void 0 === dB ? void 0 : dB.view) && void 0 !== TB ? TB : null;
-            Bd.has(BB) ? (BB => {
-              for (const TB of pB) TB(BB)
-            })(BB) : Td.has(BB) ? vB.replayAction(BB) : "replayPlayPause" === BB ? dB && VB && VB.state !== kB.hd.None && vB.setReplayPlaying(VB.state !== kB.hd.Playing) : "replayChangeCameraMode" === BB ? null === dB || void 0 === dB || dB.cycleCameraMode() : "replayExit" === BB ? !0 === (null === dB || void 0 === dB ? void 0 : dB.inPlayback) && (0, wT.m)("/") : "replayExportVideo" === BB && EB()
+          mY = YY => {
+            var rY;
+            const DY = RY(),
+              FY = null !== (rY = null === DY || void 0 === DY ? void 0 : DY.view) && void 0 !== rY ? rY : null;
+            ID.has(YY) ? (YY => {
+              for (const rY of IY) rY(YY)
+            })(YY) : RD.has(YY) ? EY.replayAction(YY) : "replayPlayPause" === YY ? DY && FY && FY.state !== uY.ed.None && EY.setReplayPlaying(FY.state !== uY.ed.Playing) : "replayChangeCameraMode" === YY ? null === DY || void 0 === DY || DY.cycleCameraMode() : "replayExit" === YY ? !0 === (null === DY || void 0 === DY ? void 0 : DY.inPlayback) && (0, Cr.j)("/") : "replayExportVideo" === YY && WY()
           };
-        let iB = !1;
+        let VY = !1;
         return {
-          states: DB,
-          events: uB,
-          commands: vB,
+          states: yY,
+          events: QY,
+          commands: EY,
           lookups: {
             replayCamera() {
-              var TB, dB, VB;
-              return !0 !== (null === (TB = lB()) || void 0 === TB ? void 0 : TB.isOpen) ? null : null !== (dB = null === (VB = BB.cameraView) || void 0 === VB ? void 0 : VB.call(BB)) && void 0 !== dB ? dB : null
+              var rY, DY, FY;
+              return !0 !== (null === (rY = RY()) || void 0 === rY ? void 0 : rY.isOpen) ? null : null !== (DY = null === (FY = YY.cameraView) || void 0 === FY ? void 0 : FY.call(YY)) && void 0 !== DY ? DY : null
             },
             leaveGameReloadsPage() {
-              var BB;
-              return !0 === (null === (BB = lB()) || void 0 === BB ? void 0 : BB.inPlayback)
+              var YY;
+              return !0 === (null === (YY = RY()) || void 0 === YY ? void 0 : YY.inPlayback)
             }
           },
           feed: {
             viewerChanged: () => {
-              var BB;
-              const dB = !0 === (null === (BB = lB()) || void 0 === BB ? void 0 : BB.inPlayback);
-              dB !== iB && (iB = dB, gB.h.yH("connectedGameChanged")), TB.fire()
+              var YY;
+              const DY = !0 === (null === (YY = RY()) || void 0 === YY ? void 0 : YY.inPlayback);
+              DY !== VY && (VY = DY, aY.g.vo("connectedGameChanged")), rY.fire()
             },
-            recorderChanged: VB.fire,
-            keyDown: BB => {
-              var TB;
-              switch (BB) {
+            recorderChanged: FY.fire,
+            keyDown: YY => {
+              var rY;
+              switch (YY) {
                 case "recordGame":
-                  return void vB.toggleRecording();
+                  return void EY.toggleRecording();
                 case "recordClip":
-                  return void((0, oT.d)() || vB.saveClip())
-              }(0, bT.c)() || ("replayViewerOpen" !== BB ? BB.startsWith("replay") && ((0, oT.d)() || !0 === (null === (TB = lB()) || void 0 === TB ? void 0 : TB.inPlayback)) && mB(BB) : HB("toggle"))
+                  return void((0, Qr.e)() || EY.saveClip())
+              }(0, DD.d)() || ("replayViewerOpen" !== YY ? YY.startsWith("replay") && ((0, Qr.e)() || !0 === (null === (rY = RY()) || void 0 === rY ? void 0 : rY.inPlayback)) && mY(YY) : oY("toggle"))
             }
           }
         }
       }({
-        runtime: yB.f,
+        runtime: AY.m,
         cameraView: () => {
-          var BB;
-          const TB = null === (BB = (0, lB.i)()) || void 0 === BB ? void 0 : BB.renderFrame;
-          if (!TB) return null;
-          const [dB, VB, yB] = TB.cameraPosition, [pB, JB, YB] = TB.cameraDirection;
+          var YY;
+          const rY = null === (YY = (0, RY.g)()) || void 0 === YY ? void 0 : YY.renderFrame;
+          if (!rY) return null;
+          const [DY, FY, AY] = rY.cameraPosition, [IY, OY, gY] = rY.cameraDirection;
           return {
-            position: [dB, VB, yB],
-            direction: [pB, JB, YB]
+            position: [DY, FY, AY],
+            direction: [IY, OY, gY]
           }
         },
         canvas: () => {
-          var BB, TB, dB;
-          return null !== (BB = null === (TB = (dB = (0, pB.N)()).canvas) || void 0 === TB ? void 0 : TB.call(dB)) && void 0 !== BB ? BB : null
+          var YY, rY, DY;
+          return null !== (YY = null === (rY = (DY = (0, IY.D)()).canvas) || void 0 === rY ? void 0 : rY.call(DY)) && void 0 !== YY ? YY : null
         },
-        freecam: yB.e
+        freecam: AY.i
       }),
-      Kd = {
+      XD = {
         states: {
-          ...VT,
-          ...JT.g,
-          ...Fd.states,
-          ...pd
+          ...ar,
+          ...ir.i,
+          ...bD.states,
+          ...vD,
+          ...bY
         },
         events: {
-          ...yT,
-          ...HB,
-          ...JT.c,
-          ...zB.d,
-          ...md.k,
-          ...Fd.events,
-          ...ld,
-          ...MB.g
+          ...vr,
+          ...oY,
+          ...ir.e,
+          ...BY.b,
+          ...eD.g,
+          ...bD.events,
+          ...uD,
+          ...NY.i
         },
         commands: {
-          ...sB,
-          ...pT,
-          ...EB,
-          ...JT.b,
-          ...WT,
-          ...vd,
-          ...MB.e,
-          ...KT,
-          ...Fd.commands,
-          ...Od
+          ...eY,
+          ...ur,
+          ...WY,
+          ...ir.b,
+          ...xr,
+          ...TD,
+          ...NY.f,
+          ...hr,
+          ...bD.commands,
+          ...ED,
+          ...XY,
+          ...ZD
         },
         queries: {
-          ...JT.d,
-          ...Ud
+          ...ir.h,
+          ...wD
         },
         lookups: {
-          ...lT,
-          ...SB,
-          ...md.m,
-          ...Fd.lookups,
-          ...fB,
-          ...jT
+          ...sr,
+          ...jY,
+          ...eD.i,
+          ...bD.lookups,
+          ...TY,
+          ...YD,
+          ...zD,
+          ...qY
         }
       };
 
-    function rd() {
-      (0, JB.e)(uB.q), (0, yB.i)(Fd.feed), (0, zB.f)(), hT || (hT = !0, (0, uB.n)(KB.l, (BB => {
-        const TB = (0, IB.f)(KB.l, BB);
-        "string" === typeof TB && Promise.resolve().then((() => dB(3145))).then((BB => {
+    function qD() {
+      (0, OY.h)(QY.n), (0, AY.o)(bD.feed), (0, BY.f)(), nr || (nr = !0, (0, QY.l)(zY.m, (YY => {
+        const rY = (0, CY.f)(zY.m, YY);
+        "string" === typeof rY && Promise.resolve().then((() => DY(3260))).then((YY => {
           let {
-            onCosmeticPackGranted: dB
-          } = BB;
-          dB(TB)
+            onCosmeticPackGranted: DY
+          } = YY;
+          DY(rY)
         }))
-      })), (0, uB.n)(KB.fb, (BB => {
-        const TB = (0, IB.f)(KB.fb, BB);
-        "number" === typeof TB && gB.h.yH("serverUpdating", Date.now() + TB, !0)
-      })), (0, uB.n)(KB.F, (BB => {
-        const TB = (0, IB.f)(KB.F, BB);
-        if ((0, IB.e)(TB)) {
+      })), (0, QY.l)(zY.jb, (YY => {
+        const rY = (0, CY.f)(zY.jb, YY);
+        "number" === typeof rY && aY.g.vo("serverUpdating", Date.now() + rY, !0)
+      })), (0, QY.l)(zY.J, (YY => {
+        const rY = (0, CY.f)(zY.J, YY);
+        if ((0, CY.c)(rY)) {
           const {
-            DB: BB,
-            uB: dB
-          } = TB;
-          (0, ZT.e)({
-            DB: "string" === typeof BB ? BB : null,
-            uB: "string" === typeof dB ? dB : null
+            AD: YY,
+            RD: DY
+          } = rY;
+          (0, kr.e)({
+            AD: "string" === typeof YY ? YY : null,
+            RD: "string" === typeof DY ? DY : null
           })
         }
-      })), (0, uB.n)(oB.Jb.NewUiRequest, (BB => {
-        const TB = (0, IB.h)(BB);
-        (0, IB.e)(TB) && "number" === typeof TB.id && (0, IB.e)(TB.clientParameters) && (0, XT.c)(TB.id, TB.clientParameters)
-      })), (0, uB.n)(KB.Y, (BB => {
-        const TB = (0, IB.f)(KB.Y, BB);
-        "number" === typeof TB && (0, XT.g)(TB)
-      })), (0, uB.m)(XT.b), (0, uB.n)(oB.Jb.UiRequestPopup, (BB => {
-        const TB = (0, IB.h)(BB);
-        if ((0, IB.e)(TB) && "number" === typeof TB.id && "string" === typeof TB.text) {
-          const BB = TB.id;
-          (0, XT.i)(BB, TB.text, (TB => {
-            WT.answerUiRequest({
-              id: BB,
-              po: TB
+      })), (0, QY.l)(vY._b.NewUiRequest, (YY => {
+        const rY = (0, CY.g)(YY);
+        (0, CY.c)(rY) && "number" === typeof rY.id && (0, CY.c)(rY.clientParameters) && (0, Gr.g)(rY.id, rY.clientParameters)
+      })), (0, QY.l)(zY.cb, (YY => {
+        const rY = (0, CY.f)(zY.cb, YY);
+        "number" === typeof rY && (0, Gr.i)(rY)
+      })), (0, QY.h)(Gr.e), (0, QY.l)(vY._b.UiRequestPopup, (YY => {
+        const rY = (0, CY.g)(YY);
+        if ((0, CY.c)(rY) && "number" === typeof rY.id && "string" === typeof rY.text) {
+          const YY = rY.id;
+          (0, Gr.j)(YY, rY.text, (rY => {
+            xr.answerUiRequest({
+              id: YY,
+              ga: rY
             })
           }))
         }
-      })), (0, uB.n)(oB.Jb.TopRightHelper, (BB => {
-        const TB = (0, IB.h)(BB);
-        void 0 !== TB && gB.h.yH("TopRightHelper", TB, !0)
-      })), (0, uB.n)(oB.Jb.TaskProgress, (BB => {
-        const TB = (0, IB.h)(BB);
-        (0, IB.e)(TB) && "string" === typeof TB.taskId && "number" === typeof TB.progress && (0, aT.d)({
-          taskId: TB.taskId,
-          progress: TB.progress
+      })), (0, QY.l)(vY._b.TopRightHelper, (YY => {
+        const rY = (0, CY.g)(YY);
+        void 0 !== rY && aY.g.vo("TopRightHelper", rY, !0)
+      })), (0, QY.l)(vY._b.TaskProgress, (YY => {
+        const rY = (0, CY.g)(YY);
+        (0, CY.c)(rY) && "string" === typeof rY.taskId && "number" === typeof rY.progress && (0, pr.c)({
+          taskId: rY.taskId,
+          progress: rY.progress
         })
-      }))), Dd || (Dd = !0, (0, uB.n)(KB.r, (BB => {
-        const TB = (0, IB.f)(KB.r, BB);
-        (0, IB.e)(TB) && gB.h.yH("showShopFromServer", {
-          toggle: TB.od,
-          kd: TB.kd
+      }))), mD || (mD = !0, (0, QY.l)(zY.v, (YY => {
+        const rY = (0, CY.f)(zY.v, YY);
+        (0, CY.c)(rY) && aY.g.vo("showShopFromServer", {
+          toggle: rY.yD,
+          QD: rY.QD
         }, !0)
-      })), (0, uB.n)(oB.Jb.OverShopInfo, (BB => {
-        const TB = (0, IB.h)(BB);
-        (0, IB.e)(TB) && gB.h.yH("overShopInfo", TB.info, !0)
-      })), (0, uB.n)(oB.Jb.ShowShopTutorial, (() => {
-        gB.h.yH("showShopTutorial", null, !0)
-      }))), kd || (kd = !0, (0, uB.i)((() => {
-        var BB;
-        (0, Jd.y)(), null === (BB = Ld) || void 0 === BB || BB(), Ld = (0, uB.e)() ? (0, gd.c)(uB.e) : null
-      })), (0, uB.n)(oB.Jb.SetCookie, (BB => {
-        const TB = (0, IB.h)(BB),
-          dB = (0, wT.e)().gameNameWithVariation;
-        (0, IB.e)(TB) && "string" === typeof TB.key && null !== dB && (0, Yd.setCookie)(dB, TB.key, TB.value)
-      })), (0, uB.n)(oB.Jb.LeaveValues, (BB => {
-        const TB = (0, IB.h)(BB);
-        if ((0, IB.e)(TB) && "string" === typeof TB.leaveEventType) {
+      })), (0, QY.l)(vY._b.OverShopInfo, (YY => {
+        const rY = (0, CY.g)(YY);
+        (0, CY.c)(rY) && aY.g.vo("overShopInfo", rY.info, !0)
+      })), (0, QY.l)(vY._b.ShowShopTutorial, (() => {
+        aY.g.vo("showShopTutorial", null, !0)
+      }))), oD || (oD = !0, (0, QY.g)((() => {
+        var YY;
+        (0, sD.x)(), null === (YY = WD) || void 0 === YY || YY(), WD = (0, QY.c)() ? (0, yD.f)(QY.c) : null
+      })), (0, QY.l)(vY._b.SetCookie, (YY => {
+        const rY = (0, CY.g)(YY),
+          DY = (0, Cr.b)().gameNameWithVariation;
+        (0, CY.c)(rY) && "string" === typeof rY.key && null !== DY && (0, iD.setCookie)(DY, rY.key, rY.value)
+      })), (0, QY.l)(vY._b.LeaveValues, (YY => {
+        const rY = (0, CY.g)(YY);
+        if ((0, CY.c)(rY) && "string" === typeof rY.leaveEventType) {
           const {
-            leaveEventType: BB,
-            category: dB,
-            subCategory: VB,
-            value: yB
-          } = TB;
-          (0, Jd.C)({
-            leaveEventType: BB,
-            category: dB,
-            subCategory: VB,
-            value: yB
+            leaveEventType: YY,
+            category: DY,
+            subCategory: FY,
+            value: AY
+          } = rY;
+          (0, sD.D)({
+            leaveEventType: YY,
+            category: DY,
+            subCategory: FY,
+            value: AY
           })
         }
-      })), (0, uB.n)(oB.Jb.CustomAnalyticsEvent, (BB => {
-        const TB = (0, IB.h)(BB);
-        if ((0, IB.e)(TB) && "string" === typeof TB.cat1) {
+      })), (0, QY.l)(vY._b.CustomAnalyticsEvent, (YY => {
+        const rY = (0, CY.g)(YY);
+        if ((0, CY.c)(rY) && "string" === typeof rY.cat1) {
           const {
-            cat1: BB,
-            cat2: dB,
-            cat3: VB,
-            value: yB
-          } = TB;
-          (0, Jd.p)({
-            cat1: BB,
-            cat2: dB,
-            cat3: VB,
-            value: yB
+            cat1: YY,
+            cat2: DY,
+            cat3: FY,
+            value: AY
+          } = rY;
+          (0, sD.l)({
+            cat1: YY,
+            cat2: DY,
+            cat3: FY,
+            value: AY
           })
         }
-      })), (0, uB.n)(oB.Jb.ProgressionEvent, (BB => {
-        const TB = (0, IB.h)(BB);
-        if ((0, IB.e)(TB)) {
+      })), (0, QY.l)(vY._b.ProgressionEvent, (YY => {
+        const rY = (0, CY.g)(YY);
+        if ((0, CY.c)(rY)) {
           const {
-            type: BB,
-            location1: dB,
-            location2: VB,
-            location3: yB,
-            score: pB
-          } = TB;
-          (0, Jd.t)({
-            type: BB,
-            location1: dB,
-            location2: VB,
-            location3: yB,
-            score: pB
+            type: YY,
+            location1: DY,
+            location2: FY,
+            location3: AY,
+            score: IY
+          } = rY;
+          (0, sD.r)({
+            type: YY,
+            location1: DY,
+            location2: FY,
+            location3: AY,
+            score: IY
           })
         }
-      })), (0, uB.n)(oB.Jb.ResourceEvent, (BB => {
-        const TB = (0, IB.h)(BB);
-        if ((0, IB.e)(TB)) {
+      })), (0, QY.l)(vY._b.ResourceEvent, (YY => {
+        const rY = (0, CY.g)(YY);
+        if ((0, CY.c)(rY)) {
           const {
-            type: BB,
-            resourceType: dB,
-            amount: VB,
-            category: yB,
-            itemName: pB
-          } = TB;
-          (0, Jd.u)({
-            type: BB,
-            resourceType: dB,
-            amount: VB,
-            category: yB,
-            itemName: pB
+            type: YY,
+            resourceType: DY,
+            amount: FY,
+            category: AY,
+            itemName: IY
+          } = rY;
+          (0, sD.u)({
+            type: YY,
+            resourceType: DY,
+            amount: FY,
+            category: AY,
+            itemName: IY
           })
         }
-      })), (0, uB.n)(oB.Jb.LeaderboardResponse, (BB => {
-        const TB = (0, IB.h)(BB);
-        if ((0, IB.e)(TB)) {
+      })), (0, QY.l)(vY._b.LeaderboardResponse, (YY => {
+        const rY = (0, CY.g)(YY);
+        if ((0, CY.c)(rY)) {
           const {
-            category: BB,
-            timeframe: dB,
-            data: VB
-          } = TB;
-          gB.h.yH("leaderboardResponse", {
-            category: BB,
-            timeframe: dB,
-            data: VB
+            category: YY,
+            timeframe: DY,
+            data: FY
+          } = rY;
+          aY.g.vo("leaderboardResponse", {
+            category: YY,
+            timeframe: DY,
+            data: FY
           })
         }
-      })), (0, uB.n)(KB.y, (BB => {
-        const TB = (0, IB.f)(KB.y, BB);
-        "string" === typeof TB && (0, od.b)(BB.conn, TB)
-      })), (0, uB.n)(KB.z, (BB => {
-        const TB = (0, IB.f)(KB.z, BB);
-        "string" === typeof TB && console.error(`[logErrorToConsole]: ${TB}`)
-      }))), QB(), (0, md.d)(), FT || (FT = !0, (0, uB.n)(KB.i, (BB => {
-        const TB = (0, IB.f)(KB.i, BB);
-        void 0 !== TB && (0, UT.i)(TB)
-      }))), RT(), tT(), ZB || (ZB = !0, (0, pB.v)(XB)), VB.gameBridge.attach(Kd), (0, VB.installPageSources)({
+      })), (0, QY.l)(zY.B, (YY => {
+        const rY = (0, CY.f)(zY.B, YY);
+        "string" === typeof rY && (0, QD.b)(YY.conn, rY)
+      })), (0, QY.l)(zY.C, (YY => {
+        const rY = (0, CY.f)(zY.C, YY);
+        "string" === typeof rY && console.error(`[logErrorToConsole]: ${rY}`)
+      }))), dY(), (0, eD.c)(), jr || (jr = !0, (0, QY.l)(zY.k, (YY => {
+        const rY = (0, CY.f)(zY.k, YY);
+        void 0 !== rY && (0, fr.m)(rY)
+      }))), qr(), cr(), GY || (GY = !0, (0, IY.s)(xY)), FY.gameBridge.attach(XD), (0, FY.installPageSources)({
         commands: {
-          ...VB.DEFAULT_CLIENT_PAGE_SOURCES.commands,
-          setChunkAddDistance: td.h
+          ...FY.DEFAULT_CLIENT_PAGE_SOURCES.commands,
+          setChunkAddDistance: fD.i
         },
-        queries: sd.wasmIconQueries,
+        queries: hD.wasmIconQueries,
         lookups: {
-          ...VB.DEFAULT_CLIENT_PAGE_SOURCES.lookups,
-          ...sd.wasmIconLookups,
-          Tm: td.e,
-          drawCallStats: fd
+          ...FY.DEFAULT_CLIENT_PAGE_SOURCES.lookups,
+          ...hD.wasmIconLookups,
+          qE: fD.d,
+          drawCallStats: jD.j
         }
-      }), (0, Nd.c)(), (0, sd.loadIcons)()
+      }), (0, CD.e)(), (0, hD.loadIcons)()
     }
   },
-  39467: (BB, TB, dB) => {
-    dB.d(TB, {
-      d: () => lB,
-      f: () => JB
+  39858: (YY, rY, DY) => {
+    DY.d(rY, {
+      e: () => RY,
+      i: () => OY
     });
-    var VB = dB(39470);
-    let yB = null,
-      pB = null;
+    var FY = DY(39862);
+    let AY = null,
+      IY = null;
 
-    function lB() {
-      return yB ??= dB.e(54).then((() => dB(41310))).catch((BB => {
-        throw yB = null, BB
-      })), yB
+    function RY() {
+      return AY ??= DY.e(58).then((() => DY(41672))).catch((YY => {
+        throw AY = null, YY
+      })), AY
     }
 
-    function JB() {
-      return pB ??= Promise.all([lB(), (0, VB.f)()]).then((BB => {
-        let [TB] = BB;
-        return TB
-      }), (BB => {
-        throw pB = null, BB
-      })), pB
+    function OY() {
+      return IY ??= Promise.all([RY(), (0, FY.h)()]).then((YY => {
+        let [rY] = YY;
+        return rY
+      }), (YY => {
+        throw IY = null, YY
+      })), IY
     }
   },
-  36e3: (BB, TB, dB) => {
-    dB.d(TB, {
-      e: () => VB
+  36427: (YY, rY, DY) => {
+    DY.d(rY, {
+      d: () => FY
     });
-    const VB = {
+    const FY = {
       "skyblock:forged:astral-astral-astral": {
         name: "Heart of the Cosmos",
         lore: "Three shards of the night sky, forged as one. The stars answer whoever holds it.",
@@ -2563,96 +2718,96 @@ export const modules = {
       }
     }
   },
-  8746: (BB, TB, dB) => {
-    dB.d(TB, {
-      c: () => yB,
-      d: () => pB
+  8908: (YY, rY, DY) => {
+    DY.d(rY, {
+      d: () => AY,
+      g: () => IY
     });
-    var VB = dB(8698);
-    const yB = "Air",
-      pB = Object.freeze(new VB.h(yB, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var FY = DY(8870);
+    const AY = "Air",
+      IY = Object.freeze(new FY.h(AY, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   },
-  35832: (BB, TB, dB) => {
-    dB.d(TB, {
-      A: () => lB,
-      d: () => yB,
-      g: () => pB,
-      i: () => LB,
-      m: () => JB,
-      p: () => YB,
-      s: () => gB,
-      v: () => kB,
-      z: () => oB
+  36244: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => AY,
+      d: () => IY,
+      f: () => sY,
+      j: () => OY,
+      k: () => gY,
+      o: () => aY,
+      p: () => uY,
+      t: () => vY,
+      u: () => RY
     });
-    var VB = dB(1117);
-    let yB = function(BB) {
-        return BB[BB.Join = 0] = "Join", BB[BB.Leave = 1] = "Leave", BB[BB.Push = 2] = "Push", BB[BB.Cursor = 3] = "Cursor", BB[BB.Submit = 4] = "Submit", BB[BB.ReloadAsVariation = 5] = "ReloadAsVariation", BB[BB.CreateFile = 6] = "CreateFile", BB[BB.RenameFile = 7] = "RenameFile", BB[BB.DeleteFile = 8] = "DeleteFile", BB[BB.SetEngine = 9] = "SetEngine", BB[BB.RenameFolder = 10] = "RenameFolder", BB
+    var FY = DY(1244);
+    let AY = function(YY) {
+        return YY[YY.Join = 0] = "Join", YY[YY.Leave = 1] = "Leave", YY[YY.Push = 2] = "Push", YY[YY.Cursor = 3] = "Cursor", YY[YY.Submit = 4] = "Submit", YY[YY.ReloadAsVariation = 5] = "ReloadAsVariation", YY[YY.CreateFile = 6] = "CreateFile", YY[YY.RenameFile = 7] = "RenameFile", YY[YY.DeleteFile = 8] = "DeleteFile", YY[YY.SetEngine = 9] = "SetEngine", YY[YY.RenameFolder = 10] = "RenameFolder", YY
       }({}),
-      pB = function(BB) {
-        return BB[BB.Joined = 0] = "Joined", BB[BB.Updates = 1] = "Updates", BB[BB.Presence = 2] = "Presence", BB[BB.RemoteCursor = 3] = "RemoteCursor", BB[BB.ForceClose = 4] = "ForceClose", BB[BB.LobbyFilesChanged = 5] = "LobbyFilesChanged", BB[BB.EngineSettings = 6] = "EngineSettings", BB
+      IY = function(YY) {
+        return YY[YY.Joined = 0] = "Joined", YY[YY.Updates = 1] = "Updates", YY[YY.Presence = 2] = "Presence", YY[YY.RemoteCursor = 3] = "RemoteCursor", YY[YY.ForceClose = 4] = "ForceClose", YY[YY.LobbyFilesChanged = 5] = "LobbyFilesChanged", YY[YY.EngineSettings = 6] = "EngineSettings", YY
       }({});
 
-    function lB(BB) {
-      return "lobby" === BB.kind ? `lobby:${BB.path}` : `codeBlock:${BB.pos[0]},${BB.pos[1]},${BB.pos[2]}`
+    function RY(YY) {
+      return "lobby" === YY.kind ? `lobby:${YY.path}` : `codeBlock:${YY.pos[0]},${YY.pos[1]},${YY.pos[2]}`
     }
 
-    function JB(BB) {
-      if ("lobby" === BB) return {
+    function OY(YY) {
+      if ("lobby" === YY) return {
         kind: "lobby",
-        path: VB.f
+        path: FY.e
       };
-      if (BB.startsWith("lobby:")) {
-        const TB = BB.slice(6);
-        return kB(TB) ? {
+      if (YY.startsWith("lobby:")) {
+        const rY = YY.slice(6);
+        return uY(rY) ? {
           kind: "lobby",
-          path: TB
+          path: rY
         } : null
       }
-      const TB = BB.match(/^codeBlock:(-?\d+),(-?\d+),(-?\d+)$/);
-      return TB ? {
+      const rY = YY.match(/^codeBlock:(-?\d+),(-?\d+),(-?\d+)$/);
+      return rY ? {
         kind: "codeBlock",
-        pos: [parseInt(TB[1]), parseInt(TB[2]), parseInt(TB[3])]
+        pos: [parseInt(rY[1]), parseInt(rY[2]), parseInt(rY[3])]
       } : null
     }
 
-    function YB(BB) {
-      return BB.endsWith(".d.ts")
+    function gY(YY) {
+      return YY.endsWith(".d.ts")
     }
 
-    function gB(BB) {
-      return BB.endsWith(".ts") && !YB(BB)
+    function aY(YY) {
+      return YY.endsWith(".ts") && !gY(YY)
     }
-    const oB = 64;
+    const vY = 64;
 
-    function kB(BB) {
-      if (!BB || BB !== BB.trim()) return !1;
-      if (BB.length > oB) return !1;
-      if (BB.startsWith("/") || BB.includes("\\") || BB.includes("\0")) return !1;
-      if (!YB(BB) && !gB(BB) && ! function(BB) {
-          return BB.endsWith(".js") && !BB.endsWith(".min.js") && !BB.endsWith(".bundle.js")
-        }(BB)) return !1;
-      const TB = BB.split("/");
-      for (const dB of TB)
-        if ("" === dB || "." === dB || ".." === dB) return !1;
+    function uY(YY) {
+      if (!YY || YY !== YY.trim()) return !1;
+      if (YY.length > vY) return !1;
+      if (YY.startsWith("/") || YY.includes("\\") || YY.includes("\0")) return !1;
+      if (!gY(YY) && !aY(YY) && ! function(YY) {
+          return YY.endsWith(".js") && !YY.endsWith(".min.js") && !YY.endsWith(".bundle.js")
+        }(YY)) return !1;
+      const rY = YY.split("/");
+      for (const DY of rY)
+        if ("" === DY || "." === DY || ".." === DY) return !1;
       return !0
     }
-    const LB = 14e3
+    const sY = 14e3
   },
-  37983: (BB, TB, dB) => {
-    dB.d(TB, {
-      e: () => VB,
-      i: () => yB
+  38400: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => FY,
+      d: () => AY
     });
-    const VB = ["description", "label"];
+    const FY = ["description", "label"];
 
-    function yB(BB) {
-      const TB = BB.type;
+    function AY(YY) {
+      const rY = YY.type;
       return {
-        type: TB,
-        params: BB[TB]
+        type: rY,
+        params: YY[rY]
       }
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

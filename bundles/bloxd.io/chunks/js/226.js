@@ -1,420 +1,559 @@
 export const id = 226;
 export const ids = [226];
 export const modules = {
-  39459: (BB, TB, dB) => {
-    dB.d(TB, {
-      d: () => pB,
-      h: () => lB
+  40158: (YY, rY, DY) => {
+    DY.d(rY, {
+      noaDevTools: () => uY
     });
-    var VB = dB(1694);
-    let yB = !1;
+    var FY = DY(36812),
+      AY = DY(36801),
+      IY = DY(2501),
+      RY = DY(1699);
 
-    function pB() {
-      yB = !0
-    }
-
-    function lB() {
-      yB && (yB = !1, (0, VB.c)())
-    }
-  },
-  39428: (BB, TB, dB) => {
-    dB.d(TB, {
-      d: () => DB,
-      f: () => LB,
-      h: () => OB
-    });
-    var VB = dB(1703),
-      yB = dB(1180),
-      pB = dB(39322),
-      lB = dB(39346),
-      JB = dB(39348),
-      YB = dB(39372);
-    const gB = new yB.b;
-    let oB = !1;
-
-    function kB(BB) {
-      const TB = (0, pB.i)();
-      return null !== TB && +BB === TB.api.localId
-    }
-
-    function LB() {
-      oB || (oB = !0, (0, YB.n)(lB.o, (BB => {
-        var TB, dB;
-        const VB = (0, JB.f)(lB.o, BB);
-        if (!(0, JB.e)(VB)) return;
-        const yB = VB;
-        kB(yB.aT) && OB(yB.ZT, {
-          icon: yB.WT,
-          level: yB.CT,
-          displayName: null !== (TB = yB.XT) && void 0 !== TB ? TB : null,
-          durationMs: null !== (dB = yB.hT) && void 0 !== dB ? dB : null
+    function OY(YY) {
+      const {
+        sQ: rY
+      } = YY, DY = rY.engine, FY = {
+        width: DY.getRenderWidth(),
+        height: DY.getRenderHeight()
+      };
+      return {
+        canvas: DY.getRenderingCanvas(),
+        maxTextureSize: DY.getCaps().maxTextureSize,
+        drawing: () => !YY.Wm,
+        resize: (YY, rY) => {
+          DY.setSize(YY, rY)
+        },
+        restoreSize: () => {
+          DY.setSize(FY.width, FY.height), rY.resize()
+        },
+        onFrameDrawn: rY => (YY.on("afterRender", rY), () => {
+          YY.off("afterRender", rY)
         })
-      })), (0, YB.n)(lB.R, (BB => {
-        const TB = (0, JB.f)(lB.R, BB);
-        if (!(0, JB.e)(TB)) return;
-        const dB = TB;
-        kB(dB.aT) && VB.b.remove(dB.ZT)
-      })), (0, YB.i)((() => {
-        VB.b.clear()
-      })))
+      }
     }
+    var gY = DY(40147),
+      aY = DY(8643);
 
-    function OB(BB, TB) {
-      VB.b.update(BB, TB), gB.forEach((TB => {
-        TB(BB)
+    function vY(YY, rY) {
+      let {
+        width: aY,
+        height: vY,
+        colouring: uY
+      } = rY;
+      const sY = "normals" === uY,
+        iY = "depth" === uY;
+      return new Promise((rY => {
+        try {
+          const yY = (0, IY.e)();
+          if (yY.sQ.iQ) return "screenshot" !== YY || null !== uY ? (console.warn("GLB downloads and coloured screenshots need WebGPU off in Graphics settings"), void rY()) : void(0, gY.e)(OY(yY), aY, vY).finally(rY);
+          const QY = yY.sQ.engine,
+            oY = yY.sQ.hT(),
+            WY = aY,
+            EY = vY;
+          Promise.all([Promise.all([DY.e(243), DY.e(244), DY.e(224)]).then((() => DY(60196))), Promise.all([DY.e(223), DY.e(222), DY.e(243), DY.e(244), DY.e(241), DY.e(245), DY.e(248), DY.e(301), DY.e(227)]).then((() => DY(60201))), Promise.all([DY.e(223), DY.e(222), DY.e(243), DY.e(244), DY.e(241), DY.e(251), DY.e(245), DY.e(253), DY.e(229)]).then((() => DY(60208))), DY.e(344).then((() => DY(60213))), Promise.all([DY.e(222), DY.e(218)]).then((() => DY(36518))), DY.e(242).then((() => DY(60220))), DY.e(217).then((() => DY(60229)))]).then((IY => {
+            const {
+              CreateScreenshotUsingRenderTarget: OY
+            } = IY[1], {
+              ShaderMaterial: gY
+            } = IY[2], {
+              ShaderLanguage: aY
+            } = IY[3], {
+              xy: vY
+            } = IY[4], {
+              registerDevtoolsShader: uY
+            } = IY[6], yY = aY.GLSL, mY = new Map, VY = oY.meshes.filter((YY => YY.material));
+            let SY = !1,
+              lY = null;
+
+            function TY() {
+              var YY;
+              SY && (SY = !1, (0, FY.e)(oY.meshes, !1)), null === (YY = lY) || void 0 === YY || YY(), lY = null, VY.forEach((YY => {
+                const rY = mY.get(YY);
+                rY && (YY.material = rY)
+              }))
+            }
+            if (sY) {
+              const YY = [],
+                rY = [];
+              VY.forEach((DY => {
+                const FY = DY.name.toLowerCase(),
+                  AY = DY.oB().boundingBox.center,
+                  IY = oY.activeCamera.position.subtract(AY).length();
+                FY.includes("sky") || FY.includes("background") || FY.includes("environment") || IY > 1e3 ? rY.push(DY) : YY.push(DY)
+              })), uY("devtoolsNormal", yY);
+              const DY = new gY("normalMaterial", oY, "devtoolsNormal", {
+                attributes: ["position", "normal"],
+                uniforms: ["worldViewProjection", "world"],
+                shaderLanguage: yY
+              });
+              uY("devtoolsWhite", yY);
+              const FY = new gY("whiteMaterial", oY, "devtoolsWhite", {
+                attributes: ["position"],
+                uniforms: ["worldViewProjection"],
+                shaderLanguage: yY
+              });
+              YY.forEach((YY => {
+                mY.set(YY, YY.material), YY.material = DY
+              })), rY.forEach((YY => {
+                mY.set(YY, YY.material), YY.material = FY
+              }))
+            } else if (iY) {
+              uY("devtoolsDepth", yY);
+              const YY = oY.activeCamera.position;
+              let rY = 0,
+                DY = 1 / 0;
+              VY.forEach((FY => {
+                const AY = FY.name.toLowerCase();
+                if (AY.includes("sky") || AY.includes("background") || AY.includes("environment")) return;
+                const IY = FY.oB().boundingBox.center,
+                  RY = vY.TransformCoordinates(IY, FY.getWorldMatrix()),
+                  OY = YY.subtract(RY).length();
+                OY > 1e3 || (rY = Math.max(rY, OY), DY = Math.min(DY, OY))
+              }));
+              const FY = rY - DY;
+              rY += .1 * FY, DY = Math.max(0, DY - .1 * FY), console.log(`Depth range: min=${DY.toFixed(2)}, max=${rY.toFixed(2)}, range=${FY.toFixed(2)}`), FY < 1 && (rY = DY + 10);
+              const AY = new gY("depthMaterial", oY, "devtoolsDepth", {
+                attributes: ["position"],
+                uniforms: ["worldViewProjection", "world", "cameraPosition", "maxDepth", "minDepth"],
+                shaderLanguage: yY
+              });
+              AY.setVector3("cameraPosition", YY), AY.setFloat("maxDepth", rY), AY.setFloat("minDepth", DY), VY.forEach((YY => {
+                mY.set(YY, YY.material), YY.material = AY
+              }))
+            }
+            if ((0, FY.e)(oY.meshes, !0), SY = !0, "glb" === YY && (lY = (0, AY.c)(oY.meshes)), "screenshot" === YY) {
+              let YY = `bloxd-screenshot-${WY}x${EY}-${Date.now()}.png`;
+              sY ? YY = `bloxd-screenshot-normals-${WY}x${EY}-${Date.now()}.png` : iY && (YY = `bloxd-screenshot-depth-${WY}x${EY}-${Date.now()}.png`), OY(QY, oY.activeCamera, {
+                width: WY,
+                height: EY
+              }, (function(DY) {
+                TY(), fetch(DY).then((function(YY) {
+                  return YY.blob()
+                })).then((function(DY) {
+                  (0, RY.downloadBlob)(DY, YY), rY()
+                })).catch((function(YY) {
+                  console.error("Error processing screenshot:", YY), rY()
+                }))
+              }), "image/png", void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, (function() {
+                console.error("Screenshot timed out"), TY(), rY()
+              }))
+            } else {
+              let YY = "LQ";
+              sY ? YY = "scene-normals" : iY && (YY = "scene-depth"), sY || iY ? setTimeout((() => {
+                (async function() {
+                  const {
+                    StandardMaterial: YY
+                  } = await Promise.all([DY.e(223), DY.e(222), DY.e(243), DY.e(244), DY.e(241), DY.e(251), DY.e(250), DY.e(228)]).then((() => DY(39391))), {
+                    Color3: rY
+                  } = await Promise.all([DY.e(223), DY.e(225)]).then((() => DY(36586))), FY = [], AY = [];
+                  if (VY.forEach((YY => {
+                      const rY = YY.name.toLowerCase(),
+                        DY = YY.oB().boundingBox.center,
+                        IY = oY.activeCamera.position.subtract(DY).length();
+                      rY.includes("sky") || rY.includes("background") || rY.includes("environment") || IY > 1e3 ? AY.push(YY) : FY.push(YY)
+                    })), sY) FY.forEach(((DY, FY) => {
+                    const AY = DY.getVerticesData("normal");
+                    if (AY) {
+                      const IY = [];
+                      for (let YY = 0; YY < AY.length; YY += 3) {
+                        const rY = Math.abs(AY[YY]),
+                          DY = Math.abs(AY[YY + 1]),
+                          FY = Math.abs(AY[YY + 2]);
+                        IY.push(rY, DY, FY, 1)
+                      }
+                      DY.setVerticesData("color", IY);
+                      const RY = new YY(`vertexColorMat_${FY}`, oY);
+                      RY.disableLighting = !0, RY.emissiveColor = new rY(1, 1, 1), RY.specularColor = new rY(0, 0, 0), DY.material = RY
+                    }
+                  })), AY.forEach(((DY, FY) => {
+                    const AY = DY.getVerticesData("position");
+                    if (AY) {
+                      const IY = [],
+                        RY = AY.length / 3;
+                      for (let YY = 0; YY < RY; YY++) IY.push(1, 1, 1, 1);
+                      DY.setVerticesData("color", IY);
+                      const OY = new YY(`whiteMat_${FY}`, oY);
+                      OY.disableLighting = !0, OY.emissiveColor = new rY(1, 1, 1), OY.specularColor = new rY(0, 0, 0), DY.material = OY
+                    }
+                  }));
+                  else if (iY) {
+                    const DY = oY.activeCamera.position;
+                    let AY = 0,
+                      IY = 1 / 0;
+                    FY.forEach((YY => {
+                      const rY = YY.oB().boundingBox.center,
+                        FY = vY.TransformCoordinates(rY, YY.getWorldMatrix()),
+                        RY = DY.subtract(FY).length();
+                      AY = Math.max(AY, RY), IY = Math.min(IY, RY)
+                    }));
+                    const RY = AY - IY;
+                    AY += .1 * RY, IY = Math.max(0, IY - .1 * RY), RY < 1 && (AY = IY + 10), VY.forEach(((FY, RY) => {
+                      const OY = FY.name.toLowerCase(),
+                        gY = FY.oB().boundingBox.center,
+                        aY = vY.TransformCoordinates(gY, FY.getWorldMatrix()),
+                        uY = DY.subtract(aY).length();
+                      if (!(OY.includes("sky") || OY.includes("background") || OY.includes("environment") || uY > 1e3)) {
+                        const DY = 1 - Math.min(Math.max((uY - IY) / (AY - IY), 0), 1),
+                          OY = new YY(`depthMat_${RY}`, oY);
+                        OY.diffuseColor = new rY(DY, DY, DY), OY.specularColor = new rY(0, 0, 0), FY.material = OY
+                      }
+                    }))
+                  }
+                })().then((() => Promise.all([DY.e(223), DY.e(222), DY.e(243), DY.e(244), DY.e(241), DY.e(251), DY.e(245), DY.e(250), DY.e(248), DY.e(240), DY.e(253), DY.e(281), DY.e(301), DY.e(234), DY.e(252), DY.e(221)]).then((() => DY(60234))))).then((rY => rY.GLTF2Export.GLBAsync(oY, YY))).then((YY => {
+                  TY(), YY.downloadFiles(), rY()
+                })).catch((YY => {
+                  console.error("Error exporting GLB:", YY), TY(), rY()
+                }))
+              }), 100) : Promise.all([DY.e(223), DY.e(222), DY.e(243), DY.e(244), DY.e(241), DY.e(251), DY.e(245), DY.e(250), DY.e(248), DY.e(240), DY.e(253), DY.e(281), DY.e(301), DY.e(234), DY.e(252), DY.e(221)]).then((() => DY(60234))).then((DY => {
+                DY.GLTF2Export.GLBAsync(oY, YY).then((YY => {
+                  TY(), YY.downloadFiles(), rY()
+                })).catch((YY => {
+                  console.error("Error exporting GLB:", YY), TY(), rY()
+                }))
+              })).catch((YY => {
+                console.error("Error importing serializers:", YY), TY(), rY()
+              }))
+            }
+          })).catch((YY => {
+            console.error("Error downloading the scene:", YY), rY()
+          }))
+        } catch (yY) {
+          console.error("Error taking screenshot:", yY), rY()
+        }
       }))
     }
-    const DB = {
-      localEffectUpdated: {
-        watch: BB => gB.add(BB)
+    const uY = new class {
+      constructor() {
+        this.tools = aY.ALL_DEV_TOOLS
+      }
+      downloadScene(YY, rY) {
+        return vY(YY, rY)
+      }
+      async setAmbientLightIntensity(YY) {
+        const {
+          Color3: rY
+        } = await Promise.all([DY.e(223), DY.e(225)]).then((() => DY(36586)));
+        (0, IY.e)().sQ.hT().ambientColor = rY.FromArray([YY, YY, YY])
       }
     }
   },
-  39431: (BB, TB, dB) => {
-    dB.d(TB, {
-      b: () => oB
+  40147: (YY, rY, DY) => {
+    DY.d(rY, {
+      e: () => gY
     });
-    var VB = dB(4192),
-      yB = dB(4186),
-      pB = dB(39356),
-      lB = dB(39372);
-    const JB = new Set(VB.G),
-      YB = VB.G.map((BB => (new TextEncoder).encode(BB))),
-      gB = new Map;
+    var FY = DY(1716);
+    const AY = 33177600,
+      IY = 3e4;
+    let RY = !1;
 
-    function oB(BB, TB) {
-      var dB;
-      return null === (dB = gB.get(BB)) || void 0 === dB ? void 0 : dB[TB]
-    }(0, lB.n)(VB.Jb.NewOtherEntitySettings, (BB => {
-      BB.payloadKind === yB.ac.Msgpack && YB.some((TB => function(BB, TB) {
-        const dB = TB[0];
-        for (let VB = BB.indexOf(dB); - 1 !== VB && VB + TB.length <= BB.length; VB = BB.indexOf(dB, VB + 1)) {
-          let dB = 1;
-          for (; dB < TB.length && BB[VB + dB] === TB[dB];) dB++;
-          if (dB === TB.length) return !0
-        }
-        return !1
-      }(BB.payload, TB))) && function(BB) {
-        if (null === BB || "object" !== typeof BB || null === BB.settings || "object" !== typeof BB.settings) return;
-        const TB = String(BB.eId),
-          dB = BB.settings;
-        let VB = gB.get(TB);
-        for (const yB in dB) {
-          if (!JB.has(yB)) continue;
-          const BB = dB[yB];
-          null === BB || void 0 === BB ? VB && delete VB[yB] : (VB ??= {}, VB[yB] = BB)
-        }
-        VB && gB.set(TB, VB)
-      }((0, pB.c)(BB.payload))
-    })), (0, lB.i)((() => {
-      gB.clear()
-    }))
-  },
-  39424: (BB, TB, dB) => {
-    dB.d(TB, {
-      d: () => OB,
-      h: () => gB,
-      i: () => kB
-    });
-    var VB = dB(37960),
-      yB = dB(1685),
-      pB = dB(1180),
-      lB = dB(39346),
-      JB = dB(39348),
-      YB = dB(39372);
-    const gB = new VB.b;
-    let oB = {};
-
-    function kB(BB) {
-      return oB[BB]
-    }
-    const LB = new pB.b;
-
-    function OB(BB) {
-      return LB.add(BB)
-    }
-
-    function DB(BB) {
-      LB.callEach(BB, "a roster listener")
-    }(0, YB.n)(lB.ab, (BB => {
-      const TB = (0, JB.f)(lB.ab, BB);
-      if (void 0 === TB) return;
-      const dB = TB.Ay.some((BB => {
-          let {
-            ny: TB,
-            ey: dB
-          } = BB;
-          return null !== dB && gB.has(TB) && gB.getName(TB) !== dB
-        })),
-        {
-          added: VB,
-          removed: pB,
-          settingChanges: YB
-        } = gB.apply(TB),
-        oB = new Set;
-      for (const yB of YB)
-        for (const BB in yB.settings) oB.add(BB);
-      const kB = dB || VB.length > 0 || pB.length > 0;
-      (kB || oB.has("hideNameSeed")) && function() {
-        const BB = new Map;
-        for (const TB of gB.ids()) {
-          const dB = gB.getName(TB),
-            VB = gB.getSetting(TB, "hideNameSeed");
-          void 0 !== dB && void 0 !== VB && null !== VB && BB.set(dB, VB)
-        }
-        yB.c.replaceAll(BB)
-      }(), DB({
-        kind: "roster",
-        members: kB,
-        settings: oB
-      })
-    })), (0, YB.n)(lB.P, (BB => {
-      const TB = (0, JB.f)(lB.P, BB);
-      if (void 0 !== TB) {
-        for (const {
-            Np: BB,
-            tp: dB,
-            sp: VB
-          }
-          of TB) oB[BB] = {
-          ...oB[BB],
-          [dB]: VB
-        };
-        DB({
-          kind: "cosmetics",
-          updates: TB
-        })
-      }
-    })), (0, YB.i)((() => {
-      gB.clear(), oB = {}, yB.c.clear(), DB({
-        kind: "reset"
-      })
-    })), (0, YB.m)((() => {
-      gB.clear(), DB({
-        kind: "reset"
-      })
-    }))
-  },
-  39445: (BB, TB, dB) => {
-    dB.d(TB, {
-      d: () => wB,
-      h: () => HB,
-      k: () => KB,
-      m: () => rB
-    });
-    var VB = dB(1147),
-      yB = dB(560),
-      pB = dB(95),
-      lB = dB(4192),
-      JB = dB(39310),
-      YB = dB(39341),
-      gB = dB(39322),
-      oB = dB(39431),
-      kB = dB(39424),
-      LB = dB(39348),
-      OB = dB(39372);
-
-    function DB(BB) {
-      let {
-        deadEId: TB,
-        killerEId: dB,
-        killerLifeformType: VB,
-        withItem: yB,
-        killstreak: pB
-      } = BB;
-      return {
-        killer: iB({
-          eId: dB,
-          lifeformType: VB
-        }),
-        victim: iB({
-          eId: TB
-        }),
-        withItem: yB,
-        killstreak: pB
-      }
-    }
-
-    function uB(BB) {
-      let {
-        killer: TB,
-        victim: dB,
-        withItem: VB
-      } = BB;
-      return {
-        killer: iB(TB),
-        victim: iB(dB),
-        withItem: VB,
-        killstreak: 0
-      }
-    }
-
-    function HB(BB) {
-      sB && zB((() => "killed" === BB.kind ? DB(BB.body) : uB(BB.body)))
-    }
-    const EB = "#2727f1",
-      vB = "#912c2c";
-
-    function mB(BB, TB) {
-      var dB;
-      return kB.h.has(BB) ? null === (dB = kB.h.getSettings(BB)) || void 0 === dB ? void 0 : dB[TB] : (0, oB.b)(BB, TB)
-    }
-
-    function iB(BB) {
-      var TB, dB, lB, JB, oB;
-      let {
-        eId: LB,
-        name: OB,
-        colour: DB,
-        lifeformType: uB
-      } = BB;
-      if (void 0 === LB || null === LB || "" === LB) {
-        const BB = OB || null;
+    function OY(YY, rY, DY) {
+      if (!YY.drawing()) return Promise.reject(new Error("Screenshots need a game to be running"));
+      if (RY) return Promise.reject(new Error("A screenshot is already being taken"));
+      RY = !0;
+      const FY = function(YY, rY, DY) {
+        const FY = Math.max(1, YY),
+          IY = Math.max(1, rY),
+          RY = Math.min(1, DY / Math.max(FY, IY), Math.sqrt(AY / (FY * IY)));
         return {
-          id: null,
-          shownName: BB,
-          lifeformType: null === BB && null !== uB && void 0 !== uB ? uB : null,
-          colour: DB || null,
-          local: !1,
-          realName: null
+          width: Math.max(1, Math.floor(FY * RY)),
+          height: Math.max(1, Math.floor(IY * RY))
         }
-      }
-      const HB = String(LB),
-        iB = null === (TB = (0, gB.i)()) || void 0 === TB ? void 0 : TB.api,
-        NB = void 0 !== iB && String(iB.localId) === HB,
-        tB = null !== (dB = kB.h.getName(HB)) && void 0 !== dB ? dB : null,
-        fB = null !== (lB = mB(HB, "hideNameSeed")) && void 0 !== lB ? lB : null;
-      let sB = null === tB ? null : (0, VB.c)(tB, !pB.featureFlags.canSeeRealPlayerNames, fB) || null,
-        MB = null;
-      if (null === sB && void 0 !== iB) {
-        const BB = iB.getEntityType(HB);
-        "Player" !== BB && (sB = (0, YB.l)(iB, +HB) || null), MB = yB.l.includes(BB) ? BB : null
-      }
-      return {
-        id: HB,
-        shownName: sB,
-        lifeformType: null === sB && null !== (JB = null !== (oB = MB) && void 0 !== oB ? oB : uB) && void 0 !== JB ? JB : null,
-        colour: DB || mB(HB, "killfeedColour") || (NB ? EB : vB),
-        local: NB,
-        realName: tB
+      }(rY, DY, YY.maxTextureSize);
+      return YY.resize(FY.width, FY.height), new Promise(((rY, DY) => {
+        let FY, AY = 2,
+          OY = null;
+        const gY = () => {
+          var rY;
+          RY = !1, null === (rY = OY) || void 0 === rY || rY(), clearTimeout(FY), YY.restoreSize()
+        };
+        FY = setTimeout((() => {
+          gY(), DY(new Error("No frame was drawn to capture"))
+        }), IY), OY = YY.onFrameDrawn((() => {
+          if (AY--, AY > 0) return;
+          const {
+            canvas: FY
+          } = YY, IY = {
+            width: FY.width,
+            height: FY.height
+          };
+          try {
+            FY.toBlob((YY => {
+              YY ? rY({
+                blob: YY,
+                ...IY
+              }) : DY(new Error("The canvas gave no image"))
+            }), "image/png")
+          } catch (RY) {
+            DY(RY)
+          } finally {
+            gY()
+          }
+        }))
+      }))
+    }
+    async function gY(YY, rY, DY) {
+      try {
+        const AY = await OY(YY, rY, DY);
+        (0, FY.d)(AY.blob, `bloxd-screenshot-${AY.width}x${AY.height}-${Date.now()}.png`)
+      } catch (AY) {
+        console.error("Error taking screenshot:", AY)
       }
     }
-    const NB = 32;
-    let tB = [],
-      fB = null,
-      sB = !1,
-      MB = !1;
+  },
+  36812: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => aY,
+      e: () => OY,
+      h: () => RY
+    });
+    var FY = DY(36809),
+      AY = DY(36817);
+    let IY = 0;
 
-    function zB(BB) {
-      null === fB ? (tB.length === NB && tB.shift(), tB.push(BB)) : fB(BB())
+    function RY(YY, rY) {
+      const DY = YY;
+      DY._noaFaceGroups = null !== rY && void 0 !== rY ? rY : null, DY._noaFaceEpoch = -1, DY._noaFaceMask = -1, DY._noaFaceCount = -1, DY._noaFaceMaterial = null;
+      const FY = YY.qm;
+      FY && 1 === FY.length && (FY[0].indexStart = 0, FY[0].indexCount = YY.getTotalIndices())
     }
 
-    function wB() {
-      MB || (MB = !0, (0, OB.n)(lB.Jb.PlayerKilled, (BB => {
-        const TB = (0, LB.h)(BB);
-        (0, LB.e)(TB) && zB((() => DB(TB)))
-      })), (0, OB.n)(lB.Jb.CustomKillfeed, (BB => {
-        const TB = (0, LB.h)(BB);
-        (0, LB.e)(TB) && (0, LB.e)(TB.killer) && (0, LB.e)(TB.victim) && zB((() => uB(TB)))
-      })), (0, OB.i)((() => {
-        tB = []
-      })))
+    function OY(YY, rY) {
+      if (rY) {
+        IY++;
+        for (const rY of YY) {
+          const YY = rY._noaFaceGroups;
+          YY && RY(rY, YY)
+        }
+      } else IY = Math.max(0, IY - 1)
     }
-    const UB = Object.freeze([0, 0, 0]),
-      FB = [0, 0, 0],
-      KB = {
-        kill: {
-          watch(BB) {
-            if (sB = !0, 0 === tB.length) return fB = BB, () => {
-              sB = !1, fB = null
-            };
-            const TB = setTimeout((() => {
-              const TB = tB;
-              tB = [], fB = BB;
-              for (const VB of TB) try {
-                BB(VB())
-              } catch (dB) {
-                console.error("[bloxd-wasm-client] a kept kill couldn't be handed on", dB)
-              }
-            }), 0);
-            return () => {
-              clearTimeout(TB), sB = !1, fB = null
+
+    function gY(YY, rY, DY) {
+      let AY = -1,
+        IY = 0;
+      for (let RY = 0; RY < FY.c; RY++) {
+        const DY = YY[RY],
+          OY = YY[RY + 1];
+        OY > DY && rY & 1 << FY.b[RY] && (AY < 0 && (AY = DY), IY = OY)
+      }
+      return AY < 0 ? (DY[0] = 0, DY[1] = 0, 0) : (DY[0] = AY, DY[1] = IY - AY, IY - AY)
+    }
+    class aY {
+      constructor(YY, rY) {
+        this.Jy = YY, this.engine = rY, this.epoch = 0, this.eyeX = NaN, this.eyeY = NaN, this.eyeZ = NaN, this.focalPx = NaN, this.culling = !1, this.range = new Int32Array(2)
+      }
+      apply(YY, rY) {
+        if (!rY) return;
+        const DY = rY.getProjectionMatrix().m,
+          RY = 0 === IY && 0 === DY[15],
+          OY = rY.globalPosition,
+          {
+            engine: aY
+          } = this,
+          vY = RY ? (0, AY.c)(DY, aY.getRenderWidth(), aY.getRenderHeight()) : 0;
+        OY.x === this.eyeX && OY.y === this.eyeY && OY.z === this.eyeZ && vY === this.focalPx && RY === this.culling || (this.epoch++, this.eyeX = OY.x, this.eyeY = OY.y, this.eyeZ = OY.z, this.focalPx = vY, this.culling = RY);
+        const {
+          epoch: uY,
+          range: sY
+        } = this, iY = this.Jy / 2, yY = iY * Math.sqrt(3), QY = YY.data, oY = YY.length;
+        let WY = 0;
+        for (let IY = 0; IY < oY; IY++) {
+          const YY = QY[IY],
+            rY = YY._noaFaceGroups;
+          if (rY && (YY._noaFaceEpoch !== uY || YY._noaFaceMaterial !== YY.material)) {
+            YY._noaFaceEpoch = uY, YY._noaFaceMaterial = YY.material;
+            const DY = YY.qm,
+              IY = DY && 1 === DY.length ? DY[0] : null;
+            let aY = -1;
+            if (RY && IY && (0, FY.q)(YY.material)) {
+              const DY = YY.position,
+                FY = OY.x - DY.x,
+                IY = OY.y - DY.y,
+                RY = OY.z - DY.z,
+                gY = FY - iY,
+                uY = IY - iY,
+                sY = RY - iY,
+                QY = Math.sqrt(gY * gY + uY * uY + sY * sY) + yY;
+              aY = (0, AY.l)(rY, FY, IY, RY, (0, AY.f)(QY, vY))
+            }
+            if (IY && aY !== YY._noaFaceMask) {
+              YY._noaFaceMask = aY;
+              let DY = 0,
+                AY = rY[FY.c]; - 1 !== aY && (AY = gY(rY, aY, sY), DY = sY[0]), YY._noaFaceCount = AY, IY.indexStart = 6 * DY, IY.indexCount = 6 * AY, IY.setBoundingInfo(YY.oB())
             }
           }
+          rY && 0 === YY._noaFaceCount || (QY[WY++] = YY)
         }
-      },
-      rB = {
-        localPos() {
-          const BB = (0, gB.i)();
-          if (null === BB) return UB;
-          const TB = BB.api.apiView;
-          for (let dB = 0; dB < 3; dB++) FB[dB] = JB.B.localPos(TB, 0, dB);
-          return FB
-        }
+        YY.length = WY
       }
+    }
   },
-  37960: (BB, TB, dB) => {
-    dB.d(TB, {
-      b: () => VB
+  36801: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => gY,
+      g: () => OY
     });
-    class VB {
-      constructor() {
-        this.members = new Map
+    const FY = new WeakSet;
+    let AY = 0;
+    const IY = new Set;
+
+    function RY(YY, rY) {
+      YY._data = rY
+    }
+
+    function OY(YY) {
+      var rY, DY;
+      (null !== (rY = null === (DY = YY.getBuffer()) || void 0 === DY ? void 0 : DY.gu) && void 0 !== rY ? rY : 0) > 0 && (FY.add(YY), 0 === AY ? RY(YY, null) : IY.add(YY))
+    }
+
+    function gY(YY) {
+      AY++;
+      for (const DY of function(YY) {
+          const rY = new Set;
+          for (const AY of YY) {
+            const YY = AY.geometry;
+            for (const AY of Object.values(null !== (DY = null === YY || void 0 === YY ? void 0 : YY.getVertexBuffers()) && void 0 !== DY ? DY : {})) {
+              var DY;
+              const YY = AY.getWrapperBuffer();
+              FY.has(YY) && rY.add(YY)
+            }
+          }
+          return rY
+        }(YY)) DY.getData() || aY(DY), IY.add(DY);
+      let rY = !0;
+      return () => {
+        if (rY && (rY = !1, AY--, 0 === AY)) {
+          for (const YY of IY) RY(YY, null);
+          IY.clear()
+        }
       }
-      apply(BB) {
-        const TB = {
-          added: [],
-          removed: [],
-          settingChanges: []
-        };
-        for (const VB of BB.Ay) {
-          let BB = this.members.get(VB.ny);
-          if (BB || (BB = {
-              name: null,
-              settings: {}
-            }, this.members.set(VB.ny, BB), TB.added.push(VB.ny)), null !== VB.ey && (BB.name = VB.ey), null !== VB.Bp || VB.Tp.length > 0) {
-            const dB = null === VB.Bp ? {} : JSON.parse(VB.Bp);
-            Object.assign(BB.settings, dB);
-            for (const TB of VB.Tp) delete BB.settings[TB], dB[TB] = void 0;
-            TB.settingChanges.push({
-              playerId: VB.ny,
-              settings: dB
+    }
+
+    function aY(YY) {
+      const rY = YY.getBuffer();
+      if (!rY || !(rY.gu > 0)) return;
+      const DY = YY._engine,
+        FY = new Uint8Array(rY.gu);
+      DY.bindArrayBuffer(rY), DY._gl.getBufferSubData(DY._gl.ARRAY_BUFFER, 0, FY), DY._resetVertexBufferBinding(), RY(YY, FY)
+    }
+  },
+  36809: (YY, rY, DY) => {
+    DY.d(rY, {
+      b: () => RY,
+      c: () => IY,
+      g: () => gY,
+      i: () => FY,
+      m: () => OY,
+      p: () => AY,
+      q: () => aY
+    });
+    const FY = 6,
+      AY = [0, 2, 4, 1, 3, 5, 0, 2],
+      IY = 6,
+      RY = [1, 0, 3, 2, 5, 4];
+    for (let vY = IY; vY < AY.length; vY++)
+      if (AY[vY] !== AY[vY - IY]) throw new Error("FACE_LAYOUT must repeat a prefix of its base groups");
+    const OY = AY.length + 1,
+      gY = (() => {
+        const YY = [];
+        for (let rY = 0; rY < IY; rY++) YY[AY[rY]] = rY;
+        return YY
+      })();
+
+    function aY(YY) {
+      return !!YY && YY.backFaceCulling && (0 === YY.transparencyMode || 1 === YY.transparencyMode)
+    }
+  },
+  36817: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => OY,
+      f: () => gY,
+      i: () => vY,
+      l: () => aY,
+      m: () => yY
+    });
+    var FY = DY(36809);
+    const AY = 1 / 16,
+      IY = 1 / 64,
+      RY = 2048;
+    FY.i;
+
+    function OY(YY, rY, DY) {
+      return Math.min(Math.abs(YY[0] * rY), Math.abs(YY[5] * DY)) / 2
+    }
+
+    function gY(YY, rY) {
+      return AY + IY * YY * YY / rY
+    }
+
+    function aY(YY, rY, DY, AY, IY) {
+      const RY = FY.m;
+      return vY(YY[RY], YY[RY + 1], YY[RY + 2], YY[RY + 3], YY[RY + 4], YY[RY + 5], rY, DY, AY, IY)
+    }
+
+    function vY(YY, rY, DY, FY, AY, IY, RY, OY, gY, aY) {
+      return (RY <= YY - aY ? 0 : 1) | (RY >= rY + aY ? 0 : 2) | (OY <= DY - aY ? 0 : 4) | (OY >= FY + aY ? 0 : 8) | (gY <= AY - aY ? 0 : 16) | (gY >= IY + aY ? 0 : 32)
+    }
+    const uY = (() => {
+        const YY = [];
+        for (let rY = 0; rY < FY.p.length; rY++) {
+          let DY = 0;
+          for (let AY = rY + 1; AY <= FY.p.length; AY++) {
+            const IY = 1 << FY.p[AY - 1];
+            if (DY & IY) break;
+            DY |= IY, YY.push({
+              start: rY,
+              end: AY,
+              EF: DY
             })
           }
         }
-        for (const VB of BB.dp) {
-          const BB = this.members.get(VB);
-          var dB;
-          if (BB) this.members.delete(VB), TB.removed.push({
-            playerId: VB,
-            name: null !== (dB = BB.name) && void 0 !== dB ? dB : void 0
-          })
-        }
-        return TB
+        return YY
+      })(),
+      sY = [];
+
+    function iY(YY, rY) {
+      const DY = FY.g[rY];
+      return YY[DY + 1] - YY[DY]
+    }
+
+    function yY(YY, rY, DY) {
+      let AY = 0;
+      for (let RY = 0; RY < FY.i; RY++) iY(YY, RY) > 0 && (AY |= 1 << RY);
+      if (0 === (rY &= AY)) return 0;
+      if (rY === AY) return DY[0] = 0, DY[1] = YY[FY.c], 1;
+      let IY = null,
+        OY = 1 / 0;
+      for (const aY of function(YY) {
+          let rY = sY[YY];
+          if (rY) return rY;
+          const DY = new Map,
+            FY = (YY, rY) => {
+              const FY = 4 * YY + rY.length / 2;
+              DY.has(FY) || DY.set(FY, {
+                EF: YY,
+                windows: rY
+              })
+            };
+          for (const IY of uY)
+            if ((IY.EF & YY) === YY && FY(IY.EF, [IY.start, IY.end]), 0 !== (IY.EF & YY))
+              for (const rY of uY) rY.start < IY.end || 0 !== (IY.EF & rY.EF) || 0 === (rY.EF & YY) || ((IY.EF | rY.EF) & YY) !== YY || FY(IY.EF | rY.EF, [IY.start, IY.end, rY.start, rY.end]);
+          const AY = [...DY.values()];
+          return rY = AY.filter((YY => !AY.some((rY => rY !== YY && (rY.EF & YY.EF) === rY.EF && rY.windows.length <= YY.windows.length)))), sY[YY] = rY, rY
+        }(rY)) {
+        let DY = (aY.windows.length / 2 - 1) * RY;
+        const gY = aY.EF & ~rY & AY;
+        for (let rY = 0; rY < FY.i; rY++) gY & 1 << rY && (DY += iY(YY, rY));
+        DY < OY && (IY = aY, OY = DY)
       }
-      has(BB) {
-        return this.members.has(BB)
+      const gY = IY.windows;
+      for (let FY = 0; FY < gY.length; FY += 2) {
+        const rY = YY[gY[FY]];
+        DY[FY] = rY, DY[FY + 1] = YY[gY[FY + 1]] - rY
       }
-      ids() {
-        return [...this.members.keys()]
-      }
-      getName(BB) {
-        var TB, dB;
-        return null !== (TB = null === (dB = this.members.get(BB)) || void 0 === dB ? void 0 : dB.name) && void 0 !== TB ? TB : void 0
-      }
-      getSettings(BB) {
-        var TB;
-        return null === (TB = this.members.get(BB)) || void 0 === TB ? void 0 : TB.settings
-      }
-      getSetting(BB, TB) {
-        var dB;
-        return null === (dB = this.members.get(BB)) || void 0 === dB ? void 0 : dB.settings[TB]
-      }
-      clear() {
-        this.members.clear()
-      }
+      return gY.length / 2
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

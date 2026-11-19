@@ -1,447 +1,449 @@
 export const id = 2;
 export const ids = [2];
 export const modules = {
-  35415: (BB, TB, dB) => {
-    dB.r(TB), dB.d(TB, {
-      drawBlockIcon: () => iB,
-      drawBlockIconUrl: () => NB,
-      getDrawnBlockIcon: () => mB
+  35808: (YY, rY, DY) => {
+    DY.r(rY), DY.d(rY, {
+      drawBlockIcon: () => VY,
+      drawBlockIconUrl: () => SY,
+      getDrawnBlockIcon: () => mY
     });
-    var VB = dB(35423);
-    const yB = Math.SQRT1_2,
-      pB = Math.sqrt(3) / 2,
-      lB = .5,
-      JB = {
+    var FY = DY(35813);
+    const AY = Math.SQRT1_2,
+      IY = Math.sqrt(3) / 2,
+      RY = .5,
+      OY = {
         boxes: [
           [0, 0, 0, 1, 1, 1]
         ],
         cropFaces: !1
       },
-      YB = {
+      gY = {
         boxes: [
           [0, 0, 0, 1, .5, 1]
         ],
         cropFaces: !1
       },
-      gB = {
+      aY = {
         boxes: [
           [0, 0, 0, 1, .5, 1],
           [0, .5, 0, .5, 1, 1]
         ],
         cropFaces: !0
       };
-    const oB = 1e-6;
+    const vY = 1e-6;
 
-    function kB(BB, TB, dB, VB) {
+    function uY(YY, rY, DY, FY) {
       let {
-        origin: yB,
-        across: pB,
-        down: lB,
-        texture: JB,
-        rect: [YB, gB, kB, LB],
-        shade: OB
-      } = VB;
-      const DB = pB.x * lB.y - pB.y * lB.x;
-      if (Math.abs(DB) < 1e-9) return;
-      const uB = [yB.x, yB.x + pB.x, yB.x + lB.x, yB.x + pB.x + lB.x],
-        HB = [yB.y, yB.y + pB.y, yB.y + lB.y, yB.y + pB.y + lB.y],
-        EB = Math.max(0, Math.floor(Math.min(...uB))),
-        vB = Math.min(dB - 1, Math.ceil(Math.max(...uB))),
-        mB = Math.max(0, Math.floor(Math.min(...HB))),
-        iB = Math.min(dB - 1, Math.ceil(Math.max(...HB)));
-      for (let NB = mB; NB <= iB; NB++)
-        for (let VB = EB; VB <= vB; VB++) {
-          const uB = VB + .5 - yB.x,
-            HB = NB + .5 - yB.y,
-            EB = (uB * lB.y - HB * lB.x) / DB,
-            vB = (pB.x * HB - pB.y * uB) / DB;
-          if (EB < -oB || EB > 1 + oB || vB < -oB || vB > 1 + oB) continue;
-          const mB = NB * dB + VB;
-          TB[mB] = 1;
-          const iB = YB + Math.min(Math.max(EB, 0), 1) * (kB - YB),
-            tB = gB + Math.min(Math.max(vB, 0), 1) * (LB - gB),
-            fB = Math.min(JB.width - 1, Math.floor(iB * JB.width)),
-            sB = 4 * (Math.min(JB.height - 1, Math.floor(tB * JB.height)) * JB.width + fB),
-            MB = JB.pixels[sB + 3] / 255;
-          if (0 === MB) continue;
-          const zB = 4 * mB,
-            wB = BB[zB + 3] / 255 * (1 - MB),
-            UB = MB + wB;
-          for (let TB = 0; TB < 3; TB++) BB[zB + TB] = (JB.pixels[sB + TB] * OB * MB + BB[zB + TB] * wB) / UB;
-          BB[zB + 3] = 255 * UB
+        origin: AY,
+        across: IY,
+        down: RY,
+        texture: OY,
+        rect: [gY, aY, uY, sY],
+        shade: iY
+      } = FY;
+      const yY = IY.x * RY.y - IY.y * RY.x;
+      if (Math.abs(yY) < 1e-9) return;
+      const QY = [AY.x, AY.x + IY.x, AY.x + RY.x, AY.x + IY.x + RY.x],
+        oY = [AY.y, AY.y + IY.y, AY.y + RY.y, AY.y + IY.y + RY.y],
+        WY = Math.max(0, Math.floor(Math.min(...QY))),
+        EY = Math.min(DY - 1, Math.ceil(Math.max(...QY))),
+        mY = Math.max(0, Math.floor(Math.min(...oY))),
+        VY = Math.min(DY - 1, Math.ceil(Math.max(...oY)));
+      for (let SY = mY; SY <= VY; SY++)
+        for (let FY = WY; FY <= EY; FY++) {
+          const QY = FY + .5 - AY.x,
+            oY = SY + .5 - AY.y,
+            WY = (QY * RY.y - oY * RY.x) / yY,
+            EY = (IY.x * oY - IY.y * QY) / yY;
+          if (WY < -vY || WY > 1 + vY || EY < -vY || EY > 1 + vY) continue;
+          const mY = SY * DY + FY;
+          rY[mY] = 1;
+          const VY = gY + Math.min(Math.max(WY, 0), 1) * (uY - gY),
+            lY = aY + Math.min(Math.max(EY, 0), 1) * (sY - aY),
+            TY = Math.min(OY.width - 1, Math.floor(VY * OY.width)),
+            eY = 4 * (Math.min(OY.height - 1, Math.floor(lY * OY.height)) * OY.width + TY),
+            NY = OY.pixels[eY + 3] / 255;
+          if (0 === NY) continue;
+          const BY = 4 * mY,
+            cY = YY[BY + 3] / 255 * (1 - NY),
+            KY = NY + cY;
+          for (let rY = 0; rY < 3; rY++) YY[BY + rY] = (OY.pixels[eY + rY] * iY * NY + YY[BY + rY] * cY) / KY;
+          YY[BY + 3] = 255 * KY
         }
     }
-    var LB = dB(35427);
-    const OB = new Map,
-      DB = new Map,
-      uB = new Map,
-      HB = new Map;
+    var sY = DY(35817);
+    const iY = new Map,
+      yY = new Map,
+      QY = new Map,
+      oY = new Map;
 
-    function EB(BB, TB, dB) {
-      return `${TB}|${dB}|${BB}`
+    function WY(YY, rY, DY) {
+      return `${rY}|${DY}|${YY}`
     }
 
-    function vB(BB, TB, dB) {
-      let VB = BB.get(TB);
-      return void 0 === VB && (VB = dB().catch((dB => {
-        throw BB.delete(TB), dB
-      })), BB.set(TB, VB)), VB
+    function EY(YY, rY, DY) {
+      let FY = YY.get(rY);
+      return void 0 === FY && (FY = DY().catch((DY => {
+        throw YY.delete(rY), DY
+      })), YY.set(rY, FY)), FY
     }
 
-    function mB(BB, TB) {
-      let dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      return DB.get(EB(BB, TB, dB))
+    function mY(YY, rY) {
+      let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      return yY.get(WY(YY, rY, DY))
     }
 
-    function iB(BB, TB, dB, VB) {
-      const yB = EB(BB, TB, dB);
-      return vB(OB, yB, (async () => {
-        const pB = await fB(VB(BB), TB, tB(dB));
-        return DB.set(yB, pB), pB
+    function VY(YY, rY, DY, FY) {
+      const AY = WY(YY, rY, DY);
+      return EY(iY, AY, (async () => {
+        const IY = await TY(FY(YY), rY, lY(DY));
+        return yY.set(AY, IY), IY
       }))
     }
 
-    function NB(BB, TB, dB, VB) {
-      return vB(uB, EB(BB, TB, dB), (async () => {
-        var yB;
-        const pB = VB(BB),
-          lB = tB(dB);
-        return null !== (yB = await (0, LB.b)(pB, TB, lB)) && void 0 !== yB ? yB : (await fB(pB, TB, lB)).toDataURL()
+    function SY(YY, rY, DY, FY) {
+      return EY(QY, WY(YY, rY, DY), (async () => {
+        var AY;
+        const IY = FY(YY),
+          RY = lY(DY);
+        return null !== (AY = await (0, sY.d)(IY, rY, RY)) && void 0 !== AY ? AY : (await TY(IY, rY, RY)).toDataURL()
       }))
     }
 
-    function tB(BB) {
-      return Math.max(1, Math.round(BB))
+    function lY(YY) {
+      return Math.max(1, Math.round(YY))
     }
-    async function fB(BB, TB, dB) {
+    async function TY(YY, rY, DY) {
       let {
-        top: oB,
-        left: LB,
-        right: OB,
-        itemType: DB
-      } = BB;
-      const [uB, HB, EB] = await Promise.all([sB(oB), sB(LB), sB(OB)]), vB = function(BB, TB, dB, JB) {
-        const YB = .6 * dB,
-          gB = YB * yB,
-          oB = YB * yB * lB,
-          LB = YB * pB,
-          OB = Math.max(...TB.boxes.map((BB => BB[4]))),
-          DB = gB / 2 + (dB - gB) / 2,
-          uB = oB + (dB - oB - oB - OB * LB) / 2,
-          HB = (BB, TB, dB) => ({
-            x: DB + (BB - dB) * gB,
-            y: uB - oB + (BB + dB) * oB + (OB - TB) * LB
+        top: vY,
+        left: sY,
+        right: iY,
+        itemType: yY
+      } = YY;
+      const [QY, oY, WY] = await Promise.all([eY(vY), eY(sY), eY(iY)]), EY = function(YY, rY, DY, OY) {
+        const gY = .6 * DY,
+          aY = gY * AY,
+          vY = gY * AY * RY,
+          sY = gY * IY,
+          iY = Math.max(...rY.boxes.map((YY => YY[4]))),
+          yY = aY / 2 + (DY - aY) / 2,
+          QY = vY + (DY - vY - vY - iY * sY) / 2,
+          oY = (YY, rY, DY) => ({
+            x: yY + (YY - DY) * aY,
+            y: QY - vY + (YY + DY) * vY + (iY - rY) * sY
           }),
-          EB = (BB, dB, VB, yB, pB, lB) => ({
-            origin: BB,
+          WY = (YY, DY, FY, AY, IY, RY) => ({
+            origin: YY,
             across: {
-              x: dB.x - BB.x,
-              y: dB.y - BB.y
+              x: DY.x - YY.x,
+              y: DY.y - YY.y
             },
             down: {
-              x: VB.x - BB.x,
-              y: VB.y - BB.y
+              x: FY.x - YY.x,
+              y: FY.y - YY.y
             },
-            texture: yB,
-            rect: TB.cropFaces ? pB : [0, 0, 1, 1],
-            shade: lB
+            texture: AY,
+            rect: rY.cropFaces ? IY : [0, 0, 1, 1],
+            shade: RY
           }),
-          vB = new Uint8ClampedArray(dB * dB * 4),
-          mB = new Uint8Array(dB * dB),
-          iB = VB.d;
-        for (const [VB, yB, pB, lB, NB, tB] of TB.boxes) {
-          const TB = EB(HB(lB, NB, tB), HB(lB, NB, pB), HB(lB, yB, tB), BB.right, [1 - tB, 1 - NB, 1 - pB, 1 - yB], iB.right),
-            JB = EB(HB(VB, NB, tB), HB(lB, NB, tB), HB(VB, yB, tB), BB.left, [VB, 1 - NB, lB, 1 - yB], iB.left),
-            YB = EB(HB(VB, NB, pB), HB(lB, NB, pB), HB(VB, NB, tB), BB.top, [VB, pB, lB, tB], iB.top);
-          for (const BB of [TB, JB, YB]) kB(vB, mB, dB, BB)
+          EY = new Uint8ClampedArray(DY * DY * 4),
+          mY = new Uint8Array(DY * DY),
+          VY = FY.c;
+        for (const [FY, AY, IY, RY, SY, lY] of rY.boxes) {
+          const rY = WY(oY(RY, SY, lY), oY(RY, SY, IY), oY(RY, AY, lY), YY.right, [1 - lY, 1 - SY, 1 - IY, 1 - AY], VY.right),
+            OY = WY(oY(FY, SY, lY), oY(RY, SY, lY), oY(FY, AY, lY), YY.left, [FY, 1 - SY, RY, 1 - AY], VY.left),
+            gY = WY(oY(FY, SY, IY), oY(RY, SY, IY), oY(FY, SY, lY), YY.top, [FY, IY, RY, lY], VY.top);
+          for (const YY of [rY, OY, gY]) uY(EY, mY, DY, YY)
         }
-        return (0, VB.h)(vB, dB, JB, (BB => 1 === mB[BB])), vB
+        return (0, FY.g)(EY, DY, OY, (YY => 1 === mY[YY])), EY
       }({
-        top: uB,
-        left: HB,
-        right: EB
-      }, function(BB) {
-        return "SlabBlock" === BB ? YB : "StairsBlock" === BB ? gB : JB
-      }(DB), TB, dB), mB = document.createElement("canvas");
-      mB.width = TB, mB.height = TB;
-      const iB = mB.getContext("2d");
-      if (!iB) throw new Error("Failed to get 2D context");
-      return iB.putImageData(new ImageData(vB, TB, TB), 0, 0), mB
+        top: QY,
+        left: oY,
+        right: WY
+      }, function(YY) {
+        return "SlabBlock" === YY ? gY : "StairsBlock" === YY ? aY : OY
+      }(yY), rY, DY), mY = document.createElement("canvas");
+      mY.width = rY, mY.height = rY;
+      const VY = mY.getContext("2d");
+      if (!VY) throw new Error("Failed to get 2D context");
+      return VY.putImageData(new ImageData(EY, rY, rY), 0, 0), mY
     }
 
-    function sB(BB) {
-      return vB(HB, BB, (async () => {
-        const TB = await (0, LB.i)(BB),
-          dB = document.createElement("canvas");
-        dB.width = TB.width, dB.height = TB.height;
-        const VB = dB.getContext("2d");
-        if (!VB) throw new Error("Failed to get 2D context");
-        return VB.drawImage(TB, 0, 0), {
-          width: TB.width,
-          height: TB.height,
-          pixels: VB.getImageData(0, 0, TB.width, TB.height).data
+    function eY(YY) {
+      return EY(oY, YY, (async () => {
+        const rY = await (0, sY.h)(YY),
+          DY = document.createElement("canvas");
+        DY.width = rY.width, DY.height = rY.height;
+        const FY = DY.getContext("2d");
+        if (!FY) throw new Error("Failed to get 2D context");
+        return FY.drawImage(rY, 0, 0), {
+          width: rY.width,
+          height: rY.height,
+          pixels: FY.getImageData(0, 0, rY.width, rY.height).data
         }
       }))
     }
   },
-  35427: (BB, TB, dB) => {
-    dB.d(TB, {
-      b: () => MB,
-      f: () => zB,
-      i: () => vB
+  35817: (YY, rY, DY) => {
+    DY.d(rY, {
+      d: () => BY,
+      g: () => cY,
+      h: () => mY
     });
-    var VB = dB(127),
-      yB = dB(95);
-    const pB = new(dB(35430).c)(new URL(dB.p + dB.u(3), dB.b), {
+    var FY = DY(309),
+      AY = DY(99);
+    const IY = new(DY(35826).d)(new URL(DY.p + DY.u(3), DY.b), {
       name: "blockIconWorker",
       type: "module"
     });
-    var lB = dB(2512);
-    const JB = 1e4,
-      YB = 3e4;
-    let gB = null,
-      oB = null,
-      kB = null,
-      LB = !1,
-      OB = 0;
-    const DB = new Map;
-    let uB = null;
-    const HB = new Map,
-      EB = new Map;
+    var RY = DY(1744),
+      OY = DY(2789);
+    const gY = 1e4,
+      aY = 3e4;
+    let vY = null,
+      uY = null,
+      sY = null,
+      iY = !1,
+      yY = 0;
+    const QY = new Map;
+    let oY = null;
+    const WY = new Map,
+      EY = new Map;
 
-    function vB(BB) {
-      return new Promise(((TB, dB) => {
-        const VB = new Image;
-        VB.crossOrigin = "anonymous", VB.onload = () => {
-          TB(VB)
-        }, VB.onerror = () => {
-          dB(new Error(`A block icon's texture did not load: ${BB.slice(0,100)}`))
-        }, VB.src = BB
-      }))
+    function mY(YY) {
+      const rY = new Promise(((rY, DY) => {
+        const FY = new Image;
+        FY.crossOrigin = "anonymous", FY.fetchPriority = "high", FY.onload = () => {
+          rY(FY)
+        }, FY.onerror = () => {
+          DY(new Error(`A block icon's texture did not load: ${YY.slice(0,100)}`))
+        }, FY.src = YY
+      }));
+      return (0, OY.g)(rY)
     }
 
-    function mB(BB) {
-      var TB, dB;
-      LB || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${BB}`), LB = !0, null === (TB = gB) || void 0 === TB || TB.terminate(), gB = null, oB = null, HB.clear(), EB.clear();
-      for (const VB of DB.values()) VB(null);
-      DB.clear(), null === (dB = uB) || void 0 === dB || dB()
+    function VY(YY) {
+      var rY, DY;
+      iY || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${YY}`), iY = !0, null === (rY = vY) || void 0 === rY || rY.terminate(), vY = null, uY = null, WY.clear(), EY.clear();
+      for (const FY of QY.values()) FY(null);
+      QY.clear(), null === (DY = oY) || void 0 === DY || DY()
     }
 
-    function iB() {
-      return kB ??= async function() {
+    function SY() {
+      return sY ??= async function() {
         if ("undefined" === typeof Worker || "undefined" === typeof OffscreenCanvas || "undefined" === typeof createImageBitmap) return;
-        if ("page" === VB.e.ios_icon_worker_v1 && (0, yB.isWebKit)()) return;
+        if ("page" === FY.e.ios_icon_worker_v1 && (0, AY.isWebKit)()) return;
         try {
-          gB = await async function() {
-            return await pB.ready(), pB.start()
+          vY = await async function() {
+            return await IY.ready(), IY.start()
           }()
-        } catch (JB) {
-          return void mB(`did not start (${String(JB)})`)
+        } catch (OY) {
+          return void VY(`did not start (${String(OY)})`)
         }
-        let BB = () => {};
-        const TB = new Promise((TB => {
-          BB = TB
+        let YY = () => {};
+        const rY = new Promise((rY => {
+          YY = rY
         }));
-        gB.onmessage = TB => {
+        vY.onmessage = rY => {
           let {
-            data: dB
-          } = TB;
-          if ("started" === dB.type) oB = gB, BB();
-          else if ("failed" === dB.type) mB(`failed a draw (${dB.message})`);
+            data: DY
+          } = rY;
+          if ("started" === DY.type) uY = vY, YY();
+          else if ("failed" === DY.type) VY(`failed a draw (${DY.message})`);
           else {
-            var VB, yB;
-            null === (VB = DB.get(dB.id)) || void 0 === VB || VB(dB.url), DB.delete(dB.id), null === (yB = uB) || void 0 === yB || yB()
+            var FY, AY;
+            null === (FY = QY.get(DY.id)) || void 0 === FY || FY(DY.url), QY.delete(DY.id), null === (AY = oY) || void 0 === AY || AY()
           }
-        }, gB.onerror = TB => {
-          TB.preventDefault(), mB(`stopped (${TB.message||"its script did not load or run"})`), BB()
+        }, vY.onerror = rY => {
+          rY.preventDefault(), VY(`stopped (${rY.message||"its script did not load or run"})`), YY()
         };
-        const dB = `did not start in ${YB/1e3} s`;
-        await (0, lB.j)(TB, YB, dB).catch((() => {
-          mB(dB)
+        const DY = `did not start in ${aY/1e3} s`;
+        await (0, RY.k)(rY, aY, DY).catch((() => {
+          VY(DY)
         }))
-      }(), kB
+      }(), sY
     }
 
-    function NB() {
-      if (null !== uB || 0 === DB.size) return;
-      const BB = new Promise((BB => {
-          uB = BB
+    function lY() {
+      if (null !== oY || 0 === QY.size) return;
+      const YY = new Promise((YY => {
+          oY = YY
         })),
-        TB = `did not answer in ${JB/1e3} s`;
-      (0, lB.j)(BB, JB, TB).then((() => {
-        uB = null, NB()
+        rY = `did not answer in ${gY/1e3} s`;
+      (0, RY.k)(YY, gY, rY).then((() => {
+        oY = null, lY()
       }), (() => {
-        uB = null, mB(TB)
+        oY = null, VY(rY)
       }))
     }
 
-    function tB(BB, TB) {
-      let dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      BB.postMessage(TB, dB)
+    function TY(YY, rY) {
+      let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      YY.postMessage(rY, DY)
     }
 
-    function fB(BB, TB, dB, VB) {
-      let yB = TB.get(dB);
-      return void 0 === yB && (yB = VB().then((async TB => {
+    function eY(YY, rY, DY, FY) {
+      let AY = rY.get(DY);
+      return void 0 === AY && (AY = FY().then((async rY => {
         let {
-          image: dB,
-          request: VB
-        } = TB;
+          image: DY,
+          request: FY
+        } = rY;
         try {
-          const TB = await createImageBitmap(dB);
-          tB(BB, VB(TB), [TB])
-        } catch (yB) {
-          mB(`could not take an image (${String(yB)})`)
+          const rY = await createImageBitmap(DY);
+          TY(YY, FY(rY), [rY])
+        } catch (AY) {
+          VY(`could not take an image (${String(AY)})`)
         }
-      })), yB.catch((() => {
-        TB.get(dB) === yB && TB.delete(dB)
-      })), TB.set(dB, yB)), yB
+      })), AY.catch((() => {
+        rY.get(DY) === AY && rY.delete(DY)
+      })), rY.set(DY, AY)), AY
     }
-    async function sB(BB, TB) {
-      iB();
-      const dB = oB;
-      if (null === dB) return null;
-      if (await BB(dB), oB !== dB) return null;
-      const VB = ++OB;
-      return new Promise((BB => {
-        DB.set(VB, BB), tB(dB, TB(VB)), NB()
+    async function NY(YY, rY) {
+      SY();
+      const DY = uY;
+      if (null === DY) return null;
+      if (await YY(DY), uY !== DY) return null;
+      const FY = ++yY;
+      return new Promise((YY => {
+        QY.set(FY, YY), TY(DY, rY(FY)), lY()
       }))
     }
 
-    function MB(BB, TB, dB) {
-      return sB((TB => Promise.all([BB.top, BB.left, BB.right].map((BB => function(BB, TB) {
-        return fB(BB, HB, TB, (async () => ({
-          image: await vB(TB),
-          request: BB => ({
+    function BY(YY, rY, DY) {
+      return NY((rY => Promise.all([YY.top, YY.left, YY.right].map((YY => function(YY, rY) {
+        return eY(YY, WY, rY, (async () => ({
+          image: await mY(rY),
+          request: YY => ({
             type: "texture",
-            url: TB,
-            bitmap: BB
+            url: rY,
+            bitmap: YY
           })
         })))
-      }(TB, BB))))), (VB => ({
+      }(rY, YY))))), (FY => ({
         type: "draw",
-        id: VB,
-        ...BB,
-        size: TB,
-        outlineWidth: dB
+        id: FY,
+        ...YY,
+        size: rY,
+        outlineWidth: DY
       })))
     }
 
-    function zB(BB, TB, dB, VB) {
-      return sB((dB => function(BB, TB, dB) {
-        return fB(BB, EB, TB, (async () => {
+    function cY(YY, rY, DY, FY) {
+      return NY((DY => function(YY, rY, DY) {
+        return eY(YY, EY, rY, (async () => {
           const {
-            texture: BB,
-            ...VB
-          } = await dB();
+            texture: YY,
+            ...FY
+          } = await DY();
           return {
-            image: await vB(BB),
-            request: BB => ({
+            image: await mY(YY),
+            request: YY => ({
               type: "model",
-              name: TB,
-              bitmap: BB,
-              geometry: VB
+              name: rY,
+              bitmap: YY,
+              geometry: FY
             })
           }
         }))
-      }(dB, BB, TB)), (TB => ({
+      }(DY, YY, rY)), (rY => ({
         type: "drawModel",
-        id: TB,
-        name: BB,
-        size: dB,
-        outlineWidth: VB
+        id: rY,
+        name: YY,
+        size: DY,
+        outlineWidth: FY
       })))
     }
   },
-  35423: (BB, TB, dB) => {
-    dB.d(TB, {
-      d: () => pB,
-      h: () => JB,
-      l: () => lB
+  35813: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => IY,
+      g: () => OY,
+      j: () => RY
     });
-    const VB = 1 / 32,
-      yB = [15, 15, 15],
-      pB = {
+    const FY = 1 / 32,
+      AY = [15, 15, 15],
+      IY = {
         top: 1,
         left: .85,
         right: .7
       };
 
-    function lB(BB, TB, dB, yB) {
+    function RY(YY, rY, DY, AY) {
       const {
-        vertices: pB,
-        uvs: lB,
-        indices: YB,
-        shades: gB
-      } = BB, oB = dB * VB, kB = dB - 2 * oB, LB = new Float32Array(pB.length);
-      for (let VB = 0; VB < pB.length; VB += 3) LB[VB] = oB + pB[VB] * kB, LB[VB + 1] = oB + pB[VB + 1] * kB, LB[VB + 2] = pB[VB + 2];
-      const OB = new Float32Array(dB * dB).fill(-1 / 0),
-        DB = new Uint8ClampedArray(dB * dB * 4),
-        uB = 255 * BB.alphaCutoff;
-      for (let VB = 0; VB < YB.length; VB += 3) {
-        const [BB, yB, pB] = [YB[VB], YB[VB + 1], YB[VB + 2]], [JB, oB, kB] = [3 * BB, 3 * yB, 3 * pB], [HB, EB, vB, mB, iB, NB] = [LB[JB], LB[JB + 1], LB[oB], LB[oB + 1], LB[kB], LB[kB + 1]], tB = (vB - HB) * (NB - EB) - (iB - HB) * (mB - EB);
-        if (Math.abs(tB) < 1e-9) continue;
-        const fB = gB[VB / 3],
-          [sB, MB, zB, wB, UB, FB] = [lB[2 * BB], lB[2 * BB + 1], lB[2 * yB], lB[2 * yB + 1], lB[2 * pB], lB[2 * pB + 1]],
-          KB = Math.max(0, Math.floor(Math.min(HB, vB, iB))),
-          rB = Math.min(dB - 1, Math.ceil(Math.max(HB, vB, iB))),
-          IB = Math.max(0, Math.floor(Math.min(EB, mB, NB))),
-          cB = Math.min(dB - 1, Math.ceil(Math.max(EB, mB, NB)));
-        for (let VB = IB; VB <= cB; VB++)
-          for (let BB = KB; BB <= rB; BB++) {
-            const [yB, pB] = [BB + .5, VB + .5], lB = ((yB - HB) * (NB - EB) - (iB - HB) * (pB - EB)) / tB, YB = ((vB - HB) * (pB - EB) - (yB - HB) * (mB - EB)) / tB, gB = 1 - lB - YB;
-            if (gB < 0 || lB < 0 || YB < 0) continue;
-            const KB = gB * LB[JB + 2] + lB * LB[oB + 2] + YB * LB[kB + 2],
-              rB = VB * dB + BB;
-            if (KB <= OB[rB]) continue;
-            const IB = Math.max(0, Math.min(TB.width - 1, Math.floor((gB * sB + lB * zB + YB * UB) * TB.width))),
-              cB = 4 * (Math.max(0, Math.min(TB.height - 1, Math.floor((gB * MB + lB * wB + YB * FB) * TB.height))) * TB.width + IB);
-            TB.pixels[cB + 3] < uB || (OB[rB] = KB, DB[4 * rB] = TB.pixels[cB] * fB, DB[4 * rB + 1] = TB.pixels[cB + 1] * fB, DB[4 * rB + 2] = TB.pixels[cB + 2] * fB, DB[4 * rB + 3] = 255)
+        vertices: IY,
+        uvs: RY,
+        indices: gY,
+        shades: aY
+      } = YY, vY = DY * FY, uY = DY - 2 * vY, sY = new Float32Array(IY.length);
+      for (let FY = 0; FY < IY.length; FY += 3) sY[FY] = vY + IY[FY] * uY, sY[FY + 1] = vY + IY[FY + 1] * uY, sY[FY + 2] = IY[FY + 2];
+      const iY = new Float32Array(DY * DY).fill(-1 / 0),
+        yY = new Uint8ClampedArray(DY * DY * 4),
+        QY = 255 * YY.alphaCutoff;
+      for (let FY = 0; FY < gY.length; FY += 3) {
+        const [YY, AY, IY] = [gY[FY], gY[FY + 1], gY[FY + 2]], [OY, vY, uY] = [3 * YY, 3 * AY, 3 * IY], [oY, WY, EY, mY, VY, SY] = [sY[OY], sY[OY + 1], sY[vY], sY[vY + 1], sY[uY], sY[uY + 1]], lY = (EY - oY) * (SY - WY) - (VY - oY) * (mY - WY);
+        if (Math.abs(lY) < 1e-9) continue;
+        const TY = aY[FY / 3],
+          [eY, NY, BY, cY, KY, HY] = [RY[2 * YY], RY[2 * YY + 1], RY[2 * AY], RY[2 * AY + 1], RY[2 * IY], RY[2 * IY + 1]],
+          zY = Math.max(0, Math.floor(Math.min(oY, EY, VY))),
+          ZY = Math.min(DY - 1, Math.ceil(Math.max(oY, EY, VY))),
+          CY = Math.max(0, Math.floor(Math.min(WY, mY, SY))),
+          fY = Math.min(DY - 1, Math.ceil(Math.max(WY, mY, SY)));
+        for (let FY = CY; FY <= fY; FY++)
+          for (let YY = zY; YY <= ZY; YY++) {
+            const [AY, IY] = [YY + .5, FY + .5], RY = ((AY - oY) * (SY - WY) - (VY - oY) * (IY - WY)) / lY, gY = ((EY - oY) * (IY - WY) - (AY - oY) * (mY - WY)) / lY, aY = 1 - RY - gY;
+            if (aY < 0 || RY < 0 || gY < 0) continue;
+            const zY = aY * sY[OY + 2] + RY * sY[vY + 2] + gY * sY[uY + 2],
+              ZY = FY * DY + YY;
+            if (zY <= iY[ZY]) continue;
+            const CY = Math.max(0, Math.min(rY.width - 1, Math.floor((aY * eY + RY * BY + gY * KY) * rY.width))),
+              fY = 4 * (Math.max(0, Math.min(rY.height - 1, Math.floor((aY * NY + RY * cY + gY * HY) * rY.height))) * rY.width + CY);
+            rY.pixels[fY + 3] < QY || (iY[ZY] = zY, yY[4 * ZY] = rY.pixels[fY] * TY, yY[4 * ZY + 1] = rY.pixels[fY + 1] * TY, yY[4 * ZY + 2] = rY.pixels[fY + 2] * TY, yY[4 * ZY + 3] = 255)
           }
       }
-      return JB(DB, dB, yB), DB
+      return OY(yY, DY, AY), yY
     }
 
-    function JB(BB, TB, dB) {
-      let VB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : TB => 0 !== BB[4 * TB + 3];
-      const pB = (BB, dB) => BB < 0 || dB < 0 || BB >= TB || dB >= TB || !VB(dB * TB + BB),
-        lB = [];
-      for (let yB = 0; yB < TB; yB++)
-        for (let BB = 0; BB < TB; BB++)
-          if (!pB(BB, yB)) BB: for (let VB = -dB; VB <= dB; VB++) {
-            const JB = dB - Math.abs(VB);
-            for (let dB = -JB; dB <= JB; dB++)
-              if (pB(BB + dB, yB + VB)) {
-                lB.push(yB * TB + BB);
-                break BB
+    function OY(YY, rY, DY) {
+      let FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : rY => 0 !== YY[4 * rY + 3];
+      const IY = (YY, DY) => YY < 0 || DY < 0 || YY >= rY || DY >= rY || !FY(DY * rY + YY),
+        RY = [];
+      for (let AY = 0; AY < rY; AY++)
+        for (let YY = 0; YY < rY; YY++)
+          if (!IY(YY, AY)) YY: for (let FY = -DY; FY <= DY; FY++) {
+            const OY = DY - Math.abs(FY);
+            for (let DY = -OY; DY <= OY; DY++)
+              if (IY(YY + DY, AY + FY)) {
+                RY.push(AY * rY + YY);
+                break YY
               }
           }
-      for (const JB of lB) BB.set(yB, 4 * JB), BB[4 * JB + 3] = 255
+      for (const OY of RY) YY.set(AY, 4 * OY), YY[4 * OY + 3] = 255
     }
   },
-  35430: (BB, TB, dB) => {
-    dB.d(TB, {
-      c: () => yB
+  35826: (YY, rY, DY) => {
+    DY.d(rY, {
+      d: () => AY
     });
-    const VB = {
-      wait: function(BB) {
-        return new Promise((TB => {
-          setTimeout(TB, BB)
+    const FY = {
+      wait: function(YY) {
+        return new Promise((rY => {
+          setTimeout(rY, YY)
         }))
       },
       stallMs: 2e4
     };
-    class yB {
-      constructor(BB) {
-        let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : VB;
-        this.url = BB, this.options = TB, this.timing = dB, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = BB
+    class AY {
+      constructor(YY) {
+        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : FY;
+        this.url = YY, this.options = rY, this.timing = DY, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = YY
       }
       ready() {
         if (null === this.fetched) {
-          const BB = new AbortController;
-          this.fetchAbort = BB, this.fetched = this.fetchWithRetries(BB.signal).finally((() => {
-            this.fetchAbort === BB && (this.fetchAbort = null)
+          const YY = new AbortController;
+          this.fetchAbort = YY, this.fetched = this.fetchWithRetries(YY.signal).finally((() => {
+            this.fetchAbort === YY && (this.fetchAbort = null)
           }))
         }
         return this.fetched
@@ -452,51 +454,51 @@ export const modules = {
       start() {
         return new Worker(this.scriptUrl, this.options)
       }
-      async fetchWithRetries(BB) {
-        for (let TB = 0;; TB++) {
-          const dB = new URL(this.url);
-          if (TB > 0 && dB.searchParams.set("cache-bust", `${Date.now()}-${TB}`), await this.fetchWhole(dB, BB)) return void(this.scriptUrl = dB);
-          if (TB >= 3 || BB.aborted) return;
-          if (await this.timing.wait(500 * 2 ** TB), BB.aborted) return
+      async fetchWithRetries(YY) {
+        for (let rY = 0;; rY++) {
+          const DY = new URL(this.url);
+          if (rY > 0 && DY.searchParams.set("cache-bust", `${Date.now()}-${rY}`), await this.fetchWhole(DY, YY)) return void(this.scriptUrl = DY);
+          if (rY >= 3 || YY.aborted) return;
+          if (await this.timing.wait(500 * 2 ** rY), YY.aborted) return
         }
       }
-      async fetchWhole(BB, TB) {
-        const dB = new AbortController;
-        let VB;
-        const yB = () => {
-            clearTimeout(VB), VB = setTimeout((() => {
-              dB.abort()
+      async fetchWhole(YY, rY) {
+        const DY = new AbortController;
+        let FY;
+        const AY = () => {
+            clearTimeout(FY), FY = setTimeout((() => {
+              DY.abort()
             }), this.timing.stallMs)
           },
-          pB = () => {
-            dB.abort()
+          IY = () => {
+            DY.abort()
           };
-        TB.addEventListener("abort", pB, {
+        rY.addEventListener("abort", IY, {
           once: !0
-        }), yB();
+        }), AY();
         try {
-          var lB;
-          const TB = await fetch(BB, {
-            signal: dB.signal
+          var RY;
+          const rY = await fetch(YY, {
+            signal: DY.signal
           });
-          if (!TB.ok) return !1;
-          const VB = null === (lB = TB.body) || void 0 === lB ? void 0 : lB.getReader();
-          if (!VB) return !1;
+          if (!rY.ok) return !1;
+          const FY = null === (RY = rY.body) || void 0 === RY ? void 0 : RY.getReader();
+          if (!FY) return !1;
           for (;;) {
             const {
-              done: BB
-            } = await VB.read();
-            if (BB) return !0;
-            yB()
+              done: YY
+            } = await FY.read();
+            if (YY) return !0;
+            AY()
           }
         } catch {
           return !1
         } finally {
-          clearTimeout(VB), TB.removeEventListener("abort", pB)
+          clearTimeout(FY), rY.removeEventListener("abort", IY)
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

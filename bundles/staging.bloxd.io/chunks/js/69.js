@@ -1,7192 +1,16254 @@
 export const id = 69;
-export const ids = [69, 85];
+export const ids = [69];
 export const modules = {
-    4226: (BB, TB, dB) => {
-      dB.d(TB, {
-        e: () => HB,
-        h: () => EB
-      });
-      var VB = dB(933),
-        yB = dB.n(VB),
-        pB = dB(62),
-        lB = dB(1078),
-        JB = dB(4232),
-        YB = dB(1657),
-        gB = dB(2139),
-        oB = dB(4240),
-        kB = dB(980);
-      const LB = new WeakMap;
-      let OB = 0;
-
-      function DB(BB) {
-        let TB = LB.get(BB);
-        return void 0 === TB && (TB = OB++, LB.set(BB, TB)), TB
-      }
-
-      function uB(BB) {
-        let {
-          piece: TB
-        } = BB;
-        return "space" === TB.kind ? (0, kB.jsx)(kB.Fragment, {
-          children: TB.text
-        }) : (0, kB.jsx)("span", {
-          className: "DialogueWord",
-          style: {
-            "--word-delay": `${TB.delayMs}ms`
-          },
-          children: (0, kB.jsx)(JB.d, {
-            text: "icon" === TB.kind ? `[[${TB.icon}]]` : TB.text
-          })
-        })
-      }
-
-      function HB(BB) {
-        let {
-          display: TB
-        } = BB;
-        const {
-          selectedLanguage: dB
-        } = (0, lB.z)(), VB = (0, pB.useMemo)((() => (0, oB.e)((0, oB.f)(TB).plan.pieces)), [TB, dB.code]);
-        return (0, kB.jsxs)("div", {
-          className: yB()("Dialogue", {
-            DialogueAnimateIn: !1 !== TB.animateIn
-          }),
-          children: [TB.speakerName && (0, kB.jsx)(YB.e, {
-            text: TB.speakerName,
-            className: "DialogueSpeaker"
-          }), (0, kB.jsx)("p", {
-            className: "DialogueLine",
-            children: VB.map(((BB, TB) => 1 === BB.length && "space" === BB[0].kind ? BB[0].text : (0, kB.jsx)("span", {
-              className: "DialogueGlue",
-              children: BB.map(((BB, TB) => (0, kB.jsx)(uB, {
-                piece: BB
-              }, TB)))
-            }, TB)))
-          })]
-        })
-      }
-      const EB = (0, pB.memo)((function() {
-        const BB = (0, gB.j)("dialogue");
-        return (0, kB.jsx)("div", {
-          className: "DialogueAnchor",
-          "data-camera-keeper": "",
-          role: "status",
-          "aria-live": "polite",
-          "aria-atomic": "true",
-          children: BB && (0, kB.jsx)(HB, {
-            display: BB
-          }, DB(BB))
-        })
-      }))
-    },
-    4100: (BB, TB, dB) => {
-        dB.r(TB), dB.d(TB, {
-          default: () => Bl
-        });
-        var VB = dB(62),
-          yB = dB(933),
-          pB = dB.n(yB),
-          lB = dB(1416),
-          JB = dB(1422),
-          YB = dB(21),
-          gB = dB(72),
-          oB = dB(4105),
-          kB = dB(4117),
-          LB = dB(4122),
-          OB = dB(3817),
-          DB = dB(980);
-        const uB = "/textures/docs/icons";
-
-        function HB(BB) {
-          let {
-            name: TB,
-            isTinted: dB,
-            className: VB,
-            style: yB
-          } = BB;
-          const lB = `${uB}/${TB}.png`;
-          return dB ? (0, DB.jsxs)("span", {
-            className: pB()("DocsPixelIcon", "Tinted", VB),
-            "aria-hidden": "true",
-            style: yB,
-            children: [(0, DB.jsx)("span", {
-              className: "DocsPixelIconTint",
-              style: {
-                maskImage: `url("${lB}")`,
-                WebkitMaskImage: `url("${lB}")`
-              }
-            }), (0, DB.jsx)("img", {
-              src: lB,
-              alt: ""
-            })]
-          }) : (0, DB.jsx)("img", {
-            className: pB()("DocsPixelIcon", VB),
-            src: lB,
-            alt: "",
-            "aria-hidden": "true",
-            style: yB
-          })
+  8833: (YY, rY) => {
+    rY.b = 8, rY.e = function(YY, rY, DY, FY) {
+      if (!Array.isArray(YY)) return !!YY;
+      rY -= Math.floor(rY), DY -= Math.floor(DY), FY -= Math.floor(FY);
+      for (var AY = 0; AY < YY.length; AY += 6)
+        if (rY >= YY[AY] && rY < YY[AY + 3] && DY >= YY[AY + 1] && DY < YY[AY + 4] && FY >= YY[AY + 2] && FY < YY[AY + 5]) return !0;
+      return !1
+    }, rY.d = function(YY) {
+      for (var rY = [], DY = 0; DY < YY.length; DY++) {
+        var FY = YY[DY];
+        if (2 !== FY.length || 3 !== FY[0].length || 3 !== FY[1].length) throw new Error("Subvoxel boxes must contain two three-dimensional bounds");
+        for (var AY = 0; AY < 3; AY++) {
+          var IY = FY[0][AY],
+            RY = FY[1][AY];
+          if (!Number.isInteger(IY) || !Number.isInteger(RY) || IY < 0 || RY > 8 || IY >= RY) throw new Error("Subvoxel bounds must be integers satisfying 0 <= start < end <= 8");
+          rY[6 * DY + AY] = IY / 8, rY[6 * DY + AY + 3] = RY / 8
         }
-        const EB = 1500;
+      }
+      return rY
+    }
+  },
+  8898: (YY, rY, DY) => {
+    DY.d(rY, {
+      B: () => iY,
+      D: () => QY,
+      E: () => yY,
+      F: () => aY,
+      G: () => sY,
+      e: () => FY,
+      h: () => AY,
+      l: () => oY,
+      m: () => gY,
+      o: () => WY,
+      r: () => OY,
+      u: () => RY,
+      x: () => IY
+    });
+    const FY = 39 == DY.j ? ["Conveyor Belt", "Splitter", "Sorting Gate", "Belt Loader", "Fast Belt", "Belt Lift", "Belt Drop", "Belt Tunnel", "Express Belt", "Fast Loader"] : null,
+      AY = .002,
+      IY = 2,
+      RY = 3,
+      OY = .5,
+      gY = 200;
 
-        function vB() {
-          const [BB, TB] = (0, VB.useState)(null);
-          (0, VB.useEffect)((() => {
-            if (null === BB) return;
-            const dB = setTimeout((() => {
-              TB(null)
-            }), EB);
-            return () => {
-              clearTimeout(dB)
-            }
-          }), [BB]);
-          return [BB, BB => {
-            (0, OB.c)(BB).then((() => {
-              TB({
-                text: BB,
-                failed: !1
-              })
-            }), (dB => {
-              console.error("Could not copy to the clipboard", dB), TB({
-                text: BB,
-                failed: !0
-              })
-            }))
+    function aY(YY, rY, DY) {
+      let FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : AY;
+      return Math.max(0, Math.min((DY - YY) * FY, rY))
+    }
+
+    function vY(YY, rY, DY) {
+      let FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : AY;
+      const IY = [];
+      let RY = rY;
+      for (const AY of YY) {
+        const YY = aY(AY.at, RY, DY, FY);
+        IY.push(YY), RY = YY - OY
+      }
+      return IY
+    }
+
+    function uY(YY, rY) {
+      let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : AY;
+      return 0 === YY.length ? 1 / 0 : YY[0].at + rY / DY
+    }
+
+    function sY(YY, rY, DY) {
+      let FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : AY,
+        IY = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
+      const RY = vY(YY, rY, DY, FY),
+        [OY] = YY.splice(IY, 1);
+      return RY.splice(IY, 1), YY.forEach(((YY, rY) => {
+        YY.at = DY - RY[rY] / FY
+      })), OY
+    }
+
+    function iY(YY, rY, DY) {
+      let FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : AY;
+      for (let AY = uY(YY, rY, FY); AY <= DY; AY = uY(YY, rY, FY)) {
+        const DY = sY(YY, rY, AY, FY);
+        DY.at = AY, YY.push(DY)
+      }
+    }
+
+    function yY(YY, rY, DY) {
+      return {
+        name: YY,
+        at: DY - rY / (arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : AY)
+      }
+    }
+
+    function QY(YY, rY, DY, FY, IY) {
+      let RY = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : AY;
+      const OY = vY(YY, rY, IY, RY);
+      let gY = 0;
+      YY.forEach(((YY, rY) => {
+        YY.at = IY - OY[rY] / RY, OY[rY] > FY && (gY = rY + 1)
+      })), DY.at = IY - FY / RY, YY.splice(gY, 0, DY)
+    }
+    const oY = "baf2BeltLines",
+      WY = "baf2BeltMoves"
+  },
+  8900: (YY, rY, DY) => {
+    DY.d(rY, {
+      $: () => WY,
+      A: () => eY,
+      E: () => sY,
+      H: () => uY,
+      I: () => iY,
+      L: () => RY,
+      P: () => VY,
+      R: () => lY,
+      U: () => mY,
+      W: () => EY,
+      Y: () => aY,
+      Z: () => oY,
+      c: () => AY,
+      cb: () => gY,
+      g: () => vY,
+      k: () => IY,
+      o: () => SY,
+      p: () => QY,
+      s: () => NY,
+      v: () => BY,
+      z: () => TY
+    });
+    var FY = DY(625);
+    const AY = {
+        "Belt Lift": 1,
+        "Belt Drop": -1
+      },
+      IY = "Belt Tunnel",
+      RY = 5,
+      OY = "|exit";
+
+    function gY(YY, rY) {
+      return rY ? `${IY}|meta|rot${YY}${OY}` : 1 === YY ? IY : `${IY}|meta|rot${YY}`
+    }
+
+    function aY(YY) {
+      return YY.endsWith(OY) && YY.startsWith(`${IY}|`)
+    }
+    const vY = [
+        [0, -1],
+        [-1, 0],
+        [0, 1],
+        [1, 0]
+      ],
+      uY = "Splitter",
+      sY = "Sorting Gate",
+      iY = {
+        leftRight: "",
+        leftFront: "|leftFront",
+        frontRight: "|frontRight"
+      },
+      yY = {
+        leftRight: ["right", "left"],
+        leftFront: ["left", "front"],
+        frontRight: ["front", "right"]
+      },
+      QY = "|right";
+
+    function oY(YY) {
+      return YY.split("|")[0] !== uY ? null : YY.endsWith(iY.leftFront) ? "leftFront" : YY.endsWith(iY.frontRight) ? "frontRight" : "leftRight"
+    }
+
+    function WY(YY, rY, DY) {
+      return function(YY) {
+        const rY = oY(YY);
+        return null === rY ? [] : yY[rY]
+      }(YY).map((YY => "right" === YY ? [DY, -rY] : "left" === YY ? [-DY, rY] : [rY, DY]))
+    }
+
+    function EY(YY) {
+      return YY.split("|")[0] === sY && YY.endsWith(QY)
+    }
+
+    function mY(YY, rY, DY) {
+      return EY(YY) ? [DY, -rY] : [-DY, rY]
+    }
+    const VY = 39 == DY.j ? ["Conveyor Belt", "Fast Belt", "Express Belt"] : null,
+      SY = ["turnLeft", "turnRight"];
+
+    function lY(YY, rY, DY) {
+      return null !== DY ? `${YY}|meta|rot${rY}|${DY}` : 1 === rY ? YY : `${YY}|meta|rot${rY}`
+    }
+    const TY = 39 == DY.j ? ["Burner Drill", "Crusher", "Smelter", "Press", "Wire Mill", "Alloy Kiln", "Electric Drill", "Assembler", "Tree Cutter", "Deep Drill", "Shatter Mill", "Sky Tap", "Crystal Vat", "Recycler", "Crop Harvester", "Centrifuge", "Synthesizer", "Mob Farm"] : null,
+      eY = 192,
+      NY = 7 * FY.x,
+      BY = 4 * FY.x
+  },
+  8865: (YY, rY, DY) => {
+    DY.d(rY, {
+      d: () => FY
+    });
+    const FY = {
+      1: [1, 0],
+      2: [0, -1],
+      3: [-1, 0],
+      4: [0, 1]
+    }
+  },
+  8830: (YY, rY, DY) => {
+    DY.d(rY, {
+      b: () => qY,
+      f: () => bY,
+      h: () => hY,
+      k: () => wY,
+      m: () => dY,
+      q: () => XY,
+      u: () => JY,
+      w: () => zY,
+      z: () => HY
+    });
+    var FY = DY(8833);
+    if (39 == DY.j) var AY = DY(229);
+    var IY = DY(8836),
+      RY = DY(8903),
+      OY = DY(8860),
+      gY = DY(2779),
+      aY = DY(341),
+      vY = DY(4001),
+      uY = DY(8870),
+      sY = DY(616),
+      iY = DY(3811),
+      yY = DY(8851),
+      QY = DY(8884);
+    if (39 == DY.j) var oY = DY(8908);
+    var WY = DY(8913),
+      EY = DY(8919);
+    const mY = {
+      ttb: 200,
+      harvestType: "cuttable",
+      soundType: {
+        break: "cloth",
+        place: "cloth"
+      },
+      itemTexture: "slime_trail",
+      solid: !1,
+      model: "rotatable",
+      modelScale: 8,
+      customModelInfo: {
+        yOffset: -.5,
+        unlit: !0,
+        yRotOffset: -Math.PI / 2
+      },
+      blockModel: "slime_trail",
+      heldItemGlb: "Slime Trail",
+      unlitStandaloneMesh: !0,
+      My: [14, 8, 11],
+      drops: null,
+      specialToolDrop: {
+        tool: [...aY.ie],
+        drops: "Slime Trail"
+      }
+    };
+
+    function VY(YY, rY) {
+      let {
+        textureAnimation: DY,
+        rotatable: FY = !0
+      } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      return {
+        model: FY ? "rotatable" : "CustomModel",
+        modelScale: 8,
+        blockModel: YY,
+        blockModelItem: !0,
+        heldItemScale: 4,
+        itemTexture: rY,
+        customModelInfo: {
+          yOffset: -.5,
+          yRotOffset: FY ? Math.PI : void 0,
+          textureAnimation: DY
+        }
+      }
+    }
+    const SY = (0, FY.d)([
+        [
+          [0, 0, 0],
+          [8, 1, 8]
+        ]
+      ]),
+      lY = [(0, yY.cc)("Maple Stairs", {
+        displayName: {
+          translationKey: "item:mapleStairs"
+        },
+        ttb: 1800,
+        textureInfo: "planks_maple",
+        harvestType: "wood"
+      }), (0, yY.cc)("Pine Stairs", {
+        displayName: {
+          translationKey: "item:pineStairs"
+        },
+        ttb: 1800,
+        textureInfo: "planks_pine",
+        harvestType: "wood"
+      }), (0, yY.cc)("Plum Stairs", {
+        displayName: {
+          translationKey: "item:plumStairs"
+        },
+        ttb: 1800,
+        textureInfo: "planks_plum",
+        harvestType: "wood"
+      }), (0, yY.cc)("Cedar Stairs", {
+        displayName: {
+          translationKey: "item:cedarStairs"
+        },
+        ttb: 1800,
+        textureInfo: "planks_cedar",
+        harvestType: "wood"
+      }), (0, yY.cc)("Aspen Stairs", {
+        displayName: {
+          translationKey: "item:aspenStairs"
+        },
+        ttb: 1800,
+        textureInfo: "planks_aspen",
+        harvestType: "wood"
+      }), (0, yY.cc)("Jungle Stairs", {
+        displayName: {
+          translationKey: "item:jungleStairs"
+        },
+        ttb: 1800,
+        textureInfo: "planks_jungle",
+        harvestType: "wood"
+      }), (0, yY.cc)("Palm Stairs", {
+        displayName: {
+          translationKey: "item:palmStairs"
+        },
+        ttb: 1800,
+        textureInfo: "planks_palm",
+        harvestType: "wood"
+      }), (0, yY.cc)("Pear Stairs", {
+        displayName: {
+          translationKey: "item:pearStairs"
+        },
+        ttb: 1800,
+        textureInfo: "planks_pear",
+        harvestType: "wood"
+      }), (0, yY.cc)("Cherry Stairs", {
+        displayName: {
+          translationKey: "item:cherryStairs"
+        },
+        ttb: 1800,
+        textureInfo: "planks_cherry",
+        harvestType: "wood"
+      }), (0, yY.cc)("Spectral Stairs", {
+        displayName: {
+          translationKey: "item:spectralStairs"
+        },
+        ttb: 1800,
+        textureInfo: "planks_spectral",
+        harvestType: "wood"
+      }), (0, yY.cc)("Mango Stairs", {
+        displayName: {
+          translationKey: "item:mangoStairs"
+        },
+        ttb: 1800,
+        textureInfo: "planks_mango",
+        harvestType: "wood"
+      }), (0, yY.cc)("Messy Stone Stairs", {
+        displayName: {
+          translationKey: "item:messyStoneStairs"
+        },
+        ttb: 1800,
+        textureInfo: "messy_stone",
+        harvestType: "rock"
+      }), (0, yY.cc)("Stone Stairs", {
+        displayName: {
+          translationKey: "item:stoneStairs"
+        },
+        ttb: 1800,
+        textureInfo: "stone",
+        harvestType: "rock"
+      }), (0, yY.cc)("Smooth Stone Stairs", {
+        displayName: {
+          translationKey: "item:smoothStoneStairs"
+        },
+        ttb: 1800,
+        textureInfo: "smooth_stone",
+        harvestType: "rock"
+      }), (0, yY.cc)("Engraved Stone Stairs", {
+        displayName: {
+          translationKey: "item:engravedStoneStairs"
+        },
+        ttb: 1800,
+        textureInfo: "stonebrick_carved",
+        harvestType: "rock"
+      }), (0, yY.cc)("Stone Bricks Stairs", {
+        displayName: {
+          translationKey: "item:stoneBricksStairs"
+        },
+        ttb: 1800,
+        textureInfo: "stonebrick",
+        harvestType: "rock"
+      }), (0, yY.cc)("Mossy Stone Stairs", {
+        displayName: {
+          translationKey: "item:mossyStoneStairs"
+        },
+        ttb: 1800,
+        textureInfo: "mossy_cobblestone",
+        harvestType: "rock"
+      }), (0, yY.cc)("Mossy Stone Bricks Stairs", {
+        displayName: {
+          translationKey: "item:mossyStoneBricksStairs"
+        },
+        ttb: 1800,
+        textureInfo: "stonebrick_mossy",
+        harvestType: "rock"
+      }), (0, yY.cc)("Andesite Stairs", {
+        displayName: {
+          translationKey: "item:andesiteStairs"
+        },
+        ttb: 1800,
+        textureInfo: "stone_andesite",
+        harvestType: "rock"
+      }), (0, yY.cc)("Smooth Andesite Stairs", {
+        displayName: {
+          translationKey: "item:smoothAndesiteStairs"
+        },
+        ttb: 1800,
+        textureInfo: "stone_andesite_smooth",
+        harvestType: "rock"
+      }), (0, yY.cc)("Engraved Andesite Stairs", {
+        displayName: {
+          translationKey: "item:engravedAndesiteStairs"
+        },
+        ttb: 1800,
+        textureInfo: "engraved_andesite",
+        harvestType: "rock"
+      }), (0, yY.cc)("Andesite Bricks Stairs", {
+        displayName: {
+          translationKey: "item:andesiteBricksStairs"
+        },
+        ttb: 1800,
+        textureInfo: "andesite_brick",
+        harvestType: "rock"
+      }), (0, yY.cc)("Diorite Stairs", {
+        displayName: {
+          translationKey: "item:dioriteStairs"
+        },
+        ttb: 1800,
+        textureInfo: "stone_diorite",
+        harvestType: "rock"
+      }), (0, yY.cc)("Smooth Diorite Stairs", {
+        displayName: {
+          translationKey: "item:smoothDioriteStairs"
+        },
+        ttb: 1800,
+        textureInfo: "stone_diorite_smooth",
+        harvestType: "rock"
+      }), (0, yY.cc)("Engraved Diorite Stairs", {
+        displayName: {
+          translationKey: "item:engravedDioriteStairs"
+        },
+        ttb: 1800,
+        textureInfo: "engraved_diorite",
+        harvestType: "rock"
+      }), (0, yY.cc)("Diorite Bricks Stairs", {
+        displayName: {
+          translationKey: "item:dioriteBricksStairs"
+        },
+        ttb: 1800,
+        textureInfo: "diorite_brick",
+        harvestType: "rock"
+      }), (0, yY.cc)("Granite Stairs", {
+        displayName: {
+          translationKey: "item:graniteStairs"
+        },
+        ttb: 1800,
+        textureInfo: "stone_granite",
+        harvestType: "rock"
+      }), (0, yY.cc)("Smooth Granite Stairs", {
+        displayName: {
+          translationKey: "item:smoothGraniteStairs"
+        },
+        ttb: 1800,
+        textureInfo: "stone_granite_smooth",
+        harvestType: "rock"
+      }), (0, yY.cc)("Engraved Granite Stairs", {
+        displayName: {
+          translationKey: "item:engravedGraniteStairs"
+        },
+        ttb: 1800,
+        textureInfo: "engraved_granite",
+        harvestType: "rock"
+      }), (0, yY.cc)("Granite Bricks Stairs", {
+        displayName: {
+          translationKey: "item:graniteBricksStairs"
+        },
+        ttb: 1800,
+        textureInfo: "granite_brick",
+        harvestType: "rock"
+      }), (0, yY.cc)("Sandstone Stairs", {
+        displayName: {
+          translationKey: "item:sandstoneStairs"
+        },
+        ttb: 960,
+        textureInfo: "sandstone_normal",
+        harvestType: "rock"
+      }), (0, yY.cc)("Smooth Sandstone Stairs", {
+        displayName: {
+          translationKey: "item:smoothSandstoneStairs"
+        },
+        ttb: 960,
+        textureInfo: "sandstone_top",
+        harvestType: "rock"
+      }), (0, yY.cc)("Engraved Sandstone Stairs", {
+        displayName: {
+          translationKey: "item:engravedSandstoneStairs"
+        },
+        ttb: 960,
+        textureInfo: "chiseled_sandstone",
+        harvestType: "rock"
+      }), (0, yY.cc)("Marked Sandstone Stairs", {
+        displayName: {
+          translationKey: "item:markedSandstoneStairs"
+        },
+        ttb: 960,
+        textureInfo: "cut_sandstone",
+        harvestType: "rock"
+      }), (0, yY.cc)("Sandstone Bricks Stairs", {
+        displayName: {
+          translationKey: "item:sandstoneBricksStairs"
+        },
+        ttb: 960,
+        textureInfo: "sandstone_brick",
+        harvestType: "rock"
+      }), (0, yY.cc)("Red Sandstone Stairs", {
+        displayName: {
+          translationKey: "item:redSandstoneStairs"
+        },
+        ttb: 960,
+        textureInfo: "red_sandstone",
+        harvestType: "rock"
+      }), (0, yY.cc)("Smooth Red Sandstone Stairs", {
+        displayName: {
+          translationKey: "item:smoothRedSandstoneStairs"
+        },
+        ttb: 960,
+        textureInfo: "red_sandstone_top",
+        harvestType: "rock"
+      }), (0, yY.cc)("Engraved Red Sandstone Stairs", {
+        displayName: {
+          translationKey: "item:engravedRedSandstoneStairs"
+        },
+        ttb: 960,
+        textureInfo: "chiseled_red_sandstone",
+        harvestType: "rock"
+      }), (0, yY.cc)("Marked Red Sandstone Stairs", {
+        displayName: {
+          translationKey: "item:markedRedSandstoneStairs"
+        },
+        ttb: 960,
+        textureInfo: "cut_red_sandstone",
+        harvestType: "rock"
+      }), (0, yY.cc)("Red Sandstone Bricks Stairs", {
+        displayName: {
+          translationKey: "item:redSandstoneBricksStairs"
+        },
+        ttb: 960,
+        textureInfo: "red_sandstone_brick",
+        harvestType: "rock"
+      }), (0, yY.cc)("Bricks Stairs", {
+        displayName: {
+          translationKey: "item:bricksStairs"
+        },
+        ttb: 2400,
+        textureInfo: "brick",
+        harvestType: "rock"
+      }), (0, yY.cc)("Ice Bricks Stairs", {
+        displayName: {
+          translationKey: "item:iceBricksStairs"
+        },
+        ttb: 1800,
+        textureInfo: "ice_brick",
+        harvestType: "rock",
+        harvestLevel: 0,
+        stoodOnSpeedMultiplier: 1.4
+      }), ...(0, yY.p)("Concrete", (YY => ({
+        displayName: {
+          translationKey: `item:${(0,aY.te)(YY)}ConcreteStairs`
+        },
+        ttb: 2160,
+        textureInfo: `${(0,aY.xe)(YY)}_concrete`,
+        harvestType: "rock"
+      }))), ...(0, yY.p)("Chalk", (YY => {
+        const rY = {
+          colour: `$t(colour:${(0,aY.xe)(YY)})`
+        };
+        return {
+          displayName: {
+            translationKey: "item:colouredChalkStairs",
+            params: rY
+          },
+          description: {
+            translationKey: "item:colouredChalkStairsDescription",
+            params: rY
+          },
+          ttb: 850,
+          textureInfo: `chalk_${(0,aY.xe)(YY)}`,
+          harvestType: "rock"
+        }
+      })), ...(0, yY.p)("Chalk Bricks", (YY => {
+        const rY = {
+          colour: `$t(colour:${(0,aY.xe)(YY)})`
+        };
+        return {
+          displayName: {
+            translationKey: "item:colouredChalkBricksStairs",
+            params: rY
+          },
+          description: {
+            translationKey: "item:colouredChalkBricksStairsDescription",
+            params: rY
+          },
+          ttb: 850,
+          textureInfo: `chalk_bricks_${(0,aY.xe)(YY)}`,
+          harvestType: "rock"
+        }
+      }))],
+      TY = {
+        displayName: {
+          translationKey: "item:chest"
+        },
+        ttb: 3e3,
+        harvestType: "wood"
+      },
+      eY = {
+        Unloaded: {
+          ttb: 100,
+          textureInfo: "unloaded",
+          harvestType: "granule"
+        },
+        Dirt: {
+          displayName: {
+            translationKey: "item:dirt"
+          },
+          ttb: 600,
+          textureInfo: "dirt",
+          harvestType: "granule"
+        },
+        "Messy Dirt": {
+          displayName: {
+            translationKey: "item:messyDirt"
+          },
+          ttb: 600,
+          textureInfo: "coarse_dirt",
+          harvestType: "granule"
+        },
+        "Grass Block": {
+          displayName: {
+            translationKey: "item:grassBlock"
+          },
+          ttb: 720,
+          textureInfo: ["grass_block_side", "grass_top", "dirt"],
+          texturePerSide: [0, 0, 1, 2, 0, 0],
+          harvestType: "granule",
+          soundType: {
+            break: "grass",
+            place: "grass"
+          }
+        },
+        Sand: {
+          displayName: {
+            translationKey: "item:sand"
+          },
+          ttb: 600,
+          textureInfo: "sand",
+          harvestType: "granule",
+          soundType: {
+            break: "sand",
+            place: "sand"
+          }
+        },
+        Clay: {
+          displayName: {
+            translationKey: "item:clay"
+          },
+          ttb: 720,
+          textureInfo: "clay",
+          harvestType: "granule"
+        },
+        Gravel: {
+          displayName: {
+            translationKey: "item:gravel"
+          },
+          ttb: 720,
+          textureInfo: "gravel",
+          harvestType: "granule"
+        },
+        Snow: {
+          displayName: {
+            translationKey: "item:snow"
+          },
+          ttb: 600,
+          textureInfo: "snow",
+          harvestType: "granule",
+          soundType: {
+            break: "snow",
+            place: "snow"
+          }
+        },
+        "Maple Log": {
+          displayName: {
+            translationKey: "item:mapleLog"
+          },
+          ttb: 2400,
+          textureInfo: "log_maple",
+          harvestType: "wood"
+        },
+        "Pine Log": {
+          displayName: {
+            translationKey: "item:pineLog"
+          },
+          ttb: 2400,
+          textureInfo: "log_pine",
+          harvestType: "wood"
+        },
+        "Plum Log": {
+          displayName: {
+            translationKey: "item:plumLog"
+          },
+          ttb: 2400,
+          textureInfo: "log_plum",
+          harvestType: "wood"
+        },
+        "Cedar Log": {
+          displayName: {
+            translationKey: "item:cedarLog"
+          },
+          ttb: 2400,
+          textureInfo: "log_cedar",
+          harvestType: "wood"
+        },
+        "Aspen Log": {
+          displayName: {
+            translationKey: "item:aspenLog"
+          },
+          ttb: 2400,
+          textureInfo: "log_aspen",
+          harvestType: "wood"
+        },
+        "Jungle Log": {
+          displayName: {
+            translationKey: "item:jungleLog"
+          },
+          ttb: 2400,
+          textureInfo: "log_jungle",
+          harvestType: "wood"
+        },
+        "Maple Wood Planks": {
+          displayName: {
+            translationKey: "item:mapleWoodPlanks"
+          },
+          ttb: 1800,
+          textureInfo: "planks_maple",
+          harvestType: "wood"
+        },
+        "Aspen Wood Planks": {
+          displayName: {
+            translationKey: "item:aspenWoodPlanks"
+          },
+          ttb: 1800,
+          textureInfo: "planks_aspen",
+          harvestType: "wood"
+        },
+        "Plum Wood Planks": {
+          displayName: {
+            translationKey: "item:plumWoodPlanks"
+          },
+          ttb: 1800,
+          textureInfo: "planks_plum",
+          harvestType: "wood"
+        },
+        "Jungle Wood Planks": {
+          displayName: {
+            translationKey: "item:jungleWoodPlanks"
+          },
+          ttb: 1800,
+          textureInfo: "planks_jungle",
+          harvestType: "wood"
+        },
+        "Pine Wood Planks": {
+          displayName: {
+            translationKey: "item:pineWoodPlanks"
+          },
+          ttb: 1800,
+          textureInfo: "planks_pine",
+          harvestType: "wood"
+        },
+        "Cedar Wood Planks": {
+          displayName: {
+            translationKey: "item:cedarWoodPlanks"
+          },
+          ttb: 1800,
+          textureInfo: "planks_cedar",
+          harvestType: "wood"
+        },
+        "Barkless Maple Log": {
+          displayName: {
+            translationKey: "item:barklessMapleLog"
+          },
+          ttb: 2e3,
+          textureInfo: "stripped_maple_log",
+          harvestType: "wood"
+        },
+        "Barkless Aspen Log": {
+          displayName: {
+            translationKey: "item:barklessAspenLog"
+          },
+          ttb: 2e3,
+          textureInfo: "stripped_aspen_log",
+          harvestType: "wood"
+        },
+        "Barkless Plum Log": {
+          displayName: {
+            translationKey: "item:barklessPlumLog"
+          },
+          ttb: 2e3,
+          textureInfo: "stripped_plum_log",
+          harvestType: "wood"
+        },
+        "Barkless Jungle Log": {
+          displayName: {
+            translationKey: "item:barklessJungleLog"
+          },
+          ttb: 2e3,
+          textureInfo: "stripped_jungle_log",
+          harvestType: "wood"
+        },
+        "Barkless Pine Log": {
+          displayName: {
+            translationKey: "item:barklessPineLog"
+          },
+          ttb: 2e3,
+          textureInfo: "stripped_pine_log",
+          harvestType: "wood"
+        },
+        "Barkless Cedar Log": {
+          displayName: {
+            translationKey: "item:barklessCedarLog"
+          },
+          ttb: 2e3,
+          textureInfo: "stripped_cedar_log",
+          harvestType: "wood"
+        },
+        free_placeholder2: {
+          ttb: 1800,
+          textureInfo: "messy_stone",
+          harvestType: "rock"
+        },
+        Stone: {
+          displayName: {
+            translationKey: "item:stone"
+          },
+          ttb: 1800,
+          textureInfo: "stone",
+          harvestType: "rock",
+          drops: "Messy Stone",
+          specialToolDrop: {
+            tool: "Moonstone Pickaxe",
+            drops: "Stone"
+          }
+        },
+        "Messy Stone": {
+          displayName: {
+            translationKey: "item:messyStone"
+          },
+          ttb: 1800,
+          textureInfo: "messy_stone",
+          harvestType: "rock"
+        },
+        free_placeholder: {
+          ttb: 1800,
+          textureInfo: "messy_stone",
+          harvestType: "rock"
+        },
+        "Smooth Stone": {
+          displayName: {
+            translationKey: "item:smoothStone"
+          },
+          ttb: 1800,
+          textureInfo: "smooth_stone",
+          harvestType: "rock"
+        },
+        Diorite: {
+          displayName: {
+            translationKey: "item:diorite"
+          },
+          ttb: 1800,
+          textureInfo: "stone_diorite",
+          harvestType: "rock"
+        },
+        "Smooth Diorite": {
+          displayName: {
+            translationKey: "item:smoothDiorite"
+          },
+          ttb: 1800,
+          textureInfo: "stone_diorite_smooth",
+          harvestType: "rock"
+        },
+        Andesite: {
+          displayName: {
+            translationKey: "item:andesite"
+          },
+          ttb: 1800,
+          textureInfo: "stone_andesite",
+          harvestType: "rock"
+        },
+        "Smooth Andesite": {
+          displayName: {
+            translationKey: "item:smoothAndesite"
+          },
+          ttb: 1800,
+          textureInfo: "stone_andesite_smooth",
+          harvestType: "rock"
+        },
+        Granite: {
+          displayName: {
+            translationKey: "item:granite"
+          },
+          ttb: 1800,
+          textureInfo: "stone_granite",
+          harvestType: "rock"
+        },
+        "Smooth Granite": {
+          displayName: {
+            translationKey: "item:smoothGranite"
+          },
+          ttb: 1800,
+          textureInfo: "stone_granite_smooth",
+          harvestType: "rock"
+        },
+        Sandstone: {
+          displayName: {
+            translationKey: "item:sandstone"
+          },
+          ttb: 960,
+          textureInfo: "sandstone_normal",
+          harvestType: "rock"
+        },
+        Yellowstone: {
+          displayName: {
+            translationKey: "item:yellowstone"
+          },
+          ttb: 3600,
+          textureInfo: "end_stone",
+          harvestType: "rock"
+        },
+        "Coal Ore": {
+          displayName: {
+            translationKey: "item:coalOre"
+          },
+          ttb: 3e3,
+          textureInfo: "coal_ore",
+          harvestType: "rock",
+          drops: "Coal",
+          specialToolDrop: {
+            tool: "Moonstone Pickaxe",
+            drops: "Coal Ore"
+          },
+          specialToolBonusDrops: {
+            "Golem Pickaxe": vY.l
+          },
+          description: {
+            translationKey: "item:coalOreDescription"
+          },
+          onMinedAura: 5
+        },
+        "Iron Ore": {
+          displayName: {
+            translationKey: "item:ironOre"
+          },
+          ttb: 3600,
+          textureInfo: "iron_ore",
+          harvestType: "rock",
+          drops: "Raw Iron",
+          specialToolDrop: {
+            tool: "Moonstone Pickaxe",
+            drops: "Iron Ore"
+          },
+          specialToolBonusDrops: {
+            "Golem Pickaxe": vY.l
+          },
+          harvestLevel: 2,
+          onMinedAura: 15
+        },
+        "Gold Ore": {
+          displayName: {
+            translationKey: "item:goldOre"
+          },
+          ttb: 4200,
+          textureInfo: "gold_ore",
+          harvestType: "rock",
+          drops: "Raw Gold",
+          specialToolDrop: {
+            tool: "Moonstone Pickaxe",
+            drops: "Gold Ore"
+          },
+          specialToolBonusDrops: {
+            "Golem Pickaxe": vY.l
+          },
+          harvestLevel: 3,
+          onMinedAura: 30,
+          My: [4, 4, 0]
+        },
+        "Lapis Lazuli Ore": {
+          displayName: {
+            translationKey: "item:lapisLazuliOre"
+          },
+          ttb: 4200,
+          textureInfo: "lapis_ore",
+          harvestType: "rock",
+          harvestLevel: 3,
+          My: [0, 0, 2]
+        },
+        "Emerald Ore": {
+          displayName: {
+            translationKey: "item:emeraldOre"
+          },
+          ttb: 4500,
+          textureInfo: "emerald_ore",
+          harvestType: "rock",
+          harvestLevel: 3,
+          My: [1, 3, 1]
+        },
+        "Diamond Ore": {
+          displayName: {
+            translationKey: "item:diamondOre"
+          },
+          ttb: 5e3,
+          textureInfo: "diamond_ore",
+          harvestType: "rock",
+          harvestLevel: 3,
+          drops: "Diamond",
+          specialToolDrop: {
+            tool: "Moonstone Pickaxe",
+            drops: "Diamond Ore"
+          },
+          specialToolBonusDrops: {
+            "Golem Pickaxe": vY.l
+          },
+          description: {
+            translationKey: "item:diamondOreDescription"
+          },
+          onMinedAura: 40,
+          My: [2, 5, 5]
+        },
+        "Block of Coal": {
+          displayName: {
+            translationKey: "item:blockOfCoal"
+          },
+          ttb: 4500,
+          textureInfo: "coal_block",
+          harvestType: "rock"
+        },
+        "Block of Iron": {
+          displayName: {
+            translationKey: "item:blockOfIron"
+          },
+          ttb: 5400,
+          textureInfo: "iron_block",
+          harvestType: "rock"
+        },
+        "Block of Gold": {
+          displayName: {
+            translationKey: "item:blockOfGold"
+          },
+          ttb: 6300,
+          textureInfo: "gold_block",
+          harvestType: "rock"
+        },
+        "Block of Lapis Lazuli": {
+          displayName: {
+            translationKey: "item:blockOfLapisLazuli"
+          },
+          ttb: 6300,
+          textureInfo: "lapis_block",
+          harvestType: "rock"
+        },
+        "Block of Emerald": {
+          displayName: {
+            translationKey: "item:blockOfEmerald"
+          },
+          ttb: 6750,
+          textureInfo: "emerald_block",
+          harvestType: "rock"
+        },
+        "White Wool": {
+          displayName: {
+            translationKey: "item:whiteWool"
+          },
+          ttb: 960,
+          textureInfo: "wool_colored_white",
+          harvestType: "cuttable",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        },
+        "Orange Wool": {
+          displayName: {
+            translationKey: "item:orangeWool"
+          },
+          ttb: 960,
+          textureInfo: "wool_colored_orange",
+          harvestType: "cuttable",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        },
+        "Magenta Wool": {
+          displayName: {
+            translationKey: "item:magentaWool"
+          },
+          ttb: 960,
+          textureInfo: "wool_colored_magenta",
+          harvestType: "cuttable",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        },
+        "Light Blue Wool": {
+          displayName: {
+            translationKey: "item:lightBlueWool"
+          },
+          ttb: 960,
+          textureInfo: "wool_colored_light_blue",
+          harvestType: "cuttable",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        },
+        "Yellow Wool": {
+          displayName: {
+            translationKey: "item:yellowWool"
+          },
+          ttb: 960,
+          textureInfo: "wool_colored_yellow",
+          harvestType: "cuttable",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        },
+        "Lime Wool": {
+          displayName: {
+            translationKey: "item:limeWool"
+          },
+          ttb: 960,
+          textureInfo: "wool_colored_lime",
+          harvestType: "cuttable",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        },
+        "Pink Wool": {
+          displayName: {
+            translationKey: "item:pinkWool"
+          },
+          ttb: 960,
+          textureInfo: "wool_colored_pink",
+          harvestType: "cuttable",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        },
+        "Gray Wool": {
+          displayName: {
+            translationKey: "item:grayWool"
+          },
+          ttb: 960,
+          textureInfo: "wool_colored_gray",
+          harvestType: "cuttable",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        },
+        "Light Gray Wool": {
+          displayName: {
+            translationKey: "item:lightGrayWool"
+          },
+          ttb: 960,
+          textureInfo: "wool_colored_light_grey",
+          harvestType: "cuttable",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        },
+        "Cyan Wool": {
+          displayName: {
+            translationKey: "item:cyanWool"
+          },
+          ttb: 960,
+          textureInfo: "wool_colored_cyan",
+          harvestType: "cuttable",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        },
+        "Purple Wool": {
+          displayName: {
+            translationKey: "item:purpleWool"
+          },
+          ttb: 960,
+          textureInfo: "wool_colored_purple",
+          harvestType: "cuttable",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        },
+        "Blue Wool": {
+          displayName: {
+            translationKey: "item:blueWool"
+          },
+          ttb: 960,
+          textureInfo: "wool_colored_blue",
+          harvestType: "cuttable",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        },
+        "Brown Wool": {
+          displayName: {
+            translationKey: "item:brownWool"
+          },
+          ttb: 960,
+          textureInfo: "wool_colored_brown",
+          harvestType: "cuttable",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        },
+        "Green Wool": {
+          displayName: {
+            translationKey: "item:greenWool"
+          },
+          ttb: 960,
+          textureInfo: "wool_colored_green",
+          harvestType: "cuttable",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        },
+        "Red Wool": {
+          displayName: {
+            translationKey: "item:redWool"
+          },
+          ttb: 960,
+          textureInfo: "wool_colored_red",
+          harvestType: "cuttable",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        },
+        "Black Wool": {
+          displayName: {
+            translationKey: "item:blackWool"
+          },
+          ttb: 960,
+          textureInfo: "wool_colored_black",
+          harvestType: "cuttable",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        },
+        "Baked Clay": {
+          displayName: {
+            translationKey: "item:bakedClay"
+          },
+          ttb: 1500,
+          textureInfo: "hardened_clay",
+          harvestType: "rock"
+        },
+        "White Baked Clay": {
+          displayName: {
+            translationKey: "item:whiteBakedClay"
+          },
+          ttb: 1500,
+          textureInfo: "hardened_clay_stained_white",
+          harvestType: "rock"
+        },
+        "Orange Baked Clay": {
+          displayName: {
+            translationKey: "item:orangeBakedClay"
+          },
+          ttb: 1500,
+          textureInfo: "hardened_clay_stained_orange",
+          harvestType: "rock"
+        },
+        "Magenta Baked Clay": {
+          displayName: {
+            translationKey: "item:magentaBakedClay"
+          },
+          ttb: 1500,
+          textureInfo: "hardened_clay_stained_magenta",
+          harvestType: "rock"
+        },
+        "Light Blue Baked Clay": {
+          displayName: {
+            translationKey: "item:lightBlueBakedClay"
+          },
+          ttb: 1500,
+          textureInfo: "hardened_clay_stained_light_blue",
+          harvestType: "rock"
+        },
+        "Yellow Baked Clay": {
+          displayName: {
+            translationKey: "item:yellowBakedClay"
+          },
+          ttb: 1500,
+          textureInfo: "hardened_clay_stained_yellow",
+          harvestType: "rock"
+        },
+        "Lime Baked Clay": {
+          displayName: {
+            translationKey: "item:limeBakedClay"
+          },
+          ttb: 1500,
+          textureInfo: "hardened_clay_stained_lime",
+          harvestType: "rock"
+        },
+        "Pink Baked Clay": {
+          displayName: {
+            translationKey: "item:pinkBakedClay"
+          },
+          ttb: 1500,
+          textureInfo: "hardened_clay_stained_pink",
+          harvestType: "rock"
+        },
+        "Gray Baked Clay": {
+          displayName: {
+            translationKey: "item:grayBakedClay"
+          },
+          ttb: 1500,
+          textureInfo: "hardened_clay_stained_gray",
+          harvestType: "rock"
+        },
+        "Light Gray Baked Clay": {
+          displayName: {
+            translationKey: "item:lightGrayBakedClay"
+          },
+          ttb: 1500,
+          textureInfo: "hardened_clay_stained_silver",
+          harvestType: "rock"
+        },
+        "Cyan Baked Clay": {
+          displayName: {
+            translationKey: "item:cyanBakedClay"
+          },
+          ttb: 1500,
+          textureInfo: "hardened_clay_stained_cyan",
+          harvestType: "rock"
+        },
+        "Purple Baked Clay": {
+          displayName: {
+            translationKey: "item:purpleBakedClay"
+          },
+          ttb: 1500,
+          textureInfo: "hardened_clay_stained_purple",
+          harvestType: "rock"
+        },
+        "Blue Baked Clay": {
+          displayName: {
+            translationKey: "item:blueBakedClay"
+          },
+          ttb: 1500,
+          textureInfo: "hardened_clay_stained_blue",
+          harvestType: "rock"
+        },
+        "Brown Baked Clay": {
+          displayName: {
+            translationKey: "item:brownBakedClay"
+          },
+          ttb: 1500,
+          textureInfo: "hardened_clay_stained_brown",
+          harvestType: "rock"
+        },
+        "Green Baked Clay": {
+          displayName: {
+            translationKey: "item:greenBakedClay"
+          },
+          ttb: 1500,
+          textureInfo: "hardened_clay_stained_green",
+          harvestType: "rock"
+        },
+        "Red Baked Clay": {
+          displayName: {
+            translationKey: "item:redBakedClay"
+          },
+          ttb: 1500,
+          textureInfo: "hardened_clay_stained_red",
+          harvestType: "rock"
+        },
+        "Black Baked Clay": {
+          displayName: {
+            translationKey: "item:blackBakedClay"
+          },
+          ttb: 1500,
+          textureInfo: "hardened_clay_stained_black",
+          harvestType: "rock"
+        },
+        "Gray Concrete": {
+          displayName: {
+            translationKey: "item:grayConcrete"
+          },
+          ttb: 2160,
+          textureInfo: "gray_concrete",
+          harvestType: "rock"
+        },
+        "Light Gray Concrete": {
+          displayName: {
+            translationKey: "item:lightGrayConcrete"
+          },
+          ttb: 2160,
+          textureInfo: "light_gray_concrete",
+          harvestType: "rock"
+        },
+        "Black Concrete": {
+          displayName: {
+            translationKey: "item:blackConcrete"
+          },
+          ttb: 2160,
+          textureInfo: "black_concrete",
+          harvestType: "rock"
+        },
+        "Blue Concrete": {
+          displayName: {
+            translationKey: "item:blueConcrete"
+          },
+          ttb: 2160,
+          textureInfo: "blue_concrete",
+          harvestType: "rock"
+        },
+        "Brown Concrete": {
+          displayName: {
+            translationKey: "item:brownConcrete"
+          },
+          ttb: 2160,
+          textureInfo: "brown_concrete",
+          harvestType: "rock"
+        },
+        "Cyan Concrete": {
+          displayName: {
+            translationKey: "item:cyanConcrete"
+          },
+          ttb: 2160,
+          textureInfo: "cyan_concrete",
+          harvestType: "rock"
+        },
+        "Light Blue Concrete": {
+          displayName: {
+            translationKey: "item:lightBlueConcrete"
+          },
+          ttb: 2160,
+          textureInfo: "light_blue_concrete",
+          harvestType: "rock"
+        },
+        "Lime Concrete": {
+          displayName: {
+            translationKey: "item:limeConcrete"
+          },
+          ttb: 2160,
+          textureInfo: "lime_concrete",
+          harvestType: "rock"
+        },
+        "Magenta Concrete": {
+          displayName: {
+            translationKey: "item:magentaConcrete"
+          },
+          ttb: 2160,
+          textureInfo: "magenta_concrete",
+          harvestType: "rock"
+        },
+        "Orange Concrete": {
+          displayName: {
+            translationKey: "item:orangeConcrete"
+          },
+          ttb: 2160,
+          textureInfo: "orange_concrete",
+          harvestType: "rock"
+        },
+        "Pink Concrete": {
+          displayName: {
+            translationKey: "item:pinkConcrete"
+          },
+          ttb: 2160,
+          textureInfo: "pink_concrete",
+          harvestType: "rock"
+        },
+        "Purple Concrete": {
+          displayName: {
+            translationKey: "item:purpleConcrete"
+          },
+          ttb: 2160,
+          textureInfo: "purple_concrete",
+          harvestType: "rock"
+        },
+        "Red Concrete": {
+          displayName: {
+            translationKey: "item:redConcrete"
+          },
+          ttb: 2160,
+          textureInfo: "red_concrete",
+          harvestType: "rock"
+        },
+        "White Concrete": {
+          displayName: {
+            translationKey: "item:whiteConcrete"
+          },
+          ttb: 2160,
+          textureInfo: "white_concrete",
+          harvestType: "rock"
+        },
+        "Green Concrete": {
+          displayName: {
+            translationKey: "item:greenConcrete"
+          },
+          ttb: 2160,
+          textureInfo: "green_concrete",
+          harvestType: "rock"
+        },
+        "Yellow Concrete": {
+          displayName: {
+            translationKey: "item:yellowConcrete"
+          },
+          ttb: 2160,
+          textureInfo: "yellow_concrete",
+          harvestType: "rock"
+        },
+        "Pine Leaves": {
+          displayName: {
+            translationKey: "item:pineLeaves"
+          },
+          ttb: 350,
+          textureInfo: "leaves_pine",
+          harvestType: "cuttable"
+        },
+        "Aspen Leaves": {
+          displayName: {
+            translationKey: "item:aspenLeaves"
+          },
+          ttb: 350,
+          textureInfo: "leaves_aspen",
+          harvestType: "cuttable"
+        },
+        "Maple Leaves": {
+          displayName: {
+            translationKey: "item:mapleLeaves"
+          },
+          ttb: 350,
+          textureInfo: "leaves_maple",
+          harvestType: "cuttable"
+        },
+        "Jungle Leaves": {
+          displayName: {
+            translationKey: "item:jungleLeaves"
+          },
+          ttb: 350,
+          textureInfo: "leaves_jungle",
+          harvestType: "cuttable"
+        },
+        Pumpkin_placeholder: {
+          ttb: 1200,
+          textureInfo: "pumpkin_face_on",
+          harvestType: "wood",
+          My: [14, 10, 4]
+        },
+        Watermelon: {
+          displayName: {
+            translationKey: "item:watermelon"
+          },
+          ttb: 1200,
+          textureInfo: ["watermelon_side", "watermelon_top"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          harvestType: "wood"
+        },
+        Glass: {
+          displayName: {
+            translationKey: "item:glass"
+          },
+          ttb: 450,
+          textureInfo: "glass",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Black Glass": {
+          displayName: {
+            translationKey: "item:blackGlass"
+          },
+          ttb: 450,
+          textureInfo: "glass_black",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Blue Glass": {
+          displayName: {
+            translationKey: "item:blueGlass"
+          },
+          ttb: 450,
+          textureInfo: "glass_blue",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Brown Glass": {
+          displayName: {
+            translationKey: "item:brownGlass"
+          },
+          ttb: 450,
+          textureInfo: "glass_brown",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Cyan Glass": {
+          displayName: {
+            translationKey: "item:cyanGlass"
+          },
+          ttb: 450,
+          textureInfo: "glass_cyan",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Gray Glass": {
+          displayName: {
+            translationKey: "item:grayGlass"
+          },
+          ttb: 450,
+          textureInfo: "glass_gray",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Light Gray Glass": {
+          displayName: {
+            translationKey: "item:lightGrayGlass"
+          },
+          ttb: 450,
+          textureInfo: "glass_light_gray",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Green Glass": {
+          displayName: {
+            translationKey: "item:greenGlass"
+          },
+          ttb: 450,
+          textureInfo: "glass_green",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Light Blue Glass": {
+          displayName: {
+            translationKey: "item:lightBlueGlass"
+          },
+          ttb: 450,
+          textureInfo: "glass_light_blue",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Lime Glass": {
+          displayName: {
+            translationKey: "item:limeGlass"
+          },
+          ttb: 450,
+          textureInfo: "glass_lime",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Magenta Glass": {
+          displayName: {
+            translationKey: "item:magentaGlass"
+          },
+          ttb: 450,
+          textureInfo: "glass_magenta",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Orange Glass": {
+          displayName: {
+            translationKey: "item:orangeGlass"
+          },
+          ttb: 450,
+          textureInfo: "glass_orange",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Pink Glass": {
+          displayName: {
+            translationKey: "item:pinkGlass"
+          },
+          ttb: 450,
+          textureInfo: "glass_pink",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Purple Glass": {
+          displayName: {
+            translationKey: "item:purpleGlass"
+          },
+          ttb: 450,
+          textureInfo: "glass_purple",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Red Glass": {
+          displayName: {
+            translationKey: "item:redGlass"
+          },
+          ttb: 450,
+          textureInfo: "glass_red",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "White Glass": {
+          displayName: {
+            translationKey: "item:whiteGlass"
+          },
+          ttb: 450,
+          textureInfo: "glass_white",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Yellow Glass": {
+          displayName: {
+            translationKey: "item:yellowGlass"
+          },
+          ttb: 450,
+          textureInfo: "glass_yellow",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "UNUSED BLOCK TYPE": {
+          ttb: 450,
+          textureInfo: "glass_silver",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Dim Lamp On": {
+          ttb: 450,
+          textureInfo: "redstone_lamp_on",
+          harvestType: "rock",
+          My: [14, 14, 14]
+        },
+        "Dim Lamp Off": {
+          ttb: 450,
+          textureInfo: "redstone_lamp_off",
+          harvestType: "rock"
+        },
+        Water: {
+          displayName: {
+            translationKey: "item:water"
+          },
+          textureInfo: [.5, .5, .8, .9],
+          ui: !0,
+          drops: null,
+          harvestType: "rock"
+        },
+        "Invisible Solid": {
+          ttb: 3e3,
+          textureInfo: "invisible_solid",
+          transTex: !0,
+          harvestType: "rock"
+        },
+        Bricks: {
+          displayName: {
+            translationKey: "item:bricks"
+          },
+          ttb: 2400,
+          textureInfo: "brick",
+          harvestType: "rock"
+        },
+        "Stone Bricks": {
+          displayName: {
+            translationKey: "item:stoneBricks"
+          },
+          ttb: 1800,
+          textureInfo: "stonebrick",
+          harvestType: "rock"
+        },
+        "Dark Red Brick": {
+          displayName: {
+            translationKey: "item:darkRedBrick"
+          },
+          ttb: 2400,
+          textureInfo: "nether_brick",
+          harvestType: "rock"
+        },
+        "Dark Red Stone": {
+          displayName: {
+            translationKey: "item:darkRedStone"
+          },
+          ttb: 1200,
+          textureInfo: "netherrack",
+          harvestType: "rock"
+        },
+        "Block of Quartz": {
+          displayName: {
+            translationKey: "item:blockOfQuartz"
+          },
+          ttb: 960,
+          textureInfo: "quartz_block_side",
+          harvestType: "rock"
+        },
+        "Chiseled Block of Quartz": {
+          displayName: {
+            translationKey: "item:chiseledBlockOfQuartz"
+          },
+          ttb: 960,
+          textureInfo: "quartz_block_chiseled",
+          harvestType: "rock"
+        },
+        "Engraved Stone": {
+          displayName: {
+            translationKey: "item:engravedStone"
+          },
+          ttb: 1800,
+          textureInfo: "stonebrick_carved",
+          harvestType: "rock"
+        },
+        "Mossy Stone Bricks": {
+          displayName: {
+            translationKey: "item:mossyStoneBricks"
+          },
+          ttb: 1800,
+          textureInfo: "stonebrick_mossy",
+          harvestType: "rock"
+        },
+        "Cracked Stone Bricks": {
+          displayName: {
+            translationKey: "item:crackedStoneBricks"
+          },
+          ttb: 1800,
+          textureInfo: "stonebrick_cracked",
+          harvestType: "rock"
+        },
+        "Smooth Sandstone": {
+          displayName: {
+            translationKey: "item:smoothSandstone"
+          },
+          ttb: 960,
+          textureInfo: "sandstone_top",
+          harvestType: "rock"
+        },
+        "Engraved Sandstone": {
+          displayName: {
+            translationKey: "item:engravedSandstone"
+          },
+          ttb: 960,
+          textureInfo: "chiseled_sandstone",
+          harvestType: "rock"
+        },
+        Ice: {
+          displayName: {
+            translationKey: "item:ice"
+          },
+          ttb: 1200,
+          textureInfo: "ice",
+          harvestType: "rock",
+          harvestLevel: 0,
+          stoodOnSpeedMultiplier: 1.4
+        },
+        Obsidian: {
+          displayName: {
+            translationKey: "item:obsidian"
+          },
+          ttb: 4e4,
+          textureInfo: "obsidian",
+          harvestType: "rock",
+          harvestLevel: 5
+        },
+        "Hay Bale": {
+          displayName: {
+            translationKey: "item:hayBale"
+          },
+          ttb: 600,
+          textureInfo: "hay_block_side",
+          harvestType: "cuttable"
+        },
+        Sponge: {
+          displayName: {
+            translationKey: "item:sponge"
+          },
+          ttb: 720,
+          textureInfo: "sponge",
+          harvestType: "granule"
+        },
+        Beacon: {
+          displayName: {
+            translationKey: "item:beacon"
+          },
+          ttb: 3600,
+          textureInfo: "beacon",
+          harvestType: "rock",
+          My: [5, 14, 14]
+        },
+        temp: {
+          ttb: 1e3,
+          harvestType: "rock"
+        },
+        "Golden Decoration": {
+          displayName: {
+            translationKey: "item:goldenDecoration"
+          },
+          ttb: 1e3,
+          textureInfo: "glowstone",
+          harvestType: "rock",
+          My: [15, 15, 13]
+        },
+        "Moonstone Explosive": {
+          displayName: {
+            translationKey: "item:moonstoneExplosive"
+          },
+          ttb: 50,
+          textureInfo: ["moonstone_explosive_side", "moonstone_explosive_top"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          harvestType: "cuttable",
+          description: {
+            translationKey: "item:moonstoneExplosiveDescription"
+          }
+        },
+        Bedrock: {
+          displayName: {
+            translationKey: "item:bedrock"
+          },
+          ttb: 5e11,
+          textureInfo: "bedrock",
+          soundType: {
+            break: "stone",
+            place: "stone"
+          }
+        },
+        "Smooth Double Stone Slab": {
+          displayName: {
+            translationKey: "item:smoothDoubleStoneSlab"
+          },
+          ttb: 2400,
+          textureInfo: "smooth_stone",
+          harvestType: "rock"
+        },
+        Cactus: {
+          displayName: {
+            translationKey: "item:cactus"
+          },
+          ttb: 300,
+          textureInfo: "small_cactus",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable"
+        },
+        Grass: {
+          displayName: {
+            translationKey: "item:grass"
+          },
+          ttb: 1,
+          textureInfo: "tallgrass",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          drops: null,
+          harvestType: "cuttable",
+          specialToolDrop: {
+            tool: "Shears",
+            drops: "Grass"
+          },
+          canBePlacedOver: !0
+        },
+        Dandelion: {
+          displayName: {
+            translationKey: "item:dandelion"
+          },
+          ttb: 300,
+          textureInfo: "dandelion",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "dandelion"
+        },
+        Poppy: {
+          displayName: {
+            translationKey: "item:poppy"
+          },
+          ttb: 300,
+          textureInfo: "poppy",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "poppy"
+        },
+        "Red Tulip": {
+          displayName: {
+            translationKey: "item:redTulip"
+          },
+          ttb: 300,
+          textureInfo: "red_tulip",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "red_tulip"
+        },
+        "Pink Tulip": {
+          displayName: {
+            translationKey: "item:pinkTulip"
+          },
+          ttb: 300,
+          textureInfo: "pink_tulip",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "pink_tulip"
+        },
+        "White Tulip": {
+          displayName: {
+            translationKey: "item:whiteTulip"
+          },
+          ttb: 300,
+          textureInfo: "white_tulip",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "white_tulip"
+        },
+        "Orange Tulip": {
+          displayName: {
+            translationKey: "item:orangeTulip"
+          },
+          ttb: 300,
+          textureInfo: "orange_tulip",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "orange_tulip"
+        },
+        Daisy: {
+          displayName: {
+            translationKey: "item:daisy"
+          },
+          ttb: 300,
+          textureInfo: "oxeye_daisy",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "oxeye_daisy"
+        },
+        Bluebell: {
+          displayName: {
+            translationKey: "item:bluebell"
+          },
+          ttb: 300,
+          textureInfo: "blue_orchid",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "blue_orchid"
+        },
+        "Forget-me-not": {
+          displayName: {
+            translationKey: "item:forget-Me-Not"
+          },
+          ttb: 300,
+          textureInfo: "cornflower",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "cornflower"
+        },
+        Allium: {
+          displayName: {
+            translationKey: "item:allium"
+          },
+          ttb: 300,
+          textureInfo: "allium",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "allium"
+        },
+        "Azure Bluet": {
+          displayName: {
+            translationKey: "item:azureBluet"
+          },
+          ttb: 300,
+          textureInfo: "azure_bluet",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "azure_bluet"
+        },
+        "Lily of the Valley": {
+          displayName: {
+            translationKey: "item:lilyOfTheValley"
+          },
+          ttb: 300,
+          textureInfo: "lily_of_the_valley",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "lily_of_the_valley"
+        },
+        "Shadow Rose": {
+          displayName: {
+            translationKey: "item:shadowRose"
+          },
+          ttb: 300,
+          textureInfo: "shadow_rose",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "shadow_rose"
+        },
+        ...(0, yY.Bb)("Furnace", {
+          displayName: {
+            translationKey: "item:furnace"
+          },
+          ttb: 4200,
+          harvestType: "rock",
+          rootMetaDesc: "Furnace|meta|rot1",
+          description: {
+            translationKey: "item:furnaceDescription"
+          },
+          My: [8, 5, 2],
+          ...VY("Furnace", "furnace")
+        }),
+        ...(0, yY.Bb)("Workbench", {
+          displayName: {
+            translationKey: "item:workbench"
+          },
+          ttb: 3e3,
+          harvestType: "wood",
+          rootMetaDesc: "Workbench|meta|rot1",
+          description: {
+            translationKey: "item:workbenchDescription"
+          },
+          ...VY("Workbench", "workbench")
+        }),
+        "Block of Diamond": {
+          displayName: {
+            translationKey: "item:blockOfDiamond"
+          },
+          ttb: 6750,
+          textureInfo: "diamond_block",
+          harvestType: "rock"
+        },
+        "Maple Door": {
+          displayName: {
+            translationKey: "item:mapleDoor"
+          },
+          ttb: 3600,
+          itemTexture: "maple_door",
+          model: "door",
+          harvestType: "wood",
+          rootMetaDesc: "Maple Door|meta|rot1|closed",
+          particlesIgnoreBlack: !0,
+          blockModel: "Maple Door"
+        },
+        "Maple Door|meta|rot1|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Maple Door|meta|rot2|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Maple Door|meta|rot2|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Maple Door|meta|rot3|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Maple Door|meta|rot3|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Maple Door|meta|rot4|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Maple Door|meta|rot4|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "_Maple Door Top": {
+          ttb: 3600,
+          itemTexture: "maple_door",
+          harvestType: "wood",
+          model: "door",
+          drops: "Maple Door",
+          rootMetaDesc: "_Maple Door Top|meta|rot1|closed",
+          particlesIgnoreBlack: !0,
+          blockModel: "_Maple Door Top"
+        },
+        "_Maple Door Top|meta|rot1|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Maple Door"
+        },
+        "_Maple Door Top|meta|rot2|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Maple Door"
+        },
+        "_Maple Door Top|meta|rot2|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Maple Door"
+        },
+        "_Maple Door Top|meta|rot3|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Maple Door"
+        },
+        "_Maple Door Top|meta|rot3|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Maple Door"
+        },
+        "_Maple Door Top|meta|rot4|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Maple Door"
+        },
+        "_Maple Door Top|meta|rot4|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Maple Door"
+        },
+        "Maple Trapdoor": {
+          displayName: {
+            translationKey: "item:mapleTrapdoor"
+          },
+          ttb: 2800,
+          itemTexture: "maple_trapdoor",
+          model: "trapdoor",
+          harvestType: "wood",
+          rootMetaDesc: "Maple Trapdoor|meta|rot1|closed",
+          blockModel: "Maple Trapdoor",
+          heldItemScale: .5,
+          blockModelItem: !0
+        },
+        "Maple Trapdoor|meta|rot1|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Maple Trapdoor|meta|rot2|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Maple Trapdoor|meta|rot2|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Maple Trapdoor|meta|rot3|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Maple Trapdoor|meta|rot3|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Maple Trapdoor|meta|rot4|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Maple Trapdoor|meta|rot4|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Aspen Sapling": {
+          displayName: {
+            translationKey: "item:aspenSapling"
+          },
+          ttb: 1,
+          textureInfo: "aspen_sapling",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "aspen_sapling"
+        },
+        "Maple Sapling": {
+          displayName: {
+            translationKey: "item:mapleSapling"
+          },
+          ttb: 1,
+          textureInfo: "maple_sapling",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "maple_sapling"
+        },
+        "Jungle Sapling": {
+          displayName: {
+            translationKey: "item:jungleSapling"
+          },
+          ttb: 1,
+          textureInfo: "jungle_sapling",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "jungle_sapling"
+        },
+        "Plum Sapling": {
+          displayName: {
+            translationKey: "item:plumSapling"
+          },
+          ttb: 1,
+          textureInfo: "plum_sapling",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "plum_sapling"
+        },
+        "Pine Sapling": {
+          displayName: {
+            translationKey: "item:pineSapling"
+          },
+          ttb: 1,
+          textureInfo: "pine_sapling",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "pine_sapling"
+        },
+        "Cedar Sapling": {
+          displayName: {
+            translationKey: "item:cedarSapling"
+          },
+          ttb: 1,
+          textureInfo: "cedar_sapling",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "cedar_sapling"
+        },
+        "Maple Log|TreeBase|Maple": {
+          ttb: 2400,
+          textureInfo: "log_maple",
+          harvestType: "wood",
+          drops: "Maple Log"
+        },
+        ...(0, yY.Eb)("Chest", {
+          ...TY,
+          textureInfo: ["chest_front", "chest_side", "chest_top[rot[1", "chest_top[rot[2", "chest_top[rot[3", "chest_top[rot[4", "chest_back"],
+          rootMetaDesc: "Chest|meta|rot1"
+        }, [
+          [1, 1, 2, 2, 0, 6],
+          [0, 6, 3, 3, 1, 1],
+          [1, 1, 4, 4, 6, 0],
+          [6, 0, 5, 5, 1, 1]
+        ]),
+        "Pine Leaves|TreeCanopy": {
+          ttb: 350,
+          textureInfo: "leaves_pine",
+          harvestType: "cuttable",
+          drops: "Pine Leaves"
+        },
+        "Aspen Leaves|TreeCanopy": {
+          ttb: 350,
+          textureInfo: "leaves_aspen",
+          harvestType: "cuttable",
+          drops: "Aspen Leaves"
+        },
+        "Maple Leaves|TreeCanopy": {
+          ttb: 350,
+          textureInfo: "leaves_maple",
+          harvestType: "cuttable",
+          drops: "Maple Leaves"
+        },
+        "Jungle Leaves|TreeCanopy": {
+          ttb: 350,
+          textureInfo: "leaves_jungle",
+          harvestType: "cuttable",
+          drops: "Jungle Leaves"
+        },
+        Protector: {
+          displayName: {
+            translationKey: "item:protector"
+          },
+          ttb: 5e3,
+          textureInfo: "protector",
+          harvestType: "rock",
+          description: {
+            translationKey: "item:protectorDescription"
+          },
+          altActionable: !0
+        },
+        "Fat Cactus": {
+          displayName: {
+            translationKey: "item:fatCactus"
+          },
+          ttb: 400,
+          textureInfo: "cactus_top",
+          harvestType: "cuttable",
+          damage: 22
+        },
+        "Dry Fat Cactus": {
+          displayName: {
+            translationKey: "item:dryFatCactus"
+          },
+          ttb: 400,
+          textureInfo: "cactus_dry",
+          harvestType: "cuttable",
+          damage: 27
+        },
+        ...(0, yY.Bb)("Maple Ladder", {
+          displayName: {
+            translationKey: "item:ladder"
+          },
+          ttb: 1e3,
+          itemTexture: "ladder_maple",
+          model: "rotatableOffset",
+          harvestType: "wood",
+          rootMetaDesc: "Maple Ladder|meta|rot1",
+          solid: !1,
+          blockModel: "Maple Ladder",
+          blockModelItem: !0
+        }),
+        ...(0, yY.Bb)("Vines", {
+          displayName: {
+            translationKey: "item:vines"
+          },
+          ttb: 225,
+          itemTexture: "vine_coloured",
+          harvestType: "cuttable",
+          model: "rotatableOffset",
+          solid: !1,
+          rootMetaDesc: "Vines|meta|rot1",
+          blockModel: "Vines",
+          modelScale: 10,
+          heldItemScale: 10,
+          blockModelItem: !0,
+          particlesIgnoreBlack: !0
+        }),
+        "Dirt|GrassRoots": {
+          ttb: 600,
+          textureInfo: "dirt",
+          harvestType: "granule"
+        },
+        ...(0, yY.Bb)("Iron Ladder", {
+          displayName: {
+            translationKey: "item:ironLadder"
+          },
+          ttb: 1800,
+          itemTexture: "iron_ladder",
+          model: "rotatableOffset",
+          harvestType: "rock",
+          rootMetaDesc: "Iron Ladder|meta|rot1",
+          solid: !1,
+          blockModel: "Iron Ladder",
+          blockModelItem: !0,
+          particlesIgnoreBlack: !0
+        }),
+        "White Planks": {
+          displayName: {
+            translationKey: "item:whitePlanks"
+          },
+          ttb: 1800,
+          textureInfo: "white_planks",
+          harvestType: "wood"
+        },
+        "Orange Planks": {
+          displayName: {
+            translationKey: "item:orangePlanks"
+          },
+          ttb: 1800,
+          textureInfo: "orange_planks",
+          harvestType: "wood"
+        },
+        "Magenta Planks": {
+          displayName: {
+            translationKey: "item:magentaPlanks"
+          },
+          ttb: 1800,
+          textureInfo: "magenta_planks",
+          harvestType: "wood"
+        },
+        "Light Blue Planks": {
+          displayName: {
+            translationKey: "item:lightBluePlanks"
+          },
+          ttb: 1800,
+          textureInfo: "light_blue_planks",
+          harvestType: "wood"
+        },
+        "Yellow Planks": {
+          displayName: {
+            translationKey: "item:yellowPlanks"
+          },
+          ttb: 1800,
+          textureInfo: "yellow_planks",
+          harvestType: "wood"
+        },
+        "Lime Planks": {
+          displayName: {
+            translationKey: "item:limePlanks"
+          },
+          ttb: 1800,
+          textureInfo: "lime_planks",
+          harvestType: "wood"
+        },
+        "Pink Planks": {
+          displayName: {
+            translationKey: "item:pinkPlanks"
+          },
+          ttb: 1800,
+          textureInfo: "pink_planks",
+          harvestType: "wood"
+        },
+        "Gray Planks": {
+          displayName: {
+            translationKey: "item:grayPlanks"
+          },
+          ttb: 1800,
+          textureInfo: "gray_planks",
+          harvestType: "wood"
+        },
+        "Light Gray Planks": {
+          displayName: {
+            translationKey: "item:lightGrayPlanks"
+          },
+          ttb: 1800,
+          textureInfo: "light_gray_planks",
+          harvestType: "wood"
+        },
+        "Cyan Planks": {
+          displayName: {
+            translationKey: "item:cyanPlanks"
+          },
+          ttb: 1800,
+          textureInfo: "cyan_planks",
+          harvestType: "wood"
+        },
+        "Purple Planks": {
+          displayName: {
+            translationKey: "item:purplePlanks"
+          },
+          ttb: 1800,
+          textureInfo: "purple_planks",
+          harvestType: "wood"
+        },
+        "Blue Planks": {
+          displayName: {
+            translationKey: "item:bluePlanks"
+          },
+          ttb: 1800,
+          textureInfo: "blue_planks",
+          harvestType: "wood"
+        },
+        "Brown Planks": {
+          displayName: {
+            translationKey: "item:brownPlanks"
+          },
+          ttb: 1800,
+          textureInfo: "brown_planks",
+          harvestType: "wood"
+        },
+        "Green Planks": {
+          displayName: {
+            translationKey: "item:greenPlanks"
+          },
+          ttb: 1800,
+          textureInfo: "green_planks",
+          harvestType: "wood"
+        },
+        "Red Planks": {
+          displayName: {
+            translationKey: "item:redPlanks"
+          },
+          ttb: 1800,
+          textureInfo: "red_planks",
+          harvestType: "wood"
+        },
+        "Black Planks": {
+          displayName: {
+            translationKey: "item:blackPlanks"
+          },
+          ttb: 1800,
+          textureInfo: "black_planks",
+          harvestType: "wood"
+        },
+        "Artisan Bench": {
+          displayName: {
+            translationKey: "item:artisanBench"
+          },
+          ttb: 3e3,
+          harvestType: "wood",
+          description: {
+            translationKey: "item:artisanBenchDescription"
+          },
+          ...VY("Artisan Bench", "artisan_bench", {
+            rotatable: !1
+          })
+        },
+        "White Ceramic": {
+          displayName: {
+            translationKey: "item:whiteCeramic"
+          },
+          ttb: 1500,
+          textureInfo: ["white_glazed_terracotta[rot[1", "white_glazed_terracotta[rot[2", "white_glazed_terracotta[rot[3", "white_glazed_terracotta[rot[4"],
+          texturePerSide: [0, 2, 2, 2, 3, 1],
+          harvestType: "rock",
+          rootMetaDesc: "White Ceramic|meta|rot1"
+        },
+        "White Ceramic|meta|rot2": {
+          ttb: 1500,
+          textureInfo: ["white_glazed_terracotta[rot[1", "white_glazed_terracotta[rot[2", "white_glazed_terracotta[rot[3", "white_glazed_terracotta[rot[4"],
+          texturePerSide: [3, 1, 3, 3, 2, 0],
+          harvestType: "rock"
+        },
+        "White Ceramic|meta|rot3": {
+          ttb: 1500,
+          textureInfo: ["white_glazed_terracotta[rot[1", "white_glazed_terracotta[rot[2", "white_glazed_terracotta[rot[3", "white_glazed_terracotta[rot[4"],
+          texturePerSide: [2, 0, 0, 0, 1, 3],
+          harvestType: "rock"
+        },
+        "White Ceramic|meta|rot4": {
+          ttb: 1500,
+          textureInfo: ["white_glazed_terracotta[rot[1", "white_glazed_terracotta[rot[2", "white_glazed_terracotta[rot[3", "white_glazed_terracotta[rot[4"],
+          texturePerSide: [1, 3, 1, 1, 0, 2],
+          harvestType: "rock"
+        },
+        "Orange Ceramic": {
+          displayName: {
+            translationKey: "item:orangeCeramic"
+          },
+          ttb: 1500,
+          textureInfo: ["orange_glazed_terracotta[rot[1", "orange_glazed_terracotta[rot[2", "orange_glazed_terracotta[rot[3", "orange_glazed_terracotta[rot[4"],
+          texturePerSide: [0, 2, 2, 2, 3, 1],
+          harvestType: "rock",
+          rootMetaDesc: "Orange Ceramic|meta|rot1"
+        },
+        "Orange Ceramic|meta|rot2": {
+          ttb: 1500,
+          textureInfo: ["orange_glazed_terracotta[rot[1", "orange_glazed_terracotta[rot[2", "orange_glazed_terracotta[rot[3", "orange_glazed_terracotta[rot[4"],
+          texturePerSide: [3, 1, 3, 3, 2, 0],
+          harvestType: "rock"
+        },
+        "Orange Ceramic|meta|rot3": {
+          ttb: 1500,
+          textureInfo: ["orange_glazed_terracotta[rot[1", "orange_glazed_terracotta[rot[2", "orange_glazed_terracotta[rot[3", "orange_glazed_terracotta[rot[4"],
+          texturePerSide: [2, 0, 0, 0, 1, 3],
+          harvestType: "rock"
+        },
+        "Orange Ceramic|meta|rot4": {
+          ttb: 1500,
+          textureInfo: ["orange_glazed_terracotta[rot[1", "orange_glazed_terracotta[rot[2", "orange_glazed_terracotta[rot[3", "orange_glazed_terracotta[rot[4"],
+          texturePerSide: [1, 3, 1, 1, 0, 2],
+          harvestType: "rock"
+        },
+        "Magenta Ceramic": {
+          displayName: {
+            translationKey: "item:magentaCeramic"
+          },
+          ttb: 1500,
+          textureInfo: ["magenta_glazed_terracotta[rot[1", "magenta_glazed_terracotta[rot[2", "magenta_glazed_terracotta[rot[3", "magenta_glazed_terracotta[rot[4"],
+          texturePerSide: [0, 2, 2, 2, 3, 1],
+          harvestType: "rock",
+          rootMetaDesc: "Magenta Ceramic|meta|rot1"
+        },
+        "Magenta Ceramic|meta|rot2": {
+          ttb: 1500,
+          textureInfo: ["magenta_glazed_terracotta[rot[1", "magenta_glazed_terracotta[rot[2", "magenta_glazed_terracotta[rot[3", "magenta_glazed_terracotta[rot[4"],
+          texturePerSide: [3, 1, 3, 3, 2, 0],
+          harvestType: "rock"
+        },
+        "Magenta Ceramic|meta|rot3": {
+          ttb: 1500,
+          textureInfo: ["magenta_glazed_terracotta[rot[1", "magenta_glazed_terracotta[rot[2", "magenta_glazed_terracotta[rot[3", "magenta_glazed_terracotta[rot[4"],
+          texturePerSide: [2, 0, 0, 0, 1, 3],
+          harvestType: "rock"
+        },
+        "Magenta Ceramic|meta|rot4": {
+          ttb: 1500,
+          textureInfo: ["magenta_glazed_terracotta[rot[1", "magenta_glazed_terracotta[rot[2", "magenta_glazed_terracotta[rot[3", "magenta_glazed_terracotta[rot[4"],
+          texturePerSide: [1, 3, 1, 1, 0, 2],
+          harvestType: "rock"
+        },
+        "Light Blue Ceramic": {
+          displayName: {
+            translationKey: "item:lightBlueCeramic"
+          },
+          ttb: 1500,
+          textureInfo: ["light_blue_glazed_terracotta[rot[1", "light_blue_glazed_terracotta[rot[2", "light_blue_glazed_terracotta[rot[3", "light_blue_glazed_terracotta[rot[4"],
+          texturePerSide: [0, 2, 2, 2, 3, 1],
+          harvestType: "rock",
+          rootMetaDesc: "Light Blue Ceramic|meta|rot1"
+        },
+        "Light Blue Ceramic|meta|rot2": {
+          ttb: 1500,
+          textureInfo: ["light_blue_glazed_terracotta[rot[1", "light_blue_glazed_terracotta[rot[2", "light_blue_glazed_terracotta[rot[3", "light_blue_glazed_terracotta[rot[4"],
+          texturePerSide: [3, 1, 3, 3, 2, 0],
+          harvestType: "rock"
+        },
+        "Light Blue Ceramic|meta|rot3": {
+          ttb: 1500,
+          textureInfo: ["light_blue_glazed_terracotta[rot[1", "light_blue_glazed_terracotta[rot[2", "light_blue_glazed_terracotta[rot[3", "light_blue_glazed_terracotta[rot[4"],
+          texturePerSide: [2, 0, 0, 0, 1, 3],
+          harvestType: "rock"
+        },
+        "Light Blue Ceramic|meta|rot4": {
+          ttb: 1500,
+          textureInfo: ["light_blue_glazed_terracotta[rot[1", "light_blue_glazed_terracotta[rot[2", "light_blue_glazed_terracotta[rot[3", "light_blue_glazed_terracotta[rot[4"],
+          texturePerSide: [1, 3, 1, 1, 0, 2],
+          harvestType: "rock"
+        },
+        "Yellow Ceramic": {
+          displayName: {
+            translationKey: "item:yellowCeramic"
+          },
+          ttb: 1500,
+          textureInfo: ["yellow_glazed_terracotta[rot[1", "yellow_glazed_terracotta[rot[2", "yellow_glazed_terracotta[rot[3", "yellow_glazed_terracotta[rot[4"],
+          texturePerSide: [0, 2, 2, 2, 3, 1],
+          harvestType: "rock",
+          rootMetaDesc: "Yellow Ceramic|meta|rot1"
+        },
+        "Yellow Ceramic|meta|rot2": {
+          ttb: 1500,
+          textureInfo: ["yellow_glazed_terracotta[rot[1", "yellow_glazed_terracotta[rot[2", "yellow_glazed_terracotta[rot[3", "yellow_glazed_terracotta[rot[4"],
+          texturePerSide: [3, 1, 3, 3, 2, 0],
+          harvestType: "rock"
+        },
+        "Yellow Ceramic|meta|rot3": {
+          ttb: 1500,
+          textureInfo: ["yellow_glazed_terracotta[rot[1", "yellow_glazed_terracotta[rot[2", "yellow_glazed_terracotta[rot[3", "yellow_glazed_terracotta[rot[4"],
+          texturePerSide: [2, 0, 0, 0, 1, 3],
+          harvestType: "rock"
+        },
+        "Yellow Ceramic|meta|rot4": {
+          ttb: 1500,
+          textureInfo: ["yellow_glazed_terracotta[rot[1", "yellow_glazed_terracotta[rot[2", "yellow_glazed_terracotta[rot[3", "yellow_glazed_terracotta[rot[4"],
+          texturePerSide: [1, 3, 1, 1, 0, 2],
+          harvestType: "rock"
+        },
+        "Lime Ceramic": {
+          displayName: {
+            translationKey: "item:limeCeramic"
+          },
+          ttb: 1500,
+          textureInfo: ["lime_glazed_terracotta[rot[1", "lime_glazed_terracotta[rot[2", "lime_glazed_terracotta[rot[3", "lime_glazed_terracotta[rot[4"],
+          texturePerSide: [0, 2, 2, 2, 3, 1],
+          harvestType: "rock",
+          rootMetaDesc: "Lime Ceramic|meta|rot1"
+        },
+        "Lime Ceramic|meta|rot2": {
+          ttb: 1500,
+          textureInfo: ["lime_glazed_terracotta[rot[1", "lime_glazed_terracotta[rot[2", "lime_glazed_terracotta[rot[3", "lime_glazed_terracotta[rot[4"],
+          texturePerSide: [3, 1, 3, 3, 2, 0],
+          harvestType: "rock"
+        },
+        "Lime Ceramic|meta|rot3": {
+          ttb: 1500,
+          textureInfo: ["lime_glazed_terracotta[rot[1", "lime_glazed_terracotta[rot[2", "lime_glazed_terracotta[rot[3", "lime_glazed_terracotta[rot[4"],
+          texturePerSide: [2, 0, 0, 0, 1, 3],
+          harvestType: "rock"
+        },
+        "Lime Ceramic|meta|rot4": {
+          ttb: 1500,
+          textureInfo: ["lime_glazed_terracotta[rot[1", "lime_glazed_terracotta[rot[2", "lime_glazed_terracotta[rot[3", "lime_glazed_terracotta[rot[4"],
+          texturePerSide: [1, 3, 1, 1, 0, 2],
+          harvestType: "rock"
+        },
+        "Pink Ceramic": {
+          displayName: {
+            translationKey: "item:pinkCeramic"
+          },
+          ttb: 1500,
+          textureInfo: ["pink_glazed_terracotta[rot[1", "pink_glazed_terracotta[rot[2", "pink_glazed_terracotta[rot[3", "pink_glazed_terracotta[rot[4"],
+          texturePerSide: [0, 2, 2, 2, 3, 1],
+          harvestType: "rock",
+          rootMetaDesc: "Pink Ceramic|meta|rot1"
+        },
+        "Pink Ceramic|meta|rot2": {
+          ttb: 1500,
+          textureInfo: ["pink_glazed_terracotta[rot[1", "pink_glazed_terracotta[rot[2", "pink_glazed_terracotta[rot[3", "pink_glazed_terracotta[rot[4"],
+          texturePerSide: [3, 1, 3, 3, 2, 0],
+          harvestType: "rock"
+        },
+        "Pink Ceramic|meta|rot3": {
+          ttb: 1500,
+          textureInfo: ["pink_glazed_terracotta[rot[1", "pink_glazed_terracotta[rot[2", "pink_glazed_terracotta[rot[3", "pink_glazed_terracotta[rot[4"],
+          texturePerSide: [2, 0, 0, 0, 1, 3],
+          harvestType: "rock"
+        },
+        "Pink Ceramic|meta|rot4": {
+          ttb: 1500,
+          textureInfo: ["pink_glazed_terracotta[rot[1", "pink_glazed_terracotta[rot[2", "pink_glazed_terracotta[rot[3", "pink_glazed_terracotta[rot[4"],
+          texturePerSide: [1, 3, 1, 1, 0, 2],
+          harvestType: "rock"
+        },
+        "Gray Ceramic": {
+          displayName: {
+            translationKey: "item:grayCeramic"
+          },
+          ttb: 1500,
+          textureInfo: ["gray_glazed_terracotta[rot[1", "gray_glazed_terracotta[rot[2", "gray_glazed_terracotta[rot[3", "gray_glazed_terracotta[rot[4"],
+          texturePerSide: [0, 2, 2, 2, 3, 1],
+          harvestType: "rock",
+          rootMetaDesc: "Gray Ceramic|meta|rot1"
+        },
+        "Gray Ceramic|meta|rot2": {
+          ttb: 1500,
+          textureInfo: ["gray_glazed_terracotta[rot[1", "gray_glazed_terracotta[rot[2", "gray_glazed_terracotta[rot[3", "gray_glazed_terracotta[rot[4"],
+          texturePerSide: [3, 1, 3, 3, 2, 0],
+          harvestType: "rock"
+        },
+        "Gray Ceramic|meta|rot3": {
+          ttb: 1500,
+          textureInfo: ["gray_glazed_terracotta[rot[1", "gray_glazed_terracotta[rot[2", "gray_glazed_terracotta[rot[3", "gray_glazed_terracotta[rot[4"],
+          texturePerSide: [2, 0, 0, 0, 1, 3],
+          harvestType: "rock"
+        },
+        "Gray Ceramic|meta|rot4": {
+          ttb: 1500,
+          textureInfo: ["gray_glazed_terracotta[rot[1", "gray_glazed_terracotta[rot[2", "gray_glazed_terracotta[rot[3", "gray_glazed_terracotta[rot[4"],
+          texturePerSide: [1, 3, 1, 1, 0, 2],
+          harvestType: "rock"
+        },
+        "Light Gray Ceramic": {
+          displayName: {
+            translationKey: "item:lightGrayCeramic"
+          },
+          ttb: 1500,
+          textureInfo: ["light_gray_glazed_terracotta[rot[1", "light_gray_glazed_terracotta[rot[2", "light_gray_glazed_terracotta[rot[3", "light_gray_glazed_terracotta[rot[4"],
+          texturePerSide: [0, 2, 2, 2, 3, 1],
+          harvestType: "rock",
+          rootMetaDesc: "Light Gray Ceramic|meta|rot1"
+        },
+        "Light Gray Ceramic|meta|rot2": {
+          ttb: 1500,
+          textureInfo: ["light_gray_glazed_terracotta[rot[1", "light_gray_glazed_terracotta[rot[2", "light_gray_glazed_terracotta[rot[3", "light_gray_glazed_terracotta[rot[4"],
+          texturePerSide: [3, 1, 3, 3, 2, 0],
+          harvestType: "rock"
+        },
+        "Light Gray Ceramic|meta|rot3": {
+          ttb: 1500,
+          textureInfo: ["light_gray_glazed_terracotta[rot[1", "light_gray_glazed_terracotta[rot[2", "light_gray_glazed_terracotta[rot[3", "light_gray_glazed_terracotta[rot[4"],
+          texturePerSide: [2, 0, 0, 0, 1, 3],
+          harvestType: "rock"
+        },
+        "Light Gray Ceramic|meta|rot4": {
+          ttb: 1500,
+          textureInfo: ["light_gray_glazed_terracotta[rot[1", "light_gray_glazed_terracotta[rot[2", "light_gray_glazed_terracotta[rot[3", "light_gray_glazed_terracotta[rot[4"],
+          texturePerSide: [1, 3, 1, 1, 0, 2],
+          harvestType: "rock"
+        },
+        "Cyan Ceramic": {
+          displayName: {
+            translationKey: "item:cyanCeramic"
+          },
+          ttb: 1500,
+          textureInfo: ["cyan_glazed_terracotta[rot[1", "cyan_glazed_terracotta[rot[2", "cyan_glazed_terracotta[rot[3", "cyan_glazed_terracotta[rot[4"],
+          texturePerSide: [0, 2, 2, 2, 3, 1],
+          harvestType: "rock",
+          rootMetaDesc: "Cyan Ceramic|meta|rot1"
+        },
+        "Cyan Ceramic|meta|rot2": {
+          ttb: 1500,
+          textureInfo: ["cyan_glazed_terracotta[rot[1", "cyan_glazed_terracotta[rot[2", "cyan_glazed_terracotta[rot[3", "cyan_glazed_terracotta[rot[4"],
+          texturePerSide: [3, 1, 3, 3, 2, 0],
+          harvestType: "rock"
+        },
+        "Cyan Ceramic|meta|rot3": {
+          ttb: 1500,
+          textureInfo: ["cyan_glazed_terracotta[rot[1", "cyan_glazed_terracotta[rot[2", "cyan_glazed_terracotta[rot[3", "cyan_glazed_terracotta[rot[4"],
+          texturePerSide: [2, 0, 0, 0, 1, 3],
+          harvestType: "rock"
+        },
+        "Cyan Ceramic|meta|rot4": {
+          ttb: 1500,
+          textureInfo: ["cyan_glazed_terracotta[rot[1", "cyan_glazed_terracotta[rot[2", "cyan_glazed_terracotta[rot[3", "cyan_glazed_terracotta[rot[4"],
+          texturePerSide: [1, 3, 1, 1, 0, 2],
+          harvestType: "rock"
+        },
+        "Purple Ceramic": {
+          displayName: {
+            translationKey: "item:purpleCeramic"
+          },
+          ttb: 1500,
+          textureInfo: ["purple_glazed_terracotta[rot[1", "purple_glazed_terracotta[rot[2", "purple_glazed_terracotta[rot[3", "purple_glazed_terracotta[rot[4"],
+          texturePerSide: [0, 2, 2, 2, 3, 1],
+          harvestType: "rock",
+          rootMetaDesc: "Purple Ceramic|meta|rot1"
+        },
+        "Purple Ceramic|meta|rot2": {
+          ttb: 1500,
+          textureInfo: ["purple_glazed_terracotta[rot[1", "purple_glazed_terracotta[rot[2", "purple_glazed_terracotta[rot[3", "purple_glazed_terracotta[rot[4"],
+          texturePerSide: [3, 1, 3, 3, 2, 0],
+          harvestType: "rock"
+        },
+        "Purple Ceramic|meta|rot3": {
+          ttb: 1500,
+          textureInfo: ["purple_glazed_terracotta[rot[1", "purple_glazed_terracotta[rot[2", "purple_glazed_terracotta[rot[3", "purple_glazed_terracotta[rot[4"],
+          texturePerSide: [2, 0, 0, 0, 1, 3],
+          harvestType: "rock"
+        },
+        "Purple Ceramic|meta|rot4": {
+          ttb: 1500,
+          textureInfo: ["purple_glazed_terracotta[rot[1", "purple_glazed_terracotta[rot[2", "purple_glazed_terracotta[rot[3", "purple_glazed_terracotta[rot[4"],
+          texturePerSide: [1, 3, 1, 1, 0, 2],
+          harvestType: "rock"
+        },
+        "Blue Ceramic": {
+          displayName: {
+            translationKey: "item:blueCeramic"
+          },
+          ttb: 1500,
+          textureInfo: ["blue_glazed_terracotta[rot[1", "blue_glazed_terracotta[rot[2", "blue_glazed_terracotta[rot[3", "blue_glazed_terracotta[rot[4"],
+          texturePerSide: [0, 2, 2, 2, 3, 1],
+          harvestType: "rock",
+          rootMetaDesc: "Blue Ceramic|meta|rot1"
+        },
+        "Blue Ceramic|meta|rot2": {
+          ttb: 1500,
+          textureInfo: ["blue_glazed_terracotta[rot[1", "blue_glazed_terracotta[rot[2", "blue_glazed_terracotta[rot[3", "blue_glazed_terracotta[rot[4"],
+          texturePerSide: [3, 1, 3, 3, 2, 0],
+          harvestType: "rock"
+        },
+        "Blue Ceramic|meta|rot3": {
+          ttb: 1500,
+          textureInfo: ["blue_glazed_terracotta[rot[1", "blue_glazed_terracotta[rot[2", "blue_glazed_terracotta[rot[3", "blue_glazed_terracotta[rot[4"],
+          texturePerSide: [2, 0, 0, 0, 1, 3],
+          harvestType: "rock"
+        },
+        "Blue Ceramic|meta|rot4": {
+          ttb: 1500,
+          textureInfo: ["blue_glazed_terracotta[rot[1", "blue_glazed_terracotta[rot[2", "blue_glazed_terracotta[rot[3", "blue_glazed_terracotta[rot[4"],
+          texturePerSide: [1, 3, 1, 1, 0, 2],
+          harvestType: "rock"
+        },
+        "Brown Ceramic": {
+          displayName: {
+            translationKey: "item:brownCeramic"
+          },
+          ttb: 1500,
+          textureInfo: ["brown_glazed_terracotta[rot[1", "brown_glazed_terracotta[rot[2", "brown_glazed_terracotta[rot[3", "brown_glazed_terracotta[rot[4"],
+          texturePerSide: [0, 2, 2, 2, 3, 1],
+          harvestType: "rock",
+          rootMetaDesc: "Brown Ceramic|meta|rot1"
+        },
+        "Brown Ceramic|meta|rot2": {
+          ttb: 1500,
+          textureInfo: ["brown_glazed_terracotta[rot[1", "brown_glazed_terracotta[rot[2", "brown_glazed_terracotta[rot[3", "brown_glazed_terracotta[rot[4"],
+          texturePerSide: [3, 1, 3, 3, 2, 0],
+          harvestType: "rock"
+        },
+        "Brown Ceramic|meta|rot3": {
+          ttb: 1500,
+          textureInfo: ["brown_glazed_terracotta[rot[1", "brown_glazed_terracotta[rot[2", "brown_glazed_terracotta[rot[3", "brown_glazed_terracotta[rot[4"],
+          texturePerSide: [2, 0, 0, 0, 1, 3],
+          harvestType: "rock"
+        },
+        "Brown Ceramic|meta|rot4": {
+          ttb: 1500,
+          textureInfo: ["brown_glazed_terracotta[rot[1", "brown_glazed_terracotta[rot[2", "brown_glazed_terracotta[rot[3", "brown_glazed_terracotta[rot[4"],
+          texturePerSide: [1, 3, 1, 1, 0, 2],
+          harvestType: "rock"
+        },
+        "Green Ceramic": {
+          displayName: {
+            translationKey: "item:greenCeramic"
+          },
+          ttb: 1500,
+          textureInfo: ["green_glazed_terracotta[rot[1", "green_glazed_terracotta[rot[2", "green_glazed_terracotta[rot[3", "green_glazed_terracotta[rot[4"],
+          texturePerSide: [0, 2, 2, 2, 3, 1],
+          harvestType: "rock",
+          rootMetaDesc: "Green Ceramic|meta|rot1"
+        },
+        "Green Ceramic|meta|rot2": {
+          ttb: 1500,
+          textureInfo: ["green_glazed_terracotta[rot[1", "green_glazed_terracotta[rot[2", "green_glazed_terracotta[rot[3", "green_glazed_terracotta[rot[4"],
+          texturePerSide: [3, 1, 3, 3, 2, 0],
+          harvestType: "rock"
+        },
+        "Green Ceramic|meta|rot3": {
+          ttb: 1500,
+          textureInfo: ["green_glazed_terracotta[rot[1", "green_glazed_terracotta[rot[2", "green_glazed_terracotta[rot[3", "green_glazed_terracotta[rot[4"],
+          texturePerSide: [2, 0, 0, 0, 1, 3],
+          harvestType: "rock"
+        },
+        "Green Ceramic|meta|rot4": {
+          ttb: 1500,
+          textureInfo: ["green_glazed_terracotta[rot[1", "green_glazed_terracotta[rot[2", "green_glazed_terracotta[rot[3", "green_glazed_terracotta[rot[4"],
+          texturePerSide: [1, 3, 1, 1, 0, 2],
+          harvestType: "rock"
+        },
+        "Red Ceramic": {
+          displayName: {
+            translationKey: "item:redCeramic"
+          },
+          ttb: 1500,
+          textureInfo: ["red_glazed_terracotta[rot[1", "red_glazed_terracotta[rot[2", "red_glazed_terracotta[rot[3", "red_glazed_terracotta[rot[4"],
+          texturePerSide: [0, 2, 2, 2, 3, 1],
+          harvestType: "rock",
+          rootMetaDesc: "Red Ceramic|meta|rot1"
+        },
+        "Red Ceramic|meta|rot2": {
+          ttb: 1500,
+          textureInfo: ["red_glazed_terracotta[rot[1", "red_glazed_terracotta[rot[2", "red_glazed_terracotta[rot[3", "red_glazed_terracotta[rot[4"],
+          texturePerSide: [3, 1, 3, 3, 2, 0],
+          harvestType: "rock"
+        },
+        "Red Ceramic|meta|rot3": {
+          ttb: 1500,
+          textureInfo: ["red_glazed_terracotta[rot[1", "red_glazed_terracotta[rot[2", "red_glazed_terracotta[rot[3", "red_glazed_terracotta[rot[4"],
+          texturePerSide: [2, 0, 0, 0, 1, 3],
+          harvestType: "rock"
+        },
+        "Red Ceramic|meta|rot4": {
+          ttb: 1500,
+          textureInfo: ["red_glazed_terracotta[rot[1", "red_glazed_terracotta[rot[2", "red_glazed_terracotta[rot[3", "red_glazed_terracotta[rot[4"],
+          texturePerSide: [1, 3, 1, 1, 0, 2],
+          harvestType: "rock"
+        },
+        "Black Ceramic": {
+          displayName: {
+            translationKey: "item:blackCeramic"
+          },
+          ttb: 1500,
+          textureInfo: ["black_glazed_terracotta[rot[1", "black_glazed_terracotta[rot[2", "black_glazed_terracotta[rot[3", "black_glazed_terracotta[rot[4"],
+          texturePerSide: [0, 2, 2, 2, 3, 1],
+          harvestType: "rock",
+          rootMetaDesc: "Black Ceramic|meta|rot1"
+        },
+        "Black Ceramic|meta|rot2": {
+          ttb: 1500,
+          textureInfo: ["black_glazed_terracotta[rot[1", "black_glazed_terracotta[rot[2", "black_glazed_terracotta[rot[3", "black_glazed_terracotta[rot[4"],
+          texturePerSide: [3, 1, 3, 3, 2, 0],
+          harvestType: "rock"
+        },
+        "Black Ceramic|meta|rot3": {
+          ttb: 1500,
+          textureInfo: ["black_glazed_terracotta[rot[1", "black_glazed_terracotta[rot[2", "black_glazed_terracotta[rot[3", "black_glazed_terracotta[rot[4"],
+          texturePerSide: [2, 0, 0, 0, 1, 3],
+          harvestType: "rock"
+        },
+        "Black Ceramic|meta|rot4": {
+          ttb: 1500,
+          textureInfo: ["black_glazed_terracotta[rot[1", "black_glazed_terracotta[rot[2", "black_glazed_terracotta[rot[3", "black_glazed_terracotta[rot[4"],
+          texturePerSide: [1, 3, 1, 1, 0, 2],
+          harvestType: "rock"
+        },
+        "Wheat Seeds": {
+          displayName: {
+            translationKey: "item:wheatSeeds"
+          },
+          ttb: 400,
+          textureInfo: "wheat_stage0",
+          model: "SquareSided",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "wheat_seeds",
+          description: {
+            translationKey: "item:wheatSeedsDescription"
+          }
+        },
+        ...(0, yY.sb)("Wheat", {
+          displayName: {
+            translationKey: "item:wheat"
+          },
+          ttb: 400,
+          model: "SquareSided",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: "Wheat Seeds"
+        }, ["wheat_stage2", "wheat_stage3", "wheat_stage4", "wheat_stage5", "wheat_stage6"]),
+        Wheat: {
+          displayName: {
+            translationKey: "item:wheat"
+          },
+          ttb: 400,
+          textureInfo: "wheat_stage7",
+          model: "SquareSided",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "wheat"
+        },
+        "Wheat|FreshlyGrown": {
+          ttb: 400,
+          textureInfo: "wheat_stage7",
+          model: "SquareSided",
+          solid: !1,
+          harvestType: "cuttable",
+          onMinedAura: 5
+        },
+        "Tilled Soil": {
+          displayName: {
+            translationKey: "item:tilledSoil"
+          },
+          ttb: 600,
+          textureInfo: "farmland",
+          harvestType: "granule"
+        },
+        "Bread Block": {
+          displayName: {
+            translationKey: "item:breadBlock"
+          },
+          ttb: 600,
+          textureInfo: ["bread_block_front", "bread_block_back", "bread_block_side", "bread_block_top"],
+          texturePerSide: [2, 2, 3, 3, 0, 1],
+          harvestType: "cuttable"
+        },
+        "ReservedBread BlockRotation1": {
+          ttb: 600,
+          textureInfo: ["bread_block_front", "bread_block_back", "bread_block_side", "bread_block_top"],
+          texturePerSide: [2, 2, 3, 3, 0, 1],
+          harvestType: "cuttable"
+        },
+        "ReservedBread BlockRotation2": {
+          ttb: 600,
+          textureInfo: ["bread_block_front", "bread_block_back", "bread_block_side", "bread_block_top"],
+          texturePerSide: [2, 2, 3, 3, 0, 1],
+          harvestType: "cuttable"
+        },
+        "ReservedBread BlockRotation3": {
+          ttb: 600,
+          textureInfo: ["bread_block_front", "bread_block_back", "bread_block_side", "bread_block_top"],
+          texturePerSide: [2, 2, 3, 3, 0, 1],
+          harvestType: "cuttable"
+        },
+        "Mossy Messy Stone": {
+          displayName: {
+            translationKey: "item:mossyMessyStone"
+          },
+          ttb: 1800,
+          textureInfo: "mossy_cobblestone",
+          harvestType: "rock"
+        },
+        "Dandelion|Roots": {
+          ttb: 300,
+          textureInfo: "dandelion",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "dandelion"
+        },
+        "Poppy|Roots": {
+          ttb: 300,
+          textureInfo: "poppy",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "poppy"
+        },
+        "Red Tulip|Roots": {
+          ttb: 300,
+          textureInfo: "red_tulip",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "red_tulip"
+        },
+        "Pink Tulip|Roots": {
+          ttb: 300,
+          textureInfo: "pink_tulip",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "pink_tulip"
+        },
+        "White Tulip|Roots": {
+          ttb: 300,
+          textureInfo: "white_tulip",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "white_tulip"
+        },
+        "Orange Tulip|Roots": {
+          ttb: 300,
+          textureInfo: "orange_tulip",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "orange_tulip"
+        },
+        "Daisy|Roots": {
+          ttb: 300,
+          textureInfo: "oxeye_daisy",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "oxeye_daisy"
+        },
+        "Bluebell|Roots": {
+          ttb: 300,
+          textureInfo: "blue_orchid",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "blue_orchid"
+        },
+        "Forget-me-not|Roots": {
+          ttb: 300,
+          textureInfo: "cornflower",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "cornflower"
+        },
+        "Allium|Roots": {
+          ttb: 300,
+          textureInfo: "allium",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "allium"
+        },
+        "Azure Bluet|Roots": {
+          ttb: 300,
+          textureInfo: "azure_bluet",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "azure_bluet"
+        },
+        "Lily of the Valley|Roots": {
+          ttb: 300,
+          textureInfo: "lily_of_the_valley",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "lily_of_the_valley"
+        },
+        "Shadow Rose|Roots": {
+          ttb: 300,
+          textureInfo: "shadow_rose",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "shadow_rose"
+        },
+        ...(0, yY.Bb)("White Bed", {
+          displayName: {
+            translationKey: "item:whiteBed"
+          },
+          ttb: 240,
+          itemTexture: "white_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          rootMetaDesc: "White Bed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "White Bed"
+        }),
+        ...(0, yY.Bb)("_White Bed Head", {
+          ttb: 240,
+          itemTexture: "white_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          drops: "White Bed",
+          rootMetaDesc: "_White Bed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_White Bed Head"
+        }),
+        ...(0, yY.Bb)("Orange Bed", {
+          displayName: {
+            translationKey: "item:orangeBed"
+          },
+          ttb: 240,
+          itemTexture: "orange_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          rootMetaDesc: "Orange Bed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Orange Bed"
+        }),
+        ...(0, yY.Bb)("_Orange Bed Head", {
+          ttb: 240,
+          itemTexture: "orange_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          drops: "Orange Bed",
+          rootMetaDesc: "_Orange Bed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Orange Bed Head"
+        }),
+        ...(0, yY.Bb)("Magenta Bed", {
+          displayName: {
+            translationKey: "item:magentaBed"
+          },
+          ttb: 240,
+          itemTexture: "magenta_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          rootMetaDesc: "Magenta Bed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Magenta Bed"
+        }),
+        ...(0, yY.Bb)("_Magenta Bed Head", {
+          ttb: 240,
+          itemTexture: "magenta_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          drops: "Magenta Bed",
+          rootMetaDesc: "_Magenta Bed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Magenta Bed Head"
+        }),
+        ...(0, yY.Bb)("Light Blue Bed", {
+          displayName: {
+            translationKey: "item:lightBlueBed"
+          },
+          ttb: 240,
+          itemTexture: "light_blue_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          rootMetaDesc: "Light Blue Bed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Light Blue Bed"
+        }),
+        ...(0, yY.Bb)("_Light Blue Bed Head", {
+          ttb: 240,
+          itemTexture: "light_blue_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          drops: "Light Blue Bed",
+          rootMetaDesc: "_Light Blue Bed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Light Blue Bed Head"
+        }),
+        ...(0, yY.Bb)("Yellow Bed", {
+          displayName: {
+            translationKey: "item:yellowBed"
+          },
+          ttb: 240,
+          itemTexture: "yellow_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          rootMetaDesc: "Yellow Bed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Yellow Bed"
+        }),
+        ...(0, yY.Bb)("_Yellow Bed Head", {
+          ttb: 240,
+          itemTexture: "yellow_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          drops: "Yellow Bed",
+          rootMetaDesc: "_Yellow Bed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Yellow Bed Head"
+        }),
+        ...(0, yY.Bb)("Lime Bed", {
+          displayName: {
+            translationKey: "item:limeBed"
+          },
+          ttb: 240,
+          itemTexture: "lime_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          rootMetaDesc: "Lime Bed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Lime Bed"
+        }),
+        ...(0, yY.Bb)("_Lime Bed Head", {
+          ttb: 240,
+          itemTexture: "lime_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          drops: "Lime Bed",
+          rootMetaDesc: "_Lime Bed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Lime Bed Head"
+        }),
+        ...(0, yY.Bb)("Pink Bed", {
+          displayName: {
+            translationKey: "item:pinkBed"
+          },
+          ttb: 240,
+          itemTexture: "pink_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          rootMetaDesc: "Pink Bed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Pink Bed"
+        }),
+        ...(0, yY.Bb)("_Pink Bed Head", {
+          ttb: 240,
+          itemTexture: "pink_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          drops: "Pink Bed",
+          rootMetaDesc: "_Pink Bed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Pink Bed Head"
+        }),
+        ...(0, yY.Bb)("Gray Bed", {
+          displayName: {
+            translationKey: "item:grayBed"
+          },
+          ttb: 240,
+          itemTexture: "gray_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          rootMetaDesc: "Gray Bed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Gray Bed"
+        }),
+        ...(0, yY.Bb)("_Gray Bed Head", {
+          ttb: 240,
+          itemTexture: "gray_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          drops: "Gray Bed",
+          rootMetaDesc: "_Gray Bed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Gray Bed Head"
+        }),
+        ...(0, yY.Bb)("Light Gray Bed", {
+          displayName: {
+            translationKey: "item:lightGrayBed"
+          },
+          ttb: 240,
+          itemTexture: "light_gray_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          rootMetaDesc: "Light Gray Bed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Light Gray Bed"
+        }),
+        ...(0, yY.Bb)("_Light Gray Bed Head", {
+          ttb: 240,
+          itemTexture: "light_gray_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          drops: "Light Gray Bed",
+          rootMetaDesc: "_Light Gray Bed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Light Gray Bed Head"
+        }),
+        ...(0, yY.Bb)("Cyan Bed", {
+          displayName: {
+            translationKey: "item:cyanBed"
+          },
+          ttb: 240,
+          itemTexture: "cyan_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          rootMetaDesc: "Cyan Bed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Cyan Bed"
+        }),
+        ...(0, yY.Bb)("_Cyan Bed Head", {
+          ttb: 240,
+          itemTexture: "cyan_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          drops: "Cyan Bed",
+          rootMetaDesc: "_Cyan Bed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Cyan Bed Head"
+        }),
+        ...(0, yY.Bb)("Purple Bed", {
+          displayName: {
+            translationKey: "item:purpleBed"
+          },
+          ttb: 240,
+          itemTexture: "purple_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          rootMetaDesc: "Purple Bed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Purple Bed"
+        }),
+        ...(0, yY.Bb)("_Purple Bed Head", {
+          ttb: 240,
+          itemTexture: "purple_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          drops: "Purple Bed",
+          rootMetaDesc: "_Purple Bed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Purple Bed Head"
+        }),
+        ...(0, yY.Bb)("Blue Bed", {
+          displayName: {
+            translationKey: "item:blueBed"
+          },
+          ttb: 240,
+          itemTexture: "blue_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          rootMetaDesc: "Blue Bed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Blue Bed"
+        }),
+        ...(0, yY.Bb)("_Blue Bed Head", {
+          ttb: 240,
+          itemTexture: "blue_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          drops: "Blue Bed",
+          rootMetaDesc: "_Blue Bed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Blue Bed Head"
+        }),
+        ...(0, yY.Bb)("Brown Bed", {
+          displayName: {
+            translationKey: "item:brownBed"
+          },
+          ttb: 240,
+          itemTexture: "brown_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          rootMetaDesc: "Brown Bed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Brown Bed"
+        }),
+        ...(0, yY.Bb)("_Brown Bed Head", {
+          ttb: 240,
+          itemTexture: "brown_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          drops: "Brown Bed",
+          rootMetaDesc: "_Brown Bed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Brown Bed Head"
+        }),
+        ...(0, yY.Bb)("Green Bed", {
+          displayName: {
+            translationKey: "item:greenBed"
+          },
+          ttb: 240,
+          itemTexture: "green_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          rootMetaDesc: "Green Bed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Green Bed"
+        }),
+        ...(0, yY.Bb)("_Green Bed Head", {
+          ttb: 240,
+          itemTexture: "green_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          drops: "Green Bed",
+          rootMetaDesc: "_Green Bed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Green Bed Head"
+        }),
+        ...(0, yY.Bb)("Red Bed", {
+          displayName: {
+            translationKey: "item:redBed"
+          },
+          ttb: 240,
+          itemTexture: "red_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          rootMetaDesc: "Red Bed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Red Bed"
+        }),
+        ...(0, yY.Bb)("_Red Bed Head", {
+          ttb: 240,
+          itemTexture: "red_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          drops: "Red Bed",
+          rootMetaDesc: "_Red Bed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Red Bed Head"
+        }),
+        ...(0, yY.Bb)("Black Bed", {
+          displayName: {
+            translationKey: "item:blackBed"
+          },
+          ttb: 240,
+          itemTexture: "black_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          rootMetaDesc: "Black Bed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Black Bed"
+        }),
+        ...(0, yY.Bb)("_Black Bed Head", {
+          ttb: 240,
+          itemTexture: "black_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          drops: "Black Bed",
+          rootMetaDesc: "_Black Bed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Black Bed Head"
+        }),
+        "Apple Block": {
+          displayName: {
+            translationKey: "item:appleBlock"
+          },
+          ttb: 600,
+          textureInfo: ["apple_block_side", "apple_block_top", "apple_block_bottom"],
+          texturePerSide: [0, 0, 1, 2, 0, 0],
+          harvestType: "wood"
+        },
+        "Moonstone Ore": {
+          displayName: {
+            translationKey: "item:moonstoneOre"
+          },
+          ttb: 5e3,
+          textureInfo: "moonstone_ore",
+          harvestType: "rock",
+          harvestLevel: 3,
+          drops: "Moonstone",
+          specialToolDrop: {
+            tool: "Moonstone Pickaxe",
+            drops: "Moonstone Ore"
+          },
+          specialToolBonusDrops: {
+            "Golem Pickaxe": vY.l
+          },
+          description: {
+            translationKey: "item:moonstoneOreDescription"
+          },
+          onMinedAura: 50,
+          My: [6, 6, 6]
+        },
+        ...(0, yY.Eb)("Moonstone Chest", {
+          displayName: {
+            translationKey: "item:moonstoneChest"
+          },
+          ttb: 3e3,
+          textureInfo: ["moonstone_chest_front", "moonstone_chest_side", "moonstone_chest_top[rot[1", "moonstone_chest_top[rot[2", "moonstone_chest_top[rot[3", "moonstone_chest_top[rot[4", "moonstone_chest_back"],
+          harvestType: "rock",
+          rootMetaDesc: "Moonstone Chest|meta|rot1",
+          description: {
+            translationKey: "item:moonstoneChestDescription"
+          }
+        }, [
+          [1, 1, 2, 2, 0, 6],
+          [0, 6, 3, 3, 1, 1],
+          [1, 1, 4, 4, 6, 0],
+          [6, 0, 5, 5, 1, 1]
+        ]),
+        "Block of Moonstone": {
+          displayName: {
+            translationKey: "item:blockOfMoonstone"
+          },
+          ttb: 6750,
+          textureInfo: "moonstone_block",
+          harvestType: "rock"
+        },
+        Magma: {
+          displayName: {
+            translationKey: "item:magma"
+          },
+          ttb: 600,
+          textureInfo: "magma",
+          harvestType: "rock",
+          My: [9, 3, 1]
+        },
+        "Useless Soil": {
+          displayName: {
+            translationKey: "item:uselessSoil"
+          },
+          ttb: 600,
+          textureInfo: "podzol_top",
+          harvestType: "granule"
+        },
+        "Marked Sandstone": {
+          displayName: {
+            translationKey: "item:markedSandstone"
+          },
+          ttb: 960,
+          textureInfo: "cut_sandstone",
+          harvestType: "rock"
+        },
+        "Red Sandstone": {
+          displayName: {
+            translationKey: "item:redSandstone"
+          },
+          ttb: 960,
+          textureInfo: "red_sandstone",
+          harvestType: "rock"
+        },
+        "Smooth Red Sandstone": {
+          displayName: {
+            translationKey: "item:smoothRedSandstone"
+          },
+          ttb: 960,
+          textureInfo: "red_sandstone_top",
+          harvestType: "rock"
+        },
+        "Engraved Red Sandstone": {
+          displayName: {
+            translationKey: "item:engravedRedSandstone"
+          },
+          ttb: 960,
+          textureInfo: "chiseled_red_sandstone",
+          harvestType: "rock"
+        },
+        "Marked Red Sandstone": {
+          displayName: {
+            translationKey: "item:markedRedSandstone"
+          },
+          ttb: 960,
+          textureInfo: "cut_red_sandstone",
+          harvestType: "rock"
+        },
+        "Green Stone": {
+          displayName: {
+            translationKey: "item:greenStone"
+          },
+          ttb: 1800,
+          textureInfo: "green_stone",
+          harvestType: "rock"
+        },
+        "Green Bricks": {
+          displayName: {
+            translationKey: "item:greenBricks"
+          },
+          ttb: 1800,
+          textureInfo: "green_bricks",
+          harvestType: "rock"
+        },
+        "Dark Green Bricks": {
+          displayName: {
+            translationKey: "item:darkGreenBricks"
+          },
+          ttb: 1800,
+          textureInfo: "dark_green_bricks",
+          harvestType: "rock"
+        },
+        "Sandstone Bricks": {
+          displayName: {
+            translationKey: "item:sandstoneBricks"
+          },
+          ttb: 960,
+          textureInfo: "sandstone_brick",
+          harvestType: "rock"
+        },
+        "Engraved Diorite": {
+          displayName: {
+            translationKey: "item:engravedDiorite"
+          },
+          ttb: 1800,
+          textureInfo: "engraved_diorite",
+          harvestType: "rock"
+        },
+        "Diorite Bricks": {
+          displayName: {
+            translationKey: "item:dioriteBricks"
+          },
+          ttb: 1800,
+          textureInfo: "diorite_brick",
+          harvestType: "rock"
+        },
+        "Engraved Andesite": {
+          displayName: {
+            translationKey: "item:engravedAndesite"
+          },
+          ttb: 1800,
+          textureInfo: "engraved_andesite",
+          harvestType: "rock"
+        },
+        "Andesite Bricks": {
+          displayName: {
+            translationKey: "item:andesiteBricks"
+          },
+          ttb: 1800,
+          textureInfo: "andesite_brick",
+          harvestType: "rock"
+        },
+        "Engraved Granite": {
+          displayName: {
+            translationKey: "item:engravedGranite"
+          },
+          ttb: 1800,
+          textureInfo: "engraved_granite",
+          harvestType: "rock"
+        },
+        "Granite Bricks": {
+          displayName: {
+            translationKey: "item:graniteBricks"
+          },
+          ttb: 1800,
+          textureInfo: "granite_brick",
+          harvestType: "rock"
+        },
+        "Ice Bricks": {
+          displayName: {
+            translationKey: "item:iceBricks"
+          },
+          ttb: 1800,
+          textureInfo: "ice_brick",
+          harvestType: "rock",
+          harvestLevel: 0,
+          stoodOnSpeedMultiplier: 1.4
+        },
+        "Placeholder Packed Ice": {
+          ttb: 1800,
+          textureInfo: "ice_brick",
+          harvestType: "rock",
+          harvestLevel: 0,
+          stoodOnSpeedMultiplier: 1.4
+        },
+        "Placeholder Blue Ice": {
+          ttb: 1800,
+          textureInfo: "ice_brick",
+          harvestType: "rock",
+          harvestLevel: 0,
+          stoodOnSpeedMultiplier: 1.4
+        },
+        "Plum Leaves": {
+          displayName: {
+            translationKey: "item:plumLeaves"
+          },
+          ttb: 350,
+          textureInfo: "leaves_plum",
+          harvestType: "cuttable"
+        },
+        "Cedar Leaves": {
+          displayName: {
+            translationKey: "item:cedarLeaves"
+          },
+          ttb: 350,
+          textureInfo: "leaves_cedar",
+          harvestType: "cuttable"
+        },
+        "Palm Leaves": {
+          displayName: {
+            translationKey: "item:palmLeaves"
+          },
+          ttb: 350,
+          textureInfo: "leaves_palm",
+          harvestType: "cuttable"
+        },
+        "Plum Leaves|TreeCanopy": {
+          ttb: 350,
+          textureInfo: "leaves_plum",
+          harvestType: "cuttable",
+          drops: "Plum Leaves"
+        },
+        "Cedar Leaves|TreeCanopy": {
+          ttb: 350,
+          textureInfo: "leaves_cedar",
+          harvestType: "cuttable",
+          drops: "Cedar Leaves"
+        },
+        "Palm Leaves|TreeCanopy": {
+          ttb: 350,
+          textureInfo: "leaves_palm",
+          harvestType: "cuttable",
+          drops: "Palm Leaves"
+        },
+        "Pine Log|TreeBase|Pine": {
+          ttb: 2400,
+          textureInfo: "log_pine",
+          harvestType: "wood",
+          drops: "Pine Log"
+        },
+        "Plum Log|TreeBase|Plum": {
+          ttb: 2400,
+          textureInfo: "log_plum",
+          harvestType: "wood",
+          drops: "Plum Log"
+        },
+        "Cedar Log|TreeBase|Cedar": {
+          ttb: 2400,
+          textureInfo: "log_cedar",
+          harvestType: "wood",
+          drops: "Cedar Log"
+        },
+        "Aspen Log|TreeBase|Aspen": {
+          ttb: 2400,
+          textureInfo: "log_aspen",
+          harvestType: "wood",
+          drops: "Aspen Log"
+        },
+        "Jungle Log|TreeBase|Jungle": {
+          ttb: 2400,
+          textureInfo: "log_jungle",
+          harvestType: "wood",
+          drops: "Jungle Log"
+        },
+        "Palm Log": {
+          displayName: {
+            translationKey: "item:palmLog"
+          },
+          ttb: 2400,
+          textureInfo: "log_palm",
+          harvestType: "wood"
+        },
+        "Palm Log|TreeBase|Palm": {
+          ttb: 2400,
+          textureInfo: "log_palm",
+          harvestType: "wood",
+          drops: "Palm Log"
+        },
+        "Palm Wood Planks": {
+          displayName: {
+            translationKey: "item:palmWoodPlanks"
+          },
+          ttb: 1800,
+          textureInfo: "planks_palm",
+          harvestType: "wood"
+        },
+        "Palm Sapling": {
+          displayName: {
+            translationKey: "item:palmSapling"
+          },
+          ttb: 1,
+          textureInfo: "palm_sapling",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "palm_sapling"
+        },
+        "Pine Door": {
+          displayName: {
+            translationKey: "item:pineDoor"
+          },
+          ttb: 3600,
+          itemTexture: "pine_door",
+          model: "door",
+          harvestType: "wood",
+          rootMetaDesc: "Pine Door|meta|rot1|closed",
+          particlesIgnoreBlack: !0,
+          blockModel: "Pine Door"
+        },
+        "Pine Door|meta|rot1|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Pine Door|meta|rot2|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Pine Door|meta|rot2|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Pine Door|meta|rot3|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Pine Door|meta|rot3|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Pine Door|meta|rot4|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Pine Door|meta|rot4|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "_Pine Door Top": {
+          ttb: 3600,
+          itemTexture: "pine_door",
+          harvestType: "wood",
+          model: "door",
+          drops: "Pine Door",
+          rootMetaDesc: "_Pine Door Top|meta|rot1|closed",
+          particlesIgnoreBlack: !0,
+          blockModel: "_Pine Door Top"
+        },
+        "_Pine Door Top|meta|rot1|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Pine Door"
+        },
+        "_Pine Door Top|meta|rot2|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Pine Door"
+        },
+        "_Pine Door Top|meta|rot2|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Pine Door"
+        },
+        "_Pine Door Top|meta|rot3|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Pine Door"
+        },
+        "_Pine Door Top|meta|rot3|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Pine Door"
+        },
+        "_Pine Door Top|meta|rot4|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Pine Door"
+        },
+        "_Pine Door Top|meta|rot4|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Pine Door"
+        },
+        "Plum Door": {
+          displayName: {
+            translationKey: "item:plumDoor"
+          },
+          ttb: 3600,
+          itemTexture: "plum_door",
+          model: "door",
+          harvestType: "wood",
+          rootMetaDesc: "Plum Door|meta|rot1|closed",
+          particlesIgnoreBlack: !0,
+          blockModel: "Plum Door"
+        },
+        "Plum Door|meta|rot1|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Plum Door|meta|rot2|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Plum Door|meta|rot2|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Plum Door|meta|rot3|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Plum Door|meta|rot3|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Plum Door|meta|rot4|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Plum Door|meta|rot4|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "_Plum Door Top": {
+          ttb: 3600,
+          itemTexture: "plum_door",
+          harvestType: "wood",
+          model: "door",
+          drops: "Plum Door",
+          rootMetaDesc: "_Plum Door Top|meta|rot1|closed",
+          particlesIgnoreBlack: !0,
+          blockModel: "_Plum Door Top"
+        },
+        "_Plum Door Top|meta|rot1|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Plum Door"
+        },
+        "_Plum Door Top|meta|rot2|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Plum Door"
+        },
+        "_Plum Door Top|meta|rot2|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Plum Door"
+        },
+        "_Plum Door Top|meta|rot3|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Plum Door"
+        },
+        "_Plum Door Top|meta|rot3|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Plum Door"
+        },
+        "_Plum Door Top|meta|rot4|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Plum Door"
+        },
+        "_Plum Door Top|meta|rot4|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Plum Door"
+        },
+        "Cedar Door": {
+          displayName: {
+            translationKey: "item:cedarDoor"
+          },
+          ttb: 3600,
+          itemTexture: "cedar_door",
+          model: "door",
+          harvestType: "wood",
+          rootMetaDesc: "Cedar Door|meta|rot1|closed",
+          particlesIgnoreBlack: !0,
+          blockModel: "Cedar Door"
+        },
+        "Cedar Door|meta|rot1|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Cedar Door|meta|rot2|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Cedar Door|meta|rot2|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Cedar Door|meta|rot3|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Cedar Door|meta|rot3|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Cedar Door|meta|rot4|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Cedar Door|meta|rot4|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "_Cedar Door Top": {
+          ttb: 3600,
+          itemTexture: "cedar_door",
+          harvestType: "wood",
+          model: "door",
+          drops: "Cedar Door",
+          rootMetaDesc: "_Cedar Door Top|meta|rot1|closed",
+          particlesIgnoreBlack: !0,
+          blockModel: "_Cedar Door Top"
+        },
+        "_Cedar Door Top|meta|rot1|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Cedar Door"
+        },
+        "_Cedar Door Top|meta|rot2|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Cedar Door"
+        },
+        "_Cedar Door Top|meta|rot2|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Cedar Door"
+        },
+        "_Cedar Door Top|meta|rot3|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Cedar Door"
+        },
+        "_Cedar Door Top|meta|rot3|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Cedar Door"
+        },
+        "_Cedar Door Top|meta|rot4|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Cedar Door"
+        },
+        "_Cedar Door Top|meta|rot4|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Cedar Door"
+        },
+        "Aspen Door": {
+          displayName: {
+            translationKey: "item:aspenDoor"
+          },
+          ttb: 3600,
+          itemTexture: "aspen_door",
+          model: "door",
+          harvestType: "wood",
+          rootMetaDesc: "Aspen Door|meta|rot1|closed",
+          particlesIgnoreBlack: !0,
+          blockModel: "Aspen Door"
+        },
+        "Aspen Door|meta|rot1|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Aspen Door|meta|rot2|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Aspen Door|meta|rot2|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Aspen Door|meta|rot3|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Aspen Door|meta|rot3|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Aspen Door|meta|rot4|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Aspen Door|meta|rot4|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "_Aspen Door Top": {
+          ttb: 3600,
+          itemTexture: "aspen_door",
+          harvestType: "wood",
+          model: "door",
+          drops: "Aspen Door",
+          rootMetaDesc: "_Aspen Door Top|meta|rot1|closed",
+          particlesIgnoreBlack: !0,
+          blockModel: "_Aspen Door Top"
+        },
+        "_Aspen Door Top|meta|rot1|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Aspen Door"
+        },
+        "_Aspen Door Top|meta|rot2|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Aspen Door"
+        },
+        "_Aspen Door Top|meta|rot2|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Aspen Door"
+        },
+        "_Aspen Door Top|meta|rot3|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Aspen Door"
+        },
+        "_Aspen Door Top|meta|rot3|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Aspen Door"
+        },
+        "_Aspen Door Top|meta|rot4|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Aspen Door"
+        },
+        "_Aspen Door Top|meta|rot4|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Aspen Door"
+        },
+        "Jungle Door": {
+          displayName: {
+            translationKey: "item:jungleDoor"
+          },
+          ttb: 3600,
+          itemTexture: "jungle_door",
+          model: "door",
+          harvestType: "wood",
+          rootMetaDesc: "Jungle Door|meta|rot1|closed",
+          particlesIgnoreBlack: !0,
+          blockModel: "Jungle Door"
+        },
+        "Jungle Door|meta|rot1|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Jungle Door|meta|rot2|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Jungle Door|meta|rot2|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Jungle Door|meta|rot3|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Jungle Door|meta|rot3|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Jungle Door|meta|rot4|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Jungle Door|meta|rot4|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "_Jungle Door Top": {
+          ttb: 3600,
+          itemTexture: "jungle_door",
+          harvestType: "wood",
+          model: "door",
+          drops: "Jungle Door",
+          rootMetaDesc: "_Jungle Door Top|meta|rot1|closed",
+          particlesIgnoreBlack: !0,
+          blockModel: "_Jungle Door Top"
+        },
+        "_Jungle Door Top|meta|rot1|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Jungle Door"
+        },
+        "_Jungle Door Top|meta|rot2|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Jungle Door"
+        },
+        "_Jungle Door Top|meta|rot2|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Jungle Door"
+        },
+        "_Jungle Door Top|meta|rot3|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Jungle Door"
+        },
+        "_Jungle Door Top|meta|rot3|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Jungle Door"
+        },
+        "_Jungle Door Top|meta|rot4|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Jungle Door"
+        },
+        "_Jungle Door Top|meta|rot4|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Jungle Door"
+        },
+        "Palm Door": {
+          displayName: {
+            translationKey: "item:palmDoor"
+          },
+          ttb: 3600,
+          itemTexture: "palm_door",
+          model: "door",
+          harvestType: "wood",
+          rootMetaDesc: "Palm Door|meta|rot1|closed",
+          particlesIgnoreBlack: !0,
+          blockModel: "Palm Door"
+        },
+        "Palm Door|meta|rot1|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Palm Door|meta|rot2|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Palm Door|meta|rot2|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Palm Door|meta|rot3|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Palm Door|meta|rot3|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Palm Door|meta|rot4|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Palm Door|meta|rot4|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "_Palm Door Top": {
+          ttb: 3600,
+          itemTexture: "palm_door",
+          harvestType: "wood",
+          model: "door",
+          drops: "Palm Door",
+          rootMetaDesc: "_Palm Door Top|meta|rot1|closed",
+          particlesIgnoreBlack: !0,
+          blockModel: "_Palm Door Top"
+        },
+        "_Palm Door Top|meta|rot1|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Palm Door"
+        },
+        "_Palm Door Top|meta|rot2|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Palm Door"
+        },
+        "_Palm Door Top|meta|rot2|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Palm Door"
+        },
+        "_Palm Door Top|meta|rot3|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Palm Door"
+        },
+        "_Palm Door Top|meta|rot3|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Palm Door"
+        },
+        "_Palm Door Top|meta|rot4|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Palm Door"
+        },
+        "_Palm Door Top|meta|rot4|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Palm Door"
+        },
+        "Pine Trapdoor": {
+          displayName: {
+            translationKey: "item:pineTrapdoor"
+          },
+          ttb: 2800,
+          itemTexture: "pine_trapdoor",
+          model: "trapdoor",
+          harvestType: "wood",
+          rootMetaDesc: "Pine Trapdoor|meta|rot1|closed",
+          blockModel: "Pine Trapdoor",
+          heldItemScale: .5,
+          blockModelItem: !0
+        },
+        "Pine Trapdoor|meta|rot1|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Pine Trapdoor|meta|rot2|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Pine Trapdoor|meta|rot2|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Pine Trapdoor|meta|rot3|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Pine Trapdoor|meta|rot3|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Pine Trapdoor|meta|rot4|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Pine Trapdoor|meta|rot4|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Plum Trapdoor": {
+          displayName: {
+            translationKey: "item:plumTrapdoor"
+          },
+          ttb: 2800,
+          itemTexture: "plum_trapdoor",
+          model: "trapdoor",
+          harvestType: "wood",
+          rootMetaDesc: "Plum Trapdoor|meta|rot1|closed",
+          blockModel: "Plum Trapdoor",
+          heldItemScale: .5,
+          blockModelItem: !0
+        },
+        "Plum Trapdoor|meta|rot1|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Plum Trapdoor|meta|rot2|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Plum Trapdoor|meta|rot2|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Plum Trapdoor|meta|rot3|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Plum Trapdoor|meta|rot3|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Plum Trapdoor|meta|rot4|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Plum Trapdoor|meta|rot4|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Cedar Trapdoor": {
+          displayName: {
+            translationKey: "item:cedarTrapdoor"
+          },
+          ttb: 2800,
+          itemTexture: "cedar_trapdoor",
+          model: "trapdoor",
+          harvestType: "wood",
+          rootMetaDesc: "Cedar Trapdoor|meta|rot1|closed",
+          blockModel: "Cedar Trapdoor",
+          heldItemScale: .5,
+          blockModelItem: !0
+        },
+        "Cedar Trapdoor|meta|rot1|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Cedar Trapdoor|meta|rot2|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Cedar Trapdoor|meta|rot2|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Cedar Trapdoor|meta|rot3|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Cedar Trapdoor|meta|rot3|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Cedar Trapdoor|meta|rot4|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Cedar Trapdoor|meta|rot4|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Aspen Trapdoor": {
+          displayName: {
+            translationKey: "item:aspenTrapdoor"
+          },
+          ttb: 2800,
+          itemTexture: "aspen_trapdoor",
+          model: "trapdoor",
+          harvestType: "wood",
+          rootMetaDesc: "Aspen Trapdoor|meta|rot1|closed",
+          blockModel: "Aspen Trapdoor",
+          heldItemScale: .5,
+          blockModelItem: !0
+        },
+        "Aspen Trapdoor|meta|rot1|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Aspen Trapdoor|meta|rot2|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Aspen Trapdoor|meta|rot2|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Aspen Trapdoor|meta|rot3|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Aspen Trapdoor|meta|rot3|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Aspen Trapdoor|meta|rot4|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Aspen Trapdoor|meta|rot4|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Jungle Trapdoor": {
+          displayName: {
+            translationKey: "item:jungleTrapdoor"
+          },
+          ttb: 2800,
+          itemTexture: "jungle_trapdoor",
+          model: "trapdoor",
+          harvestType: "wood",
+          rootMetaDesc: "Jungle Trapdoor|meta|rot1|closed",
+          blockModel: "Jungle Trapdoor",
+          heldItemScale: .5,
+          blockModelItem: !0
+        },
+        "Jungle Trapdoor|meta|rot1|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Jungle Trapdoor|meta|rot2|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Jungle Trapdoor|meta|rot2|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Jungle Trapdoor|meta|rot3|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Jungle Trapdoor|meta|rot3|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Jungle Trapdoor|meta|rot4|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Jungle Trapdoor|meta|rot4|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Palm Trapdoor": {
+          displayName: {
+            translationKey: "item:palmTrapdoor"
+          },
+          ttb: 2800,
+          itemTexture: "palm_trapdoor",
+          model: "trapdoor",
+          harvestType: "wood",
+          rootMetaDesc: "Palm Trapdoor|meta|rot1|closed",
+          blockModel: "Palm Trapdoor",
+          heldItemScale: .5,
+          blockModelItem: !0
+        },
+        "Palm Trapdoor|meta|rot1|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Palm Trapdoor|meta|rot2|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Palm Trapdoor|meta|rot2|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Palm Trapdoor|meta|rot3|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Palm Trapdoor|meta|rot3|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Palm Trapdoor|meta|rot4|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Palm Trapdoor|meta|rot4|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Red Sand": {
+          displayName: {
+            translationKey: "item:redSand"
+          },
+          ttb: 600,
+          textureInfo: "red_sand",
+          harvestType: "granule",
+          soundType: {
+            break: "sand",
+            place: "sand"
+          }
+        },
+        "Red Sandstone Bricks": {
+          displayName: {
+            translationKey: "item:redSandstoneBricks"
+          },
+          ttb: 960,
+          textureInfo: "red_sandstone_brick",
+          harvestType: "rock"
+        },
+        "Rocky Dirt": {
+          displayName: {
+            translationKey: "item:rockyDirt"
+          },
+          ttb: 600,
+          textureInfo: "rocky_dirt",
+          harvestType: "granule"
+        },
+        "Autumn Maple Leaves": {
+          displayName: {
+            translationKey: "item:autumnMapleLeaves"
+          },
+          ttb: 350,
+          textureInfo: "leaves_maple_autumn",
+          harvestType: "cuttable"
+        },
+        "Autumn Maple Leaves|TreeCanopy": {
+          ttb: 350,
+          textureInfo: "leaves_maple_autumn",
+          harvestType: "cuttable",
+          drops: "Autumn Maple Leaves"
+        },
+        ...(0, yY.Ib)("Fallen Maple Leaves", {
+          displayName: {
+            translationKey: "item:fallenMapleLeaves"
+          },
+          ttb: 350,
+          textureInfo: ["fallen_maple_leaves_side", "leaves_maple_autumn"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          solid: !1,
+          harvestType: "cuttable",
+          rootMetaDesc: "Fallen Maple Leaves|meta|rot1|bot"
+        }),
+        ...(0, yY.Ib)("Maple Slab", {
+          displayName: {
+            translationKey: "item:mapleSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_maple_side", "planks_maple"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "wood",
+          slabFullBlock: "Maple Wood Planks",
+          rootMetaDesc: "Maple Slab|meta|rot1|bot"
+        }),
+        ...(0, yY.Ib)("Pine Slab", {
+          displayName: {
+            translationKey: "item:pineSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_pine_side", "planks_pine"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "wood",
+          slabFullBlock: "Pine Wood Planks",
+          rootMetaDesc: "Pine Slab|meta|rot1|bot"
+        }),
+        ...(0, yY.Ib)("Plum Slab", {
+          displayName: {
+            translationKey: "item:plumSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_plum_side", "planks_plum"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "wood",
+          slabFullBlock: "Plum Wood Planks",
+          rootMetaDesc: "Plum Slab|meta|rot1|bot"
+        }),
+        ...(0, yY.Ib)("Cedar Slab", {
+          displayName: {
+            translationKey: "item:cedarSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_cedar_side", "planks_cedar"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "wood",
+          slabFullBlock: "Cedar Wood Planks",
+          rootMetaDesc: "Cedar Slab|meta|rot1|bot"
+        }),
+        ...(0, yY.Ib)("Aspen Slab", {
+          displayName: {
+            translationKey: "item:aspenSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_aspen_side", "planks_aspen"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "wood",
+          slabFullBlock: "Aspen Wood Planks",
+          rootMetaDesc: "Aspen Slab|meta|rot1|bot"
+        }),
+        ...(0, yY.Ib)("Jungle Slab", {
+          displayName: {
+            translationKey: "item:jungleSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_jungle_side", "planks_jungle"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "wood",
+          slabFullBlock: "Jungle Wood Planks",
+          rootMetaDesc: "Jungle Slab|meta|rot1|bot"
+        }),
+        ...(0, yY.Ib)("Palm Slab", {
+          displayName: {
+            translationKey: "item:palmSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_palm_side", "planks_palm"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "wood",
+          slabFullBlock: "Palm Wood Planks",
+          rootMetaDesc: "Palm Slab|meta|rot1|bot"
+        }),
+        ...(0, yY.Ib)("Dirt Slab", {
+          displayName: {
+            translationKey: "item:dirtSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_dirt_side", "dirt"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "granule",
+          slabFullBlock: "Dirt",
+          rootMetaDesc: "Dirt Slab|meta|rot1|bot"
+        }),
+        ...(0, yY.Ib)("Grass Slab", {
+          displayName: {
+            translationKey: "item:grassSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_grass_top_side", "grass_top"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "granule",
+          slabFullBlock: "Grass Block",
+          rootMetaDesc: "Grass Slab|meta|rot1|bot"
+        }),
+        ...(0, yY.Ib)("Messy Stone Slab", {
+          displayName: {
+            translationKey: "item:messyStoneSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_cobblestone_side", "messy_stone"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Messy Stone",
+          rootMetaDesc: "Messy Stone Slab|meta|rot1|bot"
+        }),
+        ...(0, yY.Ib)("Stone Slab", {
+          displayName: {
+            translationKey: "item:stoneSlab"
+          },
+          ttb: 800,
+          textureInfo: ["slab_stone_side", "stone"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Stone",
+          rootMetaDesc: "Stone Slab|meta|rot1|bot"
+        }),
+        ...(0, yY.Ib)("Smooth Stone Slab", {
+          displayName: {
+            translationKey: "item:smoothStoneSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_smooth_stone_side", "smooth_stone"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Smooth Stone",
+          rootMetaDesc: "Smooth Stone Slab|meta|rot1|bot"
+        }),
+        ...(0, yY.Ib)("Engraved Stone Slab", {
+          displayName: {
+            translationKey: "item:engravedStoneSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_stonebrick_carved_side", "stonebrick_carved"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Engraved Stone",
+          rootMetaDesc: "Engraved Stone Slab|meta|rot1|bot"
+        }),
+        ...(0, yY.Ib)("Stone Bricks Slab", {
+          displayName: {
+            translationKey: "item:stoneBricksSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_stonebrick_side", "stonebrick"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Stone Bricks",
+          rootMetaDesc: "Stone Bricks Slab|meta|rot1|bot"
+        }),
+        ...(0, yY.Ib)("Mossy Stone Slab", {
+          displayName: {
+            translationKey: "item:mossyStoneSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_mossy_cobblestone_side", "mossy_cobblestone"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Mossy Messy Stone",
+          rootMetaDesc: "Mossy Stone Slab|meta|rot1|bot"
+        }),
+        ...(0, yY.Ib)("Mossy Stone Bricks Slab", {
+          displayName: {
+            translationKey: "item:mossyStoneBricksSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_stonebrick_mossy_side", "stonebrick_mossy"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Mossy Stone Bricks",
+          rootMetaDesc: "Mossy Stone Bricks Slab|meta|rot1|bot"
+        }),
+        ...(0, yY.Ib)("Andesite Slab", {
+          displayName: {
+            translationKey: "item:andesiteSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_stone_andesite_side", "stone_andesite"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Andesite",
+          rootMetaDesc: "Andesite Slab|meta|rot1|bot"
+        }),
+        ...(0, yY.Ib)("Smooth Andesite Slab", {
+          displayName: {
+            translationKey: "item:smoothAndesiteSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_stone_andesite_smooth_side", "stone_andesite_smooth"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Smooth Andesite",
+          rootMetaDesc: "Smooth Andesite Slab|meta|rot1|bot"
+        }),
+        ...(0, yY.Ib)("Engraved Andesite Slab", {
+          displayName: {
+            translationKey: "item:engravedAndesiteSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_engraved_andesite_side", "engraved_andesite"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Engraved Andesite",
+          rootMetaDesc: "Engraved Andesite Slab|meta|rot1|bot"
+        }),
+        ...(0, yY.Ib)("Andesite Bricks Slab", {
+          displayName: {
+            translationKey: "item:andesiteBricksSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_andesite_brick_side", "andesite_brick"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Andesite Bricks",
+          rootMetaDesc: "Andesite Bricks Slab|meta|rot1|bot"
+        }),
+        ...(0, yY.Ib)("Diorite Slab", {
+          displayName: {
+            translationKey: "item:dioriteSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_stone_diorite_side", "stone_diorite"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Diorite",
+          rootMetaDesc: "Diorite Slab|meta|rot1|bot"
+        }),
+        ...(0, yY.Ib)("Smooth Diorite Slab", {
+          displayName: {
+            translationKey: "item:smoothDioriteSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_stone_diorite_smooth_side", "stone_diorite_smooth"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Smooth Diorite",
+          rootMetaDesc: "Smooth Diorite Slab|meta|rot1|bot"
+        }),
+        ...(0, yY.Ib)("Engraved Diorite Slab", {
+          displayName: {
+            translationKey: "item:engravedDioriteSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_engraved_diorite_side", "engraved_diorite"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Engraved Diorite",
+          rootMetaDesc: "Engraved Diorite Slab|meta|rot1|bot"
+        }),
+        ...(0, yY.Ib)("Diorite Bricks Slab", {
+          displayName: {
+            translationKey: "item:dioriteBricksSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_diorite_brick_side", "diorite_brick"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Diorite Bricks",
+          rootMetaDesc: "Diorite Bricks Slab|meta|rot1|bot"
+        }),
+        ...(0, yY.Ib)("Granite Slab", {
+          displayName: {
+            translationKey: "item:graniteSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_stone_granite_side", "stone_granite"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Granite",
+          rootMetaDesc: "Granite Slab|meta|rot1|bot"
+        }),
+        ...(0, yY.Ib)("Smooth Granite Slab", {
+          displayName: {
+            translationKey: "item:smoothGraniteSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_stone_granite_smooth_side", "stone_granite_smooth"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Smooth Granite",
+          rootMetaDesc: "Smooth Granite Slab|meta|rot1|bot"
+        }),
+        ...(0, yY.Ib)("Engraved Granite Slab", {
+          displayName: {
+            translationKey: "item:engravedGraniteSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_engraved_granite_side", "engraved_granite"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Engraved Granite",
+          rootMetaDesc: "Engraved Granite Slab|meta|rot1|bot"
+        }),
+        ...(0, yY.Ib)("Granite Bricks Slab", {
+          displayName: {
+            translationKey: "item:graniteBricksSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_granite_brick_side", "granite_brick"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Granite Bricks",
+          rootMetaDesc: "Granite Bricks Slab|meta|rot1|bot"
+        }),
+        ...(0, yY.Ib)("Sandstone Slab", {
+          displayName: {
+            translationKey: "item:sandstoneSlab"
+          },
+          ttb: 640,
+          textureInfo: ["slab_sandstone_normal_side", "sandstone_normal"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Sandstone",
+          rootMetaDesc: "Sandstone Slab|meta|rot1|bot"
+        }),
+        ...(0, yY.Ib)("Smooth Sandstone Slab", {
+          displayName: {
+            translationKey: "item:smoothSandstoneSlab"
+          },
+          ttb: 640,
+          textureInfo: "sandstone_top",
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Smooth Sandstone",
+          rootMetaDesc: "Smooth Sandstone Slab|meta|rot1|bot"
+        }),
+        ...(0, yY.Ib)("Engraved Sandstone Slab", {
+          displayName: {
+            translationKey: "item:engravedSandstoneSlab"
+          },
+          ttb: 640,
+          textureInfo: ["slab_chiseled_sandstone_side", "chiseled_sandstone"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Engraved Sandstone",
+          rootMetaDesc: "Engraved Sandstone Slab|meta|rot1|bot"
+        }),
+        ...(0, yY.Ib)("Marked Sandstone Slab", {
+          displayName: {
+            translationKey: "item:markedSandstoneSlab"
+          },
+          ttb: 640,
+          textureInfo: ["slab_cut_sandstone_side", "cut_sandstone"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Marked Sandstone",
+          rootMetaDesc: "Marked Sandstone Slab|meta|rot1|bot"
+        }),
+        ...(0, yY.Ib)("Sandstone Bricks Slab", {
+          displayName: {
+            translationKey: "item:sandstoneBricksSlab"
+          },
+          ttb: 640,
+          textureInfo: ["slab_sandstone_brick_side", "sandstone_brick"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Sandstone Bricks",
+          rootMetaDesc: "Sandstone Bricks Slab|meta|rot1|bot"
+        }),
+        ...(0, yY.Ib)("Red Sandstone Slab", {
+          displayName: {
+            translationKey: "item:redSandstoneSlab"
+          },
+          ttb: 640,
+          textureInfo: ["slab_red_sandstone_side", "red_sandstone"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Red Sandstone",
+          rootMetaDesc: "Red Sandstone Slab|meta|rot1|bot"
+        }),
+        ...(0, yY.Ib)("Smooth Red Sandstone Slab", {
+          displayName: {
+            translationKey: "item:smoothRedSandstoneSlab"
+          },
+          ttb: 640,
+          textureInfo: "red_sandstone_top",
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Smooth Red Sandstone",
+          rootMetaDesc: "Smooth Red Sandstone Slab|meta|rot1|bot"
+        }),
+        ...(0, yY.Ib)("Engraved Red Sandstone Slab", {
+          displayName: {
+            translationKey: "item:engravedRedSandstoneSlab"
+          },
+          ttb: 640,
+          textureInfo: ["slab_chiseled_red_sandstone_side", "chiseled_red_sandstone"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Engraved Red Sandstone",
+          rootMetaDesc: "Engraved Red Sandstone Slab|meta|rot1|bot"
+        }),
+        ...(0, yY.Ib)("Marked Red Sandstone Slab", {
+          displayName: {
+            translationKey: "item:markedRedSandstoneSlab"
+          },
+          ttb: 640,
+          textureInfo: ["slab_cut_red_sandstone_side", "cut_red_sandstone"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Marked Red Sandstone",
+          rootMetaDesc: "Marked Red Sandstone Slab|meta|rot1|bot"
+        }),
+        ...(0, yY.Ib)("Red Sandstone Bricks Slab", {
+          displayName: {
+            translationKey: "item:redSandstoneBricksSlab"
+          },
+          ttb: 640,
+          textureInfo: ["slab_red_sandstone_brick_side", "red_sandstone_brick"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Red Sandstone Bricks",
+          rootMetaDesc: "Red Sandstone Bricks Slab|meta|rot1|bot"
+        }),
+        ...(0, yY.Ib)("Bricks Slab", {
+          displayName: {
+            translationKey: "item:bricksSlab"
+          },
+          ttb: 1600,
+          textureInfo: ["slab_brick_side", "brick"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Bricks",
+          rootMetaDesc: "Bricks Slab|meta|rot1|bot"
+        }),
+        ...(0, yY.Ib)("Ice Bricks Slab", {
+          displayName: {
+            translationKey: "item:iceBricksSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_ice_brick_side", "ice_brick"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Ice Bricks",
+          rootMetaDesc: "Ice Bricks Slab|meta|rot1|bot",
+          harvestLevel: 0,
+          stoodOnSpeedMultiplier: 1.4
+        }),
+        "Vines|meta|rot1|Growing": {
+          ttb: 225,
+          itemTexture: "vine_coloured",
+          harvestType: "cuttable",
+          model: "rotatableOffset",
+          solid: !1,
+          rootMetaDesc: "Vines|meta|rot1|Growing",
+          blockModel: "Vines",
+          modelScale: 10,
+          heldItemScale: 10,
+          blockModelItem: !0
+        },
+        "Vines|meta|rot2|Growing": {
+          ttb: 225,
+          itemTexture: "vine_coloured",
+          harvestType: "cuttable",
+          model: "rotatableOffset",
+          solid: !1,
+          modelScale: 10,
+          heldItemScale: 10
+        },
+        "Vines|meta|rot3|Growing": {
+          ttb: 225,
+          itemTexture: "vine_coloured",
+          harvestType: "cuttable",
+          model: "rotatableOffset",
+          solid: !1,
+          modelScale: 10,
+          heldItemScale: 10
+        },
+        "Vines|meta|rot4|Growing": {
+          ttb: 225,
+          itemTexture: "vine_coloured",
+          harvestType: "cuttable",
+          model: "rotatableOffset",
+          solid: !1,
+          modelScale: 10,
+          heldItemScale: 10
+        },
+        "Cactus|Growing": {
+          ttb: 300,
+          textureInfo: "small_cactus",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "small_cactus"
+        },
+        "Fat Cactus|Growing": {
+          ttb: 400,
+          textureInfo: "cactus_top",
+          harvestType: "cuttable",
+          damage: 22
+        },
+        "Plum Block": {
+          displayName: {
+            translationKey: "item:plumBlock"
+          },
+          ttb: 600,
+          textureInfo: ["plum_block_side", "plum_block_top", "plum_block_bottom"],
+          texturePerSide: [0, 0, 1, 2, 0, 0],
+          harvestType: "wood"
+        },
+        "Coconut Block": {
+          displayName: {
+            translationKey: "item:coconutBlock"
+          },
+          ttb: 600,
+          textureInfo: ["coconut_block_side", "coconut_block_top", "coconut_block_bottom"],
+          texturePerSide: [0, 0, 1, 2, 0, 0],
+          harvestType: "wood"
+        },
+        "Pear Log": {
+          displayName: {
+            translationKey: "item:pearLog"
+          },
+          ttb: 2400,
+          textureInfo: "log_pear",
+          harvestType: "wood"
+        },
+        "Pear Wood Planks": {
+          displayName: {
+            translationKey: "item:pearWoodPlanks"
+          },
+          ttb: 1800,
+          textureInfo: "planks_pear",
+          harvestType: "wood"
+        },
+        "Pear Leaves": {
+          displayName: {
+            translationKey: "item:pearLeaves"
+          },
+          ttb: 350,
+          textureInfo: "leaves_pear",
+          harvestType: "cuttable"
+        },
+        "Pear Door": {
+          displayName: {
+            translationKey: "item:pearDoor"
+          },
+          ttb: 3600,
+          itemTexture: "pear_door",
+          model: "door",
+          harvestType: "wood",
+          rootMetaDesc: "Pear Door|meta|rot1|closed",
+          particlesIgnoreBlack: !0,
+          blockModel: "Pear Door"
+        },
+        "Pear Door|meta|rot1|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Pear Door|meta|rot2|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Pear Door|meta|rot2|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Pear Door|meta|rot3|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Pear Door|meta|rot3|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Pear Door|meta|rot4|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Pear Door|meta|rot4|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "_Pear Door Top": {
+          ttb: 3600,
+          itemTexture: "pear_door",
+          harvestType: "wood",
+          model: "door",
+          drops: "Pear Door",
+          rootMetaDesc: "_Pear Door Top|meta|rot1|closed",
+          particlesIgnoreBlack: !0,
+          blockModel: "_Pear Door Top"
+        },
+        "_Pear Door Top|meta|rot1|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Pear Door"
+        },
+        "_Pear Door Top|meta|rot2|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Pear Door"
+        },
+        "_Pear Door Top|meta|rot2|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Pear Door"
+        },
+        "_Pear Door Top|meta|rot3|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Pear Door"
+        },
+        "_Pear Door Top|meta|rot3|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Pear Door"
+        },
+        "_Pear Door Top|meta|rot4|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Pear Door"
+        },
+        "_Pear Door Top|meta|rot4|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Pear Door"
+        },
+        "Pear Trapdoor": {
+          displayName: {
+            translationKey: "item:pearTrapdoor"
+          },
+          ttb: 2800,
+          itemTexture: "pear_trapdoor",
+          model: "trapdoor",
+          harvestType: "wood",
+          rootMetaDesc: "Pear Trapdoor|meta|rot1|closed",
+          blockModel: "Pear Trapdoor",
+          heldItemScale: .5,
+          blockModelItem: !0
+        },
+        "Pear Trapdoor|meta|rot1|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Pear Trapdoor|meta|rot2|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Pear Trapdoor|meta|rot2|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Pear Trapdoor|meta|rot3|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Pear Trapdoor|meta|rot3|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Pear Trapdoor|meta|rot4|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Pear Trapdoor|meta|rot4|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Pear Sapling": {
+          displayName: {
+            translationKey: "item:pearSapling"
+          },
+          ttb: 1,
+          textureInfo: "pear_sapling",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "pear_sapling"
+        },
+        "Pear Log|TreeBase|Pear": {
+          ttb: 2400,
+          textureInfo: "log_pear",
+          harvestType: "wood",
+          drops: "Pear Log"
+        },
+        "Pear Leaves|TreeCanopy": {
+          ttb: 350,
+          textureInfo: "leaves_pear",
+          harvestType: "cuttable",
+          drops: "Pear Leaves"
+        },
+        ...(0, yY.Ib)("Pear Slab", {
+          displayName: {
+            translationKey: "item:pearSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_pear_side", "planks_pear"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "wood",
+          slabFullBlock: "Pear Wood Planks",
+          rootMetaDesc: "Pear Slab|meta|rot1|bot"
+        }),
+        "Pear Block": {
+          displayName: {
+            translationKey: "item:pearBlock"
+          },
+          ttb: 600,
+          textureInfo: ["pear_block_side", "pear_block_top", "pear_block_bottom"],
+          texturePerSide: [0, 0, 1, 2, 0, 0],
+          harvestType: "wood"
+        },
+        "Compressed Messy Stone": {
+          displayName: {
+            translationKey: "item:compressedMessyStone"
+          },
+          ttb: 12e3,
+          textureInfo: "compressed_messy_stone",
+          harvestType: "rock"
+        },
+        "Extra Compressed Messy Stone": {
+          displayName: {
+            translationKey: "item:extraCompressedMessyStone"
+          },
+          ttb: 24e3,
+          textureInfo: "extra_compressed_messy_stone",
+          harvestType: "rock"
+        },
+        "Super Compressed Messy Stone": {
+          displayName: {
+            translationKey: "item:superCompressedMessyStone"
+          },
+          ttb: 36e3,
+          textureInfo: "super_compressed_messy_stone",
+          harvestType: "rock"
+        },
+        "Hyper Compressed Messy Stone": {
+          displayName: {
+            translationKey: "item:hyperCompressedMessyStone"
+          },
+          ttb: 48e3,
+          textureInfo: "hyper_compressed_messy_stone",
+          harvestType: "rock"
+        },
+        "Ultra Compressed Messy Stone": {
+          displayName: {
+            translationKey: "item:ultraCompressedMessyStone"
+          },
+          ttb: 6e4,
+          textureInfo: "ultra_compressed_messy_stone",
+          harvestType: "rock"
+        },
+        "Mega Compressed Messy Stone": {
+          displayName: {
+            translationKey: "item:megaCompressedMessyStone"
+          },
+          ttb: 72e3,
+          textureInfo: "mega_compressed_messy_stone",
+          harvestType: "rock"
+        },
+        ...(0, yY.Bb)("Board", {
+          displayName: {
+            translationKey: "item:board"
+          },
+          ttb: 1200,
+          itemTexture: "board",
+          model: "rotatableOffset",
+          harvestType: "wood",
+          solid: !1,
+          rootMetaDesc: "Board|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: .8,
+          blockModel: "Board"
+        }),
+        Net: {
+          displayName: {
+            translationKey: "item:net"
+          },
+          ttb: 400,
+          textureInfo: "net",
+          model: "CentreCross",
+          heldItemScale: 1,
+          solid: !1,
+          harvestType: "wood",
+          description: {
+            translationKey: "item:netDescription"
+          },
+          itemTexture: "net"
+        },
+        Cobweb: {
+          displayName: {
+            translationKey: "item:cobweb"
+          },
+          ttb: 300,
+          textureInfo: "cobweb",
+          model: "CentreCross",
+          heldItemScale: 1,
+          solid: !1,
+          harvestType: "cuttable",
+          description: {
+            translationKey: "item:cobwebDescription"
+          },
+          itemTexture: "cobweb"
+        },
+        "Brown Mushroom Block": {
+          displayName: {
+            translationKey: "item:brownMushroomBlock"
+          },
+          ttb: 1200,
+          textureInfo: "brown_mushroom_block",
+          harvestType: "cuttable"
+        },
+        "Red Mushroom Block": {
+          displayName: {
+            translationKey: "item:redMushroomBlock"
+          },
+          ttb: 1200,
+          textureInfo: "red_mushroom_block",
+          harvestType: "cuttable"
+        },
+        "Mushroom Stem": {
+          displayName: {
+            translationKey: "item:mushroomStem"
+          },
+          ttb: 1200,
+          textureInfo: "mushroom_stem",
+          harvestType: "cuttable"
+        },
+        "Fireball Block": {
+          displayName: {
+            translationKey: "item:fireballBlock"
+          },
+          ttb: 1,
+          textureInfo: "fireball_block",
+          harvestType: "rock",
+          unlitStandaloneMesh: !0
+        },
+        "Iceball Block": {
+          displayName: {
+            translationKey: "item:iceballBlock"
+          },
+          ttb: 1,
+          textureInfo: "iceball_block",
+          harvestType: "rock",
+          unlitStandaloneMesh: !0
+        },
+        "Watermelon Seeds": {
+          displayName: {
+            translationKey: "item:watermelonSeeds"
+          },
+          ttb: 400,
+          textureInfo: "melon_stem",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "watermelon_seeds",
+          description: {
+            translationKey: "item:watermelonSeedsDescription"
+          }
+        },
+        "Watermelon Seeds|Growing": {
+          ttb: 400,
+          textureInfo: "melon_stem",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: "Watermelon Seeds"
+        },
+        ...(0, yY.Bb)("Attached Watermelon Stem", {
+          displayName: {
+            translationKey: "item:attachedWatermelonStem"
+          },
+          ttb: 400,
+          textureInfo: ["attached_melon_stem_wrapper", "attached_melon_stem"],
+          model: "CustomPlanes|rotatable",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: "Watermelon Seeds",
+          rootMetaDesc: "Attached Watermelon Stem|meta|rot1",
+          customPlanesInfo: [{
+            textureIdx: 0,
+            yRot: Math.PI / 4
+          }, {
+            textureIdx: 0,
+            yRot: 3 * Math.PI / 4
+          }, {
+            textureIdx: 1,
+            yRot: 3 * Math.PI / 2
           }]
-        }
-
-        function mB(BB) {
-          let {
-            text: TB,
-            label: dB,
-            className: VB
-          } = BB;
-          const [yB, lB] = vB(), JB = !1 === (null === yB || void 0 === yB ? void 0 : yB.failed);
-          return (0, DB.jsxs)("button", {
-            type: "button",
-            className: pB()("DocsCopyButton", VB, {
-              Copied: JB
-            }),
-            title: `Copy ${TB.length>40?"to clipboard":TB}`,
-            "aria-label": dB ? void 0 : `Copy ${TB}`,
-            onClick: BB => {
-              BB.stopPropagation(), lB(TB)
+        }),
+        "Pumpkin Seeds": {
+          displayName: {
+            translationKey: "item:pumpkinSeeds"
+          },
+          ttb: 400,
+          textureInfo: "melon_stem",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "pumpkin_seeds",
+          description: {
+            translationKey: "item:pumpkinSeedsDescription"
+          }
+        },
+        "Pumpkin Seeds|Growing": {
+          ttb: 400,
+          textureInfo: "melon_stem",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: "Pumpkin Seeds"
+        },
+        ...(0, yY.Bb)("Attached Pumpkin Stem", {
+          displayName: {
+            translationKey: "item:attachedPumpkinStem"
+          },
+          ttb: 400,
+          textureInfo: ["attached_melon_stem_wrapper", "attached_melon_stem"],
+          model: "CustomPlanes|rotatable",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: "Pumpkin Seeds",
+          rootMetaDesc: "Attached Pumpkin Stem|meta|rot1",
+          customPlanesInfo: [{
+            textureIdx: 0,
+            yRot: Math.PI / 4
+          }, {
+            textureIdx: 0,
+            yRot: 3 * Math.PI / 4
+          }, {
+            textureIdx: 1,
+            yRot: 3 * Math.PI / 2
+          }]
+        }),
+        Pumpkin: {
+          displayName: {
+            translationKey: "item:pumpkin"
+          },
+          ttb: 1200,
+          textureInfo: ["pumpkin_side", "pumpkin_top"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          harvestType: "wood"
+        },
+        ...(0, yY.Eb)("Carved Pumpkin", {
+          displayName: {
+            translationKey: "item:carvedPumpkin"
+          },
+          ttb: 1200,
+          textureInfo: ["carved_pumpkin", "pumpkin_side", "pumpkin_top"],
+          harvestType: "wood",
+          rootMetaDesc: "Carved Pumpkin|meta|rot1"
+        }),
+        ...(0, yY.Eb)("Jack o'Lantern", {
+          displayName: {
+            translationKey: "item:jackO'Lantern"
+          },
+          ttb: 1200,
+          textureInfo: ["pumpkin_face_on", "pumpkin_side", "pumpkin_top"],
+          harvestType: "wood",
+          rootMetaDesc: "Jack o'Lantern|meta|rot1",
+          My: [14, 10, 4]
+        }),
+        "Melon Seeds": {
+          displayName: {
+            translationKey: "item:melonSeeds"
+          },
+          ttb: 400,
+          textureInfo: "melon_stem",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "melon_seeds",
+          description: {
+            translationKey: "item:melonSeedsDescription"
+          }
+        },
+        "Melon Seeds|Growing": {
+          ttb: 400,
+          textureInfo: "melon_stem",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: "Melon Seeds"
+        },
+        ...(0, yY.Bb)("Attached Melon Stem", {
+          displayName: {
+            translationKey: "item:attachedMelonStem"
+          },
+          ttb: 400,
+          textureInfo: ["attached_melon_stem_wrapper", "attached_melon_stem"],
+          model: "CustomPlanes|rotatable",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: "Melon Seeds",
+          rootMetaDesc: "Attached Melon Stem|meta|rot1",
+          customPlanesInfo: [{
+            textureIdx: 0,
+            yRot: Math.PI / 4
+          }, {
+            textureIdx: 0,
+            yRot: 3 * Math.PI / 4
+          }, {
+            textureIdx: 1,
+            yRot: 3 * Math.PI / 2
+          }]
+        }),
+        Melon: {
+          displayName: {
+            translationKey: "item:melon"
+          },
+          ttb: 1200,
+          textureInfo: ["melon_side", "melon_top"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          harvestType: "wood"
+        },
+        "Iron Watermelon": {
+          displayName: {
+            translationKey: "item:ironWatermelon"
+          },
+          ttb: 1200,
+          textureInfo: ["iron_watermelon_side", "iron_watermelon_top"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          harvestType: "rock"
+        },
+        "Patterned Black Glass": {
+          displayName: {
+            translationKey: "item:patternedBlackGlass"
+          },
+          ttb: 450,
+          textureInfo: "patterned_glass_black",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Patterned Blue Glass": {
+          displayName: {
+            translationKey: "item:patternedBlueGlass"
+          },
+          ttb: 450,
+          textureInfo: "patterned_glass_blue",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Patterned Brown Glass": {
+          displayName: {
+            translationKey: "item:patternedBrownGlass"
+          },
+          ttb: 450,
+          textureInfo: "patterned_glass_brown",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Patterned Cyan Glass": {
+          displayName: {
+            translationKey: "item:patternedCyanGlass"
+          },
+          ttb: 450,
+          textureInfo: "patterned_glass_cyan",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Patterned Gray Glass": {
+          displayName: {
+            translationKey: "item:patternedGrayGlass"
+          },
+          ttb: 450,
+          textureInfo: "patterned_glass_gray",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Patterned Light Gray Glass": {
+          displayName: {
+            translationKey: "item:patternedLightGrayGlass"
+          },
+          ttb: 450,
+          textureInfo: "patterned_glass_light_gray",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Patterned Green Glass": {
+          displayName: {
+            translationKey: "item:patternedGreenGlass"
+          },
+          ttb: 450,
+          textureInfo: "patterned_glass_green",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Patterned Light Blue Glass": {
+          displayName: {
+            translationKey: "item:patternedLightBlueGlass"
+          },
+          ttb: 450,
+          textureInfo: "patterned_glass_light_blue",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Patterned Lime Glass": {
+          displayName: {
+            translationKey: "item:patternedLimeGlass"
+          },
+          ttb: 450,
+          textureInfo: "patterned_glass_lime",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Patterned Magenta Glass": {
+          displayName: {
+            translationKey: "item:patternedMagentaGlass"
+          },
+          ttb: 450,
+          textureInfo: "patterned_glass_magenta",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Patterned Orange Glass": {
+          displayName: {
+            translationKey: "item:patternedOrangeGlass"
+          },
+          ttb: 450,
+          textureInfo: "patterned_glass_orange",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Patterned Pink Glass": {
+          displayName: {
+            translationKey: "item:patternedPinkGlass"
+          },
+          ttb: 450,
+          textureInfo: "patterned_glass_pink",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Patterned Purple Glass": {
+          displayName: {
+            translationKey: "item:patternedPurpleGlass"
+          },
+          ttb: 450,
+          textureInfo: "patterned_glass_purple",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Patterned Red Glass": {
+          displayName: {
+            translationKey: "item:patternedRedGlass"
+          },
+          ttb: 450,
+          textureInfo: "patterned_glass_red",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Patterned White Glass": {
+          displayName: {
+            translationKey: "item:patternedWhiteGlass"
+          },
+          ttb: 450,
+          textureInfo: "patterned_glass_white",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Patterned Yellow Glass": {
+          displayName: {
+            translationKey: "item:patternedYellowGlass"
+          },
+          ttb: 450,
+          textureInfo: "patterned_glass_yellow",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        ...(0, yY.Bb)("Potion Table", {
+          displayName: {
+            translationKey: "item:potionTable"
+          },
+          ttb: 1200,
+          harvestType: "wood",
+          rootMetaDesc: "Potion Table|meta|rot1",
+          description: {
+            translationKey: "item:potionTableDescription"
+          },
+          ...VY("Potion Table", "potion_table", {
+            textureAnimation: {
+              frames: 4,
+              animationInterval: 200
+            }
+          })
+        }),
+        ...(0, yY.Bb)("Pine Ladder", {
+          displayName: {
+            translationKey: "item:pineLadder"
+          },
+          ttb: 1e3,
+          itemTexture: "ladder_pine",
+          model: "rotatableOffset",
+          harvestType: "wood",
+          rootMetaDesc: "Pine Ladder|meta|rot1",
+          modelScale: 10,
+          solid: !1,
+          blockModel: "Pine Ladder",
+          heldItemScale: 10,
+          blockModelItem: !0,
+          rotatableOffsetAmt: .375
+        }),
+        ...(0, yY.Bb)("Plum Ladder", {
+          displayName: {
+            translationKey: "item:plumLadder"
+          },
+          ttb: 1e3,
+          itemTexture: "ladder_plum",
+          model: "rotatableOffset",
+          harvestType: "wood",
+          rootMetaDesc: "Plum Ladder|meta|rot1",
+          modelScale: 10,
+          solid: !1,
+          blockModel: "Plum Ladder",
+          heldItemScale: 10,
+          blockModelItem: !0,
+          rotatableOffsetAmt: .375
+        }),
+        ...(0, yY.Bb)("Cedar Ladder", {
+          displayName: {
+            translationKey: "item:cedarLadder"
+          },
+          ttb: 1e3,
+          itemTexture: "ladder_cedar",
+          model: "rotatableOffset",
+          harvestType: "wood",
+          rootMetaDesc: "Cedar Ladder|meta|rot1",
+          modelScale: 10,
+          solid: !1,
+          blockModel: "Cedar Ladder",
+          heldItemScale: 10,
+          blockModelItem: !0
+        }),
+        ...(0, yY.Bb)("Aspen Ladder", {
+          displayName: {
+            translationKey: "item:aspenLadder"
+          },
+          ttb: 1e3,
+          itemTexture: "ladder_aspen",
+          model: "rotatableOffset",
+          harvestType: "wood",
+          rootMetaDesc: "Aspen Ladder|meta|rot1",
+          modelScale: 10,
+          solid: !1,
+          blockModel: "Aspen Ladder",
+          heldItemScale: 10,
+          blockModelItem: !0
+        }),
+        ...(0, yY.Bb)("Jungle Ladder", {
+          displayName: {
+            translationKey: "item:jungleLadder"
+          },
+          ttb: 1e3,
+          itemTexture: "ladder_jungle",
+          model: "rotatableOffset",
+          harvestType: "wood",
+          rootMetaDesc: "Jungle Ladder|meta|rot1",
+          modelScale: 10,
+          solid: !1,
+          blockModel: "Jungle Ladder",
+          heldItemScale: 10,
+          blockModelItem: !0,
+          rotatableOffsetAmt: .375
+        }),
+        ...(0, yY.Bb)("Palm Ladder", {
+          displayName: {
+            translationKey: "item:palmLadder"
+          },
+          ttb: 1e3,
+          itemTexture: "ladder_palm",
+          model: "rotatableOffset",
+          harvestType: "wood",
+          rootMetaDesc: "Palm Ladder|meta|rot1",
+          modelScale: 10,
+          solid: !1,
+          blockModel: "Palm Ladder",
+          heldItemScale: 10,
+          blockModelItem: !0
+        }),
+        ...(0, yY.Bb)("Pear Ladder", {
+          displayName: {
+            translationKey: "item:pearLadder"
+          },
+          ttb: 1e3,
+          itemTexture: "ladder_pear",
+          model: "rotatableOffset",
+          harvestType: "wood",
+          rootMetaDesc: "Pear Ladder|meta|rot1",
+          modelScale: 10,
+          solid: !1,
+          blockModel: "Pear Ladder",
+          heldItemScale: 10,
+          blockModelItem: !0
+        }),
+        "Black Carpet": {
+          displayName: {
+            translationKey: "item:blackCarpet"
+          },
+          ttb: 300,
+          itemTexture: "carpet_black_icon",
+          model: "CustomModel",
+          harvestType: "cuttable",
+          solid: !1,
+          ns: SY,
+          blockModel: "carpet_black_model",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          particlesIgnoreBlack: !0
+        },
+        "Blue Carpet": {
+          displayName: {
+            translationKey: "item:blueCarpet"
+          },
+          ttb: 300,
+          itemTexture: "carpet_blue_icon",
+          model: "CustomModel",
+          harvestType: "cuttable",
+          solid: !1,
+          ns: SY,
+          blockModel: "carpet_blue_model",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          particlesIgnoreBlack: !0
+        },
+        "Brown Carpet": {
+          displayName: {
+            translationKey: "item:brownCarpet"
+          },
+          ttb: 300,
+          itemTexture: "carpet_brown_icon",
+          model: "CustomModel",
+          harvestType: "cuttable",
+          solid: !1,
+          ns: SY,
+          blockModel: "carpet_brown_model",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          particlesIgnoreBlack: !0
+        },
+        "Cyan Carpet": {
+          displayName: {
+            translationKey: "item:cyanCarpet"
+          },
+          ttb: 300,
+          itemTexture: "carpet_cyan_icon",
+          model: "CustomModel",
+          harvestType: "cuttable",
+          solid: !1,
+          ns: SY,
+          blockModel: "carpet_cyan_model",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          particlesIgnoreBlack: !0
+        },
+        "Gray Carpet": {
+          displayName: {
+            translationKey: "item:grayCarpet"
+          },
+          ttb: 300,
+          itemTexture: "carpet_gray_icon",
+          model: "CustomModel",
+          harvestType: "cuttable",
+          solid: !1,
+          ns: SY,
+          blockModel: "carpet_gray_model",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          particlesIgnoreBlack: !0
+        },
+        "Light Gray Carpet": {
+          displayName: {
+            translationKey: "item:lightGrayCarpet"
+          },
+          ttb: 300,
+          itemTexture: "carpet_light_gray_icon",
+          model: "CustomModel",
+          harvestType: "cuttable",
+          solid: !1,
+          ns: SY,
+          blockModel: "carpet_light_gray_model",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          particlesIgnoreBlack: !0
+        },
+        "Green Carpet": {
+          displayName: {
+            translationKey: "item:greenCarpet"
+          },
+          ttb: 300,
+          itemTexture: "carpet_green_icon",
+          model: "CustomModel",
+          harvestType: "cuttable",
+          solid: !1,
+          ns: SY,
+          blockModel: "carpet_green_model",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          particlesIgnoreBlack: !0
+        },
+        "Light Blue Carpet": {
+          displayName: {
+            translationKey: "item:lightBlueCarpet"
+          },
+          ttb: 300,
+          itemTexture: "carpet_light_blue_icon",
+          model: "CustomModel",
+          harvestType: "cuttable",
+          solid: !1,
+          ns: SY,
+          blockModel: "carpet_light_blue_model",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          particlesIgnoreBlack: !0
+        },
+        "Lime Carpet": {
+          displayName: {
+            translationKey: "item:limeCarpet"
+          },
+          ttb: 300,
+          itemTexture: "carpet_lime_icon",
+          model: "CustomModel",
+          harvestType: "cuttable",
+          solid: !1,
+          ns: SY,
+          blockModel: "carpet_lime_model",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          particlesIgnoreBlack: !0
+        },
+        "Magenta Carpet": {
+          displayName: {
+            translationKey: "item:magentaCarpet"
+          },
+          ttb: 300,
+          itemTexture: "carpet_magenta_icon",
+          model: "CustomModel",
+          harvestType: "cuttable",
+          solid: !1,
+          ns: SY,
+          blockModel: "carpet_magenta_model",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          particlesIgnoreBlack: !0
+        },
+        "Orange Carpet": {
+          displayName: {
+            translationKey: "item:orangeCarpet"
+          },
+          ttb: 300,
+          itemTexture: "carpet_orange_icon",
+          model: "CustomModel",
+          harvestType: "cuttable",
+          solid: !1,
+          ns: SY,
+          blockModel: "carpet_orange_model",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          particlesIgnoreBlack: !0
+        },
+        "Pink Carpet": {
+          displayName: {
+            translationKey: "item:pinkCarpet"
+          },
+          ttb: 300,
+          itemTexture: "carpet_pink_icon",
+          model: "CustomModel",
+          harvestType: "cuttable",
+          solid: !1,
+          ns: SY,
+          blockModel: "carpet_pink_model",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          particlesIgnoreBlack: !0
+        },
+        "Purple Carpet": {
+          displayName: {
+            translationKey: "item:purpleCarpet"
+          },
+          ttb: 300,
+          itemTexture: "carpet_purple_icon",
+          model: "CustomModel",
+          harvestType: "cuttable",
+          solid: !1,
+          ns: SY,
+          blockModel: "carpet_purple_model",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          particlesIgnoreBlack: !0
+        },
+        "Red Carpet": {
+          displayName: {
+            translationKey: "item:redCarpet"
+          },
+          ttb: 300,
+          itemTexture: "carpet_red_icon",
+          model: "CustomModel",
+          harvestType: "cuttable",
+          solid: !1,
+          ns: SY,
+          blockModel: "carpet_red_model",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          particlesIgnoreBlack: !0
+        },
+        "White Carpet": {
+          displayName: {
+            translationKey: "item:whiteCarpet"
+          },
+          ttb: 300,
+          itemTexture: "carpet_white_icon",
+          model: "CustomModel",
+          harvestType: "cuttable",
+          solid: !1,
+          ns: SY,
+          blockModel: "carpet_white_model",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          particlesIgnoreBlack: !0
+        },
+        "Yellow Carpet": {
+          displayName: {
+            translationKey: "item:yellowCarpet"
+          },
+          ttb: 300,
+          itemTexture: "carpet_yellow_icon",
+          model: "CustomModel",
+          harvestType: "cuttable",
+          solid: !1,
+          ns: SY,
+          blockModel: "carpet_yellow_model",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          particlesIgnoreBlack: !0
+        },
+        ...(0, yY.B)("Bookshelf", {
+          displayName: {
+            translationKey: "item:bookshelf"
+          },
+          ttb: 1800,
+          textureInfo: ["bookshelf", "planks_maple"],
+          texturePerSide: [1, 1, 1, 1, 0, 0],
+          harvestType: "wood",
+          drops: null,
+          rootMetaDesc: "Bookshelf|meta|rot1|books6"
+        }),
+        ...(0, yY.eb)("Mailbox", {
+          displayName: {
+            translationKey: "item:mailbox"
+          },
+          ttb: 4200,
+          textureInfo: ["mailbox_front", "mailbox_side"],
+          texturePerSide: [1, 1, 1, 1, 0, 1],
+          harvestType: "wood",
+          rootMetaDesc: "Mailbox|meta|rot1|empty",
+          description: {
+            translationKey: "item:mailboxDescription"
+          }
+        }),
+        Rice: {
+          displayName: {
+            translationKey: "item:rice"
+          },
+          ttb: 400,
+          textureInfo: "rice_stage0",
+          model: "SquareSided",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "rice",
+          description: {
+            translationKey: "item:riceDescription"
+          }
+        },
+        ...(0, yY.sb)("Rice", {
+          displayName: {
+            translationKey: "item:rice"
+          },
+          ttb: 400,
+          model: "SquareSided",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: "Rice"
+        }, ["rice_stage2", "rice_stage3", "rice_stage4", "rice_stage5", "rice_stage6"]),
+        "Rice|FreshlyGrown": {
+          ttb: 400,
+          textureInfo: "rice_stage7",
+          model: "SquareSided",
+          solid: !1,
+          harvestType: "cuttable",
+          onMinedAura: 5
+        },
+        Cranberries: {
+          displayName: {
+            translationKey: "item:cranberries"
+          },
+          ttb: 400,
+          textureInfo: "berry_bush_stage0",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "cranberries",
+          description: {
+            translationKey: "item:cranberriesDescription"
+          }
+        },
+        ...(0, yY.sb)("Cranberries", {
+          ttb: 400,
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: "Cranberries"
+        }, ["berry_bush_stage1", "berry_bush_stage2"], {
+          2: {
+            onMinedAura: 5
+          }
+        }),
+        "Red Mushroom": {
+          displayName: {
+            translationKey: "item:redMushroom"
+          },
+          ttb: 400,
+          textureInfo: "red_mushroom",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "red_mushroom"
+        },
+        "Brown Mushroom": {
+          displayName: {
+            translationKey: "item:brownMushroom"
+          },
+          ttb: 400,
+          textureInfo: "brown_mushroom",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "brown_mushroom"
+        },
+        "Cotton Seeds": {
+          displayName: {
+            translationKey: "item:cottonSeeds"
+          },
+          ttb: 400,
+          textureInfo: "cotton_plant_stage0",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "cotton_seeds",
+          description: {
+            translationKey: "item:cottonSeedsDescription"
+          }
+        },
+        ...(0, yY.sb)("Cotton", {
+          displayName: {
+            translationKey: "item:cotton"
+          },
+          ttb: 400,
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: "Cotton Seeds"
+        }, ["cotton_plant_stage1", "cotton_plant_stage2", "cotton_plant_stage3"], {
+          3: {
+            onMinedAura: 5
+          }
+        }),
+        "Tribe Protector": {
+          displayName: {
+            translationKey: "item:tribeProtector"
+          },
+          ttb: 5e3,
+          textureInfo: "protector_tribe",
+          harvestType: "rock",
+          description: {
+            translationKey: "item:tribeProtectorDescription"
+          }
+        },
+        "Tall Grass": {
+          displayName: {
+            translationKey: "item:tallGrass"
+          },
+          ttb: 1,
+          textureInfo: "tall_grass_bottom",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          drops: null,
+          specialToolDrop: {
+            tool: "Shears",
+            drops: "Tall Grass"
+          },
+          itemTexture: "tall_grass_bottom",
+          canBePlacedOver: !0
+        },
+        "Tall Grass|Top": {
+          ttb: 1,
+          textureInfo: "tall_grass_top",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          drops: null,
+          specialToolDrop: {
+            tool: "Shears",
+            drops: "Tall Grass"
+          },
+          itemTexture: "tall_grass_top",
+          canBePlacedOver: !0
+        },
+        "Faction Protector": {
+          ttb: 5e3,
+          textureInfo: "protector_faction",
+          harvestType: "rock",
+          description: "Prevents other factions from changing blocks and\nopening chests in the placed chunk"
+        },
+        "Barkless Palm Log": {
+          displayName: {
+            translationKey: "item:barklessPalmLog"
+          },
+          ttb: 2e3,
+          textureInfo: "stripped_palm_log",
+          harvestType: "wood"
+        },
+        "Barkless Pear Log": {
+          displayName: {
+            translationKey: "item:barklessPearLog"
+          },
+          ttb: 2e3,
+          textureInfo: "stripped_pear_log",
+          harvestType: "wood"
+        },
+        "Barkless Maple Log|TreeBase|Maple": {
+          ttb: 2e3,
+          textureInfo: "stripped_maple_log",
+          harvestType: "wood",
+          drops: "Barkless Maple Log"
+        },
+        "Barkless Plum Log|TreeBase|Plum": {
+          ttb: 2e3,
+          textureInfo: "stripped_plum_log",
+          harvestType: "wood",
+          drops: "Barkless Plum Log"
+        },
+        "Barkless Cedar Log|TreeBase|Cedar": {
+          ttb: 2e3,
+          textureInfo: "stripped_cedar_log",
+          harvestType: "wood",
+          drops: "Barkless Cedar Log"
+        },
+        "Barkless Aspen Log|TreeBase|Aspen": {
+          ttb: 2e3,
+          textureInfo: "stripped_aspen_log",
+          harvestType: "wood",
+          drops: "Barkless Aspen Log"
+        },
+        "Barkless Jungle Log|TreeBase|Jungle": {
+          ttb: 2e3,
+          textureInfo: "stripped_jungle_log",
+          harvestType: "wood",
+          drops: "Barkless Jungle Log"
+        },
+        "Barkless Pine Log|TreeBase|Pine": {
+          ttb: 2e3,
+          textureInfo: "stripped_pine_log",
+          harvestType: "wood",
+          drops: "Barkless Pine Log"
+        },
+        "Barkless Palm Log|TreeBase|Palm": {
+          ttb: 2e3,
+          textureInfo: "stripped_palm_log",
+          harvestType: "wood",
+          drops: "Barkless Palm Log"
+        },
+        "Barkless Pear Log|TreeBase|Pear": {
+          ttb: 2e3,
+          textureInfo: "stripped_pear_log",
+          harvestType: "wood",
+          drops: "Barkless Pear Log"
+        },
+        "Mystery Block": {
+          displayName: {
+            translationKey: "item:mysteryBlock"
+          },
+          ttb: 1200,
+          textureInfo: "mystery_block",
+          harvestType: "rock"
+        },
+        Rocket: {
+          displayName: {
+            translationKey: "item:rocket"
+          },
+          ttb: 1,
+          textureInfo: "rocket_block",
+          harvestType: "rock",
+          unlitStandaloneMesh: !0
+        },
+        "Super Rocket": {
+          displayName: {
+            translationKey: "item:superRocket"
+          },
+          ttb: 1,
+          textureInfo: "super_rocket_block",
+          harvestType: "rock",
+          unlitStandaloneMesh: !0
+        },
+        ...(0, yY.R)(),
+        Grenade: {
+          displayName: {
+            translationKey: "item:grenade"
+          },
+          ttb: 1,
+          textureInfo: "grenade_block",
+          harvestType: "rock",
+          unlitStandaloneMesh: !0
+        },
+        "Cherry Log": {
+          displayName: {
+            translationKey: "item:cherryLog"
+          },
+          ttb: 2400,
+          textureInfo: "log_cherry",
+          harvestType: "wood"
+        },
+        "Barkless Cherry Log": {
+          displayName: {
+            translationKey: "item:barklessCherryLog"
+          },
+          ttb: 2e3,
+          textureInfo: "stripped_cherry_log",
+          harvestType: "wood"
+        },
+        "Barkless Cherry Log|TreeBase|Cherry": {
+          ttb: 2e3,
+          textureInfo: "stripped_cherry_log",
+          harvestType: "wood",
+          drops: "Barkless Cherry Log"
+        },
+        "Cherry Wood Planks": {
+          displayName: {
+            translationKey: "item:cherryWoodPlanks"
+          },
+          ttb: 1800,
+          textureInfo: "planks_cherry",
+          harvestType: "wood"
+        },
+        "Cherry Leaves": {
+          displayName: {
+            translationKey: "item:cherryLeaves"
+          },
+          ttb: 350,
+          textureInfo: "leaves_cherry",
+          harvestType: "cuttable"
+        },
+        ...(0, yY.Ib)("Fallen Cherry Leaves", {
+          displayName: {
+            translationKey: "item:fallenCherryLeaves"
+          },
+          ttb: 350,
+          textureInfo: ["fallen_cherry_leaves_side", "leaves_cherry"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          solid: !1,
+          harvestType: "cuttable",
+          rootMetaDesc: "Fallen Cherry Leaves|meta|rot1|bot"
+        }),
+        "Cherry Door": {
+          displayName: {
+            translationKey: "item:cherryDoor"
+          },
+          ttb: 3600,
+          itemTexture: "cherry_door",
+          model: "door",
+          harvestType: "wood",
+          rootMetaDesc: "Cherry Door|meta|rot1|closed",
+          particlesIgnoreBlack: !0,
+          blockModel: "Cherry Door"
+        },
+        "Cherry Door|meta|rot1|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Cherry Door|meta|rot2|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Cherry Door|meta|rot2|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Cherry Door|meta|rot3|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Cherry Door|meta|rot3|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Cherry Door|meta|rot4|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Cherry Door|meta|rot4|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "_Cherry Door Top": {
+          ttb: 3600,
+          itemTexture: "cherry_door",
+          harvestType: "wood",
+          model: "door",
+          drops: "Cherry Door",
+          rootMetaDesc: "_Cherry Door Top|meta|rot1|closed",
+          particlesIgnoreBlack: !0,
+          blockModel: "_Cherry Door Top"
+        },
+        "_Cherry Door Top|meta|rot1|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Cherry Door"
+        },
+        "_Cherry Door Top|meta|rot2|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Cherry Door"
+        },
+        "_Cherry Door Top|meta|rot2|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Cherry Door"
+        },
+        "_Cherry Door Top|meta|rot3|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Cherry Door"
+        },
+        "_Cherry Door Top|meta|rot3|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Cherry Door"
+        },
+        "_Cherry Door Top|meta|rot4|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Cherry Door"
+        },
+        "_Cherry Door Top|meta|rot4|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Cherry Door"
+        },
+        "Cherry Trapdoor": {
+          displayName: {
+            translationKey: "item:cherryTrapdoor"
+          },
+          ttb: 2800,
+          itemTexture: "cherry_trapdoor",
+          model: "trapdoor",
+          harvestType: "wood",
+          rootMetaDesc: "Cherry Trapdoor|meta|rot1|closed",
+          blockModel: "Cherry Trapdoor",
+          heldItemScale: .5,
+          blockModelItem: !0
+        },
+        "Cherry Trapdoor|meta|rot1|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Cherry Trapdoor|meta|rot2|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Cherry Trapdoor|meta|rot2|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Cherry Trapdoor|meta|rot3|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Cherry Trapdoor|meta|rot3|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Cherry Trapdoor|meta|rot4|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Cherry Trapdoor|meta|rot4|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Cherry Sapling": {
+          displayName: {
+            translationKey: "item:cherrySapling"
+          },
+          ttb: 1,
+          textureInfo: "cherry_sapling",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "cherry_sapling"
+        },
+        "Cherry Log|TreeBase|Cherry": {
+          ttb: 2400,
+          textureInfo: "log_cherry",
+          harvestType: "wood",
+          drops: "Cherry Log"
+        },
+        "Cherry Leaves|TreeCanopy": {
+          ttb: 350,
+          textureInfo: "leaves_cherry",
+          harvestType: "cuttable",
+          drops: "Cherry Leaves"
+        },
+        ...(0, yY.Ib)("Cherry Slab", {
+          displayName: {
+            translationKey: "item:cherrySlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_cherry_side", "planks_cherry"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "wood",
+          slabFullBlock: "Cherry Wood Planks",
+          rootMetaDesc: "Cherry Slab|meta|rot1|bot"
+        }),
+        ...(0, yY.Bb)("Cherry Ladder", {
+          displayName: {
+            translationKey: "item:cherryLadder"
+          },
+          ttb: 1e3,
+          itemTexture: "ladder_cherry",
+          model: "rotatableOffset",
+          harvestType: "wood",
+          rootMetaDesc: "Cherry Ladder|meta|rot1",
+          modelScale: 1,
+          solid: !1,
+          blockModel: "Cherry Ladder",
+          heldItemScale: 1,
+          blockModelItem: !0
+        }),
+        "Cherry Block": {
+          displayName: {
+            translationKey: "item:cherryBlock"
+          },
+          ttb: 600,
+          textureInfo: ["cherry_block_side", "cherry_block_top", "cherry_block_bottom"],
+          texturePerSide: [0, 0, 1, 2, 0, 0],
+          harvestType: "wood"
+        },
+        "Bouncy Bomb Block": {
+          displayName: {
+            translationKey: "item:bouncyBombBlock"
+          },
+          ttb: 1,
+          textureInfo: "bouncy_bomb_block",
+          harvestType: "rock",
+          unlitStandaloneMesh: !0
+        },
+        "Obby Rocket": {
+          displayName: {
+            translationKey: "item:rocket"
+          },
+          ttb: 1,
+          textureInfo: "rocket_block",
+          harvestType: "rock",
+          unlitStandaloneMesh: !0
+        },
+        "Wood Spikes": {
+          displayName: {
+            translationKey: "item:woodSpikes"
+          },
+          ttb: 1200,
+          harvestType: "wood",
+          model: "CustomModel",
+          customModelInfo: {
+            yOffset: -2 / 16
+          },
+          itemTexture: "spikes_wood",
+          solid: !1,
+          modelScale: 10,
+          blockModel: "Spikes_Wood",
+          description: {
+            translationKey: "item:spikesDescription"
+          }
+        },
+        "Stone Spikes": {
+          displayName: {
+            translationKey: "item:stoneSpikes"
+          },
+          ttb: 1200,
+          harvestType: "rock",
+          model: "CustomModel",
+          customModelInfo: {
+            yOffset: -2 / 16
+          },
+          itemTexture: "spikes_stone",
+          solid: !1,
+          modelScale: 10,
+          blockModel: "Spikes_Stone",
+          description: {
+            translationKey: "item:spikesDescription"
+          }
+        },
+        "Iron Spikes": {
+          displayName: {
+            translationKey: "item:ironSpikes"
+          },
+          ttb: 1200,
+          harvestType: "rock",
+          model: "CustomModel",
+          customModelInfo: {
+            yOffset: -2 / 16
+          },
+          itemTexture: "spikes_iron",
+          solid: !1,
+          modelScale: 10,
+          blockModel: "Spikes_Iron",
+          description: {
+            translationKey: "item:spikesDescription"
+          }
+        },
+        "Gold Spikes": {
+          displayName: {
+            translationKey: "item:goldSpikes"
+          },
+          ttb: 1200,
+          harvestType: "rock",
+          model: "CustomModel",
+          customModelInfo: {
+            yOffset: -2 / 16
+          },
+          itemTexture: "spikes_gold",
+          solid: !1,
+          modelScale: 10,
+          blockModel: "Spikes_Gold",
+          description: {
+            translationKey: "item:spikesDescription"
+          }
+        },
+        "Diamond Spikes": {
+          displayName: {
+            translationKey: "item:diamondSpikes"
+          },
+          ttb: 1200,
+          harvestType: "rock",
+          model: "CustomModel",
+          customModelInfo: {
+            yOffset: -2 / 16
+          },
+          itemTexture: "spikes_diamond",
+          solid: !1,
+          modelScale: 10,
+          blockModel: "Spikes_Diamond",
+          description: {
+            translationKey: "item:spikesDescription"
+          }
+        },
+        "Kill Spikes": {
+          displayName: {
+            translationKey: "item:killSpikes"
+          },
+          ttb: 1200,
+          harvestType: "rock",
+          model: "CustomModel",
+          customModelInfo: {
+            yOffset: -2 / 16
+          },
+          itemTexture: "spikes_kill",
+          solid: !1,
+          modelScale: 10,
+          blockModel: "Spikes_Kill",
+          description: {
+            translationKey: "item:killSpikesDescription"
+          }
+        },
+        "Corn Block": {
+          displayName: {
+            translationKey: "item:cornBlock"
+          },
+          ttb: 600,
+          textureInfo: ["corn_block_side", "corn_block_top", "corn_block_bottom"],
+          texturePerSide: [0, 0, 1, 2, 0, 0],
+          harvestType: "wood"
+        },
+        "Corn Seeds": {
+          displayName: {
+            translationKey: "item:cornSeeds"
+          },
+          ttb: 400,
+          textureInfo: "corn_stage0",
+          model: "SquareSided",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "corn_seeds",
+          description: {
+            translationKey: "item:cornSeedsDescription"
+          }
+        },
+        ...(0, yY.sb)("Corn Seeds", {
+          displayName: {
+            translationKey: "item:cornSeeds"
+          },
+          ttb: 400,
+          model: "SquareSided",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: "Corn Seeds"
+        }, ["corn_stage1"]),
+        "Corn Seeds|FreshlyGrown": {
+          ttb: 400,
+          textureInfo: "corn_stage2",
+          model: "SquareSided",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: "Corn Seeds"
+        },
+        "Corn Seeds|Growing": {
+          ttb: 400,
+          textureInfo: "corn_stage2",
+          model: "SquareSided",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: "Corn Seeds"
+        },
+        ...(0, yY.sb)("Corn Plant", {
+          displayName: {
+            translationKey: "item:corn"
+          },
+          ttb: 400,
+          model: "SquareSided",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: "Corn Seeds"
+        }, ["corn_stage0", "corn_stage1", "corn_stage2", "corn_stage3", "corn_stage4"]),
+        "Corn Plant": {
+          displayName: {
+            translationKey: "item:corn"
+          },
+          ttb: 400,
+          textureInfo: "corn_stage5",
+          model: "SquareSided",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: "Corn Seeds"
+        },
+        "Corn Plant|FreshlyGrown": {
+          ttb: 400,
+          textureInfo: "corn_stage5",
+          model: "SquareSided",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: "Corn Seeds",
+          onMinedAura: 10
+        },
+        ...(0, yY.Eb)("Loot Chest", {
+          displayName: {
+            translationKey: "item:chest"
+          },
+          ttb: 3e3,
+          textureInfo: ["chest_front", "chest_side", "chest_top[rot[1", "chest_top[rot[2", "chest_top[rot[3", "chest_top[rot[4", "chest_back"],
+          harvestType: "wood",
+          rootMetaDesc: "Loot Chest|meta|rot1",
+          drops: "Chest"
+        }, [
+          [1, 1, 2, 2, 0, 6],
+          [0, 6, 3, 3, 1, 1],
+          [1, 1, 4, 4, 6, 0],
+          [6, 0, 5, 5, 1, 1]
+        ]),
+        "Melting Ice": {
+          displayName: {
+            translationKey: "item:ice"
+          },
+          ttb: 1200,
+          textureInfo: "ice",
+          harvestType: "rock",
+          harvestLevel: 0,
+          stoodOnSpeedMultiplier: 1.4,
+          drops: "Ice"
+        },
+        "Melting Ice|Breaking": {
+          ttb: 200,
+          textureInfo: "melting_ice",
+          harvestType: "rock",
+          harvestLevel: 0,
+          stoodOnSpeedMultiplier: 1.4,
+          drops: null
+        },
+        ...(0, yY.H)((YY => `${YY} Paintball Explosive`), {
+          textureInfo: YY => [`explosive_paint_${(0,aY.xe)(YY)}_side`, `explosive_paint_${(0,aY.xe)(YY)}_top`],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          harvestType: "cuttable",
+          ttb: 50
+        }),
+        ...(0, yY.H)((YY => `${YY} Quick Paintball Explosive`), {
+          textureInfo: YY => `explosive_paint_quick_${(0,aY.xe)(YY)}`,
+          harvestType: "cuttable",
+          ttb: 50
+        }),
+        ...(0, yY.H)((YY => `${YY} Seeking Paintball Explosive`), {
+          textureInfo: YY => `explosive_paint_seeking_${(0,aY.xe)(YY)}`,
+          harvestType: "cuttable",
+          ttb: 50
+        }),
+        ...(0, yY.H)((YY => `${YY} Sticky Paintball Explosive`), {
+          textureInfo: YY => `explosive_paint_sticky_${(0,aY.xe)(YY)}`,
+          harvestType: "cuttable",
+          ttb: 50
+        }),
+        ...(0, yY.Bb)("White Strongbed", {
+          displayName: {
+            translationKey: "item:whiteStrongbed"
+          },
+          ttb: 480,
+          itemTexture: "white_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          rootMetaDesc: "White Strongbed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "White Strongbed"
+        }),
+        ...(0, yY.Bb)("_White Strongbed Head", {
+          ttb: 480,
+          itemTexture: "white_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          drops: "White Strongbed",
+          rootMetaDesc: "_White Strongbed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_White Strongbed Head"
+        }),
+        ...(0, yY.Bb)("Orange Strongbed", {
+          displayName: {
+            translationKey: "item:orangeStrongbed"
+          },
+          ttb: 480,
+          itemTexture: "orange_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          rootMetaDesc: "Orange Strongbed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Orange Strongbed"
+        }),
+        ...(0, yY.Bb)("_Orange Strongbed Head", {
+          ttb: 480,
+          itemTexture: "orange_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          drops: "Orange Strongbed",
+          rootMetaDesc: "_Orange Strongbed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Orange Strongbed Head"
+        }),
+        ...(0, yY.Bb)("Magenta Strongbed", {
+          displayName: {
+            translationKey: "item:magentaStrongbed"
+          },
+          ttb: 480,
+          itemTexture: "magenta_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          rootMetaDesc: "Magenta Strongbed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Magenta Strongbed"
+        }),
+        ...(0, yY.Bb)("_Magenta Strongbed Head", {
+          ttb: 480,
+          itemTexture: "magenta_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          drops: "Magenta Strongbed",
+          rootMetaDesc: "_Magenta Strongbed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Magenta Strongbed Head"
+        }),
+        ...(0, yY.Bb)("Light Blue Strongbed", {
+          displayName: {
+            translationKey: "item:lightBlueStrongbed"
+          },
+          ttb: 480,
+          itemTexture: "light_blue_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          rootMetaDesc: "Light Blue Strongbed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Light Blue Strongbed"
+        }),
+        ...(0, yY.Bb)("_Light Blue Strongbed Head", {
+          ttb: 480,
+          itemTexture: "light_blue_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          drops: "Light Blue Strongbed",
+          rootMetaDesc: "_Light Blue Strongbed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Light Blue Strongbed Head"
+        }),
+        ...(0, yY.Bb)("Yellow Strongbed", {
+          displayName: {
+            translationKey: "item:yellowStrongbed"
+          },
+          ttb: 480,
+          itemTexture: "yellow_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          rootMetaDesc: "Yellow Strongbed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Yellow Strongbed"
+        }),
+        ...(0, yY.Bb)("_Yellow Strongbed Head", {
+          ttb: 480,
+          itemTexture: "yellow_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          drops: "Yellow Strongbed",
+          rootMetaDesc: "_Yellow Strongbed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Yellow Strongbed Head"
+        }),
+        ...(0, yY.Bb)("Lime Strongbed", {
+          displayName: {
+            translationKey: "item:limeStrongbed"
+          },
+          ttb: 480,
+          itemTexture: "lime_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          rootMetaDesc: "Lime Strongbed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Lime Strongbed"
+        }),
+        ...(0, yY.Bb)("_Lime Strongbed Head", {
+          ttb: 480,
+          itemTexture: "lime_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          drops: "Lime Strongbed",
+          rootMetaDesc: "_Lime Strongbed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Lime Strongbed Head"
+        }),
+        ...(0, yY.Bb)("Pink Strongbed", {
+          displayName: {
+            translationKey: "item:pinkStrongbed"
+          },
+          ttb: 480,
+          itemTexture: "pink_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          rootMetaDesc: "Pink Strongbed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Pink Strongbed"
+        }),
+        ...(0, yY.Bb)("_Pink Strongbed Head", {
+          ttb: 480,
+          itemTexture: "pink_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          drops: "Pink Strongbed",
+          rootMetaDesc: "_Pink Strongbed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Pink Strongbed Head"
+        }),
+        ...(0, yY.Bb)("Gray Strongbed", {
+          displayName: {
+            translationKey: "item:grayStrongbed"
+          },
+          ttb: 480,
+          itemTexture: "gray_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          rootMetaDesc: "Gray Strongbed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Gray Strongbed"
+        }),
+        ...(0, yY.Bb)("_Gray Strongbed Head", {
+          ttb: 480,
+          itemTexture: "gray_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          drops: "Gray Strongbed",
+          rootMetaDesc: "_Gray Strongbed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Gray Strongbed Head"
+        }),
+        ...(0, yY.Bb)("Light Gray Strongbed", {
+          displayName: {
+            translationKey: "item:lightGrayStrongbed"
+          },
+          ttb: 480,
+          itemTexture: "light_gray_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          rootMetaDesc: "Light Gray Strongbed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Light Gray Strongbed"
+        }),
+        ...(0, yY.Bb)("_Light Gray Strongbed Head", {
+          ttb: 480,
+          itemTexture: "light_gray_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          drops: "Light Gray Strongbed",
+          rootMetaDesc: "_Light Gray Strongbed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Light Gray Strongbed Head"
+        }),
+        ...(0, yY.Bb)("Cyan Strongbed", {
+          displayName: {
+            translationKey: "item:cyanStrongbed"
+          },
+          ttb: 480,
+          itemTexture: "cyan_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          rootMetaDesc: "Cyan Strongbed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Cyan Strongbed"
+        }),
+        ...(0, yY.Bb)("_Cyan Strongbed Head", {
+          ttb: 480,
+          itemTexture: "cyan_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          drops: "Cyan Strongbed",
+          rootMetaDesc: "_Cyan Strongbed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Cyan Strongbed Head"
+        }),
+        ...(0, yY.Bb)("Purple Strongbed", {
+          displayName: {
+            translationKey: "item:purpleStrongbed"
+          },
+          ttb: 480,
+          itemTexture: "purple_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          rootMetaDesc: "Purple Strongbed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Purple Strongbed"
+        }),
+        ...(0, yY.Bb)("_Purple Strongbed Head", {
+          ttb: 480,
+          itemTexture: "purple_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          drops: "Purple Strongbed",
+          rootMetaDesc: "_Purple Strongbed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Purple Strongbed Head"
+        }),
+        ...(0, yY.Bb)("Blue Strongbed", {
+          displayName: {
+            translationKey: "item:blueStrongbed"
+          },
+          ttb: 480,
+          itemTexture: "blue_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          rootMetaDesc: "Blue Strongbed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Blue Strongbed"
+        }),
+        ...(0, yY.Bb)("_Blue Strongbed Head", {
+          ttb: 480,
+          itemTexture: "blue_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          drops: "Blue Strongbed",
+          rootMetaDesc: "_Blue Strongbed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Blue Strongbed Head"
+        }),
+        ...(0, yY.Bb)("Brown Strongbed", {
+          displayName: {
+            translationKey: "item:brownStrongbed"
+          },
+          ttb: 480,
+          itemTexture: "brown_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          rootMetaDesc: "Brown Strongbed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Brown Strongbed"
+        }),
+        ...(0, yY.Bb)("_Brown Strongbed Head", {
+          ttb: 480,
+          itemTexture: "brown_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          drops: "Brown Strongbed",
+          rootMetaDesc: "_Brown Strongbed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Brown Strongbed Head"
+        }),
+        ...(0, yY.Bb)("Green Strongbed", {
+          displayName: {
+            translationKey: "item:greenStrongbed"
+          },
+          ttb: 480,
+          itemTexture: "green_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          rootMetaDesc: "Green Strongbed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Green Strongbed"
+        }),
+        ...(0, yY.Bb)("_Green Strongbed Head", {
+          ttb: 480,
+          itemTexture: "green_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          drops: "Green Strongbed",
+          rootMetaDesc: "_Green Strongbed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Green Strongbed Head"
+        }),
+        ...(0, yY.Bb)("Red Strongbed", {
+          displayName: {
+            translationKey: "item:redStrongbed"
+          },
+          ttb: 480,
+          itemTexture: "red_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          rootMetaDesc: "Red Strongbed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Red Strongbed"
+        }),
+        ...(0, yY.Bb)("_Red Strongbed Head", {
+          ttb: 480,
+          itemTexture: "red_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          drops: "Red Strongbed",
+          rootMetaDesc: "_Red Strongbed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Red Strongbed Head"
+        }),
+        ...(0, yY.Bb)("Black Strongbed", {
+          displayName: {
+            translationKey: "item:blackStrongbed"
+          },
+          ttb: 480,
+          itemTexture: "black_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          rootMetaDesc: "Black Strongbed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Black Strongbed"
+        }),
+        ...(0, yY.Bb)("_Black Strongbed Head", {
+          ttb: 480,
+          itemTexture: "black_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          drops: "Black Strongbed",
+          rootMetaDesc: "_Black Strongbed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Black Strongbed Head"
+        }),
+        "Timed Spike Bomb Block": {
+          ttb: 3e4,
+          itemTexture: "timed_spike_bomb",
+          harvestType: "rock",
+          drops: null,
+          modelScale: 10,
+          model: "CustomModel",
+          blockModel: "Timed Spike Bomb Block",
+          solid: !1
+        },
+        "Timed Spike Bomb Block|Flashing": {
+          ttb: 3e4,
+          itemTexture: "timed_spike_bomb",
+          harvestType: "rock",
+          drops: null,
+          modelScale: 10,
+          model: "CustomModel",
+          blockModel: "Timed Spike Bomb Block",
+          solid: !1,
+          customModelInfo: {
+            emissiveColor: [255, 255, 255]
+          }
+        },
+        Lava: {
+          displayName: {
+            translationKey: "item:lava"
+          },
+          textureInfo: {
+            colour: [.95, .4, .05, .95],
+            animTextures: ["lava0", "lava1", "lava2", "lava3", "lava4", "lava5", "lava6", "lava7"],
+            animationInterval: 200
+          },
+          ui: !0,
+          drops: null,
+          harvestType: "rock",
+          My: [14, 8, 2]
+        },
+        "Fat Brown Mushroom": {
+          displayName: {
+            translationKey: "item:fatBrownMushroom"
+          },
+          ttb: 1200,
+          itemTexture: "fatBrownMushroom",
+          harvestType: "cuttable",
+          blockModel: "Fat Brown Mushroom",
+          blockModelItem: !0,
+          model: "CustomModel",
+          modelScale: 10,
+          heldItemScale: 10,
+          description: {
+            translationKey: "item:fatMushroomDescription"
+          }
+        },
+        "Fat Red Mushroom": {
+          displayName: {
+            translationKey: "item:fatRedMushroom"
+          },
+          ttb: 1200,
+          itemTexture: "fatRedMushroom",
+          harvestType: "cuttable",
+          blockModel: "Fat Red Mushroom",
+          blockModelItem: !0,
+          model: "CustomModel",
+          modelScale: 10,
+          heldItemScale: 10,
+          description: {
+            translationKey: "item:fatMushroomDescription"
+          }
+        },
+        "Chili Pepper Block": {
+          displayName: {
+            translationKey: "item:chiliPepperBlock"
+          },
+          ttb: 600,
+          textureInfo: ["chili_pepper_block_side", "chili_pepper_block_top", "chili_pepper_block_bottom"],
+          texturePerSide: [0, 0, 1, 2, 0, 0],
+          harvestType: "wood"
+        },
+        "Chili Pepper Seeds": {
+          displayName: {
+            translationKey: "item:chiliPepperSeeds"
+          },
+          ttb: 400,
+          itemTexture: "chili_pepper_seeds",
+          model: "CustomModel",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          harvestType: "cuttable",
+          solid: !1,
+          blockModel: "chili_pepper_stage0_model",
+          description: {
+            translationKey: "item:chiliPepperSeedsDescription"
+          }
+        },
+        "Chili Pepper Plant_stage1": {
+          ttb: 400,
+          model: "CustomModel",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          harvestType: "cuttable",
+          solid: !1,
+          blockModel: "chili_pepper_stage1_model",
+          drops: "Chili Pepper Seeds"
+        },
+        "Chili Pepper Plant_stage2": {
+          ttb: 400,
+          model: "CustomModel",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          harvestType: "cuttable",
+          solid: !1,
+          blockModel: "chili_pepper_stage2_model",
+          drops: "Chili Pepper Seeds"
+        },
+        "Chili Pepper Plant_stage3": {
+          ttb: 400,
+          model: "CustomModel",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          harvestType: "cuttable",
+          solid: !1,
+          blockModel: "chili_pepper_stage3_model",
+          drops: "Chili Pepper Seeds"
+        },
+        "Chili Pepper Plant_stage4": {
+          ttb: 400,
+          model: "CustomModel",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          harvestType: "cuttable",
+          solid: !1,
+          blockModel: "chili_pepper_stage4_model",
+          drops: "Chili Pepper Seeds"
+        },
+        "Chili Pepper Plant": {
+          ttb: 400,
+          model: "CustomModel",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          harvestType: "cuttable",
+          solid: !1,
+          blockModel: "chili_pepper_stage5_model",
+          drops: "Chili Pepper Seeds"
+        },
+        "Chili Pepper Plant|FreshlyGrown": {
+          ttb: 400,
+          model: "CustomModel",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          harvestType: "cuttable",
+          solid: !1,
+          blockModel: "chili_pepper_stage5_model",
+          drops: "Chili Pepper Seeds",
+          onMinedAura: 10
+        },
+        "Chili Pepper Seeds|Lava": {
+          displayName: {
+            translationKey: "item:chiliPepperSeeds"
+          },
+          ttb: 400,
+          itemTexture: "chili_pepper_seeds",
+          model: "CustomModel",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          harvestType: "cuttable",
+          solid: !1,
+          blockModel: "chili_pepper_stage0_lava_model",
+          description: {
+            translationKey: "item:chiliPepperSeedsDescription"
+          },
+          drops: "Chili Pepper Seeds"
+        },
+        "Chili Pepper Plant_stage1|Lava": {
+          ttb: 400,
+          model: "CustomModel",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          harvestType: "cuttable",
+          solid: !1,
+          blockModel: "chili_pepper_stage1_lava_model",
+          drops: "Chili Pepper Seeds"
+        },
+        "Chili Pepper Plant_stage2|Lava": {
+          ttb: 400,
+          model: "CustomModel",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          harvestType: "cuttable",
+          solid: !1,
+          blockModel: "chili_pepper_stage2_lava_model",
+          drops: "Chili Pepper Seeds"
+        },
+        "Chili Pepper Plant_stage3|Lava": {
+          ttb: 400,
+          model: "CustomModel",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          harvestType: "cuttable",
+          solid: !1,
+          blockModel: "chili_pepper_stage3_lava_model",
+          drops: "Chili Pepper Seeds"
+        },
+        "Chili Pepper Plant_stage4|Lava": {
+          ttb: 400,
+          model: "CustomModel",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          harvestType: "cuttable",
+          solid: !1,
+          blockModel: "chili_pepper_stage4_lava_model",
+          drops: "Chili Pepper Seeds"
+        },
+        "Chili Pepper Plant_stage5": {
+          ttb: 400,
+          model: "CustomModel",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          harvestType: "cuttable",
+          solid: !1,
+          blockModel: "chili_pepper_stage5_model",
+          drops: "Chili Pepper Seeds"
+        },
+        "Chili Pepper Plant_stage5|Lava": {
+          ttb: 400,
+          model: "CustomModel",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          harvestType: "cuttable",
+          solid: !1,
+          blockModel: "chili_pepper_stage5_lava_model",
+          drops: "Chili Pepper Seeds"
+        },
+        "Chili Pepper Plant|Lava|FreshlyGrown": {
+          ttb: 400,
+          model: "CustomModel",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          harvestType: "cuttable",
+          solid: !1,
+          blockModel: "chili_pepper_stage6_lava_model",
+          drops: "Chili Pepper Seeds",
+          onMinedAura: 20
+        },
+        "Code Block": {
+          displayName: {
+            translationKey: "item:codeBlock"
+          },
+          ttb: 5e11,
+          textureInfo: "code_block",
+          soundType: {
+            break: "stone",
+            place: "stone"
+          }
+        },
+        "Toxin Ball Block": {
+          displayName: {
+            translationKey: "item:toxinBallBlock"
+          },
+          ttb: 1,
+          textureInfo: "toxin_ball_block",
+          harvestType: "rock",
+          unlitStandaloneMesh: !0
+        },
+        ...(0, yY.H)((YY => `Spawn Block (${YY})`), {
+          displayName: YY => ({
+            translationKey: `item:${(0,aY.te)(YY)}SpawnBlock`
+          }),
+          ttb: 1500,
+          textureInfo: YY => [`${(0,aY.xe)(YY)}_spawn_block_top[rot[1`, `${(0,aY.xe)(YY)}_spawn_block_top[rot[2`, `${(0,aY.xe)(YY)}_spawn_block_top[rot[3`, `${(0,aY.xe)(YY)}_spawn_block_top[rot[4`, `${(0,aY.xe)(YY)}_spawn_block_side`],
+          texturePerSide: [4, 4, 2, 4, 4, 4],
+          harvestType: "rock",
+          rootMetaDesc: YY => `Spawn Block (${YY})|meta|rot1`,
+          description: {
+            translationKey: "item:spawnBlockDescription"
+          }
+        }),
+        ...(0, yY.H)((YY => `Spawn Block (${YY})|meta|rot2`), {
+          ttb: 1500,
+          textureInfo: YY => [`${(0,aY.xe)(YY)}_spawn_block_top[rot[1`, `${(0,aY.xe)(YY)}_spawn_block_top[rot[2`, `${(0,aY.xe)(YY)}_spawn_block_top[rot[3`, `${(0,aY.xe)(YY)}_spawn_block_top[rot[4`, `${(0,aY.xe)(YY)}_spawn_block_side`],
+          texturePerSide: [4, 4, 3, 4, 4, 4],
+          harvestType: "rock"
+        }),
+        ...(0, yY.H)((YY => `Spawn Block (${YY})|meta|rot3`), {
+          ttb: 1500,
+          textureInfo: YY => [`${(0,aY.xe)(YY)}_spawn_block_top[rot[1`, `${(0,aY.xe)(YY)}_spawn_block_top[rot[2`, `${(0,aY.xe)(YY)}_spawn_block_top[rot[3`, `${(0,aY.xe)(YY)}_spawn_block_top[rot[4`, `${(0,aY.xe)(YY)}_spawn_block_side`],
+          texturePerSide: [4, 4, 0, 4, 4, 4],
+          harvestType: "rock"
+        }),
+        ...(0, yY.H)((YY => `Spawn Block (${YY})|meta|rot4`), {
+          ttb: 1500,
+          textureInfo: YY => [`${(0,aY.xe)(YY)}_spawn_block_top[rot[1`, `${(0,aY.xe)(YY)}_spawn_block_top[rot[2`, `${(0,aY.xe)(YY)}_spawn_block_top[rot[3`, `${(0,aY.xe)(YY)}_spawn_block_top[rot[4`, `${(0,aY.xe)(YY)}_spawn_block_side`],
+          texturePerSide: [4, 4, 1, 4, 4, 4],
+          harvestType: "rock"
+        }),
+        ...(0, yY.Eb)("Checkpoint Block", {
+          displayName: {
+            translationKey: "item:checkpointBlock"
+          },
+          ttb: 1500,
+          textureInfo: ["checkpoint_block[rot[1", "checkpoint_block[rot[2", "checkpoint_block[rot[3", "checkpoint_block[rot[4"],
+          harvestType: "rock",
+          rootMetaDesc: "Checkpoint Block|meta|rot1",
+          description: {
+            translationKey: "item:checkpointBlockDescription"
+          }
+        }, [
+          [0, 0, 2, 0, 0, 0],
+          [0, 0, 3, 0, 0, 0],
+          [0, 0, 0, 0, 0, 0],
+          [0, 0, 1, 0, 0, 0]
+        ]),
+        ...(0, yY.Eb)("Custom Lobby Block", {
+          displayName: {
+            translationKey: "item:customLobbyBlock"
+          },
+          ttb: 1500,
+          textureInfo: ["custom_lobby_block_top[rot[1", "custom_lobby_block_top[rot[2", "custom_lobby_block_top[rot[3", "custom_lobby_block_top[rot[4", "custom_lobby_block_side"],
+          harvestType: "rock",
+          rootMetaDesc: "Custom Lobby Block|meta|rot1",
+          description: {
+            translationKey: "item:customLobbyBlockDescription"
+          }
+        }, [
+          [4, 4, 2, 4, 4, 4],
+          [4, 4, 3, 4, 4, 4],
+          [4, 4, 0, 4, 4, 4],
+          [4, 4, 1, 4, 4, 4]
+        ]),
+        ...(0, yY.H)((YY => `Generator Spawn Block (${YY})`), {
+          displayName: YY => ({
+            translationKey: `item:${(0,aY.te)(YY)}GeneratorSpawnBlock`
+          }),
+          ttb: 1500,
+          textureInfo: YY => [`${(0,aY.xe)(YY)}_gen_spawn_top`, `${(0,aY.xe)(YY)}_gen_spawn_coal`, `${(0,aY.xe)(YY)}_gen_spawn_iron`],
+          texturePerSide: [2, 2, 0, 0, 1, 1],
+          harvestType: "rock",
+          description: {
+            translationKey: "item:teamGeneratorSpawnBlockDescription"
+          }
+        }, ["Red", "Blue", "Lime", "Yellow", "Cyan", "White", "Pink", "Gray"]),
+        ...(0, yY.Eb)("Trader Shop Spawn Block", {
+          displayName: {
+            translationKey: "item:traderShopSpawnBlock"
+          },
+          ttb: 1500,
+          textureInfo: ["shop_trader_spawn_top[rot[1", "shop_trader_spawn_top[rot[2", "shop_trader_spawn_top[rot[3", "shop_trader_spawn_top[rot[4", "shop_trader_spawn_side", "shop_trader_spawn_face"],
+          harvestType: "rock",
+          rootMetaDesc: "Trader Shop Spawn Block|meta|rot1",
+          description: {
+            translationKey: "item:traderShopSpawnBlockDescription"
+          }
+        }, [
+          [5, 5, 2, 4, 4, 4],
+          [5, 5, 3, 4, 4, 4],
+          [5, 5, 0, 4, 4, 4],
+          [5, 5, 1, 4, 4, 4]
+        ]),
+        ...(0, yY.Eb)("Wizard Shop Spawn Block", {
+          displayName: {
+            translationKey: "item:wizardShopSpawnBlock"
+          },
+          ttb: 1500,
+          textureInfo: ["shop_wizard_spawn_top[rot[1", "shop_wizard_spawn_top[rot[2", "shop_wizard_spawn_top[rot[3", "shop_wizard_spawn_top[rot[4", "shop_wizard_spawn_side", "shop_wizard_spawn_face"],
+          harvestType: "rock",
+          rootMetaDesc: "Wizard Shop Spawn Block|meta|rot1",
+          description: {
+            translationKey: "item:wizardShopSpawnBlockDescription"
+          }
+        }, [
+          [5, 5, 2, 4, 4, 4],
+          [5, 5, 3, 4, 4, 4],
+          [5, 5, 0, 4, 4, 4],
+          [5, 5, 1, 4, 4, 4]
+        ]),
+        "Generator Spawn Block (Diamond)": {
+          displayName: {
+            translationKey: "item:diamondGeneratorSpawnBlock"
+          },
+          ttb: 1500,
+          textureInfo: ["diamond_gen_spawn_top", "diamond_gen_spawn_side"],
+          texturePerSide: [1, 1, 0, 0, 1, 1],
+          harvestType: "rock",
+          description: {
+            translationKey: "item:diamondGeneratorSpawnBlockDescription"
+          }
+        },
+        "Generator Spawn Block (Moonstone)": {
+          displayName: {
+            translationKey: "item:moonstoneGeneratorSpawnBlock"
+          },
+          ttb: 1500,
+          textureInfo: ["moonstone_gen_spawn_top", "moonstone_gen_spawn_side"],
+          texturePerSide: [1, 1, 0, 0, 1, 1],
+          harvestType: "rock",
+          description: {
+            translationKey: "item:moonstoneGeneratorSpawnBlockDescription"
+          }
+        },
+        "Generator Spawn Block (Ore)": {
+          displayName: {
+            translationKey: "item:oreGeneratorSpawnBlock"
+          },
+          ttb: 1500,
+          textureInfo: ["ore_gen_spawn_top", "ore_gen_spawn_side"],
+          texturePerSide: [1, 1, 0, 0, 1, 1],
+          harvestType: "rock",
+          description: {
+            translationKey: "item:oreGeneratorSpawnBlockDescription"
+          }
+        },
+        "Goal Block (Red)": {
+          displayName: {
+            translationKey: "item:redGoalBlock"
+          },
+          ttb: 1500,
+          textureInfo: ["explosive_paint_red_top", "red_spawn_block_top[rot[3"],
+          texturePerSide: [1, 1, 0, 0, 1, 1],
+          harvestType: "rock",
+          description: {
+            translationKey: "item:goalBlockDescription"
+          }
+        },
+        "Goal Block (Blue)": {
+          displayName: {
+            translationKey: "item:blueGoalBlock"
+          },
+          ttb: 1500,
+          textureInfo: ["explosive_paint_blue_top", "blue_spawn_block_top[rot[3"],
+          texturePerSide: [1, 1, 0, 0, 1, 1],
+          harvestType: "rock",
+          description: {
+            translationKey: "item:goalBlockDescription"
+          }
+        },
+        "Finish Block": {
+          displayName: {
+            translationKey: "item:finishBlock"
+          },
+          ttb: 1500,
+          textureInfo: "finish_block",
+          harvestType: "rock",
+          description: {
+            translationKey: "item:finishBlockDescription"
+          }
+        },
+        "Drop Location Block": {
+          displayName: {
+            translationKey: "item:dropLocationBlock"
+          },
+          ttb: 1500,
+          textureInfo: ["drop_location_block_top", "drop_location_block_side"],
+          texturePerSide: [1, 1, 0, 0, 1, 1],
+          harvestType: "rock",
+          description: {
+            translationKey: "item:dropLocationBlockDescription"
+          }
+        },
+        "Obby Death Block": {
+          displayName: {
+            translationKey: "item:obbyDeathBlock"
+          },
+          ttb: 1500,
+          textureInfo: "obby_death_block",
+          harvestType: "rock",
+          description: {
+            translationKey: "item:obbyDeathBlockDescription"
+          }
+        },
+        "Obby Absorb Block": {
+          displayName: {
+            translationKey: "item:obbyAbsorbBlock"
+          },
+          ttb: 1500,
+          textureInfo: "obby_absorb_block",
+          harvestType: "rock",
+          description: {
+            translationKey: "item:obbyAbsorbBlockDescription"
+          }
+        },
+        "Obby Absorb Death Block": {
+          displayName: {
+            translationKey: "item:obbyAbsorbDeathBlock"
+          },
+          ttb: 1500,
+          textureInfo: "obby_absorb_death_block",
+          harvestType: "rock",
+          description: {
+            translationKey: "item:obbyAbsorbDeathBlockDescription"
+          }
+        },
+        "Bone Block": {
+          displayName: {
+            translationKey: "item:boneBlock"
+          },
+          ttb: 960,
+          textureInfo: ["bone_block_side", "bone_block_top"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          harvestType: "rock"
+        },
+        ...(0, yY.lb)("Pig"),
+        ...(0, yY.lb)("Cow"),
+        ...(0, yY.lb)("Sheep"),
+        ...(0, yY.lb)("Cave Golem"),
+        ...(0, yY.lb)("Draugr Zombie"),
+        ...(0, yY.lb)("Draugr Skeleton"),
+        "Empty Spawner Block": {
+          displayName: {
+            translationKey: "item:emptyMobSpawnerBlock"
+          },
+          description: {
+            translationKey: "item:emptyMobSpawnerBlockDescription"
+          },
+          itemTexture: "empty_spawner_block_icon",
+          ttb: 5e3,
+          textureInfo: ["mob_spawner_block_empty_side", "mob_spawner_block_top"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          transTex: !0,
+          harvestType: "rock",
+          drops: null,
+          specialToolDrop: {
+            tool: "Moonstone Pickaxe",
+            drops: "Empty Spawner Block"
+          },
+          particlesIgnoreBlack: !0,
+          twoDBlockItem: !0
+        },
+        ...(0, yY.lb)("Frost Golem"),
+        ...(0, yY.lb)("Frost Zombie"),
+        ...(0, yY.lb)("Frost Skeleton"),
+        "Snowy Messy Stone": {
+          displayName: {
+            translationKey: "item:snowyMessyStone"
+          },
+          ttb: 1800,
+          textureInfo: "snowy_messy_stone",
+          harvestType: "rock"
+        },
+        ...(0, yY.Ib)("Snowy Stone Slab", {
+          displayName: {
+            translationKey: "item:snowyStoneSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["snowy_messy_stone_side", "snowy_messy_stone"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Snowy Messy Stone",
+          rootMetaDesc: "Snowy Stone Slab|meta|rot1|bot"
+        }),
+        ...(0, yY.lb)("Draugr Knight"),
+        "Packed Snow": {
+          displayName: {
+            translationKey: "item:packedSnow"
+          },
+          ttb: 1800,
+          textureInfo: "packed_snow",
+          harvestType: "granule",
+          soundType: {
+            break: "snow",
+            place: "snow"
+          }
+        },
+        "Carved Messy Stone": {
+          displayName: {
+            translationKey: "item:carvedMessyStone"
+          },
+          ttb: 1800,
+          textureInfo: "carved_messy_stone",
+          harvestType: "rock"
+        },
+        "Spectral Grass": {
+          displayName: {
+            translationKey: "item:spectralGrass"
+          },
+          ttb: 1,
+          textureInfo: "spectral_grass",
+          model: "CentreCross",
+          solid: !1,
+          drops: null,
+          harvestType: "cuttable",
+          specialToolDrop: {
+            tool: "Shears",
+            drops: "Spectral Grass"
+          },
+          canBePlacedOver: !0
+        },
+        "Spectral Log": {
+          displayName: {
+            translationKey: "item:spectralLog"
+          },
+          ttb: 2400,
+          textureInfo: "log_spectral",
+          harvestType: "wood"
+        },
+        "Barkless Spectral Log": {
+          displayName: {
+            translationKey: "item:barklessSpectralLog"
+          },
+          ttb: 2e3,
+          textureInfo: "stripped_spectral_log",
+          harvestType: "wood"
+        },
+        "Barkless Spectral Log|TreeBase|Spectral": {
+          ttb: 2e3,
+          textureInfo: "stripped_spectral_log",
+          harvestType: "wood",
+          drops: "Barkless Spectral Log"
+        },
+        "Spectral Wood Planks": {
+          displayName: {
+            translationKey: "item:spectralWoodPlanks"
+          },
+          ttb: 1800,
+          textureInfo: "planks_spectral",
+          harvestType: "wood"
+        },
+        "Spectral Leaves": {
+          displayName: {
+            translationKey: "item:spectralLeaves"
+          },
+          ttb: 350,
+          textureInfo: "leaves_spectral",
+          harvestType: "cuttable"
+        },
+        "Spectral Door": {
+          displayName: {
+            translationKey: "item:spectralDoor"
+          },
+          ttb: 3600,
+          itemTexture: "spectral_door",
+          model: "door",
+          harvestType: "wood",
+          rootMetaDesc: "Spectral Door|meta|rot1|closed",
+          particlesIgnoreBlack: !0,
+          blockModel: "Spectral Door"
+        },
+        "Spectral Door|meta|rot1|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Spectral Door|meta|rot2|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Spectral Door|meta|rot2|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Spectral Door|meta|rot3|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Spectral Door|meta|rot3|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Spectral Door|meta|rot4|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Spectral Door|meta|rot4|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "_Spectral Door Top": {
+          ttb: 3600,
+          itemTexture: "spectral_door",
+          harvestType: "wood",
+          model: "door",
+          drops: "Spectral Door",
+          rootMetaDesc: "_Spectral Door Top|meta|rot1|closed",
+          particlesIgnoreBlack: !0,
+          blockModel: "_Spectral Door Top"
+        },
+        "_Spectral Door Top|meta|rot1|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Spectral Door"
+        },
+        "_Spectral Door Top|meta|rot2|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Spectral Door"
+        },
+        "_Spectral Door Top|meta|rot2|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Spectral Door"
+        },
+        "_Spectral Door Top|meta|rot3|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Spectral Door"
+        },
+        "_Spectral Door Top|meta|rot3|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Spectral Door"
+        },
+        "_Spectral Door Top|meta|rot4|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Spectral Door"
+        },
+        "_Spectral Door Top|meta|rot4|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Spectral Door"
+        },
+        "Spectral Trapdoor": {
+          displayName: {
+            translationKey: "item:spectralTrapdoor"
+          },
+          ttb: 2800,
+          itemTexture: "spectral_trapdoor",
+          model: "trapdoor",
+          harvestType: "wood",
+          rootMetaDesc: "Spectral Trapdoor|meta|rot1|closed",
+          blockModel: "Spectral Trapdoor",
+          heldItemScale: .5,
+          blockModelItem: !0
+        },
+        "Spectral Trapdoor|meta|rot1|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Spectral Trapdoor|meta|rot2|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Spectral Trapdoor|meta|rot2|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Spectral Trapdoor|meta|rot3|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Spectral Trapdoor|meta|rot3|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Spectral Trapdoor|meta|rot4|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Spectral Trapdoor|meta|rot4|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Spectral Sapling": {
+          displayName: {
+            translationKey: "item:spectralSapling"
+          },
+          ttb: 1,
+          textureInfo: "spectral_sapling",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "spectral_sapling"
+        },
+        "Spectral Log|TreeBase|Spectral": {
+          ttb: 2400,
+          textureInfo: "log_spectral",
+          harvestType: "wood",
+          drops: "Spectral Log"
+        },
+        "Spectral Leaves|TreeCanopy": {
+          ttb: 350,
+          textureInfo: "leaves_spectral",
+          harvestType: "cuttable",
+          drops: "Spectral Leaves"
+        },
+        ...(0, yY.Ib)("Spectral Slab", {
+          displayName: {
+            translationKey: "item:spectralSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_spectral_side", "planks_spectral"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "wood",
+          slabFullBlock: "Spectral Wood Planks",
+          rootMetaDesc: "Spectral Slab|meta|rot1|bot"
+        }),
+        ...(0, yY.Bb)("Spectral Ladder", {
+          displayName: {
+            translationKey: "item:spectralLadder"
+          },
+          ttb: 1e3,
+          itemTexture: "ladder_spectral",
+          model: "rotatableOffset",
+          harvestType: "wood",
+          rootMetaDesc: "Spectral Ladder|meta|rot1",
+          modelScale: 1,
+          solid: !1,
+          blockModel: "Spectral Ladder",
+          heldItemScale: 1,
+          blockModelItem: !0
+        }),
+        ...(0, yY.Bb)("Wood Enchanting Table", {
+          displayName: {
+            translationKey: "item:woodEnchantingTable"
+          },
+          ttb: 800,
+          harvestType: "wood",
+          model: "rotatable",
+          itemTexture: "wood_enchanting_table",
+          rootMetaDesc: "Wood Enchanting Table|meta|rot1",
+          modelScale: 10,
+          blockModel: "Wood Enchanting Table",
+          description: {
+            translationKey: "item:enchantingTableDescription"
+          },
+          My: [2, 0, 2]
+        }),
+        ...(0, yY.Bb)("Stone Enchanting Table", {
+          displayName: {
+            translationKey: "item:stoneEnchantingTable"
+          },
+          ttb: 1e3,
+          harvestType: "wood",
+          model: "rotatable",
+          itemTexture: "stone_enchanting_table",
+          rootMetaDesc: "Stone Enchanting Table|meta|rot1",
+          modelScale: 10,
+          blockModel: "Stone Enchanting Table",
+          description: {
+            translationKey: "item:enchantingTableDescription"
+          },
+          My: [4, 0, 4]
+        }),
+        ...(0, yY.Bb)("Iron Enchanting Table", {
+          displayName: {
+            translationKey: "item:ironEnchantingTable"
+          },
+          ttb: 1200,
+          harvestType: "wood",
+          model: "rotatable",
+          itemTexture: "iron_enchanting_table",
+          rootMetaDesc: "Iron Enchanting Table|meta|rot1",
+          modelScale: 10,
+          blockModel: "Iron Enchanting Table",
+          description: {
+            translationKey: "item:enchantingTableDescription"
+          },
+          My: [6, 0, 6]
+        }),
+        ...(0, yY.Bb)("Gold Enchanting Table", {
+          displayName: {
+            translationKey: "item:goldEnchantingTable"
+          },
+          ttb: 1500,
+          harvestType: "wood",
+          model: "rotatable",
+          itemTexture: "gold_enchanting_table",
+          rootMetaDesc: "Gold Enchanting Table|meta|rot1",
+          modelScale: 10,
+          blockModel: "Gold Enchanting Table",
+          description: {
+            translationKey: "item:enchantingTableDescription"
+          },
+          My: [8, 0, 8]
+        }),
+        ...(0, yY.Bb)("Diamond Enchanting Table", {
+          displayName: {
+            translationKey: "item:diamondEnchantingTable"
+          },
+          ttb: 2e3,
+          harvestType: "wood",
+          model: "rotatable",
+          itemTexture: "diamond_enchanting_table",
+          rootMetaDesc: "Diamond Enchanting Table|meta|rot1",
+          modelScale: 10,
+          blockModel: "Diamond Enchanting Table",
+          description: {
+            translationKey: "item:enchantingTableDescription"
+          },
+          My: [10, 0, 10]
+        }),
+        "Pine Grass Block": {
+          displayName: {
+            translationKey: "item:pineGrassBlock"
+          },
+          ttb: 720,
+          textureInfo: ["pine_grass_block_side", "pine_grass_block", "dirt"],
+          texturePerSide: [0, 0, 1, 2, 0, 0],
+          harvestType: "granule",
+          soundType: {
+            break: "grass",
+            place: "grass"
+          }
+        },
+        ...(0, yY.Ib)("Pine Grass Slab", {
+          displayName: {
+            translationKey: "item:pineGrassSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_pine_grass_top_side", "pine_grass_block"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "granule",
+          slabFullBlock: "Pine Grass Block",
+          rootMetaDesc: "Pine Grass Slab|meta|rot1|bot"
+        }),
+        "Pine Grass": {
+          displayName: {
+            translationKey: "item:pineGrass"
+          },
+          ttb: 1,
+          textureInfo: "pine_grass",
+          model: "CentreCross",
+          solid: !1,
+          drops: null,
+          harvestType: "cuttable",
+          specialToolDrop: {
+            tool: "Shears",
+            drops: "Pine Grass"
+          },
+          canBePlacedOver: !0
+        },
+        "Pine Fern": {
+          displayName: {
+            translationKey: "item:pineFern"
+          },
+          ttb: 1,
+          textureInfo: "pine_fern",
+          model: "CentreCross",
+          solid: !1,
+          drops: null,
+          harvestType: "cuttable",
+          specialToolDrop: {
+            tool: "Shears",
+            drops: "Pine Fern"
+          },
+          canBePlacedOver: !0
+        },
+        "Fallen Pine Cone": {
+          displayName: {
+            translationKey: "item:fallenPineCone"
+          },
+          ttb: 1,
+          textureInfo: "fallen_pine_cone",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable"
+        },
+        "Pine Cone Block": {
+          displayName: {
+            translationKey: "item:pineConeBlock"
+          },
+          ttb: 600,
+          textureInfo: ["pine_cone_block_side", "pine_cone_block_top"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          harvestType: "wood"
+        },
+        ...(0, yY.lb)("Wolf"),
+        ...(0, yY.lb)("Bear"),
+        ...(0, yY.lb)("Deer"),
+        ...(0, yY.lb)("Stag"),
+        ...(0, yY.Bb)("Bone Antlers", {
+          displayName: {
+            translationKey: "item:boneAntlers"
+          },
+          description: {
+            translationKey: "item:antlersDescription"
+          },
+          ttb: 1500,
+          itemTexture: "bone_antlers_icon",
+          model: "rotatableOffset",
+          harvestType: "rock",
+          rootMetaDesc: "Bone Antlers|meta|rot1",
+          solid: !1,
+          blockModel: "bone_antlers_model",
+          modelScale: 10,
+          particlesIgnoreBlack: !0
+        }),
+        ...(0, yY.Bb)("Gold Antlers", {
+          displayName: {
+            translationKey: "item:goldAntlers"
+          },
+          description: {
+            translationKey: "item:antlersDescription"
+          },
+          ttb: 1500,
+          itemTexture: "gold_antlers_icon",
+          model: "rotatableOffset",
+          harvestType: "rock",
+          rootMetaDesc: "Gold Antlers|meta|rot1",
+          solid: !1,
+          blockModel: "gold_antlers_model",
+          modelScale: 10,
+          particlesIgnoreBlack: !0,
+          My: [7, 7, 2]
+        }),
+        ...(0, yY.lb)("Gold Watermelon Stag"),
+        ...(0, yY.Bb)("Salvaging Table", {
+          displayName: {
+            translationKey: "item:salvagingTable"
+          },
+          ttb: 1200,
+          harvestType: "wood",
+          rootMetaDesc: "Salvaging Table|meta|rot1",
+          description: {
+            translationKey: "item:salvagingTableDescription"
+          },
+          ...VY("Salvaging Table", "salvaging_table")
+        }),
+        Chalk: {
+          displayName: {
+            translationKey: "item:chalk"
+          },
+          description: {
+            translationKey: "item:chalkDescription"
+          },
+          ttb: 850,
+          textureInfo: "chalk",
+          harvestType: "rock"
+        },
+        ...(0, yY.H)((YY => `${YY} Chalk`), {
+          displayName: YY => ({
+            translationKey: "item:colouredChalk",
+            params: {
+              colour: `$t(colour:${(0,aY.xe)(YY)})`
+            }
+          }),
+          description: YY => ({
+            translationKey: "item:colouredChalkDescription",
+            params: {
+              colour: `$t(colour:${(0,aY.xe)(YY)})`
+            }
+          }),
+          ttb: 850,
+          textureInfo: YY => `chalk_${(0,aY.xe)(YY)}`,
+          harvestType: "rock"
+        }),
+        ...(0, yY.H)((YY => `${YY} Chalk Bricks`), {
+          displayName: YY => ({
+            translationKey: "item:colouredChalkBricks",
+            params: {
+              colour: `$t(colour:${(0,aY.xe)(YY)})`
+            }
+          }),
+          description: YY => ({
+            translationKey: "item:colouredChalkBricksDescription",
+            params: {
+              colour: `$t(colour:${(0,aY.xe)(YY)})`
+            }
+          }),
+          ttb: 850,
+          textureInfo: YY => `chalk_bricks_${(0,aY.xe)(YY)}`,
+          harvestType: "rock"
+        }),
+        ...(0, yY.N)("$colour$ Chalk Slab", "$colour$ Chalk", "chalk_$colour$", "item:colouredChalkSlab", "item:colouredChalkSlabDescription", {
+          ttb: 550,
+          harvestType: "rock"
+        }),
+        ...(0, yY.N)("$colour$ Chalk Bricks Slab", "$colour$ Chalk Bricks", ["chalk_bricks_slab_side_$colour$", "chalk_bricks_$colour$"], "item:colouredChalkBricksSlab", "item:colouredChalkBricksSlabDescription", {
+          ttb: 550,
+          harvestType: "rock"
+        }),
+        ...(0, yY.Bb)("Leaf Bed", {
+          displayName: {
+            translationKey: "item:leafBed"
+          },
+          ttb: 240,
+          itemTexture: "leaf_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          rootMetaDesc: "Leaf Bed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Leaf Bed"
+        }),
+        ...(0, yY.Bb)("_Leaf Bed Head", {
+          ttb: 240,
+          itemTexture: "leaf_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          drops: "Leaf Bed",
+          rootMetaDesc: "_Leaf Bed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Leaf Bed"
+        }),
+        "Jungle Grass Block": {
+          displayName: {
+            translationKey: "item:jungleGrassBlock"
+          },
+          ttb: 720,
+          textureInfo: ["jungle_grass_block_side", "jungle_grass_block", "dirt"],
+          texturePerSide: [0, 0, 1, 2, 0, 0],
+          harvestType: "granule",
+          soundType: {
+            break: "grass",
+            place: "grass"
+          }
+        },
+        ...(0, yY.Ib)("Jungle Grass Slab", {
+          displayName: {
+            translationKey: "item:jungleGrassSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_jungle_grass_top_side", "jungle_grass_block"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "granule",
+          slabFullBlock: "Jungle Grass Block",
+          rootMetaDesc: "Jungle Grass Slab|meta|rot1|bot"
+        }),
+        "Jungle Tall Grass": {
+          displayName: {
+            translationKey: "item:jungleTallGrass"
+          },
+          ttb: 1,
+          textureInfo: "jungle_tall_grass_bottom",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          drops: null,
+          specialToolDrop: {
+            tool: "Shears",
+            drops: "Jungle Tall Grass"
+          },
+          itemTexture: "jungle_tall_grass_bottom",
+          canBePlacedOver: !0
+        },
+        "Jungle Tall Grass|Top": {
+          ttb: 1,
+          textureInfo: "jungle_tall_grass_top",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          drops: null,
+          specialToolDrop: {
+            tool: "Shears",
+            drops: "Jungle Tall Grass"
+          },
+          itemTexture: "jungle_tall_grass_top",
+          canBePlacedOver: !0
+        },
+        Catnip: {
+          displayName: {
+            translationKey: "item:catnip"
+          },
+          ttb: 1,
+          textureInfo: "catnip",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          drops: null,
+          harvestType: "cuttable",
+          specialToolDrop: {
+            tool: "Shears",
+            drops: "Catnip"
+          },
+          canBePlacedOver: !0
+        },
+        "Mango Log": {
+          displayName: {
+            translationKey: "item:mangoLog"
+          },
+          ttb: 2400,
+          textureInfo: "log_mango",
+          harvestType: "wood"
+        },
+        "Barkless Mango Log": {
+          displayName: {
+            translationKey: "item:barklessMangoLog"
+          },
+          ttb: 2e3,
+          textureInfo: "stripped_mango_log",
+          harvestType: "wood"
+        },
+        "Barkless Mango Log|TreeBase|Mango": {
+          ttb: 2e3,
+          textureInfo: "stripped_mango_log",
+          harvestType: "wood",
+          drops: "Barkless Mango Log"
+        },
+        "Mango Wood Planks": {
+          displayName: {
+            translationKey: "item:mangoWoodPlanks"
+          },
+          ttb: 1800,
+          textureInfo: "planks_mango",
+          harvestType: "wood"
+        },
+        "Mango Leaves": {
+          displayName: {
+            translationKey: "item:mangoLeaves"
+          },
+          ttb: 350,
+          textureInfo: "leaves_mango",
+          harvestType: "cuttable"
+        },
+        "Mango Door": {
+          displayName: {
+            translationKey: "item:mangoDoor"
+          },
+          ttb: 3600,
+          itemTexture: "mango_door",
+          model: "door",
+          harvestType: "wood",
+          rootMetaDesc: "Mango Door|meta|rot1|closed",
+          particlesIgnoreBlack: !0,
+          blockModel: "Mango Door"
+        },
+        "Mango Door|meta|rot1|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Mango Door|meta|rot2|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Mango Door|meta|rot2|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Mango Door|meta|rot3|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Mango Door|meta|rot3|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Mango Door|meta|rot4|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Mango Door|meta|rot4|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "_Mango Door Top": {
+          ttb: 3600,
+          itemTexture: "mango_door",
+          harvestType: "wood",
+          model: "door",
+          drops: "Mango Door",
+          rootMetaDesc: "_Mango Door Top|meta|rot1|closed",
+          particlesIgnoreBlack: !0,
+          blockModel: "_Mango Door Top"
+        },
+        "_Mango Door Top|meta|rot1|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Mango Door"
+        },
+        "_Mango Door Top|meta|rot2|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Mango Door"
+        },
+        "_Mango Door Top|meta|rot2|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Mango Door"
+        },
+        "_Mango Door Top|meta|rot3|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Mango Door"
+        },
+        "_Mango Door Top|meta|rot3|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Mango Door"
+        },
+        "_Mango Door Top|meta|rot4|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Mango Door"
+        },
+        "_Mango Door Top|meta|rot4|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Mango Door"
+        },
+        "Mango Trapdoor": {
+          displayName: {
+            translationKey: "item:mangoTrapdoor"
+          },
+          ttb: 2800,
+          itemTexture: "mango_trapdoor",
+          model: "trapdoor",
+          harvestType: "wood",
+          rootMetaDesc: "Mango Trapdoor|meta|rot1|closed",
+          blockModel: "Mango Trapdoor",
+          heldItemScale: .5,
+          blockModelItem: !0
+        },
+        "Mango Trapdoor|meta|rot1|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Mango Trapdoor|meta|rot2|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Mango Trapdoor|meta|rot2|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Mango Trapdoor|meta|rot3|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Mango Trapdoor|meta|rot3|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Mango Trapdoor|meta|rot4|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Mango Trapdoor|meta|rot4|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Mango Sapling": {
+          displayName: {
+            translationKey: "item:mangoSapling"
+          },
+          ttb: 1,
+          textureInfo: "mango_sapling",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "mango_sapling"
+        },
+        "Mango Log|TreeBase|Mango": {
+          ttb: 2400,
+          textureInfo: "log_mango",
+          harvestType: "wood",
+          drops: "Mango Log"
+        },
+        "Mango Leaves|TreeCanopy": {
+          ttb: 350,
+          textureInfo: "leaves_mango",
+          harvestType: "cuttable",
+          drops: "Mango Leaves"
+        },
+        ...(0, yY.Ib)("Mango Slab", {
+          displayName: {
+            translationKey: "item:mangoSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_mango_side", "planks_mango"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "wood",
+          slabFullBlock: "Mango Wood Planks",
+          rootMetaDesc: "Mango Slab|meta|rot1|bot"
+        }),
+        ...(0, yY.Bb)("Mango Ladder", {
+          displayName: {
+            translationKey: "item:mangoLadder"
+          },
+          ttb: 1e3,
+          itemTexture: "ladder_mango",
+          model: "rotatableOffset",
+          harvestType: "wood",
+          rootMetaDesc: "Mango Ladder|meta|rot1",
+          modelScale: 1,
+          solid: !1,
+          blockModel: "Mango Ladder",
+          heldItemScale: 1,
+          blockModelItem: !0
+        }),
+        "Mango Block": {
+          displayName: {
+            translationKey: "item:mangoBlock"
+          },
+          ttb: 600,
+          textureInfo: ["mango_block_side", "mango_block_top", "mango_block_bottom"],
+          texturePerSide: [0, 0, 1, 2, 0, 0],
+          harvestType: "wood"
+        },
+        "Banana Block": {
+          displayName: {
+            translationKey: "item:bananaBlock"
+          },
+          ttb: 1200,
+          textureInfo: ["banana_block_side", "banana_block_top"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          harvestType: "wood"
+        },
+        "Banana Seeds": {
+          displayName: {
+            translationKey: "item:bananaSeeds"
+          },
+          ttb: 400,
+          textureInfo: "banana_stem",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "banana_seeds",
+          description: {
+            translationKey: "item:bananaSeedsDescription"
+          }
+        },
+        "Banana Seeds|Growing": {
+          ttb: 400,
+          textureInfo: "banana_stem",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: "Banana Seeds"
+        },
+        ...(0, yY.Bb)("Attached Banana Stem", {
+          displayName: {
+            translationKey: "item:attachedBananaStem"
+          },
+          ttb: 400,
+          textureInfo: ["attached_banana_stem_wrapper", "attached_banana_stem"],
+          model: "CustomPlanes|rotatable",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: "Banana Seeds",
+          rootMetaDesc: "Attached Banana Stem|meta|rot1",
+          customPlanesInfo: [{
+            textureIdx: 0,
+            yRot: Math.PI / 4
+          }, {
+            textureIdx: 0,
+            yRot: 3 * Math.PI / 4
+          }, {
+            textureIdx: 1,
+            yRot: 3 * Math.PI / 2
+          }]
+        }),
+        "Dangling Rope": {
+          displayName: {
+            translationKey: "item:danglingRope"
+          },
+          ttb: 225,
+          itemTexture: "dangling_rope",
+          model: "CustomModel",
+          harvestType: "cuttable",
+          solid: !1,
+          blockModel: "Dangling Rope",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375,
+            backFaceCulling: !0
+          },
+          description: {
+            translationKey: "item:ceilingClimbableDescription"
+          },
+          climbableInside: {
+            upForceScalar: .95
+          }
+        },
+        "Dangling Vine": {
+          displayName: {
+            translationKey: "item:danglingVine"
+          },
+          ttb: 225,
+          itemTexture: "dangling_vine",
+          model: "CustomModel",
+          harvestType: "cuttable",
+          solid: !1,
+          blockModel: "Dangling Vine",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375,
+            backFaceCulling: !0
+          },
+          description: {
+            translationKey: "item:ceilingClimbableDescription"
+          },
+          climbableInside: {
+            upForceScalar: .95
+          }
+        },
+        ...(0, yY.lb)("Gorilla"),
+        ...(0, yY.lb)("Wildcat"),
+        "Fruity Maple Leaves": {
+          displayName: {
+            translationKey: "item:fruityMapleLeaves"
+          },
+          ttb: 350,
+          textureInfo: "leaves_maple_fruity",
+          harvestType: "cuttable",
+          drops: null,
+          specialToolDrop: {
+            tool: "Shears",
+            drops: "Fruity Maple Leaves"
+          }
+        },
+        "Pine Cone Leaves": {
+          displayName: {
+            translationKey: "item:pineConeLeaves"
+          },
+          ttb: 350,
+          textureInfo: "leaves_pine_cone",
+          harvestType: "cuttable",
+          drops: null,
+          specialToolDrop: {
+            tool: "Shears",
+            drops: "Pine Cone Leaves"
+          }
+        },
+        "Fruity Plum Leaves": {
+          displayName: {
+            translationKey: "item:fruityPlumLeaves"
+          },
+          ttb: 350,
+          textureInfo: "leaves_plum_fruity",
+          harvestType: "cuttable",
+          drops: null,
+          specialToolDrop: {
+            tool: "Shears",
+            drops: "Fruity Plum Leaves"
+          }
+        },
+        "Fruity Palm Leaves": {
+          displayName: {
+            translationKey: "item:fruityPalmLeaves"
+          },
+          ttb: 350,
+          textureInfo: "leaves_palm_fruity",
+          harvestType: "cuttable",
+          drops: null,
+          specialToolDrop: {
+            tool: "Shears",
+            drops: "Fruity Palm Leaves"
+          }
+        },
+        "Fruity Pear Leaves": {
+          displayName: {
+            translationKey: "item:fruityPearLeaves"
+          },
+          ttb: 350,
+          textureInfo: "leaves_pear_fruity",
+          harvestType: "cuttable",
+          drops: null,
+          specialToolDrop: {
+            tool: "Shears",
+            drops: "Fruity Pear Leaves"
+          }
+        },
+        "Fruity Cherry Leaves": {
+          displayName: {
+            translationKey: "item:fruityCherryLeaves"
+          },
+          ttb: 350,
+          textureInfo: "leaves_cherry_fruity",
+          harvestType: "cuttable",
+          drops: null,
+          specialToolDrop: {
+            tool: "Shears",
+            drops: "Fruity Cherry Leaves"
+          }
+        },
+        "Fruity Mango Leaves": {
+          displayName: {
+            translationKey: "item:fruityMangoLeaves"
+          },
+          ttb: 350,
+          textureInfo: "leaves_mango_fruity",
+          harvestType: "cuttable",
+          drops: null,
+          specialToolDrop: {
+            tool: "Shears",
+            drops: "Fruity Mango Leaves"
+          }
+        },
+        ...(0, yY.lb)("Draugr Huntress"),
+        ...(0, yY.lb)("Magma Golem"),
+        "Black Portal": {
+          displayName: {
+            translationKey: "item:blackPortal"
+          },
+          textureInfo: {
+            animTextures: ["black_portal0", "black_portal1", "black_portal2", "black_portal3"],
+            animationInterval: 300,
+            interpolateFrames: !1
+          },
+          drops: null,
+          harvestType: "rock",
+          solid: !0,
+          My: (0, yY.ub)("Black")
+        },
+        "Blue Portal": {
+          displayName: {
+            translationKey: "item:bluePortal"
+          },
+          textureInfo: {
+            animTextures: ["blue_portal0", "blue_portal1", "blue_portal2", "blue_portal3"],
+            animationInterval: 300,
+            interpolateFrames: !1
+          },
+          drops: null,
+          harvestType: "rock",
+          solid: !0,
+          My: (0, yY.ub)("Blue")
+        },
+        "Brown Portal": {
+          displayName: {
+            translationKey: "item:brownPortal"
+          },
+          textureInfo: {
+            animTextures: ["brown_portal0", "brown_portal1", "brown_portal2", "brown_portal3"],
+            animationInterval: 300,
+            interpolateFrames: !1
+          },
+          drops: null,
+          harvestType: "rock",
+          solid: !0,
+          My: (0, yY.ub)("Brown")
+        },
+        "Cyan Portal": {
+          displayName: {
+            translationKey: "item:cyanPortal"
+          },
+          textureInfo: {
+            animTextures: ["cyan_portal0", "cyan_portal1", "cyan_portal2", "cyan_portal3"],
+            animationInterval: 300,
+            interpolateFrames: !1
+          },
+          drops: null,
+          harvestType: "rock",
+          solid: !0,
+          My: (0, yY.ub)("Cyan")
+        },
+        "Gray Portal": {
+          displayName: {
+            translationKey: "item:grayPortal"
+          },
+          textureInfo: {
+            animTextures: ["gray_portal0", "gray_portal1", "gray_portal2", "gray_portal3"],
+            animationInterval: 300,
+            interpolateFrames: !1
+          },
+          drops: null,
+          harvestType: "rock",
+          solid: !0,
+          My: (0, yY.ub)("Gray")
+        },
+        "Green Portal": {
+          displayName: {
+            translationKey: "item:greenPortal"
+          },
+          textureInfo: {
+            animTextures: ["green_portal0", "green_portal1", "green_portal2", "green_portal3"],
+            animationInterval: 300,
+            interpolateFrames: !1
+          },
+          drops: null,
+          harvestType: "rock",
+          solid: !0,
+          My: (0, yY.ub)("Green")
+        },
+        "Grey Portal": {
+          displayName: {
+            translationKey: "item:greyPortal"
+          },
+          textureInfo: {
+            animTextures: ["grey_portal0", "grey_portal1", "grey_portal2", "grey_portal3"],
+            animationInterval: 300,
+            interpolateFrames: !1
+          },
+          drops: null,
+          harvestType: "rock",
+          solid: !0,
+          My: (0, yY.ub)("Grey")
+        },
+        "Light Blue Portal": {
+          displayName: {
+            translationKey: "item:lightbluePortal"
+          },
+          textureInfo: {
+            animTextures: ["lightblue_portal0", "lightblue_portal1", "lightblue_portal2", "lightblue_portal3"],
+            animationInterval: 300,
+            interpolateFrames: !1
+          },
+          drops: null,
+          harvestType: "rock",
+          solid: !0,
+          My: (0, yY.ub)("Light Blue")
+        },
+        "Light Gray Portal": {
+          displayName: {
+            translationKey: "item:lightgrayPortal"
+          },
+          textureInfo: {
+            animTextures: ["lightgray_portal0", "lightgray_portal1", "lightgray_portal2", "lightgray_portal3"],
+            animationInterval: 300,
+            interpolateFrames: !1
+          },
+          drops: null,
+          harvestType: "rock",
+          solid: !0,
+          My: (0, yY.ub)("Light Gray")
+        },
+        "Lime Portal": {
+          displayName: {
+            translationKey: "item:limePortal"
+          },
+          textureInfo: {
+            animTextures: ["lime_portal0", "lime_portal1", "lime_portal2", "lime_portal3"],
+            animationInterval: 300,
+            interpolateFrames: !1
+          },
+          drops: null,
+          harvestType: "rock",
+          solid: !0,
+          My: (0, yY.ub)("Lime")
+        },
+        "Magenta Portal": {
+          displayName: {
+            translationKey: "item:magentaPortal"
+          },
+          textureInfo: {
+            animTextures: ["magenta_portal0", "magenta_portal1", "magenta_portal2", "magenta_portal3"],
+            animationInterval: 300,
+            interpolateFrames: !1
+          },
+          drops: null,
+          harvestType: "rock",
+          solid: !0,
+          My: (0, yY.ub)("Magenta")
+        },
+        "Orange Portal": {
+          displayName: {
+            translationKey: "item:orangePortal"
+          },
+          textureInfo: {
+            animTextures: ["orange_portal0", "orange_portal1", "orange_portal2", "orange_portal3"],
+            animationInterval: 300,
+            interpolateFrames: !1
+          },
+          drops: null,
+          harvestType: "rock",
+          solid: !0,
+          My: (0, yY.ub)("Orange")
+        },
+        "Pink Portal": {
+          displayName: {
+            translationKey: "item:pinkPortal"
+          },
+          textureInfo: {
+            animTextures: ["pink_portal0", "pink_portal1", "pink_portal2", "pink_portal3"],
+            animationInterval: 300,
+            interpolateFrames: !1
+          },
+          drops: null,
+          harvestType: "rock",
+          solid: !0,
+          My: (0, yY.ub)("Pink")
+        },
+        "Purple Portal": {
+          displayName: {
+            translationKey: "item:purplePortal"
+          },
+          textureInfo: {
+            animTextures: ["purple_portal0", "purple_portal1", "purple_portal2", "purple_portal3"],
+            animationInterval: 300,
+            interpolateFrames: !1
+          },
+          drops: null,
+          harvestType: "rock",
+          solid: !0,
+          My: (0, yY.ub)("Purple")
+        },
+        "Red Portal": {
+          displayName: {
+            translationKey: "item:redPortal"
+          },
+          textureInfo: {
+            animTextures: ["red_portal0", "red_portal1", "red_portal2", "red_portal3"],
+            animationInterval: 300,
+            interpolateFrames: !1
+          },
+          drops: null,
+          harvestType: "rock",
+          solid: !0,
+          My: (0, yY.ub)("Red")
+        },
+        "White Portal": {
+          displayName: {
+            translationKey: "item:whitePortal"
+          },
+          textureInfo: {
+            animTextures: ["white_portal0", "white_portal1", "white_portal2", "white_portal3"],
+            animationInterval: 300,
+            interpolateFrames: !1
+          },
+          drops: null,
+          harvestType: "rock",
+          solid: !0,
+          My: (0, yY.ub)("White")
+        },
+        "Yellow Portal": {
+          displayName: {
+            translationKey: "item:yellowPortal"
+          },
+          textureInfo: {
+            animTextures: ["yellow_portal0", "yellow_portal1", "yellow_portal2", "yellow_portal3"],
+            animationInterval: 300,
+            interpolateFrames: !1
+          },
+          drops: null,
+          harvestType: "rock",
+          solid: !0,
+          My: (0, yY.ub)("Yellow")
+        },
+        "Leather Block": {
+          displayName: {
+            translationKey: "item:leatherBlock"
+          },
+          ttb: 960,
+          textureInfo: ["leather_block_side", "leather_block_top"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          harvestType: "cuttable",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        },
+        ...(0, yY.lb)("Horse"),
+        "Tomato Plant": {
+          displayName: {
+            translationKey: "item:tomato"
+          },
+          ttb: 400,
+          textureInfo: "tomato_plant_stage0",
+          itemTexture: "tomato_plant_stage0",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable"
+        },
+        ...(0, yY.sb)("Tomato Plant", {
+          displayName: {
+            translationKey: "item:tomato"
+          },
+          ttb: 400,
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: null
+        }, ["tomato_plant_stage1"], {
+          1: {
+            itemTexture: "tomato_plant_stage1"
+          }
+        }),
+        "Tomato Plant|FreshlyGrown": {
+          displayName: {
+            translationKey: "item:tomato"
+          },
+          ttb: 400,
+          textureInfo: "tomato_plant_stage2",
+          itemTexture: "tomato_plant_stage2",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          onMinedAura: 5
+        },
+        "Tomato Plant|Top|FreshlyGrown": {
+          displayName: {
+            translationKey: "item:tomato"
+          },
+          ttb: 400,
+          textureInfo: "tomato_plant_stage2_top",
+          itemTexture: "tomato_plant_stage2_top",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          onMinedAura: 5
+        },
+        "Carrot Plant": {
+          displayName: {
+            translationKey: "item:carrotSeeds"
+          },
+          ttb: 400,
+          textureInfo: "carrot_plant_stage0",
+          itemTexture: "carrot_seeds",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: "Carrot Seeds",
+          description: {
+            translationKey: "item:carrotSeedsDescription"
+          }
+        },
+        ...(0, yY.sb)("Carrot Plant", {
+          displayName: {
+            translationKey: "item:carrotSeeds"
+          },
+          ttb: 400,
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "carrot_seeds",
+          drops: "Carrot Seeds",
+          description: {
+            translationKey: "item:carrotSeedsDescription"
+          }
+        }, ["carrot_plant_stage1"]),
+        "Carrot Plant|FreshlyGrown": {
+          displayName: {
+            translationKey: "item:carrotSeeds"
+          },
+          ttb: 400,
+          textureInfo: "carrot_plant_stage2",
+          itemTexture: "carrot_seeds",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          description: {
+            translationKey: "item:carrotSeedsDescription"
+          },
+          onMinedAura: 5
+        },
+        "Potato Plant": {
+          displayName: {
+            translationKey: "item:potatoSeeds"
+          },
+          ttb: 400,
+          textureInfo: "potato_plant_stage0",
+          itemTexture: "potato_seeds",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: "Potato Seeds",
+          description: {
+            translationKey: "item:potatoSeedsDescription"
+          }
+        },
+        ...(0, yY.sb)("Potato Plant", {
+          displayName: {
+            translationKey: "item:potatoSeeds"
+          },
+          ttb: 400,
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "potato_seeds",
+          drops: "Potato Seeds",
+          description: {
+            translationKey: "item:potatoSeedsDescription"
+          }
+        }, ["potato_plant_stage1"]),
+        "Potato Plant|FreshlyGrown": {
+          displayName: {
+            translationKey: "item:potatoSeeds"
+          },
+          ttb: 400,
+          textureInfo: "potato_plant_stage2",
+          itemTexture: "potato_seeds",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          onMinedAura: 5,
+          description: {
+            translationKey: "item:potatoSeedsDescription"
+          }
+        },
+        "Strawberry Bush": {
+          displayName: {
+            translationKey: "item:strawberries"
+          },
+          ttb: 400,
+          textureInfo: "strawberry_bush_stage0",
+          itemTexture: "strawberry_bush_stage0",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable"
+        },
+        ...(0, yY.sb)("Strawberry Bush", {
+          displayName: {
+            translationKey: "item:strawberries"
+          },
+          ttb: 400,
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: null
+        }, ["strawberry_bush_stage1", "strawberry_bush_stage2"], {
+          1: {
+            itemTexture: "strawberry_bush_stage1"
+          },
+          2: {
+            itemTexture: "strawberry_bush_stage2",
+            onMinedAura: 5
+          }
+        }),
+        "Sugar Cane Plant": {
+          displayName: {
+            translationKey: "item:sugarCane"
+          },
+          ttb: 400,
+          textureInfo: "sugar_cane_plant_stage0",
+          itemTexture: "sugar_cane_plant_stage0",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable"
+        },
+        ...(0, yY.sb)("Sugar Cane Plant", {
+          displayName: {
+            translationKey: "item:sugarCane"
+          },
+          ttb: 400,
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: null
+        }, ["sugar_cane_plant_stage1"], {
+          1: {
+            itemTexture: "sugar_cane_plant_stage1"
+          }
+        }),
+        "Sugar Cane Plant|FreshlyGrown": {
+          displayName: {
+            translationKey: "item:sugarCane"
+          },
+          ttb: 400,
+          textureInfo: "sugar_cane_plant_stage2",
+          itemTexture: "sugar_cane_plant_stage2",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          onMinedAura: 5
+        },
+        "Sugar Cane Plant|Top|FreshlyGrown": {
+          displayName: {
+            translationKey: "item:sugarCane"
+          },
+          ttb: 400,
+          textureInfo: "sugar_cane_plant_stage2_top",
+          itemTexture: "sugar_cane_plant_stage2_top",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          onMinedAura: 5
+        },
+        "Lettuce Plant": {
+          displayName: {
+            translationKey: "item:lettuce"
+          },
+          ttb: 400,
+          textureInfo: "lettuce_plant_stage0",
+          itemTexture: "lettuce_plant_stage0",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable"
+        },
+        ...(0, yY.sb)("Lettuce Plant", {
+          displayName: {
+            translationKey: "item:lettuce"
+          },
+          ttb: 400,
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: null
+        }, ["lettuce_plant_stage1"], {
+          1: {
+            itemTexture: "lettuce_plant_stage1"
+          }
+        }),
+        "Lettuce Plant|FreshlyGrown": {
+          displayName: {
+            translationKey: "item:lettuce"
+          },
+          ttb: 400,
+          textureInfo: "lettuce_plant_stage2",
+          itemTexture: "lettuce_plant_stage2",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          onMinedAura: 5
+        },
+        "Coffee Plant": {
+          displayName: {
+            translationKey: "item:coffeeBean"
+          },
+          ttb: 400,
+          textureInfo: "coffee_plant_stage0",
+          itemTexture: "coffee_plant_stage0",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable"
+        },
+        ...(0, yY.sb)("Coffee Plant", {
+          displayName: {
+            translationKey: "item:coffeeBean"
+          },
+          ttb: 400,
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: null
+        }, ["coffee_plant_stage1"], {
+          1: {
+            itemTexture: "coffee_plant_stage1"
+          }
+        }),
+        "Coffee Plant|FreshlyGrown": {
+          displayName: {
+            translationKey: "item:coffeeBean"
+          },
+          ttb: 400,
+          textureInfo: "coffee_plant_stage2",
+          itemTexture: "coffee_plant_stage2",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          onMinedAura: 5
+        },
+        "Cauliflower Plant": {
+          displayName: {
+            translationKey: "item:cauliflower"
+          },
+          ttb: 400,
+          textureInfo: "cauliflower_plant_stage0",
+          itemTexture: "cauliflower_plant_stage0",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable"
+        },
+        ...(0, yY.sb)("Cauliflower Plant", {
+          displayName: {
+            translationKey: "item:cauliflower"
+          },
+          ttb: 400,
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: null
+        }, ["cauliflower_plant_stage1"], {
+          1: {
+            itemTexture: "cauliflower_plant_stage1"
+          }
+        }),
+        "Cauliflower Plant|FreshlyGrown": {
+          displayName: {
+            translationKey: "item:cauliflower"
+          },
+          ttb: 400,
+          textureInfo: "cauliflower_plant_stage2",
+          itemTexture: "cauliflower_plant_stage2",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          onMinedAura: 5
+        },
+        "Parsnip Plant": {
+          displayName: {
+            translationKey: "item:parsnip"
+          },
+          ttb: 400,
+          textureInfo: "parsnip_plant_stage0",
+          itemTexture: "parsnip_plant_stage0",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable"
+        },
+        ...(0, yY.sb)("Parsnip Plant", {
+          displayName: {
+            translationKey: "item:parsnip"
+          },
+          ttb: 400,
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: null
+        }, ["parsnip_plant_stage1"], {
+          1: {
+            itemTexture: "parsnip_plant_stage1"
+          }
+        }),
+        "Parsnip Plant|FreshlyGrown": {
+          displayName: {
+            translationKey: "item:parsnip"
+          },
+          ttb: 400,
+          textureInfo: "parsnip_plant_stage2",
+          itemTexture: "parsnip_plant_stage2",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          onMinedAura: 5
+        },
+        "Blueberry Bush": {
+          displayName: {
+            translationKey: "item:blueberries"
+          },
+          ttb: 400,
+          textureInfo: "blueberry_bush_stage0",
+          itemTexture: "blueberry_bush_stage0",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable"
+        },
+        ...(0, yY.sb)("Blueberry Bush", {
+          displayName: {
+            translationKey: "item:blueberries"
+          },
+          ttb: 400,
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: null
+        }, ["blueberry_bush_stage1", "blueberry_bush_stage2"], {
+          1: {
+            itemTexture: "blueberry_bush_stage1"
+          },
+          2: {
+            itemTexture: "blueberry_bush_stage2",
+            onMinedAura: 5
+          }
+        }),
+        "Red Cabbage Plant": {
+          displayName: {
+            translationKey: "item:redCabbage"
+          },
+          ttb: 400,
+          textureInfo: "red_cabbage_stage0",
+          itemTexture: "red_cabbage_stage0",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable"
+        },
+        ...(0, yY.sb)("Red Cabbage Plant", {
+          displayName: {
+            translationKey: "item:redCabbage"
+          },
+          ttb: 400,
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: null
+        }, ["red_cabbage_stage1"], {
+          1: {
+            itemTexture: "red_cabbage_stage1"
+          }
+        }),
+        "Red Cabbage Plant|FreshlyGrown": {
+          displayName: {
+            translationKey: "item:redCabbage"
+          },
+          ttb: 400,
+          textureInfo: "red_cabbage_stage2",
+          itemTexture: "red_cabbage_stage2",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          onMinedAura: 5
+        },
+        "Beetroot Plant": {
+          displayName: {
+            translationKey: "item:beetrootSeeds"
+          },
+          ttb: 400,
+          textureInfo: "beetroot_plant_stage0",
+          itemTexture: "beetroot_seeds",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: "Beetroot Seeds",
+          description: {
+            translationKey: "item:beetrootSeedsDescription"
+          }
+        },
+        ...(0, yY.sb)("Beetroot Plant", {
+          displayName: {
+            translationKey: "item:beetrootSeeds"
+          },
+          ttb: 400,
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "beetroot_seeds",
+          drops: "Beetroot Seeds",
+          description: {
+            translationKey: "item:beetrootSeedsDescription"
+          }
+        }, ["beetroot_plant_stage1"]),
+        "Beetroot Plant|FreshlyGrown": {
+          displayName: {
+            translationKey: "item:beetrootSeeds"
+          },
+          ttb: 400,
+          textureInfo: "beetroot_plant_stage2",
+          itemTexture: "beetroot_seeds",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          onMinedAura: 5,
+          description: {
+            translationKey: "item:beetrootSeedsDescription"
+          }
+        },
+        "Autumn Aspen Leaves": {
+          displayName: {
+            translationKey: "item:autumnAspenLeaves"
+          },
+          ttb: 350,
+          textureInfo: "leaves_aspen_autumn",
+          harvestType: "cuttable"
+        },
+        "Autumn Aspen Leaves|TreeCanopy": {
+          ttb: 350,
+          textureInfo: "leaves_aspen_autumn",
+          harvestType: "cuttable",
+          drops: "Autumn Aspen Leaves"
+        },
+        "Autumn Fern": {
+          displayName: {
+            translationKey: "item:autumnFern"
+          },
+          ttb: 1,
+          textureInfo: "autumn_fern",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          drops: null,
+          harvestType: "cuttable",
+          specialToolDrop: {
+            tool: "Shears",
+            drops: "Autumn Fern"
+          },
+          canBePlacedOver: !0
+        },
+        ...(0, yY.Eb)("Iron Chest", {
+          displayName: {
+            translationKey: "item:ironChest"
+          },
+          ttb: 7200,
+          textureInfo: ["iron_chest_front", "iron_chest_side", "iron_chest_top[rot[1", "iron_chest_top[rot[2", "iron_chest_top[rot[3", "iron_chest_top[rot[4", "iron_chest_back"],
+          harvestType: "rock",
+          rootMetaDesc: "Iron Chest|meta|rot1",
+          description: {
+            translationKey: "item:ironChestDescription"
+          }
+        }, [
+          [1, 1, 2, 2, 0, 6],
+          [0, 6, 3, 3, 1, 1],
+          [1, 1, 4, 4, 6, 0],
+          [6, 0, 5, 5, 1, 1]
+        ]),
+        Crate: {
+          displayName: {
+            translationKey: "item:crate"
+          },
+          ttb: 600,
+          textureInfo: "crate",
+          harvestType: "wood"
+        },
+        "Carrot Block": {
+          displayName: {
+            translationKey: "item:carrotBlock"
+          },
+          ttb: 600,
+          textureInfo: ["carrot_block_side", "carrot_block_top", "carrot_block_bottom"],
+          texturePerSide: [0, 0, 1, 2, 0, 0],
+          harvestType: "wood"
+        },
+        "Carrot Seeds": {
+          displayName: {
+            translationKey: "item:carrotSeeds"
+          },
+          ttb: 400,
+          textureInfo: "carrot_plant_stage0",
+          itemTexture: "carrot_seeds",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          description: {
+            translationKey: "item:carrotSeedsDescription"
+          }
+        },
+        "Potato Block": {
+          displayName: {
+            translationKey: "item:potatoBlock"
+          },
+          ttb: 600,
+          textureInfo: "potato_block",
+          harvestType: "wood"
+        },
+        "Potato Seeds": {
+          displayName: {
+            translationKey: "item:potatoSeeds"
+          },
+          ttb: 400,
+          textureInfo: "potato_plant_stage0",
+          itemTexture: "potato_seeds",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          description: {
+            translationKey: "item:potatoSeedsDescription"
+          }
+        },
+        "Beetroot Block": {
+          displayName: {
+            translationKey: "item:beetrootBlock"
+          },
+          ttb: 600,
+          textureInfo: ["beetroot_block_side", "beetroot_block_top", "beetroot_block_bottom"],
+          texturePerSide: [0, 0, 1, 2, 0, 0],
+          harvestType: "wood"
+        },
+        "Beetroot Seeds": {
+          displayName: {
+            translationKey: "item:beetrootSeeds"
+          },
+          ttb: 400,
+          textureInfo: "beetroot_plant_stage0",
+          itemTexture: "beetroot_seeds",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          description: {
+            translationKey: "item:beetrootSeedsDescription"
+          }
+        },
+        ...(0, yY.y)("White Banner", {
+          displayName: {
+            translationKey: "item:whiteBanner"
+          },
+          ttb: 240,
+          itemTexture: "banner_white",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "White Banner|meta|rot1|bot",
+          particlesIgnoreBlack: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          solid: !1,
+          blockModel: "White Banner",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        }),
+        ...(0, yY.y)("Orange Banner", {
+          displayName: {
+            translationKey: "item:orangeBanner"
+          },
+          ttb: 240,
+          itemTexture: "banner_orange",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Orange Banner|meta|rot1|bot",
+          particlesIgnoreBlack: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          solid: !1,
+          blockModel: "Orange Banner",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        }),
+        ...(0, yY.y)("Magenta Banner", {
+          displayName: {
+            translationKey: "item:magentaBanner"
+          },
+          ttb: 240,
+          itemTexture: "banner_magenta",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Magenta Banner|meta|rot1|bot",
+          particlesIgnoreBlack: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          solid: !1,
+          blockModel: "Magenta Banner",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        }),
+        ...(0, yY.y)("Light Blue Banner", {
+          displayName: {
+            translationKey: "item:lightBlueBanner"
+          },
+          ttb: 240,
+          itemTexture: "banner_light_blue",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Light Blue Banner|meta|rot1|bot",
+          particlesIgnoreBlack: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          solid: !1,
+          blockModel: "Light Blue Banner",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        }),
+        ...(0, yY.y)("Yellow Banner", {
+          displayName: {
+            translationKey: "item:yellowBanner"
+          },
+          ttb: 240,
+          itemTexture: "banner_yellow",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Yellow Banner|meta|rot1|bot",
+          particlesIgnoreBlack: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          solid: !1,
+          blockModel: "Yellow Banner",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        }),
+        ...(0, yY.y)("Lime Banner", {
+          displayName: {
+            translationKey: "item:limeBanner"
+          },
+          ttb: 240,
+          itemTexture: "banner_lime",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Lime Banner|meta|rot1|bot",
+          particlesIgnoreBlack: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          solid: !1,
+          blockModel: "Lime Banner",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        }),
+        ...(0, yY.y)("Pink Banner", {
+          displayName: {
+            translationKey: "item:pinkBanner"
+          },
+          ttb: 240,
+          itemTexture: "banner_pink",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Pink Banner|meta|rot1|bot",
+          particlesIgnoreBlack: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          solid: !1,
+          blockModel: "Pink Banner",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        }),
+        ...(0, yY.y)("Gray Banner", {
+          displayName: {
+            translationKey: "item:grayBanner"
+          },
+          ttb: 240,
+          itemTexture: "banner_gray",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Gray Banner|meta|rot1|bot",
+          particlesIgnoreBlack: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          solid: !1,
+          blockModel: "Gray Banner",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        }),
+        ...(0, yY.y)("Light Gray Banner", {
+          displayName: {
+            translationKey: "item:lightGrayBanner"
+          },
+          ttb: 240,
+          itemTexture: "banner_light_gray",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Light Gray Banner|meta|rot1|bot",
+          particlesIgnoreBlack: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          solid: !1,
+          blockModel: "Light Gray Banner",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        }),
+        ...(0, yY.y)("Cyan Banner", {
+          displayName: {
+            translationKey: "item:cyanBanner"
+          },
+          ttb: 240,
+          itemTexture: "banner_cyan",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Cyan Banner|meta|rot1|bot",
+          particlesIgnoreBlack: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          solid: !1,
+          blockModel: "Cyan Banner",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        }),
+        ...(0, yY.y)("Purple Banner", {
+          displayName: {
+            translationKey: "item:purpleBanner"
+          },
+          ttb: 240,
+          itemTexture: "banner_purple",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Purple Banner|meta|rot1|bot",
+          particlesIgnoreBlack: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          solid: !1,
+          blockModel: "Purple Banner",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        }),
+        ...(0, yY.y)("Blue Banner", {
+          displayName: {
+            translationKey: "item:blueBanner"
+          },
+          ttb: 240,
+          itemTexture: "banner_blue",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Blue Banner|meta|rot1|bot",
+          particlesIgnoreBlack: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          solid: !1,
+          blockModel: "Blue Banner",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        }),
+        ...(0, yY.y)("Brown Banner", {
+          displayName: {
+            translationKey: "item:brownBanner"
+          },
+          ttb: 240,
+          itemTexture: "banner_brown",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Brown Banner|meta|rot1|bot",
+          particlesIgnoreBlack: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          solid: !1,
+          blockModel: "Brown Banner",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        }),
+        ...(0, yY.y)("Green Banner", {
+          displayName: {
+            translationKey: "item:greenBanner"
+          },
+          ttb: 240,
+          itemTexture: "banner_green",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Green Banner|meta|rot1|bot",
+          particlesIgnoreBlack: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          solid: !1,
+          blockModel: "Green Banner",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        }),
+        ...(0, yY.y)("Red Banner", {
+          displayName: {
+            translationKey: "item:redBanner"
+          },
+          ttb: 240,
+          itemTexture: "banner_red",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Red Banner|meta|rot1|bot",
+          particlesIgnoreBlack: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          solid: !1,
+          blockModel: "Red Banner",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        }),
+        ...(0, yY.y)("Black Banner", {
+          displayName: {
+            translationKey: "item:blackBanner"
+          },
+          ttb: 240,
+          itemTexture: "banner_black",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Black Banner|meta|rot1|bot",
+          particlesIgnoreBlack: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          solid: !1,
+          blockModel: "Black Banner",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        }),
+        ...(0, yY.y)("Draugr Banner", {
+          displayName: {
+            translationKey: "item:draugrBanner"
+          },
+          ttb: 240,
+          itemTexture: "banner_draugr",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Draugr Banner|meta|rot1|bot",
+          particlesIgnoreBlack: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          solid: !1,
+          blockModel: "Draugr Banner",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        }),
+        ...(0, yY.lb)("Spirit Golem"),
+        ...(0, yY.lb)("Spirit Wolf"),
+        ...(0, yY.lb)("Spirit Bear"),
+        ...(0, yY.lb)("Spirit Stag"),
+        ...(0, yY.lb)("Spirit Gorilla"),
+        "Fertilised Soil": {
+          displayName: {
+            translationKey: "item:fertilisedSoil"
+          },
+          ttb: 600,
+          textureInfo: "fertilised_soil",
+          harvestType: "granule",
+          drops: "Tilled Soil"
+        },
+        ...(0, yY.hb)("Sheep"),
+        ...(0, yY.hb)("Cow"),
+        ...(0, yY.hb)("Pig"),
+        ...(0, yY.hb)("Horse"),
+        ...(0, yY.hb)("Wolf"),
+        ...(0, yY.hb)("Deer"),
+        ...(0, yY.hb)("Wildcat"),
+        "Hollow Crate": {
+          displayName: {
+            translationKey: "item:hollowCrate"
+          },
+          ttb: 600,
+          textureInfo: "crate",
+          harvestType: "wood",
+          solid: !1
+        },
+        ...(0, yY.lb)("Draugr Warper"),
+        ...(0, yY.wb)("Radar", "_Radar Dish Up", "active_radar", "radar_side_active", "radar_top_active"),
+        ...(0, yY.wb)("Inactive Radar", "_Radar Dish Down", "inactive_radar", "radar_side_inactive", "radar_top_inactive"),
+        ...(0, yY.wb)("Active Radar", "_Radar Dish Up", "active_radar", "radar_side_active", {
+          textureInfo: ["radar_side_active", "radar_bottom", {
+            animTextures: ["radar_screen0[rot[1", "radar_screen1[rot[1", "radar_screen2[rot[1", "radar_screen3[rot[1"],
+            animationInterval: 200
+          }, {
+            animTextures: ["radar_screen0[rot[2", "radar_screen1[rot[2", "radar_screen2[rot[2", "radar_screen3[rot[2"],
+            animationInterval: 200
+          }, {
+            animTextures: ["radar_screen0[rot[3", "radar_screen1[rot[3", "radar_screen2[rot[3", "radar_screen3[rot[3"],
+            animationInterval: 200
+          }, {
+            animTextures: ["radar_screen0[rot[4", "radar_screen1[rot[4", "radar_screen2[rot[4", "radar_screen3[rot[4"],
+            animationInterval: 200
+          }],
+          texturesPerSide: [
+            [0, 0, 2, 1, 0, 0],
+            [0, 0, 3, 1, 0, 0],
+            [0, 0, 4, 1, 0, 0],
+            [0, 0, 5, 1, 0, 0]
+          ]
+        }),
+        "Lucky Block": {
+          displayName: {
+            translationKey: "item:luckyBlock"
+          },
+          ttb: 1200,
+          textureInfo: "yellow_lucky_block",
+          harvestType: "rock"
+        },
+        "Ultra Lucky Block": {
+          displayName: {
+            translationKey: "item:ultraLuckyBlock"
+          },
+          ttb: 1200,
+          textureInfo: "light_blue_lucky_block",
+          harvestType: "rock"
+        },
+        ...(0, yY.Bb)("Gold Trophy", {
+          displayName: {
+            translationKey: "item:goldTrophy"
+          },
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "rotatable",
+          itemTexture: "gold_trophy",
+          rootMetaDesc: "Gold Trophy|meta|rot1",
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          blockModel: "Gold Trophy"
+        }),
+        ...(0, yY.Lb)("Magenta"),
+        ...(0, yY.Lb)("Light Gray"),
+        ...(0, yY.Lb)("Red"),
+        "INTERNAL_MESH_Gold Trophy": {
+          ttb: 2e3,
+          harvestType: "rock",
+          blockModel: "Gold Trophy",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1
+        },
+        ...(0, yY.lb)("Frost Wraith"),
+        ...(0, yY.lb)("Draugr Reaver"),
+        ...(0, yY.Lb)("White"),
+        ...(0, yY.Lb)("Orange"),
+        ...(0, yY.Lb)("Light Blue"),
+        ...(0, yY.Lb)("Yellow"),
+        ...(0, yY.Lb)("Lime"),
+        ...(0, yY.Lb)("Pink"),
+        ...(0, yY.Lb)("Gray"),
+        ...(0, yY.Lb)("Cyan"),
+        ...(0, yY.Lb)("Purple"),
+        ...(0, yY.Lb)("Blue"),
+        ...(0, yY.Lb)("Brown"),
+        ...(0, yY.Lb)("Green"),
+        ...(0, yY.Lb)("Black"),
+        ...(0, yY.y)("Skull Banner", {
+          displayName: {
+            translationKey: "item:skullBanner"
+          },
+          ttb: 240,
+          itemTexture: "banner_skull",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Skull Banner|meta|rot1|bot",
+          particlesIgnoreBlack: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          solid: !1,
+          blockModel: "Skull Banner",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        }),
+        ...(0, yY.y)("Rainbow Banner", {
+          displayName: {
+            translationKey: "item:rainbowBanner"
+          },
+          ttb: 240,
+          itemTexture: "banner_rainbow",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Rainbow Banner|meta|rot1|bot",
+          particlesIgnoreBlack: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          solid: !1,
+          blockModel: "Rainbow Banner",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        }),
+        "Duo Blocchino Statue": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "2_block",
+          blockModel: "2_block",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 3,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Bebek Bebek Bebek Statue": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "bebek_bebek_bebek",
+          blockModel: "bebek_bebek_bebek",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 3,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Bobino Musculino Statue": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "bobino_musculino",
+          blockModel: "bobino_musculino",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 3,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Bobzilla Statue": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "bobzilla",
+          blockModel: "bobzilla",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 3,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Brra Brra Pachim Statue": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "brra_brra_pachim",
+          blockModel: "brra_brra_pachim",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 2.5,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Capitano Explovissimo Statue": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "capitano_explovissimo",
+          blockModel: "capitano_explovissimo",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 3,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Cappuccino Ninjino Statue": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "cappuccino_ninjino",
+          blockModel: "cappuccino_ninjino",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 3,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Chimpanzano Bananano Statue": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "chimpanzano_bananano",
+          blockModel: "chimpanzano_bananano",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 3,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Il Wizardini Del Porko Statue": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "il_wizardini_del_porko",
+          blockModel: "il_wizardini_del_porko",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 3,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Lucchia Blocchi Statue": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "lucchia_blocchi",
+          blockModel: "lucchia_blocchi",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 3,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Monsieur Bedwar Statue": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "monsieur_bedwar",
+          blockModel: "monsieur_bedwar",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 3,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Twirlina Cappucina Statue": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "twirlina_cappucina",
+          blockModel: "twirlina_cappucina",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 3,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Weapon Lucky Block": {
+          displayName: {
+            translationKey: "item:weaponLuckyBlock"
+          },
+          ttb: 1200,
+          textureInfo: ["red_lucky_block", "weapon_lucky_block"],
+          texturePerSide: [1, 1, 0, 0, 0, 0],
+          harvestType: "rock"
+        },
+        "Boiling Pot": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "boiling_pot",
+          blockModel: "boiling_pot",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Chopping Board": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "chopping_board",
+          blockModel: "chopping_board",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Frying Pan": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "frying_pan",
+          blockModel: "frying_pan",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Hob Boiling": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "hob_boiling",
+          blockModel: "hob_boiling",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Hob Frying": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "hob_frying",
+          blockModel: "hob_frying",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Kitchen Worktop": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "kitchen_worktop",
+          blockModel: "kitchen_worktop",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Slicing Board": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "slicing_board",
+          blockModel: "slicing_board",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        ...(0, yY.Bb)("Wood Trophy", {
+          displayName: {
+            translationKey: "item:woodTrophy"
+          },
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "rotatable",
+          itemTexture: "wood_trophy",
+          rootMetaDesc: "Wood Trophy|meta|rot1",
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          blockModel: "Wood Trophy"
+        }),
+        "INTERNAL_MESH_Wood Trophy": {
+          ttb: 2e3,
+          harvestType: "wood",
+          blockModel: "Wood Trophy",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1
+        },
+        ...(0, yY.Bb)("Stone Trophy", {
+          displayName: {
+            translationKey: "item:stoneTrophy"
+          },
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "rotatable",
+          itemTexture: "stone_trophy",
+          rootMetaDesc: "Stone Trophy|meta|rot1",
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          blockModel: "Stone Trophy"
+        }),
+        "INTERNAL_MESH_Stone Trophy": {
+          ttb: 2e3,
+          harvestType: "rock",
+          blockModel: "Stone Trophy",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1
+        },
+        ...(0, yY.Bb)("Iron Trophy", {
+          displayName: {
+            translationKey: "item:ironTrophy"
+          },
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "rotatable",
+          itemTexture: "iron_trophy",
+          rootMetaDesc: "Iron Trophy|meta|rot1",
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          blockModel: "Iron Trophy"
+        }),
+        "INTERNAL_MESH_Iron Trophy": {
+          ttb: 2e3,
+          harvestType: "rock",
+          blockModel: "Iron Trophy",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1
+        },
+        ...(0, yY.Bb)("Diamond Trophy", {
+          displayName: {
+            translationKey: "item:diamondTrophy"
+          },
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "rotatable",
+          itemTexture: "diamond_trophy",
+          rootMetaDesc: "Diamond Trophy|meta|rot1",
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          blockModel: "Diamond Trophy"
+        }),
+        "INTERNAL_MESH_Diamond Trophy": {
+          ttb: 2e3,
+          harvestType: "rock",
+          blockModel: "Diamond Trophy",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1
+        },
+        ...(0, yY.Bb)("Moonstone Trophy", {
+          displayName: {
+            translationKey: "item:moonstoneTrophy"
+          },
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "rotatable",
+          itemTexture: "moonstone_trophy",
+          rootMetaDesc: "Moonstone Trophy|meta|rot1",
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          blockModel: "Moonstone Trophy",
+          My: [5, 6, 8]
+        }),
+        "INTERNAL_MESH_Moonstone Trophy": {
+          ttb: 2e3,
+          harvestType: "rock",
+          blockModel: "Moonstone Trophy",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1
+        },
+        "Black Wave": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          blockModel: "wave_black",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Blue Wave": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          blockModel: "wave_blue",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Brown Wave": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          blockModel: "wave_brown",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Cyan Wave": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          blockModel: "wave_cyan",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Green Wave": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          blockModel: "wave_green",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Grey Wave": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          blockModel: "wave_grey",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Light Blue Wave": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          blockModel: "wave_light_blue",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Light Grey Wave": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          blockModel: "wave_light_grey",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Lime Wave": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          blockModel: "wave_lime",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Magenta Wave": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          blockModel: "wave_magenta",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Orange Wave": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          blockModel: "wave_orange",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Pink Wave": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          blockModel: "wave_pink",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Purple Wave": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          blockModel: "wave_purple",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Red Wave": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          blockModel: "wave_red",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "White Wave": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          blockModel: "wave_white",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Yellow Wave": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          blockModel: "wave_yellow",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        ...(0, yY.Bb)("White Directional Arrow", {
+          displayName: {
+            translationKey: "item:directionalArrow",
+            params: {
+              colour: "$t(colour:white)"
+            }
+          },
+          ttb: 400,
+          itemTexture: "white_directional_arrow",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "White Directional Arrow|meta|rot1",
+          solid: !1,
+          blockModel: "White Directional Arrow",
+          blockModelItem: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        }),
+        ...(0, yY.Bb)("Orange Directional Arrow", {
+          displayName: {
+            translationKey: "item:directionalArrow",
+            params: {
+              colour: "$t(colour:orange)"
+            }
+          },
+          ttb: 400,
+          itemTexture: "orange_directional_arrow",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Orange Directional Arrow|meta|rot1",
+          solid: !1,
+          blockModel: "Orange Directional Arrow",
+          blockModelItem: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        }),
+        ...(0, yY.Bb)("Magenta Directional Arrow", {
+          displayName: {
+            translationKey: "item:directionalArrow",
+            params: {
+              colour: "$t(colour:magenta)"
+            }
+          },
+          ttb: 400,
+          itemTexture: "magenta_directional_arrow",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Magenta Directional Arrow|meta|rot1",
+          solid: !1,
+          blockModel: "Magenta Directional Arrow",
+          blockModelItem: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        }),
+        ...(0, yY.Bb)("Light Blue Directional Arrow", {
+          displayName: {
+            translationKey: "item:directionalArrow",
+            params: {
+              colour: "$t(colour:light_blue)"
+            }
+          },
+          ttb: 400,
+          itemTexture: "light_blue_directional_arrow",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Light Blue Directional Arrow|meta|rot1",
+          solid: !1,
+          blockModel: "Light Blue Directional Arrow",
+          blockModelItem: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        }),
+        ...(0, yY.Bb)("Yellow Directional Arrow", {
+          displayName: {
+            translationKey: "item:directionalArrow",
+            params: {
+              colour: "$t(colour:yellow)"
+            }
+          },
+          ttb: 400,
+          itemTexture: "yellow_directional_arrow",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Yellow Directional Arrow|meta|rot1",
+          solid: !1,
+          blockModel: "Yellow Directional Arrow",
+          blockModelItem: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        }),
+        ...(0, yY.Bb)("Lime Directional Arrow", {
+          displayName: {
+            translationKey: "item:directionalArrow",
+            params: {
+              colour: "$t(colour:lime)"
+            }
+          },
+          ttb: 400,
+          itemTexture: "lime_directional_arrow",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Lime Directional Arrow|meta|rot1",
+          solid: !1,
+          blockModel: "Lime Directional Arrow",
+          blockModelItem: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        }),
+        ...(0, yY.Bb)("Pink Directional Arrow", {
+          displayName: {
+            translationKey: "item:directionalArrow",
+            params: {
+              colour: "$t(colour:pink)"
+            }
+          },
+          ttb: 400,
+          itemTexture: "pink_directional_arrow",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Pink Directional Arrow|meta|rot1",
+          solid: !1,
+          blockModel: "Pink Directional Arrow",
+          blockModelItem: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        }),
+        ...(0, yY.Bb)("Grey Directional Arrow", {
+          displayName: {
+            translationKey: "item:directionalArrow",
+            params: {
+              colour: "$t(colour:gray)"
+            }
+          },
+          ttb: 400,
+          itemTexture: "grey_directional_arrow",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Grey Directional Arrow|meta|rot1",
+          solid: !1,
+          blockModel: "Grey Directional Arrow",
+          blockModelItem: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        }),
+        ...(0, yY.Bb)("Light Grey Directional Arrow", {
+          displayName: {
+            translationKey: "item:directionalArrow",
+            params: {
+              colour: "$t(colour:light_gray)"
+            }
+          },
+          ttb: 400,
+          itemTexture: "light_grey_directional_arrow",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Light Grey Directional Arrow|meta|rot1",
+          solid: !1,
+          blockModel: "Light Grey Directional Arrow",
+          blockModelItem: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        }),
+        ...(0, yY.Bb)("Cyan Directional Arrow", {
+          displayName: {
+            translationKey: "item:directionalArrow",
+            params: {
+              colour: "$t(colour:cyan)"
+            }
+          },
+          ttb: 400,
+          itemTexture: "cyan_directional_arrow",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Cyan Directional Arrow|meta|rot1",
+          solid: !1,
+          blockModel: "Cyan Directional Arrow",
+          blockModelItem: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        }),
+        ...(0, yY.Bb)("Purple Directional Arrow", {
+          displayName: {
+            translationKey: "item:directionalArrow",
+            params: {
+              colour: "$t(colour:purple)"
+            }
+          },
+          ttb: 400,
+          itemTexture: "purple_directional_arrow",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Purple Directional Arrow|meta|rot1",
+          solid: !1,
+          blockModel: "Purple Directional Arrow",
+          blockModelItem: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        }),
+        ...(0, yY.Bb)("Blue Directional Arrow", {
+          displayName: {
+            translationKey: "item:directionalArrow",
+            params: {
+              colour: "$t(colour:blue)"
+            }
+          },
+          ttb: 400,
+          itemTexture: "blue_directional_arrow",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Blue Directional Arrow|meta|rot1",
+          solid: !1,
+          blockModel: "Blue Directional Arrow",
+          blockModelItem: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        }),
+        ...(0, yY.Bb)("Brown Directional Arrow", {
+          displayName: {
+            translationKey: "item:directionalArrow",
+            params: {
+              colour: "$t(colour:brown)"
+            }
+          },
+          ttb: 400,
+          itemTexture: "brown_directional_arrow",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Brown Directional Arrow|meta|rot1",
+          solid: !1,
+          blockModel: "Brown Directional Arrow",
+          blockModelItem: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        }),
+        ...(0, yY.Bb)("Green Directional Arrow", {
+          displayName: {
+            translationKey: "item:directionalArrow",
+            params: {
+              colour: "$t(colour:green)"
+            }
+          },
+          ttb: 400,
+          itemTexture: "green_directional_arrow",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Green Directional Arrow|meta|rot1",
+          solid: !1,
+          blockModel: "Green Directional Arrow",
+          blockModelItem: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        }),
+        ...(0, yY.Bb)("Red Directional Arrow", {
+          displayName: {
+            translationKey: "item:directionalArrow",
+            params: {
+              colour: "$t(colour:red)"
+            }
+          },
+          ttb: 400,
+          itemTexture: "red_directional_arrow",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Red Directional Arrow|meta|rot1",
+          solid: !1,
+          blockModel: "Red Directional Arrow",
+          blockModelItem: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        }),
+        ...(0, yY.Bb)("Black Directional Arrow", {
+          displayName: {
+            translationKey: "item:directionalArrow",
+            params: {
+              colour: "$t(colour:black)"
+            }
+          },
+          ttb: 400,
+          itemTexture: "black_directional_arrow",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Black Directional Arrow|meta|rot1",
+          solid: !1,
+          blockModel: "Black Directional Arrow",
+          blockModelItem: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        }),
+        Bin: {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "bin",
+          blockModel: "bin",
+          blockModelItem: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          heldItemScale: 4
+        },
+        ...(0, yY.Bb)("Vending Machine", {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "rotatable",
+          itemTexture: "vending_machine",
+          blockModel: "vending_machine_bottom",
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          rootMetaDesc: "Vending Machine|meta|rot1"
+        }),
+        ...(0, yY.Bb)("_Vending Machine Top", {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "rotatable",
+          blockModel: "vending_machine_top",
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          drops: "Vending Machine",
+          rootMetaDesc: "_Vending Machine Top|meta|rot1"
+        }),
+        "Job Application Statue": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "job_application",
+          blockModel: "job_application",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 3,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "John Beef Statue": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "john_beef",
+          blockModel: "john_beef",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 3,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "67 Statue": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "67",
+          blockModel: "67",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 3,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Coloured Wheel": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "wheel",
+          blockModel: "wheel",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 4,
+          customModelInfo: {
+            yOffset: 0
+          }
+        },
+        UFO: {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          blockModel: "ufo",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1
+        },
+        ...(0, yY.pb)("Torch", {
+          ttb: 300,
+          harvestType: "cuttable",
+          itemTexture: "torch",
+          solid: !1,
+          model: "CustomModel",
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5,
+            unlit: !0
+          },
+          blockModel: "torch",
+          blockModelItem: !0,
+          heldItemScale: 8,
+          unlitStandaloneMesh: !0,
+          rootMetaDesc: "Torch|meta|rot1|bot",
+          My: [14, 14, 12]
+        }, {
+          wallBlockModel: "torch_wall"
+        }),
+        ...(0, yY.J)((YY => `${YY} Torch`), {
+          ttb: 300,
+          harvestType: "cuttable",
+          itemTexture: YY => `torch_${(0,aY.xe)(YY)}`,
+          solid: !1,
+          model: "CustomModel",
+          modelScale: 8,
+          customModelInfo: () => ({
+            yOffset: -.5,
+            unlit: !0
+          }),
+          blockModel: YY => `torch_${(0,aY.xe)(YY)}`,
+          blockModelItem: !0,
+          heldItemScale: 8,
+          unlitStandaloneMesh: !0,
+          rootMetaDesc: YY => `${YY} Torch|meta|rot1|bot`,
+          My: YY => aY.O[YY]
+        }, (YY => `torch_wall_${(0,aY.xe)(YY)}`)),
+        ...(0, yY.H)((YY => `${YY} Neon`), {
+          ttb: 200,
+          harvestType: "granule",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          },
+          textureInfo: YY => `neon_${(0,aY.xe)(YY)}`,
+          unlitStandaloneMesh: !0,
+          My: YY => aY.O[YY]
+        }),
+        ...(0, yY._)(),
+        ...(0, yY.H)((YY => `Invisible ${YY} Light`), {
+          ttb: 3e3,
+          harvestType: "rock",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          },
+          textureInfo: "invisible_solid",
+          transTex: !0,
+          solid: !1,
+          My: YY => aY.O[YY],
+          drops: null
+        }),
+        "Invisible Sky Light": {
+          ttb: 3e3,
+          harvestType: "rock",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          },
+          textureInfo: "invisible_solid",
+          transTex: !0,
+          solid: !1,
+          ri: 15,
+          drops: null
+        },
+        "Dirt|PineGrassRoots": {
+          ttb: 600,
+          textureInfo: "dirt",
+          harvestType: "granule"
+        },
+        "Dirt|JungleGrassRoots": {
+          ttb: 600,
+          textureInfo: "dirt",
+          harvestType: "granule"
+        },
+        "Gun Lucky Block": {
+          displayName: {
+            translationKey: "item:gunLuckyBlock"
+          },
+          ttb: 1200,
+          textureInfo: ["red_lucky_block", "gun_lucky_block"],
+          texturePerSide: [1, 1, 0, 0, 0, 0],
+          harvestType: "rock"
+        },
+        "Ghost Chest": {
+          ttb: 1,
+          textureInfo: ["ghost_chest_front", "ghost_chest_side", "ghost_chest_top", "ghost_chest_back"],
+          texturePerSide: [1, 1, 2, 2, 0, 3],
+          harvestType: "wood",
+          transTex: !0,
+          solid: !1,
+          drops: null
+        },
+        "Ghost Lucky Block": {
+          ttb: 1,
+          textureInfo: "ghost_lucky_block",
+          harvestType: "rock",
+          transTex: !0,
+          solid: !1,
+          drops: null
+        },
+        "Ghost Mystery Block": {
+          ttb: 1,
+          textureInfo: "ghost_mystery_block",
+          harvestType: "rock",
+          transTex: !0,
+          solid: !1,
+          drops: null
+        },
+        Football: {
+          textureInfo: "football_block",
+          harvestType: "rock",
+          ttb: 600,
+          model: "CustomModel",
+          itemTexture: "football",
+          blockModel: "football",
+          blockModelItem: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          heldItemScale: 7
+        },
+        "Pet Lucky Block": {
+          displayName: {
+            translationKey: "item:petLuckyBlock"
+          },
+          ttb: 1200,
+          textureInfo: ["lucky_block_pink_question", "pet_lucky_block"],
+          texturePerSide: [1, 1, 0, 0, 0, 0],
+          harvestType: "rock"
+        },
+        ...(0, yY.pb)("Glowing Mushroom", {
+          ttb: 240,
+          harvestType: "cuttable",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          },
+          itemTexture: "glowing_mushroom",
+          model: "CustomModel",
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5,
+            unlit: !0
+          },
+          blockModel: "glowing_mushroom",
+          blockModelItem: !0,
+          heldItemScale: 6,
+          unlitStandaloneMesh: !0,
+          rootMetaDesc: "Glowing Mushroom|meta|rot1|bot",
+          My: [8, 15, 15]
+        }, {
+          wallBlockModel: "glowing_mushroom_wall",
+          yRotOffset: Math.PI / 2
+        }),
+        ...(0, yY.pb)("Crystal", {
+          ttb: 600,
+          harvestType: "rock",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          },
+          itemTexture: "crystal",
+          model: "CustomModel",
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5,
+            unlit: !0
+          },
+          blockModel: "crystal",
+          blockModelItem: !0,
+          heldItemScale: 6,
+          unlitStandaloneMesh: !0,
+          rootMetaDesc: "Crystal|meta|rot1|bot",
+          My: [8, 15, 7],
+          drops: null,
+          specialToolDrop: {
+            tool: "Moonstone Pickaxe",
+            drops: "Crystal"
+          },
+          onMinedAura: 50
+        }, {
+          xRotOffset: -Math.PI / 2
+        }),
+        ...(0, yY.Bb)("Slime Trail", {
+          ...mY,
+          rootMetaDesc: "Slime Trail|meta|rot1"
+        }),
+        "Overgrown Grass Block": {
+          displayName: {
+            translationKey: "item:overgrownGrassBlock"
+          },
+          ttb: 720,
+          textureInfo: "grass_top",
+          harvestType: "granule",
+          soundType: {
+            break: "grass",
+            place: "grass"
+          }
+        },
+        "Overgrown Pine Grass Block": {
+          displayName: {
+            translationKey: "item:overgrownPineGrassBlock"
+          },
+          ttb: 720,
+          textureInfo: "pine_grass_block",
+          harvestType: "granule",
+          soundType: {
+            break: "grass",
+            place: "grass"
+          }
+        },
+        "Overgrown Jungle Grass Block": {
+          displayName: {
+            translationKey: "item:overgrownJungleGrassBlock"
+          },
+          ttb: 720,
+          textureInfo: "jungle_grass_block",
+          harvestType: "granule",
+          soundType: {
+            break: "grass",
+            place: "grass"
+          }
+        },
+        "Smoke Block": {
+          displayName: "Smoke Block",
+          ttb: 100,
+          textureInfo: {
+            animTextures: ["smoke0", "smoke1", "smoke2", "smoke3"],
+            animationInterval: 250
+          },
+          transTex: !0,
+          solid: !1,
+          drops: null,
+          harvestType: "cuttable"
+        },
+        ...(0, yY.rb)("Pipe", "pipe", {
+          displayName: {
+            translationKey: "item:pipe"
+          },
+          description: {
+            translationKey: "item:pipeDescription"
+          },
+          ttb: 600,
+          itemTexture: "pipe",
+          model: "CustomModel",
+          harvestType: "rock",
+          solid: !1,
+          blockModelItem: !0,
+          modelScale: 8,
+          heldItemScale: 6,
+          particlesIgnoreBlack: !0,
+          rootMetaDesc: "Pipe|meta|conn|none"
+        }),
+        ...(0, yY.w)(),
+        "Auto Crafter": {
+          displayName: {
+            translationKey: "item:autoCrafter"
+          },
+          description: {
+            translationKey: "item:autoCrafterDescription"
+          },
+          ttb: 3600,
+          textureInfo: ["autocrafter_side", "crafting_table_top", "autocrafter_bottom"],
+          texturePerSide: [0, 0, 1, 2, 0, 0],
+          harvestType: "rock",
+          particlesIgnoreBlack: !0,
+          altActionable: !0
+        },
+        ...(0, yY.Ab)(),
+        ...(0, yY.rb)("Extractor Pipe", "extractor_pipe", {
+          displayName: {
+            translationKey: "item:extractorPipe"
+          },
+          description: {
+            translationKey: "item:extractorPipeDescription"
+          },
+          ttb: 600,
+          itemTexture: "extractor_pipe",
+          model: "CustomModel",
+          harvestType: "rock",
+          solid: !1,
+          modelScale: 8,
+          heldItemScale: 6,
+          blockModelItem: !0,
+          particlesIgnoreBlack: !0,
+          rootMetaDesc: "Extractor Pipe|meta|conn|none"
+        }),
+        "Splitter Pipe": {
+          displayName: {
+            translationKey: "item:splitterPipe"
+          },
+          description: {
+            translationKey: "item:splitterPipeDescription"
+          },
+          ttb: 600,
+          itemTexture: "splitter_pipe",
+          model: "CustomModel",
+          blockModel: "splitter_pipe",
+          blockModelItem: !0,
+          harvestType: "rock",
+          solid: !1,
+          modelScale: 8,
+          heldItemScale: 6,
+          particlesIgnoreBlack: !0
+        },
+        ...(0, yY.Mb)(),
+        ...(0, yY.rb)("Wire", "wire", {
+          displayName: {
+            translationKey: "item:wire"
+          },
+          description: {
+            translationKey: "item:wireDescription"
+          },
+          ttb: 400,
+          itemTexture: "wire",
+          model: "CustomModel",
+          harvestType: "rock",
+          solid: !1,
+          modelScale: 8,
+          heldItemScale: 6,
+          blockModelItem: !0,
+          particlesIgnoreBlack: !0,
+          rootMetaDesc: "Wire|meta|conn|none"
+        }),
+        ...(0, yY.Z)("Filter Pipe", "filter_pipe", "pz", {
+          displayName: {
+            translationKey: "item:filterPipe"
+          },
+          description: {
+            translationKey: "item:filterPipeDescription"
+          },
+          ttb: 600,
+          itemTexture: "filter_pipe",
+          model: "CustomModel",
+          harvestType: "rock",
+          solid: !1,
+          modelScale: 8,
+          heldItemScale: 6,
+          blockModelItem: !0,
+          particlesIgnoreBlack: !0,
+          altActionable: !0,
+          rootMetaDesc: "Filter Pipe|meta|input|none"
+        }),
+        ...(0, yY.fb)("Merger Pipe", "merger_pipe", "pz", {
+          displayName: {
+            translationKey: "item:mergerPipe"
+          },
+          description: {
+            translationKey: "item:mergerPipeDescription"
+          },
+          ttb: 600,
+          itemTexture: "merger_pipe",
+          model: "CustomModel",
+          harvestType: "rock",
+          solid: !1,
+          modelScale: 8,
+          heldItemScale: 6,
+          blockModelItem: !0,
+          particlesIgnoreBlack: !0,
+          altActionable: !0,
+          rootMetaDesc: "Merger Pipe|meta|output|none"
+        }),
+        "Auto Harvester": {
+          displayName: {
+            translationKey: "item:autoHarvester"
+          },
+          description: {
+            translationKey: "item:autoHarvesterDescription"
+          },
+          ttb: 3600,
+          textureInfo: ["harvester_side0", "harvester_side1", "harvester_top", "harvester_bottom"],
+          texturePerSide: [0, 1, 2, 3, 0, 1],
+          harvestType: "rock",
+          particlesIgnoreBlack: !0,
+          altActionable: !0
+        },
+        ...(0, yY.lb)("Stalker"),
+        "Lunite Ore": {
+          displayName: {
+            translationKey: "item:luniteOre"
+          },
+          ttb: 5e3,
+          textureInfo: "lunite_ore",
+          harvestType: "rock",
+          harvestLevel: 3,
+          drops: "Lunite",
+          specialToolDrop: {
+            tool: "Moonstone Pickaxe",
+            drops: "Lunite Ore"
+          },
+          specialToolBonusDrops: {
+            "Golem Pickaxe": vY.l
+          },
+          description: {
+            translationKey: "item:luniteOreDescription"
+          },
+          onMinedAura: 40,
+          My: [10, 3, 12]
+        },
+        "Block of Lunite": {
+          displayName: {
+            translationKey: "item:blockOfLunite"
+          },
+          description: {
+            translationKey: "item:blockOfLuniteDescription"
+          },
+          ttb: 6750,
+          textureInfo: "lunite_block",
+          harvestType: "rock"
+        },
+        ...(0, yY.cb)(),
+        "Lunite Auto Crafter": {
+          displayName: {
+            translationKey: "item:luniteAutoCrafter"
+          },
+          description: {
+            translationKey: "item:luniteAutoCrafterDescription"
+          },
+          ttb: 3600,
+          textureInfo: ["autocrafter_lunite_side", "crafting_table_top", "autocrafter_lunite_bottom"],
+          texturePerSide: [0, 0, 1, 2, 0, 0],
+          harvestType: "rock",
+          particlesIgnoreBlack: !0,
+          altActionable: !0
+        },
+        "Lunite Auto Harvester": {
+          displayName: {
+            translationKey: "item:luniteAutoHarvester"
+          },
+          description: {
+            translationKey: "item:luniteAutoHarvesterDescription"
+          },
+          ttb: 3600,
+          textureInfo: ["harvester_lunite_side_0", "harvester_lunite_side_1", "harvester_lunite_top", "harvester_lunite_bottom"],
+          texturePerSide: [0, 1, 2, 3, 0, 1],
+          harvestType: "rock",
+          particlesIgnoreBlack: !0,
+          altActionable: !0
+        },
+        "Bowling Alley Floor": {
+          displayName: {
+            translationKey: "item:bowlingAlleyFloor"
+          },
+          ttb: 960,
+          textureInfo: "bowling_alley_floor",
+          harvestType: "cuttable",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        },
+        ...(0, yY.lb)("Crone"),
+        ...(0, yY.lb)("Slime"),
+        "Slime Trail|meta|rot1|Decaying": {
+          ...mY
+        },
+        "Slime Trail|meta|rot2|Decaying": {
+          ...mY
+        },
+        "Slime Trail|meta|rot3|Decaying": {
+          ...mY
+        },
+        "Slime Trail|meta|rot4|Decaying": {
+          ...mY
+        },
+        ...(0, yY.lb)("Iron Guardian"),
+        ...(0, yY.lb)("Gold Guardian"),
+        ...(0, yY.lb)("Diamond Guardian"),
+        ...(0, yY.lb)("Moonstone Guardian"),
+        "Dry Grass Block": {
+          displayName: {
+            translationKey: "item:dryGrassBlock"
+          },
+          ttb: 720,
+          textureInfo: ["dry_grass_block_side", "dry_grass_block", "dirt"],
+          texturePerSide: [0, 0, 1, 2, 0, 0],
+          harvestType: "granule",
+          soundType: {
+            break: "grass",
+            place: "grass"
+          }
+        },
+        "Overgrown Dry Grass Block": {
+          displayName: {
+            translationKey: "item:overgrownDryGrassBlock"
+          },
+          ttb: 720,
+          textureInfo: "dry_grass_block",
+          harvestType: "granule",
+          soundType: {
+            break: "grass",
+            place: "grass"
+          }
+        },
+        "Dead Bush": {
+          displayName: {
+            translationKey: "item:deadBush"
+          },
+          ttb: 1,
+          textureInfo: "dead_bush",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          drops: null,
+          harvestType: "cuttable",
+          specialToolDrop: {
+            tool: "Shears",
+            drops: "Dead Bush"
+          },
+          canBePlacedOver: !0
+        },
+        "Dirt|DryGrassRoots": {
+          ttb: 600,
+          textureInfo: "dirt",
+          harvestType: "granule"
+        },
+        ...(0, yY.Ib)("Dry Grass Slab", {
+          displayName: {
+            translationKey: "item:dryGrassSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_dry_grass_top_side", "dry_grass_block"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "granule",
+          slabFullBlock: "Dry Grass Block",
+          rootMetaDesc: "Dry Grass Slab|meta|rot1|bot"
+        }),
+        ...(0, yY.pb)("Lantern", {
+          displayName: {
+            translationKey: "item:lantern"
+          },
+          ttb: 2500,
+          harvestType: "rock",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          },
+          itemTexture: "lantern",
+          model: "CustomModel",
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5,
+            unlit: !0
+          },
+          blockModel: "lantern",
+          blockModelItem: !0,
+          heldItemScale: 8,
+          unlitStandaloneMesh: !0,
+          rootMetaDesc: "Lantern|meta|rot1|bot",
+          My: [15, 15, 13]
+        }, {
+          wallBlockModel: "lantern_wall",
+          yRotOffset: -Math.PI,
+          noCeilingVariant: !0
+        }),
+        ...(0, yY.Bb)("Lily Pad", {
+          rootMetaDesc: "Lily Pad|meta|rot1",
+          displayName: {
+            translationKey: "item:lilyPad"
+          },
+          ttb: 300,
+          itemTexture: "lily_pad",
+          model: "rotatable",
+          harvestType: "cuttable",
+          solid: !0,
+          ns: (0, FY.d)([
+            [
+              [0, 0, 0],
+              [8, 1, 8]
+            ]
+          ]),
+          blockModel: "lily_pad_model",
+          modelScale: 7.5,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          particlesIgnoreBlack: !0
+        }),
+        ...(0, yY.lb)("Camel"),
+        ...(0, yY.hb)("Camel", 8),
+        "Rare Lucky Block": {
+          displayName: "Rare Lucky Block",
+          ttb: 1200,
+          textureInfo: "yellow_lucky_block_rare",
+          harvestType: "rock"
+        },
+        "Super Lucky Block": {
+          displayName: "Super Lucky Block",
+          ttb: 1200,
+          textureInfo: "yellow_lucky_block_super",
+          harvestType: "rock"
+        },
+        "Rare Weapon Lucky Block": {
+          displayName: "Rare Weapon Lucky Block",
+          ttb: 1200,
+          textureInfo: ["red_lucky_block_rare", "weapon_lucky_block_rare"],
+          texturePerSide: [1, 1, 0, 0, 0, 0],
+          harvestType: "rock"
+        },
+        "Super Weapon Lucky Block": {
+          displayName: "Super Weapon Lucky Block",
+          ttb: 1200,
+          textureInfo: ["red_lucky_block_super", "weapon_lucky_block_super"],
+          texturePerSide: [1, 1, 0, 0, 0, 0],
+          harvestType: "rock"
+        },
+        "Building Lucky Block": {
+          displayName: "Building Lucky Block",
+          ttb: 1200,
+          textureInfo: ["purple_lucky_block", "building_lucky_block"],
+          texturePerSide: [1, 1, 0, 0, 0, 0],
+          harvestType: "rock"
+        },
+        "Rare Building Lucky Block": {
+          displayName: "Rare Building Lucky Block",
+          ttb: 1200,
+          textureInfo: ["purple_lucky_block_rare", "building_lucky_block_rare"],
+          texturePerSide: [1, 1, 0, 0, 0, 0],
+          harvestType: "rock"
+        },
+        "Super Building Lucky Block": {
+          displayName: "Super Building Lucky Block",
+          ttb: 1200,
+          textureInfo: ["purple_lucky_block_super", "building_lucky_block_super"],
+          texturePerSide: [1, 1, 0, 0, 0, 0],
+          harvestType: "rock"
+        },
+        "Armour Lucky Block": {
+          displayName: "Armour Lucky Block",
+          ttb: 1200,
+          textureInfo: ["blue_lucky_block", "armour_lucky_block"],
+          texturePerSide: [1, 1, 0, 0, 0, 0],
+          harvestType: "rock"
+        },
+        "Rare Armour Lucky Block": {
+          displayName: "Rare Armour Lucky Block",
+          ttb: 1200,
+          textureInfo: ["blue_lucky_block_rare", "armour_lucky_block_rare"],
+          texturePerSide: [1, 1, 0, 0, 0, 0],
+          harvestType: "rock"
+        },
+        "Super Armour Lucky Block": {
+          displayName: "Super Armour Lucky Block",
+          ttb: 1200,
+          textureInfo: ["blue_lucky_block_super", "armour_lucky_block_super"],
+          texturePerSide: [1, 1, 0, 0, 0, 0],
+          harvestType: "rock"
+        },
+        "Tools Lucky Block": {
+          displayName: "Tools Lucky Block",
+          ttb: 1200,
+          textureInfo: ["orange_lucky_block", "tools_lucky_block"],
+          texturePerSide: [1, 1, 0, 0, 0, 0],
+          harvestType: "rock"
+        },
+        "Rare Tools Lucky Block": {
+          displayName: "Rare Tools Lucky Block",
+          ttb: 1200,
+          textureInfo: ["orange_lucky_block_rare", "tools_lucky_block_rare"],
+          texturePerSide: [1, 1, 0, 0, 0, 0],
+          harvestType: "rock"
+        },
+        "Super Tools Lucky Block": {
+          displayName: "Super Tools Lucky Block",
+          ttb: 1200,
+          textureInfo: ["orange_lucky_block_super", "tools_lucky_block_super"],
+          texturePerSide: [1, 1, 0, 0, 0, 0],
+          harvestType: "rock"
+        },
+        "Food Lucky Block": {
+          displayName: "Food Lucky Block",
+          ttb: 1200,
+          textureInfo: ["green_lucky_block", "food_lucky_block"],
+          texturePerSide: [1, 1, 0, 0, 0, 0],
+          harvestType: "rock"
+        },
+        "Rare Food Lucky Block": {
+          displayName: "Rare Food Lucky Block",
+          ttb: 1200,
+          textureInfo: ["green_lucky_block_rare", "food_lucky_block_rare"],
+          texturePerSide: [1, 1, 0, 0, 0, 0],
+          harvestType: "rock"
+        },
+        "Super Food Lucky Block": {
+          displayName: "Super Food Lucky Block",
+          ttb: 1200,
+          textureInfo: ["green_lucky_block_super", "food_lucky_block_super"],
+          texturePerSide: [1, 1, 0, 0, 0, 0],
+          harvestType: "rock"
+        },
+        "Potion Lucky Block": {
+          displayName: "Potion Lucky Block",
+          ttb: 1200,
+          textureInfo: ["lucky_block_pink_question", "potion_lucky_block"],
+          texturePerSide: [1, 1, 0, 0, 0, 0],
+          harvestType: "rock"
+        },
+        "Rare Potion Lucky Block": {
+          displayName: "Rare Potion Lucky Block",
+          ttb: 1200,
+          textureInfo: ["lucky_block_pink_question_rare", "potion_lucky_block_rare"],
+          texturePerSide: [1, 1, 0, 0, 0, 0],
+          harvestType: "rock"
+        },
+        "Super Potion Lucky Block": {
+          displayName: "Super Potion Lucky Block",
+          ttb: 1200,
+          textureInfo: ["lucky_block_pink_question_super", "potion_lucky_block_super"],
+          texturePerSide: [1, 1, 0, 0, 0, 0],
+          harvestType: "rock"
+        },
+        "Block Destroyer TNT": {
+          displayName: "Block Destroyer TNT",
+          ttb: 50,
+          textureInfo: ["block_destroyer_tnt_side", "block_destroyer_tnt_top"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          harvestType: "cuttable",
+          description: "Place it to start a 30 second fuse. When it goes off, every placed block on the map is removed. Lucky blocks survive."
+        },
+        ...(0, yY.t)(lY),
+        "Toxic Waste Barrel": {
+          displayName: {
+            translationKey: "item:toxicWasteBarrel"
+          },
+          ttb: 4e4,
+          textureInfo: ["toxic_waste_barrel_side", "toxic_waste_barrel_bottom", {
+            animTextures: ["toxic_waste_barrel_top0", "toxic_waste_barrel_top1", "toxic_waste_barrel_top2", "toxic_waste_barrel_top3"],
+            animationInterval: 300
+          }],
+          texturePerSide: [0, 0, 2, 1, 0, 0],
+          harvestType: "rock",
+          harvestLevel: 5
+        },
+        "Toxic Waste": {
+          displayName: {
+            translationKey: "item:toxicWaste"
+          },
+          textureInfo: {
+            colour: [.36, .93, .3, .95],
+            animTextures: ["toxic_waste0", "toxic_waste1", "toxic_waste2", "toxic_waste3", "toxic_waste4", "toxic_waste5", "toxic_waste6", "toxic_waste7"],
+            animationInterval: 200
+          },
+          ui: !0,
+          drops: null,
+          harvestType: "rock",
+          My: [6, 14, 4]
+        },
+        "Ancient Maple Log": {
+          displayName: {
+            translationKey: "item:ancientMapleLog"
+          },
+          description: {
+            translationKey: "item:ancientMapleLogDescription"
+          },
+          ttb: 2400,
+          textureInfo: "log_ancient_maple",
+          harvestType: "wood"
+        },
+        "Evil Lucky Block": {
+          displayName: {
+            translationKey: "item:evilLuckyBlock"
+          },
+          ttb: 1200,
+          textureInfo: ["evil_lucky_block", "evil_lucky_block_face"],
+          texturePerSide: [1, 1, 0, 0, 0, 0],
+          harvestType: "rock",
+          description: {
+            translationKey: "item:evilLuckyBlockDescription"
+          }
+        },
+        ...(0, yY.Qb)(lY),
+        "INTERNAL_MESH_Small Twin Icicle": {
+          ttb: 2e3,
+          harvestType: "rock",
+          blockModel: "Small Twin Icicle",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          drops: null
+        },
+        "INTERNAL_MESH_Medium Icicle": {
+          ttb: 2e3,
+          harvestType: "rock",
+          blockModel: "Medium Icicle",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          drops: null
+        },
+        "INTERNAL_MESH_Large Icicle": {
+          ttb: 2e3,
+          harvestType: "rock",
+          blockModel: "Large Icicle",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          drops: null
+        },
+        "INTERNAL_MESH_Large Twin Icicle": {
+          ttb: 2e3,
+          harvestType: "rock",
+          blockModel: "Large Twin Icicle",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          drops: null
+        },
+        ...(0, yY.qb)(),
+        ...(0, yY.lb)("Tiki Terror"),
+        ...(0, yY.Yb)(EY.b),
+        ...(0, yY.U)(),
+        "Pure Coal Ore": {
+          displayName: {
+            translationKey: "item:pureCoalOre"
+          },
+          ttb: 27e3,
+          textureInfo: "pure_coal_ore",
+          harvestType: "rock",
+          drops: "Coal",
+          Na: 9,
+          specialToolDrop: {
+            tool: "Moonstone Pickaxe",
+            drops: "Pure Coal Ore"
+          },
+          specialToolBonusDrops: {
+            "Golem Pickaxe": vY.l
+          },
+          onMinedAura: 45,
+          My: [6, 6, 6]
+        },
+        "Pure Iron Ore": {
+          displayName: {
+            translationKey: "item:pureIronOre"
+          },
+          ttb: 32400,
+          textureInfo: "pure_iron_ore",
+          harvestType: "rock",
+          harvestLevel: 2,
+          drops: "Raw Iron",
+          Na: 9,
+          specialToolDrop: {
+            tool: "Moonstone Pickaxe",
+            drops: "Pure Iron Ore"
+          },
+          specialToolBonusDrops: {
+            "Golem Pickaxe": vY.l
+          },
+          onMinedAura: 135,
+          My: [6, 6, 6]
+        },
+        "Pure Gold Ore": {
+          displayName: {
+            translationKey: "item:pureGoldOre"
+          },
+          ttb: 37800,
+          textureInfo: "pure_gold_ore",
+          harvestType: "rock",
+          harvestLevel: 3,
+          drops: "Raw Gold",
+          Na: 9,
+          specialToolDrop: {
+            tool: "Moonstone Pickaxe",
+            drops: "Pure Gold Ore"
+          },
+          specialToolBonusDrops: {
+            "Golem Pickaxe": vY.l
+          },
+          onMinedAura: 270,
+          My: [6, 6, 0]
+        },
+        "Pure Diamond Ore": {
+          displayName: {
+            translationKey: "item:pureDiamondOre"
+          },
+          ttb: 45e3,
+          textureInfo: "pure_diamond_ore",
+          harvestType: "rock",
+          harvestLevel: 3,
+          drops: "Diamond",
+          Na: 9,
+          specialToolDrop: {
+            tool: "Moonstone Pickaxe",
+            drops: "Pure Diamond Ore"
+          },
+          specialToolBonusDrops: {
+            "Golem Pickaxe": vY.l
+          },
+          onMinedAura: 360,
+          My: [2, 6, 6]
+        },
+        "Pure Moonstone Ore": {
+          displayName: {
+            translationKey: "item:pureMoonstoneOre"
+          },
+          ttb: 45e3,
+          textureInfo: "pure_moonstone_ore",
+          harvestType: "rock",
+          harvestLevel: 3,
+          drops: "Moonstone",
+          Na: 9,
+          specialToolDrop: {
+            tool: "Moonstone Pickaxe",
+            drops: "Pure Moonstone Ore"
+          },
+          specialToolBonusDrops: {
+            "Golem Pickaxe": vY.l
+          },
+          onMinedAura: 450,
+          My: [6, 6, 6]
+        },
+        ...(0, yY.Vb)(EY.b),
+        ...(0, yY.lb)("Iron Goofy Golem"),
+        ...(0, yY.lb)("Gold Goofy Golem"),
+        ...(0, yY.lb)("Diamond Goofy Golem"),
+        ...(0, yY.lb)("Moonstone Goofy Golem"),
+        ...(0, yY.D)(),
+        "Crystal Block": {
+          displayName: {
+            translationKey: "item:crystalBlock"
+          },
+          ttb: 1500,
+          textureInfo: "crystal_block",
+          harvestType: "rock",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          },
+          My: [9, 15, 5]
+        },
+        "Rope Block": {
+          displayName: {
+            translationKey: "item:ropeBlock"
+          },
+          ttb: 960,
+          textureInfo: "rope_block",
+          harvestType: "cuttable",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        },
+        Ash: {
+          displayName: {
+            translationKey: "item:ash"
+          },
+          ttb: 600,
+          textureInfo: "ash",
+          harvestType: "granule",
+          soundType: {
+            break: "sand",
+            place: "sand"
+          }
+        },
+        ...(0, IY.h)(),
+        Darkstone: {
+          displayName: {
+            translationKey: "item:darkstone"
+          },
+          ttb: 1800,
+          textureInfo: "darkstone",
+          harvestType: "rock"
+        },
+        "Darkstone Bricks": {
+          displayName: {
+            translationKey: "item:darkstoneBricks"
+          },
+          ttb: 1800,
+          textureInfo: "darkstone_bricks",
+          harvestType: "rock"
+        },
+        "Cracked Darkstone Bricks": {
+          displayName: {
+            translationKey: "item:crackedDarkstoneBricks"
+          },
+          ttb: 1800,
+          textureInfo: "darkstone_bricks_cracked",
+          harvestType: "rock"
+        },
+        "Molten Darkstone Bricks": {
+          displayName: {
+            translationKey: "item:moltenDarkstoneBricks"
+          },
+          ttb: 1800,
+          textureInfo: "darkstone_bricks_lava",
+          harvestType: "rock",
+          My: [9, 3, 1]
+        },
+        "Engraved Darkstone": {
+          displayName: {
+            translationKey: "item:engravedDarkstone"
+          },
+          ttb: 1800,
+          textureInfo: "darkstone_engraved",
+          harvestType: "rock"
+        },
+        "Smooth Darkstone": {
+          displayName: {
+            translationKey: "item:smoothDarkstone"
+          },
+          ttb: 1800,
+          textureInfo: "darkstone_smooth",
+          harvestType: "rock"
+        },
+        ...(0, yY.Y)(QY.m, TY),
+        "INTERNAL_MESH_Floor Quarters": {
+          ttb: 2e3,
+          harvestType: "rock",
+          blockModel: "floor_quarters",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          unlitStandaloneMesh: !0,
+          drops: null
+        },
+        "Scorpion Eggs Block": {
+          displayName: {
+            translationKey: "item:scorpionEggsBlock"
+          },
+          ttb: 600,
+          textureInfo: "scorpion_eggs",
+          harvestType: "cuttable",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        },
+        "INTERNAL_MESH_Boss Target": {
+          ttb: 2e3,
+          harvestType: "rock",
+          blockModel: "boss_target",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          unlitStandaloneMesh: !0,
+          drops: null
+        },
+        "INTERNAL_MESH_Rune Sigil": {
+          ttb: 2e3,
+          harvestType: "rock",
+          blockModel: "rune_sigil",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          unlitStandaloneMesh: !0,
+          drops: null
+        },
+        "INTERNAL_MESH_Eclipse Dial": {
+          ttb: 2e3,
+          harvestType: "rock",
+          blockModel: "eclipse_dial",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          unlitStandaloneMesh: !0,
+          drops: null
+        },
+        "INTERNAL_MESH_Beam Arm": {
+          ttb: 2e3,
+          harvestType: "rock",
+          blockModel: "beam_arm",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          unlitStandaloneMesh: !0,
+          drops: null
+        },
+        "INTERNAL_MESH_Beam Arm Mirrored": {
+          ttb: 2e3,
+          harvestType: "rock",
+          blockModel: "beam_arm_mirrored",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          unlitStandaloneMesh: !0,
+          drops: null
+        },
+        INTERNAL_MESH_Mortar: {
+          ttb: 2e3,
+          harvestType: "rock",
+          blockModel: "mortar_goblin",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          meshEntityBones: ["Cannon", "LeftArm", "RightArm"],
+          drops: null
+        },
+        ...(0, yY.Eb)("Trading Terminal", {
+          displayName: {
+            translationKey: "item:tradingTerminal"
+          },
+          description: {
+            translationKey: "item:tradingTerminalDescription"
+          },
+          ttb: 3e3,
+          textureInfo: [{
+            animTextures: [0, 1, 2, 3, 4, 5, 6, 7].map((YY => `trading_terminal_front${YY}`)),
+            animationInterval: 250,
+            interpolateFrames: !1
+          }, "trading_terminal_side", "trading_terminal_top"],
+          harvestType: "rock",
+          harvestLevel: 0,
+          altActionable: !0,
+          rootMetaDesc: "Trading Terminal|meta|rot1"
+        }),
+        "Stone Generator": {
+          displayName: {
+            translationKey: "item:stoneGenerator"
+          },
+          description: {
+            translationKey: "item:stoneGeneratorDescription"
+          },
+          ttb: 3e3,
+          textureInfo: ["stone_generator_side", "stone_generator_top", "messy_stone"],
+          texturePerSide: [0, 0, 1, 2, 0, 0],
+          harvestType: "rock",
+          harvestLevel: 0
+        },
+        "Wheat Helper": {
+          displayName: {
+            translationKey: "item:wheatHelper"
+          },
+          description: {
+            translationKey: "item:wheatHelperDescription"
+          },
+          ttb: 1500,
+          textureInfo: ["crate", "hay_block_top"],
+          texturePerSide: [0, 0, 1, 0, 0, 0],
+          harvestType: "wood",
+          harvestLevel: 0,
+          altActionable: !0
+        },
+        "Carrot Helper": {
+          displayName: {
+            translationKey: "item:carrotHelper"
+          },
+          description: {
+            translationKey: "item:carrotHelperDescription"
+          },
+          ttb: 1500,
+          textureInfo: ["crate", "carrot_block_top"],
+          texturePerSide: [0, 0, 1, 0, 0, 0],
+          harvestType: "wood",
+          harvestLevel: 0,
+          altActionable: !0
+        },
+        "Melon Helper": {
+          displayName: {
+            translationKey: "item:melonHelper"
+          },
+          description: {
+            translationKey: "item:melonHelperDescription"
+          },
+          ttb: 1500,
+          textureInfo: ["crate", "melon_top"],
+          texturePerSide: [0, 0, 1, 0, 0, 0],
+          harvestType: "wood",
+          harvestLevel: 0,
+          altActionable: !0
+        },
+        ... function() {
+          const YY = {};
+          for (const {
+              wood: rY,
+              block: DY
+            }
+            of WY.c) YY[DY] = {
+            displayName: {
+              translationKey: `item:${(0,aY.te)(DY)}`
             },
-            children: [(0, DB.jsx)(HB, {
-              name: JB ? "check" : "copy"
-            }), dB && (0, DB.jsx)("span", {
-              children: JB ? "Copied" : null !== yB && void 0 !== yB && yB.failed ? "Copy failed" : dB
-            })]
+            ttb: 960,
+            harvestType: "wood",
+            ..."Maple" === rY ? {
+              showInCreativeInven: !1
+            } : {},
+            ...VY(DY, (0, aY.xe)(DY), {
+              rotatable: !1
+            })
+          };
+          return YY
+        }(),
+        ...(0, RY.n)()
+      };
+    for (const nY of Object.values(eY))
+      for (const YY of Array.isArray(nY.textureInfo) ? nY.textureInfo : [nY.textureInfo]) "object" === typeof YY && null !== YY && "animTextures" in YY && (0, gY.e)(YY);
+    let NY = 1,
+      BY = 0;
+    const cY = [],
+      KY = [],
+      HY = {},
+      zY = [];
+    for (const nY in eY) {
+      if (NY > 65535) throw new Error(`block ID was ${NY}, which is over 65535 - there is a limit of 65535 block types!`);
+      const YY = eY[nY];
+      if (YY.id = NY, eY[NY] = YY, YY.name = nY, YY.stackable = !0, (0, uY.i)(eY, YY), "door" === eY[YY.meta.rootName].model) YY.ns = (0, yY.V)(YY.meta.rot, YY.meta.open);
+      else if ("trapdoor" === eY[YY.meta.rootName].model) YY.ns = (0, yY.Ub)(YY.meta.rot, YY.meta.open);
+      else {
+        const rY = (0, OY.h)(YY, eY[YY.meta.rootName]);
+        rY && (YY.ns = rY)
+      }
+      if ("object" === typeof YY.textureInfo && "animTextures" in YY.textureInfo) {
+        var ZY;
+        const rY = [];
+        YY.atlasIdx = rY, cY.push({
+          blockName: nY,
+          animTextures: YY.textureInfo.animTextures,
+          atlasIndices: rY,
+          animationInterval: null !== (ZY = YY.textureInfo.animationInterval) && void 0 !== ZY ? ZY : 200
+        })
+      } else if (Array.isArray(YY.textureInfo)) {
+        for (const rY of YY.textureInfo) {
+          var CY;
+          if ("object" !== typeof rY || !("animTextures" in rY)) continue;
+          const YY = [];
+          cY.push({
+            blockName: nY,
+            animTextures: rY.animTextures,
+            atlasIndices: YY,
+            animationInterval: null !== (CY = rY.animationInterval) && void 0 !== CY ? CY : 200
           })
         }
-        oB.c.registerLanguage("javascript", kB.b), oB.c.registerLanguage("typescript", LB.d);
-        const iB = {
-            js: "javascript",
-            ts: "typescript",
-            javascript: "javascript",
-            typescript: "typescript"
-          },
-          NB = {
-            javascript: "JavaScript",
-            typescript: "TypeScript"
-          },
-          tB = 24;
-
-        function fB(BB) {
-          let {
-            code: TB,
-            lang: dB,
-            compact: yB = !1
-          } = BB;
-          const lB = (0, VB.useMemo)((() => function(BB, TB) {
-              const dB = iB[TB];
-              return dB ? oB.c.highlight(BB, {
-                language: dB
-              }).value : BB.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-            }(TB, dB)), [TB, dB]),
-            JB = TB.split("\n").length,
-            YB = !yB && JB > tB + 6,
-            [gB, kB] = (0, VB.useState)(!1),
-            LB = iB[dB];
-          return (0, DB.jsxs)("div", {
-            className: pB()("DocsCodeBlock", {
-              Compact: yB,
-              Collapsed: YB && !gB
-            }),
-            children: [!yB && (0, DB.jsxs)("div", {
-              className: "DocsCodeBlockHeader",
-              children: [(0, DB.jsx)("span", {
-                className: "DocsCodeBlockLanguage",
-                children: LB ? NB[LB] : "Text"
-              }), (0, DB.jsx)(mB, {
-                text: TB,
-                label: "Copy"
-              })]
-            }), (0, DB.jsx)("pre", {
-              children: (0, DB.jsx)("code", {
-                className: "hljs",
-                dangerouslySetInnerHTML: {
-                  __html: lB
-                }
-              })
-            }), YB && (0, DB.jsxs)("button", {
-              type: "button",
-              className: "DocsCodeBlockExpand",
-              "aria-expanded": gB,
-              onClick: () => {
-                kB(!gB)
-              },
-              children: [(0, DB.jsx)(HB, {
-                name: gB ? "chevron-up" : "chevron-down"
-              }), gB ? "Show less" : `Show all ${JB} lines`]
-            })]
-          })
+        KY.push(nY)
+      } else KY.push(nY);
+      NY++
+    }
+    for (const {
+        blockName: nY,
+        animTextures: PY,
+        atlasIndices: UY
+      }
+      of cY) {
+      const YY = PY.length;
+      if (Math.log(YY) / Math.log(2) % 1 !== 0) throw new Error(`${nY} has ${YY} animation states, which is not a power of 2`);
+      HY[PY[0]] ??= BY++, UY.push(HY[PY[0]])
+    }
+    for (const {
+        animTextures: nY,
+        atlasIndices: PY,
+        animationInterval: UY
+      }
+      of cY) {
+      zY[PY[0]] ??= {
+        numAnimStates: nY.length,
+        animStartIdx: BY,
+        animationInterval: UY
+      };
+      for (let YY = 1; YY < nY.length; YY++) {
+        var fY;
+        const rY = nY[YY],
+          DY = null !== (fY = HY[rY]) && void 0 !== fY ? fY : BY++;
+        HY[rY] = DY, PY.push(DY)
+      }
+    }
+    for (const nY of KY) {
+      var jY;
+      const YY = eY[nY];
+      YY.stackable = !0;
+      const rY = eY[YY.meta.rootName],
+        DY = null === (jY = rY.model) || void 0 === jY ? void 0 : jY.split("|")[0];
+      if (YY.textureInfo && !rY.blockModel && (!DY || "Slab" === DY || "Stairs" === DY || "fence" === DY || "fenceGate" === DY))
+        if ("string" === typeof YY.textureInfo) {
+          const rY = YY.textureInfo;
+          let DY = HY[rY];
+          void 0 === DY && (DY = BY++, HY[rY] = DY), YY.atlasIdx = DY
+        } else if (!Array.isArray(YY.textureInfo) || "number" !== typeof YY.textureInfo[0]) {
+        const rY = YY.textureInfo;
+        YY.atlasIdx = [];
+        for (let DY = 0; DY < rY.length; DY++) {
+          const FY = rY[DY],
+            AY = "string" === typeof FY ? FY : FY.animTextures[0];
+          let IY = HY[AY];
+          void 0 === IY && (IY = BY++, HY[AY] = IY), YY.atlasIdx.push(IY)
         }
-        var sB = dB(4131);
-        var MB = dB(4133);
-        const zB = /^(?:export\s+)?(?:declare\s+)?(?:type|interface|enum|const enum)\s+([A-Za-z_$][\w$]*)/;
+      }
+    }
+    const hY = {};
+    for (const nY in eY) hY[nY] = new vY.d(eY[nY]);
+    const dY = 39 == DY.j ? hY : null,
+      JY = {};
+    for (const nY in hY) {
+      const YY = nY.split("|");
+      if ("meta" === YY[1]) {
+        var MY;
+        const rY = null !== (MY = JY[YY[0]]) && void 0 !== MY ? MY : [];
+        rY.push(nY), JY[YY[0]] = rY
+      }
+    }
+    const wY = function(YY) {
+        let rY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        if (YY === oY.d) return 0;
+        const DY = (0, AY.c)(hY, YY);
+        if (DY) return DY.id;
+        const FY = (0, AY.c)(hY, YY.split("|")[0]);
+        if (FY && YY === FY.rootMetaDesc) return FY.id;
+        if (!rY) throw new Error(`Invalid block name. You sent ${YY}. The only valid block names are 'Air' and those contained within the blockMetadata.ts file`);
+        return null
+      },
+      bY = YY => 0 === YY ? oY.d : hY[YY].name;
 
-        function wB(BB) {
-          const TB = new Map;
-          let dB, VB = [],
-            yB = !1;
-          const pB = () => {
-            dB && TB.set(dB.name, dB.lines.join("\n").trimEnd())
+    function XY(YY) {
+      return null !== hY[YY].meta.open
+    }
+    const qY = hY.Unloaded.id,
+      pY = {
+        "Patterned Yellow Glass": 1007,
+        "Black Concrete Slab|meta|rot4|side": 1220,
+        Grenade: 1221,
+        "Cherry Block": 1270,
+        "Bouncy Bomb Block": 1271,
+        "Obby Rocket": 1272,
+        "Kill Spikes": 1278,
+        "Corn Plant|FreshlyGrown": 1290,
+        "Loot Chest|meta|rot4": 1294,
+        "Melting Ice|Breaking": 1296,
+        "Black Sticky Paintball Explosive": 1360,
+        "_Black Strongbed Head|meta|rot4": 1488,
+        "Timed Spike Bomb Block|Flashing": 1490,
+        Lava: 1491,
+        "Fat Red Mushroom": 1493,
+        "Chili Pepper Block": 1494,
+        "Chili Pepper Plant|FreshlyGrown": 1501,
+        "Chili Pepper Plant|Lava|FreshlyGrown": 1509,
+        "Code Block": 1510,
+        "Toxin Ball Block": 1511,
+        "Checkpoint Block|meta|rot4": 1579,
+        "Generator Spawn Block (Ore)": 1602,
+        "Obby Absorb Death Block": 1609,
+        "Bone Block": 1610,
+        "Draugr Skeleton Spawner Block": 1616,
+        "Empty Spawner Block": 1617,
+        "Frost Skeleton Spawner Block": 1620,
+        "Snowy Stone Slab|meta|rot4|side": 1627,
+        "Draugr Knight Spawner Block": 1628,
+        "Packed Snow": 1629,
+        "Carved Messy Stone": 1630,
+        "Spectral Grass": 1631,
+        "Spectral Ladder|meta|rot4": 1673,
+        "Diamond Enchanting Table|meta|rot4": 1693,
+        "Gold Watermelon Stag Spawner Block": 1717,
+        "Salvaging Table|meta|rot4": 1721,
+        "Black Chalk Bricks Slab|meta|rot4|side": 1946,
+        "_Leaf Bed Head|meta|rot4": 1954,
+        "Jungle Tall Grass|Top": 1963,
+        Catnip: 1964,
+        "Mango Block": 2007,
+        "Attached Banana Stem|meta|rot4": 2014,
+        "Dangling Vine": 2016,
+        "Gorilla Spawner Block": 2017,
+        "Wildcat Spawner Block": 2018,
+        "Fruity Mango Leaves": 2025,
+        "Draugr Huntress Spawner Block": 2026,
+        "Magma Golem Spawner Block": 2027,
+        "Yellow Portal": 2044,
+        "Leather Block": 2045,
+        "Horse Spawner Block": 2046,
+        "Beetroot Plant|FreshlyGrown": 2084,
+        "Autumn Aspen Leaves|TreeCanopy": 2086,
+        "Autumn Fern": 2087,
+        "Iron Chest|meta|rot4": 2091,
+        Crate: 2092,
+        "Carrot Seeds": 2094,
+        "Potato Seeds": 2096,
+        "Beetroot Seeds": 2098,
+        "Black Banner|meta|rot4|side": 2482,
+        "Draugr Banner|meta|rot4|side": 2506,
+        "Spirit Gorilla Spawner Block": 2511,
+        "Fertilised Soil": 2512,
+        "_Whiskers Bottom Right|meta|rot4": 2624,
+        "Hollow Crate": 2625,
+        "Draugr Warper Spawner Block": 2626,
+        "_Active Radar Dish|meta|rot4": 2662,
+        "Lucky Block": 2663,
+        "Ultra Lucky Block": 2664,
+        "Gold Trophy|meta|rot4": 2668,
+        "_Small Red Pod Top": 2677,
+        "INTERNAL_MESH_Gold Trophy": 2678,
+        "Draugr Reaver Spawner Block": 2680,
+        "_Small Black Pod Top": 2719,
+        "Rainbow Banner|meta|rot4|side": 2767,
+        "Twirlina Cappucina Statue": 2779,
+        "Weapon Lucky Block": 2780,
+        "Slicing Board": 2787,
+        "INTERNAL_MESH_Moonstone Trophy": 2812,
+        "Yellow Wave": 2828,
+        "Black Directional Arrow|meta|rot4": 2892,
+        "_Vending Machine Top|meta|rot4": 2901,
+        "Coloured Wheel": 2905,
+        UFO: 2906,
+        "Black Neon": 3024,
+        "Super Jump Pad": 3029,
+        "Invisible Sky Light": 3046,
+        "Dirt|JungleGrassRoots": 3048,
+        "Gun Lucky Block": 3049,
+        "Ghost Mystery Block": 3052,
+        Football: 3053,
+        "Pet Lucky Block": 3054,
+        "Slime Trail|meta|rot4": 3070,
+        "Overgrown Jungle Grass Block": 3073,
+        "Smoke Block": 3074,
+        "Pipe|meta|conn|py_pz": 3096,
+        "_Auto Miner Body|meta|rot4": 3116,
+        "Auto Crafter": 3117,
+        "_Rocket Ship Northeast L5": 3137,
+        "Rocket Ship S2": 3138,
+        "Rocket Ship S3": 3139,
+        "Rocket Ship S4": 3140,
+        "Rocket Ship S5": 3141,
+        "INTERNAL_MESH_Rocket Ship Full": 3142,
+        "Extractor Pipe|meta|conn|py_pz": 3164,
+        "_Solar Panel NE|meta|rot4": 3181,
+        "Wire|meta|conn|py_pz": 3203,
+        "Filter Pipe|meta|input|py": 3209,
+        "Merger Pipe|meta|output|py": 3215,
+        "Auto Harvester": 3216,
+        "Stalker Spawner Block": 3217,
+        "Lunite Auto Harvester": 3241,
+        "Bowling Alley Floor": 3242,
+        "Crone Spawner Block": 3243,
+        "Slime Spawner Block": 3244,
+        "Slime Trail|meta|rot1|Decaying": 3245,
+        "Slime Trail|meta|rot2|Decaying": 3246,
+        "Slime Trail|meta|rot3|Decaying": 3247,
+        "Slime Trail|meta|rot4|Decaying": 3248,
+        "Iron Guardian Spawner Block": 3249,
+        "Gold Guardian Spawner Block": 3250,
+        "Diamond Guardian Spawner Block": 3251,
+        "Moonstone Guardian Spawner Block": 3252,
+        "Dry Grass Block": 3253,
+        "Overgrown Dry Grass Block": 3254,
+        "Dead Bush": 3255,
+        "Dirt|DryGrassRoots": 3256,
+        "Dry Grass Slab|meta|rot4|side": 3262,
+        "Lantern|meta|rot4|side": 3267,
+        "Lily Pad": 3268,
+        "Camel Spawner Block": 3272,
+        "_Hump Day Bottom Right|meta|rot4": 3288,
+        "Super Potion Lucky Block": 3307,
+        "Block Destroyer TNT": 3308,
+        "Black Chalk Bricks Stairs|meta|rot4|top": 4028,
+        "Toxic Waste Barrel": 4029,
+        "Toxic Waste": 4030,
+        "Ancient Maple Log": 4031,
+        "Evil Lucky Block": 4032,
+        "Maple Stairs|meta|rot1|bot|innerLeft": 4033,
+        "Black Chalk Bricks Stairs|meta|rot4|top|outerRight": 6912,
+        "INTERNAL_MESH_Small Twin Icicle": 6913,
+        "INTERNAL_MESH_Medium Icicle": 6914,
+        "INTERNAL_MESH_Large Icicle": 6915,
+        "INTERNAL_MESH_Large Twin Icicle": 6916,
+        "Noticeboard Wall Bottom Right|meta|rot4": 6992,
+        "Tiki Terror Spawner Block": 6993,
+        "Maple Fence": 6994,
+        "_Mango Fence Top|meta|nesw": 7521,
+        "Standing Noticeboard|meta|rot4|lrud": 7649,
+        "Pure Moonstone Ore": 7654,
+        "Maple Fence Gate": 7655,
+        "_Mango Fence Gate Top|meta|rot4|open": 7830,
+        "Iron Goofy Golem Spawner Block": 7831,
+        "Gold Goofy Golem Spawner Block": 7832,
+        "Diamond Goofy Golem Spawner Block": 7833,
+        "Moonstone Goofy Golem Spawner Block": 7834,
+        Cannon: 7835,
+        "_Cannon Top Front|meta|rot4": 7858,
+        "Crystal Block": 7859,
+        "Rope Block": 7860,
+        Ash: 7861,
+        "Smelter|meta|rot4": 7881,
+        "Wire Mill|meta|rot4": 7893,
+        "Conveyor Belt|meta|rot4": 7897,
+        "Splitter|meta|rot4": 7901,
+        "Voltite Ore": 7902,
+        "Belt Loader|meta|rot4": 7922,
+        "Charge Vault": 7924,
+        "Tool Bench": 7927,
+        "_Homestead Core Top": 7929,
+        "Assembler|meta|rot4|Running": 7965,
+        "Tree Cutter|meta|rot4|Running": 7973,
+        "Charging Pad": 8011,
+        "Crystal Vat|meta|rot4|Running": 8019,
+        "Comet Heart": 8023,
+        "_Starframe Spire": 8024,
+        "Fast Belt|meta|rot4|turnRight": 8040,
+        "Recycler|meta|rot4|Running": 8048,
+        "Belt Drop": 8050,
+        "Crop Harvester|meta|rot4|Running": 8058,
+        "Belt Tunnel|meta|rot4|exit": 8066,
+        "Pure Copper Ore": 8067,
+        "Pure Voltite Ore": 8068,
+        Darkstone: 8069,
+        "Darkstone Bricks": 8070,
+        "Cracked Darkstone Bricks": 8071,
+        "Molten Darkstone Bricks": 8072,
+        "Engraved Darkstone": 8073,
+        "Smooth Darkstone": 8074,
+        "Chest|meta|rot4|right": 8082,
+        "INTERNAL_MESH_Floor Quarters": 8083,
+        "Scorpion Eggs Block": 8084,
+        "INTERNAL_MESH_Boss Target": 8085,
+        "INTERNAL_MESH_Rune Sigil": 8086,
+        "INTERNAL_MESH_Eclipse Dial": 8087,
+        "INTERNAL_MESH_Beam Arm": 8088,
+        "INTERNAL_MESH_Beam Arm Mirrored": 8089,
+        INTERNAL_MESH_Mortar: 8090,
+        "Trading Terminal": 8091,
+        "Trading Terminal|meta|rot4": 8094,
+        "Stone Generator": 8095,
+        "Wheat Helper": 8096,
+        "Carrot Helper": 8097,
+        "Melon Helper": 8098,
+        Showcase: 8099,
+        "Pine Item Pedestal": 8100,
+        "Plum Item Pedestal": 8101,
+        "Cedar Item Pedestal": 8102,
+        "Aspen Item Pedestal": 8103,
+        "Jungle Item Pedestal": 8104,
+        "Palm Item Pedestal": 8105,
+        "Pear Item Pedestal": 8106,
+        "Cherry Item Pedestal": 8107,
+        "Spectral Item Pedestal": 8108,
+        "Mango Item Pedestal": 8109,
+        "Reactor Controller|meta|rot4|Alarm": 8174,
+        "Express Belt|meta|rot4|turnRight": 8231,
+        "Isotope Comet Heart": 8253,
+        "Fluid Pipe|meta|conn|nx_ny_nz_px_py_pz": 8325,
+        "Coolant Pipe|meta|conn|nx_ny_nz_px_py_pz": 8397,
+        "Fluid Tank|meta|rot1|Fill4": 8401,
+        "Fluid Pipe|meta|conn|nx_ny_nz_px_py_pz|Full": 8465,
+        "Coolant Pipe|meta|conn|nx_ny_nz_px_py_pz|Full": 8529,
+        "Reactor Port|meta|rot1|Formed|Waste": 8534,
+        "Collider|meta|rot4|Running": 8538,
+        Scaffolding: 8539,
+        "Nova Trophy|meta|rot4": 8543,
+        "Pure Uranium Ore": 8545,
+        "Nova Bomb": 8548
+      },
+      [kY, GY] = Object.entries(hY).at(-1);
+    if (kY !== Object.keys(pY).at(-1)) throw new Error(`You have added new blocks. Please add the following to knownMetadataIds:\n"${kY}": ${GY.id},\nRemember that new blocks must come after existing blocks in blockInitInfo.`);
+    Object.entries(pY).forEach((YY => {
+      let [rY, DY] = YY;
+      if (hY[rY].id !== DY) throw new Error(`${rY} id is not ${DY}. This means you added a block _before_ other blocks. Blocks can only be added at the end of blockMetadata.ts`)
+    }));
+    for (const nY of sY.s) {
+      const YY = (0, aY.Zb)(nY);
+      if (!hY[YY]) throw new Error(`Missing Mob Spawner Block for mob type ${nY}: please add '...getMobSpawnerBlock("${nY}"),' to the end of blockInitInfo.ts`)
+    }
+    for (const nY of iY.f) {
+      var xY;
+      if (null === (xY = iY.d[nY]) || void 0 === xY || !xY.supportsFriendship) continue;
+      const YY = (0, aY.Sb)(nY);
+      if (!hY[YY]) throw new Error(`Missing Mob Painting Block for mob type ${nY}: please add '...getMobPaintingBlock("${nY}"),' to the end of blockInitInfo`)
+    }
+  },
+  8851: (YY, rY, DY) => {
+    DY.d(rY, {
+      $b: () => vr,
+      Ab: () => sr,
+      B: () => yY,
+      Bb: () => bY,
+      D: () => Fr,
+      Eb: () => kY,
+      H: () => Qr,
+      Ib: () => lY,
+      J: () => Wr,
+      Lb: () => ir,
+      Mb: () => UY,
+      N: () => oY,
+      Qb: () => cY,
+      R: () => QY,
+      U: () => pY,
+      Ub: () => SY,
+      V: () => mY,
+      Vb: () => zY,
+      Y: () => GY,
+      Yb: () => HY,
+      Z: () => JY,
+      _: () => mr,
+      _b: () => Er,
+      ac: () => ur,
+      cb: () => Yr,
+      cc: () => eY,
+      d: () => Dr,
+      e: () => CY,
+      eb: () => iY,
+      fb: () => MY,
+      h: () => Ir,
+      hb: () => nY,
+      i: () => ar,
+      k: () => Or,
+      l: () => gr,
+      lb: () => xY,
+      p: () => NY,
+      pb: () => or,
+      qb: () => qY,
+      rb: () => wY,
+      sb: () => sY,
+      t: () => BY,
+      ub: () => Vr,
+      w: () => tY,
+      wb: () => PY,
+      y: () => ZY
+    });
+    var FY = DY(8833),
+      AY = DY(8860),
+      IY = DY(8862),
+      RY = DY(8873),
+      OY = DY(8877),
+      gY = DY(8884),
+      aY = DY(341),
+      vY = DY(8870),
+      uY = DY(616);
+
+    function sY(YY, rY, DY, FY) {
+      const AY = {
+          ...rY
+        },
+        IY = {};
+      for (let OY = 0; OY < DY.length; OY++) {
+        var RY;
+        Object.assign(IY, {
+          [`${YY}_stage${OY+1}`]: Object.assign({
+            ...AY
+          }, {
+            textureInfo: DY[OY]
+          }, null !== (RY = null === FY || void 0 === FY ? void 0 : FY[OY + 1]) && void 0 !== RY ? RY : {})
+        })
+      }
+      return IY
+    }
+
+    function iY(YY, rY) {
+      console.assert("meta|rot1|empty" === rY.rootMetaDesc.split("|").slice(1).join("|"), "mailbox root block .rootMetaDesc must be |meta|rot1|empty");
+      const DY = {
+        ...rY
+      };
+      delete DY.rootMetaDesc;
+      const FY = {
+          ...DY
+        },
+        AY = {
+          ...DY
+        },
+        IY = {
+          ...DY
+        };
+      Object.assign(FY, {
+        texturePerSide: [0, 1, 1, 1, 1, 1]
+      }), Object.assign(AY, {
+        texturePerSide: [1, 1, 1, 1, 1, 0]
+      }), Object.assign(IY, {
+        texturePerSide: [1, 0, 1, 1, 1, 1]
+      });
+      const RY = ["mailbox_front_full", "mailbox_side"];
+      return {
+        [YY]: rY,
+        [`${YY}|meta|rot2|empty`]: {
+          ...FY
+        },
+        [`${YY}|meta|rot3|empty`]: {
+          ...AY
+        },
+        [`${YY}|meta|rot4|empty`]: {
+          ...IY
+        },
+        [`${YY}|meta|rot1|full`]: Object.assign({
+          ...DY
+        }, {
+          textureInfo: RY
+        }),
+        [`${YY}|meta|rot2|full`]: Object.assign({
+          ...FY
+        }, {
+          textureInfo: RY
+        }),
+        [`${YY}|meta|rot3|full`]: Object.assign({
+          ...AY
+        }, {
+          textureInfo: RY
+        }),
+        [`${YY}|meta|rot4|full`]: Object.assign({
+          ...IY
+        }, {
+          textureInfo: RY
+        })
+      }
+    }
+
+    function yY(YY, rY) {
+      console.assert("meta|rot1|books6" === rY.rootMetaDesc.split("|").slice(1).join("|"), "bookshelf root block .rootMetaDesc must be |meta|rot1|books6");
+      const DY = {
+        ...rY
+      };
+      delete DY.rootMetaDesc;
+      const FY = {
+          ...DY
+        },
+        AY = {
+          ...DY
+        },
+        IY = {
+          ...DY
+        },
+        RY = {
+          0: ["bookshelf_empty", "planks_maple"],
+          1: ["bookshelf_1", "planks_maple"],
+          2: ["bookshelf_2", "planks_maple"],
+          3: ["bookshelf_3", "planks_maple"],
+          4: ["bookshelf_4", "planks_maple"],
+          5: ["bookshelf_5", "planks_maple"]
+        };
+      Object.assign(FY, {
+        texturePerSide: [0, 0, 1, 1, 1, 1]
+      }), Object.assign(AY, {
+        texturePerSide: [1, 1, 1, 1, 0, 0]
+      }), Object.assign(IY, {
+        texturePerSide: [0, 0, 1, 1, 1, 1]
+      });
+      const OY = {
+        [YY]: rY,
+        [`${YY}|meta|rot2|books6`]: {
+          ...FY
+        },
+        [`${YY}|meta|rot3|books6`]: {
+          ...AY
+        },
+        [`${YY}|meta|rot4|books6`]: {
+          ...IY
+        },
+        [`Empty ${YY}`]: Object.assign({
+          ...DY
+        }, {
+          textureInfo: RY[0],
+          description: {
+            translationKey: "item:emptyBookshelfDescription"
+          },
+          rootMetaDesc: `Empty ${YY}|meta|rot1|books0`
+        }),
+        [`Empty ${YY}|meta|rot2|books0`]: Object.assign({
+          ...FY
+        }, {
+          textureInfo: RY[0]
+        }),
+        [`Empty ${YY}|meta|rot3|books0`]: Object.assign({
+          ...AY
+        }, {
+          textureInfo: RY[0]
+        }),
+        [`Empty ${YY}|meta|rot4|books0`]: Object.assign({
+          ...IY
+        }, {
+          textureInfo: RY[0]
+        })
+      };
+      for (let gY = 1; gY <= 5; gY++) Object.assign(OY, {
+        [`${YY}|meta|rot1|books${gY}`]: Object.assign({
+          ...DY
+        }, {
+          textureInfo: RY[gY]
+        })
+      }), Object.assign(OY, {
+        [`${YY}|meta|rot2|books${gY}`]: Object.assign({
+          ...FY
+        }, {
+          textureInfo: RY[gY]
+        })
+      }), Object.assign(OY, {
+        [`${YY}|meta|rot3|books${gY}`]: Object.assign({
+          ...AY
+        }, {
+          textureInfo: RY[gY]
+        })
+      }), Object.assign(OY, {
+        [`${YY}|meta|rot4|books${gY}`]: Object.assign({
+          ...IY
+        }, {
+          textureInfo: RY[gY]
+        })
+      });
+      return OY
+    }
+
+    function QY() {
+      const YY = {};
+      for (const rY of aY.Fc) {
+        const DY = `${rY.toLowerCase().split(" ").join("_")}_concrete`;
+        Object.assign(YY, lY(`${rY} Concrete Slab`, {
+          displayName: {
+            translationKey: `item:${(0,aY.te)(rY)}ConcreteSlab`
+          },
+          ttb: 1080,
+          textureInfo: DY,
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: `${rY} Concrete`,
+          rootMetaDesc: `${rY} Concrete Slab|meta|rot1|bot`
+        }))
+      }
+      return YY
+    }
+
+    function oY(YY, rY, DY, FY, AY, IY) {
+      const RY = {};
+      for (const OY of aY.Fc) {
+        const gY = YY.replace("$colour$", OY);
+        let vY;
+        vY = Array.isArray(DY) ? {
+          textureInfo: DY.map((YY => YY.replace("$colour$", (0, aY.xe)(OY)))),
+          texturePerSide: [0, 0, 1, 1, 0, 0]
+        } : {
+          textureInfo: DY.replace("$colour$", (0, aY.xe)(OY))
+        }, Object.assign(RY, lY(gY, {
+          displayName: {
+            translationKey: FY,
+            params: {
+              colour: `$t(colour:${(0,aY.xe)(OY)})`
+            }
+          },
+          description: {
+            translationKey: AY,
+            params: {
+              colour: `$t(colour:${(0,aY.xe)(OY)})`
+            }
+          },
+          model: "Slab",
+          slabFullBlock: rY.replace("$colour$", OY),
+          ...vY,
+          rootMetaDesc: `${gY}|meta|rot1|bot`,
+          ...IY
+        }))
+      }
+      return RY
+    }
+    const WY = {
+        bot: (0, FY.d)([
+          [
+            [0, 0, 0],
+            [8, 4, 8]
+          ]
+        ]),
+        top: (0, FY.d)([
+          [
+            [0, 4, 0],
+            [8, 8, 8]
+          ]
+        ]),
+        side1: (0, FY.d)([
+          [
+            [0, 0, 0],
+            [8, 8, 4]
+          ]
+        ]),
+        side2: (0, FY.d)([
+          [
+            [0, 0, 0],
+            [4, 8, 8]
+          ]
+        ]),
+        side3: (0, FY.d)([
+          [
+            [0, 0, 4],
+            [8, 8, 8]
+          ]
+        ]),
+        side4: (0, FY.d)([
+          [
+            [4, 0, 0],
+            [8, 8, 8]
+          ]
+        ])
+      },
+      EY = [(0, FY.d)([
+        [
+          [0, 0, 7],
+          [8, 8, 8]
+        ]
+      ]), (0, FY.d)([
+        [
+          [7, 0, 0],
+          [8, 8, 8]
+        ]
+      ]), (0, FY.d)([
+        [
+          [0, 0, 0],
+          [8, 8, 1]
+        ]
+      ]), (0, FY.d)([
+        [
+          [0, 0, 0],
+          [1, 8, 8]
+        ]
+      ])];
+
+    function mY(YY, rY) {
+      return EY[(YY - 1 + Number(rY)) % 4]
+    }
+    const VY = (0, FY.d)([
+      [
+        [0, 7, 0],
+        [8, 8, 8]
+      ]
+    ]);
+
+    function SY(YY, rY) {
+      return rY ? EY[(YY + 1) % 4] : VY
+    }
+
+    function lY(YY, rY) {
+      console.assert("meta|rot1|bot" === rY.rootMetaDesc.split("|").slice(1).join("|"), "slab root block .rootMetaDesc must be |meta|rot1|bot");
+      const DY = {
+        ...rY
+      };
+      return delete DY.rootMetaDesc, {
+        [YY]: {
+          ...rY,
+          ns: WY.bot
+        },
+        [`${YY}|meta|rot1|top`]: {
+          ...DY,
+          ns: WY.top
+        },
+        [`${YY}|meta|rot1|side`]: {
+          ...DY,
+          ns: WY.side1
+        },
+        [`${YY}|meta|rot2|side`]: {
+          ...DY,
+          ns: WY.side2
+        },
+        [`${YY}|meta|rot3|side`]: {
+          ...DY,
+          ns: WY.side3
+        },
+        [`${YY}|meta|rot4|side`]: {
+          ...DY,
+          ns: WY.side4
+        }
+      }
+    }
+
+    function TY(YY, rY) {
+      const DY = {
+          ...rY,
+          model: "Stairs"
+        },
+        FY = {};
+      for (const IY of ["bot", "top"])
+        for (let rY = 1; rY <= 4; rY++) {
+          const RY = AY.l[IY][rY - 1];
+          1 === rY && "bot" === IY ? FY[YY] = {
+            ...DY,
+            rootMetaDesc: `${YY}|meta|rot1|bot`,
+            ns: RY
+          } : FY[`${YY}|meta|rot${rY}|${IY}`] = {
+            ...DY,
+            ns: RY
+          }
+        }
+      return FY
+    }
+
+    function eY(YY, rY) {
+      return {
+        name: YY,
+        data: rY
+      }
+    }
+
+    function NY(YY, rY) {
+      return aY.Fc.map((DY => eY(`${DY} ${YY} Stairs`, rY(DY))))
+    }
+
+    function BY(YY) {
+      const rY = {};
+      for (const {
+          name: DY,
+          data: FY
+        }
+        of YY) Object.assign(rY, TY(DY, FY));
+      return rY
+    }
+
+    function cY(YY) {
+      const rY = {};
+      for (const {
+          name: DY,
+          data: FY
+        }
+        of YY) {
+        const YY = {
+          ...FY,
+          model: "Stairs"
+        };
+        for (const FY of ["bot", "top"])
+          for (const IY of vY.m)
+            for (let RY = 1; RY <= 4; RY++) rY[`${DY}|meta|rot${RY}|${FY}|${IY}`] = {
+              ...YY,
+              ns: AY.p[FY][IY][RY - 1]
+            }
+      }
+      return rY
+    }
+
+    function KY(YY, rY) {
+      const DY = `_${YY} Top`,
+        FY = {};
+      for (const AY of [0, RY.j])
+        for (const IY of RY.g) FY[(0, RY.m)(YY, IY | AY)] = {
+          ...rY,
+          model: "fence",
+          ns: RY.z[IY],
+          attachedTop: (0, RY.m)(DY, IY)
+        };
+      for (const AY of RY.g) FY[(0, RY.m)(DY, AY)] = {
+        ...rY,
+        model: "fence",
+        ns: RY.A[AY],
+        canBePlacedOver: !0,
+        drops: null
+      };
+      return FY
+    }
+
+    function HY(YY) {
+      const rY = {};
+      for (const DY of YY) {
+        const YY = `${DY} Fence`;
+        Object.assign(rY, KY(YY, {
+          displayName: {
+            translationKey: `item:${(0,aY.te)(YY)}`
+          },
+          ttb: 1800,
+          textureInfo: `planks_${DY.toLowerCase()}`,
+          itemTexture: `${DY.toLowerCase()}_fence`,
+          harvestType: "wood"
+        }))
+      }
+      return rY
+    }
+
+    function zY(YY) {
+      const rY = {};
+      for (const DY of YY) {
+        const YY = `${DY} Fence Gate`,
+          FY = `_${YY} Top`,
+          AY = {
+            displayName: {
+              translationKey: `item:${(0,aY.te)(YY)}`
+            },
+            ttb: 1800,
+            textureInfo: `planks_${DY.toLowerCase()}`,
+            itemTexture: `${DY.toLowerCase()}_fence_gate`,
+            harvestType: "wood",
+            model: OY.g
           };
-          for (const lB of BB.split("\n")) {
-            const BB = lB.match(zB);
-            yB || lB.startsWith("/*") ? (yB || (pB(), dB = void 0), VB.push(lB), yB = !lB.includes("*/")) : BB ? (pB(), dB = {
-              name: BB[1],
-              lines: [...VB, lB]
-            }, VB = []) : dB && (lB.startsWith(" ") || lB.startsWith("\t") || /^[}\])|]/.test(lB)) ? dB.lines.push(lB) : dB && "" !== lB.trim() && (pB(), dB = void 0)
+        for (const {
+            rot: DY,
+            open: IY
           }
-          return pB(), TB
-        }
-
-        function UB(BB) {
-          return "methods" === BB || "callbacks" === BB || "settings" === BB
-        }
-        const FB = {
-            readme: {
-              icon: "code-block",
-              summary: "Code blocks, boards and World Code, and the globals your code can use.",
-              layout: "article"
-            },
-            snippets: {
-              icon: "scroll",
-              summary: "Ready-made code for common jobs, from moving players to running code every second.",
-              layout: "snippets"
-            },
-            howTo: {
-              icon: "book",
-              summary: "Step-by-step guides for variations, plugins and full games.",
-              layout: "article",
-              navTitle: "All how-tos"
-            },
-            changelog: {
-              icon: "calendar",
-              summary: "What changed in the Code API, newest first.",
-              layout: "changelog"
-            },
-            apiReference: {
-              icon: "prompt",
-              summary: "Every method on the api object, with parameters and return types.",
-              layout: "methods"
-            },
-            callbacks: {
-              icon: "bolt",
-              summary: "Functions your world code defines to react to game events.",
-              layout: "callbacks"
-            },
-            clientOptions: {
-              icon: "player",
-              summary: "Per-player options such as speed, health and camera.",
-              layout: "settings",
-              setterSnippet: (BB, TB) => `api.setClientOption(playerId, "${BB}", ${TB})`
-            },
-            entitySettings: {
-              icon: "eye",
-              summary: "How one player sees and interacts with another entity.",
-              layout: "settings",
-              setterSnippet: (BB, TB) => `api.setOtherEntitySetting(playerId, targetedEntityId, "${BB}", ${TB})`
-            },
-            mobSettings: {
-              icon: "mob",
-              summary: "Health, movement, combat and AI settings for mobs.",
-              layout: "settings",
-              setterSnippet: (BB, TB) => `api.setMobSetting(mobId, "${BB}", ${TB})`
-            },
-            vehicleSettings: {
-              icon: "car",
-              summary: "Movement, physics and camera settings for vehicles.",
-              layout: "settings",
-              setterSnippet: (BB, TB) => `api.setVehicleSetting(vehicleId, "${BB}", ${TB})`
-            },
-            meshEntities: {
-              icon: "mesh",
-              summary: "Spawn mesh entities and throwables, and attach meshes to nodes.",
-              layout: "article"
-            },
-            qte: {
-              icon: "stopwatch",
-              summary: "Quick time events: progress bars, timed clicks and rhythm games.",
-              layout: "article"
-            },
-            dialogueVoices: {
-              icon: "speech-bubble",
-              summary: "The voices dialogue is read out in, with a playground for making voices of your own.",
-              layout: "article",
-              hasVoicePlayground: !0
-            },
-            particles: {
-              icon: "sparkle",
-              summary: "Particle textures and presets, with a live effect playground.",
-              layout: "article",
-              gallery: "particles",
-              hasParticlePlayground: !0
-            },
-            sounds: {
-              icon: "music",
-              summary: "Every sound effect and song you can play.",
-              layout: "article",
-              gallery: "sounds"
-            },
-            icons: {
-              icon: "heart",
-              summary: "Icons for styled text, from Bloxd icons to Font Awesome.",
-              layout: "article",
-              gallery: "icons",
-              hasTextPlayground: !0
-            },
-            skins: {
-              icon: "shirt",
-              summary: "Skin parts, NPC skins and poses for players.",
-              layout: "article",
-              gallery: "skins"
-            },
-            blockNames: {
-              icon: "grass-block",
-              summary: "Every block name, with its texture and variants.",
-              layout: "article",
-              gallery: "blocks"
-            },
-            itemNames: {
-              icon: "pickaxe",
-              summary: "Every item name, with its texture.",
-              layout: "article",
-              gallery: "items"
-            }
+          of OY.i) rY[(0, OY.k)(YY, DY, IY)] = {
+          ...AY,
+          ...1 !== DY || IY ? {} : {
+            rootMetaDesc: `${YY}|meta|rot1|closed`
           },
-          KB = {
-            Variations: {
-              icon: "layers",
-              summary: "Alternate versions of a custom game, and matchmaking players between them."
-            },
-            Plugins: {
-              icon: "puzzle",
-              summary: "Reusable first-party World Code features, imported from @plugins."
-            },
-            "Building a SessionBasedGame": {
-              icon: "trophy",
-              summary: "A full team game: lobby, teams, map voting, rounds and a winner."
-            },
-            "Interactable NPCs": {
-              icon: "speech-bubble",
-              summary: "Entities players talk to or use, such as shopkeepers and guards."
-            },
-            Dialogue: {
-              icon: "volume",
-              summary: "Lines of dialogue below the crosshair, read out a syllable at a time in a voice."
-            },
-            "Project schematics": {
-              icon: "blueprint",
-              summary: "Build whole chunks from schematics stored with your project."
-            }
+          ns: (0, OY.u)(!1, DY, IY),
+          attachedTop: (0, OY.k)(FY, DY, IY)
+        };
+        for (const {
+            rot: DY,
+            open: IY
+          }
+          of OY.i) rY[(0, OY.k)(FY, DY, IY)] = {
+          ...AY,
+          ...1 !== DY || IY ? {} : {
+            rootMetaDesc: `${FY}|meta|rot1|closed`
+          },
+          ns: (0, OY.u)(!0, DY, IY),
+          canBePlacedOver: !0,
+          drops: null
+        }
+      }
+      return rY
+    }
+
+    function ZY(YY, rY) {
+      console.assert("meta|rot1|bot" === rY.rootMetaDesc.split("|").slice(1).join("|"), "banner root block .rootMetaDesc must be |meta|rot1|bot");
+      const DY = {
+        ...rY
+      };
+      delete DY.rootMetaDesc;
+      const FY = {
+          ...DY,
+          blockModel: `_${YY} Hanging`
+        },
+        AY = `_${YY} Flag`,
+        IY = {
+          ...rY,
+          drops: YY,
+          rootMetaDesc: `${AY}|meta|rot1|top`,
+          blockModel: `${AY} Hanging`
+        },
+        RY = {
+          ...IY
+        };
+      delete RY.rootMetaDesc;
+      const OY = {
+        ...RY,
+        blockModel: AY
+      };
+      return {
+        [YY]: rY,
+        [`${YY}|meta|rot2|bot`]: {
+          ...DY
+        },
+        [`${YY}|meta|rot3|bot`]: {
+          ...DY
+        },
+        [`${YY}|meta|rot4|bot`]: {
+          ...DY
+        },
+        [AY]: IY,
+        [`${AY}|meta|rot2|top`]: {
+          ...RY
+        },
+        [`${AY}|meta|rot3|top`]: {
+          ...RY
+        },
+        [`${AY}|meta|rot4|top`]: {
+          ...RY
+        },
+        [`${AY}|meta|rot1|side`]: {
+          ...RY
+        },
+        [`${AY}|meta|rot2|side`]: {
+          ...RY
+        },
+        [`${AY}|meta|rot3|side`]: {
+          ...RY
+        },
+        [`${AY}|meta|rot4|side`]: {
+          ...RY
+        },
+        [`${AY}|meta|rot1|bot`]: {
+          ...OY
+        },
+        [`${AY}|meta|rot2|bot`]: {
+          ...OY
+        },
+        [`${AY}|meta|rot3|bot`]: {
+          ...OY
+        },
+        [`${AY}|meta|rot4|bot`]: {
+          ...OY
+        },
+        [`${YY}|meta|rot1|top`]: {
+          ...FY
+        },
+        [`${YY}|meta|rot2|top`]: {
+          ...FY
+        },
+        [`${YY}|meta|rot3|top`]: {
+          ...FY
+        },
+        [`${YY}|meta|rot4|top`]: {
+          ...FY
+        },
+        [`${YY}|meta|rot1|side`]: {
+          ...FY
+        },
+        [`${YY}|meta|rot2|side`]: {
+          ...FY
+        },
+        [`${YY}|meta|rot3|side`]: {
+          ...FY
+        },
+        [`${YY}|meta|rot4|side`]: {
+          ...FY
+        }
+      }
+    }
+    const CY = ["nx", "ny", "nz", "px", "py", "pz"];
+
+    function fY(YY, rY) {
+      const [DY, FY] = YY < rY ? [YY, rY] : [rY, YY];
+      return `${DY}_${FY}`
+    }
+
+    function jY(YY) {
+      return YY[1]
+    }
+
+    function hY(YY, rY, DY) {
+      return jY(rY) === jY(DY) ? `${YY}_straight_${jY(rY)}` : `${YY}_elbow_${fY(rY,DY)}`
+    }
+
+    function dY(YY, rY, DY, FY, AY) {
+      const IY = `meta|${FY}|none`;
+      if (AY.rootMetaDesc.split("|").slice(1).join("|") !== IY) throw new Error(`${YY} root hub pipe .rootMetaDesc must be |${IY}, got "${AY.rootMetaDesc}"`);
+      if (void 0 !== AY.blockModel) throw new Error(`${YY} root hub pipe data must NOT set blockModel - the builder fills it per-variant`);
+      const RY = YY => {
+          const rY = {
+            ...AY,
+            blockModel: YY
           };
-
-        function rB(BB) {
-          return BB.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
-        }
-
-        function IB(BB) {
-          let TB = !1;
-          return BB.split("\n").map((BB => (BB.startsWith("```") && (TB = !TB), !TB && /^#{3,} /.test(BB) ? BB.slice(1) : BB))).join("\n")
-        }
-
-        function cB(BB) {
-          return "readme" === BB ? "getting-started" : rB(BB)
-        }
-        const SB = "## Glossary of Referenced Types";
-        const PB = [{
-            id: "welcome",
-            slug: "",
-            title: "Welcome",
-            icon: "house",
-            summary: "Run JavaScript in Bloxd, from a single block to a whole custom game.",
-            layout: "article",
-            markdown: "# Welcome to the Bloxd Code API\n\nWrite JavaScript that runs inside Bloxd: make a block launch players into the sky, give your world its own shop, or build a whole custom game with rounds, teams and a winner.\n\n## New to coding in Bloxd?\n\nStart with [Getting started](#readme), which explains code blocks, boards and World Code, and where each one runs. Then copy something from [Snippets](#snippets) into a code block and change it to see what happens.\n\n## Building a game\n\n[Callbacks](#callbacks) let your World Code react to players joining, chatting, breaking blocks and more. The [How-Tos](#howTo) walk through bigger features step by step, from plugins to a complete team game.\n\n## Looking something up\n\nThe [API Reference](#apiReference) lists every method on `api`. Settings for players, entities, mobs and vehicles each have their own page, and the Assets pages list every block, item, sound, particle, icon and skin name you can use. Press Ctrl K, or \u2318 K on a Mac, to search all of it.\n\n## What's new\n\nThe [Changelog](#changelog) lists what has changed in the Code API, newest first.\n\n## Get help\n\nAsk questions, report problems and suggest features on [our Discord](https://discord.gg/playbloxd)."
-          }, ...MB.d.flatMap((BB => {
-            const TB = {
-              id: BB.id,
-              slug: cB(BB.id),
-              title: BB.title,
-              markdown: BB.content,
-              ...FB[BB.id]
-            };
-            if ("readme" === BB.id) return function(BB) {
-              const TB = BB.markdown.indexOf(SB),
-                dB = BB.markdown.indexOf("\n```", TB),
-                VB = BB.markdown.indexOf("\n```", dB + 1);
-              if (-1 === TB || -1 === dB || -1 === VB) throw new Error(`Getting started has no "${SB}" section with a code block`);
-              const yB = BB.markdown.slice(TB + 31, dB).trim(),
-                pB = [...wB(BB.markdown.slice(BB.markdown.indexOf("\n", dB + 1) + 1, VB))].map((BB => {
-                  let [TB, dB] = BB;
-                  return `## ${TB}\n\n\`\`\`ts\n${dB}\n\`\`\`\n`
-                })),
-                lB = BB.markdown.slice(BB.markdown.indexOf("\n", VB + 1) + 1);
-              return [{
-                ...BB,
-                markdown: `${BB.markdown.slice(0,TB)}${lB}`
-              }, {
-                id: "types",
-                slug: "types",
-                title: "Types",
-                icon: "tag",
-                summary: "The types the API Reference's parameters and return values refer to.",
-                layout: "article",
-                markdown: `# Types\n\n${yB}\n\n${pB.join("\n")}`
-              }]
-            }(TB);
-            if ("howTo" === BB.id) {
-              const {
-                parent: BB,
-                guides: dB
-              } = function(BB) {
-                const [TB, ...dB] = BB.markdown.split(/^(?=## )/m), VB = [TB], yB = [];
-                for (const lB of dB) {
-                  var pB;
-                  const TB = lB.indexOf("\n"),
-                    dB = lB.slice(3, TB).trim(),
-                    JB = lB.slice(TB + 1);
-                  if (!JB.includes("```")) {
-                    VB.push(lB);
-                    continue
-                  }
-                  const YB = null !== (pB = KB[dB]) && void 0 !== pB ? pB : {
-                    icon: "lightbulb",
-                    summary: `How to use ${dB.toLowerCase()} in World Code.`
-                  };
-                  yB.push({
-                    id: `${BB.id}${dB.split(/[^A-Za-z0-9]+/).map((BB=>BB.charAt(0).toUpperCase()+BB.slice(1))).join("")}`,
-                    slug: `${BB.slug}-${rB(dB)}`,
-                    title: dB,
-                    layout: "article",
-                    sourceAnchor: (0, sB.m)(dB),
-                    markdown: `# ${dB}\n\n${IB(JB)}`,
-                    ...YB
-                  })
-                }
-                return {
-                  parent: {
-                    ...BB,
-                    markdown: VB.join(""),
-                    childPageIds: yB.map((BB => BB.id))
-                  },
-                  guides: yB
-                }
-              }(TB);
-              return [BB, ...dB]
-            }
-            return [TB]
-          }))],
-          QB = [{
-            title: "Get started",
-            pageIds: ["welcome", "readme", "snippets", "changelog"]
-          }, {
-            title: "How-Tos",
-            pageIds: ["howTo", ...PB.filter((BB => void 0 !== BB.sourceAnchor)).map((BB => BB.id))]
-          }, {
-            title: "Reference",
-            pageIds: ["apiReference", "callbacks", "clientOptions", "types"]
-          }, {
-            title: "Settings",
-            pageIds: ["entitySettings", "mobSettings", "vehicleSettings"]
-          }, {
-            title: "Systems",
-            pageIds: ["meshEntities", "qte", "dialogueVoices"]
-          }, {
-            title: "Assets",
-            pageIds: ["particles", "sounds", "icons", "skins", "blockNames", "itemNames"]
-          }];
-
-        function RB(BB) {
-          return PB.find((TB => TB.id === BB))
-        }
-        const aB = new Map;
-
-        function ZB(BB) {
-          let TB = aB.get(BB.id);
-          return TB || (TB = (0, sB.p)(BB.markdown, "changelog" === BB.layout ? 3 : 2), aB.set(BB.id, TB)), TB
-        }
-
-        function XB(BB, TB) {
-          return ZB(BB).sections.some((BB => BB.heading.anchor === TB || BB.blocks.some((BB => "heading" === BB.kind && BB.anchor === TB))))
-        }
-
-        function WB(BB) {
-          const [TB, ...dB] = BB.replace(/^#/, "").split("-"), VB = PB.find((BB => BB.id === TB));
-          if (!VB) return null;
-          const yB = dB.length > 0 ? (0, sB.m)(dB.join("-")) : "";
-          for (const lB of null !== (pB = VB.childPageIds) && void 0 !== pB ? pB : []) {
-            var pB;
-            const BB = RB(lB);
-            if (BB.sourceAnchor === yB) return {
-              page: BB,
-              anchor: ""
-            };
-            if (XB(BB, yB)) return {
-              page: BB,
-              anchor: yB
-            }
-          }
-          return {
-            page: VB,
-            anchor: yB
-          }
-        }
-        const hB = {
-          Examples: {
-            pageId: "snippets",
-            anchor: ""
-          },
-          Notes: {
-            pageId: "readme",
-            anchor: "Globals"
-          },
-          "Glossary-of-Referenced-Types": {
-            pageId: "types",
-            anchor: ""
+          return delete rY.rootMetaDesc, rY
+        },
+        OY = {
+          [YY]: {
+            ...AY,
+            blockModel: `${rY}_${FY}_${DY}`
           }
         };
+      for (const gY of CY) gY !== DY && (OY[`${YY}|meta|${FY}|${gY}`] = RY(`${rY}_${FY}_${gY}`));
+      return OY
+    }
 
-        function CB(BB, TB) {
-          let dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-          const VB = TB.slug ? `${BB}/${TB.slug}` : BB;
-          return dB ? `${VB}#${dB}` : VB
-        }
-        var GB = dB(4147);
-        const qB = /^export\s+(?:declare\s+)?(?:type|interface|enum|const enum|class)\s+([A-Za-z_$][\w$]*)/,
-          xB = new Set(["GameApi", "Console", "_TypeOf"]),
-          jB = 4;
+    function JY(YY, rY, DY, FY) {
+      return dY(YY, rY, DY, "input", FY)
+    }
 
-        function AB(BB) {
-          let TB = BB.length;
-          for (; TB > 0 && "" === BB[TB - 1].trim();) TB--;
-          return BB.slice(0, TB)
-        }
+    function MY(YY, rY, DY, FY) {
+      return dY(YY, rY, DY, "output", FY)
+    }
 
-        function bB(BB) {
-          var TB;
-          const dB = AB(BB);
-          if (null === (TB = dB.at(-1)) || void 0 === TB || !TB.trimEnd().endsWith("*/")) return {
-            lines: dB,
-            doc: ""
+    function wY(YY, rY, DY) {
+      console.assert("meta|conn|none" === DY.rootMetaDesc.split("|").slice(1).join("|"), `${YY} root pipe .rootMetaDesc must be |meta|conn|none`), console.assert(void 0 === DY.blockModel, `${YY} root pipe data must NOT set blockModel - the builder fills it per-variant`);
+      const FY = YY => {
+          const rY = {
+            ...DY,
+            blockModel: YY
           };
-          const VB = dB.findLastIndex((BB => BB.startsWith("/**")));
-          return -1 === VB ? {
-            lines: dB,
-            doc: ""
-          } : {
-            lines: AB(dB.slice(0, VB)),
-            doc: dB.slice(VB).join("\n")
+          return delete rY.rootMetaDesc, rY
+        },
+        AY = {
+          [YY]: {
+            ...DY,
+            blockModel: `${rY}_isolated`
           }
+        };
+      for (const IY of CY) AY[`${YY}|meta|conn|${IY}`] = FY(`${rY}_end_${IY}`);
+      for (let IY = 0; IY < CY.length; IY++)
+        for (let DY = IY + 1; DY < CY.length; DY++) {
+          const [RY, OY] = [CY[IY], CY[DY]];
+          AY[`${YY}|meta|conn|${fY(RY,OY)}`] = FY(hY(rY, RY, OY))
         }
+      return AY
+    }
 
-        function nB(BB) {
-          var TB;
-          const dB = BB.split("\n"),
-            VB = dB.flatMap(((BB, TB) => qB.test(BB) ? [TB] : []));
-          let yB = bB(dB.slice(0, null !== (TB = VB[0]) && void 0 !== TB ? TB : dB.length)).doc;
-          return VB.map(((BB, TB) => {
-            var pB;
-            const lB = bB(dB.slice(BB, null !== (pB = VB[TB + 1]) && void 0 !== pB ? pB : dB.length)),
-              JB = {
-                name: dB[BB].match(qB)[1],
-                doc: yB,
-                lines: lB.lines
-              };
-            return yB = lB.doc, JB
+    function bY(YY, rY) {
+      console.assert("meta|rot1" === rY.rootMetaDesc.split("|").slice(1).join("|"), `${YY} root block .rootMetaDesc must be |meta|rot1`);
+      const DY = {
+        ...rY
+      };
+      return delete DY.rootMetaDesc, {
+        [YY]: rY,
+        [`${YY}|meta|rot2`]: {
+          ...DY
+        },
+        [`${YY}|meta|rot3`]: {
+          ...DY
+        },
+        [`${YY}|meta|rot4`]: {
+          ...DY
+        }
+      }
+    }
+    const XY = {
+      ttb: 1800,
+      harvestType: "wood",
+      solid: !0,
+      model: "rotatable",
+      blockModelItem: !0,
+      modelScale: 8,
+      heldItemScale: 4,
+      customModelInfo: {
+        yOffset: -.5
+      }
+    };
+
+    function qY() {
+      const YY = {},
+        rY = ["", "Top", "Bottom", "Left", "Right", "Top Left", "Top Right", "Bottom Left", "Bottom Right"];
+      for (const DY of ["Standing", "Wall"])
+        for (const FY of "Standing" === DY ? [...rY, "Leg"] : rY) {
+          const rY = `Noticeboard ${DY}${FY?` ${FY}`:""}`;
+          Object.assign(YY, bY(rY, {
+            ...XY,
+            displayName: {
+              translationKey: `item:${(0,aY.te)(rY)}`
+            },
+            rootMetaDesc: `${rY}|meta|rot1`,
+            blockModel: (0, aY.xe)(rY),
+            itemTexture: (0, aY.xe)(rY)
           }))
         }
+      return YY
+    }
 
-        function eB(BB) {
-          var TB;
-          const dB = BB.match(/^readonly \[([\s\S]*)\]$/);
-          return dB ? null !== (TB = dB[1].match(/"(?:[^"\\]|\\.)*"/g)) && void 0 !== TB ? TB : [] : null
+    function pY() {
+      const YY = {};
+      for (const {
+          root: rY,
+          blockModelPrefix: DY
         }
-
-        function BT(BB) {
-          if (!BB.startsWith("{") || !BB.endsWith("}")) return null;
-          const TB = {
-              keys: [],
-              values: []
-            },
-            dB = BB => {
-              const dB = BB.trim().match(/^(?:readonly\s+)?("[^"]*"|[\w$]+)\??:\s*([\s\S]*)$/);
-              dB && (TB.keys.push(dB[1].startsWith('"') ? dB[1] : `"${dB[1]}"`), TB.values.push(dB[2].trim()))
-            };
-          let VB = 0,
-            yB = "";
-          for (const pB of BB.slice(1, -1)) "{[(".includes(pB) ? VB++ : "}])".includes(pB) && VB--, ";" === pB && 0 === VB ? (dB(yB), yB = "") : yB += pB;
-          return dB(yB), TB
-        }
-
-        function TT(BB) {
-          return BB.length > jB ? `\n\t| ${BB.join("\n\t| ")}` : BB.join(" | ")
-        }
-
-        function dT(BB, TB) {
-          const dB = function(BB, TB) {
-            return BB.replace(/\(_TypeOf\["([\w$]+)"\]\)\[keyof _TypeOf\["\1"\]\]/g, ((BB, dB) => {
-              var VB;
-              const yB = null === (VB = TB.get(dB)) || void 0 === VB ? void 0 : VB.object;
-              return yB ? TT(yB.values) : BB
-            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[[A-Za-z_$][\w$]*\]\[number\]/g, ((BB, dB) => {
-              var VB, yB;
-              const pB = null === (VB = TB.get(dB)) || void 0 === VB || null === (yB = VB.object) || void 0 === yB ? void 0 : yB.values.map(eB);
-              return null !== pB && void 0 !== pB && pB.every((BB => null !== BB)) ? TT([...new Set(pB.flat())]) : BB
-            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[number\]/g, ((BB, dB) => {
-              var VB;
-              const yB = null === (VB = TB.get(dB)) || void 0 === VB ? void 0 : VB.members;
-              return yB ? TT(yB) : BB
-            })).replace(/keyof _TypeOf\["([\w$]+)"\]/g, ((BB, dB) => {
-              var VB;
-              const yB = null === (VB = TB.get(dB)) || void 0 === VB ? void 0 : VB.object;
-              return yB ? TT(yB.keys) : BB
-            })).replace(/_TypeOf\["([\w$]+)"\]/g, ((BB, dB) => {
-              var VB, yB;
-              return null !== (VB = null === (yB = TB.get(dB)) || void 0 === yB ? void 0 : yB.text) && void 0 !== VB ? VB : BB
-            }))
-          }(BB.lines.join("\n").replace(/^export\s+(?:declare\s+)?/, ""), TB);
-          return [BB.doc, dB].filter(Boolean).join("\n").replace(/\\(`|\$\{)/g, "$1").replace(/ +\n/g, "\n")
-        }
-
-        function VT(BB) {
-          const TB = nB(BB),
-            dB = function(BB) {
-              const TB = new Map,
-                dB = BB.find((BB => "_TypeOf" === BB.name));
-              let VB = null;
-              const yB = () => {
-                if (VB) {
-                  const BB = VB.lines.join("\n");
-                  TB.set(VB.name, {
-                    text: BB,
-                    members: eB(BB),
-                    object: BT(BB)
-                  })
-                }
-              };
-              for (const pB of dB.lines.slice(1, -1)) {
-                const BB = pB.match(/^\t([\w$]+): (.+)$/);
-                BB ? (yB(), VB = {
-                  name: BB[1],
-                  lines: [BB[2]]
-                }) : VB && VB.lines.push(pB.replace(/^\t/, ""))
-              }
-              return yB(), TB
-            }(TB),
-            VB = new Map;
-          for (const yB of TB) xB.has(yB.name) || VB.has(yB.name) || VB.set(yB.name, dT(yB, dB));
-          return VB
-        }
-        let yT, pT, lT;
-
-        function JT() {
-          return pT ??= function(BB) {
-            const TB = nB(BB).find((BB => "GameApi" === BB.name)),
-              dB = new Map,
-              VB = TB.lines;
-            for (let pB = 0; pB < VB.length; pB++) {
-              var yB;
-              if (!VB[pB].trimStart().startsWith("/**")) continue;
-              const BB = pB;
-              for (; pB < VB.length && !VB[pB].includes("*/");) pB++;
-              const TB = null === (yB = VB[pB + 1]) || void 0 === yB ? void 0 : yB.match(/^\s*([A-Za-z_$][\w$]*)\s*[<(]/);
-              if (!TB) continue;
-              let lB = null;
-              const JB = [];
-              let YB = "description",
-                gB = !1;
-              for (const dB of VB.slice(BB, pB + 1).join("\n").split("\n").map((BB => BB.replace(/^\s*\/\*\*\s?/, "").replace(/\s*\*\/\s*$/, "").replace(/^\s*\*\s?/, "").replace(/\\(`|\$\{)/g, "$1")))) {
-                const BB = dB.match(/^@deprecated\s*(?:-\s*)?(.*)$/);
-                BB ? (lB = BB[1].trim(), YB = "deprecation") : dB.startsWith("@") ? (YB = "otherTag", gB = !0) : "" === dB.trim() ? gB || (YB = "description", JB.push(dB)) : "deprecation" !== YB || /^[A-Z]/.test(dB.trim()) ? "otherTag" !== YB && (YB = "description", JB.push(dB)) : lB = `${lB} ${dB.trim()}`.trim()
-              }
-              dB.set(TB[1], {
-                deprecation: lB,
-                description: JB.join("\n").trim()
-              })
-            }
-            return dB
-          }(GB.default), pT
-        }
-
-        function YT() {
-          if (!lT) {
-            lT = new Map;
-            for (const BB of PB) {
-              const TB = (0, sB.n)(ZB(BB)).flatMap((BB => BB.blocks));
-              for (const BB of (0, sB.i)(TB))
-                if ("ts" === BB.lang || "typescript" === BB.lang)
-                  for (const [TB, dB] of wB(BB.code)) lT.set(TB, dB)
-            }
-            for (const [BB, TB] of(yT ??= VT(GB.default), yT)) lT.has(BB) || lT.set(BB, TB)
-          }
-          return lT
-        }
-        const gT = {
-          BlockName: "blockNames",
-          BlockNameOrId: "blockNames",
-          ItemName: "itemNames",
-          Song: "sounds",
-          ParticlePresetId: "particles",
-          PlayerPose: "skins",
-          IngameIconName: "icons",
-          ClientOptions: "clientOptions",
-          ClientOption: "clientOptions",
-          OtherEntitySettings: "entitySettings",
-          OtherEntitySetting: "entitySettings",
-          MobSettings: "mobSettings",
-          MobSetting: "mobSettings",
-          VehicleSetting: "vehicleSettings",
-          SettableVehicleSetting: "vehicleSettings"
-        };
-        let oT;
-
-        function kT() {
-          if (!oT) {
-            oT = new Map;
-            for (const BB of PB)
-              if (UB(BB.layout))
-                for (const TB of ZB(BB).sections) oT.has(TB.heading.text) || oT.set(TB.heading.text, {
-                  pageId: BB.id,
-                  anchor: TB.heading.anchor
-                })
-          }
-          return oT
-        }
-
-        function LT(BB) {
-          const TB = BB.trim().match(/^(?:api\.)?([A-Za-z_$][\w$]*)(?:\(.*\))?$/);
-          return TB ? kT().get(TB[1]) : void 0
-        }
-        const OT = (0, VB.createContext)("/docs"),
-          DT = (0, VB.createContext)(null),
-          uT = (0, VB.createContext)(!1),
-          HT = /#(?=\d*[a-fA-F])[0-9a-fA-F]{6}\b/g;
-
-        function ET(BB) {
-          const TB = BB.match(/^["']?(#[0-9a-fA-F]{6})["']?$/);
-          return TB ? TB[1] : null
-        }
-
-        function vT(BB) {
-          let {
-            colour: TB
-          } = BB;
-          return (0, DB.jsx)("span", {
-            className: "DocsColourSwatch",
-            style: {
-              background: TB
-            },
-            "aria-hidden": "true"
-          })
-        }
-
-        function mT(BB) {
-          const TB = [];
-          let dB = 0;
-          for (const VB of BB.matchAll(HT)) TB.push(BB.slice(dB, VB.index), (0, DB.jsx)(vT, {
-            colour: VB[0]
-          }), VB[0]), dB = VB.index + VB[0].length;
-          return TB.push(BB.slice(dB)), TB
-        }
-
-        function iT(BB) {
-          let {
-            href: TB,
-            children: dB
-          } = BB;
-          const yB = (0, VB.useContext)(OT);
-          if (TB.startsWith("#")) {
-            const BB = WB(TB);
-            if (BB) return (0, DB.jsx)(lB.d, {
-              to: CB(yB, BB.page, BB.anchor),
-              children: (0, DB.jsx)(uT.Provider, {
-                value: !0,
-                children: dB
-              })
-            })
-          }
-          return (0, DB.jsx)("a", {
-            href: TB,
-            target: "_blank",
-            rel: "noopener noreferrer",
-            children: (0, DB.jsx)(uT.Provider, {
-              value: !0,
-              children: dB
-            })
-          })
-        }
-
-        function NT(BB) {
-          let {
-            code: TB
-          } = BB;
-          const dB = (0, VB.useContext)(OT);
-          if ((0, VB.useContext)(uT)) return (0, DB.jsx)("code", {
-            className: "DocsInlineCode",
-            children: TB
-          });
-          if (YT().has(TB)) return (0, DB.jsx)(MT, {
-            type: TB
-          });
-          const yB = LT(TB);
-          if (yB) return (0, DB.jsx)(lB.d, {
-            className: "DocsInlineCode DocsSymbolLink",
-            to: CB(dB, RB(yB.pageId), yB.anchor),
-            children: TB
-          });
-          const pB = ET(TB);
-          return (0, DB.jsxs)("code", {
-            className: "DocsInlineCode",
-            children: [pB && (0, DB.jsx)(vT, {
-              colour: pB
-            }), TB]
-          })
-        }
-
-        function tT(BB) {
-          let {
-            text: TB
-          } = BB;
-          const dB = [];
-          let yB = 0;
-          for (const VB of TB.matchAll(sB.f)) {
-            VB.index > yB && dB.push(...mT(TB.slice(yB, VB.index)));
-            const [, BB, pB, lB, JB, YB] = VB;
-            BB ? dB.push((0, DB.jsx)(NT, {
-              code: (0, sB.j)(BB, pB)
-            })) : lB ? dB.push((0, DB.jsx)("strong", {
-              children: (0, DB.jsx)(tT, {
-                text: lB
-              })
-            })) : dB.push((0, DB.jsx)(iT, {
-              href: YB,
-              children: (0, DB.jsx)(tT, {
-                text: JB
-              })
-            })), yB = VB.index + VB[0].length
-          }
-          return yB < TB.length && dB.push(...mT(TB.slice(yB))), (0, DB.jsx)(DB.Fragment, {
-            children: dB.map(((BB, TB) => (0, DB.jsx)(VB.Fragment, {
-              children: BB
-            }, TB)))
-          })
-        }
-        const fT = /("[^"]*"|'[^']*'|`[^`]*`)|([A-Za-z_$][\w$]*)|(\d+(?:\.\d+)?)|(\s+)|([^\w\s"'`$]+)/g,
-          sT = new Set(["string", "number", "boolean", "null", "undefined", "void", "any", "unknown", "never", "object", "true", "false", "keyof", "typeof", "in", "extends", "readonly"]);
-
-        function MT(BB) {
-          let {
-            type: TB
-          } = BB;
-          const dB = YT(),
-            yB = [];
-          for (const VB of TB.trim().matchAll(fT)) {
-            const [BB, TB, pB, lB, JB] = VB;
-            TB ? yB.push((0, DB.jsx)("span", {
-              className: "DocsTypeString",
-              children: BB
-            })) : pB && dB.has(pB) ? yB.push((0, DB.jsx)(KT, {
-              name: pB,
-              definition: dB.get(pB)
-            })) : pB ? yB.push((0, DB.jsx)("span", {
-              className: sT.has(pB) ? "DocsTypeKeyword" : "DocsTypeName",
-              children: BB
-            })) : lB ? yB.push((0, DB.jsx)("span", {
-              className: "DocsTypeNumber",
-              children: BB
-            })) : JB ? yB.push(" ") : yB.push((0, DB.jsx)("span", {
-              className: "DocsTypePunctuation",
-              children: BB
-            }))
-          }
-          return (0, DB.jsx)("code", {
-            className: "DocsInlineCode DocsTypeText",
-            children: yB.map(((BB, TB) => (0, DB.jsx)(VB.Fragment, {
-              children: BB
-            }, TB)))
-          })
-        }
-        const zT = 480,
-          wT = 6,
-          UT = "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])";
-        let FT = 0;
-
-        function KT(BB) {
-          let {
-            name: TB,
-            definition: dB
-          } = BB;
-          const yB = (0, VB.useContext)(OT),
-            pB = gT[TB],
-            JB = (0, VB.useRef)(null),
-            YB = (0, VB.useRef)(null),
-            oB = (0, VB.useRef)(null),
-            [kB, LB] = (0, VB.useState)(!1),
-            [OB, uB] = (0, VB.useState)(null),
-            EB = (0, VB.useRef)(),
-            vB = (0, VB.useContext)(DT),
-            [mB] = (0, VB.useState)((() => "DocsTypePopover-" + FT++)),
-            iB = () => {
-              clearTimeout(EB.current), LB(!0)
-            },
-            NB = () => {
-              clearTimeout(EB.current), EB.current = setTimeout((() => {
-                LB(!1)
-              }), 120)
-            };
-          return (0, VB.useEffect)((() => {
-            if (!kB) return;
-            const BB = BB => {
-              if ("Escape" === BB.key) {
-                var TB, dB;
-                if (null !== (TB = YB.current) && void 0 !== TB && TB.contains(document.activeElement)) null === (dB = JB.current) || void 0 === dB || dB.focus();
-                LB(!1)
-              }
-            };
-            return document.addEventListener("keydown", BB), () => {
-              document.removeEventListener("keydown", BB)
-            }
-          }), [kB]), (0, VB.useEffect)((() => () => {
-            clearTimeout(EB.current)
-          }), []), (0, VB.useLayoutEffect)((() => {
-            if (!kB || !JB.current || !YB.current) return void uB(null);
-            const BB = JB.current.getBoundingClientRect(),
-              TB = YB.current.offsetHeight,
-              dB = Math.min(zT, window.innerWidth - 32),
-              VB = Math.min(Math.max(16, BB.left), window.innerWidth - dB - 16),
-              yB = BB.bottom + wT + TB < window.innerHeight;
-            uB({
-              left: VB,
-              top: yB ? BB.bottom + wT : Math.max(16, BB.top - wT - TB)
-            })
-          }), [kB]), (0, DB.jsxs)(DB.Fragment, {
-            children: [(0, DB.jsx)("button", {
-              type: "button",
-              ref: JB,
-              className: "DocsTypeLink",
-              "aria-expanded": kB,
-              "aria-describedby": kB ? mB : void 0,
-              onMouseEnter: iB,
-              onMouseLeave: NB,
-              onFocus: iB,
-              onBlur: NB,
-              onKeyDown: BB => {
-                "Tab" === BB.key && !BB.shiftKey && oB.current && (BB.preventDefault(), oB.current.focus())
-              },
-              onClick: iB,
-              children: TB
-            }), kB && (0, gB.createPortal)((0, DB.jsxs)("span", {
-              ref: YB,
-              id: mB,
-              className: "DocsTypePopover",
-              role: "tooltip",
-              style: OB ? {
-                left: OB.left,
-                top: OB.top,
-                maxWidth: zT
-              } : {
-                visibility: "hidden"
-              },
-              onMouseEnter: iB,
-              onMouseLeave: NB,
-              onFocus: iB,
-              onBlur: NB,
-              children: [(0, DB.jsxs)("span", {
-                className: "DocsTypePopoverHeader",
-                children: [(0, DB.jsx)("span", {
-                  className: "DocsTypePopoverTitle",
-                  children: TB
-                }), pB && (0, DB.jsxs)(lB.d, {
-                  ref: oB,
-                  className: "DocsTypePopoverLink",
-                  to: CB(yB, RB(pB)),
-                  onClick: () => {
-                    LB(!1)
-                  },
-                  onKeyDown: BB => {
-                    if ("Tab" === BB.key) {
-                      var TB;
-                      if (BB.preventDefault(), BB.shiftKey || !JB.current || ! function(BB, TB) {
-                          const dB = [...document.querySelectorAll(UT)],
-                            VB = dB.slice(dB.indexOf(BB) + 1).find((BB => BB.getClientRects().length > 0 && !(null !== TB && void 0 !== TB && TB.contains(BB))));
-                          return null === VB || void 0 === VB || VB.focus(), void 0 !== VB
-                        }(JB.current, YB.current)) null === (TB = JB.current) || void 0 === TB || TB.focus();
-                      BB.shiftKey || LB(!1)
-                    }
-                  },
-                  children: [RB(pB).title, (0, DB.jsx)(HB, {
-                    name: "arrow-right"
-                  })]
-                })]
-              }), (0, DB.jsx)(fB, {
-                lang: "ts",
-                code: dB,
-                compact: !0
-              })]
-            }), null !== vB && void 0 !== vB ? vB : document.body)]
-          })
-        }
-        var rT = dB(184),
-          IT = dB(4156),
-          cT = dB(4162),
-          ST = dB(4167);
-        const PT = {
-          progressBar: {
-            VV: 30,
-            yV: .075,
-            pV: 5,
-            lV: !1,
-            description: [{
-              str: "Click repeatedly to complete!"
-            }],
-            JV: "fa-solid fa-computer-mouse",
-            scale: 3,
-            rotation: 15
+        of IY.i) {
+        const FY = {
+          ...XY,
+          displayName: {
+            translationKey: `item:${(0,aY.te)(IY.n)}`
           },
-          timedClick: {
-            gV: 3e3,
-            icon: "fa-solid fa-computer-mouse",
-            label: [{
-              str: "Click to complete the QTE!"
-            }],
-            oV: !0,
-            scale: 3,
-            rotation: 15,
-            kV: !1
-          },
-          gravityBar: {
-            VV: 30,
-            OV: .25,
-            DV: 3,
-            uV: .8,
-            gravity: 1,
-            HV: 1.5,
-            EV: 8,
-            vV: 4,
-            lV: !1,
-            description: [{
-              str: "Hold to catch!"
-            }],
-            icon: "Moonfish"
-          },
-          precisionBar: {
-            speed: .5,
-            iV: .15,
-            label: [{
-              str: "Click when the marker is within the green zone."
-            }],
-            icon: "",
-            scale: 1,
-            rotation: 0
-          },
-          rhythmClick: {
-            tV: 5,
-            fV: 1200,
-            sV: .15,
-            MV: 3,
-            label: [{
-              str: "Click when the circles align!"
-            }],
-            icon: ""
+          drops: IY.n,
+          itemTexture: "noticeboard",
+          customModelInfo: {
+            yOffset: -.5,
+            yRotOffset: Math.PI
           }
         };
-        var QT = dB(270),
-          RT = dB(1751);
-
-        function aT(BB) {
-          return BB.startsWith("fa-")
-        }
-        const ZT = {
-            text: "Text",
-            icon: "Icon",
-            progressBar: "Progress bar",
-            keyBinding: "Key binding",
-            other: "Other"
-          },
-          XT = {
-            text: "Text",
-            icon: {
-              icon: "Pixelated Heart"
-            },
-            progressBar: {
-              type: "ProgressBar",
-              progress: .5
-            },
-            keyBinding: {
-              type: "StyledKeyBinding",
-              action: "jump"
+        for (let AY = 1; AY <= 4; AY++)
+          for (const RY of IY.b) {
+            const OY = (0, IY.f)(rY, AY, RY),
+              gY = `${DY}${IY.s[RY]}`;
+            YY[OY] = OY === rY ? {
+              ...FY,
+              rootMetaDesc: `${rY}|meta|rot1`,
+              blockModel: gY
+            } : {
+              ...FY,
+              blockModel: gY
             }
-          };
-
-        function WT(BB) {
-          return "string" === typeof BB ? "text" : "entityName" in BB || "translationKey" in BB ? "other" : (0, QT.ub)(BB) ? "progressBar" : (0, QT.tb)(BB) ? "keyBinding" : "icon" in BB ? "icon" : "str" in BB && "string" === typeof BB.str ? "text" : "other"
-        }
-        const hT = [{
-            path: ["style", "color"],
-            label: "Colour",
-            field: {
-              kind: "colour"
-            },
-            defaultText: "The surrounding text's"
-          }, {
-            path: ["style", "fontSize"],
-            label: "Font size",
-            field: {
-              kind: "size"
-            },
-            defaultText: "1em"
-          }, {
-            path: ["style", "fontWeight"],
-            label: "Font weight",
-            field: {
-              kind: "choice",
-              options: ["normal", "bold", "100", "200", "300", "400", "500", "600", "700", "800", "900"]
-            },
-            defaultText: "normal"
-          }, {
-            path: ["style", "fontStyle"],
-            label: "Font style",
-            field: {
-              kind: "choice",
-              options: ["normal", "italic"]
-            },
-            defaultText: "normal"
-          }, {
-            path: ["style", "opacity"],
-            label: "Opacity",
-            field: {
-              kind: "fraction"
-            },
-            defaultText: "1"
-          }],
-          CT = {
-            text: [{
-              path: ["str"],
-              label: "Text",
-              field: {
-                kind: "text",
-                multiline: !0
-              },
-              isRequired: !0
-            }, ...hT],
-            icon: [{
-              path: ["icon"],
-              label: "Icon",
-              field: {
-                kind: "icon"
-              },
-              isRequired: !0
-            }, {
-              path: ["style", "color"],
-              label: "Colour",
-              field: {
-                kind: "colour"
-              },
-              defaultText: "None, or the text's for Font Awesome"
-            }, {
-              path: ["style", "fontSize"],
-              label: "Size",
-              field: {
-                kind: "size"
-              },
-              defaultText: "1.8em"
-            }, {
-              path: ["style", "opacity"],
-              label: "Opacity",
-              field: {
-                kind: "fraction"
-              },
-              defaultText: "1"
-            }],
-            progressBar: [{
-              path: ["progress"],
-              label: "Progress",
-              field: {
-                kind: "fraction"
-              },
-              isRequired: !0
-            }, {
-              path: ["width"],
-              label: "Width",
-              field: {
-                kind: "size"
-              },
-              defaultText: "4em"
-            }, {
-              path: ["height"],
-              label: "Height",
-              field: {
-                kind: "size"
-              },
-              defaultText: "0.7em"
-            }, {
-              path: ["colours"],
-              label: "Fill colours",
-              field: {
-                kind: "colours"
-              },
-              defaultText: "#ffffff"
-            }, {
-              path: ["backgroundColour"],
-              label: "Track colour",
-              field: {
-                kind: "colour"
-              },
-              defaultText: "rgba(0, 0, 0, 0.45)"
-            }],
-            keyBinding: [{
-              path: ["action"],
-              label: "Action",
-              field: {
-                kind: "choice",
-                options: RT.m
-              },
-              isRequired: !0
-            }, ...hT],
-            other: []
-          };
-
-        function GT(BB) {
-          return "string" === typeof BB ? {
-            str: BB
-          } : BB
-        }
-
-        function qT(BB, TB) {
-          let dB = GT(BB);
-          for (const VB of TB) dB = dB && "object" === typeof dB ? dB[VB] : void 0;
-          return dB
-        }
-
-        function xT(BB, TB, dB) {
-          const VB = (BB, yB) => {
-            var pB;
-            const lB = TB[yB],
-              JB = {
-                ...BB
-              };
-            if (yB === TB.length - 1) return void 0 === dB ? delete JB[lB] : JB[lB] = dB, JB;
-            const YB = VB(null !== (pB = BB[lB]) && void 0 !== pB ? pB : {}, yB + 1);
-            return 0 === Object.keys(YB).length ? delete JB[lB] : JB[lB] = YB, JB
-          };
-          return function(BB) {
-            const TB = Object.keys(BB);
-            return "string" === typeof BB.str && 1 === TB.length ? BB.str : BB
-          }(VB(GT(BB), 0))
-        }
-
-        function jT(BB, TB) {
-          const dB = WT(BB),
-            VB = CT[dB].find((BB => BB.path.join(".") === TB.join("."))),
-            yB = null !== VB && void 0 !== VB && VB.isRequired && "other" !== dB ? qT(XT[dB], TB) : void 0;
-          return xT(BB, TB, yB)
-        }
-
-        function AT(BB) {
-          switch (WT(BB)) {
-            case "text":
-              return String(qT(BB, ["str"]));
-            case "icon":
-              return String(qT(BB, ["icon"]));
-            case "progressBar":
-              return `${Math.round(100*Number(qT(BB,["progress"])))}%`;
-            case "keyBinding":
-              return String(qT(BB, ["action"]));
-            case "other":
-              return JSON.stringify(BB)
           }
-        }
-        const bT = /^[A-Za-z_$][\w$]*$/;
+      }
+      return YY
+    }
 
-        function nT(BB) {
-          if (Array.isArray(BB)) return `[${BB.map(nT).join(", ")}]`;
-          if (BB && "object" === typeof BB) {
-            const TB = Object.entries(BB).map((BB => {
-              let [TB, dB] = BB;
-              return `${bT.test(TB)?TB:JSON.stringify(TB)}: ${nT(dB)}`
-            }));
-            return 0 === TB.length ? "{}" : `{ ${TB.join(", ")} }`
-          }
-          return JSON.stringify(BB)
+    function kY(YY, rY) {
+      let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [
+        [1, 1, 2, 2, 0, 1],
+        [0, 1, 2, 2, 1, 1],
+        [1, 1, 2, 2, 1, 0],
+        [1, 0, 2, 2, 1, 1]
+      ];
+      console.assert("meta|rot1" === rY.rootMetaDesc.split("|").slice(1).join("|"), "threeTexRotBlock root block .rootMetaDesc must be |meta|rot1");
+      const FY = {
+        ...rY
+      };
+      return delete FY.rootMetaDesc, {
+        [YY]: {
+          ...rY,
+          texturePerSide: DY[0]
+        },
+        [`${YY}|meta|rot2`]: {
+          ...FY,
+          texturePerSide: DY[1]
+        },
+        [`${YY}|meta|rot3`]: {
+          ...FY,
+          texturePerSide: DY[2]
+        },
+        [`${YY}|meta|rot4`]: {
+          ...FY,
+          texturePerSide: DY[3]
         }
+      }
+    }
 
-        function eT(BB) {
-          const TB = BB.map(nT),
-            dB = `[${TB.join(", ")}]`;
-          return dB.length <= 60 ? dB : `[\n${TB.map((BB=>`    ${BB},`)).join("\n")}\n]`
-        }
-        const Bd = {
-          "\n": "\\n",
-          "\r": "\\r",
-          "\t": "\\t"
+    function GY(YY, rY) {
+      const DY = ["chest_double_front_lo", "chest_double_front_hi", "chest_side", "chest_double_top_1_lo", "chest_double_top_1_hi", "chest_double_top_2_lo", "chest_double_top_2_hi", "chest_double_back_lo", "chest_double_back_hi"],
+        FY = {
+          left: [
+            [2, 2, 6, 5, 0, 8],
+            [0, 8, 4, 4, 2, 2],
+            [2, 2, 5, 6, 8, 0],
+            [8, 0, 3, 3, 2, 2]
+          ],
+          right: [
+            [2, 2, 5, 6, 1, 7],
+            [1, 7, 3, 3, 2, 2],
+            [2, 2, 6, 5, 7, 1],
+            [7, 1, 4, 4, 2, 2]
+          ]
+        },
+        AY = {};
+      for (const IY of gY.h)
+        for (let RY = 1; RY <= 4; RY++) AY[(0, gY.c)(YY, RY, IY)] = {
+          ...rY,
+          textureInfo: DY,
+          texturePerSide: FY[IY][RY - 1]
         };
+      return AY
+    }
 
-        function Td(BB) {
-          let TB = "";
-          for (let yB = 0; yB < BB.length; yB++) {
-            const pB = BB[yB];
-            if ("\\" === pB) {
-              var dB;
-              const VB = null !== (dB = BB[yB + 1]) && void 0 !== dB ? dB : "";
-              TB += "'" === VB ? "'" : pB + VB, yB++
-            } else if ('"' === pB) TB += '\\"';
-            else {
-              var VB;
-              TB += null !== (VB = Bd[pB]) && void 0 !== VB ? VB : pB
-            }
-          }
-          return `"${TB}"`
-        }
-
-        function dd(BB) {
-          if ("string" === typeof BB) return !0;
-          if (!BB || "object" !== typeof BB || Array.isArray(BB)) return !1;
-          const TB = BB;
-          return "ProgressBar" === TB.type ? "number" === typeof TB.progress : "StyledKeyBinding" === TB.type ? RT.m.includes(TB.action) : "string" === typeof TB.icon || "string" === typeof TB.str || "string" === typeof TB.entityName || "string" === typeof TB.translationKey
-        }
-
-        function Vd(BB) {
-          let TB;
-          try {
-            TB = function(BB) {
-              let TB = "",
-                dB = "",
-                VB = 0;
-              const yB = () => {
-                TB += dB.replace(/([A-Za-z_$][\w$]*)\s*:/g, '"$1":').replace(/,(\s*[\]}])/g, "$1"), dB = ""
-              };
-              for (; VB < BB.length;) {
-                const pB = BB.slice(VB).search(/["'`]|\/\//);
-                if (-1 === pB) {
-                  dB += BB.slice(VB);
-                  break
-                }
-                dB += BB.slice(VB, VB + pB);
-                const lB = VB + pB,
-                  JB = BB[lB];
-                if ("/" === JB) {
-                  const TB = BB.indexOf("\n", lB);
-                  VB = -1 === TB ? BB.length : TB;
-                  continue
-                }
-                if (yB(), "`" === JB) throw new Error("Use quotes rather than template strings.");
-                let YB = lB + 1;
-                for (; YB < BB.length && BB[YB] !== JB;) YB += "\\" === BB[YB] ? 2 : 1;
-                if (YB >= BB.length) throw new Error("A string is missing its closing quote.");
-                const gB = BB.slice(lB + 1, YB);
-                TB += Td(gB), VB = YB + 1
-              }
-              return yB(), JSON.parse(TB)
-            }(BB.trim())
-          } catch (VB) {
-            return {
-              parts: null,
-              error: VB instanceof SyntaxError ? "This isn't a valid array yet." : VB.message
-            }
-          }
-          if (!Array.isArray(TB)) return {
-            parts: null,
-            error: 'Styled text is an array, e.g. ["Hello ", { str: "world" }]'
-          };
-          const dB = TB.findIndex((BB => !dd(BB)));
-          return -1 !== dB ? {
-            parts: null,
-            error: `Part ${dB+1} isn't one Bloxd draws: use a string, { str }, { icon }, a ProgressBar or a StyledKeyBinding.`
-          } : {
-            parts: TB,
-            error: null
-          }
-        }
-        const yd = 1 / rT.c.clientTicksPerSecond,
-          pd = 700,
-          ld = {
-            type: null,
-            parameters: null,
-            state: null,
-            isActive: !1
+    function xY(YY) {
+      const rY = (0, aY.Zb)(YY),
+        DY = uY.v.includes(YY) || uY.c.includes(YY) ? "passive" : uY.w.has(YY) ? "hostile" : "neutral";
+      return {
+        [rY]: {
+          displayName: {
+            translationKey: `item:${(0,aY.te)(YY)}MobSpawnerBlock`
           },
-          Jd = {
-            progressBar: PT.progressBar.JV,
-            timedClick: PT.timedClick.icon,
-            gravityBar: PT.gravityBar.icon,
-            precisionBar: PT.precisionBar.icon,
-            rhythmClick: PT.rhythmClick.icon
-          };
-
-        function Yd(BB) {
-          let {
-            type: TB
-          } = BB;
-          const [dB, yB] = (0, VB.useState)("ready"), [lB, JB] = (0, VB.useState)(1), [YB, gB] = (0, VB.useState)(!0), oB = (0, VB.useRef)(null), kB = (0, VB.useRef)(null), LB = (0, VB.useRef)(null), OB = (0, VB.useRef)(new Set), uB = (0, VB.useRef)(!1), EB = Jd[TB], vB = (0, VB.useMemo)((() => ({
-            getState: () => {
-              var BB, TB;
-              return null !== (BB = null === (TB = LB.current) || void 0 === TB ? void 0 : TB.getState()) && void 0 !== BB ? BB : ld
-            },
-            onFrame: BB => (OB.current.add(BB), () => {
-              OB.current.delete(BB)
-            })
-          })), []);
-          (0, VB.useEffect)((() => {
-            const BB = oB.current,
-              TB = kB.current;
-            if (!BB || !TB) return;
-            const dB = new ResizeObserver((() => {
-              JB(BB.clientWidth / Math.max(1, TB.offsetWidth))
-            }));
-            return dB.observe(BB), () => {
-              dB.disconnect()
-            }
-          }), []), (0, VB.useEffect)((() => {
-            var BB;
-            if ("playing" !== dB) return;
-            let VB = !1;
-            const pB = new ST.f[TB](PT[TB], (BB => {
-              VB = !0, gB(!1), yB(BB ? "succeeded" : "failed")
-            }), (() => {}));
-            LB.current = pB;
-            let lB = 0,
-              JB = performance.now(),
-              YB = requestAnimationFrame((function BB(TB) {
-                for (lB += Math.min(.25, (TB - JB) / 1e3), JB = TB; lB >= yd && !VB;) lB -= yd, pB.handleTick(yd);
-                for (const dB of OB.current) dB();
-                VB || (YB = requestAnimationFrame(BB))
-              }));
-            return null === (BB = oB.current) || void 0 === BB || BB.focus({
-              preventScroll: !0
-            }), () => {
-              cancelAnimationFrame(YB), pB.tearDown(), LB.current = null, uB.current = !1
-            }
-          }), [dB, TB]), (0, VB.useEffect)((() => {
-            if (YB) return;
-            const BB = setTimeout((() => {
-              gB(!0)
-            }), pd);
-            return () => {
-              clearTimeout(BB)
-            }
-          }), [YB]);
-          const mB = BB => {
-            var TB;
-            "playing" === dB && uB.current !== BB && (uB.current = BB, null === (TB = LB.current) || void 0 === TB || TB.handleMouseInput(BB))
-          };
-          return (0, DB.jsxs)("div", {
-            className: "DocsQteDemo",
-            children: [(0, DB.jsxs)("div", {
-              ref: oB,
-              className: pB()("DocsQteStage", {
-                Playing: "playing" === dB
-              }),
-              tabIndex: "playing" === dB ? 0 : -1,
-              role: "playing" === dB ? "button" : void 0,
-              "aria-label": "playing" === dB ? `${TB} quick time event: click or press Space` : void 0,
-              onPointerDown: BB => {
-                0 === BB.button && mB(!0)
-              },
-              onPointerUp: () => {
-                mB(!1)
-              },
-              onPointerLeave: () => {
-                mB(!1)
-              },
-              onPointerCancel: () => {
-                mB(!1)
-              },
-              onKeyDown: BB => {
-                "playing" !== dB || " " !== BB.key && "Enter" !== BB.key || (BB.preventDefault(), mB(!0))
-              },
-              onKeyUp: BB => {
-                "playing" !== dB || " " !== BB.key && "Enter" !== BB.key || mB(!1)
-              },
-              children: [(0, DB.jsx)("div", {
-                ref: kB,
-                className: "DocsQteScreen",
-                style: {
-                  transform: `scale(${lB})`
-                },
-                children: "playing" === dB && (0, DB.jsx)(cT.c.Provider, {
-                  value: vB,
-                  children: (0, DB.jsx)(IT.e, {
-                    qte: {
-                      type: TB,
-                      parameters: PT[TB]
-                    }
-                  })
-                })
-              }), "playing" !== dB && (0, DB.jsxs)("div", {
-                className: "DocsQteOverlay",
-                children: ["ready" !== dB && (0, DB.jsxs)("div", {
-                  className: pB()("DocsQteResult", "succeeded" === dB ? "Succeeded" : "Failed"),
-                  children: [(0, DB.jsx)(HB, {
-                    name: "succeeded" === dB ? "check" : "cross",
-                    isTinted: !0
-                  }), (0, DB.jsx)("span", {
-                    children: "succeeded" === dB ? "Succeeded: onPlayerFinishQTE gets true" : "Failed: onPlayerFinishQTE gets false"
-                  })]
-                }), (0, DB.jsxs)("button", {
-                  type: "button",
-                  className: "DocsQtePlay",
-                  disabled: !YB,
-                  onClick: () => {
-                    yB("playing")
-                  },
-                  children: [(0, DB.jsx)(HB, {
-                    name: "ready" === dB ? "play" : "replay"
-                  }), (0, DB.jsx)("span", {
-                    children: "ready" === dB ? `Try ${TB}` : "Play again"
-                  })]
-                })]
-              })]
-            }), EB && !aT(EB) && (0, DB.jsxs)("p", {
-              className: "DocsQteCaption",
-              children: ["The ", (0, DB.jsx)("code", {
-                children: EB
-              }), " icon is a Bloxd item, so it shows in game only."]
-            })]
-          })
+          description: {
+            translationKey: `item:${(0,aY.te)(YY)}MobSpawnerBlockDescription`
+          },
+          itemTexture: `${(0,aY.xe)(YY)}_spawner_block_icon`,
+          ttb: 5e3,
+          textureInfo: [`mob_spawner_${DY}_block_side`, "mob_spawner_block_top"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          transTex: !0,
+          harvestType: "rock",
+          drops: null,
+          specialToolDrop: {
+            tool: "Moonstone Pickaxe",
+            drops: rY
+          },
+          particlesIgnoreBlack: !0,
+          onMinedAura: 75,
+          twoDBlockItem: !0
         }
-
-        function gd(BB) {
-          let {
-            level: TB,
-            text: dB,
-            anchor: VB,
-            className: yB
-          } = BB;
-          const lB = `h${Math.min(TB,6)}`;
-          return (0, DB.jsxs)(lB, {
-                id: VB,
-                className: pB()("DocsHeading", yB),
-                children: [(0, DB.jsx)(tT, {
-                      text: dB
-                    }), (0, DB.jsx)("a", {
-                        className: "DocsHeadingAnchor",
-                        href: `#${VB}`,
-                        "aria-label": `Link to ${dB.replace(/`/g,"")}`,children:"#"})]})}function od(BB){let{items:TB,ordered:dB}=BB;const VB=dB?"ol":"ul";return(0,DB.jsx)(VB,{className:"DocsList",children:TB.map(((BB,TB)=>(0,DB.jsxs)("li",{children:[(0,DB.jsx)(tT,{text:BB.text}),BB.children.length>0&&(0,DB.jsx)(od,{items:BB.children,ordered:dB})]},TB)))})}function kd(BB){const TB=BB[0],dB="paragraph"===(null===TB||void 0===TB?void 0:TB.kind)?TB.text.toLowerCase():"";return/^\*\*(warning|important|caution)/.test(dB)?"warning":/^\*\*(tip|prefer)/.test(dB)?"tip":"note"}function Ld(BB){let{block:TB}=BB;switch(TB.kind){case"heading":return(0,DB.jsx)(gd,{level:TB.level,text:TB.text,anchor:TB.anchor});case"paragraph":return(0,DB.jsx)("p",{children:(0,DB.jsx)(tT,{text:TB.text})});case"code":{const BB="ts"===TB.lang?function(BB){const TB=BB.match(/^api\.addQTE\(playerId, \{\s*type: "(\w+)"/);return TB&&Object.hasOwn(PT,TB[1])?TB[1]:null}(TB.code):null;return(0,DB.jsxs)(DB.Fragment,{children:[(0,DB.jsx)(fB,{code:TB.code,lang:TB.lang}),BB&&(0,DB.jsx)(Yd,{type:BB})]})}case"table":return(0,DB.jsx)("div",{className:"DocsTableScroll",children:(0,DB.jsxs)("table",{className:"DocsTable",children:[(0,DB.jsx)("thead",{children:(0,DB.jsx)("tr",{children:TB.header.map(((BB,TB)=>(0,DB.jsx)("th",{children:(0,DB.jsx)(tT,{text:BB})},TB)))})}),(0,DB.jsx)("tbody",{children:TB.rows.map(((BB,TB)=>(0,DB.jsx)("tr",{children:BB.map(((BB,TB)=>(0,DB.jsx)("td",{children:(0,DB.jsx)(tT,{text:BB})},TB)))},TB)))})]})});case"list":return(0,DB.jsx)(od,{items:TB.items,ordered:TB.ordered});case"quote":return(0,DB.jsx)("aside",{className:pB()("DocsCallout",kd(TB.blocks)),children:(0,DB.jsx)(Od,{blocks:TB.blocks})});case"rule":return(0,DB.jsx)("hr",{className:"DocsRule"})}}function Od(BB){let{blocks:TB}=BB;return(0,DB.jsx)(DB.Fragment,{children:TB.map(((BB,TB)=>(0,DB.jsx)(Ld,{block:BB},TB)))})}var Dd=dB(4138),ud=dB(4141);function Hd(BB){return"blocks"===BB||"items"===BB}const Ed=new Map;function vd(BB){let TB=Ed.get(BB);return TB||(TB=function(BB){const TB={entries:[],legend:[],notes:[],examples:[]};let dB=!1;for(const pB of BB.split(/\r?\n/).slice(1)){if(pB.startsWith("#")){const BB=pB.replace(/^# ?/,""),VB=BB.match(/^\s+([A-Z]+)\s+=\s+(\w+)\s+->\s+(.+)$/);VB?TB.legend.push({code:VB[1],meaning:VB[2],usage:VB[3].trim()}):/^Examples:/.test(BB.trim())?dB=!0:dB&&BB.trim()?TB.examples.push(BB.trim()):BB.trim()&&!/^\s/.test(BB)&&TB.notes.push(BB.trim());continue}const BB=pB.trim().match(/^(.+?)(?:\s+\[([A-Z,]+)\])?$/);var VB,yB;BB&&TB.entries.push({name:BB[1],variants:null!==(VB=null===(yB=BB[2])||void 0===yB?void 0:yB.split(","))&&void 0!==VB?VB:[]})}return TB}("blocks"===BB?Dd:ud),Ed.set(BB,TB)),TB}function md(BB){let{className:TB,value:dB,placeholder:VB,label:yB,onChange:pB,count:lB,children:JB}=BB;return(0,DB.jsxs)("div",{className:TB,children:[(0,DB.jsx)(HB,{name:"magnifying-glass"}),(0,DB.jsx)("input",{type:"search",value:dB,placeholder:VB,"aria-label":yB,onChange:BB=>{pB(BB.target.value)}}),JB,lB&&(0,DB.jsxs)("span",{className:"DocsFilterCount",children:[lB.visible," of ",lB.total]})]})}var Nd=dB(946);function td(BB){const TB=BB.trim().match(/^(` {
-                          1,
-                          2
-                        })\ s * ([ ^ `]+?)\s*\1$/);return TB?TB[2]:null}function fd(BB){return"paragraph"===BB.kind&&""===BB.text.trim()}function sd(BB){const TB={name:BB.heading.text,description:[],params:[],returns:null};let dB="description";for(const yB of BB.blocks)if(!fd(yB))if("heading"===yB.kind&&/^Parameters:?$/.test(yB.text))dB="params";else if("heading"===yB.kind&&/^Returns:?$/.test(yB.text))dB="returns",TB.returns={type:"",description:[]};else if("params"!==dB||"table"!==yB.kind){if("returns"===dB&&"paragraph"===yB.kind&&""===TB.returns.type){const BB=td(yB.text);if(null!==BB){TB.returns.type=BB.replaceAll("\\|","|");continue}}"returns"===dB?TB.returns.description.push(yB):TB.description.push(yB)}else for(const[BB,dB,pB]of yB.rows){var VB;TB.params.push({name:BB,type:null!==(VB=td(dB))&&void 0!==VB?VB:dB,description:null!==pB&&void 0!==pB?pB:""})}return TB}const Md=/^\*\*(Type|Default|Example):\*\*\s*(.*)$/;function zd(BB){return BB.filter((BB=>!fd(BB)))}const wd=/^[\w][\w .'&!:()-]*$/,Ud=/^` [ ^ `]+`( ? : [\s, ] * `[^`] + `)*$/;function Fd(BB){var TB;if("code"===BB.kind&&"text"===BB.lang){const TB=BB.code.split("\n").map((BB=>BB.trim())).filter(Boolean);return TB.length>0&&TB.every((BB=>wd.test(BB)))?TB.map((BB=>({name:BB}))):null}return"paragraph"===BB.kind&&Ud.test(BB.text.trim())?[...BB.text.matchAll(/`([ ^ `]+)` / g)].flatMap((BB => BB[1].split(/,\s*/).map((BB => ({
-                              name: BB.trim()
-                            }))))): "table" === BB.kind && null !== (TB = BB.header[0]) && void 0 !== TB && TB.startsWith("Song") ? BB.rows.map((BB => {
-                              let [TB, dB] = BB;
-                              return {
-                                name: TB.replace(/`/g, ""),
-                                caption: dB
-                              }
-                            })) : null
-                          }
-
-                          function Kd(BB) {
-                            const TB = [];
-                            for (const dB of BB) {
-                              const BB = Fd(dB),
-                                VB = TB.at(-1),
-                                yB = "table" === dB.kind;
-                              BB ? "names" === (null === VB || void 0 === VB ? void 0 : VB.kind) && VB.isSongs === yB ? VB.names.push(...BB) : TB.push({
-                                kind: "names",
-                                names: BB,
-                                isSongs: yB
-                              }) : TB.push({
-                                kind: "block",
-                                block: dB
-                              })
-                            }
-                            return TB
-                          }
-                          const rd = {
-                            icons: "icon",
-                            particles: "particle",
-                            sounds: "sound",
-                            skins: "skin",
-                            blocks: "block",
-                            items: "item"
-                          };
-
-                          function Id(BB, TB) {
-                            return `${rd[BB]}-${(0,sB.m)(TB)}`
-                          }
-                          const cd = new WeakMap;
-
-                          function Sd(BB, TB, dB) {
-                            let VB = cd.get(TB);
-                            if (!VB) {
-                              VB = new Map;
-                              const dB = new Set;
-                              for (const yB of (0, sB.n)(TB)) {
-                                const TB = Kd(zd(yB.blocks)).map((TB => {
-                                  if ("block" === TB.kind) return TB;
-                                  return {
-                                    kind: "names",
-                                    names: TB.names.map((TB => {
-                                      var VB, pB;
-                                      const lB = Id(BB, TB.name);
-                                      let JB = lB;
-                                      for (let BB = 2; dB.has(JB); BB++) JB = `${lB}-${BB}`;
-                                      return dB.add(JB), {
-                                        ...TB,
-                                        anchor: JB,
-                                        heading: null !== (VB = null === (pB = yB.heading) || void 0 === pB ? void 0 : pB.text) && void 0 !== VB ? VB : ""
-                                      }
-                                    })),
-                                    isSongs: TB.isSongs
-                                  }
-                                }));
-                                VB.set(yB.blocks, TB)
-                              }
-                              cd.set(TB, VB)
-                            }
-                            const yB = VB.get(dB);
-                            if (!yB) throw new Error("Gallery blocks must be the page's intro or one of its sections");
-                            return yB
-                          }
-                          const Pd = "/textures/docs/skinPreviews",
-                            Qd = [{
-                              heading: "NPC Skins",
-                              prefix: "npc"
-                            }, {
-                              heading: "Poses",
-                              prefix: "pose"
-                            }];
-                          var Rd = dB(3704),
-                            ad = dB(3716);
-
-                          function Zd(BB) {
-                            return Object.hasOwn(Rd.f, BB) ? Rd.f[BB] : null
-                          }
-                          const Xd = {
-                            dir1: [-1, -1, -1],
-                            dir2: [1, 1, 1],
-                            texture: "bubble",
-                            minLifeTime: .2,
-                            maxLifeTime: .6,
-                            minEmitPower: 2,
-                            maxEmitPower: 2,
-                            minSize: .25,
-                            maxSize: .35,
-                            manualEmitCount: 20,
-                            gravity: [0, -10, 0],
-                            colorGradients: [{
-                              timeFraction: 0,
-                              minColor: [60, 60, 150, 1],
-                              maxColor: [200, 200, 255, 1]
-                            }],
-                            velocityGradients: [{
-                              timeFraction: 0,
-                              factor: 1,
-                              factor2: 1
-                            }],
-                            blendMode: ad.e.Standard
-                          };
-
-                          function Wd(BB, TB, dB) {
-                            return TB + (dB - TB) * BB()
-                          }
-
-                          function hd(BB, TB, dB) {
-                            return BB + (TB - BB) * dB
-                          }
-
-                          function Cd(BB) {
-                            return BB.length > 0 && "timeFraction" in BB[0]
-                          }
-
-                          function Gd(BB, TB) {
-                            if (0 === BB.colorGradients.length) return [{
-                              at: 0,
-                              colour: [1, 1, 1, 1]
-                            }];
-                            if (!Cd(BB.colorGradients)) {
-                              const dB = BB.colorGradients,
-                                {
-                                  color: VB
-                                } = dB[Math.floor(TB() * dB.length) % dB.length];
-                              return [{
-                                at: 0,
-                                colour: [VB[0] / 255, VB[1] / 255, VB[2] / 255, 1]
-                              }]
-                            }
-                            return [...BB.colorGradients].sort(((BB, TB) => BB.timeFraction - TB.timeFraction)).map((BB => {
-                              var dB, VB, yB;
-                              const pB = BB.minColor,
-                                lB = null !== (dB = BB.maxColor) && void 0 !== dB ? dB : pB,
-                                JB = TB(),
-                                YB = [hd(pB[0], lB[0], JB) / 255, hd(pB[1], lB[1], JB) / 255, hd(pB[2], lB[2], JB) / 255, hd(null !== (VB = pB[3]) && void 0 !== VB ? VB : 1, null !== (yB = lB[3]) && void 0 !== yB ? yB : 1, JB)];
-                              return {
-                                at: BB.timeFraction,
-                                colour: YB
-                              }
-                            }))
-                          }
-
-                          function qd(BB, TB, dB, VB) {
-                            const yB = Wd(VB, BB.minEmitPower, BB.maxEmitPower),
-                              pB = TB => Wd(VB, Math.min(BB.dir1[TB], BB.dir2[TB]), Math.max(BB.dir1[TB], BB.dir2[TB])) * yB,
-                              lB = [...BB.velocityGradients].sort(((BB, TB) => BB.timeFraction - TB.timeFraction)).map((BB => ({
-                                at: BB.timeFraction,
-                                factor: Wd(VB, BB.factor, BB.factor2)
-                              })));
-                            return {
-                              pos: [Wd(VB, TB[0], dB[0]), Wd(VB, TB[1], dB[1]), Wd(VB, TB[2], dB[2])],
-                              dir: [pB(0), pB(1), pB(2)],
-                              age: 0,
-                              life: Wd(VB, BB.minLifeTime, BB.maxLifeTime),
-                              size: Wd(VB, BB.minSize, BB.maxSize),
-                              colours: Gd(BB, VB),
-                              velocityFactors: lB
-                            }
-                          }
-
-                          function xd(BB, TB, dB, VB) {
-                            if (TB < BB[0].at) return dB(Math.min(1, BB.length - 1));
-                            for (let yB = 0; yB < BB.length - 1; yB++)
-                              if (TB <= BB[yB + 1].at) {
-                                const pB = BB[yB + 1].at - BB[yB].at;
-                                return VB(dB(yB), dB(yB + 1), pB > 0 ? (TB - BB[yB].at) / pB : 1)
-                              } return dB(BB.length - 1)
-                          }
-
-                          function jd(BB) {
-                            return xd(BB.colours, BB.age / BB.life, (TB => BB.colours[TB].colour), ((BB, TB, dB) => [hd(BB[0], TB[0], dB), hd(BB[1], TB[1], dB), hd(BB[2], TB[2], dB), hd(BB[3], TB[3], dB)]))
-                          }
-
-                          function Ad(BB, TB, dB) {
-                            if (BB.age += dB, BB.age >= BB.life) return !1;
-                            const VB = function(BB) {
-                              return 0 === BB.velocityFactors.length ? 1 : xd(BB.velocityFactors, BB.age / BB.life, (TB => BB.velocityFactors[TB].factor), hd)
-                            }(BB) * dB;
-                            for (let pB = 0; pB < 3; pB++) {
-                              var yB;
-                              BB.pos[pB] += BB.dir[pB] * VB, BB.dir[pB] += (null !== (yB = TB[pB]) && void 0 !== yB ? yB : 0) * dB
-                            }
-                            return !0
-                          }
-
-                          function bd(BB) {
-                            return String(Math.round(1e6 * BB) / 1e6)
-                          }
-
-                          function nd(BB) {
-                            return `[${BB.map(bd).join(", ")}]`
-                          }
-
-                          function ed(BB, TB) {
-                            const dB = `${TB}    `;
-                            return `[\n${(Cd(BB)?BB.map((BB=>{const TB=[`${dB}    timeFraction: ${bd(BB.timeFraction)},`,`${dB}    minColor: ${nd(BB.minColor)},`];return BB.maxColor&&TB.push(`${dB}    maxColor: ${nd(BB.maxColor)},`),`${dB}{\n${TB.join("\n")}\n${dB}},`})):BB.map((BB=>`
-                            $ {
-                              dB
-                            } {
-                              color: $ {
-                                nd(BB.color)
-                              }
-                            }, `))).join("\n")}\n${TB}]`
-                          }
-                          const BV = "let [x, y, z] = thisPos\ny += 1\napi.playParticleEffect({\n",
-                            TV = "    pos1: [x, y, z],\n    pos2: [x + 1, y + 1, z + 1],";
-                          const dV = .6;
-
-                          function VV(BB, TB) {
-                            return `${TB?"song":"sound"}:${BB}`
-                          }
-                          let yV = {
-                              track: null,
-                              volume: dV
-                            },
-                            pV = null,
-                            lV = 0,
-                            JV = 0;
-                          const YV = new Set;
-
-                          function gV(BB) {
-                            yV = {
-                              ...yV,
-                              ...BB
-                            }, YV.forEach((BB => {
-                              BB()
-                            }))
-                          }
-
-                          function oV(BB) {
-                            yV.track && gV({
-                              track: {
-                                ...yV.track,
-                                ...BB
-                              }
-                            })
-                          }
-
-                          function kV(BB) {
-                            const [TB, dB] = (0, VB.useState)((() => BB(yV))), yB = (0, VB.useRef)(BB);
-                            return yB.current = BB, (0, VB.useEffect)((() => {
-                              const BB = () => {
-                                dB((() => yB.current(yV)))
-                              };
-                              return YV.add(BB), BB(), () => {
-                                YV.delete(BB)
-                              }
-                            }), []), TB
-                          }
-
-                          function LV() {
-                            lV++;
-                            const BB = pV;
-                            pV = null, null === BB || void 0 === BB || BB.stop()
-                          }
-
-                          function OV(BB, TB) {
-                            let VB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-                            LV();
-                            const yB = lV,
-                              {
-                                track: pB
-                              } = yV,
-                              lB = pB && pB.name === BB && pB.isSong === TB ? pB.duration : 0;
-                            JV = VB, gV({
-                              track: {
-                                name: BB,
-                                isSong: TB,
-                                status: "loading",
-                                duration: lB
-                              }
-                            }), Promise.all([dB.e(201), dB.e(229)]).then((() => dB(38545))).then((dB => {
-                              let {
-                                playDocsSound: pB
-                              } = dB;
-                              yB === lV && (pV = pB(BB, TB, yV.volume, VB, {
-                                onPlay: BB => {
-                                  yB === lV && oV({
-                                    status: "playing",
-                                    duration: BB
-                                  })
-                                },
-                                onEnd: BB => {
-                                  var TB, dB;
-                                  yB === lV && (pV = null, BB ? gV({
-                                    track: null
-                                  }) : (JV = null !== (TB = null === (dB = yV.track) || void 0 === dB ? void 0 : dB.duration) && void 0 !== TB ? TB : 0, oV({
-                                    status: "paused"
-                                  })))
-                                }
-                              }))
-                            })).catch((TB => {
-                              console.error(`Could not play docs sound ${BB}`, TB), yB === lV && gV({
-                                track: null
-                              })
-                            }))
-                          }
-
-                          function DV() {
-                            const {
-                              track: BB
-                            } = yV;
-                            if (!BB) return;
-                            if ("playing" === BB.status && pV) return JV = pV.Dv(), pV.pause(), void oV({
-                              status: "paused"
-                            });
-                            if ("loading" === BB.status) return LV(), void oV({
-                              status: "paused"
-                            });
-                            if (pV) return void pV.resume();
-                            const TB = BB.duration > 0 && JV >= BB.duration - .05;
-                            OV(BB.name, BB.isSong, TB ? 0 : JV)
-                          }
-
-                          function uV() {
-                            var BB;
-                            return pV && "playing" === (null === (BB = yV.track) || void 0 === BB ? void 0 : BB.status) ? pV.Dv() : JV
-                          }
-
-                          function HV(BB) {
-                            var TB;
-                            null === (TB = pV) || void 0 === TB || TB.setVolume(BB), gV({
-                              volume: BB
-                            })
-                          }
-
-                          function EV() {
-                            LV(), JV = 0, gV({
-                              track: null
-                            })
-                          }
-                          const vV = (0, VB.createContext)(null);
-                          let mV = null;
-
-                          function iV() {
-                            const [BB, TB] = (0, VB.useState)(null);
-                            return (0, VB.useEffect)((() => {
-                              let BB = !1;
-                              return mV ??= Promise.all([dB.e(64), dB.e(67), dB.e(66), dB.e(65), dB.e(185), dB.e(90), dB.e(208)]).then((() => dB(38536))), mV.then((dB => {
-                                BB || TB(dB)
-                              }), (BB => {
-                                console.error("Could not load the docs gallery's textures", BB), mV = null
-                              })), () => {
-                                BB = !0
-                              }
-                            }), []), BB
-                          }
-                          const NV = 24,
-                            tV = /^[a-z]+_(\d+(_\d+)?|none)$/;
-
-                          function fV(BB, TB) {
-                            const dB = "skins" === BB ? function(BB, TB) {
-                              const dB = Qd.find((TB => BB.startsWith(TB.heading)));
-                              return dB ? function(BB, TB) {
-                                return `${BB}-${TB}`
-                              }(dB.prefix, TB) : null
-                            }(TB.heading, TB.name) : null;
-                            return null === dB ? null : `${Pd}/${dB}.webp`
-                          }
-
-                          function sV(BB) {
-                            let {
-                              kind: TB,
-                              entry: dB,
-                              assets: yB,
-                              renderedUrl: lB
-                            } = BB;
-                            const {
-                              name: JB
-                            } = dB, [YB, gB] = (0, VB.useState)(!1);
-                            if ("icons" === TB && aT(JB)) return (0, DB.jsx)(Nd.e, {
-                              className: "DocsTileIcon",
-                              name: JB
-                            });
-                            let oB = null;
-                            var kB;
-                            if ("icons" === TB) oB = null !== (kB = null === yB || void 0 === yB ? void 0 : yB.getIngameIconUrl(JB)) && void 0 !== kB ? kB : null;
-                            else if ("particles" === TB) {
-                              var LB, OB, uB;
-                              oB = null !== (LB = null === yB || void 0 === yB ? void 0 : yB.getParticleTextureUrl(null !== (OB = null === (uB = Zd(JB)) || void 0 === uB ? void 0 : uB.texture) && void 0 !== OB ? OB : JB)) && void 0 !== LB ? LB : null
-                            } else "skins" === TB && (oB = null !== lB && void 0 !== lB ? lB : tV.test(JB) ? `/textures/charSkins/previews/${JB}_preview.png` : null);
-                            return !oB || YB ? (0, DB.jsx)(HB, {
-                              className: "DocsTileIcon Placeholder",
-                              name: "skins" === TB ? "person" : "image"
-                            }) : (0, DB.jsx)("img", {
-                              className: pB()("DocsTileImage", {
-                                Pixelated: "skins" !== TB
-                              }),
-                              src: oB,
-                              srcSet: oB === lB ? `${oB} 2x` : void 0,
-                              alt: "",
-                              loading: "lazy",
-                              onError: () => {
-                                console.warn(`Docs gallery: could not load ${oB}`), gB(!0)
-                              }
-                            })
-                          }
-
-                          function MV(BB) {
-                            let {
-                              entry: TB,
-                              isSong: dB
-                            } = BB;
-                            const VB = kV((BB => {
-                                let {
-                                  track: VB
-                                } = BB;
-                                return (null === VB || void 0 === VB ? void 0 : VB.name) === TB.name && VB.isSong === dB ? VB.status : null
-                              })),
-                              yB = null !== VB && "paused" !== VB;
-                            return (0, DB.jsxs)("button", {
-                              type: "button",
-                              id: TB.anchor,
-                              className: pB()("DocsSoundTile", {
-                                Playing: yB
-                              }),
-                              "data-docs-track": VV(TB.name, dB),
-                              "aria-label": yB ? `Pause ${TB.name}` : `Play ${TB.name}`,
-                              onClick: () => {
-                                null !== VB ? DV() : OV(TB.name, dB)
-                              },
-                              children: [(0, DB.jsx)("span", {
-                                className: "DocsSoundPlay",
-                                children: (0, DB.jsx)(HB, {
-                                  name: yB ? "pause" : "play"
-                                })
-                              }), (0, DB.jsx)("code", {
-                                className: "DocsSoundName",
-                                children: TB.name
-                              }), TB.caption && (0, DB.jsx)("span", {
-                                className: "DocsSoundCaption",
-                                children: TB.caption
-                              })]
-                            })
-                          }
-
-                          function zV(BB) {
-                            let {
-                              kind: TB,
-                              names: dB,
-                              isSongs: yB
-                            } = BB;
-                            const lB = iV(),
-                              [JB, YB] = vB(),
-                              gB = !1 === (null === JB || void 0 === JB ? void 0 : JB.failed) ? JB.text : null,
-                              oB = (0, VB.useContext)(vV),
-                              [kB, LB] = (0, VB.useState)(""),
-                              OB = kB.trim().toLowerCase(),
-                              uB = OB ? dB.filter((BB => BB.name.toLowerCase().includes(OB))) : dB;
-                            return (0, DB.jsxs)("div", {
-                              className: "DocsGallery",
-                              children: [dB.length > NV && (0, DB.jsx)(md, {
-                                className: "DocsGalleryFilter",
-                                value: kB,
-                                placeholder: `Filter ${dB.length} names\u2026`,
-                                label: "Filter names",
-                                onChange: LB,
-                                count: OB ? {
-                                  visible: uB.length,
-                                  total: dB.length
-                                } : null
-                              }), (0, DB.jsx)("div", {
-                                className: pB()("DocsGalleryGrid", `Kind-${TB}`, {
-                                  Songs: yB
-                                }),
-                                children: uB.map((BB => {
-                                  if ("sounds" === TB) return (0, DB.jsx)(MV, {
-                                    entry: BB,
-                                    isSong: yB
-                                  }, BB.anchor);
-                                  if (oB && "particles" === TB && Zd(BB.name)) return (0, DB.jsxs)("button", {
-                                    type: "button",
-                                    id: BB.anchor,
-                                    className: pB()("DocsTile Previewable", {
-                                      Copied: gB === BB.name
-                                    }),
-                                    title: `Play "${BB.name}" in the playground and copy its name`,
-                                    onClick: () => {
-                                      oB(BB.name), YB(BB.name)
-                                    },
-                                    children: [(0, DB.jsxs)("span", {
-                                      className: "DocsTilePreview",
-                                      children: [(0, DB.jsx)(sV, {
-                                        kind: TB,
-                                        entry: BB,
-                                        assets: lB,
-                                        renderedUrl: null
-                                      }), (0, DB.jsx)("span", {
-                                        className: "DocsTilePlayBadge",
-                                        children: (0, DB.jsx)(HB, {
-                                          name: "play"
-                                        })
-                                      })]
-                                    }), (0, DB.jsx)("span", {
-                                      className: "DocsTileName",
-                                      children: gB === BB.name ? "Copied!" : BB.name
-                                    })]
-                                  }, BB.anchor);
-                                  const dB = fV(TB, BB);
-                                  return (0, DB.jsxs)("button", {
-                                    type: "button",
-                                    id: BB.anchor,
-                                    className: pB()("DocsTile", {
-                                      Copied: gB === BB.name
-                                    }),
-                                    title: `Copy "${BB.name}"`,
-                                    onClick: () => {
-                                      YB(BB.name)
-                                    },
-                                    children: [(0, DB.jsx)("span", {
-                                      className: pB()("DocsTilePreview", {
-                                        Rendered: null !== dB
-                                      }),
-                                      children: (0, DB.jsx)(sV, {
-                                        kind: TB,
-                                        entry: BB,
-                                        assets: lB,
-                                        renderedUrl: dB
-                                      })
-                                    }), (0, DB.jsx)("span", {
-                                      className: "DocsTileName",
-                                      children: gB === BB.name ? "Copied!" : BB.name
-                                    })]
-                                  }, BB.anchor)
-                                }))
-                              })]
-                            })
-                          }
-
-                          function wV(BB) {
-                            let {
-                              kind: TB,
-                              content: dB,
-                              blocks: VB
-                            } = BB;
-                            return (0, DB.jsx)(DB.Fragment, {
-                              children: Sd(TB, dB, VB).map(((BB, dB) => "block" === BB.kind ? (0, DB.jsx)(Ld, {
-                                block: BB.block
-                              }, dB) : (0, DB.jsx)(zV, {
-                                kind: TB,
-                                names: BB.names,
-                                isSongs: BB.isSongs
-                              }, dB)))
-                            })
-                          }
-                          const UV = [{
-                            pageId: "readme"
-                          }, {
-                            pageId: "snippets",
-                            countNoun: "snippets"
-                          }, {
-                            pageId: "apiReference",
-                            countNoun: "methods"
-                          }, {
-                            pageId: "callbacks",
-                            countNoun: "callbacks"
-                          }, {
-                            pageId: "howTo"
-                          }, {
-                            pageId: "clientOptions",
-                            countNoun: "options"
-                          }];
-
-                          function FV(BB) {
-                            let {
-                              cards: TB = UV,
-                              label: dB = "Start here"
-                            } = BB;
-                            const yB = (0, VB.useContext)(OT);
-                            return (0, DB.jsx)("nav", {
-                              className: "DocsLandingCards",
-                              "aria-label": dB,
-                              children: TB.map((BB => {
-                                let {
-                                  pageId: TB,
-                                  countNoun: dB
-                                } = BB;
-                                const VB = RB(TB);
-                                return (0, DB.jsxs)(lB.d, {
-                                  to: CB(yB, VB),
-                                  className: "DocsLandingCard",
-                                  children: [(0, DB.jsx)("span", {
-                                    className: "DocsLandingCardIcon",
-                                    children: (0, DB.jsx)(HB, {
-                                      name: VB.icon
-                                    })
-                                  }), (0, DB.jsx)("span", {
-                                    className: "DocsLandingCardTitle",
-                                    children: VB.title
-                                  }), (0, DB.jsx)("span", {
-                                    className: "DocsLandingCardSummary",
-                                    children: VB.summary
-                                  }), dB && (0, DB.jsxs)("span", {
-                                    className: "DocsLandingCardCount",
-                                    children: [ZB(VB).sections.length, " ", dB]
-                                  })]
-                                }, TB)
-                              }))
-                            })
-                          }
-                          const KV = 240;
-
-                          function rV(BB) {
-                            let {
-                              faces: TB
-                            } = BB;
-                            return (0, DB.jsxs)("span", {
-                              className: "DocsCube",
-                              "aria-hidden": "true",
-                              children: [(0, DB.jsx)("span", {
-                                className: "DocsCubeFace Top",
-                                style: {
-                                  backgroundImage: `url("${TB.top}")`
-                                }
-                              }), (0, DB.jsx)("span", {
-                                className: "DocsCubeFace Left",
-                                style: {
-                                  backgroundImage: `url("${TB.left}")`
-                                }
-                              }), (0, DB.jsx)("span", {
-                                className: "DocsCubeFace Right",
-                                style: {
-                                  backgroundImage: `url("${TB.right}")`
-                                }
-                              })]
-                            })
-                          }
-
-                          function IV(BB) {
-                            let {
-                              src: TB
-                            } = BB;
-                            const [dB, yB] = (0, VB.useState)(!1);
-                            return dB ? null : (0, DB.jsx)("img", {
-                              src: TB,
-                              alt: "",
-                              loading: "lazy",
-                              onError: () => {
-                                console.warn(`Docs catalogue: could not load ${TB}`), yB(!0)
-                              }
-                            })
-                          }
-
-                          function cV(BB) {
-                            let {
-                              kind: TB
-                            } = BB;
-                            const dB = vd(TB),
-                              yB = iV(),
-                              lB = (0, JB.o)(),
-                              [YB, gB] = (0, VB.useState)(""),
-                              [oB, kB] = (0, VB.useState)(null),
-                              [LB, OB] = (0, VB.useState)(KV),
-                              [uB, EB] = (0, VB.useState)(null),
-                              vB = (0, VB.useRef)(null),
-                              iB = YB.trim().toLowerCase();
-                            (0, VB.useEffect)((() => {
-                              const BB = (0, sB.k)(lB.hash),
-                                VB = dB.entries.find((dB => Id(TB, dB.name) === BB));
-                              if (VB) vB.current = VB.name, gB(VB.name), kB(null), EB(VB.name);
-                              else if (null !== vB.current) {
-                                const BB = vB.current;
-                                vB.current = null, gB((TB => TB === BB ? "" : TB)), EB(null)
-                              }
-                            }), [dB, TB, lB.hash, lB.key]), (0, VB.useEffect)((() => {
-                              var BB;
-                              null !== uB && (null === (BB = document.getElementById(Id(TB, uB))) || void 0 === BB || BB.scrollIntoView({
-                                block: "center"
-                              }))
-                            }), [TB, uB]);
-                            const NB = dB.entries.filter((BB => (!iB || BB.name.toLowerCase().includes(iB)) && (!oB || BB.variants.includes(oB))));
-                            return (0, DB.jsxs)("div", {
-                              className: "DocsCatalogue",
-                              children: [dB.notes.length > 0 && (0, DB.jsx)("div", {
-                                className: "DocsProse",
-                                children: dB.notes.map((BB => (0, DB.jsx)("p", {
-                                  children: BB
-                                }, BB)))
-                              }), dB.legend.length > 0 && (0, DB.jsx)("div", {
-                                className: "DocsTableScroll",
-                                children: (0, DB.jsxs)("table", {
-                                  className: "DocsTable DocsVariantLegend",
-                                  children: [(0, DB.jsx)("thead", {
-                                    children: (0, DB.jsxs)("tr", {
-                                      children: [(0, DB.jsx)("th", {
-                                        children: "Code"
-                                      }), (0, DB.jsx)("th", {
-                                        children: "Variant"
-                                      }), (0, DB.jsx)("th", {
-                                        children: "Name to use"
-                                      })]
-                                    })
-                                  }), (0, DB.jsx)("tbody", {
-                                    children: dB.legend.map((BB => (0, DB.jsxs)("tr", {
-                                      children: [(0, DB.jsx)("td", {
-                                        children: (0, DB.jsx)("button", {
-                                          type: "button",
-                                          className: pB()("DocsVariantChip", {
-                                            Active: oB === BB.code
-                                          }),
-                                          "aria-pressed": oB === BB.code,
-                                          title: `Show only ${TB} with ${BB.meaning} variants`,
-                                          onClick: () => {
-                                            kB(oB === BB.code ? null : BB.code)
-                                          },
-                                          children: BB.code
-                                        })
-                                      }), (0, DB.jsx)("td", {
-                                        children: BB.meaning
-                                      }), (0, DB.jsx)("td", {
-                                        children: (0, DB.jsx)("code", {
-                                          className: "DocsInlineCode",
-                                          children: BB.usage
-                                        })
-                                      })]
-                                    }, BB.code)))
-                                  })]
-                                })
-                              }), dB.examples.length > 0 && (0, DB.jsx)(fB, {
-                                lang: "text",
-                                code: dB.examples.join("\n")
-                              }), (0, DB.jsx)(md, {
-                                className: "DocsFilterBar",
-                                value: YB,
-                                placeholder: `Search ${dB.entries.length} ${TB}\u2026`,
-                                label: `Search ${TB}`,
-                                onChange: BB => {
-                                  gB(BB), OB(KV)
-                                },
-                                count: iB || oB ? {
-                                  visible: NB.length,
-                                  total: dB.entries.length
-                                } : null,
-                                children: oB && (0, DB.jsxs)("button", {
-                                  type: "button",
-                                  className: "DocsVariantChip Active",
-                                  onClick: () => {
-                                    kB(null)
-                                  },
-                                  children: [oB, " ", (0, DB.jsx)(HB, {
-                                    name: "cross"
-                                  })]
-                                })
-                              }), (0, DB.jsx)("div", {
-                                className: "DocsCatalogueGrid",
-                                children: NB.slice(0, LB).map((BB => {
-                                  const dB = "blocks" === TB ? null === yB || void 0 === yB ? void 0 : yB.getBlockFaces(BB.name) : null,
-                                    VB = yB && !dB ? yB.getItemTextureUrl(BB.name) : null;
-                                  return (0, DB.jsxs)("div", {
-                                    id: Id(TB, BB.name),
-                                    className: pB()("DocsCatalogueTile", {
-                                      Linked: BB.name === uB
-                                    }),
-                                    children: [(0, DB.jsxs)("span", {
-                                      className: "DocsCatalogueTexture",
-                                      children: [dB && (0, DB.jsx)(rV, {
-                                        faces: dB
-                                      }), VB && (0, DB.jsx)(IV, {
-                                        src: VB
-                                      })]
-                                    }), (0, DB.jsx)("span", {
-                                      className: "DocsCatalogueName",
-                                      children: BB.name
-                                    }), BB.variants.length > 0 && (0, DB.jsx)("span", {
-                                      className: "DocsCatalogueVariants",
-                                      children: BB.variants.map((BB => (0, DB.jsx)("span", {
-                                        children: BB
-                                      }, BB)))
-                                    }), (0, DB.jsx)(mB, {
-                                      text: BB.name,
-                                      className: "DocsCatalogueCopy"
-                                    })]
-                                  }, BB.name)
-                                }))
-                              }), NB.length > LB && (0, DB.jsxs)("button", {
-                                type: "button",
-                                className: "DocsShowMore",
-                                onClick: () => {
-                                  OB(NB.length)
-                                },
-                                children: ["Show all ", NB.length]
-                              }), 0 === NB.length && (0, DB.jsxs)("p", {
-                                className: "DocsEmpty",
-                                children: ["No ", TB, " match."]
-                              })]
-                            })
-                          }
-                          var SV = dB(4218),
-                            PV = dB(1477);
-                          const QV = .95 * SV.b;
-
-                          function RV(BB) {
-                            return /^\s*```/.test(BB)
-                          }
-
-                          function aV(BB, TB) {
-                            const dB = [
-                              []
-                            ];
-                            let VB = !1;
-                            for (const yB of BB.split("\n")) !VB && TB(yB) && dB.at(-1).length > 0 && dB.push([]), RV(yB) && (VB = !VB), dB.at(-1).push(yB);
-                            return dB.map((BB => BB.join("\n").trim())).filter(Boolean)
-                          }
-
-                          function ZV(BB, TB) {
-                            const dB = `${"#".repeat(TB)} `,
-                              VB = [];
-                            let yB = !1;
-                            for (const pB of BB.split("\n")) RV(pB) ? yB = !yB : !yB && pB.startsWith(dB) && VB.push(pB.slice(dB.length).trim());
-                            return VB
-                          }
-
-                          function XV(BB) {
-                            return BB.markdown.replace(/^\s*# .*\n/, "").trim()
-                          }
-                          class WV {
-                            constructor(BB, TB) {
-                              this.origin = TB, this.pages = void 0, this.partPaths = new Map;
-                              const dB = BB.map((BB => {
-                                const TB = TB => this.resolveLinks(BB, TB).length,
-                                  dB = function(BB, TB) {
-                                    const dB = BB.map((BB => TB(BB.markdown) + 2)),
-                                      VB = dB.reduce(((BB, TB) => BB + TB), 0),
-                                      yB = VB / Math.ceil(VB / QV),
-                                      pB = [];
-                                    let lB = 0;
-                                    return BB.forEach(((BB, TB) => {
-                                      const VB = dB[TB];
-                                      (0 === pB.length || lB + VB > QV || lB + VB / 2 > yB) && (pB.push([]), lB = 0), pB.at(-1).push(BB), lB += VB
-                                    })), pB
-                                  }(function(BB, TB) {
-                                    return aV(BB, (BB => BB.startsWith("## "))).flatMap((BB => {
-                                      var dB;
-                                      const VB = null !== (dB = ZV(BB, 2)[0]) && void 0 !== dB ? dB : "";
-                                      if (TB(BB) <= QV) return [{
-                                        markdown: BB,
-                                        section: VB
-                                      }];
-                                      let yB = !1,
-                                        pB = "";
-                                      return aV(BB, (BB => {
-                                        const TB = yB && "" !== BB.trim();
-                                        return yB = "" === BB.trim(), TB
-                                      })).map((BB => {
-                                        var TB;
-                                        const dB = ZV(BB, 3),
-                                          yB = BB.startsWith("### ") ? dB[0] : pB;
-                                        return pB = null !== (TB = dB.at(-1)) && void 0 !== TB ? TB : pB, {
-                                          markdown: BB,
-                                          section: VB || yB
-                                        }
-                                      }))
-                                    }))
-                                  }(XV(BB), TB), TB);
-                                return {
-                                  page: BB,
-                                  groups: dB.length > 1 ? dB : []
-                                }
-                              }));
-                              for (const {
-                                  page: VB,
-                                  groups: yB
-                                }
-                                of dB) yB.forEach(((BB, TB) => {
-                                const dB = (0, SV.r)(VB.slug, TB);
-                                for (const yB of BB.flatMap((BB => [...ZV(BB.markdown, 2), ...ZV(BB.markdown, 3)]))) {
-                                  const BB = `${VB.id}#${(0,sB.m)(yB)}`;
-                                  this.partPaths.has(BB) || this.partPaths.set(BB, dB)
-                                }
-                              }));
-                              this.pages = dB.map((BB => {
-                                let {
-                                  page: TB,
-                                  groups: dB
-                                } = BB;
-                                return {
-                                  page: TB,
-                                  path: (0, SV.q)(TB.slug),
-                                  markdown: `# ${TB.title}\n\n${this.resolveLinks(TB,XV(TB))}\n`,
-                                  parts: dB.map(((BB, VB) => this.renderPart(TB, BB, VB, dB.length)))
-                                }
-                              }))
-                            }
-                            url(BB) {
-                              return `${this.origin}${BB}`
-                            }
-                            getPage(BB) {
-                              return this.pages.find((TB => TB.page.id === BB))
-                            }
-                            oversizedFiles() {
-                              return this.pages.flatMap((BB => (BB.parts.length > 0 ? BB.parts : [{
-                                path: BB.path,
-                                label: "",
-                                markdown: BB.markdown
-                              }]).filter((BB => BB.markdown.length > SV.b))))
-                            }
-                            markdownUrl(BB, TB) {
-                              const dB = TB && this.partPaths.get(`${BB.id}#${TB}`) || (0, SV.q)(BB.slug);
-                              return this.url(TB ? `${dB}#${TB}` : dB)
-                            }
-                            resolveLinks(BB, TB) {
-                              return TB.replace(/\]\((#[^)]+)\)/g, ((TB, dB) => {
-                                var VB;
-                                const yB = null !== (VB = WB(dB)) && void 0 !== VB ? VB : this.samePageTarget(BB, dB);
-                                return yB ? `](${this.markdownUrl(yB.page,yB.anchor)})` : TB
-                              }))
-                            }
-                            samePageTarget(BB, TB) {
-                              const dB = (0, sB.m)(TB.slice(1));
-                              return XB(BB, dB) ? {
-                                page: BB,
-                                anchor: dB
-                              } : null
-                            }
-                            renderPart(BB, TB, dB, VB) {
-                              const yB = function(BB) {
-                                  const TB = BB.map((BB => BB.section)).filter(Boolean);
-                                  if (0 === TB.length) return "";
-                                  const dB = TB[0],
-                                    VB = TB.at(-1);
-                                  return dB === VB ? dB : `${dB} to ${VB}`
-                                }(TB),
-                                pB = TB.map((BB => BB.markdown)).join("\n\n"),
-                                lB = yB ? `It covers ${yB}. ` : "",
-                                JB = `Part ${dB+1} of ${VB} of [${BB.title}](${this.url((0,SV.q)(BB.slug))}). ${lB}[llms.txt](${this.url(SV.g)}) lists every part.`;
-                              return {
-                                path: (0, SV.r)(BB.slug, dB),
-                                label: yB,
-                                markdown: `# ${BB.title}, part ${dB+1} of ${VB}\n\n${JB}\n\n${this.resolveLinks(BB,pB)}\n`
-                              }
-                            }
-                            llmsTxt(BB) {
-                              const TB = ["# Bloxd Code API", "", "> JavaScript that runs inside Bloxd, in code blocks, boards and World Code: from a block that launches players into the sky to a whole custom game. Code calls methods on the `api` object and defines callbacks that react to game events.", "", `Each link is a page of the docs as Markdown. A page longer than about ${hV(SV.b)} tokens is also split into parts, listed under it, so that each fits a small context window. People read the same docs at ${this.url("/docs")}.`];
-                              for (const dB of QB) {
-                                TB.push("", `## ${dB.title}`, "");
-                                for (const BB of dB.pageIds) {
-                                  const dB = this.getPage(BB),
-                                    {
-                                      page: VB,
-                                      parts: yB
-                                    } = dB,
-                                    pB = `About ${hV(dB.markdown.length)} tokens${yB.length>0?`, in ${yB.length} parts:`:"."}`;
-                                  TB.push(`- [${VB.title}](${this.url(dB.path)}): ${VB.summary} ${pB}`), yB.forEach(((BB, dB) => {
-                                    TB.push(`  - [Part ${dB+1}${BB.label?`: ${BB.label}`:""}](${this.url(BB.path)})`)
-                                  }))
-                                }
-                              }
-                              return TB.push("", "## Optional", "", `- [Every page in one file](${this.url(SV.e)}): About ${hV(BB.length)} tokens, for a model with a large context window.`, ""), TB.join("\n")
-                            }
-                            llmsFullTxt() {
-                              return QB.flatMap((BB => BB.pageIds.map((BB => this.getPage(BB).markdown)))).join("\n---\n\n")
-                            }
-                            files() {
-                              const BB = this.llmsFullTxt(),
-                                TB = this.llmsTxt(BB),
-                                dB = new Map([
-                                  [SV.n, TB],
-                                  [SV.g, TB],
-                                  [SV.e, BB]
-                                ]);
-                              for (const VB of this.pages) {
-                                dB.set(VB.path, VB.markdown);
-                                for (const BB of VB.parts) dB.set(BB.path, BB.markdown)
-                              }
-                              return dB
-                            }
-                          }
-
-                          function hV(BB) {
-                            return `${Math.max(1,Math.round(BB/4e3))}K`
-                          }
-                          let CV = null;
-
-                          function GV() {
-                            return CV ??= new WV(PB, PV.c), CV
-                          }
-                          const qV = [{
-                            name: "ChatGPT",
-                            url: "https://chatgpt.com/?hints=search&q="
-                          }, {
-                            name: "Claude",
-                            url: "https://claude.ai/new?q="
-                          }];
-
-                          function xV(BB) {
-                            return GV().getPage(BB.id).parts.length > 0 ? `Read ${SV.k}, then the parts of the Bloxd Code API's ${BB.title} page it lists, so I can ask questions about it.` : `Read ${PV.c}${(0,SV.q)(BB.slug)} so I can ask questions about it. ${SV.k} lists every page of the Bloxd Code API docs.`
-                          }
-
-                          function jV(BB) {
-                            let {
-                              page: TB
-                            } = BB;
-                            const [dB, VB] = vB();
-                            return (0, DB.jsxs)("div", {
-                              className: "DocsPageAgentActions",
-                              children: [(0, DB.jsxs)("button", {
-                                type: "button",
-                                className: "DocsPageAgentAction",
-                                onClick: () => {
-                                  VB(GV().getPage(TB.id).markdown)
-                                },
-                                children: [(0, DB.jsx)(HB, {
-                                  name: !1 === (null === dB || void 0 === dB ? void 0 : dB.failed) ? "check" : "copy"
-                                }), (0, DB.jsx)("span", {
-                                  children: dB ? dB.failed ? "Copy failed" : "Copied" : "Copy page"
-                                })]
-                              }), qV.map((BB => (0, DB.jsxs)("a", {
-                                className: "DocsPageAgentAction",
-                                href: `${BB.url}${encodeURIComponent(xV(TB))}`,
-                                target: "_blank",
-                                rel: "noreferrer",
-                                children: [(0, DB.jsx)(HB, {
-                                  name: "external-link"
-                                }), (0, DB.jsxs)("span", {
-                                  children: ["Open in ", BB.name]
-                                })]
-                              }, BB.name)))]
-                            })
-                          }
-
-                          function AV(BB) {
-                            return `#${[0,1,2].map((TB=>Math.round(Math.min(255,Math.max(0,BB[TB]))).toString(16).padStart(2,"0"))).join("")}`
-                          }
-
-                          function bV(BB) {
-                            return [parseInt(BB.slice(1, 3), 16), parseInt(BB.slice(3, 5), 16), parseInt(BB.slice(5, 7), 16)]
-                          }
-
-                          function nV(BB) {
-                            let {
-                              label: TB,
-                              min: dB,
-                              max: VB,
-                              step: yB,
-                              low: pB,
-                              high: lB,
-                              onChange: JB
-                            } = BB;
-                            return (0, DB.jsxs)("div", {
-                              className: "DocsControl",
-                              children: [(0, DB.jsxs)("div", {
-                                className: "DocsControlLabel",
-                                children: [(0, DB.jsx)("span", {
-                                  children: TB
-                                }), (0, DB.jsx)("span", {
-                                  className: "DocsControlValue",
-                                  children: pB === lB ? pB : `${pB}\u2013${lB}`
-                                })]
-                              }), (0, DB.jsxs)("div", {
-                                className: "DocsParticleRange",
-                                children: [(0, DB.jsx)("input", {
-                                  type: "range",
-                                  min: dB,
-                                  max: VB,
-                                  step: yB,
-                                  value: Math.min(VB, pB),
-                                  "aria-label": `Minimum ${TB.toLowerCase()}`,
-                                  onChange: BB => {
-                                    const TB = Number(BB.target.value);
-                                    JB(TB, Math.max(TB, lB))
-                                  }
-                                }), (0, DB.jsx)("input", {
-                                  type: "range",
-                                  min: dB,
-                                  max: VB,
-                                  step: yB,
-                                  value: Math.min(VB, lB),
-                                  "aria-label": `Maximum ${TB.toLowerCase()}`,
-                                  onChange: BB => {
-                                    const TB = Number(BB.target.value);
-                                    JB(Math.min(TB, pB), TB)
-                                  }
-                                })]
-                              })]
-                            })
-                          }
-
-                          function eV(BB) {
-                            let {
-                              label: TB,
-                              min: dB,
-                              max: VB,
-                              step: yB,
-                              value: pB,
-                              onChange: lB,
-                              format: JB = String
-                            } = BB;
-                            return (0, DB.jsxs)("div", {
-                              className: "DocsControl",
-                              children: [(0, DB.jsxs)("div", {
-                                className: "DocsControlLabel",
-                                children: [(0, DB.jsx)("span", {
-                                  children: TB
-                                }), (0, DB.jsx)("span", {
-                                  className: "DocsControlValue",
-                                  children: JB(pB)
-                                })]
-                              }), (0, DB.jsx)("input", {
-                                type: "range",
-                                min: dB,
-                                max: VB,
-                                step: yB,
-                                value: Math.min(VB, Math.max(dB, pB)),
-                                "aria-label": TB,
-                                onChange: BB => {
-                                  lB(Number(BB.target.value))
-                                }
-                              })]
-                            })
-                          }
-
-                          function By(BB) {
-                            let {
-                              opts: TB,
-                              onChange: dB
-                            } = BB;
-                            const VB = TB.colorGradients;
-                            if (!Cd(VB)) return (0, DB.jsxs)("div", {
-                              className: "DocsControl",
-                              children: [(0, DB.jsx)("div", {
-                                className: "DocsControlLabel",
-                                children: (0, DB.jsx)("span", {
-                                  children: "Colours, one per particle"
-                                })
-                              }), (0, DB.jsx)("div", {
-                                className: "DocsParticleSwatches",
-                                children: VB.map(((BB, TB) => (0, DB.jsx)("input", {
-                                  type: "color",
-                                  value: AV(BB.color),
-                                  "aria-label": `Colour ${TB+1}`,
-                                  onChange: BB => {
-                                    const yB = [...VB];
-                                    yB[TB] = {
-                                      color: bV(BB.target.value)
-                                    }, dB(yB)
-                                  }
-                                }, TB)))
-                              })]
-                            });
-                            const yB = (BB, TB) => {
-                              const yB = [...VB];
-                              yB[BB] = TB, dB(yB)
-                            };
-                            return (0, DB.jsxs)("div", {
-                              className: "DocsControl",
-                              children: [(0, DB.jsxs)("div", {
-                                className: "DocsControlLabel",
-                                children: [(0, DB.jsx)("span", {
-                                  children: "Colour over lifetime"
-                                }), (0, DB.jsx)("span", {
-                                  className: "DocsControlValue",
-                                  children: "min \xb7 max"
-                                })]
-                              }), VB.map(((BB, TB) => {
-                                var dB;
-                                const VB = null !== (dB = BB.maxColor) && void 0 !== dB ? dB : BB.minColor;
-                                return (0, DB.jsxs)("div", {
-                                  className: "DocsParticleStop",
-                                  children: [(0, DB.jsxs)("span", {
-                                    className: "DocsParticleStopTime",
-                                    children: [Math.round(100 * BB.timeFraction), "%"]
-                                  }), (0, DB.jsx)("span", {
-                                    className: "DocsParticleStopBar",
-                                    style: {
-                                      background: `linear-gradient(90deg, ${AV(BB.minColor)}, ${AV(VB)})`
-                                    }
-                                  }), (0, DB.jsx)("input", {
-                                    type: "color",
-                                    value: AV(BB.minColor),
-                                    "aria-label": `Minimum colour at ${Math.round(100*BB.timeFraction)}%`,
-                                    onChange: dB => {
-                                      yB(TB, {
-                                        ...BB,
-                                        minColor: [...bV(dB.target.value), BB.minColor[3]]
-                                      })
-                                    }
-                                  }), (0, DB.jsx)("input", {
-                                    type: "color",
-                                    value: AV(VB),
-                                    "aria-label": `Maximum colour at ${Math.round(100*BB.timeFraction)}%`,
-                                    onChange: dB => {
-                                      yB(TB, {
-                                        ...BB,
-                                        maxColor: [...bV(dB.target.value), VB[3]]
-                                      })
-                                    }
-                                  })]
-                                }, TB)
-                              }))]
-                            })
-                          }
-                          const Ty = [-.5, -.5, -.5],
-                            dy = [.5, .5, .5],
-                            Vy = [0, 1, 2, 3, 4, 5, 6, 7].map((BB => [1 & BB ? dy[0] : Ty[0], 2 & BB ? dy[1] : Ty[1], 4 & BB ? dy[2] : Ty[2]]));class yy {
-                            constructor() {
-                              this.tints = new WeakMap
-                            }
-                            get(BB, TB, dB, VB) {
-                              const yB = Math.round(31 * TB),
-                                pB = Math.round(31 * dB),
-                                lB = Math.round(31 * VB),
-                                JB = `${yB}|${pB}|${lB}`;
-                              let YB = this.tints.get(BB);
-                              (!YB || YB.size > 2e3) && (YB = new Map, this.tints.set(BB, YB));
-                              let gB = YB.get(JB);
-                              if (gB) return gB;
-                              gB = document.createElement("canvas"), gB.width = BB.naturalWidth || 16, gB.height = BB.naturalHeight || 16;
-                              const oB = gB.getContext("2d");
-                              return oB ? (oB.imageSmoothingEnabled = !1, oB.drawImage(BB, 0, 0, gB.width, gB.height), oB.globalCompositeOperation = "multiply", oB.fillStyle = `rgb(${yB/31*255}, ${pB/31*255}, ${lB/31*255})`, oB.fillRect(0, 0, gB.width, gB.height), oB.globalCompositeOperation = "destination-in", oB.drawImage(BB, 0, 0, gB.width, gB.height)) : console.warn("Particle preview: no 2D canvas context to tint a texture with"), YB.set(JB, gB), gB
-                            }
-                          }
-
-                          function py(BB) {
-                            let {
-                              opts: TB,
-                              textureUrl: dB,
-                              burst: yB,
-                              paused: pB
-                            } = BB;
-                            const lB = (0, VB.useRef)(null),
-                              JB = (0, VB.useRef)(TB);
-                            JB.current = TB;
-                            const YB = (0, VB.useRef)(pB);
-                            YB.current = pB;
-                            const gB = (0, VB.useRef)(null),
-                              oB = (0, VB.useRef)(null),
-                              kB = (0, VB.useMemo)((() => Math.min(16, Math.max(1.6, 1.05 * function(BB) {
-                                let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
-                                const dB = [-.5, -.5, -.5],
-                                  VB = [.5, .5, .5];
-                                let yB = .5;
-                                for (let pB = 0; pB < 40; pB++) {
-                                  const pB = qd(BB, dB, VB, TB),
-                                    lB = Math.max(pB.life / 30, .001);
-                                  for (; Ad(pB, BB.gravity, lB);) yB = Math.max(yB, Math.hypot(pB.pos[0], pB.pos[1], pB.pos[2]) + pB.size / 2)
-                                }
-                                return yB
-                              }(TB)))), [TB]),
-                              LB = (0, VB.useRef)(kB);
-                            return LB.current = kB, (0, VB.useEffect)((() => {
-                              if (gB.current = null, !dB) return;
-                              const BB = new Image;
-                              let TB = !1;
-                              return BB.onload = () => {
-                                TB || (gB.current = BB)
-                              }, BB.onerror = () => {
-                                console.warn(`Particle preview: could not load the texture ${dB}`)
-                              }, BB.src = dB, () => {
-                                TB = !0
-                              }
-                            }), [dB]), (0, VB.useEffect)((() => {
-                              var BB;
-                              null === (BB = oB.current) || void 0 === BB || BB.call(oB)
-                            }), [TB, yB]), (0, VB.useEffect)((() => {
-                              const BB = lB.current,
-                                TB = null === BB || void 0 === BB ? void 0 : BB.getContext("2d");
-                              if (!BB || !TB) return void console.warn("Particle preview: no 2D canvas context to draw on");
-                              const dB = new yy;
-                              let VB = [],
-                                yB = 0,
-                                pB = -.7,
-                                kB = LB.current,
-                                OB = performance.now(),
-                                DB = 0,
-                                uB = !0,
-                                HB = null;
-                              const EB = () => {
-                                const BB = JB.current,
-                                  TB = Math.min(400, Math.max(0, Math.ceil(BB.manualEmitCount)));
-                                VB = [];
-                                for (let dB = 0; dB < TB; dB++) VB.push(qd(BB, Ty, dy, Math.random));
-                                yB = 0
-                              };
-                              oB.current = EB, EB();
-                              const vB = lB => {
-                                DB = requestAnimationFrame(vB);
-                                const oB = Math.min(.05, (lB - OB) / 1e3);
-                                if (OB = lB, !uB) return;
-                                const mB = window.devicePixelRatio || 1,
-                                  iB = Math.round(BB.clientWidth * mB),
-                                  NB = Math.round(BB.clientHeight * mB);
-                                if (0 === iB || 0 === NB) return;
-                                BB.width === iB && BB.height === NB || (BB.width = iB, BB.height = NB);
-                                const tB = JB.current;
-                                null === HB && (pB += .18 * oB), kB += (LB.current - kB) * Math.min(1, 4 * oB);
-                                const fB = .6 * oB;
-                                VB = VB.filter((BB => Ad(BB, tB.gravity, fB))), 0 !== VB.length || YB.current || (yB += oB, yB > .6 && EB());
-                                const sB = function(BB, TB, dB, VB) {
-                                  const yB = 3.2 * VB,
-                                    pB = .44 * Math.min(BB, TB) * yB / VB,
-                                    lB = Math.cos(dB),
-                                    JB = Math.sin(dB),
-                                    YB = Math.cos(.42),
-                                    gB = Math.sin(.42);
-                                  return (dB, VB, oB) => {
-                                    const kB = dB * JB + oB * lB,
-                                      LB = yB - (VB * gB + kB * YB);
-                                    if (LB < .05) return null;
-                                    const OB = pB / LB;
-                                    return {
-                                      x: BB / 2 + (dB * lB - oB * JB) * OB,
-                                      y: TB / 2 - (VB * YB - kB * gB) * OB,
-                                      scale: OB,
-                                      depth: LB
-                                    }
-                                  }
-                                }(iB, NB, pB, kB);
-                                ! function(BB, TB, dB, VB, yB) {
-                                  const pB = BB.createLinearGradient(0, 0, 0, dB);
-                                  pB.addColorStop(0, "#23262d"), pB.addColorStop(1, "#16181c"), BB.globalCompositeOperation = "source-over", BB.globalAlpha = 1, BB.fillStyle = pB, BB.fillRect(0, 0, TB, dB);
-                                  const lB = (TB, dB) => {
-                                      const yB = VB(TB[0], TB[1], TB[2]),
-                                        pB = VB(dB[0], dB[1], dB[2]);
-                                      yB && pB && (BB.beginPath(), BB.moveTo(yB.x, yB.y), BB.lineTo(pB.x, pB.y), BB.stroke())
-                                    },
-                                    JB = Math.ceil(yB) + 1,
-                                    YB = Ty[1];
-                                  BB.lineWidth = 1, BB.strokeStyle = "rgba(255, 255, 255, 0.07)";
-                                  for (let gB = -JB; gB <= JB; gB++) lB([gB + .5, YB, .5 - JB], [gB + .5, YB, JB + .5]), lB([.5 - JB, YB, gB + .5], [JB + .5, YB, gB + .5]);
-                                  BB.strokeStyle = "rgba(255, 255, 255, 0.28)", BB.setLineDash([4, 4]);
-                                  for (const gB of Vy)
-                                    for (const BB of Vy) {
-                                      const TB = [0, 1, 2].filter((TB => gB[TB] !== BB[TB]));
-                                      1 === TB.length && gB[TB[0]] < BB[TB[0]] && lB(gB, BB)
-                                    }
-                                  BB.setLineDash([])
-                                }(TB, iB, NB, sB, kB);
-                                const MB = gB.current,
-                                  zB = VB.map((BB => ({
-                                    particle: BB,
-                                    at: sB(BB.pos[0], BB.pos[1], BB.pos[2])
-                                  }))).filter((BB => null !== BB.at)).sort(((BB, TB) => TB.at.depth - BB.at.depth));
-                                TB.imageSmoothingEnabled = !1;
-                                for (const BB of function(BB) {
-                                    switch (BB) {
-                                      case ad.e.OneOne:
-                                        return [{
-                                          operation: "lighter",
-                                          usesAlpha: !1
-                                        }];
-                                      case ad.e.Add:
-                                        return [{
-                                          operation: "lighter",
-                                          usesAlpha: !0
-                                        }];
-                                      case ad.e.Multiply:
-                                        return [{
-                                          operation: "multiply",
-                                          usesAlpha: !0
-                                        }];
-                                      case ad.e.MultiplyAdd:
-                                        return [{
-                                          operation: "multiply",
-                                          usesAlpha: !0
-                                        }, {
-                                          operation: "lighter",
-                                          usesAlpha: !0
-                                        }];
-                                      default:
-                                        return [{
-                                          operation: "source-over",
-                                          usesAlpha: !0
-                                        }]
-                                    }
-                                  }(tB.blendMode)) {
-                                  TB.globalCompositeOperation = BB.operation;
-                                  for (const {
-                                      particle: VB,
-                                      at: yB
-                                    }
-                                    of zB) {
-                                    const [pB, lB, JB, YB] = jd(VB), gB = Math.max(1, VB.size * yB.scale);
-                                    TB.globalAlpha = BB.usesAlpha ? Math.min(1, Math.max(0, YB)) : 1, MB ? TB.drawImage(dB.get(MB, pB, lB, JB), yB.x - gB / 2, yB.y - gB / 2, gB, gB) : (TB.fillStyle = `rgb(${255*pB}, ${255*lB}, ${255*JB})`, TB.fillRect(yB.x - gB / 2, yB.y - gB / 2, gB, gB))
-                                  }
-                                }
-                                TB.globalCompositeOperation = "source-over", TB.globalAlpha = 1
-                              };
-                              DB = requestAnimationFrame(vB);
-                              const mB = new IntersectionObserver((BB => {
-                                let [TB] = BB;
-                                uB = TB.isIntersecting
-                              }));
-                              mB.observe(BB);
-                              const iB = TB => {
-                                  HB = TB.clientX, BB.setPointerCapture(TB.pointerId)
-                                },
-                                NB = BB => {
-                                  null !== HB && (pB += .01 * (BB.clientX - HB), HB = BB.clientX)
-                                },
-                                tB = () => {
-                                  HB = null
-                                };
-                              return BB.addEventListener("pointerdown", iB), BB.addEventListener("pointermove", NB), BB.addEventListener("pointerup", tB), BB.addEventListener("pointercancel", tB), () => {
-                                cancelAnimationFrame(DB), mB.disconnect(), oB.current = null, BB.removeEventListener("pointerdown", iB), BB.removeEventListener("pointermove", NB), BB.removeEventListener("pointerup", tB), BB.removeEventListener("pointercancel", tB)
-                              }
-                            }), []), (0, DB.jsx)("canvas", {
-                              ref: lB,
-                              className: "DocsParticleCanvas",
-                              role: "img",
-                              "aria-label": `Preview of a ${TB.texture} particle effect. Drag to turn the view.`
-                            })
-                          }
-                          const ly = ["aura", "stomp", "brainRot", "mobTameSuccess", "mango", "redFirecrackerLarge"],
-                            Jy = [{
-                              mode: ad.e.OneOne,
-                              label: "0 \xb7 OneOne (glow)"
-                            }, {
-                              mode: ad.e.Standard,
-                              label: "1 \xb7 Standard"
-                            }, {
-                              mode: ad.e.Add,
-                              label: "2 \xb7 Add"
-                            }, {
-                              mode: ad.e.Multiply,
-                              label: "3 \xb7 Multiply"
-                            }, {
-                              mode: ad.e.MultiplyAdd,
-                              label: "4 \xb7 MultiplyAdd"
-                            }],
-                            Yy = (0, VB.forwardRef)((function(BB, TB) {
-                              var dB, yB;
-                              let {
-                                textures: lB
-                              } = BB;
-                              const JB = iV(),
-                                YB = (0, VB.useRef)(null),
-                                [gB, oB] = (0, VB.useState)(Xd),
-                                [kB, LB] = (0, VB.useState)("example"),
-                                [OB, uB] = (0, VB.useState)(0),
-                                [EB, vB] = (0, VB.useState)(!1),
-                                iB = BB => {
-                                  const TB = "example" === BB ? Xd : Zd(BB);
-                                  TB && (oB(TB), LB(BB))
-                                };
-                              (0, VB.useImperativeHandle)(TB, (() => ({
-                                preview: BB => {
-                                  var TB;
-                                  iB(BB), null === (TB = YB.current) || void 0 === TB || TB.scrollIntoView({
-                                    behavior: "smooth",
-                                    block: "start"
-                                  })
-                                }
-                              })));
-                              const NB = BB => {
-                                  oB({
-                                    ...gB,
-                                    ...BB
-                                  }), LB(null)
-                                },
-                                tB = function(BB, TB) {
-                                  if (null !== TB) return `${BV}    presetId: "${TB}",\n${TV}\n})`;
-                                  const dB = BB.velocityGradients.map((BB => `        {\n            timeFraction: ${bd(BB.timeFraction)},\n            factor: ${bd(BB.factor)},\n            factor2: ${bd(BB.factor2)},\n        },`)),
-                                    VB = [`    dir1: ${nd(BB.dir1)},`, `    dir2: ${nd(BB.dir2)},`, TV, `    texture: "${BB.texture}",`, `    minLifeTime: ${bd(BB.minLifeTime)},`, `    maxLifeTime: ${bd(BB.maxLifeTime)},`, `    minEmitPower: ${bd(BB.minEmitPower)},`, `    maxEmitPower: ${bd(BB.maxEmitPower)},`, `    minSize: ${bd(BB.minSize)},`, `    maxSize: ${bd(BB.maxSize)},`, `    manualEmitCount: ${bd(BB.manualEmitCount)},`, `    gravity: ${nd(BB.gravity)},`, `    colorGradients: ${ed(BB.colorGradients,"    ")},`, `    velocityGradients: ${dB.length>0?`[\n${dB.join("\n")}\n    ]`:"[]"},`, `    blendMode: ${bd(BB.blendMode)},`];
-                                  return void 0 !== BB.hideDist && VB.push(`    hideDist: ${bd(BB.hideDist)},`), `${BV}${VB.join("\n")}\n})`
-                                }(gB, null === kB || "example" === kB ? null : kB),
-                                sB = lB.includes(gB.texture) ? lB : [...lB, gB.texture];
-                              return (0, DB.jsxs)("section", {
-                                ref: YB,
-                                className: "DocsPlayground DocsParticlePlayground",
-                                "aria-label": "Particle effect playground",
-                                children: [(0, DB.jsxs)("header", {
-                                  className: "DocsPlaygroundHeader",
-                                  children: [(0, DB.jsxs)("div", {
-                                    children: [(0, DB.jsx)("div", {
-                                      className: "DocsPlaygroundTitle",
-                                      children: "Try it: particle effects"
-                                    }), (0, DB.jsx)("div", {
-                                      className: "DocsPlaygroundHint",
-                                      children: "Pick a preset or change the settings, and the burst replays. Drag the preview to turn it."
-                                    })]
-                                  }), (0, DB.jsx)(mB, {
-                                    text: tB,
-                                    label: "Copy code"
-                                  })]
-                                }), (0, DB.jsxs)("div", {
-                                  className: "DocsPlaygroundPresets",
-                                  children: [(0, DB.jsx)("button", {
-                                    type: "button",
-                                    className: pB()("DocsVariantChip", {
-                                      Active: "example" === kB
-                                    }),
-                                    onClick: () => {
-                                      iB("example")
-                                    },
-                                    children: "Example"
-                                  }), ly.filter((BB => null !== Zd(BB))).map((BB => (0, DB.jsx)("button", {
-                                    type: "button",
-                                    className: pB()("DocsVariantChip", {
-                                      Active: kB === BB
-                                    }),
-                                    onClick: () => {
-                                      iB(BB)
-                                    },
-                                    children: BB
-                                  }, BB))), (0, DB.jsxs)("select", {
-                                    className: "DocsParticleSelect",
-                                    value: null !== kB && void 0 !== kB ? kB : "custom",
-                                    "aria-label": "Preset",
-                                    onChange: BB => {
-                                      iB(BB.target.value)
-                                    },
-                                    children: [(0, DB.jsx)("option", {
-                                      value: "example",
-                                      children: "Example effect"
-                                    }), null === kB && (0, DB.jsx)("option", {
-                                      value: "custom",
-                                      children: "Custom"
-                                    }), Rd.e.map((BB => (0, DB.jsx)("option", {
-                                      value: BB,
-                                      children: BB
-                                    }, BB)))]
-                                  })]
-                                }), (0, DB.jsxs)("div", {
-                                  className: "DocsParticleBody",
-                                  children: [(0, DB.jsxs)("div", {
-                                    className: "DocsParticleStageWrap",
-                                    children: [(0, DB.jsx)(py, {
-                                      opts: gB,
-                                      textureUrl: null !== (dB = null === JB || void 0 === JB ? void 0 : JB.getParticleTextureUrl(gB.texture)) && void 0 !== dB ? dB : null,
-                                      burst: OB,
-                                      paused: EB
-                                    }), (0, DB.jsxs)("div", {
-                                      className: "DocsParticleStageButtons",
-                                      children: [(0, DB.jsxs)("button", {
-                                        type: "button",
-                                        className: "DocsParticleStageButton",
-                                        onClick: () => {
-                                          uB(OB + 1)
-                                        },
-                                        children: [(0, DB.jsx)(HB, {
-                                          name: "replay"
-                                        }), (0, DB.jsx)("span", {
-                                          children: "Replay"
-                                        })]
-                                      }), (0, DB.jsxs)("button", {
-                                        type: "button",
-                                        className: "DocsParticleStageButton",
-                                        "aria-pressed": EB,
-                                        onClick: () => {
-                                          vB(!EB)
-                                        },
-                                        children: [(0, DB.jsx)(HB, {
-                                          name: EB ? "play" : "pause"
-                                        }), (0, DB.jsx)("span", {
-                                          children: EB ? "Loop" : "Stop looping"
-                                        })]
-                                      })]
-                                    })]
-                                  }), (0, DB.jsxs)("div", {
-                                    className: "DocsParticleControls",
-                                    children: [(0, DB.jsxs)("div", {
-                                      className: "DocsControl",
-                                      children: [(0, DB.jsxs)("div", {
-                                        className: "DocsControlLabel",
-                                        children: [(0, DB.jsx)("span", {
-                                          children: "Texture"
-                                        }), (0, DB.jsx)("code", {
-                                          className: "DocsControlValue",
-                                          children: gB.texture
-                                        })]
-                                      }), (0, DB.jsx)("div", {
-                                        className: "DocsParticleTextures",
-                                        children: sB.map((BB => {
-                                          var TB;
-                                          const dB = null !== (TB = null === JB || void 0 === JB ? void 0 : JB.getParticleTextureUrl(BB)) && void 0 !== TB ? TB : null;
-                                          return (0, DB.jsx)("button", {
-                                            type: "button",
-                                            className: pB()("DocsParticleTexture", {
-                                              Active: gB.texture === BB
-                                            }),
-                                            title: BB,
-                                            "aria-label": BB,
-                                            "aria-pressed": gB.texture === BB,
-                                            onClick: () => {
-                                              NB({
-                                                texture: BB
-                                              })
-                                            },
-                                            children: dB ? (0, DB.jsx)("img", {
-                                              src: dB,
-                                              alt: ""
-                                            }) : (0, DB.jsx)(HB, {
-                                              name: "image"
-                                            })
-                                          }, BB)
-                                        }))
-                                      })]
-                                    }), (0, DB.jsx)(eV, {
-                                      label: "Particles",
-                                      min: 1,
-                                      max: 400,
-                                      step: 1,
-                                      value: gB.manualEmitCount,
-                                      onChange: BB => {
-                                        NB({
-                                          manualEmitCount: BB
-                                        })
-                                      }
-                                    }), (0, DB.jsx)(nV, {
-                                      label: "Lifetime",
-                                      min: .05,
-                                      max: 3,
-                                      step: .05,
-                                      low: gB.minLifeTime,
-                                      high: gB.maxLifeTime,
-                                      onChange: (BB, TB) => {
-                                        NB({
-                                          minLifeTime: BB,
-                                          maxLifeTime: TB
-                                        })
-                                      }
-                                    }), (0, DB.jsx)(nV, {
-                                      label: "Emit power",
-                                      min: 0,
-                                      max: 40,
-                                      step: .5,
-                                      low: gB.minEmitPower,
-                                      high: gB.maxEmitPower,
-                                      onChange: (BB, TB) => {
-                                        NB({
-                                          minEmitPower: BB,
-                                          maxEmitPower: TB
-                                        })
-                                      }
-                                    }), (0, DB.jsx)(nV, {
-                                      label: "Size",
-                                      min: .05,
-                                      max: 2,
-                                      step: .05,
-                                      low: gB.minSize,
-                                      high: gB.maxSize,
-                                      onChange: (BB, TB) => {
-                                        NB({
-                                          minSize: BB,
-                                          maxSize: TB
-                                        })
-                                      }
-                                    }), (0, DB.jsx)(eV, {
-                                      label: "Gravity (up)",
-                                      min: -40,
-                                      max: 40,
-                                      step: 1,
-                                      value: null !== (yB = gB.gravity[1]) && void 0 !== yB ? yB : 0,
-                                      onChange: BB => {
-                                        var TB, dB;
-                                        NB({
-                                          gravity: [null !== (TB = gB.gravity[0]) && void 0 !== TB ? TB : 0, BB, null !== (dB = gB.gravity[2]) && void 0 !== dB ? dB : 0]
-                                        })
-                                      }
-                                    }), (0, DB.jsxs)("div", {
-                                      className: "DocsControl",
-                                      children: [(0, DB.jsx)("div", {
-                                        className: "DocsControlLabel",
-                                        children: (0, DB.jsx)("span", {
-                                          children: "Blend mode"
-                                        })
-                                      }), (0, DB.jsx)("select", {
-                                        className: "DocsParticleSelect",
-                                        value: gB.blendMode,
-                                        "aria-label": "Blend mode",
-                                        onChange: BB => {
-                                          NB({
-                                            blendMode: Number(BB.target.value)
-                                          })
-                                        },
-                                        children: Jy.map((BB => {
-                                          let {
-                                            mode: TB,
-                                            label: dB
-                                          } = BB;
-                                          return (0, DB.jsx)("option", {
-                                            value: TB,
-                                            children: dB
-                                          }, TB)
-                                        }))
-                                      })]
-                                    }), (0, DB.jsx)(By, {
-                                      opts: gB,
-                                      onChange: BB => {
-                                        NB({
-                                          colorGradients: BB
-                                        })
-                                      }
-                                    })]
-                                  })]
-                                }), (0, DB.jsx)(fB, {
-                                  code: tB,
-                                  lang: "ts"
-                                })]
-                              })
-                            }));
-                          var gy = dB(3888),
-                            oy = dB(1657);
-
-                          function ky(BB, TB) {
-                            return BB ? gy.c.includes(TB) ? BB.getIngameIconUrl(TB) : BB.getItemIconUrl(TB) : null
-                          }
-
-                          function Ly(BB) {
-                            var TB, dB, VB;
-                            let {
-                              part: yB,
-                              assets: lB
-                            } = BB;
-                            const JB = ky(lB, yB.icon),
-                              YB = null !== (TB = null === (dB = yB.style) || void 0 === dB ? void 0 : dB.fontSize) && void 0 !== TB ? TB : "1.8em",
-                              gB = (0, QT.Yb)(yB.style);
-                            return (0, DB.jsxs)("span", {
-                              className: pB()("DocsBloxdTextIcon", {
-                                Missing: !JB
-                              }),
-                              style: {
-                                width: YB,
-                                height: YB,
-                                opacity: null === (VB = yB.style) || void 0 === VB ? void 0 : VB.opacity
-                              },
-                              title: JB ? void 0 : `No Bloxd icon, item or block is called "${yB.icon}"`,
-                              children: [JB && gB && (0, DB.jsx)("span", {
-                                className: "DocsBloxdTextIconTint",
-                                style: {
-                                  background: gB,
-                                  maskImage: `url("${JB}")`,
-                                  WebkitMaskImage: `url("${JB}")`
-                                }
-                              }), JB ? (0, DB.jsx)("img", {
-                                src: JB,
-                                alt: "",
-                                className: pB()({
-                                  Tinted: gB
-                                })
-                              }) : (0, DB.jsx)(HB, {
-                                name: "image"
-                              })]
-                            })
-                          }
-
-                          function Oy(BB) {
-                            let {
-                              parts: TB,
-                              className: dB
-                            } = BB;
-                            const VB = iV(),
-                              yB = [];
-                            let lB = [];
-                            const JB = BB => {
-                              lB.length > 0 && (yB.push((0, DB.jsx)(oy.e, {
-                                text: lB
-                              }, `run-${BB}`)), lB = [])
-                            };
-                            return TB.forEach(((BB, TB) => {
-                              "icon" !== WT(BB) || aT(BB.icon) ? lB.push(BB) : (JB(TB), yB.push((0, DB.jsx)(Ly, {
-                                part: BB,
-                                assets: VB
-                              }, `icon-${TB}`)))
-                            })), JB(TB.length), (0, DB.jsx)("div", {
-                              className: pB()("DocsStyledTextPreview", dB),
-                              children: yB
-                            })
-                          }
-                          const Dy = ["0.75em", "1em", "1.25em", "1.5em", "2em", "3em"];
-                          let uy = null;
-
-                          function Hy(BB) {
-                            if (uy ??= document.createElement("canvas").getContext("2d"), !uy) return "#000000";
-                            uy.fillStyle = "#000000", uy.fillStyle = BB;
-                            const TB = uy.fillStyle;
-                            return TB.startsWith("#") ? TB : "#000000"
-                          }
-
-                          function Ey(BB) {
-                            let {
-                              value: TB,
-                              label: dB,
-                              onChange: VB
-                            } = BB;
-                            return (0, DB.jsxs)("span", {
-                              className: "DocsColourInput",
-                              children: [(0, DB.jsx)("input", {
-                                type: "color",
-                                value: Hy(TB),
-                                "aria-label": `${dB} picker`,
-                                onChange: BB => {
-                                  VB(BB.target.value)
-                                }
-                              }), (0, DB.jsx)("input", {
-                                type: "text",
-                                value: TB,
-                                placeholder: "#ffb914 or gold",
-                                "aria-label": dB,
-                                spellCheck: !1,
-                                onChange: BB => {
-                                  VB(BB.target.value)
-                                }
-                              })]
-                            })
-                          }
-
-                          function vy(BB) {
-                            let {
-                              value: TB,
-                              fontAwesomeIcons: dB,
-                              onChange: yB
-                            } = BB;
-                            const lB = iV(),
-                              [JB, YB] = (0, VB.useState)(aT(TB) ? "fontAwesome" : "bloxd"),
-                              [gB, oB] = (0, VB.useState)(""),
-                              kB = gB.trim().toLowerCase(),
-                              LB = "bloxd" === JB ? gy.c : dB,
-                              OB = kB ? LB.filter((BB => BB.toLowerCase().includes(kB))) : LB;
-                            return (0, DB.jsxs)("div", {
-                              className: "DocsIconPicker",
-                              children: [(0, DB.jsx)("input", {
-                                type: "text",
-                                value: TB,
-                                "aria-label": "Icon name",
-                                spellCheck: !1,
-                                onChange: BB => {
-                                  yB(BB.target.value)
-                                }
-                              }), (0, DB.jsx)("p", {
-                                className: "DocsTextFieldHint",
-                                children: "Pick one below, or type any item or block name."
-                              }), (0, DB.jsxs)("div", {
-                                className: "DocsIconPickerTabs",
-                                role: "tablist",
-                                children: [
-                                  ["bloxd", "fontAwesome"].map((BB => (0, DB.jsx)("button", {
-                                    type: "button",
-                                    role: "tab",
-                                    "aria-selected": JB === BB,
-                                    className: pB()("DocsVariantChip", {
-                                      Active: JB === BB
-                                    }),
-                                    onClick: () => {
-                                      YB(BB)
-                                    },
-                                    children: "bloxd" === BB ? `Bloxd icons (${gy.c.length})` : `Font Awesome (${dB.length})`
-                                  }, BB))), (0, DB.jsx)("input", {
-                                    type: "search",
-                                    value: gB,
-                                    placeholder: "Filter\u2026",
-                                    "aria-label": "Filter icons",
-                                    onChange: BB => {
-                                      oB(BB.target.value)
-                                    }
-                                  })
-                                ]
-                              }), (0, DB.jsxs)("div", {
-                                className: "DocsIconPickerGrid",
-                                role: "tabpanel",
-                                children: [OB.map((BB => {
-                                  const dB = "bloxd" === JB ? ky(lB, BB) : null;
-                                  return (0, DB.jsx)("button", {
-                                    type: "button",
-                                    title: BB,
-                                    "aria-label": BB,
-                                    "aria-pressed": BB === TB,
-                                    className: pB()("DocsIconPickerOption", {
-                                      Active: BB === TB
-                                    }),
-                                    onClick: () => {
-                                      yB(BB)
-                                    },
-                                    children: "fontAwesome" === JB ? (0, DB.jsx)(Nd.e, {
-                                      name: BB
-                                    }) : dB ? (0, DB.jsx)("img", {
-                                      src: dB,
-                                      alt: ""
-                                    }) : (0, DB.jsx)(HB, {
-                                      name: "image"
-                                    })
-                                  }, BB)
-                                })), 0 === OB.length && (0, DB.jsxs)("p", {
-                                  className: "DocsTextFieldHint",
-                                  children: ["No icons match \u201c", gB, "\u201d."]
-                                })]
-                              })]
-                            })
-                          }
-
-                          function my(BB) {
-                            let {
-                              property: TB,
-                              value: dB,
-                              fontAwesomeIcons: VB,
-                              onChange: yB
-                            } = BB;
-                            const {
-                              field: pB,
-                              label: lB
-                            } = TB, JB = BB => "" !== BB || TB.isRequired ? BB : void 0;
-                            switch (pB.kind) {
-                              case "text":
-                                return pB.multiline ? (0, DB.jsx)("textarea", {
-                                  value: String(null !== dB && void 0 !== dB ? dB : ""),
-                                  rows: 2,
-                                  "aria-label": lB,
-                                  onChange: BB => {
-                                    yB(BB.target.value)
-                                  }
-                                }) : (0, DB.jsx)("input", {
-                                  type: "text",
-                                  value: String(null !== dB && void 0 !== dB ? dB : ""),
-                                  "aria-label": lB,
-                                  onChange: BB => {
-                                    yB(JB(BB.target.value))
-                                  }
-                                });
-                              case "size":
-                                return (0, DB.jsx)("input", {
-                                  type: "text",
-                                  value: String(null !== dB && void 0 !== dB ? dB : ""),
-                                  placeholder: TB.defaultText,
-                                  list: "DocsTextSizeSuggestions",
-                                  "aria-label": lB,
-                                  spellCheck: !1,
-                                  onChange: BB => {
-                                    yB(JB(BB.target.value.trim()))
-                                  }
-                                });
-                              case "colour":
-                                return (0, DB.jsx)(Ey, {
-                                  value: String(null !== dB && void 0 !== dB ? dB : ""),
-                                  label: lB,
-                                  onChange: BB => {
-                                    yB(JB(BB))
-                                  }
-                                });
-                              case "colours": {
-                                const BB = Array.isArray(dB) ? dB : [],
-                                  TB = BB => {
-                                    yB(BB.length > 0 ? BB : void 0)
-                                  };
-                                return (0, DB.jsxs)("div", {
-                                  className: "DocsColourList",
-                                  children: [BB.map(((dB, VB) => (0, DB.jsxs)("span", {
-                                    className: "DocsColourListRow",
-                                    children: [(0, DB.jsx)(Ey, {
-                                      value: dB,
-                                      label: `${lB} ${VB+1}`,
-                                      onChange: dB => {
-                                        TB(BB.map(((BB, TB) => TB === VB ? dB : BB)))
-                                      }
-                                    }), (0, DB.jsx)("button", {
-                                      type: "button",
-                                      className: "DocsTextIconButton",
-                                      "aria-label": `Remove colour ${VB+1}`,
-                                      onClick: () => {
-                                        TB(BB.filter(((BB, TB) => TB !== VB)))
-                                      },
-                                      children: (0, DB.jsx)(HB, {
-                                        name: "cross"
-                                      })
-                                    })]
-                                  }, VB))), (0, DB.jsxs)("button", {
-                                    type: "button",
-                                    className: "DocsTextAddButton",
-                                    onClick: () => {
-                                      var dB;
-                                      TB([...BB, null !== (dB = BB.at(-1)) && void 0 !== dB ? dB : "#ffffff"])
-                                    },
-                                    children: [(0, DB.jsx)(HB, {
-                                      name: "plus"
-                                    }), 0 === BB.length ? "Add a colour" : "Add a colour to the gradient"]
-                                  })]
-                                })
-                              }
-                              case "fraction": {
-                                var YB;
-                                const BB = "number" === typeof dB ? dB : Number(null !== (YB = TB.defaultText) && void 0 !== YB ? YB : 0);
-                                return (0, DB.jsxs)("span", {
-                                  className: "DocsFractionInput",
-                                  children: [(0, DB.jsx)("input", {
-                                    type: "range",
-                                    min: 0,
-                                    max: 1,
-                                    step: .01,
-                                    value: BB,
-                                    "aria-label": lB,
-                                    onChange: BB => {
-                                      yB(Number(BB.target.value))
-                                    }
-                                  }), (0, DB.jsx)("output", {
-                                    children: BB.toFixed(2)
-                                  })]
-                                })
-                              }
-                              case "choice":
-                                return (0, DB.jsxs)("select", {
-                                  value: String(null !== dB && void 0 !== dB ? dB : ""),
-                                  "aria-label": lB,
-                                  onChange: BB => {
-                                    yB(JB(BB.target.value))
-                                  },
-                                  children: [!TB.isRequired && (0, DB.jsxs)("option", {
-                                    value: "",
-                                    children: ["Default (", TB.defaultText, ")"]
-                                  }), pB.options.map((BB => (0, DB.jsx)("option", {
-                                    value: BB,
-                                    children: BB
-                                  }, BB)))]
-                                });
-                              case "icon":
-                                return (0, DB.jsx)(vy, {
-                                  value: String(null !== dB && void 0 !== dB ? dB : ""),
-                                  fontAwesomeIcons: VB,
-                                  onChange: yB
-                                })
-                            }
-                          }
-
-                          function iy(BB) {
-                            let TB;
-                            try {
-                              TB = JSON.parse(BB)
-                            } catch (dB) {
-                              return {
-                                part: null,
-                                error: `Not valid JSON yet: ${dB.message}`
-                              }
-                            }
-                            return dd(TB) ? {
-                              part: TB,
-                              error: null
-                            } : {
-                              part: null,
-                              error: "Not a part Bloxd draws: use a string or an object such as { entityName } or { translationKey }."
-                            }
-                          }
-
-                          function Ny(BB) {
-                            let {
-                              parts: TB,
-                              index: dB,
-                              fontAwesomeIcons: yB,
-                              onChange: pB,
-                              Kw: lB,
-                              onClose: JB
-                            } = BB;
-                            const YB = (0, VB.useContext)(DT),
-                              oB = (0, VB.useRef)(null),
-                              kB = TB[dB],
-                              LB = WT(kB),
-                              [OB, uB] = (0, VB.useState)((() => JSON.stringify(kB, null, 2))),
-                              EB = (0, VB.useMemo)((() => "other" === LB ? iy(OB).error : null), [LB, OB]);
-                            (0, VB.useEffect)((() => {
-                              var BB;
-                              null === (BB = oB.current) || void 0 === BB || BB.focus()
-                            }), []);
-                            const vB = (0, DB.jsx)("div", {
-                              className: "DocsTextDialogOverlay",
-                              onMouseDown: BB => {
-                                BB.target === BB.currentTarget && JB()
-                              },
-                              children: (0, DB.jsxs)("div", {
-                                ref: oB,
-                                className: "DocsTextDialog",
-                                role: "dialog",
-                                "aria-modal": "true",
-                                "aria-label": `Edit part ${dB+1}: ${ZT[LB]}`,
-                                tabIndex: -1,
-                                onKeyDown: BB => {
-                                  "Escape" === BB.key ? (BB.stopPropagation(), JB()) : "Tab" === BB.key && oB.current && function(BB, TB) {
-                                    const dB = Array.from(BB.querySelectorAll(UT)),
-                                      VB = dB[0],
-                                      yB = dB.at(-1);
-                                    if (!VB || !yB) return;
-                                    const pB = document.activeElement;
-                                    !TB.shiftKey || pB !== VB && pB !== BB ? TB.shiftKey || pB !== yB || (TB.preventDefault(), VB.focus()) : (TB.preventDefault(), yB.focus())
-                                  }(oB.current, BB)
-                                },
-                                children: [(0, DB.jsxs)("header", {
-                                  className: "DocsTextDialogHeader",
-                                  children: [(0, DB.jsxs)("div", {
-                                    children: [(0, DB.jsxs)("div", {
-                                      className: "DocsTextDialogKind",
-                                      children: ["Part ", dB + 1]
-                                    }), (0, DB.jsx)("div", {
-                                      className: "DocsTextDialogTitle",
-                                      children: ZT[LB]
-                                    })]
-                                  }), (0, DB.jsx)("button", {
-                                    type: "button",
-                                    className: "DocsTextIconButton",
-                                    "aria-label": "Close",
-                                    onClick: JB,
-                                    children: (0, DB.jsx)(HB, {
-                                      name: "cross"
-                                    })
-                                  })]
-                                }), (0, DB.jsx)(Oy, {
-                                  parts: TB,
-                                  className: "DocsTextDialogPreview"
-                                }), (0, DB.jsx)("div", {
-                                  className: "DocsTextDialogFields",
-                                  children: "other" === LB ? (0, DB.jsxs)("label", {
-                                    className: "DocsTextField",
-                                    children: [(0, DB.jsx)("span", {
-                                      className: "DocsTextFieldLabel",
-                                      children: "JSON"
-                                    }), (0, DB.jsx)("textarea", {
-                                      className: "DocsTextJson",
-                                      value: OB,
-                                      rows: 6,
-                                      spellCheck: !1,
-                                      onChange: BB => {
-                                        uB(BB.target.value);
-                                        const TB = iy(BB.target.value);
-                                        null !== TB.part && pB(TB.part)
-                                      }
-                                    }), EB && (0, DB.jsx)("span", {
-                                      className: "DocsTextFieldError",
-                                      children: EB
-                                    })]
-                                  }) : CT[LB].map((BB => {
-                                    const TB = qT(kB, BB.path),
-                                      dB = BB.isRequired ? JSON.stringify(jT(kB, BB.path)) === JSON.stringify(kB) : void 0 === TB;
-                                    return (0, DB.jsxs)("div", {
-                                      className: "DocsTextField",
-                                      children: [(0, DB.jsxs)("div", {
-                                        className: "DocsTextFieldLabel",
-                                        children: [(0, DB.jsx)("span", {
-                                          children: BB.label
-                                        }), (0, DB.jsxs)("button", {
-                                          type: "button",
-                                          className: "DocsTextResetButton",
-                                          disabled: dB,
-                                          "aria-label": `Reset ${BB.label.toLowerCase()} to default`,
-                                          onClick: () => {
-                                            pB(jT(kB, BB.path))
-                                          },
-                                          children: [(0, DB.jsx)(HB, {
-                                            name: "replay"
-                                          }), "Reset"]
-                                        })]
-                                      }), (0, DB.jsx)(my, {
-                                        property: BB,
-                                        value: TB,
-                                        fontAwesomeIcons: yB,
-                                        onChange: TB => {
-                                          pB(xT(kB, BB.path, TB))
-                                        }
-                                      }), !BB.isRequired && (0, DB.jsxs)("span", {
-                                        className: "DocsTextFieldHint",
-                                        children: ["Default: ", BB.defaultText]
-                                      })]
-                                    }, BB.path.join("."))
-                                  }))
-                                }), (0, DB.jsxs)("footer", {
-                                  className: "DocsTextDialogFooter",
-                                  children: [(0, DB.jsxs)("button", {
-                                    type: "button",
-                                    className: "DocsTextRemoveButton",
-                                    onClick: lB,
-                                    children: [(0, DB.jsx)(HB, {
-                                      name: "trash"
-                                    }), "Remove part"]
-                                  }), (0, DB.jsx)("button", {
-                                    type: "button",
-                                    className: "DocsTextDoneButton",
-                                    onClick: JB,
-                                    children: "Done"
-                                  })]
-                                }), (0, DB.jsx)("datalist", {
-                                  id: "DocsTextSizeSuggestions",
-                                  children: Dy.map((BB => (0, DB.jsx)("option", {
-                                    value: BB
-                                  }, BB)))
-                                })]
-                              })
-                            });
-                            return YB ? (0, gB.createPortal)(vB, YB) : vB
-                          }
-                          const ty = [{
-                              label: "Icon and text",
-                              parts: [{
-                                icon: "Pixelated Heart"
-                              }, " You gained a life!"]
-                            }, {
-                              label: "Coloured words",
-                              parts: ["Welcome to ", {
-                                str: "Sky Castle",
-                                style: {
-                                  color: "#ffb914",
-                                  fontWeight: "bold"
-                                }
-                              }, ", adventurer!"]
-                            }, {
-                              label: "Achievement",
-                              parts: [{
-                                icon: "fa-solid fa-trophy",
-                                style: {
-                                  color: "gold"
-                                }
-                              }, {
-                                str: " Achievement unlocked: ",
-                                style: {
-                                  opacity: .8
-                                }
-                              }, {
-                                str: "Master Builder",
-                                style: {
-                                  color: "#4f94f1",
-                                  fontStyle: "italic"
-                                }
-                              }]
-                            }, {
-                              label: "Loading bar",
-                              parts: ["Charging ", {
-                                type: "ProgressBar",
-                                progress: .65,
-                                colours: ["#4f94f1", "#9be15d"]
-                              }, " Press ", {
-                                type: "StyledKeyBinding",
-                                action: "jump"
-                              }]
-                            }],
-                            fy = Object.keys(XT);
-
-                          function sy(BB) {
-                            let {
-                              fontAwesomeIcons: TB
-                            } = BB;
-                            const [dB, yB] = (0, VB.useState)(ty[0].parts), [lB, JB] = (0, VB.useState)((() => eT(ty[0].parts))), [YB, gB] = (0, VB.useState)(null), [oB, kB] = (0, VB.useState)(!1), [LB, OB] = (0, VB.useState)(null), [uB, EB] = (0, VB.useState)(!1), [vB, mB] = (0, VB.useState)(null), iB = (0, VB.useRef)(null), NB = eT(dB);
-                            (0, VB.useLayoutEffect)((() => {
-                              var BB;
-                              if (!vB) return;
-                              const TB = BB => {
-                                  var TB;
-                                  return null === (TB = iB.current) || void 0 === TB ? void 0 : TB.querySelector(`[data-focus-key="${BB}"]`)
-                                },
-                                dB = TB(vB.key);
-                              null === (BB = dB && !dB.disabled ? dB : TB(vB.fallback)) || void 0 === BB || BB.focus(), mB(null)
-                            }), [vB]);
-                            const tB = BB => {
-                                yB(BB), JB(eT(BB)), gB(null)
-                              },
-                              sB = BB => {
-                                tB(dB.filter(((TB, dB) => dB !== BB))), mB({
-                                  key: `edit-${Math.min(BB,dB.length-2)}`,
-                                  fallback: "add"
-                                })
-                              },
-                              MB = (BB, TB) => {
-                                const VB = [...dB],
-                                  [yB] = VB.splice(BB, 1);
-                                VB.splice(BB + TB, 0, yB), tB(VB);
-                                mB({
-                                  key: `${TB<0?"up":"down"}-${BB+TB}`,
-                                  fallback: `edit-${BB+TB}`
-                                })
-                              };
-                            return (0, DB.jsxs)("section", {
-                              ref: iB,
-                              className: "DocsPlayground DocsTextEditor",
-                              "aria-label": "Styled text editor",
-                              children: [(0, DB.jsx)("header", {
-                                className: "DocsPlaygroundHeader",
-                                children: (0, DB.jsxs)("div", {
-                                  children: [(0, DB.jsx)("div", {
-                                    className: "DocsPlaygroundTitle",
-                                    children: "Styled text editor"
-                                  }), (0, DB.jsx)("div", {
-                                    className: "DocsPlaygroundHint",
-                                    children: "Add parts, click one to style it, and copy the code. The preview draws it as the game does."
-                                  })]
-                                })
-                              }), (0, DB.jsx)("div", {
-                                className: "DocsPlaygroundPresets",
-                                children: ty.map((BB => (0, DB.jsx)("button", {
-                                  type: "button",
-                                  className: pB()("DocsVariantChip", {
-                                    Active: NB === eT(BB.parts)
-                                  }),
-                                  onClick: () => {
-                                    tB(BB.parts)
-                                  },
-                                  children: BB.label
-                                }, BB.label)))
-                              }), (0, DB.jsx)(Oy, {
-                                parts: dB,
-                                className: "DocsTextEditorPreview"
-                              }), (0, DB.jsxs)("div", {
-                                className: "DocsTextEditorBody",
-                                children: [(0, DB.jsxs)("div", {
-                                  className: "DocsTextEditorPanel",
-                                  children: [(0, DB.jsx)("div", {
-                                    className: "DocsTextEditorPanelTitle",
-                                    children: "Parts"
-                                  }), (0, DB.jsxs)("ol", {
-                                    className: "DocsTextParts",
-                                    children: [dB.map(((BB, TB) => {
-                                      const VB = WT(BB);
-                                      return (0, DB.jsxs)("li", {
-                                        className: "DocsTextPart",
-                                        children: [(0, DB.jsxs)("button", {
-                                          type: "button",
-                                          className: "DocsTextPartMain",
-                                          "data-focus-key": `edit-${TB}`,
-                                          "aria-label": `Edit part ${TB+1}, ${ZT[VB]}`,
-                                          onClick: () => {
-                                            OB(TB)
-                                          },
-                                          children: [(0, DB.jsx)("span", {
-                                            className: "DocsTextPartKind",
-                                            children: ZT[VB]
-                                          }), (0, DB.jsx)(Oy, {
-                                            parts: [BB],
-                                            className: "DocsTextPartPreview"
-                                          }), "text" !== VB && (0, DB.jsx)("code", {
-                                            className: "DocsTextPartName",
-                                            children: AT(BB)
-                                          })]
-                                        }), (0, DB.jsxs)("span", {
-                                          className: "DocsTextPartActions",
-                                          children: [(0, DB.jsx)("button", {
-                                            type: "button",
-                                            className: "DocsTextIconButton",
-                                            "aria-label": `Move part ${TB+1} up`,
-                                            "data-focus-key": `up-${TB}`,
-                                            disabled: 0 === TB,
-                                            onClick: () => {
-                                              MB(TB, -1)
-                                            },
-                                            children: (0, DB.jsx)(HB, {
-                                              name: "chevron-up"
-                                            })
-                                          }), (0, DB.jsx)("button", {
-                                            type: "button",
-                                            className: "DocsTextIconButton",
-                                            "aria-label": `Move part ${TB+1} down`,
-                                            "data-focus-key": `down-${TB}`,
-                                            disabled: TB === dB.length - 1,
-                                            onClick: () => {
-                                              MB(TB, 1)
-                                            },
-                                            children: (0, DB.jsx)(HB, {
-                                              name: "chevron-down"
-                                            })
-                                          }), (0, DB.jsx)("button", {
-                                            type: "button",
-                                            className: "DocsTextIconButton",
-                                            "aria-label": `Remove part ${TB+1}`,
-                                            onClick: () => {
-                                              sB(TB)
-                                            },
-                                            children: (0, DB.jsx)(HB, {
-                                              name: "cross"
-                                            })
-                                          })]
-                                        })]
-                                      }, TB)
-                                    })), 0 === dB.length && (0, DB.jsx)("li", {
-                                      className: "DocsTextPartsEmpty",
-                                      children: "No parts yet. Add one below."
-                                    })]
-                                  }), (0, DB.jsxs)("div", {
-                                    className: "DocsTextAddPart",
-                                    onKeyDown: BB => {
-                                      "Escape" === BB.key && uB && (BB.stopPropagation(), EB(!1), mB({
-                                        key: "add",
-                                        fallback: "add"
-                                      }))
-                                    },
-                                    children: [(0, DB.jsxs)("button", {
-                                      type: "button",
-                                      className: "DocsTextAddPartButton",
-                                      "data-focus-key": "add",
-                                      "aria-expanded": uB,
-                                      "aria-controls": "DocsTextAddPartMenu",
-                                      onClick: () => {
-                                        EB(!uB)
-                                      },
-                                      children: [(0, DB.jsx)(HB, {
-                                        name: "plus"
-                                      }), "Add a part", (0, DB.jsx)(HB, {
-                                        name: uB ? "chevron-up" : "chevron-down"
-                                      })]
-                                    }), uB && (0, DB.jsx)("ul", {
-                                      id: "DocsTextAddPartMenu",
-                                      className: "DocsTextAddPartMenu",
-                                      children: fy.map((BB => (0, DB.jsx)("li", {
-                                        children: (0, DB.jsx)("button", {
-                                          type: "button",
-                                          onClick: () => {
-                                            (BB => {
-                                              tB([...dB, XT[BB]]), EB(!1), OB(dB.length)
-                                            })(BB)
-                                          },
-                                          children: ZT[BB]
-                                        })
-                                      }, BB)))
-                                    })]
-                                  })]
-                                }), (0, DB.jsxs)("div", {
-                                  className: "DocsTextEditorPanel",
-                                  children: [(0, DB.jsxs)("div", {
-                                    className: "DocsTextEditorPanelTitle",
-                                    children: ["Code", (0, DB.jsxs)("button", {
-                                      type: "button",
-                                      className: "DocsTextEditCodeButton",
-                                      "aria-pressed": oB,
-                                      onClick: () => {
-                                        kB(!oB)
-                                      },
-                                      children: [(0, DB.jsx)(HB, {
-                                        name: oB ? "check" : "pencil"
-                                      }), oB ? "Done" : "Edit"]
-                                    })]
-                                  }), oB ? (0, DB.jsxs)(DB.Fragment, {
-                                    children: [(0, DB.jsx)("textarea", {
-                                      className: "DocsPlaygroundInput",
-                                      value: lB,
-                                      spellCheck: !1,
-                                      "aria-label": "Styled text as code",
-                                      onChange: BB => {
-                                        JB(BB.target.value);
-                                        const TB = Vd(BB.target.value);
-                                        gB(TB.error), TB.parts && yB(TB.parts)
-                                      }
-                                    }), YB && (0, DB.jsx)("p", {
-                                      className: "DocsPlaygroundError",
-                                      children: YB
-                                    })]
-                                  }) : (0, DB.jsx)(fB, {
-                                    lang: "js",
-                                    code: `api.sendMessage(playerId, ${NB})`
-                                  })]
-                                })]
-                              }), null !== LB && LB < dB.length && (0, DB.jsx)(Ny, {
-                                parts: dB,
-                                index: LB,
-                                fontAwesomeIcons: TB,
-                                onChange: BB => {
-                                  ((BB, TB) => {
-                                    tB(dB.map(((dB, VB) => VB === BB ? TB : dB)))
-                                  })(LB, BB)
-                                },
-                                Kw: () => {
-                                  sB(LB), OB(null)
-                                },
-                                onClose: () => {
-                                  OB(null), mB({
-                                    key: `edit-${LB}`,
-                                    fallback: "add"
-                                  })
-                                }
-                              })]
-                            })
-                          }
-                          var My = dB(4247),
-                            zy = dB(4226),
-                            wy = dB(4240),
-                            Uy = dB(4252);
-                          const Fy = 40,
-                            Ky = 800,
-                            ry = 150,
-                            Iy = 8e3,
-                            cy = 2e3;
-
-                          function Sy(BB, TB) {
-                            return 12 * Math.log2(TB / BB)
-                          }
-
-                          function Py(BB, TB) {
-                            return Math.round(BB * 2 ** (TB / 12) * 10) / 10
-                          }
-
-                          function Qy(BB) {
-                            return `${BB} ms`
-                          }
-
-                          function Ry(BB) {
-                            return `${BB} st`
-                          }
-                          const ay = [{
-                            key: "variationSemitones",
-                            label: "Word variation",
-                            max: 6
-                          }, {
-                            key: "declineSemitones",
-                            label: "Fall over a sentence",
-                            max: 12
-                          }, {
-                            key: "questionRiseSemitones",
-                            label: "Question rise",
-                            max: 12
-                          }, {
-                            key: "exclaimLiftSemitones",
-                            label: "Exclamation lift",
-                            max: 12
-                          }];
-
-                          function Zy(BB) {
-                            let {
-                              synth: TB,
-                              onChange: dB
-                            } = BB;
-                            const VB = (0, My.i)(TB);
-                            return (0, DB.jsxs)("div", {
-                              className: "DocsVoiceControls",
-                              children: [(0, DB.jsxs)("div", {
-                                className: "DocsVoiceGroup",
-                                children: [(0, DB.jsx)("div", {
-                                  className: "DocsVoiceGroupTitle",
-                                  children: "Voice"
-                                }), (0, DB.jsxs)("div", {
-                                  className: "DocsControl",
-                                  children: [(0, DB.jsx)("div", {
-                                    className: "DocsControlLabel",
-                                    children: (0, DB.jsx)("span", {
-                                      children: "Tone"
-                                    })
-                                  }), (0, DB.jsx)("div", {
-                                    className: "DocsVoiceWaveforms",
-                                    children: My.d.map((BB => (0, DB.jsx)("button", {
-                                      type: "button",
-                                      className: pB()("DocsVariantChip", {
-                                        Active: TB.waveform === BB
-                                      }),
-                                      "aria-pressed": TB.waveform === BB,
-                                      onClick: () => {
-                                        dB({
-                                          waveform: BB
-                                        })
-                                      },
-                                      children: BB
-                                    }, BB)))
-                                  })]
-                                }), (0, DB.jsx)(eV, {
-                                  label: "Pitch",
-                                  min: 0,
-                                  max: Sy(Fy, Ky),
-                                  step: .1,
-                                  value: Sy(Fy, TB.pitchHz),
-                                  format: () => `${TB.pitchHz} Hz`,
-                                  onChange: BB => {
-                                    dB({
-                                      pitchHz: Py(Fy, BB)
-                                    })
-                                  }
-                                }), (0, DB.jsx)(eV, {
-                                  label: "Time per syllable",
-                                  min: 25,
-                                  max: 200,
-                                  step: 1,
-                                  value: TB.syllableMs,
-                                  format: Qy,
-                                  onChange: BB => {
-                                    dB({
-                                      syllableMs: BB
-                                    })
-                                  }
-                                }), (0, DB.jsx)(eV, {
-                                  label: "Volume",
-                                  min: 0,
-                                  max: 2,
-                                  step: .05,
-                                  value: TB.volume,
-                                  onChange: BB => {
-                                    dB({
-                                      volume: BB
-                                    })
-                                  }
-                                })]
-                              }), (0, DB.jsxs)("div", {
-                                className: "DocsVoiceGroup",
-                                children: [(0, DB.jsx)("div", {
-                                  className: "DocsVoiceGroupTitle",
-                                  children: "Each blip"
-                                }), (0, DB.jsx)(eV, {
-                                  label: "Length",
-                                  min: 10,
-                                  max: 300,
-                                  step: 1,
-                                  value: TB.durationMs,
-                                  format: Qy,
-                                  onChange: BB => {
-                                    dB({
-                                      durationMs: BB
-                                    })
-                                  }
-                                }), (0, DB.jsx)(eV, {
-                                  label: "Fade in",
-                                  min: 0,
-                                  max: VB.durationMs,
-                                  step: 1,
-                                  value: VB.attackMs,
-                                  format: Qy,
-                                  onChange: BB => {
-                                    dB({
-                                      attackMs: BB
-                                    })
-                                  }
-                                }), (0, DB.jsx)(eV, {
-                                  label: "Fade out",
-                                  min: 0,
-                                  max: VB.durationMs - VB.attackMs,
-                                  step: 1,
-                                  value: VB.releaseMs,
-                                  format: Qy,
-                                  onChange: BB => {
-                                    dB({
-                                      releaseMs: BB
-                                    })
-                                  }
-                                }), (0, DB.jsx)(eV, {
-                                  label: "Glide",
-                                  min: -12,
-                                  max: 12,
-                                  step: .1,
-                                  value: TB.glideSemitones,
-                                  format: Ry,
-                                  onChange: BB => {
-                                    dB({
-                                      glideSemitones: BB
-                                    })
-                                  }
-                                }), (0, DB.jsxs)("label", {
-                                  className: "DocsVoiceToggle",
-                                  children: [(0, DB.jsx)("input", {
-                                    type: "checkbox",
-                                    checked: null !== TB.lowpassHz,
-                                    onChange: BB => {
-                                      dB({
-                                        lowpassHz: BB.target.checked ? cy : null
-                                      })
-                                    }
-                                  }), (0, DB.jsx)("span", {
-                                    children: "Muffle with a filter"
-                                  })]
-                                }), null !== TB.lowpassHz && (0, DB.jsx)(eV, {
-                                  label: "Filter",
-                                  min: 0,
-                                  max: Sy(ry, Iy),
-                                  step: .1,
-                                  value: Sy(ry, TB.lowpassHz),
-                                  format: () => `${TB.lowpassHz} Hz`,
-                                  onChange: BB => {
-                                    dB({
-                                      lowpassHz: Py(ry, BB)
-                                    })
-                                  }
-                                })]
-                              }), (0, DB.jsxs)("div", {
-                                className: "DocsVoiceGroup",
-                                children: [(0, DB.jsx)("div", {
-                                  className: "DocsVoiceGroupTitle",
-                                  children: "Intonation"
-                                }), ay.map((BB => {
-                                  let {
-                                    key: VB,
-                                    label: yB,
-                                    max: pB
-                                  } = BB;
-                                  return (0, DB.jsx)(eV, {
-                                    label: yB,
-                                    min: 0,
-                                    max: pB,
-                                    step: .1,
-                                    value: TB.intonation[VB],
-                                    format: Ry,
-                                    onChange: BB => {
-                                      dB({
-                                        intonation: {
-                                          ...TB.intonation,
-                                          [VB]: BB
-                                        }
-                                      })
-                                    }
-                                  }, VB)
-                                }))]
-                              })]
-                            })
-                          }
-                          const Xy = Object.keys(My.e),
-                            Wy = ["Welcome, traveller. The road ahead is long.", "Have you seen my lost sheep anywhere?", "Watch out, the bridge is about to collapse!"];
-
-                          function hy(BB) {
-                            var TB;
-                            const dB = JSON.stringify((0, My.i)(BB));
-                            return null !== (TB = Xy.find((BB => JSON.stringify((0, My.i)(My.e[BB])) === dB))) && void 0 !== TB ? TB : null
-                          }
-
-                          function Cy(BB) {
-                            let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-                            if ("object" !== typeof BB || null === BB) return JSON.stringify(BB);
-                            return `{\n${Object.entries(BB).map((BB=>{let[dB,VB]=BB;return`${TB}    ${dB}: ${Cy(VB,`${TB}    `)},`})).join("\n")}\n${TB}}`
-                          }
-
-                          function Gy(BB, TB, dB) {
-                            const VB = hy(BB),
-                              yB = [`    line: ${JSON.stringify(TB)},`];
-                            return dB && yB.push(`    speakerName: ${JSON.stringify(dB)},`), yB.push("    voice,"), `const voice = ${VB?JSON.stringify(VB):Cy((0,My.i)(BB))}\n\napi.setClientOption(playerId, "dialogue", {\n${yB.join("\n")}\n})`
-                          }
-                          const qy = 400,
-                            xy = 90;
-                          let jy = null;
-
-                          function Ay(BB, TB, dB) {
-                            return jy ??= new AudioContext, jy.resume(), (0, Uy.e)(jy, jy.destination, BB, TB, dB, (() => {}))
-                          }
-
-                          function by() {
-                            const [BB, TB] = (0, VB.useState)(My.e.regular), [dB, yB] = (0, VB.useState)(Wy[0]), [lB, JB] = (0, VB.useState)("Innkeeper"), [YB, gB] = (0, VB.useState)(0), oB = kV((BB => BB.volume)), kB = (0, VB.useRef)(null), LB = (0, VB.useRef)(0), OB = (0, VB.useRef)(0), uB = () => {
-                              var BB;
-                              null === (BB = kB.current) || void 0 === BB || BB.call(kB), kB.current = null
-                            };
-                            (0, VB.useEffect)((() => () => {
-                              var BB;
-                              null === (BB = kB.current) || void 0 === BB || BB.call(kB), window.clearTimeout(LB.current)
-                            }), []);
-                            const EB = (0, VB.useMemo)((() => ({
-                                line: dB,
-                                speakerName: lB || void 0,
-                                voice: BB
-                              })), [dB, lB, BB]),
-                              vB = (0, VB.useRef)(EB);
-                            vB.current = EB;
-                            const iB = hy(BB),
-                              NB = BB => {
-                                window.clearTimeout(LB.current), uB();
-                                const {
-                                  plan: TB,
-                                  synth: dB
-                                } = (0, wy.f)(BB);
-                                dB && (kB.current = Ay(dB, TB.blips, oB)), gB((BB => BB + 1))
-                              },
-                              tB = Gy(BB, dB, lB);
-                            return (0, DB.jsxs)("section", {
-                              className: "DocsPlayground DocsVoicePlayground",
-                              "aria-label": "Voice playground",
-                              children: [(0, DB.jsxs)("header", {
-                                className: "DocsPlaygroundHeader",
-                                children: [(0, DB.jsxs)("div", {
-                                  children: [(0, DB.jsx)("div", {
-                                    className: "DocsPlaygroundTitle",
-                                    children: "Try it: voices"
-                                  }), (0, DB.jsx)("div", {
-                                    className: "DocsPlaygroundHint",
-                                    children: "Start from a preset and change it to suit your character. The line replays as you go."
-                                  })]
-                                }), (0, DB.jsx)(mB, {
-                                  text: tB,
-                                  label: "Copy code"
-                                })]
-                              }), (0, DB.jsxs)("div", {
-                                className: "DocsPlaygroundPresets",
-                                children: [Xy.map((BB => (0, DB.jsx)("button", {
-                                  type: "button",
-                                  className: pB()("DocsVariantChip", {
-                                    Active: iB === BB
-                                  }),
-                                  "aria-pressed": iB === BB,
-                                  onClick: () => {
-                                    (BB => {
-                                      const dB = My.e[BB];
-                                      TB(dB), NB({
-                                        ...EB,
-                                        voice: dB
-                                      })
-                                    })(BB)
-                                  },
-                                  children: BB
-                                }, BB))), !iB && (0, DB.jsx)("span", {
-                                  className: "DocsVariantChip Active DocsVoiceCustomChip",
-                                  children: "custom"
-                                })]
-                              }), (0, DB.jsxs)("div", {
-                                className: "DocsVoiceBody",
-                                children: [(0, DB.jsxs)("div", {
-                                  className: "DocsVoiceScene",
-                                  children: [(0, DB.jsx)("div", {
-                                    className: "DocsVoiceStage",
-                                    children: (0, DB.jsx)(zy.e, {
-                                      display: EB
-                                    }, YB)
-                                  }), (0, DB.jsxs)("form", {
-                                    className: "DocsVoiceLineRow",
-                                    onSubmit: BB => {
-                                      BB.preventDefault(), NB(EB)
-                                    },
-                                    children: [(0, DB.jsx)("input", {
-                                      value: dB,
-                                      "aria-label": "Line",
-                                      placeholder: "Type a line to hear it",
-                                      onChange: BB => {
-                                        yB(BB.target.value)
-                                      }
-                                    }), (0, DB.jsxs)("button", {
-                                      type: "submit",
-                                      className: "DocsVoiceSpeakButton",
-                                      children: [(0, DB.jsx)(HB, {
-                                        name: "play"
-                                      }), (0, DB.jsx)("span", {
-                                        children: "Speak"
-                                      })]
-                                    })]
-                                  }), (0, DB.jsx)("div", {
-                                    className: "DocsVoiceSamples",
-                                    children: Wy.map((BB => (0, DB.jsx)("button", {
-                                      type: "button",
-                                      className: pB()("DocsVariantChip", {
-                                        Active: dB === BB
-                                      }),
-                                      onClick: () => {
-                                        var TB;
-                                        yB(TB = BB), NB({
-                                          ...EB,
-                                          line: TB
-                                        })
-                                      },
-                                      children: BB
-                                    }, BB)))
-                                  }), (0, DB.jsxs)("label", {
-                                    className: "DocsVoiceSpeaker",
-                                    children: [(0, DB.jsx)("span", {
-                                      children: "Speaker"
-                                    }), (0, DB.jsx)("input", {
-                                      value: lB,
-                                      placeholder: "No name",
-                                      onChange: BB => {
-                                        JB(BB.target.value)
-                                      }
-                                    })]
-                                  })]
-                                }), (0, DB.jsx)(Zy, {
-                                  synth: BB,
-                                  onChange: dB => {
-                                    const VB = {
-                                      ...BB,
-                                      ...dB
-                                    };
-                                    TB(VB);
-                                    const yB = {
-                                        ...EB,
-                                        voice: VB
-                                      },
-                                      pB = performance.now();
-                                    if (pB - OB.current >= xy) {
-                                      OB.current = pB, uB();
-                                      const BB = (0, wy.f)(yB).plan.blips[0];
-                                      BB && (kB.current = Ay((0, My.i)(VB), [{
-                                        ...BB,
-                                        atMs: 0
-                                      }], oB))
-                                    }
-                                    window.clearTimeout(LB.current), LB.current = window.setTimeout((() => {
-                                      NB(vB.current)
-                                    }), qy)
-                                  }
-                                })]
-                              }), (0, DB.jsx)(fB, {
-                                code: tB,
-                                lang: "ts"
-                              })]
-                            })
-                          }
-                          var ny = dB(4265);
-                          const ey = /(`{1,2})\s*(.+?)\s*\1(?!`)/g,
-                            Bp = String.raw`(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)`,
-                            Tp = [
-                              [new RegExp(String.raw`([A-Za-z_$][\w$]*)\s*(?:=(?![=>])|:)\s*${Bp}`, "g"), ny.l],
-                              [/\bfunction\s+([A-Za-z_$][\w$]*)\s*\(/g],
-                              [/([A-Za-z_$][\w$]*)\s*\([^()]*\)\s*\{/g, ny.l]
-                            ];
-
-                          function dp(BB) {
-                            return `${BB.pageId}#${BB.anchor}`
-                          }
-                          let Vp, yp, pp;
-
-                          function lp(BB) {
-                            const TB = (0, sB.g)(BB),
-                              dB = new Set;
-                            for (const [, , VB] of TB.matchAll(sB.b)) {
-                              const BB = VB.startsWith("#") ? WB(VB) : null,
-                                TB = BB ? dp({
-                                  pageId: BB.page.id,
-                                  anchor: BB.anchor
-                                }) : null;
-                              null !== TB && (Vp || (Vp = new Set(PB.flatMap((BB => UB(BB.layout) ? ZB(BB).sections.map((TB => dp({
-                                pageId: BB.id,
-                                anchor: TB.heading.anchor
-                              }))) : [])))), Vp).has(TB) && dB.add(TB)
-                            }
-                            for (const [, , VB] of TB.matchAll(ey)) {
-                              const BB = LT(VB);
-                              BB && dB.add(dp(BB))
-                            }
-                            return dB
-                          }
-
-                          function Jp(BB, TB) {
-                            const dB = new Set,
-                              VB = function(BB) {
-                                return BB.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "").replace(/"(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*'/g, '""')
-                              }(BB);
-                            for (const [, yB] of VB.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)) dB.add(yB);
-                            for (const [yB, pB] of Tp)
-                              for (const [, BB] of(0, ny.d)(VB, yB, pB)) TB.has(BB) && dB.add(BB);
-                            return dB
-                          }
-
-                          function Yp(BB, TB, dB, VB) {
-                            const yB = BB.get(TB);
-                            yB ? !VB && yB.some((BB => BB.pageId === dB.pageId)) || yB.push(dB) : BB.set(TB, [dB])
-                          }
-                          const gp = /^[A-Za-z_$][\w$]*$/;
-
-                          function op(BB) {
-                            return gp.test(BB.name) ? BB.name : "options"
-                          }
-
-                          function kp(BB, TB) {
-                            const dB = BB.params.map(op).join(", ");
-                            return TB ? `${BB.name} = (${dB}) => {\n\t\n}` : `api.${BB.name}(${dB})`
-                          }
-
-                          function Lp(BB) {
-                            let {
-                              method: TB,
-                              isCallback: dB
-                            } = BB;
-                            return (0, DB.jsxs)("div", {
-                              className: "DocsSignature",
-                              children: [(0, DB.jsxs)("span", {
-                                className: "DocsSignatureCode",
-                                children: [dB ? (0, DB.jsxs)(DB.Fragment, {
-                                  children: [(0, DB.jsx)("span", {
-                                    className: "DocsSignatureName",
-                                    children: TB.name
-                                  }), (0, DB.jsx)("span", {
-                                    className: "DocsTypePunctuation",
-                                    children: " = ("
-                                  })]
-                                }) : (0, DB.jsxs)(DB.Fragment, {
-                                  children: [(0, DB.jsx)("span", {
-                                    className: "DocsSignatureObject",
-                                    children: "api."
-                                  }), (0, DB.jsx)("span", {
-                                    className: "DocsSignatureName",
-                                    children: TB.name
-                                  }), (0, DB.jsx)("span", {
-                                    className: "DocsTypePunctuation",
-                                    children: "("
-                                  })]
-                                }), TB.params.map(((BB, dB) => (0, DB.jsxs)(VB.Fragment, {
-                                  children: [dB > 0 && (0, DB.jsx)("span", {
-                                    className: "DocsTypePunctuation",
-                                    children: ", "
-                                  }), (0, DB.jsx)("a", {
-                                    className: "DocsSignatureParam",
-                                    href: `#${TB.name}-${op(BB)}`,
-                                    children: BB.name
-                                  })]
-                                }, BB.name))), (0, DB.jsx)("span", {
-                                  className: "DocsTypePunctuation",
-                                  children: dB ? ") => " : ")"
-                                }), dB && !TB.returns && (0, DB.jsx)("span", {
-                                  className: "DocsTypeKeyword",
-                                  children: "void"
-                                })]
-                              }), TB.returns && TB.returns.type && (0, DB.jsxs)("span", {
-                                className: "DocsSignatureReturns",
-                                children: [!dB && (0, DB.jsx)("span", {
-                                  className: "DocsSignatureArrow",
-                                  children: "\u2192"
-                                }), (0, DB.jsx)(MT, {
-                                  type: TB.returns.type
-                                })]
-                              })]
-                            })
-                          }
-
-                          function Op(BB) {
-                            let {
-                              title: TB,
-                              references: dB
-                            } = BB;
-                            const yB = (0, VB.useContext)(OT);
-                            return (0, DB.jsxs)("div", {
-                              className: "DocsCardReferences",
-                              children: [(0, DB.jsx)("span", {
-                                className: "DocsCardReferencesTitle",
-                                children: TB
-                              }), dB.map((BB => (0, DB.jsx)(lB.d, {
-                                to: CB(yB, RB(BB.pageId), BB.anchor),
-                                children: BB.label
-                              }, `${BB.pageId}#${BB.anchor}`)))]
-                            })
-                          }
-
-                          function Dp(BB) {
-                            var TB, dB;
-                            let {
-                              pageId: VB,
-                              anchor: yB
-                            } = BB;
-                            const pB = dp({
-                                pageId: VB,
-                                anchor: yB
-                              }),
-                              lB = null !== (TB = function() {
-                                if (!pp) {
-                                  pp = new Map;
-                                  const VB = new Set(PB.filter((BB => "callbacks" === BB.layout)).flatMap((BB => ZB(BB).sections.map((BB => BB.heading.text)))));
-                                  for (const yB of PB)
-                                    if ("article" === yB.layout || "snippets" === yB.layout)
-                                      for (const pB of (0, sB.n)(ZB(yB)))
-                                        for (const {
-                                            code: lB
-                                          }
-                                          of(0, sB.i)(pB.blocks))
-                                          for (const JB of Jp(lB, VB)) {
-                                            const VB = kT().get(JB);
-                                            if (VB) {
-                                              var BB, TB, dB;
-                                              const lB = {
-                                                pageId: yB.id,
-                                                anchor: null !== (BB = null === (TB = pB.heading) || void 0 === TB ? void 0 : TB.anchor) && void 0 !== BB ? BB : "",
-                                                label: null !== (dB = yB.navTitle) && void 0 !== dB ? dB : yB.title
-                                              };
-                                              Yp(pp, dp(VB), lB, !1)
-                                            }
-                                          }
-                                }
-                                return pp
-                              }().get(pB)) && void 0 !== TB ? TB : [],
-                              JB = null !== (dB = function() {
-                                if (!yp) {
-                                  yp = new Map;
-                                  const BB = RB("changelog");
-                                  for (const TB of ZB(BB).sections) {
-                                    const dB = new Set(TB.blocks.flatMap((BB => [...lp(BB)])));
-                                    for (const VB of dB) {
-                                      const dB = {
-                                        pageId: BB.id,
-                                        anchor: TB.heading.anchor,
-                                        label: TB.heading.text
-                                      };
-                                      Yp(yp, VB, dB, !0)
-                                    }
-                                  }
-                                }
-                                return yp
-                              }().get(pB)) && void 0 !== dB ? dB : [];
-                            return 0 === lB.length && 0 === JB.length ? null : (0, DB.jsxs)("footer", {
-                              className: "DocsCardFooter",
-                              children: [lB.length > 0 && (0, DB.jsx)(Op, {
-                                title: "Used in",
-                                references: lB
-                              }), JB.length > 0 && (0, DB.jsx)(Op, {
-                                title: "Changelog",
-                                references: JB
-                              })]
-                            })
-                          }
-
-                          function Hp(BB) {
-                            let {
-                              method: TB,
-                              pageId: dB,
-                              anchor: VB,
-                              isCallback: yB
-                            } = BB;
-                            const pB = yB ? void 0 : JT().get(TB.name),
-                              lB = TB.description.length > 0 || null === pB || void 0 === pB || !pB.description ? TB.description : (0, sB.s)(pB.description);
-                            return (0, DB.jsxs)("article", {
-                              className: "DocsCard DocsMethodCard",
-                              children: [(0, DB.jsxs)("header", {
-                                className: "DocsCardHeader",
-                                children: [(0, DB.jsx)(gd, {
-                                  level: 2,
-                                  text: TB.name,
-                                  anchor: VB,
-                                  className: "DocsCardTitle"
-                                }), (0, DB.jsx)(mB, {
-                                  text: kp(TB, yB),
-                                  label: yB ? "Copy handler" : "Copy call",
-                                  className: "DocsCardCopy"
-                                })]
-                              }), (0, DB.jsx)(Lp, {
-                                method: TB,
-                                isCallback: yB
-                              }), pB && null !== pB.deprecation && (0, DB.jsxs)("aside", {
-                                className: "DocsCallout warning DocsDeprecation",
-                                children: [(0, DB.jsx)("strong", {
-                                  children: "Deprecated"
-                                }), pB.deprecation && (0, DB.jsxs)(DB.Fragment, {
-                                  children: [": ", (0, DB.jsx)(tT, {
-                                    text: (JB = pB.deprecation, (0, ny.x)(JB, /[a-z][\w$]*[A-Z][\w$]*\b/g, (0, ny.j)("`\\w"), (BB => {
-                                      let [TB] = BB;
-                                      return kT().has(TB) ? `\`${TB}\`` : TB
-                                    })))
-                                  })]
-                                })]
-                              }), lB.length > 0 && (0, DB.jsx)("div", {
-                                className: "DocsProse DocsCardBody",
-                                children: (0, DB.jsx)(Od, {
-                                  blocks: lB
-                                })
-                              }), TB.params.length > 0 && (0, DB.jsxs)("section", {
-                                className: "DocsCardPart",
-                                children: [(0, DB.jsx)("h3", {
-                                  className: "DocsCardPartTitle",
-                                  children: "Parameters"
-                                }), (0, DB.jsx)("dl", {
-                                  className: "DocsParamList",
-                                  children: TB.params.map((BB => (0, DB.jsxs)("div", {
-                                    id: `${TB.name}-${op(BB)}`,
-                                    className: "DocsParam",
-                                    children: [(0, DB.jsxs)("dt", {
-                                      children: [(0, DB.jsx)("code", {
-                                        className: "DocsParamName",
-                                        children: BB.name
-                                      }), (0, DB.jsx)(MT, {
-                                        type: BB.type
-                                      })]
-                                    }), BB.description && (0, DB.jsx)("dd", {
-                                      children: (0, DB.jsx)(tT, {
-                                        text: BB.description
-                                      })
-                                    })]
-                                  }, BB.name)))
-                                })]
-                              }), TB.returns && (TB.returns.type || TB.returns.description.length > 0) && (0, DB.jsxs)("section", {
-                                className: "DocsCardPart",
-                                children: [(0, DB.jsx)("h3", {
-                                  className: "DocsCardPartTitle",
-                                  children: "Returns"
-                                }), (0, DB.jsxs)("div", {
-                                  className: "DocsReturns",
-                                  children: [TB.returns.type && (0, DB.jsx)(MT, {
-                                    type: TB.returns.type
-                                  }), TB.returns.description.length > 0 && (0, DB.jsx)("div", {
-                                    className: "DocsProse",
-                                    children: (0, DB.jsx)(Od, {
-                                      blocks: TB.returns.description
-                                    })
-                                  })]
-                                })]
-                              }), (0, DB.jsx)(Dp, {
-                                pageId: dB,
-                                anchor: VB
-                              })]
-                            });
-                            var JB
-                          }
-
-                          function Ep(BB) {
-                            var TB;
-                            return null !== BB.defaultValue && "undefined" !== BB.defaultValue ? BB.defaultValue : null !== (TB = BB.example) && void 0 !== TB ? TB : "value"
-                          }
-
-                          function vp(BB) {
-                            let {
-                              setting: TB,
-                              pageId: dB,
-                              anchor: VB,
-                              setterSnippet: yB
-                            } = BB;
-                            const pB = null === TB.defaultValue ? null : ET(TB.defaultValue);
-                            return (0, DB.jsxs)("article", {
-                              className: "DocsCard DocsSettingCard",
-                              children: [(0, DB.jsxs)("header", {
-                                className: "DocsCardHeader",
-                                children: [(0, DB.jsx)(gd, {
-                                  level: 2,
-                                  text: TB.name,
-                                  anchor: VB,
-                                  className: "DocsCardTitle"
-                                }), (0, DB.jsx)(mB, {
-                                  text: yB(TB.name, Ep(TB)),
-                                  label: "Copy setter",
-                                  className: "DocsCardCopy"
-                                })]
-                              }), (0, DB.jsxs)("dl", {
-                                className: "DocsSettingFacts",
-                                children: [(0, DB.jsxs)("div", {
-                                  children: [(0, DB.jsx)("dt", {
-                                    children: "Type"
-                                  }), (0, DB.jsx)("dd", {
-                                    children: (0, DB.jsx)(MT, {
-                                      type: TB.type
-                                    })
-                                  })]
-                                }), null !== TB.defaultValue && (0, DB.jsxs)("div", {
-                                  children: [(0, DB.jsx)("dt", {
-                                    children: "Default"
-                                  }), (0, DB.jsx)("dd", {
-                                    children: (0, DB.jsxs)("code", {
-                                      className: "DocsInlineCode DocsDefaultValue",
-                                      children: [pB && (0, DB.jsx)(vT, {
-                                        colour: pB
-                                      }), TB.defaultValue]
-                                    })
-                                  })]
-                                }), null !== TB.example && (0, DB.jsxs)("div", {
-                                  children: [(0, DB.jsx)("dt", {
-                                    children: "Example"
-                                  }), (0, DB.jsx)("dd", {
-                                    children: (0, DB.jsx)("code", {
-                                      className: "DocsInlineCode",
-                                      children: TB.example
-                                    })
-                                  })]
-                                })]
-                              }), TB.description.length > 0 && (0, DB.jsx)("div", {
-                                className: "DocsProse DocsCardBody",
-                                children: (0, DB.jsx)(Od, {
-                                  blocks: TB.description
-                                })
-                              }), (0, DB.jsx)(Dp, {
-                                pageId: dB,
-                                anchor: VB
-                              })]
-                            })
-                          }
-
-                          function mp(BB) {
-                            let {
-                              section: TB
-                            } = BB;
-                            return (0, DB.jsxs)("article", {
-                              className: "DocsCard DocsSnippetCard",
-                              children: [(0, DB.jsx)(gd, {
-                                level: 2,
-                                text: TB.heading.text,
-                                anchor: TB.heading.anchor,
-                                className: "DocsCardTitle"
-                              }), (0, DB.jsx)("div", {
-                                className: "DocsProse",
-                                children: (0, DB.jsx)(Od, {
-                                  blocks: TB.blocks
-                                })
-                              })]
-                            })
-                          }
-
-                          function ip(BB) {
-                            let {
-                              section: TB
-                            } = BB;
-                            return (0, DB.jsxs)("section", {
-                              className: "DocsProse DocsArticleSection",
-                              children: [(0, DB.jsx)(gd, {
-                                level: TB.heading.level,
-                                text: TB.heading.text,
-                                anchor: TB.heading.anchor
-                              }), (0, DB.jsx)(Od, {
-                                blocks: TB.blocks
-                              })]
-                            })
-                          }
-                          const Np = {
-                            methods: "methods",
-                            callbacks: "callbacks",
-                            settings: "settings",
-                            changelog: "updates",
-                            snippets: "snippets",
-                            article: "sections"
-                          };
-
-                          function tp(BB) {
-                            let {
-                              page: TB,
-                              section: dB
-                            } = BB;
-                            if ("methods" === TB.layout || "callbacks" === TB.layout) return (0, DB.jsx)(Hp, {
-                              method: sd(dB),
-                              pageId: TB.id,
-                              anchor: dB.heading.anchor,
-                              isCallback: "callbacks" === TB.layout
-                            });
-                            if ("settings" === TB.layout) {
-                              const BB = function(BB) {
-                                const TB = {
-                                  name: BB.heading.text,
-                                  type: "",
-                                  defaultValue: null,
-                                  example: null,
-                                  description: []
-                                };
-                                for (const VB of BB.blocks) {
-                                  var dB;
-                                  if (fd(VB)) continue;
-                                  const BB = "paragraph" === VB.kind ? VB.text.match(Md) : null;
-                                  if (!BB) {
-                                    TB.description.push(VB);
-                                    continue
-                                  }
-                                  const yB = null !== (dB = td(BB[2])) && void 0 !== dB ? dB : BB[2];
-                                  "Type" === BB[1] ? TB.type = yB : "Default" === BB[1] ? TB.defaultValue = yB : "" !== yB && (TB.example = yB)
-                                }
-                                return TB.type ? TB : null
-                              }(dB);
-                              if (BB) return (0, DB.jsx)(vp, {
-                                setting: BB,
-                                pageId: TB.id,
-                                anchor: dB.heading.anchor,
-                                setterSnippet: TB.setterSnippet
-                              })
-                            }
-                            return "snippets" === TB.layout ? (0, DB.jsx)(mp, {
-                              section: dB
-                            }) : "changelog" === TB.layout ? (0, DB.jsxs)("section", {
-                              className: "DocsChangelogEntry",
-                              children: [(0, DB.jsx)("div", {
-                                className: "DocsChangelogDate",
-                                children: (0, DB.jsx)(gd, {
-                                  level: 2,
-                                  text: dB.heading.text,
-                                  anchor: dB.heading.anchor
-                                })
-                              }), (0, DB.jsx)("div", {
-                                className: "DocsProse DocsChangelogBody",
-                                children: (0, DB.jsx)(Od, {
-                                  blocks: zd(dB.blocks)
-                                })
-                              })]
-                            }) : TB.gallery ? (0, DB.jsxs)("section", {
-                              className: "DocsProse DocsArticleSection",
-                              children: [(0, DB.jsx)(gd, {
-                                level: dB.heading.level,
-                                text: dB.heading.text,
-                                anchor: dB.heading.anchor
-                              }), (0, DB.jsx)(wV, {
-                                kind: TB.gallery,
-                                content: ZB(TB),
-                                blocks: dB.blocks
-                              })]
-                            }) : (0, DB.jsx)(ip, {
-                              section: dB
-                            })
-                          }
-
-                          function fp(BB) {
-                            let {
-                              page: TB,
-                              onTocChange: dB
-                            } = BB;
-                            const yB = ZB(TB),
-                              [pB, lB] = (0, VB.useState)(""),
-                              JB = "article" !== TB.layout,
-                              YB = Hd(TB.gallery) ? TB.gallery : null,
-                              gB = null !== YB,
-                              oB = pB.trim().toLowerCase(),
-                              kB = (0, VB.useRef)(null),
-                              LB = (0, VB.useCallback)((BB => {
-                                var TB;
-                                null === (TB = kB.current) || void 0 === TB || TB.preview(BB)
-                              }), []),
-                              OB = (0, VB.useMemo)((() => {
-                                if (!TB.hasParticlePlayground) return [];
-                                const BB = Kd(yB.intro).find((BB => "names" === BB.kind && !BB.names.some((BB => null !== Zd(BB.name)))));
-                                return "names" === (null === BB || void 0 === BB ? void 0 : BB.kind) ? BB.names.map((BB => BB.name)) : []
-                              }), [TB, yB]),
-                              uB = (0, VB.useMemo)((() => {
-                                if (!TB.hasTextPlayground) return [];
-                                const BB = yB.sections.flatMap((BB => BB.blocks.flatMap((BB => {
-                                  var TB;
-                                  return (null !== (TB = Fd(BB)) && void 0 !== TB ? TB : []).flatMap((BB => aT(BB.name) ? [BB.name] : []))
-                                }))));
-                                return [...new Set(BB)]
-                              }), [TB, yB]),
-                              HB = (0, VB.useMemo)((() => oB ? yB.sections.filter((BB => function(BB, TB) {
-                                return !!BB.heading.text.toLowerCase().includes(TB) || BB.blocks.some((BB => (0, sB.g)(BB).toLowerCase().includes(TB)))
-                              }(BB, oB))) : yB.sections), [yB, oB]),
-                              EB = (0, VB.useMemo)((() => function(BB, TB) {
-                                return "article" !== BB.layout ? TB.map((BB => ({
-                                  anchor: BB.heading.anchor,
-                                  text: BB.heading.text,
-                                  level: 2
-                                }))) : TB.flatMap((BB => {
-                                  const TB = BB.blocks.flatMap((BB => "heading" === BB.kind && 3 === BB.level ? [{
-                                    anchor: BB.anchor,
-                                    text: BB.text,
-                                    level: 3
-                                  }] : []));
-                                  return [{
-                                    anchor: BB.heading.anchor,
-                                    text: BB.heading.text,
-                                    level: 2
-                                  }, ...TB]
-                                }))
-                              }(TB, HB)), [TB, HB]);
-                            return (0, VB.useEffect)((() => {
-                              dB(EB)
-                            }), [EB, dB]), (0, DB.jsxs)("article", {
-                              className: "DocsPage",
-                              children: [(0, DB.jsxs)("header", {
-                                className: "DocsPageHeader",
-                                children: [(0, DB.jsx)("h1", {
-                                  className: "DocsPageTitle",
-                                  children: yB.title || TB.title
-                                }), (0, DB.jsx)("p", {
-                                  className: "DocsPageSummary",
-                                  children: TB.summary
-                                }), (0, DB.jsx)(jV, {
-                                  page: TB
-                                }), JB && (0, DB.jsx)("div", {
-                                  className: "DocsPageStats",
-                                  children: (0, DB.jsxs)("span", {
-                                    children: [(0, DB.jsx)("strong", {
-                                      children: yB.sections.length
-                                    }), " ", Np[TB.layout]]
-                                  })
-                                })]
-                              }), "" === TB.slug && (0, DB.jsx)(FV, {}), YB && (0, DB.jsx)(cV, {
-                                kind: YB
-                              }, YB), TB.hasParticlePlayground && (0, DB.jsx)(Yy, {
-                                ref: kB,
-                                textures: OB
-                              }), !gB && yB.intro.length > 0 && (0, DB.jsx)("div", {
-                                className: "DocsProse DocsPageIntro",
-                                children: TB.gallery ? (0, DB.jsx)(vV.Provider, {
-                                  value: TB.hasParticlePlayground ? LB : null,
-                                  children: (0, DB.jsx)(wV, {
-                                    kind: TB.gallery,
-                                    content: yB,
-                                    blocks: yB.intro
-                                  })
-                                }) : (0, DB.jsx)(Od, {
-                                  blocks: zd(yB.intro)
-                                })
-                              }), TB.hasTextPlayground && (0, DB.jsx)(sy, {
-                                fontAwesomeIcons: uB
-                              }), TB.hasVoicePlayground && (0, DB.jsx)(by, {}), TB.childPageIds && (0, DB.jsx)(FV, {
-                                cards: TB.childPageIds.map((BB => ({
-                                  pageId: BB
-                                }))),
-                                label: TB.title
-                              }), JB && (0, DB.jsx)(md, {
-                                className: "DocsFilterBar",
-                                value: pB,
-                                placeholder: `Filter ${yB.sections.length} ${Np[TB.layout]}\u2026`,
-                                label: `Filter ${Np[TB.layout]}`,
-                                onChange: lB,
-                                count: oB ? {
-                                  visible: HB.length,
-                                  total: yB.sections.length
-                                } : null
-                              }), !gB && (0, DB.jsxs)("div", {
-                                className: `DocsSections Layout-${TB.layout}`,
-                                children: [HB.map((BB => (0, DB.jsx)(tp, {
-                                  page: TB,
-                                  section: BB
-                                }, BB.heading.anchor))), 0 === HB.length && (0, DB.jsxs)("p", {
-                                  className: "DocsEmpty",
-                                  children: ["No ", Np[TB.layout], " match \u201c", pB, "\u201d."]
-                                })]
-                              })]
-                            })
-                          }
-                          const sp = /^(\d+)(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})$/;
-
-                          function Mp(BB) {
-                            let {
-                              entry: TB,
-                              isActive: dB,
-                              onNavigate: VB,
-                              label: yB,
-                              children: lB
-                            } = BB;
-                            return (0, DB.jsx)("a", {
-                              href: `#${TB.anchor}`,
-                              "aria-label": yB,
-                              className: pB()(`Level${TB.level}`, {
-                                Active: dB
-                              }),
-                              "aria-current": dB ? "location" : void 0,
-                              onClick: BB => {
-                                BB.preventDefault(), VB(TB.anchor)
-                              },
-                              children: lB
-                            })
-                          }
-
-                          function zp(BB) {
-                            let {
-                              toc: TB,
-                              activeAnchor: dB,
-                              onNavigate: yB
-                            } = BB;
-                            const lB = Math.max(0, TB.findIndex((BB => BB.anchor === dB))),
-                              JB = (0, VB.useRef)(null),
-                              YB = (0, VB.useRef)(!1);
-                            (0, VB.useEffect)((() => {
-                              var BB, dB;
-                              const VB = null === (BB = JB.current) || void 0 === BB ? void 0 : BB.closest(".DocsToc"),
-                                yB = null === (dB = JB.current) || void 0 === dB ? void 0 : dB.querySelector(".DocsTimelineNotch.Active");
-                              if (!VB || !yB) return;
-                              let pB = 0;
-                              if (lB === TB.length - 1) pB = VB.scrollHeight;
-                              else if (lB > 0) {
-                                const BB = VB.getBoundingClientRect(),
-                                  TB = yB.getBoundingClientRect();
-                                pB = VB.scrollTop + TB.top + TB.height / 2 - (BB.top + VB.clientHeight / 2)
-                              }
-                              VB.scrollTo({
-                                top: pB,
-                                behavior: YB.current ? "smooth" : "auto"
-                              }), YB.current = !0
-                            }), [lB, TB.length]);
-                            const gB = [];
-                            return TB.forEach(((BB, TB) => {
-                              var dB, VB, yB;
-                              const pB = function(BB) {
-                                  const TB = BB.trim().match(sp);
-                                  return TB ? {
-                                    day: TB[1],
-                                    month: `${TB[2]} ${TB[3]}`
-                                  } : null
-                                }(BB.text),
-                                lB = null !== (dB = null === pB || void 0 === pB ? void 0 : pB.month) && void 0 !== dB ? dB : null;
-                              null !== lB && (null === (VB = gB.at(-1)) || void 0 === VB ? void 0 : VB.month) === lB || gB.push({
-                                month: lB,
-                                entries: []
-                              }), gB.at(-1).entries.push({
-                                entry: BB,
-                                day: null !== (yB = null === pB || void 0 === pB ? void 0 : pB.day) && void 0 !== yB ? yB : null,
-                                index: TB
-                              })
-                            })), (0, DB.jsx)("ol", {
-                              ref: JB,
-                              className: "DocsTimeline",
-                              children: gB.map((BB => {
-                                let {
-                                  month: TB,
-                                  entries: dB
-                                } = BB;
-                                return (0, DB.jsxs)("li", {
-                                  className: "DocsTimelineMonth",
-                                  children: [TB && (0, DB.jsx)("span", {
-                                    className: "DocsTimelineMonthName",
-                                    children: TB
-                                  }), (0, DB.jsx)("ol", {
-                                    children: dB.map((BB => {
-                                      let {
-                                        entry: TB,
-                                        day: dB,
-                                        index: VB
-                                      } = BB;
-                                      return (0, DB.jsx)("li", {
-                                        className: pB()("DocsTimelineNotch", {
-                                          Passed: VB < lB,
-                                          Active: VB === lB
-                                        }),
-                                        children: (0, DB.jsx)(Mp, {
-                                          entry: TB,
-                                          isActive: VB === lB,
-                                          onNavigate: yB,
-                                          label: TB.text,
-                                          children: (0, DB.jsx)("span", {
-                                            className: "DocsTimelineDay",
-                                            children: null !== dB && void 0 !== dB ? dB : TB.text
-                                          })
-                                        })
-                                      }, TB.anchor)
-                                    }))
-                                  })]
-                                }, dB[0].entry.anchor)
-                              }))
-                            })
-                          }
-
-                          function wp(BB) {
-                            let {
-                              isChangelog: TB,
-                              toc: dB,
-                              activeAnchor: VB,
-                              onNavigate: yB
-                            } = BB;
-                            return 0 === dB.length ? null : (0, DB.jsxs)(DB.Fragment, {
-                              children: [(0, DB.jsx)("div", {
-                                className: "DocsTocTitle",
-                                children: TB ? "Updates" : "On this page"
-                              }), TB ? (0, DB.jsx)(zp, {
-                                toc: dB,
-                                activeAnchor: VB,
-                                onNavigate: yB
-                              }) : (0, DB.jsx)("ul", {
-                                children: dB.map((BB => (0, DB.jsx)("li", {
-                                  children: (0, DB.jsx)(Mp, {
-                                    entry: BB,
-                                    isActive: BB.anchor === VB,
-                                    onNavigate: yB,
-                                    children: BB.text.replace(/`/g, "")
-                                  })
-                                }, BB.anchor)))
-                              })]
-                            })
-                          }
-                          const Up = {
-                              methods: "Method",
-                              callbacks: "Callback",
-                              settings: "Setting",
-                              changelog: "Update",
-                              snippets: "Snippet",
-                              article: "Section"
-                            },
-                            Fp = {
-                              icons: "Icon",
-                              particles: "Particle",
-                              sounds: "Sound",
-                              skins: "Skin",
-                              blocks: "Block",
-                              items: "Item"
-                            },
-                            Kp = 20,
-                            rp = 10,
-                            Ip = 40,
-                            cp = 120;
-                          let Sp;
-
-                          function Pp(BB) {
-                            const TB = BB.gallery;
-                            if (!TB) return [];
-                            if (Hd(TB)) return function(BB) {
-                              return vd(BB).entries.map((BB => BB.name))
-                            }(TB).map((dB => ({
-                              page: BB,
-                              anchor: Id(TB, dB),
-                              title: dB,
-                              kind: Fp[TB],
-                              text: "",
-                              listedUnder: BB.title
-                            })));
-                            const dB = ZB(BB);
-                            return (0, sB.n)(dB).flatMap((VB => {
-                              const yB = VB.heading ? `${BB.title} \u203a ${VB.heading.text.replace(/\s*\(\d+[^)]*\)$/,"")}` : BB.title;
-                              return Sd(TB, dB, VB.blocks).flatMap((dB => "names" !== dB.kind ? [] : dB.names.map((VB => {
-                                const pB = dB.isSongs ? "Song" : Fp[TB];
-                                return {
-                                  page: BB,
-                                  anchor: VB.anchor,
-                                  title: VB.name,
-                                  kind: pB,
-                                  text: "",
-                                  listedUnder: yB
-                                }
-                              }))))
-                            }))
-                          }
-
-                          function Qp(BB, TB, dB) {
-                            const VB = BB.title.toLowerCase();
-                            let yB = 0;
-                            if (VB === TB) yB = 100;
-                            else if (VB.startsWith(TB)) yB = 80;
-                            else if (VB.includes(TB)) yB = 60;
-                            else if (dB.every((BB => VB.includes(BB)))) yB = 45;
-                            else {
-                              if (!BB.text.toLowerCase().includes(TB)) return 0;
-                              yB = 20
-                            }
-                            return yB - Math.min(VB.length / 10, 9) + ("Page" === BB.kind ? 8 : "Method" === BB.kind ? 3 : 0) - (BB.listedUnder ? Kp : 0)
-                          }
-
-                          function Rp(BB, TB) {
-                            const dB = BB.toLowerCase().indexOf(TB),
-                              VB = Math.max(0, dB - cp / 3);
-                            return `${VB>0?"\u2026":""}${BB.slice(VB,VB+cp)}${VB+cp<BB.length?"\u2026":""}`
-                          }
-
-                          function ap(BB) {
-                            let {
-                              text: TB,
-                              query: dB
-                            } = BB;
-                            const VB = dB ? TB.toLowerCase().indexOf(dB) : -1;
-                            return -1 === VB ? (0, DB.jsx)(DB.Fragment, {
-                              children: TB
-                            }) : (0, DB.jsxs)(DB.Fragment, {
-                              children: [TB.slice(0, VB), (0, DB.jsx)("mark", {
-                                children: TB.slice(VB, VB + dB.length)
-                              }), TB.slice(VB + dB.length)]
-                            })
-                          }
-
-                          function Zp(BB) {
-                            let {
-                              basePath: TB,
-                              onClose: dB
-                            } = BB;
-                            const yB = (0, JB.q)(),
-                              [lB, YB] = (0, VB.useState)(""),
-                              [gB, oB] = (0, VB.useState)(0),
-                              kB = (0, VB.useRef)(null),
-                              LB = (0, VB.useRef)(null),
-                              OB = lB.trim().toLowerCase(),
-                              uB = (0, VB.useMemo)((() => {
-                                const BB = (Sp || (Sp = PB.flatMap((BB => {
-                                  const TB = ZB(BB);
-                                  return [{
-                                    page: BB,
-                                    anchor: "",
-                                    title: BB.title,
-                                    kind: "Page",
-                                    text: BB.summary
-                                  }, ...TB.sections.flatMap((TB => {
-                                    const dB = TB.blocks.filter((BB => "paragraph" === BB.kind)).map(sB.g).join(" ").replace(/[`*]/g, ""),
-                                      VB = {
-                                        page: BB,
-                                        anchor: TB.heading.anchor,
-                                        title: TB.heading.text.replace(/`/g, ""),
-                                        kind: Up[BB.layout],
-                                        text: dB
-                                      },
-                                      yB = TB.blocks.flatMap((TB => "article" === BB.layout && "heading" === TB.kind && 3 === TB.level ? [{
-                                        page: BB,
-                                        anchor: TB.anchor,
-                                        title: TB.text.replace(/`/g, ""),
-                                        kind: "Section",
-                                        text: VB.title
-                                      }] : []));
-                                    return [VB, ...yB]
-                                  })), ...Pp(BB)]
-                                }))), Sp);
-                                if (!OB) return BB.filter((BB => "Page" === BB.kind));
-                                const TB = OB.split(/\s+/);
-                                let dB = 0;
-                                return BB.map((BB => ({
-                                  entry: BB,
-                                  score: Qp(BB, OB, TB)
-                                }))).filter((BB => BB.score > 0)).sort(((BB, TB) => TB.score - BB.score)).filter((BB => !BB.entry.listedUnder || (dB++, dB <= rp))).slice(0, Ip).map((BB => BB.entry))
-                              }), [OB]);
-                            (0, VB.useEffect)((() => {
-                              oB(0)
-                            }), [OB]), (0, VB.useEffect)((() => {
-                              const BB = document.activeElement instanceof HTMLElement ? document.activeElement : null;
-                              return () => {
-                                null === BB || void 0 === BB || BB.focus()
-                              }
-                            }), []), (0, VB.useEffect)((() => {
-                              var BB, TB;
-                              null === (BB = kB.current) || void 0 === BB || null === (TB = BB.querySelector(".Active")) || void 0 === TB || TB.scrollIntoView({
-                                block: "nearest"
-                              })
-                            }), [gB]);
-                            const EB = BB => {
-                              yB(CB(TB, BB.page, BB.anchor)), dB()
-                            };
-                            return (0, DB.jsx)("div", {
-                              className: "DocsSearchOverlay",
-                              onMouseDown: BB => {
-                                BB.target === BB.currentTarget && dB()
-                              },
-                              children: (0, DB.jsxs)("div", {
-                                className: "DocsSearchDialog",
-                                role: "dialog",
-                                "aria-modal": "true",
-                                "aria-label": "Search the docs",
-                                onMouseDown: BB => {
-                                  BB.target !== LB.current && BB.preventDefault()
-                                },
-                                onKeyDown: BB => {
-                                  if ("Escape" === BB.key) dB();
-                                  else if ("Tab" === BB.key) {
-                                    var TB;
-                                    BB.preventDefault(), null === (TB = LB.current) || void 0 === TB || TB.focus()
-                                  }
-                                },
-                                children: [(0, DB.jsxs)("div", {
-                                  className: "DocsSearchInputRow",
-                                  children: [(0, DB.jsx)(HB, {
-                                    name: "magnifying-glass"
-                                  }), (0, DB.jsx)("input", {
-                                    ref: LB,
-                                    autoFocus: !0,
-                                    value: lB,
-                                    placeholder: "Search methods, callbacks, settings and guides\u2026",
-                                    "aria-label": "Search the docs",
-                                    "aria-controls": "DocsSearchResults",
-                                    "aria-activedescendant": uB.length > 0 ? `DocsSearchResult-${gB}` : void 0,
-                                    onChange: BB => {
-                                      YB(BB.target.value)
-                                    },
-                                    onKeyDown: BB => {
-                                      if ("ArrowDown" === BB.key || "ArrowUp" === BB.key) {
-                                        BB.preventDefault();
-                                        const TB = "ArrowDown" === BB.key ? 1 : -1;
-                                        oB((gB + TB + uB.length) % Math.max(uB.length, 1))
-                                      } else "Enter" === BB.key && uB[gB] && EB(uB[gB])
-                                    }
-                                  }), (0, DB.jsx)("kbd", {
-                                    children: "Esc"
-                                  })]
-                                }), (0, DB.jsxs)("ul", {
-                                  id: "DocsSearchResults",
-                                  ref: kB,
-                                  className: "DocsSearchResults",
-                                  role: "listbox",
-                                  children: [!OB && (0, DB.jsx)("li", {
-                                    className: "DocsSearchHint",
-                                    children: "Jump to a page"
-                                  }), uB.map(((BB, TB) => {
-                                    var dB;
-                                    return (0, DB.jsxs)("li", {
-                                      id: `DocsSearchResult-${TB}`,
-                                      role: "option",
-                                      "aria-selected": TB === gB,
-                                      className: pB()("DocsSearchResult", {
-                                        Active: TB === gB
-                                      }),
-                                      onMouseMove: () => {
-                                        oB(TB)
-                                      },
-                                      onClick: () => {
-                                        EB(BB)
-                                      },
-                                      children: [(0, DB.jsx)(HB, {
-                                        name: BB.page.icon
-                                      }), (0, DB.jsxs)("div", {
-                                        className: "DocsSearchResultText",
-                                        children: [(0, DB.jsx)("div", {
-                                          className: "DocsSearchResultTitle",
-                                          children: (0, DB.jsx)(ap, {
-                                            text: BB.title,
-                                            query: OB
-                                          })
-                                        }), BB.text && (0, DB.jsx)("div", {
-                                          className: "DocsSearchResultSnippet",
-                                          children: (0, DB.jsx)(ap, {
-                                            text: Rp(BB.text, OB),
-                                            query: OB
-                                          })
-                                        })]
-                                      }), (0, DB.jsx)("span", {
-                                        className: "DocsSearchResultMeta",
-                                        children: "Page" === BB.kind ? "Page" : null !== (dB = BB.listedUnder) && void 0 !== dB ? dB : `${BB.kind} \xb7 ${BB.page.title}`
-                                      })]
-                                    }, `${BB.page.id}#${BB.anchor}`)
-                                  })), OB && 0 === uB.length && (0, DB.jsxs)("li", {
-                                    className: "DocsSearchHint",
-                                    children: ["Nothing matches \u201c", lB, "\u201d."]
-                                  })]
-                                })]
-                              })
-                            })
-                          }
-
-                          function Xp(BB, TB) {
-                            if (TB < 10) return `${BB.toFixed(1)}s`;
-                            const dB = Math.floor(BB);
-                            return `${Math.floor(dB/60)}:${String(dB%60).padStart(2,"0")}`
-                          }
-
-                          function Wp() {
-                            const BB = kV((BB => BB.track)),
-                              TB = kV((BB => BB.volume)),
-                              [dB, yB] = (0, VB.useState)(0),
-                              lB = (0, VB.useRef)(dV);
-                            if ((0, VB.useEffect)((() => {
-                                if (!BB) return;
-                                if (yB(uV()), "playing" !== BB.status) return;
-                                let TB = 0;
-                                const dB = () => {
-                                  yB(uV()), TB = requestAnimationFrame(dB)
-                                };
-                                return TB = requestAnimationFrame(dB), () => {
-                                  cancelAnimationFrame(TB)
-                                }
-                              }), [BB]), !BB) return null;
-                            const JB = "paused" !== BB.status,
-                              YB = Math.min(dB, BB.duration);
-                            return (0, DB.jsx)("div", {
-                              className: "DocsSoundPlayerDock",
-                              children: (0, DB.jsxs)("section", {
-                                className: "DocsSoundPlayer",
-                                "aria-label": "Sound player",
-                                children: [(0, DB.jsx)("button", {
-                                  type: "button",
-                                  className: "DocsSoundPlayerToggle",
-                                  "aria-label": JB ? `Pause ${BB.name}` : `Play ${BB.name}`,
-                                  onClick: DV,
-                                  children: (0, DB.jsx)(HB, {
-                                    name: JB ? "pause" : "play"
-                                  })
-                                }), (0, DB.jsxs)("div", {
-                                  className: "DocsSoundPlayerTrack",
-                                  children: [(0, DB.jsxs)("div", {
-                                    className: "DocsSoundPlayerTitle",
-                                    children: [(0, DB.jsx)("code", {
-                                      children: BB.name
-                                    }), (0, DB.jsx)("span", {
-                                      children: BB.isSong ? "Song" : "Sound"
-                                    })]
-                                  }), (0, DB.jsxs)("div", {
-                                    className: "DocsSoundPlayerScrubber",
-                                    children: [(0, DB.jsx)("span", {
-                                      children: Xp(YB, BB.duration)
-                                    }), (0, DB.jsx)("input", {
-                                      type: "range",
-                                      min: 0,
-                                      max: BB.duration || 1,
-                                      step: .01,
-                                      value: YB,
-                                      disabled: 0 === BB.duration,
-                                      "aria-label": "Position",
-                                      "aria-valuetext": `${Xp(YB,BB.duration)} of ${Xp(BB.duration,BB.duration)}`,
-                                      onChange: BB => {
-                                        const TB = Number(BB.target.value);
-                                        ! function(BB) {
-                                          var TB;
-                                          JV = BB, null === (TB = pV) || void 0 === TB || TB.seek(BB)
-                                        }(TB), yB(TB)
-                                      }
-                                    }), (0, DB.jsx)("span", {
-                                      children: BB.duration > 0 ? Xp(BB.duration, BB.duration) : "\u2013"
-                                    })]
-                                  })]
-                                }), (0, DB.jsxs)("div", {
-                                  className: "DocsSoundPlayerVolume",
-                                  children: [(0, DB.jsx)("button", {
-                                    type: "button",
-                                    "aria-label": 0 === TB ? "Unmute" : "Mute",
-                                    onClick: () => {
-                                      0 === TB ? HV(lB.current) : (lB.current = TB, HV(0))
-                                    },
-                                    children: (0, DB.jsx)(HB, {
-                                      name: "volume",
-                                      className: pB()({
-                                        Muted: 0 === TB
-                                      })
-                                    })
-                                  }), (0, DB.jsx)("input", {
-                                    type: "range",
-                                    min: 0,
-                                    max: 1,
-                                    step: .01,
-                                    value: TB,
-                                    "aria-label": "Volume",
-                                    onChange: BB => {
-                                      HV(Number(BB.target.value))
-                                    }
-                                  })]
-                                }), (0, DB.jsx)("button", {
-                                  type: "button",
-                                  className: "DocsSoundPlayerClose",
-                                  "aria-label": "Close the player",
-                                  onClick: () => {
-                                    var TB;
-                                    null === (TB = document.querySelector(`[data-docs-track="${CSS.escape(VV(BB.name,BB.isSong))}"]`)) || void 0 === TB || TB.focus(), EV()
-                                  },
-                                  children: (0, DB.jsx)(HB, {
-                                    name: "cross"
-                                  })
-                                })]
-                              })
-                            })
-                          }
-                          var hp = dB(33);
-                          const Cp = "docsTheme",
-                            Gp = window.matchMedia("(prefers-color-scheme: light)");
-
-                          function qp(BB) {
-                            let {
-                              theme: TB,
-                              onChange: dB
-                            } = BB;
-                            const VB = "dark" === TB ? "light" : "dark";
-                            return (0, DB.jsx)("button", {
-                              type: "button",
-                              className: "DocsIconButton DocsThemeToggle",
-                              "aria-label": `Switch to ${VB} theme`,
-                              title: `Switch to ${VB} theme`,
-                              onClick: () => {
-                                dB(VB)
-                              },
-                              children: (0, DB.jsx)(HB, {
-                                name: "dark" === TB ? "moon" : "sun"
-                              })
-                            })
-                          }
-                          const xp = "https://github.com/Bloxdy/code-api",
-                            jp = "https://discord.gg/playbloxd",
-                            Ap = 180,
-                            bp = /Mac|iPhone|iPad/.test(navigator.userAgent);
-
-                          function np(BB) {
-                            let {
-                              basePath: TB,
-                              activePageId: dB,
-                              onNavigate: VB
-                            } = BB;
-                            return (0, DB.jsx)("nav", {
-                              className: "DocsNav",
-                              "aria-label": "Documentation",
-                              children: QB.map((BB => (0, DB.jsxs)("div", {
-                                className: "DocsNavGroup",
-                                children: [(0, DB.jsx)("div", {
-                                  className: "DocsNavGroupTitle",
-                                  children: BB.title
-                                }), BB.pageIds.map((BB => {
-                                  var yB;
-                                  const JB = RB(BB);
-                                  return (0, DB.jsxs)(lB.d, {
-                                    to: CB(TB, JB),
-                                    className: pB()("DocsNavLink", {
-                                      Active: JB.id === dB
-                                    }),
-                                    "aria-current": JB.id === dB ? "page" : void 0,
-                                    onClick: VB,
-                                    children: [(0, DB.jsx)(HB, {
-                                      name: JB.icon
-                                    }), (0, DB.jsx)("span", {
-                                      children: null !== (yB = JB.navTitle) && void 0 !== yB ? yB : JB.title
-                                    })]
-                                  }, JB.id)
-                                }))]
-                              }, BB.title)))
-                            })
-                          }
-
-                          function ep(BB) {
-                            let {
-                              basePath: TB,
-                              pageId: dB
-                            } = BB;
-                            const VB = QB.flatMap((BB => BB.pageIds)),
-                              yB = VB.indexOf(dB),
-                              pB = yB > 0 ? RB(VB[yB - 1]) : null,
-                              JB = yB < VB.length - 1 ? RB(VB[yB + 1]) : null;
-                            return (0, DB.jsxs)("nav", {
-                              className: "DocsPager",
-                              "aria-label": "Pages",
-                              children: [pB ? (0, DB.jsxs)(lB.d, {
-                                className: "DocsPagerLink Previous",
-                                to: CB(TB, pB),
-                                children: [(0, DB.jsx)("span", {
-                                  className: "DocsPagerLabel",
-                                  children: "Previous"
-                                }), (0, DB.jsx)("span", {
-                                  className: "DocsPagerTitle",
-                                  children: pB.title
-                                })]
-                              }) : (0, DB.jsx)("span", {}), JB && (0, DB.jsxs)(lB.d, {
-                                className: "DocsPagerLink Next",
-                                to: CB(TB, JB),
-                                children: [(0, DB.jsx)("span", {
-                                  className: "DocsPagerLabel",
-                                  children: "Next"
-                                }), (0, DB.jsx)("span", {
-                                  className: "DocsPagerTitle",
-                                  children: JB.title
-                                })]
-                              })]
-                            })
-                          }
-
-                          function Bl(BB) {
-                            let {
-                              basePath: TB,
-                              embedded: dB = !1
-                            } = BB;
-                            const {
-                              pageSlug: yB = ""
-                            } = (0, JB.u)(), gB = (0, JB.o)(), oB = (0, JB.q)(), kB = (LB = yB, PB.find((BB => BB.slug === LB)));
-                            var LB;
-                            const [OB, uB] = function() {
-                              const [BB, TB] = (0, VB.useState)((() => {
-                                const BB = hp.j.getItem(Cp);
-                                return "dark" === BB || "light" === BB ? BB : null
-                              })), [dB, yB] = (0, VB.useState)(Gp.matches ? "light" : "dark");
-                              return (0, VB.useEffect)((() => {
-                                const BB = () => {
-                                  yB(Gp.matches ? "light" : "dark")
-                                };
-                                return Gp.addEventListener("change", BB), () => {
-                                  Gp.removeEventListener("change", BB)
-                                }
-                              }), []), [null !== BB && void 0 !== BB ? BB : dB, BB => {
-                                hp.j.setItem(Cp, BB), TB(BB)
-                              }]
-                            }(), [EB, vB] = (0, VB.useState)(null), [mB, iB] = (0, VB.useState)(!1), [NB, tB] = (0, VB.useState)(!1), [fB, MB] = (0, VB.useState)([]), zB = function(BB, TB) {
-                              const [dB, yB] = (0, VB.useState)("");
-                              return (0, VB.useEffect)((() => {
-                                if (!TB) return;
-                                let dB = 0;
-                                const VB = () => {
-                                    var VB, pB;
-                                    dB = 0;
-                                    const lB = TB.getBoundingClientRect().top + Ap;
-                                    let JB = null !== (VB = null === (pB = BB[0]) || void 0 === pB ? void 0 : pB.anchor) && void 0 !== VB ? VB : "";
-                                    for (const TB of BB) {
-                                      const BB = document.getElementById(TB.anchor);
-                                      BB && BB.getBoundingClientRect().top <= lB && (JB = TB.anchor)
-                                    }
-                                    TB.scrollTop + TB.clientHeight >= TB.scrollHeight - 2 && TB.scrollTop > 0 && BB.length > 0 && (JB = BB[BB.length - 1].anchor), yB(JB)
-                                  },
-                                  pB = () => {
-                                    dB || (dB = requestAnimationFrame(VB))
-                                  };
-                                return VB(), TB.addEventListener("scroll", pB, {
-                                  passive: !0
-                                }), () => {
-                                  cancelAnimationFrame(dB), TB.removeEventListener("scroll", pB)
-                                }
-                              }), [BB, TB]), dB
-                            }(fB, EB), wB = "" === yB && gB.hash ? function(BB) {
-                              const TB = (0, sB.k)(BB);
-                              if (XB(RB("welcome"), TB)) return null;
-                              const dB = Object.hasOwn(hB, TB) ? hB[TB] : null;
-                              if (dB) return {
-                                page: RB(dB.pageId),
-                                anchor: dB.anchor
-                              };
-                              const VB = RB("readme");
-                              return XB(VB, TB) ? {
-                                page: VB,
-                                anchor: TB
-                              } : WB(`#${TB}`)
-                            }(gB.hash) : null;
-                            (0, VB.useEffect)((() => (YB.d.set({
-                              musicOnFromPage: !1
-                            }), () => {
-                              YB.d.set({
-                                musicOnFromPage: !0
-                              }), EV()
-                            })), []), (0, VB.useEffect)((() => {
-                              const BB = BB => {
-                                const TB = BB.target;
-                                if (TB.closest(".DocsTextDialog")) return;
-                                const dB = TB.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(TB.tagName);
-                                "k" === BB.key && (BB.metaKey || BB.ctrlKey) || "/" === BB.key && !dB ? (BB.preventDefault(), tB(!0)) : "Escape" === BB.key && iB(!1)
-                              };
-                              return window.addEventListener("keydown", BB), () => {
-                                window.removeEventListener("keydown", BB)
-                              }
-                            }), []);
-                            const UB = (0, VB.useRef)(null);
-                            (0, VB.useLayoutEffect)((() => {
-                              var BB, TB;
-                              if (!EB) return;
-                              const dB = UB.current === gB.pathname;
-                              UB.current = gB.pathname;
-                              const VB = (0, sB.k)(gB.hash),
-                                yB = VB ? document.getElementById(VB) : null;
-                              if (null === (BB = EB.querySelector(".DocsTargeted")) || void 0 === BB || BB.classList.remove("DocsTargeted"), null === yB || void 0 === yB || null === (TB = yB.closest(".DocsCard, .DocsParam, .DocsTile, .DocsSoundTile")) || void 0 === TB || TB.classList.add("DocsTargeted"), yB) {
-                                var pB;
-                                const BB = yB.matches(".DocsTile, .DocsSoundTile, .DocsCatalogueTile");
-                                (null !== (pB = yB.closest(".DocsChangelogEntry")) && void 0 !== pB ? pB : yB).scrollIntoView({
-                                  block: BB ? "center" : "start",
-                                  behavior: dB ? "smooth" : "auto"
-                                })
-                              } else dB || EB.scrollTo({
-                                top: 0
-                              })
-                            }), [EB, gB.pathname, gB.hash, gB.key]);
-                            const FB = (0, VB.useCallback)((() => {
-                                iB(!1)
-                              }), []),
-                              KB = (0, VB.useCallback)((BB => {
-                                oB({
-                                  hash: BB
-                                })
-                              }), [oB]);
-                            if (wB) return (0, DB.jsx)(JB.c, {
-                              replace: !0,
-                              to: CB(TB, wB.page, wB.anchor)
-                            });
-                            if (!kB) return (0, DB.jsx)(JB.c, {
-                              replace: !0,
-                              to: TB
-                            });
-                            const rB = dB ? "div" : "main";
-                            return (0, DB.jsx)(OT.Provider, {
-                              value: TB,
-                              children: (0, DB.jsx)(DT.Provider, {
-                                value: EB,
-                                children: (0, DB.jsxs)("div", {
-                                  ref: vB,
-                                  className: pB()("DocsSite", {
-                                    Embedded: dB,
-                                    NavOpen: mB
-                                  }),
-                                  "data-theme": OB,
-                                  children: [(0, DB.jsxs)("header", {
-                                    className: "DocsTopBar",
-                                    children: [(0, DB.jsx)("button", {
-                                      type: "button",
-                                      className: "DocsIconButton DocsMenuButton",
-                                      "aria-label": mB ? "Close menu" : "Open menu",
-                                      "aria-expanded": mB,
-                                      onClick: () => {
-                                        iB(!mB)
-                                      },
-                                      children: (0, DB.jsx)(HB, {
-                                        name: mB ? "cross" : "menu"
-                                      })
-                                    }), (0, DB.jsxs)(lB.d, {
-                                      to: TB,
-                                      className: "DocsBrand",
-                                      children: [(0, DB.jsx)("img", {
-                                        src: "/favicon.svg",
-                                        alt: "",
-                                        width: 28,
-                                        height: 28
-                                      }), (0, DB.jsx)("span", {
-                                        className: "DocsBrandName",
-                                        children: "Bloxd"
-                                      }), (0, DB.jsx)("span", {
-                                        className: "DocsBrandTag",
-                                        children: "Code API"
-                                      })]
-                                    }), (0, DB.jsxs)("button", {
-                                      type: "button",
-                                      className: "DocsSearchTrigger",
-                                      onClick: () => {
-                                        tB(!0)
-                                      },
-                                      children: [(0, DB.jsx)(HB, {
-                                        name: "magnifying-glass"
-                                      }), (0, DB.jsx)("span", {
-                                        className: "DocsSearchTriggerLabel",
-                                        children: "Search docs"
-                                      }), (0, DB.jsxs)("kbd", {
-                                        children: [bp ? "\u2318" : "Ctrl", " K"]
-                                      })]
-                                    }), (0, DB.jsxs)("div", {
-                                      className: "DocsTopBarLinks",
-                                      children: [(0, DB.jsxs)("a", {
-                                        href: jp,
-                                        target: "_blank",
-                                        rel: "noopener noreferrer",
-                                        className: "DocsTopBarLink",
-                                        children: [(0, DB.jsx)(HB, {
-                                          name: "discord"
-                                        }), (0, DB.jsx)("span", {
-                                          children: "Discord"
-                                        })]
-                                      }), (0, DB.jsxs)("a", {
-                                        href: xp,
-                                        target: "_blank",
-                                        rel: "noopener noreferrer",
-                                        className: "DocsTopBarLink",
-                                        children: [(0, DB.jsx)(HB, {
-                                          name: "external-link"
-                                        }), (0, DB.jsx)("span", {
-                                          children: "GitHub"
-                                        })]
-                                      }), !dB && (0, DB.jsxs)(lB.d, {
-                                        to: "/",
-                                        className: "DocsTopBarLink DocsPlayLink",
-                                        children: [(0, DB.jsx)(HB, {
-                                          name: "play"
-                                        }), (0, DB.jsx)("span", {
-                                          children: "Play Bloxd"
-                                        })]
-                                      }), (0, DB.jsx)(qp, {
-                                        theme: OB,
-                                        onChange: uB
-                                      })]
-                                    })]
-                                  }), (0, DB.jsxs)("div", {
-                                    className: "DocsSiteBody",
-                                    children: [(0, DB.jsx)("aside", {
-                                      className: "DocsSidebar",
-                                      children: (0, DB.jsx)(np, {
-                                        basePath: TB,
-                                        activePageId: kB.id,
-                                        onNavigate: FB
-                                      })
-                                    }), (0, DB.jsx)("div", {
-                                      className: "DocsNavScrim",
-                                      onClick: FB
-                                    }), (0, DB.jsxs)(rB, {
-                                      className: "DocsMain",
-                                      children: [(0, DB.jsx)(fp, {
-                                        page: kB,
-                                        onTocChange: MB
-                                      }, kB.id), (0, DB.jsx)(ep, {
-                                        basePath: TB,
-                                        pageId: kB.id
-                                      })]
-                                    }), (0, DB.jsx)("aside", {
-                                      className: pB()("DocsToc", {
-                                        Timeline: "changelog" === kB.layout
-                                      }),
-                                      "aria-label": "On this page",
-                                      children: (0, DB.jsx)(wp, {
-                                        isChangelog: "changelog" === kB.layout,
-                                        toc: fB,
-                                        activeAnchor: zB,
-                                        onNavigate: KB
-                                      })
-                                    })]
-                                  }), (0, DB.jsx)(Wp, {}), NB && (0, DB.jsx)(Zp, {
-                                    basePath: TB,
-                                    onClose: () => {
-                                      tB(!1)
-                                    }
-                                  })]
-                                })
-                              })
-                            })
-                          }
-                        }, 4131: (BB, TB, dB) => {
-                          dB.d(TB, {
-                            b: () => VB,
-                            f: () => lB,
-                            g: () => HB,
-                            i: () => uB,
-                            j: () => JB,
-                            k: () => yB,
-                            m: () => pB,
-                            n: () => DB,
-                            p: () => OB,
-                            s: () => LB
-                          });
-                          const VB = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
-
-                          function yB(BB) {
-                            try {
-                              return decodeURIComponent(BB.slice(1))
-                            } catch {
-                              return BB.slice(1)
-                            }
-                          }
-
-                          function pB(BB) {
-                            return BB.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
-                          }
-                          const lB = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${VB.source}`, "g");
-
-                          function JB(BB, TB) {
-                            return 2 === BB.length ? TB.replace(/^ (.*) $/, "$1") : TB
-                          }
-
-                          function YB(BB) {
-                            return "" === BB.trim()
-                          }
-
-                          function gB(BB) {
-                            const TB = [];
-                            for (const dB of BB.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) TB.length > 0 && TB[TB.length - 1].endsWith("\\") ? TB[TB.length - 1] += `|${dB}` : TB.push(dB);
-                            return TB.map((BB => BB.trim().replaceAll("\\|", "|")))
-                          }
-                          const oB = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
-
-                          function kB(BB) {
-                            const TB = [],
-                              dB = [{
-                                indent: -1,
-                                items: TB
-                              }];
-                            let VB = null;
-                            for (const yB of BB) {
-                              const BB = yB.match(oB);
-                              if (!BB) {
-                                VB && (VB.text += ` ${yB.trim()}`);
-                                continue
-                              }
-                              const TB = BB[1].replace(/\t/g, "  ").length;
-                              for (; TB <= dB[dB.length - 1].indent;) dB.pop();
-                              VB = {
-                                text: BB[3].trim(),
-                                children: []
-                              }, dB[dB.length - 1].items.push(VB), dB.push({
-                                indent: TB,
-                                items: VB.children
-                              })
-                            }
-                            return TB
-                          }
-
-                          function LB(BB) {
-                            const TB = BB.replace(/\r\n/g, "\n").split("\n"),
-                              dB = [];
-                            let VB = 0;
-                            for (; VB < TB.length;) {
-                              const BB = TB[VB];
-                              if (YB(BB)) {
-                                VB++;
-                                continue
-                              }
-                              const yB = BB.match(/^\s*```\s*(\w*)\s*$/);
-                              if (yB) {
-                                const BB = [];
-                                for (VB++; VB < TB.length && !/^\s*```\s*$/.test(TB[VB]);) BB.push(TB[VB]), VB++;
-                                VB++, dB.push({
-                                  kind: "code",
-                                  lang: yB[1] || "text",
-                                  code: BB.join("\n").replace(/\s+$/, "")
-                                });
-                                continue
-                              }
-                              const lB = BB.match(/^(#{1,6})\s+(.+?)\s*#*$/);
-                              if (lB) {
-                                const BB = lB[2].trim();
-                                dB.push({
-                                  kind: "heading",
-                                  level: lB[1].length,
-                                  text: BB,
-                                  anchor: pB(BB)
-                                }), VB++;
-                                continue
-                              }
-                              if (/^\s*(-{3,}|\*{3,})\s*$/.test(BB)) {
-                                dB.push({
-                                  kind: "rule"
-                                }), VB++;
-                                continue
-                              }
-                              if (BB.trim().startsWith("|") && VB + 1 < TB.length && /^\s*\|[\s:|-]+\|\s*$/.test(TB[VB + 1])) {
-                                const yB = gB(BB),
-                                  pB = [];
-                                for (VB += 2; VB < TB.length && TB[VB].trim().startsWith("|");) pB.push(gB(TB[VB])), VB++;
-                                dB.push({
-                                  kind: "table",
-                                  header: yB,
-                                  rows: pB
-                                });
-                                continue
-                              }
-                              if (BB.startsWith(">")) {
-                                const BB = [];
-                                for (; VB < TB.length && TB[VB].startsWith(">");) BB.push(TB[VB].replace(/^>\s?/, "")), VB++;
-                                dB.push({
-                                  kind: "quote",
-                                  blocks: LB(BB.join("\n"))
-                                });
-                                continue
-                              }
-                              if (oB.test(BB)) {
-                                const yB = [],
-                                  pB = /^\s*\d+\./.test(BB);
-                                for (; VB < TB.length && !YB(TB[VB]) && (oB.test(TB[VB]) || /^\s+\S/.test(TB[VB]));) yB.push(TB[VB]), VB++;
-                                dB.push({
-                                  kind: "list",
-                                  ordered: pB,
-                                  items: kB(yB)
-                                });
-                                continue
-                              }
-                              const JB = [];
-                              for (; VB < TB.length && !YB(TB[VB]) && !/^\s*```/.test(TB[VB]) && !/^#{1,6}\s/.test(TB[VB]) && !TB[VB].startsWith(">") && !oB.test(TB[VB]) && (!TB[VB].trim().startsWith("|") || 0 !== JB.length);) JB.push(TB[VB].trim()), VB++;
-                              0 === JB.length && (JB.push(TB[VB].trim()), VB++), dB.push({
-                                kind: "paragraph",
-                                text: JB.join(" ")
-                              })
-                            }
-                            return dB
-                          }
-
-                          function OB(BB) {
-                            let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-                            const dB = LB(BB);
-                            let VB = "";
-                            const yB = [],
-                              pB = [],
-                              lB = new Map;
-                            for (const gB of dB) {
-                              if ("heading" === gB.kind) {
-                                var JB;
-                                const BB = (null !== (JB = lB.get(gB.anchor)) && void 0 !== JB ? JB : 0) + 1;
-                                lB.set(gB.anchor, BB), BB > 1 && (gB.anchor = `${gB.anchor}-${BB}`)
-                              }
-                              if ("heading" === gB.kind && 1 === gB.level && !VB) {
-                                VB = gB.text;
-                                continue
-                              }
-                              if ("heading" === gB.kind && gB.level <= TB) {
-                                pB.push({
-                                  heading: gB,
-                                  blocks: []
-                                });
-                                continue
-                              }
-                              const BB = pB.at(-1);
-                              BB ? BB.blocks.push(gB) : yB.push(gB)
-                            }
-                            const YB = BB => {
-                              for (;
-                                "rule" === (null === (TB = BB.at(-1)) || void 0 === TB ? void 0 : TB.kind);) {
-                                var TB;
-                                BB.pop()
-                              }
-                            };
-                            YB(yB);
-                            for (const gB of pB) YB(gB.blocks);
-                            return {
-                              title: VB,
-                              intro: yB,
-                              sections: pB
-                            }
-                          }
-
-                          function DB(BB) {
-                            return [{
-                              heading: null,
-                              blocks: BB.intro
-                            }, ...BB.sections.map((BB => ({
-                              heading: BB.heading,
-                              blocks: BB.blocks
-                            })))]
-                          }
-
-                          function uB(BB) {
-                            return BB.flatMap((BB => "code" === BB.kind ? [BB] : "quote" === BB.kind ? uB(BB.blocks) : []))
-                          }
-
-                          function HB(BB) {
-                            switch (BB.kind) {
-                              case "heading":
-                              case "paragraph":
-                                return BB.text;
-                              case "code":
-                                return BB.code;
-                              case "table":
-                                return [BB.header, ...BB.rows].map((BB => BB.join(" "))).join(" ");
-                              case "list": {
-                                const TB = BB => BB.map((BB => `${BB.text} ${TB(BB.children)}`)).join(" ");
-                                return TB(BB.items)
-                              }
-                              case "quote":
-                                return BB.blocks.map(HB).join(" ");
-                              case "rule":
-                                return ""
-                            }
-                          }
-                        }, 4232: (BB, TB, dB) => {
-                          dB.d(TB, {
-                            d: () => JB
-                          });
-                          var VB = dB(62),
-                            yB = dB(270),
-                            pB = dB(1666),
-                            lB = dB(980);
-
-                          function JB(BB) {
-                            let {
-                              text: TB
-                            } = BB;
-                            const dB = [];
-                            let JB = "";
-                            return (0, yB.hc)(TB).forEach(((BB, TB) => {
-                              if ("string" === typeof BB || !(0, pB.d)(BB.icon)) return void(JB += "string" === typeof BB ? BB : BB.icon);
-                              const yB = Math.max(0, JB.trimEnd().search(/\S{1,12}$/));
-                              dB.push((0, lB.jsxs)(VB.Fragment, {
-                                children: [JB.slice(0, yB), (0, lB.jsxs)("span", {
-                                  className: "InlineIconTextGlue",
-                                  children: [JB.slice(yB), (0, lB.jsx)("span", {
-                                    className: "InlineIconTextIcon",
-                                    role: "img",
-                                    "aria-label": BB.icon,
-                                    children: (0, lB.jsx)(pB.c, {
-                                      itemName: BB.icon,
-                                      amount: 0
-                                    })
-                                  })]
-                                })]
-                              }, TB)), JB = ""
-                            })), dB.push(JB), (0, lB.jsx)(lB.Fragment, {
-                              children: dB
-                            })
-                          }
-                        }, 4156: (BB, TB, dB) => {
-                          dB.d(TB, {
-                            f: () => vB,
-                            e: () => EB
-                          });
-                          var VB = dB(62),
-                            yB = dB(1317),
-                            pB = dB(1657),
-                            lB = dB(4162),
-                            JB = dB(980);
-                          const YB = (0, VB.memo)((function(BB) {
-                            let {
-                              initialParameters: TB
-                            } = BB;
-                            const dB = (0, VB.useRef)(null),
-                              yB = (0, VB.useRef)(null),
-                              YB = (0, VB.useRef)(0),
-                              gB = (0, VB.useRef)(null),
-                              oB = TB.description,
-                              kB = TB.JV,
-                              {
-                                scale: LB,
-                                rotation: OB
-                              } = null !== TB && void 0 !== TB ? TB : {},
-                              DB = (0, lB.f)();
-                            return (0, VB.useEffect)((() => {
-                              const BB = DB.onFrame((() => {
-                                const BB = DB.getState();
-                                if (!BB.isActive || !dB.current || !yB.current) return;
-                                const TB = BB.state;
-                                if (dB.current.value = TB.progress, TB.clickCount > YB.current) {
-                                  YB.current = TB.clickCount;
-                                  const BB = yB.current;
-                                  BB.classList.add("pulse"), gB.current = setTimeout((() => {
-                                    BB.classList.remove("pulse")
-                                  }), 100)
-                                }
-                              }));
-                              return () => {
-                                clearTimeout(gB.current), BB()
-                              }
-                            }), [DB]), (0, JB.jsx)(JB.Fragment, {
-                              children: (0, JB.jsxs)("div", {
-                                className: "QTEProgressBarWrapper",
-                                style: {
-                                  ...null !== LB && {
-                                    "--scale": LB
-                                  },
-                                  ...null !== OB && {
-                                    "--rotation": `${OB}deg`
-                                  }
-                                },
-                                children: [(0, JB.jsx)("progress", {
-                                  id: "catch",
-                                  max: 100,
-                                  className: "QTEProgressBar",
-                                  ref: dB
-                                }), (0, JB.jsx)("span", {
-                                  className: "QTEProgressBarInteractionIndicator",
-                                  ref: yB,
-                                  children: (0, JB.jsx)(pB.e, {
-                                    text: [{
-                                      icon: kB
-                                    }]
-                                  })
-                                }), (0, JB.jsx)("div", {
-                                  className: "QTEProgressBarDescription",
-                                  children: (0, JB.jsx)(pB.e, {
-                                    text: oB
-                                  })
-                                })]
-                              })
-                            })
-                          }));
-                          var gB = dB(933),
-                            oB = dB.n(gB);
-                          const kB = 2 * Math.PI * 90,
-                            LB = (0, VB.memo)((function(BB) {
-                              let {
-                                initialParameters: TB
-                              } = BB;
-                              const dB = (0, VB.useRef)(null),
-                                yB = (0, VB.useRef)(null),
-                                YB = (0, VB.useRef)(null),
-                                gB = TB.label,
-                                LB = TB.icon,
-                                OB = TB.oV,
-                                {
-                                  scale: DB,
-                                  rotation: uB,
-                                  kV: HB
-                                } = null !== TB && void 0 !== TB ? TB : {},
-                                EB = (0, lB.f)();
-                              return (0, VB.useEffect)((() => {
-                                const BB = EB.onFrame((() => {
-                                  var BB, TB;
-                                  const VB = EB.getState();
-                                  if (!VB.isActive || !yB.current) return;
-                                  const pB = VB.state,
-                                    lB = null !== (BB = pB.timeRemaining) && void 0 !== BB ? BB : 0,
-                                    JB = null !== (TB = pB.gV) && void 0 !== TB ? TB : 1,
-                                    gB = kB * (1 - lB / JB);
-                                  yB.current.style.strokeDashoffset = `${gB}`, dB.current && (dB.current.style.opacity = lB > 0 ? "1" : "0"), YB.current && OB && (YB.current.textContent = `${(lB/1e3).toFixed(1)}s`)
-                                }));
-                                return () => {
-                                  BB()
-                                }
-                              }), [EB, OB]), (0, JB.jsxs)("div", {
-                                className: "QTETimedClick",
-                                ref: dB,
-                                style: {
-                                  ...null !== DB && {
-                                    "--scale": DB
-                                  },
-                                  ...null !== uB && {
-                                    "--rotation": `${uB}deg`
-                                  }
-                                },
-                                children: [(0, JB.jsxs)("div", {
-                                  className: "QTETimedClickCircleContainer",
-                                  children: [(0, JB.jsxs)("svg", {
-                                    className: "QTETimedClickCircularProgress",
-                                    viewBox: "0 0 200 200",
-                                    children: [(0, JB.jsx)("circle", {
-                                      className: "QTETimedClickProgressTrack",
-                                      cx: "100",
-                                      cy: "100",
-                                      r: 90,
-                                      fill: "none",
-                                      strokeWidth: "12"
-                                    }), (0, JB.jsx)("circle", {
-                                      className: "QTETimedClickProgressArc",
-                                      cx: "100",
-                                      cy: "100",
-                                      r: 90,
-                                      fill: "none",
-                                      strokeWidth: "12",
-                                      strokeLinecap: "square",
-                                      strokeDasharray: kB,
-                                      ref: yB
-                                    })]
-                                  }), (0, JB.jsx)("div", {
-                                    className: "QTETimedClickCenterContent",
-                                    children: (0, JB.jsx)(pB.e, {
-                                      text: [{
-                                        icon: LB
-                                      }],
-                                      className: oB()("QTETimedClickInnerText", {
-                                        QTETimedClickBreathe: HB
-                                      })
-                                    })
-                                  })]
-                                }), (0, JB.jsxs)("div", {
-                                  className: "QTETimedClickRightTextContainer",
-                                  children: [(0, JB.jsx)(pB.e, {
-                                    text: gB,
-                                    className: "QTETimedClickLabelText"
-                                  }), OB && (0, JB.jsx)("span", {
-                                    className: "QTETimedClickTimeText",
-                                    ref: YB
-                                  })]
-                                })]
-                              })
-                            })),
-                            OB = (0, VB.memo)((function(BB) {
-                              let {
-                                initialParameters: TB
-                              } = BB;
-                              const dB = (0, VB.useRef)(null),
-                                yB = (0, VB.useRef)(null),
-                                YB = (0, VB.useRef)(null),
-                                gB = (0, VB.useRef)(!1),
-                                oB = TB.description,
-                                kB = null === TB || void 0 === TB ? void 0 : TB.icon,
-                                LB = (0, lB.f)();
-                              return (0, VB.useEffect)((() => {
-                                const BB = LB.onFrame((() => {
-                                  const BB = LB.getState();
-                                  if (!BB.isActive) return;
-                                  const TB = BB.state;
-                                  if (dB.current) {
-                                    const BB = 100 * (TB.catchZonePosition - TB.OV / 2);
-                                    dB.current.style.left = `${BB}%`, dB.current.style.width = 100 * TB.OV + "%", TB.isCatching !== gB.current && (gB.current = TB.isCatching, TB.isCatching ? dB.current.classList.add("catching") : dB.current.classList.remove("catching"))
-                                  }
-                                  yB.current && (yB.current.style.left = 100 * TB.moverPosition + "%"), YB.current && (YB.current.value = TB.progress)
-                                }));
-                                return () => {
-                                  BB()
-                                }
-                              }), [LB]), (0, JB.jsxs)("div", {
-                                className: "QTEGravityBar",
-                                children: [(0, JB.jsx)("div", {
-                                  className: "QTEGravityBarDescription",
-                                  children: (0, JB.jsx)(pB.e, {
-                                    text: oB
-                                  })
-                                }), (0, JB.jsx)("progress", {
-                                  max: 100,
-                                  className: "QTEGravityBarProgress",
-                                  ref: YB
-                                }), (0, JB.jsxs)("div", {
-                                  className: "QTEGravityBarTrack",
-                                  children: [(0, JB.jsx)("div", {
-                                    className: "QTEGravityBarCatchZone",
-                                    ref: dB
-                                  }), (0, JB.jsx)("div", {
-                                    className: "QTEGravityBarMover",
-                                    ref: yB,
-                                    children: (0, JB.jsx)("span", {
-                                      children: kB && (0, JB.jsx)(pB.e, {
-                                        text: [{
-                                          icon: kB,
-                                          style: {
-                                            fontSize: "4rem"
-                                          }
-                                        }]
-                                      })
-                                    })
-                                  })]
-                                })]
-                              })
-                            }));
-                          var DB = dB(572);
-                          const uB = (0, VB.memo)((function(BB) {
-                              let {
-                                initialParameters: TB
-                              } = BB;
-                              const dB = (0, VB.useRef)(null),
-                                yB = TB.label,
-                                YB = TB.iV,
-                                {
-                                  icon: gB,
-                                  scale: oB,
-                                  rotation: kB
-                                } = null !== TB && void 0 !== TB ? TB : {},
-                                LB = 100 * (.5 - YB / 2),
-                                OB = 100 * YB,
-                                uB = (0, lB.f)();
-                              return (0, VB.useEffect)((() => {
-                                const BB = uB.onFrame((() => {
-                                  const BB = uB.getState();
-                                  if (!BB.isActive || !dB.current) return;
-                                  const TB = BB.state;
-                                  dB.current.style.left = 100 * TB.markerPosition + "%"
-                                }));
-                                return () => {
-                                  BB()
-                                }
-                              }), [uB]), (0, JB.jsxs)("div", {
-                                className: "QTEPrecisionBarWrapper",
-                                style: {
-                                  ...!(0, DB.M)(oB) && {
-                                    "--scale": oB
-                                  },
-                                  ...!(0, DB.M)(kB) && {
-                                    "--rotation": `${kB}deg`
-                                  }
-                                },
-                                children: [gB && (0, JB.jsx)(pB.e, {
-                                  text: [{
-                                    icon: gB
-                                  }],
-                                  className: "QTEPrecisionBarIcon"
-                                }), (0, JB.jsxs)("div", {
-                                  className: "QTEPrecisionBarTrack",
-                                  children: [(0, JB.jsx)("div", {
-                                    className: "QTEPrecisionBarSuccessZone",
-                                    style: {
-                                      left: `${LB}%`,
-                                      width: `${OB}%`
-                                    }
-                                  }), (0, JB.jsx)("div", {
-                                    className: "QTEPrecisionBarMarker",
-                                    ref: dB
-                                  })]
-                                }), (0, JB.jsx)("div", {
-                                  className: "QTEPrecisionBarLabel",
-                                  children: (0, JB.jsx)(pB.e, {
-                                    text: yB
-                                  })
-                                })]
-                              })
-                            })),
-                            HB = (0, VB.memo)((function(BB) {
-                              let {
-                                initialParameters: TB
-                              } = BB;
-                              const dB = (0, VB.useRef)(null),
-                                [yB, YB] = (0, VB.useState)((() => new Array(TB.tV).fill("pending"))),
-                                [gB, oB] = (0, VB.useState)((() => {
-                                  const BB = TB.MV;
-                                  return (0, DB.M)(BB) || BB <= 0 ? [] : new Array(BB).fill("pending")
-                                })),
-                                kB = TB.label,
-                                {
-                                  icon: LB
-                                } = TB,
-                                OB = (0, VB.useRef)(0),
-                                uB = (0, VB.useRef)(0),
-                                HB = (0, VB.useRef)([]),
-                                EB = (0, lB.f)();
-                              return (0, VB.useEffect)((() => {
-                                const BB = EB.onFrame((() => {
-                                  const BB = EB.getState();
-                                  if (!BB.isActive || !dB.current) return;
-                                  const TB = BB.state,
-                                    VB = 30 + 60 * TB.outerCircleProgress;
-                                  if (dB.current.setAttribute("r", String(VB)), !0 === TB.lastClickResult && TB.successes > OB.current) {
-                                    dB.current.classList.remove("QTERhythmClickOuterCircle--miss"), dB.current.classList.add("QTERhythmClickOuterCircle--hit");
-                                    const BB = setTimeout((() => {
-                                      var BB;
-                                      null === (BB = dB.current) || void 0 === BB || BB.classList.remove("QTERhythmClickOuterCircle--hit")
-                                    }), 200);
-                                    HB.current.push(BB)
-                                  } else if (!1 === TB.lastClickResult && TB.misses > uB.current) {
-                                    dB.current.classList.remove("QTERhythmClickOuterCircle--hit"), dB.current.classList.add("QTERhythmClickOuterCircle--miss");
-                                    const BB = setTimeout((() => {
-                                      var BB;
-                                      null === (BB = dB.current) || void 0 === BB || BB.classList.remove("QTERhythmClickOuterCircle--miss")
-                                    }), 200);
-                                    HB.current.push(BB)
-                                  }
-                                  TB.successes === OB.current && TB.misses === uB.current || (OB.current = TB.successes, uB.current = TB.misses, YB((BB => {
-                                    const dB = [...BB];
-                                    for (let VB = 0; VB < TB.tV; VB++) dB[VB] = VB < TB.successes ? "success" : "pending";
-                                    return dB
-                                  })), oB((BB => {
-                                    if (0 === BB.length) return BB;
-                                    const dB = [...BB];
-                                    for (let VB = 0; VB < dB.length; VB++) dB[VB] = VB < TB.misses ? "miss" : "pending";
-                                    return dB
-                                  })))
-                                }));
-                                return () => {
-                                  BB();
-                                  for (const BB of HB.current) clearTimeout(BB);
-                                  HB.current = []
-                                }
-                              }), [EB]), (0, JB.jsxs)("div", {
-                                className: "QTERhythmClickWrapper",
-                                children: [(0, JB.jsx)("div", {
-                                  className: "QTERhythmClickProgress",
-                                  children: yB.map(((BB, TB) => (0, JB.jsx)("div", {
-                                    className: "QTERhythmClickDot" + ("success" === BB ? " QTERhythmClickDot--success" : " QTERhythmClickDot--pendingSuccess")
-                                  }, TB)))
-                                }), (0, JB.jsxs)("div", {
-                                  className: "QTERhythmClickCircleContainer",
-                                  children: [(0, JB.jsxs)("svg", {
-                                    className: "QTERhythmClickSvg",
-                                    viewBox: "0 0 200 200",
-                                    children: [(0, JB.jsx)("circle", {
-                                      className: "QTERhythmClickInnerCircle",
-                                      cx: "100",
-                                      cy: "100",
-                                      r: 30
-                                    }), (0, JB.jsx)("circle", {
-                                      className: "QTERhythmClickOuterCircle",
-                                      cx: "100",
-                                      cy: "100",
-                                      r: 90,
-                                      ref: dB
-                                    })]
-                                  }), LB && (0, JB.jsx)("div", {
-                                    className: "QTERhythmClickCenterContent",
-                                    children: (0, JB.jsx)(pB.e, {
-                                      text: [{
-                                        icon: LB
-                                      }],
-                                      className: "QTERhythmClickIcon"
-                                    })
-                                  })]
-                                }), gB.length > 0 && (0, JB.jsx)("div", {
-                                  className: "QTERhythmClickProgress",
-                                  children: gB.map(((BB, TB) => (0, JB.jsx)("div", {
-                                    className: "QTERhythmClickDot" + ("miss" === BB ? " QTERhythmClickDot--miss" : " QTERhythmClickDot--pendingMiss")
-                                  }, TB)))
-                                }), (0, JB.jsx)("div", {
-                                  className: "QTERhythmClickLabel",
-                                  children: (0, JB.jsx)(pB.e, {
-                                    text: kB
-                                  })
-                                })]
-                              })
-                            }));
-
-                          function EB(BB) {
-                            let {
-                              qte: TB
-                            } = BB;
-                            switch (TB.type) {
-                              case "progressBar":
-                                return (0, JB.jsx)(YB, {
-                                  initialParameters: TB.parameters
-                                });
-                              case "timedClick":
-                                return (0, JB.jsx)(LB, {
-                                  initialParameters: TB.parameters
-                                });
-                              case "gravityBar":
-                                return (0, JB.jsx)(OB, {
-                                  initialParameters: TB.parameters
-                                });
-                              case "precisionBar":
-                                return (0, JB.jsx)(uB, {
-                                  initialParameters: TB.parameters
-                                });
-                              case "rhythmClick":
-                                return (0, JB.jsx)(HB, {
-                                  initialParameters: TB.parameters
-                                });
-                              default:
-                                return console.warn("Unknown QTE type"), null
-                            }
-                          }
-                          const vB = (0, VB.memo)((function() {
-                            const [BB, TB] = (0, VB.useState)({
-                              type: null,
-                              parameters: null,
-                              state: null,
-                              isActive: !1
-                            });
-                            return (0, yB.e)("qteStateUpdated", (BB => {
-                              TB(BB)
-                            })), BB.isActive && BB.type ? (0, JB.jsx)("div", {
-                              className: "QTE",
-                              "data-camera-keeper": "",
-                              children: (0, JB.jsx)(EB, {
-                                qte: BB
-                              })
-                            }) : null
-                          }))
-                        }, 4162: (BB, TB, dB) => {
-                          dB.d(TB, {
-                            c: () => JB,
-                            f: () => YB
-                          });
-                          var VB = dB(62),
-                            yB = dB(1185),
-                            pB = dB(4167);
-                          const lB = {
-                              getState: () => pB.c.getCurrentState(),
-                              onFrame: yB.m
-                            },
-                            JB = (0, VB.createContext)(lB);
-
-                          function YB() {
-                            return (0, VB.useContext)(JB)
-                          }
-                        }, 4240: (BB, TB, dB) => {
-                          dB.d(TB, {
-                            e: () => cB,
-                            f: () => IB
-                          });
-                          var VB = dB(4247),
-                            yB = dB(270);
-                          const pB = 120,
-                            lB = 260,
-                            JB = 1.15,
-                            YB = 1.2,
-                            gB = 2,
-                            oB = 1.08,
-                            kB = .8,
-                            LB = .95,
-                            OB = 8,
-                            DB = "[\"')\\]\u300d\u300f\uff09]*",
-                            uB = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${DB}$`),
-                            HB = new RegExp(`[?\uff1f]${DB}$`),
-                            EB = new RegExp(`[!\uff01]${DB}$`),
-                            vB = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-                            mB = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-                            iB = new RegExp(`[${mB}]`),
-                            NB = new RegExp(`[${mB}]|[^${mB}]+`, "g"),
-                            tB = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
-
-                          function fB(BB) {
-                            let TB = 2166136261;
-                            for (let dB = 0; dB < BB.length; dB++) TB ^= BB.charCodeAt(dB), TB = Math.imul(TB, 16777619);
-                            return (TB >>> 0) / 4294967295 * 2 - 1
-                          }
-
-                          function sB(BB) {
-                            var TB;
-                            if (iB.test(BB)) return 1;
-                            const dB = BB.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-                              VB = dB.replace(/[^0-9]/g, "");
-                            if (VB.length > 0 && !/\p{L}/u.test(dB)) return Math.min(VB.length, 4);
-                            const yB = null !== (TB = dB.match(tB)) && void 0 !== TB ? TB : [];
-                            if (0 === yB.length) {
-                              var pB, lB;
-                              const BB = null !== (pB = null === (lB = dB.match(/\p{L}/gu)) || void 0 === lB ? void 0 : lB.length) && void 0 !== pB ? pB : 0;
-                              return 0 === BB ? 0 : Math.min(Math.max(1, Math.round(BB / 2.5)), OB)
-                            }
-                            const JB = dB.replace(/[^\p{L}]/gu, ""),
-                              YB = yB.length > 1 && "e" === yB.at(-1) && JB.endsWith("e") && !JB.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(BB.replace(/[^\p{L}]/gu, ""));
-                            return Math.min(yB.length - (YB ? 1 : 0), OB)
-                          }
-
-                          function MB(BB) {
-                            return BB.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
-                          }
-
-                          function zB(BB) {
-                            const TB = BB.replace(/[^\p{L}]/gu, "");
-                            return TB.length >= 2 && TB === TB.toUpperCase() && TB !== TB.toLowerCase()
-                          }
-
-                          function wB(BB, TB) {
-                            var dB;
-                            const OB = TB && (0, VB.i)(TB),
-                              DB = null !== (dB = null === OB || void 0 === OB ? void 0 : OB.syllableMs) && void 0 !== dB ? dB : VB.b,
-                              mB = function(BB) {
-                                const TB = [];
-                                for (const VB of (0, yB.hc)(BB))
-                                  if ("string" === typeof VB)
-                                    for (const BB of VB.split(/(\s+)/)) {
-                                      if ("" === BB) continue;
-                                      if (/^\s+$/.test(BB)) {
-                                        TB.push({
-                                          kind: "space",
-                                          text: BB
-                                        });
-                                        continue
-                                      }
-                                      if (!iB.test(BB)) {
-                                        TB.push({
-                                          kind: "word",
-                                          text: BB,
-                                          delayMs: 0
-                                        });
-                                        continue
-                                      }
-                                      let VB = !0;
-                                      for (const yB of null !== (dB = BB.match(NB)) && void 0 !== dB ? dB : []) {
-                                        var dB;
-                                        const BB = TB.at(-1);
-                                        VB || "word" !== (null === BB || void 0 === BB ? void 0 : BB.kind) || iB.test(yB) || /[\p{L}\p{N}]/u.test(yB) ? (VB || TB.push({
-                                          kind: "space",
-                                          text: "\u200b"
-                                        }), TB.push({
-                                          kind: "word",
-                                          text: yB,
-                                          delayMs: 0
-                                        }), VB = !1) : BB.text += yB
-                                      }
-                                    } else TB.push({
-                                      kind: "icon",
-                                      text: VB.icon,
-                                      delayMs: 0
-                                    });
-                                return TB
-                              }(BB),
-                              tB = [];
-                            let wB = [];
-                            for (const VB of mB) "space" !== VB.kind && (wB.push(VB), uB.test(VB.text) && (tB.push(wB), wB = []));
-                            tB.push(wB);
-                            const UB = [];
-                            let FB = 0;
-                            for (const VB of tB) {
-                              var KB, rB;
-                              const BB = null !== (KB = null === (rB = VB.at(-1)) || void 0 === rB ? void 0 : rB.text) && void 0 !== KB ? KB : "",
-                                TB = HB.test(BB),
-                                dB = EB.test(BB),
-                                yB = VB.map((BB => "word" === BB.kind ? sB(BB.text) : 1)),
-                                mB = yB.findLastIndex((BB => BB > 0));
-                              for (const [HB, EB] of VB.entries()) {
-                                const BB = "word" === EB.kind,
-                                  VB = yB[HB];
-                                EB.delayMs = FB;
-                                for (let yB = 0; OB && yB < VB; yB++) {
-                                  const {
-                                    intonation: pB
-                                  } = OB;
-                                  let lB = mB > 0 ? -pB.declineSemitones * (HB / mB) : 0;
-                                  lB += fB(`${MB(EB.text)}|${yB}`) * pB.variationSemitones;
-                                  const uB = Math.min(1, pB.variationSemitones);
-                                  let vB = OB.glideSemitones,
-                                    iB = 1;
-                                  dB && (lB += pB.exclaimLiftSemitones, iB *= JB), TB && HB === mB && (lB += pB.questionRiseSemitones * (VB > 1 ? .5 + .5 * yB / (VB - 1) : 1), yB === VB - 1 && (vB = Math.abs(vB) + pB.questionRiseSemitones / 2)), BB && zB(EB.text) && (lB += gB * uB, iB *= YB), VB > 1 && 0 === yB && (lB += kB * uB, iB *= oB), UB.push({
-                                    atMs: FB + yB * DB,
-                                    semitones: lB,
-                                    glideSemitones: vB,
-                                    durationMs: yB < VB - 1 ? Math.min(OB.durationMs, DB * LB) : OB.durationMs,
-                                    level: iB
-                                  })
-                                }
-                                FB += VB * DB + (uB.test(EB.text) ? lB : vB.test(EB.text) ? pB : 0)
-                              }
-                            }
-                            return {
-                              pieces: mB.map((BB => "space" === BB.kind ? BB : "icon" === BB.kind ? {
-                                kind: "icon",
-                                icon: BB.text,
-                                delayMs: BB.delayMs
-                              } : {
-                                kind: "word",
-                                text: BB.text,
-                                delayMs: BB.delayMs
-                              })),
-                              blips: UB
-                            }
-                          }
-                          var UB = dB(1078),
-                            FB = dB(1133),
-                            KB = dB(1685);
-
-                          function rB(BB) {
-                            if ("string" === typeof BB) return BB;
-                            const TB = FB.f.get().getCurrentLanguageCode();
-                            return (0, UB.r)(TB, BB.translationKey, (0, UB.o)(BB.params, KB.c.shown))
-                          }
-
-                          function IB(BB) {
-                            const TB = void 0 === BB.voice ? null : (0, VB.j)(BB.voice),
-                              dB = TB && (0, VB.i)(TB);
-                            return {
-                              plan: wB(rB(BB.line), dB),
-                              synth: dB
-                            }
-                          }
-
-                          function cB(BB) {
-                            const TB = [];
-                            let dB = [];
-                            for (const [yB, pB] of BB.entries()) {
-                              var VB;
-                              "space" === pB.kind && (" " !== pB.text || "icon" !== (null === (VB = BB[yB + 1]) || void 0 === VB ? void 0 : VB.kind)) ? (dB.length > 0 && TB.push(dB), TB.push([pB]), dB = []) : dB.push(pB)
-                            }
-                            return dB.length > 0 && TB.push(dB), TB
-                          }
-                        }, 4252: (BB, TB, dB) => {
-                          dB.d(TB, {
-                            e: () => oB,
-                            f: () => kB
-                          });
-                          var VB = dB(4258),
-                            yB = dB(21);
-                          const pB = .25,
-                            lB = .85,
-                            JB = .02,
-                            YB = .01;
-
-                          function gB(BB, TB, dB, VB, yB, pB, JB) {
-                            const {
-                              waveform: YB,
-                              pitchHz: gB,
-                              attackMs: oB,
-                              releaseMs: kB,
-                              lowpassHz: LB
-                            } = dB, OB = yB + VB.durationMs / 1e3, DB = gB * 2 ** (VB.semitones / 12), uB = BB.createOscillator();
-                            uB.type = YB, uB.frequency.setValueAtTime(DB, yB), uB.frequency.exponentialRampToValueAtTime(DB * 2 ** (VB.glideSemitones / 12), OB);
-                            const HB = yB + Math.min(oB, VB.durationMs) / 1e3,
-                              EB = BB.createGain();
-                            EB.gain.setValueAtTime(0, yB), EB.gain.linearRampToValueAtTime(pB, HB), EB.gain.linearRampToValueAtTime(pB * lB, Math.max(HB, OB - kB / 1e3)), EB.gain.linearRampToValueAtTime(0, OB);
-                            const vB = [uB];
-                            if (null !== LB) {
-                              const TB = BB.createBiquadFilter();
-                              TB.type = "lowpass", TB.frequency.value = LB, vB.push(TB)
-                            }
-                            vB.push(EB, TB);
-                            for (let lB = 1; lB < vB.length; lB++) vB[lB - 1].connect(vB[lB]);
-                            return uB.onended = () => {
-                              for (const BB of vB.slice(0, -1)) BB.disconnect();
-                              JB()
-                            }, uB.start(yB), uB.stop(OB), uB
-                          }
-
-                          function oB(BB, TB, dB, VB, yB, lB) {
-                            if (0 === VB.length) return lB(), () => {};
-                            const oB = pB * dB.volume * yB,
-                              kB = BB.createGain();
-                            kB.connect(TB);
-                            const LB = BB.currentTime + JB,
-                              OB = new Set;
-                            for (const pB of VB) {
-                              const TB = gB(BB, kB, dB, pB, LB + pB.atMs / 1e3, oB * pB.level, (() => {
-                                OB.delete(TB), 0 === OB.size && (kB.disconnect(), lB())
-                              }));
-                              OB.add(TB)
-                            }
-                            return () => {
-                              const TB = BB.currentTime;
-                              kB.gain.setTargetAtTime(0, TB, YB);
-                              for (const BB of OB) try {
-                                BB.stop(TB + 5 * YB)
-                              } catch {}
-                            }
-                          }
-
-                          function kB(BB, TB) {
-                            var dB;
-                            const pB = VB.b.ctx,
-                              lB = VB.b.masterGain;
-                            if (!pB || !lB || !yB.d.get("soundOnFromAd")) return () => {};
-                            const JB = VB.b;
-                            return null === (dB = JB._autoResume) || void 0 === dB || dB.call(JB), oB(pB, lB, BB, TB, yB.d.get("soundVolume"), (() => {
-                              var BB;
-                              null === (BB = JB._autoSuspend) || void 0 === BB || BB.call(JB)
-                            }))
-                          }
-                        }, 4258: (BB, TB, dB) => {
-                          dB.d(TB, {
-                            Howl: () => VB.Howl,
-                            b: () => VB.Howler,
-                            readyAudioContext: () => yB
-                          });
-                          var VB = dB(4262);
-
-                          function yB() {
-                            const BB = VB.Howler;
-                            var TB;
-                            (BB.volume(), BB.ctx && BB.autoUnlock) && (null === (TB = BB._unlockAudio) || void 0 === TB || TB.call(BB))
-                          }
-                          VB.Howler._mobileUnloaded = !0
-                        }, 4265: (BB, TB, dB) => {
-                          function VB(BB) {
-                            return {
-                              notAfter: BB
-                            }
-                          }
-                          dB.d(TB, {
-                            B: () => kB,
-                            b: () => YB,
-                            d: () => gB,
-                            h: () => JB,
-                            j: () => VB,
-                            l: () => yB,
-                            p: () => pB,
-                            t: () => lB,
-                            x: () => oB
-                          });
-                          const yB = VB("\\w$."),
-                            pB = VB("\\w.,");
-
-                          function lB(BB) {
-                            return TB => YB(TB, BB)
-                          }
-
-                          function JB(BB) {
-                            return TB => !BB.test(TB.input.slice(0, TB.index))
-                          }
-
-                          function YB(BB, TB) {
-                            return BB.index > 0 && new RegExp(`[${TB}]`).test(BB.input[BB.index - 1])
-                          }
-
-                          function gB(BB, TB, dB) {
-                            return function(BB) {
-                              return void 0 !== BB && "function" !== typeof BB
-                            }(dB) ? function(BB, TB, dB) {
-                              const VB = TB.flags.replace(/[gy]/g, ""),
-                                yB = new RegExp(`[^${dB}](?:${TB.source})`, `${VB}g`),
-                                pB = [],
-                                lB = dB => {
-                                  const VB = dB.index + dB[0].length;
-                                  return ("" === dB[0] ? LB(BB, TB, VB) : VB) - 1
-                                },
-                                JB = new RegExp(`(?:${TB.source})`, `${VB}y`).exec(BB);
-                              if (JB) {
-                                if (pB.push(JB), !TB.global) return pB;
-                                yB.lastIndex = lB(JB)
-                              }
-                              for (let YB = yB.exec(BB); YB; YB = yB.exec(BB)) {
-                                const dB = LB(BB, TB, YB.index) - YB.index;
-                                if (YB[0] = YB[0].slice(dB), YB.index += dB, pB.push(YB), !TB.global) break;
-                                yB.lastIndex = lB(YB)
-                              }
-                              return pB
-                            }(BB, TB, dB.notAfter) : function(BB, TB, dB) {
-                              const VB = new RegExp(TB.source, `${TB.flags.replace(/[gy]/g,"")}g`),
-                                yB = [];
-                              for (let pB = VB.exec(BB); pB; pB = VB.exec(BB))
-                                if (!dB || dB(pB)) {
-                                  if (yB.push(pB), !TB.global) break;
-                                  "" === pB[0] && (VB.lastIndex = LB(BB, TB, VB.lastIndex))
-                                } else VB.lastIndex = LB(BB, TB, pB.index);
-                              return yB
-                            }(BB, TB, dB)
-                          }
-
-                          function oB(BB, TB, dB, VB) {
-                            let yB = "",
-                              pB = 0;
-                            for (const lB of gB(BB, TB, dB)) yB += BB.slice(pB, lB.index) + VB(lB), pB = lB.index + lB[0].length;
-                            return yB + BB.slice(pB)
-                          }
-
-                          function kB(BB, TB, dB) {
-                            const VB = [];
-                            let yB = 0;
-                            for (const pB of gB(BB, TB, dB)) VB.push(BB.slice(yB, pB.index)), yB = pB.index + pB[0].length;
-                            return [...VB, BB.slice(yB)]
-                          }
-
-                          function LB(BB, TB, dB) {
-                            var VB;
-                            return dB + (TB.unicode && (null !== (VB = BB.codePointAt(dB)) && void 0 !== VB ? VB : 0) > 65535 ? 2 : 1)
-                          }
-                        }, 4218: (BB, TB, dB) => {
-                          dB.d(TB, {
-                            b: () => yB,
-                            e: () => YB,
-                            g: () => pB,
-                            k: () => lB,
-                            n: () => JB,
-                            p: () => HB,
-                            q: () => oB,
-                            r: () => kB,
-                            v: () => uB,
-                            z: () => OB
-                          });
-                          var VB = dB(1477);
-                          const yB = 24e3,
-                            pB = "/docs/llms.txt",
-                            lB = `${VB.c}${pB}`,
-                            JB = "/llms.txt",
-                            YB = "/docs/llms-full.txt";
-
-                          function gB(BB) {
-                            return BB || "index"
-                          }
-
-                          function oB(BB) {
-                            return `/docs/${gB(BB)}.md`
-                          }
-
-                          function kB(BB, TB) {
-                            return `/docs/${gB(BB)}/${TB+1}.md`
-                          }
-                          const LB = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
-
-                          function OB(BB) {
-                            const TB = LB.exec(BB);
-                            return null === TB ? null : {
-                              name: TB[1],
-                              part: void 0 === TB[2] ? null : Number(TB[2])
-                            }
-                          }
-                          const DB = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
-
-                          function uB(BB) {
-                            const TB = DB.exec(BB);
-                            if (null === TB) return null;
-                            const [, dB = "", VB] = TB;
-                            return void 0 === VB ? oB(dB) : kB(dB, Number(VB) - 1)
-                          }
-
-                          function HB(BB) {
-                            return `/docsHtml/${gB(BB)}.html`
-                          }
-                        }, 4247: (BB, TB, dB) => {
-                          dB.d(TB, {
-                            b: () => yB,
-                            d: () => VB,
-                            e: () => pB,
-                            i: () => YB,
-                            j: () => lB
-                          });
-                          const VB = ["sine", "triangle", "square", "sawtooth"],
-                            yB = 55,
-                            pB = {
-                              soft: {
-                                waveform: "sine",
-                                pitchHz: 300,
-                                glideSemitones: -.5,
-                                durationMs: 80,
-                                attackMs: 6,
-                                releaseMs: 18,
-                                lowpassHz: null,
-                                volume: .6,
-                                intonation: {
-                                  variationSemitones: 1.2,
-                                  declineSemitones: 1.5,
-                                  questionRiseSemitones: 3.5,
-                                  exclaimLiftSemitones: 1.5
-                                },
-                                syllableMs: 60
-                              },
-                              regular: {
-                                waveform: "triangle",
-                                pitchHz: 195,
-                                glideSemitones: -.6,
-                                durationMs: 70,
-                                attackMs: 2,
-                                releaseMs: 12,
-                                lowpassHz: null,
-                                volume: 1,
-                                intonation: {
-                                  variationSemitones: 1.5,
-                                  declineSemitones: 2,
-                                  questionRiseSemitones: 4,
-                                  exclaimLiftSemitones: 2
-                                },
-                                syllableMs: 52
-                              },
-                              dark: {
-                                waveform: "sawtooth",
-                                pitchHz: 80,
-                                glideSemitones: -.6,
-                                durationMs: 85,
-                                attackMs: 6,
-                                releaseMs: 16,
-                                lowpassHz: 420,
-                                volume: 1.05,
-                                intonation: {
-                                  variationSemitones: 1,
-                                  declineSemitones: 3.5,
-                                  questionRiseSemitones: 2.5,
-                                  exclaimLiftSemitones: 1
-                                },
-                                syllableMs: 64
-                              },
-                              "high-pitched": {
-                                waveform: "triangle",
-                                pitchHz: 300,
-                                glideSemitones: -.8,
-                                durationMs: 55,
-                                attackMs: 2,
-                                releaseMs: 10,
-                                lowpassHz: null,
-                                volume: .8,
-                                intonation: {
-                                  variationSemitones: 2.2,
-                                  declineSemitones: 2,
-                                  questionRiseSemitones: 5,
-                                  exclaimLiftSemitones: 3
-                                },
-                                syllableMs: 44
-                              },
-                              gruff: {
-                                waveform: "sawtooth",
-                                pitchHz: 105,
-                                glideSemitones: -.8,
-                                durationMs: 75,
-                                attackMs: 4,
-                                releaseMs: 14,
-                                lowpassHz: 900,
-                                volume: .85,
-                                intonation: {
-                                  variationSemitones: 1.2,
-                                  declineSemitones: 3,
-                                  questionRiseSemitones: 3,
-                                  exclaimLiftSemitones: 2
-                                },
-                                syllableMs: 58
-                              },
-                              lively: {
-                                waveform: "square",
-                                pitchHz: 230,
-                                glideSemitones: .6,
-                                durationMs: 55,
-                                attackMs: 2,
-                                releaseMs: 10,
-                                lowpassHz: 2400,
-                                volume: .5,
-                                intonation: {
-                                  variationSemitones: 2.6,
-                                  declineSemitones: 1.5,
-                                  questionRiseSemitones: 5,
-                                  exclaimLiftSemitones: 3.5
-                                },
-                                syllableMs: 44
-                              },
-                              posh: {
-                                waveform: "triangle",
-                                pitchHz: 175,
-                                glideSemitones: 1.2,
-                                durationMs: 90,
-                                attackMs: 6,
-                                releaseMs: 20,
-                                lowpassHz: 2e3,
-                                volume: 1,
-                                intonation: {
-                                  variationSemitones: 2,
-                                  declineSemitones: 4,
-                                  questionRiseSemitones: 5,
-                                  exclaimLiftSemitones: 2.5
-                                },
-                                syllableMs: 60
-                              },
-                              mechanical: {
-                                waveform: "square",
-                                pitchHz: 140,
-                                glideSemitones: 0,
-                                durationMs: 60,
-                                attackMs: 0,
-                                releaseMs: 4,
-                                lowpassHz: 1400,
-                                volume: .55,
-                                intonation: {
-                                  variationSemitones: 0,
-                                  declineSemitones: 0,
-                                  questionRiseSemitones: 0,
-                                  exclaimLiftSemitones: 0
-                                },
-                                syllableMs: 62
-                              }
-                            };
-
-                          function lB(BB) {
-                            return "string" !== typeof BB ? BB : Object.hasOwn(pB, BB) ? pB[BB] : null
-                          }
-
-                          function JB(BB, TB, dB) {
-                            return Math.min(dB, Math.max(TB, BB))
-                          }
-
-                          function YB(BB) {
-                            const TB = JB(BB.durationMs, 10, 500),
-                              dB = JB(BB.attackMs, 0, TB),
-                              {
-                                intonation: yB
-                              } = BB;
-                            return {
-                              waveform: VB.includes(BB.waveform) ? BB.waveform : "sine",
-                              pitchHz: JB(BB.pitchHz, 20, 4e3),
-                              glideSemitones: JB(BB.glideSemitones, -24, 24),
-                              durationMs: TB,
-                              attackMs: dB,
-                              releaseMs: JB(BB.releaseMs, 0, TB - dB),
-                              lowpassHz: null === BB.lowpassHz ? null : JB(BB.lowpassHz, 20, 2e4),
-                              volume: JB(BB.volume, 0, 2),
-                              intonation: {
-                                variationSemitones: JB(yB.variationSemitones, 0, 6),
-                                declineSemitones: JB(yB.declineSemitones, 0, 12),
-                                questionRiseSemitones: JB(yB.questionRiseSemitones, 0, 12),
-                                exclaimLiftSemitones: JB(yB.exclaimLiftSemitones, 0, 12)
-                              },
-                              syllableMs: JB(BB.syllableMs, 25, 200)
-                            }
-                          }
-                        }
-                      }; Object.freeze(modules);
-                      for (const BB in modules) Object.freeze(modules[BB]);
+      }
+    }
+
+    function nY(YY) {
+      let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
+      const DY = (0, aY.Sb)(YY),
+        FY = `${(0,aY.xe)(YY)}_painting`,
+        AY = YY.replaceAll(" ", "_") + " Painting";
+      return {
+        ...bY(`_${DY} Top Left`, {
+          ttb: 240,
+          itemTexture: FY,
+          model: "rotatable",
+          harvestType: "wood",
+          rootMetaDesc: `_${DY} Top Left|meta|rot1`,
+          particlesIgnoreBlack: !0,
+          solid: !1,
+          modelScale: rY,
+          blockModel: `_${AY} Top Left`,
+          heldItemGlb: AY,
+          drops: DY
+        }),
+        ...bY(`_${DY} Top Right`, {
+          ttb: 240,
+          itemTexture: FY,
+          model: "rotatable",
+          harvestType: "wood",
+          rootMetaDesc: `_${DY} Top Right|meta|rot1`,
+          particlesIgnoreBlack: !0,
+          solid: !1,
+          modelScale: rY,
+          blockModel: `_${AY} Top Right`,
+          heldItemGlb: AY,
+          drops: DY
+        }),
+        ...bY(`${DY}`, {
+          ttb: 240,
+          itemTexture: FY,
+          model: "rotatable",
+          harvestType: "wood",
+          rootMetaDesc: `${DY}|meta|rot1`,
+          particlesIgnoreBlack: !0,
+          solid: !1,
+          modelScale: rY,
+          blockModel: `_${AY} Bottom Left`,
+          heldItemGlb: AY,
+          drops: DY
+        }),
+        ...bY(`_${DY} Bottom Right`, {
+          ttb: 240,
+          itemTexture: FY,
+          model: "rotatable",
+          harvestType: "wood",
+          rootMetaDesc: `_${DY} Bottom Right|meta|rot1`,
+          particlesIgnoreBlack: !0,
+          solid: !1,
+          modelScale: rY,
+          blockModel: `_${AY} Bottom Right`,
+          heldItemGlb: AY,
+          drops: DY
+        })
+      }
+    }
+
+    function PY(YY, rY, DY, FY, AY) {
+      const IY = `_${YY} Back`,
+        RY = `_${YY} Dish`,
+        OY = 3e3,
+        gY = "rock",
+        vY = "Radar";
+      return {
+        ...kY(YY, {
+          displayName: {
+            translationKey: `item:${(0,aY.te)(YY)}`
+          },
+          ttb: OY,
+          itemTexture: DY,
+          textureInfo: "string" === typeof AY ? [FY, AY, "radar_bottom"] : AY.textureInfo,
+          harvestType: gY,
+          drops: vY,
+          twoDBlockItem: !0,
+          rootMetaDesc: `${YY}|meta|rot1`
+        }, "object" === typeof AY ? AY.texturesPerSide : [
+          [0, 0, 1, 2, 0, 0],
+          [0, 0, 1, 2, 0, 0],
+          [0, 0, 1, 2, 0, 0],
+          [0, 0, 1, 2, 0, 0]
+        ]),
+        ...bY(IY, {
+          ttb: OY,
+          textureInfo: [FY, "radar_bottom"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          harvestType: gY,
+          drops: vY,
+          rootMetaDesc: `${IY}|meta|rot1`
+        }),
+        ...bY(RY, {
+          ttb: OY,
+          model: "rotatable",
+          harvestType: gY,
+          drops: vY,
+          rootMetaDesc: `${RY}|meta|rot1`,
+          particlesIgnoreBlack: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          solid: !1,
+          blockModel: rY
+        })
+      }
+    }
+
+    function UY() {
+      const YY = "Solar Panel",
+        rY = [YY, "_Solar Panel SE", "_Solar Panel NW", "_Solar Panel NE"],
+        DY = {
+          ttb: 2400,
+          textureInfo: ["solar_panel_side", "solar_panel_top", "solar_panel_bottom"],
+          texturePerSide: [0, 0, 1, 2, 0, 0],
+          harvestType: "rock"
+        },
+        FY = {};
+      for (const AY of rY) {
+        const rY = AY === YY ? {
+          displayName: {
+            translationKey: "item:solarPanel"
+          },
+          description: {
+            translationKey: "item:solarPanelDescription"
+          },
+          itemTexture: "solar_panel"
+        } : {
+          drops: YY
+        };
+        Object.assign(FY, bY(AY, {
+          ...DY,
+          rootMetaDesc: `${AY}|meta|rot1`,
+          ...rY
+        }))
+      }
+      return FY
+    }
+
+    function LY(YY) {
+      const {
+        root: rY,
+        cells: DY,
+        displayNameKey: FY,
+        descriptionKey: AY,
+        itemTexture: IY
+      } = YY, RY = {
+        ttb: 3600,
+        model: "rotatable",
+        modelScale: 8,
+        harvestType: "rock",
+        particlesIgnoreBlack: !0,
+        altActionable: !0
+      }, OY = {};
+      for (const [gY, aY] of DY) {
+        const YY = gY === rY ? {
+          displayName: {
+            translationKey: FY
+          },
+          description: {
+            translationKey: AY
+          },
+          itemTexture: IY
+        } : {
+          drops: rY
+        };
+        Object.assign(OY, bY(gY, {
+          ...RY,
+          blockModel: aY,
+          rootMetaDesc: `${gY}|meta|rot1`,
+          ...YY
+        }))
+      }
+      return OY
+    }
+
+    function tY() {
+      return LY({
+        root: "Auto Miner",
+        cells: [
+          ["Auto Miner", "auto_miner_foot_back"],
+          ["_Auto Miner Drill Front", "auto_miner_drill_front"],
+          ["_Auto Miner Drill Back", "auto_miner_drill_back"],
+          ["_Auto Miner Foot Front", "auto_miner_foot_front"],
+          ["_Auto Miner Body", "auto_miner_body"]
+        ],
+        displayNameKey: "item:autoMiner",
+        descriptionKey: "item:autoMinerDescription",
+        itemTexture: "auto_miner"
+      })
+    }
+
+    function Yr() {
+      return LY({
+        root: "Lunite Auto Miner",
+        cells: [
+          ["Lunite Auto Miner", "auto_miner_lunite_foot_back"],
+          ["_Lunite Auto Miner Drill Front", "auto_miner_lunite_drill_front"],
+          ["_Lunite Auto Miner Drill Back", "auto_miner_lunite_drill_back"],
+          ["_Lunite Auto Miner Foot Front", "auto_miner_lunite_foot_front"],
+          ["_Lunite Auto Miner Body", "auto_miner_lunite_body"]
+        ],
+        displayNameKey: "item:luniteAutoMiner",
+        descriptionKey: "item:luniteAutoMinerDescription",
+        itemTexture: "autominer_lunite"
+      })
+    }
+    const rr = "Cannon",
+      Dr = [{
+        block: rr,
+        blockModel: "cannon_bottom_back",
+        x: 0,
+        y: 0,
+        z: 0
+      }, {
+        block: "_Cannon Bottom Front",
+        blockModel: "cannon_bottom_front",
+        x: 0,
+        y: 0,
+        z: -1
+      }, {
+        block: "_Cannon Barrel Back",
+        blockModel: "cannon_barrel_back",
+        x: 0,
+        y: 1,
+        z: -2
+      }, {
+        block: "_Cannon Barrel Front",
+        blockModel: "cannon_barrel_front",
+        x: 0,
+        y: 1,
+        z: -3
+      }, {
+        block: "_Cannon Top Back",
+        blockModel: "cannon_top_back",
+        x: 0,
+        y: 1,
+        z: 0
+      }, {
+        block: "_Cannon Top Front",
+        blockModel: "cannon_top_front",
+        x: 0,
+        y: 1,
+        z: -1
+      }];
+
+    function Fr() {
+      const YY = {
+          ttb: 3600,
+          model: "rotatable",
+          modelScale: 8,
+          harvestType: "rock",
+          particlesIgnoreBlack: !0,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        rY = {};
+      for (const {
+          block: DY,
+          blockModel: FY
+        }
+        of Dr) {
+        const AY = DY === rr ? {
+          displayName: {
+            translationKey: "item:cannon"
+          },
+          blockModelItem: !0,
+          heldItemScale: 4
+        } : {
+          drops: rr
+        };
+        Object.assign(rY, bY(DY, {
+          ...YY,
+          blockModel: FY,
+          rootMetaDesc: `${DY}|meta|rot1`,
+          ...AY
+        }))
+      }
+      return rY
+    }
+    const Ar = "Rocket Ship",
+      Ir = ["southwest", "southeast", "northwest", "northeast"],
+      Rr = 5,
+      Or = Rr,
+      gr = Array.from({
+        length: Rr
+      }, ((YY, rY) => rY + 1)),
+      ar = {
+        southwest: {
+          x: 0,
+          z: 0
+        },
+        southeast: {
+          x: 1,
+          z: 0
+        },
+        northwest: {
+          x: 0,
+          z: -1
+        },
+        northeast: {
+          x: 1,
+          z: -1
+        }
+      };
+
+    function vr(YY, rY) {
+      const DY = YY[0].toUpperCase() + YY.slice(1);
+      return `_${Ar} ${DY} L${rY}`
+    }
+
+    function ur(YY) {
+      return 1 === YY ? Ar : `${Ar} S${YY}`
+    }
+
+    function sr() {
+      const YY = {
+          ttb: 3600,
+          model: "CustomModel",
+          modelScale: 8,
+          harvestType: "rock",
+          particlesIgnoreBlack: !0,
+          altActionable: !0
+        },
+        rY = rY => ({
+          ...YY,
+          blockModel: "rocket_southwest_1",
+          displayName: {
+            translationKey: 1 === rY ? "item:rocketShip" : `item:rocketShipS${rY}`
+          },
+          description: {
+            translationKey: "item:rocketShipDescription"
+          },
+          itemTexture: "rocket",
+          drops: null
+        }),
+        DY = {
+          [Ar]: rY(1)
+        };
+      for (const FY of Ir)
+        for (let rY = 1; rY <= Rr; rY++) "southwest" === FY && 1 === rY || (DY[vr(FY, rY)] = {
+          ...YY,
+          blockModel: `rocket_${FY}_${rY}`,
+          drops: null
+        });
+      for (let FY = 2; FY <= Or; FY++) DY[ur(FY)] = {
+        ...rY(FY),
+        heldItemGlb: Ar
+      };
+      return DY["INTERNAL_MESH_Rocket Ship Full"] = {
+        ttb: 3600,
+        harvestType: "rock",
+        blockModel: "rocket_full",
+        blockModelItem: !0,
+        twoDBlockItem: !0,
+        modelScale: 8,
+        drops: null
+      }, DY
+    }
+
+    function ir(YY) {
+      const rY = {
+        displayName: {
+          translationKey: `item:small${YY.replaceAll(" ","")}Pod`
+        },
+        ttb: 300,
+        itemTexture: `small_pod_${(0,aY.xe)(YY)}_icon`,
+        model: "CustomModel",
+        harvestType: "rock",
+        solid: !1,
+        modelScale: 8,
+        customModelInfo: {
+          yOffset: -.5
+        },
+        particlesIgnoreBlack: !0
+      };
+      return {
+        [`Small ${YY} Pod`]: {
+          ...rY,
+          blockModel: `Small ${YY} Pod`
+        },
+        [`_Small ${YY} Pod Mid`]: {
+          ...rY,
+          blockModel: `_Small ${YY} Pod Mid`
+        },
+        [`_Small ${YY} Pod Top`]: {
+          ...rY,
+          blockModel: `_Small ${YY} Pod Top`
+        }
+      }
+    }
+
+    function yr(YY, rY) {
+      const DY = {};
+      for (const FY in YY) {
+        const AY = YY[FY];
+        DY[FY] = "function" === typeof AY ? AY(rY) : AY
+      }
+      return DY
+    }
+
+    function Qr(YY, rY) {
+      let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : aY.Fc;
+      const FY = {};
+      for (const AY of DY) FY[YY(AY)] = yr(rY, AY);
+      return FY
+    }
+
+    function or(YY, rY) {
+      let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      console.assert("meta|rot1|bot" === rY.rootMetaDesc.split("|").slice(1).join("|"), `${YY} root block .rootMetaDesc must be |meta|rot1|bot`), console.assert("string" === typeof rY.blockModel, `${YY} root block .blockModel must be a string`);
+      const FY = {
+        ...rY
+      };
+      delete FY.rootMetaDesc;
+      const {
+        wallBlockModel: AY,
+        yRotOffset: IY,
+        xRotOffset: RY,
+        noCeilingVariant: OY
+      } = DY, gY = {
+        ...FY,
+        ...AY ? {
+          blockModel: AY
+        } : {},
+        model: "rotatable",
+        customModelInfo: {
+          ...FY.customModelInfo,
+          yRotOffset: Math.PI + (null !== IY && void 0 !== IY ? IY : 0),
+          ...void 0 !== RY ? {
+            xRotOffset: RY
+          } : {}
+        }
+      };
+      return {
+        [YY]: rY,
+        ...OY ? {} : {
+          [`${YY}|meta|rot1|top`]: {
+            ...FY
+          }
+        },
+        [`${YY}|meta|rot1|side`]: {
+          ...gY
+        },
+        [`${YY}|meta|rot2|side`]: {
+          ...gY
+        },
+        [`${YY}|meta|rot3|side`]: {
+          ...gY
+        },
+        [`${YY}|meta|rot4|side`]: {
+          ...gY
+        }
+      }
+    }
+
+    function Wr(YY, rY, DY) {
+      let FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : aY.Fc;
+      const AY = {};
+      for (const IY of FY) Object.assign(AY, or(YY(IY), yr(rY, IY), {
+        wallBlockModel: DY(IY)
+      }));
+      return AY
+    }
+    const Er = {
+      "Landing Pad": 0,
+      "Weak Jump Pad": 13,
+      "Jump Pad": 20,
+      "Strong Jump Pad": 25,
+      "Super Jump Pad": 31
+    };
+
+    function mr() {
+      const YY = {
+        ttb: 300,
+        model: "CustomModel",
+        harvestType: "cuttable",
+        solid: !1,
+        modelScale: 8,
+        customModelInfo: {
+          yOffset: -.5
+        },
+        particlesIgnoreBlack: !0,
+        canBePlacedOver: !1
+      };
+      return {
+        "Landing Pad": {
+          ...YY,
+          displayName: {
+            translationKey: "item:landingPad"
+          },
+          description: {
+            translationKey: "item:landingPadDescription"
+          },
+          itemTexture: "landing_pad",
+          blockModel: "landing_pad"
+        },
+        "Weak Jump Pad": {
+          ...YY,
+          displayName: {
+            translationKey: "item:weakJumpPad"
+          },
+          description: {
+            translationKey: "item:jumpPadDescription"
+          },
+          itemTexture: "jump_pad_weak",
+          blockModel: "jump_pad_weak"
+        },
+        "Jump Pad": {
+          ...YY,
+          displayName: {
+            translationKey: "item:jumpPad"
+          },
+          description: {
+            translationKey: "item:jumpPadDescription"
+          },
+          itemTexture: "jump_pad",
+          blockModel: "jump_pad"
+        },
+        "Strong Jump Pad": {
+          ...YY,
+          displayName: {
+            translationKey: "item:strongJumpPad"
+          },
+          description: {
+            translationKey: "item:jumpPadDescription"
+          },
+          itemTexture: "jump_pad_strong",
+          blockModel: "jump_pad_strong"
+        },
+        "Super Jump Pad": {
+          ...YY,
+          displayName: {
+            translationKey: "item:superJumpPad"
+          },
+          description: {
+            translationKey: "item:jumpPadDescription"
+          },
+          itemTexture: "jump_pad_super",
+          blockModel: "jump_pad_super"
+        }
+      }
+    }
+
+    function Vr(YY) {
+      const rY = "Grey" === YY ? "Gray" : YY;
+      return aY.O[rY].map((YY => Math.floor(YY / 2) + 2))
+    }
+  },
+  8845: (YY, rY, DY) => {
+    DY.d(rY, {
+      e: () => gY,
+      f: () => vY,
+      h: () => uY,
+      j: () => iY,
+      n: () => WY,
+      q: () => yY,
+      s: () => sY
+    });
+    var FY = DY(8833),
+      AY = DY(8851),
+      IY = DY(8890),
+      RY = DY(8898),
+      OY = DY(8900);
+    const gY = [1, 1, 0, 2, 1, 1],
+      aY = (0, FY.d)([
+        [
+          [0, 0, 0],
+          [8, 4, 8]
+        ]
+      ]),
+      vY = 1e3 * RY.h;
+
+    function uY(YY, rY) {
+      return {
+        displayName: {
+          translationKey: `item:${YY}`
+        },
+        description: {
+          translationKey: `item:${YY}Description`
+        },
+        ttb: 600,
+        textureInfo: rY,
+        model: "Slab|rotatable",
+        customModelInfo: {
+          yOffset: -.25
+        },
+        ns: aY,
+        harvestType: "rock",
+        harvestLevel: 0,
+        showInCreativeInven: !1
+      }
+    }
+
+    function sY(YY, rY) {
+      const [DY, FY] = OY.g[YY - 1];
+      return [DY * rY, 0, FY * rY]
+    }
+
+    function iY(YY, rY, DY, FY) {
+      let IY = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : vY;
+      const RY = (0, AY.Eb)(YY, {
+        ...uY(rY, DY),
+        rootMetaDesc: `${YY}|meta|rot1`
+      }, [FY, FY, FY, FY]);
+      for (let AY = 1; AY <= 4; AY++) RY[1 === AY ? YY : `${YY}|meta|rot${AY}`].surfaceVelocity = sY(AY, IY);
+      return RY
+    }
+
+    function yY(YY, rY, DY, FY) {
+      let AY = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : vY;
+      const IY = {};
+      for (const RY of OY.o) {
+        const aY = `${DY}_${"turnLeft"===RY?"turn_left":"turn_right"}`;
+        for (let DY = 1; DY <= 4; DY++) IY[(0, OY.R)(YY, DY, RY)] = {
+          ...uY(rY, [aY, ...FY]),
+          texturePerSide: gY,
+          surfaceVelocity: sY(DY, AY)
+        }
+      }
+      return IY
+    }
+    const QY = IY.s,
+      oY = QY.map((YY => YY.map((YY => 0 === YY ? 7 : 7 === YY ? 0 : YY))));
+
+    function WY(YY, rY) {
+      const DY = YY => ({
+          displayName: {
+            translationKey: `item:${rY}`
+          },
+          description: {
+            translationKey: `item:${rY}Description`
+          },
+          ttb: 600,
+          textureInfo: ["belt_tunnel_mouth", "belt_tunnel_side", ...[1, 2, 3, 4].map((rY => `${YY}[rot[${rY}`)), "conveyor_belt_bottom", "belt_tunnel_back"],
+          harvestType: "rock",
+          harvestLevel: 0,
+          showInCreativeInven: !1
+        }),
+        FY = (0, AY.Eb)(YY, {
+          ...DY("belt_tunnel_top"),
+          rootMetaDesc: `${YY}|meta|rot1`
+        }, QY);
+      return oY.forEach(((rY, AY) => {
+        FY[`${YY}|meta|rot${AY+1}|exit`] = {
+          ...DY("belt_tunnel_exit_top"),
+          texturePerSide: rY
+        }
+      })), FY
+    }
+  },
+  8836: (YY, rY, DY) => {
+    DY.d(rY, {
+      e: () => sY,
+      g: () => uY,
+      h: () => OY,
+      l: () => vY
+    });
+    var FY = DY(4001),
+      AY = DY(8845),
+      IY = DY(8890),
+      RY = DY(8898);
+
+    function OY() {
+      return {
+        ...sY("Coal Deposit", "coalDeposit", "coal_deposit"),
+        ...sY("Iron Deposit", "ironDeposit", "iron_deposit"),
+        ...sY("Stone Deposit", "stoneDeposit", "stone_deposit"),
+        ...sY("Copper Deposit", "copperDeposit", "copper_deposit"),
+        ...sY("Gold Deposit", "goldDeposit", "gold_deposit"),
+        "Homestead Core": {
+          displayName: {
+            translationKey: "item:homesteadCore"
+          },
+          description: {
+            translationKey: "item:homesteadCoreDescription"
+          },
+          ttb: 5e11,
+          textureInfo: "homestead_core",
+          harvestType: "rock",
+          drops: null,
+          altActionable: !0,
+          My: [4, 12, 14],
+          showInCreativeInven: !1
+        },
+        "Drop Pad": {
+          displayName: {
+            translationKey: "item:dropPad"
+          },
+          description: {
+            translationKey: "item:dropPadDescription"
+          },
+          ttb: 5e11,
+          textureInfo: ["drop_pad", "machine_side"],
+          texturePerSide: [1, 1, 0, 1, 1, 1],
+          harvestType: "rock",
+          drops: null,
+          showInCreativeInven: !1
+        },
+        "Copper Ore": {
+          displayName: {
+            translationKey: "item:copperOre"
+          },
+          description: {
+            translationKey: "item:copperOreDescription"
+          },
+          ttb: 3300,
+          textureInfo: "copper_ore",
+          harvestType: "rock",
+          drops: "Raw Copper",
+          showInCreativeInven: !1
+        },
+        ...(0, IY.H)("Burner Drill", "burnerDrill", "burner_drill", IY.d),
+        ...(0, IY.H)("Crusher", "crusher", "crusher"),
+        ...(0, IY.H)("Smelter", "smelter", "smelter"),
+        ...(0, IY.H)("Generator", "generator", "generator", IY.u),
+        ...(0, IY.H)("Press", "press", "press"),
+        ...(0, IY.H)("Wire Mill", "wireMill", "wire_mill"),
+        ...(0, AY.j)("Conveyor Belt", "conveyorBelt", ["conveyor_belt_top", "conveyor_belt_slab_side", "conveyor_belt_bottom"], AY.e),
+        ...(0, AY.j)("Splitter", "splitter", ["splitter_top", "splitter_slab_side", "conveyor_belt_bottom"], AY.e),
+        "Voltite Ore": {
+          displayName: {
+            translationKey: "item:voltiteOre"
+          },
+          description: {
+            translationKey: "item:voltiteOreDescription"
+          },
+          ttb: 4200,
+          textureInfo: "voltite_ore",
+          harvestType: "rock",
+          harvestLevel: 3,
+          drops: "Raw Voltite",
+          My: [2, 6, 6],
+          showInCreativeInven: !1
+        },
+        ...(0, IY.H)("Alloy Kiln", "alloyKiln", "alloy_kiln"),
+        ...(0, IY.H)("Electric Drill", "electricDrill", "electric_drill", IY.p),
+        ...(0, IY.H)("Assembler", "autoBench", "auto_bench"),
+        ...(0, AY.j)("Sorting Gate", "sortingGate", ["sorting_gate_top", "sorting_gate_slab_side", "conveyor_belt_bottom"], AY.e),
+        ...(0, AY.j)("Belt Loader", "beltLoader", ["belt_loader_top", "conveyor_belt_slab_side", "conveyor_belt_bottom", "belt_loader_slab_front"], [1, 1, 0, 2, 3, 1]),
+        ...uY("Storage Silo", "storageSilo", "storage_silo"),
+        ...uY("Charge Vault", "chargeVault", "charge_vault"),
+        ...vY("Machine Bench", "machineBench", "machine_bench"),
+        ...vY("Parts Bench", "partsBench", "parts_bench"),
+        ...vY("Tool Bench", "toolBench", "tool_bench"),
+        "_Homestead Core Mid": aY([{
+          animTextures: ["homestead_core_mid0", "homestead_core_mid1", "homestead_core_mid2", "homestead_core_mid3"],
+          animationInterval: 250
+        }], [0, 0, 0, 0, 0, 0], [3, 10, 12]),
+        "_Homestead Core Top": aY(["homestead_core_crown", "homestead_core_cap"], [0, 0, 1, 0, 0, 0], [4, 12, 14]),
+        ...(0, IY.L)("Burner Drill", "burnerDrill", "burner_drill", IY.D, IY.d),
+        ...(0, IY.L)("Crusher", "crusher", "crusher", IY.D),
+        ...(0, IY.L)("Smelter", "smelter", "smelter", IY.D),
+        ...(0, IY.L)("Generator", "generator", "generator", IY.D, IY.u),
+        ...(0, IY.L)("Press", "press", "press", IY.e),
+        ...(0, IY.L)("Wire Mill", "wireMill", "wire_mill", IY.e),
+        ...(0, IY.L)("Alloy Kiln", "alloyKiln", "alloy_kiln", IY.D),
+        ...(0, IY.L)("Electric Drill", "electricDrill", "electric_drill", IY.e, IY.p),
+        ...(0, IY.L)("Assembler", "autoBench", "auto_bench", IY.e),
+        ...(0, IY.H)("Tree Cutter", "treeCutter", "tree_cutter", IY.z),
+        ...(0, IY.L)("Tree Cutter", "treeCutter", "tree_cutter", IY.D, IY.z),
+        ...sY("Voltite Deposit", "voltiteDeposit", "voltite_deposit", [2, 6, 6]),
+        ...(0, IY.H)("Volt Engine", "voltEngine", "volt_engine", IY.u),
+        ...(0, IY.L)("Volt Engine", "voltEngine", "volt_engine", [2, 6, 8], IY.u),
+        ...(0, IY.H)("Deep Drill", "deepDrill", "deep_drill", IY.l),
+        ...(0, IY.L)("Deep Drill", "deepDrill", "deep_drill", [6, 4, 2], IY.l),
+        ...(0, IY.H)("Shatter Mill", "shatterMill", "shatter_mill"),
+        ...(0, IY.L)("Shatter Mill", "shatterMill", "shatter_mill", [6, 4, 2]),
+        ...(0, IY.H)("Sky Tap", "skyTap", "sky_tap", IY.x),
+        ...(0, IY.L)("Sky Tap", "skyTap", "sky_tap", [4, 6, 8], IY.x),
+        ...(0, AY.j)("Fast Belt", "fastBelt", ["fast_belt_top", "fast_belt_slab_side", "conveyor_belt_bottom"], AY.e, 1e3 * RY.h * RY.x),
+        ...uY("Charging Pad", "chargingPad", "charging_pad"),
+        ...(0, IY.H)("Crystal Vat", "crystalVat", "crystal_vat"),
+        ...(0, IY.L)("Crystal Vat", "crystalVat", "crystal_vat", [6, 3, 9]),
+        Starframe: {
+          displayName: {
+            translationKey: "item:starframe"
+          },
+          description: {
+            translationKey: "item:starframeDescription"
+          },
+          ttb: 1500,
+          textureInfo: "starframe",
+          harvestType: "rock",
+          harvestLevel: 0,
+          My: [6, 6, 10],
+          showInCreativeInven: !1
+        },
+        ...uY("Forge Hopper", "forgeHopper", "forge_hopper", "machine_side"),
+        "Comet Ore": {
+          displayName: {
+            translationKey: "item:cometOre"
+          },
+          description: {
+            translationKey: "item:cometOreDescription"
+          },
+          ttb: 5e3,
+          textureInfo: "comet_ore",
+          harvestType: "rock",
+          harvestLevel: 3,
+          drops: null,
+          My: [8, 6, 10],
+          showInCreativeInven: !1
+        },
+        "Comet Heart": {
+          displayName: {
+            translationKey: "item:cometHeart"
+          },
+          description: {
+            translationKey: "item:cometHeartDescription"
+          },
+          ttb: 18e3,
+          textureInfo: "comet_heart",
+          harvestType: "rock",
+          harvestLevel: 3,
+          drops: null,
+          My: [12, 10, 14],
+          showInCreativeInven: !1
+        },
+        "_Starframe Spire": {
+          displayName: {
+            translationKey: "item:starframe"
+          },
+          description: {
+            translationKey: "item:starframeDescription"
+          },
+          ttb: 5e11,
+          textureInfo: "starframe",
+          harvestType: "rock",
+          drops: null,
+          My: [6, 6, 10],
+          showInCreativeInven: !1
+        },
+        ...(0, AY.q)("Conveyor Belt", "conveyorBelt", "conveyor_belt", ["conveyor_belt_slab_side", "conveyor_belt_bottom"]),
+        ...(0, AY.q)("Fast Belt", "fastBelt", "fast_belt", ["fast_belt_slab_side", "conveyor_belt_bottom"], 1e3 * RY.h * RY.x),
+        ...(0, IY.H)("Recycler", "recycler", "recycler"),
+        ...(0, IY.L)("Recycler", "recycler", "recycler", [3, 8, 4]),
+        ...gY("Belt Lift", "beltLift", "belt_lift"),
+        ...gY("Belt Drop", "beltDrop", "belt_drop"),
+        ...(0, IY.H)("Crop Harvester", "cropHarvester", "crop_harvester", IY.i),
+        ...(0, IY.L)("Crop Harvester", "cropHarvester", "crop_harvester", IY.e, IY.i),
+        ...(0, AY.n)("Belt Tunnel", "beltTunnel"),
+        "Pure Copper Ore": {
+          displayName: {
+            translationKey: "item:pureCopperOre"
+          },
+          ttb: 29700,
+          textureInfo: "pure_copper_ore",
+          harvestType: "rock",
+          drops: "Raw Copper",
+          Na: 9,
+          specialToolDrop: {
+            tool: "Moonstone Pickaxe",
+            drops: "Pure Copper Ore"
+          },
+          specialToolBonusDrops: {
+            "Golem Pickaxe": FY.l
+          },
+          My: [6, 6, 6],
+          showInCreativeInven: !1
+        },
+        "Pure Voltite Ore": {
+          displayName: {
+            translationKey: "item:pureVoltiteOre"
+          },
+          ttb: 37800,
+          textureInfo: "pure_voltite_ore",
+          harvestType: "rock",
+          harvestLevel: 3,
+          drops: "Raw Voltite",
+          Na: 9,
+          specialToolDrop: {
+            tool: "Moonstone Pickaxe",
+            drops: "Pure Voltite Ore"
+          },
+          specialToolBonusDrops: {
+            "Golem Pickaxe": FY.l
+          },
+          My: [2, 6, 6],
+          showInCreativeInven: !1
+        }
+      }
+    }
+
+    function gY(YY, rY, DY) {
+      const FY = {
+        displayName: {
+          translationKey: `item:${rY}`
+        },
+        description: {
+          translationKey: `item:${rY}Description`
+        },
+        ttb: 600,
+        textureInfo: [`${DY}_top`, `${DY}_side`, "conveyor_belt_bottom"],
+        texturePerSide: [1, 1, 0, 2, 1, 1],
+        harvestType: "rock",
+        harvestLevel: 0,
+        showInCreativeInven: !1
+      };
+      return {
+        [YY]: FY
+      }
+    }
+
+    function aY(YY, rY, DY) {
+      return {
+        displayName: {
+          translationKey: "item:homesteadCore"
+        },
+        description: {
+          translationKey: "item:homesteadCoreDescription"
+        },
+        ttb: 5e11,
+        textureInfo: YY,
+        texturePerSide: rY,
+        harvestType: "rock",
+        drops: null,
+        altActionable: !0,
+        My: DY,
+        showInCreativeInven: !1
+      }
+    }
+
+    function vY(YY, rY, DY) {
+      const FY = {
+        displayName: {
+          translationKey: `item:${rY}`
+        },
+        description: {
+          translationKey: `item:${rY}Description`
+        },
+        ttb: 3e3,
+        textureInfo: [`${DY}_side`, `${DY}_top`],
+        texturePerSide: [0, 0, 1, 1, 0, 0],
+        harvestType: "wood",
+        altActionable: !0,
+        showInCreativeInven: !1
+      };
+      return {
+        [YY]: FY
+      }
+    }
+
+    function uY(YY, rY, DY) {
+      const FY = {
+        displayName: {
+          translationKey: `item:${rY}`
+        },
+        description: {
+          translationKey: `item:${rY}Description`
+        },
+        ttb: 1500,
+        textureInfo: [`${DY}_top`, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : `${DY}_side`],
+        texturePerSide: [1, 1, 0, 0, 1, 1],
+        harvestType: "rock",
+        harvestLevel: 0,
+        altActionable: !0,
+        showInCreativeInven: !1
+      };
+      return {
+        [YY]: FY
+      }
+    }
+
+    function sY(YY, rY, DY, FY) {
+      const AY = {
+        displayName: {
+          translationKey: `item:${rY}`
+        },
+        description: {
+          translationKey: `item:${rY}Description`
+        },
+        ttb: arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 6e3,
+        textureInfo: DY,
+        harvestType: "rock",
+        harvestLevel: 0,
+        drops: null,
+        showInCreativeInven: !1,
+        ...FY ? {
+          My: FY
+        } : {}
+      };
+      return {
+        [YY]: AY
+      }
+    }
+  },
+  8890: (YY, rY, DY) => {
+    DY.d(rY, {
+      D: () => OY,
+      H: () => mY,
+      L: () => VY,
+      d: () => aY,
+      e: () => gY,
+      i: () => iY,
+      l: () => uY,
+      p: () => vY,
+      s: () => AY,
+      u: () => QY,
+      x: () => yY,
+      z: () => sY
+    });
+    var FY = DY(8851);
+    const AY = [
+        [1, 1, 2, 6, 0, 7],
+        [0, 7, 3, 6, 1, 1],
+        [1, 1, 4, 6, 7, 0],
+        [7, 0, 5, 6, 1, 1]
+      ],
+      IY = [
+        [1, 8, 2, 6, 0, 7],
+        [0, 7, 3, 6, 8, 1],
+        [8, 1, 4, 6, 7, 0],
+        [7, 0, 5, 6, 1, 8]
+      ],
+      RY = [0, 0, 1, 2, 0, 0],
+      OY = [9, 6, 3],
+      gY = [3, 7, 9],
+      aY = {
+        underside: "burner_drill_bottom"
+      },
+      vY = {
+        underside: "electric_drill_bottom"
+      },
+      uY = {
+        underside: "deep_drill_bottom"
+      },
+      sY = {
+        backRuns: !0
+      },
+      iY = {
+        backRuns: !0
+      },
+      yY = {
+        underside: "sky_tap_bottom"
+      },
+      QY = {
+        uniform: !0
+      };
+
+    function oY(YY) {
+      return {
+        animTextures: [0, 1, 2, 3].map((rY => `${YY}_running${rY}`)),
+        animationInterval: 250
+      }
+    }
+
+    function WY(YY, rY, DY) {
+      var FY, OY;
+      const gY = DY ? oY(`${YY}_side`) : `${YY}_side`,
+        aY = null !== (FY = rY.underside) && void 0 !== FY ? FY : "machine_side";
+      if (rY.uniform) return {
+        textureInfo: [gY, `${YY}_top`, aY],
+        faces: [RY, RY, RY, RY]
+      };
+      const vY = DY && rY.backRuns ? oY(`${YY}_back`) : `${YY}_back`,
+        uY = [1, 2, 3, 4].map((rY => `${YY}_top[rot[${rY}`)),
+        sY = [null !== (OY = rY.front) && void 0 !== OY ? OY : `${YY}_front`, gY, ...uY, aY, vY];
+      if (rY.mirroredSides) {
+        const rY = DY ? oY(`${YY}_side_flip`) : `${YY}_side_flip`;
+        return {
+          textureInfo: [...sY, rY],
+          faces: IY
+        }
+      }
+      return {
+        textureInfo: sY,
+        faces: AY
+      }
+    }
+
+    function EY(YY, rY) {
+      return {
+        displayName: {
+          translationKey: `item:${YY}`
+        },
+        description: {
+          translationKey: `item:${YY}Description`
+        },
+        ttb: 1500,
+        textureInfo: rY,
+        harvestType: "rock",
+        harvestLevel: 0,
+        altActionable: !0,
+        showInCreativeInven: !1
+      }
+    }
+
+    function mY(YY, rY, DY) {
+      let AY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+      const {
+        textureInfo: IY,
+        faces: RY
+      } = WY(DY, AY, !1);
+      return (0, FY.Eb)(YY, {
+        ...EY(rY, IY),
+        rootMetaDesc: `${YY}|meta|rot1`
+      }, RY)
+    }
+
+    function VY(YY, rY, DY, FY) {
+      let AY = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+      const {
+        textureInfo: IY,
+        faces: RY
+      } = WY(DY, AY, !0), OY = {};
+      return RY.forEach(((DY, AY) => {
+        OY[`${YY}|meta|rot${AY+1}|Running`] = {
+          ...EY(rY, IY),
+          texturePerSide: DY,
+          My: FY
+        }
+      })), OY
+    }
+  },
+  8903: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => uY,
+      e: () => vY,
+      g: () => EY,
+      h: () => sY,
+      j: () => oY,
+      l: () => mY,
+      n: () => gr
+    });
+    var FY = DY(8851),
+      AY = DY(8836),
+      IY = DY(8845),
+      RY = DY(8890),
+      OY = DY(8898);
+    const gY = {
+      uniform: !0,
+      underside: "pump_bottom"
+    };
+
+    function aY(YY) {
+      return {
+        front: "output",
+        underside: `${YY}_bottom`,
+        mirroredSides: !0,
+        backRuns: !0
+      }
+    }
+    const vY = "Fluid Pipe",
+      uY = "Coolant Pipe";
+
+    function sY(YY) {
+      return YY === vY || YY === uY
+    }
+    const iY = "Full",
+      yY = 2,
+      QY = 350;
+
+    function oY(YY, rY) {
+      let DY = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      const FY = "cryo" === YY ? uY : vY;
+      return DY || 0 !== rY ? `${FY}|meta|conn|${VY(rY)}${DY?`|${iY}`:""}` : FY
+    }
+    const WY = "Fluid Tank",
+      EY = 4;
+
+    function mY(YY) {
+      return 0 === YY ? WY : `${WY}|meta|rot1|Fill${YY}`
+    }
+
+    function VY(YY) {
+      const rY = FY.e.filter(((rY, DY) => YY >> DY & 1));
+      return rY.length ? rY.join("_") : "none"
+    }
+
+    function SY(YY, rY, DY, FY) {
+      const AY = {
+          displayName: {
+            translationKey: `item:${DY}`
+          },
+          description: {
+            translationKey: "item:fluidPipeDescription"
+          },
+          ttb: 600,
+          harvestType: "rock",
+          harvestLevel: 0,
+          showInCreativeInven: !1,
+          itemTexture: "fluid_pipe",
+          model: "CustomModel",
+          solid: !1,
+          modelScale: 8,
+          particlesIgnoreBlack: !0
+        },
+        IY = {};
+      for (let RY = 0; RY < 64; RY++) {
+        const DY = oY(YY, RY, rY);
+        IY[DY] = {
+          ...AY,
+          blockModel: `${FY}_${VY(RY)}`,
+          ...sY(DY) ? {
+            rootMetaDesc: `${DY}|meta|conn|none`
+          } : {},
+          ..."cryo" === YY ? {
+            drops: vY
+          } : {},
+          ...rY ? {
+            customModelInfo: {
+              textureAnimation: {
+                frames: yY,
+                animationInterval: QY
+              }
+            }
+          } : {}
+        }
+      }
+      return IY
+    }
+    const lY = 300;
+
+    function TY() {
+      const YY = {};
+      for (let rY = 1; rY <= EY; rY++) {
+        const DY = fY(`fluid_tank_fill${rY}`, 4, "_", lY),
+          FY = rY === EY;
+        YY[mY(rY)] = dY("fluidTank", [DY.animTextures[0], DY, ...FY ? [] : ["fluid_tank"]], {
+          ...MY,
+          texturePerSide: FY ? [1, 1, 1, 1, 1, 1] : [1, 1, 2, 1, 1, 1]
+        })
+      }
+      return YY
+    }
+    const eY = RY.s.map((YY => YY.map((YY => 0 === YY ? 0 : 1))));
+    const NY = [0, 0, 0, 0, 0, 0],
+      BY = [1, 1, 1, 1, 1, 1],
+      cY = ["reactor_base", "reactor_base_top"],
+      KY = [0, 0, 1, 1, 0, 0],
+      HY = {
+        Calm: {
+          texture: "reactor_controller_green",
+          ms: 1e3,
+          light: [2, 11, 3]
+        },
+        Warm: {
+          texture: "reactor_controller_yellow",
+          ms: 600,
+          light: [10, 10, 1]
+        },
+        Hot: {
+          texture: "reactor_controller_orange",
+          ms: 400,
+          light: [12, 6, 1]
+        },
+        Alarm: {
+          texture: "reactor_controller_red",
+          ms: 200,
+          light: [13, 1, 1]
+        }
+      },
+      zY = "reactor_frame",
+      ZY = 4,
+      CY = 4;
+
+    function fY(YY) {
+      let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 4,
+        DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "_running",
+        FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 250;
+      return {
+        animTextures: Array.from({
+          length: rY
+        }, ((rY, FY) => `${YY}${DY}${FY}`)),
+        animationInterval: FY
+      }
+    }
+
+    function jY(YY, rY) {
+      return [`${YY}0`, fY(YY, rY, "")]
+    }
+
+    function hY(YY) {
+      return [1, 2, 3, 4].map((rY => `${YY}[rot[${rY}`))
+    }
+
+    function dY(YY, rY) {
+      return {
+        displayName: {
+          translationKey: `item:${YY}`
+        },
+        description: {
+          translationKey: `item:${YY}Description`
+        },
+        ttb: 1500,
+        textureInfo: rY,
+        harvestType: "rock",
+        harvestLevel: 0,
+        showInCreativeInven: !1,
+        ...arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}
+      }
+    }
+    const JY = {
+        transTex: !0,
+        soundType: {
+          break: "glass",
+          place: "stone"
+        }
+      },
+      MY = {
+        ...JY,
+        altActionable: !0
+      },
+      wY = {
+        ttb: 5e11,
+        drops: null
+      };
+
+    function bY(YY, rY, DY, FY) {
+      return {
+        [YY]: rY,
+        [`${YY}|meta|rot1|${DY}`]: {
+          ...rY,
+          ...FY
+        }
+      }
+    }
+
+    function XY(YY, rY, DY) {
+      return (0, FY.Eb)(YY, {
+        ...rY,
+        rootMetaDesc: `${YY}|meta|rot1`
+      }, DY)
+    }
+
+    function qY(YY, rY, DY, FY) {
+      const AY = {};
+      return FY.forEach(((FY, IY) => {
+        AY[`${YY}|meta|rot${IY+1}|${rY}`] = {
+          ...DY,
+          texturePerSide: FY
+        }
+      })), AY
+    }
+
+    function pY(YY, rY, DY, FY) {
+      const AY = {};
+      for (let RY = 1; RY <= 4; RY++) AY[`${YY}|meta|rot${RY}|${DY}`] = {
+        ...(0, IY.h)(rY, FY),
+        texturePerSide: IY.e,
+        surfaceVelocity: (0, IY.s)(RY, IY.f),
+        drops: YY
+      };
+      return AY
+    }
+
+    function kY() {
+      const YY = "Reactor Controller",
+        rY = [NY, NY, NY, NY],
+        DY = (YY, rY) => dY("reactorFrame", [YY], {
+          drops: "Reactor Frame",
+          ...rY ? {
+            My: rY
+          } : {}
+        });
+      let FY = XY(YY, DY(zY), rY);
+      for (const [AY, IY] of Object.entries(HY)) {
+        const RY = {
+          animTextures: [`${IY.texture}0`, `${IY.texture}1`],
+          animationInterval: IY.ms
+        };
+        FY = {
+          ...FY,
+          ...qY(YY, AY, DY(RY, IY.light), rY)
+        }
+      }
+      return FY
+    }
+
+    function GY() {
+      const YY = "Battery Controller",
+        rY = dY("batteryController", ["battery_controller_front", "battery_casing"], {
+          altActionable: !0
+        }),
+        DY = dY("batteryController", [fY("battery_controller_front"), "battery_casing"], {
+          altActionable: !0,
+          My: RY.e
+        });
+      return {
+        ...XY(YY, rY, eY),
+        ...qY(YY, "Running", DY, eY)
+      }
+    }
+    const xY = "collider_side_off",
+      nY = 16,
+      PY = 100,
+      UY = [...hY("collider_top"), "collider_bottom"],
+      LY = "collider_top[rot[1",
+      tY = [0, 0, 1, 2, 0, 0];
+
+    function Yr(YY) {
+      return YY ? fY("collider_side", nY, "_running", PY) : xY
+    }
+
+    function rr(YY) {
+      const rY = Yr(YY);
+      return ["output", rY, ...UY, rY]
+    }
+
+    function Dr(YY) {
+      return YY ? {
+        textureInfo: [xY, Yr(!0), LY, "collider_bottom"],
+        texturePerSide: [1, 1, 2, 3, 1, 1]
+      } : {
+        textureInfo: [xY, LY, "collider_bottom"],
+        texturePerSide: tY
+      }
+    }
+
+    function Fr() {
+      const YY = Dr(!1),
+        rY = [YY.texturePerSide, YY.texturePerSide, YY.texturePerSide, YY.texturePerSide];
+      return {
+        ...XY("Collider", dY("collider", rr(!1), {
+          altActionable: !0,
+          drops: null
+        }), RY.s),
+        ...XY("_Collider Focus", dY("collider", YY.textureInfo, {
+          altActionable: !0,
+          drops: null
+        }), rY),
+        ...XY("_Collider Output", dY("collider", YY.textureInfo, {
+          altActionable: !0,
+          drops: null
+        }), rY)
+      }
+    }
+    const Ar = ["laser_front", "laser_side", ...Array(4).fill("laser_side"), "laser_side", "laser_back"];
+
+    function Ir() {
+      const {
+        textureInfo: YY,
+        texturePerSide: rY
+      } = Dr(!0);
+      return qY("_Collider Focus", "Running", dY("collider", YY, {
+        altActionable: !0,
+        drops: null,
+        My: [8, 3, 8]
+      }), [rY, rY, rY, rY])
+    }
+
+    function Rr() {
+      const YY = "wireless_terminal_top[rot[1";
+      return XY("Wireless Terminal", dY("wirelessTerminal", ["wireless_terminal_front", YY, ...hY("wireless_terminal_top"), "wireless_terminal_bottom", YY], {
+        altActionable: !0,
+        My: [2, 6, 3]
+      }), RY.s)
+    }
+
+    function Or(YY, rY, DY) {
+      return dY(YY, rY, {
+        ttb: DY,
+        harvestLevel: 3,
+        drops: null,
+        My: [6, 10, 2]
+      })
+    }
+
+    function gr() {
+      return {
+        "Uranium Ore": dY("uraniumOre", "uranium_ore", {
+          ttb: 5400,
+          harvestLevel: 3,
+          drops: "Raw Uranium",
+          My: [5, 8, 1]
+        }),
+        ...(0, AY.e)("Uranium Deposit", "uraniumDeposit", "uranium_deposit", [5, 8, 1], 36e3),
+        "Sky Spring": {
+          ...(0, AY.e)("Sky Spring", "skySpring", "stone")["Sky Spring"],
+          textureInfo: [{
+            animTextures: ["sky_spring0", "sky_spring1", "sky_spring2", "sky_spring3"],
+            animationInterval: 250
+          }, "stone"],
+          texturePerSide: [1, 1, 0, 1, 1, 1]
+        },
+        ...(0, AY.l)("Atomic Bench", "atomicBench", "atomic_bench"),
+        ...vr((0, RY.H)("Pump", "pump", "pump", gY)),
+        ...vr((0, RY.L)("Pump", "pump", "pump", RY.e, gY)),
+        ...(0, RY.H)("Condenser", "condenser", "condenser", aY("condenser")),
+        ...(0, RY.L)("Condenser", "condenser", "condenser", RY.e, aY("condenser")),
+        ...(0, RY.H)("Centrifuge", "centrifuge", "centrifuge", aY("centrifuge")),
+        ...(0, RY.L)("Centrifuge", "centrifuge", "centrifuge", [6, 9, 2], aY("centrifuge")),
+        ...(0, RY.H)("Synthesizer", "synthesizer", "synthesizer", aY("synthesizer")),
+        ...(0, RY.L)("Synthesizer", "synthesizer", "synthesizer", [3, 8, 3], aY("synthesizer")),
+        ...(0, RY.H)("Mob Farm", "mobFarm", "mob_farm"),
+        ...(0, RY.L)("Mob Farm", "mobFarm", "mob_farm", RY.D),
+        "Fluid Tank": dY("fluidTank", "fluid_tank", MY),
+        ...kY(),
+        "Reactor Frame": dY("reactorFrame", "reactor_frame"),
+        "Reactor Casing": dY("reactorCasing", "reactor_casing"),
+        "Reactor Glass": dY("reactorGlass", "reactor_glass", JY),
+        ...bY("Reactor Port", dY("reactorPort", "fuel_port"), "Water", {
+          textureInfo: "water_port"
+        }),
+        "Reactor Port|meta|rot1|Waste": dY("reactorPort", "output"),
+        ...bY("Fuel Rod", dY("fuelRod", "fuel_rod0"), "Running", {
+          textureInfo: jY("fuel_rod", ZY),
+          texturePerSide: BY,
+          My: [5, 9, 2]
+        }),
+        "Graphite Block": dY("graphiteBlock", "graphite_block"),
+        ...bY("Coolant Channel", dY("coolantChannel", "coolant_channel0"), "Running", {
+          textureInfo: jY("coolant_channel", CY),
+          texturePerSide: BY
+        }),
+        "Reactor Slag": dY("reactorSlag", "reactor_slag", {
+          drops: null,
+          My: [3, 5, 1]
+        }),
+        "Atomic Bomb": ar("atomicBomb", "atomic_bomb"),
+        ...GY(),
+        "Battery Casing": dY("batteryCasing", "battery_casing"),
+        ...bY("Battery Cell", dY("batteryCell", ["battery_cell", "battery_cell_top", "battery_cell_bottom"], {
+          texturePerSide: [0, 0, 1, 2, 0, 0]
+        }), "Running", {
+          textureInfo: ["battery_cell", fY("battery_cell"), "battery_cell_top", "battery_cell_bottom"],
+          texturePerSide: [1, 1, 2, 3, 1, 1],
+          My: RY.e
+        }),
+        ...Fr(),
+        ...XY("Laser", dY("laser", Ar, {
+          altActionable: !0
+        }), RY.s),
+        ...Rr(),
+        ...(0, AY.g)("Dense Silo", "denseSilo", "dense_silo"),
+        ...(0, IY.j)("Express Belt", "expressBelt", ["express_belt_top", "express_belt_slab_side", "conveyor_belt_bottom"], IY.e, 1e3 * OY.h * OY.u),
+        ...(0, IY.q)("Express Belt", "expressBelt", "express_belt", ["express_belt_slab_side", "conveyor_belt_bottom"], 1e3 * OY.h * OY.u),
+        ...(0, IY.j)("Fast Loader", "fastLoader", ["fast_loader_top", "fast_belt_slab_side", "conveyor_belt_bottom", "fast_loader_slab_front"], [1, 1, 0, 2, 3, 1]),
+        ...pY("Splitter", "splitter", "leftFront", ["splitter_top_left_front", "splitter_slab_side", "conveyor_belt_bottom"]),
+        ...pY("Splitter", "splitter", "frontRight", ["splitter_top_front_right", "splitter_slab_side", "conveyor_belt_bottom"]),
+        ...pY("Sorting Gate", "sortingGate", "right", ["sorting_gate_top_right", "sorting_gate_slab_side", "conveyor_belt_bottom"]),
+        "Uranium Glass": dY("uraniumGlass", "uranium_glass", {
+          ...JY,
+          harvestType: "wood",
+          ttb: 450,
+          My: [4, 7, 1]
+        }),
+        "Glow Lamp": dY("glowLamp", "glow_lamp", {
+          harvestType: "wood",
+          ttb: 450,
+          My: [8, 12, 13]
+        }),
+        "_Jetpack Back": dY("jetChestplate", "jetpack_back", wY),
+        "_Atomic Spire": dY("atomicSpire", "atomic_spire", {
+          ...wY,
+          My: [5, 9, 2]
+        }),
+        "Isotope Comet Ore": Or("isotopeCometOre", "isotope_comet_ore", 5e3),
+        "Isotope Comet Heart": Or("isotopeCometHeart", "isotope_comet_heart", 18e3),
+        ...qY("Laser", "Running", dY("laser", Ar, {
+          altActionable: !0,
+          My: [9, 3, 9]
+        }), RY.s),
+        ...Ir(),
+        ...SY("water", !1, "fluidPipe", "baf2_fluid_pipe"),
+        ...(0, RY.H)("Coolant Mixer", "coolantMixer", "coolant_mixer", aY("coolant_mixer")),
+        ...(0, RY.L)("Coolant Mixer", "coolantMixer", "coolant_mixer", RY.e, aY("coolant_mixer")),
+        ...SY("cryo", !1, "fluidPipe", "baf2_fluid_pipe"),
+        ...TY(),
+        ...SY("water", !0, "waterPipe", "baf2_water_pipe"),
+        ...SY("cryo", !0, "coolantPipe", "baf2_coolant_pipe"),
+        "Reactor Frame|meta|rot1|Formed": dY("reactorFrame", cY, {
+          texturePerSide: KY
+        }),
+        "Reactor Glass|meta|rot1|Formed": dY("reactorGlass", cY, {
+          texturePerSide: KY,
+          soundType: JY.soundType
+        }),
+        "Reactor Port|meta|rot1|Formed": dY("reactorPort", "fuel_port"),
+        "Reactor Port|meta|rot1|Formed|Water": dY("reactorPort", "water_port"),
+        "Reactor Port|meta|rot1|Formed|Waste": dY("reactorPort", "output"),
+        ...qY("Collider", "Running", dY("collider", rr(!0), {
+          altActionable: !0,
+          drops: null,
+          My: [8, 3, 8]
+        }), RY.s),
+        Scaffolding: dY("scaffolding", "scaffolding", {
+          transTex: !0,
+          ttb: 300,
+          solid: !1,
+          climbableInside: {
+            upForceScalar: 1.05
+          }
+        }),
+        ...(0, FY.Bb)("Nova Trophy", {
+          displayName: {
+            translationKey: "item:novaTrophy"
+          },
+          description: {
+            translationKey: "item:novaTrophyDescription"
+          },
+          ttb: 2e3,
+          harvestType: "rock",
+          showInCreativeInven: !1,
+          model: "rotatable",
+          itemTexture: "nova_trophy",
+          rootMetaDesc: "Nova Trophy|meta|rot1",
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          blockModel: "Nova Trophy",
+          My: [4, 10, 5]
+        }),
+        "Uranium Block": dY("uraniumBlock", "uranium_block", {
+          ttb: 3e3,
+          My: [5, 9, 2]
+        }),
+        "Pure Uranium Ore": dY("pureUraniumOre", "pure_uranium_ore", {
+          ttb: 48600,
+          harvestLevel: 3,
+          drops: "Raw Uranium",
+          Na: 9,
+          specialToolDrop: {
+            tool: "Moonstone Pickaxe",
+            drops: "Pure Uranium Ore"
+          },
+          My: [6, 10, 2]
+        }),
+        "Copper Block": dY("copperBlock", "copper_block", {
+          ttb: 3e3
+        }),
+        "Voltite Block": dY("voltiteBlock", "voltite_block", {
+          ttb: 3e3,
+          My: [2, 6, 6]
+        }),
+        "Nova Bomb": ar("novaBomb", "nova_bomb")
+      }
+    }
+
+    function ar(YY, rY) {
+      return dY(YY, [`${rY}_side`, `${rY}_top`], {
+        ttb: 50,
+        texturePerSide: [0, 0, 1, 0, 0, 0],
+        harvestType: "cuttable"
+      })
+    }
+
+    function vr(YY) {
+      for (const rY of Object.values(YY)) rY.drops = "Condenser";
+      return YY
+    }
+  },
+  8862: (YY, rY, DY) => {
+    DY.d(rY, {
+      A: () => aY,
+      E: () => gY,
+      b: () => oY,
+      f: () => VY,
+      h: () => OY,
+      i: () => RY,
+      l: () => EY,
+      n: () => vY,
+      o: () => SY,
+      s: () => WY,
+      w: () => mY
+    });
+    var FY = DY(8865);
+    const AY = {
+        root: "Noticeboard",
+        blockModelPrefix: "noticeboard_wall",
+        faceOffset: -.25
+      },
+      IY = {
+        root: "Standing Noticeboard",
+        blockModelPrefix: "noticeboard_standing",
+        faceOffset: .125
+      },
+      RY = [AY, IY],
+      OY = RY.map((YY => {
+        let {
+          root: rY
+        } = YY;
+        return rY
+      })),
+      gY = AY.root,
+      aY = IY.root,
+      vY = gY,
+      uY = ["l", "r", "u", "d"],
+      [sY, iY, yY, QY] = uY.map(((YY, rY) => 1 << rY)),
+      oY = Array.from({
+        length: 1 << uY.length
+      }, ((YY, rY) => rY)),
+      WY = {
+        0: "_single",
+        [sY]: "_horizontal_right",
+        [iY]: "_horizontal_left",
+        [sY | iY]: "_horizontal",
+        [yY]: "_vertical_bottom",
+        [QY]: "_vertical_top",
+        [yY | QY]: "_vertical",
+        [iY | QY]: "_top_left",
+        [sY | QY]: "_top_right",
+        [iY | yY]: "_bottom_left",
+        [sY | yY]: "_bottom_right",
+        [sY | iY | QY]: "_top",
+        [sY | iY | yY]: "_bottom",
+        [iY | yY | QY]: "_left",
+        [sY | yY | QY]: "_right",
+        [sY | iY | yY | QY]: ""
+      },
+      EY = Object.fromEntries(Object.entries(FY.d).map((YY => {
+        let [rY, [DY, FY]] = YY;
+        return [rY, [-FY, DY]]
+      }))),
+      mY = Object.fromEntries(Object.entries(FY.d).map((YY => {
+        let [rY, [DY, FY]] = YY;
+        return [rY, [
+          [DY, 0, FY],
+          [-DY, 0, -FY],
+          [0, 1, 0],
+          [0, -1, 0]
+        ]]
+      })));
+
+    function VY(YY, rY, DY) {
+      const FY = uY.filter(((YY, rY) => DY & 1 << rY)).join("");
+      return "" === FY ? 1 === rY ? YY : `${YY}|meta|rot${rY}` : `${YY}|meta|rot${rY}|${FY}`
+    }
+
+    function SY(YY) {
+      var rY;
+      const DY = null !== (rY = YY.split("|")[2]) && void 0 !== rY ? rY : "";
+      let FY = 0;
+      return uY.forEach(((YY, rY) => {
+        DY.includes(YY) && (FY |= 1 << rY)
+      })), FY
+    }
+  },
+  8873: (YY, rY, DY) => {
+    DY.d(rY, {
+      A: () => QY,
+      B: () => RY,
+      e: () => IY,
+      g: () => OY,
+      j: () => gY,
+      m: () => uY,
+      o: () => WY,
+      p: () => sY,
+      s: () => AY,
+      w: () => oY,
+      z: () => yY
+    });
+    var FY = DY(8833);
+    const AY = [{
+        letter: "n",
+        name: "North",
+        dx: 0,
+        dz: -1
+      }, {
+        letter: "e",
+        name: "East",
+        dx: 1,
+        dz: 0
+      }, {
+        letter: "s",
+        name: "South",
+        dx: 0,
+        dz: 1
+      }, {
+        letter: "w",
+        name: "West",
+        dx: -1,
+        dz: 0
+      }],
+      IY = 39 == DY.j ? ["fence"] : null;
+
+    function RY(YY) {
+      return IY.includes(YY.model)
+    }
+    const OY = Array.from({
+        length: 1 << AY.length
+      }, ((YY, rY) => rY)),
+      gY = 1 << AY.length,
+      aY = "Stacked";
+
+    function vY(YY) {
+      return AY.filter(((rY, DY) => YY & 1 << DY)).map((YY => {
+        let {
+          letter: rY
+        } = YY;
+        return rY
+      })).join("")
+    }
+
+    function uY(YY, rY) {
+      const DY = [vY(rY), rY & gY ? aY : ""].filter(Boolean);
+      return DY.length ? `${YY}|meta|${DY.join("|")}` : YY
+    }
+
+    function sY(YY) {
+      var rY;
+      const DY = YY.split("|").slice(1),
+        FY = null !== (rY = DY.find((YY => YY !== aY))) && void 0 !== rY ? rY : "";
+      let IY = DY.includes(aY) ? gY : 0;
+      return AY.forEach(((YY, rY) => {
+        let {
+          letter: DY
+        } = YY;
+        FY.includes(DY) && (IY |= 1 << rY)
+      })), IY
+    }
+
+    function iY(YY) {
+      return OY.map((rY => (0, FY.d)(function(YY, rY) {
+        let {
+          post: DY,
+          northArm: FY
+        } = YY;
+        const IY = [DY];
+        let RY = FY;
+        return AY.forEach(((YY, DY) => {
+          rY & 1 << DY && IY.push(RY), RY = function(YY) {
+            let [rY, DY, FY, AY, IY, RY] = YY;
+            return [8 - RY, DY, rY, 8 - FY, IY, AY]
+          }(RY)
+        })), IY
+      }(YY, rY).map((YY => {
+        let [rY, DY, FY, AY, IY, RY] = YY;
+        return [
+          [rY, DY, FY],
+          [AY, IY, RY]
+        ]
+      })))))
+    }
+    const yY = iY({
+        post: [3, 0, 3, 5, 8, 5],
+        northArm: [3, 0, 0, 5, 8, 3]
+      }),
+      QY = iY({
+        post: [3, 0, 3, 5, 4, 5],
+        northArm: [3, 0, 0, 5, 4, 3]
+      }),
+      oY = {
+        glb: "Fence",
+        postPiece: "Bottom",
+        topPiece: "Top"
+      };
+    oY.glb;
+
+    function WY(YY, rY) {
+      return `${YY}${null===rY?"Post":AY[rY].name}`
+    }
+  },
+  8884: (YY, rY, DY) => {
+    if (DY.d(rY, {
+        c: () => RY,
+        d: () => OY,
+        h: () => IY,
+        k: () => aY,
+        m: () => AY,
+        q: () => gY
+      }), 39 == DY.j) var FY = DY(8865);
+    const AY = "Chest",
+      IY = ["left", "right"];
+
+    function RY(YY, rY, DY) {
+      return `${YY}|meta|rot${rY}|${DY}`
+    }
+
+    function OY(YY, rY) {
+      var DY;
+      return YY !== AY ? null : null !== (DY = IY.find((YY => rY.endsWith(`|${YY}`)))) && void 0 !== DY ? DY : null
+    }
+    const gY = {
+      left: "right",
+      right: "left"
+    };
+
+    function aY(YY, rY) {
+      const [DY, AY] = FY.d[YY];
+      return "left" === rY ? [-DY, -AY] : [DY, AY]
+    }
+  },
+  8877: (YY, rY, DY) => {
+    DY.d(rY, {
+      A: () => IY,
+      e: () => yY,
+      g: () => AY,
+      i: () => sY,
+      k: () => iY,
+      n: () => QY,
+      q: () => aY,
+      s: () => gY,
+      u: () => uY,
+      x: () => RY
+    });
+    var FY = DY(8860);
+    const AY = "fenceGate";
+
+    function IY(YY) {
+      return (null === YY || void 0 === YY ? void 0 : YY.model) === AY
+    }
+
+    function RY(YY) {
+      return IY(YY) && void 0 !== YY.attachedTop
+    }
+    const OY = [{
+      dx: 0,
+      dz: -1
+    }, {
+      dx: -1,
+      dz: 0
+    }, {
+      dx: 0,
+      dz: 1
+    }, {
+      dx: 1,
+      dz: 0
+    }];
+
+    function gY(YY) {
+      return YY % 2 === 1
+    }
+
+    function aY(YY, rY, DY) {
+      const FY = function(YY) {
+        return OY[(YY - 1) % 4]
+      }(YY);
+      return FY.dx * rY + FY.dz * DY > 0 ? (YY + 1) % 4 + 1 : YY
+    }
+    const vY = new Map;
+
+    function uY(YY, rY, DY) {
+      const AY = `${YY}|${rY}|${DY}`;
+      return vY.has(AY) || vY.set(AY, (0, FY.d)(function(YY, rY, DY) {
+        return (0, FY.t)(function(YY, rY) {
+          return rY ? [
+            [0, 0, 0, 1, YY, 5],
+            [7, 0, 0, 8, YY, 5]
+          ] : [
+            [0, 0, 3, 8, YY, 5]
+          ]
+        }(YY ? 4 : 8, DY), rY - 1)
+      }(YY, rY, DY))), vY.get(AY)
+    }
+    const sY = [1, 2, 3, 4].flatMap((YY => [!1, !0].map((rY => ({
+      rot: YY,
+      open: rY
+    })))));
+
+    function iY(YY, rY, DY) {
+      return 1 !== rY || DY ? `${YY}|meta|rot${rY}|${DY?"open":"closed"}` : YY
+    }
+    const yY = "FenceGate",
+      QY = {
+        bottom: ["BottomLeft", "BottomRight"],
+        top: ["TopLeft", "TopRight"]
+      }
+  },
+  8913: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => FY,
+      g: () => IY
+    });
+    const FY = DY(8919).b.map((YY => ({
+        wood: YY,
+        block: "Maple" === YY ? "Showcase" : `${YY} Item Pedestal`
+      }))),
+      AY = new Set(FY.map((YY => {
+        let {
+          block: rY
+        } = YY;
+        return rY
+      })));
+
+    function IY(YY) {
+      return AY.has(YY)
+    }
+  },
+  8860: (YY, rY, DY) => {
+    DY.d(rY, {
+      A: () => oY,
+      E: () => iY,
+      H: () => WY,
+      d: () => OY,
+      h: () => dY,
+      l: () => yY,
+      p: () => EY,
+      t: () => RY,
+      w: () => sY
+    });
+    var FY = DY(8833),
+      AY = DY(8870),
+      IY = DY(8862);
+
+    function RY(YY, rY) {
+      let DY = [...YY];
+      for (let FY = 0; FY < rY; FY++) DY = DY.map((YY => {
+        let [rY, DY, FY, AY, IY, RY] = YY;
+        return [FY, DY, 8 - AY, RY, IY, 8 - rY]
+      }));
+      return DY
+    }
+
+    function OY(YY) {
+      return (0, FY.d)(YY.map((YY => {
+        let [rY, DY, FY, AY, IY, RY] = YY;
+        return [
+          [rY, DY, FY],
+          [AY, IY, RY]
+        ]
+      })))
+    }
+
+    function gY() {
+      for (var YY = arguments.length, rY = new Array(YY), DY = 0; DY < YY; DY++) rY[DY] = arguments[DY];
+      return [0, 1, 2, 3].map((YY => OY(RY(rY, YY))))
+    }
+
+    function aY(YY) {
+      return YY.map((YY => {
+        let [rY, DY, FY, AY, IY, RY] = YY;
+        return [rY, 8 - IY, FY, AY, 8 - DY, RY]
+      }))
+    }
+    const vY = [0, 0, 0, 8, 4, 8],
+      uY = [0, 4, 0, 8, 8, 4],
+      sY = [vY, uY],
+      iY = aY(sY),
+      yY = {
+        bot: gY(...sY),
+        top: gY(...iY)
+      };
+
+    function QY(YY) {
+      return Object.fromEntries(AY.m.map((rY => [rY, YY(rY)])))
+    }
+    const oY = {
+        innerLeft: [vY, uY, [4, 4, 4, 8, 8, 8]],
+        innerRight: [vY, uY, [0, 4, 4, 4, 8, 8]],
+        outerLeft: [vY, [4, 4, 0, 8, 8, 4]],
+        outerRight: [vY, [0, 4, 0, 4, 8, 4]]
+      },
+      WY = QY((YY => aY(oY[YY]))),
+      EY = {
+        bot: QY((YY => gY(...oY[YY]))),
+        top: QY((YY => gY(...WY[YY])))
+      },
+      mY = gY([0, 0, 0, 8, 8, 1]),
+      VY = gY([0, 0, 0, 8, 1, 8]),
+      SY = gY([0, 0, 0, 8, 6, 8]),
+      lY = gY([0, 0, 0, 8, 3, 8]),
+      TY = gY([0, 0, 3, 8, 8, 6]),
+      eY = gY([0, 0, 0, 8, 8, 2]),
+      NY = gY([0, 0, 2, 8, 8, 3]),
+      BY = gY([1, 0, 0, 7, 8, 6]),
+      cY = gY([0, 0, 0, 8, 8, 2]),
+      KY = gY([0, 0, 3, 8, 8, 5]),
+      HY = gY([0, 0, 6, 8, 8, 8]),
+      zY = gY([3, 0, 3, 5, 8, 5]),
+      ZY = [0, 0, 0, 8, 6, 8],
+      CY = gY(ZY),
+      fY = gY(ZY, [0, 6, 7, 8, 7, 8]),
+      jY = gY(ZY, [0, 6, 0, 8, 8, 1]),
+      hY = {
+        "Dangling Rope": gY([3, 0, 3, 5, 8, 5]),
+        "Dangling Vine": gY([2, 0, 2, 6, 8, 6]),
+        Vines: mY,
+        Board: mY,
+        "Slime Trail": VY,
+        "Wood Spikes": SY,
+        "Stone Spikes": SY,
+        "Iron Spikes": SY,
+        "Gold Spikes": SY,
+        "Diamond Spikes": SY,
+        "Kill Spikes": SY,
+        "Landing Pad": lY,
+        "Weak Jump Pad": lY,
+        "Jump Pad": lY,
+        "Strong Jump Pad": lY,
+        "Super Jump Pad": lY,
+        "Slicing Board": gY([1, 0, 1, 7, 2, 7]),
+        Football: gY([2, 0, 2, 6, 4, 6]),
+        "Coloured Wheel": gY([0, 0, 3, 8, 8, 5]),
+        Lantern: gY([1, 0, 1, 7, 8, 7])
+      };
+
+    function dY(YY, rY) {
+      var DY, FY, AY, RY;
+      let OY = hY[YY.meta.rootName];
+      const gY = null !== (DY = null !== (FY = YY.blockModel) && void 0 !== FY ? FY : rY.blockModel) && void 0 !== DY ? DY : "";
+      "noticeboard_standing_leg" === gY ? OY = zY : gY.startsWith("noticeboard_standing") ? OY = KY : gY.startsWith("noticeboard_wall") ? OY = HY : YY.meta.rootName.endsWith(" Directional Arrow") ? OY = VY : YY.meta.rootName.endsWith(" Ladder") ? OY = cY : YY.meta.rootName.endsWith(" Strongbed Head") ? OY = jY : YY.meta.rootName.endsWith(" Strongbed") ? OY = fY : / Bed(?: Head)?$/.test(YY.meta.rootName) ? OY = CY : /^_(Sheep|Cow|Pig|Horse|Wolf|Deer|Wildcat|Camel) Painting /.test(gY) ? OY = mY : / Banner(?: Flag)?(?: Hanging)?$/.test(gY) ? OY = gY.endsWith(" Flag Hanging") ? NY : gY.endsWith(" Hanging") ? eY : TY : "lantern_wall" === gY && (OY = BY);
+      const aY = IY.h.includes(YY.meta.rootName) ? 2 : 0;
+      return null === (AY = OY) || void 0 === AY ? void 0 : AY[((null !== (RY = YY.meta.rot) && void 0 !== RY ? RY : 1) - 1 + aY) % 4]
+    }
+  },
+  8919: (YY, rY, DY) => {
+    DY.d(rY, {
+      b: () => FY
+    });
+    const FY = ["Maple", "Pine", "Plum", "Cedar", "Aspen", "Jungle", "Palm", "Pear", "Cherry", "Spectral", "Mango"]
+  },
+  8870: (YY, rY, DY) => {
+    DY.d(rY, {
+      e: () => FY,
+      h: () => IY,
+      i: () => RY,
+      k: () => OY,
+      m: () => AY
+    });
+    let FY = function(YY) {
+      return YY[YY.bot = 0] = "bot", YY[YY.top = 1] = "top", YY[YY.side = 2] = "side", YY
+    }({});
+    const AY = ["innerLeft", "innerRight", "outerLeft", "outerRight"];
+    class IY {
+      constructor(YY, rY, DY, FY, AY, IY, RY, OY, gY, aY, vY, uY, sY, iY, yY, QY, oY, WY, EY, mY, VY, SY, lY) {
+        this.rootName = YY, this.rootId = rY, this.metaStr = DY, this.rot = FY, this.open = AY, this.halfblockPlacement = IY, this.iA = RY, this.treeBase = OY, this.treeCanopy = gY, this.books = aY, this.freshlyGrown = vY, this.roots = uY, this.lava = sY, this.top = iY, this.grassRoots = yY, this.breaking = QY, this.flashing = oY, this.stairsCorner = WY, this.charging = EY, this.direction = mY, this.requiresAmmo = VY, this.woodType = SY, this.caughtMobType = lY
+      }
+    }
+
+    function RY(YY, rY) {
+      rY.meta = OY(rY.name, rY.id, (rY => YY[rY].id), rY.rootMetaDesc)
+    }
+
+    function OY(YY, rY, DY, RY) {
+      const OY = null !== RY && void 0 !== RY ? RY : YY;
+      if (OY.split("|").length > 1 || OY.startsWith("Caught Mob")) {
+        var gY;
+        const YY = OY.split("|")[0],
+          rY = OY.split("|").slice(1).join("|"),
+          RY = rY.includes("rot") ? parseInt(rY.split("rot")[1][0]) : null;
+        let aY = !!rY.includes("open") || null;
+        rY.includes("closed") && (aY = !1);
+        let vY = rY.includes("bot") ? FY.bot : null;
+        rY.includes("top") ? vY = FY.top : rY.includes("side") && (vY = FY.side);
+        const uY = !!rY.includes("Growing") || null,
+          sY = !!rY.includes("TreeBase") || null,
+          iY = !!rY.includes("TreeCanopy") || null,
+          yY = rY.includes("books") ? parseInt(rY.split("books")[1][0]) : null,
+          QY = !!rY.includes("FreshlyGrown") || null,
+          oY = !(!rY.includes("Roots") || rY.includes("GrassRoots")) || null,
+          WY = !!rY.includes("Lava") || null,
+          EY = !("Top" !== rY && !rY.includes("|Top") && !rY.startsWith("Top|")) || null,
+          mY = !!rY.includes("GrassRoots") || null,
+          VY = !!rY.includes("Breaking") || null,
+          SY = !!rY.includes("Flashing") || null,
+          lY = null !== (gY = AY.find((YY => rY.endsWith(`|${YY}`)))) && void 0 !== gY ? gY : null,
+          TY = rY.includes("charging") ? parseInt(rY.split("charging")[1][0]) : null,
+          eY = rY.includes("dir") ? parseInt(rY.split("dir")[1][0]) : null,
+          NY = !!rY.includes("RequiresAmmo") || null,
+          BY = sY ? rY.split("|")[1] : null,
+          cY = OY.startsWith("Caught Mob") ? OY.split(" ")[2].replaceAll("_", " ") : null;
+        return Object.freeze(new IY(YY, DY(YY), rY, RY, aY, vY, uY, sY, iY, yY, QY, oY, WY, EY, mY, VY, SY, lY, TY, eY, NY, BY, cY))
+      }
+      return Object.freeze(new IY(YY, rY, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    }
+  }
+};
+Object.freeze(modules);
+for (const YY in modules) Object.freeze(modules[YY]);

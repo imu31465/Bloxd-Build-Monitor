@@ -1,30 +1,30 @@
-export const id = 44;
-export const ids = [44];
+export const id = 47;
+export const ids = [47];
 export const modules = {
-  4096: (BB, TB, dB) => {
-    dB.d(TB, {
-      d: () => oB
+  4267: (YY, rY, DY) => {
+    DY.d(rY, {
+      b: () => vY
     });
-    var VB = dB(21),
-      yB = dB(24),
-      pB = dB(1173),
-      lB = dB(2583);
-    const JB = 3e4,
-      YB = 1e3;
+    var FY = DY(19),
+      AY = DY(25),
+      IY = DY(1287),
+      RY = DY(2565);
+    const OY = 3e4,
+      gY = 1e3;
 
-    function gB() {
-      return "visible" === document.visibilityState && "inGame" === VB.d.get("gameState") && (0, pB.r)()
+    function aY() {
+      return "visible" === document.visibilityState && "inGame" === FY.b.get("gameState") && (0, IY.l)()
     }
 
-    function oB(BB, TB) {
-      ! function(BB, TB, dB) {
-        let VB = 0;
-        const yB = setInterval((() => {
-          TB() && (VB += YB, VB >= BB && (clearInterval(yB), dB()))
-        }), YB)
-      }(JB, gB, (() => {
-        TB().then((() => {
-          BB(`saved for the player after ${JB/1e3} s of play`), (0, lB.r)(), yB.h.yH("chat", {
+    function vY(YY, rY) {
+      (0, RY.s)() || function(YY, rY, DY) {
+        let FY = 0;
+        const AY = setInterval((() => {
+          rY() && (FY += gY, FY >= YY && (clearInterval(AY), DY()))
+        }), gY)
+      }(OY, aY, (() => {
+        rY().then((() => {
+          YY(`saved for the player after ${OY/1e3} s of play`), (0, RY.C)(), AY.g.vo("chat", {
             content: [{
               str: "Saved a debug file to your downloads: please send it to us with a screenshot of the game.",
               style: {
@@ -36,61 +36,61 @@ export const modules = {
       }))
     }
   },
-  4089: (BB, TB, dB) => {
-    dB.r(TB), dB.d(TB, {
-      installRenderDebug: () => Jd,
-      renderDebugPlayable: () => gd,
-      startRenderDebug: () => Yd,
-      waitForDraw: () => od
+  4260: (YY, rY, DY) => {
+    DY.r(rY), DY.d(rY, {
+      installRenderDebug: () => uD,
+      renderDebugPlayable: () => iD,
+      startRenderDebug: () => sD,
+      waitForDraw: () => yD
     });
-    var VB = dB(4057),
-      yB = dB(4096),
-      pB = dB(2583);
-    const lB = ["+x", "-x", "+y", "-y", "+z", "-z", "dir6", "dir7"];
+    var FY = DY(4227),
+      AY = DY(4267),
+      IY = DY(2565);
+    const RY = ["+x", "-x", "+y", "-y", "+z", "-z", "dir6", "dir7"];
 
-    function JB(BB) {
-      return 7 & BB
+    function OY(YY) {
+      return 7 & YY
     }
 
-    function YB(BB) {
-      return BB >>> 11 & 1
+    function gY(YY) {
+      return YY >>> 11 & 1
     }
 
-    function gB(BB) {
-      return [1 + (BB >>> 18 & 63), 1 + (BB >>> 24 & 63)]
+    function aY(YY) {
+      return [1 + (YY >>> 18 & 63), 1 + (YY >>> 24 & 63)]
     }
 
-    function oB(BB, TB) {
-      const [dB, , VB] = BB, yB = JB(VB), pB = function(BB, TB, dB) {
-        return TB + (1 === (22 >>> BB & 1) ? 4 - dB : dB) & 3
-      }(yB, YB(VB), TB), lB = yB >>> 1, [oB, kB] = gB(dB), LB = 1 === pB || 2 === pB ? oB : 0, OB = pB >= 2 ? kB : 0, DB = [63 & dB, dB >>> 6 & 63, dB >>> 12 & 63];
-      return DB[2 === lB ? 0 : 2] += LB, DB[1 === lB ? 0 : 1] += OB, DB
+    function vY(YY, rY) {
+      const [DY, , FY] = YY, AY = OY(FY), IY = function(YY, rY, DY) {
+        return rY + (1 === (22 >>> YY & 1) ? 4 - DY : DY) & 3
+      }(AY, gY(FY), rY), RY = AY >>> 1, [vY, uY] = aY(DY), sY = 1 === IY || 2 === IY ? vY : 0, iY = IY >= 2 ? uY : 0, yY = [63 & DY, DY >>> 6 & 63, DY >>> 12 & 63];
+      return yY[2 === RY ? 0 : 2] += sY, yY[1 === RY ? 0 : 1] += iY, yY
     }
 
-    function kB(BB) {
-      const TB = Math.max(...gB(BB[0]));
-      return 1 === TB ? "1" : TB <= 4 ? "2-4" : TB <= 16 ? "5-16" : "17-64"
+    function uY(YY) {
+      const rY = Math.max(...aY(YY[0]));
+      return 1 === rY ? "1" : rY <= 4 ? "2-4" : rY <= 16 ? "5-16" : "17-64"
     }
-    const LB = 16;
+    const sY = 16;
 
-    function OB(BB) {
-      let TB = 2166136261;
-      for (let dB = 0; dB < BB.length; dB++) TB = Math.imul(TB ^ BB[dB], 16777619);
-      return TB >>> 0
+    function iY(YY) {
+      let rY = 2166136261;
+      for (let DY = 0; DY < YY.length; DY++) rY = Math.imul(rY ^ YY[DY], 16777619);
+      return rY >>> 0
     }
 
-    function DB(BB, TB) {
-      let dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 12;
-      const VB = Math.max(0, TB - dB),
-        yB = Math.min(BB.length, TB + dB),
-        pB = [];
-      for (let lB = VB; lB < yB; lB++) {
-        const dB = BB[lB].toString(16).padStart(2, "0");
-        pB.push(lB === TB ? `[${dB}]` : dB)
+    function yY(YY, rY) {
+      let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 12;
+      const FY = Math.max(0, rY - DY),
+        AY = Math.min(YY.length, rY + DY),
+        IY = [];
+      for (let RY = FY; RY < AY; RY++) {
+        const DY = YY[RY].toString(16).padStart(2, "0");
+        IY.push(RY === rY ? `[${DY}]` : DY)
       }
-      return pB.join(" ")
+      return IY.join(" ")
     }
-    const uB = {
+    const QY = {
         NO_ERROR: 0,
         POINTS: 0,
         ARRAY_BUFFER: 34962,
@@ -168,437 +168,437 @@ export const modules = {
         FLOAT_MAT3: 35675,
         FLOAT_MAT4: 35676
       },
-      HB = "_vs2fs_location0",
-      EB = 0,
-      vB = 4,
-      mB = 6,
-      iB = [0, 1, 2, 0, 2, 3],
-      NB = 2048,
-      tB = 4,
-      fB = 256,
-      sB = 64,
-      MB = 268435456,
-      zB = 65536,
-      wB = /^#version [^\n]*\/\/ program (\S+)$/m;
+      oY = "_vs2fs_location0",
+      WY = 0,
+      EY = 4,
+      mY = 6,
+      VY = [0, 1, 2, 0, 2, 3],
+      SY = 2048,
+      lY = 4,
+      TY = 256,
+      eY = 64,
+      NY = 268435456,
+      BY = 65536,
+      cY = /^#version [^\n]*\/\/ program (\S+)$/m;
 
-    function UB(BB) {
-      return null === BB.name ? `#${BB.id}` : `#${BB.id} ${BB.name}`
+    function KY(YY) {
+      return null === YY.name ? `#${YY.id}` : `#${YY.id} ${YY.name}`
     }
-    const FB = [],
-      KB = new WeakMap,
-      rB = new WeakMap,
-      IB = {
+    const HY = [],
+      zY = new WeakMap,
+      ZY = new WeakMap,
+      CY = {
         context: null,
         inProbe: !1,
         pendingCheck: null,
         shadowBytes: 0,
         uncopied: 0
       };
-    let cB = 1;
-    const SB = new WeakMap;
+    let fY = 1;
+    const jY = new WeakMap;
 
-    function PB(BB) {
-      if (null === BB) return 0;
-      let TB = SB.get(BB);
-      return void 0 === TB && (TB = cB++, SB.set(BB, TB)), TB
+    function hY(YY) {
+      if (null === YY) return 0;
+      let rY = jY.get(YY);
+      return void 0 === rY && (rY = fY++, jY.set(YY, rY)), rY
     }
-    class QB {
-      constructor(BB, TB) {
-        this.print = BB, this.now = TB, this.shown = 0, this.Dg = 0, this.sections = 0, this.second = -1 / 0, this.inSecond = 0, this.RO = [], this.dropped = 0
+    class dY {
+      constructor(YY, rY) {
+        this.print = YY, this.now = rY, this.shown = 0, this.ja = 0, this.sections = 0, this.second = -1 / 0, this.inSecond = 0, this.Mi = [], this.dropped = 0
       }
-      line(BB) {
-        const TB = this.now();
-        if (TB - this.second >= 1e3 && (this.second = TB, this.inSecond = 0), this.shown >= 400 || this.inSecond >= 20) return this.Dg++, void this.store(BB);
-        this.shown++, this.inSecond++, this.print(400 === this.shown ? `${BB} (the last line here: the rest go to bloxdDebug.save())` : BB)
+      line(YY) {
+        const rY = this.now();
+        if (rY - this.second >= 1e3 && (this.second = rY, this.inSecond = 0), this.shown >= 400 || this.inSecond >= 20) return this.ja++, void this.store(YY);
+        this.shown++, this.inSecond++, this.print(400 === this.shown ? `${YY} (the last line here: the rest go to bloxdDebug.save())` : YY)
       }
-      keep(BB) {
-        this.sections++, this.store(BB)
+      keep(YY) {
+        this.sections++, this.store(YY)
       }
-      store(BB) {
-        this.RO.push(`${new Date(Date.now()).toISOString()} ${BB}`), this.RO.length > 2e4 && (this.RO.shift(), this.dropped++)
+      store(YY) {
+        this.Mi.push(`${new Date(Date.now()).toISOString()} ${YY}`), this.Mi.length > 2e4 && (this.Mi.shift(), this.dropped++)
       }
       dump() {
-        return [`${this.shown} lines logged (above); kept here: ${this.Dg} lines past the console's budget, ${this.sections} sections; ${this.dropped} oldest dropped`, ...this.RO].join("\n")
+        return [`${this.shown} lines logged (above); kept here: ${this.ja} lines past the console's budget, ${this.sections} sections; ${this.dropped} oldest dropped`, ...this.Mi].join("\n")
       }
     }
-    let RB = null;
+    let JY = null;
 
-    function aB() {
-      if (null === RB) {
-        const BB = new QB((BB => {
-          (0, pB.i)("render", BB)
+    function MY() {
+      if (null === JY) {
+        const YY = new dY((YY => {
+          (0, IY.n)("render", YY)
         }), (() => performance.now()));
-        (0, pB.f)("render", (() => BB.dump())), RB = BB
+        (0, IY.k)("render", (() => YY.dump())), JY = YY
       }
-      return RB
+      return JY
     }
 
-    function ZB(BB) {
-      aB().line(BB)
+    function wY(YY) {
+      MY().line(YY)
     }
 
-    function XB(BB) {
-      aB().keep(BB)
+    function bY(YY) {
+      MY().keep(YY)
     }
 
-    function WB(BB) {
-      let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 4096;
-      return BB.length <= TB ? BB : `${BB.slice(0,TB)}... (${BB.length-TB} more characters)`
+    function XY(YY) {
+      let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 4096;
+      return YY.length <= rY ? YY : `${YY.slice(0,rY)}... (${YY.length-rY} more characters)`
     }
 
-    function hB(BB, TB, dB, VB, yB, pB) {
-      const lB = IB.pendingCheck;
-      if (null === lB) return;
-      const JB = "undefined" !== typeof WebGL2RenderingContext && BB instanceof WebGL2RenderingContext,
-        YB = {
-          gl: BB,
-          program: dB,
-          call: VB,
-          ek: yB,
-          instances: pB,
+    function qY(YY, rY, DY, FY, AY, IY) {
+      const RY = CY.pendingCheck;
+      if (null === RY) return;
+      const OY = "undefined" !== typeof WebGL2RenderingContext && YY instanceof WebGL2RenderingContext,
+        gY = {
+          gl: YY,
+          program: DY,
+          call: FY,
+          ws: AY,
+          instances: IY,
           attributes: [],
           group: -1,
           chunk: "",
           pages: []
         };
-      if (lB.draws.push(YB), JB) try {
-        const VB = function(BB) {
-          const TB = [],
-            dB = new Map,
-            VB = Math.min(16, BB.getParameter(uB.MAX_VERTEX_ATTRIBS));
-          for (let yB = 0; yB < VB; yB++) {
-            if (!BB.getVertexAttrib(yB, uB.VERTEX_ATTRIB_ARRAY_ENABLED)) continue;
-            const VB = BB.getVertexAttrib(yB, uB.VERTEX_ATTRIB_ARRAY_BUFFER_BINDING),
-              pB = BB.getVertexAttribOffset(yB, uB.VERTEX_ATTRIB_ARRAY_POINTER),
-              lB = BB.getVertexAttrib(yB, uB.VERTEX_ATTRIB_ARRAY_STRIDE),
-              JB = BB.getVertexAttrib(yB, uB.VERTEX_ATTRIB_ARRAY_SIZE),
-              YB = BB.getVertexAttrib(yB, uB.VERTEX_ATTRIB_ARRAY_TYPE),
-              gB = "VERTEX_ATTRIB_ARRAY_INTEGER" in BB && BB.getVertexAttrib(yB, uB.VERTEX_ATTRIB_ARRAY_INTEGER),
-              oB = "VERTEX_ATTRIB_ARRAY_DIVISOR" in BB ? BB.getVertexAttrib(yB, uB.VERTEX_ATTRIB_ARRAY_DIVISOR) : 0;
-            dB.set(yB, {
-              buffer: VB,
-              offset: pB,
-              stride: lB
-            }), TB.push(`@${yB} buf#${PB(VB)} +${pB} stride ${lB} ${JB}x0x${YB.toString(16)}${gB?" int":""} div ${oB}`)
+      if (RY.draws.push(gY), OY) try {
+        const FY = function(YY) {
+          const rY = [],
+            DY = new Map,
+            FY = Math.min(16, YY.getParameter(QY.MAX_VERTEX_ATTRIBS));
+          for (let AY = 0; AY < FY; AY++) {
+            if (!YY.getVertexAttrib(AY, QY.VERTEX_ATTRIB_ARRAY_ENABLED)) continue;
+            const FY = YY.getVertexAttrib(AY, QY.VERTEX_ATTRIB_ARRAY_BUFFER_BINDING),
+              IY = YY.getVertexAttribOffset(AY, QY.VERTEX_ATTRIB_ARRAY_POINTER),
+              RY = YY.getVertexAttrib(AY, QY.VERTEX_ATTRIB_ARRAY_STRIDE),
+              OY = YY.getVertexAttrib(AY, QY.VERTEX_ATTRIB_ARRAY_SIZE),
+              gY = YY.getVertexAttrib(AY, QY.VERTEX_ATTRIB_ARRAY_TYPE),
+              aY = "VERTEX_ATTRIB_ARRAY_INTEGER" in YY && YY.getVertexAttrib(AY, QY.VERTEX_ATTRIB_ARRAY_INTEGER),
+              vY = "VERTEX_ATTRIB_ARRAY_DIVISOR" in YY ? YY.getVertexAttrib(AY, QY.VERTEX_ATTRIB_ARRAY_DIVISOR) : 0;
+            DY.set(AY, {
+              buffer: FY,
+              offset: IY,
+              stride: RY
+            }), rY.push(`@${AY} buf#${hY(FY)} +${IY} stride ${RY} ${OY}x0x${gY.toString(16)}${aY?" int":""} div ${vY}`)
           }
           return {
-            lines: TB,
-            byLocation: dB
+            lines: rY,
+            byLocation: DY
           }
-        }(BB);
-        if (YB.attributes = VB.lines, "inst" === dB.terrain) {
+        }(YY);
+        if (gY.attributes = FY.lines, "inst" === DY.terrain) {
           const {
-            group: yB,
-            chunk: JB
-          } = function(BB, TB, dB) {
-            const VB = TB.get(mB),
-              yB = BB.getVertexAttrib(mB, uB.CURRENT_VERTEX_ATTRIB),
-              pB = VB ? `+${VB.offset}` : yB ? Array.from(yB).slice(0, 3).join(",") : "?";
-            let lB = dB.groups.get(pB);
-            return void 0 === lB && (lB = dB.groups.size, dB.groups.set(pB, lB)), {
-              group: lB,
-              chunk: pB
+            group: AY,
+            chunk: OY
+          } = function(YY, rY, DY) {
+            const FY = rY.get(mY),
+              AY = YY.getVertexAttrib(mY, QY.CURRENT_VERTEX_ATTRIB),
+              IY = FY ? `+${FY.offset}` : AY ? Array.from(AY).slice(0, 3).join(",") : "?";
+            let RY = DY.groups.get(IY);
+            return void 0 === RY && (RY = DY.groups.size, DY.groups.set(IY, RY)), {
+              group: RY,
+              chunk: IY
             }
-          }(BB, VB.byLocation, lB);
-          YB.group = yB, YB.chunk = JB;
-          for (const BB of [EB, vB]) {
-            var gB;
-            const TB = null === (gB = VB.byLocation.get(BB)) || void 0 === gB ? void 0 : gB.buffer;
-            TB && YB.pages.push({
+          }(YY, FY.byLocation, RY);
+          gY.group = AY, gY.chunk = OY;
+          for (const YY of [WY, EY]) {
+            var aY;
+            const rY = null === (aY = FY.byLocation.get(YY)) || void 0 === aY ? void 0 : aY.buffer;
+            rY && gY.pages.push({
               kind: "buf",
-              buffer: TB
+              buffer: rY
             })
-          }! function(BB, TB, dB, VB, yB, pB, lB) {
-            const JB = VB.get(EB),
-              YB = lB.parts.get(pB);
-            if (void 0 === YB && lB.parts.size >= tB) return;
-            const gB = Math.min(yB, sB, fB - (null !== YB && void 0 !== YB ? YB : 0));
-            if (null === JB || void 0 === JB || !JB.buffer || gB <= 0) return;
-            const oB = CB(BB, TB, dB);
-            if (!oB) return;
-            const kB = JB.stride || 12,
-              LB = AB(BB, JB.buffer, JB.offset, (gB - 1) * kB + 12),
-              OB = new DataView(LB.buffer),
-              DB = function(BB, TB) {
-                const dB = function(BB) {
-                    const TB = eB.get(BB);
-                    if (void 0 !== TB && (null === TB || BB.isProgram(TB))) return TB;
-                    IB.inProbe = !0;
-                    let dB = null;
+          }! function(YY, rY, DY, FY, AY, IY, RY) {
+            const OY = FY.get(WY),
+              gY = RY.parts.get(IY);
+            if (void 0 === gY && RY.parts.size >= lY) return;
+            const aY = Math.min(AY, eY, TY - (null !== gY && void 0 !== gY ? gY : 0));
+            if (null === OY || void 0 === OY || !OY.buffer || aY <= 0) return;
+            const vY = pY(YY, rY, DY);
+            if (!vY) return;
+            const uY = OY.stride || 12,
+              sY = PY(YY, OY.buffer, OY.offset, (aY - 1) * uY + 12),
+              iY = new DataView(sY.buffer),
+              yY = function(YY, rY) {
+                const DY = function(YY) {
+                    const rY = tY.get(YY);
+                    if (void 0 !== rY && (null === rY || YY.isProgram(rY))) return rY;
+                    CY.inProbe = !0;
+                    let DY = null;
                     try {
-                      dB = GB(BB, bB, nB, "fed", "the record feed")
+                      DY = kY(YY, UY, LY, "fed", "the record feed")
                     } finally {
-                      IB.inProbe = !1
+                      CY.inProbe = !1
                     }
-                    return eB.set(BB, dB), dB
-                  }(BB),
-                  VB = dB ? jB(BB, dB, TB, (() => {
-                    BB.drawArraysInstanced(uB.POINTS, 0, 1, TB)
+                    return tY.set(YY, DY), DY
+                  }(YY),
+                  FY = DY ? nY(YY, DY, rY, (() => {
+                    YY.drawArraysInstanced(QY.POINTS, 0, 1, rY)
                   }), "decode probe input (the record feed)") : null;
-                return VB ? new Uint32Array(VB.buffer) : null
-              }(BB, gB);
-            DB || lB.fed.failed++;
-            const HB = jB(BB, oB, 4 * gB, (() => {
-              BB.drawArraysInstanced(uB.POINTS, 0, 4, gB)
+                return FY ? new Uint32Array(FY.buffer) : null
+              }(YY, aY);
+            yY || RY.fed.failed++;
+            const oY = nY(YY, vY, 4 * aY, (() => {
+              YY.drawArraysInstanced(QY.POINTS, 0, 4, aY)
             }));
-            if (!HB) return;
-            lB.parts.set(pB, (null !== YB && void 0 !== YB ? YB : 0) + gB);
-            for (let uB = 0; uB < gB; uB++) {
-              const BB = uB * kB,
-                TB = [OB.getUint32(BB, !0), OB.getUint32(BB + 4, !0), OB.getUint32(BB + 8, !0)],
-                dB = DB ? [DB[3 * uB], DB[3 * uB + 1], DB[3 * uB + 2]] : TB;
-              DB && (lB.fed.records++, dB.some(((BB, dB) => BB !== TB[dB])) && (lB.fed.differing++, lB.fed.first.length < 8 && lB.fed.first.push(`part ${pB} instance ${uB}: fed ${dB.map(yT).join(" ")} buffer ${TB.map(yT).join(" ")}`)));
-              for (let VB = 0; VB < 4; VB++) {
-                const BB = 3 * (4 * uB + VB);
-                lB.vertices.push({
-                  record: dB,
-                  slot: VB,
-                  group: pB,
-                  gpu: [HB[BB], HB[BB + 1], HB[BB + 2]]
+            if (!oY) return;
+            RY.parts.set(IY, (null !== gY && void 0 !== gY ? gY : 0) + aY);
+            for (let QY = 0; QY < aY; QY++) {
+              const YY = QY * uY,
+                rY = [iY.getUint32(YY, !0), iY.getUint32(YY + 4, !0), iY.getUint32(YY + 8, !0)],
+                DY = yY ? [yY[3 * QY], yY[3 * QY + 1], yY[3 * QY + 2]] : rY;
+              yY && (RY.fed.records++, DY.some(((YY, DY) => YY !== rY[DY])) && (RY.fed.differing++, RY.fed.first.length < 8 && RY.fed.first.push(`part ${IY} instance ${QY}: fed ${DY.map(Ar).join(" ")} buffer ${rY.map(Ar).join(" ")}`)));
+              for (let FY = 0; FY < 4; FY++) {
+                const YY = 3 * (4 * QY + FY);
+                RY.vertices.push({
+                  record: DY,
+                  slot: FY,
+                  group: IY,
+                  gpu: [oY[YY], oY[YY + 1], oY[YY + 2]]
                 })
               }
             }
-          }(BB, TB, dB, VB.byLocation, pB, yB, lB)
+          }(YY, rY, DY, FY.byLocation, IY, AY, RY)
         } else {
-          const VB = BT(BB, TB, 16),
-            pB = BT(BB, TB, 8);
-          for (const BB of [VB, pB]) BB && YB.pages.push({
+          const FY = Yr(YY, rY, 16),
+            IY = Yr(YY, rY, 8);
+          for (const YY of [FY, IY]) YY && gY.pages.push({
             kind: "tex",
-            texture: BB
+            texture: YY
           });
-          VB && function(BB, TB, dB, VB, yB, pB) {
-            if (pB.parts.size >= tB) return;
-            const lB = CB(BB, TB, dB);
-            if (!lB) return;
-            let JB = 6 * fB;
-            const YB = [];
-            for (const [OB, DB] of yB) {
-              const BB = Math.min(DB, JB, Math.max(6, 6 * Math.floor(fB / yB.length)));
-              BB > 0 && (YB.push([OB, BB]), JB -= BB)
+          FY && function(YY, rY, DY, FY, AY, IY) {
+            if (IY.parts.size >= lY) return;
+            const RY = pY(YY, rY, DY);
+            if (!RY) return;
+            let OY = 6 * TY;
+            const gY = [];
+            for (const [iY, yY] of AY) {
+              const YY = Math.min(yY, OY, Math.max(6, 6 * Math.floor(TY / AY.length)));
+              YY > 0 && (gY.push([iY, YY]), OY -= YY)
             }
-            const gB = YB.reduce(((BB, TB) => {
-                let [, dB] = TB;
-                return BB + dB
+            const aY = gY.reduce(((YY, rY) => {
+                let [, DY] = rY;
+                return YY + DY
               }), 0),
-              oB = jB(BB, lB, gB, (() => {
-                for (const [TB, dB] of YB) BB.drawArrays(uB.POINTS, TB, dB)
+              vY = nY(YY, RY, aY, (() => {
+                for (const [rY, DY] of gY) YY.drawArrays(QY.POINTS, rY, DY)
               }));
-            if (!oB) return;
-            let kB = 0;
-            for (const [OB, DB] of YB) {
-              const TB = Math.floor(OB / 6),
-                dB = Math.floor((OB + DB - 1) / 6) - TB + 1,
-                yB = TT(BB, VB, NB, TB, dB);
-              for (let BB = OB; BB < OB + DB; BB++, kB++) {
-                var LB;
-                const dB = 4 * (Math.floor(BB / 6) - TB),
-                  VB = [yB[dB], yB[dB + 1], yB[dB + 2]];
-                pB.parts.set(yB[dB + 3], (null !== (LB = pB.parts.get(yB[dB + 3])) && void 0 !== LB ? LB : 0) + (BB % 6 === 0 ? 1 : 0)), pB.vertices.push({
-                  record: VB,
-                  slot: iB[BB % 6],
-                  group: yB[dB + 3],
-                  gpu: [oB[3 * kB], oB[3 * kB + 1], oB[3 * kB + 2]]
+            if (!vY) return;
+            let uY = 0;
+            for (const [iY, yY] of gY) {
+              const rY = Math.floor(iY / 6),
+                DY = Math.floor((iY + yY - 1) / 6) - rY + 1,
+                AY = rr(YY, FY, SY, rY, DY);
+              for (let YY = iY; YY < iY + yY; YY++, uY++) {
+                var sY;
+                const DY = 4 * (Math.floor(YY / 6) - rY),
+                  FY = [AY[DY], AY[DY + 1], AY[DY + 2]];
+                IY.parts.set(AY[DY + 3], (null !== (sY = IY.parts.get(AY[DY + 3])) && void 0 !== sY ? sY : 0) + (YY % 6 === 0 ? 1 : 0)), IY.vertices.push({
+                  record: FY,
+                  slot: VY[YY % 6],
+                  group: AY[DY + 3],
+                  gpu: [vY[3 * uY], vY[3 * uY + 1], vY[3 * uY + 2]]
                 })
               }
             }
-          }(BB, TB, dB, VB, yB, lB)
+          }(YY, rY, DY, FY, AY, RY)
         }
-      } catch (oB) {
-        ZB(`decode probe failed on program ${UB(dB)}: ${String(oB)}`)
+      } catch (vY) {
+        wY(`decode probe failed on program ${KY(DY)}: ${String(vY)}`)
       }
     }
 
-    function CB(BB, TB, dB) {
-      if (void 0 !== dB.probe) return dB.probe && qB(BB, TB, dB.probe), dB.probe;
-      dB.probe = null, IB.inProbe = !0;
+    function pY(YY, rY, DY) {
+      if (void 0 !== DY.probe) return DY.probe && GY(YY, rY, DY.probe), DY.probe;
+      DY.probe = null, CY.inProbe = !0;
       try {
-        dB.probe = function(BB, TB) {
-          return GB(BB, TB.vertex, TB.fragment, HB, `program ${UB(TB)}'s twin`)
-        }(BB, dB)
+        DY.probe = function(YY, rY) {
+          return kY(YY, rY.vertex, rY.fragment, oY, `program ${KY(rY)}'s twin`)
+        }(YY, DY)
       } finally {
-        IB.inProbe = !1
+        CY.inProbe = !1
       }
-      return dB.probe && qB(BB, TB, dB.probe), dB.probe
+      return DY.probe && GY(YY, rY, DY.probe), DY.probe
     }
 
-    function GB(BB, TB, dB, VB, yB) {
-      const pB = [BB.createShader(uB.VERTEX_SHADER), BB.createShader(uB.FRAGMENT_SHADER)],
-        lB = BB.createProgram();
-      if (!lB || !pB[0] || !pB[1]) return null;
-      BB.shaderSource(pB[0], TB), BB.shaderSource(pB[1], dB);
-      for (const YB of pB) BB.compileShader(YB), BB.attachShader(lB, YB);
-      BB.transformFeedbackVaryings(lB, [VB], uB.INTERLEAVED_ATTRIBS), BB.linkProgram(lB);
-      for (const YB of pB) BB.deleteShader(YB);
-      var JB;
-      return BB.getProgramParameter(lB, uB.LINK_STATUS) ? lB : (ZB(`decode probe: ${yB} failed to link: ${WB(null!==(JB=BB.getProgramInfoLog(lB))&&void 0!==JB?JB:"",300)}`), BB.deleteProgram(lB), null)
+    function kY(YY, rY, DY, FY, AY) {
+      const IY = [YY.createShader(QY.VERTEX_SHADER), YY.createShader(QY.FRAGMENT_SHADER)],
+        RY = YY.createProgram();
+      if (!RY || !IY[0] || !IY[1]) return null;
+      YY.shaderSource(IY[0], rY), YY.shaderSource(IY[1], DY);
+      for (const gY of IY) YY.compileShader(gY), YY.attachShader(RY, gY);
+      YY.transformFeedbackVaryings(RY, [FY], QY.INTERLEAVED_ATTRIBS), YY.linkProgram(RY);
+      for (const gY of IY) YY.deleteShader(gY);
+      var OY;
+      return YY.getProgramParameter(RY, QY.LINK_STATUS) ? RY : (wY(`decode probe: ${AY} failed to link: ${XY(null!==(OY=YY.getProgramInfoLog(RY))&&void 0!==OY?OY:"",300)}`), YY.deleteProgram(RY), null)
     }
 
-    function qB(BB, TB, dB) {
-      const VB = BB.getProgramParameter(TB, uB.ACTIVE_UNIFORM_BLOCKS);
-      for (let JB = 0; JB < VB; JB++) {
-        const VB = BB.getActiveUniformBlockName(TB, JB),
-          yB = null === VB ? uB.INVALID_INDEX : BB.getUniformBlockIndex(dB, VB);
-        yB !== uB.INVALID_INDEX && BB.uniformBlockBinding(dB, yB, BB.getActiveUniformBlockParameter(TB, JB, uB.UNIFORM_BLOCK_BINDING))
+    function GY(YY, rY, DY) {
+      const FY = YY.getProgramParameter(rY, QY.ACTIVE_UNIFORM_BLOCKS);
+      for (let OY = 0; OY < FY; OY++) {
+        const FY = YY.getActiveUniformBlockName(rY, OY),
+          AY = null === FY ? QY.INVALID_INDEX : YY.getUniformBlockIndex(DY, FY);
+        AY !== QY.INVALID_INDEX && YY.uniformBlockBinding(DY, AY, YY.getActiveUniformBlockParameter(rY, OY, QY.UNIFORM_BLOCK_BINDING))
       }
-      const yB = BB.getParameter(uB.CURRENT_PROGRAM);
-      BB.useProgram(dB);
-      const pB = BB.getProgramParameter(TB, uB.ACTIVE_UNIFORMS),
-        lB = BB.getActiveUniforms(TB, [...Array(pB).keys()], uB.UNIFORM_BLOCK_INDEX);
-      for (let JB = 0; JB < pB; JB++) {
-        const VB = BB.getActiveUniform(TB, JB);
-        if (!VB || -1 !== lB[JB]) continue;
-        const yB = VB.name.replace(/\[0\]$/, "");
-        for (let pB = 0; pB < VB.size; pB++) {
-          const lB = VB.size > 1 ? `${yB}[${pB}]` : VB.name,
-            JB = BB.getUniformLocation(TB, lB),
-            YB = BB.getUniformLocation(dB, lB);
-          JB && YB && xB(BB, YB, VB.type, BB.getUniform(TB, JB))
+      const AY = YY.getParameter(QY.CURRENT_PROGRAM);
+      YY.useProgram(DY);
+      const IY = YY.getProgramParameter(rY, QY.ACTIVE_UNIFORMS),
+        RY = YY.getActiveUniforms(rY, [...Array(IY).keys()], QY.UNIFORM_BLOCK_INDEX);
+      for (let OY = 0; OY < IY; OY++) {
+        const FY = YY.getActiveUniform(rY, OY);
+        if (!FY || -1 !== RY[OY]) continue;
+        const AY = FY.name.replace(/\[0\]$/, "");
+        for (let IY = 0; IY < FY.size; IY++) {
+          const RY = FY.size > 1 ? `${AY}[${IY}]` : FY.name,
+            OY = YY.getUniformLocation(rY, RY),
+            gY = YY.getUniformLocation(DY, RY);
+          OY && gY && xY(YY, gY, FY.type, YY.getUniform(rY, OY))
         }
       }
-      BB.useProgram(yB)
+      YY.useProgram(AY)
     }
 
-    function xB(BB, TB, dB, VB) {
-      const yB = ArrayBuffer.isView(VB) ? Array.from(VB) : [Number(VB)];
-      switch (dB) {
-        case uB.FLOAT:
-          return void BB.uniform1f(TB, yB[0]);
-        case uB.FLOAT_VEC2:
-          return void BB.uniform2fv(TB, yB);
-        case uB.FLOAT_VEC3:
-          return void BB.uniform3fv(TB, yB);
-        case uB.FLOAT_VEC4:
-          return void BB.uniform4fv(TB, yB);
-        case uB.FLOAT_MAT3:
-          return void BB.uniformMatrix3fv(TB, !1, yB);
-        case uB.FLOAT_MAT4:
-          return void BB.uniformMatrix4fv(TB, !1, yB);
-        case uB.UNSIGNED_INT:
-          return void BB.uniform1ui(TB, yB[0]);
-        case uB.UNSIGNED_INT_VEC2:
-          return void BB.uniform2uiv(TB, yB);
-        case uB.UNSIGNED_INT_VEC3:
-          return void BB.uniform3uiv(TB, yB);
-        case uB.UNSIGNED_INT_VEC4:
-          return void BB.uniform4uiv(TB, yB);
-        case uB.INT_VEC2:
-          return void BB.uniform2iv(TB, yB);
-        case uB.INT_VEC3:
-          return void BB.uniform3iv(TB, yB);
-        case uB.INT_VEC4:
-          return void BB.uniform4iv(TB, yB);
+    function xY(YY, rY, DY, FY) {
+      const AY = ArrayBuffer.isView(FY) ? Array.from(FY) : [Number(FY)];
+      switch (DY) {
+        case QY.FLOAT:
+          return void YY.uniform1f(rY, AY[0]);
+        case QY.FLOAT_VEC2:
+          return void YY.uniform2fv(rY, AY);
+        case QY.FLOAT_VEC3:
+          return void YY.uniform3fv(rY, AY);
+        case QY.FLOAT_VEC4:
+          return void YY.uniform4fv(rY, AY);
+        case QY.FLOAT_MAT3:
+          return void YY.uniformMatrix3fv(rY, !1, AY);
+        case QY.FLOAT_MAT4:
+          return void YY.uniformMatrix4fv(rY, !1, AY);
+        case QY.UNSIGNED_INT:
+          return void YY.uniform1ui(rY, AY[0]);
+        case QY.UNSIGNED_INT_VEC2:
+          return void YY.uniform2uiv(rY, AY);
+        case QY.UNSIGNED_INT_VEC3:
+          return void YY.uniform3uiv(rY, AY);
+        case QY.UNSIGNED_INT_VEC4:
+          return void YY.uniform4uiv(rY, AY);
+        case QY.INT_VEC2:
+          return void YY.uniform2iv(rY, AY);
+        case QY.INT_VEC3:
+          return void YY.uniform3iv(rY, AY);
+        case QY.INT_VEC4:
+          return void YY.uniform4iv(rY, AY);
         default:
-          BB.uniform1i(TB, yB[0])
+          YY.uniform1i(rY, AY[0])
       }
     }
 
-    function jB(BB, TB, dB, VB) {
-      let yB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "decode probe";
-      const pB = BB.getParameter(uB.CURRENT_PROGRAM),
-        lB = BB.getParameter(uB.TRANSFORM_FEEDBACK_BINDING),
-        JB = BB.getParameter(uB.TRANSFORM_FEEDBACK_BUFFER_BINDING),
-        YB = BB.getParameter(uB.COPY_READ_BUFFER_BINDING),
-        gB = BB.isEnabled(uB.RASTERIZER_DISCARD),
-        oB = BB.createTransformFeedback(),
-        kB = BB.createBuffer();
-      IB.inProbe = !0;
+    function nY(YY, rY, DY, FY) {
+      let AY = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "decode probe";
+      const IY = YY.getParameter(QY.CURRENT_PROGRAM),
+        RY = YY.getParameter(QY.TRANSFORM_FEEDBACK_BINDING),
+        OY = YY.getParameter(QY.TRANSFORM_FEEDBACK_BUFFER_BINDING),
+        gY = YY.getParameter(QY.COPY_READ_BUFFER_BINDING),
+        aY = YY.isEnabled(QY.RASTERIZER_DISCARD),
+        vY = YY.createTransformFeedback(),
+        uY = YY.createBuffer();
+      CY.inProbe = !0;
       try {
-        const pB = BB.getError();
-        pB !== uB.NO_ERROR && ZB(`GL error 0x${pB.toString(16)} pending before the decode probe (the renderer's)`), BB.useProgram(TB), BB.bindTransformFeedback(uB.TRANSFORM_FEEDBACK, oB), BB.bindBuffer(uB.TRANSFORM_FEEDBACK_BUFFER, kB), BB.bufferData(uB.TRANSFORM_FEEDBACK_BUFFER, 12 * dB, uB.STREAM_READ), BB.bindBufferBase(uB.TRANSFORM_FEEDBACK_BUFFER, 0, kB), BB.enable(uB.RASTERIZER_DISCARD), BB.beginTransformFeedback(uB.POINTS), VB(), BB.endTransformFeedback(), BB.bindBufferBase(uB.TRANSFORM_FEEDBACK_BUFFER, 0, null);
-        const lB = BB.getError();
-        if (lB !== uB.NO_ERROR) return ZB(`${yB}: GL error 0x${lB.toString(16)} on the feedback draw`), null;
-        const JB = new Float32Array(3 * dB);
-        return BB.bindBuffer(uB.COPY_READ_BUFFER, kB), BB.getBufferSubData(uB.COPY_READ_BUFFER, 0, JB), JB
+        const IY = YY.getError();
+        IY !== QY.NO_ERROR && wY(`GL error 0x${IY.toString(16)} pending before the decode probe (the renderer's)`), YY.useProgram(rY), YY.bindTransformFeedback(QY.TRANSFORM_FEEDBACK, vY), YY.bindBuffer(QY.TRANSFORM_FEEDBACK_BUFFER, uY), YY.bufferData(QY.TRANSFORM_FEEDBACK_BUFFER, 12 * DY, QY.STREAM_READ), YY.bindBufferBase(QY.TRANSFORM_FEEDBACK_BUFFER, 0, uY), YY.enable(QY.RASTERIZER_DISCARD), YY.beginTransformFeedback(QY.POINTS), FY(), YY.endTransformFeedback(), YY.bindBufferBase(QY.TRANSFORM_FEEDBACK_BUFFER, 0, null);
+        const RY = YY.getError();
+        if (RY !== QY.NO_ERROR) return wY(`${AY}: GL error 0x${RY.toString(16)} on the feedback draw`), null;
+        const OY = new Float32Array(3 * DY);
+        return YY.bindBuffer(QY.COPY_READ_BUFFER, uY), YY.getBufferSubData(QY.COPY_READ_BUFFER, 0, OY), OY
       } finally {
-        gB || BB.disable(uB.RASTERIZER_DISCARD), BB.bindTransformFeedback(uB.TRANSFORM_FEEDBACK, lB), BB.bindBuffer(uB.TRANSFORM_FEEDBACK_BUFFER, JB), BB.bindBuffer(uB.COPY_READ_BUFFER, YB), BB.deleteTransformFeedback(oB), BB.deleteBuffer(kB), BB.useProgram(pB), IB.inProbe = !1
+        aY || YY.disable(QY.RASTERIZER_DISCARD), YY.bindTransformFeedback(QY.TRANSFORM_FEEDBACK, RY), YY.bindBuffer(QY.TRANSFORM_FEEDBACK_BUFFER, OY), YY.bindBuffer(QY.COPY_READ_BUFFER, gY), YY.deleteTransformFeedback(vY), YY.deleteBuffer(uY), YY.useProgram(IY), CY.inProbe = !1
       }
     }
 
-    function AB(BB, TB, dB, VB) {
-      const yB = BB.getParameter(uB.COPY_READ_BUFFER_BINDING),
-        pB = new Uint8Array(VB);
-      return BB.bindBuffer(uB.COPY_READ_BUFFER, TB), BB.getBufferSubData(uB.COPY_READ_BUFFER, dB, pB), BB.bindBuffer(uB.COPY_READ_BUFFER, yB), pB
+    function PY(YY, rY, DY, FY) {
+      const AY = YY.getParameter(QY.COPY_READ_BUFFER_BINDING),
+        IY = new Uint8Array(FY);
+      return YY.bindBuffer(QY.COPY_READ_BUFFER, rY), YY.getBufferSubData(QY.COPY_READ_BUFFER, DY, IY), YY.bindBuffer(QY.COPY_READ_BUFFER, AY), IY
     }
-    const bB = `#version 300 es\nlayout(location = ${EB}) in uvec3 record;\nflat out uvec3 fed;\nvoid main() {\n\tfed = record;\n\tgl_Position = vec4(0.0);\n\tgl_PointSize = 1.0;\n}\n`,
-      nB = "#version 300 es\nprecision highp float;\nout vec4 color;\nvoid main() {\n\tcolor = vec4(0.0);\n}\n",
-      eB = new WeakMap;
+    const UY = `#version 300 es\nlayout(location = ${WY}) in uvec3 record;\nflat out uvec3 fed;\nvoid main() {\n\tfed = record;\n\tgl_Position = vec4(0.0);\n\tgl_PointSize = 1.0;\n}\n`,
+      LY = "#version 300 es\nprecision highp float;\nout vec4 color;\nvoid main() {\n\tcolor = vec4(0.0);\n}\n",
+      tY = new WeakMap;
 
-    function BT(BB, TB, dB) {
-      const VB = BB.getProgramParameter(TB, uB.ACTIVE_UNIFORMS),
-        yB = BB.getParameter(uB.ACTIVE_TEXTURE);
+    function Yr(YY, rY, DY) {
+      const FY = YY.getProgramParameter(rY, QY.ACTIVE_UNIFORMS),
+        AY = YY.getParameter(QY.ACTIVE_TEXTURE);
       try {
-        for (let yB = 0; yB < VB; yB++) {
-          const VB = BB.getActiveUniform(TB, yB);
-          if ((null === VB || void 0 === VB ? void 0 : VB.type) !== uB.UNSIGNED_INT_SAMPLER_2D) continue;
-          const pB = BB.getUniformLocation(TB, VB.name),
-            lB = pB ? BB.getUniform(TB, pB) : -1;
-          if (lB < 0) continue;
-          BB.activeTexture(uB.TEXTURE0 + lB);
-          const JB = BB.getParameter(uB.TEXTURE_BINDING_2D);
-          if (JB && rB.get(JB) === dB) return JB
+        for (let AY = 0; AY < FY; AY++) {
+          const FY = YY.getActiveUniform(rY, AY);
+          if ((null === FY || void 0 === FY ? void 0 : FY.type) !== QY.UNSIGNED_INT_SAMPLER_2D) continue;
+          const IY = YY.getUniformLocation(rY, FY.name),
+            RY = IY ? YY.getUniform(rY, IY) : -1;
+          if (RY < 0) continue;
+          YY.activeTexture(QY.TEXTURE0 + RY);
+          const OY = YY.getParameter(QY.TEXTURE_BINDING_2D);
+          if (OY && ZY.get(OY) === DY) return OY
         }
         return null
       } finally {
-        BB.activeTexture(yB)
+        YY.activeTexture(AY)
       }
     }
 
-    function TT(BB, TB, dB, VB, yB) {
-      const pB = new Uint32Array(4 * yB),
-        lB = BB.getParameter(uB.READ_FRAMEBUFFER_BINDING),
-        JB = BB.createFramebuffer();
-      BB.bindFramebuffer(uB.READ_FRAMEBUFFER, JB), BB.framebufferTexture2D(uB.READ_FRAMEBUFFER, uB.COLOR_ATTACHMENT0, uB.TEXTURE_2D, TB, 0);
+    function rr(YY, rY, DY, FY, AY) {
+      const IY = new Uint32Array(4 * AY),
+        RY = YY.getParameter(QY.READ_FRAMEBUFFER_BINDING),
+        OY = YY.createFramebuffer();
+      YY.bindFramebuffer(QY.READ_FRAMEBUFFER, OY), YY.framebufferTexture2D(QY.READ_FRAMEBUFFER, QY.COLOR_ATTACHMENT0, QY.TEXTURE_2D, rY, 0);
       try {
-        let TB = 0;
-        for (; TB < yB;) {
-          const lB = VB + TB,
-            JB = lB % dB,
-            YB = Math.min(yB - TB, dB - JB);
-          BB.readPixels(JB, Math.floor(lB / dB), YB, 1, uB.RGBA_INTEGER, uB.UNSIGNED_INT, pB.subarray(4 * TB, 4 * (TB + YB))), TB += YB
+        let rY = 0;
+        for (; rY < AY;) {
+          const RY = FY + rY,
+            OY = RY % DY,
+            gY = Math.min(AY - rY, DY - OY);
+          YY.readPixels(OY, Math.floor(RY / DY), gY, 1, QY.RGBA_INTEGER, QY.UNSIGNED_INT, IY.subarray(4 * rY, 4 * (rY + gY))), rY += gY
         }
       } finally {
-        BB.bindFramebuffer(uB.READ_FRAMEBUFFER, lB), BB.deleteFramebuffer(JB)
+        YY.bindFramebuffer(QY.READ_FRAMEBUFFER, RY), YY.deleteFramebuffer(OY)
       }
-      return pB
+      return IY
     }
 
-    function dT(BB, TB, dB) {
-      let VB = 0,
-        yB = 0;
-      for (let YB = 0; YB < TB.bytes.length; YB += zB) {
-        VB++;
-        const BB = Math.min(YB + zB, TB.bytes.length);
-        OB(TB.bytes.subarray(YB, BB)) !== OB(dB.subarray(YB, BB)) && yB++
+    function Dr(YY, rY, DY) {
+      let FY = 0,
+        AY = 0;
+      for (let gY = 0; gY < rY.bytes.length; gY += BY) {
+        FY++;
+        const YY = Math.min(gY + BY, rY.bytes.length);
+        iY(rY.bytes.subarray(gY, YY)) !== iY(DY.subarray(gY, YY)) && AY++
       }
-      const pB = `${BB} ${TB.bytes.length} B cpu ${OB(TB.bytes).toString(16)} gpu ${OB(dB).toString(16)}, ${yB}/${VB} blocks differ${TB.missed?`, ${TB.missed} GPU-side writes uncopied`:""}`;
-      if (0 === yB) return pB;
+      const IY = `${YY} ${rY.bytes.length} B cpu ${iY(rY.bytes).toString(16)} gpu ${iY(DY).toString(16)}, ${AY}/${FY} blocks differ${rY.missed?`, ${rY.missed} GPU-side writes uncopied`:""}`;
+      if (0 === AY) return IY;
       const {
-        count: lB,
-        offsets: JB
-      } = function(BB, TB) {
-        let dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 8;
-        const VB = Math.min(BB.length, TB.length);
-        let yB = Math.abs(BB.length - TB.length);
-        const pB = [];
-        for (let lB = 0; lB < VB; lB++) BB[lB] !== TB[lB] && (yB++, pB.length < dB && pB.push(lB));
+        count: RY,
+        offsets: OY
+      } = function(YY, rY) {
+        let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 8;
+        const FY = Math.min(YY.length, rY.length);
+        let AY = Math.abs(YY.length - rY.length);
+        const IY = [];
+        for (let RY = 0; RY < FY; RY++) YY[RY] !== rY[RY] && (AY++, IY.length < DY && IY.push(RY));
         return {
-          count: yB,
-          offsets: pB
+          count: AY,
+          offsets: IY
         }
-      }(TB.bytes, dB);
-      return XB([`${pB}: ${lB} bytes differ`, ...JB.map((BB => `  +${BB}: cpu ${DB(TB.bytes,BB)} | gpu ${DB(dB,BB)}`))].join("\n")), `${pB}: ${lB} bytes differ, first at ${JB.join(", ")} (context in the saved file)`
+      }(rY.bytes, DY);
+      return bY([`${IY}: ${RY} bytes differ`, ...OY.map((YY => `  +${YY}: cpu ${yY(rY.bytes,YY)} | gpu ${yY(DY,YY)}`))].join("\n")), `${IY}: ${RY} bytes differ, first at ${OY.join(", ")} (context in the saved file)`
     }
 
-    function VT(BB) {
-      if (0 === BB.vertices.length) return void ZB(`decode probe (${BB.reason}): no terrain draw probed (${BB.draws.length} seen)`);
-      const TB = function(BB) {
-          const TB = new Map;
-          for (const VB of BB) {
-            const BB = TB.get(VB.group);
-            BB ? BB.push(VB) : TB.set(VB.group, [VB])
+    function Fr(YY) {
+      if (0 === YY.vertices.length) return void wY(`decode probe (${YY.reason}): no terrain draw probed (${YY.draws.length} seen)`);
+      const rY = function(YY) {
+          const rY = new Map;
+          for (const FY of YY) {
+            const YY = rY.get(FY.group);
+            YY ? YY.push(FY) : rY.set(FY.group, [FY])
           }
-          const dB = {
-            vertices: BB.length,
+          const DY = {
+            vertices: YY.length,
             mismatches: 0,
             byDirection: new Array(8).fill(0),
             byDiagonal: [0, 0],
@@ -606,67 +606,67 @@ export const modules = {
             translations: new Map,
             first: []
           };
-          for (const [VB, yB] of TB) {
-            const BB = new Map,
-              TB = yB.map((TB => {
-                const dB = oB(TB.record, TB.slot),
-                  VB = [TB.gpu[0] - dB[0], TB.gpu[1] - dB[1], TB.gpu[2] - dB[2]],
-                  yB = VB.map((BB => Math.round(64 * BB))).join(","),
-                  pB = BB.get(yB);
-                return pB ? pB.count++ : BB.set(yB, {
+          for (const [FY, AY] of rY) {
+            const YY = new Map,
+              rY = AY.map((rY => {
+                const DY = vY(rY.record, rY.slot),
+                  FY = [rY.gpu[0] - DY[0], rY.gpu[1] - DY[1], rY.gpu[2] - DY[2]],
+                  AY = FY.map((YY => Math.round(64 * YY))).join(","),
+                  IY = YY.get(AY);
+                return IY ? IY.count++ : YY.set(AY, {
                   count: 1,
-                  offset: VB
-                }), dB
+                  offset: FY
+                }), DY
               }));
-            let pB = [0, 0, 0],
-              lB = 0;
-            for (const dB of BB.values()) dB.count > lB && (lB = dB.count, pB = dB.offset);
-            dB.translations.set(VB, pB), yB.forEach(((BB, VB) => {
-              var yB;
-              const lB = [TB[VB][0] + pB[0], TB[VB][1] + pB[1], TB[VB][2] + pB[2]];
-              if (lB.every(((TB, dB) => {
-                  return VB = BB.gpu[dB], yB = TB, Math.abs(VB - yB) <= Math.max(.001, 1e-6 * Math.abs(yB));
-                  var VB, yB
+            let IY = [0, 0, 0],
+              RY = 0;
+            for (const DY of YY.values()) DY.count > RY && (RY = DY.count, IY = DY.offset);
+            DY.translations.set(FY, IY), AY.forEach(((YY, FY) => {
+              var AY;
+              const RY = [rY[FY][0] + IY[0], rY[FY][1] + IY[1], rY[FY][2] + IY[2]];
+              if (RY.every(((rY, DY) => {
+                  return FY = YY.gpu[DY], AY = rY, Math.abs(FY - AY) <= Math.max(.001, 1e-6 * Math.abs(AY));
+                  var FY, AY
                 }))) return;
-              dB.mismatches++, dB.byDirection[JB(BB.record[2])]++, dB.byDiagonal[YB(BB.record[2])]++;
-              const gB = kB(BB.record);
-              dB.byBand[gB] = (null !== (yB = dB.byBand[gB]) && void 0 !== yB ? yB : 0) + 1, dB.first.length < LB && dB.first.push({
-                ...BB,
-                expected: lB
+              DY.mismatches++, DY.byDirection[OY(YY.record[2])]++, DY.byDiagonal[gY(YY.record[2])]++;
+              const aY = uY(YY.record);
+              DY.byBand[aY] = (null !== (AY = DY.byBand[aY]) && void 0 !== AY ? AY : 0) + 1, DY.first.length < sY && DY.first.push({
+                ...YY,
+                expected: RY
               })
             }))
           }
-          return dB
-        }(BB.vertices),
-        dB = TB.byDirection.map(((BB, TB) => BB ? `${lB[TB]} ${BB}` : "")).filter(Boolean).join(" "),
-        VB = Object.entries(TB.byBand).map((BB => {
-          let [TB, dB] = BB;
-          return `${TB}: ${dB}`
+          return DY
+        }(YY.vertices),
+        DY = rY.byDirection.map(((YY, rY) => YY ? `${RY[rY]} ${YY}` : "")).filter(Boolean).join(" "),
+        FY = Object.entries(rY.byBand).map((YY => {
+          let [rY, DY] = YY;
+          return `${rY}: ${DY}`
         })).join(" ");
-      if (ZB(`decode probe (${BB.reason}): ${TB.mismatches}/${TB.vertices} vertices differ from the CPU decode over ${BB.parts.size} parts, in the probe's own transform feedback draw (the frame's draws can still differ)` + (TB.mismatches ? ` by direction [${dB}] diagonal [0: ${TB.byDiagonal[0]} 1: ${TB.byDiagonal[1]}] extent [${VB}]` : "")), BB.fed.records > 0 || BB.fed.failed > 0) {
-        ZB(`decode probe input: ${BB.fed.differing}/${BB.fed.records} instanced records the vertex input fed differ from the buffer's readback` + (BB.fed.differing ? " (H2: the GPU's vertex copy differs, unless the feed's own integer pass-through is the fault)" : "") + (BB.fed.failed ? `; the feed failed on ${BB.fed.failed} draws, whose decode is held to the buffer's readback` : ""));
-        for (const TB of BB.fed.first) ZB(`  ${TB}`)
+      if (wY(`decode probe (${YY.reason}): ${rY.mismatches}/${rY.vertices} vertices differ from the CPU decode over ${YY.parts.size} parts, in the probe's own transform feedback draw (the frame's draws can still differ)` + (rY.mismatches ? ` by direction [${DY}] diagonal [0: ${rY.byDiagonal[0]} 1: ${rY.byDiagonal[1]}] extent [${FY}]` : "")), YY.fed.records > 0 || YY.fed.failed > 0) {
+        wY(`decode probe input: ${YY.fed.differing}/${YY.fed.records} instanced records the vertex input fed differ from the buffer's readback` + (YY.fed.differing ? " (H2: the GPU's vertex copy differs, unless the feed's own integer pass-through is the fault)" : "") + (YY.fed.failed ? `; the feed failed on ${YY.fed.failed} draws, whose decode is held to the buffer's readback` : ""));
+        for (const rY of YY.fed.first) wY(`  ${rY}`)
       }
-      for (const yB of TB.first) {
-        const [BB, TB, dB] = yB.record;
-        ZB(`  mismatch part ${yB.group} r0 ${BB.toString(16)} r1 ${TB.toString(16)} r2 ${dB.toString(16)} slot ${yB.slot} (${lB[JB(dB)]}): expected ${yB.expected.map(pT).join(",")} gpu ${yB.gpu.map(pT).join(",")}`)
+      for (const AY of rY.first) {
+        const [YY, rY, DY] = AY.record;
+        wY(`  mismatch part ${AY.group} r0 ${YY.toString(16)} r1 ${rY.toString(16)} r2 ${DY.toString(16)} slot ${AY.slot} (${RY[OY(DY)]}): expected ${AY.expected.map(Ir).join(",")} gpu ${AY.gpu.map(Ir).join(",")}`)
       }
-      XB(`decode probe translations: ${[...TB.translations].map((BB=>{let[TB,dB]=BB;return`${TB}: ${dB.map(pT).join(",")}`})).join("; ")}`)
+      bY(`decode probe translations: ${[...rY.translations].map((YY=>{let[rY,DY]=YY;return`${rY}: ${DY.map(Ir).join(",")}`})).join("; ")}`)
     }
 
-    function yT(BB) {
-      return BB.toString(16)
+    function Ar(YY) {
+      return YY.toString(16)
     }
 
-    function pT(BB) {
-      return Number.isInteger(BB) ? String(BB) : BB.toFixed(3)
+    function Ir(YY) {
+      return Number.isInteger(YY) ? String(YY) : YY.toFixed(3)
     }
 
-    function lT(BB) {
-      return null !== IB.pendingCheck ? Promise.resolve() : new Promise((TB => {
-        let dB = !1;
-        const VB = {
-          reason: BB,
+    function Rr(YY) {
+      return null !== CY.pendingCheck ? Promise.resolve() : new Promise((rY => {
+        let DY = !1;
+        const FY = {
+          reason: YY,
           terrainDraws: 0,
           draws: [],
           vertices: [],
@@ -679,80 +679,85 @@ export const modules = {
             failed: 0
           }
         };
-        IB.pendingCheck = VB;
-        const yB = () => {
-            IB.pendingCheck = null;
+        CY.pendingCheck = FY;
+        const AY = () => {
+            CY.pendingCheck = null;
             try {
-              ! function(BB) {
-                ZB(`draw ranges (${BB.reason}): ${BB.terrainDraws} terrain draws in the frame, the first ${BB.draws.length} here`);
-                for (const TB of BB.draws) {
-                  const BB = TB.ek.slice(0, 8).map((BB => {
-                      let [TB, dB] = BB;
-                      return `${TB}+${dB}`
+              ! function(YY) {
+                wY(`draw ranges (${YY.reason}): ${YY.terrainDraws} terrain draws in the frame, the first ${YY.draws.length} here`);
+                for (const rY of YY.draws) {
+                  const YY = rY.ws.slice(0, 8).map((YY => {
+                      let [rY, DY] = YY;
+                      return `${rY}+${DY}`
                     })).join(" "),
-                    dB = TB.ek.length > 8 ? ` (+${TB.ek.length-8} ranges)` : "";
-                  ZB(`  ${UB(TB.program)} ${TB.program.terrain} ${TB.call} ${BB}${dB} x${TB.instances}${TB.group>=0?` part ${TB.group} chunk ${TB.chunk}`:""} | ${TB.attributes.join(" | ")}`)
+                    DY = rY.ws.length > 8 ? ` (+${rY.ws.length-8} ranges)` : "";
+                  wY(`  ${KY(rY.program)} ${rY.program.terrain} ${rY.call} ${YY}${DY} x${rY.instances}${rY.group>=0?` part ${rY.group} chunk ${rY.chunk}`:""} | ${rY.attributes.join(" | ")}`)
                 }
-              }(VB), VT(VB);
-              VB.draws.some((BB => "undefined" !== typeof WebGL2RenderingContext && BB.gl instanceof WebGL2RenderingContext)) || 0 === VB.draws.length ? function(BB) {
-                const TB = [],
-                  dB = new Map;
-                for (const VB of BB)
-                  if ("undefined" !== typeof WebGL2RenderingContext && VB.gl instanceof WebGL2RenderingContext)
-                    for (const BB of VB.pages) dB.set("buf" === BB.kind ? BB.buffer : BB.texture, {
-                      page: BB,
-                      gl: VB.gl
+              }(FY), Fr(FY);
+              FY.draws.some((YY => "undefined" !== typeof WebGL2RenderingContext && YY.gl instanceof WebGL2RenderingContext)) || 0 === FY.draws.length ? function(YY) {
+                const rY = [],
+                  DY = new Map;
+                for (const FY of YY)
+                  if ("undefined" !== typeof WebGL2RenderingContext && FY.gl instanceof WebGL2RenderingContext)
+                    for (const YY of FY.pages) DY.set("buf" === YY.kind ? YY.buffer : YY.texture, {
+                      page: YY,
+                      gl: FY.gl
                     });
-                for (const [VB, {
-                    page: yB,
-                    gl: pB
-                  }] of dB) {
-                  const BB = KB.get(VB);
-                  if (!BB) {
-                    TB.push(`${yB.kind}#${PB(VB)}: no CPU copy (${IB.uncopied} pages over the copy budget)`);
+                for (const [FY, {
+                    page: AY,
+                    gl: IY
+                  }] of DY) {
+                  const YY = zY.get(FY);
+                  if (!YY) {
+                    rY.push(`${AY.kind}#${hY(FY)}: no CPU copy (${CY.uncopied} pages over the copy budget)`);
                     continue
                   }
-                  if ("buf" === yB.kind) {
-                    TB.push(dT(`buf#${BB.id}`, BB, AB(pB, yB.buffer, 0, BB.bytes.length)));
+                  if ("buf" === AY.kind) {
+                    rY.push(Dr(`buf#${YY.id}`, YY, PY(IY, AY.buffer, 0, YY.bytes.length)));
                     continue
                   }
-                  const dB = TT(pB, yB.texture, BB.width, 0, BB.width * BB.height),
-                    lB = 16 === BB.texelBytes ? new Uint8Array(dB.buffer) : new Uint8Array(new Uint16Array(dB).buffer);
-                  TB.push(dT(`tex#${BB.id} (${16===BB.texelBytes?"records":"light"})`, BB, lB))
+                  const DY = rr(IY, AY.texture, YY.width, 0, YY.width * YY.height),
+                    RY = 16 === YY.texelBytes ? new Uint8Array(DY.buffer) : new Uint8Array(new Uint16Array(DY).buffer);
+                  rY.push(Dr(`tex#${YY.id} (${16===YY.texelBytes?"records":"light"})`, YY, RY))
                 }
-                for (const VB of TB) ZB(`page readback ${VB}`)
-              }(VB.draws) : ZB("page readback: none on WebGL1 (no buffer readback)")
-            } catch (BB) {
-              ZB(`check failed: ${String(BB)}`)
+                for (const FY of rY) wY(`page readback ${FY}`)
+              }(FY.draws) : wY("page readback: none on WebGL1 (no buffer readback)")
+            } catch (YY) {
+              wY(`check failed: ${String(YY)}`)
             }
-            TB()
+            rY()
           },
-          pB = () => {
-            if (VB.draws.length > 0 && !dB) return dB = !0, void setTimeout(yB, 0);
-            dB || requestAnimationFrame(pB)
+          IY = () => {
+            if (FY.draws.length > 0 && !DY) return DY = !0, void setTimeout(AY, 0);
+            DY || requestAnimationFrame(IY)
           };
-        requestAnimationFrame(pB), setTimeout((() => {
-          dB || (dB = !0, yB())
+        requestAnimationFrame(IY), setTimeout((() => {
+          DY || (DY = !0, AY())
         }), 5e3)
       }))
     }
-    const JT = 20,
-      YT = 24;
+    var Or = DY(4269);
+    const gr = 20,
+      ar = 24,
+      vr = Reflect.apply;
 
-    function gT(BB, TB, dB) {
-      if (!BB) return;
-      const VB = BB[TB];
-      "function" === typeof VB && (BB[TB] = dB(VB))
+    function ur(YY, rY, DY) {
+      if (!YY) return;
+      const FY = YY[rY];
+      if ("function" === typeof FY) {
+        const AY = DY(FY);
+        YY[rY] = AY, (0, Or.x)(AY, FY)
+      }
     }
-    let oT = !1;
-    const kT = new WeakMap,
-      LT = new WeakMap,
-      OT = new WeakMap,
-      DT = {
+    let sr = !1;
+    const ir = new WeakMap,
+      yr = new WeakMap,
+      Qr = new WeakMap,
+      or = {
         gl: 0,
         lost: 0
       };
-    let uT = {
+    let Wr = {
         inst: {
           draws: 0,
           faces: 0
@@ -766,311 +771,307 @@ export const modules = {
           faces: 0
         }
       },
-      HT = {
+      Er = {
         buffer: 0,
         texture: 0
       },
-      ET = 0;
+      mr = 0;
 
-    function vT(BB, TB, dB) {
-      return Reflect.apply(BB, TB, dB)
+    function Vr(YY) {
+      let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      if (YY instanceof ArrayBuffer) return new Uint8Array(YY, rY, DY || void 0);
+      if (!ArrayBuffer.isView(YY)) return null;
+      const FY = "BYTES_PER_ELEMENT" in YY ? YY.BYTES_PER_ELEMENT : 1,
+        AY = YY.byteOffset + rY * FY,
+        IY = DY ? DY * FY : YY.byteLength - rY * FY;
+      return new Uint8Array(YY.buffer, AY, Math.max(0, IY))
     }
 
-    function mT(BB) {
-      let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-      if (BB instanceof ArrayBuffer) return new Uint8Array(BB, TB, dB || void 0);
-      if (!ArrayBuffer.isView(BB)) return null;
-      const VB = "BYTES_PER_ELEMENT" in BB ? BB.BYTES_PER_ELEMENT : 1,
-        yB = BB.byteOffset + TB * VB,
-        pB = dB ? dB * VB : BB.byteLength - TB * VB;
-      return new Uint8Array(BB.buffer, yB, Math.max(0, pB))
-    }
-
-    function iT(BB, TB) {
-      const dB = function(BB) {
-        switch (BB) {
-          case uB.ARRAY_BUFFER:
-            return uB.ARRAY_BUFFER_BINDING;
-          case uB.ELEMENT_ARRAY_BUFFER:
-            return uB.ELEMENT_ARRAY_BUFFER_BINDING;
-          case uB.COPY_READ_BUFFER:
-            return uB.COPY_READ_BUFFER_BINDING;
-          case uB.COPY_WRITE_BUFFER:
-            return uB.COPY_WRITE_BUFFER_BINDING;
-          case uB.UNIFORM_BUFFER:
-            return uB.UNIFORM_BUFFER_BINDING;
-          case uB.PIXEL_UNPACK_BUFFER:
-            return uB.PIXEL_UNPACK_BUFFER_BINDING;
-          case uB.TRANSFORM_FEEDBACK_BUFFER:
-            return uB.TRANSFORM_FEEDBACK_BUFFER_BINDING;
+    function Sr(YY, rY) {
+      const DY = function(YY) {
+        switch (YY) {
+          case QY.ARRAY_BUFFER:
+            return QY.ARRAY_BUFFER_BINDING;
+          case QY.ELEMENT_ARRAY_BUFFER:
+            return QY.ELEMENT_ARRAY_BUFFER_BINDING;
+          case QY.COPY_READ_BUFFER:
+            return QY.COPY_READ_BUFFER_BINDING;
+          case QY.COPY_WRITE_BUFFER:
+            return QY.COPY_WRITE_BUFFER_BINDING;
+          case QY.UNIFORM_BUFFER:
+            return QY.UNIFORM_BUFFER_BINDING;
+          case QY.PIXEL_UNPACK_BUFFER:
+            return QY.PIXEL_UNPACK_BUFFER_BINDING;
+          case QY.TRANSFORM_FEEDBACK_BUFFER:
+            return QY.TRANSFORM_FEEDBACK_BUFFER_BINDING;
           default:
             return 0
         }
-      }(TB);
-      return dB ? BB.getParameter(dB) : null
+      }(rY);
+      return DY ? YY.getParameter(DY) : null
     }
 
-    function NT(BB) {
-      const TB = KB.get(BB);
-      TB && (IB.shadowBytes -= TB.bytes.length, KB.delete(BB))
+    function lr(YY) {
+      const rY = zY.get(YY);
+      rY && (CY.shadowBytes -= rY.bytes.length, zY.delete(YY))
     }
 
-    function tT(BB, TB) {
-      let dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        VB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-        yB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
-      NT(BB), IB.shadowBytes + TB > MB ? IB.uncopied++ : (IB.shadowBytes += TB, KB.set(BB, {
-        id: PB(BB),
-        bytes: new Uint8Array(TB),
-        width: dB,
-        height: VB,
-        texelBytes: yB,
+    function Tr(YY, rY) {
+      let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+        AY = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
+      lr(YY), CY.shadowBytes + rY > NY ? CY.uncopied++ : (CY.shadowBytes += rY, zY.set(YY, {
+        id: hY(YY),
+        bytes: new Uint8Array(rY),
+        width: DY,
+        height: FY,
+        texelBytes: AY,
         missed: 0
       }))
     }
 
-    function fT(BB, TB) {
-      for (const dB of ["deleteBuffer", "deleteTexture"]) gT(BB, dB, (BB => function() {
-        for (var TB = arguments.length, dB = new Array(TB), VB = 0; VB < TB; VB++) dB[VB] = arguments[VB];
-        return dB[0] && NT(dB[0]), vT(BB, this, dB)
+    function er(YY, rY) {
+      for (const DY of ["deleteBuffer", "deleteTexture"]) ur(YY, DY, (YY => function() {
+        for (var rY = arguments.length, DY = new Array(rY), FY = 0; FY < rY; FY++) DY[FY] = arguments[FY];
+        return DY[0] && lr(DY[0]), vr(YY, this, DY)
       }));
-      gT(BB, "shaderSource", (BB => function() {
-        for (var TB = arguments.length, dB = new Array(TB), VB = 0; VB < TB; VB++) dB[VB] = arguments[VB];
-        return dB[0] && "string" === typeof dB[1] && kT.set(dB[0], dB[1]), vT(BB, this, dB)
-      })), gT(BB, "attachShader", (BB => function() {
-        for (var TB, dB = arguments.length, VB = new Array(dB), yB = 0; yB < dB; yB++) VB[yB] = arguments[yB];
-        const pB = VB[0],
-          lB = null !== (TB = LT.get(pB)) && void 0 !== TB ? TB : [];
-        return lB.push(VB[1]), LT.set(pB, lB), vT(BB, this, VB)
-      })), gT(BB, "linkProgram", (BB => function() {
-        for (var TB = arguments.length, dB = new Array(TB), VB = 0; VB < TB; VB++) dB[VB] = arguments[VB];
-        const yB = vT(BB, this, dB);
-        return IB.inProbe || function(BB, TB) {
-          var dB, VB, yB;
-          "undefined" !== typeof HTMLCanvasElement && BB.canvas instanceof HTMLCanvasElement && function(BB) {
-            if (FT.has(BB)) return;
-            FT.add(BB);
-            for (const TB of ["webglcontextlost", "webglcontextrestored", "webglcontextcreationerror"]) BB.addEventListener(TB, (BB => {
-              DT.lost < JT && (DT.lost++, ZB(`${TB}${"statusMessage"in BB?`: ${String(BB.statusMessage)}`:""}`))
+      ur(YY, "shaderSource", (YY => function() {
+        for (var rY = arguments.length, DY = new Array(rY), FY = 0; FY < rY; FY++) DY[FY] = arguments[FY];
+        return DY[0] && "string" === typeof DY[1] && ir.set(DY[0], DY[1]), vr(YY, this, DY)
+      })), ur(YY, "attachShader", (YY => function() {
+        for (var rY, DY = arguments.length, FY = new Array(DY), AY = 0; AY < DY; AY++) FY[AY] = arguments[AY];
+        const IY = FY[0],
+          RY = null !== (rY = yr.get(IY)) && void 0 !== rY ? rY : [];
+        return RY.push(FY[1]), yr.set(IY, RY), vr(YY, this, FY)
+      })), ur(YY, "linkProgram", (YY => function() {
+        for (var rY = arguments.length, DY = new Array(rY), FY = 0; FY < rY; FY++) DY[FY] = arguments[FY];
+        const AY = vr(YY, this, DY);
+        return CY.inProbe || function(YY, rY) {
+          var DY, FY, AY;
+          "undefined" !== typeof HTMLCanvasElement && YY.canvas instanceof HTMLCanvasElement && function(YY) {
+            if (zr.has(YY)) return;
+            zr.add(YY);
+            for (const rY of ["webglcontextlost", "webglcontextrestored", "webglcontextcreationerror"]) YY.addEventListener(rY, (YY => {
+              or.lost < gr && (or.lost++, wY(`${rY}${"statusMessage"in YY?`: ${String(YY.statusMessage)}`:""}`))
             }))
-          }(BB.canvas);
-          IB.context ??= BB;
-          const pB = null !== (dB = LT.get(TB)) && void 0 !== dB ? dB : [];
-          let lB = "",
-            JB = "";
-          for (const oB of pB) {
-            var YB;
-            const BB = null !== (YB = kT.get(oB)) && void 0 !== YB ? YB : "";
-            /\bgl_Position\b/.test(BB) ? lB = BB : JB = BB
+          }(YY.canvas);
+          CY.context ??= YY;
+          const IY = null !== (DY = yr.get(rY)) && void 0 !== DY ? DY : [];
+          let RY = "",
+            OY = "";
+          for (const vY of IY) {
+            var gY;
+            const YY = null !== (gY = ir.get(vY)) && void 0 !== gY ? gY : "";
+            /\bgl_Position\b/.test(YY) ? RY = YY : OY = YY
           }
-          const gB = {
-            id: PB(TB),
-            name: null !== (VB = null === (yB = wB.exec(lB)) || void 0 === yB ? void 0 : yB[1]) && void 0 !== VB ? VB : null,
-            gl: BB,
-            vertex: lB,
-            fragment: JB,
-            terrain: MT(lB),
+          const aY = {
+            id: hY(rY),
+            name: null !== (FY = null === (AY = cY.exec(RY)) || void 0 === AY ? void 0 : AY[1]) && void 0 !== FY ? FY : null,
+            gl: YY,
+            vertex: RY,
+            fragment: OY,
+            terrain: Br(RY),
             checked: !1,
             firstDraw: !1
           };
-          if (OT.set(TB, gB), FB.push([TB, gB]), null !== gB.terrain) {
-            const TB = pB.map((TB => {
-              var dB;
-              return null !== (dB = BB.getShaderInfoLog(TB)) && void 0 !== dB ? dB : ""
-            })).filter((BB => "" !== BB.trim()));
-            TB.length > 0 && XB(`program ${UB(gB)} (${gB.terrain}) shader logs:\n${WB(TB.join("\n"))}`)
+          if (Qr.set(rY, aY), HY.push([rY, aY]), null !== aY.terrain) {
+            const rY = IY.map((rY => {
+              var DY;
+              return null !== (DY = YY.getShaderInfoLog(rY)) && void 0 !== DY ? DY : ""
+            })).filter((YY => "" !== YY.trim()));
+            rY.length > 0 && bY(`program ${KY(aY)} (${aY.terrain}) shader logs:\n${XY(rY.join("\n"))}`)
           }
-        }(this, dB[0]), yB
-      })), gT(BB, "bufferData", (BB => function() {
-        for (var TB = arguments.length, dB = new Array(TB), VB = 0; VB < TB; VB++) dB[VB] = arguments[VB];
-        const yB = vT(BB, this, dB);
-        if (!IB.inProbe) {
-          const BB = iT(this, dB[0]);
-          if (BB) {
-            var pB, lB, JB;
-            const TB = "number" === typeof dB[1] ? null : mT(dB[1], null !== (pB = dB[3]) && void 0 !== pB ? pB : 0, null !== (lB = dB[4]) && void 0 !== lB ? lB : 0);
-            var YB;
-            if (tT(BB, "number" === typeof dB[1] ? dB[1] : null !== (JB = null === TB || void 0 === TB ? void 0 : TB.length) && void 0 !== JB ? JB : 0), TB) null === (YB = KB.get(BB)) || void 0 === YB || YB.bytes.set(TB)
-          }
-        }
-        return yB
-      })), gT(BB, "bufferSubData", (BB => function() {
-        for (var TB = arguments.length, dB = new Array(TB), VB = 0; VB < TB; VB++) dB[VB] = arguments[VB];
-        const yB = vT(BB, this, dB);
-        if (!IB.inProbe) {
-          var pB, lB;
-          const BB = iT(this, dB[0]),
-            TB = BB ? KB.get(BB) : void 0,
-            VB = mT(dB[2], null !== (pB = dB[3]) && void 0 !== pB ? pB : 0, null !== (lB = dB[4]) && void 0 !== lB ? lB : 0);
-          if (TB && VB) {
-            const BB = dB[1];
-            TB.bytes.set(VB.subarray(0, Math.max(0, TB.bytes.length - BB)), BB), sT("buffer", TB, BB, VB.length)
+        }(this, DY[0]), AY
+      })), ur(YY, "bufferData", (YY => function() {
+        for (var rY = arguments.length, DY = new Array(rY), FY = 0; FY < rY; FY++) DY[FY] = arguments[FY];
+        const AY = vr(YY, this, DY);
+        if (!CY.inProbe) {
+          const YY = Sr(this, DY[0]);
+          if (YY) {
+            var IY, RY, OY;
+            const rY = "number" === typeof DY[1] ? null : Vr(DY[1], null !== (IY = DY[3]) && void 0 !== IY ? IY : 0, null !== (RY = DY[4]) && void 0 !== RY ? RY : 0);
+            var gY;
+            if (Tr(YY, "number" === typeof DY[1] ? DY[1] : null !== (OY = null === rY || void 0 === rY ? void 0 : rY.length) && void 0 !== OY ? OY : 0), rY) null === (gY = zY.get(YY)) || void 0 === gY || gY.bytes.set(rY)
           }
         }
-        return yB
-      })), TB && (gT(BB, "copyBufferSubData", (BB => function() {
-        for (var TB = arguments.length, dB = new Array(TB), VB = 0; VB < TB; VB++) dB[VB] = arguments[VB];
-        const yB = vT(BB, this, dB);
-        if (!IB.inProbe) {
-          const [BB, TB, VB, yB, pB] = dB, lB = iT(this, BB), JB = iT(this, TB), YB = lB ? KB.get(lB) : void 0, gB = JB ? KB.get(JB) : void 0;
-          gB && (YB ? gB.bytes.set(YB.bytes.slice(VB, VB + pB), yB) : gB.missed++)
-        }
-        return yB
-      })), gT(BB, "texStorage2D", (BB => function() {
-        for (var TB = arguments.length, dB = new Array(TB), VB = 0; VB < TB; VB++) dB[VB] = arguments[VB];
-        const yB = vT(BB, this, dB),
-          [, , pB, lB, JB] = dB;
-        if (!IB.inProbe && (pB === uB.RGBA32UI || pB === uB.RGBA16UI)) {
-          const BB = this.getParameter(uB.TEXTURE_BINDING_2D),
-            TB = pB === uB.RGBA32UI ? 16 : 8;
-          BB && (rB.set(BB, TB), tT(BB, lB * JB * TB, lB, JB, TB))
-        }
-        return yB
-      })), gT(BB, "texSubImage2D", (BB => function() {
-        for (var TB = arguments.length, dB = new Array(TB), VB = 0; VB < TB; VB++) dB[VB] = arguments[VB];
-        const yB = vT(BB, this, dB);
-        return !IB.inProbe && dB.length >= 9 && dB[0] === uB.TEXTURE_2D && 0 === dB[1] && function(BB, TB) {
-          var dB;
-          const VB = BB.getParameter(uB.TEXTURE_BINDING_2D),
-            yB = VB ? KB.get(VB) : void 0;
-          if (!yB) return;
-          const [, , pB, lB, JB, YB] = TB;
-          let gB = mT(TB[8], null !== (dB = TB[9]) && void 0 !== dB ? dB : 0);
-          if (null === gB && "number" === typeof TB[8]) {
-            const dB = iT(BB, uB.PIXEL_UNPACK_BUFFER),
-              VB = dB ? KB.get(dB) : void 0;
-            gB = VB ? VB.bytes.subarray(TB[8]) : null
+        return AY
+      })), ur(YY, "bufferSubData", (YY => function() {
+        for (var rY = arguments.length, DY = new Array(rY), FY = 0; FY < rY; FY++) DY[FY] = arguments[FY];
+        const AY = vr(YY, this, DY);
+        if (!CY.inProbe) {
+          var IY, RY;
+          const YY = Sr(this, DY[0]),
+            rY = YY ? zY.get(YY) : void 0,
+            FY = Vr(DY[2], null !== (IY = DY[3]) && void 0 !== IY ? IY : 0, null !== (RY = DY[4]) && void 0 !== RY ? RY : 0);
+          if (rY && FY) {
+            const YY = DY[1];
+            rY.bytes.set(FY.subarray(0, Math.max(0, rY.bytes.length - YY)), YY), Nr("buffer", rY, YY, FY.length)
           }
-          if (null === gB) return void yB.missed++;
-          const oB = BB.getParameter(uB.UNPACK_ROW_LENGTH) || JB,
-            kB = BB.getParameter(uB.UNPACK_SKIP_ROWS),
-            LB = BB.getParameter(uB.UNPACK_SKIP_PIXELS),
-            OB = yB.texelBytes;
-          for (let DB = 0; DB < YB; DB++) {
-            const BB = ((kB + DB) * oB + LB) * OB,
-              TB = ((lB + DB) * yB.width + pB) * OB;
-            yB.bytes.set(gB.subarray(BB, BB + JB * OB), TB)
+        }
+        return AY
+      })), rY && (ur(YY, "copyBufferSubData", (YY => function() {
+        for (var rY = arguments.length, DY = new Array(rY), FY = 0; FY < rY; FY++) DY[FY] = arguments[FY];
+        const AY = vr(YY, this, DY);
+        if (!CY.inProbe) {
+          const [YY, rY, FY, AY, IY] = DY, RY = Sr(this, YY), OY = Sr(this, rY), gY = RY ? zY.get(RY) : void 0, aY = OY ? zY.get(OY) : void 0;
+          aY && (gY ? aY.bytes.set(gY.bytes.slice(FY, FY + IY), AY) : aY.missed++)
+        }
+        return AY
+      })), ur(YY, "texStorage2D", (YY => function() {
+        for (var rY = arguments.length, DY = new Array(rY), FY = 0; FY < rY; FY++) DY[FY] = arguments[FY];
+        const AY = vr(YY, this, DY),
+          [, , IY, RY, OY] = DY;
+        if (!CY.inProbe && (IY === QY.RGBA32UI || IY === QY.RGBA16UI)) {
+          const YY = this.getParameter(QY.TEXTURE_BINDING_2D),
+            rY = IY === QY.RGBA32UI ? 16 : 8;
+          YY && (ZY.set(YY, rY), Tr(YY, RY * OY * rY, RY, OY, rY))
+        }
+        return AY
+      })), ur(YY, "texSubImage2D", (YY => function() {
+        for (var rY = arguments.length, DY = new Array(rY), FY = 0; FY < rY; FY++) DY[FY] = arguments[FY];
+        const AY = vr(YY, this, DY);
+        return !CY.inProbe && DY.length >= 9 && DY[0] === QY.TEXTURE_2D && 0 === DY[1] && function(YY, rY) {
+          var DY;
+          const FY = YY.getParameter(QY.TEXTURE_BINDING_2D),
+            AY = FY ? zY.get(FY) : void 0;
+          if (!AY) return;
+          const [, , IY, RY, OY, gY] = rY;
+          let aY = Vr(rY[8], null !== (DY = rY[9]) && void 0 !== DY ? DY : 0);
+          if (null === aY && "number" === typeof rY[8]) {
+            const DY = Sr(YY, QY.PIXEL_UNPACK_BUFFER),
+              FY = DY ? zY.get(DY) : void 0;
+            aY = FY ? FY.bytes.subarray(rY[8]) : null
           }
-          sT("texture", yB, (lB * yB.width + pB) * OB, JB * YB * OB)
-        }(this, dB), yB
-      })), gT(BB, "copyTexSubImage2D", (BB => function() {
-        for (var TB = arguments.length, dB = new Array(TB), VB = 0; VB < TB; VB++) dB[VB] = arguments[VB];
-        const yB = dB[0] === uB.TEXTURE_2D ? this.getParameter(uB.TEXTURE_BINDING_2D) : null,
-          pB = yB ? KB.get(yB) : void 0;
-        return pB && pB.missed++, vT(BB, this, dB)
+          if (null === aY) return void AY.missed++;
+          const vY = YY.getParameter(QY.UNPACK_ROW_LENGTH) || OY,
+            uY = YY.getParameter(QY.UNPACK_SKIP_ROWS),
+            sY = YY.getParameter(QY.UNPACK_SKIP_PIXELS),
+            iY = AY.texelBytes;
+          for (let yY = 0; yY < gY; yY++) {
+            const YY = ((uY + yY) * vY + sY) * iY,
+              rY = ((RY + yY) * AY.width + IY) * iY;
+            AY.bytes.set(aY.subarray(YY, YY + OY * iY), rY)
+          }
+          Nr("texture", AY, (RY * AY.width + IY) * iY, OY * gY * iY)
+        }(this, DY), AY
+      })), ur(YY, "copyTexSubImage2D", (YY => function() {
+        for (var rY = arguments.length, DY = new Array(rY), FY = 0; FY < rY; FY++) DY[FY] = arguments[FY];
+        const AY = DY[0] === QY.TEXTURE_2D ? this.getParameter(QY.TEXTURE_BINDING_2D) : null,
+          IY = AY ? zY.get(AY) : void 0;
+        return IY && IY.missed++, vr(YY, this, DY)
       })));
-      for (const dB of ["drawArrays", "drawElements", "drawArraysInstanced", "drawElementsInstanced"]) gT(BB, dB, (BB => function() {
-        for (var TB = arguments.length, VB = new Array(TB), yB = 0; yB < TB; yB++) VB[yB] = arguments[yB];
-        const pB = vT(BB, this, VB);
-        return IB.inProbe || wT(this, dB, VB), pB
+      for (const DY of ["drawArrays", "drawElements", "drawArraysInstanced", "drawElementsInstanced"]) ur(YY, DY, (YY => function() {
+        for (var rY = arguments.length, FY = new Array(rY), AY = 0; AY < rY; AY++) FY[AY] = arguments[AY];
+        const IY = vr(YY, this, FY);
+        return CY.inProbe || Kr(this, DY, FY), IY
       }));
-      gT(BB, "getExtension", (BB => function() {
-        for (var TB = arguments.length, dB = new Array(TB), VB = 0; VB < TB; VB++) dB[VB] = arguments[VB];
-        const yB = vT(BB, this, dB);
-        return yB && "object" === typeof yB && function(BB, TB, dB) {
-          const VB = {
+      ur(YY, "getExtension", (YY => function() {
+        for (var rY = arguments.length, DY = new Array(rY), FY = 0; FY < rY; FY++) DY[FY] = arguments[FY];
+        const AY = vr(YY, this, DY);
+        return AY && "object" === typeof AY && function(YY, rY, DY) {
+          const FY = {
             WEBGL_multi_draw: ["multiDrawArraysWEBGL", "multiDrawElementsWEBGL", "multiDrawArraysInstancedWEBGL", "multiDrawElementsInstancedWEBGL"],
             ANGLE_instanced_arrays: ["drawArraysInstancedANGLE", "drawElementsInstancedANGLE"]
           };
-          if (!(TB in VB) || dB.bloxdRenderDebug) return;
-          dB.bloxdRenderDebug = !0;
-          for (const yB of VB[TB]) {
-            const TB = dB[yB];
-            "function" === typeof TB && (dB[yB] = function() {
-              for (var VB = arguments.length, pB = new Array(VB), lB = 0; lB < VB; lB++) pB[lB] = arguments[lB];
-              const JB = Reflect.apply(TB, dB, pB);
-              return IB.inProbe || wT(BB, yB, pB), JB
+          if (!(rY in FY) || DY.bloxdRenderDebug) return;
+          DY.bloxdRenderDebug = !0;
+          for (const AY of FY[rY]) {
+            const rY = DY[AY];
+            "function" === typeof rY && (DY[AY] = function() {
+              for (var FY = arguments.length, IY = new Array(FY), RY = 0; RY < FY; RY++) IY[RY] = arguments[RY];
+              const OY = vr(rY, DY, IY);
+              return CY.inProbe || Kr(YY, AY, IY), OY
             })
           }
-        }(this, dB[0], yB), yB
+        }(this, DY[0], AY), AY
       }))
     }
 
-    function sT(BB, TB, dB, VB) {
-      HT[BB] += VB, ET < 32 && TB.bytes.length >= 1 << 20 && (ET++, XB(`upload ${BB} #${TB.id} +${dB} ${VB} B`))
+    function Nr(YY, rY, DY, FY) {
+      Er[YY] += FY, mr < 32 && rY.bytes.length >= 1 << 20 && (mr++, bY(`upload ${YY} #${rY.id} +${DY} ${FY} B`))
     }
 
-    function MT(BB) {
-      if (!BB.includes("decodeQuad")) return null;
-      return !/^\s*#version 300 es/.test(BB) || /in uvec3 _p2vs_location0\b/.test(BB) ? "inst" : "tex"
+    function Br(YY) {
+      if (!YY.includes("decodeQuad")) return null;
+      return !/^\s*#version 300 es/.test(YY) || /in uvec3 _p2vs_location0\b/.test(YY) ? "inst" : "tex"
     }
 
-    function zT(BB, TB, dB) {
-      var VB;
-      if (dB.checked) return;
-      dB.checked = !0;
-      const yB = BB.getProgramParameter(TB, uB.LINK_STATUS),
-        pB = (null !== (VB = BB.getProgramInfoLog(TB)) && void 0 !== VB ? VB : "").trim();
-      var lB;
-      null === dB.terrain && yB || (ZB(`program ${UB(dB)} ${null!==(lB=dB.terrain)&&void 0!==lB?lB:"other"} link ${yB?"ok":"FAILED"}${pB?`: ${WB(pB,300)}`:""}`), pB && XB(`program ${UB(dB)} link log:\n${WB(pB)}`))
+    function cr(YY, rY, DY) {
+      var FY;
+      if (DY.checked) return;
+      DY.checked = !0;
+      const AY = YY.getProgramParameter(rY, QY.LINK_STATUS),
+        IY = (null !== (FY = YY.getProgramInfoLog(rY)) && void 0 !== FY ? FY : "").trim();
+      var RY;
+      null === DY.terrain && AY || (wY(`program ${KY(DY)} ${null!==(RY=DY.terrain)&&void 0!==RY?RY:"other"} link ${AY?"ok":"FAILED"}${IY?`: ${XY(IY,300)}`:""}`), IY && bY(`program ${KY(DY)} link log:\n${XY(IY)}`))
     }
 
-    function wT(BB, TB, dB) {
-      var VB;
-      const yB = BB.getParameter(uB.CURRENT_PROGRAM),
-        pB = yB ? OT.get(yB) : void 0;
-      if (!yB || !pB) return;
-      const lB = null !== (VB = pB.terrain) && void 0 !== VB ? VB : "other",
+    function Kr(YY, rY, DY) {
+      var FY;
+      const AY = YY.getParameter(QY.CURRENT_PROGRAM),
+        IY = AY ? Qr.get(AY) : void 0;
+      if (!AY || !IY) return;
+      const RY = null !== (FY = IY.terrain) && void 0 !== FY ? FY : "other",
         {
-          ek: JB,
-          instances: YB
-        } = function(BB, TB) {
-          switch (BB) {
+          ws: OY,
+          instances: gY
+        } = function(YY, rY) {
+          switch (YY) {
             case "drawArrays":
               return {
-                ek: [
-                  [TB[1], TB[2]]
+                ws: [
+                  [rY[1], rY[2]]
                 ], instances: 1
               };
             case "drawArraysInstanced":
             case "drawArraysInstancedANGLE":
               return {
-                ek: [
-                  [TB[1], TB[2]]
-                ], instances: TB[3]
+                ws: [
+                  [rY[1], rY[2]]
+                ], instances: rY[3]
               };
             case "drawElements":
               return {
-                ek: [
-                  [0, TB[1]]
+                ws: [
+                  [0, rY[1]]
                 ], instances: 1
               };
             case "drawElementsInstanced":
             case "drawElementsInstancedANGLE":
               return {
-                ek: [
-                  [0, TB[1]]
-                ], instances: TB[4]
+                ws: [
+                  [0, rY[1]]
+                ], instances: rY[4]
               };
             case "multiDrawArraysWEBGL": {
-              const BB = TB[1],
-                dB = TB[3],
-                VB = TB[2],
-                yB = TB[4],
-                pB = [];
-              for (let lB = 0; lB < TB[5]; lB++) pB.push([BB[VB + lB], dB[yB + lB]]);
+              const YY = rY[1],
+                DY = rY[3],
+                FY = rY[2],
+                AY = rY[4],
+                IY = [];
+              for (let RY = 0; RY < rY[5]; RY++) IY.push([YY[FY + RY], DY[AY + RY]]);
               return {
-                ek: pB,
+                ws: IY,
                 instances: 1
               }
             }
             default:
               return {
-                ek: [], instances: 0
+                ws: [], instances: 0
               }
           }
-        }(TB, dB),
-        gB = "inst" === pB.terrain ? YB : JB.reduce(((BB, TB) => {
-          let [, dB] = TB;
-          return BB + dB
+        }(rY, DY),
+        aY = "inst" === IY.terrain ? gY : OY.reduce(((YY, rY) => {
+          let [, DY] = rY;
+          return YY + DY
         }), 0) / 6;
-      if (uT[lB].draws++, uT[lB].faces += gB, null === pB.terrain) return;
-      if (IB.context = BB, !pB.firstDraw) {
-        pB.firstDraw = !0, zT(BB, yB, pB), UT || (UT = !0, ZB(function(BB) {
-          var TB;
-          const dB = BB.getParameter(uB.DEPTH_FUNC),
-            VB = {
+      if (Wr[RY].draws++, Wr[RY].faces += aY, null === IY.terrain) return;
+      if (CY.context = YY, !IY.firstDraw) {
+        IY.firstDraw = !0, cr(YY, AY, IY), Hr || (Hr = !0, wY(function(YY) {
+          var rY;
+          const DY = YY.getParameter(QY.DEPTH_FUNC),
+            FY = {
               513: "less",
               514: "equal",
               515: "lequal",
@@ -1078,306 +1079,321 @@ export const modules = {
               518: "gequal",
               519: "always"
             };
-          let yB = "default framebuffer";
-          if ("DRAW_FRAMEBUFFER" in BB && BB.getParameter(uB.DRAW_FRAMEBUFFER_BINDING)) {
-            const TB = BB;
-            yB = TB.getFramebufferAttachmentParameter(uB.DRAW_FRAMEBUFFER, uB.DEPTH_ATTACHMENT, uB.FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE) ? `depth ${String(TB.getFramebufferAttachmentParameter(uB.DRAW_FRAMEBUFFER,uB.DEPTH_ATTACHMENT,uB.FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE))} bits type 0x${Number(TB.getFramebufferAttachmentParameter(uB.DRAW_FRAMEBUFFER,uB.DEPTH_ATTACHMENT,uB.FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE)).toString(16)}` : "no depth attachment"
+          let AY = "default framebuffer";
+          if ("DRAW_FRAMEBUFFER" in YY && YY.getParameter(QY.DRAW_FRAMEBUFFER_BINDING)) {
+            const rY = YY;
+            AY = rY.getFramebufferAttachmentParameter(QY.DRAW_FRAMEBUFFER, QY.DEPTH_ATTACHMENT, QY.FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE) ? `depth ${String(rY.getFramebufferAttachmentParameter(QY.DRAW_FRAMEBUFFER,QY.DEPTH_ATTACHMENT,QY.FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE))} bits type 0x${Number(rY.getFramebufferAttachmentParameter(QY.DRAW_FRAMEBUFFER,QY.DEPTH_ATTACHMENT,QY.FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE)).toString(16)}` : "no depth attachment"
           }
-          const pB = BB.getParameter(uB.DEPTH_CLEAR_VALUE);
-          return `depth ${null!==(TB=VB[dB])&&void 0!==TB?TB:`0x${dB.toString(16)}`} clear ${pB}${516===dB||518===dB?" (reverse-Z)":""}, samples ${String(BB.getParameter(uB.SAMPLES))}, ${yB}`
-        }(BB)));
-        const dB = BB.getError();
-        dB !== uB.NO_ERROR && DT.gl < JT && (DT.gl++, ZB(`GL error 0x${dB.toString(16)} after program ${UB(pB)}'s first terrain draw (${TB})`))
+          const IY = YY.getParameter(QY.DEPTH_CLEAR_VALUE);
+          return `depth ${null!==(rY=FY[DY])&&void 0!==rY?rY:`0x${DY.toString(16)}`} clear ${IY}${516===DY||518===DY?" (reverse-Z)":""}, samples ${String(YY.getParameter(QY.SAMPLES))}, ${AY}`
+        }(YY)));
+        const DY = YY.getError();
+        DY !== QY.NO_ERROR && or.gl < gr && (or.gl++, wY(`GL error 0x${DY.toString(16)} after program ${KY(IY)}'s first terrain draw (${rY})`))
       }
-      const oB = IB.pendingCheck;
-      null !== oB && (oB.terrainDraws++, oB.draws.length < YT && hB(BB, yB, pB, TB, JB, YB))
+      const vY = CY.pendingCheck;
+      null !== vY && (vY.terrainDraws++, vY.draws.length < ar && qY(YY, AY, IY, rY, OY, gY))
     }
-    let UT = !1;
-    const FT = new WeakSet;
-    const KT = ["maxStorageBuffersPerShaderStage", "maxStorageBufferBindingSize", "maxBufferSize", "maxUniformBufferBindingSize", "minUniformBufferOffsetAlignment", "maxTextureDimension2D", "maxTextureArrayLayers", "maxVertexBuffers", "maxVertexAttributes", "maxVertexBufferArrayStride", "maxBindGroups", "maxColorAttachmentBytesPerSample"];
-    let rT = !1;
-    const IT = new WeakSet,
-      cT = new WeakMap,
-      ST = new WeakMap,
-      PT = {
+    let Hr = !1;
+    const zr = new WeakSet;
+    var Zr = DY(4055),
+      Cr = DY(4272);
+    const fr = ["maxStorageBuffersPerShaderStage", "maxStorageBufferBindingSize", "maxBufferSize", "maxUniformBufferBindingSize", "minUniformBufferOffsetAlignment", "maxTextureDimension2D", "maxTextureArrayLayers", "maxVertexBuffers", "maxVertexAttributes", "maxVertexBufferArrayStride", "maxBindGroups", "maxColorAttachmentBytesPerSample"];
+    let jr = !1;
+    const hr = new WeakSet,
+      dr = new WeakMap,
+      Jr = new WeakMap,
+      Mr = {
         uncaptured: 0,
         compile: 0,
         rejected: 0
       };
-    let QT = 0,
-      RT = !1,
-      aT = null,
-      ZT = {
+    let wr = 0,
+      br = !1,
+      Xr = null,
+      qr = {
         draws: 0,
         faces: 0
       };
 
-    function XT(BB) {
-      const TB = globalThis[BB];
-      return null === TB || void 0 === TB ? void 0 : TB.prototype
+    function pr(YY) {
+      const rY = globalThis[YY];
+      return null === rY || void 0 === rY ? void 0 : rY.prototype
     }
 
-    function WT(BB) {
-      return BB && "function" === typeof BB[Symbol.iterator] ? [...BB].sort().join(" ") : ""
+    function kr(YY) {
+      return YY && "function" === typeof YY[Symbol.iterator] ? [...YY].sort().join(" ") : ""
     }
 
-    function hT(BB, TB) {
-      const dB = null !== BB && void 0 !== BB ? BB : {},
-        VB = null !== TB && void 0 !== TB ? TB : Object.keys(Object.getPrototypeOf(dB)).concat(Object.keys(dB));
-      return [...new Set(VB)].filter((BB => "number" === typeof dB[BB])).map((BB => `${BB} ${String(dB[BB])}`)).join(", ")
+    function Gr(YY, rY) {
+      const DY = null !== YY && void 0 !== YY ? YY : {},
+        FY = null !== rY && void 0 !== rY ? rY : Object.keys(Object.getPrototypeOf(DY)).concat(Object.keys(DY));
+      return [...new Set(FY)].filter((YY => "number" === typeof DY[YY])).map((YY => `${YY} ${String(DY[YY])}`)).join(", ")
     }
 
-    function CT(BB, TB) {
-      var dB;
-      const VB = null !== (dB = TB.vertex) && void 0 !== dB ? dB : {};
-      if (VB.module && IT.has(VB.module)) {
-        var yB;
-        const dB = String(null !== (yB = VB.entryPoint) && void 0 !== yB ? yB : "");
-        if (dB.startsWith("vs_packed") && cT.set(BB, dB), !RT) {
-          var pB, lB, JB, YB, gB;
-          RT = !0;
-          const BB = null !== (pB = TB.depthStencil) && void 0 !== pB ? pB : {},
-            VB = null !== (lB = TB.multisample) && void 0 !== lB ? lB : {},
-            yB = String(null !== (JB = BB.depthCompare) && void 0 !== JB ? JB : "");
-          ZB(`WebGPU terrain pipeline ${dB}: depth ${String(null!==(YB=BB.format)&&void 0!==YB?YB:"none")} ${yB}${yB.startsWith("greater")?" (reverse-Z)":""}, MSAA ${String(null!==(gB=VB.count)&&void 0!==gB?gB:1)}`)
+    function xr(YY, rY) {
+      var DY;
+      const FY = null !== (DY = rY.vertex) && void 0 !== DY ? DY : {};
+      if (FY.module && hr.has(FY.module)) {
+        var AY;
+        const DY = String(null !== (AY = FY.entryPoint) && void 0 !== AY ? AY : "");
+        if (DY.startsWith("vs_packed") && dr.set(YY, DY), !br) {
+          var IY, RY, OY, gY, aY;
+          br = !0;
+          const YY = null !== (IY = rY.depthStencil) && void 0 !== IY ? IY : {},
+            FY = null !== (RY = rY.multisample) && void 0 !== RY ? RY : {},
+            AY = String(null !== (OY = YY.depthCompare) && void 0 !== OY ? OY : "");
+          wY(`WebGPU terrain pipeline ${DY}: depth ${String(null!==(gY=YY.format)&&void 0!==gY?gY:"none")} ${AY}${AY.startsWith("greater")?" (reverse-Z)":""}, MSAA ${String(null!==(aY=FY.count)&&void 0!==aY?aY:1)}`)
         }
       }
     }
 
-    function GT(BB) {
-      gT(BB, "setPipeline", (BB => function() {
-        for (var TB = arguments.length, dB = new Array(TB), VB = 0; VB < TB; VB++) dB[VB] = arguments[VB];
-        return ST.set(this, dB[0]), Reflect.apply(BB, this, dB)
+    function nr(YY) {
+      ur(YY, "setPipeline", (YY => function() {
+        for (var rY = arguments.length, DY = new Array(rY), FY = 0; FY < rY; FY++) DY[FY] = arguments[FY];
+        return Jr.set(this, DY[0]), vr(YY, this, DY)
       }));
-      for (const TB of ["draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect"]) gT(BB, TB, (BB => function() {
-        const dB = ST.get(this),
-          VB = dB ? cT.get(dB) : void 0;
-        for (var yB = arguments.length, pB = new Array(yB), lB = 0; lB < yB; lB++) pB[lB] = arguments[lB];
-        return void 0 !== VB && qT(TB, VB, pB), Reflect.apply(BB, this, pB)
+      for (const rY of ["draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect"]) ur(YY, rY, (YY => function() {
+        const DY = Jr.get(this),
+          FY = DY ? dr.get(DY) : void 0;
+        for (var AY = arguments.length, IY = new Array(AY), RY = 0; RY < AY; RY++) IY[RY] = arguments[RY];
+        return void 0 !== FY && Pr(rY, FY, IY), vr(YY, this, IY)
       }))
     }
 
-    function qT(BB, TB, dB) {
-      var VB;
-      (ZT.draws++, "draw" === BB || "drawIndexed" === BB) && (ZT.faces += dB[0] * (null !== (VB = dB[1]) && void 0 !== VB ? VB : 1) / 6);
-      if (null !== aT && aT.length < YT) {
-        const VB = ("draw" === BB ? ["vertices", "instances", "firstVertex", "firstInstance"] : "drawIndexed" === BB ? ["indices", "instances", "firstIndex", "baseVertex", "firstInstance"] : ["indirectOffset"]).map(((TB, VB) => {
-          const yB = BB.endsWith("Indirect") ? dB[1] : dB[VB];
-          return `${TB} ${String(null!==yB&&void 0!==yB?yB:"instances"===TB?1:0)}`
+    function Pr(YY, rY, DY) {
+      var FY;
+      (qr.draws++, "draw" === YY || "drawIndexed" === YY) && (qr.faces += DY[0] * (null !== (FY = DY[1]) && void 0 !== FY ? FY : 1) / 6);
+      if (null !== Xr && Xr.length < ar) {
+        const FY = ("draw" === YY ? ["vertices", "instances", "firstVertex", "firstInstance"] : "drawIndexed" === YY ? ["indices", "instances", "firstIndex", "baseVertex", "firstInstance"] : ["indirectOffset"]).map(((rY, FY) => {
+          const AY = YY.endsWith("Indirect") ? DY[1] : DY[FY];
+          return `${rY} ${String(null!==AY&&void 0!==AY?AY:"instances"===rY?1:0)}`
         }));
-        aT.push(`  ${TB} ${BB} ${VB.join(" ")}`)
+        Xr.push(`  ${rY} ${YY} ${FY.join(" ")}`)
       }
     }
 
-    function xT() {
-      if (rT || "undefined" === typeof navigator || !("gpu" in navigator)) return;
-      rT = !0, gT(XT("GPU"), "requestAdapter", (BB => function() {
-        for (var TB = arguments.length, dB = new Array(TB), VB = 0; VB < TB; VB++) dB[VB] = arguments[VB];
-        return Reflect.apply(BB, this, dB).then((BB => {
-          var TB;
-          BB ? function(BB) {
-            var TB;
-            const dB = null !== (TB = BB.info) && void 0 !== TB ? TB : {};
-            ZB(`WebGPU adapter ${["vendor","architecture","device","description"].map((BB=>{var TB;return`${BB} "${String(null!==(TB=dB[BB])&&void 0!==TB?TB:"")}"`})).join(" ")}${BB.isFallbackAdapter?" (fallback)":""}`), ZB(`WebGPU adapter features ${WT(BB.features)}`), ZB(`WebGPU adapter limits ${hT(BB.limits,KT)}`), XB(`WebGPU adapter all limits ${hT(BB.limits,null)}`)
-          }(BB) : ZB(`WebGPU requestAdapter(${JSON.stringify(null!==(TB=dB[0])&&void 0!==TB?TB:{})}) gave none`);
-          return BB
+    function Ur() {
+      if (jr || "undefined" === typeof navigator || !("gpu" in navigator)) return;
+      jr = !0, ur(pr("GPU"), "requestAdapter", (YY => function() {
+        for (var rY = arguments.length, DY = new Array(rY), FY = 0; FY < rY; FY++) DY[FY] = arguments[FY];
+        return vr(YY, this, DY).then((YY => {
+          var rY;
+          YY ? function(YY) {
+            var rY;
+            const DY = null !== (rY = YY.info) && void 0 !== rY ? rY : {};
+            wY(`WebGPU adapter ${["vendor","architecture","device","description"].map((YY=>{var rY;return`${YY} "${String(null!==(rY=DY[YY])&&void 0!==rY?rY:"")}"`})).join(" ")}${YY.isFallbackAdapter?" (fallback)":""}`), wY(`WebGPU adapter features ${kr(YY.features)}`), wY(`WebGPU adapter limits ${Gr(YY.limits,fr)}`), bY(`WebGPU adapter all limits ${Gr(YY.limits,null)}`)
+          }(YY) : wY(`WebGPU requestAdapter(${JSON.stringify(null!==(rY=DY[0])&&void 0!==rY?rY:{})}) gave none`);
+          return YY
         }))
-      })), gT(XT("GPUAdapter"), "requestDevice", (BB => function() {
-        for (var TB = arguments.length, dB = new Array(TB), VB = 0; VB < TB; VB++) dB[VB] = arguments[VB];
-        return Reflect.apply(BB, this, dB).then((BB => (function(BB) {
-          ZB(`WebGPU device features ${WT(BB.features)}`), ZB(`WebGPU device limits ${hT(BB.limits,KT)}`), BB.addEventListener("uncapturederror", (BB => {
-            if (PT.uncaptured < JT) {
-              var TB, dB, VB;
-              PT.uncaptured++;
-              const yB = BB.error;
-              ZB(`WebGPU uncaptured ${null!==(TB=null===yB||void 0===yB||null===(dB=yB.constructor)||void 0===dB?void 0:dB.name)&&void 0!==TB?TB:"error"}: ${WB(String(null!==(VB=null===yB||void 0===yB?void 0:yB.message)&&void 0!==VB?VB:""),600)}`)
+      })), ur(pr("GPUAdapter"), "requestDevice", (YY => function() {
+        for (var rY = arguments.length, DY = new Array(rY), FY = 0; FY < rY; FY++) DY[FY] = arguments[FY];
+        return vr(YY, this, DY).then((YY => (function(YY) {
+          wY(`WebGPU device features ${kr(YY.features)}`), wY(`WebGPU device limits ${Gr(YY.limits,fr)}`), YY.addEventListener("uncapturederror", (YY => {
+            if (Mr.uncaptured < gr) {
+              var rY, DY, FY;
+              Mr.uncaptured++;
+              const AY = YY.error;
+              wY(`WebGPU uncaptured ${null!==(rY=null===AY||void 0===AY||null===(DY=AY.constructor)||void 0===DY?void 0:DY.name)&&void 0!==rY?rY:"error"}: ${XY(String(null!==(FY=null===AY||void 0===AY?void 0:AY.message)&&void 0!==FY?FY:""),600)}`)
             }
           }));
-          const TB = BB.lost;
-          null === TB || void 0 === TB || TB.then((BB => {
-            var TB;
-            ZB(`WebGPU device lost (${String(BB.reason)}): ${WB(String(null!==(TB=BB.message)&&void 0!==TB?TB:""),600)}`)
+          const rY = YY.lost;
+          null === rY || void 0 === rY || rY.then((YY => {
+            var rY;
+            wY(`WebGPU device lost (${String(YY.reason)}): ${XY(String(null!==(rY=YY.message)&&void 0!==rY?rY:""),600)}`)
           }))
-        }(BB), BB)), (BB => {
-          throw ZB(`WebGPU requestDevice failed: ${String(BB)}`), BB
+        }(YY), YY)), (YY => {
+          throw wY(`WebGPU requestDevice failed: ${String(YY)}`), YY
         }))
       }));
-      const BB = XT("GPUDevice");
-      gT(BB, "createShaderModule", (BB => function() {
-        for (var TB, dB, VB = arguments.length, yB = new Array(VB), pB = 0; pB < VB; pB++) yB[pB] = arguments[pB];
-        const lB = Reflect.apply(BB, this, yB);
-        return function(BB, TB) {
-          const dB = TB.includes("decodeQuad");
-          dB && IT.add(BB);
-          const VB = BB.getCompilationInfo;
-          null === VB || void 0 === VB || VB.call(BB).then((BB => {
-            if (0 === BB.messages.length && !dB) return;
-            const TB = {};
-            for (const dB of BB.messages) {
-              var VB;
-              TB[String(dB.type)] = (null !== (VB = TB[String(dB.type)]) && void 0 !== VB ? VB : 0) + 1
+      const YY = pr("GPUDevice");
+      ur(YY, "createShaderModule", (YY => function() {
+        for (var rY, DY, FY = arguments.length, AY = new Array(FY), IY = 0; IY < FY; IY++) AY[IY] = arguments[IY];
+        const RY = vr(YY, this, AY);
+        return function(YY, rY) {
+          const DY = rY.includes("decodeQuad");
+          DY && hr.add(YY);
+          const FY = YY.getCompilationInfo;
+          null === FY || void 0 === FY || FY.call(YY).then((YY => {
+            if (0 === YY.messages.length && !DY) return;
+            const rY = {};
+            for (const DY of YY.messages) {
+              var FY;
+              rY[String(DY.type)] = (null !== (FY = rY[String(DY.type)]) && void 0 !== FY ? FY : 0) + 1
             }
-            const yB = BB.messages.map((BB => `${String(BB.type)} ${String(BB.lineNum)}:${String(BB.linePos)} ${String(BB.message)}`)).join("\n");
-            PT.compile < JT && (PT.compile++, ZB(`WebGPU ${dB?"terrain ":""}shader module compiled: ${JSON.stringify(TB)}${yB?` first: ${WB(yB.split("\n")[0],300)}`:""}`)), yB && XB(`WebGPU shader module messages:\n${WB(yB)}`)
+            const AY = YY.messages.map((YY => `${String(YY.type)} ${String(YY.lineNum)}:${String(YY.linePos)} ${String(YY.message)}`)).join("\n");
+            Mr.compile < gr && (Mr.compile++, wY(`WebGPU ${DY?"terrain ":""}shader module compiled: ${JSON.stringify(rY)}${AY?` first: ${XY(AY.split("\n")[0],300)}`:""}`)), AY && bY(`WebGPU shader module messages:\n${XY(AY)}`)
           }))
-        }(lB, String(null !== (TB = (null !== (dB = yB[0]) && void 0 !== dB ? dB : {}).code) && void 0 !== TB ? TB : "")), lB
-      })), gT(BB, "createRenderPipeline", (BB => function() {
-        for (var TB, dB = arguments.length, VB = new Array(dB), yB = 0; yB < dB; yB++) VB[yB] = arguments[yB];
-        const pB = Reflect.apply(BB, this, VB);
-        return CT(pB, null !== (TB = VB[0]) && void 0 !== TB ? TB : {}), pB
-      })), gT(BB, "createRenderPipelineAsync", (BB => function() {
-        for (var TB = arguments.length, dB = new Array(TB), VB = 0; VB < TB; VB++) dB[VB] = arguments[VB];
-        return Reflect.apply(BB, this, dB).then((BB => {
-          var TB;
-          return CT(BB, null !== (TB = dB[0]) && void 0 !== TB ? TB : {}), BB
-        }), (BB => {
-          var TB;
-          throw function(BB, TB) {
-            var dB, VB, yB;
-            if (PT.rejected >= JT) return;
-            PT.rejected++;
+        }(RY, String(null !== (rY = (null !== (DY = AY[0]) && void 0 !== DY ? DY : {}).code) && void 0 !== rY ? rY : "")), RY
+      })), ur(YY, "createRenderPipeline", (YY => function() {
+        for (var rY, DY = arguments.length, FY = new Array(DY), AY = 0; AY < DY; AY++) FY[AY] = arguments[AY];
+        const IY = vr(YY, this, FY);
+        return xr(IY, null !== (rY = FY[0]) && void 0 !== rY ? rY : {}), IY
+      })), ur(YY, "createRenderPipelineAsync", (YY => function() {
+        for (var rY = arguments.length, DY = new Array(rY), FY = 0; FY < rY; FY++) DY[FY] = arguments[FY];
+        return vr(YY, this, DY).then((YY => {
+          var rY;
+          return xr(YY, null !== (rY = DY[0]) && void 0 !== rY ? rY : {}), YY
+        }), (YY => {
+          var rY;
+          throw function(YY, rY) {
+            var DY, FY, AY;
+            if (Mr.rejected >= gr) return;
+            Mr.rejected++;
             const {
-              reason: pB,
-              message: lB
-            } = null !== TB && void 0 !== TB ? TB : {}, JB = String(null !== (dB = (null !== (VB = BB.vertex) && void 0 !== VB ? VB : {}).entryPoint) && void 0 !== dB ? dB : "");
-            ZB(`WebGPU pipeline "${String(null!==(yB=BB.label)&&void 0!==yB?yB:"")}" ${JB} rejected (${String(null!==pB&&void 0!==pB?pB:"no reason")}): ${WB(String(null!==lB&&void 0!==lB?lB:TB),600)}`)
-          }(null !== (TB = dB[0]) && void 0 !== TB ? TB : {}, BB), BB
+              reason: IY,
+              message: RY
+            } = null !== rY && void 0 !== rY ? rY : {}, OY = String(null !== (DY = (null !== (FY = YY.vertex) && void 0 !== FY ? FY : {}).entryPoint) && void 0 !== DY ? DY : "");
+            wY(`WebGPU pipeline "${String(null!==(AY=YY.label)&&void 0!==AY?AY:"")}" ${OY} rejected (${String(null!==IY&&void 0!==IY?IY:"no reason")}): ${XY(String(null!==RY&&void 0!==RY?RY:rY),600)}`)
+          }(null !== (rY = DY[0]) && void 0 !== rY ? rY : {}, YY), YY
         }))
-      })), gT(XT("GPUCanvasContext"), "configure", (BB => function() {
-        for (var TB, dB = arguments.length, VB = new Array(dB), yB = 0; yB < dB; yB++) VB[yB] = arguments[yB];
-        const pB = null !== (TB = VB[0]) && void 0 !== TB ? TB : {};
-        var lB, JB;
-        QT++ < 3 && ZB(`WebGPU canvas ${String(pB.format)} ${String(null!==(lB=pB.colorSpace)&&void 0!==lB?lB:"srgb")} alpha ${String(null!==(JB=pB.alphaMode)&&void 0!==JB?JB:"opaque")}`);
-        return Reflect.apply(BB, this, VB)
-      })), GT(XT("GPURenderPassEncoder")), GT(XT("GPURenderBundleEncoder"))
+      })), ur(pr("GPUCanvasContext"), "configure", (YY => function() {
+        for (var rY, DY = arguments.length, FY = new Array(DY), AY = 0; AY < DY; AY++) FY[AY] = arguments[AY];
+        const IY = null !== (rY = FY[0]) && void 0 !== rY ? rY : {};
+        var RY, OY;
+        wr++ < 3 && wY(`WebGPU canvas ${String(IY.format)} ${String(null!==(RY=IY.colorSpace)&&void 0!==RY?RY:"srgb")} alpha ${String(null!==(OY=IY.alphaMode)&&void 0!==OY?OY:"opaque")}`);
+        return vr(YY, this, FY)
+      })), nr(pr("GPURenderPassEncoder")), nr(pr("GPURenderBundleEncoder"))
     }
-    const jT = 1e4,
-      AT = 6e4,
-      bT = 5e3;
-    let nT = null,
-      eT = !1,
-      Bd = "1",
-      Td = "",
-      dd = !1,
-      Vd = null,
-      yd = 0,
-      pd = () => {};
-    const ld = new Promise((BB => {
-      pd = BB
+    const Lr = 1e4,
+      tr = 6e4,
+      YD = 5e3,
+      rD = 3e3,
+      DD = 100;
+    let FD = null,
+      AD = !1,
+      ID = {
+        ...Zr.c
+      },
+      RD = !1,
+      OD = null,
+      gD = 0,
+      aD = () => {};
+    const vD = new Promise((YY => {
+      aD = YY
     }));
 
-    function Jd() {
-      var BB;
-      eT || (eT = !0, Bd = "0" === (0, pB.m)("faceCull") ? "0" : "1", Td = null !== (BB = (0, pB.m)("adrenoProbe")) && void 0 !== BB ? BB : "", window.bloxdRenderDebug = {
-        faceCull: Bd,
-        adrenoProbe: Td
-      }, ZB("quality steps off while the topic is on (util/weakGpu.ts): no stepped MSAA or scale, no weak-GPU tier"), oT || "undefined" === typeof window || (oT = !0, "undefined" !== typeof WebGL2RenderingContext && fT(WebGL2RenderingContext.prototype, !0), "undefined" !== typeof WebGLRenderingContext && fT(WebGLRenderingContext.prototype, !1)), xT(), (0, pB.b)("renderProbe", (() => {
-        Od("console")
-      })), kd(), setInterval(Dd, bT))
+    function uD() {
+      var YY;
+      AD || (AD = !0, ID = Object.assign(window.bloxdRenderDebug ??= {
+        ...Zr.c
+      }, {
+        faceCull: "0" === (0, IY.p)("faceCull") ? "0" : "1",
+        adrenoProbe: null !== (YY = (0, IY.p)("adrenoProbe")) && void 0 !== YY ? YY : ""
+      }), wY("quality steps off while the topic is on (util/weakGpu.ts): no stepped MSAA or scale, no weak-GPU tier"), sr || "undefined" === typeof window || (sr = !0, "undefined" !== typeof WebGL2RenderingContext && er(WebGL2RenderingContext.prototype, !0), "undefined" !== typeof WebGLRenderingContext && er(WebGLRenderingContext.prototype, !1)), Ur(), (0, IY.e)("renderProbe", (() => {
+        WD("console")
+      })), QD(), setInterval(mD, YD))
     }
 
-    function Yd(BB) {
-      var TB, dB;
-      Jd(), nT = null !== (TB = null === BB || void 0 === BB ? void 0 : BB.backend) && void 0 !== TB ? TB : null, ZB(null === BB ? "backend: none picked (no renderer build)" : `backend ${BB.backend}: reason ${BB.reason}, source ${BB.source}, adapter ${BB.adapter?`${BB.adapter.vendor}/${BB.adapter.architecture}`:"none"}, renderer param ${null!==(dB=(0,pB.m)("renderer"))&&void 0!==dB?dB:"none"}, faceCull ${"0"===Bd?"off (whole parts)":"on"}, adrenoProbe ${Td||"none"}`)
+    function sD(YY) {
+      var rY, DY;
+      uD(), FD = null !== (rY = null === YY || void 0 === YY ? void 0 : YY.backend) && void 0 !== rY ? rY : null;
+      const FY = `, renderer param ${null!==(DY=(0,IY.p)("renderer"))&&void 0!==DY?DY:"none"}, faceCull ${"0"===ID.faceCull?"off (whole parts)":"on"}, adrenoProbe ${ID.adrenoProbe||"none"}`;
+      wY(`${(0,Cr.c)(YY)}${null===YY?"":FY}`)
     }
 
-    function gd() {
-      const BB = performance.now(),
-        TB = od(ld, jT, AT).then((TB => Od(`${Math.round((performance.now()-BB)/1e3)} s after playable${TB?"":", no terrain drawn yet"}`)));
-      (0, yB.d)(ZB, (async () => {
-        await TB, await Vd
+    function iD() {
+      const YY = performance.now(),
+        rY = yD(vD, Lr, tr).then((rY => WD(`${Math.round((performance.now()-YY)/1e3)} s after playable${rY?"":", no terrain drawn yet"}`)));
+      (0, AY.b)(wY, (async () => {
+        await rY, await OD
       }))
     }
-    async function od(BB, TB, dB) {
-      const yB = (0, VB.b)(dB).then((() => !1));
-      return await (0, VB.b)(TB), Promise.race([BB.then((() => !0)), yB])
+    async function yD(YY, rY, DY) {
+      const AY = (0, FY.c)(DY).then((() => !1));
+      return await (0, FY.c)(rY), Promise.race([YY.then((() => !0)), AY])
     }
 
-    function kd() {
+    function QD() {
       requestAnimationFrame((() => {
-        yd++, kd()
+        gD++, QD()
       }))
     }
 
-    function Ld() {
-      var BB, TB;
-      if (dd) return;
-      dd = !0;
-      const dB = window.bloxdRenderDebug;
-      var VB;
-      (ZB(`renderer caps ${null!==(BB=null===dB||void 0===dB?void 0:dB.caps)&&void 0!==BB?BB:"(not noted)"}; terrain fetch ${null!==(TB=null===dB||void 0===dB?void 0:dB.fetch)&&void 0!==TB?TB:"(not noted)"}`), Td) && ZB(`adrenoProbe ${Td} asked; in force (storage fetch only): ${null!==(VB=null===dB||void 0===dB?void 0:dB.probe)&&void 0!==VB?VB:"(not noted)"}`);
-      const yB = IB.context;
-      if (yB) {
-        for (const BB of function(BB) {
-            var TB;
-            const dB = [],
-              VB = BB.getExtension("WEBGL_debug_renderer_info"),
-              yB = VB ? BB.getParameter(VB.UNMASKED_VENDOR_WEBGL) : "(masked)",
-              pB = VB ? BB.getParameter(VB.UNMASKED_RENDERER_WEBGL) : "(masked)";
-            dB.push(`GL ${String(BB.getParameter(BB.VERSION))} | ${String(BB.getParameter(BB.SHADING_LANGUAGE_VERSION))} | ${String(BB.getParameter(BB.VENDOR))} / ${String(BB.getParameter(BB.RENDERER))}`), dB.push(`GL unmasked ${yB} / ${pB}`);
-            const lB = [
-              ["MAX_TEXTURE_SIZE", BB.MAX_TEXTURE_SIZE],
-              ["MAX_VERTEX_ATTRIBS", BB.MAX_VERTEX_ATTRIBS],
-              ["MAX_VERTEX_UNIFORM_VECTORS", BB.MAX_VERTEX_UNIFORM_VECTORS],
-              ["MAX_VERTEX_TEXTURE_IMAGE_UNITS", BB.MAX_VERTEX_TEXTURE_IMAGE_UNITS],
-              ["MAX_COMBINED_TEXTURE_IMAGE_UNITS", BB.MAX_COMBINED_TEXTURE_IMAGE_UNITS],
-              ["MAX_VARYING_VECTORS", BB.MAX_VARYING_VECTORS],
-              ["MAX_RENDERBUFFER_SIZE", BB.MAX_RENDERBUFFER_SIZE]
+    function oD() {
+      var YY, rY, DY;
+      if (RD) return;
+      (RD = !0, wY(`renderer caps ${null!==(YY=ID.caps)&&void 0!==YY?YY:"(not noted)"}; terrain fetch ${null!==(rY=ID.fetch)&&void 0!==rY?rY:"(not noted)"}`), ID.adrenoProbe) && wY(`adrenoProbe ${ID.adrenoProbe} asked; in force (storage fetch only): ${null!==(DY=ID.probe)&&void 0!==DY?DY:"(not noted)"}`);
+      const FY = CY.context;
+      if (FY) {
+        for (const YY of function(YY) {
+            var rY;
+            const DY = [],
+              FY = YY.getExtension("WEBGL_debug_renderer_info"),
+              AY = FY ? YY.getParameter(FY.UNMASKED_VENDOR_WEBGL) : "(masked)",
+              IY = FY ? YY.getParameter(FY.UNMASKED_RENDERER_WEBGL) : "(masked)";
+            DY.push(`GL ${String(YY.getParameter(YY.VERSION))} | ${String(YY.getParameter(YY.SHADING_LANGUAGE_VERSION))} | ${String(YY.getParameter(YY.VENDOR))} / ${String(YY.getParameter(YY.RENDERER))}`), DY.push(`GL unmasked ${AY} / ${IY}`);
+            const RY = [
+              ["MAX_TEXTURE_SIZE", YY.MAX_TEXTURE_SIZE],
+              ["MAX_VERTEX_ATTRIBS", YY.MAX_VERTEX_ATTRIBS],
+              ["MAX_VERTEX_UNIFORM_VECTORS", YY.MAX_VERTEX_UNIFORM_VECTORS],
+              ["MAX_VERTEX_TEXTURE_IMAGE_UNITS", YY.MAX_VERTEX_TEXTURE_IMAGE_UNITS],
+              ["MAX_COMBINED_TEXTURE_IMAGE_UNITS", YY.MAX_COMBINED_TEXTURE_IMAGE_UNITS],
+              ["MAX_VARYING_VECTORS", YY.MAX_VARYING_VECTORS],
+              ["MAX_RENDERBUFFER_SIZE", YY.MAX_RENDERBUFFER_SIZE]
             ];
-            "MAX_UNIFORM_BLOCK_SIZE" in BB && lB.push(["MAX_UNIFORM_BLOCK_SIZE", BB.MAX_UNIFORM_BLOCK_SIZE], ["MAX_VERTEX_UNIFORM_BLOCKS", BB.MAX_VERTEX_UNIFORM_BLOCKS], ["MAX_SAMPLES", BB.MAX_SAMPLES], ["MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS", BB.MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS]), dB.push(`GL limits ${lB.map((TB=>{let[dB,VB]=TB;return`${dB} ${String(BB.getParameter(VB))}`})).join(", ")}`);
-            const JB = (TB, dB) => {
-              const VB = BB.getShaderPrecisionFormat(TB, BB.HIGH_FLOAT),
-                yB = BB.getShaderPrecisionFormat(TB, BB.HIGH_INT);
-              return `${dB} highp float ${VB?`${VB.rangeMin}/${VB.rangeMax}/${VB.precision}`:"?"} int ${yB?`${yB.rangeMin}/${yB.rangeMax}/${yB.precision}`:"?"}`
+            "MAX_UNIFORM_BLOCK_SIZE" in YY && RY.push(["MAX_UNIFORM_BLOCK_SIZE", YY.MAX_UNIFORM_BLOCK_SIZE], ["MAX_VERTEX_UNIFORM_BLOCKS", YY.MAX_VERTEX_UNIFORM_BLOCKS], ["MAX_SAMPLES", YY.MAX_SAMPLES], ["MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS", YY.MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS]), DY.push(`GL limits ${RY.map((rY=>{let[DY,FY]=rY;return`${DY} ${String(YY.getParameter(FY))}`})).join(", ")}`);
+            const OY = (rY, DY) => {
+              const FY = YY.getShaderPrecisionFormat(rY, YY.HIGH_FLOAT),
+                AY = YY.getShaderPrecisionFormat(rY, YY.HIGH_INT);
+              return `${DY} highp float ${FY?`${FY.rangeMin}/${FY.rangeMax}/${FY.precision}`:"?"} int ${AY?`${AY.rangeMin}/${AY.rangeMax}/${AY.precision}`:"?"}`
             };
-            dB.push(`GL precision ${JB(BB.VERTEX_SHADER,"VS")}, ${JB(BB.FRAGMENT_SHADER,"FS")}`);
-            const YB = BB.getContextAttributes();
-            return dB.push(`GL context ${JSON.stringify(YB)} drawingBuffer ${BB.drawingBufferWidth}x${BB.drawingBufferHeight}${"drawingBufferFormat"in BB?` format 0x${Number(BB.drawingBufferFormat).toString(16)}`:""}${"drawingBufferColorSpace"in BB?` ${String(BB.drawingBufferColorSpace)}`:""}`), dB.push(`GL extensions ${(null!==(TB=BB.getSupportedExtensions())&&void 0!==TB?TB:[]).join(" ")}`), dB
-          }(yB)) ZB(BB);
+            DY.push(`GL precision ${OY(YY.VERTEX_SHADER,"VS")}, ${OY(YY.FRAGMENT_SHADER,"FS")}`);
+            const gY = YY.getContextAttributes();
+            return DY.push(`GL context ${JSON.stringify(gY)} drawingBuffer ${YY.drawingBufferWidth}x${YY.drawingBufferHeight}${"drawingBufferFormat"in YY?` format 0x${Number(YY.drawingBufferFormat).toString(16)}`:""}${"drawingBufferColorSpace"in YY?` ${String(YY.drawingBufferColorSpace)}`:""}`), DY.push(`GL extensions ${(null!==(rY=YY.getSupportedExtensions())&&void 0!==rY?rY:[]).join(" ")}`), DY
+          }(FY)) wY(YY);
         ! function() {
-          if (!IB.context) return;
-          let BB = 0,
-            TB = 0;
-          for (const [dB, VB] of FB) !VB.gl.isContextLost() && VB.gl.isProgram(dB) && (TB++, zT(VB.gl, dB, VB), null !== VB.terrain && BB++);
-          ZB(`programs: ${TB} live of ${FB.length} linked, ${BB} packed terrain; CPU page copies ${Math.round(IB.shadowBytes/1048576)} MiB (${IB.uncopied} over budget)`)
+          if (!CY.context) return;
+          let YY = 0,
+            rY = 0;
+          for (const [DY, FY] of HY) !FY.gl.isContextLost() && FY.gl.isProgram(DY) && (rY++, cr(FY.gl, DY, FY), null !== FY.terrain && YY++);
+          wY(`programs: ${rY} live of ${HY.length} linked, ${YY} packed terrain; CPU page copies ${Math.round(CY.shadowBytes/1048576)} MiB (${CY.uncopied} over budget)`)
         }()
       }
     }
 
-    function Od(BB) {
-      return Vd ??= async function(BB) {
-        Ld(), "webgpu" === nT ? await
-        function(BB) {
-          if (null !== aT) return Promise.resolve();
-          const TB = [];
-          return aT = TB, new Promise((dB => {
-            setTimeout((() => {
-              aT = null, ZB(`WebGPU draw ranges (${BB}): ${TB.length} terrain draws recorded in a second (first ${YT}; bundles replay without new ones)`);
-              for (const BB of TB) ZB(BB);
-              dB()
-            }), 1e3)
-          }))
-        }(BB): await lT(BB);
-        ZB(`check (${BB}) done: bloxdDebug.save() downloads it all`)
-      }(BB).catch((TB => {
-        ZB(`check (${BB}) failed: ${String(TB)}`)
+    function WD(YY) {
+      return OD ??= async function(YY) {
+        oD(), "webgpu" === FD ? (ED(), "1" === ID.slotCheck && wY("slot check: the last request is still unanswered, so the next answer reads the slots as they were then"), ID.slotCheck = "1", await
+          function(YY) {
+            if (null !== Xr) return Promise.resolve();
+            const rY = [];
+            return Xr = rY, new Promise((DY => {
+              setTimeout((() => {
+                Xr = null, wY(`WebGPU draw ranges (${YY}): ${rY.length} terrain draws recorded in a second (first ${ar}; bundles replay without new ones)`);
+                for (const YY of rY) wY(YY);
+                DY()
+              }), 1e3)
+            }))
+          }(YY), await async function() {
+            for (let YY = 0;
+              "1" === ID.slotCheck && YY < rD; YY += DD) await (0, FY.c)(DD);
+            if ("1" === ID.slotCheck) return void wY(`slot check: no answer in ${rD} ms (only the storage fetch has one; a later answer logs on its own)`);
+            ED()
+          }()) : await Rr(YY);
+        wY(`check (${YY}) done: bloxdDebug.save() downloads it all`)
+      }(YY).catch((rY => {
+        wY(`check (${YY}) failed: ${String(rY)}`)
       })).finally((() => {
-        Vd = null
-      })), Vd
+        OD = null
+      })), OD
     }
 
-    function Dd() {
-      const BB = BB => yd ? (BB / yd).toFixed(1) : "0",
-        TB = function() {
-          const BB = ZT;
-          return ZT = {
+    function ED() {
+      void 0 !== ID.slotCheck && "1" !== ID.slotCheck && (wY(ID.slotCheck), delete ID.slotCheck)
+    }
+
+    function mD() {
+      const YY = YY => gD ? (YY / gD).toFixed(1) : "0",
+        rY = function() {
+          const YY = qr;
+          return qr = {
             draws: 0,
             faces: 0
-          }, BB
+          }, YY
         }(),
-        dB = function() {
-          const BB = uT;
-          return uT = {
+        DY = function() {
+          const YY = Wr;
+          return Wr = {
             inst: {
               draws: 0,
               faces: 0
@@ -1390,20 +1406,30 @@ export const modules = {
               draws: 0,
               faces: 0
             }
-          }, BB
+          }, YY
         }(),
-        VB = function() {
-          const BB = HT;
-          return HT = {
+        FY = function() {
+          const YY = Er;
+          return Er = {
             buffer: 0,
             texture: 0
-          }, BB
+          }, YY
         }();
-      ("webgpu" === nT ? TB.draws : dB.inst.draws + dB.tex.draws) > 0 && pd();
-      const yB = "webgpu" === nT ? [`terrain ${BB(TB.draws)} draws ${BB(TB.faces)} faces a frame (bundles' replays uncounted)`] : ["inst", "tex", "other"].filter((BB => dB[BB].draws > 0)).map((TB => `${TB} ${BB(dB[TB].draws)} draws ${BB(dB[TB].faces)} faces a frame`));
-      ZB(`${yd} frames: ${yB.join(", ")||"no draws"}; uploaded ${Math.round(VB.buffer/1024)} KiB to buffers, ${Math.round(VB.texture/1024)} KiB to data textures`), yd = 0
+      ED(), ("webgpu" === FD ? rY.draws : DY.inst.draws + DY.tex.draws) > 0 && aD();
+      const AY = "webgpu" === FD ? [`terrain ${YY(rY.draws)} draws ${YY(rY.faces)} faces a frame (bundles' replays uncounted)`] : ["inst", "tex", "other"].filter((YY => DY[YY].draws > 0)).map((rY => `${rY} ${YY(DY[rY].draws)} draws ${YY(DY[rY].faces)} faces a frame`));
+      wY(`${gD} frames: ${AY.join(", ")||"no draws"}; uploaded ${Math.round(FY.buffer/1024)} KiB to buffers, ${Math.round(FY.texture/1024)} KiB to data textures`), gD = 0
     }
+  },
+  4272: (YY, rY, DY) => {
+    function FY(YY) {
+      if (null === YY) return "backend: none picked (no renderer build)";
+      const rY = YY.adapter ? `${YY.adapter.vendor}/${YY.adapter.architecture}` : "none";
+      return `backend ${YY.backend}: reason ${YY.reason}, source ${YY.source}, adapter ${rY}`
+    }
+    DY.d(rY, {
+      c: () => FY
+    })
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

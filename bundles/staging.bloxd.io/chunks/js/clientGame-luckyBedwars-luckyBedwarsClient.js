@@ -1,257 +1,257 @@
 export const id = 19;
 export const ids = [19];
 export const modules = {
-  35589: (BB, TB, dB) => {
-    dB.d(TB, {
-      c: () => OB,
-      e: () => DB,
-      h: () => LB,
-      l: () => kB
+  36025: (YY, rY, DY) => {
+    DY.d(rY, {
+      d: () => iY,
+      e: () => yY,
+      g: () => sY,
+      h: () => uY
     });
-    var VB = dB(8570),
-      yB = dB(35595),
-      pB = dB(35601),
-      lB = dB(8103),
-      JB = dB(1317),
-      YB = dB(62),
-      gB = dB(72),
-      oB = dB(980);
+    var FY = DY(8745),
+      AY = DY(36032),
+      IY = DY(36034),
+      RY = DY(8111),
+      OY = DY(1430),
+      gY = DY(61),
+      aY = DY(76),
+      vY = DY(1125);
 
-    function kB() {
-      var BB;
-      return (0, JB.f)(yB.c, (0, yB.k)()), (0, oB.jsx)(oB.Fragment, {
-        children: null === (BB = (0, yB.k)()) || void 0 === BB ? void 0 : BB.content
+    function uY() {
+      var YY;
+      return (0, OY.k)(AY.d, (0, AY.n)()), (0, vY.jsx)(vY.Fragment, {
+        children: null === (YY = (0, AY.n)()) || void 0 === YY ? void 0 : YY.content
       })
     }
 
-    function LB(BB) {
-      var TB;
+    function sY(YY) {
+      var rY;
       let {
-        show: dB
-      } = BB;
-      (0, JB.f)(yB.c, (0, yB.k)());
-      const gB = null === (TB = (0, yB.k)()) || void 0 === TB ? void 0 : TB.menu;
-      return (0, YB.useEffect)((() => {
-        var BB;
-        dB || (null === gB || void 0 === gB || null === (BB = gB.onClose) || void 0 === BB || BB.call(gB), (0, pB.r)())
-      }), [dB, gB]), (0, YB.useEffect)((() => dB ? (0, lB.c)(pB.x, pB.e) : void 0), [dB]), (0, oB.jsx)(VB.d, {
-        showing: dB,
+        show: DY
+      } = YY;
+      (0, OY.k)(AY.d, (0, AY.n)());
+      const aY = null === (rY = (0, AY.n)()) || void 0 === rY ? void 0 : rY.menu;
+      return (0, gY.useEffect)((() => {
+        var YY;
+        DY || (null === aY || void 0 === aY || null === (YY = aY.onClose) || void 0 === YY || YY.call(aY), (0, IY.t)())
+      }), [DY, aY]), (0, gY.useEffect)((() => DY ? (0, RY.f)(IY.y, IY.i) : void 0), [DY]), (0, vY.jsx)(FY.d, {
+        showing: DY,
         globallyUniqueKey: "clientGameMenu",
-        children: null === gB || void 0 === gB ? void 0 : gB.content
+        children: null === aY || void 0 === aY ? void 0 : aY.content
       })
     }
 
-    function OB(BB) {
+    function iY(YY) {
       let {
-        placement: TB = "bottom"
-      } = BB;
-      return (0, oB.jsx)("div", {
-        id: `clientGameHud-${TB}`,
+        placement: rY = "bottom"
+      } = YY;
+      return (0, vY.jsx)("div", {
+        id: `clientGameHud-${rY}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function DB(BB) {
+    function yY(YY) {
       let {
-        children: TB,
-        placement: dB = "bottom"
-      } = BB;
-      const [VB, yB] = (0, YB.useState)(null);
-      return (0, YB.useEffect)((() => {
-        yB(document.getElementById(`clientGameHud-${dB}`))
-      }), [dB]), VB ? (0, gB.createPortal)(TB, VB) : null
+        children: rY,
+        placement: DY = "bottom"
+      } = YY;
+      const [FY, AY] = (0, gY.useState)(null);
+      return (0, gY.useEffect)((() => {
+        AY(document.getElementById(`clientGameHud-${DY}`))
+      }), [DY]), FY ? (0, aY.createPortal)(rY, FY) : null
     }
   },
-  8570: (BB, TB, dB) => {
-    dB.d(TB, {
-      d: () => pB
+  8745: (YY, rY, DY) => {
+    DY.d(rY, {
+      d: () => IY
     });
-    var VB = dB(3948),
-      yB = dB(3951);
+    var FY = DY(4093),
+      AY = DY(4097);
 
-    function pB(BB) {
+    function IY(YY) {
       let {
-        children: TB,
-        showing: dB,
-        globallyUniqueKey: pB,
-        alwaysMountChildren: lB = !1,
-        doGameplayStartStopOnShow: JB = !0,
-        keepsMovement: YB = !1
-      } = BB;
-      return (0, yB.d)(!0, dB, pB, YB), (0, VB.e)(JB, dB), dB || lB ? TB : null
+        children: rY,
+        showing: DY,
+        globallyUniqueKey: IY,
+        alwaysMountChildren: RY = !1,
+        doGameplayStartStopOnShow: OY = !0,
+        keepsMovement: gY = !1
+      } = YY;
+      return (0, AY.b)(!0, DY, IY, gY), (0, FY.c)(OY, DY), DY || RY ? rY : null
     }
   },
-  8103: (BB, TB, dB) => {
-    dB.d(TB, {
-      b: () => pB,
-      c: () => yB
+  8111: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => IY,
+      f: () => AY
     });
-    let VB = null;
-    const yB = function(BB) {
-        const TB = {
-          cycle: BB,
+    let FY = null;
+    const AY = function(YY) {
+        const rY = {
+          cycle: YY,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return VB = TB, () => {
-          VB === TB && (VB = null)
+        return FY = rY, () => {
+          FY === rY && (FY = null)
         }
       },
-      pB = () => {
-        var BB;
-        return null !== (BB = VB) && void 0 !== BB && BB.canCycle() ? VB.cycle : null
+      IY = () => {
+        var YY;
+        return null !== (YY = FY) && void 0 !== YY && YY.canCycle() ? FY.cycle : null
       }
   },
-  35601: (BB, TB, dB) => {
-    dB.d(TB, {
-      A: () => vB,
-      c: () => pB,
-      e: () => uB,
-      i: () => HB,
-      k: () => JB,
-      n: () => LB,
-      r: () => EB,
-      s: () => kB,
-      v: () => mB,
-      x: () => DB
+  36034: (YY, rY, DY) => {
+    DY.d(rY, {
+      C: () => EY,
+      e: () => IY,
+      i: () => QY,
+      l: () => oY,
+      n: () => OY,
+      r: () => sY,
+      t: () => WY,
+      v: () => uY,
+      x: () => mY,
+      y: () => yY
     });
-    var VB = dB(21),
-      yB = dB(24);
-    const pB = "clientGameInventoryButtonsChanged",
-      lB = new Map;
+    var FY = DY(19),
+      AY = DY(25);
+    const IY = "clientGameInventoryButtonsChanged",
+      RY = new Map;
 
-    function JB() {
-      return [...lB.values()].sort(((BB, TB) => {
-        var dB, VB;
-        return (null !== (dB = BB.order) && void 0 !== dB ? dB : 0) - (null !== (VB = TB.order) && void 0 !== VB ? VB : 0)
+    function OY() {
+      return [...RY.values()].sort(((YY, rY) => {
+        var DY, FY;
+        return (null !== (DY = YY.order) && void 0 !== DY ? DY : 0) - (null !== (FY = rY.order) && void 0 !== FY ? FY : 0)
       }))
     }
-    let YB = null;
+    let gY = null;
 
-    function gB(BB) {
-      YB = BB
+    function aY(YY) {
+      gY = YY
     }
-    let oB = !1;
+    let vY = !1;
 
-    function kB(BB) {
-      oB = !0;
+    function uY(YY) {
+      vY = !0;
       try {
-        BB.onClick()
+        YY.onClick()
       } finally {
-        oB = !1
+        vY = !1
       }
-      BB.panel && "clientGame" === VB.d.get("openInGameMenuName") && gB(BB.id)
+      YY.panel && "clientGame" === FY.b.get("openInGameMenuName") && aY(YY.id)
     }
 
-    function LB() {
-      return oB
+    function sY() {
+      return vY
     }
 
-    function OB() {
-      return JB().filter((BB => BB.panel && !BB.disabled))
+    function iY() {
+      return OY().filter((YY => YY.panel && !YY.disabled))
     }
 
-    function DB(BB) {
-      const TB = OB(),
-        dB = TB.findIndex((BB => BB.id === YB));
-      return !(dB < 0 || TB.length < 2) && (kB(TB[(dB + BB + TB.length) % TB.length]), !0)
+    function yY(YY) {
+      const rY = iY(),
+        DY = rY.findIndex((YY => YY.id === gY));
+      return !(DY < 0 || rY.length < 2) && (uY(rY[(DY + YY + rY.length) % rY.length]), !0)
     }
 
-    function uB() {
-      return null !== YB && OB().length > 1
+    function QY() {
+      return null !== gY && iY().length > 1
     }
 
-    function HB() {
-      gB(null)
+    function oY() {
+      aY(null)
     }
 
-    function EB() {
-      "inventory" !== VB.d.get("openInGameMenuName") && gB(null)
+    function WY() {
+      "inventory" !== FY.b.get("openInGameMenuName") && aY(null)
     }
 
-    function vB() {
-      const BB = YB;
-      return gB(null), BB
+    function EY() {
+      const YY = gY;
+      return aY(null), YY
     }
 
-    function mB(BB) {
-      return lB.set(BB.id, BB), yB.h.yH(pB, JB(), !0), () => {
-        lB.get(BB.id) === BB && (lB.delete(BB.id), yB.h.yH(pB, JB()))
+    function mY(YY) {
+      return RY.set(YY.id, YY), AY.g.vo(IY, OY(), !0), () => {
+        RY.get(YY.id) === YY && (RY.delete(YY.id), AY.g.vo(IY, OY()))
       }
     }
   },
-  35595: (BB, TB, dB) => {
-    dB.d(TB, {
-      c: () => JB,
-      g: () => HB,
-      h: () => EB,
-      j: () => LB,
-      k: () => gB,
-      o: () => uB,
-      p: () => OB,
-      r: () => oB
+  36032: (YY, rY, DY) => {
+    DY.d(rY, {
+      d: () => OY,
+      f: () => oY,
+      h: () => WY,
+      j: () => sY,
+      n: () => aY,
+      o: () => QY,
+      p: () => iY,
+      q: () => vY
     });
-    var VB = dB(21),
-      yB = dB(24),
-      pB = dB(1173),
-      lB = dB(35601);
-    const JB = "clientGameUiChanged";
-    let YB = null;
+    var FY = DY(19),
+      AY = DY(25),
+      IY = DY(1287),
+      RY = DY(36034);
+    const OY = "clientGameUiChanged";
+    let gY = null;
 
-    function gB() {
-      return YB
+    function aY() {
+      return gY
     }
 
-    function oB(BB, TB) {
-      const dB = {
-        content: BB,
-        menu: TB
+    function vY(YY, rY) {
+      const DY = {
+        content: YY,
+        menu: rY
       };
-      return YB = dB, yB.h.yH(JB, YB, !0), () => {
-        YB === dB && (YB = null, DB = !1, HB(), yB.h.yH(JB, null))
+      return gY = DY, AY.g.vo(OY, gY, !0), () => {
+        gY === DY && (gY = null, yY = !1, oY(), AY.g.vo(OY, null))
       }
     }
-    let kB = null;
+    let uY = null;
 
-    function LB() {
-      return kB
+    function sY() {
+      return uY
     }
 
-    function OB(BB) {
-      return kB = BB, () => {
-        kB === BB && (kB = null)
+    function iY(YY) {
+      return uY = YY, () => {
+        uY === YY && (uY = null)
       }
     }
-    let DB = !1;
+    let yY = !1;
 
-    function uB() {
-      const BB = VB.d.get("openInGameMenuName");
-      "clientGame" !== BB && (DB = "inventory" === BB), (0, lB.n)() || (0, lB.i)(), (0, pB.p)("InGameMenu"), VB.d.set({
+    function QY() {
+      const YY = FY.b.get("openInGameMenuName");
+      "clientGame" !== YY && (yY = "inventory" === YY), (0, RY.r)() || (0, RY.l)(), (0, IY.k)(IY.d), FY.b.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function HB() {
-      vB(!1)
+    function oY() {
+      EY(!1)
     }
 
-    function EB() {
-      vB(DB)
+    function WY() {
+      EY(yY)
     }
 
-    function vB(BB) {
-      "clientGame" === VB.d.get("openInGameMenuName") && VB.d.set({
-        openInGameMenuName: BB ? "inventory" : null
-      }), BB || (0, lB.i)(), DB = !1
+    function EY(YY) {
+      "clientGame" === FY.b.get("openInGameMenuName") && FY.b.set({
+        openInGameMenuName: YY ? "inventory" : null
+      }), YY || (0, RY.l)(), yY = !1
     }
   },
-  38359: (BB, TB, dB) => {
-    dB.r(TB), dB.d(TB, {
-      default: () => eB
+  38751: (YY, rY, DY) => {
+    DY.r(rY), DY.d(rY, {
+      default: () => tY
     });
-    const VB = {
+    const FY = {
       trader: {
         name: "Lucky Trader",
         shopTab: "Basic Blocks"
@@ -261,270 +261,270 @@ export const modules = {
         shopTab: "Team Upgrades"
       }
     };
-    var yB = dB(62),
-      pB = dB(36923),
-      lB = dB(279);
-    const JB = ["Basic", "Rare", "Super"];
+    var AY = DY(61),
+      IY = DY(37376),
+      RY = DY(341);
+    const OY = ["Basic", "Rare", "Super"];
 
-    function YB(BB, TB) {
-      return `${"Basic"===TB?"":`${TB} `}${"Simple"===BB?"":`${BB} `}Lucky Block`
+    function gY(YY, rY) {
+      return `${"Basic"===rY?"":`${rY} `}${"Simple"===YY?"":`${YY} `}Lucky Block`
     }
-    const gB = new Map(["Simple", "Building", "Weapon", "Armour", "Tools", "Food", "Potion"].flatMap((BB => JB.map((TB => [YB(BB, TB), {
-      category: BB,
-      rarity: TB
+    const aY = new Map(["Simple", "Building", "Weapon", "Armour", "Tools", "Food", "Potion"].flatMap((YY => OY.map((rY => [gY(YY, rY), {
+      category: YY,
+      rarity: rY
     }])))));
-    gB.keys();
+    aY.keys();
 
-    function oB(BB) {
-      return gB.get(BB)
+    function vY(YY) {
+      return aY.get(YY)
     }
-    const kB = "Obsidian",
-      LB = ["Cobweb"],
-      OB = [...["Red", "Blue", "Green", "Yellow"].map((BB => `${(0,lB._)(BB)} Wool`)), "Maple Wood Planks", "Cracked Stone Bricks", "Baked Clay", kB, ...LB];
+    const uY = "Obsidian",
+      sY = ["Cobweb"],
+      iY = [...["Red", "Blue", "Green", "Yellow"].map((YY => `${(0,RY.$)(YY)} Wool`)), "Maple Wood Planks", "Cracked Stone Bricks", "Baked Clay", uY, ...sY];
 
-    function DB(BB) {
-      return OB.includes(BB)
+    function yY(YY) {
+      return iY.includes(YY)
     }
-    var uB = dB(572);
+    var QY = DY(625);
 
-    function HB(BB, TB) {
-      const dB = oB(BB);
-      if (dB) {
-        const BB = oB(TB);
-        if (!BB) return;
-        const VB = JB.length - 1 - JB.indexOf(BB.rarity);
-        return (BB.category === dB.category ? 0 : 1) * JB.length + VB
+    function oY(YY, rY) {
+      const DY = vY(YY);
+      if (DY) {
+        const YY = vY(rY);
+        if (!YY) return;
+        const FY = OY.length - 1 - OY.indexOf(YY.rarity);
+        return (YY.category === DY.category ? 0 : 1) * OY.length + FY
       }
-      if (!DB(BB)) return;
-      if (TB === BB) return 0;
-      const VB = BB => DB(BB) && !LB.includes(BB) && BB !== kB;
-      return VB(BB) && VB(TB) ? 1 : void 0
+      if (!yY(YY)) return;
+      if (rY === YY) return 0;
+      const FY = YY => yY(YY) && !sY.includes(YY) && YY !== uY;
+      return FY(YY) && FY(rY) ? 1 : void 0
     }
-    const EB = [...Array.from({
-      length: uB.q - uB.n
-    }, ((BB, TB) => uB.n + TB)), ...Array.from({
-      length: uB.n
-    }, ((BB, TB) => TB))];
-    class vB {
-      constructor(BB) {
-        this.inventory = BB, this.pending = new Map
+    const WY = [...Array.from({
+      length: QY.l - QY.k
+    }, ((YY, rY) => QY.k + rY)), ...Array.from({
+      length: QY.k
+    }, ((YY, rY) => rY))];
+    class EY {
+      constructor(YY) {
+        this.inventory = YY, this.pending = new Map
       }
-      onPlace(BB) {
-        var TB;
-        const dB = this.inventory.selectedSlot(),
-          VB = this.inventory.itemAt(dB);
-        (null === VB || void 0 === VB ? void 0 : VB.name) === BB && (null !== (TB = VB.amount) && void 0 !== TB ? TB : 1) <= 1 && mB(BB) && this.pending.set(dB, BB)
+      onPlace(YY) {
+        var rY;
+        const DY = this.inventory.selectedSlot(),
+          FY = this.inventory.itemAt(DY);
+        (null === FY || void 0 === FY ? void 0 : FY.name) === YY && (null !== (rY = FY.amount) && void 0 !== rY ? rY : 1) <= 1 && mY(YY) && this.pending.set(DY, YY)
       }
-      onDrop(BB, TB) {
-        TB < uB.n && null === this.inventory.itemAt(TB) && mB(BB) && this.refill(TB, BB)
+      onDrop(YY, rY) {
+        rY < QY.k && null === this.inventory.itemAt(rY) && mY(YY) && this.refill(rY, YY)
       }
-      dL() {
-        const BB = [...this.pending];
+      Zu() {
+        const YY = [...this.pending];
         this.pending.clear();
-        for (const [TB, dB] of BB) null === this.inventory.itemAt(TB) && this.refill(TB, dB)
+        for (const [rY, DY] of YY) null === this.inventory.itemAt(rY) && this.refill(rY, DY)
       }
-      refill(BB, TB) {
-        const dB = function(BB, TB, dB, VB) {
-          let yB, pB = 1 / 0;
-          for (const lB of EB) {
-            if (lB === TB) continue;
-            const JB = VB(lB);
-            if (!JB || lB < uB.n && TB !== dB) continue;
-            const YB = HB(BB, JB.name);
-            void 0 !== YB && YB < pB && (yB = lB, pB = YB)
+      refill(YY, rY) {
+        const DY = function(YY, rY, DY, FY) {
+          let AY, IY = 1 / 0;
+          for (const RY of WY) {
+            if (RY === rY) continue;
+            const OY = FY(RY);
+            if (!OY || RY < QY.k && rY !== DY) continue;
+            const gY = oY(YY, OY.name);
+            void 0 !== gY && gY < IY && (AY = RY, IY = gY)
           }
-          return yB
-        }(TB, BB, this.inventory.selectedSlot(), this.inventory.itemAt);
-        void 0 !== dB && this.inventory.swap(BB, dB)
+          return AY
+        }(rY, YY, this.inventory.selectedSlot(), this.inventory.itemAt);
+        void 0 !== DY && this.inventory.swap(YY, DY)
       }
     }
 
-    function mB(BB) {
-      return !!oB(BB) || DB(BB)
+    function mY(YY) {
+      return !!vY(YY) || yY(YY)
     }
-    var iB = dB(35595),
-      NB = dB(72),
-      tB = dB(933),
-      fB = dB.n(tB);
-    const sB = "Lucky Clover",
-      MB = {
+    var VY = DY(36032),
+      SY = DY(76),
+      lY = DY(1092),
+      TY = DY.n(lY);
+    const eY = "Lucky Clover",
+      NY = {
         Basic: [35, 45],
         Rare: [100, 130],
         Super: [250, 330]
       };
 
-    function zB(BB) {
-      return MB[BB][0]
+    function BY(YY) {
+      return NY[YY][0]
     }
 
-    function wB(BB) {
-      return JB.filter((TB => BB >= zB(TB)))
+    function cY(YY) {
+      return OY.filter((rY => YY >= BY(rY)))
     }
-    var UB = dB(270),
-      FB = dB(2139),
-      KB = dB(21),
-      rB = dB(2191),
-      IB = dB(1666),
-      cB = dB(35589),
-      SB = dB(946);
-    var PB = dB(980);
-    const QB = {
-      Basic: lB.L.whiteUiText,
-      Rare: lB.L.goldUiText,
-      Super: lB.L.cyanUiText
+    var KY = DY(332),
+      HY = DY(2282),
+      zY = DY(19),
+      ZY = DY(2341),
+      CY = DY(1793),
+      fY = DY(36025),
+      jY = DY(1098);
+    var hY = DY(1125);
+    const dY = {
+      Basic: RY.K.whiteUiText,
+      Rare: RY.K.goldUiText,
+      Super: RY.K.cyanUiText
     };
-    let RB = 1;
+    let JY = 1;
 
-    function aB() {
-      const BB = (0, FB.j)("currencyAmounts"),
-        TB = null === BB || void 0 === BB ? void 0 : BB.Clovers;
-      return !TB || TB.hidden ? null : (0, PB.jsx)(cB.e, {
-        children: (0, PB.jsx)(ZB, {
-          amount: TB.amount
+    function MY() {
+      const YY = (0, HY.j)("currencyAmounts"),
+        rY = null === YY || void 0 === YY ? void 0 : YY.Clovers;
+      return !rY || rY.hidden ? null : (0, hY.jsx)(fY.e, {
+        children: (0, hY.jsx)(wY, {
+          amount: rY.amount
         })
       })
     }
 
-    function ZB(BB) {
-      var TB, dB, VB;
+    function wY(YY) {
+      var rY, DY, FY;
       let {
-        amount: pB
-      } = BB;
+        amount: IY
+      } = YY;
       const {
-        openEverythingMenuName: YB
-      } = (0, KB.m)(["openEverythingMenuName"]), gB = (0, rB.e)(), [oB, kB] = (0, yB.useState)(pB), [LB, OB] = (0, yB.useState)(null), [DB, uB] = (0, yB.useState)(0), [HB, EB] = (0, yB.useState)([]), vB = (0, yB.useRef)(pB), mB = (0, yB.useRef)(!1), iB = (0, yB.useRef)(null), tB = YB === UB.m.SHOP;
-      (0, yB.useEffect)((() => {
-        const BB = vB.current;
-        if (vB.current = pB, pB <= BB || tB) return void kB(pB);
-        const TB = gB || HB.length > 0 || window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : (dB = pB - BB, VB = !mB.current, dB <= 0 || !VB && dB < 40 ? 0 : Math.min(4, Math.ceil(dB / 30)));
-        var dB, VB;
-        if (mB.current = !0, wB(pB).length > wB(BB).length && uB(RB++), TB > 0) {
-          const BB = [];
-          for (let dB = 0; dB < TB; dB++) BB.push({
-            id: RB++,
+        openEverythingMenuName: gY
+      } = (0, zY.j)(["openEverythingMenuName"]), aY = (0, ZY.e)(), [vY, uY] = (0, AY.useState)(IY), [sY, iY] = (0, AY.useState)(null), [yY, QY] = (0, AY.useState)(0), [oY, WY] = (0, AY.useState)([]), EY = (0, AY.useRef)(IY), mY = (0, AY.useRef)(!1), VY = (0, AY.useRef)(null), lY = gY === KY.t.SHOP;
+      (0, AY.useEffect)((() => {
+        const YY = EY.current;
+        if (EY.current = IY, IY <= YY || lY) return void uY(IY);
+        const rY = aY || oY.length > 0 || window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : (DY = IY - YY, FY = !mY.current, DY <= 0 || !FY && DY < 40 ? 0 : Math.min(4, Math.ceil(DY / 30)));
+        var DY, FY;
+        if (mY.current = !0, cY(IY).length > cY(YY).length && QY(JY++), rY > 0) {
+          const YY = [];
+          for (let DY = 0; DY < rY; DY++) YY.push({
+            id: JY++,
             x: window.innerWidth / 2 + 60 * (Math.random() - .5),
             y: .58 * window.innerHeight + 30 * (Math.random() - .5),
-            delayMs: 70 * dB
+            delayMs: 70 * DY
           });
-          EB((TB => [...TB, ...BB]))
+          WY((rY => [...rY, ...YY]))
         }
-        const yB = TB > 0 ? 600 : 0;
-        OB({
-          id: RB++,
-          delayMs: yB
+        const AY = rY > 0 ? 600 : 0;
+        iY({
+          id: JY++,
+          delayMs: AY
         });
-        const JB = performance.now() + yB;
-        let YB = 0;
-        const oB = TB => {
-          const dB = lB.e.clamp((TB - JB) / 600, 0, 1);
-          kB(Math.round(BB + (pB - BB) * dB)), dB < 1 && (YB = requestAnimationFrame(oB))
+        const OY = performance.now() + AY;
+        let gY = 0;
+        const vY = rY => {
+          const DY = RY.c.clamp((rY - OY) / 600, 0, 1);
+          uY(Math.round(YY + (IY - YY) * DY)), DY < 1 && (gY = requestAnimationFrame(vY))
         };
-        return YB = requestAnimationFrame(oB), () => {
-          cancelAnimationFrame(YB)
+        return gY = requestAnimationFrame(vY), () => {
+          cancelAnimationFrame(gY)
         }
-      }), [pB, tB]);
-      const MB = function(BB) {
-          var TB;
-          const dB = null !== (TB = JB.find((TB => BB < zB(TB)))) && void 0 !== TB ? TB : "Super";
+      }), [IY, lY]);
+      const NY = function(YY) {
+          var rY;
+          const DY = null !== (rY = OY.find((rY => YY < BY(rY)))) && void 0 !== rY ? rY : "Super";
           return {
-            rarity: dB,
-            progress: lB.e.clamp(BB / zB(dB), 0, 1)
+            rarity: DY,
+            progress: RY.c.clamp(YY / BY(DY), 0, 1)
           }
-        }(oB),
-        FB = wB(oB).at(-1);
-      return (0, PB.jsxs)(PB.Fragment, {
-        children: [(0, PB.jsx)("div", {
+        }(vY),
+        HY = cY(vY).at(-1);
+      return (0, hY.jsxs)(hY.Fragment, {
+        children: [(0, hY.jsx)("div", {
           className: "LuckyCloverWalletAnchor",
-          children: (0, PB.jsxs)("div", {
-            className: fB()("LuckyCloverWallet", {
-              Capped: FB && "Basic" !== FB
+          children: (0, hY.jsxs)("div", {
+            className: TY()("LuckyCloverWallet", {
+              Capped: HY && "Basic" !== HY
             }),
-            style: FB && {
-              "--luckyTierColour": QB[FB]
+            style: HY && {
+              "--luckyTierColour": dY[HY]
             },
-            children: [(0, PB.jsx)("div", {
+            children: [(0, hY.jsx)("div", {
               className: "LuckyCloverWalletFill",
               style: {
-                transform: `scaleX(${MB.progress})`
+                transform: `scaleX(${NY.progress})`
               }
-            }), DB > 0 && (0, PB.jsx)("div", {
+            }), yY > 0 && (0, hY.jsx)("div", {
               className: "LuckyCloverWalletReached",
               style: {
-                animationDelay: `${null!==(TB=null===LB||void 0===LB?void 0:LB.delayMs)&&void 0!==TB?TB:0}ms`
+                animationDelay: `${null!==(rY=null===sY||void 0===sY?void 0:sY.delayMs)&&void 0!==rY?rY:0}ms`
               }
-            }, DB), (0, PB.jsx)("div", {
-              ref: iB,
-              className: fB()("LuckyCloverWalletIcon", LB && "Bounce"),
+            }, yY), (0, hY.jsx)("div", {
+              ref: VY,
+              className: TY()("LuckyCloverWalletIcon", sY && "Bounce"),
               style: {
-                animationDelay: `${null!==(VB=null===LB||void 0===LB?void 0:LB.delayMs)&&void 0!==VB?VB:0}ms`
+                animationDelay: `${null!==(FY=null===sY||void 0===sY?void 0:sY.delayMs)&&void 0!==FY?FY:0}ms`
               },
-              children: (0, PB.jsx)(IB.c, {
-                itemName: sB,
+              children: (0, hY.jsx)(CY.c, {
+                itemName: eY,
                 amount: 0
               })
-            }, null !== (dB = null === LB || void 0 === LB ? void 0 : LB.id) && void 0 !== dB ? dB : 0), (0, PB.jsx)("span", {
+            }, null !== (DY = null === sY || void 0 === sY ? void 0 : sY.id) && void 0 !== DY ? DY : 0), (0, hY.jsx)("span", {
               className: "LuckyCloverWalletAmount SmallTextBold",
-              children: oB
-            }), FB && (0, PB.jsx)(SB.e, {
+              children: vY
+            }), HY && (0, hY.jsx)(jY.e, {
               className: "LuckyCloverWalletShop",
               name: "cart-shopping"
             })]
           })
-        }), (0, NB.createPortal)(HB.map((BB => (0, PB.jsx)(XB, {
-          flyer: BB,
-          target: iB,
+        }), (0, SY.createPortal)(oY.map((YY => (0, hY.jsx)(bY, {
+          flyer: YY,
+          target: VY,
           onDone: () => {
-            EB((TB => TB.filter((TB => TB.id !== BB.id))))
+            WY((rY => rY.filter((rY => rY.id !== YY.id))))
           }
-        }, BB.id))), document.body)]
+        }, YY.id))), document.body)]
       })
     }
 
-    function XB(BB) {
+    function bY(YY) {
       let {
-        flyer: TB,
-        target: dB,
-        onDone: VB
-      } = BB;
-      const pB = (0, yB.useRef)(null);
-      return (0, yB.useEffect)((() => {
-        var BB;
-        const yB = null === (BB = dB.current) || void 0 === BB ? void 0 : BB.getBoundingClientRect();
-        if (!pB.current || !yB) return void VB();
+        flyer: rY,
+        target: DY,
+        onDone: FY
+      } = YY;
+      const IY = (0, AY.useRef)(null);
+      return (0, AY.useEffect)((() => {
+        var YY;
+        const AY = null === (YY = DY.current) || void 0 === YY ? void 0 : YY.getBoundingClientRect();
+        if (!IY.current || !AY) return void FY();
         const {
-          x: lB,
-          y: JB
-        } = TB, YB = lB + 140 * (Math.random() - .5), gB = JB - 30 - 40 * Math.random(), oB = pB.current.animate([{
-          transform: `translate(${lB}px, ${JB}px) scale(0.3)`,
+          x: RY,
+          y: OY
+        } = rY, gY = RY + 140 * (Math.random() - .5), aY = OY - 30 - 40 * Math.random(), vY = IY.current.animate([{
+          transform: `translate(${RY}px, ${OY}px) scale(0.3)`,
           opacity: 0
         }, {
-          transform: `translate(${YB}px, ${gB}px) scale(1.3)`,
+          transform: `translate(${gY}px, ${aY}px) scale(1.3)`,
           opacity: 1,
           offset: .3
         }, {
-          transform: `translate(${yB.left}px, ${yB.top}px) scale(0.8)`,
+          transform: `translate(${AY.left}px, ${AY.top}px) scale(0.8)`,
           opacity: .9
         }], {
           duration: 750,
           easing: "ease-in",
-          delay: TB.delayMs,
+          delay: rY.delayMs,
           fill: "backwards"
         });
-        return oB.onfinish = VB, () => {
-          oB.cancel()
+        return vY.onfinish = FY, () => {
+          vY.cancel()
         }
-      }), []), (0, PB.jsx)("div", {
-        ref: pB,
+      }), []), (0, hY.jsx)("div", {
+        ref: IY,
         className: "LuckyCloverFlying",
-        children: (0, PB.jsx)(IB.c, {
-          itemName: sB,
+        children: (0, hY.jsx)(CY.c, {
+          itemName: eY,
           amount: 0
         })
       })
     }
-    var WB = dB(24);
-    const hB = "luckyGearUpgradeView",
-      CB = {
+    var XY = DY(25);
+    const qY = "luckyGearUpgradeView",
+      pY = {
         Wood: "#c8964f",
         Stone: "#b4b4b4",
         Iron: "#f2f2f2",
@@ -532,13 +532,13 @@ export const modules = {
         Diamond: "#5cf2ea"
       };
 
-    function GB(BB) {
-      var TB;
-      return null !== (TB = CB[BB.split(" ")[0]]) && void 0 !== TB ? TB : "#e07bff"
+    function kY(YY) {
+      var rY;
+      return null !== (rY = pY[YY.split(" ")[0]]) && void 0 !== rY ? rY : "#e07bff"
     }
-    class qB {
-      constructor(BB, TB) {
-        this.selectedSlot = BB, this.itemAt = TB, this.rings = [], this.unseen = new Map, this.view = {
+    class GY {
+      constructor(YY, rY) {
+        this.selectedSlot = YY, this.itemAt = rY, this.rings = [], this.unseen = new Map, this.view = {
           rings: [],
           unseenSlots: []
         }, this.nextId = 0
@@ -546,200 +546,200 @@ export const modules = {
       getView() {
         return this.view
       }
-      MD(BB) {
-        let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
-        for (const [dB, VB, yB] of BB) this.rings.push({
+      Cy(YY) {
+        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
+        for (const [DY, FY, AY] of YY) this.rings.push({
           id: this.nextId++,
-          slot: dB,
-          colour: GB(yB),
-          until: TB + 1200
-        }), dB !== this.selectedSlot() && this.unseen.set(dB, {
-          from: VB,
-          to: yB
+          slot: DY,
+          colour: kY(AY),
+          until: rY + 1200
+        }), DY !== this.selectedSlot() && this.unseen.set(DY, {
+          from: FY,
+          to: AY
         });
-        this.yH()
+        this.vo()
       }
-      dL() {
-        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : performance.now();
+      Zu() {
+        let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : performance.now();
         if (!this.rings.length && !this.unseen.size) return;
-        const TB = this.rings.filter((TB => TB.until > BB));
-        let dB = TB.length !== this.rings.length;
-        this.rings = TB;
-        for (const [VB, {
-            from: yB,
-            to: pB
+        const rY = this.rings.filter((rY => rY.until > YY));
+        let DY = rY.length !== this.rings.length;
+        this.rings = rY;
+        for (const [FY, {
+            from: AY,
+            to: IY
           }] of this.unseen) {
-          const BB = this.itemAt(VB);
-          (VB === this.selectedSlot() || BB !== pB && BB !== yB) && (this.unseen.delete(VB), dB = !0)
+          const YY = this.itemAt(FY);
+          (FY === this.selectedSlot() || YY !== IY && YY !== AY) && (this.unseen.delete(FY), DY = !0)
         }
-        dB && this.yH()
+        DY && this.vo()
       }
-      yH() {
+      vo() {
         this.view = {
           rings: [...this.rings],
           unseenSlots: [...this.unseen.keys()]
-        }, WB.h.yH(hB, this.view)
+        }, XY.g.vo(qY, this.view)
       }
     }
-    var xB = dB(1317);
+    var xY = DY(1430);
 
-    function jB(BB) {
-      return document.querySelector(`.HotBar [data-inven-idx="${BB}"]`)
+    function nY(YY) {
+      return document.querySelector(`.HotBar [data-inven-idx="${YY}"]`)
     }
 
-    function AB(BB) {
+    function PY(YY) {
       let {
-        ring: TB
-      } = BB;
-      const [dB, VB] = (0, yB.useState)(null);
-      return (0, yB.useLayoutEffect)((() => {
-        var BB, dB;
-        VB(null !== (BB = null === (dB = jB(TB.slot)) || void 0 === dB ? void 0 : dB.getBoundingClientRect()) && void 0 !== BB ? BB : null)
-      }), [TB]), dB ? (0, PB.jsx)("div", {
+        ring: rY
+      } = YY;
+      const [DY, FY] = (0, AY.useState)(null);
+      return (0, AY.useLayoutEffect)((() => {
+        var YY, DY;
+        FY(null !== (YY = null === (DY = nY(rY.slot)) || void 0 === DY ? void 0 : DY.getBoundingClientRect()) && void 0 !== YY ? YY : null)
+      }), [rY]), DY ? (0, hY.jsx)("div", {
         className: "LuckyGearRing",
         style: {
-          left: dB.left,
-          top: dB.top,
-          width: dB.width,
-          height: dB.height,
-          "--ringColour": TB.colour,
+          left: DY.left,
+          top: DY.top,
+          width: DY.width,
+          height: DY.height,
+          "--ringColour": rY.colour,
           "--ringMs": "1200ms"
         }
       }) : null
     }
 
-    function bB(BB) {
+    function UY(YY) {
       let {
-        slot: TB
-      } = BB;
-      const [dB, VB] = (0, yB.useState)(null);
-      return (0, yB.useLayoutEffect)((() => {
-        const BB = () => {
-          VB(jB(TB))
+        slot: rY
+      } = YY;
+      const [DY, FY] = (0, AY.useState)(null);
+      return (0, AY.useLayoutEffect)((() => {
+        const YY = () => {
+          FY(nY(rY))
         };
-        BB();
-        const dB = new MutationObserver(BB),
-          yB = document.querySelector(".BottomMiddleElements");
-        return yB && dB.observe(yB, {
+        YY();
+        const DY = new MutationObserver(YY),
+          AY = document.querySelector(".BottomMiddleElements");
+        return AY && DY.observe(AY, {
           childList: !0,
           subtree: !0
         }), () => {
-          dB.disconnect()
+          DY.disconnect()
         }
-      }), [TB]), dB ? (0, NB.createPortal)((0, PB.jsx)("div", {
+      }), [rY]), DY ? (0, SY.createPortal)((0, hY.jsx)("div", {
         className: "LuckyGearUnseen"
-      }), dB) : null
+      }), DY) : null
     }
 
-    function nB(BB) {
+    function LY(YY) {
       let {
-        controller: TB
-      } = BB;
-      const dB = (0, xB.f)(hB, TB.getView());
-      return (0, PB.jsxs)(PB.Fragment, {
-        children: [dB.rings.map((BB => (0, PB.jsx)(AB, {
-          ring: BB
-        }, BB.id))), dB.unseenSlots.map((BB => (0, PB.jsx)(bB, {
-          slot: BB
-        }, BB)))]
+        controller: rY
+      } = YY;
+      const DY = (0, xY.k)(qY, rY.getView());
+      return (0, hY.jsxs)(hY.Fragment, {
+        children: [DY.rings.map((YY => (0, hY.jsx)(PY, {
+          ring: YY
+        }, YY.id))), DY.unseenSlots.map((YY => (0, hY.jsx)(UY, {
+          slot: YY
+        }, YY)))]
       })
     }
-    const eB = function(BB, TB, dB, lB) {
-      let JB, {
-          localPlayerId: YB
-        } = lB,
-        gB = null;
-      const oB = new vB({
-          itemAt: BB => JB.getItemSlot(YB, BB),
-          selectedSlot: () => JB.getSelectedInventorySlotI(YB),
-          swap: (BB, TB) => {
-            JB.swapInventorySlots(BB, TB)
+    const tY = function(YY, rY, DY, RY) {
+      let OY, {
+          localPlayerId: gY
+        } = RY,
+        aY = null;
+      const vY = new EY({
+          itemAt: YY => OY.getItemSlot(gY, YY),
+          selectedSlot: () => OY.getSelectedInventorySlotI(gY),
+          swap: (YY, rY) => {
+            OY.swapInventorySlots(YY, rY)
           }
         }),
-        kB = new qB((() => JB.getSelectedInventorySlotI(YB)), (BB => {
-          var TB;
-          return null === (TB = JB.getItemSlot(YB, BB)) || void 0 === TB ? void 0 : TB.name
+        uY = new GY((() => OY.getSelectedInventorySlotI(gY)), (YY => {
+          var rY;
+          return null === (rY = OY.getItemSlot(gY, YY)) || void 0 === rY ? void 0 : rY.name
         }));
       return {
         plugins: {
-          placeAgainstBeds: (0, pB.c)()
+          placeAgainstBeds: (0, IY.d)()
         },
-        onCreate: BB => {
-          JB = BB, gB = (0, iB.r)((0, yB.createElement)(yB.Fragment, null, (0, yB.createElement)(aB), (0, yB.createElement)(nB, {
-            controller: kB
+        onCreate: YY => {
+          OY = YY, aY = (0, VY.q)((0, AY.createElement)(AY.Fragment, null, (0, AY.createElement)(MY), (0, AY.createElement)(LY, {
+            controller: uY
           })))
         },
         onClose: () => {
-          var BB;
-          null === (BB = gB) || void 0 === BB || BB()
+          var YY;
+          null === (YY = aY) || void 0 === YY || YY()
         },
-        dL: () => {
-          oB.dL(), kB.dL()
+        Zu: () => {
+          vY.Zu(), uY.Zu()
         },
-        onReceivedMessageFromServer: (BB, TB) => {
-          "luckyGearUpgrade" === BB && kB.MD(TB)
+        onReceivedMessageFromServer: (YY, rY) => {
+          "luckyGearUpgrade" === YY && uY.Cy(rY)
         },
-        onPlayerChangeBlock: (BB, TB, dB, VB, yB, pB) => {
-          "Air" !== pB && oB.onPlace(pB)
+        onPlayerChangeBlock: (YY, rY, DY, FY, AY, IY) => {
+          "Air" !== IY && vY.onPlace(IY)
         },
-        onPlayerDropItem: (BB, TB, dB, VB) => {
-          oB.onDrop(TB, VB)
+        onPlayerDropItem: (YY, rY, DY, FY) => {
+          vY.onDrop(rY, FY)
         },
-        onPlayerAltAction: (BB, TB, dB, yB, pB, lB) => {
-          if (!lB || "Mesh" !== JB.getEntityType(lB)) return;
-          const YB = JB.getEntityName(lB),
-            gB = Object.values(VB).find((BB => BB.name === YB));
-          gB && JB.openShop(BB, !1, gB.shopTab)
+        onPlayerAltAction: (YY, rY, DY, AY, IY, RY) => {
+          if (!RY || "Mesh" !== OY.getEntityType(RY)) return;
+          const gY = OY.getEntityName(RY),
+            aY = Object.values(FY).find((YY => YY.name === gY));
+          aY && OY.openShop(YY, !1, aY.shopTab)
         }
       }
     }
   },
-  36923: (BB, TB, dB) => {
-    dB.d(TB, {
-      c: () => JB
+  37376: (YY, rY, DY) => {
+    DY.d(rY, {
+      d: () => OY
     });
-    var VB = dB(279),
-      yB = dB(35894),
-      pB = dB(3896);
-    const lB = ["Leaf Bed", "_Leaf Bed Head", ...VB.Gc.flatMap((BB => [`${BB} Bed`, `_${BB} Bed Head`, `${BB} Strongbed`, `_${BB} Strongbed Head`]))];
+    var FY = DY(341),
+      AY = DY(36318),
+      IY = DY(4020);
+    const RY = ["Leaf Bed", "_Leaf Bed Head", ...FY.Fc.flatMap((YY => [`${YY} Bed`, `_${YY} Bed Head`, `${YY} Strongbed`, `_${YY} Strongbed Head`]))];
 
-    function JB() {
-      let BB;
+    function OY() {
+      let YY;
       return {
-        onCreate(TB) {
-          BB = TB
+        onCreate(rY) {
+          YY = rY
         },
-        altVetoBlocks: lB,
-        onPlayerAttemptAltAction(TB, dB, VB, lB, JB, YB) {
-          var gB;
-          if ((0, yB.e)(BB.getMetaInfo(JB).rootName) && !BB.isEntityInteractable(YB) && (0, pB.f)(null === (gB = BB.gdB(TB)) || void 0 === gB ? void 0 : gB.typeObj.type)) return "preventAction"
+        altVetoBlocks: RY,
+        onPlayerAttemptAltAction(rY, DY, FY, RY, OY, gY) {
+          var aY;
+          if ((0, AY.e)(YY.getMetaInfo(OY).rootName) && !YY.isEntityInteractable(gY) && (0, IY.f)(null === (aY = YY.rrY(rY)) || void 0 === aY ? void 0 : aY.typeObj.type)) return "preventAction"
         }
       }
     }
   },
-  35894: (BB, TB, dB) => {
-    function VB(BB) {
-      return BB.includes("Leaf Bed")
+  36318: (YY, rY, DY) => {
+    function FY(YY) {
+      return YY.includes("Leaf Bed")
     }
 
-    function yB(BB) {
-      return / Bed(?: Head)?(?:\||$)/.test(BB) && !VB(BB)
+    function AY(YY) {
+      return / Bed(?: Head)?(?:\||$)/.test(YY) && !FY(YY)
     }
 
-    function pB(BB) {
-      return BB.includes(" Strongbed")
+    function IY(YY) {
+      return YY.includes(" Strongbed")
     }
 
-    function lB(BB) {
-      return VB(BB) || yB(BB) || pB(BB)
+    function RY(YY) {
+      return FY(YY) || AY(YY) || IY(YY)
     }
-    dB.d(TB, {
-      e: () => lB,
-      h: () => VB,
-      l: () => pB,
-      p: () => yB
+    DY.d(rY, {
+      e: () => RY,
+      h: () => FY,
+      i: () => IY,
+      l: () => AY
     })
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

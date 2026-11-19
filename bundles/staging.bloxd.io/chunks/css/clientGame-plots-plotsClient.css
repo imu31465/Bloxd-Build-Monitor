@@ -696,7 +696,6 @@
 
 .PlotsProgress .PlotsProgressBar {
   background: rgba(57, 73, 128, .4);
-  border-radius: .3rem;
   flex: 1 1;
   height: .6rem;
   min-width: 4rem;

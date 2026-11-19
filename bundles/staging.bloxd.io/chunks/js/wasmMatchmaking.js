@@ -1,57 +1,57 @@
-/*! For license information please see l9xvfg.wasmMatchmaking.c0dbac6c.chunk.js.LICENSE.txt */
-export const id = 55;
-export const ids = [55];
+/*! For license information please see zyyatq.wasmMatchmaking.2d148955.chunk.js.LICENSE.txt */
+export const id = 59;
+export const ids = [59];
 export const modules = {
-  35692: BB => {
-    BB.exports = function BB(TB, dB) {
-      if (TB === dB) return !0;
-      if (TB && dB && "object" == typeof TB && "object" == typeof dB) {
-        if (TB.constructor !== dB.constructor) return !1;
-        var VB, yB, pB;
-        if (Array.isArray(TB)) {
-          if ((VB = TB.length) != dB.length) return !1;
-          for (yB = VB; 0 !== yB--;)
-            if (!BB(TB[yB], dB[yB])) return !1;
+  36116: YY => {
+    YY.exports = function YY(rY, DY) {
+      if (rY === DY) return !0;
+      if (rY && DY && "object" == typeof rY && "object" == typeof DY) {
+        if (rY.constructor !== DY.constructor) return !1;
+        var FY, AY, IY;
+        if (Array.isArray(rY)) {
+          if ((FY = rY.length) != DY.length) return !1;
+          for (AY = FY; 0 !== AY--;)
+            if (!YY(rY[AY], DY[AY])) return !1;
           return !0
         }
-        if (TB.constructor === RegExp) return TB.source === dB.source && TB.flags === dB.flags;
-        if (TB.valueOf !== Object.prototype.valueOf) return TB.valueOf() === dB.valueOf();
-        if (TB.toString !== Object.prototype.toString) return TB.toString() === dB.toString();
-        if ((VB = (pB = Object.keys(TB)).length) !== Object.keys(dB).length) return !1;
-        for (yB = VB; 0 !== yB--;)
-          if (!Object.prototype.hasOwnProperty.call(dB, pB[yB])) return !1;
-        for (yB = VB; 0 !== yB--;) {
-          var lB = pB[yB];
-          if (!BB(TB[lB], dB[lB])) return !1
+        if (rY.constructor === RegExp) return rY.source === DY.source && rY.flags === DY.flags;
+        if (rY.valueOf !== Object.prototype.valueOf) return rY.valueOf() === DY.valueOf();
+        if (rY.toString !== Object.prototype.toString) return rY.toString() === DY.toString();
+        if ((FY = (IY = Object.keys(rY)).length) !== Object.keys(DY).length) return !1;
+        for (AY = FY; 0 !== AY--;)
+          if (!Object.prototype.hasOwnProperty.call(DY, IY[AY])) return !1;
+        for (AY = FY; 0 !== AY--;) {
+          var RY = IY[AY];
+          if (!YY(rY[RY], DY[RY])) return !1
         }
         return !0
       }
-      return TB !== TB && dB !== dB
+      return rY !== rY && DY !== DY
     }
   },
-  35542: (BB, TB) => {
-    function dB(BB) {
-      if (BB && "object" === typeof BB) {
-        var TB = BB.which || BB.keyCode || BB.charCode;
-        TB && (BB = TB)
+  35974: (YY, rY) => {
+    function DY(YY) {
+      if (YY && "object" === typeof YY) {
+        var rY = YY.which || YY.keyCode || YY.charCode;
+        rY && (YY = rY)
       }
-      if ("number" === typeof BB) return lB[BB];
-      var dB, pB = String(BB);
-      return (dB = VB[pB.toLowerCase()]) ? dB : (dB = yB[pB.toLowerCase()]) || (1 === pB.length ? pB.charCodeAt(0) : void 0)
+      if ("number" === typeof YY) return RY[YY];
+      var DY, IY = String(YY);
+      return (DY = FY[IY.toLowerCase()]) ? DY : (DY = AY[IY.toLowerCase()]) || (1 === IY.length ? IY.charCodeAt(0) : void 0)
     }
-    dB.isEventKey = function(BB, TB) {
-      if (BB && "object" === typeof BB) {
-        var dB = BB.which || BB.keyCode || BB.charCode;
-        if (null === dB || void 0 === dB) return !1;
-        if ("string" === typeof TB) {
-          var pB;
-          if (pB = VB[TB.toLowerCase()]) return pB === dB;
-          if (pB = yB[TB.toLowerCase()]) return pB === dB
-        } else if ("number" === typeof TB) return TB === dB;
+    DY.isEventKey = function(YY, rY) {
+      if (YY && "object" === typeof YY) {
+        var DY = YY.which || YY.keyCode || YY.charCode;
+        if (null === DY || void 0 === DY) return !1;
+        if ("string" === typeof rY) {
+          var IY;
+          if (IY = FY[rY.toLowerCase()]) return IY === DY;
+          if (IY = AY[rY.toLowerCase()]) return IY === DY
+        } else if ("number" === typeof rY) return rY === DY;
         return !1
       }
     };
-    var VB = (TB = BB.exports = dB).code = TB.codes = {
+    var FY = (rY = YY.exports = DY).code = rY.codes = {
         backspace: 8,
         tab: 9,
         enter: 13,
@@ -96,7 +96,7 @@ export const modules = {
         "]": 221,
         "'": 222
       },
-      yB = TB.aliases = {
+      AY = rY.aliases = {
         windows: 91,
         "\u21e7": 16,
         "\u2325": 18,
@@ -118,47 +118,47 @@ export const modules = {
         del: 46,
         cmd: 91
       };
-    for (pB = 97; pB < 123; pB++) VB[String.fromCharCode(pB)] = pB - 32;
-    for (var pB = 48; pB < 58; pB++) VB[pB - 48] = pB;
-    for (pB = 1; pB < 13; pB++) VB["f" + pB] = pB + 111;
-    for (pB = 0; pB < 10; pB++) VB["numpad " + pB] = pB + 96;
-    var lB = TB.names = TB.title = {};
-    for (pB in VB) lB[VB[pB]] = pB;
-    for (var JB in yB) VB[JB] = yB[JB]
+    for (IY = 97; IY < 123; IY++) FY[String.fromCharCode(IY)] = IY - 32;
+    for (var IY = 48; IY < 58; IY++) FY[IY - 48] = IY;
+    for (IY = 1; IY < 13; IY++) FY["f" + IY] = IY + 111;
+    for (IY = 0; IY < 10; IY++) FY["numpad " + IY] = IY + 96;
+    var RY = rY.names = rY.title = {};
+    for (IY in FY) RY[FY[IY]] = IY;
+    for (var OY in AY) FY[OY] = AY[OY]
   },
-  35713: (BB, TB, dB) => {
-    dB.d(TB, {
-      b: () => lB
+  36135: (YY, rY, DY) => {
+    DY.d(rY, {
+      e: () => RY
     });
-    var VB = dB(62);
-    const yB = VB.useLayoutEffect;
-    const pB = function(BB) {
-      var TB = (0, VB.useRef)(BB);
-      return yB((function() {
-        TB.current = BB
-      })), TB
+    var FY = DY(61);
+    const AY = FY.useLayoutEffect;
+    const IY = function(YY) {
+      var rY = (0, FY.useRef)(YY);
+      return AY((function() {
+        rY.current = YY
+      })), rY
     };
-    var lB = function(BB) {
-      var TB = pB(BB);
-      (0, VB.useEffect)((function() {
-        var BB = function(BB) {
-          var dB;
-          if (null != TB.current && (dB = TB.current(BB)), BB.defaultPrevented && (BB.returnValue = ""), "string" === typeof dB) return BB.returnValue = dB, dB
+    var RY = function(YY) {
+      var rY = IY(YY);
+      (0, FY.useEffect)((function() {
+        var YY = function(YY) {
+          var DY;
+          if (null != rY.current && (DY = rY.current(YY)), YY.defaultPrevented && (YY.returnValue = ""), "string" === typeof DY) return YY.returnValue = DY, DY
         };
-        return window.addEventListener("beforeunload", BB),
+        return window.addEventListener("beforeunload", YY),
           function() {
-            window.removeEventListener("beforeunload", BB)
+            window.removeEventListener("beforeunload", YY)
           }
       }), [])
     }
   },
-  35571: BB => {
-    var TB, dB = "undefined" !== typeof window ? window.navigator.userAgent : "",
-      VB = /OS X/.test(dB),
-      yB = /Opera/.test(dB),
-      pB = !/like Gecko/.test(dB) && !yB,
-      lB = BB.exports = {
-        0: VB ? "<menu>" : "<UNK>",
+  36008: YY => {
+    var rY, DY = "undefined" !== typeof window ? window.navigator.userAgent : "",
+      FY = /OS X/.test(DY),
+      AY = /Opera/.test(DY),
+      IY = !/like Gecko/.test(DY) && !AY,
+      RY = YY.exports = {
+        0: FY ? "<menu>" : "<UNK>",
         1: "<mouse 1>",
         2: "<mouse 2>",
         3: "<break>",
@@ -201,7 +201,7 @@ export const modules = {
         47: "<help>",
         91: "<meta>",
         92: "<meta>",
-        93: VB ? "<meta>" : "<menu>",
+        93: FY ? "<meta>" : "<menu>",
         95: "<sleep>",
         106: "<num-*>",
         107: "<num-+>",
@@ -224,7 +224,7 @@ export const modules = {
         170: "<browser-search>",
         171: "<browser-favorites>",
         172: "<browser-home>",
-        173: VB && pB ? "-" : "<volume-mute>",
+        173: FY && IY ? "-" : "<volume-mute>",
         174: "<volume-down>",
         175: "<volume-up>",
         176: "<next-track>",
@@ -250,7 +250,7 @@ export const modules = {
         224: "<meta>",
         226: "<alt-gr>",
         229: "<ime-process>",
-        231: yB ? "`" : "<unicode>",
+        231: AY ? "`" : "<unicode>",
         246: "<attention>",
         247: "<crsel>",
         248: "<exsel>",
@@ -261,237 +261,171 @@ export const modules = {
         253: "<pa-1>",
         254: "<clear>"
       };
-    for (TB = 58; TB < 65; ++TB) lB[TB] = String.fromCharCode(TB);
-    for (TB = 48; TB < 58; ++TB) lB[TB] = TB - 48 + "";
-    for (TB = 65; TB < 91; ++TB) lB[TB] = String.fromCharCode(TB);
-    for (TB = 96; TB < 106; ++TB) lB[TB] = "<num-" + (TB - 96) + ">";
-    for (TB = 112; TB < 136; ++TB) lB[TB] = "F" + (TB - 111)
+    for (rY = 58; rY < 65; ++rY) RY[rY] = String.fromCharCode(rY);
+    for (rY = 48; rY < 58; ++rY) RY[rY] = rY - 48 + "";
+    for (rY = 65; rY < 91; ++rY) RY[rY] = String.fromCharCode(rY);
+    for (rY = 96; rY < 106; ++rY) RY[rY] = "<num-" + (rY - 96) + ">";
+    for (rY = 112; rY < 136; ++rY) RY[rY] = "F" + (rY - 111)
   },
-  5994: (BB, TB, dB) => {
-    dB.d(TB, {
-      b: () => yB,
-      d: () => pB
+  6230: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => AY,
+      e: () => IY
     });
-    var VB = dB(33);
-    const yB = "shaderPack";
-    async function pB() {
-      var BB;
-      let TB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (BB = await VB.f.getItem(yB, TB)) && void 0 !== BB ? BB : null
+    var FY = DY(40);
+    const AY = "shaderPack";
+    async function IY() {
+      var YY;
+      let rY = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (YY = await FY.i.getItem(AY, rY)) && void 0 !== YY ? YY : null
     }
   },
-  35399: (BB, TB, dB) => {
-    dB.d(TB, {
-      e: () => YB,
-      g: () => gB
+  8309: (YY, rY, DY) => {
+    DY.d(rY, {
+      e: () => IY,
+      h: () => AY
     });
-    var VB = dB(1133),
-      yB = dB(3073),
-      pB = dB(586),
-      lB = dB(8214);
+    let FY = !1;
 
-    function JB(BB, TB) {
-      let VB = !1;
-      const pB = () => {
-        VB = !0
-      };
-      if (! function(BB) {
-          var TB;
-          return !0 !== (null === BB || void 0 === BB ? void 0 : BB.saveData) && !/2g$/.test(null !== (TB = null === BB || void 0 === BB ? void 0 : BB.effectiveType) && void 0 !== TB ? TB : "")
-        }(navigator.connection)) return pB;
-      const JB = () => !VB && !(0, lB.i)();
-      return (0, yB.b)((() => {
-        JB() && Promise.all([dB.e(126), dB.e(81), dB.e(51)]).then((() => dB(39476))).then((BB => JB() ? TB(BB) : void 0), (TB => {
-          console.warn(`[bloxd-wasm-client] ${BB} did not load: the join loads the client itself`, TB)
+    function AY() {
+      FY = !0
+    }
+
+    function IY() {
+      return FY
+    }
+  },
+  35873: (YY, rY, DY) => {
+    DY.r(rY), DY.d(rY, {
+      InGameUi: () => mY.c,
+      LobbyLeaderboard: () => VY.c,
+      loadCharacterCustomisationUI: () => SY,
+      loadCharacterPreview: () => lY,
+      matchmakeAndPlay: () => BY,
+      setUpGame: () => TY
+    });
+    var FY = DY(1253),
+      AY = DY(183),
+      IY = DY(19),
+      RY = DY(35881),
+      OY = DY(35886),
+      gY = DY(1823),
+      aY = DY(35921);
+
+    function vY() {
+      return !1 !== gY.b.get("canCustomiseChar")
+    }
+    let uY = !1;
+    var sY = DY(1322),
+      iY = DY(1256),
+      yY = DY(713),
+      QY = DY(8309);
+    var oY = DY(8307),
+      WY = DY(3168),
+      EY = DY(1762);
+    var mY = DY(35935),
+      VY = DY(36372);
+
+    function SY() {
+      return Promise.all([DY.e(279), DY.e(387)]).then((() => DY(40271)))
+    }
+
+    function lY() {
+      return DY.e(280).then((() => DY(40276)))
+    }
+
+    function TY() {
+      return (0, oY.f)()
+    }
+    uY || (uY = !0, document.addEventListener("keydown", (YY => {
+        (0, aY.e)(YY, vY)
+      }))),
+      function(YY) {
+        var rY;
+        return !0 !== (null === YY || void 0 === YY ? void 0 : YY.saveData) && !/2g$/.test(null !== (rY = null === YY || void 0 === YY ? void 0 : YY.effectiveType) && void 0 !== rY ? rY : "")
+      }(navigator.connection) && (0, yY.d)((() => {
+        (0, QY.e)() || Promise.all([DY.e(74), DY.e(133), DY.e(87), DY.e(55)]).then((() => DY(39865))).then((YY => {
+          (0, QY.e)() || YY.startLoadAheadOfJoin({
+            joinStarted: QY.e,
+            language: iY.h.get().getCurrentLanguageCode()
+          })
+        }), (YY => {
+          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", YY)
         }))
-      })), pB
-    }
-
-    function YB() {
-      JB("the prefetch", (BB => {
-        let {
-          prefetchWasmClient: TB
-        } = BB;
-        return TB({
-          joinStarted: lB.i,
-          language: VB.f.get().getCurrentLanguageCode()
-        })
-      }))
-    }
-
-    function gB() {
-      return pB.p ? JB("the game page's early load", (BB => {
-        let {
-          startGamePageLoad: TB
-        } = BB;
-        return TB()
-      })) : () => {}
-    }
-  },
-  35457: (BB, TB, dB) => {
-    dB.r(TB), dB.d(TB, {
-      InGameUi: () => EB.b,
-      LobbyLeaderboard: () => vB.c,
-      loadCharacterCustomisationUI: () => mB,
-      loadCharacterPreview: () => iB,
-      matchmakeAndPlay: () => sB,
-      setUpGame: () => NB
-    });
-    var VB = dB(1126),
-      yB = dB(163),
-      pB = dB(21),
-      lB = dB(35466),
-      JB = dB(35474),
-      YB = dB(1708),
-      gB = dB(35488);
-
-    function oB() {
-      return !1 !== YB.c.get("canCustomiseChar")
-    }
-    let kB = !1;
-    var LB = dB(1209),
-      OB = dB(35399),
-      DB = dB(8214),
-      uB = dB(3069),
-      HB = dB(1638);
-    var EB = dB(35500),
-      vB = dB(35965);
-
-    function mB() {
-      return Promise.all([dB.e(269), dB.e(377)]).then((() => dB(39902)))
-    }
-
-    function iB() {
-      return dB.e(270).then((() => dB(39911)))
-    }
-
-    function NB() {
-      return (0, DB.g)()
-    }
-    kB || (kB = !0, document.addEventListener("keydown", (BB => {
-      (0, gB.d)(BB, oB)
-    }))), (0, OB.e)();
-    const tB = pB.d.get("router");
-    null === tB ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function BB(TB) {
-      if ((0, HB.d)(TB.state.location.pathname)) return void(0, DB.c)().catch((() => {}));
-      const dB = TB.subscribe((VB => {
-        (0, HB.d)(VB.location.pathname) && (dB(), (0, uB.d)().then((() => {
-          BB(TB)
+      }));
+    const eY = IY.b.get("router");
+    null === eY ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function YY(rY) {
+      if ((0, EY.d)(rY.state.location.pathname)) return void(0, oY.e)().catch((() => {}));
+      const DY = rY.subscribe((FY => {
+        (0, EY.d)(FY.location.pathname) && (DY(), (0, WY.b)().then((() => {
+          YY(rY)
         })))
       }))
-    }(tB), (0, lB.d)();
-    const fB = (0, JB.e)((async function(BB, TB) {
+    }(eY), (0, RY.d)();
+    const NY = (0, OY.d)((async function(YY, rY) {
       let {
-        place: dB,
-        userContext: pB,
-        direct: lB,
-        rematch: JB
-      } = BB;
-      const YB = lB ? 1 / 0 : performance.now();
-      let gB;
+        place: DY,
+        userContext: IY,
+        direct: RY,
+        rematch: OY
+      } = YY;
+      const gY = RY ? 1 / 0 : performance.now();
+      let aY;
       try {
-        gB = await (0, DB.c)()
-      } catch (oB) {
-        return console.error("The wasm client did not load:", oB), (0, LB.r)({
+        aY = await (0, oY.e)()
+      } catch (vY) {
+        return console.error("The wasm client did not load:", vY), (0, sY.n)({
           websocketUrl: null
-        }), VB.d.errorWithCode(String(oB), yB.i.CONNECT_TO_GAME_SERVER, {
-          error: oB,
-          severity: TB.aborted ? "low" : "medium",
-          IT: TB.aborted
+        }), FY.e.errorWithCode(String(vY), AY.l.CONNECT_TO_GAME_SERVER, {
+          error: vY,
+          severity: rY.aborted ? "low" : "medium",
+          Hr: rY.aborted
         })
       }
-      return gB.playWasmGame({
-        userContext: pB,
-        place: dB,
-        matchedAt: YB,
-        rematch: JB
-      }, TB)
+      return aY.playWasmGame({
+        userContext: IY,
+        place: DY,
+        matchedAt: gY,
+        rematch: OY
+      }, rY)
     }));
 
-    function sB() {
-      return (0, DB.c)().catch((() => {})), fB(...arguments)
+    function BY() {
+      return (0, oY.e)().catch((() => {})), NY(...arguments)
     }
   },
-  8214: (BB, TB, dB) => {
-    dB.d(TB, {
-      c: () => oB,
-      g: () => LB,
-      i: () => kB
+  8307: (YY, rY, DY) => {
+    DY.d(rY, {
+      e: () => vY,
+      f: () => uY
     });
-    var VB = dB(2614),
-      yB = dB(2034),
-      pB = dB(2664),
-      lB = dB(4051),
-      JB = dB(2998);
-    let YB = null,
-      gB = !1;
+    var FY = DY(2743),
+      AY = DY(2137),
+      IY = DY(2785),
+      RY = DY(4220),
+      OY = DY(3082),
+      gY = DY(8309);
+    let aY = null;
 
-    function oB() {
-      return lB.e.cancelDownloadForJoin(), (0, JB.d)(), (0, yB.i)(), gB = !0, (0, pB.h)(), Promise.all([dB.e(64), dB.e(67), dB.e(66), dB.e(65), dB.e(77), dB.e(228), dB.e(202), dB.e(226), dB.e(197), dB.e(43)]).then((() => dB(39407))).catch((() => {})), Promise.all([dB.e(126), dB.e(81), dB.e(51)]).then((() => dB(39476))).then((BB => {
+    function vY() {
+      return RY.e.cancelDownloadForJoin(), (0, OY.b)(), (0, AY.c)(), (0, gY.h)(), (0, IY.i)(), Promise.all([DY.e(69), DY.e(72), DY.e(71), DY.e(70), DY.e(83), DY.e(258), DY.e(237), DY.e(211), DY.e(235), DY.e(207), DY.e(46)]).then((() => DY(39778))).catch((() => {})), Promise.all([DY.e(74), DY.e(133), DY.e(87), DY.e(55)]).then((() => DY(39865))).then((YY => {
         let {
-          startJoinLoad: TB
-        } = BB;
-        TB()
-      }), (() => {})), YB ??= Promise.all([dB.e(66), dB.e(126), dB.e(122), dB.e(251), dB.e(177), dB.e(81), dB.e(80), dB.e(79), dB.e(197), dB.e(56)]).then((() => dB(39565))).then((BB => (BB.startWasmPlay(), BB.followPageUiPack((BB => {
-        VB.b.showGamePack(BB)
-      })), BB)), (BB => {
-        throw YB = null, BB
-      })), YB
+          startJoinLoad: rY
+        } = YY;
+        rY()
+      }), (() => {})), aY ??= Promise.all([DY.e(71), DY.e(74), DY.e(130), DY.e(73), DY.e(133), DY.e(261), DY.e(185), DY.e(87), DY.e(86), DY.e(85), DY.e(207), DY.e(60)]).then((() => DY(39960))).then((YY => (YY.startWasmPlay(), YY.followPageUiPack((YY => {
+        FY.d.showGamePack(YY)
+      })), YY)), (YY => {
+        throw aY = null, YY
+      })), aY
     }
 
-    function kB() {
-      return gB
-    }
-
-    function LB() {
-      return Promise.all([dB.e(66), dB.e(126), dB.e(122), dB.e(251), dB.e(177), dB.e(81), dB.e(80), dB.e(79), dB.e(197), dB.e(56)]).then((() => dB(39565))).then((BB => {
-        BB.startWasmPreviews(), BB.prefetchWasmPreviews()
+    function uY() {
+      return Promise.all([DY.e(71), DY.e(74), DY.e(130), DY.e(73), DY.e(133), DY.e(261), DY.e(185), DY.e(87), DY.e(86), DY.e(85), DY.e(207), DY.e(60)]).then((() => DY(39960))).then((YY => {
+        YY.startWasmPreviews(), YY.prefetchWasmPreviews()
       }))
-    }
-  },
-  35894: (BB, TB, dB) => {
-    function VB(BB) {
-      return BB.includes("Leaf Bed")
-    }
-
-    function yB(BB) {
-      return / Bed(?: Head)?(?:\||$)/.test(BB) && !VB(BB)
-    }
-
-    function pB(BB) {
-      return BB.includes(" Strongbed")
-    }
-
-    function lB(BB) {
-      return VB(BB) || yB(BB) || pB(BB)
-    }
-    dB.d(TB, {
-      e: () => lB,
-      h: () => VB,
-      l: () => pB,
-      p: () => yB
-    })
-  },
-  35886: (BB, TB, dB) => {
-    dB.d(TB, {
-      e: () => gB
-    });
-    var VB = dB(35894),
-      yB = dB(8653);
-    const pB = [],
-      lB = [],
-      JB = [],
-      YB = [];
-    for (const oB of Object.keys(yB.n))(0, VB.h)(oB) ? pB.push(oB) : (0, VB.p)(oB) && lB.push(oB), (0, VB.l)(oB) && JB.push(oB), (oB.includes(" Bed Head") || oB.includes(" Strongbed Head")) && YB.push(oB);
-    const gB = {
-      leafBeds: pB,
-      woolBeds: lB,
-      strongBeds: JB,
-      beds: [...pB, ...lB, ...JB],
-      bedHeads: YB,
-      blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

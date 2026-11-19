@@ -1,146 +1,208 @@
 export const id = 131;
 export const ids = [131];
 export const modules = {
-  7413: (BB, TB, dB) => {
-    dB.r(TB), dB.d(TB, {
-      BloxdDiscordSDK: () => uB,
-      DiscordLoginCancelledError: () => DB,
-      discordPopupTimeoutMs: () => OB
+  6194: (YY, rY, DY) => {
+    DY.r(rY), DY.d(rY, {
+      loadShaderPackTextures: () => RY,
+      shaderPackTextures: () => OY
     });
-    var VB = dB(163),
-      yB = dB(1109),
-      pB = dB(1020),
-      lB = dB(1030),
-      JB = dB.n(lB),
-      YB = dB(1089),
-      gB = dB(33),
-      oB = dB(572),
-      kB = dB(1235),
-      LB = dB(1092);
-    const OB = 6e5;
-    class DB extends Error {
-      constructor() {
-        super(...arguments), this.name = pB.discordLoginCancelledErrorName
-      }
-    }
-    class uB {
-      constructor() {
-        this.popupWindowPromise = null, this.popupWindowPromiseResolve = null, this.popupWindowPromiseReject = null, this.popupWindow = null, this.popupWindowCheckInterval = null, this.popupWindowTimeout = null, this.bloxdDiscordRefreshTokenKey = "4PSIDTCPM", this.discordRedirectUrl = yB.q[LB.e.clientEnvironment];
-        const BB = new URL(this.discordRedirectUrl).origin;
-        window.addEventListener("message", (TB => {
-          var dB;
-          if (TB.origin !== BB || "oauth_authentication_discord" !== (null === (dB = TB.data) || void 0 === dB ? void 0 : dB.type)) return;
-          if ("string" !== typeof TB.data.code || !TB.data.code) return void this.failPopup(new DB("Discord authentication was cancelled on Discord"));
-          const VB = this.popupWindowPromiseResolve;
-          this.resetPopupState(), null === VB || void 0 === VB || VB(TB.data.code)
-        }))
-      }
-      resetPopupState() {
-        null !== this.popupWindowCheckInterval && window.clearInterval(this.popupWindowCheckInterval), null !== this.popupWindowTimeout && window.clearTimeout(this.popupWindowTimeout), this.popupWindowCheckInterval = null, this.popupWindowTimeout = null, this.popupWindowPromiseResolve = null, this.popupWindowPromiseReject = null, this.popupWindowPromise = null, this.popupWindow = null
-      }
-      failPopup(BB) {
-        var TB;
-        const dB = this.popupWindowPromiseReject;
-        null === (TB = this.popupWindow) || void 0 === TB || TB.close(), this.resetPopupState(), null === dB || void 0 === dB || dB(BB)
-      }
-      openDiscordOAuthWindow() {
-        const BB = LB.e.discordClientID;
-        return window.open(`https://discord.com/oauth2/authorize?response_type=code&client_id=${BB}&scope=identify%20guilds&redirect_uri=${this.discordRedirectUrl}&integration_type=0`, "oauth_authentication", `popup,width=480,height=720,top=${window.screen.height/2-360},left=${window.screen.width/2-240}`)
-      }
-      async showDiscordAuthPrompt() {
-        return new Promise(((BB, TB) => {
-          kB.NotificationProvider.showPromptPopup({
-            title: "Discord Login Required",
-            confirmText: "Continue",
-            confirmTooltip: "Open Discord login window",
-            cancelText: "Cancel",
-            cancelTooltip: "Cancel Discord login"
-          }).getResult().then((dB => {
-            !0 === dB ? BB() : TB(new DB("Discord login was cancelled"))
-          })).catch(TB)
-        }))
-      }
-      signInWithPopup() {
-        if (null !== this.popupWindowPromise) return this.popupWindowPromise;
-        const BB = new Promise(((BB, TB) => {
-          this.popupWindowPromiseResolve = BB, this.popupWindowPromiseReject = TB
-        }));
-        return this.popupWindowPromise = BB, gB.c.removeItem(this.bloxdDiscordRefreshTokenKey), this.popupWindowTimeout = window.setTimeout((() => {
-          this.failPopup(new Error("Discord authentication timed out"))
-        }), OB), this.openPopup(BB).catch((TB => {
-          this.popupWindowPromise === BB && this.failPopup(TB instanceof Error ? TB : new Error(String(TB)))
-        })), BB
-      }
-      async openPopup(BB) {
-        let TB = this.openDiscordOAuthWindow();
-        if (!TB) {
-          if (await this.showDiscordAuthPrompt(), this.popupWindowPromise !== BB) return;
-          TB = this.openDiscordOAuthWindow()
-        }
-        if (console.log("Discord OAuth window opened:", TB), !TB) throw new Error("Failed to open Discord authentication popup - popup may have been blocked");
-        this.popupWindow = TB;
-        const dB = window.setInterval((() => {
-          TB.closed && this.popupWindowPromise === BB && (window.clearInterval(dB), this.popupWindowCheckInterval = null, window.setTimeout((() => {
-            this.popupWindowPromise === BB && this.failPopup(new DB("Discord authentication was cancelled - popup window was closed"))
-          }), 1e3))
-        }), 200);
-        this.popupWindowCheckInterval = dB
-      }
-      async exchangeAuthorizationCodeForAccessToken(BB, TB) {
-        const {
-          accessToken: dB,
-          refreshToken: VB
-        } = await JB()((async () => await (0, pB.postJsonWithMetricsCookiesAndJsonResponse)(`${YB.clientSideServerUrls.indexUrl}/index/discord/log-event`, {
-          authorizationCode: BB,
-          bloxdClientEnvironment: LB.e.clientEnvironment,
-          instanceId: null
-        }, {
-          retries: 0
-        }, TB.getMetricsCookies())), {
-          retries: 3
-        });
-        return console.log("Discord access token received:", VB, this.bloxdDiscordRefreshTokenKey), gB.c.setItem(this.bloxdDiscordRefreshTokenKey, VB), dB
-      }
-      hasCurrentUser() {
-        const BB = gB.c.getItem(this.bloxdDiscordRefreshTokenKey);
-        return !(0, oB.M)(BB)
-      }
-      async getCurrentUser(BB) {
-        const TB = gB.c.getItem(this.bloxdDiscordRefreshTokenKey);
-        if (!TB) return null;
-        let dB;
-        try {
-          const VB = await JB()((async () => {
-            try {
-              return await (0, pB.postJsonWithMetricsCookiesAndJsonResponse)(`${YB.clientSideServerUrls.indexUrl}/index/discord/collect-event`, {
-                refreshToken: TB
-              }, {
-                retries: 0
-              }, BB.getMetricsCookies())
-            } catch (dB) {
-              if (HB(dB)) throw new(JB().AbortError)(dB);
-              throw dB
-            }
-          }), {
-            retries: 3
-          });
-          dB = VB.accessToken, gB.c.setItem(this.bloxdDiscordRefreshTokenKey, VB.refreshToken)
-        } catch (VB) {
-          return HB(VB) ? (gB.c.removeItem(this.bloxdDiscordRefreshTokenKey), null) : (console.error("Failed to refresh Discord access token:", VB), null)
-        }
-        return {
-          accessToken: dB
-        }
-      }
-      signOut() {
-        this.failPopup(new DB("Signed out of Discord during login")), gB.c.removeItem(this.bloxdDiscordRefreshTokenKey)
-      }
+    var FY = DY(6150);
+    let AY = null,
+      IY = null;
+
+    function RY() {
+      return IY ??= Promise.all([DY.e(69), DY.e(193)]).then((() => DY(39609))).then((YY => {
+        let {
+          FORMER_BLOCK_IMAGE_NAMES: rY,
+          textureNameToIndex: DY,
+          textureAnimationData: IY
+        } = YY;
+        return AY ??= (0, FY.n)(DY, IY, rY), AY
+      })), IY
     }
 
-    function HB(BB) {
-      return BB instanceof VB.b && 435 === BB.httpCode
+    function OY() {
+      if (null === AY) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return AY
+    }
+  },
+  6150: (YY, rY, DY) => {
+    DY.d(rY, {
+      A: () => uY,
+      b: () => RY,
+      f: () => IY,
+      j: () => FY,
+      n: () => yY,
+      r: () => vY,
+      t: () => AY,
+      w: () => gY,
+      z: () => aY
+    });
+    const FY = 5;
+
+    function AY(YY) {
+      return YY === FY
+    }
+    const IY = 262144,
+      RY = 256,
+      OY = 256;
+
+    function gY(YY) {
+      if ("object" !== typeof YY || null === YY || Array.isArray(YY)) return "The pack has no files.";
+      const rY = [];
+      for (const [DY, FY] of Object.entries(YY)) {
+        if ("string" !== typeof FY) return `${DY} isn't text.`;
+        rY.push({
+          path: DY,
+          source: FY
+        })
+      }
+      return rY.sort(((YY, rY) => vY(YY.path, rY.path))),
+        function(YY) {
+          if (0 === YY.length) return "The pack has no .wgsl files.";
+          if (YY.length > RY) return `The pack has more than ${RY} .wgsl files.`;
+          const rY = new Set;
+          for (const {
+              path: DY
+            }
+            of YY) {
+            const YY = sY(DY);
+            if (null !== YY) return YY;
+            if (rY.has(DY)) return `The pack has two files at ${DY}.`;
+            rY.add(DY)
+          }
+          return uY(YY) > IY ? `The pack's .wgsl files are over ${IY/1024} KB in total.` : null
+        }(rY) ?? rY
+    }
+
+    function aY(YY) {
+      const rY = {};
+      for (const DY of YY) rY[DY.path] = DY.source;
+      return rY
+    }
+
+    function vY(YY, rY) {
+      return YY < rY ? -1 : YY > rY ? 1 : 0
+    }
+
+    function uY(YY) {
+      const rY = new TextEncoder;
+      let DY = 0;
+      for (const {
+          source: FY
+        }
+        of YY) DY += rY.encode(FY).byteLength;
+      return DY
+    }
+
+    function sY(YY) {
+      if (!YY.toLowerCase().endsWith(".wgsl")) return `${YY} isn't a .wgsl file.`;
+      if (YY.length > OY) return `A file path is over ${OY} characters.`;
+      if (YY.includes("\\") || /[\u0000-\u001f]/.test(YY)) return `${YY} isn't a valid file path.`;
+      return YY.split("/").some((YY => "" === YY || "." === YY || ".." === YY)) ? `${YY} isn't a valid file path.` : null
+    }
+    const iY = /^(.*)\[rot\[([1-4])$/;
+
+    function yY(YY, rY) {
+      let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const FY = new Map;
+      rY.forEach(((YY, rY) => {
+        let {
+          numAnimStates: DY,
+          animStartIdx: AY
+        } = YY;
+        for (let IY = 1; IY < DY; IY++) FY.set(AY + IY - 1, rY)
+      }));
+      const AY = Object.entries(YY),
+        IY = new Map;
+      for (const [QY, oY] of AY) {
+        const YY = iY.exec(QY);
+        "1" === YY?.[2] && IY.set(YY[1], oY + 1)
+      }
+      const RY = YY => {
+          const rY = iY.exec(YY);
+          return rY && IY.has(rY[1]) ? {
+            root: rY[1],
+            rotation: Number(rY[2]) - 1
+          } : null
+        },
+        OY = new Set(AY.map((YY => {
+          let [rY] = YY;
+          return RY(rY)?.root ?? rY
+        }))),
+        gY = (YY, DY) => {
+          const FY = YY.replace(/_?0$/, "");
+          return (rY[DY]?.numAnimStates ?? 0) > 1 && !OY.has(FY) ? FY : YY
+        },
+        aY = new Map;
+      for (const [iY, QY] of AY) aY.set(QY, gY(RY(iY)?.root ?? iY, QY));
+      const vY = AY.reduce(((YY, rY) => {
+          let [, DY] = rY;
+          return Math.max(YY, DY + 1)
+        }), 0),
+        uY = Array.from({
+          length: vY
+        }, ((YY, rY) => ({
+          id: rY + 1,
+          rotation: 0
+        }))),
+        sY = new Map,
+        yY = new Map;
+      for (const [iY, QY] of AY) {
+        const YY = RY(iY),
+          rY = FY.get(QY);
+        if (void 0 !== rY) {
+          const DY = aY.get(rY);
+          yY.set(iY, {
+            name: iY,
+            texture: DY,
+            kind: "frame"
+          }), YY && !yY.has(YY.root) && yY.set(YY.root, {
+            name: YY.root,
+            texture: DY,
+            kind: "frame"
+          });
+          continue
+        }
+        const DY = aY.get(QY),
+          AY = YY?.root ?? iY;
+        if (DY !== AY && yY.set(AY, {
+            name: AY,
+            texture: DY,
+            kind: "frame"
+          }), YY) {
+          const rY = IY.get(YY.root);
+          uY[QY] = {
+            id: rY,
+            rotation: YY.rotation
+          }, sY.set(DY, rY), yY.set(iY, {
+            name: iY,
+            texture: DY,
+            kind: "rotation"
+          })
+        } else sY.set(DY, QY + 1)
+      }
+      for (const iY of sY.keys()) yY.delete(iY);
+      for (const [iY, QY] of DY) {
+        const YY = sY.get(QY);
+        void 0 === YY || sY.has(iY) || (sY.set(iY, YY), yY.delete(iY))
+      }
+      return {
+        named: [...sY].sort(((YY, rY) => {
+          let [DY] = YY, [FY] = rY;
+          return DY < FY ? -1 : DY > FY ? 1 : 0
+        })).map((YY => {
+          let [rY, DY] = YY;
+          return {
+            name: rY,
+            id: DY
+          }
+        })),
+        aliases: [...yY.values()],
+        layers: uY
+      }
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

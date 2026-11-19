@@ -1,331 +1,387 @@
 export const id = 22;
 export const ids = [22];
 export const modules = {
-  35589: (BB, TB, dB) => {
-    dB.d(TB, {
-      c: () => OB,
-      e: () => DB,
-      h: () => LB,
-      l: () => kB
+  36025: (YY, rY, DY) => {
+    DY.d(rY, {
+      d: () => iY,
+      e: () => yY,
+      g: () => sY,
+      h: () => uY
     });
-    var VB = dB(8570),
-      yB = dB(35595),
-      pB = dB(35601),
-      lB = dB(8103),
-      JB = dB(1317),
-      YB = dB(62),
-      gB = dB(72),
-      oB = dB(980);
+    var FY = DY(8745),
+      AY = DY(36032),
+      IY = DY(36034),
+      RY = DY(8111),
+      OY = DY(1430),
+      gY = DY(61),
+      aY = DY(76),
+      vY = DY(1125);
 
-    function kB() {
-      var BB;
-      return (0, JB.f)(yB.c, (0, yB.k)()), (0, oB.jsx)(oB.Fragment, {
-        children: null === (BB = (0, yB.k)()) || void 0 === BB ? void 0 : BB.content
+    function uY() {
+      var YY;
+      return (0, OY.k)(AY.d, (0, AY.n)()), (0, vY.jsx)(vY.Fragment, {
+        children: null === (YY = (0, AY.n)()) || void 0 === YY ? void 0 : YY.content
       })
     }
 
-    function LB(BB) {
-      var TB;
+    function sY(YY) {
+      var rY;
       let {
-        show: dB
-      } = BB;
-      (0, JB.f)(yB.c, (0, yB.k)());
-      const gB = null === (TB = (0, yB.k)()) || void 0 === TB ? void 0 : TB.menu;
-      return (0, YB.useEffect)((() => {
-        var BB;
-        dB || (null === gB || void 0 === gB || null === (BB = gB.onClose) || void 0 === BB || BB.call(gB), (0, pB.r)())
-      }), [dB, gB]), (0, YB.useEffect)((() => dB ? (0, lB.c)(pB.x, pB.e) : void 0), [dB]), (0, oB.jsx)(VB.d, {
-        showing: dB,
+        show: DY
+      } = YY;
+      (0, OY.k)(AY.d, (0, AY.n)());
+      const aY = null === (rY = (0, AY.n)()) || void 0 === rY ? void 0 : rY.menu;
+      return (0, gY.useEffect)((() => {
+        var YY;
+        DY || (null === aY || void 0 === aY || null === (YY = aY.onClose) || void 0 === YY || YY.call(aY), (0, IY.t)())
+      }), [DY, aY]), (0, gY.useEffect)((() => DY ? (0, RY.f)(IY.y, IY.i) : void 0), [DY]), (0, vY.jsx)(FY.d, {
+        showing: DY,
         globallyUniqueKey: "clientGameMenu",
-        children: null === gB || void 0 === gB ? void 0 : gB.content
+        children: null === aY || void 0 === aY ? void 0 : aY.content
       })
     }
 
-    function OB(BB) {
+    function iY(YY) {
       let {
-        placement: TB = "bottom"
-      } = BB;
-      return (0, oB.jsx)("div", {
-        id: `clientGameHud-${TB}`,
+        placement: rY = "bottom"
+      } = YY;
+      return (0, vY.jsx)("div", {
+        id: `clientGameHud-${rY}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function DB(BB) {
+    function yY(YY) {
       let {
-        children: TB,
-        placement: dB = "bottom"
-      } = BB;
-      const [VB, yB] = (0, YB.useState)(null);
-      return (0, YB.useEffect)((() => {
-        yB(document.getElementById(`clientGameHud-${dB}`))
-      }), [dB]), VB ? (0, gB.createPortal)(TB, VB) : null
+        children: rY,
+        placement: DY = "bottom"
+      } = YY;
+      const [FY, AY] = (0, gY.useState)(null);
+      return (0, gY.useEffect)((() => {
+        AY(document.getElementById(`clientGameHud-${DY}`))
+      }), [DY]), FY ? (0, aY.createPortal)(rY, FY) : null
     }
   },
-  8570: (BB, TB, dB) => {
-    dB.d(TB, {
-      d: () => pB
+  8745: (YY, rY, DY) => {
+    DY.d(rY, {
+      d: () => IY
     });
-    var VB = dB(3948),
-      yB = dB(3951);
+    var FY = DY(4093),
+      AY = DY(4097);
 
-    function pB(BB) {
+    function IY(YY) {
       let {
-        children: TB,
-        showing: dB,
-        globallyUniqueKey: pB,
-        alwaysMountChildren: lB = !1,
-        doGameplayStartStopOnShow: JB = !0,
-        keepsMovement: YB = !1
-      } = BB;
-      return (0, yB.d)(!0, dB, pB, YB), (0, VB.e)(JB, dB), dB || lB ? TB : null
+        children: rY,
+        showing: DY,
+        globallyUniqueKey: IY,
+        alwaysMountChildren: RY = !1,
+        doGameplayStartStopOnShow: OY = !0,
+        keepsMovement: gY = !1
+      } = YY;
+      return (0, AY.b)(!0, DY, IY, gY), (0, FY.c)(OY, DY), DY || RY ? rY : null
     }
   },
-  35700: (BB, TB, dB) => {
-    dB.d(TB, {
-      c: () => pB,
-      f: () => lB,
-      g: () => JB,
-      j: () => YB
+  36130: (YY, rY, DY) => {
+    DY.d(rY, {
+      d: () => IY,
+      h: () => RY,
+      j: () => OY,
+      l: () => gY
     });
-    var VB = dB(62),
-      yB = dB(1002);
-    const pB = 8,
-      lB = "InGameHeaderContainer",
-      JB = "TopRightElements";
+    var FY = DY(61),
+      AY = DY(1143);
+    const IY = 8,
+      RY = "InGameHeaderContainer",
+      OY = "TopRightElements";
 
-    function YB(BB) {
-      const [TB] = (0, yB.e)(), [dB, YB] = (0, VB.useState)(!1);
-      return (0, VB.useLayoutEffect)((() => {
-        if (!BB) return;
-        const TB = document.querySelector(`.${lB}`),
-          dB = document.querySelector(`.${JB}`),
-          VB = () => {
-            const VB = BB.getBoundingClientRect(),
-              yB = TB ? TB.getBoundingClientRect().right : 0,
-              lB = dB ? dB.getBoundingClientRect().left : window.innerWidth,
-              JB = VB.left < yB + pB,
-              gB = VB.right > lB - pB;
-            YB(JB || gB)
+    function gY(YY) {
+      const [rY] = (0, AY.c)(), [DY, gY] = (0, FY.useState)(!1);
+      return (0, FY.useLayoutEffect)((() => {
+        if (!YY) return;
+        const rY = document.querySelector(`.${RY}`),
+          DY = document.querySelector(`.${OY}`),
+          FY = () => {
+            const FY = YY.getBoundingClientRect(),
+              AY = rY ? rY.getBoundingClientRect().right : 0,
+              RY = DY ? DY.getBoundingClientRect().left : window.innerWidth,
+              OY = FY.left < AY + IY,
+              aY = FY.right > RY - IY;
+            gY(OY || aY)
           };
-        VB();
-        const yB = new ResizeObserver(VB);
-        return yB.observe(BB), TB && yB.observe(TB), dB && yB.observe(dB), () => {
-          yB.disconnect()
+        FY();
+        const AY = new ResizeObserver(FY);
+        return AY.observe(YY), rY && AY.observe(rY), DY && AY.observe(DY), () => {
+          AY.disconnect()
         }
-      }), [BB, TB]), dB
+      }), [YY, rY]), DY
     }
   },
-  8103: (BB, TB, dB) => {
-    dB.d(TB, {
-      b: () => pB,
-      c: () => yB
+  8111: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => IY,
+      f: () => AY
     });
-    let VB = null;
-    const yB = function(BB) {
-        const TB = {
-          cycle: BB,
+    let FY = null;
+    const AY = function(YY) {
+        const rY = {
+          cycle: YY,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return VB = TB, () => {
-          VB === TB && (VB = null)
+        return FY = rY, () => {
+          FY === rY && (FY = null)
         }
       },
-      pB = () => {
-        var BB;
-        return null !== (BB = VB) && void 0 !== BB && BB.canCycle() ? VB.cycle : null
+      IY = () => {
+        var YY;
+        return null !== (YY = FY) && void 0 !== YY && YY.canCycle() ? FY.cycle : null
       }
   },
-  35601: (BB, TB, dB) => {
-    dB.d(TB, {
-      A: () => vB,
-      c: () => pB,
-      e: () => uB,
-      i: () => HB,
-      k: () => JB,
-      n: () => LB,
-      r: () => EB,
-      s: () => kB,
-      v: () => mB,
-      x: () => DB
+  36034: (YY, rY, DY) => {
+    DY.d(rY, {
+      C: () => EY,
+      e: () => IY,
+      i: () => QY,
+      l: () => oY,
+      n: () => OY,
+      r: () => sY,
+      t: () => WY,
+      v: () => uY,
+      x: () => mY,
+      y: () => yY
     });
-    var VB = dB(21),
-      yB = dB(24);
-    const pB = "clientGameInventoryButtonsChanged",
-      lB = new Map;
+    var FY = DY(19),
+      AY = DY(25);
+    const IY = "clientGameInventoryButtonsChanged",
+      RY = new Map;
 
-    function JB() {
-      return [...lB.values()].sort(((BB, TB) => {
-        var dB, VB;
-        return (null !== (dB = BB.order) && void 0 !== dB ? dB : 0) - (null !== (VB = TB.order) && void 0 !== VB ? VB : 0)
+    function OY() {
+      return [...RY.values()].sort(((YY, rY) => {
+        var DY, FY;
+        return (null !== (DY = YY.order) && void 0 !== DY ? DY : 0) - (null !== (FY = rY.order) && void 0 !== FY ? FY : 0)
       }))
     }
-    let YB = null;
+    let gY = null;
 
-    function gB(BB) {
-      YB = BB
+    function aY(YY) {
+      gY = YY
     }
-    let oB = !1;
+    let vY = !1;
 
-    function kB(BB) {
-      oB = !0;
+    function uY(YY) {
+      vY = !0;
       try {
-        BB.onClick()
+        YY.onClick()
       } finally {
-        oB = !1
+        vY = !1
       }
-      BB.panel && "clientGame" === VB.d.get("openInGameMenuName") && gB(BB.id)
+      YY.panel && "clientGame" === FY.b.get("openInGameMenuName") && aY(YY.id)
     }
 
-    function LB() {
-      return oB
+    function sY() {
+      return vY
     }
 
-    function OB() {
-      return JB().filter((BB => BB.panel && !BB.disabled))
+    function iY() {
+      return OY().filter((YY => YY.panel && !YY.disabled))
     }
 
-    function DB(BB) {
-      const TB = OB(),
-        dB = TB.findIndex((BB => BB.id === YB));
-      return !(dB < 0 || TB.length < 2) && (kB(TB[(dB + BB + TB.length) % TB.length]), !0)
+    function yY(YY) {
+      const rY = iY(),
+        DY = rY.findIndex((YY => YY.id === gY));
+      return !(DY < 0 || rY.length < 2) && (uY(rY[(DY + YY + rY.length) % rY.length]), !0)
     }
 
-    function uB() {
-      return null !== YB && OB().length > 1
+    function QY() {
+      return null !== gY && iY().length > 1
     }
 
-    function HB() {
-      gB(null)
+    function oY() {
+      aY(null)
     }
 
-    function EB() {
-      "inventory" !== VB.d.get("openInGameMenuName") && gB(null)
+    function WY() {
+      "inventory" !== FY.b.get("openInGameMenuName") && aY(null)
     }
 
-    function vB() {
-      const BB = YB;
-      return gB(null), BB
+    function EY() {
+      const YY = gY;
+      return aY(null), YY
     }
 
-    function mB(BB) {
-      return lB.set(BB.id, BB), yB.h.yH(pB, JB(), !0), () => {
-        lB.get(BB.id) === BB && (lB.delete(BB.id), yB.h.yH(pB, JB()))
+    function mY(YY) {
+      return RY.set(YY.id, YY), AY.g.vo(IY, OY(), !0), () => {
+        RY.get(YY.id) === YY && (RY.delete(YY.id), AY.g.vo(IY, OY()))
       }
     }
   },
-  35595: (BB, TB, dB) => {
-    dB.d(TB, {
-      c: () => JB,
-      g: () => HB,
-      h: () => EB,
-      j: () => LB,
-      k: () => gB,
-      o: () => uB,
-      p: () => OB,
-      r: () => oB
+  36032: (YY, rY, DY) => {
+    DY.d(rY, {
+      d: () => OY,
+      f: () => oY,
+      h: () => WY,
+      j: () => sY,
+      n: () => aY,
+      o: () => QY,
+      p: () => iY,
+      q: () => vY
     });
-    var VB = dB(21),
-      yB = dB(24),
-      pB = dB(1173),
-      lB = dB(35601);
-    const JB = "clientGameUiChanged";
-    let YB = null;
+    var FY = DY(19),
+      AY = DY(25),
+      IY = DY(1287),
+      RY = DY(36034);
+    const OY = "clientGameUiChanged";
+    let gY = null;
 
-    function gB() {
-      return YB
+    function aY() {
+      return gY
     }
 
-    function oB(BB, TB) {
-      const dB = {
-        content: BB,
-        menu: TB
+    function vY(YY, rY) {
+      const DY = {
+        content: YY,
+        menu: rY
       };
-      return YB = dB, yB.h.yH(JB, YB, !0), () => {
-        YB === dB && (YB = null, DB = !1, HB(), yB.h.yH(JB, null))
+      return gY = DY, AY.g.vo(OY, gY, !0), () => {
+        gY === DY && (gY = null, yY = !1, oY(), AY.g.vo(OY, null))
       }
     }
-    let kB = null;
+    let uY = null;
 
-    function LB() {
-      return kB
+    function sY() {
+      return uY
     }
 
-    function OB(BB) {
-      return kB = BB, () => {
-        kB === BB && (kB = null)
+    function iY(YY) {
+      return uY = YY, () => {
+        uY === YY && (uY = null)
       }
     }
-    let DB = !1;
+    let yY = !1;
 
-    function uB() {
-      const BB = VB.d.get("openInGameMenuName");
-      "clientGame" !== BB && (DB = "inventory" === BB), (0, lB.n)() || (0, lB.i)(), (0, pB.p)("InGameMenu"), VB.d.set({
+    function QY() {
+      const YY = FY.b.get("openInGameMenuName");
+      "clientGame" !== YY && (yY = "inventory" === YY), (0, RY.r)() || (0, RY.l)(), (0, IY.k)(IY.d), FY.b.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function HB() {
-      vB(!1)
+    function oY() {
+      EY(!1)
     }
 
-    function EB() {
-      vB(DB)
+    function WY() {
+      EY(yY)
     }
 
-    function vB(BB) {
-      "clientGame" === VB.d.get("openInGameMenuName") && VB.d.set({
-        openInGameMenuName: BB ? "inventory" : null
-      }), BB || (0, lB.i)(), DB = !1
+    function EY(YY) {
+      "clientGame" === FY.b.get("openInGameMenuName") && FY.b.set({
+        openInGameMenuName: YY ? "inventory" : null
+      }), YY || (0, RY.l)(), yY = !1
     }
   },
-  37470: (BB, TB, dB) => {
-    dB.d(TB, {
-      c: () => lB,
-      f: () => JB,
-      g: () => YB
+  37894: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => RY,
+      f: () => OY,
+      g: () => gY
     });
-    const VB = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1],
-      yB = [0, 1, 2, 0, 2, 3],
-      pB = [4, 5];
+    const FY = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1],
+      AY = [0, 1, 2, 0, 2, 3],
+      IY = [4, 5];
 
-    function lB(BB, TB, dB, VB, yB) {
-      for (let lB = 0; lB < 6; lB++) pB.includes(lB) === yB && gB(BB, TB, dB, VB, lB)
+    function RY(YY, rY, DY, FY, AY) {
+      for (let RY = 0; RY < 6; RY++) IY.includes(RY) === AY && aY(YY, rY, DY, FY, RY)
     }
 
-    function JB(BB, TB, dB, VB) {
-      for (let yB = 0; yB < 6; yB++) gB(BB, TB, dB, VB, yB)
+    function OY(YY, rY, DY, FY) {
+      for (let AY = 0; AY < 6; AY++) aY(YY, rY, DY, FY, AY)
     }
 
-    function YB(BB, TB, dB, pB, lB) {
-      for (let JB = 0; JB < 6; JB++)
-        for (const YB of [0, 1]) {
-          const [gB, oB, kB] = [YB + 2, YB + 1, (YB + 3) % 4], LB = BB.length / 3;
-          for (const [TB, yB] of [
-              [YB, oB],
-              [gB, oB],
-              [gB, kB],
-              [YB, kB]
+    function gY(YY, rY, DY, IY, RY) {
+      for (let OY = 0; OY < 6; OY++)
+        for (const gY of [0, 1]) {
+          const [aY, vY, uY] = [gY + 2, gY + 1, (gY + 3) % 4], sY = YY.length / 3;
+          for (const [rY, AY] of [
+              [gY, vY],
+              [aY, vY],
+              [aY, uY],
+              [gY, uY]
             ])
-            for (let YB = 0; YB < 3; YB++) {
-              const gB = VB[3 * (4 * JB + TB) + YB],
-                oB = VB[3 * (4 * JB + yB) + YB];
-              BB.push((gB + (oB - gB) * lB) * pB / 2 + dB[YB])
+            for (let gY = 0; gY < 3; gY++) {
+              const aY = FY[3 * (4 * OY + rY) + gY],
+                vY = FY[3 * (4 * OY + AY) + gY];
+              YY.push((aY + (vY - aY) * RY) * IY / 2 + DY[gY])
             }
-          for (const BB of yB) TB.push(LB + BB)
+          for (const YY of AY) rY.push(sY + YY)
         }
     }
 
-    function gB(BB, TB, dB, pB, lB) {
-      let [JB, YB, gB] = dB, [oB, kB, LB] = pB;
-      const OB = BB.length / 3;
-      for (let yB = 4 * lB; yB < 4 * lB + 4; yB++) BB.push(VB[3 * yB] * oB / 2 + JB, VB[3 * yB + 1] * kB / 2 + YB, VB[3 * yB + 2] * LB / 2 + gB);
-      for (const VB of yB) TB.push(OB + VB)
+    function aY(YY, rY, DY, IY, RY) {
+      let [OY, gY, aY] = DY, [vY, uY, sY] = IY;
+      const iY = YY.length / 3;
+      for (let AY = 4 * RY; AY < 4 * RY + 4; AY++) YY.push(FY[3 * AY] * vY / 2 + OY, FY[3 * AY + 1] * uY / 2 + gY, FY[3 * AY + 2] * sY / 2 + aY);
+      for (const FY of AY) rY.push(iY + FY)
+    }
+  },
+  36277: (YY, rY, DY) => {
+    function FY(YY, rY) {
+      return null === YY || null === rY ? YY === rY : YY[0] === rY[0] && YY[1] === rY[1] && YY[2] === rY[2]
+    }
+
+    function AY(YY) {
+      return [YY[0] + .5, YY[1] + .5, YY[2] + .5]
+    }
+    DY.d(rY, {
+      c: () => AY,
+      g: () => FY
+    })
+  },
+  36318: (YY, rY, DY) => {
+    function FY(YY) {
+      return YY.includes("Leaf Bed")
+    }
+
+    function AY(YY) {
+      return / Bed(?: Head)?(?:\||$)/.test(YY) && !FY(YY)
+    }
+
+    function IY(YY) {
+      return YY.includes(" Strongbed")
+    }
+
+    function RY(YY) {
+      return FY(YY) || AY(YY) || IY(YY)
+    }
+    DY.d(rY, {
+      e: () => RY,
+      h: () => FY,
+      i: () => IY,
+      l: () => AY
+    })
+  },
+  36314: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => aY
+    });
+    var FY = DY(36318),
+      AY = DY(8830);
+    const IY = [],
+      RY = [],
+      OY = [],
+      gY = [];
+    for (const vY of Object.keys(AY.m))(0, FY.h)(vY) ? IY.push(vY) : (0, FY.l)(vY) && RY.push(vY), (0, FY.i)(vY) && OY.push(vY), (vY.includes(" Bed Head") || vY.includes(" Strongbed Head")) && gY.push(vY);
+    const aY = {
+      leafBeds: IY,
+      woolBeds: RY,
+      strongBeds: OY,
+      beds: [...IY, ...RY, ...OY],
+      bedHeads: gY,
+      blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

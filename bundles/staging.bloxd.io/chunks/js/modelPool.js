@@ -1,142 +1,143 @@
-export const id = 39;
-export const ids = [39];
+export const id = 42;
+export const ids = [42];
 export const modules = {
-  40235: (BB, TB, dB) => {
-    dB.d(TB, {
-      c: () => lB
+  40555: (YY, rY, DY) => {
+    DY.d(rY, {
+      d: () => RY
     });
-    var VB = dB(138),
-      yB = dB(1092);
+    var FY = DY(144),
+      AY = DY(1224);
 
-    function pB(BB) {
-      return (0, VB.d)() ? `https://${yB.e.discordDomain}/${BB.href}` : BB.href
+    function IY(YY) {
+      return (0, FY.b)() ? `https://${AY.e.discordDomain}/${YY.href}` : YY.href
     }
-    const lB = {
-      scriptUrl: pB(new dB.U(dB(40238))),
-      wasmBinaryUrl: pB(new dB.U(dB(40244)))
+    const RY = {
+      scriptUrl: IY(new DY.U(DY(40561))),
+      wasmBinaryUrl: IY(new DY.U(DY(40567)))
     }
   },
-  8640: (BB, TB, dB) => {
-    dB.d(TB, {
-      c: () => yB,
-      e: () => pB,
-      f: () => lB
+  8816: (YY, rY, DY) => {
+    DY.d(rY, {
+      d: () => AY,
+      h: () => IY,
+      i: () => RY
     });
-    const VB = 1179937895,
-      yB = 1313821514;
+    const FY = 1179937895,
+      AY = 1313821514;
 
-    function pB(BB) {
-      const TB = new DataView(BB.buffer, BB.byteOffset, BB.byteLength);
-      if (BB.byteLength < 20 || TB.getUint32(0, !0) !== VB || 2 !== TB.getUint32(4, !0)) return null;
-      const dB = Math.min(TB.getUint32(8, !0), BB.byteLength),
-        pB = TB.getUint32(12, !0);
-      if (TB.getUint32(16, !0) !== yB || 20 + pB > dB) return null;
-      let lB;
+    function IY(YY) {
+      const rY = new DataView(YY.buffer, YY.byteOffset, YY.byteLength);
+      if (YY.byteLength < 20 || rY.getUint32(0, !0) !== FY || 2 !== rY.getUint32(4, !0)) return null;
+      const DY = Math.min(rY.getUint32(8, !0), YY.byteLength),
+        IY = rY.getUint32(12, !0);
+      if (rY.getUint32(16, !0) !== AY || 20 + IY > DY) return null;
+      let RY;
       try {
-        lB = JSON.parse((new TextDecoder).decode(BB.subarray(20, 20 + pB)))
+        RY = JSON.parse((new TextDecoder).decode(YY.subarray(20, 20 + IY)))
       } catch {
         return null
       }
-      return "object" === typeof lB && null !== lB ? {
-        json: lB,
-        jsonEnd: 20 + pB,
-        length: dB
+      return "object" === typeof RY && null !== RY ? {
+        json: RY,
+        jsonEnd: 20 + IY,
+        length: DY
       } : null
     }
 
-    function lB(BB) {
-      var TB;
-      const dB = null === (TB = pB(BB)) || void 0 === TB ? void 0 : TB.json;
-      if (void 0 === dB || !Array.isArray(dB.extensionsUsed) || !dB.extensionsUsed.includes("KHR_draco_mesh_compression")) return !1;
-      const VB = dB.meshes;
-      return Array.isArray(VB) && VB.some((BB => {
-        const TB = null === BB || void 0 === BB ? void 0 : BB.primitives;
-        return Array.isArray(TB) && TB.some((BB => {
-          const TB = null === BB || void 0 === BB ? void 0 : BB.extensions;
-          return null != (null === TB || void 0 === TB ? void 0 : TB.KHR_draco_mesh_compression)
+    function RY(YY) {
+      var rY;
+      const DY = null === (rY = IY(YY)) || void 0 === rY ? void 0 : rY.json;
+      if (void 0 === DY || !Array.isArray(DY.extensionsUsed) || !DY.extensionsUsed.includes("KHR_draco_mesh_compression")) return !1;
+      const FY = DY.meshes;
+      return Array.isArray(FY) && FY.some((YY => {
+        const rY = null === YY || void 0 === YY ? void 0 : YY.primitives;
+        return Array.isArray(rY) && rY.some((YY => {
+          const rY = null === YY || void 0 === YY ? void 0 : YY.extensions;
+          return null != (null === rY || void 0 === rY ? void 0 : rY.KHR_draco_mesh_compression)
         }))
       }))
     }
   },
-  42074: (BB, TB, dB) => {
-    dB.r(TB), dB.d(TB, {
-      pageModelPool: () => mB
+  42414: (YY, rY, DY) => {
+    DY.r(rY), DY.d(rY, {
+      MODELS_MODULE_RETRY_DELAYS_MS: () => WY,
+      pageModelPool: () => VY
     });
-    var VB = dB(3216),
-      yB = dB(35348),
-      pB = dB(39481),
-      lB = dB(40235),
-      JB = dB(39517);
+    var FY = DY(3316),
+      AY = DY(35750),
+      IY = DY(39871),
+      RY = DY(40555),
+      OY = DY(39904);
     Error;
-    class YB extends Error {
-      constructor(BB, TB) {
-        let dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-          VB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        super(`Draco ${BB}: ${TB}`), this.stage = BB, this.url = dB, this.status = VB, this.name = "DracoLoadError"
+    class gY extends Error {
+      constructor(YY, rY) {
+        let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+          FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        super(`Draco ${YY}: ${rY}`), this.stage = YY, this.url = DY, this.status = FY, this.name = "DracoLoadError"
       }
       get goneUrl() {
         return 404 === this.status || 410 === this.status ? this.url : null
       }
     }
 
-    function gB(BB, TB) {
-      let dB = null,
-        yB = !1;
+    function aY(YY, rY) {
+      let DY = null,
+        AY = !1;
       return {
         get: () => {
-          if (null === dB) {
-            const pB = async function(BB, TB) {
+          if (null === DY) {
+            const IY = async function(YY, rY) {
               try {
-                return (await (0, VB.K)(BB)).buffer
-              } catch (dB) {
-                throw new YB(TB, (0, JB.f)(dB), BB, dB instanceof VB.h ? dB.status : null)
+                return (await (0, FY.D)(YY)).buffer
+              } catch (DY) {
+                throw new gY(rY, (0, OY.f)(DY), YY, DY instanceof FY.e ? DY.status : null)
               }
-            }(BB, TB);
-            dB = pB, pB.then((() => {
-              yB = dB === pB
+            }(YY, rY);
+            DY = IY, IY.then((() => {
+              AY = DY === IY
             }), (() => {
-              dB = null
+              DY = null
             }))
           }
-          return dB
+          return DY
         },
         forget: () => {
-          yB && (dB = null, yB = !1)
+          AY && (DY = null, AY = !1)
         }
       }
     }
 
-    function oB(BB, TB) {
-      const dB = gB(TB, "wasm"),
-        VB = gB(BB, "script");
+    function vY(YY, rY) {
+      const DY = aY(rY, "wasm"),
+        FY = aY(YY, "script");
       return async function() {
-        arguments.length > 0 && void 0 !== arguments[0] && arguments[0] && (dB.forget(), VB.forget());
-        const [BB, TB] = await Promise.all([dB.get(), VB.get()]);
+        arguments.length > 0 && void 0 !== arguments[0] && arguments[0] && (DY.forget(), FY.forget());
+        const [YY, rY] = await Promise.all([DY.get(), FY.get()]);
         return {
-          script: TB,
-          wasmBinary: BB
+          script: rY,
+          wasmBinary: YY
         }
       }
     }
-    var kB = dB(8640),
-      LB = dB(2575),
-      OB = dB(39707),
-      DB = dB(39746);
-    class uB extends Error {
-      constructor(BB) {
-        super(`no model worker could install it: ${BB}`), this.name = "DracoInstallError"
+    var uY = DY(8816),
+      sY = DY(2707),
+      iY = DY(40090),
+      yY = DY(40124);
+    class QY extends Error {
+      constructor(YY) {
+        super(`no model worker could install it: ${YY}`), this.name = "DracoInstallError"
       }
     }
-    class HB {
-      constructor(BB) {
-        this.opts = BB, this.queue = [], this.slots = [], this.stopped = null, this.create = null, this.oD = null, this.downloads = 0, this.installFailure = "", this.nextSeq = 0, this.jobLosses = 0;
-        for (let TB = 0; TB < Math.max(1, BB.count); TB++) this.slots.push({
+    class oY {
+      constructor(YY) {
+        this.opts = YY, this.queue = [], this.slots = [], this.stopped = null, this.create = null, this.yy = null, this.downloads = 0, this.installFailure = "", this.nextSeq = 0, this.jobLosses = 0;
+        for (let rY = 0; rY < Math.max(1, YY.count); rY++) this.slots.push({
           worker: null,
           starting: !1,
           timer: null,
           job: null,
           seq: 0,
-          oD: "none",
+          yy: "none",
           installSeq: 0,
           failedDownload: 0,
           losses: 0,
@@ -146,18 +147,18 @@ export const modules = {
         this.downloadDecoder(), this.pump()
       }
       get pending() {
-        return this.queue.length + this.slots.filter((BB => null !== BB.job)).length
+        return this.queue.length + this.slots.filter((YY => null !== YY.job)).length
       }
-      build(BB, TB) {
-        if (null !== this.stopped) return Promise.resolve((0, OB.l)(BB, this.stopped));
-        const dB = (0, kB.f)(TB);
-        return dB && this.downloadDecoder(), new Promise((VB => {
+      build(YY, rY) {
+        if (null !== this.stopped) return Promise.resolve((0, iY.t)(YY, this.stopped));
+        const DY = (0, uY.i)(rY);
+        return DY && this.downloadDecoder(), new Promise((FY => {
           this.queue.push({
-            word: BB,
-            glb: TB,
-            draco: dB,
+            word: YY,
+            glb: rY,
+            draco: DY,
             attempts: 0,
-            resolve: VB
+            resolve: FY
           }), this.pump()
         }))
       }
@@ -165,210 +166,218 @@ export const modules = {
         this.fail(null)
       }
       files() {
-        return "object" === typeof this.oD ? this.oD : null
+        return "object" === typeof this.yy ? this.yy : null
       }
       pump() {
-        const BB = this.files();
-        for (const TB of this.slots) {
+        const YY = this.files();
+        for (const rY of this.slots) {
           if (null !== this.stopped) return;
-          if (TB.gaveUp || TB.starting) continue;
-          if (null === TB.worker) {
-            this.start(TB);
+          if (rY.gaveUp || rY.starting) continue;
+          if (null === rY.worker) {
+            this.start(rY);
             continue
           }
-          if (null !== BB && "none" === TB.oD && TB.failedDownload !== this.downloads && this.install(TB, TB.worker, BB), null !== TB.job) continue;
-          const dB = this.queue.findIndex((BB => "installed" === TB.oD || !BB.draco));
-          dB >= 0 && this.run(TB, TB.worker, this.queue.splice(dB, 1)[0])
+          if (null !== YY && "none" === rY.yy && rY.failedDownload !== this.downloads && this.install(rY, rY.worker, YY), null !== rY.job) continue;
+          const DY = this.queue.findIndex((YY => "installed" === rY.yy || !YY.draco));
+          DY >= 0 && this.run(rY, rY.worker, this.queue.splice(DY, 1)[0])
         }
         null === this.stopped && this.checkDecoder()
       }
       checkDecoder() {
         if (null === this.files()) return;
-        this.slots.some((BB => !BB.gaveUp && ("none" !== BB.oD || BB.failedDownload !== this.downloads))) || (this.oD = "uninstallable", this.decoderFailed(new uB(this.installFailure)))
+        this.slots.some((YY => !YY.gaveUp && ("none" !== YY.yy || YY.failedDownload !== this.downloads))) || (this.yy = "uninstallable", this.decoderFailed(new QY(this.installFailure)))
       }
-      start(BB) {
-        if (BB.losses >= 6) return BB.gaveUp = !0, void(this.slots.every((BB => BB.gaveUp)) && this.fail(new Error("every model worker went 6 times with no file built")));
-        BB.starting = !0, this.create ??= this.opts.loadWorker(), Promise.all([this.create, this.opts.module]).then((TB => {
-          let [dB, VB] = TB;
-          null === this.stopped && this.launch(BB, dB, VB)
-        }), (BB => {
-          this.fail(BB)
+      start(YY) {
+        if (YY.losses >= 6) return YY.gaveUp = !0, void(this.slots.every((YY => YY.gaveUp)) && this.fail(new Error("every model worker went 6 times with no file built")));
+        YY.starting = !0, this.create ??= this.opts.loadWorker(), Promise.all([this.create, this.opts.module]).then((rY => {
+          let [DY, FY] = rY;
+          null === this.stopped && this.launch(YY, DY, FY)
+        }), (YY => {
+          this.fail(YY)
         }))
       }
-      launch(BB, TB, dB) {
-        let VB;
+      launch(YY, rY, DY) {
+        let FY;
         try {
-          VB = TB()
-        } catch (yB) {
-          return void this.lose(BB, `a model worker could not be created (${String(yB)})`)
+          FY = rY()
+        } catch (AY) {
+          return void this.lose(YY, `a model worker could not be created (${String(AY)})`)
         }
-        BB.worker = VB, this.startTimer(BB, 3e4, (TB => {
-          this.lose(BB, `a model worker did not start: ${(0,DB.j)(TB)}`)
-        })), VB.onmessage = TB => {
+        YY.worker = FY, this.startTimer(YY, 3e4, (rY => {
+          this.lose(YY, `a model worker did not start: ${(0,yY.g)(rY)}`)
+        })), FY.onmessage = rY => {
           let {
-            data: dB
-          } = TB;
-          this.answered(BB, VB, dB)
-        }, VB.onerror = TB => {
-          this.lose(BB, BB.starting ? `a model worker failed to start: ${TB.message}` : `a model worker failed: ${TB.message}`)
-        }, VB.postMessage({
+            data: DY
+          } = rY;
+          this.answered(YY, FY, DY)
+        }, FY.onerror = rY => {
+          this.lose(YY, YY.starting ? `a model worker failed to start: ${rY.message}` : `a model worker failed: ${rY.message}`)
+        }, FY.postMessage({
           type: "start",
-          module: dB
+          module: DY
         })
       }
-      startTimer(BB, TB, dB) {
-        BB.timer = new DB.g(TB, (TB => {
-          BB.timer = null, dB(TB)
+      startTimer(YY, rY, DY) {
+        YY.timer = new yY.e(rY, (rY => {
+          YY.timer = null, DY(rY)
         }), void 0, this.opts.visibility)
       }
-      clearTimer(BB) {
-        var TB;
-        null === (TB = BB.timer) || void 0 === TB || TB.cancel(), BB.timer = null
+      clearTimer(YY) {
+        var rY;
+        null === (rY = YY.timer) || void 0 === rY || rY.cancel(), YY.timer = null
       }
-      answered(BB, TB, dB) {
-        if ("lost" === dB.type) return void this.lose(BB, dB.reason);
-        if (BB.starting) return "started" !== dB.type ? void this.lose(BB, `a model worker answered ${dB.type} before it started`) : (this.clearTimer(BB), BB.starting = !1, BB.startedAt = performance.now(), void this.pump());
-        if ("dracoInstalled" === dB.type || "dracoFailed" === dB.type) {
-          if (dB.seq !== BB.installSeq) return;
-          return void("installing" === BB.oD ? (this.clearTimer(BB), "dracoInstalled" === dB.type ? (BB.oD = "installed", this.pump()) : this.installFailed(BB, dB.reason)) : "dracoInstalled" === dB.type && "none" === BB.oD && BB.failedDownload === this.downloads && (BB.oD = "installed", this.pump()))
+      answered(YY, rY, DY) {
+        if ("lost" === DY.type) return void this.lose(YY, DY.reason);
+        if (YY.starting) return "started" !== DY.type ? void this.lose(YY, `a model worker answered ${DY.type} before it started`) : (this.clearTimer(YY), YY.starting = !1, YY.startedAt = performance.now(), void this.pump());
+        if ("dracoInstalled" === DY.type || "dracoFailed" === DY.type) {
+          if (DY.seq !== YY.installSeq) return;
+          return void("installing" === YY.yy ? (this.clearTimer(YY), "dracoInstalled" === DY.type ? (YY.yy = "installed", this.pump()) : this.installFailed(YY, DY.reason)) : "dracoInstalled" === DY.type && "none" === YY.yy && YY.failedDownload === this.downloads && (YY.yy = "installed", this.pump()))
         }
-        const VB = BB.job;
-        null !== VB && "started" !== dB.type && dB.seq === BB.seq && ("trapped" !== dB.type ? (BB.job = null, BB.losses = 0, this.jobLosses = 0, VB.resolve(new Uint8Array(dB.record)), this.pump()) : this.lose(BB, dB.trap, !0))
+        const FY = YY.job;
+        null !== FY && "started" !== DY.type && DY.seq === YY.seq && ("trapped" !== DY.type ? (YY.job = null, YY.losses = 0, this.jobLosses = 0, FY.resolve(new Uint8Array(DY.record)), this.pump()) : this.lose(YY, DY.trap, !0))
       }
-      install(BB, TB, dB) {
-        const VB = this.nextSeq++;
-        BB.oD = "installing", BB.installSeq = VB, this.startTimer(BB, 3e4, (TB => {
-          this.installFailed(BB, `no install within ${Math.round(TB)} ms`)
+      install(YY, rY, DY) {
+        const FY = this.nextSeq++;
+        YY.yy = "installing", YY.installSeq = FY, this.startTimer(YY, 3e4, (rY => {
+          this.installFailed(YY, `no install within ${Math.round(rY)} ms`)
         }));
-        const yB = dB.script.slice(0),
-          pB = dB.wasmBinary.slice(0);
-        TB.postMessage({
+        const AY = DY.script.slice(0),
+          IY = DY.wasmBinary.slice(0);
+        rY.postMessage({
           type: "installDraco",
-          seq: VB,
-          script: yB,
-          wasmBinary: pB
-        }, [yB, pB])
+          seq: FY,
+          script: AY,
+          wasmBinary: IY
+        }, [AY, IY])
       }
-      installFailed(BB, TB) {
-        console.warn(`[modelPool] a model worker could not install the Draco decoder: ${TB}`), this.noInstall(BB, TB), this.pump()
+      installFailed(YY, rY) {
+        console.warn(`[modelPool] a model worker could not install the Draco decoder: ${rY}`), this.noInstall(YY, rY), this.pump()
       }
-      noInstall(BB, TB) {
-        BB.oD = "none", BB.failedDownload = this.downloads, this.installFailure = TB
+      noInstall(YY, rY) {
+        YY.yy = "none", YY.failedDownload = this.downloads, this.installFailure = rY
       }
       downloadDecoder() {
-        if (null !== this.stopped || "downloading" === this.oD || null !== this.files()) return;
-        const BB = "uninstallable" === this.oD;
-        this.oD = "downloading", this.opts.downloadFiles(BB).then((BB => {
-          null === this.stopped && (this.oD = BB, this.downloads++, this.pump())
-        }), (BB => {
-          this.oD = null, this.decoderFailed(BB)
+        if (null !== this.stopped || "downloading" === this.yy || null !== this.files()) return;
+        const YY = "uninstallable" === this.yy;
+        this.yy = "downloading", this.opts.downloadFiles(YY).then((YY => {
+          null === this.stopped && (this.yy = YY, this.downloads++, this.pump())
+        }), (YY => {
+          this.yy = null, this.decoderFailed(YY)
         }))
       }
-      decoderFailed(BB) {
+      decoderFailed(YY) {
         if (null !== this.stopped) return;
-        const TB = (0, JB.f)(BB);
-        let dB = 0;
-        for (const VB of this.queue.splice(0)) VB.draco ? (VB.resolve((0, OB.d)(VB.word, TB)), dB++) : this.queue.push(VB);
-        dB > 0 && this.opts.onDecoderFailed(BB)
+        const rY = (0, OY.f)(YY);
+        let DY = 0;
+        for (const FY of this.queue.splice(0)) FY.draco ? (FY.resolve((0, iY.k)(FY.word, rY)), DY++) : this.queue.push(FY);
+        DY > 0 && this.opts.onDecoderFailed(YY)
       }
-      run(BB, TB, dB) {
-        const VB = this.nextSeq++;
-        BB.seq = VB, BB.job = dB, dB.attempts++;
-        const yB = dB.glb.slice();
-        TB.postMessage({
+      run(YY, rY, DY) {
+        const FY = this.nextSeq++;
+        YY.seq = FY, YY.job = DY, DY.attempts++;
+        const AY = DY.glb.slice();
+        rY.postMessage({
           type: "job",
-          seq: VB,
-          word: dB.word,
-          glb: yB.buffer
-        }, [yB.buffer])
+          seq: FY,
+          word: DY.word,
+          glb: AY.buffer
+        }, [AY.buffer])
       }
-      lose(BB, TB) {
-        let dB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        this.clearTimer(BB);
-        const VB = BB.worker;
-        null !== VB && (VB.onmessage = null, VB.onerror = null, VB.terminate());
-        const yB = !dB && "installing" === BB.oD;
-        BB.worker = null, BB.starting = !1, BB.oD = "none", yB && this.noInstall(BB, TB), void 0 !== BB.startedAt && performance.now() - BB.startedAt >= 6e4 && (BB.losses = 0), BB.startedAt = void 0;
-        const pB = BB.job;
-        if (BB.job = null, null !== pB || yB || BB.losses++, this.opts.onWorkerLost(TB), null !== pB && yB) pB.attempts--, this.queue.unshift(pB);
-        else if (null !== pB && (pB.attempts < 2 ? this.queue.unshift(pB) : pB.resolve((0, OB.h)(pB.word, TB)), this.jobLosses++, this.jobLosses >= 32)) return void this.fail(new Error("model workers were lost on 32 jobs with no file built"));
+      lose(YY, rY) {
+        let DY = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        this.clearTimer(YY);
+        const FY = YY.worker;
+        null !== FY && (FY.onmessage = null, FY.onerror = null, FY.terminate());
+        const AY = !DY && "installing" === YY.yy;
+        YY.worker = null, YY.starting = !1, YY.yy = "none", AY && this.noInstall(YY, rY), void 0 !== YY.startedAt && performance.now() - YY.startedAt >= 6e4 && (YY.losses = 0), YY.startedAt = void 0;
+        const IY = YY.job;
+        if (YY.job = null, null !== IY || AY || YY.losses++, this.opts.onWorkerLost(rY), null !== IY && AY) IY.attempts--, this.queue.unshift(IY);
+        else if (null !== IY && (IY.attempts < 2 ? this.queue.unshift(IY) : IY.resolve((0, iY.q)(IY.word, rY)), this.jobLosses++, this.jobLosses >= 32)) return void this.fail(new Error("model workers were lost on 32 jobs with no file built"));
         this.pump()
       }
-      fail(BB) {
+      fail(YY) {
         if (null !== this.stopped) return;
-        this.stopped = null === BB ? "the model workers stopped" : `the model workers could not start: ${(0,JB.f)(BB)}`;
-        const TB = this.stopped,
-          dB = BB => {
-            BB.resolve((0, OB.l)(BB.word, TB))
+        this.stopped = null === YY ? "the model workers stopped" : `the model workers could not start: ${(0,OY.f)(YY)}`;
+        const rY = this.stopped,
+          DY = YY => {
+            YY.resolve((0, iY.t)(YY.word, rY))
           };
-        for (const yB of this.slots) {
-          var VB;
-          this.clearTimer(yB), null === (VB = yB.worker) || void 0 === VB || VB.terminate(), yB.worker = null, null !== yB.job && dB(yB.job), yB.job = null
+        for (const AY of this.slots) {
+          var FY;
+          this.clearTimer(AY), null === (FY = AY.worker) || void 0 === FY || FY.terminate(), AY.worker = null, null !== AY.job && DY(AY.job), AY.job = null
         }
-        this.queue.splice(0).forEach(dB), null !== BB && this.opts.onUnavailable(BB)
+        this.queue.splice(0).forEach(DY), null !== YY && this.opts.onUnavailable(YY)
       }
     }
-    let EB = null;
-    const vB = new Set;
+    const WY = [...FY.q, 5e3, 15e3, 3e4];
+    let EY = null;
+    const mY = new Set;
 
-    function mB(BB) {
-      return vB.add(BB), EB ??= function() {
-        let BB = (TB = navigator.hardwareConcurrency, JB = "deviceMemory" in navigator ? navigator.deviceMemory : void 0, TB > 2 && !(0, LB.q)(JB) ? 2 : 1);
-        var TB, JB;
-        const gB = new HB({
-          module: (0, yB.e)(pB.e),
-          downloadFiles: oB(lB.c.scriptUrl, lB.c.wasmBinaryUrl),
-          loadWorker: async () => (await dB.e(40).then((() => dB(60056)))).createModelWorker,
-          count: BB,
-          onUnavailable: BB => {
-            if (EB === gB) {
-              EB = null;
-              const TB = function(BB) {
-                return BB instanceof VB.e ? [pB.e.url().href] : void 0
-              }(BB);
-              iB((dB => {
-                dB.onUnavailable(BB, TB)
+    function VY(YY) {
+      return mY.add(YY), EY ??= function() {
+        let YY = (rY = navigator.hardwareConcurrency, OY = "deviceMemory" in navigator ? navigator.deviceMemory : void 0, rY > 2 && !(0, sY.o)(OY) ? 2 : 1);
+        var rY, OY;
+        const aY = new oY({
+          module: (0, AY.d)(IY.d, {
+            delays: WY,
+            onRetry: (YY, rY) => {
+              EY === aY && SY((DY => {
+                DY.onModuleRetry(YY, rY)
+              }))
+            }
+          }),
+          downloadFiles: vY(RY.d.scriptUrl, RY.d.wasmBinaryUrl),
+          loadWorker: async () => (await DY.e(43).then((() => DY(60542)))).createModelWorker,
+          count: YY,
+          onUnavailable: YY => {
+            if (EY === aY) {
+              EY = null;
+              const rY = function(YY) {
+                return YY instanceof FY.b ? [IY.d.url().href] : void 0
+              }(YY);
+              SY((DY => {
+                DY.onUnavailable(YY, rY)
               }))
             }
           },
-          onDecoderFailed: BB => {
-            if (EB === gB) {
-              const TB = BB instanceof YB ? BB.goneUrl : null,
-                dB = null === TB ? void 0 : [TB];
-              iB((TB => {
-                TB.onDecoderFailed(BB, dB)
+          onDecoderFailed: YY => {
+            if (EY === aY) {
+              const rY = YY instanceof gY ? YY.goneUrl : null,
+                DY = null === rY ? void 0 : [rY];
+              SY((rY => {
+                rY.onDecoderFailed(YY, DY)
               }))
             }
           },
-          onWorkerLost: BB => {
-            EB === gB && iB((TB => {
-              TB.onWorkerLost(BB)
+          onWorkerLost: YY => {
+            EY === aY && SY((rY => {
+              rY.onWorkerLost(YY)
             }))
           }
         });
-        return gB
+        return aY
       }(), {
-        pool: EB,
+        pool: EY,
         unlisten: () => {
-          vB.delete(BB)
+          mY.delete(YY)
         }
       }
     }
 
-    function iB(BB) {
-      for (const dB of [...vB]) try {
-        BB(dB)
-      } catch (TB) {
-        console.error("[pageModelPool] a listener threw", TB)
+    function SY(YY) {
+      for (const DY of [...mY]) try {
+        YY(DY)
+      } catch (rY) {
+        console.error("[pageModelPool] a listener threw", rY)
       }
     }
   },
-  40244: (BB, TB, dB) => {
-    BB.exports = dB.p + "static/media/draco_decoder_gltf_v2_1.1207caa8c6e38dc2aa04.wasm"
+  40567: (YY, rY, DY) => {
+    YY.exports = DY.p + "static/media/draco_decoder_gltf_v2_1.1207caa8c6e38dc2aa04.wasm"
   },
-  40238: (BB, TB, dB) => {
-    BB.exports = dB.p + "static/media/draco_wasm_wrapper_gltf_v2_1.8b33994b6159ad3fc976.js"
+  40561: (YY, rY, DY) => {
+    YY.exports = DY.p + "static/media/draco_wasm_wrapper_gltf_v2_1.8b33994b6159ad3fc976.js"
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

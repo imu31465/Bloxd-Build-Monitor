@@ -1,19 +1,27 @@
 export const id = 351;
 export const ids = [351];
 export const modules = {
-  59990: (BB, TB, dB) => {
-    dB.r(TB), dB.d(TB, {
-      lodCubePixelShaderWGSL: () => lB
-    });
-    var VB = dB(38595);
-    const yB = "lodCubePixelShader",
-      pB = "const GammaEncodePowerApprox=1.0/2.2;varying vUV: vec2f;var textureSamplerSampler: sampler;var textureSampler: texture_cube<f32>;uniform lod: f32;uniform gamma: i32;@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {let uv=fragmentInputs.vUV*2.0-1.0;\n#ifdef POSITIVEX\nfragmentOutputs.color=textureSampleLevel(textureSampler,textureSamplerSampler,vec3f(1.001,uv.y,uv.x),uniforms.lod);\n#endif\n#ifdef NEGATIVEX\nfragmentOutputs.color=textureSampleLevel(textureSampler,textureSamplerSampler,vec3f(-1.001,uv.y,uv.x),uniforms.lod);\n#endif\n#ifdef POSITIVEY\nfragmentOutputs.color=textureSampleLevel(textureSampler,textureSamplerSampler,vec3f(uv.y,1.001,uv.x),uniforms.lod);\n#endif\n#ifdef NEGATIVEY\nfragmentOutputs.color=textureSampleLevel(textureSampler,textureSamplerSampler,vec3f(uv.y,-1.001,uv.x),uniforms.lod);\n#endif\n#ifdef POSITIVEZ\nfragmentOutputs.color=textureSampleLevel(textureSampler,textureSamplerSampler,vec3f(uv,1.001),uniforms.lod);\n#endif\n#ifdef NEGATIVEZ\nfragmentOutputs.color=textureSampleLevel(textureSampler,textureSamplerSampler,vec3f(uv,-1.001),uniforms.lod);\n#endif\nif (uniforms.gamma==0) {fragmentOutputs.color=vec4f(pow(fragmentOutputs.color.rgb,vec3f(GammaEncodePowerApprox)),fragmentOutputs.color.a);}}\n";
-    VB.e.ShadersStoreWGSL[yB] || (VB.e.ShadersStoreWGSL[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
+  60293: (YY, rY, DY) => {
+    function FY(YY, rY, DY, FY, AY, IY, RY) {
+      const OY = rY,
+        gY = FY,
+        aY = DY;
+      YY[aY + 0] = OY[gY + 0], YY[aY + 1] = OY[gY + 1], YY[aY + 2] = OY[gY + 2], YY[aY + 3] = OY[gY + 3], YY[aY + 4] = OY[gY + 4], YY[aY + 5] = OY[gY + 5], YY[aY + 6] = OY[gY + 6], YY[aY + 7] = OY[gY + 7], YY[aY + 8] = OY[gY + 8], YY[aY + 9] = OY[gY + 9], YY[aY + 10] = OY[gY + 10], YY[aY + 11] = OY[gY + 11], YY[aY + 12] = OY[gY + 12] - AY, YY[aY + 13] = OY[gY + 13] - IY, YY[aY + 14] = OY[gY + 14] - RY, YY[aY + 15] = OY[gY + 15]
     }
+
+    function AY(YY) {
+      return (rY, DY, AY, IY) => {
+        const RY = YY.camera;
+        if (!RY) return void FY(rY, DY, AY, IY, 0, 0, 0);
+        const OY = RY.worldMatrix;
+        FY(rY, DY, AY, IY, OY[12], OY[13], OY[14])
+      }
+    }
+    DY.r(rY), DY.d(rY, {
+      makePackMeshWorld: () => AY,
+      packMat4IntoF32WithOffset: () => FY
+    })
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

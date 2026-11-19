@@ -1,40 +1,146 @@
 export const id = 150;
 export const ids = [150];
 export const modules = {
-  8242: (BB, TB, dB) => {
-    dB.r(TB), dB.d(TB, {
-      pageBody: () => VB
+  7583: (YY, rY, DY) => {
+    DY.r(rY), DY.d(rY, {
+      NitroSdkAdaptor: () => RY
     });
-    const VB = {
-      whatIs: ["Your gear is completely random, and only one player makes it out of the madness. Bloxd Lucky Towers is a last-player-standing PvP mode where everyone spawns on their own pillar. Rounds are quick, chaotic and pretty unpredictable. There are no Lucky Blocks to open here, which is the big difference from Lucky Blocks Battlegrounds. Your items just turn up every 3 seconds."],
-      howToPlay: ["Up to 15 players spawn on pillars spaced out across the map. You start in a glass cage for 3 seconds. After that, everyone gets a random item every 3 seconds. It could be blocks, food, a weapon, armour, a potion or something that explodes. Build bridges over to your rivals, knock them off their pillars and be the last one alive.", "Keep an eye on the announcements, because random events can flip a whole fight. A chest might drop with a guaranteed weapon and armour inside. Jump Boost lets everyone jump higher for a bit, and Double Speed makes items spawn twice as fast. During Lava Rise the ground starts creeping up beneath you. If a Bombardment is announced, get under cover fast. Holding a Respawn Totem saves you from a fall into the void. Knocked out? You can still spectate the rest of the match."],
-      features: ["Up to 15 Players per Match", "A Random Item Every 3 Seconds", "Weapons, Armour, Potions, Arrows and Explosives", "Special Items Like Updraft, SnowDash, Steal Ball, Bouncy Bomb and Chaos Potion", "Respawn Totems for an Extra Life", "Five Random Events, From Chest Drops to Bombardment", "Craft Sticks, Reinforced Pebbles, Floor Creators and More", "Maps: The OG, Desert, Icy, Space and Forest, Plus Seasonal Spooky and Holiday Maps"],
-      tips: ["Use your first few blocks to wall up your pillar", "Hang on to explosives for breaking your rivals' bridges", "If a chest drops, race for it. There's a guaranteed weapon and two pieces of armour inside", "When the ground starts rising, build upwards", "Get under cover the moment a Bombardment is announced", "Hold a Respawn Totem whenever you might fall, because it puts you back on your pillar", "The pillars on the Icy map are further apart, since jumps on ice go further"],
-      similarGames: ["skywars", "luckyBedwars", "luckyBattlegrounds", "bedwars"],
-      faq: [{
-        question: "What is Lucky Towers?",
-        answer: "A fast PvP mode for up to 15 players. Everyone starts on their own pillar, gets a random item every 3 seconds and fights to be the last one standing."
-      }, {
-        question: "How do you win in Bloxd Lucky Towers?",
-        answer: "Be the last player alive. Use whatever random items you get to knock rivals off their pillars or take them out. If you're eliminated, you can spectate untill the match ends."
-      }, {
-        question: "How often do you get items in Lucky Towers?",
-        answer: "Every 3 seconds. During the Double Speed event they spawn twice as fast for a short while."
-      }, {
-        question: "What items can you get in Lucky Towers?",
-        answer: "Blocks, seedlings, beds, food, potions, weapons, arrows, armour and explosives. There are special items too, like the Bouncy Bomb, Respawn Totem, Floor Creator, SnowDash, Updraft, Steal Ball, Chaos Potion and Moonstone Remote Explosive."
-      }, {
-        question: "Which random events can happen in Lucky Towers?",
-        answer: "Chest Drop, Jump Boost, Double Speed, Lava Rise and Bombardment. You'll get an announcement when each one starts."
-      }, {
-        question: "Which maps are in Lucky Towers?",
-        answer: "The OG, Desert, Icy, Space and Forest. There's also a Spooky map in October and a Holiday map in December and January."
-      }, {
-        question: "How is Lucky Towers different from Lucky Blocks Battlegrounds?",
-        answer: "Lucky Towers is last player standing. Items arrive on their own, and once you're knocked out you spectate. Lucky Blocks Battlegrounds is a kills race in a shared arena where you open Lucky Blocks, and the top player wins when it resets."
-      }]
+    var FY = DY(1318),
+      AY = DY(1204);
+    const IY = "NitroOutstreamVideo";
+    class RY extends FY.c {
+      constructor() {
+        super(), this.name = "nitro", this.bannerAutoRefresh = "alwaysOn", this.videoInFlight = !1
+      }
+      static async setup() {
+        return window.nitroAds = window.nitroAds || {
+          createAd: function() {
+            for (var YY = arguments.length, rY = new Array(YY), DY = 0; DY < YY; DY++) rY[DY] = arguments[DY];
+            return new Promise((YY => {
+              window.nitroAds.queue.push(["createAd", rY, YY])
+            }))
+          },
+          addUserToken: function() {
+            for (var YY = arguments.length, rY = new Array(YY), DY = 0; DY < YY; DY++) rY[DY] = arguments[DY];
+            window.nitroAds.queue.push(["addUserToken", rY])
+          },
+          queue: []
+        }, document.addEventListener("nitroAds.rendered", (YY => {
+          var rY, DY, FY;
+          const AY = document.getElementById(null !== (rY = null === (DY = YY.detail) || void 0 === DY || null === (FY = DY.adInfo) || void 0 === FY ? void 0 : FY.adUnitCode) && void 0 !== rY ? rY : "");
+          null !== AY && void 0 !== AY && AY.classList.contains("NitroBanner") && AY.classList.toggle("NitroBannerUnfilled", "blank" === YY.detail.type)
+        })), await (0, AY.d)("https://s.nitropay.com/ads-2842.js", {
+          "data-cfasync": "false"
+        }), new RY
+      }
+      playVideoAd(YY, rY) {
+        this.showVideoAd(YY, YY)
+      }
+      playRewarded(YY, rY) {
+        this.showVideoAd(YY, rY)
+      }
+      showVideoAd(YY, rY) {
+        if (this.videoInFlight) return console.log("AD: Nitro video already playing"), void rY();
+        const DY = document.getElementById("GenericVideoWrapper"),
+          FY = document.getElementById("GenericVideoInner");
+        if (null === DY || null === FY) return void rY();
+        this.videoInFlight = !0;
+        let AY = !1;
+        const RY = document.createElement("div");
+        RY.id = IY, RY.className = "NitroVideoPlacement";
+        const OY = IY => {
+          if (!AY) {
+            AY = !0, clearTimeout(WY), clearInterval(oY), document.removeEventListener("nitroAds.adResult", vY), document.removeEventListener("nitroAds.rendered", uY), document.removeEventListener("nitroAds.complete", sY);
+            try {
+              iY.remove(), RY.querySelectorAll("video").forEach((YY => {
+                YY.pause()
+              })), RY.remove(), FY.classList.remove("NitroVideo"), DY.style.display = "none"
+            } catch (OY) {
+              console.error("AD: Error tearing down Nitro video", OY)
+            } finally {
+              this.videoInFlight = !1, window.adCompleteSoResume(), IY ? YY() : rY()
+            }
+          }
+        };
+        let gY = !1;
+        const aY = (YY, rY) => {
+            if (!gY) {
+              if (!YY) return console.log(`AD: Nitro video not filled: ${rY}`), void OY(!1);
+              gY = !0, clearTimeout(WY), WY = setTimeout((() => {
+                console.log("AD: Nitro video never completed"), OY(!1)
+              }), 12e4)
+            }
+          },
+          vY = YY => {
+            var rY;
+            (null === (rY = YY.detail) || void 0 === rY ? void 0 : rY.id) === IY && aY("filled" === YY.detail.status, YY.detail.status)
+          },
+          uY = YY => {
+            var rY, DY;
+            (null === (rY = YY.detail) || void 0 === rY || null === (DY = rY.adInfo) || void 0 === DY ? void 0 : DY.adUnitCode) === IY && aY("blank" !== YY.detail.type, YY.detail.type)
+          },
+          sY = YY => {
+            var rY;
+            (null === (rY = YY.detail) || void 0 === rY ? void 0 : rY.adUnitCode) === IY && OY(!0)
+          },
+          iY = document.createElement("button");
+        iY.className = "NitroVideoSkip", iY.disabled = !0, iY.addEventListener("click", (() => {
+          console.log("AD: Nitro video skipped"), OY(!0)
+        }));
+        let yY = Math.ceil(15);
+        const QY = () => {
+          if (yY <= 0) return clearInterval(oY), iY.textContent = "Skip Ad", void(iY.disabled = !1);
+          iY.textContent = `Skip ad in ${yY}s`, yY--
+        };
+        QY();
+        const oY = setInterval(QY, 1e3);
+        let WY = setTimeout((() => {
+          console.log("AD: Nitro video got no result"), OY(!1)
+        }), 1e4);
+        document.addEventListener("nitroAds.adResult", vY), document.addEventListener("nitroAds.rendered", uY), document.addEventListener("nitroAds.complete", sY), FY.appendChild(RY), FY.classList.add("NitroVideo"), DY.appendChild(iY), DY.style.display = "flex", window.adStartSoPause(null, {
+          preventMovement: !0
+        }), Promise.resolve(window.nitroAds.createAd(IY, {
+          format: "display",
+          outstream: "only",
+          resultTimeout: 8e3
+        })).catch((YY => {
+          console.error("AD: Nitro failed to create video", YY), OY(!1)
+        })), console.log("AD: Requested Nitro video")
+      }
+      renderBanner(YY) {
+        const {
+          divId: rY,
+          width: DY,
+          height: FY
+        } = YY, AY = `${rY}-nitro`;
+        let IY = document.getElementById(AY);
+        null === IY && (IY = document.createElement("div"), IY.id = AY, IY.className = "NitroBanner", IY.style.setProperty("--nitro-slot-width", `${DY}px`), IY.style.setProperty("--nitro-slot-height", `${FY}px`), document.getElementById(rY).appendChild(IY));
+        const RY = [
+          [String(DY), String(FY)]
+        ];
+        Promise.resolve(window.nitroAds.createAd(AY, {
+          sizes: RY
+        })).catch((YY => {
+          console.error(`AD: Nitro failed to create banner ${AY}:`, YY)
+        })), console.log(`AD: Requested Nitro banner ${AY}`)
+      }
+      displayConsentUI() {
+        var YY, rY;
+        null === (YY = (rY = window).__cmp) || void 0 === YY || YY.call(rY, "showModal")
+      }
+      addPrivacyLinks(YY) {
+        var rY, DY, FY, AY;
+        const IY = document.createElement("span");
+        IY.dataset.ccpaLink = "1";
+        const RY = document.createElement("div");
+        RY.id = "ncmp-consent-link", YY.replaceChildren(IY, RY), null === (rY = (DY = window).__uspapi) || void 0 === rY || rY.call(DY, "addLink", 1), null === (FY = (AY = window).__cmp) || void 0 === FY || FY.call(AY, "addConsentLink")
+      }
+      newPageSession() {
+        var YY, rY;
+        null === (YY = (rY = window.nitroAds).navigate) || void 0 === YY || YY.call(rY)
+      }
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

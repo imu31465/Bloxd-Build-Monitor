@@ -1,19 +1,30 @@
 export const id = 346;
 export const ids = [346];
 export const modules = {
-  59951: (BB, TB, dB) => {
-    dB.r(TB), dB.d(TB, {
-      postprocessVertexShaderWGSL: () => lB
+  60237: (YY, rY, DY) => {
+    DY.r(rY), DY.d(rY, {
+      WorldCodeAiOutOfUsage: () => IY
     });
-    var VB = dB(38595);
-    const yB = "postprocessVertexShader",
-      pB = "attribute position: vec2<f32>;uniform scale: vec2<f32>;varying vUV: vec2<f32>;const madd=vec2(0.5,0.5);\n#define CUSTOM_VERTEX_DEFINITIONS\n@vertex\nfn main(input : VertexInputs)->FragmentInputs {\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvertexOutputs.vUV=(vertexInputs.position*madd+madd)*uniforms.scale;vertexOutputs.position=vec4(vertexInputs.position,0.0,1.0);\n#define CUSTOM_VERTEX_MAIN_END\n}\n";
-    VB.e.ShadersStoreWGSL[yB] || (VB.e.ShadersStoreWGSL[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
+    var FY = DY(1437),
+      AY = DY(1125);
+
+    function IY(YY) {
+      let {
+        onGetSuperRank: rY
+      } = YY;
+      return (0, AY.jsxs)("div", {
+        className: "WorldCodeAiOutOfUsage",
+        children: [(0, AY.jsx)("p", {
+          className: "WorldCodeAiOutOfUsageText",
+          children: "You don't have any Super Bot.xd usage left - use Bot.xd or get Super Rank for more usage!"
+        }), (0, AY.jsx)(FY.n, {
+          className: "WorldCodeAiOutOfUsageButton",
+          onClick: rY,
+          children: "Get Super Rank"
+        })]
+      })
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

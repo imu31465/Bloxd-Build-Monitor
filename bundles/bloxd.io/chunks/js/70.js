@@ -1,1728 +1,10022 @@
 export const id = 70;
 export const ids = [70];
 export const modules = {
-  4108: BB => {
-    function TB(BB) {
-      return BB instanceof Map ? BB.clear = BB.delete = BB.set = function() {
-        throw new Error("map is read-only")
-      } : BB instanceof Set && (BB.add = BB.clear = BB.delete = function() {
-        throw new Error("set is read-only")
-      }), Object.freeze(BB), Object.getOwnPropertyNames(BB).forEach((dB => {
-        const VB = BB[dB],
-          yB = typeof VB;
-        "object" !== yB && "function" !== yB || Object.isFrozen(VB) || TB(VB)
-      })), BB
-    }
-    class dB {
-      constructor(BB) {
-        void 0 === BB.data && (BB.data = {}), this.data = BB.data, this.isMatchIgnored = !1
-      }
-      ignoreMatch() {
-        this.isMatchIgnored = !0
-      }
+  36408: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => RY,
+      e: () => gY,
+      i: () => aY,
+      l: () => vY,
+      p: () => OY,
+      q: () => oY
+    });
+    var FY = DY(341),
+      AY = DY(614),
+      IY = DY(349);
+    const RY = ["", "|meta|charging2", "|meta|charging3", "|meta|charging4"];
+
+    function OY(YY, rY) {
+      return "" === rY ? YY : `${YY} ${rY}`
     }
 
-    function VB(BB) {
-      return BB.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#x27;")
+    function gY(YY, rY, DY, AY) {
+      const IY = YY.replace((0, FY.xe)(rY.material), (0, FY.xe)(DY));
+      if (rY.kind === AY || "" === rY.kind) return IY;
+      const RY = (0, FY.xe)(rY.kind);
+      if (!IY.includes(RY)) throw new Error(`Cannot name assets for "${OY(DY,AY)}": "${IY}" has no "${RY}" to replace`);
+      return IY.replace(RY, (0, FY.xe)(AY))
     }
 
-    function yB(BB) {
-      const TB = Object.create(null);
-      for (const pB in BB) TB[pB] = BB[pB];
-      for (var dB = arguments.length, VB = new Array(dB > 1 ? dB - 1 : 0), yB = 1; yB < dB; yB++) VB[yB - 1] = arguments[yB];
-      return VB.forEach((function(BB) {
-        for (const dB in BB) TB[dB] = BB[dB]
-      })), TB
+    function aY(YY) {
+      return YY.creativeKinds ? YY.creativeKinds.flatMap((rY => YY.materials.map((YY => OY(YY, rY))))) : YY.materials.flatMap((rY => YY.kinds.filter((rY => {
+        var DY;
+        return !(null !== (DY = YY.hiddenKinds) && void 0 !== DY && DY.includes(rY))
+      })).map((YY => OY(rY, YY)))))
     }
-    const pB = BB => !!BB.scope;
-    class lB {
-      constructor(BB, TB) {
-        this.buffer = "", this.classPrefix = TB.classPrefix, BB.walk(this)
-      }
-      addText(BB) {
-        this.buffer += VB(BB)
-      }
-      openNode(BB) {
-        if (!pB(BB)) return;
-        const TB = ((BB, TB) => {
-          let {
-            prefix: dB
-          } = TB;
-          if (BB.startsWith("language:")) return BB.replace("language:", "language-");
-          if (BB.includes(".")) {
-            const TB = BB.split(".");
-            return [`${dB}${TB.shift()}`, ...TB.map(((BB, TB) => `${BB}${"_".repeat(TB+1)}`))].join(" ")
-          }
-          return `${dB}${BB}`
-        })(BB.scope, {
-          prefix: this.classPrefix
-        });
-        this.span(TB)
-      }
-      closeNode(BB) {
-        pB(BB) && (this.buffer += "</span>")
-      }
-      value() {
-        return this.buffer
-      }
-      span(BB) {
-        this.buffer += `<span class="${BB}">`
-      }
+
+    function vY(YY, rY) {
+      return YY.flatMap((YY => YY.kinds.includes(rY) ? YY.materials.map((YY => OY(YY, rY))) : []))
     }
-    const JB = function() {
-      let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      const TB = {
-        children: []
-      };
-      return Object.assign(TB, BB), TB
+    const uY = {
+      name: "diamondVariants",
+      materials: IY.j,
+      kinds: IY.i.map((YY => YY.trimStart())),
+      inheritsFrom: YY => ({
+        material: "Diamond",
+        kind: YY
+      }),
+      hiddenKinds: ["Crossbow Charged"],
+      creativeKinds: ["", "Fragment", "Pickaxe", "Axe", "Spade", "Hoe", "Sword", "Bow", "Crossbow", "Spear", "Dagger", "Club", "Mace", "Whip", "Boomerang", "Helmet", "Chestplate", "Gauntlets", "Leggings", "Boots"],
+      description: (YY, rY) => {
+        if ("Fragment" === rY) return {
+          translationKey: "Magmasteel" === YY ? "item:forgeFragmentDescription" : "item:elementalShardDescription"
+        }
+      }
     };
-    class YB {
-      constructor() {
-        this.Tv = JB(), this.stack = [this.Tv]
-      }
-      get top() {
-        return this.stack[this.stack.length - 1]
-      }
-      get root() {
-        return this.Tv
-      }
-      add(BB) {
-        this.top.children.push(BB)
-      }
-      openNode(BB) {
-        const TB = JB({
-          scope: BB
-        });
-        this.add(TB), this.stack.push(TB)
-      }
-      closeNode() {
-        if (this.stack.length > 1) return this.stack.pop()
-      }
-      closeAllNodes() {
-        for (; this.closeNode(););
-      }
-      toJSON() {
-        return JSON.stringify(this.Tv, null, 4)
-      }
-      walk(BB) {
-        return this.constructor._walk(BB, this.Tv)
-      }
-      static _walk(BB, TB) {
-        return "string" === typeof TB ? BB.addText(TB) : TB.children && (BB.openNode(TB), TB.children.forEach((TB => this._walk(BB, TB))), BB.closeNode(TB)), BB
-      }
-      static _collapse(BB) {
-        "string" !== typeof BB && BB.children && (BB.children.every((BB => "string" === typeof BB)) ? BB.children = [BB.children.join("")] : BB.children.forEach((BB => {
-          YB._collapse(BB)
-        })))
+
+    function sY(YY) {
+      return {
+        translationKey: `item:${(0,FY.te)(YY)}`
       }
     }
-    class gB extends YB {
-      constructor(BB) {
-        super(), this.options = BB
-      }
-      addText(BB) {
-        "" !== BB && this.add(BB)
-      }
-      startScope(BB) {
-        this.openNode(BB)
-      }
-      endScope() {
-        this.closeNode()
-      }
-      __addSublanguage(BB, TB) {
-        const dB = BB.root;
-        TB && (dB.scope = `language:${TB}`), this.add(dB)
-      }
-      toHTML() {
-        return new lB(this, this.options).value()
-      }
-      finalize() {
-        return this.closeAllNodes(), !0
-      }
-    }
-
-    function oB(BB) {
-      return BB ? "string" === typeof BB ? BB : BB.source : null
-    }
-
-    function kB(BB) {
-      return DB("(?=", BB, ")")
-    }
-
-    function LB(BB) {
-      return DB("(?:", BB, ")*")
-    }
-
-    function OB(BB) {
-      return DB("(?:", BB, ")?")
-    }
-
-    function DB() {
-      for (var BB = arguments.length, TB = new Array(BB), dB = 0; dB < BB; dB++) TB[dB] = arguments[dB];
-      return TB.map((BB => oB(BB))).join("")
-    }
-
-    function uB() {
-      for (var BB = arguments.length, TB = new Array(BB), dB = 0; dB < BB; dB++) TB[dB] = arguments[dB];
-      const VB = function(BB) {
-        const TB = BB[BB.length - 1];
-        return "object" === typeof TB && TB.constructor === Object ? (BB.splice(BB.length - 1, 1), TB) : {}
-      }(TB);
-      return "(" + (VB.capture ? "" : "?:") + TB.map((BB => oB(BB))).join("|") + ")"
-    }
-
-    function HB(BB) {
-      return new RegExp(BB.toString() + "|").exec("").length - 1
-    }
-    const EB = /\[(?:[^\\\]]|\\.)*\]|\(\??|\\([1-9][0-9]*)|\\./;
-
-    function vB(BB, TB) {
-      let {
-        joinWith: dB
-      } = TB, VB = 0;
-      return BB.map((BB => {
-        VB += 1;
-        const TB = VB;
-        let dB = oB(BB),
-          yB = "";
-        for (; dB.length > 0;) {
-          const BB = EB.exec(dB);
-          if (!BB) {
-            yB += dB;
-            break
-          }
-          yB += dB.substring(0, BB.index), dB = dB.substring(BB.index + BB[0].length), "\\" === BB[0][0] && BB[1] ? yB += "\\" + String(Number(BB[1]) + TB) : (yB += BB[0], "(" === BB[0] && VB++)
-        }
-        return yB
-      })).map((BB => `(${BB})`)).join(dB)
-    }
-    const mB = "[a-zA-Z]\\w*",
-      iB = "[a-zA-Z_]\\w*",
-      NB = "\\b\\d+(\\.\\d+)?",
-      tB = "(-?)(\\b0[xX][a-fA-F0-9]+|(\\b\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)",
-      fB = "\\b(0b[01]+)",
-      sB = {
-        tO: "\\\\[\\s\\S]",
-        relevance: 0
-      },
-      MB = {
-        scope: "string",
-        tO: "'",
-        end: "'",
-        illegal: "\\n",
-        contains: [sB]
-      },
-      zB = {
-        scope: "string",
-        tO: '"',
-        end: '"',
-        illegal: "\\n",
-        contains: [sB]
-      },
-      wB = function(BB, TB) {
-        const dB = yB({
-          scope: "comment",
-          tO: BB,
-          end: TB,
-          contains: []
-        }, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {});
-        dB.contains.push({
-          scope: "doctag",
-          tO: "[ ]*(?=(TODO|FIXME|NOTE|BUG|OPTIMIZE|HACK|XXX):)",
-          end: /(TODO|FIXME|NOTE|BUG|OPTIMIZE|HACK|XXX):/,
-          excludeBegin: !0,
-          relevance: 0
-        });
-        const VB = uB("I", "a", "is", "so", "us", "to", "at", "if", "in", "it", "on", /[A-Za-z]+['](d|ve|re|ll|t|s|n)/, /[A-Za-z]+[-][a-z]+/, /[A-Za-z][a-z]{2,}/);
-        return dB.contains.push({
-          tO: DB(/[ ]+/, "(", VB, /[.]?[:]?([.][ ]|[ ])/, "){3}")
-        }), dB
-      },
-      UB = wB("//", "$"),
-      FB = wB("/\\*", "\\*/"),
-      KB = wB("#", "$"),
-      rB = {
-        scope: "number",
-        tO: NB,
-        relevance: 0
-      },
-      IB = {
-        scope: "number",
-        tO: tB,
-        relevance: 0
-      },
-      cB = {
-        scope: "number",
-        tO: fB,
-        relevance: 0
-      },
-      SB = {
-        scope: "regexp",
-        tO: /\/(?=[^/\n]*\/)/,
-        end: /\/[gimuy]*/,
-        contains: [sB, {
-          tO: /\[/,
-          end: /\]/,
-          relevance: 0,
-          contains: [sB]
-        }]
-      },
-      PB = {
-        scope: "title",
-        tO: mB,
-        relevance: 0
-      },
-      QB = {
-        scope: "title",
-        tO: iB,
-        relevance: 0
-      },
-      RB = {
-        tO: "\\.\\s*" + iB,
-        relevance: 0
-      };
-    var aB = Object.freeze({
-      __proto__: null,
-      APOS_STRING_MODE: MB,
-      BACKSLASH_ESCAPE: sB,
-      BINARY_NUMBER_MODE: cB,
-      BINARY_NUMBER_RE: fB,
-      COMMENT: wB,
-      C_BLOCK_COMMENT_MODE: FB,
-      C_LINE_COMMENT_MODE: UB,
-      C_NUMBER_MODE: IB,
-      C_NUMBER_RE: tB,
-      END_SAME_AS_BEGIN: function(BB) {
-        return Object.assign(BB, {
-          "on:begin": (BB, TB) => {
-            TB.data._beginMatch = BB[1]
-          },
-          "on:end": (BB, TB) => {
-            TB.data._beginMatch !== BB[1] && TB.ignoreMatch()
-          }
-        })
-      },
-      HASH_COMMENT_MODE: KB,
-      IDENT_RE: mB,
-      MATCH_NOTHING_RE: /\b\B/,
-      METHOD_GUARD: RB,
-      NUMBER_MODE: rB,
-      NUMBER_RE: NB,
-      PHRASAL_WORDS_MODE: {
-        tO: /\b(a|an|the|are|I'm|isn't|don't|doesn't|won't|but|just|should|pretty|simply|enough|gonna|going|wtf|so|such|will|you|your|they|like|more)\b/
-      },
-      QUOTE_STRING_MODE: zB,
-      REGEXP_MODE: SB,
-      RE_STARTERS_RE: "!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|-|-=|/=|/|:|;|<<|<<=|<=|<|===|==|=|>>>=|>>=|>=|>>>|>>|>|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~",
-      SHEBANG: function() {
-        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        const TB = /^#![ ]*\//;
-        return BB.binary && (BB.tO = DB(TB, /.*\b/, BB.binary, /\b.*/)), yB({
-          scope: "meta",
-          tO: TB,
-          end: /$/,
-          relevance: 0,
-          "on:begin": (BB, TB) => {
-            0 !== BB.index && TB.ignoreMatch()
-          }
-        }, BB)
-      },
-      TITLE_MODE: PB,
-      UNDERSCORE_IDENT_RE: iB,
-      UNDERSCORE_TITLE_MODE: QB
-    });
-
-    function ZB(BB, TB) {
-      "." === BB.input[BB.index - 1] && TB.ignoreMatch()
-    }
-
-    function XB(BB, TB) {
-      void 0 !== BB.className && (BB.scope = BB.className, delete BB.className)
-    }
-
-    function WB(BB, TB) {
-      TB && BB.beginKeywords && (BB.tO = "\\b(" + BB.beginKeywords.split(" ").join("|") + ")(?!\\.)(?=\\b|\\s)", BB.__beforeBegin = ZB, BB.keywords = BB.keywords || BB.beginKeywords, delete BB.beginKeywords, void 0 === BB.relevance && (BB.relevance = 0))
-    }
-
-    function hB(BB, TB) {
-      Array.isArray(BB.illegal) && (BB.illegal = uB(...BB.illegal))
-    }
-
-    function CB(BB, TB) {
-      if (BB.match) {
-        if (BB.tO || BB.end) throw new Error("begin & end are not supported with match");
-        BB.tO = BB.match, delete BB.match
-      }
-    }
-
-    function GB(BB, TB) {
-      void 0 === BB.relevance && (BB.relevance = 1)
-    }
-    const qB = (BB, TB) => {
-        if (!BB.beforeMatch) return;
-        if (BB.starts) throw new Error("beforeMatch cannot be used with starts");
-        const dB = Object.assign({}, BB);
-        Object.keys(BB).forEach((TB => {
-          delete BB[TB]
-        })), BB.keywords = dB.keywords, BB.tO = DB(dB.beforeMatch, kB(dB.tO)), BB.starts = {
-          relevance: 0,
-          contains: [Object.assign(dB, {
-            endsParent: !0
-          })]
-        }, BB.relevance = 0, delete dB.beforeMatch
-      },
-      xB = ["of", "and", "for", "in", "not", "or", "if", "then", "parent", "list", "value"];
-
-    function jB(BB, TB) {
-      let dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "keyword";
-      const VB = Object.create(null);
-      return "string" === typeof BB ? yB(dB, BB.split(" ")) : Array.isArray(BB) ? yB(dB, BB) : Object.keys(BB).forEach((function(dB) {
-        Object.assign(VB, jB(BB[dB], TB, dB))
-      })), VB;
-
-      function yB(BB, dB) {
-        TB && (dB = dB.map((BB => BB.toLowerCase()))), dB.forEach((function(TB) {
-          const dB = TB.split("|");
-          VB[dB[0]] = [BB, AB(dB[0], dB[1])]
-        }))
-      }
-    }
-
-    function AB(BB, TB) {
-      return TB ? Number(TB) : function(BB) {
-        return xB.includes(BB.toLowerCase())
-      }(BB) ? 0 : 1
-    }
-    const bB = {},
-      nB = BB => {
-        console.error(BB)
-      },
-      eB = function(BB) {
-        for (var TB = arguments.length, dB = new Array(TB > 1 ? TB - 1 : 0), VB = 1; VB < TB; VB++) dB[VB - 1] = arguments[VB];
-        console.log(`WARN: ${BB}`, ...dB)
-      },
-      BT = (BB, TB) => {
-        bB[`${BB}/${TB}`] || (console.log(`Deprecated as of ${BB}. ${TB}`), bB[`${BB}/${TB}`] = !0)
-      },
-      TT = new Error;
-
-    function dT(BB, TB, dB) {
-      let {
-        key: VB
-      } = dB, yB = 0;
-      const pB = BB[VB],
-        lB = {},
-        JB = {};
-      for (let YB = 1; YB <= TB.length; YB++) JB[YB + yB] = pB[YB], lB[YB + yB] = !0, yB += HB(TB[YB - 1]);
-      BB[VB] = JB, BB[VB]._emit = lB, BB[VB]._multi = !0
-    }
-
-    function VT(BB) {
-      ! function(BB) {
-        BB.scope && "object" === typeof BB.scope && null !== BB.scope && (BB.beginScope = BB.scope, delete BB.scope)
-      }(BB), "string" === typeof BB.beginScope && (BB.beginScope = {
-          _wrap: BB.beginScope
-        }), "string" === typeof BB.endScope && (BB.endScope = {
-          _wrap: BB.endScope
+    const iY = {
+        name: "decorativeArmour",
+        materials: IY.f,
+        kinds: AY.e,
+        inheritsFrom: YY => ({
+          material: "Diamond",
+          kind: YY
         }),
-        function(BB) {
-          if (Array.isArray(BB.tO)) {
-            if (BB.skip || BB.excludeBegin || BB.returnBegin) throw nB("skip, excludeBegin, returnBegin not compatible with beginScope: {}"), TT;
-            if ("object" !== typeof BB.beginScope || null === BB.beginScope) throw nB("beginScope must be object"), TT;
-            dT(BB, BB.tO, {
-              key: "beginScope"
-            }), BB.tO = vB(BB.tO, {
-              joinWith: ""
-            })
-          }
-        }(BB),
-        function(BB) {
-          if (Array.isArray(BB.end)) {
-            if (BB.skip || BB.excludeEnd || BB.returnEnd) throw nB("skip, excludeEnd, returnEnd not compatible with endScope: {}"), TT;
-            if ("object" !== typeof BB.endScope || null === BB.endScope) throw nB("endScope must be object"), TT;
-            dT(BB, BB.end, {
-              key: "endScope"
-            }), BB.end = vB(BB.end, {
-              joinWith: ""
-            })
-          }
-        }(BB)
-    }
-
-    function yT(BB) {
-      function TB(TB, dB) {
-        return new RegExp(oB(TB), "m" + (BB.case_insensitive ? "i" : "") + (BB.unicodeRegex ? "u" : "") + (dB ? "g" : ""))
-      }
-      class dB {
-        constructor() {
-          this.matchIndexes = {}, this.regexes = [], this.matchAt = 1, this.position = 0
-        }
-        addRule(BB, TB) {
-          TB.position = this.position++, this.matchIndexes[this.matchAt] = TB, this.regexes.push([TB, BB]), this.matchAt += HB(BB) + 1
-        }
-        compile() {
-          0 === this.regexes.length && (this.exec = () => null);
-          const BB = this.regexes.map((BB => BB[1]));
-          this.matcherRe = TB(vB(BB, {
-            joinWith: "|"
-          }), !0), this.lastIndex = 0
-        }
-        exec(BB) {
-          this.matcherRe.lastIndex = this.lastIndex;
-          const TB = this.matcherRe.exec(BB);
-          if (!TB) return null;
-          const dB = TB.findIndex(((BB, TB) => TB > 0 && void 0 !== BB)),
-            VB = this.matchIndexes[dB];
-          return TB.splice(0, dB), Object.assign(TB, VB)
-        }
-      }
-      class VB {
-        constructor() {
-          this.rules = [], this.multiRegexes = [], this.count = 0, this.lastIndex = 0, this.regexIndex = 0
-        }
-        getMatcher(BB) {
-          if (this.multiRegexes[BB]) return this.multiRegexes[BB];
-          const TB = new dB;
-          return this.rules.slice(BB).forEach((BB => {
-            let [dB, VB] = BB;
-            return TB.addRule(dB, VB)
-          })), TB.compile(), this.multiRegexes[BB] = TB, TB
-        }
-        resumingScanAtSamePosition() {
-          return 0 !== this.regexIndex
-        }
-        considerAll() {
-          this.regexIndex = 0
-        }
-        addRule(BB, TB) {
-          this.rules.push([BB, TB]), "tO" === TB.type && this.count++
-        }
-        exec(BB) {
-          const TB = this.getMatcher(this.regexIndex);
-          TB.lastIndex = this.lastIndex;
-          let dB = TB.exec(BB);
-          if (this.resumingScanAtSamePosition())
-            if (dB && dB.index === this.lastIndex);
-            else {
-              const TB = this.getMatcher(0);
-              TB.lastIndex = this.lastIndex + 1, dB = TB.exec(BB)
-            } return dB && (this.regexIndex += dB.position + 1, this.regexIndex === this.count && this.considerAll()), dB
-        }
-      }
-      if (BB.compilerExtensions || (BB.compilerExtensions = []), BB.contains && BB.contains.includes("self")) throw new Error("ERR: contains `self` is not supported at the top-level of a language.  See documentation.");
-      return BB.classNameAliases = yB(BB.classNameAliases || {}),
-        function dB(pB, lB) {
-          const JB = pB;
-          if (pB.isCompiled) return JB;
-          [XB, CB, VT, qB].forEach((BB => BB(pB, lB))), BB.compilerExtensions.forEach((BB => BB(pB, lB))), pB.__beforeBegin = null, [WB, hB, GB].forEach((BB => BB(pB, lB))), pB.isCompiled = !0;
-          let YB = null;
-          return "object" === typeof pB.keywords && pB.keywords.$pattern && (pB.keywords = Object.assign({}, pB.keywords), YB = pB.keywords.$pattern, delete pB.keywords.$pattern), YB = YB || /\w+/, pB.keywords && (pB.keywords = jB(pB.keywords, BB.case_insensitive)), JB.keywordPatternRe = TB(YB, !0), lB && (pB.tO || (pB.tO = /\B|\b/), JB.beginRe = TB(JB.tO), pB.end || pB.endsWithParent || (pB.end = /\B|\b/), pB.end && (JB.endRe = TB(JB.end)), JB.terminatorEnd = oB(JB.end) || "", pB.endsWithParent && lB.terminatorEnd && (JB.terminatorEnd += (pB.end ? "|" : "") + lB.terminatorEnd)), pB.illegal && (JB.illegalRe = TB(pB.illegal)), pB.contains || (pB.contains = []), pB.contains = [].concat(...pB.contains.map((function(BB) {
-            return function(BB) {
-              BB.variants && !BB.cachedVariants && (BB.cachedVariants = BB.variants.map((function(TB) {
-                return yB(BB, {
-                  variants: null
-                }, TB)
-              })));
-              if (BB.cachedVariants) return BB.cachedVariants;
-              if (pT(BB)) return yB(BB, {
-                starts: BB.starts ? yB(BB.starts) : null
-              });
-              if (Object.isFrozen(BB)) return yB(BB);
-              return BB
-            }("self" === BB ? pB : BB)
-          }))), pB.contains.forEach((function(BB) {
-            dB(BB, JB)
-          })), pB.starts && dB(pB.starts, lB), JB.matcher = function(BB) {
-            const TB = new VB;
-            return BB.contains.forEach((BB => TB.addRule(BB.tO, {
-              rule: BB,
-              type: "tO"
-            }))), BB.terminatorEnd && TB.addRule(BB.terminatorEnd, {
-              type: "end"
-            }), BB.illegal && TB.addRule(BB.illegal, {
-              type: "illegal"
-            }), TB
-          }(JB), JB
-        }(BB)
-    }
-
-    function pT(BB) {
-      return !!BB && (BB.endsWithParent || pT(BB.starts))
-    }
-    class lT extends Error {
-      constructor(BB, TB) {
-        super(BB), this.name = "HTMLInjectionError", this.html = TB
-      }
-    }
-    const JT = VB,
-      YT = yB,
-      gT = Symbol("nomatch"),
-      oT = function(BB) {
-        const VB = Object.create(null),
-          yB = Object.create(null),
-          pB = [];
-        let lB = !0;
-        const JB = "Could not find the language '{}', did you forget to load/include a language module?",
-          YB = {
-            disableAutodetect: !0,
-            name: "Plain text",
-            contains: []
-          };
-        let oB = {
-          ignoreUnescapedHTML: !1,
-          throwUnescapedHTML: !1,
-          noHighlightRe: /^(no-?highlight)$/i,
-          languageDetectRe: /\blang(?:uage)?-([\w-]+)\b/i,
-          classPrefix: "hljs-",
-          cssSelector: "pre code",
-          languages: null,
-          __emitter: gB
-        };
-
-        function HB(BB) {
-          return oB.noHighlightRe.test(BB)
-        }
-
-        function EB(BB, TB, dB) {
-          let VB = "",
-            yB = "";
-          "object" === typeof TB ? (VB = BB, dB = TB.ignoreIllegals, yB = TB.language) : (BT("10.7.0", "highlight(lang, code, ...args) has been deprecated."), BT("10.7.0", "Please use highlight(code, options) instead.\nhttps://github.com/highlightjs/highlight.js/issues/2277"), yB = BB, VB = TB), void 0 === dB && (dB = !0);
-          const pB = {
-            code: VB,
-            language: yB
-          };
-          zB("before:highlight", pB);
-          const lB = pB.result ? pB.result : vB(pB.language, pB.code, dB);
-          return lB.code = pB.code, zB("after:highlight", lB), lB
-        }
-
-        function vB(BB, TB, yB, pB) {
-          const YB = Object.create(null);
-
-          function gB() {
-            if (!zB.keywords) return void UB.addText(FB);
-            let BB = 0;
-            zB.keywordPatternRe.lastIndex = 0;
-            let TB = zB.keywordPatternRe.exec(FB),
-              dB = "";
-            for (; TB;) {
-              dB += FB.substring(BB, TB.index);
-              const yB = tB.case_insensitive ? TB[0].toLowerCase() : TB[0],
-                pB = (VB = yB, zB.keywords[VB]);
-              if (pB) {
-                const [BB, VB] = pB;
-                if (UB.addText(dB), dB = "", YB[yB] = (YB[yB] || 0) + 1, YB[yB] <= 7 && (KB += VB), BB.startsWith("_")) dB += TB[0];
-                else {
-                  const dB = tB.classNameAliases[BB] || BB;
-                  LB(TB[0], dB)
-                }
-              } else dB += TB[0];
-              BB = zB.keywordPatternRe.lastIndex, TB = zB.keywordPatternRe.exec(FB)
-            }
-            var VB;
-            dB += FB.substring(BB), UB.addText(dB)
-          }
-
-          function kB() {
-            null != zB.subLanguage ? function() {
-              if ("" === FB) return;
-              let BB = null;
-              if ("string" === typeof zB.subLanguage) {
-                if (!VB[zB.subLanguage]) return void UB.addText(FB);
-                BB = vB(zB.subLanguage, FB, !0, wB[zB.subLanguage]), wB[zB.subLanguage] = BB._top
-              } else BB = mB(FB, zB.subLanguage.length ? zB.subLanguage : null);
-              zB.relevance > 0 && (KB += BB.relevance), UB.__addSublanguage(BB._emitter, BB.language)
-            }() : gB(), FB = ""
-          }
-
-          function LB(BB, TB) {
-            "" !== BB && (UB.startScope(TB), UB.addText(BB), UB.endScope())
-          }
-
-          function OB(BB, TB) {
-            let dB = 1;
-            const VB = TB.length - 1;
-            for (; dB <= VB;) {
-              if (!BB._emit[dB]) {
-                dB++;
-                continue
-              }
-              const VB = tB.classNameAliases[BB[dB]] || BB[dB],
-                yB = TB[dB];
-              VB ? LB(yB, VB) : (FB = yB, gB(), FB = ""), dB++
-            }
-          }
-
-          function DB(BB, TB) {
-            return BB.scope && "string" === typeof BB.scope && UB.openNode(tB.classNameAliases[BB.scope] || BB.scope), BB.beginScope && (BB.beginScope._wrap ? (LB(FB, tB.classNameAliases[BB.beginScope._wrap] || BB.beginScope._wrap), FB = "") : BB.beginScope._multi && (OB(BB.beginScope, TB), FB = "")), zB = Object.create(BB, {
-              parent: {
-                value: zB
-              }
-            }), zB
-          }
-
-          function uB(BB, TB, VB) {
-            let yB = function(BB, TB) {
-              const dB = BB && BB.exec(TB);
-              return dB && 0 === dB.index
-            }(BB.endRe, VB);
-            if (yB) {
-              if (BB["on:end"]) {
-                const VB = new dB(BB);
-                BB["on:end"](TB, VB), VB.isMatchIgnored && (yB = !1)
-              }
-              if (yB) {
-                for (; BB.endsParent && BB.parent;) BB = BB.parent;
-                return BB
-              }
-            }
-            if (BB.endsWithParent) return uB(BB.parent, TB, VB)
-          }
-
-          function HB(BB) {
-            return 0 === zB.matcher.regexIndex ? (FB += BB[0], 1) : (cB = !0, 0)
-          }
-
-          function EB(BB) {
-            const dB = BB[0],
-              VB = TB.substring(BB.index),
-              yB = uB(zB, BB, VB);
-            if (!yB) return gT;
-            const pB = zB;
-            zB.endScope && zB.endScope._wrap ? (kB(), LB(dB, zB.endScope._wrap)) : zB.endScope && zB.endScope._multi ? (kB(), OB(zB.endScope, BB)) : pB.skip ? FB += dB : (pB.returnEnd || pB.excludeEnd || (FB += dB), kB(), pB.excludeEnd && (FB = dB));
-            do {
-              zB.scope && UB.closeNode(), zB.skip || zB.subLanguage || (KB += zB.relevance), zB = zB.parent
-            } while (zB !== yB.parent);
-            return yB.starts && DB(yB.starts, BB), pB.returnEnd ? 0 : dB.length
-          }
-          let iB = {};
-
-          function NB(VB, pB) {
-            const JB = pB && pB[0];
-            if (FB += VB, null == JB) return kB(), 0;
-            if ("tO" === iB.type && "end" === pB.type && iB.index === pB.index && "" === JB) {
-              if (FB += TB.slice(pB.index, pB.index + 1), !lB) {
-                const TB = new Error(`0 width match regex (${BB})`);
-                throw TB.languageName = BB, TB.badRule = iB.rule, TB
-              }
-              return 1
-            }
-            if (iB = pB, "tO" === pB.type) return function(BB) {
-              const TB = BB[0],
-                VB = BB.rule,
-                yB = new dB(VB),
-                pB = [VB.__beforeBegin, VB["on:begin"]];
-              for (const dB of pB)
-                if (dB && (dB(BB, yB), yB.isMatchIgnored)) return HB(TB);
-              return VB.skip ? FB += TB : (VB.excludeBegin && (FB += TB), kB(), VB.returnBegin || VB.excludeBegin || (FB = TB)), DB(VB, BB), VB.returnBegin ? 0 : TB.length
-            }(pB);
-            if ("illegal" === pB.type && !yB) {
-              const BB = new Error('Illegal lexeme "' + JB + '" for mode "' + (zB.scope || "<unnamed>") + '"');
-              throw BB.mode = zB, BB
-            }
-            if ("end" === pB.type) {
-              const BB = EB(pB);
-              if (BB !== gT) return BB
-            }
-            if ("illegal" === pB.type && "" === JB) return FB += "\n", 1;
-            if (IB > 1e5 && IB > 3 * pB.index) {
-              throw new Error("potential infinite loop, way more iterations than matches")
-            }
-            return FB += JB, JB.length
-          }
-          const tB = fB(BB);
-          if (!tB) throw nB(JB.replace("{}", BB)), new Error('Unknown language: "' + BB + '"');
-          const sB = yT(tB);
-          let MB = "",
-            zB = pB || sB;
-          const wB = {},
-            UB = new oB.__emitter(oB);
-          ! function() {
-            const BB = [];
-            for (let TB = zB; TB !== tB; TB = TB.parent) TB.scope && BB.unshift(TB.scope);
-            BB.forEach((BB => UB.openNode(BB)))
-          }();
-          let FB = "",
-            KB = 0,
-            rB = 0,
-            IB = 0,
-            cB = !1;
-          try {
-            if (tB.__emitTokens) tB.__emitTokens(TB, UB);
-            else {
-              for (zB.matcher.considerAll();;) {
-                IB++, cB ? cB = !1 : zB.matcher.considerAll(), zB.matcher.lastIndex = rB;
-                const BB = zB.matcher.exec(TB);
-                if (!BB) break;
-                const dB = NB(TB.substring(rB, BB.index), BB);
-                rB = BB.index + dB
-              }
-              NB(TB.substring(rB))
-            }
-            return UB.finalize(), MB = UB.toHTML(), {
-              language: BB,
-              value: MB,
-              relevance: KB,
-              illegal: !1,
-              _emitter: UB,
-              _top: zB
-            }
-          } catch (SB) {
-            if (SB.message && SB.message.includes("Illegal")) return {
-              language: BB,
-              value: JT(TB),
-              illegal: !0,
-              relevance: 0,
-              _illegalBy: {
-                message: SB.message,
-                index: rB,
-                context: TB.slice(rB - 100, rB + 100),
-                mode: SB.mode,
-                resultSoFar: MB
-              },
-              _emitter: UB
-            };
-            if (lB) return {
-              language: BB,
-              value: JT(TB),
-              illegal: !1,
-              relevance: 0,
-              errorRaised: SB,
-              _emitter: UB,
-              _top: zB
-            };
-            throw SB
-          }
-        }
-
-        function mB(BB, TB) {
-          TB = TB || oB.languages || Object.keys(VB);
-          const dB = function(BB) {
-              const TB = {
-                value: JT(BB),
-                illegal: !1,
-                relevance: 0,
-                _top: YB,
-                _emitter: new oB.__emitter(oB)
-              };
-              return TB._emitter.addText(BB), TB
-            }(BB),
-            yB = TB.filter(fB).filter(MB).map((TB => vB(TB, BB, !1)));
-          yB.unshift(dB);
-          const pB = yB.sort(((BB, TB) => {
-              if (BB.relevance !== TB.relevance) return TB.relevance - BB.relevance;
-              if (BB.language && TB.language) {
-                if (fB(BB.language).supersetOf === TB.language) return 1;
-                if (fB(TB.language).supersetOf === BB.language) return -1
-              }
-              return 0
-            })),
-            [lB, JB] = pB,
-            gB = lB;
-          return gB.secondBest = JB, gB
-        }
-
-        function iB(BB) {
-          let TB = null;
-          const dB = function(BB) {
-            let TB = BB.className + " ";
-            TB += BB.parentNode ? BB.parentNode.className : "";
-            const dB = oB.languageDetectRe.exec(TB);
-            if (dB) {
-              const TB = fB(dB[1]);
-              return TB || (eB(JB.replace("{}", dB[1])), eB("Falling back to no-highlight mode for this block.", BB)), TB ? dB[1] : "no-highlight"
-            }
-            return TB.split(/\s+/).find((BB => HB(BB) || fB(BB)))
-          }(BB);
-          if (HB(dB)) return;
-          if (zB("before:highlightElement", {
-              el: BB,
-              language: dB
-            }), BB.dataset.highlighted) return void console.log("Element previously highlighted. To highlight again, first unset `dataset.highlighted`.", BB);
-          if (BB.children.length > 0 && (oB.ignoreUnescapedHTML || (console.warn("One of your code blocks includes unescaped HTML. This is a potentially serious security risk."), console.warn("https://github.com/highlightjs/highlight.js/wiki/security"), console.warn("The element with unescaped HTML:"), console.warn(BB)), oB.throwUnescapedHTML)) {
-            throw new lT("One of your code blocks includes unescaped HTML.", BB.innerHTML)
-          }
-          TB = BB;
-          const VB = TB.textContent,
-            pB = dB ? EB(VB, {
-              language: dB,
-              ignoreIllegals: !0
-            }) : mB(VB);
-          BB.innerHTML = pB.value, BB.dataset.highlighted = "yes",
-            function(BB, TB, dB) {
-              const VB = TB && yB[TB] || dB;
-              BB.classList.add("hljs"), BB.classList.add(`language-${VB}`)
-            }(BB, dB, pB.language), BB.result = {
-              language: pB.language,
-              re: pB.relevance,
-              relevance: pB.relevance
-            }, pB.secondBest && (BB.secondBest = {
-              language: pB.secondBest.language,
-              relevance: pB.secondBest.relevance
-            }), zB("after:highlightElement", {
-              el: BB,
-              result: pB,
-              text: VB
-            })
-        }
-        let NB = !1;
-
-        function tB() {
-          if ("loading" === document.readyState) return NB || window.addEventListener("DOMContentLoaded", (function() {
-            tB()
-          }), !1), void(NB = !0);
-          document.querySelectorAll(oB.cssSelector).forEach(iB)
-        }
-
-        function fB(BB) {
-          return BB = (BB || "").toLowerCase(), VB[BB] || VB[yB[BB]]
-        }
-
-        function sB(BB, TB) {
-          let {
-            languageName: dB
-          } = TB;
-          "string" === typeof BB && (BB = [BB]), BB.forEach((BB => {
-            yB[BB.toLowerCase()] = dB
-          }))
-        }
-
-        function MB(BB) {
-          const TB = fB(BB);
-          return TB && !TB.disableAutodetect
-        }
-
-        function zB(BB, TB) {
-          const dB = BB;
-          pB.forEach((function(BB) {
-            BB[dB] && BB[dB](TB)
-          }))
-        }
-        Object.assign(BB, {
-          highlight: EB,
-          highlightAuto: mB,
-          highlightAll: tB,
-          highlightElement: iB,
-          highlightBlock: function(BB) {
-            return BT("10.7.0", "highlightBlock will be removed entirely in v12.0"), BT("10.7.0", "Please use highlightElement now."), iB(BB)
-          },
-          configure: function(BB) {
-            oB = YT(oB, BB)
-          },
-          initHighlighting: () => {
-            tB(), BT("10.6.0", "initHighlighting() deprecated.  Use highlightAll() now.")
-          },
-          initHighlightingOnLoad: function() {
-            tB(), BT("10.6.0", "initHighlightingOnLoad() deprecated.  Use highlightAll() now.")
-          },
-          registerLanguage: function(TB, dB) {
-            let yB = null;
-            try {
-              yB = dB(BB)
-            } catch (pB) {
-              if (nB("Language definition for '{}' could not be registered.".replace("{}", TB)), !lB) throw pB;
-              nB(pB), yB = YB
-            }
-            yB.name || (yB.name = TB), VB[TB] = yB, yB.rawDefinition = dB.bind(null, BB), yB.aliases && sB(yB.aliases, {
-              languageName: TB
-            })
-          },
-          unregisterLanguage: function(BB) {
-            delete VB[BB];
-            for (const TB of Object.keys(yB)) yB[TB] === BB && delete yB[TB]
-          },
-          listLanguages: function() {
-            return Object.keys(VB)
-          },
-          getLanguage: fB,
-          registerAliases: sB,
-          autoDetection: MB,
-          inherit: YT,
-          addPlugin: function(BB) {
-            ! function(BB) {
-              BB["before:highlightBlock"] && !BB["before:highlightElement"] && (BB["before:highlightElement"] = TB => {
-                BB["before:highlightBlock"](Object.assign({
-                  block: TB.el
-                }, TB))
-              }), BB["after:highlightBlock"] && !BB["after:highlightElement"] && (BB["after:highlightElement"] = TB => {
-                BB["after:highlightBlock"](Object.assign({
-                  block: TB.el
-                }, TB))
-              })
-            }(BB), pB.push(BB)
-          },
-          removePlugin: function(BB) {
-            const TB = pB.indexOf(BB); - 1 !== TB && pB.splice(TB, 1)
-          }
-        }), BB.debugMode = function() {
-          lB = !1
-        }, BB.safeMode = function() {
-          lB = !0
-        }, BB.versionString = "11.11.1", BB.regex = {
-          concat: DB,
-          lookahead: kB,
-          either: uB,
-          optional: OB,
-          anyNumberOfTimes: LB
-        };
-        for (const dB in aB) "object" === typeof aB[dB] && TB(aB[dB]);
-        return Object.assign(BB, aB), BB
+        displayName: sY
       },
-      kT = oT({});
-    kT.newInstance = () => oT({}), BB.exports = kT, kT.HighlightJS = kT, kT.default = kT
+      yY = {
+        name: "keys",
+        materials: ["Wooden", "Stone", "Iron", "Gold", "Diamond"],
+        kinds: ["Key"],
+        metadata: () => ({
+          type: "Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        }),
+        displayName: sY
+      },
+      QY = {
+        Staff: "Club",
+        Shard: "Fragment"
+      },
+      oY = [uY, iY, {
+        name: "elemental",
+        materials: IY.l,
+        kinds: ["Shard", "Sword", "Bow", "Crossbow", "Crossbow Charged", "Spear", "Dagger", "Club", "Mace", "Whip", "Staff", ...AY.e],
+        inheritsFrom: YY => {
+          var rY;
+          return {
+            material: "Diamond",
+            kind: null !== (rY = QY[YY]) && void 0 !== rY ? rY : YY
+          }
+        },
+        hiddenKinds: ["Crossbow Charged"],
+        displayName: sY,
+        description: (YY, rY) => {
+          if ("Shard" === rY) return {
+            translationKey: "Sanguine" === YY || "Astral" === YY ? "item:forgeFragmentDescription" : "item:elementalShardDescription"
+          }
+        }
+      }, yY]
   },
-  4105: (BB, TB, dB) => {
-    dB.d(TB, {
-      c: () => VB
+  36400: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => mY,
+      e: () => cY,
+      i: () => KY,
+      k: () => BY,
+      o: () => ZY,
+      r: () => fY,
+      s: () => zY
     });
-    const VB = dB(4108)
-  },
-  4117: (BB, TB, dB) => {
-    dB.d(TB, {
-      b: () => kB
-    });
-    const VB = "[A-Za-z$_][0-9A-Za-z$_]*",
-      yB = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
-      pB = ["true", "false", "null", "undefined", "NaN", "Infinity"],
-      lB = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
-      JB = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
-      YB = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
-      gB = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
-      oB = [].concat(YB, lB, JB);
+    var FY = DY(341),
+      AY = DY(8870),
+      IY = DY(4001),
+      RY = DY(8830),
+      OY = DY(8851),
+      gY = DY(616);
+    const aY = {
+      "AK-47": {
+        gunType: "semi_automatic",
+        scopeType: "none",
+        muzzleFlashOffsetFromGun: [-5.5, -.25, 0],
+        muzzleFlashScale: 1.5,
+        autoFireWithMouse: !0,
+        fireRate: 600,
+        cadenceMs: 75,
+        equipDelay: 24,
+        damage: 20,
+        reloadTime: 2300,
+        clipSize: 30,
+        tagSpeedMult: .8,
+        subsequentTagSpeedReductionScalar: .55,
+        inaccuracyStanding: 10,
+        inaccuracyFromShot: 22,
+        inaccuracyMovement: 45,
+        yVelocityInaccuracy: 4,
+        inaccuracyFromJump: 45,
+        altInaccuracyStanding: 5,
+        altInaccuracyFromShot: 9,
+        altInaccuracyMovement: 28,
+        recoveryRate: .005,
+        minKickback: .023,
+        maxKickback: .06,
+        kickbackRate: 10,
+        kickbackDecreaseRate: 5e-6
+      },
+      M16: {
+        gunType: "semi_automatic",
+        scopeType: "none",
+        muzzleFlashOffsetFromGun: [-5.5, -.5, 0],
+        muzzleFlashScale: 1.5,
+        autoFireWithMouse: !0,
+        fireRate: 708,
+        cadenceMs: 60 / 900 * 1e3,
+        equipDelay: 23,
+        damage: 17,
+        reloadTime: 2300,
+        clipSize: 30,
+        tagSpeedMult: .8,
+        subsequentTagSpeedReductionScalar: .55,
+        inaccuracyStanding: 8,
+        inaccuracyFromShot: 12,
+        inaccuracyMovement: 35,
+        yVelocityInaccuracy: 4,
+        inaccuracyFromJump: 45,
+        altInaccuracyStanding: 3,
+        altInaccuracyFromShot: 8,
+        altInaccuracyMovement: 20,
+        recoveryRate: .005,
+        minKickback: .022,
+        maxKickback: .06,
+        kickbackRate: 10,
+        kickbackDecreaseRate: 5e-6
+      },
+      MP40: {
+        gunType: "submachine",
+        scopeType: "none",
+        muzzleFlashOffsetFromGun: [-5.5, -.25, 0],
+        muzzleFlashScale: 1.5,
+        autoFireWithMouse: !0,
+        fireRate: 900,
+        cadenceMs: 40,
+        equipDelay: 22,
+        damage: 14,
+        reloadTime: 1700,
+        clipSize: 30,
+        tagSpeedMult: .85,
+        subsequentTagSpeedReductionScalar: .4,
+        inaccuracyStanding: 13,
+        inaccuracyFromShot: 15,
+        inaccuracyMovement: 6,
+        yVelocityInaccuracy: 4,
+        inaccuracyFromJump: 55,
+        altInaccuracyStanding: 11,
+        altInaccuracyFromShot: 12,
+        altInaccuracyMovement: 5,
+        recoveryRate: .005,
+        minKickback: .022,
+        maxKickback: .05,
+        kickbackRate: 10,
+        kickbackDecreaseRate: 5e-6
+      },
+      "TAR-21": {
+        gunType: "rifle",
+        scopeType: "none",
+        muzzleFlashOffsetFromGun: [-7.5, -.5, 0],
+        muzzleFlashScale: 3,
+        autoFireWithMouse: !1,
+        fireRate: 128,
+        cadenceMs: 400,
+        equipDelay: 119,
+        damage: 50,
+        reloadTime: 2300,
+        clipSize: 20,
+        tagSpeedMult: .75,
+        subsequentTagSpeedReductionScalar: .6,
+        inaccuracyStanding: 10,
+        inaccuracyFromShot: 60,
+        inaccuracyMovement: 45,
+        yVelocityInaccuracy: 4,
+        inaccuracyFromJump: 75,
+        altInaccuracyStanding: 6,
+        altInaccuracyFromShot: 40,
+        altInaccuracyMovement: 30,
+        recoveryRate: .0065,
+        minKickback: .04,
+        maxKickback: .05,
+        kickbackRate: 25,
+        kickbackDecreaseRate: 5e-6
+      },
+      M1911: {
+        gunType: "pistol",
+        scopeType: "none",
+        muzzleFlashOffsetFromGun: [-3.5, -1, 0],
+        autoFireWithMouse: !1,
+        fireRate: 600,
+        cadenceMs: 75,
+        equipDelay: 24,
+        damage: 22,
+        reloadTime: 1500,
+        clipSize: 16,
+        tagSpeedMult: .8,
+        subsequentTagSpeedReductionScalar: .55,
+        inaccuracyStanding: 15,
+        inaccuracyFromShot: 20,
+        inaccuracyMovement: 15,
+        yVelocityInaccuracy: 1.5,
+        inaccuracyFromJump: 15,
+        altInaccuracyStanding: 12,
+        altInaccuracyFromShot: 12,
+        altInaccuracyMovement: 10,
+        recoveryRate: .01,
+        minKickback: .045,
+        maxKickback: .05,
+        kickbackRate: 0,
+        kickbackDecreaseRate: 8e-6
+      },
+      "One Shot Pistol": {
+        gunType: "semi_automatic",
+        scopeType: "none",
+        muzzleFlashOffsetFromGun: [-3.5, -1, 0],
+        autoFireWithMouse: !1,
+        fireRate: 600,
+        cadenceMs: 75,
+        equipDelay: 24,
+        damage: 1,
+        reloadTime: 5e3,
+        clipSize: 1,
+        tagSpeedMult: .8,
+        subsequentTagSpeedReductionScalar: .55,
+        inaccuracyStanding: 0,
+        inaccuracyFromShot: 25,
+        inaccuracyMovement: 15,
+        yVelocityInaccuracy: 1.01,
+        inaccuracyFromJump: 25,
+        altInaccuracyStanding: 10,
+        altInaccuracyFromShot: 25,
+        altInaccuracyMovement: 25,
+        recoveryRate: .005,
+        minKickback: .045,
+        maxKickback: .045,
+        kickbackRate: 0,
+        kickbackDecreaseRate: 5e-6
+      },
+      "Double Barrel": {
+        gunType: "shotgun",
+        scopeType: "none",
+        muzzleFlashOffsetFromGun: [-6.5, -1, 0],
+        muzzleFlashScale: 5,
+        autoFireWithMouse: !1,
+        fireRate: 150,
+        cadenceMs: 120,
+        equipDelay: 284,
+        damage: 12,
+        shotPelletCount: 10,
+        clipSize: 2,
+        reloadBulletsIndividually: !0,
+        bulletReloadTime: 650,
+        cockTime: 400,
+        tagSpeedMult: .65,
+        subsequentTagSpeedReductionScalar: .6,
+        inaccuracyStanding: 110,
+        inaccuracyFromShot: 90,
+        inaccuracyMovement: 28,
+        yVelocityInaccuracy: 5,
+        inaccuracyFromJump: 150,
+        altInaccuracyStanding: 55,
+        altInaccuracyFromShot: 55,
+        altInaccuracyMovement: 16,
+        hasVerticalInaccuracy: !0,
+        recoveryRate: .008,
+        minKickback: .18,
+        maxKickback: .22,
+        kickbackRate: 0,
+        kickbackDecreaseRate: 5e-6
+      },
+      AWP: {
+        gunType: "rifle",
+        scopeType: "sniper",
+        muzzleFlashOffsetFromGun: [-8, -2, 0],
+        muzzleFlashScale: 2,
+        autoFireWithMouse: !1,
+        fireRate: 42.8,
+        cadenceMs: 60 / 43 * 1e3,
+        equipDelay: 156,
+        damage: 70,
+        reloadTime: 2500,
+        clipSize: 5,
+        tagSpeedMult: .75,
+        subsequentTagSpeedReductionScalar: .6,
+        inaccuracyStanding: 150,
+        inaccuracyFromShot: 200,
+        inaccuracyMovement: 150,
+        yVelocityInaccuracy: 4,
+        inaccuracyFromJump: 75,
+        altInaccuracyStanding: 1,
+        altInaccuracyFromShot: 1,
+        altInaccuracyMovement: 112,
+        recoveryRate: .02,
+        minKickback: .1,
+        maxKickback: .1,
+        kickbackRate: 0,
+        kickbackDecreaseRate: 5e-6,
+        aimZoomFactor: 3.5
+      },
+      Deagle: {
+        gunType: "rifle",
+        scopeType: "none",
+        muzzleFlashOffsetFromGun: [-3.5, -1, 0],
+        muzzleFlashScale: 1.3,
+        autoFireWithMouse: !1,
+        fireRate: 200,
+        cadenceMs: 60 / 220 * 1e3,
+        equipDelay: 44,
+        damage: 36,
+        reloadTime: 2e3,
+        clipSize: 7,
+        tagSpeedMult: .78,
+        subsequentTagSpeedReductionScalar: .55,
+        inaccuracyStanding: 9,
+        inaccuracyFromShot: 22,
+        inaccuracyMovement: 14,
+        yVelocityInaccuracy: 1.5,
+        inaccuracyFromJump: 11,
+        altInaccuracyStanding: 7,
+        altInaccuracyFromShot: 14,
+        altInaccuracyMovement: 9,
+        recoveryRate: .003,
+        minKickback: .07,
+        maxKickback: .095,
+        kickbackRate: 6,
+        kickbackDecreaseRate: 6e-6
+      },
+      "Striker-12": {
+        gunType: "shotgun",
+        scopeType: "none",
+        muzzleFlashOffsetFromGun: [-6.5, -1, 0],
+        muzzleFlashScale: 3.5,
+        autoFireWithMouse: !0,
+        fireRate: 185,
+        cadenceMs: 250,
+        equipDelay: 92,
+        damage: 5,
+        shotPelletCount: 12,
+        clipSize: 12,
+        reloadTime: 2600,
+        tagSpeedMult: .68,
+        subsequentTagSpeedReductionScalar: .58,
+        inaccuracyStanding: 144,
+        inaccuracyFromShot: 120,
+        inaccuracyMovement: 48,
+        yVelocityInaccuracy: 7,
+        inaccuracyFromJump: 95,
+        altInaccuracyStanding: 80,
+        altInaccuracyFromShot: 80,
+        altInaccuracyMovement: 32,
+        hasVerticalInaccuracy: !0,
+        recoveryRate: .0055,
+        minKickback: .09,
+        maxKickback: .12,
+        kickbackRate: 4,
+        kickbackDecreaseRate: 5e-6
+      },
+      VSR: {
+        gunType: "submachine",
+        scopeType: "sniper",
+        keepScopeOnShot: !0,
+        muzzleFlashOffsetFromGun: [-6.5, -.5, 0],
+        muzzleFlashScale: 2,
+        autoFireWithMouse: !0,
+        fireRate: 450,
+        cadenceMs: 60 / 620 * 1e3,
+        equipDelay: 45,
+        damage: 15,
+        reloadTime: 1700,
+        clipSize: 20,
+        tagSpeedMult: .78,
+        subsequentTagSpeedReductionScalar: .58,
+        inaccuracyStanding: 44,
+        inaccuracyFromShot: 64,
+        inaccuracyMovement: 64,
+        yVelocityInaccuracy: 5,
+        inaccuracyFromJump: 55,
+        altInaccuracyStanding: 5,
+        altInaccuracyFromShot: 8,
+        altInaccuracyMovement: 32,
+        recoveryRate: .0055,
+        minKickback: .018,
+        maxKickback: .04,
+        kickbackRate: 12,
+        kickbackDecreaseRate: 5e-6,
+        aimZoomFactor: 2.4
+      },
+      Minigun: {
+        gunType: "submachine",
+        scopeType: "none",
+        muzzleFlashOffsetFromGun: [-8, -2, 0],
+        muzzleFlashScale: 5,
+        autoFireWithMouse: !0,
+        fireRate: 1800,
+        cadenceMs: 15,
+        equipDelay: 19,
+        damage: 20,
+        reloadTime: 2400,
+        clipSize: 100,
+        tagSpeedMult: .75,
+        subsequentTagSpeedReductionScalar: .6,
+        inaccuracyStanding: 25,
+        inaccuracyFromShot: 15,
+        inaccuracyMovement: 20,
+        yVelocityInaccuracy: 4,
+        inaccuracyFromJump: 75,
+        altInaccuracyStanding: 25,
+        altInaccuracyFromShot: 15,
+        altInaccuracyMovement: 20,
+        hasVerticalInaccuracy: !0,
+        recoveryRate: .01,
+        minKickback: .005,
+        maxKickback: .005,
+        kickbackRate: 0,
+        kickbackDecreaseRate: 1e-5
+      },
+      SKAR: {
+        gunType: "semi_automatic",
+        scopeType: "none",
+        muzzleFlashOffsetFromGun: [-5.5, -.5, 0],
+        muzzleFlashScale: 1.5,
+        autoFireWithMouse: !0,
+        fireRate: 450,
+        cadenceMs: 60 / 550 * 1e3,
+        equipDelay: 27,
+        damage: 33,
+        reloadTime: 2800,
+        clipSize: 20,
+        tagSpeedMult: .8,
+        subsequentTagSpeedReductionScalar: .55,
+        inaccuracyStanding: 8,
+        inaccuracyFromShot: 22,
+        inaccuracyMovement: 35,
+        yVelocityInaccuracy: 4,
+        inaccuracyFromJump: 45,
+        altInaccuracyStanding: 3,
+        altInaccuracyFromShot: 15,
+        altInaccuracyMovement: 20,
+        recoveryRate: .008,
+        minKickback: .04,
+        maxKickback: .109,
+        kickbackRate: 10,
+        kickbackDecreaseRate: 5e-6
+      },
+      FMR: {
+        gunType: "semi_automatic",
+        scopeType: "none",
+        muzzleFlashOffsetFromGun: [-5.5, -.5, 0],
+        muzzleFlashScale: 1.5,
+        autoFireWithMouse: !1,
+        fireRate: 450,
+        cadenceMs: 150,
+        equipDelay: 16,
+        burstCount: 3,
+        burstDelay: 200 / 3,
+        damage: 17,
+        reloadTime: 2200,
+        clipSize: 21,
+        tagSpeedMult: .8,
+        subsequentTagSpeedReductionScalar: .55,
+        inaccuracyStanding: 6,
+        inaccuracyFromShot: 8,
+        inaccuracyMovement: 30,
+        yVelocityInaccuracy: 4,
+        inaccuracyFromJump: 45,
+        altInaccuracyStanding: 2.5,
+        altInaccuracyFromShot: 5.5,
+        altInaccuracyMovement: 17,
+        recoveryRate: .007,
+        minKickback: .015,
+        maxKickback: .04,
+        kickbackRate: 10,
+        kickbackDecreaseRate: 5e-6
+      },
+      "Block-19": {
+        gunType: "pistol",
+        scopeType: "none",
+        muzzleFlashOffsetFromGun: [-3.5, -1, 0],
+        autoFireWithMouse: !1,
+        fireRate: 200,
+        cadenceMs: 60 / 210 * 1e3,
+        equipDelay: 45,
+        burstCount: 4,
+        burstDelay: 38,
+        damage: 20,
+        reloadTime: 1350,
+        clipSize: 24,
+        tagSpeedMult: .8,
+        subsequentTagSpeedReductionScalar: .55,
+        inaccuracyStanding: 12,
+        inaccuracyFromShot: 14,
+        inaccuracyMovement: 14,
+        yVelocityInaccuracy: 1.5,
+        inaccuracyFromJump: 14,
+        altInaccuracyStanding: 9,
+        altInaccuracyFromShot: 9,
+        altInaccuracyMovement: 8,
+        recoveryRate: .008,
+        minKickback: .04,
+        maxKickback: .055,
+        kickbackRate: 6,
+        kickbackDecreaseRate: 8e-6
+      },
+      "Mini Izu": {
+        gunType: "pistol",
+        scopeType: "none",
+        muzzleFlashOffsetFromGun: [-5.5, -1, 0],
+        autoFireWithMouse: !0,
+        fireRate: 923,
+        cadenceMs: 60 / 1615 * 1e3,
+        equipDelay: 21,
+        damage: 13,
+        reloadTime: 1400,
+        clipSize: 22,
+        tagSpeedMult: .85,
+        subsequentTagSpeedReductionScalar: .4,
+        inaccuracyStanding: 15,
+        inaccuracyFromShot: 20,
+        inaccuracyMovement: 8,
+        yVelocityInaccuracy: 4,
+        inaccuracyFromJump: 60,
+        altInaccuracyStanding: 12,
+        altInaccuracyFromShot: 16,
+        altInaccuracyMovement: 6,
+        recoveryRate: .005,
+        minKickback: .03,
+        maxKickback: .075,
+        kickbackRate: 12,
+        kickbackDecreaseRate: 5e-6
+      },
+      GPMG: {
+        gunType: "rifle",
+        scopeType: "none",
+        muzzleFlashOffsetFromGun: [-12.5, -.5, 0],
+        muzzleFlashScale: 2,
+        autoFireWithMouse: !0,
+        fireRate: 600,
+        cadenceMs: 60 / 700 * 1e3,
+        equipDelay: 25,
+        damage: 24,
+        reloadTime: 4500,
+        clipSize: 75,
+        tagSpeedMult: .78,
+        subsequentTagSpeedReductionScalar: .55,
+        inaccuracyStanding: 10,
+        inaccuracyFromShot: 24,
+        inaccuracyMovement: 45,
+        yVelocityInaccuracy: 4,
+        inaccuracyFromJump: 55,
+        altInaccuracyStanding: 4,
+        altInaccuracyFromShot: 16,
+        altInaccuracyMovement: 24,
+        hasVerticalInaccuracy: !0,
+        recoveryRate: .01,
+        minKickback: .032,
+        maxKickback: .09,
+        kickbackRate: 9,
+        kickbackDecreaseRate: 1e-5
+      },
+      DMR: {
+        gunType: "semi_automatic",
+        scopeType: "sniper",
+        keepScopeOnShot: !0,
+        muzzleFlashOffsetFromGun: [-6, -.5, 0],
+        muzzleFlashScale: 1.6,
+        autoFireWithMouse: !1,
+        fireRate: 270,
+        cadenceMs: 200,
+        equipDelay: 37,
+        damage: 34,
+        reloadTime: 2200,
+        clipSize: 8,
+        tagSpeedMult: .78,
+        subsequentTagSpeedReductionScalar: .55,
+        inaccuracyStanding: 8,
+        inaccuracyFromShot: 18,
+        inaccuracyMovement: 30,
+        yVelocityInaccuracy: 2,
+        inaccuracyFromJump: 30,
+        altInaccuracyStanding: 1.5,
+        altInaccuracyFromShot: 6,
+        altInaccuracyMovement: 18,
+        recoveryRate: .004,
+        minKickback: .04,
+        maxKickback: .065,
+        kickbackRate: 5,
+        kickbackDecreaseRate: 6e-6,
+        aimZoomFactor: 2.8
+      }
+    };
+    for (const jY of Object.values(aY)) jY.msPerRound = 60 / jY.fireRate * 1e3, jY.msPerRoundTouchScreen = void 0 !== jY.fireRateWithHeldTouch ? 60 / jY.fireRateWithHeldTouch * 1e3 : jY.msPerRound, jY.cadenceMs ??= jY.msPerRound, jY.altYVelocityInaccuracy ??= jY.yVelocityInaccuracy, jY.altInaccuracyFromJump ??= jY.inaccuracyFromJump;
 
-    function kB(BB) {
-      const TB = BB.regex,
-        dB = VB,
-        kB = "<>",
-        LB = "</>",
-        OB = {
-          tO: /<[A-Za-z0-9\\._:-]+/,
-          end: /\/[A-Za-z0-9\\._:-]+>|\/>/,
-          isTrulyOpeningTag: (BB, TB) => {
-            const dB = BB[0].length + BB.index,
-              VB = BB.input[dB];
-            if ("<" === VB || "," === VB) return void TB.ignoreMatch();
-            let yB;
-            ">" === VB && (((BB, TB) => {
-              let {
-                after: dB
-              } = TB;
-              const VB = "</" + BB[0].slice(1);
-              return -1 !== BB.input.indexOf(VB, dB)
-            })(BB, {
-              after: dB
-            }) || TB.ignoreMatch());
-            const pB = BB.input.substring(dB);
-            ((yB = pB.match(/^\s*=/)) || (yB = pB.match(/^\s+extends\s+/)) && 0 === yB.index) && TB.ignoreMatch()
-          }
-        },
-        DB = {
-          $pattern: VB,
-          keyword: yB,
-          literal: pB,
-          built_in: oB,
-          "variable.language": gB
-        },
-        uB = "[0-9](_?[0-9])*",
-        HB = `\\.(${uB})`,
-        EB = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
-        vB = {
-          className: "number",
-          variants: [{
-            tO: `(\\b(${EB})((${HB})|\\.)?|(${HB}))[eE][+-]?(${uB})\\b`
-          }, {
-            tO: `\\b(${EB})\\b((${HB})\\b|\\.)?|(${HB})\\b`
-          }, {
-            tO: "\\b(0|[1-9](_?[0-9])*)n\\b"
-          }, {
-            tO: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
-          }, {
-            tO: "\\b0[bB][0-1](_?[0-1])*n?\\b"
-          }, {
-            tO: "\\b0[oO][0-7](_?[0-7])*n?\\b"
-          }, {
-            tO: "\\b0[0-7]+n?\\b"
-          }],
-          relevance: 0
-        },
-        mB = {
-          className: "subst",
-          tO: "\\$\\{",
-          end: "\\}",
-          keywords: DB,
-          contains: []
-        },
-        iB = {
-          tO: ".?html`",
-          end: "",
-          starts: {
-            end: "`",
-            returnEnd: !1,
-            contains: [BB.BACKSLASH_ESCAPE, mB],
-            subLanguage: "xml"
-          }
-        },
-        NB = {
-          tO: ".?css`",
-          end: "",
-          starts: {
-            end: "`",
-            returnEnd: !1,
-            contains: [BB.BACKSLASH_ESCAPE, mB],
-            subLanguage: "css"
-          }
-        },
-        tB = {
-          tO: ".?gql`",
-          end: "",
-          starts: {
-            end: "`",
-            returnEnd: !1,
-            contains: [BB.BACKSLASH_ESCAPE, mB],
-            subLanguage: "graphql"
-          }
-        },
-        fB = {
-          className: "string",
-          tO: "`",
-          end: "`",
-          contains: [BB.BACKSLASH_ESCAPE, mB]
-        },
-        sB = {
-          className: "comment",
-          variants: [BB.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
-            relevance: 0,
-            contains: [{
-              tO: "(?=@[A-Za-z]+)",
-              relevance: 0,
-              contains: [{
-                className: "doctag",
-                tO: "@[A-Za-z]+"
-              }, {
-                className: "type",
-                tO: "\\{",
-                end: "\\}",
-                excludeEnd: !0,
-                excludeBegin: !0,
-                relevance: 0
-              }, {
-                className: "variable",
-                tO: dB + "(?=\\s*(-)|$)",
-                endsParent: !0,
-                relevance: 0
-              }, {
-                tO: /(?=[^\n])\s/,
-                relevance: 0
-              }]
-            }]
-          }), BB.C_BLOCK_COMMENT_MODE, BB.C_LINE_COMMENT_MODE]
-        },
-        MB = [BB.APOS_STRING_MODE, BB.QUOTE_STRING_MODE, iB, NB, tB, fB, {
-          match: /\$\d+/
-        }, vB];
-      mB.contains = MB.concat({
-        tO: /\{/,
-        end: /\}/,
-        keywords: DB,
-        contains: ["self"].concat(MB)
-      });
-      const zB = [].concat(sB, mB.contains),
-        wB = zB.concat([{
-          tO: /(\s*)\(/,
-          end: /\)/,
-          keywords: DB,
-          contains: ["self"].concat(zB)
-        }]),
-        UB = {
-          className: "params",
-          tO: /(\s*)\(/,
-          end: /\)/,
-          excludeBegin: !0,
-          excludeEnd: !0,
-          keywords: DB,
-          contains: wB
-        },
-        FB = {
-          variants: [{
-            match: [/class/, /\s+/, dB, /\s+/, /extends/, /\s+/, TB.concat(dB, "(", TB.concat(/\./, dB), ")*")],
-            scope: {
-              1: "keyword",
-              3: "title.class",
-              5: "keyword",
-              7: "title.class.inherited"
-            }
-          }, {
-            match: [/class/, /\s+/, dB],
-            scope: {
-              1: "keyword",
-              3: "title.class"
-            }
-          }]
-        },
-        KB = {
-          relevance: 0,
-          match: TB.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
-          className: "title.class",
-          keywords: {
-            _: [...lB, ...JB]
-          }
-        },
-        rB = {
-          variants: [{
-            match: [/function/, /\s+/, dB, /(?=\s*\()/]
-          }, {
-            match: [/function/, /\s*(?=\()/]
-          }],
-          className: {
-            1: "keyword",
-            3: "title.function"
-          },
-          label: "func.def",
-          contains: [UB],
-          illegal: /%/
-        };
-      const IB = {
-        match: TB.concat(/\b/, (cB = [...YB, "super", "import"].map((BB => `${BB}\\s*\\(`)), TB.concat("(?!", cB.join("|"), ")")), dB, TB.lookahead(/\s*\(/)),
-        className: "title.function",
-        relevance: 0
+    function vY(YY, rY) {
+      console.assert("meta|charging1" === rY.rootMetaDesc.split("|").slice(1).join("|"), "charging root item .rootMetaDesc must be |meta|charging1");
+      const DY = {
+        ...rY
       };
-      var cB;
-      const SB = {
-          tO: TB.concat(/\./, TB.lookahead(TB.concat(dB, /(?![0-9A-Za-z$_(])/))),
-          end: dB,
-          excludeBegin: !0,
-          keywords: "prototype",
-          className: "property",
-          relevance: 0
+      return delete DY.rootMetaDesc, {
+        [YY]: {
+          ...rY,
+          textureInfo: rY.textureName
         },
-        PB = {
-          match: [/get|set/, /\s+/, dB, /(?=\()/],
-          className: {
-            1: "keyword",
-            3: "title.function"
-          },
-          contains: [{
-            tO: /\(\)/
-          }, UB]
+        [`${YY}|meta|charging2`]: {
+          ...DY,
+          textureInfo: `${rY.textureName}_charging_2`
         },
-        QB = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + BB.UNDERSCORE_IDENT_RE + ")\\s*=>",
-        RB = {
-          match: [/const|var|let/, /\s+/, dB, /\s*/, /=\s*/, /(async\s*)?/, TB.lookahead(QB)],
-          keywords: "async",
-          className: {
-            1: "keyword",
-            3: "title.function"
-          },
-          contains: [UB]
-        };
-      return {
-        name: "JavaScript",
-        aliases: ["js", "jsx", "mjs", "cjs"],
-        keywords: DB,
-        exports: {
-          PARAMS_CONTAINS: wB,
-          CLASS_REFERENCE: KB
+        [`${YY}|meta|charging3`]: {
+          ...DY,
+          textureInfo: `${rY.textureName}_charging_3`
         },
-        illegal: /#(?![$_A-z])/,
-        contains: [BB.SHEBANG({
-          label: "shebang",
-          binary: "node",
-          relevance: 5
-        }), {
-          label: "use_strict",
-          className: "meta",
-          relevance: 10,
-          tO: /^\s*['"]use (strict|asm)['"]/
-        }, BB.APOS_STRING_MODE, BB.QUOTE_STRING_MODE, iB, NB, tB, fB, sB, {
-          match: /\$\d+/
-        }, vB, KB, {
-          scope: "attr",
-          match: dB + TB.lookahead(":"),
-          relevance: 0
-        }, RB, {
-          tO: "(" + BB.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
-          keywords: "return throw case",
-          relevance: 0,
-          contains: [sB, BB.REGEXP_MODE, {
-            className: "function",
-            tO: QB,
-            returnBegin: !0,
-            end: "\\s*=>",
-            contains: [{
-              className: "params",
-              variants: [{
-                tO: BB.UNDERSCORE_IDENT_RE,
-                relevance: 0
-              }, {
-                className: null,
-                tO: /\(\s*\)/,
-                skip: !0
-              }, {
-                tO: /(\s*)\(/,
-                end: /\)/,
-                excludeBegin: !0,
-                excludeEnd: !0,
-                keywords: DB,
-                contains: wB
-              }]
-            }]
-          }, {
-            tO: /,/,
-            relevance: 0
-          }, {
-            match: /\s+/,
-            relevance: 0
-          }, {
-            variants: [{
-              tO: kB,
-              end: LB
-            }, {
-              match: /<[A-Za-z0-9\\._:-]+\s*\/>/
-            }, {
-              tO: OB.tO,
-              "on:begin": OB.isTrulyOpeningTag,
-              end: OB.end
-            }],
-            subLanguage: "xml",
-            contains: [{
-              tO: OB.tO,
-              end: OB.end,
-              skip: !0,
-              contains: ["self"]
-            }]
-          }]
-        }, rB, {
-          beginKeywords: "while if switch catch for"
-        }, {
-          tO: "\\b(?!function)" + BB.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
-          returnBegin: !0,
-          label: "func.def",
-          contains: [UB, BB.inherit(BB.TITLE_MODE, {
-            tO: dB,
-            className: "title.function"
-          })]
-        }, {
-          match: /\.\.\./,
-          relevance: 0
-        }, SB, {
-          match: "\\$" + dB,
-          relevance: 0
-        }, {
-          match: [/\bconstructor(?=\s*\()/],
-          className: {
-            1: "title.function"
-          },
-          contains: [UB]
-        }, IB, {
-          relevance: 0,
-          match: /\b[A-Z][A-Z_0-9]+\b/,
-          className: "variable.constant"
-        }, FB, PB, {
-          match: /\$[(.]/
-        }]
+        [`${YY}|meta|charging4`]: {
+          ...DY,
+          textureInfo: `${rY.textureName}_charging_4`
+        }
       }
     }
-  },
-  4122: (BB, TB, dB) => {
-    dB.d(TB, {
-      d: () => LB
-    });
-    const VB = "[A-Za-z$_][0-9A-Za-z$_]*",
-      yB = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
-      pB = ["true", "false", "null", "undefined", "NaN", "Infinity"],
-      lB = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
-      JB = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
-      YB = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
-      gB = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
-      oB = [].concat(YB, lB, JB);
+    const uY = "midday",
+      sY = ["midnight", "late_night", "sunrise", "early_day", uY, "late_day", "sunset", "early_night"].filter((YY => YY !== uY));
 
-    function kB(BB) {
-      const TB = BB.regex,
-        dB = VB,
-        kB = "<>",
-        LB = "</>",
-        OB = {
-          tO: /<[A-Za-z0-9\\._:-]+/,
-          end: /\/[A-Za-z0-9\\._:-]+>|\/>/,
-          isTrulyOpeningTag: (BB, TB) => {
-            const dB = BB[0].length + BB.index,
-              VB = BB.input[dB];
-            if ("<" === VB || "," === VB) return void TB.ignoreMatch();
-            let yB;
-            ">" === VB && (((BB, TB) => {
-              let {
-                after: dB
-              } = TB;
-              const VB = "</" + BB[0].slice(1);
-              return -1 !== BB.input.indexOf(VB, dB)
-            })(BB, {
-              after: dB
-            }) || TB.ignoreMatch());
-            const pB = BB.input.substring(dB);
-            ((yB = pB.match(/^\s*=/)) || (yB = pB.match(/^\s+extends\s+/)) && 0 === yB.index) && TB.ignoreMatch()
-          }
-        },
-        DB = {
-          $pattern: VB,
-          keyword: yB,
-          literal: pB,
-          built_in: oB,
-          "variable.language": gB
-        },
-        uB = "[0-9](_?[0-9])*",
-        HB = `\\.(${uB})`,
-        EB = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
-        vB = {
-          className: "number",
-          variants: [{
-            tO: `(\\b(${EB})((${HB})|\\.)?|(${HB}))[eE][+-]?(${uB})\\b`
-          }, {
-            tO: `\\b(${EB})\\b((${HB})\\b|\\.)?|(${HB})\\b`
-          }, {
-            tO: "\\b(0|[1-9](_?[0-9])*)n\\b"
-          }, {
-            tO: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
-          }, {
-            tO: "\\b0[bB][0-1](_?[0-1])*n?\\b"
-          }, {
-            tO: "\\b0[oO][0-7](_?[0-7])*n?\\b"
-          }, {
-            tO: "\\b0[0-7]+n?\\b"
-          }],
-          relevance: 0
-        },
-        mB = {
-          className: "subst",
-          tO: "\\$\\{",
-          end: "\\}",
-          keywords: DB,
-          contains: []
-        },
-        iB = {
-          tO: ".?html`",
-          end: "",
-          starts: {
-            end: "`",
-            returnEnd: !1,
-            contains: [BB.BACKSLASH_ESCAPE, mB],
-            subLanguage: "xml"
-          }
-        },
-        NB = {
-          tO: ".?css`",
-          end: "",
-          starts: {
-            end: "`",
-            returnEnd: !1,
-            contains: [BB.BACKSLASH_ESCAPE, mB],
-            subLanguage: "css"
-          }
-        },
-        tB = {
-          tO: ".?gql`",
-          end: "",
-          starts: {
-            end: "`",
-            returnEnd: !1,
-            contains: [BB.BACKSLASH_ESCAPE, mB],
-            subLanguage: "graphql"
-          }
-        },
-        fB = {
-          className: "string",
-          tO: "`",
-          end: "`",
-          contains: [BB.BACKSLASH_ESCAPE, mB]
-        },
-        sB = {
-          className: "comment",
-          variants: [BB.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
-            relevance: 0,
-            contains: [{
-              tO: "(?=@[A-Za-z]+)",
-              relevance: 0,
-              contains: [{
-                className: "doctag",
-                tO: "@[A-Za-z]+"
-              }, {
-                className: "type",
-                tO: "\\{",
-                end: "\\}",
-                excludeEnd: !0,
-                excludeBegin: !0,
-                relevance: 0
-              }, {
-                className: "variable",
-                tO: dB + "(?=\\s*(-)|$)",
-                endsParent: !0,
-                relevance: 0
-              }, {
-                tO: /(?=[^\n])\s/,
-                relevance: 0
-              }]
-            }]
-          }), BB.C_BLOCK_COMMENT_MODE, BB.C_LINE_COMMENT_MODE]
-        },
-        MB = [BB.APOS_STRING_MODE, BB.QUOTE_STRING_MODE, iB, NB, tB, fB, {
-          match: /\$\d+/
-        }, vB];
-      mB.contains = MB.concat({
-        tO: /\{/,
-        end: /\}/,
-        keywords: DB,
-        contains: ["self"].concat(MB)
-      });
-      const zB = [].concat(sB, mB.contains),
-        wB = zB.concat([{
-          tO: /(\s*)\(/,
-          end: /\)/,
-          keywords: DB,
-          contains: ["self"].concat(zB)
-        }]),
-        UB = {
-          className: "params",
-          tO: /(\s*)\(/,
-          end: /\)/,
-          excludeBegin: !0,
-          excludeEnd: !0,
-          keywords: DB,
-          contains: wB
-        },
-        FB = {
-          variants: [{
-            match: [/class/, /\s+/, dB, /\s+/, /extends/, /\s+/, TB.concat(dB, "(", TB.concat(/\./, dB), ")*")],
-            scope: {
-              1: "keyword",
-              3: "title.class",
-              5: "keyword",
-              7: "title.class.inherited"
-            }
-          }, {
-            match: [/class/, /\s+/, dB],
-            scope: {
-              1: "keyword",
-              3: "title.class"
-            }
-          }]
-        },
-        KB = {
-          relevance: 0,
-          match: TB.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
-          className: "title.class",
-          keywords: {
-            _: [...lB, ...JB]
-          }
-        },
-        rB = {
-          variants: [{
-            match: [/function/, /\s+/, dB, /(?=\s*\()/]
-          }, {
-            match: [/function/, /\s*(?=\()/]
-          }],
-          className: {
-            1: "keyword",
-            3: "title.function"
-          },
-          label: "func.def",
-          contains: [UB],
-          illegal: /%/
-        };
-      const IB = {
-        match: TB.concat(/\b/, (cB = [...YB, "super", "import"].map((BB => `${BB}\\s*\\(`)), TB.concat("(?!", cB.join("|"), ")")), dB, TB.lookahead(/\s*\(/)),
-        className: "title.function",
-        relevance: 0
+    function iY(YY, rY, DY) {
+      const FY = {
+        [YY]: {
+          ...DY,
+          heldItemGlb: `${rY}_${uY}`,
+          textureInfo: `${rY}_${uY}`
+        }
       };
-      var cB;
-      const SB = {
-          tO: TB.concat(/\./, TB.lookahead(TB.concat(dB, /(?![0-9A-Za-z$_(])/))),
-          end: dB,
-          excludeBegin: !0,
-          keywords: "prototype",
-          className: "property",
-          relevance: 0
-        },
-        PB = {
-          match: [/get|set/, /\s+/, dB, /(?=\()/],
-          className: {
-            1: "keyword",
-            3: "title.function"
-          },
-          contains: [{
-            tO: /\(\)/
-          }, UB]
-        },
-        QB = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + BB.UNDERSCORE_IDENT_RE + ")\\s*=>",
-        RB = {
-          match: [/const|var|let/, /\s+/, dB, /\s*/, /=\s*/, /(async\s*)?/, TB.lookahead(QB)],
-          keywords: "async",
-          className: {
-            1: "keyword",
-            3: "title.function"
-          },
-          contains: [UB]
-        };
+      for (const AY of sY) FY[`${YY}|meta|${AY}`] = {
+        ...DY,
+        heldItemGlb: `${rY}_${AY}`,
+        textureInfo: `${rY}_${AY}`
+      };
+      return FY
+    }
+    const yY = {
+      Sheep: gY.o.Sheep,
+      "Cave Golem": ["corrupted"],
+      "Draugr Zombie": ["flower", "flower2", "mushroom", "vine", "vine2", "corrupted", "corrupted2"],
+      "Draugr Huntress": ["chainmail"],
+      "Frost Wraith": ["tattered", "frostKing", "accursed"]
+    };
+
+    function QY(YY, rY) {
+      var DY;
+      const FY = {
+        type: "Gun",
+        textureInfo: YY,
+        weight: 1,
+        stackable: !1,
+        keepMetaInChest: !0,
+        ...rY,
+        ...aY[YY]
+      };
       return {
-        name: "JavaScript",
-        aliases: ["js", "jsx", "mjs", "cjs"],
-        keywords: DB,
-        exports: {
-          PARAMS_CONTAINS: wB,
-          CLASS_REFERENCE: KB
-        },
-        illegal: /#(?![$_A-z])/,
-        contains: [BB.SHEBANG({
-          label: "shebang",
-          binary: "node",
-          relevance: 5
-        }), {
-          label: "use_strict",
-          className: "meta",
-          relevance: 10,
-          tO: /^\s*['"]use (strict|asm)['"]/
-        }, BB.APOS_STRING_MODE, BB.QUOTE_STRING_MODE, iB, NB, tB, fB, sB, {
-          match: /\$\d+/
-        }, vB, KB, {
-          scope: "attr",
-          match: dB + TB.lookahead(":"),
-          relevance: 0
-        }, RB, {
-          tO: "(" + BB.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
-          keywords: "return throw case",
-          relevance: 0,
-          contains: [sB, BB.REGEXP_MODE, {
-            className: "function",
-            tO: QB,
-            returnBegin: !0,
-            end: "\\s*=>",
-            contains: [{
-              className: "params",
-              variants: [{
-                tO: BB.UNDERSCORE_IDENT_RE,
-                relevance: 0
-              }, {
-                className: null,
-                tO: /\(\s*\)/,
-                skip: !0
-              }, {
-                tO: /(\s*)\(/,
-                end: /\)/,
-                excludeBegin: !0,
-                excludeEnd: !0,
-                keywords: DB,
-                contains: wB
-              }]
-            }]
-          }, {
-            tO: /,/,
-            relevance: 0
-          }, {
-            match: /\s+/,
-            relevance: 0
-          }, {
-            variants: [{
-              tO: kB,
-              end: LB
-            }, {
-              match: /<[A-Za-z0-9\\._:-]+\s*\/>/
-            }, {
-              tO: OB.tO,
-              "on:begin": OB.isTrulyOpeningTag,
-              end: OB.end
-            }],
-            subLanguage: "xml",
-            contains: [{
-              tO: OB.tO,
-              end: OB.end,
-              skip: !0,
-              contains: ["self"]
-            }]
-          }]
-        }, rB, {
-          beginKeywords: "while if switch catch for"
-        }, {
-          tO: "\\b(?!function)" + BB.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
-          returnBegin: !0,
-          label: "func.def",
-          contains: [UB, BB.inherit(BB.TITLE_MODE, {
-            tO: dB,
-            className: "title.function"
-          })]
-        }, {
-          match: /\.\.\./,
-          relevance: 0
-        }, SB, {
-          match: "\\$" + dB,
-          relevance: 0
-        }, {
-          match: [/\bconstructor(?=\s*\()/],
-          className: {
-            1: "title.function"
-          },
-          contains: [UB]
-        }, IB, {
-          relevance: 0,
-          match: /\b[A-Z][A-Z_0-9]+\b/,
-          className: "variable.constant"
-        }, FB, PB, {
-          match: /\$[(.]/
-        }]
+        [YY]: FY,
+        [`${YY}|RequiresAmmo`]: {
+          ...FY,
+          displayName: YY,
+          heldItemGlb: null !== (DY = FY.heldItemGlb) && void 0 !== DY ? DY : YY
+        }
       }
     }
-
-    function LB(BB) {
-      const TB = BB.regex,
-        dB = kB(BB),
-        lB = VB,
-        JB = ["any", "void", "number", "boolean", "string", "object", "never", "symbol", "bigint", "unknown"],
-        YB = {
-          tO: [/namespace/, /\s+/, BB.IDENT_RE],
-          beginScope: {
-            1: "keyword",
-            3: "title.class"
+    var oY = DY(36408),
+      WY = DY(36416),
+      EY = DY(36421);
+    const mY = 16,
+      VY = {
+        comboWindowMs: 800,
+        comboMultipliers: [.5, 2 / 3, 5 / 6, 1],
+        backstabAngle: 2 * Math.PI / 3
+      },
+      SY = {
+        "Wood Pickaxe": {
+          displayName: {
+            translationKey: "item:woodPickaxe"
+          },
+          type: "Tool",
+          textureInfo: "wooden_pickaxe",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 18,
+          description: {
+            translationKey: "item:pickaxeDescription"
+          },
+          stackable: !1,
+          harvests: "rock",
+          multiplier: 2,
+          level: 1
+        },
+        "Stone Pickaxe": {
+          displayName: {
+            translationKey: "item:stonePickaxe"
+          },
+          type: "Tool",
+          textureInfo: "stone_pickaxe",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 22,
+          description: {
+            translationKey: "item:pickaxeDescription"
+          },
+          stackable: !1,
+          harvests: "rock",
+          multiplier: 3.5,
+          level: 2
+        },
+        "Iron Pickaxe": {
+          displayName: {
+            translationKey: "item:ironPickaxe"
+          },
+          type: "Tool",
+          textureInfo: "iron_pickaxe",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 27,
+          description: {
+            translationKey: "item:pickaxeDescription"
+          },
+          stackable: !1,
+          harvests: "rock",
+          multiplier: 6,
+          level: 3
+        },
+        "Gold Pickaxe": {
+          displayName: {
+            translationKey: "item:goldPickaxe"
+          },
+          type: "Tool",
+          textureInfo: "golden_pickaxe",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 30,
+          description: {
+            translationKey: "item:pickaxeDescription"
+          },
+          stackable: !1,
+          harvests: "rock",
+          multiplier: 7,
+          level: 4
+        },
+        "Diamond Pickaxe": {
+          displayName: {
+            translationKey: "item:diamondPickaxe"
+          },
+          type: "Tool",
+          textureInfo: "diamond_pickaxe",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 32,
+          description: {
+            translationKey: "item:pickaxeDescription"
+          },
+          stackable: !1,
+          harvests: "rock",
+          multiplier: 8,
+          level: 5
+        },
+        "Moonstone Pickaxe": {
+          displayName: {
+            translationKey: "item:moonstonePickaxe"
+          },
+          type: "Tool",
+          textureInfo: "moonstone_pickaxe",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 32,
+          description: {
+            translationKey: "item:moonstonePickaxeDescription"
+          },
+          stackable: !1,
+          harvests: "rock",
+          multiplier: 9,
+          level: 5
+        },
+        "Golem Pickaxe": {
+          displayName: {
+            translationKey: "item:golemPickaxe"
+          },
+          type: "Tool",
+          textureInfo: "golem_pickaxe",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 32,
+          description: {
+            translationKey: "item:golemPickaxeDescription"
+          },
+          stackable: !1,
+          harvests: "rock",
+          multiplier: 8,
+          level: 5
+        },
+        "Wood Axe": {
+          displayName: {
+            translationKey: "item:woodAxe"
+          },
+          type: "Tool",
+          textureInfo: "wooden_axe",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 20,
+          description: {
+            translationKey: "item:axeDescription"
+          },
+          stackable: !1,
+          harvests: "wood",
+          multiplier: 2,
+          level: 1
+        },
+        "Stone Axe": {
+          displayName: {
+            translationKey: "item:stoneAxe"
+          },
+          type: "Tool",
+          textureInfo: "stone_axe",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 24,
+          description: {
+            translationKey: "item:axeDescription"
+          },
+          stackable: !1,
+          harvests: "wood",
+          multiplier: 3.5,
+          level: 2
+        },
+        "Iron Axe": {
+          displayName: {
+            translationKey: "item:ironAxe"
+          },
+          type: "Tool",
+          textureInfo: "iron_axe",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 31,
+          description: {
+            translationKey: "item:axeDescription"
+          },
+          stackable: !1,
+          harvests: "wood",
+          multiplier: 6,
+          level: 3
+        },
+        "Gold Axe": {
+          displayName: {
+            translationKey: "item:goldAxe"
+          },
+          type: "Tool",
+          textureInfo: "golden_axe",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 33,
+          description: {
+            translationKey: "item:axeDescription"
+          },
+          stackable: !1,
+          harvests: "wood",
+          multiplier: 7,
+          level: 4
+        },
+        "Diamond Axe": {
+          displayName: {
+            translationKey: "item:diamondAxe"
+          },
+          type: "Tool",
+          textureInfo: "diamond_axe",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 36,
+          description: {
+            translationKey: "item:axeDescription"
+          },
+          stackable: !1,
+          harvests: "wood",
+          multiplier: 8,
+          level: 5
+        },
+        "Moonstone Axe": {
+          displayName: {
+            translationKey: "item:moonstoneAxe"
+          },
+          type: "Tool",
+          textureInfo: "moonstone_axe",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 36,
+          description: {
+            translationKey: "item:moonstoneAxeDescription"
+          },
+          stackable: !1,
+          harvests: "wood",
+          multiplier: 9,
+          level: 5,
+          lumberjackHeight: 6
+        },
+        "Artisan Axe": {
+          displayName: "Artisan Axe",
+          type: "Tool",
+          textureInfo: "artisan_axe",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 31,
+          description: {
+            translationKey: "item:axeDescription"
+          },
+          stackable: !1,
+          harvests: "wood",
+          multiplier: 6,
+          level: 3
+        },
+        "Wood Spade": {
+          displayName: {
+            translationKey: "item:woodSpade"
+          },
+          type: "Tool",
+          textureInfo: "wooden_shovel",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 15,
+          description: {
+            translationKey: "item:spadeDescription"
+          },
+          stackable: !1,
+          harvests: "granule",
+          multiplier: 2,
+          level: 1
+        },
+        "Stone Spade": {
+          displayName: {
+            translationKey: "item:stoneSpade"
+          },
+          type: "Tool",
+          textureInfo: "stone_shovel",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 19,
+          description: {
+            translationKey: "item:spadeDescription"
+          },
+          stackable: !1,
+          harvests: "granule",
+          multiplier: 3.5,
+          level: 2
+        },
+        "Iron Spade": {
+          displayName: {
+            translationKey: "item:ironSpade"
+          },
+          type: "Tool",
+          textureInfo: "iron_shovel",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 24,
+          description: {
+            translationKey: "item:spadeDescription"
+          },
+          stackable: !1,
+          harvests: "granule",
+          multiplier: 6,
+          level: 3
+        },
+        "Gold Spade": {
+          displayName: {
+            translationKey: "item:goldSpade"
+          },
+          type: "Tool",
+          textureInfo: "golden_shovel",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 26,
+          description: {
+            translationKey: "item:spadeDescription"
+          },
+          stackable: !1,
+          harvests: "granule",
+          multiplier: 7,
+          level: 4
+        },
+        "Diamond Spade": {
+          displayName: {
+            translationKey: "item:diamondSpade"
+          },
+          type: "Tool",
+          textureInfo: "diamond_shovel",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 28,
+          description: {
+            translationKey: "item:spadeDescription"
+          },
+          stackable: !1,
+          harvests: "granule",
+          multiplier: 8,
+          level: 5
+        },
+        "Wood Sword": {
+          displayName: {
+            translationKey: "item:woodSword"
+          },
+          type: "Tool",
+          textureInfo: "wooden_sword",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 22,
+          description: {
+            translationKey: "item:swordDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 1
+        },
+        "Stone Sword": {
+          displayName: {
+            translationKey: "item:stoneSword"
+          },
+          type: "Tool",
+          textureInfo: "stone_sword",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 27,
+          description: {
+            translationKey: "item:swordDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 2
+        },
+        "Iron Sword": {
+          displayName: {
+            translationKey: "item:ironSword"
+          },
+          type: "Tool",
+          textureInfo: "iron_sword",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 34,
+          description: {
+            translationKey: "item:swordDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 3
+        },
+        "Gold Sword": {
+          displayName: {
+            translationKey: "item:goldSword"
+          },
+          type: "Tool",
+          textureInfo: "golden_sword",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 37,
+          description: {
+            translationKey: "item:swordDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 4
+        },
+        "Diamond Sword": {
+          displayName: {
+            translationKey: "item:diamondSword"
+          },
+          type: "Tool",
+          textureInfo: "diamond_sword",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 40,
+          description: {
+            translationKey: "item:swordDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 5
+        },
+        "Knight Sword": {
+          displayName: {
+            translationKey: "item:knightSword"
+          },
+          type: "Tool",
+          textureInfo: "knight_sword",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 43,
+          knockbackHorizontalScalar: 1.7,
+          description: {
+            translationKey: "item:knightSwordDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 5
+        },
+        "Wood Hoe": {
+          displayName: {
+            translationKey: "item:woodHoe"
+          },
+          type: "Tool",
+          textureInfo: "wooden_hoe",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 15,
+          description: {
+            translationKey: "item:hoeDescription"
+          },
+          stackable: !1,
+          harvests: "cuttable",
+          multiplier: 2,
+          level: 1
+        },
+        "Stone Hoe": {
+          displayName: {
+            translationKey: "item:stoneHoe"
+          },
+          type: "Tool",
+          textureInfo: "stone_hoe",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 19,
+          description: {
+            translationKey: "item:hoeDescription"
+          },
+          stackable: !1,
+          harvests: "cuttable",
+          multiplier: 2.5,
+          level: 2
+        },
+        "Iron Hoe": {
+          displayName: {
+            translationKey: "item:ironHoe"
+          },
+          type: "Tool",
+          textureInfo: "iron_hoe",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 24,
+          description: {
+            translationKey: "item:hoeDescription"
+          },
+          stackable: !1,
+          harvests: "cuttable",
+          multiplier: 3.25,
+          level: 3
+        },
+        "Gold Hoe": {
+          displayName: {
+            translationKey: "item:goldHoe"
+          },
+          type: "Tool",
+          textureInfo: "golden_hoe",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 26,
+          description: {
+            translationKey: "item:hoeDescription"
+          },
+          stackable: !1,
+          harvests: "cuttable",
+          multiplier: 3.75,
+          level: 4
+        },
+        "Diamond Hoe": {
+          displayName: {
+            translationKey: "item:diamondHoe"
+          },
+          type: "Tool",
+          textureInfo: "diamond_hoe",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 28,
+          description: {
+            translationKey: "item:hoeDescription"
+          },
+          stackable: !1,
+          harvests: "cuttable",
+          multiplier: 4.25,
+          level: 5
+        },
+        Flashlight: {
+          displayName: {
+            translationKey: "item:flashlight"
+          },
+          description: {
+            translationKey: "item:flashlightDescription"
+          },
+          type: "Item",
+          textureInfo: "flashlight",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          My: [15, 15, 15],
+          spotlightRange: 20,
+          spotlightConeAngle: 60,
+          firstPersonHeldRotationOffset: [-.34, -.014, .081],
+          thirdPersonHeldRotationOffset: [Math.PI / 2, 0, 0]
+        },
+        "Mining Helmet": {
+          displayName: {
+            translationKey: "item:miningHelmet"
+          },
+          description: {
+            translationKey: "item:miningHelmetDescription"
+          },
+          type: "Armour",
+          textureInfo: "mining_helmet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .07,
+          My: [15, 14, 11],
+          spotlightRange: 12,
+          spotlightConeAngle: 90
+        },
+        "Wood Helmet": {
+          displayName: {
+            translationKey: "item:woodHelmet"
+          },
+          type: "Armour",
+          textureInfo: "wood_helmet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .07
+        },
+        "Iron Helmet": {
+          displayName: {
+            translationKey: "item:ironHelmet"
+          },
+          type: "Armour",
+          textureInfo: "iron_helmet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .09
+        },
+        "Gold Helmet": {
+          displayName: {
+            translationKey: "item:goldHelmet"
+          },
+          type: "Armour",
+          textureInfo: "golden_helmet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .11
+        },
+        "Diamond Helmet": {
+          displayName: {
+            translationKey: "item:diamondHelmet"
+          },
+          type: "Armour",
+          textureInfo: "diamond_helmet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .13
+        },
+        "Wood Chestplate": {
+          displayName: {
+            translationKey: "item:woodChestplate"
+          },
+          type: "Armour",
+          textureInfo: "wood_chestplate",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .13
+        },
+        "Iron Chestplate": {
+          displayName: {
+            translationKey: "item:ironChestplate"
+          },
+          type: "Armour",
+          textureInfo: "iron_chestplate",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .18
+        },
+        "Gold Chestplate": {
+          displayName: {
+            translationKey: "item:goldChestplate"
+          },
+          type: "Armour",
+          textureInfo: "golden_chestplate",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .21
+        },
+        "Diamond Chestplate": {
+          displayName: {
+            translationKey: "item:diamondChestplate"
+          },
+          type: "Armour",
+          textureInfo: "diamond_chestplate",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .24
+        },
+        "Fur Chestplate": {
+          displayName: {
+            translationKey: "item:furChestplate"
+          },
+          type: "Armour",
+          textureInfo: "fur_chestplate",
+          weight: 1,
+          heldItemScale: 1,
+          description: {
+            translationKey: "item:furChestplateDescription"
+          },
+          stackable: !1,
+          armourReduction: .22,
+          knockbackReduction: 1
+        },
+        "Wood Leggings": {
+          displayName: {
+            translationKey: "item:woodLeggings"
+          },
+          type: "Armour",
+          textureInfo: "wood_leggings",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .1
+        },
+        "Iron Leggings": {
+          displayName: {
+            translationKey: "item:ironLeggings"
+          },
+          type: "Armour",
+          textureInfo: "iron_leggings",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .14
+        },
+        "Gold Leggings": {
+          displayName: {
+            translationKey: "item:goldLeggings"
+          },
+          type: "Armour",
+          textureInfo: "golden_leggings",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .16
+        },
+        "Diamond Leggings": {
+          displayName: {
+            translationKey: "item:diamondLeggings"
+          },
+          type: "Armour",
+          textureInfo: "diamond_leggings",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .19
+        },
+        "Wood Boots": {
+          displayName: {
+            translationKey: "item:woodBoots"
+          },
+          type: "Armour",
+          textureInfo: "wood_boots",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .05
+        },
+        "Iron Boots": {
+          displayName: {
+            translationKey: "item:ironBoots"
+          },
+          type: "Armour",
+          textureInfo: "iron_boots",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .07
+        },
+        "Gold Boots": {
+          displayName: {
+            translationKey: "item:goldBoots"
+          },
+          type: "Armour",
+          textureInfo: "golden_boots",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .09
+        },
+        "Diamond Boots": {
+          displayName: {
+            translationKey: "item:diamondBoots"
+          },
+          type: "Armour",
+          textureInfo: "diamond_boots",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .1
+        },
+        "Spiked Boots": {
+          displayName: {
+            translationKey: "item:spikedBoots"
+          },
+          type: "Armour",
+          textureInfo: "spiked_boots",
+          weight: 1,
+          heldItemScale: 1,
+          description: {
+            translationKey: "item:spikedBootsDescription"
+          },
+          stackable: !1,
+          armourReduction: .09
+        },
+        "Wood Gauntlets": {
+          displayName: {
+            translationKey: "item:woodGauntlets"
+          },
+          type: "Armour",
+          textureInfo: "wood_gauntlets",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .06
+        },
+        "Iron Gauntlets": {
+          displayName: {
+            translationKey: "item:ironGauntlets"
+          },
+          type: "Armour",
+          textureInfo: "iron_gauntlets",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .08
+        },
+        "Gold Gauntlets": {
+          displayName: {
+            translationKey: "item:goldGauntlets"
+          },
+          type: "Armour",
+          textureInfo: "golden_gauntlets",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .1
+        },
+        "Diamond Gauntlets": {
+          displayName: {
+            translationKey: "item:diamondGauntlets"
+          },
+          type: "Armour",
+          textureInfo: "diamond_gauntlets",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .11
+        },
+        "Military Helmet": {
+          displayName: {
+            translationKey: "item:militaryHelmet"
+          },
+          type: "Armour",
+          textureInfo: "military_helmet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .11
+        },
+        "Military Chestplate": {
+          displayName: {
+            translationKey: "item:militaryChestplate"
+          },
+          type: "Armour",
+          textureInfo: "military_chestplate",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .21
+        },
+        "Military Gauntlets": {
+          displayName: {
+            translationKey: "item:militaryGauntlets"
+          },
+          type: "Armour",
+          textureInfo: "military_gauntlets",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .1
+        },
+        "Military Leggings": {
+          displayName: {
+            translationKey: "item:militaryLeggings"
+          },
+          type: "Armour",
+          textureInfo: "military_leggings",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .16
+        },
+        "Military Boots": {
+          displayName: {
+            translationKey: "item:militaryBoots"
+          },
+          type: "Armour",
+          textureInfo: "military_boots",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .09
+        },
+        "White Wood Helmet": {
+          displayName: {
+            translationKey: "item:whiteWoodHelmet"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_helmet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .07
+        },
+        "White Wood Chestplate": {
+          displayName: {
+            translationKey: "item:whiteWoodChestplate"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_chestplate",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .13
+        },
+        "White Wood Leggings": {
+          displayName: {
+            translationKey: "item:whiteWoodLeggings"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_leggings",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .1
+        },
+        "White Wood Boots": {
+          displayName: {
+            translationKey: "item:whiteWoodBoots"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_boots",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .05
+        },
+        "White Wood Gauntlets": {
+          displayName: {
+            translationKey: "item:whiteWoodGauntlets"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_gauntlets",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .06
+        },
+        "Orange Wood Helmet": {
+          displayName: {
+            translationKey: "item:orangeWoodHelmet"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_helmet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .07
+        },
+        "Orange Wood Chestplate": {
+          displayName: {
+            translationKey: "item:orangeWoodChestplate"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_chestplate",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .13
+        },
+        "Orange Wood Leggings": {
+          displayName: {
+            translationKey: "item:orangeWoodLeggings"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_leggings",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .1
+        },
+        "Orange Wood Boots": {
+          displayName: {
+            translationKey: "item:orangeWoodBoots"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_boots",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .05
+        },
+        "Orange Wood Gauntlets": {
+          displayName: {
+            translationKey: "item:orangeWoodGauntlets"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_gauntlets",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .06
+        },
+        "Magenta Wood Helmet": {
+          displayName: {
+            translationKey: "item:magentaWoodHelmet"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_helmet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .07
+        },
+        "Magenta Wood Chestplate": {
+          displayName: {
+            translationKey: "item:magentaWoodChestplate"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_chestplate",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .13
+        },
+        "Magenta Wood Leggings": {
+          displayName: {
+            translationKey: "item:magentaWoodLeggings"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_leggings",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .1
+        },
+        "Magenta Wood Boots": {
+          displayName: {
+            translationKey: "item:magentaWoodBoots"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_boots",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .05
+        },
+        "Magenta Wood Gauntlets": {
+          displayName: {
+            translationKey: "item:magentaWoodGauntlets"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_gauntlets",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .06
+        },
+        "Light Blue Wood Helmet": {
+          displayName: {
+            translationKey: "item:lightBlueWoodHelmet"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_helmet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .07
+        },
+        "Light Blue Wood Chestplate": {
+          displayName: {
+            translationKey: "item:lightBlueWoodChestplate"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_chestplate",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .13
+        },
+        "Light Blue Wood Leggings": {
+          displayName: {
+            translationKey: "item:lightBlueWoodLeggings"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_leggings",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .1
+        },
+        "Light Blue Wood Boots": {
+          displayName: {
+            translationKey: "item:lightBlueWoodBoots"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_boots",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .05
+        },
+        "Light Blue Wood Gauntlets": {
+          displayName: {
+            translationKey: "item:lightBlueWoodGauntlets"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_gauntlets",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .06
+        },
+        "Yellow Wood Helmet": {
+          displayName: {
+            translationKey: "item:yellowWoodHelmet"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_helmet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .07
+        },
+        "Yellow Wood Chestplate": {
+          displayName: {
+            translationKey: "item:yellowWoodChestplate"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_chestplate",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .13
+        },
+        "Yellow Wood Leggings": {
+          displayName: {
+            translationKey: "item:yellowWoodLeggings"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_leggings",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .1
+        },
+        "Yellow Wood Boots": {
+          displayName: {
+            translationKey: "item:yellowWoodBoots"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_boots",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .05
+        },
+        "Yellow Wood Gauntlets": {
+          displayName: {
+            translationKey: "item:yellowWoodGauntlets"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_gauntlets",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .06
+        },
+        "Lime Wood Helmet": {
+          displayName: {
+            translationKey: "item:limeWoodHelmet"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_helmet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .07
+        },
+        "Lime Wood Chestplate": {
+          displayName: {
+            translationKey: "item:limeWoodChestplate"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_chestplate",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .13
+        },
+        "Lime Wood Leggings": {
+          displayName: {
+            translationKey: "item:limeWoodLeggings"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_leggings",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .1
+        },
+        "Lime Wood Boots": {
+          displayName: {
+            translationKey: "item:limeWoodBoots"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_boots",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .05
+        },
+        "Lime Wood Gauntlets": {
+          displayName: {
+            translationKey: "item:limeWoodGauntlets"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_gauntlets",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .06
+        },
+        "Pink Wood Helmet": {
+          displayName: {
+            translationKey: "item:pinkWoodHelmet"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_helmet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .07
+        },
+        "Pink Wood Chestplate": {
+          displayName: {
+            translationKey: "item:pinkWoodChestplate"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_chestplate",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .13
+        },
+        "Pink Wood Leggings": {
+          displayName: {
+            translationKey: "item:pinkWoodLeggings"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_leggings",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .1
+        },
+        "Pink Wood Boots": {
+          displayName: {
+            translationKey: "item:pinkWoodBoots"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_boots",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .05
+        },
+        "Pink Wood Gauntlets": {
+          displayName: {
+            translationKey: "item:pinkWoodGauntlets"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_gauntlets",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .06
+        },
+        "Gray Wood Helmet": {
+          displayName: {
+            translationKey: "item:grayWoodHelmet"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_helmet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .07
+        },
+        "Gray Wood Chestplate": {
+          displayName: {
+            translationKey: "item:grayWoodChestplate"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_chestplate",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .13
+        },
+        "Gray Wood Leggings": {
+          displayName: {
+            translationKey: "item:grayWoodLeggings"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_leggings",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .1
+        },
+        "Gray Wood Boots": {
+          displayName: {
+            translationKey: "item:grayWoodBoots"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_boots",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .05
+        },
+        "Gray Wood Gauntlets": {
+          displayName: {
+            translationKey: "item:grayWoodGauntlets"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_gauntlets",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .06
+        },
+        "Light Gray Wood Helmet": {
+          displayName: {
+            translationKey: "item:lightGrayWoodHelmet"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_helmet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .07
+        },
+        "Light Gray Wood Chestplate": {
+          displayName: {
+            translationKey: "item:lightGrayWoodChestplate"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_chestplate",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .13
+        },
+        "Light Gray Wood Leggings": {
+          displayName: {
+            translationKey: "item:lightGrayWoodLeggings"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_leggings",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .1
+        },
+        "Light Gray Wood Boots": {
+          displayName: {
+            translationKey: "item:lightGrayWoodBoots"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_boots",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .05
+        },
+        "Light Gray Wood Gauntlets": {
+          displayName: {
+            translationKey: "item:lightGrayWoodGauntlets"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_gauntlets",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .06
+        },
+        "Cyan Wood Helmet": {
+          displayName: {
+            translationKey: "item:cyanWoodHelmet"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_helmet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .07
+        },
+        "Cyan Wood Chestplate": {
+          displayName: {
+            translationKey: "item:cyanWoodChestplate"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_chestplate",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .13
+        },
+        "Cyan Wood Leggings": {
+          displayName: {
+            translationKey: "item:cyanWoodLeggings"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_leggings",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .1
+        },
+        "Cyan Wood Boots": {
+          displayName: {
+            translationKey: "item:cyanWoodBoots"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_boots",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .05
+        },
+        "Cyan Wood Gauntlets": {
+          displayName: {
+            translationKey: "item:cyanWoodGauntlets"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_gauntlets",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .06
+        },
+        "Purple Wood Helmet": {
+          displayName: {
+            translationKey: "item:purpleWoodHelmet"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_helmet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .07
+        },
+        "Purple Wood Chestplate": {
+          displayName: {
+            translationKey: "item:purpleWoodChestplate"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_chestplate",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .13
+        },
+        "Purple Wood Leggings": {
+          displayName: {
+            translationKey: "item:purpleWoodLeggings"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_leggings",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .1
+        },
+        "Purple Wood Boots": {
+          displayName: {
+            translationKey: "item:purpleWoodBoots"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_boots",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .05
+        },
+        "Purple Wood Gauntlets": {
+          displayName: {
+            translationKey: "item:purpleWoodGauntlets"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_gauntlets",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .06
+        },
+        "Blue Wood Helmet": {
+          displayName: {
+            translationKey: "item:blueWoodHelmet"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_helmet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .07
+        },
+        "Blue Wood Chestplate": {
+          displayName: {
+            translationKey: "item:blueWoodChestplate"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_chestplate",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .13
+        },
+        "Blue Wood Leggings": {
+          displayName: {
+            translationKey: "item:blueWoodLeggings"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_leggings",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .1
+        },
+        "Blue Wood Boots": {
+          displayName: {
+            translationKey: "item:blueWoodBoots"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_boots",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .05
+        },
+        "Blue Wood Gauntlets": {
+          displayName: {
+            translationKey: "item:blueWoodGauntlets"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_gauntlets",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .06
+        },
+        "Brown Wood Helmet": {
+          displayName: {
+            translationKey: "item:brownWoodHelmet"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_helmet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .07
+        },
+        "Brown Wood Chestplate": {
+          displayName: {
+            translationKey: "item:brownWoodChestplate"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_chestplate",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .13
+        },
+        "Brown Wood Leggings": {
+          displayName: {
+            translationKey: "item:brownWoodLeggings"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_leggings",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .1
+        },
+        "Brown Wood Boots": {
+          displayName: {
+            translationKey: "item:brownWoodBoots"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_boots",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .05
+        },
+        "Brown Wood Gauntlets": {
+          displayName: {
+            translationKey: "item:brownWoodGauntlets"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_gauntlets",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .06
+        },
+        "Green Wood Helmet": {
+          displayName: {
+            translationKey: "item:greenWoodHelmet"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_helmet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .07
+        },
+        "Green Wood Chestplate": {
+          displayName: {
+            translationKey: "item:greenWoodChestplate"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_chestplate",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .13
+        },
+        "Green Wood Leggings": {
+          displayName: {
+            translationKey: "item:greenWoodLeggings"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_leggings",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .1
+        },
+        "Green Wood Boots": {
+          displayName: {
+            translationKey: "item:greenWoodBoots"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_boots",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .05
+        },
+        "Green Wood Gauntlets": {
+          displayName: {
+            translationKey: "item:greenWoodGauntlets"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_gauntlets",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .06
+        },
+        "Red Wood Helmet": {
+          displayName: {
+            translationKey: "item:redWoodHelmet"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_helmet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .07
+        },
+        "Red Wood Chestplate": {
+          displayName: {
+            translationKey: "item:redWoodChestplate"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_chestplate",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .13
+        },
+        "Red Wood Leggings": {
+          displayName: {
+            translationKey: "item:redWoodLeggings"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_leggings",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .1
+        },
+        "Red Wood Boots": {
+          displayName: {
+            translationKey: "item:redWoodBoots"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_boots",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .05
+        },
+        "Red Wood Gauntlets": {
+          displayName: {
+            translationKey: "item:redWoodGauntlets"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_gauntlets",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .06
+        },
+        "Black Wood Helmet": {
+          displayName: {
+            translationKey: "item:blackWoodHelmet"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_helmet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .07
+        },
+        "Black Wood Chestplate": {
+          displayName: {
+            translationKey: "item:blackWoodChestplate"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_chestplate",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .13
+        },
+        "Black Wood Leggings": {
+          displayName: {
+            translationKey: "item:blackWoodLeggings"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_leggings",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .1
+        },
+        "Black Wood Boots": {
+          displayName: {
+            translationKey: "item:blackWoodBoots"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_boots",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .05
+        },
+        "Black Wood Gauntlets": {
+          displayName: {
+            translationKey: "item:blackWoodGauntlets"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_gauntlets",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .06
+        },
+        Shears: {
+          displayName: {
+            translationKey: "item:shears"
+          },
+          type: "Tool",
+          textureInfo: "shears",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 27,
+          stackable: !1,
+          harvests: "cuttable",
+          multiplier: 3,
+          level: 3
+        },
+        "Artisan Shears": {
+          displayName: {
+            translationKey: "item:artisanShears"
+          },
+          type: "Tool",
+          textureInfo: "artisan_shears",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 27,
+          stackable: !1,
+          harvests: "cuttable",
+          multiplier: 3,
+          level: 3
+        },
+        Stick: {
+          displayName: {
+            translationKey: "item:stick"
+          },
+          type: "Item",
+          textureInfo: "stick",
+          weight: 1,
+          heldItemScale: 1,
+          knockbackHorizontalScalar: 2,
+          knockbackVerticalScalar: 1.2,
+          description: {
+            translationKey: "item:stickDescription"
+          },
+          stackable: !1
+        },
+        Coal: {
+          displayName: {
+            translationKey: "item:coal"
+          },
+          type: "Item",
+          textureInfo: "coal",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Raw Iron": {
+          displayName: {
+            translationKey: "item:rawIron"
+          },
+          type: "Item",
+          textureInfo: "raw_iron",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:rawIronDescription"
           }
         },
-        LB = {
-          beginKeywords: "interface",
-          end: /\{/,
-          excludeEnd: !0,
-          keywords: {
-            keyword: "interface extends",
-            built_in: JB
+        "Iron Bar": {
+          displayName: {
+            translationKey: "item:ironBar"
           },
-          contains: [dB.exports.CLASS_REFERENCE]
+          type: "Item",
+          textureInfo: "iron_ingot",
+          weight: 1,
+          heldItemScale: .5,
+          stackable: !0
         },
-        OB = {
-          $pattern: VB,
-          keyword: yB.concat(["type", "interface", "public", "private", "protected", "implements", "declare", "abstract", "readonly", "enum", "override", "satisfies"]),
-          literal: pB,
-          built_in: oB.concat(JB),
-          "variable.language": gB
+        "Iron Fragment": {
+          displayName: {
+            translationKey: "item:ironFragment"
+          },
+          type: "Item",
+          textureInfo: "iron_fragment",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:ironFragmentDescription"
+          }
         },
-        DB = {
-          className: "meta",
-          tO: "@" + lB
+        "Raw Gold": {
+          displayName: {
+            translationKey: "item:rawGold"
+          },
+          type: "Item",
+          textureInfo: "raw_gold",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:rawGoldDescription"
+          }
         },
-        uB = (BB, TB, dB) => {
-          const VB = BB.contains.findIndex((BB => BB.label === TB));
-          if (-1 === VB) throw new Error("can not find mode to replace");
-          BB.contains.splice(VB, 1, dB)
-        };
-      Object.assign(dB.keywords, OB), dB.exports.PARAMS_CONTAINS.push(DB);
-      const HB = dB.contains.find((BB => "attr" === BB.scope)),
-        EB = Object.assign({}, HB, {
-          match: TB.concat(lB, TB.lookahead(/\s*\?:/))
-        });
-      dB.exports.PARAMS_CONTAINS.push([dB.exports.CLASS_REFERENCE, HB, EB]), dB.contains = dB.contains.concat([DB, YB, LB, EB]), uB(dB, "shebang", BB.SHEBANG()), uB(dB, "use_strict", {
-        className: "meta",
-        relevance: 10,
-        tO: /^\s*['"]use strict['"]/
-      });
-      return dB.contains.find((BB => "func.def" === BB.label)).relevance = 0, Object.assign(dB, {
-        name: "TypeScript",
-        aliases: ["ts", "tsx", "mts", "cts"]
-      }), dB
+        "Gold Bar": {
+          displayName: {
+            translationKey: "item:goldBar"
+          },
+          type: "Item",
+          textureInfo: "gold_ingot",
+          weight: 1,
+          heldItemScale: .5,
+          stackable: !0
+        },
+        "Gold Fragment": {
+          displayName: {
+            translationKey: "item:goldFragment"
+          },
+          type: "Item",
+          textureInfo: "gold_fragment",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:goldFragmentDescription"
+          }
+        },
+        Diamond: {
+          displayName: {
+            translationKey: "item:diamond"
+          },
+          type: "Item",
+          textureInfo: "diamond",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Diamond Fragment": {
+          displayName: {
+            translationKey: "item:diamondFragment"
+          },
+          type: "Item",
+          textureInfo: "diamond_fragment",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:diamondFragmentDescription"
+          }
+        },
+        Moonstone: {
+          displayName: {
+            translationKey: "item:moonstone"
+          },
+          type: "Item",
+          textureInfo: "moonstone",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        Lunite: {
+          displayName: {
+            translationKey: "item:lunite"
+          },
+          type: "Item",
+          textureInfo: "lunite",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:luniteDescription"
+          }
+        },
+        "Moonstone Fragment": {
+          displayName: {
+            translationKey: "item:moonstoneFragment"
+          },
+          type: "Item",
+          textureInfo: "moonstone_fragment",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:moonstoneFragmentDescription"
+          }
+        },
+        Bowl: {
+          displayName: {
+            translationKey: "item:bowl"
+          },
+          type: "Item",
+          textureInfo: "bowl",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        ... function(YY, rY, DY) {
+          console.assert(4 === DY.length, "Must have 4 textures for bowl fill metadatas");
+          const FY = {
+            ...rY
+          };
+          delete FY.rootMetaDesc, delete FY.textureInfo, delete FY.afterEatenItem;
+          const AY = `Partially Full ${YY}`,
+            IY = `Half Full ${YY}`,
+            RY = `Nearly Full ${YY}`,
+            OY = YY;
+          return {
+            [AY]: {
+              ...rY,
+              textureInfo: DY[0],
+              afterEatenItem: "Bowl",
+              rootMetaDesc: `${AY}|meta|charging1`
+            },
+            [IY]: {
+              ...rY,
+              textureInfo: DY[1],
+              afterEatenItem: AY,
+              rootMetaDesc: `${IY}|meta|charging1`
+            },
+            [RY]: {
+              ...rY,
+              textureInfo: DY[2],
+              afterEatenItem: IY,
+              rootMetaDesc: `${RY}|meta|charging1`
+            },
+            [OY]: {
+              ...rY,
+              textureInfo: DY[3],
+              afterEatenItem: RY,
+              rootMetaDesc: `${OY}|meta|charging1`
+            }
+          }
+        }("Bowl of Cranberries", {
+          displayName: {
+            translationKey: "item:bowlOfCranberries"
+          },
+          type: "Chargeable",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          chargeStages: 1,
+          chargeTime: 300,
+          stackable: !1,
+          eatHealAmt: 10,
+          description: {
+            translationKey: "item:bowlOfCranberriesDescription"
+          }
+        }, ["bowl_of_cranberries_1", "bowl_of_cranberries_2", "bowl_of_cranberries_3", "bowl_of_cranberries_4"]),
+        "Mushroom Soup": {
+          displayName: {
+            translationKey: "item:mushroomSoup"
+          },
+          type: "Chargeable",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          eatHealAmt: 15,
+          chargeSound: "eat1",
+          chargeStages: 1,
+          chargeTime: 375,
+          stackable: !1,
+          afterEatenItem: "Bowl",
+          textureInfo: "mushroom_soup",
+          rootMetaDesc: "Mushroom Soup|meta|charging1"
+        },
+        "Glowing Soup": {
+          displayName: {
+            translationKey: "item:glowingSoup"
+          },
+          type: "Chargeable",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          eatHealAmt: 5,
+          chargeSound: "eat1",
+          chargeStages: 1,
+          chargeTime: 375,
+          stackable: !1,
+          afterEatenItem: "Bowl",
+          textureInfo: "glowing_soup",
+          description: {
+            translationKey: "item:glowingSoupDescription"
+          },
+          My: [4, 11, 11],
+          rootMetaDesc: "Glowing Soup|meta|charging1"
+        },
+        "Night Vision Soup": {
+          displayName: {
+            translationKey: "item:nightVisionSoup"
+          },
+          type: "Chargeable",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          eatHealAmt: 10,
+          chargeSound: "eat1",
+          chargeStages: 1,
+          chargeTime: 375,
+          stackable: !1,
+          afterEatenItem: "Bowl",
+          textureInfo: "night_vision_soup",
+          description: {
+            translationKey: "item:nightVisionSoupDescription"
+          },
+          rootMetaDesc: "Night Vision Soup|meta|charging1"
+        },
+        Cotton: {
+          displayName: {
+            translationKey: "item:cotton"
+          },
+          type: "Item",
+          textureInfo: "cotton",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Gold Crop": {
+          displayName: {
+            translationKey: "item:goldCrop"
+          },
+          type: "Item",
+          textureInfo: "gold_crop",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:goldCropDescription"
+          }
+        },
+        Bucket: {
+          displayName: {
+            translationKey: "item:bucket"
+          },
+          type: "Item",
+          textureInfo: "bucket",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Water Bucket": {
+          displayName: {
+            translationKey: "item:waterBucket"
+          },
+          type: "Item",
+          textureInfo: "water_bucket",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        "Lava Bucket": {
+          displayName: {
+            translationKey: "item:lavaBucket"
+          },
+          type: "Item",
+          textureInfo: "lava_bucket",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          My: [12, 7, 2]
+        },
+        Boat: {
+          displayName: {
+            translationKey: "item:boat"
+          },
+          type: "Item",
+          textureInfo: "oak_boat",
+          heldItemGlb: "Boat Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        INTERNAL_MESH_Boat: {
+          type: "Item",
+          textureInfo: "oak_boat",
+          heldItemGlb: "Boat",
+          weight: 1,
+          heldItemScale: 4,
+          stackable: !1
+        },
+        "Obsidian Boat": {
+          displayName: {
+            translationKey: "item:obsidianBoat"
+          },
+          description: {
+            translationKey: "item:obsidianBoatDescription"
+          },
+          type: "Item",
+          textureInfo: "obsidian_boat",
+          heldItemGlb: "Obsidian Boat Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        "INTERNAL_MESH_Obsidian Boat": {
+          type: "Item",
+          textureInfo: "obsidian_boat",
+          heldItemGlb: "Obsidian Boat",
+          weight: 1,
+          heldItemScale: 4,
+          stackable: !1
+        },
+        Speedboat: {
+          displayName: {
+            translationKey: "item:speedboat"
+          },
+          type: "Item",
+          textureInfo: "speedboat",
+          heldItemGlb: "Speedboat Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        INTERNAL_MESH_Speedboat: {
+          type: "Item",
+          textureInfo: "speedboat",
+          heldItemGlb: "Speedboat",
+          weight: 1,
+          heldItemScale: 4,
+          stackable: !1
+        },
+        "Wood Hang Glider": {
+          displayName: {
+            translationKey: "item:woodHangGlider"
+          },
+          type: "Item",
+          textureInfo: "hang_glider",
+          heldItemGlb: "Wood Hang Glider Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        "INTERNAL_MESH_Wood Hang Glider": {
+          type: "Item",
+          textureInfo: "hang_glider",
+          heldItemGlb: "Wood Hang Glider",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        "Iron Hang Glider": {
+          displayName: {
+            translationKey: "item:ironHangGlider"
+          },
+          type: "Item",
+          textureInfo: "hang_glider_iron",
+          heldItemGlb: "Iron Hang Glider Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        "INTERNAL_MESH_Iron Hang Glider": {
+          type: "Item",
+          textureInfo: "hang_glider_iron",
+          heldItemGlb: "Iron Hang Glider",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        "Gold Hang Glider": {
+          displayName: {
+            translationKey: "item:goldHangGlider"
+          },
+          type: "Item",
+          textureInfo: "hang_glider_gold",
+          heldItemGlb: "Gold Hang Glider Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        "INTERNAL_MESH_Gold Hang Glider": {
+          type: "Item",
+          textureInfo: "hang_glider_gold",
+          heldItemGlb: "Gold Hang Glider",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        "Diamond Hang Glider": {
+          displayName: {
+            translationKey: "item:diamondHangGlider"
+          },
+          type: "Item",
+          textureInfo: "hang_glider_diamond",
+          heldItemGlb: "Diamond Hang Glider Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        "INTERNAL_MESH_Diamond Hang Glider": {
+          type: "Item",
+          textureInfo: "hang_glider_diamond",
+          heldItemGlb: "Diamond Hang Glider",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        Hovercraft: {
+          displayName: {
+            translationKey: "item:hovercraft"
+          },
+          type: "Item",
+          textureInfo: "hovercraft",
+          heldItemGlb: "Hovercraft Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        INTERNAL_MESH_Hovercraft: {
+          type: "Item",
+          textureInfo: "hovercraft",
+          heldItemGlb: "Hovercraft",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        ...(0, OY.H)((YY => `${YY} Kart`), {
+          displayName: YY => ({
+            translationKey: `item:${(0,FY.te)(YY)}Kart`
+          }),
+          textureInfo: YY => `${(0,FY.xe)(YY)}_kart`,
+          heldItemGlb: YY => `${YY} Kart Item`,
+          type: "Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        }),
+        ...(0, OY.H)((YY => `INTERNAL_MESH_${YY} Kart`), {
+          textureInfo: YY => `${(0,FY.xe)(YY)}_kart`,
+          heldItemGlb: YY => `${YY} Kart`,
+          type: "Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        }),
+        "Off Roader": {
+          displayName: {
+            translationKey: "item:offRoader"
+          },
+          type: "Item",
+          textureInfo: "off_roader",
+          heldItemGlb: "Off Roader Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        "INTERNAL_MESH_Off Roader": {
+          type: "Item",
+          textureInfo: "off_roader",
+          heldItemGlb: "Off Roader",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        "Gold Mining Drill": {
+          displayName: {
+            translationKey: "item:goldMiningDrill"
+          },
+          type: "Item",
+          textureInfo: "off_roader",
+          heldItemGlb: "Off Roader Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        "Iron Mining Drill": {
+          displayName: {
+            translationKey: "item:ironMiningDrill"
+          },
+          type: "Item",
+          textureInfo: "off_roader",
+          heldItemGlb: "Off Roader Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        "Diamond Mining Drill": {
+          displayName: {
+            translationKey: "item:diamondMiningDrill"
+          },
+          type: "Item",
+          textureInfo: "off_roader",
+          heldItemGlb: "Off Roader Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        "Moonstone Mining Drill": {
+          displayName: {
+            translationKey: "item:moonstoneMiningDrill"
+          },
+          type: "Item",
+          textureInfo: "off_roader",
+          heldItemGlb: "Off Roader Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        "Armored Car": {
+          displayName: {
+            translationKey: "item:armoredCar"
+          },
+          type: "Item",
+          textureInfo: "armored_car",
+          heldItemGlb: "Armored Car Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        "INTERNAL_MESH_Gold Mining Drill": {
+          type: "Item",
+          textureInfo: "off_roader",
+          heldItemGlb: "Gold Mining Drill",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        "INTERNAL_MESH_Iron Mining Drill": {
+          type: "Item",
+          textureInfo: "off_roader",
+          heldItemGlb: "Iron Mining Drill",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        "INTERNAL_MESH_Diamond Mining Drill": {
+          type: "Item",
+          textureInfo: "off_roader",
+          heldItemGlb: "Diamond Mining Drill",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        "INTERNAL_MESH_Moonstone Mining Drill": {
+          type: "Item",
+          textureInfo: "off_roader",
+          heldItemGlb: "Moonstone Mining Drill",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        "INTERNAL_MESH_Armored Car": {
+          type: "Item",
+          textureInfo: "armored_car",
+          heldItemGlb: "Armored Car",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        "Light Blue Car": {
+          displayName: {
+            translationKey: "item:lightBlueCar"
+          },
+          type: "Item",
+          textureInfo: "light_blue_car",
+          heldItemGlb: "Car Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        INTERNAL_MESH_Car: {
+          type: "Item",
+          textureInfo: "light_blue_car",
+          heldItemGlb: "Car",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        Snowball: {
+          displayName: {
+            translationKey: "item:snowball"
+          },
+          type: "Item",
+          textureInfo: "snowball",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:throwableItemDescription"
+          },
+          secondaryDamage: 4
+        },
+        "Snowball Launcher": {
+          displayName: "Snowball Launcher",
+          type: "FullAuto",
+          textureInfo: "snowball",
+          heldItemGlb: "Snowball",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: "Rapidly fires snowballs!",
+          fireInterval: 216,
+          secondaryDamage: 4,
+          holdAsAiming: !1,
+          hideAimingUI: !0
+        },
+        Pebble: {
+          displayName: {
+            translationKey: "item:pebble"
+          },
+          type: "Item",
+          textureInfo: "pebble",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:throwableItemDescription"
+          },
+          secondaryDamage: 10
+        },
+        "Reinforced Pebble": {
+          displayName: {
+            translationKey: "item:reinforcedPebble"
+          },
+          type: "Item",
+          textureInfo: "reinforced_pebble",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:throwableItemDescription"
+          },
+          secondaryDamage: 13
+        },
+        Bullet: {
+          displayName: "Bullet",
+          type: "Item",
+          textureInfo: "arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        Ball: {
+          displayName: {
+            translationKey: "item:ball"
+          },
+          type: "Item",
+          textureInfo: "ball",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:ballDescription"
+          }
+        },
+        "Reinforced Ball": {
+          displayName: {
+            translationKey: "item:reinforcedBall"
+          },
+          type: "Item",
+          textureInfo: "reinforced_ball",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:reinforcedBallDescription"
+          }
+        },
+        "Frag Grenade": {
+          displayName: {
+            translationKey: "item:fragGrenade"
+          },
+          type: "Item",
+          textureInfo: "frag_grenade",
+          weight: 1,
+          heldItemScale: 6,
+          stackable: !0,
+          description: {
+            translationKey: "item:fragGrenadeDescription"
+          }
+        },
+        "Mining Grenade": {
+          displayName: {
+            translationKey: "item:miningGrenade"
+          },
+          type: "Item",
+          textureInfo: "mining_grenade",
+          weight: 1,
+          heldItemScale: 6,
+          stackable: !0,
+          description: {
+            translationKey: "item:miningGrenadeDescription"
+          }
+        },
+        "Smoke Grenade": {
+          displayName: {
+            translationKey: "item:smokeGrenade"
+          },
+          type: "Item",
+          textureInfo: "smoke_grenade",
+          weight: 1,
+          heldItemScale: 6,
+          stackable: !0,
+          description: {
+            translationKey: "item:smokeGrenadeDescription"
+          }
+        },
+        "Moonstone Orb": {
+          displayName: {
+            translationKey: "item:moonstoneOrb"
+          },
+          type: "Item",
+          textureInfo: "moonstone_orb",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:moonstoneOrbDescription"
+          }
+        },
+        Fireball: {
+          displayName: {
+            translationKey: "item:fireball"
+          },
+          type: "Item",
+          textureInfo: "fireball",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:fireballDescription"
+          },
+          secondaryDamage: 13
+        },
+        "Bouncy Bomb": {
+          displayName: {
+            translationKey: "item:bouncyBomb"
+          },
+          type: "Item",
+          textureInfo: "bouncy_bomb",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:bouncyBombDescription"
+          },
+          secondaryDamage: 5
+        },
+        RPG: {
+          displayName: {
+            translationKey: "item:rpg"
+          },
+          type: "FullAuto",
+          textureInfo: "rpg",
+          weight: 1,
+          heldItemScale: 1.2,
+          stackable: !0,
+          description: {
+            translationKey: "item:rpgDescription"
+          },
+          secondaryDamage: 13,
+          holdAsAiming: !0,
+          hideAimingUI: !0
+        },
+        "Obby RPG": {
+          displayName: {
+            translationKey: "item:rpg"
+          },
+          type: "FullAuto",
+          textureInfo: "rpg",
+          weight: 1,
+          heldItemScale: 1.2,
+          stackable: !1,
+          description: {
+            translationKey: "item:rpgDescription"
+          },
+          holdAsAiming: !0,
+          hideAimingUI: !0,
+          fireInterval: 817
+        },
+        "Super RPG": {
+          displayName: {
+            translationKey: "item:superRpg"
+          },
+          type: "FullAuto",
+          textureInfo: "super_rpg",
+          weight: 1,
+          heldItemScale: 1.2,
+          stackable: !0,
+          description: {
+            translationKey: "item:superRpgDescription"
+          },
+          secondaryDamage: 20,
+          holdAsAiming: !0,
+          hideAimingUI: !0
+        },
+        "Grenade Launcher": {
+          displayName: {
+            translationKey: "item:grenadeLauncher"
+          },
+          type: "FullAuto",
+          textureInfo: "grenade_launcher",
+          weight: 1,
+          heldItemScale: 1.2,
+          stackable: !0,
+          description: {
+            translationKey: "item:grenadeLauncherDescription"
+          },
+          secondaryDamage: 16,
+          holdAsAiming: !0,
+          hideAimingUI: !0
+        },
+        Iceball: {
+          displayName: {
+            translationKey: "item:iceball"
+          },
+          type: "Item",
+          textureInfo: "iceball",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:iceballDescription"
+          },
+          secondaryDamage: 8
+        },
+        "67 Base Projectile": {
+          displayName: "67 Base Projectile",
+          type: "Item",
+          itemTexture: "67_projectile_base",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: "The base projectile for the 67 character in Heroes v Brainrots",
+          secondaryDamage: 14
+        },
+        "67 Boosted Projectile": {
+          displayName: "67 Boosted Projectile",
+          type: "Item",
+          itemTexture: "67_projectile_boosted",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: "The boosted projectile for the 67 character in Heroes v Brainrots",
+          secondaryDamage: 19
+        },
+        "Capitano Grenade": {
+          displayName: "Capitano Grenade",
+          type: "Item",
+          textureInfo: "moonstone_explosive_side",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: "A small explosive grenade thrown by Capitano Explovissimo in Heroes v Brainrots"
+        },
+        "Scatter Pellet": {
+          displayName: "Scatter Pellet",
+          type: "Item",
+          textureInfo: "pebble",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: "Primary spread shot from Scatter in Heroes v Brainrots",
+          secondaryDamage: 8
+        },
+        ...vY("Wood Bow", {
+          displayName: {
+            translationKey: "item:woodBow"
+          },
+          type: "Chargeable",
+          textureName: "wood_bow",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1,
+          rootMetaDesc: "Wood Bow|meta|charging1",
+          chargeStages: 4,
+          chargeTime: 700,
+          secondaryDamage: Math.floor(37.4),
+          holdAsAiming: !0,
+          description: {
+            translationKey: "item:bowDescription"
+          },
+          requiresArrow: !0
+        }),
+        ...vY("Stone Bow", {
+          displayName: {
+            translationKey: "item:stoneBow"
+          },
+          type: "Chargeable",
+          textureName: "stone_bow",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1,
+          rootMetaDesc: "Stone Bow|meta|charging1",
+          chargeStages: 4,
+          chargeTime: 700,
+          secondaryDamage: Math.floor(45.9),
+          holdAsAiming: !0,
+          description: {
+            translationKey: "item:bowDescription"
+          },
+          requiresArrow: !0
+        }),
+        ...vY("Iron Bow", {
+          displayName: {
+            translationKey: "item:ironBow"
+          },
+          type: "Chargeable",
+          textureName: "iron_bow",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1,
+          rootMetaDesc: "Iron Bow|meta|charging1",
+          chargeStages: 4,
+          chargeTime: 700,
+          secondaryDamage: Math.floor(57.8),
+          holdAsAiming: !0,
+          description: {
+            translationKey: "item:bowDescription"
+          },
+          requiresArrow: !0
+        }),
+        ...vY("Gold Bow", {
+          displayName: {
+            translationKey: "item:goldBow"
+          },
+          type: "Chargeable",
+          textureName: "gold_bow",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1,
+          rootMetaDesc: "Gold Bow|meta|charging1",
+          chargeStages: 4,
+          chargeTime: 700,
+          secondaryDamage: Math.floor(62.9),
+          holdAsAiming: !0,
+          description: {
+            translationKey: "item:bowDescription"
+          },
+          requiresArrow: !0
+        }),
+        ...vY("Diamond Bow", {
+          displayName: {
+            translationKey: "item:diamondBow"
+          },
+          type: "Chargeable",
+          textureName: "diamond_bow",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1,
+          rootMetaDesc: "Diamond Bow|meta|charging1",
+          chargeStages: 4,
+          chargeTime: 700,
+          secondaryDamage: Math.floor(68),
+          holdAsAiming: !0,
+          description: {
+            translationKey: "item:bowDescription"
+          },
+          requiresArrow: !0
+        }),
+        ...vY("Wood Crossbow", {
+          displayName: {
+            translationKey: "item:woodCrossbow"
+          },
+          type: "Chargeable",
+          textureName: "wood_crossbow",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1,
+          rootMetaDesc: "Wood Crossbow|meta|charging1",
+          chargeStages: 4,
+          chargeTime: 700,
+          holdAsAiming: !0,
+          description: {
+            translationKey: "item:bowDescription"
+          },
+          requiresArrow: !0
+        }),
+        ...vY("Stone Crossbow", {
+          displayName: {
+            translationKey: "item:stoneCrossbow"
+          },
+          type: "Chargeable",
+          textureName: "stone_crossbow",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1,
+          rootMetaDesc: "Stone Crossbow|meta|charging1",
+          chargeStages: 4,
+          chargeTime: 700,
+          holdAsAiming: !0,
+          description: {
+            translationKey: "item:bowDescription"
+          },
+          requiresArrow: !0
+        }),
+        ...vY("Iron Crossbow", {
+          displayName: {
+            translationKey: "item:ironCrossbow"
+          },
+          type: "Chargeable",
+          textureName: "iron_crossbow",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1,
+          rootMetaDesc: "Iron Crossbow|meta|charging1",
+          chargeStages: 4,
+          chargeTime: 700,
+          holdAsAiming: !0,
+          description: {
+            translationKey: "item:bowDescription"
+          },
+          requiresArrow: !0
+        }),
+        ...vY("Gold Crossbow", {
+          displayName: {
+            translationKey: "item:goldCrossbow"
+          },
+          type: "Chargeable",
+          textureName: "gold_crossbow",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1,
+          rootMetaDesc: "Gold Crossbow|meta|charging1",
+          chargeStages: 4,
+          chargeTime: 700,
+          holdAsAiming: !0,
+          description: {
+            translationKey: "item:bowDescription"
+          },
+          requiresArrow: !0
+        }),
+        ...vY("Diamond Crossbow", {
+          displayName: {
+            translationKey: "item:diamondCrossbow"
+          },
+          type: "Chargeable",
+          textureName: "diamond_crossbow",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1,
+          rootMetaDesc: "Diamond Crossbow|meta|charging1",
+          chargeStages: 4,
+          chargeTime: 700,
+          holdAsAiming: !0,
+          description: {
+            translationKey: "item:bowDescription"
+          },
+          requiresArrow: !0
+        }),
+        "Wood Crossbow Charged": {
+          displayName: {
+            translationKey: "item:woodCrossbowCharged"
+          },
+          type: "Chargeable",
+          textureInfo: "wood_crossbow_charged",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1,
+          secondaryDamage: Math.floor(37.4),
+          holdAsAiming: !0,
+          description: {
+            translationKey: "item:bowDescription"
+          }
+        },
+        "Stone Crossbow Charged": {
+          displayName: {
+            translationKey: "item:stoneCrossbowCharged"
+          },
+          type: "Chargeable",
+          textureInfo: "stone_crossbow_charged",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1,
+          secondaryDamage: Math.floor(45.9),
+          holdAsAiming: !0,
+          description: {
+            translationKey: "item:bowDescription"
+          }
+        },
+        "Iron Crossbow Charged": {
+          displayName: {
+            translationKey: "item:ironCrossbowCharged"
+          },
+          type: "Chargeable",
+          textureInfo: "iron_crossbow_charged",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1,
+          secondaryDamage: Math.floor(57.8),
+          holdAsAiming: !0,
+          description: {
+            translationKey: "item:bowDescription"
+          }
+        },
+        "Gold Crossbow Charged": {
+          displayName: {
+            translationKey: "item:goldCrossbowCharged"
+          },
+          type: "Chargeable",
+          textureInfo: "gold_crossbow_charged",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1,
+          secondaryDamage: Math.floor(62.9),
+          holdAsAiming: !0,
+          description: {
+            translationKey: "item:bowDescription"
+          }
+        },
+        "Diamond Crossbow Charged": {
+          displayName: {
+            translationKey: "item:diamondCrossbowCharged"
+          },
+          type: "Chargeable",
+          textureInfo: "diamond_crossbow_charged",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1,
+          secondaryDamage: Math.floor(68),
+          holdAsAiming: !0,
+          description: {
+            translationKey: "item:bowDescription"
+          }
+        },
+        Arrow: {
+          displayName: {
+            translationKey: "item:arrow"
+          },
+          type: "Item",
+          textureInfo: "arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        ... function(YY, rY) {
+          console.assert("meta|dir1" === rY.rootMetaDesc.split("|").slice(1).join("|"), "charging root item .rootMetaDesc must be |meta|dir1");
+          const DY = {
+            ...rY
+          };
+          return delete DY.rootMetaDesc, {
+            [YY]: {
+              ...rY,
+              heldItemGlb: YY,
+              textureInfo: rY.textureName
+            },
+            [`${YY}|meta|dir2`]: {
+              ...DY,
+              displayName: YY,
+              textureInfo: `${rY.textureName}_dir_2`
+            },
+            [`${YY}|meta|dir3`]: {
+              ...DY,
+              displayName: YY,
+              textureInfo: `${rY.textureName}_dir_3`
+            },
+            [`${YY}|meta|dir4`]: {
+              ...DY,
+              displayName: YY,
+              textureInfo: `${rY.textureName}_dir_4`
+            },
+            [`${YY}|meta|dir5`]: {
+              ...DY,
+              displayName: YY,
+              textureInfo: `${rY.textureName}_dir_5`
+            },
+            [`${YY}|meta|dir6`]: {
+              ...DY,
+              displayName: YY,
+              textureInfo: `${rY.textureName}_dir_6`
+            },
+            [`${YY}|meta|dir7`]: {
+              ...DY,
+              displayName: YY,
+              textureInfo: `${rY.textureName}_dir_7`
+            },
+            [`${YY}|meta|dir8`]: {
+              ...DY,
+              displayName: YY,
+              textureInfo: `${rY.textureName}_dir_8`
+            },
+            [`${YY}|meta|dir9`]: {
+              ...DY,
+              displayName: YY,
+              textureInfo: `${rY.textureName}_dir_9`
+            },
+            [`${YY}|meta|dir10`]: {
+              ...DY,
+              displayName: YY,
+              textureInfo: `${rY.textureName}_dir_10`
+            },
+            [`${YY}|meta|dir11`]: {
+              ...DY,
+              displayName: YY,
+              textureInfo: `${rY.textureName}_dir_11`
+            },
+            [`${YY}|meta|dir12`]: {
+              ...DY,
+              displayName: YY,
+              textureInfo: `${rY.textureName}_dir_12`
+            }
+          }
+        }("Compass", {
+          displayName: {
+            translationKey: "item:compass"
+          },
+          type: "Directional",
+          textureName: "compass",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1,
+          rootMetaDesc: "Compass|meta|dir1",
+          description: {
+            translationKey: "item:compassDescription"
+          }
+        }),
+        "Chunk Map": {
+          displayName: "Chunk Map",
+          type: "Item",
+          textureInfo: "chunk_map",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !0,
+          description: "Drop into any locked chunk to instantly unlock it."
+        },
+        Bread: {
+          displayName: {
+            translationKey: "item:bread"
+          },
+          type: "Chargeable",
+          textureInfo: "bread",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          eatable: !0,
+          chargeSound: "eat1",
+          eatHealAmt: 24,
+          description: {
+            translationKey: "item:foodDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 950,
+          rootMetaDesc: "Bread|meta|charging1"
+        },
+        "Bowl of Rice": {
+          displayName: {
+            translationKey: "item:bowlOfRice"
+          },
+          type: "Chargeable",
+          textureInfo: "bowl_of_rice",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          eatable: !0,
+          afterEatenItem: "Bowl",
+          chargeSound: "eat1",
+          eatHealAmt: 26,
+          description: {
+            translationKey: "item:foodDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 375,
+          rootMetaDesc: "Bowl of Rice|meta|charging1"
+        },
+        Apple: {
+          displayName: {
+            translationKey: "item:apple"
+          },
+          type: "Chargeable",
+          textureInfo: "apple",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          eatable: !0,
+          chargeSound: "eat1",
+          eatHealAmt: 12,
+          description: {
+            translationKey: "item:foodDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 750,
+          rootMetaDesc: "Apple|meta|charging1"
+        },
+        Plum: {
+          displayName: {
+            translationKey: "item:plum"
+          },
+          type: "Chargeable",
+          textureInfo: "plum",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          stackable: !0,
+          description: {
+            translationKey: "item:plumDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 750,
+          rootMetaDesc: "Plum|meta|charging1"
+        },
+        Coconut: {
+          displayName: {
+            translationKey: "item:coconut"
+          },
+          type: "Item",
+          textureInfo: "coconut",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:coconutDescription"
+          },
+          secondaryDamage: 5
+        },
+        "Cracked Coconut": {
+          displayName: {
+            translationKey: "item:crackedCoconut"
+          },
+          type: "Chargeable",
+          textureInfo: "cracked_coconut",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          stackable: !0,
+          description: {
+            translationKey: "item:crackedCoconutDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 750,
+          rootMetaDesc: "Cracked Coconut|meta|charging1"
+        },
+        Pear: {
+          displayName: {
+            translationKey: "item:pear"
+          },
+          type: "Chargeable",
+          textureInfo: "pear",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          stackable: !0,
+          description: {
+            translationKey: "item:pearDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 750,
+          rootMetaDesc: "Pear|meta|charging1"
+        },
+        Cherry: {
+          displayName: {
+            translationKey: "item:cherry"
+          },
+          type: "Chargeable",
+          textureInfo: "cherry",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          stackable: !0,
+          description: {
+            translationKey: "item:cherryDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 750,
+          rootMetaDesc: "Cherry|meta|charging1"
+        },
+        Banana: {
+          displayName: {
+            translationKey: "item:banana"
+          },
+          type: "Chargeable",
+          textureInfo: "banana",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          stackable: !0,
+          description: {
+            translationKey: "item:bananaDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 750,
+          rootMetaDesc: "Banana|meta|charging1"
+        },
+        "Watermelon Slice": {
+          displayName: {
+            translationKey: "item:watermelonSlice"
+          },
+          type: "Chargeable",
+          textureInfo: "watermelon_slice",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          stackable: !0,
+          description: {
+            translationKey: "item:watermelonSliceDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 750,
+          rootMetaDesc: "Watermelon Slice|meta|charging1"
+        },
+        "Gold Watermelon Slice": {
+          displayName: {
+            translationKey: "item:goldWatermelonSlice"
+          },
+          type: "Chargeable",
+          textureInfo: "glistering_watermelon_slice",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          stackable: !0,
+          description: {
+            translationKey: "item:watermelonSliceDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Gold Watermelon Slice|meta|charging1"
+        },
+        "Melon Slice": {
+          displayName: {
+            translationKey: "item:melonSlice"
+          },
+          type: "Chargeable",
+          textureInfo: "melon_slice",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          stackable: !0,
+          description: {
+            translationKey: "item:melonSliceDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 750,
+          rootMetaDesc: "Melon Slice|meta|charging1"
+        },
+        "Gold Melon Slice": {
+          displayName: {
+            translationKey: "item:goldMelonSlice"
+          },
+          type: "Chargeable",
+          textureInfo: "glistering_melon_slice",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          stackable: !0,
+          description: {
+            translationKey: "item:melonSliceDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Gold Melon Slice|meta|charging1"
+        },
+        "Pumpkin Pie": {
+          displayName: {
+            translationKey: "item:pumpkinPie"
+          },
+          type: "Chargeable",
+          textureInfo: "pumpkin_pie",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          stackable: !0,
+          description: {
+            translationKey: "item:pumpkinPieDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Pumpkin Pie|meta|charging1"
+        },
+        Corn: {
+          displayName: {
+            translationKey: "item:corn"
+          },
+          type: "Chargeable",
+          textureInfo: "corn",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          eatable: !0,
+          chargeSound: "eat1",
+          eatShieldAmt: 20,
+          description: {
+            translationKey: "item:cornDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 850,
+          rootMetaDesc: "Corn|meta|charging1"
+        },
+        Cornbread: {
+          displayName: {
+            translationKey: "item:cornbread"
+          },
+          type: "Chargeable",
+          textureInfo: "cornbread",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          eatable: !0,
+          chargeSound: "eat1",
+          eatHealAmt: 24,
+          eatShieldAmt: 20,
+          description: {
+            translationKey: "item:cornbreadDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 950,
+          rootMetaDesc: "Cornbread|meta|charging1"
+        },
+        "Chili Pepper": {
+          displayName: {
+            translationKey: "item:chiliPepper"
+          },
+          type: "Chargeable",
+          textureInfo: "chili_pepper",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          stackable: !0,
+          description: {
+            translationKey: "item:chiliPepperDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 750,
+          rootMetaDesc: "Chili Pepper|meta|charging1"
+        },
+        Mango: {
+          displayName: {
+            translationKey: "item:mango"
+          },
+          type: "Item",
+          textureInfo: "mango",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 5,
+          description: {
+            translationKey: "item:mangoDescription"
+          }
+        },
+        Carrot: {
+          displayName: {
+            translationKey: "item:carrot"
+          },
+          type: "Chargeable",
+          textureInfo: "carrot",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          stackable: !0,
+          description: {
+            translationKey: "item:carrotDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 750,
+          rootMetaDesc: "Carrot|meta|charging1"
+        },
+        "Gold Carrot": {
+          displayName: {
+            translationKey: "item:goldCarrot"
+          },
+          type: "Chargeable",
+          textureInfo: "gold_carrot",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          stackable: !0,
+          description: {
+            translationKey: "item:goldCarrotDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 750,
+          rootMetaDesc: "Gold Carrot|meta|charging1"
+        },
+        "Raw Potato": {
+          displayName: {
+            translationKey: "item:rawPotato"
+          },
+          type: "Chargeable",
+          textureInfo: "raw_potato",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          eatable: !0,
+          chargeSound: "eat1",
+          eatHealAmt: 20,
+          description: {
+            translationKey: "item:rawFoodDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1050,
+          rootMetaDesc: "Raw Potato|meta|charging1"
+        },
+        "Baked Potato": {
+          displayName: {
+            translationKey: "item:bakedPotato"
+          },
+          type: "Chargeable",
+          textureInfo: "baked_potato",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          eatable: !0,
+          chargeSound: "eat1",
+          eatHealAmt: 20,
+          description: {
+            translationKey: "item:bakedPotatoDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1050,
+          rootMetaDesc: "Baked Potato|meta|charging1"
+        },
+        Beetroot: {
+          displayName: {
+            translationKey: "item:beetroot"
+          },
+          type: "Chargeable",
+          textureInfo: "beetroot",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          stackable: !0,
+          description: {
+            translationKey: "item:beetrootDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1250,
+          rootMetaDesc: "Beetroot|meta|charging1"
+        },
+        "Raw Porkchop": {
+          displayName: {
+            translationKey: "item:rawPorkchop"
+          },
+          type: "Chargeable",
+          textureInfo: "raw_porkchop",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          eatable: !0,
+          chargeSound: "eat1",
+          eatHealAmt: 25,
+          description: {
+            translationKey: "item:rawFoodDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 950,
+          rootMetaDesc: "Raw Porkchop|meta|charging1"
+        },
+        "Cooked Porkchop": {
+          displayName: {
+            translationKey: "item:cookedPorkchop"
+          },
+          type: "Chargeable",
+          textureInfo: "cooked_porkchop",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          eatable: !0,
+          chargeSound: "eat1",
+          eatHealAmt: 25,
+          description: {
+            translationKey: "item:foodDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 950,
+          rootMetaDesc: "Cooked Porkchop|meta|charging1"
+        },
+        "Raw Beef": {
+          displayName: {
+            translationKey: "item:rawBeef"
+          },
+          type: "Chargeable",
+          textureInfo: "raw_beef",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          eatable: !0,
+          chargeSound: "eat1",
+          eatHealAmt: 28,
+          description: {
+            translationKey: "item:rawFoodDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1200,
+          rootMetaDesc: "Raw Beef|meta|charging1"
+        },
+        Steak: {
+          displayName: {
+            translationKey: "item:steak"
+          },
+          type: "Chargeable",
+          textureInfo: "steak",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          eatable: !0,
+          chargeSound: "eat1",
+          eatHealAmt: 28,
+          description: {
+            translationKey: "item:foodDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1200,
+          rootMetaDesc: "Steak|meta|charging1"
+        },
+        "Raw Mutton": {
+          displayName: {
+            translationKey: "item:rawMutton"
+          },
+          type: "Chargeable",
+          textureInfo: "raw_mutton",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          eatable: !0,
+          chargeSound: "eat1",
+          eatHealAmt: 20,
+          description: {
+            translationKey: "item:rawFoodDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 800,
+          rootMetaDesc: "Raw Mutton|meta|charging1"
+        },
+        "Cooked Mutton": {
+          displayName: {
+            translationKey: "item:cookedMutton"
+          },
+          type: "Chargeable",
+          textureInfo: "cooked_mutton",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          eatable: !0,
+          chargeSound: "eat1",
+          eatHealAmt: 20,
+          description: {
+            translationKey: "item:foodDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 800,
+          rootMetaDesc: "Cooked Mutton|meta|charging1"
+        },
+        "Raw Venison": {
+          displayName: {
+            translationKey: "item:rawVenison"
+          },
+          type: "Chargeable",
+          textureInfo: "raw_venison",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          eatable: !0,
+          chargeSound: "eat1",
+          eatHealAmt: 16,
+          description: {
+            translationKey: "item:rawFoodDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 600,
+          rootMetaDesc: "Raw Venison|meta|charging1"
+        },
+        "Cooked Venison": {
+          displayName: {
+            translationKey: "item:cookedVenison"
+          },
+          type: "Chargeable",
+          textureInfo: "cooked_venison",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          eatable: !0,
+          chargeSound: "eat1",
+          eatHealAmt: 16,
+          description: {
+            translationKey: "item:foodDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 600,
+          rootMetaDesc: "Cooked Venison|meta|charging1"
+        },
+        "Rotten Flesh": {
+          displayName: {
+            translationKey: "item:rottenFlesh"
+          },
+          type: "Chargeable",
+          textureInfo: "rotten_flesh",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          eatable: !0,
+          chargeSound: "eat1",
+          eatHealAmt: 15,
+          description: {
+            translationKey: "item:rottenFleshDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 850,
+          rootMetaDesc: "Rotten Flesh|meta|charging1"
+        },
+        "Rotten Brain": {
+          displayName: {
+            translationKey: "item:rottenBrain"
+          },
+          type: "Chargeable",
+          textureInfo: "rotten_brain",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          eatable: !0,
+          chargeSound: "eat1",
+          description: {
+            translationKey: "item:rottenBrainDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 650,
+          rootMetaDesc: "Rotten Brain|meta|charging1"
+        },
+        Bone: {
+          displayName: {
+            translationKey: "item:bone"
+          },
+          type: "Item",
+          textureInfo: "bone",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Bone Meal": {
+          displayName: {
+            translationKey: "item:boneMeal"
+          },
+          type: "Item",
+          textureInfo: "bone_meal",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:boneMealDescription"
+          }
+        },
+        Leather: {
+          displayName: {
+            translationKey: "item:leather"
+          },
+          type: "Item",
+          textureInfo: "leather",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        Saddle: {
+          displayName: {
+            translationKey: "item:saddle"
+          },
+          type: "Item",
+          textureInfo: "saddle",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        "Spirit Saddle": {
+          displayName: {
+            translationKey: "item:spiritSaddle"
+          },
+          type: "Item",
+          textureInfo: "spirit_saddle",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:spiritSaddleDescription"
+          }
+        },
+        Fur: {
+          displayName: {
+            translationKey: "item:fur"
+          },
+          type: "Item",
+          textureInfo: "fur",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:furDescription"
+          }
+        },
+        "Golem Eye": {
+          displayName: {
+            translationKey: "item:golemEye"
+          },
+          type: "Item",
+          textureInfo: "golem_eye",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:golemEyeDescription"
+          }
+        },
+        "Knight Heart": {
+          displayName: {
+            translationKey: "item:knightHeart"
+          },
+          type: "Item",
+          textureInfo: "knight_heart",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:knightHeartDescription"
+          }
+        },
+        "Teleport Heart": {
+          displayName: "Teleport Heart",
+          type: "Item",
+          textureInfo: "teleport_heart",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: "The still-beating core of a Blink. Salvaged from a Warp Stalker."
+        },
+        "Frost Shard": {
+          displayName: "Frost Shard",
+          type: "Item",
+          textureInfo: "frost_shard",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: "A splinter of cryogenic shell that never melts. Salvaged from a Frost Revenant."
+        },
+        "Molten Cog": {
+          displayName: "Molten Cog",
+          type: "Item",
+          textureInfo: "molten_cog",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: "A gear from an overload mechanism, seized mid-cycle. Salvaged from a Magma Warden."
+        },
+        "Choir Bell": {
+          displayName: "Choir Bell",
+          type: "Item",
+          textureInfo: "choir_bell",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: "The toll that calls the dead. Salvaged from a Hollow Choir."
+        },
+        "Siege Core": {
+          displayName: "Siege Core",
+          type: "Item",
+          textureInfo: "siege_core",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: "The firing heart of a barrage. Salvaged from a Siege Engine."
+        },
+        Flywheel: {
+          displayName: "Flywheel",
+          type: "Item",
+          textureInfo: "flywheel",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: "The wheel a room-mill spins around. Salvaged from a Carousel."
+        },
+        "Radiant Spark": {
+          displayName: "Radiant Spark",
+          type: "Item",
+          textureInfo: "radiant_spark",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: "A mote of the failure state itself. Salvaged from Breach Zero."
+        },
+        "Brood Sac": {
+          displayName: "Brood Sac",
+          type: "Item",
+          textureInfo: "brood_sac",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: "A sac filled with an acidic bile. Still full. Salvaged from a Broodfather."
+        },
+        Bandolier: {
+          displayName: "Bandolier",
+          type: "Item",
+          textureInfo: "bandolier",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: "Her charge belt. Three still on it, and nobody has volunteered to count again. Salvaged from a Deadlock."
+        },
+        "Name Tag": {
+          displayName: {
+            translationKey: "item:nameTag"
+          },
+          type: "Item",
+          textureInfo: "name_tag",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:nameTagDescription"
+          }
+        },
+        Book: {
+          displayName: {
+            translationKey: "item:book"
+          },
+          type: "Item",
+          textureInfo: "book",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:bookDescription"
+          }
+        },
+        "Empty Bottle": {
+          displayName: {
+            translationKey: "item:emptyBottle"
+          },
+          type: "Item",
+          textureInfo: "empty_bottle",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:emptyBottleDescription"
+          }
+        },
+        "Water Bottle": {
+          displayName: {
+            translationKey: "item:waterBottle"
+          },
+          type: "Chargeable",
+          textureInfo: "water_bottle",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:waterBottleDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Water Bottle|meta|charging1"
+        },
+        "Slowness Potion": {
+          displayName: {
+            translationKey: "item:slownessPotion"
+          },
+          type: "Chargeable",
+          textureInfo: "slowness_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          stackable: !1,
+          afterEatenItem: "Empty Bottle",
+          description: {
+            translationKey: "item:slownessPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Slowness Potion|meta|charging1"
+        },
+        "Slowness Potion II": {
+          displayName: {
+            translationKey: "item:slownessPotionII"
+          },
+          type: "Chargeable",
+          textureInfo: "slowness_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Slowness Potion",
+          eatable: !0,
+          chargeSound: "drink",
+          stackable: !1,
+          afterEatenItem: "Empty Bottle",
+          description: {
+            translationKey: "item:slownessPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Slowness Potion II|meta|charging1"
+        },
+        "Splash Slowness Potion": {
+          displayName: {
+            translationKey: "item:splashSlownessPotion"
+          },
+          type: "Item",
+          textureInfo: "splash_slowness_potion",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:splashSlownessPotionDescription"
+          },
+          rootMetaDesc: "Splash Slowness Potion|meta|charging1"
+        },
+        "Splash Slowness Potion II": {
+          displayName: {
+            translationKey: "item:splashSlownessPotionII"
+          },
+          type: "Item",
+          textureInfo: "splash_slowness_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Splash Slowness Potion",
+          stackable: !1,
+          description: {
+            translationKey: "item:splashSlownessPotionDescription"
+          },
+          rootMetaDesc: "Splash Slowness Potion II|meta|charging1"
+        },
+        "Arrow of Slowness": {
+          displayName: {
+            translationKey: "item:arrowOfSlowness"
+          },
+          type: "Item",
+          textureInfo: "slowness_arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "Poison Potion": {
+          displayName: {
+            translationKey: "item:poisonPotion"
+          },
+          type: "Chargeable",
+          textureInfo: "poison",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          stackable: !1,
+          afterEatenItem: "Empty Bottle",
+          description: {
+            translationKey: "item:poisonPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Poison Potion|meta|charging1"
+        },
+        "Poison Potion II": {
+          displayName: {
+            translationKey: "item:poisonPotionII"
+          },
+          type: "Chargeable",
+          textureInfo: "poison",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Poison Potion",
+          eatable: !0,
+          chargeSound: "drink",
+          stackable: !1,
+          afterEatenItem: "Empty Bottle",
+          description: {
+            translationKey: "item:poisonPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Poison Potion II|meta|charging1"
+        },
+        "Splash Poison Potion": {
+          displayName: {
+            translationKey: "item:splashPoisonPotion"
+          },
+          type: "Item",
+          textureInfo: "splash_poison",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:splashPoisonPotionDescription"
+          },
+          rootMetaDesc: "Splash Poison Potion|meta|charging1"
+        },
+        "Splash Poison Potion II": {
+          displayName: {
+            translationKey: "item:splashPoisonPotionII"
+          },
+          type: "Item",
+          textureInfo: "splash_poison",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Splash Poison Potion",
+          stackable: !1,
+          description: {
+            translationKey: "item:splashPoisonPotionDescription"
+          },
+          rootMetaDesc: "Splash Poison Potion II|meta|charging1"
+        },
+        "Arrow of Poison": {
+          displayName: {
+            translationKey: "item:arrowOfPoison"
+          },
+          type: "Item",
+          textureInfo: "poison_arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "Weakness Potion": {
+          displayName: {
+            translationKey: "item:weaknessPotion"
+          },
+          type: "Chargeable",
+          textureInfo: "weakness_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          stackable: !1,
+          afterEatenItem: "Empty Bottle",
+          description: {
+            translationKey: "item:weaknessPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Weakness Potion|meta|charging1"
+        },
+        "Weakness Potion II": {
+          displayName: {
+            translationKey: "item:weaknessPotionII"
+          },
+          type: "Chargeable",
+          textureInfo: "weakness_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Weakness Potion",
+          eatable: !0,
+          chargeSound: "drink",
+          stackable: !1,
+          afterEatenItem: "Empty Bottle",
+          description: {
+            translationKey: "item:weaknessPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Weakness Potion II|meta|charging1"
+        },
+        "Splash Weakness Potion": {
+          displayName: {
+            translationKey: "item:splashWeaknessPotion"
+          },
+          type: "Item",
+          textureInfo: "splash_weakness_potion",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:splashWeaknessPotionDescription"
+          }
+        },
+        "Splash Weakness Potion II": {
+          displayName: {
+            translationKey: "item:splashWeaknessPotionII"
+          },
+          type: "Item",
+          textureInfo: "splash_weakness_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Splash Weakness Potion",
+          stackable: !1,
+          description: {
+            translationKey: "item:splashWeaknessPotionDescription"
+          }
+        },
+        "Arrow of Weakness": {
+          displayName: {
+            translationKey: "item:arrowOfWeakness"
+          },
+          type: "Item",
+          textureInfo: "weakness_arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "Instant Damage Potion": {
+          displayName: {
+            translationKey: "item:instantDamagePotion"
+          },
+          type: "Chargeable",
+          textureInfo: "instant_damage_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          stackable: !1,
+          afterEatenItem: "Empty Bottle",
+          description: {
+            translationKey: "item:instantDamagePotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Instant Damage Potion|meta|charging1"
+        },
+        "Instant Damage Potion II": {
+          displayName: {
+            translationKey: "item:instantDamagePotionII"
+          },
+          type: "Chargeable",
+          textureInfo: "instant_damage_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Instant Damage Potion",
+          eatable: !0,
+          chargeSound: "drink",
+          stackable: !1,
+          afterEatenItem: "Empty Bottle",
+          description: {
+            translationKey: "item:instantDamagePotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Instant Damage Potion II|meta|charging1"
+        },
+        "Splash Instant Damage Potion": {
+          displayName: {
+            translationKey: "item:splashInstantDamagePotion"
+          },
+          type: "Item",
+          textureInfo: "splash_instant_damage_potion",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:splashInstantDamagePotionDescription"
+          }
+        },
+        "Splash Instant Damage Potion II": {
+          displayName: {
+            translationKey: "item:splashInstantDamagePotionII"
+          },
+          type: "Item",
+          textureInfo: "splash_instant_damage_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Splash Instant Damage Potion",
+          stackable: !1,
+          description: {
+            translationKey: "item:splashInstantDamagePotionDescription"
+          }
+        },
+        "Arrow of Instant Damage": {
+          displayName: {
+            translationKey: "item:arrowOfInstantDamage"
+          },
+          type: "Item",
+          textureInfo: "instant_damage_arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "Milk Potion": {
+          displayName: {
+            translationKey: "item:milkPotion"
+          },
+          type: "Chargeable",
+          textureInfo: "milk_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          stackable: !1,
+          afterEatenItem: "Empty Bottle",
+          description: {
+            translationKey: "item:milkPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Milk Potion|meta|charging1"
+        },
+        "Splash Milk Potion": {
+          displayName: {
+            translationKey: "item:splashMilkPotion"
+          },
+          type: "Item",
+          textureInfo: "splash_milk_potion",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:milkPotionDescription"
+          }
+        },
+        "Arrow of Milk": {
+          displayName: {
+            translationKey: "item:arrowOfMilk"
+          },
+          type: "Item",
+          textureInfo: "milk_arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "Speed Potion": {
+          displayName: {
+            translationKey: "item:speedPotion"
+          },
+          type: "Chargeable",
+          textureInfo: "speed_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          stackable: !1,
+          afterEatenItem: "Empty Bottle",
+          description: {
+            translationKey: "item:speedPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Speed Potion|meta|charging1"
+        },
+        "Speed Potion II": {
+          displayName: {
+            translationKey: "item:speedPotionII"
+          },
+          type: "Chargeable",
+          textureInfo: "speed_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Speed Potion",
+          eatable: !0,
+          chargeSound: "drink",
+          stackable: !1,
+          afterEatenItem: "Empty Bottle",
+          description: {
+            translationKey: "item:speedPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Speed Potion II|meta|charging1"
+        },
+        "Splash Speed Potion": {
+          displayName: {
+            translationKey: "item:splashSpeedPotion"
+          },
+          type: "Item",
+          textureInfo: "splash_speed_potion",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:splashSpeedPotionDescription"
+          },
+          rootMetaDesc: "Splash Speed Potion|meta|charging1"
+        },
+        "Splash Speed Potion II": {
+          displayName: {
+            translationKey: "item:splashSpeedPotionII"
+          },
+          type: "Item",
+          textureInfo: "splash_speed_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Splash Speed Potion",
+          stackable: !1,
+          description: {
+            translationKey: "item:splashSpeedPotionDescription"
+          }
+        },
+        "Arrow of Speed": {
+          displayName: {
+            translationKey: "item:arrowOfSpeed"
+          },
+          type: "Item",
+          textureInfo: "speed_arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "Defense Potion": {
+          displayName: {
+            translationKey: "item:defensePotion"
+          },
+          type: "Chargeable",
+          textureInfo: "defense_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:defensePotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Defense Potion|meta|charging1"
+        },
+        "Defense Potion II": {
+          displayName: {
+            translationKey: "item:defensePotionII"
+          },
+          type: "Chargeable",
+          textureInfo: "defense_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Defense Potion",
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:defensePotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Defense Potion II|meta|charging1"
+        },
+        "Splash Defense Potion": {
+          displayName: {
+            translationKey: "item:splashDefensePotion"
+          },
+          type: "Item",
+          textureInfo: "splash_defense_potion",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:splashDefensePotionDescription"
+          }
+        },
+        "Splash Defense Potion II": {
+          displayName: {
+            translationKey: "item:splashDefensePotionII"
+          },
+          type: "Item",
+          textureInfo: "splash_defense_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Splash Defense Potion",
+          stackable: !1,
+          description: {
+            translationKey: "item:splashDefensePotionDescription"
+          }
+        },
+        "Arrow of Defense": {
+          displayName: {
+            translationKey: "item:arrowOfDefense"
+          },
+          type: "Item",
+          textureInfo: "defense_arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "Strength Potion": {
+          displayName: {
+            translationKey: "item:strengthPotion"
+          },
+          type: "Chargeable",
+          textureInfo: "strength_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:strengthPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Strength Potion|meta|charging1"
+        },
+        "Strength Potion II": {
+          displayName: {
+            translationKey: "item:strengthPotionII"
+          },
+          type: "Chargeable",
+          textureInfo: "strength_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Strength Potion",
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:strengthPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Strength Potion II|meta|charging1"
+        },
+        "Splash Strength Potion": {
+          displayName: {
+            translationKey: "item:splashStrengthPotion"
+          },
+          type: "Item",
+          textureInfo: "splash_strength_potion",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:splashStrengthPotionDescription"
+          }
+        },
+        "Splash Strength Potion II": {
+          displayName: {
+            translationKey: "item:splashStrengthPotionII"
+          },
+          type: "Item",
+          textureInfo: "splash_strength_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Splash Strength Potion",
+          stackable: !1,
+          description: {
+            translationKey: "item:splashStrengthPotionDescription"
+          }
+        },
+        "Arrow of Strength": {
+          displayName: {
+            translationKey: "item:arrowOfStrength"
+          },
+          type: "Item",
+          textureInfo: "strength_arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "Invisibility Potion": {
+          displayName: {
+            translationKey: "item:invisibilityPotion"
+          },
+          type: "Chargeable",
+          textureInfo: "invisibility_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:invisibilityPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Invisibility Potion|meta|charging1"
+        },
+        "Splash Invisibility Potion": {
+          displayName: {
+            translationKey: "item:splashInvisibilityPotion"
+          },
+          type: "Item",
+          textureInfo: "splash_invisibility_potion",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:splashInvisibilityPotionDescription"
+          }
+        },
+        "Arrow of Invisibility": {
+          displayName: {
+            translationKey: "item:arrowOfInvisibility"
+          },
+          type: "Item",
+          textureInfo: "invisibility_arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "Jump Potion": {
+          displayName: {
+            translationKey: "item:jumpPotion"
+          },
+          type: "Chargeable",
+          textureInfo: "jump_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:jumpPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1e3,
+          rootMetaDesc: "Jump Potion|meta|charging1"
+        },
+        "Jump Potion II": {
+          displayName: {
+            translationKey: "item:jumpPotionII"
+          },
+          type: "Chargeable",
+          textureInfo: "jump_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Jump Potion",
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:jumpPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1e3,
+          rootMetaDesc: "Jump Potion II|meta|charging1"
+        },
+        "Splash Jump Potion": {
+          displayName: {
+            translationKey: "item:splashJumpPotion"
+          },
+          type: "Item",
+          textureInfo: "splash_jump_potion",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:splashJumpPotionDescription"
+          }
+        },
+        "Splash Jump Potion II": {
+          displayName: {
+            translationKey: "item:splashJumpPotionII"
+          },
+          type: "Item",
+          textureInfo: "splash_jump_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Splash Jump Potion",
+          stackable: !1,
+          description: {
+            translationKey: "item:splashJumpPotionDescription"
+          }
+        },
+        "Arrow of Jumping": {
+          displayName: {
+            translationKey: "item:arrowOfJumping"
+          },
+          type: "Item",
+          textureInfo: "jump_arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "Knockback Potion": {
+          displayName: {
+            translationKey: "item:knockbackPotion"
+          },
+          type: "Chargeable",
+          textureInfo: "knockback_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          stackable: !1,
+          afterEatenItem: "Empty Bottle",
+          description: {
+            translationKey: "item:knockbackPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Knockback Potion|meta|charging1"
+        },
+        "Splash Knockback Potion": {
+          displayName: {
+            translationKey: "item:splashKnockbackPotion"
+          },
+          type: "Item",
+          textureInfo: "splash_knockback_potion",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:splashKnockbackPotionDescription"
+          }
+        },
+        "Splash Knockback Potion II": {
+          displayName: {
+            translationKey: "item:splashKnockbackPotionII"
+          },
+          type: "Item",
+          textureInfo: "splash_knockback_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Splash Knockback Potion",
+          stackable: !1,
+          description: {
+            translationKey: "item:splashKnockbackPotionDescription"
+          }
+        },
+        "Arrow of Knockback": {
+          displayName: {
+            translationKey: "item:arrowOfKnockback"
+          },
+          type: "Item",
+          textureInfo: "knockback_arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "Regeneration Potion": {
+          displayName: {
+            translationKey: "item:regenerationPotion"
+          },
+          type: "Chargeable",
+          textureInfo: "regen_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:regenerationPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Regeneration Potion|meta|charging1"
+        },
+        "Regeneration Potion II": {
+          displayName: {
+            translationKey: "item:regenerationPotionII"
+          },
+          type: "Chargeable",
+          textureInfo: "regen_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Regeneration Potion",
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:regenerationPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Regeneration Potion II|meta|charging1"
+        },
+        "Splash Regeneration Potion": {
+          displayName: {
+            translationKey: "item:splashRegenerationPotion"
+          },
+          type: "Item",
+          textureInfo: "splash_regen_potion",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:splashRegenerationPotionDescription"
+          }
+        },
+        "Splash Regeneration Potion II": {
+          displayName: {
+            translationKey: "item:splashRegenerationPotionII"
+          },
+          type: "Item",
+          textureInfo: "splash_regen_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Splash Regeneration Potion",
+          stackable: !1,
+          description: {
+            translationKey: "item:splashRegenerationPotionDescription"
+          }
+        },
+        "Arrow of Regeneration": {
+          displayName: {
+            translationKey: "item:arrowOfRegeneration"
+          },
+          type: "Item",
+          textureInfo: "regen_arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "Instant Healing Potion": {
+          displayName: {
+            translationKey: "item:instantHealingPotion"
+          },
+          type: "Chargeable",
+          textureInfo: "heal_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:instantHealingPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Instant Healing Potion|meta|charging1"
+        },
+        "Instant Healing Potion II": {
+          displayName: {
+            translationKey: "item:instantHealingPotionII"
+          },
+          type: "Chargeable",
+          textureInfo: "heal_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Instant Healing Potion",
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:instantHealingPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Instant Healing Potion II|meta|charging1"
+        },
+        "Splash Instant Healing Potion": {
+          displayName: {
+            translationKey: "item:splashInstantHealingPotion"
+          },
+          type: "Item",
+          textureInfo: "splash_heal_potion",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:splashInstantHealingPotionDescription"
+          }
+        },
+        "Splash Instant Healing Potion II": {
+          displayName: {
+            translationKey: "item:splashInstantHealingPotionII"
+          },
+          type: "Item",
+          textureInfo: "splash_heal_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Splash Instant Healing Potion",
+          stackable: !1,
+          description: {
+            translationKey: "item:splashInstantHealingPotionDescription"
+          }
+        },
+        "Arrow of Instant Healing": {
+          displayName: {
+            translationKey: "item:arrowOfInstantHealing"
+          },
+          type: "Item",
+          textureInfo: "heal_arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "Haste Potion": {
+          displayName: {
+            translationKey: "item:hastePotion"
+          },
+          type: "Chargeable",
+          textureInfo: "haste_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:hastePotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Haste Potion|meta|charging1"
+        },
+        "Haste Potion II": {
+          displayName: {
+            translationKey: "item:hastePotionII"
+          },
+          type: "Chargeable",
+          textureInfo: "haste_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Haste Potion",
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:hastePotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Haste Potion II|meta|charging1"
+        },
+        "Splash Haste Potion": {
+          displayName: {
+            translationKey: "item:splashHastePotion"
+          },
+          type: "Item",
+          textureInfo: "splash_haste_potion",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:splashHastePotionDescription"
+          }
+        },
+        "Splash Haste Potion II": {
+          displayName: {
+            translationKey: "item:splashHastePotionII"
+          },
+          type: "Item",
+          textureInfo: "splash_haste_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Splash Haste Potion",
+          stackable: !1,
+          description: {
+            translationKey: "item:splashHastePotionDescription"
+          }
+        },
+        "Arrow of Haste": {
+          displayName: {
+            translationKey: "item:arrowOfHaste"
+          },
+          type: "Item",
+          textureInfo: "haste_arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "Shield Potion": {
+          displayName: {
+            translationKey: "item:shieldPotion"
+          },
+          type: "Chargeable",
+          textureInfo: "shield_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:shieldPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Shield Potion|meta|charging1"
+        },
+        "Shield Potion II": {
+          displayName: {
+            translationKey: "item:shieldPotionII"
+          },
+          type: "Chargeable",
+          textureInfo: "shield_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Shield Potion",
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:shieldPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Shield Potion II|meta|charging1"
+        },
+        "Splash Shield Potion": {
+          displayName: {
+            translationKey: "item:splashShieldPotion"
+          },
+          type: "Item",
+          textureInfo: "splash_shield_potion",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:splashShieldPotionDescription"
+          }
+        },
+        "Splash Shield Potion II": {
+          displayName: {
+            translationKey: "item:splashShieldPotionII"
+          },
+          type: "Item",
+          textureInfo: "splash_shield_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Splash Shield Potion",
+          stackable: !1,
+          description: {
+            translationKey: "item:splashShieldPotionDescription"
+          }
+        },
+        "Arrow of Shield": {
+          displayName: {
+            translationKey: "item:arrowOfShield"
+          },
+          type: "Item",
+          textureInfo: "shield_arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "Double Jump Potion": {
+          displayName: {
+            translationKey: "item:doubleJumpPotion"
+          },
+          type: "Chargeable",
+          textureInfo: "double_jump_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:doubleJumpPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Double Jump Potion|meta|charging1"
+        },
+        "Splash Double Jump Potion": {
+          displayName: {
+            translationKey: "item:splashDoubleJumpPotion"
+          },
+          type: "Item",
+          textureInfo: "splash_double_jump_potion",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:splashDoubleJumpPotionDescription"
+          }
+        },
+        "Arrow of Double Jump": {
+          displayName: {
+            translationKey: "item:arrowOfDoubleJump"
+          },
+          type: "Item",
+          textureInfo: "double_jump_arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "Heat Resistance Potion": {
+          displayName: {
+            translationKey: "item:heatResistancePotion"
+          },
+          type: "Chargeable",
+          textureInfo: "heat_resistance_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:heatResistancePotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Heat Resistance Potion|meta|charging1"
+        },
+        "Splash Heat Resistance Potion": {
+          displayName: {
+            translationKey: "item:splashHeatResistancePotion"
+          },
+          type: "Item",
+          textureInfo: "splash_heat_resistance_potion",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:splashHeatResistancePotionDescription"
+          }
+        },
+        "Arrow of Heat Resistance": {
+          displayName: {
+            translationKey: "item:arrowOfHeatResistance"
+          },
+          type: "Item",
+          textureInfo: "heat_resistance_arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "X-Ray Vision Potion": {
+          displayName: {
+            translationKey: "item:xRayVisionPotion"
+          },
+          type: "Chargeable",
+          textureInfo: "x_ray_vision_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:xRayVisionPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "X-Ray Vision Potion|meta|charging1"
+        },
+        "Splash X-Ray Vision Potion": {
+          displayName: {
+            translationKey: "item:splashXRayVisionPotion"
+          },
+          type: "Item",
+          textureInfo: "splash_x_ray_vision_potion",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:splashXRayVisionPotionDescription"
+          }
+        },
+        "Arrow of X-Ray Vision": {
+          displayName: {
+            translationKey: "item:arrowOfXRayVision"
+          },
+          type: "Item",
+          textureInfo: "x_ray_vision_arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "Mining Yield Potion": {
+          displayName: {
+            translationKey: "item:miningYieldPotion"
+          },
+          type: "Chargeable",
+          textureInfo: "mining_yield_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:miningYieldPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Mining Yield Potion|meta|charging1"
+        },
+        "Mining Yield Potion II": {
+          displayName: {
+            translationKey: "item:miningYieldPotionII"
+          },
+          type: "Chargeable",
+          textureInfo: "mining_yield_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Mining Yield Potion",
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:miningYieldPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Mining Yield Potion II|meta|charging1"
+        },
+        "Splash Mining Yield Potion": {
+          displayName: {
+            translationKey: "item:splashMiningYieldPotion"
+          },
+          type: "Item",
+          textureInfo: "splash_mining_yield_potion",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:splashMiningYieldPotionDescription"
+          }
+        },
+        "Splash Mining Yield Potion II": {
+          displayName: {
+            translationKey: "item:splashMiningYieldPotionII"
+          },
+          type: "Item",
+          textureInfo: "splash_mining_yield_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Splash Mining Yield Potion",
+          stackable: !1,
+          description: {
+            translationKey: "item:splashMiningYieldPotionDescription"
+          }
+        },
+        "Arrow of Mining Yield": {
+          displayName: {
+            translationKey: "item:arrowOfMiningYield"
+          },
+          type: "Item",
+          textureInfo: "mining_yield_arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "Brain Rot Potion": {
+          displayName: {
+            translationKey: "item:brainRotPotion"
+          },
+          type: "Chargeable",
+          textureInfo: "brain_rot_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:brainRotPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Brain Rot Potion|meta|charging1"
+        },
+        "Splash Brain Rot Potion": {
+          displayName: {
+            translationKey: "item:splashBrainRotPotion"
+          },
+          type: "Item",
+          textureInfo: "splash_brain_rot_potion",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:splashBrainRotPotionDescription"
+          }
+        },
+        "Arrow of Brain Rot": {
+          displayName: {
+            translationKey: "item:arrowOfBrainRot"
+          },
+          type: "Item",
+          textureInfo: "brain_rot_arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "Chaos Potion": {
+          displayName: {
+            translationKey: "item:chaosPotion"
+          },
+          type: "Chargeable",
+          textureInfo: "chaos_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:chaosPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 600,
+          rootMetaDesc: "Chaos Potion|meta|charging1"
+        },
+        "Teleportation Potion": {
+          displayName: {
+            translationKey: "item:teleportationPotion"
+          },
+          type: "Chargeable",
+          textureInfo: "teleportation_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:teleportationPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 600,
+          rootMetaDesc: "Teleportation Potion|meta|charging1"
+        },
+        Ammo: {
+          displayName: {
+            translationKey: "item:ammo"
+          },
+          type: "Item",
+          textureInfo: "ammo",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        ...QY("AK-47", {
+          heldItemScale: 2
+        }),
+        ...QY("M16", {
+          heldItemScale: 2
+        }),
+        ...QY("MP40", {
+          heldItemScale: 2.5
+        }),
+        ...QY("TAR-21", {
+          heldItemScale: 2.5
+        }),
+        ...QY("M1911", {
+          heldItemScale: 2
+        }),
+        ...QY("One Shot Pistol", {
+          heldItemScale: 2,
+          heldItemGlb: "M1911",
+          textureInfo: "M1911"
+        }),
+        ...QY("Double Barrel", {
+          heldItemScale: 2.5,
+          textureInfo: "Double-barreled"
+        }),
+        ...QY("AWP", {
+          heldItemScale: 3
+        }),
+        ...QY("Deagle", {
+          heldItemScale: 2
+        }),
+        ...QY("Striker-12", {
+          heldItemScale: 2.5
+        }),
+        ...QY("VSR", {
+          heldItemScale: 2.5
+        }),
+        ...QY("DMR", {
+          heldItemScale: 2.5
+        }),
+        ...QY("Minigun", {
+          heldItemScale: 3
+        }),
+        ...QY("FMR", {
+          heldItemScale: 2
+        }),
+        ...QY("SKAR", {
+          heldItemScale: 2.5
+        }),
+        ...QY("Block-19", {
+          heldItemScale: 2.5
+        }),
+        ...QY("Mini Izu", {
+          heldItemScale: 2
+        }),
+        ...QY("GPMG", {
+          heldItemScale: 2.8
+        }),
+        "Gold Coin": {
+          displayName: {
+            translationKey: "item:goldCoin"
+          },
+          type: "Item",
+          textureInfo: "gold_coin",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        Updraft: {
+          displayName: {
+            translationKey: "item:updraft"
+          },
+          type: "FullAuto",
+          textureInfo: "updraft",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:updraftDescription"
+          },
+          fireInterval: 515
+        },
+        Snowdash: {
+          displayName: {
+            translationKey: "item:snowdash"
+          },
+          type: "FullAuto",
+          textureInfo: "snowdash",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:snowdashDescription"
+          },
+          fireInterval: 515
+        },
+        "Floor Creator": {
+          displayName: {
+            translationKey: "item:floorCreator"
+          },
+          type: "Item",
+          textureInfo: "floor_creator",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:floorCreatorDescription"
+          }
+        },
+        "Moonstone Remote Explosive": {
+          displayName: {
+            translationKey: "item:moonstoneRemoteExplosive"
+          },
+          type: "Item",
+          textureInfo: "moonstone_remote_explosive",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:moonstoneRemoteExplosiveDescription"
+          },
+          heldItemGlb: "Moonstone Remote"
+        },
+        "Moonstone Remote": {
+          displayName: {
+            translationKey: "item:moonstoneRemote"
+          },
+          type: "Item",
+          textureInfo: "moonstone_remote",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:moonstoneRemoteDescription"
+          }
+        },
+        "Ice Bridge": {
+          displayName: {
+            translationKey: "item:iceBridge"
+          },
+          type: "Item",
+          textureInfo: "ice_bridge",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:iceBridgeDescription"
+          },
+          bridgeLength: mY
+        },
+        "Maple Planks Bridge": {
+          displayName: {
+            translationKey: "item:maplePlanksBridge"
+          },
+          type: "Item",
+          textureInfo: "maple_planks_bridge",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:maplePlanksBridgeDescription"
+          },
+          bridgeLength: mY
+        },
+        "Messy Stone Bridge": {
+          displayName: {
+            translationKey: "item:messyStoneBridge"
+          },
+          type: "Item",
+          textureInfo: "messy_stone_bridge",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:messyStoneBridgeDescription"
+          },
+          bridgeLength: mY
+        },
+        ...(0, OY.H)((YY => `${YY} Balloon`), {
+          displayName: YY => ({
+            translationKey: `item:${(0,FY.te)(YY)}Balloon`
+          }),
+          textureInfo: YY => `${(0,FY.xe)(YY)}_balloon`,
+          heldItemGlb: YY => `${YY} Balloon Item`,
+          type: "Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:balloonDescription"
+          }
+        }),
+        ...(0, OY.H)((YY => `INTERNAL_MESH_${YY} Balloon`), {
+          textureInfo: YY => `${(0,FY.xe)(YY)}_balloon`,
+          heldItemGlb: YY => `${YY} Balloon`,
+          type: "Item",
+          weight: 1,
+          heldItemScale: 4,
+          stackable: !1
+        }),
+        ...(0, OY.H)((YY => `${YY} Popup Tower`), {
+          displayName: YY => ({
+            translationKey: `item:${(0,FY.te)(YY)}PopupTower`
+          }),
+          textureInfo: YY => `${(0,FY.xe)(YY)}_popup_tower`,
+          type: "Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:popupTowerDescription"
+          }
+        }),
+        ...(0, OY.H)((YY => `${YY} Paintball Gun`), {
+          displayName: YY => ({
+            translationKey: `item:${(0,FY.te)(YY)}PaintballGun`
+          }),
+          textureInfo: YY => `${(0,FY.xe)(YY)}_paintball_gun`,
+          type: "FullAuto",
+          weight: 1,
+          heldItemScale: .5,
+          stackable: !1,
+          description: {
+            translationKey: "item:paintballGunDescription"
+          },
+          fireInterval: 167,
+          secondaryDamage: 100,
+          holdAsAiming: !0,
+          hideAimingUI: !0
+        }),
+        ...(0, OY.H)((YY => `${YY} Paintball`), {
+          displayName: YY => ({
+            translationKey: `item:${(0,FY.te)(YY)}Paintball`
+          }),
+          textureInfo: YY => `${(0,FY.xe)(YY)}_paintball`,
+          type: "Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:paintballDescription"
+          }
+        }),
+        ...(0, OY.H)((YY => `${YY} Heavy Paintball Gun`), {
+          displayName: YY => ({
+            translationKey: `item:${(0,FY.te)(YY)}HeavyPaintballGun`
+          }),
+          textureInfo: YY => `${(0,FY.xe)(YY)}_heavy_paintball_gun`,
+          type: "FullAuto",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:paintballGunDescription"
+          },
+          fireInterval: 1015,
+          secondaryDamage: 250,
+          holdAsAiming: !0,
+          hideAimingUI: !0
+        }),
+        ...(0, OY.H)((YY => `${YY} Paintball Explosive Item`), {
+          displayName: YY => ({
+            translationKey: `item:${(0,FY.te)(YY)}PaintballExplosive`
+          }),
+          textureInfo: YY => `explosive_paint_${(0,FY.xe)(YY)}`,
+          type: "Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:paintballExplosiveDescription"
+          }
+        }),
+        ...(0, OY.H)((YY => `${YY} Sticky Paintball Explosive Item`), {
+          displayName: YY => ({
+            translationKey: `item:${(0,FY.te)(YY)}StickyPaintballExplosive`
+          }),
+          textureInfo: YY => `explosive_paint_sticky_${(0,FY.xe)(YY)}`,
+          type: "Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:stickyPaintballExplosiveDescription"
+          }
+        }),
+        ...(0, OY.H)((YY => `${YY} Seeking Paintball Explosive Item`), {
+          displayName: YY => ({
+            translationKey: `item:${(0,FY.te)(YY)}SeekingPaintballExplosive`
+          }),
+          textureInfo: YY => `explosive_paint_seeking_${(0,FY.xe)(YY)}`,
+          type: "Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:seekingPaintballExplosiveDescription"
+          }
+        }),
+        ...(0, OY.H)((YY => `${YY} Quick Paintball Explosive Item`), {
+          displayName: YY => ({
+            translationKey: `item:${(0,FY.te)(YY)}QuickPaintballExplosive`
+          }),
+          textureInfo: YY => `explosive_paint_quick_${(0,FY.xe)(YY)}`,
+          type: "Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:quickPaintballExplosiveDescription"
+          }
+        }),
+        ... function(YY, rY) {
+          const DY = {},
+            FY = (0, OY.H)(YY, rY);
+          for (const AY in FY) Object.assign(DY, vY(AY, FY[AY]));
+          return DY
+        }((YY => `${YY} Paint Bow`), {
+          displayName: YY => ({
+            translationKey: `item:${(0,FY.te)(YY)}PaintBow`
+          }),
+          textureName: YY => `${(0,FY.xe)(YY)}_paint_bow`,
+          rootMetaDesc: YY => `${YY} Paint Bow|meta|charging1`,
+          type: "Chargeable",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1,
+          chargeStages: 4,
+          chargeTime: 1500,
+          holdAsAiming: !0,
+          description: {
+            translationKey: "item:paintBowDescription"
+          },
+          minChargeStateToUse: 0
+        }),
+        ...Object.fromEntries(gY.s.map((YY => {
+          const rY = (0, FY.te)(YY),
+            DY = (0, FY.xe)(YY);
+          return [(0, FY.Vb)(YY), {
+            displayName: {
+              translationKey: `item:${rY}SpawnOrb`
+            },
+            type: "Item",
+            textureInfo: `${DY}_spawn_orb`,
+            weight: 1,
+            heldItemScale: 1,
+            stackable: !0,
+            description: {
+              translationKey: `item:${rY}SpawnOrbDescription`,
+              params: {
+                mob: YY
+              }
+            }
+          }]
+        }))),
+        "Mob Catcher": {
+          displayName: {
+            translationKey: "item:mobCatcher"
+          },
+          type: "Item",
+          textureInfo: "mob_catcher",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:mobCatcherDescription"
+          }
+        },
+        ...Object.fromEntries(gY.k.flatMap((YY => {
+          const rY = (0, FY.xe)(YY);
+          return gY.o[YY].map((DY => {
+            var AY;
+            const IY = "default" !== DY && (null === (AY = yY[YY]) || void 0 === AY ? void 0 : AY.includes(DY)),
+              RY = IY ? {
+                heldItemGlb: (0, FY.Db)(YY, "default")
+              } : {};
+            return [(0, FY.Db)(YY, DY), {
+              type: "Item",
+              textureInfo: `caught_${rY}_${IY?"default":DY}`,
+              weight: 1,
+              heldItemScale: 1,
+              stackable: !1,
+              ...RY
+            }]
+          }))
+        }))),
+        ...vY("Timed Spike Bomb", {
+          displayName: {
+            translationKey: "item:timedSpikeBomb"
+          },
+          type: "Chargeable",
+          textureName: "timed_spike_bomb",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:timedSpikeBombDescription"
+          },
+          chargeStages: 4,
+          chargeTime: 2e3,
+          chargeSound: "fallsmall",
+          rootMetaDesc: "Timed Spike Bomb|meta|charging1"
+        }),
+        "Toxin Ball": {
+          displayName: {
+            translationKey: "item:toxinBall"
+          },
+          type: "Item",
+          textureInfo: "toxin_ball",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:toxinBallDescription"
+          },
+          secondaryDamage: 13
+        },
+        "Aura XP Fragment": {
+          displayName: {
+            translationKey: "item:auraXpFragment"
+          },
+          type: "Chargeable",
+          textureInfo: "aura_xp_fragment",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          eatable: !0,
+          chargeSound: "eat1",
+          description: {
+            translationKey: "item:auraXpFragmentDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 500,
+          rootMetaDesc: "Aura XP Fragment|meta|charging1"
+        },
+        "Aura XP Orb": {
+          displayName: {
+            translationKey: "item:auraXpOrb"
+          },
+          type: "Chargeable",
+          textureInfo: "aura_xp_orb",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          eatable: !0,
+          chargeSound: "eat1",
+          description: {
+            translationKey: "item:auraXpOrbDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1250,
+          rootMetaDesc: "Aura XP Orb|meta|charging1"
+        },
+        "Aura XP Potion": {
+          displayName: {
+            translationKey: "item:auraXpPotion"
+          },
+          type: "Chargeable",
+          textureInfo: "aura_xp_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          stackable: !1,
+          afterEatenItem: "Empty Bottle",
+          description: {
+            translationKey: "item:auraXpPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Aura XP Potion|meta|charging1"
+        },
+        "Aura XP Potion II": {
+          displayName: {
+            translationKey: "item:auraXpPotionII"
+          },
+          type: "Chargeable",
+          textureInfo: "aura_xp_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          stackable: !1,
+          afterEatenItem: "Empty Bottle",
+          description: {
+            translationKey: "item:auraXpPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Aura XP Potion II|meta|charging1"
+        },
+        "Splash Aura XP Potion": {
+          displayName: {
+            translationKey: "item:splashAuraXpPotion"
+          },
+          type: "Item",
+          textureInfo: "splash_aura_xp_potion",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:splashAuraXpPotionDescription"
+          }
+        },
+        "Splash Aura XP Potion II": {
+          displayName: {
+            translationKey: "item:splashAuraXpPotionII"
+          },
+          type: "Item",
+          textureInfo: "splash_aura_xp_potion",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:splashAuraXpPotionDescription"
+          }
+        },
+        "Arrow of Aura XP": {
+          displayName: {
+            translationKey: "item:arrowOfAuraXp"
+          },
+          type: "Item",
+          textureInfo: "aura_xp_arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        Firecracker: {
+          displayName: {
+            translationKey: "item:firecracker"
+          },
+          type: "Item",
+          textureInfo: "firecracker",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:firecrackerDescription"
+          },
+          secondaryDamage: 15
+        },
+        "Rainbow Firecracker": {
+          displayName: {
+            translationKey: "item:rainbowFirecracker"
+          },
+          type: "Item",
+          textureInfo: "firecracker_rainbow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:firecrackerDescription"
+          },
+          secondaryDamage: 15
+        },
+        ...(0, OY.H)((YY => `${YY} Firecracker`), {
+          displayName: YY => ({
+            translationKey: `item:${(0,FY.te)(YY)}Firecracker`
+          }),
+          textureInfo: YY => `firecracker_${(0,FY.xe)(YY)}`,
+          type: "Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:firecrackerDescription"
+          },
+          secondaryDamage: 15
+        }),
+        "Firecracker Pebble": {
+          displayName: {
+            translationKey: "item:firecrackerPebble"
+          },
+          type: "Item",
+          textureInfo: "firecracker_pebble",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:firecrackerPebbleDescription"
+          },
+          secondaryDamage: 15
+        },
+        "Rainbow Firecracker Pebble": {
+          displayName: {
+            translationKey: "item:rainbowFirecrackerPebble"
+          },
+          type: "Item",
+          textureInfo: "firecracker_pebble_rainbow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:firecrackerPebbleDescription"
+          },
+          secondaryDamage: 15
+        },
+        ...(0, OY.H)((YY => `${YY} Firecracker Pebble`), {
+          displayName: YY => ({
+            translationKey: `item:${(0,FY.te)(YY)}FirecrackerPebble`
+          }),
+          textureInfo: YY => `firecracker_pebble_${(0,FY.xe)(YY)}`,
+          type: "Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:firecrackerPebbleDescription"
+          },
+          secondaryDamage: 15
+        }),
+        "WorldBuilder Wand": {
+          displayName: {
+            translationKey: "item:worldBuilderWand"
+          },
+          type: "Item",
+          textureInfo: "worldbuilder_wand",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:worldBuilderWandDescription"
+          }
+        },
+        "Red Strongfish": {
+          displayName: {
+            translationKey: "item:redStrongfish"
+          },
+          type: "Item",
+          textureInfo: "strongfish_red",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Green Strongfish": {
+          displayName: {
+            translationKey: "item:greenStrongfish"
+          },
+          type: "Item",
+          textureInfo: "strongfish_green",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Moon Strongfish": {
+          displayName: {
+            translationKey: "item:moonStrongfish"
+          },
+          type: "Item",
+          textureInfo: "strongfish_moon",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        Wheatfish: {
+          displayName: {
+            translationKey: "item:wheatfish"
+          },
+          type: "Chargeable",
+          textureInfo: "wheatfish",
+          weight: 1,
+          heldItemScale: .5,
+          stackable: !0,
+          description: {
+            translationKey: "item:wheatfishDescription"
+          },
+          chargeStages: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          chargeTime: 750,
+          eatHealAmt: 15,
+          rootMetaDesc: "Wheatfish|meta|charging1"
+        },
+        Moonfish: {
+          displayName: {
+            translationKey: "item:moonfish"
+          },
+          type: "Item",
+          textureInfo: "moonfish",
+          weight: 1,
+          heldItemScale: .5,
+          stackable: !0
+        },
+        Bombfish: {
+          displayName: {
+            translationKey: "item:bombfish"
+          },
+          type: "Item",
+          textureInfo: "bombfish",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Boomerang Fish": {
+          displayName: {
+            translationKey: "item:boomerangFish"
+          },
+          type: "Item",
+          textureInfo: "boomerang_fish",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !0
+        },
+        "Root Flounder": {
+          displayName: {
+            translationKey: "item:rootFlounder"
+          },
+          type: "Item",
+          textureInfo: "root_flounder",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Abyss Carp": {
+          displayName: {
+            translationKey: "item:abyssCarp"
+          },
+          type: "Item",
+          textureInfo: "abyss_carp",
+          weight: 1,
+          heldItemScale: 1.5,
+          stackable: !0
+        },
+        "Boulder Bass": {
+          displayName: {
+            translationKey: "item:boulderBass"
+          },
+          type: "Item",
+          textureInfo: "boulder_bass",
+          weight: 1,
+          heldItemScale: 2,
+          stackable: !0
+        },
+        Barnaclejaw: {
+          displayName: {
+            translationKey: "item:barnacleJaw"
+          },
+          type: "Item",
+          textureInfo: "barnaclejaw",
+          weight: 1,
+          heldItemScale: 2,
+          stackable: !0
+        },
+        "Crystalized Wheatfish": {
+          displayName: {
+            translationKey: "item:crystalizedWheatfish"
+          },
+          type: "Item",
+          textureInfo: "crystalized_wheatfish",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        Darter: {
+          displayName: {
+            translationKey: "item:darter"
+          },
+          type: "Chargeable",
+          textureInfo: "darter",
+          weight: 1,
+          heldItemScale: .5,
+          stackable: !0,
+          description: {
+            translationKey: "item:darterDescription"
+          },
+          chargeStages: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          chargeTime: 750,
+          eatHealAmt: 10,
+          rootMetaDesc: "Darter|meta|charging1"
+        },
+        "Shadow Darter": {
+          displayName: {
+            translationKey: "item:shadowDarter"
+          },
+          type: "Item",
+          textureInfo: "darter_shadow",
+          weight: 1,
+          heldItemScale: .5,
+          stackable: !0
+        },
+        "Electric Eel": {
+          displayName: {
+            translationKey: "item:electricEel"
+          },
+          type: "Item",
+          textureInfo: "electric_eel",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Grass Snapper": {
+          displayName: {
+            translationKey: "item:grassSnapper"
+          },
+          type: "Item",
+          textureInfo: "grass_snapper",
+          weight: 1,
+          heldItemScale: 1.5,
+          stackable: !0
+        },
+        "Jungle Spinefish": {
+          displayName: {
+            translationKey: "item:jungleSpinefish"
+          },
+          type: "Item",
+          textureInfo: "jungle_spinefish",
+          weight: 1,
+          heldItemScale: 1.5,
+          stackable: !0
+        },
+        "Mangler Catfish": {
+          displayName: {
+            translationKey: "item:manglerCatfish"
+          },
+          type: "Item",
+          textureInfo: "mangler_catfish",
+          weight: 1,
+          heldItemScale: 1.5,
+          stackable: !0
+        },
+        "Mossback Arapaima": {
+          displayName: {
+            translationKey: "item:mossbackArapaima"
+          },
+          type: "Item",
+          textureInfo: "mossback_arapaima",
+          weight: 1,
+          heldItemScale: 1.5,
+          stackable: !0
+        },
+        "Sandbelly Piranha": {
+          displayName: {
+            translationKey: "item:sandbellyPiranha"
+          },
+          type: "Chargeable",
+          textureInfo: "sandbelly_piranha",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:sandbellyPiranhaDescription"
+          },
+          chargeStages: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          chargeTime: 750,
+          eatHealAmt: 10,
+          rootMetaDesc: "Sandbelly Piranha|meta|charging1"
+        },
+        "Shadeback Ray": {
+          displayName: {
+            translationKey: "item:shadebackRay"
+          },
+          type: "Item",
+          textureInfo: "shadeback_ray",
+          weight: 2,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Mudbelly Tilapia": {
+          displayName: {
+            translationKey: "item:mudbellyTilapia"
+          },
+          type: "Chargeable",
+          textureInfo: "mudbelly_tilapia",
+          weight: 1.5,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:mudbellyTilapiaDescription"
+          },
+          chargeStages: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          chargeTime: 750,
+          eatHealAmt: 30,
+          rootMetaDesc: "Mudbelly Tilapia|meta|charging1"
+        },
+        "Mireback Carp": {
+          displayName: {
+            translationKey: "item:mirebackCarp"
+          },
+          type: "Item",
+          textureInfo: "mireback_carp",
+          weight: 1,
+          heldItemScale: 1.5,
+          stackable: !0
+        },
+        "Rotslab Eel": {
+          displayName: {
+            translationKey: "item:rotslabEel"
+          },
+          type: "Item",
+          textureInfo: "rotslab_eel",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Aether Minnow": {
+          displayName: {
+            translationKey: "item:aetherMinnow"
+          },
+          type: "Item",
+          textureInfo: "aether_minnow",
+          weight: 1,
+          heldItemScale: .5,
+          stackable: !0
+        },
+        "Murkborne Ray": {
+          displayName: {
+            translationKey: "item:murkborneRay"
+          },
+          type: "Item",
+          textureInfo: "murkborne_ray",
+          weight: 1,
+          heldItemScale: 2,
+          stackable: !0
+        },
+        "Eldertide Leviathan": {
+          displayName: {
+            translationKey: "item:eldertideLeviathan"
+          },
+          type: "Item",
+          textureInfo: "eldertide_leviathan",
+          weight: 1,
+          heldItemScale: 3,
+          stackable: !0
+        },
+        Oarfish: {
+          displayName: {
+            translationKey: "item:oarfish"
+          },
+          type: "Item",
+          textureInfo: "oarfish",
+          weight: 1,
+          heldItemScale: 2,
+          stackable: !0
+        },
+        "Alpha Moon Strongfish": {
+          displayName: {
+            translationKey: "item:alphaMoonStrongfish"
+          },
+          type: "Item",
+          textureInfo: "alpha_moon_strongfish",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Bamboo Catfish": {
+          displayName: {
+            translationKey: "item:bambooCatfish"
+          },
+          type: "Item",
+          textureInfo: "bamboo_catfish",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Blackwater Bream": {
+          displayName: {
+            translationKey: "item:blackwaterBream"
+          },
+          type: "Item",
+          textureInfo: "blackwater_bream",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Blackwater Leviathan": {
+          displayName: {
+            translationKey: "item:blackwaterLeviathan"
+          },
+          type: "Item",
+          textureInfo: "blackwater_leviathan",
+          weight: 1,
+          heldItemScale: 5,
+          stackable: !0
+        },
+        "Boned Sturgeon": {
+          displayName: {
+            translationKey: "item:bonedSturgeon"
+          },
+          type: "Item",
+          textureInfo: "boned_sturgeon",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Bull Shark": {
+          displayName: {
+            translationKey: "item:bullShark"
+          },
+          type: "Item",
+          textureInfo: "bull_shark",
+          weight: 1,
+          heldItemScale: 2,
+          stackable: !0
+        },
+        "Channel Sawfish": {
+          displayName: {
+            translationKey: "item:channelSawfish"
+          },
+          type: "Item",
+          textureInfo: "channel_sawfish",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Coastal Mullet": {
+          displayName: {
+            translationKey: "item:coastalMullet"
+          },
+          type: "Item",
+          textureInfo: "coastal_mullet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        Coelacanth: {
+          displayName: {
+            translationKey: "item:coelacanth"
+          },
+          type: "Item",
+          textureInfo: "coelacanth",
+          weight: 1,
+          heldItemScale: 4,
+          stackable: !0
+        },
+        "Driftwood Catfish": {
+          displayName: {
+            translationKey: "item:driftwoodCatfish"
+          },
+          type: "Item",
+          textureInfo: "driftwood_catfish",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Eagle Ray": {
+          displayName: {
+            translationKey: "item:eagleRay"
+          },
+          type: "Item",
+          textureInfo: "eagle_ray",
+          weight: 1,
+          heldItemScale: 1.5,
+          stackable: !0
+        },
+        "Giant Grouper": {
+          displayName: {
+            translationKey: "item:giantGrouper"
+          },
+          type: "Item",
+          textureInfo: "giant_grouper",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !0
+        },
+        "Giant Moray": {
+          displayName: {
+            translationKey: "item:giantMoray"
+          },
+          type: "Item",
+          textureInfo: "giant_moray",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !0
+        },
+        "Giant Stingray": {
+          displayName: {
+            translationKey: "item:giantStingray"
+          },
+          type: "Item",
+          textureInfo: "giant_stingray",
+          weight: 1,
+          heldItemScale: 2,
+          stackable: !0
+        },
+        "Golden Mahseer": {
+          description: {
+            translationKey: "item:goldenMahseerDescription"
+          },
+          displayName: {
+            translationKey: "item:goldenMahseer"
+          },
+          type: "Item",
+          textureInfo: "golden_mahseer",
+          weight: 1,
+          heldItemScale: 1.5,
+          stackable: !0
+        },
+        "Greenfin Loach": {
+          displayName: {
+            translationKey: "item:greenfinLoach"
+          },
+          type: "Item",
+          textureInfo: "greenfin_loach",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Mangrove Herring": {
+          displayName: {
+            translationKey: "item:mangroveHerring"
+          },
+          type: "Item",
+          textureInfo: "mangrove_herring",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Moonlit Boomerang Fish": {
+          displayName: {
+            translationKey: "item:moonlitBoomerangFish"
+          },
+          type: "Item",
+          textureInfo: "moonlit_boomerang_fish",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Moonstone Pupfish": {
+          displayName: {
+            translationKey: "item:moonstonePupfish"
+          },
+          type: "Chargeable",
+          textureInfo: "moonstone_pupfish",
+          weight: 1,
+          heldItemScale: .75,
+          stackable: !0,
+          description: {
+            translationKey: "item:moonstonePupfishDescription"
+          },
+          chargeStages: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          chargeTime: 750,
+          eatHealAmt: 10,
+          rootMetaDesc: "Moonstone Pupfish|meta|charging1"
+        },
+        "Mudline Perch": {
+          displayName: {
+            translationKey: "item:mudlinePerch"
+          },
+          type: "Item",
+          textureInfo: "mudline_perch",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Murk Stingray": {
+          displayName: {
+            translationKey: "item:murkStingray"
+          },
+          type: "Item",
+          textureInfo: "murk_stingray",
+          weight: 1,
+          heldItemScale: 1.5,
+          stackable: !0
+        },
+        Needlefish: {
+          displayName: {
+            translationKey: "item:needlefish"
+          },
+          type: "Item",
+          textureInfo: "needlefish",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Nomai Moray": {
+          displayName: {
+            translationKey: "item:nomaiMoray"
+          },
+          type: "Item",
+          textureInfo: "nomai_moray",
+          weight: 1,
+          heldItemScale: 1.5,
+          stackable: !0
+        },
+        "Pearlescent Moonfish": {
+          displayName: {
+            translationKey: "item:pearlescentMoonfish"
+          },
+          type: "Item",
+          textureInfo: "pearlescent_moonfish",
+          weight: 1,
+          heldItemScale: .75,
+          stackable: !0
+        },
+        "Rainbow Guppy": {
+          displayName: {
+            translationKey: "item:rainbowGuppy"
+          },
+          type: "Item",
+          textureInfo: "rainbow_guppy",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Red Snapper": {
+          displayName: {
+            translationKey: "item:redSnapper"
+          },
+          type: "Item",
+          textureInfo: "red_snapper",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Reedglass Minnow": {
+          displayName: {
+            translationKey: "item:reedglassMinnow"
+          },
+          type: "Item",
+          textureInfo: "reedglass_minnow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Reef Sardine": {
+          displayName: {
+            translationKey: "item:reefSardine"
+          },
+          type: "Item",
+          textureInfo: "reef_sardine",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Root Perch": {
+          displayName: {
+            translationKey: "item:rootPerch"
+          },
+          type: "Item",
+          textureInfo: "root_perch",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Rust Scad": {
+          displayName: {
+            translationKey: "item:rustScad"
+          },
+          type: "Item",
+          textureInfo: "rust_scad",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        Seahorse: {
+          displayName: {
+            translationKey: "item:seahorse"
+          },
+          type: "Item",
+          textureInfo: "seahorse",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        Snakehead: {
+          displayName: {
+            translationKey: "item:snakehead"
+          },
+          type: "Item",
+          textureInfo: "snakehead",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Spined Stickleback": {
+          displayName: {
+            translationKey: "item:spinedStickleback"
+          },
+          type: "Item",
+          textureInfo: "spined_stickleback",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Stone Grouper": {
+          displayName: {
+            translationKey: "item:stoneGrouper"
+          },
+          type: "Item",
+          textureInfo: "stone_grouper",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Sumpback Carp": {
+          displayName: {
+            translationKey: "item:sumpbackCarp"
+          },
+          type: "Item",
+          textureInfo: "sumpback_carp",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Sunset Minnow": {
+          displayName: {
+            translationKey: "item:sunsetMinnow"
+          },
+          type: "Item",
+          textureInfo: "sunset_minnow",
+          weight: 1,
+          heldItemScale: .5,
+          stackable: !0
+        },
+        Tarpon: {
+          displayName: {
+            translationKey: "item:tarpon"
+          },
+          type: "Item",
+          textureInfo: "tarpon",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Threadfin Bream": {
+          displayName: {
+            translationKey: "item:threadfinBream"
+          },
+          type: "Item",
+          textureInfo: "threadfin_bream",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Tri-Pointed Needlefish": {
+          displayName: {
+            translationKey: "item:triPointedNeedlefish"
+          },
+          type: "Item",
+          textureInfo: "tri_pointed_needlefish",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Game Dev Fish": {
+          displayName: {
+            translationKey: "item:gameDevFish"
+          },
+          type: "Item",
+          textureInfo: "ellie_fish",
+          weight: 1,
+          heldItemScale: 1.75,
+          stackable: !0
+        },
+        "Armoured Searobin": {
+          displayName: {
+            translationKey: "item:armouredSearobin"
+          },
+          type: "Item",
+          textureInfo: "armoured_searobin",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Ash Lionfish": {
+          displayName: {
+            translationKey: "item:ashLionfish"
+          },
+          type: "Item",
+          textureInfo: "ash_lionfish",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Barefrost Toothfish": {
+          displayName: {
+            translationKey: "item:barefrostToothfish"
+          },
+          type: "Item",
+          textureInfo: "barefrost_toothfish",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !0
+        },
+        "Blackfin Icefish": {
+          displayName: {
+            translationKey: "item:blackfinIcefish"
+          },
+          type: "Item",
+          textureInfo: "blackfin_icefish",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Basalt Pipefish": {
+          displayName: {
+            translationKey: "item:basaltPipefish"
+          },
+          type: "Item",
+          textureInfo: "basalt_pipefish",
+          weight: 1,
+          heldItemScale: .5,
+          stackable: !0
+        },
+        "Brimstone Spikefish": {
+          displayName: {
+            translationKey: "item:brimstoneSpikefish"
+          },
+          type: "Item",
+          textureInfo: "brimstone_spikefish",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Cinder Leviathan": {
+          displayName: {
+            translationKey: "item:cinderLeviathan"
+          },
+          type: "Item",
+          textureInfo: "cinder_leviathan",
+          weight: 1,
+          heldItemScale: 3,
+          stackable: !0
+        },
+        "Crowned Flame Angelfish": {
+          displayName: {
+            translationKey: "item:crownedFlameAngelfish"
+          },
+          type: "Item",
+          textureInfo: "crowned_flame_angelfish",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Deepwater Lanternfish": {
+          displayName: {
+            translationKey: "item:deepwaterLanternfish"
+          },
+          type: "Item",
+          textureInfo: "deepwater_lanternfish",
+          weight: 1,
+          heldItemScale: .5,
+          stackable: !0
+        },
+        "Driftice Capelin": {
+          displayName: {
+            translationKey: "item:drifticeCapelin"
+          },
+          type: "Item",
+          textureInfo: "driftice_capelin",
+          weight: 1,
+          heldItemScale: .5,
+          stackable: !0
+        },
+        "Ember Chub": {
+          displayName: {
+            translationKey: "item:emberChub"
+          },
+          type: "Item",
+          textureInfo: "ember_chub",
+          weight: 1,
+          heldItemScale: .5,
+          stackable: !0
+        },
+        "Embermark Wrasse": {
+          displayName: {
+            translationKey: "item:embermarkWrasse"
+          },
+          type: "Item",
+          textureInfo: "embermark_wrasse",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Eviota Vader": {
+          displayName: {
+            translationKey: "item:eviotaVader"
+          },
+          type: "Item",
+          textureInfo: "eviota_vader",
+          weight: 1,
+          heldItemScale: .5,
+          stackable: !0
+        },
+        "Frost Herring": {
+          displayName: {
+            translationKey: "item:frostHerring"
+          },
+          type: "Item",
+          textureInfo: "frost_herring",
+          weight: 1,
+          heldItemScale: .5,
+          stackable: !0
+        },
+        "Frost Wolf Eel": {
+          displayName: {
+            translationKey: "item:frostWolfEel"
+          },
+          type: "Item",
+          textureInfo: "frost_wolf_eel",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !0
+        },
+        "Frostpaint Notie": {
+          displayName: {
+            translationKey: "item:frostpaintNotie"
+          },
+          type: "Item",
+          textureInfo: "frostpaint_notie",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Frozen Grenadier": {
+          displayName: {
+            translationKey: "item:frozenGrenadier"
+          },
+          type: "Item",
+          textureInfo: "frozen_grenadier",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Giant Trevally": {
+          displayName: {
+            translationKey: "item:giantTrevally"
+          },
+          type: "Item",
+          textureInfo: "giant_trevally",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !0
+        },
+        "Glacial Lanternfish": {
+          displayName: {
+            translationKey: "item:glacialLanternfish"
+          },
+          type: "Item",
+          textureInfo: "glacial_lanternfish",
+          weight: 1,
+          heldItemScale: .5,
+          stackable: !0
+        },
+        "Glacial Silverfish": {
+          displayName: {
+            translationKey: "item:glacialSilverfish"
+          },
+          type: "Item",
+          textureInfo: "glacial_silverfish",
+          weight: 1,
+          heldItemScale: .5,
+          stackable: !0
+        },
+        "Heatwarp Flounder": {
+          displayName: {
+            translationKey: "item:heatwarpFlounder"
+          },
+          type: "Item",
+          textureInfo: "heatwarp_flounder",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        Hatchetfish: {
+          displayName: {
+            translationKey: "item:hatchetfish"
+          },
+          type: "Item",
+          textureInfo: "hatchetfish",
+          weight: 1,
+          heldItemScale: .5,
+          stackable: !0
+        },
+        "Ice Spined Notothenia": {
+          displayName: {
+            translationKey: "item:iceSpinedNotothenia"
+          },
+          type: "Item",
+          textureInfo: "ice_spined_notothenia",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Iceshelf Skate": {
+          displayName: {
+            translationKey: "item:iceshelfSkate"
+          },
+          type: "Item",
+          textureInfo: "iceshelf_skate",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !0
+        },
+        "Icy Sculpin": {
+          displayName: {
+            translationKey: "item:icySculpin"
+          },
+          type: "Item",
+          textureInfo: "icy_sculpin",
+          weight: 1,
+          heldItemScale: .5,
+          stackable: !0
+        },
+        "Lavaflow Trout": {
+          displayName: {
+            translationKey: "item:lavaflowTrout"
+          },
+          type: "Item",
+          textureInfo: "lavaflow_trout",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Lavawake Slopefish": {
+          displayName: {
+            translationKey: "item:lavawakeSlopefish"
+          },
+          type: "Item",
+          textureInfo: "lavawake_slopefish",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Magma Sardinella": {
+          displayName: {
+            translationKey: "item:magmaSardinella"
+          },
+          type: "Item",
+          textureInfo: "magma_sardinella",
+          weight: 1,
+          heldItemScale: .5,
+          stackable: !0
+        },
+        "Magma Trout": {
+          displayName: {
+            translationKey: "item:magmaTrout"
+          },
+          type: "Item",
+          textureInfo: "magma_trout",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Marbled Moray Cod": {
+          displayName: {
+            translationKey: "item:marbledMorayCod"
+          },
+          type: "Item",
+          textureInfo: "marbled_moray_cod",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !0
+        },
+        "Molten Lotella Cod": {
+          displayName: {
+            translationKey: "item:moltenLotellaCod"
+          },
+          type: "Item",
+          textureInfo: "molten_lotella_cod",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Northern Wolffish": {
+          displayName: {
+            translationKey: "item:northernWolffish"
+          },
+          type: "Item",
+          textureInfo: "northern_wolffish",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !0
+        },
+        "Paleice Rockcod": {
+          displayName: {
+            translationKey: "item:paleiceRockcod"
+          },
+          type: "Item",
+          textureInfo: "paleice_rockcod",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Permafrost Halibut": {
+          displayName: {
+            translationKey: "item:permafrostHalibut"
+          },
+          type: "Item",
+          textureInfo: "permafrost_halibut",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !0
+        },
+        Pithead: {
+          displayName: {
+            translationKey: "item:pithead"
+          },
+          type: "Item",
+          textureInfo: "pithead",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Polarflash Electron": {
+          displayName: {
+            translationKey: "item:polarflashElectron"
+          },
+          type: "Item",
+          textureInfo: "polarflash_electron",
+          weight: 1,
+          heldItemScale: .5,
+          stackable: !0
+        },
+        "Pyroclast Eel": {
+          displayName: {
+            translationKey: "item:pyroclastEel"
+          },
+          type: "Item",
+          textureInfo: "pyroclast_eel",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !0
+        },
+        "Pyroscale Grouper": {
+          displayName: {
+            translationKey: "item:pyroscaleGrouper"
+          },
+          type: "Item",
+          textureInfo: "pyroscale_grouper",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !0
+        },
+        "Red Pyreside": {
+          displayName: {
+            translationKey: "item:redPyreside"
+          },
+          type: "Item",
+          textureInfo: "red_pyreside",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Rimesnouted Lancetfish": {
+          displayName: {
+            translationKey: "item:rimesnoutedLancetfish"
+          },
+          type: "Item",
+          textureInfo: "rimesnouted_lancetfish",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Scorched Sunfish": {
+          displayName: {
+            translationKey: "item:scorchedSunfish"
+          },
+          type: "Item",
+          textureInfo: "scorched_sunfish",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !0
+        },
+        "Scored Dace": {
+          displayName: {
+            translationKey: "item:scoredDace"
+          },
+          type: "Item",
+          textureInfo: "scored_dace",
+          weight: 1,
+          heldItemScale: .5,
+          stackable: !0
+        },
+        "Silver Dragonfish": {
+          displayName: {
+            translationKey: "item:silverDragonfish"
+          },
+          type: "Item",
+          textureInfo: "silver_dragonfish",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Snow Haddock": {
+          displayName: {
+            translationKey: "item:snowHaddock"
+          },
+          type: "Item",
+          textureInfo: "snow_haddock",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Volcanic Catfish": {
+          displayName: {
+            translationKey: "item:volcanicCatfish"
+          },
+          type: "Item",
+          textureInfo: "volcanic_catfish",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Volcanic Semperi": {
+          displayName: {
+            translationKey: "item:volcanicSemperi"
+          },
+          type: "Item",
+          textureInfo: "volcanic_semperi",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Rusty Rod": {
+          description: {
+            translationKey: "item:rustyRodDescription"
+          },
+          displayName: {
+            translationKey: "item:rustyRod"
+          },
+          type: "Item",
+          fishingRodInfo: {
+            biteDelayMs: [7e3, 9e3]
+          },
+          textureInfo: "rusty_rod",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1
+        },
+        "Lucky Rod": {
+          description: {
+            translationKey: "item:luckyRodDescription"
+          },
+          displayName: {
+            translationKey: "item:luckyRod"
+          },
+          type: "Item",
+          fishingRodInfo: {
+            biteDelayMs: [2e3, 4e3]
+          },
+          textureInfo: "lucky_rod",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1
+        },
+        "Sturdy Rod": {
+          description: {
+            translationKey: "item:sturdyRodDescription"
+          },
+          displayName: {
+            translationKey: "item:sturdyRod"
+          },
+          type: "Item",
+          fishingRodInfo: {
+            biteDelayMs: [5e3, 7e3]
+          },
+          textureInfo: "sturdy_rod",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1
+        },
+        "Jungle Rod": {
+          displayName: {
+            translationKey: "item:jungleRod"
+          },
+          type: "Item",
+          fishingRodInfo: {
+            biteDelayMs: [2e3, 4e3]
+          },
+          textureInfo: "jungle_rod",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1
+        },
+        "Draugr Rod": {
+          displayName: {
+            translationKey: "item:draugrRod"
+          },
+          type: "Item",
+          fishingRodInfo: {
+            biteDelayMs: [2e3, 4e3]
+          },
+          textureInfo: "draugr_rod",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1
+        },
+        "Cursed Rod": {
+          displayName: {
+            translationKey: "item:cursedRod"
+          },
+          type: "Item",
+          fishingRodInfo: {
+            biteDelayMs: [2e3, 4e3]
+          },
+          textureInfo: "cursed_rod",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1
+        },
+        "Tangle Resistant Rod": {
+          displayName: {
+            translationKey: "item:tangleResistantRod"
+          },
+          type: "Item",
+          fishingRodInfo: {
+            biteDelayMs: [2e3, 4e3]
+          },
+          textureInfo: "tangle_resistant_rod",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1
+        },
+        "Speed Rod": {
+          description: {
+            translationKey: "item:speedRodDescription"
+          },
+          displayName: {
+            translationKey: "item:speedRod"
+          },
+          type: "Item",
+          fishingRodInfo: {
+            biteDelayMs: [2e3, 4e3]
+          },
+          textureInfo: "speed_rod",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1
+        },
+        "Carbon Rod": {
+          displayName: {
+            translationKey: "item:carbonRod"
+          },
+          type: "Item",
+          fishingRodInfo: {
+            biteDelayMs: [2e3, 4e3]
+          },
+          textureInfo: "carbon_rod",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1
+        },
+        "Deep Sea Rod": {
+          displayName: {
+            translationKey: "item:deepSeaRod"
+          },
+          type: "Item",
+          fishingRodInfo: {
+            biteDelayMs: [2e3, 4e3]
+          },
+          textureInfo: "deep_sea_rod",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1
+        },
+        "Master Rod": {
+          displayName: {
+            translationKey: "item:masterRod"
+          },
+          type: "Item",
+          fishingRodInfo: {
+            biteDelayMs: [2e3, 4e3]
+          },
+          textureInfo: "master_rod",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1
+        },
+        "Obsidian Rod": {
+          displayName: {
+            translationKey: "item:obsidianRod"
+          },
+          type: "Item",
+          fishingRodInfo: {
+            biteDelayMs: [2e3, 4e3]
+          },
+          textureInfo: "obsidian_rod",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1
+        },
+        "Molten Magma Rod": {
+          displayName: {
+            translationKey: "item:moltenMagmaRod"
+          },
+          type: "Item",
+          fishingRodInfo: {
+            biteDelayMs: [2e3, 4e3]
+          },
+          textureInfo: "molten_magma_rod",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1
+        },
+        "Frost Rod": {
+          displayName: {
+            translationKey: "item:frostRod"
+          },
+          type: "Item",
+          fishingRodInfo: {
+            biteDelayMs: [2e3, 4e3]
+          },
+          textureInfo: "frost_rod",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1
+        },
+        "Black Ice Rod": {
+          displayName: {
+            translationKey: "item:blackIceRod"
+          },
+          type: "Item",
+          fishingRodInfo: {
+            biteDelayMs: [2e3, 4e3]
+          },
+          textureInfo: "black_ice_rod",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1
+        },
+        "Mythic Rod": {
+          displayName: {
+            translationKey: "item:mythicRod"
+          },
+          type: "Item",
+          fishingRodInfo: {
+            biteDelayMs: [2e3, 4e3]
+          },
+          textureInfo: "mythic_rod",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1
+        },
+        Acorn: {
+          displayName: {
+            translationKey: "item:acorn"
+          },
+          type: "Chargeable",
+          textureInfo: "acorn",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:acornDescription"
+          },
+          chargeStages: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          chargeTime: 500,
+          eatHealAmt: 3,
+          rootMetaDesc: "Acorn|meta|charging1"
+        },
+        "Acorn Jelly": {
+          displayName: {
+            translationKey: "item:acornJelly"
+          },
+          type: "Chargeable",
+          textureInfo: "acorn_jelly",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:acornJellyDescription"
+          },
+          chargeStages: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          chargeTime: 750,
+          rootMetaDesc: "Acorn Jelly|meta|charging1"
+        },
+        "Cow's Milk": {
+          displayName: {
+            translationKey: "item:cowsMilk"
+          },
+          type: "Chargeable",
+          textureInfo: "cows_milk",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:cowsMilkDescription"
+          },
+          chargeStages: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          chargeTime: 500,
+          eatHealAmt: 3,
+          rootMetaDesc: "Cow's Milk|meta|charging1"
+        },
+        Cheese: {
+          displayName: {
+            translationKey: "item:cheese"
+          },
+          type: "Chargeable",
+          textureInfo: "cheese",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:cheeseDescription"
+          },
+          chargeStages: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          chargeTime: 750,
+          rootMetaDesc: "Cheese|meta|charging1"
+        },
+        "Caught Fish": {
+          displayName: {
+            translationKey: "item:caughtFish"
+          },
+          type: "Chargeable",
+          textureInfo: "caught_fish",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:caughtFishDescription"
+          },
+          chargeStages: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          chargeTime: 500,
+          eatHealAmt: 3,
+          rootMetaDesc: "Caught Fish|meta|charging1"
+        },
+        "Fish Fillet": {
+          displayName: {
+            translationKey: "item:fishFillet"
+          },
+          type: "Chargeable",
+          textureInfo: "fish_fillet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:fishFilletDescription"
+          },
+          chargeStages: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          chargeTime: 750,
+          rootMetaDesc: "Fish Fillet|meta|charging1"
+        },
+        "Meaty Bone": {
+          displayName: {
+            translationKey: "item:meatyBone"
+          },
+          type: "Chargeable",
+          textureInfo: "meaty_bone",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:meatyBoneDescription"
+          },
+          chargeStages: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          chargeTime: 500,
+          eatHealAmt: 3,
+          rootMetaDesc: "Meaty Bone|meta|charging1"
+        },
+        "Blinding Pebble": {
+          displayName: {
+            translationKey: "item:blindingPebble"
+          },
+          type: "Item",
+          textureInfo: "blinding_pebble",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:blindingPebbleDescription"
+          },
+          secondaryDamage: 15
+        },
+        "Sheep's Milk": {
+          displayName: {
+            translationKey: "item:sheepsMilk"
+          },
+          type: "Chargeable",
+          textureInfo: "sheeps_milk",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:sheepsMilkDescription"
+          },
+          chargeStages: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          chargeTime: 500,
+          eatHealAmt: 3,
+          rootMetaDesc: "Sheep's Milk|meta|charging1"
+        },
+        "Yoghurt Pot": {
+          displayName: {
+            translationKey: "item:yoghurtPot"
+          },
+          type: "Chargeable",
+          textureInfo: "yoghurt_pot",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:yoghurtPotDescription"
+          },
+          chargeStages: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          chargeTime: 750,
+          rootMetaDesc: "Yoghurt Pot|meta|charging1"
+        },
+        Truffle: {
+          displayName: {
+            translationKey: "item:truffle"
+          },
+          type: "Chargeable",
+          textureInfo: "truffle",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:truffleDescription"
+          },
+          chargeStages: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          chargeTime: 500,
+          eatHealAmt: 3,
+          rootMetaDesc: "Truffle|meta|charging1"
+        },
+        "Truffle Oil": {
+          displayName: {
+            translationKey: "item:truffleOil"
+          },
+          type: "Chargeable",
+          textureInfo: "truffle_oil",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:truffleOilDescription"
+          },
+          chargeStages: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          chargeTime: 750,
+          rootMetaDesc: "Truffle Oil|meta|charging1"
+        },
+        Oats: {
+          displayName: {
+            translationKey: "item:oats"
+          },
+          type: "Chargeable",
+          textureInfo: "oats",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:oatsDescription"
+          },
+          chargeStages: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          chargeTime: 500,
+          eatHealAmt: 3,
+          rootMetaDesc: "Oats|meta|charging1"
+        },
+        Porridge: {
+          displayName: {
+            translationKey: "item:porridge"
+          },
+          type: "Chargeable",
+          textureInfo: "porridge",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:porridgeDescription"
+          },
+          chargeStages: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          chargeTime: 750,
+          rootMetaDesc: "Porridge|meta|charging1"
+        },
+        Dates: {
+          displayName: {
+            translationKey: "item:dates"
+          },
+          type: "Chargeable",
+          textureInfo: "dates",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:datesDescription"
+          },
+          chargeStages: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          chargeTime: 500,
+          eatHealAmt: 3,
+          rootMetaDesc: "Dates|meta|charging1"
+        },
+        "Date Pudding": {
+          displayName: {
+            translationKey: "item:datePudding"
+          },
+          type: "Chargeable",
+          textureInfo: "date_pudding",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:datePuddingDescription"
+          },
+          chargeStages: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          chargeTime: 750,
+          rootMetaDesc: "Date Pudding|meta|charging1"
+        },
+        Poop: {
+          displayName: {
+            translationKey: "item:poop"
+          },
+          type: "Item",
+          textureInfo: "poop",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:poopDescription"
+          },
+          secondaryDamage: 1
+        },
+        Fertiliser: {
+          displayName: {
+            translationKey: "item:fertiliser"
+          },
+          type: "Item",
+          textureInfo: "fertiliser",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:fertiliserDescription"
+          }
+        },
+        Medkit: {
+          displayName: {
+            translationKey: "item:medkit"
+          },
+          type: "Item",
+          textureInfo: "medkit",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Wood Spear": {
+          displayName: {
+            translationKey: "item:woodSpear"
+          },
+          type: "Tool",
+          textureInfo: "wood_spear",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 18,
+          attackRange: 5,
+          description: {
+            translationKey: "item:spearDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 1,
+          abilityCooldownMs: 1600,
+          dashImpulse: 18
+        },
+        "Stone Spear": {
+          displayName: {
+            translationKey: "item:stoneSpear"
+          },
+          type: "Tool",
+          textureInfo: "stone_spear",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 22,
+          attackRange: 5,
+          description: {
+            translationKey: "item:spearDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 2,
+          abilityCooldownMs: 1600,
+          dashImpulse: 20
+        },
+        "Iron Spear": {
+          displayName: {
+            translationKey: "item:ironSpear"
+          },
+          type: "Tool",
+          textureInfo: "iron_spear",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 28,
+          attackRange: 5,
+          description: {
+            translationKey: "item:spearDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 3,
+          abilityCooldownMs: 1600,
+          dashImpulse: 22
+        },
+        "Gold Spear": {
+          displayName: {
+            translationKey: "item:goldSpear"
+          },
+          type: "Tool",
+          textureInfo: "gold_spear",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 30,
+          attackRange: 5,
+          description: {
+            translationKey: "item:spearDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 4,
+          abilityCooldownMs: 1600,
+          dashImpulse: 25
+        },
+        "Diamond Spear": {
+          displayName: {
+            translationKey: "item:diamondSpear"
+          },
+          type: "Tool",
+          textureInfo: "diamond_spear",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 32,
+          attackRange: 5,
+          description: {
+            translationKey: "item:spearDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 5,
+          abilityCooldownMs: 1600,
+          dashImpulse: 28
+        },
+        "Moonstone Spear": {
+          displayName: {
+            translationKey: "item:moonstoneSpear"
+          },
+          type: "Tool",
+          textureInfo: "moonstone_spear",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 32,
+          attackRange: 5,
+          description: {
+            translationKey: "item:spearDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 5,
+          abilityCooldownMs: 1600,
+          dashImpulse: 28
+        },
+        "Wood Dagger": {
+          displayName: {
+            translationKey: "item:woodDagger"
+          },
+          type: "Tool",
+          textureInfo: "wood_dagger",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 20,
+          attackRange: 2.5,
+          attackCooldownMs: 250,
+          knockbackHorizontalScalar: .4,
+          knockbackVerticalScalar: .8,
+          comboInfo: VY,
+          description: {
+            translationKey: "item:daggerDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 1
+        },
+        "Stone Dagger": {
+          displayName: {
+            translationKey: "item:stoneDagger"
+          },
+          type: "Tool",
+          textureInfo: "stone_dagger",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 25,
+          attackRange: 2.5,
+          attackCooldownMs: 250,
+          knockbackHorizontalScalar: .4,
+          knockbackVerticalScalar: .8,
+          comboInfo: VY,
+          description: {
+            translationKey: "item:daggerDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 2
+        },
+        "Iron Dagger": {
+          displayName: {
+            translationKey: "item:ironDagger"
+          },
+          type: "Tool",
+          textureInfo: "iron_dagger",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 31,
+          attackRange: 2.5,
+          attackCooldownMs: 250,
+          knockbackHorizontalScalar: .4,
+          knockbackVerticalScalar: .8,
+          comboInfo: VY,
+          description: {
+            translationKey: "item:daggerDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 3
+        },
+        "Gold Dagger": {
+          displayName: {
+            translationKey: "item:goldDagger"
+          },
+          type: "Tool",
+          textureInfo: "gold_dagger",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 34,
+          attackRange: 2.5,
+          attackCooldownMs: 250,
+          knockbackHorizontalScalar: .4,
+          knockbackVerticalScalar: .8,
+          comboInfo: VY,
+          description: {
+            translationKey: "item:daggerDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 4
+        },
+        "Diamond Dagger": {
+          displayName: {
+            translationKey: "item:diamondDagger"
+          },
+          type: "Tool",
+          textureInfo: "diamond_dagger",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 36,
+          attackRange: 2.5,
+          attackCooldownMs: 250,
+          knockbackHorizontalScalar: .4,
+          knockbackVerticalScalar: .8,
+          comboInfo: VY,
+          description: {
+            translationKey: "item:daggerDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 5
+        },
+        "Moonstone Dagger": {
+          displayName: {
+            translationKey: "item:moonstoneDagger"
+          },
+          type: "Tool",
+          textureInfo: "moonstone_dagger",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 36,
+          attackRange: 2.5,
+          attackCooldownMs: 250,
+          knockbackHorizontalScalar: .4,
+          knockbackVerticalScalar: .8,
+          comboInfo: VY,
+          description: {
+            translationKey: "item:daggerDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 5
+        },
+        "Wood Boomerang": {
+          displayName: {
+            translationKey: "item:woodBoomerang"
+          },
+          type: "Tool",
+          textureInfo: "wood_boomerang",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 11,
+          secondaryDamage: 11,
+          description: {
+            translationKey: "item:boomerangDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 1
+        },
+        "Stone Boomerang": {
+          displayName: {
+            translationKey: "item:stoneBoomerang"
+          },
+          type: "Tool",
+          textureInfo: "stone_boomerang",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 14,
+          secondaryDamage: 14,
+          description: {
+            translationKey: "item:boomerangDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 2
+        },
+        "Iron Boomerang": {
+          displayName: {
+            translationKey: "item:ironBoomerang"
+          },
+          type: "Tool",
+          textureInfo: "iron_boomerang",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 17,
+          secondaryDamage: 17,
+          description: {
+            translationKey: "item:boomerangDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 3
+        },
+        "Gold Boomerang": {
+          displayName: {
+            translationKey: "item:goldBoomerang"
+          },
+          type: "Tool",
+          textureInfo: "gold_boomerang",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 19,
+          secondaryDamage: 19,
+          description: {
+            translationKey: "item:boomerangDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 4
+        },
+        "Diamond Boomerang": {
+          displayName: {
+            translationKey: "item:diamondBoomerang"
+          },
+          type: "Tool",
+          textureInfo: "diamond_boomerang",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 20,
+          secondaryDamage: 20,
+          description: {
+            translationKey: "item:boomerangDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 5
+        },
+        "Moonstone Boomerang": {
+          displayName: {
+            translationKey: "item:moonstoneBoomerang"
+          },
+          type: "Tool",
+          textureInfo: "moonstone_boomerang",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 20,
+          secondaryDamage: 20,
+          description: {
+            translationKey: "item:boomerangDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 5
+        },
+        "Wood Club": {
+          displayName: {
+            translationKey: "item:woodClub"
+          },
+          type: "Tool",
+          textureInfo: "wood_club",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 22,
+          knockbackHorizontalScalar: 1.7,
+          knockbackVerticalScalar: 1.2,
+          description: {
+            translationKey: "item:clubDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 1
+        },
+        "Stone Club": {
+          displayName: {
+            translationKey: "item:stoneClub"
+          },
+          type: "Tool",
+          textureInfo: "stone_club",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 27,
+          knockbackHorizontalScalar: 1.9,
+          knockbackVerticalScalar: 1.2,
+          description: {
+            translationKey: "item:clubDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 2
+        },
+        "Iron Club": {
+          displayName: {
+            translationKey: "item:ironClub"
+          },
+          type: "Tool",
+          textureInfo: "iron_club",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 34,
+          knockbackHorizontalScalar: 2.1,
+          knockbackVerticalScalar: 1.2,
+          description: {
+            translationKey: "item:clubDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 3
+        },
+        "Gold Club": {
+          displayName: {
+            translationKey: "item:goldClub"
+          },
+          type: "Tool",
+          textureInfo: "gold_club",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 37,
+          knockbackHorizontalScalar: 2.3,
+          knockbackVerticalScalar: 1.2,
+          description: {
+            translationKey: "item:clubDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 4
+        },
+        "Diamond Club": {
+          displayName: {
+            translationKey: "item:diamondClub"
+          },
+          type: "Tool",
+          textureInfo: "diamond_club",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 40,
+          knockbackHorizontalScalar: 2.5,
+          knockbackVerticalScalar: 1.2,
+          description: {
+            translationKey: "item:clubDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 5
+        },
+        "Moonstone Club": {
+          displayName: {
+            translationKey: "item:moonstoneClub"
+          },
+          type: "Tool",
+          textureInfo: "moonstone_club",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 40,
+          knockbackHorizontalScalar: 2.5,
+          knockbackVerticalScalar: 1.2,
+          description: {
+            translationKey: "item:clubDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 5
+        },
+        "Wood Mace": {
+          displayName: {
+            translationKey: "item:woodMace"
+          },
+          type: "Tool",
+          textureInfo: "wood_mace",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 11,
+          velocityMultiplier: 2.2,
+          description: {
+            translationKey: "item:maceDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 1
+        },
+        "Stone Mace": {
+          displayName: {
+            translationKey: "item:stoneMace"
+          },
+          type: "Tool",
+          textureInfo: "stone_mace",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 14,
+          velocityMultiplier: 2.4,
+          description: {
+            translationKey: "item:maceDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 2
+        },
+        "Iron Mace": {
+          displayName: {
+            translationKey: "item:ironMace"
+          },
+          type: "Tool",
+          textureInfo: "iron_mace",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 17,
+          velocityMultiplier: 2.6,
+          description: {
+            translationKey: "item:maceDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 3
+        },
+        "Gold Mace": {
+          displayName: {
+            translationKey: "item:goldMace"
+          },
+          type: "Tool",
+          textureInfo: "gold_mace",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 19,
+          velocityMultiplier: 2.8,
+          description: {
+            translationKey: "item:maceDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 4
+        },
+        "Diamond Mace": {
+          displayName: {
+            translationKey: "item:diamondMace"
+          },
+          type: "Tool",
+          textureInfo: "diamond_mace",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 20,
+          velocityMultiplier: 3,
+          description: {
+            translationKey: "item:maceDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 5
+        },
+        "Moonstone Mace": {
+          displayName: {
+            translationKey: "item:moonstoneMace"
+          },
+          type: "Tool",
+          textureInfo: "moonstone_mace",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 20,
+          velocityMultiplier: 3,
+          description: {
+            translationKey: "item:maceDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 5
+        },
+        "Wood Whip": {
+          displayName: {
+            translationKey: "item:woodWhip"
+          },
+          type: "Tool",
+          textureInfo: "wood_whip",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 8,
+          attackRange: 8,
+          knockbackHorizontalScalar: -1,
+          description: {
+            translationKey: "item:whipDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 1
+        },
+        "Stone Whip": {
+          displayName: {
+            translationKey: "item:stoneWhip"
+          },
+          type: "Tool",
+          textureInfo: "stone_whip",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 11,
+          attackRange: 8,
+          knockbackHorizontalScalar: -1.2,
+          description: {
+            translationKey: "item:whipDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 2
+        },
+        "Iron Whip": {
+          displayName: {
+            translationKey: "item:ironWhip"
+          },
+          type: "Tool",
+          textureInfo: "iron_whip",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 14,
+          attackRange: 8,
+          knockbackHorizontalScalar: -1.4,
+          description: {
+            translationKey: "item:whipDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 3
+        },
+        "Gold Whip": {
+          displayName: {
+            translationKey: "item:goldWhip"
+          },
+          type: "Tool",
+          textureInfo: "gold_whip",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 16,
+          attackRange: 8,
+          knockbackHorizontalScalar: -1.6,
+          description: {
+            translationKey: "item:whipDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 4
+        },
+        "Diamond Whip": {
+          displayName: {
+            translationKey: "item:diamondWhip"
+          },
+          type: "Tool",
+          textureInfo: "diamond_whip",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 17,
+          attackRange: 8,
+          knockbackHorizontalScalar: -1.8,
+          description: {
+            translationKey: "item:whipDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 5
+        },
+        "Moonstone Whip": {
+          displayName: {
+            translationKey: "item:moonstoneWhip"
+          },
+          type: "Tool",
+          textureInfo: "moonstone_whip",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 17,
+          attackRange: 8,
+          knockbackHorizontalScalar: -1.8,
+          description: {
+            translationKey: "item:whipDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 5
+        },
+        "Beef Stew": {
+          displayName: {
+            translationKey: "item:beefStew"
+          },
+          type: "Item",
+          textureInfo: "beef_stew",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:beefStewDescription"
+          }
+        },
+        Chicken: {
+          displayName: {
+            translationKey: "item:chicken"
+          },
+          type: "Item",
+          textureInfo: "chicken",
+          heldItemGlb: "chicken",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:chickenDescription"
+          }
+        },
+        Coleslaw: {
+          displayName: {
+            translationKey: "item:coleslaw"
+          },
+          type: "Item",
+          textureInfo: "coleslaw",
+          heldItemGlb: "coleslaw",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:coleslawDescription"
+          }
+        },
+        Egg: {
+          displayName: {
+            translationKey: "item:egg"
+          },
+          type: "Item",
+          textureInfo: "egg",
+          heldItemGlb: "egg",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:eggDescription"
+          }
+        },
+        "Fish N Chips": {
+          displayName: {
+            translationKey: "item:fishNChips"
+          },
+          type: "Item",
+          textureInfo: "fish_n_chips",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:fishNChipsDescription"
+          }
+        },
+        "Fried Rice": {
+          displayName: {
+            translationKey: "item:friedRice"
+          },
+          type: "Item",
+          textureInfo: "fried_rice",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:friedRiceDescription"
+          }
+        },
+        Lettuce: {
+          displayName: {
+            translationKey: "item:lettuce"
+          },
+          type: "Item",
+          textureInfo: "lettuce",
+          heldItemGlb: "lettuce",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:lettuceDescription"
+          }
+        },
+        Omelette: {
+          displayName: {
+            translationKey: "item:omelette"
+          },
+          type: "Item",
+          textureInfo: "omelette",
+          heldItemGlb: "omelette",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:omeletteDescription"
+          }
+        },
+        Onion: {
+          displayName: {
+            translationKey: "item:onion"
+          },
+          type: "Item",
+          textureInfo: "onion",
+          heldItemGlb: "onion",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:onionDescription"
+          }
+        },
+        "Red Cabbage": {
+          displayName: {
+            translationKey: "item:redCabbage"
+          },
+          type: "Item",
+          textureInfo: "red_cabbage",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:redCabbageDescription"
+          }
+        },
+        "Roast Dinner": {
+          displayName: {
+            translationKey: "item:roastDinner"
+          },
+          type: "Item",
+          textureInfo: "roast_dinner",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:roastDinnerDescription"
+          }
+        },
+        Salad: {
+          displayName: {
+            translationKey: "item:salad"
+          },
+          type: "Item",
+          textureInfo: "salad",
+          heldItemGlb: "salad",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:saladDescription"
+          }
+        },
+        "Stuffed Pepper": {
+          displayName: {
+            translationKey: "item:stuffedPepper"
+          },
+          type: "Item",
+          textureInfo: "stuffed_pepper",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:stuffedPepperDescription"
+          }
+        },
+        Sushi: {
+          displayName: {
+            translationKey: "item:sushi"
+          },
+          type: "Item",
+          textureInfo: "sushi",
+          heldItemGlb: "sushi",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:sushiDescription"
+          }
+        },
+        Tomato: {
+          displayName: {
+            translationKey: "item:tomato"
+          },
+          type: "Item",
+          textureInfo: "tomato",
+          heldItemGlb: "tomato",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:tomatoDescription"
+          }
+        },
+        "Vegetable Soup": {
+          displayName: {
+            translationKey: "item:vegetableSoup"
+          },
+          type: "Item",
+          textureInfo: "veg_soup",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:vegetableSoupDescription"
+          }
+        },
+        "Common Lottery Ticket": {
+          displayName: [{
+            str: "Common Lottery Ticket",
+            style: {
+              color: "#4d4d4d"
+            }
+          }],
+          description: "Take it to the Lottery stall in the spawn hub to redeem it for a reward.",
+          type: "Item",
+          textureInfo: "book",
+          heldItemGlb: "Book",
+          weight: 0,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Uncommon Lottery Ticket": {
+          displayName: [{
+            str: "Uncommon Lottery Ticket",
+            style: {
+              color: "#A9FF21"
+            }
+          }],
+          description: "Take it to the Lottery stall in the spawn hub to redeem it for a reward.",
+          type: "Item",
+          textureInfo: "book",
+          heldItemGlb: "Book",
+          weight: 0,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Rare Lottery Ticket": {
+          displayName: [{
+            str: "Rare Lottery Ticket",
+            style: {
+              color: "#84E0FF"
+            }
+          }],
+          description: "Take it to the Lottery stall in the spawn hub to redeem it for a reward.",
+          type: "Item",
+          textureInfo: "book",
+          heldItemGlb: "Book",
+          weight: 0,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Epic Lottery Ticket": {
+          displayName: [{
+            str: "Epic Lottery Ticket",
+            style: {
+              color: "#800080"
+            }
+          }],
+          description: "Take it to the Lottery stall in the spawn hub to redeem it for a reward.",
+          type: "Item",
+          textureInfo: "book",
+          heldItemGlb: "Book",
+          weight: 0,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Legendary Lottery Ticket": {
+          displayName: [{
+            str: "Legendary Lottery Ticket",
+            style: {
+              color: "#ffa500"
+            }
+          }],
+          description: "Take it to the Lottery stall in the spawn hub to redeem it for a reward.",
+          type: "Item",
+          textureInfo: "book",
+          heldItemGlb: "Book",
+          weight: 0,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        ...iY("Wood Clock", "clock_wood", {
+          displayName: {
+            translationKey: "item:woodClock"
+          },
+          type: "Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:clockDescription"
+          }
+        }),
+        ...iY("Gold Clock", "clock_gold", {
+          displayName: {
+            translationKey: "item:goldClock"
+          },
+          type: "Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:clockDescription"
+          }
+        }),
+        "Lucky Sword Upgrade": {
+          displayName: "Sword Upgrade",
+          description: "Use to permanently advance your Sword tier for this match. Share spare upgrades with your team.",
+          type: "Item",
+          textureInfo: "lucky_sword_upgrade",
+          weight: 0,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Lucky Armour Upgrade": {
+          displayName: "Armour Upgrade",
+          description: "Use to permanently advance your Armour tier for this match. Share spare upgrades with your team.",
+          type: "Item",
+          textureInfo: "lucky_armour_upgrade",
+          weight: 0,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Lucky Tools Upgrade": {
+          displayName: "Tools Upgrade",
+          description: "Use to permanently advance your Pickaxe and Axe tier for this match. Share spare upgrades with your team.",
+          type: "Item",
+          textureInfo: "lucky_tools_upgrade",
+          weight: 0,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Lucky Clover": {
+          displayName: "Clovers",
+          description: "Earned from lucky blocks, kills and beds. Spend them at your base's Lucky Trader and Lucky Upgrades.",
+          type: "Item",
+          textureInfo: "lucky_clover",
+          weight: 0,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Void Net": {
+          displayName: "Void Wings",
+          description: "Keep one in your inventory. Falling into the void uses it up and puts you back on solid ground.",
+          type: "Item",
+          textureInfo: "void_net",
+          weight: 0,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Lucky Bomb": {
+          displayName: "Lucky Bomb",
+          description: "A random lucky effect for everyone it splashes, you included. Usually good!",
+          type: "Item",
+          textureInfo: "lucky_bomb",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "Unlucky Bomb": {
+          displayName: "Unlucky Bomb",
+          description: "A random unlucky effect for everyone it splashes, you included. Usually bad!",
+          type: "Item",
+          textureInfo: "unlucky_bomb",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "Swap Orb": {
+          displayName: "Swap Orb",
+          description: "Throw near an enemy or mob to swap places with them.",
+          type: "Item",
+          textureInfo: "swap_orb",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "Golden Lucky Clover": {
+          displayName: "Golden Clover",
+          description: "A shiny golden four-leaf clover.",
+          type: "Item",
+          textureInfo: "golden_lucky_clover",
+          weight: 0,
+          heldItemScale: 1,
+          stackable: !0
+        }
+      };
+    for (const jY of oY.q)
+      for (const YY of jY.materials)
+        for (const rY of jY.kinds) {
+          var lY, TY, eY, NY;
+          const DY = null === (lY = jY.inheritsFrom) || void 0 === lY ? void 0 : lY.call(jY, rY),
+            AY = (0, oY.p)(YY, rY);
+          if (SY[AY]) throw new Error(`Item family "${jY.name}" would overwrite the existing item "${AY}"`);
+          const IY = {
+              displayName: null !== (TY = null === (eY = jY.displayName) || void 0 === eY ? void 0 : eY.call(jY, AY)) && void 0 !== TY ? TY : AY
+            },
+            RY = null === (NY = jY.description) || void 0 === NY ? void 0 : NY.call(jY, YY, rY);
+          if (void 0 !== RY && (IY.description = RY), !DY) {
+            if (!jY.metadata) throw new Error(`Item family "${jY.name}" declares neither inheritsFrom nor metadata`);
+            const YY = (0, FY.xe)(AY);
+            SY[AY] = {
+              ...jY.metadata(rY),
+              ...IY,
+              textureInfo: YY,
+              heldItemGlb: YY
+            };
+            continue
+          }
+          const OY = (0, oY.p)(DY.material, DY.kind);
+          if (!SY[OY]) throw new Error(`Item family "${jY.name}" inherits "${AY}" from "${OY}", which is not registered`);
+          for (const FY of oY.c) {
+            const RY = SY[`${OY}${FY}`];
+            if (!RY) continue;
+            const gY = (0, oY.e)(RY.textureInfo, DY, YY, rY),
+              aY = {
+                ...RY,
+                ...IY,
+                textureInfo: gY,
+                heldItemGlb: gY
+              };
+            RY.rootMetaDesc && (aY.rootMetaDesc = RY.rootMetaDesc.replace(OY, AY)), SY[`${AY}${FY}`] = aY
+          }
+        }
+    SY["Cracked Rubellite Pickaxe"] = {
+      ...SY["Rubellite Pickaxe"],
+      displayName: "Cracked Rubellite Pickaxe",
+      description: "Ruby calls it cracked, not beaten. A sturdy pickaxe ready for the stubborn stone in her mine.",
+      multiplier: 4.75,
+      level: 3,
+      damage: 24
+    };
+    for (const [jY, hY] of [
+        ["Goldheart Engine", "goldheartEngine"],
+        ["Deepbite Drill Tip", "deepbiteDrillTip"],
+        ["Empty Fuel Cell", "emptyFuelCell"],
+        ["Blackfire Fuel Cell", "blackfireFuelCell"]
+      ]) SY[jY] = {
+      displayName: {
+        translationKey: `item:${hY}`
+      },
+      description: {
+        translationKey: `item:${hY}Description`
+      },
+      type: "Item",
+      textureInfo: (0, FY.xe)(jY),
+      weight: 1,
+      heldItemScale: 1,
+      stackable: !0
+    };
+    for (const [jY, hY] of [
+        ["Doom Rivet", "doomRivet"],
+        ["Doom Crest", "doomCrest"]
+      ]) SY[jY] = {
+      displayName: {
+        translationKey: `item:${hY}`
+      },
+      description: {
+        translationKey: `item:${hY}Description`
+      },
+      type: "Item",
+      textureInfo: (0, FY.xe)(jY),
+      weight: 1,
+      heldItemScale: 1,
+      stackable: !0,
+      showInCreativeInven: !1
+    };
+    for (const [jY, hY, dY] of [
+        ["Raw Copper", "rawCopper", "raw_copper"],
+        ["Copper Bar", "copperBar", "copper_bar"],
+        ["Iron Grit", "ironGrit", "iron_grit"],
+        ["Gold Grit", "goldGrit", "gold_grit"],
+        ["Copper Grit", "copperGrit", "copper_grit"],
+        ["Charcoal", "charcoal", "charcoal"]
+      ]) SY[jY] = {
+      displayName: {
+        translationKey: `item:${hY}`
+      },
+      description: {
+        translationKey: `item:${hY}Description`
+      },
+      type: "Item",
+      textureInfo: dY,
+      weight: 1,
+      heldItemScale: 1,
+      stackable: !0,
+      showInCreativeInven: !1
+    };
+    SY["Recall Beacon"] = {
+      displayName: {
+        translationKey: "item:recallBeacon"
+      },
+      description: {
+        translationKey: "item:recallBeaconDescription"
+      },
+      type: "Item",
+      textureInfo: "recall_beacon",
+      weight: 1,
+      heldItemScale: 1,
+      stackable: !1,
+      showInCreativeInven: !1
+    }, SY["Iron Hammer"] = {
+      displayName: {
+        translationKey: "item:ironHammer"
+      },
+      description: {
+        translationKey: "item:ironHammerDescription"
+      },
+      type: "Tool",
+      textureInfo: "iron_hammer",
+      weight: 1,
+      heldItemScale: 1,
+      damage: 27,
+      stackable: !1,
+      harvests: "rock",
+      multiplier: 2.5,
+      level: 3,
+      showInCreativeInven: !1
+    };
+    for (const [jY, hY, dY] of [
+        ["Iron Plate", "ironPlate", "iron_plate"],
+        ["Copper Wire", "copperWire", "copper_wire"],
+        ["Motor", "motor", "motor"]
+      ]) SY[jY] = {
+      displayName: {
+        translationKey: `item:${hY}`
+      },
+      description: {
+        translationKey: `item:${hY}Description`
+      },
+      type: "Item",
+      textureInfo: dY,
+      weight: 1,
+      heldItemScale: 1,
+      stackable: !0,
+      showInCreativeInven: !1
+    };
+    for (const [jY, hY, dY] of [
+        ["Machine Parts", "machineParts", "machine_parts"],
+        ["Relay Coil", "relayCoil", "relay_coil"],
+        ["Deposit Seed (Copper)", "depositSeedCopper", "deposit_seed_copper"],
+        ["Deposit Seed (Gold)", "depositSeedGold", "deposit_seed_gold"],
+        ["Deposit Seed (Voltite)", "depositSeedVoltite", "deposit_seed_voltite"],
+        ["Deposit Seed (Coal)", "depositSeedCoal", "deposit_seed_coal"],
+        ["Deposit Seed (Iron)", "depositSeedIron", "deposit_seed_iron"],
+        ["Deposit Seed (Stone)", "depositSeedStone", "deposit_seed_stone"]
+      ]) SY[jY] = {
+      displayName: {
+        translationKey: `item:${hY}`
+      },
+      description: {
+        translationKey: `item:${hY}Description`
+      },
+      type: "Item",
+      textureInfo: dY,
+      weight: 1,
+      heldItemScale: 1,
+      stackable: !0,
+      showInCreativeInven: !1
+    };
+    for (const [jY, hY, dY, JY] of [
+        ["Steel Bar", "steelBar", "steel_bar", !0],
+        ["Gold Plate", "goldPlate", "gold_plate", !0],
+        ["Logic Board", "logicBoard", "logic_board", !0],
+        ["Machine Hull", "machineHull", "machine_hull", !0],
+        ["Raw Voltite", "rawVoltite", "raw_voltite", !0],
+        ["Power Coupler", "powerCoupler", "power_coupler", !1],
+        ["Ore Lens", "oreLens", "ore_lens", !1],
+        ["Homing Beacon", "homingBeacon", "homing_beacon", !1],
+        ["Pull Charm", "pullCharm", "pull_charm", !1]
+      ]) SY[jY] = {
+      displayName: {
+        translationKey: `item:${hY}`
+      },
+      description: {
+        translationKey: `item:${hY}Description`
+      },
+      type: "Item",
+      textureInfo: dY,
+      weight: 1,
+      heldItemScale: 1,
+      stackable: JY,
+      showInCreativeInven: !1
+    };
+    SY["Vein Breaker"] = {
+      displayName: {
+        translationKey: "item:veinBreaker"
+      },
+      description: {
+        translationKey: "item:veinBreakerDescription"
+      },
+      type: "Tool",
+      textureInfo: "vein_breaker",
+      weight: 1,
+      heldItemScale: 1,
+      damage: 27,
+      stackable: !1,
+      harvests: "rock",
+      multiplier: 6,
+      level: 3,
+      showInCreativeInven: !1
+    };
+    for (const [jY, hY, dY, JY] of [
+        ["Voltite Dust", "voltiteDust", "voltite_dust", !0],
+        ["Voltite Cell", "voltiteCell", "voltite_cell", !0],
+        ["Sky Pack", "skyPack", "sky_pack", !1],
+        ["Dusk Moss", "duskMoss", "dusk_moss", !0]
+      ]) SY[jY] = {
+      displayName: {
+        translationKey: `item:${hY}`
+      },
+      description: {
+        translationKey: `item:${hY}Description`
+      },
+      type: "Item",
+      textureInfo: dY,
+      weight: 1,
+      heldItemScale: 1,
+      stackable: JY,
+      showInCreativeInven: !1
+    };
+    for (const [jY, hY, dY] of [
+        ["Star Alloy", "starAlloy", "star_alloy"],
+        ["Moonstone Dust", "moonstoneDust", "moonstone_dust"],
+        ["Comet Shard", "cometShard", "comet_shard"],
+        ["Comet Core", "cometCore", "comet_core"]
+      ]) SY[jY] = {
+      displayName: {
+        translationKey: `item:${hY}`
+      },
+      description: {
+        translationKey: `item:${hY}Description`
+      },
+      type: "Item",
+      textureInfo: dY,
+      weight: 1,
+      heldItemScale: 1,
+      stackable: !0,
+      showInCreativeInven: !1
+    };
+    SY["Starbore Drill"] = {
+      displayName: {
+        translationKey: "item:starboreDrill"
+      },
+      description: {
+        translationKey: "item:starboreDrillDescription"
+      },
+      type: "Tool",
+      textureInfo: "starbore_drill",
+      weight: 1,
+      heldItemScale: 1,
+      damage: 30,
+      stackable: !1,
+      harvests: "rock",
+      multiplier: 8,
+      level: 5,
+      showInCreativeInven: !1
+    };
+    for (const jY of [2, 3, 4, 5, 6, 7, 8, 9, 10]) SY[`Core Tier ${jY}`] = {
+      displayName: {
+        translationKey: `item:coreTier${jY}`
+      },
+      description: {
+        translationKey: `item:coreTier${jY}Description`
+      },
+      type: "Item",
+      textureInfo: `core_tier_${Math.min(jY,5)}`,
+      weight: 1,
+      heldItemScale: 1,
+      stackable: !0,
+      showInCreativeInven: !1
+    };
+    SY["Arc Caster"] = {
+      displayName: {
+        translationKey: "item:arcCaster"
+      },
+      description: {
+        translationKey: "item:arcCasterDescription"
+      },
+      type: "Item",
+      textureInfo: "arc_caster",
+      weight: 1,
+      heldItemScale: 1,
+      stackable: !1,
+      showInCreativeInven: !1
+    };
+    for (const [jY, hY] of [
+        ["Helmet", .14],
+        ["Chestplate", .25],
+        ["Gauntlets", .12],
+        ["Leggings", .2],
+        ["Boots", .11]
+      ]) SY[`Voltplate ${jY}`] = {
+      displayName: {
+        translationKey: `item:voltplate${jY}`
+      },
+      description: {
+        translationKey: `item:voltplate${jY}Description`
+      },
+      type: "Armour",
+      textureInfo: `voltplate_${jY.toLowerCase()}`,
+      weight: 1,
+      heldItemScale: 1,
+      stackable: !1,
+      armourReduction: hY,
+      showInCreativeInven: !1
+    };
+    for (const jY of EY.e)
+      for (const YY of EY.i) {
+        const rY = (0, EY.q)(jY, YY);
+        SY[rY] = {
+          displayName: {
+            translationKey: `item:${(0,FY.te)(rY)}`
+          },
+          description: {
+            translationKey: `item:sword${YY}Description`
+          },
+          type: "Item",
+          textureInfo: (0, FY.xe)(rY),
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          showInCreativeInven: !1
+        }
+      }
+    SY["Moonstone Sword"] = {
+      ...SY["Diamond Sword"],
+      displayName: {
+        translationKey: "item:moonstoneSword"
+      },
+      textureInfo: "moonstone_sword",
+      showInCreativeInven: !1
+    }, SY["Magmaward Fuel"] = {
+      displayName: {
+        translationKey: "item:magmawardFuel"
+      },
+      description: {
+        translationKey: "item:magmawardFuelDescription"
+      },
+      type: "Item",
+      textureInfo: "magmaward_fuel",
+      weight: 1,
+      heldItemScale: 1,
+      stackable: !0,
+      showInCreativeInven: !1
+    };
+    for (const [jY, hY, dY] of [
+        ["Raw Uranium", "rawUranium", "raw_uranium"],
+        ["Uranium Grit", "uraniumGrit", "uranium_grit"],
+        ["Uranium Pellet", "uraniumPellet", "uranium_pellet"],
+        ["Plutonium Pellet", "plutoniumPellet", "plutonium_pellet"],
+        ["Spent Pellet", "spentPellet", "spent_pellet"],
+        ["Glow Dust", "glowDust", "glow_dust"],
+        ["Biomass", "biomass", "biomass"],
+        ["Graphite", "graphite", "graphite"],
+        ["Containment Plate", "containmentPlate", "containment_plate"],
+        ["Heat Exchanger", "heatExchanger", "heat_exchanger"],
+        ["Focus Lens", "focusLens", "focus_lens"],
+        ["Nova Matter", "novaMatter", "nova_matter"],
+        ["Deposit Seed (Uranium)", "depositSeedUranium", "deposit_seed_uranium"]
+      ]) SY[jY] = {
+      displayName: {
+        translationKey: `item:${hY}`
+      },
+      description: {
+        translationKey: `item:${hY}Description`
+      },
+      type: "Item",
+      textureInfo: dY,
+      weight: 1,
+      heldItemScale: 1,
+      stackable: !0,
+      showInCreativeInven: !1
+    };
+    for (const [jY, hY, dY] of [
+        ["Reactor Blueprint", "reactorBlueprint", "reactor_blueprint"],
+        ["Wrench", "wrench", "wrench"],
+        ["Advanced Coupler", "advancedCoupler", "advanced_coupler"],
+        ["Nova Coupler", "novaCoupler", "nova_upgrade"]
+      ]) SY[jY] = {
+      displayName: {
+        translationKey: `item:${hY}`
+      },
+      description: {
+        translationKey: `item:${hY}Description`
+      },
+      type: "Item",
+      textureInfo: dY,
+      weight: 1,
+      heldItemScale: 1,
+      stackable: !1,
+      showInCreativeInven: !1
+    };
+    for (const jY of ["Arc Caster", "Power Coupler", "Advanced Coupler", "Nova Coupler"]) SY[jY].firstPersonHeldRotationOffset = SY.Flashlight.firstPersonHeldRotationOffset, SY[jY].thirdPersonHeldRotationOffset = SY.Flashlight.thirdPersonHeldRotationOffset;
+    for (const jY of [11, 12, 13, 14, 15]) SY[`Core Tier ${jY}`] = {
+      displayName: {
+        translationKey: `item:coreTier${jY}`
+      },
+      description: {
+        translationKey: `item:coreTier${jY}Description`
+      },
+      type: "Item",
+      textureInfo: "core_tier_5",
+      weight: 1,
+      heldItemScale: 1,
+      stackable: !0,
+      showInCreativeInven: !1
+    };
+    for (const [jY, hY, dY, JY] of [
+        ["Jet Chestplate", "jetChestplate", "jetpack", 0],
+        ["Nova Jet Chestplate", "novaJetChestplate", "nova_jetpack", .27]
+      ]) SY[jY] = {
+      displayName: {
+        translationKey: `item:${hY}`
+      },
+      description: {
+        translationKey: `item:${hY}Description`
+      },
+      type: "Armour",
+      textureInfo: dY,
+      weight: 1,
+      heldItemScale: 1,
+      stackable: !1,
+      armourReduction: JY,
+      showInCreativeInven: !1
+    };
+    for (const [jY, hY] of [
+        ["Helmet", .15],
+        ["Chestplate", .27],
+        ["Gauntlets", .13],
+        ["Leggings", .21],
+        ["Boots", .12]
+      ]) SY[`Nova ${jY}`] = {
+      displayName: {
+        translationKey: `item:nova${jY}`
+      },
+      description: {
+        translationKey: `item:nova${jY}Description`
+      },
+      type: "Armour",
+      textureInfo: `nova_${jY.toLowerCase()}`,
+      weight: 1,
+      heldItemScale: 1,
+      stackable: !1,
+      armourReduction: hY,
+      showInCreativeInven: !1
+    };
+    SY["Nova Blade"] = {
+      displayName: {
+        translationKey: "item:novaBlade"
+      },
+      description: {
+        translationKey: "item:novaBladeDescription"
+      },
+      type: "Tool",
+      textureInfo: "nova_blade",
+      weight: 1,
+      heldItemScale: 1.1,
+      damage: 50,
+      stackable: !1,
+      harvests: null,
+      multiplier: 2,
+      level: 1,
+      showInCreativeInven: !1
+    }, SY["Mob Cage"] = {
+      displayName: {
+        translationKey: "item:mobCage"
+      },
+      description: {
+        translationKey: "item:mobCageDescription"
+      },
+      type: "Item",
+      textureInfo: "mob_cage",
+      weight: 1,
+      heldItemScale: 1,
+      stackable: !0,
+      showInCreativeInven: !1
+    };
+    for (const jY of ["Pig", "Cow", "Sheep", "Deer", "Stag"]) SY[`Caged ${jY}`] = {
+      displayName: {
+        translationKey: `item:caged${jY}`
+      },
+      description: {
+        translationKey: "item:cagedMobDescription"
+      },
+      type: "Item",
+      textureInfo: "mob_cage_filled",
+      weight: 1,
+      heldItemScale: 1,
+      stackable: !1,
+      showInCreativeInven: !1
+    };
+    SY["Nova Multitool"] = {
+      displayName: {
+        translationKey: "item:novaMultitool"
+      },
+      description: {
+        translationKey: "item:novaMultitoolDescription"
+      },
+      type: "Tool",
+      textureInfo: "nova_multitool",
+      weight: 1,
+      heldItemScale: 1,
+      damage: 32,
+      stackable: !1,
+      harvests: "rock",
+      multiplier: 1,
+      level: 5,
+      showInCreativeInven: !1
+    }, SY["Pocket Terminal"] = {
+      displayName: {
+        translationKey: "item:pocketTerminal"
+      },
+      description: {
+        translationKey: "item:pocketTerminalDescription"
+      },
+      type: "Item",
+      textureInfo: "pocket_terminal",
+      weight: 1,
+      heldItemScale: .4,
+      stackable: !1,
+      showInCreativeInven: !1,
+      firstPersonHeldRotationOffset: [-.53, 1.67, .02],
+      thirdPersonHeldRotationOffset: [-Math.PI / 2, 0, 0]
+    };
+    for (const [jY, hY, dY, JY] of [
+        ["Comet Beacon", "cometBeacon", "comet_beacon", !0],
+        ["Nova Wrench", "novaWrench", "nova_wrench", !1]
+      ]) SY[jY] = {
+      displayName: {
+        translationKey: `item:${hY}`
+      },
+      description: {
+        translationKey: `item:${hY}Description`
+      },
+      type: "Item",
+      textureInfo: dY,
+      weight: 1,
+      heldItemScale: 1,
+      stackable: JY,
+      showInCreativeInven: !1
+    };
+
+    function BY(YY, rY) {
+      return [...YY, ...(0, oY.l)(oY.q, rY)].map((YY => ZY[YY].id))
     }
+
+    function cY(YY) {
+      return YY.split(" ")[0]
+    }
+    const KY = .0018;
+    let HY = Object.values(RY.h).reduce(((YY, rY) => Math.max(YY, rY.id)), 0) + 1;
+    for (const jY in SY) SY[jY].id = HY, SY[jY].name = jY, SY[HY] = SY[jY], (0, AY.i)(SY, SY[jY]), ++HY;
+    const zY = {};
+    for (const jY in SY) zY[jY] = new IY.f(SY[jY]);
+    const ZY = {},
+      CY = [RY.h, zY].flatMap(Object.entries);
+    for (const [jY, hY] of CY) ZY[jY] = hY, ZY[hY.id] = hY;
+    for (const jY of WY.d) {
+      const YY = jY;
+      if (!ZY[YY]) throw new Error(`Missing "${YY}" item for vehicle type "${jY}"`)
+    }
+    const fY = {};
+    for (const jY in SY)
+      if ("rock" === SY[jY].harvests) {
+        const YY = SY[jY].level;
+        if (void 0 !== YY && "string" === typeof jY)
+          for (let rY = 0; rY <= YY; rY++) {
+            const DY = fY[rY];
+            (void 0 === DY || YY < SY[DY].level) && (fY[rY] = jY)
+          }
+      }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

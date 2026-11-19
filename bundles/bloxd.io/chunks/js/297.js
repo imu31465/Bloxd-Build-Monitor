@@ -1,409 +1,472 @@
 export const id = 297;
-export const ids = [297];
+export const ids = [296, 297];
 export const modules = {
-  40701: (BB, TB, dB) => {
-    dB.d(TB, {
-      b: () => lB
+  40838: (YY, rY, DY) => {
+    DY.r(rY), DY.d(rY, {
+      _DDSTextureLoader: () => IY
     });
-    var VB = dB(38595);
-    const yB = "bakedVertexAnimation",
-      pB = "#ifdef BAKED_VERTEX_ANIMATION_TEXTURE\n{\n#ifdef INSTANCES\n#define BVASNAME bakedVertexAnimationSettingsInstanced\n#else\n#define BVASNAME bakedVertexAnimationSettings\n#endif\nfloat VATStartFrame=BVASNAME.x;float VATEndFrame=BVASNAME.y;float VATOffsetFrame=BVASNAME.z;float VATSpeed=BVASNAME.w;float totalFrames=VATEndFrame-VATStartFrame+1.0;float time=bakedVertexAnimationTime*VATSpeed/totalFrames;float frameCorrection=time<1.0 ? 0.0 : 1.0;float numOfFrames=totalFrames-frameCorrection;float VATFrameNum=fract(time)*numOfFrames;VATFrameNum=mod(VATFrameNum+VATOffsetFrame,numOfFrames);VATFrameNum=floor(VATFrameNum);VATFrameNum+=VATStartFrame+frameCorrection;mat4 VATInfluence;VATInfluence=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndices[0],VATFrameNum)*matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndices[1],VATFrameNum)*matricesWeights[1];\n#endif\n#if NUM_BONE_INFLUENCERS>2\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndices[2],VATFrameNum)*matricesWeights[2];\n#endif\n#if NUM_BONE_INFLUENCERS>3\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndices[3],VATFrameNum)*matricesWeights[3];\n#endif\n#if NUM_BONE_INFLUENCERS>4\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndicesExtra[0],VATFrameNum)*matricesWeightsExtra[0];\n#endif\n#if NUM_BONE_INFLUENCERS>5\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndicesExtra[1],VATFrameNum)*matricesWeightsExtra[1];\n#endif\n#if NUM_BONE_INFLUENCERS>6\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndicesExtra[2],VATFrameNum)*matricesWeightsExtra[2];\n#endif\n#if NUM_BONE_INFLUENCERS>7\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndicesExtra[3],VATFrameNum)*matricesWeightsExtra[3];\n#endif\nfinalWorld=finalWorld*VATInfluence;}\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
+    var FY = DY(39120),
+      AY = DY(40821);
+    class IY {
+      constructor() {
+        this.supportCascades = !0
+      }
+      loadCubeData(YY, rY, DY, IY) {
+        const RY = rY.ky();
+        let OY, gY = !1,
+          aY = 1e3;
+        if (Array.isArray(YY))
+          for (let FY = 0; FY < YY.length; FY++) {
+            const DY = YY[FY];
+            OY = AY.DDSTools.GetDDSInfo(DY), rY.width = OY.width, rY.height = OY.height, gY = (OY.isRGB || OY.isLuminance || OY.mipmapCount > 1) && rY.generateMipMaps, RY._unpackFlipY(OY.isCompressed), AY.DDSTools.UploadDDSLevels(RY, rY, DY, OY, gY, 6, -1, FY), OY.isFourCC || 1 !== OY.mipmapCount ? aY = OY.mipmapCount - 1 : RY.generateMipMapsForCubemap(rY)
+          } else {
+            const IY = YY;
+            OY = AY.DDSTools.GetDDSInfo(IY), rY.width = OY.width, rY.height = OY.height, DY && (OY.sphericalPolynomial = new FY.f), gY = (OY.isRGB || OY.isLuminance || OY.mipmapCount > 1) && rY.generateMipMaps, RY._unpackFlipY(OY.isCompressed), AY.DDSTools.UploadDDSLevels(RY, rY, IY, OY, gY, 6), OY.isFourCC || 1 !== OY.mipmapCount ? aY = OY.mipmapCount - 1 : RY.generateMipMapsForCubemap(rY, !1)
+          }
+        RY._setCubeMapTextureParams(rY, gY, aY), rY.isReady = !0, rY.onLoadedObservable.notifyObservers(rY), rY.onLoadedObservable.clear(), IY && IY({
+          isDDS: !0,
+          width: rY.width,
+          info: OY,
+          data: YY,
+          texture: rY
+        })
+      }
+      loadData(YY, rY, DY) {
+        const FY = AY.DDSTools.GetDDSInfo(YY),
+          IY = (FY.isRGB || FY.isLuminance || FY.mipmapCount > 1) && rY.generateMipMaps && Math.max(FY.width, FY.height) >> FY.mipmapCount - 1 === 1;
+        DY(FY.width, FY.height, IY, FY.isFourCC, (() => {
+          AY.DDSTools.UploadDDSLevels(rY.ky(), rY, YY, FY, IY, 1)
+        }))
+      }
     }
   },
-  40599: (BB, TB, dB) => {
-    dB.d(TB, {
-      c: () => lB
+  40825: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => aY
     });
-    var VB = dB(38595);
-    const yB = "bakedVertexAnimationDeclaration",
-      pB = "#ifdef BAKED_VERTEX_ANIMATION_TEXTURE\nuniform float bakedVertexAnimationTime;\n#if !defined(WEBGL2) && !defined(WEBGPU)\nuniform vec2 bakedVertexAnimationTextureSizeInverted;\n#endif\nuniform vec4 bakedVertexAnimationSettings;uniform sampler2D bakedVertexAnimationTexture;\n#ifdef INSTANCES\nattribute vec4 bakedVertexAnimationSettingsInstanced;\n#endif\n#define inline\nmat4 readMatrixFromRawSamplerVAT(sampler2D smp,float index,float frame)\n{\n#if defined(WEBGL2) || defined(WEBGPU)\nint offset=int(index)*4;int frameUV=int(frame);vec4 m0=texelFetch(smp,ivec2(offset+0,frameUV),0);vec4 m1=texelFetch(smp,ivec2(offset+1,frameUV),0);vec4 m2=texelFetch(smp,ivec2(offset+2,frameUV),0);vec4 m3=texelFetch(smp,ivec2(offset+3,frameUV),0);return mat4(m0,m1,m2,m3);\n#else\nfloat offset=index*4.0;float frameUV=(frame+0.5)*bakedVertexAnimationTextureSizeInverted.y;float dx=bakedVertexAnimationTextureSizeInverted.x;vec4 m0=texture2D(smp,vec2(dx*(offset+0.5),frameUV));vec4 m1=texture2D(smp,vec2(dx*(offset+1.5),frameUV));vec4 m2=texture2D(smp,vec2(dx*(offset+2.5),frameUV));vec4 m3=texture2D(smp,vec2(dx*(offset+3.5),frameUV));return mat4(m0,m1,m2,m3);\n#endif\n}\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
+    var FY = DY(36524),
+      AY = DY(36559),
+      IY = DY(39120),
+      RY = DY(36533),
+      OY = DY(36588);
+    class gY {
+      constructor(YY, rY, DY, FY) {
+        this.name = YY, this.worldAxisForNormal = rY, this.worldAxisForFileX = DY, this.worldAxisForFileY = FY
+      }
     }
+    class aY {
+      static _NearestPow2Floor(YY) {
+        return YY <= 1 ? 1 : 1 << Math.floor(Math.log2(YY))
+      }
+      static ConvertCubeMapTextureToSphericalPolynomial(YY) {
+        if (!YY.isCube) return null;
+        YY.hT()?.ky().flushFramebuffer();
+        const rY = YY.getSize().width,
+          DY = YY._sphericalPolynomialTargetSize,
+          FY = DY > 0 ? this._NearestPow2Floor(DY) : 0,
+          AY = !YY.noMipmap && !0 === YY._texture?.generateMipMaps,
+          IY = FY > 0 && FY < rY && AY,
+          RY = IY ? Math.max(0, Math.round(Math.log2(rY / FY))) : 0,
+          OY = IY ? Math.max(1, Math.floor(rY / Math.pow(2, RY))) : rY,
+          gY = YY.readPixels(0, RY, void 0, !1),
+          aY = YY.readPixels(1, RY, void 0, !1);
+        let vY, uY;
+        YY.isRenderTarget ? (vY = YY.readPixels(3, RY, void 0, !1), uY = YY.readPixels(2, RY, void 0, !1)) : (vY = YY.readPixels(2, RY, void 0, !1), uY = YY.readPixels(3, RY, void 0, !1));
+        const sY = YY.readPixels(4, RY, void 0, !1),
+          iY = YY.readPixels(5, RY, void 0, !1),
+          yY = YY.gammaSpace,
+          QY = FY > 0 && FY < rY && !IY;
+        return new Promise((YY => {
+          Promise.all([aY, gY, vY, uY, sY, iY]).then((DY => {
+            let [AY, IY, RY, gY, aY, vY] = DY, uY = OY;
+            if (QY) {
+              const YY = 4;
+              AY = this._DownsampleFace(AY, rY, FY, YY), IY = this._DownsampleFace(IY, rY, FY, YY), RY = this._DownsampleFace(RY, rY, FY, YY), gY = this._DownsampleFace(gY, rY, FY, YY), aY = this._DownsampleFace(aY, rY, FY, YY), vY = this._DownsampleFace(vY, rY, FY, YY), uY = FY
+            }
+            const sY = {
+              size: uY,
+              right: IY,
+              left: AY,
+              up: RY,
+              down: gY,
+              front: aY,
+              back: vY,
+              format: 5,
+              type: AY instanceof Float32Array ? 1 : 0,
+              gammaSpace: yY
+            };
+            YY(this.ConvertCubeMapToSphericalPolynomial(sY))
+          }))
+        }))
+      }
+      static _AreaElement(YY, rY) {
+        return Math.atan2(YY * rY, Math.sqrt(YY * YY + rY * rY + 1))
+      }
+      static _DownsampleFace(YY, rY, DY, FY) {
+        const AY = YY instanceof Float32Array ? YY : Float32Array.from(YY),
+          IY = DY * DY * FY,
+          RY = new Float32Array(IY),
+          OY = rY / DY,
+          gY = 1 / (OY * OY);
+        for (let vY = 0; vY < DY; vY++) {
+          const YY = Math.floor(vY * OY),
+            IY = Math.floor((vY + 1) * OY);
+          for (let aY = 0; aY < DY; aY++) {
+            const uY = Math.floor(aY * OY),
+              sY = Math.floor((aY + 1) * OY),
+              iY = (vY * DY + aY) * FY;
+            for (let DY = 0; DY < FY; DY++) {
+              let OY = 0;
+              for (let RY = YY; RY < IY; RY++)
+                for (let YY = uY; YY < sY; YY++) OY += AY[(RY * rY + YY) * FY + DY];
+              RY[iY + DY] = OY * gY
+            }
+          }
+        }
+        if (YY instanceof Float32Array) return RY;
+        const aY = new(0, YY.constructor)(IY);
+        for (let vY = 0; vY < IY; vY++) aY[vY] = RY[vY] + .5 | 0;
+        return aY
+      }
+      static ConvertCubeMapToSphericalPolynomial(YY) {
+        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const DY = rY > 0 ? this._NearestPow2Floor(rY) : 0;
+        if (DY > 0 && YY.size > DY) {
+          const rY = 5 === YY.format ? 4 : 3,
+            FY = ["right", "left", "up", "down", "front", "back"],
+            AY = {};
+          for (const IY of FY) AY[IY] = this._DownsampleFace(YY[IY], YY.size, DY, rY);
+          YY = {
+            ...YY,
+            ...AY,
+            size: DY
+          }
+        }
+        const FY = new IY.b;
+        let gY = 0;
+        const aY = 2 / YY.size,
+          vY = aY,
+          uY = .5 * aY,
+          sY = uY - 1;
+        for (let IY = 0; IY < 6; IY++) {
+          const rY = this._FileFaces[IY],
+            DY = YY[rY.name];
+          let iY = sY;
+          const yY = 5 === YY.format ? 4 : 3;
+          for (let IY = 0; IY < YY.size; IY++) {
+            let QY = sY;
+            for (let vY = 0; vY < YY.size; vY++) {
+              const sY = rY.worldAxisForFileX.scale(QY).add(rY.worldAxisForFileY.scale(iY)).add(rY.worldAxisForNormal);
+              sY.normalize();
+              const oY = this._AreaElement(QY - uY, iY - uY) - this._AreaElement(QY - uY, iY + uY) - this._AreaElement(QY + uY, iY - uY) + this._AreaElement(QY + uY, iY + uY);
+              let WY = DY[IY * YY.size * yY + vY * yY + 0],
+                EY = DY[IY * YY.size * yY + vY * yY + 1],
+                mY = DY[IY * YY.size * yY + vY * yY + 2];
+              isNaN(WY) && (WY = 0), isNaN(EY) && (EY = 0), isNaN(mY) && (mY = 0), 0 === YY.type && (WY /= 255, EY /= 255, mY /= 255), YY.gammaSpace && (WY = Math.pow((0, AY.Clamp)(WY), RY.g), EY = Math.pow((0, AY.Clamp)(EY), RY.g), mY = Math.pow((0, AY.Clamp)(mY), RY.g));
+              const VY = this.MAX_HDRI_VALUE;
+              if (this.PRESERVE_CLAMPED_COLORS) {
+                const YY = Math.max(WY, EY, mY);
+                if (YY > VY) {
+                  const rY = VY / YY;
+                  WY *= rY, EY *= rY, mY *= rY
+                }
+              } else WY = (0, AY.Clamp)(WY, 0, VY), EY = (0, AY.Clamp)(EY, 0, VY), mY = (0, AY.Clamp)(mY, 0, VY);
+              const SY = new OY.c(WY, EY, mY);
+              FY.addLight(sY, SY, oY), gY += oY, QY += aY
+            }
+            iY += vY
+          }
+        }
+        const iY = 6 * (4 * Math.PI) / 6 / gY;
+        return FY.scaleInPlace(iY), FY.convertIncidentRadianceToIrradiance(), FY.convertIrradianceToLambertianRadiance(), IY.f.FromHarmonics(FY)
+      }
+    }
+    aY._FileFaces = [new gY("right", new FY.r(1, 0, 0), new FY.r(0, 0, -1), new FY.r(0, -1, 0)), new gY("left", new FY.r(-1, 0, 0), new FY.r(0, 0, 1), new FY.r(0, -1, 0)), new gY("up", new FY.r(0, 1, 0), new FY.r(1, 0, 0), new FY.r(0, 0, 1)), new gY("down", new FY.r(0, -1, 0), new FY.r(1, 0, 0), new FY.r(0, 0, -1)), new gY("front", new FY.r(0, 0, 1), new FY.r(1, 0, 0), new FY.r(0, -1, 0)), new gY("back", new FY.r(0, 0, -1), new FY.r(-1, 0, 0), new FY.r(0, -1, 0))], aY.MAX_HDRI_VALUE = 4096, aY.PRESERVE_CLAMPED_COLORS = !1
   },
-  40597: (BB, TB, dB) => {
-    dB.d(TB, {
-      b: () => lB
+  40821: (YY, rY, DY) => {
+    DY.d(rY, {
+      DDSTools: () => yY
     });
-    var VB = dB(38595);
-    const yB = "bonesDeclaration",
-      pB = "#if NUM_BONE_INFLUENCERS>0\nattribute vec4 matricesIndices;attribute vec4 matricesWeights;\n#if NUM_BONE_INFLUENCERS>4\nattribute vec4 matricesIndicesExtra;attribute vec4 matricesWeightsExtra;\n#endif\n#ifndef BAKED_VERTEX_ANIMATION_TEXTURE\n#ifdef BONETEXTURE\nuniform highp sampler2D boneSampler;uniform vec2 boneTextureInfo;\n#else\nuniform mat4 mBones[BonesPerMesh];\n#endif\n#ifdef BONES_VELOCITY_ENABLED\nuniform mat4 mPreviousBones[BonesPerMesh];\n#endif\n#ifdef BONETEXTURE\n#define inline\nmat4 readMatrixFromRawSampler(sampler2D smp,float index)\n{\n#if defined(WEBGL2) || defined(WEBGPU)\nint offset=int(index)*4; \nint textureWidth=int(boneTextureInfo.x);int y=int(offset)/textureWidth;int x=int(offset) % textureWidth;vec4 m0=texelFetch(smp,ivec2(x+0,y),0);vec4 m1=texelFetch(smp,ivec2(x+1,y),0);vec4 m2=texelFetch(smp,ivec2(x+2,y),0);vec4 m3=texelFetch(smp,ivec2(x+3,y),0);return mat4(m0,m1,m2,m3);\n#else\nfloat offset=index*4.0;float y=floor(offset/boneTextureInfo.x);float x=offset-y*boneTextureInfo.x;float dy=1.0/boneTextureInfo.y;float dx=1.0/boneTextureInfo.x;vec4 m0=texture2D(smp,vec2(dx*(x+0.5),dy*(y+0.5)));vec4 m1=texture2D(smp,vec2(dx*(x+1.5),dy*(y+0.5)));vec4 m2=texture2D(smp,vec2(dx*(x+2.5),dy*(y+0.5)));vec4 m3=texture2D(smp,vec2(dx*(x+3.5),dy*(y+0.5))); \nreturn mat4(m0,m1,m2,m3);\n#endif\n}\n#endif\n#endif\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
+    var FY = DY(36559),
+      AY = DY(38040),
+      IY = DY(40825),
+      RY = DY(39184);
+    const OY = 131072,
+      gY = 131072;
+
+    function aY(YY) {
+      return YY.charCodeAt(0) + (YY.charCodeAt(1) << 8) + (YY.charCodeAt(2) << 16) + (YY.charCodeAt(3) << 24)
     }
-  },
-  40699: (BB, TB, dB) => {
-    dB.d(TB, {
-      c: () => lB
-    });
-    var VB = dB(38595);
-    const yB = "bonesVertex",
-      pB = "#ifndef BAKED_VERTEX_ANIMATION_TEXTURE\n#if NUM_BONE_INFLUENCERS>0\nmat4 influence;\n#ifdef BONETEXTURE\ninfluence=readMatrixFromRawSampler(boneSampler,matricesIndices[0])*matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndices[1])*matricesWeights[1];\n#endif\n#if NUM_BONE_INFLUENCERS>2\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndices[2])*matricesWeights[2];\n#endif\n#if NUM_BONE_INFLUENCERS>3\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndices[3])*matricesWeights[3];\n#endif\n#if NUM_BONE_INFLUENCERS>4\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndicesExtra[0])*matricesWeightsExtra[0];\n#endif\n#if NUM_BONE_INFLUENCERS>5\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndicesExtra[1])*matricesWeightsExtra[1];\n#endif\n#if NUM_BONE_INFLUENCERS>6\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndicesExtra[2])*matricesWeightsExtra[2];\n#endif\n#if NUM_BONE_INFLUENCERS>7\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndicesExtra[3])*matricesWeightsExtra[3];\n#endif\n#else\ninfluence=mBones[int(matricesIndices[0])]*matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\ninfluence+=mBones[int(matricesIndices[1])]*matricesWeights[1];\n#endif\n#if NUM_BONE_INFLUENCERS>2\ninfluence+=mBones[int(matricesIndices[2])]*matricesWeights[2];\n#endif\n#if NUM_BONE_INFLUENCERS>3\ninfluence+=mBones[int(matricesIndices[3])]*matricesWeights[3];\n#endif\n#if NUM_BONE_INFLUENCERS>4\ninfluence+=mBones[int(matricesIndicesExtra[0])]*matricesWeightsExtra[0];\n#endif\n#if NUM_BONE_INFLUENCERS>5\ninfluence+=mBones[int(matricesIndicesExtra[1])]*matricesWeightsExtra[1];\n#endif\n#if NUM_BONE_INFLUENCERS>6\ninfluence+=mBones[int(matricesIndicesExtra[2])]*matricesWeightsExtra[2];\n#endif\n#if NUM_BONE_INFLUENCERS>7\ninfluence+=mBones[int(matricesIndicesExtra[3])]*matricesWeightsExtra[3];\n#endif\n#endif\nfinalWorld=finalWorld*influence;\n#endif\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
+    const vY = aY("DXT1"),
+      uY = aY("DXT3"),
+      sY = aY("DXT5"),
+      iY = aY("DX10");
+    class yY {
+      static GetDDSInfo(YY) {
+        const rY = new Int32Array(YY.buffer, YY.byteOffset, 31),
+          DY = new Int32Array(YY.buffer, YY.byteOffset, 35);
+        let FY = 1;
+        rY[2] & OY && (FY = Math.max(1, rY[7]));
+        const AY = rY[21],
+          IY = AY === iY ? DY[32] : 0;
+        let RY = 0;
+        switch (AY) {
+          case 113:
+            RY = 2;
+            break;
+          case 116:
+            RY = 1;
+            break;
+          case iY:
+            if (10 === IY) {
+              RY = 2;
+              break
+            }
+            if (2 === IY) {
+              RY = 1;
+              break
+            }
+        }
+        return {
+          width: rY[4],
+          height: rY[3],
+          mipmapCount: FY,
+          isFourCC: 4 === (4 & rY[20]),
+          isRGB: 64 === (64 & rY[20]),
+          isLuminance: (rY[20] & gY) === gY,
+          isCube: 512 === (512 & rY[28]),
+          isCompressed: AY === vY || AY === uY || AY === sY,
+          dxgiFormat: IY,
+          textureType: RY
+        }
+      }
+      static _GetHalfFloatAsFloatRGBAArrayBuffer(YY, rY, DY, FY, AY, IY) {
+        const OY = new Float32Array(FY),
+          gY = new Uint16Array(AY, DY);
+        let aY = 0;
+        for (let vY = 0; vY < rY; vY++)
+          for (let rY = 0; rY < YY; rY++) {
+            const DY = 4 * (rY + vY * YY);
+            OY[aY] = (0, RY.c)(gY[DY]), OY[aY + 1] = (0, RY.c)(gY[DY + 1]), OY[aY + 2] = (0, RY.c)(gY[DY + 2]), yY.StoreLODInAlphaChannel ? OY[aY + 3] = IY : OY[aY + 3] = (0, RY.c)(gY[DY + 3]), aY += 4
+          }
+        return OY
+      }
+      static _GetHalfFloatRGBAArrayBuffer(YY, rY, DY, FY, AY, IY) {
+        if (yY.StoreLODInAlphaChannel) {
+          const OY = new Uint16Array(FY),
+            gY = new Uint16Array(AY, DY);
+          let aY = 0;
+          for (let DY = 0; DY < rY; DY++)
+            for (let rY = 0; rY < YY; rY++) {
+              const FY = 4 * (rY + DY * YY);
+              OY[aY] = gY[FY], OY[aY + 1] = gY[FY + 1], OY[aY + 2] = gY[FY + 2], OY[aY + 3] = (0, RY.k)(IY), aY += 4
+            }
+          return OY
+        }
+        return new Uint16Array(AY, DY, FY)
+      }
+      static _GetFloatRGBAArrayBuffer(YY, rY, DY, FY, AY, IY) {
+        if (yY.StoreLODInAlphaChannel) {
+          const RY = new Float32Array(FY),
+            OY = new Float32Array(AY, DY);
+          let gY = 0;
+          for (let DY = 0; DY < rY; DY++)
+            for (let rY = 0; rY < YY; rY++) {
+              const FY = 4 * (rY + DY * YY);
+              RY[gY] = OY[FY], RY[gY + 1] = OY[FY + 1], RY[gY + 2] = OY[FY + 2], RY[gY + 3] = IY, gY += 4
+            }
+          return RY
+        }
+        return new Float32Array(AY, DY, FY)
+      }
+      static _GetFloatAsHalfFloatRGBAArrayBuffer(YY, rY, DY, FY, AY, IY) {
+        const OY = new Uint16Array(FY),
+          gY = new Float32Array(AY, DY);
+        let aY = 0;
+        for (let vY = 0; vY < rY; vY++)
+          for (let rY = 0; rY < YY; rY++) OY[aY] = (0, RY.k)(gY[aY]), OY[aY + 1] = (0, RY.k)(gY[aY + 1]), OY[aY + 2] = (0, RY.k)(gY[aY + 2]), yY.StoreLODInAlphaChannel ? OY[aY + 3] = (0, RY.k)(IY) : OY[aY + 3] = (0, RY.k)(gY[aY + 3]), aY += 4;
+        return OY
+      }
+      static _GetFloatAsUIntRGBAArrayBuffer(YY, rY, DY, AY, IY, RY) {
+        const OY = new Uint8Array(AY),
+          gY = new Float32Array(IY, DY);
+        let aY = 0;
+        for (let vY = 0; vY < rY; vY++)
+          for (let rY = 0; rY < YY; rY++) {
+            const DY = 4 * (rY + vY * YY);
+            OY[aY] = 255 * (0, FY.Clamp)(gY[DY]), OY[aY + 1] = 255 * (0, FY.Clamp)(gY[DY + 1]), OY[aY + 2] = 255 * (0, FY.Clamp)(gY[DY + 2]), yY.StoreLODInAlphaChannel ? OY[aY + 3] = RY : OY[aY + 3] = 255 * (0, FY.Clamp)(gY[DY + 3]), aY += 4
+          }
+        return OY
+      }
+      static _GetHalfFloatAsUIntRGBAArrayBuffer(YY, rY, DY, AY, IY, OY) {
+        const gY = new Uint8Array(AY),
+          aY = new Uint16Array(IY, DY);
+        let vY = 0;
+        for (let uY = 0; uY < rY; uY++)
+          for (let rY = 0; rY < YY; rY++) {
+            const DY = 4 * (rY + uY * YY);
+            gY[vY] = 255 * (0, FY.Clamp)((0, RY.c)(aY[DY])), gY[vY + 1] = 255 * (0, FY.Clamp)((0, RY.c)(aY[DY + 1])), gY[vY + 2] = 255 * (0, FY.Clamp)((0, RY.c)(aY[DY + 2])), yY.StoreLODInAlphaChannel ? gY[vY + 3] = OY : gY[vY + 3] = 255 * (0, FY.Clamp)((0, RY.c)(aY[DY + 3])), vY += 4
+          }
+        return gY
+      }
+      static _GetRGBAArrayBuffer(YY, rY, DY, FY, AY, IY, RY, OY, gY) {
+        const aY = new Uint8Array(FY),
+          vY = new Uint8Array(AY, DY);
+        let uY = 0;
+        for (let sY = 0; sY < rY; sY++)
+          for (let rY = 0; rY < YY; rY++) {
+            const DY = 4 * (rY + sY * YY);
+            aY[uY] = vY[DY + IY], aY[uY + 1] = vY[DY + RY], aY[uY + 2] = vY[DY + OY], aY[uY + 3] = vY[DY + gY], uY += 4
+          }
+        return aY
+      }
+      static _ExtractLongWordOrder(YY) {
+        return 0 === YY || 255 === YY || -16777216 === YY ? 0 : 1 + yY._ExtractLongWordOrder(YY >> 8)
+      }
+      static _GetRGBArrayBuffer(YY, rY, DY, FY, AY, IY, RY, OY) {
+        const gY = new Uint8Array(FY),
+          aY = new Uint8Array(AY, DY);
+        let vY = 0;
+        for (let uY = 0; uY < rY; uY++)
+          for (let rY = 0; rY < YY; rY++) {
+            const DY = 3 * (rY + uY * YY);
+            gY[vY] = aY[DY + IY], gY[vY + 1] = aY[DY + RY], gY[vY + 2] = aY[DY + OY], vY += 3
+          }
+        return gY
+      }
+      static _GetLuminanceArrayBuffer(YY, rY, DY, FY, AY) {
+        const IY = new Uint8Array(FY),
+          RY = new Uint8Array(AY, DY);
+        let OY = 0;
+        for (let gY = 0; gY < rY; gY++)
+          for (let rY = 0; rY < YY; rY++) {
+            const DY = rY + gY * YY;
+            IY[OY] = RY[DY], OY++
+          }
+        return IY
+      }
+      static UploadDDSLevels(YY, rY, DY, FY, RY, gY) {
+        let aY = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : -1,
+          QY = arguments.length > 7 ? arguments[7] : void 0,
+          oY = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8],
+          WY = null;
+        FY.sphericalPolynomial && (WY = []);
+        const EY = !!YY.getCaps().s3tc;
+        rY.generateMipMaps = RY;
+        const mY = new Int32Array(DY.buffer, DY.byteOffset, 31);
+        let VY, SY, lY, TY, eY, NY, BY, cY = 0,
+          KY = 0,
+          HY = 1;
+        if (542327876 !== mY[0]) return void AY.d.Error("Invalid magic number in DDS header");
+        if (!FY.isFourCC && !FY.isRGB && !FY.isLuminance) return void AY.d.Error("Unsupported format, must contain a FourCC, RGB or LUMINANCE code");
+        if (FY.isCompressed && !EY) return void AY.d.Error("Compressed textures are not supported on this platform.");
+        let zY = mY[22];
+        TY = mY[1] + 4;
+        let ZY = !1;
+        if (FY.isFourCC) switch (VY = mY[21], VY) {
+          case vY:
+            HY = 8, KY = 33777;
+            break;
+          case uY:
+            HY = 16, KY = 33778;
+            break;
+          case sY:
+            HY = 16, KY = 33779;
+            break;
+          case 113:
+            ZY = !0, zY = 64;
+            break;
+          case 116:
+            ZY = !0, zY = 128;
+            break;
+          case iY: {
+            TY += 20;
+            let YY = !1;
+            switch (FY.dxgiFormat) {
+              case 10:
+                ZY = !0, zY = 64, YY = !0;
+                break;
+              case 2:
+                ZY = !0, zY = 128, YY = !0;
+                break;
+              case 88:
+                FY.isRGB = !0, FY.isFourCC = !1, zY = 32, YY = !0
+            }
+            if (YY) break
+          }
+          default:
+            return void AY.d.Error(["Unsupported FourCC code:", (CY = VY, String.fromCharCode(255 & CY, CY >> 8 & 255, CY >> 16 & 255, CY >> 24 & 255))])
+        }
+        var CY;
+        const fY = yY._ExtractLongWordOrder(mY[23]),
+          jY = yY._ExtractLongWordOrder(mY[24]),
+          hY = yY._ExtractLongWordOrder(mY[25]),
+          dY = yY._ExtractLongWordOrder(mY[26]);
+        ZY && (KY = YY._getRGBABufferInternalSizedFormat(FY.textureType)), NY = 1, mY[2] & OY && !1 !== RY && (NY = Math.max(1, mY[7]));
+        const JY = QY || 0,
+          MY = YY.getCaps();
+        for (let AY = JY; AY < gY; AY++) {
+          for (SY = mY[4], lY = mY[3], BY = 0; BY < NY; ++BY) {
+            if (-1 === aY || aY === BY) {
+              const IY = -1 === aY ? BY : 0;
+              if (!FY.isCompressed && FY.isFourCC) {
+                rY.format = 5, cY = SY * lY * 4;
+                let FY = null;
+                if (YY._badOS || YY._badDesktopOS || !MY.textureHalfFloat && !MY.textureFloat) 128 === zY ? (FY = yY._GetFloatAsUIntRGBAArrayBuffer(SY, lY, DY.byteOffset + TY, cY, DY.buffer, IY), WY && 0 == IY && WY.push(yY._GetFloatRGBAArrayBuffer(SY, lY, DY.byteOffset + TY, cY, DY.buffer, IY))) : 64 === zY && (FY = yY._GetHalfFloatAsUIntRGBAArrayBuffer(SY, lY, DY.byteOffset + TY, cY, DY.buffer, IY), WY && 0 == IY && WY.push(yY._GetHalfFloatAsFloatRGBAArrayBuffer(SY, lY, DY.byteOffset + TY, cY, DY.buffer, IY))), rY.type = 0;
+                else {
+                  const YY = MY.textureFloat && (oY && MY.textureFloatLinearFiltering || !oY),
+                    AY = MY.textureHalfFloat && (oY && MY.textureHalfFloatLinearFiltering || !oY),
+                    RY = (128 === zY || 64 === zY && !AY) && YY ? 1 : (64 === zY || 128 === zY && !YY) && AY ? 2 : 0;
+                  let OY, gY = null;
+                  if (128 === zY) switch (RY) {
+                    case 1:
+                      OY = yY._GetFloatRGBAArrayBuffer, gY = null;
+                      break;
+                    case 2:
+                      OY = yY._GetFloatAsHalfFloatRGBAArrayBuffer, gY = yY._GetFloatRGBAArrayBuffer;
+                      break;
+                    case 0:
+                      OY = yY._GetFloatAsUIntRGBAArrayBuffer, gY = yY._GetFloatRGBAArrayBuffer
+                  } else switch (RY) {
+                    case 1:
+                      OY = yY._GetHalfFloatAsFloatRGBAArrayBuffer, gY = null;
+                      break;
+                    case 2:
+                      OY = yY._GetHalfFloatRGBAArrayBuffer, gY = yY._GetHalfFloatAsFloatRGBAArrayBuffer;
+                      break;
+                    case 0:
+                      OY = yY._GetHalfFloatAsUIntRGBAArrayBuffer, gY = yY._GetHalfFloatAsFloatRGBAArrayBuffer
+                  }
+                  rY.type = RY, FY = OY(SY, lY, DY.byteOffset + TY, cY, DY.buffer, IY), WY && 0 == IY && WY.push(gY ? gY(SY, lY, DY.byteOffset + TY, cY, DY.buffer, IY) : FY)
+                }
+                FY && YY._uploadDataToTextureDirectly(rY, FY, AY, IY)
+              } else if (FY.isRGB) rY.type = 0, 24 === zY ? (rY.format = 4, cY = SY * lY * 3, eY = yY._GetRGBArrayBuffer(SY, lY, DY.byteOffset + TY, cY, DY.buffer, fY, jY, hY), YY._uploadDataToTextureDirectly(rY, eY, AY, IY)) : (rY.format = 5, cY = SY * lY * 4, eY = yY._GetRGBAArrayBuffer(SY, lY, DY.byteOffset + TY, cY, DY.buffer, fY, jY, hY, dY), YY._uploadDataToTextureDirectly(rY, eY, AY, IY));
+              else if (FY.isLuminance) {
+                const FY = YY._getUnpackAlignement(),
+                  RY = SY;
+                cY = Math.floor((SY + FY - 1) / FY) * FY * (lY - 1) + RY, eY = yY._GetLuminanceArrayBuffer(SY, lY, DY.byteOffset + TY, cY, DY.buffer), rY.format = 1, rY.type = 0, YY._uploadDataToTextureDirectly(rY, eY, AY, IY)
+              } else cY = Math.max(4, SY) / 4 * Math.max(4, lY) / 4 * HY, eY = new Uint8Array(DY.buffer, DY.byteOffset + TY, cY), rY.type = 0, YY._uploadCompressedDataToTextureDirectly(rY, KY, SY, lY, eY, AY, IY)
+            }
+            TY += zY ? SY * lY * (zY / 8) : cY, SY *= .5, lY *= .5, SY = Math.max(1, SY), lY = Math.max(1, lY)
+          }
+          if (void 0 !== QY) break
+        }
+        WY && WY.length > 0 ? FY.sphericalPolynomial = IY.c.ConvertCubeMapToSphericalPolynomial({
+          size: mY[4],
+          right: WY[0],
+          left: WY[1],
+          up: WY[2],
+          down: WY[3],
+          front: WY[4],
+          back: WY[5],
+          format: 5,
+          type: 1,
+          gammaSpace: !1
+        }) : FY.sphericalPolynomial = void 0
+      }
     }
-  },
-  40728: (BB, TB, dB) => {
-    dB.d(TB, {
-      e: () => lB
-    });
-    var VB = dB(38595);
-    const yB = "clipPlaneVertex",
-      pB = "#ifdef CLIPPLANE\nfClipDistance=dot(worldPos,vClipPlane);\n#endif\n#ifdef CLIPPLANE2\nfClipDistance2=dot(worldPos,vClipPlane2);\n#endif\n#ifdef CLIPPLANE3\nfClipDistance3=dot(worldPos,vClipPlane3);\n#endif\n#ifdef CLIPPLANE4\nfClipDistance4=dot(worldPos,vClipPlane4);\n#endif\n#ifdef CLIPPLANE5\nfClipDistance5=dot(worldPos,vClipPlane5);\n#endif\n#ifdef CLIPPLANE6\nfClipDistance6=dot(worldPos,vClipPlane6);\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
-    }
-  },
-  40633: (BB, TB, dB) => {
-    dB.d(TB, {
-      c: () => lB
-    });
-    var VB = dB(38595);
-    const yB = "clipPlaneVertexDeclaration",
-      pB = "#ifdef CLIPPLANE\nuniform vec4 vClipPlane;varying float fClipDistance;\n#endif\n#ifdef CLIPPLANE2\nuniform vec4 vClipPlane2;varying float fClipDistance2;\n#endif\n#ifdef CLIPPLANE3\nuniform vec4 vClipPlane3;varying float fClipDistance3;\n#endif\n#ifdef CLIPPLANE4\nuniform vec4 vClipPlane4;varying float fClipDistance4;\n#endif\n#ifdef CLIPPLANE5\nuniform vec4 vClipPlane5;varying float fClipDistance5;\n#endif\n#ifdef CLIPPLANE6\nuniform vec4 vClipPlane6;varying float fClipDistance6;\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
-    }
-  },
-  40570: (BB, TB, dB) => {
-    dB.d(TB, {
-      e: () => lB
-    });
-    var VB = dB(38595);
-    const yB = "decalVertexDeclaration",
-      pB = "#ifdef DECAL\nuniform vec4 vDecalInfos;uniform mat4 decalMatrix;\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
-    }
-  },
-  40730: (BB, TB, dB) => {
-    dB.d(TB, {
-      c: () => lB
-    });
-    var VB = dB(38595);
-    const yB = "fogVertex",
-      pB = "#ifdef FOG\nvFogDistance=(view*worldPos).xyz;\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
-    }
-  },
-  40638: (BB, TB, dB) => {
-    dB.d(TB, {
-      d: () => lB
-    });
-    var VB = dB(38595);
-    const yB = "fogVertexDeclaration",
-      pB = "#ifdef FOG\nvarying vec3 vFogDistance;\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
-    }
-  },
-  40595: (BB, TB, dB) => {
-    dB.d(TB, {
-      b: () => lB
-    });
-    var VB = dB(38595);
-    const yB = "helperFunctions",
-      pB = "const float PI=3.1415926535897932384626433832795;const float TWO_PI=6.283185307179586;const float HALF_PI=1.5707963267948966;const float RECIPROCAL_PI=0.3183098861837907;const float RECIPROCAL_PI2=0.15915494309189535;const float RECIPROCAL_PI4=0.07957747154594767;const float HALF_MIN=5.96046448e-08; \nconst float LinearEncodePowerApprox=2.2;const float GammaEncodePowerApprox=1.0/LinearEncodePowerApprox;const vec3 LuminanceEncodeApprox=vec3(0.2126,0.7152,0.0722);const float Epsilon=0.0000001;\n#define saturate(x) clamp(x,0.0,1.0)\n#define absEps(x) abs(x)+Epsilon\n#define maxEps(x) max(x,Epsilon)\n#define saturateEps(x) clamp(x,Epsilon,1.0)\nmat3 transposeMat3(mat3 inMatrix) {vec3 i0=inMatrix[0];vec3 i1=inMatrix[1];vec3 i2=inMatrix[2];mat3 outMatrix=mat3(\nvec3(i0.x,i1.x,i2.x),\nvec3(i0.y,i1.y,i2.y),\nvec3(i0.z,i1.z,i2.z)\n);return outMatrix;}\nmat3 inverseMat3(mat3 inMatrix) {float a00=inMatrix[0][0],a01=inMatrix[0][1],a02=inMatrix[0][2];float a10=inMatrix[1][0],a11=inMatrix[1][1],a12=inMatrix[1][2];float a20=inMatrix[2][0],a21=inMatrix[2][1],a22=inMatrix[2][2];float b01=a22*a11-a12*a21;float b11=-a22*a10+a12*a20;float b21=a21*a10-a11*a20;float det=a00*b01+a01*b11+a02*b21;return mat3(b01,(-a22*a01+a02*a21),(a12*a01-a02*a11),\nb11,(a22*a00-a02*a20),(-a12*a00+a02*a10),\nb21,(-a21*a00+a01*a20),(a11*a00-a01*a10))/det;}\n#if USE_EXACT_SRGB_CONVERSIONS\nvec3 toLinearSpaceExact(vec3 color)\n{vec3 nearZeroSection=0.0773993808*color;vec3 remainingSection=pow(0.947867299*(color+vec3(0.055)),vec3(2.4));\n#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\nreturn mix(remainingSection,nearZeroSection,lessThanEqual(color,vec3(0.04045)));\n#else\nreturn\nvec3(\ncolor.r<=0.04045 ? nearZeroSection.r : remainingSection.r,\ncolor.g<=0.04045 ? nearZeroSection.g : remainingSection.g,\ncolor.b<=0.04045 ? nearZeroSection.b : remainingSection.b);\n#endif\n}\nvec3 toGammaSpaceExact(vec3 color)\n{vec3 nearZeroSection=12.92*color;vec3 remainingSection=1.055*pow(color,vec3(0.41666))-vec3(0.055);\n#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\nreturn mix(remainingSection,nearZeroSection,lessThanEqual(color,vec3(0.0031308)));\n#else\nreturn\nvec3(\ncolor.r<=0.0031308 ? nearZeroSection.r : remainingSection.r,\ncolor.g<=0.0031308 ? nearZeroSection.g : remainingSection.g,\ncolor.b<=0.0031308 ? nearZeroSection.b : remainingSection.b);\n#endif\n}\n#endif\nfloat toLinearSpace(float color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nfloat nearZeroSection=0.0773993808*color;float remainingSection=pow(0.947867299*(color+0.055),2.4);return color<=0.04045 ? nearZeroSection : remainingSection;\n#else\nreturn pow(color,LinearEncodePowerApprox);\n#endif\n}\nvec3 toLinearSpace(vec3 color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nreturn toLinearSpaceExact(color);\n#else\nreturn pow(color,vec3(LinearEncodePowerApprox));\n#endif\n}\nvec4 toLinearSpace(vec4 color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nreturn vec4(toLinearSpaceExact(color.rgb),color.a);\n#else\nreturn vec4(pow(color.rgb,vec3(LinearEncodePowerApprox)),color.a);\n#endif\n}\nfloat toGammaSpace(float color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nfloat nearZeroSection=12.92*color;float remainingSection=1.055*pow(color,0.41666)-0.055;return color<=0.0031308 ? nearZeroSection : remainingSection;\n#else\nreturn pow(color,GammaEncodePowerApprox);\n#endif\n}\nvec3 toGammaSpace(vec3 color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nreturn toGammaSpaceExact(color);\n#else\nreturn pow(color,vec3(GammaEncodePowerApprox));\n#endif\n}\nvec4 toGammaSpace(vec4 color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nreturn vec4(toGammaSpaceExact(color.rgb),color.a);\n#else\nreturn vec4(pow(color.rgb,vec3(GammaEncodePowerApprox)),color.a);\n#endif\n}\nfloat square(float value)\n{return value*value;}\nvec3 square(vec3 value)\n{return value*value;}\nfloat pow5(float value) {float sq=value*value;return sq*sq*value;}\nvec3 double_refract(vec3 I,vec3 N,float eta) {vec3 Tfront=refract(I,N,1.0/eta);vec3 Nback=normalize(reflect(N,Tfront));return refract(Tfront,-Nback,eta);}\nfloat getLuminanceUnclamped(vec3 color)\n{return dot(color,LuminanceEncodeApprox);}\nfloat getLuminance(vec3 color)\n{return saturate(getLuminanceUnclamped(color));}\nfloat getRand(vec2 seed) {return fract(sin(dot(seed.xy ,vec2(12.9898,78.233)))*43758.5453);}\nfloat dither(vec2 seed,float varianceAmount) {float rand=getRand(seed);float normVariance=varianceAmount/255.0;float dither=mix(-normVariance,normVariance,rand);return dither;}\nconst float rgbdMaxRange=255.;vec4 toRGBD(vec3 color) {float maxRGB=maxEps(max(color.r,max(color.g,color.b)));float D =max(rgbdMaxRange/maxRGB,1.);D =saturate(floor(D)/255.);vec3 rgb=color.rgb*D;rgb=toGammaSpace(rgb);return vec4(saturate(rgb),D);}\nvec3 fromRGBD(vec4 rgbd) {rgbd.rgb=toLinearSpace(rgbd.rgb);return rgbd.rgb/rgbd.a;}\nvec3 parallaxCorrectNormal( vec3 vertexPos,vec3 origVec,vec3 cubeSize,vec3 cubePos ) {vec3 invOrigVec=vec3(1.)/origVec;vec3 halfSize=cubeSize*0.5;vec3 intersecAtMaxPlane=(cubePos+halfSize-vertexPos)*invOrigVec;vec3 intersecAtMinPlane=(cubePos-halfSize-vertexPos)*invOrigVec;vec3 largestIntersec=max(intersecAtMaxPlane,intersecAtMinPlane);float distance=min(min(largestIntersec.x,largestIntersec.y),largestIntersec.z);vec3 intersectPositionWS=vertexPos+origVec*distance;return intersectPositionWS-cubePos;}\nvec3 equirectangularToCubemapDirection(vec2 uv) {float longitude=uv.x*TWO_PI-PI;float latitude=HALF_PI-uv.y*PI;vec3 direction;direction.x=cos(latitude)*sin(longitude);direction.y=sin(latitude);direction.z=cos(latitude)*cos(longitude);return direction;}\nfloat sqrtClamped(float value) {return sqrt(max(value,0.));}\nfloat avg(vec3 value) {return dot(value,vec3(0.333333333));}\n#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\nprecision highp int;uint extractBits(uint value,int offset,int width) {return (value>>offset) & ((1u<<width)-1u);}\nint onlyBitPosition(uint value) {return (floatBitsToInt(float(value))>>23)-0x7f;}\nvec3 singleScatterToMultiScatterAlbedo(vec3 rho_ss) {vec3 s=sqrt(max(vec3(1.0)-rho_ss,vec3(0.0)));return (vec3(1.0)-s)*(vec3(1.0)-vec3(0.139)*s)/(vec3(1.0)+vec3(1.17)*s);}\nvec3 multiScatterToSingleScatterAlbedo(vec3 rho_ms) {vec3 s=4.09712+4.20863*rho_ms-sqrt(9.59217+41.6808*rho_ms+17.7126*rho_ms*rho_ms);return 1.0-s*s;}\nvec3 multiScatterToSingleScatterAlbedo(vec3 rho_ms,float aniso) {vec3 s=4.09712+4.20863*rho_ms-sqrt(9.59217+41.6808*rho_ms+17.7126*rho_ms*rho_ms);return (1.0-s*s)/maxEps(1.0-aniso*s*s);}\nfloat min3(vec3 v) {return min(v.x,min(v.y,v.z));}\nfloat max3(vec3 v) {return max(v.x,max(v.y,v.z));}\nfloat uint2float(uint i) {return uintBitsToFloat(0x3F800000u | (i>>9u))-1.0;}\nvec2 plasticSequence(const uint rstate) {return vec2(uint2float(rstate*3242174889u),\nuint2float(rstate*2447445414u));}\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
-    }
-  },
-  40604: (BB, TB, dB) => {
-    dB.d(TB, {
-      d: () => lB
-    });
-    var VB = dB(38595);
-    const yB = "instancesDeclaration",
-      pB = "#ifdef INSTANCES\nattribute vec4 world0;attribute vec4 world1;attribute vec4 world2;attribute vec4 world3;\n#ifdef INSTANCESCOLOR\nattribute vec4 instanceColor;\n#endif\n#if defined(THIN_INSTANCES) && !defined(WORLD_UBO)\nuniform mat4 world;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nattribute vec4 previousWorld0;attribute vec4 previousWorld1;attribute vec4 previousWorld2;attribute vec4 previousWorld3;\n#ifdef THIN_INSTANCES\nuniform mat4 previousWorld;\n#endif\n#endif\n#else\n#if !defined(WORLD_UBO)\nuniform mat4 world;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nuniform mat4 previousWorld;\n#endif\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
-    }
-  },
-  40694: (BB, TB, dB) => {
-    dB.d(TB, {
-      c: () => lB
-    });
-    var VB = dB(38595);
-    const yB = "instancesVertex",
-      pB = "#ifdef INSTANCES\nmat4 finalWorld=mat4(world0,world1,world2,world3);\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nmat4 finalPreviousWorld=mat4(previousWorld0,previousWorld1,\npreviousWorld2,previousWorld3);\n#endif\n#ifdef THIN_INSTANCES\nfinalWorld=world*finalWorld;\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nfinalPreviousWorld=previousWorld*finalPreviousWorld;\n#endif\n#endif\n#else\nmat4 finalWorld=world;\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nmat4 finalPreviousWorld=previousWorld;\n#endif\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
-    }
-  },
-  40647: (BB, TB, dB) => {
-    dB.d(TB, {
-      e: () => lB
-    });
-    var VB = dB(38595);
-    const yB = "lightVxFragmentDeclaration",
-      pB = "#ifdef LIGHT{X}\nuniform vec4 vLightData{X};uniform vec4 vLightDiffuse{X};\n#ifdef SPECULARTERM\nuniform vec4 vLightSpecular{X};\n#else\nvec4 vLightSpecular{X}=vec4(0.);\n#endif\n#ifdef SHADOW{X}\n#ifdef SHADOWCSM{X}\nuniform mat4 lightMatrix{X}[SHADOWCSMNUM_CASCADES{X}];varying vec4 vPositionFromLight{X}[SHADOWCSMNUM_CASCADES{X}];varying float vDepthMetric{X}[SHADOWCSMNUM_CASCADES{X}];varying vec4 vPositionFromCamera{X};\n#elif defined(SHADOWCUBE{X})\n#else\nvarying vec4 vPositionFromLight{X};varying float vDepthMetric{X};uniform mat4 lightMatrix{X};\n#endif\nuniform vec4 shadowsInfo{X};uniform vec2 depthValues{X};\n#endif\n#ifdef SPOTLIGHT{X}\nuniform vec4 vLightDirection{X};uniform vec4 vLightFalloff{X};\n#elif defined(POINTLIGHT{X})\nuniform vec4 vLightFalloff{X};\n#elif defined(HEMILIGHT{X})\nuniform vec3 vLightGround{X};\n#endif\n#if defined(AREALIGHT{X}) && defined(AREALIGHTUSED) && defined(AREALIGHTSUPPORTED)\nuniform vec4 vLightWidth{X};uniform vec4 vLightHeight{X};\n#endif\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
-    }
-  },
-  40656: (BB, TB, dB) => {
-    dB.d(TB, {
-      b: () => lB
-    });
-    var VB = dB(38595);
-    const yB = "lightVxUboDeclaration",
-      pB = "#ifdef LIGHT{X}\nuniform Light{X}\n{vec4 vLightData;vec4 vLightDiffuse;vec4 vLightSpecular;\n#ifdef SPOTLIGHT{X}\nvec4 vLightDirection;vec4 vLightFalloff;\n#elif defined(POINTLIGHT{X})\nvec4 vLightFalloff;\n#elif defined(HEMILIGHT{X})\nvec3 vLightGround;\n#elif defined(CLUSTLIGHT{X})\nvec2 vSliceData;vec2 vSliceRanges[CLUSTLIGHT_SLICES];\n#endif\n#if defined(AREALIGHT{X}) && defined(AREALIGHTUSED) && defined(AREALIGHTSUPPORTED)\nvec4 vLightWidth;vec4 vLightHeight;\n#endif\nvec4 shadowsInfo;vec2 depthValues;} light{X};\n#ifdef SHADOW{X}\n#ifdef SHADOWCSM{X}\nuniform mat4 lightMatrix{X}[SHADOWCSMNUM_CASCADES{X}];varying vec4 vPositionFromLight{X}[SHADOWCSMNUM_CASCADES{X}];varying float vDepthMetric{X}[SHADOWCSMNUM_CASCADES{X}];varying vec4 vPositionFromCamera{X};\n#elif defined(SHADOWCUBE{X})\n#else\nvarying vec4 vPositionFromLight{X};varying float vDepthMetric{X};uniform mat4 lightMatrix{X};\n#endif\n#endif\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
-    }
-  },
-  40680: (BB, TB, dB) => {
-    dB.d(TB, {
-      c: () => lB
-    });
-    var VB = dB(38595);
-    const yB = "logDepthDeclaration",
-      pB = "#ifdef LOGARITHMICDEPTH\nuniform float logarithmicDepthConstant;varying float vFragmentDepth;\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
-    }
-  },
-  40753: (BB, TB, dB) => {
-    dB.d(TB, {
-      c: () => lB
-    });
-    var VB = dB(38595);
-    const yB = "logDepthVertex",
-      pB = "#ifdef LOGARITHMICDEPTH\nvFragmentDepth=1.0+gl_Position.w;gl_Position.z=log2(max(0.000001,vFragmentDepth))*logarithmicDepthConstant;\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
-    }
-  },
-  40619: (BB, TB, dB) => {
-    dB.d(TB, {
-      b: () => lB
-    });
-    var VB = dB(38595);
-    const yB = "mainUVVaryingDeclaration",
-      pB = "#ifdef MAINUV{X}\nvarying vec2 vMainUV{X};\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
-    }
-  },
-  40580: (BB, TB, dB) => {
-    dB.d(TB, {
-      d: () => lB
-    });
-    var VB = dB(38595);
-    const yB = "meshUboDeclaration",
-      pB = "#ifdef WEBGL2\nuniform mat4 world;uniform float visibility;\n#else\nlayout(std140,column_major) uniform;uniform Mesh\n{mat4 world;float visibility;};\n#endif\n#define WORLD_UBO\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
-    }
-  },
-  40686: (BB, TB, dB) => {
-    dB.d(TB, {
-      d: () => lB
-    });
-    var VB = dB(38595);
-    const yB = "morphTargetsVertex",
-      pB = "#ifdef MORPHTARGETS\n#ifdef MORPHTARGETS_TEXTURE\n#if {X}==0\nfor (int i=0; i<NUM_MORPH_INFLUENCERS; i++) {if (float(i)>=morphTargetCount) break;vertexID=float(gl_VertexID)*morphTargetTextureInfo.x;\n#ifdef MORPHTARGETS_POSITION\npositionUpdated+=(readVector3FromRawSampler(i,vertexID)-position)*morphTargetInfluences[i];\n#endif\n#ifdef MORPHTARGETTEXTURE_HASPOSITIONS\nvertexID+=1.0;\n#endif\n#ifdef MORPHTARGETS_NORMAL\nnormalUpdated+=(readVector3FromRawSampler(i,vertexID) -normal)*morphTargetInfluences[i];\n#endif\n#ifdef MORPHTARGETTEXTURE_HASNORMALS\nvertexID+=1.0;\n#endif\n#ifdef MORPHTARGETS_UV\nuvUpdated+=(readVector3FromRawSampler(i,vertexID).xy-uv)*morphTargetInfluences[i];\n#endif\n#ifdef MORPHTARGETTEXTURE_HASUVS\nvertexID+=1.0;\n#endif\n#ifdef MORPHTARGETS_TANGENT\ntangentUpdated.xyz+=(readVector3FromRawSampler(i,vertexID) -tangent.xyz)*morphTargetInfluences[i];\n#endif\n#ifdef MORPHTARGETTEXTURE_HASTANGENTS\nvertexID+=1.0;\n#endif\n#ifdef MORPHTARGETS_UV2\nuv2Updated+=(readVector3FromRawSampler(i,vertexID).xy-uv2)*morphTargetInfluences[i];\n#endif\n#ifdef MORPHTARGETTEXTURE_HASUV2S\nvertexID+=1.0;\n#endif\n#ifdef MORPHTARGETS_COLOR\ncolorUpdated+=(readVector4FromRawSampler(i,vertexID)-color)*morphTargetInfluences[i];\n#endif\n}\n#endif\n#else\n#ifdef MORPHTARGETS_POSITION\npositionUpdated+=(position{X}-position)*morphTargetInfluences[{X}];\n#endif\n#ifdef MORPHTARGETS_NORMAL\nnormalUpdated+=(normal{X}-normal)*morphTargetInfluences[{X}];\n#endif\n#ifdef MORPHTARGETS_TANGENT\ntangentUpdated.xyz+=(tangent{X}-tangent.xyz)*morphTargetInfluences[{X}];\n#endif\n#ifdef MORPHTARGETS_UV\nuvUpdated+=(uv_{X}-uv)*morphTargetInfluences[{X}];\n#endif\n#ifdef MORPHTARGETS_UV2\nuv2Updated+=(uv2_{X}-uv2)*morphTargetInfluences[{X}];\n#endif\n#ifdef MORPHTARGETS_COLOR\ncolorUpdated+=(color{X}-color)*morphTargetInfluences[{X}];\n#endif\n#endif\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
-    }
-  },
-  40673: (BB, TB, dB) => {
-    dB.d(TB, {
-      b: () => lB
-    });
-    var VB = dB(38595);
-    const yB = "morphTargetsVertexDeclaration",
-      pB = "#ifdef MORPHTARGETS\n#ifndef MORPHTARGETS_TEXTURE\n#ifdef MORPHTARGETS_POSITION\nattribute vec3 position{X};\n#endif\n#ifdef MORPHTARGETS_NORMAL\nattribute vec3 normal{X};\n#endif\n#ifdef MORPHTARGETS_TANGENT\nattribute vec3 tangent{X};\n#endif\n#ifdef MORPHTARGETS_UV\nattribute vec2 uv_{X};\n#endif\n#ifdef MORPHTARGETS_UV2\nattribute vec2 uv2_{X};\n#endif\n#ifdef MORPHTARGETS_COLOR\nattribute vec4 color{X};\n#endif\n#elif {X}==0\nuniform float morphTargetCount;\n#endif\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
-    }
-  },
-  40684: (BB, TB, dB) => {
-    dB.d(TB, {
-      e: () => lB
-    });
-    var VB = dB(38595);
-    const yB = "morphTargetsVertexGlobal",
-      pB = "#ifdef MORPHTARGETS\n#ifdef MORPHTARGETS_TEXTURE\nfloat vertexID;\n#endif\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
-    }
-  },
-  40665: (BB, TB, dB) => {
-    dB.d(TB, {
-      e: () => lB
-    });
-    var VB = dB(38595);
-    const yB = "morphTargetsVertexGlobalDeclaration",
-      pB = "#ifdef MORPHTARGETS\nuniform float morphTargetInfluences[NUM_MORPH_INFLUENCERS];\n#ifdef MORPHTARGETS_TEXTURE \nuniform float morphTargetTextureIndices[NUM_MORPH_INFLUENCERS];uniform vec3 morphTargetTextureInfo;uniform highp sampler2DArray morphTargets;vec3 readVector3FromRawSampler(int targetIndex,float vertexIndex)\n{ \n#if defined(WEBGL2) || defined(WEBGPU)\nint textureWidth=int(morphTargetTextureInfo.y);int y=int(vertexIndex)/textureWidth;int x=int(vertexIndex) % textureWidth;return texelFetch(morphTargets,ivec3(x,y,int(morphTargetTextureIndices[targetIndex])),0).xyz;\n#else\nfloat y=floor(vertexIndex/morphTargetTextureInfo.y);float x=vertexIndex-y*morphTargetTextureInfo.y;vec3 textureUV=vec3((x+0.5)/morphTargetTextureInfo.y,(y+0.5)/morphTargetTextureInfo.z,morphTargetTextureIndices[targetIndex]);return texture(morphTargets,textureUV).xyz;\n#endif\n}\nvec4 readVector4FromRawSampler(int targetIndex,float vertexIndex)\n{ \n#if defined(WEBGL2) || defined(WEBGPU)\nint textureWidth=int(morphTargetTextureInfo.y);int y=int(vertexIndex)/textureWidth;int x=int(vertexIndex) % textureWidth;return texelFetch(morphTargets,ivec3(x,y,int(morphTargetTextureIndices[targetIndex])),0);\n#else\nfloat y=floor(vertexIndex/morphTargetTextureInfo.y);float x=vertexIndex-y*morphTargetTextureInfo.y;vec3 textureUV=vec3((x+0.5)/morphTargetTextureInfo.y,(y+0.5)/morphTargetTextureInfo.z,morphTargetTextureIndices[targetIndex]);return texture(morphTargets,textureUV);\n#endif\n}\n#endif\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
-    }
-  },
-  40705: (BB, TB, dB) => {
-    dB.d(TB, {
-      d: () => lB
-    });
-    var VB = dB(38595);
-    const yB = "prePassVertex",
-      pB = "#ifdef PREPASS_DEPTH\nvViewPos=(view*worldPos).rgb;\n#endif\n#ifdef PREPASS_NORMALIZED_VIEW_DEPTH\nvNormViewDepth=((view*worldPos).z-cameraInfo.x)/(cameraInfo.y-cameraInfo.x);\n#endif\n#ifdef PREPASS_LOCAL_POSITION\nvPosition=positionUpdated.xyz;\n#endif\n#if (defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR)) && defined(BONES_VELOCITY_ENABLED)\nvCurrentPosition=viewProjection*worldPos;\n#if NUM_BONE_INFLUENCERS>0\nmat4 previousInfluence;previousInfluence=mPreviousBones[int(matricesIndices[0])]*matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\npreviousInfluence+=mPreviousBones[int(matricesIndices[1])]*matricesWeights[1];\n#endif \n#if NUM_BONE_INFLUENCERS>2\npreviousInfluence+=mPreviousBones[int(matricesIndices[2])]*matricesWeights[2];\n#endif \n#if NUM_BONE_INFLUENCERS>3\npreviousInfluence+=mPreviousBones[int(matricesIndices[3])]*matricesWeights[3];\n#endif\n#if NUM_BONE_INFLUENCERS>4\npreviousInfluence+=mPreviousBones[int(matricesIndicesExtra[0])]*matricesWeightsExtra[0];\n#endif \n#if NUM_BONE_INFLUENCERS>5\npreviousInfluence+=mPreviousBones[int(matricesIndicesExtra[1])]*matricesWeightsExtra[1];\n#endif \n#if NUM_BONE_INFLUENCERS>6\npreviousInfluence+=mPreviousBones[int(matricesIndicesExtra[2])]*matricesWeightsExtra[2];\n#endif \n#if NUM_BONE_INFLUENCERS>7\npreviousInfluence+=mPreviousBones[int(matricesIndicesExtra[3])]*matricesWeightsExtra[3];\n#endif\nvPreviousPosition=previousViewProjection*finalPreviousWorld*previousInfluence*vec4(positionUpdated,1.0);\n#else\nvPreviousPosition=previousViewProjection*finalPreviousWorld*vec4(positionUpdated,1.0);\n#endif\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
-    }
-  },
-  40613: (BB, TB, dB) => {
-    dB.d(TB, {
-      d: () => lB
-    });
-    var VB = dB(38595);
-    const yB = "prePassVertexDeclaration",
-      pB = "#ifdef PREPASS\n#ifdef PREPASS_LOCAL_POSITION\nvarying vec3 vPosition;\n#endif\n#ifdef PREPASS_DEPTH\nvarying vec3 vViewPos;\n#endif\n#ifdef PREPASS_NORMALIZED_VIEW_DEPTH\nvarying float vNormViewDepth;\n#endif\n#if defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR)\nuniform mat4 previousViewProjection;varying vec4 vCurrentPosition;varying vec4 vPreviousPosition;\n#endif\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
-    }
-  },
-  40623: (BB, TB, dB) => {
-    dB.d(TB, {
-      e: () => lB
-    });
-    var VB = dB(38595);
-    const yB = "samplerVertexDeclaration",
-      pB = "#if defined(_DEFINENAME_) && _DEFINENAME_DIRECTUV==0\nvarying vec2 v_VARYINGNAME_UV;\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
-    }
-  },
-  40720: (BB, TB, dB) => {
-    dB.d(TB, {
-      b: () => lB
-    });
-    var VB = dB(38595);
-    const yB = "samplerVertexImplementation",
-      pB = "#if defined(_DEFINENAME_) && _DEFINENAME_DIRECTUV==0\nif (v_INFONAME_==0.)\n{v_VARYINGNAME_UV=vec2(_MATRIXNAME_Matrix*vec4(uvUpdated,1.0,0.0));}\n#ifdef UV2\nelse if (v_INFONAME_==1.)\n{v_VARYINGNAME_UV=vec2(_MATRIXNAME_Matrix*vec4(uv2Updated,1.0,0.0));}\n#endif\n#ifdef UV3\nelse if (v_INFONAME_==2.)\n{v_VARYINGNAME_UV=vec2(_MATRIXNAME_Matrix*vec4(uv3,1.0,0.0));}\n#endif\n#ifdef UV4\nelse if (v_INFONAME_==3.)\n{v_VARYINGNAME_UV=vec2(_MATRIXNAME_Matrix*vec4(uv4,1.0,0.0));}\n#endif\n#ifdef UV5\nelse if (v_INFONAME_==4.)\n{v_VARYINGNAME_UV=vec2(_MATRIXNAME_Matrix*vec4(uv5,1.0,0.0));}\n#endif\n#ifdef UV6\nelse if (v_INFONAME_==5.)\n{v_VARYINGNAME_UV=vec2(_MATRIXNAME_Matrix*vec4(uv6,1.0,0.0));}\n#endif\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
-    }
-  },
-  40574: (BB, TB, dB) => {
-    dB.d(TB, {
-      e: () => lB
-    });
-    var VB = dB(38595);
-    const yB = "sceneUboDeclaration",
-      pB = "layout(std140,column_major) uniform;uniform Scene {mat4 viewProjection;\n#ifdef MULTIVIEW\nmat4 viewProjectionR;\n#endif \nmat4 view;mat4 projection;vec4 vEyePosition;mat4 inverseProjection;};\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
-    }
-  },
-  40738: (BB, TB, dB) => {
-    dB.d(TB, {
-      e: () => lB
-    });
-    var VB = dB(38595);
-    const yB = "shadowsVertex",
-      pB = "#ifdef SHADOWS\n#if defined(SHADOWCSM{X})\nvPositionFromCamera{X}=view*worldPos;for (int i=0; i<SHADOWCSMNUM_CASCADES{X}; i++) {vPositionFromLight{X}[i]=lightMatrix{X}[i]*worldPos;\n#ifdef USE_REVERSE_DEPTHBUFFER\nvDepthMetric{X}[i]=(-vPositionFromLight{X}[i].z+light{X}.depthValues.x)/light{X}.depthValues.y;\n#else\nvDepthMetric{X}[i]=(vPositionFromLight{X}[i].z+light{X}.depthValues.x)/light{X}.depthValues.y;\n#endif\n}\n#elif defined(SHADOW{X}) && !defined(SHADOWCUBE{X})\nvPositionFromLight{X}=lightMatrix{X}*worldPos;\n#ifdef USE_REVERSE_DEPTHBUFFER\nvDepthMetric{X}=(-vPositionFromLight{X}.z+light{X}.depthValues.x)/light{X}.depthValues.y;\n#else\nvDepthMetric{X}=(vPositionFromLight{X}.z+light{X}.depthValues.x)/light{X}.depthValues.y;\n#endif\n#endif\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
-    }
-  },
-  40588: (BB, TB, dB) => {
-    dB.d(TB, {
-      b: () => lB
-    });
-    var VB = dB(38595);
-    const yB = "uvAttributeDeclaration",
-      pB = "#ifdef UV{X}\nattribute vec2 uv{X};\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
-    }
-  },
-  40711: (BB, TB, dB) => {
-    dB.d(TB, {
-      e: () => lB
-    });
-    var VB = dB(38595);
-    const yB = "uvVariableDeclaration",
-      pB = "#if !defined(UV{X}) && defined(MAINUV{X})\nvec2 uv{X}=vec2(0.,0.);\n#endif\n#ifdef MAINUV{X}\nvMainUV{X}=uv{X};\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
-    }
-  },
-  40745: (BB, TB, dB) => {
-    dB.d(TB, {
-      d: () => lB
-    });
-    var VB = dB(38595);
-    const yB = "vertexColorMixing",
-      pB = "#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvColor=vec4(1.0);\n#ifdef VERTEXCOLOR\n#ifdef VERTEXALPHA\nvColor*=colorUpdated;\n#else\nvColor.rgb*=colorUpdated.rgb;\n#endif\n#endif\n#ifdef INSTANCESCOLOR\nvColor*=instanceColor;\n#endif\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
-    }
+    yY.StoreLODInAlphaChannel = !1
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

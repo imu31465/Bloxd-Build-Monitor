@@ -1,10837 +1,11209 @@
 export const id = 187;
-export const ids = [187];
+export const ids = [49, 187];
 export const modules = {
-  33444: (BB, TB, dB) => {
-    dB.r(TB), dB.d(TB, {
-      animatedBlockTextures: () => YB,
-      armourAtlasUrl: () => lB,
-      averageColors: () => gB,
-      blockAtlasUrls: () => pB,
-      blockAtlasWidth: () => VB,
-      buildHash: () => kB,
-      builtTextureIndexFingerprint: () => oB,
-      imagesPerAtlas: () => yB,
-      outputHash: () => LB,
-      rotatedBlockTextures: () => JB
+  37929: (YY, rY, DY) => {
+    var FY = {
+      "./combat_1.png": 37934,
+      "./dungeon_crumbling_crypt.png": 37936,
+      "./dungeon_frozen_hollow.png": 37938,
+      "./dungeon_wildwood_grove.png": 37940,
+      "./dungeons.png": 37946,
+      "./farming_1.png": 37950,
+      "./fishing_1.png": 37958,
+      "./hub.png": 37963,
+      "./island.png": 37970,
+      "./mining_1.png": 37975,
+      "./mining_1_bridge.png": 37980,
+      "./mining_1_gallery.png": 37982,
+      "./mining_1_hollow.png": 37990,
+      "./mining_1_village.png": 37995
+    };
+
+    function AY(YY) {
+      var rY = IY(YY);
+      return DY(rY)
+    }
+
+    function IY(YY) {
+      if (!DY.o(FY, YY)) {
+        var rY = new Error("Cannot find module '" + YY + "'");
+        throw rY.code = "MODULE_NOT_FOUND", rY
+      }
+      return FY[YY]
+    }
+    AY.keys = function() {
+      return Object.keys(FY)
+    }, AY.resolve = IY, YY.exports = AY, AY.id = 37929
+  },
+  38003: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => AY,
+      e: () => IY
     });
-    const VB = 8,
-      yB = [256, 256, 256, 256, 256, 166],
-      pB = [dB(33448), dB(33450), dB(33458), dB(33467), dB(33474), dB(33478)],
-      lB = dB(33484),
-      JB = {
-        "alloy_kiln_top[rot[1": dB(33488),
-        "alloy_kiln_top[rot[2": dB(33496),
-        "alloy_kiln_top[rot[3": dB(33502),
-        "alloy_kiln_top[rot[4": dB(33507),
-        "auto_bench_top[rot[1": dB(33512),
-        "auto_bench_top[rot[2": dB(33515),
-        "auto_bench_top[rot[3": dB(33522),
-        "auto_bench_top[rot[4": dB(33529),
-        "belt_tunnel_exit_top[rot[1": dB(33531),
-        "belt_tunnel_exit_top[rot[2": dB(33536),
-        "belt_tunnel_exit_top[rot[3": dB(33542),
-        "belt_tunnel_exit_top[rot[4": dB(33544),
-        "belt_tunnel_top[rot[1": dB(33549),
-        "belt_tunnel_top[rot[2": dB(33553),
-        "belt_tunnel_top[rot[3": dB(33555),
-        "belt_tunnel_top[rot[4": dB(33561),
-        "black_glazed_terracotta[rot[1": dB(33566),
-        "black_glazed_terracotta[rot[2": dB(33574),
-        "black_glazed_terracotta[rot[3": dB(33582),
-        "black_glazed_terracotta[rot[4": dB(33587),
-        "black_spawn_block_top[rot[1": dB(33590),
-        "black_spawn_block_top[rot[2": dB(33594),
-        "black_spawn_block_top[rot[3": dB(33596),
-        "black_spawn_block_top[rot[4": dB(33603),
-        "blue_glazed_terracotta[rot[1": dB(33612),
-        "blue_glazed_terracotta[rot[2": dB(33619),
-        "blue_glazed_terracotta[rot[3": dB(33627),
-        "blue_glazed_terracotta[rot[4": dB(33629),
-        "blue_spawn_block_top[rot[1": dB(33634),
-        "blue_spawn_block_top[rot[2": dB(33638),
-        "blue_spawn_block_top[rot[3": dB(33640),
-        "blue_spawn_block_top[rot[4": dB(33642),
-        "brown_glazed_terracotta[rot[1": dB(33650),
-        "brown_glazed_terracotta[rot[2": dB(33657),
-        "brown_glazed_terracotta[rot[3": dB(33665),
-        "brown_glazed_terracotta[rot[4": dB(33667),
-        "brown_spawn_block_top[rot[1": dB(33672),
-        "brown_spawn_block_top[rot[2": dB(33674),
-        "brown_spawn_block_top[rot[3": dB(33679),
-        "brown_spawn_block_top[rot[4": dB(33686),
-        "burner_drill_top[rot[1": dB(33693),
-        "burner_drill_top[rot[2": dB(33695),
-        "burner_drill_top[rot[3": dB(33702),
-        "burner_drill_top[rot[4": dB(33711),
-        "centrifuge_top[rot[1": dB(33720),
-        "centrifuge_top[rot[2": dB(33727),
-        "centrifuge_top[rot[3": dB(33736),
-        "centrifuge_top[rot[4": dB(33738),
-        "checkpoint_block[rot[1": dB(33743),
-        "checkpoint_block[rot[2": dB(33748),
-        "checkpoint_block[rot[3": dB(33757),
-        "checkpoint_block[rot[4": dB(33766),
-        "chest_top[rot[1": dB(33775),
-        "chest_top[rot[2": dB(33781),
-        "chest_top[rot[3": dB(33775),
-        "chest_top[rot[4": dB(33781),
-        "collider_top[rot[1": dB(33786),
-        "collider_top[rot[2": dB(33791),
-        "collider_top[rot[3": dB(33794),
-        "collider_top[rot[4": dB(33796),
-        "condenser_top[rot[1": dB(33804),
-        "condenser_top[rot[2": dB(33808),
-        "condenser_top[rot[3": dB(33811),
-        "condenser_top[rot[4": dB(33816),
-        "coolant_mixer_top[rot[1": dB(33824),
-        "coolant_mixer_top[rot[2": dB(33828),
-        "coolant_mixer_top[rot[3": dB(33836),
-        "coolant_mixer_top[rot[4": dB(33839),
-        "crop_harvester_top[rot[1": dB(33846),
-        "crop_harvester_top[rot[2": dB(33851),
-        "crop_harvester_top[rot[3": dB(33858),
-        "crop_harvester_top[rot[4": dB(33865),
-        "crusher_top[rot[1": dB(33874),
-        "crusher_top[rot[2": dB(33876),
-        "crusher_top[rot[3": dB(33879),
-        "crusher_top[rot[4": dB(33887),
-        "crystal_vat_top[rot[1": dB(33889),
-        "crystal_vat_top[rot[2": dB(33896),
-        "crystal_vat_top[rot[3": dB(33900),
-        "crystal_vat_top[rot[4": dB(33907),
-        "custom_lobby_block_top[rot[1": dB(33913),
-        "custom_lobby_block_top[rot[2": dB(33916),
-        "custom_lobby_block_top[rot[3": dB(33921),
-        "custom_lobby_block_top[rot[4": dB(33929),
-        "cyan_glazed_terracotta[rot[1": dB(33938),
-        "cyan_glazed_terracotta[rot[2": dB(33942),
-        "cyan_glazed_terracotta[rot[3": dB(33948),
-        "cyan_glazed_terracotta[rot[4": dB(33950),
-        "cyan_spawn_block_top[rot[1": dB(33957),
-        "cyan_spawn_block_top[rot[2": dB(33959),
-        "cyan_spawn_block_top[rot[3": dB(33963),
-        "cyan_spawn_block_top[rot[4": dB(33970),
-        "deep_drill_top[rot[1": dB(33977),
-        "deep_drill_top[rot[2": dB(33983),
-        "deep_drill_top[rot[3": dB(33990),
-        "deep_drill_top[rot[4": dB(33996),
-        "electric_drill_top[rot[1": dB(34004),
-        "electric_drill_top[rot[2": dB(34011),
-        "electric_drill_top[rot[3": dB(34015),
-        "electric_drill_top[rot[4": dB(34023),
-        "gray_glazed_terracotta[rot[1": dB(34029),
-        "gray_glazed_terracotta[rot[2": dB(34036),
-        "gray_glazed_terracotta[rot[3": dB(34038),
-        "gray_glazed_terracotta[rot[4": dB(34042),
-        "gray_spawn_block_top[rot[1": dB(34050),
-        "gray_spawn_block_top[rot[2": dB(34057),
-        "gray_spawn_block_top[rot[3": dB(34060),
-        "gray_spawn_block_top[rot[4": dB(34067),
-        "green_glazed_terracotta[rot[1": dB(34070),
-        "green_glazed_terracotta[rot[2": dB(34076),
-        "green_glazed_terracotta[rot[3": dB(34080),
-        "green_glazed_terracotta[rot[4": dB(34084),
-        "green_spawn_block_top[rot[1": dB(34090),
-        "green_spawn_block_top[rot[2": dB(34096),
-        "green_spawn_block_top[rot[3": dB(34105),
-        "green_spawn_block_top[rot[4": dB(34113),
-        "iron_chest_top[rot[1": dB(34119),
-        "iron_chest_top[rot[2": dB(34126),
-        "iron_chest_top[rot[3": dB(34119),
-        "iron_chest_top[rot[4": dB(34126),
-        "light_blue_glazed_terracotta[rot[1": dB(34130),
-        "light_blue_glazed_terracotta[rot[2": dB(34139),
-        "light_blue_glazed_terracotta[rot[3": dB(34146),
-        "light_blue_glazed_terracotta[rot[4": dB(34153),
-        "light_blue_spawn_block_top[rot[1": dB(34155),
-        "light_blue_spawn_block_top[rot[2": dB(34161),
-        "light_blue_spawn_block_top[rot[3": dB(34167),
-        "light_blue_spawn_block_top[rot[4": dB(34176),
-        "light_gray_glazed_terracotta[rot[1": dB(34181),
-        "light_gray_glazed_terracotta[rot[2": dB(34189),
-        "light_gray_glazed_terracotta[rot[3": dB(34197),
-        "light_gray_glazed_terracotta[rot[4": dB(34203),
-        "light_gray_spawn_block_top[rot[1": dB(34209),
-        "light_gray_spawn_block_top[rot[2": dB(34211),
-        "light_gray_spawn_block_top[rot[3": dB(34216),
-        "light_gray_spawn_block_top[rot[4": dB(34220),
-        "lime_glazed_terracotta[rot[1": dB(34223),
-        "lime_glazed_terracotta[rot[2": dB(34227),
-        "lime_glazed_terracotta[rot[3": dB(34231),
-        "lime_glazed_terracotta[rot[4": dB(34239),
-        "lime_spawn_block_top[rot[1": dB(34241),
-        "lime_spawn_block_top[rot[2": dB(34243),
-        "lime_spawn_block_top[rot[3": dB(34249),
-        "lime_spawn_block_top[rot[4": dB(34256),
-        "magenta_glazed_terracotta[rot[1": dB(34264),
-        "magenta_glazed_terracotta[rot[2": dB(34268),
-        "magenta_glazed_terracotta[rot[3": dB(34271),
-        "magenta_glazed_terracotta[rot[4": dB(34280),
-        "magenta_spawn_block_top[rot[1": dB(34287),
-        "magenta_spawn_block_top[rot[2": dB(34293),
-        "magenta_spawn_block_top[rot[3": dB(34300),
-        "magenta_spawn_block_top[rot[4": dB(34308),
-        "mob_farm_top[rot[1": dB(34315),
-        "mob_farm_top[rot[2": dB(34324),
-        "mob_farm_top[rot[3": dB(34328),
-        "mob_farm_top[rot[4": dB(34337),
-        "moonstone_chest_top[rot[1": dB(34340),
-        "moonstone_chest_top[rot[2": dB(34347),
-        "moonstone_chest_top[rot[3": dB(34340),
-        "moonstone_chest_top[rot[4": dB(34347),
-        "orange_glazed_terracotta[rot[1": dB(34352),
-        "orange_glazed_terracotta[rot[2": dB(34358),
-        "orange_glazed_terracotta[rot[3": dB(34367),
-        "orange_glazed_terracotta[rot[4": dB(34373),
-        "orange_spawn_block_top[rot[1": dB(34375),
-        "orange_spawn_block_top[rot[2": dB(34378),
-        "orange_spawn_block_top[rot[3": dB(34383),
-        "orange_spawn_block_top[rot[4": dB(34387),
-        "pink_glazed_terracotta[rot[1": dB(34389),
-        "pink_glazed_terracotta[rot[2": dB(34391),
-        "pink_glazed_terracotta[rot[3": dB(34393),
-        "pink_glazed_terracotta[rot[4": dB(34395),
-        "pink_spawn_block_top[rot[1": dB(34398),
-        "pink_spawn_block_top[rot[2": dB(34407),
-        "pink_spawn_block_top[rot[3": dB(34415),
-        "pink_spawn_block_top[rot[4": dB(34419),
-        "press_top[rot[1": dB(34427),
-        "press_top[rot[2": dB(34432),
-        "press_top[rot[3": dB(34441),
-        "press_top[rot[4": dB(34450),
-        "purple_glazed_terracotta[rot[1": dB(34454),
-        "purple_glazed_terracotta[rot[2": dB(34462),
-        "purple_glazed_terracotta[rot[3": dB(34464),
-        "purple_glazed_terracotta[rot[4": dB(34468),
-        "purple_spawn_block_top[rot[1": dB(34471),
-        "purple_spawn_block_top[rot[2": dB(34474),
-        "purple_spawn_block_top[rot[3": dB(34479),
-        "purple_spawn_block_top[rot[4": dB(34484),
-        "radar_screen0[rot[1": dB(34490),
-        "radar_screen0[rot[2": dB(34492),
-        "radar_screen0[rot[3": dB(34497),
-        "radar_screen0[rot[4": dB(34500),
-        "radar_screen1[rot[1": dB(34502),
-        "radar_screen1[rot[2": dB(34508),
-        "radar_screen1[rot[3": dB(34512),
-        "radar_screen1[rot[4": dB(34518),
-        "radar_screen2[rot[1": dB(34525),
-        "radar_screen2[rot[2": dB(34532),
-        "radar_screen2[rot[3": dB(34537),
-        "radar_screen2[rot[4": dB(34541),
-        "radar_screen3[rot[1": dB(34546),
-        "radar_screen3[rot[2": dB(34550),
-        "radar_screen3[rot[3": dB(34556),
-        "radar_screen3[rot[4": dB(34563),
-        "recycler_top[rot[1": dB(34571),
-        "recycler_top[rot[2": dB(34577),
-        "recycler_top[rot[3": dB(34580),
-        "recycler_top[rot[4": dB(34583),
-        "red_glazed_terracotta[rot[1": dB(34592),
-        "red_glazed_terracotta[rot[2": dB(34594),
-        "red_glazed_terracotta[rot[3": dB(34597),
-        "red_glazed_terracotta[rot[4": dB(34603),
-        "red_spawn_block_top[rot[1": dB(34609),
-        "red_spawn_block_top[rot[2": dB(34612),
-        "red_spawn_block_top[rot[3": dB(34621),
-        "red_spawn_block_top[rot[4": dB(34626),
-        "shatter_mill_top[rot[1": dB(34632),
-        "shatter_mill_top[rot[2": dB(34640),
-        "shatter_mill_top[rot[3": dB(34642),
-        "shatter_mill_top[rot[4": dB(34651),
-        "shop_trader_spawn_top[rot[1": dB(34656),
-        "shop_trader_spawn_top[rot[2": dB(34658),
-        "shop_trader_spawn_top[rot[3": dB(34662),
-        "shop_trader_spawn_top[rot[4": dB(34664),
-        "shop_wizard_spawn_top[rot[1": dB(34670),
-        "shop_wizard_spawn_top[rot[2": dB(34679),
-        "shop_wizard_spawn_top[rot[3": dB(34684),
-        "shop_wizard_spawn_top[rot[4": dB(34692),
-        "sky_tap_top[rot[1": dB(34698),
-        "sky_tap_top[rot[2": dB(34705),
-        "sky_tap_top[rot[3": dB(34712),
-        "sky_tap_top[rot[4": dB(34719),
-        "smelter_top[rot[1": dB(34728),
-        "smelter_top[rot[2": dB(34733),
-        "smelter_top[rot[3": dB(34737),
-        "smelter_top[rot[4": dB(34741),
-        "synthesizer_top[rot[1": dB(34744),
-        "synthesizer_top[rot[2": dB(34746),
-        "synthesizer_top[rot[3": dB(34755),
-        "synthesizer_top[rot[4": dB(34757),
-        "tree_cutter_top[rot[1": dB(34761),
-        "tree_cutter_top[rot[2": dB(34764),
-        "tree_cutter_top[rot[3": dB(34773),
-        "tree_cutter_top[rot[4": dB(34777),
-        "white_glazed_terracotta[rot[1": dB(34786),
-        "white_glazed_terracotta[rot[2": dB(34793),
-        "white_glazed_terracotta[rot[3": dB(34801),
-        "white_glazed_terracotta[rot[4": dB(34807),
-        "white_spawn_block_top[rot[1": dB(34816),
-        "white_spawn_block_top[rot[2": dB(34821),
-        "white_spawn_block_top[rot[3": dB(34823),
-        "white_spawn_block_top[rot[4": dB(34825),
-        "wire_mill_top[rot[1": dB(34830),
-        "wire_mill_top[rot[2": dB(34834),
-        "wire_mill_top[rot[3": dB(34837),
-        "wire_mill_top[rot[4": dB(34844),
-        "wireless_terminal_top[rot[1": dB(34852),
-        "wireless_terminal_top[rot[2": dB(34852),
-        "wireless_terminal_top[rot[3": dB(34852),
-        "wireless_terminal_top[rot[4": dB(34852),
-        "yellow_glazed_terracotta[rot[1": dB(34857),
-        "yellow_glazed_terracotta[rot[2": dB(34863),
-        "yellow_glazed_terracotta[rot[3": dB(34867),
-        "yellow_glazed_terracotta[rot[4": dB(34874),
-        "yellow_spawn_block_top[rot[1": dB(34876),
-        "yellow_spawn_block_top[rot[2": dB(34880),
-        "yellow_spawn_block_top[rot[3": dB(34888),
-        "yellow_spawn_block_top[rot[4": dB(34897)
+    const FY = new WeakMap;
+
+    function AY(YY, rY) {
+      return FY.set(YY, rY), YY
+    }
+
+    function IY(YY) {
+      var rY;
+      return null !== (rY = FY.get(YY)) && void 0 !== rY ? rY : null
+    }
+  },
+  37914: (YY, rY, DY) => {
+    function FY(YY, rY, DY) {
+      var FY;
+      const {
+        width: AY,
+        height: IY
+      } = DY, RY = null !== (FY = YY.text) && void 0 !== FY ? FY : YY, OY = (RY.x / 100 - .5) * AY, gY = (RY.y / 100 - .5) * IY, aY = AY / 2 - rY.x;
+      if (null !== YY.text && Math.abs(OY) <= aY && gY >= rY.top - IY / 2 && gY <= IY / 2 - rY.bottom) return {
+        x: RY.x,
+        y: RY.y
+      };
+      const vY = Math.min(0 === OY ? 1 / 0 : aY / Math.abs(OY), gY > 0 ? (IY / 2 - rY.bottom) / gY : gY < 0 ? (rY.top - IY / 2) / gY : 1 / 0);
+      return !Number.isFinite(vY) || vY < 0 ? {
+        x: 50,
+        y: 50
+      } : {
+        x: 50 + OY * vY / AY * 100,
+        y: 50 + gY * vY / IY * 100
+      }
+    }
+    DY.d(rY, {
+      b: () => FY
+    })
+  },
+  37926: (YY, rY, DY) => {
+    DY.d(rY, {
+      e: () => RY
+    });
+    const FY = 4,
+      AY = 12e3,
+      IY = 1e3;
+    class RY {
+      constructor() {
+        let {
+          limit: YY = FY,
+          windowMs: rY = AY,
+          spacingMs: DY = IY,
+          now: RY = Date.now
+        } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        this.sent = [], this.lastSentAt = -1 / 0, this.timer = null, this.listeners = new Set, this.priority = new Set, this.limit = void 0, this.windowMs = void 0, this.spacingMs = void 0, this.now = void 0, this.limit = YY, this.windowMs = rY, this.spacingMs = DY, this.now = RY
+      }
+      isPacing() {
+        return !this.canSendPriority() || this.isPriorityWaiting()
+      }
+      canSendPriority() {
+        return this.prune(), this.sent.length < this.limit && this.now() - this.lastSentAt >= this.spacingMs
+      }
+      tryStart() {
+        for (const YY of this.priority) YY.flush();
+        return !this.isPacing() && (this.start(), !0)
+      }
+      start() {
+        this.prune();
+        const YY = this.now();
+        this.sent.push(YY), this.lastSentAt = YY, this.schedule(), this.notify()
+      }
+      addPriority(YY) {
+        return this.priority.add(YY), () => {
+          this.priority.delete(YY)
+        }
+      }
+      subscribe(YY) {
+        return this.listeners.add(YY), () => {
+          this.listeners.delete(YY)
+        }
+      }
+      dispose() {
+        this.clearTimer(), this.sent = [], this.listeners.clear(), this.priority.clear()
+      }
+      isPriorityWaiting() {
+        for (const YY of this.priority)
+          if (YY.waiting()) return !0;
+        return !1
+      }
+      prune() {
+        const YY = this.now() - this.windowMs;
+        for (; this.sent.length > 0 && this.sent[0] <= YY;) this.sent.shift()
+      }
+      schedule() {
+        this.clearTimer();
+        const YY = this.now(),
+          rY = this.lastSentAt + this.spacingMs,
+          DY = Math.min(rY > YY ? rY : 1 / 0, this.sent.length > 0 ? this.sent[0] + this.windowMs : 1 / 0);
+        DY !== 1 / 0 && (this.timer = setTimeout((() => {
+          this.timer = null, this.prune(), this.schedule(), this.notify()
+        }), Math.max(0, DY - YY)))
+      }
+      notify() {
+        for (const YY of this.listeners) YY()
+      }
+      clearTimer() {
+        null !== this.timer && (clearTimeout(this.timer), this.timer = null)
+      }
+    }
+  },
+  37910: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => FY
+    });
+    class FY {
+      constructor(YY, rY, DY) {
+        this.vo = YY, this.beforeOpen = rY, this.afterClose = DY, this.open = !1, this.Ky = !1, this.snapshot = void 0, this.getSnapshot = () => this.snapshot, this.show = () => {
+          this.isEnabled() && !this.Ky && (this.open = !0, this.beforeOpen(this), this.emit())
+        }, this.close = () => {
+          this.closePanel(!1)
+        }, this.dismiss = () => {
+          this.closePanel(!0)
+        }
+      }
+      isOpen() {
+        return this.open
+      }
+      showOrRefresh() {
+        this.open ? this.emit() : this.show()
+      }
+      closePanel(YY) {
+        this.open = !1, this.onClosed(), this.emit(), this.afterClose(YY)
+      }
+      onClosed() {}
+      dispose() {
+        this.open = !1, this.emit(), this.Ky = !0
+      }
+      isEnabled() {
+        return !0
+      }
+      emit() {
+        this.Ky || (this.snapshot = this.buildSnapshot(), this.vo(this.snapshot))
+      }
+    }
+  },
+  38005: (YY, rY, DY) => {
+    DY.r(rY), DY.d(rY, {
+      SkyblockEntityFacing: () => OY,
+      needsSkyblockEntityFacing: () => RY
+    });
+    var FY = DY(37921),
+      AY = DY(3815),
+      IY = DY(38011);
+
+    function RY(YY, rY) {
+      if (YY.metaInfo === FY.n || "Iron Guardian" === YY.type || "Gold Guardian" === YY.type) return !0;
+      if ("Pig" === YY.type) return "sitting" === YY.pose;
+      if ("Person" !== YY.meshKind || void 0 === YY.meshOpts) return !1;
+      let DY = null === rY || void 0 === rY ? void 0 : rY.get(YY.meshOpts);
+      if (void 0 === DY) {
+        var IY, RY;
+        const FY = (0, AY.j)(YY);
+        DY = !1, "pig_napoleon" === (null === FY || void 0 === FY || null === (IY = FY.opts.textures) || void 0 === IY ? void 0 : IY.head) ? DY = !0 : "npc_pig_head" === (null === FY || void 0 === FY || null === (RY = FY.opts.textures) || void 0 === RY ? void 0 : RY.head) && (DY = "sitting" === FY.opts.pose || "sitting"), rY && (rY.size >= 256 && rY.clear(), rY.set(YY.meshOpts, DY))
+      }
+      return "sitting" === DY ? "sitting" === YY.pose : DY
+    }(0, IY.f)("skyblock", ((YY, rY) => {
+      rY.setFacingTolerance(RY(YY) ? 0 : null)
+    }));
+    class OY {
+      constructor(YY) {
+        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        this.api = YY, this.alsoVisit = rY, this.facing = new Set, this.nextFacing = new Set, this.meshFacingCache = new Map, this.visit = YY => {
+          var rY;
+          const DY = this.api.getEntityInfo(YY);
+          DY && (RY(DY, this.meshFacingCache) && (this.api.setFacingTolerance(YY, 0), this.nextFacing.add(YY)), null === (rY = this.alsoVisit) || void 0 === rY || rY.call(this, YY, DY))
+        }
+      }
+      Zu() {
+        const {
+          api: YY
+        } = this, rY = this.nextFacing;
+        YY.forEachEntity(this.visit);
+        for (const DY of this.facing) rY.has(DY) || YY.setFacingTolerance(DY, null);
+        this.facing.clear(), this.nextFacing = this.facing, this.facing = rY
+      }
+      dispose() {
+        for (const YY of this.facing) this.api.setFacingTolerance(YY, null);
+        this.facing.clear(), this.meshFacingCache.clear()
+      }
+    }
+  },
+  37903: (YY, rY, DY) => {
+    DY.r(rY), DY.d(rY, {
+      default: () => Ag
+    });
+    const FY = "island";
+    var AY = DY(341);
+    const IY = (0, AY.Bb)([0, 0, -1]),
+      RY = [{
+        name: "S",
+        bearing: (0, AY.Bb)([0, 0, 1])
+      }, {
+        name: "E",
+        bearing: (0, AY.Bb)([-1, 0, 0])
+      }, {
+        name: "N",
+        bearing: IY
+      }, {
+        name: "W",
+        bearing: (0, AY.Bb)([1, 0, 0])
+      }];
+
+    function OY(YY, rY, DY) {
+      return [100 * (DY.mapMaxX - YY) / (DY.mapMaxX - DY.mapMinX), 100 * (rY - DY.mapMinZ) / (DY.mapMaxZ - DY.mapMinZ)]
+    }
+
+    function gY(YY, rY, DY) {
+      const AY = "local" === rY,
+        IY = YY.background,
+        RY = rY => IY ? OY(rY[0] - YY.mapOrigin[0], rY[2] - YY.mapOrigin[2], IY.bounds) : [50, 50],
+        gY = (YY.insideDungeon ? [] : YY.landmarks).map((YY => {
+          var rY, FY;
+          return {
+            id: YY.id,
+            name: DY(YY.visited && YY.nameKey ? null !== (rY = YY.mapLabelKey) && void 0 !== rY ? rY : YY.nameKey : "skyblockGame:mapUnknown"),
+            icon: YY.visited && null !== (FY = YY.icon) && void 0 !== FY ? FY : "unknown",
+            visited: YY.visited,
+            current: !1,
+            position: RY(YY.position),
+            travelKind: "landmark",
+            travelId: YY.id
+          }
+        })),
+        vY = YY.zones.map((rY => {
+          var FY;
+          return {
+            id: rY.id,
+            name: DY(rY.visited && rY.nameKey ? rY.nameKey : "skyblockGame:mapUnknown"),
+            icon: rY.visited && null !== (FY = rY.icon) && void 0 !== FY ? FY : "unknown",
+            visited: rY.visited,
+            current: rY.id === YY.zoneId,
+            position: rY.position,
+            thumbnail: rY.visited ? rY.id : void 0,
+            travelKind: "zone",
+            travelId: rY.id
+          }
+        })),
+        uY = YY.insideDungeon || !IY ? [] : YY.portals.map((YY => {
+          var rY;
+          return {
+            id: YY.id,
+            name: DY(null !== (rY = YY.nameKey) && void 0 !== rY ? rY : "skyblockGame:mapUnknown"),
+            icon: YY.visited ? "dungeons" === YY.destination ? "portal_orange" : "portal" : "unknown",
+            visited: YY.visited,
+            current: !1,
+            position: RY(YY.position),
+            colour: YY.colour,
+            travelKind: "zone",
+            travelId: YY.destination
+          }
+        })),
+        sY = AY ? gY : vY,
+        iY = sY.filter((YY => YY.visited)).length,
+        yY = IY ? (IY.bounds.mapMaxX - IY.bounds.mapMinX) / (IY.bounds.mapMaxZ - IY.bounds.mapMinZ) : 2,
+        QY = IY ? JSON.stringify([IY.bounds, YY.mapOrigin]) : "";
+      return {
+        local: AY,
+        points: sY,
+        portals: AY ? uY : [],
+        progress: sY.length ? DY("skyblockGame:mapDiscovered", {
+          current: String(iY),
+          total: String(sY.length)
+        }) : null,
+        percent: sY.length ? 100 * iY / sY.length : 0,
+        canTravel: [...sY, ...AY ? uY : []].some((YY => YY.visited && !YY.current)),
+        noLandmarks: AY && !YY.insideDungeon && 0 === gY.length,
+        background: IY ? {
+          imageKey: IY.imageKey,
+          fallbackImageKey: YY.zoneId,
+          geometryKey: QY,
+          label: DY(IY.labelKey),
+          colour: IY.backgroundColour,
+          ratio: yY
+        } : null,
+        connections: aY(YY.zones),
+        minimap: IY ? {
+          imageKey: IY.imageKey,
+          fallbackImageKey: YY.zoneId,
+          geometryKey: QY,
+          label: DY(IY.labelKey),
+          colour: IY.backgroundColour,
+          caption: DY(YY.zoneId === FY ? "skyblockGame:zoneIsland" : IY.labelKey),
+          width: (IY.bounds.mapMaxX - IY.bounds.mapMinX) / IY.minimapSpan * 100 + "%",
+          height: (IY.bounds.mapMaxZ - IY.bounds.mapMinZ) / IY.minimapSpan * 100 + "%",
+          markers: [...gY, ...uY]
+        } : null
+      }
+    }
+
+    function aY(YY) {
+      const rY = new Set;
+      return YY.flatMap((DY => DY.connections.flatMap((FY => {
+        const AY = YY.find((YY => YY.id === FY)),
+          IY = [DY.id, FY].sort().join("|");
+        return !AY || rY.has(IY) ? [] : (rY.add(IY), [{
+          id: `${DY.id}-${FY}`,
+          start: DY.position,
+          end: AY.position,
+          explored: DY.visited && AY.visited
+        }])
+      }))))
+    }
+    var vY = DY(37910);
+    class uY extends vY.c {}
+    const sY = "skyblockMapView";
+    class iY extends uY {
+      constructor(YY, rY, DY) {
+        let FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => {},
+          AY = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {},
+          IY = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now;
+        super(YY, FY, AY), this.requestTravel = rY, this.translate = DY, this.now = IY, this.entities = [], this.map = null, this.tab = "local", this.pending = null, this.nextRequestId = 0, this.feedbackKey = "", this.snapshot = {
+          presentation: null,
+          enabled: !1,
+          open: !1,
+          tab: "local",
+          map: null,
+          pending: !1,
+          feedback: ""
+        }, this.showLocal = () => {
+          this.selectTab("local"), this.show()
+        }, this.selectTab = YY => {
+          this.tab = YY, this.feedbackKey = "", this.emit()
+        }, this.travel = (YY, rY) => {
+          if (!this.map || this.pending || this.Ky) return;
+          const DY = ("zone" === YY ? this.map.zones : this.map.landmarks).find((YY => YY.id === rY));
+          if (DY) {
+            if (this.map.insideDungeon) this.feedbackKey = "skyblockGame:mapDungeonTravelDisabled";
+            else if ("fastTravelEnabled" in DY && !DY.fastTravelEnabled) this.feedbackKey = "skyblockGame:mapLandmarkTravelDisabled";
+            else if (DY.visited)
+              if ("zone" === YY && rY === this.map.zoneId) this.feedbackKey = "skyblockGame:mapAlreadyHere";
+              else {
+                const DY = ++this.nextRequestId;
+                this.pending = {
+                  requestId: DY,
+                  expiresAt: this.now() + 1e4
+                }, this.feedbackKey = "skyblockGame:mapTravelling", this.requestTravel({
+                  kind: YY,
+                  id: rY,
+                  requestId: DY
+                })
+              }
+            else this.feedbackKey = "skyblockGame:mapVisitFirst";
+            this.emit()
+          }
+        }
+      }
+      getEntities() {
+        return this.entities
+      }
+      setTranslator(YY) {
+        this.translate = YY, this.emit()
+      }
+      Cy(YY) {
+        var rY;
+        if (!this.Ky)
+          if ("entities" !== YY.kind)
+            if ("open" !== YY.kind) {
+              var DY, FY;
+              if ("snapshot" === YY.kind)(null === (DY = YY.snapshot) || void 0 === DY ? void 0 : DY.zoneId) !== (null === (FY = this.map) || void 0 === FY ? void 0 : FY.zoneId) && (this.pending = null, this.feedbackKey = ""), this.map = YY.snapshot, !this.map && this.open && this.close();
+              else if ("travelQueued" === YY.kind) {
+                var AY;
+                YY.requestId === (null === (AY = this.pending) || void 0 === AY ? void 0 : AY.requestId) && (this.pending.expiresAt = 1 / 0, this.close())
+              } else if (YY.requestId === (null === (rY = this.pending) || void 0 === rY ? void 0 : rY.requestId)) {
+                var IY;
+                this.pending = null, this.feedbackKey = null !== (IY = YY.errorKey) && void 0 !== IY ? IY : "", null === YY.errorKey && this.close()
+              }
+              this.emit()
+            } else this.show();
+        else this.entities = YY.entities
+      }
+      Zu() {
+        this.pending && this.now() >= this.pending.expiresAt && (this.pending = null, this.feedbackKey = "skyblockGame:mapTravelTimeout", this.emit())
+      }
+      dispose() {
+        this.map = null, this.pending = null, super.dispose()
+      }
+      isEnabled() {
+        return null !== this.map
+      }
+      buildSnapshot() {
+        return {
+          presentation: this.map ? gY(this.map, this.tab, this.translate) : null,
+          enabled: this.isEnabled(),
+          open: this.open,
+          tab: this.tab,
+          map: this.map,
+          pending: null !== this.pending,
+          feedback: this.feedbackKey ? this.translate(this.feedbackKey) : ""
+        }
+      }
+    }
+    const yY = 67.5 * Math.PI / 180;
+
+    function QY(YY, rY) {
+      const DY = Math.abs(YY);
+      if (DY > yY || rY.trackHalfWidth <= 0) return null;
+      const FY = rY.trackHalfWidth,
+        AY = rY.screenHalfWidth / (rY.tanHalfFovX * Math.max(.5, Math.cos(rY.pitch))),
+        IY = Math.min(Math.atan(.6 * FY / AY), .75 * yY),
+        RY = AY * Math.tan(IY);
+      let OY;
+      if (DY <= IY) OY = AY * Math.tan(DY);
+      else {
+        const YY = yY - IY,
+          rY = Math.max(0, AY * YY / (Math.cos(IY) ** 2 * (FY - RY)) - 1),
+          gY = (DY - IY) / YY;
+        OY = RY + (FY - RY) * (1 + rY) * gY / (1 + rY * gY)
+      }
+      return 50 + Math.sign(YY) * OY * 50 / FY
+    }
+    class oY {
+      constructor(YY, rY) {
+        this.map = YY, this.visited = rY, this.id = void 0, this.enabled = !0, this.range = 96, this.limit = 40, this.id = rY ? "landmarks" : "unknownLandmarks"
+      }
+      getPoints() {
+        const YY = this.map.getSnapshot().map;
+        return !YY || YY.insideDungeon ? [] : YY.landmarks.filter((YY => YY.visited === this.visited)).map((YY => {
+          var rY, DY;
+          return {
+            id: `landmark:${YY.id}`,
+            position: YY.position,
+            icon: null !== (rY = YY.icon) && void 0 !== rY ? rY : "unknown",
+            nameKey: null !== (DY = YY.nameKey) && void 0 !== DY ? DY : "skyblockGame:compassUnknown",
+            kind: this.visited ? "landmark" : "unknown"
+          }
+        }))
+      }
+    }
+    class WY {
+      constructor(YY, rY, DY, FY) {
+        this.map = YY, this.kind = rY, this.position = DY, this.alive = FY, this.id = void 0, this.enabled = !0, this.range = void 0, this.limit = void 0, this.id = rY, this.range = "enemy" === rY ? 48 : 64, this.limit = 12
+      }
+      lE(YY) {
+        if ("enemy" !== this.kind || this.alive(YY.pF)) return this.position(YY.pF)
+      }
+      getPoints() {
+        const YY = [];
+        for (const FY of this.map.getEntities()) {
+          if (FY.kind !== this.kind || "enemy" === this.kind && !this.alive(FY.compassEntityId)) continue;
+          const AY = this.position(FY.compassEntityId);
+          var rY, DY;
+          if (AY) YY.push({
+            id: `${this.kind}:${FY.compassEntityId}`,
+            pF: FY.compassEntityId,
+            kind: this.kind,
+            icon: null !== (rY = FY.icon) && void 0 !== rY ? rY : FY.npcSkin ? `npc_${FY.npcSkin}` : this.kind,
+            displayName: FY.displayName,
+            position: AY,
+            nameKey: null !== (DY = FY.nameKey) && void 0 !== DY ? DY : "enemy" === this.kind ? "skyblockGame:compassEnemy" : "skyblockGame:compassNpc"
+          })
+        }
+        return YY
+      }
+    }
+    class EY {
+      constructor(YY) {
+        this.map = YY, this.id = "portals", this.enabled = !0, this.range = 96, this.limit = 12
+      }
+      getPoints() {
+        const YY = this.map.getSnapshot().map;
+        return !YY || YY.insideDungeon ? [] : YY.portals.map((YY => {
+          var rY;
+          return {
+            id: "portal:" + YY.id,
+            kind: "portal",
+            position: YY.position,
+            nameKey: null !== (rY = YY.nameKey) && void 0 !== rY ? rY : "skyblockGame:compassUnvisitedZone",
+            icon: YY.visited ? "dungeons" === YY.destination ? "portal_orange" : "portal" : "unknown",
+            colour: YY.colour
+          }
+        }))
+      }
+    }
+    class mY {
+      constructor(YY) {
+        this.target = YY, this.id = "quest", this.enabled = !0, this.range = 1 / 0, this.limit = 1
+      }
+      getPoints() {
+        const YY = this.target();
+        return YY ? [{
+          id: "quest",
+          kind: "quest",
+          icon: "quest",
+          position: YY.position,
+          nameKey: YY.nameKey
+        }] : []
+      }
+    }
+
+    function VY(YY, rY, DY) {
+      let FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : YY.position;
+      const IY = FY[0] - rY[0],
+        RY = FY[2] - rY[2];
+      return {
+        ...YY,
+        position: FY,
+        offset: AY.c.computeShortestRotation(DY, (0, AY.Bb)([IY, 0, RY])),
+        distance: Math.hypot(IY, FY[1] - rY[1], RY)
+      }
+    }
+    let SY;
+
+    function lY(YY, rY) {
+      var DY;
+      return (null === (DY = SY) || void 0 === DY ? void 0 : DY.locale) !== rY && (SY = {
+        locale: rY,
+        near: new Intl.NumberFormat(rY, {
+          minimumFractionDigits: 1,
+          maximumFractionDigits: 1
+        }),
+        far: new Intl.NumberFormat(rY, {
+          minimumFractionDigits: 0,
+          maximumFractionDigits: 0
+        })
+      }), (YY < 10 ? SY.near : SY.far).format(YY)
+    }
+    class TY {
+      constructor() {
+        this.providers = new Map, this.candidates = [], this.refreshAt = 0
+      }
+      register(YY) {
+        return this.providers.set(YY.id, YY), this.refreshAt = 0, () => {
+          this.providers.get(YY.id) === YY && (this.providers.delete(YY.id), this.refreshAt = 0)
+        }
+      }
+      frame(YY, rY, DY) {
+        if (DY >= this.refreshAt) {
+          this.refreshAt = DY + 200, this.candidates = [];
+          for (const rY of this.providers.values()) {
+            if (!rY.enabled) continue;
+            const DY = rY.getPoints().map((rY => {
+              const DY = rY.position;
+              return {
+                point: rY,
+                distance: Math.hypot(DY[0] - YY[0], DY[1] - YY[1], DY[2] - YY[2])
+              }
+            })).filter((YY => YY.distance <= rY.range)).sort(((YY, rY) => YY.distance - rY.distance)).slice(0, rY.limit);
+            for (const {
+                point: YY
+              }
+              of DY) this.candidates.push({
+              provider: rY,
+              point: YY
+            })
+          }
+        }
+        const FY = [];
+        for (const {
+            point: AY,
+            provider: IY
+          }
+          of this.candidates) {
+          if (!IY.enabled) continue;
+          const DY = IY.lE ? IY.lE(AY) : AY.position;
+          if (DY) {
+            const IY = VY(AY, YY, rY, DY);
+            Math.abs(IY.offset) <= yY && FY.push(IY)
+          }
+        }
+        return FY
+      }
+      dispose() {
+        this.providers.clear(), this.candidates = []
+      }
+    }
+    var eY = DY(36034),
+      NY = DY(61);
+    const BY = [{
+        dailyRewardCoins: 1e3,
+        dailyRewardItems: []
+      }, {
+        dailyRewardCoins: 3e3,
+        dailyRewardItems: []
+      }, {
+        dailyRewardCoins: 4e3,
+        dailyRewardItems: []
+      }, {
+        dailyRewardCoins: 5500,
+        dailyRewardItems: []
+      }, {
+        dailyRewardCoins: 7e3,
+        dailyRewardItems: []
+      }, {
+        dailyRewardCoins: 9e3,
+        dailyRewardItems: [{
+          dailyRewardItemName: "Gold Bar",
+          dailyRewardItemAmount: 2
+        }]
+      }, {
+        dailyRewardCoins: 25e3,
+        dailyRewardItems: [{
+          dailyRewardItemName: "Gold Bar",
+          dailyRewardItemAmount: 3
+        }, {
+          dailyRewardItemName: "Diamond",
+          dailyRewardItemAmount: 1
+        }]
+      }],
+      cY = BY.length;
+
+    function KY(YY) {
+      return YY >= cY ? 1 : YY + 1
+    }
+    const HY = "skyblockQuests";
+    var zY = DY(37921);
+    const ZY = "devquests",
+      CY = "none",
+      fY = {
+        hub: {
+          farming_1: {
+            min: [4, 16, 90],
+            max: [4, 18, 91],
+            unlockedBlock: "Yellow Portal"
+          },
+          mining_1: {
+            min: [95, 16, 2],
+            max: [97, 18, 2],
+            unlockedBlock: "Cyan Portal"
+          },
+          combat_1: {
+            min: [207, 36, 49],
+            max: [208, 38, 49],
+            unlockedBlock: "Red Portal"
+          },
+          fishing_1: {
+            min: [6, 20, 149],
+            max: [6, 22, 150],
+            unlockedBlock: "Blue Portal"
+          }
+        },
+        combat_1: {
+          tower_roof: {
+            min: [202, 69, 151],
+            max: [203, 71, 151],
+            unlockedBlock: "Red Portal",
+            lockedBlock: "Grey Portal"
+          },
+          tower_exit: {
+            min: [202, 80, 133],
+            max: [203, 82, 133],
+            unlockedBlock: "Red Portal",
+            lockedBlock: "Grey Portal"
+          }
+        }
       },
-      YB = {
-        "Active Radar2": dB(34901),
-        "Active Radar3": dB(34908),
-        "Active Radar4": dB(34913),
-        "Active Radar5": dB(34922),
-        "Active Radar|meta|rot22": dB(34901),
-        "Active Radar|meta|rot23": dB(34908),
-        "Active Radar|meta|rot24": dB(34913),
-        "Active Radar|meta|rot25": dB(34922),
-        "Active Radar|meta|rot32": dB(34901),
-        "Active Radar|meta|rot33": dB(34908),
-        "Active Radar|meta|rot34": dB(34913),
-        "Active Radar|meta|rot35": dB(34922),
-        "Active Radar|meta|rot42": dB(34901),
-        "Active Radar|meta|rot43": dB(34908),
-        "Active Radar|meta|rot44": dB(34913),
-        "Active Radar|meta|rot45": dB(34922),
-        "Alloy Kiln|meta|rot1|Running1": dB(34927),
-        "Alloy Kiln|meta|rot2|Running1": dB(34927),
-        "Alloy Kiln|meta|rot3|Running1": dB(34927),
-        "Alloy Kiln|meta|rot4|Running1": dB(34927),
-        "Assembler|meta|rot1|Running1": dB(34929),
-        "Assembler|meta|rot2|Running1": dB(34929),
-        "Assembler|meta|rot3|Running1": dB(34929),
-        "Assembler|meta|rot4|Running1": dB(34929),
-        "Battery Cell|meta|rot1|Running1": dB(34935),
-        "Battery Controller|meta|rot1|Running0": dB(34943),
-        "Battery Controller|meta|rot2|Running0": dB(34943),
-        "Battery Controller|meta|rot3|Running0": dB(34943),
-        "Battery Controller|meta|rot4|Running0": dB(34943),
-        "Black Portal": dB(34952),
-        "Blue Portal": dB(34955),
-        "Brown Portal": dB(34962),
-        "Burner Drill|meta|rot1|Running1": dB(34964),
-        "Burner Drill|meta|rot2|Running1": dB(34964),
-        "Burner Drill|meta|rot3|Running1": dB(34964),
-        "Burner Drill|meta|rot4|Running1": dB(34964),
-        "Centrifuge|meta|rot1|Running1": dB(34972),
-        "Centrifuge|meta|rot1|Running7": dB(34978),
-        "Centrifuge|meta|rot1|Running8": dB(34985),
-        "Centrifuge|meta|rot2|Running1": dB(34972),
-        "Centrifuge|meta|rot2|Running7": dB(34978),
-        "Centrifuge|meta|rot2|Running8": dB(34985),
-        "Centrifuge|meta|rot3|Running1": dB(34972),
-        "Centrifuge|meta|rot3|Running7": dB(34978),
-        "Centrifuge|meta|rot3|Running8": dB(34985),
-        "Centrifuge|meta|rot4|Running1": dB(34972),
-        "Centrifuge|meta|rot4|Running7": dB(34978),
-        "Centrifuge|meta|rot4|Running8": dB(34985),
-        "Collider|meta|rot1|Running1": dB(34987),
-        "Collider|meta|rot1|Running7": dB(34987),
-        "Collider|meta|rot2|Running1": dB(34987),
-        "Collider|meta|rot2|Running7": dB(34987),
-        "Collider|meta|rot3|Running1": dB(34987),
-        "Collider|meta|rot3|Running7": dB(34987),
-        "Collider|meta|rot4|Running1": dB(34987),
-        "Collider|meta|rot4|Running7": dB(34987),
-        "Condenser|meta|rot1|Running1": dB(34993),
-        "Condenser|meta|rot1|Running7": dB(34998),
-        "Condenser|meta|rot1|Running8": dB(35007),
-        "Condenser|meta|rot2|Running1": dB(34993),
-        "Condenser|meta|rot2|Running7": dB(34998),
-        "Condenser|meta|rot2|Running8": dB(35007),
-        "Condenser|meta|rot3|Running1": dB(34993),
-        "Condenser|meta|rot3|Running7": dB(34998),
-        "Condenser|meta|rot3|Running8": dB(35007),
-        "Condenser|meta|rot4|Running1": dB(34993),
-        "Condenser|meta|rot4|Running7": dB(34998),
-        "Condenser|meta|rot4|Running8": dB(35007),
-        "Coolant Channel|meta|rot1|Running1": dB(35012),
-        "Coolant Mixer|meta|rot1|Running1": dB(35021),
-        "Coolant Mixer|meta|rot1|Running7": dB(35028),
-        "Coolant Mixer|meta|rot1|Running8": dB(35034),
-        "Coolant Mixer|meta|rot2|Running1": dB(35021),
-        "Coolant Mixer|meta|rot2|Running7": dB(35028),
-        "Coolant Mixer|meta|rot2|Running8": dB(35034),
-        "Coolant Mixer|meta|rot3|Running1": dB(35021),
-        "Coolant Mixer|meta|rot3|Running7": dB(35028),
-        "Coolant Mixer|meta|rot3|Running8": dB(35034),
-        "Coolant Mixer|meta|rot4|Running1": dB(35021),
-        "Coolant Mixer|meta|rot4|Running7": dB(35028),
-        "Coolant Mixer|meta|rot4|Running8": dB(35034),
-        "Crop Harvester|meta|rot1|Running1": dB(35040),
-        "Crop Harvester|meta|rot1|Running7": dB(35042),
-        "Crop Harvester|meta|rot2|Running1": dB(35040),
-        "Crop Harvester|meta|rot2|Running7": dB(35042),
-        "Crop Harvester|meta|rot3|Running1": dB(35040),
-        "Crop Harvester|meta|rot3|Running7": dB(35042),
-        "Crop Harvester|meta|rot4|Running1": dB(35040),
-        "Crop Harvester|meta|rot4|Running7": dB(35042),
-        "Crusher|meta|rot1|Running1": dB(35047),
-        "Crusher|meta|rot2|Running1": dB(35047),
-        "Crusher|meta|rot3|Running1": dB(35047),
-        "Crusher|meta|rot4|Running1": dB(35047),
-        "Crystal Vat|meta|rot1|Running1": dB(35054),
-        "Crystal Vat|meta|rot2|Running1": dB(35054),
-        "Crystal Vat|meta|rot3|Running1": dB(35054),
-        "Crystal Vat|meta|rot4|Running1": dB(35054),
-        "Cyan Portal": dB(35058),
-        "Deep Drill|meta|rot1|Running1": dB(35062),
-        "Deep Drill|meta|rot2|Running1": dB(35062),
-        "Deep Drill|meta|rot3|Running1": dB(35062),
-        "Deep Drill|meta|rot4|Running1": dB(35062),
-        "Electric Drill|meta|rot1|Running1": dB(35071),
-        "Electric Drill|meta|rot2|Running1": dB(35071),
-        "Electric Drill|meta|rot3|Running1": dB(35071),
-        "Electric Drill|meta|rot4|Running1": dB(35071),
-        "Fluid Tank|meta|rot1|Fill11": dB(35078),
-        "Fluid Tank|meta|rot1|Fill21": dB(35081),
-        "Fluid Tank|meta|rot1|Fill31": dB(35087),
-        "Fluid Tank|meta|rot1|Fill41": dB(35093),
-        "Fuel Rod|meta|rot1|Running1": dB(35096),
-        "Generator|meta|rot1|Running0": dB(35099),
-        "Generator|meta|rot2|Running0": dB(35099),
-        "Generator|meta|rot3|Running0": dB(35099),
-        "Generator|meta|rot4|Running0": dB(35099),
-        "Gray Portal": dB(35101),
-        "Green Portal": dB(35104),
-        "Grey Portal": dB(35101),
-        Lava: dB(35110),
-        "Light Blue Portal": dB(35113),
-        "Light Gray Portal": dB(35117),
-        "Lime Portal": dB(35122),
-        "Magenta Portal": dB(35124),
-        "Mob Farm|meta|rot1|Running1": dB(35127),
-        "Mob Farm|meta|rot2|Running1": dB(35127),
-        "Mob Farm|meta|rot3|Running1": dB(35127),
-        "Mob Farm|meta|rot4|Running1": dB(35127),
-        "Orange Portal": dB(35129),
-        "Pink Portal": dB(35136),
-        "Press|meta|rot1|Running1": dB(35144),
-        "Press|meta|rot2|Running1": dB(35144),
-        "Press|meta|rot3|Running1": dB(35144),
-        "Press|meta|rot4|Running1": dB(35144),
-        "Pump|meta|rot1|Running0": dB(35151),
-        "Pump|meta|rot2|Running0": dB(35151),
-        "Pump|meta|rot3|Running0": dB(35151),
-        "Pump|meta|rot4|Running0": dB(35151),
-        "Purple Portal": dB(35158),
-        "Reactor Controller|meta|rot1|Alarm0": dB(35166),
-        "Reactor Controller|meta|rot1|Calm0": dB(35168),
-        "Reactor Controller|meta|rot1|Hot0": dB(35173),
-        "Reactor Controller|meta|rot1|Warm0": dB(35179),
-        "Reactor Controller|meta|rot2|Alarm0": dB(35166),
-        "Reactor Controller|meta|rot2|Calm0": dB(35168),
-        "Reactor Controller|meta|rot2|Hot0": dB(35173),
-        "Reactor Controller|meta|rot2|Warm0": dB(35179),
-        "Reactor Controller|meta|rot3|Alarm0": dB(35166),
-        "Reactor Controller|meta|rot3|Calm0": dB(35168),
-        "Reactor Controller|meta|rot3|Hot0": dB(35173),
-        "Reactor Controller|meta|rot3|Warm0": dB(35179),
-        "Reactor Controller|meta|rot4|Alarm0": dB(35166),
-        "Reactor Controller|meta|rot4|Calm0": dB(35168),
-        "Reactor Controller|meta|rot4|Hot0": dB(35173),
-        "Reactor Controller|meta|rot4|Warm0": dB(35179),
-        "Recycler|meta|rot1|Running1": dB(35186),
-        "Recycler|meta|rot2|Running1": dB(35186),
-        "Recycler|meta|rot3|Running1": dB(35186),
-        "Recycler|meta|rot4|Running1": dB(35186),
-        "Red Portal": dB(35194),
-        "Shatter Mill|meta|rot1|Running1": dB(35203),
-        "Shatter Mill|meta|rot2|Running1": dB(35203),
-        "Shatter Mill|meta|rot3|Running1": dB(35203),
-        "Shatter Mill|meta|rot4|Running1": dB(35203),
-        "Sky Spring0": dB(35209),
-        "Sky Tap|meta|rot1|Running1": dB(35213),
-        "Sky Tap|meta|rot2|Running1": dB(35213),
-        "Sky Tap|meta|rot3|Running1": dB(35213),
-        "Sky Tap|meta|rot4|Running1": dB(35213),
-        "Smelter|meta|rot1|Running1": dB(35215),
-        "Smelter|meta|rot2|Running1": dB(35215),
-        "Smelter|meta|rot3|Running1": dB(35215),
-        "Smelter|meta|rot4|Running1": dB(35215),
-        "Smoke Block": dB(35222),
-        "Synthesizer|meta|rot1|Running1": dB(35228),
-        "Synthesizer|meta|rot1|Running7": dB(35235),
-        "Synthesizer|meta|rot1|Running8": dB(35238),
-        "Synthesizer|meta|rot2|Running1": dB(35228),
-        "Synthesizer|meta|rot2|Running7": dB(35235),
-        "Synthesizer|meta|rot2|Running8": dB(35238),
-        "Synthesizer|meta|rot3|Running1": dB(35228),
-        "Synthesizer|meta|rot3|Running7": dB(35235),
-        "Synthesizer|meta|rot3|Running8": dB(35238),
-        "Synthesizer|meta|rot4|Running1": dB(35228),
-        "Synthesizer|meta|rot4|Running7": dB(35235),
-        "Synthesizer|meta|rot4|Running8": dB(35238),
-        "Toxic Waste": dB(35244),
-        "Toxic Waste Barrel2": dB(35248),
-        "Trading Terminal0": dB(35257),
-        "Trading Terminal|meta|rot20": dB(35257),
-        "Trading Terminal|meta|rot30": dB(35257),
-        "Trading Terminal|meta|rot40": dB(35257),
-        "Tree Cutter|meta|rot1|Running1": dB(35263),
-        "Tree Cutter|meta|rot1|Running7": dB(35272),
-        "Tree Cutter|meta|rot2|Running1": dB(35263),
-        "Tree Cutter|meta|rot2|Running7": dB(35272),
-        "Tree Cutter|meta|rot3|Running1": dB(35263),
-        "Tree Cutter|meta|rot3|Running7": dB(35272),
-        "Tree Cutter|meta|rot4|Running1": dB(35263),
-        "Tree Cutter|meta|rot4|Running7": dB(35272),
-        "Volt Engine|meta|rot1|Running0": dB(35280),
-        "Volt Engine|meta|rot2|Running0": dB(35280),
-        "Volt Engine|meta|rot3|Running0": dB(35280),
-        "Volt Engine|meta|rot4|Running0": dB(35280),
-        "White Portal": dB(35286),
-        "Wire Mill|meta|rot1|Running1": dB(35288),
-        "Wire Mill|meta|rot2|Running1": dB(35288),
-        "Wire Mill|meta|rot3|Running1": dB(35288),
-        "Wire Mill|meta|rot4|Running1": dB(35288),
-        "Yellow Portal": dB(35291),
-        "_Collider Focus|meta|rot1|Running1": dB(34987),
-        "_Collider Focus|meta|rot2|Running1": dB(34987),
-        "_Collider Focus|meta|rot3|Running1": dB(34987),
-        "_Collider Focus|meta|rot4|Running1": dB(34987),
-        "_Homestead Core Mid0": dB(35297)
+      jY = "Compressed Messy Stone",
+      hY = {
+        "Grass Block": "Useless Soil",
+        "Pine Grass Block": "Useless Soil",
+        "Jungle Grass Block": "Useless Soil",
+        "Dry Grass Block": "Useless Soil",
+        "Overgrown Grass Block": "Useless Soil",
+        "Overgrown Pine Grass Block": "Useless Soil",
+        "Overgrown Jungle Grass Block": "Useless Soil",
+        "Overgrown Dry Grass Block": "Useless Soil",
+        Dirt: "Messy Dirt",
+        Sand: "Sandstone",
+        Gravel: "Smooth Andesite"
       },
-      gB = {
-        Unloaded: [
-          [244, 0, 255],
-          [0, 0, 0]
-        ],
-        Dirt: [
-          [133, 98, 77],
-          [139, 102, 80],
-          [127, 92, 74]
-        ],
-        "Messy Dirt": [
-          [123, 87, 59],
-          [129, 90, 62],
-          [118, 81, 57]
-        ],
-        "Grass Block": [
-          [93, 141, 53],
-          [89, 136, 47],
-          [88, 132, 46],
-          [127, 92, 74],
-          [133, 98, 77],
-          [139, 102, 80]
-        ],
-        Sand: [
-          [251, 234, 163],
-          [252, 237, 175],
-          [247, 228, 156],
-          [243, 222, 150],
-          [245, 225, 153]
-        ],
-        Clay: [
-          [173, 183, 190],
-          [161, 171, 181],
-          [148, 159, 172]
-        ],
-        Gravel: [
-          [129, 131, 133],
-          [116, 121, 125],
-          [141, 142, 143]
-        ],
-        Snow: [
-          [230, 238, 249],
-          [238, 243, 250],
-          [245, 247, 250]
-        ],
-        "Maple Log": [
-          [107, 82, 52],
-          [124, 99, 65],
-          [115, 91, 57]
-        ],
-        "Pine Log": [
-          [83, 55, 41],
-          [73, 49, 40],
-          [65, 43, 30]
-        ],
-        "Plum Log": [
-          [109, 78, 76],
-          [113, 82, 81],
-          [117, 89, 87]
-        ],
-        "Cedar Log": [
-          [51, 36, 15],
-          [59, 42, 18],
-          [44, 31, 12]
-        ],
-        "Aspen Log": [
-          [233, 230, 200],
-          [99, 95, 82],
-          [54, 50, 42],
-          [227, 223, 189],
-          [98, 94, 79]
-        ],
-        "Jungle Log": [
-          [95, 73, 36],
-          [101, 78, 38],
-          [107, 84, 41]
-        ],
-        "Maple Wood Planks": [
-          [174, 143, 90],
-          [170, 139, 88],
-          [159, 128, 84]
-        ],
-        "Aspen Wood Planks": [
-          [199, 180, 128],
-          [194, 175, 123],
-          [187, 168, 115]
-        ],
-        "Plum Wood Planks": [
-          [149, 102, 93],
-          [146, 99, 91],
-          [138, 92, 84]
-        ],
-        "Jungle Wood Planks": [
-          [165, 124, 86],
-          [160, 120, 82],
-          [154, 114, 76]
-        ],
-        "Pine Wood Planks": [
-          [121, 87, 67],
-          [118, 85, 65],
-          [109, 77, 58]
-        ],
-        "Cedar Wood Planks": [
-          [81, 52, 25],
-          [78, 50, 23],
-          [73, 46, 21]
-        ],
-        "Barkless Maple Log": [
-          [169, 138, 88],
-          [178, 147, 95],
-          [174, 143, 90]
-        ],
-        "Barkless Aspen Log": [
-          [195, 176, 124],
-          [202, 183, 132],
-          [199, 180, 128]
-        ],
-        "Barkless Plum Log": [
-          [146, 100, 91],
-          [151, 104, 95],
-          [149, 102, 93]
-        ],
-        "Barkless Jungle Log": [
-          [162, 121, 83],
-          [169, 127, 89],
-          [165, 124, 86]
-        ],
-        "Barkless Pine Log": [
-          [118, 84, 64],
-          [125, 90, 70],
-          [121, 87, 67]
-        ],
-        "Barkless Cedar Log": [
-          [78, 50, 24],
-          [84, 54, 27],
-          [81, 52, 25]
-        ],
-        free_placeholder2: [
-          [142, 148, 155],
-          [131, 137, 144],
-          [121, 127, 135]
-        ],
-        Stone: [
-          [133, 139, 146],
-          [139, 145, 152],
-          [127, 133, 140]
-        ],
-        "Messy Stone": [
-          [142, 148, 155],
-          [131, 137, 144],
-          [121, 127, 135]
-        ],
-        free_placeholder: [
-          [142, 148, 155],
-          [131, 137, 144],
-          [121, 127, 135]
-        ],
-        "Smooth Stone": [
-          [160, 166, 173],
-          [151, 157, 164],
-          [133, 139, 146],
-          [138, 144, 151],
-          [117, 122, 128],
-          [129, 135, 142],
-          [108, 113, 119]
-        ],
-        Diorite: [
-          [246, 245, 240],
-          [233, 232, 226],
-          [206, 205, 197],
-          [219, 218, 212]
-        ],
-        "Smooth Diorite": [
-          [255, 255, 255],
-          [249, 249, 246],
-          [233, 232, 226],
-          [240, 239, 233],
-          [226, 225, 219],
-          [215, 213, 208],
-          [206, 203, 199]
-        ],
-        Andesite: [
-          [111, 120, 128],
-          [104, 114, 122],
-          [116, 126, 134],
-          [125, 134, 140]
-        ],
-        "Smooth Andesite": [
-          [138, 148, 154],
-          [127, 138, 145],
-          [114, 124, 132],
-          [116, 126, 134],
-          [111, 120, 128],
-          [104, 114, 122],
-          [100, 108, 116],
-          [125, 134, 140],
-          [93, 100, 108]
-        ],
-        Granite: [
-          [159, 107, 88],
-          [159, 117, 102],
-          [152, 101, 83],
-          [144, 94, 77]
-        ],
-        "Smooth Granite": [
-          [189, 135, 108],
-          [174, 121, 98],
-          [159, 107, 88],
-          [159, 112, 95],
-          [154, 103, 85],
-          [136, 87, 71],
-          [148, 98, 80],
-          [128, 80, 65]
-        ],
-        Sandstone: [
-          [247, 227, 155],
-          [252, 237, 175],
-          [251, 234, 163],
-          [245, 223, 151]
-        ],
-        Yellowstone: [
-          [237, 239, 173],
-          [221, 215, 149],
-          [242, 246, 180],
-          [227, 223, 157],
-          [232, 231, 165]
-        ],
-        "Coal Ore": [
-          [133, 139, 146],
-          [141, 147, 153],
-          [43, 44, 45],
-          [34, 35, 35],
-          [122, 128, 136],
-          [127, 133, 140]
-        ],
-        "Iron Ore": [
-          [133, 139, 146],
-          [139, 145, 152],
-          [210, 206, 199],
-          [195, 189, 183],
-          [122, 128, 136],
-          [127, 133, 140]
-        ],
-        "Gold Ore": [
-          [133, 139, 146],
-          [139, 145, 152],
-          [255, 226, 35],
-          [250, 193, 32],
-          [122, 128, 136],
-          [127, 133, 140]
-        ],
-        "Lapis Lazuli Ore": [
-          [133, 139, 146],
-          [139, 145, 152],
-          [63, 87, 154],
-          [50, 73, 137],
-          [122, 128, 136],
-          [127, 133, 140]
-        ],
-        "Emerald Ore": [
-          [133, 139, 146],
-          [139, 145, 152],
-          [88, 254, 140],
-          [60, 236, 115],
-          [122, 128, 136],
-          [127, 133, 140]
-        ],
-        "Diamond Ore": [
-          [133, 139, 146],
-          [139, 145, 152],
-          [93, 249, 246],
-          [63, 239, 236],
-          [122, 128, 136],
-          [127, 133, 140]
-        ],
-        "Block of Coal": [
-          [34, 35, 35],
-          [27, 28, 28],
-          [39, 40, 40]
-        ],
-        "Block of Iron": [
-          [238, 238, 234],
-          [227, 224, 217],
-          [210, 206, 199],
-          [215, 211, 204],
-          [195, 189, 183],
-          [183, 176, 170]
-        ],
-        "Block of Gold": [
-          [255, 255, 255],
-          [255, 245, 71],
-          [255, 219, 23],
-          [255, 226, 35],
-          [250, 193, 32],
-          [239, 163, 12]
-        ],
-        "Block of Lapis Lazuli": [
-          [97, 134, 188],
-          [75, 108, 167],
-          [63, 87, 154],
-          [66, 93, 158],
-          [53, 72, 141],
-          [41, 57, 123]
-        ],
-        "Block of Emerald": [
-          [187, 255, 169],
-          [141, 239, 116],
-          [65, 226, 75],
-          [94, 232, 91],
-          [55, 215, 72],
-          [44, 203, 68]
-        ],
-        "White Wool": [
-          [250, 250, 250],
-          [239, 240, 241]
-        ],
-        "Orange Wool": [
-          [252, 133, 33],
-          [246, 123, 25]
-        ],
-        "Magenta Wool": [
-          [203, 74, 189],
-          [195, 70, 182]
-        ],
-        "Light Blue Wool": [
-          [59, 194, 230],
-          [57, 184, 223]
-        ],
-        "Yellow Wool": [
-          [255, 211, 64],
-          [252, 203, 50]
-        ],
-        "Lime Wool": [
-          [134, 202, 29],
-          [122, 192, 27]
-        ],
-        "Pink Wool": [
-          [254, 155, 188],
-          [248, 146, 178]
-        ],
-        "Gray Wool": [
-          [73, 79, 83],
-          [67, 73, 77]
-        ],
-        "Light Gray Wool": [
-          [154, 154, 149],
-          [147, 147, 141]
-        ],
-        "Cyan Wool": [
-          [25, 153, 154],
-          [23, 144, 149]
-        ],
-        "Purple Wool": [
-          [136, 45, 183],
-          [127, 42, 176]
-        ],
-        "Blue Wool": [
-          [58, 68, 166],
-          [55, 61, 160]
-        ],
-        "Brown Wool": [
-          [125, 81, 44],
-          [118, 75, 42]
-        ],
-        "Green Wool": [
-          [95, 119, 32],
-          [89, 113, 30]
-        ],
-        "Red Wool": [
-          [176, 44, 37],
-          [166, 40, 35]
-        ],
-        "Black Wool": [
-          [29, 31, 36],
-          [24, 25, 30]
-        ],
-        "Baked Clay": [
-          [150, 93, 67],
-          [152, 95, 69],
-          [148, 92, 66]
-        ],
-        "White Baked Clay": [
-          [195, 167, 154],
-          [198, 169, 156],
-          [192, 165, 152]
-        ],
-        "Orange Baked Clay": [
-          [198, 108, 46],
-          [201, 109, 47],
-          [195, 107, 45]
-        ],
-        "Magenta Baked Clay": [
-          [173, 82, 125],
-          [176, 83, 127],
-          [170, 81, 123]
-        ],
-        "Light Blue Baked Clay": [
-          [104, 139, 145],
-          [106, 141, 148],
-          [102, 137, 142]
-        ],
-        "Yellow Baked Clay": [
-          [201, 148, 59],
-          [204, 150, 60],
-          [198, 146, 58]
-        ],
-        "Lime Baked Clay": [
-          [136, 143, 47],
-          [138, 146, 48],
-          [134, 140, 46]
-        ],
-        "Pink Baked Clay": [
-          [199, 120, 123],
-          [202, 122, 125],
-          [196, 118, 121]
-        ],
-        "Gray Baked Clay": [
-          [109, 83, 72],
-          [112, 85, 74],
-          [106, 81, 70]
-        ],
-        "Light Gray Baked Clay": [
-          [149, 120, 104],
-          [152, 122, 106],
-          [146, 118, 102]
-        ],
-        "Cyan Baked Clay": [
-          [87, 119, 108],
-          [89, 122, 110],
-          [85, 116, 106]
-        ],
-        "Purple Baked Clay": [
-          [139, 68, 122],
-          [142, 69, 124],
-          [136, 67, 120]
-        ],
-        "Blue Baked Clay": [
-          [103, 77, 114],
-          [105, 79, 117],
-          [101, 75, 111]
-        ],
-        "Brown Baked Clay": [
-          [134, 84, 55],
-          [137, 86, 56],
-          [131, 82, 54]
-        ],
-        "Green Baked Clay": [
-          [120, 103, 49],
-          [123, 105, 50],
-          [117, 101, 48]
-        ],
-        "Red Baked Clay": [
-          [158, 67, 51],
-          [161, 68, 52],
-          [155, 66, 50]
-        ],
-        "Black Baked Clay": [
-          [87, 59, 49],
-          [90, 61, 50],
-          [84, 57, 48]
-        ],
-        "Gray Concrete": [
-          [64, 69, 73]
-        ],
-        "Light Gray Concrete": [
-          [139, 139, 134]
-        ],
-        "Black Concrete": [
-          [22, 23, 28]
-        ],
-        "Blue Concrete": [
-          [53, 58, 143]
-        ],
-        "Brown Concrete": [
-          [109, 72, 43]
-        ],
-        "Cyan Concrete": [
-          [30, 134, 138]
-        ],
-        "Light Blue Concrete": [
-          [64, 172, 205]
-        ],
-        "Lime Concrete": [
-          [119, 179, 38]
-        ],
-        "Magenta Concrete": [
-          [176, 69, 165]
-        ],
-        "Orange Concrete": [
-          [223, 118, 34]
-        ],
-        "Pink Concrete": [
-          [228, 140, 168]
-        ],
-        "Purple Concrete": [
-          [115, 42, 157]
-        ],
-        "Red Concrete": [
-          [148, 40, 36]
-        ],
-        "White Concrete": [
-          [227, 228, 228]
-        ],
-        "Green Concrete": [
-          [85, 106, 35]
-        ],
-        "Yellow Concrete": [
-          [234, 192, 61]
-        ],
-        "Pine Leaves": [
-          [56, 76, 64],
-          [47, 63, 56],
-          [36, 54, 48]
-        ],
-        "Aspen Leaves": [
-          [91, 164, 57],
-          [79, 149, 47],
-          [102, 178, 68]
-        ],
-        "Maple Leaves": [
-          [37, 101, 20],
-          [44, 113, 23],
-          [33, 91, 18]
-        ],
-        "Jungle Leaves": [
-          [0, 122, 0],
-          [0, 111, 0],
-          [1, 136, 1]
-        ],
-        Pumpkin_placeholder: [
-          [237, 147, 44],
-          [233, 134, 39],
-          [239, 170, 65],
-          [255, 221, 97],
-          [255, 234, 159],
-          [223, 119, 32]
-        ],
-        Watermelon: [
-          [161, 172, 29],
-          [110, 149, 32],
-          [93, 141, 32],
-          [144, 167, 26],
-          [82, 135, 30],
-          [98, 143, 29]
-        ],
-        Glass: [
-          [255, 255, 255],
-          [179, 230, 225],
-          [163, 217, 212],
-          [147, 204, 199],
-          [107, 179, 173]
-        ],
-        "Black Glass": [
-          [75, 76, 81],
-          [35, 37, 43],
-          [24, 25, 30],
-          [13, 14, 17],
-          [3, 4, 4]
-        ],
-        "Blue Glass": [
-          [98, 104, 211],
-          [65, 71, 173],
-          [55, 61, 160],
-          [46, 52, 147],
-          [31, 36, 122]
-        ],
-        "Brown Glass": [
-          [169, 119, 80],
-          [131, 85, 50],
-          [118, 75, 42],
-          [105, 65, 34],
-          [80, 47, 21]
-        ],
-        "Cyan Glass": [
-          [55, 194, 200],
-          [30, 157, 162],
-          [23, 144, 149],
-          [17, 132, 136],
-          [7, 107, 111]
-        ],
-        "Gray Glass": [
-          [127, 127, 128],
-          [81, 86, 90],
-          [67, 73, 77],
-          [54, 60, 64],
-          [42, 48, 51]
-        ],
-        "Light Gray Glass": [
-          [198, 198, 198],
-          [160, 160, 158],
-          [147, 147, 141],
-          [134, 134, 125],
-          [121, 121, 109]
-        ],
-        "Green Glass": [
-          [135, 164, 63],
-          [100, 126, 37],
-          [89, 113, 30],
-          [78, 100, 24],
-          [67, 87, 18]
-        ],
-        "Light Blue Glass": [
-          [99, 218, 255],
-          [67, 196, 236],
-          [57, 184, 223],
-          [47, 172, 210],
-          [38, 160, 197]
-        ],
-        "Lime Glass": [
-          [167, 243, 63],
-          [133, 205, 35],
-          [122, 192, 27],
-          [112, 179, 20],
-          [102, 166, 15]
-        ],
-        "Magenta Glass": [
-          [249, 122, 235],
-          [208, 83, 195],
-          [195, 70, 182],
-          [182, 58, 169],
-          [169, 49, 157]
-        ],
-        "Orange Glass": [
-          [255, 169, 100],
-          [255, 132, 33],
-          [246, 123, 25],
-          [233, 113, 17],
-          [220, 103, 9]
-        ],
-        "Pink Glass": [
-          [255, 188, 209],
-          [255, 158, 188],
-          [248, 146, 178],
-          [235, 131, 164],
-          [222, 117, 151]
-        ],
-        "Purple Glass": [
-          [175, 84, 227],
-          [138, 51, 189],
-          [127, 42, 176],
-          [116, 34, 163],
-          [105, 27, 150]
-        ],
-        "Red Glass": [
-          [217, 79, 74],
-          [179, 50, 45],
-          [166, 40, 35],
-          [153, 33, 28],
-          [140, 26, 21]
-        ],
-        "White Glass": [
-          [255, 255, 255],
-          [252, 253, 254],
-          [239, 240, 241],
-          [220, 224, 228],
-          [201, 208, 215]
-        ],
-        "Yellow Glass": [
-          [255, 231, 155],
-          [255, 209, 67],
-          [252, 203, 50],
-          [239, 191, 40],
-          [226, 179, 31]
-        ],
-        "UNUSED BLOCK TYPE": [
-          [153, 153, 153],
-          [197, 197, 197]
-        ],
-        "Dim Lamp On": [
-          [26, 27, 27],
-          [255, 188, 78],
-          [255, 233, 73]
-        ],
-        "Dim Lamp Off": [
-          [34, 35, 35],
-          [67, 69, 73]
-        ],
-        "Invisible Solid": [],
-        Bricks: [
-          [165, 150, 134],
-          [149, 84, 61],
-          [156, 88, 67],
-          [144, 80, 57],
-          [151, 140, 122]
-        ],
-        "Stone Bricks": [
-          [108, 113, 119],
-          [133, 139, 146],
-          [138, 144, 151],
-          [117, 122, 128],
-          [129, 135, 142]
-        ],
-        "Dark Red Brick": [
-          [66, 25, 25],
-          [94, 42, 39],
-          [100, 46, 42],
-          [78, 31, 31],
-          [90, 40, 37]
-        ],
-        "Dark Red Stone": [
-          [94, 42, 39],
-          [103, 48, 44],
-          [86, 37, 35]
-        ],
-        "Block of Quartz": [
-          [253, 252, 247],
-          [251, 248, 239],
-          [248, 244, 234]
-        ],
-        "Chiseled Block of Quartz": [
-          [253, 252, 247],
-          [251, 248, 239],
-          [237, 229, 217],
-          [232, 223, 209],
-          [241, 234, 223]
-        ],
-        "Engraved Stone": [
-          [160, 166, 173],
-          [151, 157, 164],
-          [133, 139, 146],
-          [138, 144, 151],
-          [117, 122, 128],
-          [108, 113, 119],
-          [129, 135, 142]
-        ],
-        "Mossy Stone Bricks": [
-          [95, 128, 67],
-          [125, 131, 138],
-          [138, 144, 151],
-          [133, 139, 146],
-          [88, 121, 61],
-          [106, 125, 98],
-          [105, 136, 72]
-        ],
-        "Cracked Stone Bricks": [
-          [108, 113, 119],
-          [133, 139, 146],
-          [138, 144, 151],
-          [125, 131, 138],
-          [117, 122, 128]
-        ],
-        "Smooth Sandstone": [
-          [251, 234, 163],
-          [252, 237, 175],
-          [249, 231, 159]
-        ],
-        "Engraved Sandstone": [
-          [251, 234, 163],
-          [252, 237, 175],
-          [242, 219, 147],
-          [239, 213, 141]
-        ],
-        Ice: [
-          [137, 231, 255],
-          [106, 218, 247],
-          [122, 225, 251]
-        ],
-        Obsidian: [
-          [33, 21, 48],
-          [28, 15, 40],
-          [40, 26, 56]
-        ],
-        "Hay Bale": [
-          [181, 144, 79],
-          [166, 127, 71],
-          [160, 99, 69],
-          [165, 108, 74],
-          [159, 121, 66]
-        ],
-        Sponge: [
-          [206, 200, 66],
-          [166, 150, 46]
-        ],
-        Beacon: [
-          [255, 255, 255],
-          [154, 222, 245],
-          [194, 245, 250],
-          [220, 254, 252]
-        ],
-        "Golden Decoration": [
-          [150, 101, 53],
-          [235, 194, 129],
-          [254, 236, 199]
-        ],
-        "Moonstone Explosive": [
-          [205, 205, 255],
-          [175, 167, 255],
-          [190, 186, 255],
-          [162, 148, 255],
-          [242, 242, 255],
-          [224, 225, 255],
-          [79, 72, 111]
-        ],
-        Bedrock: [
-          [25, 25, 26],
-          [21, 21, 22],
-          [18, 18, 19]
-        ],
-        "Smooth Double Stone Slab": [
-          [160, 166, 173],
-          [151, 157, 164],
-          [133, 139, 146],
-          [138, 144, 151],
-          [117, 122, 128],
-          [129, 135, 142],
-          [108, 113, 119]
-        ],
-        Cactus: [
-          [115, 177, 42],
-          [131, 185, 47],
-          [103, 170, 38]
-        ],
-        Grass: [
-          [92, 143, 37],
-          [81, 136, 34],
-          [73, 129, 29]
-        ],
-        Dandelion: [
-          [255, 236, 79],
-          [220, 146, 34],
-          [67, 122, 64],
-          [67, 137, 41]
-        ],
-        Poppy: [
-          [237, 48, 44],
-          [167, 20, 20],
-          [74, 143, 40],
-          [51, 130, 31]
-        ],
-        "Red Tulip": [
-          [242, 55, 76],
-          [237, 48, 44],
-          [78, 145, 48],
-          [67, 122, 64],
-          [67, 137, 41]
-        ],
-        "Pink Tulip": [
-          [255, 157, 192],
-          [255, 143, 181],
-          [78, 145, 48],
-          [67, 122, 64],
-          [67, 137, 41]
-        ],
-        "White Tulip": [
-          [255, 255, 255],
-          [247, 247, 247],
-          [78, 145, 48],
-          [67, 122, 64],
-          [67, 137, 41]
-        ],
-        "Orange Tulip": [
-          [247, 167, 51],
-          [241, 157, 37],
-          [78, 145, 48],
-          [67, 122, 64],
-          [67, 137, 41]
-        ],
-        Daisy: [
-          [247, 247, 247],
-          [254, 214, 57],
-          [67, 137, 41],
-          [67, 122, 64]
-        ],
-        Bluebell: [
-          [42, 191, 253],
-          [34, 160, 231],
-          [67, 137, 41],
-          [67, 122, 64]
-        ],
-        "Forget-me-not": [
-          [75, 118, 240],
-          [229, 238, 72],
-          [67, 122, 64],
-          [67, 137, 41]
-        ],
-        Allium: [
-          [160, 107, 215],
-          [184, 120, 237],
-          [67, 122, 64],
-          [67, 137, 41]
-        ],
-        "Azure Bluet": [
-          [252, 252, 252],
-          [218, 218, 218],
-          [67, 122, 64],
-          [67, 137, 41]
-        ],
-        "Lily of the Valley": [
-          [255, 255, 255],
-          [67, 137, 41],
-          [67, 122, 64],
-          [234, 234, 234]
-        ],
-        "Shadow Rose": [
-          [54, 43, 38],
-          [66, 53, 46],
-          [65, 154, 142],
-          [60, 143, 139]
-        ],
-        Furnace: [
-          [15, 15, 15],
-          [151, 157, 164],
-          [142, 148, 155],
-          [42, 24, 19],
-          [128, 133, 139],
-          [106, 110, 115],
-          [121, 126, 132],
-          [99, 104, 108],
-          [160, 166, 173],
-          [138, 144, 151],
-          [117, 122, 128],
-          [97, 101, 106],
-          [133, 139, 146],
-          [113, 118, 124],
-          [93, 97, 102],
-          [136, 141, 147],
-          [112, 116, 121],
-          [36, 20, 16],
-          [90, 94, 99],
-          [106, 111, 116],
-          [88, 92, 96],
-          [103, 108, 115],
-          [49, 36, 31]
-        ],
-        Workbench: [
-          [15, 15, 15],
-          [210, 206, 199],
-          [165, 112, 39],
-          [175, 121, 45],
-          [153, 104, 37],
-          [149, 103, 38],
-          [122, 85, 31],
-          [140, 95, 33],
-          [115, 78, 27],
-          [107, 73, 26],
-          [110, 75, 28],
-          [90, 62, 23],
-          [185, 129, 50],
-          [187, 175, 164],
-          [157, 110, 42],
-          [174, 161, 137],
-          [131, 122, 115],
-          [122, 113, 96],
-          [159, 149, 139],
-          [148, 137, 116],
-          [111, 98, 85],
-          [120, 82, 30],
-          [99, 67, 24],
-          [134, 119, 103],
-          [130, 88, 31]
-        ],
-        "Block of Diamond": [
-          [230, 255, 244],
-          [75, 241, 205],
-          [50, 205, 197],
-          [57, 214, 199],
-          [44, 175, 195],
-          [34, 149, 183]
-        ],
-        "Maple Door": [
-          [175, 143, 85],
-          [132, 97, 61]
-        ],
-        "_Maple Door Top": [
-          [175, 143, 85],
-          [132, 97, 61]
-        ],
-        "Maple Trapdoor": [
-          [132, 97, 61],
-          [175, 143, 85]
-        ],
-        "Aspen Sapling": [
-          [124, 165, 61],
-          [99, 139, 48],
-          [218, 214, 174]
-        ],
-        "Maple Sapling": [
-          [113, 80, 47],
-          [48, 119, 35],
-          [63, 140, 44]
-        ],
-        "Jungle Sapling": [
-          [57, 58, 14],
-          [49, 113, 25],
-          [36, 94, 20]
-        ],
-        "Plum Sapling": [
-          [126, 152, 33],
-          [104, 133, 26],
-          [132, 96, 21]
-        ],
-        "Pine Sapling": [
-          [61, 94, 61],
-          [84, 58, 32],
-          [47, 75, 49]
-        ],
-        "Cedar Sapling": [
-          [55, 143, 47],
-          [32, 115, 37],
-          [78, 60, 35]
-        ],
-        "Maple Log|TreeBase|Maple": [
-          [107, 82, 52],
-          [124, 99, 65],
-          [115, 91, 57]
-        ],
-        Chest: [
-          [252, 250, 246],
-          [183, 125, 45],
-          [233, 230, 224],
-          [165, 112, 39],
-          [214, 209, 202],
-          [201, 194, 183],
-          [153, 101, 29]
-        ],
-        "Pine Leaves|TreeCanopy": [
-          [56, 76, 64],
-          [47, 63, 56],
-          [36, 54, 48]
-        ],
-        "Aspen Leaves|TreeCanopy": [
-          [91, 164, 57],
-          [79, 149, 47],
-          [102, 178, 68]
-        ],
-        "Maple Leaves|TreeCanopy": [
-          [37, 101, 20],
-          [44, 113, 23],
-          [33, 91, 18]
-        ],
-        "Jungle Leaves|TreeCanopy": [
-          [0, 122, 0],
-          [0, 111, 0],
-          [1, 136, 1]
-        ],
-        Protector: [
-          [130, 139, 152],
-          [122, 131, 143],
-          [29, 201, 216],
-          [93, 249, 246],
-          [63, 239, 236]
-        ],
-        "Fat Cactus": [
-          [103, 170, 38],
-          [115, 177, 42],
-          [202, 215, 121]
-        ],
-        "Dry Fat Cactus": [
-          [136, 89, 36],
-          [148, 100, 40],
-          [202, 215, 121]
-        ],
-        "Maple Ladder": [
-          [156, 120, 74],
-          [132, 97, 61]
-        ],
-        Vines: [
-          [78, 114, 46],
-          [60, 90, 36],
-          [51, 73, 33]
-        ],
-        "Dirt|GrassRoots": [
-          [133, 98, 77],
-          [139, 102, 80],
-          [127, 92, 74]
-        ],
-        "Iron Ladder": [
-          [173, 180, 182],
-          [135, 141, 144]
-        ],
-        "White Planks": [
-          [255, 255, 255],
-          [250, 250, 250],
-          [242, 242, 242]
-        ],
-        "Orange Planks": [
-          [242, 140, 59],
-          [237, 136, 55],
-          [229, 129, 49]
-        ],
-        "Magenta Planks": [
-          [189, 86, 179],
-          [185, 83, 175],
-          [176, 75, 166]
-        ],
-        "Light Blue Planks": [
-          [91, 195, 227],
-          [86, 190, 222],
-          [79, 183, 214]
-        ],
-        "Yellow Planks": [
-          [255, 223, 96],
-          [251, 219, 92],
-          [242, 210, 84]
-        ],
-        "Lime Planks": [
-          [146, 203, 68],
-          [141, 198, 64],
-          [134, 190, 58]
-        ],
-        "Pink Planks": [
-          [251, 167, 193],
-          [248, 162, 188],
-          [242, 154, 181]
-        ],
-        "Gray Planks": [
-          [74, 80, 83],
-          [71, 77, 80],
-          [61, 67, 70]
-        ],
-        "Light Gray Planks": [
-          [161, 161, 156],
-          [156, 156, 150],
-          [148, 148, 139]
-        ],
-        "Cyan Planks": [
-          [51, 151, 155],
-          [49, 147, 151],
-          [43, 138, 142]
-        ],
-        "Purple Planks": [
-          [124, 53, 163],
-          [121, 51, 159],
-          [113, 44, 150]
-        ],
-        "Blue Planks": [
-          [63, 68, 150],
-          [61, 65, 145],
-          [54, 58, 137]
-        ],
-        "Brown Planks": [
-          [119, 84, 57],
-          [115, 81, 55],
-          [106, 73, 48]
-        ],
-        "Green Planks": [
-          [101, 121, 52],
-          [97, 117, 50],
-          [89, 108, 43]
-        ],
-        "Red Planks": [
-          [155, 51, 47],
-          [151, 49, 45],
-          [142, 43, 39]
-        ],
-        "Black Planks": [
-          [26, 27, 31],
-          [24, 25, 29],
-          [20, 21, 25]
-        ],
-        "Artisan Bench": [
-          [15, 15, 15],
-          [151, 157, 164],
-          [142, 148, 155],
-          [165, 112, 39],
-          [153, 104, 37],
-          [87, 92, 143],
-          [100, 101, 157],
-          [234, 219, 201],
-          [219, 207, 189],
-          [159, 149, 139],
-          [175, 121, 45],
-          [128, 133, 139],
-          [106, 110, 115],
-          [149, 103, 38],
-          [113, 118, 124],
-          [121, 126, 132],
-          [99, 104, 108],
-          [93, 97, 102],
-          [130, 88, 31],
-          [107, 73, 26],
-          [110, 75, 28],
-          [90, 62, 23],
-          [140, 95, 33],
-          [115, 78, 27],
-          [120, 82, 30],
-          [99, 67, 24],
-          [105, 110, 116],
-          [86, 90, 95]
-        ],
-        "White Ceramic": [
-          [254, 220, 86],
-          [249, 255, 254],
-          [58, 179, 218],
-          [35, 137, 199]
-        ],
-        "Orange Ceramic": [
-          [249, 128, 29],
-          [22, 163, 163],
-          [249, 165, 55],
-          [249, 255, 254],
-          [28, 198, 198],
-          [225, 97, 0],
-          [22, 156, 156]
-        ],
-        "Magenta Ceramic": [
-          [221, 104, 218],
-          [199, 78, 189],
-          [244, 181, 203],
-          [169, 48, 159],
-          [201, 82, 192]
-        ],
-        "Light Blue Ceramic": [
-          [35, 137, 199],
-          [41, 44, 133],
-          [77, 185, 221],
-          [87, 189, 223],
-          [249, 255, 254],
-          [44, 46, 143]
-        ],
-        "Yellow Ceramic": [
-          [254, 216, 61],
-          [255, 236, 157],
-          [238, 170, 13],
-          [164, 118, 76],
-          [242, 176, 21]
-        ],
-        "Lime Ceramic": [
-          [242, 176, 21],
-          [94, 169, 24],
-          [89, 160, 23],
-          [255, 236, 157],
-          [170, 233, 101],
-          [133, 207, 33],
-          [127, 204, 25]
-        ],
-        "Pink Ceramic": [
-          [184, 183, 173],
-          [244, 181, 203],
-          [243, 139, 170],
-          [217, 113, 152]
-        ],
-        "Gray Ceramic": [
-          [54, 57, 61],
-          [157, 157, 157],
-          [71, 79, 82],
-          [91, 108, 113],
-          [153, 153, 153]
-        ],
-        "Light Gray Ceramic": [
-          [204, 208, 210],
-          [96, 114, 119],
-          [153, 153, 153],
-          [22, 156, 156]
-        ],
-        "Cyan Ceramic": [
-          [54, 57, 61],
-          [21, 119, 136],
-          [71, 79, 82],
-          [204, 208, 210],
-          [22, 156, 156]
-        ],
-        "Purple Ceramic": [
-          [137, 50, 184],
-          [162, 84, 224],
-          [44, 44, 50],
-          [98, 31, 152]
-        ],
-        "Blue Ceramic": [
-          [35, 30, 67],
-          [44, 46, 143],
-          [31, 125, 189]
-        ],
-        "Brown Ceramic": [
-          [205, 145, 124],
-          [131, 84, 50],
-          [164, 118, 76],
-          [21, 119, 136],
-          [23, 132, 151],
-          [71, 79, 82],
-          [22, 125, 143]
-        ],
-        "Green Ceramic": [
-          [141, 167, 89],
-          [208, 214, 215],
-          [73, 91, 36],
-          [94, 124, 22],
-          [114, 155, 36],
-          [204, 208, 210]
-        ],
-        "Red Ceramic": [
-          [176, 46, 38],
-          [142, 32, 32],
-          [206, 75, 68],
-          [205, 145, 124]
-        ],
-        "Black Ceramic": [
-          [49, 49, 56],
-          [153, 34, 34],
-          [43, 43, 49],
-          [0, 0, 0]
-        ],
-        "Wheat Seeds": [
-          [62, 160, 41],
-          [44, 148, 32],
-          [32, 148, 38]
-        ],
-        Wheat_stage1: [
-          [62, 160, 41],
-          [44, 148, 32],
-          [25, 135, 31]
-        ],
-        Wheat_stage2: [
-          [62, 160, 41],
-          [44, 148, 32],
-          [25, 135, 31]
-        ],
-        Wheat_stage3: [
-          [62, 160, 41],
-          [44, 148, 32],
-          [25, 135, 31]
-        ],
-        Wheat_stage4: [
-          [62, 160, 41],
-          [44, 148, 32],
-          [25, 135, 31]
-        ],
-        Wheat_stage5: [
-          [62, 160, 41],
-          [44, 148, 32],
-          [25, 135, 31]
-        ],
-        Wheat: [
-          [181, 144, 79],
-          [188, 160, 87],
-          [166, 127, 71]
-        ],
-        "Wheat|FreshlyGrown": [
-          [181, 144, 79],
-          [188, 160, 87],
-          [166, 127, 71]
-        ],
-        "Tilled Soil": [
-          [129, 90, 62],
-          [123, 87, 59],
-          [119, 82, 58]
-        ],
-        "Bread Block": [
-          [198, 144, 41],
-          [188, 133, 37],
-          [193, 139, 39],
-          [178, 122, 33],
-          [183, 128, 35]
-        ],
-        "ReservedBread BlockRotation1": [
-          [198, 144, 41],
-          [188, 133, 37],
-          [193, 139, 39],
-          [178, 122, 33],
-          [183, 128, 35]
-        ],
-        "ReservedBread BlockRotation2": [
-          [198, 144, 41],
-          [188, 133, 37],
-          [193, 139, 39],
-          [178, 122, 33],
-          [183, 128, 35]
-        ],
-        "ReservedBread BlockRotation3": [
-          [198, 144, 41],
-          [188, 133, 37],
-          [193, 139, 39],
-          [178, 122, 33],
-          [183, 128, 35]
-        ],
-        "Mossy Messy Stone": [
-          [121, 127, 135],
-          [131, 137, 144],
-          [142, 148, 155],
-          [98, 129, 84],
-          [73, 129, 29],
-          [92, 143, 37],
-          [81, 136, 34]
-        ],
-        "Dandelion|Roots": [
-          [255, 236, 79],
-          [220, 146, 34],
-          [67, 122, 64],
-          [67, 137, 41]
-        ],
-        "Poppy|Roots": [
-          [237, 48, 44],
-          [167, 20, 20],
-          [74, 143, 40],
-          [51, 130, 31]
-        ],
-        "Red Tulip|Roots": [
-          [242, 55, 76],
-          [237, 48, 44],
-          [78, 145, 48],
-          [67, 122, 64],
-          [67, 137, 41]
-        ],
-        "Pink Tulip|Roots": [
-          [255, 157, 192],
-          [255, 143, 181],
-          [78, 145, 48],
-          [67, 122, 64],
-          [67, 137, 41]
-        ],
-        "White Tulip|Roots": [
-          [255, 255, 255],
-          [247, 247, 247],
-          [78, 145, 48],
-          [67, 122, 64],
-          [67, 137, 41]
-        ],
-        "Orange Tulip|Roots": [
-          [247, 167, 51],
-          [241, 157, 37],
-          [78, 145, 48],
-          [67, 122, 64],
-          [67, 137, 41]
-        ],
-        "Daisy|Roots": [
-          [247, 247, 247],
-          [254, 214, 57],
-          [67, 137, 41],
-          [67, 122, 64]
-        ],
-        "Bluebell|Roots": [
-          [42, 191, 253],
-          [34, 160, 231],
-          [67, 137, 41],
-          [67, 122, 64]
-        ],
-        "Forget-me-not|Roots": [
-          [75, 118, 240],
-          [229, 238, 72],
-          [67, 122, 64],
-          [67, 137, 41]
-        ],
-        "Allium|Roots": [
-          [160, 107, 215],
-          [184, 120, 237],
-          [67, 122, 64],
-          [67, 137, 41]
-        ],
-        "Azure Bluet|Roots": [
-          [252, 252, 252],
-          [218, 218, 218],
-          [67, 122, 64],
-          [67, 137, 41]
-        ],
-        "Lily of the Valley|Roots": [
-          [255, 255, 255],
-          [67, 137, 41],
-          [67, 122, 64],
-          [234, 234, 234]
-        ],
-        "Shadow Rose|Roots": [
-          [54, 43, 38],
-          [66, 53, 46],
-          [65, 154, 142],
-          [60, 143, 139]
-        ],
-        "White Bed": [
-          [205, 199, 199],
-          [235, 235, 235],
-          [236, 236, 236],
-          [205, 198, 198],
-          [175, 143, 85],
-          [156, 120, 74]
-        ],
-        "_White Bed Head": [
-          [205, 199, 199],
-          [235, 235, 235],
-          [236, 236, 236],
-          [205, 198, 198],
-          [175, 143, 85],
-          [156, 120, 74]
-        ],
-        "Orange Bed": [
-          [205, 199, 199],
-          [235, 235, 235],
-          [255, 129, 24],
-          [241, 105, 18],
-          [175, 143, 85],
-          [156, 120, 74]
-        ],
-        "_Orange Bed Head": [
-          [205, 199, 199],
-          [235, 235, 235],
-          [255, 129, 24],
-          [241, 105, 18],
-          [175, 143, 85],
-          [156, 120, 74]
-        ],
-        "Magenta Bed": [
-          [205, 199, 199],
-          [235, 235, 235],
-          [189, 60, 180],
-          [158, 47, 156],
-          [175, 143, 85],
-          [156, 120, 74]
-        ],
-        "_Magenta Bed Head": [
-          [205, 199, 199],
-          [235, 235, 235],
-          [189, 60, 180],
-          [158, 47, 156],
-          [175, 143, 85],
-          [156, 120, 74]
-        ],
-        "Light Blue Bed": [
-          [205, 199, 199],
-          [235, 235, 235],
-          [41, 161, 213],
-          [34, 132, 193],
-          [175, 143, 85],
-          [156, 120, 74]
-        ],
-        "_Light Blue Bed Head": [
-          [205, 199, 199],
-          [235, 235, 235],
-          [41, 161, 213],
-          [34, 132, 193],
-          [175, 143, 85],
-          [156, 120, 74]
-        ],
-        "Yellow Bed": [
-          [205, 199, 199],
-          [235, 235, 235],
-          [255, 206, 41],
-          [230, 175, 33],
-          [175, 143, 85],
-          [156, 120, 74]
-        ],
-        "_Yellow Bed Head": [
-          [205, 199, 199],
-          [235, 235, 235],
-          [255, 206, 41],
-          [230, 175, 33],
-          [175, 143, 85],
-          [156, 120, 74]
-        ],
-        "Lime Bed": [
-          [205, 199, 199],
-          [235, 235, 235],
-          [123, 198, 24],
-          [97, 174, 17],
-          [175, 143, 85],
-          [156, 120, 74]
-        ],
-        "_Lime Bed Head": [
-          [205, 199, 199],
-          [235, 235, 235],
-          [123, 198, 24],
-          [97, 174, 17],
-          [175, 143, 85],
-          [156, 120, 74]
-        ],
-        "Pink Bed": [
-          [205, 199, 199],
-          [235, 235, 235],
-          [246, 137, 172],
-          [217, 116, 143],
-          [175, 143, 85],
-          [156, 120, 74]
-        ],
-        "_Pink Bed Head": [
-          [205, 199, 199],
-          [235, 235, 235],
-          [246, 137, 172],
-          [217, 116, 143],
-          [175, 143, 85],
-          [156, 120, 74]
-        ],
-        "Gray Bed": [
-          [205, 199, 199],
-          [235, 235, 235],
-          [98, 113, 115],
-          [77, 90, 93],
-          [175, 143, 85],
-          [156, 120, 74]
-        ],
-        "_Gray Bed Head": [
-          [205, 199, 199],
-          [235, 235, 235],
-          [98, 113, 115],
-          [77, 90, 93],
-          [175, 143, 85],
-          [156, 120, 74]
-        ],
-        "Light Gray Bed": [
-          [205, 199, 199],
-          [235, 235, 235],
-          [147, 149, 140],
-          [125, 128, 118],
-          [175, 143, 85],
-          [156, 120, 74]
-        ],
-        "_Light Gray Bed Head": [
-          [205, 199, 199],
-          [235, 235, 235],
-          [147, 149, 140],
-          [125, 128, 118],
-          [175, 143, 85],
-          [156, 120, 74]
-        ],
-        "Cyan Bed": [
-          [205, 199, 199],
-          [235, 235, 235],
-          [18, 158, 157],
-          [12, 128, 136],
-          [175, 143, 85],
-          [156, 120, 74]
-        ],
-        "_Cyan Bed Head": [
-          [205, 199, 199],
-          [235, 235, 235],
-          [18, 158, 157],
-          [12, 128, 136],
-          [175, 143, 85],
-          [156, 120, 74]
-        ],
-        "Purple Bed": [
-          [205, 199, 199],
-          [235, 235, 235],
-          [131, 44, 180],
-          [102, 32, 147],
-          [175, 143, 85],
-          [156, 120, 74]
-        ],
-        "_Purple Bed Head": [
-          [205, 199, 199],
-          [235, 235, 235],
-          [131, 44, 180],
-          [102, 32, 147],
-          [175, 143, 85],
-          [156, 120, 74]
-        ],
-        "Blue Bed": [
-          [205, 199, 199],
-          [235, 235, 235],
-          [69, 90, 190],
-          [58, 66, 168],
-          [175, 143, 85],
-          [156, 120, 74]
-        ],
-        "_Blue Bed Head": [
-          [205, 199, 199],
-          [235, 235, 235],
-          [69, 90, 190],
-          [58, 66, 168],
-          [175, 143, 85],
-          [156, 120, 74]
-        ],
-        "Brown Bed": [
-          [205, 199, 199],
-          [235, 235, 235],
-          [143, 91, 53],
-          [124, 73, 45],
-          [175, 143, 85],
-          [156, 120, 74]
-        ],
-        "_Brown Bed Head": [
-          [205, 199, 199],
-          [235, 235, 235],
-          [143, 91, 53],
-          [124, 73, 45],
-          [175, 143, 85],
-          [156, 120, 74]
-        ],
-        "Green Bed": [
-          [205, 199, 199],
-          [235, 235, 235],
-          [96, 129, 22],
-          [72, 106, 14],
-          [175, 143, 85],
-          [156, 120, 74]
-        ],
-        "_Green Bed Head": [
-          [205, 199, 199],
-          [235, 235, 235],
-          [96, 129, 22],
-          [72, 106, 14],
-          [175, 143, 85],
-          [156, 120, 74]
-        ],
-        "Red Bed": [
-          [205, 199, 199],
-          [235, 235, 235],
-          [180, 49, 41],
-          [151, 30, 30],
-          [175, 143, 85],
-          [156, 120, 74]
-        ],
-        "_Red Bed Head": [
-          [205, 199, 199],
-          [235, 235, 235],
-          [180, 49, 41],
-          [151, 30, 30],
-          [175, 143, 85],
-          [156, 120, 74]
-        ],
-        "Black Bed": [
-          [205, 199, 199],
-          [235, 235, 235],
-          [35, 35, 40],
-          [10, 10, 12],
-          [175, 143, 85],
-          [156, 120, 74]
-        ],
-        "_Black Bed Head": [
-          [205, 199, 199],
-          [235, 235, 235],
-          [35, 35, 40],
-          [10, 10, 12],
-          [175, 143, 85],
-          [156, 120, 74]
-        ],
-        "Apple Block": [
-          [213, 34, 34],
-          [230, 43, 47]
-        ],
-        "Moonstone Ore": [
-          [133, 139, 146],
-          [139, 145, 152],
-          [242, 242, 255],
-          [224, 225, 255],
-          [122, 128, 136],
-          [125, 131, 139]
-        ],
-        "Moonstone Chest": [
-          [255, 255, 255],
-          [201, 210, 241],
-          [248, 248, 255],
-          [188, 199, 236],
-          [240, 240, 255],
-          [224, 225, 255],
-          [170, 186, 227]
-        ],
-        "Block of Moonstone": [
-          [255, 255, 255],
-          [240, 240, 255],
-          [224, 225, 255],
-          [230, 231, 255],
-          [211, 209, 249],
-          [199, 192, 243]
-        ],
-        Magma: [
-          [230, 100, 16],
-          [247, 136, 24],
-          [101, 40, 40]
-        ],
-        "Useless Soil": [
-          [133, 98, 77],
-          [139, 102, 80],
-          [127, 92, 74],
-          [125, 130, 67],
-          [121, 125, 62],
-          [118, 121, 61]
-        ],
-        "Marked Sandstone": [
-          [252, 237, 175],
-          [251, 234, 163],
-          [249, 231, 159],
-          [239, 213, 141],
-          [242, 219, 147]
-        ],
-        "Red Sandstone": [
-          [200, 104, 34],
-          [203, 110, 36],
-          [205, 112, 38],
-          [197, 99, 33]
-        ],
-        "Smooth Red Sandstone": [
-          [203, 110, 36],
-          [206, 113, 39],
-          [201, 106, 35]
-        ],
-        "Engraved Red Sandstone": [
-          [203, 110, 36],
-          [206, 113, 39],
-          [191, 95, 31],
-          [187, 91, 29]
-        ],
-        "Marked Red Sandstone": [
-          [206, 113, 39],
-          [203, 110, 36],
-          [201, 106, 35],
-          [187, 91, 29],
-          [191, 95, 31]
-        ],
-        "Green Stone": [
-          [104, 181, 170],
-          [113, 189, 176],
-          [97, 175, 164]
-        ],
-        "Green Bricks": [
-          [78, 144, 127],
-          [104, 181, 170],
-          [113, 189, 176],
-          [86, 154, 138],
-          [97, 175, 164]
-        ],
-        "Dark Green Bricks": [
-          [59, 130, 104],
-          [68, 142, 115],
-          [50, 112, 92],
-          [46, 105, 88]
-        ],
-        "Sandstone Bricks": [
-          [235, 207, 135],
-          [251, 234, 163],
-          [252, 237, 175],
-          [247, 227, 155],
-          [242, 219, 147]
-        ],
-        "Engraved Diorite": [
-          [255, 255, 255],
-          [249, 249, 246],
-          [233, 232, 226],
-          [240, 239, 233],
-          [215, 213, 208],
-          [206, 203, 199]
-        ],
-        "Diorite Bricks": [
-          [206, 203, 199],
-          [240, 239, 233],
-          [233, 232, 226],
-          [215, 213, 208],
-          [226, 225, 219]
-        ],
-        "Engraved Andesite": [
-          [138, 148, 154],
-          [127, 138, 145],
-          [111, 120, 128],
-          [116, 126, 134],
-          [104, 114, 122],
-          [100, 108, 116],
-          [93, 100, 108],
-          [125, 134, 140]
-        ],
-        "Andesite Bricks": [
-          [93, 100, 108],
-          [114, 124, 132],
-          [111, 120, 128],
-          [107, 116, 124],
-          [100, 108, 116]
-        ],
-        "Engraved Granite": [
-          [189, 135, 108],
-          [174, 121, 98],
-          [154, 103, 85],
-          [159, 107, 88],
-          [159, 112, 95],
-          [136, 87, 71],
-          [128, 80, 65]
-        ],
-        "Granite Bricks": [
-          [128, 80, 65],
-          [159, 107, 88],
-          [154, 103, 85],
-          [159, 112, 95],
-          [136, 87, 71],
-          [148, 98, 80]
-        ],
-        "Ice Bricks": [
-          [238, 243, 250],
-          [106, 218, 247],
-          [122, 225, 251],
-          [137, 231, 255],
-          [245, 247, 250],
-          [230, 238, 249]
-        ],
-        "Placeholder Packed Ice": [
-          [238, 243, 250],
-          [106, 218, 247],
-          [122, 225, 251],
-          [137, 231, 255],
-          [245, 247, 250],
-          [230, 238, 249]
-        ],
-        "Placeholder Blue Ice": [
-          [238, 243, 250],
-          [106, 218, 247],
-          [122, 225, 251],
-          [137, 231, 255],
-          [245, 247, 250],
-          [230, 238, 249]
-        ],
-        "Plum Leaves": [
-          [128, 144, 47],
-          [116, 130, 41],
-          [143, 160, 60]
-        ],
-        "Cedar Leaves": [
-          [36, 69, 18],
-          [30, 60, 13],
-          [46, 82, 26]
-        ],
-        "Palm Leaves": [
-          [125, 158, 29],
-          [135, 168, 35],
-          [153, 181, 45],
-          [144, 175, 40]
-        ],
-        "Plum Leaves|TreeCanopy": [
-          [128, 144, 47],
-          [116, 130, 41],
-          [143, 160, 60]
-        ],
-        "Cedar Leaves|TreeCanopy": [
-          [36, 69, 18],
-          [30, 60, 13],
-          [46, 82, 26]
-        ],
-        "Palm Leaves|TreeCanopy": [
-          [125, 158, 29],
-          [135, 168, 35],
-          [153, 181, 45],
-          [144, 175, 40]
-        ],
-        "Pine Log|TreeBase|Pine": [
-          [83, 55, 41],
-          [73, 49, 40],
-          [65, 43, 30]
-        ],
-        "Plum Log|TreeBase|Plum": [
-          [109, 78, 76],
-          [113, 82, 81],
-          [117, 89, 87]
-        ],
-        "Cedar Log|TreeBase|Cedar": [
-          [51, 36, 15],
-          [59, 42, 18],
-          [44, 31, 12]
-        ],
-        "Aspen Log|TreeBase|Aspen": [
-          [233, 230, 200],
-          [99, 95, 82],
-          [54, 50, 42],
-          [227, 223, 189],
-          [98, 94, 79]
-        ],
-        "Jungle Log|TreeBase|Jungle": [
-          [95, 73, 36],
-          [101, 78, 38],
-          [107, 84, 41]
-        ],
-        "Palm Log": [
-          [155, 121, 75],
-          [149, 113, 67],
-          [140, 105, 60],
-          [134, 98, 55]
-        ],
-        "Palm Log|TreeBase|Palm": [
-          [155, 121, 75],
-          [149, 113, 67],
-          [140, 105, 60],
-          [134, 98, 55]
-        ],
-        "Palm Wood Planks": [
-          [214, 153, 73],
-          [209, 149, 70],
-          [199, 141, 64]
-        ],
-        "Palm Sapling": [
-          [38, 128, 11],
-          [45, 151, 13],
-          [91, 85, 44]
-        ],
-        "Pine Door": [
-          [122, 91, 52],
-          [63, 63, 63],
-          [159, 155, 155]
-        ],
-        "_Pine Door Top": [
-          [122, 91, 52],
-          [63, 63, 63],
-          [159, 155, 155]
-        ],
-        "Plum Door": [
-          [174, 97, 49]
-        ],
-        "_Plum Door Top": [
-          [174, 97, 49]
-        ],
-        "Cedar Door": [
-          [81, 52, 25],
-          [41, 21, 12]
-        ],
-        "_Cedar Door Top": [
-          [81, 52, 25],
-          [41, 21, 12]
-        ],
-        "Aspen Door": [
-          [199, 180, 128],
-          [249, 245, 223]
-        ],
-        "_Aspen Door Top": [
-          [199, 180, 128],
-          [249, 245, 223]
-        ],
-        "Jungle Door": [
-          [165, 124, 86],
-          [143, 99, 71]
-        ],
-        "_Jungle Door Top": [
-          [165, 124, 86],
-          [143, 99, 71]
-        ],
-        "Palm Door": [
-          [214, 153, 73],
-          [182, 129, 62]
-        ],
-        "_Palm Door Top": [
-          [214, 153, 73],
-          [182, 129, 62]
-        ],
-        "Pine Trapdoor": [
-          [122, 91, 52],
-          [97, 67, 39],
-          [63, 63, 63]
-        ],
-        "Plum Trapdoor": [
-          [174, 97, 49],
-          [126, 54, 30]
-        ],
-        "Cedar Trapdoor": [
-          [61, 37, 18],
-          [41, 21, 12],
-          [81, 52, 25]
-        ],
-        "Aspen Trapdoor": [
-          [199, 180, 128],
-          [249, 245, 223],
-          [154, 126, 92]
-        ],
-        "Jungle Trapdoor": [
-          [124, 78, 58],
-          [165, 124, 86],
-          [63, 63, 63]
-        ],
-        "Palm Trapdoor": [
-          [182, 129, 62],
-          [214, 153, 73]
-        ],
-        "Red Sand": [
-          [203, 110, 36],
-          [199, 102, 34],
-          [201, 106, 36],
-          [197, 99, 33],
-          [206, 113, 39]
-        ],
-        "Red Sandstone Bricks": [
-          [182, 87, 27],
-          [203, 110, 36],
-          [206, 113, 39],
-          [199, 105, 35],
-          [191, 95, 31]
-        ],
-        "Rocky Dirt": [
-          [133, 98, 77],
-          [139, 102, 80],
-          [139, 145, 152],
-          [136, 122, 115],
-          [133, 139, 146],
-          [127, 92, 74],
-          [133, 119, 112]
-        ],
-        "Autumn Maple Leaves": [
-          [168, 76, 50],
-          [193, 99, 55],
-          [149, 64, 45],
-          [190, 90, 58],
-          [188, 84, 59],
-          [191, 94, 57]
-        ],
-        "Autumn Maple Leaves|TreeCanopy": [
-          [168, 76, 50],
-          [193, 99, 55],
-          [149, 64, 45],
-          [190, 90, 58],
-          [188, 84, 59],
-          [191, 94, 57]
-        ],
-        "Fallen Maple Leaves": [
-          [188, 84, 59],
-          [149, 64, 45],
-          [168, 76, 50],
-          [191, 94, 57],
-          [190, 90, 58]
-        ],
-        "Maple Slab": [
-          [156, 120, 74],
-          [175, 143, 85]
-        ],
-        "Pine Slab": [
-          [121, 87, 67],
-          [118, 84, 64],
-          [109, 77, 58]
-        ],
-        "Plum Slab": [
-          [149, 102, 93],
-          [146, 100, 91],
-          [138, 92, 84]
-        ],
-        "Cedar Slab": [
-          [61, 37, 18],
-          [81, 52, 25],
-          [78, 50, 24],
-          [73, 46, 21]
-        ],
-        "Aspen Slab": [
-          [199, 180, 128],
-          [195, 176, 124],
-          [187, 168, 115]
-        ],
-        "Jungle Slab": [
-          [165, 124, 86],
-          [162, 121, 83],
-          [154, 114, 76]
-        ],
-        "Palm Slab": [
-          [214, 153, 73],
-          [210, 150, 72],
-          [199, 141, 64]
-        ],
-        "Dirt Slab": [
-          [127, 92, 74],
-          [133, 98, 77],
-          [139, 102, 80]
-        ],
-        "Grass Slab": [
-          [89, 136, 47],
-          [93, 141, 53],
-          [88, 132, 46]
-        ],
-        "Messy Stone Slab": [
-          [142, 148, 155],
-          [121, 127, 135],
-          [131, 137, 144]
-        ],
-        "Stone Slab": [
-          [139, 145, 152],
-          [133, 139, 146],
-          [127, 133, 140]
-        ],
-        "Smooth Stone Slab": [
-          [151, 157, 164],
-          [133, 139, 146],
-          [138, 144, 151],
-          [117, 122, 128],
-          [129, 135, 142],
-          [108, 113, 119]
-        ],
-        "Engraved Stone Slab": [
-          [151, 157, 164],
-          [133, 139, 146],
-          [138, 144, 151],
-          [117, 122, 128],
-          [129, 135, 142],
-          [108, 113, 119]
-        ],
-        "Stone Bricks Slab": [
-          [138, 144, 151],
-          [133, 139, 146],
-          [108, 113, 119],
-          [117, 122, 128],
-          [129, 135, 142]
-        ],
-        "Mossy Stone Slab": [
-          [133, 139, 146],
-          [92, 143, 37],
-          [81, 136, 34],
-          [142, 148, 155],
-          [73, 129, 29],
-          [106, 125, 98]
-        ],
-        "Mossy Stone Bricks Slab": [
-          [138, 144, 151],
-          [133, 139, 146],
-          [95, 128, 67],
-          [88, 121, 61],
-          [125, 131, 138],
-          [105, 136, 72],
-          [106, 125, 98]
-        ],
-        "Andesite Slab": [
-          [111, 120, 128],
-          [116, 126, 134],
-          [104, 114, 122],
-          [125, 134, 140]
-        ],
-        "Smooth Andesite Slab": [
-          [127, 138, 145],
-          [116, 126, 134],
-          [104, 114, 122],
-          [111, 120, 128],
-          [125, 134, 140],
-          [100, 108, 116],
-          [114, 124, 132],
-          [93, 100, 108]
-        ],
-        "Engraved Andesite Slab": [
-          [127, 138, 145],
-          [116, 126, 134],
-          [100, 108, 116],
-          [104, 114, 122],
-          [111, 120, 128],
-          [125, 134, 140],
-          [93, 100, 108]
-        ],
-        "Andesite Bricks Slab": [
-          [111, 120, 128],
-          [116, 126, 134],
-          [104, 114, 122],
-          [93, 100, 108],
-          [125, 134, 140],
-          [100, 108, 116]
-        ],
-        "Diorite Slab": [
-          [246, 245, 240],
-          [233, 232, 226],
-          [206, 205, 197],
-          [219, 218, 212]
-        ],
-        "Smooth Diorite Slab": [
-          [249, 249, 246],
-          [240, 239, 233],
-          [226, 225, 219],
-          [233, 232, 226],
-          [215, 213, 208],
-          [206, 203, 199]
-        ],
-        "Engraved Diorite Slab": [
-          [249, 249, 246],
-          [240, 239, 233],
-          [226, 225, 219],
-          [233, 232, 226],
-          [215, 213, 208],
-          [206, 203, 199]
-        ],
-        "Diorite Bricks Slab": [
-          [240, 239, 233],
-          [206, 203, 199],
-          [233, 232, 226],
-          [226, 225, 219],
-          [215, 213, 208]
-        ],
-        "Granite Slab": [
-          [159, 107, 88],
-          [152, 101, 83],
-          [144, 94, 77],
-          [159, 117, 102]
-        ],
-        "Smooth Granite Slab": [
-          [174, 121, 98],
-          [154, 103, 85],
-          [148, 98, 80],
-          [159, 107, 88],
-          [159, 112, 95],
-          [136, 87, 71],
-          [128, 80, 65]
-        ],
-        "Engraved Granite Slab": [
-          [174, 121, 98],
-          [154, 103, 85],
-          [148, 98, 80],
-          [159, 107, 88],
-          [159, 112, 95],
-          [136, 87, 71],
-          [128, 80, 65]
-        ],
-        "Granite Bricks Slab": [
-          [154, 103, 85],
-          [159, 112, 95],
-          [159, 107, 88],
-          [128, 80, 65],
-          [148, 98, 80],
-          [136, 87, 71]
-        ],
-        "Sandstone Slab": [
-          [251, 234, 163],
-          [247, 227, 155],
-          [252, 237, 175],
-          [245, 223, 151]
-        ],
-        "Smooth Sandstone Slab": [
-          [251, 234, 163],
-          [252, 237, 175],
-          [249, 231, 159]
-        ],
-        "Engraved Sandstone Slab": [
-          [251, 234, 163],
-          [252, 237, 175],
-          [249, 231, 159],
-          [242, 219, 147],
-          [239, 213, 141]
-        ],
-        "Marked Sandstone Slab": [
-          [251, 234, 163],
-          [252, 237, 175],
-          [249, 231, 159],
-          [242, 219, 147],
-          [239, 213, 141]
-        ],
-        "Sandstone Bricks Slab": [
-          [251, 234, 163],
-          [252, 237, 175],
-          [235, 207, 135],
-          [247, 227, 155],
-          [242, 219, 147]
-        ],
-        "Red Sandstone Slab": [
-          [203, 110, 36],
-          [205, 112, 38],
-          [200, 104, 34],
-          [197, 99, 33]
-        ],
-        "Smooth Red Sandstone Slab": [
-          [203, 110, 36],
-          [206, 113, 39],
-          [201, 106, 35]
-        ],
-        "Engraved Red Sandstone Slab": [
-          [203, 110, 36],
-          [206, 113, 39],
-          [201, 106, 35],
-          [191, 95, 31],
-          [187, 91, 29]
-        ],
-        "Marked Red Sandstone Slab": [
-          [203, 110, 36],
-          [206, 113, 39],
-          [201, 106, 35],
-          [191, 95, 31],
-          [187, 91, 29]
-        ],
-        "Red Sandstone Bricks Slab": [
-          [203, 110, 36],
-          [206, 113, 39],
-          [182, 87, 27],
-          [199, 105, 35],
-          [191, 95, 31]
-        ],
-        "Bricks Slab": [
-          [156, 88, 67],
-          [149, 84, 61],
-          [165, 150, 134],
-          [144, 80, 57],
-          [151, 140, 122]
-        ],
-        "Ice Bricks Slab": [
-          [137, 231, 255],
-          [122, 225, 251],
-          [106, 218, 247],
-          [238, 243, 250],
-          [245, 247, 250],
-          [230, 238, 249]
-        ],
-        "Cactus|Growing": [
-          [115, 177, 42],
-          [131, 185, 47],
-          [103, 170, 38]
-        ],
-        "Fat Cactus|Growing": [
-          [103, 170, 38],
-          [115, 177, 42],
-          [202, 215, 121]
-        ],
-        "Plum Block": [
-          [170, 31, 170],
-          [179, 36, 179]
-        ],
-        "Coconut Block": [
-          [133, 99, 45],
-          [148, 109, 50]
-        ],
-        "Pear Log": [
-          [107, 108, 70],
-          [99, 100, 63],
-          [91, 92, 56]
-        ],
-        "Pear Wood Planks": [
-          [153, 144, 93],
-          [149, 140, 90],
-          [143, 134, 84]
-        ],
-        "Pear Leaves": [
-          [202, 224, 171],
-          [188, 212, 153],
-          [215, 234, 190]
-        ],
-        "Pear Door": [
-          [141, 110, 99],
-          [109, 76, 65]
-        ],
-        "_Pear Door Top": [
-          [141, 110, 99],
-          [109, 76, 65]
-        ],
-        "Pear Trapdoor": [
-          [141, 110, 99],
-          [109, 76, 65]
-        ],
-        "Pear Sapling": [
-          [242, 248, 234],
-          [97, 97, 97]
-        ],
-        "Pear Log|TreeBase|Pear": [
-          [107, 108, 70],
-          [99, 100, 63],
-          [91, 92, 56]
-        ],
-        "Pear Leaves|TreeCanopy": [
-          [202, 224, 171],
-          [188, 212, 153],
-          [215, 234, 190]
-        ],
-        "Pear Slab": [
-          [153, 144, 93],
-          [150, 141, 89],
-          [143, 134, 84]
-        ],
-        "Pear Block": [
-          [121, 170, 47],
-          [128, 177, 54]
-        ],
-        "Compressed Messy Stone": [
-          [117, 117, 117],
-          [97, 97, 97],
-          [66, 66, 66]
-        ],
-        "Extra Compressed Messy Stone": [
-          [107, 107, 107],
-          [87, 87, 87],
-          [66, 66, 66],
-          [97, 97, 97]
-        ],
-        "Super Compressed Messy Stone": [
-          [87, 87, 87],
-          [66, 66, 66],
-          [51, 51, 51]
-        ],
-        "Hyper Compressed Messy Stone": [
-          [77, 77, 77],
-          [51, 51, 51],
-          [66, 66, 66]
-        ],
-        "Ultra Compressed Messy Stone": [
-          [68, 68, 68],
-          [44, 44, 44],
-          [58, 58, 58]
-        ],
-        "Mega Compressed Messy Stone": [
-          [62, 62, 62],
-          [53, 53, 53],
-          [41, 41, 41],
-          [55, 55, 55]
-        ],
-        Board: [
-          [175, 143, 85],
-          [132, 97, 61]
-        ],
-        Net: [
-          [237, 182, 124],
-          [206, 151, 112]
-        ],
-        Cobweb: [
-          [234, 219, 201],
-          [255, 243, 214]
-        ],
-        "Brown Mushroom Block": [
-          [191, 149, 113],
-          [188, 143, 109],
-          [179, 138, 101]
-        ],
-        "Red Mushroom Block": [
-          [226, 61, 48],
-          [230, 73, 52],
-          [242, 238, 230],
-          [231, 224, 212],
-          [202, 49, 49]
-        ],
-        "Mushroom Stem": [
-          [212, 208, 199],
-          [226, 224, 219],
-          [219, 216, 209],
-          [235, 234, 232]
-        ],
-        "Fireball Block": [
-          [236, 63, 49],
-          [255, 129, 0],
-          [239, 92, 52]
-        ],
-        "Iceball Block": [
-          [49, 123, 235],
-          [0, 191, 255],
-          [52, 151, 237]
-        ],
-        "Watermelon Seeds": [
-          [91, 121, 12],
-          [83, 113, 8],
-          [70, 104, 6]
-        ],
-        "Watermelon Seeds|Growing": [
-          [91, 121, 12],
-          [83, 113, 8],
-          [70, 104, 6]
-        ],
-        "Attached Watermelon Stem": [
-          [91, 121, 12],
-          [83, 113, 8],
-          [70, 104, 6]
-        ],
-        "Pumpkin Seeds": [
-          [91, 121, 12],
-          [83, 113, 8],
-          [70, 104, 6]
-        ],
-        "Pumpkin Seeds|Growing": [
-          [91, 121, 12],
-          [83, 113, 8],
-          [70, 104, 6]
-        ],
-        "Attached Pumpkin Stem": [
-          [91, 121, 12],
-          [83, 113, 8],
-          [70, 104, 6]
-        ],
-        Pumpkin: [
-          [237, 147, 44],
-          [233, 134, 39],
-          [223, 119, 32],
-          [217, 107, 30]
-        ],
-        "Carved Pumpkin": [
-          [237, 147, 44],
-          [233, 134, 39],
-          [223, 119, 32],
-          [99, 44, 19],
-          [217, 107, 30]
-        ],
-        "Jack o'Lantern": [
-          [237, 147, 44],
-          [233, 134, 39],
-          [239, 170, 65],
-          [255, 221, 97],
-          [255, 234, 159],
-          [223, 119, 32]
-        ],
-        "Melon Seeds": [
-          [91, 121, 12],
-          [83, 113, 8],
-          [70, 104, 6]
-        ],
-        "Melon Seeds|Growing": [
-          [91, 121, 12],
-          [83, 113, 8],
-          [70, 104, 6]
-        ],
-        "Attached Melon Stem": [
-          [91, 121, 12],
-          [83, 113, 8],
-          [70, 104, 6]
-        ],
-        Melon: [
-          [242, 247, 171],
-          [244, 234, 86],
-          [245, 220, 0],
-          [243, 241, 129],
-          [243, 208, 0],
-          [243, 225, 65]
-        ],
-        "Iron Watermelon": [
-          [234, 224, 197],
-          [228, 215, 189],
-          [221, 205, 180],
-          [210, 187, 162],
-          [222, 206, 180]
-        ],
-        "Patterned Black Glass": [
-          [0, 0, 0],
-          [42, 56, 66],
-          [73, 96, 114]
-        ],
-        "Patterned Blue Glass": [
-          [71, 115, 214],
-          [32, 59, 118],
-          [115, 157, 249]
-        ],
-        "Patterned Brown Glass": [
-          [124, 82, 51],
-          [138, 101, 73],
-          [113, 71, 39]
-        ],
-        "Patterned Cyan Glass": [
-          [21, 119, 135],
-          [98, 179, 193]
-        ],
-        "Patterned Gray Glass": [
-          [86, 90, 93],
-          [72, 77, 82]
-        ],
-        "Patterned Light Gray Glass": [
-          [154, 160, 167],
-          [190, 194, 198],
-          [165, 171, 178]
-        ],
-        "Patterned Green Glass": [
-          [105, 125, 62],
-          [223, 210, 33],
-          [197, 70, 41],
-          [219, 159, 11],
-          [86, 106, 44]
-        ],
-        "Patterned Light Blue Glass": [
-          [172, 212, 255],
-          [135, 187, 242]
-        ],
-        "Patterned Lime Glass": [
-          [125, 199, 55],
-          [188, 226, 152],
-          [150, 217, 87]
-        ],
-        "Patterned Magenta Glass": [
-          [136, 55, 129],
-          [193, 73, 183],
-          [225, 134, 222]
-        ],
-        "Patterned Orange Glass": [
-          [172, 79, 7],
-          [242, 151, 82],
-          [224, 111, 23],
-          [246, 130, 42]
-        ],
-        "Patterned Pink Glass": [
-          [250, 205, 222],
-          [238, 116, 161],
-          [242, 157, 188]
-        ],
-        "Patterned Purple Glass": [
-          [126, 63, 177],
-          [154, 97, 201],
-          [82, 22, 131]
-        ],
-        "Patterned Red Glass": [
-          [143, 33, 33],
-          [209, 84, 84],
-          [182, 56, 56]
-        ],
-        "Patterned White Glass": [
-          [255, 255, 255],
-          [232, 234, 236]
-        ],
-        "Patterned Yellow Glass": [
-          [248, 214, 135],
-          [250, 202, 91]
-        ],
-        "Potion Table": [
-          [15, 15, 15],
-          [149, 103, 38],
-          [122, 85, 31],
-          [71, 74, 78],
-          [76, 80, 85],
-          [129, 192, 0],
-          [140, 95, 33],
-          [115, 78, 27],
-          [145, 203, 0],
-          [136, 115, 26],
-          [112, 94, 21],
-          [60, 63, 66],
-          [50, 52, 55],
-          [65, 68, 72],
-          [53, 56, 59],
-          [57, 59, 62],
-          [47, 48, 51],
-          [54, 55, 59],
-          [44, 46, 48]
-        ],
-        "Pine Ladder": [
-          [97, 67, 39],
-          [111, 79, 39],
-          [122, 91, 52]
-        ],
-        "Plum Ladder": [
-          [149, 75, 38],
-          [174, 97, 49]
-        ],
-        "Cedar Ladder": [
-          [81, 52, 25],
-          [61, 37, 18]
-        ],
-        "Aspen Ladder": [
-          [174, 150, 107],
-          [199, 180, 128]
-        ],
-        "Jungle Ladder": [
-          [143, 99, 71],
-          [165, 124, 86]
-        ],
-        "Palm Ladder": [
-          [196, 139, 66],
-          [214, 153, 73]
-        ],
-        "Pear Ladder": [
-          [141, 110, 99],
-          [109, 76, 65]
-        ],
-        "Black Carpet": [
-          [29, 31, 36],
-          [18, 19, 23]
-        ],
-        "Blue Carpet": [
-          [58, 68, 166],
-          [52, 54, 154],
-          [46, 54, 133]
-        ],
-        "Brown Carpet": [
-          [125, 81, 44],
-          [111, 69, 39],
-          [100, 65, 35]
-        ],
-        "Cyan Carpet": [
-          [25, 153, 154],
-          [21, 135, 143],
-          [20, 122, 123]
-        ],
-        "Gray Carpet": [
-          [73, 79, 83],
-          [61, 66, 70],
-          [55, 59, 62]
-        ],
-        "Light Gray Carpet": [
-          [154, 154, 149],
-          [139, 140, 132],
-          [123, 123, 119]
-        ],
-        "Green Carpet": [
-          [95, 119, 32],
-          [82, 106, 28],
-          [76, 95, 26]
-        ],
-        "Light Blue Carpet": [
-          [59, 194, 230],
-          [55, 174, 215],
-          [47, 155, 184]
-        ],
-        "Lime Carpet": [
-          [134, 202, 29],
-          [109, 182, 24],
-          [107, 162, 23]
-        ],
-        "Magenta Carpet": [
-          [203, 74, 189],
-          [186, 65, 175],
-          [162, 59, 151]
-        ],
-        "Orange Carpet": [
-          [252, 133, 33],
-          [240, 113, 16],
-          [202, 106, 26]
-        ],
-        "Pink Carpet": [
-          [254, 155, 188],
-          [242, 136, 168],
-          [203, 124, 150]
-        ],
-        "Purple Carpet": [
-          [136, 45, 183],
-          [118, 39, 168],
-          [109, 36, 146]
-        ],
-        "Red Carpet": [
-          [176, 44, 37],
-          [155, 36, 33],
-          [133, 33, 28]
-        ],
-        "White Carpet": [
-          [250, 250, 250],
-          [227, 230, 231],
-          [200, 200, 200]
-        ],
-        "Yellow Carpet": [
-          [255, 211, 64],
-          [248, 195, 35],
-          [204, 169, 51]
-        ],
-        Bookshelf: [
-          [174, 143, 90],
-          [71, 47, 31],
-          [125, 164, 45],
-          [182, 60, 53],
-          [79, 160, 111],
-          [49, 142, 184],
-          [249, 155, 78],
-          [0, 130, 121],
-          [159, 128, 84]
-        ],
-        "Empty Bookshelf": [
-          [174, 143, 90],
-          [71, 47, 31],
-          [80, 52, 33],
-          [159, 128, 84]
-        ],
-        Mailbox: [
-          [183, 125, 45],
-          [165, 112, 39],
-          [214, 209, 202],
-          [233, 230, 224],
-          [153, 101, 29]
-        ],
-        Rice: [
-          [46, 134, 62],
-          [52, 147, 59]
-        ],
-        Rice_stage1: [
-          [52, 147, 59],
-          [46, 134, 62]
-        ],
-        Rice_stage2: [
-          [52, 147, 59],
-          [46, 134, 62]
-        ],
-        Rice_stage3: [
-          [121, 172, 97],
-          [52, 147, 59],
-          [46, 134, 62],
-          [34, 117, 56]
-        ],
-        Rice_stage4: [
-          [121, 172, 97],
-          [52, 147, 59],
-          [34, 117, 56],
-          [46, 134, 62]
-        ],
-        Rice_stage5: [
-          [166, 200, 140],
-          [88, 168, 90],
-          [46, 134, 62],
-          [34, 117, 56],
-          [52, 147, 59]
-        ],
-        "Rice|FreshlyGrown": [
-          [229, 246, 210],
-          [216, 234, 194],
-          [134, 191, 127],
-          [52, 147, 59],
-          [46, 134, 62],
-          [34, 117, 56]
-        ],
-        Cranberries: [
-          [45, 104, 65],
-          [40, 98, 64],
-          [33, 89, 65]
-        ],
-        Cranberries_stage1: [
-          [45, 104, 65],
-          [40, 98, 64],
-          [33, 89, 65]
-        ],
-        Cranberries_stage2: [
-          [45, 104, 65],
-          [165, 7, 0],
-          [40, 98, 64],
-          [33, 89, 65]
-        ],
-        "Red Mushroom": [
-          [230, 73, 52],
-          [242, 238, 230],
-          [226, 61, 48],
-          [212, 208, 199],
-          [226, 224, 219]
-        ],
-        "Brown Mushroom": [
-          [191, 149, 113],
-          [188, 143, 109],
-          [212, 208, 199],
-          [226, 224, 219]
-        ],
-        "Cotton Seeds": [
-          [42, 110, 30],
-          [71, 86, 47],
-          [32, 98, 28],
-          [59, 74, 39]
-        ],
-        Cotton_stage1: [
-          [42, 110, 30],
-          [32, 98, 28],
-          [86, 74, 56],
-          [72, 62, 45]
-        ],
-        Cotton_stage2: [
-          [42, 110, 30],
-          [32, 98, 28],
-          [100, 61, 64],
-          [85, 49, 50]
-        ],
-        Cotton_stage3: [
-          [236, 237, 240],
-          [199, 203, 208],
-          [100, 61, 64],
-          [85, 49, 50],
-          [75, 43, 44]
-        ],
-        "Tribe Protector": [
-          [130, 139, 152],
-          [122, 131, 143],
-          [187, 185, 232],
-          [242, 242, 255],
-          [224, 225, 255]
-        ],
-        "Tall Grass": [
-          [81, 136, 34],
-          [73, 129, 29]
-        ],
-        "Tall Grass|Top": [
-          [92, 143, 37],
-          [81, 136, 34]
-        ],
-        "Faction Protector": [
-          [217, 87, 99],
-          [172, 50, 50],
-          [252, 236, 50]
-        ],
-        "Barkless Palm Log": [
-          [210, 150, 72],
-          [217, 156, 76],
-          [214, 153, 73]
-        ],
-        "Barkless Pear Log": [
-          [150, 141, 89],
-          [157, 147, 96],
-          [153, 144, 93]
-        ],
-        "Barkless Maple Log|TreeBase|Maple": [
-          [169, 138, 88],
-          [178, 147, 95],
-          [174, 143, 90]
-        ],
-        "Barkless Plum Log|TreeBase|Plum": [
-          [146, 100, 91],
-          [151, 104, 95],
-          [149, 102, 93]
-        ],
-        "Barkless Cedar Log|TreeBase|Cedar": [
-          [78, 50, 24],
-          [84, 54, 27],
-          [81, 52, 25]
-        ],
-        "Barkless Aspen Log|TreeBase|Aspen": [
-          [195, 176, 124],
-          [202, 183, 132],
-          [199, 180, 128]
-        ],
-        "Barkless Jungle Log|TreeBase|Jungle": [
-          [162, 121, 83],
-          [169, 127, 89],
-          [165, 124, 86]
-        ],
-        "Barkless Pine Log|TreeBase|Pine": [
-          [118, 84, 64],
-          [125, 90, 70],
-          [121, 87, 67]
-        ],
-        "Barkless Palm Log|TreeBase|Palm": [
-          [210, 150, 72],
-          [217, 156, 76],
-          [214, 153, 73]
-        ],
-        "Barkless Pear Log|TreeBase|Pear": [
-          [150, 141, 89],
-          [157, 147, 96],
-          [153, 144, 93]
-        ],
-        "Mystery Block": [
-          [243, 170, 36],
-          [238, 202, 78],
-          [235, 235, 235],
-          [225, 150, 13]
-        ],
-        Rocket: [
-          [52, 81, 51],
-          [89, 130, 64],
-          [67, 102, 58]
-        ],
-        "Super Rocket": [
-          [80, 58, 32],
-          [133, 67, 56],
-          [105, 64, 43]
-        ],
-        "Yellow Concrete Slab": [
-          [234, 192, 61]
-        ],
-        "White Concrete Slab": [
-          [227, 228, 228]
-        ],
-        "Red Concrete Slab": [
-          [148, 40, 36]
-        ],
-        "Purple Concrete Slab": [
-          [115, 42, 157]
-        ],
-        "Pink Concrete Slab": [
-          [228, 140, 168]
-        ],
-        "Orange Concrete Slab": [
-          [223, 118, 34]
-        ],
-        "Magenta Concrete Slab": [
-          [176, 69, 165]
-        ],
-        "Lime Concrete Slab": [
-          [119, 179, 38]
-        ],
-        "Light Gray Concrete Slab": [
-          [139, 139, 134]
-        ],
-        "Light Blue Concrete Slab": [
-          [64, 172, 205]
-        ],
-        "Green Concrete Slab": [
-          [85, 106, 35]
-        ],
-        "Gray Concrete Slab": [
-          [64, 69, 73]
-        ],
-        "Cyan Concrete Slab": [
-          [30, 134, 138]
-        ],
-        "Brown Concrete Slab": [
-          [109, 72, 43]
-        ],
-        "Blue Concrete Slab": [
-          [53, 58, 143]
-        ],
-        "Black Concrete Slab": [
-          [22, 23, 28]
-        ],
-        Grenade: [
-          [61, 49, 97],
-          [65, 77, 142],
-          [62, 60, 123]
-        ],
-        "Cherry Log": [
-          [54, 34, 46],
-          [48, 30, 41],
-          [63, 41, 54]
-        ],
-        "Barkless Cherry Log": [
-          [242, 180, 203],
-          [246, 187, 209],
-          [244, 183, 206]
-        ],
-        "Barkless Cherry Log|TreeBase|Cherry": [
-          [242, 180, 203],
-          [246, 187, 209],
-          [244, 183, 206]
-        ],
-        "Cherry Wood Planks": [
-          [244, 183, 206],
-          [240, 177, 201],
-          [234, 169, 194]
-        ],
-        "Cherry Leaves": [
-          [252, 184, 223],
-          [241, 168, 212],
-          [255, 200, 229]
-        ],
-        "Fallen Cherry Leaves": [
-          [255, 200, 229],
-          [241, 168, 212],
-          [252, 184, 223]
-        ],
-        "Cherry Door": [
-          [233, 192, 187],
-          [208, 157, 157]
-        ],
-        "_Cherry Door Top": [
-          [233, 192, 187],
-          [208, 157, 157]
-        ],
-        "Cherry Trapdoor": [
-          [218, 170, 170],
-          [233, 192, 187],
-          [231, 209, 209]
-        ],
-        "Cherry Sapling": [
-          [249, 194, 225],
-          [237, 162, 204],
-          [71, 44, 57]
-        ],
-        "Cherry Log|TreeBase|Cherry": [
-          [54, 34, 46],
-          [48, 30, 41],
-          [63, 41, 54]
-        ],
-        "Cherry Leaves|TreeCanopy": [
-          [252, 184, 223],
-          [241, 168, 212],
-          [255, 200, 229]
-        ],
-        "Cherry Slab": [
-          [244, 183, 206],
-          [242, 180, 203],
-          [234, 169, 194]
-        ],
-        "Cherry Ladder": [
-          [211, 159, 159],
-          [233, 192, 187]
-        ],
-        "Cherry Block": [
-          [241, 62, 149],
-          [253, 69, 159]
-        ],
-        "Bouncy Bomb Block": [
-          [183, 45, 183],
-          [205, 68, 205],
-          [193, 56, 193]
-        ],
-        "Obby Rocket": [
-          [52, 81, 51],
-          [89, 130, 64],
-          [67, 102, 58]
-        ],
-        "Wood Spikes": [
-          [0, 0, 0],
-          [149, 114, 70],
-          [114, 79, 42],
-          [124, 90, 55]
-        ],
-        "Stone Spikes": [
-          [0, 0, 0],
-          [146, 142, 142],
-          [97, 94, 94],
-          [109, 105, 105]
-        ],
-        "Iron Spikes": [
-          [0, 0, 0],
-          [214, 221, 222],
-          [147, 158, 161],
-          [173, 180, 182]
-        ],
-        "Gold Spikes": [
-          [0, 0, 0],
-          [251, 235, 49],
-          [224, 152, 21],
-          [243, 170, 36]
-        ],
-        "Diamond Spikes": [
-          [0, 0, 0],
-          [63, 239, 201],
-          [37, 154, 173],
-          [37, 171, 193]
-        ],
-        "Kill Spikes": [
-          [0, 0, 0],
-          [236, 95, 95],
-          [172, 13, 13],
-          [200, 12, 12]
-        ],
-        "Corn Block": [
-          [255, 228, 0],
-          [254, 203, 25],
-          [255, 216, 13],
-          [63, 108, 0],
-          [59, 101, 0],
-          [36, 84, 0],
-          [48, 93, 0]
-        ],
-        "Corn Seeds": [
-          [92, 126, 23],
-          [81, 118, 20],
-          [71, 109, 16]
-        ],
-        "Corn Seeds_stage1": [
-          [92, 126, 23],
-          [81, 118, 20],
-          [71, 109, 16]
-        ],
-        "Corn Seeds|FreshlyGrown": [
-          [92, 126, 23],
-          [81, 118, 20],
-          [71, 109, 16]
-        ],
-        "Corn Seeds|Growing": [
-          [92, 126, 23],
-          [81, 118, 20],
-          [71, 109, 16]
-        ],
-        "Corn Plant_stage1": [
-          [92, 126, 23],
-          [81, 118, 20],
-          [71, 109, 16]
-        ],
-        "Corn Plant_stage2": [
-          [92, 126, 23],
-          [81, 118, 20],
-          [71, 109, 16]
-        ],
-        "Corn Plant_stage3": [
-          [92, 126, 23],
-          [81, 118, 20],
-          [71, 109, 16]
-        ],
-        "Corn Plant_stage4": [
-          [92, 126, 23],
-          [81, 118, 20],
-          [71, 109, 16]
-        ],
-        "Corn Plant_stage5": [
-          [134, 163, 27],
-          [81, 118, 20],
-          [92, 126, 23],
-          [71, 109, 16]
-        ],
-        "Corn Plant": [
-          [217, 192, 14],
-          [81, 118, 20],
-          [92, 126, 23],
-          [71, 109, 16]
-        ],
-        "Corn Plant|FreshlyGrown": [
-          [217, 192, 14],
-          [81, 118, 20],
-          [92, 126, 23],
-          [71, 109, 16]
-        ],
-        "Loot Chest": [
-          [252, 250, 246],
-          [183, 125, 45],
-          [233, 230, 224],
-          [165, 112, 39],
-          [214, 209, 202],
-          [201, 194, 183],
-          [153, 101, 29]
-        ],
-        "Melting Ice": [
-          [137, 231, 255],
-          [106, 218, 247],
-          [122, 225, 251]
-        ],
-        "Melting Ice|Breaking": [
-          [99, 179, 255],
-          [95, 152, 255],
-          [96, 166, 255]
-        ],
-        "Yellow Paintball Explosive": [
-          [240, 204, 67],
-          [234, 192, 61],
-          [226, 173, 56],
-          [245, 247, 250],
-          [225, 229, 234],
-          [34, 35, 35]
-        ],
-        "White Paintball Explosive": [
-          [236, 238, 239],
-          [227, 228, 228],
-          [207, 212, 212],
-          [245, 247, 250],
-          [225, 229, 234],
-          [34, 35, 35]
-        ],
-        "Red Paintball Explosive": [
-          [159, 54, 43],
-          [148, 40, 36],
-          [139, 32, 32],
-          [245, 247, 250],
-          [225, 229, 234],
-          [34, 35, 35]
-        ],
-        "Purple Paintball Explosive": [
-          [122, 57, 172],
-          [115, 42, 157],
-          [109, 34, 145],
-          [245, 247, 250],
-          [225, 229, 234],
-          [34, 35, 35]
-        ],
-        "Pink Paintball Explosive": [
-          [224, 114, 159],
-          [214, 101, 143],
-          [199, 89, 125],
-          [245, 247, 250],
-          [225, 229, 234],
-          [34, 35, 35]
-        ],
-        "Orange Paintball Explosive": [
-          [240, 130, 49],
-          [223, 118, 34],
-          [203, 113, 25],
-          [245, 247, 250],
-          [225, 229, 234],
-          [34, 35, 35]
-        ],
-        "Magenta Paintball Explosive": [
-          [191, 82, 186],
-          [176, 69, 165],
-          [156, 57, 151],
-          [245, 247, 250],
-          [225, 229, 234],
-          [34, 35, 35]
-        ],
-        "Lime Paintball Explosive": [
-          [136, 193, 48],
-          [119, 179, 38],
-          [100, 164, 32],
-          [245, 247, 250],
-          [225, 229, 234],
-          [34, 35, 35]
-        ],
-        "Light Gray Paintball Explosive": [
-          [153, 153, 150],
-          [139, 139, 134],
-          [128, 128, 122],
-          [245, 247, 250],
-          [225, 229, 234],
-          [34, 35, 35]
-        ],
-        "Light Blue Paintball Explosive": [
-          [76, 192, 217],
-          [64, 172, 205],
-          [58, 152, 190],
-          [245, 247, 250],
-          [225, 229, 234],
-          [34, 35, 35]
-        ],
-        "Green Paintball Explosive": [
-          [100, 121, 44],
-          [85, 106, 35],
-          [71, 94, 28],
-          [245, 247, 250],
-          [225, 229, 234],
-          [34, 35, 35]
-        ],
-        "Gray Paintball Explosive": [
-          [76, 81, 84],
-          [64, 69, 73],
-          [56, 60, 65],
-          [245, 247, 250],
-          [225, 229, 234],
-          [34, 35, 35]
-        ],
-        "Cyan Paintball Explosive": [
-          [37, 150, 149],
-          [30, 134, 138],
-          [25, 119, 127],
-          [245, 247, 250],
-          [225, 229, 234],
-          [34, 35, 35]
-        ],
-        "Brown Paintball Explosive": [
-          [123, 81, 53],
-          [109, 72, 43],
-          [95, 63, 34],
-          [245, 247, 250],
-          [225, 229, 234],
-          [34, 35, 35]
-        ],
-        "Blue Paintball Explosive": [
-          [61, 73, 153],
-          [53, 58, 143],
-          [48, 47, 132],
-          [245, 247, 250],
-          [225, 229, 234],
-          [34, 35, 35]
-        ],
-        "Black Paintball Explosive": [
-          [34, 35, 35],
-          [22, 23, 28],
-          [9, 10, 12],
-          [245, 247, 250],
-          [225, 229, 234]
-        ],
-        "Yellow Quick Paintball Explosive": [
-          [240, 204, 67],
-          [234, 192, 61],
-          [226, 173, 56],
-          [245, 247, 250]
-        ],
-        "White Quick Paintball Explosive": [
-          [236, 238, 239],
-          [227, 228, 228],
-          [207, 212, 212],
-          [245, 247, 250]
-        ],
-        "Red Quick Paintball Explosive": [
-          [159, 54, 43],
-          [148, 40, 36],
-          [139, 32, 32],
-          [245, 247, 250]
-        ],
-        "Purple Quick Paintball Explosive": [
-          [122, 57, 172],
-          [115, 42, 157],
-          [109, 34, 145],
-          [245, 247, 250]
-        ],
-        "Pink Quick Paintball Explosive": [
-          [224, 114, 159],
-          [214, 101, 143],
-          [199, 89, 125],
-          [245, 247, 250],
-          [235, 238, 242]
-        ],
-        "Orange Quick Paintball Explosive": [
-          [240, 130, 49],
-          [223, 118, 34],
-          [203, 113, 25],
-          [245, 247, 250]
-        ],
-        "Magenta Quick Paintball Explosive": [
-          [191, 82, 186],
-          [176, 69, 165],
-          [156, 57, 151],
-          [245, 247, 250]
-        ],
-        "Lime Quick Paintball Explosive": [
-          [136, 193, 48],
-          [119, 179, 38],
-          [100, 164, 32],
-          [245, 247, 250],
-          [235, 238, 242]
-        ],
-        "Light Gray Quick Paintball Explosive": [
-          [153, 153, 150],
-          [139, 139, 134],
-          [128, 128, 122],
-          [245, 247, 250]
-        ],
-        "Light Blue Quick Paintball Explosive": [
-          [76, 192, 217],
-          [64, 172, 205],
-          [58, 152, 190],
-          [245, 247, 250]
-        ],
-        "Green Quick Paintball Explosive": [
-          [100, 121, 44],
-          [85, 106, 35],
-          [71, 94, 28],
-          [245, 247, 250]
-        ],
-        "Gray Quick Paintball Explosive": [
-          [76, 81, 84],
-          [64, 69, 73],
-          [56, 60, 65],
-          [245, 247, 250]
-        ],
-        "Cyan Quick Paintball Explosive": [
-          [37, 150, 149],
-          [30, 134, 138],
-          [25, 119, 127],
-          [245, 247, 250]
-        ],
-        "Brown Quick Paintball Explosive": [
-          [123, 81, 53],
-          [109, 72, 43],
-          [95, 63, 34],
-          [245, 247, 250]
-        ],
-        "Blue Quick Paintball Explosive": [
-          [61, 73, 153],
-          [53, 58, 143],
-          [48, 47, 132],
-          [245, 247, 250]
-        ],
-        "Black Quick Paintball Explosive": [
-          [34, 35, 35],
-          [22, 23, 28],
-          [9, 10, 12],
-          [245, 247, 250]
-        ],
-        "Yellow Seeking Paintball Explosive": [
-          [240, 204, 67],
-          [234, 192, 61],
-          [245, 247, 250],
-          [226, 173, 56]
-        ],
-        "White Seeking Paintball Explosive": [
-          [236, 238, 239],
-          [227, 228, 228],
-          [245, 247, 250],
-          [207, 212, 212]
-        ],
-        "Red Seeking Paintball Explosive": [
-          [159, 54, 43],
-          [148, 40, 36],
-          [245, 247, 250],
-          [139, 32, 32]
-        ],
-        "Purple Seeking Paintball Explosive": [
-          [122, 57, 172],
-          [115, 42, 157],
-          [245, 247, 250],
-          [109, 34, 145]
-        ],
-        "Pink Seeking Paintball Explosive": [
-          [224, 114, 159],
-          [214, 101, 143],
-          [245, 247, 250],
-          [199, 89, 125]
-        ],
-        "Orange Seeking Paintball Explosive": [
-          [240, 130, 49],
-          [223, 118, 34],
-          [245, 247, 250],
-          [203, 113, 25]
-        ],
-        "Magenta Seeking Paintball Explosive": [
-          [191, 82, 186],
-          [176, 69, 165],
-          [245, 247, 250],
-          [156, 57, 151]
-        ],
-        "Lime Seeking Paintball Explosive": [
-          [136, 193, 48],
-          [119, 179, 38],
-          [245, 247, 250],
-          [100, 164, 32]
-        ],
-        "Light Gray Seeking Paintball Explosive": [
-          [153, 153, 150],
-          [139, 139, 134],
-          [245, 247, 250],
-          [128, 128, 122]
-        ],
-        "Light Blue Seeking Paintball Explosive": [
-          [76, 192, 217],
-          [64, 172, 205],
-          [245, 247, 250],
-          [58, 152, 190]
-        ],
-        "Green Seeking Paintball Explosive": [
-          [100, 121, 44],
-          [85, 106, 35],
-          [245, 247, 250],
-          [71, 94, 28]
-        ],
-        "Gray Seeking Paintball Explosive": [
-          [76, 81, 84],
-          [64, 69, 73],
-          [245, 247, 250],
-          [56, 60, 65]
-        ],
-        "Cyan Seeking Paintball Explosive": [
-          [37, 150, 149],
-          [30, 134, 138],
-          [245, 247, 250],
-          [25, 119, 127]
-        ],
-        "Brown Seeking Paintball Explosive": [
-          [123, 81, 53],
-          [109, 72, 43],
-          [245, 247, 250],
-          [95, 63, 34]
-        ],
-        "Blue Seeking Paintball Explosive": [
-          [61, 73, 153],
-          [53, 58, 143],
-          [245, 247, 250],
-          [48, 47, 132]
-        ],
-        "Black Seeking Paintball Explosive": [
-          [34, 35, 35],
-          [22, 23, 28],
-          [245, 247, 250],
-          [9, 10, 12]
-        ],
-        "Yellow Sticky Paintball Explosive": [
-          [240, 204, 67],
-          [234, 192, 61],
-          [226, 173, 56],
-          [204, 195, 177],
-          [187, 175, 164]
-        ],
-        "White Sticky Paintball Explosive": [
-          [236, 238, 239],
-          [227, 228, 228],
-          [207, 212, 212],
-          [204, 195, 177],
-          [187, 175, 164]
-        ],
-        "Red Sticky Paintball Explosive": [
-          [159, 54, 43],
-          [148, 40, 36],
-          [139, 32, 32],
-          [204, 195, 177],
-          [187, 175, 164]
-        ],
-        "Purple Sticky Paintball Explosive": [
-          [122, 57, 172],
-          [115, 42, 157],
-          [109, 34, 145],
-          [204, 195, 177],
-          [187, 175, 164]
-        ],
-        "Pink Sticky Paintball Explosive": [
-          [224, 114, 159],
-          [214, 101, 143],
-          [199, 89, 125],
-          [204, 195, 177],
-          [187, 175, 164]
-        ],
-        "Orange Sticky Paintball Explosive": [
-          [240, 130, 49],
-          [223, 118, 34],
-          [203, 113, 25],
-          [204, 195, 177],
-          [187, 175, 164]
-        ],
-        "Magenta Sticky Paintball Explosive": [
-          [191, 82, 186],
-          [176, 69, 165],
-          [156, 57, 151],
-          [204, 195, 177],
-          [187, 175, 164]
-        ],
-        "Lime Sticky Paintball Explosive": [
-          [136, 193, 48],
-          [119, 179, 38],
-          [100, 164, 32],
-          [204, 195, 177],
-          [187, 175, 164]
-        ],
-        "Light Gray Sticky Paintball Explosive": [
-          [153, 153, 150],
-          [139, 139, 134],
-          [128, 128, 122],
-          [204, 195, 177],
-          [187, 175, 164]
-        ],
-        "Light Blue Sticky Paintball Explosive": [
-          [76, 192, 217],
-          [64, 172, 205],
-          [58, 152, 190],
-          [204, 195, 177],
-          [187, 175, 164]
-        ],
-        "Green Sticky Paintball Explosive": [
-          [100, 121, 44],
-          [85, 106, 35],
-          [71, 94, 28],
-          [204, 195, 177],
-          [187, 175, 164]
-        ],
-        "Gray Sticky Paintball Explosive": [
-          [76, 81, 84],
-          [64, 69, 73],
-          [56, 60, 65],
-          [204, 195, 177],
-          [187, 175, 164]
-        ],
-        "Cyan Sticky Paintball Explosive": [
-          [37, 150, 149],
-          [30, 134, 138],
-          [25, 119, 127],
-          [204, 195, 177],
-          [187, 175, 164]
-        ],
-        "Brown Sticky Paintball Explosive": [
-          [123, 81, 53],
-          [109, 72, 43],
-          [95, 63, 34],
-          [204, 195, 177],
-          [187, 175, 164]
-        ],
-        "Blue Sticky Paintball Explosive": [
-          [61, 73, 153],
-          [53, 58, 143],
-          [48, 47, 132],
-          [204, 195, 177],
-          [187, 175, 164]
-        ],
-        "Black Sticky Paintball Explosive": [
-          [34, 35, 35],
-          [22, 23, 28],
-          [9, 10, 12],
-          [204, 195, 177],
-          [187, 175, 164]
-        ],
-        "White Strongbed": [
-          [173, 180, 182],
-          [235, 235, 235],
-          [236, 236, 236],
-          [205, 198, 198],
-          [205, 199, 199],
-          [147, 158, 161]
-        ],
-        "_White Strongbed Head": [
-          [173, 180, 182],
-          [235, 235, 235],
-          [236, 236, 236],
-          [205, 198, 198],
-          [205, 199, 199],
-          [147, 158, 161]
-        ],
-        "Orange Strongbed": [
-          [173, 180, 182],
-          [235, 235, 235],
-          [255, 129, 24],
-          [241, 105, 18],
-          [205, 199, 199],
-          [147, 158, 161]
-        ],
-        "_Orange Strongbed Head": [
-          [173, 180, 182],
-          [235, 235, 235],
-          [255, 129, 24],
-          [241, 105, 18],
-          [205, 199, 199],
-          [147, 158, 161]
-        ],
-        "Magenta Strongbed": [
-          [173, 180, 182],
-          [235, 235, 235],
-          [189, 60, 180],
-          [158, 47, 156],
-          [205, 199, 199],
-          [147, 158, 161]
-        ],
-        "_Magenta Strongbed Head": [
-          [173, 180, 182],
-          [235, 235, 235],
-          [189, 60, 180],
-          [158, 47, 156],
-          [205, 199, 199],
-          [147, 158, 161]
-        ],
-        "Light Blue Strongbed": [
-          [173, 180, 182],
-          [235, 235, 235],
-          [41, 161, 213],
-          [34, 132, 193],
-          [205, 199, 199],
-          [147, 158, 161]
-        ],
-        "_Light Blue Strongbed Head": [
-          [173, 180, 182],
-          [235, 235, 235],
-          [41, 161, 213],
-          [34, 132, 193],
-          [205, 199, 199],
-          [147, 158, 161]
-        ],
-        "Yellow Strongbed": [
-          [173, 180, 182],
-          [235, 235, 235],
-          [255, 206, 41],
-          [230, 175, 33],
-          [205, 199, 199],
-          [147, 158, 161]
-        ],
-        "_Yellow Strongbed Head": [
-          [173, 180, 182],
-          [235, 235, 235],
-          [255, 206, 41],
-          [230, 175, 33],
-          [205, 199, 199],
-          [147, 158, 161]
-        ],
-        "Lime Strongbed": [
-          [173, 180, 182],
-          [235, 235, 235],
-          [123, 198, 24],
-          [97, 174, 17],
-          [205, 199, 199],
-          [147, 158, 161]
-        ],
-        "_Lime Strongbed Head": [
-          [173, 180, 182],
-          [235, 235, 235],
-          [123, 198, 24],
-          [97, 174, 17],
-          [205, 199, 199],
-          [147, 158, 161]
-        ],
-        "Pink Strongbed": [
-          [173, 180, 182],
-          [235, 235, 235],
-          [246, 137, 172],
-          [217, 116, 143],
-          [205, 199, 199],
-          [147, 158, 161]
-        ],
-        "_Pink Strongbed Head": [
-          [173, 180, 182],
-          [235, 235, 235],
-          [246, 137, 172],
-          [217, 116, 143],
-          [205, 199, 199],
-          [147, 158, 161]
-        ],
-        "Gray Strongbed": [
-          [173, 180, 182],
-          [235, 235, 235],
-          [98, 113, 115],
-          [77, 90, 93],
-          [205, 199, 199],
-          [147, 158, 161]
-        ],
-        "_Gray Strongbed Head": [
-          [173, 180, 182],
-          [235, 235, 235],
-          [98, 113, 115],
-          [77, 90, 93],
-          [205, 199, 199],
-          [147, 158, 161]
-        ],
-        "Light Gray Strongbed": [
-          [173, 180, 182],
-          [235, 235, 235],
-          [147, 149, 140],
-          [125, 128, 118],
-          [205, 199, 199],
-          [147, 158, 161]
-        ],
-        "_Light Gray Strongbed Head": [
-          [173, 180, 182],
-          [235, 235, 235],
-          [147, 149, 140],
-          [125, 128, 118],
-          [205, 199, 199],
-          [147, 158, 161]
-        ],
-        "Cyan Strongbed": [
-          [173, 180, 182],
-          [235, 235, 235],
-          [18, 158, 157],
-          [12, 128, 136],
-          [205, 199, 199],
-          [147, 158, 161]
-        ],
-        "_Cyan Strongbed Head": [
-          [173, 180, 182],
-          [235, 235, 235],
-          [18, 158, 157],
-          [12, 128, 136],
-          [205, 199, 199],
-          [147, 158, 161]
-        ],
-        "Purple Strongbed": [
-          [173, 180, 182],
-          [235, 235, 235],
-          [131, 44, 180],
-          [102, 32, 147],
-          [205, 199, 199],
-          [147, 158, 161]
-        ],
-        "_Purple Strongbed Head": [
-          [173, 180, 182],
-          [235, 235, 235],
-          [131, 44, 180],
-          [102, 32, 147],
-          [205, 199, 199],
-          [147, 158, 161]
-        ],
-        "Blue Strongbed": [
-          [173, 180, 182],
-          [235, 235, 235],
-          [69, 90, 190],
-          [58, 66, 168],
-          [205, 199, 199],
-          [147, 158, 161]
-        ],
-        "_Blue Strongbed Head": [
-          [173, 180, 182],
-          [235, 235, 235],
-          [69, 90, 190],
-          [58, 66, 168],
-          [205, 199, 199],
-          [147, 158, 161]
-        ],
-        "Brown Strongbed": [
-          [173, 180, 182],
-          [235, 235, 235],
-          [143, 91, 53],
-          [124, 73, 45],
-          [205, 199, 199],
-          [147, 158, 161]
-        ],
-        "_Brown Strongbed Head": [
-          [173, 180, 182],
-          [235, 235, 235],
-          [143, 91, 53],
-          [124, 73, 45],
-          [205, 199, 199],
-          [147, 158, 161]
-        ],
-        "Green Strongbed": [
-          [173, 180, 182],
-          [235, 235, 235],
-          [96, 129, 22],
-          [72, 106, 14],
-          [205, 199, 199],
-          [147, 158, 161]
-        ],
-        "_Green Strongbed Head": [
-          [173, 180, 182],
-          [235, 235, 235],
-          [96, 129, 22],
-          [72, 106, 14],
-          [205, 199, 199],
-          [147, 158, 161]
-        ],
-        "Red Strongbed": [
-          [173, 180, 182],
-          [235, 235, 235],
-          [180, 49, 41],
-          [151, 30, 30],
-          [205, 199, 199],
-          [147, 158, 161]
-        ],
-        "_Red Strongbed Head": [
-          [173, 180, 182],
-          [235, 235, 235],
-          [180, 49, 41],
-          [151, 30, 30],
-          [205, 199, 199],
-          [147, 158, 161]
-        ],
-        "Black Strongbed": [
-          [173, 180, 182],
-          [235, 235, 235],
-          [35, 35, 40],
-          [10, 10, 12],
-          [205, 199, 199],
-          [147, 158, 161]
-        ],
-        "_Black Strongbed Head": [
-          [173, 180, 182],
-          [235, 235, 235],
-          [35, 35, 40],
-          [10, 10, 12],
-          [205, 199, 199],
-          [147, 158, 161]
-        ],
-        "Timed Spike Bomb Block": [
-          [0, 0, 0],
-          [215, 219, 223],
-          [23, 50, 85],
-          [167, 23, 23],
-          [255, 18, 18]
-        ],
-        "Timed Spike Bomb Block|Flashing": [
-          [0, 0, 0],
-          [215, 219, 223],
-          [23, 50, 85],
-          [167, 23, 23],
-          [255, 18, 18]
-        ],
-        "Fat Brown Mushroom": [
-          [167, 124, 97],
-          [193, 151, 119],
-          [197, 188, 176],
-          [211, 206, 196]
-        ],
-        "Fat Red Mushroom": [
-          [237, 232, 202],
-          [226, 61, 48],
-          [213, 202, 173],
-          [201, 32, 32],
-          [197, 188, 176],
-          [211, 206, 196]
-        ],
-        "Chili Pepper Block": [
-          [198, 2, 9],
-          [216, 0, 7],
-          [207, 1, 8]
-        ],
-        "Chili Pepper Seeds": [
-          [0, 0, 0],
-          [222, 41, 44],
-          [163, 27, 29]
-        ],
-        "Chili Pepper Seeds|Lava": [
-          [0, 0, 0],
-          [222, 41, 44],
-          [163, 27, 29]
-        ],
-        "Code Block": [
-          [227, 158, 100],
-          [199, 126, 79],
-          [72, 31, 24],
-          [219, 222, 230],
-          [200, 84, 82],
-          [243, 96, 92],
-          [194, 135, 62],
-          [134, 67, 65]
-        ],
-        "Toxin Ball Block": [
-          [8, 94, 53],
-          [17, 200, 113],
-          [11, 130, 73]
-        ],
-        "Spawn Block (Yellow)": [
-          [234, 192, 61],
-          [255, 209, 66]
-        ],
-        "Spawn Block (White)": [
-          [227, 228, 228],
-          [251, 252, 252]
-        ],
-        "Spawn Block (Red)": [
-          [148, 40, 36],
-          [173, 47, 42]
-        ],
-        "Spawn Block (Purple)": [
-          [115, 42, 157],
-          [134, 49, 184]
-        ],
-        "Spawn Block (Pink)": [
-          [228, 140, 168],
-          [252, 155, 186]
-        ],
-        "Spawn Block (Orange)": [
-          [223, 118, 34],
-          [247, 131, 38]
-        ],
-        "Spawn Block (Magenta)": [
-          [176, 69, 165],
-          [201, 79, 189]
-        ],
-        "Spawn Block (Lime)": [
-          [119, 179, 38],
-          [136, 204, 43]
-        ],
-        "Spawn Block (Light Gray)": [
-          [139, 139, 134],
-          [166, 166, 160]
-        ],
-        "Spawn Block (Light Blue)": [
-          [64, 172, 205],
-          [72, 193, 230]
-        ],
-        "Spawn Block (Green)": [
-          [85, 106, 35],
-          [106, 133, 44]
-        ],
-        "Spawn Block (Gray)": [
-          [64, 69, 73],
-          [87, 94, 99]
-        ],
-        "Spawn Block (Cyan)": [
-          [30, 134, 138],
-          [35, 158, 163]
-        ],
-        "Spawn Block (Brown)": [
-          [109, 72, 43],
-          [135, 89, 53]
-        ],
-        "Spawn Block (Blue)": [
-          [53, 58, 143],
-          [62, 68, 168]
-        ],
-        "Spawn Block (Black)": [
-          [22, 23, 28],
-          [42, 44, 54]
-        ],
-        "Checkpoint Block": [
-          [62, 230, 27],
-          [255, 255, 255]
-        ],
-        "Custom Lobby Block": [
-          [0, 0, 0],
-          [0, 255, 255]
-        ],
-        "Generator Spawn Block (Red)": [
-          [148, 40, 36],
-          [199, 54, 48],
-          [173, 47, 42]
-        ],
-        "Generator Spawn Block (Blue)": [
-          [53, 58, 143],
-          [72, 79, 194],
-          [62, 68, 168]
-        ],
-        "Generator Spawn Block (Lime)": [
-          [119, 179, 38],
-          [153, 230, 49],
-          [136, 204, 43]
-        ],
-        "Generator Spawn Block (Yellow)": [
-          [234, 192, 61],
-          [255, 215, 89],
-          [255, 209, 66]
-        ],
-        "Generator Spawn Block (Cyan)": [
-          [30, 134, 138],
-          [41, 183, 189],
-          [35, 158, 163]
-        ],
-        "Generator Spawn Block (White)": [
-          [227, 228, 228],
-          [255, 255, 255],
-          [251, 252, 252]
-        ],
-        "Generator Spawn Block (Pink)": [
-          [228, 140, 168],
-          [255, 171, 198],
-          [252, 155, 186]
-        ],
-        "Generator Spawn Block (Gray)": [
-          [64, 69, 73],
-          [110, 118, 125],
-          [87, 94, 99]
-        ],
-        "Trader Shop Spawn Block": [
-          [43, 44, 45],
-          [255, 177, 8]
-        ],
-        "Wizard Shop Spawn Block": [
-          [54, 107, 138],
-          [255, 177, 8]
-        ],
-        "Generator Spawn Block (Diamond)": [
-          [44, 175, 195],
-          [57, 214, 199],
-          [48, 194, 197]
-        ],
-        "Generator Spawn Block (Moonstone)": [
-          [199, 192, 243],
-          [230, 231, 255],
-          [215, 213, 251]
-        ],
-        "Generator Spawn Block (Ore)": [
-          [133, 139, 146],
-          [139, 145, 152],
-          [224, 205, 175],
-          [43, 44, 45],
-          [209, 188, 154],
-          [34, 35, 35],
-          [122, 128, 136],
-          [127, 133, 140],
-          [93, 249, 246],
-          [63, 239, 236]
-        ],
-        "Goal Block (Red)": [
-          [159, 54, 43],
-          [148, 40, 36],
-          [245, 247, 250],
-          [34, 35, 35]
-        ],
-        "Goal Block (Blue)": [
-          [61, 73, 153],
-          [53, 58, 143],
-          [245, 247, 250],
-          [34, 35, 35]
-        ],
-        "Finish Block": [
-          [255, 255, 255],
-          [0, 0, 0]
-        ],
-        "Drop Location Block": [
-          [45, 61, 114],
-          [61, 80, 131]
-        ],
-        "Obby Death Block": [
-          [182, 60, 53],
-          [153, 45, 40]
-        ],
-        "Obby Absorb Block": [
-          [47, 48, 50],
-          [34, 35, 35]
-        ],
-        "Obby Absorb Death Block": [
-          [88, 74, 127],
-          [60, 49, 81],
-          [73, 61, 102]
-        ],
-        "Bone Block": [
-          [229, 228, 212],
-          [226, 225, 209],
-          [232, 231, 217]
-        ],
-        "Pig Spawner Block": [
-          [81, 136, 34],
-          [73, 129, 29],
-          [78, 82, 118],
-          [58, 69, 104]
-        ],
-        "Cow Spawner Block": [
-          [81, 136, 34],
-          [73, 129, 29],
-          [78, 82, 118],
-          [58, 69, 104]
-        ],
-        "Sheep Spawner Block": [
-          [81, 136, 34],
-          [73, 129, 29],
-          [78, 82, 118],
-          [58, 69, 104]
-        ],
-        "Cave Golem Spawner Block": [
-          [200, 72, 69],
-          [182, 60, 53],
-          [78, 82, 118],
-          [58, 69, 104]
-        ],
-        "Draugr Zombie Spawner Block": [
-          [200, 72, 69],
-          [182, 60, 53],
-          [78, 82, 118],
-          [58, 69, 104]
-        ],
-        "Draugr Skeleton Spawner Block": [
-          [200, 72, 69],
-          [182, 60, 53],
-          [78, 82, 118],
-          [58, 69, 104]
-        ],
-        "Empty Spawner Block": [
-          [132, 135, 149],
-          [124, 125, 138],
-          [78, 82, 118],
-          [58, 69, 104]
-        ],
-        "Frost Golem Spawner Block": [
-          [200, 72, 69],
-          [182, 60, 53],
-          [78, 82, 118],
-          [58, 69, 104]
-        ],
-        "Frost Zombie Spawner Block": [
-          [200, 72, 69],
-          [182, 60, 53],
-          [78, 82, 118],
-          [58, 69, 104]
-        ],
-        "Frost Skeleton Spawner Block": [
-          [200, 72, 69],
-          [182, 60, 53],
-          [78, 82, 118],
-          [58, 69, 104]
-        ],
-        "Snowy Messy Stone": [
-          [133, 139, 146],
-          [142, 148, 155],
-          [205, 212, 221],
-          [238, 243, 250]
-        ],
-        "Snowy Stone Slab": [
-          [133, 139, 146],
-          [238, 243, 250],
-          [205, 212, 221],
-          [142, 148, 155]
-        ],
-        "Draugr Knight Spawner Block": [
-          [200, 72, 69],
-          [182, 60, 53],
-          [78, 82, 118],
-          [58, 69, 104]
-        ],
-        "Packed Snow": [
-          [229, 245, 255],
-          [220, 240, 255],
-          [208, 234, 255]
-        ],
-        "Carved Messy Stone": [
-          [131, 137, 144],
-          [142, 148, 155],
-          [121, 127, 135],
-          [107, 113, 120]
-        ],
-        "Spectral Grass": [
-          [65, 154, 142],
-          [60, 143, 139]
-        ],
-        "Spectral Log": [
-          [60, 87, 121],
-          [50, 70, 100],
-          [55, 78, 111]
-        ],
-        "Barkless Spectral Log": [
-          [31, 175, 167],
-          [34, 182, 174],
-          [32, 178, 170]
-        ],
-        "Barkless Spectral Log|TreeBase|Spectral": [
-          [31, 175, 167],
-          [34, 182, 174],
-          [32, 178, 170]
-        ],
-        "Spectral Wood Planks": [
-          [32, 178, 170],
-          [30, 172, 164],
-          [26, 164, 157]
-        ],
-        "Spectral Leaves": [
-          [49, 120, 121],
-          [65, 154, 142],
-          [55, 132, 133],
-          [60, 143, 139]
-        ],
-        "Spectral Door": [
-          [54, 157, 145],
-          [43, 132, 128],
-          [31, 105, 107]
-        ],
-        "_Spectral Door Top": [
-          [54, 157, 145],
-          [43, 132, 128],
-          [31, 105, 107]
-        ],
-        "Spectral Trapdoor": [
-          [31, 105, 107],
-          [54, 157, 145]
-        ],
-        "Spectral Sapling": [
-          [22, 136, 139],
-          [18, 120, 122],
-          [62, 41, 83]
-        ],
-        "Spectral Log|TreeBase|Spectral": [
-          [60, 87, 121],
-          [50, 70, 100],
-          [55, 78, 111]
-        ],
-        "Spectral Leaves|TreeCanopy": [
-          [49, 120, 121],
-          [65, 154, 142],
-          [55, 132, 133],
-          [60, 143, 139]
-        ],
-        "Spectral Slab": [
-          [32, 178, 170],
-          [31, 175, 167],
-          [26, 164, 157]
-        ],
-        "Spectral Ladder": [
-          [31, 105, 107],
-          [54, 157, 145]
-        ],
-        "Wood Enchanting Table": [
-          [1, 1, 1],
-          [226, 212, 191],
-          [238, 230, 218],
-          [174, 142, 86],
-          [156, 120, 74],
-          [128, 124, 124],
-          [100, 65, 49]
-        ],
-        "Stone Enchanting Table": [
-          [1, 1, 1],
-          [226, 212, 191],
-          [238, 230, 218],
-          [163, 161, 161],
-          [128, 124, 124],
-          [100, 65, 49]
-        ],
-        "Iron Enchanting Table": [
-          [1, 1, 1],
-          [226, 212, 191],
-          [238, 230, 218],
-          [252, 250, 246],
-          [214, 209, 202],
-          [184, 11, 11],
-          [100, 65, 49]
-        ],
-        "Gold Enchanting Table": [
-          [1, 1, 1],
-          [226, 212, 191],
-          [238, 230, 218],
-          [252, 236, 50],
-          [243, 170, 36],
-          [184, 11, 11],
-          [100, 65, 49]
-        ],
-        "Diamond Enchanting Table": [
-          [1, 1, 1],
-          [226, 212, 191],
-          [238, 230, 218],
-          [63, 239, 201],
-          [37, 171, 193],
-          [184, 11, 11],
-          [100, 65, 49]
-        ],
-        "Pine Grass Block": [
-          [53, 97, 69],
-          [50, 92, 64],
-          [53, 87, 64],
-          [127, 92, 74],
-          [133, 98, 77],
-          [139, 102, 80]
-        ],
-        "Pine Grass Slab": [
-          [50, 92, 64],
-          [53, 97, 69],
-          [53, 87, 64]
-        ],
-        "Pine Grass": [
-          [57, 103, 72],
-          [53, 97, 69],
-          [50, 92, 64]
-        ],
-        "Pine Fern": [
-          [57, 103, 72],
-          [53, 97, 69],
-          [50, 92, 64]
-        ],
-        "Fallen Pine Cone": [
-          [84, 58, 32],
-          [91, 62, 33],
-          [75, 51, 27]
-        ],
-        "Pine Cone Block": [
-          [91, 62, 33],
-          [75, 51, 27],
-          [84, 58, 32]
-        ],
-        "Wolf Spawner Block": [
-          [209, 170, 57],
-          [204, 162, 55],
-          [78, 82, 118],
-          [58, 69, 104]
-        ],
-        "Bear Spawner Block": [
-          [200, 72, 69],
-          [182, 60, 53],
-          [78, 82, 118],
-          [58, 69, 104]
-        ],
-        "Deer Spawner Block": [
-          [81, 136, 34],
-          [73, 129, 29],
-          [78, 82, 118],
-          [58, 69, 104]
-        ],
-        "Stag Spawner Block": [
-          [200, 72, 69],
-          [182, 60, 53],
-          [78, 82, 118],
-          [58, 69, 104]
-        ],
-        "Bone Antlers": [
-          [247, 239, 225],
-          [228, 214, 189],
-          [216, 195, 157]
-        ],
-        "Gold Antlers": [
-          [236, 224, 87],
-          [210, 196, 32],
-          [243, 170, 36],
-          [212, 145, 22]
-        ],
-        "Gold Watermelon Stag Spawner Block": [
-          [200, 72, 69],
-          [182, 60, 53],
-          [78, 82, 118],
-          [58, 69, 104]
-        ],
-        "Salvaging Table": [
-          [15, 15, 15],
-          [76, 80, 85],
-          [187, 175, 164],
-          [71, 74, 78],
-          [67, 69, 73],
-          [174, 161, 137],
-          [63, 65, 69],
-          [159, 149, 139],
-          [148, 137, 116],
-          [165, 112, 39],
-          [175, 121, 45],
-          [65, 68, 72],
-          [53, 56, 59],
-          [149, 103, 38],
-          [57, 59, 62],
-          [60, 63, 66],
-          [50, 52, 55],
-          [47, 48, 51],
-          [122, 85, 31],
-          [110, 75, 28],
-          [90, 62, 23],
-          [140, 95, 33],
-          [122, 113, 96],
-          [115, 78, 27],
-          [131, 122, 115],
-          [173, 166, 150],
-          [99, 67, 24],
-          [130, 88, 31],
-          [107, 73, 26]
-        ],
-        Chalk: [
-          [221, 218, 203],
-          [218, 215, 198],
-          [214, 210, 192]
-        ],
-        "Yellow Chalk": [
-          [237, 210, 124],
-          [235, 208, 124],
-          [233, 207, 123]
-        ],
-        "White Chalk": [
-          [231, 230, 221],
-          [228, 228, 220],
-          [226, 225, 218]
-        ],
-        "Red Chalk": [
-          [194, 129, 118],
-          [192, 128, 116],
-          [189, 126, 115]
-        ],
-        "Purple Chalk": [
-          [174, 130, 189],
-          [172, 128, 187],
-          [171, 127, 185]
-        ],
-        "Pink Chalk": [
-          [235, 182, 189],
-          [232, 180, 188],
-          [230, 179, 186]
-        ],
-        "Orange Chalk": [
-          [234, 170, 112],
-          [232, 168, 112],
-          [229, 167, 111]
-        ],
-        "Magenta Chalk": [
-          [209, 144, 192],
-          [207, 143, 190],
-          [205, 141, 189]
-        ],
-        "Lime Chalk": [
-          [172, 206, 113],
-          [170, 204, 112],
-          [169, 201, 112]
-        ],
-        "Light Gray Chalk": [
-          [185, 183, 172],
-          [183, 180, 170],
-          [181, 178, 169]
-        ],
-        "Light Blue Chalk": [
-          [140, 201, 213],
-          [138, 200, 211],
-          [137, 198, 209]
-        ],
-        "Green Chalk": [
-          [156, 166, 116],
-          [154, 164, 114],
-          [153, 161, 113]
-        ],
-        "Gray Chalk": [
-          [145, 146, 140],
-          [143, 144, 138],
-          [141, 142, 137]
-        ],
-        "Cyan Chalk": [
-          [123, 182, 176],
-          [121, 180, 174],
-          [120, 178, 173]
-        ],
-        "Brown Chalk": [
-          [170, 147, 122],
-          [168, 145, 120],
-          [166, 144, 119]
-        ],
-        "Blue Chalk": [
-          [139, 140, 181],
-          [137, 138, 179],
-          [136, 137, 177]
-        ],
-        "Black Chalk": [
-          [123, 122, 116],
-          [120, 120, 114],
-          [118, 117, 113]
-        ],
-        "Yellow Chalk Bricks": [
-          [214, 188, 104],
-          [237, 210, 124],
-          [235, 208, 124],
-          [233, 207, 123],
-          [222, 195, 113]
-        ],
-        "White Chalk Bricks": [
-          [207, 207, 191],
-          [231, 230, 221],
-          [228, 228, 220],
-          [226, 225, 218],
-          [214, 214, 203]
-        ],
-        "Red Chalk Bricks": [
-          [171, 108, 96],
-          [194, 129, 118],
-          [192, 128, 116],
-          [189, 126, 115],
-          [179, 116, 104]
-        ],
-        "Purple Chalk Bricks": [
-          [150, 106, 166],
-          [174, 130, 189],
-          [172, 128, 187],
-          [171, 127, 185],
-          [158, 116, 173]
-        ],
-        "Pink Chalk Bricks": [
-          [212, 156, 165],
-          [235, 182, 189],
-          [232, 180, 188],
-          [230, 179, 186],
-          [219, 166, 174]
-        ],
-        "Orange Chalk Bricks": [
-          [212, 148, 94],
-          [234, 170, 112],
-          [232, 168, 112],
-          [229, 167, 111],
-          [219, 157, 102]
-        ],
-        "Magenta Chalk Bricks": [
-          [186, 122, 169],
-          [209, 144, 192],
-          [207, 143, 190],
-          [205, 141, 189],
-          [194, 130, 177]
-        ],
-        "Lime Chalk Bricks": [
-          [150, 184, 94],
-          [172, 206, 113],
-          [170, 204, 112],
-          [169, 201, 112],
-          [158, 191, 101]
-        ],
-        "Light Gray Chalk Bricks": [
-          [163, 160, 145],
-          [185, 183, 172],
-          [183, 180, 170],
-          [181, 178, 169],
-          [171, 167, 156]
-        ],
-        "Light Blue Chalk Bricks": [
-          [113, 179, 191],
-          [140, 201, 213],
-          [138, 200, 211],
-          [137, 198, 209],
-          [126, 188, 199]
-        ],
-        "Green Chalk Bricks": [
-          [133, 143, 93],
-          [156, 166, 116],
-          [154, 164, 114],
-          [153, 161, 113],
-          [140, 150, 102]
-        ],
-        "Gray Chalk Bricks": [
-          [122, 122, 112],
-          [145, 146, 140],
-          [143, 144, 138],
-          [141, 142, 137],
-          [128, 130, 122]
-        ],
-        "Cyan Chalk Bricks": [
-          [102, 161, 154],
-          [123, 182, 176],
-          [121, 180, 174],
-          [120, 178, 173],
-          [110, 168, 163]
-        ],
-        "Brown Chalk Bricks": [
-          [148, 125, 100],
-          [170, 147, 122],
-          [168, 145, 120],
-          [166, 144, 119],
-          [156, 132, 108]
-        ],
-        "Blue Chalk Bricks": [
-          [115, 116, 158],
-          [139, 140, 181],
-          [137, 138, 179],
-          [136, 137, 177],
-          [124, 125, 166],
-          [134, 135, 174]
-        ],
-        "Black Chalk Bricks": [
-          [99, 99, 90],
-          [123, 122, 116],
-          [120, 120, 114],
-          [118, 117, 113],
-          [107, 107, 100]
-        ],
-        "Yellow Chalk Slab": [
-          [237, 210, 124],
-          [235, 208, 124],
-          [233, 207, 123]
-        ],
-        "White Chalk Slab": [
-          [231, 230, 221],
-          [228, 228, 220],
-          [226, 225, 218]
-        ],
-        "Red Chalk Slab": [
-          [194, 129, 118],
-          [192, 128, 116],
-          [189, 126, 115]
-        ],
-        "Purple Chalk Slab": [
-          [174, 130, 189],
-          [172, 128, 187],
-          [171, 127, 185]
-        ],
-        "Pink Chalk Slab": [
-          [235, 182, 189],
-          [232, 180, 188],
-          [230, 179, 186]
-        ],
-        "Orange Chalk Slab": [
-          [234, 170, 112],
-          [232, 168, 112],
-          [229, 167, 111]
-        ],
-        "Magenta Chalk Slab": [
-          [209, 144, 192],
-          [207, 143, 190],
-          [205, 141, 189]
-        ],
-        "Lime Chalk Slab": [
-          [172, 206, 113],
-          [170, 204, 112],
-          [169, 201, 112]
-        ],
-        "Light Gray Chalk Slab": [
-          [185, 183, 172],
-          [183, 180, 170],
-          [181, 178, 169]
-        ],
-        "Light Blue Chalk Slab": [
-          [140, 201, 213],
-          [138, 200, 211],
-          [137, 198, 209]
-        ],
-        "Green Chalk Slab": [
-          [156, 166, 116],
-          [154, 164, 114],
-          [153, 161, 113]
-        ],
-        "Gray Chalk Slab": [
-          [145, 146, 140],
-          [143, 144, 138],
-          [141, 142, 137]
-        ],
-        "Cyan Chalk Slab": [
-          [123, 182, 176],
-          [121, 180, 174],
-          [120, 178, 173]
-        ],
-        "Brown Chalk Slab": [
-          [170, 147, 122],
-          [168, 145, 120],
-          [166, 144, 119]
-        ],
-        "Blue Chalk Slab": [
-          [139, 140, 181],
-          [137, 138, 179],
-          [136, 137, 177]
-        ],
-        "Black Chalk Slab": [
-          [123, 122, 116],
-          [120, 120, 114],
-          [118, 117, 113]
-        ],
-        "Yellow Chalk Bricks Slab": [
-          [233, 207, 123],
-          [235, 208, 124],
-          [214, 188, 104],
-          [237, 210, 124],
-          [222, 195, 113]
-        ],
-        "White Chalk Bricks Slab": [
-          [226, 225, 218],
-          [228, 228, 220],
-          [207, 207, 191],
-          [231, 230, 221],
-          [214, 214, 203]
-        ],
-        "Red Chalk Bricks Slab": [
-          [189, 126, 115],
-          [192, 128, 116],
-          [171, 108, 96],
-          [194, 129, 118],
-          [179, 116, 104]
-        ],
-        "Purple Chalk Bricks Slab": [
-          [171, 127, 185],
-          [172, 128, 187],
-          [150, 106, 166],
-          [174, 130, 189],
-          [158, 116, 173]
-        ],
-        "Pink Chalk Bricks Slab": [
-          [230, 179, 186],
-          [232, 180, 188],
-          [212, 156, 165],
-          [235, 182, 189],
-          [219, 166, 174]
-        ],
-        "Orange Chalk Bricks Slab": [
-          [229, 167, 111],
-          [232, 168, 112],
-          [212, 148, 94],
-          [234, 170, 112],
-          [219, 157, 102]
-        ],
-        "Magenta Chalk Bricks Slab": [
-          [205, 141, 189],
-          [207, 143, 190],
-          [186, 122, 169],
-          [209, 144, 192],
-          [194, 130, 177]
-        ],
-        "Lime Chalk Bricks Slab": [
-          [169, 201, 112],
-          [170, 204, 112],
-          [150, 184, 94],
-          [172, 206, 113],
-          [158, 191, 101]
-        ],
-        "Light Gray Chalk Bricks Slab": [
-          [181, 178, 169],
-          [183, 180, 170],
-          [163, 160, 145],
-          [185, 183, 172],
-          [171, 167, 156]
-        ],
-        "Light Blue Chalk Bricks Slab": [
-          [137, 198, 209],
-          [138, 200, 211],
-          [113, 179, 191],
-          [140, 201, 213],
-          [126, 188, 199]
-        ],
-        "Green Chalk Bricks Slab": [
-          [153, 161, 113],
-          [154, 164, 114],
-          [133, 143, 93],
-          [156, 166, 116],
-          [140, 150, 102]
-        ],
-        "Gray Chalk Bricks Slab": [
-          [141, 142, 137],
-          [143, 144, 138],
-          [122, 122, 112],
-          [145, 146, 140],
-          [128, 130, 122]
-        ],
-        "Cyan Chalk Bricks Slab": [
-          [120, 178, 173],
-          [121, 180, 174],
-          [102, 161, 154],
-          [123, 182, 176],
-          [110, 168, 163]
-        ],
-        "Brown Chalk Bricks Slab": [
-          [166, 144, 119],
-          [168, 145, 120],
-          [148, 125, 100],
-          [170, 147, 122],
-          [156, 132, 108]
-        ],
-        "Blue Chalk Bricks Slab": [
-          [136, 137, 177],
-          [137, 138, 179],
-          [134, 135, 174],
-          [115, 116, 158],
-          [139, 140, 181],
-          [124, 125, 166]
-        ],
-        "Black Chalk Bricks Slab": [
-          [118, 117, 113],
-          [120, 120, 114],
-          [99, 99, 90],
-          [123, 122, 116],
-          [107, 107, 100]
-        ],
-        "Leaf Bed": [
-          [56, 105, 31],
-          [30, 54, 27],
-          [156, 120, 74]
-        ],
-        "_Leaf Bed Head": [
-          [56, 105, 31],
-          [30, 54, 27],
-          [156, 120, 74]
-        ],
-        "Jungle Grass Block": [
-          [42, 158, 25],
-          [38, 151, 23],
-          [36, 145, 23],
-          [127, 92, 74],
-          [133, 98, 77],
-          [139, 102, 80]
-        ],
-        "Jungle Grass Slab": [
-          [38, 151, 23],
-          [42, 158, 25],
-          [36, 145, 23]
-        ],
-        "Jungle Tall Grass": [
-          [38, 151, 23],
-          [42, 158, 25],
-          [36, 145, 23],
-          [26, 136, 20]
-        ],
-        "Jungle Tall Grass|Top": [
-          [42, 158, 25],
-          [36, 145, 23],
-          [38, 151, 23]
-        ],
-        Catnip: [
-          [42, 158, 25],
-          [36, 145, 23],
-          [38, 151, 23],
-          [23, 137, 20]
-        ],
-        "Mango Log": [
-          [132, 138, 77],
-          [123, 129, 68],
-          [141, 147, 88]
-        ],
-        "Barkless Mango Log": [
-          [207, 193, 110],
-          [214, 200, 117],
-          [210, 196, 113]
-        ],
-        "Barkless Mango Log|TreeBase|Mango": [
-          [207, 193, 110],
-          [214, 200, 117],
-          [210, 196, 113]
-        ],
-        "Mango Wood Planks": [
-          [210, 196, 113],
-          [206, 192, 109],
-          [201, 186, 103]
-        ],
-        "Mango Leaves": [
-          [91, 177, 16],
-          [104, 188, 23],
-          [73, 169, 15]
-        ],
-        "Mango Door": [
-          [197, 183, 95],
-          [163, 147, 53],
-          [210, 196, 113]
-        ],
-        "_Mango Door Top": [
-          [197, 183, 95],
-          [163, 147, 53],
-          [210, 196, 113]
-        ],
-        "Mango Trapdoor": [
-          [197, 183, 95],
-          [163, 147, 53],
-          [210, 196, 113]
-        ],
-        "Mango Sapling": [
-          [69, 134, 78],
-          [40, 123, 61],
-          [79, 67, 64]
-        ],
-        "Mango Log|TreeBase|Mango": [
-          [132, 138, 77],
-          [123, 129, 68],
-          [141, 147, 88]
-        ],
-        "Mango Leaves|TreeCanopy": [
-          [91, 177, 16],
-          [104, 188, 23],
-          [73, 169, 15]
-        ],
-        "Mango Slab": [
-          [210, 196, 113],
-          [207, 193, 110],
-          [201, 186, 103]
-        ],
-        "Mango Ladder": [
-          [197, 183, 95],
-          [163, 147, 53],
-          [210, 196, 113]
-        ],
-        "Mango Block": [
-          [210, 47, 24],
-          [221, 63, 30],
-          [234, 100, 32],
-          [225, 85, 27],
-          [247, 136, 33],
-          [239, 123, 30]
-        ],
-        "Banana Block": [
-          [242, 212, 30],
-          [251, 222, 50]
-        ],
-        "Banana Seeds": [
-          [153, 181, 45],
-          [135, 168, 35],
-          [145, 145, 55],
-          [149, 113, 67]
-        ],
-        "Banana Seeds|Growing": [
-          [153, 181, 45],
-          [135, 168, 35],
-          [145, 145, 55],
-          [149, 113, 67]
-        ],
-        "Attached Banana Stem": [
-          [153, 181, 45],
-          [135, 168, 35],
-          [145, 145, 55],
-          [149, 113, 67]
-        ],
-        "Dangling Rope": [
-          [197, 162, 115],
-          [181, 147, 101]
-        ],
-        "Dangling Vine": [
-          [82, 106, 28],
-          [95, 119, 32],
-          [64, 85, 7]
-        ],
-        "Gorilla Spawner Block": [
-          [200, 72, 69],
-          [182, 60, 53],
-          [78, 82, 118],
-          [58, 69, 104]
-        ],
-        "Wildcat Spawner Block": [
-          [209, 170, 57],
-          [204, 162, 55],
-          [78, 82, 118],
-          [58, 69, 104]
-        ],
-        "Fruity Maple Leaves": [
-          [37, 101, 20],
-          [44, 113, 23],
-          [230, 43, 47],
-          [33, 91, 18],
-          [195, 25, 21],
-          [36, 98, 20]
-        ],
-        "Pine Cone Leaves": [
-          [56, 76, 64],
-          [47, 63, 56],
-          [75, 51, 27],
-          [36, 54, 48],
-          [98, 66, 34],
-          [84, 58, 32],
-          [50, 68, 58]
-        ],
-        "Fruity Plum Leaves": [
-          [128, 144, 47],
-          [116, 130, 41],
-          [143, 160, 60],
-          [127, 51, 111],
-          [119, 47, 104]
-        ],
-        "Fruity Palm Leaves": [
-          [125, 158, 29],
-          [135, 168, 35],
-          [133, 99, 45],
-          [81, 61, 28],
-          [153, 181, 45],
-          [144, 175, 40],
-          [117, 88, 39]
-        ],
-        "Fruity Pear Leaves": [
-          [202, 224, 171],
-          [188, 212, 153],
-          [215, 234, 190],
-          [244, 182, 63],
-          [246, 199, 68]
-        ],
-        "Fruity Cherry Leaves": [
-          [252, 184, 223],
-          [241, 168, 212],
-          [255, 200, 229],
-          [253, 69, 159],
-          [228, 54, 139]
-        ],
-        "Fruity Mango Leaves": [
-          [91, 177, 16],
-          [104, 188, 23],
-          [234, 100, 32],
-          [73, 169, 15],
-          [247, 136, 33],
-          [241, 118, 33]
-        ],
-        "Draugr Huntress Spawner Block": [
-          [200, 72, 69],
-          [182, 60, 53],
-          [78, 82, 118],
-          [58, 69, 104]
-        ],
-        "Magma Golem Spawner Block": [
-          [200, 72, 69],
-          [182, 60, 53],
-          [78, 82, 118],
-          [58, 69, 104]
-        ],
-        "Leather Block": [
-          [127, 91, 67],
-          [129, 95, 72],
-          [118, 79, 51],
-          [124, 87, 62],
-          [174, 158, 137],
-          [167, 151, 130],
-          [162, 145, 123]
-        ],
-        "Horse Spawner Block": [
-          [81, 136, 34],
-          [73, 129, 29],
-          [78, 82, 118],
-          [58, 69, 104]
-        ],
-        "Tomato Plant": [
-          [88, 113, 44],
-          [76, 95, 51]
-        ],
-        "Tomato Plant_stage1": [
-          [88, 112, 44],
-          [88, 113, 44],
-          [169, 134, 61],
-          [76, 95, 51]
-        ],
-        "Tomato Plant|FreshlyGrown": [
-          [88, 113, 44],
-          [88, 112, 44],
-          [76, 95, 51]
-        ],
-        "Tomato Plant|Top|FreshlyGrown": [
-          [107, 132, 45],
-          [76, 95, 51],
-          [88, 113, 44],
-          [182, 60, 53],
-          [88, 112, 44]
-        ],
-        "Carrot Plant": [
-          [107, 132, 45],
-          [88, 113, 44],
-          [88, 112, 44]
-        ],
-        "Carrot Plant_stage1": [
-          [107, 132, 45],
-          [88, 113, 44],
-          [147, 104, 57]
-        ],
-        "Carrot Plant|FreshlyGrown": [
-          [107, 132, 45],
-          [88, 113, 44],
-          [227, 120, 64],
-          [205, 94, 70]
-        ],
-        "Potato Plant": [
-          [88, 113, 44],
-          [76, 95, 51],
-          [88, 112, 44]
-        ],
-        "Potato Plant_stage1": [
-          [88, 112, 44],
-          [88, 113, 44],
-          [76, 95, 51],
-          [127, 120, 75],
-          [126, 119, 75]
-        ],
-        "Potato Plant|FreshlyGrown": [
-          [88, 113, 44],
-          [76, 95, 51],
-          [178, 144, 98],
-          [153, 121, 81],
-          [153, 120, 81]
-        ],
-        "Strawberry Bush": [
-          [120, 158, 36],
-          [107, 132, 45],
-          [88, 113, 44],
-          [88, 112, 44]
-        ],
-        "Strawberry Bush_stage1": [
-          [120, 158, 36],
-          [107, 132, 45],
-          [88, 113, 44],
-          [88, 112, 44]
-        ],
-        "Strawberry Bush_stage2": [
-          [120, 158, 36],
-          [107, 132, 45],
-          [88, 113, 44],
-          [182, 60, 53],
-          [88, 112, 44]
-        ],
-        "Sugar Cane Plant": [
-          [180, 170, 51],
-          [150, 154, 38],
-          [124, 131, 30],
-          [123, 131, 30]
-        ],
-        "Sugar Cane Plant_stage1": [
-          [180, 170, 51],
-          [150, 154, 38],
-          [124, 131, 30],
-          [123, 131, 30]
-        ],
-        "Sugar Cane Plant|FreshlyGrown": [
-          [150, 154, 38],
-          [180, 170, 51],
-          [124, 131, 30],
-          [123, 131, 30]
-        ],
-        "Sugar Cane Plant|Top|FreshlyGrown": [
-          [180, 170, 51],
-          [150, 154, 38]
-        ],
-        "Lettuce Plant": [
-          [120, 158, 36],
-          [124, 174, 47],
-          [123, 174, 47]
-        ],
-        "Lettuce Plant_stage1": [
-          [120, 158, 36],
-          [124, 174, 47],
-          [119, 158, 36],
-          [123, 174, 47]
-        ],
-        "Lettuce Plant|FreshlyGrown": [
-          [120, 158, 36],
-          [124, 174, 47],
-          [107, 132, 45],
-          [119, 158, 36]
-        ],
-        "Coffee Plant": [
-          [124, 131, 30],
-          [97, 115, 8],
-          [73, 93, 0]
-        ],
-        "Coffee Plant_stage1": [
-          [124, 131, 30],
-          [97, 115, 8],
-          [73, 93, 0]
-        ],
-        "Coffee Plant|FreshlyGrown": [
-          [97, 115, 8],
-          [124, 131, 30],
-          [83, 57, 58],
-          [73, 93, 0]
-        ],
-        "Cauliflower Plant": [
-          [154, 180, 81],
-          [149, 174, 78]
-        ],
-        "Cauliflower Plant_stage1": [
-          [188, 201, 125],
-          [120, 158, 36],
-          [177, 189, 119],
-          [119, 158, 36],
-          [177, 189, 118],
-          [188, 201, 124]
-        ],
-        "Cauliflower Plant|FreshlyGrown": [
-          [255, 243, 214],
-          [120, 158, 36],
-          [234, 219, 201],
-          [171, 176, 123],
-          [119, 158, 36],
-          [171, 176, 122]
-        ],
-        "Parsnip Plant": [
-          [88, 113, 44],
-          [76, 95, 51],
-          [88, 112, 44]
-        ],
-        "Parsnip Plant_stage1": [
-          [88, 113, 44],
-          [76, 95, 51],
-          [140, 132, 81]
-        ],
-        "Parsnip Plant|FreshlyGrown": [
-          [88, 113, 44],
-          [76, 95, 51],
-          [88, 112, 44],
-          [232, 203, 130],
-          [204, 169, 110]
-        ],
-        "Blueberry Bush": [
-          [107, 132, 45],
-          [88, 113, 44],
-          [76, 95, 51]
-        ],
-        "Blueberry Bush_stage1": [
-          [107, 132, 45],
-          [88, 113, 44],
-          [76, 95, 51]
-        ],
-        "Blueberry Bush_stage2": [
-          [107, 132, 45],
-          [76, 95, 51],
-          [58, 69, 104],
-          [88, 113, 44]
-        ],
-        "Red Cabbage Plant": [
-          [133, 144, 74],
-          [125, 141, 67],
-          [124, 141, 67]
-        ],
-        "Red Cabbage Plant_stage1": [
-          [145, 129, 111],
-          [120, 158, 36],
-          [130, 123, 97],
-          [119, 158, 36],
-          [129, 123, 96],
-          [144, 130, 110]
-        ],
-        "Red Cabbage Plant|FreshlyGrown": [
-          [169, 100, 186],
-          [120, 158, 36],
-          [140, 87, 157],
-          [124, 110, 101],
-          [119, 158, 36],
-          [123, 110, 101]
-        ],
-        "Beetroot Plant": [
-          [107, 132, 45],
-          [88, 113, 44],
-          [88, 112, 44]
-        ],
-        "Beetroot Plant_stage1": [
-          [107, 132, 45],
-          [88, 113, 44],
-          [99, 75, 48]
-        ],
-        "Beetroot Plant|FreshlyGrown": [
-          [107, 132, 45],
-          [107, 132, 44],
-          [88, 113, 44],
-          [106, 131, 45],
-          [99, 75, 48],
-          [110, 36, 52],
-          [95, 9, 38]
-        ],
-        "Autumn Aspen Leaves": [
-          [211, 154, 39],
-          [208, 137, 35],
-          [215, 175, 54],
-          [215, 171, 53],
-          [217, 179, 47],
-          [214, 170, 51]
-        ],
-        "Autumn Aspen Leaves|TreeCanopy": [
-          [211, 154, 39],
-          [208, 137, 35],
-          [215, 175, 54],
-          [215, 171, 53],
-          [217, 179, 47],
-          [214, 170, 51]
-        ],
-        "Autumn Fern": [
-          [195, 131, 31],
-          [186, 120, 24],
-          [177, 108, 19]
-        ],
-        "Iron Chest": [
-          [255, 255, 255],
-          [228, 224, 218],
-          [214, 209, 202],
-          [248, 245, 241],
-          [241, 238, 233],
-          [201, 196, 189]
-        ],
-        Crate: [
-          [183, 151, 93],
-          [175, 143, 85],
-          [156, 120, 74],
-          [166, 132, 80]
-        ],
-        "Carrot Block": [
-          [219, 111, 67],
-          [227, 120, 64]
-        ],
-        "Carrot Seeds": [
-          [107, 132, 45],
-          [88, 113, 44],
-          [88, 112, 44]
-        ],
-        "Potato Block": [
-          [169, 136, 92],
-          [178, 144, 98],
-          [184, 150, 103]
-        ],
-        "Potato Seeds": [
-          [88, 113, 44],
-          [76, 95, 51],
-          [88, 112, 44]
-        ],
-        "Beetroot Block": [
-          [105, 27, 47],
-          [110, 36, 52]
-        ],
-        "Beetroot Seeds": [
-          [107, 132, 45],
-          [88, 113, 44],
-          [88, 112, 44]
-        ],
-        "White Banner": [
-          [124, 75, 71],
-          [239, 240, 241],
-          [227, 230, 231]
-        ],
-        "_White Banner Flag": [
-          [124, 75, 71],
-          [239, 240, 241],
-          [227, 230, 231]
-        ],
-        "Orange Banner": [
-          [124, 75, 71],
-          [246, 123, 25],
-          [240, 113, 16]
-        ],
-        "_Orange Banner Flag": [
-          [124, 75, 71],
-          [246, 123, 25],
-          [240, 113, 16]
-        ],
-        "Magenta Banner": [
-          [124, 75, 71],
-          [195, 70, 182],
-          [186, 65, 175]
-        ],
-        "_Magenta Banner Flag": [
-          [124, 75, 71],
-          [195, 70, 182],
-          [186, 65, 175]
-        ],
-        "Light Blue Banner": [
-          [124, 75, 71],
-          [57, 184, 223],
-          [55, 174, 215]
-        ],
-        "_Light Blue Banner Flag": [
-          [124, 75, 71],
-          [57, 184, 223],
-          [55, 174, 215]
-        ],
-        "Yellow Banner": [
-          [124, 75, 71],
-          [252, 203, 50],
-          [248, 195, 35]
-        ],
-        "_Yellow Banner Flag": [
-          [124, 75, 71],
-          [252, 203, 50],
-          [248, 195, 35]
-        ],
-        "Lime Banner": [
-          [124, 75, 71],
-          [122, 192, 27],
-          [109, 182, 24]
-        ],
-        "_Lime Banner Flag": [
-          [124, 75, 71],
-          [122, 192, 27],
-          [109, 182, 24]
-        ],
-        "Pink Banner": [
-          [124, 75, 71],
-          [248, 146, 178],
-          [242, 136, 168]
-        ],
-        "_Pink Banner Flag": [
-          [124, 75, 71],
-          [248, 146, 178],
-          [242, 136, 168]
-        ],
-        "Gray Banner": [
-          [124, 75, 71],
-          [67, 73, 77],
-          [61, 66, 70]
-        ],
-        "_Gray Banner Flag": [
-          [124, 75, 71],
-          [67, 73, 77],
-          [61, 66, 70]
-        ],
-        "Light Gray Banner": [
-          [124, 75, 71],
-          [147, 147, 141],
-          [139, 140, 132]
-        ],
-        "_Light Gray Banner Flag": [
-          [124, 75, 71],
-          [147, 147, 141],
-          [139, 140, 132]
-        ],
-        "Cyan Banner": [
-          [124, 75, 71],
-          [23, 144, 149],
-          [21, 135, 143]
-        ],
-        "_Cyan Banner Flag": [
-          [124, 75, 71],
-          [23, 144, 149],
-          [21, 135, 143]
-        ],
-        "Purple Banner": [
-          [124, 75, 71],
-          [127, 42, 176],
-          [118, 39, 168]
-        ],
-        "_Purple Banner Flag": [
-          [124, 75, 71],
-          [127, 42, 176],
-          [118, 39, 168]
-        ],
-        "Blue Banner": [
-          [124, 75, 71],
-          [55, 61, 160],
-          [52, 54, 154]
-        ],
-        "_Blue Banner Flag": [
-          [124, 75, 71],
-          [55, 61, 160],
-          [52, 54, 154]
-        ],
-        "Brown Banner": [
-          [124, 75, 71],
-          [118, 75, 42],
-          [111, 69, 39]
-        ],
-        "_Brown Banner Flag": [
-          [124, 75, 71],
-          [118, 75, 42],
-          [111, 69, 39]
-        ],
-        "Green Banner": [
-          [124, 75, 71],
-          [89, 113, 30],
-          [82, 106, 28]
-        ],
-        "_Green Banner Flag": [
-          [124, 75, 71],
-          [89, 113, 30],
-          [82, 106, 28]
-        ],
-        "Red Banner": [
-          [124, 75, 71],
-          [166, 40, 35],
-          [155, 36, 33]
-        ],
-        "_Red Banner Flag": [
-          [124, 75, 71],
-          [166, 40, 35],
-          [155, 36, 33]
-        ],
-        "Black Banner": [
-          [124, 75, 71],
-          [24, 25, 30],
-          [18, 19, 23]
-        ],
-        "_Black Banner Flag": [
-          [124, 75, 71],
-          [24, 25, 30],
-          [18, 19, 23]
-        ],
-        "Draugr Banner": [
-          [124, 75, 71],
-          [109, 96, 82],
-          [98, 169, 177],
-          [88, 76, 64],
-          [84, 148, 155]
-        ],
-        "_Draugr Banner Flag": [
-          [124, 75, 71],
-          [109, 96, 82],
-          [98, 169, 177],
-          [88, 76, 64],
-          [84, 148, 155]
-        ],
-        "Spirit Golem Spawner Block": [
-          [209, 170, 57],
-          [204, 162, 55],
-          [78, 82, 118],
-          [58, 69, 104]
-        ],
-        "Spirit Wolf Spawner Block": [
-          [209, 170, 57],
-          [204, 162, 55],
-          [78, 82, 118],
-          [58, 69, 104]
-        ],
-        "Spirit Bear Spawner Block": [
-          [209, 170, 57],
-          [204, 162, 55],
-          [78, 82, 118],
-          [58, 69, 104]
-        ],
-        "Spirit Stag Spawner Block": [
-          [209, 170, 57],
-          [204, 162, 55],
-          [78, 82, 118],
-          [58, 69, 104]
-        ],
-        "Spirit Gorilla Spawner Block": [
-          [209, 170, 57],
-          [204, 162, 55],
-          [78, 82, 118],
-          [58, 69, 104]
-        ],
-        "Fertilised Soil": [
-          [148, 96, 63],
-          [124, 69, 25],
-          [175, 123, 82]
-        ],
-        "_Grant Wool Top Left": [
-          [195, 157, 78],
-          [250, 250, 250],
-          [175, 156, 126],
-          [243, 235, 223],
-          [70, 59, 43]
-        ],
-        "_Grant Wool Top Right": [
-          [195, 157, 78],
-          [250, 250, 250],
-          [175, 156, 126],
-          [243, 235, 223],
-          [70, 59, 43]
-        ],
-        "Grant Wool": [
-          [195, 157, 78],
-          [250, 250, 250],
-          [175, 156, 126],
-          [243, 235, 223],
-          [70, 59, 43]
-        ],
-        "_Grant Wool Bottom Right": [
-          [195, 157, 78],
-          [250, 250, 250],
-          [175, 156, 126],
-          [243, 235, 223],
-          [70, 59, 43]
-        ],
-        "_Stampede Top Left": [
-          [195, 157, 78],
-          [215, 198, 186],
-          [137, 102, 79],
-          [255, 255, 255],
-          [0, 0, 1]
-        ],
-        "_Stampede Top Right": [
-          [195, 157, 78],
-          [215, 198, 186],
-          [137, 102, 79],
-          [255, 255, 255],
-          [0, 0, 1]
-        ],
-        Stampede: [
-          [195, 157, 78],
-          [215, 198, 186],
-          [137, 102, 79],
-          [255, 255, 255],
-          [0, 0, 1]
-        ],
-        "_Stampede Bottom Right": [
-          [195, 157, 78],
-          [215, 198, 186],
-          [137, 102, 79],
-          [255, 255, 255],
-          [0, 0, 1]
-        ],
-        "_Unforgotten Pig Top Left": [
-          [195, 157, 78],
-          [237, 189, 196],
-          [208, 133, 146],
-          [247, 240, 240],
-          [71, 42, 53]
-        ],
-        "_Unforgotten Pig Top Right": [
-          [195, 157, 78],
-          [237, 189, 196],
-          [208, 133, 146],
-          [247, 240, 240],
-          [71, 42, 53]
-        ],
-        "Unforgotten Pig": [
-          [195, 157, 78],
-          [237, 189, 196],
-          [208, 133, 146],
-          [247, 240, 240],
-          [71, 42, 53]
-        ],
-        "_Unforgotten Pig Bottom Right": [
-          [195, 157, 78],
-          [237, 189, 196],
-          [208, 133, 146],
-          [247, 240, 240],
-          [71, 42, 53]
-        ],
-        "_Sunbathed Gallope Top Left": [
-          [195, 157, 78],
-          [159, 169, 182],
-          [222, 229, 238],
-          [93, 96, 116],
-          [127, 167, 186]
-        ],
-        "_Sunbathed Gallope Top Right": [
-          [195, 157, 78],
-          [159, 169, 182],
-          [222, 229, 238],
-          [93, 96, 116],
-          [127, 167, 186]
-        ],
-        "Sunbathed Gallope": [
-          [195, 157, 78],
-          [159, 169, 182],
-          [222, 229, 238],
-          [93, 96, 116],
-          [127, 167, 186]
-        ],
-        "_Sunbathed Gallope Bottom Right": [
-          [195, 157, 78],
-          [159, 169, 182],
-          [222, 229, 238],
-          [93, 96, 116],
-          [127, 167, 186]
-        ],
-        "_Dreaming Canine Top Left": [
-          [195, 157, 78],
-          [139, 130, 113],
-          [188, 183, 173],
-          [211, 238, 198],
-          [29, 36, 23]
-        ],
-        "_Dreaming Canine Top Right": [
-          [195, 157, 78],
-          [139, 130, 113],
-          [188, 183, 173],
-          [211, 238, 198],
-          [29, 36, 23]
-        ],
-        "Dreaming Canine": [
-          [195, 157, 78],
-          [139, 130, 113],
-          [188, 183, 173],
-          [211, 238, 198],
-          [29, 36, 23]
-        ],
-        "_Dreaming Canine Bottom Right": [
-          [195, 157, 78],
-          [139, 130, 113],
-          [188, 183, 173],
-          [211, 238, 198],
-          [29, 36, 23]
-        ],
-        "_A Doe Through The Green Top Left": [
-          [195, 157, 78],
-          [174, 123, 81],
-          [212, 160, 116],
-          [236, 222, 199],
-          [55, 33, 14]
-        ],
-        "_A Doe Through The Green Top Right": [
-          [195, 157, 78],
-          [174, 123, 81],
-          [212, 160, 116],
-          [236, 222, 199],
-          [55, 33, 14]
-        ],
-        "A Doe Through The Green": [
-          [195, 157, 78],
-          [174, 123, 81],
-          [212, 160, 116],
-          [236, 222, 199],
-          [55, 33, 14]
-        ],
-        "_A Doe Through The Green Bottom Right": [
-          [195, 157, 78],
-          [174, 123, 81],
-          [212, 160, 116],
-          [236, 222, 199],
-          [55, 33, 14]
-        ],
-        "_Whiskers Top Left": [
-          [195, 157, 78],
-          [247, 178, 12],
-          [255, 157, 0],
-          [229, 246, 203],
-          [137, 225, 0]
-        ],
-        "_Whiskers Top Right": [
-          [195, 157, 78],
-          [247, 178, 12],
-          [255, 157, 0],
-          [229, 246, 203],
-          [137, 225, 0]
-        ],
-        Whiskers: [
-          [195, 157, 78],
-          [247, 178, 12],
-          [255, 157, 0],
-          [229, 246, 203],
-          [137, 225, 0]
-        ],
-        "_Whiskers Bottom Right": [
-          [195, 157, 78],
-          [247, 178, 12],
-          [255, 157, 0],
-          [229, 246, 203],
-          [137, 225, 0]
-        ],
-        "Hollow Crate": [
-          [183, 151, 93],
-          [175, 143, 85],
-          [156, 120, 74],
-          [166, 132, 80]
-        ],
-        "Draugr Warper Spawner Block": [
-          [200, 72, 69],
-          [182, 60, 53],
-          [78, 82, 118],
-          [58, 69, 104]
-        ],
-        Radar: [
-          [114, 122, 133],
-          [106, 113, 123],
-          [91, 96, 103],
-          [83, 87, 93],
-          [98, 104, 113],
-          [146, 184, 49],
-          [125, 164, 45]
-        ],
-        "_Radar Back": [
-          [114, 122, 133],
-          [106, 113, 123],
-          [91, 96, 103],
-          [83, 87, 93],
-          [98, 104, 113],
-          [146, 184, 49],
-          [125, 164, 45]
-        ],
-        "Inactive Radar": [
-          [114, 122, 133],
-          [106, 113, 123],
-          [91, 96, 103],
-          [83, 87, 93],
-          [98, 104, 113],
-          [172, 172, 172],
-          [163, 163, 163]
-        ],
-        "_Inactive Radar Back": [
-          [114, 122, 133],
-          [106, 113, 123],
-          [91, 96, 103],
-          [83, 87, 93],
-          [98, 104, 113],
-          [172, 172, 172],
-          [163, 163, 163]
-        ],
-        "Active Radar": [
-          [114, 122, 133],
-          [106, 113, 123],
-          [91, 96, 103],
-          [83, 87, 93],
-          [98, 104, 113],
-          [146, 184, 49],
-          [125, 164, 45]
-        ],
-        "_Active Radar Back": [
-          [114, 122, 133],
-          [106, 113, 123],
-          [91, 96, 103],
-          [83, 87, 93],
-          [98, 104, 113],
-          [146, 184, 49],
-          [125, 164, 45]
-        ],
-        "Lucky Block": [
-          [255, 233, 73],
-          [255, 211, 76],
-          [255, 188, 78],
-          [245, 247, 250],
-          [252, 172, 78],
-          [249, 155, 78]
-        ],
-        "Ultra Lucky Block": [
-          [192, 252, 235],
-          [75, 241, 205],
-          [50, 205, 197],
-          [57, 214, 199],
-          [245, 247, 250],
-          [44, 175, 195],
-          [34, 149, 183]
-        ],
-        "Gold Trophy": [
-          [0, 0, 0],
-          [255, 255, 255],
-          [255, 245, 71],
-          [250, 193, 32],
-          [255, 219, 23],
-          [239, 163, 12],
-          [58, 61, 65]
-        ],
-        "Small Magenta Pod": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [179, 65, 166],
-          [203, 74, 189]
-        ],
-        "_Small Magenta Pod Mid": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [179, 65, 166],
-          [203, 74, 189]
-        ],
-        "_Small Magenta Pod Top": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [179, 65, 166],
-          [203, 74, 189]
-        ],
-        "Small Light Gray Pod": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [128, 128, 123],
-          [154, 154, 149]
-        ],
-        "_Small Light Gray Pod Mid": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [128, 128, 123],
-          [154, 154, 149]
-        ],
-        "_Small Light Gray Pod Top": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [128, 128, 123],
-          [154, 154, 149]
-        ],
-        "Small Red Pod": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [150, 38, 32],
-          [176, 44, 37]
-        ],
-        "_Small Red Pod Mid": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [150, 38, 32],
-          [176, 44, 37]
-        ],
-        "_Small Red Pod Top": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [150, 38, 32],
-          [176, 44, 37]
-        ],
-        "Frost Wraith Spawner Block": [
-          [200, 72, 69],
-          [182, 60, 53],
-          [78, 82, 118],
-          [58, 69, 104]
-        ],
-        "Draugr Reaver Spawner Block": [
-          [200, 72, 69],
-          [182, 60, 53],
-          [78, 82, 118],
-          [58, 69, 104]
-        ],
-        "Small White Pod": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [221, 226, 231],
-          [239, 240, 241]
-        ],
-        "_Small White Pod Mid": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [221, 226, 231],
-          [239, 240, 241]
-        ],
-        "_Small White Pod Top": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [221, 226, 231],
-          [239, 240, 241]
-        ],
-        "Small Orange Pod": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [233, 120, 24],
-          [252, 133, 33]
-        ],
-        "_Small Orange Pod Mid": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [233, 120, 24],
-          [252, 133, 33]
-        ],
-        "_Small Orange Pod Top": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [233, 120, 24],
-          [252, 133, 33]
-        ],
-        "Small Light Blue Pod": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [47, 180, 215],
-          [59, 194, 230]
-        ],
-        "_Small Light Blue Pod Mid": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [47, 180, 215],
-          [59, 194, 230]
-        ],
-        "_Small Light Blue Pod Top": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [47, 180, 215],
-          [59, 194, 230]
-        ],
-        "Small Yellow Pod": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [244, 190, 59],
-          [255, 211, 64]
-        ],
-        "_Small Yellow Pod Mid": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [244, 190, 59],
-          [255, 211, 64]
-        ],
-        "_Small Yellow Pod Top": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [244, 190, 59],
-          [255, 211, 64]
-        ],
-        "Small Lime Pod": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [118, 182, 19],
-          [134, 202, 29]
-        ],
-        "_Small Lime Pod Mid": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [118, 182, 19],
-          [134, 202, 29]
-        ],
-        "_Small Lime Pod Top": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [118, 182, 19],
-          [134, 202, 29]
-        ],
-        "Small Pink Pod": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [234, 128, 161],
-          [248, 146, 178]
-        ],
-        "_Small Pink Pod Mid": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [234, 128, 161],
-          [248, 146, 178]
-        ],
-        "_Small Pink Pod Top": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [234, 128, 161],
-          [248, 146, 178]
-        ],
-        "Small Gray Pod": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [57, 63, 67],
-          [73, 79, 83]
-        ],
-        "_Small Gray Pod Mid": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [57, 63, 67],
-          [73, 79, 83]
-        ],
-        "_Small Gray Pod Top": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [57, 63, 67],
-          [73, 79, 83]
-        ],
-        "Small Cyan Pod": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [17, 136, 137],
-          [25, 153, 154]
-        ],
-        "_Small Cyan Pod Mid": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [17, 136, 137],
-          [25, 153, 154]
-        ],
-        "_Small Cyan Pod Top": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [17, 136, 137],
-          [25, 153, 154]
-        ],
-        "Small Purple Pod": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [121, 35, 166],
-          [136, 45, 183]
-        ],
-        "_Small Purple Pod Mid": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [121, 35, 166],
-          [136, 45, 183]
-        ],
-        "_Small Purple Pod Top": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [121, 35, 166],
-          [136, 45, 183]
-        ],
-        "Small Blue Pod": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [49, 58, 154],
-          [58, 68, 166]
-        ],
-        "_Small Blue Pod Mid": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [49, 58, 154],
-          [58, 68, 166]
-        ],
-        "_Small Blue Pod Top": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [49, 58, 154],
-          [58, 68, 166]
-        ],
-        "Small Brown Pod": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [109, 68, 34],
-          [125, 81, 44]
-        ],
-        "_Small Brown Pod Mid": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [109, 68, 34],
-          [125, 81, 44]
-        ],
-        "_Small Brown Pod Top": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [109, 68, 34],
-          [125, 81, 44]
-        ],
-        "Small Green Pod": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [85, 107, 27],
-          [95, 119, 32]
-        ],
-        "_Small Green Pod Mid": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [85, 107, 27],
-          [95, 119, 32]
-        ],
-        "_Small Green Pod Top": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [85, 107, 27],
-          [95, 119, 32]
-        ],
-        "Small Black Pod": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [19, 21, 25],
-          [29, 31, 36]
-        ],
-        "_Small Black Pod Mid": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [19, 21, 25],
-          [29, 31, 36]
-        ],
-        "_Small Black Pod Top": [
-          [148, 157, 169],
-          [135, 144, 157],
-          [19, 21, 25],
-          [29, 31, 36]
-        ],
-        "Skull Banner": [
-          [124, 75, 71],
-          [24, 25, 30],
-          [18, 19, 23],
-          [227, 230, 231]
-        ],
-        "_Skull Banner Flag": [
-          [124, 75, 71],
-          [24, 25, 30],
-          [18, 19, 23],
-          [227, 230, 231]
-        ],
-        "Rainbow Banner": [
-          [124, 75, 71],
-          [59, 194, 230],
-          [254, 155, 188],
-          [155, 36, 33],
-          [240, 113, 16],
-          [248, 195, 35],
-          [109, 182, 24],
-          [52, 54, 154]
-        ],
-        "_Rainbow Banner Flag": [
-          [124, 75, 71],
-          [59, 194, 230],
-          [254, 155, 188],
-          [155, 36, 33],
-          [240, 113, 16],
-          [248, 195, 35],
-          [109, 182, 24],
-          [52, 54, 154]
-        ],
-        "Duo Blocchino Statue": [
-          [215, 22, 22]
-        ],
-        "Bebek Bebek Bebek Statue": [
-          [215, 22, 22]
-        ],
-        "Bobino Musculino Statue": [
-          [215, 22, 22]
-        ],
-        "Bobzilla Statue": [
-          [215, 22, 22]
-        ],
-        "Brra Brra Pachim Statue": [
-          [215, 22, 22]
-        ],
-        "Capitano Explovissimo Statue": [
-          [215, 22, 22]
-        ],
-        "Cappuccino Ninjino Statue": [
-          [215, 22, 22]
-        ],
-        "Chimpanzano Bananano Statue": [
-          [215, 22, 22]
-        ],
-        "Il Wizardini Del Porko Statue": [
-          [215, 22, 22]
-        ],
-        "Lucchia Blocchi Statue": [
-          [215, 22, 22]
-        ],
-        "Monsieur Bedwar Statue": [
-          [215, 22, 22]
-        ],
-        "Twirlina Cappucina Statue": [
-          [215, 22, 22]
-        ],
-        "Weapon Lucky Block": [
-          [252, 78, 78],
-          [235, 64, 64],
-          [219, 48, 48],
-          [245, 247, 250],
-          [194, 33, 33],
-          [170, 19, 19]
-        ],
-        "Boiling Pot": [
-          [215, 22, 22]
-        ],
-        "Chopping Board": [
-          [215, 22, 22]
-        ],
-        "Frying Pan": [
-          [215, 22, 22]
-        ],
-        "Hob Boiling": [
-          [215, 22, 22]
-        ],
-        "Hob Frying": [
-          [215, 22, 22]
-        ],
-        "Kitchen Worktop": [
-          [215, 22, 22]
-        ],
-        "Slicing Board": [
-          [215, 22, 22]
-        ],
-        "Wood Trophy": [
-          [0, 0, 0],
-          [196, 181, 120],
-          [186, 165, 108],
-          [159, 128, 84],
-          [174, 143, 90],
-          [148, 115, 75],
-          [58, 61, 65]
-        ],
-        "Stone Trophy": [
-          [0, 0, 0],
-          [160, 166, 173],
-          [151, 157, 164],
-          [117, 122, 128],
-          [133, 139, 146],
-          [108, 113, 119],
-          [58, 61, 65]
-        ],
-        "Iron Trophy": [
-          [0, 0, 0],
-          [238, 238, 234],
-          [227, 224, 217],
-          [195, 189, 183],
-          [210, 206, 199],
-          [183, 176, 170],
-          [58, 61, 65]
-        ],
-        "Diamond Trophy": [
-          [0, 0, 0],
-          [230, 255, 244],
-          [75, 241, 205],
-          [44, 175, 195],
-          [50, 205, 197],
-          [34, 149, 183],
-          [58, 61, 65]
-        ],
-        "Moonstone Trophy": [
-          [0, 0, 0],
-          [255, 255, 255],
-          [240, 240, 255],
-          [211, 209, 249],
-          [224, 225, 255],
-          [199, 192, 243],
-          [58, 61, 65]
-        ],
-        "White Directional Arrow": [
-          [0, 0, 0],
-          [250, 250, 250]
-        ],
-        "Orange Directional Arrow": [
-          [0, 0, 0],
-          [252, 133, 33]
-        ],
-        "Magenta Directional Arrow": [
-          [0, 0, 0],
-          [203, 74, 189]
-        ],
-        "Light Blue Directional Arrow": [
-          [0, 0, 0],
-          [59, 194, 230]
-        ],
-        "Yellow Directional Arrow": [
-          [0, 0, 0],
-          [255, 211, 64]
-        ],
-        "Lime Directional Arrow": [
-          [0, 0, 0],
-          [134, 202, 29]
-        ],
-        "Pink Directional Arrow": [
-          [0, 0, 0],
-          [254, 155, 188]
-        ],
-        "Grey Directional Arrow": [
-          [0, 0, 0],
-          [73, 79, 83]
-        ],
-        "Light Grey Directional Arrow": [
-          [0, 0, 0],
-          [154, 154, 149]
-        ],
-        "Cyan Directional Arrow": [
-          [0, 0, 0],
-          [25, 153, 154]
-        ],
-        "Purple Directional Arrow": [
-          [0, 0, 0],
-          [136, 45, 183]
-        ],
-        "Blue Directional Arrow": [
-          [0, 0, 0],
-          [58, 68, 166]
-        ],
-        "Brown Directional Arrow": [
-          [0, 0, 0],
-          [125, 81, 44]
-        ],
-        "Green Directional Arrow": [
-          [0, 0, 0],
-          [95, 119, 32]
-        ],
-        "Red Directional Arrow": [
-          [0, 0, 0],
-          [176, 44, 37]
-        ],
-        "Black Directional Arrow": [
-          [0, 0, 0],
-          [29, 31, 36]
-        ],
-        Bin: [
-          [0, 0, 0],
-          [134, 144, 178],
-          [142, 161, 198],
-          [146, 170, 208],
-          [128, 132, 166]
-        ],
-        "Vending Machine": [
-          [0, 0, 0],
-          [175, 196, 236],
-          [150, 178, 217],
-          [49, 142, 184],
-          [182, 60, 53],
-          [255, 207, 5],
-          [120, 158, 36],
-          [81, 136, 34],
-          [64, 151, 234],
-          [142, 161, 198]
-        ],
-        "Job Application Statue": [
-          [245, 247, 250],
-          [34, 35, 35],
-          [39, 40, 40],
-          [186, 199, 219],
-          [51, 52, 54],
-          [231, 235, 243],
-          [246, 248, 250]
-        ],
-        "John Beef Statue": [
-          [255, 243, 214],
-          [245, 231, 208],
-          [137, 102, 78],
-          [34, 35, 35],
-          [147, 111, 87],
-          [0, 56, 80],
-          [245, 247, 250],
-          [201, 183, 170],
-          [0, 0, 0],
-          [130, 95, 72],
-          [152, 117, 93],
-          [39, 40, 40],
-          [63, 54, 51],
-          [255, 207, 5],
-          [122, 87, 63]
-        ],
-        "67 Statue": [
-          [49, 142, 184],
-          [65, 178, 227],
-          [54, 107, 138],
-          [225, 229, 234],
-          [166, 174, 186],
-          [205, 210, 218],
-          [215, 220, 226],
-          [245, 247, 250],
-          [0, 0, 0]
-        ],
-        "Coloured Wheel": [
-          [120, 200, 234],
-          [241, 107, 107],
-          [255, 255, 255],
-          [163, 207, 113],
-          [65, 178, 227],
-          [235, 48, 48],
-          [255, 239, 125],
-          [255, 233, 73],
-          [127, 189, 57],
-          [34, 35, 35],
-          [51, 52, 54]
-        ],
-        Torch: [
-          [0, 0, 0],
-          [245, 247, 250],
-          [248, 244, 206],
-          [188, 143, 48],
-          [165, 112, 39]
-        ],
-        "Yellow Torch": [
-          [0, 0, 0],
-          [255, 211, 64],
-          [252, 203, 50],
-          [187, 135, 42],
-          [165, 112, 39]
-        ],
-        "White Torch": [
-          [0, 0, 0],
-          [250, 250, 250],
-          [239, 240, 241],
-          [184, 144, 90],
-          [165, 112, 39]
-        ],
-        "Red Torch": [
-          [0, 0, 0],
-          [176, 44, 37],
-          [166, 40, 35],
-          [166, 94, 38],
-          [165, 112, 39]
-        ],
-        "Purple Torch": [
-          [0, 0, 0],
-          [136, 45, 183],
-          [127, 42, 176],
-          [156, 95, 74],
-          [165, 112, 39]
-        ],
-        "Pink Torch": [
-          [0, 0, 0],
-          [254, 155, 188],
-          [248, 146, 178],
-          [186, 121, 74],
-          [165, 112, 39]
-        ],
-        "Orange Torch": [
-          [0, 0, 0],
-          [252, 133, 33],
-          [246, 123, 25],
-          [186, 115, 36],
-          [165, 112, 39]
-        ],
-        "Magenta Torch": [
-          [0, 0, 0],
-          [203, 74, 189],
-          [195, 70, 182],
-          [173, 102, 75],
-          [165, 112, 39]
-        ],
-        "Lime Torch": [
-          [0, 0, 0],
-          [134, 202, 29],
-          [122, 192, 27],
-          [155, 132, 36],
-          [165, 112, 39]
-        ],
-        "Light Gray Torch": [
-          [0, 0, 0],
-          [154, 154, 149],
-          [147, 147, 141],
-          [161, 121, 65],
-          [165, 112, 39]
-        ],
-        "Light Blue Torch": [
-          [0, 0, 0],
-          [59, 194, 230],
-          [57, 184, 223],
-          [138, 130, 85],
-          [165, 112, 39]
-        ],
-        "Green Torch": [
-          [0, 0, 0],
-          [95, 119, 32],
-          [89, 113, 30],
-          [146, 113, 37],
-          [165, 112, 39]
-        ],
-        "Gray Torch": [
-          [0, 0, 0],
-          [73, 79, 83],
-          [67, 73, 77],
-          [141, 103, 49],
-          [165, 112, 39]
-        ],
-        "Cyan Torch": [
-          [0, 0, 0],
-          [25, 153, 154],
-          [23, 144, 149],
-          [130, 120, 67],
-          [165, 112, 39]
-        ],
-        "Brown Torch": [
-          [0, 0, 0],
-          [125, 81, 44],
-          [118, 75, 42],
-          [154, 103, 40],
-          [165, 112, 39]
-        ],
-        "Blue Torch": [
-          [0, 0, 0],
-          [58, 68, 166],
-          [55, 61, 160],
-          [138, 100, 70],
-          [165, 112, 39]
-        ],
-        "Black Torch": [
-          [0, 0, 0],
-          [29, 31, 36],
-          [24, 25, 30],
-          [130, 91, 37],
-          [165, 112, 39]
-        ],
-        "Yellow Neon": [
-          [255, 218, 95],
-          [254, 211, 73],
-          [252, 203, 50]
-        ],
-        "White Neon": [
-          [255, 255, 255],
-          [247, 248, 248],
-          [239, 240, 241]
-        ],
-        "Red Neon": [
-          [191, 48, 40],
-          [179, 44, 38],
-          [166, 40, 35]
-        ],
-        "Purple Neon": [
-          [145, 48, 196],
-          [136, 45, 186],
-          [127, 42, 176]
-        ],
-        "Pink Neon": [
-          [255, 173, 200],
-          [252, 160, 189],
-          [248, 146, 178]
-        ],
-        "Orange Neon": [
-          [255, 146, 55],
-          [251, 135, 40],
-          [246, 123, 25]
-        ],
-        "Magenta Neon": [
-          [216, 79, 201],
-          [206, 75, 192],
-          [195, 70, 182]
-        ],
-        "Lime Neon": [
-          [142, 215, 31],
-          [132, 204, 29],
-          [122, 192, 27]
-        ],
-        "Light Gray Neon": [
-          [167, 167, 161],
-          [157, 157, 151],
-          [147, 147, 141]
-        ],
-        "Light Blue Neon": [
-          [65, 208, 246],
-          [61, 196, 235],
-          [57, 184, 223]
-        ],
-        "Green Neon": [
-          [105, 132, 35],
-          [97, 123, 33],
-          [89, 113, 30]
-        ],
-        "Gray Neon": [
-          [84, 91, 96],
-          [76, 82, 87],
-          [67, 73, 77]
-        ],
-        "Cyan Neon": [
-          [27, 166, 167],
-          [25, 155, 158],
-          [23, 144, 149]
-        ],
-        "Brown Neon": [
-          [138, 89, 48],
-          [128, 82, 45],
-          [118, 75, 42]
-        ],
-        "Blue Neon": [
-          [66, 77, 185],
-          [61, 69, 173],
-          [55, 61, 160]
-        ],
-        "Black Neon": [
-          [39, 42, 49],
-          [32, 34, 40],
-          [24, 25, 30]
-        ],
-        "Landing Pad": [
-          [186, 192, 202],
-          [166, 174, 186],
-          [140, 140, 140],
-          [128, 128, 128]
-        ],
-        "Weak Jump Pad": [
-          [186, 192, 202],
-          [166, 174, 186],
-          [255, 255, 255],
-          [230, 230, 230]
-        ],
-        "Jump Pad": [
-          [186, 192, 202],
-          [166, 174, 186],
-          [85, 243, 26],
-          [59, 223, 26]
-        ],
-        "Strong Jump Pad": [
-          [186, 192, 202],
-          [166, 174, 186],
-          [255, 240, 43],
-          [255, 215, 20]
-        ],
-        "Super Jump Pad": [
-          [186, 192, 202],
-          [166, 174, 186],
-          [255, 70, 59],
-          [231, 60, 50]
-        ],
-        "Invisible Yellow Light": [],
-        "Invisible White Light": [],
-        "Invisible Red Light": [],
-        "Invisible Purple Light": [],
-        "Invisible Pink Light": [],
-        "Invisible Orange Light": [],
-        "Invisible Magenta Light": [],
-        "Invisible Lime Light": [],
-        "Invisible Light Gray Light": [],
-        "Invisible Light Blue Light": [],
-        "Invisible Green Light": [],
-        "Invisible Gray Light": [],
-        "Invisible Cyan Light": [],
-        "Invisible Brown Light": [],
-        "Invisible Blue Light": [],
-        "Invisible Black Light": [],
-        "Invisible Sky Light": [],
-        "Dirt|PineGrassRoots": [
-          [133, 98, 77],
-          [139, 102, 80],
-          [127, 92, 74]
-        ],
-        "Dirt|JungleGrassRoots": [
-          [133, 98, 77],
-          [139, 102, 80],
-          [127, 92, 74]
-        ],
-        "Gun Lucky Block": [
-          [252, 78, 78],
-          [235, 64, 64],
-          [219, 48, 48],
-          [245, 247, 250],
-          [194, 33, 33],
-          [170, 19, 19]
-        ],
-        "Ghost Chest": [
-          [188, 188, 188],
-          [100, 100, 100],
-          [173, 173, 173],
-          [90, 90, 90],
-          [158, 158, 158],
-          [146, 146, 146],
-          [81, 81, 81]
-        ],
-        "Ghost Lucky Block": [
-          [166, 166, 166],
-          [157, 157, 157],
-          [146, 146, 146],
-          [185, 185, 185],
-          [139, 139, 139],
-          [131, 131, 131]
-        ],
-        "Ghost Mystery Block": [
-          [133, 133, 133],
-          [149, 149, 149],
-          [176, 176, 176],
-          [118, 118, 118]
-        ],
-        Football: [
-          [34, 35, 35],
-          [245, 247, 250]
-        ],
-        "Pet Lucky Block": [
-          [251, 159, 198],
-          [249, 132, 183],
-          [247, 103, 167],
-          [245, 247, 250],
-          [246, 83, 158],
-          [245, 52, 144]
-        ],
-        "Glowing Mushroom": [
-          [0, 0, 0],
-          [82, 210, 255],
-          [99, 228, 254],
-          [116, 245, 253],
-          [65, 178, 227]
-        ],
-        Crystal: [
-          [0, 0, 0],
-          [173, 253, 177],
-          [122, 252, 130],
-          [92, 242, 85],
-          [78, 224, 55]
-        ],
-        "Slime Trail": [
-          [0, 0, 0],
-          [255, 166, 197],
-          [255, 146, 186],
-          [254, 128, 169]
-        ],
-        "Overgrown Grass Block": [
-          [93, 141, 53],
-          [89, 136, 47],
-          [88, 132, 46]
-        ],
-        "Overgrown Pine Grass Block": [
-          [53, 97, 69],
-          [50, 92, 64],
-          [53, 87, 64]
-        ],
-        "Overgrown Jungle Grass Block": [
-          [42, 158, 25],
-          [38, 151, 23],
-          [36, 145, 23]
-        ],
-        Pipe: [
-          [91, 92, 105],
-          [72, 71, 77]
-        ],
-        "Auto Miner": [
-          [82, 82, 91],
-          [148, 157, 169],
-          [72, 71, 77],
-          [130, 139, 152],
-          [175, 196, 236],
-          [199, 214, 255],
-          [255, 255, 255],
-          [255, 0, 0]
-        ],
-        "Auto Crafter": [
-          [100, 63, 45],
-          [91, 92, 105],
-          [34, 35, 35],
-          [84, 51, 36],
-          [45, 49, 54],
-          [72, 71, 77],
-          [82, 82, 91]
-        ],
-        "Rocket Ship": [
-          [58, 57, 62],
-          [118, 126, 135],
-          [66, 168, 204],
-          [36, 39, 43],
-          [66, 66, 73]
-        ],
-        "Rocket Ship S2": [
-          [58, 57, 62],
-          [118, 126, 135],
-          [66, 168, 204],
-          [36, 39, 43],
-          [66, 66, 73]
-        ],
-        "Rocket Ship S3": [
-          [58, 57, 62],
-          [118, 126, 135],
-          [66, 168, 204],
-          [36, 39, 43],
-          [66, 66, 73]
-        ],
-        "Rocket Ship S4": [
-          [58, 57, 62],
-          [118, 126, 135],
-          [66, 168, 204],
-          [36, 39, 43],
-          [66, 66, 73]
-        ],
-        "Rocket Ship S5": [
-          [58, 57, 62],
-          [118, 126, 135],
-          [66, 168, 204],
-          [36, 39, 43],
-          [66, 66, 73]
-        ],
-        "Extractor Pipe": [
-          [56, 92, 58],
-          [45, 71, 42]
-        ],
-        "Splitter Pipe": [
-          [71, 46, 105],
-          [56, 36, 77]
-        ],
-        "Solar Panel": [
-          [64, 151, 234],
-          [20, 118, 192],
-          [186, 192, 202],
-          [91, 92, 105],
-          [166, 174, 186],
-          [82, 82, 91],
-          [45, 49, 54],
-          [148, 157, 169]
-        ],
-        "_Solar Panel SE": [
-          [64, 151, 234],
-          [20, 118, 192],
-          [186, 192, 202],
-          [91, 92, 105],
-          [166, 174, 186],
-          [82, 82, 91],
-          [45, 49, 54],
-          [148, 157, 169]
-        ],
-        "_Solar Panel NW": [
-          [64, 151, 234],
-          [20, 118, 192],
-          [186, 192, 202],
-          [91, 92, 105],
-          [166, 174, 186],
-          [82, 82, 91],
-          [45, 49, 54],
-          [148, 157, 169]
-        ],
-        "_Solar Panel NE": [
-          [64, 151, 234],
-          [20, 118, 192],
-          [186, 192, 202],
-          [91, 92, 105],
-          [166, 174, 186],
-          [82, 82, 91],
-          [45, 49, 54],
-          [148, 157, 169]
-        ],
-        Wire: [
-          [44, 46, 49],
-          [200, 114, 54],
-          [58, 60, 64]
-        ],
-        "Filter Pipe": [
-          [218, 212, 231],
-          [173, 163, 169]
-        ],
-        "Merger Pipe": [
-          [64, 216, 247],
-          [51, 167, 181]
-        ],
-        "Auto Harvester": [
-          [227, 120, 64],
-          [91, 92, 105],
-          [67, 69, 73],
-          [98, 104, 113],
-          [166, 174, 186],
-          [130, 139, 152],
-          [205, 94, 70],
-          [72, 71, 77],
-          [82, 82, 91]
-        ],
-        "Stalker Spawner Block": [
-          [200, 72, 69],
-          [182, 60, 53],
-          [78, 82, 118],
-          [58, 69, 104]
-        ],
-        "Lunite Ore": [
-          [242, 246, 180],
-          [243, 20, 129],
-          [205, 15, 112],
-          [221, 215, 149]
-        ],
-        "Block of Lunite": [
-          [166, 9, 94],
-          [247, 103, 167],
-          [243, 20, 129]
-        ],
-        "Lunite Auto Miner": [
-          [243, 20, 129],
-          [82, 82, 91],
-          [205, 15, 112],
-          [72, 71, 77],
-          [175, 196, 236],
-          [199, 214, 255],
-          [255, 255, 255],
-          [255, 0, 0]
-        ],
-        "Lunite Auto Crafter": [
-          [100, 63, 45],
-          [243, 20, 129],
-          [34, 35, 35],
-          [84, 51, 36],
-          [45, 49, 54],
-          [186, 12, 103],
-          [205, 15, 112]
-        ],
-        "Lunite Auto Harvester": [
-          [227, 120, 64],
-          [91, 92, 105],
-          [130, 139, 152],
-          [166, 174, 186],
-          [98, 104, 113],
-          [67, 69, 73],
-          [205, 94, 70],
-          [72, 71, 77],
-          [205, 15, 112]
-        ],
-        "Bowling Alley Floor": [
-          [37, 38, 38],
-          [34, 35, 35],
-          [49, 142, 184],
-          [97, 115, 8],
-          [28, 29, 29],
-          [121, 100, 186],
-          [217, 74, 105]
-        ],
-        "Crone Spawner Block": [
-          [200, 72, 69],
-          [182, 60, 53],
-          [78, 82, 118],
-          [58, 69, 104]
-        ],
-        "Slime Spawner Block": [
-          [209, 170, 57],
-          [204, 162, 55],
-          [78, 82, 118],
-          [58, 69, 104]
-        ],
-        "Iron Guardian Spawner Block": [
-          [200, 72, 69],
-          [182, 60, 53],
-          [78, 82, 118],
-          [58, 69, 104]
-        ],
-        "Gold Guardian Spawner Block": [
-          [200, 72, 69],
-          [182, 60, 53],
-          [78, 82, 118],
-          [58, 69, 104]
-        ],
-        "Diamond Guardian Spawner Block": [
-          [200, 72, 69],
-          [182, 60, 53],
-          [78, 82, 118],
-          [58, 69, 104]
-        ],
-        "Moonstone Guardian Spawner Block": [
-          [200, 72, 69],
-          [182, 60, 53],
-          [78, 82, 118],
-          [58, 69, 104]
-        ],
-        "Dry Grass Block": [
-          [178, 151, 76],
-          [174, 145, 73],
-          [170, 140, 71],
-          [127, 92, 74],
-          [133, 98, 77],
-          [139, 102, 80]
-        ],
-        "Overgrown Dry Grass Block": [
-          [178, 151, 76],
-          [174, 145, 73],
-          [170, 140, 71]
-        ],
-        "Dead Bush": [
-          [170, 140, 71],
-          [164, 137, 68],
-          [158, 132, 65]
-        ],
-        "Dirt|DryGrassRoots": [
-          [133, 98, 77],
-          [139, 102, 80],
-          [127, 92, 74]
-        ],
-        "Dry Grass Slab": [
-          [174, 145, 73],
-          [178, 151, 76],
-          [170, 140, 71]
-        ],
-        Lantern: [
-          [0, 0, 0],
-          [115, 115, 127],
-          [91, 92, 105],
-          [255, 188, 78],
-          [255, 233, 73]
-        ],
-        "Lily Pad": [
-          [23, 132, 0],
-          [35, 167, 7],
-          [14, 81, 0]
-        ],
-        "Camel Spawner Block": [
-          [81, 136, 34],
-          [73, 129, 29],
-          [78, 82, 118],
-          [58, 69, 104]
-        ],
-        "_Hump Day Top Left": [
-          [195, 157, 78],
-          [181, 168, 136],
-          [241, 223, 196],
-          [98, 87, 70],
-          [199, 187, 167]
-        ],
-        "_Hump Day Top Right": [
-          [195, 157, 78],
-          [181, 168, 136],
-          [241, 223, 196],
-          [98, 87, 70],
-          [199, 187, 167]
-        ],
-        "Hump Day": [
-          [195, 157, 78],
-          [181, 168, 136],
-          [241, 223, 196],
-          [98, 87, 70],
-          [199, 187, 167]
-        ],
-        "_Hump Day Bottom Right": [
-          [195, 157, 78],
-          [181, 168, 136],
-          [241, 223, 196],
-          [98, 87, 70],
-          [199, 187, 167]
-        ],
-        "Rare Lucky Block": [
-          [251, 235, 49],
-          [243, 170, 36],
-          [255, 211, 76],
-          [255, 188, 78],
-          [245, 247, 250],
-          [252, 172, 78]
-        ],
-        "Super Lucky Block": [
-          [229, 253, 243],
-          [63, 239, 201],
-          [255, 211, 76],
-          [255, 188, 78],
-          [245, 247, 250],
-          [252, 172, 78]
-        ],
-        "Rare Weapon Lucky Block": [
-          [251, 235, 49],
-          [243, 170, 36],
-          [235, 64, 64],
-          [219, 48, 48],
-          [245, 247, 250],
-          [194, 33, 33]
-        ],
-        "Super Weapon Lucky Block": [
-          [229, 253, 243],
-          [63, 239, 201],
-          [235, 64, 64],
-          [219, 48, 48],
-          [245, 247, 250],
-          [194, 33, 33]
-        ],
-        "Building Lucky Block": [
-          [207, 140, 255],
-          [183, 114, 247],
-          [161, 90, 232],
-          [245, 247, 250],
-          [135, 67, 207],
-          [108, 48, 179]
-        ],
-        "Rare Building Lucky Block": [
-          [251, 235, 49],
-          [243, 170, 36],
-          [183, 114, 247],
-          [161, 90, 232],
-          [245, 247, 250],
-          [135, 67, 207]
-        ],
-        "Super Building Lucky Block": [
-          [229, 253, 243],
-          [63, 239, 201],
-          [183, 114, 247],
-          [161, 90, 232],
-          [245, 247, 250],
-          [135, 67, 207]
-        ],
-        "Armour Lucky Block": [
-          [125, 155, 255],
-          [95, 126, 245],
-          [74, 102, 232],
-          [245, 247, 250],
-          [53, 73, 207],
-          [38, 54, 179]
-        ],
-        "Rare Armour Lucky Block": [
-          [251, 235, 49],
-          [243, 170, 36],
-          [95, 126, 245],
-          [74, 102, 232],
-          [245, 247, 250],
-          [53, 73, 207]
-        ],
-        "Super Armour Lucky Block": [
-          [229, 253, 243],
-          [63, 239, 201],
-          [95, 126, 245],
-          [74, 102, 232],
-          [245, 247, 250],
-          [53, 73, 207]
-        ],
-        "Tools Lucky Block": [
-          [255, 162, 90],
-          [249, 138, 69],
-          [236, 116, 51],
-          [245, 247, 250],
-          [214, 92, 38],
-          [187, 70, 28]
-        ],
-        "Rare Tools Lucky Block": [
-          [251, 235, 49],
-          [243, 170, 36],
-          [249, 138, 69],
-          [236, 116, 51],
-          [245, 247, 250],
-          [214, 92, 38]
-        ],
-        "Super Tools Lucky Block": [
-          [229, 253, 243],
-          [63, 239, 201],
-          [249, 138, 69],
-          [236, 116, 51],
-          [245, 247, 250],
-          [214, 92, 38]
-        ],
-        "Food Lucky Block": [
-          [122, 234, 124],
-          [85, 214, 95],
-          [61, 191, 77],
-          [245, 247, 250],
-          [47, 163, 67],
-          [34, 138, 58]
-        ],
-        "Rare Food Lucky Block": [
-          [251, 235, 49],
-          [243, 170, 36],
-          [85, 214, 95],
-          [61, 191, 77],
-          [245, 247, 250],
-          [47, 163, 67]
-        ],
-        "Super Food Lucky Block": [
-          [229, 253, 243],
-          [63, 239, 201],
-          [85, 214, 95],
-          [61, 191, 77],
-          [245, 247, 250],
-          [47, 163, 67]
-        ],
-        "Potion Lucky Block": [
-          [251, 159, 198],
-          [249, 132, 183],
-          [247, 103, 167],
-          [245, 247, 250],
-          [246, 83, 158],
-          [245, 52, 144]
-        ],
-        "Rare Potion Lucky Block": [
-          [251, 235, 49],
-          [243, 170, 36],
-          [249, 132, 183],
-          [247, 103, 167],
-          [245, 247, 250],
-          [246, 83, 158]
-        ],
-        "Super Potion Lucky Block": [
-          [229, 253, 243],
-          [63, 239, 201],
-          [249, 132, 183],
-          [247, 103, 167],
-          [245, 247, 250],
-          [246, 83, 158]
-        ],
-        "Block Destroyer TNT": [
-          [46, 47, 51],
-          [34, 35, 35],
-          [9, 10, 12],
-          [240, 204, 67],
-          [22, 23, 28],
-          [226, 173, 56]
-        ],
-        "Maple Stairs": [
-          [174, 143, 90],
-          [170, 139, 88],
-          [159, 128, 84]
-        ],
-        "Pine Stairs": [
-          [121, 87, 67],
-          [118, 85, 65],
-          [109, 77, 58]
-        ],
-        "Plum Stairs": [
-          [149, 102, 93],
-          [146, 99, 91],
-          [138, 92, 84]
-        ],
-        "Cedar Stairs": [
-          [81, 52, 25],
-          [78, 50, 23],
-          [73, 46, 21]
-        ],
-        "Aspen Stairs": [
-          [199, 180, 128],
-          [194, 175, 123],
-          [187, 168, 115]
-        ],
-        "Jungle Stairs": [
-          [165, 124, 86],
-          [160, 120, 82],
-          [154, 114, 76]
-        ],
-        "Palm Stairs": [
-          [214, 153, 73],
-          [209, 149, 70],
-          [199, 141, 64]
-        ],
-        "Pear Stairs": [
-          [153, 144, 93],
-          [149, 140, 90],
-          [143, 134, 84]
-        ],
-        "Cherry Stairs": [
-          [244, 183, 206],
-          [240, 177, 201],
-          [234, 169, 194]
-        ],
-        "Spectral Stairs": [
-          [32, 178, 170],
-          [30, 172, 164],
-          [26, 164, 157]
-        ],
-        "Mango Stairs": [
-          [210, 196, 113],
-          [206, 192, 109],
-          [201, 186, 103]
-        ],
-        "Messy Stone Stairs": [
-          [142, 148, 155],
-          [131, 137, 144],
-          [121, 127, 135]
-        ],
-        "Stone Stairs": [
-          [133, 139, 146],
-          [139, 145, 152],
-          [127, 133, 140]
-        ],
-        "Smooth Stone Stairs": [
-          [160, 166, 173],
-          [151, 157, 164],
-          [133, 139, 146],
-          [138, 144, 151],
-          [117, 122, 128],
-          [129, 135, 142],
-          [108, 113, 119]
-        ],
-        "Engraved Stone Stairs": [
-          [160, 166, 173],
-          [151, 157, 164],
-          [133, 139, 146],
-          [138, 144, 151],
-          [117, 122, 128],
-          [108, 113, 119],
-          [129, 135, 142]
-        ],
-        "Stone Bricks Stairs": [
-          [108, 113, 119],
-          [133, 139, 146],
-          [138, 144, 151],
-          [117, 122, 128],
-          [129, 135, 142]
-        ],
-        "Mossy Stone Stairs": [
-          [121, 127, 135],
-          [131, 137, 144],
-          [142, 148, 155],
-          [98, 129, 84],
-          [73, 129, 29],
-          [92, 143, 37],
-          [81, 136, 34]
-        ],
-        "Mossy Stone Bricks Stairs": [
-          [95, 128, 67],
-          [125, 131, 138],
-          [138, 144, 151],
-          [133, 139, 146],
-          [88, 121, 61],
-          [106, 125, 98],
-          [105, 136, 72]
-        ],
-        "Andesite Stairs": [
-          [111, 120, 128],
-          [104, 114, 122],
-          [116, 126, 134],
-          [125, 134, 140]
-        ],
-        "Smooth Andesite Stairs": [
-          [138, 148, 154],
-          [127, 138, 145],
-          [114, 124, 132],
-          [116, 126, 134],
-          [111, 120, 128],
-          [104, 114, 122],
-          [100, 108, 116],
-          [125, 134, 140],
-          [93, 100, 108]
-        ],
-        "Engraved Andesite Stairs": [
-          [138, 148, 154],
-          [127, 138, 145],
-          [111, 120, 128],
-          [116, 126, 134],
-          [104, 114, 122],
-          [100, 108, 116],
-          [93, 100, 108],
-          [125, 134, 140]
-        ],
-        "Andesite Bricks Stairs": [
-          [93, 100, 108],
-          [114, 124, 132],
-          [111, 120, 128],
-          [107, 116, 124],
-          [100, 108, 116]
-        ],
-        "Diorite Stairs": [
-          [246, 245, 240],
-          [233, 232, 226],
-          [206, 205, 197],
-          [219, 218, 212]
-        ],
-        "Smooth Diorite Stairs": [
-          [255, 255, 255],
-          [249, 249, 246],
-          [233, 232, 226],
-          [240, 239, 233],
-          [226, 225, 219],
-          [215, 213, 208],
-          [206, 203, 199]
-        ],
-        "Engraved Diorite Stairs": [
-          [255, 255, 255],
-          [249, 249, 246],
-          [233, 232, 226],
-          [240, 239, 233],
-          [215, 213, 208],
-          [206, 203, 199]
-        ],
-        "Diorite Bricks Stairs": [
-          [206, 203, 199],
-          [240, 239, 233],
-          [233, 232, 226],
-          [215, 213, 208],
-          [226, 225, 219]
-        ],
-        "Granite Stairs": [
-          [159, 107, 88],
-          [159, 117, 102],
-          [152, 101, 83],
-          [144, 94, 77]
-        ],
-        "Smooth Granite Stairs": [
-          [189, 135, 108],
-          [174, 121, 98],
-          [159, 107, 88],
-          [159, 112, 95],
-          [154, 103, 85],
-          [136, 87, 71],
-          [148, 98, 80],
-          [128, 80, 65]
-        ],
-        "Engraved Granite Stairs": [
-          [189, 135, 108],
-          [174, 121, 98],
-          [154, 103, 85],
-          [159, 107, 88],
-          [159, 112, 95],
-          [136, 87, 71],
-          [128, 80, 65]
-        ],
-        "Granite Bricks Stairs": [
-          [128, 80, 65],
-          [159, 107, 88],
-          [154, 103, 85],
-          [159, 112, 95],
-          [136, 87, 71],
-          [148, 98, 80]
-        ],
-        "Sandstone Stairs": [
-          [247, 227, 155],
-          [252, 237, 175],
-          [251, 234, 163],
-          [245, 223, 151]
-        ],
-        "Smooth Sandstone Stairs": [
-          [251, 234, 163],
-          [252, 237, 175],
-          [249, 231, 159]
-        ],
-        "Engraved Sandstone Stairs": [
-          [251, 234, 163],
-          [252, 237, 175],
-          [242, 219, 147],
-          [239, 213, 141]
-        ],
-        "Marked Sandstone Stairs": [
-          [252, 237, 175],
-          [251, 234, 163],
-          [249, 231, 159],
-          [239, 213, 141],
-          [242, 219, 147]
-        ],
-        "Sandstone Bricks Stairs": [
-          [235, 207, 135],
-          [251, 234, 163],
-          [252, 237, 175],
-          [247, 227, 155],
-          [242, 219, 147]
-        ],
-        "Red Sandstone Stairs": [
-          [200, 104, 34],
-          [203, 110, 36],
-          [205, 112, 38],
-          [197, 99, 33]
-        ],
-        "Smooth Red Sandstone Stairs": [
-          [203, 110, 36],
-          [206, 113, 39],
-          [201, 106, 35]
-        ],
-        "Engraved Red Sandstone Stairs": [
-          [203, 110, 36],
-          [206, 113, 39],
-          [191, 95, 31],
-          [187, 91, 29]
-        ],
-        "Marked Red Sandstone Stairs": [
-          [206, 113, 39],
-          [203, 110, 36],
-          [201, 106, 35],
-          [187, 91, 29],
-          [191, 95, 31]
-        ],
-        "Red Sandstone Bricks Stairs": [
-          [182, 87, 27],
-          [203, 110, 36],
-          [206, 113, 39],
-          [199, 105, 35],
-          [191, 95, 31]
-        ],
-        "Bricks Stairs": [
-          [165, 150, 134],
-          [149, 84, 61],
-          [156, 88, 67],
-          [144, 80, 57],
-          [151, 140, 122]
-        ],
-        "Ice Bricks Stairs": [
-          [238, 243, 250],
-          [106, 218, 247],
-          [122, 225, 251],
-          [137, 231, 255],
-          [245, 247, 250],
-          [230, 238, 249]
-        ],
-        "Yellow Concrete Stairs": [
-          [234, 192, 61]
-        ],
-        "White Concrete Stairs": [
-          [227, 228, 228]
-        ],
-        "Red Concrete Stairs": [
-          [148, 40, 36]
-        ],
-        "Purple Concrete Stairs": [
-          [115, 42, 157]
-        ],
-        "Pink Concrete Stairs": [
-          [228, 140, 168]
-        ],
-        "Orange Concrete Stairs": [
-          [223, 118, 34]
-        ],
-        "Magenta Concrete Stairs": [
-          [176, 69, 165]
-        ],
-        "Lime Concrete Stairs": [
-          [119, 179, 38]
-        ],
-        "Light Gray Concrete Stairs": [
-          [139, 139, 134]
-        ],
-        "Light Blue Concrete Stairs": [
-          [64, 172, 205]
-        ],
-        "Green Concrete Stairs": [
-          [85, 106, 35]
-        ],
-        "Gray Concrete Stairs": [
-          [64, 69, 73]
-        ],
-        "Cyan Concrete Stairs": [
-          [30, 134, 138]
-        ],
-        "Brown Concrete Stairs": [
-          [109, 72, 43]
-        ],
-        "Blue Concrete Stairs": [
-          [53, 58, 143]
-        ],
-        "Black Concrete Stairs": [
-          [22, 23, 28]
-        ],
-        "Yellow Chalk Stairs": [
-          [237, 210, 124],
-          [235, 208, 124],
-          [233, 207, 123]
-        ],
-        "White Chalk Stairs": [
-          [231, 230, 221],
-          [228, 228, 220],
-          [226, 225, 218]
-        ],
-        "Red Chalk Stairs": [
-          [194, 129, 118],
-          [192, 128, 116],
-          [189, 126, 115]
-        ],
-        "Purple Chalk Stairs": [
-          [174, 130, 189],
-          [172, 128, 187],
-          [171, 127, 185]
-        ],
-        "Pink Chalk Stairs": [
-          [235, 182, 189],
-          [232, 180, 188],
-          [230, 179, 186]
-        ],
-        "Orange Chalk Stairs": [
-          [234, 170, 112],
-          [232, 168, 112],
-          [229, 167, 111]
-        ],
-        "Magenta Chalk Stairs": [
-          [209, 144, 192],
-          [207, 143, 190],
-          [205, 141, 189]
-        ],
-        "Lime Chalk Stairs": [
-          [172, 206, 113],
-          [170, 204, 112],
-          [169, 201, 112]
-        ],
-        "Light Gray Chalk Stairs": [
-          [185, 183, 172],
-          [183, 180, 170],
-          [181, 178, 169]
-        ],
-        "Light Blue Chalk Stairs": [
-          [140, 201, 213],
-          [138, 200, 211],
-          [137, 198, 209]
-        ],
-        "Green Chalk Stairs": [
-          [156, 166, 116],
-          [154, 164, 114],
-          [153, 161, 113]
-        ],
-        "Gray Chalk Stairs": [
-          [145, 146, 140],
-          [143, 144, 138],
-          [141, 142, 137]
-        ],
-        "Cyan Chalk Stairs": [
-          [123, 182, 176],
-          [121, 180, 174],
-          [120, 178, 173]
-        ],
-        "Brown Chalk Stairs": [
-          [170, 147, 122],
-          [168, 145, 120],
-          [166, 144, 119]
-        ],
-        "Blue Chalk Stairs": [
-          [139, 140, 181],
-          [137, 138, 179],
-          [136, 137, 177]
-        ],
-        "Black Chalk Stairs": [
-          [123, 122, 116],
-          [120, 120, 114],
-          [118, 117, 113]
-        ],
-        "Yellow Chalk Bricks Stairs": [
-          [214, 188, 104],
-          [237, 210, 124],
-          [235, 208, 124],
-          [233, 207, 123],
-          [222, 195, 113]
-        ],
-        "White Chalk Bricks Stairs": [
-          [207, 207, 191],
-          [231, 230, 221],
-          [228, 228, 220],
-          [226, 225, 218],
-          [214, 214, 203]
-        ],
-        "Red Chalk Bricks Stairs": [
-          [171, 108, 96],
-          [194, 129, 118],
-          [192, 128, 116],
-          [189, 126, 115],
-          [179, 116, 104]
-        ],
-        "Purple Chalk Bricks Stairs": [
-          [150, 106, 166],
-          [174, 130, 189],
-          [172, 128, 187],
-          [171, 127, 185],
-          [158, 116, 173]
-        ],
-        "Pink Chalk Bricks Stairs": [
-          [212, 156, 165],
-          [235, 182, 189],
-          [232, 180, 188],
-          [230, 179, 186],
-          [219, 166, 174]
-        ],
-        "Orange Chalk Bricks Stairs": [
-          [212, 148, 94],
-          [234, 170, 112],
-          [232, 168, 112],
-          [229, 167, 111],
-          [219, 157, 102]
-        ],
-        "Magenta Chalk Bricks Stairs": [
-          [186, 122, 169],
-          [209, 144, 192],
-          [207, 143, 190],
-          [205, 141, 189],
-          [194, 130, 177]
-        ],
-        "Lime Chalk Bricks Stairs": [
-          [150, 184, 94],
-          [172, 206, 113],
-          [170, 204, 112],
-          [169, 201, 112],
-          [158, 191, 101]
-        ],
-        "Light Gray Chalk Bricks Stairs": [
-          [163, 160, 145],
-          [185, 183, 172],
-          [183, 180, 170],
-          [181, 178, 169],
-          [171, 167, 156]
-        ],
-        "Light Blue Chalk Bricks Stairs": [
-          [113, 179, 191],
-          [140, 201, 213],
-          [138, 200, 211],
-          [137, 198, 209],
-          [126, 188, 199]
-        ],
-        "Green Chalk Bricks Stairs": [
-          [133, 143, 93],
-          [156, 166, 116],
-          [154, 164, 114],
-          [153, 161, 113],
-          [140, 150, 102]
-        ],
-        "Gray Chalk Bricks Stairs": [
-          [122, 122, 112],
-          [145, 146, 140],
-          [143, 144, 138],
-          [141, 142, 137],
-          [128, 130, 122]
-        ],
-        "Cyan Chalk Bricks Stairs": [
-          [102, 161, 154],
-          [123, 182, 176],
-          [121, 180, 174],
-          [120, 178, 173],
-          [110, 168, 163]
-        ],
-        "Brown Chalk Bricks Stairs": [
-          [148, 125, 100],
-          [170, 147, 122],
-          [168, 145, 120],
-          [166, 144, 119],
-          [156, 132, 108]
-        ],
-        "Blue Chalk Bricks Stairs": [
-          [115, 116, 158],
-          [139, 140, 181],
-          [137, 138, 179],
-          [136, 137, 177],
-          [124, 125, 166],
-          [134, 135, 174]
-        ],
-        "Black Chalk Bricks Stairs": [
-          [99, 99, 90],
-          [123, 122, 116],
-          [120, 120, 114],
-          [118, 117, 113],
-          [107, 107, 100]
-        ],
-        "Toxic Waste Barrel": [
-          [255, 246, 79],
-          [91, 236, 77],
-          [244, 228, 77],
-          [232, 210, 75],
-          [60, 215, 49]
-        ],
-        "Ancient Maple Log": [
-          [122, 74, 81],
-          [140, 90, 96],
-          [131, 82, 87],
-          [155, 104, 125],
-          [148, 98, 121],
-          [162, 110, 132]
-        ],
-        "Evil Lucky Block": [
-          [146, 33, 206],
-          [115, 16, 167],
-          [46, 47, 51],
-          [68, 0, 108],
-          [76, 5, 114],
-          [245, 247, 250],
-          [52, 0, 93],
-          [34, 35, 35],
-          [10, 8, 5],
-          [37, 0, 76]
-        ],
-        "Noticeboard Standing": [
-          [192, 165, 136]
-        ],
-        "Noticeboard Standing Top": [
-          [183, 125, 45],
-          [165, 112, 39],
-          [175, 152, 123],
-          [192, 165, 136]
-        ],
-        "Noticeboard Standing Bottom": [
-          [192, 165, 136],
-          [183, 125, 45],
-          [165, 112, 39]
-        ],
-        "Noticeboard Standing Left": [
-          [165, 112, 39],
-          [192, 165, 136]
-        ],
-        "Noticeboard Standing Right": [
-          [165, 112, 39],
-          [192, 165, 136]
-        ],
-        "Noticeboard Standing Top Left": [
-          [183, 125, 45],
-          [165, 112, 39],
-          [153, 101, 29],
-          [175, 152, 123],
-          [192, 165, 136]
-        ],
-        "Noticeboard Standing Top Right": [
-          [183, 125, 45],
-          [165, 112, 39],
-          [153, 101, 29],
-          [175, 152, 123],
-          [192, 165, 136]
-        ],
-        "Noticeboard Standing Bottom Left": [
-          [165, 112, 39],
-          [192, 165, 136],
-          [153, 101, 29],
-          [183, 125, 45]
-        ],
-        "Noticeboard Standing Bottom Right": [
-          [165, 112, 39],
-          [192, 165, 136],
-          [153, 101, 29],
-          [183, 125, 45]
-        ],
-        "Noticeboard Standing Leg": [
-          [153, 101, 29],
-          [165, 112, 39]
-        ],
-        "Noticeboard Wall": [
-          [192, 165, 136]
-        ],
-        "Noticeboard Wall Top": [
-          [183, 125, 45],
-          [165, 112, 39],
-          [175, 152, 123],
-          [192, 165, 136]
-        ],
-        "Noticeboard Wall Bottom": [
-          [192, 165, 136],
-          [183, 125, 45],
-          [165, 112, 39]
-        ],
-        "Noticeboard Wall Left": [
-          [165, 112, 39],
-          [192, 165, 136]
-        ],
-        "Noticeboard Wall Right": [
-          [165, 112, 39],
-          [192, 165, 136]
-        ],
-        "Noticeboard Wall Top Left": [
-          [183, 125, 45],
-          [165, 112, 39],
-          [153, 101, 29],
-          [175, 152, 123],
-          [192, 165, 136]
-        ],
-        "Noticeboard Wall Top Right": [
-          [183, 125, 45],
-          [165, 112, 39],
-          [153, 101, 29],
-          [175, 152, 123],
-          [192, 165, 136]
-        ],
-        "Noticeboard Wall Bottom Left": [
-          [165, 112, 39],
-          [192, 165, 136],
-          [153, 101, 29],
-          [183, 125, 45]
-        ],
-        "Noticeboard Wall Bottom Right": [
-          [165, 112, 39],
-          [192, 165, 136],
-          [153, 101, 29],
-          [183, 125, 45]
-        ],
-        "Tiki Terror Spawner Block": [
-          [200, 72, 69],
-          [182, 60, 53],
-          [78, 82, 118],
-          [58, 69, 104]
-        ],
-        "Maple Fence": [
-          [174, 143, 90],
-          [170, 139, 88],
-          [159, 128, 84]
-        ],
-        "_Maple Fence Top": [
-          [174, 143, 90],
-          [170, 139, 88],
-          [159, 128, 84]
-        ],
-        "Pine Fence": [
-          [121, 87, 67],
-          [118, 85, 65],
-          [109, 77, 58]
-        ],
-        "_Pine Fence Top": [
-          [121, 87, 67],
-          [118, 85, 65],
-          [109, 77, 58]
-        ],
-        "Plum Fence": [
-          [149, 102, 93],
-          [146, 99, 91],
-          [138, 92, 84]
-        ],
-        "_Plum Fence Top": [
-          [149, 102, 93],
-          [146, 99, 91],
-          [138, 92, 84]
-        ],
-        "Cedar Fence": [
-          [81, 52, 25],
-          [78, 50, 23],
-          [73, 46, 21]
-        ],
-        "_Cedar Fence Top": [
-          [81, 52, 25],
-          [78, 50, 23],
-          [73, 46, 21]
-        ],
-        "Aspen Fence": [
-          [199, 180, 128],
-          [194, 175, 123],
-          [187, 168, 115]
-        ],
-        "_Aspen Fence Top": [
-          [199, 180, 128],
-          [194, 175, 123],
-          [187, 168, 115]
-        ],
-        "Jungle Fence": [
-          [165, 124, 86],
-          [160, 120, 82],
-          [154, 114, 76]
-        ],
-        "_Jungle Fence Top": [
-          [165, 124, 86],
-          [160, 120, 82],
-          [154, 114, 76]
-        ],
-        "Palm Fence": [
-          [214, 153, 73],
-          [209, 149, 70],
-          [199, 141, 64]
-        ],
-        "_Palm Fence Top": [
-          [214, 153, 73],
-          [209, 149, 70],
-          [199, 141, 64]
-        ],
-        "Pear Fence": [
-          [153, 144, 93],
-          [149, 140, 90],
-          [143, 134, 84]
-        ],
-        "_Pear Fence Top": [
-          [153, 144, 93],
-          [149, 140, 90],
-          [143, 134, 84]
-        ],
-        "Cherry Fence": [
-          [244, 183, 206],
-          [240, 177, 201],
-          [234, 169, 194]
-        ],
-        "_Cherry Fence Top": [
-          [244, 183, 206],
-          [240, 177, 201],
-          [234, 169, 194]
-        ],
-        "Spectral Fence": [
-          [32, 178, 170],
-          [30, 172, 164],
-          [26, 164, 157]
-        ],
-        "_Spectral Fence Top": [
-          [32, 178, 170],
-          [30, 172, 164],
-          [26, 164, 157]
-        ],
-        "Mango Fence": [
-          [210, 196, 113],
-          [206, 192, 109],
-          [201, 186, 103]
-        ],
-        "_Mango Fence Top": [
-          [210, 196, 113],
-          [206, 192, 109],
-          [201, 186, 103]
-        ],
-        Noticeboard: [
-          [183, 125, 45],
-          [165, 112, 39],
-          [153, 101, 29],
-          [175, 152, 123],
-          [192, 165, 136]
-        ],
-        "Standing Noticeboard": [
-          [183, 125, 45],
-          [165, 112, 39],
-          [153, 101, 29],
-          [175, 152, 123],
-          [192, 165, 136]
-        ],
-        "Pure Coal Ore": [
-          [34, 35, 35],
-          [27, 28, 28],
-          [39, 40, 40]
-        ],
-        "Pure Iron Ore": [
-          [215, 211, 204],
-          [205, 200, 194],
-          [227, 224, 217],
-          [193, 187, 181]
-        ],
-        "Pure Gold Ore": [
-          [255, 226, 35],
-          [250, 193, 32],
-          [253, 210, 34],
-          [255, 238, 56]
-        ],
-        "Pure Diamond Ore": [
-          [162, 255, 235],
-          [75, 241, 205],
-          [57, 214, 199],
-          [51, 193, 197]
-        ],
-        "Pure Moonstone Ore": [
-          [206, 201, 246],
-          [224, 225, 255],
-          [242, 242, 255],
-          [255, 255, 255]
-        ],
-        "Maple Fence Gate": [
-          [174, 143, 90],
-          [170, 139, 88],
-          [159, 128, 84]
-        ],
-        "_Maple Fence Gate Top": [
-          [174, 143, 90],
-          [170, 139, 88],
-          [159, 128, 84]
-        ],
-        "Pine Fence Gate": [
-          [121, 87, 67],
-          [118, 85, 65],
-          [109, 77, 58]
-        ],
-        "_Pine Fence Gate Top": [
-          [121, 87, 67],
-          [118, 85, 65],
-          [109, 77, 58]
-        ],
-        "Plum Fence Gate": [
-          [149, 102, 93],
-          [146, 99, 91],
-          [138, 92, 84]
-        ],
-        "_Plum Fence Gate Top": [
-          [149, 102, 93],
-          [146, 99, 91],
-          [138, 92, 84]
-        ],
-        "Cedar Fence Gate": [
-          [81, 52, 25],
-          [78, 50, 23],
-          [73, 46, 21]
-        ],
-        "_Cedar Fence Gate Top": [
-          [81, 52, 25],
-          [78, 50, 23],
-          [73, 46, 21]
-        ],
-        "Aspen Fence Gate": [
-          [199, 180, 128],
-          [194, 175, 123],
-          [187, 168, 115]
-        ],
-        "_Aspen Fence Gate Top": [
-          [199, 180, 128],
-          [194, 175, 123],
-          [187, 168, 115]
-        ],
-        "Jungle Fence Gate": [
-          [165, 124, 86],
-          [160, 120, 82],
-          [154, 114, 76]
-        ],
-        "_Jungle Fence Gate Top": [
-          [165, 124, 86],
-          [160, 120, 82],
-          [154, 114, 76]
-        ],
-        "Palm Fence Gate": [
-          [214, 153, 73],
-          [209, 149, 70],
-          [199, 141, 64]
-        ],
-        "_Palm Fence Gate Top": [
-          [214, 153, 73],
-          [209, 149, 70],
-          [199, 141, 64]
-        ],
-        "Pear Fence Gate": [
-          [153, 144, 93],
-          [149, 140, 90],
-          [143, 134, 84]
-        ],
-        "_Pear Fence Gate Top": [
-          [153, 144, 93],
-          [149, 140, 90],
-          [143, 134, 84]
-        ],
-        "Cherry Fence Gate": [
-          [244, 183, 206],
-          [240, 177, 201],
-          [234, 169, 194]
-        ],
-        "_Cherry Fence Gate Top": [
-          [244, 183, 206],
-          [240, 177, 201],
-          [234, 169, 194]
-        ],
-        "Spectral Fence Gate": [
-          [32, 178, 170],
-          [30, 172, 164],
-          [26, 164, 157]
-        ],
-        "_Spectral Fence Gate Top": [
-          [32, 178, 170],
-          [30, 172, 164],
-          [26, 164, 157]
-        ],
-        "Mango Fence Gate": [
-          [210, 196, 113],
-          [206, 192, 109],
-          [201, 186, 103]
-        ],
-        "_Mango Fence Gate Top": [
-          [210, 196, 113],
-          [206, 192, 109],
-          [201, 186, 103]
-        ],
-        "Iron Goofy Golem Spawner Block": [
-          [81, 136, 34],
-          [73, 129, 29],
-          [78, 82, 118],
-          [58, 69, 104]
-        ],
-        "Gold Goofy Golem Spawner Block": [
-          [81, 136, 34],
-          [73, 129, 29],
-          [78, 82, 118],
-          [58, 69, 104]
-        ],
-        "Diamond Goofy Golem Spawner Block": [
-          [81, 136, 34],
-          [73, 129, 29],
-          [78, 82, 118],
-          [58, 69, 104]
-        ],
-        "Moonstone Goofy Golem Spawner Block": [
-          [81, 136, 34],
-          [73, 129, 29],
-          [78, 82, 118],
-          [58, 69, 104]
-        ],
-        "Crystal Block": [
-          [92, 242, 85],
-          [173, 253, 177],
-          [122, 252, 130],
-          [82, 229, 63]
-        ],
-        "Rope Block": [
-          [189, 155, 108],
-          [197, 162, 115],
-          [181, 147, 101]
-        ],
-        Ash: [
-          [45, 44, 44],
-          [47, 46, 46],
-          [44, 43, 43],
-          [42, 41, 41],
-          [43, 42, 42]
-        ],
-        "Coal Deposit": [
-          [186, 192, 202],
-          [205, 210, 218],
-          [157, 166, 178],
-          [166, 174, 186],
-          [27, 28, 28],
-          [39, 40, 40],
-          [34, 35, 35]
-        ],
-        "Iron Deposit": [
-          [186, 192, 202],
-          [205, 210, 218],
-          [157, 166, 178],
-          [166, 174, 186],
-          [193, 187, 181],
-          [205, 200, 194],
-          [215, 211, 204],
-          [227, 224, 217]
-        ],
-        "Stone Deposit": [
-          [186, 192, 202],
-          [205, 210, 218],
-          [157, 166, 178],
-          [166, 174, 186],
-          [117, 122, 128],
-          [139, 145, 152],
-          [133, 139, 146],
-          [127, 133, 140]
-        ],
-        "Copper Deposit": [
-          [186, 192, 202],
-          [205, 210, 218],
-          [157, 166, 178],
-          [166, 174, 186],
-          [181, 84, 41],
-          [117, 123, 73],
-          [200, 102, 46],
-          [174, 132, 71],
-          [79, 199, 136],
-          [147, 161, 96],
-          [215, 123, 55]
-        ],
-        "Gold Deposit": [
-          [186, 192, 202],
-          [205, 210, 218],
-          [157, 166, 178],
-          [166, 174, 186],
-          [250, 193, 32],
-          [253, 210, 34],
-          [255, 226, 35],
-          [255, 238, 56]
-        ],
-        "Homestead Core": [
-          [210, 214, 219],
-          [154, 161, 169],
-          [58, 63, 72],
-          [107, 114, 123],
-          [220, 254, 252],
-          [93, 249, 246],
-          [41, 183, 189],
-          [30, 134, 138]
-        ],
-        "Drop Pad": [
-          [241, 199, 40],
-          [43, 44, 45],
-          [154, 161, 169],
-          [238, 238, 234],
-          [133, 139, 146],
-          [94, 100, 108],
-          [122, 128, 136]
-        ],
-        "Copper Ore": [
-          [133, 139, 146],
-          [141, 147, 153],
-          [215, 123, 55],
-          [200, 102, 46],
-          [79, 199, 136],
-          [122, 128, 136],
-          [127, 133, 140]
-        ],
-        "Burner Drill": [
-          [47, 51, 58],
-          [242, 201, 76],
-          [28, 30, 36],
-          [140, 88, 26],
-          [255, 160, 48],
-          [228, 230, 233],
-          [192, 195, 199],
-          [68, 73, 82]
-        ],
-        Crusher: [
-          [47, 51, 58],
-          [242, 201, 76],
-          [28, 30, 36],
-          [125, 127, 128],
-          [228, 230, 233],
-          [192, 195, 199],
-          [68, 73, 82]
-        ],
-        Smelter: [
-          [47, 51, 58],
-          [242, 201, 76],
-          [28, 30, 36],
-          [140, 123, 76],
-          [255, 224, 138],
-          [228, 230, 233],
-          [192, 195, 199],
-          [68, 73, 82]
-        ],
-        Generator: [
-          [47, 51, 58],
-          [163, 170, 180],
-          [28, 30, 36],
-          [242, 201, 76],
-          [255, 224, 138],
-          [115, 122, 133],
-          [68, 73, 82],
-          [217, 83, 30],
-          [255, 160, 48]
-        ],
-        Press: [
-          [47, 51, 58],
-          [242, 201, 76],
-          [28, 30, 36],
-          [132, 79, 41],
-          [240, 144, 74],
-          [228, 230, 233],
-          [192, 195, 199],
-          [68, 73, 82]
-        ],
-        "Wire Mill": [
-          [47, 51, 58],
-          [242, 201, 76],
-          [28, 30, 36],
-          [140, 108, 85],
-          [255, 196, 154],
-          [228, 230, 233],
-          [192, 195, 199],
-          [68, 73, 82]
-        ],
-        "Conveyor Belt": [
-          [115, 122, 133],
-          [47, 51, 58],
-          [163, 170, 180],
-          [242, 201, 76],
-          [28, 30, 36]
-        ],
-        Splitter: [
-          [115, 122, 133],
-          [28, 30, 36],
-          [255, 160, 48],
-          [163, 170, 180],
-          [47, 51, 58],
-          [242, 201, 76]
-        ],
-        "Voltite Ore": [
-          [133, 139, 146],
-          [139, 145, 152],
-          [128, 153, 159],
-          [113, 194, 196],
-          [93, 249, 246],
-          [93, 192, 249],
-          [229, 253, 243],
-          [127, 133, 140],
-          [123, 167, 171]
-        ],
-        "Alloy Kiln": [
-          [47, 51, 58],
-          [242, 201, 76],
-          [28, 30, 36],
-          [140, 88, 26],
-          [255, 160, 48],
-          [228, 230, 233],
-          [192, 195, 199],
-          [68, 73, 82]
-        ],
-        "Electric Drill": [
-          [47, 51, 58],
-          [242, 201, 76],
-          [28, 30, 36],
-          [50, 110, 140],
-          [90, 200, 255],
-          [228, 230, 233],
-          [192, 195, 199],
-          [68, 73, 82]
-        ],
-        Assembler: [
-          [47, 51, 58],
-          [242, 201, 76],
-          [28, 30, 36],
-          [61, 115, 67],
-          [111, 209, 122],
-          [228, 230, 233],
-          [192, 195, 199],
-          [68, 73, 82]
-        ],
-        "Sorting Gate": [
-          [115, 122, 133],
-          [47, 51, 58],
-          [242, 201, 76],
-          [163, 170, 180],
-          [28, 30, 36]
-        ],
-        "Belt Loader": [
-          [47, 51, 58],
-          [163, 170, 180],
-          [68, 73, 82],
-          [242, 201, 76],
-          [115, 122, 133]
-        ],
-        "Storage Silo": [
-          [47, 51, 58],
-          [163, 170, 180],
-          [115, 122, 133],
-          [68, 73, 82],
-          [86, 92, 102],
-          [28, 30, 36]
-        ],
-        "Charge Vault": [
-          [47, 51, 58],
-          [163, 170, 180],
-          [115, 122, 133],
-          [255, 196, 154],
-          [240, 144, 74],
-          [164, 80, 42],
-          [68, 73, 82],
-          [93, 249, 246]
-        ],
-        "Machine Bench": [
-          [47, 58, 69],
-          [142, 162, 180],
-          [86, 104, 122],
-          [184, 144, 42],
-          [242, 201, 76]
-        ],
-        "Parts Bench": [
-          [94, 42, 18],
-          [221, 138, 69],
-          [164, 80, 31],
-          [216, 221, 226],
-          [143, 151, 158]
-        ],
-        "Tool Bench": [
-          [53, 35, 79],
-          [154, 123, 198],
-          [101, 68, 143],
-          [125, 243, 240],
-          [47, 180, 192]
-        ],
-        "_Homestead Core Top": [
-          [255, 214, 92],
-          [58, 63, 72],
-          [210, 214, 219],
-          [154, 161, 169],
-          [220, 254, 252],
-          [107, 114, 123],
-          [93, 249, 246],
-          [41, 183, 189]
-        ],
-        "Tree Cutter": [
-          [47, 51, 58],
-          [242, 201, 76],
-          [28, 30, 36],
-          [61, 105, 38],
-          [111, 190, 70],
-          [228, 230, 233],
-          [192, 195, 199],
-          [68, 73, 82]
-        ],
-        "Voltite Deposit": [
-          [186, 192, 202],
-          [205, 210, 218],
-          [157, 166, 178],
-          [166, 174, 186],
-          [93, 207, 249],
-          [93, 192, 249],
-          [93, 228, 248],
-          [229, 253, 243],
-          [93, 249, 246],
-          [93, 221, 248]
-        ],
-        "Volt Engine": [
-          [47, 51, 58],
-          [163, 170, 180],
-          [115, 122, 133],
-          [28, 30, 36],
-          [255, 196, 154],
-          [229, 253, 243],
-          [93, 249, 246],
-          [164, 80, 42],
-          [154, 92, 255],
-          [240, 144, 74],
-          [77, 0, 211],
-          [68, 73, 82]
-        ],
-        "Deep Drill": [
-          [47, 51, 58],
-          [242, 201, 76],
-          [28, 30, 36],
-          [85, 51, 140],
-          [154, 92, 255],
-          [228, 230, 233],
-          [192, 195, 199],
-          [68, 73, 82]
-        ],
-        "Shatter Mill": [
-          [47, 51, 58],
-          [242, 201, 76],
-          [28, 30, 36],
-          [85, 51, 140],
-          [154, 92, 255],
-          [228, 230, 233],
-          [192, 195, 199],
-          [68, 73, 82]
-        ],
-        "Sky Tap": [
-          [47, 51, 58],
-          [242, 201, 76],
-          [28, 30, 36],
-          [51, 137, 135],
-          [93, 249, 246],
-          [228, 230, 233],
-          [192, 195, 199],
-          [68, 73, 82]
-        ],
-        "Fast Belt": [
-          [115, 122, 133],
-          [59, 143, 214],
-          [28, 30, 36],
-          [163, 170, 180],
-          [93, 249, 246],
-          [47, 51, 58]
-        ],
-        "Charging Pad": [
-          [47, 51, 58],
-          [163, 170, 180],
-          [93, 249, 246],
-          [123, 170, 250],
-          [28, 30, 36],
-          [242, 201, 76],
-          [255, 160, 48],
-          [154, 92, 255]
-        ],
-        "Crystal Vat": [
-          [47, 51, 58],
-          [242, 201, 76],
-          [28, 30, 36],
-          [35, 131, 111],
-          [63, 239, 201],
-          [228, 230, 233],
-          [192, 195, 199],
-          [68, 73, 82]
-        ],
-        Starframe: [
-          [242, 201, 76],
-          [253, 252, 255],
-          [230, 234, 246],
-          [138, 134, 180],
-          [30, 26, 46],
-          [43, 38, 64],
-          [201, 212, 226],
-          [154, 92, 255]
-        ],
-        "Forge Hopper": [
-          [47, 51, 58],
-          [163, 170, 180],
-          [115, 122, 133],
-          [28, 30, 36],
-          [77, 0, 211],
-          [68, 73, 82],
-          [216, 196, 255],
-          [154, 92, 255],
-          [86, 92, 102]
-        ],
-        "Comet Ore": [
-          [41, 32, 33],
-          [42, 55, 27],
-          [33, 27, 27],
-          [29, 24, 24],
-          [60, 129, 15],
-          [84, 227, 0],
-          [48, 80, 23],
-          [36, 30, 30],
-          [224, 255, 205]
-        ],
-        "Comet Heart": [
-          [41, 32, 33],
-          [33, 27, 27],
-          [29, 24, 24],
-          [42, 55, 27],
-          [36, 30, 30],
-          [60, 129, 15],
-          [84, 227, 0],
-          [48, 80, 23],
-          [224, 255, 205]
-        ],
-        "_Starframe Spire": [
-          [242, 201, 76],
-          [253, 252, 255],
-          [230, 234, 246],
-          [138, 134, 180],
-          [30, 26, 46],
-          [43, 38, 64],
-          [201, 212, 226],
-          [154, 92, 255]
-        ],
-        Recycler: [
-          [47, 51, 58],
-          [242, 201, 76],
-          [28, 30, 36],
-          [79, 125, 59],
-          [143, 227, 107],
-          [228, 230, 233],
-          [192, 195, 199],
-          [68, 73, 82]
-        ],
-        "Belt Lift": [
-          [47, 51, 58],
-          [115, 122, 133],
-          [28, 30, 36],
-          [255, 160, 48]
-        ],
-        "Belt Drop": [
-          [47, 51, 58],
-          [115, 122, 133],
-          [28, 30, 36],
-          [242, 201, 76]
-        ],
-        "Crop Harvester": [
-          [47, 51, 58],
-          [242, 201, 76],
-          [28, 30, 36],
-          [132, 114, 54],
-          [240, 207, 99],
-          [228, 230, 233],
-          [192, 195, 199],
-          [68, 73, 82]
-        ],
-        "Belt Tunnel": [
-          [47, 51, 58],
-          [115, 122, 133],
-          [255, 160, 48],
-          [28, 30, 36],
-          [163, 170, 180],
-          [242, 201, 76]
-        ],
-        "Pure Copper Ore": [
-          [200, 102, 46],
-          [215, 123, 55],
-          [181, 84, 41],
-          [174, 132, 71],
-          [79, 199, 136],
-          [147, 161, 96]
-        ],
-        "Pure Voltite Ore": [
-          [229, 253, 243],
-          [93, 249, 246],
-          [93, 207, 249],
-          [93, 228, 248],
-          [93, 221, 248],
-          [93, 192, 249]
-        ],
-        Darkstone: [
-          [41, 32, 33],
-          [33, 27, 27],
-          [29, 24, 24],
-          [36, 30, 30]
-        ],
-        "Darkstone Bricks": [
-          [24, 20, 20],
-          [39, 31, 32],
-          [34, 28, 28],
-          [29, 24, 24],
-          [36, 30, 30]
-        ],
-        "Cracked Darkstone Bricks": [
-          [24, 20, 20],
-          [39, 31, 32],
-          [34, 28, 28],
-          [29, 24, 24],
-          [33, 27, 27],
-          [36, 30, 30]
-        ],
-        "Molten Darkstone Bricks": [
-          [255, 171, 33],
-          [81, 54, 34],
-          [34, 28, 28],
-          [39, 31, 32],
-          [77, 51, 30],
-          [255, 147, 40],
-          [36, 30, 30],
-          [79, 53, 32]
-        ],
-        "Engraved Darkstone": [
-          [47, 37, 38],
-          [42, 33, 34],
-          [34, 28, 28],
-          [39, 31, 32],
-          [36, 30, 30],
-          [29, 24, 24],
-          [24, 20, 20]
-        ],
-        "Smooth Darkstone": [
-          [47, 37, 38],
-          [42, 33, 34],
-          [34, 28, 28],
-          [39, 31, 32],
-          [36, 30, 30],
-          [29, 24, 24],
-          [24, 20, 20]
-        ],
-        "Scorpion Eggs Block": [
-          [204, 195, 177],
-          [219, 207, 189],
-          [196, 185, 171],
-          [234, 219, 201],
-          [245, 231, 208]
-        ],
-        "Stone Generator": [
-          [142, 148, 155],
-          [131, 137, 144],
-          [121, 127, 135],
-          [108, 113, 119],
-          [69, 73, 79],
-          [230, 100, 16]
-        ],
-        "Wheat Helper": [
-          [183, 151, 93],
-          [175, 143, 85],
-          [156, 120, 74],
-          [166, 132, 80]
-        ],
-        "Carrot Helper": [
-          [183, 151, 93],
-          [175, 143, 85],
-          [156, 120, 74],
-          [166, 132, 80]
-        ],
-        "Melon Helper": [
-          [183, 151, 93],
-          [175, 143, 85],
-          [156, 120, 74],
-          [166, 132, 80]
-        ],
-        Showcase: [
-          [15, 15, 15],
-          [159, 128, 84],
-          [174, 143, 90],
-          [135, 109, 71],
-          [111, 90, 59],
-          [122, 98, 65],
-          [100, 80, 53],
-          [148, 122, 76],
-          [122, 100, 63]
-        ],
-        "Pine Item Pedestal": [
-          [15, 15, 15],
-          [109, 77, 58],
-          [121, 87, 67],
-          [93, 65, 49],
-          [76, 54, 41],
-          [75, 54, 40],
-          [62, 44, 33],
-          [103, 74, 57],
-          [85, 61, 47]
-        ],
-        "Plum Item Pedestal": [
-          [15, 15, 15],
-          [138, 92, 84],
-          [149, 102, 93],
-          [117, 78, 71],
-          [97, 64, 59],
-          [104, 68, 62],
-          [85, 56, 51],
-          [127, 87, 79],
-          [104, 71, 65]
-        ],
-        "Cedar Item Pedestal": [
-          [15, 15, 15],
-          [69, 43, 20],
-          [81, 52, 25],
-          [59, 37, 17],
-          [48, 30, 14],
-          [50, 31, 14],
-          [41, 26, 12],
-          [69, 44, 21],
-          [57, 36, 18]
-        ],
-        "Aspen Item Pedestal": [
-          [15, 15, 15],
-          [187, 168, 115],
-          [199, 180, 128],
-          [159, 143, 98],
-          [131, 118, 80],
-          [144, 129, 90],
-          [118, 106, 74],
-          [169, 153, 109],
-          [139, 126, 90]
-        ],
-        "Jungle Item Pedestal": [
-          [15, 15, 15],
-          [154, 114, 76],
-          [165, 124, 86],
-          [131, 97, 65],
-          [108, 80, 53],
-          [123, 90, 59],
-          [102, 74, 48],
-          [140, 105, 73],
-          [115, 87, 60]
-        ],
-        "Palm Item Pedestal": [
-          [15, 15, 15],
-          [199, 141, 64],
-          [214, 153, 73],
-          [169, 120, 54],
-          [139, 99, 45],
-          [154, 108, 48],
-          [127, 89, 39],
-          [182, 130, 62],
-          [150, 107, 51]
-        ],
-        "Pear Item Pedestal": [
-          [15, 15, 15],
-          [143, 134, 84],
-          [153, 144, 93],
-          [122, 114, 71],
-          [100, 94, 59],
-          [107, 100, 62],
-          [88, 83, 51],
-          [130, 122, 79],
-          [107, 101, 65]
-        ],
-        "Cherry Item Pedestal": [
-          [15, 15, 15],
-          [234, 169, 194],
-          [244, 183, 206],
-          [199, 144, 165],
-          [164, 118, 136],
-          [184, 122, 145],
-          [152, 100, 120],
-          [207, 156, 175],
-          [171, 128, 144]
-        ],
-        "Spectral Item Pedestal": [
-          [15, 15, 15],
-          [26, 164, 157],
-          [32, 178, 170],
-          [22, 139, 133],
-          [18, 115, 110],
-          [17, 123, 118],
-          [14, 102, 97],
-          [27, 151, 144],
-          [22, 125, 119]
-        ],
-        "Mango Item Pedestal": [
-          [15, 15, 15],
-          [201, 186, 103],
-          [210, 196, 113],
-          [171, 158, 88],
-          [141, 130, 72],
-          [154, 142, 76],
-          [127, 117, 62],
-          [178, 167, 96],
-          [147, 137, 79]
-        ],
-        "Uranium Ore": [
-          [133, 139, 146],
-          [139, 145, 152],
-          [121, 161, 110],
-          [112, 186, 103],
-          [67, 252, 20],
-          [84, 227, 0],
-          [159, 255, 93],
-          [127, 133, 140]
-        ],
-        "Uranium Deposit": [
-          [186, 192, 202],
-          [205, 210, 218],
-          [157, 166, 178],
-          [166, 174, 186],
-          [84, 227, 0],
-          [88, 216, 1],
-          [113, 254, 57],
-          [67, 252, 20],
-          [159, 255, 93],
-          [76, 240, 10]
-        ],
-        "Atomic Bench": [
-          [43, 51, 48],
-          [147, 162, 154],
-          [89, 102, 95],
-          [182, 255, 59],
-          [111, 207, 31]
-        ],
-        Pump: [
-          [47, 51, 58],
-          [163, 170, 180],
-          [115, 122, 133],
-          [192, 195, 199],
-          [86, 92, 102],
-          [28, 30, 36],
-          [29, 76, 134],
-          [47, 134, 208],
-          [68, 73, 82],
-          [212, 241, 255],
-          [108, 198, 245]
-        ],
-        Condenser: [
-          [179, 187, 205],
-          [152, 155, 170],
-          [171, 174, 190],
-          [132, 135, 149],
-          [91, 92, 105],
-          [82, 82, 91],
-          [34, 35, 35]
-        ],
-        Centrifuge: [
-          [179, 187, 205],
-          [152, 155, 170],
-          [171, 174, 190],
-          [132, 135, 149],
-          [91, 92, 105],
-          [82, 82, 91],
-          [34, 35, 35]
-        ],
-        Synthesizer: [
-          [179, 187, 205],
-          [152, 155, 170],
-          [171, 174, 190],
-          [132, 135, 149],
-          [91, 92, 105],
-          [82, 82, 91],
-          [34, 35, 35]
-        ],
-        "Mob Farm": [
-          [47, 51, 58],
-          [242, 201, 76],
-          [28, 30, 36],
-          [228, 230, 233],
-          [192, 195, 199],
-          [68, 73, 82]
-        ],
-        "Fluid Tank": [
-          [179, 187, 205],
-          [152, 155, 170],
-          [171, 174, 190],
-          [115, 115, 127],
-          [97, 98, 111],
-          [34, 35, 35],
-          [43, 44, 45]
-        ],
-        "Reactor Controller": [
-          [179, 187, 205],
-          [152, 155, 170],
-          [171, 174, 190],
-          [132, 135, 149],
-          [103, 104, 116],
-          [115, 115, 127]
-        ],
-        "Reactor Frame": [
-          [179, 187, 205],
-          [152, 155, 170],
-          [171, 174, 190],
-          [132, 135, 149],
-          [103, 104, 116],
-          [115, 115, 127]
-        ],
-        "Reactor Casing": [
-          [47, 51, 58],
-          [163, 170, 180],
-          [115, 122, 133],
-          [86, 92, 102],
-          [92, 95, 101],
-          [68, 73, 82],
-          [28, 30, 36]
-        ],
-        "Reactor Glass": [
-          [179, 187, 205],
-          [152, 155, 170],
-          [171, 174, 190]
-        ],
-        "Reactor Port": [
-          [179, 187, 205],
-          [152, 155, 170],
-          [171, 174, 190],
-          [132, 135, 149],
-          [91, 92, 105],
-          [82, 82, 91],
-          [92, 199, 32],
-          [84, 227, 0]
-        ],
-        "Fuel Rod": [
-          [132, 135, 149],
-          [115, 115, 127],
-          [84, 227, 0],
-          [98, 181, 2],
-          [67, 252, 20],
-          [92, 199, 32]
-        ],
-        "Graphite Block": [
-          [37, 40, 40],
-          [34, 36, 36],
-          [42, 47, 47],
-          [39, 43, 43],
-          [36, 38, 38]
-        ],
-        "Coolant Channel": [
-          [132, 135, 149],
-          [152, 155, 170],
-          [85, 85, 94],
-          [57, 160, 206],
-          [61, 169, 217],
-          [74, 194, 241],
-          [65, 178, 227],
-          [97, 98, 111]
-        ],
-        "Reactor Slag": [
-          [115, 115, 127],
-          [98, 181, 2],
-          [103, 165, 34],
-          [107, 148, 65],
-          [128, 130, 144]
-        ],
-        "Atomic Bomb": [
-          [179, 187, 205],
-          [171, 174, 190],
-          [132, 135, 149],
-          [152, 155, 170],
-          [151, 189, 157],
-          [67, 252, 20],
-          [84, 227, 0]
-        ],
-        "Battery Controller": [
-          [47, 51, 58],
-          [163, 170, 180],
-          [28, 30, 36],
-          [192, 195, 199],
-          [41, 183, 189],
-          [93, 249, 246],
-          [68, 73, 82]
-        ],
-        "Battery Casing": [
-          [47, 51, 58],
-          [163, 170, 180],
-          [115, 122, 133],
-          [86, 92, 102],
-          [92, 95, 101],
-          [68, 73, 82],
-          [28, 30, 36],
-          [93, 249, 246]
-        ],
-        "Battery Cell": [
-          [179, 187, 205],
-          [122, 150, 170],
-          [138, 166, 187],
-          [171, 174, 190],
-          [154, 181, 203],
-          [82, 210, 255],
-          [116, 245, 253],
-          [75, 75, 84],
-          [68, 93, 110],
-          [76, 101, 118],
-          [85, 85, 94],
-          [84, 110, 126],
-          [152, 155, 170],
-          [119, 122, 137],
-          [132, 135, 149]
-        ],
-        Collider: [
-          [179, 187, 205],
-          [152, 155, 170],
-          [171, 174, 190],
-          [132, 135, 149],
-          [91, 92, 105],
-          [82, 82, 91],
-          [34, 35, 35]
-        ],
-        "_Collider Focus": [
-          [171, 174, 190],
-          [136, 51, 71],
-          [159, 59, 82],
-          [152, 155, 170],
-          [91, 92, 105],
-          [82, 82, 91],
-          [248, 93, 128],
-          [166, 160, 64],
-          [84, 227, 0],
-          [179, 187, 205],
-          [113, 43, 59]
-        ],
-        "_Collider Output": [
-          [171, 174, 190],
-          [136, 51, 71],
-          [159, 59, 82],
-          [152, 155, 170],
-          [91, 92, 105],
-          [82, 82, 91],
-          [248, 93, 128],
-          [166, 160, 64],
-          [84, 227, 0],
-          [179, 187, 205],
-          [113, 43, 59]
-        ],
-        Laser: [
-          [179, 187, 205],
-          [113, 43, 59],
-          [136, 51, 71],
-          [171, 174, 190],
-          [248, 93, 128],
-          [255, 125, 175]
-        ],
-        "Wireless Terminal": [
-          [186, 199, 219],
-          [179, 187, 205],
-          [171, 174, 190],
-          [30, 31, 31],
-          [34, 35, 35],
-          [26, 27, 27],
-          [178, 144, 98],
-          [217, 74, 105],
-          [98, 137, 5],
-          [36, 174, 214],
-          [249, 155, 78],
-          [122, 119, 153],
-          [232, 210, 75],
-          [185, 109, 145],
-          [152, 155, 170],
-          [116, 245, 253],
-          [72, 71, 77]
-        ],
-        "Dense Silo": [
-          [179, 187, 205],
-          [152, 155, 170],
-          [171, 174, 190],
-          [132, 135, 149],
-          [142, 145, 160]
-        ],
-        "Express Belt": [
-          [115, 122, 133],
-          [58, 110, 24],
-          [28, 30, 36],
-          [163, 170, 180],
-          [182, 255, 59],
-          [47, 51, 58]
-        ],
-        "Fast Loader": [
-          [47, 51, 58],
-          [93, 249, 246],
-          [68, 73, 82],
-          [242, 201, 76],
-          [163, 170, 180]
-        ],
-        "Uranium Glass": [
-          [159, 255, 93],
-          [67, 252, 20],
-          [76, 240, 10],
-          [84, 227, 0],
-          [88, 216, 1]
-        ],
-        "Glow Lamp": [
-          [115, 115, 127],
-          [97, 98, 111],
-          [152, 155, 170],
-          [179, 187, 205],
-          [220, 255, 195],
-          [239, 255, 228],
-          [255, 255, 255]
-        ],
-        "_Jetpack Back": [
-          [228, 230, 233],
-          [192, 195, 199],
-          [136, 139, 144],
-          [95, 102, 114],
-          [93, 249, 246],
-          [68, 73, 82],
-          [28, 30, 36]
-        ],
-        "_Atomic Spire": [
-          [232, 255, 176],
-          [253, 252, 255],
-          [230, 234, 246],
-          [111, 138, 82],
-          [28, 38, 20],
-          [42, 58, 28],
-          [201, 216, 192],
-          [182, 255, 59]
-        ],
-        "Isotope Comet Ore": [
-          [41, 32, 33],
-          [42, 55, 27],
-          [33, 27, 27],
-          [29, 24, 24],
-          [79, 138, 26],
-          [182, 255, 59],
-          [47, 90, 18],
-          [36, 30, 30],
-          [244, 255, 208]
-        ],
-        "Isotope Comet Heart": [
-          [41, 32, 33],
-          [33, 27, 27],
-          [29, 24, 24],
-          [42, 55, 27],
-          [36, 30, 30],
-          [79, 138, 26],
-          [182, 255, 59],
-          [47, 90, 18],
-          [244, 255, 208]
-        ],
-        "Fluid Pipe": [
-          [82, 82, 91],
-          [91, 92, 105],
-          [34, 35, 35],
-          [43, 44, 45]
-        ],
-        "Coolant Mixer": [
-          [179, 187, 205],
-          [152, 155, 170],
-          [171, 174, 190],
-          [132, 135, 149],
-          [91, 92, 105],
-          [82, 82, 91],
-          [34, 35, 35]
-        ],
-        "Coolant Pipe": [
-          [82, 82, 91],
-          [91, 92, 105],
-          [34, 35, 35],
-          [43, 44, 45]
-        ],
-        Scaffolding: [
-          [179, 187, 205],
-          [152, 155, 170],
-          [171, 174, 190],
-          [132, 135, 149]
-        ],
-        "Nova Trophy": [
-          [0, 0, 0],
-          [242, 255, 240],
-          [205, 255, 212],
-          [110, 245, 140],
-          [160, 255, 175],
-          [46, 232, 96],
-          [58, 61, 65]
-        ],
-        "Uranium Block": [
-          [180, 255, 151],
-          [129, 255, 79],
-          [67, 252, 20],
-          [113, 254, 57],
-          [84, 227, 0],
-          [76, 240, 10],
-          [159, 255, 93],
-          [88, 216, 1]
-        ],
-        "Pure Uranium Ore": [
-          [67, 252, 20],
-          [76, 240, 10],
-          [84, 227, 0],
-          [159, 255, 93],
-          [113, 254, 57],
-          [88, 216, 1]
-        ],
-        "Copper Block": [
-          [245, 179, 81],
-          [233, 152, 69],
-          [215, 123, 55],
-          [212, 118, 53],
-          [208, 113, 51],
-          [200, 102, 46],
-          [204, 108, 49],
-          [181, 84, 41]
-        ],
-        "Voltite Block": [
-          [229, 253, 243],
-          [93, 249, 246],
-          [93, 228, 248],
-          [93, 238, 248],
-          [93, 221, 248],
-          [93, 207, 249],
-          [93, 211, 249],
-          [93, 192, 249]
-        ],
-        "Nova Bomb": [
-          [179, 187, 205],
-          [171, 174, 190],
-          [132, 135, 149],
-          [152, 155, 170],
-          [154, 92, 255],
-          [255, 95, 210],
-          [255, 240, 251]
-        ]
+      dY = ["Stone", "Diorite", "Andesite", "Granite"],
+      JY = new Set(dY),
+      MY = (Object.keys(hY), {
+        "Pure Coal Ore": "Coal Ore",
+        "Pure Iron Ore": "Iron Ore",
+        "Pure Gold Ore": "Gold Ore",
+        "Pure Diamond Ore": "Diamond Ore",
+        "Pure Moonstone Ore": "Moonstone Ore"
+      });
+    const wY = ["Magmasteel Helmet", "Magmasteel Chestplate", "Magmasteel Gauntlets", "Magmasteel Leggings", "Magmasteel Boots"];
+
+    function bY(YY, rY) {
+      const DY = Math.floor(5 * YY / (2 * rY + 1));
+      return Math.min(4, Math.max(0, DY))
+    }
+    var XY = DY(1244);
+    var qY = DY(35799);
+    var pY = DY(36032),
+      kY = DY(25),
+      GY = DY(8287);
+    const xY = ["foraging", "combat", "mining", "farming", "fishing", "exploration"],
+      nY = 1e3;
+
+    function PY(YY) {
+      return Math.max(0, YY)
+    }
+
+    function UY(YY) {
+      return 1 + .01 * PY(YY)
+    }
+
+    function LY(YY) {
+      return 1 + .005 * PY(YY)
+    }
+
+    function tY(YY) {
+      return 1 + .005 * PY(YY)
+    }
+
+    function Yr(YY) {
+      return .01 * PY(YY)
+    }
+
+    function rr(YY) {
+      return 150 / (150 + PY(YY))
+    }
+
+    function Dr(YY) {
+      return 1 + .002 * PY(YY)
+    }
+
+    function Fr(YY) {
+      return Math.round(10 * YY) / 10
+    }
+
+    function Ar(YY, rY) {
+      switch (YY) {
+        case "foraging":
+          return {
+            translationKey: "skyblockGame:foragingBenefit", percent: Fr(100 * (LY(rY) - 1))
+          };
+        case "combat":
+          return {
+            translationKey: "skyblockGame:combatBenefit", percent: Fr(100 * (UY(rY) - 1))
+          };
+        case "mining":
+          return {
+            translationKey: "skyblockGame:miningBenefit", percent: Fr(100 * (tY(rY) - 1))
+          };
+        case "farming":
+          return {
+            translationKey: "skyblockGame:farmingBenefit", percent: Fr(100 * Yr(rY))
+          };
+        case "fishing":
+          return {
+            translationKey: "skyblockGame:fishingBenefit", percent: Fr(100 * (1 - rr(rY)))
+          };
+        case "exploration":
+          return {
+            translationKey: "skyblockGame:explorationBenefit", percent: Fr(100 * (Dr(rY) - 1))
+          }
+      }
+    }
+
+    function Ir(YY) {
+      return "farming" === YY ? 200 : 100
+    }
+
+    function Rr(YY, rY) {
+      if (!Number.isSafeInteger(YY) || YY < 0) throw new Error("Skill XP must be a non-negative safe integer");
+      const DY = Ir(rY),
+        FY = YY => function(YY, rY) {
+          return Ir(YY) * rY * (rY + 1) / 2
+        }(rY, YY);
+      let AY = Math.min(nY, Math.floor((Math.sqrt(8 * YY / DY + 1) - 1) / 2));
+      return AY < nY && FY(AY + 1) <= YY ? AY++ : FY(AY) > YY && AY--, {
+        totalXp: YY,
+        level: AY,
+        xpIntoLevel: YY - FY(AY),
+        xpForNextLevel: AY === nY ? null : DY * (AY + 1)
+      }
+    }
+    const Or = new Set(["Apple Block", "Plum Block", "Coconut Block", "Pear Block", "Cherry Block", "Mango Block", "Banana Block"]);
+
+    function gr(YY) {
+      return Or.has(YY)
+    }
+    const ar = new Set(AY.ob);
+
+    function vr(YY) {
+      return ar.has(YY)
+    }
+    new Set(["Watermelon", "Melon", "Wheat|FreshlyGrown", "Rice|FreshlyGrown", "Corn Plant|FreshlyGrown", "Chili Pepper Plant|FreshlyGrown", "Chili Pepper Plant|Lava|FreshlyGrown", "Tomato Plant|FreshlyGrown", "Tomato Plant|Top|FreshlyGrown", "Carrot Plant|FreshlyGrown", "Potato Plant|FreshlyGrown", "Sugar Cane Plant|FreshlyGrown", "Sugar Cane Plant|Top|FreshlyGrown", "Coffee Plant|FreshlyGrown", "Lettuce Plant|FreshlyGrown", "Cauliflower Plant|FreshlyGrown", "Parsnip Plant|FreshlyGrown", "Red Cabbage Plant|FreshlyGrown", "Beetroot Plant|FreshlyGrown"]);
+    const ur = {
+        "Maple Log": 10,
+        "Pine Log": 10,
+        "Plum Log": 10,
+        "Cedar Log": 10,
+        "Aspen Log": 10,
+        "Jungle Log": 10,
+        "Palm Log": 10,
+        "Pear Log": 10,
+        "Cherry Log": 10,
+        "Spectral Log": 10,
+        "Mango Log": 10
       },
-      oB = "79168767",
-      kB = "e1e7e31a4afed7bb6e87fcf8193e7df54a8c551cb4c2b17bc82677e1b4eeb49e",
-      LB = "a92c2b35dbd727b0c4d179fb62c7459e3276ff22d2e3d468680cc7dcea046f67"
-  },
-  34901: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAkklEQVR42mMoqmr9D8JZhdUoGCbOACKWnTH5375R73/6NA0wBrFBYmAFINUggdoluigYJAaSAysA6UJXABKjkgKQQ5AdhuxguC8IepOgApj/0TE8HKjjTZgPYBhFAUhg0g5DuG4QGyQGDwfkiEKOsEEVDsgRhRxhxHkTpgDdCnqHAy5fwMOBMl9QnrMIRhYhbwIAUndZzyeW4fUAAAAASUVORK5CYII="
-  },
-  34908: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAmElEQVR42mMoqmr9D8JZhdUoGCbOACLSp2mg4PaNev+XnTGBKACpBgnULtFFwSAxkBxYAUg1ugKQScQrwGsFQUcS5U2CCmBGolsFDwcQZ9IOQxTfoPgCxAEJUqYApxUEHUndcABhEBtrOIAchuxQrN5E9ip5CrBaQdCR1AkH9KQGswojHGAY5lis3kT2LvkKUKwg6EhC3gQA6TBZz9KShxkAAAAASUVORK5CYII="
-  },
-  34913: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAkUlEQVR42mMoqmr9D8JZhdUoGCbOACLSp2n8b9+o93/ZGRMwBrFBYmAFINUgTu0SXRQMEgPJUUkByE50BSAxsAKQQ5AdhuxguC8IepOgAmTjka2BhwPIvkk7DOEOBLFBYijehIUiDFMxoGCRhQ3TOxzQHYkSDgQDCjm5ISe7QRUOeK2gPFVTHpKwyMIWkkR5EwCWuFnPdyNi+wAAAABJRU5ErkJggg=="
-  },
-  34922: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAlklEQVR42mMoqmr9D8JZhdUoGCbOACKWnTH5375R73/6NA0UDFYAUg2SrF2ii4JBYiA5sAKQanQFIFOJV4DXCoKOJMqbBBWgGw2zEh4OyL4ASU7aYQgWw+pNkAIQTZkCFCsIOpK64QAyFmQ8znCAORCnL2BepEwBhhUEHUmdcEA3GiNfIDsOqy+QvUe+ApxWEHQkIW8CAP/wWc8afgh7AAAAAElFTkSuQmCC"
-  },
-  34927: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAApElEQVR42mPQN7b6jw8zgIjFq7b8L65qRcEgMbiCsJi0/zJyKv+f5Nn/f9UNYbt4BqEqAEn+vzT3///PF//fDJbDVACT/P+g6///nemYCkD2gowGYRAbRQHIQSABZIziSILepE44EPQmLKBAklgDCuR3cBiAwgJo0tAMB4LeBAfUAgOwN0GJBjMcoJL/v1wb6ukBnzcJZhxwegCFASgsgCbRMRwANw4MZwI4edkAAAAASUVORK5CYII="
-  },
-  34929: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiUlEQVR42mPQN7b6jw8zgIjFq7b8d/EMguNr/2+DxeAKiqta/9uGJvw/cPg4mN5z+zFYIYoCkCQMgxRhVYBsCoaCfUtK/7ck2oLpjS1hqArQHQnCKI4k6E2Sw+HS/+v4w6H/8EVahANyGIDogQ4HozjzAUsPsDAAhcmgD4dHHz7TIhyQw4C66QEAg6YU6VXVJBAAAAAASUVORK5CYII="
-  },
-  34935: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAwklEQVR42mPYvPvsfxCeMXvV/9Xr9oExiA0TZ4AJmmV3/Tfs2wHGIDZMnMHbO+Q/CDs6ev7HxmYIDY37D8LoJsDE4QpcYvP++6SWgTGIDVcAMgYkGHTp//+Sr3/BGMQGiYGtgLm2a9nu/7O2ngZjEBvuC5CXQLi8qvN/S/tUMAaxYeIM1AsHdF+ghENIXh2GL0BixIcDCKO7AW4FQV8QHQ5V01aBQxCEQWyUcAAFL7ovQGLEhwNR6QE9RQ1EOIzw9AAA146Mt324gEkAAAAASUVORK5CYII="
-  },
-  34943: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAkElEQVR42mPQN7b6jw8zgIjFq7b8l5FTQcEgMbiCA4eP/9fcvve/9bkr/2Ov3wHTIEVwBei6YRjFhCt///6f8fvn/9if38A0hgJkSZBiFAUgB7l4BqFgFEcS9CZ1wgE5DEBhQno44PUmSAGyJEZADZZwwBubRIUDXm/CAgrZmkEZDnhjk+j0gNObBIOaonAAAFhAFLFPQxX/AAAAAElFTkSuQmCC"
-  },
-  34952: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAoElEQVR42pWSwQ6AIAxD+QY9qAf1ZEw8+v//pilJCbAO9NAQmgesY2EYp+e8biP46348YV62aGBDEcBaAPlK/z9ASYCClwAvBRUBiKcgepAEcrD/hCoyb5gb0wXMDayBoIxJQEVtpojfnTdF3tDqQQJ4qk4AL6gELqCG5hvAqLIGbFqjH+pPMoA3MEUfahmgLs6k8IalANS4JaCbwht5AC91o2ckw5oiNQAAAABJRU5ErkJggg=="
-  },
-  34955: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAApElEQVR42pWSsQ6AIBBD+SjjYmLi4ujox7k5+QF+oKYkJcD1QIeG0DzgelwYxuPZ9tsI/rJeT5jmMxrYUASwFkC+0v8PUBKg4CXAS0FFAOIpiB4kgRzsP6GKzBvmxnQBcwNrIChjElBRmynid+dNkTe0epAAnqoTwAsqgQuoofkGMKqsAZvW6If6kwzgDUzRh1oGqIszKbxhKQA1bgnopvBGHsAL5Ao2Xz94CG4AAAAASUVORK5CYII="
-  },
-  34962: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAApklEQVR42pWSwQ2AIBAE6cbExJc1+PNnBVbg16ctWLFmSZYAtwf62BA2A9weF45leO59NoJ/bdMTznWMBjYUAawFkK/0/wOUBCh4CfBSUBGAeAqiB0kgB/tPqCLzhrkxXcDcwBoIypgEVNRmivjdeVPkDa0eJICn6gTwgkrgAmpovgGMKmvApjX6of4kA3gDU/ShlgHq4kwKb1gKQI1bAropvJEH8AIN9webxwaFmwAAAABJRU5ErkJggg=="
-  },
-  34964: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAeklEQVR42mPQN7b6jw8zgIjFq7b8l5FTQcEgMbiC4qrW/zeD5f7/35n+/1V3Gph28QxCVRAWk4aCMRSgW4GhAGQsTgUgB4EEkDGKIwl6kzrhgBwGoDChQTiABJ/k2Q/ucEAOAxqlB5gELF0M2vSAnDdoGA6wdEG9cAAATDXc9BUaQeMAAAAASUVORK5CYII="
-  },
-  34972: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAlElEQVR42mPYvPvsfxBOms/yP2krEwZmmDF71f/i4nqsGKSJYfW6ff8Tk/L/Kykr/w95zACmQRgkhqJAW0f3/67jt/+D+CCFGApAgiAFIAxSjNUEEAYpRFEAciSIg+5AuAK4NztZMTGKAqqEA3JYkOdNvAGFHAaDOhyISg8gjDM9gNhDOz0gOxJneiDoTbwBRbv0AADK+kuXF0EjLAAAAABJRU5ErkJggg=="
-  },
-  34978: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAYklEQVR42mNI2sr0Hx9mSJrP8n/1un3/QfTm3WdRMEgMrCCpk/U/TGHQpf9gDNMEUQDFIMHkJ//AGKcCmPFYFYCtQsYwBTDV6KZhOBLDNLACqocDQW8SDKjhEQ6j6WEIpwcAzOVa24nwQ6EAAAAASUVORK5CYII="
-  },
-  34985: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAjUlEQVR42mNI2sr0HwPPZ/m/efdZMGYAcYqL67HiGbNXQRQkJuX/V1JWBuOQxwxgGiS2et0+hAKQBEhg1/Hb/7V1dDEVgARBkiAMUoxVAUgCRGM1Ad2BIDG4I5M6WTEwwptUDQdYGGANB4LeJCqgkMNi0IYDwfQACwe86QEkOPTTA05HEvQmUQFFm/QAAGeuS5dJAwFDAAAAAElFTkSuQmCC"
-  },
-  34987: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAACACAYAAAA27Cg+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAuklEQVR42mNYvW7ffxDuMHb/P986CIxBbJg4w4zZq/5Hx2RixSA5BpCqoKDo/z9iG1AwSAxsArKCZQscwJh8BVitADkExEF3IEgM7MjNu8/+B+FCbWuw90AYxIaJM4yGw2g40C4c8PoCJBHymAGMQWzSFeC0YjQcRsNhsIYDQV/AJGAKSVeA04rRcBgNh8EaDkSVD7AaD2f5gFfB8CknR8NhxIQDUb4g2ODEqwCnFaPhMBoOo+FAg3AAAIoFCANDVarKAAAAAElFTkSuQmCC"
-  },
-  34993: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAoElEQVR42mPYvPvsfxA2y+76b1K7EAMzzJi96n9xcT1WDNLEsHrdvv+JSfn/z1669X/FsetgDGKDxFAUaOvo/rdccA6MQWysChw3PQZjrApgkl6HPoIxXAHIkSAOugPhCmDe1IusxsAoCqgTDsgYqzeRMYYCs/wOuFdBbKzhAAsDEHvQhgPB9EAwHGCSWMMBOQyGdjgQzBd4Awo5DKibLwBw/XCXyTjHZAAAAABJRU5ErkJggg=="
-  },
-  34998: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAYklEQVR42mMwqV34Hx9mMMvu+r963b7/IHrz7rMoGCQGVqAXWf0fpjDo0n8whmkCK4BhkGDyk39gjFMBzHisCkBWIWO4AphqdNMwHIluGlgB9cOBoDcJBtTwCIfR9DCE0wMAfs11w10yRroAAAAASUVORK5CYII="
-  },
-  35007: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAm0lEQVR42mMwqV34Hx2bZXf937z7LBgzgDjFxfVY8YzZqyAKEpPy/5+9dOv/imPXwRjEBomtXrcPoUBbR/e/5YJzYAxiY1XguOkxGGNV4HXoIxjDFGEoQHcgSAzuSL3IagwM9yZ1wwEZY/UmMsZQYJbfAfciiI2hACSBHBaDNhwIpgeC4QCTxBkOyGExdMOBYL7AG1DIeYK64QAAt8Fwl4hhJ+QAAAAASUVORK5CYII="
-  },
-  35012: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAsElEQVR42mNoaZ/6f8bsVWAMYqPzGUJD4/5bLjj333blzf8gNowPwiA2WIHXoY9gDFMAYjtuegxRkJiUDxcAsWF8EAaxwQpAkgQVwATQNRB2A0FvEh0OMH+DMChMUMIB5khkN8D4DOjeQvcVTgVwb+IKKJRwwOsG6oQDsr9hfFj6gLsBFvbobiIcm9jCASM94E1RBN1AvXBAzxco4YCcBtHdRDg2iQ4HnCmKoBsIeRMAW5mOY3E9YZMAAAAASUVORK5CYII="
-  },
-  35021: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAnUlEQVR42mPYvPvsfxD2WXDgf8zqUxiYYcbsVf+Li+uxYpAmhtXr9v1PTMr/v2WV8f9ps9T+O7t6/i/5+hcshqIAJBEcHgvGQZf+YyoACcIUgBRjKAAZC5IAWQOyDq4A5EgQB92BcAUwbzpP2YKBURRQHg44HUm0NwkGFM6gHkzhMJoeEL4AORIWHlh9QXR6wBqSMP+DFKKEJMXhAACjAIxvfWnaygAAAABJRU5ErkJggg=="
-  },
-  35028: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAY0lEQVR42mOIWX3qPz7M4LPgwP/V6/b9B9Gbd59FwSAxsALnKVv+wxQGXfoPxjBNYAUwDBJMfvIPjHEqgBmPVQHIKmQMVwBTjW4ahiPRTQMroH44EPQmwYAaHuEwmh6GcHoAAJ9Q0RenaahCAAAAAElFTkSuQmCC"
-  },
-  35034: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAnElEQVR42mOIWX3qPzr2WXDg/+bdZ8GYAcQpLq7HimfMXgVRkJiU/7/k69//zq6e/6fNUvu/ZZUxWGz1un0IBUGX/v8PDo8FY5BCDAUgQZgCkGIMBSBjQcaDFIKsw1CA7kCQGNyRzlO2YGC4N6kXDgQdSdCbBAOKYFAPhnAYTQ8QN8D8D3IkVl8gexOrL0CCeAMKZCxIAhYe1AsHAP6ijG9TA6I6AAAAAElFTkSuQmCC"
-  },
-  35040: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAyUlEQVR42mPQN7b6jw8zgIjFq7b8L65qRcEgMbgCkMC6/qj/MnIq/5c12oNpF88gVAUgQZiiqng9TAW/P176f2pL1f8P55PBNIaCXVPiwJIgGqQYRQHIQSDJrw9mgyVBNIojCXqTOuFA0JuwAIIpwlAAcvmeBeFg+saJeVhMqHcHSx5fUQOmMcIBOQxAYTIQ4UDQm7AAginCUABLB7B0gTU9gCRh6QIjHJDDYCDTA15vEsw4sHQASxcYCmDpAJYusKYH5LxBdDgAAPA9JwuWaUAMAAAAAElFTkSuQmCC"
-  },
-  35042: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAfUlEQVR42mPQN7b6jw8zgIhljfb/1/VHoeAJBWYIBU+evfwvI6eCQcMVHDh8HCyAThOv4PfHS2CBD+eTwTSMD1cA4mDDcAUEvUlQAcjP6OFQFa+H6gZsYYGiAJtXSVOAHgYgPj3DAeTngU4P2MJgMKQHUF6hd3rAljeoEw4Ae4L1dkg6/AQAAAAASUVORK5CYII="
-  },
-  35047: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAY0lEQVR42mPQN7b6jw8zgIjFq7b8l5FTQcEgMbiCmPjU/wcOH0fBIDG4ApAASBc6DVcA4nR0T8CgUawACSBjFCtADnLxDELBKI4k6E3KwwFdEoZJCyiQ19Dp0XAYiuEw5PMFAA+R/+xFE4cJAAAAAElFTkSuQmCC"
-  },
-  35054: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAuElEQVR42mPQN7b6jw8zgIjFq7b8L65qRcEgMbiCsJi0//2HL/5X9Yj+rxWc+d/80M3/Lp5BqApAkjf/vPtf+Pn6f3lbX0wFMBAExKnP/mAqkJFTgdsPYqMoADkIJICMURxJ0JvUCYc9tx+DwwDkXdXVBzF9AZKEeROkCEMBKJBgARV15v4QDYdr/yDeA0U11thETg+gMMEZDou/P8WeooZMegCFAci7WGMTJAkCp4lJD1hTFO3CAQBsnBEThkme9wAAAABJRU5ErkJggg=="
-  },
-  35058: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAoklEQVR42pWSUQqAIBBEvUQUdOA+g376CTpCdMJihBF1Z7U+BnF46s66YVjWZ74vI/jTcT5h3PZoYEMRwFoA+Ur/P0BJgIKXAC8FFQGIpyB6kARysP+EKjJvmBvTBcwNrIGgjElARW2miN+dN0Xe0OpBAniqTgAvqAQuoIbmG8CosgZsWqMf6k8ygDcwRR9qGaAuzqTwhqUA1LgloJvCG3kALy7/W2OcSfXIAAAAAElFTkSuQmCC"
-  },
-  35062: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA4UlEQVR42mPQN7b6jw8zgIjFq7b8Pzjr///Yn9/+z/j98/+za//BYnAFxVWt/2fF/P9/4PDx/x3dE8CKXTyDUBXAJEESIDZWBTBJmEIUBdEMP8ESIAWFCmhWgBwEEkDGKI4k6E2iwgHkTVAYXPn7F+xNjHAAORLkQBAGKcbwBcxrMJ9gDQeYBNZw8GW4DNeNEdR0CgeQvaAwAIUFyJsY4QCKIFhMgsIEazggRznO9IAzoEBugEliBDWdwgGUF0BhAMobWNMDSBAWDhiJFjk9IEc7zoyDNT2A3ADTjRHUFIUDAOgCMtXQJnBkAAAAAElFTkSuQmCC"
-  },
-  35071: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAlklEQVR42mPQN7b6jw8zgIjFq7b8l5FTgeNr//6DxeAKiqta//8/Muv/oTij//+fXwPTLp5BqArCYtJQMIYCkNEHDh//39E9AczGqgAkCVKEoQDkIJAAMkZxJEFvkhwOm/5gCweg/y8UeYDpJQFaZIYDTm8SDKgBCAeNqGLs4QBOD9B0MQLSg35WB/ZwAKUDWLoYUukBAKNn+OCnDQGbAAAAAElFTkSuQmCC"
-  },
-  35078: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAZ0lEQVR42mPYvPvs/xmzV/1fvW4fCgaJgeQYQIzi4nqsGCTHAFKdmJT/X0lZGQWDxEBycAXaOroomHQFjpse//c69BFMgzBcAcghIA66A0FiYEcS9OaQCwfksBip4QDy/2h6oGU4AAALk4ERa4KWBAAAAABJRU5ErkJggg=="
-  },
-  35081: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAeUlEQVR42mPYvPvs/xmzV/1fvW4fCgaJgeQYQIzi4nqsGCTHAFKdmJT/X0lZGQWDxEBycAXaOrooGEOB46bHcOx16CN2BSAJmCK4ApBDQBx0B4LEwI4k6M3BFA4gL2L1JnpAwRSNgHDAmh5wBtTwCgfkfIE1PdAuHABA3ZcbFoEIVwAAAABJRU5ErkJggg=="
-  },
-  35087: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAfElEQVR42mPYvPvs/xmzV/1fvW4fCgaJgeQYQIzi4nqsGCTHAFKdmJT/X0lZGQWDxEBycAVehz6CseOmx2AaQwFIAoZxKoCZAMJwBSCHgDjoDgSJgR1J0JuDKRyQFaB4Ez2gYIqGZjggRzdWb5IfUEM2HAjmC4IBRd1wAAAsia1MQAXjwwAAAABJRU5ErkJggg=="
-  },
-  35093: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAeklEQVR42mPYvPvs/xmzV/1fvW4fCgaJgeQYQIzi4nqsGCTHAFKdmJT/3+vQRzB23PQYjEFiIDmsCkA0hgKYTrwKsFoBcgiIg+5AkBjYkQS9Sb1wIOgLguFAMCSRjR/04QDzDd7oJi/B4AyowRYOyA4lL9kTHVDUDQcAHpzFPT1JU6oAAAAASUVORK5CYII="
-  },
-  35096: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAXklEQVR42mNoaZ/6H4SLi+v/Y2MzhDxm+A/CSVuZ/mNjMzj/EfkPwjHHFeCCyGy4AhAHG5uwAmRjCSrA6gaC3qQ8HLA5ksrhgCuoB204YHUk9cIBWRDFm6PpgUrpAQBgi1Sn7AWw5gAAAABJRU5ErkJggg=="
-  },
-  35099: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAwklEQVR42mPQN7b6jw8zgIjFq7b8l5FTAeNvNxv///9yDSwGV1Bc1QqX/PVyO5jt4hmEqgAmCaI/nfTBVACzAiSJ1QRkSQwFIAfdDJb7/39n+v//l+b+f5Jnj+pIgt4kKRxAPvn/+SL2cIB5E6svkMMAROMMB5wmIEtiDQeQ3191p0HCYoEBLcMBnB4edOFODzhjEzkMQGGCMxxwpihkSazhAEsHsHRBw3AA+QRneoB5E6svkMOARukBlg5g6YLocAAAigYStPzFN6MAAAAASUVORK5CYII="
-  },
-  35101: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAoUlEQVR42pWSsQ6AIBBD+TEXTYwOxoHRxf//CUxJSoDroQ4NoXnA9bgwzWuK120EfztjCst+ZAMbigDWBqhX+v8BSgIUvAJ4KagMQDwF0YMkUIPvT6gi64a5MV3A3MAaCMqYBFTUYYr83XVT5A2jHhSAp/oE8IJK4AJqaL4BjCprwGY0+qH/JAN4A9P0oZcB+uJMCm9YGkCNWwFeU3gjD+ABssjxSIVC2SIAAAAASUVORK5CYII="
-  },
-  35104: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAApElEQVR42pWSsQ6AIBBD+RAT4+IHObk4mzi7+g1+sqYkJcD1QIeG0DzgelxYjuHZ79kI/nZNT1jPMRrYUASwFkC+0v8PUBKg4CXAS0FFAOIpiB4kgRzsP6GKzBvmxnQBcwNrIChjElBRmynid+dNkTe0epAAnqoTwAsqgQuoofkGMKqsAZvW6If6kwzgDUzRh1oGqIszKbxhKQA1bgnopvBGHsALLmgBa5jKaxAAAAAASUVORK5CYII="
-  },
-  35110: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAABACAYAAAAnBDaKAAAACXBIWXMAAAsTAAALEwEAmpwYAAABGklEQVR42q1VUQ5CIQzbOfzzw8T7egAP8G7hxVAQSDu68Uz8WJ7BwtauAyuPeynPW2lfEVaOa2kxFl+Xb/RNDKiLA1CjAdTRElAXMNWsQRzboqc2VVj7EkDFZKH+hFoM81E9HRQDiKaXmk7AXbIXSgOiWX+gBlKoJMwL409kmig70YxMQzoEtjvhB5EXpTef09dkmRdyP3QtjFrtaX5iHRwHMmWzlebI6WludVhOCGmmvVA00/vBjWI+/lMHZf3efk0z9INvt6wBhiZut+wFakF+cEdqmqqOBXDa9pIF3ksIIB1Sy/2sQzj+I7/UAR01QOfvKDQM9iM1DAH8XGyfg1So5Vn8zz2ZPM9xkURzCIVptkL1jXqy4AJ5A9PUhluqac3SAAAAAElFTkSuQmCC"
-  },
-  35113: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAApElEQVR42pWSQQ6AIBAD+ZVXj37BT3rx4tlPGGPiVzQlKQG2C3poCM0A22XDsBzPvN9G8KftesK4ntHAhiKAtQDylf5/gJIABS8BXgoqAhBPQfQgCeRg/wlVZN4wN6YLmBtYA0EZk4CK2kwRvztviryh1YME8FSdAF5QCVxADc03gFFlDdi0Rj/Un2QAb2CKPtQyQF2cSeENSwGocUtAN4U38gBemmrgx7lTTjcAAAAASUVORK5CYII="
-  },
-  35117: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAnklEQVR42pWSwQ6AIAxD+XhPaqIeNPGin6opSQmwDvTQEJoHrGNhmofnuk8j+PuxPGHdxmhgQxHAWgD5Sv8/QEmAgpcALwUVAYinIHqQBHKw/4QqMm+YG9MFzA2sgaCMSUBFbaaI3503Rd7Q6kECeKpOAC+oBC6ghuYbwKiyBmxaox/qTzKANzBFH2oZoC7OpPCGpQDUuCWgm8IbeQAvG4++15SMJnYAAAAASUVORK5CYII="
-  },
-  35122: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAApklEQVR42pWSMQ6AIBAEeYadlR/wXxYWln7LzsoH+CTNkiwBbg+02BA2A9weF5ZjePZ7NoK/XdMT1nOMBjYUAawFkK/0/wOUBCh4CfBSUBGAeAqiB0kgB/tPqCLzhrkxXcDcwBoIypgEVNRmivjdeVPkDa0eJICn6gTwgkrgAmpovgGMKmvApjX6of4kA3gDU/ShlgHq4kwKb1gKQI1bAropvJEH8ALncGOPwN7ovQAAAABJRU5ErkJggg=="
-  },
-  35124: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAo0lEQVR42pWSwQqAIBBE/bWOHfuD/jCIDhEEnfqtYoQRdWe1DoM4PHVn3XAMy3PPuxH8a9qecI5rNLChCGAtgHyl/x+gJEDBS4CXgooAxFMQPUgCOdh/QhWZN8yN6QLmBtZAUMYkoKI2U8Tvzpsib2j1IAE8VSeAF1QCF1BD8w1gVFkDNq3RD/UnGcAbmKIPtQxQF2dSeMNSAGrcEtBN4Y08gBfx/sln/hITjwAAAABJRU5ErkJggg=="
-  },
-  35127: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAZ0lEQVR42mPQN7b6jw8zgIjFq7b8L65qRcEgMbiCA4eP/7cyUvvfNXE2GIPYIDEqK9jQ64WCURSAHOTiGYSCURxJ0JvUCQcvWy24L0BsDF9QrmBIhEOUlwHcFyA2hi8oVzCaHmgdDgCfWyPv9v4SBAAAAABJRU5ErkJggg=="
-  },
-  35129: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAApElEQVR42pWSyw2AIBBEKcGzZ4uwLa8eLcFK/RSgGZIhwM6CHiaEyQN2lg3HMjz3PhvBv7bpCec6RgMbigDWAshX+v8BSgIUvAR4KagIQDwF0YMkkIP9J1SRecPcmC5gbmANBGVMAipqM0X87rwp8oZWDxLAU3UCeEElcAE1NN8ARpU1YNMa/VB/kgG8gSn6UMsAdXEmhTcsBaDGLQHdFN7IA3gBYCyfH50PSeQAAAAASUVORK5CYII="
-  },
-  35136: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAoUlEQVR42pWSvQ6AIBCDeXxHN9/AuLi4+lb+zJqSlADXAx0aQvMB1+PCMSzPPe9G8K9pe8I5rtHAhiKAtQDylf5/gJIABS8BXgoqAhBPQfQgCeRg/wlVZN4wN6YLmBtYA0EZk4CK2kwRvztviryh1YME8FSdAF5QCVxADc03gFFlDdi0Rj/Un2QAb2CKPtQyQF2cSeENSwGocUtAN4U38gBe8B5Bdu0nAAAAAAAASUVORK5CYII="
-  },
-  35144: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAdUlEQVR42mPQN7b6jw8zgIjFq7b8l5FT+X/g8PH/Hd0TwGyQGFxBcVUrWBIZu3gGoSqIiU9FwRgKQMZ+2VD3/8MELzAbQwHIbmSMogDkIJAAMkZxJEFvUiccQILIGMMXlAfUaDgMoXCgTr74eWETOG/QOV8AAH2KBtTFvnlHAAAAAElFTkSuQmCC"
-  },
-  35151: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAeUlEQVR42mPQN7b6jw8zgIjFq7b8L65q/X/g8HEwBrFBYnAFYTFp/2XkVP4rRc37X7XpIZjt4hmEqQAkee3Tf9wKlt/9+V+/7QJuBSBJkDUYCkAOAgkgYxRHEvQm9cKBht4kGNSDKRxo6E2CQT2YwoGG3iQY1BSFAwA09/TQ5aX3OgAAAABJRU5ErkJggg=="
-  },
-  35158: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAApklEQVR42pWSsQ2AIBRE2cbOygVcytbSEVzBzsoBnExzJEeAfx+0uBAuD/j3+WEZjmefbyP423Q9YR3PaGBDEcBaAPlK/z9ASYCClwAvBRUBiKcgepAEcrD/hCoyb5gb0wXMDayBoIxJQEVtpojfnTdF3tDqQQJ4qk4AL6gELqCG5hvAqLIGbFqjH+pPMoA3MEUfahmgLs6k8IalANS4JaCbwht5AC8bL3g7sYle4gAAAABJRU5ErkJggg=="
-  },
-  35166: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAQCAYAAAArij59AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAZElEQVR42mPYvPvs/xmzV/1fvW4fCgaJgeQYQIzi4nqsGCTHAFKdmJT/f6aZzv8z5upgDGKDxEBycAUgif8WimAMYpOuAKcVIIeAOOgOBImBHUnQm9QNB2RMvC9IUoDVCorDAQBMdEjsl4aiEQAAAABJRU5ErkJggg=="
-  },
-  35168: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAQCAYAAAArij59AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAY0lEQVR42mPYvPvs/xmzV/1fvW4fCgaJgeQYQIzi4nqsGCTHAFKdmJT/33SWwX+zs7pgDGKDxEBycAVgyf+aEAxkk64ApxUgh4A46A4EiYEdSdCb1A0HZEy8L0hSgNUKisMBAOjwSYxsIxYpAAAAAElFTkSuQmCC"
-  },
-  35173: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAQCAYAAAArij59AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAZElEQVR42mPYvPvs/xmzV/1fvW4fCgaJgeQYQIzi4nqsGCTHAFKdmJT/f2aqwf8ztbpgDGKDxEBycAUgif9TNcEYxCZdAU4rQA4BcdAdCBIDO5KgN6kbDsiYeF+QpACrFRSHAwCBzVFAxafa6gAAAABJRU5ErkJggg=="
-  },
-  35179: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAQCAYAAAArij59AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAZElEQVR42mPYvPvs/xmzV/1fvW4fCgaJgeQYQIzi4nqsGCTHAFKdmJT/f+Ykw/9nDuqBMYgNEgPJwRWAJP5/0AZjEJt0BTitADkExEF3IEgM7EiC3qRuOCBj4n1BkgKsVlAcDgDiyVjQ7pwN1wAAAABJRU5ErkJggg=="
-  },
-  35186: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAm0lEQVR42mPQN7b6jw8zgIjFq7b8L65qRcEgMbiCsJi0//2Ps//LyKmA8da388BiKApAEgcOH/9/KM4IzMaqACTZ0T0BuwKQsTAr7ny7gKoA5CAXzyAUjOJIgt6kTjggOxIUJli9CfLikgAt3OEAkgQFFlYFeIN6sIQDKILomB4wgnowpgeMRIucHi4UeeAOB5AkzvSAN6gpCgcA20P1eLluZlIAAAAASUVORK5CYII="
-  },
-  35194: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAo0lEQVR42pWSsQ6AIBBD+SxXRydXHf0Gv9UYE/9FU5IS4HqgQ0NoHnA9Lhzz8Nz7agT/2qYnnMsYDWwoAlgLIF/p/wcoCVDwEuCloCIA8RRED5JADvafUEXmDXNjuoC5gTUQlDEJqKjNFPG786bIG1o9SABP1QngBZXABdTQfAMYVdaATWv0Q/1JBvAGpuhDLQPUxZkU3rAUgBq3BHRTeCMP4AXGmIofTDelPAAAAABJRU5ErkJggg=="
-  },
-  35203: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAp0lEQVR42mPQN7b6jw8zgIjFq7b8P3D4OAoGicEVdHRPwIrhCmbF/AcLXPn79/+M3z/B7IOz/iMUgDggyZt/3oExSNGza/9RrUB3A4oVIAe5eAahYBRHEvQmUeEgI6eCgjHCAa8jQd5EDyQUb4I4IL/DwgEUJigBNTzCAeRN9HDASA+xP7+hpAdQIhp04UBZvoClB5D3QFENYqN4E8RBTg+gMKFjegAABPZTO2RWT1sAAAAASUVORK5CYII="
-  },
-  35209: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAvklEQVR42r2TMQrDMBAE9RG/IR/JU/wO/yKtSxcpXaVKEQiYkMq/SJH6zAr2WHKy1JgUwvLtSrc3oDTfHvZ8rXYZrzZOc17YowYtYXMaFuvOQ/7qHlqCuyRiQUu4koX3x6y/f90IzQ0oQISJt2RDswVDloLmkM0xj+WAKThm4ECBLAIHMlBz4FBs8UcO7K85nMNvOP47B2WgJuegp5WFc6i22At5MAftrzmcgwrVdwFRWYR3QTG8i2qLZsjWmBuAat8bjEEIPgAAAABJRU5ErkJggg=="
-  },
-  35213: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAwElEQVR42mPQN7b6jw8zgIjFq7b8L65qRcEgMbiCsJi0/74Ml/8fnPX//7Nr//9HM/wEi8EVyMipgCWv/P37f8bvn/9nxfwHi6EoAOGbf96BMYwPV+DiGQQ2MvbnN7AJIDZIDMWRIAFkjOJIgt6kTjiA/A7zJihMMMIBFEAwb4LCBGs4wLyJMxxgQT1ow6FQAeFNnOkB5k2QT7CGA8ybOMMBFtSDOj3AvAkKE4xwAOUFmDdxpgeYN3GGAyyoqRsOAFKJGnMyMsQeAAAAAElFTkSuQmCC"
-  },
-  35215: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAvUlEQVR42mPQN7b6jw8zgIiDTXn/t2YF/c8zUwPTMD5cAYhzM1ju//+d6f//X5r7/0me/f85Ec4IBSAOWPLLtf//P1/8/3+BAaoJTQ66WK2BKyiuav0vI6eCgl08kUxYvGoLWAAZg8TgCgh6k6ACkKNAPkF2LGneBHFedadBFAElQQGF4s1pniZYrRlU4QByHMhRyI4lzZsgDljyQRckoICJBiM9YLNm0KUHkE+QHUuaNwlmHOS8gGwNncIBAOzsCtij8O90AAAAAElFTkSuQmCC"
-  },
-  35222: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAApUlEQVR42n1TQQ6AIAzbb/Wudy8mvsD3aiDpUkbLgSC1WVs24n7eD+s4rm/bz74DCyaAxOeoAJ/bd7SSWA1gmU5QusBSosqwVChjwLpEOziJJLiIwz2gpIzJIEfMmLUsIsqbrF6C2dVPElzE9MDLttt5iRpr6kUFKzFWCSyBjVqJ7KYatSGF+yk9gGAHBuBgUhmcuqmSyHmwD0f1IR/OqpNJWE3VD3fafnYxSwv8AAAAAElFTkSuQmCC"
-  },
-  35228: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAk0lEQVR42mPYvPvsfxCOKNT5n96gi4EZZsxe9b+4uB4rBmliWL1u3//EpPz/P2Ib/ispK8MxSAxFgbaOLgrGUAAyAa8CZMmKeSoIBSBHgjjoDoQrgHnTP8UIA6MooDwckMOAvHCAScDCA6cCUBigKBiS4YDXmyBJDG8iK4BJDtpwADkQOW+QnuxhJuBVgNUEisMBALMtL+mbt0BRAAAAAElFTkSuQmCC"
-  },
-  35235: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAYklEQVR42mNIb9D9jw8zRBTq/F+9bt9/EL1591kUDBIDK/BPMfoPUxh06T8YwzSBFcAwSDD5yT8wxqkAZjxWBSCrkDFcAUw1umkYjkQ3DayA+uFA0JsEA2p4hMNoehjC6QEASU9Rh0wnbbQAAAAASUVORK5CYII="
-  },
-  35238: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAgklEQVR42mNIb9D9j44jCnX+b959FowZQJzi4nqseMbsVRAFiUn5/5WUleH4R2wDWGz1un0IBdo6uigYrwKsJlTMU8FvAroDQWJwR/qnGGFguDdpEw4gTF44gPyPVwFyWAzdcCDKmzBFOEMSFhaDOhxAvgA5lPRkjyxJ0ASsCsgOBwDVgi/pFLMyqAAAAABJRU5ErkJggg=="
-  },
-  35244: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAABACAYAAAAnBDaKAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAX0lEQVR42mOIfuP7Hxn7PLL/b3PdEIxBbAYYBxdmwKUTJs6AbgU6ZkDXgW4iYTfgspt4N5CsYJgGFPVDcmgG1AAkuUEbUIMtbw5EQA3JQoyGATW8SnvSA2qEVovoAQUAy4TgfWJ3JvsAAAAASUVORK5CYII="
-  },
-  35248: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAWElEQVR42mP4/83/PwhHv/FFwTBxBmySyIoYYByfR/ZYFTHg0o1TAcgkZNMIKyDoSKK8SXQ4oNuPEg7YFJAXDqQrQHckjcOBYHrAliaIV0BSOIymB1qkBwCdcbETOmjnqQAAAABJRU5ErkJggg=="
-  },
-  35257: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAABACAYAAAAnBDaKAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAtklEQVR42mMwMbf5jw8z6Bqa/ZeTl/+vpKyMgkFiIDmwAilpabAACFfMUwHTIDEMBTDJbTamCAVaukZgDkgSRCNjkBwDUY4EGQmiPdx9wRjEBpkIdwM+zDAaDmSEA8hYnOGA7EWMcIBJwjDWcMCGB1U4wPwPsopgesAaDsgKhm44wFxOMF/AwgCWwokLqCEVDnjLB5jXkMsIjHBADiSc4QBLKEO/nCSYHrCGA8z/6GXlaDjQNRwAox8traCgEvgAAAAASUVORK5CYII="
-  },
-  35263: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAfElEQVR42mPQN7b6jw8zgIjFq7b8L65qRcEgMbgCkMC6/qj/q7ojwDQIu3gGoSqY3xCCgjEUwHTiNAGvApCD8ve5/e86lfl/6bVuMI3iSILepF44EPQFDQMK5CDkMACFyaANBxoGFMhByGEwUOmBxsmeYEDB0gNy3iA6HABwwx7DcZO5HQAAAABJRU5ErkJggg=="
-  },
-  35272: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAXElEQVR42mPQN7b6jw8zgAgZORUwfvLsJQobRQFI4MDh4yhsuAKYAAgjs+lpBUFvElSA7jgYG64A3XEYvkB3HIYvsIUBihXYwgDDDdisoWI40MGRdAjq0fRA2JsAe5REb3EOCCsAAAAASUVORK5CYII="
-  },
-  35280: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA7ElEQVR42mPQN7b6jw8zgIjFq7b8L65q/S8jpwLGIDZIDK7g//NrYImbf979v/L3L5j9/8gshIIlAVpgQZDkwVn/wexDcUYIBV821IEFQZK+DJfB7J8XNiEUXCjy+O/iGQR3A4iNYgLIQSBBZIziSILepEI4AP0Mknh27f//aIafkHAAhg1cAcjFsICK/fkNzAb5DK4A5GeQIEgSFlCgsEExAT0cQKE7uMIBmh5m/P75f1bMf8xwAPkZJAiShAUU1vSAnKI+TPBCTVGDPz0g5QtQWOBMDyBJUKIBsVFiE+Rn9BRFMD2gpCiKwgEAyw0F8u4YawcAAAAASUVORK5CYII="
-  },
-  35286: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAoElEQVR42pWSwQqAIBBE/f9f61IdKohOQX1GMcKIurNah0EcnrqzbhjG+Tmv2wj+tGxPWPcjGthQBLAWQL7S/w9QEqDgJcBLQUUA4imIHiSBHOw/oYrMG+bGdAFzA2sgKGMSUFGbKeJ3502RN7R6kACeqhPACyqBC6ih+QYwqqwBm9boh/qTDOANTNGHWgaoizMpvGEpADVuCeim8EYewAv1cJXeo+jG+QAAAABJRU5ErkJggg=="
-  },
-  35288: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAv0lEQVR42mPQN7b6jw8zgIjFq7b8P3D4+P//R2b9/7KhDswGicEVFFe1/u/ongCWvFDkAWa7eAahKgiLSfsvI6cCVgSisSoAGf1hgheYxqoAZg2GFSAHgQSQMYojCXqT6HAA2f3zwibc4fD/+bX/h+KMcIcDyAcgb+IMB1hA4QwHkATIDQMZDiCMNz2A8JIALdzhAEtROMMBJAkLarwBNZDhAHIDLNFiDQeQBN70AEtROMMBlKLwpgdYiqJuOAAATQgfeQZYDQYAAAAASUVORK5CYII="
-  },
-  35291: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAApElEQVR42p2SMRKAIAwE+Yu1rW/w3zY2tr5FKyToIYQLOBY3DDcL5ELcsQz+3OdK0d8m7851vM2wSQIQ1hLI18f/AUAUgMQDYKWAIhAhnAqCJ6JADvafoEVmDbNjmoC+IdUAkMVMAInaTiHfnTeF3tDqwQvgpEognqMJTIAMzTcgRaU1hE1r9F31SRowB6bog1YF6OKqmMawlAAZtxfopbBGXoAL27cAxtXN9OEAAAAASUVORK5CYII="
-  },
-  35297: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAATElEQVR42mO4dO32/1kLV/7X3L73/51/f8AYxAaJZRdV/2eAKZBr6/of+/MbGIPYWBWAdIIwTgV4TRgMbhgh3iTKDSPEm5Slh+GdcQD5tdafSSmJ2gAAAABJRU5ErkJggg=="
-  },
-  33484: BB => {
-    BB.exports = "data:image/png;base64,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"
-  },
-  33448: BB => {
-    BB.exports = "data:image/png;base64,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"
-  },
-  33450: BB => {
-    BB.exports = "data:image/png;base64,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"
-  },
-  33458: BB => {
-    BB.exports = "data:image/png;base64,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"
-  },
-  33467: BB => {
-    BB.exports = "data:image/png;base64,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"
-  },
-  33474: BB => {
-    BB.exports = "data:image/png;base64,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"
-  },
-  33478: BB => {
-    BB.exports = "data:image/png;base64,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"
-  },
-  33488: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPklEQVR42mPQN7b6jw8zgIjFq7b8d/EM+v9/gQEYg9ggMbgCZElkRSgKsGEUBWExaSiYNAUwRyJjFEfi8yYA3TR8HXnxtosAAAAASUVORK5CYII="
-  },
-  33496: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAOUlEQVR42mPQN7b6jw8zgIjFq7b8d/EMQsEgMbgCkEBYTBoYg9j/FxiAabwKQJgyBShWEHQkPm8CAKF9fB3W+yGAAAAAAElFTkSuQmCC"
-  },
-  33502: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPUlEQVR42mPQN7b6jw8zgIjFq7b8d/EMQsEgMbgCkEBYTBoKBomRpgAbRlHwf4EBCkZRAHMksiSKI/F5EwCqBnwdxPqfUQAAAABJRU5ErkJggg=="
-  },
-  33507: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAOUlEQVR42mPQN7b6jw8zgIjFq7b8d/EMQsEgMbgCkMD/BQZgOiwmDYxBbLgCkCRlCghaQdCR+LwJAOW9fB0E5WJyAAAAAElFTkSuQmCC"
-  },
-  33512: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPklEQVR42mPQN7b6jw8zgIjFq7b8T7HX/Z9/sQqMQWyQGFwBsiSyIhQF2DCKgpZEWxRMmgKYI5ExiiPxeRMAGdJ64aLdHgIAAAAASUVORK5CYII="
-  },
-  33515: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAOElEQVR42mPQN7b6jw8zgIjFq7b8T7HXRcEgMbgCkEBLoi0Yg9j5F6vANF4FIEyZAhQrCDoSnzcBBI164XoDGi0AAAAASUVORK5CYII="
-  },
-  33522: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPUlEQVR42mPQN7b6jw8zgIjFq7b8T7HXRcEgMbgCkEBLoi0KBomRpgAbRlGQf7EKBaMogDkSWRLFkfi8CQArOHrhTR2ckAAAAABJRU5ErkJggg=="
-  },
-  33529: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAOUlEQVR42mPQN7b6jw8zgIjFq7b8T7HXRcEgMbgCkED+xSow3ZJoC8YgNlwBSJIyBQStIOhIfN4EAEB9euEqwrzFAAAAAElFTkSuQmCC"
-  },
-  33531: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAQUlEQVR42mPQN7b6jw8zgIjiqtb//xcYoGCQGFwBSEBGTgUFg8SIN2Hxqi3/P530gesGsUFiKApgEjCFGArINgEATUSJr7M602UAAAAASUVORK5CYII="
-  },
-  33536: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAQElEQVR42mPQN7b6jw8zLF615T8yLq5q/f9/gQGYBiuQkVP5/+mkz38YDZIEsUE0WAGyJEyCNAUErSDoSELeBAAhsImvv4GwvQAAAABJRU5ErkJggg=="
-  },
-  33542: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAARElEQVR42mPQN7b6v3jVlv8ycir/P530AWMQGyQGkmOAKYBJwBRiKKDMhOKq1v//FxigYJAYXAFIAKYbhkFixJuADwMAWXWJr6ByNeoAAAAASUVORK5CYII="
-  },
-  33544: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPklEQVR42mPQN7b6jw8zgIjiqtb//xcYgOnFq7agYLACkKSMnAqY/nTSB8yG0RgKkCVBNOkKsFpB0JH4vAkAhQmJr019p9UAAAAASUVORK5CYII="
-  },
-  33549: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAARElEQVR42mPQN7b6v3jVlv+fTvr8l5FTAWMQGyQGkmOAKYBJwBRiKKDMhOKq1v//FxigYJAYXAFIAGY8DIPEiDcBHwYAWXWJrzna0CwAAAAASUVORK5CYII="
-  },
-  33553: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPElEQVR42mPQN7b6jw8zgIjiqtb//xcYgOnFq7agYLACkKSMnAqc/nTSB05jKECWBNGkK8BqBUFH4vMmAIUJia9XIajCAAAAAElFTkSuQmCC"
-  },
-  33555: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAQUlEQVR42mPQN7b6jw8zgIjiqtb//xcYoGCQGFwBSEBGTgUFg8SIN2Hxqi1gXZ9O+oAxiA0SQ1EAk4ApxFBAtgkATUSJrw5DbKsAAAAASUVORK5CYII="
-  },
-  33561: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPklEQVR42mPQN7b6jw8zLF615T8yLq5q/f9/gQGYBiv4dNLnv4ycyn8YDZKE0WAFyJIgmnQFBK0g6EhC3gQAIbCJr2AsyWQAAAAASUVORK5CYII="
-  },
-  33566: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAATUlEQVR42nWOMQ4AIAgD+xZXJza/6ms1RWuqiQMBubaIiDZ6KVmca40BIItvCKgTyJBCd2t5CQg84YAthN+U01PxRjr8CgyuP/gJh+wTFINiFQcXz+QAAAAASUVORK5CYII="
-  },
-  33574: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAS0lEQVR42mWPOwoAMAhDcxbXTm69ak9rUZoSdBA1efiB+w4AFWt5ZH/MKp6HL2RNgHkAapZGo5uZa4XSOok3gWRfIyBCoQHwzQ5Ru+q0YhUDyLizAAAAAElFTkSuQmCC"
-  },
-  33582: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAATklEQVR42mMwNLT4z8DA8B9Eg/BMJSUwHybGgE0SRMMVIkviVAATQJEAYm1tw/8MyAIgNkwDzGQGdCORFUHFUBUgmwAWg3kTZieybpAcAJI1YhU+nXU+AAAAAElFTkSuQmCC"
-  },
-  33587: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAS0lEQVR42m2OOwoAMAhDcxZXJ7detae1aBvQ4hDE5PmB2XIAqS3i0dN79QahCRqBBqlaO1GVAEka3MQBVPo/k2AN+VgDGBKoP8XAAbv1YhUa3MW8AAAAAElFTkSuQmCC"
-  },
-  33590: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKUlEQVR42mMQE5f5jw8zIHO0dMzAGKsCmCS6IgZsksiKiLeCOgqweRMAjpJWt7WGFcEAAAAASUVORK5CYII="
-  },
-  33594: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJ0lEQVR42mMQE5f5jw8zoAto6ZgRVoCsiAFZEB0Tr4CgFSQ5Et2bAF4nVrc+0JYMAAAAAElFTkSuQmCC"
-  },
-  33596: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJUlEQVR42mMQE5f5jw8zIHO0dMzAmAYKYBLoGMUEbJKkuwGbNwE4NFa3kkj15gAAAABJRU5ErkJggg=="
-  },
-  33603: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKElEQVR42mMQE5f5jw8zIHO0dMxwKwBJ4lQAk0THxCsgaAVRjsTlTQBon1a3i6C2MwAAAABJRU5ErkJggg=="
-  },
-  33612: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAR0lEQVR42mNQlnP+D8I6ev3/0dnytXv/M4AIdAXIfLgCEI2MYYoYYAIgDjKGKUJRgI3NALMT2RRkNgOy45Dth2EGdG+hOxQAX657bm9rKEwAAAAASUVORK5CYII="
-  },
-  33619: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAARklEQVR42mNQlnP+r6PX/x9Ey9fuRcEgMQaYJLICGB+sAFkSpBiEkdkMMF3IEsimEKcAmxUwxzMgc5AdCXM83JHoOmGmAgCD/3tuKdLpEwAAAABJRU5ErkJggg=="
-  },
-  33627: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAATElEQVR42mNQlnP+L1+7FwWDxHT0+sE0A4iAYWQFMEUMIAKEQRLIbJgiBpgumAQ6mwFmNEw3silgBTDHYHMo3ASYImTHwRWgewudDQA+E3tuOn2tgAAAAABJRU5ErkJggg=="
-  },
-  33629: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAR0lEQVR42mOQr937X1nO+b+OXj+YBvFhbBBmQJdEVgBiM6DrBGGYqWAFMKNgCpBp4hQgG4tuBdyRyKYgS4IUMyBLICuAOR4AGcJ7blfrrasAAAAASUVORK5CYII="
-  },
-  33634: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKUlEQVR42mMwter/jw8zIHPsXFaAMVYFMEl0RQzYJJEVEW8FdRRg8yYAAL2CWRNTb3UAAAAASUVORK5CYII="
-  },
-  33638: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJ0lEQVR42mMwter/jw8zoAvYuawgrABZEQOyIDomXgFBK0hyJLo3AeDiglnmTHO4AAAAAElFTkSuQmCC"
-  },
-  33640: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJklEQVR42mMwter/jw8zIHPsXFaAMQ0UwCTQMYoJ2CRJdwM2bwIAx/aCWfWopK0AAAAASUVORK5CYII="
-  },
-  33642: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKElEQVR42mMwter/jw8zIHPsXFbgVgCSxKkAJomOiVdA0AqiHInLmwDnwoJZMzqJiAAAAABJRU5ErkJggg=="
-  },
-  33650: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAY0lEQVR42mM4O7Hmf3OI0f8lZT5gGsQXLe+A0wwgQXQFILZ4y3QwmwHEQcYwRe7+Qf/FavtRTUBWABNjAHFgAuhWgWgGkENAgugKQWyQOxhgDJCdMAmYD+AmwARgxsMkQd4EAFxIlUV2KRxIAAAAAElFTkSuQmCC"
-  },
-  33657: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAYklEQVR42mMQLe/4f3ZizX8Y3Rxi9H9JmQ+YBvEZQIR4y3SwILoCEGYA6XT3D0KRRMYMyMYhK4CbgC4JkwCJgd2A7DhkCZBikBzYBJgimEKQm0AOh5sAEgQJwKwRq+2Hex0AL0aVRfNOGcgAAAAASUVORK5CYII="
-  },
-  33665: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAYUlEQVR42mMQLe/43xxi9B9GLynzAbPPTqwB0wwwSZAACIP47v5B/8VbpoP5DDAGSAKEYQphJjHABGHGoytkgAkiK0JWyCBW2w+2E10BDDOAJEDuAHGwWcWA7CV0BSA3AABIL5VFJWWaggAAAABJRU5ErkJggg=="
-  },
-  33667: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAaElEQVR42mMQLe/4f3ZizX+x2v7/S8p8/jeHGP0Xb5kOpkFyDCBJkIC7fxBYEMQHYZAkiM8AYoB0wiRAgjCFcBOQJWDWwMQYkCXQJUF8BpgEugKQm8BWYDMaxAY5HMRmQDYO2XEwRwIAdTGVRUqJLt4AAAAASUVORK5CYII="
-  },
-  33672: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKUlEQVR42mPI9dD+jw8zIHPaI03BGKsCmCS6IgZsksiKiLeCOgqweRMAoad7e9uCMRkAAAAASUVORK5CYII="
-  },
-  33674: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJ0lEQVR42mPI9dD+jw8zoAu0R5oSVoCsiAFZEB0Tr4CgFSQ5Et2bAHtae3tw6b/9AAAAAElFTkSuQmCC"
-  },
-  33679: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJUlEQVR42mPI9dD+jw8zIHPaI03BmAYKYBLoGMUEbJKkuwGbNwFdVXt77o7IGgAAAABJRU5ErkJggg=="
-  },
-  33686: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKElEQVR42mPI9dD+jw8zIHPaI01xKwBJ4lQAk0THxCsgaAVRjsTlTQCDont7r0hy+AAAAABJRU5ErkJggg=="
-  },
-  33693: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPklEQVR42mPQN7b6jw8zgIjFq7b8l5FT+f9/gQEYg9ggMbgCZElkRSgKsGEUBdkmEiiYNAUwRyJjFEfi8yYAMuNwA/Vk9VUAAAAASUVORK5CYII="
-  },
-  33695: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAOUlEQVR42mPQN7b6jw8zgIjFq7b8l5FTQcEgMbgCkEC2iQQYg9j/FxiAabwKQJgyBShWEHQkPm8CAE8GcANYADUoAAAAAElFTkSuQmCC"
-  },
-  33702: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPUlEQVR42mPQN7b6jw8zgIjFq7b8l5FTQcEgMbgCkEC2iQQKBomRpgAbRlHwf4EBCkZRAHMksiSKI/F5EwDTwXADrgh04AAAAABJRU5ErkJggg=="
-  },
-  33711: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAOUlEQVR42mPQN7b6jw8zgIjFq7b8l5FTQcEgMbgCkMD/BQZgOttEAoxBbLgCkCRlCghaQdCR+LwJALeecAM9Ei38AAAAAElFTkSuQmCC"
-  },
-  33720: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAASUlEQVR42mPYvPvs/xmzV/1fvW4fCgaJgeQYQERSJ+v/pPksqBgoBlYA4yRtZULFUE0MYA5IEYxGZgNpEhUgYxQFOByJUIAHAwAC/42DApJpxQAAAABJRU5ErkJggg=="
-  },
-  33727: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPUlEQVR42mNI2sr0HwPPZ/m/efdZMGYAC3SyggXhGMQH4hmzV0EVgASxmLJ63T40BTATyFeA0wqCjsTjTQBVQ42DiBaEOAAAAABJRU5ErkJggg=="
-  },
-  33736: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAASElEQVR42mNI2sr0Hx9mADM6Wf8nzWdBxSAxuAKQALpuqBiqAphu0hQg2YeCoe5i2Lz7LE5HguTACmbMXvV/9bp9KBgkBlIAAKp+jYM5jOdZAAAAAElFTkSuQmCC"
-  },
-  33738: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPklEQVR42mPYvPvsfxBOms/yP2krEwZmmDF71f+kTlYIBimCYRAfpGD1un3YdUPFUBXAdJOvAJsVBB1JyJsAWDqNg94oHwAAAAAASUVORK5CYII="
-  },
-  33743: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJUlEQVR42mOweyb9Hx9mgDFggKACdEVYFSArQlFA0A2UKcDlTQBvtKRp3V1XoQAAAABJRU5ErkJggg=="
-  },
-  33748: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIklEQVR42mOweyb9Hx9mIEoBLoDVBKIV4HQDsiTxjsSnAABAqqRp/uWV2wAAAABJRU5ErkJggg=="
-  },
-  33757: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVR42mOweyb9Hx9mwCYIAjRQgA6wmkBQAbIivG5A9iYA2xSkac9ntKwAAAAASUVORK5CYII="
-  },
-  33766: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVR42mOweyb9Hx9mIEkBCOBUAANYFSADggrQFTNQ7AsACi2kadtiCk4AAAAASUVORK5CYII="
-  },
-  33775: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIUlEQVR42mP48+vb/+21ulgxSI6BKAVLC9SxYuJNGGArAC3IrvVAmQUdAAAAAElFTkSuQmCC"
-  },
-  33781: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIUlEQVR42mP48+vbf3yYYXut7n8QXlqg/h8be2goIORNAC3IrvW7yg3rAAAAAElFTkSuQmCC"
-  },
-  33786: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAARUlEQVR42mNYvW7ffxDuMHb/P986CIxBbJg4A4xRqG0NlgBhEBuuYMbsVWABmG4YhmlgQDYeZgKMDaIJKyDKCryOJORNAO+blw3rR4ckAAAAAElFTkSuQmCC"
-  },
-  33791: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAARklEQVR42mNYvW7ffxCeMXvVf2xsBhijUNv6f4exOxiD2HAFMIH51kEoGKaBAcQBMWA0MhtEE1ZA0AqCjoQxYEbCjIcpAABXu5cNdHU60gAAAABJRU5ErkJggg=="
-  },
-  33794: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAARklEQVR42mNYvW7ffxDuMHb/P986CIxBbJg4A4xRqG0NlgBhEBuuACYA0w3DILEZs1f9Z4AZCaOR2WATCCogaAVBRxLyJgCMS5cNQ1dFjwAAAABJRU5ErkJggg=="
-  },
-  33796: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAR0lEQVR42mNYvW7ffxDuMHb/P986CIxBbJg4A4xRqG0NlgBhEBuuACYA0w3DMA0MMCNhNDIbRBNWQNAKgo6EMWbMXvUfGxsAJDqXDY/iEGUAAAAASUVORK5CYII="
-  },
-  33804: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAASElEQVR42mPYvPvs/xmzV/1fvW4fCgaJgeQYQIReZPV/s+wuFAwSAyuAcUxqF6JgmCYGEAfEgNHIbBBNmgJkjKIAlyPhCvBhANSelyOIXUSlAAAAAElFTkSuQmCC"
-  },
-  33808: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAP0lEQVR42mMwqV34Hx2bZXf937z7LBgzgAT0IqvBgjAM4oPwjNmrIApAgthMWb1uH6oCmAnkK8BpBUFH4vMmAEfGlyNbf64ZAAAAAElFTkSuQmCC"
-  },
-  33811: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAASUlEQVR42mMwqV34Hx9mABF6kdX/zbK7UDBIDK4AJICuEyaGogCmmzQFyPYhY5i7GDbvPovTkSA5sIIZs1f9X71uHwoGiYEUAAB/Zpcj9lcZ9AAAAABJRU5ErkJggg=="
-  },
-  33816: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPklEQVR42mPYvPvsfxA2y+76b1K7EAMzzJi96r9eZDUYgxTBMIgPVrB63T6sumFiKApguslXgNUKgo4k5E0ADE2XI/G2BwEAAAAASUVORK5CYII="
-  },
-  33824: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAASUlEQVR42mPYvPvs/xmzV/1fvW4fCgaJgeQYQITzlC3/fRYcQMEgMbACGCdm9SkUDNPEAOKAGDAamQ2iSVOAjFEU4HIkXAE+DADKzLJRbi16KwAAAABJRU5ErkJggg=="
-  },
-  33828: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAQElEQVR42mOIWX3qPzr2WXDg/+bdZ8GYASTgPGULWBCGQXwQnjF7FUQBSBCbKavX7UNVADOBfAU4rSDoSHzeBACXd7JRvr2GngAAAABJRU5ErkJggg=="
-  },
-  33836: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAASUlEQVR42mOIWX3qPz7MACKcp2z577PgAAoGicEVgATQdcLEUBTAdJOmANk+ZAxzF8Pm3WdxOhIkB1YwY/aq/6vX7UPBIDGQAgCmkrJRd5QE8AAAAABJRU5ErkJggg=="
-  },
-  33839: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAP0lEQVR42mPYvPvsfxD2WXDgf8zqUxiYYcbsVf+dp2wBY5AiGAbxwQpWr9uHVTdMDEUBTDf5CrBaQdCRhLwJANnnslF82lt0AAAAAElFTkSuQmCC"
-  },
-  33846: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPklEQVR42mPQN7b6jw8zgIjFq7b8l5FT+f/hfDIYg9ggMbgCZElkRSgKsGEUBVXxeiiYNAUwRyJjFEfi8yYAoW90dWz3D9QAAAAASUVORK5CYII="
-  },
-  33851: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAOUlEQVR42mPQN7b6jw8zgIjFq7b8l5FTQcEgMbgCkEBVvB4Yg9gfzieDabwKQJgyBShWEHQkPm8CAJYddHW0fYezAAAAAElFTkSuQmCC"
-  },
-  33858: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPUlEQVR42mPQN7b6jw8zgIjFq7b8l5FTQcEgMbgCkEBVvB4KBomRpgAbRlHw4XwyCkZRAHMksiSKI/F5EwD763R10VufMgAAAABJRU5ErkJggg=="
-  },
-  33865: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAOUlEQVR42mPQN7b6jw8zgIjFq7b8l5FTQcEgMbgCkMCH88lguipeD4xBbLgCkCRlCghaQdCR+LwJAAdMdHXA4vOyAAAAAElFTkSuQmCC"
-  },
-  33874: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPklEQVR42mPQN7b6jw8zgIjFq7b8l5FT+f/k2UswBrFBYnAFyJLIilAUYMMoClw8g1AwaQpgjkTGKI7E500Artd2mxjij78AAAAASUVORK5CYII="
-  },
-  33876: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAOUlEQVR42mPQN7b6jw8zgIjFq7b8l5FTQcEgMbgCkICLZxAYg9hPnr0E03gVgDBlClCsIOhIfN4EAI6vdpuC0p/nAAAAAElFTkSuQmCC"
-  },
-  33879: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPUlEQVR42mPQN7b6jw8zgIjFq7b8l5FTQcEgMbgCkICLZxAKBomRpgAbRlHw5NlLFIyiAOZIZEkUR+LzJgAbjnab9hXOowAAAABJRU5ErkJggg=="
-  },
-  33887: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAOUlEQVR42mPQN7b6jw8zgIjFq7b8l5FTQcEgMbgCkMCTZy/BtItnEBiD2HAFIEnKFBC0gqAj8XkTADu2dpuFMdcfAAAAAElFTkSuQmCC"
-  },
-  33889: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPklEQVR42mPQN7b6jw8zgIjFq7b8d/EM+m///iQYg9ggMbgCZElkRSgKsGEUBWExaSiYNAUwRyJjFEfi8yYAih19DcddOzYAAAAASUVORK5CYII="
-  },
-  33896: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAOUlEQVR42mPQN7b6jw8zgIjFq7b8d/EMQsEgMbgCkEBYTBoYg9j270+CabwKQJgyBShWEHQkPm8CAA7OfQ28u6Q/AAAAAElFTkSuQmCC"
-  },
-  33900: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPUlEQVR42mPQN7b6jw8zgIjFq7b8d/EMQsEgMbgCkEBYTBoKBomRpgAbRlFg//4kCkZRAHMksiSKI/F5EwDlcH0NLKekZwAAAABJRU5ErkJggg=="
-  },
-  33907: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAOUlEQVR42mPQN7b6jw8zgIjFq7b8d/EMQsEgMbgCkID9+5NgOiwmDYxBbLgCkCRlCghaQdCR+LwJAGDOfQ3JJbywAAAAAElFTkSuQmCC"
-  },
-  33913: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJUlEQVR42mNgYGD4TwAjcf7/h2CsCmCSmIqwSKIqItYK6ijAggFJmmOdVkGTWAAAAABJRU5ErkJggg=="
-  },
-  33916: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJElEQVR42mNgYGD4TwCjCfz/T4QCVEVIguiYeAUErSDJkWgYANjuY52a1VA5AAAAAElFTkSuQmCC"
-  },
-  33921: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVR42mNgYGD4TwAjcf7/h2AaKIBJoGMUE7BLkuoGLBgAuAFjnRbXpA0AAAAASUVORK5CYII="
-  },
-  33929: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJklEQVR42mNgYGD4TwAjcf7/x6MAJIlTAUwSHROvgKAVRDkSBwYAKK1jnVFl/EoAAAAASUVORK5CYII="
-  },
-  33938: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAYElEQVR42mMws7T9L1re8d/dP+j/mQuXwDSMLzZnzn8GEAESgAnC2CAM0gxWANIJMwkmARIDsRlADFwKQCYyoBuLbB1IEQO6nTCT4CYgG42MYY4HOxLZayCdIDEQBvkCAGHOjLlnK7NQAAAAAElFTkSuQmCC"
-  },
-  33942: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAXUlEQVR42mMQmzPnv5ml7X/R8o7/7v5B/89cuPQfJAYTZwAJgiRhGKQAhGF8BmRJEAbpQjYRbgJMEIZh1jHAjENXADcB5BhcVoDdAHMxyCSYsTBTwSagexHZTSCNAPCJjLlNFO5/AAAAAElFTkSuQmCC"
-  },
-  33948: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAW0lEQVR42mMws7T9LzZnDhifuXDpv7t/0H/R8g4wDRJjAHFADBCNjkGaGUAqQTphAiCMrIgB2Vh0DBKHm4CsE8QGiYEw2A24FIAdiW4nsnVgBSAC2WvIbgL5AgAx2oy5FVwc2gAAAABJRU5ErkJggg=="
-  },
-  33950: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAYElEQVR42mMQmzPnv5ml7X/R8o7/7v5B/89cuASmQXyQOAOMA5KASYJokEYQZgBJwlTDTIJhsAKYCcgYphBkEgOynegKQOIMyA5CtwKE4W6AORJZEmwCSBfMxeheBDkSAKMQjLmLv7hzAAAAAElFTkSuQmCC"
-  },
-  33957: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKUlEQVR42mOQa+v6jw8zIHOU5y0GY6wKYJLoihiwSSIrIt4K6ijA5k0AleuPDR072tAAAAAASUVORK5CYII="
-  },
-  33959: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKElEQVR42mOQa+v6jw8zoAsoz1tMWAGyIgZkQXRMvAKCVpDkSHRvAgBu5Y8N2jSgpAAAAABJRU5ErkJggg=="
-  },
-  33963: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJklEQVR42mOQa+v6jw8zIHOU5y0GYxoogEmgYxQTsEmS7gZs3gQAUE+PDfVU3agAAAAASUVORK5CYII="
-  },
-  33970: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKElEQVR42mOQa+v6jw8zIHOU5y3GrQAkiVMBTBIdE6+AoBVEORKXNwF3VY8NGkYA8AAAAABJRU5ErkJggg=="
-  },
-  33977: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPklEQVR42mPQN7b6jw8zgIjFq7b8d/EM+j8r5j8Yg9ggMbgCZElkRSgKsGEUBWExaSiYNAUwRyJjFEfi8yYAge99AcHFpy8AAAAASUVORK5CYII="
-  },
-  33983: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAOUlEQVR42mPQN7b6jw8zgIjFq7b8d/EMQsEgMbgCkEBYTBoYg9izYv6DabwKQJgyBShWEHQkPm8CAAnOfQGQUJVyAAAAAElFTkSuQmCC"
-  },
-  33990: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPUlEQVR42mPQN7b6jw8zgIjFq7b8d/EMQsEgMbgCkEBYTBoKBomRpgAbRlEwK+Y/CkZRAHMksiSKI/F5EwDi7n0BdxU3PQAAAABJRU5ErkJggg=="
-  },
-  33996: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAOUlEQVR42mPQN7b6jw8zgIjFq7b8d/EMQsEgMbgCkMCsmP9gOiwmDYxBbLgCkCRlCghaQdCR+LwJAFsefQFkhBoGAAAAAElFTkSuQmCC"
-  },
-  34004: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPklEQVR42mPQN7b6jw8zgIjFq7b8l5FT+R914j8Yg9ggMbgCZElkRSgKsGEUBVVWciiYNAUwRyJjFEfi8yYA8WJyx+e4XBkAAAAASUVORK5CYII="
-  },
-  34011: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAOUlEQVR42mPQN7b6jw8zgIjFq7b8l5FTQcEgMbgCkECVlRwYg9hRJ/6DabwKQJgyBShWEHQkPm8CAKpfcsduG3zmAAAAAElFTkSuQmCC"
-  },
-  34015: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPUlEQVR42mPQN7b6jw8zgIjFq7b8l5FTQcEgMbgCkECVlRwKBomRpgAbRlEQdeI/CkZRAHMksiSKI/F5EwDhZHLH3vn68wAAAABJRU5ErkJggg=="
-  },
-  34023: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAOUlEQVR42mPQN7b6jw8zgIjFq7b8l5FTQcEgMbgCkEDUif9guspKDoxBbLgCkCRlCghaQdCR+LwJACh2cscd54wAAAAAAElFTkSuQmCC"
-  },
-  34029: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAX0lEQVR42lWOOw6AMAxDcyokBmZGJNZegYXjZMhZg1zpVWaIms+z69j2o1VV1fTndfd43tmHhsycS44AquAI4C7LAVrfYL0AFACeRX2gBlJJraPeYOGQO/0yaKHQnuEDoc+DuojFLxUAAAAASUVORK5CYII="
-  },
-  34036: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAX0lEQVR42k2OMQ6AMAwD8yokBmZGJNZ+gYXnZOhbiy7SoQxuFduxE+d1r/G8hW0/FnNm1s8cCJognDH9hi5qAHPOFQiKEECuEohyE7HfUgYeBAlhTdhltIKp0Td6v1UfQ4yDuieAE/oAAAAASUVORK5CYII="
-  },
-  34038: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAXklEQVR42m2OMQqAQBAD8yrBwtpSsL0v2PicLfatJ7MQWcEi5C4ZlmhZt7kf58Qjonxcd4lcBJlZIjRAiYsHpYMOFUBJ8HcJqW+gMPDZYMDijxitTht0+V4w0Ld4wwO+XoO6lnwRbAAAAABJRU5ErkJggg=="
-  },
-  34042: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAYElEQVR42k2PsQ2AMAwEMxUSBTUlEm1WoGEcF5nV6ILOSvGK7D+/nbbtR/bnTV40xsjzuqtumIimBpBgWw1FDTATbLgKw9SI+IF1v0Dd4C7kpGloJhAloGldNwit0/ziAxywg7oMtAoiAAAAAElFTkSuQmCC"
-  },
-  34050: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKUlEQVR42mNwcPX8jw8zIHPC45LBGKsCmCS6IgZsksiKiLeCOgqweRMACnB4dU6iHQMAAAAASUVORK5CYII="
-  },
-  34057: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJ0lEQVR42mNwcPX8jw8zoAuExyUTVoCsiAFZEB0Tr4CgFSQ5Et2bANTneHXYXbM4AAAAAElFTkSuQmCC"
-  },
-  34060: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJUlEQVR42mNwcPX8jw8zIHPC45LBmAYKYBLoGMUEbJKkuwGbNwGq/Xh13RT13QAAAABJRU5ErkJggg=="
-  },
-  34067: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKElEQVR42mNwcPX8jw8zIHPC45JxKwBJ4lQAk0THxCsgaAVRjsTlTQDgd3h13DeLLwAAAABJRU5ErkJggg=="
-  },
-  34070: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAY0lEQVR42mPoXR75/8K16/89o1XgNEgMJs4AIpAVxNWI/S+arQKmQYoYQBIgfObCJTANUwATRzEBhGGSIBqEGWC6kI1GVsgAsgemGtkUmGKwAmRdyIrBCkD2gxQhGwuzEuQLAPsVkMtcFW39AAAAAElFTkSuQmCC"
-  },
-  34076: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAY0lEQVR42mO4cO36/97lkWDsGa3yH8SH0SAxBhARVyP2v2i2CphGVgDCDCAOCMMUgNhnLlz6DxNnAEmAMEwRTALFBJgEslUw0xhggsi6YXywI2EqYYLIpqH4AlkhiAaJg9wAADr1kMtagriuAAAAAElFTkSuQmCC"
-  },
-  34080: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAYUlEQVR42mPoXR75P65GDIw9o1X+F81WAdMg8QvXrv9nQJaAYRAfJA5SBFaALIGsGKwA2ViYYmQrGZB1I5sCsh/sBmRjYbrOXLgEV8gA8wVMAUgXigkgAqQIhGESMBrkSAAJk5DLRq7nEgAAAABJRU5ErkJggg=="
-  },
-  34084: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAXUlEQVR42mO4cO36/97lkf89o1X+F81WAdNxNWJgDBJnABEgDkwBDMMUghUgCyIrBCtANhImiGwdA8gNIIysG9kUBpjEmQuX4PYiW4diAohGtgruC2QFIBokBhMHAMmzkMsH9gklAAAAAElFTkSuQmCC"
-  },
-  34090: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKUlEQVR42mMIzVL+jw8zIHOyWnXAGKsCmCS6IgZsksiKiLeCOgqweRMAB4Z8Q5JhnLkAAAAASUVORK5CYII="
-  },
-  34096: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJ0lEQVR42mMIzVL+jw8zoAtkteoQVoCsiAFZEB0Tr4CgFSQ5Et2bAN5GfEPHmcmRAAAAAElFTkSuQmCC"
-  },
-  34105: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJUlEQVR42mMIzVL+jw8zIHOyWnXAmAYKYBLoGMUEbJKkuwGbNwG9/XxDIEA2rgAAAABJRU5ErkJggg=="
-  },
-  34113: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKElEQVR42mMIzVL+jw8zIHOyWnVwKwBJ4lQAk0THxCsgaAVRjsTlTQDnLnxD0YSSXQAAAABJRU5ErkJggg=="
-  },
-  34119: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAHElEQVR42mP4DwRPHtz6f+3iKTCNzAYBhpGhAADZQOphSUpuhQAAAABJRU5ErkJggg=="
-  },
-  34126: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIklEQVR42mP4TwAwPHlw6z8+zHDt4qn/+DBhE+hgBSFvAgDZQOph2bOpVgAAAABJRU5ErkJggg=="
-  },
-  34130: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAWUlEQVR42mNQ7jz+X1On9b/vzrtgDGKH773//+f/f2A+A0gBsiIYDVIAwigKdPT64RIgMbAJIALEwSYJohnQjYSZCHMTWAEIY5MEK4DpRDcJ7guYIMwkdEUA9RO588J965gAAAAASUVORK5CYII="
-  },
-  34139: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAWElEQVR42mPw3Xn3/8////5r6rSCMYiv3HkcjhlAkjAF6JIgMQaYTphCHb1+FNMYkHUiKwKJgRXA3AAzFtlKsBUwAWT7YfzwvfdRFcAwskkM2CRh1oLcAACGiLnzq3jOwAAAAABJRU5ErkJggg=="
-  },
-  34146: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAVklEQVR42mP4+f/ffxj23Xn3v6ZOKxjD+AwgApsiGB+sAIaVO4+DMUgCZhIDNklkkxhAgjAFMEkdvf7/MHEGbJIgnTATGdCNhNFwBTBfhO+9D1eArAgAZHe584Mw/DUAAAAASUVORK5CYII="
-  },
-  34153: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAXUlEQVR42mPw3Xn3/8////6DaOXO42AahkHiDCAChLFJghWE770PFwApgimEK9DUaf0PwsgmgTDMWgaYkTp6/f/RrQNpZIAxQBhZEUwMbAXMWGSdcDdgk4QpALkBANMCufN9py89AAAAAElFTkSuQmCC"
-  },
-  34155: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKUlEQVR42mNwWHP2Pz7MgMzxOPgMjLEqgEmiK2LAJomsiHgrqKMAmzcBi0+xzVbtDEEAAAAASUVORK5CYII="
-  },
-  34161: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKElEQVR42mNwWHP2Pz7MgC7gcfAZYQXIihiQBdEx8QoIWkGSI9G9CQBkSbHNM9q0HQAAAABJRU5ErkJggg=="
-  },
-  34167: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJklEQVR42mNwWHP2Pz7MgMzxOPgMjGmgACaBjlFMwCZJuhuweRMARbOxzeneMm4AAAAASUVORK5CYII="
-  },
-  34176: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKUlEQVR42mNwWHP2Pz7MgMzxOPgMtwKQJE4FMEl0TLwCglYQ5Uhc3gQAbLmxzaiTpKMAAAAASUVORK5CYII="
-  },
-  34181: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAWUlEQVR42mM4c+HS/4Si8v8zZ84E08hskBwDTBDEAWGxOXPAGCbOAJMA6QJhGBukCETDTYCZAlMEM4UBZiRMAFkRWAGyDpgiZKsYsBkL0w23AtlhyApA3gQAZdWulklbi70AAAAASUVORK5CYII="
-  },
-  34189: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAV0lEQVR42mMQmzPn/5kLl/7PnDnzP4idUFQO5sNoBpgkiEZXAMIMyJIwBTAxEM0Ak0DWDVMANgFmFLokTAPYDTAJZKNBCsBWIOtGdwvcBJjDYIIwNsibAG8NrpZJsY1NAAAAAElFTkSuQmCC"
-  },
-  34197: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAV0lEQVR42l2OwQnAMAwDPUXn6wz9dBZDRsqjZCEXGS6IPIJkc5Ec81t1P2+h1xiVmT3Lh5YnIA8UGCmAQ8FvQId2xRlLrV5X+GFSfN8A6d2eEgwc6V4JP07prpaRNDg3AAAAAElFTkSuQmCC"
-  },
-  34203: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAWklEQVR42l2OwQnAMAwDNUXn6wz9dBZDRsqjdKGUMyiIPoyNzpKt+bzrvO5VVd1zhsniMUYXok2U2AbQAXTPO8FOA7s7wbcS+hyljP7/grafTHcmyiAXDDnxAUWxrpYOZK0YAAAAAElFTkSuQmCC"
-  },
-  34209: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKUlEQVR42mPo7m77jw8zIHOWLVsAxlgVwCTRFTFgk0RWRLwV1FGAzZsA80KsYSNbGucAAAAASUVORK5CYII="
-  },
-  34211: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKElEQVR42mPo7m77jw8zoAssW7aAsAJkRQzIguiYeAUErSDJkejeBAC5cqxh1e/b9wAAAABJRU5ErkJggg=="
-  },
-  34216: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJklEQVR42mPo7m77jw8zIHOWLVsAxjRQAJNAxygmYJMk3Q3YvAkAjCKsYT8S3zMAAAAASUVORK5CYII="
-  },
-  34220: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKUlEQVR42mPo7m77jw8zIHOWLVuAWwFIEqcCmCQ6Jl4BQSuIciQubwIAxfKsYdyyL6oAAAAASUVORK5CYII="
-  },
-  34223: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAYUlEQVR42mP4tEH0f9xKCQwcuUD8//83c/8zwARWvUzFwHAFIA6Ibj2vCMcoJoAUgARB1oEEYZIgPooCkGD9GUm4JEgMRQFMJ4gG8UHiDCAOiIFsLEwSbAJIEIbRJUFuAABBI6t+XYXa6wAAAABJRU5ErkJggg=="
-  },
-  34227: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAYElEQVR42mP4/2bu/8gF4v/jVkpg4E8bRP8zgBSsepmKgWGKGGAmtJ5XhGOQBEwRA8gYmCIQDeKDFMEVgDgwRfVnJME0igIQAyQAMwFmHYoJMEXI1oHEQDQDsp3IimAYALa/q36dI6ObAAAAAElFTkSuQmCC"
-  },
-  34231: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAWklEQVR42mP4tEH0f+t5xf+rXqaCaRD//5u5cMyATTJygThYDEQzwCRBHJgkTFPcSgmICTCd9WckwTSKAmRjQTSym8AKkI2FYZAEigIQBx2DJFFMgAkgY5B1AIFCq35UrsTiAAAAAElFTkSuQmCC"
-  },
-  34239: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAXUlEQVR42mP4/2bufxj+tEH0f+t5xf+rXqaCaRCfIXKBOFgARGNTxBC3UgLOgSkC0TBFKApAkvVnJFFMQlEAEoSZAFMEVwCiQYpgGKYIrACmCB2DFYCMgSlCxjATAAumq36DYemDAAAAAElFTkSuQmCC"
-  },
-  34241: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKUlEQVR42mMo36z2Hx9mQOZ0nNEGY6wKYJLoihiwSSIrIt4K6ijA5k0A6C2XDzkfYOoAAAAASUVORK5CYII="
-  },
-  34243: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKElEQVR42mMo36z2Hx9mQBfoOKNNWAGyIgZkQXRMvAKCVpDkSHRvAgDGNpcPZqKpUAAAAABJRU5ErkJggg=="
-  },
-  34249: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJklEQVR42mMo36z2Hx9mQOZ0nNEGYxoogEmgYxQTsEmS7gZs3gQAq5eXD1g/rBEAAAAASUVORK5CYII="
-  },
-  34256: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKElEQVR42mMo36z2Hx9mQOZ0nNHGrQAkiVMBTBIdE6+AoBVEORKXNwHNjpcPx7wCxgAAAABJRU5ErkJggg=="
-  },
-  34264: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAT0lEQVR42mO4m3Hr/3G/vf9B9Jetp8EYxgfRDDAGSGKlwXwwBrFRFMAkTwYdAGOYIrACZJ3ICmCKGGD2gjBMAbIYihuQFWB1JEEFyBimAACOMcNTZrOi5gAAAABJRU5ErkJggg=="
-  },
-  34268: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAS0lEQVR42mO4m3HrPwx/2XoajJHFGI777f0PwyDJlQbzwTRMjAGmC4ZBCmCKwCaAGCeDDmBgmCLiFOCyAuwGdF8g24/VF8g+AJkAACqWw1P3ThDNAAAAAElFTkSuQmCC"
-  },
-  34271: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAASklEQVR42mM47rf3/92MW/+/bD2NgmHiDMgKTgYdAGPSFCAbi6wAhsEKVhrMB2OYAhgfrABkFEwRsgKQGIYbkHViOBJmEkwnTAEAuhHDU4NiXBkAAAAASUVORK5CYII="
-  },
-  34280: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAASUlEQVR42mM47rf3Pwx/2XoajJHFGO5m3PoPwiCJlQbzwTRMDIQZYDpBkjAFyJgBJnky6AAGJk4Bsv1YrUD2AUwBVl/ATEL3BQAdu8NTDj8cyAAAAABJRU5ErkJggg=="
-  },
-  34287: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKUlEQVR42mPY4Lr0Pz7MgMw56b8XjLEqgEmiK2LAJomsiHgrqKMAmzcB4UWqZ/cI++gAAAAASUVORK5CYII="
-  },
-  34293: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKElEQVR42mPY4Lr0Pz7MgC5w0n8vYQXIihiQBdEx8QoIWkGSI9G9CQC2oqpnYydYrwAAAABJRU5ErkJggg=="
-  },
-  34300: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJklEQVR42mPY4Lr0Pz7MgMw56b8XjGmgACaBjlFMwCZJuhuweRMAlTeqZxW9ZAUAAAAASUVORK5CYII="
-  },
-  34308: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKUlEQVR42mPY4Lr0Pz7MgMw56b8XtwKQJE4FMEl0TLwCglYQ5Uhc3gQAv9qqZy4KorUAAAAASUVORK5CYII="
-  },
-  34315: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPklEQVR42mPQN7b6jw8zgIjFq7b8l5FT+V9c1QrGIDZIDK4AWRJZEYoCbBhFQUx8KgomTQHMkcgYxZH4vAkAzHxxHb95owsAAAAASUVORK5CYII="
-  },
-  34324: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAOElEQVR42mPQN7b6jw8zgIjFq7b8l5FTQcEgMbgCkEBMfCoYg9jFVa1gGq8CEKZMAYoVBB2Jz5sA9fFxHWjttcwAAAAASUVORK5CYII="
-  },
-  34328: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPUlEQVR42mPQN7b6jw8zgIjFq7b8l5FTQcEgMbgCkEBMfCoKBomRpgAbRlFQXNWKglEUwByJLIniSHzeBABN1XEdcXQ9UQAAAABJRU5ErkJggg=="
-  },
-  34337: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAOUlEQVR42mPQN7b6jw8zgIjFq7b8l5FTQcEgMbgCkEBxVSuYjolPBWMQG64AJEmZAoJWEHQkPm8CACRgcR0wWvh3AAAAAElFTkSuQmCC"
-  },
-  34340: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAFklEQVR42mP4DwQnL33EikGAYWQoAACFOOnRasFQLQAAAABJRU5ErkJggg=="
-  },
-  34347: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAGElEQVR42mP4TwAwnLz08T8+PDQUEPImAIU46dFLpExsAAAAAElFTkSuQmCC"
-  },
-  34352: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAaUlEQVR42mP42SD7X2zx4v8/l5qDMZj9/99/mWPHwJgBJICu4GEiAxwzwCRAHJBpyDTYBJgCkCDIaGTdINPgVsAEQYpgGiAmQHXBjYe5Zc4ciAIQgWws2FdQSRANVwAWAFoF8x5IEmQSABdtpb0kNJbpAAAAAElFTkSuQmCC"
-  },
-  34358: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAaklEQVR42l2OwQ2AMAwDPUVfMAfzsAmD9FexSvdgjH4IcZRELQ+rVXyOg613oYa8UlqTcR8m+1+74DkhoT9AgWmapJfXQZCat7CKUALWHwM157qsKLVmYqnRAGgm5EaIc9jFDhmoa+NwAh/vRqW9d3n0lQAAAABJRU5ErkJggg=="
-  },
-  34367: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAaklEQVR42l2PwQ3AIAwDMwWvdo7O0006CD/UVdijY+RTiF05Qn0YS/jigPl9jFLr2HqnSmv05zS6KYT7tTOQCGQYTRACgT7eD8AFgbjQNFZBhmOtBZQDIdODslYuYJ1Gm4Jcoe+h+g+gbQKkcaW9lnhLYgAAAABJRU5ErkJggg=="
-  },
-  34373: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAaUlEQVR42l2PwQ2AMAwDMwUvmIN52IRB+qtYpXswRj6ktYUjysNy1Zzj1tbW4j4s4EutdJ5LCb/2MAGSnxuHgszjyQF9pCBBhrVQbhgBQiNAQAlcaJuEYAJTzetTRXZ/6iDjq38AqvTdDsyJpb2LqQzUAAAAAElFTkSuQmCC"
-  },
-  34375: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKUlEQVR42mO4X6b0Hx9mQOZ8b1YDY6wKYJLoihiwSSIrIt4K6ijA5k0A1CSgY5U2a5YAAAAASUVORK5CYII="
-  },
-  34378: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKElEQVR42mO4X6b0Hx9mQBf43qxGWAGyIgZkQXRMvAKCVpDkSHRvAgC2g6BjzIJ+RgAAAABJRU5ErkJggg=="
-  },
-  34383: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJklEQVR42mO4X6b0Hx9mQOZ8b1YDYxoogEmgYxQTsEmS7gZs3gQAn0qgY53vMy0AAAAASUVORK5CYII="
-  },
-  34387: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKElEQVR42mO4X6b0Hx9mQOZ8b1bDrQAkiVMBTBIdE6+AoBVEORKXNwG866BjX9x/RgAAAABJRU5ErkJggg=="
-  },
-  34389: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAU0lEQVR42mPYsX3tfxD+svX0/8/dq8A0CN8snAHGDDBJEAcmCVMIVoAsCZMA0TA2A7KxyGwYZsCmE5nPgEsnzFoGZPuRHQeiQR5ggHkH3R0w7wMAY/PQPdS7P3QAAAAASUVORK5CYII="
-  },
-  34391: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAUUlEQVR42mO4WTjjPwh/2XoajD93rwLTO7avBWMGmCRIAiYJEwMrQNaFjGGKUBTATEHmMyDrxmYSA7Jx6CaBFYAcgqwIWSFIjAHmHXQrYN4HAFBb0D1zfRKUAAAAAElFTkSuQmCC"
-  },
-  34393: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAU0lEQVR42mPYsX3tfxD+svX0/8/dq8A0CN8snAHGDDBJEAemCKYQrABZEhnDFDHAGDCdyHywAlw6YWwGdHuR7QebgOw4ZB+AaJAHGGDeQbcC5n0AUrvQPU2UFeYAAAAASUVORK5CYII="
-  },
-  34395: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAUklEQVR42mO4WTjjPwh/2XoajD93rwLTO7avBWMGmCRMAoRhYmAFMEmYAhgNU8QA04VuBYzNgKwTm0kMyMZhM4kB5BBkRcimgMQYYN7B5hOQAgBmU9A9AGG/YAAAAABJRU5ErkJggg=="
-  },
-  34398: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKklEQVR42mN40rPiPz7MgMz5M3sXGGNVAJNEV8SATRJZEfFWUEcBNm8CACiyycMTCh9qAAAAAElFTkSuQmCC"
-  },
-  34407: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKElEQVR42mN40rPiPz7MgC7wZ/YuwgqQFTEgC6Jj4hUQtIIkR6J7EwD/csnDC09jYQAAAABJRU5ErkJggg=="
-  },
-  34415: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJklEQVR42mN40rPiPz7MgMz5M3sXGNNAAUwCHaOYgE2SdDdg8yYA3ynJw8omp1oAAAAASUVORK5CYII="
-  },
-  34419: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKUlEQVR42mN40rPiPz7MgMz5M3sXbgUgSZwKYJLomHgFBK0gypG4vAkACGnJw/ggdsQAAAAASUVORK5CYII="
-  },
-  34427: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPklEQVR42mPQN7b6jw8zgIjFq7b8j4lP/f9hghcYg9ggMbgCZElkRSgKsGEUBS6eQSiYNAUwRyJjFEfi8yYAWVp+yW0qAYUAAAAASUVORK5CYII="
-  },
-  34432: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAOUlEQVR42mPQN7b6jw8zgIjFq7b8j4lPRcEgMbgCkICLZxAYg9gfJniBabwKQJgyBShWEHQkPm8CAP/OfsmcugG3AAAAAElFTkSuQmCC"
-  },
-  34441: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPUlEQVR42mPQN7b6jw8zgIjFq7b8j4lPRcEgMbgCkICLZxAKBomRpgAbRlHwYYIXCkZRAHMksiSKI/F5EwDxAX7JftBBnAAAAABJRU5ErkJggg=="
-  },
-  34450: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAOUlEQVR42mPQN7b6jw8zgIjFq7b8j4lPRcEgMbgCkMCHCV5g2sUzCIxBbLgCkCRlCghaQdCR+LwJAEqNfsmVPJ1MAAAAAElFTkSuQmCC"
-  },
-  34454: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAVUlEQVR42mPoNNrxf1HIg/86OkZwDBID0UnyM/4zgCRhimAKYQpANAOIAVME0wVigzDYBJgCZBokAVPIALMXJIDMhiuAGQczEtkKFBPQFcBNQBdAxwBQ94p38cEmIQAAAABJRU5ErkJggg=="
-  },
-  34462: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAUUlEQVR42mNIkp/xX0fH6H+n0Q4wDcOLQh6AxRhgEjAaJAGTBNEMIBNAHBBGNg0kCWIzwCRgkjAJnApAGJnNADMeWSGyGNwEdAVYTUA2CUYDAH7/infsS1ioAAAAAElFTkSuQmCC"
-  },
-  34464: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAATUlEQVR42mPoNNrxHx0nyc+A0wzoAjC2jo4RGDOg64QpgGEGZAmYLmQ2hoJFIQ9QaAZkI2GKQGy4ApiDYDRIAoRhihiQdcHshSkEORIA+tCKdyallj8AAAAASUVORK5CYII="
-  },
-  34468: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAATklEQVR42mNIkp/xv9Nox38YjY4ZdHSM/oMwTBG6BgZk1cgKMEwASSCz4SaABBaFPPiPTGNVAOLAJJGtZIBJgmiYCTDFcEfCJJB9BDMNAMzIinexe84uAAAAAElFTkSuQmCC"
-  },
-  34471: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKUlEQVR42mMo1pr7Hx9mQOa0Ge4AY6wKYJLoihiwSSIrIt4K6ijA5k0AKuuR+/fNQZMAAAAASUVORK5CYII="
-  },
-  34474: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKElEQVR42mMo1pr7Hx9mQBdoM9xBWAGyIgZkQXRMvAKCVpDkSHRvAgAEnpH7IQ8teQAAAABJRU5ErkJggg=="
-  },
-  34479: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJklEQVR42mMo1pr7Hx9mQOa0Ge4AYxoogEmgYxQTsEmS7gZs3gQA5oqR+5zypGkAAAAASUVORK5CYII="
-  },
-  34484: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKElEQVR42mMo1pr7Hx9mQOa0Ge7ArQAkiVMBTBIdE6+AoBVEORKXNwEM5pH79i7x7gAAAABJRU5ErkJggg=="
-  },
-  34490: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAATUlEQVR42mMoqmr9D8JZhdUoGCbOACKWnTH5375R73/6NA0wBrFBYmAFINUggdoluigYJAaSAysA6UJXABKjkgKQQ5AdhuxguC/weRMAJ1OVu16MXPwAAAAASUVORK5CYII="
-  },
-  34492: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAARElEQVR42mMoqmr9D8JZhdUoGCbOACLSp2mg4PaNev+XnTGBKACpBgnULtFFwSAxkBxYAUg1ugKQScQrwGsFQUcS8iYACySVu8WCtLgAAAAASUVORK5CYII="
-  },
-  34497: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAATUlEQVR42mMoqmr9D8JZhdUoGCbOACLSp2n8b9+o93/ZGRMwBrFBYmAFINUgTu0SXRQMEgPJUUkByE50BSAxsAKQQ5AdhuxguC/weRMA9P6Vux7GvpcAAAAASUVORK5CYII="
-  },
-  34500: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAARUlEQVR42mMoqmr9D8JZhdUoGCbOACKWnTH5375R73/6NA0UDFYAUg2SrF2ii4JBYiA5sAKQanQFIFOJV4DXCoKOJORNABE8lbtYytMaAAAAAElFTkSuQmCC"
-  },
-  34502: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAT0lEQVR42mMoqmr9D8JZhdUoGCbOACLSp2lgxWAFINUgTu0SXRQMEgPJEa9g2RkTFIyiACQwaYchXDeIDRIDKwA5pH2jHoYDQWJwX+DzJgBiyJVvZ1x9IgAAAABJRU5ErkJggg=="
-  },
-  34508: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAARklEQVR42mMoqmr9D8JZhdUoGCbOACLaN+r9X3bG5H/6NA0UDFYAUg3iTNphCFZUu0QXjEFiIDm4ApAgZQpwWkHQkYS8CQD2o5VvIlvPQgAAAABJRU5ErkJggg=="
-  },
-  34512: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAVUlEQVR42mMoqmr9D8JZhdUoGCbOACLaN+r9T5+mgYJBYmAFINXLzpj8n7TD8H/tEl0wBrFBYiA5sAKQDpAAMgaJoSiA6YZh4hWAHILuQBiG+wKfNwFqlZVvBTPxPQAAAABJRU5ErkJggg=="
-  },
-  34518: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAARUlEQVR42mMoqmr9D8JZhdUoGCbOACLSp2mg4GVnTP63b9SDKACpBgnWLtEFY5DkpB2GYDGQHFYFIJoyBShWEHQkIW8CANarlW/cPbFXAAAAAElFTkSuQmCC"
-  },
-  34525: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAWElEQVR42mMoqmr9D8JZhdUoGCbOACLSp2lgxWAFINUgTu0SXRQMEgPJgRW0b9T7v+yMCQoGicEVgAQm7TCE6waxQWIoCtCtgCsAOQRkHLoDQWJwX+DzJgBc/ZbzBi3AbgAAAABJRU5ErkJggg=="
-  },
-  34532: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAASUlEQVR42mMoqmr9D8JZhdUoGCbOACLaN+r9X3bGBIxB7PRpGmAMVgBSDeLULtH9P2mHIVgRiA0SA8mhKABhyhRgtYKgIwl5EwC6NpbzwDKhewAAAABJRU5ErkJggg=="
-  },
-  34537: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAW0lEQVR42mMoqmr9D8JZhdUoGCbOACLaN+r9T5+mgYJBYmAFINXLzpj8r12ii4JBYiA5uIJJOwzhkiA2igKQcSABZAwSgysA2YluBUgMrADkEHQHwjDcF/i8CQADVpbzcHzQxwAAAABJRU5ErkJggg=="
-  },
-  34541: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAASElEQVR42mMoqmr9D8JZhdUoGCbOACLSp2mAcftGvf/LzpiAMYgNVgBSDZKsXaILlpi0wxDMBomB5DAUgGjKFGBYQdCRhLwJAKYOlvOSJ/rjAAAAAElFTkSuQmCC"
-  },
-  34546: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAWklEQVR42mMoqmr9D8JZhdUoGCbOACLaN+r9X3bGBAWDxMAKQKpBApN2GP6vXaILxiA2SAwkB1cAk4RhFAUg49AVgMTgCtKnaWAoAImBFYAcAuJgw3Bf4PMmACEfl5dAUbsPAAAAAElFTkSuQmCC"
-  },
-  34550: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAARklEQVR42mMoqmr9D8JZhdUoGCbOACLSp2mAcftGvf/LzpiAMYgNVgBSDZKsXaILx5N2GIIVgeSwKgBhyhSgWEHQkYS8CQDi5JeXxQI7nAAAAABJRU5ErkJggg=="
-  },
-  34556: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAVklEQVR42mMoqmr9D8JZhdUoGCbOACLSp2lgxWAFINUgTu0SXRQMEgPJgRW0b9TDUAASgytYdsYEQwFIDEXBpB2GcEkQG64A5BCQcSABZAwSg/sCnzcB6YCXlxYPfWcAAAAASUVORK5CYII="
-  },
-  34563: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAR0lEQVR42mMoqmr9D8JZhdUoGCbOACLaN+r9X3bGBIxB7PRpGmAMVgBSDZKYtMPwf+0SXTgGKQDJwRUgS5KnAKcVBB1JyJsAJ7uXl7aCxCMAAAAASUVORK5CYII="
-  },
-  34571: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPklEQVR42mPQN7b6jw8zgIjFq7b8d/EM+t//OBuMQWyQGFwBsiSyIhQF2DCKAvs4MxRMmgKYI5ExiiPxeRMAQsJ6SaLJvUQAAAAASUVORK5CYII="
-  },
-  34577: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAOElEQVR42mPQN7b6jw8zgIjFq7b8d/EMQsEgMbgCkIB9nBkYg9j9j7PBNF4FIEyZAhQrCDoSnzcBoPJ6STqadRYAAAAASUVORK5CYII="
-  },
-  34580: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPUlEQVR42mPQN7b6jw8zgIjFq7b8d/EMQsEgMbgCkIB9nBkKBomRpgAbRlHQ/zgbBaMogDkSWRLFkfi8CQBZgXpJ4SbswQAAAABJRU5ErkJggg=="
-  },
-  34583: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAOUlEQVR42mPQN7b6jw8zgIjFq7b8d/EMQsEgMbgCkED/42wwbR9nBsYgNlwBSJIyBQStIOhIfN4EAPtCekkU2s7XAAAAAElFTkSuQmCC"
-  },
-  34592: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAUUlEQVR42mPYoKf2v09BAQWDxM55u4BpBpgCEA3DID5IAQgzwHTBBEAYRQGycTA2snUoCtBpuAKYIDaFDGcn1qA4ENktIDmwCSAGsgRMDORNAFDjiVqgPow8AAAAAElFTkSuQmCC"
-  },
-  34594: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAATElEQVR42mPYoKf2/+zEmv8gGob7FBTgbAZkyXPeLmAMUgDDDCABmCSyQphJKArQFcMVoOtGUYAsiG4/3JHIJoAkkDUwwLyJrBvZGgBdnolatMtI1QAAAABJRU5ErkJggg=="
-  },
-  34597: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAT0lEQVR42mPYoKf2/+zEmv8g+py3CxzDxBhADGQJkCAMg+QYYILINLJChj4FBQwFyDRYAQwj64QrgBkJU4DMB2EUBcgOhPEZkI1Dtg6mAAAn8YlaiGyJGAAAAABJRU5ErkJggg=="
-  },
-  34603: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAUUlEQVR42mPYoKf2/5y3Cxj3KSiAMYh9dmLNf5AcA0wSpgAkCNMEUsQA4sB0wnTDMNgEmC5kQWQ+igJ0hVgVoCtmwGY/TCHckTCHwtgwSZAjARs2iVqHrGxYAAAAAElFTkSuQmCC"
-  },
-  34609: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKUlEQVR42mOYoqHyHx9mQOas1dcCY6wKYJLoihiwSSIrIt4K6ijA5k0AF/N6bVaz6f0AAAAASUVORK5CYII="
-  },
-  34612: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKElEQVR42mOYoqHyHx9mQBdYq69FWAGyIgZkQXRMvAKCVpDkSHRvAgD8bnptDFD08QAAAABJRU5ErkJggg=="
-  },
-  34621: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJklEQVR42mOYoqHyHx9mQOas1dcCYxoogEmgYxQTsEmS7gZs3gQA5uh6bU7aRtYAAAAASUVORK5CYII="
-  },
-  34626: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKElEQVR42mOYoqHyHx9mQOas1dfCrQAkiVMBTBIdE6+AoBVEORKXNwECbXptaTyrtwAAAABJRU5ErkJggg=="
-  },
-  34632: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPklEQVR42mPQN7b6jw8zgIjFq7b8l5FT+T8r5j8Yg9ggMbgCZElkRSgKsGEUBS6eQSiYNAUwRyJjFEfi8yYAUPZyJ0cvZnEAAAAASUVORK5CYII="
-  },
-  34640: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAOUlEQVR42mPQN7b6jw8zgIjFq7b8l5FTQcEgMbgCkICLZxAYg9izYv6DabwKQJgyBShWEHQkPm8CAF7vcicGWtM1AAAAAElFTkSuQmCC"
-  },
-  34642: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPUlEQVR42mPQN7b6jw8zgIjFq7b8l5FTQcEgMbgCkICLZxAKBomRpgAbRlEwK+Y/CkZRAHMksiSKI/F5EwDYkHIn+9AcGwAAAABJRU5ErkJggg=="
-  },
-  34651: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAOUlEQVR42mPQN7b6jw8zgIjFq7b8l5FTQcEgMbgCkMCsmP9g2sUzCIxBbLgCkCRlCghaQdCR+LwJAMqXcieTEDwrAAAAAElFTkSuQmCC"
-  },
-  34656: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKUlEQVR42mPQ1tH9jw8zIHP+b+QAY6wKYJLoihiwSSIrIt4K6ijA5k0ApXV2add4ZHsAAAAASUVORK5CYII="
-  },
-  34658: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKElEQVR42mPQ1tH9jw8zoAv838hBWAGyIgZkQXRMvAKCVpDkSHRvAgDG0nZpwBr8SQAAAABJRU5ErkJggg=="
-  },
-  34662: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJklEQVR42mPQ1tH9jw8zIHP+b+QAYxoogEmgYxQTsEmS7gZs3gQAGF52aVupcAIAAAAASUVORK5CYII="
-  },
-  34664: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKElEQVR42mPQ1tH9jw8zIHP+b+TArQAkiVMBTBIdE6+AoBVEORKXNwH28nZp6oFM1wAAAABJRU5ErkJggg=="
-  },
-  34670: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKUlEQVR42mMwy+76jw8zIHP+b+QAY6wKYJLoihiwSSIrIt4K6ijA5k0AtACUa87/TgEAAAAASUVORK5CYII="
-  },
-  34679: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKElEQVR42mMwy+76jw8zoAv838hBWAGyIgZkQXRMvAKCVpDkSHRvAgBOG5RrHnvzJAAAAABJRU5ErkJggg=="
-  },
-  34684: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJklEQVR42mMwy+76jw8zIHP+b+QAYxoogEmgYxQTsEmS7gZs3gQA/i+Ua586yx0AAAAASUVORK5CYII="
-  },
-  34692: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKElEQVR42mMwy+76jw8zIHP+b+TArQAkiVMBTBIdE6+AoBVEORKXNwFkI5RrGXEGiQAAAABJRU5ErkJggg=="
-  },
-  34698: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPklEQVR42mPQN7b6jw8zgIjFq7b8d/EM+h/78xsYg9ggMbgCZElkRSgKsGEUBWExaSiYNAUwRyJjFEfi8yYACl9/C5cIgdAAAAAASUVORK5CYII="
-  },
-  34705: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAOUlEQVR42mPQN7b6jw8zgIjFq7b8d/EMQsEgMbgCkEBYTBoYg9ixP7+BabwKQJgyBShWEHQkPm8CAAfefwvB/dfFAAAAAElFTkSuQmCC"
-  },
-  34712: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPUlEQVR42mPQN7b6jw8zgIjFq7b8d/EMQsEgMbgCkEBYTBoKBomRpgAbRlEQ+/MbCkZRAHMksiSKI/F5EwB0lX8LZPDV2QAAAABJRU5ErkJggg=="
-  },
-  34719: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAOUlEQVR42mPQN7b6jw8zgIjFq7b8d/EMQsEgMbgCkEDsz29gOiwmDYxBbLgCkCRlCghaQdCR+LwJAHcWfwuX37JWAAAAAElFTkSuQmCC"
-  },
-  34728: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPklEQVR42mPQN7b6jw8zgIjFq7b8zzNT+///QRcYg9ggMbgCZElkRSgKsGEUBXMinFEwaQpgjkTGKI7E500AQhN/N/IUPY0AAAAASUVORK5CYII="
-  },
-  34733: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAOUlEQVR42mPQN7b6jw8zgIjFq7b8zzNTQ8EgMbgCkMCcCGcwBrH/P+gC03gVgDBlClCsIOhIfN4EACw0fzdxt8evAAAAAElFTkSuQmCC"
-  },
-  34737: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPUlEQVR42mPQN7b6jw8zgIjFq7b8zzNTQ8EgMbgCkMCcCGcUDBIjTQE2jKLg/4MuFIyiAOZIZEkUR+LzJgCJvX83AzeahAAAAABJRU5ErkJggg=="
-  },
-  34741: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAOUlEQVR42mPQN7b6jw8zgIjFq7b8zzNTQ8EgMbgCkMD/B11gek6EMxiD2HAFIEnKFBC0gqAj8XkTAJ+cfzeUyfoDAAAAAElFTkSuQmCC"
-  },
-  34744: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAASElEQVR42mPYvPvs/xmzV/1fvW4fCgaJgeQYQIR/itH/iEIdFAwSAyuAcdIbdFEwTBMDiANiwGhkNogmTQEyRlGAy5FwBfgwAPwFi3X4ME+IAAAAAElFTkSuQmCC"
-  },
-  34746: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAP0lEQVR42mNIb9D9j44jCnX+b959FowZQAL+KUZgQRgG8UF4xuxVEAUgQWymrF63D1UBzATyFeC0gqAj8XkTADkZi3UmDpWHAAAAAElFTkSuQmCC"
-  },
-  34755: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAASElEQVR42mNIb9D9jw8zgAj/FKP/EYU6KBgkBlcAEkDXCRNDUQDTTZoCZPuQMcxdDJt3n8XpSJAcWMGM2av+r163DwWDxEAKAH2ti3V2PhQRAAAAAElFTkSuQmCC"
-  },
-  34757: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPklEQVR42mPYvPvsfxCOKNT5n96gi4EZZsxe9d8/xQiMQYpgGMQHK1i9bh9W3TAxFAUw3eQrwGoFQUcS8iYAQKiLdb3LW/kAAAAASUVORK5CYII="
-  },
-  34761: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPklEQVR42mPQN7b6jw8zgIjFq7b8l5FT+Z+/zw2MQWyQGFwBsiSyIhQF2DCKApMkJRRMmgKYI5ExiiPxeRMAj81t4wHeNc8AAAAASUVORK5CYII="
-  },
-  34764: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAOElEQVR42mPQN7b6jw8zgIjFq7b8l5FTQcEgMbgCkIBJkhIYg9j5+9zANF4FIEyZAhQrCDoSnzcBP2tt41wA2JsAAAAASUVORK5CYII="
-  },
-  34773: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPUlEQVR42mPQN7b6jw8zgIjFq7b8l5FTQcEgMbgCkIBJkhIKBomRpgAbRlGQv88NBaMogDkSWRLFkfi8CQA3wW3jwgziJQAAAABJRU5ErkJggg=="
-  },
-  34777: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAOUlEQVR42mPQN7b6jw8zgIjFq7b8l5FTQcEgMbgCkED+PjcwbZKkBMYgNlwBSJIyBQStIOhIfN4EAIgjbeOnvacoAAAAAElFTkSuQmCC"
-  },
-  34786: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAU0lEQVR42mP4dyfsPwj//P8PTlttvvVfufM4mM2ALAljwyTBCpB1ImOYBgZknSCjQRhZEwOyLmQFIGtAbAZkB8EwiA9XAJOEWQWTRHEkuheRrQEASirWs9IODPYAAAAASUVORK5CYII="
-  },
-  34793: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAVElEQVR42mP4+f/ff+XO4/+tNt/6D2L/uxMGp0GYAcSBKUKWgLEZkAWQMUyMAZkDsgbZKrAJIAGY8cgKYBiuAKYI2U0gORRHgjCym0B8BmzGIzsaAO7L1rO9lmBLAAAAAElFTkSuQmCC"
-  },
-  34801: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAVklEQVR42mNQ7jz+/+f/f/+tNt8CYxD7350wMA3CDDAGSCEIgyRhCkB8BpAumCRMMUwSJAdXgG4NihUwI9HdAcIMyHYiY5gYiiORdcLYDMgOQtYJswIA/UrWs5kLWoMAAAAASUVORK5CYII="
-  },
-  34807: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAVklEQVR42mP4+f/ffxD+dycMTFttvgXGILZy5/H/DCACpgCEQXyYGAgzgFQjC8B0gjBIjgFZAt14sAKY0egKYGIMyBxkDNPIAJNENgnFkcgSyFbBFAEAWKnWs+XDdUcAAAAASUVORK5CYII="
-  },
-  34816: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKklEQVR42mN4/OTJf3yYAZnz+88fMMaqACaJrogBmySyIuKtoI4CbN4EALTt75E3hOoLAAAAAElFTkSuQmCC"
-  },
-  34821: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKElEQVR42mN4/OTJf3yYAV3g958/hBUgK2JAFkTHxCsgaAVJjkT3JgCA5e+RWXY02QAAAABJRU5ErkJggg=="
-  },
-  34823: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJklEQVR42mN4/OTJf3yYAZnz+88fMKaBApgEOkYxAZsk6W7A5k0AWB3vkdaNar4AAAAASUVORK5CYII="
-  },
-  34825: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKUlEQVR42mN4/OTJf3yYAZnz+88f3ApAkjgVwCTRMfEKCFpBlCNxeRMAjCXvkZ8RFqUAAAAASUVORK5CYII="
-  },
-  34830: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPklEQVR42mPQN7b6jw8zgIjFq7b8r7KS+///yCwwBrFBYnAFyJLIilAUYMMoCpYEaKFg0hTAHImMURyJz5sAB49+t2seOv0AAAAASUVORK5CYII="
-  },
-  34834: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAOUlEQVR42mPQN7b6jw8zgIjFq7b8r7KSQ8EgMbgCkMCSAC0wBrH/H5kFpvEqAGHKFKBYQdCR+LwJAOtFfrfITfbPAAAAAElFTkSuQmCC"
-  },
-  34837: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPUlEQVR42mPQN7b6jw8zgIjFq7b8r7KSQ8EgMbgCkMCSAC0UDBIjTQE2jKLg/5FZKBhFAcyRyJIojsTnTQBD4X63jw1N/wAAAABJRU5ErkJggg=="
-  },
-  34844: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAOUlEQVR42mPQN7b6jw8zgIjFq7b8r7KSQ8EgMbgCkMD/I7PA9JIALTAGseEKQJKUKSBoBUFH4vMmAGAcfrfaTSn1AAAAAElFTkSuQmCC"
-  },
-  34852: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAN0lEQVR42mPYdfz2fxDevPssCoaJM4CI1ev2YcVgBSDVIA6MRmaDaAZkCXRMmgKcVhB0JCFvAgDbosuNH/ORcAAAAABJRU5ErkJggg=="
-  },
-  34857: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAUklEQVR42mP4d8P2//83c+EYxn+3ivf/kjKf/wwgzqcNonAM44MUgmi4AmQa2TScJsBoBnQ3gOxFZmO1AiQBwwwg12IzBaQYrADGgbkaWTdIMwATKMBs9AQAIwAAAABJRU5ErkJggg=="
-  },
-  34863: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAV0lEQVR42mNYUubz/90q3v//38z9/++GLZiGYRCf4dMGUTADRIMEQTQMg/gM6LqQFYIVoAtgmAByA0w3MhvuBpAgDGO1AiQB4mDTDfIdA4hANgXZVyA+AHdtwGxXz1qaAAAAAElFTkSuQmCC"
-  },
-  34867: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAVUlEQVR42mN4t4r3/5IyHzj+tEH0/78btmAaxGeACYLo/2/mwjFIEUgzA7JukARIMTLNgKwTmykM6DpANAyDTQCpQtaFYQWyq7GaALIX5FqYnehuAABy18BsetyiFQAAAABJRU5ErkJggg=="
-  },
-  34874: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAUklEQVR42mNYUubz/9MG0f//btiCaRAfht+t4v3PACJAkv/fzIVjmCYQzQASAHGQaWRTGLDpRmbDTYBhdBOxWgHDINNxmgDzFYYbYHyQ70BuAAAOksBsMssoMQAAAABJRU5ErkJggg=="
-  },
-  34876: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKUlEQVR42mN4dcD2Pz7MgMz5f9EJjLEqgEmiK2LAJomsiHgrqKMAmzcBYqm8h9MX3TYAAAAASUVORK5CYII="
-  },
-  34880: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKElEQVR42mN4dcD2Pz7MgC7w/6ITYQXIihiQBdEx8QoIWkGSI9G9CQBDlryHxhnHiAAAAABJRU5ErkJggg=="
-  },
-  34888: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJklEQVR42mN4dcD2Pz7MgMz5f9EJjGmgACaBjlFMwCZJuhuweRMAKzu8h7I0MecAAAAASUVORK5CYII="
-  },
-  34897: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKUlEQVR42mN4dcD2Pz7MgMz5f9EJtwKQJE4FMEl0TLwCglYQ5Uhc3gQASk68hx6jQsMAAAAASUVORK5CYII="
+      sr = {
+        Stone: 2,
+        Diorite: 18,
+        Granite: 18,
+        Andesite: 18,
+        "Coal Ore": 10,
+        "Iron Ore": 15,
+        "Gold Ore": 20,
+        "Diamond Ore": 30,
+        "Moonstone Ore": 40,
+        "Block of Coal": 15,
+        "Block of Gold": 30
+      },
+      ir = {
+        ...sr,
+        ...Object.fromEntries(Object.entries(MY).map((YY => {
+          let [rY, DY] = YY;
+          return [rY, 9 * sr[DY]]
+        })))
+      },
+      yr = {
+        Watermelon: 10,
+        Melon: 10,
+        "Wheat|FreshlyGrown": 10,
+        "Rice|FreshlyGrown": 10,
+        "Corn Plant|FreshlyGrown": 10,
+        "Chili Pepper Plant|FreshlyGrown": 10,
+        "Chili Pepper Plant|Lava|FreshlyGrown": 10,
+        "Tomato Plant|FreshlyGrown": 10,
+        "Tomato Plant|Top|FreshlyGrown": 10,
+        "Carrot Plant|FreshlyGrown": 10,
+        "Potato Plant|FreshlyGrown": 10,
+        "Sugar Cane Plant|FreshlyGrown": 10,
+        "Sugar Cane Plant|Top|FreshlyGrown": 10,
+        "Coffee Plant|FreshlyGrown": 10,
+        "Lettuce Plant|FreshlyGrown": 10,
+        "Cauliflower Plant|FreshlyGrown": 10,
+        "Parsnip Plant|FreshlyGrown": 10,
+        "Red Cabbage Plant|FreshlyGrown": 10,
+        "Beetroot Plant|FreshlyGrown": 10
+      },
+      Qr = {
+        Wheatfish: 25,
+        Darter: 25,
+        "Sunset Minnow": 25,
+        "Root Flounder": 25,
+        "Greenfin Loach": 25,
+        "Red Strongfish": 30,
+        "Green Strongfish": 30,
+        "Boomerang Fish": 30,
+        Seahorse: 30,
+        "Spined Stickleback": 30,
+        "Moon Strongfish": 40,
+        "Boulder Bass": 40,
+        "Grass Snapper": 40,
+        "Crystalized Wheatfish": 55,
+        "Moonstone Pupfish": 55,
+        "Reedglass Minnow": 35,
+        "Mangrove Herring": 35,
+        "Mudline Perch": 35,
+        "Coastal Mullet": 35,
+        "Reef Sardine": 35,
+        "Root Perch": 40,
+        "Aether Minnow": 40,
+        "Driftwood Catfish": 45,
+        "Tri-Pointed Needlefish": 70,
+        "Threadfin Bream": 40,
+        "Mudbelly Tilapia": 40,
+        "Rotslab Eel": 40,
+        "Polarflash Electron": 45,
+        Hatchetfish: 45,
+        "Mireback Carp": 50,
+        "Blackwater Bream": 50,
+        "Stone Grouper": 55,
+        "Shadeback Ray": 60,
+        "Glacial Silverfish": 60,
+        "Moonlit Boomerang Fish": 90,
+        "Murkborne Ray": 90,
+        "Bamboo Catfish": 50,
+        "Mossback Arapaima": 60,
+        "Murk Stingray": 65,
+        "Channel Sawfish": 70,
+        "Boned Sturgeon": 75,
+        Oarfish: 90,
+        Snakehead: 160,
+        "Eldertide Leviathan": 250,
+        Pithead: 50,
+        "Electric Eel": 60,
+        "Shadow Darter": 60,
+        "Abyss Carp": 65,
+        "Nomai Moray": 75,
+        "Silver Dragonfish": 80,
+        "Giant Moray": 100,
+        Coelacanth: 250,
+        "Frost Herring": 60,
+        "Permafrost Halibut": 70,
+        "Glacial Lanternfish": 80,
+        "Frozen Grenadier": 85,
+        "Blackfin Icefish": 100,
+        Moonfish: 120,
+        "Alpha Moon Strongfish": 140,
+        "Deepwater Lanternfish": 300,
+        "Pearlescent Moonfish": 300,
+        "Game Dev Fish": 50
+      };
+    const or = {
+        foraging: "Iron Axe",
+        combat: "Iron Sword",
+        mining: "Iron Pickaxe",
+        farming: "Iron Hoe",
+        fishing: "Rusty Rod",
+        exploration: "Compass"
+      },
+      Wr = {
+        foraging: [80, 220, 100],
+        combat: [240, 70, 70],
+        mining: [60, 220, 240],
+        farming: [245, 220, 60],
+        fishing: [70, 120, 245],
+        exploration: [255, 180, 70]
+      };
+
+    function Er(YY) {
+      return `rgb(${Wr[YY].join(", ")})`
+    }
+
+    function mr(YY, rY, DY) {
+      if (!DY) return YY(rY);
+      const FY = {};
+      for (const [AY, IY] of Object.entries(DY)) FY[AY] = "string" === typeof IY ? IY : YY(IY.translationKey);
+      return YY(rY, FY)
+    }
+    class Vr {
+      constructor(YY, rY) {
+        this.now = YY, this.getJournal = rY, this.pending = [], this.current = null, this.followUp = null, this.shownAt = 0, this.expiresAt = 0, this.token = 0, this.ja = !1, this.onShown = () => {}
+      }
+      enqueue(YY) {
+        const rY = Sr(YY);
+        if (rY) this.pending.push(YY);
+        else {
+          const rY = this.pending.findIndex(Sr);
+          this.pending.splice(-1 === rY ? this.pending.length : rY, 0, YY)
+        }
+        return (null === this.current || null !== this.followUp && !rY) && (this.advance(), !0)
+      }
+      setHeld(YY) {
+        return this.ja = YY, !YY && null === this.current && this.pending.length > 0 && (this.advance(), !0)
+      }
+      Zu() {
+        const YY = this.getJournal(),
+          rY = this.followUp;
+        if (null !== this.current && this.now() >= this.expiresAt) return this.showFollowUp(null === rY ? this.findFollowUp(this.current) : null), !0;
+        if ("explore" === (null === rY || void 0 === rY ? void 0 : rY.kind) && YY && YY.active.length > 0) return this.showFollowUp(this.findFollowUp(this.current)), !0;
+        if ("step" === (null === rY || void 0 === rY ? void 0 : rY.kind)) {
+          const YY = this.findFollowUp(this.current);
+          if ("step" !== (null === YY || void 0 === YY ? void 0 : YY.kind) || YY.questId !== rY.questId || YY.step.id !== rY.step.id) return this.showFollowUp(YY, this.expiresAt), !0
+        }
+        return !1
+      }
+      clear() {
+        this.pending = [], this.current = null, this.followUp = null, this.expiresAt = 0
+      }
+      getView(YY, rY, DY) {
+        var FY, AY, IY, RY;
+        if (null === this.current) return null;
+        if ("skillLevel" === this.current.questCompletionKind) return this.getSkillLevelView(this.current, YY, DY);
+        if ("landmark" === this.current.questCompletionKind) return this.getLandmarkView(this.current, YY);
+        if ("npcNote" === this.current.questCompletionKind) return this.getNpcNoteView(this.current, YY, rY);
+        const {
+          questCompletionKind: OY,
+          questCompletionNameKey: gY
+        } = this.current, aY = "step" === this.current.questCompletionKind ? this.current.questCompletionNameParams : void 0, vY = "quest" === this.current.questCompletionKind ? this.current.questCompletionCoins : 0, uY = "step" === (null === (FY = this.followUp) || void 0 === FY ? void 0 : FY.kind) ? this.followUp : null, sY = "explore" === (null === (AY = this.followUp) || void 0 === AY ? void 0 : AY.kind);
+        let iY;
+        return iY = sY ? YY("skyblockGame:questExploreTitle") : null !== uY ? "quest" === OY ? YY("skyblockGame:questNextQuestTitle", {
+          quest: YY(uY.questNameKey)
+        }) : YY("skyblockGame:questNextStepTitle") : YY("started" === OY ? "skyblockGame:questStartedTitle" : "quest" === OY ? "skyblockGame:questCompletedTitle" : "skyblockGame:subquestCompletedTitle"), {
+          token: this.token,
+          kind: null === this.followUp ? OY : "step",
+          phase: null === this.followUp ? "completion" : "next",
+          title: iY,
+          name: sY ? rY("skyblockGame:questExploreName") : null !== uY ? mr(rY, uY.step.nameKey, uY.step.nameParams) : mr(rY, gY, aY),
+          description: sY ? rY("skyblockGame:questExploreDescription") : null === uY ? null : mr(rY, uY.step.descriptionKey, uY.step.descriptionParams),
+          reward: null === this.followUp && vY > 0 ? rY("skyblockGame:questCoinRewardSuffix", {
+            amount: vY.toLocaleString(DY)
+          }) : null,
+          iconItem: null !== (IY = null === uY || void 0 === uY ? void 0 : uY.step.questIconItem) && void 0 !== IY ? IY : null,
+          accent: null,
+          durationMs: this.expiresAt - this.shownAt,
+          waypointNameKey: null !== uY && (null === (RY = this.getJournal()) || void 0 === RY ? void 0 : RY.trackedQuestId) === uY.questId ? uY.step.nameKey : null
+        }
+      }
+      getSkillLevelView(YY, rY, DY) {
+        let {
+          skill: FY,
+          beforeLevel: AY,
+          level: IY
+        } = YY;
+        const RY = Ar(FY, AY),
+          OY = Ar(FY, IY);
+        return {
+          token: this.token,
+          kind: "skillLevel",
+          phase: "completion",
+          title: rY(`skyblockGame:${FY}`),
+          name: rY("skyblockGame:skillLevelUp", {
+            to: IY.toLocaleString(DY)
+          }),
+          description: RY.percent === OY.percent ? null : rY(`${OY.translationKey}Change`, {
+            before: RY.percent.toLocaleString(DY),
+            after: OY.percent.toLocaleString(DY)
+          }),
+          reward: null,
+          iconItem: or[FY],
+          accent: Er(FY),
+          durationMs: this.expiresAt - this.shownAt,
+          waypointNameKey: null
+        }
+      }
+      getLandmarkView(YY, rY) {
+        let {
+          landmarkNameKey: DY
+        } = YY;
+        return {
+          token: this.token,
+          kind: "landmark",
+          phase: "completion",
+          title: rY("skyblockGame:landmarkDiscovered"),
+          name: rY(DY),
+          description: null,
+          reward: null,
+          iconItem: null,
+          accent: null,
+          durationMs: this.expiresAt - this.shownAt,
+          waypointNameKey: null
+        }
+      }
+      getNpcNoteView(YY, rY, DY) {
+        let {
+          titleKey: FY,
+          textKey: AY,
+          params: IY = {},
+          nameKeys: RY = {},
+          iconItem: OY = null
+        } = YY;
+        const gY = {
+          ...IY
+        };
+        for (const [aY, vY] of Object.entries(RY)) gY[aY] = rY(vY);
+        return {
+          token: this.token,
+          kind: "npcNote",
+          phase: "completion",
+          title: rY(FY),
+          name: DY(AY, gY),
+          description: null,
+          reward: null,
+          iconItem: OY,
+          accent: null,
+          durationMs: this.expiresAt - this.shownAt,
+          waypointNameKey: null
+        }
+      }
+      durationMs() {
+        var YY;
+        if (null !== this.followUp) return 5600;
+        switch (null === (YY = this.current) || void 0 === YY ? void 0 : YY.questCompletionKind) {
+          case "quest":
+            return 4800;
+          case "started":
+            return 4e3;
+          case "skillLevel":
+            return 3e3;
+          case "landmark":
+            return 3500;
+          case "npcNote":
+            return 8e3;
+          default:
+            return 2400
+        }
+      }
+      showFollowUp(YY, rY) {
+        null === YY || this.ja ? this.advance() : (this.followUp = YY, this.token++, this.shownAt = this.now(), this.expiresAt = null !== rY && void 0 !== rY ? rY : this.shownAt + this.durationMs())
+      }
+      findFollowUp(YY) {
+        var rY;
+        const DY = this.getJournal();
+        if (!DY || this.hasPendingQuestPopup() || Sr(YY)) return null;
+        const FY = "started" === YY.questCompletionKind ? DY.active.some((rY => rY.id === YY.questCompletionQuestId)) : "quest" === YY.questCompletionKind ? DY.completed.some((rY => rY.id === YY.questCompletionQuestId)) : [...DY.active, ...DY.completed].some((rY => rY.id === YY.questCompletionQuestId && rY.subquests.some((rY => rY.id === YY.questCompletionStepId && "completed" === rY.status))));
+        if (!FY) return null;
+        if ("quest" === YY.questCompletionKind && 0 === DY.active.length && !this.hasPendingQuestPopup()) return {
+          kind: "explore"
+        };
+        const AY = DY.active.find((YY => YY.id === DY.trackedQuestId)),
+          IY = null !== (rY = null === AY || void 0 === AY ? void 0 : AY.subquests.find((YY => "ready" === YY.status))) && void 0 !== rY ? rY : null === AY || void 0 === AY ? void 0 : AY.subquests.find((YY => "active" === YY.status));
+        return IY ? {
+          kind: "step",
+          questId: AY.id,
+          questNameKey: AY.nameKey,
+          step: IY
+        } : null
+      }
+      hasPendingQuestPopup() {
+        return this.pending.some((YY => !Sr(YY)))
+      }
+      advance() {
+        var YY;
+        this.current = this.ja ? null : null !== (YY = this.pending.shift()) && void 0 !== YY ? YY : null, this.followUp = null, null !== this.current && (this.token++, this.shownAt = this.now(), this.expiresAt = this.shownAt + this.durationMs(), this.onShown(this.current.questCompletionKind))
+      }
+    }
+
+    function Sr(YY) {
+      return lr(YY.questCompletionKind)
+    }
+
+    function lr(YY) {
+      return "skillLevel" === YY || "landmark" === YY || "npcNote" === YY
+    }
+    var Tr = DY(37914);
+    const er = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAP0lEQVR4nGNgoAD8h2L8Cqz6T4IxLsVwyZwTb+CYAZ9imCI5Gx+cisEK73/7jYLRFcKtxqcIwzPE+BymgXwAABikVOyJwpyoAAAAAElFTkSuQmCC",
+      Nr = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAUUlEQVR4nGNgIAP8x4FRwH8w+OqOim+LYyiGSLzQR8G/DipgKgy2Vvqfc+INmEZm4zQRphCniTA3wRXeFseuECQIwlfbmMEYxsfqc2KChyAAANDbei83hMJpAAAAAElFTkSuQmCC",
+      Br = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAVElEQVR4nGNgIAP8x4FRwH8QePfuFQq+dO44hmKwxOMHN1Hw4b3bMRW6unv/zznxBkwjs3GaCFOI00SYm2AKQWysCkGCILxm6TwwhvGx+pyY4CEIAG45h2BiJfmeAAAAAElFTkSuQmCC",
+      cr = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAASElEQVR4nGNgIAP8x4FRwP9sF+X/XVEGKDjbRRlDMVjww44uFHyyKw5TIUjC2n4BXBGIjVMh0SaSpHBBkC0Y41IIVkxM8BAEAGLKe3rsiWx2AAAAAElFTkSuQmCC",
+      Kr = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAW0lEQVR4nGNgIAP8J0bs//M750GCKPg5Qgyh8OT2Vf870vxR8MntqzAVysnL/wcBmCIQAIlhVQjCMIUwPobCjAC7/+XZSSgYJIZVoZGWKlwRiI1NISwosGHSAAAPvV+9cOwRMQAAAABJRU5ErkJggg==";
+    var Hr = DY(37918);
+    const zr = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAT0lEQVR4nGNgIAP8h2JcfDD4X2lg/D9RRhQmCWbnq6piKAYrRMf52BSCTHAU54QrArGRbEA18ev3X3CFIDZOq2GmwkzDqxAdY/U5DkwaAACgalVtqFSm5wAAAABJRU5ErkJggg==",
+      Zr = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAf0lEQVR4nO3VsQkEIRCG0ek/MbwWbMXk4u1kOBi4bWANhA0U3oM/9zOZCAAAAAAm8lf/Nza+1+NiNym4BKfgEjxOCR6Th7ZPX9rsI2I3Q/AluAnugvOU4Fw8M6vnKnaTgkvwEFyC8/TgtniWZovdpOAS3AR3we2UYAAAAIDYxQ2IeNNWBgNQ/AAAAABJRU5ErkJggg==";
+    const Cr = DY.p + "static/media/quest_search.b4f00072d5f134fdf189ecb8a48edc99.svg";
+    const fr = DY.p + "static/media/quest_talk.7d2326c7bdb6bc060cc0cde294f4fa89.svg",
+      jr = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAANklEQVR4nGNgIBP8R8NYwX8QuH7nGRwzYFEMVwQzDcSetXgHdsXEKIIrJkYRusn4FVHdRJwAALfWRnO5uwepAAAAAElFTkSuQmCC";
+    var hr = DY(18131),
+      dr = DY(20222),
+      Jr = DY(22651),
+      Mr = DY(24164),
+      wr = DY(25837);
+    const br = {
+      ashen_fort: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAUElEQVR4nGNgIAP8R6PR2RCBzRu2/kemQbirvQ/GRlUIwyAFIJyUkIFbobyUHhjjVAiSgCmM1p9HWCFI0YKYD/gVgjDMapAibAphQYENkwYAeH1pEdiBhHAAAAAASUVORK5CYII=",
+      auction: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAR0lEQVR4nGNgoAD8h2K84P+kApf/vw4qEFT8H6SoJsr8/5quIMKKg62VwIrxmfx/apEbWBKkCOQMbArhimB8YhThBUQpIggAQqYxE90Y9BMAAAAASUVORK5CYII=",
+      bank: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAR0lEQVR4nGNgIBP8R8NYwX8w+OoOwbfFcSr+/+ugAhi/X8zz/0gVD1aFCNNui6Ow0RWDBWGmIbPJVwhzFwgjs7G6EwcmDQAAuONyKxIgH/AAAAAASUVORK5CYII=",
+      carrot: hr,
+      castle: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAVUlEQVR4nGNgoAD8R8I4wf+pRW7/n2nrgzEDDsX/YQrxmfr/yIHdYAkQDWNP6uvDUAxXAMIgBSCcm5mJqRAkAVIUbK0ExgQV1kSZgzEuhXDPYMGkAQC0sV3YpEV43gAAAABJRU5ErkJggg==",
+      cinderfall: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAATUlEQVR4nGNgoAD8h2K84P//N/5gjE/x/78dLHCFIDYuxWDJxqys/362tjgVwhXBFOJS/P+yCROKImNNbbAYhkJ000AKQRir9TgwaQAA9pxTDDdv+r4AAAAASUVORK5CYII=",
+      combat_1: dr,
+      cow: Kr,
+      craft: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAPklEQVR4nGNgIAH8JxIz/L+2JA2Mp6VZYGUzwBSCBPFhBphCYq0GKy7w0kARwCGGIgjHhBTiNxHdLTjECAMAZEReU1MzQpcAAAAASUVORK5CYII=",
+      dungeons: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQUlEQVR4nGNgIBP8R8NYwf++KbPhOKewHKtiuAJ5KT0wBinEphis6L+1AVwhiA0Sw6oQpgiGKVdIjBvBinFg0gAAOOVdfOFyr7kAAAAASUVORK5CYII=",
+      emberwatch: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAATElEQVR4nGNgoAD8h2L8Cv6/8f//t4PlPy4N/48c2A2WACm6bMIEZk/q68NQDFYIwyAFIJybmYnbVJCJ+BTBFRIyjSSFcJ8TE0Q4AQDqiVfWwMcDkgAAAABJRU5ErkJggg==",
+      enemy: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAU0lEQVR4nGNgIBP8R8NYwf///W3/n3r4wjEDFsUYikB4s4o2hmKwhDY3L1wRiI1ToQgLK1whiI1TIQjnCYqBMUgRNoVgxSAJmCIQjdfnxAQPXgAAraZYPXKBMfkAAAAASUVORK5CYII=",
+      farm: DY(25858),
+      farming_1: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAR0lEQVR4nGNgoAD8h2K84P+nbP//87SU8Cr+D1J0w1H///9LXjgV/4cpQsbYFIMlPjw+hILxKqyJMv8fbK1EuUKwYhyYNAAAbaVgzAUMTa8AAAAASUVORK5CYII=",
+      fishing: er,
+      fishing_1: er,
+      forest: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAASElEQVR4nGNgIBP8R8NYwf+c/TZgbN+jA8YMWBRjKAJhg3JlDMUoikAKQFgxWgi7qcQogiuuiTL/H2ythFcRSQrBiolRhBMAAJ9tQRoOB1rEAAAAAElFTkSuQmCC",
+      guardian_gold: Nr,
+      guardian_iron: Br,
+      hub: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAWElEQVR4nGNgoAL4T5SirGUf/uNTDJa0r78GxjpRK7Aq/v8p2x8s8eHxIThGVwhWdMNR//88LSWwgv+XvLArhJlwcnMXfhNBgjVR5nCFIDY2hXCPYMGkAQDGNGSEX91FFwAAAABJRU5ErkJggg==",
+      island: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAUElEQVR4nGNgoAD8h2K84L//OlcwxqcYrECvyQKOGXAohkn870pxgLMxFC17FgfGOfut4Ni7Xwe74u60ADDO8rIC03jdCVIEwkT5nBhFOAEAI1k9HXZqyYAAAAAASUVORK5CYII=",
+      melon: Jr,
+      mines: Mr,
+      mining_1: Mr,
+      npc: cr,
+      npc_beaver_lumberjack: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAASUlEQVR4nGNgIAP8h2JcfDD4XxQVCMYwBSB2nJsbhmKwhJKyMlwDiI1TYUVyMFgBCIPYeBX+/3zt/6vbJ6moEBljUwhWjAOTBgAZSmJ9XCb2zAAAAABJRU5ErkJggg==",
+      npc_chef: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAW0lEQVR4nGNgIBP8R8NYwf+v33/B8f1nH7AqRlEEU3gfi+L/RVGB/y/feQlXAGKDxLAqlJDX//9pfycYg9g4FYIUxLm5gfHJvgz8Cl9vaQFjkEIQxuohHJg0AACncHuimGgHPgAAAABJRU5ErkJggg==",
+      npc_cow: Kr,
+      npc_draugr_warper: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAb0lEQVR4nGNgIBIwIrH/41PDCFPU+/IzVlXF4rxgdSwwgUV33oFpXh42MP35yy+sVv///x9is8GxR2D6gpUcRAEjxGYmZF2nvv/BygYBuNUwk0BASoKHIe38M+wKQZLIAMa/iOZGsDuxehtVDWEAAHwCHXf9ctZjAAAAAElFTkSuQmCC",
+      npc_dwarf_blue_hair: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAUElEQVR4nGNgIBP8R8NYwf//51lRMAMWxf/TM0r+/z/AjoLTM0owFENMeSCBirGY+l+r/SpY8OGmBjBGFkNR6DD9FVwRDIPEyFYIVowDkwYAEBZzAwnUgyIAAAAASUVORK5CYII=",
+      npc_dwarf_braided_hair: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAASElEQVR4nGNgIBP8R8NYwX9deRUUzIBFMYYiXIr/h5rqYMUYCr9+/wUWjLE2AGNkMRSF6Q6mcEUwDBLDUIiuCNlkDA/hwKQBAPnYUUW1+JaKAAAAAElFTkSuQmCC",
+      npc_dwarf_child: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAATklEQVR4nGNgIBP8R8NYwX8lZeX/6hoaYAxiY1P8f1trHlbMgKb4/5qGDKwYQ+HX77/+q0jKwxWA2CAxDIVEW32gqwRDEUgMq4dwYNIAAP19arcJQ+nsAAAAAElFTkSuQmCC",
+      npc_dwarf_forked_beard: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAUElEQVR4nGNgIBP8R8NYwX91DQ0UzIBFMVhick4EXBGMja74f1tKAFaMofDr91//VSTlwSaBMIgNEsOqEN2NWBWCTFFSVkbBIDGsHsKBSQMAnGRas5Ev2yIAAAAASUVORK5CYII=",
+      npc_dwarf_ginger_beard: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAYElEQVR4nGNgIBP8R8NYwf//B9hRMAMWxf//n2f9//+BBCo+z4qh+P/dFd0YGKvCr99//WfQ8/z/dNMUMAaxwWLoCt/umPn/ZaMLCgaJYSgEmfK4wgEFg03G5iEcmDQAAGl2d4woNRHRAAAAAElFTkSuQmCC",
+      npc_dwarf_grey_beard: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQklEQVR4nGNgIBP8R8NYwX8vUxsUzIBFMYYiXIr/O+mbYcUYCr9+//VfRVIebhKIDRLDUJiSkoIVk60QrBgHJg0AAIrsWQuZyZ2qAAAAAElFTkSuQmCC",
+      npc_dwarf_hair_buns: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAVklEQVR4nGNgIBP8R8NYwX8tRXkUzIBF8X81OZn/ilKSYBqZzYCmGCw4JTsarhDGxlD49fsvsOC8omQwRhZDUbisLBOuCIZBYhgK0RUhm4zhIRyYNAAAK2NaB/Me8/sAAAAASUVORK5CYII=",
+      npc_dwarf_purple_beard: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAR0lEQVR4nGNgIBP8R8NYwX8bw8D/LqYRYAxiY1P8/+TEQqyYAU3x/z2tWVgxhsKv33+BBZFNgomhKIS5DR2TrRCsGAcmDQAAxtNi2UvD/ZAAAAAASUVORK5CYII=",
+      npc_dwarf_red_hair: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAXUlEQVR4nGNgIBP8R8NYwf//DyT+/3cqhOAHElgV/y8urv///zwrCi4ursdQDJEEmYiMz7NiKpxiZvXfUEnr/7npBWAMYoPEsCqEKQLhDdUR/5uNTchXCFaMA5MGAHoVbT+3iic1AAAAAElFTkSuQmCC",
+      npc_dwarf_short_beard: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAATklEQVR4nGNgIBP8R8NYwX91DQ0UzIBF8f9trXlYMQOa4v9rGjKwYgyFX7//AgsimwQTQ1F4oKsEw40gMQyFIFOUlJVRMDY3ghXjwKQBAAoPYHs6ybo9AAAAAElFTkSuQmCC",
+      npc_farmer_gill: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAWUlEQVR4nGNgIBP8R8NYwf+bW0v+b53gD8cMOBT/X2cfgYIZsChEMQmfqf/PXrr1X0Je///rLS1gDGKDxLAq/LS/E67wZF/G/2XrdmFXCFOETyFYMQ5MGgAAx9NujhmsqqEAAAAASUVORK5CYII=",
+      npc_fire_mage: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAUElEQVR4nGNgIBP8R8NYwf8jtqZwvNJMH6tiFEX4FP//v5EDK8ZQ+PX7r/8WQuz/1+YFgjGIDRLDULi9LAKuCIZBYhgKJ+nJYcVYPYQDkwYAY/ZlGR1JAIkAAAAASUVORK5CYII=",
+      npc_forge_mother: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAXklEQVR4nGNgIAP8x4FRwP+vzy+AJSKd7MEYWQxF4avbJ8EYphDGx1D49fsvTBOhYigKfS0s/l9dPAsFg8SwKpyYkAVXBGLjVPj/POv//x+0Ifg8K1aFYMXEBA9BAACWKnGnkFHGrQAAAABJRU5ErkJggg==",
+      npc_goblin_goggles: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAgklEQVR4nGNkQAX/0fiMGAyQIhMPGxRVZ3YcgathwqUIBKBi/2Gq//tMzWDw4HBkwAZ2/NjPsCV7Btzq/1+//2LQ1dFkSMgoBQssmNHNcPnKdQZuTjawgXCFTd0zsJpYV5oBVsgCEzj+7wRWhTAA8wwcPNt2A4zRAUrw4DAMWQ1hAADlHCXxWLGl2AAAAABJRU5ErkJggg==",
+      npc_goblin_mad_scientist: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAV0lEQVR4nGNgIBP8R8NYwX/PzoT/qpZGYAxiY1P8//8DCayYAU3x/7OXboEFkRXAxFAUfv3+67+SsvL//+dZwRjEBolhKIQpQMcYCkGOx4axeggHJg0AAFKzbFf/ov6kAAAAAElFTkSuQmCC",
+      npc_gold_guardian: Nr,
+      npc_gold_watermelon_stag: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAWElEQVR4nGNgIAP8R6KR2Sjg/5sH4f9hNDKbAZ9ifIoYQIKfV6nAFSKxURVt8jH7f1+R9//ZVH8wBrFBYuiKwZIgiS27w8AYxAaJ4TQVWSEuN4IVo2HSAQCFHFiN1+WGFAAAAABJRU5ErkJggg==",
+      npc_head_8_0: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAdElEQVR4nGNgIBIwIrH/41PDCFO06sIzMMNbQ5Jh643ncFVhBlJgdXCFSnJqDBJiMgwvXj1BMe7eo1tghSzIgrPqMlAU+eXUwNlMyBINs7gYZJTkwBjERgYoCud0iGBlYygEgStrdoAxVq/DPIQhi6mGMAAAMzccpadovTMAAAAASUVORK5CYII=",
+      npc_human_archer: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAc0lEQVR4nGNkQID/DNgBI5wAKTqwtAOrKofoCrA6FmTBvinLUBQV5UTB2SgKf//5i8N2BoTVX7//YuC2VmfwZOYCC2z/+43h69GbDNycbGB1cIWHXBywmmS35wBYIRNOu9AA3I1ffnzFqxBmNdh6ItQQBgAsaRzpv2C9aQAAAABJRU5ErkJggg==",
+      npc_human_desert_guard: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAfklEQVR4nGNkQID/DNgBI5wAKfpxdztWVRzKnmB1LDCBdReZGUSEhVAUvXn7Ds6GKwSB23MnoigUDIiFs5lgDH9PB4Zll+7DJUBskBiKQ0FunBoXy/D9xw8UEzk5OBiyFy1GdSPHpTMM+rw8KApvfv6CaTUhALMabD0RaggDACCpH2oXfV//AAAAAElFTkSuQmCC",
+      npc_human_sentry: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAYUlEQVR4nGNgIBIwIrH/41PDCFOkqamJVdX169fB6liQBXNMTVAUTTl9BkPj/6/ff4Gs/j81LhaMkcVQrO4JC2Xg5OBA0f39xw+GklWrUa2edvYcTh+DABNeWSRAdPAQDQAzViKkGPwLjwAAAABJRU5ErkJggg==",
+      npc_iron_guardian: Br,
+      npc_jackal_priest: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAdklEQVR4nGNgQID/UIyVzwQT1NTUZBAWFoYrALFBYjDFjDCF/zdyMGADjP4/wBQLTODVVXkGh8UwCyDgQOw/BgaGmyhWg8GZcxexsjEUmhjpM3z79g2MQWxkALcaBP79/cvAwc4OZyO8gGYiPoDQghqGuNQQBgAoCCX1U3QMRQAAAABJRU5ErkJggg==",
+      npc_minotaur: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAaklEQVR4nGNgIAP8R6KR2Sjg/9fnF8AKMgJ8wBhZDEXhq9snwRimEMbHUPj1+6//DBYBCBMtAiBi6ApBkhMTsv5fXTwLjEHsODc37Ar/n2eFKwSxcSp8sGHO//8ftMEYxMamEKwYByYNAABmXHNFjN9ucgAAAABJRU5ErkJggg==",
+      npc_minotaur_elder: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAg0lEQVR4nGNgIBIwIrH/41PDBFP09fkFMKMuJxWMQQAq9h9ZIcPXLz8ZXt0+CTcGxAaJwQBcIbeMIYOYqjlcAsQGiaG78X9ZajxDvJ01iuMWHjrK0DV7IVgd3EQQ2LMX4k50NgiwIHPy8mczMCiqgdlaOrcYyqdFYVgN9x0WgKyGMAAArq0oYNR0jFIAAAAASUVORK5CYII=",
+      npc_minotaur_warrior: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAjUlEQVR4nGNkQAX/0fiMGAyQooWVjiiq4tv3o6th+P/q9sn//z9oo+BXt0/+h9nCgmLE/VuoFvMgmHCF3DKGDIycvxmq3XzA/G137jHwcediKuwLDme4ungWXCKKgYFh3fLtDAcvQ/hMyDbt2XsBKxtF4Y8/vxn8A4wYuHmZwBjEBolhDR5Un2BVQxgAAJW+Nj/Gsfy4AAAAAElFTkSuQmCC",
+      npc_monster_hunter_lorenzo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAVElEQVR4nGNgIAP8x4FRwH9NLa3/ru5eYBoZM6AphkvsrU0BY5wKv37/9d/awAauEMQGiWEoPNmaDVcEw7PigjAVIlsHw3gVIrsRm0KwYmKChyAAAIfVZAdaM2LxAAAAAElFTkSuQmCC",
+      npc_npc_pig_head: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAXklEQVR4nGNgIAP8h2JcfDD4/3Lyjv9fe3bCJMHsl5N3YCj+/3/HfQjecAWOX2JVuOHKfwZ1U7giEBunQpB1yBinwkJta7giEBurwrOXbv3/+v0XCgaJYfU5DkwaAADzDIUDTIstKgAAAABJRU5ErkJggg==",
+      npc_painter_spencer: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAgklEQVR42mNgIBIwovH/45JHVvj/XZc7w+/vfxme3GViYGBgYDBetAuuBqbw/+MKB6xWynYcYGBgYGCEK/z6/ReDsoYpg5OsMAMDAwPDvsdvGe7eOM3AzcmGqjDFyZPh26+fKKZ9+/mDYcPpYwwMDAyMTMT6Gq4Q3TR8wfOfyCDEDwAFFSX0ZxYXtAAAAABJRU5ErkJggg==",
+      npc_pig: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAARklEQVR4nGNgIAP8x4FRwP/3x87A8ds9R+CYAU0xiiQMP1y0FlOhu7YJhkKQGFYTQSYgY5xWg0yAKYKxyXYjWDExwUMQAABoKIoUBfmEPAAAAABJRU5ErkJggg==",
+      npc_pig_napoleon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAYElEQVR4nGNgoAD8h2K84L++ofF/V3dvvIr/gxRtszH9//X7LzCbAYvi///Ps/6Xk5dHwSAxdMX//2+48p9B3RRMw9gvJ+/ArvBrz04UjFNhobY1XBGIjU0hWDEOTBoAAIrnYG/Xae9eAAAAAElFTkSuQmCC",
+      npc_pig_worker: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAYElEQVR4nGNgIAP8R8NYwf/YhDQ4dnb1xKnhP0gSHesbGmMo/v9/w5X/DOqmYBrGfjl5B3aFhdrW/7/27ARjEBunQpAEOsZQGGLn+L8oKvD/1++/wBjEBolh9RAOTBoAAGcEbivle0KRAAAAAElFTkSuQmCC",
+      npc_piggy_banker: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAXElEQVR4nGNgIBP8R8NYwX9Xd+//2jq6cMyAQ/F/OXn5//8fSPz/f54VzGbAohAsgQ2jK/7/f8OV/wzqpmAaxn45eQd2hV97dqJgnAoLta3hikBsbArBinFg0gAAgophxWZsQvAAAAAASUVORK5CYII=",
+      npc_portal_mage: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAYUlEQVR4nGNgIBP8R8NYwX+GDVNRMQOm4v8MC9qxYwZUxf//b+T4//8A+///51khGMTeyIGp8Nz0gv8MDoFgGsbeUB2BXeHESHcUjFNhR4Dj/zp3OzAGsbEphHgIOyYNAACzzGY5JF2GbAAAAABJRU5ErkJggg==",
+      npc_rabbit_aristocrat: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAXklEQVR4nGNgIAP8h2JcfDD4P3fB+v/3csphkmB2S/tUDMX/+yYuIE7h3AXrwYqRMU4TlZSV4YpAbJwKYe4EYRC7prYLU6GLocX/ODe3/1+//wJjEBskhtXnODBpAAD3lm2BX81XrwAAAABJRU5ErkJggg==",
+      npc_smuglyn: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAASklEQVR42mNgIAP8x4FRFWlqamLF6IrBgj1hoSgYq8Kv33/9txBi/z81LhaMQWyQGIbC5VmZcEUwDBLDUIiuCIRB1pOtkOjgIQgAhutlSTAZTWcAAAAASUVORK5CYII=",
+      npc_tentacle_boy: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAiElEQVR4nGNkQID/DNgBI5wAKXJw8Wb48vkjhqozJ4+A1bHABKI0arEad+akBdzY/ybmNgw/f/3CqpCdjQ1sKthEM4scHM5DsZ7hf23T3v9fv//6z8srAmaj80FqmGC6JMSkUExB54Ot1ubgYSgoXQkWuHXrKpiG8UFyMAA3HkbjEIMoRqMxxABOskezGUlSqQAAAABJRU5ErkJggg==",
+      npc_tentacle_girl: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAgklEQVR4nGNgwA3+QzEYMOGQ/H9viS7Dp4N+MDEGFmRFO8PqGYTFRBjevnrDwMCwjuHN4/twSRZsikD07U1BUKnLKArBQExYAIxh7OvX78DlUNzoMbEWKxtDYb11MFY2htXPPr5nOH7mApiW4hdECxAkX/fbJIGDYqV3MYwND0eiAQAf4TQGGrZ+tQAAAABJRU5ErkJggg==",
+      npc_tentacle_guy: Hr,
+      npc_tentacle_guy_fisherman: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAVElEQVR4nGNgIBP8R8NYwX9XD7//JuY2cMyARTFcUtfQDIxxKf4fHFaFgRPjWzAVVpXP/K+krAymYWycCrMzeuEKQWycCmE0jI1NIVgxEo3MJg0AAIJsWIj/ilEbAAAAAElFTkSuQmCC",
+      npc_wolf_in_suit: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAVUlEQVR4nGNgIAP8h2JcfDD47+0X/N/a1gEmCWY7u3piKAYrRMfOuBQqKSvDFYHYOBV+/f4LbCUIg9g4FYIUgEwCYbxu/P/5GtxEEBubQrBiHJg0AAB07Vx5G7sqWQAAAABJRU5ErkJggg==",
+      npc_wolf_security: zr,
+      player: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQElEQVR4nGNgoAD8h2K84D8M4FP8/9HLz3CFIDYuxUQpBEugK8SmGCy4cttpmASYjVUhkiJ8YhAJbO7GGT64AACb2mXTEt92cwAAAABJRU5ErkJggg==",
+      portal: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAU0lEQVR4nGNgIAP8x4FRwP9YmzYwtlOJAWMYG10xWOL7zz9wfPLcDdwKQZL901eAMUixrowDpkKQbphJMFPxKoSZCMI4FYIkQBiZjdXnxAQPQQAAOtFywhRvXJwAAAAASUVORK5CYII=",
+      portal_orange: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAVUlEQVR4nGNgIAP8x4FRwP9YmzYwtlOJAWMYG10xWOLzJAs4/tSkglshSPJjldT/D4UCYMW6Mg6YCkG6YSbBTMWrEGQiDONUCJIAYWQ2Vp8TEzwEAQAA6GVEbqZ9DwAAAABJRU5ErkJggg==",
+      quest: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAMElEQVR4nGNgoAD8h2K84P//Xwf+/35tSFDxf+or/P3a8P/nVSrEuZMoRVQ3EScAAIINMAfVJxmxAAAAAElFTkSuQmCC",
+      quest_search: Cr,
+      quest_talk: fr,
+      scorched_flats: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAUUlEQVR4nGNgIBP8R8NYwf8HT+6jYAYsisES/vIicEUg9t4TuzAUY5gGUoRNIVwxSBJGY1W0wF0LjKuMFcAYxsewGiYJchtMAzaFYMU4MGkAADMzb36mUd86AAAAAElFTkSuQmCC",
+      scorp_pit: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAASElEQVR4nGNgoAD8R8I4wf//l6rA+MUCG5yK/z/T1kc27T8uxeiCWBXCrUQ2cUOCHHYTQRIgU2BuxKYQxUSYApwmIgmi08QDAPP+Ttl2n8EbAAAAAElFTkSuQmCC",
+      shooting_gallery: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAASElEQVR4nGNgIBP8x4IxwP9n2vpw/P+SFxijK4ZIIoGaKHP8CkE0WNH///83q2jjVwhj41WIDLAphCsGScIwLl+DFRMKGoIAAPFdcuGHeG5wAAAAAElFTkSuQmCC",
+      smelt: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAP0lEQVR4nGNgIBH8J4DB4P+8efPwYgaoYjCnoKAAK56HTSG6lXgV/n5t+P9zhQphhSBFeBUS4xmwYmKChygAADFjjqm4UTd5AAAAAElFTkSuQmCC",
+      talk: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAANElEQVR4nGNgIBH8x4Ph4D8+wICkGC6Ai2Yg2cRdx67hxBjuhGnA5xkUk3FJYphKSBFBAACXuoGa4rCq3AAAAABJRU5ErkJggg==",
+      tower_of_doom: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAPUlEQVR4nGNgIAP8J0bsf1VBG0gQBduaucHYmAr/X/L6/9/aAKdCBpjiqKAkMMaliPoKwYrQFeJUjAOTBgBhWEzjnMiaVwAAAABJRU5ErkJggg==",
+      unknown: jr,
+      watermelon: wr
+    };
+
+    function Xr(YY, rY) {
+      const DY = document.createElement("img");
+      return DY.className = rY, DY.src = YY, DY.alt = "", DY.draggable = !1, DY
+    }
+
+    function qr(YY) {
+      var rY;
+      const DY = null !== (rY = br[YY]) && void 0 !== rY ? rY : YY.startsWith("npc_") ? cr : jr;
+      if ("portal" !== YY) return Xr(DY, "SkyblockMapIcon");
+      const FY = document.createElement("span");
+      FY.className = "SkyblockMapIcon Portal";
+      const AY = document.createElement("span");
+      return AY.className = "SkyblockMapIconTint", AY.style.maskImage = AY.style.webkitMaskImage = `url("${Zr}")`, FY.append(Xr(DY, "SkyblockMapIconLayer"), AY, Xr(Zr, "SkyblockMapIconLayer SkyblockMapIconShade")), FY
+    }
+    var pr = DY(37888),
+      kr = DY(3828);
+    const Gr = [{
+      lobes: [3, 4],
+      amount: [.04, .055]
+    }, {
+      lobes: [5, 6, 7],
+      amount: [.025, .035]
+    }];
+
+    function xr(YY) {
+      const rY = new kr.g(YY);
+      return {
+        radius: 45,
+        squareness: 3,
+        wobbles: Gr.map((YY => {
+          let {
+            lobes: DY,
+            amount: FY
+          } = YY;
+          return {
+            lobes: DY[Math.floor(rY.next() * DY.length)],
+            amount: FY[0] + rY.next() * (FY[1] - FY[0]),
+            phase: 2 * rY.next() * Math.PI
+          }
+        })),
+        samples: 160
+      }
+    }
+
+    function nr(YY) {
+      let {
+        radius: rY,
+        squareness: DY,
+        wobbles: FY,
+        samples: AY
+      } = YY;
+      const IY = [];
+      for (let RY = 0; RY < AY; RY++) {
+        const YY = 2 * Math.PI * RY / AY,
+          OY = Math.cos(YY),
+          gY = Math.sin(YY),
+          aY = rY * (Math.abs(OY) ** DY + Math.abs(gY) ** DY) ** (-1 / DY) * FY.reduce(((rY, DY) => {
+            let {
+              lobes: FY,
+              amount: AY,
+              phase: IY
+            } = DY;
+            return rY + AY * Math.sin(FY * YY + IY)
+          }), 1);
+        IY.push(`${(50+aY*OY).toFixed(2)} ${(50+aY*gY).toFixed(2)}`)
+      }
+      return `M${IY.join("L")}Z`
+    }
+    const Pr = ".InGameHeaderContainer, .TopRightElementsLeft > *, .TopRightElementsRight > *, .MiddleTextTopContainer";
+    class Ur {
+      constructor() {
+        this.compassSpacing = 1, this.compassSize = {
+          trackHalfWidth: 0,
+          screenHalfWidth: 0
+        }, this.compass = null, this.terrain = null, this.searchAreaPath = {
+          seed: "",
+          d: ""
+        }, this.searchAreas = {
+          minimap: null,
+          map: null
+        }, this.player = null, this.waypoint = null, this.markerIcon = null, this.waypointMarkerSize = {
+          width: 0,
+          height: 0
+        }, this.waypointInset = {
+          x: 8,
+          top: 8,
+          bottom: 8
+        }, this.viewport = {
+          width: 0,
+          height: 0
+        }, this.stopLayout = null, this.stopWaypoint = null, this.stopWaypointOrigin = null, this.waypointOriginToken = null, this.waypointLaunch = null, this.markers = new Map, this.cardinals = [], this.frame = null, this.Ky = !1, this.mountCompass = YY => {
+          var rY;
+          if (null === (rY = this.stopLayout) || void 0 === rY || rY.call(this), this.stopLayout = null, this.markers.clear(), this.cardinals = [], this.compass = null, !YY || this.Ky) return;
+          const DY = YY.querySelector(".SkyblockCompassTrack");
+          this.compass = {
+            root: YY,
+            track: DY,
+            label: YY.querySelector(".SkyblockCompassLabel")
+          }, DY.replaceChildren();
+          for (let AY = 0; AY < 4; AY++) {
+            const YY = document.createElement("span");
+            YY.className = "SkyblockCompassCardinal", DY.appendChild(YY), this.cardinals.push(YY)
+          }
+          const FY = (0, pr.c)(Pr, [YY], this.layout);
+          this.stopLayout = () => {
+            FY(), DY.replaceChildren()
+          }, this.render(this.frame)
+        }, this.mountTerrain = YY => {
+          this.terrain = this.Ky ? null : YY, this.render(this.frame)
+        }, this.mountMinimapSearchArea = YY => {
+          this.mountSearchArea("minimap", YY)
+        }, this.mountMapSearchArea = YY => {
+          this.mountSearchArea("map", YY)
+        }, this.mountPlayer = YY => {
+          this.player = this.Ky ? null : YY, this.render(this.frame)
+        }, this.mountWaypoint = YY => {
+          var rY, DY;
+          if (null === (rY = this.stopWaypoint) || void 0 === rY || rY.call(this), this.stopWaypoint = null, this.waypoint = null, this.markerIcon = null, !YY || this.Ky) return;
+          const FY = YY.querySelector(".SkyblockQuestWaypointMarker");
+          FY.replaceChildren(qr("quest")), this.markerIcon = "quest", this.waypoint = {
+            root: YY,
+            marker: FY,
+            clip: YY.querySelector(".SkyblockQuestWaypointTextClip"),
+            text: YY.querySelector(".SkyblockQuestWaypointText"),
+            label: YY.querySelector(".SkyblockQuestWaypointLabel"),
+            distance: YY.querySelector(".SkyblockQuestWaypointDistance"),
+            hint: YY.querySelector(".SkyblockQuestWaypointHint")
+          };
+          const AY = () => {
+              this.waypointMarkerSize = {
+                width: FY.offsetWidth,
+                height: FY.offsetHeight
+              }, this.waypointInset = {
+                x: FY.offsetWidth / 2 + 8,
+                top: FY.offsetHeight + 8,
+                bottom: 8
+              }
+            },
+            IY = new ResizeObserver((() => {
+              AY(), this.render(this.frame)
+            }));
+          IY.observe(FY, {
+            box: "border-box"
+          });
+          const RY = () => {
+            this.viewport = {
+              width: window.innerWidth,
+              height: window.innerHeight
+            }
+          };
+          window.addEventListener("resize", RY), null === (DY = window.visualViewport) || void 0 === DY || DY.addEventListener("resize", RY), this.stopWaypoint = () => {
+            var YY;
+            IY.disconnect(), window.removeEventListener("resize", RY), null === (YY = window.visualViewport) || void 0 === YY || YY.removeEventListener("resize", RY)
+          }, RY(), AY(), this.render(this.frame)
+        }, this.mountWaypointOrigin = YY => {
+          var rY;
+          if (null === (rY = this.stopWaypointOrigin) || void 0 === rY || rY.call(this), this.stopWaypointOrigin = null, this.waypointLaunch = null, this.waypointOriginToken = YY && !this.Ky ? Number(YY.dataset.notificationToken) : null, YY && !this.Ky && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            const rY = {
+              nameKey: YY.dataset.waypointNameKey,
+              x: 0,
+              y: 0,
+              startedAt: null
+            };
+            this.waypointLaunch = rY;
+            const DY = () => {
+                const DY = YY.getBoundingClientRect();
+                rY.x = (DY.left + DY.width / 2) / window.innerWidth * 100, rY.y = (DY.top + DY.height / 2) / window.innerHeight * 100
+              },
+              FY = new ResizeObserver(DY);
+            FY.observe(YY.parentElement), FY.observe(YY), window.addEventListener("resize", DY), this.stopWaypointOrigin = () => {
+              FY.disconnect(), window.removeEventListener("resize", DY)
+            }, DY()
+          }
+          this.render(this.frame)
+        }, this.layout = () => {
+          if (!this.compass) return;
+          const YY = this.compass.root,
+            rY = getComputedStyle(YY),
+            DY = getComputedStyle(document.documentElement),
+            FY = parseFloat(DY.fontSize),
+            AY = parseFloat(rY.getPropertyValue("--compass-icon-size")) * FY,
+            IY = "1" === rY.getPropertyValue("--compass-fit-top").trim(),
+            RY = IY ? 1 : 8,
+            OY = Array.from(document.querySelectorAll(Pr), (YY => {
+              var rY;
+              return (null !== (rY = YY.querySelector(".MiddleTextTop")) && void 0 !== rY ? rY : YY).getBoundingClientRect()
+            })).filter((YY => YY.width > 0 && YY.height > 0));
+          let gY = (parseFloat(DY.getPropertyValue("--notchTop")) || 0) + RY,
+            aY = "";
+          if (IY) {
+            const rY = window.innerWidth / 2,
+              DY = YY.getBoundingClientRect().height,
+              IY = [gY, ...OY.map((YY => Math.max(gY, YY.bottom + RY)))].sort(((YY, rY) => YY - rY));
+            for (const YY of IY) {
+              let IY = rY - 8;
+              for (const FY of OY) FY.bottom + RY <= YY || FY.top >= YY + DY + RY || (IY = Math.min(IY, FY.right <= rY ? rY - FY.right - 8 : FY.left - rY - 8));
+              const vY = 2 * IY - AY;
+              if (vY >= 16 * FY) {
+                aY = `${vY}px`, gY = YY;
+                break
+              }
+            }
+          }
+          YY.style.maxWidth !== aY && (YY.style.maxWidth = aY);
+          const vY = YY.getBoundingClientRect(),
+            uY = this.compassSize.trackHalfWidth;
+          if (vY.width > 0) {
+            const YY = this.compass.track.getBoundingClientRect();
+            this.compassSize = {
+              trackHalfWidth: YY.width / 2,
+              screenHalfWidth: window.innerWidth / 2
+            }, this.compassSpacing = 4 * AY / YY.width
+          }
+          if (!aY)
+            for (const sY of OY) sY.right > vY.left - 8 && sY.left < vY.right + 8 && (gY = Math.max(gY, sY.bottom + RY));
+          YY.style.top = `${gY}px`, this.compassSize.trackHalfWidth !== uY && this.render(this.frame)
+        }
+      }
+      mountSearchArea(YY, rY) {
+        this.searchAreas[YY] = this.Ky ? null : rY, this.render(this.frame)
+      }
+      render(YY) {
+        if (this.Ky) return;
+        if (this.frame = YY, this.compass && (Lr(this.compass.root, !YY), YY)) {
+          const rY = this.compassSize.trackHalfWidth / 50;
+          YY.compass.cardinals.forEach(((YY, DY) => {
+            const FY = this.cardinals[DY];
+            FY.textContent !== YY.name && (FY.textContent = YY.name), Lr(FY, YY.hidden), FY.style.translate = YY.left * rY + "px"
+          }));
+          const DY = new Set;
+          YY.compass.markers.forEach(((FY, AY) => {
+            var IY;
+            DY.add(FY.id);
+            let RY = this.markers.get(FY.id);
+            RY || (RY = document.createElement("span"), RY.className = "SkyblockCompassMarker", this.markers.set(FY.id, RY), this.compass.track.appendChild(RY)), RY.dataset.icon !== FY.icon && (RY.dataset.icon = FY.icon, RY.replaceChildren(qr(FY.icon))), RY.style.color = null !== (IY = FY.colour) && void 0 !== IY ? IY : "", RY.style.translate = FY.left * rY + "px", RY.style.zIndex = String(YY.compass.markers.length - AY), RY.title !== FY.name && (RY.title = FY.name)
+          }));
+          for (const [YY, FY] of this.markers) DY.has(YY) || (FY.remove(), this.markers.delete(YY));
+          this.compass.label.textContent !== YY.compass.label && (this.compass.label.textContent = YY.compass.label)
+        }
+        this.terrain && (Lr(this.terrain, !(null !== YY && void 0 !== YY && YY.minimap)), null !== YY && void 0 !== YY && YY.minimap && (this.terrain.style.transform = YY.minimap.transform, this.terrain.style.setProperty("--minimap-icon-rotation", YY.minimap.iconRotation)));
+        const rY = null === YY || void 0 === YY ? void 0 : YY.searchArea;
+        for (const DY of [this.searchAreas.minimap, this.searchAreas.map])
+          if (DY && (Lr(DY, !rY), rY)) {
+            if (this.searchAreaPath.seed !== rY.shapeSeed && (this.searchAreaPath = {
+                seed: rY.shapeSeed,
+                d: nr(xr(rY.shapeSeed))
+              }), DY.dataset.shapeSeed !== rY.shapeSeed) {
+              DY.dataset.shapeSeed = rY.shapeSeed;
+              for (const YY of DY.querySelectorAll("path")) YY.setAttribute("d", this.searchAreaPath.d)
+            }
+            DY.style.left = `${rY.left}%`, DY.style.top = `${rY.top}%`, DY.style.width = `${rY.width}%`, DY.style.height = `${rY.height}%`
+          } if (this.player && (Lr(this.player, !(null !== YY && void 0 !== YY && YY.player) || YY.player.hidden), null !== YY && void 0 !== YY && YY.player && (this.player.style.left = `${YY.player.left}%`, this.player.style.top = `${YY.player.top}%`, this.player.style.setProperty("--map-player-rotation", YY.player.rotation))), this.waypoint) {
+          const {
+            root: rY,
+            marker: DY,
+            clip: FY,
+            text: AY,
+            label: IY,
+            distance: RY,
+            hint: OY
+          } = this.waypoint, gY = !(null !== YY && void 0 !== YY && YY.waypoint) || null !== YY.waypoint.popupToken && YY.waypoint.popupToken !== this.waypointOriginToken;
+          Lr(rY, gY);
+          let aY = 1;
+          const vY = this.waypointLaunch;
+          if (!gY && vY && YY.waypoint.nameKey === vY.nameKey) {
+            const YY = performance.now();
+            vY.startedAt ??= YY, aY = Math.min(1, Math.max(0, (YY - vY.startedAt - 450) / 1e3)), DY.style.opacity = String(Math.min(1, (YY - vY.startedAt) / 150)), 1 === aY && (this.waypointLaunch = null)
+          } else DY.style.opacity = "", vY && null !== vY.startedAt && (this.waypointLaunch = null);
+          if (rY.classList.toggle("Launching", aY < 1), null !== YY && void 0 !== YY && YY.waypoint) {
+            const rY = this.waypointInset,
+              gY = "quest_talk" === YY.waypoint.markerIcon ? function(YY, rY, DY) {
+                if (!YY.text || null === YY.blockHeight || 0 === YY.nearness) return YY;
+                const FY = YY.blockHeight / 100 * DY.height,
+                  AY = -YY.nearness * (tr * FY + rY.width / 2),
+                  IY = YY.nearness * (YD * FY + rY.height / 2);
+                return {
+                  ...YY,
+                  text: {
+                    x: YY.text.x + AY / DY.width * 100,
+                    y: YY.text.y + IY / DY.height * 100
+                  }
+                }
+              }(YY.waypoint, this.waypointMarkerSize, this.viewport) : YY.waypoint,
+              uY = (0, Tr.b)(gY, rY, this.viewport),
+              sY = aY * aY * (3 - 2 * aY),
+              iY = aY < 1 ? vY.x + (uY.x - vY.x) * sY : uY.x,
+              yY = aY < 1 ? vY.y + (uY.y - vY.y) * sY : uY.y;
+            DY.style.translate = `${iY}vw ${yY}vh`, FY.style.clipPath = `inset(${rY.top}px ${rY.x}px ${rY.bottom}px)`, Lr(AY, aY < 1 || !YY.waypoint.text), AY.style.opacity = String(1 - YY.waypoint.nearness), YY.waypoint.text && (AY.style.translate = `${YY.waypoint.text.x}vw ${YY.waypoint.text.y}vh`), IY.textContent !== YY.waypoint.name && (IY.textContent = YY.waypoint.name), this.markerIcon !== YY.waypoint.markerIcon && (this.markerIcon = YY.waypoint.markerIcon, DY.replaceChildren(qr(this.markerIcon))), RY.textContent !== YY.waypoint.distance && (RY.textContent = YY.waypoint.distance), Lr(OY, null === YY.waypoint.hint), null !== YY.waypoint.hint && OY.textContent !== YY.waypoint.hint && (OY.textContent = YY.waypoint.hint)
+          }
+        }
+      }
+      dispose() {
+        var YY, rY;
+        this.mountWaypointOrigin(null), this.render(null), null === (YY = this.stopLayout) || void 0 === YY || YY.call(this), this.stopLayout = null, null === (rY = this.stopWaypoint) || void 0 === rY || rY.call(this), this.stopWaypoint = null, this.compass = null, this.terrain = null, this.searchAreas = {
+          minimap: null,
+          map: null
+        }, this.player = null, this.waypoint = null, this.markers.clear(), this.cardinals = [], this.Ky = !0
+      }
+    }
+
+    function Lr(YY, rY) {
+      YY.hidden !== rY && (YY.hidden = rY)
+    }
+    const tr = .55,
+      YD = .6;
+    const rD = {
+      talk: "quest_talk",
+      search: "quest_search"
+    };
+    class DD {
+      constructor(YY, rY, DY, FY) {
+        this.map = YY, this.quests = rY, this.compass = DY, this.display = new Ur, this.translate = void 0, this.locale = "en-GB", this.metresFormat = new Intl.NumberFormat(this.locale), this.Ky = !1, this.snapshot = null, this.texts = new Map, this.translate = FY
+      }
+      setTranslator(YY, rY) {
+        this.translate = YY, this.locale = rY, this.metresFormat = new Intl.NumberFormat(rY), this.texts.clear()
+      }
+      translateCached(YY, rY) {
+        const DY = void 0 === rY ? YY : `${YY} ${rY}`;
+        let FY = this.texts.get(DY);
+        return void 0 === FY && (this.texts.size >= 500 && this.texts.clear(), FY = this.translate(YY, void 0 === rY ? void 0 : {
+          distance: rY
+        }), this.texts.set(DY, FY)), FY
+      }
+      getSnapshot() {
+        return this.snapshot
+      }
+      afterRender(YY, rY, DY) {
+        if (this.Ky) return;
+        if (!YY) return this.snapshot = null, void this.display.render(null);
+        const FY = this.map.getSnapshot().map,
+          gY = DY.cameraHeading,
+          aY = {
+            ...this.display.compassSize,
+            tanHalfFovX: DY.tanHalfFovX,
+            pitch: DY.cameraPitch
+          },
+          vY = [];
+        if (FY)
+          for (const AY of this.compass.frame(YY, gY, rY)) {
+            const YY = QY(AY.offset, aY);
+            null !== YY && vY.push({
+              ...AY,
+              left: YY
+            })
+          }
+        const uY = function(YY, rY) {
+            const DY = [],
+              FY = YY => "quest" === YY.kind ? YY.distance - 1 : YY.distance,
+              AY = [...YY].sort(((YY, rY) => FY(YY) - FY(rY) || YY.id.localeCompare(rY.id)));
+            for (const IY of AY) {
+              let YY = !1;
+              if ("quest" !== IY.kind)
+                for (const FY of DY)
+                  if (Math.abs(FY.left - IY.left) < rY) {
+                    YY = !0;
+                    break
+                  } YY || DY.push(IY)
+            }
+            return DY
+          }(vY, this.display.compassSpacing),
+          sY = function(YY) {
+            let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI / 36,
+              DY = null;
+            for (const FY of YY) Math.abs(FY.offset) <= rY && (!DY || FY.distance < DY.distance || FY.distance === DY.distance && Math.abs(FY.offset) < Math.abs(DY.offset)) && (DY = FY);
+            return DY
+          }(uY),
+          iY = YY => {
+            var rY;
+            return null !== (rY = YY.displayName) && void 0 !== rY ? rY : this.translateCached(YY.nameKey)
+          },
+          yY = {
+            compass: {
+              markers: uY.map((YY => ({
+                id: YY.id,
+                icon: YY.icon,
+                colour: YY.colour,
+                name: iY(YY),
+                left: YY.left
+              }))),
+              cardinals: RY.map((YY => {
+                let {
+                  name: rY,
+                  bearing: DY
+                } = YY;
+                const FY = QY(AY.c.computeShortestRotation(gY, DY), aY);
+                return {
+                  name: rY,
+                  left: null !== FY && void 0 !== FY ? FY : 0,
+                  hidden: null === FY
+                }
+              })),
+              label: sY ? `${iY(sY)} \xb7 ${this.translateCached("skyblockGame:waypointDistance",lY(sY.distance,this.locale))}` : ""
+            },
+            minimap: null,
+            searchArea: null,
+            player: null,
+            waypoint: null
+          };
+        if (null !== FY && void 0 !== FY && FY.background) {
+          const rY = YY[0] - FY.mapOrigin[0],
+            DY = YY[2] - FY.mapOrigin[2],
+            {
+              rotation: AY,
+              transform: RY
+            } = function(YY, rY, DY, FY) {
+              const [AY, RY] = OY(YY, rY, FY), gY = IY - DY;
+              return {
+                rotation: gY,
+                transform: `rotate(${gY}rad) translate(-${AY}%, -${RY}%)`
+              }
+            }(rY, DY, gY, FY.background.bounds);
+          yY.minimap = {
+            transform: RY,
+            iconRotation: -AY + "rad"
+          };
+          const [aY, vY] = OY(rY, DY, FY.background.bounds);
+          yY.player = {
+            left: aY,
+            top: vY,
+            hidden: aY < 0 || vY < 0 || aY > 100 || vY > 100,
+            rotation: -AY + "rad"
+          }
+        }
+        const {
+          waypoint: oY
+        } = this.quests.getSnapshot();
+        if ("search" === (null === oY || void 0 === oY ? void 0 : oY.questMarkerIcon) && null !== FY && void 0 !== FY && FY.background) {
+          const {
+            bounds: YY
+          } = FY.background, [rY, DY] = OY(oY.position[0] - FY.mapOrigin[0], oY.position[2] - FY.mapOrigin[2], YY);
+          yY.searchArea = {
+            left: rY,
+            top: DY,
+            width: 6400 / (YY.mapMaxX - YY.mapMinX),
+            height: 6400 / (YY.mapMaxZ - YY.mapMinZ),
+            shapeSeed: oY.nameKey
+          }
+        }
+        const WY = this.quests.getNotificationSnapshot(),
+          EY = "completion" === (null === WY || void 0 === WY ? void 0 : WY.phase) && !lr(WY.kind);
+        if (oY && !EY) {
+          const rY = Math.hypot(...oY.position.map(((rY, DY) => rY - YY[DY]))),
+            FY = Math.round(rY),
+            AY = "talk" === oY.questMarkerIcon ? Math.min(1, Math.max(0, (10 - rY) / 5)) : 0,
+            IY = DY.projectWorldPosToViewport(oY.position),
+            RY = IY && DY.projectWorldPosToViewport([oY.position[0], oY.position[1] - 1, oY.position[2]]);
+          yY.waypoint = {
+            ...DY.projectWorldPosToScreenPos(oY.position),
+            text: IY,
+            nearness: AY * AY * (3 - 2 * AY),
+            blockHeight: IY && RY ? RY.y - IY.y : null,
+            name: this.translateCached(oY.nameKey),
+            nameKey: oY.nameKey,
+            markerIcon: oY.questMarkerIcon ? rD[oY.questMarkerIcon] : "quest",
+            popupToken: (null === WY || void 0 === WY ? void 0 : WY.waypointNameKey) === oY.nameKey ? WY.token : null,
+            distance: this.translateCached("skyblockGame:waypointDistance", this.metresFormat.format(FY)),
+            hint: "search" === oY.questMarkerIcon && Math.hypot(oY.position[0] - YY[0], oY.position[2] - YY[2]) <= 32 ? this.translateCached("skyblockGame:waypointSearchHint") : null
+          }
+        }
+        this.snapshot = yY, this.display.render(yY)
+      }
+      dispose() {
+        this.Ky = !0, this.snapshot = null, this.display.dispose()
+      }
+    }
+    const FD = "skyblockSkillsView";
+    class AD extends uY {
+      constructor(YY) {
+        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now,
+          DY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : YY => YY,
+          FY = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "en-GB",
+          AY = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : YY => YY;
+        super(YY, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {}, arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : () => {}), this.now = rY, this.translate = DY, this.locale = FY, this.itemName = AY, this.progress = null, this.selected = "foraging", this.pending = new Map, this.recent = null, this.nextLevelUpToken = 0, this.onLevelUp = () => {}, this.skillText = new Map, this.sourceText = new Map, this.snapshot = {
+          enabled: !1,
+          open: !1,
+          skills: [],
+          detail: null,
+          overallLevel: null,
+          hud: null
+        }, this.select = YY => {
+          this.selected = YY, this.emit()
+        }
+      }
+      setTranslator(YY, rY, DY) {
+        this.translate = YY, this.locale = rY, this.itemName = DY, this.skillText.clear(), this.sourceText.clear(), this.emit()
+      }
+      text(YY) {
+        let rY = this.skillText.get(YY);
+        return rY || (rY = {
+          label: this.translate(`skyblockGame:${YY}`),
+          description: this.translate(`skyblockGame:${YY}Description`)
+        }, this.skillText.set(YY, rY)), rY
+      }
+      sources(YY) {
+        if ("mining" === YY || "fishing" === YY) return this.buildSources(YY);
+        let rY = this.sourceText.get(YY);
+        return rY || (rY = this.buildSources(YY), this.sourceText.set(YY, rY)), rY
+      }
+      buildSources(YY) {
+        const rY = this.translate;
+        return "exploration" === YY ? [rY("skyblockGame:explorationZoneSource", {
+          xp: this.number(100)
+        }), rY("skyblockGame:explorationLandmarkSource", {
+          xp: this.number(50)
+        })] : "foraging" === YY ? [rY("skyblockGame:logSource", {
+          xp: this.number(ur["Maple Log"])
+        })] : "combat" === YY ? [rY("skyblockGame:creatureKillSource"), rY("skyblockGame:noEnvironmentalXp")] : "farming" === YY ? [rY("skyblockGame:cropSource", {
+          xp: this.number(yr["Wheat|FreshlyGrown"])
+        }), rY("skyblockGame:terrainFarmingSource", {
+          xp: this.number(2)
+        }), rY("skyblockGame:noYoungCropXp")] : Object.entries("mining" === YY ? ir : Qr).map((YY => {
+          let [DY, FY] = YY;
+          return rY("skyblockGame:itemXpSource", {
+            item: this.itemName(DY),
+            xp: this.number(FY)
+          })
+        }))
+      }
+      number(YY) {
+        return YY.toLocaleString(this.locale)
+      }
+      benefit(YY, rY) {
+        const DY = Ar(YY, rY);
+        return this.translate(DY.translationKey, {
+          bonus: this.number(DY.percent)
+        })
+      }
+      Cy(YY) {
+        if (!this.Ky) {
+          if ("snapshot" === YY.kind) this.progress = YY.progress, this.pending.clear(), this.recent = null;
+          else if ("award" === YY.kind && this.progress) {
+            const {
+              award: rY
+            } = YY;
+            this.progress = {
+              ...this.progress,
+              [rY.skill]: rY.after
+            };
+            for (const [YY, FY] of this.pending) FY.skill === rY.skill && this.pending.delete(YY);
+            const DY = rY.after.level > rY.before.level;
+            this.recordGain(rY.skill, rY.amount, DY ? ++this.nextLevelUpToken : null), DY && this.onLevelUp({
+              questCompletionKind: "skillLevel",
+              skill: rY.skill,
+              beforeLevel: rY.before.level,
+              level: rY.after.level
+            })
+          } else {
+            if ("rejectBlock" === YY.kind) return void this.rejectBlock(YY.position);
+            if ("open" === YY.kind) return void this.show()
+          }
+          this.emit()
+        }
+      }
+      predictBlock(YY, rY, DY) {
+        if (!this.progress || this.Ky || DY) return;
+        const FY = function(YY, rY) {
+          const DY = YY.split("|")[0];
+          return "Air" === rY || rY === `Barkless ${YY}` ? Object.hasOwn(ur, DY) ? {
+            skill: "foraging",
+            amount: ur[DY]
+          } : "Air" !== rY ? null : Object.hasOwn(ir, YY) ? {
+            skill: "mining",
+            amount: ir[YY]
+          } : gr(YY) ? {
+            skill: "farming",
+            amount: 10
+          } : vr(YY) ? {
+            skill: "foraging",
+            amount: 2
+          } : Object.hasOwn(yr, YY) ? {
+            skill: "farming",
+            amount: yr[YY]
+          } : Object.hasOwn(hY, YY) ? {
+            skill: "farming",
+            amount: 2
+          } : null : null
+        }(rY, "Air");
+        if (!FY) return;
+        const AY = YY.join(",");
+        if (this.pending.has(AY)) return;
+        const IY = this.predictedProgress(FY.skill).totalXp + FY.amount;
+        Number.isSafeInteger(IY) && (this.pending.set(AY, {
+          ...FY,
+          expires: this.now() + 2e3
+        }), this.recordGain(FY.skill, 0), this.emit())
+      }
+      rejectBlock(YY) {
+        this.pending.delete(YY.join(",")) && this.emit()
+      }
+      Zu() {
+        if (this.Ky) return;
+        let YY = !1;
+        for (const [rY, DY] of this.pending) DY.expires <= this.now() && (this.pending.delete(rY), YY = !0);
+        this.recent && this.recent.expires <= this.now() && (this.recent = null, YY = !0), YY && this.emit()
+      }
+      dispose() {
+        this.progress = null, this.pending.clear(), this.recent = null, super.dispose()
+      }
+      recordGain(YY, rY) {
+        var DY, FY;
+        let AY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        const IY = (null === (DY = this.recent) || void 0 === DY ? void 0 : DY.skill) === YY && this.recent.expires > this.now() ? this.recent.confirmed : 0,
+          RY = (null === (FY = this.recent) || void 0 === FY ? void 0 : FY.skill) === YY && this.recent.expires > this.now() ? this.recent.levelUpToken : null;
+        this.recent = {
+          skill: YY,
+          confirmed: IY + rY,
+          expires: this.now() + 3e3,
+          levelUpToken: null !== AY && void 0 !== AY ? AY : RY
+        }
+      }
+      pendingXp(YY) {
+        let rY = 0;
+        for (const DY of this.pending.values()) DY.skill === YY && (rY += DY.amount);
+        return rY
+      }
+      predictedProgress(YY) {
+        const rY = this.progress[YY],
+          DY = this.pendingXp(YY);
+        return DY ? Rr(rY.totalXp + DY, YY) : rY
+      }
+      isEnabled() {
+        return null !== this.progress
+      }
+      buildSnapshot() {
+        var YY, rY, DY;
+        const FY = this.progress ? xY.map((YY => {
+            const rY = this.predictedProgress(YY);
+            return {
+              ...this.text(YY),
+              icon: or[YY],
+              benefit: this.benefit(YY, rY.level),
+              sources: this.sources(YY),
+              id: YY,
+              selected: YY === this.selected,
+              level: this.translate("skyblockGame:level", {
+                level: this.number(rY.level)
+              }),
+              xp: null === rY.xpForNextLevel ? this.translate("skyblockGame:max") : this.translate("skyblockGame:xpProgress", {
+                current: this.number(rY.xpIntoLevel),
+                target: this.number(rY.xpForNextLevel)
+              }),
+              percent: null === rY.xpForNextLevel ? 100 : Math.min(100, rY.xpIntoLevel / rY.xpForNextLevel * 100)
+            }
+          })) : [],
+          AY = FY.find((YY => {
+            var rY;
+            return YY.id === (null === (rY = this.recent) || void 0 === rY ? void 0 : rY.skill)
+          })),
+          IY = this.recent ? this.recent.confirmed + this.pendingXp(this.recent.skill) : 0;
+        return {
+          enabled: this.isEnabled(),
+          open: this.open,
+          skills: FY,
+          detail: null !== (YY = FY.find((YY => YY.selected))) && void 0 !== YY ? YY : null,
+          overallLevel: this.progress ? xY.reduce(((YY, rY) => YY + this.predictedProgress(rY).level), 0) : null,
+          hud: AY && IY > 0 ? {
+            skill: AY,
+            gain: this.translate("skyblockGame:xpGain", {
+              xp: this.number(IY)
+            }),
+            levelUpToken: null !== (rY = null === (DY = this.recent) || void 0 === DY ? void 0 : DY.levelUpToken) && void 0 !== rY ? rY : null,
+            colour: Er(AY.id)
+          } : null
+        }
+      }
+    }
+    const ID = Math.max(1600, 600, 950) + 400,
+      RD = {
+        "--quest-step-flash": "1600ms",
+        "--quest-step-pop": "600ms",
+        "--quest-step-unlock": "500ms",
+        "--quest-step-unlock-delay": "450ms"
+      },
+      OD = "skyblockQuestsView",
+      gD = "skyblockQuestNotificationView";
+    class aD extends uY {
+      constructor(YY, rY, DY) {
+        let FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => {},
+          AY = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Date.now,
+          IY = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : "en-GB",
+          RY = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : () => {};
+        super(YY, FY, arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : () => {}), this.requestTracking = rY, this.translate = DY, this.now = AY, this.locale = IY, this.publishNotification = RY, this.notifications = void 0, this.notificationSnapshot = null, this.authoritative = null, this.receivedAt = 0, this.selected = null, this.completedExpanded = !1, this.trackAvailableAt = 0, this.waitingForTrack = !1, this.compassTarget = null, this.waypoint = null, this.trackedSteps = null, this.trackedStepPulse = 0, this.trackedChange = null, this.onTrackedStepFinished = () => {}, this.onViewDialogue = null, this.translateWithIcons = null, this.snapshot = {
+          enabled: !1,
+          open: !1,
+          active: [],
+          completed: [],
+          completedExpanded: !1,
+          detail: null,
+          tracked: null,
+          trackedStepPulse: 0,
+          waypoint: null,
+          compassTarget: null
+        }, this.getNotificationSnapshot = () => this.notificationSnapshot, this.showTracked = () => {
+          var YY, rY;
+          this.selected = null !== (YY = null === (rY = this.authoritative) || void 0 === rY ? void 0 : rY.trackedQuestId) && void 0 !== YY ? YY : null, this.show()
+        }, this.select = YY => {
+          this.selected = YY, this.emit()
+        }, this.toggleCompleted = () => {
+          this.completedExpanded = !this.completedExpanded, this.emit()
+        }, this.trackSelected = () => {
+          const YY = this.snapshot.detail;
+          !this.Ky && null !== YY && void 0 !== YY && YY.canTrack && this.now() >= this.trackAvailableAt && (this.trackAvailableAt = this.now() + 2500, this.waitingForTrack = !0, this.requestTracking(YY.id), this.emit())
+        }, this.viewDialogue = () => {
+          const YY = this.snapshot.detail;
+          var rY;
+          YY && (null === (rY = this.onViewDialogue) || void 0 === rY || rY.call(this, YY.id))
+        }, this.notifications = new Vr(AY, (() => this.authoritative))
+      }
+      getTrackedQuestId() {
+        var YY, rY;
+        return null !== (YY = null === (rY = this.authoritative) || void 0 === rY ? void 0 : rY.trackedQuestId) && void 0 !== YY ? YY : null
+      }
+      notify(YY) {
+        !this.Ky && this.notifications.enqueue(YY) && this.emitNotification()
+      }
+      setNotificationsHeld(YY) {
+        (this.notifications.setHeld(YY) || YY) && this.emitNotification()
+      }
+      Zu() {
+        var YY, rY;
+        if (this.Ky) return;
+        this.notifications.Zu() && this.emitNotification();
+        let DY = !1;
+        this.trackAvailableAt && this.now() >= this.trackAvailableAt && (this.trackAvailableAt = 0, this.waitingForTrack = !1, DY = !0), this.trackedChange && this.now() >= this.trackedChange.expiresAt && (this.trackedChange = null, DY = !0);
+        const FY = vD(this.authoritative);
+        null !== FY && void 0 !== FY && null !== (YY = FY.questClock) && void 0 !== YY && YY.running && this.clockText(FY) !== (null === (rY = this.snapshot.tracked) || void 0 === rY ? void 0 : rY.clock) && (DY = !0), DY && this.emit()
+      }
+      setTranslator(YY) {
+        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.locale;
+        this.translate = YY, this.locale = rY, this.emitNotification(), this.emit()
+      }
+      Cy(YY) {
+        if (!this.Ky)
+          if ("completion" === YY.kind) this.notify(YY.questCompletion);
+          else if ("landmark" === YY.kind) this.notify({
+          questCompletionKind: "landmark",
+          landmarkNameKey: YY.landmarkDiscoveredNameKey
+        });
+        else if ("npcNote" === YY.kind) {
+          var rY, DY, FY;
+          this.notify({
+            questCompletionKind: "npcNote",
+            titleKey: YY.npcNoteTitleKey,
+            textKey: YY.npcNoteTextKey,
+            params: null !== (rY = YY.npcNoteParams) && void 0 !== rY ? rY : {},
+            nameKeys: null !== (DY = YY.npcNoteNameKeys) && void 0 !== DY ? DY : {},
+            iconItem: null !== (FY = YY.npcNoteIconItem) && void 0 !== FY ? FY : null
+          })
+        } else if ("open" === YY.kind) this.show();
+        else if ("guidance" === YY.kind) this.waypoint = YY.waypoint, this.compassTarget = YY.compassTarget, this.snapshot = {
+          ...this.snapshot,
+          waypoint: this.waypoint,
+          compassTarget: this.compassTarget
+        };
+        else if ("snapshot" === YY.kind) {
+          this.authoritative = YY.snapshot, this.notifications.Zu() && this.emitNotification(), this.receivedAt = this.now(), this.waitingForTrack = !1;
+          const rY = this.trackedStepPulse;
+          this.updateTrackedStepPulse(YY.snapshot), this.emit(), this.trackedStepPulse > rY && this.onTrackedStepFinished()
+        }
+      }
+      dispose() {
+        this.notifications.clear(), this.emitNotification(), this.authoritative = null, this.selected = null, this.completedExpanded = !1, this.trackAvailableAt = 0, this.waitingForTrack = !1, this.waypoint = null, this.compassTarget = null, this.trackedSteps = null, this.trackedStepPulse = 0, this.trackedChange = null, super.dispose()
+      }
+      emitNotification() {
+        this.Ky || (this.notificationSnapshot = this.notifications.getView(this.translate, this.questTextTranslator(), this.locale), this.publishNotification(this.notificationSnapshot))
+      }
+      questTextTranslator() {
+        var YY;
+        return null !== (YY = this.translateWithIcons) && void 0 !== YY ? YY : this.translate
+      }
+      clockText(YY) {
+        const rY = YY.questClock;
+        if (!rY) return null;
+        const DY = rY.elapsedMs + (rY.running ? this.now() - this.receivedAt : 0);
+        return void 0 === rY.countdownFromMs ? (0, zY.q)(DY, !1) : (0, zY.q)(1e3 * Math.ceil(Math.max(0, rY.countdownFromMs - DY) / 1e3), !1)
+      }
+      updateTrackedStepPulse(YY) {
+        var rY, DY, FY;
+        const AY = vD(YY);
+        if (!AY) return this.trackedSteps = null, this.trackedStepPulse = 0, void(this.trackedChange = null);
+        const IY = YY => AY.subquests.filter((rY => YY(rY.status))).map((YY => YY.id)),
+          RY = IY((YY => "completed" === YY || "skipped" === YY)),
+          OY = IY((YY => "locked" !== YY)),
+          gY = (null === (rY = this.trackedSteps) || void 0 === rY ? void 0 : rY.questId) === AY.id && AY.progress >= this.trackedSteps.progress ? this.trackedSteps : null;
+        if (gY) {
+          const YY = RY.filter((YY => !gY.finished.has(YY))),
+            rY = IY((YY => "active" === YY || "ready" === YY)).filter((YY => !gY.unlocked.has(YY)));
+          YY.length > 0 && this.trackedStepPulse++, (YY.length > 0 || rY.length > 0) && (this.trackedChange = {
+            finished: new Set(YY),
+            unlocked: new Set(rY),
+            expiresAt: this.now() + ID
+          })
+        } else {
+          var aY;
+          this.trackedStepPulse = (null === (aY = this.trackedSteps) || void 0 === aY ? void 0 : aY.questId) === AY.id ? this.trackedStepPulse : 0, this.trackedChange = null
+        }
+        this.trackedSteps = {
+          questId: AY.id,
+          progress: AY.progress,
+          finished: new Set([...null !== (DY = null === gY || void 0 === gY ? void 0 : gY.finished) && void 0 !== DY ? DY : [], ...RY]),
+          unlocked: new Set([...null !== (FY = null === gY || void 0 === gY ? void 0 : gY.unlocked) && void 0 !== FY ? FY : [], ...OY])
+        }
+      }
+      entry(YY, rY) {
+        var DY, FY;
+        const AY = YY.id === (null === (DY = this.authoritative) || void 0 === DY ? void 0 : DY.trackedQuestId),
+          IY = this.now() < this.trackAvailableAt,
+          RY = this.questTextTranslator(),
+          OY = YY.subquests.map((rY => {
+            var DY, FY, IY, OY, gY, aY;
+            const vY = null !== (DY = rY.handInNpcName) && void 0 !== DY ? DY : YY.giverName,
+              uY = this.translate("skyblockGame:progress", {
+                current: rY.progress.toLocaleString(this.locale),
+                target: rY.target.toLocaleString(this.locale)
+              }),
+              sY = {
+                active: null,
+                locked: "skyblockGame:subquestLocked",
+                ready: vY ? "skyblockGame:subquestReady" : "skyblockGame:subquestReadyNoNpc",
+                completed: "skyblockGame:completed",
+                skipped: "skyblockGame:subquestSkipped"
+              } [rY.status],
+              iY = "active" === rY.status || "ready" === rY.status;
+            return {
+              id: rY.id,
+              name: mr(RY, rY.nameKey, rY.nameParams),
+              description: mr(RY, rY.descriptionKey, rY.descriptionParams),
+              progress: uY,
+              status: rY.status,
+              statusLabel: sY ? this.translate(sY, {
+                npc: vY
+              }) : uY,
+              iconItem: iY && null !== (FY = rY.questIconItem) && void 0 !== FY ? FY : null,
+              barPercent: "active" === rY.status && rY.showsProgressBar ? Math.min(100, 100 * rY.progress / rY.target) : null,
+              justFinished: AY && null !== (IY = null === (OY = this.trackedChange) || void 0 === OY ? void 0 : OY.finished.has(rY.id)) && void 0 !== IY && IY,
+              justUnlocked: AY && null !== (gY = null === (aY = this.trackedChange) || void 0 === aY ? void 0 : aY.unlocked.has(rY.id)) && void 0 !== gY && gY
+            }
+          }));
+        return {
+          id: YY.id,
+          name: mr(RY, YY.nameKey, YY.nameParams),
+          description: mr(RY, YY.descriptionKey, YY.descriptionParams),
+          progress: rY ? this.translate("skyblockGame:completed") : this.translate("skyblockGame:stepsProgress", {
+            current: YY.progress.toLocaleString(this.locale),
+            target: YY.target.toLocaleString(this.locale)
+          }),
+          completed: rY,
+          tracked: AY,
+          selected: YY.id === this.selected,
+          canTrack: !rY && !AY && !IY,
+          trackLabel: this.translate(AY ? "skyblockGame:trackingQuest" : this.waitingForTrack ? "skyblockGame:updating" : IY ? "skyblockGame:pleaseWait" : "skyblockGame:trackQuest"),
+          canViewDialogue: null !== this.onViewDialogue && "dungeon_run" !== YY.id,
+          subquests: OY,
+          focusStep: null !== (FY = OY.find((YY => null !== YY.barPercent))) && void 0 !== FY ? FY : null,
+          clock: this.clockText(YY)
+        }
+      }
+      isEnabled() {
+        return null !== this.authoritative
+      }
+      buildSnapshot() {
+        var YY, rY, DY, FY, AY, IY, RY, OY, gY, aY;
+        const vY = [...null !== (YY = null === (rY = this.authoritative) || void 0 === rY ? void 0 : rY.active) && void 0 !== YY ? YY : [], ...null !== (DY = null === (FY = this.authoritative) || void 0 === FY ? void 0 : FY.completed) && void 0 !== DY ? DY : []];
+        var uY, sY, iY, yY;
+        vY.some((YY => YY.id === this.selected)) || (this.selected = null !== (uY = null !== (sY = null === (iY = this.authoritative) || void 0 === iY ? void 0 : iY.trackedQuestId) && void 0 !== sY ? sY : null === (yY = vY[0]) || void 0 === yY ? void 0 : yY.id) && void 0 !== uY ? uY : null);
+        const QY = null !== (AY = null === (IY = this.authoritative) || void 0 === IY ? void 0 : IY.active.map((YY => this.entry(YY, !1)))) && void 0 !== AY ? AY : [];
+        QY.sort(((YY, rY) => Number(rY.tracked) - Number(YY.tracked)));
+        const oY = null !== (RY = null === (OY = this.authoritative) || void 0 === OY ? void 0 : OY.completed.map((YY => this.entry(YY, !0)))) && void 0 !== RY ? RY : [];
+        return {
+          enabled: this.isEnabled(),
+          open: this.open,
+          active: QY,
+          completed: oY,
+          completedExpanded: this.completedExpanded,
+          detail: null !== (gY = [...QY, ...oY].find((YY => YY.selected))) && void 0 !== gY ? gY : null,
+          tracked: null !== (aY = QY.find((YY => YY.tracked))) && void 0 !== aY ? aY : null,
+          trackedStepPulse: this.trackedStepPulse,
+          waypoint: this.waypoint,
+          compassTarget: this.compassTarget
+        }
+      }
+    }
+
+    function vD(YY) {
+      var rY;
+      return null !== (rY = null === YY || void 0 === YY ? void 0 : YY.active.find((rY => rY.id === YY.trackedQuestId))) && void 0 !== rY ? rY : null
+    }
+    const uD = "skyblockDungeonsView";
+    class sD extends uY {
+      constructor(YY, rY) {
+        let DY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "en-GB",
+          FY = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : () => {};
+        super(YY, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {}, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {}), this.translate = rY, this.locale = DY, this.requestEnter = FY, this.authoritative = null, this.selected = null, this.pickerDungeonId = null, this.pageIndex = 0, this.snapshot = {
+          enabled: !1,
+          open: !1,
+          dungeons: [],
+          detail: null,
+          picker: null
+        }, this.select = YY => {
+          this.selected = YY, this.emit()
+        }, this.previous = () => {
+          this.turnTo(this.pageIndex - 1)
+        }, this.next = () => {
+          this.turnTo(this.pageIndex + 1)
+        }, this.enter = () => {
+          const YY = this.pickerEntry(),
+            rY = null === YY || void 0 === YY ? void 0 : YY.difficulties[this.pageIndex];
+          void 0 !== rY && null !== rY.unlockedBoss && (this.close(), this.requestEnter(YY.id, rY.difficulty))
+        }
+      }
+      setTranslator(YY) {
+        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.locale;
+        this.translate = YY, this.locale = rY, this.emit()
+      }
+      Cy(YY) {
+        var rY, DY;
+        if (!this.Ky) return "open" === YY.kind ? (this.pickerDungeonId = null, void this.show()) : void("choose" !== YY.kind ? "snapshot" === YY.kind && (this.authoritative = YY.snapshot, this.pageIndex = Math.min(this.pageIndex, Math.max(0, (null !== (rY = null === (DY = this.pickerEntry()) || void 0 === DY ? void 0 : DY.difficulties.length) && void 0 !== rY ? rY : 1) - 1)), null === YY.snapshot && this.open ? this.close() : this.emit()) : this.choose(YY.chooseDungeonId))
+      }
+      dispose() {
+        this.authoritative = null, this.selected = null, this.pickerDungeonId = null, super.dispose()
+      }
+      onClosed() {
+        this.pickerDungeonId = null
+      }
+      choose(YY) {
+        var rY;
+        const DY = null === (rY = this.authoritative) || void 0 === rY ? void 0 : rY.dungeons.find((rY => rY.id === YY));
+        void 0 !== DY ? this.open && this.pickerDungeonId === YY || (this.pickerDungeonId = YY, this.pageIndex = Math.max(0, DY.difficulties.findLastIndex((YY => null !== YY.unlockedBoss))), this.showOrRefresh()) : console.warn(`Skyblock dungeons: asked to choose a boss in unknown dungeon ${YY}`)
+      }
+      turnTo(YY) {
+        var rY, DY;
+        const FY = null !== (rY = null === (DY = this.pickerEntry()) || void 0 === DY ? void 0 : DY.difficulties.length) && void 0 !== rY ? rY : 0;
+        YY < 0 || YY >= FY || YY === this.pageIndex || (this.pageIndex = YY, this.emit())
+      }
+      pickerEntry() {
+        var YY, rY;
+        return null !== (YY = null === (rY = this.authoritative) || void 0 === rY ? void 0 : rY.dungeons.find((YY => YY.id === this.pickerDungeonId))) && void 0 !== YY ? YY : null
+      }
+      difficulty(YY) {
+        const rY = YY.completions > 0,
+          DY = null === YY.bestMs ? null : (0, zY.q)(YY.bestMs);
+        return {
+          difficulty: YY.difficulty,
+          label: this.translate(zY.c[YY.difficulty]),
+          colour: zY.g[YY.difficulty],
+          beaten: rY,
+          bestTime: DY,
+          completions: YY.completions,
+          summary: rY ? [null === DY ? null : this.translate("skyblockGame:dungeonBestTime", {
+            time: DY
+          }), this.translate("skyblockGame:dungeonCompletions", {
+            completions: YY.completions.toLocaleString(this.locale)
+          })].filter((YY => null !== YY)).join(" \xb7 ") : this.translate("skyblockGame:dungeonNotCompleted")
+        }
+      }
+      entry(YY) {
+        const rY = YY.difficulties.map((YY => this.difficulty(YY))),
+          DY = rY.filter((YY => YY.beaten)).length;
+        return {
+          id: YY.id,
+          name: this.translate(YY.nameKey),
+          selected: YY.id === this.selected,
+          beatenSummary: `${DY} / ${rY.length}`,
+          difficulties: rY
+        }
+      }
+      picker() {
+        const YY = this.pickerEntry();
+        if (null === YY || 0 === YY.difficulties.length) return null;
+        const rY = YY.difficulties.map(((rY, DY) => {
+          var FY, AY, IY, RY;
+          const OY = rY.unlockedBoss,
+            gY = null === OY ? this.lockedHint(YY, DY) : null;
+          return {
+            ...this.difficulty(rY),
+            unlocked: null !== OY,
+            bossName: null === OY ? null : this.translate(OY.bossNameKey),
+            bossMobType: null !== (FY = null === OY || void 0 === OY ? void 0 : OY.bossMobType) && void 0 !== FY ? FY : null,
+            bossMobVariation: null !== (AY = null === OY || void 0 === OY ? void 0 : OY.bossMobVariation) && void 0 !== AY ? AY : null,
+            lockedHint: null !== (IY = null === gY || void 0 === gY ? void 0 : gY.text) && void 0 !== IY ? IY : null,
+            lockedHintHighlight: null !== (RY = null === gY || void 0 === gY ? void 0 : gY.highlight) && void 0 !== RY ? RY : null,
+            current: DY === this.pageIndex
+          }
+        }));
+        return {
+          dungeonName: this.translate(YY.nameKey),
+          pages: rY,
+          page: rY[this.pageIndex],
+          canPrevious: this.pageIndex > 0,
+          canNext: this.pageIndex < rY.length - 1
+        }
+      }
+      lockedHint(YY, rY) {
+        var DY, FY, AY;
+        if (0 === rY && "number" === typeof YY.combatLevelLock) {
+          const rY = this.translate("skyblockGame:dungeonBossLockedCombatLevel", {
+            level: YY.combatLevelLock
+          });
+          return this.hintHighlighting("skyblockGame:dungeonBossLockedCombat", {}, "skill", {
+            name: rY,
+            colour: Er("combat"),
+            icon: or.combat
+          })
+        }
+        const IY = null !== (DY = null === (FY = this.authoritative) || void 0 === FY ? void 0 : FY.dungeons) && void 0 !== DY ? DY : [],
+          RY = rY > 0 ? YY : null !== (AY = IY[IY.indexOf(YY) - 1]) && void 0 !== AY ? AY : null,
+          OY = rY > 0 ? YY.difficulties[rY - 1] : null === RY || void 0 === RY ? void 0 : RY.difficulties[0];
+        if (null === RY || void 0 === OY) return null;
+        const gY = this.translate(RY.nameKey);
+        if (null === OY.unlockedBoss) return RY === YY ? this.hintNamingDifficulty("skyblockGame:dungeonBossLockedUnseen", {}, OY.difficulty) : this.hintNamingDifficulty("skyblockGame:dungeonBossLockedUnseenElsewhere", {
+          dungeon: gY
+        }, OY.difficulty);
+        const aY = this.translate(OY.unlockedBoss.bossNameKey);
+        return RY === YY ? this.hintNamingDifficulty("skyblockGame:dungeonBossLocked", {
+          boss: aY
+        }, OY.difficulty) : {
+          text: this.translate("skyblockGame:dungeonBossLockedElsewhere", {
+            boss: aY,
+            dungeon: gY
+          }),
+          highlight: null
+        }
+      }
+      hintNamingDifficulty(YY, rY, DY) {
+        return this.hintHighlighting(YY, rY, "difficulty", {
+          name: this.translate(zY.c[DY]),
+          colour: zY.g[DY],
+          icon: null
+        })
+      }
+      hintHighlighting(YY, rY, DY, FY) {
+        let {
+          name: AY,
+          colour: IY,
+          icon: RY
+        } = FY;
+        const OY = this.translate(YY, {
+          ...rY,
+          [DY]: "\x01"
+        }).split("\x01");
+        return {
+          text: this.translate(YY, {
+            ...rY,
+            [DY]: AY
+          }),
+          highlight: 2 === OY.length ? {
+            before: OY[0],
+            name: AY,
+            after: OY[1],
+            colour: IY,
+            icon: RY
+          } : null
+        }
+      }
+      isEnabled() {
+        return null !== this.authoritative
+      }
+      buildSnapshot() {
+        var YY, rY, DY;
+        const FY = null !== (YY = null === (rY = this.authoritative) || void 0 === rY ? void 0 : rY.dungeons) && void 0 !== YY ? YY : [];
+        var AY, IY;
+        FY.some((YY => YY.id === this.selected)) || (this.selected = null !== (AY = null === (IY = FY[0]) || void 0 === IY ? void 0 : IY.id) && void 0 !== AY ? AY : null);
+        const RY = FY.map((YY => this.entry(YY)));
+        return {
+          enabled: this.isEnabled(),
+          open: this.open,
+          dungeons: RY,
+          detail: null !== (DY = RY.find((YY => YY.selected))) && void 0 !== DY ? DY : null,
+          picker: null === this.pickerDungeonId ? null : this.picker()
+        }
+      }
+    }
+    const iD = ["mining", "farming", "foraging", "fishing", "combat"],
+      yD = [25, 50, 100, 200, 400, 750, 1250, 2e3, 3e3],
+      QD = [20, 40, 80, 150, 300, 500, 800, 1200, 2e3];
+
+    function oD() {
+      for (var YY = arguments.length, rY = new Array(YY), DY = 0; DY < YY; DY++) rY[DY] = arguments[DY];
+      return rY.map(((YY, rY) => ({
+        amount: YY,
+        coins: yD[rY],
+        xp: QD[rY]
+      })))
+    }
+    const WD = oD(100, 250, 500, 1e3, 2500, 5e3, 1e4, 25e3, 5e4),
+      ED = oD(50, 100, 250, 1e3, 2500, 5e3, 1e4, 25e3),
+      mD = oD(50, 100, 250, 500, 1e3, 2500, 5e3),
+      VD = oD(25, 50, 100, 250, 500, 1e3),
+      SD = oD(10, 25, 50, 100, 250, 500, 1e3),
+      lD = oD(1, 5, 10, 25, 50);
+
+    function TD(YY, rY) {
+      return {
+        id: YY,
+        category: "fishing",
+        item: rY,
+        drops: [rY],
+        tiers: arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : SD
+      }
+    }
+    const eD = [{
+        id: "coal",
+        category: "mining",
+        item: "Coal",
+        blocks: {
+          "Coal Ore": 1,
+          "Pure Coal Ore": 9,
+          "Block of Coal": 3
+        },
+        tiers: ED
+      }, {
+        id: "iron",
+        category: "mining",
+        item: "Raw Iron",
+        blocks: {
+          "Iron Ore": 1,
+          "Pure Iron Ore": 9
+        },
+        tiers: mD
+      }, {
+        id: "gold",
+        category: "mining",
+        item: "Raw Gold",
+        blocks: {
+          "Gold Ore": 1,
+          "Pure Gold Ore": 9
+        },
+        tiers: mD
+      }, {
+        id: "diamond",
+        category: "mining",
+        item: "Diamond",
+        blocks: {
+          "Diamond Ore": 1,
+          "Pure Diamond Ore": 9
+        },
+        tiers: VD
+      }, {
+        id: "moonstone",
+        category: "mining",
+        item: "Moonstone",
+        blocks: {
+          "Moonstone Ore": 1,
+          "Pure Moonstone Ore": 9
+        },
+        tiers: VD
+      }, {
+        id: "stone",
+        category: "mining",
+        item: "Stone",
+        blocks: {
+          Stone: 1
+        },
+        tiers: ED
+      }, {
+        id: "wheat",
+        category: "farming",
+        item: "Wheat",
+        blocks: {
+          "Wheat|FreshlyGrown": 1
+        },
+        tiers: WD
+      }, {
+        id: "carrot",
+        category: "farming",
+        item: "Carrot",
+        blocks: {
+          "Carrot Plant|FreshlyGrown": 1
+        },
+        tiers: WD
+      }, {
+        id: "potato",
+        category: "farming",
+        item: "Raw Potato",
+        blocks: {
+          "Potato Plant|FreshlyGrown": 1
+        },
+        tiers: WD
+      }, {
+        id: "beetroot",
+        category: "farming",
+        item: "Beetroot",
+        blocks: {
+          "Beetroot Plant|FreshlyGrown": 1
+        },
+        tiers: mD
+      }, {
+        id: "melon",
+        category: "farming",
+        item: "Melon",
+        blocks: {
+          Melon: 1
+        },
+        tiers: ED
+      }, {
+        id: "watermelon",
+        category: "farming",
+        item: "Watermelon",
+        blocks: {
+          Watermelon: 1
+        },
+        tiers: ED
+      }, {
+        id: "maple_log",
+        category: "foraging",
+        item: "Maple Log",
+        blocks: {
+          "Maple Log": 1
+        },
+        tiers: ED
+      }, {
+        id: "pear_log",
+        category: "foraging",
+        item: "Pear Log",
+        blocks: {
+          "Pear Log": 1
+        },
+        tiers: mD
+      }, {
+        id: "palm_log",
+        category: "foraging",
+        item: "Palm Log",
+        blocks: {
+          "Palm Log": 1
+        },
+        tiers: mD
+      }, TD("wheatfish", "Wheatfish"), TD("darter", "Darter"), TD("sunset_minnow", "Sunset Minnow"), TD("root_flounder", "Root Flounder"), TD("greenfin_loach", "Greenfin Loach"), TD("red_strongfish", "Red Strongfish"), TD("green_strongfish", "Green Strongfish"), TD("boomerang_fish", "Boomerang Fish"), TD("seahorse", "Seahorse"), TD("spined_stickleback", "Spined Stickleback"), TD("moon_strongfish", "Moon Strongfish"), TD("boulder_bass", "Boulder Bass"), TD("grass_snapper", "Grass Snapper"), TD("crystal_wheatfish", "Crystalized Wheatfish", lD), TD("moonstone_pupfish", "Moonstone Pupfish", lD), TD("reedglass_minnow", "Reedglass Minnow"), TD("mangrove_herring", "Mangrove Herring"), TD("mudline_perch", "Mudline Perch"), TD("coastal_mullet", "Coastal Mullet"), TD("reef_sardine", "Reef Sardine"), TD("root_perch", "Root Perch"), TD("driftwood_catfish", "Driftwood Catfish"), TD("aether_minnow", "Aether Minnow"), TD("needlefish", "Tri-Pointed Needlefish"), TD("threadfin_bream", "Threadfin Bream"), TD("mudbelly_tilapia", "Mudbelly Tilapia"), TD("rotslab_eel", "Rotslab Eel"), TD("polarflash_electron", "Polarflash Electron"), TD("mireback_carp", "Mireback Carp"), TD("blackwater_bream", "Blackwater Bream"), TD("stone_grouper", "Stone Grouper"), TD("shadeback_ray", "Shadeback Ray"), TD("glacial_silverfish", "Glacial Silverfish"), TD("hatchetfish", "Hatchetfish"), TD("moonlit_boomerang", "Moonlit Boomerang Fish"), TD("murkborne_ray", "Murkborne Ray"), TD("bamboo_catfish", "Bamboo Catfish"), TD("mossback_arapaima", "Mossback Arapaima"), TD("murk_stingray", "Murk Stingray"), TD("channel_sawfish", "Channel Sawfish"), TD("boned_sturgeon", "Boned Sturgeon"), TD("oarfish", "Oarfish"), TD("snakehead", "Snakehead", lD), TD("eldertide_leviathan", "Eldertide Leviathan", lD), TD("pithead", "Pithead"), TD("electric_eel", "Electric Eel"), TD("shadow_darter", "Shadow Darter"), TD("abyss_carp", "Abyss Carp"), TD("nomai_moray", "Nomai Moray"), TD("silver_dragonfish", "Silver Dragonfish"), TD("giant_moray", "Giant Moray"), TD("coelacanth", "Coelacanth", lD), TD("frost_herring", "Frost Herring"), TD("permafrost_halibut", "Permafrost Halibut"), TD("glacial_lanternfish", "Glacial Lanternfish"), TD("frozen_grenadier", "Frozen Grenadier"), TD("blackfin_icefish", "Blackfin Icefish"), TD("moonfish", "Moonfish"), TD("alpha_strongfish", "Alpha Moon Strongfish"), TD("deep_lanternfish", "Deepwater Lanternfish", lD), TD("pearlescent_moonfish", "Pearlescent Moonfish", lD), {
+        id: "rotten_flesh",
+        category: "combat",
+        item: "Rotten Flesh",
+        drops: ["Rotten Flesh"],
+        tiers: ED
+      }, {
+        id: "rotten_brain",
+        category: "combat",
+        item: "Rotten Brain",
+        drops: ["Rotten Brain"],
+        tiers: VD
+      }, {
+        id: "iron_fragment",
+        category: "combat",
+        item: "Iron Fragment",
+        drops: ["Iron Fragment"],
+        tiers: VD
+      }],
+      ND = (new Map(eD.map((YY => [YY.id, YY]))), new Map),
+      BD = new Map;
+    for (const Ig of eD) {
+      for (const [YY, rY] of Object.entries(null !== (cD = Ig.blocks) && void 0 !== cD ? cD : {})) {
+        var cD;
+        ND.set(YY, {
+          collection: Ig,
+          amount: rY
+        })
+      }
+      for (const YY of null !== (KD = Ig.drops) && void 0 !== KD ? KD : []) {
+        var KD;
+        BD.set(YY, Ig)
+      }
+    }
+
+    function HD(YY, rY) {
+      let DY = 0;
+      for (; DY < YY.tiers.length && rY >= YY.tiers[DY].amount;) DY++;
+      return DY
+    }
+    const zD = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"];
+
+    function ZD(YY) {
+      return zD[YY - 1]
+    }
+    const CD = "skyblockCollectionsView";
+    class fD extends uY {
+      constructor(YY, rY) {
+        let DY = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "en-GB",
+          FY = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : YY => YY;
+        super(YY, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {}, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => {}), this.translate = rY, this.locale = DY, this.itemName = FY, this.counts = null, this.category = "mining", this.selected = eD[0].id, this.snapshot = {
+          enabled: !1,
+          open: !1,
+          categories: [],
+          collections: [],
+          detail: null,
+          tiersUnlocked: ""
+        }, this.selectCategory = YY => {
+          this.category = YY, this.selected = this.inCategory(YY)[0].id, this.emit()
+        }, this.select = YY => {
+          this.selected = YY, this.emit()
+        }
+      }
+      setTranslator(YY, rY, DY) {
+        this.translate = YY, this.locale = rY, this.itemName = DY, this.emit()
+      }
+      Cy(YY) {
+        if (!this.Ky)
+          if ("collOpen" !== YY.kind) {
+            (YY.collFull || null === this.counts) && (this.counts = new Map);
+            for (const [rY, DY] of YY.collCounts) this.counts.set(rY, DY);
+            this.emit()
+          } else this.show()
+      }
+      dispose() {
+        this.counts = null, super.dispose()
+      }
+      isEnabled() {
+        return null !== this.counts
+      }
+      buildSnapshot() {
+        var YY;
+        if (null === this.counts) return {
+          enabled: !1,
+          open: this.open,
+          categories: [],
+          collections: [],
+          detail: null,
+          tiersUnlocked: ""
+        };
+        const rY = this.inCategory(this.category).map((YY => this.collectionView(YY))),
+          DY = eD.reduce(((YY, rY) => YY + this.tierOf(rY)), 0);
+        return {
+          enabled: !0,
+          open: this.open,
+          categories: iD.map((YY => this.categoryView(YY))),
+          collections: rY,
+          detail: null !== (YY = rY.find((YY => YY.selected))) && void 0 !== YY ? YY : null,
+          tiersUnlocked: this.translate("skyblockGame:collectionTiersUnlocked", {
+            count: this.number(DY)
+          })
+        }
+      }
+      categoryView(YY) {
+        const rY = this.inCategory(YY),
+          DY = rY.reduce(((YY, rY) => YY + this.tierOf(rY)), 0),
+          FY = rY.reduce(((YY, rY) => YY + rY.tiers.length), 0);
+        return {
+          id: YY,
+          label: this.translate(`skyblockGame:${YY}`),
+          icon: or[YY],
+          tiers: this.translate("skyblockGame:collectionProgress", {
+            current: this.number(DY),
+            target: this.number(FY)
+          }),
+          selected: YY === this.category
+        }
+      }
+      collectionView(YY) {
+        var rY, DY;
+        const FY = null !== (rY = this.counts.get(YY.id)) && void 0 !== rY ? rY : 0,
+          AY = HD(YY, FY),
+          IY = null !== (DY = YY.tiers[AY]) && void 0 !== DY ? DY : null,
+          RY = 0 === AY ? 0 : YY.tiers[AY - 1].amount;
+        return {
+          id: YY.id,
+          name: this.itemName(YY.item),
+          icon: YY.item,
+          selected: YY.id === this.selected,
+          locked: 0 === FY,
+          count: this.translate("skyblockGame:collectionCount", {
+            count: this.number(FY)
+          }),
+          tier: 0 === AY ? this.translate("skyblockGame:collectionNoTier") : this.tierLabel(AY),
+          percent: null === IY ? 100 : Math.min(100, (FY - RY) / (IY.amount - RY) * 100),
+          progress: null === IY ? this.translate("skyblockGame:max") : this.translate("skyblockGame:collectionProgress", {
+            current: this.number(FY),
+            target: this.number(IY.amount)
+          }),
+          nextReward: null === IY ? null : this.reward(YY, IY.coins, IY.xp)
+        }
+      }
+      reward(YY, rY, DY) {
+        return this.translate("skyblockGame:collectionReward", {
+          coins: this.number(rY),
+          xp: this.number(DY),
+          skill: this.translate(`skyblockGame:${YY.category}`)
+        })
+      }
+      tierLabel(YY) {
+        return this.translate("skyblockGame:collectionTier", {
+          tier: ZD(YY)
+        })
+      }
+      tierOf(YY) {
+        var rY;
+        return HD(YY, null !== (rY = this.counts.get(YY.id)) && void 0 !== rY ? rY : 0)
+      }
+      inCategory(YY) {
+        return eD.filter((rY => rY.category === YY))
+      }
+      number(YY) {
+        return YY.toLocaleString(this.locale)
+      }
+    }
+    const jD = "skyblockPortalTransitView",
+      hD = "skyblockPortalArrival";
+    class dD {
+      constructor(YY, rY) {
+        let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now;
+        this.vo = YY, this.storage = rY, this.now = DY, this.view = null, this.token = 0, this.hideTimer = null
+      }
+      getSnapshot() {
+        return this.view
+      }
+      Cy(YY) {
+        const rY = {
+          zoneNameKey: YY.transitZoneNameKey,
+          variation: YY.transitZoneVariation,
+          colour: YY.transitColour,
+          departedAt: this.now()
+        };
+        this.storage.setItem(hD, rY), this.show("departure", rY.zoneNameKey, rY.colour, YY.transitDurationMs, YY.transitDurationMs + 1500, (() => {
+          this.storage.removeItem(hD)
+        }))
+      }
+      resumeArrival(YY) {
+        const rY = this.storage.getItem(hD);
+        this.storage.removeItem(hD), null === rY || rY.variation !== YY || this.now() - rY.departedAt > 3e4 || this.show("arrival", rY.zoneNameKey, rY.colour, 3200, 2e4)
+      }
+      finishArrival(YY) {
+        var rY;
+        "arrival" === (null === (rY = this.view) || void 0 === rY ? void 0 : rY.phase) && this.view.token === YY && (this.clearTimer(), this.view = null, this.vo(null))
+      }
+      dispose() {
+        this.clearTimer()
+      }
+      show(YY, rY, DY, FY, AY, IY) {
+        this.clearTimer(), this.view = {
+          token: ++this.token,
+          phase: YY,
+          zoneNameKey: rY,
+          colour: DY,
+          durationMs: FY
+        }, this.vo(this.view), this.hideTimer = setTimeout((() => {
+          this.hideTimer = null, this.view = null, this.vo(null), null === IY || void 0 === IY || IY()
+        }), AY)
+      }
+      clearTimer() {
+        null !== this.hideTimer && (clearTimeout(this.hideTimer), this.hideTimer = null)
+      }
+    }
+    const JD = "skyblockDailyRewardView",
+      MD = "skyblockDailyRewardCoin";
+    class wD {
+      constructor(YY, rY, DY, FY) {
+        let AY = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {},
+          IY = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : () => {},
+          RY = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : () => {},
+          OY = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : () => {},
+          gY = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : performance.now.bind(performance);
+        this.vo = YY, this.isBusy = rY, this.holdQuestPopups = DY, this.onHeldCoinsChanged = FY, this.onCoinLanded = AY, this.onStarted = IY, this.onFinished = RY, this.onItemLanded = OY, this.now = gY, this.ja = [], this.queue = [], this.playing = null, this.token = 0
+      }
+      getSnapshot() {
+        var YY, rY;
+        return null !== (YY = null === (rY = this.playing) || void 0 === rY ? void 0 : rY.view) && void 0 !== YY ? YY : null
+      }
+      getHeldCoins() {
+        var YY, rY;
+        let DY = 0;
+        for (const FY of this.ja) DY += FY.coins;
+        return DY - (null !== (YY = null === (rY = this.playing) || void 0 === rY ? void 0 : rY.released) && void 0 !== YY ? YY : 0)
+      }
+      Cy(YY) {
+        "dailyRewardClaimed" !== YY.kind ? (this.queue.push(YY), this.Zu()) : this.ja.push({
+          coins: YY.dailyRewardCoins,
+          receivedAt: this.now()
+        })
+      }
+      Zu() {
+        const YY = this.now();
+        if (null === this.playing) return this.releaseUnshown(YY), void this.startNext(YY);
+        const rY = this.playing,
+          DY = YY - rY.startedAt,
+          FY = rY.view.flyingCoins,
+          AY = function(YY, rY) {
+            let DY = 0;
+            for (; DY < rY && XD(DY, rY) <= YY;) DY++;
+            return DY
+          }(DY, FY);
+        if (AY !== rY.landed) {
+          for (let YY = AY - rY.landed > 2 ? AY - 1 : rY.landed; YY < AY; YY++) this.onCoinLanded(YY, FY);
+          rY.landed = AY, rY.released = Math.round(rY.view.coins * AY / FY), this.onHeldCoinsChanged()
+        }
+        for (; rY.itemsLanded < rY.view.items.length && 2e3 + 160 * rY.itemsLanded + 630 <= DY;) this.onItemLanded(rY.itemsLanded), rY.itemsLanded++;
+        DY >= rY.view.durationMs && (this.finish(), this.startNext(YY))
+      }
+      dispose() {
+        null !== this.playing && this.holdQuestPopups(!1), this.playing = null, this.queue = [], this.ja = [], this.vo(null)
+      }
+      startNext(YY) {
+        if (0 === this.queue.length || this.isBusy()) return;
+        const rY = this.queue.shift();
+        this.token++;
+        const DY = {
+          token: this.token,
+          day: rY.dailyRewardDay,
+          coins: rY.dailyRewardCoins,
+          items: rY.dailyRewardItems,
+          durationMs: 5e3,
+          flyingCoins: rY.dailyRewardDay === cY ? 24 : 14
+        };
+        this.playing = {
+          view: DY,
+          startedAt: YY,
+          landed: 0,
+          released: 0,
+          itemsLanded: 0
+        }, this.holdQuestPopups(!0), this.vo(DY), this.onStarted(DY)
+      }
+      finish() {
+        this.ja.shift(), this.playing = null, this.holdQuestPopups(!1), this.vo(null), this.onHeldCoinsChanged(), this.onFinished()
+      }
+      releaseUnshown(YY) {
+        if (this.queue.length > 0 || 0 === this.ja.length) return;
+        const rY = this.ja.length;
+        this.ja = this.ja.filter((rY => YY - rY.receivedAt < 6e4)), this.ja.length !== rY && this.onHeldCoinsChanged()
+      }
+    }
+
+    function bD(YY, rY) {
+      return 450 + 715 * YY / (rY - 1)
+    }
+
+    function XD(YY, rY) {
+      return bD(YY, rY) + 650
+    }
+    const qD = "skyblockMailboxView";
+    class pD {
+      constructor(YY, rY) {
+        let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {},
+          FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : performance.now.bind(performance);
+        this.vo = YY, this.isBusy = rY, this.onStarted = DY, this.now = FY, this.waiting = [], this.playing = null, this.token = 0, this.itemName = YY => YY
+      }
+      getSnapshot() {
+        var YY, rY;
+        return null !== (YY = null === (rY = this.playing) || void 0 === rY ? void 0 : rY.view) && void 0 !== YY ? YY : null
+      }
+      setItemName(YY) {
+        this.itemName = YY
+      }
+      Cy(YY) {
+        this.waiting.push(...YY.mailLetters), this.Zu()
+      }
+      Zu() {
+        const YY = this.now();
+        null !== this.playing && YY - this.playing.startedAt >= this.playing.view.durationMs && (this.playing = null, this.vo(null)), null === this.playing && this.waiting.length > 0 && !this.isBusy() && this.start(YY)
+      }
+      dispose() {
+        this.playing = null, this.waiting = [], this.vo(null)
+      }
+      start(YY) {
+        const rY = this.waiting.slice(0, 3);
+        this.token++;
+        const DY = {
+          token: this.token,
+          letters: rY.map((YY => this.toView(YY))),
+          more: this.waiting.length - rY.length,
+          durationMs: 4500 + 700 * rY.length
+        };
+        this.waiting = [], this.playing = {
+          view: DY,
+          startedAt: YY
+        }, this.vo(DY), this.onStarted(DY)
+      }
+      toView(YY) {
+        return {
+          coins: YY.mailCoins,
+          items: YY.mailItems.map((YY => {
+            var rY;
+            return {
+              itemName: YY.mailItemName,
+              amount: YY.mailItemAmount,
+              label: null !== (rY = YY.mailItemLabel) && void 0 !== rY ? rY : this.itemName(YY.mailItemName)
+            }
+          })),
+          reasonKey: YY.mailReasonKey,
+          reasonParams: YY.mailReasonParams
+        }
+      }
+    }
+    const kD = "skyblockQuestGraphView",
+      GD = "skyblockDevQuestJump";
+
+    function xD(YY) {
+      if (0 === YY.length) return "";
+      const rY = [`M ${YY[0].x} ${YY[0].y}`];
+      for (let FY = 1; FY < YY.length - 1; FY++) {
+        const DY = YY[FY + 1];
+        rY.push(`Q ${YY[FY].x} ${YY[FY].y} ${(YY[FY].x+DY.x)/2} ${(YY[FY].y+DY.y)/2}`)
+      }
+      const DY = YY[YY.length - 1];
+      return rY.push(`L ${DY.x} ${DY.y}`), rY.join(" ")
+    }
+
+    function nD(YY, rY) {
+      return YY < rY ? `${YY}|${rY}` : `${rY}|${YY}`
+    }
+    class PD extends uY {
+      constructor(YY, rY) {
+        let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {},
+          FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => {},
+          AY = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {},
+          IY = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : () => {},
+          RY = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : {
+            getItem: () => null,
+            setItem: () => {},
+            removeItem: () => {}
+          },
+          OY = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : Date.now;
+        super(YY, DY, FY), this.translate = rY, this.requestJump = AY, this.requestArrive = IY, this.storage = RY, this.now = OY, this.layout = null, this.hoveredId = null, this.graphCount = 0, this.snapshot = {
+          enabled: !1,
+          open: !1,
+          width: 0,
+          height: 0,
+          nodes: [],
+          edges: [],
+          planning: !1
+        }, this.hover = YY => {
+          YY !== this.hoveredId && (this.hoveredId = YY, this.emit())
+        }, this.jump = YY => {
+          this.close(), this.requestJump(YY)
+        }
+      }
+      Cy(YY) {
+        if (!this.Ky)
+          if ("graph" !== YY.kind) {
+            if ("jumping" === YY.kind) {
+              const rY = {
+                questId: YY.graphQuestId,
+                variation: YY.graphVariation,
+                completes: YY.graphCompletesOnArrival,
+                departedAt: this.now()
+              };
+              this.storage.setItem(GD, rY)
+            }
+          } else {
+            const rY = ++this.graphCount;
+            DY.e(112).then((() => DY(5998))).then((DY => {
+              let {
+                default: FY
+              } = DY;
+              this.Ky || rY !== this.graphCount || (this.layout = function(YY, rY, DY) {
+                var FY, AY;
+                const IY = new YY.graphlib.Graph;
+                IY.setGraph({
+                  rankdir: "LR",
+                  ranksep: 70,
+                  nodesep: 14,
+                  marginx: 24,
+                  marginy: 24
+                }), IY.setDefaultEdgeLabel((() => ({})));
+                const RY = new Set;
+                for (const vY of rY) RY.add(vY.graphQuestId), IY.setNode(vY.graphQuestId, {
+                  width: 190,
+                  height: 52
+                });
+                const OY = DY.filter((YY => RY.has(YY.graphFromId) && RY.has(YY.graphToId) && YY.graphFromId !== YY.graphToId)),
+                  gY = new Map;
+                for (const vY of [...OY].sort(((YY, rY) => Number("awaits" === YY.graphEdgeKind) - Number("awaits" === rY.graphEdgeKind)))) {
+                  const YY = nD(vY.graphFromId, vY.graphToId);
+                  gY.has(YY) || (gY.set(YY, vY), IY.setEdge(vY.graphFromId, vY.graphToId))
+                }
+                YY.layout(IY);
+                const aY = IY.graph();
+                return {
+                  width: Math.ceil(null !== (FY = aY.width) && void 0 !== FY ? FY : 0),
+                  height: Math.ceil(null !== (AY = aY.height) && void 0 !== AY ? AY : 0),
+                  nodes: rY.map((YY => {
+                    var rY, DY;
+                    const FY = IY.node(YY.graphQuestId);
+                    return {
+                      node: YY,
+                      left: (null !== (rY = FY.x) && void 0 !== rY ? rY : 0) - 95,
+                      top: (null !== (DY = FY.y) && void 0 !== DY ? DY : 0) - 26
+                    }
+                  })),
+                  edges: OY.map((YY => {
+                    var rY;
+                    const DY = gY.get(nD(YY.graphFromId, YY.graphToId)),
+                      FY = null !== (rY = IY.edge(DY.graphFromId, DY.graphToId).points) && void 0 !== rY ? rY : [];
+                    return {
+                      edge: YY,
+                      key: `${YY.graphFromId}|${YY.graphToId}|${YY.graphEdgeKind}`,
+                      path: xD(DY.graphFromId === YY.graphFromId ? FY : [...FY].reverse())
+                    }
+                  })),
+                  plans: new Map(rY.map((YY => [YY.graphQuestId, new Set([YY.graphQuestId, ...YY.graphPlanIds])])))
+                }
+              }(FY, YY.graphNodes, YY.graphEdges), this.show())
+            })).catch((YY => {
+              console.error("The quest graph could not be laid out", YY)
+            }))
+          }
+      }
+      resumeJump(YY) {
+        const rY = this.storage.getItem(GD);
+        this.storage.removeItem(GD), null === rY || rY.variation !== YY || this.now() - rY.departedAt > 6e4 || this.requestArrive(rY.questId, rY.completes)
+      }
+      setTranslator(YY) {
+        this.translate = YY, this.emit()
+      }
+      dispose() {
+        this.layout = null, this.hoveredId = null, super.dispose()
+      }
+      onClosed() {
+        this.hoveredId = null
+      }
+      isEnabled() {
+        return null !== this.layout
+      }
+      getPlan() {
+        var YY, rY;
+        return null !== (YY = null === this.hoveredId || null === (rY = this.layout) || void 0 === rY ? void 0 : rY.plans.get(this.hoveredId)) && void 0 !== YY ? YY : new Set
+      }
+      buildSnapshot() {
+        const YY = this.layout;
+        if (null === YY) return {
+          enabled: !1,
+          open: this.open,
+          width: 0,
+          height: 0,
+          nodes: [],
+          edges: [],
+          planning: !1
+        };
+        const rY = this.getPlan();
+        return {
+          enabled: !0,
+          open: this.open,
+          width: YY.width,
+          height: YY.height,
+          nodes: YY.nodes.map((YY => {
+            let {
+              node: DY,
+              left: FY,
+              top: AY
+            } = YY;
+            return {
+              id: DY.graphQuestId,
+              name: this.translate(DY.graphNameKey),
+              detail: null === DY.graphGiverName ? DY.graphZoneId : `${DY.graphGiverName} \xb7 ${DY.graphZoneId}`,
+              state: DY.graphState,
+              left: FY,
+              top: AY,
+              inPlan: rY.has(DY.graphQuestId),
+              hovered: DY.graphQuestId === this.hoveredId
+            }
+          })),
+          edges: YY.edges.map((YY => {
+            let {
+              edge: DY,
+              key: FY,
+              path: AY
+            } = YY;
+            return {
+              key: FY,
+              kind: DY.graphEdgeKind,
+              path: AY,
+              inPlan: rY.has(DY.graphFromId) && rY.has(DY.graphToId)
+            }
+          })),
+          planning: rY.size > 0
+        }
+      }
+    }
+    var UD = DY(36421);
+    const LD = 250,
+      tD = 2150,
+      YF = -2.8,
+      rF = 2.2,
+      DF = -27,
+      FF = {
+        zeta: .34,
+        period: .7,
+        lead: .1,
+        rush: .04
+      },
+      AF = {
+        zeta: .45,
+        period: .55,
+        delay: .12,
+        to: 1.25
+      },
+      IF = Math.round(50 + 1e3 * (AF.delay + AF.period / 2)),
+      RF = "\u16a0\u16a2\u16a6\u16a8\u16b1\u16b2\u16b7\u16b9\u16ba\u16be\u16c1\u16c3\u16c7\u16c8\u16c9\u16ca\u16cf\u16d2\u16d6\u16d7\u16da\u16dc\u16de\u16df",
+      OF = Array.from({
+        length: 26
+      }, ((YY, rY) => {
+        const DY = 2.39996 * rY,
+          FY = .5 + .618034 * rY % 1 * .23,
+          AY = rY % 3 !== 2;
+        return {
+          rune: AY ? RF[7 * rY % 24] : "",
+          style: {
+            "--from-x": `calc(var(--sword-size) * ${(Math.cos(DY)*FY).toFixed(3)})`,
+            "--from-y": `calc(var(--sword-size) * ${(Math.sin(DY)*FY).toFixed(3)})`,
+            "--spin": 40 * (rY % 5 - 2) + "deg",
+            "--size": (AY ? 1 + rY % 4 * .2 : .3 + rY % 2 * .15) + "rem",
+            "--duration": `${(1.8+7*rY%5*.35).toFixed(2)}s`,
+            "--delay": `${(-.83*rY%3).toFixed(2)}s`
+          }
+        }
+      }));
+
+    function gF(YY, rY) {
+      return Array.from({
+        length: 30 + 3 * YY + (rY ? 10 : 0)
+      }, ((YY, rY) => {
+        const DY = rY < 4,
+          FY = DY ? "#fff" : Math.random() < .25 ? "#ff922b" : "#ffe08a",
+          AY = DY ? 7 + 3 * Math.random() : 3.5 + 5 * Math.random(),
+          IY = DY ? 2.2 : .6 + Math.random(),
+          RY = DY ? .3 : Math.random() < .5 ? .16 : .24,
+          OY = DY ? 600 + 100 * Math.random() : 280 + 280 * Math.random();
+        return {
+          "--c": FY,
+          "--angle": `${Math.round(220*(Math.random()-.5)+15)}deg`,
+          "--distance": `${AY.toFixed(2)}rem`,
+          "--length": `${IY.toFixed(2)}rem`,
+          "--width": `${RY}rem`,
+          "--duration": `${Math.round(OY)}ms`,
+          "--delay": `${Math.round(40*Math.random())}ms`,
+          "--fall": `${(1+Math.random()).toFixed(2)}rem`
+        }
+      }))
+    }
+
+    function aF(YY) {
+      let {
+        zeta: rY,
+        period: DY
+      } = YY;
+      const FY = 2 * Math.PI / DY;
+      return {
+        w: FY,
+        decay: rY * FY / Math.sqrt(1 - rY * rY)
+      }
+    }
+    let vF = !1;
+
+    function uF() {
+      if (vF) return;
+      vF = !0;
+      const YY = document.createElement("style");
+      YY.textContent = function() {
+        const YY = aF(FF),
+          rY = aF(AF),
+          DY = rY => Math.exp(-YY.decay * rY) * Math.sin(YY.w * rY),
+          FY = DY(Math.atan(YY.w / YY.decay) / YY.w),
+          AY = .25,
+          IY = 2.15,
+          RY = Math.round(215),
+          OY = [];
+        for (let gY = 0; gY <= RY; gY++) {
+          const YY = gY / RY * IY;
+          let aY = Math.sin(Math.min(YY, AY) / AY * Math.PI / 2) ** 2,
+            vY = 0,
+            uY = 1,
+            sY = 1 - .2 * aY,
+            iY = 1;
+          if (YY >= AY) {
+            const RY = YY - AY,
+              OY = Math.max(0, RY - .05);
+            aY = Math.exp(-OY / .05), vY = DY(OY + FF.lead * (1 - Math.exp(-OY / FF.rush))) / FY;
+            const gY = OY - AF.delay,
+              yY = gY <= 0 ? 0 : 1 - Math.exp(-rY.decay * gY) * (Math.cos(rY.w * gY) + rY.decay / rY.w * Math.sin(rY.w * gY)),
+              QY = Math.max(0, (YY - 1.77) / (IY - 1.77));
+            uY = (1 + (AF.to - 1) * yY) * (1 + .08 * QY), sY = 1.1 + 1.5 * Math.exp(-RY / .07) + .3 * Math.exp(-(((1e3 * RY - IF) / 100) ** 2)) + .8 * QY, iY = 1 - QY ** 1.5
+          }
+          const yY = .15 * aY + YF * vY,
+            QY = -.1 * aY + rF * vY,
+            oY = 3 * aY + DF * vY;
+          OY.push(`${(gY/RY*100).toFixed(3)}% { opacity: ${iY.toFixed(3)}; transform: translate(${yY.toFixed(3)}rem, ${QY.toFixed(3)}rem) rotate(${oY.toFixed(2)}deg) scale(${uY.toFixed(3)}); filter: brightness(${sY.toFixed(2)}) drop-shadow(0 0 0.8rem color-mix(in srgb, var(--tier) 55%, transparent)); }`)
+        }
+        return `@keyframes SkyblockForgeSwordBurst { ${OY.join(" ")} }`
+      }(), document.head.append(YY)
+    }
+    const sF = "skyblockForgeView",
+      iF = {
+        Blade: "skyblockGame:forgeSlotBlade",
+        Guard: "skyblockGame:forgeSlotGuard",
+        Handle: "skyblockGame:forgeSlotHandle"
+      };
+    class yF extends uY {
+      constructor(YY, rY, DY, FY, AY) {
+        super(YY, DY, FY), this.translate = rY, this.requestForge = AY, this.snapshot = void 0, this.owned = {}, this.coal = 0, this.received = !1, this.awaitingReply = !1, this.pacing = null, this.replyTimeout = null, this.status = null, this.forging = null, this.forgeId = 0, this.arriving = null, this.selected = {
+          Blade: null,
+          Guard: null,
+          Handle: null
+        }, this.onForgeStarted = null, this.onPartSelected = null, this.select = (YY, rY) => {
+          var DY, FY;
+          null !== this.forging || (null !== (DY = this.owned[(0, UD.q)(rY, YY)]) && void 0 !== DY ? DY : 0) <= 0 || (this.selected[YY] = this.selected[YY] === rY ? null : rY, this.status = null, null === (FY = this.onPartSelected) || void 0 === FY || FY.call(this), this.emit())
+        }, this.forge = YY => {
+          var rY, DY;
+          const FY = this.selectedParts();
+          if (null === FY || this.isPending() || !this.open) return;
+          const AY = (0, UD.m)(FY);
+          if (null === AY || AY.coalCost > this.coal) return;
+          const IY = this.preview(AY),
+            RY = null !== (rY = null === (DY = this.onForgeStarted) || void 0 === DY ? void 0 : DY.call(this, IY.tier, IY.named, YY)) && void 0 !== rY ? rY : () => {};
+          if (this.dropArrival(), YY) {
+            const YY = {
+              id: ++this.forgeId,
+              preview: IY,
+              timers: [],
+              stopSounds: RY,
+              landed: !1,
+              reply: null
+            };
+            YY.timers.push(setTimeout((() => {
+              YY.landed = !0, null !== YY.reply && (this.apply(YY.reply), YY.reply = null, this.emit())
+            }), LD), setTimeout((() => {
+              this.finishForge(YY)
+            }), tD)), this.forging = YY
+          }
+          this.awaitingReply = !0, this.pacing = setTimeout((() => {
+            this.pacing = null, this.emit()
+          }), 2500), this.replyTimeout = setTimeout((() => {
+            this.replyTimeout = null, this.awaitingReply = !1, this.emit()
+          }), 8e3), this.emit(), this.requestForge(FY)
+        }, this.snapshot = this.buildSnapshot()
+      }
+      Cy(YY) {
+        if (this.received = !0, this.awaitingReply = !1, this.clearReplyTimeout(), "open" === YY.forgeMessageKind) return this.dropForge(), this.apply(YY), this.status = null, void this.show();
+        const rY = this.forging;
+        if (null !== rY && null !== YY.forgeRefusalKey) this.dropForge();
+        else if (null !== rY && !rY.landed) return void(rY.reply = YY);
+        this.apply(YY), this.emit()
+      }
+      apply(YY) {
+        if (this.owned = YY.forgeOwnedParts, this.coal = YY.forgeCoalOwned, this.keepSelectionOwned("open" === YY.forgeMessageKind), null !== YY.forgeForgedSwordId) {
+          var rY;
+          const DY = (0, UD.m)(YY.forgeForgedSwordId);
+          this.status = {
+            tone: "forged",
+            key: "skyblockGame:forgeForged",
+            params: {
+              sword: null !== (rY = null === DY || void 0 === DY ? void 0 : DY.displayName) && void 0 !== rY ? rY : ""
+            }
+          }
+        } else null !== YY.forgeRefusalKey && (this.status = {
+          tone: "refused",
+          key: YY.forgeRefusalKey,
+          params: {}
+        })
+      }
+      setTranslator(YY) {
+        this.translate = YY, this.emit()
+      }
+      isEnabled() {
+        return this.received
+      }
+      onClosed() {
+        this.dropForge(), this.dropArrival(), this.status = null, this.awaitingReply = !1, this.clearReplyTimeout()
+      }
+      finishForge(YY) {
+        var rY;
+        this.forging = null;
+        const DY = this.selectedParts(),
+          FY = setTimeout((() => {
+            this.arriving = null, this.emit()
+          }), 400);
+        this.arriving = {
+          id: YY.id,
+          sameSword: null !== DY && (null === (rY = (0, UD.m)(DY)) || void 0 === rY ? void 0 : rY.displayName) === YY.preview.name,
+          timer: FY
+        }, this.emit()
+      }
+      dropForge() {
+        const YY = this.forging;
+        if (null !== YY) {
+          this.forging = null;
+          for (const rY of YY.timers) clearTimeout(rY);
+          YY.stopSounds(), null !== YY.reply && this.apply(YY.reply)
+        }
+      }
+      dropArrival() {
+        null !== this.arriving && (clearTimeout(this.arriving.timer), this.arriving = null)
+      }
+      isPending() {
+        return this.awaitingReply || null !== this.pacing
+      }
+      clearReplyTimeout() {
+        null !== this.replyTimeout && (clearTimeout(this.replyTimeout), this.replyTimeout = null)
+      }
+      buildSnapshot() {
+        var YY, rY, DY;
+        const FY = this.selectedParts(),
+          AY = null === FY ? null : (0, UD.m)(FY),
+          IY = null !== (YY = null === (rY = this.forging) || void 0 === rY ? void 0 : rY.preview) && void 0 !== YY ? YY : null === AY ? null : this.preview(AY);
+        return {
+          enabled: this.received,
+          open: this.open,
+          slots: UD.i.map((YY => ({
+            kind: YY,
+            label: this.translate(iF[YY]),
+            parts: this.partsFor(YY)
+          }))),
+          coalOwned: this.coal,
+          preview: IY,
+          unformedSword: UD.h[null !== (DY = this.selected.Blade) && void 0 !== DY ? DY : "Iron"].baseSword,
+          anyParts: Object.values(this.owned).some((YY => YY > 0)),
+          canForge: null !== IY && !IY.coalShort && !this.isPending(),
+          status: null === this.status ? null : {
+            tone: this.status.tone,
+            text: this.translate(this.status.key, this.status.params)
+          },
+          forging: null === this.forging ? null : {
+            id: this.forging.id,
+            preview: this.forging.preview
+          },
+          arriving: null === this.arriving ? null : {
+            id: this.arriving.id,
+            sameSword: this.arriving.sameSword
+          }
+        }
+      }
+      preview(YY) {
+        return {
+          name: YY.displayName,
+          lore: YY.lore,
+          baseSword: YY.baseSword,
+          enchantmentTier: YY.enchantmentTier,
+          tier: Number(YY.enchantmentTier.slice(-1)),
+          named: YY.named,
+          stats: this.stats(YY),
+          effects: YY.effects,
+          coalCost: YY.coalCost,
+          coalShort: null === this.forging && YY.coalCost > this.coal
+        }
+      }
+      partsFor(YY) {
+        const rY = [];
+        for (const FY of UD.e) {
+          var DY;
+          const AY = (0, UD.q)(FY, YY),
+            IY = null !== (DY = this.owned[AY]) && void 0 !== DY ? DY : 0;
+          IY > 0 && rY.push({
+            material: FY,
+            itemName: AY,
+            owned: IY,
+            selected: this.selected[YY] === FY,
+            placeholder: !1
+          })
+        }
+        if (0 === rY.length) {
+          const DY = UD.e[0];
+          rY.push({
+            material: DY,
+            itemName: (0, UD.q)(DY, YY),
+            owned: 0,
+            selected: !1,
+            placeholder: !0
+          })
+        }
+        return rY
+      }
+      stats(YY) {
+        const rY = [{
+          label: this.translate("skyblockGame:forgeStatPower"),
+          value: `\xd7${YY.powerMultiplier.toFixed(2)}`,
+          better: YY.powerMultiplier > 1
+        }, {
+          label: this.translate("skyblockGame:forgeStatDamage"),
+          value: `\xd7${YY.damageMultiplier.toFixed(2)}`,
+          better: YY.damageMultiplier > 1
+        }, {
+          label: this.translate("skyblockGame:forgeStatSpeed"),
+          value: `\xd7${(1/YY.cooldownMultiplier).toFixed(2)}`,
+          better: YY.cooldownMultiplier < 1
+        }, {
+          label: this.translate("skyblockGame:forgeStatKnockback"),
+          value: `\xd7${YY.knockbackMultiplier.toFixed(2)}`,
+          better: YY.knockbackMultiplier > 1
+        }];
+        return YY.reachBonus > 0 && rY.push({
+          label: this.translate("skyblockGame:forgeStatReach"),
+          value: `+${YY.reachBonus.toFixed(1)}`,
+          better: !0
+        }), YY.damageReduction > 0 && rY.push({
+          label: this.translate("skyblockGame:forgeStatDefence"),
+          value: `${Math.round(100*YY.damageReduction)}%`,
+          better: !0
+        }), rY
+      }
+      selectedParts() {
+        const {
+          Blade: YY,
+          Guard: rY,
+          Handle: DY
+        } = this.selected;
+        return null === YY || null === rY || null === DY ? null : {
+          blade: YY,
+          guard: rY,
+          handle: DY
+        }
+      }
+      keepSelectionOwned(YY) {
+        for (const DY of UD.i) {
+          var rY;
+          const FY = this.selected[DY];
+          if (null !== FY && (null !== (rY = this.owned[(0, UD.q)(FY, DY)]) && void 0 !== rY ? rY : 0) > 0) continue;
+          if (!YY) {
+            this.selected[DY] = null;
+            continue
+          }
+          const AY = [...UD.e].reverse().find((YY => {
+            var rY;
+            return (null !== (rY = this.owned[(0, UD.q)(YY, DY)]) && void 0 !== rY ? rY : 0) > 0
+          }));
+          this.selected[DY] = null !== AY && void 0 !== AY ? AY : null
+        }
+      }
+      dispose() {
+        this.received = !1, this.dropForge(), this.dropArrival(), this.clearReplyTimeout(), null !== this.pacing && (clearTimeout(this.pacing), this.pacing = null), super.dispose()
+      }
+    }
+    const QF = "skyblockSmugglerView",
+      oF = {
+        "Red Firecracker Pebble": "skyblockGame:mortarStrike",
+        "Purple Firecracker Pebble": "skyblockGame:interdimensionalStrike"
+      };
+    class WF extends uY {
+      constructor(YY, rY, DY, FY, AY) {
+        let IY = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now;
+        super(YY, DY, FY), this.translate = rY, this.requestBuy = AY, this.now = IY, this.snapshot = void 0, this.day = 0, this.deals = [], this.rivets = 0, this.crests = 0, this.soldOut = new Set, this.rotatesAtMs = 0, this.received = !1, this.awaitingReply = !1, this.pacing = null, this.replyTimeout = null, this.countdown = null, this.status = null, this.boughtSlot = null, this.boughtCount = 0, this.itemName = YY => YY, this.onBought = null, this.buy = YY => {
+          const rY = this.deals[YY];
+          void 0 !== rY && !this.isPending() && this.open && !this.soldOut.has(YY) && this.canAfford(rY) && (this.awaitingReply = !0, this.pacing = setTimeout((() => {
+            this.pacing = null, this.emit()
+          }), 2500), this.replyTimeout = setTimeout((() => {
+            this.replyTimeout = null, this.awaitingReply = !1, this.emit()
+          }), 8e3), this.emit(), this.requestBuy(this.day, YY))
+        }, this.snapshot = this.buildSnapshot()
+      }
+      Cy(YY) {
+        if (this.received = !0, this.day = YY.smugglerDay, this.deals = YY.smugglerDeals, this.rivets = YY.smugglerRivetsOwned, this.crests = YY.smugglerCrestsOwned, this.soldOut = new Set(YY.smugglerSoldOutSlots), this.rotatesAtMs = this.now() + YY.smugglerRotatesInMs, this.awaitingReply = !1, this.clearReplyTimeout(), "open" === YY.smugglerMessageKind) return this.status = null, this.boughtSlot = null, this.show(), void this.startCountdown();
+        if (this.boughtSlot = YY.smugglerBoughtSlot, null !== YY.smugglerBoughtSlot) {
+          var rY, DY;
+          const FY = this.deals[YY.smugglerBoughtSlot];
+          this.status = {
+            tone: "bought",
+            key: "skyblockGame:smugglerBought",
+            params: {
+              item: void 0 === FY ? "" : this.dealName(FY),
+              amount: String(null !== (rY = null === FY || void 0 === FY ? void 0 : FY.smugglerDealAmount) && void 0 !== rY ? rY : 0)
+            }
+          }, this.boughtCount++, null === (DY = this.onBought) || void 0 === DY || DY.call(this)
+        } else null !== YY.smugglerRefusalKey && (this.status = {
+          tone: "refused",
+          key: YY.smugglerRefusalKey,
+          params: {}
+        });
+        this.emit()
+      }
+      setTranslator(YY, rY, DY) {
+        this.translate = YY, void 0 !== DY && (this.itemName = DY), this.emit()
+      }
+      isEnabled() {
+        return this.received
+      }
+      onClosed() {
+        this.status = null, this.boughtSlot = null, this.awaitingReply = !1, this.clearReplyTimeout(), this.stopCountdown(), this.boughtCount = 0
+      }
+      dealName(YY) {
+        if (null !== YY.smugglerDealUniqueName) return YY.smugglerDealUniqueName;
+        const rY = oF[YY.smugglerDealItem];
+        return void 0 === rY ? this.itemName(YY.smugglerDealItem) : this.translate(rY)
+      }
+      canAfford(YY) {
+        return YY.smugglerDealRivets <= this.rivets && YY.smugglerDealCrests <= this.crests
+      }
+      isPending() {
+        return this.awaitingReply || null !== this.pacing
+      }
+      startCountdown() {
+        this.stopCountdown(), this.countdown = setInterval((() => {
+          this.emit()
+        }), 15e3)
+      }
+      stopCountdown() {
+        null !== this.countdown && (clearInterval(this.countdown), this.countdown = null)
+      }
+      clearReplyTimeout() {
+        null !== this.replyTimeout && (clearTimeout(this.replyTimeout), this.replyTimeout = null)
+      }
+      rotatesText() {
+        const YY = Math.ceil((this.rotatesAtMs - this.now()) / 6e4);
+        return YY <= 0 ? this.translate("skyblockGame:smugglerRotatesSoon") : YY < 60 ? this.translate("skyblockGame:smugglerRotatesMinutes", {
+          minutes: String(YY)
+        }) : this.translate("skyblockGame:smugglerRotatesHours", {
+          hours: String(Math.floor(YY / 60)),
+          minutes: String(YY % 60)
+        })
+      }
+      buildSnapshot() {
+        return {
+          enabled: this.received,
+          open: this.open,
+          deals: this.deals.map(((YY, rY) => ({
+            slot: rY,
+            itemName: YY.smugglerDealItem,
+            displayName: this.dealName(YY),
+            enchantmentTier: YY.smugglerDealEnchantmentTier,
+            amount: YY.smugglerDealAmount,
+            rivets: YY.smugglerDealRivets,
+            crests: YY.smugglerDealCrests,
+            affordable: this.canAfford(YY),
+            soldOut: this.soldOut.has(rY),
+            justBought: this.boughtSlot === rY
+          }))),
+          rivetsOwned: this.rivets,
+          crestsOwned: this.crests,
+          rotatesText: this.received ? this.rotatesText() : "",
+          pending: this.isPending(),
+          status: null === this.status ? null : {
+            tone: this.status.tone,
+            text: this.translate(this.status.key, this.status.params)
+          },
+          boughtCount: this.boughtCount
+        }
+      }
+      dispose() {
+        this.received = !1, this.clearReplyTimeout(), this.stopCountdown(), null !== this.pacing && (clearTimeout(this.pacing), this.pacing = null), super.dispose()
+      }
+    }
+    const EF = "skyblockPassageView",
+      mF = {
+        new: "skyblockGame:passagePhaseNew",
+        waxing: "skyblockGame:passagePhaseWaxing",
+        full: "skyblockGame:passagePhaseFull",
+        waning: "skyblockGame:passagePhaseWaning"
+      };
+
+    function VF(YY, rY) {
+      return YY(mF[rY])
+    }
+
+    function SF(YY, rY, DY, FY) {
+      const AY = Math.ceil((DY - FY) / 864e5),
+        IY = VF(YY, rY);
+      return AY > 1 ? YY("skyblockGame:passageNextDays", {
+        phase: IY,
+        days: String(AY)
+      }) : YY("skyblockGame:passageNextSoon", {
+        phase: IY
+      })
+    }
+    class lF extends uY {
+      constructor(YY, rY, DY, FY) {
+        let AY = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Date.now;
+        super(YY, DY, FY), this.translate = rY, this.now = AY, this.snapshot = void 0, this.message = null, this.receivedAtMs = 0, this.itemName = YY => YY, this.toggle = () => {
+          this.open ? this.dismiss() : this.show()
+        }, this.snapshot = this.buildSnapshot()
+      }
+      Cy(YY) {
+        this.message = YY, this.receivedAtMs = this.now(), this.emit()
+      }
+      setTranslator(YY, rY, DY) {
+        this.translate = YY, void 0 !== DY && (this.itemName = DY), this.emit()
+      }
+      isEnabled() {
+        return null !== this.message
+      }
+      describe(YY) {
+        return {
+          itemName: YY.passageFish,
+          displayName: this.itemName(YY.passageFish),
+          where: this.translate("skyblockGame:passageInWater", {
+            water: this.translate(YY.passageFishWaterKey)
+          })
+        }
+      }
+      buildSnapshot() {
+        const YY = this.message;
+        return null === YY ? {
+          enabled: !1,
+          open: !1,
+          phase: "new",
+          phaseName: "",
+          visitors: [],
+          resting: null,
+          nextPhase: "waxing",
+          next: ""
+        } : {
+          enabled: !0,
+          open: this.open,
+          phase: YY.passagePhase,
+          phaseName: VF(this.translate, YY.passagePhase),
+          visitors: YY.passageVisitors.map((YY => this.describe(YY))),
+          resting: this.describe(YY.passageResting),
+          nextPhase: YY.passageNextPhase,
+          next: SF(this.translate, YY.passageNextPhase, YY.passageTurnsInMs, this.now() - this.receivedAtMs)
+        }
+      }
+      dispose() {
+        this.message = null, super.dispose()
+      }
+    }
+    var TF = DY(37926);
+    const eF = "skyblockKeepersChairView";
+    class NF extends uY {
+      constructor(YY, rY, DY, FY, AY) {
+        let IY = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now,
+          RY = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : new TF.e;
+        super(YY, DY, FY), this.translate = rY, this.requestAim = AY, this.now = IY, this.pacer = RY, this.snapshot = void 0, this.islands = [], this.favoured = null, this.received = !1, this.awaitingReply = !1, this.unsubscribePacer = void 0, this.replyTimeout = null, this.status = null, this.aimedCount = 0, this.passage = null, this.passageReceivedAtMs = 0, this.atChair = !0, this.itemName = YY => YY, this.aim = YY => {
+          !this.awaitingReply && this.open && this.atChair && YY !== this.favoured && (null === YY || this.islands.some((rY => rY.keepersChairIslandId === YY && rY.keepersChairIslandRelit))) && this.pacer.tryStart() && (this.awaitingReply = !0, this.replyTimeout = setTimeout((() => {
+            this.replyTimeout = null, this.awaitingReply = !1, this.emit()
+          }), 8e3), this.emit(), this.requestAim(null !== YY && void 0 !== YY ? YY : "none"))
+        }, this.snapshot = this.buildSnapshot(), this.unsubscribePacer = RY.subscribe((() => {
+          this.emit()
+        }))
+      }
+      Cy(YY) {
+        var rY, DY;
+        this.received = !0;
+        const FY = this.favoured,
+          AY = this.atChair;
+        var IY;
+        return this.islands = YY.keepersChairIslands, this.favoured = YY.keepersChairFavoured, this.passage = null !== (rY = YY.keepersChairPassage) && void 0 !== rY ? rY : null, this.passageReceivedAtMs = this.now(), this.atChair = null === (DY = YY.keepersChairAtChair) || void 0 === DY || DY, "place" === YY.keepersChairMessageKind ? (!AY && this.atChair && "refused" === (null === (IY = this.status) || void 0 === IY ? void 0 : IY.tone) && (this.status = null), void this.emit()) : (this.awaitingReply = !1, this.clearReplyTimeout(), "open" === YY.keepersChairMessageKind ? (this.status = null, void this.show()) : void(this.open ? (null !== YY.keepersChairRefusalKey ? this.status = {
+          tone: "refused",
+          key: YY.keepersChairRefusalKey,
+          island: null
+        } : this.favoured !== FY && (this.status = null === this.favoured ? {
+          tone: "aimed",
+          key: "skyblockGame:keepersChairRestedStatus",
+          island: null
+        } : {
+          tone: "aimed",
+          key: "skyblockGame:keepersChairAimedStatus",
+          island: this.favoured
+        }, this.aimedCount++), this.emit()) : this.emit()))
+      }
+      isAtChair() {
+        return this.atChair
+      }
+      receivePassage(YY) {
+        this.received && (this.passage = YY, this.passageReceivedAtMs = this.now(), this.emit())
+      }
+      setTranslator(YY, rY, DY) {
+        this.translate = YY, void 0 !== DY && (this.itemName = DY), this.emit()
+      }
+      isEnabled() {
+        return this.received
+      }
+      onClosed() {
+        this.status = null, this.awaitingReply = !1, this.clearReplyTimeout(), this.aimedCount = 0
+      }
+      isPending() {
+        return this.awaitingReply || this.pacer.isPacing()
+      }
+      clearReplyTimeout() {
+        null !== this.replyTimeout && (clearTimeout(this.replyTimeout), this.replyTimeout = null)
+      }
+      islandName(YY) {
+        const rY = this.islands.find((rY => rY.keepersChairIslandId === YY));
+        return void 0 === rY ? YY : this.translate(rY.keepersChairIslandNameKey)
+      }
+      buildSnapshot() {
+        const YY = this.atChair ? this.status : {
+            tone: "refused",
+            key: "skyblockGame:keepersChairTooFar",
+            island: null
+          },
+          rY = this.passage;
+        return {
+          enabled: this.received,
+          open: this.open,
+          islands: this.islands.map((YY => {
+            const rY = YY.keepersChairFeaturedFish;
+            return {
+              id: YY.keepersChairIslandId,
+              name: this.translate(YY.keepersChairIslandNameKey),
+              relit: YY.keepersChairIslandRelit,
+              featuredFish: null === rY ? null : {
+                itemName: rY,
+                displayName: this.itemName(rY)
+              },
+              favoured: YY.keepersChairIslandId === this.favoured
+            }
+          })),
+          aimed: null !== this.favoured,
+          canAim: this.atChair && !this.isPending(),
+          status: null === YY ? null : {
+            tone: YY.tone,
+            text: this.translate(YY.key, null === YY.island ? void 0 : {
+              island: this.islandName(YY.island)
+            })
+          },
+          aimedCount: this.aimedCount,
+          almanac: null === rY ? null : {
+            phase: rY.keepersChairPassagePhase,
+            phaseName: VF(this.translate, rY.keepersChairPassagePhase),
+            nextPhase: rY.keepersChairPassageNextPhase,
+            next: SF(this.translate, rY.keepersChairPassageNextPhase, rY.keepersChairPassageTurnsInMs, this.now() - this.passageReceivedAtMs)
+          }
+        }
+      }
+      dispose() {
+        this.received = !1, this.passage = null, this.atChair = !0, this.clearReplyTimeout(), this.unsubscribePacer(), super.dispose()
+      }
+    }
+    const BF = "skyblockReachLogView",
+      cF = ["skyblockGame:reachLogBronze", "skyblockGame:reachLogSilver", "skyblockGame:reachLogGold"],
+      KF = "Caught Fish",
+      HF = [1, 2, 4];
+
+    function zF(YY, rY) {
+      return YY.map((YY => ({
+        ...YY,
+        reachLogPageFish: YY.reachLogPageFish.map((YY => ({
+          ...YY,
+          reachLogFishFresh: rY(YY)
+        })))
+      })))
+    }
+    class ZF extends uY {
+      constructor(YY, rY, DY, FY, AY) {
+        let IY = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : new TF.e;
+        super(YY, DY, FY), this.translate = rY, this.requestOpen = AY, this.pacer = IY, this.snapshot = void 0, this.pages = [], this.pagesCurrent = !1, this.serverFresh = 0, this.passagePhase = null, this.heldFresh = new Set, this.shown = !1, this.received = !1, this.selected = null, this.letGoShown = !1, this.awaitingReply = !1, this.replyTimeout = null, this.newsToken = 0, this.news = !1, this.pageViews = null, this.newsTimeout = null, this.unsubscribePacer = void 0, this.itemName = YY => YY, this.ask = () => {
+          !this.received || this.open || this.awaitingReply || (this.pagesCurrent && 0 === this.serverFresh ? this.showPages() : this.pacer.tryStart() && (this.awaitingReply = !0, this.replyTimeout = setTimeout((() => {
+            this.replyTimeout = null, this.awaitingReply = !1, this.emit()
+          }), 8e3), this.emit(), this.requestOpen()))
+        }, this.selectPage = YY => {
+          this.pages.some((rY => rY.reachLogIslandId === YY)) && (this.selected = YY, this.emit())
+        }, this.snapshot = this.buildSnapshot(), this.unsubscribePacer = IY.subscribe((() => {
+          this.emit()
+        }))
+      }
+      Cy(YY) {
+        if (this.received = !0, "status" === YY.reachLogMessageKind) return !0 === YY.reachLogNews && this.markNews(), this.serverFresh = YY.reachLogFreshCount, this.pagesCurrent = !1, void this.emit();
+        const rY = this.awaitingReply;
+        if (this.awaitingReply = !1, this.clearReplyTimeout(), "unavailable" !== YY.reachLogMessageKind)
+          if (this.pageViews = null, this.pages = zF(YY.reachLogPages, (YY => YY.reachLogFishFresh || this.heldFresh.has(YY.reachLogFishItem))), this.letGoShown = YY.reachLogLetGoRibbonShown, this.pagesCurrent = !0, this.serverFresh = 0, rY) this.showPages();
+          else {
+            for (const YY of this.pages)
+              for (const rY of YY.reachLogPageFish) rY.reachLogFishFresh && this.heldFresh.add(rY.reachLogFishItem);
+            this.emit()
+          }
+        else this.emit()
+      }
+      setTranslator(YY, rY, DY) {
+        this.translate = YY, this.pageViews = null, void 0 !== DY && (this.itemName = DY), this.emit()
+      }
+      isEnabled() {
+        return this.received
+      }
+      onClosed() {
+        this.shown && (this.shown = !1, this.pageViews = null, this.pages = zF(this.pages, (() => !1)))
+      }
+      showPages() {
+        this.heldFresh.clear(), this.selected = this.pickPage(), this.show(), this.shown = this.isOpen()
+      }
+      pickPage() {
+        var YY, rY, DY, FY;
+        const AY = this.pages.find((YY => YY.reachLogPageFish.some((YY => YY.reachLogFishFresh))));
+        if (void 0 !== AY) return AY.reachLogIslandId;
+        if (null !== this.selected && this.pages.some((YY => YY.reachLogIslandId === this.selected))) return this.selected;
+        return null !== (YY = null !== (rY = null === (DY = this.pages.filter((YY => YY.reachLogIslandAwake)).at(-1)) || void 0 === DY ? void 0 : DY.reachLogIslandId) && void 0 !== rY ? rY : null === (FY = this.pages[0]) || void 0 === FY ? void 0 : FY.reachLogIslandId) && void 0 !== YY ? YY : null
+      }
+      markNews() {
+        this.newsToken++, this.news = !0, this.clearNewsTimeout(), this.newsTimeout = setTimeout((() => {
+          this.newsTimeout = null, this.news = !1, this.emit()
+        }), 1200)
+      }
+      clearNewsTimeout() {
+        null !== this.newsTimeout && (clearTimeout(this.newsTimeout), this.newsTimeout = null)
+      }
+      clearReplyTimeout() {
+        null !== this.replyTimeout && (clearTimeout(this.replyTimeout), this.replyTimeout = null)
+      }
+      buildSnapshot() {
+        return {
+          enabled: this.received,
+          open: this.open,
+          pending: this.awaitingReply || this.pacer.isPacing(),
+          freshCount: this.serverFresh + this.heldFresh.size,
+          news: this.news,
+          newsToken: this.newsToken,
+          selected: this.selected,
+          letGoShown: this.letGoShown,
+          pages: this.pageViews ??= this.buildPages()
+        }
+      }
+      buildPages() {
+        return this.pages.map((YY => {
+          var rY;
+          return {
+            id: YY.reachLogIslandId,
+            name: this.translate(YY.reachLogIslandNameKey),
+            awake: YY.reachLogIslandAwake,
+            gold: YY.reachLogPageGold,
+            caught: YY.reachLogPageFish.filter((YY => YY.reachLogFishCaught && !YY.reachLogFishVisitor)).length,
+            total: YY.reachLogPageFish.filter((YY => !YY.reachLogFishVisitor)).length,
+            fish: YY.reachLogPageFish.map((YY => {
+              const rY = YY.reachLogFishBestKg;
+              return {
+                itemName: YY.reachLogFishItem,
+                name: YY.reachLogFishCaught ? this.itemName(YY.reachLogFishItem) : this.translate("skyblockGame:reachLogUnknownFish"),
+                caught: YY.reachLogFishCaught,
+                chance: this.translate("skyblockGame:reachLogChance", {
+                  count: Math.max(1, Math.round(1 / YY.reachLogFishChance))
+                }),
+                best: YY.reachLogFishCaught ? null === rY ? this.translate("skyblockGame:reachLogNoSize") : this.translate("skyblockGame:reachLogBest", {
+                  kg: rY.toFixed(1)
+                }) : this.translate("skyblockGame:reachLogNotCaught"),
+                marks: YY.reachLogFishMarks,
+                ribbons: HF.map((rY => 0 !== (YY.reachLogFishRibbons & rY))),
+                glimmer: 0 !== (8 & YY.reachLogFishRibbons),
+                halo: 0 !== (32 & YY.reachLogFishRibbons),
+                fresh: YY.reachLogFishFresh,
+                visitor: YY.reachLogFishVisitor
+              }
+            })),
+            returner: this.buildReturner(null !== (rY = YY.reachLogPageReturner) && void 0 !== rY ? rY : null)
+          }
+        }))
+      }
+      buildReturner(YY) {
+        return null === YY ? null : {
+          itemName: YY.reachLogReturnerFishItem,
+          line: this.translate(YY.reachLogReturnerLineKey, {
+            name: this.translate(YY.reachLogReturnerNameKey),
+            trinket: this.translate(YY.reachLogReturnerTrinketKey)
+          }),
+          back: YY.reachLogReturnerBack
+        }
+      }
+      receivePassagePhase(YY) {
+        null !== this.passagePhase && this.passagePhase !== YY && (this.pagesCurrent = !1), this.passagePhase = YY
+      }
+      dispose() {
+        this.received = !1, this.pagesCurrent = !1, this.passagePhase = null, this.heldFresh.clear(), this.clearReplyTimeout(), this.clearNewsTimeout(), this.unsubscribePacer(), super.dispose()
+      }
+    }
+    const CF = "skyblockLampLightView";
+    class fF {
+      constructor(YY, rY, DY, FY) {
+        this.vo = YY, this.translate = rY, this.requestCommand = DY, this.pacer = FY, this.snapshot = void 0, this.message = null, this.shop = null, this.situation = "open", this.awaitingTag = null, this.awaitingOff = !1, this.offQueued = !1, this.offTag = null, this.lastTag = 0, this.replyTimeout = null, this.offTimeout = null, this.refusalKey = null, this.gainedCount = 0, this.lastGained = 0, this.atChair = !0, this.sparkle = null, this.locale = "en", this.Ky = !1, this.unsubscribePacer = void 0, this.removePriority = void 0, this.getSnapshot = () => this.snapshot, this.setRelease = YY => {
+          YY ? this.send("release on") : this.awaitingOff || (this.awaitingOff = !0, this.offQueued = !0, this.sendQueuedOff(), this.emit())
+        }, this.buy = YY => {
+          this.send(`buy ${YY}`)
+        }, this.socket = YY => {
+          this.send(`socket ${null!==YY&&void 0!==YY?YY:CY}`)
+        }, this.wearTint = YY => {
+          this.send(`tint ${null!==YY&&void 0!==YY?YY:CY}`)
+        }, this.setSituation = YY => {
+          this.situation = YY, this.emit()
+        }, this.snapshot = this.buildSnapshot(), this.unsubscribePacer = FY.subscribe((() => {
+          this.sendQueuedOff(), this.emit()
+        })), this.removePriority = FY.addPriority({
+          waiting: () => this.offQueued,
+          flush: () => {
+            this.sendQueuedOff()
+          }
+        })
+      }
+      Cy(YY) {
+        if (this.message = YY, null !== YY.lampLightShop && (this.shop = YY.lampLightShop), "open" === YY.lampLightKind && (this.refusalKey = null), "reply" === YY.lampLightKind) {
+          var rY;
+          const AY = null !== (rY = YY.lampLightReplyTag) && void 0 !== rY ? rY : null,
+            IY = null !== AY && AY === this.offTag;
+          var DY, FY;
+          if (IY ? this.settleOff() : null !== AY && AY !== this.awaitingTag || this.settleReply(), this.refusalKey = YY.lampLightRefusalKey, null !== YY.lampLightBought && !IY) this.sparkle = {
+            id: YY.lampLightBought,
+            count: (null !== (DY = null === (FY = this.sparkle) || void 0 === FY ? void 0 : FY.count) && void 0 !== DY ? DY : 0) + 1
+          }
+        }
+        YY.lampLightReleasing || (this.settleOff(), this.gainedCount = 0), "released" === YY.lampLightKind && (this.lastGained = YY.lampLightGained, this.gainedCount++), this.emit()
+      }
+      setAtChair(YY) {
+        YY !== this.atChair && (this.atChair = YY, YY && (this.refusalKey = null), this.emit())
+      }
+      setTranslator(YY, rY) {
+        this.translate = YY, this.locale = null !== rY && void 0 !== rY ? rY : this.locale, this.emit()
+      }
+      onChairClosed() {
+        this.refusalKey = null, this.emit()
+      }
+      dispose() {
+        this.clearReplyTimeout(), this.settleOff(), this.unsubscribePacer(), this.removePriority(), this.message = null, this.shop = null, this.emit(), this.Ky = !0
+      }
+      send(YY) {
+        var rY;
+        if (null !== this.awaitingTag || "ready" !== (null === (rY = this.message) || void 0 === rY ? void 0 : rY.lampLightStatus) || !this.atChair) return;
+        if (this.sendQueuedOff(), this.offQueued || !this.pacer.tryStart()) return;
+        const DY = this.nextTag();
+        this.awaitingTag = DY, this.replyTimeout = setTimeout((() => {
+          this.replyTimeout = null, this.awaitingTag = null, this.emit()
+        }), 8e3), this.requestCommand(`lamplight-${YY} ${DY}`), this.emit()
+      }
+      sendQueuedOff() {
+        if (!this.offQueued || !this.pacer.canSendPriority()) return;
+        this.offQueued = !1;
+        const YY = this.nextTag();
+        this.offTag = YY, this.pacer.start(), this.offTimeout = setTimeout((() => {
+          this.offTimeout = null, this.awaitingOff = !1, this.offTag = null, this.emit()
+        }), 8e3), this.requestCommand(`lamplight-release off ${YY}`)
+      }
+      nextTag() {
+        return this.lastTag = this.lastTag % 999999 + 1, this.lastTag
+      }
+      settleOff() {
+        this.awaitingOff = !1, this.offQueued = !1, this.offTag = null, null !== this.offTimeout && (clearTimeout(this.offTimeout), this.offTimeout = null)
+      }
+      settleReply() {
+        this.awaitingTag = null, this.clearReplyTimeout()
+      }
+      isPending() {
+        return null !== this.awaitingTag || this.offQueued || this.pacer.isPacing()
+      }
+      clearReplyTimeout() {
+        null !== this.replyTimeout && (clearTimeout(this.replyTimeout), this.replyTimeout = null)
+      }
+      emit() {
+        this.Ky || (this.snapshot = this.buildSnapshot(), this.vo(this.snapshot))
+      }
+      formatLight(YY) {
+        return Math.floor(YY).toLocaleString(this.locale)
+      }
+      formatPercent(YY) {
+        const rY = 100 * YY;
+        return rY >= 10 ? Math.round(rY).toLocaleString(this.locale) : rY.toLocaleString(this.locale, {
+          maximumFractionDigits: 1
+        })
+      }
+      formatOdds(YY, rY) {
+        if ("bite" === YY) return this.translate("skyblockGame:lampLightBite", {
+          seconds: (rY.lampLightBiteMs / 1e3).toLocaleString(this.locale, {
+            maximumFractionDigits: 1
+          })
+        });
+        if ("rare" === YY) return this.translate("skyblockGame:lampLightRare", {
+          percent: this.formatPercent(rY.lampLightRareChance)
+        });
+        if ("notice" === YY) return null === rY.lampLightNoticeChance ? null : this.translate("skyblockGame:lampLightNotice", {
+          percent: this.formatPercent(rY.lampLightNoticeChance)
+        });
+        const DY = "meter" === YY ? rY.lampLightMeterCatches : rY.lampLightBloomCatches;
+        return null === DY ? null : this.translate("meter" === YY ? "skyblockGame:lampLightMeter" : "skyblockGame:lampLightBloomLasts", {
+          catches: String(Math.round(DY))
+        })
+      }
+      oddsLines(YY, rY) {
+        const DY = (YY, rY) => {
+            var DY;
+            return null !== (DY = {
+              bite: rY.lampLightBiteMs,
+              rare: rY.lampLightRareChance,
+              meter: rY.lampLightMeterCatches,
+              bloom: rY.lampLightBloomCatches,
+              notice: rY.lampLightNoticeChance
+            } [YY]) && void 0 !== DY ? DY : 0
+          },
+          FY = {
+            bite: !0,
+            rare: !1,
+            meter: !0,
+            bloom: !1,
+            notice: !1
+          },
+          AY = [];
+        for (const IY of ["bite", "rare", "meter", "bloom", "notice"]) {
+          const RY = this.formatOdds(IY, YY),
+            OY = this.formatOdds(IY, rY);
+          if (null === RY || null === OY || "bite" !== IY && "rare" !== IY && RY === OY) continue;
+          const gY = DY(IY, rY) - DY(IY, YY),
+            aY = FY[IY] ? gY < 0 : gY > 0;
+          AY.push({
+            label: IY,
+            before: RY,
+            after: OY,
+            tone: RY === OY ? "same" : aY ? "better" : "worse"
+          })
+        }
+        return AY
+      }
+      charmView(YY, rY, DY) {
+        const FY = YY.lampLightCharmId.charAt(0).toUpperCase() + YY.lampLightCharmId.slice(1),
+          AY = "bloom" === this.situation;
+        return {
+          id: YY.lampLightCharmId,
+          name: this.translate(`skyblockGame:lampLightCharm${FY}`),
+          effect: this.translate(`skyblockGame:lampLightCharm${FY}Effect`),
+          cost: this.translate("skyblockGame:lampLightCost", {
+            light: this.formatLight(YY.lampLightCharmCost)
+          }),
+          owned: YY.lampLightCharmOwned,
+          affordable: DY >= YY.lampLightCharmCost,
+          socketed: rY.lampLightSocketed === YY.lampLightCharmId,
+          lines: this.oddsLines(AY ? rY.lampLightBareBloom : rY.lampLightBareOpen, AY ? YY.lampLightCharmBloom : YY.lampLightCharmOpen)
+        }
+      }
+      buildSnapshot() {
+        var YY, rY, DY, FY;
+        const AY = this.message,
+          IY = "ready" === (null === AY || void 0 === AY ? void 0 : AY.lampLightStatus) ? this.shop : null,
+          RY = null !== (YY = null === AY || void 0 === AY ? void 0 : AY.lampLightBalance) && void 0 !== YY ? YY : 0,
+          OY = this.atChair,
+          gY = "loading" === (null === AY || void 0 === AY ? void 0 : AY.lampLightStatus) ? "skyblockGame:lampLightLoading" : "unreadable" === (null === AY || void 0 === AY ? void 0 : AY.lampLightStatus) ? "skyblockGame:lampLightUnreadable" : null,
+          aY = "ready" !== (null === AY || void 0 === AY ? void 0 : AY.lampLightStatus) || OY ? null !== (rY = this.refusalKey) && void 0 !== rY ? rY : gY : "skyblockGame:lampLightTooFar";
+        return {
+          enabled: null !== AY && "locked" !== AY.lampLightStatus,
+          status: null !== (DY = null === AY || void 0 === AY ? void 0 : AY.lampLightStatus) && void 0 !== DY ? DY : "loading",
+          balance: this.translate("skyblockGame:lampLightBalance", {
+            light: this.formatLight(RY)
+          }),
+          releasing: null !== (FY = null === AY || void 0 === AY ? void 0 : AY.lampLightReleasing) && void 0 !== FY && FY,
+          gained: null === AY || 0 === this.gainedCount ? null : {
+            text: this.translate("skyblockGame:lampLightGained", {
+              light: this.formatLight(this.lastGained)
+            }),
+            count: this.gainedCount
+          },
+          canCommand: "ready" === (null === AY || void 0 === AY ? void 0 : AY.lampLightStatus) && OY && !this.isPending(),
+          situation: this.situation,
+          shop: null === IY ? null : {
+            oddsFor: this.translate("skyblockGame:lampLightOddsFor", {
+              rod: IY.lampLightOddsRod,
+              island: this.translate(IY.lampLightIslandNameKey)
+            }),
+            heldRod: null !== IY.lampLightHeldRod,
+            charms: IY.lampLightCharms.map((YY => this.charmView(YY, IY, RY))),
+            tints: IY.lampLightTints.map((YY => {
+              const rY = YY.lampLightTintId,
+                [DY, FY, AY] = YY.lampLightTintColour;
+              return {
+                id: rY,
+                name: this.translate(`skyblockGame:lampLightTint${rY.charAt(0).toUpperCase()}${rY.slice(1)}`),
+                cost: this.translate("skyblockGame:lampLightCost", {
+                  light: this.formatLight(YY.lampLightTintCost)
+                }),
+                owned: YY.lampLightTintOwned,
+                affordable: RY >= YY.lampLightTintCost,
+                wearing: IY.lampLightTint === rY,
+                colour: `rgb(${DY}, ${FY}, ${AY})`
+              }
+            })),
+            wearingIslandColours: null === IY.lampLightTint
+          },
+          notice: null === aY ? null : this.translate(aY),
+          sparkle: this.sparkle
+        }
+      }
+    }
+    const jF = "skyblockMagmawardView";
+    class hF {
+      constructor(YY) {
+        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
+        this.vo = YY, this.now = rY, this.snapshot = null, this.pulseToken = 0, this.pulseAt = -1 / 0, this.flareToken = 0, this.flareAt = -1 / 0, this.setLitToken = 0, this.setLitAt = -1 / 0, this.wornTokens = wY.map((() => 0)), this.wornAt = wY.map((() => -1 / 0))
+      }
+      getSnapshot() {
+        return this.snapshot
+      }
+      Cy(YY) {
+        var rY, DY;
+        const FY = wY.map(((rY, DY) => !0 === YY.magmawardPiecesWorn[DY]));
+        if (!FY.includes(!0)) return this.snapshot = null, void this.vo(null);
+        const AY = this.now(),
+          IY = this.snapshot;
+        null === IY && (this.wornTokens.fill(0), this.wornAt.fill(-1 / 0), this.setLitAt = -1 / 0);
+        const RY = YY.magmawardFuelCarried,
+          OY = !FY.includes(!1);
+        let gY = null !== (rY = null === IY || void 0 === IY ? void 0 : IY.pulse) && void 0 !== rY ? rY : null,
+          aY = null !== (DY = null === IY || void 0 === IY ? void 0 : IY.flare) && void 0 !== DY ? DY : null;
+        YY.magmawardFuelBurned ? (gY = "burn", aY = "burn", this.pulseToken++, this.flareToken++, this.pulseAt = AY, this.flareAt = AY) : null !== IY && RY > IY.fuel && (gY = "gain", this.pulseToken++, this.pulseAt = AY), OY && null !== IY && !IY.fullSet && (aY = "fullSet", this.flareToken++, this.setLitToken++, this.flareAt = AY, this.setLitAt = AY);
+        const vY = wY.map(((YY, rY) => (FY[rY] && null !== IY && !IY.pieces[rY].worn && (this.wornTokens[rY]++, this.wornAt[rY] = AY), {
+          itemName: YY,
+          worn: FY[rY],
+          wornToken: this.wornTokens[rY],
+          justWorn: FY[rY] && this.isPlaying(this.wornAt[rY], AY)
+        })));
+        this.snapshot = {
+          pieces: vY,
+          wornCount: FY.filter(Boolean).length,
+          fullSet: OY,
+          fuel: RY,
+          fuelState: RY <= 0 ? "empty" : RY <= 3 ? "low" : "ok",
+          pulse: this.isPlaying(this.pulseAt, AY) ? gY : null,
+          pulseToken: this.pulseToken,
+          flare: this.isPlaying(this.flareAt, AY) ? aY : null,
+          flareToken: this.flareToken,
+          setLit: OY && this.isPlaying(this.setLitAt, AY),
+          setLitToken: this.setLitToken
+        }, this.vo(this.snapshot)
+      }
+      dispose() {
+        this.snapshot = null, this.vo(null)
+      }
+      isPlaying(YY, rY) {
+        return rY - YY < 1200
+      }
+    }
+    const dF = "skyblockGlowtideView";
+    class JF {
+      constructor(YY) {
+        this.vo = YY, this.bloom = null, this.snapshot = null, this.inRangeToken = 0, this.arrow = null, this.arrowTurn = NaN, this.mountArrow = YY => {
+          this.arrow = YY, this.arrowTurn = NaN
+        }
+      }
+      getSnapshot() {
+        return this.snapshot
+      }
+      Cy(YY) {
+        this.bloom = YY.glowtideBloom, null === this.bloom && null !== this.snapshot && (this.snapshot = null, this.vo(null))
+      }
+      afterRender(YY, rY) {
+        const DY = this.bloom;
+        if (null === DY || null === YY) return;
+        const FY = DY.glowtideBloomX - YY[0],
+          IY = DY.glowtideBloomZ - YY[2],
+          RY = Math.hypot(FY, IY),
+          OY = this.snapshot,
+          gY = null !== OY && void 0 !== OY && OY.inRange ? 1 : 0,
+          aY = RY <= 12.5 + gY && YY[1] - DY.glowtideBloomY <= 10 + gY;
+        !aY || null !== OY && void 0 !== OY && OY.inRange || this.inRangeToken++;
+        const vY = {
+          colour: DY.glowtideBloomColour,
+          inRange: aY,
+          distance: Math.round(RY),
+          inRangeToken: this.inRangeToken
+        };
+        (null === OY || vY.colour !== OY.colour || vY.inRange !== OY.inRange || !aY && vY.distance !== OY.distance) && (this.snapshot = vY, this.vo(vY));
+        const uY = AY.c.computeShortestRotation(rY, (0, AY.Bb)([FY, 0, IY]));
+        null === this.arrow || Math.abs(uY - this.arrowTurn) < .01 || (this.arrow.style.transform = `rotate(${uY}rad)`, this.arrowTurn = uY)
+      }
+      dispose() {
+        this.bloom = null, this.arrow = null, this.snapshot = null, this.vo(null)
+      }
+    }
+    const MF = "skyblockGlowMeterView";
+    class wF {
+      constructor(YY) {
+        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
+        this.vo = YY, this.now = rY, this.snapshot = null, this.fullToken = 0, this.fullAt = -1 / 0, this.burstToken = 0, this.burstAt = -1 / 0, this.gainToken = 0, this.gainAt = -1 / 0
+      }
+      getSnapshot() {
+        return this.snapshot
+      }
+      Cy(YY) {
+        const rY = this.now(),
+          {
+            glowMeterFill: DY,
+            glowMeterCapacity: FY
+          } = YY,
+          AY = DY >= FY,
+          IY = this.snapshot;
+        null !== IY && (AY && !IY.full && (this.fullToken++, this.fullAt = rY), IY.full && !AY ? (this.burstToken++, this.burstAt = rY) : DY > IY.fill && (this.gainToken++, this.gainAt = rY)), this.snapshot = {
+          fill: DY,
+          gu: FY,
+          ratio: Math.min(1, Math.max(0, DY / FY)),
+          full: AY,
+          rares: YY.glowMeterRares,
+          ready: AY && this.isPlaying(this.fullAt, rY),
+          fullToken: this.fullToken,
+          burst: this.isPlaying(this.burstAt, rY),
+          burstToken: this.burstToken,
+          gained: this.isPlaying(this.gainAt, rY),
+          gainToken: this.gainToken
+        }, this.vo(this.snapshot)
+      }
+      dispose() {
+        this.snapshot = null, this.vo(null)
+      }
+      isPlaying(YY, rY) {
+        return rY - YY < 2e3
+      }
+    }
+    const bF = "skyblockHushWaitView";
+    class XF {
+      constructor(YY) {
+        this.vo = YY, this.snapshot = null, this.token = 0, this.timers = []
+      }
+      getSnapshot() {
+        return this.snapshot
+      }
+      Cy(YY) {
+        let {
+          hushWaitMs: rY,
+          hushWaitTotalMs: DY,
+          hushWaitLines: FY
+        } = YY;
+        if (this.clearTimers(), this.token++, 0 === FY.length) return console.warn("Skyblock: a Hush wait message came without a line"), void this.show(null);
+        if (rY <= 0) return this.show({
+          token: this.token,
+          phase: "abandoned",
+          waitMs: 3500,
+          elapsedMs: 0,
+          line: FY[0],
+          lineIndex: 0
+        }), void this.later(3500, (() => {
+          this.show(null)
+        }));
+        const AY = Math.max(null !== DY && void 0 !== DY ? DY : rY, rY),
+          IY = AY - rY,
+          RY = YY => AY * YY / FY.length,
+          OY = YY => {
+            this.show({
+              token: this.token,
+              phase: "waiting",
+              waitMs: AY,
+              elapsedMs: IY,
+              line: FY[YY],
+              lineIndex: YY
+            })
+          };
+        let gY = 0;
+        for (; gY + 1 < FY.length && RY(gY + 1) <= IY;) gY++;
+        OY(gY);
+        for (let aY = gY + 1; aY < FY.length; aY++) this.later(RY(aY) - IY, (() => {
+          OY(aY)
+        }));
+        this.later(rY, (() => {
+          this.show(null)
+        }))
+      }
+      dispose() {
+        this.clearTimers(), this.show(null)
+      }
+      show(YY) {
+        this.snapshot = YY, this.vo(YY)
+      }
+      later(YY, rY) {
+        this.timers.push(setTimeout(rY, YY))
+      }
+      clearTimers() {
+        for (const YY of this.timers) clearTimeout(YY);
+        this.timers = []
+      }
+    }
+    const qF = "skyblockTideChartsView",
+      pF = 36e5,
+      kF = 864e5;
+
+    function GF(YY, rY, DY) {
+      const [FY, AY, IY, RY] = YY.tideChartArea, OY = Math.floor(rY), gY = Math.floor(DY);
+      return OY >= FY && OY <= IY && gY >= AY && gY <= RY
+    }
+
+    function xF(YY, rY, DY) {
+      const [FY, AY, IY, RY] = YY.tideChartWater;
+      return function(YY, rY, DY, FY, AY, IY) {
+        const RY = 4 - bY(Math.floor(AY) - (YY - DY), DY);
+        return 5 * bY(Math.floor(IY) - (rY - FY), FY) + RY
+      }(FY, AY, IY, RY, rY, DY)
+    }
+
+    function nF(YY, rY, DY) {
+      const FY = YY.tideCharts;
+      for (let AY = 0; AY < FY.length; AY++)
+        if (GF(FY[AY], rY, DY)) return FY[AY];
+      return null
+    }
+
+    function PF(YY, rY, DY) {
+      const FY = Math.max(0, rY - DY);
+      return FY > kF ? YY("skyblockGame:tideChartsTurnDays", {
+        days: String(Math.ceil(FY / kF))
+      }) : FY > pF ? YY("skyblockGame:tideChartsTurnHours", {
+        hours: String(Math.ceil(FY / pF))
+      }) : YY("skyblockGame:tideChartsTurnSoon")
+    }
+    class UF extends uY {
+      constructor(YY, rY, DY, FY) {
+        let AY = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Date.now;
+        super(YY, DY, FY), this.translate = rY, this.now = AY, this.snapshot = void 0, this.message = null, this.receivedAtMs = 0, this.hereIsland = null, this.hereCell = -1, this.lastX = Number.NaN, this.lastZ = Number.NaN, this.picked = null, this.lastIsland = null, this.pulse = {
+          island: "",
+          cells: 0,
+          token: 0,
+          atMs: 0
+        }, this.cast = null, this.castToken = 0, this.turnsCheckedAtMs = 0, this.toggle = () => {
+          this.open ? this.dismiss() : (this.picked = null, this.show())
+        }, this.Ps = YY => {
+          this.picked = YY, this.emit()
+        }, this.snapshot = this.buildSnapshot()
+      }
+      Cy(YY) {
+        const rY = this.message;
+        if (null !== rY)
+          for (const FY of YY.tideCharts) {
+            var DY;
+            const YY = rY.tideCharts.find((YY => YY.tideChartIsland === FY.tideChartIsland)),
+              AY = FY.tideChartLit & ~(null !== (DY = null === YY || void 0 === YY ? void 0 : YY.tideChartLit) && void 0 !== DY ? DY : 0);
+            void 0 !== YY && 0 !== AY && (this.pulse = {
+              island: FY.tideChartIsland,
+              cells: AY,
+              token: this.pulse.token + 1,
+              atMs: this.now()
+            })
+          }
+        this.message = YY, this.receivedAtMs = this.now(), this.locate(this.lastX, this.lastZ), this.emit()
+      }
+      locate(YY, rY) {
+        var DY;
+        const FY = null === this.message || Number.isNaN(YY) ? null : nF(this.message, YY, rY),
+          AY = null !== (DY = null === FY || void 0 === FY ? void 0 : FY.tideChartIsland) && void 0 !== DY ? DY : null,
+          IY = null === FY ? -1 : function(YY, rY, DY) {
+            const [FY, AY, IY, RY] = YY.tideChartWater;
+            return function(YY, rY, DY, FY, AY, IY, RY) {
+              return ((AY - YY) / (DY + RY)) ** 2 + ((IY - rY) / (FY + RY)) ** 2 <= 1
+            }(FY, AY, IY, RY, rY, DY, 2) ? xF(YY, rY, DY) : -1
+          }(FY, YY, rY);
+        return (AY !== this.hereIsland || IY !== this.hereCell) && (this.hereIsland = AY, this.hereCell = IY, null !== AY && (this.lastIsland = AY), !0)
+      }
+      afterRender(YY) {
+        if (null === this.message) return;
+        this.lastX = null === YY ? Number.NaN : YY[0], this.lastZ = null === YY ? Number.NaN : YY[2];
+        const rY = this.locate(this.lastX, this.lastZ),
+          DY = this.expirePulses();
+        (rY || DY || this.turnsChanged()) && this.emit()
+      }
+      turnsChanged() {
+        const YY = this.now();
+        return !(!this.open || YY - this.turnsCheckedAtMs < 3e4 || null === this.message) && (this.turnsCheckedAtMs = YY, PF(this.translate, this.message.tideChartTurnsInMs, YY - this.receivedAtMs) !== this.snapshot.turnsText)
+      }
+      castLanded(YY, rY) {
+        const DY = null === this.message ? null : nF(this.message, YY, rY);
+        if (null === DY) return;
+        const FY = xF(DY, YY, rY);
+        0 === (DY.tideChartPreBlank & 1 << FY) && (this.cast = {
+          island: DY.tideChartIsland,
+          cell: FY,
+          token: ++this.castToken,
+          atMs: this.now()
+        }, this.emit())
+      }
+      expirePulses() {
+        const YY = this.now();
+        let rY = !1;
+        return 0 !== this.pulse.cells && YY - this.pulse.atMs >= 1500 && (this.pulse = {
+          ...this.pulse,
+          cells: 0
+        }, rY = !0), null !== this.cast && YY - this.cast.atMs >= 1500 && (this.cast = null, rY = !0), rY
+      }
+      setTranslator(YY) {
+        this.translate = YY, this.emit()
+      }
+      isEnabled() {
+        return null !== this.message && this.message.tideCharts.length > 0
+      }
+      onClosed() {
+        this.picked = null
+      }
+      findChart(YY, rY) {
+        var DY;
+        return null !== (DY = YY.tideCharts.find((YY => YY.tideChartIsland === rY))) && void 0 !== DY ? DY : null
+      }
+      describe(YY) {
+        var rY, DY, FY;
+        const AY = YY.tideChartIsland,
+          IY = [];
+        for (let iY = 0; iY < 25; iY++) {
+          const rY = 1 << iY;
+          0 !== (YY.tideChartLit & rY) ? IY.push("lit") : 0 !== (YY.tideChartClear & rY) ? IY.push("clear") : 0 !== (YY.tideChartPreBlank & rY) ? IY.push("shore") : IY.push("water")
+        }
+        const RY = function(YY) {
+            let rY = 0;
+            for (let DY = YY >>> 0; 0 !== DY; DY &= DY - 1) rY++;
+            return rY
+          }(YY.tideChartLit),
+          OY = YY.tideChartInkCount,
+          gY = this.translate(YY.tideChartIslandNameKey),
+          aY = this.translate("skyblockGame:tideChartsLit", {
+            lit: String(RY),
+            ink: String(OY)
+          }),
+          vY = null === YY.tideChartPictureNameKey ? null : this.translate(YY.tideChartPictureNameKey),
+          uY = this.hereIsland === AY && -1 !== this.hereCell ? this.hereCell : null,
+          sY = [`${gY}: ${aY}.`];
+        if (null !== vY && sY.push(this.translate("skyblockGame:tideChartsPictureRevealed", {
+            picture: vY
+          })), null !== uY) {
+          const YY = Math.floor(uY / 5) + 1,
+            rY = uY % 5 + 1;
+          sY.push(this.translate("skyblockGame:tideChartsHereCell", {
+            row: String(YY),
+            column: String(rY)
+          }))
+        }
+        return {
+          island: AY,
+          islandName: gY,
+          cells: IY,
+          hereCell: uY,
+          lit: RY,
+          ink: OY,
+          litText: aY,
+          pictureName: vY,
+          gridLabel: sY.join(" "),
+          pulseCells: this.pulse.island === AY ? this.pulse.cells : 0,
+          pulseToken: this.pulse.token,
+          castCell: (null === (rY = this.cast) || void 0 === rY ? void 0 : rY.island) === AY ? this.cast.cell : null,
+          castToken: null !== (DY = null === (FY = this.cast) || void 0 === FY ? void 0 : FY.token) && void 0 !== DY ? DY : 0
+        }
+      }
+      buildSnapshot() {
+        var YY, rY, DY;
+        const FY = this.message;
+        if (null === FY || 0 === FY.tideCharts.length) return {
+          enabled: !1,
+          open: !1,
+          chip: null,
+          card: null,
+          turnsText: "",
+          bookText: "",
+          tabs: []
+        };
+        const AY = this.findChart(FY, this.hereIsland),
+          IY = null !== (YY = null !== (rY = null !== (DY = this.findChart(FY, this.open ? this.picked : null)) && void 0 !== DY ? DY : AY) && void 0 !== rY ? rY : this.findChart(FY, this.lastIsland)) && void 0 !== YY ? YY : FY.tideCharts[0],
+          RY = null === AY ? null : this.describe(AY);
+        return this.turnsCheckedAtMs = this.now(), {
+          enabled: !0,
+          open: this.open,
+          chip: RY,
+          card: IY === AY ? RY : this.describe(IY),
+          turnsText: PF(this.translate, FY.tideChartTurnsInMs, this.now() - this.receivedAtMs),
+          bookText: this.translate("skyblockGame:tideChartsBook", {
+            count: String(FY.tideChartBookCount)
+          }),
+          tabs: FY.tideCharts.map((YY => ({
+            island: YY.tideChartIsland,
+            name: this.translate(YY.tideChartIslandNameKey),
+            selected: YY.tideChartIsland === IY.tideChartIsland
+          })))
+        }
+      }
+      dispose() {
+        this.message = null, this.hereIsland = null, this.hereCell = -1, this.cast = null, super.dispose()
+      }
+    }
+    const LF = "skyblockRegularsView",
+      tF = {
+        goal: "skyblockGame:regularsGiftTint",
+        given: "skyblockGame:regularsGiftTint",
+        owed: "skyblockGame:regularsGiftTintOwed"
+      },
+      YA = {
+        goal: "skyblockGame:regularsCharmGoal",
+        given: "skyblockGame:regularsCharmGiven",
+        owed: "skyblockGame:regularsCharmOwed"
+      };
+
+    function rA(YY, rY) {
+      return "given" === YY ? rY.given : "owed" === YY ? rY.owed : rY.goal
+    }
+    class DA extends uY {
+      constructor(YY, rY, DY, FY) {
+        super(YY, DY, FY), this.translate = rY, this.snapshot = void 0, this.message = null, this.selected = "", this.openedFromReachLog = !1, this.itemName = YY => YY, this.openIsland = YY => {
+          this.selected = YY, this.openedFromReachLog = !0, this.show()
+        }, this.selectIsland = YY => {
+          this.selected = YY, this.emit()
+        }, this.snapshot = this.buildSnapshot()
+      }
+      Cy(YY) {
+        this.message = YY, this.emit()
+      }
+      isOverReachLog() {
+        return this.open && this.openedFromReachLog
+      }
+      takeReturnToReachLog() {
+        const YY = this.openedFromReachLog;
+        return this.openedFromReachLog = !1, YY
+      }
+      setTranslator(YY, rY, DY) {
+        this.translate = YY, void 0 !== DY && (this.itemName = DY), this.emit()
+      }
+      isEnabled() {
+        return null !== this.message
+      }
+      describeGift(YY, rY, DY) {
+        return {
+          text: this.translate(rA(YY, rY), DY),
+          given: "given" === YY
+        }
+      }
+      describeRegular(YY, rY) {
+        const DY = this.translate,
+          FY = null !== YY.regularKg,
+          AY = YY.regularMeetings,
+          IY = FY ? 0 === AY ? DY("skyblockGame:regularsNotMet") : 1 === AY ? DY("skyblockGame:regularsMeetingsOne") : DY("skyblockGame:regularsMeetings", {
+            count: AY
+          }) : "";
+        return {
+          id: YY.regularId,
+          name: DY(YY.regularNameKey),
+          line: DY(YY.regularLineKey),
+          itemName: YY.regularFishItem,
+          fishName: this.itemName(YY.regularFishItem),
+          tagged: FY,
+          size: null === YY.regularKg ? DY("skyblockGame:regularsNotTagged") : DY("skyblockGame:regularsSize", {
+            kg: YY.regularKg.toFixed(1)
+          }),
+          meetings: IY,
+          chance: DY("skyblockGame:regularsChance", {
+            count: YY.regularOneInCasts
+          }),
+          resting: YY.regularRestingToday,
+          gifts: [{
+            text: DY("skyblockGame:regularsGiftFlare"),
+            given: AY >= 3
+          }, this.describeGift(YY.regularTintGift, tF, {
+            tint: DY(YY.regularTintNameKey)
+          })],
+          history: [...YY.regularHistory].reverse().map((YY => {
+            const FY = YY.regularMeetingKg.toFixed(1),
+              AY = rY - YY.regularMeetingDay;
+            return AY <= 0 ? DY("skyblockGame:regularsToday", {
+              kg: FY
+            }) : DY("skyblockGame:regularsDaysAgo", {
+              days: AY,
+              kg: FY
+            })
+          }))
+        }
+      }
+      describeIsland(YY, rY) {
+        return {
+          id: YY.regularsIslandId,
+          name: this.translate(YY.regularsIslandNameKey),
+          charm: this.describeGift(YY.regularsCharmGift, YA, {
+            charm: this.translate(YY.regularsCharmNameKey)
+          }),
+          regulars: YY.regularsList.map((YY => this.describeRegular(YY, rY)))
+        }
+      }
+      buildSnapshot() {
+        var YY, rY, DY, FY;
+        const AY = this.message;
+        if (null === AY) return {
+          enabled: !1,
+          open: !1,
+          selected: "",
+          islands: []
+        };
+        const IY = AY.regularsIslands.map((YY => this.describeIsland(YY, AY.regularsToday))),
+          RY = null !== (YY = null !== (rY = null === (DY = IY.find((YY => YY.id === this.selected))) || void 0 === DY ? void 0 : DY.id) && void 0 !== rY ? rY : null === (FY = IY[0]) || void 0 === FY ? void 0 : FY.id) && void 0 !== YY ? YY : "";
+        return {
+          enabled: !0,
+          open: this.open,
+          selected: RY,
+          islands: IY
+        }
+      }
+      dispose() {
+        this.message = null, super.dispose()
+      }
+    }
+    const FA = "skyblockHiddenWatersView";
+    class AA {
+      constructor(YY) {
+        this.vo = YY, this.snapshot = null
+      }
+      getSnapshot() {
+        return this.snapshot
+      }
+      Cy(YY) {
+        this.snapshot = function(YY) {
+          const [rY, DY] = YY.hiddenWatersMapSize, FY = (YY, FY) => ({
+            left: 1 - YY / rY,
+            top: FY / DY
+          }), AY = new Map;
+          for (const [RY, OY] of YY.hiddenWatersGlimpses) {
+            var IY;
+            const YY = null !== (IY = AY.get(RY)) && void 0 !== IY ? IY : [];
+            YY.push(OY), AY.set(RY, YY)
+          }
+          return {
+            found: YY.hiddenWatersFound,
+            total: YY.hiddenWatersTotal,
+            aspect: DY / rY,
+            pins: YY.hiddenWatersPins.map((YY => {
+              let [rY, DY] = YY;
+              return FY(rY, DY)
+            })),
+            islands: YY.hiddenWatersIslands.map((YY => {
+              let [AY, IY, RY, OY] = YY;
+              const {
+                left: gY,
+                top: aY
+              } = FY(RY + 1, IY);
+              return {
+                left: gY,
+                top: aY,
+                width: (RY + 1 - AY) / rY,
+                height: (OY + 1 - IY) / DY
+              }
+            })),
+            glimpses: AY
+          }
+        }(YY), this.vo(this.snapshot)
+      }
+    }
+    const IA = "skyblockDialogueView";
+    class RA extends uY {
+      constructor(YY, rY, DY, FY, AY) {
+        let IY = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now;
+        super(YY, DY, FY), this.translate = rY, this.requestDialogue = AY, this.now = IY, this.snapshot = void 0, this.enabled = !1, this.scripts = [], this.speakers = new Map, this.received = !1, this.selection = {
+          kind: "character",
+          npcId: null
+        }, this.requestAvailableAt = 0, this.showCharacters = () => {
+          this.selection = {
+            kind: "character",
+            npcId: "character" === this.selection.kind ? this.selection.npcId : null
+          }, this.request(), this.show()
+        }, this.showQuest = YY => {
+          this.selection = {
+            kind: "quest",
+            questId: YY
+          }, this.request(), this.show()
+        }, this.selectCharacter = YY => {
+          this.selection = {
+            kind: "character",
+            npcId: YY
+          }, this.emit()
+        }, this.snapshot = this.buildSnapshot()
+      }
+      Cy(YY) {
+        this.received = !0, this.scripts = YY.questDialogueScripts, this.speakers = new Map(YY.questDialogueSpeakers.map((YY => [YY.dialogueSpeakerId, YY]))), this.emit()
+      }
+      setTranslator(YY) {
+        this.translate = YY, this.emit()
+      }
+      isEnabled() {
+        return this.enabled
+      }
+      request() {
+        const YY = this.now();
+        YY >= this.requestAvailableAt && (this.requestAvailableAt = YY + 3e3, this.requestDialogue())
+      }
+      buildSnapshot() {
+        var YY;
+        const rY = {
+          enabled: this.enabled,
+          open: this.open,
+          loading: !this.received,
+          completedLabel: this.translate("skyblockDialogue:completed")
+        };
+        if (!this.open) return {
+          ...rY,
+          characters: [],
+          questFocus: null,
+          conversations: []
+        };
+        const DY = this.selection;
+        if ("quest" === DY.kind) {
+          const YY = this.scripts.find((YY => YY.dialogueQuestId === DY.questId));
+          return {
+            ...rY,
+            characters: [],
+            questFocus: DY.questId,
+            conversations: YY ? [this.conversation(YY)] : []
+          }
+        }
+        const FY = [];
+        for (let IY = this.scripts.length - 1; IY >= 0; IY--) {
+          const YY = this.scripts[IY].dialogueLines;
+          for (let rY = YY.length - 1; rY >= 0; rY--) FY.includes(YY[rY].dialogueSpeakerId) || FY.push(YY[rY].dialogueSpeakerId)
+        }
+        const AY = null !== DY.npcId && FY.includes(DY.npcId) ? DY.npcId : null !== (YY = FY[0]) && void 0 !== YY ? YY : null;
+        return {
+          ...rY,
+          characters: FY.map((YY => {
+            var rY, DY;
+            return {
+              id: YY,
+              styling: null !== (rY = null === (DY = this.speakers.get(YY)) || void 0 === DY ? void 0 : DY.dialogueSpeakerStyling) && void 0 !== rY ? rY : YY,
+              selected: YY === AY
+            }
+          })),
+          questFocus: null,
+          conversations: this.scripts.filter((YY => YY.dialogueLines.some((YY => YY.dialogueSpeakerId === AY)))).map((YY => this.conversation(YY))).reverse()
+        }
+      }
+      conversation(YY) {
+        let rY = null;
+        return {
+          questId: YY.dialogueQuestId,
+          questName: this.translate(YY.dialogueQuestNameKey),
+          completed: YY.dialogueQuestCompleted,
+          lines: YY.dialogueLines.map(((YY, DY) => {
+            var FY;
+            const AY = YY.dialogueSpeakerId === rY || null === (FY = this.speakers.get(YY.dialogueSpeakerId)) || void 0 === FY ? void 0 : FY.dialogueSpeakerStyling;
+            return rY = YY.dialogueSpeakerId, {
+              key: DY,
+              display: {
+                line: {
+                  translationKey: YY.dialogueLineKey,
+                  params: this.params(YY.dialogueLineParams)
+                },
+                speakerName: AY,
+                animateIn: !1
+              }
+            }
+          }))
+        }
+      }
+      params(YY) {
+        if (void 0 !== YY) return Object.fromEntries(Object.entries(YY).map((YY => {
+          let [rY, DY] = YY;
+          return [rY, "string" === typeof DY ? DY : this.translate(DY.translationKey)]
+        })))
+      }
+    }
+    var OA = DY(605),
+      gA = DY(1270),
+      aA = DY(99);
+    const vA = "skyblockAutographsView";
+
+    function uA(YY) {
+      const rY = OA.m[YY];
+      return {
+        label: rY.chatTag.map((YY => YY.str)).join(""),
+        icon: rY.icon,
+        colour: rY.mainRGB
+      }
+    }
+    class sA extends uY {
+      constructor(YY) {
+        let rY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "en-GB";
+        super(YY, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => {}, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {}), this.locale = rY, this.signatures = null, this.snapshot = {
+          enabled: !1,
+          open: !1,
+          entries: [],
+          total: 0,
+          rankTotal: 0
+        }
+      }
+      Cy(YY) {
+        this.signatures = YY.autographSignatures, YY.autographOpen ? this.show() : this.emit()
+      }
+      setTranslator(YY) {
+        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.locale;
+        this.locale = rY, this.emit()
+      }
+      dispose() {
+        this.signatures = null, super.dispose()
+      }
+      isEnabled() {
+        return null !== this.signatures
+      }
+      buildSnapshot() {
+        var YY;
+        const rY = null !== (YY = this.signatures) && void 0 !== YY ? YY : [],
+          DY = new Intl.DateTimeFormat(this.locale, {
+            dateStyle: "medium"
+          }),
+          FY = [...rY].sort(((YY, rY) => Number(null !== rY.autographRank) - Number(null !== YY.autographRank) || rY.autographSignedAtMs - YY.autographSignedAtMs)).map((YY => ({
+            key: `${YY.autographSignedAtMs}|${YY.autographSignerName}`,
+            name: (0, gA.d)(YY.autographSignerName, !aA.featureFlags.canSeeRealPlayerNames),
+            rank: null === YY.autographRank ? null : uA(YY.autographRank),
+            signedOn: DY.format(YY.autographSignedAtMs)
+          })));
+        return {
+          enabled: this.isEnabled(),
+          open: this.open,
+          entries: FY,
+          total: FY.length,
+          rankTotal: FY.filter((YY => null !== YY.rank)).length
+        }
+      }
+    }
+    const iA = "skyblockHudView",
+      yA = () => {},
+      QA = {
+        getItem: () => null,
+        setItem: yA,
+        removeItem: yA
+      };
+    class oA {
+      constructor(YY) {
+        let {
+          translate: rY,
+          translateWithIcons: DY,
+          setMenuOpen: FY = yA,
+          dismissMenu: AY = () => {
+            FY(!1)
+          },
+          publishSkills: IY = yA,
+          publishQuests: RY = yA,
+          publishQuestNotification: OY = yA,
+          publishDungeons: gY = yA,
+          publishCollections: aY = yA,
+          publishMap: vY = yA,
+          publishHud: uY = yA,
+          publishPortalTransit: sY = yA,
+          publishDailyReward: yY = yA,
+          publishMailbox: QY = yA,
+          publishQuestGraph: oY = yA,
+          publishForge: WY = yA,
+          publishSmuggler: EY = yA,
+          publishKeepersChair: mY = yA,
+          publishReachLog: VY = yA,
+          publishLampLight: SY = yA,
+          publishMagmaward: lY = yA,
+          publishGlowtide: eY = yA,
+          publishGlowMeter: NY = yA,
+          publishHushWait: BY = yA,
+          publishPassage: cY = yA,
+          publishTideCharts: KY = yA,
+          publishRegulars: HY = yA,
+          publishHiddenWaters: zY = yA,
+          publishDialogue: ZY = yA,
+          publishAutographs: CY = yA,
+          isLoadingScreenUp: fY = () => !1,
+          onDailyRewardCoinLanded: jY = yA,
+          onDailyRewardStarted: hY = yA,
+          onDailyRewardFinished: dY = yA,
+          onDailyRewardItemLanded: JY = yA,
+          onMailboxStarted: MY = yA,
+          journeyStorage: wY = QA,
+          requestTracking: bY = yA,
+          requestTravel: XY = yA,
+          requestDungeonEnter: qY = yA,
+          requestQuestJump: pY = yA,
+          requestQuestArrive: kY = yA,
+          requestForge: GY = yA,
+          requestSmuggle: xY = yA,
+          requestKeepersChairAim: nY = yA,
+          requestReachLogOpen: PY = yA,
+          requestLampLight: UY = yA,
+          requestDialogue: LY = yA
+        } = YY;
+        this.navigation = void 0, this.map = void 0, this.compass = new TY, this.skills = void 0, this.quests = void 0, this.dungeons = void 0, this.collections = void 0, this.questGraph = void 0, this.forge = void 0, this.smuggler = void 0, this.keepersChair = void 0, this.reachLog = void 0, this.lampLight = void 0, this.commandPacer = new TF.e, this.passage = void 0, this.tideCharts = void 0, this.regulars = void 0, this.hiddenWaters = void 0, this.autographs = void 0, this.portalTransit = void 0, this.dailyReward = void 0, this.mailbox = void 0, this.magmaward = void 0, this.glowtide = void 0, this.glowMeter = void 0, this.hushWait = void 0, this.dialogue = void 0, this.panels = void 0, this.setMenuOpen = void 0, this.hudSnapshot = null, this.openingPanel = null, this.publishHud = void 0, this.resolveItemName = YY => YY, this.close = () => {
+          for (const YY of this.panels) YY.close()
+        }, this.setMenuOpen = FY, this.publishHud = uY, this.portalTransit = new dD(sY, wY), this.magmaward = new hF(lY), this.glowtide = new JF(eY), this.glowMeter = new wF(NY), this.hushWait = new XF(BY), this.dailyReward = new wD(yY, (() => fY() || null !== this.portalTransit.getSnapshot() || null !== this.quests.getNotificationSnapshot() || null !== this.mailbox.getSnapshot()), (YY => {
+          this.quests.setNotificationsHeld(YY)
+        }), (() => {
+          null !== this.hudSnapshot && this.publishHud(this.getHudSnapshot())
+        }), jY, hY, dY, JY);
+        const tY = YY => {
+          this.panels.some((YY => YY.isOpen())) || (YY ? AY() : this.setMenuOpen(!1))
+        };
+        this.skills = new AD(IY, Date.now, (() => {
+          this.beforePanelOpen(this.skills)
+        }), rY, void 0, void 0, tY), this.quests = new aD(RY, bY, rY, (() => {
+          this.beforePanelOpen(this.quests)
+        }), void 0, void 0, tY, OY), this.dungeons = new sD(gY, rY, (() => {
+          this.beforePanelOpen(this.dungeons)
+        }), void 0, tY, qY), this.collections = new fD(aY, rY, (() => {
+          this.beforePanelOpen(this.collections)
+        }), tY), this.map = new iY(vY, XY, rY, (() => {
+          this.beforePanelOpen(this.map)
+        }), tY), this.questGraph = new PD(oY, rY, (() => {
+          this.beforePanelOpen(this.questGraph)
+        }), tY, pY, kY, wY), this.forge = new yF(WY, rY, (() => {
+          this.beforePanelOpen(this.forge)
+        }), tY, GY), this.smuggler = new WF(EY, rY, (() => {
+          this.beforePanelOpen(this.smuggler)
+        }), tY, xY), this.lampLight = new fF(SY, rY, UY, this.commandPacer), this.keepersChair = new NF(mY, rY, (() => {
+          this.beforePanelOpen(this.keepersChair)
+        }), (YY => {
+          this.lampLight.onChairClosed(), tY(YY)
+        }), nY, Date.now, this.commandPacer), this.reachLog = new ZF(VY, rY, (() => {
+          this.beforePanelOpen(this.reachLog)
+        }), tY, PY, this.commandPacer), this.passage = new lF(cY, rY, (() => {
+          this.beforePanelOpen(this.passage)
+        }), tY), this.tideCharts = new UF(KY, rY, (() => {
+          this.beforePanelOpen(this.tideCharts)
+        }), tY), this.regulars = new DA(HY, rY, (() => {
+          this.beforePanelOpen(this.regulars)
+        }), (YY => {
+          this.regulars.takeReturnToReachLog() && !YY && null === this.openingPanel && this.reachLog.isOpen() && this.reachLog.close(), tY(YY)
+        })), this.hiddenWaters = new AA(zY), this.dialogue = new RA(ZY, rY, (() => {
+          this.beforePanelOpen(this.dialogue)
+        }), tY, LY), this.autographs = new sA(CY, (() => {
+          this.beforePanelOpen(this.autographs)
+        }), tY), this.mailbox = new pD(QY, (() => fY() || null !== this.portalTransit.getSnapshot() || null !== this.dailyReward.getSnapshot()), MY), this.quests.translateWithIcons = null !== DY && void 0 !== DY ? DY : null, this.skills.onLevelUp = YY => {
+          this.quests.notify(YY)
+        }, this.panels = [this.map, this.skills, this.quests, this.dungeons, this.collections, this.questGraph, this.forge, this.smuggler, this.keepersChair, this.reachLog, this.passage, this.tideCharts, this.regulars, this.dialogue, this.autographs], this.navigation = new DD(this.map, this.quests, this.compass, rY)
+      }
+      getHudSnapshot() {
+        const YY = this.hudSnapshot,
+          rY = this.dailyReward.getHeldCoins();
+        return null === YY || rY <= 0 || !("hudPurseCoins" in YY) ? YY : {
+          ...YY,
+          hudPurseCoins: Math.max(0, YY.hudPurseCoins - rY)
+        }
+      }
+      receiveHud(YY) {
+        this.hudSnapshot = YY, this.publishHud(this.getHudSnapshot())
+      }
+      beforePanelOpen(YY) {
+        this.setMenuOpen(!0);
+        const rY = YY === this.regulars && this.regulars.isOverReachLog();
+        this.openingPanel = YY;
+        for (const DY of this.panels) DY === YY || rY && DY === this.reachLog || DY.close();
+        this.openingPanel = null
+      }
+      setTranslator(YY, rY, DY) {
+        let FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : rY => this.resolveItemName(rY, YY);
+        this.quests.translateWithIcons = null !== DY && void 0 !== DY ? DY : null, this.navigation.setTranslator(YY, rY), this.lampLight.setTranslator(YY, rY), this.mailbox.setItemName(FY);
+        for (const AY of this.panels) AY.setTranslator(YY, rY, FY)
+      }
+      dispose() {
+        this.navigation.dispose(), this.compass.dispose(), this.portalTransit.dispose(), this.dailyReward.dispose(), this.mailbox.dispose(), this.magmaward.dispose(), this.glowtide.dispose(), this.glowMeter.dispose(), this.hushWait.dispose(), this.lampLight.dispose(), this.commandPacer.dispose();
+        for (const YY of this.panels) YY.dispose()
+      }
+    }
+    var WA = DY(1092),
+      EA = DY.n(WA),
+      mA = DY(19),
+      VA = DY(36025),
+      SA = DY(2971),
+      lA = DY(1793),
+      TA = DY(1778),
+      eA = DY(8774),
+      NA = DY(1211),
+      BA = DY(1430),
+      cA = DY(1125);
+
+    function KA(YY) {
+      let {
+        controller: rY,
+        minimap: DY,
+        children: FY
+      } = YY;
+      const IY = (0, BA.k)(iA, rY.getHudSnapshot()),
+        [RY, OY] = (0, NY.useState)(rY.skills.getSnapshot().overallLevel);
+      (0, BA.g)(FD, (YY => {
+        OY(YY.overallLevel)
+      }));
+      const gY = (0, NY.useRef)(null);
+      (0, BA.g)(MD, (YY => {
+        ! function(YY, rY) {
+          if (null === YY || "function" !== typeof YY.animate) return;
+          const DY = rY ? 1.35 : 1.15;
+          YY.animate([{
+            transform: "scale(1)"
+          }, {
+            transform: `scale(${DY})`
+          }, {
+            transform: "scale(1)"
+          }], {
+            duration: rY ? 320 : 160,
+            easing: "ease-out"
+          }), YY.classList.toggle("Receiving", !rY), rY && (YY.classList.remove("Shine"), YY.offsetWidth, YY.classList.add("Shine"))
+        }(gY.current, YY)
+      }));
+      const {
+        t: aY
+      } = (0, NA.C)(), {
+        isTouchScreen: vY
+      } = (0, mA.j)(["isTouchScreen"]), [uY, sY] = (0, NY.useState)(null);
+      return (0, SA.l)(uY, ".SkyblockRightHud"), null !== IY || DY ? (0, cA.jsx)(VA.e, {
+        placement: "topRight",
+        children: (0, cA.jsxs)("div", {
+          className: EA()("SkyblockRightHud", {
+            TouchScreen: vY
+          }),
+          children: [DY, null !== IY && (0, cA.jsxs)("div", {
+            ref: sY,
+            className: "SkyblockRightHudCard",
+            children: ["hudHelpText" in IY ? (0, cA.jsx)("div", {
+              className: "SkyblockHudHelp",
+              children: IY.hudHelpText
+            }) : (0, cA.jsxs)(cA.Fragment, {
+              children: [(0, cA.jsxs)("div", {
+                className: "SkyblockHudStatus",
+                children: [(0, cA.jsxs)("span", {
+                  className: "SkyblockHudIdentity",
+                  children: [(0, cA.jsx)("strong", {
+                    style: {
+                      color: AY.K.cyanUiText
+                    },
+                    children: aY(IY.hudZoneNameKey)
+                  }), null !== RY && (0, cA.jsx)("span", {
+                    style: {
+                      color: AY.K.goldUiText
+                    },
+                    children: aY("skyblockGame:level", {
+                      level: (0, eA.g)(RY)
+                    })
+                  })]
+                }), (0, cA.jsxs)("span", {
+                  className: "SkyblockHudCoins",
+                  ref: gY,
+                  children: [(0, cA.jsx)("span", {
+                    "aria-hidden": "true",
+                    children: (0, cA.jsx)(lA.c, {
+                      itemName: "Gold Coin",
+                      amount: 0
+                    })
+                  }), (0, eA.g)(IY.hudPurseCoins)]
+                })]
+              }), IY.hudClockText.length > 0 && (0, cA.jsx)("div", {
+                className: "SkyblockHudClock",
+                children: (0, cA.jsx)(TA.b, {
+                  text: IY.hudClockText
+                })
+              })]
+            }), FY, "hudZoneNameKey" in IY && (0, cA.jsx)("div", {
+              className: "SkyblockHudAddress",
+              children: "www.bloxd.io"
+            })]
+          })]
+        })
+      }) : null
+    }
+
+    function HA(YY) {
+      let {
+        icon: rY
+      } = YY;
+      const DY = (0, NY.useCallback)((YY => {
+        null === YY || void 0 === YY || YY.replaceChildren(qr(rY))
+      }), [rY]);
+      return (0, cA.jsx)("span", {
+        className: "SkyblockMapIconSlot",
+        ref: DY
+      })
+    }
+
+    function zA(YY) {
+      let {
+        controller: rY
+      } = YY;
+      const {
+        t: DY
+      } = (0, NA.C)();
+      return (0, cA.jsx)("div", {
+        className: "SkyblockMapPlayer",
+        ref: rY.display.mountPlayer,
+        title: DY("skyblockGame:mapYouAreHere"),
+        children: (0, cA.jsx)(HA, {
+          icon: "player"
+        })
+      })
+    }
+    const ZA = DY(37929),
+      CA = Object.fromEntries(ZA.keys().map((YY => [YY.replace(/^\.\/(.*)\.png$/, "$1"), ZA(YY)])));
+
+    function fA(YY, rY) {
+      var DY;
+      return null !== (DY = CA[YY]) && void 0 !== DY ? DY : CA[rY]
+    }
+
+    function jA(YY) {
+      let {
+        imageKey: rY,
+        fallbackImageKey: DY,
+        geometryKey: FY,
+        alt: AY,
+        className: IY
+      } = YY;
+      const [RY, OY] = (0, NY.useState)((() => function(YY, rY) {
+        return [{
+          id: 0,
+          imageKey: YY,
+          geometryKey: rY,
+          phase: "shown"
+        }]
+      }(rY, FY))), gY = function(YY, rY, DY) {
+        const FY = YY[YY.length - 1];
+        if (FY.imageKey === rY && FY.geometryKey === DY) return YY;
+        const AY = {
+          id: FY.id + 1,
+          imageKey: rY,
+          geometryKey: DY,
+          phase: "entering"
+        };
+        return FY.geometryKey === DY ? [{
+          ...FY,
+          phase: "leaving"
+        }, AY] : [AY]
+      }(RY, rY, FY);
+      return gY !== RY && OY(gY), (0, cA.jsx)(cA.Fragment, {
+        children: gY.map((YY => (0, cA.jsx)("img", {
+          className: EA()("SkyblockMapTerrainImage", IY, {
+            Entering: "entering" === YY.phase,
+            Leaving: "leaving" === YY.phase
+          }),
+          src: fA(YY.imageKey, DY),
+          alt: "leaving" === YY.phase ? "" : AY,
+          onAnimationEnd: () => {
+            OY((rY => function(YY, rY) {
+              return YY.flatMap((YY => YY.id !== rY ? [YY] : "leaving" === YY.phase ? [] : [{
+                ...YY,
+                phase: "shown"
+              }]))
+            }(rY, YY.id)))
+          }
+        }, YY.id)))
+      })
+    }
+    var hA = DY(4086),
+      dA = DY(1437);
+
+    function JA(YY) {
+      if ("Tab" !== YY.key) return;
+      const rY = Array.from(YY.currentTarget.querySelectorAll('[role="button"][tabindex="0"], button:not(:disabled)')),
+        DY = rY.indexOf(document.activeElement);
+      var FY;
+      if (YY.shiftKey && DY <= 0) YY.preventDefault(), null === (FY = rY.at(-1)) || void 0 === FY || FY.focus();
+      else if (!YY.shiftKey && (-1 === DY || DY === rY.length - 1)) {
+        var AY;
+        YY.preventDefault(), null === (AY = rY[0]) || void 0 === AY || AY.focus()
+      }
+    }
+
+    function MA() {
+      const YY = (0, NY.useRef)(null);
+      return (0, NY.useCallback)((rY => {
+        var DY;
+        rY ? (YY.current = document.activeElement, rY.focus()) : null === (DY = YY.current) || void 0 === DY || DY.focus()
+      }), [])
+    }
+
+    function wA(YY) {
+      let {
+        percent: rY,
+        label: DY,
+        levelUpToken: FY,
+        colour: AY
+      } = YY;
+      return (0, cA.jsxs)("div", {
+        className: "SkillProgressBar",
+        role: "progressbar",
+        "aria-label": DY,
+        "aria-valuemin": 0,
+        "aria-valuemax": 100,
+        "aria-valuenow": rY,
+        "aria-valuetext": DY,
+        children: [(0, cA.jsx)("div", {
+          className: "SkillProgressBarFill",
+          style: {
+            transform: `scaleX(${rY/100})`
+          }
+        }), null !== FY && void 0 !== FY && (0, cA.jsx)("div", {
+          className: "SkillProgressBarLevelUp",
+          style: {
+            "--skill-colour": AY
+          }
+        }, FY)]
+      })
+    }
+
+    function bA(YY) {
+      let {
+        mount: rY
+      } = YY;
+      return (0, cA.jsx)("div", {
+        className: "SkyblockSearchArea",
+        ref: rY,
+        hidden: !0,
+        children: (0, cA.jsxs)("svg", {
+          viewBox: "0 0 100 100",
+          preserveAspectRatio: "none",
+          children: [(0, cA.jsx)("path", {
+            className: "SkyblockSearchAreaShadow"
+          }), (0, cA.jsx)("path", {
+            className: "SkyblockSearchAreaDashes"
+          })]
+        })
+      })
+    }
+
+    function XA(YY, rY, DY, FY) {
+      (0, NY.useLayoutEffect)((() => {
+        const AY = YY.current;
+        if (!DY || null === rY || void 0 === rY || !rY.local || !AY) return;
+        const IY = Array.from(AY.querySelectorAll(".SkyblockMapNode")),
+          RY = [...rY.points, ...rY.portals],
+          OY = () => {
+            const YY = AY.clientWidth,
+              DY = AY.clientHeight,
+              OY = IY.map(((AY, IY) => {
+                const OY = RY[IY];
+                return {
+                  id: OY.id,
+                  portal: IY >= rY.points.length,
+                  x: OY.position[0] * YY / 100,
+                  y: OY.position[1] * DY / 100,
+                  width: AY.offsetWidth / FY,
+                  height: AY.offsetHeight / FY
+                }
+              })),
+              gY = new Map(RY.map(((YY, rY) => [YY.id, IY[rY]])));
+            for (const rY of function(YY, rY, DY) {
+                const FY = [],
+                  AY = [...YY].sort(((YY, rY) => Number(rY.portal) - Number(YY.portal) || YY.id.localeCompare(rY.id)));
+                for (const IY of AY) {
+                  const YY = YY => Math.max(IY.width / 2, Math.min(rY - IY.width / 2, YY)),
+                    AY = YY => Math.max(IY.height / 2, Math.min(DY - IY.height / 2, YY)),
+                    RY = [YY(IY.x)],
+                    OY = [AY(IY.y)];
+                  for (const rY of FY) RY.push(YY(rY.x - (rY.width + IY.width) / 2 - 4), YY(rY.x + (rY.width + IY.width) / 2 + 4)), OY.push(AY(rY.y - (rY.height + IY.height) / 2 - 4), AY(rY.y + (rY.height + IY.height) / 2 + 4));
+                  let gY = {
+                      ...IY,
+                      x: RY[0],
+                      y: OY[0]
+                    },
+                    aY = 1 / 0,
+                    vY = 1 / 0;
+                  for (const rY of new Set(RY))
+                    for (const YY of new Set(OY)) {
+                      let DY = 0;
+                      for (const RY of FY) DY += Math.max(0, (IY.width + RY.width) / 2 + 4 - Math.abs(rY - RY.x)) * Math.max(0, (IY.height + RY.height) / 2 + 4 - Math.abs(YY - RY.y));
+                      const AY = (rY - IY.x) ** 2 + (YY - IY.y) ** 2;
+                      (DY < aY || DY === aY && AY < vY) && (gY = {
+                        ...IY,
+                        x: rY,
+                        y: YY
+                      }, aY = DY, vY = AY)
+                    }
+                  FY.push(gY)
+                }
+                return FY
+              }(OY, YY, DY)) {
+              const YY = gY.get(rY.id);
+              YY.style.left = `${rY.x}px`, YY.style.top = `${rY.y}px`
+            }
+          };
+        OY();
+        const gY = new ResizeObserver(OY);
+        gY.observe(AY);
+        for (const YY of IY) gY.observe(YY);
+        return () => {
+          gY.disconnect()
+        }
+      }), [YY, rY, DY, FY])
+    }
+    const qA = {
+        zoom: 1,
+        x: 0,
+        y: 0
+      },
+      pA = {
+        x0: 0,
+        y0: 0,
+        x1: 1,
+        y1: 1
+      };
+
+    function kA(YY, rY, DY) {
+      return Math.min(DY, Math.max(rY, YY))
+    }
+
+    function GA(YY, rY, DY) {
+      const FY = Math.min(1, DY * rY / YY),
+        AY = Math.min(1, YY / (DY * rY));
+      return {
+        x0: (1 - FY) / 2,
+        y0: (1 - AY) / 2,
+        x1: (1 + FY) / 2,
+        y1: (1 + AY) / 2
+      }
+    }
+
+    function xA(YY, rY, DY, FY) {
+      const AY = rY * (FY - DY);
+      if (AY <= 1) return .5 - rY * (DY + FY) / 2;
+      const IY = .45 * Math.min(1, AY - 1);
+      return kA(YY, 1 - rY * FY - IY, IY - rY * DY)
+    }
+
+    function nA(YY, rY) {
+      const DY = kA(YY.zoom, 1, 12);
+      return {
+        zoom: DY,
+        x: xA(YY.x, DY, rY.x0, rY.x1),
+        y: xA(YY.y, DY, rY.y0, rY.y1)
+      }
+    }
+
+    function PA(YY, rY, DY, FY) {
+      let AY = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : pA;
+      const IY = kA(YY.zoom * rY, 1, 12),
+        RY = IY / YY.zoom;
+      return nA({
+        zoom: IY,
+        x: DY - (DY - YY.x) * RY,
+        y: FY - (FY - YY.y) * RY
+      }, AY)
+    }
+
+    function UA(YY, rY, DY, FY) {
+      const [AY, IY] = (0, NY.useState)(qA);
+      (0, NY.useEffect)((() => {
+        IY(qA)
+      }), [DY]), (0, NY.useEffect)((() => {
+        const DY = YY.current;
+        if (!rY || !DY) return;
+        const AY = () => GA(DY.clientWidth, DY.clientHeight, FY),
+          RY = YY => {
+            const rY = DY.getBoundingClientRect();
+            return {
+              x: (YY.clientX - rY.left) / rY.width,
+              y: (YY.clientY - rY.top) / rY.height
+            }
+          },
+          OY = new Map;
+        let gY = {
+            x: 0,
+            y: 0
+          },
+          aY = !1,
+          vY = 0;
+        const uY = YY => {
+            YY.preventDefault();
+            const rY = YY.deltaMode === WheelEvent.DOM_DELTA_LINE ? 16 * YY.deltaY : YY.deltaY,
+              DY = RY(YY);
+            IY((YY => PA(YY, Math.exp(.0015 * -rY), DY.x, DY.y, AY())))
+          },
+          sY = YY => {
+            "mouse" === YY.pointerType && 0 !== YY.button || (OY.set(YY.pointerId, RY(YY)), 1 === OY.size && (gY = {
+              x: YY.clientX,
+              y: YY.clientY
+            }, aY = !1), vY = 0)
+          },
+          iY = YY => {
+            const rY = OY.get(YY.pointerId);
+            if (!rY) return;
+            const FY = RY(YY);
+            if (OY.set(YY.pointerId, FY), 2 === OY.size) {
+              const [YY, rY] = [...OY.values()], DY = Math.hypot(YY.x - rY.x, YY.y - rY.y);
+              if (vY > 0) {
+                const FY = DY / vY;
+                IY((DY => PA(DY, FY, (YY.x + rY.x) / 2, (YY.y + rY.y) / 2, AY())))
+              }
+              return vY = DY, void(aY = !0)
+            }!aY && Math.hypot(YY.clientX - gY.x, YY.clientY - gY.y) < 4 || (aY || (aY = !0, DY.setPointerCapture(YY.pointerId)), IY((YY => function(YY, rY, DY) {
+              let FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : pA;
+              return nA({
+                zoom: YY.zoom,
+                x: YY.x + rY,
+                y: YY.y + DY
+              }, FY)
+            }(YY, FY.x - rY.x, FY.y - rY.y, AY()))))
+          },
+          yY = YY => {
+            OY.delete(YY.pointerId), vY = 0
+          },
+          QY = YY => {
+            aY && (YY.stopPropagation(), YY.preventDefault(), aY = !1)
+          },
+          oY = new ResizeObserver((() => {
+            IY((YY => nA(YY, AY())))
+          }));
+        return oY.observe(DY), DY.addEventListener("wheel", uY, {
+          passive: !1
+        }), DY.addEventListener("pointerdown", sY), DY.addEventListener("pointermove", iY), DY.addEventListener("pointerup", yY), DY.addEventListener("pointercancel", yY), DY.addEventListener("click", QY, !0), () => {
+          oY.disconnect(), DY.removeEventListener("wheel", uY), DY.removeEventListener("pointerdown", sY), DY.removeEventListener("pointermove", iY), DY.removeEventListener("pointerup", yY), DY.removeEventListener("pointercancel", yY), DY.removeEventListener("click", QY, !0)
+        }
+      }), [YY, rY, DY, FY]);
+      return {
+        view: AY,
+        zoomBy: rY => {
+          const DY = YY.current;
+          DY && IY((YY => PA(YY, rY, .5, .5, GA(DY.clientWidth, DY.clientHeight, FY))))
+        }
+      }
+    }
+
+    function LA(YY) {
+      var rY, DY, FY, AY;
+      let {
+        controller: IY,
+        navigation: RY
+      } = YY;
+      const OY = (0, BA.k)(sY, IY.getSnapshot()),
+        {
+          t: gY
+        } = (0, NA.C)(),
+        aY = MA(),
+        vY = OY.presentation,
+        uY = (0, NY.useRef)(null),
+        iY = (0, NY.useRef)(null),
+        yY = Boolean(OY.open && (null === vY || void 0 === vY ? void 0 : vY.local) && vY.background),
+        QY = UA(uY, yY, `${OY.open}|${OY.tab}|${null===vY||void 0===vY||null===(rY=vY.background)||void 0===rY?void 0:rY.geometryKey}`, null !== (DY = null === vY || void 0 === vY || null === (FY = vY.background) || void 0 === FY ? void 0 : FY.ratio) && void 0 !== DY ? DY : 2);
+      if (XA(iY, vY, OY.open, QY.view.zoom), !vY || !OY.open) return null;
+      const oY = vY.local ? vY.background : null,
+        WY = {
+          "--map-ratio": String(null !== (AY = null === oY || void 0 === oY ? void 0 : oY.ratio) && void 0 !== AY ? AY : 2),
+          backgroundColor: null === oY || void 0 === oY ? void 0 : oY.colour
+        },
+        EY = {
+          "--map-zoom": String(QY.view.zoom),
+          transform: `translate(${100*QY.view.x}%, ${100*QY.view.y}%) scale(${QY.view.zoom})`
+        };
+      return (0, cA.jsx)(hA.e, {
+        show: OY.open,
+        close: IY.dismiss,
+        togglePointerLock: !1,
+        className: "SkyblockSkillsOverlay",
+        children: (0, cA.jsxs)("section", {
+          className: "SkyblockSkillsPanel SkyblockMapPanel",
+          role: "dialog",
+          "aria-modal": "true",
+          "aria-labelledby": "skyblockMapTitle",
+          tabIndex: -1,
+          ref: aY,
+          onKeyDown: JA,
+          children: [(0, cA.jsxs)("header", {
+            className: "SkyblockSkillsHeader",
+            children: [(0, cA.jsxs)("div", {
+              className: "SkyblockMapTitle",
+              children: [(0, cA.jsx)("h2", {
+                id: "skyblockMapTitle",
+                children: gY("skyblockGame:map")
+              }), vY.minimap && (0, cA.jsx)("p", {
+                children: vY.minimap.caption
+              })]
+            }), (0, cA.jsx)("div", {
+              className: "SkyblockMapTabs",
+              "data-pad-tabs": "1",
+              children: ["local", "world"].map((YY => (0, cA.jsx)("button", {
+                type: "button",
+                "data-pad-tab": !0,
+                "data-pad-selected": YY === OY.tab ? "true" : void 0,
+                className: EA()({
+                  Selected: YY === OY.tab
+                }),
+                "aria-pressed": YY === OY.tab,
+                onClick: () => {
+                  IY.selectTab(YY)
+                },
+                children: gY("local" === YY ? "skyblockGame:mapLocal" : "skyblockGame:mapWorld")
+              }, YY)))
+            }), (0, cA.jsx)(dA.k, {
+              padIgnore: !0,
+              onClick: IY.dismiss
+            })]
+          }), (0, cA.jsx)("div", {
+            className: "SkyblockMapBody",
+            children: (0, cA.jsxs)("div", {
+              ref: uY,
+              className: EA()("SkyblockMapCanvas", {
+                Local: vY.local,
+                Overview: !vY.local,
+                Zoomed: QY.view.zoom > 1
+              }),
+              style: WY,
+              children: [(0, cA.jsx)("div", {
+                className: "SkyblockMapZoomLayer",
+                style: yY ? EY : void 0,
+                children: (0, cA.jsxs)("div", {
+                  className: "SkyblockMapArea",
+                  ref: iY,
+                  children: [oY && (0, cA.jsx)(jA, {
+                    className: "SkyblockMapTerrain",
+                    imageKey: oY.imageKey,
+                    fallbackImageKey: oY.fallbackImageKey,
+                    geometryKey: oY.geometryKey,
+                    alt: oY.label
+                  }), vY.local && (0, cA.jsx)(bA, {
+                    mount: RY.display.mountMapSearchArea
+                  }), !vY.local && (0, cA.jsx)("svg", {
+                    className: "SkyblockMapConnections",
+                    viewBox: "0 0 100 100",
+                    preserveAspectRatio: "none",
+                    "aria-hidden": "true",
+                    children: vY.connections.map((YY => (0, cA.jsx)("line", {
+                      className: EA()({
+                        Explored: YY.explored
+                      }),
+                      x1: YY.start[0],
+                      y1: YY.start[1],
+                      x2: YY.end[0],
+                      y2: YY.end[1]
+                    }, YY.id)))
+                  }), vY.points.map((YY => {
+                    const rY = !vY.local && YY.thumbnail ? CA[YY.thumbnail] : void 0;
+                    return (0, cA.jsxs)("div", {
+                      className: EA()("SkyblockMapNode", {
+                        Current: YY.current
+                      }),
+                      style: {
+                        left: `${YY.position[0]}%`,
+                        top: `${YY.position[1]}%`
+                      },
+                      children: [(0, cA.jsxs)(dA.f, {
+                        className: EA()("SkyblockMapPin", {
+                          Unknown: !YY.visited,
+                          Current: YY.current
+                        }),
+                        disabled: OY.pending,
+                        onClick: () => {
+                          IY.travel(YY.travelKind, YY.travelId)
+                        },
+                        children: [rY && (0, cA.jsx)("img", {
+                          className: "SkyblockMapZoneThumbnail",
+                          src: rY,
+                          alt: ""
+                        }), !rY && (0, cA.jsx)("span", {
+                          className: "SkyblockMapPinSymbol",
+                          "aria-hidden": "true",
+                          children: (0, cA.jsx)(HA, {
+                            icon: YY.icon
+                          })
+                        }), (0, cA.jsx)("span", {
+                          className: "SkyblockMapPinName",
+                          children: YY.name
+                        })]
+                      }), YY.current && (0, cA.jsx)("span", {
+                        className: EA()("SkyblockMapHereBadge", {
+                          Above: YY.position[1] > 50
+                        }),
+                        children: gY("skyblockGame:mapYouAreHere")
+                      })]
+                    }, YY.id)
+                  })), vY.portals.map((YY => (0, cA.jsx)("div", {
+                    className: "SkyblockMapNode",
+                    style: {
+                      left: `clamp(3rem, ${YY.position[0]}%, calc(100% - 3rem))`,
+                      top: `clamp(2rem, ${YY.position[1]}%, calc(100% - 2rem))`
+                    },
+                    children: (0, cA.jsxs)(dA.f, {
+                      className: "SkyblockMapPin",
+                      disabled: OY.pending,
+                      onClick: () => {
+                        IY.travel(YY.travelKind, YY.travelId)
+                      },
+                      children: [(0, cA.jsx)("span", {
+                        className: "SkyblockMapPinSymbol",
+                        style: {
+                          color: YY.colour
+                        },
+                        "aria-hidden": "true",
+                        children: (0, cA.jsx)(HA, {
+                          icon: YY.icon
+                        })
+                      }), (0, cA.jsx)("span", {
+                        className: "SkyblockMapPinName",
+                        children: YY.name
+                      })]
+                    })
+                  }, YY.id))), vY.local && (0, cA.jsx)(zA, {
+                    controller: RY
+                  })]
+                })
+              }), yY && (0, cA.jsxs)("div", {
+                className: "SkyblockMapZoomControls",
+                children: [(0, cA.jsx)("button", {
+                  type: "button",
+                  "aria-label": gY("skyblockGame:mapZoomIn"),
+                  disabled: QY.view.zoom >= 12,
+                  onClick: () => {
+                    QY.zoomBy(1.5)
+                  },
+                  children: "+"
+                }), (0, cA.jsx)("button", {
+                  type: "button",
+                  "aria-label": gY("skyblockGame:mapZoomOut"),
+                  disabled: QY.view.zoom <= 1,
+                  onClick: () => {
+                    QY.zoomBy(1 / 1.5)
+                  },
+                  children: "\u2212"
+                })]
+              }), (0, cA.jsx)("div", {
+                className: "SkyblockMapFeedback",
+                role: "status",
+                "aria-live": "polite",
+                children: OY.feedback
+              })]
+            })
+          }), (0, cA.jsxs)("footer", {
+            className: "SkyblockMapFooter",
+            children: [vY.progress && (0, cA.jsxs)("div", {
+              className: "SkyblockMapProgress",
+              children: [(0, cA.jsx)("span", {
+                children: vY.progress
+              }), (0, cA.jsx)(wA, {
+                percent: vY.percent,
+                label: vY.progress
+              })]
+            }), vY.noLandmarks && (0, cA.jsx)("span", {
+              children: gY("skyblockGame:mapNoLandmarks")
+            }), vY.canTravel && (0, cA.jsx)("span", {
+              className: "SkyblockMapHint",
+              children: gY("skyblockGame:mapTravelHint")
+            })]
+          })]
+        })
+      })
+    }
+
+    function tA(YY) {
+      let {
+        view: rY,
+        controller: DY,
+        navigation: FY
+      } = YY;
+      const {
+        t: AY
+      } = (0, NA.C)(), {
+        isTouchScreen: IY
+      } = (0, mA.j)(["isTouchScreen"]);
+      return (0, cA.jsxs)("aside", {
+        className: "SkyblockMinimap",
+        "aria-label": AY("skyblockGame:mapLocal"),
+        children: [IY && (0, cA.jsx)(dA.f, {
+          className: "SkyblockMinimapOpen",
+          onClick: DY.showLocal,
+          children: AY("skyblockGame:map")
+        }), (0, cA.jsxs)("div", {
+          className: "SkyblockMinimapFrame",
+          style: {
+            backgroundColor: rY.colour
+          },
+          children: [(0, cA.jsxs)("div", {
+            className: "SkyblockMinimapTerrain",
+            ref: FY.display.mountTerrain,
+            style: {
+              width: rY.width,
+              height: rY.height
+            },
+            children: [(0, cA.jsx)(jA, {
+              imageKey: rY.imageKey,
+              fallbackImageKey: rY.fallbackImageKey,
+              geometryKey: rY.geometryKey,
+              alt: rY.label
+            }), (0, cA.jsx)(bA, {
+              mount: FY.display.mountMinimapSearchArea
+            }), rY.markers.map((YY => (0, cA.jsx)("span", {
+              className: "SkyblockMinimapLandmark",
+              style: {
+                left: `${YY.position[0]}%`,
+                top: `${YY.position[1]}%`,
+                color: YY.colour
+              },
+              title: YY.name,
+              children: (0, cA.jsx)(HA, {
+                icon: YY.icon
+              })
+            }, YY.id)))]
+          }), (0, cA.jsx)("div", {
+            className: "SkyblockMinimapPlayer",
+            title: AY("skyblockGame:mapYouAreHere"),
+            children: (0, cA.jsx)(HA, {
+              icon: "player"
+            })
+          })]
+        }), (0, cA.jsx)("div", {
+          className: "SkyblockMinimapCaption",
+          children: rY.caption
+        })]
+      })
+    }
+
+    function YI(YY) {
+      let {
+        controller: rY
+      } = YY;
+      return (0, cA.jsxs)("div", {
+        className: "SkyblockCompass",
+        ref: rY.display.mountCompass,
+        children: [(0, cA.jsx)("span", {
+          className: "SkyblockCompassArrow",
+          "aria-hidden": "true",
+          children: "\u25bc"
+        }), (0, cA.jsx)("div", {
+          className: "SkyblockCompassTrack",
+          "aria-hidden": "true"
+        }), (0, cA.jsx)("div", {
+          className: "SkyblockCompassLabel"
+        })]
+      })
+    }
+
+    function rI(YY) {
+      let {
+        controller: rY,
+        surface: DY
+      } = YY;
+      const {
+        t: FY
+      } = (0, NA.C)(), AY = (0, BA.k)(FD, rY.getSnapshot()), IY = MA();
+      return AY.enabled ? (0, cA.jsxs)(cA.Fragment, {
+        children: ["hud" === DY && (0, cA.jsx)(VA.e, {
+          placement: "statBars",
+          children: AY.hud && (0, cA.jsxs)("div", {
+            className: "SkyblockSkillsHudCompact",
+            style: {
+              "--skill-colour": AY.hud.colour
+            },
+            children: [(0, cA.jsx)(wA, {
+              percent: AY.hud.skill.percent,
+              label: AY.hud.skill.xp,
+              levelUpToken: AY.hud.levelUpToken,
+              colour: AY.hud.colour
+            }), (0, cA.jsxs)("div", {
+              className: "SkyblockSkillsHudCompactText SmallTextBold",
+              children: [(0, cA.jsxs)("span", {
+                children: [AY.hud.skill.label, " \xb7 ", AY.hud.skill.level]
+              }), (0, cA.jsx)("span", {
+                children: AY.hud.gain
+              })]
+            })]
+          })
+        }), "hud" === DY && (0, cA.jsx)(VA.e, {
+          children: AY.hud && (0, cA.jsxs)("div", {
+            className: "SkyblockSkillsHud",
+            children: [(0, cA.jsxs)("div", {
+              className: "SkyblockSkillsHudHeading",
+              children: [(0, cA.jsx)("strong", {
+                children: AY.hud.skill.label
+              }), (0, cA.jsx)("span", {
+                children: AY.hud.gain
+              })]
+            }), (0, cA.jsx)(wA, {
+              percent: AY.hud.skill.percent,
+              label: AY.hud.skill.xp,
+              levelUpToken: AY.hud.levelUpToken,
+              colour: AY.hud.colour
+            }), (0, cA.jsxs)("div", {
+              className: "SkyblockSkillsHudProgress",
+              children: [(0, cA.jsx)("span", {
+                children: AY.hud.skill.level
+              }), (0, cA.jsx)("span", {
+                children: AY.hud.skill.xp
+              })]
+            })]
+          })
+        }), "menu" === DY && (0, cA.jsx)(hA.e, {
+          show: AY.open,
+          close: rY.dismiss,
+          togglePointerLock: !1,
+          className: "SkyblockSkillsOverlay",
+          children: (0, cA.jsxs)("section", {
+            className: "SkyblockSkillsPanel",
+            role: "dialog",
+            "aria-modal": "true",
+            "aria-labelledby": "skyblockSkillsTitle",
+            tabIndex: -1,
+            ref: IY,
+            onKeyDown: JA,
+            children: [(0, cA.jsxs)("header", {
+              className: "SkyblockSkillsHeader",
+              children: [(0, cA.jsxs)("div", {
+                children: [(0, cA.jsx)("h2", {
+                  id: "skyblockSkillsTitle",
+                  children: FY("skyblockGame:skills")
+                }), (0, cA.jsx)("p", {
+                  children: FY("skyblockGame:skillsIntro")
+                })]
+              }), (0, cA.jsx)(dA.k, {
+                padIgnore: !0,
+                onClick: rY.dismiss
+              })]
+            }), (0, cA.jsxs)("div", {
+              className: "SkyblockSkillsBody",
+              children: [(0, cA.jsx)("div", {
+                className: "SkyblockSkillsList",
+                "data-pad-select-on-focus": !0,
+                children: AY.skills.map((YY => (0, cA.jsxs)(dA.f, {
+                  className: EA()("SkyblockSkillCard", {
+                    Selected: YY.selected
+                  }),
+                  ariaPressed: YY.selected,
+                  onClick: () => {
+                    rY.select(YY.id)
+                  },
+                  children: [(0, cA.jsx)("div", {
+                    className: "SkyblockSkillIcon",
+                    children: (0, cA.jsx)(lA.c, {
+                      itemName: YY.icon,
+                      amount: 0
+                    })
+                  }), (0, cA.jsxs)("div", {
+                    className: "SkyblockSkillSummary",
+                    children: [(0, cA.jsxs)("div", {
+                      className: "SkyblockSkillTitle",
+                      children: [(0, cA.jsx)("strong", {
+                        children: YY.label
+                      }), (0, cA.jsx)("span", {
+                        children: YY.level
+                      })]
+                    }), (0, cA.jsx)(wA, {
+                      percent: YY.percent,
+                      label: `${YY.label}: ${YY.xp}`
+                    }), (0, cA.jsx)("span", {
+                      className: "SkyblockSkillXp",
+                      children: YY.xp
+                    })]
+                  })]
+                }, YY.id)))
+              }), AY.detail && (0, cA.jsxs)("div", {
+                className: "SkyblockSkillDetail",
+                children: [(0, cA.jsx)("div", {
+                  className: "SkyblockSkillDetailIcon",
+                  children: (0, cA.jsx)(lA.c, {
+                    itemName: AY.detail.icon,
+                    amount: 0
+                  })
+                }), (0, cA.jsx)("h3", {
+                  children: AY.detail.label
+                }), (0, cA.jsx)("strong", {
+                  className: "SkyblockSkillDetailLevel",
+                  children: AY.detail.level
+                }), (0, cA.jsx)("p", {
+                  children: AY.detail.description
+                }), (0, cA.jsxs)("div", {
+                  className: "SkyblockSkillBenefit",
+                  children: [(0, cA.jsx)("strong", {
+                    children: FY("skyblockGame:currentBenefit")
+                  }), (0, cA.jsx)("span", {
+                    children: AY.detail.benefit
+                  })]
+                }), (0, cA.jsx)(wA, {
+                  percent: AY.detail.percent,
+                  label: AY.detail.xp
+                }), (0, cA.jsx)("p", {
+                  children: AY.detail.xp
+                }), (0, cA.jsx)("h4", {
+                  children: FY("skyblockGame:earnXp")
+                }), (0, cA.jsx)("ul", {
+                  children: AY.detail.sources.map((YY => (0, cA.jsx)("li", {
+                    children: YY
+                  }, YY)))
+                })]
+              })]
+            })]
+          })
+        })]
+      }) : null
+    }
+    var DI = DY(1354),
+      FI = DY(4410),
+      AI = DY(332);
+
+    function II(YY) {
+      let {
+        item: rY
+      } = YY;
+      return (0, cA.jsx)("span", {
+        className: "SkyblockQuestStepIcon",
+        "aria-hidden": "true",
+        children: (0, cA.jsx)(lA.c, {
+          itemName: rY,
+          amount: 0
+        })
+      })
+    }
+
+    function RI(YY) {
+      let {
+        name: rY,
+        percent: DY,
+        progress: FY
+      } = YY;
+      return (0, cA.jsxs)("span", {
+        className: "SkyblockQuestStepBar",
+        children: [(0, cA.jsx)(wA, {
+          percent: DY,
+          label: `${(0,AI.tb)(rY)}: ${FY}`
+        }), (0, cA.jsx)("span", {
+          className: "SkyblockQuestStepBarLabel",
+          children: FY
+        })]
+      })
+    }
+
+    function OI(YY) {
+      let {
+        subquests: rY,
+        showDescriptions: DY = !1
+      } = YY;
+      return (0, cA.jsx)("ul", {
+        className: "SkyblockQuestChecklist",
+        children: rY.map((YY => {
+          const rY = DY && "completed" === YY.status,
+            FY = (0, cA.jsxs)("li", {
+              className: EA()("SkyblockQuestStep", YY.status, {
+                JustFinished: YY.justFinished,
+                JustUnlocked: YY.justUnlocked
+              }),
+              tabIndex: rY ? 0 : void 0,
+              children: [null !== YY.iconItem && (0, cA.jsx)(II, {
+                item: YY.iconItem
+              }), null === YY.iconItem && (0, cA.jsx)("span", {
+                className: "SkyblockQuestStepMark",
+                "aria-hidden": "true",
+                children: "completed" === YY.status ? "\u2713" : "skipped" === YY.status ? "\u2212" : "\u25cb"
+              }), (0, cA.jsxs)("span", {
+                className: "SkyblockQuestStepBody",
+                children: [(0, cA.jsx)("strong", {
+                  children: (0, cA.jsx)(FI.c, {
+                    text: YY.name
+                  })
+                }), DY && !rY && (0, cA.jsx)("span", {
+                  children: (0, cA.jsx)(FI.c, {
+                    text: YY.description
+                  })
+                }), null !== YY.barPercent && (0, cA.jsx)(RI, {
+                  name: YY.name,
+                  percent: YY.barPercent,
+                  progress: YY.progress
+                }), null === YY.barPercent && !rY && (0, cA.jsx)("span", {
+                  className: "SkyblockQuestStepStatus",
+                  children: YY.statusLabel
+                })]
+              })]
+            }, YY.id);
+          return rY ? (0, cA.jsx)(DI.g, {
+            delayShow: 200,
+            tooltipInner: (0, cA.jsxs)("div", {
+              className: "SkyblockQuestStepTooltip",
+              children: [(0, cA.jsx)("span", {
+                children: (0, cA.jsx)(FI.c, {
+                  text: YY.description
+                })
+              }), (0, cA.jsx)("strong", {
+                children: YY.statusLabel
+              })]
+            }),
+            children: FY
+          }, YY.id) : FY
+        }))
+      })
+    }
+
+    function gI(YY) {
+      let {
+        quest: rY,
+        select: DY
+      } = YY;
+      const {
+        t: FY
+      } = (0, NA.C)(), AY = rY.focusStep;
+      return (0, cA.jsxs)(dA.f, {
+        className: EA()("SkyblockQuestCard", {
+          Selected: rY.selected,
+          Tracked: rY.tracked
+        }),
+        onClick: () => {
+          DY(rY.id)
+        },
+        children: [(0, cA.jsxs)("div", {
+          className: "SkyblockQuestCardTitle",
+          children: [(0, cA.jsx)("strong", {
+            children: (0, cA.jsx)(FI.c, {
+              text: rY.name
+            })
+          }), rY.tracked && (0, cA.jsx)("span", {
+            className: "SkyblockQuestTrackingBadge",
+            children: FY("skyblockGame:currentQuest")
+          })]
+        }), AY && (0, cA.jsxs)("div", {
+          className: "SkyblockQuestCardStep",
+          children: [null !== AY.iconItem && (0, cA.jsx)(II, {
+            item: AY.iconItem
+          }), (0, cA.jsx)(RI, {
+            name: AY.name,
+            percent: AY.barPercent,
+            progress: AY.progress
+          })]
+        }), (0, cA.jsx)("span", {
+          className: "SkyblockQuestProgress",
+          children: rY.progress
+        })]
+      })
+    }
+
+    function aI(YY) {
+      let {
+        controller: rY,
+        surface: DY
+      } = YY;
+      const FY = (0, BA.k)(OD, rY.getSnapshot()),
+        {
+          t: AY
+        } = (0, NA.C)(),
+        IY = MA();
+      return FY.enabled ? (0, cA.jsxs)(cA.Fragment, {
+        children: ["hud" === DY && (0, cA.jsx)(cA.Fragment, {
+          children: FY.tracked && (0, cA.jsx)("div", {
+            className: "SkyblockQuestTracker",
+            style: RD,
+            children: (0, cA.jsxs)("div", {
+              className: "SkyblockQuestTrackerBody",
+              children: [FY.trackedStepPulse > 0 && (0, cA.jsx)("span", {
+                className: "SkyblockQuestTrackerPulse",
+                "aria-hidden": "true"
+              }, FY.trackedStepPulse), (0, cA.jsx)("span", {
+                className: "SkyblockQuestEyebrow",
+                children: AY("skyblockGame:currentQuest")
+              }), (0, cA.jsxs)("span", {
+                className: "SkyblockQuestTrackerTitle",
+                children: [(0, cA.jsx)("strong", {
+                  children: (0, cA.jsx)(FI.c, {
+                    text: FY.tracked.name
+                  })
+                }), null !== FY.tracked.clock && (0, cA.jsx)("span", {
+                  className: "SkyblockQuestClock",
+                  children: FY.tracked.clock
+                })]
+              }), (0, cA.jsx)(OI, {
+                subquests: FY.tracked.subquests
+              })]
+            })
+          })
+        }), "menu" === DY && (0, cA.jsx)(hA.e, {
+          show: FY.open,
+          close: rY.dismiss,
+          togglePointerLock: !1,
+          className: "SkyblockSkillsOverlay",
+          children: (0, cA.jsxs)("section", {
+            className: "SkyblockSkillsPanel SkyblockQuestsPanel",
+            role: "dialog",
+            "aria-modal": "true",
+            "aria-labelledby": "skyblockQuestsTitle",
+            tabIndex: -1,
+            ref: IY,
+            onKeyDown: JA,
+            children: [(0, cA.jsxs)("header", {
+              className: "SkyblockSkillsHeader",
+              children: [(0, cA.jsx)("div", {
+                children: (0, cA.jsx)("h2", {
+                  id: "skyblockQuestsTitle",
+                  children: AY("skyblockGame:quests")
+                })
+              }), (0, cA.jsx)(dA.k, {
+                padIgnore: !0,
+                onClick: rY.dismiss
+              })]
+            }), (0, cA.jsxs)("div", {
+              className: "SkyblockSkillsBody SkyblockQuestsBody",
+              children: [(0, cA.jsxs)("div", {
+                className: "SkyblockQuestList",
+                children: [(0, cA.jsx)("h3", {
+                  children: AY("skyblockGame:current")
+                }), 0 === FY.active.length && (0, cA.jsx)("p", {
+                  className: "SkyblockQuestEmpty",
+                  children: AY("skyblockGame:noActiveQuests")
+                }), FY.active.map((YY => (0, cA.jsx)(gI, {
+                  quest: YY,
+                  select: rY.select
+                }, YY.id))), (0, cA.jsx)("h3", {
+                  children: (0, cA.jsxs)("button", {
+                    type: "button",
+                    className: EA()("SkyblockQuestSectionToggle", {
+                      Expanded: FY.completedExpanded
+                    }),
+                    "aria-expanded": FY.completedExpanded,
+                    onClick: rY.toggleCompleted,
+                    children: [(0, cA.jsx)("span", {
+                      className: "SkyblockQuestSectionCaret",
+                      "aria-hidden": "true"
+                    }), AY("skyblockGame:completed"), (0, cA.jsx)("span", {
+                      className: "SkyblockQuestSectionCount",
+                      children: FY.completed.length
+                    })]
+                  })
+                }), FY.completedExpanded && 0 === FY.completed.length && (0, cA.jsx)("p", {
+                  className: "SkyblockQuestEmpty",
+                  children: AY("skyblockGame:noCompletedQuests")
+                }), FY.completedExpanded && FY.completed.map((YY => (0, cA.jsx)(gI, {
+                  quest: YY,
+                  select: rY.select
+                }, YY.id)))]
+              }), FY.detail && (0, cA.jsxs)("div", {
+                className: "SkyblockQuestDetail",
+                children: [FY.detail.completed && (0, cA.jsx)("span", {
+                  className: "SkyblockQuestEyebrow",
+                  children: AY("skyblockGame:completedQuest")
+                }), (0, cA.jsx)("h3", {
+                  children: (0, cA.jsx)(FI.c, {
+                    text: FY.detail.name
+                  })
+                }), (0, cA.jsx)("p", {
+                  className: "SkyblockQuestDescription",
+                  children: (0, cA.jsx)(FI.c, {
+                    text: FY.detail.description
+                  })
+                }), (0, cA.jsxs)("p", {
+                  className: "SkyblockQuestProgress",
+                  children: [FY.detail.progress, null !== FY.detail.clock && (0, cA.jsx)("span", {
+                    className: "SkyblockQuestClock",
+                    children: FY.detail.clock
+                  })]
+                }), (0, cA.jsx)(OI, {
+                  subquests: FY.detail.subquests,
+                  showDescriptions: !0
+                }), FY.detail.tracked && (0, cA.jsx)("p", {
+                  className: "SkyblockQuestTrackingStatus",
+                  children: FY.detail.trackLabel
+                }), !FY.detail.completed && !FY.detail.tracked && (0, cA.jsx)(dA.n, {
+                  onClick: rY.trackSelected,
+                  disabled: !FY.detail.canTrack,
+                  children: FY.detail.trackLabel
+                }), FY.detail.canViewDialogue && (0, cA.jsx)(dA.f, {
+                  className: "SkyblockQuestViewDialogue",
+                  onClick: rY.viewDialogue,
+                  children: AY("skyblockDialogue:viewDialogue")
+                })]
+              })]
+            })]
+          })
+        })]
+      }) : null
+    }
+    var vI = DY(1098),
+      uI = DY(2368);
+
+    function sI(YY, rY, DY, FY, AY) {
+      const IY = YY => "linear" === AY ? YY : {
+          AA: AY,
+          point: YY
+        },
+        RY = {};
+      for (const [OY, gY] of FY)
+        for (const [rY, DY] of Object.entries(YY(OY, gY, IY))) RY[rY] ??= {
+          timeline: []
+        }, RY[rY].timeline.push(DY);
+      return {
+        tF: rY,
+        loop: DY,
+        rA: RY
+      }
+    }
+    const iI = .547,
+      yI = .022,
+      QI = {
+        drop: -.03,
+        torso: -.28,
+        nod: -.4,
+        arms: -2.85,
+        spread: .18
+      },
+      oI = {
+        drop: .22,
+        torso: .7,
+        nod: -.25,
+        legs: [-.35, .25],
+        arms: -1.05,
+        spread: .12
+      };
+
+    function WI(YY, rY, DY) {
+      const {
+        drop: FY = 0,
+        shift: AY = 0,
+        torso: IY = 0,
+        nod: RY = 0,
+        tilt: OY = 0,
+        legs: gY = [0, 0],
+        arms: aY = 0,
+        spread: vY = 0
+      } = rY, uY = iI * Math.cos(IY) - yI * Math.sin(IY), sY = iI * Math.sin(IY) + yI * Math.cos(IY), iY = DY([0, -FY, AY]);
+      return {
+        LowerBody: {
+          timeFraction: YY,
+          position: iY,
+          rotation: DY([0, 0, 0])
+        },
+        UpperBody: {
+          timeFraction: YY,
+          position: iY,
+          rotation: DY([IY, 0, OY])
+        },
+        HeadMesh: {
+          timeFraction: YY,
+          position: DY([0, uY - iI - FY, sY - yI + AY]),
+          rotation: DY([IY + RY, 0, OY])
+        },
+        LegLeftMesh: {
+          timeFraction: YY,
+          rotation: DY([gY[0], 0, 0])
+        },
+        LegRightMesh: {
+          timeFraction: YY,
+          rotation: DY([gY[1], 0, 0])
+        },
+        ArmLeftMesh: {
+          timeFraction: YY,
+          rotation: DY([aY, 0, vY])
+        },
+        ArmRightMesh: {
+          timeFraction: YY,
+          rotation: DY([aY, 0, -vY])
+        }
+      }
+    }
+
+    function EI(YY, rY, DY) {
+      return sI(WI, YY, rY, DY, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "linear")
+    }
+
+    function mI(YY) {
+      return "number" === typeof YY ? [YY, YY] : YY
+    }
+
+    function VI(YY, rY, DY) {
+      const {
+        rise: FY = 0,
+        shift: AY = 0,
+        torso: IY = 0,
+        twist: RY = 0,
+        tilt: OY = 0,
+        nod: gY = 0,
+        cock: aY = 0,
+        arms: vY = 0,
+        spread: uY = 0
+      } = rY, [sY, iY] = mI(vY), [yY, QY] = mI(uY);
+      return {
+        TorsoNode: {
+          timeFraction: YY,
+          position: DY([0, FY, AY]),
+          rotation: DY([IY, RY, OY])
+        },
+        HeadMesh: {
+          timeFraction: YY,
+          rotation: DY([gY, 0, aY])
+        },
+        ArmLeftMesh: {
+          timeFraction: YY,
+          rotation: DY([sY, 0, yY])
+        },
+        ArmRightMesh: {
+          timeFraction: YY,
+          rotation: DY([iY, 0, -QY])
+        }
+      }
+    }
+    const SI = [1.0625, -1, 0];
+
+    function lI(YY) {
+      return "number" === typeof YY ? [YY, YY] : YY
+    }
+
+    function TI(YY, rY, DY) {
+      const {
+        drop: FY = 0,
+        shift: AY = 0,
+        torso: IY = 0,
+        tilt: RY = 0,
+        nod: OY = 0,
+        cock: gY = 0,
+        legs: aY = [0, 0],
+        arms: vY = 0,
+        spread: uY = 0
+      } = rY, [sY, iY] = lI(vY), [yY, QY] = lI(uY), oY = -IY, WY = -RY, [EY, mY, VY] = function(YY, rY) {
+        const [DY, FY, AY] = [-SI[0], SI[1], -SI[2]], IY = DY * Math.cos(rY) - FY * Math.sin(rY), RY = DY * Math.sin(rY) + FY * Math.cos(rY);
+        return [IY - DY, -(RY * Math.cos(YY) - AY * Math.sin(YY) - FY), RY * Math.sin(YY) + AY * Math.cos(YY) - AY]
+      }(oY, WY), SY = DY([0, -FY, AY]);
+      return {
+        TorsoNode: {
+          timeFraction: YY,
+          position: DY([EY, mY - FY, VY + AY]),
+          rotation: DY([oY, 0, WY])
+        },
+        HeadMesh: {
+          timeFraction: YY,
+          rotation: DY([-OY, 0, -gY])
+        },
+        ArmLeftMesh: {
+          timeFraction: YY,
+          rotation: DY([-sY, 0, -yY])
+        },
+        ArmRightMesh: {
+          timeFraction: YY,
+          rotation: DY([-iY, 0, QY])
+        },
+        LegLeftMesh: {
+          timeFraction: YY,
+          position: SY,
+          rotation: DY([-aY[0], 0, 0])
+        },
+        LegRightMesh: {
+          timeFraction: YY,
+          position: SY,
+          rotation: DY([-aY[1], 0, 0])
+        }
+      }
+    }
+    var eI = DY(36896),
+      NI = DY(37858),
+      BI = DY(38003);
+
+    function cI(YY, rY, DY) {
+      var FY, AY;
+      const IY = function() {
+          let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+          return YY + ((arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0) - YY) * DY
+        },
+        [RY, OY] = null !== (FY = YY.legs) && void 0 !== FY ? FY : [0, 0],
+        [gY, aY] = null !== (AY = rY.legs) && void 0 !== AY ? AY : [0, 0];
+      return {
+        drop: IY(YY.drop, rY.drop),
+        shift: IY(YY.shift, rY.shift),
+        torso: IY(YY.torso, rY.torso),
+        nod: IY(YY.nod, rY.nod),
+        tilt: IY(YY.tilt, rY.tilt),
+        legs: [IY(RY, gY), IY(OY, aY)],
+        arms: IY(YY.arms, rY.arms),
+        spread: IY(YY.spread, rY.spread)
+      }
+    }
+    const KI = {
+        drop: .1,
+        torso: .22,
+        nod: -.32,
+        legs: [-.2, .18],
+        arms: -.75,
+        spread: .32
+      },
+      HI = EI(4400, !0, [
+        [0, KI],
+        [.16, {
+          ...KI,
+          drop: .06,
+          torso: .16,
+          arms: -.85
+        }],
+        [.3, KI],
+        [.44, {
+          ...KI,
+          drop: .06,
+          torso: .16,
+          arms: -.85
+        }],
+        [.56, cI(KI, QI, .7)],
+        [.66, cI(KI, QI, .78)],
+        [.74, cI(KI, oI, .65)],
+        [.86, {
+          ...KI,
+          drop: .14
+        }],
+        [1, KI]
+      ], "catmull-rom-spline"),
+      zI = {
+        ...KI,
+        drop: .14,
+        torso: .3,
+        spread: .4
+      },
+      ZI = {
+        rise: .15,
+        torso: .15,
+        nod: -.25,
+        arms: -.6,
+        spread: .35
+      },
+      CI = {
+        drop: .06,
+        torso: .18,
+        nod: -.25,
+        legs: [-.12, .1],
+        arms: -.45,
+        spread: .45
+      },
+      fI = {
+        caveGolem: HI,
+        magmaGolem: EI(3600, !0, [
+          [0, zI],
+          [.12, {
+            ...zI,
+            tilt: .08,
+            drop: .11
+          }],
+          [.26, {
+            ...zI,
+            tilt: -.08
+          }],
+          [.4, {
+            ...zI,
+            tilt: .06,
+            drop: .11
+          }],
+          [.52, cI(zI, QI, .9)],
+          [.62, cI(zI, oI, .8)],
+          [.7, cI(zI, oI, .45)],
+          [.78, cI(zI, oI, .85)],
+          [.9, {
+            ...zI,
+            drop: .17
+          }],
+          [1, zI]
+        ], "catmull-rom-spline"),
+        frostWraith: function(YY, rY, DY) {
+          return sI(VI, YY, rY, DY, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "linear")
+        }(4800, !0, [
+          [0, ZI],
+          [.14, {
+            ...ZI,
+            rise: .25,
+            tilt: .06
+          }],
+          [.28, {
+            ...ZI,
+            rise: .12,
+            tilt: -.04
+          }],
+          [.42, {
+            ...ZI,
+            rise: .24,
+            tilt: .04
+          }],
+          [.54, {
+            ...ZI,
+            rise: .22,
+            twist: .2,
+            arms: [-.3, -1.6],
+            spread: [.4, .05]
+          }],
+          [.64, {
+            ...ZI,
+            rise: .26,
+            twist: .2,
+            torso: .05,
+            arms: [-.3, -1.9],
+            spread: [.4, .05]
+          }],
+          [.72, {
+            ...ZI,
+            rise: .1,
+            twist: .22,
+            torso: .35,
+            nod: -.1,
+            arms: [-.25, -1.1],
+            spread: [.4, -.05]
+          }],
+          [.86, {
+            ...ZI,
+            rise: .16,
+            tilt: -.04
+          }],
+          [1, ZI]
+        ], "catmull-rom-spline"),
+        tikiTerror: function(YY, rY, DY) {
+          return sI(TI, YY, rY, DY, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "linear")
+        }(4400, !0, [
+          [0, CI],
+          [.16, {
+            ...CI,
+            drop: .02,
+            torso: .12,
+            arms: -.55,
+            spread: .52
+          }],
+          [.3, CI],
+          [.44, {
+            ...CI,
+            drop: .02,
+            torso: .12,
+            arms: -.55,
+            spread: .52
+          }],
+          [.56, {
+            drop: -.03,
+            torso: -.28,
+            nod: -.48,
+            legs: [-.12, .12],
+            arms: -1.45,
+            spread: 1.1
+          }],
+          [.64, {
+            drop: -.03,
+            torso: -.32,
+            tilt: .05,
+            nod: -.52,
+            legs: [-.12, .12],
+            arms: -1.5,
+            spread: 1.2
+          }],
+          [.72, {
+            drop: -.03,
+            torso: -.28,
+            tilt: -.05,
+            nod: -.48,
+            legs: [-.12, .12],
+            arms: -1.45,
+            spread: 1.1
+          }],
+          [.86, {
+            ...CI,
+            drop: .1
+          }],
+          [1, CI]
+        ], "catmull-rom-spline")
+      },
+      jI = {
+        golem: "caveGolem",
+        wraith: "frostWraith",
+        tiki: "tikiTerror"
+      },
+      hI = {
+        "Cave Golem": "caveGolem",
+        "Magma Golem": "magmaGolem"
+      },
+      dI = Object.fromEntries(Object.entries(fI).map((YY => {
+        let [rY, DY] = YY;
+        return [rY, (0, BI.c)((0, eI.f)(DY), rY)]
+      })));
+
+    function JI(YY) {
+      const rY = function(YY) {
+        var rY;
+        const DY = (0, NI.e)(YY).poseRig;
+        return null !== (rY = hI[YY]) && void 0 !== rY ? rY : void 0 === DY ? null : jI[DY]
+      }(YY);
+      return null === rY ? null : dI[rY]
+    }
+
+    function MI(YY) {
+      return {
+        "--difficulty-colour": YY
+      }
+    }
+    const wI = (0, NY.lazy)((() => (0, uI.d)(DY.e(213).then((() => DY(40578))), (YY => YY.MobPreview))));
+
+    function bI(YY) {
+      var rY, DY, FY;
+      let {
+        picker: AY,
+        controller: IY
+      } = YY;
+      const {
+        t: RY
+      } = (0, NA.C)(), OY = MA(), {
+        page: gY
+      } = AY;
+      return (0, cA.jsxs)("section", {
+        className: "SkyblockSkillsPanel SkyblockBossPicker",
+        role: "dialog",
+        "aria-modal": "true",
+        "aria-labelledby": "skyblockBossPickerTitle",
+        tabIndex: -1,
+        ref: OY,
+        onKeyDown: YY => {
+          "ArrowLeft" === YY.key ? (YY.preventDefault(), YY.stopPropagation(), IY.previous()) : "ArrowRight" === YY.key ? (YY.preventDefault(), YY.stopPropagation(), IY.next()) : JA(YY)
+        },
+        style: MI(gY.colour),
+        children: [(0, cA.jsxs)("header", {
+          className: "SkyblockSkillsHeader",
+          children: [(0, cA.jsx)("h2", {
+            id: "skyblockBossPickerTitle",
+            children: AY.dungeonName
+          }), (0, cA.jsx)(dA.k, {
+            padIgnore: !0,
+            onClick: IY.dismiss
+          })]
+        }), (0, cA.jsxs)("div", {
+          className: "SkyblockBossPickerBody",
+          children: [(0, cA.jsxs)("div", {
+            className: "SkyblockBossPickerStage",
+            children: [(0, cA.jsx)(dA.f, {
+              className: "SkyblockBossPickerTurn Previous",
+              disabled: !AY.canPrevious,
+              onClick: IY.previous,
+              children: (0, cA.jsx)("span", {
+                className: "SkyblockBossPickerChevron",
+                children: (0, cA.jsx)(vI.e, {
+                  name: "angle-up"
+                })
+              })
+            }), (0, cA.jsxs)("div", {
+              className: EA()("SkyblockBossPickerBoss", {
+                Locked: !gY.unlocked
+              }),
+              children: [null !== gY.bossMobType && (0, cA.jsx)(NY.Suspense, {
+                fallback: (0, cA.jsx)("div", {
+                  className: "SkyblockBossPickerModel"
+                }),
+                children: (0, cA.jsx)(wI, {
+                  className: "SkyblockBossPickerModel",
+                  mobType: gY.bossMobType,
+                  variation: gY.bossMobVariation,
+                  animation: null !== (rY = JI(gY.bossMobType)) && void 0 !== rY ? rY : void 0
+                })
+              }), null === gY.bossMobType && (0, cA.jsx)("div", {
+                className: "SkyblockBossPickerModel SkyblockBossPickerUnknown",
+                "aria-hidden": "true",
+                children: "?"
+              })]
+            }), (0, cA.jsx)(dA.f, {
+              className: "SkyblockBossPickerTurn Next",
+              disabled: !AY.canNext,
+              onClick: IY.next,
+              children: (0, cA.jsx)("span", {
+                className: "SkyblockBossPickerChevron",
+                children: (0, cA.jsx)(vI.e, {
+                  name: "angle-up"
+                })
+              })
+            })]
+          }), (0, cA.jsxs)("div", {
+            className: "SkyblockBossPickerCaption",
+            children: [(0, cA.jsxs)("span", {
+              className: "SkyblockBossPickerDifficulty",
+              children: [gY.beaten && (0, cA.jsx)("span", {
+                "aria-hidden": "true",
+                children: "\u2713 "
+              }), gY.label]
+            }), (0, cA.jsx)("strong", {
+              className: "SkyblockBossPickerName",
+              children: null !== (DY = gY.bossName) && void 0 !== DY ? DY : "???"
+            }), (0, cA.jsxs)("span", {
+              className: EA()("SkyblockBossPickerRecord", {
+                Locked: null !== gY.lockedHint
+              }),
+              children: [null !== gY.lockedHintHighlight && (0, cA.jsxs)(cA.Fragment, {
+                children: [gY.lockedHintHighlight.before, (0, cA.jsxs)("span", {
+                  className: "SkyblockDifficulty",
+                  style: MI(gY.lockedHintHighlight.colour),
+                  children: [null !== gY.lockedHintHighlight.icon && (0, cA.jsx)("span", {
+                    className: "SkyblockBossPickerHintIcon",
+                    "aria-hidden": "true",
+                    children: (0, cA.jsx)(lA.c, {
+                      itemName: gY.lockedHintHighlight.icon,
+                      amount: 0
+                    })
+                  }), gY.lockedHintHighlight.name]
+                }), gY.lockedHintHighlight.after]
+              }), null === gY.lockedHintHighlight && (null !== (FY = gY.lockedHint) && void 0 !== FY ? FY : gY.summary)]
+            })]
+          }), (0, cA.jsx)("div", {
+            className: "SkyblockBossPickerDots",
+            "aria-hidden": "true",
+            children: AY.pages.map((YY => (0, cA.jsx)("span", {
+              className: EA()("SkyblockBossPickerDot", {
+                Current: YY.current,
+                Locked: !YY.unlocked
+              }),
+              style: MI(YY.colour)
+            }, YY.difficulty)))
+          }), (0, cA.jsx)(dA.p, {
+            className: "SkyblockBossPickerFight",
+            disabled: !gY.unlocked,
+            onClick: IY.enter,
+            children: RY("skyblockGame:dungeonFight")
+          })]
+        })]
+      })
+    }
+
+    function XI(YY) {
+      let {
+        dungeon: rY,
+        select: DY
+      } = YY;
+      return (0, cA.jsxs)(dA.f, {
+        className: EA()("SkyblockDungeonCard", {
+          Selected: rY.selected
+        }),
+        onClick: () => {
+          DY(rY.id)
+        },
+        children: [(0, cA.jsxs)("div", {
+          className: "SkyblockDungeonCardTitle",
+          children: [(0, cA.jsx)("strong", {
+            children: rY.name
+          }), (0, cA.jsx)("span", {
+            children: rY.beatenSummary
+          })]
+        }), (0, cA.jsx)("div", {
+          className: "SkyblockDungeonChips",
+          children: rY.difficulties.map((YY => (0, cA.jsxs)("span", {
+            className: EA()("SkyblockDungeonChip", "SkyblockDifficulty", {
+              Beaten: YY.beaten
+            }),
+            style: MI(YY.colour),
+            title: YY.summary,
+            children: [YY.beaten && (0, cA.jsx)("span", {
+              "aria-hidden": "true",
+              children: "\u2713 "
+            }), YY.label]
+          }, YY.difficulty)))
+        })]
+      })
+    }
+
+    function qI(YY) {
+      let {
+        controller: rY
+      } = YY;
+      const DY = (0, BA.k)(uD, rY.getSnapshot()),
+        {
+          t: FY
+        } = (0, NA.C)(),
+        AY = MA();
+      return DY.enabled ? (0, cA.jsxs)(hA.e, {
+        show: DY.open,
+        close: rY.dismiss,
+        togglePointerLock: !1,
+        className: "SkyblockSkillsOverlay",
+        children: [DY.picker && (0, cA.jsx)(bI, {
+          picker: DY.picker,
+          controller: rY
+        }), !DY.picker && (0, cA.jsxs)("section", {
+          className: "SkyblockSkillsPanel SkyblockDungeonsPanel",
+          role: "dialog",
+          "aria-modal": "true",
+          "aria-labelledby": "skyblockDungeonsTitle",
+          tabIndex: -1,
+          ref: AY,
+          onKeyDown: JA,
+          children: [(0, cA.jsxs)("header", {
+            className: "SkyblockSkillsHeader",
+            children: [(0, cA.jsxs)("div", {
+              children: [(0, cA.jsx)("h2", {
+                id: "skyblockDungeonsTitle",
+                children: FY("skyblockGame:dungeons")
+              }), (0, cA.jsx)("p", {
+                children: FY("skyblockGame:dungeonsIntro")
+              })]
+            }), (0, cA.jsx)(dA.k, {
+              padIgnore: !0,
+              onClick: rY.dismiss
+            })]
+          }), (0, cA.jsxs)("div", {
+            className: "SkyblockSkillsBody SkyblockDungeonsBody",
+            children: [(0, cA.jsx)("div", {
+              className: "SkyblockDungeonList",
+              children: DY.dungeons.map((YY => (0, cA.jsx)(XI, {
+                dungeon: YY,
+                select: rY.select
+              }, YY.id)))
+            }), DY.detail && (0, cA.jsxs)("div", {
+              className: "SkyblockDungeonDetail",
+              children: [(0, cA.jsx)("h3", {
+                children: DY.detail.name
+              }), (0, cA.jsx)("ul", {
+                className: "SkyblockDungeonRecords",
+                children: DY.detail.difficulties.map((YY => (0, cA.jsxs)("li", {
+                  className: EA()("SkyblockDungeonRecord", {
+                    Beaten: YY.beaten
+                  }),
+                  children: [(0, cA.jsxs)("span", {
+                    className: "SkyblockDungeonRecordName SkyblockDifficulty",
+                    style: MI(YY.colour),
+                    children: [YY.beaten && (0, cA.jsx)("span", {
+                      "aria-hidden": "true",
+                      children: "\u2713 "
+                    }), YY.label]
+                  }), (0, cA.jsx)("span", {
+                    className: "SkyblockDungeonRecordSummary",
+                    children: YY.summary
+                  })]
+                }, YY.difficulty)))
+              })]
+            })]
+          })]
+        })]
+      }) : null
+    }
+
+    function pI(YY) {
+      let {
+        collection: rY,
+        select: DY
+      } = YY;
+      return (0, cA.jsxs)(dA.f, {
+        className: EA()("SkyblockSkillCard", "SkyblockCollectionCard", {
+          Selected: rY.selected,
+          Locked: rY.locked
+        }),
+        ariaPressed: rY.selected,
+        onClick: () => {
+          DY(rY.id)
+        },
+        children: [(0, cA.jsx)("div", {
+          className: "SkyblockSkillIcon",
+          children: (0, cA.jsx)(lA.c, {
+            itemName: rY.icon,
+            amount: 0
+          })
+        }), (0, cA.jsxs)("div", {
+          className: "SkyblockSkillSummary",
+          children: [(0, cA.jsxs)("div", {
+            className: "SkyblockSkillTitle",
+            children: [(0, cA.jsx)("strong", {
+              children: rY.name
+            }), (0, cA.jsx)("span", {
+              children: rY.tier
+            })]
+          }), (0, cA.jsx)(wA, {
+            percent: rY.percent,
+            label: `${rY.name}: ${rY.progress}`
+          }), (0, cA.jsx)("span", {
+            className: "SkyblockSkillXp",
+            children: rY.progress
+          })]
+        })]
+      })
+    }
+
+    function kI(YY) {
+      let {
+        collection: rY
+      } = YY;
+      const {
+        t: DY
+      } = (0, NA.C)();
+      return (0, cA.jsxs)("div", {
+        className: "SkyblockSkillDetail SkyblockCollectionDetail",
+        children: [(0, cA.jsx)("div", {
+          className: "SkyblockSkillDetailIcon",
+          children: (0, cA.jsx)(lA.c, {
+            itemName: rY.icon,
+            amount: 0
+          })
+        }), (0, cA.jsx)("h3", {
+          children: rY.name
+        }), (0, cA.jsx)("strong", {
+          className: "SkyblockSkillDetailLevel",
+          children: rY.tier
+        }), (0, cA.jsx)("p", {
+          children: rY.locked ? DY("skyblockGame:collectionLocked") : rY.count
+        }), null !== rY.nextReward && (0, cA.jsxs)("div", {
+          className: "SkyblockSkillBenefit",
+          children: [(0, cA.jsx)("strong", {
+            children: DY("skyblockGame:collectionNextReward")
+          }), (0, cA.jsx)("span", {
+            children: rY.nextReward
+          })]
+        }), (0, cA.jsx)(wA, {
+          percent: rY.percent,
+          label: rY.progress
+        }), (0, cA.jsx)("p", {
+          children: rY.progress
+        })]
+      })
+    }
+
+    function GI(YY) {
+      let {
+        controller: rY
+      } = YY;
+      const DY = (0, BA.k)(CD, rY.getSnapshot()),
+        {
+          t: FY
+        } = (0, NA.C)(),
+        AY = MA();
+      return DY.enabled ? (0, cA.jsx)(hA.e, {
+        show: DY.open,
+        close: rY.dismiss,
+        togglePointerLock: !1,
+        className: "SkyblockSkillsOverlay",
+        children: (0, cA.jsxs)("section", {
+          className: "SkyblockSkillsPanel SkyblockCollectionsPanel",
+          role: "dialog",
+          "aria-modal": "true",
+          "aria-labelledby": "skyblockCollectionsTitle",
+          tabIndex: -1,
+          ref: AY,
+          onKeyDown: JA,
+          children: [(0, cA.jsxs)("header", {
+            className: "SkyblockSkillsHeader",
+            children: [(0, cA.jsxs)("div", {
+              children: [(0, cA.jsx)("h2", {
+                id: "skyblockCollectionsTitle",
+                children: FY("skyblockGame:collections")
+              }), (0, cA.jsxs)("p", {
+                children: [FY("skyblockGame:collectionsIntro"), " ", DY.tiersUnlocked]
+              })]
+            }), (0, cA.jsx)(dA.k, {
+              padIgnore: !0,
+              onClick: rY.dismiss
+            })]
+          }), (0, cA.jsx)("div", {
+            className: "SkyblockCollectionCategories",
+            "data-pad-tabs": "1",
+            children: DY.categories.map((YY => (0, cA.jsxs)(dA.f, {
+              className: EA()("SkyblockCollectionCategory", {
+                Selected: YY.selected
+              }),
+              ariaPressed: YY.selected,
+              padTabSelected: YY.selected,
+              onClick: () => {
+                rY.selectCategory(YY.id)
+              },
+              children: [(0, cA.jsx)("span", {
+                className: "SkyblockCollectionCategoryIcon",
+                children: (0, cA.jsx)(lA.c, {
+                  itemName: YY.icon,
+                  amount: 0
+                })
+              }), (0, cA.jsxs)("span", {
+                className: "SkyblockCollectionCategoryText",
+                children: [(0, cA.jsx)("strong", {
+                  children: YY.label
+                }), (0, cA.jsx)("span", {
+                  children: YY.tiers
+                })]
+              })]
+            }, YY.id)))
+          }), (0, cA.jsxs)("div", {
+            className: "SkyblockSkillsBody",
+            children: [(0, cA.jsx)("div", {
+              className: "SkyblockSkillsList",
+              "data-pad-select-on-focus": !0,
+              children: DY.collections.map((YY => (0, cA.jsx)(pI, {
+                collection: YY,
+                select: rY.select
+              }, YY.id)))
+            }), DY.detail && (0, cA.jsx)(kI, {
+              collection: DY.detail
+            })]
+          })]
+        })
+      }) : null
+    }
+    const xI = ["completed", "active", "available", "locked"],
+      nI = ["prerequisite", "acceptFirst", "sends", "awaits"];
+
+    function PI(YY) {
+      let {
+        controller: rY
+      } = YY;
+      const DY = (0, BA.k)(kD, rY.getSnapshot()),
+        {
+          t: FY
+        } = (0, NA.C)(),
+        AY = MA();
+      return DY.enabled ? (0, cA.jsx)(hA.e, {
+        show: DY.open,
+        close: rY.dismiss,
+        togglePointerLock: !1,
+        className: "SkyblockSkillsOverlay",
+        children: (0, cA.jsxs)("section", {
+          className: "SkyblockSkillsPanel SkyblockQuestGraphPanel",
+          role: "dialog",
+          "aria-modal": "true",
+          "aria-labelledby": "skyblockQuestGraphTitle",
+          tabIndex: -1,
+          ref: AY,
+          onKeyDown: JA,
+          children: [(0, cA.jsxs)("header", {
+            className: "SkyblockSkillsHeader",
+            children: [(0, cA.jsxs)("div", {
+              children: [(0, cA.jsx)("h2", {
+                id: "skyblockQuestGraphTitle",
+                children: FY("skyblockDevQuests:title")
+              }), (0, cA.jsx)("p", {
+                children: FY("skyblockDevQuests:intro")
+              })]
+            }), (0, cA.jsx)(dA.k, {
+              onClick: rY.dismiss
+            })]
+          }), (0, cA.jsxs)("div", {
+            className: "SkyblockQuestGraphLegend",
+            children: [xI.map((YY => (0, cA.jsx)("span", {
+              className: EA()("SkyblockQuestGraphLegendState", YY),
+              children: FY(`skyblockDevQuests:state_${YY}`)
+            }, YY))), nI.map((YY => (0, cA.jsxs)("span", {
+              className: "SkyblockQuestGraphLegendEdge",
+              children: [(0, cA.jsx)("svg", {
+                width: "28",
+                height: "8",
+                "aria-hidden": "true",
+                children: (0, cA.jsx)("line", {
+                  className: EA()("SkyblockQuestGraphEdge", YY),
+                  x1: "0",
+                  y1: "4",
+                  x2: "28",
+                  y2: "4"
+                })
+              }), FY(`skyblockDevQuests:edge_${YY}`)]
+            }, YY)))]
+          }), (0, cA.jsx)("div", {
+            className: "SkyblockQuestGraphScroll",
+            children: (0, cA.jsxs)("div", {
+              className: EA()("SkyblockQuestGraphCanvas", {
+                Planning: DY.planning
+              }),
+              style: {
+                width: DY.width,
+                height: DY.height
+              },
+              children: [(0, cA.jsxs)("svg", {
+                className: "SkyblockQuestGraphEdges",
+                width: DY.width,
+                height: DY.height,
+                "aria-hidden": "true",
+                children: [(0, cA.jsx)("defs", {
+                  children: (0, cA.jsx)("marker", {
+                    id: "skyblockQuestGraphArrow",
+                    viewBox: "0 0 8 8",
+                    refX: "7",
+                    refY: "4",
+                    markerWidth: "6",
+                    markerHeight: "6",
+                    orient: "auto-start-reverse",
+                    children: (0, cA.jsx)("path", {
+                      className: "SkyblockQuestGraphArrow",
+                      d: "M 0 0 L 8 4 L 0 8 z"
+                    })
+                  })
+                }), DY.edges.map((YY => (0, cA.jsx)("path", {
+                  className: EA()("SkyblockQuestGraphEdge", YY.kind, {
+                    InPlan: YY.inPlan
+                  }),
+                  d: YY.path,
+                  markerEnd: "url(#skyblockQuestGraphArrow)"
+                }, YY.key)))]
+              }), DY.nodes.map((YY => (0, cA.jsxs)("button", {
+                type: "button",
+                className: EA()("SkyblockQuestGraphNode", YY.state, {
+                  InPlan: YY.inPlan,
+                  Hovered: YY.hovered
+                }),
+                style: {
+                  left: YY.left,
+                  top: YY.top,
+                  width: 190,
+                  height: 52
+                },
+                title: YY.id,
+                onMouseEnter: () => {
+                  rY.hover(YY.id)
+                },
+                onMouseLeave: () => {
+                  rY.hover(null)
+                },
+                onFocus: () => {
+                  rY.hover(YY.id)
+                },
+                onBlur: () => {
+                  rY.hover(null)
+                },
+                onClick: () => {
+                  rY.jump(YY.id)
+                },
+                children: [(0, cA.jsx)("strong", {
+                  children: YY.name
+                }), (0, cA.jsx)("span", {
+                  children: YY.detail
+                })]
+              }, YY.id)))]
+            })
+          })]
+        })
+      }) : null
+    }
+    const UI = ["skyblockGame:forgeStatPower", "skyblockGame:forgeStatDamage", "skyblockGame:forgeStatSpeed", "skyblockGame:forgeStatKnockback"],
+      LI = {
+        "--impact": "250ms",
+        "--hold": "50ms",
+        "--pop-at": `${IF}ms`,
+        "--forge-duration": "2150ms"
+      },
+      tI = Array.from({
+        length: 18
+      }, ((YY, rY) => ({
+        "--ember-left": `${(4+92*(.618034*rY%1)).toFixed(1)}%`,
+        "--ember-size": 3 + rY % 3 * 2 + "px",
+        "--ember-drift": 14 * (rY % 5 - 2) + "px",
+        "--ember-duration": `${(5.5+7*rY%5*.9).toFixed(1)}s`,
+        "--ember-delay": `${(-1.37*rY%8).toFixed(2)}s`
+      })));
+
+    function YR(YY) {
+      if (YY.style.removeProperty("--part-size"), null === YY.parentElement || "wrap" === getComputedStyle(YY.parentElement).flexWrap) return;
+      const rY = [...YY.children],
+        DY = getComputedStyle(YY),
+        FY = parseFloat(DY.getPropertyValue("--part-size")) * parseFloat(getComputedStyle(document.documentElement).fontSize),
+        AY = (YY.clientHeight - parseFloat(DY.rowGap) * (rY.length - 1)) / rY.length,
+        IY = rY.map((YY => {
+          const rY = getComputedStyle(YY),
+            DY = YY.querySelector("h3"),
+            IY = YY.querySelector(".SkyblockForgeParts");
+          if (null === DY || null === IY) return FY;
+          const RY = AY - parseFloat(rY.paddingTop) - parseFloat(rY.paddingBottom) - DY.offsetHeight - parseFloat(getComputedStyle(DY).marginBottom),
+            OY = parseFloat(getComputedStyle(IY).columnGap),
+            gY = IY.children.length;
+          let aY = 0;
+          for (let FY = 1; FY <= gY; FY++) {
+            const YY = Math.ceil(gY / FY);
+            aY = Math.max(aY, Math.min((IY.clientWidth - OY * (FY - 1)) / FY, (RY - OY * (YY - 1)) / YY))
+          }
+          return aY
+        }));
+      YY.style.setProperty("--part-size", `${Math.floor(Math.max(FY,Math.min(...IY)))}px`)
+    }
+
+    function rR(YY) {
+      var rY, DY, FY, IY, RY;
+      let {
+        controller: OY
+      } = YY;
+      const gY = (0, BA.k)(sF, OY.getSnapshot()),
+        {
+          t: aY
+        } = (0, NA.C)(),
+        vY = MA(),
+        uY = function() {
+          const YY = (0, NY.useRef)(null),
+            rY = (0, NY.useRef)(null);
+          return (0, NY.useLayoutEffect)((() => {
+            null !== YY.current && YR(YY.current)
+          })), (0, NY.useCallback)((DY => {
+            var FY;
+            null === (FY = rY.current) || void 0 === FY || FY.disconnect(), rY.current = null, YY.current = DY, null !== DY && (rY.current = new ResizeObserver((() => {
+              YR(DY)
+            })), rY.current.observe(DY))
+          }), [])
+        }(),
+        sY = function(YY) {
+          const rY = (0, NY.useRef)(null);
+          return (0, NY.useLayoutEffect)((() => {
+            const YY = rY.current;
+            if (null !== YY) {
+              YY.style.removeProperty("font-size");
+              for (let rY = 1.7; rY > 1.1 && YY.scrollWidth > YY.clientWidth; rY -= .1) YY.style.fontSize = rY - .1 + "rem"
+            }
+          }), [YY]), (0, NY.useCallback)((YY => {
+            rY.current = YY
+          }), [])
+        }(null === (rY = gY.preview) || void 0 === rY ? void 0 : rY.name),
+        iY = (0, NY.useRef)(null),
+        yY = (0, NY.useRef)({}),
+        QY = gY.forging,
+        oY = null !== (DY = null === QY || void 0 === QY ? void 0 : QY.preview.tier) && void 0 !== DY ? DY : 0,
+        WY = null !== (FY = null === QY || void 0 === QY ? void 0 : QY.preview.named) && void 0 !== FY && FY,
+        EY = (0, NY.useMemo)((() => {
+          return null === QY ? null : {
+            flames: (YY = oY, rY = WY, Array.from({
+              length: 26 + 6 * YY + (rY ? 20 : 0)
+            }, ((YY, rY) => {
+              const DY = rY < 6,
+                FY = Math.random() * Math.PI * 2,
+                AY = DY ? 5 + 3 * Math.random() : 6 + Math.random() ** 1.3 * 8,
+                IY = Math.cos(FY) * AY,
+                RY = Math.sin(FY) * AY - 2 - 3 * Math.random(),
+                OY = Math.random(),
+                [gY, aY, vY] = DY ? ["var(--ember-glow)", .8 + .2 * Math.random(), 1100 + 200 * Math.random()] : OY < .15 ? ["#fff6c2", .3 + .2 * Math.random(), 350 + 150 * Math.random()] : OY < .45 ? ["var(--tier)", .35 + .45 * Math.random(), 500 + 300 * Math.random()] : [OY < .7 ? "var(--ember)" : "var(--ember-glow)", .35 + .5 * Math.random(), 500 + 300 * Math.random()];
+              return {
+                "--c": gY,
+                "--x0": `${(.15*IY).toFixed(2)}rem`,
+                "--y0": `${(.15*RY).toFixed(2)}rem`,
+                "--x": `${IY.toFixed(2)}rem`,
+                "--y": `${RY.toFixed(2)}rem`,
+                "--spin": `${Math.round(360*(Math.random()-.5))}deg`,
+                "--size": `${aY.toFixed(2)}rem`,
+                "--duration": `${Math.round(vY)}ms`,
+                "--delay": `${Math.round(80*Math.random())}ms`
+              }
+            }))),
+            sparks: gF(oY, WY)
+          };
+          var YY, rY
+        }), [null === QY || void 0 === QY ? void 0 : QY.id]);
+      if (!gY.enabled) return null;
+      const mY = gY.preview,
+        VY = gY.arriving,
+        SY = null !== VY && !VY.sameSword,
+        lY = null !== mY && (0, cA.jsx)(lA.c, {
+          itemName: mY.baseSword,
+          amount: 0,
+          enchantmentTier: mY.enchantmentTier
+        });
+      return (0, cA.jsx)(hA.e, {
+        show: gY.open,
+        close: OY.dismiss,
+        togglePointerLock: !1,
+        className: "SkyblockSkillsOverlay",
+        children: (0, cA.jsxs)("section", {
+          className: "SkyblockSkillsPanel SkyblockForgePanel",
+          role: "dialog",
+          "aria-modal": "true",
+          "aria-labelledby": "skyblockForgeTitle",
+          tabIndex: -1,
+          ref: vY,
+          onKeyDown: JA,
+          children: [(0, cA.jsx)("div", {
+            className: "SkyblockForgeEmbers",
+            "aria-hidden": "true",
+            children: tI.map(((YY, rY) => (0, cA.jsx)("span", {
+              style: YY
+            }, rY)))
+          }), (0, cA.jsxs)("header", {
+            className: "SkyblockSkillsHeader",
+            children: [(0, cA.jsxs)("div", {
+              children: [(0, cA.jsx)("h2", {
+                id: "skyblockForgeTitle",
+                children: aY("skyblockGame:forgeTitle")
+              }), (0, cA.jsx)("p", {
+                children: aY("skyblockGame:forgeIntro")
+              })]
+            }), (0, cA.jsx)(dA.k, {
+              onClick: OY.dismiss
+            })]
+          }), (0, cA.jsxs)("div", {
+            className: "SkyblockForgeBody",
+            children: [(0, cA.jsx)("div", {
+              ref: uY,
+              className: EA()("SkyblockForgeSlots", {
+                Locked: null !== QY
+              }),
+              children: gY.slots.map((YY => (0, cA.jsxs)("div", {
+                className: "SkyblockForgeSlot",
+                children: [(0, cA.jsx)("h3", {
+                  children: YY.label
+                }), (0, cA.jsx)("div", {
+                  className: "SkyblockForgeParts",
+                  children: YY.parts.map((rY => (0, cA.jsx)("button", {
+                    type: "button",
+                    className: EA()("SkyblockForgePart", {
+                      Selected: rY.selected,
+                      Missing: rY.placeholder
+                    }),
+                    disabled: rY.placeholder,
+                    title: rY.placeholder ? aY("skyblockGame:forgePickParts") : rY.itemName,
+                    "aria-pressed": rY.selected,
+                    onClick: () => {
+                      OY.select(YY.kind, rY.material)
+                    },
+                    children: (0, cA.jsx)(lA.c, {
+                      itemName: rY.itemName,
+                      amount: rY.owned
+                    })
+                  }, rY.material)))
+                })]
+              }, YY.kind)))
+            }), (0, cA.jsxs)("div", {
+              className: EA()("SkyblockForgeAnvil", {
+                Named: null === mY || void 0 === mY ? void 0 : mY.named
+              }),
+              style: {
+                "--tier": null === mY ? "transparent" : AY.nb[mY.enchantmentTier]
+              },
+              children: [(0, cA.jsxs)("div", {
+                className: EA()("SkyblockForgeAltar", {
+                  Forging: null !== QY
+                }),
+                style: null === QY ? void 0 : LI,
+                children: [(0, cA.jsxs)("div", {
+                  className: EA()("SkyblockForgeMount", {
+                    Arrive: null !== VY
+                  }),
+                  children: [null === mY && (0, cA.jsx)("div", {
+                    className: "SkyblockForgeSword Unformed",
+                    children: (0, cA.jsx)(lA.c, {
+                      itemName: gY.unformedSword,
+                      amount: 0
+                    })
+                  }), null !== mY && (0, cA.jsx)("div", {
+                    className: "SkyblockForgeGlow"
+                  }), null !== mY && null === QY && (0, cA.jsx)("div", {
+                    ref: iY,
+                    className: "SkyblockForgeFloat",
+                    children: (0, cA.jsx)("div", {
+                      className: "SkyblockForgeSword",
+                      children: lY
+                    })
+                  }), null !== mY && (0, cA.jsx)("div", {
+                    className: "SkyblockForgeAura",
+                    "aria-hidden": "true",
+                    children: OF.map(((YY, rY) => (0, cA.jsx)("span", {
+                      className: EA()({
+                        Rune: "" !== YY.rune
+                      }),
+                      style: YY.style,
+                      children: YY.rune
+                    }, rY)))
+                  }), null !== QY && null !== EY && (0, cA.jsxs)(cA.Fragment, {
+                    children: [(0, cA.jsx)("div", {
+                      className: "SkyblockForgeFlash"
+                    }), (0, cA.jsx)("div", {
+                      className: "SkyblockForgeFlames",
+                      children: EY.flames.map(((YY, rY) => (0, cA.jsx)("span", {
+                        style: YY
+                      }, rY)))
+                    }), (0, cA.jsx)("div", {
+                      className: "SkyblockForgeSettle",
+                      style: yY.current,
+                      children: (0, cA.jsx)("div", {
+                        className: "SkyblockForgeSword",
+                        children: lY
+                      })
+                    }), (0, cA.jsx)("div", {
+                      className: "SkyblockForgeHitFlash"
+                    }), (0, cA.jsx)("div", {
+                      className: "SkyblockForgeShock"
+                    }), (oY >= 4 || WY) && (0, cA.jsx)("div", {
+                      className: "SkyblockForgeShock Echo"
+                    }), (0, cA.jsx)("div", {
+                      className: "SkyblockForgeSparks",
+                      children: EY.sparks.map(((YY, rY) => (0, cA.jsx)("span", {
+                        style: YY
+                      }, rY)))
+                    }), (0, cA.jsx)("div", {
+                      className: "SkyblockForgeSwing"
+                    })]
+                  })]
+                }), (0, cA.jsx)("p", {
+                  className: EA()("SkyblockForgeStatus", null === (IY = gY.status) || void 0 === IY ? void 0 : IY.tone),
+                  children: null === (RY = gY.status) || void 0 === RY ? void 0 : RY.text
+                })]
+              }), null === mY && (0, cA.jsx)("p", {
+                className: EA()("SkyblockForgeName Waiting", {
+                  ArriveText: SY
+                }),
+                children: aY(gY.anyParts ? "skyblockGame:forgePickToPreview" : "skyblockGame:forgePickParts")
+              }), null !== mY && (0, cA.jsx)("h3", {
+                ref: sY,
+                className: EA()("SkyblockForgeName", {
+                  ArriveText: SY
+                }),
+                title: mY.name,
+                children: mY.name
+              }), (null === mY || void 0 === mY ? void 0 : mY.named) && (0, cA.jsx)("span", {
+                className: "SkyblockForgeSecret",
+                children: aY("skyblockGame:forgeSecret")
+              }), (0, cA.jsxs)(dA.p, {
+                className: "SkyblockForgeButton",
+                disabled: !gY.canForge,
+                title: null === mY ? void 0 : aY("skyblockGame:forgeCoalOwned", {
+                  owned: String(gY.coalOwned)
+                }),
+                onClick: () => {
+                  yY.current = function(YY) {
+                    const rY = null === YY ? "none" : getComputedStyle(YY).transform,
+                      DY = new DOMMatrixReadOnly("none" === rY ? void 0 : rY);
+                    return {
+                      "--settle-y": `${DY.f.toFixed(2)}px`,
+                      "--settle-turn": `${(180*Math.atan2(DY.b,DY.a)/Math.PI).toFixed(2)}deg`
+                    }
+                  }(iY.current), uF(), OY.forge(!window.matchMedia("(prefers-reduced-motion: reduce)").matches)
+                },
+                children: [aY("skyblockGame:forgeButton"), null !== mY && (0, cA.jsxs)("span", {
+                  className: EA()("SkyblockForgeCost", {
+                    Short: mY.coalShort
+                  }),
+                  children: [(0, cA.jsx)("span", {
+                    className: "SkyblockForgeCoal",
+                    children: (0, cA.jsx)(lA.c, {
+                      itemName: UD.d,
+                      amount: 0
+                    })
+                  }), mY.coalCost]
+                })]
+              })]
+            }), (0, cA.jsxs)("div", {
+              className: EA()("SkyblockForgeDetails", {
+                Named: null === mY || void 0 === mY ? void 0 : mY.named
+              }),
+              children: [(0, cA.jsx)("p", {
+                className: EA()("SkyblockForgeLore", {
+                  ArriveText: SY
+                }),
+                title: null === mY || void 0 === mY ? void 0 : mY.lore,
+                children: null === mY || void 0 === mY ? void 0 : mY.lore
+              }), (0, cA.jsxs)("dl", {
+                className: EA()("SkyblockForgeStats", {
+                  ArriveText: SY
+                }),
+                children: [null === mY && UI.map((YY => (0, cA.jsxs)("div", {
+                  className: "SkyblockForgeStat Empty",
+                  children: [(0, cA.jsx)("dt", {
+                    children: aY(YY)
+                  }), (0, cA.jsx)("dd", {
+                    children: "\u2013"
+                  })]
+                }, YY))), null === mY || void 0 === mY ? void 0 : mY.stats.map((YY => (0, cA.jsxs)("div", {
+                  className: EA()("SkyblockForgeStat", {
+                    Better: YY.better
+                  }),
+                  children: [(0, cA.jsx)("dt", {
+                    children: YY.label
+                  }), (0, cA.jsx)("dd", {
+                    children: YY.value
+                  })]
+                }, YY.label)))]
+              }), (0, cA.jsx)("ul", {
+                className: EA()("SkyblockForgeEffects", {
+                  ArriveText: SY
+                }),
+                children: null === mY || void 0 === mY ? void 0 : mY.effects.map((YY => (0, cA.jsx)("li", {
+                  children: YY
+                }, YY)))
+              })]
+            })]
+          })]
+        })
+      })
+    }
+    const DR = "Doom Rivet",
+      FR = "Doom Crest";
+
+    function AR(YY) {
+      let {
+        itemName: rY,
+        amount: DY,
+        owned: FY
+      } = YY;
+      return (0, cA.jsxs)("span", {
+        className: EA()("SkyblockSmugglerPrice", {
+          Short: DY > FY
+        }),
+        children: [(0, cA.jsx)("span", {
+          className: "SkyblockSmugglerPriceIcon",
+          children: (0, cA.jsx)(lA.c, {
+            itemName: rY,
+            amount: 0
+          })
+        }), (0, cA.jsx)("span", {
+          children: DY
+        })]
+      })
+    }
+
+    function IR(YY) {
+      return YY.justBought ? "skyblockGame:smugglerJustBought" : YY.soldOut ? "skyblockGame:smugglerSoldOut" : "skyblockGame:smugglerBuy"
+    }
+
+    function RR(YY) {
+      let {
+        deal: rY,
+        view: DY,
+        buy: FY
+      } = YY;
+      const {
+        t: AY
+      } = (0, NA.C)();
+      return (0, cA.jsxs)("div", {
+        className: EA()("SkyblockSmugglerPocket", {
+          Bought: rY.justBought,
+          Unaffordable: !rY.affordable,
+          SoldOut: rY.soldOut && !rY.justBought
+        }),
+        children: [(0, cA.jsx)("span", {
+          className: "SkyblockSmugglerBuckle",
+          "aria-hidden": "true"
+        }), (0, cA.jsxs)("div", {
+          className: "SkyblockSmugglerGoods",
+          children: [(0, cA.jsx)(lA.c, {
+            itemName: rY.itemName,
+            amount: 0,
+            enchantmentTier: rY.enchantmentTier
+          }), rY.amount > 1 && (0, cA.jsx)("span", {
+            className: "SkyblockSmugglerAmount",
+            children: AY("skyblockGame:smugglerAmount", {
+              amount: rY.amount
+            })
+          })]
+        }), (0, cA.jsx)("h3", {
+          children: rY.displayName
+        }), (0, cA.jsxs)("div", {
+          className: "SkyblockSmugglerDeal",
+          children: [(0, cA.jsxs)("div", {
+            className: "SkyblockSmugglerPrices",
+            children: [rY.rivets > 0 && (0, cA.jsx)(AR, {
+              itemName: DR,
+              amount: rY.rivets,
+              owned: DY.rivetsOwned
+            }), rY.crests > 0 && (0, cA.jsx)(AR, {
+              itemName: FR,
+              amount: rY.crests,
+              owned: DY.crestsOwned
+            })]
+          }), (0, cA.jsx)(dA.f, {
+            className: "SkyblockSmugglerBuy",
+            disabled: rY.soldOut || !rY.affordable || DY.pending,
+            onClick: () => {
+              FY(rY.slot)
+            },
+            children: AY(IR(rY))
+          })]
+        })]
+      }, rY.justBought ? DY.boughtCount : 0)
+    }
+
+    function OR(YY) {
+      let {
+        controller: rY
+      } = YY;
+      const DY = (0, BA.k)(QF, rY.getSnapshot()),
+        {
+          t: FY
+        } = (0, NA.C)(),
+        AY = MA();
+      return DY.enabled ? (0, cA.jsx)(hA.e, {
+        show: DY.open,
+        close: rY.dismiss,
+        togglePointerLock: !1,
+        className: "SkyblockSkillsOverlay",
+        children: (0, cA.jsxs)("section", {
+          className: "SkyblockSkillsPanel SkyblockSmugglerPanel",
+          role: "dialog",
+          "aria-modal": "true",
+          "aria-labelledby": "skyblockSmugglerTitle",
+          tabIndex: -1,
+          ref: AY,
+          onKeyDown: JA,
+          children: [(0, cA.jsx)("span", {
+            className: "SkyblockSmugglerStrap Left",
+            "aria-hidden": "true"
+          }), (0, cA.jsx)("span", {
+            className: "SkyblockSmugglerStrap Right",
+            "aria-hidden": "true"
+          }), (0, cA.jsxs)("header", {
+            className: "SkyblockSmugglerFlap",
+            children: [(0, cA.jsxs)("div", {
+              children: [(0, cA.jsx)("h2", {
+                id: "skyblockSmugglerTitle",
+                children: FY("skyblockGame:smugglerTitle")
+              }), (0, cA.jsx)("p", {
+                children: FY("skyblockGame:smugglerIntro")
+              })]
+            }), (0, cA.jsxs)("div", {
+              className: "SkyblockSmugglerFlapActions",
+              children: [(0, cA.jsxs)("div", {
+                className: "SkyblockSmugglerWallet",
+                children: [(0, cA.jsx)(AR, {
+                  itemName: DR,
+                  amount: DY.rivetsOwned,
+                  owned: DY.rivetsOwned
+                }), (0, cA.jsx)(AR, {
+                  itemName: FR,
+                  amount: DY.crestsOwned,
+                  owned: DY.crestsOwned
+                })]
+              }), (0, cA.jsx)(dA.k, {
+                onClick: rY.dismiss
+              })]
+            })]
+          }), (0, cA.jsx)("div", {
+            className: "SkyblockSmugglerPockets",
+            children: DY.deals.map((YY => (0, cA.jsx)(RR, {
+              deal: YY,
+              view: DY,
+              buy: rY.buy
+            }, YY.slot)))
+          }), (0, cA.jsxs)("footer", {
+            className: "SkyblockSmugglerBedroll",
+            children: [(0, cA.jsx)("span", {
+              className: "SkyblockSmugglerRotates",
+              children: DY.rotatesText
+            }), null !== DY.status && (0, cA.jsx)("span", {
+              className: EA()("SkyblockSmugglerStatus", DY.status.tone),
+              children: DY.status.text
+            })]
+          })]
+        })
+      }) : null
+    }
+
+    function gR(YY) {
+      let {
+        phase: rY,
+        className: DY
+      } = YY;
+      return (0, cA.jsx)("span", {
+        className: EA()("SkyblockMoon", `Moon-${rY}`, DY),
+        "aria-hidden": "true"
+      })
+    }
+
+    function aR(YY) {
+      let {
+        controller: rY
+      } = YY;
+      const DY = (0, BA.k)(EF, rY.getSnapshot()),
+        {
+          t: FY
+        } = (0, NA.C)();
+      return DY.enabled ? (0, cA.jsx)(VA.e, {
+        placement: "statBars",
+        children: (0, cA.jsx)("button", {
+          type: "button",
+          tabIndex: -1,
+          className: EA()("SkyblockPassageChip", DY.open && "Open"),
+          "aria-label": FY("skyblockGame:passageChipLabel", {
+            phase: DY.phaseName
+          }),
+          title: FY("skyblockGame:passageChipLabel", {
+            phase: DY.phaseName
+          }),
+          onMouseDown: YY => {
+            YY.preventDefault()
+          },
+          onClick: rY.toggle,
+          children: (0, cA.jsx)(gR, {
+            phase: DY.phase
+          }, DY.phase)
+        })
+      }) : null
+    }
+
+    function vR(YY) {
+      let {
+        fish: rY
+      } = YY;
+      return (0, cA.jsxs)("li", {
+        className: "SkyblockPassageFish",
+        children: [(0, cA.jsx)("span", {
+          className: "SkyblockPassageFishIcon",
+          children: (0, cA.jsx)(lA.c, {
+            itemName: rY.itemName,
+            amount: 0
+          })
+        }), (0, cA.jsxs)("span", {
+          className: "SkyblockPassageFishText",
+          children: [(0, cA.jsx)("span", {
+            className: "SkyblockPassageFishName",
+            children: rY.displayName
+          }), (0, cA.jsx)("span", {
+            className: "SkyblockPassageFishWhere",
+            children: rY.where
+          })]
+        })]
+      })
+    }
+
+    function uR(YY) {
+      let {
+        controller: rY
+      } = YY;
+      const DY = (0, BA.k)(EF, rY.getSnapshot()),
+        {
+          t: FY
+        } = (0, NA.C)(),
+        AY = MA();
+      return DY.enabled ? (0, cA.jsx)(hA.e, {
+        show: DY.open,
+        close: rY.dismiss,
+        togglePointerLock: !1,
+        className: "SkyblockSkillsOverlay",
+        children: (0, cA.jsxs)("section", {
+          className: "SkyblockSkillsPanel SkyblockPassagePanel",
+          role: "dialog",
+          "aria-modal": "true",
+          "aria-labelledby": "skyblockPassageTitle",
+          tabIndex: -1,
+          ref: AY,
+          onKeyDown: JA,
+          children: [(0, cA.jsxs)("header", {
+            className: "SkyblockPassageHeader",
+            children: [(0, cA.jsx)(gR, {
+              phase: DY.phase,
+              className: "SkyblockPassageHeaderMoon"
+            }), (0, cA.jsxs)("div", {
+              children: [(0, cA.jsx)("h2", {
+                id: "skyblockPassageTitle",
+                children: FY("skyblockGame:passageTitle")
+              }), (0, cA.jsx)("p", {
+                className: "SkyblockPassagePhase",
+                children: DY.phaseName
+              })]
+            }), (0, cA.jsx)(dA.k, {
+              padIgnore: !0,
+              onClick: rY.dismiss
+            })]
+          }), (0, cA.jsx)("p", {
+            className: "SkyblockPassageIntro",
+            children: FY("skyblockGame:passageIntro")
+          }), (0, cA.jsxs)("div", {
+            className: "SkyblockPassageBody",
+            children: [(0, cA.jsxs)("section", {
+              className: "SkyblockPassageColumn",
+              children: [(0, cA.jsx)("h3", {
+                children: FY("skyblockGame:passageVisiting")
+              }), (0, cA.jsx)("ul", {
+                className: "SkyblockPassageList",
+                children: DY.visitors.map((YY => (0, cA.jsx)(vR, {
+                  fish: YY
+                }, YY.itemName)))
+              })]
+            }), (0, cA.jsxs)("section", {
+              className: "SkyblockPassageColumn",
+              children: [null !== DY.resting && (0, cA.jsxs)(cA.Fragment, {
+                children: [(0, cA.jsx)("h3", {
+                  children: FY("skyblockGame:passageResting")
+                }), (0, cA.jsx)("ul", {
+                  className: "SkyblockPassageList Resting",
+                  children: (0, cA.jsx)(vR, {
+                    fish: DY.resting
+                  })
+                })]
+              }), (0, cA.jsxs)("p", {
+                className: "SkyblockPassageNext",
+                children: [(0, cA.jsx)(gR, {
+                  phase: DY.nextPhase
+                }), (0, cA.jsx)("span", {
+                  children: DY.next
+                })]
+              })]
+            })]
+          })]
+        })
+      }) : null
+    }
+
+    function sR() {
+      return (0, cA.jsx)("span", {
+        className: "SkyblockLampLightSparkle",
+        "aria-hidden": "true",
+        children: [0, 1, 2, 3, 4, 5].map((YY => (0, cA.jsx)("i", {
+          style: {
+            "--sparkle-index": YY
+          }
+        }, YY)))
+      })
+    }
+
+    function iR(YY) {
+      var rY;
+      let {
+        charm: DY,
+        view: FY,
+        controller: AY
+      } = YY;
+      const {
+        t: IY
+      } = (0, NA.C)(), RY = FY.shop, OY = (null === (rY = FY.sparkle) || void 0 === rY ? void 0 : rY.id) === DY.id;
+      return (0, cA.jsxs)("li", {
+        className: EA()("SkyblockLampLightCharm", DY.owned && "Owned", DY.socketed && "Socketed"),
+        children: [OY && (0, cA.jsx)(sR, {}, FY.sparkle.count), (0, cA.jsx)("h4", {
+          children: DY.name
+        }), (0, cA.jsx)("p", {
+          className: "SkyblockLampLightEffect",
+          children: DY.effect
+        }), (0, cA.jsx)("ul", {
+          className: "SkyblockLampLightOdds",
+          children: DY.lines.map((YY => (0, cA.jsxs)("li", {
+            className: EA()("SkyblockLampLightOddsLine", "better" === YY.tone ? "Better" : "worse" === YY.tone ? "Worse" : "Same"),
+            children: [(0, cA.jsx)("span", {
+              className: "Before",
+              children: YY.before
+            }), (0, cA.jsx)("span", {
+              className: "Arrow",
+              children: "\u2192"
+            }), (0, cA.jsx)("span", {
+              className: "After",
+              children: YY.after
+            })]
+          }, YY.label)))
+        }), (0, cA.jsx)("div", {
+          className: "SkyblockLampLightCharmAction",
+          children: DY.owned ? DY.socketed ? (0, cA.jsxs)(cA.Fragment, {
+            children: [(0, cA.jsx)("span", {
+              className: "SkyblockLampLightBadge",
+              children: IY("skyblockGame:lampLightSocketed")
+            }), (0, cA.jsx)(dA.J, {
+              disabled: !FY.canCommand,
+              ariaLabel: IY("skyblockGame:lampLightRemoveLabel", {
+                charm: DY.name
+              }),
+              onClick: () => {
+                AY.socket(null)
+              },
+              children: IY("skyblockGame:lampLightRemove")
+            })]
+          }) : (0, cA.jsx)(dA.f, {
+            disabled: !FY.canCommand || !RY.heldRod,
+            ariaLabel: IY("skyblockGame:lampLightSocketLabel", {
+              charm: DY.name
+            }),
+            onClick: () => {
+              AY.socket(DY.id)
+            },
+            children: IY("skyblockGame:lampLightSocket")
+          }) : (0, cA.jsx)(dA.f, {
+            disabled: !FY.canCommand || !DY.affordable,
+            ariaLabel: IY("skyblockGame:lampLightBuyLabel", {
+              item: DY.name,
+              cost: DY.cost
+            }),
+            onClick: () => {
+              AY.buy(DY.id)
+            },
+            children: DY.cost
+          })
+        })]
+      })
+    }
+
+    function yR(YY) {
+      var rY;
+      let {
+        tint: DY,
+        view: FY,
+        controller: AY
+      } = YY;
+      const {
+        t: IY
+      } = (0, NA.C)();
+      return (0, cA.jsxs)("li", {
+        className: EA()("SkyblockLampLightTint", DY.wearing && "Wearing"),
+        style: {
+          "--tint-colour": DY.colour
+        },
+        children: [(null === (rY = FY.sparkle) || void 0 === rY ? void 0 : rY.id) === DY.id && (0, cA.jsx)(sR, {}, FY.sparkle.count), (0, cA.jsx)("span", {
+          className: "SkyblockLampLightSwatch",
+          "aria-hidden": "true"
+        }), (0, cA.jsx)("span", {
+          className: "SkyblockLampLightTintName",
+          children: DY.name
+        }), DY.wearing ? (0, cA.jsx)("span", {
+          className: "SkyblockLampLightBadge",
+          children: IY("skyblockGame:lampLightWearing")
+        }) : (0, cA.jsx)(dA.f, {
+          disabled: !FY.canCommand || !DY.owned && !DY.affordable,
+          ariaLabel: DY.owned ? IY("skyblockGame:lampLightWearLabel", {
+            tint: DY.name
+          }) : IY("skyblockGame:lampLightBuyLabel", {
+            item: DY.name,
+            cost: DY.cost
+          }),
+          onClick: () => {
+            DY.owned ? AY.wearTint(DY.id) : AY.buy(DY.id)
+          },
+          children: DY.owned ? IY("skyblockGame:lampLightWear") : DY.cost
+        })]
+      })
+    }
+
+    function QR(YY) {
+      let {
+        controller: rY
+      } = YY;
+      const DY = (0, BA.k)(CF, rY.getSnapshot()),
+        {
+          t: FY
+        } = (0, NA.C)(),
+        AY = DY.shop;
+      return (0, cA.jsxs)("div", {
+        className: "SkyblockLampLightTab",
+        children: [(0, cA.jsxs)("div", {
+          className: "SkyblockLampLightTop",
+          children: [(0, cA.jsx)("span", {
+            className: "SkyblockLampLightBalance",
+            children: DY.balance
+          }), (0, cA.jsxs)("button", {
+            type: "button",
+            role: "switch",
+            "aria-checked": DY.releasing,
+            className: EA()("SkyblockLampLightSwitch", DY.releasing && "On"),
+            disabled: DY.releasing ? "ready" !== DY.status : !DY.canCommand,
+            onClick: () => {
+              rY.setRelease(!DY.releasing)
+            },
+            children: [(0, cA.jsx)("span", {
+              className: "SkyblockLampLightSwitchTrack",
+              "aria-hidden": "true",
+              children: (0, cA.jsx)("span", {
+                className: "SkyblockLampLightSwitchKnob"
+              })
+            }), FY("skyblockGame:lampLightRelease")]
+          }), (0, cA.jsx)("span", {
+            className: "SkyblockLampLightHint",
+            children: FY("skyblockGame:lampLightReleaseHint")
+          })]
+        }), null !== DY.notice && (0, cA.jsx)("p", {
+          className: "SkyblockLampLightNotice",
+          role: "status",
+          children: DY.notice
+        }), null !== AY && (0, cA.jsxs)(cA.Fragment, {
+          children: [(0, cA.jsxs)("div", {
+            className: "SkyblockLampLightSectionHead",
+            children: [(0, cA.jsx)("h3", {
+              children: FY("skyblockGame:lampLightCharms")
+            }), (0, cA.jsx)("span", {
+              className: "SkyblockLampLightOddsFor",
+              children: AY.oddsFor
+            }), (0, cA.jsx)("div", {
+              className: "SkyblockLampLightSituations",
+              role: "group",
+              children: ["open", "bloom"].map((YY => (0, cA.jsx)("button", {
+                type: "button",
+                "aria-pressed": DY.situation === YY,
+                className: EA()("SkyblockLampLightSituation", DY.situation === YY && "Selected"),
+                onClick: () => {
+                  rY.setSituation(YY)
+                },
+                children: FY("open" === YY ? "skyblockGame:lampLightOpenWater" : "skyblockGame:lampLightInBloom")
+              }, YY)))
+            })]
+          }), !AY.heldRod && (0, cA.jsx)("p", {
+            className: "SkyblockLampLightHoldRod",
+            children: FY("skyblockGame:lampLightHoldRod")
+          }), (0, cA.jsx)("ul", {
+            className: "SkyblockLampLightCharms",
+            children: AY.charms.map((YY => (0, cA.jsx)(iR, {
+              charm: YY,
+              view: DY,
+              controller: rY
+            }, YY.id)))
+          }), (0, cA.jsx)("div", {
+            className: "SkyblockLampLightSectionHead",
+            children: (0, cA.jsx)("h3", {
+              children: FY("skyblockGame:lampLightTints")
+            })
+          }), (0, cA.jsxs)("ul", {
+            className: "SkyblockLampLightTints",
+            children: [(0, cA.jsxs)("li", {
+              className: EA()("SkyblockLampLightTint", "Islands", AY.wearingIslandColours && "Wearing"),
+              children: [(0, cA.jsx)("span", {
+                className: "SkyblockLampLightSwatch",
+                "aria-hidden": "true"
+              }), (0, cA.jsx)("span", {
+                className: "SkyblockLampLightTintName",
+                children: FY("skyblockGame:lampLightIslandColours")
+              }), AY.wearingIslandColours ? (0, cA.jsx)("span", {
+                className: "SkyblockLampLightBadge",
+                children: FY("skyblockGame:lampLightWearing")
+              }) : (0, cA.jsx)(dA.f, {
+                disabled: !DY.canCommand,
+                ariaLabel: FY("skyblockGame:lampLightWearLabel", {
+                  tint: FY("skyblockGame:lampLightIslandColours")
+                }),
+                onClick: () => {
+                  rY.wearTint(null)
+                },
+                children: FY("skyblockGame:lampLightWear")
+              })]
+            }), AY.tints.map((YY => (0, cA.jsx)(yR, {
+              tint: YY,
+              view: DY,
+              controller: rY
+            }, YY.id)))]
+          })]
+        })]
+      })
+    }
+
+    function oR(YY) {
+      let {
+        controller: rY
+      } = YY;
+      const DY = (0, BA.k)(CF, rY.getSnapshot()),
+        {
+          t: FY
+        } = (0, NA.C)();
+      return DY.releasing ? (0, cA.jsx)(VA.e, {
+        children: (0, cA.jsxs)("button", {
+          type: "button",
+          className: "SkyblockLampLightPill",
+          onClick: () => {
+            rY.setRelease(!1)
+          },
+          children: [(0, cA.jsx)("span", {
+            className: "SkyblockLampLightPillOrb",
+            "aria-hidden": "true"
+          }), (0, cA.jsxs)("span", {
+            className: "SkyblockLampLightPillText SmallTextBold",
+            children: [FY("skyblockGame:lampLightReleasing"), " \xb7 ", DY.balance]
+          }), (0, cA.jsx)("span", {
+            className: "SkyblockLampLightPillStop SmallTextBold",
+            children: FY("skyblockGame:lampLightKeepCatches")
+          }), null !== DY.gained && (0, cA.jsx)("span", {
+            className: "SkyblockLampLightPillGain SmallTextBold",
+            "aria-hidden": "true",
+            children: DY.gained.text
+          }, DY.gained.count)]
+        })
+      }) : null
+    }
+
+    function WR(YY) {
+      let {
+        island: rY,
+        view: DY,
+        aim: FY
+      } = YY;
+      const {
+        t: AY
+      } = (0, NA.C)(), IY = rY.featuredFish;
+      return (0, cA.jsxs)("li", {
+        className: EA()("SkyblockKeepersChairIsland", `Island-${rY.id}`, rY.favoured && "Aimed", !rY.relit && "Dark"),
+        children: [(0, cA.jsx)("h3", {
+          children: rY.name
+        }), rY.relit && null !== IY ? (0, cA.jsxs)("div", {
+          className: "SkyblockKeepersChairNotice",
+          children: [(0, cA.jsx)("span", {
+            className: "SkyblockKeepersChairNoticeLabel",
+            children: AY("skyblockGame:keepersChairTideNotice")
+          }), (0, cA.jsx)("span", {
+            className: "SkyblockKeepersChairFish",
+            children: (0, cA.jsx)(lA.c, {
+              itemName: IY.itemName,
+              amount: 0
+            })
+          }), (0, cA.jsx)("span", {
+            className: "SkyblockKeepersChairFishName",
+            children: IY.displayName
+          })]
+        }) : (0, cA.jsx)("div", {
+          className: "SkyblockKeepersChairNotice",
+          children: (0, cA.jsx)("span", {
+            className: "SkyblockKeepersChairDarkLens",
+            children: AY("skyblockGame:keepersChairDark")
+          })
+        }), rY.relit && (rY.favoured ? (0, cA.jsx)("span", {
+          className: "SkyblockKeepersChairAimedBadge",
+          children: AY("skyblockGame:keepersChairAimed")
+        }) : (0, cA.jsx)(dA.f, {
+          className: "SkyblockKeepersChairAim",
+          disabled: !DY.canAim,
+          ariaLabel: AY("skyblockGame:keepersChairAimLabel", {
+            island: rY.name
+          }),
+          onClick: () => {
+            FY(rY.id)
+          },
+          children: AY("skyblockGame:keepersChairAim")
+        }))]
+      }, rY.favoured ? DY.aimedCount : 0)
+    }
+
+    function ER(YY) {
+      let {
+        controller: rY,
+        lampLight: DY
+      } = YY;
+      const FY = (0, BA.k)(eF, rY.getSnapshot()),
+        AY = (0, BA.k)(CF, DY.getSnapshot()),
+        [IY, RY] = (0, NY.useState)("lamp"),
+        {
+          t: OY
+        } = (0, NA.C)(),
+        gY = MA();
+      if (!FY.enabled) return null;
+      const aY = "light" === IY && AY.enabled;
+      return (0, cA.jsx)(hA.e, {
+        show: FY.open,
+        close: rY.dismiss,
+        togglePointerLock: !1,
+        className: "SkyblockSkillsOverlay",
+        children: (0, cA.jsxs)("section", {
+          className: EA()("SkyblockSkillsPanel", "SkyblockKeepersChairPanel", aY && "OnLampLight"),
+          role: "dialog",
+          "aria-modal": "true",
+          "aria-labelledby": "skyblockKeepersChairTitle",
+          tabIndex: -1,
+          ref: gY,
+          onKeyDown: JA,
+          children: [(0, cA.jsxs)("header", {
+            className: "SkyblockKeepersChairHeader",
+            children: [(0, cA.jsxs)("div", {
+              children: [(0, cA.jsx)("h2", {
+                id: "skyblockKeepersChairTitle",
+                children: OY("skyblockGame:keepersChairTitle")
+              }), (0, cA.jsx)("p", {
+                children: OY(aY ? "skyblockGame:keeperWickLampLightWelcome" : "skyblockGame:keeperWickKeepersChairWelcome")
+              })]
+            }), (0, cA.jsx)(dA.k, {
+              padIgnore: !0,
+              ariaLabel: OY("skyblockGame:keepersChairClose"),
+              onClick: rY.dismiss
+            })]
+          }), AY.enabled && (0, cA.jsx)("div", {
+            className: "SkyblockKeepersChairTabs",
+            role: "tablist",
+            "data-pad-tabs": "1",
+            children: ["lamp", "light"].map((YY => (0, cA.jsxs)("button", {
+              type: "button",
+              role: "tab",
+              "aria-selected": "light" === YY === aY,
+              "data-pad-tab": !0,
+              "data-pad-selected": "light" === YY === aY ? "true" : void 0,
+              className: EA()("SkyblockKeepersChairTab", "light" === YY === aY && "Selected"),
+              onClick: () => {
+                RY(YY)
+              },
+              children: [OY("lamp" === YY ? "skyblockGame:lampLightChairTab" : "skyblockGame:lampLightTab"), "light" === YY && (0, cA.jsx)("span", {
+                className: "SkyblockKeepersChairTabBalance",
+                children: AY.balance
+              })]
+            }, YY)))
+          }), aY ? (0, cA.jsx)(QR, {
+            controller: DY
+          }) : (0, cA.jsx)(mR, {
+            view: FY,
+            controller: rY
+          })]
+        })
+      })
+    }
+
+    function mR(YY) {
+      let {
+        view: rY,
+        controller: DY
+      } = YY;
+      const {
+        t: FY
+      } = (0, NA.C)();
+      return (0, cA.jsxs)(cA.Fragment, {
+        children: [(0, cA.jsx)("ul", {
+          className: "SkyblockKeepersChairIslands",
+          children: rY.islands.map((YY => (0, cA.jsx)(WR, {
+            island: YY,
+            view: rY,
+            aim: DY.aim
+          }, YY.id)))
+        }), null !== rY.almanac && (0, cA.jsxs)("div", {
+          className: "SkyblockKeepersChairAlmanac",
+          children: [(0, cA.jsx)("span", {
+            className: "SkyblockKeepersChairAlmanacLabel",
+            children: FY("skyblockGame:passageTitle")
+          }), (0, cA.jsxs)("span", {
+            className: "SkyblockKeepersChairAlmanacWeek",
+            children: [(0, cA.jsx)(gR, {
+              phase: rY.almanac.phase
+            }), rY.almanac.phaseName]
+          }), (0, cA.jsxs)("span", {
+            className: "SkyblockKeepersChairAlmanacWeek Next",
+            children: [(0, cA.jsx)(gR, {
+              phase: rY.almanac.nextPhase
+            }), rY.almanac.next]
+          })]
+        }), (0, cA.jsxs)("footer", {
+          className: "SkyblockKeepersChairFooter",
+          children: [(0, cA.jsx)("span", {
+            className: "SkyblockKeepersChairFavour",
+            children: FY("skyblockGame:keepersChairFavour")
+          }), rY.aimed && (0, cA.jsx)(dA.J, {
+            className: "SkyblockKeepersChairRest",
+            disabled: !rY.canAim,
+            onClick: () => {
+              DY.aim(null)
+            },
+            children: FY("skyblockGame:keepersChairRest")
+          })]
+        }), null !== rY.status && (0, cA.jsx)("p", {
+          className: EA()("SkyblockKeepersChairStatus", "refused" === rY.status.tone ? "Refused" : "Shines"),
+          role: "status",
+          children: rY.status.text
+        })]
+      })
+    }
+
+    function VR(YY) {
+      let {
+        controller: rY
+      } = YY;
+      const {
+        t: DY
+      } = (0, NA.C)(), FY = (0, BA.k)(BF, rY.getSnapshot());
+      if (!FY.enabled) return null;
+      const AY = FY.freshCount > 0 ? DY("skyblockGame:reachLogOpenNews", {
+        count: FY.freshCount
+      }) : DY("skyblockGame:reachLogOpen");
+      return (0, cA.jsx)(VA.e, {
+        placement: "statBars",
+        children: (0, cA.jsxs)("button", {
+          type: "button",
+          className: EA()("SkyblockReachLogButton", FY.freshCount > 0 && "HasNews", FY.pending && "Pending"),
+          "aria-label": AY,
+          title: AY,
+          onClick: rY.ask,
+          children: [FY.news && (0, cA.jsx)("span", {
+            className: "SkyblockReachLogPulse",
+            "aria-hidden": "true"
+          }, `pulse:${FY.newsToken}`), (0, cA.jsx)("span", {
+            className: EA()("SkyblockReachLogIcon", FY.news && "Jump"),
+            "aria-hidden": "true",
+            children: (0, cA.jsx)(lA.c, {
+              itemName: KF,
+              amount: 0
+            })
+          }, `icon:${FY.newsToken}`), FY.freshCount > 0 && (0, cA.jsx)("span", {
+            className: "SkyblockReachLogBadge",
+            children: FY.freshCount
+          })]
+        })
+      })
+    }
+
+    function SR(YY) {
+      let {
+        gift: rY
+      } = YY;
+      return (0, cA.jsx)("li", {
+        className: EA()("SkyblockRegularsGift", rY.given && "Given"),
+        children: rY.text
+      })
+    }
+
+    function lR(YY) {
+      let {
+        regular: rY
+      } = YY;
+      const {
+        t: DY
+      } = (0, NA.C)();
+      return (0, cA.jsxs)("li", {
+        className: EA()("SkyblockRegularsCard", rY.tagged ? "Tagged" : "Untagged", rY.resting && "Resting"),
+        children: [(0, cA.jsxs)("div", {
+          className: "SkyblockRegularsCardTop",
+          children: [(0, cA.jsx)("span", {
+            className: "SkyblockRegularsIcon",
+            title: rY.fishName,
+            children: (0, cA.jsx)(lA.c, {
+              itemName: rY.itemName,
+              amount: 0
+            })
+          }), (0, cA.jsxs)("div", {
+            className: "SkyblockRegularsNames",
+            children: [(0, cA.jsx)("h3", {
+              children: rY.name
+            }), (0, cA.jsx)("span", {
+              className: "SkyblockRegularsFish",
+              children: rY.fishName
+            })]
+          })]
+        }), (0, cA.jsx)("p", {
+          className: "SkyblockRegularsLine",
+          children: rY.line
+        }), (0, cA.jsxs)("p", {
+          className: "SkyblockRegularsStats",
+          children: [(0, cA.jsx)("span", {
+            className: "SkyblockRegularsSize",
+            children: rY.size
+          }), rY.tagged && (0, cA.jsx)("span", {
+            className: "SkyblockRegularsMeetings",
+            children: rY.resting ? DY("skyblockGame:regularsResting") : rY.meetings
+          })]
+        }), (0, cA.jsx)("p", {
+          className: "SkyblockRegularsChance",
+          children: rY.chance
+        }), (0, cA.jsx)("ul", {
+          className: "SkyblockRegularsGifts",
+          children: rY.gifts.map((YY => (0, cA.jsx)(SR, {
+            gift: YY
+          }, YY.text)))
+        }), rY.history.length > 0 && (0, cA.jsx)("ul", {
+          className: "SkyblockRegularsHistory",
+          children: rY.history.map(((YY, rY) => (0, cA.jsx)("li", {
+            children: YY
+          }, rY)))
+        })]
+      })
+    }
+
+    function TR(YY) {
+      let {
+        controller: rY,
+        island: DY
+      } = YY;
+      const {
+        t: FY
+      } = (0, NA.C)(), AY = (0, BA.k)(LF, rY.getSnapshot()), IY = AY.islands.find((YY => YY.id === DY));
+      if (!AY.enabled || void 0 === IY) return null;
+      const RY = FY("skyblockGame:regularsOpen");
+      return (0, cA.jsxs)("button", {
+        type: "button",
+        className: "SkyblockRegularsStrip",
+        "aria-label": RY,
+        title: RY,
+        onClick: () => {
+          rY.openIsland(DY)
+        },
+        children: [(0, cA.jsx)("span", {
+          className: "SkyblockRegularsStripTitle",
+          children: FY("skyblockGame:regularsTitle")
+        }), IY.regulars.map((YY => (0, cA.jsx)("span", {
+          className: EA()("SkyblockRegularsStripIcon", YY.tagged && "Tagged"),
+          title: YY.name,
+          children: (0, cA.jsx)(lA.c, {
+            itemName: YY.itemName,
+            amount: 0
+          })
+        }, YY.id)))]
+      })
+    }
+
+    function eR(YY) {
+      var rY;
+      let {
+        controller: DY
+      } = YY;
+      const FY = (0, BA.k)(LF, DY.getSnapshot()),
+        {
+          t: AY
+        } = (0, NA.C)(),
+        IY = MA();
+      if (!FY.enabled) return null;
+      const RY = null !== (rY = FY.islands.find((YY => YY.id === FY.selected))) && void 0 !== rY ? rY : null;
+      return (0, cA.jsx)(hA.e, {
+        show: FY.open,
+        close: DY.dismiss,
+        togglePointerLock: !1,
+        className: "SkyblockSkillsOverlay",
+        children: (0, cA.jsxs)("section", {
+          className: "SkyblockSkillsPanel SkyblockReachLogPanel SkyblockRegularsPanel",
+          role: "dialog",
+          "aria-modal": "true",
+          "aria-labelledby": "skyblockRegularsTitle",
+          tabIndex: -1,
+          ref: IY,
+          onKeyDown: JA,
+          children: [(0, cA.jsxs)("header", {
+            className: "SkyblockReachLogHeader",
+            children: [(0, cA.jsxs)("div", {
+              children: [(0, cA.jsx)("h2", {
+                id: "skyblockRegularsTitle",
+                children: AY("skyblockGame:regularsTitle")
+              }), (0, cA.jsx)("p", {
+                children: AY("skyblockGame:pimRegularsLedgerWelcome")
+              })]
+            }), (0, cA.jsx)(dA.k, {
+              padIgnore: !0,
+              onClick: DY.dismiss
+            })]
+          }), (0, cA.jsx)("nav", {
+            className: "SkyblockReachLogTabs",
+            role: "tablist",
+            "data-pad-tabs": "1",
+            children: FY.islands.map((YY => {
+              const rY = YY.id === FY.selected;
+              return (0, cA.jsx)("button", {
+                type: "button",
+                role: "tab",
+                "aria-selected": rY,
+                "data-pad-tab": !0,
+                "data-pad-selected": rY ? "true" : void 0,
+                className: EA()("SkyblockReachLogTab", `Island-${YY.id}`, rY && "Selected", YY.charm.given && "GoldPage"),
+                onClick: () => {
+                  DY.selectIsland(YY.id)
+                },
+                children: (0, cA.jsx)("span", {
+                  className: "SkyblockReachLogTabName",
+                  children: YY.name
+                })
+              }, YY.id)
+            }))
+          }), (0, cA.jsxs)("div", {
+            className: EA()("SkyblockRegularsPage", null !== RY && `Island-${RY.id}`),
+            role: "tabpanel",
+            children: [(0, cA.jsx)("p", {
+              className: "SkyblockRegularsHow",
+              children: AY("skyblockGame:regularsHow")
+            }), null !== RY && (0, cA.jsx)("ul", {
+              className: "SkyblockRegularsGrid",
+              children: RY.regulars.map((YY => (0, cA.jsx)(lR, {
+                regular: YY
+              }, YY.id)))
+            })]
+          }), null !== RY && (0, cA.jsx)("footer", {
+            className: "SkyblockRegularsFooter",
+            children: (0, cA.jsx)("span", {
+              className: EA()("SkyblockRegularsCharm", RY.charm.given && "Given"),
+              children: RY.charm.text
+            })
+          })]
+        })
+      })
+    }
+    const NR = [{
+        "--left": "12%",
+        "--tilt": "14deg",
+        "--duration": "11s",
+        "--delay": "-3s"
+      }, {
+        "--left": "62%",
+        "--tilt": "-10deg",
+        "--duration": "14s",
+        "--delay": "-9s"
+      }],
+      BR = Array.from({
+        length: 6
+      }, ((YY, rY) => ({
+        "--x": `${(88*(.618034*rY%1)).toFixed(1)}%`,
+        "--y": `${(10+37*rY%70).toFixed(1)}%`,
+        "--size": 7 + rY % 3 * 3 + "rem",
+        "--drift-x": 3 * (rY % 3 - 1) + "rem",
+        "--drift-y": 2 * (rY % 2 === 0 ? -1 : 1) + "rem",
+        "--duration": 14 + rY % 4 * 3 + "s",
+        "--delay": 2.5 * -rY + "s"
+      }))),
+      cR = Array.from({
+        length: 14
+      }, ((YY, rY) => ({
+        "--left": `${(3+94*((.618034*rY+.3)%1)).toFixed(1)}%`,
+        "--size": 4 + rY % 4 * 2 + "px",
+        "--sway": rY % 3 * 3 + 3 + "px",
+        "--duration": `${(8+7*rY%6*1.1).toFixed(1)}s`,
+        "--delay": `${(-1.73*rY%12).toFixed(2)}s`
+      }))),
+      KR = (0, NY.memo)((function(YY) {
+        let {
+          island: rY
+        } = YY;
+        return (0, cA.jsxs)("div", {
+          className: EA()("SkyblockReachLogDepths", null !== rY && `Island-${rY}`),
+          "aria-hidden": "true",
+          children: [NR.map(((YY, rY) => (0, cA.jsx)("span", {
+            className: "SkyblockReachLogShaft",
+            style: YY
+          }, `shaft${rY}`))), BR.map(((YY, rY) => (0, cA.jsx)("span", {
+            className: EA()("SkyblockReachLogMote", rY % 2 === 1 && "Violet"),
+            style: YY
+          }, `mote${rY}`))), cR.map(((YY, rY) => (0, cA.jsx)("span", {
+            className: "SkyblockReachLogBubble",
+            style: YY
+          }, `bubble${rY}`)))]
+        })
+      })),
+      HR = 100;
+
+    function zR(YY) {
+      let {
+        view: rY
+      } = YY;
+      const {
+        t: DY
+      } = (0, NA.C)();
+      if (null === rY || 0 === rY.total) return null;
+      const FY = HR * rY.aspect,
+        AY = DY("skyblockGame:hiddenWatersCount", {
+          found: rY.found,
+          total: rY.total
+        });
+      return (0, cA.jsxs)("div", {
+        className: "SkyblockHiddenWatersStrip",
+        title: `${DY("skyblockGame:hiddenWatersTitle")}: ${AY}`,
+        children: [(0, cA.jsxs)("svg", {
+          className: "SkyblockHiddenWatersOutline",
+          viewBox: `0 0 100 ${FY}`,
+          "aria-hidden": "true",
+          children: [rY.islands.map(((YY, rY) => (0, cA.jsx)("ellipse", {
+            className: "SkyblockHiddenWatersIsland",
+            cx: (YY.left + YY.width / 2) * HR,
+            cy: (YY.top + YY.height / 2) * FY,
+            rx: YY.width / 2 * HR,
+            ry: YY.height / 2 * FY
+          }, rY))), rY.pins.map(((YY, rY) => (0, cA.jsx)("circle", {
+            className: "SkyblockHiddenWatersPin",
+            cx: YY.left * HR,
+            cy: YY.top * FY,
+            r: 13
+          }, rY)))]
+        }), (0, cA.jsxs)("span", {
+          className: "SkyblockHiddenWatersText",
+          children: [(0, cA.jsx)("span", {
+            className: "SkyblockHiddenWatersTitle",
+            children: DY("skyblockGame:hiddenWatersTitle")
+          }), (0, cA.jsx)("span", {
+            className: rY.found === rY.total ? "SkyblockHiddenWatersCount AllFound" : "SkyblockHiddenWatersCount",
+            children: AY
+          })]
+        })]
+      })
+    }
+
+    function ZR(YY) {
+      let {
+        view: rY,
+        island: DY
+      } = YY;
+      const {
+        t: FY
+      } = (0, NA.C)(), AY = null === rY || void 0 === rY ? void 0 : rY.glimpses.get(DY);
+      return void 0 === AY || 0 === AY.length ? null : (0, cA.jsxs)("div", {
+        className: "SkyblockHiddenWatersGlimpses",
+        children: [(0, cA.jsx)("span", {
+          className: "SkyblockHiddenWatersGlimpsesTitle",
+          children: FY("skyblockGame:hiddenWatersGlimpsed")
+        }), (0, cA.jsx)("span", {
+          className: "SkyblockHiddenWatersGlimpsesRow",
+          children: AY.map((YY => (0, cA.jsx)("span", {
+            className: "SkyblockHiddenWatersSilhouette",
+            "aria-hidden": "true",
+            children: (0, cA.jsx)(lA.c, {
+              itemName: YY,
+              amount: 0
+            })
+          }, YY)))
+        })]
+      })
+    }
+    const CR = ["Bronze", "Silver", "Gold"],
+      fR = [{
+        className: "Bloom",
+        titleKey: "skyblockGame:reachLogRibbonBloomTitle",
+        legendKey: "skyblockGame:reachLogLegendBloom"
+      }, {
+        className: "Chart",
+        titleKey: "skyblockGame:reachLogRibbonChartTitle",
+        legendKey: "skyblockGame:reachLogLegendChart"
+      }, {
+        className: "LetGo",
+        titleKey: "skyblockGame:reachLogRibbonLetGoTitle",
+        legendKey: "skyblockGame:reachLogLegendLetGo"
+      }],
+      jR = fR.slice(0, 2);
+
+    function hR(YY) {
+      return YY ? fR : jR
+    }
+
+    function dR(YY) {
+      let {
+        fish: rY,
+        letGoShown: DY
+      } = YY;
+      const {
+        t: FY
+      } = (0, NA.C)();
+      return (0, cA.jsxs)("span", {
+        className: "SkyblockReachLogMarks",
+        children: [CR.map(((YY, DY) => {
+          const AY = DY < rY.marks;
+          return (0, cA.jsx)("span", {
+            className: EA()("SkyblockReachLogPip", YY, AY && "Earned", AY && rY.fresh && DY === rY.marks - 1 && "Newest"),
+            title: FY(cF[DY])
+          }, YY)
+        })), (0, cA.jsx)("span", {
+          className: "SkyblockReachLogDivider"
+        }), hR(DY).map(((YY, DY) => (0, cA.jsx)("span", {
+          className: EA()("SkyblockReachLogRibbon", YY.className, !0 === rY.ribbons[DY] && "Earned"),
+          title: FY(YY.titleKey)
+        }, YY.className)))]
+      })
+    }
+
+    function JR(YY) {
+      let {
+        letGoShown: rY,
+        haloShown: DY
+      } = YY;
+      const {
+        t: FY
+      } = (0, NA.C)();
+      return (0, cA.jsxs)("span", {
+        className: "SkyblockReachLogLegend",
+        children: [(0, cA.jsxs)("span", {
+          className: "SkyblockReachLogLegendItem",
+          title: FY("skyblockGame:reachLogMarks"),
+          children: [(0, cA.jsx)("span", {
+            className: "SkyblockReachLogPip Gold Earned"
+          }), FY("skyblockGame:reachLogLegendMarks")]
+        }), hR(rY).map((YY => (0, cA.jsxs)("span", {
+          className: "SkyblockReachLogLegendItem",
+          title: FY(YY.titleKey),
+          children: [(0, cA.jsx)("span", {
+            className: EA()("SkyblockReachLogRibbon", YY.className, "Earned")
+          }), FY(YY.legendKey)]
+        }, YY.className))), (0, cA.jsxs)("span", {
+          className: "SkyblockReachLogLegendItem",
+          title: FY("skyblockGame:reachLogGlimmerTitle"),
+          children: [(0, cA.jsx)("span", {
+            className: "SkyblockReachLogGlimmer"
+          }), FY("skyblockGame:reachLogLegendGlimmer")]
+        }), DY && (0, cA.jsxs)("span", {
+          className: "SkyblockReachLogLegendItem",
+          title: FY("skyblockGame:reachLogHaloTitle"),
+          children: [(0, cA.jsx)("span", {
+            className: "SkyblockReachLogHalo"
+          }), FY("skyblockGame:reachLogLegendHalo")]
+        })]
+      })
+    }
+
+    function MR(YY) {
+      let {
+        returner: rY
+      } = YY;
+      return (0, cA.jsxs)("div", {
+        className: EA()("SkyblockReachLogReturner", rY.back && "Back"),
+        children: [(0, cA.jsx)("span", {
+          className: "SkyblockReachLogReturnerIcon",
+          "aria-hidden": "true",
+          children: (0, cA.jsx)(lA.c, {
+            itemName: rY.itemName,
+            amount: 0
+          })
+        }), (0, cA.jsx)("span", {
+          className: "SkyblockReachLogReturnerLine",
+          children: rY.line
+        })]
+      })
+    }
+
+    function wR(YY) {
+      let {
+        fish: rY,
+        letGoShown: DY
+      } = YY;
+      const {
+        t: FY
+      } = (0, NA.C)();
+      return (0, cA.jsxs)("li", {
+        className: EA()("SkyblockReachLogCard", rY.caught ? "Caught" : "Unknown", rY.marks >= 3 && "GoldCard", rY.fresh && "Fresh", rY.visitor && "Visitor"),
+        children: [rY.visitor && (0, cA.jsx)("span", {
+          className: "SkyblockReachLogVisitorTag",
+          children: FY("skyblockGame:reachLogVisitor")
+        }), rY.fresh && Array.from({
+          length: 4
+        }, ((YY, rY) => (0, cA.jsx)("span", {
+          className: "SkyblockReachLogSparkle"
+        }, rY))), (0, cA.jsxs)("span", {
+          className: "SkyblockReachLogFishIcon",
+          "aria-hidden": "true",
+          children: [rY.halo && (0, cA.jsx)("span", {
+            className: "SkyblockReachLogHalo",
+            title: FY("skyblockGame:reachLogHaloTitle")
+          }), (0, cA.jsx)(lA.c, {
+            itemName: rY.itemName,
+            amount: 0
+          }), rY.glimmer && (0, cA.jsx)("span", {
+            className: "SkyblockReachLogGlimmer",
+            title: FY("skyblockGame:reachLogGlimmerTitle")
+          })]
+        }), (0, cA.jsx)("span", {
+          className: "SkyblockReachLogFishName",
+          children: rY.name
+        }), (0, cA.jsx)("span", {
+          className: "SkyblockReachLogFishChance",
+          children: rY.chance
+        }), (0, cA.jsx)("span", {
+          className: "SkyblockReachLogFishBest",
+          children: rY.best
+        }), (0, cA.jsx)(dR, {
+          fish: rY,
+          letGoShown: DY
+        })]
+      })
+    }
+
+    function bR(YY) {
+      let {
+        page: rY,
+        letGoShown: DY,
+        hiddenWaters: FY
+      } = YY;
+      const {
+        t: AY
+      } = (0, NA.C)();
+      return rY.awake ? (0, cA.jsx)("ul", {
+        className: "SkyblockReachLogGrid",
+        children: rY.fish.map((YY => (0, cA.jsx)(wR, {
+          fish: YY,
+          letGoShown: DY
+        }, YY.itemName)))
+      }) : (0, cA.jsxs)(cA.Fragment, {
+        children: [(0, cA.jsx)("p", {
+          className: "SkyblockReachLogAsleep",
+          children: AY("skyblockGame:reachLogAsleep")
+        }), (0, cA.jsx)(ZR, {
+          view: FY,
+          island: rY.id
+        })]
+      })
+    }
+
+    function XR(YY) {
+      var rY, DY;
+      let {
+        controller: FY,
+        regulars: AY,
+        hiddenWaters: IY
+      } = YY;
+      const RY = (0, BA.k)(BF, FY.getSnapshot()),
+        OY = function(YY) {
+          return (0, BA.k)(FA, YY.getSnapshot())
+        }(IY),
+        gY = (0, BA.k)(LF, AY.getSnapshot()),
+        {
+          t: aY
+        } = (0, NA.C)(),
+        vY = MA();
+      if (!RY.enabled) return null;
+      const uY = null !== (rY = RY.pages.find((YY => YY.id === RY.selected))) && void 0 !== rY ? rY : null;
+      return (0, cA.jsx)(hA.e, {
+        show: RY.open,
+        close: FY.dismiss,
+        togglePointerLock: !1,
+        className: EA()("SkyblockSkillsOverlay", gY.open && "SkyblockReachLogUnderLedger"),
+        children: (0, cA.jsxs)("section", {
+          className: "SkyblockSkillsPanel SkyblockReachLogPanel",
+          role: "dialog",
+          "aria-modal": "true",
+          "aria-labelledby": "skyblockReachLogTitle",
+          tabIndex: -1,
+          ref: vY,
+          onKeyDown: JA,
+          children: [(0, cA.jsx)(KR, {
+            island: null !== (DY = null === uY || void 0 === uY ? void 0 : uY.id) && void 0 !== DY ? DY : null
+          }), (0, cA.jsxs)("header", {
+            className: "SkyblockReachLogHeader",
+            children: [(0, cA.jsxs)("div", {
+              children: [(0, cA.jsx)("h2", {
+                id: "skyblockReachLogTitle",
+                children: aY("skyblockGame:reachLogTitle")
+              }), (0, cA.jsx)("p", {
+                children: aY("skyblockGame:keeperWickReachLogWelcome")
+              })]
+            }), (0, cA.jsx)(zR, {
+              view: OY
+            }), (0, cA.jsx)(dA.k, {
+              padIgnore: !0,
+              onClick: FY.dismiss
+            })]
+          }), (0, cA.jsx)("nav", {
+            className: "SkyblockReachLogTabs",
+            role: "tablist",
+            "data-pad-tabs": "1",
+            children: RY.pages.map((YY => {
+              const rY = YY.id === RY.selected,
+                DY = YY.fish.some((YY => YY.fresh));
+              return (0, cA.jsxs)("button", {
+                type: "button",
+                role: "tab",
+                "aria-selected": rY,
+                "data-pad-tab": !0,
+                "data-pad-selected": rY ? "true" : void 0,
+                className: EA()("SkyblockReachLogTab", `Island-${YY.id}`, rY && "Selected", !YY.awake && "Asleep", YY.gold && "GoldPage", DY && "HasNews"),
+                onClick: () => {
+                  FY.selectPage(YY.id)
+                },
+                children: [(0, cA.jsx)("span", {
+                  className: "SkyblockReachLogTabName",
+                  children: YY.name
+                }), YY.awake && (0, cA.jsx)("span", {
+                  className: "SkyblockReachLogTabCount",
+                  children: aY("skyblockGame:reachLogCaughtCount", {
+                    caught: YY.caught,
+                    total: YY.total
+                  })
+                })]
+              }, YY.id)
+            }))
+          }), (0, cA.jsxs)("div", {
+            className: EA()("SkyblockReachLogPage", null !== uY && `Island-${uY.id}`),
+            role: "tabpanel",
+            children: [null !== uY && (0, cA.jsx)(bR, {
+              page: uY,
+              letGoShown: RY.letGoShown,
+              hiddenWaters: OY
+            }), !0 === (null === uY || void 0 === uY ? void 0 : uY.awake) && null !== uY.returner && (0, cA.jsx)(MR, {
+              returner: uY.returner
+            }), !0 === (null === uY || void 0 === uY ? void 0 : uY.awake) && (0, cA.jsx)(TR, {
+              controller: AY,
+              island: uY.id
+            })]
+          }), (0, cA.jsx)("footer", {
+            className: EA()("SkyblockReachLogFooter", null !== uY && `Island-${uY.id}`, !0 === (null === uY || void 0 === uY ? void 0 : uY.gold) && "GoldPage"),
+            children: !0 === (null === uY || void 0 === uY ? void 0 : uY.gold) ? (0, cA.jsx)("span", {
+              className: "SkyblockReachLogGoldLine",
+              children: aY("skyblockGame:keeperWickReachLogPageGold")
+            }) : (0, cA.jsxs)(cA.Fragment, {
+              children: [(0, cA.jsx)(JR, {
+                letGoShown: RY.letGoShown,
+                haloShown: !0 === (null === uY || void 0 === uY ? void 0 : uY.fish.some((YY => YY.halo)))
+              }), (0, cA.jsx)("span", {
+                className: "SkyblockReachLogReward",
+                children: aY("skyblockGame:reachLogPageReward")
+              })]
+            })
+          })]
+        })
+      })
+    }
+    var qR = DY(4408);
+
+    function pR(YY) {
+      let {
+        conversation: rY,
+        completedLabel: DY
+      } = YY;
+      return (0, cA.jsxs)("article", {
+        className: "SkyblockDialogueConversation",
+        children: [(0, cA.jsxs)("header", {
+          children: [(0, cA.jsx)("h3", {
+            children: rY.questName
+          }), rY.completed && (0, cA.jsx)("span", {
+            className: "SkyblockDialogueCompleted",
+            children: DY
+          })]
+        }), rY.lines.map((YY => (0, cA.jsx)(qR.b, {
+          display: YY.display
+        }, YY.key)))]
+      })
+    }
+
+    function kR(YY) {
+      let {
+        controller: rY
+      } = YY;
+      const {
+        t: DY
+      } = (0, NA.C)(), FY = (0, BA.k)(IA, rY.getSnapshot()), AY = MA();
+      if (!FY.enabled) return null;
+      const IY = !FY.loading && 0 === FY.conversations.length;
+      return (0, cA.jsx)(hA.e, {
+        show: FY.open,
+        close: rY.dismiss,
+        togglePointerLock: !1,
+        className: "SkyblockSkillsOverlay",
+        children: (0, cA.jsxs)("section", {
+          className: "SkyblockSkillsPanel SkyblockDialoguePanel",
+          role: "dialog",
+          "aria-modal": "true",
+          "aria-labelledby": "skyblockDialogueTitle",
+          tabIndex: -1,
+          ref: AY,
+          onKeyDown: JA,
+          children: [(0, cA.jsxs)("header", {
+            className: "SkyblockSkillsHeader",
+            children: [(0, cA.jsxs)("div", {
+              children: [(0, cA.jsx)("h2", {
+                id: "skyblockDialogueTitle",
+                children: DY("skyblockDialogue:title")
+              }), (0, cA.jsx)("p", {
+                children: DY("skyblockDialogue:intro")
+              })]
+            }), (0, cA.jsx)(dA.k, {
+              padIgnore: !0,
+              onClick: rY.dismiss
+            })]
+          }), (0, cA.jsxs)("div", {
+            className: EA()("SkyblockDialogueBody", {
+              SingleColumn: null !== FY.questFocus || 0 === FY.characters.length
+            }),
+            children: [null === FY.questFocus && FY.characters.length > 0 && (0, cA.jsx)("nav", {
+              className: "SkyblockDialogueCharacters",
+              children: FY.characters.map((YY => (0, cA.jsx)(dA.f, {
+                className: EA()("SkyblockDialogueCharacter", {
+                  Selected: YY.selected
+                }),
+                onClick: () => {
+                  rY.selectCharacter(YY.id)
+                },
+                children: (0, cA.jsx)(TA.b, {
+                  text: YY.styling
+                })
+              }, YY.id)))
+            }), (0, cA.jsxs)("div", {
+              className: "SkyblockDialogueConversations",
+              children: [null !== FY.questFocus && (0, cA.jsx)(dA.f, {
+                className: "SkyblockDialogueBack",
+                onClick: rY.showCharacters,
+                children: DY("skyblockDialogue:allCharacters")
+              }), FY.loading && (0, cA.jsx)("p", {
+                className: "SkyblockDialogueEmpty",
+                children: DY("skyblockDialogue:loading")
+              }), IY && (0, cA.jsx)("p", {
+                className: "SkyblockDialogueEmpty",
+                children: DY(null === FY.questFocus ? "skyblockDialogue:empty" : "skyblockDialogue:questEmpty")
+              }), FY.conversations.map((YY => (0, cA.jsx)(pR, {
+                conversation: YY,
+                completedLabel: FY.completedLabel
+              }, YY.questId)))]
+            })]
+          })]
+        })
+      })
+    }
+
+    function GR(YY) {
+      let {
+        controller: rY
+      } = YY;
+      const DY = (0, BA.k)(vA, rY.getSnapshot()),
+        {
+          t: FY
+        } = (0, NA.C)(),
+        AY = MA();
+      return DY.enabled ? (0, cA.jsx)(hA.e, {
+        show: DY.open,
+        close: rY.dismiss,
+        togglePointerLock: !1,
+        className: "SkyblockSkillsOverlay",
+        children: (0, cA.jsxs)("section", {
+          className: "SkyblockSkillsPanel SkyblockAutographsPanel",
+          role: "dialog",
+          "aria-modal": "true",
+          "aria-labelledby": "skyblockAutographsTitle",
+          tabIndex: -1,
+          ref: AY,
+          onKeyDown: JA,
+          children: [(0, cA.jsxs)("header", {
+            className: "SkyblockSkillsHeader",
+            children: [(0, cA.jsxs)("div", {
+              children: [(0, cA.jsx)("h2", {
+                id: "skyblockAutographsTitle",
+                children: FY("skyblockGame:autographBook")
+              }), (0, cA.jsx)("p", {
+                children: FY("skyblockGame:autographBookIntro")
+              })]
+            }), (0, cA.jsx)(dA.k, {
+              padIgnore: !0,
+              onClick: rY.dismiss
+            })]
+          }), (0, cA.jsxs)("div", {
+            className: "SkyblockAutographsBody",
+            children: [(0, cA.jsxs)("div", {
+              className: "SkyblockAutographTotals",
+              children: [(0, cA.jsxs)("div", {
+                className: "SkyblockAutographTotal",
+                children: [(0, cA.jsx)("strong", {
+                  children: DY.total
+                }), (0, cA.jsx)("span", {
+                  children: FY("skyblockGame:autographTotal")
+                })]
+              }), (0, cA.jsxs)("div", {
+                className: "SkyblockAutographTotal Ranked",
+                children: [(0, cA.jsx)("strong", {
+                  children: DY.rankTotal
+                }), (0, cA.jsx)("span", {
+                  children: FY("skyblockGame:autographRankTotal")
+                })]
+              })]
+            }), 0 === DY.entries.length ? (0, cA.jsx)("p", {
+              className: "SkyblockAutographsEmpty",
+              children: FY("skyblockGame:autographBookEmpty")
+            }) : (0, cA.jsx)("ul", {
+              className: "SkyblockAutographList",
+              children: DY.entries.map((YY => (0, cA.jsxs)("li", {
+                className: EA()("SkyblockAutograph", {
+                  Ranked: null !== YY.rank
+                }),
+                style: null === YY.rank ? void 0 : {
+                  color: YY.rank.colour
+                },
+                children: [null !== YY.rank && (0, cA.jsx)(vI.e, {
+                  className: "SkyblockAutographRankIcon",
+                  name: YY.rank.icon,
+                  kit: (0, vI.h)(YY.rank.icon)
+                }), (0, cA.jsxs)("div", {
+                  className: "SkyblockAutographText",
+                  children: [(0, cA.jsx)("span", {
+                    className: "SkyblockAutographName",
+                    children: YY.name
+                  }), (0, cA.jsxs)("span", {
+                    className: "SkyblockAutographDetails",
+                    children: [null !== YY.rank && (0, cA.jsx)("span", {
+                      className: "SkyblockAutographRank",
+                      children: YY.rank.label
+                    }), (0, cA.jsx)("span", {
+                      className: "SkyblockAutographDate",
+                      children: YY.signedOn
+                    })]
+                  })]
+                })]
+              }, YY.key)))
+            })]
+          })]
+        })
+      }) : null
+    }
+    const xR = (0, NY.memo)((function(YY) {
+        let {
+          controller: rY
+        } = YY;
+        return (0, cA.jsxs)("div", {
+          className: "SkyblockQuestWaypoint",
+          ref: rY.display.mountWaypoint,
+          children: [(0, cA.jsx)("div", {
+            className: "SkyblockQuestWaypointMarker"
+          }), (0, cA.jsx)("div", {
+            className: "SkyblockQuestWaypointTextClip",
+            children: (0, cA.jsxs)("div", {
+              className: "SkyblockQuestWaypointText",
+              children: [(0, cA.jsx)("span", {
+                className: "SkyblockQuestWaypointLabel"
+              }), (0, cA.jsx)("span", {
+                className: "SkyblockQuestWaypointDistance"
+              }), (0, cA.jsx)("span", {
+                className: "SkyblockQuestWaypointHint",
+                hidden: !0
+              })]
+            })
+          })]
+        })
+      })),
+      nR = {
+        started: "!",
+        quest: "\u2605",
+        step: "\u2713",
+        skillLevel: "\u25b2",
+        landmark: "\u25c6",
+        npcNote: "\u2709\ufe0e"
+      };
+
+    function PR(YY) {
+      return "next" === YY.phase ? "\u2192" : nR[YY.kind]
+    }
+    const UR = (0, NY.memo)((function(YY) {
+      let {
+        controller: rY,
+        display: DY
+      } = YY;
+      const FY = (0, BA.k)(gD, rY.getNotificationSnapshot()),
+        [AY, IY] = (0, NY.useState)(!1);
+      return (0, BA.g)("qteStateUpdated", (YY => {
+        IY(YY.isActive)
+      })), (0, cA.jsxs)("div", {
+        className: "SkyblockQuestNotificationAnchor" + (AY ? " UnderQte" : ""),
+        role: "status",
+        "aria-live": "polite",
+        "aria-atomic": "true",
+        children: [FY && (0, cA.jsxs)("div", {
+          className: `SkyblockQuestNotification ${FY.kind} ${FY.phase}`,
+          style: {
+            "--quest-notification-duration": `${FY.durationMs}ms`,
+            ...FY.accent && {
+              "--quest-notification-accent": FY.accent
+            }
+          },
+          children: [(0, cA.jsxs)("div", {
+            className: "SkyblockQuestNotificationSymbols" + (FY.iconItem ? " WithIcon" : ""),
+            "aria-hidden": "true",
+            children: [(0, cA.jsx)("span", {
+              className: "SkyblockQuestNotificationMark",
+              children: PR(FY)
+            }), FY.iconItem && (0, cA.jsx)("span", {
+              className: "SkyblockQuestNotificationIcon",
+              children: (0, cA.jsx)(lA.c, {
+                itemName: FY.iconItem,
+                amount: 0
+              })
+            })]
+          }), (0, cA.jsxs)("div", {
+            className: "SkyblockQuestNotificationText",
+            children: [(0, cA.jsx)("span", {
+              className: "SkyblockQuestNotificationTitle",
+              children: FY.title
+            }), (0, cA.jsx)("strong", {
+              className: "SkyblockQuestNotificationName",
+              children: (0, cA.jsx)(FI.c, {
+                text: FY.name
+              })
+            }), FY.description && (0, cA.jsx)("span", {
+              className: "SkyblockQuestNotificationDescription",
+              children: (0, cA.jsx)(FI.c, {
+                text: FY.description
+              })
+            }), FY.reward && (0, cA.jsx)("span", {
+              className: "SkyblockQuestNotificationReward",
+              children: (0, cA.jsx)(FI.c, {
+                text: FY.reward
+              })
+            })]
+          })]
+        }, FY.token), (null === FY || void 0 === FY ? void 0 : FY.waypointNameKey) && (0, cA.jsx)("div", {
+          className: "SkyblockQuestNotificationWaypointOrigin",
+          "data-waypoint-name-key": FY.waypointNameKey,
+          "data-notification-token": FY.token,
+          ref: DY.mountWaypointOrigin,
+          "aria-hidden": "true"
+        }, `waypoint-${FY.token}`)]
+      })
+    }));
+
+    function LR(YY) {
+      const rY = parseInt(YY.replace("#", ""), 16);
+      return `${rY>>16&255}, ${rY>>8&255}, ${255&rY}`
+    }
+    const tR = (0, NY.memo)((function(YY) {
+      let {
+        controller: rY
+      } = YY;
+      const {
+        t: DY
+      } = (0, NA.C)(), FY = (0, BA.k)(jD, rY.getSnapshot());
+      if (!FY) return null;
+      const AY = "arrival" === FY.phase;
+      return (0, cA.jsxs)("div", {
+        className: EA()("SkyblockPortalTransit", {
+          Departure: !AY,
+          Arrival: AY
+        }),
+        style: {
+          "--portal-rgb": LR(FY.colour),
+          "--portal-duration": `${FY.durationMs}ms`
+        },
+        role: "status",
+        "aria-live": "polite",
+        children: [(0, cA.jsx)("div", {
+          className: "SkyblockPortalTransitVeil",
+          "aria-hidden": "true"
+        }), (0, cA.jsx)("div", {
+          className: "SkyblockPortalTransitRim",
+          "aria-hidden": "true",
+          onAnimationEnd: () => {
+            rY.finishArrival(FY.token)
+          }
+        }), (0, cA.jsxs)("div", {
+          className: "SkyblockPortalTransitTitle",
+          children: [(0, cA.jsx)("div", {
+            className: "SkyblockPortalTransitBand",
+            "aria-hidden": "true"
+          }), !AY && (0, cA.jsx)("span", {
+            className: "SkyblockPortalTransitEyebrow",
+            children: DY("skyblockGame:portalTransitHeading")
+          }), (0, cA.jsx)("strong", {
+            className: "SkyblockPortalTransitZone",
+            children: DY(FY.zoneNameKey)
+          })]
+        })]
+      }, FY.token)
+    }));
+
+    function YO() {
+      return window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    }
+
+    function rO() {
+      const YY = document.querySelector(".SkyblockHudCoins"),
+        rY = null === YY || void 0 === YY ? void 0 : YY.getBoundingClientRect();
+      return rY && rY.width > 0 ? {
+        x: rY.left + Math.min(rY.width, 24) / 2,
+        y: rY.top + rY.height / 2
+      } : {
+        x: window.innerWidth - 48,
+        y: 48
+      }
+    }
+
+    function DO(YY) {
+      return {
+        x: YY.left + YY.width / 2,
+        y: YY.top + YY.height / 2
+      }
+    }
+
+    function FO() {
+      var YY;
+      const rY = null === (YY = document.querySelector(".HotBar")) || void 0 === YY ? void 0 : YY.getBoundingClientRect();
+      return rY && rY.width > 0 ? DO(rY) : {
+        x: window.innerWidth / 2,
+        y: window.innerHeight - 40
+      }
+    }
+
+    function AO(YY) {
+      let {
+        items: rY,
+        origins: DY,
+        target: FY
+      } = YY;
+      return (0, cA.jsx)("div", {
+        className: "SkyblockDailyRewardFlyingItems",
+        children: rY.map(((YY, rY) => {
+          const AY = DY[rY];
+          return (0, cA.jsx)("span", {
+            className: "SkyblockDailyRewardFlyingItem",
+            style: {
+              left: `${AY.x}px`,
+              top: `${AY.y}px`,
+              "--item-dx": FY.x - AY.x + "px",
+              "--item-dy": FY.y - AY.y + "px",
+              "--item-delay": 2e3 + 160 * rY + "ms",
+              "--item-flight": "700ms"
+            },
+            children: (0, cA.jsx)(lA.c, {
+              itemName: YY.dailyRewardItemName,
+              amount: 0
+            })
+          }, YY.dailyRewardItemName)
+        }))
+      })
+    }
+
+    function IO(YY, rY) {
+      const DY = -Math.PI / 2 + 1.25 * (YY / (rY - 1) * 2 - 1),
+        FY = 70 + YY % 3 * 22;
+      return {
+        x: Math.cos(DY) * FY,
+        y: Math.sin(DY) * FY * .7
+      }
+    }
+
+    function RO(YY) {
+      let {
+        origin: rY,
+        target: DY,
+        count: FY
+      } = YY;
+      const AY = [];
+      for (let IY = 0; IY < FY; IY++) {
+        const YY = IO(IY, FY);
+        AY.push((0, cA.jsx)("span", {
+          className: "SkyblockDailyRewardCoin",
+          style: {
+            left: `${rY.x}px`,
+            top: `${rY.y}px`,
+            "--coin-bx": `${YY.x}px`,
+            "--coin-by": `${YY.y}px`,
+            "--coin-dx": DY.x - rY.x + "px",
+            "--coin-dy": DY.y - rY.y + "px",
+            "--coin-delay": `${bD(IY,FY)}ms`,
+            "--coin-flight": "650ms"
+          },
+          children: (0, cA.jsx)(lA.c, {
+            itemName: "Gold Coin",
+            amount: 0
+          })
+        }, IY))
+      }
+      return (0, cA.jsx)("div", {
+        className: "SkyblockDailyRewardCoins",
+        children: AY
+      })
+    }
+
+    function OO(YY) {
+      let {
+        day: rY
+      } = YY;
+      const DY = BY[rY - 1];
+      return (0, cA.jsxs)(cA.Fragment, {
+        children: [(0, cA.jsxs)("span", {
+          className: "SkyblockDailyRewardFooterReward",
+          children: [(0, cA.jsx)(lA.c, {
+            itemName: "Gold Coin",
+            amount: 0
+          }), (0, eA.g)(DY.dailyRewardCoins)]
+        }), DY.dailyRewardItems.map((YY => (0, cA.jsxs)("span", {
+          className: "SkyblockDailyRewardFooterReward",
+          children: [(0, cA.jsx)(lA.c, {
+            itemName: YY.dailyRewardItemName,
+            amount: 0
+          }), "\xd7", YY.dailyRewardItemAmount]
+        }, YY.dailyRewardItemName)))]
+      })
+    }
+
+    function gO(YY) {
+      let {
+        day: rY
+      } = YY;
+      const DY = KY(rY);
+      return (0, cA.jsx)("ol", {
+        className: "SkyblockDailyRewardStrip",
+        children: BY.map(((YY, FY) => {
+          const AY = FY + 1;
+          return (0, cA.jsxs)("li", {
+            className: EA()("SkyblockDailyRewardTile", {
+              Claimed: AY < rY && AY !== DY,
+              Today: AY === rY,
+              Tomorrow: AY === DY,
+              Jackpot: AY === cY
+            }),
+            children: [(0, cA.jsx)("span", {
+              className: "SkyblockDailyRewardTileDay",
+              children: AY
+            }), (0, cA.jsxs)("span", {
+              className: "SkyblockDailyRewardTileReward SkyblockDailyRewardTileCoins",
+              children: [(0, cA.jsx)(lA.c, {
+                itemName: "Gold Coin",
+                amount: 0
+              }), (0, eA.g)(YY.dailyRewardCoins)]
+            }), YY.dailyRewardItems.map((YY => (0, cA.jsxs)("span", {
+              className: "SkyblockDailyRewardTileReward",
+              children: [(0, cA.jsx)(lA.c, {
+                itemName: YY.dailyRewardItemName,
+                amount: 0
+              }), "\xd7", YY.dailyRewardItemAmount]
+            }, YY.dailyRewardItemName)))]
+          }, AY)
+        }))
+      })
+    }
+
+    function aO(YY) {
+      let {
+        view: rY
+      } = YY;
+      const {
+        t: DY
+      } = (0, NA.C)(), FY = (0, NY.useRef)(null), AY = (0, NY.useRef)(null), [IY, RY] = (0, NY.useState)(null);
+      (0, NY.useLayoutEffect)((() => {
+        var YY;
+        const rY = null === (YY = FY.current) || void 0 === YY ? void 0 : YY.getBoundingClientRect();
+        if (rY) {
+          var DY, IY;
+          const YY = Array.from(null !== (DY = null === (IY = AY.current) || void 0 === IY ? void 0 : IY.children) && void 0 !== DY ? DY : [], (YY => DO(YY.getBoundingClientRect())));
+          RY({
+            origin: DO(rY),
+            target: rO(),
+            itemOrigins: YY,
+            itemTarget: FO()
+          })
+        }
+      }), []);
+      const OY = KY(rY.day),
+        gY = function(YY, rY) {
+          const [DY, FY] = (0, NY.useState)((() => YO() ? YY : 0));
+          return (0, NY.useEffect)((() => {
+            if (YO()) return;
+            const DY = performance.now();
+            let AY = 0;
+            const IY = RY => {
+              const OY = Math.min(Math.max((RY - DY) / rY, 0), 1);
+              FY(Math.round(YY * (1 - (1 - OY) ** 3))), OY < 1 && (AY = requestAnimationFrame(IY))
+            };
+            return AY = requestAnimationFrame(IY), () => {
+              cancelAnimationFrame(AY)
+            }
+          }), [YY, rY]), DY
+        }(rY.coins, 450);
+      return (0, cA.jsxs)("div", {
+        className: EA()("SkyblockDailyReward", {
+          Jackpot: rY.day === cY
+        }),
+        style: {
+          "--daily-duration": `${rY.durationMs}ms`
+        },
+        role: "status",
+        "aria-live": "polite",
+        children: [(0, cA.jsx)("div", {
+          className: "SkyblockDailyRewardGlow",
+          "aria-hidden": "true"
+        }), (0, cA.jsxs)("div", {
+          className: "SkyblockDailyRewardCard",
+          children: [(0, cA.jsxs)("div", {
+            className: "SkyblockDailyRewardHeading",
+            children: [(0, cA.jsx)("span", {
+              className: "SkyblockDailyRewardTitle",
+              children: DY("skyblockGame:dailyRewardTitle")
+            }), (0, cA.jsx)("span", {
+              className: "SkyblockDailyRewardDay",
+              children: DY("skyblockGame:dailyRewardDay", {
+                day: String(rY.day)
+              })
+            })]
+          }), (0, cA.jsxs)("div", {
+            className: "SkyblockDailyRewardAmount",
+            ref: FY,
+            children: [(0, cA.jsx)(lA.c, {
+              itemName: "Gold Coin",
+              amount: 0
+            }), (0, cA.jsxs)("span", {
+              children: ["+", (0, eA.g)(gY)]
+            })]
+          }), rY.items.length > 0 && (0, cA.jsx)("div", {
+            className: "SkyblockDailyRewardItems",
+            ref: AY,
+            children: rY.items.map((YY => (0, cA.jsxs)("span", {
+              className: "SkyblockDailyRewardItem",
+              children: [(0, cA.jsx)(lA.c, {
+                itemName: YY.dailyRewardItemName,
+                amount: 0
+              }), "\xd7", YY.dailyRewardItemAmount]
+            }, YY.dailyRewardItemName)))
+          }), (0, cA.jsx)(gO, {
+            day: rY.day
+          }), (0, cA.jsxs)("div", {
+            className: "SkyblockDailyRewardFooter",
+            children: [DY("skyblockGame:dailyRewardComeBack"), (0, cA.jsx)(OO, {
+              day: OY
+            })]
+          })]
+        }), null !== IY && (0, cA.jsx)(RO, {
+          origin: IY.origin,
+          target: IY.target,
+          count: rY.flyingCoins
+        }), null !== IY && IY.itemOrigins.length === rY.items.length && (0, cA.jsx)(AO, {
+          items: rY.items,
+          origins: IY.itemOrigins,
+          target: IY.itemTarget
+        })]
+      })
+    }
+    const vO = (0, NY.memo)((function(YY) {
+        let {
+          controller: rY
+        } = YY;
+        const DY = (0, BA.k)(JD, rY.getSnapshot());
+        return DY ? (0, cA.jsx)(aO, {
+          view: DY
+        }, DY.token) : null
+      })),
+      uO = "Gold Coin";
+
+    function sO(YY) {
+      return 650 + 220 * YY
+    }
+
+    function iO(YY) {
+      return {
+        "--letter-delay": `${sO(YY)}ms`,
+        "--letter-land": `${sO(YY)+300}ms`
+      }
+    }
+
+    function yO(YY) {
+      let {
+        letterCount: rY
+      } = YY;
+      return (0, cA.jsxs)("div", {
+        className: "SkyblockMailboxArt",
+        "aria-hidden": "true",
+        children: [(0, cA.jsx)("img", {
+          className: "SkyblockMailboxFrame",
+          src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAPUlEQVR4nGNgGBTgPxbMgKHoU7Y/Cr7hqI9VMVji8yqV//8veYHxPC0l7ApBEugYp/UgXBNljteN6BrIBwC4hzWhsgbVSgAAAABJRU5ErkJggg==",
+          alt: ""
+        }), (0, cA.jsx)("img", {
+          className: "SkyblockMailboxFrame SkyblockMailboxFrameFlag",
+          src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAATElEQVR4nGNgIBP8h2L8iv5f8gJjQor/f16lAlOEU/H/T9n+YIUgGoRvOOpjVQyWACkE0SA8T0sJu0KQBDrGaT0I10SZ43UjugbyAQAsw0ABFINz6QAAAABJRU5ErkJggg==",
+          alt: ""
+        }), (0, cA.jsx)("img", {
+          className: "SkyblockMailboxFrame SkyblockMailboxFrameOpen",
+          src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAW0lEQVR4nGNgIBP8h2L8iv5f8gJjQor/f16lAlOEjBlQFH3K9gcrBNEgHGyt9P//rwMYiv/fcNQHKwTRIPzh8SEwxlA4T0sJBYNMBJmM1XoQrokyx+tGdA3kAwD3jUzPjfodhAAAAABJRU5ErkJggg==",
+          alt: ""
+        }), Array.from({
+          length: rY
+        }, ((YY, rY) => (0, cA.jsx)("img", {
+          className: "SkyblockMailboxFlyingLetter",
+          style: iO(rY),
+          src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAP0lEQVR4nGNgoCX4jwOjgP//fx1AwZ+y/f/fcNTHUPz/w+NDKBikaJ6WEnaFa7qCwBhZA0ETcSkEKybGM9QDAOtbYxX7UuH5AAAAAElFTkSuQmCC",
+          alt: ""
+        }, rY)))]
+      })
+    }
+
+    function QO(YY) {
+      var rY, DY, FY;
+      let {
+        letter: AY,
+        index: IY
+      } = YY;
+      const {
+        t: RY
+      } = (0, NA.C)(), OY = null !== (rY = null === (DY = AY.items[0]) || void 0 === DY ? void 0 : DY.itemName) && void 0 !== rY ? rY : uO;
+      return (0, cA.jsxs)("li", {
+        className: "SkyblockMailboxLetter",
+        style: iO(IY),
+        children: [(0, cA.jsx)("div", {
+          className: "SkyblockMailboxStamp",
+          "aria-hidden": "true",
+          children: (0, cA.jsx)(lA.c, {
+            itemName: OY,
+            amount: 0
+          })
+        }), (0, cA.jsx)("div", {
+          className: "SkyblockMailboxReason",
+          children: RY(AY.reasonKey, null !== (FY = AY.reasonParams) && void 0 !== FY ? FY : void 0)
+        }), (0, cA.jsxs)("div", {
+          className: "SkyblockMailboxContents",
+          children: [AY.coins > 0 && (0, cA.jsxs)("span", {
+            className: "SkyblockMailboxGift SkyblockMailboxCoins",
+            children: [(0, cA.jsx)(lA.c, {
+              itemName: uO,
+              amount: 0
+            }), "+", (0, eA.g)(AY.coins)]
+          }), AY.items.map(((YY, rY) => (0, cA.jsxs)("span", {
+            className: "SkyblockMailboxGift",
+            children: [(0, cA.jsx)(lA.c, {
+              itemName: YY.itemName,
+              amount: 0
+            }), YY.label, " \xd7", YY.amount]
+          }, rY)))]
+        })]
+      })
+    }
+
+    function oO(YY) {
+      let {
+        view: rY
+      } = YY;
+      const {
+        t: DY
+      } = (0, NA.C)();
+      return (0, cA.jsx)("div", {
+        className: "SkyblockMailbox",
+        style: {
+          "--mail-duration": `${rY.durationMs}ms`,
+          "--flag-up": "300ms",
+          "--door-open": "500ms",
+          "--more-land": `${sO(rY.letters.length)+300}ms`
+        },
+        role: "status",
+        "aria-live": "polite",
+        children: (0, cA.jsxs)("div", {
+          className: "SkyblockMailboxCard",
+          children: [(0, cA.jsxs)("div", {
+            className: "SkyblockMailboxHeading",
+            children: [(0, cA.jsx)(yO, {
+              letterCount: rY.letters.length
+            }), (0, cA.jsx)("span", {
+              className: "SkyblockMailboxTitle",
+              children: DY("skyblockGame:mailboxTitle")
+            })]
+          }), (0, cA.jsx)("ol", {
+            className: "SkyblockMailboxLetters",
+            children: rY.letters.map(((YY, rY) => (0, cA.jsx)(QO, {
+              letter: YY,
+              index: rY
+            }, rY)))
+          }), rY.more > 0 && (0, cA.jsx)("div", {
+            className: "SkyblockMailboxMore",
+            children: DY("skyblockGame:mailboxMore", {
+              count: String(rY.more)
+            })
+          })]
+        })
+      })
+    }
+    const WO = (0, NY.memo)((function(YY) {
+      let {
+        controller: rY
+      } = YY;
+      const DY = (0, BA.k)(qD, rY.getSnapshot());
+      return DY ? (0, cA.jsx)(oO, {
+        view: DY
+      }, DY.token) : null
+    }));
+
+    function EO(YY) {
+      let {
+        controller: rY
+      } = YY;
+      const {
+        t: DY
+      } = (0, NA.C)(), FY = (0, BA.k)(jF, rY.getSnapshot());
+      if (null === FY) return null;
+      const AY = FY.fullSet ? "empty" === FY.fuelState ? {
+        text: DY("skyblockGame:magmawardHudNoFuel"),
+        tone: "empty"
+      } : null : {
+        text: DY("skyblockGame:magmawardHudFullSet", {
+          worn: String(FY.wornCount)
+        }),
+        tone: "partial"
+      };
+      return (0, cA.jsx)(VA.e, {
+        placement: "statBars",
+        children: (0, cA.jsxs)("div", {
+          className: EA()("SkyblockMagmawardHud", `SkyblockMagmawardHud-${FY.fuelState}`, {
+            "SkyblockMagmawardHud-partial": !FY.fullSet,
+            "SkyblockMagmawardHud-armed": FY.fullSet && "empty" !== FY.fuelState
+          }),
+          children: [null !== FY.flare && (0, cA.jsx)("div", {
+            className: `SkyblockMagmawardFlare SkyblockMagmawardFlare-${FY.flare}`
+          }, `flare:${FY.flareToken}`), (0, cA.jsx)("div", {
+            className: EA()("SkyblockMagmawardPieces", {
+              SkyblockMagmawardPiecesComplete: FY.setLit
+            }),
+            children: FY.pieces.map(((YY, rY) => (0, cA.jsx)("div", {
+              className: EA()("SkyblockMagmawardPiece", {
+                SkyblockMagmawardPieceWorn: YY.worn,
+                SkyblockMagmawardPieceJustWorn: YY.justWorn
+              }),
+              children: (0, cA.jsx)(lA.c, {
+                itemName: YY.itemName,
+                amount: 0
+              })
+            }, `${rY}:${YY.wornToken}`)))
+          }, `pieces:${FY.setLitToken}`), (0, cA.jsxs)("div", {
+            className: "SkyblockMagmawardFuel",
+            children: [(0, cA.jsx)("div", {
+              className: "SkyblockMagmawardLowGlow"
+            }), (0, cA.jsxs)("div", {
+              className: EA()("SkyblockMagmawardFuelCounter", FY.pulse && `SkyblockMagmawardFuelCounter-${FY.pulse}`),
+              children: [(0, cA.jsx)("div", {
+                className: "SkyblockMagmawardFuelIcon",
+                children: (0, cA.jsx)(lA.c, {
+                  itemName: "Magmaward Fuel",
+                  amount: 0
+                })
+              }), (0, cA.jsx)("span", {
+                className: "SkyblockMagmawardFuelCount SmallTextBold",
+                children: FY.fuel
+              })]
+            }, `counter:${FY.pulseToken}`), "burn" === FY.pulse && (0, cA.jsx)("span", {
+              className: "SkyblockMagmawardEmber SmallTextBold",
+              children: "-1"
+            }, `ember:${FY.pulseToken}`)]
+          }), AY && (0, cA.jsx)("div", {
+            className: `SkyblockMagmawardCaption SkyblockMagmawardCaption-${AY.tone} SmallTextBold`,
+            children: AY.text
+          })]
+        })
+      })
+    }
+
+    function mO(YY) {
+      let {
+        controller: rY
+      } = YY;
+      const {
+        t: DY,
+        selectedLanguage: FY
+      } = (0, NA.C)(), AY = (0, BA.k)(dF, rY.getSnapshot());
+      return null === AY ? null : (0, cA.jsx)(VA.e, {
+        placement: "statBars",
+        children: (0, cA.jsxs)("div", {
+          className: EA()("SkyblockGlowtideChip", {
+            SkyblockGlowtideChipInRange: AY.inRange
+          }),
+          style: {
+            "--glowtide-colour": AY.colour
+          },
+          "aria-label": DY("skyblockGame:glowtideChipLabel"),
+          children: [(0, cA.jsx)("div", {
+            className: "SkyblockGlowtideChipOrb"
+          }), AY.inRange ? (0, cA.jsx)("span", {
+            className: "SkyblockGlowtideChipCall SmallTextBold",
+            children: DY("skyblockGame:glowtideChipInRange")
+          }, `call:${AY.inRangeToken}`) : (0, cA.jsxs)(cA.Fragment, {
+            children: [(0, cA.jsx)("div", {
+              ref: rY.mountArrow,
+              className: "SkyblockGlowtideChipArrow"
+            }), (0, cA.jsx)("span", {
+              className: "SkyblockGlowtideChipDistance SmallTextBold",
+              children: DY("skyblockGame:waypointDistance", {
+                distance: lY(AY.distance, FY.code)
+              })
+            })]
+          })]
+        })
+      })
+    }
+
+    function VO(YY) {
+      let {
+        controller: rY
+      } = YY;
+      const {
+        t: DY
+      } = (0, NA.C)(), FY = (0, BA.k)(MF, rY.getSnapshot());
+      return null === FY ? null : (0, cA.jsx)(VA.e, {
+        placement: "statBars",
+        children: (0, cA.jsxs)("div", {
+          className: EA()("SkyblockGlowMeter", {
+            SkyblockGlowMeterFull: FY.full
+          }),
+          "aria-label": DY("skyblockGame:glowMeterLabel", {
+            fill: String(FY.fill),
+            gu: String(FY.gu)
+          }),
+          children: [FY.burst && (0, cA.jsx)("div", {
+            className: "SkyblockGlowMeterBurst"
+          }, `burst:${FY.burstToken}`), (0, cA.jsxs)("div", {
+            className: "SkyblockGlowMeterVial",
+            children: [(0, cA.jsx)("div", {
+              className: "SkyblockGlowMeterLiquid",
+              style: {
+                transform: `scaleX(${FY.ratio})`
+              }
+            }), FY.gained && (0, cA.jsx)("div", {
+              className: "SkyblockGlowMeterGlint"
+            }, `gain:${FY.gainToken}`), FY.full && Array.from({
+              length: 5
+            }, ((YY, rY) => (0, cA.jsx)("span", {
+              className: "SkyblockGlowMeterSparkle"
+            }, rY)))]
+          }), FY.full && FY.rares.map((YY => (0, cA.jsx)("div", {
+            className: "SkyblockGlowMeterRare",
+            children: (0, cA.jsx)(lA.c, {
+              itemName: YY,
+              amount: 0
+            })
+          }, YY))), FY.ready && (0, cA.jsx)("div", {
+            className: "SkyblockGlowMeterReady SmallTextBold",
+            children: (0, cA.jsx)("span", {
+              children: DY("skyblockGame:glowMeterReady")
+            })
+          }, `ready:${FY.fullToken}`)]
+        })
+      })
+    }
+
+    function SO(YY) {
+      let {
+        controller: rY
+      } = YY;
+      const {
+        t: DY
+      } = (0, NA.C)(), FY = (0, BA.k)(bF, rY.getSnapshot());
+      if (null === FY) return null;
+      const AY = "waiting" === FY.phase,
+        IY = {
+          animationDuration: `${FY.waitMs}ms`,
+          animationDelay: -FY.elapsedMs + "ms"
+        },
+        RY = AY ? void 0 : {
+          animationDuration: `${FY.waitMs}ms`
+        };
+      return (0, cA.jsxs)("div", {
+        className: AY ? "SkyblockHushWait" : "SkyblockHushWait SkyblockHushWaitAbandoned",
+        children: [AY && (0, cA.jsxs)("div", {
+          className: "SkyblockHushWaitRing",
+          children: [Array.from({
+            length: 3
+          }, ((YY, rY) => (0, cA.jsx)("span", {
+            className: "SkyblockHushWaitRipple"
+          }, rY))), (0, cA.jsx)("span", {
+            className: "SkyblockHushWaitClosing",
+            style: IY
+          }), (0, cA.jsxs)("svg", {
+            className: "SkyblockHushWaitProgress",
+            viewBox: "0 0 100 100",
+            children: [(0, cA.jsx)("circle", {
+              className: "SkyblockHushWaitTrack",
+              cx: "50",
+              cy: "50",
+              r: 46
+            }), (0, cA.jsx)("circle", {
+              className: "SkyblockHushWaitArc",
+              cx: "50",
+              cy: "50",
+              r: 46,
+              pathLength: 100,
+              style: IY
+            })]
+          }), (0, cA.jsx)("span", {
+            className: "SkyblockHushWaitMoon"
+          })]
+        }), (0, cA.jsx)("div", {
+          className: "SkyblockHushWaitLine SmallTextBold",
+          style: RY,
+          children: DY(FY.line)
+        }, FY.lineIndex)]
+      }, FY.token)
+    }
+
+    function lO(YY) {
+      let {
+        chart: rY,
+        showHere: DY,
+        className: FY
+      } = YY;
+      return (0, cA.jsx)("div", {
+        className: EA()("SkyblockTideChartGrid", FY, null !== rY.pictureName && "Complete"),
+        "aria-hidden": "true",
+        children: rY.cells.map(((YY, FY) => {
+          const AY = 0 !== (rY.pulseCells & 1 << FY),
+            IY = rY.castCell === FY;
+          return (0, cA.jsx)("span", {
+            className: EA()("SkyblockTideChartCell", `Cell-${YY}`, AY && "Pulse", IY && "Cast", DY && rY.hereCell === FY && "Here")
+          }, `${FY}:${AY?`p${rY.pulseToken}`:""}:${IY?`c${rY.castToken}`:""}`)
+        }))
+      })
+    }
+
+    function TO(YY) {
+      let {
+        controller: rY
+      } = YY;
+      const DY = (0, BA.k)(qF, rY.getSnapshot()),
+        {
+          t: FY
+        } = (0, NA.C)(),
+        AY = DY.chip;
+      if (!DY.enabled || null === AY) return null;
+      const IY = FY("skyblockGame:tideChartsChipLabel", {
+        island: AY.islandName,
+        lit: String(AY.lit),
+        ink: String(AY.ink)
+      });
+      return (0, cA.jsx)(VA.e, {
+        placement: "statBars",
+        children: (0, cA.jsxs)("button", {
+          type: "button",
+          tabIndex: -1,
+          className: EA()("SkyblockTideChartsChip", DY.open && "Open", null !== AY.pictureName && "Complete"),
+          "aria-label": IY,
+          title: IY,
+          onMouseDown: YY => {
+            YY.preventDefault()
+          },
+          onClick: rY.toggle,
+          children: [(0, cA.jsx)(lO, {
+            chart: AY,
+            showHere: !1,
+            className: "Mini"
+          }), (0, cA.jsxs)("span", {
+            className: "SkyblockTideChartsChipCount SmallTextBold",
+            children: [AY.lit, "/", AY.ink]
+          })]
+        })
+      })
+    }
+
+    function eO(YY) {
+      let {
+        controller: rY
+      } = YY;
+      const DY = (0, BA.k)(qF, rY.getSnapshot()),
+        {
+          t: FY
+        } = (0, NA.C)(),
+        AY = MA(),
+        IY = DY.card;
+      return DY.enabled && null !== IY ? (0, cA.jsx)(hA.e, {
+        show: DY.open,
+        close: rY.dismiss,
+        togglePointerLock: !1,
+        className: "SkyblockSkillsOverlay",
+        children: (0, cA.jsxs)("section", {
+          className: "SkyblockSkillsPanel SkyblockTideChartsPanel",
+          role: "dialog",
+          "aria-modal": "true",
+          "aria-labelledby": "skyblockTideChartsTitle",
+          tabIndex: -1,
+          ref: AY,
+          onKeyDown: JA,
+          children: [(0, cA.jsxs)("header", {
+            className: "SkyblockTideChartsHeader",
+            children: [(0, cA.jsxs)("div", {
+              children: [(0, cA.jsx)("h2", {
+                id: "skyblockTideChartsTitle",
+                children: FY("skyblockGame:tideChartsTitle")
+              }), (0, cA.jsx)("p", {
+                className: "SkyblockTideChartsIntro",
+                children: FY("skyblockGame:tideChartsIntro")
+              })]
+            }), (0, cA.jsx)(dA.k, {
+              padIgnore: !0,
+              ariaLabel: FY("skyblockGame:tideChartsClose"),
+              onClick: rY.dismiss
+            })]
+          }), DY.tabs.length > 1 && (0, cA.jsx)("div", {
+            className: "SkyblockTideChartsTabs",
+            role: "group",
+            "aria-label": FY("skyblockGame:tideChartsIslands"),
+            children: DY.tabs.map((YY => (0, cA.jsx)("button", {
+              type: "button",
+              className: EA()("SkyblockTideChartsTab", YY.selected && "Selected"),
+              "aria-pressed": YY.selected,
+              onClick: () => {
+                rY.Ps(YY.island)
+              },
+              children: YY.name
+            }, YY.island)))
+          }), (0, cA.jsxs)("div", {
+            className: "SkyblockTideChartsBody",
+            children: [(0, cA.jsx)("div", {
+              className: "SkyblockTideChartsMap",
+              role: "img",
+              "aria-label": IY.gridLabel,
+              children: (0, cA.jsx)(lO, {
+                chart: IY,
+                showHere: !0,
+                className: "Large"
+              })
+            }), (0, cA.jsxs)("div", {
+              className: "SkyblockTideChartsInfo",
+              children: [(0, cA.jsx)("h3", {
+                children: IY.islandName
+              }), (0, cA.jsx)("p", {
+                className: "SkyblockTideChartsLit",
+                children: IY.litText
+              }), null === IY.pictureName ? (0, cA.jsx)("p", {
+                className: "SkyblockTideChartsPicture",
+                children: FY("skyblockGame:tideChartsPictureHidden")
+              }) : (0, cA.jsx)("p", {
+                className: "SkyblockTideChartsPicture Revealed",
+                children: FY("skyblockGame:tideChartsPictureRevealed", {
+                  picture: IY.pictureName
+                })
+              }, IY.pictureName), (0, cA.jsxs)("ul", {
+                className: "SkyblockTideChartsLegend",
+                "aria-hidden": "true",
+                children: [(0, cA.jsxs)("li", {
+                  children: [(0, cA.jsx)("span", {
+                    className: "SkyblockTideChartCell Cell-lit"
+                  }), FY("skyblockGame:tideChartsLegendLit")]
+                }), (0, cA.jsxs)("li", {
+                  children: [(0, cA.jsx)("span", {
+                    className: "SkyblockTideChartCell Cell-clear"
+                  }), FY("skyblockGame:tideChartsLegendClear")]
+                }), null !== IY.hereCell && (0, cA.jsxs)("li", {
+                  children: [(0, cA.jsx)("span", {
+                    className: "SkyblockTideChartCell Cell-water Here"
+                  }), FY("skyblockGame:tideChartsLegendHere")]
+                })]
+              }), (0, cA.jsxs)("p", {
+                className: "SkyblockTideChartsFooter",
+                children: [(0, cA.jsx)("span", {
+                  children: DY.turnsText
+                }), (0, cA.jsx)("span", {
+                  children: DY.bookText
+                })]
+              })]
+            })]
+          })]
+        })
+      }) : null
+    }
+
+    function NO(YY) {
+      var rY;
+      let {
+        controller: DY
+      } = YY;
+      const {
+        selectedLanguage: FY
+      } = (0, NA.C)(), AY = FY.code;
+      (0, NY.useEffect)((() => {
+        DY.setTranslator(((YY, rY) => (0, NA.y)(AY, YY, rY)), AY, ((YY, rY) => (0, NA.u)(AY, YY, rY)))
+      }), [DY, AY]);
+      const IY = (0, BA.k)(sY, DY.map.getSnapshot()),
+        {
+          openInGameMenuName: RY
+        } = (0, mA.j)(["openInGameMenuName"]);
+      return (0, cA.jsxs)(cA.Fragment, {
+        children: [(0, cA.jsx)(UR, {
+          controller: DY.quests,
+          display: DY.navigation.display
+        }), IY.enabled && !RY && (0, cA.jsx)(YI, {
+          controller: DY.navigation
+        }), (0, cA.jsx)(KA, {
+          controller: DY,
+          minimap: IY.enabled && (null === (rY = IY.presentation) || void 0 === rY ? void 0 : rY.minimap) && (0, cA.jsx)(tA, {
+            view: IY.presentation.minimap,
+            navigation: DY.navigation,
+            controller: DY.map
+          }),
+          children: (0, cA.jsx)(aI, {
+            controller: DY.quests,
+            surface: "hud"
+          })
+        }), (0, cA.jsx)(xR, {
+          controller: DY.navigation
+        }), (0, cA.jsx)(tR, {
+          controller: DY.portalTransit
+        }), (0, cA.jsx)(vO, {
+          controller: DY.dailyReward
+        }), (0, cA.jsx)(WO, {
+          controller: DY.mailbox
+        }), (0, cA.jsx)(EO, {
+          controller: DY.magmaward
+        }), (0, cA.jsx)(mO, {
+          controller: DY.glowtide
+        }), (0, cA.jsx)(aR, {
+          controller: DY.passage
+        }), (0, cA.jsx)(TO, {
+          controller: DY.tideCharts
+        }), (0, cA.jsx)(VO, {
+          controller: DY.glowMeter
+        }), (0, cA.jsx)(VR, {
+          controller: DY.reachLog
+        }), (0, cA.jsx)(SO, {
+          controller: DY.hushWait
+        }), (0, cA.jsx)(oR, {
+          controller: DY.lampLight
+        }), (0, cA.jsx)(rI, {
+          controller: DY.skills,
+          surface: "hud"
+        })]
+      })
+    }
+
+    function BO(YY) {
+      let {
+        controller: rY
+      } = YY;
+      return (0, cA.jsxs)(cA.Fragment, {
+        children: [(0, cA.jsx)(LA, {
+          controller: rY.map,
+          navigation: rY.navigation
+        }), (0, cA.jsx)(rI, {
+          controller: rY.skills,
+          surface: "menu"
+        }), (0, cA.jsx)(aI, {
+          controller: rY.quests,
+          surface: "menu"
+        }), (0, cA.jsx)(qI, {
+          controller: rY.dungeons
+        }), (0, cA.jsx)(GI, {
+          controller: rY.collections
+        }), (0, cA.jsx)(PI, {
+          controller: rY.questGraph
+        }), (0, cA.jsx)(rR, {
+          controller: rY.forge
+        }), (0, cA.jsx)(OR, {
+          controller: rY.smuggler
+        }), (0, cA.jsx)(ER, {
+          controller: rY.keepersChair,
+          lampLight: rY.lampLight
+        }), (0, cA.jsx)(XR, {
+          controller: rY.reachLog,
+          regulars: rY.regulars,
+          hiddenWaters: rY.hiddenWaters
+        }), (0, cA.jsx)(eR, {
+          controller: rY.regulars
+        }), (0, cA.jsx)(uR, {
+          controller: rY.passage
+        }), (0, cA.jsx)(eO, {
+          controller: rY.tideCharts
+        }), (0, cA.jsx)(kR, {
+          controller: rY.dialogue
+        }), (0, cA.jsx)(GR, {
+          controller: rY.autographs
+        })]
+      })
+    }
+    var cO = DY(36151);
+    const KO = LD + IF;
+
+    function HO(YY, rY, DY, FY, AY) {
+      const IY = [],
+        RY = [],
+        OY = DY => {
+          const FY = YY.playSound(rY, DY.sound, DY.volume, DY.rate);
+          FY && (RY.push(FY), void 0 !== DY.cutAfter && IY.push(setTimeout((() => {
+            FY.fade(FY.getVolume(), 0, 300)
+          }), DY.cutAfter)))
+        };
+      for (const gY of function(YY, rY) {
+          const DY = [{
+            sound: "rpgKnifeSlice1",
+            beat: LD,
+            lead: 260,
+            volume: .5,
+            rate: 1
+          }, {
+            sound: "sweep6",
+            beat: LD,
+            lead: 140,
+            volume: .35,
+            rate: .85
+          }, {
+            sound: "rpgMetalPot1",
+            beat: LD,
+            lead: 100,
+            volume: 1,
+            rate: .78 + .04 * Math.random()
+          }, {
+            sound: "hit1",
+            beat: LD,
+            lead: 0,
+            volume: .8,
+            rate: .7
+          }, {
+            sound: "lowDrum1",
+            beat: LD,
+            lead: 60,
+            volume: .6,
+            rate: 1
+          }, {
+            sound: "zapAccent1",
+            beat: 360,
+            lead: 60,
+            volume: .3,
+            rate: 1.3
+          }, {
+            sound: (0, cO.d)("firecracker"),
+            beat: 420,
+            lead: 160,
+            volume: .25,
+            rate: 1.4,
+            cutAfter: 500
+          }, {
+            sound: "fireBurn",
+            beat: KO + 150,
+            lead: 400,
+            volume: .6,
+            rate: 1.2
+          }, {
+            sound: (0, cO.d)("bigDrumSwish"),
+            beat: KO + 80,
+            lead: 480,
+            volume: .35,
+            rate: 1,
+            cutAfter: 1400
+          }, {
+            sound: "magicAccent2",
+            beat: KO + 60,
+            lead: 180,
+            volume: .5 + .06 * YY,
+            rate: .82 + .07 * YY
+          }];
+          return YY >= 4 && DY.push({
+            sound: "exp_levelup",
+            beat: KO + 120,
+            lead: 60,
+            volume: .35,
+            rate: 1
+          }), rY && DY.push({
+            sound: "trumpetFlare",
+            beat: KO + 40,
+            lead: 20,
+            volume: .8,
+            rate: 1
+          }), DY.push({
+            sound: "harp_pling",
+            beat: tD,
+            lead: 40,
+            volume: .2,
+            rate: 1.5
+          }), DY
+        }(DY, FY)) AY ? IY.push(setTimeout((() => {
+        OY(gY)
+      }), Math.max(0, gY.beat - gY.lead / gY.rate))) : gY.beat !== LD && "magicAccent2" !== gY.sound && "trumpetFlare" !== gY.sound || OY(gY);
+      return () => {
+        for (const YY of IY) clearTimeout(YY);
+        for (const YY of RY) YY.fade(YY.getVolume(), 0, 120)
+      }
+    }
+    class zO {
+      constructor(YY) {
+        this.deps = YY, this.pending = new Map, this.localHook = null
+      }
+      hookWaiting(YY, rY) {
+        this.pending.delete(YY);
+        const DY = this.deps.now();
+        if (null === rY) {
+          var FY;
+          if ((null === (FY = this.localHook) || void 0 === FY ? void 0 : FY.hookId) === YY) {
+            const YY = DY >= this.localHook.biteAtMs - 300;
+            this.localHook = null, this.deps.onLocalWaitEnded(YY)
+          }
+          return
+        }
+        const AY = DY + rY;
+        this.settle(YY, AY) || (this.pending.size >= 16 && this.pending.delete(this.pending.keys().next().value), this.pending.set(YY, {
+          untilMs: DY + 1e3,
+          biteAtMs: AY
+        }))
+      }
+      getLocalHook() {
+        var YY, rY;
+        return null !== (YY = null === (rY = this.localHook) || void 0 === rY ? void 0 : rY.hookId) && void 0 !== YY ? YY : null
+      }
+      afterRender() {
+        if (0 === this.pending.size) return;
+        const YY = this.deps.now();
+        for (const [rY, {
+            untilMs: DY,
+            biteAtMs: FY
+          }] of this.pending)(this.settle(rY, FY) || YY > DY) && this.pending.delete(rY)
+      }
+      dispose() {
+        this.pending.clear(), this.localHook = null
+      }
+      settle(YY, rY) {
+        const DY = this.deps.getLineOwner(YY);
+        if (null === DY) return !1;
+        if (!this.deps.isLocalPlayer(DY)) return !0;
+        if (this.localHook = {
+            hookId: YY,
+            biteAtMs: rY
+          }, !this.deps.isHushWaiting()) {
+          const [rY, DY] = this.deps.getHookPosition(YY);
+          this.deps.onCastLanded(rY, DY)
+        }
+        return this.deps.onLocalHookSettled(), !0
+      }
+    }
+    var ZO = DY(3815);
+    const CO = {
+        0: [15],
+        1: [40, 60, 40],
+        2: [40, 60, 40, 60, 60],
+        3: [30, 50, 30, 50, 90]
+      },
+      fO = {
+        1: {
+          count: 24,
+          rise: 2.5,
+          colour: [79, 237, 237]
+        },
+        2: {
+          count: 40,
+          rise: 3.5,
+          colour: [245, 209, 66]
+        },
+        3: {
+          count: 64,
+          rise: 5,
+          colour: [206, 145, 206]
+        }
+      };
+    class jO {
+      constructor(YY) {
+        this.deps = YY, this.tell = null
+      }
+      receiveTell(YY) {
+        let {
+          biteTellTier: rY
+        } = YY;
+        this.tell = {
+          tier: rY,
+          atMs: this.deps.now(),
+          burst: !1
+        }, this.burstAtHook()
+      }
+      onLocalHookSettled() {
+        null !== this.tell && this.deps.now() - this.tell.atMs <= 500 && this.burstAtHook()
+      }
+      onLocalWaitEnded(YY) {
+        const rY = this.tell;
+        if (this.tell = null, !YY) return;
+        const DY = null !== rY && this.deps.now() - rY.atMs <= 3e3 ? rY.tier : 0;
+        this.deps.vibrate(CO[DY])
+      }
+      burstAtHook() {
+        const YY = this.tell,
+          rY = this.deps.getLocalHookPosition();
+        null === YY || YY.burst || null === rY || (YY.burst = !0, this.deps.playParticles(function(YY, rY) {
+          let [DY, FY, AY] = rY;
+          const {
+            count: IY,
+            rise: RY,
+            colour: OY
+          } = fO[YY], [gY, aY, vY] = OY;
+          return {
+            texture: "glint",
+            pos1: [DY - .3, FY, AY - .3],
+            pos2: [DY + .3, FY + .2, AY + .3],
+            dir1: [-.6, RY, -.6],
+            dir2: [.6, 1.4 * RY, .6],
+            minLifeTime: .5,
+            maxLifeTime: .9,
+            minEmitPower: 1,
+            maxEmitPower: 1.6,
+            minSize: .12,
+            maxSize: .3,
+            manualEmitCount: IY,
+            gravity: [0, -4, 0],
+            velocityGradients: [{
+              timeFraction: 0,
+              factor: 1,
+              factor2: 1
+            }, {
+              timeFraction: 1,
+              factor: .2,
+              factor2: .2
+            }],
+            colorGradients: [{
+              timeFraction: 0,
+              minColor: [gY, aY, vY, 1],
+              maxColor: [255, 255, 255, 1]
+            }, {
+              timeFraction: 1,
+              minColor: [gY, aY, vY, 0],
+              maxColor: [gY, aY, vY, 0]
+            }],
+            blendMode: ZO.g.Add,
+            hideDist: 48
+          }
+        }(YY.tier, rY)))
+      }
+    }
+    var hO = DY(1256),
+      dO = DY(1816),
+      JO = DY(40);
+
+    function MO(YY, rY) {
+      return [{
+        timeFraction: 0,
+        minColor: [255 * YY[0], 255 * YY[1], 255 * YY[2], 1],
+        maxColor: [255 * rY[0], 255 * rY[1], 255 * rY[2], 1]
+      }, {
+        timeFraction: 1,
+        minColor: [0, 0, 0, 1]
+      }]
+    }
+    const wO = [0, 0, 0],
+      bO = {
+        texture: "glint",
+        mipmaps: !1,
+        gu: 24,
+        minLifeTime: .18,
+        maxLifeTime: .35,
+        minSize: .07,
+        maxSize: .14,
+        minEmitPower: 0,
+        maxEmitPower: 0,
+        emitRate: 12,
+        dir1: wO,
+        dir2: wO,
+        blendMode: ZO.g.OneOne
+      },
+      XO = {
+        ...bO,
+        colorGradients: MO([1, .88, .38], [1, .65, .15])
+      },
+      qO = {
+        ...bO,
+        colorGradients: MO([.55, .95, 1], [.9, 1, 1])
+      },
+      pO = [.5, .5, .5],
+      kO = {
+        texture: "glint",
+        mipmaps: !1,
+        gu: 24,
+        minLifeTime: .2,
+        maxLifeTime: .4,
+        minSize: .12,
+        maxSize: .22,
+        minEmitPower: .5,
+        maxEmitPower: 1.5,
+        emitRate: 0,
+        colorGradients: MO([1, .12, .12], [1, .35, .2]),
+        blendMode: ZO.g.OneOne
+      };
+    class GO {
+      constructor() {
+        this.drops = new Map
+      }
+      Cy(YY, rY) {
+        if ("overflowFlash" === rY.kind) {
+          const [DY, FY, AY] = rY.position, IY = YY.createParticles(kO, {
+            pos: [DY, FY, AY],
+            half: pO
+          });
+          return IY.emit(18), void IY.stop()
+        }
+        this.drops.has(rY.itemId) || this.drops.set(rY.itemId, {
+          owner: rY.owner,
+          cosmetic: rY.cosmetic,
+          pickupDelayCleared: !1,
+          seen: !1,
+          markedAt: performance.now(),
+          lastMovingAt: 0,
+          lastPosition: [0, 0, 0],
+          particles: null
+        })
+      }
+      Zu(YY) {
+        if (0 === this.drops.size) return;
+        const rY = performance.now(),
+          DY = YY.getCameraPosition();
+        let FY = 0;
+        for (const IY of this.drops.values()) null !== IY.particles && FY++;
+        for (const [IY, RY] of this.drops) {
+          const OY = YY.getPositionView(IY);
+          if (null === OY) {
+            var AY;
+            if (RY.seen || rY - RY.markedAt > 5e3) null !== RY.particles && FY--, null === (AY = RY.particles) || void 0 === AY || AY.stop(), this.drops.delete(IY);
+            continue
+          }
+          RY.cosmetic || !YY.isLocalPlayer(RY.owner) || RY.pickupDelayCleared || (YY.clearPickupDelay(IY), RY.pickupDelayCleared = !0);
+          const gY = RY.lastPosition,
+            aY = RY.seen && (OY[0] - gY[0]) ** 2 + (OY[1] - gY[1]) ** 2 + (OY[2] - gY[2]) ** 2 > 4e-4,
+            vY = (OY[0] - DY[0]) ** 2 + (OY[1] - DY[1]) ** 2 + (OY[2] - DY[2]) ** 2 < 2025;
+          RY.seen = !0, gY[0] = OY[0], gY[1] = OY[1], gY[2] = OY[2], aY && (RY.lastMovingAt = rY), null !== RY.particles && (!vY || rY - RY.lastMovingAt > 500) && (RY.particles.stop(), RY.particles = null, FY--), aY && vY && null === RY.particles && FY < 32 && (RY.particles = YY.createParticles(RY.cosmetic ? qO : XO, {
+            pos: OY
+          }), FY++), null !== RY.particles && (RY.particles.moveTo(OY), RY.particles.setEmitRate(aY ? 12 : 0)), !aY && null === RY.particles && rY - Math.max(RY.lastMovingAt, RY.markedAt) > 2e3 && this.drops.delete(IY)
+        }
+      }
+      dispose() {
+        for (const rY of this.drops.values()) {
+          var YY;
+          null === (YY = rY.particles) || void 0 === YY || YY.stop()
+        }
+        this.drops.clear()
+      }
+    }
+    var xO = DY(213);
+    const nO = xO.d.jW * xO.d.playerEyeToHeightRatio;
+    class PO {
+      constructor(YY) {
+        this.host = YY, this.lava = [], this.loop = null, this.nextUpdateAt = 0
+      }
+      Cy(YY) {
+        this.lava = YY, this.nextUpdateAt = 0
+      }
+      Zu() {
+        var YY;
+        const rY = this.host.now();
+        if (rY < this.nextUpdateAt) return;
+        this.nextUpdateAt = rY + 250;
+        const DY = this.host.playerPosition(),
+          FY = DY && this.findNearest([DY[0], DY[1] + nO, DY[2]]);
+        if (!FY || FY.distance >= 40) return void this.stop();
+        const AY = .5 * Math.min(1, (40 - FY.distance) / 8);
+        this.loop ? this.loop.setRelativeVolume(AY) : this.loop = this.host.play("lavaFlow", AY, FY.position, 40 + nO, 9, !0), null === (YY = this.loop) || void 0 === YY || YY.setPosition(FY.position)
+      }
+      dispose() {
+        this.stop(), this.lava = []
+      }
+      stop() {
+        var YY;
+        null === (YY = this.loop) || void 0 === YY || YY.stop(), this.loop = null
+      }
+      findNearest(YY) {
+        let rY = -1,
+          DY = 1 / 0;
+        for (let FY = 0; FY < this.lava.length; FY += 3) {
+          const AY = this.lava[FY] - YY[0],
+            IY = this.lava[FY + 1] - YY[1],
+            RY = this.lava[FY + 2] - YY[2],
+            OY = AY * AY + IY * IY + RY * RY;
+          OY < DY && (DY = OY, rY = FY)
+        }
+        return rY < 0 ? null : {
+          position: [this.lava[rY], this.lava[rY + 1], this.lava[rY + 2]],
+          distance: Math.sqrt(DY)
+        }
+      }
+    }
+    var UO = DY(1786),
+      LO = DY(38005);
+    const tO = {
+      "Grey Portal": "Gray"
+    };
+    for (const Ig of AY.Fc) tO[`${Ig} Portal`] = Ig;
+    const Yg = Object.keys(tO),
+      rg = Object.fromEntries(Yg.map((YY => [YY, (0, AY.Y)(AY.K[`${(0,AY.te)(tO[YY])}Team`])])));
+    Object.fromEntries(Yg.map((YY => [YY, AY.K[`${(0,AY.te)(tO[YY])}UiText`]])));
+    class Dg {
+      constructor(YY, rY) {
+        this.presentation = YY, this.portal = rY, this.unlocked = void 0
+      }
+      Cy(YY) {
+        const rY = !1 === this.unlocked && YY;
+        this.unlocked = YY, this.Zu();
+        const {
+          min: DY,
+          max: FY,
+          unlockedBlock: AY
+        } = this.portal;
+        if (rY && this.presentation.hasChunk(...DY)) {
+          const [YY, rY, IY] = rg[AY];
+          this.presentation.playParticles({
+            pos1: [...DY],
+            pos2: FY.map((YY => YY + 1)),
+            dir1: [-1, 0, -1],
+            dir2: [1, 1, 1],
+            texture: "glint",
+            minLifeTime: .4,
+            maxLifeTime: 1.2,
+            minEmitPower: .5,
+            maxEmitPower: 1.5,
+            minSize: .12,
+            maxSize: .25,
+            manualEmitCount: 80,
+            hideDist: 64,
+            gravity: [0, .5, 0],
+            colorGradients: [{
+              timeFraction: 0,
+              minColor: [YY, rY, IY, 1],
+              maxColor: [Math.min(255, YY + 55), Math.min(255, rY + 55), Math.min(255, IY + 90), 1]
+            }],
+            velocityGradients: [{
+              timeFraction: 0,
+              factor: 1,
+              factor2: 1
+            }],
+            blendMode: 1
+          })
+        }
+      }
+      Zu() {
+        var YY;
+        const rY = this.unlocked ? this.portal.unlockedBlock : null !== (YY = this.portal.lockedBlock) && void 0 !== YY ? YY : "Light Gray Portal",
+          {
+            min: DY,
+            max: FY
+          } = this.portal;
+        for (let AY = DY[0]; AY <= FY[0]; AY++)
+          for (let YY = DY[1]; YY <= FY[1]; YY++)
+            for (let IY = DY[2]; IY <= FY[2]; IY++) this.presentation.hasChunk(AY, YY, IY) && this.presentation.sE(AY, YY, IY) !== rY && this.presentation.Rl(AY, YY, IY, rY)
+      }
+    }
+    const Fg = {
+        farming_1: {
+          raises: YY => "NPC" === YY.type && "chef" === YY.variation,
+          rise: .4
+        },
+        fishing_1: {
+          raises: YY => "Draugr Warper" === YY.type,
+          rise: .4
+        }
+      },
+      Ag = (YY, rY, DY, IY) => {
+        let {
+          localPlayerId: RY
+        } = IY;
+        const OY = new oA({
+          translate: (YY, rY) => (0, NA.y)(hO.h.get().getCurrentLanguageCode(), YY, rY),
+          translateWithIcons: (YY, rY) => (0, NA.u)(hO.h.get().getCurrentLanguageCode(), YY, rY),
+          setMenuOpen: YY => {
+            YY ? (0, pY.o)() : (0, pY.f)()
+          },
+          dismissMenu: pY.h,
+          publishSkills: YY => {
+            kY.g.vo(FD, YY, !0)
+          },
+          publishQuests: YY => {
+            kY.g.vo(OD, YY, !0)
+          },
+          publishQuestNotification: YY => {
+            kY.g.vo(gD, YY, !0)
+          },
+          publishDungeons: YY => {
+            kY.g.vo(uD, YY, !0)
+          },
+          publishCollections: YY => {
+            kY.g.vo(CD, YY, !0)
+          },
+          publishMap: YY => {
+            kY.g.vo(sY, YY, !0)
+          },
+          publishHud: YY => {
+            kY.g.vo(iA, YY, !0)
+          },
+          publishPortalTransit: YY => {
+            kY.g.vo(jD, YY, !0)
+          },
+          isLoadingScreenUp: () => mA.b.get("loadingOverlayVisible"),
+          publishDailyReward: YY => {
+            kY.g.vo(JD, YY, !0)
+          },
+          publishMailbox: YY => {
+            kY.g.vo(qD, YY, !0)
+          },
+          publishQuestGraph: YY => {
+            kY.g.vo(kD, YY, !0)
+          },
+          publishForge: YY => {
+            kY.g.vo(sF, YY, !0)
+          },
+          publishSmuggler: YY => {
+            kY.g.vo(QF, YY, !0)
+          },
+          publishKeepersChair: YY => {
+            kY.g.vo(eF, YY, !0)
+          },
+          publishReachLog: YY => {
+            kY.g.vo(BF, YY, !0)
+          },
+          publishLampLight: YY => {
+            kY.g.vo(CF, YY, !0)
+          },
+          publishMagmaward: YY => {
+            kY.g.vo(jF, YY, !0)
+          },
+          publishGlowtide: YY => {
+            kY.g.vo(dF, YY, !0)
+          },
+          publishGlowMeter: YY => {
+            kY.g.vo(MF, YY, !0)
+          },
+          publishHushWait: YY => {
+            kY.g.vo(bF, YY, !0)
+          },
+          publishPassage: YY => {
+            kY.g.vo(EF, YY, !0)
+          },
+          publishTideCharts: YY => {
+            kY.g.vo(qF, YY, !0)
+          },
+          publishRegulars: YY => {
+            kY.g.vo(LF, YY, !0)
+          },
+          publishHiddenWaters: YY => {
+            kY.g.vo(FA, YY, !0)
+          },
+          publishDialogue: YY => {
+            kY.g.vo(IA, YY, !0)
+          },
+          publishAutographs: YY => {
+            kY.g.vo(vA, YY, !0)
+          },
+          onDailyRewardStarted: YY => {
+            dY.playSound(RY, YY.day === cY ? "trumpetFlare" : "chestOpen", .8, 1)
+          },
+          onDailyRewardCoinLanded: (YY, rY) => {
+            dY.playSound(RY, "exp_collect", .35, 1 + .6 * YY / (rY - 1)), kY.g.vo(MD, YY === rY - 1)
+          },
+          onDailyRewardItemLanded: YY => {
+            dY.playSound(RY, "pickUp", .6, 1 + .15 * YY)
+          },
+          onMailboxStarted: () => {
+            dY.playSound(RY, "rpgMetalClick", .6, 1), dY.playSound(RY, "rpgBookFlip1", .7, 1)
+          },
+          onDailyRewardFinished: () => {
+            dY.sendCommand("skyblockDailyRewardDone")
+          },
+          journeyStorage: JO.q,
+          requestTracking: YY => {
+            dY.sendCommand(`quests track ${YY}`)
+          },
+          requestDungeonEnter: (YY, rY) => {
+            dY.sendCommand(`${zY.m}${YY} ${rY}`)
+          },
+          requestQuestJump: YY => {
+            dY.sendCommand(`${ZY} jump ${YY}`)
+          },
+          requestQuestArrive: (YY, rY) => {
+            const DY = `${ZY} arrive ${YY}`;
+            dY.sendCommand(rY ? `${DY} complete` : DY)
+          },
+          requestForge: YY => {
+            let {
+              blade: rY,
+              guard: DY,
+              handle: FY
+            } = YY;
+            dY.sendCommand(`forge ${rY} ${DY} ${FY}`)
+          },
+          requestDialogue: () => {
+            dY.sendCommand("quests dialogue")
+          },
+          requestSmuggle: (YY, rY) => {
+            dY.sendCommand(`smuggle ${YY} ${rY}`)
+          },
+          requestKeepersChairAim: YY => {
+            dY.sendCommand(`keeperschair-aim ${YY}`)
+          },
+          requestReachLogOpen: () => {
+            dY.sendCommand("reachlog-open")
+          },
+          requestLampLight: YY => {
+            dY.sendCommand(`${YY}`)
+          },
+          requestTravel: YY => {
+            dY.sendCommand(`map travel ${YY.kind} ${YY.id} ${YY.requestId}`)
+          }
+        });
+        let gY, aY, vY, uY, iY, yY, QY, VY, SY, lY, TY, BY, KY;
+        const CY = new GO;
+        let dY, wY = null;
+        const bY = Fg[null !== DY && void 0 !== DY ? DY : ""],
+          xY = (YY, rY) => {
+            null !== bY && void 0 !== bY && bY.raises(rY) && dY.setNametagOffset(YY, bY.rise)
+          },
+          nY = new jO({
+            getLocalHookPosition: () => {
+              const YY = PY.getLocalHook();
+              return null !== YY && dY.checkValid(YY) ? dY.lE(YY) : null
+            },
+            playParticles: YY => {
+              dY.playParticleEffect(YY)
+            },
+            vibrate: YY => {
+              GY.f.play("fishBite", YY)
+            },
+            now: () => performance.now()
+          }),
+          PY = new zO({
+            getLineOwner: YY => dY.checkValid(YY) ? dY.getLineOwner(YY) : null,
+            isLocalPlayer: YY => dY.isLocalPlayer(YY),
+            getHookPosition: YY => {
+              const [rY, , DY] = dY.lE(YY);
+              return [rY, DY]
+            },
+            isHushWaiting: () => {
+              var YY;
+              return "waiting" === (null === (YY = OY.hushWait.getSnapshot()) || void 0 === YY ? void 0 : YY.phase)
+            },
+            onCastLanded: (YY, rY) => {
+              OY.tideCharts.castLanded(YY, rY)
+            },
+            onLocalHookSettled: () => {
+              nY.onLocalHookSettled()
+            },
+            onLocalWaitEnded: YY => {
+              nY.onLocalWaitEnded(YY)
+            },
+            now: () => performance.now()
+          }),
+          UY = new PO({
+            now: () => performance.now(),
+            playerPosition: () => dY.checkValid(RY) ? dY.lE(RY) : null,
+            play: (YY, rY, DY, FY, AY, IY) => dY.playSound(RY, YY, rY, 1, {
+              zY: DY,
+              maxHearDist: FY,
+              refDistance: AY
+            }, IY)
+          }),
+          LY = new Map;
+        let tY;
+        return {
+          onCreate: YY => {
+            if (dY = YY, wY = new LO.SkyblockEntityFacing(YY, bY ? xY : null), OY.portalTransit.resumeArrival(null !== DY && void 0 !== DY ? DY : null), (null !== DY && void 0 !== DY ? DY : FY) === FY) {
+              let YY = -1 / 0;
+              tY = kY.g.subscribe("toggleMenu", (rY => {
+                const DY = performance.now();
+                "inventory|Workbench" !== rY || "cross_to_hub" !== OY.quests.getTrackedQuestId() || DY - YY < 1e4 || (YY = DY, dY.sendCommand("skyblockWorkbenchOpened"))
+              }))
+            }
+            for (const [FY, AY] of Object.entries(null !== (rY = fY[null !== DY && void 0 !== DY ? DY : ""]) && void 0 !== rY ? rY : {})) {
+              var rY;
+              LY.set(FY, new Dg({
+                hasChunk: (rY, DY, FY) => YY.isBlockInLoadedChunk(rY, DY, FY),
+                sE: (rY, DY, FY) => YY.blockIdToBlockName(YY.getBlockId(rY, DY, FY)),
+                Rl: (rY, DY, FY, AY) => {
+                  YY.Rl(rY, DY, FY, AY)
+                },
+                playParticles: rY => {
+                  YY.playParticleEffect(rY)
+                }
+              }, AY))
+            }
+            KY = (0, UO.c)((YY => function(YY) {
+              return Object.hasOwn(br, YY) || YY.startsWith("npc_")
+            }(YY) ? qr(YY) : null)), OY.resolveItemName = (rY, DY) => {
+              const FY = YY.getItemStat(RY, rY, "displayName");
+              return FY && "object" === typeof FY && "translationKey" in FY ? DY(FY.translationKey, (0, NA.r)(FY.params, dO.e.shown)) : "string" === typeof FY ? DY(FY) : rY
+            }, OY.quests.notifications.onShown = YY => {
+              "quest" === YY ? dY.playSound(RY, "magicAccent1", 1, 1) : "skillLevel" === YY ? dY.playSound(RY, "magicAccent1", 1, .6) : "landmark" === YY ? dY.playSound(RY, "trumpetFlare", 1, .6) : "npcNote" === YY ? dY.playSound(RY, "magicAccent2", .8, 1.1) : "started" === YY ? dY.playSound(RY, (0, cO.d)("bigDrumSwish"), 1, 1) : dY.playSound(RY, (0, cO.d)("rpgHandleSmallLeather"), 1, 1)
+            }, OY.forge.onPartSelected = () => {
+              dY.playSound(RY, "rpgMetalClick", .6, .9 + .2 * Math.random())
+            }, OY.forge.onForgeStarted = (rY, DY, FY) => HO(YY, RY, rY, DY, FY), OY.smuggler.onBought = () => {
+              dY.playSound(RY, (0, cO.d)("rpgHandleSmallLeather"), 1, 1), dY.playSound(RY, "chestOpen", .6, 1)
+            }, OY.compass.register(new oY(OY.map, !0)), OY.compass.register(new oY(OY.map, !1)), OY.compass.register(new EY(OY.map)), OY.compass.register(new mY((() => OY.quests.getSnapshot().compassTarget)));
+            for (const DY of ["enemy", "npc"]) OY.compass.register(new WY(OY.map, DY, (rY => YY.checkValid(rY) ? YY.lE(rY) : void 0), (rY => YY.isAlive(rY))))
+          },
+          onAfterRender: (YY, rY) => {
+            const DY = dY.checkValid(RY) ? dY.lE(RY) : null;
+            OY.navigation.afterRender(DY, performance.now(), rY), OY.glowtide.afterRender(DY, rY.cameraHeading), OY.tideCharts.afterRender(DY), PY.afterRender()
+          },
+          onClose: () => {
+            var YY, rY, DY, FY, AY, IY, RY, sY, yY, oY, WY, EY, mY, eY, NY;
+            tY && kY.g.unsubscribe(tY), null === (YY = KY) || void 0 === YY || YY(), CY.dispose(), UY.dispose(), null === (rY = wY) || void 0 === rY || rY.dispose(), PY.dispose(), OY.dispose(), null === (DY = gY) || void 0 === DY || DY(), null === (FY = aY) || void 0 === FY || FY(), null === (AY = vY) || void 0 === AY || AY(), null === (IY = uY) || void 0 === IY || IY(), null === (RY = iY) || void 0 === RY || RY(), null === (sY = QY) || void 0 === sY || sY(), null === (yY = undefined) || void 0 === yY || yY(), null === (oY = VY) || void 0 === oY || oY(), null === (WY = SY) || void 0 === WY || WY(), null === (EY = lY) || void 0 === EY || EY(), null === (mY = TY) || void 0 === mY || mY(), null === (eY = undefined) || void 0 === eY || eY(), null === (NY = BY) || void 0 === NY || NY()
+          },
+          onPlayerChangeBlock: (YY, rY, FY, IY, gY, aY) => {
+            if (YY === RY && "Air" === aY) {
+              const YY = dY.getClientOption(RY, "creative");
+              OY.skills.predictBlock([rY, FY, IY], gY, YY);
+              const aY = function(YY, rY) {
+                  if ("hub" === rY || "farming_1" === rY || "mining_1" === rY) return !JY.has(YY) || "hub" !== rY && "mining_1" !== rY ? Object.hasOwn(hY, YY) ? hY[YY] : void 0 : jY
+                }(gY, DY),
+                vY = ("hub" === DY || "mining_1" === DY) && (AY.jd.some((YY => YY === gY)) || Object.hasOwn(MY, gY) || "mining_1" === DY && "Block of Coal" === gY);
+              YY || void 0 === aY && !vY || dY.Rl(rY, FY, IY, null !== aY && void 0 !== aY ? aY : jY)
+            }
+          },
+          onPlayerAttackEntity: (YY, rY) => {
+            if (YY !== RY || "Player" !== dY.getEntityType(rY)) return;
+            const [DY, FY, AY] = dY.lE(rY);
+            dY.burstParticlePreset("critical", [DY, FY + 1, AY], 10)
+          },
+          onChangeBlockFail: YY => {
+            for (const {
+                oD: rY
+              }
+              of YY) OY.skills.rejectBlock(rY)
+          },
+          onReceivedMessageFromServer: (YY, rY) => {
+            if ("skyblockGatedPortal" === YY) {
+              var DY;
+              const [YY, FY] = rY;
+              return void(null === (DY = LY.get(YY)) || void 0 === DY || DY.Cy(FY))
+            }
+            if ("skyblockDailyReward" === YY) return void OY.dailyReward.Cy(rY);
+            if ("skyblockMailbox" === YY) return void OY.mailbox.Cy(rY);
+            if ("skyblockPortalTransit" === YY) return void OY.portalTransit.Cy(rY);
+            if ("skyblockLoot" === YY) return void CY.Cy(dY, rY);
+            if ("skyblockLava" === YY) return void UY.Cy(rY);
+            if ("skyblockForge" === YY) return void OY.forge.Cy(rY);
+            if ("skyblockMagmaward" === YY) return void OY.magmaward.Cy(rY);
+            if ("skyblockGlowtide" === YY) return void OY.glowtide.Cy(rY);
+            if ("skyblockGlowMeter" === YY) return void OY.glowMeter.Cy(rY);
+            if ("skyblockHushWait" === YY) return void OY.hushWait.Cy(rY);
+            if ("skyblockPassage" === YY) {
+              const YY = rY;
+              return OY.passage.Cy(YY), OY.reachLog.receivePassagePhase(YY.passagePhase), lY ??= (0, eY.x)({
+                id: "skyblockPassage",
+                order: 5,
+                labelKey: "skyblockGame:passageButton",
+                icon: {
+                  kind: "item",
+                  name: "Moonfish"
+                },
+                panel: !0,
+                onClick: OY.passage.show
+              }), void OY.keepersChair.receivePassage({
+                keepersChairPassagePhase: YY.passagePhase,
+                keepersChairPassageNextPhase: YY.passageNextPhase,
+                keepersChairPassageTurnsInMs: YY.passageTurnsInMs
+              })
+            }
+            if ("skyblockTideCharts" === YY) {
+              const YY = rY;
+              return OY.tideCharts.Cy(YY), void(YY.tideCharts.length > 0 && (TY ??= (0, eY.x)({
+                id: "skyblockTideCharts",
+                order: 8,
+                labelKey: "skyblockGame:tideChartsTitle",
+                icon: {
+                  kind: "item",
+                  name: "Chunk Map"
+                },
+                panel: !0,
+                onClick: OY.tideCharts.show
+              })))
+            }
+            if (YY === XY.z) {
+              var FY;
+              const {
+                hookId: YY,
+                waiting: DY
+              } = rY;
+              return void PY.hookWaiting(YY, null !== (FY = null === DY || void 0 === DY ? void 0 : DY.remainingMs) && void 0 !== FY ? FY : null)
+            }
+            if ("skyblockBiteTell" === YY) return void nY.receiveTell(rY);
+            if ("skyblockSmuggler" === YY) return void OY.smuggler.Cy(rY);
+            if ("skyblockKeepersChair" === YY) return OY.keepersChair.Cy(rY), void OY.lampLight.setAtChair(OY.keepersChair.isAtChair());
+            if ("skyblockLampLight" === YY) {
+              const YY = rY;
+              var AY;
+              if (OY.lampLight.Cy(YY), YY.lampLightReleasing) SY ??= (0, eY.x)({
+                id: "skyblockLampLightKeepCatches",
+                order: 7,
+                labelKey: "skyblockGame:lampLightKeepCatches",
+                icon: {
+                  kind: "item",
+                  name: "Bucket"
+                },
+                onClick: () => {
+                  OY.lampLight.setRelease(!1)
+                }
+              });
+              else null === (AY = SY) || void 0 === AY || AY(), SY = void 0;
+              return
+            }
+            if ("skyblockRegulars" === YY) return void OY.regulars.Cy(rY);
+            if ("skyblockHiddenWaters" === YY) return void OY.hiddenWaters.Cy(rY);
+            if ("skyblockReachLog" === YY) return OY.reachLog.Cy(rY), void(VY ??= (0, eY.x)({
+              id: "skyblockReachLog",
+              order: 6,
+              labelKey: "skyblockGame:reachLogTitle",
+              icon: {
+                kind: "item",
+                name: KF
+              },
+              onClick: OY.reachLog.ask
+            }));
+            if ("skyblockBurrowDoor" === YY) {
+              for (const [YY, DY, FY, AY] of rY) dY.Rl(YY, DY, FY, AY);
+              return
+            }
+            if ("skyblockHud" === YY) OY.receiveHud(rY);
+            else if ("skyblockMap" === YY) OY.map.Cy(rY);
+            else if (YY === qY.e) OY.skills.Cy(rY);
+            else if (YY === HY && "dialogue" === rY.kind) OY.dialogue.Cy(rY);
+            else if (YY === HY) OY.quests.Cy(rY);
+            else if (YY === zY.i) OY.dungeons.Cy(rY);
+            else if ("sbCollections" === YY) OY.collections.Cy(rY);
+            else if ("skyblockQuestGraph" === YY) OY.questGraph.Cy(rY);
+            else {
+              if ("skyblockAutographs" !== YY) return;
+              OY.autographs.Cy(rY)
+            }
+            if (!aY && OY.map.getSnapshot().enabled) {
+              const YY = (0, eY.x)({
+                  id: "skyblockMap",
+                  order: 3,
+                  labelKey: "skyblockGame:map",
+                  icon: {
+                    kind: "item",
+                    name: "Compass"
+                  },
+                  panel: !0,
+                  onClick: OY.map.show
+                }),
+                rY = (0, pY.p)(OY.map.show);
+              aY = () => {
+                YY(), rY()
+              }
+            }!vY && OY.skills.getSnapshot().enabled && (vY = (0, eY.x)({
+              id: "skyblockSkills",
+              order: 0,
+              labelKey: "skyblockGame:skills",
+              icon: {
+                kind: "item",
+                name: "Iron Sword"
+              },
+              panel: !0,
+              onClick: OY.skills.show
+            })), !QY && OY.collections.getSnapshot().enabled && (QY = (0, eY.x)({
+              id: "skyblockCollections",
+              order: 2.5,
+              labelKey: "skyblockGame:collections",
+              icon: {
+                kind: "item",
+                name: "Coal"
+              },
+              panel: !0,
+              onClick: OY.collections.show
+            })), !uY && OY.quests.getSnapshot().enabled && (uY = (0, eY.x)({
+              id: "skyblockQuests",
+              order: 1,
+              labelKey: "skyblockGame:quests",
+              icon: {
+                kind: "item",
+                name: "Book"
+              },
+              panel: !0,
+              onClick: OY.quests.show
+            })), !BY && OY.autographs.getSnapshot().enabled && (BY = (0, eY.x)({
+              id: "skyblockAutographs",
+              order: 5,
+              labelKey: "skyblockGame:autographs",
+              icon: {
+                kind: "item",
+                name: "Name Tag"
+              },
+              panel: !0,
+              onClick: OY.autographs.show
+            }));
+            const IY = OY.dungeons.getSnapshot().enabled;
+            var RY;
+            (vY || uY || IY) && yY !== IY && (yY = IY, null === (RY = iY) || void 0 === RY || RY(), iY = (0, eY.x)({
+              id: "skyblockDungeons",
+              order: 2,
+              labelKey: "skyblockGame:dungeons",
+              icon: {
+                kind: "image",
+                src: zr
+              },
+              disabled: !IY,
+              panel: !0,
+              onClick: OY.dungeons.show
+            }));
+            gY || (gY = (0, pY.q)((0, NY.createElement)(NO, {
+              controller: OY
+            }), {
+              content: (0, NY.createElement)(BO, {
+                controller: OY
+              }),
+              onClose: OY.close
+            }))
+          },
+          Zu: () => {
+            var YY;
+            for (const rY of LY.values()) rY.Zu();
+            CY.Zu(dY), UY.Zu(), null === (YY = wY) || void 0 === YY || YY.Zu(), OY.skills.Zu(), OY.quests.Zu(), OY.dailyReward.Zu(), OY.mailbox.Zu(), OY.map.Zu()
+          }
+        }
+      }
+  },
+  37921: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => RY,
+      g: () => OY,
+      i: () => FY,
+      m: () => IY,
+      n: () => AY,
+      q: () => gY
+    });
+    const FY = "skyblockDungeons",
+      AY = "skyblockHeldBoss",
+      IY = "dungeonEnter ",
+      RY = Object.freeze({
+        easy: "skyblockGame:difficultyEasy",
+        medium: "skyblockGame:difficultyMedium",
+        hard: "skyblockGame:difficultyHard",
+        insane: "skyblockGame:difficultyInsane"
+      }),
+      OY = Object.freeze({
+        easy: "#77b326",
+        medium: "#eac03d",
+        hard: "#df7622",
+        insane: "#e74d4d"
+      });
+
+    function gY(YY) {
+      let rY = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+      const DY = Math.max(0, Math.floor(YY)),
+        FY = Math.floor(DY % 1e3 / 100),
+        AY = Math.floor(DY / 1e3),
+        IY = AY % 60,
+        RY = Math.floor(AY / 60),
+        OY = RY % 60,
+        gY = Math.floor(RY / 60),
+        aY = YY => YY < 10 ? `0${YY}` : String(YY),
+        vY = rY ? `.${FY}` : "";
+      return gY > 0 ? `${gY}:${aY(OY)}:${aY(IY)}${vY}` : `${OY}:${aY(IY)}${vY}`
+    }
+  },
+  35799: (YY, rY, DY) => {
+    DY.d(rY, {
+      b: () => AY,
+      e: () => FY
+    });
+    const FY = "skyblockSkills",
+      AY = "skills_test_gym"
+  },
+  8774: (YY, rY, DY) => {
+    DY.d(rY, {
+      e: () => AY,
+      g: () => RY
+    });
+    const FY = [{
+      threshold: 10n ** 180n,
+      suffix: "NoQig"
+    }, {
+      threshold: 10n ** 177n,
+      suffix: "OcQig"
+    }, {
+      threshold: 10n ** 174n,
+      suffix: "SpQig"
+    }, {
+      threshold: 10n ** 171n,
+      suffix: "SQig"
+    }, {
+      threshold: 10n ** 168n,
+      suffix: "QiQig"
+    }, {
+      threshold: 10n ** 165n,
+      suffix: "QaQig"
+    }, {
+      threshold: 10n ** 162n,
+      suffix: "TQig"
+    }, {
+      threshold: 10n ** 159n,
+      suffix: "DQig"
+    }, {
+      threshold: 10n ** 156n,
+      suffix: "UQig"
+    }, {
+      threshold: 10n ** 153n,
+      suffix: "Qig"
+    }, {
+      threshold: 10n ** 150n,
+      suffix: "NoQag"
+    }, {
+      threshold: 10n ** 147n,
+      suffix: "OcQag"
+    }, {
+      threshold: 10n ** 144n,
+      suffix: "SpQag"
+    }, {
+      threshold: 10n ** 141n,
+      suffix: "SQag"
+    }, {
+      threshold: 10n ** 138n,
+      suffix: "QiQag"
+    }, {
+      threshold: 10n ** 135n,
+      suffix: "QaQag"
+    }, {
+      threshold: 10n ** 132n,
+      suffix: "TQag"
+    }, {
+      threshold: 10n ** 129n,
+      suffix: "DQag"
+    }, {
+      threshold: 10n ** 126n,
+      suffix: "UQag"
+    }, {
+      threshold: 10n ** 123n,
+      suffix: "Qag"
+    }, {
+      threshold: 10n ** 120n,
+      suffix: "NoTg"
+    }, {
+      threshold: 10n ** 117n,
+      suffix: "OcTg"
+    }, {
+      threshold: 10n ** 114n,
+      suffix: "SpTg"
+    }, {
+      threshold: 10n ** 111n,
+      suffix: "STg"
+    }, {
+      threshold: 10n ** 108n,
+      suffix: "QiTg"
+    }, {
+      threshold: 10n ** 105n,
+      suffix: "QaTg"
+    }, {
+      threshold: 10n ** 102n,
+      suffix: "TTg"
+    }, {
+      threshold: 10n ** 99n,
+      suffix: "DTg"
+    }, {
+      threshold: 10n ** 96n,
+      suffix: "UTg"
+    }, {
+      threshold: 10n ** 93n,
+      suffix: "Tg"
+    }, {
+      threshold: 10n ** 90n,
+      suffix: "NoVg"
+    }, {
+      threshold: 10n ** 87n,
+      suffix: "OcVg"
+    }, {
+      threshold: 10n ** 84n,
+      suffix: "SpVg"
+    }, {
+      threshold: 10n ** 81n,
+      suffix: "SVg"
+    }, {
+      threshold: 10n ** 78n,
+      suffix: "QiVg"
+    }, {
+      threshold: 10n ** 75n,
+      suffix: "QaVg"
+    }, {
+      threshold: 10n ** 72n,
+      suffix: "TVg"
+    }, {
+      threshold: 10n ** 69n,
+      suffix: "DVg"
+    }, {
+      threshold: 10n ** 66n,
+      suffix: "UVg"
+    }, {
+      threshold: 10n ** 63n,
+      suffix: "Vg"
+    }, {
+      threshold: 10n ** 60n,
+      suffix: "NoD"
+    }, {
+      threshold: 10n ** 57n,
+      suffix: "OcD"
+    }, {
+      threshold: 10n ** 54n,
+      suffix: "SpD"
+    }, {
+      threshold: 10n ** 51n,
+      suffix: "SD"
+    }, {
+      threshold: 10n ** 48n,
+      suffix: "QiD"
+    }, {
+      threshold: 10n ** 45n,
+      suffix: "QaD"
+    }, {
+      threshold: 10n ** 42n,
+      suffix: "TD"
+    }, {
+      threshold: 10n ** 39n,
+      suffix: "DD"
+    }, {
+      threshold: 10n ** 36n,
+      suffix: "UD"
+    }, {
+      threshold: 10n ** 33n,
+      suffix: "D"
+    }, {
+      threshold: 10n ** 30n,
+      suffix: "No"
+    }, {
+      threshold: 10n ** 27n,
+      suffix: "Oc"
+    }, {
+      threshold: 10n ** 24n,
+      suffix: "Sep"
+    }, {
+      threshold: 10n ** 21n,
+      suffix: "S"
+    }, {
+      threshold: 10n ** 18n,
+      suffix: "Qi"
+    }, {
+      threshold: 10n ** 15n,
+      suffix: "Qa"
+    }, {
+      threshold: 10n ** 12n,
+      suffix: "T"
+    }, {
+      threshold: 10n ** 9n,
+      suffix: "B"
+    }, {
+      threshold: 10n ** 6n,
+      suffix: "M"
+    }, {
+      threshold: 1000n,
+      suffix: "K"
+    }];
+
+    function AY(YY) {
+      let rY, DY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
+      if ("number" === typeof YY) {
+        if (!Number.isFinite(YY)) return "0";
+        if (Math.abs(YY) < 100) {
+          const rY = YY < 0 ? "-" : "",
+            DY = Math.abs(YY);
+          return DY >= 10 ? `${rY}${DY.toFixed(1).replace(/\.0$/,"")}` : `${rY}${DY.toFixed(2).replace(/\.?0+$/,"")}`
+        }
+        rY = BigInt(Math.floor(YY))
+      } else rY = YY;
+      const AY = rY < 0n ? -rY : rY,
+        IY = rY < 0n ? "-" : "",
+        RY = AY.toString();
+      if (RY.length <= DY) return `${IY}${RY}`;
+      const OY = 3 * Math.floor((RY.length - 1) / 3);
+      if (OY < 3) return `${IY}${RY}`;
+      if (OY > 3 * FY.length) {
+        const YY = RY[0],
+          rY = RY.slice(1, 3).replace(/0+$/, "");
+        return `${IY}${rY?`${YY}.${rY}`:YY}e${RY.length-1}`
+      }
+      const {
+        threshold: gY,
+        suffix: aY
+      } = FY[FY.length - OY / 3], vY = AY / gY, uY = Number(1000n * (AY % gY) / gY), sY = Number(vY) + uY / 1e3;
+      let iY;
+      return iY = sY >= 100 ? Math.floor(sY).toString() : sY >= 10 ? sY.toFixed(1).replace(/\.0$/, "") : sY.toFixed(2).replace(/\.?0+$/, ""), `${IY}${iY}${aY}`
+    }
+    const IY = FY.map((YY => {
+      let {
+        threshold: rY,
+        suffix: DY
+      } = YY;
+      return {
+        threshold: Number(rY),
+        suffix: DY
+      }
+    })).filter((YY => {
+      let {
+        threshold: rY
+      } = YY;
+      return Number.isFinite(rY)
+    }));
+
+    function RY(YY) {
+      const rY = Math.abs(YY),
+        DY = YY < 0 ? "-" : "";
+      for (const {
+          threshold: FY,
+          suffix: AY
+        }
+        of IY)
+        if (rY >= FY) {
+          const YY = rY / FY;
+          if (YY >= 1e3) return `${DY}${rY.toExponential(2).replace("e+","e")}`;
+          let IY;
+          return IY = YY >= 100 ? Math.floor(YY).toString() : YY >= 10 ? YY.toFixed(1).replace(/\.0$/, "") : YY.toFixed(2).replace(/\.?0+$/, ""), `${DY}${IY}${AY}`
+        } return `${DY}${rY}`
+    }
+  },
+  37934: (YY, rY, DY) => {
+    YY.exports = DY.p + "static/media/combat_1.72ac23641446e4f80923.png"
+  },
+  37936: (YY, rY, DY) => {
+    YY.exports = DY.p + "static/media/dungeon_crumbling_crypt.39389aef74bd36e64180.png"
+  },
+  37938: (YY, rY, DY) => {
+    YY.exports = DY.p + "static/media/dungeon_frozen_hollow.042bf06d2cfd2c68c7e6.png"
+  },
+  37940: (YY, rY, DY) => {
+    YY.exports = DY.p + "static/media/dungeon_wildwood_grove.d5115bf7a4d3fc811ff4.png"
+  },
+  37946: (YY, rY, DY) => {
+    YY.exports = DY.p + "static/media/dungeons.6836b40c30687755a545.png"
+  },
+  37950: (YY, rY, DY) => {
+    YY.exports = DY.p + "static/media/farming_1.08302e28e41bf98474fe.png"
+  },
+  37958: (YY, rY, DY) => {
+    YY.exports = DY.p + "static/media/fishing_1.c63e97744abce5bb9af7.png"
+  },
+  37963: (YY, rY, DY) => {
+    YY.exports = DY.p + "static/media/hub.8b20a64678134496251d.png"
+  },
+  37970: (YY, rY, DY) => {
+    YY.exports = DY.p + "static/media/island.113e20c7bd7db93fe1ce.png"
+  },
+  37975: (YY, rY, DY) => {
+    YY.exports = DY.p + "static/media/mining_1.68cac4bdadc5ef809ae5.png"
+  },
+  37980: (YY, rY, DY) => {
+    YY.exports = DY.p + "static/media/mining_1_bridge.56ff82ba845db0b52726.png"
+  },
+  37982: (YY, rY, DY) => {
+    YY.exports = DY.p + "static/media/mining_1_gallery.4e799e6329dbc66249ce.png"
+  },
+  37990: (YY, rY, DY) => {
+    YY.exports = DY.p + "static/media/mining_1_hollow.82ed2e9c753519918230.png"
+  },
+  37995: (YY, rY, DY) => {
+    YY.exports = DY.p + "static/media/mining_1_village.c2a625c1c4541a1fbe65.png"
+  },
+  18131: YY => {
+    YY.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAFT2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS41LjAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICAgeG1sbnM6ZXhpZj0iaHR0cDovL25zLmFkb2JlLmNvbS9leGlmLzEuMC8iCiAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyIKICAgIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIKICAgIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgZXhpZjpQaXhlbFhEaW1lbnNpb249IjEwIgogICBleGlmOlBpeGVsWURpbWVuc2lvbj0iMTAiCiAgIGV4aWY6Q29sb3JTcGFjZT0iMSIKICAgdGlmZjpJbWFnZVdpZHRoPSIxMCIKICAgdGlmZjpJbWFnZUxlbmd0aD0iMTAiCiAgIHRpZmY6UmVzb2x1dGlvblVuaXQ9IjIiCiAgIHRpZmY6WFJlc29sdXRpb249IjcyLzEiCiAgIHRpZmY6WVJlc29sdXRpb249IjcyLzEiCiAgIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiCiAgIHBob3Rvc2hvcDpJQ0NQcm9maWxlPSJzUkdCIElFQzYxOTY2LTIuMSIKICAgeG1wOk1vZGlmeURhdGU9IjIwMjUtMDktMTFUMDY6MDg6MTMtMDQ6MDAiCiAgIHhtcDpNZXRhZGF0YURhdGU9IjIwMjUtMDktMTFUMDY6MDg6MTMtMDQ6MDAiPgogICA8ZGM6dGl0bGU+CiAgICA8cmRmOkFsdD4KICAgICA8cmRmOmxpIHhtbDpsYW5nPSJ4LWRlZmF1bHQiPlBsYW5rczwvcmRmOmxpPgogICAgPC9yZGY6QWx0PgogICA8L2RjOnRpdGxlPgogICA8eG1wTU06SGlzdG9yeT4KICAgIDxyZGY6U2VxPgogICAgIDxyZGY6bGkKICAgICAgc3RFdnQ6YWN0aW9uPSJwcm9kdWNlZCIKICAgICAgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWZmaW5pdHkgRGVzaWduZXIgMS4xMC42IgogICAgICBzdEV2dDp3aGVuPSIyMDI1LTA5LTExVDA2OjA4OjEzLTA0OjAwIi8+CiAgICA8L3JkZjpTZXE+CiAgIDwveG1wTU06SGlzdG9yeT4KICA8L3JkZjpEZXNjcmlwdGlvbj4KIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+Cjw/eHBhY2tldCBlbmQ9InIiPz5RDOytAAABgWlDQ1BzUkdCIElFQzYxOTY2LTIuMQAAKJF1kbtLA0EQhz9PxTcRtLAQDKJWKlEhaGOR4AvUIp7gq0kul0RI4nEXkWAr2AoKoo2vQv8CbQVrQVAUQay1VbTRcM7lAhExs8zOt7/dGXZnQVGTWsqq8EEqnTFDYwHv3PyCt+qVGuqoRaEtrFnG1MyoSkn7vKfMibc9Tq3S5/61uqhuaVBWLTysGWZGeFx4ci1jOLwj3KwlwlHhM+FuUy4ofOfoEZdfHI67/O2wqYaCoDQKe+O/OPKLtYSZEpaX05FKrmqF+zgvqdfTszMS28VbsQgxRgAvE4wQxE8fQzL76aGfXllRIt+Xz59mRXI1mQ2ymCwTJ0GGblFXpbouMSa6LiNJ1un/375asYF+t3p9ACqfbfu9E6q2Ibdl219Htp07hvInuEwX81cOYfBD9K2i1nEAng04vypqkV242ISWRyNshvNSubgSi8HbKTTMQ9MN1C66PSvsc/IA6rp81TXs7UOXnPcs/QAlUWfIbV2y+QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAG9JREFUGJVjYKAQ/IdiOGDEpqh6jiYDAwMDQ2vKdbgaJnzG5nSqwEzHUPj/1WJThpZPDxg+vv2N212vFpv+/9/H+f9yFi/MjXB3wtz4/38fJwMDAwPDlTssDLrTPmO4nwXGuHIHwsSmCMVELGLkAQBi0iUZsdoC/wAAAABJRU5ErkJggg=="
+  },
+  20222: YY => {
+    YY.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAABgWlDQ1BzUkdCIElFQzYxOTY2LTIuMQAAKJF1kc8rRFEUxz9miMYIsbCweGlYDflREymLmRgKizHKYPPmmTejZsbrvZFkq2wVJTZ+LfgL2CprpYiUbFkTG/ScZ6Zmkjm3c8/nfu89p3vPBVc0rWWsym7IZHNmJBxUZmKzSvUzNbTSyCAeVbOMiamRKGXt444KJ950OrXKn/vXahcSlgYVNcJDmmHmhEeFx1dyhsPbws1aSl0QPhX2m3JB4VtHj+f5xeFknr8cNqORELgahJVkCcdLWEuZGWF5Ob5Melkr3Md5iTeRnZ6S2CbeikWEMEEUxhgmRIAeBmQO0EkvXbKiTH73b/4kS5KryWywiskiSVLk8Iu6LNUTEnXREzLSrDr9/9tXS+/rzVf3BqHqybbf2qF6C743bfvz0La/j8D9CBfZYv7SAfS/i75Z1Hz7UL8OZ5dFLb4D5xvQ8mCopvorucVdug6vJ1AXg6Zr8Mzle1bY5/geomvyVVewuwcdcr5+/gejEmgBy3n7uAAAAGRJREFUGJWVkDEOgCAMRZ+Eu5iQeBtu6MpRnNkYuUZhULQwKP7lN+n7bVOY1HJ5+eJsq8q+AiA5ARCDALAdpxsdk5yIQYhBcL5rPWCDmka4j73oBscJzptug9UpDWsIfrxn9kQqJZUnE6phAjUAAAAASUVORK5CYII="
+  },
+  22651: YY => {
+    YY.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAGtJREFUGJVjYKAC+A/FDAwMDAxMuBR9fr6D4esduAasCv9/fr6D4cX7yyiC6Ar/f36+g4GBgYFBQlAXp0K4InTTGBgYGBjRrYOZxPTVg4FbBUUNROHXO6iYgYHhv3eYEHafImMXfz6siggCADC+M1RlDaxOAAAAAElFTkSuQmCC"
+  },
+  24164: YY => {
+    YY.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAE9JREFUGJVjYCASMKLx/+OSR1b4/z9PMqqqL3OxGcbwHxl3MXj9/8+T/B+LLQgNNVHm/6E24FT4f2qRG9xUXAqRFTHgUoiuCNnNWD1COQAAFWcvZJ927BwAAAAASUVORK5CYII="
+  },
+  25837: YY => {
+    YY.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAH1JREFUGJVjYKAC+A/FDAwMDAxMuBSdyDdkWLzBGKYBq8L/J+wNGR4se4IiiK7w/wl7QwYGBgYGBS0ZnArhih5cQzUNWeH/E/mGcAUKWjIMtwuZGGIDzjIwMDAwwgkGBob/UIfDQWzAWQbvMCHGraveYXoCGbv482HxJxEAAJssJtLET2YfAAAAAElFTkSuQmCC"
+  },
+  25858: YY => {
+    YY.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAItJREFUGJVjYKAA/Ifh3nJb/Arv7E79X+Mp+p+BgeH/1EYX7Ir299n8v7M79f/+PhuYyQwMDAwMTOgqZXU1GR5fvs4gq6vJcGd3KswpDCzoCmGKHl++zrB3901UybBACwYGBob/NZ6icLfBMFSOgRHJbQwMDAwMjkVHGMICLRiRDVq1/gTCE+gmkA0A4Aw5D/wQUU0AAAAASUVORK5CYII="
+  },
+  37918: YY => {
+    YY.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAYElEQVR4nGNgIBIwovH/45JnRFaUGN+Comr+whq4GiZ0RVycnGAMAlAxsC0sMN2fvn9DodEBzEQGdUV5hvNnV4JpGJuPkwtTIQh4umZhZWMonDqjGCsbHcCCBkQjs0kDAPeaHpfX1eroAAAAAElFTkSuQmCC"
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

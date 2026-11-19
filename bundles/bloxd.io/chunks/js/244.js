@@ -1,573 +1,617 @@
 export const id = 244;
 export const ids = [244];
 export const modules = {
-  39216: (BB, TB, dB) => {
-    dB.d(TB, {
-      b: () => fB,
-      f: () => NB,
-      i: () => mB,
-      j: () => iB,
-      k: () => vB,
-      l: () => EB
+  39223: (YY, rY, DY) => {
+    DY.d(rY, {
+      e: () => IY
     });
-    var VB = dB(38772),
-      yB = dB(38843),
-      pB = dB(36126),
-      lB = dB(38897),
-      JB = dB(39218),
-      YB = dB(39088),
-      gB = dB(38799),
-      oB = dB(39080),
-      kB = dB(36148),
-      LB = dB(39075),
-      OB = dB(39073),
-      DB = dB(39101),
-      uB = dB(36166);
-    const HB = {
-      effect: null,
-      subMesh: null
-    };
-    class EB extends oB.c {
-      constructor(BB, TB, dB) {
-        let VB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-        super(BB, TB, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4]), this._textures = {}, this._internalTextures = {}, this._textureArrays = {}, this._externalTextures = {}, this._floats = {}, this._ints = {}, this._uints = {}, this._floatsArrays = {}, this._colors3 = {}, this._colors3Arrays = {}, this._colors4 = {}, this._colors4Arrays = {}, this._vectors2 = {}, this._vectors3 = {}, this._vectors4 = {}, this._quaternions = {}, this._quaternionsArrays = {}, this._matrices = {}, this._matrixArrays = {}, this._matrices3x3 = {}, this._matrices2x2 = {}, this._vectors2Arrays = {}, this._vectors3Arrays = {}, this._vectors4Arrays = {}, this._uniformBuffers = {}, this._textureSamplers = {}, this._storageBuffers = {}, this._cachedWorldViewMatrix = new pB.b, this._cachedWorldViewProjectionMatrix = new pB.b, this._multiview = !1, this._vertexPullingMetadata = null, this._materialHelperNeedsPreviousMatrices = !1, this._shaderPath = dB, this._options = {
-          needAlphaBlending: !1,
-          needAlphaTesting: !1,
-          attributes: ["position", "normal", "uv"],
-          uniforms: ["worldViewProjection"],
-          uniformBuffers: [],
-          samplers: [],
-          externalTextures: [],
-          samplerObjects: [],
-          storageBuffers: [],
-          defines: [],
-          useClipPlane: !1,
-          ...VB
+    var FY = DY(38040),
+      AY = DY(36569);
+    class IY {
+      static Instantiate(YY) {
+        if (this.RegisteredExternalClasses && this.RegisteredExternalClasses[YY]) return this.RegisteredExternalClasses[YY];
+        const rY = (0, AY.e)(YY);
+        if (rY) return rY;
+        FY.d.Warn(YY + " not found, you may have missed an import.");
+        const DY = YY.split(".");
+        let IY = "undefined" !== typeof window ? window : "undefined" !== typeof globalThis ? globalThis : this;
+        for (let FY = 0, AY = DY.length; FY < AY; FY++) IY = IY[DY[FY]];
+        return "function" !== typeof IY ? null : IY
+      }
+    }
+    IY.RegisteredExternalClasses = {}
+  },
+  39044: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => AY
+    });
+    var FY = DY(39013);
+    class AY {
+      static get Now() {
+        return (0, FY.l)() && window.performance && window.performance.now ? window.performance.now() : Date.now()
+      }
+    }
+  },
+  39065: (YY, rY, DY) => {
+    function FY(YY) {
+      let rY = 1;
+      do {
+        rY *= 2
+      } while (rY < YY);
+      return rY === YY
+    }
+
+    function AY(YY, rY, DY) {
+      return YY * (1 - DY) + rY * DY
+    }
+
+    function IY(YY) {
+      const rY = RY(YY),
+        DY = OY(YY);
+      return rY - YY > YY - DY ? DY : rY
+    }
+
+    function RY(YY) {
+      return YY--, YY |= YY >> 1, YY |= YY >> 2, YY |= YY >> 4, YY |= YY >> 8, YY |= YY >> 16, ++YY
+    }
+
+    function OY(YY) {
+      return YY |= YY >> 1, YY |= YY >> 2, YY |= YY >> 4, YY |= YY >> 8, (YY |= YY >> 16) - (YY >> 1)
+    }
+
+    function gY(YY, rY) {
+      let DY;
+      switch (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 2) {
+        case 1:
+          DY = OY(YY);
+          break;
+        case 2:
+          DY = IY(YY);
+          break;
+        default:
+          DY = RY(YY)
+      }
+      return Math.min(DY, rY)
+    }
+    DY.d(rY, {
+      d: () => OY,
+      f: () => gY,
+      g: () => FY,
+      j: () => AY,
+      n: () => IY
+    })
+  },
+  39219: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => mY,
+      f: () => SY,
+      i: () => WY,
+      m: () => EY
+    });
+    var FY, AY = DY(36552),
+      IY = DY(39013),
+      RY = DY(38040),
+      OY = DY(38037),
+      gY = DY(39044),
+      aY = DY(39029),
+      vY = DY(39169),
+      uY = DY(36546),
+      sY = DY(39160),
+      iY = DY(39037),
+      yY = DY(39223),
+      QY = DY(37242),
+      oY = DY(39065);
+    class WY {
+      static get BaseUrl() {
+        return sY.d.BaseUrl
+      }
+      static set BaseUrl(YY) {
+        sY.d.BaseUrl = YY
+      }
+      static get CleanUrl() {
+        return sY.d.CleanUrl
+      }
+      static set CleanUrl(YY) {
+        sY.d.CleanUrl = YY
+      }
+      static IsAbsoluteUrl(YY) {
+        return 0 === YY.indexOf("//") || -1 !== YY.indexOf("://") && (-1 !== YY.indexOf(".") && (-1 !== YY.indexOf("/") && (!(YY.indexOf(":") > YY.indexOf("/")) && (YY.indexOf("://") < YY.indexOf(".") || (0 === YY.indexOf("data:") || 0 === YY.indexOf("blob:"))))))
+      }
+      static set ScriptBaseUrl(YY) {
+        sY.d.ScriptBaseUrl = YY
+      }
+      static get ScriptBaseUrl() {
+        return sY.d.ScriptBaseUrl
+      }
+      static set CDNBaseUrl(YY) {
+        FY.ScriptBaseUrl = YY, FY.AssetBaseUrl = YY
+      }
+      static set ScriptPreprocessUrl(YY) {
+        sY.d.ScriptPreprocessUrl = YY
+      }
+      static get ScriptPreprocessUrl() {
+        return sY.d.ScriptPreprocessUrl
+      }
+      static get DefaultRetryStrategy() {
+        return sY.d.DefaultRetryStrategy
+      }
+      static set DefaultRetryStrategy(YY) {
+        sY.d.DefaultRetryStrategy = YY
+      }
+      static get CorsBehavior() {
+        return sY.d.CorsBehavior
+      }
+      static set CorsBehavior(YY) {
+        sY.d.CorsBehavior = YY
+      }
+      static get UseFallbackTexture() {
+        return uY.d.UseFallbackTexture
+      }
+      static set UseFallbackTexture(YY) {
+        uY.d.UseFallbackTexture = YY
+      }
+      static get RegisteredExternalClasses() {
+        return yY.e.RegisteredExternalClasses
+      }
+      static set RegisteredExternalClasses(YY) {
+        yY.e.RegisteredExternalClasses = YY
+      }
+      static get fallbackTexture() {
+        return uY.d.FallbackTexture
+      }
+      static set fallbackTexture(YY) {
+        uY.d.FallbackTexture = YY
+      }
+      static FetchToRef(YY, rY, DY, FY, AY, IY) {
+        const RY = 4 * ((Math.abs(YY) * DY % DY | 0) + (Math.abs(rY) * FY % FY | 0) * DY);
+        IY.r = AY[RY] / 255, IY.g = AY[RY + 1] / 255, IY.b = AY[RY + 2] / 255, IY.a = AY[RY + 3] / 255
+      }
+      static Mix(YY, rY, DY) {
+        return 0
+      }
+      static Instantiate(YY) {
+        return yY.e.Instantiate(YY)
+      }
+      static SetImmediate(YY) {
+        iY.d.SetImmediate(YY)
+      }
+      static IsExponentOfTwo(YY) {
+        return !0
+      }
+      static FloatRound(YY) {
+        return Math.fround(YY)
+      }
+      static GetFilename(YY) {
+        const rY = YY.lastIndexOf("/");
+        return rY < 0 ? YY : YY.substring(rY + 1)
+      }
+      static GetFolderPath(YY) {
+        let rY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const DY = YY.lastIndexOf("/");
+        return DY < 0 ? rY ? YY : "" : YY.substring(0, DY + 1)
+      }
+      static ToDegrees(YY) {
+        return 180 * YY / Math.PI
+      }
+      static ToRadians(YY) {
+        return YY * Math.PI / 180
+      }
+      static SmoothAngleChange(YY, rY) {
+        let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : .9;
+        const FY = this.ToRadians(YY),
+          AY = this.ToRadians(rY);
+        return this.ToDegrees(Math.atan2((1 - DY) * Math.sin(AY) + DY * Math.sin(FY), (1 - DY) * Math.cos(AY) + DY * Math.cos(FY)))
+      }
+      static MakeArray(YY, rY) {
+        return !0 === rY || void 0 !== YY && null != YY ? Array.isArray(YY) ? YY : [YY] : null
+      }
+      static GetPointerPrefix(YY) {
+        return (0, IY.l)() && !window.PointerEvent ? "mouse" : "pointer"
+      }
+      static SetCorsBehavior(YY, rY) {
+        (0, sY.y)(YY, rY)
+      }
+      static SetReferrerPolicyBehavior(YY, rY) {
+        rY.referrerPolicy = YY
+      }
+      static get PreprocessUrl() {
+        return sY.d.PreprocessUrl
+      }
+      static set PreprocessUrl(YY) {
+        sY.d.PreprocessUrl = YY
+      }
+      static LoadImage(YY, rY, DY, FY, AY, IY) {
+        return (0, sY.m)(YY, rY, DY, FY, AY, IY)
+      }
+      static LoadFile(YY, rY, DY, FY, AY, IY) {
+        return (0, sY.i)(YY, rY, DY, FY, AY, IY)
+      }
+      static async LoadFileAsync(YY) {
+        let rY = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        return await new Promise(((DY, FY) => {
+          (0, sY.i)(YY, (YY => {
+            DY(YY)
+          }), void 0, void 0, rY, ((YY, rY) => {
+            FY(rY)
+          }))
+        }))
+      }
+      static GetAssetUrl(YY) {
+        if (!YY) return "";
+        if (FY.AssetBaseUrl && YY.startsWith(FY._DefaultAssetsUrl)) {
+          const rY = FY.AssetBaseUrl.endsWith("/") ? FY.AssetBaseUrl.slice(0, -1) : FY.AssetBaseUrl;
+          return YY.replace(FY._DefaultAssetsUrl, rY)
         }
+        return YY
       }
-      get shaderPath() {
-        return this._shaderPath
-      }
-      set shaderPath(BB) {
-        this._shaderPath = BB
-      }
-      get options() {
-        return this._options
-      }
-      get isMultiview() {
-        return this._multiview
-      }
-      getClassName() {
-        return "ShaderMaterial"
-      }
-      needAlphaBlending() {
-        return this.alpha < 1 || this._options.needAlphaBlending
-      }
-      needAlphaTesting() {
-        return this._options.needAlphaTesting
-      }
-      _checkUniform(BB) {
-        -1 === this._options.uniforms.indexOf(BB) && this._options.uniforms.push(BB)
-      }
-      setTexture(BB, TB) {
-        return -1 === this._options.samplers.indexOf(BB) && this._options.samplers.push(BB), this._textures[BB] = TB, this
-      }
-      setInternalTexture(BB, TB) {
-        return -1 === this._options.samplers.indexOf(BB) && this._options.samplers.push(BB), this._internalTextures[BB] = TB, this
-      }
-      removeTexture(BB) {
-        delete this._textures[BB]
-      }
-      setTextureArray(BB, TB) {
-        return -1 === this._options.samplers.indexOf(BB) && this._options.samplers.push(BB), this._checkUniform(BB), this._textureArrays[BB] = TB, this
-      }
-      setExternalTexture(BB, TB) {
-        return -1 === this._options.externalTextures.indexOf(BB) && this._options.externalTextures.push(BB), this._externalTextures[BB] = TB, this
-      }
-      setFloat(BB, TB) {
-        return this._checkUniform(BB), this._floats[BB] = TB, this
-      }
-      setInt(BB, TB) {
-        return this._checkUniform(BB), this._ints[BB] = TB, this
-      }
-      setUInt(BB, TB) {
-        return this._checkUniform(BB), this._uints[BB] = TB, this
-      }
-      setFloats(BB, TB) {
-        return this._checkUniform(BB), this._floatsArrays[BB] = TB, this
-      }
-      setColor3(BB, TB) {
-        return this._checkUniform(BB), this._colors3[BB] = TB, this
-      }
-      setColor3Array(BB, TB) {
-        return this._checkUniform(BB), this._colors3Arrays[BB] = TB.reduce(((BB, TB) => (BB.push(TB.r, TB.g, TB.b), BB)), []), this
-      }
-      setColor4(BB, TB) {
-        return this._checkUniform(BB), this._colors4[BB] = TB, this
-      }
-      setColor4Array(BB, TB) {
-        return this._checkUniform(BB), this._colors4Arrays[BB] = TB.reduce(((BB, TB) => (BB.push(TB.r, TB.g, TB.b, TB.a), BB)), []), this
-      }
-      setVector2(BB, TB) {
-        return this._checkUniform(BB), this._vectors2[BB] = TB, this
-      }
-      setVector3(BB, TB) {
-        return this._checkUniform(BB), this._vectors3[BB] = TB, this
-      }
-      setVector4(BB, TB) {
-        return this._checkUniform(BB), this._vectors4[BB] = TB, this
-      }
-      setQuaternion(BB, TB) {
-        return this._checkUniform(BB), this._quaternions[BB] = TB, this
-      }
-      setQuaternionArray(BB, TB) {
-        return this._checkUniform(BB), this._quaternionsArrays[BB] = TB.reduce(((BB, TB) => (TB.toArray(BB, BB.length), BB)), []), this
-      }
-      setMatrix(BB, TB) {
-        return this._checkUniform(BB), this._matrices[BB] = TB, this
-      }
-      setMatrices(BB, TB) {
-        this._checkUniform(BB);
-        const dB = new Float32Array(16 * TB.length);
-        for (let VB = 0; VB < TB.length; VB++) {
-          TB[VB].copyToArray(dB, 16 * VB)
+      static GetBabylonScriptURL(YY, rY) {
+        if (!YY) return "";
+        if (YY.startsWith(FY._DefaultCdnUrl))
+          if (FY.ScriptBaseUrl) {
+            const rY = FY.ScriptBaseUrl.endsWith("/") ? FY.ScriptBaseUrl.slice(0, -1) : FY.ScriptBaseUrl;
+            YY = YY.replace(FY._DefaultCdnUrl, rY)
+          } else if (FY._CdnVersion) {
+          const rY = `${FY._DefaultCdnUrl}/v${FY._CdnVersion}`;
+          YY.startsWith(rY) || (YY = YY.replace(FY._DefaultCdnUrl, rY))
         }
-        return this._matrixArrays[BB] = dB, this
+        return YY = FY.ScriptPreprocessUrl(YY), rY && !FY.IsAbsoluteUrl(YY) && (YY = FY.GetAbsoluteUrl(YY)), YY
       }
-      setMatrix3x3(BB, TB) {
-        return this._checkUniform(BB), this._matrices3x3[BB] = TB, this
+      static LoadBabylonScript(YY, rY, DY, AY) {
+        YY = FY.GetBabylonScriptURL(YY), FY.LoadScript(YY, rY, DY)
       }
-      setMatrix2x2(BB, TB) {
-        return this._checkUniform(BB), this._matrices2x2[BB] = TB, this
+      static async LoadBabylonScriptAsync(YY) {
+        return YY = FY.GetBabylonScriptURL(YY), await FY.LoadScriptAsync(YY)
       }
-      setArray2(BB, TB) {
-        return this._checkUniform(BB), this._vectors2Arrays[BB] = TB, this
-      }
-      setArray3(BB, TB) {
-        return this._checkUniform(BB), this._vectors3Arrays[BB] = TB, this
-      }
-      setArray4(BB, TB) {
-        return this._checkUniform(BB), this._vectors4Arrays[BB] = TB, this
-      }
-      setUniformBuffer(BB, TB) {
-        return -1 === this._options.uniformBuffers.indexOf(BB) && this._options.uniformBuffers.push(BB), this._uniformBuffers[BB] = TB, this
-      }
-      setTextureSampler(BB, TB) {
-        return -1 === this._options.samplerObjects.indexOf(BB) && this._options.samplerObjects.push(BB), this._textureSamplers[BB] = TB, this
-      }
-      setStorageBuffer(BB, TB) {
-        return -1 === this._options.storageBuffers.indexOf(BB) && this._options.storageBuffers.push(BB), this._storageBuffers[BB] = TB, this
-      }
-      setDefine(BB, TB) {
-        const dB = BB.trimEnd() + " ",
-          VB = this.options.defines.findIndex((TB => TB === BB || TB.startsWith(dB)));
-        return VB >= 0 && this.options.defines.splice(VB, 1), ("boolean" !== typeof TB || TB) && this.options.defines.push(dB + TB), this
-      }
-      isReadyForSubMesh(BB, TB, dB) {
-        return this.isReady(BB, dB, TB)
-      }
-      isReady(BB, TB, dB) {
-        const VB = dB && this._storeEffectOnSubMeshes;
-        if (this.isFrozen) {
-          const BB = VB ? dB._drawWrapper : this._drawWrapper;
-          if (BB.effect && BB._wasPreviouslyReady && BB._wasPreviouslyUsingInstances === TB) return !0
-        }
-        const pB = this.jU(),
-          JB = pB.PD(),
-          gB = [],
-          oB = [];
-        let kB = null,
-          uB = this._shaderPath,
-          EB = this._options.uniforms,
-          vB = this._options.uniformBuffers,
-          mB = this._options.samplers;
-        JB.getCaps().multiview && pB.activeCamera && pB.activeCamera.outputRenderTarget && pB.activeCamera.outputRenderTarget.getViewCount() > 1 && (this._multiview = !0, gB.push("#define MULTIVIEW"), -1 !== EB.indexOf("viewProjection") && -1 === EB.indexOf("viewProjectionR") && EB.push("viewProjectionR"));
-        for (let yB = 0; yB < this._options.defines.length; yB++) {
-          const BB = 0 === this._options.defines[yB].indexOf("#define") ? this._options.defines[yB] : `#define ${this._options.defines[yB]}`;
-          gB.push(BB)
-        }
-        for (let yB = 0; yB < this._options.attributes.length; yB++) oB.push(this._options.attributes[yB]);
-        if (BB && BB.isVerticesDataPresent(lB.m.ColorKind) && (-1 === oB.indexOf(lB.m.ColorKind) && oB.push(lB.m.ColorKind), gB.push("#define VERTEXCOLOR")), TB && (gB.push("#define INSTANCES"), (0, OB.qb)(oB, this._materialHelperNeedsPreviousMatrices), BB?.hasThinInstances && (gB.push("#define THIN_INSTANCES"), BB && BB.isVerticesDataPresent(lB.m.ColorInstanceKind) && (oB.push(lB.m.ColorInstanceKind), gB.push("#define INSTANCESCOLOR")))), BB && BB.useBones && BB.computeBonesUsingShaders && BB.skeleton) {
-          oB.push(lB.m.MatricesIndicesKind), oB.push(lB.m.MatricesWeightsKind), BB.numBoneInfluencers > 4 && (oB.push(lB.m.MatricesIndicesExtraKind), oB.push(lB.m.MatricesWeightsExtraKind));
-          const TB = BB.skeleton;
-          gB.push("#define NUM_BONE_INFLUENCERS " + BB.numBoneInfluencers), kB = new YB.d, kB.addCPUSkinningFallback(0, BB), TB.isUsingTextureForMatrices ? (gB.push("#define BONETEXTURE"), -1 === EB.indexOf("boneTextureInfo") && EB.push("boneTextureInfo"), -1 === this._options.samplers.indexOf("boneSampler") && this._options.samplers.push("boneSampler")) : (gB.push("#define BonesPerMesh " + (TB.bones.length + 1)), -1 === EB.indexOf("mBones") && EB.push("mBones"))
-        } else gB.push("#define NUM_BONE_INFLUENCERS 0");
-        let iB = 0;
-        const NB = BB ? BB.morphTargetManager : null;
-        if (NB) {
-          const TB = -1 !== gB.indexOf("#define UV1"),
-            dB = -1 !== gB.indexOf("#define UV2"),
-            VB = -1 !== gB.indexOf("#define TANGENT"),
-            yB = -1 !== gB.indexOf("#define NORMAL"),
-            pB = -1 !== gB.indexOf("#define VERTEXCOLOR");
-          iB = (0, OB.H)(NB, gB, oB, BB, !0, yB, VB, TB, dB, pB), NB.isUsingTextureForTargets && (-1 === EB.indexOf("morphTargetTextureIndices") && EB.push("morphTargetTextureIndices"), -1 === this._options.samplers.indexOf("morphTargets") && this._options.samplers.push("morphTargets")), iB > 0 && (EB = EB.slice(), EB.push("morphTargetInfluences"), EB.push("morphTargetCount"), EB.push("morphTargetTextureInfo"), EB.push("morphTargetTextureIndices"))
-        } else gB.push("#define NUM_MORPH_INFLUENCERS 0");
-        if (BB) {
-          const dB = BB.bakedVertexAnimationManager;
-          dB && dB.isEnabled && (gB.push("#define BAKED_VERTEX_ANIMATION_TEXTURE"), -1 === EB.indexOf("bakedVertexAnimationSettings") && EB.push("bakedVertexAnimationSettings"), -1 === EB.indexOf("bakedVertexAnimationTextureSizeInverted") && EB.push("bakedVertexAnimationTextureSizeInverted"), -1 === EB.indexOf("bakedVertexAnimationTime") && EB.push("bakedVertexAnimationTime"), -1 === this._options.samplers.indexOf("bakedVertexAnimationTexture") && this._options.samplers.push("bakedVertexAnimationTexture"), TB && oB.push("bakedVertexAnimationSettingsInstanced"))
-        }
-        for (const yB in this._textures)
-          if (!this._textures[yB].isReady()) return !1;
-        for (const yB in this._internalTextures)
-          if (!this._internalTextures[yB].isReady) return !1;
-        BB && this.needAlphaTestingForMesh(BB) && gB.push("#define ALPHATEST"), !1 !== this._options.useClipPlane && ((0, LB.c)(EB), (0, LB.g)(this, pB, gB)), pB.fogEnabled && BB?.applyFog && pB.fogMode !== yB.g.FOGMODE_NONE && (gB.push("#define FOG"), -1 === EB.indexOf("view") && EB.push("view"), -1 === EB.indexOf("vFogInfos") && EB.push("vFogInfos"), -1 === EB.indexOf("vFogColor") && EB.push("vFogColor")), this._useLogarithmicDepth && (gB.push("#define LOGARITHMICDEPTH"), -1 === EB.indexOf("logarithmicDepthConstant") && EB.push("logarithmicDepthConstant"));
-        const tB = dB ? dB.getRenderingMesh() : BB;
-        if (tB && this.useVertexPulling) {
-          const BB = tB.geometry;
-          BB && (this._vertexPullingMetadata = (0, DB.e)(BB), this._vertexPullingMetadata && this._vertexPullingMetadata.forEach(((BB, TB) => {
-            EB.push(`vp_${TB}_info`)
-          }))), gB.push("#define USE_VERTEX_PULLING");
-          const TB = tB.geometry?.getIndexBuffer();
-          TB && !tB.isUnIndexed && (gB.push("#define VERTEX_PULLING_USE_INDEX_BUFFER"), TB.is32Bits && gB.push("#define VERTEX_PULLING_INDEX_BUFFER_32BITS"))
-        }
-        this.customShaderNameResolve && (EB = EB.slice(), vB = vB.slice(), mB = mB.slice(), uB = this.customShaderNameResolve(this.name, EB, vB, mB, gB, oB));
-        const fB = VB ? dB._getDrawWrapper(void 0, !0) : this._drawWrapper,
-          sB = fB?.effect ?? null,
-          MB = fB?.defines ?? null,
-          zB = gB.join("\n");
-        let wB = sB;
-        return MB !== zB && (wB = JB.createEffect(uB, {
-          attributes: oB,
-          uniformsNames: EB,
-          uniformBuffersNames: vB,
-          samplers: mB,
-          defines: zB,
-          fallbacks: kB,
-          onCompiled: this.onCompiled,
-          onError: this.onError,
-          indexParameters: {
-            maxSimultaneousMorphTargets: iB
-          },
-          shaderLanguage: this._options.shaderLanguage,
-          extraInitializationsAsync: this._options.extraInitializationsAsync
-        }, JB), VB ? dB.setEffect(wB, zB, this._materialContext) : fB && fB.setEffect(wB, zB), this._onEffectCreatedObservable && (HB.effect = wB, HB.subMesh = dB ?? BB?.oN[0] ?? null, this._onEffectCreatedObservable.notifyObservers(HB))), fB._wasPreviouslyUsingInstances = !!TB, !!wB?.isReady() && (sB !== wB && pB.resetCachedMaterial(), fB._wasPreviouslyReady = !0, !0)
-      }
-      bindOnlyWorldMatrix(BB, TB) {
-        const dB = TB ?? this.getEffect();
-        if (!dB) return;
-        const VB = this._options.uniforms; - 1 !== VB.indexOf("world") && dB.setMatrix("world", BB);
-        const yB = this.jU(); - 1 !== VB.indexOf("worldView") && (BB.multiplyToRef(yB.getViewMatrix(), this._cachedWorldViewMatrix), dB.setMatrix("worldView", this._cachedWorldViewMatrix)), -1 !== VB.indexOf("worldViewProjection") && (BB.multiplyToRef(yB.getTransformMatrix(), this._cachedWorldViewProjectionMatrix), dB.setMatrix("worldViewProjection", this._cachedWorldViewProjectionMatrix)), -1 !== VB.indexOf("view") && dB.setMatrix("view", yB.getViewMatrix())
-      }
-      bindForSubMesh(BB, TB, dB) {
-        this.bind(BB, TB, dB._drawWrapperOverride?.effect, dB)
-      }
-      bind(BB, TB, dB, VB) {
-        const yB = VB && this._storeEffectOnSubMeshes,
-          pB = dB ?? (yB ? VB.effect : this.getEffect());
-        if (!pB) return;
-        const lB = this.jU();
-        this._activeEffect = pB, this.bindOnlyWorldMatrix(BB, dB);
-        const JB = this._options.uniformBuffers;
-        let YB = !1;
-        if (pB && JB && JB.length > 0 && lB.PD().supportsUniformBuffers)
-          for (let oB = 0; oB < JB.length; ++oB) {
-            switch (JB[oB]) {
-              case "Mesh":
-                TB && (TB.getMeshUniformBuffer().bindToEffect(pB, "Mesh"), TB.transferToEffect(BB));
-                break;
-              case "Scene":
-                (0, OB.r)(pB, lB.getSceneUniformBuffer()), lB.finalizeSceneUbo(), YB = !0
+      static _LoadScriptNative(YY, rY, DY, AY) {
+        if (_native) {
+          if (arguments.length > 4 && void 0 !== arguments[4] && arguments[4]) {
+            const YY = "Loading a script as an ES module is not supported in Babylon Native";
+            return void DY?.(YY, new Error(YY))
+          }
+          FY.LoadFile(YY, (YY => {
+            try {
+              Function(YY).apply(null), rY && rY()
+            } catch (FY) {
+              DY && DY("LoadScript Error", FY)
             }
-          }
-        const gB = TB && yB ? this._mustRebind(lB, pB, VB, TB.visibility) : lB.getCachedMaterial() !== this;
-        if (pB && gB) {
-          let BB;
-          for (BB in YB || -1 === this._options.uniforms.indexOf("view") || pB.setMatrix("view", lB.getViewMatrix()), YB || -1 === this._options.uniforms.indexOf("projection") || pB.setMatrix("projection", lB.getProjectionMatrix()), YB || -1 === this._options.uniforms.indexOf("viewProjection") || (pB.setMatrix("viewProjection", lB.getTransformMatrix()), this._multiview && pB.setMatrix("viewProjectionR", lB._transformMatrixR)), lB.activeCamera && -1 !== this._options.uniforms.indexOf("cameraPosition") && pB.setVector3("cameraPosition", lB.activeCamera.globalPosition), (0, OB.f)(TB, pB), (0, LB.d)(pB, this, lB), this._vertexPullingMetadata && (0, DB.b)(pB, this._vertexPullingMetadata), this._useLogarithmicDepth && (0, OB.p)(yB ? VB.materialDefines : pB.defines, pB, lB), TB && (0, OB.h)(lB, TB, pB), this._textures) pB.setTexture(BB, this._textures[BB]);
-          for (BB in this._internalTextures) pB._bindTexture(BB, this._internalTextures[BB]);
-          for (BB in this._textureArrays) pB.setTextureArray(BB, this._textureArrays[BB]);
-          for (BB in this._ints) pB.setInt(BB, this._ints[BB]);
-          for (BB in this._uints) pB.setUInt(BB, this._uints[BB]);
-          for (BB in this._floats) pB.setFloat(BB, this._floats[BB]);
-          for (BB in this._floatsArrays) pB.setArray(BB, this._floatsArrays[BB]);
-          for (BB in this._colors3) pB.setColor3(BB, this._colors3[BB]);
-          for (BB in this._colors3Arrays) pB.setArray3(BB, this._colors3Arrays[BB]);
-          for (BB in this._colors4) {
-            const TB = this._colors4[BB];
-            pB.setFloat4(BB, TB.r, TB.g, TB.b, TB.a)
-          }
-          for (BB in this._colors4Arrays) pB.setArray4(BB, this._colors4Arrays[BB]);
-          for (BB in this._vectors2) pB.setVector2(BB, this._vectors2[BB]);
-          for (BB in this._vectors3) pB.setVector3(BB, this._vectors3[BB]);
-          for (BB in this._vectors4) pB.setVector4(BB, this._vectors4[BB]);
-          for (BB in this._quaternions) pB.setQuaternion(BB, this._quaternions[BB]);
-          for (BB in this._matrices) pB.setMatrix(BB, this._matrices[BB]);
-          for (BB in this._matrixArrays) pB.setMatrices(BB, this._matrixArrays[BB]);
-          for (BB in this._matrices3x3) pB.setMatrix3x3(BB, this._matrices3x3[BB]);
-          for (BB in this._matrices2x2) pB.setMatrix2x2(BB, this._matrices2x2[BB]);
-          for (BB in this._vectors2Arrays) pB.setArray2(BB, this._vectors2Arrays[BB]);
-          for (BB in this._vectors3Arrays) pB.setArray3(BB, this._vectors3Arrays[BB]);
-          for (BB in this._vectors4Arrays) pB.setArray4(BB, this._vectors4Arrays[BB]);
-          for (BB in this._quaternionsArrays) pB.setArray4(BB, this._quaternionsArrays[BB]);
-          for (BB in this._uniformBuffers) {
-            const TB = this._uniformBuffers[BB].getBuffer();
-            TB && pB.bindUniformBuffer(TB, BB)
-          }
-          const dB = lB.PD(),
-            JB = dB.setExternalTexture;
-          if (JB)
-            for (BB in this._externalTextures) JB.call(dB, BB, this._externalTextures[BB]);
-          const gB = dB.setTextureSampler;
-          if (gB)
-            for (BB in this._textureSamplers) gB.call(dB, BB, this._textureSamplers[BB]);
-          const oB = dB.setStorageBuffer;
-          if (oB)
-            for (BB in this._storageBuffers) oB.call(dB, BB, this._storageBuffers[BB])
+          }), void 0, void 0, !1, ((YY, rY) => {
+            DY && DY("LoadScript Error", rY)
+          }))
         }
-        if (pB && TB && (gB || !this.isFrozen)) {
-          (0, OB.q)(TB, pB), TB.morphTargetManager && TB.morphTargetManager.isUsingTextureForTargets && TB.morphTargetManager._bind(pB);
-          const BB = TB.bakedVertexAnimationManager;
-          if (BB && BB.isEnabled) {
-            const BB = yB ? VB._drawWrapper : this._drawWrapper;
-            TB.bakedVertexAnimationManager?.bind(pB, !!BB._wasPreviouslyUsingInstances)
-          }
-        }
-        this._afterBind(TB, pB, VB)
       }
-      getActiveTextures() {
-        const BB = super.getActiveTextures();
-        for (const TB in this._textures) BB.push(this._textures[TB]);
-        for (const TB in this._textureArrays) {
-          const dB = this._textureArrays[TB];
-          for (let TB = 0; TB < dB.length; TB++) BB.push(dB[TB])
-        }
-        return BB
-      }
-      hasTexture(BB) {
-        if (super.hasTexture(BB)) return !0;
-        for (const dB in this._textures)
-          if (this._textures[dB] === BB) return !0;
-        const TB = BB.getInternalTexture();
-        for (const dB in this._internalTextures)
-          if (this._internalTextures[dB] === TB) return !0;
-        for (const dB in this._textureArrays) {
-          const TB = this._textureArrays[dB];
-          for (let dB = 0; dB < TB.length; dB++)
-            if (TB[dB] === BB) return !0
-        }
-        return !1
-      }
-      clone(BB) {
-        const TB = VB.c.Clone((() => new EB(BB, this.jU(), this._shaderPath, this._options, this._storeEffectOnSubMeshes)), this);
-        TB.name = BB, TB.id = BB, "object" === typeof TB._shaderPath && (TB._shaderPath = {
-          ...TB._shaderPath
-        }), this._options = {
-          ...this._options
-        };
-        const dB = Object.keys(this._options);
-        for (const VB of dB) {
-          const BB = this._options[VB];
-          Array.isArray(BB) && (this._options[VB] = BB.slice(0))
-        }
-        this.stencil.copyTo(TB.stencil);
-        for (const VB in this._textures) TB.setTexture(VB, this._textures[VB]);
-        for (const VB in this._internalTextures) TB.setInternalTexture(VB, this._internalTextures[VB]);
-        for (const VB in this._textureArrays) TB.setTextureArray(VB, this._textureArrays[VB]);
-        for (const VB in this._externalTextures) TB.setExternalTexture(VB, this._externalTextures[VB]);
-        for (const VB in this._ints) TB.setInt(VB, this._ints[VB]);
-        for (const VB in this._uints) TB.setUInt(VB, this._uints[VB]);
-        for (const VB in this._floats) TB.setFloat(VB, this._floats[VB]);
-        for (const VB in this._floatsArrays) TB.setFloats(VB, this._floatsArrays[VB]);
-        for (const VB in this._colors3) TB.setColor3(VB, this._colors3[VB]);
-        for (const VB in this._colors3Arrays) TB._colors3Arrays[VB] = this._colors3Arrays[VB];
-        for (const VB in this._colors4) TB.setColor4(VB, this._colors4[VB]);
-        for (const VB in this._colors4Arrays) TB._colors4Arrays[VB] = this._colors4Arrays[VB];
-        for (const VB in this._vectors2) TB.setVector2(VB, this._vectors2[VB]);
-        for (const VB in this._vectors3) TB.setVector3(VB, this._vectors3[VB]);
-        for (const VB in this._vectors4) TB.setVector4(VB, this._vectors4[VB]);
-        for (const VB in this._quaternions) TB.setQuaternion(VB, this._quaternions[VB]);
-        for (const VB in this._quaternionsArrays) TB._quaternionsArrays[VB] = this._quaternionsArrays[VB];
-        for (const VB in this._matrices) TB.setMatrix(VB, this._matrices[VB]);
-        for (const VB in this._matrixArrays) TB._matrixArrays[VB] = this._matrixArrays[VB].slice();
-        for (const VB in this._matrices3x3) TB.setMatrix3x3(VB, this._matrices3x3[VB]);
-        for (const VB in this._matrices2x2) TB.setMatrix2x2(VB, this._matrices2x2[VB]);
-        for (const VB in this._vectors2Arrays) TB.setArray2(VB, this._vectors2Arrays[VB]);
-        for (const VB in this._vectors3Arrays) TB.setArray3(VB, this._vectors3Arrays[VB]);
-        for (const VB in this._vectors4Arrays) TB.setArray4(VB, this._vectors4Arrays[VB]);
-        for (const VB in this._uniformBuffers) TB.setUniformBuffer(VB, this._uniformBuffers[VB]);
-        for (const VB in this._textureSamplers) TB.setTextureSampler(VB, this._textureSamplers[VB]);
-        for (const VB in this._storageBuffers) TB.setStorageBuffer(VB, this._storageBuffers[VB]);
-        return TB
-      }
-      dispose(BB, TB, dB) {
-        if (TB) {
-          let BB;
-          for (BB in this._textures) this._textures[BB].dispose();
-          for (BB in this._internalTextures) this._internalTextures[BB].dispose();
-          for (BB in this._textureArrays) {
-            const TB = this._textureArrays[BB];
-            for (let BB = 0; BB < TB.length; BB++) TB[BB].dispose()
+      static _LoadScriptWeb(YY, rY, DY, FY) {
+        let AY = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        if ("function" === typeof importScripts) {
+          try {
+            importScripts(YY), rY && rY()
+          } catch (gY) {
+            DY?.(`Unable to load script '${YY}' in worker`, gY)
           }
+          return
         }
-        this._textures = {}, this._internalTextures = {}, super.dispose(BB, TB, dB)
+        if (!(0, IY.l)()) return void DY?.(`Cannot load script '${YY}' outside of a window or a worker`);
+        const RY = document.getElementsByTagName("head")[0],
+          OY = document.createElement("script");
+        AY ? (OY.setAttribute("type", "module"), OY.innerText = YY) : (OY.setAttribute("type", "text/javascript"), OY.setAttribute("src", YY)), FY && (OY.id = FY), OY.onload = () => {
+          rY && rY()
+        }, OY.onerror = rY => {
+          DY && DY(`Unable to load script '${YY}'`, rY)
+        }, RY.appendChild(OY)
       }
-      serialize() {
-        const BB = VB.c.Serialize(this);
-        let TB;
-        for (TB in BB.customType = "BABYLON.ShaderMaterial", BB.uniqueId = this.uniqueId, BB.options = this._options, BB.shaderPath = this._shaderPath, BB.storeEffectOnSubMeshes = this._storeEffectOnSubMeshes, BB.stencil = this.stencil.serialize(), BB.textures = {}, this._textures) BB.textures[TB] = this._textures[TB].serialize();
-        for (TB in BB.textureArrays = {}, this._textureArrays) {
-          BB.textureArrays[TB] = [];
-          const dB = this._textureArrays[TB];
-          for (let VB = 0; VB < dB.length; VB++) BB.textureArrays[TB].push(dB[VB].serialize())
+      static async LoadScriptAsync(YY, rY) {
+        return await new Promise(((DY, FY) => {
+          this.LoadScript(YY, (() => {
+            DY()
+          }), ((YY, rY) => {
+            FY(rY || new Error(YY))
+          }), rY)
+        }))
+      }
+      static ReadFileAsDataURL(YY, rY, DY) {
+        const FY = new FileReader,
+          IY = {
+            onCompleteObservable: new AY.e,
+            abort: () => FY.abort()
+          };
+        return FY.onloadend = () => {
+          IY.onCompleteObservable.notifyObservers(IY)
+        }, FY.onload = YY => {
+          rY(YY.target.result)
+        }, FY.onprogress = DY, FY.readAsDataURL(YY), IY
+      }
+      static ReadFile(YY, rY, DY, FY, AY) {
+        return (0, sY.p)(YY, rY, DY, FY, AY)
+      }
+      static FileAsURL(YY) {
+        const rY = new Blob([YY]);
+        return window.URL.createObjectURL(rY)
+      }
+      static Format(YY) {
+        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+        return YY.toFixed(rY)
+      }
+      static DeepCopy(YY, rY, DY, FY) {
+        OY.c.DeepCopy(YY, rY, DY, FY)
+      }
+      static IsEmpty(YY) {
+        for (const rY in YY)
+          if (Object.prototype.hasOwnProperty.call(YY, rY)) return !1;
+        return !0
+      }
+      static RegisterTopRootEvents(YY, rY) {
+        for (let FY = 0; FY < rY.length; FY++) {
+          const AY = rY[FY];
+          YY.addEventListener(AY.name, AY.handler, !1);
+          try {
+            window.parent && window.parent.addEventListener(AY.name, AY.handler, !1)
+          } catch (DY) {}
         }
-        for (TB in BB.ints = {}, this._ints) BB.ints[TB] = this._ints[TB];
-        for (TB in BB.uints = {}, this._uints) BB.uints[TB] = this._uints[TB];
-        for (TB in BB.floats = {}, this._floats) BB.floats[TB] = this._floats[TB];
-        for (TB in BB.floatsArrays = {}, this._floatsArrays) BB.floatsArrays[TB] = this._floatsArrays[TB];
-        for (TB in BB.colors3 = {}, this._colors3) {
-          const dB = this._colors3[TB];
-          BB.colors3[TB] = [dB.r, dB.g, dB.b]
+      }
+      static UnregisterTopRootEvents(YY, rY) {
+        for (let FY = 0; FY < rY.length; FY++) {
+          const AY = rY[FY];
+          YY.removeEventListener(AY.name, AY.handler);
+          try {
+            YY.parent && YY.parent.removeEventListener(AY.name, AY.handler)
+          } catch (DY) {}
         }
-        for (TB in BB.colors3Arrays = {}, this._colors3Arrays) BB.colors3Arrays[TB] = this._colors3Arrays[TB];
-        for (TB in BB.colors4 = {}, this._colors4) {
-          const dB = this._colors4[TB];
-          BB.colors4[TB] = [dB.r, dB.g, dB.b, dB.a]
+      }
+      static async DumpFramebuffer(YY, rY, DY, FY) {
+        throw (0, aY.i)("DumpTools")
+      }
+      static DumpData(YY, rY, DY, FY) {
+        throw (0, aY.i)("DumpTools")
+      }
+      static async DumpDataAsync(YY, rY, DY) {
+        throw (0, aY.i)("DumpTools")
+      }
+      static _IsOffScreenCanvas(YY) {
+        return void 0 !== YY.convertToBlob
+      }
+      static ToBlob(YY, rY) {
+        let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "image/png",
+          AY = arguments.length > 3 ? arguments[3] : void 0;
+        FY._IsOffScreenCanvas(YY) || YY.toBlob || (YY.toBlob = function(YY, rY, DY) {
+          setTimeout((() => {
+            const FY = atob(this.toDataURL(rY, DY).split(",")[1]),
+              AY = FY.length,
+              IY = new Uint8Array(AY);
+            for (let YY = 0; YY < AY; YY++) IY[YY] = FY.charCodeAt(YY);
+            YY(new Blob([IY]))
+          }))
+        }), FY._IsOffScreenCanvas(YY) ? YY.convertToBlob({
+          type: DY,
+          quality: AY
+        }).then((YY => rY(YY))) : YY.toBlob((function(YY) {
+          rY(YY)
+        }), DY, AY)
+      }
+      static DownloadBlob(YY, rY) {
+        if ("download" in document.createElement("a")) {
+          if (!rY) {
+            const YY = new Date;
+            rY = "screenshot_" + ((YY.getFullYear() + "-" + (YY.getMonth() + 1)).slice(2) + "-" + YY.getDate() + "_" + YY.getHours() + "-" + ("0" + YY.getMinutes()).slice(-2)) + ".png"
+          }
+          FY.Download(YY, rY)
+        } else if (YY && "undefined" !== typeof URL) {
+          const rY = URL.createObjectURL(YY),
+            DY = window.open("");
+          if (!DY) return;
+          const FY = DY.document.createElement("img");
+          FY.onload = function() {
+            URL.revokeObjectURL(rY)
+          }, FY.src = rY, DY.document.body.appendChild(FY)
         }
-        for (TB in BB.colors4Arrays = {}, this._colors4Arrays) BB.colors4Arrays[TB] = this._colors4Arrays[TB];
-        for (TB in BB.vectors2 = {}, this._vectors2) {
-          const dB = this._vectors2[TB];
-          BB.vectors2[TB] = [dB.x, dB.y]
+      }
+      static EncodeScreenshotCanvasData(YY, rY) {
+        let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "image/png",
+          AY = arguments.length > 3 ? arguments[3] : void 0,
+          IY = arguments.length > 4 ? arguments[4] : void 0;
+        if ("string" !== typeof AY && rY) {
+          if (rY) {
+            if (FY._IsOffScreenCanvas(YY)) return void YY.convertToBlob({
+              type: DY,
+              quality: IY
+            }).then((YY => {
+              const DY = new FileReader;
+              DY.readAsDataURL(YY), DY.onloadend = () => {
+                const YY = DY.result;
+                rY(YY)
+              }
+            }));
+            const AY = YY.toDataURL(DY, IY);
+            rY(AY)
+          }
+        } else this.ToBlob(YY, (function(YY) {
+          YY && FY.DownloadBlob(YY, AY), rY && rY("")
+        }), DY, IY)
+      }
+      static Download(YY, rY) {
+        if ("undefined" === typeof URL) return;
+        const DY = window.URL.createObjectURL(YY),
+          FY = document.createElement("a");
+        document.body.appendChild(FY), FY.style.display = "none", FY.href = DY, FY.download = rY, FY.addEventListener("click", (() => {
+          FY.parentElement && FY.parentElement.removeChild(FY)
+        })), FY.click(), window.URL.revokeObjectURL(DY)
+      }
+      static BackCompatCameraNoPreventDefault(YY) {
+        return "boolean" === typeof YY[0] ? YY[0] : "boolean" === typeof YY[1] && YY[1]
+      }
+      static CreateScreenshot(YY, rY, DY, FY) {
+        throw (0, aY.i)("ScreenshotTools")
+      }
+      static async CreateScreenshotAsync(YY, rY, DY) {
+        throw (0, aY.i)("ScreenshotTools")
+      }
+      static CreateScreenshotUsingRenderTarget(YY, rY, DY, FY) {
+        throw (0, aY.i)("ScreenshotTools")
+      }
+      static async CreateScreenshotUsingRenderTargetAsync(YY, rY, DY) {
+        throw (0, aY.i)("ScreenshotTools")
+      }
+      static RandomId() {
+        return (0, QY.c)()
+      }
+      static IsBase64(YY) {
+        return (0, sY.g)(YY)
+      }
+      static DecodeBase64(YY) {
+        return (0, sY.b)(YY)
+      }
+      static get errorsCount() {
+        return RY.d.errorsCount
+      }
+      static Log(YY) {
+        RY.d.Log(YY)
+      }
+      static Warn(YY) {
+        RY.d.Warn(YY)
+      }
+      static Error(YY) {
+        RY.d.Error(YY)
+      }
+      static get LogCache() {
+        return RY.d.LogCache
+      }
+      static ClearLogCache() {
+        RY.d.ClearLogCache()
+      }
+      static set LogLevels(YY) {
+        RY.d.LogLevels = YY
+      }
+      static set PerformanceLogLevel(YY) {
+        (YY & FY.PerformanceUserMarkLogLevel) !== FY.PerformanceUserMarkLogLevel ? (YY & FY.PerformanceConsoleLogLevel) !== FY.PerformanceConsoleLogLevel ? (FY.StartPerformanceCounter = FY._StartPerformanceCounterDisabled, FY.EndPerformanceCounter = FY._EndPerformanceCounterDisabled, _native?.disablePerformanceLogging?.()) : _native?.enablePerformanceLogging ? (_native.enablePerformanceLogging(2), FY.StartPerformanceCounter = FY._StartMarkNative, FY.EndPerformanceCounter = FY._EndMarkNative) : (FY.StartPerformanceCounter = FY._StartPerformanceConsole, FY.EndPerformanceCounter = FY._EndPerformanceConsole) : _native?.enablePerformanceLogging ? (_native.enablePerformanceLogging(1), FY.StartPerformanceCounter = FY._StartMarkNative, FY.EndPerformanceCounter = FY._EndMarkNative) : (FY.StartPerformanceCounter = FY._StartUserMark, FY.EndPerformanceCounter = FY._EndUserMark)
+      }
+      static _StartPerformanceCounterDisabled(YY, rY) {}
+      static _EndPerformanceCounterDisabled(YY, rY) {}
+      static _StartUserMark(YY) {
+        let rY = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        if (!FY._Performance) {
+          if (!(0, IY.l)()) return;
+          FY._Performance = window.performance
         }
-        for (TB in BB.vectors3 = {}, this._vectors3) {
-          const dB = this._vectors3[TB];
-          BB.vectors3[TB] = [dB.x, dB.y, dB.z]
+        rY && FY._Performance.mark && FY._Performance.mark(YY + "-Begin")
+      }
+      static _EndUserMark(YY) {
+        (!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && FY._Performance.mark && (FY._Performance.mark(YY + "-End"), FY._Performance.measure(YY, YY + "-Begin", YY + "-End"))
+      }
+      static _StartPerformanceConsole(YY) {
+        let rY = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        rY && (FY._StartUserMark(YY, rY), console.time && console.time(YY))
+      }
+      static _EndPerformanceConsole(YY) {
+        let rY = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        rY && (FY._EndUserMark(YY, rY), console.timeEnd(YY))
+      }
+      static _StartMarkNative(YY) {
+        if ((!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && _native?.startPerformanceCounter)
+          if (FY._NativePerformanceCounterHandles.has(YY)) FY.Warn(`Performance counter with name ${YY} is already started.`);
+          else {
+            const rY = _native.startPerformanceCounter(YY);
+            FY._NativePerformanceCounterHandles.set(YY, rY)
+          }
+      }
+      static _EndMarkNative(YY) {
+        if ((!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && _native?.endPerformanceCounter) {
+          const rY = FY._NativePerformanceCounterHandles.get(YY);
+          rY ? (_native.endPerformanceCounter(rY), FY._NativePerformanceCounterHandles.delete(YY)) : FY.Warn(`Performance counter with name ${YY} was not started.`)
         }
-        for (TB in BB.vectors4 = {}, this._vectors4) {
-          const dB = this._vectors4[TB];
-          BB.vectors4[TB] = [dB.x, dB.y, dB.z, dB.w]
+      }
+      static get Now() {
+        return gY.c.Now
+      }
+      static GetClassName(YY) {
+        let rY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          DY = null;
+        if (!rY && YY.getClassName) DY = YY.getClassName();
+        else {
+          if (YY instanceof Object) {
+            DY = (rY ? YY : Object.getPrototypeOf(YY)).constructor.__bjsclassName__
+          }
+          DY || (DY = typeof YY)
         }
-        for (TB in BB.quaternions = {}, this._quaternions) BB.quaternions[TB] = this._quaternions[TB].FVB();
-        for (TB in BB.matrices = {}, this._matrices) BB.matrices[TB] = this._matrices[TB].FVB();
-        for (TB in BB.matrixArray = {}, this._matrixArrays) BB.matrixArray[TB] = this._matrixArrays[TB];
-        for (TB in BB.matrices3x3 = {}, this._matrices3x3) BB.matrices3x3[TB] = this._matrices3x3[TB];
-        for (TB in BB.matrices2x2 = {}, this._matrices2x2) BB.matrices2x2[TB] = this._matrices2x2[TB];
-        for (TB in BB.vectors2Arrays = {}, this._vectors2Arrays) BB.vectors2Arrays[TB] = this._vectors2Arrays[TB];
-        for (TB in BB.vectors3Arrays = {}, this._vectors3Arrays) BB.vectors3Arrays[TB] = this._vectors3Arrays[TB];
-        for (TB in BB.vectors4Arrays = {}, this._vectors4Arrays) BB.vectors4Arrays[TB] = this._vectors4Arrays[TB];
-        for (TB in BB.quaternionsArrays = {}, this._quaternionsArrays) BB.quaternionsArrays[TB] = this._quaternionsArrays[TB];
-        return BB
+        return DY
+      }
+      static First(YY, rY) {
+        for (const DY of YY)
+          if (rY(DY)) return DY;
+        return null
+      }
+      static getFullClassName(YY) {
+        let rY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          DY = null,
+          FY = null;
+        if (!rY && YY.getClassName) DY = YY.getClassName();
+        else {
+          if (YY instanceof Object) {
+            const AY = rY ? YY : Object.getPrototypeOf(YY);
+            DY = AY.constructor.__bjsclassName__, FY = AY.constructor.__bjsmoduleName__
+          }
+          DY || (DY = typeof YY)
+        }
+        return DY ? (null != FY ? FY + "." : "") + DY : null
+      }
+      static async DelayAsync(YY) {
+        await new Promise((rY => {
+          setTimeout((() => {
+            rY()
+          }), YY)
+        }))
+      }
+      static IsSafari() {
+        return !!(0, IY.i)() && /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
       }
     }
 
-    function vB(BB, TB, dB) {
-      const yB = VB.c.Parse((() => new EB(BB.name, TB, BB.shaderPath, BB.options, BB.storeEffectOnSubMeshes)), BB, TB, dB);
-      let lB;
-      for (lB in BB.stencil && yB.stencil.parse(BB.stencil, TB, dB), BB.textures) yB.setTexture(lB, JB.f.Parse(BB.textures[lB], TB, dB));
-      for (lB in BB.textureArrays) {
-        const VB = BB.textureArrays[lB],
-          pB = [];
-        for (let BB = 0; BB < VB.length; BB++) pB.push(JB.f.Parse(VB[BB], TB, dB));
-        yB.setTextureArray(lB, pB)
+    function EY(YY, rY) {
+      return DY => {
+        DY.__bjsclassName__ = YY, DY.__bjsmoduleName__ = null != rY ? rY : null
       }
-      for (lB in BB.ints) yB.setInt(lB, BB.ints[lB]);
-      for (lB in BB.uints) yB.setUInt(lB, BB.uints[lB]);
-      for (lB in BB.floats) yB.setFloat(lB, BB.floats[lB]);
-      for (lB in BB.floatsArrays) yB.setFloats(lB, BB.floatsArrays[lB]);
-      for (lB in BB.colors3) {
-        const TB = BB.colors3[lB];
-        yB.setColor3(lB, {
-          r: TB[0],
-          g: TB[1],
-          b: TB[2]
-        })
-      }
-      for (lB in BB.colors3Arrays) {
-        const TB = BB.colors3Arrays[lB].reduce(((BB, TB, dB) => (dB % 3 === 0 ? BB.push([TB]) : BB[BB.length - 1].push(TB), BB)), []).map((BB => ({
-          r: BB[0],
-          g: BB[1],
-          b: BB[2]
-        })));
-        yB.setColor3Array(lB, TB)
-      }
-      for (lB in BB.colors4) {
-        const TB = BB.colors4[lB];
-        yB.setColor4(lB, {
-          r: TB[0],
-          g: TB[1],
-          b: TB[2],
-          a: TB[3]
-        })
-      }
-      for (lB in BB.colors4Arrays) {
-        const TB = BB.colors4Arrays[lB].reduce(((BB, TB, dB) => (dB % 4 === 0 ? BB.push([TB]) : BB[BB.length - 1].push(TB), BB)), []).map((BB => ({
-          r: BB[0],
-          g: BB[1],
-          b: BB[2],
-          a: BB[3]
-        })));
-        yB.setColor4Array(lB, TB)
-      }
-      for (lB in BB.vectors2) {
-        const TB = BB.vectors2[lB];
-        yB.setVector2(lB, {
-          x: TB[0],
-          y: TB[1]
-        })
-      }
-      for (lB in BB.vectors3) {
-        const TB = BB.vectors3[lB];
-        yB.setVector3(lB, {
-          x: TB[0],
-          y: TB[1],
-          z: TB[2]
-        })
-      }
-      for (lB in BB.vectors4) {
-        const TB = BB.vectors4[lB];
-        yB.setVector4(lB, {
-          x: TB[0],
-          y: TB[1],
-          z: TB[2],
-          w: TB[3]
-        })
-      }
-      for (lB in BB.quaternions) yB.setQuaternion(lB, pB.f.FromArray(BB.quaternions[lB]));
-      for (lB in BB.matrices) yB.setMatrix(lB, pB.b.FromArray(BB.matrices[lB]));
-      const YB = yB;
-      for (lB in BB.matrixArray) YB._matrixArrays[lB] = new Float32Array(BB.matrixArray[lB]);
-      for (lB in BB.matrices3x3) yB.setMatrix3x3(lB, BB.matrices3x3[lB]);
-      for (lB in BB.matrices2x2) yB.setMatrix2x2(lB, BB.matrices2x2[lB]);
-      for (lB in BB.vectors2Arrays) yB.setArray2(lB, BB.vectors2Arrays[lB]);
-      for (lB in BB.vectors3Arrays) yB.setArray3(lB, BB.vectors3Arrays[lB]);
-      for (lB in BB.vectors4Arrays) yB.setArray4(lB, BB.vectors4Arrays[lB]);
-      for (lB in BB.quaternionsArrays) yB.setArray4(lB, BB.quaternionsArrays[lB]);
-      return yB
     }
-    async function mB(BB, TB, dB) {
-      let VB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "";
-      return await new Promise(((yB, pB) => {
-        const lB = new gB.c;
-        lB.addEventListener("readystatechange", (() => {
-          if (4 == lB.readyState)
-            if (200 == lB.status) {
-              const TB = vB(JSON.parse(lB.responseText), dB || kB.c.LastCreatedScene, VB);
-              BB && (TB.name = BB), yB(TB)
-            } else pB("Unable to load the ShaderMaterial")
-        })), lB.open("GET", TB), lB.send()
-      }))
+    FY = WY, WY.AssetBaseUrl = "", WY.UseCustomRequestHeaders = !1, WY.CustomRequestHeaders = vY.d.CustomRequestHeaders, WY.GetDOMTextContent = IY.d, WY._DefaultCdnUrl = "https://cdn.babylonjs.com", WY._CdnVersion = "9.28.0", WY._DefaultAssetsUrl = "https://assets.babylonjs.com/core", WY.LoadScript = "undefined" === typeof _native ? FY._LoadScriptWeb : FY._LoadScriptNative, WY.GetAbsoluteUrl = "object" === typeof document ? YY => {
+      const rY = document.createElement("a");
+      return rY.href = YY, rY.href
+    } : "function" === typeof URL && "object" === typeof location ? YY => new URL(YY, location.origin).href : () => {
+      throw new Error("Unable to get absolute URL. Override BABYLON.Tools.GetAbsoluteUrl to a custom implementation for the current context.")
+    }, WY.NoneLogLevel = RY.d.NoneLogLevel, WY.MessageLogLevel = RY.d.MessageLogLevel, WY.WarningLogLevel = RY.d.WarningLogLevel, WY.ErrorLogLevel = RY.d.ErrorLogLevel, WY.AllLogLevel = RY.d.AllLogLevel, WY.IsWindowObjectExist = IY.l, WY.PerformanceNoneLogLevel = 0, WY.PerformanceUserMarkLogLevel = 1, WY.PerformanceConsoleLogLevel = 2, WY._NativePerformanceCounterHandles = new Map, WY.StartPerformanceCounter = FY._StartPerformanceCounterDisabled, WY.EndPerformanceCounter = FY._EndPerformanceCounterDisabled;
+    class mY {
+      constructor(YY, rY, DY) {
+        let FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        this.iterations = YY, this.index = FY - 1, this._done = !1, this._fn = rY, this._successCallback = DY
+      }
+      executeNext() {
+        this._done || (this.index + 1 < this.iterations ? (++this.index, this._fn(this)) : this.breakLoop())
+      }
+      breakLoop() {
+        this._done = !0, this._successCallback()
+      }
+      static Run(YY, rY, DY) {
+        const FY = new mY(YY, rY, DY, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0);
+        return FY.executeNext(), FY
+      }
+      static SyncAsyncForLoop(YY, rY, DY, FY, AY) {
+        let IY = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
+        return mY.Run(Math.ceil(YY / rY), (FY => {
+          AY && AY() ? FY.breakLoop() : setTimeout((() => {
+            for (let IY = 0; IY < rY; ++IY) {
+              const RY = FY.index * rY + IY;
+              if (RY >= YY) break;
+              if (DY(RY), AY && AY()) {
+                FY.breakLoop();
+                break
+              }
+            }
+            FY.executeNext()
+          }), IY)
+        }), FY)
+      }
     }
-    async function iB(BB, TB) {
-      let dB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-      const VB = this?.SnippetUrl ?? EB.SnippetUrl;
-      return await new Promise(((yB, pB) => {
-        const lB = new gB.c;
-        lB.addEventListener("readystatechange", (() => {
-          if (4 == lB.readyState)
-            if (200 == lB.status) {
-              const VB = JSON.parse(JSON.parse(lB.responseText).jsonPayload),
-                pB = vB(JSON.parse(VB.shaderMaterial), TB || kB.c.LastCreatedScene, dB);
-              pB.snippetId = BB, yB(pB)
-            } else pB("Unable to load the snippet " + BB)
-        })), lB.open("GET", VB + "/" + BB.replace(/#/g, "/")), lB.send()
-      }))
-    }
-    EB.SnippetUrl = "https://snippet.babylonjs.com";
-    const NB = iB;
-    let tB = !1;
+    let VY = !1;
 
-    function fB() {
-      tB || (tB = !0, EB.Parse = vB, EB.ParseFromFileAsync = mB, EB.ParseFromSnippetAsync = iB, EB.CreateFromSnippetAsync = NB, (0, uB.g)("BABYLON.ShaderMaterial", EB))
+    function SY() {
+      VY || (VY = !0, WY.Mix = oY.j, WY.IsExponentOfTwo = oY.g, uY.d.FallbackTexture = "data:image/jpg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QBmRXhpZgAATU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAAExAAIAAAAQAAAATgAAAAAAAABgAAAAAQAAAGAAAAABcGFpbnQubmV0IDQuMC41AP/bAEMABAIDAwMCBAMDAwQEBAQFCQYFBQUFCwgIBgkNCw0NDQsMDA4QFBEODxMPDAwSGBITFRYXFxcOERkbGRYaFBYXFv/bAEMBBAQEBQUFCgYGChYPDA8WFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFv/AABEIAQABAAMBIgACEQEDEQH/xAAfAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgv/xAC1EAACAQMDAgQDBQUEBAAAAX0BAgMABBEFEiExQQYTUWEHInEUMoGRoQgjQrHBFVLR8CQzYnKCCQoWFxgZGiUmJygpKjQ1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4eLj5OXm5+jp6vHy8/T19vf4+fr/xAAfAQADAQEBAQEBAQEBAAAAAAAAAQIDBAUGBwgJCgv/xAC1EQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/APH6KKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76CiiigD5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BQooooA+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/voKKKKAPl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76CiiigD5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BQooooA+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/voKKKKAPl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76P//Z")
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

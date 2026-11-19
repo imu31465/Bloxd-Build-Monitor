@@ -1,28 +1,28 @@
-export const id = 60;
-export const ids = [60];
+export const id = 64;
+export const ids = [64];
 export const modules = {
-  39813: (BB, TB, dB) => {
-    dB.r(TB), dB.d(TB, {
-      ZstdErrorCode: () => oB,
-      ZstdFrameDecoder: () => UB
+  40167: (YY, rY, DY) => {
+    DY.r(rY), DY.d(rY, {
+      ZstdErrorCode: () => vY,
+      ZstdFrameDecoder: () => KY
     });
-    const VB = ArrayBuffer,
-      yB = Uint8Array,
-      pB = Uint16Array,
-      lB = Int16Array,
-      JB = Int32Array,
-      YB = (BB, TB, dB) => {
-        if (yB.prototype.slice) return yB.prototype.slice.call(BB, TB, dB);
-        (null == TB || TB < 0) && (TB = 0), (null == dB || dB > BB.length) && (dB = BB.length);
-        const VB = new yB(dB - TB);
-        return VB.set(BB.subarray(TB, dB)), VB
+    const FY = ArrayBuffer,
+      AY = Uint8Array,
+      IY = Uint16Array,
+      RY = Int16Array,
+      OY = Int32Array,
+      gY = (YY, rY, DY) => {
+        if (AY.prototype.slice) return AY.prototype.slice.call(YY, rY, DY);
+        (null == rY || rY < 0) && (rY = 0), (null == DY || DY > YY.length) && (DY = YY.length);
+        const FY = new AY(DY - rY);
+        return FY.set(YY.subarray(rY, DY)), FY
       },
-      gB = (BB, TB, dB, VB) => {
-        if (yB.prototype.fill) return yB.prototype.fill.call(BB, TB, dB, VB);
-        for ((null == dB || dB < 0) && (dB = 0), (null == VB || VB > BB.length) && (VB = BB.length); dB < VB; ++dB) BB[dB] = TB;
-        return BB
+      aY = (YY, rY, DY, FY) => {
+        if (AY.prototype.fill) return AY.prototype.fill.call(YY, rY, DY, FY);
+        for ((null == DY || DY < 0) && (DY = 0), (null == FY || FY > YY.length) && (FY = YY.length); DY < FY; ++DY) YY[DY] = rY;
+        return YY
       },
-      oB = {
+      vY = {
         InvalidData: 0,
         WindowSizeTooLarge: 1,
         InvalidBlockType: 2,
@@ -30,376 +30,376 @@ export const modules = {
         DistanceTooFarBack: 4,
         UnexpectedEOF: 5
       },
-      kB = ["invalid zstd data", "window size too large (>2046MB)", "invalid block type", "FSE accuracy too high", "match distance too far back", "unexpected EOF"],
-      LB = (BB, TB, dB) => {
-        const VB = new Error(TB || kB[BB]);
-        if (VB.code = BB, Error.captureStackTrace && Error.captureStackTrace(VB, LB), !dB) throw VB;
-        return VB
+      uY = ["invalid zstd data", "window size too large (>2046MB)", "invalid block type", "FSE accuracy too high", "match distance too far back", "unexpected EOF"],
+      sY = (YY, rY, DY) => {
+        const FY = new Error(rY || uY[YY]);
+        if (FY.code = YY, Error.captureStackTrace && Error.captureStackTrace(FY, sY), !DY) throw FY;
+        return FY
       },
-      OB = (BB, TB, dB) => {
-        let VB = 0,
-          yB = 0;
-        for (; VB < dB; ++VB) yB |= BB[TB++] << (VB << 3);
-        return yB
+      iY = (YY, rY, DY) => {
+        let FY = 0,
+          AY = 0;
+        for (; FY < DY; ++FY) AY |= YY[rY++] << (FY << 3);
+        return AY
       },
-      DB = (BB, TB) => {
-        const dB = BB[0] | BB[1] << 8 | BB[2] << 16;
-        if (3126568 == dB && 253 == BB[3]) {
-          const dB = BB[4],
-            VB = dB >> 5 & 1,
-            pB = dB >> 2 & 1,
-            lB = 3 & dB,
-            YB = dB >> 6;
-          8 & dB && LB(0);
-          let gB = 6 - VB;
-          const oB = 3 == lB ? 4 : lB,
-            kB = OB(BB, gB, oB);
-          gB += oB;
-          const DB = YB ? 1 << YB : VB,
-            uB = OB(BB, gB, DB) + (1 == YB && 256);
-          let HB = uB;
-          if (!VB) {
-            const TB = 1 << 10 + (BB[5] >> 3);
-            HB = TB + (TB >> 3) * (7 & BB[5])
+      yY = (YY, rY) => {
+        const DY = YY[0] | YY[1] << 8 | YY[2] << 16;
+        if (3126568 == DY && 253 == YY[3]) {
+          const DY = YY[4],
+            FY = DY >> 5 & 1,
+            IY = DY >> 2 & 1,
+            RY = 3 & DY,
+            gY = DY >> 6;
+          8 & DY && sY(0);
+          let aY = 6 - FY;
+          const vY = 3 == RY ? 4 : RY,
+            uY = iY(YY, aY, vY);
+          aY += vY;
+          const yY = gY ? 1 << gY : FY,
+            QY = iY(YY, aY, yY) + (1 == gY && 256);
+          let oY = QY;
+          if (!FY) {
+            const rY = 1 << 10 + (YY[5] >> 3);
+            oY = rY + (rY >> 3) * (7 & YY[5])
           }
-          HB > 2145386496 && LB(1);
-          const EB = new yB((1 == TB ? uB || HB : TB ? 0 : HB) + 12);
-          return EB[0] = 1, EB[4] = 4, EB[8] = 8, {
-            b: gB + DB,
+          oY > 2145386496 && sY(1);
+          const WY = new AY((1 == rY ? QY || oY : rY ? 0 : oY) + 12);
+          return WY[0] = 1, WY[4] = 4, WY[8] = 8, {
+            b: aY + yY,
             y: 0,
             l: 0,
-            d: kB,
-            w: TB && 1 != TB ? TB : EB.subarray(12),
-            e: HB,
-            o: new JB(EB.buffer, 0, 3),
-            u: uB,
-            c: pB,
-            m: Math.min(131072, HB)
+            d: uY,
+            w: rY && 1 != rY ? rY : WY.subarray(12),
+            e: oY,
+            o: new OY(WY.buffer, 0, 3),
+            u: QY,
+            c: IY,
+            m: Math.min(131072, oY)
           }
         }
-        if (25481893 == (dB >> 4 | BB[3] << 20)) return 8 + (((VB = BB)[pB = 4] | VB[pB + 1] << 8 | VB[pB + 2] << 16 | VB[pB + 3] << 24) >>> 0);
-        var VB, pB;
-        LB(0)
+        if (25481893 == (DY >> 4 | YY[3] << 20)) return 8 + (((FY = YY)[IY = 4] | FY[IY + 1] << 8 | FY[IY + 2] << 16 | FY[IY + 3] << 24) >>> 0);
+        var FY, IY;
+        sY(0)
       },
-      uB = BB => {
-        let TB = 0;
-        for (; 1 << TB <= BB; ++TB);
-        return TB - 1
+      QY = YY => {
+        let rY = 0;
+        for (; 1 << rY <= YY; ++rY);
+        return rY - 1
       },
-      HB = (BB, TB, dB) => {
-        let JB = 4 + (TB << 3);
-        const YB = 5 + (15 & BB[TB]);
-        YB > dB && LB(3);
-        const gB = 1 << YB;
-        let oB = gB,
-          kB = -1,
-          OB = -1,
-          DB = -1,
-          HB = gB;
-        const EB = new VB(512 + (gB << 2)),
-          vB = new lB(EB, 0, 256),
-          mB = new pB(EB, 0, 256),
-          iB = new pB(EB, 512, gB),
-          NB = 512 + (gB << 1),
-          tB = new yB(EB, NB, gB),
-          fB = new yB(EB, NB + gB);
-        for (; kB < 255 && oB > 0;) {
-          const TB = uB(oB + 1),
-            dB = JB >> 3,
-            VB = (1 << TB + 1) - 1;
-          let yB = (BB[dB] | BB[dB + 1] << 8 | BB[dB + 2] << 16) >> (7 & JB) & VB;
-          const pB = (1 << TB) - 1,
-            lB = VB - oB - 1,
-            YB = yB & pB;
-          if (YB < lB ? (JB += TB, yB = YB) : (JB += TB + 1, yB > pB && (yB -= lB)), vB[++kB] = --yB, -1 == yB ? (oB += yB, tB[--HB] = kB) : oB -= yB, !yB)
+      oY = (YY, rY, DY) => {
+        let OY = 4 + (rY << 3);
+        const gY = 5 + (15 & YY[rY]);
+        gY > DY && sY(3);
+        const aY = 1 << gY;
+        let vY = aY,
+          uY = -1,
+          iY = -1,
+          yY = -1,
+          oY = aY;
+        const WY = new FY(512 + (aY << 2)),
+          EY = new RY(WY, 0, 256),
+          mY = new IY(WY, 0, 256),
+          VY = new IY(WY, 512, aY),
+          SY = 512 + (aY << 1),
+          lY = new AY(WY, SY, aY),
+          TY = new AY(WY, SY + aY);
+        for (; uY < 255 && vY > 0;) {
+          const rY = QY(vY + 1),
+            DY = OY >> 3,
+            FY = (1 << rY + 1) - 1;
+          let AY = (YY[DY] | YY[DY + 1] << 8 | YY[DY + 2] << 16) >> (7 & OY) & FY;
+          const IY = (1 << rY) - 1,
+            RY = FY - vY - 1,
+            gY = AY & IY;
+          if (gY < RY ? (OY += rY, AY = gY) : (OY += rY + 1, AY > IY && (AY -= RY)), EY[++uY] = --AY, -1 == AY ? (vY += AY, lY[--oY] = uY) : vY -= AY, !AY)
             do {
-              const TB = JB >> 3;
-              OB = (BB[TB] | BB[TB + 1] << 8) >> (7 & JB) & 3, JB += 2, kB += OB
-            } while (3 == OB)
-        }(kB > 255 || oB) && LB(0);
-        let sB = 0;
-        const MB = (gB >> 1) + (gB >> 3) + 3,
-          zB = gB - 1;
-        for (let VB = 0; VB <= kB; ++VB) {
-          const BB = vB[VB];
-          if (BB < 1) mB[VB] = -BB;
+              const rY = OY >> 3;
+              iY = (YY[rY] | YY[rY + 1] << 8) >> (7 & OY) & 3, OY += 2, uY += iY
+            } while (3 == iY)
+        }(uY > 255 || vY) && sY(0);
+        let eY = 0;
+        const NY = (aY >> 1) + (aY >> 3) + 3,
+          BY = aY - 1;
+        for (let FY = 0; FY <= uY; ++FY) {
+          const YY = EY[FY];
+          if (YY < 1) mY[FY] = -YY;
           else
-            for (DB = 0; DB < BB; ++DB) {
-              tB[sB] = VB;
+            for (yY = 0; yY < YY; ++yY) {
+              lY[eY] = FY;
               do {
-                sB = sB + MB & zB
-              } while (sB >= HB)
+                eY = eY + NY & BY
+              } while (eY >= oY)
             }
         }
-        for (sB && LB(0), DB = 0; DB < gB; ++DB) {
-          const BB = mB[tB[DB]]++,
-            TB = fB[DB] = YB - uB(BB);
-          iB[DB] = (BB << TB) - gB
+        for (eY && sY(0), yY = 0; yY < aY; ++yY) {
+          const YY = mY[lY[yY]]++,
+            rY = TY[yY] = gY - QY(YY);
+          VY[yY] = (YY << rY) - aY
         }
-        return [JB + 7 >> 3, {
-          b: YB,
-          s: tB,
-          n: fB,
-          t: iB
+        return [OY + 7 >> 3, {
+          b: gY,
+          s: lY,
+          n: TY,
+          t: VY
         }]
       },
-      EB = HB(new yB([81, 16, 99, 140, 49, 198, 24, 99, 12, 33, 196, 24, 99, 102, 102, 134, 70, 146, 4]), 0, 6)[1],
-      vB = HB(new yB([33, 20, 196, 24, 99, 140, 33, 132, 16, 66, 8, 33, 132, 16, 66, 8, 33, 68, 68, 68, 68, 68, 68, 68, 68, 36, 9]), 0, 6)[1],
-      mB = HB(new yB([32, 132, 16, 66, 102, 70, 68, 68, 68, 68, 36, 73, 2]), 0, 5)[1],
-      iB = (BB, TB) => {
-        const dB = BB.length,
-          VB = new JB(dB);
-        for (let yB = 0; yB < dB; ++yB) VB[yB] = TB, TB += 1 << BB[yB];
-        return VB
+      WY = oY(new AY([81, 16, 99, 140, 49, 198, 24, 99, 12, 33, 196, 24, 99, 102, 102, 134, 70, 146, 4]), 0, 6)[1],
+      EY = oY(new AY([33, 20, 196, 24, 99, 140, 33, 132, 16, 66, 8, 33, 132, 16, 66, 8, 33, 68, 68, 68, 68, 68, 68, 68, 68, 36, 9]), 0, 6)[1],
+      mY = oY(new AY([32, 132, 16, 66, 102, 70, 68, 68, 68, 68, 36, 73, 2]), 0, 5)[1],
+      VY = (YY, rY) => {
+        const DY = YY.length,
+          FY = new OY(DY);
+        for (let AY = 0; AY < DY; ++AY) FY[AY] = rY, rY += 1 << YY[AY];
+        return FY
       },
-      NB = new yB(new JB([0, 0, 0, 0, 16843009, 50528770, 134678020, 202050057, 269422093]).buffer, 0, 36),
-      tB = iB(NB, 0),
-      fB = new yB(new JB([0, 0, 0, 0, 0, 0, 0, 0, 16843009, 50528770, 117769220, 185207048, 252579084, 16]).buffer, 0, 53),
-      sB = iB(fB, 3),
-      MB = (BB, TB, dB) => {
-        const VB = BB.length,
-          yB = TB.length,
-          pB = BB[VB - 1],
-          lB = (1 << dB.b) - 1,
-          JB = -dB.b;
-        pB || LB(0);
-        let YB = 0,
-          gB = dB.b,
-          oB = (VB << 3) - 8 + uB(pB) - gB,
-          kB = -1;
-        for (; oB > JB && kB < yB;) {
-          const VB = oB >> 3;
-          YB = (YB << gB | (BB[VB] | BB[VB + 1] << 8 | BB[VB + 2] << 16) >> (7 & oB)) & lB, TB[++kB] = dB.s[YB], oB -= gB = dB.n[YB]
+      SY = new AY(new OY([0, 0, 0, 0, 16843009, 50528770, 134678020, 202050057, 269422093]).buffer, 0, 36),
+      lY = VY(SY, 0),
+      TY = new AY(new OY([0, 0, 0, 0, 0, 0, 0, 0, 16843009, 50528770, 117769220, 185207048, 252579084, 16]).buffer, 0, 53),
+      eY = VY(TY, 3),
+      NY = (YY, rY, DY) => {
+        const FY = YY.length,
+          AY = rY.length,
+          IY = YY[FY - 1],
+          RY = (1 << DY.b) - 1,
+          OY = -DY.b;
+        IY || sY(0);
+        let gY = 0,
+          aY = DY.b,
+          vY = (FY << 3) - 8 + QY(IY) - aY,
+          uY = -1;
+        for (; vY > OY && uY < AY;) {
+          const FY = vY >> 3;
+          gY = (gY << aY | (YY[FY] | YY[FY + 1] << 8 | YY[FY + 2] << 16) >> (7 & vY)) & RY, rY[++uY] = DY.s[gY], vY -= aY = DY.n[gY]
         }
-        oB == JB && kB + 1 == yB || LB(0)
+        vY == OY && uY + 1 == AY || sY(0)
       },
-      zB = (BB, TB, dB) => {
-        let VB = 6;
-        const yB = TB.length + 3 >> 2,
-          pB = yB << 1,
-          lB = yB + pB;
-        MB(BB.subarray(VB, VB += BB[0] | BB[1] << 8), TB.subarray(0, yB), dB), MB(BB.subarray(VB, VB += BB[2] | BB[3] << 8), TB.subarray(yB, pB), dB), MB(BB.subarray(VB, VB += BB[4] | BB[5] << 8), TB.subarray(pB, lB), dB), MB(BB.subarray(VB), TB.subarray(lB), dB)
+      BY = (YY, rY, DY) => {
+        let FY = 6;
+        const AY = rY.length + 3 >> 2,
+          IY = AY << 1,
+          RY = AY + IY;
+        NY(YY.subarray(FY, FY += YY[0] | YY[1] << 8), rY.subarray(0, AY), DY), NY(YY.subarray(FY, FY += YY[2] | YY[3] << 8), rY.subarray(AY, IY), DY), NY(YY.subarray(FY, FY += YY[4] | YY[5] << 8), rY.subarray(IY, RY), DY), NY(YY.subarray(FY), rY.subarray(RY), DY)
       },
-      wB = (BB, TB, dB) => {
-        let VB = TB.b;
-        const lB = BB[VB],
-          JB = lB >> 1 & 3;
-        TB.l = 1 & lB;
-        const oB = lB >> 3 | BB[VB + 1] << 5 | BB[VB + 2] << 13,
-          kB = (VB += 3) + oB;
-        if (1 == JB) {
-          if (VB >= BB.length) return;
-          return TB.b = VB + 1, dB ? (gB(dB, BB[VB], TB.y, TB.y += oB), dB) : gB(new yB(oB), BB[VB])
+      cY = (YY, rY, DY) => {
+        let FY = rY.b;
+        const RY = YY[FY],
+          OY = RY >> 1 & 3;
+        rY.l = 1 & RY;
+        const vY = RY >> 3 | YY[FY + 1] << 5 | YY[FY + 2] << 13,
+          uY = (FY += 3) + vY;
+        if (1 == OY) {
+          if (FY >= YY.length) return;
+          return rY.b = FY + 1, DY ? (aY(DY, YY[FY], rY.y, rY.y += vY), DY) : aY(new AY(vY), YY[FY])
         }
-        if (!(kB > BB.length)) {
-          if (0 == JB) return TB.b = kB, dB ? (dB.set(BB.subarray(VB, kB), TB.y), TB.y += oB, dB) : YB(BB, VB, kB);
-          if (2 == JB) {
-            const lB = BB[VB],
-              JB = 3 & lB,
-              oB = lB >> 2 & 3;
-            let OB = lB >> 4,
-              DB = 0,
-              iB = 0;
-            JB < 2 ? 1 & oB ? OB |= BB[++VB] << 4 | (2 & oB && BB[++VB] << 12) : OB = lB >> 3 : (iB = oB, oB < 2 ? (OB |= (63 & BB[++VB]) << 4, DB = BB[VB] >> 6 | BB[++VB] << 2) : 2 == oB ? (OB |= BB[++VB] << 4 | (3 & BB[++VB]) << 12, DB = BB[VB] >> 2 | BB[++VB] << 6) : (OB |= BB[++VB] << 4 | (63 & BB[++VB]) << 12, DB = BB[VB] >> 6 | BB[++VB] << 2 | BB[++VB] << 10)), ++VB;
-            let wB = dB ? dB.subarray(TB.y, TB.y + TB.m) : new yB(TB.m),
-              UB = wB.length - OB;
-            if (UB < 0 && LB(0), 0 == JB) wB.set(BB.subarray(VB, VB += OB), UB);
-            else if (1 == JB) gB(wB, BB[VB++], UB);
+        if (!(uY > YY.length)) {
+          if (0 == OY) return rY.b = uY, DY ? (DY.set(YY.subarray(FY, uY), rY.y), rY.y += vY, DY) : gY(YY, FY, uY);
+          if (2 == OY) {
+            const RY = YY[FY],
+              OY = 3 & RY,
+              vY = RY >> 2 & 3;
+            let iY = RY >> 4,
+              yY = 0,
+              VY = 0;
+            OY < 2 ? 1 & vY ? iY |= YY[++FY] << 4 | (2 & vY && YY[++FY] << 12) : iY = RY >> 3 : (VY = vY, vY < 2 ? (iY |= (63 & YY[++FY]) << 4, yY = YY[FY] >> 6 | YY[++FY] << 2) : 2 == vY ? (iY |= YY[++FY] << 4 | (3 & YY[++FY]) << 12, yY = YY[FY] >> 2 | YY[++FY] << 6) : (iY |= YY[++FY] << 4 | (63 & YY[++FY]) << 12, yY = YY[FY] >> 6 | YY[++FY] << 2 | YY[++FY] << 10)), ++FY;
+            let cY = DY ? DY.subarray(rY.y, rY.y + rY.m) : new AY(rY.m),
+              KY = cY.length - iY;
+            if (KY < 0 && sY(0), 0 == OY) cY.set(YY.subarray(FY, FY += iY), KY);
+            else if (1 == OY) aY(cY, YY[FY++], KY);
             else {
-              let dB = TB.h;
-              if (2 == JB) {
-                const lB = ((BB, TB) => {
-                  let dB = 0,
-                    VB = -1;
-                  const lB = new yB(292),
-                    JB = BB[TB],
-                    YB = lB.subarray(0, 256),
-                    oB = lB.subarray(256, 268),
-                    kB = new pB(lB.buffer, 268);
-                  if (JB < 128) {
-                    const [dB, yB] = HB(BB, TB + 1, 6), pB = dB << 3, lB = BB[TB += JB];
-                    lB || LB(0);
-                    let gB = 0,
-                      oB = 0,
-                      kB = yB.b,
-                      OB = kB,
-                      DB = (++TB << 3) - 8 + uB(lB);
-                    for (; VB > 254 && LB(0), DB -= kB, !(DB < pB);) {
-                      let TB = DB >> 3;
-                      if (gB += (BB[TB] | BB[TB + 1] << 8) >> (7 & DB) & (1 << kB) - 1, YB[++VB] = yB.s[gB], DB -= OB, DB < pB) break;
-                      TB = DB >> 3, oB += (BB[TB] | BB[TB + 1] << 8) >> (7 & DB) & (1 << OB) - 1, YB[++VB] = yB.s[oB], kB = yB.n[gB], gB = yB.t[gB], OB = yB.n[oB], oB = yB.t[oB]
-                    }++VB > 255 && LB(0)
+              let DY = rY.h;
+              if (2 == OY) {
+                const RY = ((YY, rY) => {
+                  let DY = 0,
+                    FY = -1;
+                  const RY = new AY(292),
+                    OY = YY[rY],
+                    gY = RY.subarray(0, 256),
+                    vY = RY.subarray(256, 268),
+                    uY = new IY(RY.buffer, 268);
+                  if (OY < 128) {
+                    const [DY, AY] = oY(YY, rY + 1, 6), IY = DY << 3, RY = YY[rY += OY];
+                    RY || sY(0);
+                    let aY = 0,
+                      vY = 0,
+                      uY = AY.b,
+                      iY = uY,
+                      yY = (++rY << 3) - 8 + QY(RY);
+                    for (; FY > 254 && sY(0), yY -= uY, !(yY < IY);) {
+                      let rY = yY >> 3;
+                      if (aY += (YY[rY] | YY[rY + 1] << 8) >> (7 & yY) & (1 << uY) - 1, gY[++FY] = AY.s[aY], yY -= iY, yY < IY) break;
+                      rY = yY >> 3, vY += (YY[rY] | YY[rY + 1] << 8) >> (7 & yY) & (1 << iY) - 1, gY[++FY] = AY.s[vY], uY = AY.n[aY], aY = AY.t[aY], iY = AY.n[vY], vY = AY.t[vY]
+                    }++FY > 255 && sY(0)
                   } else {
-                    for (VB = JB - 127; dB < VB; dB += 2) {
-                      const VB = BB[++TB];
-                      YB[dB] = VB >> 4, YB[dB + 1] = 15 & VB
-                    }++TB
+                    for (FY = OY - 127; DY < FY; DY += 2) {
+                      const FY = YY[++rY];
+                      gY[DY] = FY >> 4, gY[DY + 1] = 15 & FY
+                    }++rY
                   }
-                  let OB = 0;
-                  for (dB = 0; dB < VB; ++dB) {
-                    const BB = YB[dB];
-                    BB > 11 && LB(0), OB += BB && 1 << BB - 1
+                  let iY = 0;
+                  for (DY = 0; DY < FY; ++DY) {
+                    const YY = gY[DY];
+                    YY > 11 && sY(0), iY += YY && 1 << YY - 1
                   }
-                  const DB = uB(OB) + 1,
-                    EB = 1 << DB,
-                    vB = EB - OB;
-                  for (vB & vB - 1 && LB(0), YB[VB++] = uB(vB) + 1, dB = 0; dB < VB; ++dB) {
-                    const BB = YB[dB];
-                    ++oB[YB[dB] = BB && DB + 1 - BB]
+                  const yY = QY(iY) + 1,
+                    WY = 1 << yY,
+                    EY = WY - iY;
+                  for (EY & EY - 1 && sY(0), gY[FY++] = QY(EY) + 1, DY = 0; DY < FY; ++DY) {
+                    const YY = gY[DY];
+                    ++vY[gY[DY] = YY && yY + 1 - YY]
                   }
-                  const mB = new yB(EB << 1),
-                    iB = mB.subarray(0, EB),
-                    NB = mB.subarray(EB);
-                  for (kB[DB] = 0, dB = DB; dB > 0; --dB) {
-                    const BB = kB[dB];
-                    gB(NB, dB, BB, kB[dB - 1] = BB + oB[dB] * (1 << DB - dB))
+                  const mY = new AY(WY << 1),
+                    VY = mY.subarray(0, WY),
+                    SY = mY.subarray(WY);
+                  for (uY[yY] = 0, DY = yY; DY > 0; --DY) {
+                    const YY = uY[DY];
+                    aY(SY, DY, YY, uY[DY - 1] = YY + vY[DY] * (1 << yY - DY))
                   }
-                  for (kB[0] != EB && LB(0), dB = 0; dB < VB; ++dB) {
-                    const BB = YB[dB];
-                    if (BB) {
-                      const TB = kB[BB];
-                      gB(iB, dB, TB, kB[BB] = TB + (1 << DB - BB))
+                  for (uY[0] != WY && sY(0), DY = 0; DY < FY; ++DY) {
+                    const YY = gY[DY];
+                    if (YY) {
+                      const rY = uY[YY];
+                      aY(VY, DY, rY, uY[YY] = rY + (1 << yY - YY))
                     }
                   }
-                  return [TB, {
-                    n: NB,
-                    b: DB,
-                    s: iB
+                  return [rY, {
+                    n: SY,
+                    b: yY,
+                    s: VY
                   }]
-                })(BB, VB);
-                DB += VB - (VB = lB[0]), TB.h = dB = lB[1]
-              } else dB || LB(0);
-              (iB ? zB : MB)(BB.subarray(VB, VB += DB), wB.subarray(UB), dB)
+                })(YY, FY);
+                yY += FY - (FY = RY[0]), rY.h = DY = RY[1]
+              } else DY || sY(0);
+              (VY ? BY : NY)(YY.subarray(FY, FY += yY), cY.subarray(KY), DY)
             }
-            let FB = BB[VB++];
-            if (FB) {
-              255 == FB ? FB = 32512 + (BB[VB++] | BB[VB++] << 8) : FB > 127 && (FB = FB - 128 << 8 | BB[VB++]);
-              const lB = BB[VB++];
-              3 & lB && LB(0);
-              const JB = [vB, mB, EB];
-              for (let dB = 2; dB > -1; --dB) {
-                const YB = lB >> 2 + (dB << 1) & 3;
-                if (1 == YB) {
-                  const TB = new yB([0, 0, BB[VB++]]);
-                  JB[dB] = {
-                    s: TB.subarray(2, 3),
-                    n: TB.subarray(0, 1),
-                    t: new pB(TB.buffer, 0, 1),
+            let HY = YY[FY++];
+            if (HY) {
+              255 == HY ? HY = 32512 + (YY[FY++] | YY[FY++] << 8) : HY > 127 && (HY = HY - 128 << 8 | YY[FY++]);
+              const RY = YY[FY++];
+              3 & RY && sY(0);
+              const OY = [EY, mY, WY];
+              for (let DY = 2; DY > -1; --DY) {
+                const gY = RY >> 2 + (DY << 1) & 3;
+                if (1 == gY) {
+                  const rY = new AY([0, 0, YY[FY++]]);
+                  OY[DY] = {
+                    s: rY.subarray(2, 3),
+                    n: rY.subarray(0, 1),
+                    t: new IY(rY.buffer, 0, 1),
                     b: 0
                   }
-                } else 2 == YB ? [VB, JB[dB]] = HB(BB, VB, 9 - (1 & dB)) : 3 == YB && (TB.t || LB(0), JB[dB] = TB.t[dB])
+                } else 2 == gY ? [FY, OY[DY]] = oY(YY, FY, 9 - (1 & DY)) : 3 == gY && (rY.t || sY(0), OY[DY] = rY.t[DY])
               }
-              const [gB, oB, OB] = TB.t = JB, DB = BB[kB - 1];
-              DB || LB(0);
-              let iB = (kB << 3) - 8 + uB(DB) - OB.b,
-                MB = iB >> 3,
-                zB = 0,
-                KB = (BB[MB] | BB[MB + 1] << 8) >> (7 & iB) & (1 << OB.b) - 1;
-              MB = (iB -= oB.b) >> 3;
-              let rB = (BB[MB] | BB[MB + 1] << 8) >> (7 & iB) & (1 << oB.b) - 1;
-              MB = (iB -= gB.b) >> 3;
-              let IB = (BB[MB] | BB[MB + 1] << 8) >> (7 & iB) & (1 << gB.b) - 1;
-              for (++FB; --FB;) {
-                const dB = OB.s[KB],
-                  VB = OB.n[KB],
-                  yB = gB.s[IB],
-                  pB = gB.n[IB],
-                  lB = oB.s[rB],
-                  JB = oB.n[rB];
-                MB = (iB -= lB) >> 3;
-                const YB = 1 << lB;
-                let kB = YB + ((BB[MB] | BB[MB + 1] << 8 | BB[MB + 2] << 16 | BB[MB + 3] << 24) >>> (7 & iB) & YB - 1);
-                MB = (iB -= fB[yB]) >> 3;
-                let DB = sB[yB] + ((BB[MB] | BB[MB + 1] << 8 | BB[MB + 2] << 16) >> (7 & iB) & (1 << fB[yB]) - 1);
-                MB = (iB -= NB[dB]) >> 3;
-                const uB = tB[dB] + ((BB[MB] | BB[MB + 1] << 8 | BB[MB + 2] << 16) >> (7 & iB) & (1 << NB[dB]) - 1);
-                if ((iB < 0 || UB + uB > wB.length || zB + uB + DB > wB.length) && LB(0), MB = (iB -= VB) >> 3, KB = OB.t[KB] + ((BB[MB] | BB[MB + 1] << 8) >> (7 & iB) & (1 << VB) - 1), MB = (iB -= pB) >> 3, IB = gB.t[IB] + ((BB[MB] | BB[MB + 1] << 8) >> (7 & iB) & (1 << pB) - 1), MB = (iB -= JB) >> 3, rB = oB.t[rB] + ((BB[MB] | BB[MB + 1] << 8) >> (7 & iB) & (1 << JB) - 1), kB > 3) TB.o[2] = TB.o[1], TB.o[1] = TB.o[0], TB.o[0] = kB -= 3;
+              const [aY, vY, iY] = rY.t = OY, yY = YY[uY - 1];
+              yY || sY(0);
+              let VY = (uY << 3) - 8 + QY(yY) - iY.b,
+                NY = VY >> 3,
+                BY = 0,
+                zY = (YY[NY] | YY[NY + 1] << 8) >> (7 & VY) & (1 << iY.b) - 1;
+              NY = (VY -= vY.b) >> 3;
+              let ZY = (YY[NY] | YY[NY + 1] << 8) >> (7 & VY) & (1 << vY.b) - 1;
+              NY = (VY -= aY.b) >> 3;
+              let CY = (YY[NY] | YY[NY + 1] << 8) >> (7 & VY) & (1 << aY.b) - 1;
+              for (++HY; --HY;) {
+                const DY = iY.s[zY],
+                  FY = iY.n[zY],
+                  AY = aY.s[CY],
+                  IY = aY.n[CY],
+                  RY = vY.s[ZY],
+                  OY = vY.n[ZY];
+                NY = (VY -= RY) >> 3;
+                const gY = 1 << RY;
+                let uY = gY + ((YY[NY] | YY[NY + 1] << 8 | YY[NY + 2] << 16 | YY[NY + 3] << 24) >>> (7 & VY) & gY - 1);
+                NY = (VY -= TY[AY]) >> 3;
+                let yY = eY[AY] + ((YY[NY] | YY[NY + 1] << 8 | YY[NY + 2] << 16) >> (7 & VY) & (1 << TY[AY]) - 1);
+                NY = (VY -= SY[DY]) >> 3;
+                const QY = lY[DY] + ((YY[NY] | YY[NY + 1] << 8 | YY[NY + 2] << 16) >> (7 & VY) & (1 << SY[DY]) - 1);
+                if ((VY < 0 || KY + QY > cY.length || BY + QY + yY > cY.length) && sY(0), NY = (VY -= FY) >> 3, zY = iY.t[zY] + ((YY[NY] | YY[NY + 1] << 8) >> (7 & VY) & (1 << FY) - 1), NY = (VY -= IY) >> 3, CY = aY.t[CY] + ((YY[NY] | YY[NY + 1] << 8) >> (7 & VY) & (1 << IY) - 1), NY = (VY -= OY) >> 3, ZY = vY.t[ZY] + ((YY[NY] | YY[NY + 1] << 8) >> (7 & VY) & (1 << OY) - 1), uY > 3) rY.o[2] = rY.o[1], rY.o[1] = rY.o[0], rY.o[0] = uY -= 3;
                 else {
-                  const BB = kB - (0 != uB);
-                  BB ? (kB = 3 == BB ? TB.o[0] - 1 : TB.o[BB], BB > 1 && (TB.o[2] = TB.o[1]), TB.o[1] = TB.o[0], TB.o[0] = kB) : kB = TB.o[0]
+                  const YY = uY - (0 != QY);
+                  YY ? (uY = 3 == YY ? rY.o[0] - 1 : rY.o[YY], YY > 1 && (rY.o[2] = rY.o[1]), rY.o[1] = rY.o[0], rY.o[0] = uY) : uY = rY.o[0]
                 }
-                for (let BB = 0; BB < uB; ++BB) wB[zB + BB] = wB[UB + BB];
-                zB += uB, UB += uB;
-                let HB = zB - kB;
-                if (HB < 0) {
-                  let BB = -HB;
-                  const dB = TB.e + HB;
-                  dB < 0 && LB(4), BB > DB && (BB = DB);
-                  for (let VB = 0; VB < BB; ++VB) wB[zB + VB] = TB.w[dB + VB];
-                  zB += BB, DB -= BB, HB = 0
+                for (let YY = 0; YY < QY; ++YY) cY[BY + YY] = cY[KY + YY];
+                BY += QY, KY += QY;
+                let oY = BY - uY;
+                if (oY < 0) {
+                  let YY = -oY;
+                  const DY = rY.e + oY;
+                  DY < 0 && sY(4), YY > yY && (YY = yY);
+                  for (let FY = 0; FY < YY; ++FY) cY[BY + FY] = rY.w[DY + FY];
+                  BY += YY, yY -= YY, oY = 0
                 }
-                for (let BB = 0; BB < DB; ++BB) wB[zB + BB] = wB[HB + BB];
-                zB += DB
+                for (let YY = 0; YY < yY; ++YY) cY[BY + YY] = cY[oY + YY];
+                BY += yY
               }
-              if (zB != UB)
-                for (; UB < wB.length;) wB[zB++] = wB[UB++];
-              else zB = wB.length;
-              dB ? TB.y += zB : wB = YB(wB, 0, zB)
-            } else if (dB) {
-              if (TB.y += OB, UB)
-                for (let BB = 0; BB < OB; ++BB) wB[BB] = wB[UB + BB]
-            } else UB && (wB = YB(wB, UB));
-            return TB.b = kB, wB
+              if (BY != KY)
+                for (; KY < cY.length;) cY[BY++] = cY[KY++];
+              else BY = cY.length;
+              DY ? rY.y += BY : cY = gY(cY, 0, BY)
+            } else if (DY) {
+              if (rY.y += iY, KY)
+                for (let YY = 0; YY < iY; ++YY) cY[YY] = cY[KY + YY]
+            } else KY && (cY = gY(cY, KY));
+            return rY.b = uY, cY
           }
-          LB(2)
+          sY(2)
         }
       };
-    class UB {
+    class KY {
       output = null;
       decoded = 0;
       done = !1;
       st = null;
       parts = [];
-      Dg = 0;
+      ja = 0;
       needed = 18;
       size;
-      constructor(BB) {
-        this.size = BB
+      constructor(YY) {
+        this.size = YY
       }
-      push(BB) {
+      push(YY) {
         if (this.done) return;
-        if (this.parts.push(BB), this.Dg += BB.length, this.Dg < this.needed) return;
-        const TB = ((BB, TB) => {
-          if (1 == BB.length) return BB[0];
-          const dB = new yB(TB);
-          for (let VB = 0, yB = 0; VB < BB.length; ++VB) {
-            const TB = BB[VB];
-            dB.set(TB, yB), yB += TB.length
+        if (this.parts.push(YY), this.ja += YY.length, this.ja < this.needed) return;
+        const rY = ((YY, rY) => {
+          if (1 == YY.length) return YY[0];
+          const DY = new AY(rY);
+          for (let FY = 0, AY = 0; FY < YY.length; ++FY) {
+            const rY = YY[FY];
+            DY.set(rY, AY), AY += rY.length
           }
-          return dB
-        })(this.parts, this.Dg);
-        let dB = this.st;
-        if (!dB) {
-          const BB = DB(TB, new yB(0));
-          "number" != typeof BB && BB.u === this.size || LB(0, `not a zstd frame of ${this.size} bytes`), dB = this.st = DB(TB, 1), dB.e = 0, this.output = dB.w
+          return DY
+        })(this.parts, this.ja);
+        let DY = this.st;
+        if (!DY) {
+          const YY = yY(rY, new AY(0));
+          "number" != typeof YY && YY.u === this.size || sY(0, `not a zstd frame of ${this.size} bytes`), DY = this.st = yY(rY, 1), DY.e = 0, this.output = DY.w
         }
         for (;;) {
-          const BB = TB.length - dB.b;
-          if (BB < 3) {
+          const YY = rY.length - DY.b;
+          if (YY < 3) {
             this.needed = 3;
             break
           }
-          const VB = TB[dB.b],
-            yB = VB >> 1 & 3;
-          3 == yB && LB(2);
-          const pB = VB >> 3 | TB[dB.b + 1] << 5 | TB[dB.b + 2] << 13;
-          pB > dB.m && LB(0);
-          const lB = 1 == yB ? 4 : 3 + pB;
-          if (BB < lB) {
-            this.needed = lB;
+          const FY = rY[DY.b],
+            AY = FY >> 1 & 3;
+          3 == AY && sY(2);
+          const IY = FY >> 3 | rY[DY.b + 1] << 5 | rY[DY.b + 2] << 13;
+          IY > DY.m && sY(0);
+          const RY = 1 == AY ? 4 : 3 + IY;
+          if (YY < RY) {
+            this.needed = RY;
             break
           }
-          if (wB(TB, dB, dB.w) || LB(5), dB.e = dB.y, (dB.y > dB.u || dB.l && dB.y != dB.u) && LB(0), dB.l) {
+          if (cY(rY, DY, DY.w) || sY(5), DY.e = DY.y, (DY.y > DY.u || DY.l && DY.y != DY.u) && sY(0), DY.l) {
             this.done = !0;
             break
           }
         }
-        this.decoded = dB.y;
-        const VB = TB.subarray(dB.b);
-        this.parts = VB.length ? [VB] : [], this.Dg = VB.length, dB.b = 0
+        this.decoded = DY.y;
+        const FY = rY.subarray(DY.b);
+        this.parts = FY.length ? [FY] : [], this.ja = FY.length, DY.b = 0
       }
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

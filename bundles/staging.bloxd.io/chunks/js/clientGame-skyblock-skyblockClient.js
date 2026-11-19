@@ -1,597 +1,597 @@
 export const id = 25;
 export const ids = [25];
 export const modules = {
-  35589: (BB, TB, dB) => {
-    dB.d(TB, {
-      c: () => OB,
-      e: () => DB,
-      h: () => LB,
-      l: () => kB
+  36025: (YY, rY, DY) => {
+    DY.d(rY, {
+      d: () => iY,
+      e: () => yY,
+      g: () => sY,
+      h: () => uY
     });
-    var VB = dB(8570),
-      yB = dB(35595),
-      pB = dB(35601),
-      lB = dB(8103),
-      JB = dB(1317),
-      YB = dB(62),
-      gB = dB(72),
-      oB = dB(980);
+    var FY = DY(8745),
+      AY = DY(36032),
+      IY = DY(36034),
+      RY = DY(8111),
+      OY = DY(1430),
+      gY = DY(61),
+      aY = DY(76),
+      vY = DY(1125);
 
-    function kB() {
-      var BB;
-      return (0, JB.f)(yB.c, (0, yB.k)()), (0, oB.jsx)(oB.Fragment, {
-        children: null === (BB = (0, yB.k)()) || void 0 === BB ? void 0 : BB.content
+    function uY() {
+      var YY;
+      return (0, OY.k)(AY.d, (0, AY.n)()), (0, vY.jsx)(vY.Fragment, {
+        children: null === (YY = (0, AY.n)()) || void 0 === YY ? void 0 : YY.content
       })
     }
 
-    function LB(BB) {
-      var TB;
+    function sY(YY) {
+      var rY;
       let {
-        show: dB
-      } = BB;
-      (0, JB.f)(yB.c, (0, yB.k)());
-      const gB = null === (TB = (0, yB.k)()) || void 0 === TB ? void 0 : TB.menu;
-      return (0, YB.useEffect)((() => {
-        var BB;
-        dB || (null === gB || void 0 === gB || null === (BB = gB.onClose) || void 0 === BB || BB.call(gB), (0, pB.r)())
-      }), [dB, gB]), (0, YB.useEffect)((() => dB ? (0, lB.c)(pB.x, pB.e) : void 0), [dB]), (0, oB.jsx)(VB.d, {
-        showing: dB,
+        show: DY
+      } = YY;
+      (0, OY.k)(AY.d, (0, AY.n)());
+      const aY = null === (rY = (0, AY.n)()) || void 0 === rY ? void 0 : rY.menu;
+      return (0, gY.useEffect)((() => {
+        var YY;
+        DY || (null === aY || void 0 === aY || null === (YY = aY.onClose) || void 0 === YY || YY.call(aY), (0, IY.t)())
+      }), [DY, aY]), (0, gY.useEffect)((() => DY ? (0, RY.f)(IY.y, IY.i) : void 0), [DY]), (0, vY.jsx)(FY.d, {
+        showing: DY,
         globallyUniqueKey: "clientGameMenu",
-        children: null === gB || void 0 === gB ? void 0 : gB.content
+        children: null === aY || void 0 === aY ? void 0 : aY.content
       })
     }
 
-    function OB(BB) {
+    function iY(YY) {
       let {
-        placement: TB = "bottom"
-      } = BB;
-      return (0, oB.jsx)("div", {
-        id: `clientGameHud-${TB}`,
+        placement: rY = "bottom"
+      } = YY;
+      return (0, vY.jsx)("div", {
+        id: `clientGameHud-${rY}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function DB(BB) {
+    function yY(YY) {
       let {
-        children: TB,
-        placement: dB = "bottom"
-      } = BB;
-      const [VB, yB] = (0, YB.useState)(null);
-      return (0, YB.useEffect)((() => {
-        yB(document.getElementById(`clientGameHud-${dB}`))
-      }), [dB]), VB ? (0, gB.createPortal)(TB, VB) : null
+        children: rY,
+        placement: DY = "bottom"
+      } = YY;
+      const [FY, AY] = (0, gY.useState)(null);
+      return (0, gY.useEffect)((() => {
+        AY(document.getElementById(`clientGameHud-${DY}`))
+      }), [DY]), FY ? (0, aY.createPortal)(rY, FY) : null
     }
   },
-  4226: (BB, TB, dB) => {
-    dB.d(TB, {
-      e: () => HB,
-      h: () => EB
+  4408: (YY, rY, DY) => {
+    DY.d(rY, {
+      b: () => oY,
+      d: () => WY
     });
-    var VB = dB(933),
-      yB = dB.n(VB),
-      pB = dB(62),
-      lB = dB(1078),
-      JB = dB(4232),
-      YB = dB(1657),
-      gB = dB(2139),
-      oB = dB(4240),
-      kB = dB(980);
-    const LB = new WeakMap;
-    let OB = 0;
+    var FY = DY(1092),
+      AY = DY.n(FY),
+      IY = DY(61),
+      RY = DY(1211),
+      OY = DY(4410),
+      gY = DY(1778),
+      aY = DY(2282),
+      vY = DY(4419),
+      uY = DY(1125);
+    const sY = new WeakMap;
+    let iY = 0;
 
-    function DB(BB) {
-      let TB = LB.get(BB);
-      return void 0 === TB && (TB = OB++, LB.set(BB, TB)), TB
+    function yY(YY) {
+      let rY = sY.get(YY);
+      return void 0 === rY && (rY = iY++, sY.set(YY, rY)), rY
     }
 
-    function uB(BB) {
+    function QY(YY) {
       let {
-        piece: TB
-      } = BB;
-      return "space" === TB.kind ? (0, kB.jsx)(kB.Fragment, {
-        children: TB.text
-      }) : (0, kB.jsx)("span", {
+        piece: rY
+      } = YY;
+      return "space" === rY.kind ? (0, uY.jsx)(uY.Fragment, {
+        children: rY.text
+      }) : (0, uY.jsx)("span", {
         className: "DialogueWord",
         style: {
-          "--word-delay": `${TB.delayMs}ms`
+          "--word-delay": `${rY.delayMs}ms`
         },
-        children: (0, kB.jsx)(JB.d, {
-          text: "icon" === TB.kind ? `[[${TB.icon}]]` : TB.text
+        children: (0, uY.jsx)(OY.c, {
+          text: "icon" === rY.kind ? `[[${rY.icon}]]` : rY.text
         })
       })
     }
 
-    function HB(BB) {
+    function oY(YY) {
       let {
-        display: TB
-      } = BB;
+        display: rY
+      } = YY;
       const {
-        selectedLanguage: dB
-      } = (0, lB.z)(), VB = (0, pB.useMemo)((() => (0, oB.e)((0, oB.f)(TB).plan.pieces)), [TB, dB.code]);
-      return (0, kB.jsxs)("div", {
-        className: yB()("Dialogue", {
-          DialogueAnimateIn: !1 !== TB.animateIn
+        selectedLanguage: DY
+      } = (0, RY.C)(), FY = (0, IY.useMemo)((() => (0, vY.e)((0, vY.g)(rY).plan.pieces)), [rY, DY.code]);
+      return (0, uY.jsxs)("div", {
+        className: AY()("Dialogue", {
+          DialogueAnimateIn: !1 !== rY.animateIn
         }),
-        children: [TB.speakerName && (0, kB.jsx)(YB.e, {
-          text: TB.speakerName,
+        children: [rY.speakerName && (0, uY.jsx)(gY.b, {
+          text: rY.speakerName,
           className: "DialogueSpeaker"
-        }), (0, kB.jsx)("p", {
+        }), (0, uY.jsx)("p", {
           className: "DialogueLine",
-          children: VB.map(((BB, TB) => 1 === BB.length && "space" === BB[0].kind ? BB[0].text : (0, kB.jsx)("span", {
+          children: FY.map(((YY, rY) => 1 === YY.length && "space" === YY[0].kind ? YY[0].text : (0, uY.jsx)("span", {
             className: "DialogueGlue",
-            children: BB.map(((BB, TB) => (0, kB.jsx)(uB, {
-              piece: BB
-            }, TB)))
-          }, TB)))
+            children: YY.map(((YY, rY) => (0, uY.jsx)(QY, {
+              piece: YY
+            }, rY)))
+          }, rY)))
         })]
       })
     }
-    const EB = (0, pB.memo)((function() {
-      const BB = (0, gB.j)("dialogue");
-      return (0, kB.jsx)("div", {
+    const WY = (0, IY.memo)((function() {
+      const YY = (0, aY.j)("dialogue");
+      return (0, uY.jsx)("div", {
         className: "DialogueAnchor",
         "data-camera-keeper": "",
         role: "status",
         "aria-live": "polite",
         "aria-atomic": "true",
-        children: BB && (0, kB.jsx)(HB, {
-          display: BB
-        }, DB(BB))
+        children: YY && (0, uY.jsx)(oY, {
+          display: YY
+        }, yY(YY))
       })
     }))
   },
-  4232: (BB, TB, dB) => {
-    dB.d(TB, {
-      d: () => JB
+  4410: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => OY
     });
-    var VB = dB(62),
-      yB = dB(270),
-      pB = dB(1666),
-      lB = dB(980);
+    var FY = DY(61),
+      AY = DY(332),
+      IY = DY(1793),
+      RY = DY(1125);
 
-    function JB(BB) {
+    function OY(YY) {
       let {
-        text: TB
-      } = BB;
-      const dB = [];
-      let JB = "";
-      return (0, yB.hc)(TB).forEach(((BB, TB) => {
-        if ("string" === typeof BB || !(0, pB.d)(BB.icon)) return void(JB += "string" === typeof BB ? BB : BB.icon);
-        const yB = Math.max(0, JB.trimEnd().search(/\S{1,12}$/));
-        dB.push((0, lB.jsxs)(VB.Fragment, {
-          children: [JB.slice(0, yB), (0, lB.jsxs)("span", {
+        text: rY
+      } = YY;
+      const DY = [];
+      let OY = "";
+      return (0, AY.cc)(rY).forEach(((YY, rY) => {
+        if ("string" === typeof YY || !(0, IY.f)(YY.icon)) return void(OY += "string" === typeof YY ? YY : YY.icon);
+        const AY = Math.max(0, OY.trimEnd().search(/\S{1,12}$/));
+        DY.push((0, RY.jsxs)(FY.Fragment, {
+          children: [OY.slice(0, AY), (0, RY.jsxs)("span", {
             className: "InlineIconTextGlue",
-            children: [JB.slice(yB), (0, lB.jsx)("span", {
+            children: [OY.slice(AY), (0, RY.jsx)("span", {
               className: "InlineIconTextIcon",
               role: "img",
-              "aria-label": BB.icon,
-              children: (0, lB.jsx)(pB.c, {
-                itemName: BB.icon,
+              "aria-label": YY.icon,
+              children: (0, RY.jsx)(IY.c, {
+                itemName: YY.icon,
                 amount: 0
               })
             })]
           })]
-        }, TB)), JB = ""
-      })), dB.push(JB), (0, lB.jsx)(lB.Fragment, {
-        children: dB
+        }, rY)), OY = ""
+      })), DY.push(OY), (0, RY.jsx)(RY.Fragment, {
+        children: DY
       })
     }
   },
-  8570: (BB, TB, dB) => {
-    dB.d(TB, {
-      d: () => pB
+  8745: (YY, rY, DY) => {
+    DY.d(rY, {
+      d: () => IY
     });
-    var VB = dB(3948),
-      yB = dB(3951);
+    var FY = DY(4093),
+      AY = DY(4097);
 
-    function pB(BB) {
+    function IY(YY) {
       let {
-        children: TB,
-        showing: dB,
-        globallyUniqueKey: pB,
-        alwaysMountChildren: lB = !1,
-        doGameplayStartStopOnShow: JB = !0,
-        keepsMovement: YB = !1
-      } = BB;
-      return (0, yB.d)(!0, dB, pB, YB), (0, VB.e)(JB, dB), dB || lB ? TB : null
+        children: rY,
+        showing: DY,
+        globallyUniqueKey: IY,
+        alwaysMountChildren: RY = !1,
+        doGameplayStartStopOnShow: OY = !0,
+        keepsMovement: gY = !1
+      } = YY;
+      return (0, AY.b)(!0, DY, IY, gY), (0, FY.c)(OY, DY), DY || RY ? rY : null
     }
   },
-  4240: (BB, TB, dB) => {
-    dB.d(TB, {
-      e: () => cB,
-      f: () => IB
+  4419: (YY, rY, DY) => {
+    DY.d(rY, {
+      e: () => fY,
+      g: () => CY
     });
-    var VB = dB(4247),
-      yB = dB(270);
-    const pB = 120,
-      lB = 260,
-      JB = 1.15,
-      YB = 1.2,
-      gB = 2,
-      oB = 1.08,
-      kB = .8,
-      LB = .95,
-      OB = 8,
-      DB = "[\"')\\]\u300d\u300f\uff09]*",
-      uB = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${DB}$`),
-      HB = new RegExp(`[?\uff1f]${DB}$`),
-      EB = new RegExp(`[!\uff01]${DB}$`),
-      vB = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-      mB = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-      iB = new RegExp(`[${mB}]`),
-      NB = new RegExp(`[${mB}]|[^${mB}]+`, "g"),
-      tB = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+    var FY = DY(4422),
+      AY = DY(332);
+    const IY = 120,
+      RY = 260,
+      OY = 1.15,
+      gY = 1.2,
+      aY = 2,
+      vY = 1.08,
+      uY = .8,
+      sY = .95,
+      iY = 8,
+      yY = "[\"')\\]\u300d\u300f\uff09]*",
+      QY = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${yY}$`),
+      oY = new RegExp(`[?\uff1f]${yY}$`),
+      WY = new RegExp(`[!\uff01]${yY}$`),
+      EY = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+      mY = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+      VY = new RegExp(`[${mY}]`),
+      SY = new RegExp(`[${mY}]|[^${mY}]+`, "g"),
+      lY = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-    function fB(BB) {
-      let TB = 2166136261;
-      for (let dB = 0; dB < BB.length; dB++) TB ^= BB.charCodeAt(dB), TB = Math.imul(TB, 16777619);
-      return (TB >>> 0) / 4294967295 * 2 - 1
+    function TY(YY) {
+      let rY = 2166136261;
+      for (let DY = 0; DY < YY.length; DY++) rY ^= YY.charCodeAt(DY), rY = Math.imul(rY, 16777619);
+      return (rY >>> 0) / 4294967295 * 2 - 1
     }
 
-    function sB(BB) {
-      var TB;
-      if (iB.test(BB)) return 1;
-      const dB = BB.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-        VB = dB.replace(/[^0-9]/g, "");
-      if (VB.length > 0 && !/\p{L}/u.test(dB)) return Math.min(VB.length, 4);
-      const yB = null !== (TB = dB.match(tB)) && void 0 !== TB ? TB : [];
-      if (0 === yB.length) {
-        var pB, lB;
-        const BB = null !== (pB = null === (lB = dB.match(/\p{L}/gu)) || void 0 === lB ? void 0 : lB.length) && void 0 !== pB ? pB : 0;
-        return 0 === BB ? 0 : Math.min(Math.max(1, Math.round(BB / 2.5)), OB)
+    function eY(YY) {
+      var rY;
+      if (VY.test(YY)) return 1;
+      const DY = YY.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+        FY = DY.replace(/[^0-9]/g, "");
+      if (FY.length > 0 && !/\p{L}/u.test(DY)) return Math.min(FY.length, 4);
+      const AY = null !== (rY = DY.match(lY)) && void 0 !== rY ? rY : [];
+      if (0 === AY.length) {
+        var IY, RY;
+        const YY = null !== (IY = null === (RY = DY.match(/\p{L}/gu)) || void 0 === RY ? void 0 : RY.length) && void 0 !== IY ? IY : 0;
+        return 0 === YY ? 0 : Math.min(Math.max(1, Math.round(YY / 2.5)), iY)
       }
-      const JB = dB.replace(/[^\p{L}]/gu, ""),
-        YB = yB.length > 1 && "e" === yB.at(-1) && JB.endsWith("e") && !JB.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(BB.replace(/[^\p{L}]/gu, ""));
-      return Math.min(yB.length - (YB ? 1 : 0), OB)
+      const OY = DY.replace(/[^\p{L}]/gu, ""),
+        gY = AY.length > 1 && "e" === AY.at(-1) && OY.endsWith("e") && !OY.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(YY.replace(/[^\p{L}]/gu, ""));
+      return Math.min(AY.length - (gY ? 1 : 0), iY)
     }
 
-    function MB(BB) {
-      return BB.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+    function NY(YY) {
+      return YY.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
     }
 
-    function zB(BB) {
-      const TB = BB.replace(/[^\p{L}]/gu, "");
-      return TB.length >= 2 && TB === TB.toUpperCase() && TB !== TB.toLowerCase()
+    function BY(YY) {
+      const rY = YY.replace(/[^\p{L}]/gu, "");
+      return rY.length >= 2 && rY === rY.toUpperCase() && rY !== rY.toLowerCase()
     }
 
-    function wB(BB, TB) {
-      var dB;
-      const OB = TB && (0, VB.i)(TB),
-        DB = null !== (dB = null === OB || void 0 === OB ? void 0 : OB.syllableMs) && void 0 !== dB ? dB : VB.b,
-        mB = function(BB) {
-          const TB = [];
-          for (const VB of (0, yB.hc)(BB))
-            if ("string" === typeof VB)
-              for (const BB of VB.split(/(\s+)/)) {
-                if ("" === BB) continue;
-                if (/^\s+$/.test(BB)) {
-                  TB.push({
+    function cY(YY, rY) {
+      var DY;
+      const iY = rY && (0, FY.l)(rY),
+        yY = null !== (DY = null === iY || void 0 === iY ? void 0 : iY.syllableMs) && void 0 !== DY ? DY : FY.b,
+        mY = function(YY) {
+          const rY = [];
+          for (const FY of (0, AY.cc)(YY))
+            if ("string" === typeof FY)
+              for (const YY of FY.split(/(\s+)/)) {
+                if ("" === YY) continue;
+                if (/^\s+$/.test(YY)) {
+                  rY.push({
                     kind: "space",
-                    text: BB
+                    text: YY
                   });
                   continue
                 }
-                if (!iB.test(BB)) {
-                  TB.push({
+                if (!VY.test(YY)) {
+                  rY.push({
                     kind: "word",
-                    text: BB,
+                    text: YY,
                     delayMs: 0
                   });
                   continue
                 }
-                let VB = !0;
-                for (const yB of null !== (dB = BB.match(NB)) && void 0 !== dB ? dB : []) {
-                  var dB;
-                  const BB = TB.at(-1);
-                  VB || "word" !== (null === BB || void 0 === BB ? void 0 : BB.kind) || iB.test(yB) || /[\p{L}\p{N}]/u.test(yB) ? (VB || TB.push({
+                let FY = !0;
+                for (const AY of null !== (DY = YY.match(SY)) && void 0 !== DY ? DY : []) {
+                  var DY;
+                  const YY = rY.at(-1);
+                  FY || "word" !== (null === YY || void 0 === YY ? void 0 : YY.kind) || VY.test(AY) || /[\p{L}\p{N}]/u.test(AY) ? (FY || rY.push({
                     kind: "space",
                     text: "\u200b"
-                  }), TB.push({
+                  }), rY.push({
                     kind: "word",
-                    text: yB,
+                    text: AY,
                     delayMs: 0
-                  }), VB = !1) : BB.text += yB
+                  }), FY = !1) : YY.text += AY
                 }
-              } else TB.push({
+              } else rY.push({
                 kind: "icon",
-                text: VB.icon,
+                text: FY.icon,
                 delayMs: 0
               });
-          return TB
-        }(BB),
-        tB = [];
-      let wB = [];
-      for (const VB of mB) "space" !== VB.kind && (wB.push(VB), uB.test(VB.text) && (tB.push(wB), wB = []));
-      tB.push(wB);
-      const UB = [];
-      let FB = 0;
-      for (const VB of tB) {
-        var KB, rB;
-        const BB = null !== (KB = null === (rB = VB.at(-1)) || void 0 === rB ? void 0 : rB.text) && void 0 !== KB ? KB : "",
-          TB = HB.test(BB),
-          dB = EB.test(BB),
-          yB = VB.map((BB => "word" === BB.kind ? sB(BB.text) : 1)),
-          mB = yB.findLastIndex((BB => BB > 0));
-        for (const [HB, EB] of VB.entries()) {
-          const BB = "word" === EB.kind,
-            VB = yB[HB];
-          EB.delayMs = FB;
-          for (let yB = 0; OB && yB < VB; yB++) {
+          return rY
+        }(YY),
+        lY = [];
+      let cY = [];
+      for (const FY of mY) "space" !== FY.kind && (cY.push(FY), QY.test(FY.text) && (lY.push(cY), cY = []));
+      lY.push(cY);
+      const KY = [];
+      let HY = 0;
+      for (const FY of lY) {
+        var zY, ZY;
+        const YY = null !== (zY = null === (ZY = FY.at(-1)) || void 0 === ZY ? void 0 : ZY.text) && void 0 !== zY ? zY : "",
+          rY = oY.test(YY),
+          DY = WY.test(YY),
+          AY = FY.map((YY => "word" === YY.kind ? eY(YY.text) : 1)),
+          mY = AY.findLastIndex((YY => YY > 0));
+        for (const [oY, WY] of FY.entries()) {
+          const YY = "word" === WY.kind,
+            FY = AY[oY];
+          WY.delayMs = HY;
+          for (let AY = 0; iY && AY < FY; AY++) {
             const {
-              intonation: pB
-            } = OB;
-            let lB = mB > 0 ? -pB.declineSemitones * (HB / mB) : 0;
-            lB += fB(`${MB(EB.text)}|${yB}`) * pB.variationSemitones;
-            const uB = Math.min(1, pB.variationSemitones);
-            let vB = OB.glideSemitones,
-              iB = 1;
-            dB && (lB += pB.exclaimLiftSemitones, iB *= JB), TB && HB === mB && (lB += pB.questionRiseSemitones * (VB > 1 ? .5 + .5 * yB / (VB - 1) : 1), yB === VB - 1 && (vB = Math.abs(vB) + pB.questionRiseSemitones / 2)), BB && zB(EB.text) && (lB += gB * uB, iB *= YB), VB > 1 && 0 === yB && (lB += kB * uB, iB *= oB), UB.push({
-              atMs: FB + yB * DB,
-              semitones: lB,
-              glideSemitones: vB,
-              durationMs: yB < VB - 1 ? Math.min(OB.durationMs, DB * LB) : OB.durationMs,
-              level: iB
+              intonation: IY
+            } = iY;
+            let RY = mY > 0 ? -IY.declineSemitones * (oY / mY) : 0;
+            RY += TY(`${NY(WY.text)}|${AY}`) * IY.variationSemitones;
+            const QY = Math.min(1, IY.variationSemitones);
+            let EY = iY.glideSemitones,
+              VY = 1;
+            DY && (RY += IY.exclaimLiftSemitones, VY *= OY), rY && oY === mY && (RY += IY.questionRiseSemitones * (FY > 1 ? .5 + .5 * AY / (FY - 1) : 1), AY === FY - 1 && (EY = Math.abs(EY) + IY.questionRiseSemitones / 2)), YY && BY(WY.text) && (RY += aY * QY, VY *= gY), FY > 1 && 0 === AY && (RY += uY * QY, VY *= vY), KY.push({
+              atMs: HY + AY * yY,
+              semitones: RY,
+              glideSemitones: EY,
+              durationMs: AY < FY - 1 ? Math.min(iY.durationMs, yY * sY) : iY.durationMs,
+              level: VY
             })
           }
-          FB += VB * DB + (uB.test(EB.text) ? lB : vB.test(EB.text) ? pB : 0)
+          HY += FY * yY + (QY.test(WY.text) ? RY : EY.test(WY.text) ? IY : 0)
         }
       }
       return {
-        pieces: mB.map((BB => "space" === BB.kind ? BB : "icon" === BB.kind ? {
+        pieces: mY.map((YY => "space" === YY.kind ? YY : "icon" === YY.kind ? {
           kind: "icon",
-          icon: BB.text,
-          delayMs: BB.delayMs
+          icon: YY.text,
+          delayMs: YY.delayMs
         } : {
           kind: "word",
-          text: BB.text,
-          delayMs: BB.delayMs
+          text: YY.text,
+          delayMs: YY.delayMs
         })),
-        blips: UB
+        blips: KY
       }
     }
-    var UB = dB(1078),
-      FB = dB(1133),
-      KB = dB(1685);
+    var KY = DY(1211),
+      HY = DY(1256),
+      zY = DY(1816);
 
-    function rB(BB) {
-      if ("string" === typeof BB) return BB;
-      const TB = FB.f.get().getCurrentLanguageCode();
-      return (0, UB.r)(TB, BB.translationKey, (0, UB.o)(BB.params, KB.c.shown))
+    function ZY(YY) {
+      if ("string" === typeof YY) return YY;
+      const rY = HY.h.get().getCurrentLanguageCode();
+      return (0, KY.u)(rY, YY.translationKey, (0, KY.r)(YY.params, zY.e.shown))
     }
 
-    function IB(BB) {
-      const TB = void 0 === BB.voice ? null : (0, VB.j)(BB.voice),
-        dB = TB && (0, VB.i)(TB);
+    function CY(YY) {
+      const rY = void 0 === YY.voice ? null : (0, FY.m)(YY.voice),
+        DY = rY && (0, FY.l)(rY);
       return {
-        plan: wB(rB(BB.line), dB),
-        synth: dB
+        plan: cY(ZY(YY.line), DY),
+        synth: DY
       }
     }
 
-    function cB(BB) {
-      const TB = [];
-      let dB = [];
-      for (const [yB, pB] of BB.entries()) {
-        var VB;
-        "space" === pB.kind && (" " !== pB.text || "icon" !== (null === (VB = BB[yB + 1]) || void 0 === VB ? void 0 : VB.kind)) ? (dB.length > 0 && TB.push(dB), TB.push([pB]), dB = []) : dB.push(pB)
+    function fY(YY) {
+      const rY = [];
+      let DY = [];
+      for (const [AY, IY] of YY.entries()) {
+        var FY;
+        "space" === IY.kind && (" " !== IY.text || "icon" !== (null === (FY = YY[AY + 1]) || void 0 === FY ? void 0 : FY.kind)) ? (DY.length > 0 && rY.push(DY), rY.push([IY]), DY = []) : DY.push(IY)
       }
-      return dB.length > 0 && TB.push(dB), TB
+      return DY.length > 0 && rY.push(DY), rY
     }
   },
-  8103: (BB, TB, dB) => {
-    dB.d(TB, {
-      b: () => pB,
-      c: () => yB
+  8111: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => IY,
+      f: () => AY
     });
-    let VB = null;
-    const yB = function(BB) {
-        const TB = {
-          cycle: BB,
+    let FY = null;
+    const AY = function(YY) {
+        const rY = {
+          cycle: YY,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return VB = TB, () => {
-          VB === TB && (VB = null)
+        return FY = rY, () => {
+          FY === rY && (FY = null)
         }
       },
-      pB = () => {
-        var BB;
-        return null !== (BB = VB) && void 0 !== BB && BB.canCycle() ? VB.cycle : null
+      IY = () => {
+        var YY;
+        return null !== (YY = FY) && void 0 !== YY && YY.canCycle() ? FY.cycle : null
       }
   },
-  35601: (BB, TB, dB) => {
-    dB.d(TB, {
-      A: () => vB,
-      c: () => pB,
-      e: () => uB,
-      i: () => HB,
-      k: () => JB,
-      n: () => LB,
-      r: () => EB,
-      s: () => kB,
-      v: () => mB,
-      x: () => DB
+  36034: (YY, rY, DY) => {
+    DY.d(rY, {
+      C: () => EY,
+      e: () => IY,
+      i: () => QY,
+      l: () => oY,
+      n: () => OY,
+      r: () => sY,
+      t: () => WY,
+      v: () => uY,
+      x: () => mY,
+      y: () => yY
     });
-    var VB = dB(21),
-      yB = dB(24);
-    const pB = "clientGameInventoryButtonsChanged",
-      lB = new Map;
+    var FY = DY(19),
+      AY = DY(25);
+    const IY = "clientGameInventoryButtonsChanged",
+      RY = new Map;
 
-    function JB() {
-      return [...lB.values()].sort(((BB, TB) => {
-        var dB, VB;
-        return (null !== (dB = BB.order) && void 0 !== dB ? dB : 0) - (null !== (VB = TB.order) && void 0 !== VB ? VB : 0)
+    function OY() {
+      return [...RY.values()].sort(((YY, rY) => {
+        var DY, FY;
+        return (null !== (DY = YY.order) && void 0 !== DY ? DY : 0) - (null !== (FY = rY.order) && void 0 !== FY ? FY : 0)
       }))
     }
-    let YB = null;
+    let gY = null;
 
-    function gB(BB) {
-      YB = BB
+    function aY(YY) {
+      gY = YY
     }
-    let oB = !1;
+    let vY = !1;
 
-    function kB(BB) {
-      oB = !0;
+    function uY(YY) {
+      vY = !0;
       try {
-        BB.onClick()
+        YY.onClick()
       } finally {
-        oB = !1
+        vY = !1
       }
-      BB.panel && "clientGame" === VB.d.get("openInGameMenuName") && gB(BB.id)
+      YY.panel && "clientGame" === FY.b.get("openInGameMenuName") && aY(YY.id)
     }
 
-    function LB() {
-      return oB
+    function sY() {
+      return vY
     }
 
-    function OB() {
-      return JB().filter((BB => BB.panel && !BB.disabled))
+    function iY() {
+      return OY().filter((YY => YY.panel && !YY.disabled))
     }
 
-    function DB(BB) {
-      const TB = OB(),
-        dB = TB.findIndex((BB => BB.id === YB));
-      return !(dB < 0 || TB.length < 2) && (kB(TB[(dB + BB + TB.length) % TB.length]), !0)
+    function yY(YY) {
+      const rY = iY(),
+        DY = rY.findIndex((YY => YY.id === gY));
+      return !(DY < 0 || rY.length < 2) && (uY(rY[(DY + YY + rY.length) % rY.length]), !0)
     }
 
-    function uB() {
-      return null !== YB && OB().length > 1
+    function QY() {
+      return null !== gY && iY().length > 1
     }
 
-    function HB() {
-      gB(null)
+    function oY() {
+      aY(null)
     }
 
-    function EB() {
-      "inventory" !== VB.d.get("openInGameMenuName") && gB(null)
+    function WY() {
+      "inventory" !== FY.b.get("openInGameMenuName") && aY(null)
     }
 
-    function vB() {
-      const BB = YB;
-      return gB(null), BB
+    function EY() {
+      const YY = gY;
+      return aY(null), YY
     }
 
-    function mB(BB) {
-      return lB.set(BB.id, BB), yB.h.yH(pB, JB(), !0), () => {
-        lB.get(BB.id) === BB && (lB.delete(BB.id), yB.h.yH(pB, JB()))
+    function mY(YY) {
+      return RY.set(YY.id, YY), AY.g.vo(IY, OY(), !0), () => {
+        RY.get(YY.id) === YY && (RY.delete(YY.id), AY.g.vo(IY, OY()))
       }
     }
   },
-  35595: (BB, TB, dB) => {
-    dB.d(TB, {
-      c: () => JB,
-      g: () => HB,
-      h: () => EB,
-      j: () => LB,
-      k: () => gB,
-      o: () => uB,
-      p: () => OB,
-      r: () => oB
+  36032: (YY, rY, DY) => {
+    DY.d(rY, {
+      d: () => OY,
+      f: () => oY,
+      h: () => WY,
+      j: () => sY,
+      n: () => aY,
+      o: () => QY,
+      p: () => iY,
+      q: () => vY
     });
-    var VB = dB(21),
-      yB = dB(24),
-      pB = dB(1173),
-      lB = dB(35601);
-    const JB = "clientGameUiChanged";
-    let YB = null;
+    var FY = DY(19),
+      AY = DY(25),
+      IY = DY(1287),
+      RY = DY(36034);
+    const OY = "clientGameUiChanged";
+    let gY = null;
 
-    function gB() {
-      return YB
+    function aY() {
+      return gY
     }
 
-    function oB(BB, TB) {
-      const dB = {
-        content: BB,
-        menu: TB
+    function vY(YY, rY) {
+      const DY = {
+        content: YY,
+        menu: rY
       };
-      return YB = dB, yB.h.yH(JB, YB, !0), () => {
-        YB === dB && (YB = null, DB = !1, HB(), yB.h.yH(JB, null))
+      return gY = DY, AY.g.vo(OY, gY, !0), () => {
+        gY === DY && (gY = null, yY = !1, oY(), AY.g.vo(OY, null))
       }
     }
-    let kB = null;
+    let uY = null;
 
-    function LB() {
-      return kB
+    function sY() {
+      return uY
     }
 
-    function OB(BB) {
-      return kB = BB, () => {
-        kB === BB && (kB = null)
+    function iY(YY) {
+      return uY = YY, () => {
+        uY === YY && (uY = null)
       }
     }
-    let DB = !1;
+    let yY = !1;
 
-    function uB() {
-      const BB = VB.d.get("openInGameMenuName");
-      "clientGame" !== BB && (DB = "inventory" === BB), (0, lB.n)() || (0, lB.i)(), (0, pB.p)("InGameMenu"), VB.d.set({
+    function QY() {
+      const YY = FY.b.get("openInGameMenuName");
+      "clientGame" !== YY && (yY = "inventory" === YY), (0, RY.r)() || (0, RY.l)(), (0, IY.k)(IY.d), FY.b.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function HB() {
-      vB(!1)
+    function oY() {
+      EY(!1)
     }
 
-    function EB() {
-      vB(DB)
+    function WY() {
+      EY(yY)
     }
 
-    function vB(BB) {
-      "clientGame" === VB.d.get("openInGameMenuName") && VB.d.set({
-        openInGameMenuName: BB ? "inventory" : null
-      }), BB || (0, lB.i)(), DB = !1
+    function EY(YY) {
+      "clientGame" === FY.b.get("openInGameMenuName") && FY.b.set({
+        openInGameMenuName: YY ? "inventory" : null
+      }), YY || (0, RY.l)(), yY = !1
     }
   },
-  37463: (BB, TB, dB) => {
-    function VB(BB, TB, dB) {
-      const VB = new Set,
-        yB = new ResizeObserver(dB),
-        pB = () => {
-          const TB = new Set(document.querySelectorAll(BB));
-          let pB = !1;
-          for (const BB of VB) TB.has(BB) || (yB.unobserve(BB), VB.delete(BB), pB = !0);
-          for (const BB of TB) VB.has(BB) || (yB.observe(BB), lB.observe(BB, {
+  37888: (YY, rY, DY) => {
+    function FY(YY, rY, DY) {
+      const FY = new Set,
+        AY = new ResizeObserver(DY),
+        IY = () => {
+          const rY = new Set(document.querySelectorAll(YY));
+          let IY = !1;
+          for (const YY of FY) rY.has(YY) || (AY.unobserve(YY), FY.delete(YY), IY = !0);
+          for (const YY of rY) FY.has(YY) || (AY.observe(YY), RY.observe(YY, {
             attributes: !0,
             attributeFilter: ["class", "style"]
-          }), VB.add(BB));
-          pB && dB()
+          }), FY.add(YY));
+          IY && DY()
         },
-        lB = new MutationObserver((TB => {
-          TB.some((BB => "attributes" === BB.type)) && dB(), TB.some((TB => function(BB, TB, dB) {
-            if ("childList" !== BB.type) return !1;
-            for (const VB of BB.addedNodes)
-              if (VB instanceof Element && (VB.matches(TB) || VB.querySelector(TB))) return !0;
-            for (const VB of BB.removedNodes)
-              if (VB instanceof Element)
-                for (const BB of dB)
-                  if (VB.contains(BB)) return !0;
+        RY = new MutationObserver((rY => {
+          rY.some((YY => "attributes" === YY.type)) && DY(), rY.some((rY => function(YY, rY, DY) {
+            if ("childList" !== YY.type) return !1;
+            for (const FY of YY.addedNodes)
+              if (FY instanceof Element && (FY.matches(rY) || FY.querySelector(rY))) return !0;
+            for (const FY of YY.removedNodes)
+              if (FY instanceof Element)
+                for (const YY of DY)
+                  if (FY.contains(YY)) return !0;
             return !1
-          }(TB, BB, VB))) && pB()
+          }(rY, YY, FY))) && IY()
         }));
-      lB.observe(document.body, {
+      RY.observe(document.body, {
         childList: !0,
         subtree: !0
       });
-      for (const JB of TB) yB.observe(JB);
-      return window.addEventListener("resize", dB), pB(), dB(), () => {
-        yB.disconnect(), lB.disconnect(), window.removeEventListener("resize", dB)
+      for (const OY of rY) AY.observe(OY);
+      return window.addEventListener("resize", DY), IY(), DY(), () => {
+        AY.disconnect(), RY.disconnect(), window.removeEventListener("resize", DY)
       }
     }
-    dB.d(TB, {
-      d: () => VB
+    DY.d(rY, {
+      c: () => FY
     })
   },
-  8204: (BB, TB, dB) => {
-    dB.d(TB, {
-      c: () => JB,
-      f: () => YB
+  8287: (YY, rY, DY) => {
+    DY.d(rY, {
+      d: () => OY,
+      f: () => gY
     });
-    var VB = dB(21),
-      yB = dB(1209),
-      pB = dB(95);
-    const lB = {
+    var FY = DY(19),
+      AY = DY(1322),
+      IY = DY(99);
+    const RY = {
       blockMined: {
         pattern: [18],
         priority: 1,
@@ -634,350 +634,350 @@ export const modules = {
       }
     };
 
-    function JB() {
-      return (0, pB.isMobile)() && "function" === typeof navigator.vibrate
+    function OY() {
+      return (0, IY.isMobile)() && "function" === typeof navigator.vibrate
     }
-    const YB = new class {
-      constructor(BB) {
-        this.deps = BB, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
+    const gY = new class {
+      constructor(YY) {
+        this.deps = YY, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
       }
-      play(BB, TB) {
-        var dB;
+      play(YY, rY) {
+        var DY;
         if (!this.deps.enabled()) return;
-        const VB = lB[BB],
-          yB = null !== TB && void 0 !== TB ? TB : VB.pattern;
-        if (null === yB) return void console.warn("No vibration pattern for", BB);
-        const pB = this.deps.now();
-        pB - this.lastAnyAt < 40 && VB.priority < this.playingPriority || pB - (null !== (dB = this.lastAt.get(BB)) && void 0 !== dB ? dB : -1 / 0) < VB.minGapMs || pB < this.playingUntil && VB.priority < this.playingPriority || (this.lastAt.set(BB, pB), this.lastAnyAt = pB, this.playingUntil = pB + yB.reduce(((BB, TB) => BB + TB), 0), this.playingPriority = VB.priority, this.deps.vibrate(yB))
+        const FY = RY[YY],
+          AY = null !== rY && void 0 !== rY ? rY : FY.pattern;
+        if (null === AY) return void console.warn("No vibration pattern for", YY);
+        const IY = this.deps.now();
+        IY - this.lastAnyAt < 40 && FY.priority < this.playingPriority || IY - (null !== (DY = this.lastAt.get(YY)) && void 0 !== DY ? DY : -1 / 0) < FY.minGapMs || IY < this.playingUntil && FY.priority < this.playingPriority || (this.lastAt.set(YY, IY), this.lastAnyAt = IY, this.playingUntil = IY + AY.reduce(((YY, rY) => YY + rY), 0), this.playingPriority = FY.priority, this.deps.vibrate(AY))
       }
     }({
-      vibrate: BB => {
-        navigator.vibrate([...BB])
+      vibrate: YY => {
+        navigator.vibrate([...YY])
       },
       now: () => performance.now(),
-      enabled: () => JB() && VB.d.get("isTouchScreen") && VB.d.get("clientEscMenuOptions").vibration && !(0, yB.h)()
+      enabled: () => OY() && FY.b.get("isTouchScreen") && FY.b.get("clientEscMenuOptions").vibration && !(0, AY.d)()
     })
   },
-  36496: (BB, TB, dB) => {
-    dB.d(TB, {
-      d: () => JB,
-      h: () => lB
+  36896: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => OY,
+      f: () => RY
     });
-    var VB = dB(36491),
-      yB = dB(279),
-      pB = dB(1652);
+    var FY = DY(36894),
+      AY = DY(341),
+      IY = DY(1774);
 
-    function lB(BB) {
-      if ("Sy" in BB) return tB.createAnimationScript(BB);
-      return new gB(BB).createAnimationScript()
+    function RY(YY) {
+      if ("tF" in YY) return lY.createAnimationScript(YY);
+      return new aY(YY).createAnimationScript()
     }
 
-    function JB(BB, TB, dB, yB) {
-      const pB = BB.Sy <= 0 ? 1 : TB + dB * Math.max(0, yB) / BB.Sy;
-      return BB.Py === VB.n.LoopOnLastFrame ? pB % 1 : BB.Py === VB.n.NoLoop && pB >= 1 ? null : Math.min(1, pB)
+    function OY(YY, rY, DY, AY) {
+      const IY = YY.tF <= 0 ? 1 : rY + DY * Math.max(0, AY) / YY.tF;
+      return YY.YA === FY.l.LoopOnLastFrame ? IY % 1 : YY.YA === FY.l.NoLoop && IY >= 1 ? null : Math.min(1, IY)
     }
-    class YB {
-      createAnimationScript(BB) {
+    class gY {
+      createAnimationScript(YY) {
         const {
-          Sy: TB,
-          loop: dB,
-          Qy: VB
-        } = BB;
+          tF: rY,
+          loop: DY,
+          rA: FY
+        } = YY;
         return {
-          Sy: Math.round(TB),
-          Py: this.createLoopMode(null !== dB && void 0 !== dB && dB),
-          Qy: this.createNodeSkeletonAnimationScript(null !== VB && void 0 !== VB ? VB : null)
+          tF: Math.round(rY),
+          YA: this.createLoopMode(null !== DY && void 0 !== DY && DY),
+          rA: this.createNodeSkeletonAnimationScript(null !== FY && void 0 !== FY ? FY : null)
         }
       }
-      createLoopMode(BB) {
-        switch (BB) {
+      createLoopMode(YY) {
+        switch (YY) {
           case !1:
-            return VB.n.NoLoop;
+            return FY.l.NoLoop;
           case !0:
-            return VB.n.LoopOnLastFrame;
+            return FY.l.LoopOnLastFrame;
           case "hold-on-last-frame":
-            return VB.n.HoldOnLastFrame
+            return FY.l.HoldOnLastFrame
         }
-        throw new Error(`Invalid loop mode schema: ${BB}`)
+        throw new Error(`Invalid loop mode schema: ${YY}`)
       }
-      createNodeSkeletonAnimationScript(BB) {
-        if (null === BB) return null;
-        const TB = {};
-        for (const dB in BB) {
-          const VB = BB[dB];
-          TB[dB] = this.createNodeAnimationScript(VB)
+      createNodeSkeletonAnimationScript(YY) {
+        if (null === YY) return null;
+        const rY = {};
+        for (const DY in YY) {
+          const FY = YY[DY];
+          rY[DY] = this.createNodeAnimationScript(FY)
         }
-        return TB
+        return rY
       }
-      createNodeAnimationScript(BB) {
+      createNodeAnimationScript(YY) {
         const {
-          timeline: TB
-        } = BB, dB = TB.filter((BB => Number.isFinite(BB.timeFraction)));
-        return dB.sort(((BB, TB) => BB.timeFraction - TB.timeFraction)), {
-          rotation: this.createTimelineFromKeyframes(dB, "rotation", LB),
-          position: this.createTimelineFromKeyframes(dB, "position", DB)
+          timeline: rY
+        } = YY, DY = rY.filter((YY => Number.isFinite(YY.timeFraction)));
+        return DY.sort(((YY, rY) => YY.timeFraction - rY.timeFraction)), {
+          rotation: this.createTimelineFromKeyframes(DY, "rotation", sY),
+          position: this.createTimelineFromKeyframes(DY, "position", yY)
         }
       }
-      createTimelineFromKeyframes(BB, TB, dB) {
-        const VB = [];
-        for (const YB of BB) {
-          const BB = YB[TB];
-          if (BB) {
-            const TB = this.createAnimationFrameWithoutPrecomputes(YB.timeFraction, BB);
-            oB(TB) && VB.push(TB)
+      createTimelineFromKeyframes(YY, rY, DY) {
+        const FY = [];
+        for (const gY of YY) {
+          const YY = gY[rY];
+          if (YY) {
+            const rY = this.createAnimationFrameWithoutPrecomputes(gY.timeFraction, YY);
+            vY(rY) && FY.push(rY)
           }
         }
-        const yB = [];
-        for (let YB = 0; YB < VB.length; YB++) {
-          var pB, lB, JB;
-          const BB = VB[YB],
-            TB = null !== (pB = VB[YB - 1]) && void 0 !== pB ? pB : BB,
-            gB = null !== (lB = VB[YB + 1]) && void 0 !== lB ? lB : BB,
-            oB = null !== (JB = VB[YB + 2]) && void 0 !== JB ? JB : gB;
-          yB.push({
-            ...BB,
-            ...dB(TB.post, TB.timeFraction, BB.post, BB.timeFraction, gB.pre, gB.timeFraction, oB.pre, oB.timeFraction)
+        const AY = [];
+        for (let gY = 0; gY < FY.length; gY++) {
+          var IY, RY, OY;
+          const YY = FY[gY],
+            rY = null !== (IY = FY[gY - 1]) && void 0 !== IY ? IY : YY,
+            aY = null !== (RY = FY[gY + 1]) && void 0 !== RY ? RY : YY,
+            vY = null !== (OY = FY[gY + 2]) && void 0 !== OY ? OY : aY;
+          AY.push({
+            ...YY,
+            ...DY(rY.post, rY.timeFraction, YY.post, YY.timeFraction, aY.pre, aY.timeFraction, vY.pre, vY.timeFraction)
           })
         }
-        return yB
+        return AY
       }
-      createAnimationFrameWithoutPrecomputes(BB, TB) {
-        let dB, VB, yB = null;
-        var pB;
-        if ("object" === typeof TB && "point" in TB) yB = null !== (pB = TB.Xy) && void 0 !== pB ? pB : null, dB = TB.point, VB = TB.point;
-        else if ("object" === typeof TB && "pre" in TB) {
-          var lB;
-          yB = null !== (lB = TB.Xy) && void 0 !== lB ? lB : null, dB = TB.pre, VB = TB.post
-        } else dB = TB, VB = TB;
+      createAnimationFrameWithoutPrecomputes(YY, rY) {
+        let DY, FY, AY = null;
+        var IY;
+        if ("object" === typeof rY && "point" in rY) AY = null !== (IY = rY.AA) && void 0 !== IY ? IY : null, DY = rY.point, FY = rY.point;
+        else if ("object" === typeof rY && "pre" in rY) {
+          var RY;
+          AY = null !== (RY = rY.AA) && void 0 !== RY ? RY : null, DY = rY.pre, FY = rY.post
+        } else DY = rY, FY = rY;
         return {
-          timeFraction: BB,
-          Xy: this.createLerpMode(yB),
-          pre: dB,
-          post: VB
+          timeFraction: YY,
+          AA: this.createLerpMode(AY),
+          pre: DY,
+          post: FY
         }
       }
-      createLerpMode(BB) {
-        return null === BB ? VB.j.Linear : YB.LERP_MODE_SCHEMA_MAPPING[BB]
+      createLerpMode(YY) {
+        return null === YY ? FY.h.Linear : gY.LERP_MODE_SCHEMA_MAPPING[YY]
       }
     }
-    YB.LERP_MODE_SCHEMA_MAPPING = {
-      linear: VB.j.Linear,
-      "catmull-rom-spline": VB.j.CatmullRomSpline
+    gY.LERP_MODE_SCHEMA_MAPPING = {
+      linear: FY.h.Linear,
+      "catmull-rom-spline": FY.h.CatmullRomSpline
     };
-    class gB {
-      constructor(BB) {
-        this.animationSchema = BB
+    class aY {
+      constructor(YY) {
+        this.animationSchema = YY
       }
       createAnimationScript() {
         const {
-          animation_length: BB,
-          loop: TB,
-          bones: dB
+          animation_length: YY,
+          loop: rY,
+          bones: DY
         } = this.animationSchema;
         return {
-          Sy: Math.round(1e3 * BB),
-          Py: this.createLoopMode(null !== TB && void 0 !== TB && TB),
-          Qy: this.createNodeSkeletonAnimationScript(null !== dB && void 0 !== dB ? dB : null)
+          tF: Math.round(1e3 * YY),
+          YA: this.createLoopMode(null !== rY && void 0 !== rY && rY),
+          rA: this.createNodeSkeletonAnimationScript(null !== DY && void 0 !== DY ? DY : null)
         }
       }
-      createLoopMode(BB) {
-        switch (BB) {
+      createLoopMode(YY) {
+        switch (YY) {
           case !1:
-            return VB.n.NoLoop;
+            return FY.l.NoLoop;
           case !0:
-            return VB.n.LoopOnLastFrame;
+            return FY.l.LoopOnLastFrame;
           case "hold_on_last_frame":
-            return VB.n.HoldOnLastFrame
+            return FY.l.HoldOnLastFrame
         }
-        throw new Error(`Invalid Blockbench loop mode schema: ${BB}`)
+        throw new Error(`Invalid Blockbench loop mode schema: ${YY}`)
       }
-      createNodeSkeletonAnimationScript(BB) {
-        if (null === BB) return null;
-        const TB = {};
-        for (const dB in BB) {
-          const VB = BB[dB];
-          TB[dB] = this.createNodeAnimationScript(VB)
+      createNodeSkeletonAnimationScript(YY) {
+        if (null === YY) return null;
+        const rY = {};
+        for (const DY in YY) {
+          const FY = YY[DY];
+          rY[DY] = this.createNodeAnimationScript(FY)
         }
-        return TB
+        return rY
       }
-      createNodeAnimationScript(BB) {
+      createNodeAnimationScript(YY) {
         const {
-          rotation: TB,
-          position: dB
-        } = BB;
+          rotation: rY,
+          position: DY
+        } = YY;
         return {
-          rotation: this.createAnimationTimeline(null !== TB && void 0 !== TB ? TB : null, HB, LB, !0),
-          position: this.createAnimationTimeline(null !== dB && void 0 !== dB ? dB : null, vB, DB, !1)
+          rotation: this.createAnimationTimeline(null !== rY && void 0 !== rY ? rY : null, oY, sY, !0),
+          position: this.createAnimationTimeline(null !== DY && void 0 !== DY ? DY : null, EY, yY, !1)
         }
       }
-      createAnimationTimeline(BB, TB, dB, VB) {
-        if (null === BB) return [];
-        if (Array.isArray(BB)) {
-          BB = {
-            "0.0": BB
+      createAnimationTimeline(YY, rY, DY, FY) {
+        if (null === YY) return [];
+        if (Array.isArray(YY)) {
+          YY = {
+            "0.0": YY
           }
         }
-        const yB = Object.entries(BB).map((BB => {
-          let [dB, VB] = BB;
-          const yB = Number(dB) / this.animationSchema.animation_length;
-          return this.createAnimationFrameWithoutPrecomputes(yB, VB, TB)
-        })).filter(oB);
-        yB.sort(((BB, TB) => BB.timeFraction - TB.timeFraction)), VB && function(BB) {
-          for (let TB = 1; TB < BB.length; TB++) {
-            const dB = BB[TB - 1].post,
-              VB = BB[TB],
-              yB = mB(VB.pre),
-              pB = mB(VB.post),
-              lB = NB(dB, VB.pre);
-            NB(dB, yB) < lB && (BB[TB] = {
-              ...VB,
-              pre: yB,
-              post: pB
+        const AY = Object.entries(YY).map((YY => {
+          let [DY, FY] = YY;
+          const AY = Number(DY) / this.animationSchema.animation_length;
+          return this.createAnimationFrameWithoutPrecomputes(AY, FY, rY)
+        })).filter(vY);
+        AY.sort(((YY, rY) => YY.timeFraction - rY.timeFraction)), FY && function(YY) {
+          for (let rY = 1; rY < YY.length; rY++) {
+            const DY = YY[rY - 1].post,
+              FY = YY[rY],
+              AY = mY(FY.pre),
+              IY = mY(FY.post),
+              RY = SY(DY, FY.pre);
+            SY(DY, AY) < RY && (YY[rY] = {
+              ...FY,
+              pre: AY,
+              post: IY
             })
           }
-        }(yB);
-        const pB = [];
-        for (let gB = 0; gB < yB.length; gB++) {
-          var lB, JB, YB;
-          const BB = yB[gB],
-            TB = null !== (lB = yB[gB - 1]) && void 0 !== lB ? lB : BB,
-            VB = null !== (JB = yB[gB + 1]) && void 0 !== JB ? JB : BB,
-            oB = null !== (YB = yB[gB + 2]) && void 0 !== YB ? YB : VB;
-          pB.push({
-            ...BB,
-            ...dB(TB.post, TB.timeFraction, BB.post, BB.timeFraction, VB.pre, VB.timeFraction, oB.pre, oB.timeFraction)
+        }(AY);
+        const IY = [];
+        for (let aY = 0; aY < AY.length; aY++) {
+          var RY, OY, gY;
+          const YY = AY[aY],
+            rY = null !== (RY = AY[aY - 1]) && void 0 !== RY ? RY : YY,
+            FY = null !== (OY = AY[aY + 1]) && void 0 !== OY ? OY : YY,
+            vY = null !== (gY = AY[aY + 2]) && void 0 !== gY ? gY : FY;
+          IY.push({
+            ...YY,
+            ...DY(rY.post, rY.timeFraction, YY.post, YY.timeFraction, FY.pre, FY.timeFraction, vY.pre, vY.timeFraction)
           })
         }
-        return pB
+        return IY
       }
-      createAnimationFrameWithoutPrecomputes(BB, TB, dB) {
-        let VB, yB, pB = null;
-        if ("object" === typeof TB && "post" in TB) {
-          var lB;
-          pB = null !== (lB = TB.lerp_mode) && void 0 !== lB ? lB : null, yB = uB(TB.post, dB), VB = TB.pre ? uB(TB.pre, dB) : yB
+      createAnimationFrameWithoutPrecomputes(YY, rY, DY) {
+        let FY, AY, IY = null;
+        if ("object" === typeof rY && "post" in rY) {
+          var RY;
+          IY = null !== (RY = rY.lerp_mode) && void 0 !== RY ? RY : null, AY = QY(rY.post, DY), FY = rY.pre ? QY(rY.pre, DY) : AY
         } else {
-          const BB = uB(TB, dB);
-          yB = BB, VB = BB
+          const YY = QY(rY, DY);
+          AY = YY, FY = YY
         }
         return {
-          timeFraction: BB,
-          Xy: this.createLerpMode(pB),
-          pre: VB,
-          post: yB
+          timeFraction: YY,
+          AA: this.createLerpMode(IY),
+          pre: FY,
+          post: AY
         }
       }
-      createLerpMode(BB) {
-        return null === BB ? VB.j.Linear : gB.LERP_MODE_SCHEMA_MAPPING[BB]
+      createLerpMode(YY) {
+        return null === YY ? FY.h.Linear : aY.LERP_MODE_SCHEMA_MAPPING[YY]
       }
     }
 
-    function oB(BB) {
-      return Number.isFinite(BB.timeFraction) && kB(BB.pre) && kB(BB.post)
+    function vY(YY) {
+      return Number.isFinite(YY.timeFraction) && uY(YY.pre) && uY(YY.post)
     }
 
-    function kB(BB) {
-      return Number.isFinite(BB[0]) && Number.isFinite(BB[1]) && Number.isFinite(BB[2])
+    function uY(YY) {
+      return Number.isFinite(YY[0]) && Number.isFinite(YY[1]) && Number.isFinite(YY[2])
     }
 
-    function LB(BB, TB, dB, VB, yB, pB, lB, JB) {
-      const YB = pB - TB,
-        gB = pB - VB,
-        oB = JB - VB,
-        kB = [null, null, null];
-      for (let LB = 0; LB < kB.length; LB++) kB[LB] = OB(BB[LB], dB[LB], yB[LB], lB[LB], YB, oB);
+    function sY(YY, rY, DY, FY, AY, IY, RY, OY) {
+      const gY = IY - rY,
+        aY = IY - FY,
+        vY = OY - FY,
+        uY = [null, null, null];
+      for (let sY = 0; sY < uY.length; sY++) uY[sY] = iY(YY[sY], DY[sY], AY[sY], RY[sY], gY, vY);
       return {
-        Wy: gB,
-        hy: kB
+        IA: aY,
+        RA: uY
       }
     }
 
-    function OB(BB, TB, dB, VB, pB, lB) {
+    function iY(YY, rY, DY, FY, IY, RY) {
       return {
-        Gy: yB.e.computeShortestRotation(BB, dB) / pB,
-        qy: yB.e.computeShortestRotation(TB, VB) / lB,
-        delta: yB.e.computeShortestRotation(TB, dB)
+        gA: AY.c.computeShortestRotation(YY, DY) / IY,
+        aA: AY.c.computeShortestRotation(rY, FY) / RY,
+        delta: AY.c.computeShortestRotation(rY, DY)
       }
     }
 
-    function DB(BB, TB, dB, VB, yB, pB, lB, JB) {
-      const YB = pB - TB,
-        gB = pB - VB,
-        oB = JB - VB,
-        kB = [null, null, null];
-      for (let LB = 0; LB < kB.length; LB++) kB[LB] = {
-        Gy: (yB[LB] - BB[LB]) / YB,
-        qy: (lB[LB] - dB[LB]) / oB,
-        delta: yB[LB] - dB[LB]
+    function yY(YY, rY, DY, FY, AY, IY, RY, OY) {
+      const gY = IY - rY,
+        aY = IY - FY,
+        vY = OY - FY,
+        uY = [null, null, null];
+      for (let sY = 0; sY < uY.length; sY++) uY[sY] = {
+        gA: (AY[sY] - YY[sY]) / gY,
+        aA: (RY[sY] - DY[sY]) / vY,
+        delta: AY[sY] - DY[sY]
       };
       return {
-        Wy: gB,
-        hy: kB
+        IA: aY,
+        RA: uY
       }
     }
 
-    function uB(BB, TB) {
-      return null === TB ? BB : TB(BB)
+    function QY(YY, rY) {
+      return null === rY ? YY : rY(YY)
     }
 
-    function HB(BB) {
-      const [TB, dB, VB] = BB, lB = -(0, pB.j)(TB), JB = -(0, pB.j)(dB), YB = (0, pB.j)(VB), gB = yB.e.quaternionFromEulerZYX(lB, JB, YB);
-      return yB.e.eulerYXZFromQuaternion(gB)
+    function oY(YY) {
+      const [rY, DY, FY] = YY, RY = -(0, IY.q)(rY), OY = -(0, IY.q)(DY), gY = (0, IY.q)(FY), aY = AY.c.quaternionFromEulerZYX(RY, OY, gY);
+      return AY.c.eulerYXZFromQuaternion(aY)
     }
-    gB.LERP_MODE_SCHEMA_MAPPING = {
-      linear: VB.j.Linear,
-      catmullrom: VB.j.CatmullRomSpline
+    aY.LERP_MODE_SCHEMA_MAPPING = {
+      linear: FY.h.Linear,
+      catmullrom: FY.h.CatmullRomSpline
     };
-    const EB = 1 / 16;
+    const WY = 1 / 16;
 
-    function vB(BB) {
-      return [-BB[0] * EB, BB[1] * EB, BB[2] * EB]
+    function EY(YY) {
+      return [-YY[0] * WY, YY[1] * WY, YY[2] * WY]
     }
 
-    function mB(BB) {
-      const [TB, dB, VB] = BB;
-      return [TB >= 0 ? Math.PI - TB : -Math.PI - TB, iB(dB + Math.PI), iB(VB + Math.PI)]
+    function mY(YY) {
+      const [rY, DY, FY] = YY;
+      return [rY >= 0 ? Math.PI - rY : -Math.PI - rY, VY(DY + Math.PI), VY(FY + Math.PI)]
     }
 
-    function iB(BB) {
-      return yB.e.mod(BB + Math.PI, 2 * Math.PI) - Math.PI
+    function VY(YY) {
+      return AY.c.mod(YY + Math.PI, 2 * Math.PI) - Math.PI
     }
 
-    function NB(BB, TB) {
-      return Math.abs(yB.e.computeShortestRotation(BB[0], TB[0])) + Math.abs(yB.e.computeShortestRotation(BB[1], TB[1])) + Math.abs(yB.e.computeShortestRotation(BB[2], TB[2]))
+    function SY(YY, rY) {
+      return Math.abs(AY.c.computeShortestRotation(YY[0], rY[0])) + Math.abs(AY.c.computeShortestRotation(YY[1], rY[1])) + Math.abs(AY.c.computeShortestRotation(YY[2], rY[2]))
     }
-    const tB = new YB
+    const lY = new gY
   },
-  36491: (BB, TB, dB) => {
-    dB.d(TB, {
-      d: () => lB,
-      f: () => pB,
-      j: () => VB,
-      n: () => yB
+  36894: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => RY,
+      d: () => IY,
+      h: () => FY,
+      l: () => AY
     });
-    let VB = function(BB) {
-        return BB[BB.Linear = 0] = "Linear", BB[BB.CatmullRomSpline = 1] = "CatmullRomSpline", BB
+    let FY = function(YY) {
+        return YY[YY.Linear = 0] = "Linear", YY[YY.CatmullRomSpline = 1] = "CatmullRomSpline", YY
       }({}),
-      yB = function(BB) {
-        return BB[BB.NoLoop = 0] = "NoLoop", BB[BB.LoopOnLastFrame = 1] = "LoopOnLastFrame", BB[BB.HoldOnLastFrame = 2] = "HoldOnLastFrame", BB
+      AY = function(YY) {
+        return YY[YY.NoLoop = 0] = "NoLoop", YY[YY.LoopOnLastFrame = 1] = "LoopOnLastFrame", YY[YY.HoldOnLastFrame = 2] = "HoldOnLastFrame", YY
       }({}),
-      pB = function(BB) {
-        return BB[BB.Movement = 0] = "Movement", BB[BB.Action = 1] = "Action", BB[BB.Emote = 2] = "Emote", BB[BB.Custom = 3] = "Custom", BB
+      IY = function(YY) {
+        return YY[YY.Movement = 0] = "Movement", YY[YY.Action = 1] = "Action", YY[YY.Emote = 2] = "Emote", YY[YY.Custom = 3] = "Custom", YY
       }({}),
-      lB = function(BB) {
-        return BB[BB.Start = 0] = "Start", BB[BB.Stop = 1] = "Stop", BB
+      RY = function(YY) {
+        return YY[YY.Start = 0] = "Start", YY[YY.Stop = 1] = "Stop", YY
       }({})
   },
-  4247: (BB, TB, dB) => {
-    dB.d(TB, {
-      b: () => yB,
-      d: () => VB,
-      e: () => pB,
-      i: () => YB,
-      j: () => lB
+  4422: (YY, rY, DY) => {
+    DY.d(rY, {
+      b: () => AY,
+      e: () => FY,
+      i: () => IY,
+      l: () => gY,
+      m: () => RY
     });
-    const VB = ["sine", "triangle", "square", "sawtooth"],
-      yB = 55,
-      pB = {
+    const FY = ["sine", "triangle", "square", "sawtooth"],
+      AY = 55,
+      IY = {
         soft: {
           waveform: "sine",
           pitchHz: 300,
@@ -1116,39 +1116,39 @@ export const modules = {
         }
       };
 
-    function lB(BB) {
-      return "string" !== typeof BB ? BB : Object.hasOwn(pB, BB) ? pB[BB] : null
+    function RY(YY) {
+      return "string" !== typeof YY ? YY : Object.hasOwn(IY, YY) ? IY[YY] : null
     }
 
-    function JB(BB, TB, dB) {
-      return Math.min(dB, Math.max(TB, BB))
+    function OY(YY, rY, DY) {
+      return Math.min(DY, Math.max(rY, YY))
     }
 
-    function YB(BB) {
-      const TB = JB(BB.durationMs, 10, 500),
-        dB = JB(BB.attackMs, 0, TB),
+    function gY(YY) {
+      const rY = OY(YY.durationMs, 10, 500),
+        DY = OY(YY.attackMs, 0, rY),
         {
-          intonation: yB
-        } = BB;
+          intonation: AY
+        } = YY;
       return {
-        waveform: VB.includes(BB.waveform) ? BB.waveform : "sine",
-        pitchHz: JB(BB.pitchHz, 20, 4e3),
-        glideSemitones: JB(BB.glideSemitones, -24, 24),
-        durationMs: TB,
-        attackMs: dB,
-        releaseMs: JB(BB.releaseMs, 0, TB - dB),
-        lowpassHz: null === BB.lowpassHz ? null : JB(BB.lowpassHz, 20, 2e4),
-        volume: JB(BB.volume, 0, 2),
+        waveform: FY.includes(YY.waveform) ? YY.waveform : "sine",
+        pitchHz: OY(YY.pitchHz, 20, 4e3),
+        glideSemitones: OY(YY.glideSemitones, -24, 24),
+        durationMs: rY,
+        attackMs: DY,
+        releaseMs: OY(YY.releaseMs, 0, rY - DY),
+        lowpassHz: null === YY.lowpassHz ? null : OY(YY.lowpassHz, 20, 2e4),
+        volume: OY(YY.volume, 0, 2),
         intonation: {
-          variationSemitones: JB(yB.variationSemitones, 0, 6),
-          declineSemitones: JB(yB.declineSemitones, 0, 12),
-          questionRiseSemitones: JB(yB.questionRiseSemitones, 0, 12),
-          exclaimLiftSemitones: JB(yB.exclaimLiftSemitones, 0, 12)
+          variationSemitones: OY(AY.variationSemitones, 0, 6),
+          declineSemitones: OY(AY.declineSemitones, 0, 12),
+          questionRiseSemitones: OY(AY.questionRiseSemitones, 0, 12),
+          exclaimLiftSemitones: OY(AY.exclaimLiftSemitones, 0, 12)
         },
-        syllableMs: JB(BB.syllableMs, 25, 200)
+        syllableMs: OY(YY.syllableMs, 25, 200)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

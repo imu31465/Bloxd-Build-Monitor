@@ -1,41 +1,788 @@
 export const id = 191;
 export const ids = [191];
 export const modules = {
-  40268: (BB, TB, dB) => {
-    dB.r(TB), dB.d(TB, {
-      default: () => pB
+  36311: (YY, rY, DY) => {
+    DY.d(rY, {
+      e: () => SY,
+      i: () => VY
     });
-    var VB = dB(35308),
-      yB = dB.n(VB);
+    var FY = DY(3832),
+      AY = DY(1430),
+      IY = DY(61),
+      RY = DY(6041),
+      OY = DY(3823),
+      gY = DY(1287),
+      aY = DY(1808),
+      vY = DY(1778),
+      uY = DY(1437),
+      sY = DY(1211),
+      iY = DY(36314),
+      yY = DY(1092),
+      QY = DY.n(yY),
+      oY = DY(1314),
+      WY = DY(1098),
+      EY = DY(1284),
+      mY = DY(1125);
+    const VY = "SleepingOverlay";
 
-    function pB() {
-      return yB()('(()=>{var BB={16:(BB,TB,dB)=>{BB.exports=dB.p+"static/media/bloxd_wasm_bg.83d4d2ae0f6df4b285af.wasm"},22:(BB,TB,dB)=>{BB.exports=dB.p+"static/media/bloxd_wasm_textures_bg.1218b8b300c47f90e7ad.wasm"}},TB={};function dB(VB){var yB=TB[VB];if(void 0!==yB)return yB.exports;var pB=TB[VB]={exports:{}};return BB[VB](pB,pB.exports,dB),pB.exports}dB.m=BB,dB.d=(BB,TB)=>{for(var VB in TB)dB.o(TB,VB)&&!dB.o(BB,VB)&&Object.defineProperty(BB,VB,{enumerable:!0,get:TB[VB]})},dB.f={},dB.e=BB=>Promise.all(Object.keys(dB.f).reduce(((TB,VB)=>(dB.f[VB](BB,TB),TB)),[])),dB.u=BB=>"static/js/l9xvfg.wasmZstdDecoder.3bc057ed.chunk.worker.js",dB.o=(BB,TB)=>Object.prototype.hasOwnProperty.call(BB,TB),dB.r=BB=>{"undefined"!==typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(BB,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(BB,"__esModule",{value:!0})},dB.U=function(BB){var TB=new URL(BB,"x:/"),dB={};for(var VB in TB)dB[VB]=TB[VB];for(var VB in dB.href=BB,dB.pathname=BB.replace(/[?#].*/,""),dB.origin=dB.protocol="",dB.toString=dB.toJSON=()=>BB,dB)Object.defineProperty(this,VB,{enumerable:!0,configurable:!0,value:dB[VB]})},dB.U.prototype=URL.prototype,dB.p="/",(()=>{var BB={0:1};dB.f.i=(TB,VB)=>{BB[TB]||importScripts(dB.p+dB.u(TB))};var TB=self.webpackChunk_bloxd_web=self.webpackChunk_bloxd_web||[],VB=TB.push.bind(TB);TB.push=TB=>{var yB=TB[0],pB=TB[1],lB=TB[2];for(var JB in pB)dB.o(pB,JB)&&(dB.m[JB]=pB[JB]);for(lB&&lB(dB);yB.length;)BB[yB.pop()]=1;VB(TB)}})();var VB={};dB.r(VB),dB.d(VB,{eo:()=>pB,EnvelopeKind:()=>lB,Bk:()=>JB,PhysicsEngine:()=>YB,Tk:()=>gB,Vk:()=>oB,yk:()=>kB,lk:()=>LB,Jk:()=>OB,Yk:()=>DB,gk:()=>uB,kk:()=>HB,Lk:()=>EB,Ok:()=>vB,default:()=>MT,initSync:()=>sT,Dk:()=>mB,uk:()=>iB,Hk:()=>NB,Ek:()=>tB,vk:()=>fB,mk:()=>sB,ik:()=>MB,Nk:()=>zB,tk:()=>wB,fk:()=>UB,sk:()=>FB,Mk:()=>KB,zk:()=>rB,wk:()=>IB,Uk:()=>cB});var yB={};dB.r(yB),dB.d(yB,{BloxdWasmFetchError:()=>WT,BloxdWasmHttpError:()=>hT,BloxdWasmIntegrityError:()=>GT,BloxdWasmTimeoutError:()=>CT,PROMISE_HOOK_CODES:()=>aT,RETRY_DELAYS_MS:()=>jT,STALL_TIMEOUT_MS:()=>xT,WASM_HOOKS_ENFORCED:()=>ty,WasmBufferView:()=>sp,bloxdTextureWasmUrl:()=>ip,bloxdWasmCore:()=>Op,bloxdWasmDownloadHref:()=>dp,compileBloxdTextureWasm:()=>tp,compileBloxdWasmBrowser:()=>kp,describeBloxdWasmFailure:()=>Ad,fetchBytes:()=>id,getBloxdWasm:()=>bd,getBloxdWasmBuild:()=>nd,getBloxdWasmFailureReason:()=>jd,getBloxdWasmFailureStage:()=>Gd,getBloxdWasmFailureStatus:()=>xd,getBloxdWasmMemory:()=>dV,getBloxdWasmModule:()=>ed,getBloxdWasmStatus:()=>Cd,getBloxdWasmTamper:()=>hy,getLastBloxdWasmPanic:()=>BV,initBloxdWasmBrowser:()=>Dp,initBloxdWasmFromModule:()=>Hp,isBloxdWasmDownloadFailureRetryable:()=>yV,isBloxdWasmLoadUnstreamed:()=>Hd,isBloxdWasmReady:()=>hd,isEnforceableWasmReport:()=>Ky,isPromiseHookReport:()=>wy,isPunishedWasmReport:()=>ry,isRendererWasmReport:()=>my,isWeightedWasmReport:()=>My,loadBloxdWasmBrowser:()=>gp,markBloxdWasmFailed:()=>VV,onBloxdWasmFailed:()=>gV,onBloxdWasmMemoryGrown:()=>oV,takeBloxdWasmRefusedAllocation:()=>TV,textureLoadFailure:()=>mp,wasmMemoryControl:()=>vp,wasmView:()=>fp,watchBloxdRenderer:()=>vy});class pB{__destroy_into_raw(){const BB=this.__wbg_ptr;return this.__wbg_ptr=0,PB.unregister(this),BB}free(){const BB=this.__destroy_into_raw();NT.mHKB(BB,0)}Fk(){const BB=NT.sWkg(this.__wbg_ptr);if(BB[2])throw DT(BB[1]);return BB[0]>>>0}Kk(){return NT.WMqO(this.__wbg_ptr)>>>0}constructor(){const BB=NT.pq5v();return this.__wbg_ptr=BB,PB.register(this,this.__wbg_ptr,this),this}rk(){return NT.ZI30(this.__wbg_ptr)>>>0}Ik(BB){const TB=NT.iz9J(this.__wbg_ptr,BB);if(TB[2])throw DT(TB[1]);return TB[0]>>>0}Sk(BB){const TB=NT.T9oq(this.__wbg_ptr,BB);if(TB[2])throw DT(TB[1]);return TB[0]>>>0}}Symbol.dispose&&(pB.prototype[Symbol.dispose]=pB.prototype.free);const lB=Object.freeze({Js:0,0:"Js",Error:1,1:"Error",LeaveRoom:2,2:"LeaveRoom",RoomState:3,3:"RoomState",RoomStatePatch:4,4:"RoomStatePatch",RoomDataNone:5,5:"RoomDataNone",RoomDataBin:6,6:"RoomDataBin",RoomDataBytes:7,7:"RoomDataBytes",Ignored:8,8:"Ignored",StringType:16,16:"StringType"});class JB{__destroy_into_raw(){const BB=this.__wbg_ptr;return this.__wbg_ptr=0,QB.unregister(this),BB}free(){const BB=this.__destroy_into_raw();NT.UIrT(BB,0)}Rk(BB,TB){const dB=NT.nALF(this.__wbg_ptr,BB,TB);if(dB[2])throw DT(dB[1]);return dB[0]>>>0}ak(BB){const TB=NT.zOah(this.__wbg_ptr,BB);if(TB[2])throw DT(TB[1]);return TB[0]>>>0}Zk(){NT.sfkk(this.__wbg_ptr)}static Xk(){return NT.Sx74()>>>0}Wk(){return NT.OcJh(this.__wbg_ptr)>>>0}hk(){const BB=NT.GFEM(this.__wbg_ptr);return 0===BB[0]?void 0:BB[1]}Ck(){return NT.xvRs(this.__wbg_ptr)>>>0}Gk(){return NT.uEzX(this.__wbg_ptr)>>>0}static Qk(){return NT.S7Ni()>>>0}constructor(){const BB=NT.gT8u();return this.__wbg_ptr=BB,QB.register(this,this.__wbg_ptr,this),this}qk(){return NT.VuOL(this.__wbg_ptr)>>>0}xk(){return NT.w2eH(this.__wbg_ptr)>>>0}jk(){return NT.vj7t(this.__wbg_ptr)>>>0}Pk(BB){return NT.T2fq(this.__wbg_ptr,BB)>>>0}reserve(BB,TB){const dB=NT.HGEC(this.__wbg_ptr,BB,TB);if(dB[1])throw DT(dB[0])}nk(BB,TB){const dB=oT(BB,NT.hTqM),VB=tT;NT.GQiQ(this.__wbg_ptr,dB,VB,TB)}text(){let BB,TB;try{const dB=NT.h3D2(this.__wbg_ptr);return BB=dB[0],TB=dB[1],eB(dB[0],dB[1])}finally{NT.Bg8x(BB,TB,1)}}}Symbol.dispose&&(JB.prototype[Symbol.dispose]=JB.prototype.free);class YB{__destroy_into_raw(){const BB=this.__wbg_ptr;return this.__wbg_ptr=0,RB.unregister(this),BB}free(){const BB=this.__destroy_into_raw();NT.FOkj(BB,0)}TL(BB,TB){GB(TB,pB);const dB=NT.PKSN(this.__wbg_ptr,BB,TB.__wbg_ptr);if(dB[2])throw DT(dB[1]);return dB[0]>>>0}VL(){const BB=NT.oebK(this.__wbg_ptr);if(BB[1])throw DT(BB[0])}YL(BB,TB,dB,VB,yB,pB,lB,JB,YB,oB,kB){GB(BB,gB);const LB=NT.i1aP(this.__wbg_ptr,BB.__wbg_ptr,TB,dB,VB,yB,pB,lB,JB,YB,oB,kB);if(LB[2])throw DT(LB[1]);return LB[0]}gL(){const BB=NT.CNW0(this.__wbg_ptr);var TB=qB(BB[0],BB[1]).slice();return NT.Bg8x(BB[0],8*BB[1],8),TB}oL(){return NT.exuy(this.__wbg_ptr)>>>0}kL(){return NT.Wv5L(this.__wbg_ptr)>>>0}LL(){return NT.gpUB(this.__wbg_ptr)>>>0}constructor(BB,TB,dB,VB,yB,pB,lB,JB){const YB=NT.vUX7(BB,TB,dB,VB,yB,pB,lB,JB);if(YB[2])throw DT(YB[1]);return this.__wbg_ptr=YB[0],RB.register(this,this.__wbg_ptr,this),this}uL(BB){GB(BB,pB);const TB=NT.P6vQ(this.__wbg_ptr,BB.__wbg_ptr);if(TB[2])throw DT(TB[1]);return TB[0]>>>0}HL(BB){const TB=NT.WYkW(this.__wbg_ptr,BB);if(TB[1])throw DT(TB[0])}EL(){return NT.ZTfj(this.__wbg_ptr)>>>0}resume(BB,TB){GB(BB,gB),GB(TB,pB);const dB=NT.FPyh(this.__wbg_ptr,BB.__wbg_ptr,TB.__wbg_ptr);if(dB[2])throw DT(dB[1]);return dB[0]>>>0}tL(BB){const TB=NT.WBli(this.__wbg_ptr,BB);if(TB[1])throw DT(TB[0])}ML(BB,TB){GB(TB,pB);const dB=NT.SFAM(this.__wbg_ptr,BB,TB.__wbg_ptr);if(dB[1])throw DT(dB[0])}UL(BB){const TB=LT(BB,NT.hTqM),dB=tT,VB=NT.U9Fu(this.__wbg_ptr,TB,dB);if(VB[1])throw DT(VB[0])}pL(BB,TB,dB,VB,yB,pB){const lB=NT.Zw2F(this.__wbg_ptr,BB,TB,dB,VB,yB,pB);if(lB[1])throw DT(lB[0])}lL(BB,TB,dB,VB){const yB=oT(BB,NT.hTqM),pB=tT,lB=LT(TB,NT.hTqM),JB=tT,YB=LT(dB,NT.hTqM),gB=tT,oB=LT(VB,NT.hTqM),kB=tT,LB=NT.YZxl(this.__wbg_ptr,yB,pB,lB,JB,YB,gB,oB,kB);if(LB[1])throw DT(LB[0])}KL(BB,TB){GB(TB,pB);const dB=NT.Nsff(this.__wbg_ptr,BB,TB.__wbg_ptr);if(dB[1])throw DT(dB[0])}DL(BB,TB,dB){const VB=NT.NkS4(this.__wbg_ptr,BB,TB,dB);if(VB[1])throw DT(VB[0])}IL(BB,TB,dB,VB,yB,pB,lB,JB,YB,oB){GB(BB,gB);return NT.T4dZ(this.__wbg_ptr,BB.__wbg_ptr,TB,dB,VB,yB,pB,lB,JB,YB,oB)}}Symbol.dispose&&(YB.prototype[Symbol.dispose]=YB.prototype.free);class gB{static __wrap(BB){const TB=Object.create(gB.prototype);return TB.__wbg_ptr=BB,aB.register(TB,TB.__wbg_ptr,TB),TB}__destroy_into_raw(){const BB=this.__wbg_ptr;return this.__wbg_ptr=0,aB.unregister(this),BB}free(){const BB=this.__destroy_into_raw();NT.Mekz(BB,0)}PL(BB){const TB=NT.q9gF(this.__wbg_ptr,BB);if(TB[2])throw DT(TB[1]);return TB[0]>>>0}QL(BB,TB,dB){return NT.SyAt(this.__wbg_ptr,BB,TB,dB)}RL(BB,TB,dB){return NT.WGMD(this.__wbg_ptr,BB,TB,dB)>>>0}aL(BB,TB,dB,VB){return 0!==NT.jGDg(this.__wbg_ptr,BB,TB,dB,VB)}ZL(){NT.hBMd(this.__wbg_ptr)}WL(BB){const TB=NT.yxuK(this.__wbg_ptr,BB);if(TB[3])throw DT(TB[2]);var dB=jB(TB[0],TB[1]).slice();return NT.Bg8x(TB[0],1*TB[1],1),dB}evict(BB,TB){return NT.tX4a(this.__wbg_ptr,BB,TB)>>>0}hL(){NT.AenT(this.__wbg_ptr)}CL(BB,TB,dB){NT.oMk0(this.__wbg_ptr,BB,TB,dB)}qL(BB){const TB=NT.LfLu(this.__wbg_ptr,BB);if(TB[1])throw DT(TB[0])}xL(){return NT.tcqA(this.__wbg_ptr)>>>0}jL(){return NT.WWKW(this.__wbg_ptr)>>>0}AL(BB,TB,dB){NT.woUI(this.__wbg_ptr,BB,TB,dB)}bL(BB,TB,dB){NT.ZbEr(this.__wbg_ptr,BB,TB,dB)}nL(){return NT.Kx3Z(this.__wbg_ptr)>>>0}eL(){return NT.LVwN(this.__wbg_ptr)>>>0}constructor(){const BB=NT.qXd1();return this.__wbg_ptr=BB,aB.register(this,this.__wbg_ptr,this),this}static BO(){const BB=NT.o9Jd();return gB.__wrap(BB)}dO(){return NT.GtiM(this.__wbg_ptr)>>>0}VO(){return NT.DqqM(this.__wbg_ptr)>>>0}yO(BB,TB,dB,VB){const yB=NT.mbBT(this.__wbg_ptr,BB,TB,dB,VB);if(yB[1])throw DT(yB[0])}pO(){return NT.aPAt(this.__wbg_ptr)>>>0}lO(){return NT.Tr52(this.__wbg_ptr)>>>0}JO(BB,TB,dB,VB){NT.L4Dv(this.__wbg_ptr,BB,TB,dB,VB)}YO(BB){NT.TBHF(this.__wbg_ptr,BB)}oO(BB,TB,dB,VB,yB){const pB=kT(TB,NT.hTqM),lB=tT,JB=oT(dB,NT.hTqM),YB=tT,gB=LT(VB,NT.hTqM),oB=tT,kB=NT.ho5I(this.__wbg_ptr,BB,pB,lB,JB,YB,gB,oB,yB);if(kB[1])throw DT(kB[0])}gO(BB,TB,dB,VB){const yB=kT(BB,NT.hTqM),pB=tT,lB=oT(TB,NT.hTqM),JB=tT,YB=LT(dB,NT.hTqM),gB=tT,oB=kT(VB,NT.hTqM),kB=tT,LB=NT.YQiZ(this.__wbg_ptr,yB,pB,lB,JB,YB,gB,oB,kB);if(LB[1])throw DT(LB[0])}HO(BB){const TB=kT(BB,NT.hTqM),dB=tT,VB=NT.zyQE(this.__wbg_ptr,TB,dB);if(VB[1])throw DT(VB[0])}EO(){return NT.S9a5(this.__wbg_ptr)>>>0}vO(BB){const TB=NT.ekc0(this.__wbg_ptr,BB);if(TB[2])throw DT(TB[1]);return TB[0]>>>0}steer(){return NT.xW45(this.__wbg_ptr)>>>0}mO(){const BB=NT.I9dQ(this.__wbg_ptr);var TB=qB(BB[0],BB[1]).slice();return NT.Bg8x(BB[0],8*BB[1],8),TB}iO(){return NT.Qx59(this.__wbg_ptr)>>>0}mL(){const BB=NT.gARt(this.__wbg_ptr);var TB,dB,VB=(TB=BB[0],dB=BB[1],TB>>>=0,(null!==nB&&0!==nB.byteLength||(nB=new Int32Array(NT.memory.buffer)),nB).subarray(TB/4,TB/4+dB)).slice();return NT.Bg8x(BB[0],4*BB[1],4),VB}}Symbol.dispose&&(gB.prototype[Symbol.dispose]=gB.prototype.free);class oB{__destroy_into_raw(){const BB=this.__wbg_ptr;return this.__wbg_ptr=0,ZB.unregister(this),BB}free(){const BB=this.__destroy_into_raw();NT.HvIW(BB,0)}tO(BB){const TB=oT(BB,NT.hTqM),dB=tT,VB=NT.VFyw(this.__wbg_ptr,TB,dB);if(VB[1])throw DT(VB[0])}fO(){return NT.ymtw(this.__wbg_ptr)>>>0}sO(){return NT.hTBy(this.__wbg_ptr)>>>0}constructor(){const BB=NT.e2b8();return this.__wbg_ptr=BB,ZB.register(this,this.__wbg_ptr,this),this}run(BB,TB){GB(BB,gB);const dB=NT.CzS5(this.__wbg_ptr,BB.__wbg_ptr,TB);if(dB[2])throw DT(dB[1]);return dB[0]>>>0}MO(BB){const TB=oT(BB,NT.hTqM),dB=tT;NT.zudT(this.__wbg_ptr,TB,dB)}zO(BB){const TB=oT(BB,NT.hTqM),dB=tT;NT.dJro(this.__wbg_ptr,TB,dB)}}Symbol.dispose&&(oB.prototype[Symbol.dispose]=oB.prototype.free);class kB{__destroy_into_raw(){const BB=this.__wbg_ptr;return this.__wbg_ptr=0,XB.unregister(this),BB}free(){const BB=this.__destroy_into_raw();NT.QulG(BB,0)}UO(BB,TB){const dB=kT(BB,NT.hTqM),VB=tT;return NT.dVMu(this.__wbg_ptr,dB,VB,TB)>>>0}FO(BB,TB,dB){GB(BB,gB);const VB=kT(dB,NT.hTqM),yB=tT,pB=NT.DTCy(this.__wbg_ptr,BB.__wbg_ptr,TB,VB,yB);if(pB[2])throw DT(pB[1]);return pB[0]>>>0}wO(BB){return NT.TIhB(this.__wbg_ptr,BB)>>>0}constructor(){const BB=NT.v8w2();return this.__wbg_ptr=BB,XB.register(this,this.__wbg_ptr,this),this}scan(BB,TB){GB(BB,gB);const dB=NT.sXd0(this.__wbg_ptr,BB.__wbg_ptr,TB);if(dB[2])throw DT(dB[1]);return dB[0]>>>0}IO(BB){const TB=kT(BB,NT.hTqM),dB=tT;NT.I2iH(this.__wbg_ptr,TB,dB)}rO(){return NT.mLSx(this.__wbg_ptr)>>>0}KO(){return NT.QIOu(this.__wbg_ptr)>>>0}}Symbol.dispose&&(kB.prototype[Symbol.dispose]=kB.prototype.free);class LB{__destroy_into_raw(){const BB=this.__wbg_ptr;return this.__wbg_ptr=0,WB.unregister(this),BB}free(){const BB=this.__destroy_into_raw();NT.plSl(BB,0)}SO(BB){const TB=NT.d8Ye(this.__wbg_ptr,BB);if(TB[2])throw DT(TB[1]);return TB[0]>>>0}compute(BB,TB,dB,VB){var yB=YT(VB)?0:OT(VB,NT.hTqM,NT.ZG5t),pB=tT;const lB=NT.UGai(this.__wbg_ptr,BB,YT(TB)?Number.MAX_SAFE_INTEGER:TB|0,dB,yB,pB);if(lB[2])throw DT(lB[1]);return lB[0]>>>0}QO(BB){const TB=OT(BB,NT.hTqM,NT.ZG5t),dB=tT;NT.ndet(this.__wbg_ptr,TB,dB)}aO(){return NT.dhV9(this.__wbg_ptr)}ZO(BB){return NT.A4OC(this.__wbg_ptr,BB)>>>0}XO(){return NT.oBDq(this.__wbg_ptr)>>>0}WO(){return NT.PS49(this.__wbg_ptr)>>>0}hO(BB,TB){const dB=NT.eLe6(this.__wbg_ptr,BB,TB);if(dB[1])throw DT(dB[0])}CO(){return NT.qBCa(this.__wbg_ptr)>>>0}GO(){return NT.QU8L(this.__wbg_ptr)>>>0}qO(){return NT.lzVs(this.__wbg_ptr)>>>0}PO(BB,TB,dB){const VB=oT(BB,NT.hTqM),yB=tT,pB=oT(TB,NT.hTqM),lB=tT,JB=NT.kttQ(this.__wbg_ptr,VB,yB,pB,lB,dB);if(JB[1])throw DT(JB[0])}jO(){return NT.dKdx(this.__wbg_ptr)>>>0}mesh(BB,TB,dB,VB,yB){const pB=NT.BKiM(this.__wbg_ptr,BB,TB,dB,VB,yB);if(pB[2])throw DT(pB[1]);return pB[0]>>>0}constructor(BB,TB,dB,VB,yB,pB,lB,JB,YB,gB,oB,kB,LB,OB,DB,uB,HB,EB,vB,mB){const iB=gT(BB,NT.hTqM),NB=tT,tB=LT(TB,NT.hTqM),fB=tT,sB=oT(dB,NT.hTqM),MB=tT,zB=kT(VB,NT.hTqM),wB=tT,UB=kT(yB,NT.hTqM),FB=tT,KB=oT(pB,NT.hTqM),rB=tT,IB=oT(lB,NT.hTqM),cB=tT,SB=LT(JB,NT.hTqM),PB=tT,QB=LT(YB,NT.hTqM),RB=tT,aB=kT(gB,NT.hTqM),ZB=tT;var XB=YT(oB)?0:gT(oB,NT.hTqM),hB=tT;const CB=oT(kB,NT.hTqM),GB=tT,qB=kT(LB,NT.hTqM),xB=tT;var jB=YT(OB)?0:kT(OB,NT.hTqM),AB=tT;const bB=LT(DB,NT.hTqM),nB=tT,eB=NT.wjAm(iB,NB,tB,fB,sB,MB,zB,wB,UB,FB,KB,rB,IB,cB,SB,PB,QB,RB,aB,ZB,XB,hB,CB,GB,qB,xB,jB,AB,bB,nB,uB,HB,EB,vB,mB);if(eB[2])throw DT(eB[1]);return this.__wbg_ptr=eB[0],WB.register(this,this.__wbg_ptr,this),this}xO(BB,TB){const dB=oT(BB,NT.hTqM),VB=tT,yB=NT.rVWX(this.__wbg_ptr,dB,VB,TB);if(yB[3])throw DT(yB[2]);var pB=jB(yB[0],yB[1]).slice();return NT.Bg8x(yB[0],1*yB[1],1),pB}bO(BB){NT.yCPn(this.__wbg_ptr,YT(BB)?16777215:BB)}nO(BB){return NT.wdvW(this.__wbg_ptr,BB)>>>0}BD(){return NT.oOFC(this.__wbg_ptr)>>>0}eO(){const BB=NT.Z01O(this.__wbg_ptr);if(BB[2])throw DT(BB[1]);return 0!==BB[0]}TD(){return NT.vkgX(this.__wbg_ptr)>>>0}dD(){return NT.TvfV(this.__wbg_ptr)>>>0}}Symbol.dispose&&(LB.prototype[Symbol.dispose]=LB.prototype.free);class OB{__destroy_into_raw(){const BB=this.__wbg_ptr;return this.__wbg_ptr=0,hB.unregister(this),BB}free(){const BB=this.__destroy_into_raw();NT.U09M(BB,0)}compute(BB,TB,dB,VB){var yB=YT(VB)?0:OT(VB,NT.hTqM,NT.ZG5t),pB=tT;const lB=NT.kiOs(this.__wbg_ptr,BB,YT(TB)?Number.MAX_SAFE_INTEGER:TB|0,dB,yB,pB);if(lB[2])throw DT(lB[1]);return lB[0]>>>0}QO(BB){const TB=OT(BB,NT.hTqM,NT.ZG5t),dB=tT;NT.JDul(this.__wbg_ptr,TB,dB)}GO(){return NT.PjRA(this.__wbg_ptr)>>>0}qO(){return NT.te9D(this.__wbg_ptr)>>>0}VD(BB){const TB=NT.bte3(this.__wbg_ptr,BB);if(TB[2])throw DT(TB[1]);return TB[0]>>>0}constructor(BB,TB,dB,VB,yB,pB){const lB=gT(BB,NT.hTqM),JB=tT,YB=LT(TB,NT.hTqM),gB=tT,oB=oT(dB,NT.hTqM),kB=tT,LB=kT(VB,NT.hTqM),OB=tT,DB=NT.vnXH(lB,JB,YB,gB,oB,kB,LB,OB,yB,pB);if(DB[2])throw DT(DB[1]);return this.__wbg_ptr=DB[0],hB.register(this,this.__wbg_ptr,this),this}BD(){return NT.NVzn(this.__wbg_ptr)>>>0}eO(){const BB=NT.F7vM(this.__wbg_ptr);if(BB[2])throw DT(BB[1]);return 0!==BB[0]}TD(){return NT.mAAE(this.__wbg_ptr)>>>0}}function DB(){const BB=NT.dYYN();var TB=xB(BB[0],BB[1]).slice();return NT.Bg8x(BB[0],4*BB[1],4),TB}function uB(BB,TB){let dB,VB;try{const yB=gT(BB,NT.hTqM),pB=tT,lB=OT(TB,NT.hTqM,NT.ZG5t),JB=tT,YB=NT.XWFP(yB,pB,lB,JB);return dB=YB[0],VB=YB[1],eB(YB[0],YB[1])}finally{NT.Bg8x(dB,VB,1)}}function HB(){const BB=NT.oh9j();var TB=xB(BB[0],BB[1]).slice();return NT.Bg8x(BB[0],4*BB[1],4),TB}function EB(BB){return 0!==NT.drZv(BB)}function vB(BB,TB){const dB=OT(BB,NT.hTqM,NT.ZG5t),VB=tT,yB=NT.UfqU(dB,VB,TB);if(yB[1])throw DT(yB[0])}function mB(){NT.ckOG()}function iB(){return NT.QZKp()>>>0}function NB(BB){return 0!==NT.RVIA(BB)}function tB(BB){return 0!==NT.R6Pt(BB)}function fB(BB){NT.kmmR(BB)}function sB(){return NT.egNP()>>>0}function MB(){return NT.kew6()>>>0}function zB(){return 0!==NT.BGuw()}function wB(){const BB=NT.fN9M();var TB=xB(BB[0],BB[1]).slice();return NT.Bg8x(BB[0],4*BB[1],4),TB}function UB(){const BB=NT.X0AN();var TB=xB(BB[0],BB[1]).slice();return NT.Bg8x(BB[0],4*BB[1],4),TB}function FB(){const BB=NT.ZSBl();var TB=xB(BB[0],BB[1]).slice();return NT.Bg8x(BB[0],4*BB[1],4),TB}function KB(){return NT.tdPp()>>>0}function rB(){NT.LTQK()}function IB(){let BB,TB;try{const dB=NT.xZUQ();return BB=dB[0],TB=dB[1],eB(dB[0],dB[1])}finally{NT.Bg8x(BB,TB,1)}}function cB(BB){NT.Xh7o(CB(BB))}function SB(){return{__proto__:null,h3dK:{__proto__:null,k4aZ:function(BB,TB){return CB(Error(eB(BB,TB)))},kGv4:function(BB,TB){throw new Error(eB(BB,TB))},JmI5:function(BB){pT(BB).call()},BBwt:function(BB,TB){console.error(eB(BB,TB))},K970:function(){return performance.now()},KWa1:function(BB){DT(BB)}}}}Symbol.dispose&&(OB.prototype[Symbol.dispose]=OB.prototype.free);const PB="undefined"===typeof FinalizationRegistry?{register:()=>{},unregister:()=>{}}:new FinalizationRegistry((BB=>NT.mHKB(BB,1))),QB="undefined"===typeof FinalizationRegistry?{register:()=>{},unregister:()=>{}}:new FinalizationRegistry((BB=>NT.UIrT(BB,1))),RB="undefined"===typeof FinalizationRegistry?{register:()=>{},unregister:()=>{}}:new FinalizationRegistry((BB=>NT.FOkj(BB,1))),aB="undefined"===typeof FinalizationRegistry?{register:()=>{},unregister:()=>{}}:new FinalizationRegistry((BB=>NT.Mekz(BB,1))),ZB="undefined"===typeof FinalizationRegistry?{register:()=>{},unregister:()=>{}}:new FinalizationRegistry((BB=>NT.HvIW(BB,1))),XB="undefined"===typeof FinalizationRegistry?{register:()=>{},unregister:()=>{}}:new FinalizationRegistry((BB=>NT.QulG(BB,1))),WB="undefined"===typeof FinalizationRegistry?{register:()=>{},unregister:()=>{}}:new FinalizationRegistry((BB=>NT.plSl(BB,1))),hB="undefined"===typeof FinalizationRegistry?{register:()=>{},unregister:()=>{}}:new FinalizationRegistry((BB=>NT.U09M(BB,1)));function CB(BB){JT===lT.length&&lT.push(lT.length+1);const TB=JT;return JT=lT[TB],lT[TB]=BB,TB}function GB(BB,TB){if(!(BB instanceof TB))throw new Error(`expected instance of ${TB.name}`)}function qB(BB,TB){return BB>>>=0,bB().subarray(BB/8,BB/8+TB)}function xB(BB,TB){return BB>>>=0,dT().subarray(BB/4,BB/4+TB)}function jB(BB,TB){return BB>>>=0,yT().subarray(BB/1,BB/1+TB)}let AB=null;function bB(){return null!==AB&&0!==AB.byteLength||(AB=new Float64Array(NT.memory.buffer)),AB}let nB=null;function eB(BB,TB){return function(BB,TB){ET+=TB,ET>=HT&&(uT=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0}),uT.decode(),ET=TB);return uT.decode(yT().subarray(BB,BB+TB))}(BB>>>0,TB)}let BT=null;let TT=null;function dT(){return null!==TT&&0!==TT.byteLength||(TT=new Uint32Array(NT.memory.buffer)),TT}let VT=null;function yT(){return null!==VT&&0!==VT.byteLength||(VT=new Uint8Array(NT.memory.buffer)),VT}function pT(BB){return lT[BB]}let lT=new Array(1024).fill(void 0);lT.push(void 0,null,!0,!1);let JT=lT.length;function YT(BB){return void 0===BB||null===BB}function gT(BB,TB){const dB=TB(2*BB.length,2)>>>0;return(null!==BT&&0!==BT.byteLength||(BT=new Uint16Array(NT.memory.buffer)),BT).set(BB,dB/2),tT=BB.length,dB}function oT(BB,TB){const dB=TB(4*BB.length,4)>>>0;return dT().set(BB,dB/4),tT=BB.length,dB}function kT(BB,TB){const dB=TB(1*BB.length,1)>>>0;return yT().set(BB,dB/1),tT=BB.length,dB}function LT(BB,TB){const dB=TB(8*BB.length,8)>>>0;return bB().set(BB,dB/8),tT=BB.length,dB}function OT(BB,TB,dB){if(void 0===dB){const dB=vT.encode(BB),VB=TB(dB.length,1)>>>0;return yT().subarray(VB,VB+dB.length).set(dB),tT=dB.length,VB}let VB=BB.length,yB=TB(VB,1)>>>0;const pB=yT();let lB=0;for(;lB<VB;lB++){const TB=BB.charCodeAt(lB);if(TB>127)break;pB[yB+lB]=TB}if(lB!==VB){0!==lB&&(BB=BB.slice(lB)),yB=dB(yB,VB,VB=lB+3*BB.length,1)>>>0;const TB=yT().subarray(yB+lB,yB+VB);lB+=vT.encodeInto(BB,TB).written,yB=dB(yB,VB,lB,1)>>>0}return tT=lB,yB}function DT(BB){const TB=pT(BB);return function(BB){BB<1028||(lT[BB]=JT,JT=BB)}(BB),TB}let uT=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0});uT.decode();const HT=2146435072;let ET=0;const vT=new TextEncoder;"encodeInto"in vT||(vT.encodeInto=function(BB,TB){const dB=vT.encode(BB);return TB.set(dB),{read:BB.length,written:dB.length}});let mT,iT,NT,tT=0;function fT(BB,TB){return iT=BB,NT=BB.exports,mT=TB,AB=null,nB=null,BT=null,TT=null,VT=null,NT.ZCFe(),NT}function sT(BB){if(void 0!==NT)return NT;void 0!==BB&&(Object.getPrototypeOf(BB)===Object.prototype?({module:BB}=BB):console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));const TB=SB();BB instanceof WebAssembly.Module||(BB=new WebAssembly.Module(BB));return fT(new WebAssembly.Instance(BB,TB),BB)}async function MT(BB){if(void 0!==NT)return NT;void 0!==BB&&(Object.getPrototypeOf(BB)===Object.prototype?({module_or_path:BB}=BB):console.warn("using deprecated parameters for the initialization function; pass a single object instead"));const TB=SB();("string"===typeof BB||"function"===typeof Request&&BB instanceof Request||"function"===typeof URL&&BB instanceof URL)&&(BB=fetch(BB));const{instance:dB,module:VB}=await async function(BB,TB){if("function"===typeof Response&&BB instanceof Response){if(!BB.ok)throw new Error(`failed to fetch Wasm: ${BB.status} ${BB.statusText} fetching \'${BB.url}\'`);if("function"===typeof WebAssembly.instantiateStreaming)try{return await WebAssembly.instantiateStreaming(BB,TB)}catch(dB){if(!function(BB){switch(BB){case"basic":case"cors":case"default":return!0}return!1}(BB.type)||"application/wasm"===BB.headers.get("Content-Type"))throw dB;console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\\n",dB)}const VB=await BB.arrayBuffer();return await WebAssembly.instantiate(VB,TB)}{const dB=await WebAssembly.instantiate(BB,TB);return dB instanceof WebAssembly.Instance?{instance:dB,module:BB}:dB}}(await BB,TB);return fT(dB,VB)}const zT=Reflect.apply,wT=Object.getOwnPropertyDescriptor,UT=Object.getPrototypeOf,FT=Promise,KT=Object.getPrototypeOf((async()=>{})()).then;function rT(BB){return new FT(BB)}function IT(BB,TB,dB){let VB;try{zT(KT,BB,[TB,dB]),VB=!0}catch{VB=!1}VB||BB.then(TB,dB)}function cT(BB,TB){const dB=wT(BB,TB);return dB?.get?zT(dB.get,BB,[]):dB?.value}const ST="undefined"===typeof WebAssembly?void 0:WebAssembly.Module.prototype,PT="undefined"===typeof WebAssembly?void 0:WebAssembly.Instance.prototype,QT=[["to",Object.prototype,"then",!0],["ta",ArrayBuffer.prototype,"then",!0],["tm",ST,"then",!0],["ti",PT,"then",!0],["pt",Promise.prototype,"then",!1],["pk",Promise.prototype,"constructor",!1],["pg",globalThis,"Promise",!1],["pr",Promise,"race",!1],["pa",Promise,"all",!1]],RT=QT.map((BB=>{let[,TB,dB,VB]=BB;if(void 0!==TB)return VB?UT(TB):cT(TB,dB)})),aT=QT.map((BB=>{let[TB]=BB;return`wh:${TB}`}));function ZT(){for(let BB=0;BB<QT.length;BB++){const[TB,dB,VB,yB]=QT[BB];let pB;try{pB=void 0===dB||(yB?void 0===wT(dB,VB)&&UT(dB)===RT[BB]:cT(dB,VB)===RT[BB])}catch{pB=!1}if(!pB)return`wh:${TB}`}return null}let XT=null;class WT extends Error{retryable;constructor(BB,TB,dB){super(BB,dB),this.retryable=TB}}class hT extends WT{status;constructor(BB,TB){super(BB,TB>=500),this.status=TB}}class CT extends WT{}class GT extends Error{}function qT(BB){return BB instanceof GT?"integrity":BB instanceof CT?"timeout":BB instanceof WT?"fetch":"compile"}const xT=15e3,jT=[1e3,3e3],AT=globalThis.crypto?.subtle,bT=AT?.digest,nT=!0===globalThis.isSecureContext,eT=Reflect.apply,Bd=Object.defineProperty,Td="undefined"===typeof Response?void 0:Response.prototype.arrayBuffer,dd=Object.getOwnPropertyDescriptor(ArrayBuffer.prototype,"byteLength").get,Vd="undefined"===typeof Response?void 0:Response.prototype.clone,yd="undefined"===typeof Response?void 0:Object.getOwnPropertyDescriptor(Response.prototype,"body")?.get,pd="undefined"===typeof Response?void 0:Object.getOwnPropertyDescriptor(Response.prototype,"type")?.get,ld="undefined"===typeof ReadableStream?void 0:ReadableStream.prototype.getReader,Jd="undefined"===typeof ReadableStreamDefaultReader?void 0:ReadableStreamDefaultReader.prototype.read,Yd=Uint8Array.prototype.set,gd=Uint8Array,od="undefined"===typeof fetch?void 0:fetch,kd="undefined"===typeof WebAssembly?void 0:WebAssembly,Ld=kd?.compile,Od=kd?.compileStreaming,Dd=Array.from({length:256},((BB,TB)=>TB.toString(16).padStart(2,"0"))),ud=new Set;function Hd(BB){return ud.has(BB.href)}async function Ed(BB,TB,dB){if(XT??=ZT(),!AT&&!nT)return;let VB="";try{const BB=await eT(bT,AT,["SHA-256",TB]),dB=eT(dd,BB,[]),yB=new gd(BB);for(let TB=0;TB<dB;TB++)VB+=Dd[yB[TB]]}catch{}if(VB!==dB.sha256)throw VB&&dB.onMismatch(),new GT(VB?`${BB} is not the module this build ships`:`${BB} could not be hashed`)}function vd(BB,TB){let{hideThen:dB=!1,priority:VB}=arguments.length>2&&void 0!==arguments[2]?arguments[2]:{};const yB={useLoadedFetch:!1};return Nd((()=>td(BB.href,((pB,lB,JB)=>async function(BB,TB,dB,VB,yB,pB,lB,JB){let YB,gB,oB,kB;try{const dB=void 0===JB?{signal:TB}:{signal:TB,priority:JB};YB=await(pB.useLoadedFetch&&od?eT(od,globalThis,[BB,dB]):fetch(BB,dB))}catch(NB){throw wd(`Fetching ${BB} failed`,NB,TB)}try{gB=YB.ok,oB=YB.status,kB=YB.headers.get("Content-Type")}catch(NB){throw pB.useLoadedFetch=!0,wd(`Reading ${BB}\'s response failed`,NB,TB)}if(!gB)throw new hT(`Fetching ${BB} failed: HTTP ${oB}`,oB);dB();const LB=zd(YB),OB=null!==LB,DB=OB&&void 0!==yB&&function(BB){return void 0!==pd&&"default"===eT(pd,BB,[])}(YB),uB="application/wasm"===kB?.trim().toLowerCase(),HB=OB&&!DB&&uB,EB=HB&&(!lB||function(BB){try{return md(BB),!0}catch{return!1}}(YB)),vB=LB??function(BB){try{const TB=BB.clone();return eT(yd,TB,[]),TB}catch{return null}}(YB),mB=EB&&void 0!==yB?sd(fd(zd(YB),!0)):null;vB?function(BB,TB,dB){const VB=yd?eT(yd,BB,[]):BB.body;if(!VB)return void dB();const yB=ld?eT(ld,VB,[]):VB.getReader(),pB=()=>{IT(Jd?eT(Jd,yB,[]):yB.read(),(BB=>{BB.done?dB():(TB(),pB())}),dB)};pB()}(vB,dB,VB):VB();if(!EB){const dB=DB&&uB;let VB;dB?console.warn(`${BB} came in a constructed Response, not a fetched one, so it compiles without streaming`):HB?console.warn(`${BB} came in a Response that takes no own properties, so it compiles without streaming`):OB&&console.warn(`${BB} was served as ${kB}, not application/wasm, so it compiles without streaming`);try{VB=function(BB){const TB=new gd(eT(dd,BB,[]));return eT(Yd,TB,[new gd(BB)]),TB}(await fd(YB,OB))}catch(NB){throw OB||(pB.useLoadedFetch=!0),wd(`Downloading ${BB} failed`,NB,TB)}const lB=await function(BB){return eT(Ld,kd,[BB])}(VB);return void 0!==yB&&await Ed(BB,VB,yB),dB&&ud.add(BB),lB}let iB;try{iB=await Md(YB)}catch(NB){if(TB.aborted||NB instanceof TypeError)throw wd(`Downloading ${BB} failed`,NB,TB);throw NB}if(mB&&void 0!==yB){let dB;try{dB=new gd(await mB)}catch(NB){throw wd(`Downloading ${BB} failed: its copy for checking broke off`,NB,TB)}await Ed(BB,dB,yB)}return iB}(BB.href,pB,lB,JB,TB,yB,dB,VB)))))}function md(BB){return Bd(BB,"then",{__proto__:null,value:void 0}),BB}function id(BB){let{spare:TB=0,priority:dB="auto"}=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{};const VB="string"===typeof BB?BB:BB.href;return Nd((()=>td(VB,((BB,yB,pB)=>async function(BB,TB,dB,VB,yB,pB){let lB;try{lB=await fetch(BB,{signal:TB,priority:pB})}catch(gB){throw wd(`Fetching ${BB} failed`,gB,TB)}if(!lB.ok)throw new hT(`Fetching ${BB} failed: HTTP ${lB.status}`,lB.status);if(dB(),null===lB.body){let dB;VB();try{dB=await lB.arrayBuffer()}catch(gB){throw wd(`Downloading ${BB} failed`,gB,TB)}const pB=new Uint8Array(yB+dB.byteLength);return pB.set(new Uint8Array(dB),yB),pB}const JB=lB.body.getReader(),YB=[];for(;;){let pB;try{pB=await JB.read()}catch(gB){throw wd(`Downloading ${BB} failed`,gB,TB)}if(pB.done)return VB(),Ud(YB,yB);YB.push(pB.value),dB()}}(VB,BB,yB,pB,TB,dB)))))}async function Nd(BB){for(let dB=0;;dB++)try{return await BB()}catch(TB){const BB=jT[dB];if(!(TB instanceof WT)||!TB.retryable||void 0===BB)throw TB;console.warn(`${TB.message}, retrying in ${BB/1e3} s`),await rT((TB=>{setTimeout(TB,BB)}))}}async function td(BB,TB){const dB=new AbortController;let VB,yB=()=>{};const pB=rT(((BB,TB)=>{yB=TB})),lB=()=>{clearTimeout(VB),VB=setTimeout((()=>{yB(new CT(`Downloading ${BB} stalled: nothing arrived for ${xT/1e3} s`,!0)),dB.abort()}),xT)},JB=()=>{clearTimeout(VB)};lB();try{return await(YB=[TB(dB.signal,lB,JB),pB],rT(((BB,TB)=>{for(let dB=0;dB<YB.length;dB++)IT(YB[dB],BB,TB)})))}finally{clearTimeout(VB)}var YB}function fd(BB,TB){return TB&&Td?eT(Td,BB,[]):BB.arrayBuffer()}function sd(BB){return IT(BB,(()=>{}),(()=>{})),BB}function Md(BB){return eT(Od,kd,[BB])}function zd(BB){if(!Vd)return BB.clone();try{return eT(Vd,BB,[])}catch{return null}}function wd(BB,TB,dB){return dB.aborted?TB:new WT(`${BB}: ${TB instanceof Error?TB.message:String(TB)}`,!0,{cause:TB})}function Ud(BB){let TB=arguments.length>1&&void 0!==arguments[1]?arguments[1]:0,dB=TB;for(const pB of BB)dB+=pB.length;const VB=new Uint8Array(dB);let yB=TB;for(const pB of BB)VB.set(pB,yB),yB+=pB.length;return VB}let Fd="unloaded",Kd=null,rd=null,Id=null,cd=null;const Sd=new Set,Pd=new Set;let Qd=!1,Rd=null,ad=null,Zd=null,Xd=!1,Wd=0;function hd(){return"ready"===Fd}function Cd(){return Fd}function Gd(){return Kd}const qd={fetch:"fetch_failed",timeout:"fetch_failed",integrity:"fetch_failed",compile:"compile_failed",instantiate:"instantiate_failed",call:"call_failed"};function xd(){return null===Kd?null:qd[Kd]}function jd(){return rd}function Ad(){return null===Kd?"not failed":`${Kd}: ${(BB=rd)instanceof Error?`${BB.name}: ${BB.message}`:String(BB)}`;var BB}function bd(){if(!hd())throw new Error(`Bloxd wasm is not ready (${Cd()}): check isBloxdWasmReady() first`);return Rd}function nd(){return hd()?ad:null}function ed(){return hd()?Id:null}function BV(){return Zd}function TV(){if(!cd||0===Wd)return 0;const BB=new Uint32Array(cd.buffer,Wd,1),TB=BB[0]??0;return BB[0]=0,TB}function dV(){if(!cd)throw new Error("Bloxd wasm has not been instantiated");return cd}function VV(BB){"failed"!==Fd&&JV(BB,"call")}function yV(){return rd instanceof WT&&rd.retryable}function pV(){return"unloaded"===Fd&&(Fd="loading",!0)}function lV(BB,TB,dB,VB){ad=BB,Rd=TB,Id=dB,cd=VB.memory;const{Mk:yB}=TB;Wd="function"===typeof yB?yB():0,Fd="ready",function(){if(Xd)return;Xd=!0;const BB=console.error;console.error=function(){for(var TB=arguments.length,dB=new Array(TB),VB=0;VB<TB;VB++)dB[VB]=arguments[VB];const[yB]=dB;"string"===typeof yB&&yB.startsWith("panicked at")&&(Zd=yB,TV()),BB.apply(console,dB)}}()}function JV(BB,TB){Fd="failed",Kd=TB,rd=BB,console.error(`Bloxd wasm failed (${TB}):`,BB);const dB=[...Sd];Sd.clear();for(const VB of dB)YV(VB)}function YV(BB){try{BB()}catch(TB){console.error("A Bloxd wasm failure listener threw:",TB)}}function gV(BB){return"failed"===Fd?(YV(BB),()=>{}):(Sd.add(BB),()=>{Sd.delete(BB)})}function oV(BB){return Qd||(bd(),Rd.Uk(kV),Qd=!0),Pd.add(BB),()=>{Pd.delete(BB)}}function kV(){const BB=dV().buffer;for(const dB of Pd)try{dB(BB)}catch(TB){console.error("A Bloxd wasm memory growth listener threw:",TB)}}const LV={bloxd_wasm:()=>"6a2efd5680223ac4664cc3045620a185da94b2f4e06849c44e38e480fc80e38a",bloxd_wasm_client:()=>"607784131ab158c610f964eeccd0a0852f74d8ce3d4f4aee969d2f319a80e3b6",bloxd_wasm_workers:()=>"d5276c08ec0e736252a42b7c12c1091036eec7cc17105f167a56c574e34a0505",bloxd_wasm_models:()=>"92f9285c30a7dd1629d525045b29e9aca6c3d567d620b4834fec4760fd172ddc",bloxd_wasm_webgpu:()=>"ed656d46a24419edcd62f7bc46fd9a190039bf0f388edff699daa513cf32f6d2",bloxd_wasm_webgl:()=>"52116128612eeabf26c6510c105a72c4a8c70bb8b756449209899fb860a93f15",bloxd_wasm_webgl1:()=>"3697a90b61a47ddbbdceb28b1c9caaf73e71aabf414852b8293dc48cb3f6a6a8",bloxd_wasm_replay:()=>"5464460b78e15b4bb176525399accbb59f863e7383feb54312b177c696166e48",bloxd_wasm_recorder:()=>"e1fdcb56336c3bc38215a981e4378ac3821b8912419bc7fd948eb1da353324ba",bloxd_wasm_anim:()=>"74e56eee078a428190364a7d35938aac7810b6b32140848c6b994c19e70e3042",bloxd_wasm_textures:()=>"4b25ea5144f7ce6b7af54af6beda3d49671ed61aae27771d204b13971136dce5",bloxd_wasm_shader_pack:()=>"4746bfad07ac1f13f98ece970e8e224d9432f9561a8a4390c6f598c4e17052f5"},OV=Function.prototype.toString,DV=RegExp.prototype.exec,uV=Reflect.apply,HV=Function.prototype.call,EV=Function.prototype.apply,vV=Function.prototype.bind,mV=Object.defineProperty,iV=Uint8Array;let NV,tV;try{NV=globalThis.crypto,tV=void 0===NV||null===NV?void 0:NV.getRandomValues}catch{}const fV="bloxdBindApply";let sV;try{const BB=HV;mV(BB,fV,{__proto__:null,value:vV,configurable:!0});try{sV=BB[fV](EV)}finally{delete BB[fV]}}catch{}const MV=16,zV=256,wV=0,UV=1,FV=2,KV=3;let rV,IV=wV,cV=uV,SV=0;function PV(BB,TB){return BB===`function ${TB}() { [native code] }`||BB===`function ${TB}() {\\n    [native code]\\n}`}const QV=0,RV=1,aV=2;let ZV=QV;function XV(BB,TB,dB){if(ZV===aV&&IV===UV&&!function(){const BB=rV;return SV>=zV&&(cV(tV,NV,[BB]),SV=0),BB[SV++]<256/MV}())return function(BB,TB,dB){return cV(BB,TB,dB??0)}(...arguments);if(ZV===QV||IV===FV)return uV(BB,TB,dB);let VB;ZV=QV;try{IV===wV&&(IV=KV,IV=function(){const BB=uV(OV,uV,[]);if(PV(BB,"apply"))return FV;if(null===uV(DV,/\\(\\.\\.\\.arguments\\)/,[BB])&&null===uV(DV,/^function\\s*\\(\\.\\.\\.[\\w$]+\\)/,[BB]))return FV;if("function"!==typeof sV||"function"!==typeof HV||"function"!==typeof EV||"function"!==typeof vV||"function"!==typeof mV||"function"!==typeof tV||"function"!==typeof iV||!PV(uV(OV,HV,[]),"call")||!PV(uV(OV,EV,[]),"apply")||!PV(uV(OV,vV,[]),"bind")||!PV(uV(OV,mV,[]),"defineProperty")||!PV(uV(OV,tV,[]),"getRandomValues")||!PV(uV(OV,iV,[]),"Uint8Array"))return FV;const TB=sV,dB={},VB=function(BB){return this===dB&&BB===dB};try{if(!0!==TB(VB,dB,[dB]))return FV;const BB=new iV(zV);TB(tV,NV,[BB]),rV=BB}catch{return FV}return cV=TB,UV}()),VB=uV(BB,TB,dB)}catch(yB){throw IV=FV,yB}return ZV=aV,VB}let WV=uV;function hV(){return(WV===uV?0:3)+ZV}function CV(){const BB=hV();return WV=uV,BB}function GV(BB){WV=BB>=3?XV:uV,ZV=BB%3}const qV=Function.prototype.toString,xV=Object.getOwnPropertyDescriptor,jV=RegExp.prototype.exec,AV=Object.prototype.hasOwnProperty,bV=Set.prototype.has,nV=Reflect.get,eV=Object.getPrototypeOf,By="undefined"===typeof WebAssembly?void 0:WebAssembly;function Ty(BB,TB,dB){return{code:BB,holder:TB,key:dB,...arguments.length>3&&void 0!==arguments[3]?arguments[3]:{},native:new RegExp(`^function (get )?${dB}\\\\(\\\\) \\\\{\\\\s*\\\\[native code\\\\]\\\\s*\\\\}$`)}}function dy(){return By}const Vy=By?.Instance.prototype,yy=By?.Memory.prototype;function py(){return yy}let ly,Jy;try{const BB=globalThis.crypto,TB=BB?.subtle;ly=BB?eV(BB):void 0,Jy=TB?eV(TB):void 0}catch{}const Yy=[Ty("in",dy,"instantiate",{tier:"weighted",onNamespace:!0}),Ty("is",dy,"instantiateStreaming",{tier:"weighted",onNamespace:!0}),Ty("co",dy,"compile",{tier:"weighted",onNamespace:!0}),Ty("cs",dy,"compileStreaming",{tier:"weighted",onNamespace:!0}),Ty("mo",dy,"Module",{isConstructor:!0,tier:"punished",onNamespace:!0}),Ty("it",dy,"Instance",{isConstructor:!0,tier:"punished",onNamespace:!0}),Ty("me",dy,"Memory",{isConstructor:!0,tier:"punished",onNamespace:!0}),Ty("ex",(function(){return Vy}),"exports",{isGetter:!0,tier:"punished"}),Ty("bu",py,"buffer",{isGetter:!0,tier:"punished"}),Ty("gr",py,"grow",{tier:"punished"}),Ty("rc",(function(){return"undefined"===typeof Response?void 0:Response.prototype}),"clone"),Ty("cr",(function(){return globalThis}),"crypto",{isGetter:!0,tier:"punished",inSecureContext:!0}),Ty("su",(function(){return ly}),"subtle",{isGetter:!0,tier:"punished",inSecureContext:!0}),Ty("dg",(function(){return Jy}),"digest",{tier:"punished",inSecureContext:!0})];function gy(BB){let TB;try{const dB=nV(globalThis,BB);TB="function"===typeof dB?dB.prototype:void 0}catch{}return()=>TB}function oy(BB,TB,dB){return dB.map((dB=>Ty(BB,TB,dB)))}const ky=Ty("rx",gy("HTMLCanvasElement"),"getContext"),Ly=["createShader","shaderSource","compileShader","createProgram","linkProgram","useProgram","drawArrays","drawElements","depthFunc","depthMask","enable","disable","blendFuncSeparate","colorMask"],Oy={webgpu:[...oy("gd",gy("GPUDevice"),["createShaderModule","createRenderPipeline","createCommandEncoder"]),...oy("gq",gy("GPUQueue"),["submit","writeBuffer"]),...oy("ge",gy("GPUCommandEncoder"),["beginRenderPass","finish"]),...oy("gp",gy("GPURenderPassEncoder"),["setPipeline","setBindGroup","draw","drawIndexed","drawIndirect","drawIndexedIndirect","executeBundles"]),ky],webgl:[...oy("g2",gy("WebGL2RenderingContext"),[...Ly,"drawArraysInstanced","drawElementsInstanced"]),ky],webgl1:[...oy("g1",gy("WebGLRenderingContext"),Ly),ky]};let Dy=[];function uy(BB){let{code:TB,key:dB}=BB;return`wh:${TB}:${dB}`}const Hy=new Set(Object.values(Oy).flatMap((BB=>BB.map(uy)))),Ey=uy(ky);function vy(BB){Dy=Oy[BB]}function my(BB){const TB=CV();try{return WV(bV,Hy,[BB])}finally{GV(TB)}}function iy(BB){return new Set(Yy.filter((TB=>TB.tier===BB)).map((BB=>`wh:${BB.code}`)))}const Ny=iy("punished"),ty=!1,fy=new Set(aT),sy=iy("weighted");function My(BB){const TB=CV();try{return zy(BB)}finally{GV(TB)}}function zy(BB){return WV(bV,sy,[BB])}function wy(BB){const TB=CV();try{return Uy(BB)}finally{GV(TB)}}function Uy(BB){return WV(bV,fy,[BB])}function Fy(BB){return"wb"===BB||WV(bV,Ny,[BB])}function Ky(BB){const TB=CV();try{return Fy(BB)||Uy(BB)}finally{GV(TB)}}function ry(BB){const TB=CV();try{return"wb"===BB||ty&&Fy(BB)}finally{GV(TB)}}function Iy(BB,TB){let{isConstructor:dB,native:VB}=TB;return"function"===typeof BB&&(!(!dB&&WV(AV,BB,["prototype"]))&&null!==WV(jV,VB,[WV(qV,BB,[])]))}function cy(BB,TB){return Iy(BB,Ty("",(()=>{}),TB,arguments.length>2&&void 0!==arguments[2]&&arguments[2]?{isConstructor:!0}:{}))}function Sy(BB){const{holder:TB,key:dB,isGetter:VB,onNamespace:yB,inSecureContext:pB}=BB,lB=TB(),JB=function(BB,TB){for(let dB=BB;void 0!==dB&&null!==dB;dB=eV(dB)){const BB=xV(dB,TB);if(BB)return BB}}(lB,dB);if(!JB)return!(pB&&!0===globalThis.isSecureContext);const YB=VB?JB.get:JB.value;if(!Iy(YB,BB))return!1;if(yB){const TB=globalThis.WebAssembly;if(TB!==lB&&null!==TB&&("object"===typeof TB||"function"===typeof TB)){const VB=nV(TB,dB);return VB===YB||void 0===VB||Iy(VB,BB)}}return!0}let Py=null,Qy=!1;function Ry(BB){try{return Sy(BB)}catch{return!1}}function ay(){if(void 0===By)return null;let BB=function(){try{return globalThis.WebAssembly===By}catch{return!1}}()?null:"wh:wa";const TB=TB=>{null!==TB&&(null===BB||Zy(TB)>Zy(BB))&&(BB=TB)};for(let dB=0;dB<Yy.length;dB++){const BB=Yy[dB];void 0===BB||Ry(BB)||TB(`wh:${BB.code}`)}TB(XT??ZT());for(let dB=0;dB<Dy.length;dB++){const BB=Dy[dB];void 0===BB||Ry(BB)||TB(uy(BB))}return BB}function Zy(BB){return Fy(BB)?5:zy(BB)?4:Uy(BB)?3:function(BB){return WV(bV,Hy,[BB])}(BB)?BB===Ey?0:1:2}function Xy(){const BB=function(){const BB=hV();return IV===wV||IV===UV?(WV=XV,ZV=RV):WV=uV,BB}();try{if(null===Py||!Fy(Py)){const BB=ay();(null===Py||null!==BB&&Zy(BB)>Zy(Py))&&(Py=BB)}}finally{GV(BB)}}function Wy(){Qy=!0}function hy(){if(Qy)return"wb";if((!(arguments.length>0&&void 0!==arguments[0])||arguments[0])&&Xy(),null!==Py)return Py;if(void 0===By)return"wn:unsupported";const BB=Gd();return null===BB?null:`wn:${BB}`}function Cy(BB){const TB=Object.prototype.hasOwnProperty.call(LV,BB)?LV[BB]():void 0;if(void 0!==TB)return{sha256:TB,onMismatch:Wy};throw new GT(`${BB} has no release digest, so this build refuses it`)}const Gy=".zst.bin",qy=Reflect.apply,xy=ArrayBuffer,jy="undefined"===typeof Response?void 0:Response,Ay="undefined"===typeof ReadableStream?void 0:ReadableStream,by=function(){let BB;void 0!==Ay&&new Ay({__proto__:null,start(TB){const{enqueue:dB,close:VB,error:yB}=Object.getPrototypeOf(TB);BB={enqueue:dB,close:VB,error:yB}}},{__proto__:null});return BB}(),ny=function(){try{return"undefined"!==typeof WebAssembly&&"function"===typeof WebAssembly.compileStreaming&&void 0!==by&&cy(jy,"Response",!0)&&cy(Ay,"ReadableStream",!0)&&cy(by.enqueue,"enqueue")&&cy(by.close,"close")&&cy(by.error,"error")&&cy(yd,"body")&&cy(ld,"getReader")&&cy(Jd,"read")}catch{return!1}}();let ey=!1;function Bp(BB){for(const TB of"bloxd_wasm_webgpu:4954899,bloxd_wasm_webgl:5221928,bloxd_wasm_webgl1:4725588,bloxd_wasm_workers:196044,bloxd_wasm_models:312534,bloxd_wasm_client:3648335"?.split(",")??[]){const[dB,VB]=TB.split(":");if(dB===BB){const BB=Number(VB);return Number.isInteger(BB)&&BB>0?BB:void 0}}}function Tp(BB){const TB=Bp(BB.name);if(void 0!==TB&&ny&&!ey)return{href:`${BB.url().href}${Gy}`,length:TB}}function dp(BB){return Tp(BB)?.href??BB.url().href}function Vp(BB,TB,VB){const yB=BB.url(),pB=Tp(BB);return void 0!==pB?async function(BB,TB,VB,yB){let{href:pB,length:lB}=TB;try{return await td(pB,((BB,TB,JB)=>async function(BB,TB,VB,yB,pB,lB,JB){const YB=new xy(TB);let gB;yp??=sd(dB.e(1).then((()=>dB(25))));try{gB=await fetch(BB,void 0===JB?{signal:VB}:{signal:VB,priority:JB})}catch(fB){throw new Error(`Fetching ${BB} failed: ${lp(fB)}`)}const{ok:oB,status:kB,body:LB}=function(BB,TB){try{const{ok:BB,status:dB}=TB;return{ok:BB,status:dB,body:qy(yd,TB,[])}}catch{throw new Error(`${BB} came in a response a page script made`)}}(BB,gB);if(!oB)throw new Error(`Fetching ${BB} failed: HTTP ${kB}`);yB();const{reader:OB,controller:DB,compiled:uB}=function(BB,TB){let dB;try{let BB;dB=qy(ld,TB,[]);const VB=new Ay({__proto__:null,start(TB){BB=TB}},{__proto__:null}),yB=new jy(VB,{__proto__:null,headers:{__proto__:null,"Content-Type":"application/wasm"}});return{reader:dB,controller:BB,compiled:sd(Md(md(yB)))}}catch(fB){throw void 0!==dB&&pp(dB),new Error(`${BB} could not be streamed into a compile: ${lp(fB)}`)}}(BB,LB),{enqueue:HB,close:EB,error:vB}=by,mB=BB=>{try{qy(vB,DB,[BB])}catch{}finally{pp(OB)}};VB.addEventListener("abort",(()=>{mB(new Error(`${BB} stalled`))}),{once:!0});let iB=!1;IT(uB,(()=>{}),(()=>{iB=!0,pp(OB)}));let NB=0;try{let dB;try{dB=await yp}catch(fB){throw ey=!0,new Error(`The zstd decoder did not load: ${lp(fB)}`)}const{ZstdFrameDecoder:VB}=dB,lB=new VB(TB);for(;!lB.done&&!iB;){let TB;try{TB=await qy(Jd,OB,[])}catch(fB){throw new Error(`Downloading ${BB} failed: ${lp(fB)}`)}if(TB.done||iB)break;yB();try{lB.push(TB.value)}catch(fB){throw new Error(`${BB} did not decode: ${lp(fB)}`)}const{output:dB,decoded:VB}=lB;if(null!==dB&&VB!==NB){qy(Yd,new gd(YB),[dB.subarray(NB,VB),NB]);try{qy(HB,DB,[new gd(YB,NB,VB-NB)])}catch{iB=!0}NB=VB}}if(pB(),iB)throw await uB,new Error(`${BB}\'s compile stopped reading before its end`);if(!lB.done)throw new Error(`${BB} ended before its module did`);pp(OB);try{qy(EB,DB,[])}catch{}}catch(fB){throw mB(fB),fB}const tB=await uB;void 0!==lB&&await Ed(BB,new gd(YB),{sha256:lB.sha256,onMismatch:()=>{}});return tB}(pB,lB,BB,TB,JB,VB,yB)))}catch(YB){console.warn(`${lp(YB)}: loading ${BB.href} instead`)}const JB=await vd(BB,VB,{hideThen:!0,priority:yB});return JB}(yB,pB,TB,VB):vd(yB,TB,{hideThen:void 0!==Bp(BB.name),priority:VB})}let yp=null;function pp(BB){try{sd(BB.cancel())}catch{}}function lp(BB){return BB instanceof Error?BB.message:String(BB)}let Jp=null,Yp=!1;function gp(BB,TB,dB){return null===Jp?Jp=op(BB,TB,dB?.priority):BB!==Jp.build?console.warn(`Bloxd wasm: ${BB.name} was asked for after ${Jp.build.name} started loading, which this thread keeps`):TB.name!==Jp.workers.name&&console.warn(`Bloxd wasm: ${TB.name} was asked for workers after ${Jp.workers.name}, which this thread keeps`),dB?.reloadFailedDownload&&!Yp&&yV()&&(Fd="unloaded",Kd=null,rd=null,1)&&(Yp=!0,Jp=op(Jp.build,Jp.workers)),Jp.loaded}function op(BB,TB,dB){const VB=async function(BB,TB){if(pV()){let VB;try{VB=await BB()}catch(dB){return JV(dB,qT(dB)),!1}try{lV(TB,TB.JD,VB.workerModule,await TB.init({module_or_path:VB.module}))}catch(dB){JV(dB,"instantiate")}}return hd()}((async()=>{Xy();const VB=Lp(BB,dB),yB=TB.name===BB.name?VB:Lp(TB,dB);var pB;await(pB=[VB,yB],rT(((BB,TB)=>{let dB=pB.length;if(0===dB)return void BB();const VB=()=>{dB--,0===dB&&BB()};for(let yB=0;yB<pB.length;yB++)IT(pB[yB],VB,TB)})));const lB=await VB,JB=await yB;return Xy(),{module:lB,workerModule:JB}}),BB);return{build:BB,workers:TB,loaded:VB}}async function kp(BB){return Lp(BB)}function Lp(BB,TB){return Vp(BB,Cy(BB.name),TB)}const Op={name:"bloxd_wasm",url:()=>new dB.U(dB(16)),init:MT,JD:VB};function Dp(){return gp(arguments.length>0&&void 0!==arguments[0]?arguments[0]:Op,arguments.length>1&&void 0!==arguments[1]?arguments[1]:Op,arguments.length>2?arguments[2]:void 0)}function Hp(BB){return function(BB,TB){let dB=arguments.length>2&&void 0!==arguments[2]?arguments[2]:null;if(pV()){let yB;try{yB=BB()}catch(VB){return JV(VB,qT(VB)),!1}try{lV(dB,TB,yB,TB.initSync({module:yB}))}catch(VB){JV(VB,"instantiate")}}return hd()}((()=>BB),VB,Op)}const Ep=["none","idle","now"];function vp(){const BB=()=>bd();return{memoryBytes:()=>dV().buffer.byteLength,reserveUpFront:TB=>BB().Ek(TB),reserveAhead:TB=>BB().Hk(TB),setCeiling:TB=>{BB().vk(TB)},lowWater:()=>Ep[BB().uk()]??"none",stats:()=>function(BB){const TB=new Uint32Array(dV().buffer,BB,17),dB=BB=>TB[BB]??0,VB=BB=>({upFront:dB(BB),ahead:dB(BB+1),onDemandInFrame:dB(BB+2),onDemand:dB(BB+3)});return{memoryBytes:dB(0),initialBytes:dB(1),liveBytes:dB(2),peakLiveBytes:dB(3),headroomBytes:dB(4),unusedBytes:dB(5),ceilingBytes:dB(6),reservesRefused:dB(7),grows:VB(8),grownBytes:VB(12),allocationsRefused:dB(16)}}(BB().mk()),takeBallast:()=>BB().ik(),takePressure:()=>BB().Nk()}}function mp(BB,TB){return new Error(`${BB}: ${TB instanceof Error?`${TB.name}: ${TB.message}`:String(TB)}`,{cause:TB})}function ip(){return new URL(new dB.U(dB(22)).href,globalThis.location?.href).href}let Np=null;function tp(){return Np??=(async()=>vd(new URL(ip()),Cy("bloxd_wasm_textures")))().catch((BB=>{throw mp(qT(BB),BB)})),Np}function fp(BB,TB,dB){return new BB(dV().buffer,TB,dB)}class sp{type;ptr;length;currentView;constructor(BB,TB,dB){this.type=BB,this.ptr=TB,this.length=dB,this.currentView=fp(BB,TB,dB)}view(){return this.currentView.length!==this.length&&(this.currentView=fp(this.type,this.ptr,this.length)),this.currentView}}const Mp=15;function zp(BB,TB,dB){return!!(BB&&null!==dB&&TB>=dB)}const wp=27;let Up=0;class Fp{constructor(BB){this.runs=BB,this.layers=null,this.serial=Up,Up=(Up+1)%4294967295}from(BB,TB){return 0===BB?[0,0]:(this.layers??=function(BB,TB){const dB=TB*TB,VB=new Uint32Array(2*TB);let yB=1,pB=0,lB=0;for(;lB<BB.length&&yB<TB;){const JB=lB;let YB=0,gB=0;for(;lB<BB.length&&BB[lB]>=128;)YB+=(127&BB[lB++])<<gB,gB+=7;for(YB+=BB[lB++]<<gB;BB[lB]>=128;)lB++;if(lB++,!(YB<=0))for(pB+=YB;yB<TB&&yB*dB<pB;)VB[2*yB]=JB,VB[2*yB+1]=pB-YB,yB++}for(;yB<TB;yB++)VB[2*yB]=BB.length,VB[2*yB+1]=pB;return VB}(this.runs,TB),[this.layers[2*BB],this.layers[2*BB+1]])}to(BB,TB){const{runs:dB}=this;if(BB>=TB)return dB.length;const[VB,yB]=this.from(BB,TB);if(yB===BB*TB*TB)return VB;let pB=VB;for(let lB=0;lB<2&&pB<dB.length;pB++)dB[pB]<128&&lB++;return pB}}function Kp(BB,TB,dB,VB){const yB=VB*VB,pB=VB-1;let lB;lB=TB?new Uint16Array(yB):new Uint8Array(yB);const JB=lB,YB=BB;if(0===dB)JB.set(YB.subarray(0,yB));else if(1===dB)JB.set(YB.subarray(pB*yB,VB*yB));else if(2===dB||3===dB){const BB=2===dB?0:pB;for(let TB=0;TB<VB;TB++){const dB=TB*yB+BB*VB;JB.set(YB.subarray(dB,dB+VB),TB*VB)}}else{const TB=4===dB?0:pB;for(let dB=0;dB<VB;dB++){const pB=dB*yB+TB,JB=dB*VB;for(let TB=0;TB<VB;TB++)lB[JB+TB]=BB[pB+TB*VB]}}return lB}let rp=function(BB){return BB[BB.Corner=0]="Corner",BB[BB.EdgeX=1]="EdgeX",BB[BB.EdgeY=2]="EdgeY",BB[BB.EdgeZ=3]="EdgeZ",BB[BB.FaceX=4]="FaceX",BB[BB.FaceY=5]="FaceY",BB[BB.FaceZ=6]="FaceZ",BB[BB.Center=7]="Center",BB}({});rp.Corner,rp.EdgeZ,rp.Corner,rp.EdgeY,rp.FaceX,rp.EdgeY,rp.Corner,rp.EdgeZ,rp.Corner,rp.EdgeX,rp.FaceY,rp.EdgeX,rp.FaceZ,rp.Center,rp.FaceZ,rp.EdgeX,rp.FaceY,rp.EdgeX,rp.Corner,rp.EdgeZ,rp.Corner,rp.EdgeY,rp.FaceX,rp.EdgeY,rp.Corner,rp.EdgeZ,rp.Corner;const Ip=[22,4,16,10,14,12],cp=Array.from({length:27},((BB,TB)=>[Math.floor(TB/9)-1,Math.floor(TB/3)%3-1,TB%3-1]));function Sp(BB){return cp[BB]}function Pp(BB,TB,dB){return BB<0?[dB-TB,dB]:BB>0?[0,TB]:[0,dB]}const Qp=/^alloc_failed (\\d+) bytes$/;class Rp{constructor(BB){this.chunkSizeCubed=BB,this.uint8=[],this.uint16=[]}put(BB){const TB=this.chunkSizeCubed,dB=2*this.chunkSizeCubed;for(const VB of BB)VB.byteLength===TB&&this.uint8.length<Rp.MAX_SIZE?this.uint8.push(new Uint8Array(VB)):VB.byteLength===dB&&this.uint16.length<Rp.MAX_SIZE&&this.uint16.push(new Uint16Array(VB))}drain(){const BB=[...this.uint8,...this.uint16].map((BB=>BB.buffer));return this.uint8.length=0,this.uint16.length=0,BB}takeUint8(){var BB;return null!==(BB=this.uint8.pop())&&void 0!==BB?BB:new Uint8Array(this.chunkSizeCubed)}takeUint16(){var BB;return null!==(BB=this.uint16.pop())&&void 0!==BB?BB:new Uint16Array(this.chunkSizeCubed)}takeZeroedUint8(){const BB=this.takeUint8();return BB.fill(0),BB}}Rp.MAX_SIZE=16;function ap(BB,TB,dB,VB){return{emission:BB,skyEmission:Float64Array.from({length:TB.length},((BB,dB)=>{var VB;return null!==(VB=TB[dB])&&void 0!==VB?VB:0})),filters:Int32Array.from({length:dB.length},((BB,TB)=>{var VB;const yB=null!==(VB=dB[TB])&&void 0!==VB?VB:1;return yB<0?-1:Math.min(yB,15)})),opacity:Uint8Array.from({length:VB.length},((BB,TB)=>VB[TB]?1:0))}}new Map;function Zp(BB){return BB instanceof Error&&Object.getPrototypeOf(BB)===Error.prototype}class Xp extends RangeError{}class Wp extends Xp{constructor(BB){super(`alloc_failed ${BB} bytes`),this.bytes=BB}}function hp(BB){const TB=Qp.exec(BB);return TB?new Wp(Number(TB[1])):new Xp(BB)}function Cp(BB){return Zp(BB)&&Qp.test(BB.message)?hp(BB.message):BB}class Gp extends Error{constructor(BB){super(BB instanceof Error?BB.message:String(BB)),this.trap=BB}}const qp=["full","relit","relit-sky","unchanged"];function xp(BB){return Number.isInteger(BB)&&BB>=-2147483648&&BB<=2147483647}class jp extends Xp{constructor(BB,TB){super(TB),this.reason=BB}}class Ap{constructor(BB,TB,dB){this.engine=TB,this.lastLightPass="full",this.view=void 0,this.chunkSizeCubed=void 0,this.seedSize=void 0,this.lightU8=void 0,this.lightU16=void 0,this.seedRead=void 0,this.pool=void 0,this.view=BB.view,this.chunkSizeCubed=dB*dB*dB;const VB=dB+30;this.seedSize=VB*VB,this.pool=new Rp(this.chunkSizeCubed),this.lightU8=new BB.BufferView(Uint8Array,TB.qO(),this.chunkSizeCubed),this.lightU16=new BB.BufferView(Uint16Array,TB.GO(),this.chunkSizeCubed),this.seedRead=new BB.BufferView(Uint8Array,TB.BD(),this.seedSize)}returnBuffers(BB){this.pool.put(BB)}takeBuffers(){return this.pool.drain()}getZeroedFullChunkLightData(){return this.pool.takeZeroedUint8()}checkComputeInput(BB,TB,dB){if(BB.length<this.seedSize)throw new jp("seed_size",`WasmLightEngine sky seed grid holds ${BB.length} columns, not ${this.seedSize}`);if(!xp(dB)||null!==TB&&!xp(TB))throw new jp("chunk_j",`WasmLightEngine chunkJ ${dB} or highestChunkJ ${TB} is not a 32-bit integer`)}computeWritten(BB,TB,dB,VB,yB){this.checkComputeInput(TB,dB,VB);const{engine:pB,view:lB}=this;let JB;lB(Uint8Array,pB.TD(),this.seedSize).set(TB.subarray(0,this.seedSize));try{JB=pB.compute(BB,dB,VB,yB)}catch(gB){throw Cp(gB)}if(this.lastLightPass=qp[JB>>1],1&JB){const BB=this.pool.takeUint16();return BB.set(this.lightU16.view()),{uD:BB,isUint16:!0}}const YB=this.pool.takeUint8();return YB.set(this.lightU8.view()),{uD:YB,isUint16:!1}}skySeedColumnsRead(BB){return!!this.engine.eO()&&(BB.set(this.seedRead.view()),!0)}forgetKeptStates(BB){this.engine.QO(BB)}free(){this.engine.free()}}const bp=/^(0|[1-9]\\d*)$/;function np(BB){return"number"===typeof BB&&Number.isInteger(BB)&&BB>=0&&BB<=2147483647}new WeakMap,new WeakMap;const ep=new Uint32Array(0);const Bl=new ArrayBuffer(0);const Tl=[0,1,2,0,2,3];let dl=new Uint32Array(0);function Vl(BB){if(dl.length<6*BB){const TB=Math.max(BB,2*dl.length/6);dl=function(BB,TB){for(let dB=0;dB<TB;dB++){const TB=4*dB,VB=6*dB;for(let dB=0;dB<6;dB++)BB[VB+dB]=TB+Tl[dB]}return BB}(new Uint32Array(6*TB),TB)}return dl.slice(0,6*BB)}function yl(BB,TB,dB,VB){const yB=BB(Uint16Array,TB,4*dB);return VB?yB.slice():new Float32Array(yB)}const pl={computed:1,provided:2,zeroedFull:3},ll=4294967295,Jl=[1,2,4,3,0,pl.computed,pl.provided,pl.zeroedFull,4,8,16,32,64,128,256,8,0,1,2,3,4,1,2,0,1,2,3,2,0,1,16,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,1,2,4,8,16,15,8,ll,1,2],Yl=[],gl=[];function ol(BB){return Number.isInteger(BB)&&BB>=0&&BB<2**32}function kl(BB){try{return BB()}catch(TB){throw Zp(TB)?hp(TB.message):new Gp(TB)}}class Ll extends Ap{static create(BB,TB){!function(BB){const TB="function"===typeof BB.tk?kl((()=>BB.tk())):[];if(TB.length!==Jl.length||!Jl.every(((BB,dB)=>TB[dB]===BB)))throw new Xp(`@bloxd/wasm\'s mesher constants [${Array.from(TB).join()}] are not wasmChunkMesher.ts\'s [${Jl.join()}]`)}(BB.JD);const dB=function(BB){var TB,dB,VB;const yB=ap(BB.lightEmissionLookup,BB.skyLightEmissionLookup,BB.lightFilterLookup,BB.opacityLookup),pB=Int32Array.from({length:BB.blockFaceToMatId.length},((TB,dB)=>{const VB=BB.blockFaceToMatId[dB];if(void 0===VB)return-1;if(!np(VB))throw new Xp(`blockFaceToMatId[${dB}] is ${String(VB)}`);return VB}));let lB=0;const JB=[];for(const[DB,uB]of Object.entries(BB.matIdToTerrainId)){const BB=Number(DB);if(bp.test(DB)&&!(BB>32768)){if(void 0!==uB&&!np(uB))throw new Xp(`matIdToTerrainId[${DB}] is ${String(uB)}`);JB.push([BB,null!==uB&&void 0!==uB?uB:-1]),lB=Math.max(lB,BB+1)}}const YB=new Int32Array(lB).fill(-1);for(const[DB,uB]of JB)YB[DB]=uB;const gB=BB.matColorLookup,oB=new Float64Array(3*gB.length),kB=new Uint8Array(gB.length);for(let DB=0;DB<gB.length;DB++){const BB=gB[DB];if(BB){if(!Array.isArray(BB))throw new Xp(`matColorLookup[${DB}] is not an array`);kB[DB]=1;for(let TB=0;TB<3;TB++)oB[3*DB+TB]=Number(BB[TB])}}const LB=Int32Array.from(BB.faceGroupTerrainIds,(BB=>{if(!np(BB))throw new Xp(`faceGroupTerrainIds holds ${BB}`);return BB})),OB=Uint8Array.from(BB.faceGroupLayout,(BB=>{if(!Number.isInteger(BB)||BB<0||BB>5)throw new Xp(`faceGroupLayout holds ${BB}`);return BB}));return{FD:yB.emission,skyEmission:yB.skyEmission,KD:yB.filters,opacity:yB.opacity,solid:Uint8Array.from({length:BB.solidLookupArr.length},((TB,dB)=>BB.solidLookupArr[dB]?1:0)),blockFaceMat:pB,matTerrain:YB,matAtlasIndex:Float64Array.from({length:BB.atlasIndexLookup.length},((TB,dB)=>Number(BB.atlasIndexLookup[dB]))),matColour:oB,matColourSet:kB,materialBlockFlags:BB.materialBlockFlags,faceGroupTerrainIds:LB,faceGroupLayout:OB,visOccluders:null!==(TB=BB.visOccluders)&&void 0!==TB?TB:null,rD:Float64Array.from(BB.rD,Number),cD:Number(BB.cD),flags:(BB.doAO?1:0)|(BB.skipRevAo?2:0)|(BB.compactParts?4:0),UD:BB.UD,keptLightStates:null!==(dB=BB.keptLightStates)&&void 0!==dB?dB:4,decodedChunks:null!==(VB=BB.decodedChunks)&&void 0!==VB?VB:64}}(TB),VB=kl((()=>new BB.JD.lk(dB.FD,dB.skyEmission,dB.KD,dB.opacity,dB.solid,dB.blockFaceMat,dB.matTerrain,dB.matAtlasIndex,dB.matColour,dB.matColourSet,dB.materialBlockFlags,dB.faceGroupTerrainIds,dB.faceGroupLayout,dB.visOccluders,dB.rD,dB.cD,dB.flags,dB.UD,dB.keptLightStates,dB.decodedChunks)));try{return new Ll(BB,function(BB){return new Proxy(BB,{get(BB,TB){const dB=Reflect.get(BB,TB);return"function"!==typeof dB?dB:function(){for(var TB=arguments.length,VB=new Array(TB),yB=0;yB<TB;yB++)VB[yB]=arguments[yB];return kl((()=>dB.apply(BB,VB)))}}})}(VB),TB.UD,TB.compactParts)}catch(yB){throw yB instanceof Gp?gl.push(VB):VB.free(),yB}}constructor(BB,TB,dB,VB){super(BB,TB,dB),this.mesher=TB,this.compactParts=VB,this.lastComputeKind="wasm",this.lastComputeMs=0,this.UD=void 0,this.hoodStarts=new Uint32Array(wp),this.hoodSerials=new Uint32Array(wp),this.hoodEnds=new Uint32Array(wp),this.hoodFrom=new Uint32Array(wp),this.UD=dB}loadHood(BB,TB){const{mesher:dB,view:VB,UD:yB,hoodSerials:pB,hoodStarts:lB,hoodEnds:JB,hoodFrom:YB}=this;for(let uB=0;uB<wp;uB++){var gB,oB;pB[uB]=null!==(gB=null===(oB=BB[uB])||void 0===oB?void 0:oB.serial)&&void 0!==gB?gB:ll}const kB=dB.xO(pB,TB);YB.fill(ll);let LB=0;for(let uB=0;uB<wp;uB++){const dB=BB[uB];if(dB&&(1===kB[uB]||2===kB[uB])){const[BB,VB]=1===kB[uB]?Pp(Sp(uB)[0],TB,yB):[0,yB],[pB,JB]=dB.from(BB,yB);lB[uB]=pB,YB[uB]=JB,LB+=dB.to(VB,yB)-pB}JB[uB]=LB}const OB=VB(Uint8Array,dB.ZO(LB),LB);let DB=0;for(let uB=0;uB<wp;uB++)YB[uB]!==ll&&OB.set(BB[uB].runs.subarray(lB[uB],lB[uB]+JB[uB]-DB),DB),DB=JB[uB];dB.PO(JB,YB,TB)}computeFromNeighbours(BB,TB,dB,VB,yB,pB){if(BB!==Yl)throw new Error("WasmChunkMesher lights the chunks loadHood loaded: pass LOADED_HOOD");const lB=performance.now(),JB=this.computeWritten(TB,dB,VB,yB,pB);return this.lastComputeMs=performance.now()-lB,JB}mesh(BB){const TB=this.checkJob(BB),{mesher:dB,view:VB}=this,yB=this.writeAndMesh(BB,TB),pB=dB.aO();return function(BB,TB,dB,VB,yB){const pB=TB[1];if(1&TB[0]){const dB=[];for(let yB=0;yB<pB;yB++){const pB=TB.subarray(8+2*yB);dB.push(yl(BB,pB[0],pB[1],VB))}return{lightOnly:!0,lightDataArrays:dB}}const lB=[],JB=0!==(2&TB[0])?[]:null;for(let oB=0;oB<pB;oB++){const yB=TB.subarray(8+16*oB),pB=-1===(0|yB[0])?void 0:0|yB[0],YB=yB[1],gB=yB[2],kB=0!==(8&YB),LB={vertices:kB?Bl:BB(Uint8Array,yB[3],yB[4]).slice().buffer,usesAtlas:0!==(1&YB),indices:VB?ep:Vl(gB),uD:2&YB?yl(BB,yB[5],gB,VB):null,aD:dB,terrainID:pB,faceGroups:16&YB?BB(Int32Array,yB[7],15).slice():null};4&YB&&(LB.packedVertices=kB?BB(Uint32Array,yB[6],3*gB).slice():void 0),kB&&(LB.vertexCount=4*gB),lB.push(LB),JB&&JB.push({terrainID:pB,numFaces:gB,is:BB(Int16Array,yB[8],gB).slice(),js:BB(Int16Array,yB[9],gB).slice(),ks:BB(Int16Array,yB[10],gB).slice(),wids:BB(Int16Array,yB[11],gB).slice(),hts:BB(Int16Array,yB[12],gB).slice(),EB:BB(Uint8Array,yB[13],gB).slice(),diagonals:BB(Uint8Array,yB[14],gB).slice()})}const YB={lightOnly:!1,vertexDataInfo:lB,faceLayout:JB,buildMs:performance.now()-yB},gB=TB[2];return 0!==gB&&(YB.visNegNeighbours=TB[3]),gB>1&&(YB.visGraphs=3===gB?BB(Uint16Array,TB[4],8).slice():null),YB}(VB,VB(Uint32Array,dB.jO(),yB),BB.chunk.aD,this.compactParts,pB)}writeAndMesh(BB,TB){const{mesher:dB,view:VB,UD:yB}=this;VB(Uint16Array,dB.dD(),yB).set(BB.chunk.cO);const{light:pB}=BB;if(pB&&"provided"===pB.kind){const BB=dB.nO(pB.isUint16);pB.isUint16?VB(Uint16Array,BB,this.chunkSizeCubed).set(pB.data):VB(Uint8Array,BB,this.chunkSizeCubed).set(pB.data)}let lB=0,JB=0;for(let oB=0;oB<6;oB++){var YB,gB;const TB=null===(YB=BB.neighbourLightBorders)||void 0===YB?void 0:YB[oB];TB&&(VB(Uint16Array,dB.SO(oB),yB*yB).set(TB),lB|=1<<oB),null!==(gB=BB.neighbourLightIsUint16)&&void 0!==gB&&gB[oB]&&(JB|=1<<oB)}return 32&TB&&this.writeLayout(BB.lightOnlyLayout),dB.mesh(TB,BB.neighboursBitmask,BB.neighbourOpenSkyFaces,lB,JB)}checkJob(BB){const{chunk:TB,light:dB}=BB,VB=this.UD;if(TB.cO.length!==VB)throw new Xp(`WasmChunkMesher needs a _wholeLayerVoxel of ${VB}`);if(!ol(BB.neighboursBitmask)||!ol(BB.neighbourOpenSkyFaces))throw new Xp(`WasmChunkMesher neighbours bitmask ${BB.neighboursBitmask} or open sky faces ${BB.neighbourOpenSkyFaces}`);let yB=0;if(dB){const BB="provided"===dB.kind;if(BB&&(dB.data.length!==this.chunkSizeCubed||dB.data instanceof Uint16Array!==dB.isUint16))throw new Xp(`WasmChunkMesher light is not ${this.chunkSizeCubed} ${dB.isUint16?"u16":"u8"} values`);yB|=pl[dB.kind]|(BB&&dB.isUint16?4:0)}const pB=BB.neighbourLightBorders;if(pB){yB|=8;for(let BB=0;BB<6;BB++){const TB=pB[BB];if(TB&&TB.length!==VB*VB)throw new Xp(`WasmChunkMesher light border ${BB} is not ${VB*VB} light values`)}}BB.neighbourLightIsUint16&&(yB|=16);const lB=dB?BB.lightOnlyLayout:null;if(lB){for(const BB of lB){const TB=BB.numFaces,dB=[BB.is,BB.js,BB.ks,BB.wids,BB.hts,BB.EB,BB.diagonals];if(!ol(TB)||dB.some((BB=>BB.length!==TB)))throw new Xp("WasmChunkMesher face layout arrays disagree with numFaces")}yB|=32}return yB|(BB.visGraphs?64:0)|(TB.ED?128:0)|(TB.LD?256:0)}writeLayout(BB){const{mesher:TB,view:dB}=this;let VB=0;for(const kB of BB)VB+=kB.numFaces;TB.hO(BB.length,VB);const yB=TB.WO(),pB=TB.XO(),lB=TB.CO(),JB=dB(Uint32Array,yB,BB.length),YB=dB(Int16Array,pB,5*VB),gB=dB(Uint8Array,lB,2*VB);let oB=0;BB.forEach(((BB,TB)=>{JB[TB]=BB.numFaces,YB.set(BB.is,oB),YB.set(BB.js,VB+oB),YB.set(BB.ks,2*VB+oB),YB.set(BB.wids,3*VB+oB),YB.set(BB.hts,4*VB+oB),gB.set(BB.EB,oB),gB.set(BB.diagonals,VB+oB),oB+=BB.numFaces}))}}Error;function Ol(BB){return/out of (executable )?memory|could not allocate memory|array buffer allocation failed/i.test(String(BB))}new Set(["start_refused","light_state_refused","abort_refused","trap_out_of_memory"]),new Set;function Dl(BB,TB){for(const dB of TB)BB.push(dB.is.buffer),BB.push(dB.js.buffer),BB.push(dB.ks.buffer),BB.push(dB.wids.buffer),BB.push(dB.hts.buffer),BB.push(dB.EB.buffer),BB.push(dB.diagonals.buffer)}class ul extends Error{}let Hl,El=null,vl=null;const ml=[];let il=0,Nl=!1,tl=0;let fl=0,sl=null,Ml=!1;const zl=new class{constructor(){this.runs=new Map}take(BB){BB.forgetAll&&this.runs.clear();for(const TB of BB.forgotten)this.runs.delete(TB);return BB.sentIds.forEach(((TB,dB)=>{this.runs.set(TB,new Fp(BB.sentRuns[dB]))})),Array.from(BB.ids,(BB=>{if(BB<0)return null;const TB=this.runs.get(BB);if(!TB)throw new Error(`The meshing worker holds no chunk ${BB}`);return TB}))}clear(){this.runs.clear()}get size(){return this.runs.size}get bytes(){let BB=0;for(const{runs:TB}of this.runs.values())BB+=TB.byteLength;return BB}},wl=new class{constructor(){this.entries=new Map}take(BB){var TB;const{lightHood:dB,hood:VB}=BB;dB.forgetAll&&this.entries.clear();for(const yB of dB.forgotten)this.entries.delete(yB);dB.providedTag&&(BB.providedLightData=this.Dg(VB.ids[13],dB.providedTag).slice()),null===(TB=dB.borderTags)||void 0===TB||TB.forEach(((TB,dB)=>{if(TB){const yB=this.Dg(VB.ids[Ip[dB]],TB);BB.neighbourLightBorders[dB]=Kp(yB,BB.neighbourLightIsUint16[dB],dB,BB.chunk.size)}}))}keep(BB,TB){if(!BB.lightHood.keep)return;const dB=BB.hood.ids[13];TB?this.entries.set(dB,{tag:BB.meshJobId,data:TB.slice()}):this.entries.delete(dB)}Dg(BB,TB){const dB=this.entries.get(BB);if((null===dB||void 0===dB?void 0:dB.tag)!==TB)throw new Error(`The meshing worker holds no light ${TB} for chunk ${BB}${dB?`, but light ${dB.tag}`:""}`);return dB.data}clear(){this.entries.clear()}get size(){return this.entries.size}};function Ul(BB,TB){const dB={type:"lightEngineReport",message:BB,failureKind:TB};self.postMessage(dB)}function Fl(){if(Nl)return;Nl=!0;const BB={type:"lightEngineReport",message:`No wasm mesher on this worker (${Sl()})`,lost:!0};self.postMessage(BB)}function Kl(BB){return BB instanceof Error?BB.message:String(BB)}function rl(BB){try{return vl=Ll.create(BB,Hl),!1}catch(TB){const dB=BB.takeRefusedAllocation();TB instanceof Gp&&BB.markFailed(TB.trap);const VB=dB>0&&!(TB instanceof Wp)?` (alloc_failed ${dB} bytes)`:"",yB=cl(TB),pB=dB>0||TB instanceof Wp;return Ul(`Wasm mesher failed${VB} to start: ${Kl(TB)}`,yB?void 0:pB?"start_refused":"start_failed"),pB||yB}}function Il(){var BB;null!==(BB=El)&&void 0!==BB&&BB.isReady()?vl.free():ml.push(vl),vl=null}function cl(BB){return!(BB instanceof Gp)&&!(BB instanceof ul)&&Ol(BB)}function Sl(){if(null!==sl)return sl;const BB=Cd();return"ready"===BB?"its start failed":"failed"===BB?Ad():`wasm ${BB}`}self.onmessage=BB=>{let{data:{type:TB,data:dB}}=BB;switch(TB){case"wasmInit":Hp(dB)||Ul(`Wasm did not start (${Ad()}), so this worker meshes nothing`);break;case"meshingInit":!function(BB){Hl=BB,zl.clear(),wl.clear(),il=0,Nl=!1,fl=0,sl=null,vl&&Il();El=function(BB){const TB=function(BB){var TB;return BB.isBloxdWasmReady()?{JD:BB.getBloxdWasm(),view:BB.wasmView,BufferView:BB.WasmBufferView,isReady:BB.isBloxdWasmReady,markFailed:BB.markBloxdWasmFailed,takeRefusedAllocation:null!==(TB=BB.takeBloxdWasmRefusedAllocation)&&void 0!==TB?TB:()=>0}:null}(BB);return TB?{...TB,trapContext:()=>{const TB=Math.round(BB.getBloxdWasmMemory().buffer.byteLength/2**20),dB=BB.getLastBloxdWasmPanic();return`wasm memory ${TB} MB, ${null===dB?"no panic message":`panic: ${function(BB){return BB.replace(/\\s*\\n\\s*/g," / ").slice(0,300)}(dB)}`}`},takeRefusedAllocation:BB.takeBloxdWasmRefusedAllocation}:null}(yB),El&&rl(El);vl||Fl()}(dB);break;case"xD":!function(BB){const TB=performance.now(),{i:dB,j:VB,k:yB}=BB.chunk,pB={data:null,isUint16:!1,kind:"computed",source:"none",seedColumnsRead:null,ms:0,engine:null};let lB=!1;const JB=null!==vl;Ml=!1;try{const dB=zl.take(BB.hood);wl.take(BB),lB=!0;const VB=function(BB,TB,dB){vl&&!El.isReady()&&Il();const VB=vl;if(!VB)throw new ul(`No wasm mesher on this worker (${Sl()})`);let yB=!1;try{VB.loadHood(TB,function(BB){const{chunk:TB}=BB;return!BB.computeLighting||BB.providedLightData||TB.LD||zp(TB.ED,BB.chunkJ,BB.highestChunkJ)?1:Mp}(BB)),yB=!0;const pB=function(BB,TB,dB){!function(BB,TB,dB,VB){const{chunk:yB,skySeedGrid:pB,highestChunkJ:lB,chunkJ:JB}=TB;if(!TB.computeLighting)return;if(BB.returnBuffers(TB.reusableLightBuffers),TB.providedLightData)return VB.data=TB.providedLightData,VB.isUint16=TB.providedLightIsUint16,VB.kind="provided",void(VB.source=TB.providedLightReused?"reused":"server");if(zp(yB.ED,JB,lB))return;if(yB.LD)return VB.data=BB.getZeroedFullChunkLightData(),VB.isUint16=!1,void(VB.kind="zeroedFull");const{i:YB,j:gB,k:oB}=yB,kB=BB.computeFromNeighbours(dB,TB.neighboursBitmask,pB,lB,JB,`${YB},${gB},${oB}`);if(VB.ms=BB.lastComputeMs,VB.engine=BB.lastComputeKind,VB.data=kB.uD,VB.isUint16=kB.isUint16,VB.kind="computed",VB.source="clientBfs",function(BB,TB){return null!==TB&&BB<TB}(JB,lB)){const TB=new Uint8Array(pB.length);BB.skySeedColumnsRead(TB)&&(VB.seedColumnsRead=TB)}}(BB,TB,Yl,dB);const VB=performance.now(),yB=BB.mesh({chunk:TB.chunk,neighboursBitmask:TB.neighboursBitmask,light:dB.data&&{data:dB.data,isUint16:dB.isUint16,kind:dB.kind},neighbourLightBorders:TB.neighbourLightBorders,neighbourLightIsUint16:TB.neighbourLightIsUint16,neighbourOpenSkyFaces:TB.neighbourOpenSkyFaces,lightOnlyLayout:TB.lightOnly?TB.cachedFaceLayout:null,visGraphs:!1!==TB.visGraphs});return{...yB,meshMs:performance.now()-VB}}(VB,BB,dB);return fl=0,pB}catch(pB){const{i:TB,j:lB,k:JB}=BB.chunk;if(pB instanceof Xp){const YB=dB.data;Object.assign(dB,{data:null,isUint16:!1,kind:"computed",source:"none",seedColumnsRead:null,ms:0,engine:null});let gB=BB.reusableLightBuffers;if(yB&&(gB=YB&&YB!==BB.providedLightData?[YB.buffer]:[]),VB.returnBuffers(gB),pB instanceof Wp){const BB=++tl;Ul(0===(BB&BB-1)?`Wasm mesher could not keep a light state: ${pB.message} (${BB} on this thread), failing chunk ${TB},${lB},${JB}`:null,"light_state_refused"),++fl>=3&&(sl=`its memory can\'t grow: ${fl} light states refused in a row`,Il())}else{const BB=il<3;BB&&il++,Ul(BB?`Wasm mesher could not take chunk ${TB},${lB},${JB}: ${Kl(pB)}`:null,"refused_input")}throw pB}if(cl(pB))throw pB;const YB=El.takeRefusedAllocation();pB instanceof Gp&&El.markFailed(pB.trap),Il();throw Ul(`Wasm mesher failed${YB>0?` (alloc_failed ${YB} bytes)`:""} on chunk ${TB},${lB},${JB}: ${Kl(pB)}`,function(BB,TB){if(!(BB instanceof Gp))return"threw";if(TB>0)return"abort_refused";return Ol(BB.trap)?"trap_out_of_memory":"trap"}(pB,YB)),Ml=YB>0,El.isReady()&&rl(El)&&(Ml=!0),pB}}(BB,dB,pB);wl.keep(BB,"clientBfs"===pB.source?pB.data:null),"lightDataArrays"in VB?function(BB,TB,dB,VB,yB){const{i:pB,j:lB,k:JB}=BB.chunk,{skySeedGrid:YB}=BB,gB=BB.cachedFaceLayout,oB=dB.data,kB=[];dB.seedColumnsRead&&kB.push(dB.seedColumnsRead.buffer);for(const OB of TB)kB.push(OB.buffer);kB.push(oB.buffer),YB&&kB.push(YB.buffer),Dl(kB,gB);const LB={type:"meshed",i:pB,j:lB,k:JB,meshJobId:BB.meshJobId,lightOnlyUpdate:!0,lightDataArrays:TB,faceLayout:gB,computedLightData:oB,Ip:dB.isUint16,lightSource:dB.source,serverLightCovered:BB.serverLightCovered,reusableSkySeedGrid:YB,lightSeedColumnsRead:dB.seedColumnsRead,lightMs:dB.ms,meshMs:VB,jobMs:performance.now()-yB,lightEngineKind:dB.engine};self.postMessage(LB,kB)}(BB,VB.lightDataArrays,pB,VB.meshMs,TB):function(BB,TB,dB,VB){const{i:yB,j:pB,k:lB}=BB.chunk,{skySeedGrid:JB}=BB,{vertexDataInfo:YB,faceLayout:gB,visGraphs:oB,visNegNeighbours:kB}=TB,LB=[];dB.seedColumnsRead&&LB.push(dB.seedColumnsRead.buffer);for(const DB of YB)DB.vertices.byteLength>0&&LB.push(DB.vertices),DB.indices.buffer.byteLength>0&&LB.push(DB.indices.buffer),DB.uD&&LB.push(DB.uD.buffer),DB.packedVertices&&LB.push(DB.packedVertices.buffer),DB.faceGroups&&LB.push(DB.faceGroups.buffer);dB.data&&LB.push(dB.data.buffer),JB&&LB.push(JB.buffer),gB&&Dl(LB,gB),oB&&LB.push(oB.buffer);const OB={type:"meshed",i:yB,j:pB,k:lB,meshJobId:BB.meshJobId,lightOnlyUpdate:!1,vertexDataInfo:YB,faceLayout:gB,computedLightData:dB.data,Ip:dB.isUint16,lightSource:dB.source,serverLightCovered:BB.serverLightCovered,reusableSkySeedGrid:JB,lightSeedColumnsRead:dB.seedColumnsRead,lightMs:dB.ms,meshMs:TB.meshMs,jobMs:performance.now()-VB,buildMs:TB.buildMs,mesherEngineKind:"wasm",lightEngineKind:dB.engine,...void 0===kB?{}:{visNegNeighbours:kB},...void 0===oB?{}:{visGraphs:oB}};self.postMessage(OB,LB)}(BB,VB,pB,TB)}catch(YB){console.error(`Worker meshChunk failed for chunk (${dB}, ${VB}, ${yB})`,YB),wl.keep(BB,null);const TB=YB instanceof Wp||Ml||cl(YB),gB=JB&&!vl&&!(YB instanceof Xp)&&!(YB instanceof ul);!function(BB,TB,dB,VB,yB,pB,lB,JB,YB,gB){const oB=[];lB&&oB.push(lB.buffer),JB&&oB.push(JB.buffer);const kB={type:"meshError",i:BB,j:TB,k:dB,meshJobId:VB,errorMessage:yB instanceof Error?yB.message:String(yB),cachesTaken:pB,reusableLightBuffer:lB,reusableSkySeedGrid:JB,lostMesher:YB,refusedState:gB};self.postMessage(kB,oB)}(dB,VB,yB,BB.meshJobId,YB,lB,pB.data,BB.skySeedGrid,gB,TB),vl||Fl()}}(dB);break;default:console.error("Unrecognised meshing worker message type:",TB)}}})();', "Worker", void 0, dB.p + "meshing.worker.c86831a1.worker.js")
-    }
-  },
-  35308: BB => {
-    BB.exports = function(BB, TB, dB, VB) {
-      var yB = self || window;
-      try {
-        try {
-          var pB;
-          try {
-            pB = new yB.Blob([BB])
-          } catch (gB) {
-            (pB = new(yB.BlobBuilder || yB.WebKitBlobBuilder || yB.MozBlobBuilder || yB.MSBlobBuilder)).append(BB), pB = pB.getBlob()
+    function SY() {
+      const {
+        t: YY
+      } = (0, sY.C)(), [rY, DY] = (0, IY.useState)(!1), [yY, SY] = (0, IY.useState)(null), [TY, eY] = (0, IY.useState)(1), [NY, BY] = (0, IY.useState)(!1), [cY, KY] = (0, IY.useState)(!1), HY = (0, IY.useRef)(0), zY = (0, IY.useRef)(!1), ZY = (0, IY.useRef)(!1), CY = (0, IY.useRef)(), fY = (0, IY.useRef)(null);
+
+      function jY() {
+        const YY = null !== yY && void 0 !== yY ? yY : "Rested Speed";
+        aY.gameBridge.send("wakeUp", cY ? YY : null), fY.current = null, DY(!1), SY(null), eY(1), BY(!1), KY(!1)
+      }
+
+      function hY() {
+        return !NY && (jY(), !0)
+      }
+      return (0, AY.g)("PlayerPhysicsTypeUpdate", (YY => {
+        YY !== fY.current && (fY.current = YY, YY === RY.n.SLEEPING ? (ZY.current || (HY.current = aY.gameBridge.lookup("cameraZoom", null), ZY.current = !0), zY.current = !0, aY.gameBridge.send("setCameraZoom", 3), DY(!0), eY(function() {
+          for (const YY of aY.gameBridge.lookup("blocksStandingOn", null)) {
+            if (iY.c.leafBeds.includes(YY)) return console.log(`Found leaf bed: ${YY}`), 1;
+            if (iY.c.woolBeds.includes(YY)) return console.log(`Found woold bed: ${YY}`), 2;
+            if (iY.c.strongBeds.includes(YY)) return console.log(`Found strong bed ${YY}`), 3
           }
-          var lB = yB.URL || yB.webkitURL,
-            JB = lB.createObjectURL(pB),
-            YB = new yB[TB](JB, dB);
-          return lB.revokeObjectURL(JB), YB
-        } catch (gB) {
-          return new yB[TB]("data:application/javascript,".concat(encodeURIComponent(BB)), dB)
-        }
-      } catch (gB) {
-        if (!VB) throw Error("Inline worker is not supported");
-        return new yB[TB](VB, dB)
+          return 1
+        }())) : (ZY.current = !1, DY(!1), SY(null), eY(1)))
+      })), (0, IY.useEffect)((() => () => {
+        (0, gY.j)(VY)
+      }), []), (0, IY.useEffect)((() => {
+        rY ? (0, gY.k)(VY) : ((0, gY.j)(VY), zY.current && (aY.gameBridge.send("setCameraZoom", HY.current), zY.current = !1))
+      }), [rY]), (0, EY.t)("overlay", CY, hY, rY), (0, mY.jsx)(FY.b, {
+        className: "SleepingOverlay",
+        "data-camera-keeper": "",
+        in: rY,
+        timeout: 300,
+        nodeRef: CY,
+        unmountOnExit: !0,
+        children: (0, mY.jsx)("div", {
+          ref: CY,
+          onClick: YY => {
+            hY() && YY.stopPropagation()
+          },
+          children: (0, mY.jsxs)("div", {
+            className: "SleepingOverlayBody",
+            children: [(0, mY.jsx)("div", {
+              className: "SleepingOverlayPerkList",
+              children: OY.d.map((rY => (0, mY.jsxs)(lY, {
+                restedEffect: rY,
+                eR: yY,
+                setChosenRestedEffect: SY,
+                children: [(0, mY.jsxs)("div", {
+                  className: "SleepingOverlayPerkTitle",
+                  children: [(0, mY.jsx)(vY.b, {
+                    text: [{
+                      icon: rY
+                    }]
+                  }), OY.c[rY].shortName]
+                }), (0, mY.jsx)("div", {
+                  className: "SleepingOverlayPerkDescription",
+                  children: YY(OY.c[rY].description, {
+                    time: OY.c[rY].effectLevelDurations[TY] / 6e4
+                  })
+                })]
+              }, rY)))
+            }), (0, mY.jsxs)("div", {
+              className: "SleepingOverlayPerkBottom",
+              children: [(0, mY.jsx)("div", {
+                className: "SleepingOverlayPerkBottomSide"
+              }), (0, mY.jsxs)(uY.f, {
+                className: "SleepingOverlayWakeUpButton",
+                onClick: YY => {
+                  cY ? jY() : (BY(!0), (0, oY.V)((() => {
+                    BY(!1), KY(!0)
+                  }), !0)), YY.stopPropagation()
+                },
+                loading: NY,
+                children: [!cY && (0, mY.jsxs)(mY.Fragment, {
+                  children: [(0, mY.jsx)(WY.e, {
+                    name: "film"
+                  }), " ", YY("classicGame:watchAdToGetRestedPerk")]
+                }), cY && YY("classicGame:wakeUp")]
+              }), (0, mY.jsxs)("div", {
+                className: "SleepingOverlayPerkBottomSide",
+                children: [(0, mY.jsx)("div", {
+                  className: QY()("SleepingOverlayBedIcon", {
+                    SleepingOverlayBedIconActive: 1 === TY
+                  }),
+                  children: (0, mY.jsx)(vY.b, {
+                    text: [{
+                      icon: "Leaf Bed"
+                    }]
+                  })
+                }), (0, mY.jsx)("div", {
+                  className: QY()("SleepingOverlayBedIcon", {
+                    SleepingOverlayBedIconActive: 2 === TY
+                  }),
+                  children: (0, mY.jsx)(vY.b, {
+                    text: [{
+                      icon: "Red Bed"
+                    }]
+                  })
+                }), (0, mY.jsx)("div", {
+                  className: QY()("SleepingOverlayBedIcon", {
+                    SleepingOverlayBedIconActive: 3 === TY
+                  }),
+                  children: (0, mY.jsx)(vY.b, {
+                    text: [{
+                      icon: "Red Strongbed"
+                    }]
+                  })
+                })]
+              })]
+            })]
+          })
+        })
+      })
+    }
+    const lY = (0, IY.memo)((function(YY) {
+      let {
+        children: rY,
+        restedEffect: DY,
+        eR: FY,
+        setChosenRestedEffect: AY
+      } = YY;
+      return DY === FY ? (0, mY.jsx)(uY.n, {
+        onClick: YY => {
+          YY.stopPropagation()
+        },
+        children: rY
+      }) : (0, mY.jsx)(uY.j, {
+        onClick: YY => {
+          AY(DY), YY.stopPropagation()
+        },
+        children: rY
+      })
+    }))
+  },
+  39674: (YY, rY, DY) => {
+    DY.d(rY, {
+      b: () => xY
+    });
+    var FY = DY(19),
+      AY = DY(25),
+      IY = DY(3852),
+      RY = DY(332),
+      OY = DY(1619),
+      gY = DY(7614),
+      aY = DY(3863),
+      vY = DY(8098),
+      uY = DY(7642),
+      sY = DY(7623),
+      iY = DY(7647),
+      yY = DY(1663),
+      QY = DY(7655),
+      oY = DY(8080),
+      WY = DY(8225),
+      EY = DY(8104),
+      mY = DY(8230),
+      VY = DY(1808),
+      SY = DY(7598),
+      lY = DY(8129),
+      TY = DY(8126),
+      eY = DY(8102);
+    class NY {
+      constructor() {
+        this.lostAtMs = null
+      }
+      update(YY, rY) {
+        return YY ? (this.lostAtMs = null, !1) : (this.lostAtMs ??= rY, rY - this.lostAtMs >= 250)
+      }
+      reset() {
+        this.lostAtMs = null
       }
     }
+    class BY {
+      constructor(YY, rY) {
+        this.press = YY, this.release = rY, this.downAtMs = null, this.token = null, this.latched = !1
+      }
+      update(YY, rY, DY, FY) {
+        if (YY && null === this.downAtMs) return this.downAtMs = DY, this.latched = FY, void(this.token = this.press());
+        null !== this.downAtMs && (this.latched ? YY && this.end() : !rY && DY - this.downAtMs >= 40 && this.end())
+      }
+      isLatched() {
+        return null !== this.downAtMs && this.latched
+      }
+      unlatch() {
+        this.latched = !1
+      }
+      cancel() {
+        null !== this.downAtMs && this.end()
+      }
+      end() {
+        const YY = this.token;
+        this.downAtMs = null, this.token = null, this.latched = !1, this.release(YY)
+      }
+    }
+    const cY = {
+        kind: "specialAction",
+        action: "SpecialAction2"
+      },
+      KY = YY => {
+        let rY = null;
+        const DY = new eY.d,
+          FY = () => {
+            rY && (((YY, rY, DY) => {
+              switch (DY.kind) {
+                case "reload":
+                  return void rY.specialActionUp("SpecialAction1");
+                case "specialAction":
+                  return void rY.specialActionUp(DY.action);
+                case "customButton":
+                  return void VY.gameBridge.send("pressCustomButton", {
+                    id: DY.id,
+                    down: !1
+                  });
+                case "touchButton":
+                  YY.pressTouchButton(!1)
+              }
+            })(YY, rY.bodies, rY.action), rY = null)
+          },
+          IY = (DY, AY, IY, RY) => {
+            FY(), rY = {
+              action: AY,
+              bodies: DY,
+              heldBy: IY,
+              atMs: RY
+            }, ((YY, rY, DY) => {
+              switch (DY.kind) {
+                case "reload":
+                  return rY.reloadGun(), void rY.specialActionDown("SpecialAction1");
+                case "specialAction":
+                  return void rY.specialActionDown(DY.action);
+                case "customButton":
+                  return void VY.gameBridge.send("pressCustomButton", {
+                    id: DY.id,
+                    down: !0
+                  });
+                case "touchButton":
+                  YY.pressTouchButton(!0)
+              }
+            })(YY, DY, AY)
+          };
+        return {
+          update: (RY, OY, aY, vY) => {
+            var sY;
+            const iY = (0, lY.l)(YY.contextActionInputs()),
+              yY = null !== (sY = iY[0]) && void 0 !== sY ? sY : cY;
+            (0, TY.c)((0, lY.h)(yY) ? yY : null);
+            const QY = (0, lY.d)(iY);
+            (0, TY.g)(QY);
+            const oY = (0, gY.i)("actionButton");
+            if (QY) {
+              const YY = DY.update(OY.wasPressed(oY), OY.isHeld(oY), aY, vY);
+              "tap" === YY ? IY(RY, yY, [oY], aY) : "hold" === YY && (uY.b.consumeButton(oY), AY.g.vo(mY.l, iY))
+            } else DY.release(), OY.wasPressed(oY) && IY(RY, yY, [oY], aY);
+            rY && aY - rY.atMs >= 40 && !rY.heldBy.some((YY => (0, SY.E)(OY.frame.values, YY))) && FY()
+          },
+          pressPicked: (YY, rY) => {
+            IY(YY, rY, [(0, gY.i)("menuConfirm"), (0, gY.i)("actionButton")], performance.now())
+          },
+          release: () => {
+            DY.release(), FY(), (0, TY.c)(null), (0, TY.g)(!1)
+          }
+        }
+      };
+    var HY = DY(7594);
+    var zY = DY(39667),
+      ZY = DY(8146),
+      CY = DY(7637),
+      fY = DY(8255);
+    var jY = DY(39663),
+      hY = DY(8263),
+      dY = DY(39677),
+      JY = DY(8248),
+      MY = DY(8153),
+      wY = DY(8159),
+      bY = DY(8166),
+      XY = DY(8082);
+    const qY = () => XY.c[(0, sY.i)().tapHoldTime].wheelMs,
+      pY = () => ((0, vY.d)(), new Event("controllerMenuKey")),
+      kY = (YY, rY, DY) => new BY((() => {
+        const DY = YY.bodies();
+        return {
+          bodies: DY,
+          press: rY(DY)
+        }
+      }), (YY => {
+        let {
+          bodies: rY,
+          press: FY
+        } = YY;
+        DY(rY, FY)
+      })),
+      GY = {
+        running: !1,
+        latchedAtMs: -1 / 0
+      },
+      xY = YY => {
+        const rY = {
+          x: 0,
+          y: 0,
+          magnitude: 0,
+          headingOffset: 0,
+          jumpHeld: !1,
+          jumpPressed: !1,
+          running: !1,
+          sprintHeld: !1
+        };
+        let DY = GY;
+        const vY = new dY.b,
+          VY = AY.g.subscribe("appManagerUpdated|activeInputDevice", (rY => {
+            YY.deviceChanged(rY)
+          }));
+        let lY = null,
+          TY = 0;
+        const BY = () => {
+          lY = null, (0, MY.d)(null)
+        };
+        let cY = !1;
+        const xY = new NY,
+          nY = YY.look,
+          PY = new eY.d,
+          UY = new eY.d,
+          LY = KY(YY),
+          tY = AY.g.subscribe(mY.n, (rY => {
+            LY.pressPicked(YY.bodies(), rY)
+          })),
+          Yr = kY(YY, (YY => YY.primaryFireDown()), ((YY, rY) => {
+            YY.primaryFireUp(rY)
+          })),
+          rr = kY(YY, (YY => YY.altFireDown()), ((YY, rY) => {
+            YY.altFireUp(rY)
+          }));
+        let Dr = !1,
+          Fr = !1,
+          Ar = !1;
+        const Ir = (0, oY.b)(SY.Z),
+          Rr = (0, oY.b)(SY.Z),
+          Or = new eY.d;
+        let gr = !1;
+        const ar = () => {
+            Ir.reset(), Rr.reset(), Or.release(), (0, bY.g)(!1), nY.release(), Yr.cancel(), (0, wY.c)(!1), rr.cancel(), LY.release(), PY.release(), UY.release(), BY()
+          },
+          vr = function() {
+            let FY = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+            ar(), Fr = !1, FY || (Dr = !1, DY = GY, Object.assign(rY, {
+              x: 0,
+              y: 0,
+              magnitude: 0,
+              headingOffset: 0,
+              jumpHeld: !1,
+              jumpPressed: !1,
+              running: !1,
+              sprintHeld: !1
+            }), YY.stopMoving())
+          },
+          ur = function(FY, AY, IY) {
+            let RY = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+            const OY = (0, sY.i)(),
+              aY = (0, jY.f)(AY, OY.moveDeadzone),
+              uY = (0, gY.i)("sprint");
+            DY = (0, jY.p)(DY, {
+              sprintPressed: FY.wasPressed(uY),
+              magnitude: aY.magnitude,
+              autoSprint: OY.autoSprint,
+              nowMs: IY
+            }), rY.running = DY.running, rY.sprintHeld = FY.isHeld(uY), rY.x = aY.x, rY.y = aY.y, rY.magnitude = aY.speed, rY.headingOffset = aY.headingOffset, Dr = aY.magnitude > 0;
+            const iY = (0, gY.i)("jump");
+            if (rY.jumpHeld = FY.isHeld(iY), rY.jumpPressed = FY.wasPressed(iY), rY.jumpPressed && YY.bodies().jumpDown(), RY) return void YY.move(rY, null);
+            const yY = (0, gY.i)("sneak"),
+              QY = vY.filter({
+                sneakHeld: FY.isHeld(yY),
+                sneakPressed: FY.wasPressed(yY),
+                sneakTogglePressed: FY.wasPressed((0, gY.i)("sneakToggle"))
+              }, IY);
+            YY.move(rY, {
+              ...QY,
+              mode: OY.sneakMode
+            })
+          },
+          sr = (YY, rY) => {
+            const DY = (0, gY.i)("chat");
+            if ("off" === (0, sY.i)().quickChat) return void(YY.wasPressed(DY) && (uY.b.consumeButton(DY), AY.g.vo(ZY.e)));
+            const FY = PY.update(YY.wasPressed(DY), YY.isHeld(DY), rY, qY());
+            "tap" === FY || "hold" === FY && null === (0, yY.b)() ? AY.g.vo(ZY.e) : "hold" === FY && (uY.b.consumeButton(DY), AY.g.vo(EY.k))
+          },
+          ir = (rY, DY) => {
+            ((YY, rY) => {
+              const DY = (0, WY.d)(),
+                FY = (0, gY.i)("emoteWheel");
+              if ("wheel" === (0, sY.i)().emoteButton) return YY.wasPressed(FY) && (uY.b.consumeButton(FY), AY.g.vo("requestEmoteWheelPadOpen", !0)), (0, WY.d)() !== DY;
+              const IY = UY.update(YY.wasPressed(FY), YY.isHeld(FY), rY, qY());
+              return "tap" === IY ? AY.g.vo("requestEmoteRepeatLast") : "hold" === IY && (uY.b.consumeButton(FY), AY.g.vo("requestEmoteWheelPadOpen", !1)), (0, WY.d)() !== DY
+            })(rY, DY) || sr(rY, DY), rY.wasPressed((0, gY.i)("inventory")) && (uY.b.consumeButton((0, gY.i)("inventory")), (0, OY.x)(pY(), "inventory", YY.hasFullInventory())), rY.wasPressed((0, gY.i)("pause")) && (uY.b.consumeButton((0, gY.i)("pause")), (0, aY.c)() === RY.t.SOCIAL ? (0, OY.v)(pY(), RY.t.SOCIAL) : (0, OY.h)(pY())), rY.wasPressed((0, gY.i)("leaderboard")) && !(0, IY.c)() && (uY.b.consumeButton((0, gY.i)("leaderboard")), ((YY, rY) => {
+              if ("shop" === (0, CY.c)()) return AY.g.vo(fY.m), void(0, OY.v)(YY, RY.t.SHOP, !0);
+              (0, OY.v)(YY, RY.t.LOBBY_LEADERBOARD, rY)
+            })(pY(), YY.hasLobbyLeaderboard()))
+          },
+          yr = (rY, DY) => {
+            const FY = YY.bodies();
+            ((rY, DY) => {
+              const FY = (0, gY.i)("attack"),
+                AY = rY.wasPressed(FY);
+              AY && !Yr.isLatched() && (cY = YY.targetsBlock()), Yr.update(AY, rY.isHeld(FY), DY, "toggle" === (0, sY.i)().attackMode), Yr.isLatched() && cY ? xY.update(YY.targetsBlock(), DY) && Yr.unlatch() : xY.reset(), (0, wY.c)(Yr.isLatched())
+            })(rY, DY), rr.update(rY.wasPressed((0, gY.i)("use")), rY.isHeld((0, gY.i)("use")), DY, !1), Ir.update(rY.isHeld((0, gY.i)("hotbarPrevious")), DY) && YY.scrollHotbar(-1), Rr.update(rY.isHeld((0, gY.i)("hotbarNext")), DY) && YY.scrollHotbar(1), ((rY, DY, FY) => {
+              const AY = (0, gY.i)("perspective"),
+                IY = (0, gY.i)("pickBlock"),
+                RY = YY.pickBlockAllowed();
+              (0, bY.g)(RY && !gr && YY.targetsBlock());
+              const OY = () => {
+                DY.pickBlock() && (gr = !0, (0, bY.g)(!1))
+              };
+              if (!RY || IY !== AY) return Or.release(), rY.wasPressed(AY) && DY.swapCameraZoom(), void(RY && rY.wasPressed(IY) && OY());
+              const aY = Or.update(rY.wasPressed(IY), rY.isHeld(IY), FY, qY());
+              "tap" === aY ? OY() : "hold" === aY && DY.swapCameraZoom()
+            })(rY, FY, DY), ((rY, DY, FY) => {
+              const AY = (0, gY.i)("drop");
+              if (rY.wasPressed(AY)) {
+                DY.dropItem(!1);
+                const YY = (0, sY.i)();
+                "off" !== YY.buttonRepeat && (lY = FY, TY = XY.c[YY.tapHoldTime].dropStackMs, (0, MY.d)(TY))
+              }
+              null !== lY && (!rY.isHeld(AY) || YY.selectedSlotEmpty() ? BY() : FY - lY >= TY && (BY(), DY.dropItem(!0)))
+            })(rY, FY, DY), LY.update(FY, rY, DY, qY()), ir(rY, DY)
+          },
+          Qr = uY.b.register({
+            name: "gameplay",
+            isActive: () => {
+              const rY = Dr && "keyboardMouse" === FY.b.get("activeInputDevice") && !(0, iY.E)(),
+                DY = (0, iY.i)() ? [zY.c] : [];
+              return ((0, iY.i)() || rY) && (0, QY.e)(DY) && YY.hasPlayer()
+            },
+            onFrame: YY => {
+              const rY = performance.now(),
+                DY = (0, sY.i)(),
+                FY = (0, jY.t)(YY, (0, jY.j)(DY, (0, gY.i)("pause"), (0, hY.e)().isSupported())),
+                AY = (0, jY.h)(FY, DY.swapSticks);
+              return (0, iY.i)() ? (Fr = !1, (0, QY.e)() ? (Ar = !1, nY.update(AY.look, DY, FY.isHeld((0, gY.i)("use"))), ur(FY, AY.move, rY), void yr(FY, rY)) : (Ar || (Ar = !0, vY.lostToPadScreen(), vr()), void sr(FY, rY))) : (Fr || (ar(), Fr = !0), void ur(FY, AY.move, rY))
+            },
+            onDeactivate: YY => {
+              (0, iY.i)() && vY.lostToPadScreen(), vr(YY)
+            },
+            onPeekFrame: rY => {
+              (0, iY.i)() && (0, QY.e)(zY.g) && YY.hasPlayer() ? ur(rY, (0, jY.h)(rY, (0, sY.i)().swapSticks).move, performance.now(), !0) : vr()
+            }
+          }),
+          or = (0, zY.e)(YY),
+          Wr = (() => {
+            const YY = AY.g.subscribe(HY.c, (YY => {
+              !YY && (0, iY.i)() && "inGame" === FY.b.get("gameState") && AY.g.vo("showBottomMessage", {
+                message: [{
+                  translationKey: "controller:disconnected"
+                }],
+                timeoutLength: 3e3,
+                type: "Warning"
+              })
+            }));
+            return () => {
+              AY.g.unsubscribe(YY)
+            }
+          })();
+        return () => {
+          vr(), YY.uninstall(), (0, JY.g)(!1), (0, bY.g)(!1), AY.g.unsubscribe(VY), AY.g.unsubscribe(tY), Qr(), or(), Wr(), nY.uninstall()
+        }
+      }
+  },
+  39667: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => yY,
+      e: () => oY,
+      g: () => iY
+    });
+    var FY = DY(1287),
+      AY = DY(3852),
+      IY = DY(8202),
+      RY = DY(36311),
+      OY = DY(1692),
+      gY = DY(1208),
+      aY = DY(7655),
+      vY = DY(8104),
+      uY = DY(8230);
+    const sY = {
+        emoteWheel: IY.i,
+        quickChatWheel: vY.d,
+        actionWheel: uY.o
+      },
+      iY = Object.keys(sY),
+      yY = "dead",
+      QY = YY => (0, FY.h)().includes(YY),
+      oY = YY => {
+        const rY = [(0, aY.k)(yY, (() => YY.hasPlayer() && YY.isPlayerDead())), (0, aY.k)("sleeping", (() => QY(RY.i))), (0, aY.k)("turnstile", (() => QY(gY.e))), (0, aY.k)("videoAd", OY.g), (0, aY.k)("replay", (() => (0, AY.c)() || YY.isReplayMode())), (0, aY.k)("freeCamera", (() => YY.isFreeCameraOn())), ...Object.entries(sY).map((YY => {
+          let [rY, DY] = YY;
+          return (0, aY.k)(rY, DY)
+        }))];
+        return () => {
+          for (const YY of rY) YY()
+        }
+      }
+  },
+  39663: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => AY,
+      f: () => gY,
+      h: () => OY,
+      j: () => vY,
+      m: () => RY,
+      n: () => IY,
+      p: () => aY,
+      t: () => uY
+    });
+    var FY = DY(7598);
+    class AY {
+      constructor() {
+        this.fullTiltSinceMs = null
+      }
+      update(YY, rY, DY) {
+        const AY = (0, FY.g)(YY, rY.lookDeadzone);
+        if (Math.hypot(AY.x, AY.y) < .9 || Math.abs(AY.x) < Math.abs(AY.y)) return this.fullTiltSinceMs = null, 1;
+        null === this.fullTiltSinceMs && (this.fullTiltSinceMs = DY);
+        const IY = (RY = rY.lookSensitivityX, Math.min(1, 100 / RY));
+        var RY;
+        return 1 + (1.6 - 1) * Math.max(0, Math.min(1, (DY - this.fullTiltSinceMs - 250 * IY) / (200 * IY)))
+      }
+      reset() {
+        this.fullTiltSinceMs = null
+      }
+    }
+    const IY = (YY, rY, DY, AY, IY) => {
+        let RY = 1;
+        return "boost" === DY.lookCurve ? RY = YY.update(rY, DY, IY) : YY.reset(),
+          function(YY, rY) {
+            let {
+              yawBoost: DY = 1,
+              aiming: AY = !1
+            } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+            const IY = (0, FY.f)((0, FY.g)(YY, rY.lookDeadzone), rY.lookCurve),
+              RY = 220 * Math.PI / 180,
+              OY = AY ? rY.aimLookSensitivity / 100 : 1,
+              gY = rY.lookSensitivityX / 100 * OY,
+              aY = rY.lookSensitivityY / 100 * OY;
+            return {
+              yawRadPerSec: IY.x * RY * gY * DY * (rY.invertLookX ? -1 : 1),
+              pitchRadPerSec: IY.y * RY * .7 * aY * (rY.invertLookY ? -1 : 1)
+            }
+          }(rY, DY, {
+            yawBoost: RY,
+            aiming: AY
+          })
+      },
+      RY = (YY, rY) => {
+        const DY = Math.max(0, Math.min(250, rY)) / 1e3;
+        return {
+          Tl: YY.yawRadPerSec * DY,
+          Bl: YY.pitchRadPerSec * DY
+        }
+      },
+      OY = (YY, rY) => rY ? {
+        move: YY.rightStick,
+        look: YY.leftStick
+      } : {
+        move: YY.leftStick,
+        look: YY.rightStick
+      },
+      gY = (YY, rY) => {
+        const DY = (0, FY.g)(YY, rY),
+          AY = Math.min(1, Math.hypot(DY.x, DY.y));
+        return {
+          magnitude: AY,
+          speed: Math.min(1, AY / .8),
+          headingOffset: 0 === AY ? 0 : Math.atan2(DY.x, -DY.y),
+          x: DY.x,
+          y: DY.y
+        }
+      },
+      aY = (YY, rY) => {
+        let {
+          sprintPressed: DY,
+          magnitude: FY,
+          autoSprint: AY,
+          nowMs: IY
+        } = rY;
+        const RY = DY ? IY : YY.latchedAtMs,
+          OY = (YY => {
+            let {
+              running: rY,
+              magnitude: DY,
+              sprintPressed: FY,
+              autoSprint: AY
+            } = YY;
+            return !(DY < .5) && (!!FY || !!(AY && DY >= .9) || rY)
+          })({
+            running: YY.running,
+            magnitude: FY,
+            sprintPressed: IY - RY <= 1e3,
+            autoSprint: AY
+          });
+        return {
+          running: OY,
+          latchedAtMs: OY ? -1 / 0 : RY
+        }
+      },
+      vY = (YY, rY, DY) => DY && YY.gyroAiming && "button" === YY.gyroActivation && YY.gyroButton !== rY ? YY.gyroButton : null,
+      uY = (YY, rY) => rY ? {
+        ...YY,
+        isHeld: DY => DY !== rY && YY.isHeld(DY),
+        wasPressed: DY => DY !== rY && YY.wasPressed(DY),
+        wasReleased: DY => DY !== rY && YY.wasReleased(DY),
+        value: DY => DY === rY ? 0 : YY.value(DY)
+      } : YY
+  },
+  39677: (YY, rY, DY) => {
+    DY.d(rY, {
+      b: () => AY,
+      e: () => FY
+    });
+    const FY = YY => {
+      let {
+        mode: rY,
+        sneakHeld: DY,
+        sneakPressed: FY,
+        sneakTogglePressed: AY,
+        descending: IY,
+        canCrouch: RY,
+        toggled: OY
+      } = YY;
+      return RY ? IY ? {
+        crouchHeld: DY,
+        toggled: !1
+      } : "hold" === rY ? {
+        crouchHeld: DY,
+        toggled: AY ? !OY : OY
+      } : {
+        crouchHeld: !1,
+        toggled: FY || AY ? !OY : OY
+      } : {
+        crouchHeld: !1,
+        toggled: !1
+      }
+    };
+    class AY {
+      constructor() {
+        this.regainPending = !1, this.regainedAtMs = -1 / 0, this.graceEndsMs = -1 / 0, this.ignoringHeld = !1
+      }
+      lostToPadScreen() {
+        this.regainPending = !0
+      }
+      filter(YY, rY) {
+        this.regainPending && (this.regainPending = !1, this.regainedAtMs = rY, this.graceEndsMs = rY + 500);
+        const DY = rY < this.graceEndsMs;
+        return DY && (YY.sneakPressed || YY.sneakTogglePressed) && (this.graceEndsMs = Math.min(this.regainedAtMs + 1e3, Math.max(this.graceEndsMs, rY + 300))), YY.sneakHeld ? DY && YY.sneakPressed && (this.ignoringHeld = !0) : this.ignoringHeld = !1, {
+          sneakHeld: YY.sneakHeld && !this.ignoringHeld,
+          sneakPressed: YY.sneakPressed && !this.ignoringHeld,
+          sneakTogglePressed: YY.sneakTogglePressed && !DY
+        }
+      }
+    }
+  },
+  39651: (YY, rY, DY) => {
+    DY(8263)
+  },
+  39658: (YY, rY, DY) => {
+    DY.d(rY, {
+      e: () => mY
+    });
+    var FY = DY(25),
+      AY = DY(8202),
+      IY = DY(8216),
+      RY = DY(7614),
+      OY = DY(7642),
+      gY = DY(7623),
+      aY = DY(39663),
+      vY = DY(39667),
+      uY = DY(7655),
+      sY = DY(7598),
+      iY = DY(8104),
+      yY = DY(8230);
+    const QY = [{
+        isOpen: AY.l,
+        openButton: () => (0, RY.i)("emoteWheel"),
+        aim: YY => {
+          FY.g.vo("emoteWheelPadAim", YY)
+        },
+        commit: YY => {
+          FY.g.vo("requestEmoteWheelPadCommit", YY)
+        },
+        close: () => {
+          FY.g.vo("requestEmoteWheelClose")
+        }
+      }, {
+        isOpen: iY.d,
+        openButton: () => (0, RY.i)("chat"),
+        aim: YY => {
+          FY.g.vo(iY.g, YY)
+        },
+        commit: YY => {
+          FY.g.vo(iY.i, YY)
+        },
+        close: () => {
+          FY.g.vo(iY.h)
+        },
+        keptOpenBy: [vY.c]
+      }, {
+        isOpen: yY.o,
+        openButton: () => (0, RY.i)("actionButton"),
+        aim: YY => {
+          FY.g.vo(yY.c, YY)
+        },
+        commit: YY => {
+          FY.g.vo(yY.h, YY)
+        },
+        close: () => {
+          FY.g.vo(yY.e)
+        }
+      }],
+      oY = () => {
+        var YY;
+        return null !== (YY = QY.find((YY => YY.isOpen()))) && void 0 !== YY ? YY : null
+      },
+      WY = YY => (0, RY.J)(YY.openButton()),
+      EY = (YY, rY) => !(0, sY.E)(YY.frame.values, rY),
+      mY = () => {
+        let YY = null,
+          rY = !1,
+          DY = !1;
+        return OY.b.register({
+          name: "wheel",
+          isActive: () => null !== oY(),
+          peek: () => {
+            const YY = oY();
+            return YY && WY(YY) ? null : {
+              over: "gameplay",
+              stick: (0, gY.i)().swapSticks ? "right" : "left"
+            }
+          },
+          onFrame: FY => {
+            var AY;
+            const sY = oY();
+            if (!sY) return;
+            if (null !== (0, uY.b)([...vY.g, ...null !== (AY = sY.keptOpenBy) && void 0 !== AY ? AY : []])) return void sY.close();
+            const iY = sY.openButton(),
+              yY = (0, aY.h)(FY.frame, (0, gY.i)().swapSticks),
+              QY = WY(sY) ? yY.move : yY.look;
+            YY !== sY ? (YY = sY, rY = !EY(FY, iY) || Math.hypot(QY.x, QY.y) >= IY.G, DY = !1) : DY && (DY = !1, EY(FY, iY) && (rY = !1)), sY.aim(QY);
+            const mY = (0, RY.i)("menuConfirm"),
+              VY = (0, RY.i)("menuBack");
+            return FY.wasPressed(VY) ? (OY.b.consumeButton(VY), void sY.close()) : FY.wasPressed(mY) || FY.wasPressed(iY) ? (OY.b.consumeButton(mY), OY.b.consumeButton(iY), void sY.commit(!1)) : void(rY && EY(FY, iY) && (rY = !1, sY.commit(!0)))
+          },
+          onDeactivate: () => {
+            DY = null !== YY && oY() === YY, DY || (YY = null, rY = !1)
+          }
+        })
+      }
+  },
+  8908: (YY, rY, DY) => {
+    DY.d(rY, {
+      d: () => AY,
+      g: () => IY
+    });
+    var FY = DY(8870);
+    const AY = "Air",
+      IY = Object.freeze(new FY.h(AY, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

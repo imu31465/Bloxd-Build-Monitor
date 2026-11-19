@@ -1,126 +1,462 @@
 export const id = 303;
 export const ids = [303];
 export const modules = {
-  40873: (BB, TB, dB) => {
-    dB.d(TB, {
-      b: () => lB
+  40907: (YY, rY, DY) => {
+    DY.r(rY), DY.d(rY, {
+      _KTXTextureLoader: () => yY
     });
-    var VB = dB(38595);
-    const yB = "clipPlaneFragment",
-      pB = "#if defined(CLIPPLANE) || defined(CLIPPLANE2) || defined(CLIPPLANE3) || defined(CLIPPLANE4) || defined(CLIPPLANE5) || defined(CLIPPLANE6)\nif (false) {}\n#endif\n#ifdef CLIPPLANE\nelse if (fClipDistance>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE2\nelse if (fClipDistance2>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE3\nelse if (fClipDistance3>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE4\nelse if (fClipDistance4>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE5\nelse if (fClipDistance5>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE6\nelse if (fClipDistance6>0.0)\n{discard;}\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
+    var FY = DY(38040);
+    class AY {
+      constructor(YY, rY) {
+        if (this.data = YY, this.isInvalid = !1, !AY.IsValid(YY)) return this.isInvalid = !0, void FY.d.Error("texture missing KTX identifier");
+        const DY = Uint32Array.BYTES_PER_ELEMENT,
+          IY = new DataView(this.data.buffer, this.data.byteOffset + 12, 13 * DY),
+          RY = 67305985 === IY.getUint32(0, !0);
+        return this.glType = IY.getUint32(1 * DY, RY), this.glTypeSize = IY.getUint32(2 * DY, RY), this.glFormat = IY.getUint32(3 * DY, RY), this.glInternalFormat = IY.getUint32(4 * DY, RY), this.glBaseInternalFormat = IY.getUint32(5 * DY, RY), this.pixelWidth = IY.getUint32(6 * DY, RY), this.pixelHeight = IY.getUint32(7 * DY, RY), this.pixelDepth = IY.getUint32(8 * DY, RY), this.numberOfArrayElements = IY.getUint32(9 * DY, RY), this.numberOfFaces = IY.getUint32(10 * DY, RY), this.numberOfMipmapLevels = IY.getUint32(11 * DY, RY), this.bytesOfKeyValueData = IY.getUint32(12 * DY, RY), 0 !== this.glType ? (FY.d.Error("only compressed formats currently supported"), void(this.isInvalid = !0)) : (this.numberOfMipmapLevels = Math.max(1, this.numberOfMipmapLevels), 0 === this.pixelHeight || 0 !== this.pixelDepth ? (FY.d.Error("only 2D textures currently supported"), void(this.isInvalid = !0)) : 0 !== this.numberOfArrayElements ? (FY.d.Error("texture arrays not currently supported"), void(this.isInvalid = !0)) : this.numberOfFaces !== rY ? (FY.d.Error("number of faces expected" + rY + ", but found " + this.numberOfFaces), void(this.isInvalid = !0)) : void(this.loadType = AY.COMPRESSED_2D))
+      }
+      uploadLevels(YY, rY) {
+        switch (this.loadType) {
+          case AY.COMPRESSED_2D:
+            this._upload2DCompressedLevels(YY, rY);
+          case AY.TEX_2D:
+          case AY.COMPRESSED_3D:
+          case AY.TEX_3D:
+        }
+      }
+      _upload2DCompressedLevels(YY, rY) {
+        let DY = AY.HEADER_LEN + this.bytesOfKeyValueData,
+          FY = this.pixelWidth,
+          IY = this.pixelHeight;
+        const RY = rY ? this.numberOfMipmapLevels : 1;
+        for (let AY = 0; AY < RY; AY++) {
+          const rY = new Int32Array(this.data.buffer, this.data.byteOffset + DY, 1)[0];
+          DY += 4;
+          for (let RY = 0; RY < this.numberOfFaces; RY++) {
+            const OY = new Uint8Array(this.data.buffer, this.data.byteOffset + DY, rY);
+            YY.ky()._uploadCompressedDataToTextureDirectly(YY, YY.format, FY, IY, OY, RY, AY), DY += rY, DY += 3 - (rY + 3) % 4
+          }
+          FY = Math.max(1, .5 * FY), IY = Math.max(1, .5 * IY)
+        }
+      }
+      static IsValid(YY) {
+        if (YY.byteLength >= 12) {
+          const rY = new Uint8Array(YY.buffer, YY.byteOffset, 12);
+          if (171 === rY[0] && 75 === rY[1] && 84 === rY[2] && 88 === rY[3] && 32 === rY[4] && 49 === rY[5] && 49 === rY[6] && 187 === rY[7] && 13 === rY[8] && 10 === rY[9] && 26 === rY[10] && 10 === rY[11]) return !0
+        }
+        return !1
+      }
+    }
+    AY.HEADER_LEN = 64, AY.COMPRESSED_2D = 0, AY.COMPRESSED_3D = 1, AY.TEX_2D = 2, AY.TEX_3D = 3;
+    var IY, RY, OY, gY = DY(40912),
+      aY = DY(39219);
+
+    function vY(YY, rY) {
+      const DY = rY?.jsDecoderModule || KTX2DECODER;
+      YY && (YY.wasmBaseUrl && (DY.Transcoder.WasmBaseUrl = YY.wasmBaseUrl), YY.wasmUASTCToASTC && (DY.LiteTranscoder_UASTC_ASTC.WasmModuleURL = YY.wasmUASTCToASTC), YY.wasmUASTCToBC7 && (DY.LiteTranscoder_UASTC_BC7.WasmModuleURL = YY.wasmUASTCToBC7), YY.wasmUASTCToRGBA_UNORM && (DY.LiteTranscoder_UASTC_RGBA_UNORM.WasmModuleURL = YY.wasmUASTCToRGBA_UNORM), YY.wasmUASTCToRGBA_SRGB && (DY.LiteTranscoder_UASTC_RGBA_SRGB.WasmModuleURL = YY.wasmUASTCToRGBA_SRGB), YY.wasmUASTCToR8_UNORM && (DY.LiteTranscoder_UASTC_R8_UNORM.WasmModuleURL = YY.wasmUASTCToR8_UNORM), YY.wasmUASTCToRG8_UNORM && (DY.LiteTranscoder_UASTC_RG8_UNORM.WasmModuleURL = YY.wasmUASTCToRG8_UNORM), YY.jsMSCTranscoder && (DY.MSCTranscoder.JSModuleURL = YY.jsMSCTranscoder), YY.wasmMSCTranscoder && (DY.MSCTranscoder.WasmModuleURL = YY.wasmMSCTranscoder), YY.wasmZSTDDecoder && (DY.ZSTDDecoder.WasmModuleURL = YY.wasmZSTDDecoder)), rY && (rY.wasmUASTCToASTC && (DY.LiteTranscoder_UASTC_ASTC.WasmBinary = rY.wasmUASTCToASTC), rY.wasmUASTCToBC7 && (DY.LiteTranscoder_UASTC_BC7.WasmBinary = rY.wasmUASTCToBC7), rY.wasmUASTCToRGBA_UNORM && (DY.LiteTranscoder_UASTC_RGBA_UNORM.WasmBinary = rY.wasmUASTCToRGBA_UNORM), rY.wasmUASTCToRGBA_SRGB && (DY.LiteTranscoder_UASTC_RGBA_SRGB.WasmBinary = rY.wasmUASTCToRGBA_SRGB), rY.wasmUASTCToR8_UNORM && (DY.LiteTranscoder_UASTC_R8_UNORM.WasmBinary = rY.wasmUASTCToR8_UNORM), rY.wasmUASTCToRG8_UNORM && (DY.LiteTranscoder_UASTC_RG8_UNORM.WasmBinary = rY.wasmUASTCToRG8_UNORM), rY.jsMSCTranscoder && (DY.MSCTranscoder.JSModule = rY.jsMSCTranscoder), rY.wasmMSCTranscoder && (DY.MSCTranscoder.WasmBinary = rY.wasmMSCTranscoder), rY.wasmZSTDDecoder && (DY.ZSTDDecoder.WasmBinary = rY.wasmZSTDDecoder))
+    }
+
+    function uY(YY) {
+      let rY;
+      "undefined" === typeof YY && "undefined" !== typeof KTX2DECODER && (YY = KTX2DECODER), onmessage = DY => {
+        if (DY.data) switch (DY.data.action) {
+          case "init": {
+            const FY = DY.data.urls;
+            FY && (FY.jsDecoderModule && "undefined" === typeof YY && (importScripts(FY.jsDecoderModule), YY = KTX2DECODER), vY(FY)), DY.data.wasmBinaries && vY(void 0, {
+              ...DY.data.wasmBinaries,
+              jsDecoderModule: YY
+            }), rY = new YY.KTX2Decoder, postMessage({
+              action: "init"
+            });
+            break
+          }
+          case "setDefaultDecoderOptions":
+            YY.KTX2Decoder.DefaultDecoderOptions = DY.data.options;
+            break;
+          case "decode":
+            rY.decode(DY.data.data, DY.data.caps, DY.data.options).then((YY => {
+              const rY = [];
+              for (let DY = 0; DY < YY.mipmaps.length; ++DY) {
+                const FY = YY.mipmaps[DY];
+                FY && FY.data && rY.push(FY.data.buffer)
+              }
+              postMessage({
+                action: "decoded",
+                success: !0,
+                decodedData: YY
+              }, rY)
+            })).catch((YY => {
+              postMessage({
+                action: "decoded",
+                success: !1,
+                vv: YY
+              })
+            }))
+        }
+      }
+    }! function(YY) {
+      YY[YY.ETC1S = 0] = "ETC1S", YY[YY.UASTC4x4 = 1] = "UASTC4x4", YY[YY.RGBA32 = 2] = "RGBA32"
+    }(IY || (IY = {})),
+    function(YY) {
+      YY[YY.ASTC_4X4_RGBA = 0] = "ASTC_4X4_RGBA", YY[YY.ASTC_4x4_RGBA = 0] = "ASTC_4x4_RGBA", YY[YY.BC7_RGBA = 1] = "BC7_RGBA", YY[YY.BC3_RGBA = 2] = "BC3_RGBA", YY[YY.BC1_RGB = 3] = "BC1_RGB", YY[YY.PVRTC1_4_RGBA = 4] = "PVRTC1_4_RGBA", YY[YY.PVRTC1_4_RGB = 5] = "PVRTC1_4_RGB", YY[YY.ETC2_RGBA = 6] = "ETC2_RGBA", YY[YY.ETC1_RGB = 7] = "ETC1_RGB", YY[YY.RGBA32 = 8] = "RGBA32", YY[YY.R8 = 9] = "R8", YY[YY.RG8 = 10] = "RG8"
+    }(RY || (RY = {})),
+    function(YY) {
+      YY[YY.COMPRESSED_RGBA_BPTC_UNORM_EXT = 36492] = "COMPRESSED_RGBA_BPTC_UNORM_EXT", YY[YY.COMPRESSED_RGBA_ASTC_4X4_KHR = 37808] = "COMPRESSED_RGBA_ASTC_4X4_KHR", YY[YY.COMPRESSED_RGB_S3TC_DXT1_EXT = 33776] = "COMPRESSED_RGB_S3TC_DXT1_EXT", YY[YY.COMPRESSED_RGBA_S3TC_DXT5_EXT = 33779] = "COMPRESSED_RGBA_S3TC_DXT5_EXT", YY[YY.COMPRESSED_RGBA_PVRTC_4BPPV1_IMG = 35842] = "COMPRESSED_RGBA_PVRTC_4BPPV1_IMG", YY[YY.COMPRESSED_RGB_PVRTC_4BPPV1_IMG = 35840] = "COMPRESSED_RGB_PVRTC_4BPPV1_IMG", YY[YY.COMPRESSED_RGBA8_ETC2_EAC = 37496] = "COMPRESSED_RGBA8_ETC2_EAC", YY[YY.COMPRESSED_RGB8_ETC2 = 37492] = "COMPRESSED_RGB8_ETC2", YY[YY.COMPRESSED_RGB_ETC1_WEBGL = 36196] = "COMPRESSED_RGB_ETC1_WEBGL", YY[YY.RGBA8Format = 32856] = "RGBA8Format", YY[YY.R8Format = 33321] = "R8Format", YY[YY.RG8Format = 33323] = "RG8Format"
+    }(OY || (OY = {}));
+    class sY {
+      static GetDefaultNumWorkers() {
+        return "object" === typeof navigator && navigator.hardwareConcurrency ? Math.min(Math.floor(.5 * navigator.hardwareConcurrency), 4) : 1
+      }
+      static _Initialize(YY) {
+        if (sY._WorkerPoolPromise || sY._DecoderModulePromise) return;
+        const rY = {
+          wasmBaseUrl: aY.i.ScriptBaseUrl,
+          jsDecoderModule: aY.i.GetBabylonScriptURL(this.URLConfig.jsDecoderModule, !0),
+          wasmUASTCToASTC: aY.i.GetBabylonScriptURL(this.URLConfig.wasmUASTCToASTC, !0),
+          wasmUASTCToBC7: aY.i.GetBabylonScriptURL(this.URLConfig.wasmUASTCToBC7, !0),
+          wasmUASTCToRGBA_UNORM: aY.i.GetBabylonScriptURL(this.URLConfig.wasmUASTCToRGBA_UNORM, !0),
+          wasmUASTCToRGBA_SRGB: aY.i.GetBabylonScriptURL(this.URLConfig.wasmUASTCToRGBA_SRGB, !0),
+          wasmUASTCToR8_UNORM: aY.i.GetBabylonScriptURL(this.URLConfig.wasmUASTCToR8_UNORM, !0),
+          wasmUASTCToRG8_UNORM: aY.i.GetBabylonScriptURL(this.URLConfig.wasmUASTCToRG8_UNORM, !0),
+          jsMSCTranscoder: aY.i.GetBabylonScriptURL(this.URLConfig.jsMSCTranscoder, !0),
+          wasmMSCTranscoder: aY.i.GetBabylonScriptURL(this.URLConfig.wasmMSCTranscoder, !0),
+          wasmZSTDDecoder: aY.i.GetBabylonScriptURL(this.URLConfig.wasmZSTDDecoder, !0)
+        };
+        YY && "function" === typeof Worker && "undefined" !== typeof URL ? sY._WorkerPoolPromise = new Promise((DY => {
+          const FY = `${vY}(${uY})()`,
+            AY = URL.createObjectURL(new Blob([FY], {
+              type: "application/javascript"
+            }));
+          DY(new gY.d(YY, (async () => await async function(YY, rY, DY) {
+            return await new Promise(((FY, AY) => {
+              const IY = rY => {
+                  YY.removeEventListener("error", IY), YY.removeEventListener("message", RY), AY(rY)
+                },
+                RY = rY => {
+                  "init" === rY.data.action && (YY.removeEventListener("error", IY), YY.removeEventListener("message", RY), FY(YY))
+                };
+              YY.addEventListener("error", IY), YY.addEventListener("message", RY), YY.postMessage({
+                action: "init",
+                urls: DY,
+                wasmBinaries: rY
+              })
+            }))
+          }(new Worker(AY), void 0, rY))))
+        })) : "undefined" === typeof sY._KTX2DecoderModule ? sY._DecoderModulePromise = aY.i.LoadBabylonScriptAsync(rY.jsDecoderModule).then((() => (sY._KTX2DecoderModule = KTX2DECODER, sY._KTX2DecoderModule.MSCTranscoder.UseFromWorkerThread = !1, sY._KTX2DecoderModule.WASMMemoryManager.LoadBinariesFromCurrentThread = !0, vY(rY, sY._KTX2DecoderModule), new sY._KTX2DecoderModule.KTX2Decoder))) : (sY._KTX2DecoderModule.MSCTranscoder.UseFromWorkerThread = !1, sY._KTX2DecoderModule.WASMMemoryManager.LoadBinariesFromCurrentThread = !0, sY._DecoderModulePromise = Promise.resolve(new sY._KTX2DecoderModule.KTX2Decoder))
+      }
+      constructor(YY) {
+        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : sY.DefaultNumWorkers;
+        this._engine = YY;
+        const DY = "object" === typeof rY && rY.workerPool || sY.WorkerPool;
+        if (DY) sY._WorkerPoolPromise = Promise.resolve(DY);
+        else {
+          "object" === typeof rY ? sY._KTX2DecoderModule = rY?.binariesAndModulesContainer?.jsDecoderModule : "undefined" !== typeof KTX2DECODER && (sY._KTX2DecoderModule = KTX2DECODER);
+          const YY = "number" === typeof rY ? rY : rY.numWorkers ?? sY.DefaultNumWorkers;
+          sY._Initialize(YY)
+        }
+      }
+      async _uploadAsync(YY, rY, DY) {
+        const FY = await this._decodeAsync(YY, DY);
+        this._createTexture(FY, rY, DY)
+      }
+      async _decodeAsync(YY, rY) {
+        const DY = this._engine.getCaps(),
+          FY = {
+            astc: !!DY.astc,
+            bptc: !!DY.bptc,
+            s3tc: !!DY.s3tc,
+            pvrtc: !!DY.pvrtc,
+            etc2: !!DY.etc2,
+            etc1: !!DY.etc1
+          };
+        if (sY._WorkerPoolPromise) {
+          const DY = await sY._WorkerPoolPromise;
+          return await new Promise(((AY, IY) => {
+            DY.push(((DY, RY) => {
+              const OY = YY => {
+                  DY.removeEventListener("error", OY), DY.removeEventListener("message", gY), IY(YY), RY()
+                },
+                gY = YY => {
+                  "decoded" === YY.data.action && (DY.removeEventListener("error", OY), DY.removeEventListener("message", gY), YY.data.success ? AY(YY.data.decodedData) : IY({
+                    message: YY.data.vv
+                  }), RY())
+                };
+              DY.addEventListener("error", OY), DY.addEventListener("message", gY), DY.postMessage({
+                action: "setDefaultDecoderOptions",
+                options: sY.DefaultDecoderOptions._getKTX2DecoderOptions()
+              });
+              const aY = new Uint8Array(YY.byteLength);
+              aY.set(new Uint8Array(YY.buffer, YY.byteOffset, YY.byteLength)), DY.postMessage({
+                action: "decode",
+                data: aY,
+                caps: FY,
+                options: rY
+              }, [aY.buffer])
+            }))
+          }))
+        }
+        if (sY._DecoderModulePromise) {
+          const FY = await sY._DecoderModulePromise;
+          return sY.DefaultDecoderOptions.isDirty && (sY._KTX2DecoderModule.KTX2Decoder.DefaultDecoderOptions = sY.DefaultDecoderOptions._getKTX2DecoderOptions()), await new Promise(((AY, IY) => {
+            FY.decode(YY, DY, rY).then((YY => {
+              AY(YY)
+            })).catch((YY => {
+              IY({
+                message: YY
+              })
+            }))
+          }))
+        }
+        throw new Error("KTX2 decoder module is not available")
+      }
+      _createTexture(YY, rY, DY) {
+        if ((YY.layerCount ?? 1) > 1) throw new Error("KTX2 container - array textures are not supported by this texture loader.");
+        this._engine._bindTextureDirectly(3553, rY), DY && (DY.transcodedFormat = YY.transcodedFormat, DY.isInGammaSpace = YY.isInGammaSpace, DY.hasAlpha = YY.hasAlpha, DY.transcoderName = YY.transcoderName);
+        let FY = !0;
+        switch (YY.transcodedFormat) {
+          case 32856:
+            rY.type = 0, rY.format = 5;
+            break;
+          case 33321:
+            rY.type = 0, rY.format = 6;
+            break;
+          case 33323:
+            rY.type = 0, rY.format = 7;
+            break;
+          default:
+            rY.format = YY.transcodedFormat, FY = !1
+        }
+        if (rY._gammaSpace = YY.isInGammaSpace, rY.generateMipMaps = YY.mipmaps.length > 1, rY.width = YY.mipmaps[0].width, rY.height = YY.mipmaps[0].height, YY.errors) throw new Error("KTX2 container - could not transcode the data. " + YY.errors);
+        for (let AY = 0; AY < YY.mipmaps.length; ++AY) {
+          const DY = YY.mipmaps[AY];
+          if (!DY || !DY.data) throw new Error("KTX2 container - could not transcode one of the image");
+          FY ? (rY.width = DY.width, rY.height = DY.height, this._engine._uploadDataToTextureDirectly(rY, DY.data, 0, AY, void 0, !0)) : this._engine._uploadCompressedDataToTextureDirectly(rY, YY.transcodedFormat, DY.width, DY.height, DY.data, 0, AY)
+        }
+        rY._extension = ".ktx2", rY.isReady = !0, this._engine._bindTextureDirectly(3553, null)
+      }
+      static IsValid(YY) {
+        if (YY.byteLength >= 12) {
+          const rY = new Uint8Array(YY.buffer, YY.byteOffset, 12);
+          if (171 === rY[0] && 75 === rY[1] && 84 === rY[2] && 88 === rY[3] && 32 === rY[4] && 50 === rY[5] && 48 === rY[6] && 187 === rY[7] && 13 === rY[8] && 10 === rY[9] && 26 === rY[10] && 10 === rY[11]) return !0
+        }
+        return !1
+      }
+    }
+
+    function iY(YY) {
+      switch (YY) {
+        case 35916:
+          return 33776;
+        case 35918:
+          return 33778;
+        case 35919:
+          return 33779;
+        case 37493:
+          return 37492;
+        case 37497:
+          return 37496;
+        case 37495:
+          return 37494;
+        case 37840:
+          return 37808;
+        case 37841:
+          return 37809;
+        case 37842:
+          return 37810;
+        case 37843:
+          return 37811;
+        case 37844:
+          return 37812;
+        case 37845:
+          return 37813;
+        case 37846:
+          return 37814;
+        case 37847:
+          return 37815;
+        case 37848:
+          return 37816;
+        case 37849:
+          return 37817;
+        case 37850:
+          return 37818;
+        case 37851:
+          return 37819;
+        case 37852:
+          return 37820;
+        case 37853:
+          return 37821;
+        case 36493:
+          return 36492
+      }
+      return null
+    }
+    sY.URLConfig = {
+      jsDecoderModule: "https://cdn.babylonjs.com/babylon.ktx2Decoder.js",
+      wasmUASTCToASTC: null,
+      wasmUASTCToBC7: null,
+      wasmUASTCToRGBA_UNORM: null,
+      wasmUASTCToRGBA_SRGB: null,
+      wasmUASTCToR8_UNORM: null,
+      wasmUASTCToRG8_UNORM: null,
+      jsMSCTranscoder: null,
+      wasmMSCTranscoder: null,
+      wasmZSTDDecoder: null
+    }, sY.DefaultNumWorkers = sY.GetDefaultNumWorkers(), sY.DefaultDecoderOptions = new class {
+      constructor() {
+        this._isDirty = !0, this._useRGBAIfOnlyBC1BC3AvailableWhenUASTC = !0, this._ktx2DecoderOptions = {}
+      }
+      get isDirty() {
+        return this._isDirty
+      }
+      get useRGBAIfASTCBC7NotAvailableWhenUASTC() {
+        return this._useRGBAIfASTCBC7NotAvailableWhenUASTC
+      }
+      set useRGBAIfASTCBC7NotAvailableWhenUASTC(YY) {
+        this._useRGBAIfASTCBC7NotAvailableWhenUASTC !== YY && (this._useRGBAIfASTCBC7NotAvailableWhenUASTC = YY, this._isDirty = !0)
+      }
+      get useRGBAIfOnlyBC1BC3AvailableWhenUASTC() {
+        return this._useRGBAIfOnlyBC1BC3AvailableWhenUASTC
+      }
+      set useRGBAIfOnlyBC1BC3AvailableWhenUASTC(YY) {
+        this._useRGBAIfOnlyBC1BC3AvailableWhenUASTC !== YY && (this._useRGBAIfOnlyBC1BC3AvailableWhenUASTC = YY, this._isDirty = !0)
+      }
+      get forceRGBA() {
+        return this._forceRGBA
+      }
+      set forceRGBA(YY) {
+        this._forceRGBA !== YY && (this._forceRGBA = YY, this._isDirty = !0)
+      }
+      get forceR8() {
+        return this._forceR8
+      }
+      set forceR8(YY) {
+        this._forceR8 !== YY && (this._forceR8 = YY, this._isDirty = !0)
+      }
+      get forceRG8() {
+        return this._forceRG8
+      }
+      set forceRG8(YY) {
+        this._forceRG8 !== YY && (this._forceRG8 = YY, this._isDirty = !0)
+      }
+      get bypassTranscoders() {
+        return this._bypassTranscoders
+      }
+      set bypassTranscoders(YY) {
+        this._bypassTranscoders !== YY && (this._bypassTranscoders = YY, this._isDirty = !0)
+      }
+      _getKTX2DecoderOptions() {
+        if (!this._isDirty) return this._ktx2DecoderOptions;
+        this._isDirty = !1;
+        const YY = {};
+        return void 0 !== this._useRGBAIfASTCBC7NotAvailableWhenUASTC && (YY.useRGBAIfASTCBC7NotAvailableWhenUASTC = this._useRGBAIfASTCBC7NotAvailableWhenUASTC), void 0 !== this._forceRGBA && (YY.forceRGBA = this._forceRGBA), void 0 !== this._forceR8 && (YY.forceR8 = this._forceR8), void 0 !== this._forceRG8 && (YY.forceRG8 = this._forceRG8), void 0 !== this._bypassTranscoders && (YY.bypassTranscoders = this._bypassTranscoders), this.useRGBAIfOnlyBC1BC3AvailableWhenUASTC && (YY.transcodeFormatDecisionTree = {
+          UASTC: {
+            transcodeFormat: [RY.BC1_RGB, RY.BC3_RGBA],
+            yes: {
+              transcodeFormat: RY.RGBA32,
+              engineFormat: 32856,
+              roundToMultiple4: !1
+            }
+          }
+        }), this._ktx2DecoderOptions = YY, YY
+      }
+    };
+    class yY {
+      constructor() {
+        this.supportCascades = !1
+      }
+      loadCubeData(YY, rY, DY, FY) {
+        if (Array.isArray(YY)) return;
+        rY._invertVScale = !rY.invertY;
+        const IY = rY.ky(),
+          RY = new AY(YY, 6),
+          OY = iY(RY.glInternalFormat);
+        null !== OY ? (rY.format = OY, rY._useSRGBBuffer = IY._getUseSRGBBuffer(!0, !rY.generateMipMaps), rY._gammaSpace = !0) : rY.format = RY.glInternalFormat;
+        const gY = RY.numberOfMipmapLevels > 1 && rY.generateMipMaps;
+        IY._unpackFlipY(!0), RY.uploadLevels(rY, rY.generateMipMaps), rY.width = RY.pixelWidth, rY.height = RY.pixelHeight, IY._setCubeMapTextureParams(rY, gY, RY.numberOfMipmapLevels - 1), rY.isReady = !0, rY.onLoadedObservable.notifyObservers(rY), rY.onLoadedObservable.clear(), FY && FY()
+      }
+      loadData(YY, rY, DY, IY) {
+        if (AY.IsValid(YY)) {
+          rY._invertVScale = !rY.invertY;
+          const FY = new AY(YY, 1),
+            IY = iY(FY.glInternalFormat);
+          null !== IY ? (rY.format = IY, rY._useSRGBBuffer = rY.ky()._getUseSRGBBuffer(!0, !rY.generateMipMaps), rY._gammaSpace = !0) : rY.format = FY.glInternalFormat, DY(FY.pixelWidth, FY.pixelHeight, rY.generateMipMaps, !0, (() => {
+            FY.uploadLevels(rY, rY.generateMipMaps)
+          }), FY.isInvalid)
+        } else if (sY.IsValid(YY)) {
+          new sY(rY.ky())._uploadAsync(YY, rY, IY).then((() => {
+            DY(rY.width, rY.height, rY.generateMipMaps, !0, (() => {}), !1)
+          }), (YY => {
+            FY.d.Warn(`Failed to load KTX2 texture data: ${YY.message}`), DY(0, 0, !1, !1, (() => {}), !0)
+          }))
+        } else FY.d.Error("texture missing KTX identifier"), DY(0, 0, !1, !1, (() => {}), !0)
+      }
     }
   },
-  40866: (BB, TB, dB) => {
-    dB.d(TB, {
-      e: () => lB
+  40912: (YY, rY, DY) => {
+    DY.d(rY, {
+      d: () => AY
     });
-    var VB = dB(38595);
-    const yB = "clipPlaneFragmentDeclaration",
-      pB = "#ifdef CLIPPLANE\nvarying float fClipDistance;\n#endif\n#ifdef CLIPPLANE2\nvarying float fClipDistance2;\n#endif\n#ifdef CLIPPLANE3\nvarying float fClipDistance3;\n#endif\n#ifdef CLIPPLANE4\nvarying float fClipDistance4;\n#endif\n#ifdef CLIPPLANE5\nvarying float fClipDistance5;\n#endif\n#ifdef CLIPPLANE6\nvarying float fClipDistance6;\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
+    class FY {
+      constructor(YY) {
+        this._pendingActions = new Array, this._workerInfos = YY.map((YY => ({
+          workerPromise: Promise.resolve(YY),
+          idle: !0
+        })))
+      }
+      dispose() {
+        for (const YY of this._workerInfos) YY.workerPromise.then((YY => {
+          YY.terminate()
+        }));
+        this._workerInfos.length = 0, this._pendingActions.length = 0
+      }
+      push(YY) {
+        this._executeOnIdleWorker(YY) || this._pendingActions.push(YY)
+      }
+      _executeOnIdleWorker(YY) {
+        for (const rY of this._workerInfos)
+          if (rY.idle) return this._execute(rY, YY), !0;
+        return !1
+      }
+      _execute(YY, rY) {
+        YY.idle = !1, YY.workerPromise.then((DY => {
+          rY(DY, (() => {
+            const rY = this._pendingActions.shift();
+            rY ? this._execute(YY, rY) : YY.idle = !0
+          }))
+        }))
+      }
     }
-  },
-  40911: (BB, TB, dB) => {
-    dB.d(TB, {
-      b: () => lB
-    });
-    var VB = dB(38595);
-    const yB = "fogFragment",
-      pB = "#ifdef FOG\nfloat fog=CalcFogFactor();\n#ifdef PBR\nfog=toLinearSpace(fog);\n#endif\ncolor.rgb=mix(vFogColor,color.rgb,fog);\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
+    class AY extends FY {
+      constructor(YY, rY) {
+        let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : AY.DefaultOptions;
+        super([]), this._maxWorkers = YY, this._createWorkerAsync = rY, this._options = DY
+      }
+      push(YY) {
+        if (!this._executeOnIdleWorker(YY))
+          if (this._workerInfos.length < this._maxWorkers) {
+            const rY = {
+              workerPromise: this._createWorkerAsync(),
+              idle: !1
+            };
+            this._workerInfos.push(rY), this._execute(rY, YY)
+          } else this._pendingActions.push(YY)
+      }
+      _execute(YY, rY) {
+        YY.timeoutId && (clearTimeout(YY.timeoutId), delete YY.timeoutId), super._execute(YY, ((DY, FY) => {
+          rY(DY, (() => {
+            FY(), YY.idle && (YY.timeoutId = setTimeout((() => {
+              YY.workerPromise.then((YY => {
+                YY.terminate()
+              }));
+              const rY = this._workerInfos.indexOf(YY); - 1 !== rY && this._workerInfos.splice(rY, 1)
+            }), this._options.idleTimeElapsedBeforeRelease))
+          }))
+        }))
+      }
     }
-  },
-  40870: (BB, TB, dB) => {
-    dB.d(TB, {
-      c: () => lB
-    });
-    var VB = dB(38595);
-    const yB = "fogFragmentDeclaration",
-      pB = "#ifdef FOG\n#define FOGMODE_NONE 0.\n#define FOGMODE_EXP 1.\n#define FOGMODE_EXP2 2.\n#define FOGMODE_LINEAR 3.\n#define E 2.71828\nuniform vec4 vFogInfos;uniform vec3 vFogColor;varying vec3 vFogDistance;float CalcFogFactor()\n{float fogCoeff=1.0;float fogStart=vFogInfos.y;float fogEnd=vFogInfos.z;float fogDensity=vFogInfos.w;float fogDistance=length(vFogDistance);if (FOGMODE_LINEAR==vFogInfos.x)\n{fogCoeff=(fogEnd-fogDistance)/(fogEnd-fogStart);}\nelse if (FOGMODE_EXP==vFogInfos.x)\n{fogCoeff=1.0/pow(E,fogDistance*fogDensity);}\nelse if (FOGMODE_EXP2==vFogInfos.x)\n{fogCoeff=1.0/pow(E,fogDistance*fogDistance*fogDensity*fogDensity);}\nreturn clamp(fogCoeff,0.0,1.0);}\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
-    }
-  },
-  40595: (BB, TB, dB) => {
-    dB.d(TB, {
-      b: () => lB
-    });
-    var VB = dB(38595);
-    const yB = "helperFunctions",
-      pB = "const float PI=3.1415926535897932384626433832795;const float TWO_PI=6.283185307179586;const float HALF_PI=1.5707963267948966;const float RECIPROCAL_PI=0.3183098861837907;const float RECIPROCAL_PI2=0.15915494309189535;const float RECIPROCAL_PI4=0.07957747154594767;const float HALF_MIN=5.96046448e-08; \nconst float LinearEncodePowerApprox=2.2;const float GammaEncodePowerApprox=1.0/LinearEncodePowerApprox;const vec3 LuminanceEncodeApprox=vec3(0.2126,0.7152,0.0722);const float Epsilon=0.0000001;\n#define saturate(x) clamp(x,0.0,1.0)\n#define absEps(x) abs(x)+Epsilon\n#define maxEps(x) max(x,Epsilon)\n#define saturateEps(x) clamp(x,Epsilon,1.0)\nmat3 transposeMat3(mat3 inMatrix) {vec3 i0=inMatrix[0];vec3 i1=inMatrix[1];vec3 i2=inMatrix[2];mat3 outMatrix=mat3(\nvec3(i0.x,i1.x,i2.x),\nvec3(i0.y,i1.y,i2.y),\nvec3(i0.z,i1.z,i2.z)\n);return outMatrix;}\nmat3 inverseMat3(mat3 inMatrix) {float a00=inMatrix[0][0],a01=inMatrix[0][1],a02=inMatrix[0][2];float a10=inMatrix[1][0],a11=inMatrix[1][1],a12=inMatrix[1][2];float a20=inMatrix[2][0],a21=inMatrix[2][1],a22=inMatrix[2][2];float b01=a22*a11-a12*a21;float b11=-a22*a10+a12*a20;float b21=a21*a10-a11*a20;float det=a00*b01+a01*b11+a02*b21;return mat3(b01,(-a22*a01+a02*a21),(a12*a01-a02*a11),\nb11,(a22*a00-a02*a20),(-a12*a00+a02*a10),\nb21,(-a21*a00+a01*a20),(a11*a00-a01*a10))/det;}\n#if USE_EXACT_SRGB_CONVERSIONS\nvec3 toLinearSpaceExact(vec3 color)\n{vec3 nearZeroSection=0.0773993808*color;vec3 remainingSection=pow(0.947867299*(color+vec3(0.055)),vec3(2.4));\n#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\nreturn mix(remainingSection,nearZeroSection,lessThanEqual(color,vec3(0.04045)));\n#else\nreturn\nvec3(\ncolor.r<=0.04045 ? nearZeroSection.r : remainingSection.r,\ncolor.g<=0.04045 ? nearZeroSection.g : remainingSection.g,\ncolor.b<=0.04045 ? nearZeroSection.b : remainingSection.b);\n#endif\n}\nvec3 toGammaSpaceExact(vec3 color)\n{vec3 nearZeroSection=12.92*color;vec3 remainingSection=1.055*pow(color,vec3(0.41666))-vec3(0.055);\n#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\nreturn mix(remainingSection,nearZeroSection,lessThanEqual(color,vec3(0.0031308)));\n#else\nreturn\nvec3(\ncolor.r<=0.0031308 ? nearZeroSection.r : remainingSection.r,\ncolor.g<=0.0031308 ? nearZeroSection.g : remainingSection.g,\ncolor.b<=0.0031308 ? nearZeroSection.b : remainingSection.b);\n#endif\n}\n#endif\nfloat toLinearSpace(float color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nfloat nearZeroSection=0.0773993808*color;float remainingSection=pow(0.947867299*(color+0.055),2.4);return color<=0.04045 ? nearZeroSection : remainingSection;\n#else\nreturn pow(color,LinearEncodePowerApprox);\n#endif\n}\nvec3 toLinearSpace(vec3 color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nreturn toLinearSpaceExact(color);\n#else\nreturn pow(color,vec3(LinearEncodePowerApprox));\n#endif\n}\nvec4 toLinearSpace(vec4 color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nreturn vec4(toLinearSpaceExact(color.rgb),color.a);\n#else\nreturn vec4(pow(color.rgb,vec3(LinearEncodePowerApprox)),color.a);\n#endif\n}\nfloat toGammaSpace(float color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nfloat nearZeroSection=12.92*color;float remainingSection=1.055*pow(color,0.41666)-0.055;return color<=0.0031308 ? nearZeroSection : remainingSection;\n#else\nreturn pow(color,GammaEncodePowerApprox);\n#endif\n}\nvec3 toGammaSpace(vec3 color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nreturn toGammaSpaceExact(color);\n#else\nreturn pow(color,vec3(GammaEncodePowerApprox));\n#endif\n}\nvec4 toGammaSpace(vec4 color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nreturn vec4(toGammaSpaceExact(color.rgb),color.a);\n#else\nreturn vec4(pow(color.rgb,vec3(GammaEncodePowerApprox)),color.a);\n#endif\n}\nfloat square(float value)\n{return value*value;}\nvec3 square(vec3 value)\n{return value*value;}\nfloat pow5(float value) {float sq=value*value;return sq*sq*value;}\nvec3 double_refract(vec3 I,vec3 N,float eta) {vec3 Tfront=refract(I,N,1.0/eta);vec3 Nback=normalize(reflect(N,Tfront));return refract(Tfront,-Nback,eta);}\nfloat getLuminanceUnclamped(vec3 color)\n{return dot(color,LuminanceEncodeApprox);}\nfloat getLuminance(vec3 color)\n{return saturate(getLuminanceUnclamped(color));}\nfloat getRand(vec2 seed) {return fract(sin(dot(seed.xy ,vec2(12.9898,78.233)))*43758.5453);}\nfloat dither(vec2 seed,float varianceAmount) {float rand=getRand(seed);float normVariance=varianceAmount/255.0;float dither=mix(-normVariance,normVariance,rand);return dither;}\nconst float rgbdMaxRange=255.;vec4 toRGBD(vec3 color) {float maxRGB=maxEps(max(color.r,max(color.g,color.b)));float D =max(rgbdMaxRange/maxRGB,1.);D =saturate(floor(D)/255.);vec3 rgb=color.rgb*D;rgb=toGammaSpace(rgb);return vec4(saturate(rgb),D);}\nvec3 fromRGBD(vec4 rgbd) {rgbd.rgb=toLinearSpace(rgbd.rgb);return rgbd.rgb/rgbd.a;}\nvec3 parallaxCorrectNormal( vec3 vertexPos,vec3 origVec,vec3 cubeSize,vec3 cubePos ) {vec3 invOrigVec=vec3(1.)/origVec;vec3 halfSize=cubeSize*0.5;vec3 intersecAtMaxPlane=(cubePos+halfSize-vertexPos)*invOrigVec;vec3 intersecAtMinPlane=(cubePos-halfSize-vertexPos)*invOrigVec;vec3 largestIntersec=max(intersecAtMaxPlane,intersecAtMinPlane);float distance=min(min(largestIntersec.x,largestIntersec.y),largestIntersec.z);vec3 intersectPositionWS=vertexPos+origVec*distance;return intersectPositionWS-cubePos;}\nvec3 equirectangularToCubemapDirection(vec2 uv) {float longitude=uv.x*TWO_PI-PI;float latitude=HALF_PI-uv.y*PI;vec3 direction;direction.x=cos(latitude)*sin(longitude);direction.y=sin(latitude);direction.z=cos(latitude)*cos(longitude);return direction;}\nfloat sqrtClamped(float value) {return sqrt(max(value,0.));}\nfloat avg(vec3 value) {return dot(value,vec3(0.333333333));}\n#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\nprecision highp int;uint extractBits(uint value,int offset,int width) {return (value>>offset) & ((1u<<width)-1u);}\nint onlyBitPosition(uint value) {return (floatBitsToInt(float(value))>>23)-0x7f;}\nvec3 singleScatterToMultiScatterAlbedo(vec3 rho_ss) {vec3 s=sqrt(max(vec3(1.0)-rho_ss,vec3(0.0)));return (vec3(1.0)-s)*(vec3(1.0)-vec3(0.139)*s)/(vec3(1.0)+vec3(1.17)*s);}\nvec3 multiScatterToSingleScatterAlbedo(vec3 rho_ms) {vec3 s=4.09712+4.20863*rho_ms-sqrt(9.59217+41.6808*rho_ms+17.7126*rho_ms*rho_ms);return 1.0-s*s;}\nvec3 multiScatterToSingleScatterAlbedo(vec3 rho_ms,float aniso) {vec3 s=4.09712+4.20863*rho_ms-sqrt(9.59217+41.6808*rho_ms+17.7126*rho_ms*rho_ms);return (1.0-s*s)/maxEps(1.0-aniso*s*s);}\nfloat min3(vec3 v) {return min(v.x,min(v.y,v.z));}\nfloat max3(vec3 v) {return max(v.x,max(v.y,v.z));}\nfloat uint2float(uint i) {return uintBitsToFloat(0x3F800000u | (i>>9u))-1.0;}\nvec2 plasticSequence(const uint rstate) {return vec2(uint2float(rstate*3242174889u),\nuint2float(rstate*2447445414u));}\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
-    }
-  },
-  40680: (BB, TB, dB) => {
-    dB.d(TB, {
-      c: () => lB
-    });
-    var VB = dB(38595);
-    const yB = "logDepthDeclaration",
-      pB = "#ifdef LOGARITHMICDEPTH\nuniform float logarithmicDepthConstant;varying float vFragmentDepth;\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
-    }
-  },
-  40903: (BB, TB, dB) => {
-    dB.d(TB, {
-      b: () => lB
-    });
-    var VB = dB(38595);
-    const yB = "logDepthFragment",
-      pB = "#ifdef LOGARITHMICDEPTH\ngl_FragDepthEXT=log2(vFragmentDepth)*logarithmicDepthConstant*0.5;\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
-    }
-  },
-  59779: (BB, TB, dB) => {
-    dB.r(TB), dB.d(TB, {
-      skyPixelShader: () => EB
-    });
-    var VB = dB(38595),
-      yB = dB(40866),
-      pB = dB(40680),
-      lB = dB(40870),
-      JB = dB(40595),
-      YB = dB(40873),
-      gB = dB(40903),
-      oB = dB(40911);
-    const kB = "imageProcessingCompatibility",
-      LB = "#ifdef IMAGEPROCESSINGPOSTPROCESS\ngl_FragColor.rgb=pow(gl_FragColor.rgb,vec3(2.2));\n#endif\n";
-    VB.e.IncludesShadersStore[kB] || (VB.e.IncludesShadersStore[kB] = LB);
-    const OB = {
-        name: kB,
-        shader: LB
-      },
-      DB = "skyPixelShader",
-      uB = "precision highp float;varying vec3 vPositionW;\n#ifdef VERTEXCOLOR\nvarying vec4 vColor;\n#endif\n#include<clipPlaneFragmentDeclaration>\nuniform vec3 cameraPosition;uniform vec3 cameraOffset;uniform vec3 up;uniform float luminance;uniform float turbidity;uniform float rayleigh;uniform float mieCoefficient;uniform float mieDirectionalG;uniform vec3 sunPosition;uniform float cloudiness;\n#ifdef SKY_RAW_HDR_OUTPUT\nuniform float maxColorValue;\n#endif\n#ifdef LOGARITHMICDEPTH\n#extension GL_EXT_frag_depth : enable\n#endif\n#include<logDepthDeclaration>\n#include<fogFragmentDeclaration>\nconst float e=2.71828182845904523536028747135266249775724709369995957;const float pi=3.141592653589793238462643383279502884197169;const float n=1.0003;const float N=2.545E25;const float pn=0.035;const vec3 lambda=vec3(680E-9,550E-9,450E-9);const vec3 K=vec3(0.686,0.678,0.666);const float v=4.0;const float rayleighZenithLength=8.4E3;const float mieZenithLength=1.25E3;const float EE=1000.0;const float sunAngularDiameterCos=0.999956676946448443553574619906976478926848692873900859324;const float cutoffAngle=pi/1.95;const float steepness=1.5;const float CLOUD_TAU_MAX=15.0;const float CLOUD_G=0.5;const float CLOUD_G_BACK=-0.5;const float CLOUD_BACK_WEIGHT=0.2;vec3 totalRayleigh(vec3 lambda)\n{return (8.0*pow(pi,3.0)*pow(pow(n,2.0)-1.0,2.0)*(6.0+3.0*pn))/(3.0*N*pow(lambda,vec3(4.0))*(6.0-7.0*pn));}\nvec3 simplifiedRayleigh()\n{return 0.0005/vec3(94,40,18);}\nfloat rayleighPhase(float cosTheta)\n{ \nreturn (3.0/(16.0*pi))*(1.0+pow(cosTheta,2.0));}\nvec3 totalMie(vec3 lambda,vec3 K,float T)\n{float c=(0.2*T )*10E-18;return 0.434*c*pi*pow((2.0*pi)/lambda,vec3(v-2.0))*K;}\nfloat hgPhase(float cosTheta,float g)\n{return (1.0/(4.0*pi))*((1.0-pow(g,2.0))/pow(1.0-2.0*g*cosTheta+pow(g,2.0),1.5));}\nfloat cloudPhase(float cosTheta,float gForward)\n{return mix(hgPhase(cosTheta,gForward),hgPhase(cosTheta,CLOUD_G_BACK),CLOUD_BACK_WEIGHT);}\nfloat sunIntensity(float zenithAngleCos)\n{return EE*max(0.0,1.0-exp((-(cutoffAngle-acos(zenithAngleCos))/steepness)));}\nfloat A=0.15;float B=0.50;float C=0.10;float D=0.20;float EEE=0.02;float F=0.30;float W=1000.0;vec3 Uncharted2Tonemap(vec3 x)\n{return ((x*(A*x+C*B)+D*EEE)/(x*(A*x+B)+D*F))-EEE/F;}\n#if DITHER\n#include<helperFunctions>\n#endif\n#define CUSTOM_FRAGMENT_DEFINITIONS\nvoid main(void) {\n#define CUSTOM_FRAGMENT_MAIN_BEGIN\n#include<clipPlaneFragment>\n/**\n*--------------------------------------------------------------------------------------------------\n* Sky Color\n*--------------------------------------------------------------------------------------------------\n*/\nfloat sunfade=1.0-clamp(1.0-exp((sunPosition.y/450000.0)),0.0,1.0);float rayleighCoefficient=rayleigh-(1.0*(1.0-sunfade));vec3 sunDirection=normalize(sunPosition);float sunE=sunIntensity(dot(sunDirection,up));vec3 betaR=simplifiedRayleigh()*rayleighCoefficient;vec3 betaM=totalMie(lambda,K,turbidity)*mieCoefficient;float zenithAngle=acos(max(0.0,dot(up,normalize(vPositionW-cameraPosition+cameraOffset))));float sR=rayleighZenithLength/(cos(zenithAngle)+0.15*pow(93.885-((zenithAngle*180.0)/pi),-1.253));float sM=mieZenithLength/(cos(zenithAngle)+0.15*pow(93.885-((zenithAngle*180.0)/pi),-1.253));vec3 Fex=exp(-(betaR*sR+betaM*sM));float cosTheta=dot(normalize(vPositionW-cameraPosition),sunDirection);float rPhase=rayleighPhase(cosTheta*0.5+0.5);vec3 betaRTheta=betaR*rPhase;float mPhase=hgPhase(cosTheta,mieDirectionalG);vec3 betaMTheta=betaM*mPhase;vec3 Lin=pow(sunE*((betaRTheta+betaMTheta)/(betaR+betaM))*(1.0-Fex),vec3(1.5));Lin*=mix(vec3(1.0),pow(sunE*((betaRTheta+betaMTheta)/(betaR+betaM))*Fex,vec3(1.0/2.0)),clamp(pow(1.0-dot(up,sunDirection),5.0),0.0,1.0));vec3 direction=normalize(vPositionW-cameraPosition);float theta=acos(direction.y);float phi=atan(direction.z,direction.x);vec2 uv=vec2(phi,theta)/vec2(2.0*pi,pi)+vec2(0.5,0.0);vec3 L0=vec3(0.1)*Fex;float sundiskTerm;if (cloudiness>0.0) {float cloudTau=cloudiness*CLOUD_TAU_MAX;float cloudT=exp(-cloudTau);float cloudG=CLOUD_G*cloudT;float omegaSun=2.0*pi*(1.0-sunAngularDiameterCos);float sharpDisk=smoothstep(sunAngularDiameterCos,sunAngularDiameterCos+0.00002,cosTheta);sundiskTerm=cloudT*sharpDisk+(1.0-cloudT)*omegaSun*cloudPhase(cosTheta,cloudG);} else {sundiskTerm=smoothstep(sunAngularDiameterCos,sunAngularDiameterCos+0.00002,cosTheta);}\nL0+=(sunE*19000.0*Fex)*sundiskTerm;vec3 texColor=(Lin+L0);texColor*=0.04 ;texColor+=vec3(0.0,0.001,0.0025)*0.3;\n#ifdef SKY_RAW_HDR_OUTPUT\nvec3 retColor=texColor*luminance;\n#else\nvec3 whiteScale=1.0/Uncharted2Tonemap(vec3(W));float g_fMaxLuminance=1.0;float fLumScaled=0.1/luminance;float fLumCompressed=(fLumScaled*(1.0+(fLumScaled/(g_fMaxLuminance*g_fMaxLuminance))))/(1.0+fLumScaled);float ExposureBias=fLumCompressed;vec3 curr=Uncharted2Tonemap((log2(2.0/pow(luminance,4.0)))*texColor);vec3 retColor=curr*whiteScale;\n#endif\n/**\n*--------------------------------------------------------------------------------------------------\n* Sky Color\n*--------------------------------------------------------------------------------------------------\n*/\nfloat alpha=1.0;\n#ifdef VERTEXCOLOR\nretColor.rgb*=vColor.rgb;\n#endif\n#if defined(VERTEXALPHA) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nalpha*=vColor.a;\n#endif\n#if DITHER\nretColor.rgb+=dither(gl_FragCoord.xy,0.5);\n#endif\n#ifdef SKY_RAW_HDR_OUTPUT\nvec4 color=vec4(clamp(retColor.rgb,0.0,maxColorValue),alpha);\n#else\nvec4 color=clamp(vec4(retColor.rgb,alpha),0.0,1.0);\n#endif\n#include<logDepthFragment>\n#include<fogFragment>\ngl_FragColor=color;\n#ifndef SKY_RAW_HDR_OUTPUT\n#include<imageProcessingCompatibility>\n#endif\n#define CUSTOM_FRAGMENT_MAIN_END\n}\n";
-    VB.e.ShadersStore[DB] || (VB.e.ShadersStore[DB] = uB);
-    const HB = [yB.e, pB.c, lB.c, JB.b, YB.b, gB.b, oB.b, OB];
-    for (const vB of HB) VB.e.IncludesShadersStore[vB.name] || (VB.e.IncludesShadersStore[vB.name] = vB.shader);
-    const EB = {
-      name: DB,
-      shader: uB
+    AY.DefaultOptions = {
+      idleTimeElapsedBeforeRelease: 1e3
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

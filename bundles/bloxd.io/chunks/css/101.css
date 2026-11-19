@@ -1,147 +1,191 @@
-.ShaderPackPublishPage {
+.StudioPage {
   display: flex;
   flex-direction: column;
-  gap: .5rem;
+  gap: 1.5rem;
   margin: 0 auto;
-  max-width: 50rem;
-  padding-bottom: 1rem;
-  width: 100%
+  max-width: 100rem;
+  padding-bottom: 4rem
 }
 
-.ShaderPackPublishPage .ShaderPackPublishBack {
+.StudioPage .StudioPageHeader {
   align-items: center;
   display: flex;
-  padding: .6rem .75rem
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between
 }
 
-.ShaderPackPublishPage .ShaderPackPublishBack .BackButton {
-  font-size: 1.5rem;
-  padding-left: .3rem;
-  position: relative
-}
-
-@media(pointer:coarse) {
-  .ShaderPackPublishPage .ShaderPackPublishBack .BackButton:before {
-    content: "";
-    inset: min(0px, (100% - 44px)/2) min(0px, (100% - 44px)/2);
-    position: absolute
-  }
-}
-
-.ShaderPackPublishPage .ShaderPackPublishBack {
-  padding-left: 0
-}
-
-.ShaderPackPublishPage .ShaderPackPublishTitle {
-  font-size: 1.8rem;
+.StudioPage .StudioPageHeader .StudioPageTitle {
+  font-size: 2rem;
   margin: 0
 }
 
-.ShaderPackPublishForm {
+.StudioPage .StudioPageLoader {
   display: flex;
-  flex-direction: column;
-  gap: .75rem
+  justify-content: center;
+  padding: 4rem 0
 }
 
-.ShaderPackPublishForm .ShaderPackPublishIntro {
+.StudioPage .StudioPageMessage {
   color: #cfcfcf;
-  font-size: 1.1rem;
-  margin: 0
+  font-size: 1.2rem;
+  padding: 4rem 0;
+  text-align: center
 }
 
-.ShaderPackPublishForm .ShaderPackPublishLink {
-  color: #ffb914;
-  text-decoration: underline
-}
-
-.ShaderPackPublishForm .ShaderPackPublishSummary {
-  background-color: rgba(57, 73, 128, .4);
-  border-radius: 0;
+.StudioLeaderboard .StudioLeaderboardBanner {
+  background-color: rgba(255, 185, 20, .12);
+  border-left: .2rem solid #ffb914;
   display: flex;
   flex-direction: column;
-  gap: .5rem;
-  padding: .75rem
+  font-size: .9rem;
+  gap: .35rem;
+  padding: .75rem 1rem
 }
 
-.ShaderPackPublishForm .ShaderPackPublishSummary .ShaderPackPublishPackName {
-  font-size: 1.3rem;
-  font-weight: 700;
-  overflow-wrap: anywhere
-}
-
-.ShaderPackPublishForm .ShaderPackPublishSummary .ShaderPackPublishPackSize {
-  color: #a4a4a4;
-  font-size: 1rem
-}
-
-.ShaderPackPublishForm .ShaderPackPublishNote {
-  align-items: center;
-  color: #85baff;
+.StudioLeaderboard .StudioLeaderboardCategories,
+.StudioLeaderboard .StudioLeaderboardScopes {
   display: flex;
-  font-size: 1.05rem;
-  gap: .5rem;
-  overflow-wrap: anywhere
+  flex-wrap: wrap;
+  gap: .5rem
 }
 
-.ShaderPackPublishForm .ShaderPackPublishNote.Ready {
-  color: #1dd06d
+.StudioLeaderboard .StudioLeaderboardScopes+.StudioLeaderboardCategories {
+  margin-top: -1rem
 }
 
-.ShaderPackPublishForm .ShaderPackPublishNote.Warning {
-  color: #fcd373
+.StudioLeaderboard .StudioLeaderboardTableScroll {
+  overflow-x: auto;
+  overflow-y: hidden
 }
 
-.ShaderPackPublishForm .ShaderPackPublishNote.Error {
-  color: #ff8a80
+.StudioLeaderboard .StudioLeaderboardOwner .ProfilePreview {
+  background-color: #303a59;
+  cursor: inherit;
+  font-size: .85rem
 }
 
-.ShaderPackPublishForm .ShaderPackPublishField {
+.StudioLeaderboard .StudioLeaderboardOwner .ProfilePreviewLeft {
+  transform: none
+}
+
+.StudioLeaderboard .StudioLeaderboardEngagementScore {
+  font-weight: 800
+}
+
+.StudioLeaderboard .StudioLeaderboardPosition {
+  color: #cfcfcf;
+  font-weight: 800;
+  white-space: nowrap
+}
+
+.StudioLeaderboard .StudioLeaderboardPosition .StudioLeaderboardPositionItem {
+  -ms-interpolation-mode: nearest-neighbor;
+  height: 1.5rem;
+  image-rendering: optimizeSpeed;
+  image-rendering: -o-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: optimize-contrast;
+  margin-right: .4rem;
+  vertical-align: -.35rem;
+  width: 1.5rem
+}
+
+.StudioLeaderboard .StudioLeaderboardPosition.StudioLeaderboardTopPosition {
+  color: var(--studioTopRankColour)
+}
+
+.StudioLeaderboard .StudioLeaderboardPosition.StudioLeaderboardTopPosition.StudioLeaderboardTopPosition1 {
+  --studioTopRankColour: #5ce1d8
+}
+
+.StudioLeaderboard .StudioLeaderboardPosition.StudioLeaderboardTopPosition.StudioLeaderboardTopPosition2 {
+  --studioTopRankColour: #ffb914
+}
+
+.StudioLeaderboard .StudioLeaderboardPosition.StudioLeaderboardTopPosition.StudioLeaderboardTopPosition3 {
+  --studioTopRankColour: #cfcfcf
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup {
   display: flex;
-  flex-direction: column;
-  font-size: 1.1rem;
-  gap: .3rem
-}
-
-.ShaderPackPublishForm .ShaderPackPublishField .ShaderPackPublishInput {
-  font-size: 1.1rem;
-  padding: .4rem .5rem;
+  gap: .5rem;
+  max-height: 75vh;
+  max-width: 55rem;
+  min-width: 40rem;
+  overflow-y: scroll;
   text-align: left
 }
 
-.ShaderPackPublishForm .ShaderPackPublishField .ShaderPackPublishDescription {
-  min-height: 5rem;
-  resize: vertical
+.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SchematicPopupTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0
 }
 
-.ShaderPackPublishForm .ShaderPackPublishField .ShaderPackPublishHint {
-  color: #fcd373;
-  font-size: .95rem
-}
-
-.ShaderPackPublishForm .ShaderPackPublishButton {
-  align-self: flex-start
-}
-
-.ShaderPackDiagnostics {
-  display: flex;
-  flex-direction: column;
+.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SchematicPopupSubtitle {
+  color: #cfcfcf;
   font-size: 1rem;
-  gap: .4rem;
-  list-style: none;
-  margin: 0;
-  overflow-wrap: anywhere;
-  padding: 0
+  font-weight: 700;
+  margin: 1rem 0 0
 }
 
-.ShaderPackDiagnostics .ShaderPackDiagnosticLocation {
-  color: #ffb914;
-  font-family: monospace;
-  margin-right: .5rem
+.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SchematicPopupSubtitle.Hidden {
+  display: none
 }
 
-.ShaderPackDiagnostics .ShaderPackDiagnosticVariants {
-  color: #a4a4a4;
-  margin-left: .5rem
+.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SchematicPopupSchematicListContainer {
+  border: 2px solid #303a59;
+  border-radius: 0;
+  box-sizing: border-box;
+  overflow-y: auto;
+  padding: .5rem;
+  width: 100%
+}
+
+.SchematicImageContainer {
+  align-items: center;
+  display: flex;
+  font-size: 2rem;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1
+}
+
+.SchematicImageContainer .LogoLoaderOuter {
+  border-color: #a4a4a4 #f2f2f2 #f2f2f2
+}
+
+.SchematicImageContainer .SchematicImage {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%
+}
+
+.SchematicImageContainer .SchematicImage.SchematicImageFadeIn {
+  animation-duration: .3s;
+  animation-fill-mode: backwards;
+  animation-iteration-count: 1;
+  animation-name: fadeIn;
+  isolation: isolate
+}
+
+.SchematicImageContainer .SchematicImageError {
+  color: #cfcfcf;
+  opacity: .4
+}
+
+.Table {
+  border-collapse: collapse;
+  width: 100%
 }
 
 @keyframes rainbowShimmer {
@@ -243,44 +287,72 @@
   }
 }
 
-.ShaderPackDropZone {
-  align-items: center;
-  border: 1px solid #ffb914;
+.StudioTable {
+  background-color: #3c4b68;
+  border: 1px solid #0f0f0f;
   border-radius: 0;
   box-sizing: border-box;
+  text-align: left
+}
+
+.StudioTable thead {
+  background-color: #394980
+}
+
+.StudioTable thead th {
+  color: #a4a4a4;
+  font-size: .85em;
+  font-weight: 800;
+  padding: .75rem 1rem;
+  text-transform: uppercase
+}
+
+.StudioTable tbody tr {
+  border-top: 1px solid hsla(0, 0%, 95%, .1);
+  cursor: pointer
+}
+
+@media(hover:hover) {
+  .StudioTable tbody tr:hover {
+    background-color: #394980
+  }
+}
+
+.StudioTable tbody tr.pad-focused {
+  background-color: #394980
+}
+
+@media(hover:none) {
+  .StudioTable tbody tr:active {
+    background-color: #394980
+  }
+}
+
+.StudioTable tbody tr td {
+  padding: .6rem 1rem
+}
+
+.StudioTable .StudioTableGameCell {
+  align-items: center;
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  justify-content: center;
-  min-height: 12rem;
-  padding: 2rem 1rem
+  gap: .75rem
 }
 
-.ShaderPackDropZone .ShaderPackDropZoneIcon {
-  font-size: 3rem;
-  opacity: .4;
-  text-shadow: 0 0 0 #000;
-  transition: opacity .3s
+.StudioTable .StudioTableGameCell .StudioTableThumbnail {
+  aspect-ratio: 3/2;
+  border-radius: 0;
+  flex-shrink: 0;
+  height: 3rem;
+  overflow: hidden;
+  position: relative
 }
 
-.ShaderPackDropZone .ShaderPackDropZoneInstructions {
-  color: #cfcfcf;
-  font-size: 1.2rem;
-  text-align: center
+.StudioTable .StudioTableGameCell .StudioTableThumbnail .StudioTableThumbnailImage {
+  height: 100%;
+  object-fit: cover;
+  width: 100%
 }
 
-.ShaderPackDropZone .ShaderPackDropZoneButtons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .75rem;
-  justify-content: center
-}
-
-.ShaderPackDropZone.ActiveDrag .ShaderPackDropZoneIcon {
-  opacity: 1
-}
-
-.ShaderPackDropZone.Disabled {
-  opacity: .5;
-  pointer-events: none
+.StudioTable .StudioTableGameCell .StudioTableGameName {
+  font-weight: 800
 }

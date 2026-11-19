@@ -1,1043 +1,1037 @@
-/*! For license information please see l9xvfg.247.9e5fa589.chunk.js.LICENSE.txt */
 export const id = 247;
 export const ids = [247];
 export const modules = {
-  39264: (BB, TB, dB) => {
-    dB.r(TB), dB.d(TB, {
-      getAnalytics: () => qT,
-      getGoogleAnalyticsClientId: () => bT,
-      initializeAnalytics: () => xT,
-      isSupported: () => jT,
-      logEvent: () => dd,
-      setAnalyticsCollectionEnabled: () => Bd,
-      setConsent: () => Vd,
-      setCurrentScreen: () => AT,
-      setDefaultEventParameters: () => Td,
-      setUserId: () => nT,
-      setUserProperties: () => eT,
-      settings: () => CT
+  39328: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => BY
     });
-    var VB = dB(39248),
-      yB = dB(39258),
-      pB = dB(39255),
-      lB = dB(39253);
-    let JB, YB;
-    const gB = new WeakMap,
-      oB = new WeakMap,
-      kB = new WeakMap,
-      LB = new WeakMap,
-      OB = new WeakMap;
-    let DB = {
-      get(BB, TB, dB) {
-        if (BB instanceof IDBTransaction) {
-          if ("done" === TB) return oB.get(BB);
-          if ("objectStoreNames" === TB) return BB.objectStoreNames || kB.get(BB);
-          if ("store" === TB) return dB.objectStoreNames[1] ? void 0 : dB.objectStore(dB.objectStoreNames[0])
+    var FY = DY(39127),
+      AY = DY(39131),
+      IY = DY(36524),
+      RY = DY(39337),
+      OY = DY(39367),
+      gY = DY(39306),
+      aY = DY(39219);
+    let vY = (() => {
+      var YY;
+      let rY, DY, RY, OY, vY, uY, sY, iY, yY, QY, oY, WY = [],
+        EY = [],
+        mY = [],
+        VY = [],
+        SY = [],
+        lY = [],
+        TY = [],
+        eY = [],
+        NY = [],
+        BY = [],
+        cY = [],
+        KY = [],
+        HY = [],
+        zY = [],
+        ZY = [],
+        CY = [],
+        fY = [],
+        jY = [],
+        hY = [],
+        dY = [],
+        JY = [],
+        MY = [];
+      return YY = class {
+        constructor() {
+          this.keysUp = (0, FY.j)(this, WY, [38]), this.keysUpward = ((0, FY.j)(this, EY), (0, FY.j)(this, mY, [33])), this.keysDown = ((0, FY.j)(this, VY), (0, FY.j)(this, SY, [40])), this.keysDownward = ((0, FY.j)(this, lY), (0, FY.j)(this, TY, [34])), this.keysLeft = ((0, FY.j)(this, eY), (0, FY.j)(this, NY, [37])), this.keysRight = ((0, FY.j)(this, BY), (0, FY.j)(this, cY, [39])), this.rotationSpeed = ((0, FY.j)(this, KY), (0, FY.j)(this, HY, .5)), this.keysRotateLeft = ((0, FY.j)(this, zY), (0, FY.j)(this, ZY, [])), this.keysRotateRight = ((0, FY.j)(this, CY), (0, FY.j)(this, fY, [])), this.keysRotateUp = ((0, FY.j)(this, jY), (0, FY.j)(this, hY, [])), this.keysRotateDown = ((0, FY.j)(this, dY), (0, FY.j)(this, JY, [])), this._keys = ((0, FY.j)(this, MY), new Array)
         }
-        return EB(BB[TB])
-      },
-      set: (BB, TB, dB) => (BB[TB] = dB, !0),
-      has: (BB, TB) => BB instanceof IDBTransaction && ("done" === TB || "store" === TB) || TB in BB
-    };
-
-    function uB(BB) {
-      return BB !== IDBDatabase.prototype.transaction || "objectStoreNames" in IDBTransaction.prototype ? (YB || (YB = [IDBCursor.prototype.advance, IDBCursor.prototype.continue, IDBCursor.prototype.continuePrimaryKey])).includes(BB) ? function() {
-        for (var TB = arguments.length, dB = new Array(TB), VB = 0; VB < TB; VB++) dB[VB] = arguments[VB];
-        return BB.apply(vB(this), dB), EB(gB.get(this))
-      } : function() {
-        for (var TB = arguments.length, dB = new Array(TB), VB = 0; VB < TB; VB++) dB[VB] = arguments[VB];
-        return EB(BB.apply(vB(this), dB))
-      } : function(TB) {
-        for (var dB = arguments.length, VB = new Array(dB > 1 ? dB - 1 : 0), yB = 1; yB < dB; yB++) VB[yB - 1] = arguments[yB];
-        const pB = BB.call(vB(this), TB, ...VB);
-        return kB.set(pB, TB.sort ? TB.sort() : [TB]), EB(pB)
-      }
-    }
-
-    function HB(BB) {
-      return "function" === typeof BB ? uB(BB) : (BB instanceof IDBTransaction && function(BB) {
-        if (oB.has(BB)) return;
-        const TB = new Promise(((TB, dB) => {
-          const VB = () => {
-              BB.removeEventListener("complete", yB), BB.removeEventListener("error", pB), BB.removeEventListener("abort", pB)
-            },
-            yB = () => {
-              TB(), VB()
-            },
-            pB = () => {
-              dB(BB.error || new DOMException("AbortError", "AbortError")), VB()
-            };
-          BB.addEventListener("complete", yB), BB.addEventListener("error", pB), BB.addEventListener("abort", pB)
-        }));
-        oB.set(BB, TB)
-      }(BB), TB = BB, (JB || (JB = [IDBDatabase, IDBObjectStore, IDBIndex, IDBCursor, IDBTransaction])).some((BB => TB instanceof BB)) ? new Proxy(BB, DB) : BB);
-      var TB
-    }
-
-    function EB(BB) {
-      if (BB instanceof IDBRequest) return function(BB) {
-        const TB = new Promise(((TB, dB) => {
-          const VB = () => {
-              BB.removeEventListener("success", yB), BB.removeEventListener("error", pB)
-            },
-            yB = () => {
-              TB(EB(BB.result)), VB()
-            },
-            pB = () => {
-              dB(BB.error), VB()
-            };
-          BB.addEventListener("success", yB), BB.addEventListener("error", pB)
-        }));
-        return TB.then((TB => {
-          TB instanceof IDBCursor && gB.set(TB, BB)
-        })).catch((() => {})), OB.set(TB, BB), TB
-      }(BB);
-      if (LB.has(BB)) return LB.get(BB);
-      const TB = HB(BB);
-      return TB !== BB && (LB.set(BB, TB), OB.set(TB, BB)), TB
-    }
-    const vB = BB => OB.get(BB);
-    const mB = ["get", "getKey", "getAll", "getAllKeys", "count"],
-      iB = ["put", "add", "delete", "clear"],
-      NB = new Map;
-
-    function tB(BB, TB) {
-      if (!(BB instanceof IDBDatabase) || TB in BB || "string" !== typeof TB) return;
-      if (NB.get(TB)) return NB.get(TB);
-      const dB = TB.replace(/FromIndex$/, ""),
-        VB = TB !== dB,
-        yB = iB.includes(dB);
-      if (!(dB in (VB ? IDBIndex : IDBObjectStore).prototype) || !yB && !mB.includes(dB)) return;
-      const pB = async function(BB) {
-        const TB = this.transaction(BB, yB ? "readwrite" : "readonly");
-        let pB = TB.store;
-        for (var lB = arguments.length, JB = new Array(lB > 1 ? lB - 1 : 0), YB = 1; YB < lB; YB++) JB[YB - 1] = arguments[YB];
-        return VB && (pB = pB.index(JB.shift())), (await Promise.all([pB[dB](...JB), yB && TB.done]))[0]
-      };
-      return NB.set(TB, pB), pB
-    }
-    DB = (BB => ({
-      ...BB,
-      get: (TB, dB, VB) => tB(TB, dB) || BB.get(TB, dB, VB),
-      has: (TB, dB) => !!tB(TB, dB) || BB.has(TB, dB)
-    }))(DB);
-    const fB = "@firebase/installations",
-      sB = "0.6.4",
-      MB = 1e4,
-      zB = `w:${sB}`,
-      wB = "FIS_v2",
-      UB = 36e5,
-      FB = {
-        "missing-app-config-values": 'Missing App configuration value: "{$valueName}"',
-        "not-registered": "Firebase Installation is not registered.",
-        "installation-not-found": "Firebase Installation not found.",
-        "request-failed": '{$requestName} request failed with error "{$serverCode} {$serverStatus}: {$serverMessage}"',
-        "app-offline": "Could not process request. Application offline.",
-        "delete-pending-registration": "Can't delete installation while there is a pending registration request."
-      },
-      KB = new pB.e("installations", "Installations", FB);
-
-    function rB(BB) {
-      return BB instanceof pB.g && BB.code.includes("request-failed")
-    }
-
-    function IB(BB) {
-      let {
-        projectId: TB
-      } = BB;
-      return `https://firebaseinstallations.googleapis.com/v1/projects/${TB}/installations`
-    }
-
-    function cB(BB) {
-      return {
-        token: BB.token,
-        requestStatus: 2,
-        expiresIn: (TB = BB.expiresIn, Number(TB.replace("s", "000"))),
-        creationTime: Date.now()
-      };
-      var TB
-    }
-    async function SB(BB, TB) {
-      const dB = (await TB.json()).error;
-      return KB.create("request-failed", {
-        requestName: BB,
-        serverCode: dB.code,
-        serverMessage: dB.message,
-        serverStatus: dB.status
-      })
-    }
-
-    function PB(BB) {
-      let {
-        apiKey: TB
-      } = BB;
-      return new Headers({
-        "Content-Type": "application/json",
-        Accept: "application/json",
-        "x-goog-api-key": TB
-      })
-    }
-
-    function QB(BB, TB) {
-      let {
-        refreshToken: dB
-      } = TB;
-      const VB = PB(BB);
-      return VB.append("Authorization", function(BB) {
-        return `${wB} ${BB}`
-      }(dB)), VB
-    }
-    async function RB(BB) {
-      const TB = await BB();
-      return TB.status >= 500 && TB.status < 600 ? BB() : TB
-    }
-
-    function aB(BB) {
-      return new Promise((TB => {
-        setTimeout(TB, BB)
-      }))
-    }
-    const ZB = /^[cdef][\w-]{21}$/;
-
-    function XB() {
-      try {
-        const BB = new Uint8Array(17);
-        (self.crypto || self.msCrypto).getRandomValues(BB), BB[0] = 112 + BB[0] % 16;
-        const TB = function(BB) {
-          const TB = (dB = BB, btoa(String.fromCharCode(...dB)).replace(/\+/g, "-").replace(/\//g, "_"));
-          var dB;
-          return TB.substr(0, 22)
-        }(BB);
-        return ZB.test(TB) ? TB : ""
-      } catch (BB) {
-        return ""
-      }
-    }
-
-    function WB(BB) {
-      return `${BB.appName}!${BB.appId}`
-    }
-    const hB = new Map;
-
-    function CB(BB, TB) {
-      const dB = WB(BB);
-      GB(dB, TB),
-        function(BB, TB) {
-          const dB = xB();
-          dB && dB.postMessage({
-            key: BB,
-            fid: TB
-          });
-          jB()
-        }(dB, TB)
-    }
-
-    function GB(BB, TB) {
-      const dB = hB.get(BB);
-      if (dB)
-        for (const VB of dB) VB(TB)
-    }
-    let qB = null;
-
-    function xB() {
-      return !qB && "BroadcastChannel" in self && (qB = new BroadcastChannel("[Firebase] FID Change"), qB.onmessage = BB => {
-        GB(BB.data.key, BB.data.fid)
-      }), qB
-    }
-
-    function jB() {
-      0 === hB.size && qB && (qB.close(), qB = null)
-    }
-    const AB = "firebase-installations-store";
-    let bB = null;
-
-    function nB() {
-      return bB || (bB = function(BB, TB) {
-        let {
-          blocked: dB,
-          upgrade: VB,
-          blocking: yB,
-          terminated: pB
-        } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const lB = indexedDB.open(BB, TB),
-          JB = EB(lB);
-        return VB && lB.addEventListener("upgradeneeded", (BB => {
-          VB(EB(lB.result), BB.oldVersion, BB.newVersion, EB(lB.transaction))
-        })), dB && lB.addEventListener("blocked", (() => dB())), JB.then((BB => {
-          pB && BB.addEventListener("close", (() => pB())), yB && BB.addEventListener("versionchange", (() => yB()))
-        })).catch((() => {})), JB
-      }("firebase-installations-database", 1, {
-        upgrade: (BB, TB) => {
-          if (0 === TB) BB.createObjectStore(AB)
-        }
-      })), bB
-    }
-    async function eB(BB, TB) {
-      const dB = WB(BB),
-        VB = (await nB()).transaction(AB, "readwrite"),
-        yB = VB.objectStore(AB),
-        pB = await yB.get(dB);
-      return await yB.put(TB, dB), await VB.done, pB && pB.fid === TB.fid || CB(BB, TB.fid), TB
-    }
-    async function BT(BB) {
-      const TB = WB(BB),
-        dB = (await nB()).transaction(AB, "readwrite");
-      await dB.objectStore(AB).delete(TB), await dB.done
-    }
-    async function TT(BB, TB) {
-      const dB = WB(BB),
-        VB = (await nB()).transaction(AB, "readwrite"),
-        yB = VB.objectStore(AB),
-        pB = await yB.get(dB),
-        lB = TB(pB);
-      return void 0 === lB ? await yB.delete(dB) : await yB.put(lB, dB), await VB.done, !lB || pB && pB.fid === lB.fid || CB(BB, lB.fid), lB
-    }
-    async function dT(BB) {
-      let TB;
-      const dB = await TT(BB.appConfig, (dB => {
-        const VB = function(BB) {
-            const TB = BB || {
-              fid: XB(),
-              registrationStatus: 0
-            };
-            return pT(TB)
-          }(dB),
-          yB = function(BB, TB) {
-            if (0 === TB.registrationStatus) {
-              if (!navigator.onLine) {
-                return {
-                  installationEntry: TB,
-                  registrationPromise: Promise.reject(KB.create("app-offline"))
+        attachControl(YY) {
+          YY = aY.i.BackCompatCameraNoPreventDefault(arguments), this._onCanvasBlurObserver || (this._scene = this.camera.hT(), this._engine = this._scene.ky(), this._onCanvasBlurObserver = this._engine.onCanvasBlurObservable.add((() => {
+            this._keys.length = 0
+          })), this._onKeyboardObserver = this._scene.onKeyboardObservable.add((rY => {
+            const DY = rY.event;
+            if (!DY.metaKey)
+              if (rY.type === gY.d.KEYDOWN) {
+                if (-1 !== this.keysUp.indexOf(DY.keyCode) || -1 !== this.keysDown.indexOf(DY.keyCode) || -1 !== this.keysLeft.indexOf(DY.keyCode) || -1 !== this.keysRight.indexOf(DY.keyCode) || -1 !== this.keysUpward.indexOf(DY.keyCode) || -1 !== this.keysDownward.indexOf(DY.keyCode) || -1 !== this.keysRotateLeft.indexOf(DY.keyCode) || -1 !== this.keysRotateRight.indexOf(DY.keyCode) || -1 !== this.keysRotateUp.indexOf(DY.keyCode) || -1 !== this.keysRotateDown.indexOf(DY.keyCode)) {
+                  -1 === this._keys.indexOf(DY.keyCode) && this._keys.push(DY.keyCode), YY || DY.preventDefault()
                 }
-              }
-              const dB = {
-                  fid: TB.fid,
-                  registrationStatus: 1,
-                  registrationTime: Date.now()
-                },
-                VB = async function(BB, TB) {
-                  try {
-                    const dB = await async function(BB, TB) {
-                      let {
-                        appConfig: dB,
-                        heartbeatServiceProvider: VB
-                      } = BB, {
-                        fid: yB
-                      } = TB;
-                      const pB = IB(dB),
-                        lB = PB(dB),
-                        JB = VB.getImmediate({
-                          optional: !0
-                        });
-                      if (JB) {
-                        const BB = await JB.getHeartbeatsHeader();
-                        BB && lB.append("x-firebase-client", BB)
-                      }
-                      const YB = {
-                          fid: yB,
-                          authVersion: wB,
-                          appId: dB.appId,
-                          sdkVersion: zB
-                        },
-                        gB = {
-                          method: "POST",
-                          headers: lB,
-                          body: JSON.stringify(YB)
-                        },
-                        oB = await RB((() => fetch(pB, gB)));
-                      if (oB.ok) {
-                        const BB = await oB.json();
-                        return {
-                          fid: BB.fid || yB,
-                          registrationStatus: 2,
-                          refreshToken: BB.refreshToken,
-                          authToken: cB(BB.authToken)
-                        }
-                      }
-                      throw await SB("Create Installation", oB)
-                    }(BB, TB);
-                    return eB(BB.appConfig, dB)
-                  } catch (dB) {
-                    throw rB(dB) && 409 === dB.customData.serverCode ? await BT(BB.appConfig) : await eB(BB.appConfig, {
-                      fid: TB.fid,
-                      registrationStatus: 0
-                    }), dB
-                  }
-                }(BB, dB);
-              return {
-                installationEntry: dB,
-                registrationPromise: VB
-              }
+              } else if (-1 !== this.keysUp.indexOf(DY.keyCode) || -1 !== this.keysDown.indexOf(DY.keyCode) || -1 !== this.keysLeft.indexOf(DY.keyCode) || -1 !== this.keysRight.indexOf(DY.keyCode) || -1 !== this.keysUpward.indexOf(DY.keyCode) || -1 !== this.keysDownward.indexOf(DY.keyCode) || -1 !== this.keysRotateLeft.indexOf(DY.keyCode) || -1 !== this.keysRotateRight.indexOf(DY.keyCode) || -1 !== this.keysRotateUp.indexOf(DY.keyCode) || -1 !== this.keysRotateDown.indexOf(DY.keyCode)) {
+              const rY = this._keys.indexOf(DY.keyCode);
+              rY >= 0 && this._keys.splice(rY, 1), YY || DY.preventDefault()
             }
-            return 1 === TB.registrationStatus ? {
-              installationEntry: TB,
-              registrationPromise: VT(BB)
-            } : {
-              installationEntry: TB
+          })))
+        }
+        detachControl() {
+          this._scene && (this._onKeyboardObserver && this._scene.onKeyboardObservable.remove(this._onKeyboardObserver), this._onCanvasBlurObserver && this._engine.onCanvasBlurObservable.remove(this._onCanvasBlurObserver), this._onKeyboardObserver = null, this._onCanvasBlurObserver = null), this._keys.length = 0
+        }
+        checkInputs() {
+          if (this._onKeyboardObserver) {
+            const YY = this.camera,
+              rY = YY.movement.input,
+              DY = rY.getEntry("keyboard", "translate"),
+              FY = rY.getEntry("keyboard", "rotate"),
+              AY = FY?.sensitivity ?? 1,
+              RY = YY._localDirection.p_(0, 0, 0);
+            for (let IY = 0; IY < this._keys.length; IY++) {
+              const rY = this._keys[IY]; - 1 !== this.keysLeft.indexOf(rY) ? RY.x -= 1 : -1 !== this.keysUp.indexOf(rY) ? RY.z += 1 : -1 !== this.keysRight.indexOf(rY) ? RY.x += 1 : -1 !== this.keysDown.indexOf(rY) ? RY.z -= 1 : -1 !== this.keysUpward.indexOf(rY) ? RY.y += 1 : -1 !== this.keysDownward.indexOf(rY) ? RY.y -= 1 : -1 !== this.keysRotateLeft.indexOf(rY) ? FY && (YY.cameraRotation.y -= this._getLocalRotation() * AY) : -1 !== this.keysRotateRight.indexOf(rY) ? FY && (YY.cameraRotation.y += this._getLocalRotation() * AY) : -1 !== this.keysRotateUp.indexOf(rY) ? FY && (YY.cameraRotation.x -= this._getLocalRotation() * AY) : -1 !== this.keysRotateDown.indexOf(rY) && FY && (YY.cameraRotation.x += this._getLocalRotation() * AY)
             }
-          }(BB, VB);
-        return TB = yB.registrationPromise, yB.installationEntry
-      }));
-      return "" === dB.fid ? {
-        installationEntry: await TB
-      } : {
-        installationEntry: dB,
-        registrationPromise: TB
-      }
-    }
-    async function VT(BB) {
-      let TB = await yT(BB.appConfig);
-      for (; 1 === TB.registrationStatus;) await aB(100), TB = await yT(BB.appConfig);
-      if (0 === TB.registrationStatus) {
-        const {
-          installationEntry: TB,
-          registrationPromise: dB
-        } = await dT(BB);
-        return dB || TB
-      }
-      return TB
-    }
-
-    function yT(BB) {
-      return TT(BB, (BB => {
-        if (!BB) throw KB.create("installation-not-found");
-        return pT(BB)
-      }))
-    }
-
-    function pT(BB) {
-      return 1 === (TB = BB).registrationStatus && TB.registrationTime + MB < Date.now() ? {
-        fid: BB.fid,
-        registrationStatus: 0
-      } : BB;
-      var TB
-    }
-    async function lT(BB, TB) {
-      let {
-        appConfig: dB,
-        heartbeatServiceProvider: VB
-      } = BB;
-      const yB = function(BB, TB) {
-          let {
-            fid: dB
-          } = TB;
-          return `${IB(BB)}/${dB}/authTokens:generate`
-        }(dB, TB),
-        pB = QB(dB, TB),
-        lB = VB.getImmediate({
-          optional: !0
-        });
-      if (lB) {
-        const BB = await lB.getHeartbeatsHeader();
-        BB && pB.append("x-firebase-client", BB)
-      }
-      const JB = {
-          installation: {
-            sdkVersion: zB,
-            appId: dB.appId
+            if (DY && (0 !== RY.x || 0 !== RY.y || 0 !== RY.z)) {
+              const rY = YY._computeLocalCameraSpeed() * (DY.sensitivity ?? 1);
+              RY.normalize().scaleInPlace(rY), YY.hT().useRightHandedSystem && (RY.z *= -1), YY.getViewMatrix().invertToRef(YY._cameraTransformMatrix), IY.r.TransformNormalToRef(RY, YY._cameraTransformMatrix, YY._transformedDirection), YY.cameraDirection.addInPlace(YY._transformedDirection)
+            }
           }
-        },
-        YB = {
-          method: "POST",
-          headers: pB,
-          body: JSON.stringify(JB)
-        },
-        gB = await RB((() => fetch(yB, YB)));
-      if (gB.ok) {
-        return cB(await gB.json())
-      }
-      throw await SB("Generate Auth Token", gB)
-    }
-    async function JT(BB) {
-      let TB, dB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      const VB = await TT(BB.appConfig, (VB => {
-        if (!gT(VB)) throw KB.create("not-registered");
-        const yB = VB.authToken;
-        if (!dB && function(BB) {
-            return 2 === BB.requestStatus && ! function(BB) {
-              const TB = Date.now();
-              return TB < BB.creationTime || BB.creationTime + BB.expiresIn < TB + UB
-            }(BB)
-          }(yB)) return VB;
-        if (1 === yB.requestStatus) return TB = async function(BB, TB) {
-          let dB = await YT(BB.appConfig);
-          for (; 1 === dB.authToken.requestStatus;) await aB(100), dB = await YT(BB.appConfig);
-          const VB = dB.authToken;
-          return 0 === VB.requestStatus ? JT(BB, TB) : VB
-        }(BB, dB), VB;
-        {
-          if (!navigator.onLine) throw KB.create("app-offline");
-          const dB = function(BB) {
-            const TB = {
-              requestStatus: 1,
-              requestTime: Date.now()
-            };
-            return Object.assign(Object.assign({}, BB), {
-              authToken: TB
-            })
-          }(VB);
-          return TB = async function(BB, TB) {
-            try {
-              const dB = await lT(BB, TB),
-                VB = Object.assign(Object.assign({}, TB), {
-                  authToken: dB
-                });
-              return await eB(BB.appConfig, VB), dB
-            } catch (dB) {
-              if (!rB(dB) || 401 !== dB.customData.serverCode && 404 !== dB.customData.serverCode) {
-                const dB = Object.assign(Object.assign({}, TB), {
-                  authToken: {
-                    requestStatus: 0
-                  }
-                });
-                await eB(BB.appConfig, dB)
-              } else await BT(BB.appConfig);
-              throw dB
+        }
+        getClassName() {
+          return "FreeCameraKeyboardMoveInput"
+        }
+        _onLostFocus() {
+          this._keys.length = 0
+        }
+        getSimpleName() {
+          return "keyboard"
+        }
+        _getLocalRotation() {
+          const YY = this.camera._calculateHandednessMultiplier();
+          return this.rotationSpeed * this._engine.getDeltaTime() / 1e3 * YY
+        }
+      }, (() => {
+        const IY = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        rY = [(0, AY.M)()], DY = [(0, AY.M)()], RY = [(0, AY.M)()], OY = [(0, AY.M)()], vY = [(0, AY.M)()], uY = [(0, AY.M)()], sY = [(0, AY.M)()], iY = [(0, AY.M)()], yY = [(0, AY.M)()], QY = [(0, AY.M)()], oY = [(0, AY.M)()], (0, FY.i)(null, null, rY, {
+          kind: "field",
+          name: "keysUp",
+          static: !1,
+          private: !1,
+          access: {
+            has: YY => "keysUp" in YY,
+            get: YY => YY.keysUp,
+            set: (YY, rY) => {
+              YY.keysUp = rY
             }
-          }(BB, dB), dB
-        }
-      }));
-      return TB ? await TB : VB.authToken
-    }
-
-    function YT(BB) {
-      return TT(BB, (BB => {
-        if (!gT(BB)) throw KB.create("not-registered");
-        const TB = BB.authToken;
-        return 1 === (dB = TB).requestStatus && dB.requestTime + MB < Date.now() ? Object.assign(Object.assign({}, BB), {
-          authToken: {
-            requestStatus: 0
-          }
-        }) : BB;
-        var dB
-      }))
-    }
-
-    function gT(BB) {
-      return void 0 !== BB && 2 === BB.registrationStatus
-    }
-    async function oT(BB) {
-      let TB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      const dB = BB;
-      await async function(BB) {
-        const {
-          registrationPromise: TB
-        } = await dT(BB);
-        TB && await TB
-      }(dB);
-      return (await JT(dB, TB)).token
-    }
-
-    function kT(BB) {
-      return KB.create("missing-app-config-values", {
-        valueName: BB
-      })
-    }
-    const LT = "installations",
-      OT = BB => {
-        const TB = BB.getProvider("app").getImmediate(),
-          dB = function(BB) {
-            if (!BB || !BB.options) throw kT("App Configuration");
-            if (!BB.name) throw kT("App Name");
-            const TB = ["projectId", "apiKey", "appId"];
-            for (const dB of TB)
-              if (!BB.options[dB]) throw kT(dB);
-            return {
-              appName: BB.name,
-              projectId: BB.options.projectId,
-              apiKey: BB.options.apiKey,
-              appId: BB.options.appId
+          },
+          metadata: IY
+        }, WY, EY), (0, FY.i)(null, null, DY, {
+          kind: "field",
+          name: "keysUpward",
+          static: !1,
+          private: !1,
+          access: {
+            has: YY => "keysUpward" in YY,
+            get: YY => YY.keysUpward,
+            set: (YY, rY) => {
+              YY.keysUpward = rY
             }
-          }(TB);
-        return {
-          app: TB,
-          appConfig: dB,
-          heartbeatServiceProvider: (0, VB.y)(TB, "heartbeat"),
-          _delete: () => Promise.resolve()
+          },
+          metadata: IY
+        }, mY, VY), (0, FY.i)(null, null, RY, {
+          kind: "field",
+          name: "keysDown",
+          static: !1,
+          private: !1,
+          access: {
+            has: YY => "keysDown" in YY,
+            get: YY => YY.keysDown,
+            set: (YY, rY) => {
+              YY.keysDown = rY
+            }
+          },
+          metadata: IY
+        }, SY, lY), (0, FY.i)(null, null, OY, {
+          kind: "field",
+          name: "keysDownward",
+          static: !1,
+          private: !1,
+          access: {
+            has: YY => "keysDownward" in YY,
+            get: YY => YY.keysDownward,
+            set: (YY, rY) => {
+              YY.keysDownward = rY
+            }
+          },
+          metadata: IY
+        }, TY, eY), (0, FY.i)(null, null, vY, {
+          kind: "field",
+          name: "keysLeft",
+          static: !1,
+          private: !1,
+          access: {
+            has: YY => "keysLeft" in YY,
+            get: YY => YY.keysLeft,
+            set: (YY, rY) => {
+              YY.keysLeft = rY
+            }
+          },
+          metadata: IY
+        }, NY, BY), (0, FY.i)(null, null, uY, {
+          kind: "field",
+          name: "keysRight",
+          static: !1,
+          private: !1,
+          access: {
+            has: YY => "keysRight" in YY,
+            get: YY => YY.keysRight,
+            set: (YY, rY) => {
+              YY.keysRight = rY
+            }
+          },
+          metadata: IY
+        }, cY, KY), (0, FY.i)(null, null, sY, {
+          kind: "field",
+          name: "rotationSpeed",
+          static: !1,
+          private: !1,
+          access: {
+            has: YY => "rotationSpeed" in YY,
+            get: YY => YY.rotationSpeed,
+            set: (YY, rY) => {
+              YY.rotationSpeed = rY
+            }
+          },
+          metadata: IY
+        }, HY, zY), (0, FY.i)(null, null, iY, {
+          kind: "field",
+          name: "keysRotateLeft",
+          static: !1,
+          private: !1,
+          access: {
+            has: YY => "keysRotateLeft" in YY,
+            get: YY => YY.keysRotateLeft,
+            set: (YY, rY) => {
+              YY.keysRotateLeft = rY
+            }
+          },
+          metadata: IY
+        }, ZY, CY), (0, FY.i)(null, null, yY, {
+          kind: "field",
+          name: "keysRotateRight",
+          static: !1,
+          private: !1,
+          access: {
+            has: YY => "keysRotateRight" in YY,
+            get: YY => YY.keysRotateRight,
+            set: (YY, rY) => {
+              YY.keysRotateRight = rY
+            }
+          },
+          metadata: IY
+        }, fY, jY), (0, FY.i)(null, null, QY, {
+          kind: "field",
+          name: "keysRotateUp",
+          static: !1,
+          private: !1,
+          access: {
+            has: YY => "keysRotateUp" in YY,
+            get: YY => YY.keysRotateUp,
+            set: (YY, rY) => {
+              YY.keysRotateUp = rY
+            }
+          },
+          metadata: IY
+        }, hY, dY), (0, FY.i)(null, null, oY, {
+          kind: "field",
+          name: "keysRotateDown",
+          static: !1,
+          private: !1,
+          access: {
+            has: YY => "keysRotateDown" in YY,
+            get: YY => YY.keysRotateDown,
+            set: (YY, rY) => {
+              YY.keysRotateDown = rY
+            }
+          },
+          metadata: IY
+        }, JY, MY), IY && Object.defineProperty(YY, Symbol.metadata, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: IY
+        })
+      })(), YY
+    })();
+    OY.d.FreeCameraKeyboardMoveInput = vY;
+    var uY = DY(36552),
+      sY = DY(39301);
+    let iY = (() => {
+      var YY;
+      let rY, DY, IY = [],
+        RY = [],
+        OY = [],
+        gY = [];
+      return YY = class {
+        _applyPointerRotation(YY, rY) {
+          this._pointerConditions.button = this._currentActiveButton;
+          const DY = this.camera.movement.input.resolveInteraction("pointer", this._pointerConditions);
+          if (!DY || "rotate" !== DY.interaction) return;
+          const FY = DY.GJ ?? DY.sensitivity ?? 1 / this.angularSensibility,
+            AY = DY.xJ ?? DY.sensitivity ?? 1 / this.angularSensibility;
+          this.camera.cameraRotation.y += YY * FY, this.camera.cameraRotation.x += rY * AY
         }
-      },
-      DT = BB => {
-        const TB = BB.getProvider("app").getImmediate(),
-          dB = (0, VB.y)(TB, LT).getImmediate();
-        return {
-          getId: () => async function(BB) {
-            const TB = BB,
-              {
-                installationEntry: dB,
-                registrationPromise: VB
-              } = await dT(TB);
-            return VB ? VB.catch(console.error) : JT(TB).catch(console.error), dB.fid
-          }(dB),
-          getToken: BB => oT(dB, BB)
+        constructor() {
+          let YY = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+          this.touchEnabled = YY, this.buttons = (0, FY.j)(this, IY, [0, 1, 2]), this.angularSensibility = ((0, FY.j)(this, RY), (0, FY.j)(this, OY, 2e3)), this._pointerInput = (0, FY.j)(this, gY), this._previousPosition = null, this.onPointerMovedObservable = new uY.e, this._allowCameraRotation = !0, this._currentActiveButton = -1, this._activePointerId = -1, this._pointerConditions = {}
         }
-      };
-    (0, VB.A)(new lB.c(LT, OT, "PUBLIC")), (0, VB.A)(new lB.c("installations-internal", DT, "PRIVATE")), (0, VB.R)(fB, sB), (0, VB.R)(fB, sB, "esm2017");
-    const uT = "analytics",
-      HT = "https://www.googletagmanager.com/gtag/js",
-      ET = new yB.h("@firebase/analytics"),
-      vT = {
-        "already-exists": "A Firebase Analytics instance with the appId {$id}  already exists. Only one Firebase Analytics instance can be created for each appId.",
-        "already-initialized": "initializeAnalytics() cannot be called again with different options than those it was initially called with. It can be called again with the same options to return the existing instance, or getAnalytics() can be used to get a reference to the already-intialized instance.",
-        "already-initialized-settings": "Firebase Analytics has already been initialized.settings() must be called before initializing any Analytics instanceor it will have no effect.",
-        "interop-component-reg-failed": "Firebase Analytics Interop Component failed to instantiate: {$reason}",
-        "invalid-analytics-context": "Firebase Analytics is not supported in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: {$errorInfo}",
-        "indexeddb-unavailable": "IndexedDB unavailable or restricted in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: {$errorInfo}",
-        "fetch-throttle": "The config fetch request timed out while in an exponential backoff state. Unix timestamp in milliseconds when fetch request throttling ends: {$throttleEndTimeMillis}.",
-        "config-fetch-failed": "Dynamic config fetch failed: [{$httpStatus}] {$responseMessage}",
-        "no-api-key": 'The "apiKey" field is empty in the local Firebase config. Firebase Analytics requires this field tocontain a valid API key.',
-        "no-app-id": 'The "appId" field is empty in the local Firebase config. Firebase Analytics requires this field tocontain a valid app ID.',
-        "no-client-id": 'The "client_id" field is empty.',
-        "invalid-gtag-resource": "Trusted Types detected an invalid gtag resource: {$gtagURL}."
-      },
-      mT = new pB.e("analytics", "Analytics", vT);
-
-    function iT(BB) {
-      if (!BB.startsWith(HT)) {
-        const TB = mT.create("invalid-gtag-resource", {
-          gtagURL: BB
-        });
-        return ET.warn(TB.message), ""
-      }
-      return BB
-    }
-
-    function NT(BB) {
-      return Promise.all(BB.map((BB => BB.catch((BB => BB)))))
-    }
-
-    function tT(BB, TB) {
-      const dB = function(BB, TB) {
-          let dB;
-          return window.trustedTypes && (dB = window.trustedTypes.createPolicy(BB, TB)), dB
-        }("firebase-js-sdk-policy", {
-          createScriptURL: iT
-        }),
-        VB = document.createElement("script"),
-        yB = `${HT}?l=${BB}&id=${TB}`;
-      VB.src = dB ? null === dB || void 0 === dB ? void 0 : dB.createScriptURL(yB) : yB, VB.async = !0, document.head.appendChild(VB)
-    }
-
-    function fT(BB, TB, dB, VB) {
-      return async function(yB) {
-        try {
-          for (var pB = arguments.length, lB = new Array(pB > 1 ? pB - 1 : 0), JB = 1; JB < pB; JB++) lB[JB - 1] = arguments[JB];
-          if ("event" === yB) {
-            const [VB, yB] = lB;
-            await async function(BB, TB, dB, VB, yB) {
+        attachControl(YY) {
+          YY = aY.i.BackCompatCameraNoPreventDefault(arguments);
+          const rY = this.camera.ky(),
+            DY = rY.getInputElement();
+          this._pointerInput || (this._pointerInput = FY => {
+            const AY = FY.event,
+              IY = "touch" === AY.pointerType;
+            if (!this.touchEnabled && IY) return;
+            if (FY.type !== sY.d.POINTERMOVE && -1 === this.buttons.indexOf(AY.button)) return;
+            const RY = AY.target;
+            if (FY.type === sY.d.POINTERDOWN) {
+              if (IY && -1 !== this._activePointerId || !IY && -1 !== this._currentActiveButton) return;
+              this._activePointerId = AY.pointerId;
               try {
-                let pB = [];
-                if (yB && yB.send_to) {
-                  let BB = yB.send_to;
-                  Array.isArray(BB) || (BB = [BB]);
-                  const VB = await NT(dB);
-                  for (const dB of BB) {
-                    const BB = VB.find((BB => BB.measurementId === dB)),
-                      yB = BB && TB[BB.appId];
-                    if (!yB) {
-                      pB = [];
-                      break
-                    }
-                    pB.push(yB)
-                  }
-                }
-                0 === pB.length && (pB = Object.values(TB)), await Promise.all(pB), BB("event", VB, yB || {})
-              } catch (pB) {
-                ET.error(pB)
-              }
-            }(BB, TB, dB, VB, yB)
-          } else if ("config" === yB) {
-            const [yB, pB] = lB;
-            await async function(BB, TB, dB, VB, yB, pB) {
-              const lB = VB[yB];
+                RY?.setPointerCapture(AY.pointerId)
+              } catch (OY) {} - 1 === this._currentActiveButton && (this._currentActiveButton = AY.button), this._previousPosition = {
+                x: AY.clientX,
+                y: AY.clientY
+              }, YY || (AY.preventDefault(), DY && DY.focus()), rY.isPointerLock && this._onMouseMove && this._onMouseMove(FY.event)
+            } else if (FY.type === sY.d.POINTERUP) {
+              if (IY && this._activePointerId !== AY.pointerId || !IY && this._currentActiveButton !== AY.button) return;
               try {
-                if (lB) await TB[lB];
-                else {
-                  const BB = (await NT(dB)).find((BB => BB.measurementId === yB));
-                  BB && await TB[BB.appId]
-                }
-              } catch (JB) {
-                ET.error(JB)
+                RY?.releasePointerCapture(AY.pointerId)
+              } catch (OY) {}
+              this._currentActiveButton = -1, this._previousPosition = null, YY || AY.preventDefault(), this._activePointerId = -1
+            } else if (FY.type === sY.d.POINTERMOVE && (this._activePointerId === AY.pointerId || !IY))
+              if (rY.isPointerLock && this._onMouseMove) this._onMouseMove(FY.event);
+              else if (this._previousPosition) {
+              const rY = this.camera._calculateHandednessMultiplier(),
+                DY = (AY.clientX - this._previousPosition.x) * rY,
+                FY = (AY.clientY - this._previousPosition.y) * rY;
+              this._allowCameraRotation && this._applyPointerRotation(DY, FY), this.onPointerMovedObservable.notifyObservers({
+                offsetX: DY,
+                offsetY: FY
+              }), this._previousPosition = {
+                x: AY.clientX,
+                y: AY.clientY
+              }, YY || AY.preventDefault()
+            }
+          }), this._onMouseMove = DY => {
+            if (!rY.isPointerLock) return;
+            const FY = this.camera._calculateHandednessMultiplier();
+            this._applyPointerRotation(DY.movementX * FY, DY.movementY * FY), this._previousPosition = null, YY || DY.preventDefault()
+          }, this._observer = this.camera.hT()._inputManager._addCameraPointerObserver(this._pointerInput, sY.d.POINTERDOWN | sY.d.POINTERUP | sY.d.POINTERMOVE), DY && (this._contextMenuBind = YY => this.onContextMenu(YY), DY.addEventListener("contextmenu", this._contextMenuBind, !1))
+        }
+        onContextMenu(YY) {
+          YY.preventDefault()
+        }
+        detachControl() {
+          if (this._observer) {
+            if (this.camera.hT()._inputManager._removeCameraPointerObserver(this._observer), this._contextMenuBind) {
+              const YY = this.camera.ky().getInputElement();
+              YY && YY.removeEventListener("contextmenu", this._contextMenuBind)
+            }
+            this.onPointerMovedObservable && this.onPointerMovedObservable.clear(), this._observer = null, this._onMouseMove = null, this._previousPosition = null
+          }
+          this._activePointerId = -1, this._currentActiveButton = -1
+        }
+        getClassName() {
+          return "FreeCameraMouseInput"
+        }
+        getSimpleName() {
+          return "mouse"
+        }
+      }, (() => {
+        const aY = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        rY = [(0, AY.M)()], DY = [(0, AY.M)()], (0, FY.i)(null, null, rY, {
+          kind: "field",
+          name: "buttons",
+          static: !1,
+          private: !1,
+          access: {
+            has: YY => "buttons" in YY,
+            get: YY => YY.buttons,
+            set: (YY, rY) => {
+              YY.buttons = rY
+            }
+          },
+          metadata: aY
+        }, IY, RY), (0, FY.i)(null, null, DY, {
+          kind: "field",
+          name: "angularSensibility",
+          static: !1,
+          private: !1,
+          access: {
+            has: YY => "angularSensibility" in YY,
+            get: YY => YY.angularSensibility,
+            set: (YY, rY) => {
+              YY.angularSensibility = rY
+            }
+          },
+          metadata: aY
+        }, OY, gY), aY && Object.defineProperty(YY, Symbol.metadata, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: aY
+        })
+      })(), YY
+    })();
+    OY.d.FreeCameraMouseInput = iY;
+    var yY = DY(39309);
+    let QY = (() => {
+      var YY;
+      let rY, DY, IY, RY = [],
+        OY = [],
+        gY = [],
+        vY = [],
+        iY = [],
+        QY = [];
+      return YY = class {
+        constructor() {
+          this.wheelPrecisionX = (0, FY.j)(this, RY, 3), this.wheelPrecisionY = ((0, FY.j)(this, OY), (0, FY.j)(this, gY, 3)), this.wheelPrecisionZ = ((0, FY.j)(this, vY), (0, FY.j)(this, iY, 3)), this.onChangedObservable = ((0, FY.j)(this, QY), new uY.e), this._wheelDeltaX = 0, this._wheelDeltaY = 0, this._wheelDeltaZ = 0, this._ffMultiplier = 12, this._normalize = 120
+        }
+        attachControl(YY) {
+          YY = aY.i.BackCompatCameraNoPreventDefault(arguments), this._wheel = rY => {
+            if (rY.type !== sY.d.POINTERWHEEL) return;
+            const DY = rY.event,
+              FY = DY.deltaMode === yY.d.DOM_DELTA_LINE ? this._ffMultiplier : 1;
+            this._wheelDeltaX += this.wheelPrecisionX * FY * DY.deltaX / this._normalize, this._wheelDeltaY -= this.wheelPrecisionY * FY * DY.deltaY / this._normalize, this._wheelDeltaZ += this.wheelPrecisionZ * FY * DY.deltaZ / this._normalize, DY.preventDefault && (YY || DY.preventDefault())
+          }, this._observer = this.camera.hT()._inputManager._addCameraPointerObserver(this._wheel, sY.d.POINTERWHEEL)
+        }
+        detachControl() {
+          this._observer && (this.camera.hT()._inputManager._removeCameraPointerObserver(this._observer), this._observer = null, this._wheel = null), this.onChangedObservable && this.onChangedObservable.clear()
+        }
+        checkInputs() {
+          this.onChangedObservable.notifyObservers({
+            wheelDeltaX: this._wheelDeltaX,
+            wheelDeltaY: this._wheelDeltaY,
+            wheelDeltaZ: this._wheelDeltaZ
+          }), this._wheelDeltaX = 0, this._wheelDeltaY = 0, this._wheelDeltaZ = 0
+        }
+        getClassName() {
+          return "BaseCameraMouseWheelInput"
+        }
+        getSimpleName() {
+          return "mousewheel"
+        }
+      }, (() => {
+        const aY = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        rY = [(0, AY.M)()], DY = [(0, AY.M)()], IY = [(0, AY.M)()], (0, FY.i)(null, null, rY, {
+          kind: "field",
+          name: "wheelPrecisionX",
+          static: !1,
+          private: !1,
+          access: {
+            has: YY => "wheelPrecisionX" in YY,
+            get: YY => YY.wheelPrecisionX,
+            set: (YY, rY) => {
+              YY.wheelPrecisionX = rY
+            }
+          },
+          metadata: aY
+        }, RY, OY), (0, FY.i)(null, null, DY, {
+          kind: "field",
+          name: "wheelPrecisionY",
+          static: !1,
+          private: !1,
+          access: {
+            has: YY => "wheelPrecisionY" in YY,
+            get: YY => YY.wheelPrecisionY,
+            set: (YY, rY) => {
+              YY.wheelPrecisionY = rY
+            }
+          },
+          metadata: aY
+        }, gY, vY), (0, FY.i)(null, null, IY, {
+          kind: "field",
+          name: "wheelPrecisionZ",
+          static: !1,
+          private: !1,
+          access: {
+            has: YY => "wheelPrecisionZ" in YY,
+            get: YY => YY.wheelPrecisionZ,
+            set: (YY, rY) => {
+              YY.wheelPrecisionZ = rY
+            }
+          },
+          metadata: aY
+        }, iY, QY), aY && Object.defineProperty(YY, Symbol.metadata, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: aY
+        })
+      })(), YY
+    })();
+    var oY;
+    ! function(YY) {
+      YY[YY.MoveRelative = 0] = "MoveRelative", YY[YY.RotateRelative = 1] = "RotateRelative", YY[YY.MoveScene = 2] = "MoveScene"
+    }(oY || (oY = {}));
+    let WY = (() => {
+      var YY;
+      let rY, DY, RY, OY, gY, aY, vY, uY, sY, iY = QY,
+        yY = [];
+      return YY = class extends iY {
+        constructor() {
+          super(...arguments), this.camera = (0, FY.j)(this, yY), this._moveRelative = IY.r.Zero(), this._rotateRelative = IY.r.Zero(), this._moveScene = IY.r.Zero(), this._wheelXAction = oY.MoveRelative, this._wheelXActionCoordinate = 0, this._wheelYAction = oY.MoveRelative, this._wheelYActionCoordinate = 2, this._wheelZAction = null, this._wheelZActionCoordinate = null
+        }
+        getClassName() {
+          return "FreeCameraMouseWheelInput"
+        }
+        set wheelXMoveRelative(YY) {
+          null === YY && this._wheelXAction !== oY.MoveRelative || (this._wheelXAction = oY.MoveRelative, this._wheelXActionCoordinate = YY)
+        }
+        get wheelXMoveRelative() {
+          return this._wheelXAction !== oY.MoveRelative ? null : this._wheelXActionCoordinate
+        }
+        set wheelYMoveRelative(YY) {
+          null === YY && this._wheelYAction !== oY.MoveRelative || (this._wheelYAction = oY.MoveRelative, this._wheelYActionCoordinate = YY)
+        }
+        get wheelYMoveRelative() {
+          return this._wheelYAction !== oY.MoveRelative ? null : this._wheelYActionCoordinate
+        }
+        set wheelZMoveRelative(YY) {
+          null === YY && this._wheelZAction !== oY.MoveRelative || (this._wheelZAction = oY.MoveRelative, this._wheelZActionCoordinate = YY)
+        }
+        get wheelZMoveRelative() {
+          return this._wheelZAction !== oY.MoveRelative ? null : this._wheelZActionCoordinate
+        }
+        set wheelXRotateRelative(YY) {
+          null === YY && this._wheelXAction !== oY.RotateRelative || (this._wheelXAction = oY.RotateRelative, this._wheelXActionCoordinate = YY)
+        }
+        get wheelXRotateRelative() {
+          return this._wheelXAction !== oY.RotateRelative ? null : this._wheelXActionCoordinate
+        }
+        set wheelYRotateRelative(YY) {
+          null === YY && this._wheelYAction !== oY.RotateRelative || (this._wheelYAction = oY.RotateRelative, this._wheelYActionCoordinate = YY)
+        }
+        get wheelYRotateRelative() {
+          return this._wheelYAction !== oY.RotateRelative ? null : this._wheelYActionCoordinate
+        }
+        set wheelZRotateRelative(YY) {
+          null === YY && this._wheelZAction !== oY.RotateRelative || (this._wheelZAction = oY.RotateRelative, this._wheelZActionCoordinate = YY)
+        }
+        get wheelZRotateRelative() {
+          return this._wheelZAction !== oY.RotateRelative ? null : this._wheelZActionCoordinate
+        }
+        set wheelXMoveScene(YY) {
+          null === YY && this._wheelXAction !== oY.MoveScene || (this._wheelXAction = oY.MoveScene, this._wheelXActionCoordinate = YY)
+        }
+        get wheelXMoveScene() {
+          return this._wheelXAction !== oY.MoveScene ? null : this._wheelXActionCoordinate
+        }
+        set wheelYMoveScene(YY) {
+          null === YY && this._wheelYAction !== oY.MoveScene || (this._wheelYAction = oY.MoveScene, this._wheelYActionCoordinate = YY)
+        }
+        get wheelYMoveScene() {
+          return this._wheelYAction !== oY.MoveScene ? null : this._wheelYActionCoordinate
+        }
+        set wheelZMoveScene(YY) {
+          null === YY && this._wheelZAction !== oY.MoveScene || (this._wheelZAction = oY.MoveScene, this._wheelZActionCoordinate = YY)
+        }
+        get wheelZMoveScene() {
+          return this._wheelZAction !== oY.MoveScene ? null : this._wheelZActionCoordinate
+        }
+        checkInputs() {
+          if (0 === this._wheelDeltaX && 0 === this._wheelDeltaY && 0 == this._wheelDeltaZ) return;
+          this._moveRelative.o3(0), this._rotateRelative.o3(0), this._moveScene.o3(0), this._updateCamera(), this.camera.hT().useRightHandedSystem && (this._moveRelative.z *= -1);
+          const YY = IY.e.Zero();
+          this.camera.getViewMatrix().invertToRef(YY);
+          const rY = IY.r.Zero();
+          IY.r.TransformNormalToRef(this._moveRelative, YY, rY), this.camera.cameraRotation.x += this._rotateRelative.x / 200, this.camera.cameraRotation.y += this._rotateRelative.y / 200, this.camera.cameraDirection.addInPlace(rY), this.camera.cameraDirection.addInPlace(this._moveScene), super.checkInputs()
+        }
+        _updateCamera() {
+          this._updateCameraProperty(this._wheelDeltaX, this._wheelXAction, this._wheelXActionCoordinate), this._updateCameraProperty(this._wheelDeltaY, this._wheelYAction, this._wheelYActionCoordinate), this._updateCameraProperty(this._wheelDeltaZ, this._wheelZAction, this._wheelZActionCoordinate)
+        }
+        _updateCameraProperty(YY, rY, DY) {
+          if (0 === YY) return;
+          if (null === rY || null === DY) return;
+          let FY = null;
+          switch (rY) {
+            case oY.MoveRelative:
+              FY = this._moveRelative;
+              break;
+            case oY.RotateRelative:
+              FY = this._rotateRelative;
+              break;
+            case oY.MoveScene:
+              FY = this._moveScene
+          }
+          switch (DY) {
+            case 0:
+              FY.set(YY, 0, 0);
+              break;
+            case 1:
+              FY.set(0, YY, 0);
+              break;
+            case 2:
+              FY.set(0, 0, YY)
+          }
+        }
+      }, (() => {
+        const IY = "function" === typeof Symbol && Symbol.metadata ? Object.create(iY[Symbol.metadata] ?? null) : void 0;
+        rY = [(0, AY.M)()], DY = [(0, AY.M)()], RY = [(0, AY.M)()], OY = [(0, AY.M)()], gY = [(0, AY.M)()], aY = [(0, AY.M)()], vY = [(0, AY.M)()], uY = [(0, AY.M)()], sY = [(0, AY.M)()], (0, FY.i)(YY, null, rY, {
+          kind: "setter",
+          name: "wheelXMoveRelative",
+          static: !1,
+          private: !1,
+          access: {
+            has: YY => "wheelXMoveRelative" in YY,
+            set: (YY, rY) => {
+              YY.wheelXMoveRelative = rY
+            }
+          },
+          metadata: IY
+        }, null, yY), (0, FY.i)(YY, null, DY, {
+          kind: "setter",
+          name: "wheelYMoveRelative",
+          static: !1,
+          private: !1,
+          access: {
+            has: YY => "wheelYMoveRelative" in YY,
+            set: (YY, rY) => {
+              YY.wheelYMoveRelative = rY
+            }
+          },
+          metadata: IY
+        }, null, yY), (0, FY.i)(YY, null, RY, {
+          kind: "setter",
+          name: "wheelZMoveRelative",
+          static: !1,
+          private: !1,
+          access: {
+            has: YY => "wheelZMoveRelative" in YY,
+            set: (YY, rY) => {
+              YY.wheelZMoveRelative = rY
+            }
+          },
+          metadata: IY
+        }, null, yY), (0, FY.i)(YY, null, OY, {
+          kind: "setter",
+          name: "wheelXRotateRelative",
+          static: !1,
+          private: !1,
+          access: {
+            has: YY => "wheelXRotateRelative" in YY,
+            set: (YY, rY) => {
+              YY.wheelXRotateRelative = rY
+            }
+          },
+          metadata: IY
+        }, null, yY), (0, FY.i)(YY, null, gY, {
+          kind: "setter",
+          name: "wheelYRotateRelative",
+          static: !1,
+          private: !1,
+          access: {
+            has: YY => "wheelYRotateRelative" in YY,
+            set: (YY, rY) => {
+              YY.wheelYRotateRelative = rY
+            }
+          },
+          metadata: IY
+        }, null, yY), (0, FY.i)(YY, null, aY, {
+          kind: "setter",
+          name: "wheelZRotateRelative",
+          static: !1,
+          private: !1,
+          access: {
+            has: YY => "wheelZRotateRelative" in YY,
+            set: (YY, rY) => {
+              YY.wheelZRotateRelative = rY
+            }
+          },
+          metadata: IY
+        }, null, yY), (0, FY.i)(YY, null, vY, {
+          kind: "setter",
+          name: "wheelXMoveScene",
+          static: !1,
+          private: !1,
+          access: {
+            has: YY => "wheelXMoveScene" in YY,
+            set: (YY, rY) => {
+              YY.wheelXMoveScene = rY
+            }
+          },
+          metadata: IY
+        }, null, yY), (0, FY.i)(YY, null, uY, {
+          kind: "setter",
+          name: "wheelYMoveScene",
+          static: !1,
+          private: !1,
+          access: {
+            has: YY => "wheelYMoveScene" in YY,
+            set: (YY, rY) => {
+              YY.wheelYMoveScene = rY
+            }
+          },
+          metadata: IY
+        }, null, yY), (0, FY.i)(YY, null, sY, {
+          kind: "setter",
+          name: "wheelZMoveScene",
+          static: !1,
+          private: !1,
+          access: {
+            has: YY => "wheelZMoveScene" in YY,
+            set: (YY, rY) => {
+              YY.wheelZMoveScene = rY
+            }
+          },
+          metadata: IY
+        }, null, yY), IY && Object.defineProperty(YY, Symbol.metadata, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: IY
+        })
+      })(), YY
+    })();
+    OY.d.FreeCameraMouseWheelInput = WY;
+    let EY = (() => {
+      var YY;
+      let rY, DY, RY = [],
+        OY = [],
+        gY = [],
+        vY = [];
+      return YY = class {
+        constructor() {
+          let YY = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          this.allowMouse = YY, this.touchAngularSensibility = (0, FY.j)(this, RY, 2e5), this.touchMoveSensibility = ((0, FY.j)(this, OY), (0, FY.j)(this, gY, 250)), this.singleFingerRotate = ((0, FY.j)(this, vY), !1), this._offsetX = null, this._offsetY = null, this._pointerPressed = new Array, this._isSafari = aY.i.IsSafari()
+        }
+        attachControl(YY) {
+          YY = aY.i.BackCompatCameraNoPreventDefault(arguments);
+          let rY = null;
+          if (void 0 === this._pointerInput && (this._onLostFocus = () => {
+              this._offsetX = null, this._offsetY = null
+            }, this._pointerInput = DY => {
+              const FY = DY.event,
+                AY = "mouse" === FY.pointerType || this._isSafari && "undefined" === typeof FY.pointerType;
+              if (this.allowMouse || !AY)
+                if (DY.type === sY.d.POINTERDOWN) {
+                  if (YY || FY.preventDefault(), this._pointerPressed.push(FY.pointerId), 1 !== this._pointerPressed.length) return;
+                  rY = {
+                    x: FY.clientX,
+                    y: FY.clientY
+                  }
+                } else if (DY.type === sY.d.POINTERUP) {
+                YY || FY.preventDefault();
+                const DY = this._pointerPressed.indexOf(FY.pointerId);
+                if (-1 === DY) return;
+                if (this._pointerPressed.splice(DY, 1), 0 != DY) return;
+                rY = null, this._offsetX = null, this._offsetY = null
+              } else if (DY.type === sY.d.POINTERMOVE) {
+                if (YY || FY.preventDefault(), !rY) return;
+                if (0 != this._pointerPressed.indexOf(FY.pointerId)) return;
+                this._offsetX = FY.clientX - rY.x, this._offsetY = -(FY.clientY - rY.y)
               }
-              BB("config", yB, pB)
-            }(BB, TB, dB, VB, yB, pB)
-          } else if ("consent" === yB) {
-            const [TB] = lB;
-            BB("consent", "update", TB)
-          } else if ("get" === yB) {
-            const [TB, dB, VB] = lB;
-            BB("get", TB, dB, VB)
-          } else if ("set" === yB) {
-            const [TB] = lB;
-            BB("set", TB)
-          } else BB(yB, ...lB)
-        } catch (YB) {
-          ET.error(YB)
-        }
-      }
-    }
-    const sT = new class {
-      constructor() {
-        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-          TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1e3;
-        this.throttleMetadata = BB, this.intervalMillis = TB
-      }
-      getThrottleMetadata(BB) {
-        return this.throttleMetadata[BB]
-      }
-      setThrottleMetadata(BB, TB) {
-        this.throttleMetadata[BB] = TB
-      }
-      deleteThrottleMetadata(BB) {
-        delete this.throttleMetadata[BB]
-      }
-    };
-
-    function MT(BB) {
-      return new Headers({
-        Accept: "application/json",
-        "x-goog-api-key": BB
-      })
-    }
-    async function zT(BB) {
-      let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : sT,
-        dB = arguments.length > 2 ? arguments[2] : void 0;
-      const {
-        appId: VB,
-        apiKey: yB,
-        measurementId: pB
-      } = BB.options;
-      if (!VB) throw mT.create("no-app-id");
-      if (!yB) {
-        if (pB) return {
-          measurementId: pB,
-          appId: VB
-        };
-        throw mT.create("no-api-key")
-      }
-      const lB = TB.getThrottleMetadata(VB) || {
-          backoffCount: 0,
-          throttleEndTimeMillis: Date.now()
-        },
-        JB = new UT;
-      return setTimeout((async () => {
-        JB.abort()
-      }), void 0 !== dB ? dB : 6e4), wT({
-        appId: VB,
-        apiKey: yB,
-        measurementId: pB
-      }, lB, JB, TB)
-    }
-    async function wT(BB, TB, dB) {
-      let {
-        throttleEndTimeMillis: VB,
-        backoffCount: yB
-      } = TB, lB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : sT;
-      var JB;
-      const {
-        appId: YB,
-        measurementId: gB
-      } = BB;
-      try {
-        await
-        function(BB, TB) {
-          return new Promise(((dB, VB) => {
-            const yB = Math.max(TB - Date.now(), 0),
-              pB = setTimeout(dB, yB);
-            BB.addEventListener((() => {
-              clearTimeout(pB), VB(mT.create("fetch-throttle", {
-                throttleEndTimeMillis: TB
-              }))
-            }))
-          }))
-        }(dB, VB)
-      } catch (oB) {
-        if (gB) return ET.warn(`Timed out fetching this Firebase app's measurement ID from the server. Falling back to the measurement ID ${gB} provided in the "measurementId" field in the local Firebase config. [${null===oB||void 0===oB?void 0:oB.message}]`), {
-          appId: YB,
-          measurementId: gB
-        };
-        throw oB
-      }
-      try {
-        const TB = await async function(BB) {
-          var TB;
-          const {
-            appId: dB,
-            apiKey: VB
-          } = BB, yB = {
-            method: "GET",
-            headers: MT(VB)
-          }, pB = "https://firebase.googleapis.com/v1alpha/projects/-/apps/{app-id}/webConfig".replace("{app-id}", dB), lB = await fetch(pB, yB);
-          if (200 !== lB.status && 304 !== lB.status) {
-            let BB = "";
-            try {
-              const dB = await lB.json();
-              (null === (TB = dB.error) || void 0 === TB ? void 0 : TB.message) && (BB = dB.error.message)
-            } catch (JB) {}
-            throw mT.create("config-fetch-failed", {
-              httpStatus: lB.status,
-              responseMessage: BB
-            })
+            }), this._observer = this.camera.hT()._inputManager._addCameraPointerObserver(this._pointerInput, sY.d.POINTERDOWN | sY.d.POINTERUP | sY.d.POINTERMOVE), this._onLostFocus) {
+            const YY = this.camera.ky().getInputElement();
+            YY && YY.addEventListener("blur", this._onLostFocus)
           }
-          return lB.json()
-        }(BB);
-        return lB.deleteThrottleMetadata(YB), TB
-      } catch (oB) {
-        const TB = oB;
-        if (! function(BB) {
-            if (!(BB instanceof pB.g) || !BB.customData) return !1;
-            const TB = Number(BB.customData.httpStatus);
-            return 429 === TB || 500 === TB || 503 === TB || 504 === TB
-          }(TB)) {
-          if (lB.deleteThrottleMetadata(YB), gB) return ET.warn(`Failed to fetch this Firebase app's measurement ID from the server. Falling back to the measurement ID ${gB} provided in the "measurementId" field in the local Firebase config. [${null===TB||void 0===TB?void 0:TB.message}]`), {
-            appId: YB,
-            measurementId: gB
-          };
-          throw oB
         }
-        const VB = 503 === Number(null === (JB = null === TB || void 0 === TB ? void 0 : TB.customData) || void 0 === JB ? void 0 : JB.httpStatus) ? (0, pB.r)(yB, lB.intervalMillis, 30) : (0, pB.r)(yB, lB.intervalMillis),
-          kB = {
-            throttleEndTimeMillis: Date.now() + VB,
-            backoffCount: yB + 1
-          };
-        return lB.setThrottleMetadata(YB, kB), ET.debug(`Calling attemptFetch again in ${VB} millis`), wT(BB, kB, dB, lB)
-      }
-    }
-    class UT {
-      constructor() {
-        this.listeners = []
-      }
-      addEventListener(BB) {
-        this.listeners.push(BB)
-      }
-      abort() {
-        this.listeners.forEach((BB => BB()))
-      }
-    }
-    let FT, KT;
-
-    function rT(BB) {
-      KT = BB
-    }
-
-    function IT(BB) {
-      FT = BB
-    }
-    async function cT(BB, TB, dB, VB, yB, lB, JB) {
-      var YB;
-      const gB = zT(BB);
-      gB.then((TB => {
-        dB[TB.measurementId] = TB.appId, BB.options.measurementId && TB.measurementId !== BB.options.measurementId && ET.warn(`The measurement ID in the local Firebase config (${BB.options.measurementId}) does not match the measurement ID fetched from the server (${TB.measurementId}). To ensure analytics events are always sent to the correct Analytics property, update the measurement ID field in the local config or remove it from the local config.`)
-      })).catch((BB => ET.error(BB))), TB.push(gB);
-      const oB = async function() {
-        if (!(0, pB.cb)()) return ET.warn(mT.create("indexeddb-unavailable", {
-          errorInfo: "IndexedDB is not available in this environment."
-        }).message), !1;
-        try {
-          await (0, pB.qb)()
-        } catch (BB) {
-          return ET.warn(mT.create("indexeddb-unavailable", {
-            errorInfo: null === BB || void 0 === BB ? void 0 : BB.toString()
-          }).message), !1
-        }
-        return !0
-      }().then((BB => BB ? VB.getId() : void 0)), [kB, LB] = await Promise.all([gB, oB]);
-      (function(BB) {
-        const TB = window.document.getElementsByTagName("script");
-        for (const dB of Object.values(TB))
-          if (dB.src && dB.src.includes(HT) && dB.src.includes(BB)) return dB;
-        return null
-      })(lB) || tT(lB, kB.measurementId), KT && (yB("consent", "default", KT), rT(void 0)), yB("js", new Date);
-      const OB = null !== (YB = null === JB || void 0 === JB ? void 0 : JB.config) && void 0 !== YB ? YB : {};
-      return OB.origin = "firebase", OB.update = !0, null != LB && (OB.firebase_id = LB), yB("config", kB.measurementId, OB), FT && (yB("set", FT), IT(void 0)), kB.measurementId
-    }
-    class ST {
-      constructor(BB) {
-        this.app = BB
-      }
-      _delete() {
-        return delete PT[this.app.options.appId], Promise.resolve()
-      }
-    }
-    let PT = {},
-      QT = [];
-    const RT = {};
-    let aT, ZT, XT = "dataLayer",
-      WT = "gtag",
-      hT = !1;
-
-    function CT(BB) {
-      if (hT) throw mT.create("already-initialized");
-      BB.dataLayerName && (XT = BB.dataLayerName), BB.gtagName && (WT = BB.gtagName)
-    }
-
-    function GT(BB, TB, dB) {
-      ! function() {
-        const BB = [];
-        if ((0, pB.V)() && BB.push("This is a browser extension environment."), (0, pB.h)() || BB.push("Cookies are not available."), BB.length > 0) {
-          const TB = BB.map(((BB, TB) => `(${TB+1}) ${BB}`)).join(" "),
-            dB = mT.create("invalid-analytics-context", {
-              errorInfo: TB
-            });
-          ET.warn(dB.message)
-        }
-      }();
-      const VB = BB.options.appId;
-      if (!VB) throw mT.create("no-app-id");
-      if (!BB.options.apiKey) {
-        if (!BB.options.measurementId) throw mT.create("no-api-key");
-        ET.warn(`The "apiKey" field is empty in the local Firebase config. This is needed to fetch the latest measurement ID for this Firebase app. Falling back to the measurement ID ${BB.options.measurementId} provided in the "measurementId" field in the local Firebase config.`)
-      }
-      if (null != PT[VB]) throw mT.create("already-exists", {
-        id: VB
-      });
-      if (!hT) {
-        ! function(BB) {
-          let TB = [];
-          Array.isArray(window[BB]) ? TB = window[BB] : window[BB] = TB
-        }(XT);
-        const {
-          wrappedGtag: BB,
-          gtagCore: TB
-        } = function(BB, TB, dB, VB, yB) {
-          let pB = function() {
-            for (var BB = arguments.length, TB = new Array(BB), dB = 0; dB < BB; dB++) TB[dB] = arguments[dB];
-            window[VB].push(arguments)
-          };
-          return window[yB] && "function" === typeof window[yB] && (pB = window[yB]), window[yB] = fT(pB, BB, TB, dB), {
-            gtagCore: pB,
-            wrappedGtag: window[yB]
+        detachControl() {
+          if (this._pointerInput) {
+            if (this._observer && (this.camera.hT()._inputManager._removeCameraPointerObserver(this._observer), this._observer = null), this._onLostFocus) {
+              const YY = this.camera.ky().getInputElement();
+              YY && YY.removeEventListener("blur", this._onLostFocus), this._onLostFocus = null
+            }
+            this._pointerPressed.length = 0, this._offsetX = null, this._offsetY = null
           }
-        }(PT, QT, RT, XT, WT);
-        ZT = BB, aT = TB, hT = !0
-      }
-      PT[VB] = cT(BB, QT, RT, TB, aT, XT, dB);
-      return new ST(BB)
-    }
-
-    function qT() {
-      let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, VB.I)();
-      BB = (0, pB.N)(BB);
-      const TB = (0, VB.y)(BB, uT);
-      return TB.isInitialized() ? TB.getImmediate() : xT(BB)
-    }
-
-    function xT(BB) {
-      let TB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      const dB = (0, VB.y)(BB, uT);
-      if (dB.isInitialized()) {
-        const BB = dB.getImmediate();
-        if ((0, pB.z)(TB, dB.getOptions())) return BB;
-        throw mT.create("already-initialized")
-      }
-      return dB.initialize({
-        options: TB
-      })
-    }
-    async function jT() {
-      if ((0, pB.V)()) return !1;
-      if (!(0, pB.h)()) return !1;
-      if (!(0, pB.cb)()) return !1;
-      try {
-        return await (0, pB.qb)()
-      } catch (BB) {
-        return !1
-      }
-    }
-
-    function AT(BB, TB, dB) {
-      BB = (0, pB.N)(BB), async function(BB, TB, dB, VB) {
-        if (VB && VB.global) return BB("set", {
-          screen_name: dB
-        }), Promise.resolve();
-        BB("config", await TB, {
-          update: !0,
-          screen_name: dB
-        })
-      }(ZT, PT[BB.app.options.appId], TB, dB).catch((BB => ET.error(BB)))
-    }
-    async function bT(BB) {
-      return BB = (0, pB.N)(BB), async function(BB, TB) {
-        const dB = await TB;
-        return new Promise(((TB, VB) => {
-          BB("get", dB, "client_id", (BB => {
-            BB || VB(mT.create("no-client-id")), TB(BB)
-          }))
-        }))
-      }(ZT, PT[BB.app.options.appId])
-    }
-
-    function nT(BB, TB, dB) {
-      BB = (0, pB.N)(BB), async function(BB, TB, dB, VB) {
-        if (VB && VB.global) return BB("set", {
-          user_id: dB
-        }), Promise.resolve();
-        BB("config", await TB, {
-          update: !0,
-          user_id: dB
-        })
-      }(ZT, PT[BB.app.options.appId], TB, dB).catch((BB => ET.error(BB)))
-    }
-
-    function eT(BB, TB, dB) {
-      BB = (0, pB.N)(BB), async function(BB, TB, dB, VB) {
-        if (VB && VB.global) {
-          const TB = {};
-          for (const BB of Object.keys(dB)) TB[`user_properties.${BB}`] = dB[BB];
-          return BB("set", TB), Promise.resolve()
         }
-        BB("config", await TB, {
-          update: !0,
-          user_properties: dB
-        })
-      }(ZT, PT[BB.app.options.appId], TB, dB).catch((BB => ET.error(BB)))
-    }
-
-    function Bd(BB, TB) {
-      BB = (0, pB.N)(BB), async function(BB, TB) {
-        const dB = await BB;
-        window[`ga-disable-${dB}`] = !TB
-      }(PT[BB.app.options.appId], TB).catch((BB => ET.error(BB)))
-    }
-
-    function Td(BB) {
-      ZT ? ZT("set", BB) : IT(BB)
-    }
-
-    function dd(BB, TB, dB, VB) {
-      BB = (0, pB.N)(BB), async function(BB, TB, dB, VB, yB) {
-        if (yB && yB.global) BB("event", dB, VB);
-        else {
-          const yB = await TB;
-          BB("event", dB, Object.assign(Object.assign({}, VB), {
-            send_to: yB
-          }))
+        checkInputs() {
+          if (null === this._offsetX || null === this._offsetY) return;
+          if (0 === this._offsetX && 0 === this._offsetY) return;
+          const YY = this.camera,
+            rY = YY.movement.input,
+            DY = rY.getEntry("touch", "rotate"),
+            FY = rY.getEntry("touch", "translate"),
+            AY = YY._calculateHandednessMultiplier(),
+            RY = this.singleFingerRotate && 1 === this._pointerPressed.length || !this.singleFingerRotate && this._pointerPressed.length > 1;
+          if (DY) {
+            const rY = DY.sensitivity ?? 1 / this.touchAngularSensibility;
+            YY.cameraRotation.y = this._offsetX * AY * rY, RY && (YY.cameraRotation.x = -this._offsetY * AY * rY)
+          }
+          if (!RY && FY) {
+            const rY = YY._computeLocalCameraSpeed(),
+              DY = FY.sensitivity ?? (0 !== this.touchMoveSensibility ? 1 / this.touchMoveSensibility : 0),
+              AY = IY.n.xy[0];
+            AY.p_(0, 0, rY * this._offsetY * DY), IY.e.RotationYawPitchRollToRef(YY.rotation.y, YY.rotation.x, 0, YY._cameraRotationMatrix), IY.r.TransformCoordinatesToRef(AY, YY._cameraRotationMatrix, AY), YY.cameraDirection.addInPlace(AY)
+          }
         }
-      }(ZT, PT[BB.app.options.appId], TB, dB, VB).catch((BB => ET.error(BB)))
-    }
-
-    function Vd(BB) {
-      ZT ? ZT("consent", "update", BB) : rT(BB)
-    }
-    const yd = "@firebase/analytics",
-      pd = "0.10.0";
-    (0, VB.A)(new lB.c(uT, ((BB, TB) => {
-      let {
-        options: dB
-      } = TB;
-      return GT(BB.getProvider("app").getImmediate(), BB.getProvider("installations-internal").getImmediate(), dB)
-    }), "PUBLIC")), (0, VB.A)(new lB.c("analytics-internal", (function(BB) {
-      try {
-        const TB = BB.getProvider(uT).getImmediate();
-        return {
-          logEvent: (BB, dB, VB) => dd(TB, BB, dB, VB)
+        getClassName() {
+          return "FreeCameraTouchInput"
         }
-      } catch (TB) {
-        throw mT.create("interop-component-reg-failed", {
-          reason: TB
+        getSimpleName() {
+          return "touch"
+        }
+      }, (() => {
+        const IY = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        rY = [(0, AY.M)()], DY = [(0, AY.M)()], (0, FY.i)(null, null, rY, {
+          kind: "field",
+          name: "touchAngularSensibility",
+          static: !1,
+          private: !1,
+          access: {
+            has: YY => "touchAngularSensibility" in YY,
+            get: YY => YY.touchAngularSensibility,
+            set: (YY, rY) => {
+              YY.touchAngularSensibility = rY
+            }
+          },
+          metadata: IY
+        }, RY, OY), (0, FY.i)(null, null, DY, {
+          kind: "field",
+          name: "touchMoveSensibility",
+          static: !1,
+          private: !1,
+          access: {
+            has: YY => "touchMoveSensibility" in YY,
+            get: YY => YY.touchMoveSensibility,
+            set: (YY, rY) => {
+              YY.touchMoveSensibility = rY
+            }
+          },
+          metadata: IY
+        }, gY, vY), IY && Object.defineProperty(YY, Symbol.metadata, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: IY
         })
+      })(), YY
+    })();
+    OY.d.FreeCameraTouchInput = EY;
+    var mY, VY, SY, lY = DY(39029);
+    class TY extends OY.e {
+      constructor(YY) {
+        super(YY), this._mouseInput = null, this._mouseWheelInput = null
       }
-    }), "PRIVATE")), (0, VB.R)(yd, pd), (0, VB.R)(yd, pd, "esm2017")
+      addKeyboard() {
+        return this.add(new vY), this
+      }
+      addMouse() {
+        let YY = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        return this._mouseInput || (this._mouseInput = new iY(YY), this.add(this._mouseInput)), this
+      }
+      removeMouse() {
+        return this._mouseInput && this.remove(this._mouseInput), this
+      }
+      addMouseWheel() {
+        return this._mouseWheelInput || (this._mouseWheelInput = new WY, this.add(this._mouseWheelInput)), this
+      }
+      removeMouseWheel() {
+        return this._mouseWheelInput && this.remove(this._mouseWheelInput), this
+      }
+      addTouch() {
+        return this.add(new EY), this
+      }
+      clear() {
+        super.clear(), this._mouseInput = null
+      }
+    }(mY = TY.prototype).addDeviceOrientation ?? (mY.addDeviceOrientation = (0, lY.g)("FreeCameraInputsManager", "addDeviceOrientation")), (VY = TY.prototype).addVirtualJoystick ?? (VY.addVirtualJoystick = (0, lY.g)("FreeCameraInputsManager", "addVirtualJoystick")), (SY = TY.prototype).addGamepad ?? (SY.addGamepad = (0, lY.g)("FreeCameraInputsManager", "addGamepad"));
+    var eY = DY(39041),
+      NY = DY(36569);
+    let BY = (() => {
+        var YY;
+        let rY, DY, OY, gY, vY = RY.g,
+          uY = [],
+          sY = [],
+          iY = [],
+          yY = [],
+          QY = [],
+          oY = [],
+          WY = [],
+          EY = [];
+        return YY = class extends vY {
+          get angularSensibility() {
+            const YY = this.inputs.attached.mouse;
+            return YY ? YY.angularSensibility : 0
+          }
+          set angularSensibility(YY) {
+            const rY = this.inputs.attached.mouse;
+            rY && (rY.angularSensibility = YY)
+          }
+          get keysUp() {
+            const YY = this.inputs.attached.keyboard;
+            return YY ? YY.keysUp : []
+          }
+          set keysUp(YY) {
+            const rY = this.inputs.attached.keyboard;
+            rY && (rY.keysUp = YY)
+          }
+          get keysUpward() {
+            const YY = this.inputs.attached.keyboard;
+            return YY ? YY.keysUpward : []
+          }
+          set keysUpward(YY) {
+            const rY = this.inputs.attached.keyboard;
+            rY && (rY.keysUpward = YY)
+          }
+          get keysDown() {
+            const YY = this.inputs.attached.keyboard;
+            return YY ? YY.keysDown : []
+          }
+          set keysDown(YY) {
+            const rY = this.inputs.attached.keyboard;
+            rY && (rY.keysDown = YY)
+          }
+          get keysDownward() {
+            const YY = this.inputs.attached.keyboard;
+            return YY ? YY.keysDownward : []
+          }
+          set keysDownward(YY) {
+            const rY = this.inputs.attached.keyboard;
+            rY && (rY.keysDownward = YY)
+          }
+          get keysLeft() {
+            const YY = this.inputs.attached.keyboard;
+            return YY ? YY.keysLeft : []
+          }
+          set keysLeft(YY) {
+            const rY = this.inputs.attached.keyboard;
+            rY && (rY.keysLeft = YY)
+          }
+          get keysRight() {
+            const YY = this.inputs.attached.keyboard;
+            return YY ? YY.keysRight : []
+          }
+          set keysRight(YY) {
+            const rY = this.inputs.attached.keyboard;
+            rY && (rY.keysRight = YY)
+          }
+          get keysRotateLeft() {
+            const YY = this.inputs.attached.keyboard;
+            return YY ? YY.keysRotateLeft : []
+          }
+          set keysRotateLeft(YY) {
+            const rY = this.inputs.attached.keyboard;
+            rY && (rY.keysRotateLeft = YY)
+          }
+          get keysRotateRight() {
+            const YY = this.inputs.attached.keyboard;
+            return YY ? YY.keysRotateRight : []
+          }
+          set keysRotateRight(YY) {
+            const rY = this.inputs.attached.keyboard;
+            rY && (rY.keysRotateRight = YY)
+          }
+          get keysRotateUp() {
+            const YY = this.inputs.attached.keyboard;
+            return YY ? YY.keysRotateUp : []
+          }
+          set keysRotateUp(YY) {
+            const rY = this.inputs.attached.keyboard;
+            rY && (rY.keysRotateUp = YY)
+          }
+          get keysRotateDown() {
+            const YY = this.inputs.attached.keyboard;
+            return YY ? YY.keysRotateDown : []
+          }
+          set keysRotateDown(YY) {
+            const rY = this.inputs.attached.keyboard;
+            rY && (rY.keysRotateDown = YY)
+          }
+          constructor(YY, rY, DY) {
+            var AY;
+            super(YY, rY, DY, !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3]), AY = this, this.ellipsoid = (0, FY.j)(this, uY, new IY.r(.5, 1, .5)), this.ellipsoidOffset = ((0, FY.j)(this, sY), (0, FY.j)(this, iY, new IY.r(0, 0, 0))), this.checkCollisions = ((0, FY.j)(this, yY), (0, FY.j)(this, QY, !1)), this.applyGravity = ((0, FY.j)(this, oY), (0, FY.j)(this, WY, !1)), this.inputs = (0, FY.j)(this, EY), this._needMoveForGravity = !1, this._oldPosition = IY.r.Zero(), this._diffPosition = IY.r.Zero(), this._newPosition = IY.r.Zero(), this._collisionMask = -1, this._onCollisionPositionChange = function(YY, rY) {
+              let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+              AY._newPosition.brY(rY), AY._newPosition.subtractToRef(AY._oldPosition, AY._diffPosition), AY._diffPosition.length() > eY.d.CollisionsEpsilon && (AY.position.addToRef(AY._diffPosition, AY._deferredPositionUpdate), AY._deferOnly ? AY._deferredUpdated = !0 : AY.position.brY(AY._deferredPositionUpdate), AY.Lu && DY && AY.Lu(DY))
+            }, this.inputs = new TY(this), this.inputs.addKeyboard().addMouse()
+          }
+          attachControl(YY, rY) {
+            rY = aY.i.BackCompatCameraNoPreventDefault(arguments), this.inputs.attachElement(rY)
+          }
+          detachControl() {
+            this.inputs.detachElement(), this.cameraDirection = new IY.r(0, 0, 0), this.cameraRotation = new IY.q(0, 0)
+          }
+          get collisionMask() {
+            return this._collisionMask
+          }
+          set collisionMask(YY) {
+            this._collisionMask = isNaN(YY) ? -1 : YY
+          }
+          _collideWithWorld(YY) {
+            let rY;
+            rY = this.parent ? IY.r.TransformCoordinates(this.position, this.parent.getWorldMatrix()) : this.position, rY.subtractFromFloatsToRef(0, this.ellipsoid.y, 0, this._oldPosition), this._oldPosition.addInPlace(this.ellipsoidOffset);
+            const DY = this.hT().collisionCoordinator;
+            this._collider || (this._collider = DY.createCollider()), this._collider._radius = this.ellipsoid, this._collider.collisionMask = this._collisionMask;
+            let FY = YY;
+            this.applyGravity && (FY = YY.add(this.hT().gravity)), DY.getNewPosition(this._oldPosition, FY, this._collider, 3, null, this._onCollisionPositionChange, this.uniqueId)
+          }
+          _checkInputs() {
+            this._localDirection || (this._localDirection = IY.r.Zero(), this._transformedDirection = IY.r.Zero()), this.inputs.checkInputs(), super._checkInputs()
+          }
+          set needMoveForGravity(YY) {
+            this._needMoveForGravity = YY
+          }
+          get needMoveForGravity() {
+            return this._needMoveForGravity
+          }
+          _decideIfNeedsToMove() {
+            return this._needMoveForGravity || Math.abs(this.cameraDirection.x) > 0 || Math.abs(this.cameraDirection.y) > 0 || Math.abs(this.cameraDirection.z) > 0
+          }
+          _updatePosition() {
+            this.checkCollisions && this.hT().collisionsEnabled ? this._collideWithWorld(this.cameraDirection) : super._updatePosition()
+          }
+          dispose() {
+            this.inputs.clear(), super.dispose()
+          }
+          getClassName() {
+            return "FreeCamera"
+          }
+        }, (() => {
+          const IY = "function" === typeof Symbol && Symbol.metadata ? Object.create(vY[Symbol.metadata] ?? null) : void 0;
+          rY = [(0, AY.J)()], DY = [(0, AY.J)()], OY = [(0, AY.M)()], gY = [(0, AY.M)()], (0, FY.i)(null, null, rY, {
+            kind: "field",
+            name: "ellipsoid",
+            static: !1,
+            private: !1,
+            access: {
+              has: YY => "ellipsoid" in YY,
+              get: YY => YY.ellipsoid,
+              set: (YY, rY) => {
+                YY.ellipsoid = rY
+              }
+            },
+            metadata: IY
+          }, uY, sY), (0, FY.i)(null, null, DY, {
+            kind: "field",
+            name: "ellipsoidOffset",
+            static: !1,
+            private: !1,
+            access: {
+              has: YY => "ellipsoidOffset" in YY,
+              get: YY => YY.ellipsoidOffset,
+              set: (YY, rY) => {
+                YY.ellipsoidOffset = rY
+              }
+            },
+            metadata: IY
+          }, iY, yY), (0, FY.i)(null, null, OY, {
+            kind: "field",
+            name: "checkCollisions",
+            static: !1,
+            private: !1,
+            access: {
+              has: YY => "checkCollisions" in YY,
+              get: YY => YY.checkCollisions,
+              set: (YY, rY) => {
+                YY.checkCollisions = rY
+              }
+            },
+            metadata: IY
+          }, QY, oY), (0, FY.i)(null, null, gY, {
+            kind: "field",
+            name: "applyGravity",
+            static: !1,
+            private: !1,
+            access: {
+              has: YY => "applyGravity" in YY,
+              get: YY => YY.applyGravity,
+              set: (YY, rY) => {
+                YY.applyGravity = rY
+              }
+            },
+            metadata: IY
+          }, WY, EY), IY && Object.defineProperty(YY, Symbol.metadata, {
+            enumerable: !0,
+            configurable: !0,
+            writable: !0,
+            value: IY
+          })
+        })(), YY
+      })(),
+      cY = !1;
+    cY || (cY = !0, (0, NY.i)("BABYLON.FreeCamera", BY))
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

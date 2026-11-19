@@ -1,547 +1,508 @@
 export const id = 89;
 export const ids = [89];
 export const modules = {
-  4274: (BB, TB, dB) => {
-    dB.r(TB), dB.d(TB, {
-      default: () => hB
+  40254: (YY, rY, DY) => {
+    DY.r(rY), DY.d(rY, {
+      DOCS_AGENT_PART_CHARS: () => hr.b,
+      DOCS_LLMS_FULL_TXT_PATH: () => hr.f,
+      DOCS_LLMS_TXT_PATH: () => hr.i,
+      DOCS_LLMS_TXT_URL: () => hr.l,
+      ROOT_LLMS_TXT_PATH: () => hr.n,
+      allGamemodeSettings: () => FY.d,
+      arcadeModeStaticConfig: () => QY.c,
+      arenaStaticConfig: () => Ar,
+      backroomsStaticConfig: () => Fr.d,
+      battleBoxStaticConfig: () => gr,
+      bedwarsStaticConfig: () => HY.e,
+      bloxdAggregatorConfig: () => OY.c,
+      bloxdPreprodAggregatorConfig: () => gY.c,
+      bloxdStagingAggregatorConfig: () => aY.c,
+      bridgeBattleStaticConfig: () => wY.b,
+      captureTheFlagStaticConfig: () => ir,
+      classicStaticConfig: () => CY.d,
+      clutchStaticConfig: () => xY.c,
+      conquerorStaticConfig: () => sr,
+      containmentBreachStaticConfig: () => Yr.b,
+      cookingStaticConfig: () => qY.d,
+      coolMathGamesAggregatorConfig: () => vY.c,
+      coreDefendersStaticConfig: () => tY.e,
+      crazyGamesNinetyNineNightsBundle: () => uY.d,
+      ctfStaticConfig: () => ur,
+      customGameSettings: () => FY.g,
+      customGamesListingHeading: () => fr.e,
+      customGamesListingPath: () => fr.i,
+      defusalStaticConfig: () => vr,
+      docsPageHtmlPath: () => hr.q,
+      docsPageMarkdownPath: () => hr.t,
+      docsPagePartPath: () => hr.w,
+      docsPageTitles: () => Nr.c,
+      docsSitePageMarkdownPath: () => hr.y,
+      dodgeBowStaticConfig: () => Or,
+      doodleStaticConfig: () => cY.b,
+      dressUpStaticConfig: () => nY.e,
+      eatToGrowStaticConfig: () => Dr.e,
+      escapeHtml: () => Nr.g,
+      eviltowerStaticConfig: () => EY.d,
+      exampleStaticConfig: () => oY.c,
+      extractionStaticConfig: () => pY.b,
+      firstPartyStudioGames: () => IY.b,
+      fishingStaticConfig: () => yY.b,
+      gameImageVariantHeights: () => Tr.e,
+      gameImageVariantsEncoding: () => lr.d,
+      getAllAggregatorGameNames: () => RY.d,
+      getConfiguredGameImagePaths: () => er.d,
+      getCustomGameFromPath: () => Nr.j,
+      getCustomGameListingPage: () => fr.l,
+      getCustomGamePagePath: () => Nr.k,
+      getCustomGamePageRedirectPath: () => Nr.l,
+      getCustomGameSchematicIdFromPath: () => Nr.m,
+      getCustomGameThumbnailCandidates: () => mr.e,
+      getCustomGameThumbnailUrls: () => mr.g,
+      getCustomGameUrlIdFromPath: () => Nr.o,
+      getFirstPartyStudioGameName: () => IY.e,
+      getGameCanonicalUrl: () => Nr.p,
+      getGameImageBlurhash: () => Vr.c,
+      getGameImagePath: () => er.e,
+      getGameImageVariantPath: () => Tr.l,
+      getGameImageVariantSource: () => Sr.e,
+      getGameImageVariants: () => Sr.h,
+      getGamePage: () => Nr.x,
+      getGamePageContentHeadings: () => Br.d,
+      getGamePagePath: () => Nr.t,
+      getGamePageRedirectPath: () => Nr.v,
+      getGameSeoMetadata: () => Nr.z,
+      getGameTileImagePaths: () => Sr.j,
+      getIndexedCustomGameListingPaths: () => fr.n,
+      getIndexedGamePages: () => Nr.A,
+      getJsonLdScriptText: () => Nr.E,
+      getPathGamePageContentGame: () => Nr.G,
+      getPathSeoMetadata: () => Nr.H,
+      getPlayableGame: () => AY,
+      getPlayerSeoMetadata: () => Nr.J,
+      getSeoMetaTagAttributes: () => Nr.K,
+      getShaderPackPolicy: () => FY.k,
+      getStaticGameConfig: () => FY.n,
+      getStaticPageSeoMetadata: () => Nr.M,
+      getUndescribedPageSeoMetadata: () => Nr.Q,
+      goalRushStaticConfig: () => UY.d,
+      goldrushStaticConfig: () => Ir,
+      greenvilleStaticConfig: () => KY.e,
+      heroesvbrainrotsStaticConfig: () => LY.d,
+      hideseekStaticConfig: () => ZY.d,
+      infectionStaticConfig: () => fY.d,
+      isGameIndexed: () => Nr.T,
+      knockoutStaticConfig: () => GY.c,
+      lastStandStaticConfig: () => JY.e,
+      loadGamePageContent: () => Br.h,
+      luckyBattlegroundsStaticConfig: () => BY.e,
+      luckyTowersStaticConfig: () => NY.d,
+      murderMysteryStaticConfig: () => zY.d,
+      naturalDisasterStaticConfig: () => hY.b,
+      ninetyNineNightsStaticConfig: () => dY.b,
+      normaliseFirstPartyGameNames: () => IY.f,
+      oneBlockStaticConfig: () => mY.d,
+      paintballStaticConfig: () => jY.b,
+      parkourStaticConfig: () => sY.e,
+      petSimulatorStaticConfig: () => ar,
+      piratesStaticConfig: () => TY.c,
+      plotsStaticConfig: () => lY.b,
+      prisonStaticConfig: () => Er,
+      pvpCivStaticConfig: () => rr.b,
+      racingStaticConfig: () => Wr,
+      rankedStaticConfig: () => bY.e,
+      readDocsPageMarkdownPath: () => hr.z,
+      renderGamePageContentHtml: () => Cr,
+      renderSeoMetaTags: () => Nr.U,
+      rocketParkourStaticConfig: () => MY.c,
+      rocketSpleefStaticConfig: () => eY.e,
+      seoSiteOrigin: () => jr.e,
+      shootingStaticConfig: () => iY.d,
+      simonSaysStaticConfig: () => kY.e,
+      skyIslandsStaticConfig: () => PY.c,
+      skyblockStaticConfig: () => VY.e,
+      skywarsStaticConfig: () => SY.b,
+      survivalRoyaleStaticConfig: () => yr,
+      testGymStaticConfig: () => WY.b,
+      thePitStaticConfig: () => or,
+      tsunamiStaticConfig: () => XY.e,
+      uchStaticConfig: () => Qr,
+      wallsStaticConfig: () => Rr
     });
-    var VB = dB(62),
-      yB = dB(1422),
-      pB = dB(279),
-      lB = dB(1113),
-      JB = dB(1495),
-      YB = dB(1147),
-      gB = dB(1445),
-      oB = dB(1393),
-      kB = dB(2293);
-    const LB = {
-      retries: 2,
-      minTimeout: 2e3
-    };
-    var OB = dB(993),
-      DB = dB(1491),
-      uB = dB(1011),
-      HB = dB(1657),
-      EB = dB(1078),
-      vB = dB(1105),
-      mB = dB(2971),
-      iB = dB(1225),
-      NB = dB(1324),
-      tB = dB(1407),
-      fB = dB(2228),
-      sB = dB(2242),
-      MB = dB(4278),
-      zB = dB(1901),
-      wB = dB(933),
-      UB = dB.n(wB),
-      FB = dB(946),
-      KB = dB(4284),
-      rB = dB(21),
-      IB = dB(1679),
-      cB = dB(3123),
-      SB = dB(1771),
-      PB = dB(3089),
-      QB = dB(95),
-      RB = dB(3962),
-      aB = dB(980);
-    const ZB = [MB];
+    var FY = DY(778);
 
-    function XB(BB) {
-      let {
-        icon: TB,
-        label: dB,
-        value: VB
-      } = BB;
-      return (0, aB.jsxs)("div", {
-        className: "PlayerProfileStat",
-        children: [(0, aB.jsx)(FB.e, {
-          name: TB,
-          className: "PlayerProfileStatIcon"
-        }), (0, aB.jsxs)("div", {
-          className: "PlayerProfileStatText",
-          children: [(0, aB.jsx)("div", {
-            className: "PlayerProfileStatLabel SmallTextLight",
-            children: dB
-          }), (0, aB.jsx)("div", {
-            className: "PlayerProfileStatValue",
-            children: VB
-          })]
-        })]
-      })
+    function AY(YY) {
+      var rY, DY;
+      return null !== (rY = null === (DY = (0, FY.n)(YY)) || void 0 === DY ? void 0 : DY.defaultListedVariation) && void 0 !== rY ? rY : YY
     }
-
-    function WB(BB) {
-      let {
-        profile: TB
-      } = BB;
-      const {
-        t: dB,
-        selectedLanguage: VB
-      } = (0, EB.z)();
-      let yB = dB("homePage:profileUnknown");
-      if (TB.lastOnline) {
-        const BB = (0, EB.m)(VB.code, "homePage:profileTimeAgo");
-        yB = dB("homePage:profileTimeAgo", {
-          time: (0, pB.cb)(BB, TB.lastOnline, Date.now())
-        })
-      }
-      let lB = dB("homePage:profileUnknown");
-      return TB.accountCreatedAt && (lB = new Date(TB.accountCreatedAt).toLocaleDateString(void 0, {
-        year: "numeric",
-        month: "short",
-        day: "numeric"
-      })), (0, aB.jsxs)("div", {
-        className: "PlayerProfileStats",
-        children: [(0, aB.jsx)(XB, {
-          icon: "hourglass",
-          label: dB("homePage:profileTimePlayed"),
-          value: (0, cB.d)(TB.totalPlayMinutes)
-        }), (0, aB.jsx)(XB, {
-          icon: "wifi",
-          label: dB("homePage:profileLastOnline"),
-          value: yB
-        }), (0, aB.jsx)(XB, {
-          icon: "calendar",
-          label: dB("homePage:profileJoined"),
-          value: lB
-        })]
-      })
-    }
-
-    function hB() {
-      const {
-        t: BB
-      } = (0, EB.z)(), TB = (0, tB.useNavigatePreserveSearch)(), dB = (0, OB.i)(), {
-        playerName: MB,
-        playerUrlName: wB
-      } = (0, yB.u)(), cB = (0, yB.o)(), XB = (0, lB.f)(cB.pathname), hB = XB && ("urlId" in XB ? `urlId:${XB.urlId}` : `name:${XB.lowerCaseName}`), CB = (0, VB.useRef)(hB);
-      CB.current = hB;
-      const {
-        userContext: GB,
-        isUserContextUpdating: qB
-      } = (0, uB.b)(), xB = (0, VB.useRef)(null), jB = (0, VB.useRef)(null), AB = (0, VB.useRef)(null), bB = (0, VB.useRef)(!1), nB = (0, VB.useRef)((0, pB.fc)(ZB)), [eB, BT] = (0, VB.useState)((() => {
-        const BB = XB && sB.e.peek(GB, XB);
-        return BB ? {
-          status: "loaded",
-          profile: BB,
-          playerKey: hB
-        } : {
-          status: "loading"
-        }
-      })), [TT, dT] = (0, VB.useState)(0);
-      (0, VB.useEffect)(fB.d, []), (0, VB.useEffect)((() => {
-        IB.gameBridge.send("leaveGame", {
-          reloadPath: null
-        }), rB.d.set({
-          gameState: "landingPage",
-          openEverythingMenuName: null,
-          openInGameMenuName: null
-        })
-      }), [cB.key]);
-      const VT = () => {
-        const BB = (0, tB.getPreviousLocation)();
-        null === BB || BB.startsWith("/play") ? (0, tB.navigateToHomePage)() : TB(-1)
+    var IY = DY(1055),
+      RY = DY(1076),
+      OY = DY(770),
+      gY = DY(758),
+      aY = DY(762),
+      vY = DY(754),
+      uY = DY(750),
+      sY = DY(787),
+      iY = DY(816),
+      yY = DY(796),
+      QY = DY(802),
+      oY = DY(811),
+      WY = DY(814),
+      EY = DY(824),
+      mY = DY(827),
+      VY = DY(830),
+      SY = DY(843),
+      lY = DY(852),
+      TY = DY(861),
+      eY = DY(864),
+      NY = DY(868),
+      BY = DY(871),
+      cY = DY(874),
+      KY = DY(882),
+      HY = DY(884),
+      zY = DY(893),
+      ZY = DY(902),
+      CY = DY(908),
+      fY = DY(910),
+      jY = DY(912),
+      hY = DY(921),
+      dY = DY(929),
+      JY = DY(933),
+      MY = DY(935),
+      wY = DY(943),
+      bY = DY(952),
+      XY = DY(960),
+      qY = DY(968),
+      pY = DY(972),
+      kY = DY(976),
+      GY = DY(984),
+      xY = DY(989),
+      nY = DY(998),
+      PY = DY(1006),
+      UY = DY(1010),
+      LY = DY(1018),
+      tY = DY(1022),
+      Yr = DY(1027),
+      rr = DY(1031),
+      Dr = DY(1040),
+      Fr = DY(1049);
+    const Ar = {
+        type: "Arena",
+        title: "Battle Arena",
+        description: "Fight for glory in a 2v2v2v2v2v2v2v2 arena!",
+        smallPicture: "battle_arena",
+        thumbnailUseLongRatio: !1,
+        badges: [{
+          type: "limitedTimeGame"
+        }],
+        useRejoinLastLobbyButton: !1,
+        additionalMetaTags: [],
+        gameMonId: "wzap3u9jp9ki78o4dohtfdfnklxyci19"
+      },
+      Ir = {
+        type: "Arena",
+        title: "Goldrush",
+        description: "Who is the best miner?\nMine gold and deposit it at your spawn, but beware of others killing you",
+        smallPicture: "goldrushThumbnail",
+        largePicture: "goldrushThumbnailLarge",
+        thumbnailUseLongRatio: !1,
+        badges: [{
+          type: "limitedTimeGame"
+        }],
+        useRejoinLastLobbyButton: !1,
+        additionalMetaTags: [],
+        gameMonId: "wzap3u9jp9ki78o4dohtfdfnklxyci19"
+      },
+      Rr = {
+        type: "Arena",
+        title: "Walls",
+        description: "Prepare with your team before the walls comes down and you need to fight to the death!",
+        smallPicture: "wallsThumbnail2",
+        thumbnailUseLongRatio: !1,
+        badges: [],
+        useRejoinLastLobbyButton: !1,
+        additionalMetaTags: [],
+        gameMonId: "wzap3u9jp9ki78o4dohtfdfnklxyci19"
+      },
+      Or = {
+        type: "Arena",
+        title: "Dodge Bow",
+        description: "Runners use speed and cover to survive until the timer ends. Hunters use bows, trying to eliminate all runners before time runs out.",
+        smallPicture: "image-c",
+        thumbnailUseLongRatio: !1,
+        badges: [],
+        useRejoinLastLobbyButton: !1,
+        additionalMetaTags: [],
+        firebaseConfig: {
+          apiKey: "AIzaSyCJ-G6m_NyA3P021v-ugDmMmkcKysUebSE",
+          projectId: "bloxd-ee1aa",
+          storageBucket: "bloxd-ee1aa.appspot.com",
+          messagingSenderId: "758847442742",
+          appId: "1:758847442742:web:65e726de81c0cd0bf02d97",
+          measurementId: "G-KYV287K7XD"
+        },
+        gameMonId: "wzap3u9jp9ki78o4dohtfdfnklxyci19"
+      },
+      gr = {
+        type: "Arena",
+        title: "BattleBox",
+        description: "Battle other teams in rounds!",
+        largePicture: "bloxd_battlebox_thumbnail_large",
+        smallPicture: "bloxd_battlebox_thumbnail_small",
+        thumbnailUseLongRatio: !1,
+        badges: [{
+          type: "limitedTimeGame"
+        }],
+        countdownInformation: {
+          type: "releaseCountdown",
+          previewText: "general:comingSoon",
+          countdownStartTime: new Date("2025-08-13T12:00:00Z"),
+          countdownToTime: new Date("2025-08-18T13:30:00Z")
+        },
+        useRejoinLastLobbyButton: !1,
+        additionalMetaTags: [],
+        gameMonId: ""
+      },
+      ar = {
+        type: "Simulator",
+        title: "game:petSim",
+        description: "game:petSimDescription",
+        smallPicture: "bloxd_pet_sim_thumbnail_small_1",
+        largePicture: "bloxd_pet_sim_thumbnail_large_1",
+        thumbnailUseLongRatio: !1,
+        badges: [{
+          type: "limitedTimeGame"
+        }],
+        useRejoinLastLobbyButton: !1,
+        additionalMetaTags: [],
+        gameMonId: "wzap3u9jp9ki78o4dohtfdfnklxyci19"
+      },
+      vr = {
+        type: "Shooting",
+        title: "Defusal",
+        description: "Defuse or detonate the spike!",
+        smallPicture: "thumbnail",
+        thumbnailUseLongRatio: !1,
+        badges: [],
+        useRejoinLastLobbyButton: !1,
+        additionalMetaTags: [],
+        gameMonId: "wzap3u9jp9ki78o4dohtfdfnklxyci19"
+      },
+      ur = {
+        type: "Arena",
+        title: "Capture the Flag",
+        description: "Classic 'Capture the Flag' with kits.",
+        smallPicture: "ctf",
+        thumbnailUseLongRatio: !1,
+        badges: [],
+        useRejoinLastLobbyButton: !1,
+        additionalMetaTags: []
+      },
+      sr = {
+        type: "Arena",
+        title: "Conqueror",
+        description: "Make tactical choices to conquer your enemies!",
+        smallPicture: "duos_combined_pic",
+        thumbnailUseLongRatio: !1,
+        badges: [],
+        useRejoinLastLobbyButton: !1,
+        additionalMetaTags: [],
+        firebaseConfig: {
+          apiKey: "AIzaSyCJ-G6m_NyA3P021v-ugDmMmkcKysUebSE",
+          projectId: "bloxd-ee1aa",
+          storageBucket: "bloxd-ee1aa.appspot.com",
+          messagingSenderId: "758847442742",
+          appId: "1:758847442742:web:c3d095738f8bde05f02d97",
+          measurementId: "G-SCYFMGGGEW"
+        },
+        gameMonId: "wzap3u9jp9ki78o4dohtfdfnklxyci19"
+      },
+      ir = {
+        type: "Arena",
+        title: "Capture the Flag",
+        description: "Capture the flag to win! It's that simple!",
+        smallPicture: "bloxd_capture_the_flag_thumbnail_small",
+        largePicture: "bloxd_capture_the_flag_thumbnail_large",
+        thumbnailUseLongRatio: !1,
+        badges: [{
+          type: "limitedTimeGame"
+        }],
+        useRejoinLastLobbyButton: !1,
+        additionalMetaTags: []
+      },
+      yr = {
+        type: "Survival",
+        title: "Survival Royale",
+        description: "Fortnite but way better ofc ;)",
+        smallPicture: "survivalRoyale",
+        thumbnailUseLongRatio: !1,
+        badges: [],
+        useRejoinLastLobbyButton: !1,
+        additionalMetaTags: [],
+        gameMonId: "wzap3u9jp9ki78o4dohtfdfnklxyci19"
+      },
+      Qr = {
+        type: "Parkour",
+        title: "Parkour Builder",
+        description: "Race through a parkour map with a twist - each round, you get to add a new block to the course!",
+        smallPicture: "uchThumbnail",
+        thumbnailUseLongRatio: !1,
+        badges: [{
+          type: "limitedTimeGame"
+        }],
+        visibleBetweenDates: {
+          startDate: new Date("2025-10-24T14:00:00Z"),
+          endDate: new Date("2025-10-25T14:00:00Z")
+        },
+        useRejoinLastLobbyButton: !1,
+        additionalMetaTags: [],
+        gameMonId: "wzap3u9jp9ki78o4dohtfdfnklxyci19"
+      },
+      or = {
+        type: "Arena",
+        title: "The Pit",
+        description: "Jump in the pit, beat everyone else!",
+        smallPicture: "thePitThumbnail",
+        thumbnailUseLongRatio: !1,
+        badges: [],
+        useRejoinLastLobbyButton: !1,
+        additionalMetaTags: [],
+        gameMonId: "wzap3u9jp9ki78o4dohtfdfnklxyci19"
+      },
+      Wr = {
+        type: "Racing",
+        title: "Rush Racing",
+        description: "Compete against other players in a fast-paced racing game!",
+        smallPicture: "racing_thumbnail_compressed",
+        thumbnailUseLongRatio: !1,
+        badges: [{
+          type: "limitedTimeGame"
+        }],
+        useRejoinLastLobbyButton: !1,
+        additionalMetaTags: [],
+        gameMonId: "wzap3u9jp9ki78o4dohtfdfnklxyci19"
+      },
+      Er = {
+        title: "Prison",
+        type: "Roleplay",
+        description: "Survive in maximum security prison!",
+        smallPicture: "prison_thumbnail",
+        thumbnailUseLongRatio: !1,
+        badges: [],
+        useRejoinLastLobbyButton: !1,
+        additionalMetaTags: [],
+        firebaseConfig: {
+          apiKey: "AIzaSyCJ-G6m_NyA3P021v-ugDmMmkcKysUebSE",
+          projectId: "bloxd-ee1aa",
+          storageBucket: "bloxd-ee1aa.appspot.com",
+          messagingSenderId: "758847442742",
+          appId: "1:758847442742:web:bd6d1461bd147389f02d97",
+          measurementId: "G-3NHZG8TJSS"
+        },
+        gameMonId: "wzap3u9jp9ki78o4dohtfdfnklxyci19"
       };
-      (0, RB.d)(VT), (0, VB.useEffect)((() => {
-        var BB;
-        if (qB) return;
-        if (!XB) return void BT({
-          status: "notFound",
-          playerKey: hB
-        });
-        const TB = "urlId" in XB && (null === (BB = jB.current) || void 0 === BB ? void 0 : BB.urlId) === XB.urlId && AB.current === GB;
-        if (TB && bB.current) return;
-        const dB = TB ? null : sB.e.peek(GB, XB);
-        let VB = !1;
-        const yB = BB => "loaded" === BB.status && (BB.playerKey === hB || "urlId" in XB && BB.profile.urlId === XB.urlId);
-        return dB ? (AB.current = GB, bB.current = !1, BT({
-          status: "loaded",
-          profile: dB,
-          playerKey: hB
-        }), sB.e.invalidate(XB)) : BT((BB => yB(BB) ? BB : {
-          status: "loading"
-        })), async function(BB, TB) {
-          if ("lowerCaseName" in TB && TB.lowerCaseName.length > YB.e) return {
-            status: "notFound"
-          };
-          try {
-            return {
-              status: "loaded",
-              profile: await oB.c.getPlayerProfile(BB, TB, LB)
-            }
-          } catch (dB) {
-            return (0, kB.b)(dB) ? {
-              status: "notFound"
-            } : (console.error("Failed to load user profile", dB), {
-              status: "failed"
-            })
-          }
-        }(GB, XB).then((BB => {
-          VB || ("loaded" === BB.status && (AB.current = GB, bB.current = !0), BT((TB => "failed" === BB.status && yB(TB) ? TB : {
-            ...BB,
-            playerKey: hB
-          })))
-        })), () => {
-          VB = !0
-        }
-      }), [qB, hB, GB, TT]);
-      const yT = "loading" === eB.status || eB.playerKey === hB || "loaded" === eB.status && !!XB && "urlId" in XB && eB.profile.urlId === XB.urlId ? eB : {
-          status: "loading"
-        },
-        pT = "loaded" === yT.status ? yT.profile : null,
-        lT = "loading" === yT.status ? null : function(BB) {
-          if ("loaded" === BB.status) {
-            const {
-              profile: TB
-            } = BB;
-            return (0, gB.V)({
-              urlId: TB.urlId,
-              name: TB.player.name,
-              ranks: TB.player.ranks,
-              socialLinks: TB.socialLinks
-            })
-          }
-          return "notFound" === BB.status ? (0, gB.cb)() : null
-        }(yT),
-        JT = null !== pT && void 0 !== pT && pT.urlId ? (0, lB.h)({
-          urlId: pT.urlId,
-          name: pT.player.name
-        }) : null;
-      (0, DB.e)(JT);
-      const YT = null !== pT && void 0 !== pT && pT.player.cosmetics.profileEffect ? zB.i[pT.player.cosmetics.profileEffect] : void 0,
-        gT = null !== pT && !qB && GB.getPlayerName().toLowerCase() === pT.player.name.toLowerCase(),
-        oT = (0, SB.c)(null === pT || void 0 === pT ? void 0 : pT.player.name),
-        kT = gT && GB.playerHasRank("youtuber");
-      jB.current = pT;
-      const LT = (0, VB.useCallback)((() => {
-          XB && (sB.e.invalidate(XB), sB.e.get(GB, XB).then((BB => {
-            CB.current === hB && (bB.current = !0, BT({
-              status: "loaded",
-              profile: BB,
-              playerKey: hB
-            }))
-          })).catch((BB => {
-            console.error("Failed to refresh user profile", BB)
-          })))
-        }), [hB, GB]),
-        OT = (0, VB.useCallback)((() => {
-          var BB;
-          const TB = jB.current;
-          return !(!TB || null === (BB = xB.current) || void 0 === BB || !BB.isReady()) && (xB.current.setAllCosmetics(TB.player.cosmetics), !0)
-        }), []);
-      return (0, VB.useEffect)((() => {
-        if (!pT) return;
-        let BB, TB = !1;
-        const dB = () => {
-          TB || OT() || (BB = setTimeout(dB, 100))
-        };
-        return dB(), () => {
-          TB = !0, clearTimeout(BB)
-        }
-      }), [pT, OT]), (0, aB.jsxs)("div", {
-        className: UB()("PlayerProfile", {
-          PlayerProfilePortrait: dB
-        }),
-        children: [lT && (0, aB.jsx)(JB.e, {
-          meta: lT
-        }), (0, aB.jsxs)("div", {
-          className: "PlayerProfileBackgroundContainer",
-          children: [YT && (0, aB.jsx)(YT, {}), !YT && (0, aB.jsx)("div", {
-            className: "PlayerProfileBackground",
-            style: {
-              backgroundImage: `url(${nB.current})`
-            }
-          })]
-        }), (0, aB.jsxs)("div", {
-          className: "PlayerProfileHeader",
-          children: [(0, aB.jsx)(NB.b, {
-            onClick: VT,
-            children: BB("general:back")
-          }), pT && !qB && !gT && QB.featureFlags.useSocialFeatures && (0, aB.jsx)("div", {
-            className: "PlayerProfileExclusionActions",
-            children: (0, aB.jsx)(PB.c, {
-              playerName: pT.player.name,
-              className: "SmallTextLight"
-            })
-          })]
-        }), "loading" === yT.status && (0, aB.jsx)("div", {
-          className: "PlayerProfileCentredMessage",
-          children: (0, aB.jsx)(iB.b, {})
-        }), ("notFound" === yT.status || "failed" === yT.status) && (0, aB.jsxs)("div", {
-          className: "PlayerProfileCentredMessage PlayerProfileError",
-          children: [(0, aB.jsx)(FB.e, {
-            name: "face-dizzy"
-          }), (0, aB.jsx)("div", {
-            className: "PlayerProfileErrorText",
-            children: "notFound" === yT.status ? BB("socialBar:playerNotFound", {
-              playerName: null !== wB && void 0 !== wB ? wB : MB
-            }) : BB("playerProfile:loadFailed")
-          }), "failed" === yT.status && (0, aB.jsx)(NB.d, {
-            onClick: () => {
-              dT((BB => BB + 1))
-            },
-            children: BB("general:tryAgain")
-          })]
-        }), pT && (0, aB.jsxs)("div", {
-          className: "PlayerProfileContent",
-          children: [(0, aB.jsxs)("div", {
-            className: "PlayerProfileLeft",
-            children: [(0, aB.jsx)("div", {
-              className: "PlayerProfileName FullyFancyText",
-              children: (0, aB.jsx)(HB.e, {
-                text: (0, vB.E)(pT.player.ranks, pT.player.name, pT.player.nameColour),
-                friendBadgeFor: oT ? pT.player.name : void 0
-              })
-            }), (0, aB.jsx)("div", {
-              className: "PlayerProfileModel",
-              children: (0, aB.jsx)(VB.Suspense, {
-                fallback: (0, aB.jsx)("div", {
-                  className: "PlayerProfileModelLoading",
-                  children: (0, aB.jsx)(iB.b, {})
-                }),
-                children: (0, aB.jsx)(fB.c, {
-                  ref: xB,
-                  onReady: () => {
-                    OT()
-                  }
-                })
-              })
-            })]
-          }), (0, aB.jsxs)("div", {
-            className: "PlayerProfileRight",
-            children: [(0, aB.jsx)(WB, {
-              profile: pT
-            }), (pT.socialLinks.length > 0 || kT) && (0, aB.jsx)(KB.e, {
-              socialLinks: pT.socialLinks,
-              editable: kT,
-              userContext: GB,
-              onLinksUpdated: LT
-            }), (0, aB.jsxs)("div", {
-              className: "PlayerProfileGames",
-              children: [(0, aB.jsx)("div", {
-                className: "PlayerProfileGamesTitle SmallTextBold",
-                children: BB("homePage:profileReleasedGames")
-              }), 0 === pT.releasedGames.length && (0, aB.jsx)("div", {
-                className: "PlayerProfileNoGames",
-                children: BB("homePage:profileNoReleasedGames")
-              }), pT.releasedGames.length > 0 && (0, aB.jsx)("div", {
-                className: "PlayerProfileGamesGrid",
-                children: pT.releasedGames.map((BB => (0, aB.jsx)(mB.f, {
-                  source: {
-                    type: "preview",
-                    preview: BB
-                  },
-                  gameWidth: "100%",
-                  useLongRatio: !0,
-                  hideFavourites: !0,
-                  entrySource: "other"
-                }, BB.schematicId)))
-              })]
-            })]
-          })]
-        })]
-      })
+    var mr = DY(1547),
+      Vr = DY(1557),
+      Sr = DY(3096),
+      lr = DY(3114),
+      Tr = DY(1554),
+      er = DY(3105),
+      Nr = DY(1526),
+      Br = DY(1574);
+
+    function cr(YY, rY, DY) {
+      return `<${YY}><h2>${(0,Nr.g)(rY)}</h2>${DY}</${YY}>`
     }
+
+    function Kr(YY) {
+      return YY.map((YY => `<p>${(0,Nr.g)(YY)}</p>`)).join("")
+    }
+
+    function Hr(YY) {
+      return `<ul>${YY.map((YY=>`<li>${YY}</li>`)).join("")}</ul>`
+    }
+
+    function zr(YY) {
+      return Hr(YY.map(Nr.g))
+    }
+
+    function Zr(YY, rY) {
+      return Hr(YY.similarGames.map((YY => {
+        var DY, AY;
+        const IY = null !== (DY = null === (AY = Br.b[YY]) || void 0 === AY ? void 0 : AY.name) && void 0 !== DY ? DY : rY(FY.d[YY].title);
+        return `<a href="${(0,Nr.g)((0,Nr.t)(YY))}">${(0,Nr.g)(IY)}</a>`
+      })))
+    }
+    async function Cr(YY, rY) {
+      const DY = (0, Nr.x)(YY);
+      if (!DY) return null;
+      const FY = await (0, Br.h)(DY),
+        AY = (0, Br.d)(FY),
+        IY = FY.faq.map((YY => {
+          let {
+            question: rY,
+            answer: DY
+          } = YY;
+          return `<h3>${(0,Nr.g)(rY)}</h3><p>${(0,Nr.g)(DY)}</p>`
+        })).join("");
+      return `<main style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)"><article>${[`<header><h1>${(0,Nr.g)(FY.name)}</h1><p>${(0,Nr.g)(FY.description)}</p></header>`,cr("section",AY.whatIs,Kr(FY.whatIs)),cr("section",AY.howToPlay,Kr(FY.howToPlay)),cr("section",AY.features,zr(FY.features)),cr("aside",AY.tips,zr(FY.tips)),cr("section",AY.faq,IY),cr("nav",AY.similarGames,Zr(FY,rY))].join("")}</article></main>`
+    }
+    var fr = DY(1566),
+      jr = DY(1560),
+      hr = DY(4405)
   },
-  4284: (BB, TB, dB) => {
-    dB.d(TB, {
-      e: () => HB
+  4405: (YY, rY, DY) => {
+    DY.d(rY, {
+      b: () => AY,
+      f: () => gY,
+      i: () => IY,
+      l: () => RY,
+      n: () => OY,
+      q: () => oY,
+      t: () => vY,
+      w: () => uY,
+      y: () => QY,
+      z: () => iY
     });
-    var VB = dB(933),
-      yB = dB.n(VB),
-      pB = dB(4042),
-      lB = dB(1078),
-      JB = dB(946),
-      YB = dB(1324),
-      gB = dB(1393),
-      oB = dB(1235),
-      kB = dB(2160),
-      LB = dB(980);
-    const OB = {
-      youtube: {
-        icon: "youtube",
-        color: "#FF0033",
-        name: "YouTube"
-      },
-      tiktok: {
-        icon: "tiktok",
-        color: "#0F0F0F",
-        name: "TikTok"
-      },
-      instagram: {
-        icon: "instagram",
-        color: "#E1306C",
-        name: "Instagram"
-      },
-      twitter: {
-        icon: "x-twitter",
-        color: "#0F0F0F",
-        name: "X"
-      },
-      twitch: {
-        icon: "twitch",
-        color: "#9146FF",
-        name: "Twitch"
-      }
-    };
+    var FY = DY(1560);
+    const AY = 24e3,
+      IY = "/docs/llms.txt",
+      RY = `${FY.e}${IY}`,
+      OY = "/llms.txt",
+      gY = "/docs/llms-full.txt";
 
-    function DB(BB) {
-      let {
-        platform: TB
-      } = BB;
-      const dB = "youtube" === TB;
-      return (0, LB.jsxs)("span", {
-        className: yB()("PlayerProfileSocialLinkIcon", {
-          PlayerProfileSocialLinkIconYoutube: dB
-        }),
-        children: [dB && (0, LB.jsx)(kB.d, {
-          variant: "white"
-        }), !dB && (0, LB.jsx)(JB.e, {
-          name: OB[TB].icon,
-          kit: "brands"
-        })]
-      })
+    function aY(YY) {
+      return YY || "index"
     }
 
-    function uB(BB) {
-      let {
-        platform: TB,
-        link: dB,
-        editable: VB,
-        userContext: yB,
-        onLinksUpdated: kB
-      } = BB;
-      const {
-        t: uB
-      } = (0, lB.z)(), HB = OB[TB];
-      if (!dB && !VB) return null;
-
-      function EB() {
-        var BB;
-        if (!yB || !kB) return;
-        oB.NotificationProvider.showInputPopup({
-          title: "homePage:profileSocialLinkEditTitle",
-          textOpts: {
-            title: {
-              platform: HB.name
-            }
-          },
-          prefixText: pB.x[TB],
-          placeholderText: "playBloxd",
-          initialValue: null !== (BB = null === dB || void 0 === dB ? void 0 : dB.handle) && void 0 !== BB ? BB : "",
-          maxLength: 30,
-          submitText: "general:save",
-          secondaryButtonText: dB ? "general:remove" : void 0
-        }).getResult().then((async BB => {
-          if ("notificationTornDown" !== BB && null !== BB) try {
-            "submit" === BB.type ? await gB.c.setSocialLink(yB, TB, BB.value) : await gB.c.clearSocialLink(yB, TB), kB()
-          } catch (dB) {
-            console.error("Failed to update social link", dB), oB.NotificationProvider.showAlertPopup({
-              title: dB.errorMessageForUser,
-              confirmText: "general:ok"
-            })
-          }
-        }))
-      }
-      if (dB) {
-        const BB = `@${dB.handle}`;
-        return (0, LB.jsxs)("a", {
-          className: "PlayerProfileSocialLink",
-          style: {
-            background: HB.color
-          },
-          href: dB.profileUrl,
-          target: "_blank",
-          rel: "noopener noreferrer",
-          children: [(0, LB.jsxs)("div", {
-            className: "PlayerProfileSocialLinkMain",
-            children: [(0, LB.jsx)(DB, {
-              platform: TB
-            }), (0, LB.jsx)("span", {
-              className: "PlayerProfileSocialLinkText",
-              children: (0, LB.jsx)("span", {
-                className: "PlayerProfileSocialLinkName SmallTextBold",
-                children: BB
-              })
-            })]
-          }), VB && (0, LB.jsx)("button", {
-            type: "button",
-            className: "PlayerProfileSocialLinkEditButton",
-            ...(0, YB._)({
-              stopPropagation: !0
-            }),
-            onClick: BB => {
-              BB.stopPropagation(), BB.preventDefault(), EB()
-            },
-            children: (0, LB.jsx)(JB.e, {
-              name: "pen-to-square"
-            })
-          }), !VB && (0, LB.jsx)("span", {
-            className: "PlayerProfileSocialLinkArrow",
-            children: (0, LB.jsx)(JB.e, {
-              name: "arrow-up-right-from-square"
-            })
-          })]
-        })
-      }
-      return (0, LB.jsxs)("button", {
-        type: "button",
-        className: "PlayerProfileSocialLink PlayerProfileSocialLinkUnlinked",
-        style: {
-          background: HB.color
-        },
-        ...(0, YB._)(),
-        onClick: () => {
-          EB()
-        },
-        children: [(0, LB.jsx)(DB, {
-          platform: TB
-        }), (0, LB.jsxs)("span", {
-          className: "PlayerProfileSocialLinkText",
-          children: [(0, LB.jsx)("span", {
-            className: "PlayerProfileSocialLinkName SmallTextBold",
-            children: HB.name
-          }), (0, LB.jsx)("span", {
-            className: "PlayerProfileSocialLinkCount SmallTextLight",
-            children: uB("homePage:profileSocialLinkAdd")
-          })]
-        }), (0, LB.jsx)("span", {
-          className: "PlayerProfileSocialLinkEditButton",
-          children: (0, LB.jsx)(JB.e, {
-            name: "pen-to-square"
-          })
-        })]
-      })
+    function vY(YY) {
+      return `/docs/${aY(YY)}.md`
     }
 
-    function HB(BB) {
-      let {
-        socialLinks: TB,
-        editable: dB = !1,
-        userContext: VB,
-        onLinksUpdated: yB
-      } = BB;
-      if (!dB && 0 === TB.length) return null;
-      const lB = new Map(TB.map((BB => [BB.platform, BB]))),
-        JB = dB ? pB.w : TB.map((BB => BB.platform));
-      return (0, LB.jsx)("div", {
-        className: "PlayerProfileSocialLinks",
-        children: (0, LB.jsx)("div", {
-          className: "PlayerProfileSocialLinksList",
-          children: JB.map((BB => (0, LB.jsx)(uB, {
-            platform: BB,
-            link: lB.get(BB),
-            editable: dB,
-            userContext: VB,
-            onLinksUpdated: yB
-          }, BB)))
-        })
-      })
+    function uY(YY, rY) {
+      return `/docs/${aY(YY)}/${rY+1}.md`
     }
-  },
-  4278: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQ0lEQVR4nGOws7P7D8Kmpqb/NTU1wTQymwGbAhANwwzIOmAYxQRkCXNzczBGtgrFBGQFKFZgsxtuAi67YY5HMQGbAgCIxWSBYHJzHAAAAABJRU5ErkJggg=="
+    const sY = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
+
+    function iY(YY) {
+      const rY = sY.exec(YY);
+      return null === rY ? null : {
+        name: rY[1],
+        part: void 0 === rY[2] ? null : Number(rY[2])
+      }
+    }
+    const yY = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
+
+    function QY(YY) {
+      const rY = yY.exec(YY);
+      if (null === rY) return null;
+      const [, DY = "", FY] = rY;
+      return void 0 === FY ? vY(DY) : uY(DY, Number(FY) - 1)
+    }
+
+    function oY(YY) {
+      return `/docsHtml/${aY(YY)}.html`
+    }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

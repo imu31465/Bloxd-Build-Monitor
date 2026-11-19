@@ -1,188 +1,467 @@
 export const id = 298;
 export const ids = [298];
 export const modules = {
-  40766: (BB, TB, dB) => {
-    dB.d(TB, {
-      b: () => lB
+  40846: (YY, rY, DY) => {
+    DY.r(rY), DY.d(rY, {
+      _ENVTextureLoader: () => NY
     });
-    var VB = dB(38595);
-    const yB = "decalFragmentDeclaration",
-      pB = "#ifdef DECAL\nuniform vec4 vDecalInfos;\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
+    var FY = DY(39065),
+      AY = DY(36524),
+      IY = DY(36559),
+      RY = DY(39120),
+      OY = DY(38975),
+      gY = DY(39123),
+      aY = (DY(39217), DY(40853)),
+      vY = DY(38040),
+      uY = (DY(40863), DY(40891), DY(39180));
+    const sY = "image/png",
+      iY = [134, 22, 135, 150, 246, 214, 150, 54];
+
+    function yY(YY) {
+      const rY = new DataView(YY.buffer, YY.byteOffset, YY.byteLength);
+      let DY = 0;
+      for (let RY = 0; RY < iY.length; RY++)
+        if (rY.getUint8(DY++) !== iY[RY]) return vY.d.Error("Not a babylon environment map"), null;
+      let FY, AY = "";
+      for (; FY = rY.getUint8(DY++);) AY += String.fromCharCode(FY);
+      let IY = JSON.parse(AY);
+      return IY = QY(IY), IY.binaryDataPosition = DY, IY.specular && (IY.specular.lodGenerationScale = IY.specular.lodGenerationScale || .8), IY
+    }
+
+    function QY(YY) {
+      if (YY.version > 2) throw new Error(`Unsupported babylon environment map version "${YY.version}". Latest supported version is "2".`);
+      return 2 === YY.version ? YY : YY = {
+        ...YY,
+        version: 2,
+        imageType: sY
+      }
+    }
+
+    function oY(YY, rY) {
+      const DY = (rY = QY(rY)).specular;
+      let FY = Math.log2(rY.width);
+      if (FY = Math.round(FY) + 1, DY.mipmaps.length !== 6 * FY) throw new Error(`Unsupported specular mipmaps number "${DY.mipmaps.length}"`);
+      const AY = new Array(FY);
+      for (let IY = 0; IY < FY; IY++) {
+        AY[IY] = new Array(6);
+        for (let FY = 0; FY < 6; FY++) {
+          const RY = DY.mipmaps[6 * IY + FY];
+          AY[IY][FY] = new Uint8Array(YY.buffer, YY.byteOffset + rY.binaryDataPosition + RY.position, RY.length)
+        }
+      }
+      return AY
+    }
+
+    function WY(YY, rY) {
+      rY = QY(rY);
+      const DY = new Array(6),
+        FY = rY.irradiance?.irradianceTexture;
+      if (FY) {
+        if (6 !== FY.faces.length) throw new Error(`Incorrect irradiance texture faces number "${FY.faces.length}"`);
+        for (let AY = 0; AY < 6; AY++) {
+          const IY = FY.faces[AY];
+          DY[AY] = new Uint8Array(YY.buffer, YY.byteOffset + rY.binaryDataPosition + IY.position, IY.length)
+        }
+      }
+      return DY
+    }
+
+    function EY(YY, rY, DY) {
+      const FY = (DY = QY(DY)).specular;
+      if (!FY) return Promise.resolve([]);
+      YY._lodGenerationScale = FY.lodGenerationScale;
+      const IY = [],
+        RY = oY(rY, DY);
+      IY.push(VY(YY, RY, DY.imageType));
+      const OY = DY.irradiance?.irradianceTexture;
+      if (OY) {
+        const FY = WY(rY, DY);
+        let RY = null;
+        DY.irradiance?.irradianceTexture?.dominantDirection && (RY = AY.r.FromArray(DY.irradiance.irradianceTexture.dominantDirection)), IY.push(SY(YY, FY, OY.size, DY.imageType, RY))
+      }
+      return Promise.all(IY)
+    }
+    async function mY(YY, rY, DY, FY, AY, IY, RY, OY, gY, aY, vY) {
+      return await new Promise(((uY, sY) => {
+        if (DY) {
+          const DY = rY.createTexture(null, !0, !0, null, 1, null, (YY => {
+            sY(YY)
+          }), YY);
+          FY?.onEffectCreatedObservable.addOnce((OY => {
+            OY.executeWhenCompiled((() => {
+              FY.externalTextureSamplerBinding = !0, FY.onApply = FY => {
+                FY._bindTexture("textureSampler", DY), FY.setFloat2("scale", 1, rY._features.needsInvertingBitmap && YY instanceof ImageBitmap ? -1 : 1)
+              }, rY.scenes.length && (rY.scenes[0].postProcessManager.directRender([FY], aY, !0, IY, RY), rY.restoreDefaultFramebuffer(), DY.dispose(), URL.revokeObjectURL(AY), uY())
+            }))
+          }))
+        } else {
+          if (rY._uploadImageToTexture(vY, YY, IY, RY), OY) {
+            const DY = gY[RY];
+            DY && rY._uploadImageToTexture(DY._texture, YY, IY, 0)
+          }
+          uY()
+        }
+      }))
+    }
+    async function VY(YY, rY) {
+      let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : sY;
+      const FY = YY.ky();
+      YY.format = 5, YY.type = 0, YY.generateMipMaps = !0, YY._cachedAnisotropicFilteringLevel = null, FY.updateTextureSamplingMode(3, YY), await lY(YY, rY, !0, DY), YY.isReady = !0
+    }
+    async function SY(YY, rY, DY) {
+      let FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : sY,
+        AY = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
+      const IY = YY.ky(),
+        RY = new OY.c(IY, 5),
+        aY = new gY.e(IY, RY);
+      YY._irradianceTexture = aY, aY._dominantDirection = AY, RY.isCube = !0, RY.format = 5, RY.type = 0, RY.generateMipMaps = !0, RY._cachedAnisotropicFilteringLevel = null, RY.generateMipMaps = !0, RY.width = DY, RY.height = DY, IY.updateTextureSamplingMode(3, RY), await lY(RY, [rY], !1, FY), IY.generateMipMapsForCubemap(RY), RY.isReady = !0
+    }
+    async function lY(YY, rY, AY) {
+      let RY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : sY;
+      if (!(0, FY.g)(YY.width)) throw new Error("Texture size must be a power of two");
+      const vY = (0, IY.ILog2)(YY.width) + 1,
+        iY = YY.ky();
+      let yY = !1,
+        QY = !1,
+        oY = null,
+        WY = null,
+        EY = null;
+      const VY = iY.getCaps();
+      VY.textureLOD ? iY._features.supportRenderAndCopyToLodForFloatTextures ? VY.textureHalfFloatRender && VY.textureHalfFloatLinearFiltering ? (yY = !0, YY.type = 2) : VY.textureFloatRender && VY.textureFloatLinearFiltering && (yY = !0, YY.type = 1) : yY = !1 : (yY = !1, QY = AY);
+      let SY = 0;
+      if (yY) iY.isWebGPU ? (SY = 1, await DY.e(332).then((() => DY(60433)))) : await DY.e(314).then((() => DY(60440))), oY = new aY.d("rgbdDecode", "rgbdDecode", null, null, 1, null, 3, iY, !1, void 0, YY.type, void 0, null, !1, void 0, SY), YY._isRGBD = !1, YY.invertY = !1, WY = iY.createRenderTargetCubeTexture(YY.width, {
+        generateDepthBuffer: !1,
+        generateMipMaps: !0,
+        generateStencilBuffer: !1,
+        samplingMode: 3,
+        type: YY.type,
+        format: 5
+      });
+      else if (YY._isRGBD = !0, YY.invertY = !0, QY) {
+        const rY = 3;
+        EY = {};
+        const DY = YY._lodGenerationScale,
+          FY = YY._lodGenerationOffset;
+        for (let AY = 0; AY < rY; AY++) {
+          const IY = (vY - 1) * DY + FY,
+            RY = FY + (IY - FY) * (1 - AY / (rY - 1)),
+            aY = Math.round(Math.min(Math.max(RY, 0), IY)),
+            uY = new OY.c(iY, 2);
+          uY.isCube = !0, uY.invertY = !0, uY.generateMipMaps = !1, iY.updateTextureSamplingMode(2, uY);
+          const sY = new gY.e(null);
+          switch (sY._isCube = !0, sY._texture = uY, EY[aY] = sY, AY) {
+            case 0:
+              YY._lodTextureLow = sY;
+              break;
+            case 1:
+              YY._lodTextureMid = sY;
+              break;
+            case 2:
+              YY._lodTextureHigh = sY
+          }
+        }
+      }
+      const lY = [];
+      for (let DY = 0; DY < rY.length; DY++)
+        for (let FY = 0; FY < 6; FY++) {
+          const AY = rY[DY][FY],
+            IY = (0, uY.i)(AY),
+            OY = new Blob([IY], {
+              type: RY
+            }),
+            gY = URL.createObjectURL(OY);
+          let aY;
+          if (iY._features.forceBitmapOverHTMLImageElement) aY = iY.createImageBitmap(OY, {
+            premultiplyAlpha: "none",
+            colorSpaceConversion: "none"
+          }).then((async rY => await mY(rY, iY, yY, oY, gY, FY, DY, QY, EY, WY, YY)));
+          else {
+            const rY = new Image;
+            rY.src = gY, aY = new Promise(((AY, IY) => {
+              rY.onload = () => {
+                mY(rY, iY, yY, oY, gY, FY, DY, QY, EY, WY, YY).then((() => AY())).catch((YY => {
+                  IY(YY)
+                }))
+              }, rY.onerror = YY => {
+                IY(YY)
+              }
+            }))
+          }
+          lY.push(aY)
+        }
+      if (await Promise.all(lY), rY.length < vY) {
+        let DY;
+        const FY = Math.pow(2, vY - 1 - rY.length),
+          AY = FY * FY * 4;
+        switch (YY.type) {
+          case 0:
+            DY = new Uint8Array(AY);
+            break;
+          case 2:
+            DY = new Uint16Array(AY);
+            break;
+          case 1:
+            DY = new Float32Array(AY)
+        }
+        for (let IY = rY.length; IY < vY; IY++)
+          for (let rY = 0; rY < 6; rY++) iY._uploadArrayBufferViewToTexture(WY?.texture || YY, DY, rY, IY)
+      }
+      if (WY) {
+        const rY = YY._irradianceTexture;
+        YY._irradianceTexture = null, iY._releaseTexture(YY), WY._swapAndDie(YY), YY._irradianceTexture = rY
+      }
+      oY && oY.dispose(), QY && (YY._lodTextureHigh && YY._lodTextureHigh._texture && (YY._lodTextureHigh._texture.isReady = !0), YY._lodTextureMid && YY._lodTextureMid._texture && (YY._lodTextureMid._texture.isReady = !0), YY._lodTextureLow && YY._lodTextureLow._texture && (YY._lodTextureLow._texture.isReady = !0))
+    }
+
+    function TY(YY, rY) {
+      const DY = (rY = QY(rY)).irradiance;
+      if (!DY) return;
+      const FY = new RY.f;
+      AY.r.FromArrayToRef(DY.x, 0, FY.x), AY.r.FromArrayToRef(DY.y, 0, FY.y), AY.r.FromArrayToRef(DY.z, 0, FY.z), AY.r.FromArrayToRef(DY.xx, 0, FY.xx), AY.r.FromArrayToRef(DY.yy, 0, FY.yy), AY.r.FromArrayToRef(DY.zz, 0, FY.zz), AY.r.FromArrayToRef(DY.yz, 0, FY.yz), AY.r.FromArrayToRef(DY.zx, 0, FY.zx), AY.r.FromArrayToRef(DY.xy, 0, FY.xy), YY._sphericalPolynomial = FY
+    }
+    var eY = DY(40900);
+    class NY {
+      constructor() {
+        this.supportCascades = !1
+      }
+      loadCubeData(YY, rY, DY, FY, AY) {
+        if (Array.isArray(YY)) return;
+        const IY = yY(YY);
+        if (IY) {
+          rY.width = IY.width, rY.height = IY.width;
+          try {
+            (0, eY.d)(), TY(rY, IY), EY(rY, YY, IY).then((() => {
+              rY.isReady = !0, rY.onLoadedObservable.notifyObservers(rY), rY.onLoadedObservable.clear(), FY && FY()
+            }), (YY => {
+              AY?.("Can not upload environment levels", YY)
+            }))
+          } catch (RY) {
+            AY?.("Can not upload environment file", RY)
+          }
+        } else AY && AY("Can not parse the environment file", null)
+      }
+      loadData() {
+        throw ".env not supported in 2d."
+      }
     }
   },
-  40891: (BB, TB, dB) => {
-    dB.d(TB, {
-      b: () => lB
+  40900: (YY, rY, DY) => {
+    DY.d(rY, {
+      d: () => RY
     });
-    var VB = dB(38595);
-    const yB = "depthPrePass",
-      pB = "#ifdef DEPTHPREPASS\ngl_FragColor=vec4(0.,0.,0.,1.0);return;\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
+    var FY = DY(40825),
+      AY = DY(39123);
+    let IY = !1;
+
+    function RY() {
+      IY || (IY = !0, AY.e.prototype._sphericalPolynomialTargetSize = 0, AY.e.prototype.forceSphericalPolynomialsRecompute = function() {
+        this._texture && (this._texture._sphericalPolynomial = null, this._texture._sphericalPolynomialPromise = null, this._texture._sphericalPolynomialComputed = !1)
+      }, Object.defineProperty(AY.e.prototype, "sphericalPolynomial", {
+        get: function() {
+          if (this._texture) {
+            if (this._texture._sphericalPolynomial || this._texture._sphericalPolynomialComputed) return this._texture._sphericalPolynomial;
+            if (this._texture.isReady) return this._texture._sphericalPolynomialPromise || (this._texture._sphericalPolynomialPromise = FY.c.ConvertCubeMapTextureToSphericalPolynomial(this), null === this._texture._sphericalPolynomialPromise ? this._texture._sphericalPolynomialComputed = !0 : this._texture._sphericalPolynomialPromise.then((YY => {
+              this._texture._sphericalPolynomial = YY, this._texture._sphericalPolynomialComputed = !0
+            }))), null
+          }
+          return null
+        },
+        set: function(YY) {
+          this._texture && (this._texture._sphericalPolynomial = YY)
+        },
+        enumerable: !0,
+        configurable: !0
+      }))
     }
   },
-  40793: (BB, TB, dB) => {
-    dB.d(TB, {
-      d: () => lB
+  40825: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => aY
     });
-    var VB = dB(38595);
-    const yB = "lightFragmentDeclaration",
-      pB = "#ifdef LIGHT{X}\nuniform vec4 vLightData{X};uniform vec4 vLightDiffuse{X};\n#ifdef SPECULARTERM\nuniform vec4 vLightSpecular{X};\n#else\nvec4 vLightSpecular{X}=vec4(0.);\n#endif\n#ifdef SHADOW{X}\n#ifdef SHADOWCSM{X}\nuniform mat4 lightMatrix{X}[SHADOWCSMNUM_CASCADES{X}];uniform float viewFrustumZ{X}[SHADOWCSMNUM_CASCADES{X}];uniform float frustumLengths{X}[SHADOWCSMNUM_CASCADES{X}];uniform float cascadeBlendFactor{X};varying vec4 vPositionFromLight{X}[SHADOWCSMNUM_CASCADES{X}];varying float vDepthMetric{X}[SHADOWCSMNUM_CASCADES{X}];varying vec4 vPositionFromCamera{X};\n#if defined(SHADOWPCSS{X})\nuniform highp sampler2DArrayShadow shadowTexture{X};uniform highp sampler2DArray depthTexture{X};uniform vec2 lightSizeUVCorrection{X}[SHADOWCSMNUM_CASCADES{X}];uniform float depthCorrection{X}[SHADOWCSMNUM_CASCADES{X}];uniform float penumbraDarkness{X};\n#elif defined(SHADOWPCF{X})\nuniform highp sampler2DArrayShadow shadowTexture{X};\n#else\nuniform highp sampler2DArray shadowTexture{X};\n#endif\n#ifdef SHADOWCSMDEBUG{X}\nconst vec3 vCascadeColorsMultiplier{X}[8]=vec3[8]\n(\nvec3 ( 1.5,0.0,0.0 ),\nvec3 ( 0.0,1.5,0.0 ),\nvec3 ( 0.0,0.0,5.5 ),\nvec3 ( 1.5,0.0,5.5 ),\nvec3 ( 1.5,1.5,0.0 ),\nvec3 ( 1.0,1.0,1.0 ),\nvec3 ( 0.0,1.0,5.5 ),\nvec3 ( 0.5,3.5,0.75 )\n);vec3 shadowDebug{X};\n#endif\n#ifdef SHADOWCSMUSESHADOWMAXZ{X}\nint index{X}=-1;\n#else\nint index{X}=SHADOWCSMNUM_CASCADES{X}-1;\n#endif\nfloat diff{X}=0.;\n#elif defined(SHADOWCUBE{X})\nuniform samplerCube shadowTexture{X};\n#else\nvarying vec4 vPositionFromLight{X};varying float vDepthMetric{X};\n#if defined(SHADOWPCSS{X})\nuniform highp sampler2DShadow shadowTexture{X};uniform highp sampler2D depthTexture{X};\n#elif defined(SHADOWPCF{X})\nuniform highp sampler2DShadow shadowTexture{X};\n#else\nuniform sampler2D shadowTexture{X};\n#endif\nuniform mat4 lightMatrix{X};\n#endif\nuniform vec4 shadowsInfo{X};uniform vec2 depthValues{X};\n#endif\n#ifdef SPOTLIGHT{X}\nuniform vec4 vLightDirection{X};uniform vec4 vLightFalloff{X};\n#elif defined(POINTLIGHT{X})\nuniform vec4 vLightFalloff{X};\n#elif defined(HEMILIGHT{X})\nuniform vec3 vLightGround{X};\n#endif\n#ifdef AREALIGHT{X}\nuniform vec4 vLightWidth{X};uniform vec4 vLightHeight{X};\n#ifdef RECTAREALIGHTEMISSIONTEXTURE{X}\nuniform sampler2D rectAreaLightEmissionTexture{X};\n#endif\n#endif\n#ifdef IESLIGHTTEXTURE{X}\nuniform sampler2D iesLightTexture{X};\n#endif\n#ifdef PROJECTEDLIGHTTEXTURE{X}\nuniform mat4 textureProjectionMatrix{X};uniform sampler2D projectionLightTexture{X};\n#endif\n#ifdef CLUSTLIGHT{X}\nuniform vec2 vSliceData{X};uniform vec2 vSliceRanges{X}[CLUSTLIGHT_SLICES];uniform sampler2D lightDataTexture{X};uniform highp sampler2D tileMaskTexture{X};\n#endif\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
+    var FY = DY(36524),
+      AY = DY(36559),
+      IY = DY(39120),
+      RY = DY(36533),
+      OY = DY(36588);
+    class gY {
+      constructor(YY, rY, DY, FY) {
+        this.name = YY, this.worldAxisForNormal = rY, this.worldAxisForFileX = DY, this.worldAxisForFileY = FY
+      }
     }
-  },
-  40802: (BB, TB, dB) => {
-    dB.d(TB, {
-      d: () => lB
-    });
-    var VB = dB(38595);
-    const yB = "lightUboDeclaration",
-      pB = "#ifdef LIGHT{X}\nuniform Light{X}\n{vec4 vLightData;vec4 vLightDiffuse;vec4 vLightSpecular;\n#ifdef SPOTLIGHT{X}\nvec4 vLightDirection;vec4 vLightFalloff;\n#elif defined(POINTLIGHT{X})\nvec4 vLightFalloff;\n#elif defined(HEMILIGHT{X})\nvec3 vLightGround;\n#elif defined(CLUSTLIGHT{X})\nvec2 vSliceData;vec2 vSliceRanges[CLUSTLIGHT_SLICES];\n#endif\n#if defined(AREALIGHT{X}) && defined(AREALIGHTUSED) && defined(AREALIGHTSUPPORTED)\nvec4 vLightWidth;vec4 vLightHeight;\n#endif\nvec4 shadowsInfo;vec2 depthValues;} light{X};\n#ifdef IESLIGHTTEXTURE{X}\nuniform sampler2D iesLightTexture{X};\n#endif\n#ifdef RECTAREALIGHTEMISSIONTEXTURE{X}\nuniform sampler2D rectAreaLightEmissionTexture{X};\n#endif\n#ifdef PROJECTEDLIGHTTEXTURE{X}\nuniform mat4 textureProjectionMatrix{X};uniform sampler2D projectionLightTexture{X};\n#endif\n#ifdef CLUSTLIGHT{X}\nuniform sampler2D lightDataTexture{X};uniform highp sampler2D tileMaskTexture{X};\n#endif\n#ifdef SHADOW{X}\n#ifdef SHADOWCSM{X}\nuniform mat4 lightMatrix{X}[SHADOWCSMNUM_CASCADES{X}];uniform float viewFrustumZ{X}[SHADOWCSMNUM_CASCADES{X}];uniform float frustumLengths{X}[SHADOWCSMNUM_CASCADES{X}];uniform float cascadeBlendFactor{X};varying vec4 vPositionFromLight{X}[SHADOWCSMNUM_CASCADES{X}];varying float vDepthMetric{X}[SHADOWCSMNUM_CASCADES{X}];varying vec4 vPositionFromCamera{X};\n#if defined(SHADOWPCSS{X})\nuniform highp sampler2DArrayShadow shadowTexture{X};uniform highp sampler2DArray depthTexture{X};uniform vec2 lightSizeUVCorrection{X}[SHADOWCSMNUM_CASCADES{X}];uniform float depthCorrection{X}[SHADOWCSMNUM_CASCADES{X}];uniform float penumbraDarkness{X};\n#elif defined(SHADOWPCF{X})\nuniform highp sampler2DArrayShadow shadowTexture{X};\n#else\nuniform highp sampler2DArray shadowTexture{X};\n#endif\n#ifdef SHADOWCSMDEBUG{X}\nconst vec3 vCascadeColorsMultiplier{X}[8]=vec3[8]\n(\nvec3 ( 1.5,0.0,0.0 ),\nvec3 ( 0.0,1.5,0.0 ),\nvec3 ( 0.0,0.0,5.5 ),\nvec3 ( 1.5,0.0,5.5 ),\nvec3 ( 1.5,1.5,0.0 ),\nvec3 ( 1.0,1.0,1.0 ),\nvec3 ( 0.0,1.0,5.5 ),\nvec3 ( 0.5,3.5,0.75 )\n);vec3 shadowDebug{X};\n#endif\n#ifdef SHADOWCSMUSESHADOWMAXZ{X}\nint index{X}=-1;\n#else\nint index{X}=SHADOWCSMNUM_CASCADES{X}-1;\n#endif\nfloat diff{X}=0.;\n#elif defined(SHADOWCUBE{X})\nuniform samplerCube shadowTexture{X}; \n#else\nvarying vec4 vPositionFromLight{X};varying float vDepthMetric{X};\n#if defined(SHADOWPCSS{X})\nuniform highp sampler2DShadow shadowTexture{X};uniform highp sampler2D depthTexture{X};\n#elif defined(SHADOWPCF{X})\nuniform highp sampler2DShadow shadowTexture{X};\n#else\nuniform sampler2D shadowTexture{X};\n#endif\nuniform mat4 lightMatrix{X};\n#endif\n#endif\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
+    class aY {
+      static _NearestPow2Floor(YY) {
+        return YY <= 1 ? 1 : 1 << Math.floor(Math.log2(YY))
+      }
+      static ConvertCubeMapTextureToSphericalPolynomial(YY) {
+        if (!YY.isCube) return null;
+        YY.hT()?.ky().flushFramebuffer();
+        const rY = YY.getSize().width,
+          DY = YY._sphericalPolynomialTargetSize,
+          FY = DY > 0 ? this._NearestPow2Floor(DY) : 0,
+          AY = !YY.noMipmap && !0 === YY._texture?.generateMipMaps,
+          IY = FY > 0 && FY < rY && AY,
+          RY = IY ? Math.max(0, Math.round(Math.log2(rY / FY))) : 0,
+          OY = IY ? Math.max(1, Math.floor(rY / Math.pow(2, RY))) : rY,
+          gY = YY.readPixels(0, RY, void 0, !1),
+          aY = YY.readPixels(1, RY, void 0, !1);
+        let vY, uY;
+        YY.isRenderTarget ? (vY = YY.readPixels(3, RY, void 0, !1), uY = YY.readPixels(2, RY, void 0, !1)) : (vY = YY.readPixels(2, RY, void 0, !1), uY = YY.readPixels(3, RY, void 0, !1));
+        const sY = YY.readPixels(4, RY, void 0, !1),
+          iY = YY.readPixels(5, RY, void 0, !1),
+          yY = YY.gammaSpace,
+          QY = FY > 0 && FY < rY && !IY;
+        return new Promise((YY => {
+          Promise.all([aY, gY, vY, uY, sY, iY]).then((DY => {
+            let [AY, IY, RY, gY, aY, vY] = DY, uY = OY;
+            if (QY) {
+              const YY = 4;
+              AY = this._DownsampleFace(AY, rY, FY, YY), IY = this._DownsampleFace(IY, rY, FY, YY), RY = this._DownsampleFace(RY, rY, FY, YY), gY = this._DownsampleFace(gY, rY, FY, YY), aY = this._DownsampleFace(aY, rY, FY, YY), vY = this._DownsampleFace(vY, rY, FY, YY), uY = FY
+            }
+            const sY = {
+              size: uY,
+              right: IY,
+              left: AY,
+              up: RY,
+              down: gY,
+              front: aY,
+              back: vY,
+              format: 5,
+              type: AY instanceof Float32Array ? 1 : 0,
+              gammaSpace: yY
+            };
+            YY(this.ConvertCubeMapToSphericalPolynomial(sY))
+          }))
+        }))
+      }
+      static _AreaElement(YY, rY) {
+        return Math.atan2(YY * rY, Math.sqrt(YY * YY + rY * rY + 1))
+      }
+      static _DownsampleFace(YY, rY, DY, FY) {
+        const AY = YY instanceof Float32Array ? YY : Float32Array.from(YY),
+          IY = DY * DY * FY,
+          RY = new Float32Array(IY),
+          OY = rY / DY,
+          gY = 1 / (OY * OY);
+        for (let vY = 0; vY < DY; vY++) {
+          const YY = Math.floor(vY * OY),
+            IY = Math.floor((vY + 1) * OY);
+          for (let aY = 0; aY < DY; aY++) {
+            const uY = Math.floor(aY * OY),
+              sY = Math.floor((aY + 1) * OY),
+              iY = (vY * DY + aY) * FY;
+            for (let DY = 0; DY < FY; DY++) {
+              let OY = 0;
+              for (let RY = YY; RY < IY; RY++)
+                for (let YY = uY; YY < sY; YY++) OY += AY[(RY * rY + YY) * FY + DY];
+              RY[iY + DY] = OY * gY
+            }
+          }
+        }
+        if (YY instanceof Float32Array) return RY;
+        const aY = new(0, YY.constructor)(IY);
+        for (let vY = 0; vY < IY; vY++) aY[vY] = RY[vY] + .5 | 0;
+        return aY
+      }
+      static ConvertCubeMapToSphericalPolynomial(YY) {
+        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const DY = rY > 0 ? this._NearestPow2Floor(rY) : 0;
+        if (DY > 0 && YY.size > DY) {
+          const rY = 5 === YY.format ? 4 : 3,
+            FY = ["right", "left", "up", "down", "front", "back"],
+            AY = {};
+          for (const IY of FY) AY[IY] = this._DownsampleFace(YY[IY], YY.size, DY, rY);
+          YY = {
+            ...YY,
+            ...AY,
+            size: DY
+          }
+        }
+        const FY = new IY.b;
+        let gY = 0;
+        const aY = 2 / YY.size,
+          vY = aY,
+          uY = .5 * aY,
+          sY = uY - 1;
+        for (let IY = 0; IY < 6; IY++) {
+          const rY = this._FileFaces[IY],
+            DY = YY[rY.name];
+          let iY = sY;
+          const yY = 5 === YY.format ? 4 : 3;
+          for (let IY = 0; IY < YY.size; IY++) {
+            let QY = sY;
+            for (let vY = 0; vY < YY.size; vY++) {
+              const sY = rY.worldAxisForFileX.scale(QY).add(rY.worldAxisForFileY.scale(iY)).add(rY.worldAxisForNormal);
+              sY.normalize();
+              const oY = this._AreaElement(QY - uY, iY - uY) - this._AreaElement(QY - uY, iY + uY) - this._AreaElement(QY + uY, iY - uY) + this._AreaElement(QY + uY, iY + uY);
+              let WY = DY[IY * YY.size * yY + vY * yY + 0],
+                EY = DY[IY * YY.size * yY + vY * yY + 1],
+                mY = DY[IY * YY.size * yY + vY * yY + 2];
+              isNaN(WY) && (WY = 0), isNaN(EY) && (EY = 0), isNaN(mY) && (mY = 0), 0 === YY.type && (WY /= 255, EY /= 255, mY /= 255), YY.gammaSpace && (WY = Math.pow((0, AY.Clamp)(WY), RY.g), EY = Math.pow((0, AY.Clamp)(EY), RY.g), mY = Math.pow((0, AY.Clamp)(mY), RY.g));
+              const VY = this.MAX_HDRI_VALUE;
+              if (this.PRESERVE_CLAMPED_COLORS) {
+                const YY = Math.max(WY, EY, mY);
+                if (YY > VY) {
+                  const rY = VY / YY;
+                  WY *= rY, EY *= rY, mY *= rY
+                }
+              } else WY = (0, AY.Clamp)(WY, 0, VY), EY = (0, AY.Clamp)(EY, 0, VY), mY = (0, AY.Clamp)(mY, 0, VY);
+              const SY = new OY.c(WY, EY, mY);
+              FY.addLight(sY, SY, oY), gY += oY, QY += aY
+            }
+            iY += vY
+          }
+        }
+        const iY = 6 * (4 * Math.PI) / 6 / gY;
+        return FY.scaleInPlace(iY), FY.convertIncidentRadianceToIrradiance(), FY.convertIrradianceToLambertianRadiance(), IY.f.FromHarmonics(FY)
+      }
     }
+    aY._FileFaces = [new gY("right", new FY.r(1, 0, 0), new FY.r(0, 0, -1), new FY.r(0, -1, 0)), new gY("left", new FY.r(-1, 0, 0), new FY.r(0, 0, 1), new FY.r(0, -1, 0)), new gY("up", new FY.r(0, 1, 0), new FY.r(1, 0, 0), new FY.r(0, 0, 1)), new gY("down", new FY.r(0, -1, 0), new FY.r(1, 0, 0), new FY.r(0, 0, -1)), new gY("front", new FY.r(0, 0, 1), new FY.r(1, 0, 0), new FY.r(0, -1, 0)), new gY("back", new FY.r(0, 0, -1), new FY.r(-1, 0, 0), new FY.r(0, -1, 0))], aY.MAX_HDRI_VALUE = 4096, aY.PRESERVE_CLAMPED_COLORS = !1
   },
-  40805: (BB, TB, dB) => {
-    dB.d(TB, {
-      c: () => lB
+  40863: (YY, rY, DY) => {
+    DY.d(rY, {
+      d: () => IY
     });
-    var VB = dB(38595);
-    const yB = "ltcHelperFunctions",
-      pB = "vec2 LTCUv( const in vec3 N,const in vec3 V,const in float roughness ) {const float LUTSIZE=64.0;const float LUTSCALE=( LUTSIZE-1.0 )/LUTSIZE;const float LUTBIAS=0.5/LUTSIZE;float dotNV=saturate( dot( N,V ) );vec2 uv=vec2( roughness,sqrt( 1.0-dotNV ) );uv=uv*LUTSCALE+LUTBIAS;return uv;}\nfloat LTCClippedSphereFormFactor( const in vec3 f ) {float l=length( f );return max( ( l*l+f.z )/( l+1.0 ),0.0 );}\nvec3 LTCEdgeVectorFormFactor( const in vec3 v1,const in vec3 v2 ) {float x=dot( v1,v2 );float y=abs( x );float a=0.8543985+( 0.4965155+0.0145206*y )*y;float b=3.4175940+( 4.1616724+y )*y;float v=a/b;float thetaSintheta=0.0;if( x>0.0 )\n{thetaSintheta=v;}\nelse\n{thetaSintheta=0.5*inversesqrt( max( 1.0-x*x,1e-7 ) )-v;}\nreturn cross( v1,v2 )*thetaSintheta;}\nvec3 LTCEvaluate( const in vec3 N,const in vec3 V,const in vec3 P,const in mat3 mInv,const in vec3 rectCoords[ 4 ] ) {vec3 v1=rectCoords[ 1 ]-rectCoords[ 0 ];vec3 v2=rectCoords[ 3 ]-rectCoords[ 0 ];vec3 lightNormal=cross( v1,v2 );if( dot( lightNormal,P-rectCoords[ 0 ] )<0.0 ) return vec3( 0.0 );vec3 T1,T2;T1=normalize( V-N*dot( V,N ) );T2=- cross( N,T1 ); \nmat3 mat=mInv*transposeMat3( mat3( T1,T2,N ) );vec3 coords[ 4 ];coords[ 0 ]=mat*( rectCoords[ 0 ]-P );coords[ 1 ]=mat*( rectCoords[ 1 ]-P );coords[ 2 ]=mat*( rectCoords[ 2 ]-P );coords[ 3 ]=mat*( rectCoords[ 3 ]-P );coords[ 0 ]=normalize( coords[ 0 ] );coords[ 1 ]=normalize( coords[ 1 ] );coords[ 2 ]=normalize( coords[ 2 ] );coords[ 3 ]=normalize( coords[ 3 ] );vec3 vectorFormFactor=vec3( 0.0 );vectorFormFactor+=LTCEdgeVectorFormFactor( coords[ 0 ],coords[ 1 ] );vectorFormFactor+=LTCEdgeVectorFormFactor( coords[ 1 ],coords[ 2 ] );vectorFormFactor+=LTCEdgeVectorFormFactor( coords[ 2 ],coords[ 3 ] );vectorFormFactor+=LTCEdgeVectorFormFactor( coords[ 3 ],coords[ 0 ] );float result=LTCClippedSphereFormFactor( vectorFormFactor );return vec3( result );}\nvec3 FetchDiffuseFilteredTexture(sampler2D texLightFiltered,vec3 p1_,vec3 p2_,vec3 p3_,vec3 p4_)\n{vec3 V1=p2_-p1_;vec3 V2=p4_-p1_;vec3 planeOrtho=(cross(V1,V2));float planeAreaSquared=dot(planeOrtho,planeOrtho);float planeDistxPlaneArea=dot(planeOrtho,p1_);vec3 P=planeDistxPlaneArea*planeOrtho/planeAreaSquared-p1_;float dot_V1_V2=dot(V1,V2);float inv_dot_V1_V1=1.0/dot(V1,V1);vec3 V2_=V2-V1*dot_V1_V2*inv_dot_V1_V1;vec2 Puv;Puv.y=dot(V2_,P)/dot(V2_,V2_);Puv.x=dot(V1,P)*inv_dot_V1_V1-dot_V1_V2*inv_dot_V1_V1*Puv.y ;float d=abs(planeDistxPlaneArea)/pow(planeAreaSquared,0.75);float sampleLOD=log(2048.0*d)/log(3.0);vec2 sampleUV=vec2(0.125,0.125)+(vec2(0.75)*Puv);sampleUV.x=1.0-sampleUV.x;return texture2DLodEXT(texLightFiltered,sampleUV,sampleLOD).rgb;}\nvec3 LTCEvaluateWithEmission( const in vec3 N,const in vec3 V,const in vec3 P,const in mat3 mInv,const in vec3 rectCoords[ 4 ],const in sampler2D texFilteredMap ) {vec3 v1=rectCoords[ 1 ]-rectCoords[ 0 ];vec3 v2=rectCoords[ 3 ]-rectCoords[ 0 ];vec3 lightNormal=cross( v1,v2 );if( dot( lightNormal,P-rectCoords[ 0 ] )<0.0 ) return vec3( 0.0 );vec3 T1,T2;T1=normalize( V-N*dot( V,N ) );T2=- cross( N,T1 ); \nmat3 mat=mInv*transposeMat3( mat3( T1,T2,N ) );vec3 coords[ 4 ];coords[ 0 ]=mat*( rectCoords[ 0 ]-P );coords[ 1 ]=mat*( rectCoords[ 1 ]-P );coords[ 2 ]=mat*( rectCoords[ 2 ]-P );coords[ 3 ]=mat*( rectCoords[ 3 ]-P );vec3 textureLight=FetchDiffuseFilteredTexture(texFilteredMap,coords[0],coords[1],coords[2],coords[3]);coords[ 0 ]=normalize( coords[ 0 ] );coords[ 1 ]=normalize( coords[ 1 ] );coords[ 2 ]=normalize( coords[ 2 ] );coords[ 3 ]=normalize( coords[ 3 ] );vec3 vectorFormFactor=vec3( 0.0 );vectorFormFactor+=LTCEdgeVectorFormFactor( coords[ 0 ],coords[ 1 ] );vectorFormFactor+=LTCEdgeVectorFormFactor( coords[ 1 ],coords[ 2 ] );vectorFormFactor+=LTCEdgeVectorFormFactor( coords[ 2 ],coords[ 3 ] );vectorFormFactor+=LTCEdgeVectorFormFactor( coords[ 3 ],coords[ 0 ] );float result=LTCClippedSphereFormFactor( vectorFormFactor );return vec3( result )*textureLight;}\nstruct areaLightData\n{vec3 Diffuse;vec3 Specular;vec4 Fresnel;};\n#define inline\nareaLightData computeAreaLightSpecularDiffuseFresnel(const in sampler2D ltc1,const in sampler2D ltc2,const in vec3 viewDir,const in vec3 normal,const in vec3 position,const in vec3 lightPos,const in vec3 halfWidth,const in vec3 halfHeight,const in float roughness) \n{areaLightData result;vec3 rectCoords[ 4 ];rectCoords[ 0 ]=lightPos+halfWidth-halfHeight; \nrectCoords[ 1 ]=lightPos-halfWidth-halfHeight;rectCoords[ 2 ]=lightPos-halfWidth+halfHeight;rectCoords[ 3 ]=lightPos+halfWidth+halfHeight;\n#ifdef SPECULARTERM\nvec2 uv=LTCUv( normal,viewDir,roughness );vec4 t1=texture2D( ltc1,uv );vec4 t2=texture2D( ltc2,uv );mat3 mInv=mat3(\nvec3( t1.x,0,t1.y ),\nvec3( 0,1, 0 ),\nvec3( t1.z,0,t1.w )\n);result.Specular=LTCEvaluate( normal,viewDir,position,mInv,rectCoords );result.Fresnel=t2;\n#endif\nresult.Diffuse=LTCEvaluate( normal,viewDir,position,mat3( 1.0 ),rectCoords );return result;}\n#define inline\nareaLightData computeAreaLightSpecularDiffuseFresnelWithEmission(const in sampler2D ltc1,const in sampler2D ltc2,const in sampler2D texFilteredMap,const in vec3 viewDir,const in vec3 normal,const in vec3 position,const in vec3 lightPos,const in vec3 halfWidth,const in vec3 halfHeight,const in float roughness) \n{areaLightData result;vec3 rectCoords[ 4 ];rectCoords[ 0 ]=lightPos+halfWidth-halfHeight; \nrectCoords[ 1 ]=lightPos-halfWidth-halfHeight;rectCoords[ 2 ]=lightPos-halfWidth+halfHeight;rectCoords[ 3 ]=lightPos+halfWidth+halfHeight;\n#ifdef SPECULARTERM\nvec2 uv=LTCUv( normal,viewDir,roughness );vec4 t1=texture2D( ltc1,uv );vec4 t2=texture2D( ltc2,uv );mat3 mInv=mat3(\nvec3( t1.x,0,t1.y ),\nvec3( 0,1, 0 ),\nvec3( t1.z,0,t1.w )\n);result.Specular=LTCEvaluateWithEmission( normal,viewDir,position,mInv,rectCoords,texFilteredMap );result.Fresnel=t2;\n#endif\nresult.Diffuse=LTCEvaluateWithEmission( normal,viewDir,position,mat3( 1.0 ),rectCoords,texFilteredMap );return result;}";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
-    }
-  },
-  40619: (BB, TB, dB) => {
-    dB.d(TB, {
-      b: () => lB
-    });
-    var VB = dB(38595);
-    const yB = "mainUVVaryingDeclaration",
-      pB = "#ifdef MAINUV{X}\nvarying vec2 vMainUV{X};\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
-    }
-  },
-  40580: (BB, TB, dB) => {
-    dB.d(TB, {
-      d: () => lB
-    });
-    var VB = dB(38595);
-    const yB = "meshUboDeclaration",
-      pB = "#ifdef WEBGL2\nuniform mat4 world;uniform float visibility;\n#else\nlayout(std140,column_major) uniform;uniform Mesh\n{mat4 world;float visibility;};\n#endif\n#define WORLD_UBO\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
-    }
-  },
-  40784: (BB, TB, dB) => {
-    dB.d(TB, {
-      b: () => lB
-    });
-    var VB = dB(38595);
-    const yB = "oitDeclaration",
-      pB = "#ifdef ORDER_INDEPENDENT_TRANSPARENCY\n#extension GL_EXT_draw_buffers : require\nlayout(location=0) out vec2 depth; \nlayout(location=1) out vec4 frontColor;layout(location=2) out vec4 backColor;\n#define MAX_DEPTH 99999.0\nhighp vec4 gl_FragColor;uniform sampler2D oitDepthSampler;uniform sampler2D oitFrontColorSampler;\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
-    }
-  },
-  40916: (BB, TB, dB) => {
-    dB.d(TB, {
-      c: () => lB
-    });
-    var VB = dB(38595);
-    const yB = "oitFragment",
-      pB = "#ifdef ORDER_INDEPENDENT_TRANSPARENCY\nfloat fragDepth=gl_FragCoord.z; \n#ifdef ORDER_INDEPENDENT_TRANSPARENCY_16BITS\nuint halfFloat=packHalf2x16(vec2(fragDepth));vec2 full=unpackHalf2x16(halfFloat);fragDepth=full.x;\n#endif\nivec2 fragCoord=ivec2(gl_FragCoord.xy);vec2 lastDepth=texelFetch(oitDepthSampler,fragCoord,0).rg;vec4 lastFrontColor=texelFetch(oitFrontColorSampler,fragCoord,0);depth.rg=vec2(-MAX_DEPTH);frontColor=lastFrontColor;backColor=vec4(0.0);\n#ifdef USE_REVERSE_DEPTHBUFFER\nfloat furthestDepth=-lastDepth.x;float nearestDepth=lastDepth.y;\n#else\nfloat nearestDepth=-lastDepth.x;float furthestDepth=lastDepth.y;\n#endif\nfloat alphaMultiplier=1.0-lastFrontColor.a;\n#ifdef USE_REVERSE_DEPTHBUFFER\nif (fragDepth>nearestDepth || fragDepth<furthestDepth) {\n#else\nif (fragDepth<nearestDepth || fragDepth>furthestDepth) {\n#endif\nreturn;}\n#ifdef USE_REVERSE_DEPTHBUFFER\nif (fragDepth<nearestDepth && fragDepth>furthestDepth) {\n#else\nif (fragDepth>nearestDepth && fragDepth<furthestDepth) {\n#endif\ndepth.rg=vec2(-fragDepth,fragDepth);return;}\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
-    }
-  },
-  40833: (BB, TB, dB) => {
-    dB.d(TB, {
-      b: () => lB
-    });
-    var VB = dB(38595);
-    const yB = "reflectionFunction",
-      pB = "vec3 computeFixedEquirectangularCoords(vec4 worldPos,vec3 worldNormal,vec3 direction)\n{float lon=atan(direction.z,direction.x);float lat=acos(direction.y);vec2 sphereCoords=vec2(lon,lat)*RECIPROCAL_PI2*2.0;float s=sphereCoords.x*0.5+0.5;float t=sphereCoords.y;return vec3(s,t,0); }\nvec3 computeMirroredFixedEquirectangularCoords(vec4 worldPos,vec3 worldNormal,vec3 direction)\n{float lon=atan(direction.z,direction.x);float lat=acos(direction.y);vec2 sphereCoords=vec2(lon,lat)*RECIPROCAL_PI2*2.0;float s=sphereCoords.x*0.5+0.5;float t=sphereCoords.y;return vec3(1.0-s,t,0); }\nvec3 computeEquirectangularCoords(vec4 worldPos,vec3 worldNormal,vec3 eyePosition,mat4 reflectionMatrix)\n{vec3 cameraToVertex=normalize(worldPos.xyz-eyePosition);vec3 r=normalize(reflect(cameraToVertex,worldNormal));r=vec3(reflectionMatrix*vec4(r,0));float lon=atan(r.z,r.x);float lat=acos(r.y);vec2 sphereCoords=vec2(lon,lat)*RECIPROCAL_PI2*2.0;float s=sphereCoords.x*0.5+0.5;float t=sphereCoords.y;return vec3(s,t,0);}\nvec3 computeSphericalCoords(vec4 worldPos,vec3 worldNormal,mat4 view,mat4 reflectionMatrix)\n{vec3 viewDir=normalize(vec3(view*worldPos));vec3 viewNormal=normalize(vec3(view*vec4(worldNormal,0.0)));vec3 r=reflect(viewDir,viewNormal);r=vec3(reflectionMatrix*vec4(r,0));r.z=r.z-1.0;float m=2.0*length(r);return vec3(r.x/m+0.5,1.0-r.y/m-0.5,0);}\nvec3 computePlanarCoords(vec4 worldPos,vec3 worldNormal,vec3 eyePosition,mat4 reflectionMatrix)\n{vec3 viewDir=worldPos.xyz-eyePosition;vec3 coords=normalize(reflect(viewDir,worldNormal));return vec3(reflectionMatrix*vec4(coords,1));}\nvec3 computeCubicCoords(vec4 worldPos,vec3 worldNormal,vec3 eyePosition,mat4 reflectionMatrix)\n{vec3 viewDir=normalize(worldPos.xyz-eyePosition);vec3 coords=reflect(viewDir,worldNormal);coords=vec3(reflectionMatrix*vec4(coords,0));\n#ifdef INVERTCUBICMAP\ncoords.y*=-1.0;\n#endif\nreturn coords;}\nvec3 computeCubicLocalCoords(vec4 worldPos,vec3 worldNormal,vec3 eyePosition,mat4 reflectionMatrix,vec3 reflectionSize,vec3 reflectionPosition)\n{vec3 viewDir=normalize(worldPos.xyz-eyePosition);vec3 coords=reflect(viewDir,worldNormal);coords=parallaxCorrectNormal(worldPos.xyz,coords,reflectionSize,reflectionPosition);coords=vec3(reflectionMatrix*vec4(coords,0));\n#ifdef INVERTCUBICMAP\ncoords.y*=-1.0;\n#endif\nreturn coords;}\nvec3 computeProjectionCoords(vec4 worldPos,mat4 view,mat4 reflectionMatrix)\n{return vec3(reflectionMatrix*(view*worldPos));}\nvec3 computeSkyBoxCoords(vec3 positionW,mat4 reflectionMatrix)\n{return vec3(reflectionMatrix*vec4(positionW,1.));}\n#ifdef REFLECTION\nvec3 computeReflectionCoords(vec4 worldPos,vec3 worldNormal)\n{\n#ifdef REFLECTIONMAP_MIRROREDEQUIRECTANGULAR_FIXED\nvec3 direction=normalize(vDirectionW);return computeMirroredFixedEquirectangularCoords(worldPos,worldNormal,direction);\n#endif\n#ifdef REFLECTIONMAP_EQUIRECTANGULAR_FIXED\nvec3 direction=normalize(vDirectionW);return computeFixedEquirectangularCoords(worldPos,worldNormal,direction);\n#endif\n#ifdef REFLECTIONMAP_EQUIRECTANGULAR\nreturn computeEquirectangularCoords(worldPos,worldNormal,vEyePosition.xyz,reflectionMatrix);\n#endif\n#ifdef REFLECTIONMAP_SPHERICAL\nreturn computeSphericalCoords(worldPos,worldNormal,view,reflectionMatrix);\n#endif\n#ifdef REFLECTIONMAP_PLANAR\nreturn computePlanarCoords(worldPos,worldNormal,vEyePosition.xyz,reflectionMatrix);\n#endif\n#ifdef REFLECTIONMAP_CUBIC\n#ifdef USE_LOCAL_REFLECTIONMAP_CUBIC\nreturn computeCubicLocalCoords(worldPos,worldNormal,vEyePosition.xyz,reflectionMatrix,vReflectionSize,vReflectionPosition);\n#else\nreturn computeCubicCoords(worldPos,worldNormal,vEyePosition.xyz,reflectionMatrix);\n#endif\n#endif\n#ifdef REFLECTIONMAP_PROJECTION\nreturn computeProjectionCoords(worldPos,view,reflectionMatrix);\n#endif\n#ifdef REFLECTIONMAP_SKYBOX\nreturn computeSkyBoxCoords(vPositionUVW,reflectionMatrix);\n#endif\n#ifdef REFLECTIONMAP_EXPLICIT\nreturn vec3(0,0,0);\n#endif\n}\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
-    }
-  },
-  40830: (BB, TB, dB) => {
-    dB.d(TB, {
-      e: () => lB
-    });
-    var VB = dB(38595);
-    const yB = "samplerFragmentDeclaration",
-      pB = "#ifdef _DEFINENAME_\n#if _DEFINENAME_DIRECTUV==1\n#define v_VARYINGNAME_UV vMainUV1\n#elif _DEFINENAME_DIRECTUV==2\n#define v_VARYINGNAME_UV vMainUV2\n#elif _DEFINENAME_DIRECTUV==3\n#define v_VARYINGNAME_UV vMainUV3\n#elif _DEFINENAME_DIRECTUV==4\n#define v_VARYINGNAME_UV vMainUV4\n#elif _DEFINENAME_DIRECTUV==5\n#define v_VARYINGNAME_UV vMainUV5\n#elif _DEFINENAME_DIRECTUV==6\n#define v_VARYINGNAME_UV vMainUV6\n#else\nvarying vec2 v_VARYINGNAME_UV;\n#endif\nuniform sampler2D _SAMPLERNAME_Sampler;\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
-    }
-  },
-  40574: (BB, TB, dB) => {
-    dB.d(TB, {
-      e: () => lB
-    });
-    var VB = dB(38595);
-    const yB = "sceneUboDeclaration",
-      pB = "layout(std140,column_major) uniform;uniform Scene {mat4 viewProjection;\n#ifdef MULTIVIEW\nmat4 viewProjectionR;\n#endif \nmat4 view;mat4 projection;vec4 vEyePosition;mat4 inverseProjection;};\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
-    }
-  },
-  40821: (BB, TB, dB) => {
-    dB.d(TB, {
-      d: () => lB
-    });
-    var VB = dB(38595);
-    const yB = "shadowsFragmentFunctions",
-      pB = "#ifdef SHADOWS\n#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\n#define TEXTUREFUNC(s,c,l) texture2DLodEXT(s,c,l)\n#else\n#define TEXTUREFUNC(s,c,b) texture2D(s,c,b)\n#endif\n#ifndef SHADOWFLOAT\nfloat unpack(vec4 color)\n{const vec4 bit_shift=vec4(1.0/(255.0*255.0*255.0),1.0/(255.0*255.0),1.0/255.0,1.0);return dot(color,bit_shift);}\n#endif\nfloat computeFallOff(float value,vec2 clipSpace,float frustumEdgeFalloff)\n{float mask=smoothstep(1.0-frustumEdgeFalloff,1.00000012,clamp(dot(clipSpace,clipSpace),0.,1.));return mix(value,1.0,mask);}\n#define inline\nfloat computeShadowCube(vec3 worldPos,vec3 lightPosition,samplerCube shadowSampler,float darkness,vec2 depthValues)\n{vec3 directionToLight=worldPos-lightPosition;float depth=length(directionToLight);depth=(depth+depthValues.x)/(depthValues.y);depth=clamp(depth,0.,1.0);directionToLight=normalize(directionToLight);directionToLight.y=-directionToLight.y;\n#ifndef SHADOWFLOAT\nfloat shadow=unpack(textureCube(shadowSampler,directionToLight));\n#else\nfloat shadow=textureCube(shadowSampler,directionToLight).x;\n#endif\nreturn depth>shadow ? darkness : 1.0;}\n#define inline\nfloat computeShadowWithPoissonSamplingCube(vec3 worldPos,vec3 lightPosition,samplerCube shadowSampler,float mapSize,float darkness,vec2 depthValues)\n{vec3 directionToLight=worldPos-lightPosition;float depth=length(directionToLight);depth=(depth+depthValues.x)/(depthValues.y);depth=clamp(depth,0.,1.0);directionToLight=normalize(directionToLight);directionToLight.y=-directionToLight.y;float visibility=1.;vec3 poissonDisk[4];poissonDisk[0]=vec3(-1.0,1.0,-1.0);poissonDisk[1]=vec3(1.0,-1.0,-1.0);poissonDisk[2]=vec3(-1.0,-1.0,-1.0);poissonDisk[3]=vec3(1.0,-1.0,1.0);\n#ifndef SHADOWFLOAT\nif (unpack(textureCube(shadowSampler,directionToLight+poissonDisk[0]*mapSize))<depth) visibility-=0.25;if (unpack(textureCube(shadowSampler,directionToLight+poissonDisk[1]*mapSize))<depth) visibility-=0.25;if (unpack(textureCube(shadowSampler,directionToLight+poissonDisk[2]*mapSize))<depth) visibility-=0.25;if (unpack(textureCube(shadowSampler,directionToLight+poissonDisk[3]*mapSize))<depth) visibility-=0.25;\n#else\nif (textureCube(shadowSampler,directionToLight+poissonDisk[0]*mapSize).x<depth) visibility-=0.25;if (textureCube(shadowSampler,directionToLight+poissonDisk[1]*mapSize).x<depth) visibility-=0.25;if (textureCube(shadowSampler,directionToLight+poissonDisk[2]*mapSize).x<depth) visibility-=0.25;if (textureCube(shadowSampler,directionToLight+poissonDisk[3]*mapSize).x<depth) visibility-=0.25;\n#endif\nreturn min(1.0,visibility+darkness);}\n#define inline\nfloat computeShadowWithESMCube(vec3 worldPos,vec3 lightPosition,samplerCube shadowSampler,float darkness,float depthScale,vec2 depthValues)\n{vec3 directionToLight=worldPos-lightPosition;float depth=length(directionToLight);depth=(depth+depthValues.x)/(depthValues.y);float shadowPixelDepth=clamp(depth,0.,1.0);directionToLight=normalize(directionToLight);directionToLight.y=-directionToLight.y;\n#ifndef SHADOWFLOAT\nfloat shadowMapSample=unpack(textureCube(shadowSampler,directionToLight));\n#else\nfloat shadowMapSample=textureCube(shadowSampler,directionToLight).x;\n#endif\nfloat esm=1.0-clamp(exp(min(87.,depthScale*shadowPixelDepth))*shadowMapSample,0.,1.-darkness);return esm;}\n#define inline\nfloat computeShadowWithCloseESMCube(vec3 worldPos,vec3 lightPosition,samplerCube shadowSampler,float darkness,float depthScale,vec2 depthValues)\n{vec3 directionToLight=worldPos-lightPosition;float depth=length(directionToLight);depth=(depth+depthValues.x)/(depthValues.y);float shadowPixelDepth=clamp(depth,0.,1.0);directionToLight=normalize(directionToLight);directionToLight.y=-directionToLight.y;\n#ifndef SHADOWFLOAT\nfloat shadowMapSample=unpack(textureCube(shadowSampler,directionToLight));\n#else\nfloat shadowMapSample=textureCube(shadowSampler,directionToLight).x;\n#endif\nfloat esm=clamp(exp(min(87.,-depthScale*(shadowPixelDepth-shadowMapSample))),darkness,1.);return esm;}\n#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\n#define inline\nfloat computeShadowCSM(float layer,vec4 vPositionFromLight,float depthMetric,highp sampler2DArray shadowSampler,float darkness,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec2 uv=0.5*clipSpace.xy+vec2(0.5);vec3 uvLayer=vec3(uv.x,uv.y,layer);float shadowPixelDepth=clamp(depthMetric,0.,1.0);\n#ifndef SHADOWFLOAT\nfloat shadow=unpack(texture2D(shadowSampler,uvLayer));\n#else\nfloat shadow=texture2D(shadowSampler,uvLayer).x;\n#endif\nreturn shadowPixelDepth>shadow ? computeFallOff(darkness,clipSpace.xy,frustumEdgeFalloff) : 1.;}\n#endif\n#define inline\nfloat computeShadow(vec4 vPositionFromLight,float depthMetric,sampler2D shadowSampler,float darkness,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec2 uv=0.5*clipSpace.xy+vec2(0.5);if (uv.x<0. || uv.x>1.0 || uv.y<0. || uv.y>1.0)\n{return 1.0;}\nelse\n{float shadowPixelDepth=clamp(depthMetric,0.,1.0);\n#ifndef SHADOWFLOAT\nfloat shadow=unpack(TEXTUREFUNC(shadowSampler,uv,0.));\n#else\nfloat shadow=TEXTUREFUNC(shadowSampler,uv,0.).x;\n#endif\nreturn shadowPixelDepth>shadow ? computeFallOff(darkness,clipSpace.xy,frustumEdgeFalloff) : 1.;}}\n#define inline\nfloat computeShadowWithPoissonSampling(vec4 vPositionFromLight,float depthMetric,sampler2D shadowSampler,float mapSize,float darkness,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec2 uv=0.5*clipSpace.xy+vec2(0.5);if (uv.x<0. || uv.x>1.0 || uv.y<0. || uv.y>1.0)\n{return 1.0;}\nelse\n{float shadowPixelDepth=clamp(depthMetric,0.,1.0);float visibility=1.;vec2 poissonDisk[4];poissonDisk[0]=vec2(-0.94201624,-0.39906216);poissonDisk[1]=vec2(0.94558609,-0.76890725);poissonDisk[2]=vec2(-0.094184101,-0.92938870);poissonDisk[3]=vec2(0.34495938,0.29387760);\n#ifndef SHADOWFLOAT\nif (unpack(TEXTUREFUNC(shadowSampler,uv+poissonDisk[0]*mapSize,0.))<shadowPixelDepth) visibility-=0.25;if (unpack(TEXTUREFUNC(shadowSampler,uv+poissonDisk[1]*mapSize,0.))<shadowPixelDepth) visibility-=0.25;if (unpack(TEXTUREFUNC(shadowSampler,uv+poissonDisk[2]*mapSize,0.))<shadowPixelDepth) visibility-=0.25;if (unpack(TEXTUREFUNC(shadowSampler,uv+poissonDisk[3]*mapSize,0.))<shadowPixelDepth) visibility-=0.25;\n#else\nif (TEXTUREFUNC(shadowSampler,uv+poissonDisk[0]*mapSize,0.).x<shadowPixelDepth) visibility-=0.25;if (TEXTUREFUNC(shadowSampler,uv+poissonDisk[1]*mapSize,0.).x<shadowPixelDepth) visibility-=0.25;if (TEXTUREFUNC(shadowSampler,uv+poissonDisk[2]*mapSize,0.).x<shadowPixelDepth) visibility-=0.25;if (TEXTUREFUNC(shadowSampler,uv+poissonDisk[3]*mapSize,0.).x<shadowPixelDepth) visibility-=0.25;\n#endif\nreturn computeFallOff(min(1.0,visibility+darkness),clipSpace.xy,frustumEdgeFalloff);}}\n#define inline\nfloat computeShadowWithESM(vec4 vPositionFromLight,float depthMetric,sampler2D shadowSampler,float darkness,float depthScale,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec2 uv=0.5*clipSpace.xy+vec2(0.5);if (uv.x<0. || uv.x>1.0 || uv.y<0. || uv.y>1.0)\n{return 1.0;}\nelse\n{float shadowPixelDepth=clamp(depthMetric,0.,1.0);\n#ifndef SHADOWFLOAT\nfloat shadowMapSample=unpack(TEXTUREFUNC(shadowSampler,uv,0.));\n#else\nfloat shadowMapSample=TEXTUREFUNC(shadowSampler,uv,0.).x;\n#endif\nfloat esm=1.0-clamp(exp(min(87.,depthScale*shadowPixelDepth))*shadowMapSample,0.,1.-darkness);return computeFallOff(esm,clipSpace.xy,frustumEdgeFalloff);}}\n#define inline\nfloat computeShadowWithCloseESM(vec4 vPositionFromLight,float depthMetric,sampler2D shadowSampler,float darkness,float depthScale,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec2 uv=0.5*clipSpace.xy+vec2(0.5);if (uv.x<0. || uv.x>1.0 || uv.y<0. || uv.y>1.0)\n{return 1.0;}\nelse\n{float shadowPixelDepth=clamp(depthMetric,0.,1.0); \n#ifndef SHADOWFLOAT\nfloat shadowMapSample=unpack(TEXTUREFUNC(shadowSampler,uv,0.));\n#else\nfloat shadowMapSample=TEXTUREFUNC(shadowSampler,uv,0.).x;\n#endif\nfloat esm=clamp(exp(min(87.,-depthScale*(shadowPixelDepth-shadowMapSample))),darkness,1.);return computeFallOff(esm,clipSpace.xy,frustumEdgeFalloff);}}\n#ifdef IS_NDC_HALF_ZRANGE\n#define ZINCLIP clipSpace.z\n#else\n#define ZINCLIP uvDepth.z\n#endif\n#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\n#define SMALLEST_ABOVE_ZERO 1.1754943508e-38\n#define GREATEST_LESS_THAN_ONE 0.99999994\n#define DISABLE_UNIFORMITY_ANALYSIS\n#define inline\nfloat computeShadowWithCSMPCF1(float layer,vec4 vPositionFromLight,float depthMetric,highp sampler2DArrayShadow shadowSampler,float darkness,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec3 uvDepth=vec3(0.5*clipSpace.xyz+vec3(0.5));\n#ifdef USE_REVERSE_DEPTHBUFFER\nuvDepth.z=clamp(ZINCLIP,SMALLEST_ABOVE_ZERO,1.);\n#else\nuvDepth.z=clamp(ZINCLIP,0.,GREATEST_LESS_THAN_ONE);\n#endif\nvec4 uvDepthLayer=vec4(uvDepth.x,uvDepth.y,layer,uvDepth.z);float shadow=texture2D(shadowSampler,uvDepthLayer);shadow=mix(darkness,1.,shadow);return computeFallOff(shadow,clipSpace.xy,frustumEdgeFalloff);}\n#define inline\nfloat computeShadowWithCSMPCF3(float layer,vec4 vPositionFromLight,float depthMetric,highp sampler2DArrayShadow shadowSampler,vec2 shadowMapSizeAndInverse,float darkness,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec3 uvDepth=vec3(0.5*clipSpace.xyz+vec3(0.5));\n#ifdef USE_REVERSE_DEPTHBUFFER\nuvDepth.z=clamp(ZINCLIP,SMALLEST_ABOVE_ZERO,1.);\n#else\nuvDepth.z=clamp(ZINCLIP,0.,GREATEST_LESS_THAN_ONE);\n#endif\nvec2 uv=uvDepth.xy*shadowMapSizeAndInverse.x; \nuv+=0.5; \nvec2 st=fract(uv); \nvec2 base_uv=floor(uv)-0.5; \nbase_uv*=shadowMapSizeAndInverse.y; \nvec2 uvw0=3.-2.*st;vec2 uvw1=1.+2.*st;vec2 u=vec2((2.-st.x)/uvw0.x-1.,st.x/uvw1.x+1.)*shadowMapSizeAndInverse.y;vec2 v=vec2((2.-st.y)/uvw0.y-1.,st.y/uvw1.y+1.)*shadowMapSizeAndInverse.y;float shadow=0.;shadow+=uvw0.x*uvw0.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[0],v[0]),layer,uvDepth.z));shadow+=uvw1.x*uvw0.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[1],v[0]),layer,uvDepth.z));shadow+=uvw0.x*uvw1.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[0],v[1]),layer,uvDepth.z));shadow+=uvw1.x*uvw1.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[1],v[1]),layer,uvDepth.z));shadow=shadow/16.;shadow=mix(darkness,1.,shadow);return computeFallOff(shadow,clipSpace.xy,frustumEdgeFalloff);}\n#define inline\nfloat computeShadowWithCSMPCF5(float layer,vec4 vPositionFromLight,float depthMetric,highp sampler2DArrayShadow shadowSampler,vec2 shadowMapSizeAndInverse,float darkness,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec3 uvDepth=vec3(0.5*clipSpace.xyz+vec3(0.5));\n#ifdef USE_REVERSE_DEPTHBUFFER\nuvDepth.z=clamp(ZINCLIP,SMALLEST_ABOVE_ZERO,1.);\n#else\nuvDepth.z=clamp(ZINCLIP,0.,GREATEST_LESS_THAN_ONE);\n#endif\nvec2 uv=uvDepth.xy*shadowMapSizeAndInverse.x; \nuv+=0.5; \nvec2 st=fract(uv); \nvec2 base_uv=floor(uv)-0.5; \nbase_uv*=shadowMapSizeAndInverse.y; \nvec2 uvw0=4.-3.*st;vec2 uvw1=vec2(7.);vec2 uvw2=1.+3.*st;vec3 u=vec3((3.-2.*st.x)/uvw0.x-2.,(3.+st.x)/uvw1.x,st.x/uvw2.x+2.)*shadowMapSizeAndInverse.y;vec3 v=vec3((3.-2.*st.y)/uvw0.y-2.,(3.+st.y)/uvw1.y,st.y/uvw2.y+2.)*shadowMapSizeAndInverse.y;float shadow=0.;shadow+=uvw0.x*uvw0.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[0],v[0]),layer,uvDepth.z));shadow+=uvw1.x*uvw0.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[1],v[0]),layer,uvDepth.z));shadow+=uvw2.x*uvw0.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[2],v[0]),layer,uvDepth.z));shadow+=uvw0.x*uvw1.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[0],v[1]),layer,uvDepth.z));shadow+=uvw1.x*uvw1.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[1],v[1]),layer,uvDepth.z));shadow+=uvw2.x*uvw1.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[2],v[1]),layer,uvDepth.z));shadow+=uvw0.x*uvw2.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[0],v[2]),layer,uvDepth.z));shadow+=uvw1.x*uvw2.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[1],v[2]),layer,uvDepth.z));shadow+=uvw2.x*uvw2.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[2],v[2]),layer,uvDepth.z));shadow=shadow/144.;shadow=mix(darkness,1.,shadow);return computeFallOff(shadow,clipSpace.xy,frustumEdgeFalloff);}\n#define inline\nfloat computeShadowWithPCF1(vec4 vPositionFromLight,float depthMetric,highp sampler2DShadow shadowSampler,float darkness,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec3 uvDepth=vec3(0.5*clipSpace.xyz+vec3(0.5));uvDepth.z=ZINCLIP;if (depthMetric<0.0 || depthMetric>1.0 || uvDepth.x<0. || uvDepth.x>1.0 || uvDepth.y<0. || uvDepth.y>1.0) {return 1.0;} else {float shadow=TEXTUREFUNC(shadowSampler,uvDepth,0.);shadow=mix(darkness,1.,shadow);return computeFallOff(shadow,clipSpace.xy,frustumEdgeFalloff);}}\n#define inline\nfloat computeShadowWithPCF3(vec4 vPositionFromLight,float depthMetric,highp sampler2DShadow shadowSampler,vec2 shadowMapSizeAndInverse,float darkness,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec3 uvDepth=vec3(0.5*clipSpace.xyz+vec3(0.5));uvDepth.z=ZINCLIP;if (depthMetric<0.0 || depthMetric>1.0 || uvDepth.x<0. || uvDepth.x>1.0 || uvDepth.y<0. || uvDepth.y>1.0) {return 1.0;} else {vec2 uv=uvDepth.xy*shadowMapSizeAndInverse.x; \nuv+=0.5; \nvec2 st=fract(uv); \nvec2 base_uv=floor(uv)-0.5; \nbase_uv*=shadowMapSizeAndInverse.y; \nvec2 uvw0=3.-2.*st;vec2 uvw1=1.+2.*st;vec2 u=vec2((2.-st.x)/uvw0.x-1.,st.x/uvw1.x+1.)*shadowMapSizeAndInverse.y;vec2 v=vec2((2.-st.y)/uvw0.y-1.,st.y/uvw1.y+1.)*shadowMapSizeAndInverse.y;float shadow=0.;shadow+=uvw0.x*uvw0.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[0],v[0]),uvDepth.z),0.);shadow+=uvw1.x*uvw0.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[1],v[0]),uvDepth.z),0.);shadow+=uvw0.x*uvw1.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[0],v[1]),uvDepth.z),0.);shadow+=uvw1.x*uvw1.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[1],v[1]),uvDepth.z),0.);shadow=shadow/16.;shadow=mix(darkness,1.,shadow);return computeFallOff(shadow,clipSpace.xy,frustumEdgeFalloff);}}\n#define inline\nfloat computeShadowWithPCF5(vec4 vPositionFromLight,float depthMetric,highp sampler2DShadow shadowSampler,vec2 shadowMapSizeAndInverse,float darkness,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec3 uvDepth=vec3(0.5*clipSpace.xyz+vec3(0.5));uvDepth.z=ZINCLIP;if (depthMetric<0.0 || depthMetric>1.0 || uvDepth.x<0. || uvDepth.x>1.0 || uvDepth.y<0. || uvDepth.y>1.0) {return 1.0;} else {vec2 uv=uvDepth.xy*shadowMapSizeAndInverse.x; \nuv+=0.5; \nvec2 st=fract(uv); \nvec2 base_uv=floor(uv)-0.5; \nbase_uv*=shadowMapSizeAndInverse.y; \nvec2 uvw0=4.-3.*st;vec2 uvw1=vec2(7.);vec2 uvw2=1.+3.*st;vec3 u=vec3((3.-2.*st.x)/uvw0.x-2.,(3.+st.x)/uvw1.x,st.x/uvw2.x+2.)*shadowMapSizeAndInverse.y;vec3 v=vec3((3.-2.*st.y)/uvw0.y-2.,(3.+st.y)/uvw1.y,st.y/uvw2.y+2.)*shadowMapSizeAndInverse.y;float shadow=0.;shadow+=uvw0.x*uvw0.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[0],v[0]),uvDepth.z),0.);shadow+=uvw1.x*uvw0.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[1],v[0]),uvDepth.z),0.);shadow+=uvw2.x*uvw0.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[2],v[0]),uvDepth.z),0.);shadow+=uvw0.x*uvw1.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[0],v[1]),uvDepth.z),0.);shadow+=uvw1.x*uvw1.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[1],v[1]),uvDepth.z),0.);shadow+=uvw2.x*uvw1.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[2],v[1]),uvDepth.z),0.);shadow+=uvw0.x*uvw2.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[0],v[2]),uvDepth.z),0.);shadow+=uvw1.x*uvw2.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[1],v[2]),uvDepth.z),0.);shadow+=uvw2.x*uvw2.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[2],v[2]),uvDepth.z),0.);shadow=shadow/144.;shadow=mix(darkness,1.,shadow);return computeFallOff(shadow,clipSpace.xy,frustumEdgeFalloff);}}\nconst vec3 PoissonSamplers32[64]=vec3[64](\nvec3(0.06407013,0.05409927,0.),\nvec3(0.7366577,0.5789394,0.),\nvec3(-0.6270542,-0.5320278,0.),\nvec3(-0.4096107,0.8411095,0.),\nvec3(0.6849564,-0.4990818,0.),\nvec3(-0.874181,-0.04579735,0.),\nvec3(0.9989998,0.0009880066,0.),\nvec3(-0.004920578,-0.9151649,0.),\nvec3(0.1805763,0.9747483,0.),\nvec3(-0.2138451,0.2635818,0.),\nvec3(0.109845,0.3884785,0.),\nvec3(0.06876755,-0.3581074,0.),\nvec3(0.374073,-0.7661266,0.),\nvec3(0.3079132,-0.1216763,0.),\nvec3(-0.3794335,-0.8271583,0.),\nvec3(-0.203878,-0.07715034,0.),\nvec3(0.5912697,0.1469799,0.),\nvec3(-0.88069,0.3031784,0.),\nvec3(0.5040108,0.8283722,0.),\nvec3(-0.5844124,0.5494877,0.),\nvec3(0.6017799,-0.1726654,0.),\nvec3(-0.5554981,0.1559997,0.),\nvec3(-0.3016369,-0.3900928,0.),\nvec3(-0.5550632,-0.1723762,0.),\nvec3(0.925029,0.2995041,0.),\nvec3(-0.2473137,0.5538505,0.),\nvec3(0.9183037,-0.2862392,0.),\nvec3(0.2469421,0.6718712,0.),\nvec3(0.3916397,-0.4328209,0.),\nvec3(-0.03576927,-0.6220032,0.),\nvec3(-0.04661255,0.7995201,0.),\nvec3(0.4402924,0.3640312,0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.)\n);const vec3 PoissonSamplers64[64]=vec3[64](\nvec3(-0.613392,0.617481,0.),\nvec3(0.170019,-0.040254,0.),\nvec3(-0.299417,0.791925,0.),\nvec3(0.645680,0.493210,0.),\nvec3(-0.651784,0.717887,0.),\nvec3(0.421003,0.027070,0.),\nvec3(-0.817194,-0.271096,0.),\nvec3(-0.705374,-0.668203,0.),\nvec3(0.977050,-0.108615,0.),\nvec3(0.063326,0.142369,0.),\nvec3(0.203528,0.214331,0.),\nvec3(-0.667531,0.326090,0.),\nvec3(-0.098422,-0.295755,0.),\nvec3(-0.885922,0.215369,0.),\nvec3(0.566637,0.605213,0.),\nvec3(0.039766,-0.396100,0.),\nvec3(0.751946,0.453352,0.),\nvec3(0.078707,-0.715323,0.),\nvec3(-0.075838,-0.529344,0.),\nvec3(0.724479,-0.580798,0.),\nvec3(0.222999,-0.215125,0.),\nvec3(-0.467574,-0.405438,0.),\nvec3(-0.248268,-0.814753,0.),\nvec3(0.354411,-0.887570,0.),\nvec3(0.175817,0.382366,0.),\nvec3(0.487472,-0.063082,0.),\nvec3(-0.084078,0.898312,0.),\nvec3(0.488876,-0.783441,0.),\nvec3(0.470016,0.217933,0.),\nvec3(-0.696890,-0.549791,0.),\nvec3(-0.149693,0.605762,0.),\nvec3(0.034211,0.979980,0.),\nvec3(0.503098,-0.308878,0.),\nvec3(-0.016205,-0.872921,0.),\nvec3(0.385784,-0.393902,0.),\nvec3(-0.146886,-0.859249,0.),\nvec3(0.643361,0.164098,0.),\nvec3(0.634388,-0.049471,0.),\nvec3(-0.688894,0.007843,0.),\nvec3(0.464034,-0.188818,0.),\nvec3(-0.440840,0.137486,0.),\nvec3(0.364483,0.511704,0.),\nvec3(0.034028,0.325968,0.),\nvec3(0.099094,-0.308023,0.),\nvec3(0.693960,-0.366253,0.),\nvec3(0.678884,-0.204688,0.),\nvec3(0.001801,0.780328,0.),\nvec3(0.145177,-0.898984,0.),\nvec3(0.062655,-0.611866,0.),\nvec3(0.315226,-0.604297,0.),\nvec3(-0.780145,0.486251,0.),\nvec3(-0.371868,0.882138,0.),\nvec3(0.200476,0.494430,0.),\nvec3(-0.494552,-0.711051,0.),\nvec3(0.612476,0.705252,0.),\nvec3(-0.578845,-0.768792,0.),\nvec3(-0.772454,-0.090976,0.),\nvec3(0.504440,0.372295,0.),\nvec3(0.155736,0.065157,0.),\nvec3(0.391522,0.849605,0.),\nvec3(-0.620106,-0.328104,0.),\nvec3(0.789239,-0.419965,0.),\nvec3(-0.545396,0.538133,0.),\nvec3(-0.178564,-0.596057,0.)\n);\n#define inline\nfloat computeShadowWithCSMPCSS(float layer,vec4 vPositionFromLight,float depthMetric,highp sampler2DArray depthSampler,highp sampler2DArrayShadow shadowSampler,float shadowMapSizeInverse,float lightSizeUV,float darkness,float frustumEdgeFalloff,int searchTapCount,int pcfTapCount,vec3[64] poissonSamplers,vec2 lightSizeUVCorrection,float depthCorrection,float penumbraDarkness)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec3 uvDepth=vec3(0.5*clipSpace.xyz+vec3(0.5));\n#ifdef USE_REVERSE_DEPTHBUFFER\nuvDepth.z=clamp(ZINCLIP,SMALLEST_ABOVE_ZERO,1.);\n#else\nuvDepth.z=clamp(ZINCLIP,0.,GREATEST_LESS_THAN_ONE);\n#endif\nvec4 uvDepthLayer=vec4(uvDepth.x,uvDepth.y,layer,uvDepth.z);float blockerDepth=0.0;float sumBlockerDepth=0.0;float numBlocker=0.0;for (int i=0; i<searchTapCount; i ++) {blockerDepth=texture2D(depthSampler,vec3(uvDepth.xy+(lightSizeUV*lightSizeUVCorrection*shadowMapSizeInverse*PoissonSamplers32[i].xy),layer)).r;if (blockerDepth<depthMetric) {sumBlockerDepth+=blockerDepth;numBlocker++;}}\nfloat avgBlockerDepth=sumBlockerDepth/numBlocker;float AAOffset=shadowMapSizeInverse*10.;float penumbraRatio=((depthMetric-avgBlockerDepth)*depthCorrection+AAOffset);vec4 filterRadius=vec4(penumbraRatio*lightSizeUV*lightSizeUVCorrection*shadowMapSizeInverse,0.,0.);float random=getRand(vPositionFromLight.xy);float rotationAngle=random*3.1415926;vec2 rotationVector=vec2(cos(rotationAngle),sin(rotationAngle));float shadow=0.;for (int i=0; i<pcfTapCount; i++) {vec4 offset=vec4(poissonSamplers[i],0.);offset=vec4(offset.x*rotationVector.x-offset.y*rotationVector.y,offset.y*rotationVector.x+offset.x*rotationVector.y,0.,0.);shadow+=texture2D(shadowSampler,uvDepthLayer+offset*filterRadius);}\nshadow/=float(pcfTapCount);shadow=mix(shadow,1.,min((depthMetric-avgBlockerDepth)*depthCorrection*penumbraDarkness,1.));shadow=mix(darkness,1.,shadow);if (numBlocker<1.0) {return 1.0;}\nelse\n{return computeFallOff(shadow,clipSpace.xy,frustumEdgeFalloff);}}\n#define inline\nfloat computeShadowWithPCSS(vec4 vPositionFromLight,float depthMetric,sampler2D depthSampler,highp sampler2DShadow shadowSampler,float shadowMapSizeInverse,float lightSizeUV,float darkness,float frustumEdgeFalloff,int searchTapCount,int pcfTapCount,vec3[64] poissonSamplers)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec3 uvDepth=vec3(0.5*clipSpace.xyz+vec3(0.5));uvDepth.z=ZINCLIP;if (depthMetric<0.0 || depthMetric>1.0 || uvDepth.x<0. || uvDepth.x>1.0 || uvDepth.y<0. || uvDepth.y>1.0) {return 1.0;} else {float blockerDepth=0.0;float sumBlockerDepth=0.0;float numBlocker=0.0;for (int i=0; i<searchTapCount; i ++) {blockerDepth=TEXTUREFUNC(depthSampler,uvDepth.xy+(lightSizeUV*shadowMapSizeInverse*PoissonSamplers32[i].xy),0.).r;if (blockerDepth<depthMetric) {sumBlockerDepth+=blockerDepth;numBlocker++;}}\nif (numBlocker<1.0) {return 1.0;}\nelse\n{float avgBlockerDepth=sumBlockerDepth/numBlocker;float AAOffset=shadowMapSizeInverse*10.;float penumbraRatio=((depthMetric-avgBlockerDepth)+AAOffset);float filterRadius=penumbraRatio*lightSizeUV*shadowMapSizeInverse;float random=getRand(vPositionFromLight.xy);float rotationAngle=random*3.1415926;vec2 rotationVector=vec2(cos(rotationAngle),sin(rotationAngle));float shadow=0.;for (int i=0; i<pcfTapCount; i++) {vec3 offset=poissonSamplers[i];offset=vec3(offset.x*rotationVector.x-offset.y*rotationVector.y,offset.y*rotationVector.x+offset.x*rotationVector.y,0.);shadow+=TEXTUREFUNC(shadowSampler,uvDepth+offset*filterRadius,0.);}\nshadow/=float(pcfTapCount);shadow=mix(shadow,1.,depthMetric-avgBlockerDepth);shadow=mix(darkness,1.,shadow);return computeFallOff(shadow,clipSpace.xy,frustumEdgeFalloff);}}}\n#define inline\nfloat computeShadowWithPCSS16(vec4 vPositionFromLight,float depthMetric,sampler2D depthSampler,highp sampler2DShadow shadowSampler,float shadowMapSizeInverse,float lightSizeUV,float darkness,float frustumEdgeFalloff)\n{return computeShadowWithPCSS(vPositionFromLight,depthMetric,depthSampler,shadowSampler,shadowMapSizeInverse,lightSizeUV,darkness,frustumEdgeFalloff,16,16,PoissonSamplers32);}\n#define inline\nfloat computeShadowWithPCSS32(vec4 vPositionFromLight,float depthMetric,sampler2D depthSampler,highp sampler2DShadow shadowSampler,float shadowMapSizeInverse,float lightSizeUV,float darkness,float frustumEdgeFalloff)\n{return computeShadowWithPCSS(vPositionFromLight,depthMetric,depthSampler,shadowSampler,shadowMapSizeInverse,lightSizeUV,darkness,frustumEdgeFalloff,16,32,PoissonSamplers32);}\n#define inline\nfloat computeShadowWithPCSS64(vec4 vPositionFromLight,float depthMetric,sampler2D depthSampler,highp sampler2DShadow shadowSampler,float shadowMapSizeInverse,float lightSizeUV,float darkness,float frustumEdgeFalloff)\n{return computeShadowWithPCSS(vPositionFromLight,depthMetric,depthSampler,shadowSampler,shadowMapSizeInverse,lightSizeUV,darkness,frustumEdgeFalloff,32,64,PoissonSamplers64);}\n#define inline\nfloat computeShadowWithCSMPCSS16(float layer,vec4 vPositionFromLight,float depthMetric,highp sampler2DArray depthSampler,highp sampler2DArrayShadow shadowSampler,float shadowMapSizeInverse,float lightSizeUV,float darkness,float frustumEdgeFalloff,vec2 lightSizeUVCorrection,float depthCorrection,float penumbraDarkness)\n{return computeShadowWithCSMPCSS(layer,vPositionFromLight,depthMetric,depthSampler,shadowSampler,shadowMapSizeInverse,lightSizeUV,darkness,frustumEdgeFalloff,16,16,PoissonSamplers32,lightSizeUVCorrection,depthCorrection,penumbraDarkness);}\n#define inline\nfloat computeShadowWithCSMPCSS32(float layer,vec4 vPositionFromLight,float depthMetric,highp sampler2DArray depthSampler,highp sampler2DArrayShadow shadowSampler,float shadowMapSizeInverse,float lightSizeUV,float darkness,float frustumEdgeFalloff,vec2 lightSizeUVCorrection,float depthCorrection,float penumbraDarkness)\n{return computeShadowWithCSMPCSS(layer,vPositionFromLight,depthMetric,depthSampler,shadowSampler,shadowMapSizeInverse,lightSizeUV,darkness,frustumEdgeFalloff,16,32,PoissonSamplers32,lightSizeUVCorrection,depthCorrection,penumbraDarkness);}\n#define inline\nfloat computeShadowWithCSMPCSS64(float layer,vec4 vPositionFromLight,float depthMetric,highp sampler2DArray depthSampler,highp sampler2DArrayShadow shadowSampler,float shadowMapSizeInverse,float lightSizeUV,float darkness,float frustumEdgeFalloff,vec2 lightSizeUVCorrection,float depthCorrection,float penumbraDarkness)\n{return computeShadowWithCSMPCSS(layer,vPositionFromLight,depthMetric,depthSampler,shadowSampler,shadowMapSizeInverse,lightSizeUV,darkness,frustumEdgeFalloff,32,64,PoissonSamplers64,lightSizeUVCorrection,depthCorrection,penumbraDarkness);}\n#endif\n#endif\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
-    }
-  },
-  40848: (BB, TB, dB) => {
-    dB.d(TB, {
-      d: () => lB
-    });
-    var VB = dB(38595);
-    const yB = "textureRepetitionFunctions",
-      pB = "#if TEXTURE_REPETITION_MODE>0\nvec4 _texRepHash4(vec2 p) {return fract(sin(vec4(\n1.0+dot(p,vec2(37.0,17.0)),\n2.0+dot(p,vec2(11.0,47.0)),\n3.0+dot(p,vec2(41.0,29.0)),\n4.0+dot(p,vec2(23.0,31.0))\n))*103.0);}\n#endif\n#if TEXTURE_REPETITION_MODE==1\nvec4 _texRepSample(sampler2D samp,vec2 uv) {float k=texture2D(samp,0.005*uv).x;float index=k*8.0;float f=fract(index);float i=floor(index+0.5);float ib=floor(index);f=min(f,1.0-f)*2.0;vec2 offa=sin(vec2(3.0,7.0)*i);vec2 offb=sin(vec2(3.0,7.0)*ib);vec2 dx=dFdx(uv);vec2 dy=dFdy(uv);vec4 cola=textureGrad(samp,uv+0.3*offa,dx,dy);vec4 colb=textureGrad(samp,uv+0.3*offb,dx,dy);float colSum=cola.x+cola.y+cola.z-colb.x-colb.y-colb.z;return mix(cola,colb,smoothstep(0.2,0.8,f-0.1*colSum));}\n#elif TEXTURE_REPETITION_MODE==2\n#ifndef TEXTURE_REPETITION_M_PI\n#define TEXTURE_REPETITION_M_PI 3.14159265358979\n#endif\nvec2 _texRepHexHash(vec2 p) {vec2 r=mat2(127.1,269.5,311.7,183.3)*p;return fract(sin(r)*43758.5453);}\nvoid _texRepTriangleGrid(\nout float w1,out float w2,out float w3,\nout ivec2 vertex1,out ivec2 vertex2,out ivec2 vertex3,\nvec2 st\n) {st*=2.0*sqrt(3.0);mat2 gridToSkewedGrid=mat2(1.0,0.0,-0.57735027,1.15470054);vec2 skewedCoord=gridToSkewedGrid*st;ivec2 baseId=ivec2(floor(skewedCoord));vec3 temp=vec3(fract(skewedCoord),0.0);temp.z=1.0-temp.x-temp.y;float s=step(0.0,-temp.z);float s2=2.0*s-1.0;w1=-temp.z*s2;w2=s-temp.y*s2;w3=s-temp.x*s2;vertex1=baseId+ivec2(int(s),int(s));vertex2=baseId+ivec2(int(s),int(1.0-s));vertex3=baseId+ivec2(int(1.0-s),int(s));}\nvec2 _texRepMakeCenST(ivec2 Vertex) {mat2 invSkewMat=mat2(1.0,0.0,0.5,1.0/1.15470054);return (invSkewMat*vec2(Vertex))/(2.0*sqrt(3.0));}\nmat2 _texRepLoadRot2x2(ivec2 idx,float rotStr) {float angle=float(abs(idx.x*idx.y)+abs(idx.x+idx.y))+TEXTURE_REPETITION_M_PI;angle=mod(angle,2.0*TEXTURE_REPETITION_M_PI);if (angle<0.0) angle+=2.0*TEXTURE_REPETITION_M_PI;if (angle>TEXTURE_REPETITION_M_PI) angle-=TEXTURE_REPETITION_M_PI;angle*=rotStr;float cs=cos(angle);float si=sin(angle);return mat2(cs,si,-si,cs);}\nvec3 _texRepGain3(vec3 x,float r) {float k=log(1.0-r)/log(0.5);vec3 s=2.0*step(0.5,x);vec3 m=2.0*(1.0-s);vec3 res=0.5*s+0.25*m*pow(max(vec3(0.0),s+x*m),vec3(k));return res/(res.x+res.y+res.z);}\nvec4 _texRepSample(sampler2D samp,vec2 uv) {float rotStrength=vTextureRepetitionHexTilingParams.x;float fallOffContrast=vTextureRepetitionHexTilingParams.y;float expVal=vTextureRepetitionHexTilingParams.z;float r=vTextureRepetitionHexTilingParams.w;vec2 dSTdx=dFdx(uv);vec2 dSTdy=dFdy(uv);float w1,w2,w3;ivec2 vertex1,vertex2,vertex3;_texRepTriangleGrid(w1,w2,w3,vertex1,vertex2,vertex3,uv);mat2 rot1=_texRepLoadRot2x2(vertex1,rotStrength);mat2 rot2=_texRepLoadRot2x2(vertex2,rotStrength);mat2 rot3=_texRepLoadRot2x2(vertex3,rotStrength);vec2 cen1=_texRepMakeCenST(vertex1);vec2 cen2=_texRepMakeCenST(vertex2);vec2 cen3=_texRepMakeCenST(vertex3);vec2 st1=(uv-cen1)*rot1+cen1+_texRepHexHash(vec2(vertex1));vec2 st2=(uv-cen2)*rot2+cen2+_texRepHexHash(vec2(vertex2));vec2 st3=(uv-cen3)*rot3+cen3+_texRepHexHash(vec2(vertex3));vec4 c1=textureGrad(samp,st1,dSTdx*rot1,dSTdy*rot1);vec4 c2=textureGrad(samp,st2,dSTdx*rot2,dSTdy*rot2);vec4 c3=textureGrad(samp,st3,dSTdx*rot3,dSTdy*rot3);vec3 Lw=vec3(0.299,0.587,0.114);vec3 Dw=vec3(dot(c1.rgb,Lw),dot(c2.rgb,Lw),dot(c3.rgb,Lw));Dw=mix(vec3(1.0),Dw,fallOffContrast);vec3 W=Dw*pow(vec3(w1,w2,w3),vec3(expVal));W/=(W.x+W.y+W.z);if (r != 0.5) {W=_texRepGain3(W,r);}\nreturn W.x*c1+W.y*c2+W.z*c3;}\n#elif TEXTURE_REPETITION_MODE==3\nvec4 _texRepSample(sampler2D samp,vec2 uv) {vec2 iuv=floor(uv);vec2 fuv=fract(uv);vec4 ofa=_texRepHash4(iuv+vec2(0.0,0.0));vec4 ofb=_texRepHash4(iuv+vec2(1.0,0.0));vec4 ofc=_texRepHash4(iuv+vec2(0.0,1.0));vec4 ofd=_texRepHash4(iuv+vec2(1.0,1.0));vec2 dx=dFdx(uv);vec2 dy=dFdy(uv);ofa.zw=sign(ofa.zw-0.5);ofb.zw=sign(ofb.zw-0.5);ofc.zw=sign(ofc.zw-0.5);ofd.zw=sign(ofd.zw-0.5);vec2 uva=uv*ofa.zw+ofa.xy; vec2 ddxa=dx*ofa.zw; vec2 ddya=dy*ofa.zw;vec2 uvb=uv*ofb.zw+ofb.xy; vec2 ddxb=dx*ofb.zw; vec2 ddyb=dy*ofb.zw;vec2 uvc=uv*ofc.zw+ofc.xy; vec2 ddxc=dx*ofc.zw; vec2 ddyc=dy*ofc.zw;vec2 uvd=uv*ofd.zw+ofd.xy; vec2 ddxd=dx*ofd.zw; vec2 ddyd=dy*ofd.zw;vec2 b=smoothstep(0.25,0.75,fuv);return mix(\nmix(textureGrad(samp,uva,ddxa,ddya),textureGrad(samp,uvb,ddxb,ddyb),b.x),\nmix(textureGrad(samp,uvc,ddxc,ddyc),textureGrad(samp,uvd,ddxd,ddyd),b.x),\nb.y\n);}\n#elif TEXTURE_REPETITION_MODE==4\nvec4 _texRepSample(sampler2D samp,vec2 uv) {vec2 p=floor(uv);vec2 f=fract(uv);vec2 dx=dFdx(uv);vec2 dy=dFdy(uv);vec4 va=vec4(0.0);float wt=0.0;float w2=0.0;for (int j=-1; j<=1; j++) {for (int i=-1; i<=1; i++) {vec2 g=vec2(float(i),float(j));vec4 o=_texRepHash4(p+g);vec2 r=g-f+o.xy;float d=dot(r,r);float w=exp(-5.0*d);vec4 c=textureGrad(samp,uv+o.zw,dx,dy);va+=w*c;wt+=w;w2+=w*w;}}\nfloat mean=0.3;vec4 res=mean+(va-wt*mean)/sqrt(w2);return mix(va/wt,res,0.4);}\n#endif\n#if TEXTURE_REPETITION_MODE>0\n#define TEXRD(s,uv) _texRepSample(s,uv)\n#else\n#define TEXRD(s,uv) texture2D(s,uv)\n#endif\n#define TEXRD_DEFINED\n";
-    VB.e.IncludesShadersStore[yB] || (VB.e.IncludesShadersStore[yB] = pB);
-    const lB = {
-      name: yB,
-      shader: pB
+    var FY = DY(40853),
+      AY = DY(40871);
+    class IY {
+      static ExpandRGBDTexture(YY) {
+        const rY = YY._texture;
+        if (!rY || !YY.isRGBD) return;
+        const AY = rY.ky(),
+          IY = AY.getCaps(),
+          RY = rY.isReady;
+        let OY = !1;
+        IY.textureHalfFloatRender && IY.textureHalfFloatLinearFiltering ? (OY = !0, rY.type = 2) : IY.textureFloatRender && IY.textureFloatLinearFiltering && (OY = !0, rY.type = 1), OY && (rY.isReady = !1, rY._isRGBD = !1, rY.invertY = !1);
+        const gY = async () => {
+          const IY = AY.isWebGPU,
+            RY = IY ? 1 : 0;
+          rY.isReady = !1, IY ? await DY.e(332).then((() => DY(60433))) : await DY.e(314).then((() => DY(60440)));
+          const OY = new FY.d("rgbdDecode", "rgbdDecode", null, null, 1, null, 3, AY, !1, void 0, rY.type, void 0, null, !1, void 0, RY);
+          OY.externalTextureSamplerBinding = !0;
+          const gY = AY.createRenderTargetTexture(rY.width, {
+            generateDepthBuffer: !1,
+            generateMipMaps: !1,
+            generateStencilBuffer: !1,
+            samplingMode: rY.samplingMode,
+            type: rY.type,
+            format: 5
+          });
+          OY.onEffectCreatedObservable.addOnce((DY => {
+            DY.executeWhenCompiled((() => {
+              OY.onApply = YY => {
+                YY._bindTexture("textureSampler", rY), YY.setFloat2("scale", 1, 1)
+              }, YY.hT()?.postProcessManager.directRender([OY], gY, !0), AY.restoreDefaultFramebuffer(), AY._releaseTexture(rY), OY && OY.dispose(), gY._swapAndDie(rY), rY.isReady = !0
+            }))
+          }))
+        };
+        OY && (RY ? gY() : YY.onLoadObservable.addOnce(gY))
+      }
+      static async EncodeTextureToRGBD(YY, rY) {
+        let FY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        return rY.ky().isWebGPU ? await DY.e(333).then((() => DY(60457))) : await DY.e(315).then((() => DY(60455))), await (0, AY.b)("rgbdEncode", YY, rY, FY, 1, 5)
+      }
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

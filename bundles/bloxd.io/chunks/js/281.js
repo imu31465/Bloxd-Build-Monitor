@@ -1,417 +1,632 @@
 export const id = 281;
 export const ids = [281];
 export const modules = {
-  40202: (BB, TB, dB) => {
-    dB.r(TB), dB.d(TB, {
-      default: () => tB
+  40303: (YY, rY, DY) => {
+    DY.d(rY, {
+      d: () => mY,
+      h: () => CY,
+      l: () => oY,
+      o: () => WY,
+      s: () => sY,
+      t: () => QY,
+      u: () => yY,
+      y: () => iY
     });
-    var VB = dB(62),
-      yB = dB(4133),
-      pB = dB(1555),
-      lB = dB(933),
-      JB = dB.n(lB),
-      YB = dB(1324),
-      gB = dB(1078),
-      oB = dB(4105),
-      kB = dB(4117),
-      LB = dB(4122),
-      OB = dB(980);
-
-    function DB(BB) {
-      return BB.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-    }
-    oB.c.registerLanguage("javascript", kB.b), oB.c.registerLanguage("typescript", LB.d);
-
-    function uB(BB, TB) {
-      const dB = DB(BB).replace(/"/g, "&quot;");
-      return `<button type="button" class="DocsCopyButton ${TB}" title="${dB}" aria-label="${dB}"><svg class="DocsCopyIcon" viewBox="0 0 16 16" aria-hidden="true"><rect x="5.5" y="5.5" width="8.5" height="8.5" rx="1.5"/><path d="M10.5 3.5V3A1.5 1.5 0 0 0 9 1.5H3A1.5 1.5 0 0 0 1.5 3v6A1.5 1.5 0 0 0 3 10.5h.5"/></svg><svg class="DocsCopiedIcon" viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-7.5"/></svg></button>`
-    }
-
-    function HB(BB, TB) {
-      const dB = [],
-        VB = BB.toLowerCase(),
-        yB = TB.toLowerCase();
-      let pB = 0;
-      for (; pB < BB.length;) {
-        const lB = VB.indexOf(yB, pB);
-        if (-1 === lB) {
-          dB.push(BB.slice(pB));
-          break
-        }
-        lB > pB && dB.push(BB.slice(pB, lB)), dB.push((0, OB.jsx)("mark", {
-          className: "DocsHighlight",
-          children: BB.slice(lB, lB + TB.length)
-        }, lB)), pB = lB + TB.length
+    var FY = DY(36524),
+      AY = DY(36588),
+      IY = DY(36559),
+      RY = DY(40305),
+      OY = DY(39347),
+      gY = DY(39139),
+      aY = DY(39169),
+      vY = DY(39144),
+      uY = DY(36569);
+    const sY = Object.freeze(new FY.g(0, 0, 0, 0)),
+      iY = Object.freeze(FY.r.Zero()),
+      yY = Object.freeze(FY.q.Zero()),
+      QY = Object.freeze(gY.e.Zero()),
+      oY = Object.freeze(AY.c.Black()),
+      WY = Object.freeze(new AY.d(0, 0, 0, 0)),
+      EY = {
+        key: 0,
+        repeatCount: 0,
+        YA: 2
+      };
+    class mY {
+      static _PrepareAnimation(YY, rY, DY, IY, RY, OY, aY, vY) {
+        let uY;
+        if (!isNaN(parseFloat(RY)) && isFinite(RY) ? uY = mY.ANIMATIONTYPE_FLOAT : RY instanceof FY.g ? uY = mY.ANIMATIONTYPE_QUATERNION : RY instanceof FY.r ? uY = mY.ANIMATIONTYPE_VECTOR3 : RY instanceof FY.q ? uY = mY.ANIMATIONTYPE_VECTOR2 : RY instanceof AY.c ? uY = mY.ANIMATIONTYPE_COLOR3 : RY instanceof AY.d ? uY = mY.ANIMATIONTYPE_COLOR4 : RY instanceof gY.e && (uY = mY.ANIMATIONTYPE_SIZE), void 0 == uY) return null;
+        const sY = new mY(YY, rY, DY, uY, aY),
+          iY = [{
+            frame: 0,
+            value: RY
+          }, {
+            frame: IY,
+            value: OY
+          }];
+        return sY.setKeys(iY), void 0 !== vY && sY.setEasingFunction(vY), sY
       }
-      return dB
-    }
-    var EB = dB(946),
-      vB = dB(1249),
-      mB = dB(35856),
-      iB = dB(35860);
-    const NB = {
-        clientOptions: {
-          tabStep: "docsClientOptionsTab",
-          tabText: "codeEditor:tutorialClientOptionsTab",
-          pageStep: "docsClientOptions",
-          pageText: "codeEditor:tutorialClientOptions"
-        },
-        apiReference: {
-          tabStep: "docsApiReferenceTab",
-          tabText: "codeEditor:tutorialApiReferenceTab",
-          pageStep: "docsApiReference",
-          pageText: "codeEditor:tutorialApiReference"
-        },
-        callbacks: {
-          tabStep: "docsCallbacksTab",
-          tabText: "codeEditor:tutorialCallbacksTab",
-          pageStep: "docsCallbacks",
-          pageText: "codeEditor:tutorialCallbacks"
+      get runtimeAnimations() {
+        return this._runtimeAnimations
+      }
+      get hasRunningRuntimeAnimations() {
+        for (const YY of this._runtimeAnimations)
+          if (!YY.isStopped()) return !0;
+        return !1
+      }
+      constructor(YY, rY, DY, FY, AY, IY) {
+        this.name = YY, this.targetProperty = rY, this.framePerSecond = DY, this.dataType = FY, this.YA = AY, this.enableBlending = IY, this._easingFunction = null, this._runtimeAnimations = new Array, this._events = new Array, this.blendingSpeed = .01, this._ranges = {}, this._coreAnimation = null, this.targetPropertyPath = rY.split("."), this.dataType = FY, this.YA = void 0 === AY ? mY.ANIMATIONLOOPMODE_CYCLE : AY, this.uniqueId = mY._UniqueIdGenerator++
+      }
+      toString(YY) {
+        let rY = "Name: " + this.name + ", property: " + this.targetProperty;
+        if (rY += ", datatype: " + ["Float", "xy", "Quaternion", "Matrix", "Color3", "Vector2"][this.dataType], rY += ", nKeys: " + (this._keys ? this._keys.length : "none"), rY += ", nRanges: " + (this._ranges ? Object.keys(this._ranges).length : "none"), YY) {
+          rY += ", Ranges: {";
+          let YY = !0;
+          for (const DY in this._ranges) YY || (rY += ", "), YY = !1, rY += DY;
+          rY += "}"
         }
-      },
-      tB = (0, VB.memo)((function(BB) {
-        var TB, dB, lB, kB, LB, tB, fB;
-        let {
-          popOutDocs: sB,
-          hideDocs: MB,
-          tutorialEnabled: zB
-        } = BB;
-        const [wB, UB] = (0, VB.useState)(yB.d[0].id), FB = (0, VB.useRef)(null), KB = (0, VB.useRef)(null), [rB, IB] = (0, VB.useState)(""), [cB, SB] = (0, VB.useState)(0), [PB, QB] = (0, VB.useState)(null), [RB, aB] = (0, VB.useState)(!1), [ZB, XB] = (0, VB.useState)(160), WB = (0, VB.useRef)(!1), hB = (0, VB.useRef)(null), CB = (0, mB.l)("docsOverview"), [GB, qB] = (0, VB.useState)(0), xB = Object.values(NB).some((BB => (null === BB || void 0 === BB ? void 0 : BB.tabStep) === CB));
-        (0, VB.useEffect)((() => {
-          xB && rB.length > 0 && (IB(""), qB((BB => BB + 1)))
-        }), [xB, rB]);
-        const jB = rB.length > 0,
-          AB = (0, VB.useMemo)((() => function(BB) {
-            if (!BB) return [];
-            const TB = BB.toLowerCase(),
-              dB = [];
-            for (const VB of yB.d) {
-              const BB = VB.content.toLowerCase();
-              let yB = 0,
-                pB = -1,
-                lB = 0,
-                JB = BB.indexOf(TB, lB);
-              for (; - 1 !== JB;) - 1 === pB && (pB = JB), yB++, lB = JB + TB.length, JB = BB.indexOf(TB, lB);
-              if (0 === yB) continue;
-              const YB = Math.max(0, pB - 40),
-                gB = Math.min(VB.content.length, pB + TB.length + 40),
-                oB = (YB > 0 ? "..." : "") + VB.content.slice(YB, gB).replace(/\n/g, " ") + (gB < VB.content.length ? "..." : "");
-              dB.push({
-                doc: VB,
-                matchCount: yB,
-                snippet: oB
-              })
+        return rY
+      }
+      addEvent(YY) {
+        this._events.push(YY), this._events.sort(((YY, rY) => YY.frame - rY.frame))
+      }
+      removeEvents(YY) {
+        for (let rY = 0; rY < this._events.length; rY++) this._events[rY].frame === YY && (this._events.splice(rY, 1), rY--)
+      }
+      getEvents() {
+        return this._events
+      }
+      createRange(YY, rY, DY) {
+        this._ranges[YY] || (this._ranges[YY] = new RY.c(YY, rY, DY))
+      }
+      deleteRange(YY) {
+        let rY = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        const DY = this._ranges[YY];
+        if (DY) {
+          if (rY) {
+            const YY = DY.from,
+              rY = DY.to;
+            for (let DY = this._keys.length - 1; DY >= 0; DY--) this._keys[DY].frame >= YY && this._keys[DY].frame <= rY && this._keys.splice(DY, 1)
+          }
+          this._ranges[YY] = null
+        }
+      }
+      getRange(YY) {
+        return this._ranges[YY]
+      }
+      getKeys() {
+        return this._keys
+      }
+      getHighestFrame() {
+        let YY = 0;
+        for (let rY = 0, DY = this._keys.length; rY < DY; rY++) YY < this._keys[rY].frame && (YY = this._keys[rY].frame);
+        return YY
+      }
+      getEasingFunction() {
+        return this._easingFunction
+      }
+      setEasingFunction(YY) {
+        this._easingFunction = YY
+      }
+      floatInterpolateFunction(YY, rY, DY) {
+        return (0, IY.Lerp)(YY, rY, DY)
+      }
+      floatInterpolateFunctionWithTangents(YY, rY, DY, FY, AY) {
+        return (0, IY.Hermite)(YY, rY, DY, FY, AY)
+      }
+      quaternionInterpolateFunction(YY, rY, DY) {
+        return FY.g.Slerp(YY, rY, DY)
+      }
+      quaternionInterpolateFunctionWithTangents(YY, rY, DY, AY, IY) {
+        return FY.g.Hermite(YY, rY, DY, AY, IY).normalize()
+      }
+      vector3InterpolateFunction(YY, rY, DY) {
+        return FY.r.Lerp(YY, rY, DY)
+      }
+      vector3InterpolateFunctionWithTangents(YY, rY, DY, AY, IY) {
+        return FY.r.Hermite(YY, rY, DY, AY, IY)
+      }
+      vector2InterpolateFunction(YY, rY, DY) {
+        return FY.q.Lerp(YY, rY, DY)
+      }
+      vector2InterpolateFunctionWithTangents(YY, rY, DY, AY, IY) {
+        return FY.q.Hermite(YY, rY, DY, AY, IY)
+      }
+      sizeInterpolateFunction(YY, rY, DY) {
+        return gY.e.Lerp(YY, rY, DY)
+      }
+      color3InterpolateFunction(YY, rY, DY) {
+        return AY.c.Lerp(YY, rY, DY)
+      }
+      color3InterpolateFunctionWithTangents(YY, rY, DY, FY, IY) {
+        return AY.c.Hermite(YY, rY, DY, FY, IY)
+      }
+      color4InterpolateFunction(YY, rY, DY) {
+        return AY.d.Lerp(YY, rY, DY)
+      }
+      color4InterpolateFunctionWithTangents(YY, rY, DY, FY, IY) {
+        return AY.d.Hermite(YY, rY, DY, FY, IY)
+      }
+      _getKeyValue(YY) {
+        return "function" === typeof YY ? YY() : YY
+      }
+      evaluate(YY) {
+        return EY.key = 0, this._interpolate(YY, EY)
+      }
+      _interpolate(YY, rY) {
+        let DY = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        if (rY.YA === mY.ANIMATIONLOOPMODE_CONSTANT && rY.repeatCount > 0) return rY.highLimitValue.clone ? rY.highLimitValue.clone() : rY.highLimitValue;
+        const FY = this._keys;
+        let AY;
+        if (this._coreAnimation) AY = this._coreAnimation._key;
+        else {
+          const IY = FY.length;
+          for (AY = rY.key; AY >= 0 && YY < FY[AY].frame;) --AY;
+          for (; AY + 1 <= IY - 1 && YY >= FY[AY + 1].frame;) ++AY;
+          if (rY.key = AY, AY < 0) return DY ? void 0 : this._getKeyValue(FY[0].value);
+          if (AY + 1 > IY - 1) return DY ? void 0 : this._getKeyValue(FY[IY - 1].value);
+          this._key = AY
+        }
+        const IY = FY[AY],
+          RY = FY[AY + 1];
+        if (DY && (YY === IY.frame || YY === RY.frame)) return;
+        const OY = this._getKeyValue(IY.value),
+          gY = this._getKeyValue(RY.value);
+        if (1 === IY.interpolation) return RY.frame > YY ? OY : gY;
+        const aY = void 0 !== IY.outTangent && void 0 !== RY.inTangent,
+          vY = RY.frame - IY.frame;
+        let uY = (YY - IY.frame) / vY;
+        const EY = IY.easingFunction || this.getEasingFunction();
+        switch (EY && (uY = EY.ease(uY)), this.dataType) {
+          case mY.ANIMATIONTYPE_FLOAT: {
+            const YY = aY ? this.floatInterpolateFunctionWithTangents(OY, IY.outTangent * vY, gY, RY.inTangent * vY, uY) : this.floatInterpolateFunction(OY, gY, uY);
+            switch (rY.YA) {
+              case mY.ANIMATIONLOOPMODE_CYCLE:
+              case mY.ANIMATIONLOOPMODE_CONSTANT:
+              case mY.ANIMATIONLOOPMODE_YOYO:
+                return YY;
+              case mY.ANIMATIONLOOPMODE_RELATIVE:
+              case mY.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return (rY.offsetValue ?? 0) * rY.repeatCount + YY
             }
-            return dB.sort(((BB, TB) => TB.matchCount - BB.matchCount)), dB
-          }(rB)), [rB]),
-          bB = jB ? null !== (TB = null !== (dB = null === (lB = AB.find((BB => BB.doc.id === wB))) || void 0 === lB ? void 0 : lB.doc) && void 0 !== dB ? dB : null === (kB = AB[0]) || void 0 === kB ? void 0 : kB.doc) && void 0 !== TB ? TB : null : null !== (LB = yB.d.find((BB => BB.id === wB))) && void 0 !== LB ? LB : yB.d[0],
-          {
-            t: nB
-          } = (0, gB.z)(),
-          eB = nB("codeEditor:copySnippet"),
-          BT = (0, VB.useMemo)((() => bB ? function(BB, TB, dB, VB) {
-            let yB = TB;
-            yB = yB.replace(/\r\n/g, "\n");
-            const pB = [];
-            yB = yB.replace(/```(\w*)\n([\s\S]*?)```/g, ((BB, TB, VB) => {
-              const yB = pB.length;
-              let lB = DB(VB);
-              try {
-                lB = oB.c.highlight(VB.trimEnd(), {
-                  language: TB
-                }).value
-              } catch (JB) {
-                console.warn("Could not highlight documentation code block", JB)
-              }
-              return pB.push(`<div class="DocsCodeBlockRow"><pre class="DocsCodeBlock" data-lang="${TB}"><code>${lB}</code></pre>${uB(dB,"DocsCopyBlock")}</div>`), `\0PLACEHOLDER_${yB}\0`
-            })), yB = yB.replace(/(`{1,2})([^\n]+?)\1(?!`)/g, ((TB, VB, yB) => {
-              const lB = pB.length,
-                JB = 2 === VB.length ? yB.replace(/^ (.*) $/, "$1") : yB;
-              let YB = DB(JB);
-              try {
-                "apiReference" !== BB && "callbacks" !== BB || (YB = oB.c.highlight(JB.trimEnd().replaceAll("\\|", "|"), {
-                  language: "typescript"
-                }).value)
-              } catch (gB) {
-                console.warn("Could not highlight documentation snippet", gB)
-              }
-              return pB.push(`<span class="DocsInlineCodeRow"><code class="DocsInlineCode">${YB}</code>${uB(dB,"DocsCopyInline")}</span>`), `\0PLACEHOLDER_${lB}\0`
-            })), yB = DB(yB), yB = yB.replace(/^#### (.+)$/gm, '<h4 class="DocsH4">$1</h4>'), yB = yB.replace(/^### (.+)$/gm, '<h3 class="DocsH3">$1</h3>'), yB = yB.replace(/^## (.+)$/gm, '<h2 class="DocsH2">$1</h2>'), yB = yB.replace(/^# (.+)$/gm, '<h1 class="DocsH1">$1</h1>'), yB = yB.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>"), yB = yB.replace(/\[([^\]]+)\]\(([^)]+)\)/g, ((BB, TB, dB) => dB.startsWith("#") ? `<a class="DocsAnchor" data-id="${dB}">${TB}</a>` : `<a href="${dB}" target="_blank" rel="noopener noreferrer">${TB}</a>`)), yB = yB.replace(/^(\|.+\|)\n(\|[\s:\-|]+\|)\n((?:\|.+\|\s*\r?\n?)*)/gm, ((BB, TB, dB, VB) => `<table class="DocsTable"><thead><tr>${TB.split("|").slice(1,-1).map((BB=>`<th>${BB.trim()}</th>`)).join("")}</tr></thead><tbody>${VB.trim().split("\n").map((BB=>`<tr>${BB.split("|").slice(1,-1).map((BB=>`<td>${BB.trim()}</td>`)).join("")}</tr>`)).join("")}</tbody></table>`)), yB = yB.replace(/(?:^[ \t]*([*-])[ \t]+.+(?:\n|$))+/gm, ((BB, TB) => function(BB, TB) {
-              const dB = "*" === TB,
-                VB = [];
-              for (const JB of BB.split("\n")) {
-                const BB = JB.match(/^([ \t]*)(?:[*-])[ \t]+(.+)$/);
-                BB && VB.push({
-                  indent: BB[1].replace(/\t/g, "  ").length,
-                  content: BB[2]
-                })
-              }
-              let yB = "";
-              const pB = [],
-                lB = dB ? "ol" : "ul";
-              for (const {
-                  indent: JB,
-                  content: YB
-                }
-                of VB) {
-                for (; pB.length > 0 && JB < pB[pB.length - 1];) yB += `</${lB}></li>`, pB.pop();
-                (0 === pB.length || JB > pB[pB.length - 1]) && (pB.length > 0 && (yB = yB.replace(/<\/li>$/, "")), yB += `<${lB} class="DocsList">`, pB.push(JB)), yB += `<li class="DocsListItem">${YB}</li>`
-              }
-              for (; pB.length > 0;) yB += `</${lB}>`, pB.pop(), pB.length > 0 && (yB += "</li>");
-              return yB
-            }(BB, TB))), yB = yB.replace(/\n{2,}/g, "\n<br/>\n");
-            for (let lB = 0; lB < pB.length; lB++) yB = yB.replace(`\0PLACEHOLDER_${lB}\0`, pB[lB]);
-            if (VB) {
-              const BB = DB(VB).replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
-                TB = new RegExp(BB, "gi");
-              yB = yB.replace(/([^<>]+)(?=<|$)/g, (BB => BB.replace(TB, (BB => `<mark class="DocsHighlight">${BB}</mark>`))))
+            break
+          }
+          case mY.ANIMATIONTYPE_QUATERNION: {
+            const YY = aY ? this.quaternionInterpolateFunctionWithTangents(OY, IY.outTangent.scale(vY), gY, RY.inTangent.scale(vY), uY) : this.quaternionInterpolateFunction(OY, gY, uY);
+            switch (rY.YA) {
+              case mY.ANIMATIONLOOPMODE_CYCLE:
+              case mY.ANIMATIONLOOPMODE_CONSTANT:
+              case mY.ANIMATIONLOOPMODE_YOYO:
+                return YY;
+              case mY.ANIMATIONLOOPMODE_RELATIVE:
+              case mY.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return YY.addInPlace((rY.offsetValue || sY).scale(rY.repeatCount))
             }
-            return yB
-          }(bB.id, bB.content, eB, jB ? rB : void 0) : ""), [bB, eB, jB, rB]);
-        (0, VB.useEffect)((() => {
-          const BB = KB.current;
-          if (!BB) return;
-          const TB = BB => {
-            var TB, dB, VB, yB, pB;
-            const lB = null === (TB = (dB = BB.target).closest) || void 0 === TB ? void 0 : TB.call(dB, ".DocsCopyButton");
-            if (!lB) return;
-            BB.preventDefault(), BB.stopPropagation();
-            const JB = null !== (VB = null === (yB = lB.parentElement) || void 0 === yB || null === (pB = yB.querySelector("code")) || void 0 === pB ? void 0 : pB.textContent) && void 0 !== VB ? VB : "";
-            navigator.clipboard.writeText(JB.trimEnd()).then((() => {
-              lB.classList.add("Copied"), setTimeout((() => {
-                lB.classList.remove("Copied")
-              }), 1500)
-            })).catch((BB => {
-              console.warn("Could not copy documentation code", BB)
-            }))
-          };
-          return BB.addEventListener("click", TB, !0), () => {
-            BB.removeEventListener("click", TB, !0)
+            return YY
           }
-        }), []);
-        const [TT, dT] = (0, VB.useState)(0);
-        (0, VB.useEffect)((() => {
-          if (!jB || !KB.current) return void dT(0);
-          const BB = KB.current.querySelectorAll(".DocsHighlight").length;
-          dT(BB)
-        }), [jB, BT]), (0, VB.useEffect)((() => {
-          if (null === PB || !KB.current) return;
-          QB(null);
-          const BB = KB.current.querySelectorAll(".DocsHighlight");
-          if (0 === BB.length) return;
-          const TB = Math.min(PB, BB.length - 1);
-          SB(TB), BB.forEach((BB => {
-            BB.classList.remove("DocsHighlightActive")
-          })), BB[TB].classList.add("DocsHighlightActive"), BB[TB].scrollIntoView({
-            block: "center",
-            behavior: "smooth"
-          })
-        }), [PB, BT]);
-        const VT = (0, VB.useCallback)((BB => {
-            if (!KB.current) return;
-            const TB = KB.current.querySelectorAll(".DocsHighlight");
-            if (0 === TB.length) return;
-            const dB = (cB + BB + TB.length) % TB.length;
-            SB(dB), QB(dB)
-          }), [cB]),
-          yT = (0, VB.useCallback)((BB => {
-            var TB;
-            const dB = null === (TB = NB[BB]) || void 0 === TB ? void 0 : TB.tabStep;
-            dB && dB === CB && (0, iB.g)(dB), BB !== wB ? (aB(!0), UB(BB), SB(0), KB.current && (KB.current.scrollTop = 0), jB && QB(0)) : aB(!RB)
-          }), [jB, wB, RB, CB]),
-          pT = (0, VB.useCallback)((BB => {
-            var TB;
-            const dB = Array.from((null === (TB = KB.current) || void 0 === TB ? void 0 : TB.querySelectorAll(".DocsH2, .DocsH3")) || []).find((TB => {
-              var dB;
-              return null === (dB = TB.textContent) || void 0 === dB ? void 0 : dB.includes(BB)
-            }));
-            dB && dB.scrollIntoView({
-              block: "start",
-              behavior: "smooth"
-            })
-          }), [KB]),
-          lT = (0, VB.useCallback)((BB => {
-            var TB, dB;
-            const VB = null !== (TB = null === (dB = FB.current) || void 0 === dB ? void 0 : dB.clientWidth) && void 0 !== TB ? TB : window.innerWidth,
-              yB = Math.max(120, VB - 200);
-            return Math.min(Math.max(BB, 120), yB)
-          }), []),
-          JT = (0, VB.useCallback)((() => {
-            var BB;
-            WB.current && (WB.current = !1, null === (BB = FB.current) || void 0 === BB || BB.classList.remove("DocsSidebarResizing"))
-          }), []),
-          YT = (0, VB.useCallback)((BB => {
-            var TB;
-            BB.preventDefault(), WB.current = !0, null === (TB = FB.current) || void 0 === TB || TB.classList.add("DocsSidebarResizing")
-          }), []);
-        (0, VB.useEffect)((() => {
-          const BB = FB.current,
-            TB = BB => {
-              if (!WB.current || !FB.current) return;
-              const TB = FB.current.getBoundingClientRect().left;
-              XB(lT(BB.clientX - TB))
-            };
-          return window.addEventListener("mousemove", TB), window.addEventListener("mouseup", JT), () => {
-            window.removeEventListener("mousemove", TB), window.removeEventListener("mouseup", JT), null === BB || void 0 === BB || BB.classList.remove("DocsSidebarResizing")
+          case mY.ANIMATIONTYPE_VECTOR3: {
+            const YY = aY ? this.vector3InterpolateFunctionWithTangents(OY, IY.outTangent.scale(vY), gY, RY.inTangent.scale(vY), uY) : this.vector3InterpolateFunction(OY, gY, uY);
+            switch (rY.YA) {
+              case mY.ANIMATIONLOOPMODE_CYCLE:
+              case mY.ANIMATIONLOOPMODE_CONSTANT:
+              case mY.ANIMATIONLOOPMODE_YOYO:
+                return YY;
+              case mY.ANIMATIONLOOPMODE_RELATIVE:
+              case mY.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return YY.add((rY.offsetValue || iY).scale(rY.repeatCount))
+            }
+            break
           }
-        }), [lT, JT]);
-        const gT = (0, VB.useCallback)((BB => {
-          if (BB) {
-            const [TB, dB] = BB.slice(1).split("-");
-            dB && (hB.current = {
-              docId: TB,
-              subsection: dB
-            }), TB && yT(TB)
+          case mY.ANIMATIONTYPE_VECTOR2: {
+            const YY = aY ? this.vector2InterpolateFunctionWithTangents(OY, IY.outTangent.scale(vY), gY, RY.inTangent.scale(vY), uY) : this.vector2InterpolateFunction(OY, gY, uY);
+            switch (rY.YA) {
+              case mY.ANIMATIONLOOPMODE_CYCLE:
+              case mY.ANIMATIONLOOPMODE_CONSTANT:
+              case mY.ANIMATIONLOOPMODE_YOYO:
+                return YY;
+              case mY.ANIMATIONLOOPMODE_RELATIVE:
+              case mY.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return YY.add((rY.offsetValue || yY).scale(rY.repeatCount))
+            }
+            break
           }
-        }), [yT]);
-        (0, VB.useEffect)((() => {
-          const BB = hB.current;
-          BB && wB === BB.docId && (setTimeout((() => {
-            pT(BB.subsection)
-          }), 0), hB.current = null)
-        })), (0, VB.useEffect)((() => {
-          if (!KB.current) return;
-          KB.current.querySelectorAll("a.DocsAnchor").forEach((BB => {
-            BB.addEventListener("click", (TB => {
-              TB.preventDefault(), gT(BB.dataset.id)
-            }))
-          }))
-        }), [wB, gT]);
-        const oT = Object.values(NB).find((BB => (null === BB || void 0 === BB ? void 0 : BB.pageStep) === CB));
-        return (0, OB.jsx)(mB.h, {
-          tutorial: "docsOverview",
-          step: null !== (tB = null === oT || void 0 === oT ? void 0 : oT.pageStep) && void 0 !== tB ? tB : "docsPanel",
-          text: nB(null !== (fB = null === oT || void 0 === oT ? void 0 : oT.pageText) && void 0 !== fB ? fB : "codeEditor:tutorialDocsPanel"),
-          enabled: zB,
-          placement: "left",
-          onPrevious: oT ? void 0 : MB,
-          children: (0, OB.jsxs)("div", {
-            className: "DocsPanel",
-            ref: FB,
-            children: [(0, OB.jsxs)("div", {
-              className: "DocsSidebar",
-              style: {
-                width: ZB,
-                minWidth: ZB,
-                maxWidth: ZB
-              },
-              children: [(0, OB.jsx)(pB.e, {
-                className: "DocsSearch",
-                placeholderText: "\ud83d\udd0e Search docs...",
-                onValueChange: BB => {
-                  IB(BB), SB(0), QB(0)
-                }
-              }, GB), (0, OB.jsx)("div", {
-                className: "DocsNavList",
-                children: jB ? AB.map((BB => (0, OB.jsxs)("div", {
-                  className: JB()("DocsNavItem", "SearchResult", {
-                    Active: BB.doc.id === (null === bB || void 0 === bB ? void 0 : bB.id)
-                  }),
-                  "data-pad-focusable": !0,
-                  onClick: () => {
-                    yT(BB.doc.id)
-                  },
-                  children: [(0, OB.jsxs)("div", {
-                    className: "SearchResultTitle",
-                    children: [BB.doc.title, (0, OB.jsx)("span", {
-                      className: "SearchResultCount",
-                      children: BB.matchCount
-                    })]
-                  }), (0, OB.jsx)("div", {
-                    className: "SearchResultSnippet",
-                    children: HB(BB.snippet, rB)
-                  })]
-                }, BB.doc.id))) : yB.d.map((BB => {
-                  const TB = (0, OB.jsxs)("div", {
-                      className: JB()("DocsNavItem", {
-                        Active: BB.id === (null === bB || void 0 === bB ? void 0 : bB.id)
-                      }),
-                      "data-pad-focusable": !0,
-                      onClick: () => {
-                        yT(BB.id)
-                      },
-                      children: [(0, OB.jsx)("span", {
-                        className: "DocsNavItemTitle",
-                        children: BB.title
-                      }), BB.subsections && BB.id === (null === bB || void 0 === bB ? void 0 : bB.id) && RB && (0, OB.jsx)("span", {
-                        className: "DocsNavItemSubsectionArrow",
-                        children: (0, OB.jsx)(EB.e, {
-                          name: "angle-down"
-                        })
-                      }), BB.subsections && (BB.id !== (null === bB || void 0 === bB ? void 0 : bB.id) || !RB) && (0, OB.jsx)("span", {
-                        className: "DocsNavItemSubsectionArrow",
-                        children: (0, OB.jsx)(EB.e, {
-                          name: "angle-up"
-                        })
-                      })]
-                    }),
-                    dB = NB[BB.id];
-                  return (0, OB.jsxs)(VB.Fragment, {
-                    children: [dB && (0, OB.jsx)(mB.h, {
-                      tutorial: "docsOverview",
-                      step: dB.tabStep,
-                      text: nB(dB.tabText),
-                      enabled: zB,
-                      placement: "left",
-                      waitForClick: !0,
-                      children: TB
-                    }), !dB && TB, RB && BB.subsections && BB.id === (null === bB || void 0 === bB ? void 0 : bB.id) && BB.subsections.map((BB => (0, OB.jsx)("div", {
-                      className: "DocsNavItem DocsSubsection",
-                      "data-pad-focusable": !0,
-                      onClick: () => {
-                        pT(BB)
-                      },
-                      children: BB
-                    }, BB)))]
-                  }, BB.id)
-                }))
-              }), (0, OB.jsx)("div", {
-                className: "DocsSidebarButtonContainer",
-                children: (0, OB.jsx)(vB.h, {
-                  tooltipInner: nB("codeEditor:popOutDocsTooltip"),
-                  placement: "top",
-                  children: (0, OB.jsx)(YB.d, {
-                    className: "DocsSidebarButton",
-                    onClick: sB,
-                    children: nB("codeEditor:popOutDocs")
-                  })
-                })
-              })]
-            }), (0, OB.jsx)("div", {
-              className: "DocsSidebarResizeHandle",
-              onMouseDown: YT
-            }), (0, OB.jsxs)("div", {
-              className: "DocsContentWrapper",
-              children: [jB && TT > 0 && (0, OB.jsxs)("div", {
-                className: "DocsMatchNav",
-                children: [(0, OB.jsxs)("span", {
-                  className: "DocsMatchNavLabel",
-                  children: [cB + 1, " / ", TT]
-                }), (0, OB.jsx)("button", {
-                  className: "DocsMatchNavButton",
-                  onClick: () => {
-                    VT(-1)
-                  },
-                  children: "\u25b2"
-                }), (0, OB.jsx)("button", {
-                  className: "DocsMatchNavButton",
-                  onClick: () => {
-                    VT(1)
-                  },
-                  children: "\u25bc"
-                })]
-              }), (0, OB.jsx)("div", {
-                className: "DocsContent",
-                ref: KB,
-                dangerouslySetInnerHTML: {
-                  __html: BT
-                }
-              })]
-            })]
-          })
-        })
+          case mY.ANIMATIONTYPE_SIZE:
+            switch (rY.YA) {
+              case mY.ANIMATIONLOOPMODE_CYCLE:
+              case mY.ANIMATIONLOOPMODE_CONSTANT:
+              case mY.ANIMATIONLOOPMODE_YOYO:
+                return this.sizeInterpolateFunction(OY, gY, uY);
+              case mY.ANIMATIONLOOPMODE_RELATIVE:
+              case mY.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return this.sizeInterpolateFunction(OY, gY, uY).add((rY.offsetValue || QY).scale(rY.repeatCount))
+            }
+            break;
+          case mY.ANIMATIONTYPE_COLOR3: {
+            const YY = aY ? this.color3InterpolateFunctionWithTangents(OY, IY.outTangent.scale(vY), gY, RY.inTangent.scale(vY), uY) : this.color3InterpolateFunction(OY, gY, uY);
+            switch (rY.YA) {
+              case mY.ANIMATIONLOOPMODE_CYCLE:
+              case mY.ANIMATIONLOOPMODE_CONSTANT:
+              case mY.ANIMATIONLOOPMODE_YOYO:
+                return YY;
+              case mY.ANIMATIONLOOPMODE_RELATIVE:
+              case mY.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return YY.add((rY.offsetValue || oY).scale(rY.repeatCount))
+            }
+            break
+          }
+          case mY.ANIMATIONTYPE_COLOR4: {
+            const YY = aY ? this.color4InterpolateFunctionWithTangents(OY, IY.outTangent.scale(vY), gY, RY.inTangent.scale(vY), uY) : this.color4InterpolateFunction(OY, gY, uY);
+            switch (rY.YA) {
+              case mY.ANIMATIONLOOPMODE_CYCLE:
+              case mY.ANIMATIONLOOPMODE_CONSTANT:
+              case mY.ANIMATIONLOOPMODE_YOYO:
+                return YY;
+              case mY.ANIMATIONLOOPMODE_RELATIVE:
+              case mY.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return YY.add((rY.offsetValue || WY).scale(rY.repeatCount))
+            }
+            break
+          }
+          case mY.ANIMATIONTYPE_MATRIX:
+            switch (rY.YA) {
+              case mY.ANIMATIONLOOPMODE_CYCLE:
+              case mY.ANIMATIONLOOPMODE_CONSTANT:
+              case mY.ANIMATIONLOOPMODE_YOYO:
+                return mY.AllowMatricesInterpolation ? this.matrixInterpolateFunction(OY, gY, uY, rY.workValue) : OY;
+              case mY.ANIMATIONLOOPMODE_RELATIVE:
+              case mY.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return OY
+            }
+        }
+        return 0
+      }
+      matrixInterpolateFunction(YY, rY, DY, AY) {
+        return mY.AllowMatrixDecomposeForInterpolation ? AY ? (FY.e.DecomposeLerpToRef(YY, rY, DY, AY), AY) : FY.e.DecomposeLerp(YY, rY, DY) : AY ? (FY.e.LerpToRef(YY, rY, DY, AY), AY) : FY.e.Lerp(YY, rY, DY)
+      }
+      clone() {
+        let YY = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const rY = new mY(this.name, this.targetPropertyPath.join("."), this.framePerSecond, this.dataType, this.YA);
+        if (rY.enableBlending = this.enableBlending, rY.blendingSpeed = this.blendingSpeed, this._keys && rY.setKeys(this._keys, !1, YY), this._ranges) {
+          rY._ranges = {};
+          for (const YY in this._ranges) {
+            const DY = this._ranges[YY];
+            DY && (rY._ranges[YY] = DY.clone())
+          }
+        }
+        return rY
+      }
+      setKeys(YY) {
+        let rY = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        if (arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) this._keys = YY;
+        else if (this._keys = YY.slice(0), rY)
+          for (let DY = 0; DY < this._keys.length; DY++) {
+            const YY = this._keys[DY];
+            this._keys[DY] = {
+              frame: YY.frame,
+              value: YY.value.clone ? YY.value.clone() : YY.value,
+              inTangent: YY.inTangent && YY.inTangent.clone ? YY.inTangent.clone() : YY.inTangent,
+              outTangent: YY.outTangent && YY.outTangent.clone ? YY.outTangent.clone() : YY.outTangent,
+              interpolation: YY.interpolation,
+              lockedTangent: YY.lockedTangent,
+              easingFunction: YY.easingFunction
+            }
+          }
+      }
+      createKeyForFrame(YY) {
+        EY.key = 0;
+        const rY = this._interpolate(YY, EY, !0);
+        if (!rY) return this._keys[EY.key].frame === YY ? EY.key : EY.key + 1;
+        const DY = {
+          frame: YY,
+          value: rY.clone ? rY.clone() : rY
+        };
+        return this._keys.splice(EY.key + 1, 0, DY), EY.key + 1
+      }
+      serialize() {
+        const YY = {};
+        YY.name = this.name, YY.property = this.targetProperty, YY.framePerSecond = this.framePerSecond, YY.dataType = this.dataType, YY.loopBehavior = this.YA, YY.enableBlending = this.enableBlending, YY.blendingSpeed = this.blendingSpeed;
+        const rY = this.dataType;
+        YY.keys = [];
+        const DY = this.getKeys();
+        for (let FY = 0; FY < DY.length; FY++) {
+          const AY = DY[FY],
+            IY = {};
+          switch (IY.frame = AY.frame, rY) {
+            case mY.ANIMATIONTYPE_FLOAT:
+              IY.values = [AY.value], void 0 !== AY.inTangent && IY.values.push(AY.inTangent), void 0 !== AY.outTangent && (void 0 === AY.inTangent && IY.values.push(void 0), IY.values.push(AY.outTangent)), void 0 !== AY.interpolation && (void 0 === AY.inTangent && IY.values.push(void 0), void 0 === AY.outTangent && IY.values.push(void 0), IY.values.push(AY.interpolation));
+              break;
+            case mY.ANIMATIONTYPE_QUATERNION:
+            case mY.ANIMATIONTYPE_MATRIX:
+            case mY.ANIMATIONTYPE_VECTOR3:
+            case mY.ANIMATIONTYPE_COLOR3:
+            case mY.ANIMATIONTYPE_COLOR4:
+              IY.values = AY.value.VDY(), void 0 != AY.inTangent && IY.values.push(AY.inTangent.VDY()), void 0 != AY.outTangent && (void 0 === AY.inTangent && IY.values.push(void 0), IY.values.push(AY.outTangent.VDY())), void 0 !== AY.interpolation && (void 0 === AY.inTangent && IY.values.push(void 0), void 0 === AY.outTangent && IY.values.push(void 0), IY.values.push(AY.interpolation))
+          }
+          YY.keys.push(IY)
+        }
+        YY.ws = [];
+        for (const FY in this._ranges) {
+          const rY = this._ranges[FY];
+          if (!rY) continue;
+          const DY = {};
+          DY.name = FY, DY.from = rY.from, DY.to = rY.to, YY.ws.push(DY)
+        }
+        return YY
+      }
+      static _UniversalLerp(YY, rY, DY) {
+        const FY = YY.constructor;
+        return FY.Lerp ? FY.Lerp(YY, rY, DY) : FY.Slerp ? FY.Slerp(YY, rY, DY) : YY.toFixed ? YY * (1 - DY) + DY * rY : rY
+      }
+    }
+
+    function VY(YY, rY, DY) {
+      let AY;
+      AY = "object" === typeof rY ? rY : {
+        referenceFrame: rY ?? 0,
+        range: DY,
+        cloneOriginalAnimation: arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+        clonedAnimationName: arguments.length > 4 ? arguments[4] : void 0
+      };
+      let IY = YY;
+      AY.cloneOriginalAnimation && (IY = YY.clone(), IY.name = AY.clonedAnimationName || IY.name);
+      const RY = IY.getKeys();
+      if (!RY.length) return IY;
+      const OY = AY.referenceFrame && AY.referenceFrame >= 0 ? AY.referenceFrame : 0;
+      let gY = 0;
+      const aY = RY[0];
+      let vY = RY.length - 1;
+      const uY = RY[vY],
+        sY = {
+          referenceValue: aY.value,
+          referencePosition: FY.n.xy[0],
+          referenceQuaternion: FY.n.Quaternion[0],
+          referenceScaling: FY.n.xy[1],
+          keyPosition: FY.n.xy[2],
+          keyQuaternion: FY.n.Quaternion[1],
+          keyScaling: FY.n.xy[3]
+        };
+      let iY = aY.frame,
+        yY = uY.frame;
+      if (AY.range) {
+        const YY = IY.getRange(AY.range);
+        YY && (iY = YY.from, yY = YY.to)
+      } else iY = AY.fromFrame ?? iY, yY = AY.toFrame ?? yY;
+      iY !== aY.frame && (gY = IY.createKeyForFrame(iY)), yY !== uY.frame && (vY = IY.createKeyForFrame(yY));
+      const QY = IY.getKeys();
+      if (1 === QY.length) {
+        const YY = IY._getKeyValue(QY[0].value);
+        sY.referenceValue = YY.clone ? YY.clone() : YY
+      } else if (OY <= aY.frame) {
+        const YY = IY._getKeyValue(aY.value);
+        sY.referenceValue = YY.clone ? YY.clone() : YY
+      } else if (OY >= uY.frame) {
+        const YY = IY._getKeyValue(uY.value);
+        sY.referenceValue = YY.clone ? YY.clone() : YY
+      } else {
+        EY.key = 0;
+        const YY = IY._interpolate(OY, EY);
+        sY.referenceValue = YY.clone ? YY.clone() : YY
+      }
+      IY.dataType === mY.ANIMATIONTYPE_QUATERNION ? sY.referenceValue.normalize().conjugateInPlace() : IY.dataType === mY.ANIMATIONTYPE_MATRIX && (sY.referenceValue.decompose(sY.referenceScaling, sY.referenceQuaternion, sY.referencePosition), sY.referenceQuaternion.normalize().conjugateInPlace());
+      let oY = Number.MAX_VALUE;
+      const WY = AY.clipKeys ? [] : null;
+      for (let EY = gY; EY <= vY; EY++) {
+        let YY = QY[EY];
+        if ((WY || AY.cloneOriginalAnimation) && (YY = {
+            frame: YY.frame,
+            value: YY.value.clone ? YY.value.clone() : YY.value,
+            inTangent: YY.inTangent,
+            outTangent: YY.outTangent,
+            interpolation: YY.interpolation,
+            lockedTangent: YY.lockedTangent,
+            easingFunction: YY.easingFunction
+          }, WY && (oY === Number.MAX_VALUE && (oY = YY.frame), YY.frame -= oY, WY.push(YY))), !EY || IY.dataType === mY.ANIMATIONTYPE_FLOAT || YY.value !== aY.value) switch (IY.dataType) {
+          case mY.ANIMATIONTYPE_MATRIX:
+            YY.value.decompose(sY.keyScaling, sY.keyQuaternion, sY.keyPosition), sY.keyPosition.dDY(sY.referencePosition), sY.keyScaling.divideInPlace(sY.referenceScaling), sY.referenceQuaternion.multiplyToRef(sY.keyQuaternion, sY.keyQuaternion), FY.e.ComposeToRef(sY.keyScaling, sY.keyQuaternion, sY.keyPosition, YY.value);
+            break;
+          case mY.ANIMATIONTYPE_QUATERNION:
+            sY.referenceValue.multiplyToRef(YY.value, YY.value);
+            break;
+          case mY.ANIMATIONTYPE_VECTOR2:
+          case mY.ANIMATIONTYPE_VECTOR3:
+          case mY.ANIMATIONTYPE_COLOR3:
+          case mY.ANIMATIONTYPE_COLOR4:
+            YY.value.subtractToRef(sY.referenceValue, YY.value);
+            break;
+          case mY.ANIMATIONTYPE_SIZE:
+            YY.value.width -= sY.referenceValue.width, YY.value.height -= sY.referenceValue.height;
+            break;
+          default:
+            YY.value -= sY.referenceValue
+        }
+      }
+      return WY && IY.setKeys(WY, !0), IY
+    }
+
+    function SY(YY, rY, DY, FY) {
+      const AY = new mY(YY + "Animation", YY, DY, rY, mY.ANIMATIONLOOPMODE_CONSTANT);
+      return AY.setEasingFunction(FY), AY
+    }
+
+    function lY(YY, rY, DY, FY, AY, IY, RY, OY, gY, aY, vY) {
+      const uY = mY._PrepareAnimation(YY, DY, FY, AY, IY, RY, OY, gY);
+      return uY ? (rY.hT && (vY = rY.hT()), vY ? vY.beginDirectAnimation(rY, [uY], 0, AY, uY.YA !== mY.ANIMATIONLOOPMODE_CONSTANT, 1, aY) : null) : null
+    }
+
+    function TY(YY, rY, DY, FY, AY, IY, RY, OY, gY, aY, vY) {
+      const uY = mY._PrepareAnimation(YY, FY, AY, IY, RY, OY, gY, aY);
+      if (!uY) return null;
+      return rY.hT().beginDirectHierarchyAnimation(rY, DY, [uY], 0, IY, 1 === uY.YA, 1, vY)
+    }
+
+    function eY(YY, rY, DY, FY, AY, IY, RY, OY, gY, aY) {
+      const vY = mY._PrepareAnimation(YY, DY, FY, AY, IY, RY, OY, gY);
+      return vY ? (rY.animations.push(vY), rY.hT().beginAnimation(rY, 0, AY, 1 === vY.YA, 1, aY)) : null
+    }
+
+    function NY(YY, rY, DY, FY, AY, IY, RY) {
+      let OY = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+        gY = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8],
+        aY = arguments.length > 9 ? arguments[9] : void 0;
+      if (RY <= 0) return DY[YY] = rY, OY && OY(), null;
+      const vY = AY * (RY / 1e3);
+      IY.setKeys(aY ?? [{
+        frame: 0,
+        value: DY[YY].clone ? DY[YY].clone() : DY[YY]
+      }, {
+        frame: vY,
+        value: rY
+      }]), DY.animations || (DY.animations = []), DY.animations.push(IY);
+      return FY.beginAnimation(DY, 0, vY, !1, 1, OY ?? void 0, void 0, gY)
+    }
+
+    function BY(YY, rY) {
+      vY.b.AppendSerializedAnimations(YY, rY)
+    }
+
+    function cY(YY) {
+      const rY = new mY(YY.name, YY.property, YY.framePerSecond, YY.dataType, YY.loopBehavior),
+        DY = YY.dataType,
+        IY = [];
+      let RY, OY;
+      for (YY.enableBlending && (rY.enableBlending = YY.enableBlending), YY.blendingSpeed && (rY.blendingSpeed = YY.blendingSpeed), OY = 0; OY < YY.keys.length; OY++) {
+        const rY = YY.keys[OY];
+        let gY, aY, vY;
+        switch (DY) {
+          case mY.ANIMATIONTYPE_FLOAT:
+            RY = rY.values[0], rY.values.length >= 2 && (gY = rY.values[1]), rY.values.length >= 3 && (aY = rY.values[2]), rY.values.length >= 4 && (vY = rY.values[3]);
+            break;
+          case mY.ANIMATIONTYPE_QUATERNION:
+            if (RY = FY.g.FromArray(rY.values), rY.values.length >= 8) {
+              const YY = FY.g.FromArray(rY.values.slice(4, 8));
+              YY.equals(FY.g.Zero()) || (gY = YY)
+            }
+            if (rY.values.length >= 12) {
+              const YY = FY.g.FromArray(rY.values.slice(8, 12));
+              YY.equals(FY.g.Zero()) || (aY = YY)
+            }
+            rY.values.length >= 13 && (vY = rY.values[12]);
+            break;
+          case mY.ANIMATIONTYPE_MATRIX:
+            RY = FY.e.FromArray(rY.values), rY.values.length >= 17 && (vY = rY.values[16]);
+            break;
+          case mY.ANIMATIONTYPE_COLOR3:
+            RY = AY.c.FromArray(rY.values), rY.values[3] && (gY = AY.c.FromArray(rY.values[3])), rY.values[4] && (aY = AY.c.FromArray(rY.values[4])), rY.values[5] && (vY = rY.values[5]);
+            break;
+          case mY.ANIMATIONTYPE_COLOR4:
+            RY = AY.d.FromArray(rY.values), rY.values[4] && (gY = AY.d.FromArray(rY.values[4])), rY.values[5] && (aY = AY.d.FromArray(rY.values[5])), rY.values[6] && (vY = rY.values[6]);
+            break;
+          case mY.ANIMATIONTYPE_VECTOR3:
+          default:
+            RY = FY.r.FromArray(rY.values), rY.values[3] && (gY = FY.r.FromArray(rY.values[3])), rY.values[4] && (aY = FY.r.FromArray(rY.values[4])), rY.values[5] && (vY = rY.values[5])
+        }
+        const uY = {};
+        uY.frame = rY.frame, uY.value = RY, void 0 != gY && (uY.inTangent = gY), void 0 != aY && (uY.outTangent = aY), void 0 != vY && (uY.interpolation = vY), IY.push(uY)
+      }
+      if (rY.setKeys(IY), YY.ws)
+        for (OY = 0; OY < YY.ws.length; OY++) RY = YY.ws[OY], rY.createRange(RY.name, RY.from, RY.to);
+      return rY
+    }
+    async function KY(YY, rY) {
+      return await new Promise(((DY, FY) => {
+        const AY = new aY.d;
+        AY.addEventListener("readystatechange", (() => {
+          if (4 == AY.readyState)
+            if (200 == AY.status) {
+              let rY = JSON.parse(AY.responseText);
+              if (rY.animations && (rY = rY.animations), rY.length) {
+                const YY = [];
+                for (const DY of rY) YY.push(cY(DY));
+                DY(YY)
+              } else {
+                const FY = cY(rY);
+                YY && (FY.name = YY), DY(FY)
+              }
+            } else FY("Unable to load the animation")
+        })), AY.open("GET", rY), AY.send()
       }))
+    }
+    async function HY(YY) {
+      const rY = this?.SnippetUrl ?? mY.SnippetUrl;
+      return await new Promise(((DY, FY) => {
+        const AY = new aY.d;
+        AY.addEventListener("readystatechange", (() => {
+          if (4 == AY.readyState)
+            if (200 == AY.status) {
+              const rY = JSON.parse(JSON.parse(AY.responseText).jsonPayload);
+              if (rY.animations) {
+                const FY = JSON.parse(rY.animations),
+                  AY = [];
+                for (const rY of FY.animations) {
+                  const DY = cY(rY);
+                  DY.snippetId = YY, AY.push(DY)
+                }
+                DY(AY)
+              } else {
+                const FY = cY(JSON.parse(rY.animation));
+                FY.snippetId = YY, DY(FY)
+              }
+            } else FY("Unable to load the snippet " + YY)
+        })), AY.open("GET", rY + "/" + YY.replace(/#/g, "/")), AY.send()
+      }))
+    }
+    mY._UniqueIdGenerator = 0, mY.AllowMatricesInterpolation = !1, mY.AllowMatrixDecomposeForInterpolation = !0, mY.InheritOriginalValueFromActiveAnimations = !1, mY.SnippetUrl = "https://snippet.babylonjs.com", mY.ANIMATIONTYPE_FLOAT = 0, mY.ANIMATIONTYPE_VECTOR3 = 1, mY.ANIMATIONTYPE_QUATERNION = 2, mY.ANIMATIONTYPE_MATRIX = 3, mY.ANIMATIONTYPE_COLOR3 = 4, mY.ANIMATIONTYPE_COLOR4 = 7, mY.ANIMATIONTYPE_VECTOR2 = 5, mY.ANIMATIONTYPE_SIZE = 6, mY.ANIMATIONLOOPMODE_RELATIVE = 0, mY.ANIMATIONLOOPMODE_CYCLE = 1, mY.ANIMATIONLOOPMODE_CONSTANT = 2, mY.ANIMATIONLOOPMODE_YOYO = 4, mY.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT = 5;
+    const zY = HY;
+    let ZY = !1;
+
+    function CY() {
+      ZY || (ZY = !0, mY.Parse = cY, mY.ParseFromFileAsync = KY, mY.ParseFromSnippetAsync = HY, mY.CreateFromSnippetAsync = zY, mY.CreateAnimation = SY, mY.CreateAndStartAnimation = lY, mY.CreateAndStartHierarchyAnimation = TY, mY.CreateMergeAndStartAnimation = eY, mY.MakeAnimationAdditive = VY, mY.TransitionTo = NY, mY.AppendSerializedAnimations = BY, (0, uY.i)("BABYLON.Animation", mY), OY.b._AnimationRangeFactory = (YY, rY, DY) => new RY.c(YY, rY, DY))
+    }
+  },
+  40305: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => FY
+    });
+    class FY {
+      constructor(YY, rY, DY) {
+        this.name = YY, this.from = rY, this.to = DY
+      }
+      clone() {
+        return new FY(this.name, this.from, this.to)
+      }
+    }
+  },
+  40356: (YY, rY, DY) => {
+    DY.d(rY, {
+      e: () => FY.c,
+      i: () => FY.l
+    });
+    var FY = DY(39270);
+    (0, FY.f)()
+  },
+  40338: (YY, rY, DY) => {
+    DY.d(rY, {
+      d: () => FY.i
+    });
+    var FY = DY(39596);
+    (0, FY.e)()
+  },
+  40316: (YY, rY, DY) => {
+    DY.d(rY, {
+      c: () => FY.d
+    });
+    var FY = DY(39582);
+    (0, FY.f)()
+  },
+  40362: (YY, rY, DY) => {
+    DY.d(rY, {
+      d: () => FY.c
+    });
+    var FY = DY(39514);
+    (0, FY.g)()
+  },
+  40314: (YY, rY, DY) => {
+    DY.d(rY, {
+      e: () => FY.g
+    });
+    var FY = DY(39560);
+    (0, FY.c)()
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);

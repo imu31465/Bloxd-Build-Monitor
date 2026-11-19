@@ -1,113 +1,126 @@
-export const id = 51;
-export const ids = [51];
+export const id = 55;
+export const ids = [55];
 export const modules = {
-  39476: (BB, TB, dB) => {
-    dB.r(TB), dB.d(TB, {
-      prefetchWasmClient: () => mB,
-      startGamePageLoad: () => EB,
-      startJoinLoad: () => HB
+  39865: (YY, rY, DY) => {
+    DY.r(rY), DY.d(rY, {
+      prefetchWasmClient: () => lY,
+      startJoinLoad: () => EY,
+      startLoadAheadOfJoin: () => VY
     });
-    var VB = dB(3211),
-      yB = dB(35348),
-      pB = dB(35355),
-      lB = dB(39481),
-      JB = dB(586),
-      YB = dB(39499),
-      gB = dB(39524),
-      oB = dB(39527),
-      kB = dB(39550);
-    const LB = "[bloxd-wasm-client]";
-    let OB = null,
-      DB = null,
-      uB = !1;
+    var FY = DY(3312),
+      AY = DY(35750),
+      IY = DY(39871),
+      RY = DY(1113),
+      OY = DY(649),
+      gY = DY(39890),
+      aY = (DY(39906), DY(39916)),
+      vY = DY(39924),
+      uY = DY(39951);
+    const sY = "[bloxd-wasm-client]";
+    let iY = null,
+      yY = null,
+      QY = null,
+      oY = null,
+      WY = null;
 
-    function HB() {
-      return uB = !0, vB()
-    }
-
-    function EB() {
-      return vB()
-    }
-
-    function vB() {
-      return DB ??= (async () => {
+    function EY() {
+      return oY ??= (async () => {
         if ("undefined" === typeof WebAssembly) return;
-        const BB = await (0, oB.L)();
-        if (null === BB || (0, YB.C)(BB)) return;
-        if ("wasm" !== (0, JB.e)(window.location.search) && null !== (0, gB.e)(BB)) return;
-        const TB = await BB.load();
-        uB && "unloaded" === (0, VB.C)() && (0, oB.m)(), await (0, yB.h)(TB, lB.i, uB ? void 0 : {
-          priority: "low"
-        })
-      })().catch((BB => {
-        console.warn(`${LB} the early wasm load did not start: the boot loads the client itself`, BB)
-      })), DB
+        const YY = await (0, vY.L)();
+        if (null === YY) return;
+        if ((0, gY.l)(YY)) return (0, vY.P)("none"), void mY("none");
+        if ("wasm" !== (0, OY.f)(window.location.search) && null !== (0, aY.b)(YY, (0, aY.e)(YY, !0))) return (0, vY.P)("none"), void mY("none");
+        (0, vY.P)(YY.backend);
+        const rY = await YY.load();
+        mY(rY.name), "unloaded" === (0, FY.B)() && (0, vY.k)(), await (0, AY.h)(rY, IY.f) || console.warn(`${sY} the join's early wasm load failed: the boot loads the client itself`)
+      })().catch((YY => {
+        console.warn(`${sY} the join's early wasm load did not start: the boot loads the client itself`, YY)
+      })), oY
     }
 
-    function mB() {
+    function mY(YY) {
+      null !== WY && (0, RY.logClientMeasurement)("wasm_compile_ahead", {
+        hit: WY === YY ? 1 : 0
+      }, {
+        guessed: WY,
+        loaded: YY
+      })
+    }
+
+    function VY() {
+      let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      if (null === QY) {
+        var rY;
+        const DY = null !== (rY = YY.joinStarted) && void 0 !== rY ? rY : () => !1;
+        QY = Promise.all([lY(YY), SY(DY)]).then((() => {}))
+      }
+      return QY
+    }
+
+    function SY(YY) {
+      return yY ??= (async () => {
+        if ("undefined" === typeof WebAssembly) return;
+        const rY = await (0, vY.h)();
+        null === rY || YY() || "unloaded" !== (0, FY.B)() || (WY = rY.name, await (0, AY.b)([rY, IY.f], "low"))
+      })().catch((YY => {
+        console.warn(`${sY} the compile ahead of the join did not start: the join loads the client itself`, YY)
+      })), yY
+    }
+
+    function lY() {
       let {
-        joinStarted: BB = () => !1,
-        language: TB = ""
+        joinStarted: YY = () => !1,
+        language: rY = ""
       } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      return OB ??= async function(BB, TB) {
-        if (!await async function(BB) {
-            if (BB()) return !1;
-            let TB;
+      return iY ??= async function(YY, rY) {
+        if (!await async function(YY) {
+            if (YY()) return !1;
+            let rY;
             try {
-              var VB;
-              const BB = await fetch(`${dB.p}static/js/l9xvfg.wasmJoinFiles.json`, {
+              var FY;
+              const YY = await fetch(`${DY.p}static/js/zyyatq.wasmJoinFiles.json`, {
                 priority: "low",
                 cache: "no-cache"
               });
-              if (!BB.ok) throw new Error(`HTTP ${BB.status}`);
-              if (/\bno-store\b/.test(null !== (VB = BB.headers.get("Cache-Control")) && void 0 !== VB ? VB : "")) return !1;
-              const yB = await BB.json();
-              if (!Array.isArray(yB)) throw new Error("not a list");
-              TB = yB
-            } catch (pB) {
-              return console.warn(`${LB} the join's chunk list did not load: the join downloads its chunks itself`, pB), !BB()
+              if (!YY.ok) throw new Error(`HTTP ${YY.status}`);
+              if (/\bno-store\b/.test(null !== (FY = YY.headers.get("Cache-Control")) && void 0 !== FY ? FY : "")) return !1;
+              const AY = await YY.json();
+              if (!Array.isArray(AY)) throw new Error("not a list");
+              rY = AY
+            } catch (IY) {
+              return console.warn(`${sY} the join's chunk list did not load: the join downloads its chunks itself`, IY), !YY()
             }
-            if (BB()) return !1;
-            const yB = document.createElement("link").relList.supports("prefetch");
-            for (const lB of TB) {
-              const BB = `${dB.p}${lB}`;
-              yB ? iB(BB) : NB(BB).catch((TB => {
-                console.warn(`${LB} prefetching ${BB} failed`, TB)
+            if (YY()) return !1;
+            const AY = document.createElement("link").relList.supports("prefetch");
+            for (const RY of rY) {
+              const YY = `${DY.p}${RY}`;
+              AY ? TY(YY) : eY(YY).catch((rY => {
+                console.warn(`${sY} prefetching ${YY} failed`, rY)
               }))
             }
             return !0
-          }(BB)) return;
-        const yB = [NB((0, kB.g)())];
-        (0, kB.c)(TB) && yB.push(NB((0, kB.i)()));
-        "unloaded" === (0, VB.C)() && yB.push(NB((0, pB.b)(lB.i)), (0, oB.g)().then((TB => {
-          if (null === TB || "unloaded" !== (0, VB.C)() || BB()) return;
-          const dB = new AbortController;
-          return TB.superseded.then((() => {
-            dB.abort()
-          })), NB((0, pB.b)(TB.build), dB.signal).catch((BB => {
-            if (!dB.signal.aborted) throw BB
-          }))
-        })));
-        await Promise.all(yB)
-      }(BB, TB).catch((BB => {
-        console.warn(`${LB} the prefetch failed: the join downloads the client itself`, BB)
-      })), OB
+          }(YY)) return;
+        const FY = [eY((0, uY.h)())];
+        (0, uY.e)(rY) && FY.push(eY((0, uY.l)()));
+        await Promise.all(FY)
+      }(YY, rY).catch((YY => {
+        console.warn(`${sY} the prefetch failed: the join downloads the client itself`, YY)
+      })), iY
     }
 
-    function iB(BB) {
-      const TB = document.createElement("link");
-      TB.rel = "prefetch", TB.href = BB, BB.endsWith(".js") && (TB.crossOrigin = "anonymous"), document.head.appendChild(TB)
+    function TY(YY) {
+      const rY = document.createElement("link");
+      rY.rel = "prefetch", rY.href = YY, YY.endsWith(".js") && (rY.crossOrigin = "anonymous"), document.head.appendChild(rY)
     }
-    async function NB(BB, TB) {
-      const dB = await fetch(BB, {
-        priority: "low",
-        signal: TB
+    async function eY(YY) {
+      const rY = await fetch(YY, {
+        priority: "low"
       });
-      if (!dB.ok) throw new Error(`Fetching ${BB} failed: HTTP ${dB.status}`);
-      const VB = dB.body.getReader();
-      for (; !(await VB.read()).done;);
+      if (!rY.ok) throw new Error(`Fetching ${YY} failed: HTTP ${rY.status}`);
+      const DY = rY.body.getReader();
+      for (; !(await DY.read()).done;);
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const YY in modules) Object.freeze(modules[YY]);
